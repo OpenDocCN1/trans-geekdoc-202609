@@ -1,0 +1,7 @@
+radar will tune its angle away from the target and eventually lose its lock on the target.
+
+From this simple description, one can see that this operation is rather difficult because the phase difference of two jamming signals needs to be carefully controlled over a broad bandwidth. One straightforward implementation is having two jammers on the tip of each wing and each jammer has one receiver and one transmitter, as illustrated in Figure 5.8. Each jammer’s transmitter rebroadcasts the received radar signals from the other jammer’s receiver and one of the two jamming signals is delayed to create the 180° difference. However, the amount of delay depends on signal frequency (for a 2-GHz signal, the delay needs to be 0.25 ns and for a 1 GHz signal, the delay is 0.5 ns) and the jammer has no control over the radar’s frequency. For the cross-eye jamming to be effective, this delay (phase difference) needs to be accurate. This is an extremely challenging task. The original idea of cross-eye jamming was filed for patents in 1958 (US4117484A and US4006478A), but the actual deployment did not happen until the 1970s (these two patent applications were granted in 1978 and 1977, respectively). The complexity of this clever approach might be the main reason behind its delayed deployment.
+
+![](bbox=[0.1, 0.51, 0.9, 0.8])
+
+The cross-eye jammer implementation concept (adapted from Journal of Electronic Defense, April 2010, p. 50).

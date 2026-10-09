@@ -1,0 +1,26 @@
++   - LORO Lobe on Receive Only
+- LPI Low Probability of Intercept
+- MANPADS Man-Portable Air Defense Systems
+- MALD Miniature Air-Launched Decoys
+- PLAAF People's Liberation Army Air Force
+- PRF Pulse Repetition Frequency
+- PRI Pulse Repetition Interval
+- PW Pulse Width
+- QPSK Quadrature Phase Shifting Keying
+- Q-Value Quality Value
+- RAM Radar-Absorbent Material
+- RF Radio Frequency
+- RNN Recurrent Neural Network
+- ROCAF Republic of China Air Force
+- RAF Royal Air Force
+- SARH Semi-Active Radar Homing
+- Superhet Superheterodyne
+- SAM Surface to Air Missiles
+- TALD Tactical Air Launched Decoy
+- TOA Time of Arrival
+- TR Transmit/Receive
+- TWT Traveling Wave Tube
+- UV Ultra-Violet
+- VHF Very High Frequency
+- VOA Voice of America
+- WVD Wigner Ville Distribution

@@ -1,0 +1,13 @@
+In order to detect an object using an electromagnetic wave, the wavelength of the signal must be much smaller than the object. Thus, the signal wavelength cannot be very long. To detect the returned weak signal, one might increase the gain of the receiver antenna. As part of the antenna shape design, the antenna’s physical size must be several wavelengths long. A movable antenna used in a battlefield cannot be too large. For example, if one limits the diameter of the radar target to about 1 m, the signal wavelength must be several times smaller than that and a wavelength of 1 m roughly corresponds to a frequency of 300 MHz. Therefore, the general military radar signal frequency is from 2 to 18 GHz and the corresponding wavelength is $0.15 - 0.0167$ m. Although a higher frequency can improve the resolution of the radar, some technical problems accompany signals of high frequency. First of all, the attenuation (loss) that the microwave signal suffers in air is rather low when the signal frequency is below 20 GHz. Above 20 GHz, the loss can be too high. By checking Equation (2.1), one can find that when the signal frequency increases, the received signal strength decreases in proportion to the square of the signal frequency. In addition, when the signal frequency increases, to maintain the same gain, the size of the antenna aperture (antenna’s receiving cross section) needs to be decreased. When the frequency of a signal is doubled, the aperture needs to be decreased four times. As a result, signals with higher frequency will have a narrow signal beam width and it might be difficult to find the target (it is much easier to hit someone using a baseball bat than a long needle). In the 1930s, when radars were being developed, the generation of high frequency signal was a major technology challenge.
+
+# **2.7 Requirement of Very Short Pulse**
+
+When a radar sends out a signal to detect objects, the signal duration (known as pulse width, PW) is finite. The radar sends out a signal first and then tries to capture the reflected signal before emitting the next radar signal. Based on the time the radar receives the reflected signal, the radar can determine the distance of this object. The resolution of radar’s distance measurement depends on the radar signal’s pulse width and this relation can be written as
+
+```
+$$\Delta d = \tau c/2$$
+
+(2.3)
+```
+
+where $\Delta d$ is the distance resolution, $\tau$ is the pulse width, and $c$ is the speed of light. This equation can be explained as follows. A radar signal with a pulse

@@ -1,0 +1,9 @@
+![](bbox=[0.12, 0.11, 0.88, 0.36])
+
+**Figure 10.10** Simplified deep-Q learning.
+
+the highest Q-value. However, this approach requires each combination of states and actions to be visited in the training process. This requirement is not realistic when there are a large number of states. To solve this problem, deep-Q learning is proposed.
+
+A simplified deep-Q learning diagram is shown in Figure 10.10. A neural network uses a state as input and as output the Q-value of each possible action. When an action is taken, the reward it generates is used to update the Q-value and train the neural network. After the network is well-trained, in any state, the action with the highest Q-value will be recommended. Although this concept of deep-Q learning is straightforward, it has an inherent issue: the neural network chases a moving target. When the neural network is updated, the calculation of the Q-value is also changed. As a result, deep-Q learning does not always generate a stable outcome and some modifications are necessary. Fixing deep-Q learning is one of DeepMind’s major contributions. However, we will stop our discussion about deep-Q learning here before it becomes too complicated for an introductory book.
+
+A policy can be deterministic or stochastic. A deterministic policy means the agent always takes the action that is supposed to produce the biggest reward. The stochastic policy means the agent takes an action based on a predetermined probability. For example, the agent might take an action with the highest Q-value 95% of the time, and the probability of the agent taking other actions is 5%. The reason for stochastic policy is to explore new actions so that the machine can learn some new tricks.

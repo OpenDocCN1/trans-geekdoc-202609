@@ -1,0 +1,7 @@
+![](bbox=[0.2, 0.12, 0.78, 0.4])
+
+**Figure 5.11**   AN-ALQ 101 ECM pod.
+
+During a battle, sometimes aircraft equipped with EW systems fly first to attract the enemy radars to find or shoot at them. For example, in the Vietnam War, after losing aircraft to North Vietnam’s SA-2 missiles but not being able to locate SA-2 missile sites and destroy them, the concept of Wild Weasel was conceived. The idea was to have Wild Weasel units that consist of aircraft equipped with a radar warning receiver to lead other aircraft in a mission. The function of the Wild Weasel unit was to attract enemy radars to lock on Wild Weasel units and the Wild Weasel plane could destroy the enemy radar site by using anti-radiation missiles, which can follow a radar’s signals. This is, of course, a very risky job. From June 1966 to August 1966, out of 10 Weasel-modified F-105Fs (the second batch of Wild Weasels), 5 of them were lost.
+
+In a modern war, without effective radars, the military is literally blind. On the other hand, without an effective ECM, the aircraft are sitting ducks. During war, the main job of the electronic attack aircraft is to protect all friendly aircraft. They usually fly in a certain pattern away from the immediate battlefield and can jam the enemy radar at a far distance. Since they are equipped with better electronic warfare equipment, they can concentrate on jamming. One such example is that, on December 18, 1972, in a mission to attack Hanoi, besides aircraft conducting actual attacking tasks, 31 EA aircraft were deployed for stand-off jamming.

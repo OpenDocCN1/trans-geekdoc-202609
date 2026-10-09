@@ -1,0 +1,13 @@
+by the Earth's atmosphere. As the UV and IR-based missile approaches warning systems are designed based on the same principle and the major difference between them is wavelength; the UV receiver will not be discussed in this book.
+
+# ## 6.4 Tail Warning Radar
+
+The tail warning radar is designed to detect missile approaching aircraft from behind. The requirement of the radar is relatively simple, but it has to be light and small. Another design challenge is that the approaching missile is usually small and has a very small radar cross section (RCS) which is the area reflecting radar signals, thus making it difficult to be detected. A missile might be long, but it usually has a small diameter. When a missile is flying toward the radar, the cross section facing the radar can be tiny, and, during the missile's flight path, its head may be always facing the tail warning radar. If the missile and the radar are not aligned in the same line, the RCS of the missile might be larger.
+
+The range of the tail warning radar depends on from where a missile might be launched. The missile can be fired from a ground base or from an aircraft. Consequently, the tail warning radar should cover a relatively large angle, not only looking directly backward.
+
+One major advantage of the radar-based missile approach warning system over the IR-based one is that it does not generate false alarms as frequently as the IR-based missile approach warning system. A tail warning radar can also estimate the approaching missile's speed and range. On the other hand, the tail warning radar sends out signal which can expose the aircraft, thus increasing the vulnerability of the aircraft. A tail warning radar also might not detect a missile with a small RCS until it is too late. In order to reduce the false alarm rate of the IR-based missile approach warning system, combining the tail warning radar and IR receiver has been considered, but it might not be a feasible option for every type of aircraft.
+
+# ## 6.5 Proximity Fuze and Jamming
+
+The first time James Tsui heard about the idea of a proximity fuze was when he was a college student. His professor talked about German anti-aircraft artillery shells and emphasized two technologies used in the shell. The first one was that the wall of the shell is part of a storage battery but without the electrolytic fluid. The electrolytic fluid is in an ampule in the shell but not
