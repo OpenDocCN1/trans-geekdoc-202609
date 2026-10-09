@@ -1,0 +1,16 @@
+and reasonable wisdom aptitude and deal with the issue as to low-control, downsizing and low-esteem point of view.
+
+# Network Layer
+
+The Network Layer expects the activity of directing and transmitting the data assembled by the Perception layer by methods for arranging headways. The data is transmitted to various gadgets or IoT focuses on the Internet. A couple of cases of the system advances that are commonly used are WiFi, Bluetooth, 3G/LTE, Zigbee, Lora, etc. As described earlier IOTs network layer is built up based on the current mobile media transmission and Internet. Its principle highlight is to pass on the data between a long distance.
+The network layer involves different correspondence arrange and incorporated system dependent on the Internet, which is by and large viewed as the most developed part. Moreover, it incorporates the part that cleverly forms gigantic data. The administration focus of IoT data focus fog-cloud computing, stage, master framework and so forth that is to state network layer not just has the capability of system activity, yet additionally improves the capability of data activity.
+
+# Application Layer
+
+The Application Layer is the top layer of the IoT structure additionally, it achieves the last target of serving the system. Models of the layer are Smart Home, Smart City, Smart Cars, Smart Grids, Smart Hospitals, and Smart Plant, etc. The Application layer gets data transmitted through the Network Layer, and it uses the data to achieve a conclusive target of giving the sharp organization of the IoT system. The principal task for the application layer is to find services and take on the administration. The application layer is an association of IoT innovations and segment proficient advancements and a layer to understand the wide savvy application by giving different arrangements. It is the application layers that at last understands the profound mixing between data innovation and part, and broadly affect the national financial and social advancement. For the application layer, the key issue is to share the data with the networks and secure data security. The application layer is the last objective for IoT advancement, programming advancement and wise control innovation will offer bright utilization of IoT. The advancement for different parts and the family’s application will advance the prominence of the IoT and will profit the entire IoT industry chain.
+
+# IoT Security Problems
+
+The IoT security-related problems remain not only for the security of wireless, WSN and the Internet. Yet in addition to IoT gadgets get to control, approval, the respectability of data, accessibility and security issues for their clients.
+
++   **Power constraint in embedded devices:** The main concern of IoT users or researchers the computational power and storage size of these devices. To run security cryptographic algorithms requires high computation power and storage size which are heavy and expensive. Due to this, these cryptographic algorithms cannot be executed on resource-constrained devices such as embedded devices, wearables, sensors and on other wireless devices.

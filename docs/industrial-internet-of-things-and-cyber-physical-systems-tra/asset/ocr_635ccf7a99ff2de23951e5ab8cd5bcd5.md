@@ -1,0 +1,11 @@
+from being hacked. The next countermeasure is to block the UART access with another chip so that the hacker will not take advantage of the device.
+
+# Stuxnet
+
+Stuxnet is an extremely sophisticated computer worm that exploits multiple previously unknown Windows zero-day vulnerabilities to infect computers and spread. Its purpose was not just to infect PCs but to cause real-world physical effects. Specifically, it targets centrifuges used to produce the enriched uranium that powers nuclear weapons and reactors. Stuxnet was first identified by the infosec community in 2010 after the attack as shown in Figure 14, but development on it probably began in 2005. Despite its unparalleled ability to spread and its widespread infection rate, Stuxnet does little or no harm to computers not involved in uranium enrichment. When it infects a computer, it checks to see if that computer is connected to specific models of programmable logic controllers (PLCs) manufactured by Siemens. PLCs are how computers interact with and control industrial machinery like uranium centrifuges. The worm then alters the PLCs' programming, resulting in the centrifuges being spun too quickly and for too long, damaging or destroying the delicate equipment in the process. While this is happening, the PLCs tell the controller computer that everything is working fine, making it difficult to detect or diagnose what is going wrong until it is too late (Frühlinger, J. 2017)
+
+Figure 14. Stuxnet infected hosts by country in 2010.
+
+![](bbox=[0.28, 0.53, 0.74, 0.73])
+
+To prevent Stuxnet attacks, logging of events should not be performed on the same device which generates the logs but should write identical logs to a separate device for pre- and post-event analysis. This also helps minimizing the possibility of an attacker “hiding their tracks” or altering system logs. Security Information and Event Management (SIEM) systems are designed for precisely this purpose and will securely maintain audit trails regardless of attacks against other systems on the control system network (Joel Langill, 2010).

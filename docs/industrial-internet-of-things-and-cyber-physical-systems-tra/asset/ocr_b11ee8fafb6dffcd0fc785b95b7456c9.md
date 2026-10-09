@@ -1,0 +1,17 @@
++   6.  Gamma Rays (greater than 10EH2): Typically, used for clinical imaging in nuclear medicine. Gamma rays are unsafe and risky because of their adverse impacts on human
+
+Kuppasamy et al. (2016) has seen that the range from 300 GHZ to 790 THZ i.e. IR to Visible is much higher than the radio range.
+
+Using visible light for communication has the potential to transform this technology into how we access the Internet. There will be no unfavorable impact on security as data cannot be retrieved in the absence of light. Since Radio Frequency communication is prone to eavesdropping whereas this technology can be excellently used in high-security zones.
+
+The frequency extends that is open to us, including numerous waves, for example, X-beams, gamma beams, UV, infrared, visible light beams, radio waves. Any wave could be selected for communication, but why the only the visible range is chosen? The clarification for this is the easier reach and less destructive impacts that these wave causes. VLC utilizes light between 400 THZ (780 nm) and 800 THZ (375 nm) as a medium that is less unsafe to high-power applications. Subsequently, the visible light (from red to blue) of the electromagnetic range does no solicitation to the individuals as the rays are sheltered to utilize, vast data transfer capacity and moreover ensuing period in the communication area (Sarkar, A., Agarwal, S., & Nath, A., 2015).
+
+# LITERARTURE SURVEY
+
+Li-Fi related literature has been reviewed to ascertain the work done by various researchers. In the last few decades, Wi-Fi has developed very fast. We have become very dependent on this technology day by day. But this technology also has its own limitations. Such as, it can only serve a certain distance. Also, Dimitrov, S., & Haas, H. (2015). discuss in their work that the bandwidth and speed used in this technology are limited. Internet efficiency and security are now the major concern. Thus RF-based Wi-Fi technology isn't the ideal route to achieve the latest capabilities. Harald Haas introduced a new methodology known as Light Fidelity (Li-Fi). The design flexibility of Li-Fi aids to overcome the disadvantages of Wi-Fi in the context of adaptability, speed, and ease of use. Ramadhaani, E., & Mahardhika, G. P. (2018) has mentioned in their paper that LiFi technology has been implemented in Paris. Sarkar et.al (2015) and Neha, Gupta, P. (2017). discuss in their work that this methodology has used VLC and LEDs as media for fast information transfer. LED lights utilized in Li-Fi are pocket-friendly, safe, and durable. Also, it has good performance and better lifetime. Paul, S., & Sharma, S. (2014) has mentioned in their research that VLC is liberated from any health concerns, as it is environment friendly, green technology instead of the microwave, which has an adverse effect on human bodies.
+
+Haas, H.(2018) in “LiFi is a paradigm-shifting 5G technology.” has explained various misconceptions and represent the possible effects of this technique. This research article additionally predicts a shift in the existing wireless communication while moving from millimeter wave to Nanometer wave range.
+
+He has also compared VLC and Li-Fi.
+
+Khanda, D., & Jain, S. (2014) presented a research article “Li-Fi (light fidelity): The future technology in wireless communication.” in which they have explained that every bulb can be performed as a receptor in the Li-Fi technique. This paper also mentions that the exchange of data and signals can be accomplished using light and radio waves simultaneously.

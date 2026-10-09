@@ -1,0 +1,55 @@
+
+
+# 参考文献汇总
+
+- Alavi, A. H., Jiao, P., Buttler, W. G., & Lajnef, N. (2018). Internet of Things-enabled smart cities: State-of-the-art and future trends. *Measurement*, 129, 589–606. doi:10.1016/j.measurement.2018.07.067
+- Albright, D., Brannan, P., & Waldron, C. (2010). *Did Stuxnet take out 1,000 centrifuges at the Natanz enrichment plant?* Institute for Science and International Security.
+- Alessandretti, A. A. (2018). A Model Predictive Cloud-based Control Scheme for Trajectory-Tracking: Effects of Round-trip Time Over-estimates. In *13th APCCA International Conference on Automatic Control and Soft Computing (CONTROLO)* (pp. 183-188), Ponta Delgada, Portugal: IEEE. 10.1109/CONTROLO.2018.8516416
+- Alex, R., Ronaldo, T. P., Raimir, H. F., & Joël, J. P. (2019). Enabling Online Quantitative Security Analysis in 6LoWPAN Networks. *IEEE Internet of Things Journal*, 6(3), 5631–5638. doi:10.1109/IIOT.2019.2904302
+- Aextian, L., Magnos, M., Roberta, L. G., Arash, F. B., & Emilio, S. (2018). RDNA: Residue-Defined Networking Architecture Enabling Ultra-Reliable Low-Latency Datacenters. *IEEE eTransactions on Network and Service Management*, 15(4), 1473–1487. doi:10.1109/TNSM.2018.2876845
+- Al-hamadian, A., & Allen, W. H. (2014). RAADODV: a reputation-aware AODV for mobile ad hoc networks. In *Proceedings of the 2014 ACM Southeast Regional Conference on - ACM SE ’14* (pp. 1–6). New York: ACM Press. 10.1145/2638404.2638462
+- Ali, S., Khan, M. A., Ahmad, J., & Malik, A. W., & ur Rehman, A. (2018). Detection and prevention of Black Hole Attacks in IOT & WSN. In *2018 Third International Conference on Fog and Mobile Edge Computing (FMEC)* (pp. 217-226). IEEE. 10.1109/FMEC.2018.8364068
+- Ali, B., & Awad, A. (2018). Cyber and physical security vulnerability assessment for IoT-based smart homes. *Sensors (Basel)*, 18(3), 817. doi:10.3390/s18030817 PMID:29518023
+- Alireza, S., Yoss, J., Makan, P., & Mohamed, C. (2016). Efficient Provisioning of Security Service Function Chaining Using Network Security Defense Patterns. *IEEE Transactions on Services Computing*, 12(4), 534–549.
+- Ali, S., & Kim, D.-H. (2013). Effective and comfortable power control using Kalman filter for building energy management. *Wireless Personal Communications*, 73(4), 1439–1453. doi:10.1007/s11277-013-1259-9
+- Al-Janabi, S., Al-Shourbaji, I., Shojafar, M., & Shamshirband, S. (2017). Survey of main challenges (security and privacy) in wireless body area networks for healthcare applications. *Egyptian Informatics Journal*, 18(2), 113–122. doi:10.1016/eij.2016.11.001
+- Almuhim, M., & Zaman, N. (2018). *Proposing secure and lightweight authentication scheme for IoT based E-health applications.* Paper presented at the 2018 20th International Conference on Advanced Communication Technology (ICACT).
+- Almusaylim, Z. A., & Jhanji, N. Z. (2019). Comprehensive Review: Privacy Protection of User in Location-Aware Services of Mobile Cloud Computing. *Wireless Personal Communications*, 888, 1–24.
+- Almusaylim, Z. A., & Zaman, N. (2019). A review on smart home present state and challenges: Linked to context-awareness internet of things (IoT). *Wireless Networks*, 25(6), 3193–3204. doi:10.1007/s11276-018-1712-5
+- Alonso, J., Arrieta, L. O.-E., Escalante, M., Gorrojoigüina, J., & Presenza, D. (2013). Cloud modernization assessment framework: Analyzing the impact of a potential migration to Cloud. 2013 *IEEE 7th International Symposium on the Maintenance and Evolution of Service-Oriented and Cloud-Based Systems*. 10.1109/MESOCA.2013.6632736
+- Alsoufi, D., Elleithy, K. M., Abuzaghigh, T., & Nassar, A. (2012). *Security in wireless sensor networks-Improving the leap protocol.* Academic Press.
+- Amasyali, P., & El-Gohary. (2016). Building Lighting energy consumption prediction for supporting energy data analytics. *Procedia Engineering, 145*, 511–517.
+- Amit, P., & P., S. (2018). DDoS Attacks at the Application Layer: Challenges and Research Perspectives for Safeguarding Web Applications. *IEEE Communications Surveys and Tutorials, 21*(1), 661–685.
+- Ammar, M., Russello, G., & Crispop, B. (2018). Internet of Things: A survey on the security of IoT frameworks. *Journal of Information Security and Applications, 38*, 8–27. doi:10.1016/j.jisa.2017.11.002
+- Amudhavel, J., Brindha, V., Anantharaj, B., Karthikeyan, P., Bhuvaneswari, B., & Vasanthi, M. (2016). A survey on intrusion detection system: State of the art review. *Indian Journal of Science and Technology, 9*(11), 1-9.
+- Ananthi, N., Divya, J., Divya, M., & Janani, V. (2017). IoT Based Smart Soil Monitoring System for Agricultural Production. *In 2017 IEEE Technological Innovations in ICT for Agriculture and Rural Development (TIAR).* Chennai: IEEE. doi:10.1109/TIAR.2017.8273717
+- Andreasen. (1988). Consumer complaints and redress: what we know and what we don't know. *In The Frontier of Research in the Consumer Interest.* American Council on Consumer Interests.
+- Andreas, P. (2018). Efficient IoT-based sensor BIG Data collection–processing and analysis in smart buildings. *Future Generation Computer Systems, 82*, 349–357. doi:10.1016/j.future.2017.09.082
+- Andreasen. (2001). Antecedents to satisfaction with service recovery. *European Journal of Marketing*.
+- Aniket, B., & Sunil, B. (2019). Detecting lateral spear phishing attacks in organisations. *IET Information Security, 13*(2), 133–140. doi:10.1049/iet-ifs.2018.5090
+- Anthony, O., Odeyabinya, J., & Emmanuel, S. (2018). Intrusion detection in internet of things (IoT). *International Journal of Advanced Research in Computer Science, 9*(1).
+- Antol, S., Agrawal, A., Lu, J., Mitchell, M., Batra, D., Lawrence Zitnick, C., & Parikh, D. (2015). Vqa: Visual question answering. *In Proceedings of the IEEE international conference on computer vision* (pp. 2425-2433). IEEE.
+- Anwar, Zainal, Abdullah, & Qureshi. (2014). Security Issues and Attacks in Wireless Sensor Network. *World Applied Sciences Journal, 30*(10).
+- Anwar, R. W., Bakhtiarl, M., Zainal, A., Hanan Abdullah, A., & Qureshi, K. N. (2014). Security issues and attacks in wireless sensor network. *World Applied Sciences Journal, 30*(10), 1224–1227. doi:10.5829/idosi.wasj.2014.30.10.334
+- Aradhye, H., Toderici, G., & Yagnik, J. (2009, December). Video2text: Learning to annotate video content. *In IEEE International Conference on Data Mining Workshops* (pp. 144-151). IEEE.
+- Arul Mozhi Varman, S., & Arvind Ram Baskaran, S. (2017). Deep Learning and IoT for Smart Agriculture Using WSN. *In 2017 IEEE International Conference on Computational Intelligence and Computing Research (ICCIC).* Coimbatore: IEEE. 10.1109/ICCIC.2017.8524140
+- Arya, A., & Bilandi, N. (2007). A Review: Wireless Body Area Networks for Health Care. *International Journal of Innovative Research in Computer and Communication Engineering, 3297*(4), 3800–3806. Retrieved from www.ijirce.com
+- Asif, M. K., Khan, T. A., Taj, T. A., Naeem, U., & Yakoob, S. (2013, April). Network intrusion detection and its strategic importance. *In 2013 IEEE Business Engineering and Industrial Applications Colloquium (BEIAC)* (pp. 140-144). IEEE. doi:10.1109/BEIAC.2013.6560100
+- Assael. (1992). *Consumer Behavior & Marketing Action* (4th ed.). PWS-Kent Publishing Company.
+- Aswale, S., & Ghorpade, V. R. (2015). Survey of QoS Routing Protocols in Wireless Multimedia Sensor Networks. *Journal of Computer Networks and Communications*, 2015, 1–29. doi:10.1155/2015/824619
+- Atalık, O. (2007). Customer complaints about airline service: A preliminary study of Turkish frequent flyers. *Management Research News*.
+- Atzori, L., Iera, A., Morabito, G., & Nitti, M. (2012). The social internet of things (siot)—when social networks meet the internet of things: Concept, architecture and network characterization. *Computer Networks*, 56(16), 3594–3608. doi:10.1016/j.comnet.2012.07.010
+- Avast smart home security report. (2019). Avast.
+- Aydin, S. A., & Ozer, O. (2005). The analysis of antecedents of customer loyalty in the Turkish Mobile Telecom market. *European Journal of Marketing*.
+- Ayyash, M., Elgala, H., Khreishah, A., Jungnickel, V., Little, T., Shao, S., ... Freund, R. (2016). Coexistence of WiFi and LiFi toward 5G: Concepts, opportunities, and challenges. *IEEE Communications Magazine*, 54(2), 64–71. doi:10.1109/MCOM.2016.7402263
+- Babakus, E., Yavas, U., Karatepe, O.M., & Avci, T. (2003). The effect of management commitment to service quality on employees’ affective and performance outcomes. *Journal of the Academy of Marketing Science*.
+- Baber, J., Afälpurlkar, N., & Bakhtyar, M. (2011). Video segmentation into scenes using entropy and SURF. In *7th International Conference on Emerging Technologies* (pp. 1-6). 10.1109/ICET.2011.6048496
+- Baber, J., Satho, S. I., Afülpurlkar, N., & Keatmanee, C. (2013, August). Bag of visual words model for videos segmentation into scenes. In *Proceedings of the Fifth International Conference on Internet Multimedia Computing and Service* (pp. 191-194). 10.1145/2499788.2499814
+- Bacco, M., Berton, A., Ferro, E., Gennaro, C., Gotta, A., Matteoli, S., . . . Zanella, A. (2018). Smart Farming: Opportunities, Challenges and Technology Enablers. In *2018 IoT Vertical and Topical Summit on Agriculture - Tuscany (IOT Tuscany)*. Tuscany: IEEE.
+- Bag, A., & Bazziouni, M. A. (2008). Routing algorithm for network of homogeneous and id-less biomedical sensor nodes (RAIN). In *2008 IEEE Sensors Applications Symposium* (pp. 68–73). IEEE.
+- Bag, A., & Bazziouni, M. A. (2006). Energy efficient thermal aware routing algorithms for embedded biomedical sensor networks. In *2006 IEEE International Conference on Mobile Ad Hoc and Sensor Systems, MASS* (Vol. 1, pp. 604–609). 10.1109/MHBOC.2006.278619
+- Bag, A., & Bazziouni, M. A. (2007). Hotspot Preventing Routing Algorithm for Delay-Sensitive Biomedical Sensor Networks. In *2007 IEEE International Conference on Portable Information Devices, PiDs 2007* (pp. 1–5). 10.1109/PORTABLE.2007.30
+- Bagire, V. A. (2012). *Strategic configurations and performance of large non-Governmental organizations in Uganda* (PhD Thesis). University of Nairobi.
+- Bagiro, A. M., Mahmood, A., & Barton, A. (2017). Prediction of monthly rainfall in Victoria, Australia: Clusterwise linear regression approach. *Atmos. Res*.
+- Ballantyne, D., & Vary, R.J. (2006). Creating value-in-use through marketing interaction: the exchange logic of relating, communicating and knowing. *Marketing Theory*.
+

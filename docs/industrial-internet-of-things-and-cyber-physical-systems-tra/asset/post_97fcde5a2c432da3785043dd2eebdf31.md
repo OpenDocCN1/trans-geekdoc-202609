@@ -1,0 +1,40 @@
+
+## Complex to Simple
+
+Breakdown complex data sets and apply machine learning to analyze the data from all devices. Qualitative and Quantitative analysis will help build an intelligent learning system. Results of analysis would help make the system intelligent to control the environment effectively. Learn and adjust as we call the process. For example, indoor air quality depends on heating/cooling, ventilation and positioning of building. Creation of intelligent buildings based on different parameters (Szilagyi & P. Wira, 2018) (M. Manic, D. Wijayasekara, K. Amarasinha and J. J. Rodriguez-Andina, 2016) (M. Manic, K. Amarasinha, J. J. Rodriguez-Andina & C. Rieger, 2016).
+
+Companies like Singapore Technologies Electronics Limited, Allied Digital Services limited, NG Bailey Group, Schneider Electric SE, Delta Electronics, Inc., Siemens Ltd., Pacific Control Systems, Larsen & Toubro Limited, T-Systems International GmbH and Advanced Control Corporation etc. have already created effective design solutions by integrating intelligent Internet of Things solutions with cloud architecture. Major features are customized integrated solution with single front-end interface, reduced energy consumption with less operating cost and low carbon footprint, auditing is digitized with no manual interference so compliance is regulated. Elevators, fire/flood, life safety and security systems are prompt and reporting is excellent. (Enertiv – Smart Building Solutions) (M. Manic, K. Amarasinha, J. J. Rodriguez-Andina & C. Rieger, 2016).
+
+## REFERENCES
+
+- Advanced Control Corp. (n.d.). Retrieved from https://advancedcontrolcorp.com
+- Aftab, M., Chen, C., Chau, C.-K., & Rahwan, T. (2017). Automatic HVAC control with real-time occupancy recognition and simulation-guided model predictive control in low-cost embedded system. *Energy and Building, 154*, 141–156. doi:10.1016/j.enbuild.2017.07.077
+- Al-Ali, A., Zualkernan, I. A., Rashid, M., Gupta, R., & Alakarar, M. (2017). A smart home energy management system using Internet of Things and big data analytics approach. *IEEE Transactions on Consumer Electronics, 63*(4), 426–434. doi:10.1109/TCE.2017.015014
+- Ali, S., & Kim, D.-H. (2013). Effective and comfortable power control model using Kalman filter for building energy management. *Wireless Personal Communications*, 73(4), 1439–1453. doi:10.1007/11277-013-1259-9
+- Amasaly & El-Gohary. (2016). Building Lighting energy consumption prediction for supporting energy data analytics. *Procedia Engineering, 145*, 511-517.
+- Andreas, P. (2018). Efficient IoT-based sensor BIG Data collection–processing and analysis in smart buildings. *Future Generation Computer Systems*, 82, 349–357. doi:10.1016/j.future.2017.09.082
+- Belmonte-Hernandez, A., Hernandez-Penaloza, G., Alvarez, F., & Conti, G. (2017). Adaptive fingerprinting in multi-sensor fusion for accurate indoor tracking. *IEEE Sensors Journal, 17*(15), 4983–4998, doi:10.1109/JSEN.2017.2715978
+- Billy, Wijerathne, Ng, & Yuen. (2017). Sensor fusion for public space utilization monitoring in a smart city. *IEEE Internet of Things Journal*.
+- Bouibiche, D. E., Pathan, A.-S. K., Lloretn, J., Zhou, H., Hong, S., Amin, S. O., & Feki, M. A. (2018). Advanced Industrial Wireless Sensor Networks and Intelligent IoT. *IEEE Communications Magazine, 56*(2), 14–15. doi:10.1109/MCOM.2018.8291108
+- Campbell, B., Clark, M., DeBruin, S., Ghena, B., Jackson, N., Kuo, Y.-S., & Dutta, P. (2016). Perpetual Sensing for the Built Environment. *IEEE Pervasive Computing, 15*(4), 45–55. doi:10.1109/MPRV.2016.66
+- Cheng, Z., Zhao, Q., Wang, F., Jiang, Y., Xia, L., & Ding, J. (2016). Satisfaction based Q-learning for integrated lighting and blind control. *Energy and Building, 127*, 43–55. doi:10.1016/j.enbuild.2016.05.067
+- Condry, M. W., & Nelson, C. B. (2016). Using Smart Edge IoT Devices for Safer. Rapid Response With Industry IoT Control Operations. *Proceedings of the IEEE, 104*(5), 938–946. 10.1109/JPROC.2015.2513672
+- Daylighting: Whole Building Design Guide. (n.d.). Retrieved from https://www.wbdg.org/resources/daylighting
+- Enertiv – Smart Building Solutions. (n.d.). Retrieved from https://www.enertiv.com
+- Fayaz & Kim. (2018). *A Prediction Methodology of Energy Consumption Based on Deep Extreme Learning Machine and Comparative Analysis in Residential Buildings*. Academic Press.
+- Gebreslassie, B., Zayegh, A., & Kalam, A. (2017). Design, modeling of an intelligent green building using, actuator sensor interface network protocol. *Australasian Universities Power Engineering Conference (AUPEC)*, 1-6. 10.1109/AUPEC.2017.8282492
+- Guo, X., Tiller, D., Henze, G., & Waters, C. (2010). The performance of occupancy-based lighting control systems: A review. *Lighting Research & Technology, 42*(4), 415–431. doi:10.1177/1477153510376225
+- Hinton, G. E., & Salakhutdinov, R. R. (2006). Reducing the dimensionality of data with neural networks. *Science, 2006*(313), 504–507. doi:10.1126/science.1127647 PMID:16873662
+- Jain, S., & Garg, V. (2018). A review of open loop control strategies for shades, blinds and integrated lighting by use of real-time daylight prediction methods. *Building and Environment, 135*, 352–364. doi:10.1016/j.buildenv.2018.03.018
+- Javed, A., Larijani, H., Ahmadian, A., & Gibson, D. (2017). Smart Random Neural Network Controller for HVAC Using Cloud Computing Technology. *IEEE Transactions on Industrial Informatics, 13*(1), 351–360. doi:10.1109/TII.2016.2597746
+- Kelly, S. D. T., Suryadevara, N. K., & Mukhopadhyay, S. C. (2013). Towards the Implementation of IoT for Environmental Condition Monitoring in Homes. *IEEE Sensors Journal, 13*(10), 3846–3853. doi:10.1109/JSEN.2013.22623379
+- Kong, W., Dong, Z. Y., Hill, D. J., Luo, F., & Xu, Y. (2017). *Short-term residential load forecasting based on random behavior learning, IEEE Transactions on Power Systems*. Pre-print. doi:10.1109/TPWRS.2017.2688178
+- Kumar, A., & Hancke, G. P. (2014). An Energy-Efficient Smart Comfort Sensing System Based on the IEEE 1451 Standard for Green Buildings. *IEEE Sensors Journal*, 14(12), 4245-4252. doi:10.1109/JSEN.2014.2356651
+- Li, W., Lu, Y., Sun, J., Chen, Q., Dong, T., Zhou, L., . . . Wei, L. (2017). People counting based on improved gauss process regression. *Proc. of International Conference on Security, Pattern Analysis, and Cybernetics (SPAC)*, 603-608.
+- Lilis, G., Conus, G., Asadi, N., & Kayal, M. (2017). Towards the next generation of intelligent building: An assessment study of current automation and future IoT based systems with a proposal for transitional design. *Sustainable Cities and Society*, 28, 473-481. doi:10.1016/j.scs.2016.08.019
+- Liu, Y., Akram Hassan, K., Karlsson, M., Weister, O., & Gong, S. (2018). Active Plant Wall for Green Indoor Climate Based on Cloud and Internet of Things. *IEEE Access: Practical Innovations, Open Solutions*, 6, 33631-33644. doi:10.1109/ACCESS.2018.2847440
+- Liu, Z., Chen, D. K., Peh, D. L., & Tan, D. K. W. (2017). A feasibility study of Building Information Modeling for Green Mark New Non-Residential Building (NRB): 2015 analysis. *Energy Procedia*, 143, 80-87. doi:10.1016/j.egypro.2017.12.651
+- Lu, Y., Wu, Z., Chang, R., & Li, Y. (2017). Building Information Modeling (BIM) for green buildings: A critical review and future directions. *Automation in Construction*, 83, 134-148. doi:10.1016/j.autcon.2017.08.024
+- Manic, M., Amarasinghe, K., Rodriguez-Andina, J. J., & Rieger, C. (2016). Intelligent Buildings of the Future: Cyberaware, Deep Learning Powered, and Human Interacting. *IEEE Industrial Electronics Magazine*, 10(4), 32-49. doi:10.1109/MIE.2016.2615575
+- Manic, M., Wijayasekara, D., Amarasinghe, K., & Rodriguez-Andina, J. J. (2016). Building Energy Management Systems: The Age of Intelligent and Adaptive Buildings. *IEEE Industrial Electronics Magazine*, 10(1), 25-39. doi:10.1109/MIE.2015.2513749
+- Marasco & Koutkosta. (2016). Applications of machine learning methods to identifying and predicting building retrofit opportunities. *Energy and Buildings*, 431-441.
