@@ -1,0 +1,56 @@
+
+## 参考文献
+
+*   **[492]** K. Tominaga, S. Fujita, R. Takakura, B. Shizuki, Investigating the effects of position and angle of virtual keyboard on text entry performance and workload, *Proceedings of the Asian CHI Symposium 2021*. New York: ACM; 2021:25–27. [https://doi.org/10.1145/3429360.3468174](http://dx.doi.org/10.1145/3429360.3468174).
+
+*   **[493]** E. Triantafyllidis, Z. Li, The challenges in modeling human performance in 3D space with Fitts' law, *Extended Abstracts of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '21*. New York: ACM; 2021:56.1–56.9. [https://doi.org/10.1145/3411763.3443442](http://dx.doi.org/10.1145/3411763.3443442).
+
+*   **[494]** T.S. Tullis, Designing a menu-based interface to an operating system, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '85*. New York: ACM; 1985:70–84. [https://doi.org/10.1145/317456.317471](http://dx.doi.org/10.1145/317456.317471).
+
+*   **[495]** H.P. Van Cott, R.G. Kinkade, *Human Engineering Guide to Equipment Design*. Washington, DC: U.S. Government Printing Office; 1972.
+
+*   **[496]** L. Vanacken, T. Grossman, K. Coninx, Exploring the effects of environment density and target visibility on object selection in 3D virtual environments, *Proceedings of the IEEE Symposium on 3D User Interfaces - 3DUI '07*. New York: IEEE; 2007:117–124. [https://doi.org/10.1109/3DUI.2007.340783](http://dx.doi.org/10.1109/3DUI.2007.340783).
+
+*   **[497]** N. Vanderschantz, C. Timpany, A. Hinze, Design exploration of ebook interfaces for personal digital libraries on tablet devices, *Proceedings of the 15th New Zealand Conference on Human-Computer Interaction - CHINZ '15*. New York: ACM; 2015:21–30. [https://doi.org/10.1145/2808047.2808054](http://dx.doi.org/10.1145/2808047.2808054).
+
+*   **[498]** E. Velloso, J. Alexander, A. Bulling, H. Gellersen, Interactions under the desk: A characterisation of foot movements for input in a seated position, *Proceedings of the 15th IFIP TC13 Conference on Human-Computer Interaction - INTERACT '15*. Berlin: Springer; 2015:384–401. [https://doi.org/10.1007/978-3-319-22701-6_29](http://dx.doi.org/10.1007/978-3-319-22701-6_29).
+
+*   **[499]** D. Venolia, Facile 3D manipulation, *Proceedings of the INTERACT '93 and CHI '93 Conference on Human Factors in Computing Systems - INTERCHI '93*. New York: ACM; 1993:31–36. [https://doi.org/10.1145/169059.169065](http://dx.doi.org/10.1145/169059.169065).
+
+*   **[500]** D.S. Venolia, S. Ishikawa, *Three degree of freedom graphic object controller*. [(U. S. Patent 5,313,230)](http://dx.doi.org/10.1145/169059.169065) 1994.
+
+*   **[501]** D. Venolia, F. Neiberg, T-Cube: A fast, self-disclosing pen-based alphabet, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '94*. New York: ACM; 1994:265–270. [https://doi.org/10.1145/191666.191761](http://dx.doi.org/10.1145/191666.191761).
+
+*   **[502]** K. Vertanen, P.-O. Kristensson, Parakeet: A continuous speech recognition system for mobile touch-screen devices, *Proceedings of the ACM Conference on Intelligent User Interfaces - IUI '09*. New York: ACM; 2009:237–246. [https://doi.org/10.1145/1502650.1502685](http://dx.doi.org/10.1145/1502650.1502685).
+
+*   **[503]** K. Vertanen, H. Memmi, J. Emge, S. Reyal, P.O. Kristensson, VelociTap: Investigating fast mobile text entry using sentence-based decoding of touchscreen keyboard input, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '15*. New York: ACM; 2015:659–668. [https://doi.org/10.1145/2702123.2702135](http://dx.doi.org/10.1145/2702123.2702135).
+
+*   **[504]** N. Villar, S. Izadi, D. Rosenfeld, H. Benko, J. Helmes, J. Westhues, S. Hodges, E. Ofek, A. Butler, X. Cao, B. Chen, Mouse 2.0: Multi-touch meets the mouse, *Proceedings of the ACM Symposium on User Interface Software and Technology - UIST '09*. New York: ACM; 2009:33–42. [https://doi.org/10.1145/1622176.1622184](http://dx.doi.org/10.1145/1622176.1622184).
+
+*   **[505]** S. Voelker, C. Corsten, N.A.-h. Hamdan, K.I. Overgaard, J. Borchers, An interaction model for touch-aware tangibles on interactive surfaces, *Extended Abstracts of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '04*. New York: ACM; 2014:1873–1878. [https://doi.org/10.1145/2559206.2581273](http://dx.doi.org/10.1145/2559206.2581273).
+
+*   **[506]** S. Voelker, C. Wacharamanotham, J. Borchers, An evaluation of state switching methods for indirect touch systems, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '13*. New York: ACM; 2013:745–754. [https://doi.org/10.1145/2470654.2470759](http://dx.doi.org/10.1145/2470654.2470759).
+
+*   **[507]** D. Vogel, R. Balakrishnan, Direct pen interaction with a conventional graphical user interface, *Human-Computer Interaction* 2010;25(4):324–388 [10.1080/07370024.2010.499839](http://dx.doi.org/10.1080/07370024.2010.499839).
+
+*   **[508]** D. Vogel, P. Baudisch, Shift: A technique for operating pen-based interfaces using touch, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '07*. New York: ACM; 2007:657–666. [https://doi.org/10.1145/1240624.1240727](http://dx.doi.org/10.1145/1240624.1240727).
+
+*   **[509]** Y. Wang, C. Shi, L. Li, H. Tong, H. Qu, Visualizing research impact through citation data, *ACM Transactions on Interactive Intelligent Systems* 2018;8(1):5.1–5.24 [10.1145/3132744](http://dx.doi.org/10.1145/3132744).
+
+*   **[510]** C. Ware, H.H. Mikaelian, An evaluation of an eye tracker as a device for computer input, *Proceedings of the CHI+GI Conference on Human Factors in Computing Systems - CHI+GI '87*. New York: ACM; 1987:183–188. [https://doi.org/10.1145/30851.275627](http://dx.doi.org/10.1145/30851.275627).
+
+*   **[511]** A.M. Webb, M. Pahud, K. Hinckley, B. Buxton, Wearables as context for Guiard-abiding bimanual touch, *Proceedings of the ACM Symposium on User Interface Software and Technology - UIST '16*. New York: ACM; 2016:287–300. [https://doi.org/10.1145/2984511.2984564](http://dx.doi.org/10.1145/2984511.2984564).
+
+*   **[512]** S. Weisband, S. Kiesler, Self disclosure on computer forms: Meta-analysis and implications, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '96*. New York: ACM; 1996:3–10. [https://doi.org/10.1145/238386.238387](http://dx.doi.org/10.1145/238386.238387).
+
+*   **[513]** M. Weiser, The computer for the 21st century, *Scientific American* Sept. 1991;265(3):94–105 [10.1145/329124.329126](http://dx.doi.org/10.1145/329124.329126).
+
+*   **[514]** A.T. Welford, *Fundamentals of Skill*. London: Methuen; 1968.
+
+*   **[515]** C.D. Wickens, *Engineering Psychology and Human Performance*. New York: Harper Collins; 1987. [https://doi.org/10.4324/9781003177616](http://dx.doi.org/10.4324/9781003177616).
+
+*   **[516]** D. Wigdor, R. Balakrishnan, A comparison of consecutive and concurrent input text entry techniques for mobile phones, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '04*. New York: ACM; 2004:81–88. [https://doi.org/10.1145/985692.985703](http://dx.doi.org/10.1145/985692.985703).
+
+*   **[517]** D. Wigdor, R. Balakrishnan, TiltText: Using tilt for text input to mobile phones, *Proceedings of the ACM Symposium on User Interface Software and Technology - UIST '03*. New York: ACM; 2003:81–90. [https://doi.org/10.1145/964696.964705](http://dx.doi.org/10.1145/964696.964705).
+
+*   **[518]** D. Wigdor, C. Forlines, P. Baudisch, J. Barnwell, C. Shen, LucidTouch: A see-through mobile device, *Proceedings of the ACM Symposium on User Interface Software and Technology - UIST '07*. New York: ACM; 2007:269–278. [https://doi.org/10.1145/1294211.1294259](http://dx.doi.org/10.1145/1294211.1294259).

@@ -1,0 +1,60 @@
+
+## 参考文献
+
+*   **[347]** D. Maynes-Aminzade, H. Raffle, You're in control: A urinary user interface, *Extended Abstracts of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '03*. New York: ACM; 2003:986–987. [https://doi.org/10.1145/765891.766108](http://dx.doi.org/10.1145/765891.766108).
+
+*   **[348]** D.C. McCallum, P. Irani, ARC-Pad: Absolute+relative cursor positioning for large displays with a mobile touchscreen, *Proceedings of the ACM Symposium on User Interface Software and Technology - UIST '09*. New York: ACM; 2009:153–156. [https://doi.org/10.1145/1622176.1622205](http://dx.doi.org/10.1145/1622176.1622205).
+
+*   **[349]** J. McGrenere, G. Moore, Are we all in the same “bloat”? *Proceedings of Graphics Interface - GI '00*. Toronto: Canadian Information Processing Society; 2000:187–196. [https://doi.org/10.20380/GI2000.25](http://dx.doi.org/10.20380/GI2000.25).
+
+*   **[350]** M. McGuffin, R. Balakrishnan, Acquisition of expanding targets, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '02*. New York: ACM; 2002:57–64. [https://doi.org/10.1145/503376.503388](http://dx.doi.org/10.1145/503376.503388).
+
+*   **[351]** L.K. McIntire, J.P. McIntire, A. McKinley, C. Goodyear, Detection of vigilance performance with pupillometry, *Proceedings of the 2014 Symposium on Eye Tracking Research & Applications - ETRA '14*. New York: ACM; 2014:167–174. [https://doi.org/10.1145/2578153.2578177](http://dx.doi.org/10.1145/2578153.2578177).
+
+*   **[352]** C. McQueen, I.S. MacKenzie, S.X. Zhang, An extended study of numeric entry on pen-based computers, *Proceedings of Graphics Interface - GI '95*. Toronto: Canadian Information Processing Society; 1995:215–222. [https://doi.org/10.20380/GI1995.25](http://dx.doi.org/10.20380/GI1995.25).
+
+*   **[353]** S. Al-Megren, A predictive fingerstroke-level model for smartwatch interaction, *Multimodal Technologies and Interaction* 2018;2(3):1–23 [10.3390/mti2030038](http://dx.doi.org/10.3390/mti2030038).
+
+*   **[354]** B. Mehlenbacher, T.M. Duffy, J. Palmer, Finding information on a menu: Linking menu organizaton onto the user's goals, *Human-Computer Interaction* 1989;4(3):231–251 [10.1207/s15327051hci0403_3](http://dx.doi.org/10.1207/s15327051hci0403_3).
+
+*   **[355]** A. Menin, R. Cava, C.M.D.S. Freitas, O. Corby, M. Winckler, Towards a visual approach for representing analytical provenance in exploration processes, *25th International Conference on Information Visualisation - IV '21*. New York: IEEE; 2021:21–28. [https://doi.org/10.1109/IV53921.2021.00014](http://dx.doi.org/10.1109/IV53921.2021.00014).
+
+*   **[356]** D.E. Meyer, J.E.K. Smith, S. Kornblum, R.A. Abrams, C.E. Wright, Speed-accuracy tradeoffs in aimed movements: Toward a theory of rapid voluntary action, M. Jeannerod, ed. *Attention and Performance XIII*. Hillsdale, NJ: Erlbaum; 1990.
+
+*   **[357]** D.P. Miller, The depth/breadth tradeoff in hierarchical computer menus, *Proceedings of the Human Factors Society*. Santa Monica, CA: Human Factors Society; 1981:12–16. [https://doi.org/10.1177/107118138102500179](http://dx.doi.org/10.1177/107118138102500179).
+
+*   **[358]** G.A. Miller, The magical number seven plus or minus two: Some limits on our capacity for processing information, *Psychological Review* 1956;63(2):81–97.
+
+*   **[359]** M. Moritz, *The Little Kingdom: The Private Story of Apple Computer*. New York: William Morrow; 1984.
+
+*   **[360]** M.R. Morris, A. Huang, A. Paepcke, T. Winograd, Cooperative gestures: Multi-user gestural interactions for co-located groupware, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '06*. New York: ACM; 2006:1201–1210. [https://doi.org/10.1145/1124772.1124952](http://dx.doi.org/10.1145/1124772.1124952).
+
+*   **[361]** C. Munteanu, R. Baecker, G. Penn, E. Toms, D. James, The effect of speech recognition accuracy rates on the usefulness and usability of webcast archives, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '06*. New York: ACM; 2006:493–502. [https://doi.org/10.1145/1124772.1124848](http://dx.doi.org/10.1145/1124772.1124848).
+
+*   **[362]** L.R.D. Murthy, A. Mukhopadhyay, V. Yellheti, S. Arjun, P. Thomas, M. Dilli Babu, K.P. Singh Saluja, D.V. JeevithaShree, P. Biswas, Evaluating accuracy of eye gaze controlled interface in military aviation environment, *Proceedings of the 2020 IEEE Aerospace Conference*. New York: IEEE; 2020:1–12. [https://doi.org/10.1109/AERO47225.2020.9172480](http://dx.doi.org/10.1109/AERO47225.2020.9172480).
+
+*   **[363]** A.K. Mutasim, A.U. Batmaz, M.H. Mughrabi, W. Stuerzlinger, Does repeatedly typing the same phrase provide a good estimate of expert text entry performance? *Extended Abstracts of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '23*. New York: ACM; 2023:90.1–90.8. [https://doi.org/10.1145/3544549.3585647](http://dx.doi.org/10.1145/3544549.3585647).
+
+*   **[364]** B.A. Myers, A brief history of human-computer interaction technology, *Interactions* Mar. 1998;5(2):44–54 [10.1145/274430.274436](http://dx.doi.org/10.1145/274430.274436).
+
+*   **[365]** M.A. Nacenta, R.L. Mandryk, C. Gutwin, Targeting across displayless space, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '08*. New York: ACM; 2008:777–786. [https://doi.org/10.1145/1357054.1357178](http://dx.doi.org/10.1145/1357054.1357178).
+
+*   **[366]** F. Negini, R.L. Mandryk, K.G. Stanley, Using affective state to adapt characters, NPCs, and the environment in a first-person shooter game, *Proceedings of the IEEE Games, Entertainment, Media Conference - IEEE-GEM '14*. New York: IEEE; 2014:109–116. [https://doi.org/10.1109/GEM.2014.7048094](http://dx.doi.org/10.1109/GEM.2014.7048094).
+
+*   **[367]** B. New, C. Pallier, M. Brysbaert, L. Ferrand, Lexique 2: A new French lexical database, *Behavior Research Methods, Instruments, & Computers* 2004;36:516–524 [10.3758/BF03195598](http://dx.doi.org/10.3758/BF03195598).
+
+*   **[368]** A. Newell, P.S. Rosenbloom, Mechanisms of skill acquisition and the law of practice, J.R. Anderson, ed. *Cognitive Skills and Their Acquisition*. Hillsdale, NJ: Erlbaum; 1981:1–55.
+
+*   **[369]** A. Newell, *Unified Theories of Cognition*. Cambridge, MA: Harvard University Press; 1990.
+
+*   **[370]** W.M. Newman, A graphical technique for numerical input, *The Computer Journal* 1968;11(1):63–64 [10.1093/comjnl/11.1.63](http://dx.doi.org/10.1093/comjnl/11.1.63).
+
+*   **[371]** M. Nguyen, M. Laly, B.C. Kwon, C. Mougenot, J. McNamara, Moody Man: Improving creative teamwork through dynamic affective recognition, *Extended Abstracts of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '22*. New York: ACM; 2022:465.1–465.14. [https://doi.org/10.1145/3491101.3519656](http://dx.doi.org/10.1145/3491101.3519656).
+
+*   **[372]** H. Nicolau, J. Jorge, Touch typing using thumbs: Understanding the effect of mobility and hand posture, *Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems - CHI '12*. New York: ACM; 2012:2683–2686. [https://doi.org/10.1145/2207676.2208661](http://dx.doi.org/10.1145/2207676.2208661).
+
+*   **[373]** J. Nielsen, Estimating the number of subjects needed for a thinking aloud test, *International Journal of Human-Computer Studies* 1994;41(3):385–397 [10.1006/ijhc.1994.1065](http://dx.doi.org/10.1006/ijhc.1994.1065).
+
+*   **[374]** A. Nivedhan, L.A. Mielby, Q.J. Wang, The influence of emotion-oriented extrinsic visual and auditory cues on coffee perception: A virtual reality experiment, *Companion Proceedings of the 2020 International Conference on Multimodal Interaction - ICMI '21*. New York: ACM; 2021:301–306. [https://doi.org/10.1145/3395035.3425646](http://dx.doi.org/10.1145/3395035.3425646).
+
+*   **[375]** D.A. Norman, Design rules based on analyses of human error, *Communications of the ACM* 1983;26(4):254–258 [10.1145/2163.358092](http://dx.doi.org/10.1145/2163.358092).

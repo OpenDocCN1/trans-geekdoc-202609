@@ -1,0 +1,64 @@
+
+
+## 参考文献
+
+*   **[90]** G. Costagliola, M. De Rosa, V. Fuccella, B. Martin, BubbleBoard: 一种基于缩放的智能手表文本输入法，*International Conference on Human-Computer Interaction 会议论文集 - HCII '22 (LNCS 13303)*。柏林：Springer；2022：14–27。[https://doi.org/10.1007/978-3-031-05409-9_2](http://dx.doi.org/10.1007/978-3-031-05409-9_2)。
+
+*   **[91]** E. Courtoux, C. Appert, O. Chapuis, SurfAirs：面向大型垂直显示器的表面 + 空中输入，*ACM SIGCHI Conference on Human Factors in Computing Systems 会议论文集 - CHI '23*。纽约：ACM；2023。[https://doi.org/10.1145/3544548.3580877](http://dx.doi.org/10.1145/3544548.3580877)。
+
+*   **[92]** C.A.S. Cunha, R.P. Duarte, 多设备营养控制，*Sensors* 2022；22(7)：1–24 [10.3390/s22072617](http://dx.doi.org/10.3390/s22072617)。
+
+*   **[93]** H.A. Cunningham, 变换空间映射下的瞄准误差暗示了视觉-运动映射的一种结构，*Journal of Experimental Psychology: Human Perception and Performance* 1989；15(3)：493–506 [10.1037/0096-1523.15.3.493](http://dx.doi.org/10.1037/0096-1523.15.3.493)。
+
+*   **[94]** L.D. Cutler, B. Fröhlich, P. Hanrahan, 响应工作台上的双手直接操作，*1997 Symposium on Interactive 3D Graphics 会议论文集 - I3D '97*。纽约：ACM；1997：107–114。[https://doi.org/10.1145/253284.253315](http://dx.doi.org/10.1145/253284.253315)。
+
+*   **[95]** M. Czerwinski, S. Dumais, G. Robertson, S. Dziadosz, S. Tiernan, M. van Dantzich, 面向信息管理与检索的隐式查询可视化，*ACM SIGCHI Conference on Human Factors in Computing Systems 会议论文集 - CHI '99*。纽约：ACM；1999：560–567。[https://doi.org/10.1145/302979.303158](http://dx.doi.org/10.1145/302979.303158)。
+
+*   **[96]** M. Czerwinski, E. Horvitz, S. Wilhite, 任务切换与中断的日记研究，*ACM SIGCHI Conference on Human Factors in Computing Systems 会议论文集 - CHI '04*。纽约：ACM；2004：175–182。[https://doi.org/10.1145/985692.985715](http://dx.doi.org/10.1145/985692.985715)。
+
+*   **[97]** L.A. Dabbish, R.E. Kraut, S. Fussell, S. Kiesler, 理解电子邮件使用：预测对消息的行动，*ACM SIGCHI Conference on Human Factors in Computing Systems 会议论文集 - CHI '05*。纽约：ACM；2005：591–700。[https://doi.org/10.1145/1054972.1055068](http://dx.doi.org/10.1145/1054972.1055068)。
+
+*   **[98]** P.T. Daniels, W. Bright, *The World's Writing Systems*（《世界书写系统》）。纽约：Oxford University Press；1996。
+
+*   **[99]** R.A. Day, B. Gastel, *How to Write and Publish a Scientific Paper*（《如何撰写和发表科学论文》）。第 6 版。Westport, CT：Greenwood Publishing；2006。[https://doi.org/10.1017/S095026880003079X](http://dx.doi.org/10.1017/S095026880003079X)。
+
+*   **[100]** W. Delamare, M. Daniel, K. Hasan, MultiFingerBubble：面向稠密环境的 3D 气泡光标变体，*ACM SIGCHI Conference on Human Factors in Computing Systems 扩展摘要 - CHI '22*。纽约：ACM；2022：453.1–453.6。[https://doi.org/10.1145/3491101.3519692](http://dx.doi.org/10.1145/3491101.3519692)。
+
+*   **[101]** L. Diana, P. Pilastro, E.N. Aiello, A.K. Eberhard-Moscicka, R.M. Müri, N. Bolognini, 眼跳、注意定向与脱离：右侧顶后皮层 (PPC) 和前眼区 (FEF) 阳极经颅直流电刺激 (tDCS) 的效应，*2021 Symposium on Eye Tracking Research & Applications 会议论文集 - ETRA '21*。纽约：ACM；2021：20.1–20.7。[https://doi.org/10.1145/3448018.3457995](http://dx.doi.org/10.1145/3448018.3457995)。
+
+*   **[102]** P. Dietz, D. Leigh, DiamondTouch：一种多用户触摸技术，*ACM Symposium on User Interface Software and Technology 会议论文集 - UIST '01*。纽约：ACM；2001：219–226。[https://doi.org/10.1145/502348.502389](http://dx.doi.org/10.1145/502348.502389)。
+
+*   **[103]** A. Dix, J. Finlay, G. Abowd, R. Beale, *Human-Computer Interaction*（《人机交互》）。第 3 版。伦敦：Prentice Hall；2004。
+
+*   **[104]** M. Dragovic, 改进爱丁堡利手量表的测量，*Laterality* 2004；9(4)：411–419 [10.1080/13576500342000248](http://dx.doi.org/10.1080/13576500342000248)。
+
+*   **[105]** M.H. Draper, E.S. Viire, T.A. Furness, V.J. Gawron, 图像缩放和系统时延对头耦合虚拟环境中模拟器疾病的影响，*Human Factors* 2001；43(1)：120–146 [10.1518/001872001775992552](http://dx.doi.org/10.1518/001872001775992552)。
+
+*   **[106]** T.J. Dube, Y. Ren, H. Limerick, I.S. MacKenzie, A.S. Arif, 推、点、停留和捏：四种增强了超声波触觉反馈的空中选择方法的评估，*Proceedings of the ACM on Human–Computer Interaction* 2022 年 11 月；6(ISS)：565.1–565.19 [10.1145/3567718](http://dx.doi.org/10.1145/3567718)。
+
+*   **[107]** A.T. Duchowski, *Eye Tracking Methodology: Theory and Practice*（《眼动追踪方法论：理论与实践》）。第 3 版。伦敦：Springer；2017。
+
+*   **[108]** H.B.-L. Duh, V.H.H. Chen, C.B. Tan, 在不同手机上玩不同游戏：关于移动游戏的实证研究，*MobileHCI '08 会议论文集*。纽约：ACM；2008：391–394。[https://doi.org/10.1145/1409240.1409296](http://dx.doi.org/10.1145/1409240.1409296)。
+
+*   **[109]** M.D. Dunlop, 手表顶部文本输入：仅用 5 个按键能实现手机式预测文本输入吗？*MobileHCI '04 会议论文集*。海德堡：Springer；2004：342–346。
+
+*   **[110]** M.D. Dunlop, A. Crossan, 移动电话预测文本输入法，*Personal and Ubiquitous Computing* 2000；4：134–143 [10.1007/BF01324120](http://dx.doi.org/10.1007/BF01324120)。
+
+*   **[111]** R. Eg, K. Raaen, M. Claypool, 带着延迟玩游戏：时序差导致性能差，体验随之而来，*10th International Conference on Quality of Multimedia Experience 会议论文集 - QoMEX '18*。纽约：IEEE；2018：1–6。[https://doi.org/10.1109/QoMEX.2018.8463382](http://dx.doi.org/10.1109/QoMEX.2018.8463382)。
+
+*   **[112]** L.A. Elkin, J.-B. Beau, G. Casiez, D. Vogel, 使用有形笔状输入进行操作、学习与回忆，*ACM SIGCHI Conference on Human Factors in Computing Systems 会议论文集 - CHI '20*。纽约：ACM；2020：1–12。[https://doi.org/10.1145/3313831.3376772](http://dx.doi.org/10.1145/3313831.3376772)。
+
+*   **[113]** C. Elmadjian, C.H. Morimoto, GazeBar：在注视交互中利用“迈达斯之触”，*ACM SIGCHI Conference on Human Factors in Computing Systems 扩展摘要 - CHI '21*。纽约：ACM；2021：248.1–248.7。[https://doi.org/10.1145/3411763.3451703](http://dx.doi.org/10.1145/3411763.3451703)。
+
+*   **[114]** D. Engelbart, *X-Y position indicator for a display system*（《显示系统的 X-Y 位置指示器》）。[(U.S. Patent 3,541,541)] 1970。
+
+*   **[115]** W.K. English, D.C. Engelbart, M.L. Berman, 文本操作的显示选择技术，*IEEE Transactions on Human Factors in Electronics* 1967；HFE-8(1)：5–15 [10.1109/THFE.1967.232994](http://dx.doi.org/10.1109/THFE.1967.232994)。
+
+*   **[116]** N. Enns, I.S. MacKenzie, 基于触摸的远程控制设备，*ACM SIGCHI Conference on Human Factors in Computing Systems 扩展摘要 - CHI '98*。纽约：ACM；1998：229–230。[https://doi.org/10.1145/286498.286717](http://dx.doi.org/10.1145/286498.286717)。
+
+*   **[117]** D.M. Erceg-Hurn, V.M. Mirosevich, 现代稳健统计方法：最大化研究准确性和效力的简便途径，*American Psychologist* 2008；63(7)：591–601 [10.1037/0003-066X.63.7.591](http://dx.doi.org/10.1037/0003-066X.63.7.591)。
+
+*   **[118]** T. Erickson, D.W. McDonald, *HCI Remixed: Reflections on Works That Have Influenced the HCI Community*（《HCI 重混：对影响 HCI 社区作品的反思》）。剑桥，马萨诸塞州：MIT Press；2007。
+
+*   **[119]** Ericsson, *10 hot consumer trends 2030: The Internet of senses*（《2030 年十大热门消费趋势：感官互联网》）。Ericsson ConsumerLab；2019 年 12 月。[https://www.ericsson.com/4ac661/assets/local/reports-papers/consumerlab/reports/2019/10hctreport2030.pdf](https://www.ericsson.com/4ac661/assets/local/reports-papers/consumerlab/reports/2019/10hctreport2030.pdf)。
+
