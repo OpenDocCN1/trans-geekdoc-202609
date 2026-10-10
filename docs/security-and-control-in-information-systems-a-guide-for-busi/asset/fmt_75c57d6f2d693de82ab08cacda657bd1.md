@@ -1,0 +1,39 @@
+
+Whether or not they fall neatly on either side of the commercial/ guardian divide, different working groups within an organisation will inevitably hold varying attitudes about trust – or perhaps more specifically, about any imputation that they are *not* to be trusted. These variations will depend not just on the nature and function of the working group, but on the staff’s status and seniority, their degree of professional independence, and the effects of personal ‘networking’. To complicate matters, some groups will regard bluffing and deceit as normal business tactics. Bluffing is a complex game, since the bluffer presents a partial or distorted version of the facts, but only within bounds which it is believed will be accepted and understood by the listener. Overstepping the mark will result in the complete collapse of trust between the parties. It is normally used in negotiations between businesses, but can also be a tactic in the course of an internal fight for influence or resources (both of which, as we have seen, loom large in control and security decisions). The legitimacy of bluff as a business tactic has exercised the minds of a number of business ethicists, including Carr ([1993](#reference.xhtml#ref_r48)) and Bowie ([1993](#reference.xhtml#ref_r39)).
+
+Ultimately, intuition will have to be the main guide assessing how trust is working in any given situation. However, it can never be ignored when implementing controls because of two factors.
+
+* *Staff attitudes and sensitivities*. Controls which appear to send signals of distrust will be resented, particularly by staff who are used to working in a highly trusting environment. Equally, if the working atmosphere is of the opposite kind, where scepticism prevails and few people take anything at face value, it will be unwise to presume that all users can be trusted. This will simply be interpreted as a sign of management weakness, or incompetence.
+* *Minimising costs*. Trust can be regarded as an asset, with a real value in monetary terms. If staff *can* be trusted, any investment in elaborate and expensive controls is going to be wasted (besides being potentially counter-productive). However, this can be an extremely difficult position for a manager to take and defend, since it requires a high level of faith in other employees, and a willingness to forego the ‘safer’ option of relying on the more predictable protection afforded by explicit controls. Yet the resulting savings to the organisation in both start-up and recurring costs can be substantial.
+
+## 3.5 The Limits of Trust: The Rise of ‘Social Engineering'
+
+If organisations can reap benefits from cultivating a culture of trust, they can also find themselves seriously at risk if their employees are both trusting *and* naïve. Staff must be made aware of the threats presented by confidence tricksters of various kinds, who will try to impersonate legitimate users, and then exploit the trusted status which this provides. This has become a popular technique with those embarking on schemes for computer misuse, and the term *social engineering* has been coined to describe their activities. The simplest example is the use of some ploy to persuade someone to reveal their password. Being able to type in a valid user identifier and password is always a good deal easier than having to resort to technical trickery to get into a system.
+
+Social engineering can be a useful starting point for those interested in committing fraud or theft, but it is mostly associated with malicious intrusion by hackers. Kevin Mitnick is a hacker who developed his social engineering skills as a youth in Los Angeles, as the incident described shows.
+
+The episode illustrates the three basic principles of social engineering:
+
+* Invent a plausible identity for yourself, and a justification for what you are doing.
+* Divert attention from your true motives and intentions.
+* Play on people’s susceptibilities and weaknesses.
+
+The third principle was applied by Mitnick in taking advantage of the fact the guard was bored. Social engineers may also exploit people’s eagerness to please, their feelings of insecurity, and their reluctance to become involved in wrangles over what may seem very minor points of procedure.
+
+While social engineering can be used to gain access to buildings, or to charm information out of people in face-to-face conversations, the social engineer’s preferred medium is the telephone. Freed from the need to put in an actual appearance, the imposter can adopt a number of different roles. Gordon ([1995](#reference.xhtml#ref_r94)) suggests that these fall into five basic categories:
+
+1. *The clueless newbie*. The imposter plays the part of a new employee, or somebody whose PC has just been connected to the network, and rings the computer centre for help. Playing dumb in this way enlists sympathy, and encourages people to spell out every detail.
+2. *The technical person*. Here the roles are reversed, for example, the imposter rings a secretary, claiming to be involved in some deeply technical work for the company, and asks if he could have someone’s password to help carry out a test.
+3. *The VIP*. This person pulls rank, pretending to be a senior manager or official. There will be some vital and urgent reason for revealing the information, and serious consequences if it is not revealed.
+4. *The person with an angry boss*. In this case a play is made for the listener’s sympathy: ‘The sales manager is giving me a really hard time over this. Could you help me out?’
+5. *The security person*. A risky option, but if successful this combines the authority of a VIP with the intimidating use of jargon of a technical person. Impersonating a security officer allows all kinds of questions to be asked about procedures, passwords, and system facilities.
+
+Countermeasures against social engineering depend on constant vigilance, and a willingness to respond with pertinent questions. If staff have doubts about the identity of a caller, they should be encouraged to seek as much corroborative information as they can, in a calm and persistent manner. Their training should cover the dangers of giving out even apparently innocuous details, such as a person’s working hours, or the systems for which she has access rights, to anyone whose identity is in doubt. Above all, staff should be encouraged *never* to take it for granted that a telephone caller is actually the person he or she claims to be.
+
+## 3.6 Legitimacy of Controls: Some Issues of Probity and Surveillance
+
+In theory, every organisation aspires to make all of its data perfectly accurate and reliable, with access restricted according to legitimate ‘need to know’. There are of course technical limits to these ambitions (which are explored in later chapters), but limits are also imposed by the social and ethical framework within which the company has to function.
+
+Take, for example, the transnational company which tries to apply a unified accounting system across all its operations. It trades in a country where customs officers expect to receive substantial bribes before goods can be moved from the dockside, or where politicians expect to receive substantial inducements to lubricate business deals. How are these payments to be recorded? Does someone make a ledger entry showing, with complete accuracy, that X dollars were paid out in bribes on such-andsuch a date? Even if this were to be recorded in the ledgers, it is highly unlikely that a sum would later appear under ‘bribes and inducements’ in the corporate accounts. Somewhere along the line, the accounting system must be fudged so that these payments are buried alongside other, more legitimate, costs of sales.
+
+Kelly ([1984](#reference.xhtml#ref_r140)) describes a predicament of this kind faced by an American bank in Italy:
