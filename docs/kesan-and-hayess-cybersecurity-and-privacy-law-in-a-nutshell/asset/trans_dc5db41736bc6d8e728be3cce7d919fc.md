@@ -1,0 +1,193 @@
+
+
+# 索引
+
+## O
+
+**Operation Eligible Receiver**, 170
+
+## P
+
+**Pen Register Act**, 215, 216
+
+**Personally identifiable information**
+
+- Defined in CFR, 228
+- In identity theft laws, 121, 145, 227
+
+**Privacy**
+
+- Constitutional law, 206, 207
+- Information privacy, 204, 206
+- Location privacy, 211, 212
+- “Zone of privacy,” 207
+
+**Privacy Act of 1974**, 228, 229
+
+**“Privacy,” article**, 204
+
+**Privacy law**
+
+- Children’s Online Privacy Protection Act, 239
+- Communications Act and ISPs, 237, 238
+- Drivers’ Privacy Protection Act, 227
+- Education records, 227
+- Family Educational Rights and Privacy Act, 239, 240
+- Financial, 235
+- Genetic information, 234, 235
+- Healthcare information, 227, 232, 233
+- Personally identifiable information, 227
+- State laws, 241, 242
+- Video rental records, 227, 240, 241
+
+**Privacy policies**, 254
+
+**Privacy Shield**, 247
+
+**Privacy torts**, 204, 205
+
+**Private search doctrine**, *See* Fourth Amendment, Private search doctrine
+
+**Prosser, William**, 204, 205
+
+**Protocols**, 14, 217
+
+## R
+
+**Ransomware**, 7
+
+**Records disposal**, 135, 136
+
+**Biometric data**, 266
+
+**Re-encoders**, 134
+
+**Right to be let alone**, 203
+
+**“Right to Privacy,” article**, 203, 204, 205
+
+## S
+
+**Safe Harbor Framework**, 247
+
+**Schengen Agreement**, 179
+
+**Sector specific agencies**, 147, 148, 150
+
+**Securities and Exchange Commission on cybersecurity**, 157, 158
+
+**Self-defense online**, 43
+
+**Self-regulation**, 43, 44
+
+- PCI-DSS, 43
+- TrustArc, 43, 44
+
+**Shadow Brokers**, 38, 175
+
+**Skimmers**, 134
+
+**SLAPP lawsuits**, 256
+
+**Social engineering**, 17, 152
+
+**Software**
+
+- Complexity, 15
+- Security flaws, 15, 16, 28
+
+**SQL Injection**, *See* Cyberattacks, Methods
+
+**Standing**
+
+- Data breach lawsuits, *see* Data Breach Laws, Standing
+
+**Supreme Court cases**, 111, 112, 113
+
+**State responsibility for third party**, 180, 181
+
+- Effective control, 182, 183
+- Indirect responsibility, 181
+- Overall control, 182
+
+**Stored Communications Act**, 216, 217
+
+- 2703(d) order, 218, 219
+- Application to metadata, 218
+- CLOUD Act, 223
+- Compelled disclosure, 218, 219
+- Constitutionality, 218, 219
+- Criminal provision, 217, 218
+- Delayed notice, 219, 221
+- Electronic communication services, 221, 222
+- Electronic storage, 222
+- Overseas data, 223
+- Protection for emails over 180 days old, 218, 219, 220, 221
+- Protection for previously read emails, 217, 219, 220, 221
+- Remote computing services, 220, 221, 222
+- Subpoena, 218
+- Voluntary disclosure, 218, 221
+- Warrant requirement, 218, 219
+
+**Supervisory Control and Data Acquisition Systems (SCADA)**, 156
+
+## T
+
+**Tallinn Manual**, 168, 169, 176, 178, 182, 183, 184, 185, 192, 200
+
+**Telecommunications service**, 237
+
+**Terms of service agreements**, 253, 254
+
+**Third party doctrine**, *See* Fourth Amendment, Third party doctrine
+
+**Threat modeling**, *See* Cybercrime statutes, states, Threat modeling
+
+**Title III Wiretaps**, *See* Wiretap Act
+
+**Trade secrets**, 52, 53
+
+**Trafficking in stolen identities**, *See* Identity theft, Trafficking
+
+**Treaties**, 162, 163
+
+## U
+
+**United Nations Charter**, 184, 185, 186, 187, 194, 196, 198
+
+**Unlawful advocacy**, 152
+
+**Use of force**, 184, 185, 186, 187, 188
+
+## V
+
+**Vulnerability market**, 37, 38
+
+## W
+
+**Warren, Samuel**, 203, 204
+
+**Warshak, United States versus**, 219, 220
+
+**Wassenaar Arrangement**, *See* Export controls, Wassenaar Arrangement
+
+**Website takedowns**, 40, 41, 42
+
+- Backpage, 42
+- InFraud, 40
+
+**Webstresser.org**, 28, 40
+
+**Wiretap Act**, 213, 214
+
+- CLOUD Act, 224, 225
+- Comparison to FISA, 215
+- Other investigative procedures required, 214, 215
+- Supporting offenses, 214
+
+**Wiretaps**, 212
+
+## Z
+
+**Zero Days**, 2, 18, 174, 175
+

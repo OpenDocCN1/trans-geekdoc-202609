@@ -1,0 +1,42 @@
+
+
+# 网络安全中的外部性问题
+
+与安全缺陷的斗争受困于外部性问题。Anderson 和 Moore 敏锐地观察到：“当守护系统的人不是系统失效时受损的人时，系统特别容易失效。”[17](#section9.xhtml#ftn.24) 单台受感染的计算机可能只会给其用户带来不便，但作为僵尸网络一部分所能造成的总体危害，并非该用户必须承担的成本。这属于外部性。如果用户修复问题所承担的成本大于其预期因攻击遭受的损失，那么激励安全投资将变得更加困难。
+
+部分由于潜在成本的存在，面对安全威胁的不作为并不总是源于无知。Workman 2008 年的研究发现，公众了解安全威胁及应对措施，但往往不使用免费的对抗措施。[18](#section9.xhtml#ftn.25) 他们可能转而依赖他人的投资。之所以可能，是因为与网络安全相关的风险和收益都是共享的，这可能限制了用户单方面投资的激励。这造成了“搭便车”问题，即社区成员个人不担心安全，因为他们确信其他人正在处理。
+
+因此，网络安全的社会危害是个人用户不承担的外部性，个人用户体验到的危害有限。个人用户所经历的有限危害，反过来又是软件供应商不承担的外部性。在软件开发过程中，有人认为供应商倾向于更关注功能而非安全。[19](#section9.xhtml#ftn.26) 这可能是因为消费者往往对功能比对安全更了解。当信息不对称导致所售商品质量下降时，可能会形成“柠檬市场”。如果消费者不要求安全的软件，开发商投资安全功能的激励就会减弱，从而可能导致安全领域的“柠檬市场”。
+
+黑客自身也可被视为经济行为体。正如我们的示例故事所示，黑客行为的道德和伦理各不相同。Wilma 代表白帽子身份。她为 Securesoft 工作，研究新兴网络安全威胁，以更好地服务 Securesoft 的客户。自由职业的灰帽子黑客 George 对识别和演示漏洞感兴趣，他发现了一个可实现数据库利用的缺陷。黑帽子黑客 Brian 为自身利益和盈利动机行事。
+
+最优秀的黑客通常受金钱或声望驱动去创新，这与驱动其他任何职业人士的动机相同。年度 Pwn2Own 黑客大赛吸引全球人才，承诺提供经济激励和极大的炫耀权利。私营部门之外也有竞赛。为发掘顶尖人才，中国政府举办自己的区域性黑客大赛。黑客攻击是一个拥有自身经济体系的产业，黑客通常是理性的市场行为体。如果能将知识变现，他们中的许多人就会这么做。
+
+网络安全知识有多种变现途径。世界各地的知名公司都提供漏洞赏金计划，奖励在其产品中发现安全漏洞的研究人员。公司通常会宣布计划并提供指南，提交的漏洞会被修复，发现者会获得报酬。
+
+漏洞赏金计划并不总能按预期工作。2016 年，网约车公司 Uber 被一名黑客联系，该黑客闯入 Uber 计算机系统并窃取大量用户信息。据报道，该黑客在 Github 上存储的一个文件中找到了一个密码，该密码允许访问 Uber 远程服务器上的备份文件。Github 是一个软件开发人员分享代码的热门网站。获取数据的黑客勒索赎金以换取被盗数据。Uber 员工没有向警方报告勒索要求，也没有向任何人报告数据泄露，而是将黑客的要求通过漏洞赏金计划处理，并支付了黑客费用，条件是删除数据。
+
+除了漏洞赏金，还有其他变现漏洞信息的方式。在所谓的灰色市场中，Zerodium 等公司为零日漏洞利用代码支付巨额资金。与漏洞赏金不同，灰色市场的买家通常不利用这些知识修复底层漏洞，而是可能将这些漏洞利用代码提供给政府购买。政府囤积零日漏洞目前是法律和政策领域的一个空白地带，私营部门许多人对此做法深感担忧。2016 年，一个名为 Shadow Brokers 的组织宣布，他们从国家安全局（NSA）窃取了大量零日漏洞利用代码。2017 年，毁灭性的 WannaCry 攻击利用 NSA 开发并由 Shadow Brokers 泄露的 EternalBlue 漏洞利用代码，引发全球性勒索软件攻击，造成大规模破坏。
+
+正如存在帮助向政府提供安全漏洞知识的灰色市场，也存在旨在向其他愿意付费的买家提供此类服务的黑色市场。漏洞信息（尤其是零日漏洞利用代码）的黑色市场通常隐藏在暗网论坛中，只能通过高度安全的网络浏览方式访问，卖家以加密货币收款。
+
+## 参考文献
+
+[1](#section9.xhtml#ftnb.8) J.R. Okin, *The Internet Revolution: The Not-for-Dummies Guide to the History, Technology, and Use of the Internet* 159–60 (2005).
+
+[2](#section9.xhtml#ftnb.9) Carol Woody & Nancy Mead, Using Quality Metrics and Security Methods to Predict Software Assurance, SEI Blog (June 20, 2016), <https://insights.sei.cmu.edu/sei_blog/2016/06/using-quality-metrics-and-security-methods-to-predict-software-assurance.html>.
+
+[3](#section9.xhtml#ftnb.10) Nat’l Research Council of the Nat’l Acads., *Technology, Policy, Law, and Ethics Regarding U.S. Acquisition and Use of Cyberattack Capabilities*, 10–11 (William A. Owens et al. eds., 2009).
+
+[4](#section9.xhtml#ftnb.11) Herbert S. Lin, Offensive Cyber Operations and the Use of Force, 4 J. Nat’l Security L. & Pol’y 63, 67 (2010), <https://www.westlaw.com/Document/I20ceb735a1fd11df9b8c850332338889/View/FullText.html?transitionType=Default&contextData=(sc.Default)&VR=3.0&RS=da3.0&fragmentIdentifier=co_pp_sp_186241_67>.
+
+[5](#section9.xhtml#ftnb.12) Posting of Symantec Security Response to Symantec Official Blog, Oct. 24, 2011.
+
+[6](#section9.xhtml#ftnb.13) Deborah Norris Rodin, Note, The Cybersecurity Partnership: A Proposal for Cyberthreat Information Sharing Between Contractors and the Federal Government, 44 Pub. Cont. L.J. 505, 506 (2015), <https://www.westlaw.com/Document/Ibfdcb876279d11e598dc8b09b4f043e0/View/FullText.html?transitionType=Default&contextData=(sc.Default)&VR=3.0&RS=da3.0&fragmentIdentifier=co_pp_sp_1223_506>.
+
+[7](#section9.xhtml#ftnb.14) Symantec, *Symantec 2010 Critical Infrastructure Protection Study: Global Results* (2010).
+
+[8](#section9.xhtml#ftnb.15) Andy Greenberg, How Hacked Water Heaters Could Trigger Mass Blackouts, Wired (Aug. 13, 2018, 7:00 AM), <https://www.wired.com/story/water-heaters-power-grid-hack-blackout/>.
+
+[9](#section9.xhtml#ftnb.16) Symantec, *Windows Rootkit Overview* (2005).
+
