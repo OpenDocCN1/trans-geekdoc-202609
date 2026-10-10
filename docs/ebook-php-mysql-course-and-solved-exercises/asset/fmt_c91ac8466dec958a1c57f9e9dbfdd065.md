@@ -1,0 +1,164 @@
+
+<?php
+
+class Users {
+
+    private $name;
+
+    private $firstname;
+
+    private $age;
+
+    private $email;
+
+}
+
+If you now try to initialize these attributes directly from outside the class, for example from the `index.php` file, using the code:
+
+```php
+<?php
+
+require_once "Users.php";
+
+$user1 = new Users();
+
+$user1->name = "Dupont";
+
+$user1->firstname = "Claire";
+
+$user1->age = 32;
+
+$user1->email = "dupond-claire@gmail.com";
+```
+
+When this code is executed, a fatal error is generated, indicating that access to private attributes is not allowed from outside the class. To resolve this error and allow write access to private attributes from outside the class, we need to provide public methods in the class that allow these attributes to be modified.
+
+In the `Users` class, we create a new public method named `initialize()` for example:
+
+```php
+public function initialize($lastName, $firstName, $age, $email) {
+
+    $this->name = $lastName;
+
+    $this->firstname = $firstName;
+
+    $this->age = $age;
+
+    $this->email = $email;
+
+}
+```
+
+In this code, we've created a public method that takes the user's surname, first name, age and email as parameters, then assigns them to the corresponding properties of the current object (`$this`). This method thus initializes the values of the object's private attributes from the values supplied as arguments. We can now use this method to access the private attributes name, first name, age and email. Let's call this method in the `index.php` file:
+
+```php
+require_once "Users.php";
+
+$user1 = new Users();
+
+$user1->initialize("Salim", "Zakaria", 32, "salim@gmail.com");
+```
+
+Code execution generates no errors. To retrieve the values of the last name, first name, age and email attributes initialized by the `initialize()` method, let's also call the `getInfosUser()` method:
+
+```php
+require_once "Users.php";
+
+$user1 = new Users();
+
+$user1->initialize("Salim", "Zakaria", 32, "salim@gmail.com");
+
+$user1->getInfosUser();
+```
+
+Executing this code will produce the following result:
+
+![Image](images/image-177.png)
+
+In short, private attributes are accessed via public methods that act as interfaces to manipulate the data encapsulated in the class's objects. This maintains encapsulation and controls access to private data, guaranteeing system security and consistency.
+
+## Conclusion
+
+In this chapter, we explored in depth the fundamental concept of object-oriented programming: classes and objects. We've learned how to define classes, create objects from these classes, and manipulate the data encapsulated inside objects.
+
+We have also studied the different types of properties and methods. These concepts enable us to create complex data structures and modular, extensible software systems.
+
+By understanding the principles of object-oriented programming, we're better equipped to design robust, maintainable and scalable applications. By making effective use of classes and objects, we can organize our code in a more logical and intuitive way, making it easier to develop and maintain our projects.
+
+In conclusion, classes and objects are essential elements of object-oriented programming in PHP, and mastering them is a must for any PHP developer looking to create modern, high-performance applications. By continuing to explore and practice these concepts, we're on our way to becoming more competent and efficient PHP developers.
+
+## Exercises
+
+### Exercise 24
+
+Write a class representing a city. It should have properties like name, department, region, and population count, and a method displaying "City X is in department Y of region Z and has N inhabitants".
+
+Create city objects, assign their properties, and use the display method.
+
+### Exercise 25
+
+Create a class `Person` with the following attributes: name, first name, age. The class should have a method `presentation()` that displays a string containing the person's information.
+
+Then, create two `Person` objects with different information and call the `presentation` method.
+
+# Chapter 15
+
+# Data Encapsulation and Modeling
+
+In this chapter, we'll explore the fundamental concept of encapsulation in PHP object-oriented programming (OOP), and its role in data modeling and management. Encapsulation, one of the pillars of OOP, consists in grouping data and the methods that act on that data within a single entity, called a class. This approach guarantees data integrity and security by controlling access and manipulation.
+
+We also continue to examine the different levels of visibility of properties and methods, such as `public`, `private` and `protected`, and their impact on encapsulation. By understanding these visibility levels, you'll be able to design well-structured and secure classes, while facilitating code reuse and application maintenance.
+
+Finally, we'll look at data modeling through encapsulation, implementing model classes to efficiently represent entities and relationships in an information system. You'll learn how to use getters and setters to control access to properties, guarantee data consistency and simplify object management.
+
+By combining encapsulation with other OOP concepts, such as inheritance and polymorphism, which we'll develop in the following chapters, you'll be able to create robust, flexible web architectures capable of meeting the evolving requirements of modern IT projects.
+
+## Encapsulation: protecting data and methods
+
+In PHP object-oriented programming, encapsulation refers to the grouping of data (properties, etc.) and the actions used to manipulate them within a class.
+
+Encapsulation is very important for limiting access to properties from outside the class. To determine who can access the various properties, methods and constants of our classes, we use access limiters, also known as visibility levels, represented by the keywords `public`, `private` and `protected`.
+
+### Principles of encapsulation
+
+Encapsulation concerns the visibility and accessibility of class properties and methods.
+
+When creating a new class, it's crucial to determine which properties and methods must be accessible from outside the class.
+
+As we saw in the previous chapter, properties, methods or constants defined with the `public` keyword are accessible everywhere, both inside and outside the class. Properties, methods or constants defined with the `private` keyword can only be accessed inside the class that defined them.
+
+In the upcoming chapter on inheritance, we'll discover that properties, methods or constants defined with the `protected` keyword are accessible inside the class that defined them, as well as in child classes that inherit from this class or in the parent class itself.
+
+By convention, attributes are declared as `private`, as it is risky to access a class attribute directly. To access these attributes, we use public methods.
+
+In most cases, we define our methods with the keyword `public` and our properties with the keywords `protected` or `private`. However, it should be noted that this principle is not absolute and may vary according to the specific needs of each application.
+
+## Defining and using getters and setters methods
+
+In this section, we explore a fundamental concept in object-oriented programming: getters and setters. These methods, also known as accessors and mutators, are used to access an object's properties (getters) and to modify these properties in a controlled way (setters).
+
+Getters are used to retrieve the values of an object's properties, while setters are used to set or modify these values.
+
+We'll look at how to define these methods in a PHP class, as well as their practical use to encapsulate data, control access and guarantee data consistency within our application.
+
+Let's go back to the `Users` class to see how to define and use getters and setters methods:
+
+```php
+<?php
+
+class Users {
+
+    private $name;
+
+    private $age;
+
+    // Getter for property $name
+
+    public function getName() {
+
+        return $this->name;
+
+    }
+
+    // Setter for property $name
+```
