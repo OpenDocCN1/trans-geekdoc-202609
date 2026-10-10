@@ -1,0 +1,162 @@
+
+```python
+def transpose_convolution_layer(input_layer,
+    filters,
+    kernel_size=[4, 4],
+    activation=tf.nn.relu,
+    strides=2):
+    layer = tf.layers.conv2d_transpose(
+        inputs=input_layer,
+        filters=filters,
+        kernel_size=kernel_size,
+        activation=activation,
+        strides=strides,
+        kernel_regularizer=tf.nn.l2_loss,
+        bias_regularizer=None
+    )
+    add_variable_summary(layer, 'convolution')
+    return layer
+```
+
+接下来，我们将使用以下代码定义一个带有非线性激活的全连接层：
+
+```python
+def dense_layer(input_layer,
+    units,
+    activation=tf.nn.relu):
+    layer = tf.layers.dense(
+        inputs=input_layer,
+        units=units,
+        activation=activation
+    )
+    add_variable_summary(layer, 'dense')
+    return layer
+```
+
+现在，我们将定义一个接收噪声作为输入并转换为图像的生成器。生成器由几个全连接层组成，后面跟转置卷积层以对噪声进行上采样。最后，通过一个卷积层使噪声变为单通道。在每层之间都有批归一化层，以便梯度平滑流动。我们将使用以下代码定义生成器：
+
+```python
+def get_generator(input_noise, is_training=True):
+    generator = dense_layer(input_noise, 1024)
+    generator = tf.layers.batch_normalization(generator,
+        training=is_training)
+    generator = dense_layer(generator, 7 * 7 * 256)
+    generator = tf.layers.batch_normalization(generator,
+        training=is_training)
+    generator = tf.reshape(generator, [-1, 7, 7, 256])
+    generator = transpose_convolution_layer(generator)
+    generator = tf.layers.batch_normalization(generator,
+        training=is_training)
+    generator = transpose_convolution_layer(generator)
+    generator = tf.layers.batch_normalization(generator,
+        training=is_training)
+    generator = convolution_layer(generator, 3)
+    generator = convolution_layer(generator, 1, activation=tf.tanh)
+    return generator
+```
+
+# 生成式模型
+
+## 第 8 章
+
+我们现在将结束风格传输章节。此操作相对较慢，但适用于任何图像。在下一节中，我们将看到如何使用类似的思路来创建一个超分辨率网络。有几种方法可以改进此过程，例如：
+
+- 对随机图像添加高斯滤波
+- 给不同层添加不同的权重
+- 不同的层和权重可以用于内容
+- 使用图像权重初始化而非随机图像初始化
+- 可以保留颜色
+- 可以使用掩码（Masks）来指定需求
+- 任何草图都可以转换为绘画
+- 绘制草图并创建图像
+
+通过训练 CNN 输出此类图像，任何图像都可以转换为艺术风格。
+
+![](img/48c861eac4dc634fbf2a09fdbe884beb_239_0.png)
+
+## 生成对抗网络
+
+生成对抗网络（GAN）由 Ian Goodfellow 于 2014 年发明。它是一种无监督算法，同时训练两个神经网络分别作为判别器和生成器。该技术可以从随机噪声生成图像，判别器可以评估其是否为原始图像。经过进一步训练，生成器网络可以生成照片级真实的图像。生成器网络通常是一个反卷积神经网络，而判别器是一个卷积神经网络。
+
+理解这一点的绝佳类比是将生成器看作一个制作假币的人，而将判别器看作一个判断钱是否真假的警察。生成器根据警察的反馈不断改进假币的质量，直到警察再无法区分真钱和假币为止。现在，让我们开始实现。
+
+[ 225 ]
+
+## 基础 GAN (Vanilla GAN)
+
+原始的 GAN 被称为基础 GAN。在构建模型之前，让我们定义几个对本章其余部分有用的层。以下是添加了漏激活和正则化的 `convolution_layer`：
+
+```python
+def convolution_layer(input_layer,
+    filters,
+    kernel_size=[4, 4],
+    activation=tf.nn.leaky_relu):
+    layer = tf.layers.conv2d(
+        inputs=input_layer,
+        filters=filters,
+        kernel_size=kernel_size,
+        activation=activation,
+        kernel_regularizer=tf.nn.l2_loss,
+        bias_regularizer=None
+    )
+    add_variable_summary(layer, 'convolution')
+    return layer
+```
+
+接下来，我们将使用以下代码定义一个 `transpose_convolution_layer`，它是带有正则化的 `convolution_layer` 的相反操作：
+
+```python
+def transpose_convolution_layer(input_layer,
+    filters,
+    kernel_size=[4, 4],
+    activation=tf.nn.relu,
+    strides=2):
+    layer = tf.layers.conv2d_transpose(
+        inputs=input_layer,
+        filters=filters,
+        kernel_size=kernel_size,
+        activation=activation,
+        strides=strides,
+        kernel_regularizer=tf.nn.l2_loss,
+        bias_regularizer=None
+    )
+    add_variable_summary(layer, 'convolution')
+    return layer
+```
+
+接下来，我们将使用以下代码定义一个带有非线性激活的全连接层：
+
+```python
+def dense_layer(input_layer,
+    units,
+    activation=tf.nn.relu):
+    layer = tf.layers.dense(
+        inputs=input_layer,
+        units=units,
+        activation=activation
+    )
+    add_variable_summary(layer, 'dense')
+    return layer
+```
+
+现在，我们将定义一个接收噪声作为输入并转换为图像的生成器。生成器由几个全连接层组成，后面跟转置卷积层以对噪声进行上采样。最后，通过一个卷积层使噪声变为单通道。在每层之间都有批归一化层，以便梯度平滑流动。我们将使用以下代码定义生成器：
+
+```python
+def get_generator(input_noise, is_training=True):
+    generator = dense_layer(input_noise, 1024)
+    generator = tf.layers.batch_normalization(generator,
+        training=is_training)
+    generator = dense_layer(generator, 7 * 7 * 256)
+    generator = tf.layers.batch_normalization(generator,
+        training=is_training)
+    generator = tf.reshape(generator, [-1, 7, 7, 256])
+    generator = transpose_convolution_layer(generator)
+    generator = tf.layers.batch_normalization(generator,
+        training=is_training)
+    generator = transpose_convolution_layer(generator)
+    generator = tf.layers.batch_normalization(generator,
+        training=is_training)
+    generator = convolution_layer(generator, 3)
+    generator = convolution_layer(generator, 1, activation=tf.tanh)
+    return generator
+```
