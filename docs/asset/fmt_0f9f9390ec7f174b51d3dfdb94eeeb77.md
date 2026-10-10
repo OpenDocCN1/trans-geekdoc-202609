@@ -1,0 +1,313 @@
+
+- 孟加拉语数据集 (Bengali dataset), 86
+- 孟加拉语假新闻和谣言检测, 86–87
+- Betyclud (Betyclud), 6
+- 双向长短期记忆 (Bidirectional long short-term memory), 105
+- 二进制独热编码向量 (Binary one-hot vector), 91, 92
+- 绑定 (Binding), 196
+- 生物信息学 (Bioinformatics), 324, 325
+- 生物识别认证 (Biometric authentication), 235, 237, 239, 241
+- 生物武器 (Bioweapon), 349, 350, 352, 353, 356
+- 比特 (Bit), 316, 332
+- 黑洞 (Black hole), 424
+- 蓝牙 (Bluetooth), 332
+- 玻尔兹曼 (Boltzmann), 315
+- 大脑 (Brains), 308
+- 刷刺活检 (Brush biopsy), 16
+- 臀部 (Butt), 186
+- 热点 (Buzz), 336
+- 基于正则化最小二方的协同表示分类 (CRC_RLS), 170
+- 性能比较 (Comparing performances), 23
+- 复杂症 (Complications), 308
+- 组件 (Components), 304
+- 复合 (Compound), 197
+- 压缩 (Compression), 346
+- 压缩感知 (CS), 165–167, 169–173
+- 计算机安全 (Computer security), 270–271
+- 计算机 (Computers), 307
+- 计算 (Computing), 304, 305, 341
+- 概念 (Concepts), 306, 308
+- 条件 (Condition), 200
+- 条件概率计算 (Conditional probability, calculation), 88–89
+- 构型 (Conformation), 197
+- 连性 (Connectivity), 304, 331
+- 约束 (Constraints), 318
+- 消费者 (Consumer), 339
+- 消耗 (Consumption), 341
+- 容器 (Container), 337
+- 遏制 (Containment), 193, 198
+- 污染 (Contamination), 184
+- 上文 (Context), 343
+- 矛盾 (Contradictions), 184
+- 运输 (Conveyance), 337
+- 卷积 (Convolution), 310, 311, 341, 342
+- 卷积神经网络 (CNN), 105, 168, 387
+- 冠病毒 (Corona), 192
+- 相关性 (Correlation), 201
+- 余弦相似度 (Cosine similarity), 107
+- 新冠肺炎 (COVID-19), 165
+- CPS 组件,
+  - 控制组件, 403–404
+  - 感知组件, 403
+  - 事件型 CPS, 404
+  - 基于混合的 CPS, 405
+  - 基于晶格的事件, 404–405
+  - 定时执行 CPS, 404
+- 计算 (Calculation), 347
+- 相机 (Cam), 187
+- 容量 (Capacities), 324, 325
+- 案例研究 (Case study), 280–283
+- 案例 (Cases), 188, 198, 200
+- 猫 (Cat), 320
+- 细胞 (Cell), 338
+- 执行官 (CEO), 336
+- 特征 (Characteristics), 303, 347
+- 化学的 (Chemical), 321
+- 分类 (Classification), 107
+- 分类技术, LSVM, 87
+- 分类器, 朴素贝叶斯 (Naive Bayes), 85, 88–89
+- 标题党 (Clickbait), 86
+- 客户端 (Clients), 325, 338
+- 云端 (Cloud), 342
+- 云网关/枢纽 (Cloud gateway/hub), 131
+- CNN, 187, 311
+- 科恩系数 (Cohen’s kappa), 393
+- CPU, 329
+- 客户关系管理 (CRM), 323
+- 加密操作 (Cryptographic operations), 262
+- CSI 方法, 88
+- CSV, 5–6
+- CT, 185–187
+- CT 扫描 (CT scan), 16
+- 客户 (Customer), 323, 338
+- 信息物理系统 (Cyber-physical systems), 70
+- 网络网络攻击 (Cyber attack), 381, 415, 420
+- 信息物理接口族 (Cyber-physical interface family), 402
+- 信息物理物理系统 (CPS), 415–431
+- 细胞毒性 (Cytotoxicity), 322
+- 检测器 (Detector), 314
+- 偏差 (Deviations), 312
+- 设备 (Device), 184, 304, 305, 307, 329, 331, 332, 341
+- 诊断 (Diagnosis), 184, 185, 188
+- 话语整合 (Discourse integration), 116
+- 离散小波变换 (DCT), 165
+- 疾病 (Disease), 189, 192
+- 虚假信息 (Disinformation), diverse range, 86
+- 干扰 (Disruption), 189
+- CPS 中的分布与可靠性, 403–405
+- 数据 (Data), 184, 188, 201, 202, 307, 308, 311–314, 317, 320, 324–326, 335, 343
+- 数据集 (Dataset), 184, 198, 200, 202, 308, 311, 317, 320, 323
+- 数据集 (Datasets), 92–93
+- BanFakeNews, 86, 93, 94–95
+  - 孟加拉语, 86
+  - 假新闻语料库, 92, 94, 95
+  - 谎者 (Liar), 82, 93–95
+  - 测试, 91, 92
+  - DDoS 攻击, 421, 431
+- 交易 (Deals), 326
+- 调试 (Debugging), 317
+- 决策 (Decision making), 22
+- 决策树 (Decision tree), 39
+- 声明 (Declarations), 306
+- 解码器 (Decoder), 319
+- 深度学习 (Deep learning), 73
+- 深度学习网络 (DNN), 167
+- 深度神经网络 (Deep neural network), 23
+- 深度 Q , 123, 124, 144
+- 模糊化 (Fuzzification), 147, 149
+- 延迟 (Delay), 347
+- 拒绝服务攻击 (DDoS attacks), 254
+- 检测 (Detection), 186–188, 341
+- 分布 (Distributions), 197
+- DL, 183–185, 188, 303, 304, 306–308, 316, 319, 320, 322–325, 341–343, 124, 144
+- 文档 (Document), 321
+- DoS 攻击, 423, 426
+- 药物 (Drug), 195, 192
+- 双交叉模式 (DCP), 167
+- 动态规划 (Dynamic programming), 128
+- ANN 框架 (ANN framework), 87
+- 评估 (assessment), 102
+- 边缘分析 (Edge analytics), 139, 140, 143
+- 效力 (Efficacy), 187
+- 电气设备 (Electrical devices), 137
+- 电梯 (Elevator), 337
+- 空的 (Empty), 337
+- 编码器 (Encoder), 316, 317
+- 编码 (Encoding), 317
+- 能量 (Energy), 333, 339
+- 参与 (Engagement), 339
+- 工程师 (Engineers), 347
+- 环境 (Environment), 305
+- 酶 (Enzyme), 195
+- 根除 (Eradication), 201, 202, 308, 318
+- 增生 (Erythroplasia), OE, 6, 7
+- ESP32 微控制器, 5, 10–12, 323
+- 以太网 (Ethernet), 331
+- 评估 (Evaluation), 345
+- 事件枢纽 (Event hub), 138
+- 剥脱细胞学 (Exfoliation cytology), 16
+- 实验设置 (Experimental setup), 47
+- 专家 (Experts), 308
+- 提取 (Extraction), 347
+- Facebook, 85, 87, 88
+- 人脸识别 (FR), 166–169, 178–179
+- 表面 (Facet), 202
+- 因素 (Factors), 189, 309
+- 假新闻检测 (Fake news, detection of), algorithm, 89–90
+  - 数据集, 92–93
+  - 评估, 93–95
+  - 方法解释, 91–92
+  - 流程图, 90
+  - 文献综述, 87–88
+  - 提出的工作, 88–92
+  - 性能相对比较, 95
+  - 结果与分析, 92–95
+- 假新闻语料数据集, 92
+- 图 (Figure), 197–200, 306, 319, 320, 334, 339
+- 文件 (Files), 307
+- 过滤 (Filtering), 107
+- 火线 (Firewire), 8
+- 拟合 (Fitting), 317
+- 平坦化 (Flattening), 311
+- 预测见解 (Forecasted insight), 138
+- 框架 (Framework), 188, 305, 324, 345
+- FT 分类器, 107
+- 函数 (Function), 309, 313
+- 功能 (Functionality), 335
+- 模糊化 (Fuzzification), 147, 149
+- 模糊逻辑 (Fuzzy logic), 147–157
+- 模糊控制系统 (Fuzzy logic control system), 147, 149
+- 模糊比例积分 (PID) 控制器, 148
+- 模糊规则库 (Fuzzy rule base), 155
+- 模糊规则查看器 (Fuzzy rule viewer), 149, 156
+- 模糊变量 (Fuzzy variables), 149
+- 气体传感器 (Gas sensor), 12
+- GasLevelMonitoring, 9
+- GasLevelMonitoring 库, 14–15
+- 门 (Gates), 312
+- GE, 336
+- 性别 (Gender), 198
+- 生成器 (Generator), 313
+- 手势控制 (Gesture control), 290, 294
+- Google, 319, 335
+- GPS 定位 (GPS location), 278–288, 291
+- 梯度 (Gradient), 318
+- 梯度图 (Gradient graph), 157–161
+- 网格 (Grid), 339
+- 指南 (Guide), 189
+- 指南 (Guidelines), 304
+- 农民 (Farmers), 340
+- 农耕 (Farming), 340
+- 特征提取技术 (Feature extraction technique), 388
+- 特征生成 (Feature generation), 388
+- 前馈神经网络 (Feed forward neural network), 413
+- 女性 (Female), 197, 199
+- 少数接近观察 (Few close observations), 223
+- HAN 假新闻检测, 88, 827
+- Halitos, 7
+- 处理器 (Handler), 335
+- 硬件 (Hardware), 329, 332
+- 健康 (Health), 340
+- 医疗保健 (Healthcare), 340, 342
+- 层级结构 (Hierarchy), 189
+- 同源性 (Homology), 195
+- 医院 (Hospital), 197, 200
+- 主机 (Host), 191
+- HPLC, 16
+- 混合与许可云 (Hybrid and permit cloud), 145
+- 超空间类比语言 (Hyperspace analog to language), 106, 107
+- 超文本传输协议 (HTTP), 7-8
+- 物联网 (IoT), 305, 353, 360, 361, 363, 416, 419, 431
+- 干预措施 (Interventions), 193
+- CPS 简介 (Introduction to CPS), 399–400
+- 深度学习简介 (Introduction to deep learning), 276–279
+- 机器学习简介 (Introduction to machine learning), 274–275
+- 侵入 (Intrusion), 306
+- 侵入检测 (Intrusion detection), 419
+- IoT 设备 (IoT devices), 137, 139
+- IoT 枢纽 (IoT hub), 131
+- IoT 网关 (IoT gateway), 34
+- IoT 解决方案 (IoT solution), 250
+- IP (Ip), 331
+- 隔离 (Isolation), 197
+- 条目 (Items), 334
+- IFTTT 服务器 (IFTTT server), 259, 264
+- 图像 (Image), 307, 314, 320
+- 185, 188
+- 不足 (Inadequacy), 336
+- 缘切活检 (Incisional biopsy), 16
+- 不一致性 (Inconsistencies), 308
+- 索引 (Indices), 189
+- 个体 (Individual), 342
+- 感染 (Infection), 183, 187, 189, 195
+- 发明 (Invention), 333
+- 输入 (Input), 201, 309–313, 315, 318
+- 检查 (Inspection), 197, 201
+- 实例 (Instance), 326
+- 整合 (Integration), 304
+- 智能 (Intellect), 306
+- 交互 (Interaction), 196
+- ML 与 CPS 交互 (Interaction between ML and CPS), 410
+- 接口 (Interface), 327, 329, 332
+
+## 440 索引
+
+- 局限性, 184, 304, 347
+- 线性图, 263–264
+- 液体活检, 16
+- 文献综述, 368–371
+- 局部二进制模式 (LBP), 167
+- 蝗虫, 349–357, 362, 365
+- 逻辑回归, 24, 39
+- 损失 (Loss), 392
+- 批 (Lot), 308
+- LSTM, 188
+- LSTM 架构, 105
+- LSTM 递归神经网络, 44
+- LSVM 分技术, 87
+- 肺, 185–187
+- MAC 层, 426
+- 机器, 307, 315
+- 机器学习, 72, 124–126, 130, 139, 145
+- 机器学习 (ML), 社交媒体中的虚假新闻和谣言（参见 虚假新闻，检测）
+- 印度的机器学习与深度学习, 79
+- 机器间交互, 233
+- 宏观, 345
+- 作者, 347
+- 男性, 197
+- 手动, 147, 155
+- 马尔可夫决策过程, 126, 128, 145
+- 矩阵, 339
+- MD, 197
+- 平均, 201, 202
+- 测量, 188
+- 措施, 193
+- 内存, 312, 331
+- 消息队列传输 (MQTT), 7–8
+- MessagePack, 8
+- 计费, 334
+- 方法, 303, 329
+- 方法论, 323
+- 指标, 345
+- 微, 345
+- 微内核, 327
+- 毫秒, 341
+- 缓解, 193
+- 粒话 (Mitos), 320
+- ML, 303, 304, 306, 307
+- ML 框架, 139
+- MFD 框架, 87
+- 模型, 185, 191, 196, 314, 315, 319
+- 建模, 332
+- 模块, 327
+- 监控, 346
+- 死亡率, 184, 200
+- MQTT 代理服务器, 253, 254
+- MQ 传感器, 5
+- MRI, 16
+- 多倍, 309
+- 多任务处理, 305, 329
+- 朴素贝叶斯, 24, 41, 107, 108
+- 朴素贝叶斯分类器, 58, 88–99
+- 自然语言处理, 108
+- 自然语言处理 (NLP) 方法, 86–91
