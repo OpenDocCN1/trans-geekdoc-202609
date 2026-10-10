@@ -1,0 +1,457 @@
+
+# 154 索引
+
+- 能源供需平衡 135
+- 能源效率 114
+- 能源效率低下 57
+- 能源互联网 135, 139
+- 能源来源 142–143
+- 能源共享 135
+- 能源交易 135
+- Energy Web 去中心化系统 140
+- Energy Web 基金 140
+- 可执行性 64
+- ENIGMA 106
+- 企业级 92
+- EOS 57, 65
+- EOS 节点 57
+- 以太坊 18
+- 以太坊 2.0 91
+- Ethereum, 18, 22–50, 61, 80, 83, 96–97, 109, 118, 144
+- 以太坊基金 95
+- 以太坊主网 50
+- 以太坊命名服务 87
+- 以太坊智能合约最佳实践 74
+- 以太坊虚拟机 65
+- Etherscan 89
+- 事件 28–31
+- 事件模型 118
+- EVM 65
+- EVM 字节码 66
+- EW-DOS 140
+- 电力交换 138
+- 执行-订单-验证 69
+- 执行排序 118
+- 执行环境 65
+- 电力费用 80
+- 外部创新者 90
+- 日食攻击 105
+- 经济激励 128
+- 生态系统 90
+- 边缘 102
+- 边缘网关 114, 116
+- 效率 128
+- EIP 1193 79
+- 著名见证人选举 36
+- 电动充电 137
+- 消除中间环节 139
+- 方面 75
+- FairAccess 106, 111
+- 公平性 102
+- 见证人 32, 34
+- 故障代理 129
+- 费用 38, 60
+
+# 154 索引
+
+- 法币 4
+- 法定货币 53
+- 文件存储 41–42
+- 最终性 55–56
+- 已完成的区块 56
+- 金融应用 120, 132
+- 金融服务 121
+- 指纹识别 108
+- FlexiDAO 142
+- Flint 92
+- 雾 102
+- 形式化身份 51
+- 形式化验证 71
+- 框架 70
+- 全注 47
+- 全职支持 97
+- Ganache 70
+- Gas 58, 60
+- Gas 价格 60
+- 生成领域 136
+- 创世文件 94
+- Go 70, 92
+- Golang 65
+- 货物制造 124
+- Google BigQuery 99
+- Google Cloud Platform 99
+- 协议 28–29, 31, 34
+- 治理 121
+- 绿色 143
+- 灰色状态 15
+- 保证机制 3
+- 有保证的 15
+- 猜测哈希值 8
+- HCC 成员 43
+- 医疗保健 121
+- Hedera 97
+- Hedera 管理委员会 92
+- Hedera Hashgraph 37, 60
+- Hedera 平台 43
+- Hedera 智能合约服务 65
+- Hedera 代币 42
+- 隐藏提示 22
+- 交互历史 126
+- 家庭网关 136
+- 同态掩码 105
+- HTTP 81
+- 人道主义 121
+- 混合方法 106
+- 混合网络 139
+- Hyperledger Burrow 65
+- Hyperledger Explorer 89
+- Hyperledger Fabric 54, 92, 96–97
+- Hyperledger Project 96
+- IBFT 97
+- IDE 70
+- 识别并修复问题 89
+- 身份信誉系统 121
+- 基于身份的访问控制 110
+- IMEI 107
+- 不可变性 28, 68, 103
+- 激励模型 38
+- 激励支付 39
+- 工业 4.0 122
+- Indy 92
+- Infura 99
+- 创新交易 23
+- 保险 132
+- 集成环境 70
+- IoT 与 DLT 集成 101
+- 中间人 139
+- 区块链通信 63
+- 网络层 41
+- 能源互联网 135
+- 物联网 19
+- 互操作性 62–63
+- 星际文件系统 84
+- 分片消息 41
+- 跨片智能合约交互 76
+- 硬件安全 115
+- 哈希 9
+- 哈希算力 60
+- 哈希率 103
+- 哈希值 3, 92
+- 哈希树 7
+- Hashgraph 应用 32
+- Hashgraph 图表 29
+- Hashgraph 历史 29
+- Hashgraph 账本 29
+- Hashgraph 结构 31
+- 哈希算法 18
+- HBAE 93
+
+# 155 索引
+
+- 入侵者 129
+- 恶意节点 36
+- IoT 92
+- 强制性访问控制 110
+- IoT 架构 101
+- 中间人攻击 16
+- IoT 设备 58, 116
+- 操纵参数 132
+- IoT 开关和电表 144
+- 市场 134
+- IoT 协议 116
+- 市场领域 136
+- 主分片 40
+- 成员政策 38
+- IOTA 2.0, 94
+- IOTA 2.5, 60
+- IOTA 节点包 26
+- IOTA 基金会 94
+- IOTA 网络 21
+- IPC 81
+- IPS 84, 106
+- Iroha 92
+- 不可逆 126
+- 微电网 137–138, 141
+- 微支付 19, 59, 138
+- 微交易 42, 59
+- 里程 132
+- 里碑交易 24
+- 矿机 8
+- Java 70
+- JavaScript 65
+- JSON-RPC 81
+- 键值对 88
+- Kotlin 65
+- 挖矿 48, 91
+- 矿池 8, 10
+- 挖矿算力 16
+- 延迟 54, 78
+- 最新区块 56
+- 账本构建 48
+- 镜像 78, 93
+- 处理不当 74
+- 法律义务 64
+- 缓解技术 73
+- 库 89
+- 移动网络 143
+- LDAR 123
+- 模块化网络 71
+- 轻量节点 48
+- 模块化 76
+- Lightning 网络 63
+- 模块 75
+- Linux 基金 92
+- Litecoin 18, 100
+- LO Energy 141
+- 货币政策 13
+- 货币交易 135
+- 本地分布式账本节点 67
+- 钱 120
+- 远程广域网 143
+- MongoDB 106
+- 低延迟 28
+- 垄断 43
+- 低功率移动网络 143
+- msg.sender 109
+- 忠诚代币 144
+- 多智能体机器人系统 126
+- 多智能体系统 126
+- 多角色 113
+- 多方计算 105
+- 多租户 137
+- M2M 交易 102
+- 神话 70–71
+- MAC 110
+- 机器接口 114
+- 命名服务 82
+- 机器间 1
+- Namecoin 88
+- 机器间协商 137
+- 网络控制 51
+- 主网 91, 93
+- 网络收敛 55
+- 多数 32
+- 网络费用 39
+
+# 156 索引
+
+- 网络治理 48
+- 网络规模 56
+- 基于网络的攻击 36
+- NIST 136
+- 节点 21, 40, 47
+- 一 7
+- 非确定性智能代码 84
+- 非金融应用 120
+- 请求数 78
+- OAuth 2.0 119
+- 目标模型、架构与
+- 可观测性 64
+- 链下客户端 54
+- 链下数据库 106
+- 链下逻辑 61
+- 链下存储 118
+- 链上逻辑 44
+- 链上扩展 61
+- 一次性密码 109
+- 开放共识模型 39
+- 开放数据 137
+- 开放公共 WLAN 52
+- OpenZeppelin 71, 99
+- Opera
+- 操作领域 136
+- 任务优化 128
+- 预言机架构 85
+- 预言机安全 85
+- 预言机 83
+- 执行订单 69
+- 孤立区块 22
+- 其他父区块 30
+- 输出交易 26
+- 输出寄存器 121
+- 输出权 133
+- OYEN 71
+- P2P 通信 47
+- P2P 能源交易 137, 141
+- P2P 网络 47
+- PoS 91
+- Power Ledger 141
+- Power 购买协议 142
+- 电力线通信 143
+- 预测市场 121
+- 预付电表 137, 144
+- 私有 92, 93
+- 私有网络 50
+- 私有 WLAN 52
+- 概率性 56
+- 处理层 114
+- 编程代码 46
+- 证明工作 55
+- 证明容量 1
+- 证明执行 118
+- 证明空间 1
+- 传播交易 22
+- 传播者 137
+- 可证明的 86
+- 智能合约 75
+- 代理合约 75
+- 伪匿名 103–104
+- 公有 2, 37, 91
+- 公有拍卖 87
+- 公有数据集 99
+- 公有网络 49, 57, 91
+- QuikNode 99
+- Quorum 95, 97
+- R3 93
+- Raiden 网络 63
+- 随机特卡洛 20
+- 随机 21
+- RBAC 110
+- 记录 5
+- 冗余 44
+- 参考模型 48
+- 注册表 52
+- 监管原因 74
+- 剩余交易 27
+- Remix 70
+- 复制 83
+- 资源所有者 87
+- 资源服务器 11
+- 65, 92
+- 可扩展性 28, 60
+
+# 158 索引
+
+- solidify 15
+- Solidity 66, 69, 92
+- 已区块 (solved block) 12
+- 减速带 (speed bump) 75
+- SSI 108
+- 稳定性 (stability) 38
+- 质押模型 (staking model) 42
+- 质押代币 (staking token) 86
+- 启动 (start-up) 130
+- 状态通道 (state channel) 62
+- 状态分 (state shading) 62
+- 存储 (storage) 57, 82–83, 114
+- Storj 84
+- 强见 (strong seeing) 40
+- 强烈地 (strongly) 33
+- 充分终局 (sufficient finale) 56
+- 适用性检查 (suitability check) 129
+- 智能合约 (Suncontract) 141
+- 超级多数 (supermajority) 33, 40
+- Swarm 83
+- SWC 74
+- SWC 注册表 (SWC Registry) 73
+- Swether 144
+- 女巫攻击 (Sybil) 105
+- 女巫攻击 (Sybil attack) 32
+- 同步消息 (sync message) 36
+- 同步 (synchronization) 44
+- 系统 (system) 45
+- 代币化 (tokenization) 139
+- 代币 (tokens) 2
+- 工具 (tool) 89
+- 镇报员 (Town Crier) 86
+- tr 132
+- 交易 (trade) 121
+- 流量阻塞 (traffic obstruction) 135
+- 交易 (transaction) 3–4
+- 交易成本 (transaction costs) 54
+- 交易数据 (transaction data) 118
+- 交易费 (transaction fee) 7, 13, 59–60
+- 交易哈希 (transaction Hash) 26
+- 交易历史 (transaction History) 24
+- 交易发行者 (transaction issuer) 115
+- 交易注册 (transaction register) 5
+- 交易请求者 (transaction requester) 116
+- 交易分 (transaction shading) 62
+- 交易验证 (transaction validation) 59
+- 交易排序依赖 (transaction-ordering dependence) 74
+- 转移访问 (transferring access) 131
+- 传输域 (transmission domain) 126
+- 透明度 (transparency) 126
+- truffle 70, 99
+- 树干提示 (trunk tip) 25
+- 信任 (trust) 4, 38, 69, 102
+- 可信交易交换 (trusted exchange of transactions) 45–46
+- 可信执行 (trusted execution) 44, 46
+- 无信任真相 (trustless truth) 12
+- 可信性 (trustworthiness) 11
+- tx.origin 109
+- 织网 (tangle) 2, 19, 21
+- 织网历史 (tangle history) 22
+- 任务分发 (task dispatching) 128
+- 分类法 (taxonomy) 52
+- 模板 (template) 96
+- 临时访问 (temporary access) 131
+- 租户 (tenant) 76
+- tendermint 63
+- 测试工具 (testing tool) 70
+- tetramax 技术转移 (tetramax technology transfer) 117
+- 吞吐量 (throughput) 54
+- 时间事件顺序 (time event order) 37
+- 时间劫持 (timejacking) 105
+- 限时投票 (time-limited voting) 129
+- 时间戳 (timestamp) 31
+- 时间戳共识 (timestamp consensus) 35
+- 时间戳依赖 (timestamp dependence) 74
+- 事件时间戳 (timestamp of event) 36
+- 时间-时间戳账本 (time-timestamp ledger) 14
+- 提示 19
+- UML 类图 118
+- 不可伪造代币 (unforgeable token) 109
+- 唯一区块链地址 (unique blockchain address) 107
+- 唯一实体标识符 (unique entity identifier) 107
+- 不稳定的 (unstable) 15
+- 不可停止域名 (unstoppable domains) 88
+- UP2 143
+- 上层协议 (upper layer protocols) 47
+- ursa 72
+- 可用性问题 (usability problem) 78
+- 用例 (use case) 90
+- 用户 (user) 90
+- 用户访问 (user access) 49
+- 用户交互 (user interaction) 114
+- 用户隐私 (user privacy) 53
+- Usiso 143
+- 公用表 (utility meter) 126
+- 实用型代币 (utility token) 138
+
+# 索引 — 159
+
+- 价值 (value) 3
+- 原生三元运算符 (vanilla ternary) 24
+- VaultPoint 113
+- 车对环境 (vehicle-to-environment) 122
+- 车对基础设施 (vehicle-to-infrastructure) 122
+- 可验证性 (verifiability) 64
+- 可验证交易 (verifiable transaction) 109
+- 验证 (verification) 6, 66
+- 验证频率 (verification frequency) 8
+- 虚拟 IPv6 地址 (virtual IPv6 address) 109
+- 虚拟模型 (virtual model) 125
+- 虚拟现实 (virtual reality) 123
+- 虚拟投票 (virtual voting) 29, 32, 36, 39
+- 波动性 (volatility) 52
+- 投票权重 (vote weighting) 40
+- 漏洞 (vulnerability) 72
+- Vper 69, 92
+- 钱包互操作性 (wallet interoperability) 79
+- Web3.js 67, 80
+- Web3.py 80
+- Web3.io 80
+- WebAssembly 65, 70
+- WebSocket 81
+- WePower 142
+- 证人 (witnesses) 33
+- 最坏情况 (worst-case scenario) 131
+- 是/否问题 (Yes/No questions) 37
+- Zcash 18
+- 零知识证明 (zero-knowledge proof) 53, 105
+- ZK-SNARK 105
+- ZK-STARK 105
+- ZMOK 99
+- 行走 (walk) 21
+- 钱包 (wallet) 78
