@@ -1,0 +1,108 @@
+
+
+### 7. 扫描 IP 范围
+在输入对话框中键入 `10.0.0.0/8` 作为要扫描的地址范围。扫描可能需要长达 30 分钟才能完成。扫描完成后，单击通知上的“OK”按钮。
+
+### 8. 布局检测到的计算机
+接下来屏幕上会显示一组检测到的计算机。在灰色区域右键单击，然后选择 **Layout | Stack**。这会将计算机并排放置，并显示检测到的计算机的 IP 地址。
+
+### 9. 选择目标系统
+选择 Windows 7 系统（其 IP 地址应为 `10.0.0.2`）。我在实际网络上操作，所以我选择的是 `10.0.1.35`。
+
+### 10. 定位 EternalBlue 漏洞利用
+选中 Windows 7 系统后（周围显示绿色虚线框），在左侧面板展开 **Exploit | Windows | SMB**。你应该会看到一个标记为 `ms17_010_eternalblue` 的漏洞利用模块。
+
+![Image](f0158-01.jpg)
+
+### 11. 配置漏洞利用参数
+双击 `ms17_010_eternalblue` 漏洞利用模块。确保 `LHOST` 地址是你的 Kali Linux 系统的地址。请注意，此漏洞利用针对 Windows 7 和 Server 2008 R2 目标。
+
+![Image](f0158-02.jpg)
+
+### 12. 发起攻击
+单击 **Launch** 开始攻击，等待一两分钟。如果攻击成功，你会注意到 Armitage 中该计算机的图标变为红色。
+
+### 13. 交互 Shell
+攻击成功后，你应该会看到一个 **Exploit** 选项卡，显示在该系统上打开了一个会话。右键单击被攻陷的计算机（现显示为红色），选择 **Shell 1 | Interact** 以在该系统上打开命令提示符。
+
+![Image](f0159-01.jpg)
+
+### 14. 验证管理员权限
+你应该会注意到屏幕底部有一个 **Shell 1** 选项卡。同时请注意，这是受害者系统的 Windows 命令提示符。你拥有该系统的完全管理员访问权限。为了验证这一点，请键入以下命令查看该系统 SAM 数据库中的用户账户列表：
+
+![Image](p0159-01.jpg)
+
+### 15. 创建后门账户
+接下来，你将在该系统上创建一个用户账户作为后门，以防有人修补了系统导致你无法再次利用漏洞。键入以下命令来创建用户并将该用户放入 administrators 组：
+
+![Image](p0159-02.jpg)
+
+### 16. 导航至 hosts 文件目录
+创建隐藏用户账户只是为了展示我们拥有完全管理权限。我们真正想做的是修改他们的 hosts 文件，以便当用户访问银行网站时，会被重定向到我们的伪造网站。请注意你当前位于 `c:\windows\system32` 文件夹。键入以下命令导航到包含 hosts 文件的文件夹：
+
+![Image](p0159-03.jpg)
+
+### 17. 修改 hosts 文件
+要向 hosts 文件添加无效条目，请键入以下内容：
+
+![Image](p0160-01.jpg)
+
+### 18. 验证重定向
+切换到受害者的 Windows 7 系统并启动 Web 浏览器；然后导航到 [www.mybank.com](http://www.mybank.com)。
+
+### 19. 结果确认
+你被发送到课程网站了吗？ ______________
+
+---
+
+## Domain Hijacking（域名劫持）
+Domain hijacking is a type of attack that involves the hacker taking over a domain name from the original registrant. The hacker may hijack the domain by using social engineering techniques to gain access to the domain name and then switch ownership, or the hacker could exploit a vulnerability on the systems that host the domain name to gain unauthorized access to the domain registration.
+
+## Uniform Resource Locator Redirection（URL 重定向）
+Uniform Resource Locator (URL) redirection is a DNS attack that involves the attacker sending a request for a DNS name to a different location such as a malicious web site that the attacker is running.
+
+## Domain Reputation（域名信誉）
+Domain reputation is a rating on your domain name of whether or not the domain is known to send spam messages. If an employee in your company sends a lot of spam messages, your domain may be flagged as having a poor reputation due to the sending of those spam messages. Spam-filtering systems will block e-mail messages from systems with a poor domain reputation.
+
+---
+
+### Pass the Hash（哈希传递）
+Pass the hash is a hacking technique used to access networks that use Microsoft NT LAN Manager (NTLM) as their authentication protocol. With pass the hash, the hacker first compromises a Windows system and then performs a hashdump of the SAM database. The hashdump contains all of the password hashes for each of the user accounts on that system. The hacker can then use those hashes in a pass-the-hash attack to move laterally throughout the network and authenticate to the next system. The benefit of this type of attack from a hacker’s perspective is that the hacker does not need to crack the user passwords; they can simply pass the hash value of the password to another system on the network when authenticating. As a mitigation technique for pass the hash, you can enforce Kerberos authentication in order to remove the risk of this attack.
+
+### Amplification（信号放大）
+Amplification is the process of increasing the strength of a signal so that communication can occur. A hacker may amplify the signal on their wireless card so that they can reach greater distances with wireless. This means that the hacker may not need to be physically close to a network in order to connect to that network if they have amplified their signal. Keep in mind, from a security point of view, you should lower the power on your wireless access point to force someone to be close to your access point in order to connect (inside the facility).
+
+### Spam（垃圾邮件）
+Spam is sending the same unsolicited e-mail message to a number of people. Spam messages are typically sent in hopes that the receiver of the spam message will buy a product or service from the sender of the message.
+
+Most e-mail servers now have spam filters in place that help protect the system from receiving a large number of unsolicited e-mail messages.
+
+### Privilege Escalation（权限提升）
+Privilege escalation is a popular attack that involves someone who has user-level access to a system being able to elevate their privileges to gain administrative access to the system. Privilege escalation normally occurs due to a vulnerability within software running on the system or within the operating system itself. It is important to keep the system and application patched in order to remove any known vulnerabilities, which will help prevent privilege escalation.
+
+### Port Scanning Attacks（端口扫描攻击）
+Another popular network attack is known as port scanning or a port scanning attack. With a port scanning attack, the hacker runs software on the network that does a port scan against the system, which indicates to the hacker what ports are open. Once the hacker finds out what ports are open, they can then try to exploit the ports to gain access to the system.
+
+A number of different types of port scans can be used; the following list details three of the most popular:
+
+#### TCP connect scan（TCP 连接扫描）
+With a TCP connect scan, shown in [Figure 4-9](#ch04.xhtml#ch4fig9), the hacker performs a TCP three-way handshake with each port on the system. The concept is that if the hacker can do a three-way handshake with a port, then the port must be open.
+
+![Image](f0162-01.jpg)
+
+**FIGURE 4-9** Performing a TCP connect scan
+
+#### SYN scan (half-open scan)（SYN 扫描/半开放扫描）
+The TCP connect scan is easily detected on a network because of the three packets sent between the hacker and the system being scanned; therefore, the SYN scan was created. With the SYN scan, the hacker sends a SYN message but doesn’t send the ACK as the third phase of the three-way handshake after receiving an ACK/SYN from the victim’s system. The goal here is to avoid detection by creating less traffic. This scan is also known as a half-open scan or a stealth scan.
+
+#### XMAS scan（XMAS 扫描）
+In an XMAS scan, a packet is sent to each port with the PSH, URG, and FIN flags set in the packet. The term *XMAS scan* comes from the fact that you have three of six flags enabled, which is like turning on a bunch of lights on a Christmas tree. Note that this is also called an XMAS attack.
+
+---
+
+## EXERCISE 4-2: Performing a Port Scan（执行端口扫描）
+
+![Images](video.jpg)
+
+In this exercise, you will use Kali Linux to do some port scanning on the 10.0.0.0 network. Ensure that Windows 10 VM, ServerA VM, and Kali Linux are started.
+
