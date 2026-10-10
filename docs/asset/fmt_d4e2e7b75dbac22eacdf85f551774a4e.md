@@ -1,0 +1,64 @@
+
+随着所谓的第四次工业革命、物联网 (`IoT`) 以及连接到互联网的设备数量的指数级增长，潜在的攻击面也呈指数级增长。正如之前提到的，北极表现出的风险和脆弱性与其他地区相比可能非常不同。仅仅减少系统内个人的风险是不够的；需要使用一种对总风险采取整体考虑的方法，如系统技术过程分析 (`STPA`) 方法所示 (`Leveson & Thomas, 2018`)。
+
+每个北极社会（甚至每个社区）都必须以自己的方式最大化新型互联网数字服务所能提供的可能性，但是通过增强韧性、最小化风险并将数字依赖降低到可接受的水平。由于这些社区之间的差异，不存在适用于所有人的通用解决方案，但社区可以从经验和想法的增加中受益。随着北极社会内部以及与非北极社会之间更多的合作，他们将能够更好地面对利用新服务这一极具挑战的未来。
+
+## 6. 结论
+
+似乎尽管北极将继续利用可用性大大增加的数字服务，但它将继续有某些地理地区遭受脆弱气候的影响，以及远离大多数存储云数据的数据中心的副作用。为了应对数字时代的挑战，北极社区必须利用数字服务的优势，同时要保持北极社会的韧性，使其不至于脆弱或失效。
+
+## 参考文献
+
+- Areng, L. (2014). Lillipian in digital affairs. Tall Paper No. 4. NATO Cooperative Defence of Excellence: https://ccode.org/uploads/2018/10/TP_04.
+- Bada, M., Sasse, A., & Nurse, J. R. (2015). Cybersecurity Awareness Campaigns: Why do they fail to change behaviour? International Conference on Sustainable Society, 2015, cs. Available: arXiv:1901.0262
+- CyberBook (2019), Cybersecurity Body of Knowledge. University of Bristol.
+- Czech Republic (2019). Prague Proposals - The security of networks. https://www.vl.cz/assets/media/PRG_
+- ENISA (2018). Analysis of high level of security. Union.
+- Estonia (2019). Cybersecurity Strategy. Ministry of Economic Affairs and Communications. https://www.mkm.ee/en/cybersecurity_strategy.
+- Farice (2019). Viðgerð ísllands til Greenland (in Icelandic): https://is.fr.fr/frettatnyningar/vidgerd-islands-til-greenland
+- ITU (2018). Measuring the Digital Society Report 2017. https://www.itu.int/en/ITU-D/Statistics/Pages/report-2017.aspx
+- ITU (2019). Global Cybersecurity Index (GCI) 2018.
+- Linkov, I. & Trim, B. D. (2019). The science and practice of resilience. Springer.
+- Leveson, N., & Thomas, J. (2018). STPA handbook. MIT. https://psacs.mit.edu/home/get_file?name=STPA_Handbook.pdf
+- Warf B. J. (2011). Contours, contrasts, and contradictions of the Arctic infrastructure, Polar Geography, 34:3, 193–208. http://dx.org/10.1080/10888937X.2011.589012
+- TELE-POST (2019). Nyhedsarkiv. Available: https://telepost.dk/da/nyhedsarkiv
+
+北极地区的网络安全与韧性
+
+B.D. Trump 等人（编辑）
+
+IOS Press, 2020
+
+© 2020 作者与 IOS Press。保留所有权利。
+
+doi:10.5233/NICSP200048
+
+# 海底电缆干扰：北极视角
+
+Stefan KIRCHNER ᵃ
+
+ᵃ 拉普兰大学
+
+## 1 引言
+
+全球维网（`WWW`）是北极地区生活中不可或缺的一部分。特别是移动互联网服务，有助于北极居民和社区的安全与福祉。尽管技术无法弥合由于北极村庄、定居点、城镇和城市之间遥远距离以及北极地区相对有限的服务基础设施（例如医疗或救援服务）所造成的社会鸿沟，但通信技术在确保在极北地区长期存在方面发挥着重要作用。
+
+北极及周边地区被认为几乎空空，但它们是全球连接的关键要素。这不仅包括跨越北极的欧洲与美国之间的航线，还包括北大西洋的海底电缆。随着连接需求增长，将需要更多的海底电缆。在本文写作时（2019年春），芬兰通过海底电缆与瑞典、爱沙尼亚、俄罗斯和德国相连 [1]。奥兰兰群岛与芬兰大陆及瑞典相连 [1]。芬兰湾拥有一个特定的海底电缆网络，与赫尔辛基至少有七处连接，其中包括赫尔辛基与塔林之间的连接、塔林与瑞典之间的另外两处连接、赫尔辛基与科特卡之间的连接，以及科特卡与俄罗斯Logi之间的的一处连接。
+
+海底电缆主要限于阿拉斯加（包括沿西北海岸以及连接阿拉斯加南部与加拿大西岸及美国本土）、格陵兰岛（沿西南岸以及连接加拿大和冰岛）、冰岛（连接格陵兰、法法罗群岛、英国和欧洲大陆）、挪威（沿西岸并连接斯尔瓦巴群岛）以及俄罗斯联邦。从长远来看，随着俄罗斯远东经济发展的持续，以及气候变化导致冻土融化（使得俄罗斯大部分地区可能难以进入），海底电缆也可能成为俄罗斯北极海岸的一种可行工具。北极海洋海冰的流失正在加快 [2]，至少在夏季月份如此。
+
+在本文写作时，北极已有若干电缆项目正在进行中，包括一条跨北极电缆，该电缆可以连接欧洲（通过波罗的海现有及计划中的电缆，包括计划在波罗的海最部的芬兰波尼亚湾，那里距离北极圈南部不足100英里）并通过巴伦兹海和北极洋连接阿拉斯加（从而连接北美大陆）、俄罗斯远东、日本和中国（地图请参见 [5]）。这种计划中的连接预计对远离北冰洋的芬兰内陆地区产生重大影响 [5]。
+
+在依赖快速跨洲通信的世界中，海底电缆具有很高的实用价值，这引发了海底电缆如何在现行国际法的问题。这不仅涉及谁可以在何处放置海底电缆的问题，而且考虑到电缆大部分程度上毫无保护地直接位于海底 [1]，还涉及了对海底电缆造成的（无论是故意还是无意的）损害的责任问题。这在国际法中并非新顾虑 [6]；早在1984年，海洋电缆的保护就已经成为国际条约规管的对象 [7]。
+
+尽管《联合国海洋法公约》[8] 包含了海底电缆在不同海洋空间行为的特定规则（第112条 [8]），以及关于责任的问题（第113-115条 [8]），但本文关注的是这一关键基础设施的安全问题，以及不同行为者确保防止外部干扰的能力。
+
+## 2 对海底电缆的干扰
+
+涉及渔船（特别是拖网船 [9]）的事件表明，这些电缆的直径与花园软管相当 [1]，总长度超过120万公里，非常脆弱。早在2014年，加拿大最高法院就对一起涉及渔船造成损害的案件做出裁决，在该案中，一名操作船只的渔民发现锚钩钩住了电缆，但根据他对一年前看过的地图的记忆，他认为该电缆并在使用中 [10]。随后，该渔民切断了电缆以释放锚钩。与他认为电缆未使用的假设相反，涉案电缆实际上是某些被告拥有的光纤电缆。加拿大最高法院不得不对涉及《海事保险法》[31] 和《海事索赔责任限制公约》（`LLMC`）的问题进行裁决，这是一项限制无意损害责任的国际条约。法院必须处理该渔民是否造成了巨大损害（并因此失去保护）的问题 [10]。虽然海底电缆位于海岸或深水区，但它们仅仅位于海床上，这意味着它们免受故意干扰的保护较少。尽管在铺设电缆时应避开渔场，且尽管海图上标明了位置，海底电缆的意外损坏仍然是一个可能。从公共航运的角度来看，国际法律界长期以来一直在制定准则，保护第三方免受从重大油油事故到邮轮受损等有害影响的影响 [11]。
+
+除了海底电缆，针对海底电缆的威胁已成为安全关注的问题一段时间。物理连接海底电缆的技术能力（几乎是字面意义上的“接线”）已经存在了几十年，并且可以使用从潜艇发射的深海潜水器切断位于数英米深处的海缆。近年来对国际通信的依赖迅速增长，针对海底电缆的敌对行动的担忧也随之增加。两位专注于国家安全的记者说道：“俄罗斯的最终黑客可能涉及切断某些最难访问位置的光纤电缆，以停止与西方的即时通信；经济和公民已经产生了依赖” [13]。
+
+在岸上数米水深处切断电缆，与修复拖网网在近岸处造成的损害相比，将耗费巨大的努力。事实上，据报道俄罗斯正在寻找干扰电缆的方法（目前在原则上已具备这种能力），但美国以及其他几个国家预计将一直具备这种能力，并一直在研究如果俄罗斯完全与世界隔绝，维持一个功能良好的国家网络的可能性的。“各国将海底电缆视为关键基础设施，相关项目一直以来一直是并行的地缘政治争端。’。去年，澳大利亚干预并阻止了中国巨头华为建设一条连接澳大利亚与所罗门群岛的电缆，担心这会让中国政府进入其网络” [9]。”查看全球海底电缆路线地图显示，由于现代电缆的高容量以及铺设海底电缆的成本，冗余性是有限的。成功干扰的成效是显著的。通过破坏海底电缆来切断与全球互联网的连接，可以对国家安全、国际安全以及社会凝聚力产生剧性的影响，这只是仅仅是几个例子之一。汤加群岛在2019年1月20日一根光纤电缆被切断后遭受了严重的连接中断 [14]。由于限于卫星通信，国家政府的努力阻止了视频流媒体服务等高流量站点的访问 [15]。除了消费者不便外，当地企业处境尤为艰难，因为他们现在知道是一艘船拖锚时损坏了电缆 [15]；这一事件提供了一个例子和警告，特别是对于其他依赖一根或几根电缆的国家。汤加用户的损失表明了在几分钟内破坏一个国家的经济是多么容易。事实证明，切断海底电缆即使在混合战争背景下也是一种有效的工具。虽然北极发生武装冲突的风险是为了提高其在北方的军事能力 [16]，以及俄罗斯在俄罗斯联邦北极地区军事部署的显著增加（例如 [17]），但混合战争和技术形式干扰的门槛似乎要低得多。俄罗斯多次干扰挪威北部的全球定位系统（`GPS`）信号 [18] 就是一个案例。干扰对偏远地区至关重要的`GPS`功能，凸显了针对海底电缆的另一种军事行动：虽然有些像从关他哥湾到美国大陆的电缆 [19]，但海底电缆并不一定符合军事/平民的区别（这是战法或国际人道法的核心）[20]，根据1977年《日内瓦公约第一附加议定书》（以下简称 `AP I`）的第48条和第5条第2款，至少部分用于军事通信的电缆很容易成为合法目标 [20] [21]。这是一个可以作为国家行为的案例。
+
+cables, those owned by private actors might be considered civilian nature in under Article 48 `AP I` [21]. However, a privately-owned cable, if used for military communications, might become a legitimate target under Article 52 (2) `AP I` [20] [21]. Private owners are therefore well advised to ensure their cables cannot be used for military purposes. In, however, guaranteeing with absolute certainty that a private company's cable cannot be used for military purposes might be impossible to achieve: the low threshold for accessibility by new customers who has been built into their products for many years thatat large online service providers are at risk of abuse. Even explicit disruption of the use of services, such as of a mobile app for free, instant communication, for military purposes in the company's terms of service (`TOS`) will not prevent a privately owned cable from becoming a legitimate target under international humanitarian law (Cf. Article 52 (2) `AP I` [21]). On so attacks on "dual-use targets" can have the practical effect of harming civilians, yet might be permissible under international humanitarian law as they do not "lack," any direct military purpose" [22]. While an in-depth analysis of the rules of cyber warfare go beyond the purposes of this text, cable owners, their customers, and end users who depend on all of them will be well advised to take into account the disruption which is possible when cables are targeted in war or in hybrid conflicts.
