@@ -1,0 +1,135 @@
+
+在[第 3.2 节](#ebook_split_029.html#id-surfaceplot)中，我们绘制了一个在编译时固定的函数 `f(x,y)`。现在我们可以解析、检查并求值字符串中的表达式，因此可以构建一个 Web 应用程序，它在运行时从客户端接收一个表达式并绘制该函数的曲面。我们可以使用 `vars` 集合来检查该表达式是否仅为两个变量 `x` 和 `y` 的函数——实际上是三个，因为我们将把半径 `r` 作为一个便利变量提供。并且我们将使用 `Check` 方法在求值开始前拒绝格式错误的表达式，这样我们就不必在随后的 40,000 次函数求值（100×100 个单元格，每个单元格有四个角）中重复这些检查。
+
+`parseAndCheck` 函数结合了这些解析和检查步骤：
+
+[点击此处查看代码图像](#ch07_images.html#id203pro01_r)
+
+gopl.io/ch7/surface
+
+```
+import "gopl.io/ch7/eval"
+
+func parseAndCheck(s string) (eval.Expr, error) {
+    if s == "" {
+        return nil, fmt.Errorf("empty expression")
+    }
+    expr, err := eval.Parse(s)
+    if err != nil {
+        return nil, err
+    }
+    vars := make(map[eval.Var]bool)
+    if err := expr.Check(vars); err != nil {
+        return nil, err
+    }
+    for v := range vars {
+        if v != "x" && v != "y" && v != "r" {
+            return nil, fmt.Errorf("undefined variable: %s", v)
+        }
+    }
+    return expr, nil
+}
+```
+
+要使其成为一个 Web 应用程序，我们只需要下面的 `plot` 函数，它具有熟悉的 `http.HandlerFunc` 签名：
+
+[点击此处查看代码图像](#ch07_images.html#id203pro02_r)
+
+```
+func plot(w http.ResponseWriter, r *http.Request) {
+    r.ParseForm()
+    expr, err := parseAndCheck(r.Form.Get("expr"))
+    if err != nil {
+        http.Error(w, "bad expr: "+err.Error(), http.StatusBadRequest)
+        return
+    }
+    w.Header().Set("Content-Type", "image/svg+xml")
+    surface(w, func(x, y float64) float64 {
+        r := math.Hypot(x, y) // distance from (0,0)
+        return expr.Eval(eval.Env{"x": x, "y": y, "r": r})
+    })
+}
+```
+
+![三个函数的曲面：(a) sin(-x)*pow(1.5,-r); (b) pow(2,sin(y))*pow(2,sin(x))/12; (c) sin(x*y/10)/10。](graphics/three-surfaces.png)
+
+**图 7.7.** 三个函数的曲面：(a) `sin(-x)*pow(1.5,-r)`；(b) `pow(2,sin(y))*pow(2,sin(x))/12`；(c) `sin(x*y/10)/10`。
+
+`plot` 函数解析并检查 HTTP 请求中指定的表达式，并用它来创建一个两个变量的匿名函数。该匿名函数与原始曲面绘制程序中固定函数 `f` 具有相同的签名，但它会对用户提供的表达式求值。环境定义了 `x`、`y` 和半径 `r`。最后，`plot` 调用 `surface`，它只是来自 `gopl.io/ch3/surface` 的 `main` 函数的修改版，改为接受要绘制的函数和输出 `io.Writer` 作为参数，而不是使用固定函数 `f` 和 `os.Stdout`。[图 7.7](#ebook_split_068.html#id-figures-three-surfaces) 展示了该程序生成的三个曲面。
+
+**练习 7.13：** 为 `Expr` 添加一个 `String` 方法以美观地打印语法树。检查再次解析结果时，是否生成一棵等价的树。
+
+**练习 7.14：** 定义一个满足 `Expr` 接口的新具体类型，并提供一个新操作，例如计算其操作数的最小值。由于 `Parse` 函数不会创建此新类型的实例，要使用它，你需要直接构建语法树（或扩展解析器）。
+
+**练习 7.15：** 编写一个程序，从标准输入读取单个表达式，提示用户提供任何变量的值，然后在生成的环境中对表达式求值。妥善处理所有错误。
+
+**练习 7.16：** 编写一个基于 Web 的计算器程序。
+
+## 7.10 类型断言
+
+*类型断言* 是一种应用于接口值的操作。在语法上，它看起来像 `x.(T)`，其中 `x` 是一个接口类型的表达式，`T` 是一个类型，称为“断言”类型。类型断言检查其操作数的动态类型是否与断言类型匹配。
+
+有两种可能性。首先，如果断言类型 `T` 是一个具体类型，则类型断言检查 `x` 的动态类型是否*等同于* `T`。如果此检查成功，类型断言的结果是 `x` 的动态值，其类型当然是 `T`。换句话说，对具体类型的类型断言从其操作数中提取具体值。如果检查失败，则该操作会引发 panic。例如：
+
+[点击此处查看代码图像](#ch07_images.html#id205pro01_r)
+
+```
+var w io.Writer
+w = os.Stdout
+f := w.(*os.File)      // success: f == os.Stdout
+c := w.(*bytes.Buffer) // panic: interface holds *os.File, not *bytes.Buffer
+```
+
+其次，如果断言类型 `T` 是一个接口类型，则类型断言检查 `x` 的动态类型是否*满足* `T`。如果此检查成功，动态值不会被提取；结果仍然是一个具有相同类型和值组件的接口值，但结果具有接口类型 `T`。换句话说，对接口类型的类型断言改变了表达式的类型，使一组不同的（通常更大的）方法变得可访问，但它保留了接口值内部的动态类型和值组件。
+
+在下面的第一个类型断言之后，`w` 和 `rw` 都持有 `os.Stdout`，因此它们都具有动态类型 `*os.File`，但 `w` 作为一个 `io.Writer` 仅暴露文件的 `Write` 方法，而 `rw` 也暴露其 `Read` 方法。
+
+[点击此处查看代码图像](#ch07_images.html#id206pro01_r)
+
+```
+var w io.Writer
+w = os.Stdout
+rw := w.(io.ReadWriter) // success: *os.File has both Read and Write
+
+w = new(ByteCounter)
+rw = w.(io.ReadWriter) // panic: *ByteCounter has no Read method
+```
+
+无论断言什么类型，如果操作数是一个 nil 接口值，类型断言就会失败。对限制性较弱的接口类型（方法较少的类型）进行类型断言很少见，因为它的行为就像赋值一样，除了在 nil 的情况下。
+
+[点击此处查看代码图像](#ch07_images.html#id206pro02_r)
+
+```
+w = rw             // io.ReadWriter is assignable to io.Writer
+w = rw.(io.Writer) // fails only if rw == nil
+```
+
+我们通常不确定接口值的动态类型，并且我们想测试它是否为某个特定类型。如果类型断言出现在期望两个结果的赋值中，例如以下声明，则该操作在失败时不会 panic，而是返回一个额外的第二个结果，一个表示成功的布尔值：
+
+[点击此处查看代码图像](#ch07_images.html#id206pro03_r)
+
+```
+var w io.Writer = os.Stdout
+f, ok := w.(*os.File)      // success:  ok, f == os.Stdout
+b, ok := w.(*bytes.Buffer) // failure: !ok, b == nil
+```
+
+第二个结果通常赋值给一个名为 `ok` 的变量。如果操作失败，`ok` 为 false，第一个结果等于断言类型的零值，在本例中为 nil `*bytes.Buffer`。
+
+`ok` 结果通常立即用于决定下一步做什么。`if` 语句的扩展形式使这非常紧凑：
+
+```
+if f, ok := w.(*os.File); ok {
+    // ...use f...
+}
+```
+
+当类型断言的操作数是一个变量时，你有时会看到重用原始名称来命名新的局部变量，从而遮蔽原来的变量，如下所示：
+
+```
+if w, ok := w.(*os.File); ok {
+    // ...use w...
+}
+```
+
+## 7.11 使用类型断言区分错误

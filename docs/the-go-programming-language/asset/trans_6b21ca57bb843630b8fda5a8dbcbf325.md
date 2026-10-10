@@ -1,0 +1,191 @@
+
+
+## 切片技巧与 Map 详解
+
+### 切片的高级用法
+
+```go
+func nonempty2(strings []string) []string {
+    out := strings[:0] // zero-length slice of original
+    for _, s := range strings {
+        if s != "" {
+            out = append(out, s)
+        }
+    }
+    return out
+}
+```
+
+无论使用哪种变体，以这种方式复用数组要求每个输入值最多产生一个输出值，这对于许多过滤序列元素或合并相邻元素的算法来说是成立的。这种复杂的切片用法是例外而非常规，但在某些场合下可以做到清晰、高效且有用。
+
+切片可用于实现栈。给定一个初始为空的切片 `stack`，我们可以用 `append` 将新值压入切片末尾：
+
+```go
+stack = append(stack, v) // push v
+```
+
+栈顶是最后一个元素：
+
+```go
+top := stack[len(stack)-1] // top of stack
+```
+
+弹出该元素以缩减栈：
+
+```go
+stack = stack[:len(stack)-1] // pop
+```
+
+要从切片中间移除一个元素并保留剩余元素顺序，可用 `copy` 将高位元素前移一位填补空缺：
+
+```go
+func remove(slice []int, i int) []int {
+    copy(slice[i:], slice[i+1:])
+    return slice[:len(slice)-1]
+}
+
+func main() {
+    s := []int{5, 6, 7, 8, 9}
+    fmt.Println(remove(s, 2)) // "[5 6 8 9]"
+}
+```
+
+如果不需要保留顺序，只需将最后一个元素移入空缺位置：
+
+```go
+func remove(slice []int, i int) []int {
+    slice[i] = slice[len(slice)-1]
+    return slice[:len(slice)-1]
+}
+
+func main() {
+    s := []int{5, 6, 7, 8, 9}
+    fmt.Println(remove(s, 2)) // "[5 6 9 8]"
+}
+```
+
+**练习 4.3：** 重写 `reverse`，使其使用数组指针而非切片。
+
+**练习 4.4：** 编写一个单遍历版本的 `rotate`。
+
+**练习 4.5：** 编写一个原地函数，消除 `[]string` 切片中的相邻重复项。
+
+**练习 4.6：** 编写一个原地函数，将 UTF-8 编码的 `[]byte` 切片中每一段相邻的 Unicode 空白字符（见 `unicode.IsSpace`）压缩为单个 ASCII 空格。
+
+**练习 4.7：** 修改 `reverse`，使其原地反转代表 UTF-8 编码字符串的 `[]byte` 切片中的字符。能否不分配新内存完成？
+
+## 4.3 Map
+
+哈希表是所有数据结构中最精巧、用途最广的之一。它是一个无序的键值对集合，所有键各不相同，且无论哈希表多大，都能通过平均常数次键比较来检索、更新或删除给定键关联的值。
+
+在 Go 中，`map` 是对哈希表的引用，map 类型写作 `map[K]V`，其中 `K` 和 `V` 分别是其键和值的类型。给定 map 中的所有键类型相同，所有值类型也相同，但键类型不必与值类型相同。键类型 `K` 必须支持 `==` 比较，以便 map 判断给定键是否等于已有键。虽然浮点数可比较，但用浮点数做相等比较是坏主意，正如第 3 章所述，若 NaN 是可能值则更糟。值类型 `V` 无限制。
+
+内置函数 `make` 可创建 map：
+
+```go
+ages := make(map[string]int) // mapping from strings to ints
+```
+
+也可用 *map 字面量* 创建并初始化键值对：
+
+```go
+ages := map[string]int{
+    "alice":   31,
+    "charlie": 34,
+}
+```
+
+这等价于：
+
+```go
+ages := make(map[string]int)
+ages["alice"] = 31
+ages["charlie"] = 34
+```
+
+因此，新建空 map 的另一种写法是 `map[string]int{}`。
+
+通过下标符号访问 map 元素：
+
+```go
+ages["alice"] = 32
+fmt.Println(ages["alice"]) // "32"
+```
+
+用内置函数 `delete` 删除元素：
+
+```go
+delete(ages, "alice") // remove element ages["alice"]
+```
+
+这些操作在元素不存在时也安全；用不存在的键查找 map 会返回该类型的零值，因此即使 `"bob"` 尚不在 map 中，以下代码也能工作，因为 `ages["bob"]` 的值将是 `0`：
+
+```go
+ages["bob"] = ages["bob"] + 1 // happy birthday!
+```
+
+简短赋值形式 `x += y` 和 `x++` 也适用于 map 元素，故上述语句可改写为：
+
+```go
+ages["bob"] += 1
+```
+
+甚至更简洁地：
+
+```go
+ages["bob"]++
+```
+
+但 map 元素不是变量，不能取其地址：
+
+```go
+_ = &ages["bob"] // compile error: cannot take address of map element
+```
+
+原因之一是 map 扩容可能导致现有元素被重新哈希到新存储位置，从而使地址失效。
+
+用基于 `range` 的 `for` 循环遍历 map 中所有键值对，类似切片遍历。循环每次迭代将 `name` 和 `age` 设为下一对键值：
+
+```go
+for name, age := range ages {
+    fmt.Printf("%s\t%d\n", name, age)
+}
+```
+
+map 迭代顺序未指定，不同实现可能用不同哈希函数导致不同顺序。实践中顺序是随机的，每次执行都不同。这是有意为之：让顺序变化有助于强制程序在不同实现下保持健壮。要按序遍历键值对，必须显式排序键，例如键为字符串时用 `sort` 包的 `Strings` 函数。这是常见模式：
+
+```go
+import "sort"
+
+var names []string
+for name := range ages {
+    names = append(names, name)
+}
+sort.Strings(names)
+for _, name := range names {
+    fmt.Printf("%s\t%d\n", name, ages[name])
+}
+```
+
+既然一开始就知道 `names` 的最终大小，预先分配所需大小的数组更高效。下面语句创建一个初始为空但容量足以容纳 `ages` map 所有键的切片：
+
+```go
+names := make([]string, 0, len(ages))
+```
+
+第一个 `range` 循环只需 `ages` map 的键，故省略第二个循环变量。第二个循环只需 `names` 切片的元素，故用空标识符 `_` 忽略第一个变量（索引）。
+
+map 类型的零值是 `nil`，即不引用任何哈希表。
+
+```go
+var ages map[string]int
+fmt.Println(ages == nil)    // "true"
+fmt.Println(len(ages) == 0) // "true"
+```
+
+包括查找、`delete`、`len` 和 `range` 循环在内的大多数 map 操作，在 nil map 引用上均安全，因为其表现如空 map。但向 nil map 存值会引发 panic：
+
+```go
+ages["carol"] = 21 // panic: assignment to entry in nil map
+```
+

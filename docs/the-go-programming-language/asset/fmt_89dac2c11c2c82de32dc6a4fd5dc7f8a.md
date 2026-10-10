@@ -1,0 +1,96 @@
+
+**Exercise 8.15:** Failure of any client program to read data in a timely manner ultimately causes all clients to get stuck. Modify the broadcaster to skip a message rather than wait if a client writer is not ready to accept it. Alternatively, add buffering to each client’s outgoing message channel so that most messages are not dropped; the broadcaster should use a non-blocking send to this channel.
+
+# 9. Concurrency with Shared Variables
+
+In the previous chapter, we presented several programs that use goroutines and channels to express concurrency in a direct and natural way. However, in doing so, we glossed over a number of important and subtle issues that programmers must bear in mind when writing concurrent code.
+
+In this chapter, we’ll take a closer look at the mechanics of concurrency. In particular, we’ll point out some of the problems associated with sharing variables among multiple goroutines, the analytical techniques for recognizing those problems, and the patterns for solving them. Finally, we’ll explain some of the technical differences between goroutines and operating system threads.
+
+## 9.1 Race Conditions
+
+In a sequential program, that is, a program with only one goroutine, the steps of the program happen in the familiar execution order determined by the program logic. For instance, in a sequence of statements, the first one happens before the second one, and so on. In a program with two or more goroutines, the steps within each goroutine happen in the familiar order, but in general we don’t know whether an event `x` in one goroutine happens before an event `y` in another goroutine, or happens after it, or is simultaneous with it. When we cannot confidently say that one event *happens before* the other, then the events `x` and `y` are *concurrent*.
+
+Consider a function that works correctly in a sequential program. That function is *concurrency-safe* if it continues to work correctly even when called concurrently, that is, from two or more goroutines with no additional synchronization. We can generalize this notion to a set of collaborating functions, such as the methods and operations of a particular type. A type is concurrency-safe if all its accessible methods and operations are concurrency-safe.
+
+We can make a program concurrency-safe without making every concrete type in that program concurrency-safe. Indeed, concurrency-safe types are the exception rather than the rule, so you should access a variable concurrently only if the documentation for its type says that this is safe. We avoid concurrent access to most variables either by *confining* them to a single goroutine or by maintaining a higher-level invariant of *mutual exclusion*. We’ll explain these terms in this chapter.
+
+In contrast, exported package-level functions *are* generally expected to be concurrency-safe. Since package-level variables cannot be confined to a single goroutine, functions that modify them must enforce mutual exclusion.
+
+There are many reasons a function might not work when called concurrently, including deadlock, livelock, and resource starvation. We don’t have space to discuss all of them, so we’ll focus on the most important one, the *race condition*.
+
+A race condition is a situation in which the program does not give the correct result for some interleavings of the operations of multiple goroutines. Race conditions are pernicious because they may remain latent in a program and appear infrequently, perhaps only under heavy load or when using certain compilers, platforms, or architectures. This makes them hard to reproduce and diagnose.
+
+It is traditional to explain the seriousness of race conditions through the metaphor of financial loss, so we’ll consider a simple bank account program.
+
+[Click here to view code image](#ch09_images.html#id258pro01_r)
+
+```
+// Package bank implements a bank with only one account.
+package bank
+
+var balance int
+
+func Deposit(amount int) { balance = balance + amount }
+
+func Balance() int { return balance }
+```
+
+(We could have written the body of the `Deposit` function as `balance += amount`, which is equivalent, but the longer form will simplify the explanation.)
+
+For a program this trivial, we can see at a glance that any sequence of calls to `Deposit` and `Balance` will give the right answer, that is, `Balance` will report the sum of all amounts previously deposited. However, if we call these functions not in a sequence but concurrently, `Balance` is no longer guaranteed to give the right answer. Consider the following two goroutines, which represent two transactions on a joint bank account:
+
+[Click here to view code image](#ch09_images.html#id258pro02_r)
+
+```
+// Alice:
+go func() {
+    bank.Deposit(200)                // A1
+    fmt.Println("=", bank.Balance()) // A2
+}()
+
+// Bob:
+go bank.Deposit(100)                 // B
+```
+
+Alice deposits $200, then checks her balance, while Bob deposits $100. Since the steps `A1` and `A2` occur concurrently with `B`, we cannot predict the order in which they happen. Intuitively, it might seem that there are only three possible orderings, which we’ll call “Alice first,” “Bob first,” and “Alice/Bob/Alice.” The following table shows the value of the `balance` variable after each step. The quoted strings represent the printed balance slips.
+
+[Click here to view code image](#ch09_images.html#id259pro01_r)
+
+```
+Alice first              Bob first        Alice/Bob/Alice
+          0                      0                      0
+  A1    200              B     100              A1    200
+  A2 "= 200"             A1    300              B     300
+  B     300              A2 "= 300"             A2 "= 300"
+```
+
+In all cases the final balance is $300. The only variation is whether Alice’s balance slip includes Bob’s transaction or not, but the customers are satisfied either way.
+
+But this intuition is wrong. There is a fourth possible outcome, in which Bob’s deposit occurs in the middle of Alice’s deposit, after the balance has been read (`balance + amount`) but before it has been updated (`balance = ...`), causing Bob’s transaction to disappear. This is because Alice’s deposit operation `A1` is really a sequence of two operations, a read and a write; call them `A1r` and `A1w`. Here’s the problematic interleaving:
+
+[Click here to view code image](#ch09_images.html#id259pro02_r)
+
+```
+Data race
+         0
+A1r      0          ... = balance + amount
+B      100
+A1w    200          balance = ...
+A2  "= 200"
+```
+
+After `A1r`, the expression `balance + amount` evaluates to 200, so this is the value written during `A1w`, despite the intervening deposit. The final balance is only $200. The bank is $100 richer at Bob’s expense.
+
+This program contains a particular kind of race condition called a *data race*. A data race occurs whenever two goroutines access the same variable concurrently and at least one of the accesses is a write.
+
+Things get even messier if the data race involves a variable of a type that is larger than a single machine word, such as an interface, a string, or a slice. This code updates `x` concurrently to two slices of different lengths:
+
+[Click here to view code image](#ch09_images.html#id259pro03_r)
+
+```
+var x []int
+go func() { x = make([]int, 10) }()
+go func() { x = make([]int, 1000000) }()
+x[999999] = 1 // NOTE: undefined behavior; memory corruption possible!
+```

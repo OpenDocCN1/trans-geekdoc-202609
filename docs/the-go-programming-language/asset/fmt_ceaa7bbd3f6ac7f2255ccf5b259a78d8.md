@@ -1,0 +1,98 @@
+
+## 10.7 The Go Tool
+
+The rest of this chapter concerns the `go` tool, which is used for downloading, querying, formatting, building, testing, and installing packages of Go code.
+
+The `go` tool combines the features of a diverse set of tools into one command set. It is a package manager (analogous to `apt` or `rpm`) that answers queries about its inventory of packages, computes their dependencies, and downloads them from remote version-control systems. It is a build system that computes file dependencies and invokes compilers, assemblers, and linkers, although it is intentionally less complete than the standard Unix `make`. And it is a test driver, as we will see in [Chapter 11](#ebook_split_103.html#id-testing).
+
+Its command-line interface uses the “Swiss army knife” style, with over a dozen subcommands, some of which we have already seen, like `get`, `run`, `build`, and `fmt`. You can run `go help` to see the index of its built-in documentation, but for reference, we’ve listed the most commonly used commands below:
+
+```
+$ go
+...
+    build       compile packages and dependencies
+    clean       remove object files
+    doc         show documentation for package or symbol
+    env         print Go environment information
+    fmt         run gofmt on package sources
+    get         download and install packages and dependencies
+    install     compile and install packages and dependencies
+    list        list packages
+    run         compile and run Go program
+    test        test packages
+    version     print Go version
+    vet         run go tool vet on packages
+
+Use "go help [command]" for more information about a command.
+...
+```
+
+To keep the need for configuration to a minimum, the `go` tool relies heavily on conventions. For example, given the name of a Go source file, the tool can find its enclosing package, because each directory contains a single package and the import path of a package corresponds to the directory hierarchy in the workspace. Given the import path of a package, the tool can find the corresponding directory in which it stores object files. It can also find the URL of the server that hosts the source code repository.
+
+### 10.7.1 Workspace Organization
+
+The only configuration most users ever need is the `GOPATH` environment variable, which specifies the root of the workspace. When switching to a different workspace, users update the value of `GOPATH`. For instance, we set `GOPATH` to `$HOME/gobook` while working on this book:
+
+```
+$ export GOPATH=$HOME/gobook
+$ go get gopl.io/...
+```
+
+After you download all the programs for this book using the command above, your workspace will contain a hierarchy like this one:
+
+```
+GOPATH/
+    src/
+        gopl.io/
+            .git/
+            ch1/
+                helloworld/
+                    main.go
+                dup/
+                    main.go
+                ...
+        golang.org/x/net/
+            .git/
+            html/
+                parse.go
+                node.go
+                ...
+    bin/
+        helloworld
+        dup
+    pkg/
+        darwin_amd64/
+            ...
+```
+
+`GOPATH` has three subdirectories. The `src` subdirectory holds source code. Each package resides in a directory whose name relative to `$GOPATH/src` is the package’s import path, such as `gopl.io/ch1/helloworld`. Observe that a single `GOPATH` workspace contains multiple version-control repositories beneath `src`, such as `gopl.io` or `golang.org`. The `pkg` subdirectory is where the build tools store compiled packages, and the `bin` subdirectory holds executable programs like `helloworld`.
+
+A second environment variable, `GOROOT`, specifies the root directory of the Go distribution, which provides all the packages of the standard library. The directory structure beneath `GOROOT` resembles that of `GOPATH`, so, for example, the source files of the `fmt` package reside in the `$GOROOT/src/fmt` directory. Users never need to set `GOROOT` since, by default, the `go` tool will use the location where it was installed.
+
+The `go env` command prints the effective values of the environment variables relevant to the toolchain, including the default values for the missing ones. `GOOS` specifies the target operating system (for example, `android`, `linux`, `darwin`, or `windows`) and `GOARCH` specifies the target processor architecture, such as `amd64`, `386`, or `arm`. Although `GOPATH` is the only variable you must set, the others occasionally appear in our explanations.
+
+```
+$ go env
+GOPATH="/home/gopher/gobook"
+GOROOT="/usr/local/go"
+GOARCH="amd64"
+GOOS="darwin"
+...
+```
+
+### 10.7.2 Downloading Packages
+
+When using the `go` tool, a package’s import path indicates not only where to find it in the local workspace, but where to find it on the Internet so that `go get` can retrieve and update it.
+
+The `go get` command can download a single package or an entire subtree or repository using the `...` notation, as in the previous section. The tool also computes and downloads all the dependencies of the initial packages, which is why the `golang.org/x/net/html` package appeared in the workspace in the previous example.
+
+Once `go get` has downloaded the packages, it builds them and then *installs* the libraries and commands. We’ll look at the details in the next section, but an example will show how straightforward the process is. The first command below gets the `golint` tool, which checks for common style problems in Go source code. The second command runs `golint` on `gopl.io/ch2/popcount` from [Section 2.6.2](#ebook_split_025.html#id-packageinitialization). It helpfully reports that we have forgotten to write a doc comment for the package:
+
+```
+$ go get github.com/golang/lint/golint
+$ $GOPATH/bin/golint gopl.io/ch2/popcount
+src/gopl.io/ch2/popcount/main.go:1:1:
+  package comment should be of the form "Package popcount ..."
+```
+
+The `go get` command has support for popular code-hosting sites like GitHub, Bitbucket, and Launchpad and can make the appropriate requests to their version-control systems. For less well-known sites, you may have to indicate which version-control protocol to use in the import path, such as Git or Mercurial. Run `go help importpath` for the details.
