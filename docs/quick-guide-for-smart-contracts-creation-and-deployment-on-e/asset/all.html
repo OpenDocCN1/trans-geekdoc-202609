@@ -1,0 +1,2036 @@
+<p><span id="cover.xhtml"></span></p>
+<div class="body">
+<img src="images/cover.jpeg" alt="cover" class="cover" />
+</div>
+<p><span id="bookinfo.html"></span></p>
+<div style="text-align: center">
+Dr. Hedaya Mahmood Alasooly<br />
+
+<h1>Quick Guide for Smart Contracts Creation and Deployment on Ethereum Blockchain</h1>
+<h2></h2>
+<br />
+<br />
+<br />
+<br />
+BookRix GmbH &amp; Co. KG<br />
+80331 Munich<br />
+
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_0.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_0.html#c540973421">Quick Guide for Smart Contracts Creation and Deployment on Ethereum Blockchain</h3>
+<p><strong>Quick Guide for Smart Contracts Creation and Deployment on Ethereum Blockchain</strong></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>By</p>
+<p>Dr. Hedaya Mahmood Alasooly</p>
+<p>Hedaya_alasooly@yahoo.com</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_1.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_1.html#c747927371">1. Overview:</h3>
+<p><strong>1. Overview:</strong></p>
+<p> </p>
+<p>This work explains briefly the creation and deployment Of Smart Contract on Ethereum Blockchain. The work consists from the following sections</p>
+<ul>
+<li>Blockchain</li>
+<li>Solidity variables and types</li>
+<li>How to Setup or Install Ethereum on Windows</li>
+<li>How to compile and deploy smart contract on JavaScriptVM</li>
+<li>How to install Ganache Blockchain on Windows and deploy smart contract using it.</li>
+<li>How to compile and deploy Smart Contract on Test Networks,</li>
+<li>Quick example of deploying ERC20 token smart contract.</li>
+<li>Getting started tutorial on Solidity</li>
+<li>Creating ERC-20 smart contract and crowd sale (ICO) smart contract without coding</li>
+<li>ERC-20 smart contract and crowd sale (ICO) smart contract:</li>
+<li>Creating Ethereum ERC-20 Tokens and Crowd Sales (ICO) without coding with Token Wizard:</li>
+<li>Example of creating and deploying an ERC20 token on the test and main network!!!</li>
+</ul>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_2.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_2.html#c537646561">2. Blockchain:</h3>
+<p><strong>2. Blockchain:</strong></p>
+<p> </p>
+<p>A blockchain is a digital record of transactions. The name comes from its structure, in which individual records, called blocks, are linked together in single list, called a chain. Blockchains are used for recording transactions made with cryptocurrencies, such as Bitcoin, and have many other applications.</p>
+<p>Each transaction added to a blockchain is validated by multiple computers on the Internet. These systems, which are configured to monitor specific types of blockchain transactions, form a peer-to-peer network. They work together to ensure each transaction is valid before it is added to the blockchain. This decentralized network of computers ensures a single system cannot add invalid blocks to the chain.</p>
+<p>When a new block is added to a blockchain, it is linked to the previous block using a cryptographic hash generated from the contents of the previous block. This ensures the chain is never broken and that each block is permanently recorded. It is also intentionally difficult to alter past transactions in blockchain since all the subsequent blocks must be altered first.</p>
+<ul>
+<li><strong>Blockchain Uses:</strong> While blockchain is widely known for its use in cryptocurrencies such as Bitcoin, Litecoin, and Ether, the technology has several other uses. For example, it enables "smart contracts," which execute when certain conditions are met. This provides an automated escrow system for transactions between two parties. Blockchain can potentially be used to allow individuals to pay each other without a central clearing point, which is required for ACH and wire transfers. It has potential to greatly increase the efficiency of stock trading by allowing transactions to settle almost instantly instead of requiring three or more days for each transaction to clear. Blockchain technology can also be used for non-financial purposes. For example, the InterPlanetary File System (IFPS) uses blockchain to decentralize file storage by linking files together over the Internet. Some digital signature platforms now use blockchain to record signatures and verify documents have been digitally signed. Blockchain can even be used to protect intellectual property by linking the distribution of content to the original source.</li>
+<li>Blockchain is decentralized database that consists from records and data. The entire data is spread out in bounch of distributed computers to end to be pear to pear p2p network. The records in these databases are stored in form of blocks which linked together in secured way.</li>
+<li>The bitcoin blockchain stores data specific to keep track of crypto currencies balances between different parties.</li>
+</ul>
+<ul>
+<li>Ethereum block chain can store much more deep data than bitcoin block chain. Ethereum block chain allows building decentralized apps. These decentralized apps defined by smart contracts. So smart contract allows individuals to exchange information in trusted confident free manner without relying on third party as bank or lawyer or other way. So these Ethereum smart contracts stored in special transections in Ethereum blockchain which can be used then to build applications. So you can think on smart contracts as decentralized api's. As smart contracts stored in Ethereum blockchains, they need to be validated or mined as any other transactions. So there is small costs associated with deploying smart contracts.</li>
+<li>How to code smart contract. We do that with solidity. Solidity is a code used. Solidity is a language used to code smart contract. And syntax is similar to java script and is designed with Ethereum virtual machine in mind. So we will use solidity to create smart contract in web based ide called remex</li>
+</ul>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_3.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_3.html#c303896901">3. Solidity variables and types</h3>
+<p><strong>3. Solidity variables and types</strong></p>
+<p> </p>
+<ul>
+<li>You can write the solidity and test code in https://remix.ethereum.org/.</li>
+<li>Here screen of https://remix.ethereum.org</li>
+</ul>
+<p> </p>
+<p><img src="images/159551591299085953_1.jpg" /></p>
+<p> </p>
+<ul>
+<li>Create new contract. I called it Coursetro.</li>
+<li>Start off by writing (or pasting) the following code:</li>
+</ul>
+<p>pragma solidity ^0.4.18;</p>
+<p> </p>
+<p>contract Coursetro {</p>
+<p>}</p>
+<p>The very first line defines the version of solidity you're going to use.</p>
+<p>Next, you define the contract and its name and open it up like a JavaScript class.</p>
+<ul>
+<li>On the right side of the browser under the Run tab, you will see a Deploy button. Click on this. You will notice that underneath the Deploy button shows a new section with the name of the contract and "at 0x..." (memory):</li>
+</ul>
+<p><img src="images/159551591230265132_2.jpg" /></p>
+<ul>
+<li>This means that the smart contract (yes, it's not very smart at this point) lives at an address. To see this full address along with other information, in the debugger if you click on the <strong>Details</strong> button, it will provide you with more information:</li>
+<li>Notice there's a <strong>contractAddress</strong>, this is where the smart contract actually lives. No, it's not live on the Ethereum Blockchain because right now, we're simply working within the Javascript EVM.</li>
+<li>Also notice <strong>gas</strong>. Every time a contract is deployed and modified, nodes on the Ethereum network must verify the contract. It's referred to as being redundantly parallel, as a way to reach consensus.Gas is the name for the execution fee that senders of transactions (in our case, senders of a smart contract transaction) will pay for verification.</li>
+<li><strong>Elaborating on this further</strong>, from etherdocs.org:</li>
+<li><em>"Gas is the name for the execution fee that senders of transactions need to pay for every operation made on an Ethereum blockchain. The name gas is inspired by the view that this fee acts as cryptofuel, driving the motion of smart contracts. Gas is purchased for ether from the miners that execute the code. Gas and ether are decoupled deliberately since units of gas align with computation units having a natural cost, while the price of ether generally fluctuates as a result of market forces. The two are mediated by a free market: the price of gas is actually decided by the miners, who can refuse to process a transaction with a lower gas price than their minimum limit. To get gas you simply need to add ether to your account. The Ethereum clients automatically purchase gas for your ether in the amount you specify as your maximum expenditure for the transaction."</em></li>
+<li>In Solidity, you define a variable by first specifying its type.</li>
+</ul>
+<p>What other types are there?</p>
+<ol>
+<li><strong>bool</strong><br />
+This is a Boolean, which returns true or false.</li>
+<li><strong>int / uint</strong><br />
+Both int and uint represent integers, or number values. The primary difference between int and uint (Unsigned Integer), is that int can hold negative numbers as values.</li>
+<li><strong>address</strong><br />
+The address type represents a 20 byte value, which is meant to store an Ethereum address. Variables that are typed as address also have members, including balance and transfer.</li>
+<li><strong>bytes1 through 32</strong><br />
+This is a fixed-size byte array.</li>
+<li><strong>bytes</strong><br />
+A dynamically-sized byte array.</li>
+<li><strong>string</strong><br />
+A dynamically signed string.</li>
+<li><strong>mapping</strong><br />
+Hash tables with key types and value types. We will look at mappings more in depth later on in the course.</li>
+<li><strong>struct</strong><br />
+Structs allow you to define new types. We will also cover this more in depth shortly.</li>
+</ol>
+<ul>
+<li>Let's define a string variable in our contract.  Let's also define my age. No one can have a negative age, so we will use an unsigned integer for this:</li>
+</ul>
+<p>pragma solidity ^0.4.18;</p>
+<p> </p>
+<p>contract Coursetro {</p>
+<p>string fName = 'Gary';</p>
+<p>uint age = 34;</p>
+<p>}</p>
+<ul>
+<li>Solidity has four types of visibilities for both functions and variables:</li>
+</ul>
+<ol>
+<li><strong>Public</strong><br />
+This allows you to define functions or variables that can be called internally or through messages.</li>
+<li><strong>Private</strong><br />
+Private variables and functions are only available to the current contract and not derived contracts.</li>
+<li><strong>Internal</strong><br />
+Fuctions and variables that can only be accessed internally (current contract or derived).</li>
+<li><strong>External</strong><br />
+Functions that can be called from other contracts and transactions. They cannot be called internally, except with "this.functionName()".</li>
+</ol>
+<ul>
+<li><strong>Let's add the public visibility to our variables:</strong></li>
+</ul>
+<p>pragma solidity ^0.4.18;</p>
+<p> </p>
+<p>contract Coursetro {</p>
+<p>string public fName = 'Gary';</p>
+<p>uint public age = 34;</p>
+<p>}</p>
+<ul>
+<li>Click <strong>Deploy</strong>, we can now see on the right that we have 2 blue buttons with the name of our variables and the associated values. When you define public state variables, the EVM creates getter functions for them. So, you can actually click on these buttons and it will return the value, as if it were a function.</li>
+<li>Every smart contract has a constructor function. This constructor is called when a contract is created. Inside of it, you can define the values of variables. Let's re-adjust our code to work with a constructor:</li>
+</ul>
+<p>pragma solidity ^0.4.18;</p>
+<p>contract Coursetro {</p>
+<p> </p>
+<p>string public fName;</p>
+<p>uint public age;</p>
+<p> </p>
+<p>function Coursetro() public {</p>
+<p>fName = 'Gary';</p>
+<p>age = 34;</p>
+<p>}</p>
+<p>}</p>
+<ul>
+<li>Variables can be declared as being constant. As the name suggests, these are variables with a constant value that does not change.Let's transform the <strong>fName</strong> variable to a constant variable:</li>
+</ul>
+<p>pragma solidity ^0.4.18;</p>
+<p> </p>
+<p>contract Coursetro {</p>
+<p> </p>
+<p>string constant fName = 'Gary';</p>
+<p>uint public age;</p>
+<p> </p>
+<p>function Coursetro() public {</p>
+<p>fName = 'Gary';</p>
+<p>age = 34;</p>
+<p>}</p>
+<p> </p>
+<p>}</p>
+<p>In your IDE, you'll notice a red "X" next to line 9. If you hover over it, you will notice that it says, "<em>TypeError: cannot assign to a constant variable</em>". Remove line 9 and the error goes away.</p>
+<ul>
+<li>Our smart contract at this point is pretty boring. Let's integrate a potential user interaction where we can manually define a Coursetro Instructor's name and age. Paste the following:</li>
+</ul>
+<p>pragma solidity ^0.4.18;</p>
+<p> </p>
+<p>contract Coursetro {</p>
+<p>string fName;</p>
+<p>uint age;</p>
+<p>function setInstructor(string _fName, uint _age) public {</p>
+<p>fName = _fName;</p>
+<p>age = _age;</p>
+<p>}</p>
+<p>function getInstructor() public constant returns (string, uint) {</p>
+<p>return (fName, age);</p>
+<p>}</p>
+<p>}</p>
+<ul>
+<li>Our smart contract at this point is pretty boring. Let's integrate a potential user interaction where we can manually define a Coursetro Instructor's name and age. Paste the following:</li>
+</ul>
+<p>pragma solidity ^0.4.18;</p>
+<p> </p>
+<p>contract Coursetro {</p>
+<p>string fName;</p>
+<p>uint age;</p>
+<p>function setInstructor(string _fName, uint _age) public {</p>
+<p>fName = _fName;</p>
+<p>age = _age;</p>
+<p>}</p>
+<p>function getInstructor() public constant returns (string, uint) {</p>
+<p>return (fName, age);</p>
+<p>}</p>
+<p>}</p>
+<ul>
+<li>We have two functions, setInstructor() and getInstructor(). <strong>setInstructor</strong> accepts 2 parameters, _fName and _age. Once called, we set our string fName to the returned _fName, and same with age. Then, our <strong>getInstructor()</strong> function is defined as being constant, and it returns a string and a uint. This is where we return the fName and age variable once it's called. Click <strong>Deploy</strong> and under the red <strong>set Instructor</strong> button, type in: "Gary", 34 and click the button. Next, click on the <strong>getInstructor()</strong> button and you will notice it now returns the inputed value! This is how you set variables from user input in a smart contract.</li>
+</ul>
+<p> </p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_4.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_4.html#c121347371">4. How to setup or install Ethereum on Windows</h3>
+<p><strong>4. How to setup or install Ethereum on Windows</strong></p>
+<ul>
+<li>Install chocolatey on windows . Go to "https://chocolatey.org/install" and copy window command or simply run below command to install chocolatey on windows</li>
+</ul>
+<p>@"%SystemRoot%System32WindowsPowerShellv1.0powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%chocolateybin"</p>
+<ul>
+<li>Run below command to install Node Js</li>
+</ul>
+<p>choco install nodejs.install –y</p>
+<ul>
+<li>Or simply download the installer from "https://nodejs.org/en/download/" link</li>
+<li>Install Git. To install either run below command</li>
+</ul>
+<p>choco install git –y</p>
+<ul>
+<li>Or download the installer from "https://gitforwindows.org/" link.</li>
+<li>Install Visual Studio Code along with solidity extension. To install either run below command</li>
+</ul>
+<p>. choco install VisualStudioCode –y</p>
+<ul>
+<li>Or download the installer from "https://www.visualstudio.com/downloads/" link</li>
+<li>Install Python on Windows. To install either run below command</li>
+</ul>
+<p>choco install python –y</p>
+<ul>
+<li>Or download the installer from "https://www.python.org/downloads/" link.</li>
+<li>Open the visual studio consol. Go to extensions page. Install the solidity extension</li>
+<li>Install Python on Windows. To install either run below command</li>
+</ul>
+<p>choco install python –y</p>
+<ul>
+<li>Install Ganache on Windows. Download the installer from below link. http://truffleframework.com/ganache/</li>
+<li>Or install it from command line</li>
+</ul>
+<p>npm install –g ganache -cli</p>
+<ul>
+<li>What is ganache.When you develop application, that application will be held in application server. In case of Ethereum, the Ethereum blockchain will hold the smart contract. The blockchain is acting as application server. Ganache is simulation blockchain that runs locally in the system and simulate the Ethereum blockchin for you. It comes as GUI or command line.</li>
+<li>When you run ganache, you will see this image. You see many ether addresses. Each ether address has some ethereum on it.</li>
+</ul>
+<p><img src="images/15955159139154190_1.jpg" /></p>
+<ul>
+<li>Remix is IDE used to build smart contract. Remix web based IDE https://remix.ethereum.org</li>
+<li>Install IDE from git or npm using below command npm </li>
+</ul>
+<p>install remix-ide -g remix-ide git clone https://github.com/ethereum/remix-ide...</p>
+<p>cd remix-ide</p>
+<p>npm  install</p>
+<p>npm  run setupremix   </p>
+<p>npm start</p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_5.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_5.html#c626313971">5. How to compile and deploy smart contract on JavaScriptVM</h3>
+<p><strong>5. How to compile and deploy smart contract on JavaScriptVM</strong></p>
+<p> </p>
+<ul>
+<li>URL to open Remix IDE https://remix.ethereum.org</li>
+<li>When we compile the solidity code, we get byte code that we can deploy in Ethereum blockchain.</li>
+<li>Start new contract student.sol</li>
+<li>Below is smart contract code</li>
+</ul>
+<p>pragma solidity ^0.4.18;</p>
+<p> </p>
+<p>contract student {</p>
+<p>string name;</p>
+<p>uint age;</p>
+<p>function setStudentDetails(string _name, uint _age) public{</p>
+<p>name=_name;</p>
+<p>age=_age;</p>
+<p>}</p>
+<p>function getStudentDetails() public view returns(string, uint){</p>
+<p>return (name, age);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<ul>
+<li>We must deploy the smart contract on Blockchain. There are different blockchains available.Among them are: main net block chain and test net blockchains. Or we can deploy the smart conract on our self blockchain environment. We will use first to deploy smart contract on the inbuilt blockchain inside the Remix IDE which is Java Script VM.</li>
+</ul>
+<p> </p>
+<p><img src="images/159551591335092675_1.jpg" /></p>
+<p> </p>
+<p> </p>
+<ul>
+<li>To deploy the smart contract on Java Script VM blockchain, we need an account. We get bay default in Remix 5 accounts. But if we deploy the smart contract in Ethereum blockchain, we must create an account there.</li>
+<li>We choose any account and deploy the smart contract on Java Script VM, click deploy. When the smart contract deployed, it will be deployed on some address. The address assigned by blockchain to that smart contract. So we can always refer to smart contract by that address only.</li>
+<li>We need ethereum to deploy the smart contract in the main net Ethereum blockchain. Because the miner will mine your transection and when itsis confirmed, it must get some fees.</li>
+<li>When you assign values to variables, you change the state of the variables, that means you make changes in block chain, and you must pay gas for that. Someone will mine the transaction and then it will be successful. Get function output the values of variables and does not change state of block chin. So it does not require mining and no fees required.</li>
+<li>Debugger allows you to debug the smart contract</li>
+</ul>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_6.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_6.html#c290631541">6. How to install Ganache Blockchain on Windows and deploy smart contract using it:</h3>
+<p><strong>6. How to install Ganache Blockchain on Windows and deploy smart contract using it:</strong></p>
+<p> </p>
+<ul>
+<li>This part shows how to deploy smart contract to Ganache blockchain using remix.</li>
+<li>Install Ganache on Windows. Download the installer from below link. http://truffleframework.com/ganache/</li>
+<li>Or install it from command line</li>
+</ul>
+<p>npm install –g ganache -cli</p>
+<ul>
+<li>What is ganache?? When you develop application, that application will be held in application server. In case of ethereum, the Ethereum blockchain will hold the smart contract. The blockchain is acting as application server. Ganache is simulation blockchain that runs locally in the system and simulate the Ethereum blockchin for you. It comes as GUI or command line.</li>
+<li>When you run ganache, you will see this image. You see many ether addresses. Each ether address has some money on it.</li>
+</ul>
+<p><img src="images/159551591363022050_1.jpg" /></p>
+<p> </p>
+<ul>
+<li>There will be 10 accounts by defaults.</li>
+<li>The block tab will show the transections blocks</li>
+<li>The transection tab will show the transactions. Any transection done by smart contract will be shown on this window.</li>
+<li>The log tab will show all logs.</li>
+</ul>
+<ul>
+<li>To connect to Ganache block chain through the Remix, return to our previous example. URL to open Remix IDE https://remix.ethereum.org. When we compile the solidity code, we get byte code that we can deploy in Ethereum blockchain.</li>
+<li>Start new contract student.sol. Below is smart contract code</li>
+</ul>
+<p>pragma solidity &gt;=0.4.22 &lt;0.6.0;</p>
+<p>contract student {</p>
+<p>string name;</p>
+<p>uint age;</p>
+<p>function setStudentDetails(string _name, uint _age) public{</p>
+<p>name=_name;</p>
+<p>age=_age;</p>
+<p>}</p>
+<p>function getStudentDetails() public view returns(string, uint){</p>
+<p>return (name, age);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<ul>
+<li>To connect to Ganache block chain, go to run and choose to run with the third option Web3 provider. Assign connecting to the GUI Ganache server port http://localhost:7545. If you use the command line Ganache, use the server port http://localhost:8545</li>
+<li>It will show the following after connecting to Ganache. I will show 10 accounts of the Ganache block chain and the amount of ethereum on these accounts.</li>
+</ul>
+<p><img src="images/15955159146808753_2.jpg" /></p>
+<ul>
+<li>Click deploy to deploy the smart contract. We get the following transection log:</li>
+</ul>
+<p><img src="images/15955159147035594_3.jpg" /></p>
+<ul>
+<li>When we go to ganache dashboard, we can see the transection details</li>
+</ul>
+<p><img src="images/159551591572128972_4.jpg" /></p>
+<ul>
+<li>When we send the student details: name and age. New transection will be sent which requires mining. It will use some gas fees that will be given to miner.</li>
+</ul>
+<p><img src="images/159551591512554364_5.jpg" /></p>
+<ul>
+<li>The transaction is shown in Ganache as smart contract call from certain address to other address</li>
+</ul>
+<p><img src="images/15955159163479181_6.jpg" /></p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_7.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_7.html#c128550071">7. How to compile and deploy Smart Contract on Test Networks:</h3>
+<p><strong>7. How to compile and deploy Smart Contract on Test Networks:</strong></p>
+<p> </p>
+<ul>
+<li>This part shows how to deploy smart contract to TesNet blockchain using remix.</li>
+<li>URL to open Remix IDE https://remix.ethereum.org</li>
+<li>Start new contract student.sol. Below is smart contract code</li>
+</ul>
+<p>pragma solidity &gt;=0.4.22 &lt;0.6.0;</p>
+<p>contract student {</p>
+<p>string name;</p>
+<p>uint age;</p>
+<p>function setStudentDetails(string _name, uint _age) public{</p>
+<p>name=_name;</p>
+<p>age=_age;</p>
+<p>}</p>
+<p>function getStudentDetails() public view returns(string, uint){</p>
+<p>return (name, age);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<ul>
+<li>Install metamask. With metamask, we can deploy the smart contract in either main network, local network in computer, or any of the three test networks: Ropsten Test Network, Kovan Test Network, Rinkeby Test Network.</li>
+</ul>
+<p><img src="images/159551591697707265_1.jpg" /></p>
+<ul>
+<li>We will use in this example to connect to Ropsten Test Network.</li>
+<li>First the metamask account will have zero ether.But we need ethereum balance to spend when we do any change in status on blackchain or we do transection .</li>
+</ul>
+<p> </p>
+<p><img src="images/159551591765408805_2.jpg" /></p>
+<ul>
+<li>To have some ether in the account, we click buy while connecting to Rinkeby Test Network. It will take us to ethereum faucet https://faucet.metamask.io. We do not get real ethereum from the faucet, but just test ether that can be used in our test network.</li>
+<li>If previous process failed, you can use https://faucet.rinkeby.io/. Send test ether to the metamask account . You must put the ethereum address in twitter tweet and then submit the tweet to the faucet</li>
+</ul>
+<p><img src="images/159551591777092004_3.jpg" /></p>
+<ul>
+<li>To deploy the contract on the Rinkeby test network, choose to run contract on injected web 3 mode and deploy the contract. Here screenshot when the contract deployed in the Rinkeby trst network blockchain.</li>
+</ul>
+<p><img src="images/159551591811815232_4.jpg" /></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_8.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_8.html#c710329901">8. Quick example of deploying ERC20 token smart contract:</h3>
+<p><strong>8. Quick example of deploying ERC20 token smart contract:</strong></p>
+<p> </p>
+<ul>
+<li>Install the metamask on the browser</li>
+<li>After installing meta mask, we have many networks we can work on:</li>
+</ul>
+<p><img src="images/159551591865305970_1.jpg" /></p>
+<ul>
+<li>We will use the test network.</li>
+<li>We can get the erc20 token smart contract creation code ready from https://github.com/ethereum/ethereum-org/blob/master/solidity/token-erc20.sol</li>
+</ul>
+<p>pragma solidity &gt;=0.4.22 &lt;0.6.0;</p>
+<p>interface tokenRecipient {</p>
+<p>function receiveApproval(address _from, uint256 _value, address _token, bytes calldata _extraData) external;</p>
+<p>}      </p>
+<p>contract TokenERC20 {</p>
+<p>// Public variables of the token</p>
+<p>string public name;</p>
+<p>string public symbol;</p>
+<p>uint8 public decimals = 18;</p>
+<p>// 18 decimals is the strongly suggested default, avoid changing it</p>
+<p>uint256 public totalSupply;</p>
+<p> </p>
+<p>// This creates an array with all balances</p>
+<p>mapping (address =&gt; uint256) public balanceOf;</p>
+<p>mapping (address =&gt; mapping (address =&gt; uint256)) public allowance;</p>
+<p> </p>
+<p>// This generates a public event on the blockchain that will notify clients</p>
+<p>event Transfer(address indexed from, address indexed to, uint256 value);</p>
+<p>// This generates a public event on the blockchain that will notify clients</p>
+<p>event Approval(address indexed _owner, address indexed _spender, uint256 _value);</p>
+<p>// This notifies clients about the amount burnt</p>
+<p>event Burn(address indexed from, uint256 value);</p>
+<p>/**</p>
+<p>* Constructor function</p>
+<p>*</p>
+<p>* Initializes contract with initial supply tokens to the creator of the contract</p>
+<p>*/</p>
+<p>constructor(</p>
+<p>uint256 initialSupply,</p>
+<p>string memory tokenName,</p>
+<p>string memory tokenSymbol</p>
+<p>) public {</p>
+<p>totalSupply = initialSupply * 10 ** uint256(decimals); // Update total supply with the decimal amount</p>
+<p>balanceOf[msg.sender] = totalSupply; // Give the creator all initial tokens</p>
+<p>name = tokenName; // Set the name for display purposes</p>
+<p>symbol = tokenSymbol; // Set the symbol for display purposes</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* Internal transfer, only can be called by this contract</p>
+<p>*/</p>
+<p>function _transfer(address _from, address _to, uint _value) internal {</p>
+<p>// Prevent transfer to 0x0 address. Use burn() instead</p>
+<p>require(_to != address(0x0));</p>
+<p>// Check if the sender has enough</p>
+<p>require(balanceOf[_from] &gt;= _value);</p>
+<p>// Check for overflows</p>
+<p>require(balanceOf[_to] + _value &gt;= balanceOf[_to]);</p>
+<p>// Save this for an assertion in the future</p>
+<p>uint previousBalances = balanceOf[_from] + balanceOf[_to];</p>
+<p>// Subtract from the sender</p>
+<p>balanceOf[_from] -= _value;</p>
+<p>// Add the same to the recipient</p>
+<p>balanceOf[_to] += _value;</p>
+<p>emit Transfer(_from, _to, _value);</p>
+<p>// Asserts are used to use static analysis to find bugs in your code. They should never fail</p>
+<p>assert(balanceOf[_from] + balanceOf[_to] == previousBalances);</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* Transfer tokens</p>
+<p>*</p>
+<p>* Send `_value` tokens to `_to` from your account</p>
+<p>*</p>
+<p>* @param _to The address of the recipient</p>
+<p>* @param _value the amount to send</p>
+<p>*/</p>
+<p>function transfer(address _to, uint256 _value) public returns (bool success) {</p>
+<p>_transfer(msg.sender, _to, _value);</p>
+<p>return true;</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* Transfer tokens from other address</p>
+<p>*</p>
+<p>* Send `_value` tokens to `_to` on behalf of `_from`</p>
+<p>*</p>
+<p>* @param _from The address of the sender</p>
+<p>* @param _to The address of the recipient</p>
+<p>* @param _value the amount to send</p>
+<p>*/</p>
+<p>function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {</p>
+<p>require(_value &lt;= allowance[_from][msg.sender]); // Check allowance</p>
+<p>allowance[_from][msg.sender] -= _value;</p>
+<p>_transfer(_from, _to, _value);</p>
+<p>return true;</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* Set allowance for other address</p>
+<p>*</p>
+<p>* Allows `_spender` to spend no more than `_value` tokens on your behalf</p>
+<p>*</p>
+<p>* @param _spender The address authorized to spend</p>
+<p>* @param _value the max amount they can spend</p>
+<p>*/</p>
+<p>function approve(address _spender, uint256 _value) public</p>
+<p>returns (bool success) {</p>
+<p>allowance[msg.sender][_spender] = _value;</p>
+<p>emit Approval(msg.sender, _spender, _value);</p>
+<p>return true;</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* Set allowance for other address and notify</p>
+<p>*</p>
+<p>* Allows `_spender` to spend no more than `_value` tokens on your behalf, and then ping the contract about it</p>
+<p>*</p>
+<p>* @param _spender The address authorized to spend</p>
+<p>* @param _value the max amount they can spend</p>
+<p>* @param _extraData some extra information to send to the approved contract</p>
+<p>*/</p>
+<p>function approveAndCall(address _spender, uint256 _value, bytes memory _extraData)</p>
+<p>public</p>
+<p>returns (bool success) {</p>
+<p>tokenRecipient spender = tokenRecipient(_spender);</p>
+<p>if (approve(_spender, _value)) {</p>
+<p>spender.receiveApproval(msg.sender, _value, address(this), _extraData);</p>
+<p>return true;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* Destroy tokens</p>
+<p>*</p>
+<p>* Remove `_value` tokens from the system irreversibly</p>
+<p>*</p>
+<p>* @param _value the amount of money to burn</p>
+<p>*/</p>
+<p>function burn(uint256 _value) public returns (bool success) {</p>
+<p>require(balanceOf[msg.sender] &gt;= _value); // Check if the sender has enough</p>
+<p>balanceOf[msg.sender] -= _value; // Subtract from the sender</p>
+<p>totalSupply -= _value; // Updates totalSupply</p>
+<p>emit Burn(msg.sender, _value);</p>
+<p>return true;</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* Destroy tokens from other account</p>
+<p>*</p>
+<p>* Remove `_value` tokens from the system irreversibly on behalf of `_from`.</p>
+<p>*</p>
+<p>* @param _from the address of the sender</p>
+<p>* @param _value the amount of money to burn</p>
+<p>*/</p>
+<p>function burnFrom(address _from, uint256 _value) public returns (bool success) {</p>
+<p>require(balanceOf[_from] &gt;= _value); // Check if the targeted balance is enough</p>
+<p>require(_value &lt;= allowance[_from][msg.sender]); // Check allowance</p>
+<p>balanceOf[_from] -= _value; // Subtract from the targeted balance</p>
+<p>allowance[_from][msg.sender] -= _value; // Subtract from the sender's allowance</p>
+<p>totalSupply -= _value; // Update totalSupply</p>
+<p>emit Burn(_from, _value);</p>
+<p>return true;</p>
+<p>}</p>
+<p>}</p>
+<ul>
+<li><strong>We must adjust the following when deploying the cod:</strong></li>
+</ul>
+<p>1- Contact Mycoin must be your contract name</p>
+<p>2- totalSupply</p>
+<p>3- initalSupply</p>
+<p>4- tokenName</p>
+<p>5. tokenSymbol</p>
+<p> </p>
+<ul>
+<li>Compile the code in https://remix.ethereum.org/</li>
+<li>Connect the metamask to Rinkbey test network</li>
+<li>Get test ether from the faucet https://faucet.rinkeby.io/. It will send your ethereum account 3 ether.</li>
+<li>Setup the following before deploying the account as example</li>
+</ul>
+<p>initialSupply: 1000000</p>
+<p>tokenName: hidaia</p>
+<p>tokenSymbol: hedaia</p>
+<p><img src="images/159551591983952036_2.jpg" /></p>
+<ul>
+<li>When the contract deployed you will get the following forms that you can fill</li>
+</ul>
+<p><img src="images/159551591982184671_3.jpg" /></p>
+<ul>
+<li>You can try to burn some tokens,you will see that the total supply decreased by those number you burbed,</li>
+<li>You can also try any other changes</li>
+</ul>
+<p> </p>
+<p> </p>
+<p><strong><br />
+</strong></p>
+<p><strong>9. Getting started tutorial on solidity:</strong></p>
+<p><strong>a) Data Types and Data Structures</strong></p>
+<p> </p>
+<p>Go to https://remix.ethereum.org/ and create new file. I called it MyContrct.sol.</p>
+<p>Let's create a new file named MyContract.sol. On the first line of this file, we'll declare the version of the solidity programming language we want to use:</p>
+<p>pragma solidity ^0.4.24;</p>
+<p> </p>
+<p>Now we can declare the smart contract like this:</p>
+<p>pragma solidity ^0.4.24;</p>
+<p>contract MyContract {</p>
+<p>// ...</p>
+<p>}</p>
+<p> </p>
+<p>A smart contract is a piece of code that gets executed on the Ethereum blockchain. It functions somewhat like an API microservice on the web that is publicly accessible to everyone. All of the code of the smart contract is visible to the public, and we can allow anyone connected to the network to call functions on the smart contract.</p>
+<p>First, we'll program a simple "storage" smart contract that will be able to:</p>
+<p>Store a value</p>
+<p>Retrieve this value</p>
+<p>We'll start by creating a way to store a string value in the smart contract like this. We'll do that with a variable called value. Solidity is a statically typed language, so we must first specify the data type when declaring the variable like this:</p>
+<p>pragma solidity ^0.4.24;</p>
+<p>contract MyContract {</p>
+<p>string value;</p>
+<p> </p>
+<p>}</p>
+<p> </p>
+<p>Now let's create a function to read this value from storage. We'll start by declaring a function called get() with the function keyword like this:</p>
+<p>function get() {</p>
+<p>// ...</p>
+<p>}</p>
+<p>Now we'll return the value from the state variable with the return keyword like this. We'll set the "visibility" of this function to public so that anyone connected to the blockchain can call it. Finally, we'll specify the return value string for the function:</p>
+<p>pragma solidity ^0.4.24;</p>
+<p>contract MyContract {</p>
+<p>string value;</p>
+<p>function get() public view returns(string) {</p>
+<p>return value;</p>
+<p>}</p>
+<p>}</p>
+<p>let's create a way to set this value from outside the smart contract. We'll create a set function. We simply created a function that accepts a _value argument of string type. This function is also publicly visible so that anyone connected to the blockchain can call it. Now let's actually update the smart contract value like this:</p>
+<p>function set(string _value) public {</p>
+<p>value = _value;</p>
+<p>}</p>
+<p> </p>
+<p>Now let's set a default value for the value state variable. We'll do that inside the smart contract constructor function like this:</p>
+<p>constructor() public {</p>
+<p>value = "myValue";</p>
+<p>}</p>
+<p> </p>
+<p>Remember, the Etherum blockchain is made up of bundles of records called "blocks" which are "chained together" to make up the public ledger. The basic units of all these blocks are transactions. You're seeing them listed here below. You can click the "down" arrow to see all details of the receipt.</p>
+<p>I'll select the JavaScript virtual machine, which will give us a simulated blockchain inside our browser.</p>
+<p>Let's update the code in our smart contract to be compatible with the latest version of Solidity at the time of writing this article. We can modify the first line in the smart contract code like this:</p>
+<p>pragma solidity ^0.5.1;</p>
+<p> </p>
+<p>First, modify the get() and set () functions to look like this:</p>
+<p>pragma solidity ^0.5.1;</p>
+<p>contract MyContract {</p>
+<p>string value;</p>
+<p>constructor() public {</p>
+<p>value = "myValue";</p>
+<p>}</p>
+<p>function get() public view returns(string memory) {</p>
+<p>return value;</p>
+<p>}</p>
+<p>function set(string memory _value) public {</p>
+<p>value = _value;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>We can also assign a default value to the state variable like this:</p>
+<p>string public value = "myValue";</p>
+<p> </p>
+<p>We can also set this value as a constant that will never change like this:</p>
+<p>string public constant value = "myValue";</p>
+<p> </p>
+<p>We can create a boolean state variable like this:</p>
+<p>bool public myBool = true;</p>
+<p> </p>
+<p>This can be either true or false.</p>
+<p> </p>
+<p>Now we can create an integer like this:</p>
+<p>int public myInt = 1;</p>
+<p> </p>
+<p>Integers can be positive or negative, i.e., signed. If you don't want a number to be negative, you can create an unsigned integer like this:</p>
+<p>uint public myUint = 1;</p>
+<p> </p>
+<p>We can specify the number of bits for the number. The above example defaults to 256 bits. We can be explicit like this:</p>
+<p>uint256 public myUint256 = 9999;</p>
+<p> </p>
+<p>We can also restrict the value to 8 bits, like this:</p>
+<p>uint8 public myUint8 = 8;</p>
+<p> </p>
+<p><strong>b) Enums</strong></p>
+<p> </p>
+<p>Now let's go over some basic data structures in solidity. First, let's look at the Enum data structure, which are a way of keeping track of enumerated lists in Solidity. We can check against this list whenever you're writing smart contracts. Let's create an enum in the smart contract like this:</p>
+<p>enum State { Waiting, Ready, Active }</p>
+<p> </p>
+<p>Just as an example, this will help us keep track of the active state of the smart contract by providing Waiting, Ready, and Active options. We can check the current state of the smart contract like this:</p>
+<p>State public state;</p>
+<p> </p>
+<p>Now, we can set the default state in the constructor:</p>
+<p>constructor() public {</p>
+<p>state = State.Waiting;</p>
+<p>}</p>
+<p>We can update the current state to active like this:</p>
+<p>function activate() public {</p>
+<p>state = State.Active;</p>
+<p>}</p>
+<p> </p>
+<p>And finally, we can check against the enum list to see if the state is currently active like this:</p>
+<p>function isActive() public view returns(bool) {</p>
+<p>return state == State.Active;</p>
+<p>}</p>
+<p> </p>
+<p>Now the final smart contract code should look like this:</p>
+<p>pragma solidity 0.5.1;</p>
+<p>contract MyContract {</p>
+<p>enum State { Waiting, Ready, Active }</p>
+<p>State public state;</p>
+<p>constructor() public {</p>
+<p>state = State.Waiting;</p>
+<p>}</p>
+<p>function activate() public {</p>
+<p>state = State.Active;</p>
+<p>}</p>
+<p>function isActive() public view returns(bool) {</p>
+<p>return state == State.Active;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><strong>c) Structs</strong></p>
+<p> </p>
+<p>Solidity allows you to define your own data types with Structs. You can basically model any kind of data you want with arbitrary attributes of varying data types. Let's look at how this works by creating a people struct:</p>
+<p>struct Person {</p>
+<p>string _firstName;</p>
+<p>string _lastName;</p>
+<p>}</p>
+<p> </p>
+<p>We've modeled a person here that has a _firstName and _lastName. Notice that we're able to specify any data type that we want! We've used strings for both attributes here. We could add up to 17 different attributes here with any data type.</p>
+<p> </p>
+<p>Now we need a place to store this person struct. Let's use an array for this! We can declare people array like this:</p>
+<p>Person[] public people;</p>
+<p> </p>
+<p>Notice we declare the type within the array, i.e., Person. We also set the visibility to public and assigned it to a state variable called people. This will provide us with a function that will allow us to access the people inside this array. I should mention though, that calling the people() function outside the smart contract will not return the entire array. Instead, the people() function will accept an index argument that will allow us to reference the person inside the array based upon that index, which is zero-based. For example, we can access the first person in the people array like this: people(0)</p>
+<p> </p>
+<p>Now let's create a way to add a person to this array. We'll create an addPerson() function like this:</p>
+<p>This function will accept the arguments for the person struct attributes, then instantiate a new person and add it to the people array with the push function. It also increments the peopleCount state variable by 1. We can implement that state variable in the smart contract like this: uint256 public peopleCount;</p>
+<p>function addPerson(string memory _firstName, string memory _lastName) public {</p>
+<p>people.push(Person(_firstName, _lastName));</p>
+<p>peopleCount += 1;</p>
+<p>}</p>
+<p> </p>
+<p>Now the completed smart contract code should look like this:</p>
+<p>pragma solidity 0.5.1;</p>
+<p>contract MyContract {</p>
+<p>Person[] public people;</p>
+<p>uint256 public peopleCount;</p>
+<p> </p>
+<p>struct Person {</p>
+<p>string _firstName;</p>
+<p>string _lastName;</p>
+<p>}</p>
+<p>function addPerson(string memory _firstName, string memory _lastName) public {</p>
+<p>people.push(Person(_firstName, _lastName));</p>
+<p>peopleCount += 1;</p>
+<p>}</p>
+<p><strong>}            </strong></p>
+<p> </p>
+<p><strong>d) Mapping</strong></p>
+<p> </p>
+<p>Solidity provides a data structure called a mapping which allows us to store key-value pairs. This structure acts much like an associative array or a hash table in other functions. We can declare a mapping in the smart contact like this:</p>
+<p>mapping(uint =&gt; Person) public people;</p>
+<p> </p>
+<p>This will be a mapping where we store person structs. It will replace the people array we used in the previous example. The key will be an unsigned integer, and the value will be a person struct. We'll treat the key like a database id. We can update the person struct to keep track of that id like this:</p>
+<p>struct Person { uint _id; string _firstName; string _lastName; }</p>
+<p> </p>
+<p>Now we can modify the addPerson() function to update the people mapping. The following code uses the peopleCount counter cache to create an id for the person. Then it instantiates a new person struct with the id and the passed in attributes. It then adds this to the people mapping. The completed smart contract code should look like this:</p>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>contract MyContract {</p>
+<p>uint256 peopleCount = 0;</p>
+<p> </p>
+<p>mapping(uint =&gt; Person) public people;</p>
+<p> </p>
+<p>struct Person {</p>
+<p>uint _id;</p>
+<p>string _firstName;</p>
+<p>string _lastName;</p>
+<p>}</p>
+<p> </p>
+<p>function addPerson(string memory _firstName, string memory _lastName) public {</p>
+<p>peopleCount += 1;</p>
+<p>people[peopleCount] = Person(peopleCount, _firstName, _lastName);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>We can deploy the contract to check the code. If I putin addPerson field:</p>
+<p>“_firstName”=”Hidaia” and “_secondName”=”Alassouli”</p>
+<p>This will be stored as the first element in people array. I put 1 in people field and I will get the data stored in the element 1 in array people.</p>
+<p><img src="images/159551592035104727_4.jpg" /></p>
+<p> </p>
+<p> </p>
+<p><strong>e) Function Visibility</strong></p>
+<p> </p>
+<p>Let's talk about function visibility. In the last sections, we used the public function visibility several times so that the smart contract functions can be called outside the smart contract by accounts connected to the network. What if we wanted to create functions that are only used inside the smart contract? We can do this with the internal visibility. Let’s increment the peopleCount to its own internal function like this:</p>
+<p><strong>function incrementCount() internal {</strong></p>
+<p>peopleCount += 1;</p>
+<p>}</p>
+<p> </p>
+<p>This function will only be accessible inside the smart contract, not by the public interface for other accounts. Now we can call this function inside the addPerson() function like this:</p>
+<p>function addPerson(string memory _firstName, string memory _lastName) public {</p>
+<p>incrementCount()</p>
+<p>people[peopleCount] = Person(peopleCount, _firstName, _lastName);</p>
+<p>}</p>
+<p> </p>
+<p><strong>f) Modifiers</strong></p>
+<p> </p>
+<p>Now that's an example of other types of function visibly. Let's talk about function modifiers. These will allow us to add special behavior to our functions, like add permissions. Let's create a modifier that only allows an admin or "owner" to call the addPerson() function, and restrict everyone else from calling this function.</p>
+<p>First, we'll create a way to store the owner of this smart contract. We can do that with a state variable like this:</p>
+<p>address owner;</p>
+<p> </p>
+<p>Now let's create a modifier that checks if the person calling the function is the owner:</p>
+<p>modifier onlyOwner() {</p>
+<p>require(msg.sender == owner);</p>
+<p>_;</p>
+<p>}</p>
+<p> </p>
+<p>Let me explain this code:</p>
+<p>First, we declare the modifier with the modifier keyword, followed by the modifier name onlyOwner.</p>
+<p>Next, we access the current account that's calling the function with msg.sender.</p>
+<p>Next, we use require() to check that the account calling the function is the owner. If the result of the expression passed into require() evaluates to true, then code resumes execution. If not, it throws an error. In this case, if the account calling the function is not the owner, then Solidity will throw an error.</p>
+<p>Now we can set the owner inside the smart contract as the account that deploys the smart contract like this:</p>
+<p>constructor() public {</p>
+<p>owner = msg.sender;</p>
+<p>}</p>
+<p> </p>
+<p>Now we can add the modifier to the addPerson() function so that only the owner can call it.Try to run your code to see if only the owner can call the function successfully without any errors! At this point, the complete smart contract code should look like this:</p>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>contract MyContract {</p>
+<p>uint256 public peopleCount = 0;</p>
+<p>mapping(uint =&gt; Person) public people;</p>
+<p> </p>
+<p>address owner;</p>
+<p> </p>
+<p>modifier onlyOwner() {</p>
+<p>require(msg.sender == owner);</p>
+<p>_;</p>
+<p>}</p>
+<p> </p>
+<p>struct Person {</p>
+<p>uint _id;</p>
+<p>string _firstName;</p>
+<p>string _lastName;</p>
+<p>}</p>
+<p> </p>
+<p>constructor() public {</p>
+<p>owner = msg.sender;</p>
+<p>}</p>
+<p> </p>
+<p>function addPerson(</p>
+<p>string memory _firstName,</p>
+<p>string memory _lastName</p>
+<p>)</p>
+<p>public</p>
+<p>onlyOwner</p>
+<p>{</p>
+<p>incrementCount()</p>
+<p>people[peopleCount] = Person(peopleCount, _firstName, _lastName);</p>
+<p>}</p>
+<p> </p>
+<p>function incrementCount() internal {</p>
+<p>peopleCount += 1;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><strong>g) Time</strong></p>
+<p> </p>
+<p>We can create a new modifier that uses time to illustrate a use case for time in Solidity. We'll create a new modifier called onlyWhileOpen that will check that the current time on the blockchain is past a time that we specify. This is a common practice when creating ICO crowdsale smart contracts that have an "opening time". Often times, these smart contracts will reject investor contributions that are made before the crowdsale has started. We can model similar behavior by restricting access to the addPerson() function until after the opening time has passed. First let's create a state variable to store the opening time:</p>
+<p>uint256 startTime;</p>
+<p> </p>
+<p>We can store the startTime with this state variable in seconds, as that's how we express timestamps in Solidity. In fact, the time stamps are expressed in unix time which is the number of seconds that have passed since Thursday, 1 January 1970. Now I'll set the start time in the constructor like this:</p>
+<p>constructor() public {</p>
+<p>startTime = (unic timestamp);</p>
+<p>}</p>
+<p> </p>
+<p>You can use https://www.epochconverter.com/ to generate a unix timestamp in the future for your own purposes! Now let's create a modifier to check that the start time has passed like this:</p>
+<p>modifier onlyWhileOpen() {</p>
+<p><strong></strong> <strong>require(block.timestamp &gt;= startTime);</strong></p>
+<p>_;</p>
+<p>}</p>
+<p> </p>
+<p>First, we declare the modifier, just like we did in the last example. Next, we require the specific condition.Then we compare the start time to "now", by checking the current block's timestamp with block.timestamp.</p>
+<p> </p>
+<p>Now we can add the modifier to the addPerson() function</p>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>contract MyContract {</p>
+<p><strong>uint256</strong> <strong>public peopleCount = 0;</strong></p>
+<p><strong>mapping(uint =&gt; Person) public people;</strong></p>
+<p> </p>
+<p>uint256 startTime;</p>
+<p> </p>
+<p><strong></strong> <strong>modifier onlyWhileOpen() {</strong></p>
+<p>require(block.timestamp &gt;= startTime);</p>
+<p>_;</p>
+<p>}</p>
+<p> </p>
+<p><strong></strong> <strong>struct Person {</strong></p>
+<p><strong></strong> <strong>uint _id;</strong></p>
+<p><strong></strong> <strong>string _firstName;</strong></p>
+<p><strong></strong> <strong>string _lastName;</strong></p>
+<p>}</p>
+<p> </p>
+<p><strong>constructor()</strong> <strong>public {</strong></p>
+<p><strong>startTime =</strong> <strong>1544668513; // Update this value</strong></p>
+<p>}</p>
+<p> </p>
+<p><strong></strong> <strong>function addPerson(</strong></p>
+<p><strong></strong> <strong>string memory _firstName,</strong></p>
+<p><strong></strong> <strong>string memory _lastName</strong></p>
+<p><strong></strong> <strong>)</strong></p>
+<p><strong></strong> <strong>public</strong></p>
+<p>onlyWhileOpen</p>
+<p><strong></strong> <strong>{</strong></p>
+<p>people[peopleCount] = Person(peopleCount, _firstName, _lastName);</p>
+<p>}</p>
+<p> </p>
+<p><strong></strong> <strong>function incrementCount() internal {</strong></p>
+<p><strong>peopleCount +=</strong> <strong>1;</strong></p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><strong>h) Sending Ether &amp; Events</strong></p>
+<p> </p>
+<p>Now let's write a function that accepts Ether. To demonstrate this, I'll create an ico-like contract with a buyToken() function. This will allow an account to send ether to pay for tokens with Ether. The smart contract will be responsible for issuing the tokens, tracking the balance of the account, and also transferring the Ether funds to another wallet address.</p>
+<p>First we'll create a mapping to track the token balances like this:</p>
+<p>mapping(address =&gt; uint256) public balances;</p>
+<p> </p>
+<p>Now I'll create the buyToken() function that will increment the balance like this:</p>
+<p>function buyToken() public {</p>
+<p>balances[msg.sender] += 1;</p>
+<p>}</p>
+<p> </p>
+<p>Now I'll declare a wallet where the ether funds will be sent whenever an account buys tokens:</p>
+<p>address wallet;</p>
+<p> </p>
+<p>Now we can transfer funds to the wallet whenever the buyToken() function is called like this:</p>
+<p>function buyToken() public payable {</p>
+<p>balances[msg.sender] += 1;</p>
+<p>wallet.transfer(msg.value);</p>
+<p>}</p>
+<p> </p>
+<p>Now let me explain this code:</p>
+<p>We can transfer ether directly to the wallet by calling wallet.transfer()</p>
+<p>We can get the value of the Ether sent in by function caller with msg.value, just like msg.sender</p>
+<p>We also must use the payable modifier so that accounts can send Ether when calling the function.</p>
+<p> </p>
+<p>Likewise, to update to Solidity 0.5.1, we must explicitly declare the wallet payable as well:</p>
+<p>address payable wallet;</p>
+<p> </p>
+<p>Now let's set the wallet address inside the constructor function of the contract (we'll use the payable modifier here, too):</p>
+<p>constructor(address payable _wallet) public {</p>
+<p>wallet = _wallet;</p>
+<p>}</p>
+<p> </p>
+<p>Awesome! Now watch the video above as I demonstrate how to send Ether with this function inside of Remix. You complete smart contract code should look like this up to this point:</p>
+<p>contract MyContract {</p>
+<p>mapping(address =&gt; uint256) public balances;</p>
+<p>address payable wallet;</p>
+<p> </p>
+<p>constructor(address payable _wallet) public {</p>
+<p>wallet = _wallet;</p>
+<p>}</p>
+<p> </p>
+<p>function buyToken() public payable {</p>
+<p>balances[msg.sender] += 1;</p>
+<p>wallet.transfer(msg.value);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>We can test the code. When running the code, I deployed the contract with some ether address. Then I bought tokens with other ether addr by clicking buy token and I set the amount ex: 2 eth. Then I clicked the balance button. It shows the balance incremented by 1 and the ether balances increased in deployed contract by 2 and decreased for the buyer ether address by 2.</p>
+<p> </p>
+<p><img src="images/159551592057389693_5.jpg" /></p>
+<p> </p>
+<p>Now I'll show you how to create a default or "fallback" function inside Solidity. This is a function that will get called anytime an account sends Ether to a smart contract. This is a very common pattern for ICO smart contracts, where you simply send Ether to a smart contract and it executes a function. That's exactly what we'll do here. We'll declare a fallback function that wraps the buyTokens() function. It will purchase tokens any time an account sends Ether to the smart contract. We can do that like this:</p>
+<p>function() external payable {</p>
+<p>buyToken();</p>
+<p>}</p>
+<p> </p>
+<p>Now let's talk about Events. Events are a way of dealing with the asynchronous nature of the blockchain. We can declare events inside smart contracts that can be subscribed to by external consumers. These consumers will be able to listen for these events to know that something happened inside the smart contract. We'll declare a Purchase event at the top of the smart contract like this:</p>
+<p>event Purchase(</p>
+<p>address _buyer,</p>
+<p>uint256 _amount</p>
+<p>);</p>
+<p> </p>
+<p>This event will log the buyer and the token amount. We'll be able to trigger this event inside the buyToken() function like this:</p>
+<p>function buyToken() public payable {</p>
+<p>balances[msg.sender] += 1;</p>
+<p>wallet.transfer(msg.value);</p>
+<p>emit Purchase(msg.sender, 1);</p>
+<p>}</p>
+<p> </p>
+<p>This event will allow us to know any time a token is purchased inside this smart contract. But what if we only wanted to listen for events that were relevant to our account? Good news! Solidity allows us to subscribe to filter events by indexed values. We can index the _buyer inside the event like this:</p>
+<p>event Purchase(</p>
+<p>address indexed _buyer,</p>
+<p>uint256 _amount</p>
+<p>);</p>
+<p> </p>
+<p>Now you know how to work with events inside Solidity. At this point your complete smart contract code should look like this:</p>
+<p>pragma solidity 0.5.1;</p>
+<p>contract MyContract {</p>
+<p>mapping(address =&gt; uint256) public balances;</p>
+<p>address payable wallet;</p>
+<p>event Purchase(</p>
+<p>address indexed _buyer,</p>
+<p>uint256 _amount</p>
+<p>);</p>
+<p> </p>
+<p>constructor(address payable _wallet) public {</p>
+<p>wallet = _wallet;</p>
+<p>}</p>
+<p>function() external payable {</p>
+<p>buyToken();</p>
+<p>}</p>
+<p>function buyToken() public payable {</p>
+<p>balances[msg.sender] += 1;</p>
+<p>wallet.transfer(msg.value);</p>
+<p>emit Purchase(msg.sender, 1);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>Here the log generated when buying a token:</p>
+<p><img src="images/159551592143285549_6.jpg" /></p>
+<p> </p>
+<p><strong>j) Smart contract interaction</strong></p>
+<p> </p>
+<p>I'll show you how to work with multiple smart contracts in solidity. First, I'll show you how to call smart contract functions from within another smart contract.</p>
+<p>I'll create the token contract like this:</p>
+<p>contract ERC20Token {</p>
+<p>string name;</p>
+<p>mapping(address =&gt; uint256) public balances;</p>
+<p> </p>
+<p>function mint() public {</p>
+<p>balances[msg.sender] += 1;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>Now we can mint tokens from MyContract using the ERC20Token contract. In order to do this, we need to a few things: the address of the token, and the smart contract code in order to call its mint() function. First I'll store the token address in a state variable like this:</p>
+<p>contract MyContract {</p>
+<p>address public token;</p>
+<p>//...</p>
+<p>}</p>
+<p> </p>
+<p>Now we can set the value for the token address inside the constructor like this:</p>
+<p>constructor(address payable _wallet, ERC20Token _token) public {</p>
+<p>wallet = _wallet;</p>
+<p>token = _token;</p>
+<p>}</p>
+<p> </p>
+<p>Now that we have the address available, we can access the smart contract code inside of the buyToken() function like this, and call the mint() function on it like this:</p>
+<p>function buyToken() public payable {</p>
+<p>ERC20Token _token = ERC20Token(address(token));</p>
+<p>_token.mint();</p>
+<p>wallet.transfer(msg.value);</p>
+<p>}</p>
+<p> </p>
+<p>I want to draw your attention to something before we continue. If you were to call the buyToken() function from your personal account right now, you would not mint any tokens for yourself. Why is that!? Let's revisit the mint() function as it is now:</p>
+<p>function mint() public {</p>
+<p>balances[msg.sender] += 1;</p>
+<p>}</p>
+<p> </p>
+<p>The reason it will not mint tokens for your account is because msg.sender is actually referencing the address of MyContract, which is calling the function from inside its buyToken()function! If we want to mint tokens for our own account, we must use tx.origin to reference the account that originated the transaction on the blockchain like this:</p>
+<p>function mint() public {</p>
+<p>balances[tx.origin] += 1;</p>
+<p>}</p>
+<p> </p>
+<p>You will need to deploy the token smart contract first, obtain its address, and then include it as an argument whenever you deploy the second smart contract. At this point your complete smart contract code should look like this:</p>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>contract ERC20Token {</p>
+<p>string name;</p>
+<p>mapping(address =&gt; uint256) public balances;</p>
+<p> </p>
+<p>function mint() public {</p>
+<p>balances[tx.origin] += 1;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>contract MyContract {</p>
+<p>address public token;</p>
+<p> </p>
+<p>address payable wallet;</p>
+<p> </p>
+<p>constructor(address payable _wallet, address _token) public {</p>
+<p>wallet = _wallet;</p>
+<p>token = _token;</p>
+<p>}</p>
+<p> </p>
+<p>function buyToken() public payable {</p>
+<p>ERC20Token _token = ERC20Token(address(token));</p>
+<p>_token.mint();</p>
+<p>wallet.transfer(msg.value);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>Now test the code</p>
+<ul>
+<li>Deploy the ERC20Token contract first.</li>
+<li>Take the contract address from debug menu</li>
+<li>Deploy MyContract after putting the creator wallet address and ERC20Token smart contract address arguments in deploy field.</li>
+<li>Press the buyToken field</li>
+<li>Then presss the balance field in ERC20Token contract and put the buyer address to show the balance (address of the person initiated the transection)</li>
+</ul>
+<p> </p>
+<p><img src="images/159551592146506453_7.jpg" /></p>
+<p> </p>
+<p><strong>k) Inheritance</strong></p>
+<p> </p>
+<p>Now let's talk about inheritance. Solidity allows you to create smart contracts that inherit from one another. Let's create a new pseudo token called MyToken that inherits from our original token smart contract. We'll use inheritance to give it a unique name, symbol, and mint function. We can inherit from the smart contract like this</p>
+<p> </p>
+<p>contract MyToken is ERC20Token {</p>
+<p>// ...</p>
+<p> </p>
+<p>}</p>
+<p> </p>
+<p>Now we can keep track of the token name in the parent smart contract like this:</p>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>contract ERC20Token {</p>
+<p>string public name;</p>
+<p>mapping(address =&gt; uint256) public balances;</p>
+<p> </p>
+<p>constructor(string memory _name) public {</p>
+<p>name = _name;</p>
+<p>}</p>
+<p> </p>
+<p>function mint() public {</p>
+<p>balances[tx.origin] ++;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>We can override the name of the parent token inside the constructor of our child token. While we're here, we'll also create a symbol for the child token and set it in the constructor. I'll show you how to override the parent token contract constructor, while assigning the new values like this:</p>
+<p>contract MyToken is ERC20Token {</p>
+<p>string public symbol;</p>
+<p> </p>
+<p>constructor(</p>
+<p>string memory _name,</p>
+<p>string memory _symbol</p>
+<p>)</p>
+<p>ERC20Token(_name)</p>
+<p>public {</p>
+<p>symbol = _symbol;</p>
+<p>}</p>
+<p>}</p>
+<p>Awesome! Now we have customized MyToken. Now let's update the mint() function to override the functionality of the parent token. First, let's create a way to store the address of all the token owners. We'll also set the count of all the owners like this:</p>
+<p>contract MyToken is ERC20Token {</p>
+<p>address[] public owners;</p>
+<p>uint256 public ownerCount;</p>
+<p>//...</p>
+<p>}</p>
+<p> </p>
+<p>Now let's update these values inside our own mint() function while preserving the behavior of the parent token smart contract. We can do that with the super keyword like this:</p>
+<p>function mint() public {</p>
+<p>super.mint();</p>
+<p>ownerCount ++;</p>
+<p>owners.push(msg.sender);</p>
+<p>}</p>
+<p> </p>
+<p>Awesome! Now we've created our own custom token that inherits from the parent token. Your full smart contract code should look like this:</p>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>contract ERC20Token {</p>
+<p>string public name;</p>
+<p>mapping(address =&gt; uint256) public balances;</p>
+<p> </p>
+<p>constructor(string memory _name) public {</p>
+<p>name = _name;</p>
+<p>}</p>
+<p> </p>
+<p>function mint() public {</p>
+<p>balances[tx.origin] ++;</p>
+<p>}</p>
+<p>}</p>
+<p>contract MyToken is ERC20Token {</p>
+<p>string public symbol;</p>
+<p>address[] public owners;</p>
+<p>uint256 public ownerCount;</p>
+<p> </p>
+<p>constructor(</p>
+<p>string memory _name,</p>
+<p>string memory _symbol</p>
+<p>)</p>
+<p>ERC20Token(_name)</p>
+<p>public {</p>
+<p>symbol = _symbol;</p>
+<p>}</p>
+<p> </p>
+<p>function mint() public {</p>
+<p>super.mint();</p>
+<p>ownerCount ++;</p>
+<p>owners.push(msg.sender);</p>
+<p>}</p>
+<p> </p>
+<p>}</p>
+<p> </p>
+<p>Now test the code. I deployed the contract “MyToken” with the name argument “Hidaia” and symbol “HED”</p>
+<p>The following data showed for each contract field: balances, name, ownerCount, owners, and symbol.</p>
+<p> </p>
+<p><img src="images/159551592261574373_8.jpg" /></p>
+<p> </p>
+<p><strong>l) Library</strong></p>
+<p> </p>
+<p>Library is used so we don’t repeat the code I each new contract code. Lets declare library Math.</p>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>library Math{</p>
+<p>function divide(uint256 a, uint256 b) internal pure returns (uint256) {</p>
+<p>require(b&gt;0);</p>
+<p>uint256 c=a/b;</p>
+<p>return c;</p>
+<p>}</p>
+<p>}</p>
+<p>contract MyContract {</p>
+<p>uint256 public value;</p>
+<p>function calaculate (uint _value1, uint _value2) public {</p>
+<p>value=Math.divide(_value1, _value2);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>MyContract will use the defined library Math to divide a and b.</p>
+<p>Deploy MyContract and give the values of a and b in the Calculate function fields. Attached the screenshot og the result:</p>
+<p> </p>
+<p><img src="images/159551592223141044_9.jpg" /></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><strong>m) Including library in separate file</strong></p>
+<p> </p>
+<p>We can put the library in separate file and call it inside the contract by including the library file.</p>
+<p>As an example, we opened new file for the Math library we wrote. The new file is Library.sol. Here the code inside the library:</p>
+<p>pragma solidity 0.5.1;</p>
+<p>library Math{</p>
+<p>function divide(uint256 a, uint256 b) internal pure returns (uint256) {</p>
+<p>require(b&gt;0);</p>
+<p>uint256 c=a/b;</p>
+<p>return c;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>Then we can call the library file Math.sol inside MyContract.sol file through import command. Here the complete code:</p>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>import "./Math.sol";</p>
+<p> </p>
+<p>contract MyContract {</p>
+<p>uint256 public value;</p>
+<p>function calaculate (uint _value1, uint _value2) public {</p>
+<p>value=Math.divide(_value1, _value2);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><strong>n) SafeMath</strong></p>
+<p> </p>
+<p>There is a common library called SafeMath.sol makes the athematicoperations much simple. The library in this link</p>
+<p>https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol</p>
+<ul>
+<li>I created SafeMath.sol with the code in that page.</li>
+</ul>
+<p> </p>
+<p>pragma solidity ^0.5.0;</p>
+<p> </p>
+<p>/**</p>
+<p>* @dev Wrappers over Solidity's arithmetic operations with added overflow</p>
+<p>* checks.</p>
+<p>*</p>
+<p>* Arithmetic operations in Solidity wrap on overflow. This can easily result</p>
+<p>* in bugs, because programmers usually assume that an overflow raises an</p>
+<p>* error, which is the standard behavior in high level programming languages.</p>
+<p>* `SafeMath` restores this intuition by reverting the transaction when an</p>
+<p>* operation overflows.</p>
+<p>*</p>
+<p>* Using this library instead of the unchecked operations eliminates an entire</p>
+<p>* class of bugs, so it's recommended to use it always.</p>
+<p>*/</p>
+<p>library SafeMath {</p>
+<p>/**</p>
+<p>* @dev Returns the addition of two unsigned integers, reverting on</p>
+<p>* overflow.</p>
+<p>*</p>
+<p>* Counterpart to Solidity's `+` operator.</p>
+<p>*</p>
+<p>* Requirements:</p>
+<p>* - Addition cannot overflow.</p>
+<p>*/</p>
+<p>function add(uint256 a, uint256 b) internal pure returns (uint256) {</p>
+<p>uint256 c = a + b;</p>
+<p>require(c &gt;= a, "SafeMath: addition overflow");</p>
+<p> </p>
+<p>return c;</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* @dev Returns the subtraction of two unsigned integers, reverting on</p>
+<p>* overflow (when the result is negative).</p>
+<p>*</p>
+<p>* Counterpart to Solidity's `-` operator.</p>
+<p>*</p>
+<p>* Requirements:</p>
+<p>* - Subtraction cannot overflow.</p>
+<p>*/</p>
+<p>function sub(uint256 a, uint256 b) internal pure returns (uint256) {</p>
+<p>return sub(a, b, "SafeMath: subtraction overflow");</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* @dev Returns the subtraction of two unsigned integers, reverting with custom message on</p>
+<p>* overflow (when the result is negative).</p>
+<p>*</p>
+<p>* Counterpart to Solidity's `-` operator.</p>
+<p>*</p>
+<p>* Requirements:</p>
+<p>* - Subtraction cannot overflow.</p>
+<p>*</p>
+<p>* NOTE: This is a feature of the next version of OpenZeppelin Contracts.</p>
+<p>* @dev Get it via `npm install @openzeppelin/contracts@next`.</p>
+<p>*/</p>
+<p>function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {</p>
+<p>require(b &lt;= a, errorMessage);</p>
+<p>uint256 c = a - b;</p>
+<p> </p>
+<p>return c;</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* @dev Returns the multiplication of two unsigned integers, reverting on</p>
+<p>* overflow.</p>
+<p>*</p>
+<p>* Counterpart to Solidity's `*` operator.</p>
+<p>*</p>
+<p>* Requirements:</p>
+<p>* - Multiplication cannot overflow.</p>
+<p>*/</p>
+<p>function mul(uint256 a, uint256 b) internal pure returns (uint256) {</p>
+<p>// Gas optimization: this is cheaper than requiring 'a' not being zero, but the</p>
+<p>// benefit is lost if 'b' is also tested.</p>
+<p>// See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522</p>
+<p>if (a == 0) {</p>
+<p>return 0;</p>
+<p>}</p>
+<p> </p>
+<p>uint256 c = a * b;</p>
+<p>require(c / a == b, "SafeMath: multiplication overflow");</p>
+<p> </p>
+<p>return c;</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* @dev Returns the integer division of two unsigned integers. Reverts on</p>
+<p>* division by zero. The result is rounded towards zero.</p>
+<p>*</p>
+<p>* Counterpart to Solidity's `/` operator. Note: this function uses a</p>
+<p>* `revert` opcode (which leaves remaining gas untouched) while Solidity</p>
+<p>* uses an invalid opcode to revert (consuming all remaining gas).</p>
+<p>*</p>
+<p>* Requirements:</p>
+<p>* - The divisor cannot be zero.</p>
+<p>*/</p>
+<p>function div(uint256 a, uint256 b) internal pure returns (uint256) {</p>
+<p>return div(a, b, "SafeMath: division by zero");</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* @dev Returns the integer division of two unsigned integers. Reverts with custom message on</p>
+<p>* division by zero. The result is rounded towards zero.</p>
+<p>*</p>
+<p>* Counterpart to Solidity's `/` operator. Note: this function uses a</p>
+<p>* `revert` opcode (which leaves remaining gas untouched) while Solidity</p>
+<p>* uses an invalid opcode to revert (consuming all remaining gas).</p>
+<p>*</p>
+<p>* Requirements:</p>
+<p>* - The divisor cannot be zero.</p>
+<p>* NOTE: This is a feature of the next version of OpenZeppelin Contracts.</p>
+<p>* @dev Get it via `npm install @openzeppelin/contracts@next`.</p>
+<p>*/</p>
+<p>function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {</p>
+<p>// Solidity only automatically asserts when dividing by 0</p>
+<p>require(b &gt; 0, errorMessage);</p>
+<p>uint256 c = a / b;</p>
+<p>// assert(a == b * c + a % b); // There is no case in which this doesn't hold</p>
+<p> </p>
+<p>return c;</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),</p>
+<p>* Reverts when dividing by zero.</p>
+<p>*</p>
+<p>* Counterpart to Solidity's `%` operator. This function uses a `revert`</p>
+<p>* opcode (which leaves remaining gas untouched) while Solidity uses an</p>
+<p>* invalid opcode to revert (consuming all remaining gas).</p>
+<p>*</p>
+<p>* Requirements:</p>
+<p>* - The divisor cannot be zero.</p>
+<p>*/</p>
+<p>function mod(uint256 a, uint256 b) internal pure returns (uint256) {</p>
+<p>return mod(a, b, "SafeMath: modulo by zero");</p>
+<p>}</p>
+<p> </p>
+<p>/**</p>
+<p>* @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),</p>
+<p>* Reverts with custom message when dividing by zero.</p>
+<p>*</p>
+<p>* Counterpart to Solidity's `%` operator. This function uses a `revert`</p>
+<p>* opcode (which leaves remaining gas untouched) while Solidity uses an</p>
+<p>* invalid opcode to revert (consuming all remaining gas).</p>
+<p>*</p>
+<p>* Requirements:</p>
+<p>* - The divisor cannot be zero.</p>
+<p>*</p>
+<p>* NOTE: This is a feature of the next version of OpenZeppelin Contracts.</p>
+<p>* @dev Get it via `npm install @openzeppelin/contracts@next`.</p>
+<p>*/</p>
+<p>function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {</p>
+<p>require(b != 0, errorMessage);</p>
+<p>return a % b;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<ul>
+<li>Then I called the library in MyContract.sol with import command. Now any athematic operation is easier. Here the MyContract.sol code :</li>
+</ul>
+<p>pragma solidity 0.5.1;</p>
+<p> </p>
+<p>import "./SafeMath.sol";</p>
+<p> </p>
+<p>contract MyContract {</p>
+<p>using SafeMath for uint256;</p>
+<p>uint256 public value;</p>
+<p>function calaculate (uint _value1, uint _value2) public {</p>
+<p>value=_value1.div(_value2);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<ul>
+<li>Attached screenshot when deploying MyContract.sol</li>
+</ul>
+<p> </p>
+<p><img src="images/159551592354341205_10.jpg" /></p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_9.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_9.html#c847710831">10. ERC-20 smart contract and crowd sale (ICO) smart contract:</h3>
+<p><strong>10. ERC-20 smart contract and crowd sale (ICO) smart contract:</strong></p>
+<p>I'm going to show you how to code your own cryptocurrency on the Ethereum blockchain and sell it! I'll show you how to create your own ERC-20 token and crowd sale step-by-step with Ethereum smart contracts, how to test the smart contracts, how to deploy the smart contracts to the Ethereum blockchain, and how to build an ICO website deployed to the web. I'll also explain what an ERC-20 token is, how an Ethereum token works, how an initial coin offering (ICO) works.</p>
+<p><strong>a. What is an ERC-20 Token?</strong></p>
+<p>The Ethereum blockchain allows you to create your own cryptocurrency, or token, that can be purchased with Ether, the native cryptocurrency of the Ethereum blockchain. ERC-20 is simply a standard that specifies how these tokens behave, so that they are compatible with other platforms like cryptocurrency exchanges.</p>
+<p>Ethereum is a blockchain like Bitcoin. Like Bitcoin, Ethereum keeps track of account balances for people who own Ether, Ethereum’s native cryptocurrency. Unlike Bitcoin, Ethereum is also a platform that allows you to create your own token without creating a new blockchain.</p>
+<p>You can create an Ethereum token with a smart contract. ERC-20 is a standard that specifies how this token smart contract should work.</p>
+<p>Let’s use an example to understand how an ERC-20 token smart contract works. Let’s say that we want to create a token called “My Token” with the symbol “MTK” and that there will be 100,000,000 of these tokens in existence.</p>
+<p>First, the token smart contract keeps track of some basic token attributes. For example it records the name “My Token", the symbol that you see on a cryptocurrency exchange, and how many total tokens exist.</p>
+<p>It also keeps track of who owns “My Token” and how much.</p>
+<p>ERC-20 tokens can be transferred from one account to another as payment, just like any other cryptocurrency.</p>
+<p>They can also be purchased in a crowd sale, like an ICO, which we will examine in the next section.</p>
+<p>They can also be bought and sold on a cryptocurrency exchange.</p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_10.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_10.html#c37782111">b. How ERC-20 Tokens Work</h3>
+<p><strong>b. How ERC-20 Tokens Work</strong></p>
+<p>Ethereum allows developers to write applications that run on the blockchain with smart contracts, which encapsulate all of the business logic of these applications. They enable us to read and write data to the blockchain, as well as execute code. Smart contacts are written in a programming language called Solidity, which looks a lot like Javascript. It is a full blown programming language that will allow us to do many of the same types of things Javascript is capable of, but it behaves a bit differently because of its use case, as we’ll see in this tutorial.</p>
+<p>In the case of an ERC-20 token, the smart contract governs all of the behavior about how the token works, and keeps track of token ownership and account balances.</p>
+<p>ERC-20 is an API specification for how Ethereum tokens should be built. It is a community adopted standard that allows tokens to be supported in a variety of use cases. We want to build a token that is compliant with this standard so that it can be widely accepted. If we did not have a standard like this, we could have endless ways to create tokens, and they might not be compatible with one another!</p>
+<p>Using the ERC-20 standard ensures that a token is compliant for the following use cases (and more):</p>
+<ul>
+<li>Wallet transfers - sending tokens from one account to another</li>
+<li>Buying and selling on cryptocurrency exchanges</li>
+<li>Purchasing tokens in an crowd sale (ICO) like we'll demonstrate in this tutorial</li>
+</ul>
+<p>The ERC-20 specification essentially dictates the interface that the smart contract must respond to. It specifies the structure of the smart contract and types of functions that the smart contract must have. It also provides some suggested functions that are nice to have, but ultimately optional. It dictates certain events that our token must have, like a transfer event. See, smart contracts can emit events that consumers can subscribe to, and with this standard, we can subscribe to events that tell us when tokens are sold.</p>
+<p>Here is an example implementation of the transfer function specified by the ERC-20 standard. It is required by the smart contract, and governs how someone can send an ERC-20 token from their wallet to another.</p>
+<p>contract ERC20Token {</p>
+<p><strong></strong> <strong>// ...</strong></p>
+<p> </p>
+<p><strong></strong> <strong>function transfer(address _to, uint256 _value) public returns (bool success) {</strong></p>
+<p><strong></strong> <strong>require(balanceOf[msg.sender] &gt;= _value);</strong></p>
+<p> </p>
+<p>balanceOf[msg.sender] -= _value;</p>
+<p>balanceOf[_to] += _value;</p>
+<p> </p>
+<p>Transfer(msg.sender, _to, _value);</p>
+<p> </p>
+<p><strong></strong> <strong>return true;</strong></p>
+<p>}</p>
+<p> </p>
+<p><strong></strong> <strong>// ...</strong></p>
+<p>}</p>
+<p> </p>
+<p>This function implements the ERC-20 standard the following ways:</p>
+<ul>
+<li>The function exists.</li>
+<li>It accepts the correct arguments.</li>
+<li>It fails if the user doesn't have enough tokens to transfer, i.e., an insufficient balance.</li>
+<li>It transfers the balance from the sender's account to the receiver's account.</li>
+<li>It triggers a sell event.</li>
+<li>It returns the correct value, e.g., true.</li>
+</ul>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_11.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_11.html#c388189031">c. How a crowd sale (ICO) works</h3>
+<p><strong>c. How a crowd sale (ICO) works</strong></p>
+<p>ERC-20 tokens can be distributed in a variety of ways. One popular method is holding a crowd sale, or an initial coin offering (ICO). Crowd sales are a way for a company to raise capital for their business by creating their own ERC-20 token that can be purchased by investors with Ether.</p>
+<p>You can watch this video below for more information on how crowd sales work in addition to following along with this article.</p>
+<p>Whenever a crowd sale takes place, the company gets liquid capital in the form of Ether that was paid by the investors, as well as holding onto a reserved amount of the ERC-20 tokens that were sold in the crowd sale.</p>
+<p>In order to participate in a crowd sale, an investor must connect to the Etherum Blockchain with an account. This account has a wallet address that can store Ether, as well as the ERC-20 tokens that are purchased in the crowd sale.</p>
+<p>The investor must visit a crowd sale website that talks to a smart contract. The smart contract governs all of the rules for how the crowd sale works.</p>
+<p>Whenever an investor purchases tokens on the crowd sale website, they send Ether from their wallet to the smart contract, and the smart contract instantly dispenses the purchased tokens to their wallet.</p>
+<p>The smart contract sets the price of the token in the crowd sale and governs how the crowd sale behaves.</p>
+<p>Crowd sales can take on all kinds of shapes and sizes. They can have multiple tiers or phases, like Pre ICO, ICO, and ICO Bonus phase. Each of these tiers can happen at different points of time and can behave differently.</p>
+<p>They can also have white lists to restrict which investors can purchase tokens.</p>
+<p>They can also have a reserved amount of tokens that are not sold in the crowd sale. These reserves are usually set aside for specific members of each company like founders and advisors. These reserves can be a fixed amount of tokens or a percentage.</p>
+<p>Whenever a crowd sale ends, it can be finalized by an administrator. Whenever this happens, all of the reserved tokens will be distributed to the appropriate accounts and the crowd sale will officially be over.</p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_12.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_12.html#c538469851">d. Short code of ERC20 smart contract</h3>
+<p><strong>d. Short code of ERC20 smart contract</strong></p>
+<p> </p>
+<p>Let’s start building our ERC-20 token! Here is the complete ERC-20 token smart contract Solidity code. C<strong>eate the file DappToken.sol</strong></p>
+<p> </p>
+<p>pragma solidity ^0.4.2;</p>
+<p> </p>
+<p>contract DappToken {</p>
+<p>string public name = "DApp Token";</p>
+<p>string public symbol = "DAPP";</p>
+<p>string public standard = "DApp Token v1.0";</p>
+<p>uint256 public totalSupply;</p>
+<p> </p>
+<p>event Transfer(</p>
+<p>address indexed _from,</p>
+<p>address indexed _to,</p>
+<p>uint256 _value</p>
+<p>);</p>
+<p> </p>
+<p>event Approval(</p>
+<p>address indexed _owner,</p>
+<p>address indexed _spender,</p>
+<p>uint256 _value</p>
+<p>);</p>
+<p> </p>
+<p>mapping(address =&gt; uint256) public balanceOf;</p>
+<p>mapping(address =&gt; mapping(address =&gt; uint256)) public allowance;</p>
+<p> </p>
+<p>function DappToken (uint256 _initialSupply) public {</p>
+<p>balanceOf[msg.sender] = _initialSupply;</p>
+<p>totalSupply = _initialSupply;</p>
+<p>}</p>
+<p> </p>
+<p>function transfer(address _to, uint256 _value) public returns (bool success) {</p>
+<p>require(balanceOf[msg.sender] &gt;= _value);</p>
+<p> </p>
+<p>balanceOf[msg.sender] -= _value;</p>
+<p>balanceOf[_to] += _value;</p>
+<p> </p>
+<p>Transfer(msg.sender, _to, _value);</p>
+<p> </p>
+<p>return true;</p>
+<p>}</p>
+<p> </p>
+<p>function approve(address _spender, uint256 _value) public returns (bool success) {</p>
+<p>allowance[msg.sender][_spender] = _value;</p>
+<p> </p>
+<p>Approval(msg.sender, _spender, _value);</p>
+<p> </p>
+<p>return true;</p>
+<p>}</p>
+<p> </p>
+<p>function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {</p>
+<p>require(_value &lt;= balanceOf[_from]);</p>
+<p>require(_value &lt;= allowance[_from][msg.sender]);</p>
+<p> </p>
+<p>balanceOf[_from] -= _value;</p>
+<p>balanceOf[_to] += _value;</p>
+<p> </p>
+<p>allowance[_from][msg.sender] -= _value;</p>
+<p> </p>
+<p>Transfer(_from, _to, _value);</p>
+<p> </p>
+<p>return true;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>Let's take a look at what this smart contract does, and how it implements the ERC-20 standard:</p>
+<ul>
+<li>It stores the token name string public name = "DApp Token".</li>
+<li>It stores the token symbol for cryptocurrency exchanges string public symbol = "DAPP".</li>
+<li>It stores the total supply of tokens in existence uint256 public totalSupply.</li>
+<li>It uses a Solidity mapping to store the balance of each account that owns tokens mapping(address =&gt; uint256) public balanceOf.</li>
+<li>It implements a transfer function to allow users to send tokens to another account.</li>
+<li>It implements an approve function that allows another account to spend tokens, like on a cryptocurrency exchange. This updates the allowance mapping to see how much the account is allowed to spend.</li>
+<li>It implements a transferFrom that allows another account to transfer tokens.</li>
+</ul>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_13.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_13.html#c249041721">e. Short code of Crowd sale (ICO) smart contract</h3>
+<p><strong>e. Short code of Crowd sale (ICO) smart contract</strong></p>
+<p>Now we can build a crowd sale smart contract that will allow investors to purchase tokens in an initial coin offering (ICO). Here is the complete crowd sale smart contract Solidity code:</p>
+<p>pragma solidity ^0.4.2;</p>
+<p> </p>
+<p>import "./DappToken.sol";</p>
+<p> </p>
+<p>contract DappTokenSale {</p>
+<p>address admin;</p>
+<p>DappToken public tokenContract;</p>
+<p>uint256 public tokenPrice;</p>
+<p>uint256 public tokensSold;</p>
+<p> </p>
+<p>event Sell(address _buyer, uint256 _amount);</p>
+<p> </p>
+<p>function DappTokenSale(DappToken _tokenContract, uint256 _tokenPrice) public {</p>
+<p>admin = msg.sender;</p>
+<p>tokenContract = _tokenContract;</p>
+<p>tokenPrice = _tokenPrice;</p>
+<p>}</p>
+<p> </p>
+<p>function multiply(uint x, uint y) internal pure returns (uint z) {</p>
+<p>require(y == 0 || (z = x * y) / y == x);</p>
+<p>}</p>
+<p> </p>
+<p>function buyTokens(uint256 _numberOfTokens) public payable {</p>
+<p>require(msg.value == multiply(_numberOfTokens, tokenPrice));</p>
+<p>require(tokenContract.balanceOf(this) &gt;= _numberOfTokens);</p>
+<p>require(tokenContract.transfer(msg.sender, _numberOfTokens));</p>
+<p> </p>
+<p>tokensSold += _numberOfTokens;</p>
+<p> </p>
+<p>Sell(msg.sender, _numberOfTokens);</p>
+<p>}</p>
+<p> </p>
+<p>function endSale() public {</p>
+<p>require(msg.sender == admin);</p>
+<p>require(tokenContract.transfer(admin, tokenContract.balanceOf(this)));</p>
+<p> </p>
+<p>// Just transfer the balance to the admin</p>
+<p>admin.transfer(address(this).balance);</p>
+<p>}</p>
+<p>}</p>
+<p>Let's take a look at what this smart contract does, and how it functions as a crowd sale:</p>
+<ul>
+<li>It stores an admin account for the crowd sale address admin.</li>
+<li>It references the ERC-20 token smart contract DappToken public tokenContract.</li>
+<li>It stores the token price uint256 public tokenPrice.</li>
+<li>It stores the number of tokens sold uint256 public tokensSold.</li>
+<li>It implements a sell event so that consumers can get notifications whenever a token has been sold.</li>
+<li>It implements a buyTokens function that allows users to purchase tokens in the crowd sale.</li>
+<li>It implements an endSale function that allows an admin to end the crowd sale and collect the Ether funds that was raised during the sale.</li>
+</ul>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_14.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_14.html#c447813171">11. Creating Ethereum ERC-20 Tokens and Crowd Sales (ICO) without coding with Token Wizard:</h3>
+<p><strong>11. Creating Ethereum ERC-20 Tokens and Crowd Sales (ICO) without coding with Token Wizard:</strong></p>
+<p> </p>
+<p>The POA network wizard allows you to create ERC20 token and crowd sales web site in easy steps.</p>
+<ul>
+<li>Connect the metamask in some test network as Rinkeby test network.</li>
+<li>Go website https://wizard.oracles.org/#/:</li>
+<li>Start by clicking New Crowdsale</li>
+</ul>
+<p><img src="images/159551592379938201_1.jpg" /></p>
+<ul>
+<li>Click whitelist crowdsale. Then continue.</li>
+</ul>
+<p><img src="images/159551592430649232_2.jpg" /></p>
+<ul>
+<li>This is the page that we will put all token specification that we want to sell:</li>
+</ul>
+<p><img src="images/159551592493197221_3.jpg" /></p>
+<ul>
+<li>Here setup your token details</li>
+</ul>
+<p>Name: Hidaia</p>
+<p>Ticker: HIDI (Token symbol)</p>
+<p>Decimals: 18 (The token can be divided by 18 decimal amounts)</p>
+<ul>
+<li>In reserved token section, we are allowed to reserve certain amountof tokens that will not be sold in crowd sale. You can reserve a fixed amount of tokens or percentage of sales for some addresses you choose.</li>
+<li>I chose to reserve 1000 tokens for this address 0xa4F8b494facbda8888DA6C8b2f4B9498F33dc981</li>
+</ul>
+<p><img src="images/159551592413927553_4.jpg" /></p>
+<ul>
+<li>Then click continue. Here we get the token settings:</li>
+</ul>
+<p><img src="images/15955159258473446_5.jpg" /></p>
+<p> </p>
+<ul>
+<li>In this window we can specify the gas rice for each transection. This is the fee that the investor will pay when he purchase token.</li>
+<li>You can also specify in “Investor Min CAP” the minimum amount of tokens that investor can purchase. I selected 1.</li>
+<li>In “Enable whitelisting” field, you can restrict the accounts that can participate in the crowdsale. We will leave it off</li>
+<li>Setup the Crowd sale setup address. I chose “HIDAIAICO”</li>
+<li>You can specify the start and end time for token sale.</li>
+<li>Then you can specify the exchange rate of the tokens. This specifies the number of tokens the investor will receive for one ether.Example, if you setu this field with 100. Then the investor will get 100 tokens when he pays 1 ether.</li>
+<li>Then you can setup the supply. Which is the number of tokens that can be sold on this crowdsale. I setup 1000000 tokens to be sold in this tiere of crowdsale.</li>
+<li>Here the complete setup</li>
+</ul>
+<p><img src="images/159551592639841391_6.jpg" /></p>
+<ul>
+<li>Click add TIER. Then you sign all transactions in the following windows.</li>
+</ul>
+<p><img src="images/159551592715914312_7.jpg" /></p>
+<ul>
+<li>Then the page that will be shown to investor when he wants to participate in crowdsale</li>
+</ul>
+<p><img src="images/159551592821343859_8.jpg" /></p>
+<ul>
+<li>Click invest to show the full page that will be shown to investor that wants to participate in crowd sale</li>
+</ul>
+<p>https://wizard.oracles.org/invest?addr=0x300213fF03Bf91299d6654e2986ABca6E26f92Bf&amp;networkID=4</p>
+<p><img src="images/1595515929389228_9.jpg" /></p>
+<ul>
+<li>Put the number of tokens you want to send to buy and then click invest and then confirm transection</li>
+</ul>
+<p><img src="images/159551592938858086_10.jpg" /></p>
+<ul>
+<li>Here the details</li>
+</ul>
+<p>0xa4F8b494facbda8888DA6C8b2f4B9498F33dc981</p>
+<p>Current Account</p>
+<p>0x13cE73594E51341A34a31F99675a3ff21F77C925</p>
+<p>Token Address</p>
+<p>0x300213fF03Bf91299d6654e2986ABca6E26f92Bf</p>
+<p>Crowdsale Contract Address</p>
+<p>HIDAIA</p>
+<p>Name</p>
+<p>HIDI</p>
+<p>Ticker</p>
+<p>1000000 HIDI</p>
+<p>Total Supply</p>
+<p> </p>
+<ul>
+<li><strong>You can check token received in etherscan</strong></li>
+</ul>
+<p>https://rinkeby.etherscan.io/address/0xa4F8b494facbda8888DA6C8b2f4B9498F33dc981</p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_15.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_15.html#c731245891">12. Example of creating and deploying an ERC20 token on the test and main network!!!</h3>
+<p><strong>12. Example of creating and deploying an ERC20 token on the test and main network!!!</strong></p>
+<p> </p>
+<p><strong>a. Write the ERC20 smart contract codes in Remix from https://github.com/ConsenSys</strong></p>
+<p> </p>
+<p>1-Go to https://remix.ethereum.org/</p>
+<p>2- Create new file EIP20.sol file. Copy on it the code found in https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol</p>
+<p>// Abstract contract for the full ERC 20 Token standard</p>
+<p>// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md</p>
+<p>pragma solidity ^0.4.21;</p>
+<p> </p>
+<p> </p>
+<p>contract EIP20Interface {</p>
+<p>/* This is a slight change to the ERC20 base standard.</p>
+<p>function totalSupply() constant returns (uint256 supply);</p>
+<p>is replaced with:</p>
+<p>uint256 public totalSupply;</p>
+<p>This automatically creates a getter function for the totalSupply.</p>
+<p>This is moved to the base contract since public getter functions are not</p>
+<p>currently recognised as an implementation of the matching abstract</p>
+<p>function by the compiler.</p>
+<p>*/</p>
+<p>/// total amount of tokens</p>
+<p>uint256 public totalSupply;</p>
+<p> </p>
+<p>/// @param _owner The address from which the balance will be retrieved</p>
+<p>/// @return The balance</p>
+<p>function balanceOf(address _owner) public view returns (uint256 balance);</p>
+<p> </p>
+<p>/// @notice send `_value` token to `_to` from `msg.sender`</p>
+<p>/// @param _to The address of the recipient</p>
+<p>/// @param _value The amount of token to be transferred</p>
+<p>/// @return Whether the transfer was successful or not</p>
+<p>function transfer(address _to, uint256 _value) public returns (bool success);</p>
+<p> </p>
+<p>/// @notice send `_value` token to `_to` from `_from` on the condition it is approved by `_from`</p>
+<p>/// @param _from The address of the sender</p>
+<p>/// @param _to The address of the recipient</p>
+<p>/// @param _value The amount of token to be transferred</p>
+<p>/// @return Whether the transfer was successful or not</p>
+<p>function transferFrom(address _from, address _to, uint256 _value) public returns (bool success);</p>
+<p> </p>
+<p>/// @notice `msg.sender` approves `_spender` to spend `_value` tokens</p>
+<p>/// @param _spender The address of the account able to transfer the tokens</p>
+<p>/// @param _value The amount of tokens to be approved for transfer</p>
+<p>/// @return Whether the approval was successful or not</p>
+<p>function approve(address _spender, uint256 _value) public returns (bool success);</p>
+<p>/// @param _owner The address of the account owning tokens</p>
+<p>/// @param _spender The address of the account able to transfer the tokens</p>
+<p>/// @return Amount of remaining tokens allowed to spent</p>
+<p>function allowance(address _owner, address _spender) public view returns (uint256 remaining);</p>
+<p> </p>
+<p>// solhint-disable-next-line no-simple-event-func-name</p>
+<p>event Transfer(address indexed _from, address indexed _to, uint256 _value);</p>
+<p>event Approval(address indexed _owner, address indexed _spender, uint256 _value);</p>
+<p>}</p>
+<p> </p>
+<p>2- Create new file EIP20Factory.sol file. Copy on it the code found in</p>
+<p>https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20Factory.sol</p>
+<p>import "./EIP20.sol";</p>
+<p> </p>
+<p>pragma solidity ^0.4.21;</p>
+<p> </p>
+<p> </p>
+<p>contract EIP20Factory {</p>
+<p> </p>
+<p>mapping(address =&gt; address[]) public created;</p>
+<p>mapping(address =&gt; bool) public isEIP20; //verify without having to do a bytecode check.</p>
+<p>bytes public EIP20ByteCode; // solhint-disable-line var-name-mixedcase</p>
+<p> </p>
+<p>function EIP20Factory() public {</p>
+<p>//upon creation of the factory, deploy a EIP20 (parameters are meaningless) and store the bytecode provably.</p>
+<p>address verifiedToken = createEIP20(10000, "Verify Token", 3, "VTX");</p>
+<p>EIP20ByteCode = codeAt(verifiedToken);</p>
+<p>}</p>
+<p> </p>
+<p>//verifies if a contract that has been deployed is a Human Standard Token.</p>
+<p>//NOTE: This is a very expensive function, and should only be used in an eth_call. ~800k gas</p>
+<p>function verifyEIP20(address _tokenContract) public view returns (bool) {</p>
+<p>bytes memory fetchedTokenByteCode = codeAt(_tokenContract);</p>
+<p> </p>
+<p>if (fetchedTokenByteCode.length != EIP20ByteCode.length) {</p>
+<p>return false; //clear mismatch</p>
+<p>}</p>
+<p> </p>
+<p>//starting iterating through it if lengths match</p>
+<p>for (uint i = 0; i &lt; fetchedTokenByteCode.length; i++) {</p>
+<p>if (fetchedTokenByteCode[i] != EIP20ByteCode[i]) {</p>
+<p>return false;</p>
+<p>}</p>
+<p>}</p>
+<p>return true;</p>
+<p>}</p>
+<p> </p>
+<p>function createEIP20(uint256 _initialAmount, string _name, uint8 _decimals, string _symbol)</p>
+<p>public</p>
+<p>returns (address) {</p>
+<p> </p>
+<p>EIP20 newToken = (new EIP20(_initialAmount, _name, _decimals, _symbol));</p>
+<p>created[msg.sender].push(address(newToken));</p>
+<p>isEIP20[address(newToken)] = true;</p>
+<p>//the factory will own the created tokens. You must transfer them.</p>
+<p>newToken.transfer(msg.sender, _initialAmount);</p>
+<p>return address(newToken);</p>
+<p>}</p>
+<p> </p>
+<p>//for now, keeping this internal. Ideally there should also be a live version of this that</p>
+<p>// any contract can use, lib-style.</p>
+<p>//retrieves the bytecode at a specific address.</p>
+<p>function codeAt(address _addr) internal view returns (bytes outputCode) {</p>
+<p>assembly { // solhint-disable-line no-inline-assembly</p>
+<p>// retrieve the size of the code, this needs assembly</p>
+<p>let size := extcodesize(_addr)</p>
+<p>// allocate output byte array - this could also be done without assembly</p>
+<p>// by using outputCode = new bytes(size)</p>
+<p>outputCode := mload(0x40)</p>
+<p>// new "memory end" including padding</p>
+<p>mstore(0x40, add(outputCode, and(add(add(size, 0x20), 0x1f), not(0x1f))))</p>
+<p>// store length in memory</p>
+<p>mstore(outputCode, size)</p>
+<p>// actually retrieve the code, this needs assembly</p>
+<p>extcodecopy(_addr, add(outputCode, 0x20), 0, size)</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>3- Create new file EIP20Interface.sol file. Copy on it the code found in</p>
+<p>https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20Interface.sol</p>
+<p>// Abstract contract for the full ERC 20 Token standard</p>
+<p>// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md</p>
+<p>pragma solidity ^0.4.21;</p>
+<p> </p>
+<p> </p>
+<p>contract EIP20Interface {</p>
+<p>/* This is a slight change to the ERC20 base standard.</p>
+<p>function totalSupply() constant returns (uint256 supply);</p>
+<p>is replaced with:</p>
+<p>uint256 public totalSupply;</p>
+<p>This automatically creates a getter function for the totalSupply.</p>
+<p>This is moved to the base contract since public getter functions are not</p>
+<p>currently recognised as an implementation of the matching abstract</p>
+<p>function by the compiler.</p>
+<p>*/</p>
+<p>/// total amount of tokens</p>
+<p>uint256 public totalSupply;</p>
+<p> </p>
+<p>/// @param _owner The address from which the balance will be retrieved</p>
+<p>/// @return The balance</p>
+<p>function balanceOf(address _owner) public view returns (uint256 balance);</p>
+<p> </p>
+<p>/// @notice send `_value` token to `_to` from `msg.sender`</p>
+<p>/// @param _to The address of the recipient</p>
+<p>/// @param _value The amount of token to be transferred</p>
+<p>/// @return Whether the transfer was successful or not</p>
+<p>function transfer(address _to, uint256 _value) public returns (bool success);</p>
+<p> </p>
+<p>/// @notice send `_value` token to `_to` from `_from` on the condition it is approved by `_from`</p>
+<p>/// @param _from The address of the sender</p>
+<p>/// @param _to The address of the recipient</p>
+<p>/// @param _value The amount of token to be transferred</p>
+<p>/// @return Whether the transfer was successful or not</p>
+<p>function transferFrom(address _from, address _to, uint256 _value) public returns (bool success);</p>
+<p> </p>
+<p>/// @notice `msg.sender` approves `_spender` to spend `_value` tokens</p>
+<p>/// @param _spender The address of the account able to transfer the tokens</p>
+<p>/// @param _value The amount of tokens to be approved for transfer</p>
+<p>/// @return Whether the approval was successful or not</p>
+<p>function approve(address _spender, uint256 _value) public returns (bool success);</p>
+<p> </p>
+<p>/// @param _owner The address of the account owning tokens</p>
+<p>/// @param _spender The address of the account able to transfer the tokens</p>
+<p>/// @return Amount of remaining tokens allowed to spent</p>
+<p>function allowance(address _owner, address _spender) public view returns (uint256 remaining);</p>
+<p> </p>
+<p>// solhint-disable-next-line no-simple-event-func-name</p>
+<p>event Transfer(address indexed _from, address indexed _to, uint256 _value);</p>
+<p>event Approval(address indexed _owner, address indexed _spender, uint256 _value);</p>
+<p>}</p>
+<p> </p>
+</div>
+<p><span id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_16.html"></span></p>
+<div>
+<h3 id="dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block_16.html#c888585981">b. Deploy and test the ERC20 smart contract codes:</h3>
+<p><strong>b. Deploy and test the ERC20 smart contract codes:</strong></p>
+<p> </p>
+<ul>
+<li>First deploy the smart contracts on Rinkeby test network</li>
+<li>Run EIP20. When deploying the EIP20 smart contract, you must input Initail amount, token symbol , number of decimals and token name. I setup initial amount= 100000000,token name=”Hidaia”, token symbol=”HIDI”, number of decimals=2 . Here screenshot</li>
+<li> </li>
+</ul>
+<p><img src="images/159551593099238062_1.jpg" /></p>
+<p> </p>
+<ul>
+<li>Click transact. Then the contract deployed. We get the following data that we can query</li>
+</ul>
+<p><img src="images/159551593114927686_2.jpg" /></p>
+<p> </p>
+<ul>
+<li>We can query any data. Example, BalanceOf= 100000000</li>
+</ul>
+<p><img src="images/159551593166352841_3.jpg" /></p>
+<ul>
+<li>We can transfer tokens to other address from transfer field. Just setup the etherum address you want to transfer tokens to it and amount of tokens.Example to transfer 1000 tokens to address 0x5673C69337457E0Cf7F68e86D878B2D35B0F9F46. Then check the balance</li>
+</ul>
+<p><img src="images/159551593172245506_4.jpg" /></p>
+<ul>
+<li>You can test transection in Rinkeby test network using https://rinkeby.etherscan.io/</li>
+<li>You can repeat the procedure in the main ethereum network after confirming it in in the test network.</li>
+</ul>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="imprint.html"></span></p>
+<div style="text-align: left">
+<br />
+<br />
+<br />
+Publisher:<br />
+BookRix GmbH &amp; Co. KG<br />
+Implerstraße 24<br />
+80331 Munich<br />
+Germany<br />
+<br />
+<br />
+<br />
+Publication Date: July 23rd 2020<br />
+<br />
+<a href="https://www.bookrix.com/-kf086886aac2de5">https://www.bookrix.com/-kf086886aac2de5</a><br />
+<br />
+ISBN: 978-3-7487-5106-9<br />
+<br />
+<br />
+
+<div class="sfont_bold">
+BookRix-Edition, publishing information
+</div>
+We thank you for choosing to purchase this book from BookRix.com. We want to invite you back to <a href="https://www.bookrix.com/">BookRix.com</a> in order to evaluate the <a href="https://www.bookrix.com/_ebook-dr-hedaya-mahmood-alasooly-quick-guide-for-smart-contracts-creation-and-deployment-on-ethereum-block">book</a>. Here you can discuss with other readers, discover more <a href="https://www.bookrix.com/books.html">books</a> and even become an author yourself.<br />
+<br />
+Thank you again for supporting our BookRix-community.<br />
+<br />
+
+</div>
