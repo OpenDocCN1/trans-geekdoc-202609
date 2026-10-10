@@ -1,0 +1,41 @@
+
+- Lin, Y. C., & Nguyen, H. L. T. (2019). Adaptive neuro-fuzzy predictor-based control for cooperative adaptive cruise control system. *IEEE Transactions on Intelligent Transportation Systems*, 21(3), 1054–1063.
+- Almadi, A. I., Al Mamlook, R. E., Almahrabi, Y., Ullah, I., Jamal, A., & Bandara, N. (2022). A fuzzy-logic approach based on driver decision-making behavior modeling and simulation. *Sustainability*, 14(14), 8874.
+- Malik, H., Larue, G. S., Rakotoarirany, A., & Maire, F. (2014). Fuzzy logic to evaluate driving maneuvers: An integrated approach to improve training. *IEEE Transactions on Intelligent Transportation Systems*, 16(4), 1728–1735.
+- Hentout, A., Maoudj, A., & Aouache, M. (2023). A review of the literature on fuzzy-logic approaches for collision-free path planning of manipulator robots. *Artificial Intelligence Review*, 56(4), 3369–3444.
+- Miranda, M. H., Silva, F. L., Lourenço, M. A., Eckert, J. J., & Silva, L. C. (2022). Vehicle drivetrain and fuzzy controller optimization using a planar dynamics simulation based on a real-world driving cycle. *Energy*, 257, 124769.
+- Moslem, S., Farooq, D., Esztergár-Kiss, D., Yaseen, G., Senapati, T., & Deveci, M. (2023). A novel spherical decision-making model for measuring the separateness of preferences for drivers’ behavior factors associated with road traffic accidents. *Expert Systems with Applications*, 238, 122318.
+- Ellalid, B. B., Benamar, N., Hafd, A. S., Rachidi, T., & Mrani, N. (2022). A comprehensive survey on the application of deep and reinforcement learning approaches in autonomous driving. *Journal of King Saud University-Computer and Information Sciences*, 34(9), 7366–7390.
+- Fıscac, J. F., Bajcsy, A., Herbert, S. L., Friedovich-Keil, D., Wang, S., Tomlin, C. J., & Dragan, A. D. (2018). Probabilistically safe robot planning with confidence-based human predictions. *arXiv preprint arXiv:1806.00109*.
+- David, M. (2019). AI and the illusion of human-algorithm complementarity. *Social Research: An International Quarterly*, 86(4), 887–908.
+- Ali, M. A., Mailah, M., Jabbar, W. A., Moiduddin, K., Ameen, W., & Alkhalefah, H. (2020). Autonomous road roundabout detection and navigation system for smart vehicles and cities using laser simulator–fuzzy logic algorithms and sensor fusion. *Sensors*, 20(13), 3694.
+- Deveci, M., Pamucar, D., & Gokaslan, I. (2021). Fuzzy Power Heronian function based CoCoSo method for the advantage prioritization of autonomous vehicles in real-time traffic management. *Sustainable Cities and Society*, 69, 102846.
+- Nakrani, N. M., & Joshi, M. M. (2022). A human-like decision intelligence for obstacle avoidance in autonomous vehicle parking. *Applied Intelligence*, 52, 3728–3747.
+- Kamil, F., & Moghriabih, M. Y. (2022). Multi-layer decision-based fuzzy logic model to navigate mobile robot in unknown dynamic environments. *Fuzzy Information and Engineering*, 14(1), 51–73.
+- Lopez, I., & Sarioglu-Klijln, N. (2010). A review of uncertainty in flight vehicle structural damage monitoring, diagnosis and control: Challenges and opportunities. *Progress in Aerospace Sciences*, 46(7), 247–273.
+- Jafari, S., Shahbazi, Z., & Byun, Y. C. (2022). Improving the road and traffic control prediction based on fuzzy logic approach in multiple intersections. *Mathematics*, 10(16), 2832.
+- Jafari, S., Shahbazi, Z., & Byun, Y. C. (2021). Traffic control prediction design based on fuzzy logic and Lyapunov approaches to improve the performance of road intersection. *Processes*, 9(12), 2205.
+- Nyholm, S., & Smids, J. (2020). Automated cars meet human drivers: Responsible human-robot coordination and the ethics of mixed traffic. *Ethics and Information Technology*, 22, 335–344.
+- Yu, H., Jiang, R., He, Z., Zheng, Z., Li, L., Liu, R., & Chen, X. (2021). Automated vehicle-involved traffic flow studies: A survey of assumptions, models, speculations, and perspectives. *Transportation Research Part C: Emerging Technologies*, 127, 103101.
+- Yilin, C., & Jianhua, W. (2022). Optimization and implementation of fuzzy logic controllers for precise path tracking in autonomous driving. *Journal of Sustainable Urban Futures*, 12(12), 1–15.
+- Rahman, Z., Yi, X., Khalil, I., Anwar, A., & Pal, S. (2023). Blockchain-based and fuzzy logic-enabled false data discovery for the intelligent autonomous vehicular system. In: *Proceedings of the Third International Symposium on Advanced Security on Software and Systems*, pp. 1–11.
+- Sadaf, M., Iqbal, Z., Javed, A. R., Saba, I., Richen, M., Majeed, S., & Raza, A. (2023). Connected and automated vehicles: Infrastructure, applications, security, critical challenges, and future aspects. *Technologies*, 11(5), 117.
+- Mata-Carballeria, Ó., Diaz-Rodríguez, M., del Campo, I., & Martínez, V. (2020). An intelligent system-on-a-chip for a real-time assessment of fuel consumption to promote eco-driving. *Applied Sciences*, 10(18), 6549.
+- Reddy, N. R. (2019). *Driving Behaviour Classification: An Eco-driving Approach* (Master's thesis, University of Twente).
+- Li, P., Jiao, X., & Li, Y. (2021). Adaptive real-time energy management control strategy based on fuzzy inference system for plug-in hybrid electric vehicles. *Control Engineering Practice*, 107, 104703.
+- Nie, Z., Jia, Y., Wang, W., & Outbib, R. (2022). Eco-Co-Optimization strategy for connected and automated fuel cell hybrid vehicles in dynamic urban traffic settings. *Energy Conversion and Management*, 263, 115690.
+- Xu, N., Li, X., Liu, Q., & Zhao, D. (2021). An overview of eco-driving theory, capability evaluation, and training applications. *Sensors*, 21(19), 6547.
+- Deb, M., Majumder, P., Majumder, A., Roy, S., & Banerjee, R. (2016). Application of artificial intelligence (AI) in characterization of the performance-emission profile of a single cylinder CI engine operating with hydrogen in dual fuel mode: An ANN approach with fuzzy-logic based topology optimization. *International Journal of Hydrogen Energy*, 41(32), 14330–14350.
+- Tarafdar, A. A., Majumder, P., Deb, M., & Bera, U. K. (2023). Application of a q-rung orthopair hesitant fuzzy aggregated Type-3 fuzzy logic in the characterization of performance-emission profile of a single cylinder CI-engine operating with hydrogen in dual fuel mode. *Energy*, 269, 126751.
+
+## 参考文献
+- 43. Sitichompoo, S., Theinnoi, K., Sawatmongkhon, B., Wongchang, T., Iamcheerangkoon, T., & Phugot, S. (2022). 在加氢情况下对柴油-生物柴油-乙醇混合燃料柴油发动机氮氧化物排放的选择性催化还原的促进作用。*Alexandria Engineering Journal, 61*(7), 5383–5395。
+- 44. Jung, Y., Pyo, Y. D., Jang, J., Kim, G. C., Cho, C. P., & Yang, C. (2019)。使用 DOC 和 DPF 系统及 Pt 还原的 SCR 过程中 NO、NO2 和 N2O 的排放。*Chemical Engineering Journal, 369*, 1059–1067。
+- 45. Alves de Araujo Junior, C. A., Mauricio Villanueva, J. M., Almeida, R. J. S. D., & Azevedo de Medeiros, I. E. (2021)。基于模糊逻辑的发电厂水冷系统数字孪生。*Sensors, 21*(20), 6737。
+- 46. Tarafdár, A., Majumder, P., Deb, M., & Bera, U. K. (2023)。单缸 CI 发动机柴油-氢气双燃料性能-排放优化：一种基于球形模糊 MARCOS MCGDM 的 3 型模糊逻辑方法。*International Journal of Hydrogen Energy, 48*, 28601–28627。
+- 47. Ghadi, Y. Y., Rasul, M. G., & Khan, M. M. K. (2016)。在亚热带的昆士兰机构建筑中智能建筑先进模糊逻辑控制器的设计与开发。*Renewable and Sustainable Energy Reviews, 54*, 738–744。
+- 48. Liu, Z., Zhang, X., Sun, Y., & Zhou, Y. (2023)。智能节能建筑能源可靠性、灵活性、韧性及以用户为中心控制的先进控制——最新综述。*Energy and Buildings, 297*, 113436。
+- 49. Rajeswari Subramaniam, K., Cheng, C. T., & Pang, T. Y. (2023)。使用车辆供暖、通风和空调系统调节热舒适度和室内空气质量的模糊逻辑控制模拟。*Sensors, 23*(3), 1395。
+- 50. Fayaz, M., Ullah, I., Shah, A. S., & Kim, D. (2019)。基于学习优化和学习控制算法的高效能耗与用户舒适度最大化方法。*Journal of Intelligent & Fuzzy Systems, 37*(5), 6683–6706。
+- 51. Bruno, D. R., Berri, R., Barbosa, F., & Osorio, F. S. (2023)。CARINA 项目：应用于自动驾驶车辆和先进驾驶辅助系统（ADAS）的视觉感知系统。*IEEE Access, 11*, 69720–69749。
+- 52. Capitanie, M. P., & Cárdenas, H. M. G. (2023)。墨西哥先进驾驶辅助系统（ADAS）的人工智能及其吸收情况。*Ciencia Nicolaita*, (88)。
