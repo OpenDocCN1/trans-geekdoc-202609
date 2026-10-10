@@ -1,0 +1,265 @@
+
+# 2021 IEEE 国际通信会议研讨会 (ICC Workshops)
+
+Dakshit Reetwahi¹, Rajesh Gupta¹, Student Member, IEEE, Aparna Kumari¹, Student Member, IEEE, Sandeep Tanwar³, Senior Member, IEEE, Department of Computer Science and Engineering, Institute of Technology. Nirma University, Ahmedabad, Gujarat, India *19nmce2@nirmau.ac.in, *18vphde31@nirmau.ac.in, *17fphde22@nirmau.ac.in, sandeep.tanwar@nirmau.ac.in
+
+**摘要——如今**，寻找停车位既乏味又令人压力。由于驾驶员选择最近的停车位，停车交通会导致拥堵、空气污染以及停车区域违章。智能交通系统（ITS）主要关注路侧交通并通常被予以考虑。然而，停车消耗了大部分时间。在本文中，我们提出了一种集成人工智能（AI）和区块链（BC）架构，根据车辆类型和时间（即需求）预测停车可用性和定价率。我们的系统提供了多种停车服务，其中车辆类型连接到区块链网络，使用智能合约管理驾驶员的偏好和需求。我们确保了安全性和隐私，并对所提模型进行了性能评估和分析。
+
+**索引术**——人工智能，区块链，停车定价预测，以太坊，IEEE
+
+# I. 引言
+
+印度车辆从2011年至2020年的指数级增长（1）引发了各种令人困的问题，如交通拥堵、交通事故以及由于公共空间有限和停车管理不善导致的时间耗费。这些是交通机构和有效公共发布（2）中的首要考虑之事项。这需要自动化和智能化来增强交通系统，而智能交通系统（ITS）是一个可行的解决方案，提供了改进交通管理的方法（3）。传统的ITS聚焦于道路行驶问题，而除了路边停车导致的交通拥堵外，停车管理也是主要问题之一。它消耗了停车总时间的约 40%。
+
+![](img/0f753980fc8b53ff3a6b207cde399cda_0_0.png)
+
+如果价格高于当前价格，它将使我的车辆变得没有必要。动态定价根据可用空位以及与其他停车供应商的距离设定基准 [7]。随着车辆数量的快速增加，对停车的需求也在增加。因此，ITS 必须根据这种扩展性和停车需求来管理停车。
+
+最近，研究人员和计算机科学家致力于停车引导和信息（PGI）系统 [8]，该系统为驾驶员提供寻找停车位可用性的实时信息。向用户提供停车可用性和交通详情可以通过减少他们寻找停车位的时间来提高性能。实施基于 ML 算法的动态定价，在路边和路外停车位的预测中起着重要作用，以便驾驶员在到达地点之前到达目的地。
+
+自动驾驶车辆（AVs）从车辆网络收集敏感信息，交换理想数据可以带来更快的停车行程。AV 系统对于用户和信息管理而言，是每次都需要访问云端进行处理和智能化 [10]。这导致了由于车辆与服务器之间的距离产生的延迟，可以使用边缘计算（FC）解决。FC 也是一个去中心化的信息中心，智能位于局域网（LAN）中 [11]。因此它位于数据中心，但为了快速访问使用了 CCS 和 QQS，这可能导致隐私和身份验证问题。因为恶意用户可以使用假地址加入网络并窃取通信数据
+
+[12]。此外，设备需要访问另一个设备（即 LAN 服务器）来获取智能和处理，这可能会导致延迟。
+
+为了解决这一问题，引入了边缘计算（EC），智能被应用于数据源（即靠近边缘用户）。EC 通过在边缘服务器处理数据减少延迟并增强可靠性，然后结果存储在 CCS 中永久存储。对于大型复杂数据，边缘服务器需要存储容量和处理能力，这需要专用资源。如果将数据传输到其他设备会导致隐私问题，EC 允许用户连接到网络并访问服务，恶意用户可以容易窃取信息并误导 ITS。攻击者试图通过控制通信路径破坏系统，向在线交易中传递无效信息，攻击者可以在那里窃取账户 ID、在线交易 ID 等信息。中心化机构处理原始数据作为有效数据，因此如果数据遭到破坏，可能会损坏整个实体的系统。此类问题可以使用认证访问和严格的数据存储来处理。
+
+区块链（BC）提供了服务器之间的去中心化连接，通过实现密码学和公共区块哈希分布交易 [15]。基于区块链的停车预测允许用户维护跟踪和感知活动，因为区块链通过引入智能合约（SC）消除了第三方（中心化），智能合约包含了规则和共识，以保护 AV 系统免受恶意用户侵害。用户停车服务连接到区块链网络（BN） [16]。每项停车服务提供记录和验证交易的权利。驾驶员和车辆分别使用用户 ID 和车辆 ID 进行验证，从而保护了 AV 系统。恶意用户需要拥有高级权限和加密货币，以便根据工作量证明（PoW）、权益证明（PoS）、拜占庭等任务获得支付。因此，BC 确保了整个 BN 之间的安全通信 [17]。
+
+## A. 动机
+
+中心化的 AV 服务存在安全、隐私和延迟问题。以下是本综述论文的主要动机：
+
+- 1. 目前的停车系统预测占用率和费率花费大量时间。
+- 2. 静态定价无法应对市场状况，因为它可能高于或低于最优值。而动态定价通常根据需求变化达到最优值（即需求高时价格较高，需求低时较低）。
+- 3. 动态定价通过改变距离停车和位置之间的价格来解决拥堵问题。PG 系统预测停车位可用性，使用户可以使用基本规则和适当的价格占用停车位。
+- 4. 私有区块链通过限制对 BN 的访问和认证来增强安全性和数据完整性。此外，用户需要执行预设任务才能加入 BN，因此恶意用户损害 AV 系统的机会较少。
+
+## B. 研究贡献
+
+- 本文针对停车预测和可用性研究的重要性提出了建议。
+- 我们提出了一种基于全自动人工智能（AI）的受信且安全管理系统的分布式架构。
+- 本文强调了公平的停车预测分布，用于管理停车区域的拥堵和高峰。
+
+# II. 系统模型与架构
+
+![](img/0f753980fc8b53ff3a6b207cde399cda_1_0.png)
+
+系统模型 (2) 涉及驾驶员、停车服务等角色，它们通过潜在通信连接到以太坊智能合约（ESC）用于数据库管理。驾驶员根据位置请求停车，使用用户 ID 进行验证并经过哈希处理存储在区块链（BC）上。停车服务作为 BN 中的一个区块，提供停车服务位置、方位，并为驾驶员提供价格以实现公平和更好的定价。停车服务根据实时需求进行去中心化分布。
+
+这里 `$R = \{R_1, R_2, ..., R_p\}$` 表示 `p` 组停车服务。这些角色与城市 `N` 个停车区域相关，每个区域与一个停车服务相关，即 `\{P_1, P_2, ..., P_n\} \in R`。任何停车服务的停车区域都可以由 `\{D_1, D_2, ..., D_m\} \in \{V_1, V_2, ..., V_k\} \in S` 驱动。条目的约束和映射如下：
+
+```
+$f_1 : P \rightarrow D(n, m)$,n$f_2 : D \rightarrow V(k)$
+```
+
+# $f_3 \rightarrow V(n:k)$
+
+因此，相应的矩阵 `[PD]_{n \times m}, [DV]_{1 \times k}[PV]_{n \times k}` 可以根据如下约束条件写入：
+
+```
+$[PD]_{n \times m} = \begin{cases} 1, & P_i \in D_j \vee R_p, \ 0, & \text{otherwise.} \end{cases} \quad (1)$
+```
+
+```
+$[DV]_{1 \times k} = \begin{cases} 1, & D_i \in V_j \vee R_d, \ 0, & \text{otherwise.} \end{cases} \quad (2)$
+```
+
+```
+$[PV]_{n \times k} = \begin{cases} 1, & P_i \in V_j \vee R_p, \ 0, & \text{otherwise.} \end{cases} \quad (3)$
+```
+
+`{n, m, r, k, i, a} > 0`
+
+停车价格根据需求分配为高峰和非高峰期（NPT）。NPT 是需求低低时归零的时间。当需求高时，NPT 为 0；当 NPT 设置为 y 且 `x > y` 时，需求高，则价格设置为 z，其中 `x > z > y`。以下方程显示了根据需求和可用性对价格更改所需的约束条件：
+
+```
+$A_p = \begin{cases} 1, & \text{if slot is empty} \ 0, & \text{otherwise.} \end{cases} \quad (4)$
+```
+
+```
+$NPT = \begin{cases} 1, & \text{if demand is low} \ 0, & \text{otherwise.} \end{cases} \quad (5)$
+```
+
+```
+$price = \begin{cases} high, & NPT = 0 \ low, & NPT = 1. \end{cases} \quad (6)$
+```
+
+```
+$price = \begin{cases} high, & NPT > 0 \text{\ \& } A_p > 0 \text{\ \&} demand < 70 \ low, & NPT = 1 \text{\ \&} A_p \ge 70 \text{\ \&} demand \ge 70. \end{cases} \quad (7)$
+```
+
+其中 `price > 0, high < z < low`
+
+```
+$price = fc + sc + cvt \pm dc \quad (8)$
+```
+
+其中 `fc` 是固定成本，`sc` 是基础服务费，`cvt` 是基于车辆类型的费用，`dc` 是距离费用。
+
+支付使用钱包地址 `W_b, W_w, W_p` 进行，其中 `W_w` 是钱包地址，`W_p` 是停车服务地址，`W_d` 是区块链网络中的司机地址。`W_{vw}` 是根据以下实体发布的钱包地址：
+
+```
+$W_b = \{Sendaddr, Nonce_{stamp}, GAS_{value}, M_{tree}\}\nW_p = \{PK^{kp}, P^{hash}, P^{hash}_{stamp}, GAS_{value}, M_{tree}\}\nW_d = \{PK^{pd}, P^{pd}, P^{hash}_{stamp}, GAS_{value}, M_{tree}\}$
+```
+
+每个角色都可以根据方程在加密钱包中进行支付和接受支付。这些支付使用 PoW、PoB 或 Rp 等共识机制进行验证。如果执行成功，交易将在公共账本上进行，司机可以访问车辆。这里我们使用 IPFS 协议来存储和共享数据，因为它具有高带宽、低延迟和可靠性，导致了
+
+# III. 提议的架构
+
+传统的停车管理系统面临交通拥堵、时间压力和污染问题，因为当需求很高时，用户手动寻找停车场非常困难。在本文中，我们提出了一种基于 AI 和区块链（BC）的集成解决方案，以提高停车管理的安全性能。图 3 所示，所提的架构由四层组成：司机层、AI 层、BC 层。停车服务层提供了详细说明。这些层的结构如下：
+
+## A. 司机层
+
+司机层是与系统交互的入口。司机可能拥有多个一个异质车辆（例如二轮车、三轮车、四轮车），根据此决定价格。司机可以通过提供车辆 ID、车辆类型、到达日期和位置来请求区块链停车预约。系统根据司机的请求识别并预测每个停车区域的可用车位。系统对这些预测信息做出响应。通过分析的偏好、服务和价格，司机可以确认预约。支付使用基于区块链的机制，司机使用加密钱包。这使用私钥、密码学和时间戳进行加密。司机可以向 BC 层进行支付，通过执行共识机制进行验证。支付验证后，司机可以将车辆停在指定的地点。
+
+AI 层用于根据高峰状态和车辆执行可用性检查并预测价格。该应用程序搜索特定时间和车辆类型的停车场，并由算法处理以根据需求和时间确定停车可用性和价格。算法将通过分析对等（即其他用户）以及基于需求和时间的费率，通知用户最近的停车区域。定价应用于发生停车占用的数据服务器上。当司机停留并检查停车场的可用性时，基于 AI 的算法处理数据集并根据司机的请求进行检查。该数据集包含日期、时间、位置、车辆类型、所需服务等车辆。为了准确预测，模型根据以前的数据和融合矩阵进行训练和测试。矩阵显示了基于结果的实际价格和预测价格。根据可用性，系统为司机提供区域位置和带有预测价格的可用位，司机据此可以选择合适的停车位置。然后车位被表示为空闲。此外，如果用户对已订停车做出更改，则更改将作为更改增加。数据保存在区块链上供以后使用。
+
+## B. AI 层
+
+## 停车服务提供层
+
+# 司机接口
+
+![](img/0f753980fc8b53ff3a6b207cde399cda_3_0.png)
+
+# AI 层
+
+价格预测处理
+
+# 区块链层
+
+- 使用许可 ID 请求停车
+- 带有车位和价格的
+- 进行支付
+- 如果有效则更新
+- 检查可用性
+- 向司机接口响应
+- 请求支付和司机验证
+- 停车辆
+
+图 3：所提的基于区块链和 AI 的停车价格预测系统。
+
+## C. BC 层
+
+引入 BC 层是为了增强系统角色和敏感信息的安全性。所有服务提供者都连接到区块链网络（BN），每个停车提供者充当一个区块和公共账本的本地副本。使用共识机制更新公共账本的值。要添加新节点，停车服务提供者需要计算随机数（nonce）。停车服务提供者寻找随机数以获得进入网络的机会。每个启动一个智能合约，根据实体更改停车状态。
+
+## D. 停车服务提供层
+
+每个停车区域都有一个停车服务提供者，在网络中充当一个区块。停车服务提供者加入网络以实现公平透明的停车分配。停车服务提供者更新未付款停车的信息。如报告所述，区块链可以预留合适的停车场，停车服务提供者（即人员）负责验证和确认每个条目和交易。每个单元包含公共账本副本和用于验证的智能合约。
+
+# IV. 性能评估
+
+在本节中，我们讨论了实验结果并评估了所提系统的性能。它使用 Python 语言在 Windows 操作系统上实现，配备 Intel(R) Core(iTM) CPU @ 2.60GHz、16GB RAM。车辆价格数据生成
+
+## 表 I：基于 MSE 和 MAE 的性能评估
+
+| | MSE | MAE |
+|---|---|---|
+| 两轮车 | 18.23 | 3.75 |
+| 重型车辆 | 36.25 | 5.16 |
+
+基于第二节中讨论的参数以及我们统计学设置的初始参数。
+
+此外，图 5 显示了某一天两轮车的停车预测，MSE 和 MAE 分别为 27.54 和 4.79。图 6 显示了某一天重型车辆的停车预测，MSE 和 MAE 分别为 36.25 和 5.16。在这里，每个类别对预测以及获得的 MSE 和 MAE 值有不同的影响，表明两轮车的价格范围在 10 到 500 卢比之间，重型车辆在 100 到 150 卢比之间。
+
+![](img/0f753980fc8b53ff3a6b207cde399cda_4_0.png)
+
+图 4：两轮车车辆预测。
+
+为了评估所提方法的有效性，我们对所提方法与先进方法 [19] 和 [20] 进行了对比分析。两轮车停车价格预测获得的 MSE 和 MAE 值分别为 18.23 和 3.75（如表 I所示），与现有方法 [19]（MSE: 34.02，MAE: 3.93）和 [20] 相比均较低。
+
+### A. 基于区块链的评估
+
+本节重点介绍了基于区块链的结果，这些结果在存储成本和扩展性方面支持了所提系统。
+
+![](img/0f753980fc8b53ff3a6b207cde399cda_4_1.png)
+
+图 5：四轮车价格预测。
+
+![](img/0f753980fc8b53ff3a6b207cde399cda_4_2.png)
+
+![](img/0f753980fc8b53ff3a6b207cde399cda_4_3.png)
+
+图 7：所提 IPFS 与传统的基于太坊系统的存储成本对比。
+
+在这里，我们有三类车辆：两轮车、四轮车和重型车辆。全天分为不同类别的停车高峰期、中段期和非高峰期。图所示每个类别的停车价格说明了使用 LSTM 模型对某一天两轮车停车价格的预测。它显示预测价格接近实际停车价格，并实现了 18.23 和 3.75 的 MSE 和 MAE 值，具有准确率较高的预测。
+
+图 7 显示了传统的基于太坊的存储系统与所提基于 IPFS 的存储系统在存储数据方面的对比分析。如所述，向以太坊存储数据的传统方法非常贵。基于区块链的动态价格预测方案使用分布式 IPFS 存储方案用于车辆，清楚地表明所提系统优于传统系统 [21]。
+
+在以太坊中，单个单词由二十位组成，存储到其中需要 20K G 数据，G = 20K [22]。
+
+```
+1 word = G (20000G)
+```
+
+图 6：重型车辆价格预测。
+
+授权使用的许可受限于：Dedan Kimathi 科技大学。于 2021 年 9 月 01 日 14:17:38 UTC 下载自 IEEEplore。要求。
+
+## 参考文献
+
+[1] https://www.statista.com/statistics/008392/automobile-industry-consumer-sales-trends-international/
+
+[2] Z. Park, S. Kim and J. Lee, Dynamic pricing for morning commuting causing consumer experience. Transport Research Part: Emerging Technologies, vol. 48, pp. 468–490, 2014.
+
+[3] S. Tarwan, J. Vera, S. Syagi, N. Kumar, and M. S. Abbas, "A systematic review of pricing in ride sharing economy." Data and Privacy, vol. 1, p. 5, 2019.
+
+
+
+[4] K. A. Washington, U. Holzte, and J. Puzka, "The effectiveness of parking guidance information systems in main." Traffic engineering & control, vol. 35, pp. 304–309, 2016.
+
+[5] G. Wang, Y. Guo, J. Shi, and S. Chen, A secure and intelligent parking system. IoT intelligent transportation systems, volume. 3, pp. 30–38, 2021.
+
+[6] S. Tiwari and N. K. S. Syagi, Multimodal Data Gathering for IoT Applications: Concepts, Radiations, and Strategies, 2019.
+
+[7] X. Yuan and R. Ahmed, "A blockchain-based framework for smart parking." in IEEE International Conference on Information Technology (IEEE ICT), pp. 2044–2047, 2019.
+
+[8] J. A. Gao, P. Blythe, W. Wang, and J. Deng, "Designing the parking guidance information for the drivers." in 2018 IEEE 11th International Conference on Vehicular Technology (IEEE), pp. 1852–1857, 2018.
+
+[9] T. Nguyen, M. Phan, T. Du, B. Nguyen, K. Chu, and D. J. Deng, "A smart smart parking system based on blockchain and cloud computing." IEEE Access, vol. 7, pp. 1581–1591, 2019.
+
+[10] T. Wang, C. Tao, W. Wu, C. Lee, and J. Rodriguez, "Smart traffic management system using blockchain and edge computing." IEEE Communications Letters, vol. 6, pp. 70172–70185, 2022.
+
+[11] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6, 2017.
+
+[12] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system using blockchain in 2017 IEEE International Conference on Communications (ICC), pp. 1–6, 2017.
+
+[13] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6, 2017.
+
+[14] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system using blockchain in 2017 IEEE International Conference on Communications (ICC), pp. 1–6, 2017.
+
+[15] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6, 2017.
+
+[16] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system using blockchain in 2017 IEEE International Conference on Communications (ICC), pp. 1–6, 2017.
+
+[17] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6, 2017.
+
+[18] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system using blockchain in 2017 IEEE International Conference on Communications (ICC), pp. 1–6, 2017.
+
+[19] X. Zhang, X. Lin, and X. Sun, "Real time edge-based clustering in 2017 IEEE Winter Conference on Vehicular Communications and Networking (WCNC), pp. 1–6, 2017.
+
+[20] C. Zhang, Y. Wang, J. Chen, and J. Hu, "Blockchain-based smart parking system using blockchain in 2017 IEEE International Conference on Communications (ICC), pp. 1–6, 2017.
+
+[21] "Ethereum statistics," https://ethereum.io/ Accessed: 2021.
+
+![](img/0f753980fc8b53ff3a6b207cde399cda_5_0.png)
+
+图 8：所提系统与传统系统的对比。
+
+存储 1 KB 数据的成本为：
+
+`1 KB = 2 × 2000 Gas`
+
+当前价格 (`P_gas`) 和以太坊价格 (`P_eth`)分别为 $49 和 $1339.16。因此，用英文表示成本为：
+
+> 1 ETH = $100
+
+`ETHs = δ G`
+
+# V. 结论
+
+本文强调了当前集中人工价格预测系统中存在的问题，如拥堵、非法停车和安全问题。为了应对这些挑战，我们提出了一种基于人工智能和区块链的解决方案，允许用户使用区块链提供商与停车服务交互。价格根据车辆类型以确保服务便利性和收入化。价格根据需求（即非高峰期或高峰期）和可用性变化。支付交易使用区块链加密，停车服务验证并确认所有交易以增强安全性和信任。我们还展示了模型评估和结果。未来，我们将优化区块链操作以快速
+
+## 致谢
+
+这项工作得到了印度政府电子和信息技术部（MEITY）电子和信息技术部 Visvesvaraya 博士计划（MEITY-PHD-2828）的支持。
