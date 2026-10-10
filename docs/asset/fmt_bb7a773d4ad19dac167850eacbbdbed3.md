@@ -1,0 +1,1061 @@
+
+## 7. 使用 Personalize 训练推荐模型：
+
+- A. 打开 `Chapter12` 目录下的 `personalize.ipynb` 笔记本。此笔记本使用 movie lens 数据集训练了一个用于电影评论推荐的 Personalize 模型。它经历了创建数据集组/数据集、导入数据、构建解决方案以及创建 Personalize 活动的过程。
+- B. 按照笔记本中的指令并顺序运行所有单元格，以完成所有步骤。
+
+恭喜你！你已成功使用了多项 AWS 服务及其 API。如你所见，使用带有预训练模型的 AI 服务来执行不同的 ML 任务是非常简单的。使用 AI 服务训练自定义模型涉及一些额外的步骤，但底层的基础设施和数据科学细节被抽象掉了，使得非数据科学家也能轻松使用这些服务。
+
+## 总结
+
+在本章中，我们涵盖了围绕 AI 服务的话题。我们回顾了 AWS AI 服务列表以及它们可以用于构建 ML 解决方案的地方。我们还讨论了在 AI 服务部署中采用 MLOps。现在，你应该对什么是 AI 服务有了良好的理解，并知道你并不总是构建自定义模型来解决 ML 问题。当 AI 服务适用时，它们可以为你提供构建支持 AI 应用程序的快速方法。
+
+希望这本书能为你提供关于 ML 解决方案架构的良好视角，并学会如何将各种数据科学知识和 ML 技能应用于各种不同的 ML 任务（例如构建 ML 平台）。现在成为一名 ML 解决方案架构师是非常令人兴奋的，因为你对 ML 领域有了广泛的了解，可以帮助不同组织推动跨行业的数字化和业务转型。
+
+那么，接下来是什么？AI/ML 是一个拥有许多子领域的广泛领域，因此在所有子领域中开发技术深度将具有挑战性。如果你觉得 ML 解决方案架构听起来很有，你可以在未来的学习中关注几个领域，同时保持对 ML 布局的广泛理解。AI/ML 正在以加速的速度发展，因此预计不同学科之间将不断出现新的快速创新和变革。
+
+# 索引
+
+- accuracy 10
+- accuracy score 14
+- activation function 64
+- Active Directory 187
+- Adam optimizer 139, 141
+- administration, data lake resources
+- Lake Formation administrator 108
+- Lake Formation database creator 109
+- Lake Formation database user 109
+- Lake Formation data user 25
+- Aequitas
+- reference link 340
+- agency trading 25
+- Airbnb 143
+- Airflow 185
+- AI services
+- about 364
+- challenges, solving 364, 365
+- evaluating, for ML use cases 378
+- MLOps architecture, designing for 386
+- operational metrics, monitoring for 388
+- overview 365
+- used, for building intelligent solutions 379
+- used, for running ML tasks 389-394
+- algorithmic trading 25
+- algorithms, scikit-learn
+- link 129
+- AllReduce
+- implementing, in frameworks 308, 309
+- overview 307, 308
+- Amazon Augmented AI (A2I) service
+- reference link 369
+- Amazon Comprehend
+- about 366
+- entity recognition 366
+- event detection 367
+- language detection 367
+- sentiment analysis 366
+- syntax analysis 367
+- text classification 367
+- topic modeling 367
+- Amazon DocumentDB 100
+- Amazon Echo virtual assistant 4
+- Amazon ECR 241
+- Amazon EKS
+- used, for creating Kubernetes environment 174-180
+- Amazon ElasticSearch 101
+- Amazon EMR 105
+- Amazon Kendra
+- about 376
+- data sources 377
+- document ranking 376
+- document reading understanding 376
+- documents 377
+- frequently asked question (FAQ) matching 376
+- index 377
+- intelligent search, performing against documents 377
+- queries 377
+- tags 377
+- Amazon Lex
+- about 375
+- fulfillment 375
+- intent 375
+- prompt 375
+- lots 375
+- utterance 375
+- Amazon Personalize
+- about 372
+- campaign 373
+- custom model, deploying 373, 373
+- custom model, training 373, 374
+- dataset group 373
+- personalized re-ranking 372
+- recipe 373
+- similar items, computing 372
+- solution 373
+- user personalization 372
+- Amazon Pinpoint 384
+- Amazon RDS 100
+- Amazon Redshift 101
+- Amazon Rekognition
+- about 369
+- celebrity identification 370
+- content moderation 370
+- facial analysis and recognition 370
+- label detection 369
+- personal protection equipment (PPE) detection 370
+- reference link 370
+- short text detection 370
+- Amazon S3 195
+- Amazon SageMaker Feature Store 106
+- Amazon SageMaker Neo 327
+- Amazon Textract
+- about 368
+- form extraction 368
+- OCR 368
+- table extraction 368
+- Amazon Transcribe
+- about 371
+- call analytics 371
+- custom models 371
+- media transcription 371
+- redaction 371
+- subtitle 372
+- Anaconda package repository
+- reference link 128
+- anti-money laundering (AML)
+- about 31
+- analysis 32
+- detection flow 32
+- machine learning-based solutions, 31, 322
+- Apache Airflow
+- about 201, 202
+- Directed Acyclic Graph (DAG) 201
+- operators 202
+- scheduling 202
+- tasks 201
+- Apache Hive 105
+- Apache Hudi 105
+- Apache Spark 102, 130
+- Apache Tensor Virtual Machine AWS CloudTrail (TVM) 327
+- CodeCommit 241
+- Data Migration Service (DMS) 101
+- Elastic Container Registry (ECR) 278
+- Elastic EMR 203
+- Glue 102
+- Lake Formation 99
+- Lambda 103
+- Managed Streaming for Kafka 101
+- Management Console 175
+- SDK 179
+- Step Functions 199
+- Azure Blob Storage 199
+- backpropagation 66
+- bag-of-words(BOW) 73
+- BERT
+- about 77
+- fine-tuning 79
+- model, training in Jupyter Notebook 245
+- model, training with SageMaker Training Service 251
+- pre-training 78
+- bias metrics 339
+- class imbalance 339
+- demographic disparity, in labels 339
+- conditional (ABAC) 169
+- configuration changes 348
+- lineage tracking 348
+- model approval 368
+- model tracking 348
+- model interpretability 336
+- de-identification 336
+- de-identification 336
+- difference in positive proportion of observed labels 339
+- de-identification
+- Kullback and Leibniz (KL) divergence 339
+- central processing units (CPUs) 319, 320
+- centroids 66
+- chroot system 152
+- examples 339
+- classification and regression algorithms
+- Big O 57
+- bootstrap sampling 61
+- clustering 66
+- decision tree algorithm 59
+- gradient boosting 62
+- K-means clustering 66
+- K-nearest neighbor algorithm 63
+- linear regression algorithm 58
+- logistic regression algorithm 58
+- C# 102
+- (MLP) network 64
+- random forest algorithm 61
+- click-through rate (CTR) 48
+- XGBoost 62
+- canary deployment 194
+- CloudFormation template
+- Net Asset Value (NAV) 29 creating, for ML deployment pipeline 295-298
+- Net Asset Value (NAV) review 29 creating, for ML training prediction 30
+- post-trade settlement failure prediction 30
+- CloudWatch logs 283
+- CloudWatch metrics 283
+- AWS account setup 244, 245
+- inadequate change management source code, saving to 257
+- inadequate model testing deployment stage 290 source stage 290
+- inconsistent data distributions 336
+- lack of documentation 336
+
+- 跨环境不同数据的代码提升支持 388 源和目标 101
+- 代码存储库 276
+- 常数折叠 325
+- 冷启动问题 70
+- 容器仓库 276
+- 协同过滤 69
+- 容器 152-154
+- 通信协议 328
+- 上下文广告 48
+- 计算机统一设备 (CUD)
+- 上下文老虎机算法 70
+- 架构 (CUDA) 321
+- 连续词袋模型 (CBOW) 75
+- 计算机视觉 57, 71
+- 持续部署 (CD) 20
+- 计算机视觉神经网络
+- 持续集成 (CI) 20
+- 架构 持续集成 (CI)/持续部署 (CD) 185
+- 卷积神经网络 (CNN) 71, 72
+- 连续跳跃语法模型 75
+- ResNet 72, 73
+- 控制器 155
+- 概念漂移检测 269
+- 控制平面
+- Conda 包管理器 关于 154, 269
+- 引用链接 328
+- 关键组件 154, 155
+- 配置细节，针对 TensorFlow
+- 收敛 56
+- 预测批处理 328
+- 卷积滤波器 71
+- 卷积神经网络 (CNN) 关于 71
+- 配置细节，针对 TorchServe 关于 328
+- 引用链接 328
+- 架构 72
+- 考虑因素，数据目录多样性 核心功能，ML 平台
+- 自动数据目录 103 数据探索以及与其他工具的集成 103
+- 实验 19
+- 元数据目录 103
+- 搜索能力 103
+- 大规模数据处理 19
+- 标签灵活性 103
+- 特征托管/服务 19
+- 考虑因素，数据摄入 103
+- 模型管理 19
+- 数据格式 100
+- 数据预处理能力 100
+- 数据可扩展性 100
+- 数据大小 100
+- 摄入模式 101
+- 可靠性 101
+- 安全 100
+- 评估指标，定义 144
+- 损失函数，定义 144
+- 模型，加载 145
+- 模型，保存 145
+- 模型服务 145
+- 模型，训练 145
+- 神经网络，定义 144
+- 优化器，选择 145
+- 核心功能，scikit-learn
+- 数据准备 129
+- 模型评估 129
+- 模型保存 130
+- 模型训练 129
+- 流水线工具 130
+- 核心功能，Spark ML
+- 数据准备 132, 133
+- 模型评估 134
+- 模型保存 135
+- 模型训练 133
+- 流水线 134
+- 核心功能，TensorFlow 2.x
+- 数据准备 138
+- 评估指标，选择 129
+- 损失函数，定义 139
+- 模型，拟合 139
+- 模型，保存 139
+- 模型，服务 139
+- 网络，编译为模型 139
+- 神经网络，定义 138
+- 优化器，选择 139
+- 训练模型，评估 139
+- 信贷风险评估
+- 工作流 34
+- 交叉熵损失函数 147
+- CSV 100
+- 智能搜索的客户自助自动化 385, 386
+- 自定义资源 (CR) 159, 190
+- 自定义资源定义 (CRD) 159
+- Cython 127
+- 数据获取 14
+- 数据和模型偏差报告 344
+- 数据目录
+- 关于 103
+- AWS Glue目录 104
+- 关键考虑因素 103
+- 数据漂移 261
+- 数据提取 379
+- 数据治理
+- 关于 109
+- 审计 110
+- 数据访问权限配置 110
+- 数据目录编制 110
+- 数据质量 110
+- 监控 110
+- 数据摄入
+- 关于 97, 100
+- 触发 114
+- 数据摄入工具
+- Apache Kafka 100
+- Apache Spark Streaming 100
+- AWS Glue 100, 102
+- AWS Lambda 103
+- 考虑因素 109
+- Kinesis Firehose 100, 101
+- 安全文件传输协议 (SFTP) 100
+- 数据血缘 109
+- 数据线性度 57
+- 数据管理
+- 关于 94
+- 能力 95, 96
+- 学习 94-96
+- 与 ML 生命周期周期的交叉 95
+- 数据管理架构
+- 关于 96
+- 授权 108
+- 数据目录 103
+- 数据摄入 100
+- 数据流水线 107
+- 供客户端消费的数据服务 100
+- 数据存储和管理 98
+- 数据版本控制 105
+- 企业级数据管理 98
+- 机器学习特征存储 106
+- 范围有限的 97
+- 管理平台，在 AWS 上
+- Amazon Glue ETL 任务，创建 118-121
+- 构建 111
+- 数据湖中的数据发现 116, 117
+- 数据摄入流水线，创建 113, 114
+- 数据湖，使用 Glue Workflow 创建 121, 122
+- 数据湖中的数据查询 116, 117
+- Glue 目录，创建 115
+- 数据操作 126
+- 数据并行化 303
+- 流水线 关于 107
+- AWS Glue Workflow 108
+- AWS Step Functions 108
+- 数据平面 269
+- 差异隐私 349
+- 同态加密 (HE) 349
+- 数据处理 关于 104, 126
+- Amazon Elastic Map (EMR) 105
+- AWS Glue ETL 105
+- AWS Lambda 105
+- 关键需求 104
+- 技术 205
+- 数据科学环境 关于 184
+- 使用 AWS 服务和 SageMaker 构建 234, 235
+- 使用 SageMaker 构建数据科学环境架构 241, 242
+- 使用 SageMaker Experiments 构建数据科学环境架构 242
+- 使用 SageMaker Hosting 238, 239
+- 使用 SageMaker 处理 236, 237
+- 使用 SageMaker 调优 240, 241
+- 数据科学环境实验指南 242
+- 问题描述 242
+- 在 Jupyter Notebook 中训练 BERT 模型 245-251
+- 使用 AWS 服务的数据科学环境，实验指南 242
+- 使用 SageMaker Training Service 训练 BERT 模型 251-255
+- CodeCommit，设置 244, 245
+- SageMaker，设置 242-244
+- 源代码，保存到 CodeCommit 存储库 257
+- 供客户端消费的数据服务 107
+- 数据服务模式 关于 107
+- 通过 API 消费 107
+- 通过数据拷贝消费 107
+- 用于个性化训练的集集 372
+- 项目数据集 373
+- 用户交互数据集 373
+- 专门构建的数据版本工具 106
+- S3 分区 106
+- 运行 60
+- 解码器网络 77
+- DeepAR 算法 68
+- 深度学习神经网络 56
+- DeepSpeed 316
+- 库 110
+- 部署 157, 158
+- 控制器 155
+- Dex 187
+- 差异隐私 349-353
+- 降维 7
+- 有向无环图 (DAG)
+- 判别模型 81
+- 判别器网络 82
+- 分布式训练数据并行化 303
+- 分布式训练模型并行化 309, 310
+- 分布式训练使用 PyTorch 运行 329, 330
+- get_data_loader 函数修改 329, 330
+- 多进程启动节点 331
+- train() 函数修改 329, 330
+
+- 医疗数据管理 43
+- 医疗影像分析 40, 41
+- 行业 40
+- 医疗数据管理 43
+- Herring
+- 引用链接 307
+- 分层数据格式 (HDF5) 格式 139
+- Hive 元数据目录 103
+- 留出数据集 14
+- Homebrew
+- 下载链接 84
+- 安装 84
+- 8位整数 (INT8) 322
+- 集成组件 68
+- 智能解决方案
+- 使用 AI 服务进行构建 379
+- 交互式开发环境 (IDE) 236
+- 中间表示 (IR) 326
+- 物联网 (IoT) 46
+- 投资银行
+- 关于 26
+- 结构化数据 27
+- 非结构化数据 27
+- 工作流 27
+- Ist 166, 187
+- Istio Citadel 207
+- Istio Pilot 207
+- Istio-system 207
+- Horovov
+- 关于 309
+- 引用链接 309
+- HTTP 基础认证 168
+- 人脑神经元 64
+- 超参数 55
+
+# I
+
+- IBM AI 公平性 360
+- 引用链接 340
+- 推理批处理 328
+- 推理引擎优化 328
+- 信息增益 59
+- 代码即基础设施 (IaC) 263
+- Ingress 165, 166
+- 保险理赔管理
+- 关于 36
+- 挑战 36
+- 财产保险理赔 38
+- 工作流 37
+- 保险业 35
+- 保险承保
+- 关于 35
+- 财产保险 35
+
+# J
+
+- Java 102, 127
+- 任务控制器 155
+- JSON 98, 200
+- JSON Web Token (JWT) 166
+- Jupyter 数据科学环境
+- 构建 83
+- 业务问题审查 83
+- 数据集描述 83
+- 设置 86-91
+- Jupyter Notebook
+- 关于 84, 174, 187
+- BERT 模型，训练 245-251
+- 在 macOS 上的安装 85
+- 在 Windows 上的安装 86
+
+# K
+
+- Kaggle 63
+- 药物发现的关键阶段 41
+- 临床开发 41
+- 发现与开发 41
+- FDA 审核 41
+- 上市监测 41
+- 临床前 41
+- KFServing 186, 197, 198
+- Kinesis Data Analytics 102
+- Kinesis Firehose
+- 关于 101
+- 数据流 102
+- 数据摄入 101
+- 可扩展性的关键需求
+- K-means 聚类
+- 关于 66
+- K 近邻算法
+- 关于 63
+- 了解客户 (KYC) 38
+- kubectl 速查表
+- 引用链接 155
+- Kubeflow
+- 关于 185, 186, 206
+- 安装 205-210
+- 用于数据科学的使用
+- Kubeflow Pipelines
+- 关于 186-238
+- 实验 203-205
+- 输出产物 204
+- 流水线 203-204
+- 运行触发器 204
+- 步骤 203
+- Kubeflow Pipelines 软件包 (KFP) 223
+- Kubernetes
+- 关于 154, 155
+- 架构 156
+- 自定义资源 159
+- 机器学习工作负载 173
+- 网络 161-163
+- 算子 159, 160
+- Pod 187
+- 代理 163
+- Kubernetes 环境
+- 使用 Amazon EKS 创建 174-180
+- Kubernetes Python 客户端
+- 用户认证 168-170
+
+# L
+
+- 标记数据集 5
+- 标签 5
+- Lake Formation
+- 关于 108
+- Lake Formation 数据库创建器 112
+- Lake Formation 数据库用户 109
+- Lambda 函数 113
+- 语言建模 77
+- 大模型
+- 分布式训练 302, 303
+- 狄利克拉分配 (LDA) 算法 80, 81
+- 笔记本
+- 修改 331, 332
+- 懒性执行 132
+- 叶子节点 60
+- 学习率 55
+- Lex bot
+- 构建 375, 376
+- LightGBM 63
+- 机器学习特征存储库 106
+- 机器学习库
+- 特征 126, 127
+- 机器学习 (ML)
+- 关于 23
+- 数据管理架构 96
+- 数据管理考虑 94-96
+- 强化学习 5, 9
+- 无监督 ML 6-8
+- 与传统软件对比 10, 11
+- 维护行业 46
+- 线性模型 56
+- 线性回归 57
+- 线性回归算法 38
+- 链路攻击 39
+- Linux 175
+- 负载均衡器 164, 165
+- 数据处理 381
+- 文档分类 380, 381
+- 文档验证 379
+- 本地可解释模型无关说明 (LIME) 341
+- macOS
+- Jupyter Notebook，安装 85
+- Python 3，安装 84
+- 制造业 44
+- 工程设计 44
+- 维护 46
+- 流程 44
+- 产品质量与产率 45
+- 市场滥用条例 (MAR) 32
+- 营销活动和 48
+- 点击率 (CTR) 48
+- 上下文广告 48
+- 分割 48
+- 图像数据解释器 341
+- 表格数据解释器 341
+- 文本数据解释器 279
+- 逻辑回归算法 58, 59
+- 长短期记忆 (LSTM) 77
+- 损失
+- 金融工具指令 II (MiFID II) 32
+- matplot 128
+- 矩阵分解 70
+- 矩阵单元 (MXUs) 321
+- 最大池化 71
+- 引用链接 139
+- 损失函数 54
+- 低延迟模型推理 318
+- 均绝对误差 (MAE) 139
+-  NLP 机器学习算法
+- 均方误差 (MSE) 139
+- 关于 75
+- 媒体与娱乐 (M&E) 行业 37
+- BERT 77-79
+- 内容开发与生产 38
+- 生成式预训练 Transformer (GPT) 80
+- 内容分发与客户参与 39, 40
+- 内容管理与发现 38, 39
+- 狄利克拉分配 (LDA) 80, 81
+- 媒体处理与分析工作流 381-383
+- 长短期记忆 (LSTM) 77
+- 医疗影像 关于 40, 41
+- 循环神经网络 (RNN) 75, 76
+- Word2Vec 75
+- 基于 ML 的预测模型 49
+- 合购 (M&A) 24 Microsoft 143
+- 基于 ML 的搜索能力 41
+- 基于 ML 的偏差
+- 关于 53, 关于 338
+- NLP 算法 73 回归 58
+- 偏差检测 339
+- 计算机视觉神经网络架构 71
+- 缓解 339
+- 生成式模型 81 54
+- ML 部署流水线
+- 概述 56
+- 推荐算法 67
+- CloudFormation 模板，创建 295-298
+- ML 算法考虑 56
+- 准确率与可解释性 57
+- 特征数量 56, 57
+- 数据准备 14
+- 全局可解释性 340
+- ML 生命周期
+- ML 问题定型 13
+- 模型部署 15
+- 模型评估 14
+- 模型训练 14
+- 建立 347
+- 管理控制 346
+- 模型库存 345
+- 可观测性 347
+- 隐私 349
+- 可复现性 348
+
+# 机器学习运维 (MLOps)
+- 用于 ML 工作流 274, 275
+- 模型构建 127, 部署 211-219
+- 过程与操作 274
+- 一致性 模型配置 20, 25
+- 流水线设计与管理 20
+- 流水线执行与监控 20
+- 解决方案架构
+- AWS 服务，使用 276-278
+- AI 服务设计 386
+- 监控 276
+- 在 AWS 构建 289
+- 流水线监控 285, 286
+- 自动化流水线工作流 201
+- 16, 17, 23
+- 元素 17, 18
+- 业务理解 18, 23
+- 持续集成 (CI)
+- 持续部署 (CD) 185
+- 数据科学环境 185
+- 模型注册 185
+- 模型服务环境 185
+- 模型训练环境 184
+- 平台，治理设计 342, 343
+- 审计 347
+- 数据与模型文档 343, 344
+- 使用 AI 服务运行任务 389-394
+- CloudFormation 模板，创建 289-295
+- AI 服务评估 378
+- 金融服务 24
+- 医疗与生命科学 40
+- 识别练习 50
+- 制造业 44
+- 媒体与娱乐 (M&E) 行业 37
+- 零售业 46
+- 模型审批与生命周期跟踪 345
+- 编译器 关于 326
+- 与模型注册注册 192
+- Amazon SageMaker Neo 327
+- 使用模型服务提供 193
+- Apache Tensor Virtual 211-219 Machine (TVM) 327
+- 模型保存 127
+- PyTorch Glow 327
+- 模型选择与评估
+- TensorFlow 加速线性工具，scikit-learn 参考 129
+- 代数法 (XLA) 326
+- 模型服务 127, 185
+- 模型漂移 261
+- 模型端点监控自定义容器 272
+- 关于 281-284 PyTorch 模型 270
+- 关键指标 281 scikit-learn 271
+- 模型评估 127 Spark ML 模型 270
+- 模型解释性报告 344 TensorFlow 269
+- 模型托管环境 Xgboost 模型 271
+- 关于 268, 269 模型训练
+- 认证 273 关于 127
+- 推理引擎 269-273 使用 Kubeflow 训练算子 190
+- 日志 274 使用 Kubernetes Jobs 189
+- 监控 274 模型训练环境
+- 安全控制 273 关于 184, 264
+- 模型推理自动化 267
+- 工作 318, 319 构建 189-191
+- 引擎 255, 266 生命周期管理 268
+- 模型训练监控
+- 关于 279
+- 关键指标 279-281
+- 模型并行训练监控 279
+- MongoDB DB 100
+- 移动平均值 (MA) 组件 68 多臂老虎机 (MAB) 70
+- 多层感知机网络
+- (MLP) 64-66, 310
+- 多租户 188
+
+# N
+
+- 原始模型并行 310, 311
+- 命名实体识别 (NER) 技术 27
+- 命名空间 (namespaces) 156
+- 自然语言生成 (NLG) 26
+- 自然语言处理 (NLP) 关于 73
+- 模型 (models) 26, 57
+- 自然语言理解 (NLU) 376, 385
+- 净值值 (NAV) 审核流程 29
+- Netflix 132
+- 网络地址转换 (NAT) 161
+- 网络策略 (network policies) 168
+- 网络安全 168
+- 网络流量管理 166
+- 神经网络 (Neural Network) 143
+- 下一步最佳动作 (Next Best Action) 方法 28
+- Nginx 193
+- Node.js 102
+- NodePort 163, 164
+- 正规方程 (normal equation) 56
+- NoSQL 数据库 102
+- NumPy 128
+- Nvidia GPU 架构
+    - 全局内存组件 302
+    - 流式多处理器 (SM) 组件 320
+- 在线学习 (online learning) 70
+- ONNX 195
+- OpenAI 80
+- OpenID Connect (OIDC) 273
+- 用于构建数据科学的开源技术
+    - 架构 205
+    - 用于构建 ML 平台的使用 185
+- 运营指标 (operational metrics)
+    - AI 服务的监控 388
+    - 操作符优化 (operator optimization) 326
+- 光字符识别 (OCR) 34, 368
+- 优化 (optimization) 54
+- 优化器 (Optimizer) 143
+- 优化器 (optimizers) 54
+- Keras 优化器
+    - 参考链接 139
+- 词外词 (OOV) 77
+- 过拟合 (overfitting) 60
+- 越顶传输 (OTT) 37
+
+# P
+
+- 包管理器 (package manager) 128
+- 损益 (P and L) 信息 33
+- 启用并行服务会话 328
+- 参数服务器 (parameter server)
+    - 在框架中的实现 306, 357
+    - 概述 305, 306
+- Parquet 100
+- 词性标记 (POS) 分析 367
+- 权限 (permission)
+    - 授予命名空间服务账户
+    - 访问 Istio 服务 220-232
+- 个人身份信息 (PII) 371
+# O
+
+- 目标函数 (objective function) 54
+- 对象存储 (object storage) 98
+- 可观测性 (observability) 167
+- 货币与货币监理局 (OCC) 335
+- Pinterest 132
+- PyTorch
+    - 关于 19, 143, 190, 196, 197
+    - 组件 144
+    - 安装 84, 85
+    - 安装 143
+- PIP 83
+- PIP3
+- 流水线模型并行 312, 143
+- URL 143
+- 流水线仓库 (pipeline repository) 276
+- PyTorch Glow 327
+- PIP 包管理器
+- PyTorch 模型
+    - 关于 128
+    - 构建 146-149
+    - 参考链接 128
+    - 训练 146-149
+- Pods (Pods) 155-157
+
+# Q
+
+- 交易后结算 (post-trade settlement)
+- 制造质量控制
+- 工作流 (workflow) 30
+- 行业部门 45
+- Presto 105
+- 量化 (quantization) 322
+- 预训练 (pre-training) 78
+- 产品需求预测 367
+- 产品设计 44
+- 产品推荐 383
+- 随机森林算法
+- 产品搜索与发现，
+    - 关于 61
+    - 零售业 46, 47
+    - 优势 62
+- 概念验证 (POC) 18
+- 零售业 46, 47
+- 自营交易 (prop trading) 25
+- 推荐算法
+    - 关于 69
+    - 协同过滤算法 69
+- 剪枝 (pruning) 323
+- 特制数据版本工具 416
+- PySpark 132
+- 多臂老虎机/上下文老虎老虎机算法 70
+- Python 83, 102, 127, 153, 188
+- 推荐系统 69
+- Python 3
+- 循环神经网络 (RNN) 68, 75, 76
+    - 安装 84, 85
+    - 在 macOS 上安装 84
+    - 在 Windows 上安装 85
+- 注册位置 (Register Location) 112
+- 正则化 (regularization) 57
+- 强化 (reinforcement)
+- Python 包索引 (Python Package Index)
+    - 关于 8
+    - 示例 9
+- Python SDK (软件开发包) 191
+    - 用例 9
+- Python 终端 (Python shell) 102
+- ReLU 64
+- 残差网络 (ResNet)
+    - 关于 72
+    - 架构 73
+- 零售业
+    - 关于 46
+    - 产品需求预测 49
+    - 产品搜索与发现 46, 47
+    - 情感分析 46, 49
+    - 目标营销 37
+- 环 (Ring)
+    - 在框架中的实现 308, 309
+- 风险管理
+    - 关于 31
+    - 反洗钱 (AML) 31, 32
+    - 信贷风险 34
+    - 保险 35
+    - 交易监控 32
+- 基于角色的访问控制 (RBAC) 170
+# S
+
+- S3 桶 (S3 bucket)
+    - 创建 113
+- S3 分区 106
+- S3 存储
+    - 注册 112
+- SageMaker
+    - 关于 203
+    - 架构 234
+    - SageMaker Clarify 281
+    - SageMaker Debugger 281
+    - SageMaker 分布式训练 317
+    - SageMaker Experiments 241, 278
+    - SageMaker 用于数据治理
+        - 数据集 353, 357
+        - 隐私保护模型 359, 360
+        - 训练 353
+    - SageMaker 模型监控
+        - 数据漂移 346
+        - 特性归因分析 346
+        - 模型性能 346
+    - SageMaker 模型注册表 278
+    - SageMaker 流水线 238, 242, 244
+    - SageMaker 处理服务
+        - 关于 239, 240
+        - 训练 251
+    - SageMaker 调优
+        - 参数 240
+        - 策略 255
+- 调度器 (scheduler) 155
+- scikit-learn
+    - 关于 197
+    - 组件 127, 128
+    - 安装 128
+- SciPy 128
+- sigmoid 激活函数 64
+- 简单通知服务 (SNS) 281
+- 单指令多数据 (SIMD) 320
+- 单点登录 (SSO) 168
+- 安全文件传输协议 (SFTP) 382
+- Softmax 138
+- 空间复杂度 57
+- 安全 (security)
+    - 身份验证 20
+    - 审计 20
+    - 数据加密 20
+    - 网络 20
+    - 禁用 348
+    - 私有云 348
+    - 存储 348
+    - 分段 348
+    - 情感分析 48
+    - 稀疏矩阵 69
+    - 静态剪枝 324
+- 监督学习 (supervised ML)
+    - 算法 5, 7
+    - 示例 8
+- 无监督学习 (unsupervised ML) 关于 6, 7
+    - 示例 8
+- 非结构化数据 98
+- Spark 应用
+    - 算法 131
+    - 集群 131
+    - 安装说明 132
+    - SparkContext 131
+- Spark ML
+    - 算法 185, 198
+    - 组件 132, 201
+    - 数据科学环境 286
+    - 服务 286
+    - 深度学习方法 49
+    - 回归分析 49
+    - 服务账户 168
+    - 服务网格 166
+    - Splunk 101
+- Seldon Core 185
+- Shapley AdditiveExPlanations (SHAP) 341
+    - DeepExplainer 342
+    - GradientExplainer 342
+    - KernelExplainer 342
+    - LinearExplainer 342
+    - TreeExplainer 342
+- 随机梯度下降 (SGD) 139
+- 直通处理 (straight-through processing) 36
+- 子树 (subtrees) 61
+
+# T
+
+- 标签 (tags) 67
+- 目标营销 47
+- 张量 (tensor) 313
+- 词频-逆文档频率 (TF-IDF) 关于 73
+- 文本转语音 385
+- 时间复杂度 57
+- 时间序列 关于 67
+    - 特性 67
+    - 季节性 67
+    - 平稳性 67
+    - 趋势 67
+- 时间序列算法
+    - ARIMA 算法 67, 68
+    - DeepAR 算法 68
+- 标记 (token) 76
+- 主题模型 80, 81
+- torch-mode-archive 196
+- TorchServe 服务框架 196
+- 交易监控
+    - 关于 32
+    - 挑战 33
+    - 工作流 33
+- transformer 78
+- transformers, scikit-learn 129
+- transformers, Spark ML 133
+- TRIM 335
+# U
+
+- Uber 132
+- Ubuntu 153, 218
+- 通用资源标识符 (URI) 187
+- Unix 版本 7 152
+- 用户中心化营销活动
+    - 以用户为中心的营销活动 483
+
+# V
+
+- 梯度消失问题 72
+- 视频点播 (VOD) 39
+- 虚拟有云 (VPC) 176, 348
+- 虚拟服务 166
+- VMWare 152
+
+# W
+
+- 弱学习树 61
+- 财富管理 (WM) 业务
+    - 关于 27, 28
+    - 挑战 27
+- Wikipedia 75
+- Windows
+    - Windows 上安装 Jupyter Notebook 86
+    - Windows 安装 Python 3 85
+    - Python Windows 安装程序 85
+- Word2Vec 75
+
+# X
+
+- X.509 客户端证书 168
+- XGBoost 62, 63, 190, 197
+- XML 98
+
+# Y
+
+- YAML 187
+
+# Z
+
+- 零冗余优化器 (ZeRO) 316
+- 零样本学习 80
+
+# 其他你可能喜欢的书籍
+
+如果你喜欢这本书，你可能对 Packt 出出的其他书籍感兴趣：
+
+![](img/bd21298357d8484151447cff0b2f138b_436_0.png)
+
+# Amazon SageMaker 机器学习实战指南
+
+Joshua Arvin Lat
+
+ISBN: 9781800567030
+
+- 训练并部署 NLP、时间序列预测和计算机视觉模型，以解决不同的业务问题
+- 使用自定义容器镜像推向 SageMaker 自定义的极限
+- 使用 SageMaker Autopilot 的 AutoML 能力创建高质量模型
+- 使用有效的数据分析和准备技术工作
+- 探索调试和管理机器学习实验及部署的解决方案
+- 使用 SageMaker Clarify 处理偏见检测和机器学习可解释性需求
+- 使用各种解决方案自动化中间和复杂的部署及工作流
+
+![](img/bd21298357d8484151447cff0b2f138b_437_0.png)
+
+# Amazon SageMaker 最佳实践
+
+Sireesha Muppala, Randy DeFautw, Shelbee Eigenbrode
+
+ISBN: 9781801070522
+
+- 使用 AWS Data Wrangler 和 SageMaker Clarify 进行数据偏见检测
+- 使用 SageMaker Feature Store 加快数据处理
+- 使用 SageMaker Ground Truth 克服标记偏差
+- 通过 SageMaker Debugger 的监控和分析功能缩短训练时间
+- 使用 SageMaker 模型注册结合 CI/CD 解决模型部署自动化的挑战
+- 探索用于优化的 SageMaker Neo
+- 使用 Amazon Model Monitor 实现数据和模型质量监控
+- 通过 SageMaker 数据和模型并行缩短训练时间并降低成本
