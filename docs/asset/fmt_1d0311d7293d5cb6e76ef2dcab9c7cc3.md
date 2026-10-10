@@ -1,0 +1,107 @@
+
+# V
+- Intrigue.io, 99–103
+- SpiderFoot, 89–90
+- URLs
+    - Photon, 150
+    - 公共以及 299
+    - 爬虫工具，217–219
+    - 用户代理头部（User-agent），125
+- 用户名
+    - 替换，369
+    - Skiptracer 搜索，366–369
+- Userrecon（用户侦测），370–372
+- SocialLinks，350–351
+- Maltego 用户，358–360
+- `space_finder.rb` CSF, 299, 300–301
+- 结果，下载，296
+- `site:` 运算符，Google 攻击语法，161
+- skids（脚本小子），274
+- SkipEase, 330, 331
+- Skiptracer
+- `spider_finder.rb` CSF, 239
+- SpiderFoot, 84
+    - 访问，85
+    - 发现元素列表，90–91
+    - IP 地址原因，86–87
+    - uberpeople.net, 89–99
+    - VirusTotal, 87–88
+- SpiderFoot HX, 91
+- 结果部分，92–93
+- AdvancedBackgroundChecks（高级背景检查），361
+- 地址搜索，361–364
+- HavelBeenPwned, 361
+- LinkedIn（领英），361
+- MySpace, 361
+- 电话号码搜索，364–366
+- SpiderOak, CSF (CloudStorageFinder)（云存储查找器），以及 299
+- SSL 证书，Pivot Engine（枢纽引擎），227–229
+- 州法院网站，332–333
+- Storm Proxies, 10–118
+- Strinatras, 436
+- Strand, Jahn, 24–25, 325, 347, 386–387
+- True People, 361
+- Truth Finder, 361
+- 用户名搜索，366–369
+- SOC（安全运营中心），255
+- 社会工程学，381–382
+- Argon 故事，383–387
+- KickAss 论坛以及，383–388
+- 社交媒体，349
+- 图片，保存，357
+- OSINT.（开源情报），350–351
+- Facebook 搜索，352–357
+- Instagram, 354
+- Photon, 150
+- Reddit Investigator（Reddit 调查员），372–374
+- Skiptracer
+- 电子邮件地址搜索，311–364
+- CT（证书透明度）以及，202
+- CFTR, 203–204
+- Photon, 150
+- Sublist3r, 58–59
+- SYN 扫描，68
+
+# W
+- Wayback Machine（网页快照），211–212
+    - 扫描，214–215
+    - Photon, 150，216–317
+    - 网站，219–220
+    - 截图，193
+    - 爬虫
+        - 运行，151–152
+        - Photon, 149
+    - WAFs（Web防火墙），136–141
+- WordPress 插件，139–141
+- WPSScan 及其，136–141
+- WPSScan，132
+    - `-enumerate u`，138
+        - `--force`, 137
+        - `--proxy`, 137
+        - `--stealthy`, 137
+    - IP 地址，旋转，138
+    - 输出，134–136
+    - 参数，133–134
+- WordPress 未被检测，136–141
+- Wyatt, Nathan，32, 349. *参见*
+- Arnie, TDO 以及
+    - 计算机滥用法，33
+    - Dissent Doe 采访，33
+- 引渡，33–34
+- 起诉书，33–34
+- OSINT.rest, 352–354
+- YouTube 音频，34
+
+# X
+- Xdedic, 29
+- XLS 文件，攻击语法，162, 163
+
+# Y
+- Yahoo!, 攻击语法，169
+- Yandex, 340
+- YoungBThug, 433–434, 440–446
+
+# Z
+- ze0ring, 276
+- ZIB 木马，435
+- Zynga, 459
