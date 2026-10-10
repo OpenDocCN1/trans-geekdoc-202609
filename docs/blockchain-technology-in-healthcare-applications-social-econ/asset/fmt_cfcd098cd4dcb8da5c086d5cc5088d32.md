@@ -1,0 +1,64 @@
+
+|| \[[97](#C_006_c1.xhtml#r1_97)\] |
+
+上表表明，区块链在改善物联网安全问题方面具有巨大潜力。但仍需更多研究来探究区块链应用的效率与简易性。
+
+## 1.6 挑战与未来工作
+
+在物联网生态系统中实施区块链的主要缺点在于，缺乏通用的方法论或系统架构来根据需求组合这些系统。区块链在共识协议的可扩展性和大数据处理方面存在问题。这些顾虑带来了一些需要更多关注的挑战。
+
+### 1.6.1 设备异构性
+
+物联网生态系统涉及从低端设备到高端服务器的各类设备。它们在多层中计算数据，每层都有其自身的机制 \[[98](#C_006_c1.xhtml#r1_98)\]。因此，需要引入一个用于安全赋能的通用框架，使设备能在各层动态适应安全需求。
+
+### 1.6.2 硬件与固件漏洞
+
+随着需求增加，物联网设备趋向于更低成本、更低功耗。这以降低硬件或固件质量为代价换取了系统的用户友好性 \[[99](#C_006_c1.xhtml#r1_99)\]。除了物理干扰外，恶意软件和路由问题等软件相关问题也可能发生。因此，需要一套标准系统来监控这些问题。
+
+### 1.6.3 可扩展性
+
+物联网设备用于处理数十亿设备收集的大数据。区块链在处理这些数据时需要大量计算时间。此外，物联网设备自身在同步和基于海量数据传输决策方面也存在特定限制。因此，尚需寻找一种可扩展的通用机制，以同时配合物联网与区块链工作 \[[100](#C_006_c1.xhtml#r1_100)\]。
+
+### 1.6.4 物联网友好型共识机制的局限性
+
+物联网设备多执行实时交互。它们高速收集、处理、传输和同步数据以提供基本服务。大多数提案中采用的共识协议（如 `PoW`、`PoET` 和 `PoC`）用于公有链。其计算时间相当可观，导致快速响应产生时延。因此，需要一种更以物联网为中心的共识机制，以更高效地服务于区块链 \[[101](#C_006_c1.xhtml#r1_101)\]。
+
+除了这些问题外，区块链和物联网生态系统在数据完整性、通信协议以及未来物联网设备的普适性集成方面，仍需更多有影响力的工作来缓解安全问题。
+
+## 1.7 结论
+
+本章呈现了基于区块链的物联网安全问题及其解决方案的综合研究。为便于深入理解，还提及了区块链技术和物联网架构的基本属性与术语。五层架构对工业领域和智慧城市概念的实施极具成效。结合区块链技术，整个生态系统可更加高效完整。我们指出的安全问题非常普遍，物联网设备极易受其侵害。网络层和中间件层对于维持设备间通信至关重要。攻击者利用这些层寻找入口点，轻易发动网络攻击。其自身限制未授权访问或检测入侵者的机制仍在完善中。区块链在这方面成为最具前景的技术。我们希望这些发现有助于深入理解整个系统，并激励我们致力于解决现有物联网设备及未来物联网应用的安全问题。
+
+## 参考文献
+
+1.  [Andrade](#C_006_c1.xhtml#r1_1b), T., & Bastos, D. (2019, June). Extended reality in IoT scenarios: concepts, applications and future trends. In 2019 5th Experiment International Conference (exp. At'19) (pp. 107–112). IEEE. Funchal, Portugal.
+
+2.  [Sami](#C_006_c1.xhtml#r1_2b), N., Mufti, T., Sohail, S. S., Siddiqui, J., & Kumar, D. (2020). Future Internet of Things (IOT) from cloud perspective: aspects, applications and challenges. In: Alam, M., Shakil, K., & Khan, S. (eds) Internet of Things (IoT) (pp. 515–532). Springer, Cham.
+
+3.  [Goyal](#C_006_c1.xhtml#r1_3b), S., Sharma, N., Bhushan, B., Shankar, A., & Sagayam, M. (2020). IoT enabled technology in secured healthcare: applications, challenges and future directions. Cognitive Internet of Medical Things for Smart Healthcare, 25–48. Doi: [10.1007/978-3-030-55833-8\_2](http://doi.org/10.1007/978-3-030-55833-8_2).
+
+4.  [Sethi](#C_006_c1.xhtml#r1_4b), R., Bhushan, B., Sharma, N., Kumar, R., & Kaushik, I. (2020). Applicability of industrial IoT in diversified sectors: evolution, applications and challenges. Studies in Big Data Multimedia Technologies in the Internet of Things Environment, 45–67. Doi: [10.1007/978-981-15-7965-3\_4](http://doi.org/10.1007/978-981-15-7965-3_4)
+
+5.  [ur](#C_006_c1.xhtml#r1_5b) Rehman, M. H., Yaqoob, I., Salah, K., Imran, M., Jayaraman, P. P., & Perera, C. (2019). The role of big data analytics in industrial Internet of Things. Future Generation Computer Systems, 99, 247–259.
+
+6.  [Dai](#C_006_c1.xhtml#r1_6b), H. N., Wang, H., Xu, G., Wan, J., & Imran, M. (2020). Big data analytics for manufacturing Internet of Things: opportunities, challenges and enabling technologies. Enterprise Information Systems, 14(9–10), 1279–1303.
+
+7.  [Wu](#C_006_c1.xhtml#r1_7b), M., Wang, K., Cai, X., Guo, S., Guo, M., & Rong, C. (2019). A comprehensive survey of blockchain: from theory to IoT applications and beyond. IEEE Internet of Things Journal, 6(5), 8114–8154.
+
+8.  [Bhushan](#C_006_c1.xhtml#r1_8b), B., Sahoo, C., Sinha, P., & Khamparia, A. (2021). Unification of blockchain and Internet of Things (BIoT): requirements, working model, challenges and future directions. Wireless Networks, 27(1), 55–90.
+
+9.  [Christidis](#C_006_c1.xhtml#r1_9b), K., & Devetsikiotis, M. (2016). Blockchains and smart contracts for the Internet of Things. IEEE Access, 4, 2292–2303.
+
+10.  [Haque](#C_006_c1.xhtml#r1_10b), A. B., & Bhushan, B. (2021). Emergence of blockchain technology: a reliable and secure solution for IoT systems. In: Sharma, S. K., Bhushan, B., Khamparia, A., Astya, P. N., & Debnat, N. C. (eds), Blockchain Technology for Data Privacy Management (pp. 159–183). CRC Press, London.
+
+11.  [Xiao](#C_006_c1.xhtml#r1_11b), Y., Zhang, N., Lou, W., & Hou, Y. T. (2020). A survey of distributed consensus protocols for blockchain networks. IEEE Communications Surveys & Tutorials, 22(2), 1432–1465.
+
+12.  [Berentsen](#C_006_c1.xhtml#r1_12b), A. (2019). Aleksander Berentsen recommends “Bitcoin: a peer-to-peer electronic cash system” by Satoshi Nakamoto. In: Frey, B., & Schaltegger, C. (eds) *21st Century Economics* (pp. 7–8). Springer, Cham.
+
+13.  [Padmavathi](#C_006_c1.xhtml#r1_13b), U., & Rajagopalan, N. (eds). (2021). Concept of blockchain technology and its emergence. In: Blockchain Applications in IoT Security (pp. 1–20). IGI Global, Hershey, PA.
+
+14.  [Yiu](#C_006_c1.xhtml#r1_14b), N. C. (2021). Toward blockchain-enabled supply chain anti-counterfeiting and traceability. Future Internet, 13(4), 86.
+
+15.  [AlShamsi](#C_006_c1.xhtml#r1_15b), M., Salloum, S. A., Alshurideh, M., & Abdallah, S. (2021). Artificial intelligence and blockchain for transparency in governance. In: Hassanien, A., Bhatnagar, R., & Darwish, A. (eds), Artificial Intelligence for Sustainable Development: Theory, Practice and Future Applications (pp. 219–230). Springer, Cham.
+
+16.  [Wang](#C_006_c1.xhtml#r1_16b), W., Hoang, D. T., Hu, P., Xiong, Z., Niyato, D., Wang, P., … Kim, D. I. (2019). A survey on consensus mechanisms and mining strategy management in blockchain networks. IEEE Access, 7, 22328–22370.

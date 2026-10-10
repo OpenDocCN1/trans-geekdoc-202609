@@ -1,0 +1,62 @@
+
+## 参考文献
+
+47. [Perti](#C_006_c1.xhtml#r1_47b), A., Singh, A., Sinha, A., & Srivastava, P. K. (2021). Security risks and challenges in IoT-based applications. In *Proceedings of International Conference on Big Data, Machine Learning and their Applications* (pp. 99–111). Springer, Singapore.
+
+48. [Chen](#C_006_c1.xhtml#r1_48b), K., Zhang, S., Li, Z., Zhang, Y., Deng, Q., Ray, S., & Jin, Y. (2018). Internet-of-things security and vulnerabilities: taxonomy, challenges, and practice. *Journal of Hardware and Systems Security*, 2(2), 97–110.
+
+49. [Mukaddam](#C_006_c1.xhtml#r1_49b), A., Elhajj, I., Kayssi, A., & Chehab, A. (2014, May). IP spoofing detection using modified hop count. In *2014 IEEE 28th International Conference on Advanced Information Networking and Applications* (pp. 512–516). Victoria, BC, IEEE.
+
+50. [Al-Hadhrami](#C_006_c1.xhtml#r1_50b), Y., & Hussain, F. K. (2021). DDoS attacks in IoT networks: a comprehensive systematic literature review. *World Wide Web*, 24(1), 1–31.
+
+51. [Deogirikar](#C_006_c1.xhtml#r1_51b), J., & Vidhate, A. (2017, February). Security attacks in IoT: a survey. In *2017 International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)* (pp. 32–37). Palladam, India, IEEE.
+
+52. [Al-Maslamani](#C_006_c1.xhtml#r1_52b), N., & Abdallah, M. (2020, February). Malicious node detection in wireless sensor network using swarm intelligence optimization. In *2020 IEEE International Conference on Informatics, IoT, and Enabling Technologies (ICIoT)* (pp. 219–224). Doha, Qatar, IEEE.
+
+53. [Meziane](#C_006_c1.xhtml#r1_53b), H., Ouerdi, N., Kasmi, M. A., & Mazouz, S. (2021). Classifying security attacks in IoT using CTM method. In: Ben Ahmed, M., Mellouli, S., Braganca, L., Anouar Abdelhakim, B., & Bernadetta, K. A. (Eds.), *Emerging Trends in ICT for Sustainable Development* (pp. 307–315). Springer, Cham.
+
+54. [Ashraf](#C_006_c1.xhtml#r1_54b), Q. M., & Habaebi, M. H. (2015). Autonomic schemes for threat mitigation in Internet of Things. *Journal of Network and Computer Applications*, 49, 112–127.
+
+55. [Frustaci](#C_006_c1.xhtml#r1_55b), M., Pace, P., Aloi, G., & Fortino, G. (2017). Evaluating critical security issues of the IoT world: present and future challenges. *IEEE Internet of Things Journal*, 5(4), 2483–2495.
+
+56. [Tsiknas](#C_006_c1.xhtml#r1_56b), K., Taketzis, D., Demertzis, K., & Skianis, C. (2021). Cyber threats to industrial IoT: a survey on attacks and countermeasures. *IoT*, 2(1), 163–188.
+
+57. [Pusuluri](#C_006_c1.xhtml#r1_57b), R., Kalaiarasan, K., & Yogaraj, A. (2021). Software-defined networking and architecture of IoT with security, challenges and applications: a survey. In: Suresh, P., Saravanakumar, U., & Hussein Al Salameh, M. (Eds.), *Advances in Smart System Technologies* (pp. 519–531). Springer, Singapore.
+
+58. [Hernández-Ramos](#C_006_c1.xhtml#r1_58b), J. L., Baldini, G., Matheu, S. N., & Skarmeta, A. (2020, June). Updating IoT devices: challenges and potential approaches. In *2020 Global Internet of Things Summit (GIoTS)* (pp. 1–5). Dublin, IEEE.
+
+59. [Ahemd](#C_006_c1.xhtml#r1_59b), M. M., Shah, M. A., & Wahid, A. (2017, April). IoT security: a layered approach for attacks & defenses. In *2017 International Conference on Communication Technologies (ComTech)* (pp. 104–110). Rawalpindi, Pakistan, IEEE.
+
+60. [Billure](#C_006_c1.xhtml#r1_60b), R., Tayur, V. M., & Mahesh, V. (2015, June). Internet of Things-a study on the security challenges. In *2015 IEEE International Advance Computing Conference (IACC)* (pp. 247–252). Banglore, India, IEEE.
+
+61. [Wang](#C_006_c1.xhtml#r1_61b), E. K., Sun, R., Chen, C. M., Liang, Z., Kumari, S., & Khan, M. K. (2020). Proof of X-repute blockchain consensus protocol for IoT systems. *Computers & Security*, 95, 101871.
+
+62. [Bilge](#C_006_c1.xhtml#r1_62b), L., & Dumitraş, T. (2012, October). Before we knew it: an empirical study of zero-day attacks in the real world. In *Proceedings of the 2012 ACM Conference on Computer and Communications Security* (pp. 833–844). Raleigh, NC, ACM.
+
+63. [Alkatheiri](#C_006_c1.xhtml#r1_63b), M. S., Sangi, A. R., & Anamalamudi, S. (2020). Physical unclonable function (PUF)-based security in Internet of Things (IoT): key challenges and solutions. In: Gupta, B., Perez, G., Agrawal, D., & Gupta, D. (Eds.), *Handbook of Computer Networks and Cyber Security* (pp. 461–473). Springer, Cham.
+
+64. [Chen](#C_006_c1.xhtml#r1_64b), C. M., Deng, X., Gan, W., Chen, J., & Islam, S. H. (2021). A secure blockchain-based group key agreement protocol for IoT. *The Journal of Supercomputing*, 77(2), 1–23.
+
+65. [Yang](#C_006_c1.xhtml#r1_65b), D., Yoo, S., Doh, I., & Chae, K. (2021). Selective blockchain system for secure and efficient D2D communication. *Journal of Network and Computer Applications*, 173, 102817.
+
+66. [Zhang](#C_006_c1.xhtml#r1_66b), L., & Ge, Y. (2021, January). Identity authentication based on domestic commercial cryptography with blockchain in the heterogeneous alliance network. In *2021 IEEE International Conference on Consumer Electronics and Computer Engineering (ICCECE)* (pp. 191–195). Guangzhou, China, IEEE.
+
+67. [Tahir](#C_006_c1.xhtml#r1_67b), M., Sardaraz, M., Muhammad, S., & Saud Khan, M. (2020). A lightweight authentication and authorization framework for blockchain-enabled IoT network in health-informatics. *Sustainability*, 12(17), 6960.
+
+68. [Li](#C_006_c1.xhtml#r1_68b), T., Wang, H., He, D., & Yu, J. (2020). Permissioned blockchain-based anonymous and traceable aggregate signature scheme for Industrial Internet of Things. *IEEE Internet of Things Journal*, 8(10), 8387–8398.
+
+69. [Qiao](#C_006_c1.xhtml#r1_69b), G., & Zhuang, Y. (2020, December). A blockchain-based reconstruction framework for UAV network. In *International Conference on Security, Privacy and Anonymity in Computation, Communication and Storage* (pp. 301–311). Springer, Cham.
+
+70. [Chen](#C_006_c1.xhtml#r1_70b), C. L., Deng, Y. Y., Weng, W., Zhou, M., & Sun, H. (2021). A blockchain-based intelligent anti-switch package in tracing logistics system. *The Journal of Supercomputing*, 77(7), 7791–7832.
+
+71. [Vangala](#C_006_c1.xhtml#r1_71b), A., Sutrala, A. K., Das, A. K., & Jo, M. (2021). Smart contract-based blockchain-envisioned authentication scheme for smart farming. *IEEE Internet of Things Journal*, 8(13), 10792–10806.
+
+72. [Vishwakarma](#C_006_c1.xhtml#r1_72b), L., & Das, D. (2020, November). BSS: blockchain enabled security system for Internet of Things applications. In *2020 IEEE 19th International Symposium on Network Computing and Applications (NCA)* (pp. 1–4). Cambridge, MA, IEEE.
+
+73. [Nesarani](#C_006_c1.xhtml#r1_73b), A., Ramar, R., & Pandian, S. (2020). An efficient approach for rice prediction from authenticated Block chain node using machine learning technique. *Environmental Technology & Innovation*, 20, 101064.
+
+74. [Mukhandi](#C_006_c1.xhtml#r1_74b), M., Andrade, E., Damião, F., Granjal, J., & Vilela, J. P. (2020, November). Blockchain-based scalable authentication for IoT. In *Proceedings of the 18th Conference on Embedded Networked Sensor Systems* (pp. 667–668). Japan, ACM.
+
+75. [Seshadri](#C_006_c1.xhtml#r1_75b), S. S., Rodriguez, D., Subedi, M., Choo, K. K. R., Ahmed, S., Chen, Q., & Lee, J. (2020). IoTCop: a blockchain-based monitoring framework for detection and isolation of malicious devices in Internet-of-Things systems. *IEEE Internet of Things Journal*, 8(5), 3346–3359.
+
+76. [Kumar](#C_006_c1.xhtml#r1_76b), S., Das, A. K., & Sinha, D. (2021). Blockchain-Based Sybil-Secure Data Transmission (SSDT) IoT framework for smart city applications. In: Bhateja, V., Peng, S. L., Satapathy, S. C., Zhang, Y. D. (Eds.), *Evolution in Computational Intelligence* (pp. 355–370). Springer, Singapore.
