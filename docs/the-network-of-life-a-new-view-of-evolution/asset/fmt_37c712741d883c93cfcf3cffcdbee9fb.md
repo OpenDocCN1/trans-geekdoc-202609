@@ -1,0 +1,42 @@
+
+## Chapter 7 References (continued)
+
+20.  [20](#15_ch7.xhtml#chapter7_20). Nolan, T., 2021, “Control of Malaria-Transmitting Mosquitoes Using Gene Drives,” *Philosophical Transactions of the Royal Society B*, 376(1818):20190803. See also Powell, J. R., 2022, “Modifying Mosquitoes to Suppress Disease Transmission: Is the Long Wait Over?,” *Genetics*, 221(3):p.iyac072 (summary and references).
+
+21.  [21](#15_ch7.xhtml#chapter7_21). Zhang, Y., Pribil, M., Palmgren, M., and Gao, C., 2020, “A CRISPR Way for Accelerating Improvement of Food Crops,” *Nature Food*, 1(4):200–205; Georges, M., Charlier, C., and Hayes, B., 2019, “Harnessing Genomic Information for Livestock Improvement,” *Nature Reviews Genetics*, 20(3):135–56.
+
+22.  [22](#15_ch7.xhtml#chapter7_22). Novak, B. J., 2018, “De-extinction,” *Genes*, 9(11):548; Robert, A., Thévenin, C., Princé, K., Sarrazin, F., and Clavel, J., 2017, “De-extinction and Evolution,” *Functional Ecology*, 31(5):1021–31.
+
+23.  [23](#15_ch7.xhtml#chapter7_23). For reviews of synthetic life and its applications: Church, G., and Regis, E., 2012, *Regenesis*, New York: Basic Books; Li, J., Zhao, H., Zheng, L., and An, W., 2021, “Advances in Synthetic Biology and Biosafety Governance,” *Frontiers in Bioengineering and Biotechnology*, 9:173; Power, M. E., 2021, “Synthetic Threads through the Web of Life,” *Proceedings of the National Academy of Sciences of the USA*, 118(22):p.e2004833118.
+
+24.  [24](#15_ch7.xhtml#chapter7_24). Gibson, D. G., Glass, J. I., Lartigue, C., Noskov, V. N., Chuang, R. Y., Algire, M. A., Benders, G. A., Montague, M. G., Ma, L., Moodie, M. M., and Merryman, C., 2010, “Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome,” *Science*, 329(5987):52–56; Callaway, E., 2016, “ ‘Minimal’ Cell Raises Stakes in Race to Harness Synthetic Life,” *Nature*, 531(7596):557–59.
+
+25.  [25](#15_ch7.xhtml#chapter7_25). Richardson, S. M., Mitchell, L. A., Stracquadanio, G., Yang, K., Dymond, J. S., DiCarlo, J. E., Lee, D., Huang, C.L.V., Chandrasegaran, S., Cai, Y., and Boeke, J. D., 2017, “Design of a Synthetic Yeast Genome,” *Science*, 355(6329):1040–44.
+
+26.  [26](#15_ch7.xhtml#chapter7_26). Lajoie, M. J., Rovner, A. J., Goodman, D. B., Aerni, H. R., Haimovich, A. D., Kuznetsov, G., Mercer, J. A., Wang, H. H., Carr, P. A., Mosberg, J. A., and Rohland, N., 2013, “Genomically Recoded Organisms Expand Biological Functions,” *Science*, 342(6156):357–60; Fredens, J., Wang, K., de la Torre, D., Funke, L. F., Robertson, W. E., Christova, Y., Chia, T., Schmied, W. H., Dunkelmann, D. L., Beránek, V., and Uttamapinant, C., 2019, “Total Synthesis of *Escherichia coli* with a Recoded Genome,” *Nature*, 569(7757):514–18.
+
+27.  [27](#15_ch7.xhtml#chapter7_27). Zhou, Z., Chen, X., Sheng, H., Shen, X., Sun, X., Yan, Y., Wang, J., and Yuan, Q., 2020, “Engineering Probiotics as Living Diagnostics and Therapeutics for Improving Human Health,” *Microbial Cell Factories*, 19(1):1–12; Ostrov, N., Beal, J., Ellis, T., Gordon, D. B., Karas, B. J., Lee, H. H., Lenaghan, S. C., Schloss, J. A., Stracquadanio, G., Trefzer, A., and Bader, J. S., 2019, “Technological Challenges and Milestones for Writing Genomes,” *Science*, 366(6463):310–12; Ostrov, N., Nyerges, A., Chiappino-Pepe, A., Rudolph, A., Baas-Thomas, M., and Church, G. M., 2020, “Synthetic Genomes with Altered Genetic Codes,” *Current Opinion in Systems Biology*, 24:32–40.
+
+28.  [28](#15_ch7.xhtml#chapter7_28). Tender, L. M., Reimers, C. E., Stecher, H. A., III, Holmes, D. E., Bond, D. R., Lowy, D. A., Pilobello, K., Fertig, S. J., and Lovley, D. R., 2002, “Harnessing Microbially Generated Power on the Seafloor,” *Nature Biotechnology*, 20(8):821–25; Bird, L. J., Kundu, B. B., Tschirhart, T., Corts, A. D., Su, L., Gralnick, J. A., Ajo-Franklin, C. M., and Glaven, S. M., 2021, “Engineering Wired Life: Synthetic Biology for Electroactive Bacteria,” *ACS Synthetic Biology*, 10(11):2808–23.
+
+29.  [29](#15_ch7.xhtml#chapter7_29). Levin, S. R., Scott, T. W., Cooper, H. S., and West, S. A., 2019, “Darwin’s Aliens,” *International Journal of Astrobiology*, 18(1):1–9.
+
+30.  [30](#15_ch7.xhtml#chapter7_30). Kolbert, E., 2021, *Under a White Sky: The Nature of the Future*, New York: Crown (quote at 137).
+
+31.  [31](#15_ch7.xhtml#chapter7_31). Johnson, C. N., Balmford, A., Brook, B. W., Buettel, J. C., Galetti, M., Guangchun, L., and Wilmshurst, J. M., 2017, “Biodiversity Losses and Conservation Responses in the Anthropocene,” *Science*, 356(6335):270–75; Galetti, M., Moleón, M., Jordano, P., Pires, M. M., Guimaraes P. R., Jr., Pape, T., Nichols, E., Hansen, D., Olesen, J. M., Munk, M., and de Mattos, J. S., 2018, “Ecological and Evolutionary Legacy of Megafauna Extinctions,” *Biological Reviews*, 93(2):845–62; Rohwer, Y., and Marris, E., 2021, “Ecosystem Integrity Is Neither Real Nor Valuable,” *Conservation Science and Practice*, 3(4):p.e411.
+
+## Chapter 8
+
+1.  [1](#16_ch8.xhtml#chapter8_1). Others have designated stages for human evolution in similar fashion. K. N. Laland (2017, *Darwin’s Unfinished Symphony*, Princeton, NJ: Princeton University Press) has identified human evolutionary stages as genetic, genetic-cultural, and cultural. M. Tegmark (2018, *Life 3.0: Being Human in the Age of Artificial Intelligence*, New York: Vintage Books) has identified Life 1.0, 2.0, and 3.0 corresponding to (1) life evolving its hardware and software, (2) life evolving its hardware but designing much of its software via culture, and (3) life designing its hardware and software via technology. E. A. Lee (2020, *The Coevolution: The Entwined Futures of Humans and Machines*, Cambridge, MA: MIT Press) adds a fourth “synthetic” stage to Laland’s scenario, which is characterized by the emergence of a new life-form based on silicon rather than carbon.
+
+2.  [2](#16_ch8.xhtml#chapter8_2). Hublin, J. J., Ben-Ncer, A., Bailey, S. E., Freidline, S. E., Neubauer, S., Skinner, M. M., Bergmann, I., Le Cabec, A., Benazzi, S., Harvati, K., and Gunz, P., 2017, “New Fossils from Jebel Irhoud, Morocco, and the Pan-African Origin of *Homo sapiens*,” *Nature*, 546(7657):289–92; Richter, D., Grün, R., Joannes-Boyau, R., Steele, T. E., Amani, F., Rué, M., Fernandes, P., Raynal, J. P., Geraads, D., Ben-Ncer, A., and Hublin, J. J., 2017, “The Age of the Hominin Fossils from Jebel Irhoud, Morocco, and the Origins of the Middle Stone Age,” *Nature*, 546(7657):293–96.
+
+3.  [3](#16_ch8.xhtml#chapter8_3). Boë, L. J., Sawallis, T. R., Fagot, J., Badin, P., Barbier, G., Captier, G., Ménard, L., Heim, J. L., and Schwartz, J. L., 2019, “Which Way to the Dawn of Speech? Reanalyzing Half a Century of Debates and Data in Light of Speech Science,” *Science Advances*, 5(12):p.eaaw3916.
+
+4.  [4](#16_ch8.xhtml#chapter8_4). See Aldhous, P., Lee, S. M., and Hirji, Z., 2021, “The Texas Winter Storm and Power Outages Killed Hundreds More People than the State Says,” *BuzzFeed News*, May 26, 2021, [https://www.buzzfeednews.com/article/peteraldhous/texas-winter-storm-power-outage-death-toll](https://www.buzzfeednews.com/article/peteraldhous/texas-winter-storm-power-outage-death-toll).
+
+5.  [5](#16_ch8.xhtml#chapter8_5). Kurzweil, R., 2005, *The Singularity Is Near: When Humans Transcend Biology*, New York: Penguin Books.
+
+6.  [6](#16_ch8.xhtml#chapter8_6). Weon, B. M., and Je, J. H., 2009, “Theoretical Estimation of Maximum Human Lifespan,” *Biogerontology*, 10:65–71.
+
+7.  [7](#16_ch8.xhtml#chapter8_7). Melzer, D., Pilling, L. C., and Ferrucci, L., 2020, “The Genetics of Human Ageing,” *Nature Reviews Genetics*, 21(2):88–101.

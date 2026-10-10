@@ -1,0 +1,48 @@
+
+
+### 参考文献
+
+13. Woese, C. R., 2002, “On the Evolution of Cells,” *Proceedings of the National Academy of Sciences of the USA*, 99(13):8742–47; Kauffman, S. A., 2019, *A World Beyond Physics: The Emergence and Evolution of Life*, Oxford: Oxford University Press; Damer, B., and Deamer, D., 2020, “The Hot Spring Hypothesis for an Origin of Life,” *Astrobiology*, 20(4):429–52.
+
+14. Woese, C. R., 1998, “The Universal Ancestor,” *Proceedings of the National Academy of Sciences of the USA*, 95(12):6858.
+
+15. Woese, “Evolution of cells.”
+
+16. 随着更多数据和分析的出现，生物群体的年龄估算也在不断改进。此处，我使用了 TimeTree (Kumar, S., Stecher, G., Suleski, M., and Hedges, S. B., 2017, “TimeTree: A Resource for Timelines, Timetrees, and Divergence Times,” *Molecular Biology and Evolution*, 34(7):1812–19, `http://www.timetree.org/`)。
+
+17. Husnik, F., Nikoh, N., Koga, R., Ross, L., Duncan, R. P., Fujie, M., Tanaka, M., Satoh, N., Bachtrog, D., Wilson, A. C., and Von Dohlen, C. D., 2013, “Horizontal Gene Transfer from Diverse Bacteria to an Insect Genome Enables a Tripartite Nested Mealybug Symbiosis,” *Cell*, 153(7):1567–78.
+
+18. Cavalier-Smith, T., 2002, “Origins of the Machinery of Recombination and Sex,” *Heredity*, 88(2):125–41.
+
+19. Khaledian, E., Brayton, K. A., and Broschat, S. L., 2020, “A Systematic Approach to Bacterial Phylogeny Using Order Level Sampling and Identification of HGT Using Network Science,” *Microorganisms*, 8(2):312.
+
+20. Coleman, G. A., Davín, A. A., Mahendrarajah, T. A., Szánthó, L. L., Spang, A., Hugenholtz, P., Szöllősi, G. J., and Williams, T. A., 2021, “A Rooted Phylogeny Resolves Early Bacterial Evolution,” *Science*, 372(6542):0511.
+
+21. Williams, T. A., Szöllősi, G. J., Spang, A., Foster, P. G., Heaps, S. E., Boussau, B., Ettema, T. J., and Embley, T. M., 2017, “Integrative Modeling of Gene and Genome Evolution Roots the Archaeal Tree of Life,” *Proceedings of the National Academy of Sciences of the USA*, 114(23):E4602–11, see supplement, fig. S19.
+
+22. Leander, B. S., 2020, “Predatory Protists,” *Current Biology*, 30(10):R510–16. 关于真核生物起源的捕食性原生生物假说的替代观点：López-García, P., and Moreira, D., 2020, “The Syntrophy Hypothesis for the Origin of Eukaryotes Revisited,” *Nature Microbiology*, 5(5):655–67。
+
+23. Fan, L., Wu, D., Goremykin, V., Xiao, J., Xu, Y., Garg, S., Zhang, C., Martin, W. F., and Zhu, R., 2020, “Phylogenetic Analyses with Systematic Taxon Sampling Show that Mitochondria Branch within Alphaproteobacteria,” *Nature Ecology & Evolution*, 4(9):1213–19.
+
+24. 目前的证据表明，线粒体的演化始于厌氧条件，这种条件有利于古菌宿主与α-变形菌共生体之间的氢交换，正如氢假说所预测的那样 (Martin, W., and Müller, M., 1998, “The Hydrogen Hypothesis for the First Eukaryote,” *Nature* 392:37–41; Mills, D. B., Boyle, R. A., Daines, S. J., Sperling, E. A., Pisani, D., Donoghue, P. C., and Lenton, T. M., 2022, “Eukaryogenesis and Oxygen in Earth History,” *Nature Ecology & Evolution*, 6(5):520–32)。氧代谢及其益处是后来才出现的。
+
+25. Moustafa, A., Reyes-Prieto, A., and Bhattacharya, D., 2008, “Chlamydiae Has Contributed at Least 55 Genes to Plantae with Predominantly Plastid Functions,” *PLoS One*, 3(5):2205; Cenci, U., Bhattacharya, D., Weber, A. P., Colleoni, C., Subtil, A., and Ball, S. G., 2017, “Biotic Host–Pathogen Interactions as Major Drivers of Plastid Endosymbiosis,” *Trends in Plant Science*, 22(4):316–28. 反对观点见：Domman, D., Horn, M., Embley, T. M., and Williams, T. A., 2015, “Plastid Establishment Did Not Require a Chlamydial Partner,” *Nature Communications*, 6(1):6421; Martin, W. F., 2017, “Too Much Eukaryote LGT,” *BioEssays*, 39(12):1700115。
+
+26. Niklas, K. J., and Newman, S. A., 2020, “The Many Roads to and from Multicellularity,” *Journal of Experimental Botany*, 71(11):3247–53; Tikhonenkov, D. V., Hehenberger, E., Esaulov, A. S., Belyakova, O. I., Mazei, Y. A., Mylnikov, A. P., and Keeling, P. J., 2020, “Insights into the Origin of Metazoan Multicellularity from Predatory Unicellular Relatives of Animals,” *BMC Biology*, 18:1–24。
+
+27. Niklas, K. J., 2014, “The Evolutionary-Developmental Origins of Multicellularity,” *American Journal of Botany*, 101(1):6–25; Herron, M. D., Borin, J. M., Boswell, J. C., Walker, J., Chen, I.C.K., Knox, C. A., Boyd, M., Rosenzweig, F., and Ratcliff, W. C., 2019, “De Novo Origins of Multicellularity in Response to Predation,” *Scientific Reports*, 9(1):1–9。
+
+28. Koonin, E. V., 2016, “Viruses and Mobile Elements as Drivers of Evolutionary Transitions,” *Philosophical Transactions of the Royal Society B*, 371(1701):20150442。
+
+29. Schönknecht, G., Chen, W. H., Ternes, C. M., Barbier, G. G., Shrestha, R. P., Stanke, M., Bräutigam, A., Baker, B. J., Banfield, J. F., Garavito, R. M., and Carr, K., 2013, “Gene Transfer from Bacteria and Archaea Facilitated Evolution of an Extremophilic Eukaryote,” *Science*, 339(6124):1207–10; Qiu, H., Price, D. C., Weber, A. P., Reeb, V., Yang, E. C., Lee, J. M., Kim, S. Y., Yoon, H. S., and Bhattacharya, D., 2013, “Adaptation through Horizontal Gene Transfer in the Cryptoendolithic Red Alga *Galdieria phlegrea*,” *Current Biology*, 23(19):R865–66; Rossoni, A. W., Price, D. C., Seger, M., Lyska, D., Lammers, P., Bhattacharya, D., and Weber, A. P., 2019, “The Genomes of Polyextremophilic Cyanidiales Contain 1% Horizontally Transferred Genes with Diverse Adaptive Functions,” *Elife*, 8:45017; Hoham, R. W., and Remias, D., 2020, “Snow and Glacial Algae: A Review,” *Journal of Phycology*, 56:264–82。
+
+30. Van Etten, J., and Bhattacharya, D., 2020, “Horizontal Gene Transfer in Eukaryotes: Not If, but How Much?,” *Trends in Genetics*, 36(12):915–25。
+
+31. 综述见：Husnik, F., and McCutcheon, J. P., 2018, “Functional Horizontal Gene Transfer from Bacteria to Eukaryotes,” *Nature Reviews Microbiology*, 16(2):67。
+
+32. Wickell, D. A., and Li, F., 2020, “On the Evolutionary Significance of Horizontal Gene Transfers in Plants,” *New Phytologist*, 225:113–17。
+
+33. Koutsovoulos, G., Kumar, S., Laetsch, D. R., Stevens, L., Daub, J., Conlon, C., Maroon, H., Thomas, F., Aboobaker, A. A., and Blaxter, M., 2016, “No Evidence for Extensive Horizontal Gene Transfer in the Genome of the Tardigrade *Hypsibius dujardini*,” *Proceedings of the National Academy of Sciences of the USA*, 113:5053–58。
+
+34. Pastor-Satorras, R., Castellano, C., Van Mieghem, P., and Vespignani, A., 2015, “Epidemic Processes in complex Networks,” *Reviews of Modern Physics*, 87(3):925; Hu, Y., Ji, S., Jin, Y., Feng, L., Stanley, H. E., and Havlin, S., 2018, “Local Structure Can Identify and Quantify Influential Global Spreaders in Large Scale Social Networks,” *Proceedings of the National Academy of Sciences of the USA*, 115(29):7468–72。
+
