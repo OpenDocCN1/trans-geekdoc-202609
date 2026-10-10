@@ -1,0 +1,2 @@
++   [数字程序员的 Python 数据分析：从入门到专家的 3.0 速成课，凭借本手册的极简主义将改变你的生活。深度机器学习与大数据](README.md)
++   [数字程序员的 Python 数据分析：从入门到专家的 3.0 速成课，凭借本手册的极简主义将改变你的生活。深度机器学习与大数据](python-for-data-analysis-from-the-beginner-to-expert-crash-c_0.md)
