@@ -1,0 +1,210 @@
+
+
+# 附录 2 - 实现一个简单的神经网络
+
+## 2.1 Python
+
+```python
+##############################################################################################
+#
+# Created by: Tinniam V Ganesh
+# Date : 11 Jan 2018
+# File: DLfunctions.py
+#
+##############################################################################################
+
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+
+# 计算向量的 Sigmoid 函数值
+# 输入: z
+# 输出: a
+def sigmoid(z):
+    a = 1 / (1 + np.exp(-z))
+    return a
+
+# 根据数据集计算模型形状
+# 输入: X, Y
+# 返回: modelParams
+def getModelShape(X, Y):
+    numTraining = X.shape[1]  # 训练样本数量
+    numFeats = X.shape[0]     # 输入特征数量
+    numHidden = 4             # 隐藏层单元数量
+    numOutput = Y.shape[0]    # 输出单元数量
+
+    # 创建一个值字典
+    modelParams = {
+        "numTraining": numTraining,
+        "numFeats": numFeats,
+        "numHidden": numHidden,
+        "numOutput": numOutput
+    }
+    return modelParams
+
+# 初始化模型
+# 输入: 特征数量, 隐藏单元数量, 输出单元数量
+# 返回: 权重和偏置矩阵及向量
+def initializeModel(numFeats, numHidden, numOutput):
+    np.random.seed(2)
+    W1 = np.random.randn(numHidden, numFeats) * 0.01  # 乘以 .01
+    b1 = np.zeros((numHidden, 1))
+    W2 = np.random.randn(numOutput, numHidden) * 0.01
+    b2 = np.zeros((numOutput, 1))
+
+    # 创建神经网络参数字典
+    nnParameters = {'W1': W1, 'b1': b1, 'W2': W2, 'b2': b2}
+    return nnParameters
+
+# 计算神经网络的前向传播
+# 输入: X, nnParameters
+# 返回: 第 2 层的激活值, 输出以及第 1 层和第 2 层的激活值
+def forwardPropagation(X, nnParameters):
+    # 获取参数
+    W1 = nnParameters["W1"]
+    b1 = nnParameters["b1"]
+    W2 = nnParameters["W2"]
+    b2 = nnParameters["b2"]
+
+    # 计算输入层的 Z1
+    Z1 = np.dot(W1, X) + b1
+
+    # 使用 tanh 激活函数计算输出 A1。
+    # tanh 激活函数的表现优于 sigmoid 函数
+    A1 = np.tanh(Z1)
+
+    # 计算第 2 层的 Z2
+    Z2 = np.dot(W2, A1) + b2
+
+    # 使用 sigmoid 激活函数计算输出 A2
+    A2 = sigmoid(Z2)
+
+    cache = {'Z1': Z1, 'A1': A1, 'Z2': Z2, 'A2': A2}
+    return A2, cache
+
+# 计算代价
+# 输入: A2, Y
+# 输出: cost
+def computeCost(A2, Y):
+    m = float(Y.shape[1])
+
+    # 对 logprobs 进行逐元素相乘
+    cost = -1 / m * np.sum(Y * np.log(A2) + (1 - Y) * (np.log(1 - A2)))
+    cost = np.squeeze(cost)
+    return cost
+
+# 计算 1 个周期的反向传播
+# 输入: 神经网络参数 - 权重和偏置, 两层的 Z 和激活值,
+#       输入特征, 输出值 Y
+# 返回: 梯度
+def backPropagation(nnParameters, cache, X, Y):
+    numtraining = float(X.shape[1])
+
+    # 获取参数
+    W1 = nnParameters["W1"]
+    W2 = nnParameters["W2"]
+
+    # 获取神经网络缓存
+    A1 = cache["A1"]
+    A2 = cache["A2"]
+
+    # 计算梯度
+    dZ2 = A2 - Y
+    dW2 = 1 / numtraining * np.dot(dZ2, A1.T)
+    db2 = 1 / numtraining * np.sum(dZ2, axis=1, keepdims=True)
+    dZ1 = np.multiply(np.dot(W2.T, dZ2), (1 - np.power(A1, 2)))
+    dW1 = 1 / numtraining * np.dot(dZ1, X.T)
+    db1 = 1 / numtraining * np.sum(dZ1, axis=1, keepdims=True)
+
+    # 创建一个字典
+    gradients = {
+        "dW1": dW1,
+        "db1": db1,
+        "dW2": dW2,
+        "db2": db2
+    }
+    return gradients
+
+# 执行梯度下降
+# 输入: 权重和偏置, 梯度, 学习率
+# 输出: 1 次迭代后更新的权重
+def gradientDescent(nnParameters, gradients, learningRate):
+    W1 = nnParameters['W1']
+    b1 = nnParameters['b1']
+    W2 = nnParameters['W2']
+    b2 = nnParameters['b2']
+
+    dW1 = gradients["dW1"]
+    db1 = gradients["db1"]
+    dW2 = gradients["dW2"]
+    db2 = gradients["db2"]
+
+    W1 = W1 - learningRate * dW1
+    b1 = b1 - learningRate * db1
+    W2 = W2 - learningRate * dW2
+    b2 = b2 - learningRate * db2
+
+    # 更新神经网络参数
+    updatedNNParameters = {
+        "W1": W1,
+        "b1": b1,
+        "W2": W2,
+        "b2": b2
+    }
+    return updatedNNParameters
+
+# 通过最小化代价计算神经网络
+# 输入: 输入数据 X, 输出 Y, 隐藏层隐藏单元数量,
+#       迭代次数
+# 返回: 神经网络更新后的权重和偏置向量
+def computeNN(X, Y, numHidden, learningRate, numIterations=10000):
+    np.random.seed(3)
+
+    modelParams = getModelShape(X, Y)
+    numFeats = modelParams['numFeats']
+    numOutput = modelParams['numOutput']
+
+    costs = []
+    nnParameters = initializeModel(numFeats, numHidden, numOutput)
+
+    W1 = nnParameters['W1']
+    b1 = nnParameters['b1']
+    W2 = nnParameters['W2']
+    b2 = nnParameters['b2']
+
+    # 执行梯度下降
+    for i in range(0, numIterations):
+        # 评估前向传播以计算输出层的激活值
+        A2, cache = forwardPropagation(X, nnParameters)
+
+        # 根据输出激活值和 Y 计算代价
+        cost = computeCost(A2, Y)
+
+        # 执行反向传播以计算梯度
+        gradients = backPropagation(nnParameters, cache, X, Y)
+
+        # 使用梯度更新每次迭代的权重。
+        nnParameters = gradientDescent(nnParameters, gradients, learningRate)
+
+        # 每 1000 次迭代打印一次代价
+        if i % 1000 == 0:
+            costs.append(cost)
+            print("Cost after iteration %i: %f" % (i, cost))
+
+    return nnParameters, costs
+
+# 为给定输入计算预测值
+# 输入: 神经网络参数, 输入数据
+def predict(nnParameters, X):
+    A2, cache = forwardPropagation(X, nnParameters)
+    predictions = (A2 > 0.5)
+    return predictions
+
+# 绘制决策边界
+# 输入: 输入模型, X, Y, 要保存的图形文件名
+# 返回: 空
+def plot_decision_boundary_n(model, X, y, fig):
+    # 设置最小值和最大值并给予一些边距
+    x_min, x_max = X[0, :].min() - 1, X[0, :].max() + 1
+```
+

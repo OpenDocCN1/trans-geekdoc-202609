@@ -1,0 +1,281 @@
+
+
+# R 语言神经网络实现代码
+
+## 代码片段 1：成本计算与正则化
+
+```r
+a = c(AL[Y==0,1], AL[Y==1,2], AL[Y==2,3])
+
+m = length(Y)
+
+a = pickColumns(AL, Y, numClasses)
+
+# a = c(A2[y=k,k+1])
+
+# 取对数
+correct_probs = -log(a)
+
+# 计算损失
+cost = sum(correct_probs) / m
+
+# 正则化成本
+L <- length(parameters) / 2
+
+L2RegularizationCost = 0
+
+# 添加 L2 范数
+for(l in 1:L) {
+  L2RegularizationCost = L2RegularizationCost +
+    sum(parameters[[paste("W", l, sep="")]]^2)
+}
+
+L2RegularizationCost = (lambd / (2 * m)) * L2RegularizationCost
+
+cost = cost + L2RegularizationCost
+}
+
+return(cost)
+}
+```
+
+## 代码片段 2：单层反向传播
+
+```r
+# 计算通过某层的反向传播
+# 输入：神经网络参数 - dA
+# # cache - forward_cache 与 activation_cache
+# # 输出值 Y
+# # activationFunc
+# # numClasses
+# 返回：梯度
+# dL/dWi = dL/dZi * Al-1
+# dl/dbl = dL/dZl
+# dL/dZ_prev = dL/dZl * W
+
+layerActivationBackward <- function(dA, cache, Y, activationFunc, numClasses) {
+
+  # 获取 A_prev, W, b
+  forward_cache <- cache[['forward_cache']]
+  activation_cache <- cache[['activation_cache']]
+  A_prev <- forward_cache[['A_prev']]
+  numtraining = dim(A_prev)[2]
+
+  # 获取 Z
+  activation_cache <- cache[['activation_cache']]
+
+  if(activationFunc == "relu") {
+    dZ <- reluDerivative(dA, activation_cache)
+  } else if(activationFunc == "sigmoid") {
+    dZ <- sigmoidDerivative(dA, activation_cache)
+  } else if(activationFunc == "tanh") {
+    dZ <- tanhDerivative(dA, activation_cache)
+  } else if(activationFunc == "softmax") {
+    dZ <- softmaxDerivative(dA, activation_cache, Y, numtraining, numClasses)
+  }
+
+  if (activationFunc == 'softmax') {
+    W <- forward_cache[['W']]
+    b <- forward_cache[['b']]
+    dW = 1/numtraining * A_prev %*% dZ
+    db = 1/numtraining * matrix(colSums(dZ), nrow=1, ncol=numClasses)
+    dA_prev = dZ %*% W
+  } else {
+    W <- forward_cache[['W']]
+    b <- forward_cache[['b']]
+    numtraining = dim(A_prev)[2]
+    dW = 1/numtraining * dZ %*% t(A_prev)
+    db = 1/numtraining * rowSums(dZ)
+    dA_prev = t(W) %*% dZ
+  }
+
+  retvals <- list("dA_prev"=dA_prev, "dW"=dW, "db"=db)
+  return(retvals)
+}
+```
+
+## 代码片段 3：带正则化的单层反向传播
+
+```r
+# 计算带正则化的通过某层的反向传播
+# 输入：dA - 神经网络参数
+# # cache - forward_cache 与 activation_cache
+# # 输出值 Y
+# # lambd
+# # activationFunc
+# # numClasses
+# 返回：梯度
+# dL/dWi = dL/dZi * Al-1
+# dl/dbl = dL/dZl
+# dL/dZ_prev = dL/dZl * W
+
+layerActivationBackwardWithReg <- function(dA, cache, Y, lambd, activationFunc, numClasses) {
+
+  # 获取 A_prev, W, b
+  forward_cache <- cache[['forward_cache']]
+  activation_cache <- cache[['activation_cache']]
+  A_prev <- forward_cache[['A_prev']]
+  numtraining = dim(A_prev)[2]
+
+  # 获取 Z
+  activation_cache <- cache[['activation_cache']]
+
+  if(activationFunc == "relu") {
+    dZ <- reluDerivative(dA, activation_cache)
+  } else if(activationFunc == "sigmoid") {
+    dZ <- sigmoidDerivative(dA, activation_cache)
+  } else if(activationFunc == "tanh") {
+    dZ <- tanhDerivative(dA, activation_cache)
+  } else if(activationFunc == "softmax") {
+    dZ <- softmaxDerivative(dA, activation_cache, Y, numtraining, numClasses)
+  }
+
+  if (activationFunc == 'softmax') {
+    W <- forward_cache[['W']]
+    b <- forward_cache[['b']]
+    # 添加正则化因子
+    dW = 1/numtraining * A_prev %*% dZ + (lambd/numtraining) * t(W)
+    db = 1/numtraining * matrix(colSums(dZ), nrow=1, ncol=numClasses)
+    dA_prev = dZ %*% W
+  } else {
+    W <- forward_cache[['W']]
+    b <- forward_cache[['b']]
+    numtraining = dim(A_prev)[2]
+    # 添加正则化因子
+    dW = 1/numtraining * dZ %*% t(A_prev) + (lambd/numtraining) * W
+    db = 1/numtraining * rowSums(dZ)
+    dA_prev = t(W) %*% dZ
+  }
+
+  retvals <- list("dA_prev"=dA_prev, "dW"=dW, "db"=db)
+  return(retvals)
+}
+```
+
+## 代码片段 4：深度网络反向传播
+
+```r
+# 计算通过所有层的 1 个周期的反向传播
+# 输入：AL: L 层网络的输出 - 权重
+# Y 真实输出
+# caches -- 包含以下内容的缓存列表：
+# 每个 layerActivationForward() 的缓存，激活函数为 "relu"/"tanh"
+# #(即 caches[l]，l 的范围为 L-1，即 l = 0...L-2)
+# #layerActivationForward() 的缓存，激活函数为 "sigmoid" (即 caches[L-1])
+# dropoutMat
+# lambd
+# keep_prob
+# hiddenActivationFunc - 隐藏层的激活函数 - relu/tanh/sigmoid
+# outputActivationFunc - 输出层的激活函数 sigmoid/softmax
+# numClasses
+# 返回：
+# gradients -- 包含梯度的字典
+# gradients["dA" + str(l)]
+# gradients["dW" + str(l)]
+# gradients["db" + str(l)]
+
+backwardPropagationDeep <- function(AL, Y, caches, dropoutMat, lambd=0, keep_prob=0, hiddenActivationFunc='relu',
+                                    outputActivationFunc="sigmoid", numClasses) {
+
+  # 初始化梯度
+  gradients = list()
+
+  # 设置层数
+  L = length(caches)
+  numTraining = dim(AL)[2]
+
+  if(outputActivationFunc == "sigmoid")
+    # 初始化反向传播
+    # dl/dAL = -(y/a) - ((1-y)/(1-a)) - 在输出层
+    dAL = -( (Y/AL) - (1 - Y)/(1 - AL))
+  else if(outputActivationFunc == "softmax") {
+    dAL = 0
+    Y = t(Y)
+  }
+
+  # 获取最后一层的梯度
+  # 输入："AL, Y, caches"。
+  # 输出："gradients["dAL"], gradients["dWL"], gradients["dbL"]"
+  # 从第 L 层开始
+  # 获取当前缓存
+  current_cache = caches[[L]]$cache
+
+  if (lambd == 0) {
+    retvals <- layerActivationBackward(dAL, current_cache, Y,
+                                       activationFunc = outputActivationFunc, numClasses)
+  } else {
+    retvals = layerActivationBackwardWithReg(dAL, current_cache, Y, lambd, activationFunc = outputActivationFunc, numClasses)
+  }
+
+  # 注意：取 dA 的转置
+  if(outputActivationFunc == "sigmoid")
+    gradients[[paste("dA", L, sep="")]] <- retvals[['dA_prev']]
+  else if(outputActivationFunc == "softmax")
+    gradients[[paste("dA", L, sep="")]] <- t(retvals[['dA_prev']])
+
+  gradients[[paste("dW", L, sep="")]] <- retvals[['dW']]
+  gradients[[paste("db", L, sep="")]] <- retvals[['db']]
+
+  # 反向遍历
+  for(l in (L-1):1) {
+    # 计算 L-1 到 1 层的梯度（针对 Relu/tanh）
+    # 输入："gradients["dA" + str(l + 2)], caches"。
+    # 输出："gradients["dA" + str(l + 1)] , gradients["dW" + str(l + 1)] , gradients["db" + str(l + 1)]"
+    current_cache = caches[[l]]$cache
+
+    if (lambd == 0) {
+      # 获取 dropout 矩阵
+      D <- dropoutMat[[paste("D", l, sep="")]]
+      # 梯度与 dropout 矩阵相乘
+      gradients[[paste('dA', l+1, sep="")]] = gradients[[paste('dA', l+1, sep="")]] * D
+      # 除以 keep_prob 以保持期望值不变
+      gradients[[paste('dA', l+1, sep="")]] =
+        gradients[[paste('dA', l+1, sep="")]] / keep_prob
+
+      retvals = layerActivationBackward(gradients[[paste('dA', l+1, sep="")]], current_cache, Y,
+                                        activationFunc = hiddenActivationFunc)
+    } else {
+      retvals =
+        layerActivationBackwardWithReg(gradients[[paste('dA', l+1, sep="")]], current_cache, Y, lambd,
+                                       activationFunc = hiddenActivationFunc)
+    }
+
+    gradients[[paste("dA", l, sep="")]] <- retvals[['dA_prev']]
+    gradients[[paste("dW", l, sep="")]] <- retvals[['dW']]
+    gradients[[paste("db", l, sep="")]] <- retvals[['db']]
+  }
+
+  return(gradients)
+}
+```
+
+## 代码片段 5：梯度下降参数更新
+
+```r
+# 执行梯度下降
+# 输入：权重和偏置
+# : 梯度
+# : 学习率
+# : outputActivationFunc - 隐藏层的激活函数 sigmoid/softmax
+# 输出：1 次迭代后更新的权重
+
+gradientDescent <- function(parameters, gradients,
+                            learningRate, outputActivationFunc="sigmoid") {
+
+  L = length(parameters) / 2 # 神经网络中的层数
+
+  # 每个参数的更新规则。使用 for 循环。
+  for(l in 1:(L-1)) {
+    parameters[[paste("W", l, sep="")]] = parameters[[paste("W", l, sep="")]] -
+      learningRate * gradients[[paste("dW", l, sep="")]]
+    parameters[[paste("b", l, sep="")]] = parameters[[paste("b", l, sep="")]] -
+      learningRate * gradients[[paste("db", l, sep="")]]
+  }
+
+  if(outputActivationFunc == "sigmoid") {
+    parameters[[paste("W", L, sep="")]] = parameters[[paste("W", L, sep="")]] -
+      learningRate * gradients[[paste("dW", L, sep="")]]
+  }
+}
+```
+

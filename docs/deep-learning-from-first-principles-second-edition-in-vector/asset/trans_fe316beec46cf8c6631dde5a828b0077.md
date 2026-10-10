@@ -1,0 +1,190 @@
+
+# 隐藏层激活函数 – tanh
+
+# 输出层激活函数 – softmax
+
+# 学习率 – 0.005
+
+# 优化器="adam"
+
+# Beta1 = 0.7
+
+# Beta2 = 0.9
+
+# Epsilon = 1e-8
+
+# Mini_batch_size = 512
+
+![Image 366](index-308_1.jpg)
+
+```python
+retvalsSGD = L_Layer_DeepModel_SGD(X1, Y1, layersDimensions,
+    hiddenActivationFunc='tanh',
+    outputActivationFunc="softmax",
+    learningRate=0.005,
+    optimizer="adam",
+    beta1=0.7,
+    beta2=0.9,
+    epsilon=10^-8,
+    mini_batch_size=512,
+    num_epochs=5000,
+    print_cost=True)
+```
+
+# 绘制成本与迭代次数的关系图
+
+```r
+iterations <- seq(0, 5000, 1000)
+costs = retvalsSGD$costs
+df = data.frame(iterations, costs)
+ggplot(df, aes(x=iterations, y=costs)) + geom_point() + geom_line(color="blue") +
+    ggtitle("Costs vs number of epochs") + xlab("No of epochs") + ylab("Cost")
+```
+
+## 5.1c. 带 Adam 优化的随机梯度下降 – Octave
+
+```matlab
+source("DL7functions.m")
+load('./mnist/mnist.txt.gz');
+
+# 从 1024 创建一个随机排列
+permutation = randperm(1024);
+disp(length(permutation));
+
+# 使用这 1024 作为批次
+X = trainX(permutation, :);
+Y = trainY(permutation, :);
+
+# 设置层维度
+# 784 – 输入特征数量 (28 x28)
+# 15, 9 – 2 个隐藏层，分别有 15, 9 个隐藏单元
+# 10 – 输出层有 10 个输出类别，使用 softmax 激活单元
+layersDimensions = [784, 15, 9, 10];
+
+# 注意 epsilon 的高值。
+# 否则带 Adam 的 GD 似乎不收敛
+
+# 使用带 Adam 优化的 SGD 执行 L 层深度学习网络
+# 隐藏层激活函数 – relu
+# 输出层激活函数 – softmax
+# 学习率 – 0.01
+# optimizer="adam"
+# beta1 = 0.9
+# beta2 = 0.9
+# epsilon = 100
+# mini_batch_size = 512
+
+[weights biases costs] = L_Layer_DeepModel_SGD(X', Y', layersDimensions,
+    hiddenActivationFunc='relu',
+    outputActivationFunc="softmax",
+    learningRate=0.1,
+    lrDecay=false,
+    decayRate=1,
+    lambd=0,
+    keep_prob=1,
+    optimizer="adam",
+    beta=0.9,
+    beta1=0.9,
+    beta2=0.9,
+    epsilon=100,
+    mini_batch_size=512,
+    num_epochs=5000);
+
+# 绘制成本与迭代次数的关系图
+plotCostVsEpochs(5000, costs)
+```
+
+![Image 367](index-311_1.jpg)
+
+## 6. 结论
+
+在本章中，我讨论并实现了几种随机梯度下降优化方法。这些方法的实现增强了我现有的通用 L 层深度学习网络的矢量化实现，涵盖了 Python、R 和 Octave。
+
+![Image 368](index-313_1.jpg)
+![Image 369](index-313_2.jpg)
+![Image 370](index-313_3.jpg)
+![Image 371](index-313_4.jpg)
+![Image 372](index-313_5.jpg)
+![Image 373](index-313_6.jpg)
+![Image 374](index-313_7.jpg)
+
+## 8. 深度学习中的梯度检验
+
+> *除非你用不止一种方式学习它，否则你不会理解任何东西。* — Marvin Minsky
+>
+> *从未有过任何一台计算机被设计成能意识到它在做什么；但大多数时候，我们也不是。* — Marvin Minsky
+>
+> *大量的信息造成了注意力的匮乏。* — Herbert Simon
+
+在最后一章中，我将讨论并实现构建深度学习网络所需的关键功能，即“梯度检验”。梯度检验是检查实现正确性的重要方法，特别是前向传播和反向传播周期的实现。此外，我还将根据我的经验讨论一些调整深度学习网络超参数的技巧。
+
+本章实现了一个关键函数，用于通过梯度检验确保 L 层深度学习网络实现的正确性。
+
+梯度检验基于以下方法。梯度下降的一次迭代通过执行 来计算并更新参数。
+
+为了最小化成本，我们需要最小化 。
+
+令 为计算导数 的函数。梯度检验允许我们对函数 的实现进行数值评估并验证其正确性。
+
+我们知道函数的导数由下式给出
+
+**注意**：上述导数基于双侧导数。单侧导数由下式给出
+
+梯度检验基于双侧导数，因为其误差阶为 ，而单侧导数为 。
+
+因此梯度检验使用双侧导数如下。
+
+在梯度检验中执行以下操作：
+
+**A) 运行一次正常的实现周期，执行以下操作：**
+
+a) 通过运行 1 个周期的前向传播计算输出激活值
+b) 使用输出激活值计算成本
+c) 使用反向传播计算梯度 (`grad`)
+
+**B) 执行梯度检验步骤如下：**
+
+a) 设置 。将所有“权重”和“偏置”矩阵及向量展平为列向量。
+b) 通过添加 () 向上轻推 来初始化
+c) 使用 执行前向传播
+d) 计算成本，即
+e) 通过减去 向下轻推 来初始化
+f) 使用 执行前向传播
+g) 计算成本，即
+h) 使用双侧导数计算 或“gradapprox”，公式为
+i) 计算“grad”和“gradapprox”之间的 L2 范数或欧氏距离。
+
+如果差异阶为 或 ，则实现正确。在深度学习
+
+![Image 398](index-315_1.jpg)
+![Image 399](index-315_2.jpg)
+
+[专项课程](https://www.coursera.org/specializations/deep-learning)中，Andrew Ng 教授提到如果差异阶为 ，则实现正确。差异为 也可以接受。任何大于该值的差异都值得关注，你应该更仔细地检查代码。要查看更多详细信息，请点击 [梯度检验和高级优化](http://ufldl.stanford.edu/wiki/index.php/Gradient_checking_and_advanced_optimization)。
+
+本章调用的函数实现见附录 8 – 梯度检验。
+
+您可以从 Github 克隆/下载代码：[DeepLearningFromFirstPrinciples](https://github.com/tvganesh/DeepLearningFromFirstPrinciples/tree/master/Chap8-DLGradientCheck)。
+
+在花费了大部分 3 天时间后，我现在意识到梯度检验对于确保实现正确性是多么关键。最初我得到了非常高的差异，不知道如何理解结果或调试我的实现。在盯着结果看了许多小时后，我终于找到了一种定位实现中问题的方法。事实上，我确实捕捉到了 Python 代码中的一个小 bug，而该 bug 在 R 和 Octave 实现中不存在。我将在下面演示这一点。
+
+### 1.1a 梯度检验 – Sigmoid 激活 – Python
+
+```python
+import numpy as np
+import matplotlib
+
+exec(open("DLfunctions8.py").read())
+exec(open("testcases.py").read())
+
+# 加载圆环数据集
+train_X, train_Y, test_X, test_Y = load_dataset()
+
+# 设置层维度
+# 2 – 输入特征数量
+# 4 – 1 个隐藏层，包含 4 个激活单元
+# 1 – 输出层包含 1 个 sigmoid 激活单元
+layersDimensions = [2, 4, 1]
+
+# 初始化参数
+parameters = initializeDeepModel(layersDimensions)
+```

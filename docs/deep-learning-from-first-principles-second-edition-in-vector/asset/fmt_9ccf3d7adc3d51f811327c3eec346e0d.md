@@ -1,0 +1,236 @@
+
+# 神经网络反向传播与优化算法实现
+
+## `layerActivationBackwardWithReg` 函数
+
+```python
+def layerActivationBackwardWithReg(dA, cache, Y, lambd, activationFunc):
+    forward_cache, activation_cache = cache
+    A_prev, W, b = forward_cache
+    numtraining = float(A_prev.shape[1])
+    # print("n=",numtraining)
+    # print("no=",numtraining)
+
+    if activationFunc == "relu":
+        dZ = reluDerivative(dA, activation_cache)
+    elif activationFunc == "sigmoid":
+        dZ = sigmoidDerivative(dA, activation_cache)
+    elif activationFunc == "tanh":
+        dZ = tanhDerivative(dA, activation_cache)
+    elif activationFunc == "softmax":
+        dZ = stableSoftmaxDerivative(dA, activation_cache, Y, numtraining)
+
+    if activationFunc == 'softmax':
+        # Add the regularization factor
+        dW = 1/numtraining * np.dot(A_prev, dZ) + (lambd/numtraining) * W.T
+        db = 1/numtraining * np.sum(dZ, axis=0, keepdims=True)
+        dA_prev = np.dot(dZ, W)
+    else:
+        # Add the regularization factor
+        dW = 1/numtraining * (np.dot(dZ, A_prev.T)) + (lambd/numtraining) * W
+        # print("dW=",dW)
+        db = 1/numtraining * np.sum(dZ, axis=1, keepdims=True)
+        # print("db=",db)
+        dA_prev = np.dot(W.T, dZ)
+
+    return dA_prev, dW, db
+```
+
+## `backwardPropagationDeep` 函数
+
+```python
+def backwardPropagationDeep(AL, Y, caches, dropoutMat, lambd=0, keep_prob=1,
+                            hiddenActivationFunc='relu', outputActivationFunc="sigmoid"):
+    """
+    Compute the backpropagation for 1 cycle
+
+    Input:
+        AL: Output of L layer Network - weights
+        Y: Real output
+        caches: list of caches containing:
+            - dropoutMat
+            - lambd
+            - keep_prob
+            - every cache of layerActivationForward() with "relu"/"tanh"
+              (it's caches[l], for l in range(L-1) i.e l = 0...L-2)
+            - the cache of layerActivationForward() with "sigmoid" (it's caches[L-1])
+        hiddenActivationFunc: Activation function at hidden layers - relu/sigmoid/tanh
+        outputActivationFunc: Activation function at output - sigmoid/softmax
+
+    Returns:
+        gradients: A dictionary with the gradients
+            gradients["dA" + str(l)] = ...
+            gradients["dW" + str(l)] = ...
+            gradients["db" + str(l)] = ...
+    """
+    # initialize the gradients
+    gradients = {}
+
+    # Set the number of layers
+    L = len(caches)
+    m = float(AL.shape[1])
+
+    if outputActivationFunc == "sigmoid":
+        Y = Y.reshape(AL.shape)  # after this line, Y is the same shape as AL
+
+        # Initializing the backpropagation
+        # dl/dAL= -(y/a + (1-y)/(1-a)) - At the output layer
+        dAL = - (np.divide(Y, AL) - np.divide(1 - Y, 1 - AL))
+    else:
+        dAL = 0
+        Y = Y.T
+
+    # Since this is a binary classification the activation at output is sigmoid
+    # Get the gradients at the last layer
+    # Inputs: "AL, Y, caches".
+    # Outputs: "gradients["dAL"], gradients["dWL"], gradients["dbL"]"
+    current_cache = caches[L-1]
+
+    if lambd == 0:
+        gradients["dA" + str(L)], gradients["dW" + str(L)], gradients["db" + str(L)] \
+            = layerActivationBackward(dAL, current_cache, Y, activationFunc=outputActivationFunc)
+    else:  # Regularization
+        gradients["dA" + str(L)], gradients["dW" + str(L)], gradients["db" + str(L)] \
+            = layerActivationBackwardWithReg(dAL, current_cache, Y, lambd, activationFunc=outputActivationFunc)
+
+    # Note dA for softmax is the transpose
+    if outputActivationFunc == "softmax":
+        gradients["dA" + str(L)] = gradients["dA" + str(L)].T
+
+    # Traverse in the reverse direction
+    for l in reversed(range(L-1)):
+        # Compute the gradients for L-1 to 1 for Relu/tanh
+        # Inputs: "gradients["dA" + str(l + 2)], caches".
+        # Outputs: "gradients["dA" + str(l + 1)] , gradients["dW" + str(l + 1)] , gradients["db" + str(l + 1)]"
+        current_cache = caches[l]
+        # dA_prev_temp, dW_temp, db_temp = layerActivationBackward(gradients['dA'+str(l+2)], current_cache, activationFunc = "relu")
+
+        if lambd == 0:
+            # In the reverse direction use the same dropout matrix
+            # Random dropout
+            # Multiply dA'l' with the dropoutMat and divide to keep the expected value same
+            D = dropoutMat["D" + str(l+1)]
+
+            # Drop some dAl's
+            gradients['dA'+str(l+2)] = np.multiply(gradients['dA'+str(l+2)], D)
+            # Divide by keep_prob to keep expected value same
+            gradients['dA'+str(l+2)] = np.divide(gradients['dA'+str(l+2)], keep_prob)
+
+            dA_prev_temp, dW_temp, db_temp = \
+                layerActivationBackward(gradients['dA'+str(l+2)], current_cache, Y, keep_prob=1, activationFunc=hiddenActivationFunc)
+        else:
+            dA_prev_temp, dW_temp, db_temp = \
+                layerActivationBackwardWithReg(gradients['dA'+str(l+2)], current_cache, Y, lambd, activationFunc=hiddenActivationFunc)
+
+        gradients["dA" + str(l + 1)] = dA_prev_temp
+        gradients["dW" + str(l + 1)] = dW_temp
+        gradients["db" + str(l + 1)] = db_temp
+
+    return gradients
+```
+
+## `gradientDescent` 函数
+
+```python
+def gradientDescent(parameters, gradients, learningRate, outputActivationFunc="sigmoid"):
+    """
+    Perform Gradient Descent
+
+    Input:
+        parameters: Weights and biases
+        gradients: gradients
+        learningRate: learning rate
+        outputActivationFunc: Activation function at output - sigmoid/softmax
+
+    Output:
+        Updated weights after 1 iteration
+    """
+    L = int(len(parameters) / 2)
+
+    # Update rule for each parameter.
+    for l in range(L-1):
+        parameters["W" + str(l+1)] = parameters['W'+str(l+1)] - learningRate * gradients['dW' + str(l+1)]
+        parameters["b" + str(l+1)] = parameters['b'+str(l+1)] - learningRate * gradients['db' + str(l+1)]
+
+    if outputActivationFunc == "sigmoid":
+        parameters["W" + str(L)] = parameters['W'+str(L)] - learningRate * gradients['dW' + str(L)]
+        parameters["b" + str(L)] = parameters['b'+str(L)] - learningRate * gradients['db' + str(L)]
+    elif outputActivationFunc == "softmax":
+        parameters["W" + str(L)] = parameters['W'+str(L)] - learningRate * gradients['dW' + str(L)].T
+        parameters["b" + str(L)] = parameters['b'+str(L)] - learningRate * gradients['db' + str(L)].T
+
+    return parameters
+```
+
+## `gradientDescentWithMomentum` 函数
+
+```python
+def gradientDescentWithMomentum(parameters, gradients, v, beta, learningRate, outputActivationFunc="sigmoid"):
+    """
+    Update parameters with momentum
+
+    Input:
+        parameters
+        gradients
+        v
+        beta
+        learningRate
+        outputActivationFunc: softmax/sigmoid
+
+    Output:
+        Updated parameters and velocity
+    """
+    L = len(parameters) // 2  # number of layers in the neural networks
+
+    # Momentum update for each parameter
+    for l in range(L-1):
+        # Compute velocities
+        # v['dWk'] = beta * v['dWk'] + (1-beta) * dWk
+        v["dW" + str(l+1)] = beta * v["dW" + str(l+1)] + (1-beta) * gradients['dW' + str(l+1)]
+        v["db" + str(l+1)] = beta * v["db" + str(l+1)] + (1-beta) * gradients['db' + str(l+1)]
+
+        # Update parameters with velocities
+        parameters["W" + str(l+1)] = parameters['W' + str(l+1)] - learningRate * v["dW" + str(l+1)]
+        parameters["b" + str(l+1)] = parameters['b' + str(l+1)] - learningRate * v["db" + str(l+1)]
+
+    if outputActivationFunc == "sigmoid":
+        v["dW" + str(L)] = beta * v["dW" + str(L)] + (1-beta) * gradients['dW' + str(L)]
+        v["db" + str(L)] = beta * v["db" + str(L)] + (1-beta) * gradients['db' + str(L)]
+
+        parameters["W" + str(L)] = parameters['W'+str(L)] - learningRate * gradients['dW' + str(L)]
+        parameters["b" + str(L)] = parameters['b'+str(L)] - learningRate * gradients['db' + str(L)]
+    elif outputActivationFunc == "softmax":
+        v["dW" + str(L)] = beta * v["dW" + str(L)] + (1-beta) * gradients['dW' + str(L)].T
+        v["db" + str(L)] = beta * v["db" + str(L)] + (1-beta) * gradients['db' + str(L)].T
+
+        parameters["W" + str(L)] = parameters['W'+str(L)] - learningRate * gradients['dW' + str(L)].T
+        parameters["b" + str(L)] = parameters['b'+str(L)] - learningRate * gradients['db' + str(L)].T
+
+    return parameters, v
+```
+
+## `gradientDescentWithRMSProp` 函数
+
+```python
+def gradientDescentWithRMSProp(parameters, gradients, s, beta1, epsilon, learningRate, outputActivationFunc="sigmoid"):
+    """
+    Update parameters with RMSProp
+
+    Input:
+        parameters
+        gradients
+        s
+        beta1
+        learningRate
+        outputActivationFunc: sigmoid/softmax
+
+    Output:
+        Updated parameters and RMSProp
+    """
+    L = len(parameters) // 2  # number of layers in the neural networks
+
+    # Momentum update for each parameter
+    for l in range(L-1):
+        # Compute RMSProp
+        # ... (代码未完整提供)
+```
