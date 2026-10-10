@@ -1,0 +1,48 @@
+
+
+## 参考文献
+
+23. [Klare, B. F.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000024), Burge, M. J., Klontz, J. C., Vorder Bruegge, R. W., & Jain, A. K. (2012). Face Recognition Performance: Role of Demographic Information. *IEEE Transactions on Information Forensics and Security*, *7*(6), 1789–1801. [https://doi.org/10.1109/TIFS.2012.2214212](https://doi.org/10.1109/TIFS.2012.2214212)
+
+24. [Korver-Glenn, E.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000025) (2018). Compounding Inequalities: How Racial Stereotypes and Discrimination Accumulate Across the Stages of Housing Exchange. *American Sociological Review*, *83*(4), 627–656.
+
+25. [Kovera, M. B.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000026) (2019). Racial Disparities in the Criminal Justice System: Prevalence, Causes, and a Search for Solutions. *Journal of Social Issues*, *75*(4), 1139–1164. [https://doi.org/10.1111/josi.12355](https://doi.org/10.1111/josi.12355)
+
+26. [Kramer, A. D. I.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000027), Guillory, J. E., & Hancock, J. T. (2014). Experimental Evidence of Massive-scale Emotional Contagion through Social Networks. *Proceedings of the National Academy of Sciences*, *111*(24), 8788–8790. [https://doi.org/10.1073/pnas.1320040111](https://doi.org/10.1073/pnas.1320040111)
+
+27. [Lerman, J.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000028) (2013). Big Data and Its Exclusions. *Stanford Law Review*. [https://www.stanfordlawreview.org/online/privacy-and-big-data-big-data-and-its-exclusions/](https://www.stanfordlawreview.org/online/privacy-and-big-data-big-data-and-its-exclusions/)
+
+28. [Li, Y.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000029), Dai, W., Ming, Z., & Qiu, M. (2016). Privacy Protection for Preventing Data Over-Collection in Smart City. *IEEE Transactions on Computers*, *65*(5), 1339–1350. [https://doi.org/10.1109/TC.2015.2470247](https://doi.org/10.1109/TC.2015.2470247)
+
+29. [Liu, Z. Y.-C.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000030), Chamberlin, A. J., Tallam, K., Jones, I. J., Lamore, L. L., Bauer, J., Bresciani, M., Wolfe, C. M., Casagrandi, R., Mari, L., Gatto, M., Diongue, A. K., Toure, L., Rohr, J. R., Riveau, G., Jouanard, N., Wood, C. L., Sokolow, S. H., Mandle, L., … De Leo, G. A. (2022). Deep Learning Segmentation of Satellite Imagery Identifies Aquatic Vegetation Associated with Snail Intermediate Hosts of Schistosomiasis in Senegal, Africa. *Remote Sensing*, *14*(6), Article 6. [https://doi.org/10.3390/rs14061345](https://doi.org/10.3390/rs14061345)
+
+30. [MacArthur Justice Center](#c4.xhtml#TNFUK_04_AREV_C004-CIT000031). (n.d.). ShotSpotter Is Deployed Overwhelmingly in Black and Latinx Neighborhoods in Chicago. Retrieved January 23, 2023, from [https://endpolicesurveillance.com/burden-on-communities-of-color/](https://endpolicesurveillance.com/burden-on-communities-of-color/)
+
+31. [Mazzeo Rinaldi, F.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000032), Celardi, E., Miracula, V., & Picone, A. (2025). Artificial Intelligence and Text Analysis in Evaluating Complex Social Phenomena. The Russia-Ukraine Conflict. In S. B. Nielsen, F. Mazzeo Rinaldi, & G. J. Petersson (Eds.), *Artificial Intelligence and Evaluation. Emerging Technologies and Their Implications for Evaluation* (pp. 168–195). London: Routledge. [https://doi.org/10.4324/9781003512493](https://doi.org/10.4324/9781003512493)
+
+32. [Mehrabi, N.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000033), Morstatter, F., Saxena, N., Lerman, K., & Galstyan, A. (2021). A Survey on Bias and Fairness in Machine Learning. *ACM Computing Surveys*, *54*(6), 115, 35. [https://doi.org/10.1145/3457607](https://doi.org/10.1145/3457607)
+
+33. Mills De La Rosa, S., [Greenstein, N.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000034), Schwartz, D, & Lloyd, C. (2021). Machine Learning in Workforce Development Research: Lessons and Opportunities. U.S. Department of Labor, Chief Evaluation Office. [https://www.dol.gov/sites/dolgov/files/OASP/evaluation/pdf/Machine%20Learning%20in%20Workforce%20Development%20Research_Lessons%20and%20Opportunities_issue%20brief.pdf](https://www.dol.gov/sites/dolgov/files/OASP/evaluation/pdf/Machine%20Learning%20in%20Workforce%20Development%20Research_Lessons%20and%20Opportunities_issue%20brief.pdf)
+
+34. [Mitchell, S.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000035), Potash, E., Barocas, S., D’Amour, A., & Lum, K. (2021). Algorithmic Fairness: Choices, Assumptions, and Definitions. *Annual Review of Statistics and Its Application*, *8*(1), 141–163. [https://doi.org/10.1146/annurev-statistics-042720-125902](https://doi.org/10.1146/annurev-statistics-042720-125902)
+
+35. [Naidu, G.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000036), Zuva, T., & Sibanda, E. M. (2023). A Review of Evaluation Metrics in Machine Learning Algorithms. In R. Silhavy & P. Silhavy (Eds.), *Artificial Intelligence Application in Networks and Systems* (pp. 15–25). Springer International Publishing. [https://doi.org/10.1007/978-3-031-35314-7_2](https://doi.org/10.1007/978-3-031-35314-7_2)
+
+36. [NCPHSBBR.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000037) (1979). *The Belmont Report*. New York: Department of Health, Education, and Welfare.
+
+37. [Nyst, C.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000038), & Falchetta, T. (2017). The Right to Privacy in the Digital Age. *Journal of Human Rights Practice*, *9*(1), 104–118. [https://doi.org/10.1093/jhuman/huw026](https://doi.org/10.1093/jhuman/huw026)
+
+38. [OECD Legal Instruments](#c4.xhtml#TNFUK_04_AREV_C004-CIT000039). (2019). Recommendation of the Council on Artificial Intelligence. *OECD*. [https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449](https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449)
+
+39. [Parry, M.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000040) (2011, July 10). Harvard Researchers Accused of Breaching Students’ *Privacy*. *The Chronicle of Higher Education*. [https://www.chronicle.com/article/harvard-researchers-accused-of-breaching-students-privacy/](https://www.chronicle.com/article/harvard-researchers-accused-of-breaching-students-privacy/)
+
+40. Proposal for a Regulation of the European Parliament and of the Council Laying Down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act) and Amending Certain Union Legislative Acts, COM/2021/206 final, CNECT. (2021). [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52021PC0206)
+
+41. [Ragini, J. R.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000041), Anand, P. M. R., & Bhaskar, V. (2018). Big Data Analytics for Disaster Response and Recovery Through Sentiment Analysis. *International Journal of Information Management*, *42*, 13–24. [https://doi.org/10.1016/j.ijinfomgt.2018.05.004](https://doi.org/10.1016/j.ijinfomgt.2018.05.004)
+
+42. [Rathbone, J.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000042), Hoffmann, T., & Glasziou, P. (2015). Faster Title and Abstract Screening? Evaluating Abstrackr, a Semi-automated Online Screening Program for Systematic Reviewers. *Systematic Reviews*, *4*(1), 80. [https://doi.org/10.1186/s13643-015-0067-6](https://doi.org/10.1186/s13643-015-0067-6)
+
+43. [Salaverría, R.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000043), & León, B. (2022). Misinformation Beyond the Media: ‘Fake News’ in the Big Data Ecosystem. In J. Vázquez-Herrero, A. Silva-Rodríguez, M.-C. Negreira-Rey, C. Toural-Bran, & X. López-García (Eds.), *Total Journalism: Models, Techniques and Challenges* (pp. 109–121). Springer International Publishing. [https://doi.org/10.1007/978-3-030-88028-6_9](https://doi.org/10.1007/978-3-030-88028-6_9)
+
+44. [Schaul, K.](#c4.xhtml#TNFUK_04_AREV_C004-CIT000044), Chen, S. Y., & Tiku, N. (2023, April 19). Inside the Secret List of Websites that Make AI Like ChatGPT Sound Smart. *Washington Post*. [https://www.washingtonpost.com/technology/interactive/2023/ai-chatbot-learning/](https://www.washingtonpost.com/technology/interactive/2023/ai-chatbot-learning/)
+

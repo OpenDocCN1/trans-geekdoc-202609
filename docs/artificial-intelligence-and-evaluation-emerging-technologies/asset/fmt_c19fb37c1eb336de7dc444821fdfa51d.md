@@ -1,0 +1,62 @@
+
+## 索引
+
+*   **machine learning** [3](#c1.xhtml#p3)–[5](#c1.xhtml#p5), [13](#c2.xhtml#p13), [15](#c2.xhtml#p15), [19](#c2.xhtml#p19), [20](#c2.xhtml#p20), [27](#c2.xhtml#p27)–[32](#c2.xhtml#p32), [37](#c3.xhtml#p37)–[39](#c3.xhtml#p39), [43](#c3.xhtml#p43), [44](#c3.xhtml#p44), [46](#c3.xhtml#p46), [47](#c3.xhtml#p47), [49](#c3.xhtml#p49), [60](#c4.xhtml#p60), [80](#c5.xhtml#p80), [82](#c5.xhtml#p82), [86](#c5.xhtml#p86), [88](#c5.xhtml#p88), [95](#c5.xhtml#p95), [98](#c5.xhtml#p98), [99](#c5.xhtml#p99), [103](#c6.xhtml#p103), [104](#c6.xhtml#p104), [106](#c6.xhtml#p106)–[116](#c6.xhtml#p116), [118](#c6.xhtml#p118), [121](#c7.xhtml#p121)–[130](#c7.xhtml#p130), [134](#c7.xhtml#p134)–[136](#c7.xhtml#p136), [139](#c7.xhtml#p139), [148](#c8.xhtml#p148), [168](#c9.xhtml#p168), [198](#c10.xhtml#p198), [199](#c10.xhtml#p199), [212](#c10.xhtml#p212), [214](#c10.xhtml#p214), [216](#c10.xhtml#p216), [219](#c11.xhtml#p219)–[225](#c11.xhtml#p225), [228](#c11.xhtml#p228), [231](#c11.xhtml#p231)–[233](#c11.xhtml#p233), [235](#c11.xhtml#p235), [245](#c12.xhtml#p245), [260](#c12.xhtml#p260), [271](#c13.xhtml#p271), [274](#c13.xhtml#p274), [275](#c13.xhtml#p275), [278](#c13.xhtml#p278), [289](#c14.xhtml#p289)–[291](#c14.xhtml#p291), [293](#c14.xhtml#p293), [295](#c14.xhtml#p295); **deep learning** [47](#c3.xhtml#p47), [180](#c9.xhtml#p180); **structured (SML)** [27](#c2.xhtml#p27)–[30](#c2.xhtml#p30); **unstructured (UML)** [27](#c2.xhtml#p27)–[30](#c2.xhtml#p30)
+
+*   **machine translation** [81](#c5.xhtml#p81), [82](#c5.xhtml#p82), [98](#c5.xhtml#p98), [178](#c9.xhtml#p178), [180](#c9.xhtml#p180)
+
+*   **Magpi** [16](#c2.xhtml#p16)
+
+*   **Mckinsey** [3](#c1.xhtml#p3), [267](#c13.xhtml#p267), [275](#c13.xhtml#p275), [279](#c13.xhtml#p279), [280](#c13.xhtml#p280), [287](#c14.xhtml#p287)
+
+*   **mechanism** [48](#c3.xhtml#p48), [59](#c4.xhtml#p59), [123](#c7.xhtml#p123), [169](#c9.xhtml#p169), [170](#c9.xhtml#p170), [173](#c9.xhtml#p173), [185](#c9.xhtml#p185)–[187](#c9.xhtml#p187), [189](#c9.xhtml#p189), [190](#c9.xhtml#p190), [223](#c11.xhtml#p223), [239](#c11.xhtml#p239), [243](#c12.xhtml#p243), [244](#c12.xhtml#p244), [248](#c12.xhtml#p248)–[259](#c12.xhtml#p259)
+
+*   **MERL Tech** [272](#c13.xhtml#p272)
+
+*   **Messenger** [17](#c2.xhtml#p17)
+
+*   **Meta** [266](#c13.xhtml#p266)
+
+*   **Microsoft** [50](#c3.xhtml#p50), [266](#c13.xhtml#p266)
+
+*   **mobile** [2](#c1.xhtml#p2), [6](#c1.xhtml#p6), [14](#c2.xhtml#p14)–[16](#c2.xhtml#p16), [21](#c2.xhtml#p21), [31](#c2.xhtml#p31), [81](#c5.xhtml#p81), [199](#c10.xhtml#p199), [273](#c13.xhtml#p273); **data** [14](#c2.xhtml#p14)–[16](#c2.xhtml#p16), [21](#c2.xhtml#p21), [31](#c2.xhtml#p31); **phone** [2](#c1.xhtml#p2), [6](#c1.xhtml#p6), [273](#c13.xhtml#p273)
+
+*   **model**: **training** [81](#c5.xhtml#p81), [94](#c5.xhtml#p94), [95](#c5.xhtml#p95); **validation** [94](#c5.xhtml#p94)
+
+*   **modeling**: **thematic** [39](#c3.xhtml#p39), [148](#c8.xhtml#p148); **topic** [17](#c2.xhtml#p17), [26](#c2.xhtml#p26)–[28](#c2.xhtml#p28), [29](#c2.xhtml#p29), [39](#c3.xhtml#p39), [49](#c3.xhtml#p49), [80](#c5.xhtml#p80), [81](#c5.xhtml#p81), [99](#c5.xhtml#p99), [127](#c7.xhtml#p127), [128](#c7.xhtml#p128), [131](#c7.xhtml#p131), [146](#c8.xhtml#p146), [147](#c8.xhtml#p147)
+
+*   **monitoring** [13](#c2.xhtml#p13)–[16](#c2.xhtml#p16), [19](#c2.xhtml#p19)–[21](#c2.xhtml#p21), [23](#c2.xhtml#p23), [24](#c2.xhtml#p24), [27](#c2.xhtml#p27), [30](#c2.xhtml#p30), [31](#c2.xhtml#p31), [37](#c3.xhtml#p37), [47](#c3.xhtml#p47), [56](#c4.xhtml#p56), [59](#c4.xhtml#p59), [60](#c4.xhtml#p60), [64](#c4.xhtml#p64)–[66](#c4.xhtml#p66), [68](#c4.xhtml#p68), [69](#c4.xhtml#p69), [81](#c5.xhtml#p81), [87](#c5.xhtml#p87), [91](#c5.xhtml#p91), [134](#c7.xhtml#p134), [136](#c7.xhtml#p136), [196](#c10.xhtml#p196), [197](#c10.xhtml#p197), [199](#c10.xhtml#p199), [200](#c10.xhtml#p200), [203](#c10.xhtml#p203), [214](#c10.xhtml#p214), [247](#c12.xhtml#p247), [271](#c13.xhtml#p271), [275](#c13.xhtml#p275), [277](#c13.xhtml#p277), [278](#c13.xhtml#p278)
+
+*   **monitoring and evaluation (M&E)** [13](#c2.xhtml#p13), [15](#c2.xhtml#p15), [20](#c2.xhtml#p20), [21](#c2.xhtml#p21), [24](#c2.xhtml#p24), [30](#c2.xhtml#p30), [31](#c2.xhtml#p31), [37](#c3.xhtml#p37), [47](#c3.xhtml#p47), [64](#c4.xhtml#p64), [134](#c7.xhtml#p134), [199](#c10.xhtml#p199), [200](#c10.xhtml#p200), [209](#c10.xhtml#p209), [275](#c13.xhtml#p275), [277](#c13.xhtml#p277), [278](#c13.xhtml#p278); **system** [47](#c3.xhtml#p47), [275](#c13.xhtml#p275), [277](#c13.xhtml#p277), [278](#c13.xhtml#p278)
+
+*   **Nagorno-Karabakh** [1](#c1.xhtml#p1)
+
+*   **Naïve Bayes** [90](#c5.xhtml#p90), [94](#c5.xhtml#p94), [99](#c5.xhtml#p99), [111](#c6.xhtml#p111), [112](#c6.xhtml#p112)
+
+*   **National Aeronautics and Space Administration (NASA) (USA)** [32](#c2.xhtml#p32), [212](#c10.xhtml#p212)
+
+*   **natural language processing (NLP)** [8](#c1.xhtml#p8), [15](#c2.xhtml#p15), [21](#c2.xhtml#p21), [25](#c2.xhtml#p25), [26](#c2.xhtml#p26), [30](#c2.xhtml#p30), [31](#c2.xhtml#p31), [39](#c3.xhtml#p39), [44](#c3.xhtml#p44), [47](#c3.xhtml#p47)–[50](#c3.xhtml#p50), [80](#c5.xhtml#p80), [83](#c5.xhtml#p83), [85](#c5.xhtml#p85)–[88](#c5.xhtml#p88), [91](#c5.xhtml#p91), [92](#c5.xhtml#p92), [94](#c5.xhtml#p94)–[97](#c5.xhtml#p97), [99](#c5.xhtml#p99), [103](#c6.xhtml#p103), [124](#c7.xhtml#p124), [137](#c7.xhtml#p137), [178](#c9.xhtml#p178), [180](#c9.xhtml#p180), [254](#c12.xhtml#p254), [290](#c14.xhtml#p290), [291](#c14.xhtml#p291), [293](#c14.xhtml#p293); **supervised** [83](#c5.xhtml#p83), [85](#c5.xhtml#p85)–[88](#c5.xhtml#p88), [91](#c5.xhtml#p91); **techniques** [80](#c5.xhtml#p80), [178](#c9.xhtml#p178); **unsupervised** [80](#c5.xhtml#p80)
+
+*   **natural language understanding (NLU)** [47](#c3.xhtml#p47)–[50](#c3.xhtml#p50), [52](#c3.xhtml#p52), [103](#c6.xhtml#p103)
+
+*   **Netherlands** [177](#c9.xhtml#p177), [242](#c12.xhtml#p242), [243](#c12.xhtml#p243)
+
+*   **neural network** [94](#c5.xhtml#p94), [99](#c5.xhtml#p99), [180](#c9.xhtml#p180); **convolutional** [180](#c9.xhtml#p180); **recurrent** [180](#c9.xhtml#p180)
+
+*   **North Atlantic Treaty Organization (NATO)** [176](#c9.xhtml#p176), [177](#c9.xhtml#p177), [183](#c9.xhtml#p183)
+
+*   **NVivo** [88](#c5.xhtml#p88), [91](#c5.xhtml#p91)
+
+*   **Office of the Auditor General of Norway (OAGN)** [103](#c6.xhtml#p103), [106](#c6.xhtml#p106), [113](#c6.xhtml#p113), [116](#c6.xhtml#p116)
+
+*   **optical character recognition (OCR)** [111](#c6.xhtml#p111)
+
+*   **performance**: **testing** [111](#c6.xhtml#p111)
+
+*   **performance audit** [8](#c1.xhtml#p8), [103](#c6.xhtml#p103)–[106](#c6.xhtml#p106), [113](#c6.xhtml#p113), [115](#c6.xhtml#p115)–[117](#c6.xhtml#p117), [271](#c13.xhtml#p271)
+
+*   **policy**: **policy makers** [8](#c1.xhtml#p8), [61](#c4.xhtml#p61), [82](#c5.xhtml#p82), [152](#c8.xhtml#p152), [169](#c9.xhtml#p169), [173](#c9.xhtml#p173), [174](#c9.xhtml#p174), [183](#c9.xhtml#p183), [188](#c9.xhtml#p188), [189](#c9.xhtml#p189), [239](#c11.xhtml#p239), [298](#c14.xhtml#p298), [299](#c14.xhtml#p299); **policy making** [2](#c1.xhtml#p2), [6](#c1.xhtml#p6), [8](#c1.xhtml#p8), [31](#c2.xhtml#p31), [144](#c8.xhtml#p144), [239](#c11.xhtml#p239), [251](#c12.xhtml#p251)
+
+*   **Power BI** [176](#c9.xhtml#p176)–[179](#c9.xhtml#p179)
+
+*   **precision**: **analytics** [37](#c3.xhtml#p37), [38](#c3.xhtml#p38), [46](#c3.xhtml#p46), [47](#c3.xhtml#p47), [49](#c3.xhtml#p49), [220](#c11.xhtml#p220), [221](#c11.xhtml#p221), [223](#c11.xhtml#p223)–[231](#c11.xhtml#p231), [236](#c11.xhtml#p236)–[240](#c11.xhtml#p240), [288](#c14.xhtml#p288), [293](#c14.xhtml#p293); **care modeling** [232](#c11.xhtml#p232), [233](#c11.xhtml#p233), [235](#c11.xhtml#p235), [237](#c11.xhtml#p237), [239](#c11.xhtml#p239), [240](#c11.xhtml#p240), [293](#c14.xhtml#p293)

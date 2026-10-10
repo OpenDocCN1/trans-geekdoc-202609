@@ -1,0 +1,52 @@
+
+## 参考文献
+
+33. [Kumar, S.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000033), Barbier, G., Abbasi, M., & Liu, H. (2021). TweetTracker: An analysis tool for humanitarian and disaster relief. *Proceedings of the International AAAI Conference on Web and Social Media*, 5(1), 661–662. [https://doi.org/10.1609/icwsm.v5i1.14079](https://doi.org/10.1609/icwsm.v5i1.14079)
+
+34. [Liu, R.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000034), Wang, L., Lei, J., et al. (2020). Effects of an immersive virtual reality-based classroom on students’ learning performance in science lessons. *British Journal of Educational Technology*, 51, 2034–2049. [https://doi.org/10.1111/bjet.13028](https://doi.org/10.1111/bjet.13028)
+
+35. [Marchese, M.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000035), Moheddine, A., & Patrone, F. (2019). IoT and UAV integration in 5G Hybrid Terrestrial-Satellite Networks. *Sensors (Basel)*, 19(17), 3704. [https://doi.org/10.3390/s19173704](https://doi.org/10.3390/s19173704)
+
+36. [Marvin, G.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000036), & Sevilla, G. (2019, August 23). The Best Social Media Management and Analytics Tools. *PCMag*. Retrieved from [https://www.pcmag.com/picks/the-best-social-media-management-analytics-tools](https://www.pcmag.com/picks/the-best-social-media-management-analytics-tools)
+
+37. [MasterCard Foundation](#c2.xhtml#TNFUK_02_AREV_C002-CIT000037), Mercy Corps and AGRIFIN Accelerate. (2019, December). *AgriFin Accelerate Five Year Overview*. Retrieved from [https://www.mercycorpsagrifin.org/wp-content/uploads/2020/03/AgriFinALE4_OpeningPlenaryAllSlides.pdf](https://www.mercycorpsagrifin.org/wp-content/uploads/2020/03/AgriFinALE4_OpeningPlenaryAllSlides.pdf)
+
+38. [Mazzeo Rinaldi, F.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000038), Celardi, E., Miracula, V., & Picone, A. (2025). Artificial Intelligence and Text Analysis in Evaluating Complex Social Phenomena: The Russia-Ukraine Conflict. In S.B. Nielsen, F. Mazzeo Rinaldi, & G.J. Petersson (Eds.), *Artificial Intelligence and Evaluation: Emerging Technologies and Their Implications for Evaluation* (pp. 168–195). London: Routledge. [https://doi.org/10.4324/9781003512493](https://doi.org/10.4324/9781003512493)
+
+39. MERLTech. (n.d.). Past MERLTech Conferences. *MERLTech*. Retrieved from [https://merltech.org/events/past-merl-tech-conferences/](https://merltech.org/events/past-merl-tech-conferences/)
+
+40. [Næss, T.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000040), Prabhu, C., Mjaaland, M., Holtermann, H., & Engebretsen, L.S. (2025). Text Mining and Machine Learning in an Evaluation of Police Handling of Cybercrime in Norway. In S.B. Nielsen, F. Mazzeo Rinaldi, & G.J. Petersson (Eds.), *Artificial Intelligence and Evaluation: Emerging Technologies and Their Implications for Evaluation* (pp. 103–119). London: Routledge. [https://doi.org/10.4324/9781003512493](https://doi.org/10.4324/9781003512493)
+
+41. [Penn State University](#c2.xhtml#TNFUK_02_AREV_C002-CIT000041), Department of Geography. (n.d.). Geog 160 – Mapping Our Changing World, Geospatial Data Quality, Validity, Accuracy and Precision. Retrieved from [https://www.e-education.psu.edu/geog160/node/1922](https://www.e-education.psu.edu/geog160/node/1922)
+
+42. [Petkovic, S.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000042), Petkovic, D., & Petkovic, A. (2017). IoT devices VS. drones for data collection in agriculture. *DAAAM International Scientific Book*, 16, 63–80.
+
+43. [Rakotomalala, O.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000043), Peixoto, T., & Kumagai, S. (2020). Chatbots for Third-Party Monitoring: CivicTech Pilot in Madagascar. *Governance Notes*, No. 23. World Bank. Retrieved from [https://openknowledge.worldbank.org/handle/10986/34076](https://openknowledge.worldbank.org/handle/10986/34076)
+
+44. [Roen, E.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000044), & Gallager, J. (2022). Can Artificial Intelligence Identify Evaluation Findings That Advance Equity? USAID’s Mixed Experience. November 2022 (included with permission from the authors).
+
+45. [Skrabania, L.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000045) (2021, March 18). Interview: How Problematic Are Satellites and Drones in Terms of Data Protection? Retrieved from [https://en.reset.org/interview-how-problematic-are-satellites-and-drones-terms-data-protection-03072021/](https://en.reset.org/interview-how-problematic-are-satellites-and-drones-terms-data-protection-03072021/)
+
+46. [Tawalbeh, L.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000046), Muheidat, F., Tawalbeh, M., & Quwaider, M. (2020). IoT privacy and security: Challenges and solutions. *Applied Sciences*, 10(12), 4102. [https://doi.org/10.3390/app10124102](https://doi.org/10.3390/app10124102)
+
+47. The Development Cafe. (2018). Blog. Retrieved from [https://www.dev-cafe.org/blog/](https://www.dev-cafe.org/blog/)
+
+48. [Thiabaud, A.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000048), Triulzi, I., & Orel, E., et al. (2020). Social, behavioral, and cultural factors of HIV in Malawi: Semi-automated systematic review. *Journal of Medical Internet Research*, 22(8), e18747. [https://doi.org/10.2196/18747](https://doi.org/10.2196/18747)
+
+49. [Toetzke, M.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000049), Banholzer, N., & Feuerriegel, S. (2022). Monitoring global development aid with machine learning. *Nature Sustainability*, 5, 533–541. [https://doi.org/10.1038/s41893-022-00874-z](https://doi.org/10.1038/s41893-022-00874-z)
+
+50. [UNEP.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000050) (2021, February 18). Making peace with nature: A scientific blueprint to tackle the climate, biodiversity and pollution emergencies. *UNEP*. Retrieved from [https://www.unep.org/resources/making-peace-nature](https://www.unep.org/resources/making-peace-nature)
+
+51. [U.S. Congress](#c2.xhtml#TNFUK_02_AREV_C002-CIT000051). (2018). Foundations for evidence-based policymaking act of 2018, 5 USC 301 (2019). Public Law No: 115-435 (01/14/2019). Retrieved from [https://www.congress.gov/115/plaws/publ435/PLAW-115publ435.pdf](https://www.congress.gov/115/plaws/publ435/PLAW-115publ435.pdf)
+
+52. [U.S. Whitehouse](#c2.xhtml#TNFUK_02_AREV_C002-CIT000052). (2022). Agency Inventories of AI use Cases, Executive Order 13960, 2022. Retrieved from [https://www.ai.gov/ai-use-case-inventories/](https://www.ai.gov/ai-use-case-inventories/)
+
+53. [van der Vink, G.E.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000053), Carlson, K.N., Phillips, E., et al. (2023). Identifying vulnerability to human trafficking in Bangladesh: An ecosystem approach using weak-signal analysis. *Journal of International Development*, 1–17. [https://doi.org/10.1002/jid.3824](https://doi.org/10.1002/jid.3824)
+
+54. [Vota, W.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000054) (2018, November 21). The Definitive Guide to Mobile Data Collection in International Development. *ICTWorks*. Retrieved from [https://www.ictworks.org/guide-mobile-data-collection/](https://www.ictworks.org/guide-mobile-data-collection/)
+
+55. [Wikipedia](#c2.xhtml#TNFUK_02_AREV_C002-CIT000055). (n.d.). List of Social Platforms with at Least 100 Million Active Users. *Wikipedia*. Retrieved from [https://en.wikipedia.org/wiki/List_of_social_platforms_with_at_least_100_million_active_users](https://en.wikipedia.org/wiki/List_of_social_platforms_with_at_least_100_million_active_users)
+
+56. [World Bank](#c2.xhtml#TNFUK_02_AREV_C002-CIT000056). (2017, April 25). Tapping the potential of drones for development. *World Bank*. Retrieved from [https://www.worldbank.org/en/topic/transport/brief/drones-for-development](https://www.worldbank.org/en/topic/transport/brief/drones-for-development)
+
+57. [York, P.](#c2.xhtml#TNFUK_02_AREV_C002-CIT000057), & Bamberger, M. (2025). The Applications of Big Data to Strengthen Evaluation. In S.B. Nielsen, F. Mazzeo Rinaldi, & G.J. Petersson (Eds.), *Artificial Intelligence and Evaluation: Emerging Technologies and Their Implications for Evaluation* (pp. 37–55). London: Routledge. [https://doi.org/10.4324/9781003512493](https://doi.org/10.4324/9781003512493)
