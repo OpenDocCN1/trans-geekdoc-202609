@@ -1,0 +1,54 @@
+
+# 内部审计的角色重塑与未来展望
+
+以内部审计（IA）为例，其更侧重于向监管机构和外部审计师提供保证，即风险控制在设计和运行层面均有效。现在的问题是如何衡量这种有效性。一种直接的方法是“复制”业务逻辑，然后应用审计控制；另一种则是仅检查高层控制/实施。我们应当注意到，在当前形势下，审计对象的领域知识仍源自业务（因此，审计师无法超越这一知识范畴），且数据通常只是相应业务数据的子集。在考虑自动化（如持续监控和持续审计）时，业务、合规和审计可能使用相似的技术来实现类似的功能。换句话说，IA 可能会“复制”逻辑并重新实现，以自动化方式验证业务结果。这可能会受到少数人的推崇，因为这种*权宜*的自动化可能覆盖某些特定审计主题的“全量”。然而，考虑审计控制/主题的“全面”覆盖（如离散点与系统性视角的对比）可能更有意义。
+
+随着数据中台的建设，共享数据和技术将成为趋势。三道防线最终将基于相同的数据和技术中台（既为了问责也为了透明），尽管访问权限可能不同。事实上，依我之见，三道防线的基础技术几乎相同。^[7] 虽然大多数当前的自动化项目利于短期目标，但审计的创新规划应聚焦长期目标，因为如果整体平台已被“审计”证明为有效且高效，组织通常不需要 IA 进行“重复”工作。因此，随着数字化的进步和共享平台的到来，IA 在组织中的重要性会降低吗？答案是否定的！这取决于如何重新定义角色，例如：
+
+1.  **中层内部监督者**（相较于现有的执行管理层内部监督者），如针对已发生和新兴风险的增强型保证角色。IA 可能不聚焦于“直接”的业务结果验证（这可能是第一、二道防线控制单元的重点）；而是在对平台进行完整审计并实施持续审计/监控后，强调实施和运行的有效性。
+
+2.  **敏捷协调者与协作者**，如从初始设计阶段到最终项目评估阶段全程参与平台/项目（保证端到端生命周期）；审计师不是为了找麻烦，而是为了预防/减少未来的麻烦。协作可通过分享审计知识帮助第一、二道防线避免不必要的问题。凭借第一手知识对任何系统变更的敏捷响应，是敏捷审计的关键之一。
+
+3.  **风险捕获/识别先锋**，即识别因新兴技术（如区块链、数字孪生、复杂 AI 模型及伦理）、新形势和事件（如 COVID-19 大流行）以及新的高影响力变革（如结构性、组织性和政治性变革）而产生的新型风险。
+
+4.  **通用顾问与教育者**，如为目标 GB/GF 提供持续的咨询和教育服务。
+
+因此，IA 应保持独立，但同样重要的是，应保持开放心态、协作与共享。独立性不应成为 IA 停止跨组织及组织外协作的借口。作为支持职能，IA 没有足够的资金用于长期创新。为在数字化世界中保持 IA 的强劲与敏捷，IA 应对内外部合作伙伴的广泛机会保持开放。
+
+审计即服务（AaaS），如[图 1.15](#chap1.xhtml#fig1-15)所示，基于数据平台可行，数据靠近决策模块以提高效率，审计可利用 API 实时或近实时地以灵活配置嵌入业务，适应不同场景。审计决策工作流可能类似于[图 1.16](#chap1.xhtml#fig1-16)。
+
+总之，IA 传统的概念性独立性可能已过时；取而代之的，在共享数据和技术服务方面的更多协作可能是未来。IA 应主动朝此方向重新定位。许多审计自动化项目只是第一、二道防线业务逻辑和风险控制的复制，这可能不是第三道防线的主要工作；相反，更高层级的监督自动化可能更具吸引力。敏捷性也是主要方法，它使 IA 能让审计师参与业务项目、产品和服务的初始设计和最终实施。利用 AI、RPA、自动化等对生命周期进行持续审计，可能更加有效和高效。
+
+![](images/p35.jpg)
+
+**图 1.15.** 云端的 AaaS
+
+![](images/p35-1.jpg)
+
+**图 1.16.** 利用 AI 进行审计决策的工作流
+
+## 参考文献
+
+[1] World Economic Forum and Deloitte, “Beyond Fintech: A Pragmatic Assessment Of Disruptive Potential In Financial Services,” 2017.
+
+[2] B. King, *Bank 4.0: Banking Everywhere, Never at a Bank,* Wiley, 2019.
+
+[3] Toronto Centre, FinTech, RegTech and SupTech: What They Mean for Financial Supervision, Toronto Leadership Centre, 2017.
+
+[4] Z. Deng, Big Data Innovation: *Alibaba’s Cloud-Based Data Middle Platform* (Chinese), Publishing House of Electronics Industry, 2018.
+
+[5] D. Fu, M. Jiang, Y. Ren and S. Sun, *Data Middle Office: Move Data Valuable* (Chinese), China Machine Press, 2020.
+
+[6] C. C. Vergara and L. F. Agudo, “Fintech and Sustainability: Do They Affect Each Other?,” *Sustainability,* Vol. 12, p. 7,012, June 2021.
+
+[7] S. Brown, *The Innovation Ultimatum: How six strategic technologies will reshape every business in the 2020s,* 1, Ed., Wiley, 2020.
+
+---
+
+[¹] 略有不同于[[7]](#chap1.xhtml#rref7)，后者认为关键数字技术包括 AI、DLT/区块链、IoT、自主机器、虚拟与增强现实以及 5G 通信，我们认为后三类是五大核心技术的衍生：AI、区块链、云计算、大数据和 IoT，简称为 ABCDI。
+
+[²] J. Kranjec. “Digital Payments to Hit $6.6T Value in 2021, a 40% Jump in Two Years”. Finaria, <https://www.finaria.it/pr/digital-payments-to-hit-6-6t-value-in-2021-a-40-jump-in-two-years/>. Accessed Nov 20, 2021.
+
+[³] “Global Digital Lending Market (2021 to 2026) — Growth, Trends, COVID-19 Impact. And forecasts — ResearchandMarkets.com”, BusinessWire [Accessed: Nov 20, 2021]. [Online]. Available: <https://www.businesswire.com/news/home/20210406005479/en/Global-Digital-Lending-Market-2021-to-2026---Growth-Trends-COVID-19-Impact-and-Forecasts---ResearchAndMarkets.com>.
+
+[⁴] “Robo-Advisors”. Statista [Accessed: Nov 20, 2021]. [Online]. Available: <https://www.statista.com/outlook/dmo/fintech/personal-finance/robo-advisors/worldwide>
