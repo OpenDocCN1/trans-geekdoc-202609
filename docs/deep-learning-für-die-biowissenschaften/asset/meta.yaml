@@ -1,0 +1,1650 @@
+name: Deep Learning für die Biowissenschaften
+slug: deep-learning-für-die-biowissenschaften
+name_cn: 生物科学深度学习
+toc:
+- - '##'
+  - 生物科学深度学习
+- - '#'
+  - PDBBind 案例研究
+- - '##'
+  - PDBBind 数据集
+- - '##'
+  - 在 PDBBind 数据集中开发特征
+- - '##'
+  - 总结
+- - '#'
+  - 6 基因组学中的深度学习
+- - '##'
+  - DNA、RNA 和蛋白质
+- - '##'
+  - 回到现实
+- - '##'
+  - 转录因子结合
+- - '###'
+  - 用于 TF 结合的卷积模型
+- - '##'
+  - 染色质可及性
+- - '##'
+  - RNA 干扰
+- - '##'
+  - 总结
+- - '#'
+  - 7 显微镜学中的机器学习
+- - '##'
+  - 显微镜学简介
+- - '###'
+  - 现代光学显微镜
+- - '##'
+  - 衍射极限
+- - '###'
+  - 电子显微镜和扫描探针显微镜
+- - '###'
+  - 超分辨显微镜
+- - '###'
+  - 深度学习与衍射极限？
+- - '##'
+  - 为显微镜学准备生物样本
+- - '###'
+  - 染色样本
+- - '###'
+  - 固定样本
+- - '###'
+  - 切片样本
+- - '###'
+  - 荧光显微镜
+- - '###'
+  - 样本制备伪影
+- - '##'
+  - 深度学习应用
+- - '###'
+  - 细胞计数
+- - '###'
+  - 细胞分割
+- - '###'
+  - 计算辅助分析
+- - '##'
+  - 总结
+- - '#'
+  - 8 医学中的深度学习
+- - '##'
+  - 计算机辅助诊断
+- - '###'
+  - 基于贝叶斯网络的概率诊断
+- - '##'
+  - 电子健康记录
+- - '###'
+  - 大型 EHR 数据库的风险何在？
+- - '##'
+  - 深度放射学
+- - '###'
+  - X 光片和 CT 扫描
+- - '###'
+  - 组织学
+- - '###'
+  - MRI 扫描
+- - '##'
+  - 作为治疗手段的学习模型
+- - '###'
+  - 糖尿病视网膜病变
+- - '##'
+  - 总结
+- - '###'
+  - 伦理考量
+- - '###'
+  - 工作岗位流失
+- - '###'
+  - 概要
+- - '#'
+  - 9 生成模型
+- - '##'
+  - 变分自编码器
+- - '##'
+  - 生成对抗网络
+- - '##'
+  - 生成模型在生命科学中的应用
+- - '###'
+  - 为核心结构开发新思路
+- - '###'
+  - 蛋白质设计
+- - '###'
+  - 科学发现工具
+- - '###'
+  - 生成建模的未来
+- - '##'
+  - 使用生成模型
+- - '###'
+  - 分析生成模型的输出
+- - '##'
+  - 总结
+- - '#'
+  - 10 解读深度学习模型
+- - '##'
+  - 解释预测
+- - '##'
+  - 优化输入
+- - '##'
+  - 预测不确定性
+- - '##'
+  - 可解释性、解释性与现实后果
+- - '##'
+  - 总结
+- - '#'
+  - 11 虚拟筛选工作流示例
+- - '##'
+  - 准备数据集
+- - '##'
+  - 训练预测模型
+- - '##'
+  - 准备用于预测的数据集
+- - '##'
+  - 应用预测模型
+- - '##'
+  - 总结
+- - '#'
+  - 12 机遇与展望
+- - '##'
+  - 医学诊断
+- - '##'
+  - 个性化医疗
+- - '##'
+  - 药物开发
+- - '##'
+  - 生物学研究
+- - '##'
+  - 总结
+- - '#'
+  - 索引
+- - '#'
+  - 前言
+- - '##'
+  - 本书使用的约定
+- - '##'
+  - 使用代码示例
+- - '##'
+  - Danksagung
+- - '#'
+  - 第 1 章：为什么是生物科学？
+- - '##'
+  - 为什么是深度学习？
+- - '##'
+  - 在现代生物科学中，数据为王
+- - '#'
+  - 基因测序与数据科学的进展
+- - '##'
+  - 您将学到什么？
+- - '#'
+  - 深度学习在生命科学中的进展与应用
+- - '##'
+  - 医学诊断
+- - '##'
+  - 药物发现与生成模型
+- - '##'
+  - 可解释性与模型准确性
+- - '##'
+  - 案例研究：使用 DeepChem 进行虚拟筛选
+- - '##'
+  - 展望：未来潜力与挑战
+- - '#'
+  - 第 2 章：深度学习简介
+- - '##'
+  - 多层感知机
+- - '##'
+  - 多层感知机作为层的堆叠
+- - '##'
+  - 激活函数
+- - '##'
+  - 宽度和深度
+- - '##'
+  - 训练模型
+- - '#'
+  - 模型改进与验证
+- - '##'
+  - 验证
+- - '##'
+  - 正则化
+- - '##'
+  - 超参数优化
+- - '##'
+  - 其他模型类型
+- - '###'
+  - 卷积神经网络
+- - '###'
+  - 循环神经网络
+- - '###'
+  - 进阶阅读
+- - '#'
+  - 第 3 章：使用 DeepChem 进行机器学习
+- - '##'
+  - DeepChem 数据集
+- - '##'
+  - 训练预测分子毒性的模型
+- - '#'
+  - 每十二个任务中的每一个都对应一个生物学实验
+- - '##'
+  - 需要多少生物学知识？
+- - '##'
+  - 本书后续章节中的生物学基础
+- - '#'
+  - 检查 Tox21 数据集
+- - '##'
+  - 分析数据集形状
+- - '##'
+  - 处理缺失标签
+- - '##'
+  - 数据集处理是一项挑战
+- - '#'
+  - 检查 Transformer
+- - '###'
+  - ROC AUC
+- - '##'
+  - 案例研究：训练 MNIST 模型
+- - '###'
+  - MNIST 数据集
+- - '###'
+  - 用于 MNIST 的卷积架构
+- - '###'
+  - '**SoftMax 和 SoftMaxCrossEntropy**'
+- - '###'
+  - '**总结**'
+- - '#'
+  - 第 4 章：分子机器学习
+- - '##'
+  - 什么是分子？
+- - '###'
+  - 什么是分子键？
+- - '###'
+  - 共价键
+- - '###'
+  - 非共价键
+- - '###'
+  - 分子图
+- - '###'
+  - 分子构象
+- - '###'
+  - 分子手性
+- - '###'
+  - 分子的特征化
+- - '####'
+  - SMILES 字符串与 RDKit
+- - '####'
+  - 连接性指纹
+- - '#'
+  - arr 是一个 2 x 1024 的数组，包含
+- - '#'
+  - 两个分子的指纹
+- - '####'
+  - 分子描述符
+- - '#'
+  - arr 是一个 2 x 111 的数组，包含
+- - '#'
+  - 两个分子的属性
+- - '###'
+  - 图卷积
+- - '###'
+  - 训练一个预测溶解度的模型
+- - '###'
+  - MoleculeNet
+- - '####'
+  - SMARTS 字符串
+- - '###'
+  - 总结
+- - '#'
+  - 第 5 章：生物物理机器学习
+- - '#'
+  - 蛋白质结构与机器学习
+- - '##'
+  - 为何称为生物物理学？
+- - '##'
+  - 深度学习与物理学
+- - '##'
+  - 蛋白质结构
+- - '#'
+  - 图 5-1：枯草杆菌 CapD 蛋白的一种晶体结构，即炭疽病的病原体。确定细菌蛋白的结构可以成为设计新型抗生素的有效工具。更广泛地说，识别治疗相关蛋白的结构是现代药物发现中最重要的步骤之一。
+- - '##'
+  - 蛋白质序列
+- - '##'
+  - 我们能否通过计算预测 3-D 结构？
+- - '##'
+  - 蛋白质结合简介
+- - '#'
+  - 计算预测很难
+- - '##'
+  - 生物物理特性
+- - '###'
+  - PDB 文件及其陷阱
+- - '##'
+  - 网格特征化
+- - '###'
+  - 氢键
+- - '###'
+  - 盐桥
+- - '##'
+  - Salzbrücken
+- - '##'
+  - π-π-Wechselwirkungen
+- - '##'
+  - Fingerabdrücke
+- - '##'
+  - Einige Details zur Implementierung
+- - '##'
+  - Atomare Featurisierung
+- - '#'
+  - PDBBind 案例研究
+- - '##'
+  - PDBBind 数据集
+- - '#'
+  - 图 5-10：来自 PDBBind 数据集的 2D3U 蛋白-配体复合物的可视化
+- - '##'
+  - 蛋白质可视化工具
+- - '#'
+  - 在 PDBBind 数据集中开发特征
+- - '##'
+  - 体素化
+- - '##'
+  - 基线模型
+- - '##'
+  - 许多架构可产生相似效果
+- - '##'
+  - Wo liegen die Unterschiede dieser Architekturen?
+- - '###'
+  - Fazit
+- - '#'
+  - 第 6 章：基因组学中的深度学习
+- - '###'
+  - DNA, RNA und Proteine
+- - '#'
+  - DNA ist ein Polymer
+- - '##'
+  - Proteine als Hardware
+- - '##'
+  - Speicherung der Aminosäuresequenzen
+- - '##'
+  - Von DNA zum Protein
+- - '##'
+  - Regulationsmechanismen
+- - '##'
+  - Zusammenfassung des einfachen Modells
+- - '#'
+  - Und nun zur Wirklichkeit
+- - '##'
+  - Chromosomen und Histone
+- - '##'
+  - DNA-Methylierung
+- - '##'
+  - Spleißen und Spleißvarianten
+- - '##'
+  - Fazit
+- - '#'
+  - 'RNA: 不仅仅是信息传递者'
+- - '##'
+  - Transkriptionsfaktor-Bindung（转录因子结合）
+- - '###'
+  - Ein Konvolutionsmodell für die TF-Bindung（用于 TF 结合的卷积模型）
+- - '#'
+  - 使用卷积神经网络进行数据处理
+- - '##'
+  - 模型创建与输入定义
+- - '##'
+  - 卷积层
+- - '##'
+  - 输出计算
+- - '##'
+  - 损失函数
+- - '##'
+  - 训练与评估
+- - '##'
+  - 染色质可及性
+- - '###'
+  - RNA 干扰
+- - '###'
+  - 总结
+- - '#'
+  - 第 7 章：显微镜中的机器学习
+- - '###'
+  - 自动化高通量显微镜图像分析
+- - '###'
+  - 显微镜简介
+- - '####'
+  - 现代光学显微镜
+- - '###'
+  - 衍射极限
+- - '####'
+  - 电子显微镜和扫描力显微镜
+- - '####'
+  - 超分辨率显微镜
+- - '###'
+  - 功能性超分辨率显微镜
+- - '###'
+  - 确定性超分辨率显微镜
+- - '###'
+  - 随机性超分辨率显微镜
+- - '####'
+  - 深度学习与衍射极限？
+- - '###'
+  - 为显微镜准备生物样本
+- - '####'
+  - 样本染色
+- - '####'
+  - 样本固定
+- - '####'
+  - 样本切片
+- - '####'
+  - 荧光显微镜
+- - '#####'
+  - 荧光团与荧光标记
+- - '####'
+  - 样本制备伪影
+- - '#####'
+  - 中间体：一个虚构的细胞器
+- - '###'
+  - 深度学习应用
+- - '####'
+  - 细胞计数
+- - '#####'
+  - 什么是细胞系？
+- - '#####'
+  - 在 DeepChem 中实现细胞计数
+- - '##'
+  - 细胞分割
+- - '###'
+  - DeepChem 中的细胞分割实现
+- - '#'
+  - 医学中的深度学习
+- - '##'
+  - 代码示例：用于图像分割的 U-Net
+- - '#'
+  - 三次下采样
+- - '#'
+  - 1x1 卷积（瓶颈层）
+- - '#'
+  - 三次上采样（带跳跃连接）
+- - '#'
+  - 计算输出
+- - '##'
+  - 计算辅助分析
+- - '##'
+  - 总结
+- - '#'
+  - 第 8 章：医学中的深度学习
+- - '##'
+  - 计算机辅助诊断与医学中的早期 AI 方法
+- - '##'
+  - 计算机辅助诊断
+- - '##'
+  - 基于贝叶斯网络的概率诊断
+- - '##'
+  - 电子健康档案
+- - '#'
+  - Die große Akzeptanz von EHR-Systemen
+- - '##'
+  - ICD-10-Codes
+- - '###'
+  - Fast Healthcare Interoperability Resources (FHIR)
+- - '##'
+  - Was ist mit unüberwachtem Lernen?
+- - '##'
+  - Worin liegen die Gefahren großer EHR-Daten库?
+- - '###'
+  - Helfen EHRs Ärzten wirklich?
+- - '###'
+  - 深度放射学
+- - '####'
+  - X 光片和 CT 扫描
+- - '####'
+  - Histologie
+- - '####'
+  - MRT-Scans
+- - '###'
+  - Lernmodelle als Therapeutika
+- - '###'
+  - Diabetische Retinopathie
+- - '#'
+  - 糖尿病视网膜病变
+- - '#'
+  - 定义并创建模型
+- - '###'
+  - Fazit
+- - '####'
+  - Ethische Überlegungen
+- - '####'
+  - Arbeitsplatzverluste
+- - '####'
+  - Zusammenfassung
+- - '#'
+  - 第 9 章：生成模型
+- - '#'
+  - 生成模型
+- - '##'
+  - 变分自编码器
+- - '##'
+  - 生成对抗网络
+- - '###'
+  - 生成式模型在生命科学中的应用
+- - '####'
+  - 为核心结构开发新思路
+- - '####'
+  - 蛋白质设计
+- - '####'
+  - 科学发现的工具
+- - '####'
+  - 生成式建模的未来
+- - '###'
+  - 使用生成式模型
+- - '##'
+  - 代码示例：训练用于分子生成的 VAE
+- - '###'
+  - 加载训练数据
+- - '###'
+  - 定义词汇表
+- - '###'
+  - 创建模型
+- - '###'
+  - 训练模型
+- - '###'
+  - 生成新分子
+- - '##'
+  - 分析生成模型的输出
+- - '#'
+  - '23'
+- - '#'
+  - Bewertung generierter Moleküle
+- - '##'
+  - Fazit
+- - '#'
+  - 第 10 章：解读深度学习模型
+- - '##'
+  - 解释预测
+- - '##'
+  - Saliency Mapping und Eingabeoptimierung
+- - '###'
+  - Eingaben optimieren
+- - '###'
+  - 预测不确定性
+- - '###'
+  - 可解释性、可说明性与现实后果
+- - '###'
+  - 总结
+- - '#'
+  - 第 11 章：虚拟筛选工作流示例
+- - '###'
+  - 准备数据集
+- - '##'
+  - 训练预测模型
+- - '###'
+  - 为预测准备数据集
+- - '#'
+  - 表 11-4：基于 zinc.CSV 的 DataFrame 的前几行
+- - '##'
+  - 表 11-5：使用最频繁的五个过滤器
+- - '#'
+  - 应用预测模型
+- - '#'
+  - 添加一个虚拟列以满足特征化器要求
+- - '##'
+  - 表 11-6：创建的 DataFrame 的前几行
+- - '#'
+  - 'Abbildung 11-11: Chemische Strukturen der Moleküle mit den höchsten Scores'
+- - '#'
+  - 'Abbildung 11-12: Skelettformeln der Moleküle mit den höchsten Scores. Die Werte
+    unterhalb der Strukturen sind Scores des Modells'
+- - '#'
+  - 'Abbildung 11-13: Berechnung eines Tanimoto-Koeffizienten'
+- - '#'
+  - 'Abbildung 11-14: Die ersten Zeilen des geclusterten Datensatzes'
+- - '#'
+  - Fazit
+- - '#'
+  - 第 12 章：机遇与展望
+- - '#'
+  - Chancen und Perspektiven
+- - '#'
+  - 生命科学与深度学习
+- - '##'
+  - 医学诊断
+- - '##'
+  - 个性化医疗
+- - '###'
+  - 药物研发
+- - '###'
+  - 生物学研究
+- - '##'
+  - 结论
+- - '##'
+  - 脚注
+- - '###'
+  - 第 1 章 为什么是生物科学？
+- - '###'
+  - 第 4 章 分子机器学习
+- - '###'
+  - 第 6 章 基因组学中的深度学习
+- - '###'
+  - 第 7 章 显微镜中的机器学习
+- - '###'
+  - 第 8 章 医学中的深度学习
+- - '###'
+  - 第 9 章 生成模型
+- - '###'
+  - 第 10 章 解读深度学习模型
+- - '##'
+  - KAPITEL 12 Chancen und Perspektiven
+- - '##'
+  - Index
+- - '###'
+  - Symbole
+- - '###'
+  - A
+- - '###'
+  - B
+- - '#'
+  - Primer zur Proteinbindung 67
+- - '##'
+  - Proteinsequenz 65
+- - '##'
+  - rechnergestützte Vorhersage von 66
+- - '#'
+  - Biowissenschaften
+- - '##'
+  - Bedeutung der biomedizinischen Forschung 1
+- - '##'
+  - zeitgemäß, Vertrauen auf Daten 2
+- - '#'
+  - Boten-RNA (mRNA) 87
+- - '#'
+  - RNA-Interferenz 96
+- - '#'
+  - Translation in Proteine 88
+- - '#'
+  - Boxplot 178
+- - '#'
+  - Verteilung der Formalladung von aktiven und neutralisierten inaktiven Molekülen
+    vergleichen 181
+- - '#'
+  - vorhergesagte Werte für aktive und inaktive Moleküle vergleichen 185
+- - '#'
+  - Butina-Clustering 195
+- - '#'
+  - '**C**'
+- - '##'
+  - CellProfiler 102
+- - '##'
+  - Chaperone 89
+- - '##'
+  - chemische Informatik (Cheminformatik) 3
+- - '##'
+  - chemische Verbindungen 44, 46–48
+- - '###'
+  - kovalent 46
+- - '###'
+  - nicht kovalent 47
+- - '###'
+  - Umwandlung in Kanten in Molekülgraphen 48
+- - '##'
+  - chemische Wertigkeit, erzeugte Moleküle 158
+- - '##'
+  - chemischer Fingerabdruck 194
+- - '##'
+  - Chiralität von Molekülen 50
+- - '##'
+  - Chromatin 93
+- - '##'
+  - Chromosom 87
+- - '##'
+  - CNNs *siehe* Convolutional Neural Networks
+- - '##'
+  - Code-Repository für dieses Buch 76
+- - '##'
+  - computerunterstützte Diagnostik (in der Medizin) 127–128, 199–201
+- - '##'
+  - Convolutional Neural Networks (CNNs) 21, 205
+- - '###'
+  - für diabetische Retinopathie-Bilder 142
+- - '###'
+  - für die Bilderkennung 53
+- - '###'
+  - für die TF-Bindung 91–93
+- - '###'
+  - für die Zellzählung in Deep-Learning-Anwendungen 119
+- - '###'
+  - Konvolutionsmodelle für Scans in der Radiologie 133
+- - '###'
+  - mit CT-Scans zur Klassifizierung des Fortschreitens von Alzheimer 137
+- - '###'
+  - Trainieren auf dem MNIST-Ziffernerkennungsdatensatz 35–41
+- - '##'
+  - Convolution-Kernel 22
+- - '##'
+  - CPUs, Schwierigkeiten beim Umgang mit Deep-Learning-Workloads 41
+- - '##'
+  - csv-Dateien
+- - '###'
+  - für Informationen von aktiven和 inaktiven Molekülen 181
+- - '###'
+  - Pandas-Funktion `read_CSV` 176
+- - '##'
+  - CT-(Computertomografie-)Scans 135–138
+- - '##'
+  - Deep Learning in der Signalverarbeitung 139
+- - '##'
+  - Cytosin (C) 86
+- - '#'
+  - '**D**'
+- - '##'
+  - Daten, Bedeutung in den modernen Biowissenschaften 2
+- - '##'
+  - Daten库在 den Biowissenschaften 3
+- - '##'
+  - Datenpunkte 15
+- - '##'
+  - Datensätze
+- - '###'
+  - BBBC-Datensätze 118
+- - '###'
+  - DeepChem-Dataset-Objekt 26
+- - '###'
+  - Featurization 28
+- - '###'
+  - Trainings-, Validierungs-和 Testdatensätze, die in DeepChem zur Vorhersage der
+    Toxizität von Molekülen verwendet werden 29
+- - '###'
+  - Trainingsdatensatz 15
+- - '###'
+  - Verarbeiten und Bereinigen, Herausforderungen von 31
+- - '###'
+  - Verarbeiten von Bilddatensätzen 119
+- - '###'
+  - Verwendung in den Biowissenschaften 3
+- - '###'
+  - Vorbereitung, für die Modellvorhersage für Beispiel in virtuellem Screening 187–190
+- - '###'
+  - Vorbereitung, für die Vorhersagemodellierung im virtuellen Screening 176
+- - '##'
+  - Datenschutzbedenken
+- - '###'
+  - Anwendung von Deep Learning in der Medizin 145
+- - '###'
+  - für Deep-Learning-Datensätze in der medizinischen Diagnostik 200
+- - '##'
+  - Daylight Theory Manual 58
+- - '##'
+  - '`dc.models.Model`, Klasse 32'
+- - '##'
+  - '`dc.molnet`, Mod块 29'
+- - '##'
+  - Decoder/Encoder 148
+- - '##'
+  - Deep Learning
+- - '###'
+  - Chancen und Perspektiven 199–205
+- - '###'
+  - in der biologischen Forschung 204
+- - '###'
+  - in der medizinischen Diagnostik 199–201
+- - '###'
+  - in der pharmazeutischen Entwicklung 202–204
+- - '###'
+  - Einführung in 9–24
+- - '###'
+  - Hyperparameteroptimierung 19
+- - '###'
+  - lineare Modelle 10–12
+- - '###'
+  - mathematische Funktionen für die meisten Fragestellungen 9
+- - '###'
+  - mehrlagige Perzeptronen 12–15
+- - '###'
+  - Modelle trainieren 15–17
+- - '###'
+  - Modelle, andere Arten von 20–23
+- - '###'
+  - Regularisierung 18
+- - '###'
+  - Validierung 17
+- - '###'
+  - Entwickeln von Antibiotika für gramnegative Bakterien 113
+- - '###'
+  - Fortschritte durch Anwendung von 2
+- - '###'
+  - Hintergrundwissen, Ressourcen zum Weiterlesen 23
+- - '###'
+  - in der Genomik 85–99
+- - '####'
+  - Bindung des Transkriptionsfaktors 90–93
+- - '####'
+  - einzigartige Eignung von Deep Learning 89
+- - '####'
+  - RNA-Interferenz 96–99
+- - '####'
+  - Zugänglichkeit von Chromatin 93–96
+- - '###'
+  - in der Medizin 127–146
+- - '####'
+  - Anwendungen in der Radiologie 133–139
+- - '####'
+  - Arbeitsplatzverluste und 145
+- - '####'
+  - computerunterstützte Diagnostik 127–128
+- - '####'
+  - Diagnose des Fortschreitens der diabetischen Retinopathie 140–144
+- - '####'
+  - elektronische Gesundheitsakte (EHR) 130–133
+- - '####'
+  - ethische Überlegungen 144
+- - '####'
+  - Lernmodelle als Therapeutika 139
+- - '####'
+  - probabilistische Diagnosen mit Bayes'schen Netzen 128
+- - '####'
+  - tiefe Netze vs. Expertensysteme und Bayes'sche Netze 130
+- - '###'
+  - neue Möglichkeiten der Planung der Synthese von wirkstoffartigen Molekülen 159
+- - '###'
+  - superauflösende Methoden 111
+- - '###'
+  - Überwindung der Beugungsgrenze 111
+- - '##'
+  - Deep Neural Networks 1
+- - '#'
+  - 索引
+- - '##'
+  - A
+- - '##'
+  - I
+- - '##'
+  - D
+- - '##'
+  - E
+- - '##'
+  - F
+- - '#'
+  - Mittlere quadratische Wurzel (RMSE) 168
+- - '#'
+  - Fehlerfunktion (für Trainingsdatensätze) 15
+- - '#'
+  - Filter für störende Moleküle in biologischen Assays 187
+- - '#'
+  - Fixiermittel 113
+- - '#'
+  - Fixierung biologischer Proben für die Mikroskopie 113
+- - '#'
+  - flache Modelle 14
+- - '##'
+  - vs. tiefe Modelle 14
+- - '#'
+  - Fläche unter der Kurve 33
+- - '#'
+  - Fluoreszenzmikroskopie 114–116
+- - '##'
+  - Deep Learning und 125
+- - '#'
+  - Fluoreszenzmarkierung 115
+- - '#'
+  - Fluorophor 115
+- - '#'
+  - Fortschreiten von Alzheimer, Klassifizierung mit Deep Learning 137
+- - '#'
+  - Fundusbilder 140
+- - '#'
+  - funktionelle superauflösende Mikroskopie 110
+- - '#'
+  - Funktionen
+- - '##'
+  - Design im Machine Learning 10
+- - '##'
+  - Grundfunktionen für viele Fragestellungen des Deep Learning 9
+- - '##'
+  - in mehrlagigen Perzeptronen 12
+- - '##'
+  - universeller Approximator 14
+- - '#'
+  - '**G**'
+- - '#'
+  - Gated Recurrent Unit (GRU) 23
+- - '#'
+  - Gehirn, große Auswirkungen moderner Software auf das 140
+- - '#'
+  - Gehirnfunktionen, neuronale Netze ausführen 204
+- - '#'
+  - Genauigkeit, nahezu menschliche, bei medizinischen Deep-Learning-Systemen 137
+- - '#'
+  - Gene 87
+- - '##'
+  - deaktivieren, mit RNA-Interferenz 97
+- - '##'
+  - Spleißvarianten 88
+- - '#'
+  - Generative Adversarial Networks (GANs) 149–151
+- - '##'
+  - Entwicklung von 152
+- - '##'
+  - gegensätzlicher Aspekt 150
+- - '##'
+  - Struktur von 150
+- - '##'
+  - vs. VAEs 150
+- - '#'
+  - generative Modelle 6, 147–160
+- - '##'
+  - Anwendungen in den Biowissenschaften 151–153
+- - '###'
+  - Proteindesign 152
+- - '###'
+  - Tool für wissenschaftliche Entdeckungen 152
+- - '###'
+  - Zukunft generativer Modellierung 152
+- - '##'
+  - Arbeiten mit 153
+- - '###'
+  - Analysieren der Ausgabe 155
+- - '###'
+  - Entwicklung neuer Ideen für Wirkstoffe 151
+- - '###'
+  - Erzeugen neuer Moleküle, Schlüsselfragen 158
+- - '###'
+  - Generative Adversarial Networks (GANs) 149–151
+- - '###'
+  - Variational Autoencoder (VAEs) 147–149
+- - '##'
+  - Generator (in GANs) 149
+- - '#'
+  - Genetik 5
+- - '##'
+  - vs. Genomik 85
+- - '#'
+  - Genom 85
+- - '#'
+  - Genomik 5, 85–99
+- - '##'
+  - Bindung des Transkriptionsfaktors 90–93
+- - '##'
+  - Datenschutzbedenken für Datensätze 200
+- - '##'
+  - Deep Learning in der
+- - '###'
+  - Optimieren der Eingaben für Modelle der TF-Bindung 165–168
+- - '##'
+  - DNA, RNA und Proteine 85–87
+- - '##'
+  - RNA-Interferenz 96–99
+- - '##'
+  - vs. Genetik 85
+- - '##'
+  - wie Genome wirklich funktionieren 87–90
+- - '##'
+  - Zugänglichkeit von Chromatin 93–96
+- - '#'
+  - geometrische Konfigurationen, Proteinbindung和 73
+- - '#'
+  - Gesundheitsakte (elektronisch) 130–133
+- - '#'
+  - Gewebeentwicklungsvorgang, generative Modelle für 152
+- - '#'
+  - Gewichte 10
+- - '#'
+  - GPUs
+- - '##'
+  - hochauflösende Bilder和 142
+- - '##'
+  - Verarbeiten der Zellzählung im DeepChem-Datensatz 120
+- - '##'
+  - Vorteile für laufende Deep-Learning-Workloads 41
+- - '#'
+  - Gradientenverfahren 16
+- - '#'
+  - Graph Convolutional Networks 54
+- - '#'
+  - Graph Convolutions 53
+- - '##'
+  - Umwandeln von SMILES-Strings in, mit DeepChem-Featurizer 55
+- - '#'
+  - Graphen (molekular) 48, 54
+- - '#'
+  - Grid Featurization 69–74
+- - '##'
+  - π-π-Wechselwirkungen 71
+- - '##'
+  - DeepChem und RdkitGridFeaturizer 70
+- - '##'
+  - Erstellen von RdkitGridFeaturizer für PDBBind 78
+- - '##'
+  - Fingerabdrücke 73
+- - '##'
+  - Implementierungsdetails für DeepChemRDkitGridFeaturizer 73
+- - '##'
+  - mit MLP verwenden, um Protein-Ligand-Strukturen in DeepChem vorherzusagen 80
+- - '##'
+  - Salzbrücken 71
+- - '##'
+  - Wasserstoffbrücken 70
+- - '#'
+  - GRU (Gated Recurrent Unit) 23
+- - '#'
+  - Guanin (G) 86
+- - '#'
+  - '**H**'
+- - '#'
+  - Halbacetal 158
+- - '#'
+  - Hidden-Layer (in MLPs) 12
+- - '#'
+  - Hinton, Geoffrey 135
+- - '#'
+  - Histologie 138
+- - '#'
+  - Histone 87
+- - '#'
+  - hochauflösende Bilder 142
+- - '#'
+  - homolog 67
+- - '#'
+  - Homologie-Modellierung 67
+- - '#'
+  - hyperbolischer Tangens 13
+- - '#'
+  - Hyperparameter 4, 19
+- - '#'
+  - Hyperparameteroptimierung 20
+- - '#'
+  - '**I**'
+- - '#'
+  - ICD-10-Codes 131
+- - '#'
+  - ImageLoader (DeepChem), Klasse 118
+- - '#'
+  - Immersionsfixierung 113
+- - '#'
+  - inaktive Moleküle *siehe* `aktive und inaktive Moleküle`
+- - '#'
+  - Inferenztechniken in Expertensystemen 127
+- - '#'
+  - Interpretation von tiefen Modellen
+- - '##'
+  - Interpretierbarkeit und Erklärbarkeit in der personalisierten Medizin 201
+- - '##'
+  - Interpretierbarkeit 161
+- - '##'
+  - Interpretieren von Deep-Learning-Modellen 161–173
+- - '###'
+  - Eingaben optimieren 165–168
+- - '###'
+  - Interpretierbarkeit, Erklärbarkeit和 reale Konsequenzen 172
+- - '###'
+  - Vorhersagen erklären 161–164
+- - '#'
+  - ionische Bindung
+- - '#'
+  - 索引
+- - '##'
+  - I
+- - '##'
+  - J
+- - '##'
+  - K
+- - '##'
+  - L
+- - '##'
+  - M
+- - '#'
+  - Matthews-Korrelationskoeffizient (MCC) 183
+- - '##'
+  - Mikroskopie 5, 101–126
+- - '###'
+  - Beugungsgrenze 106–112
+- - '###'
+  - Deep Learning 和 111
+- - '###'
+  - superauflösende Mikroskopie 110
+- - '###'
+  - umgehen mittels Elektronen-和 Rasterkraftmikroskopie 108
+- - '###'
+  - Deep-Learning-Anwendungen 117–125
+- - '####'
+  - rechnergestützte Assays 124
+- - '####'
+  - Zellsegmentierung 120–124
+- - '####'
+  - Zellzählung 117, 120
+- - '####'
+  - Einführung in 103–106
+- - '####'
+  - zeitgemäße Lichtmikroskopie 104
+- - '####'
+  - Machine Learning für die automatisierte hochauflösende Bildanalyse 102
+- - '####'
+  - Grenzen des Deep Learning 106
+- - '####'
+  - Vorbereiten biologischer Proben für die 112–117
+- - '#####'
+  - Artefakte der Probenvorbereitung 116
+- - '#####'
+  - Einfärben 112
+- - '#####'
+  - Fluoreszenzmikroskopie 114–116
+- - '#####'
+  - Gründe, die Entwickler verstehen sollten 112
+- - '#####'
+  - Nachverfolgen der Proben 117
+- - '#####'
+  - Probenfixierung 113
+- - '#####'
+  - Schneiden der Proben 113
+- - '#####'
+  - Mikrotom 114
+- - '##'
+  - Modelle 20–23
+- - '###'
+  - Baseline 80
+- - '###'
+  - Brüchigkeit von visuellen Konvolutionsmodellen 125
+- - '###'
+  - Convolutional Neural Networks (CNNs) 21
+- - '###'
+  - Deep Learning, Schwierigkeiten bei der Interpretation von 6
+- - '###'
+  - DeepChem, biowissenschaftliche Modelle 32
+- - '###'
+  - diskriminative 和 generative 6
+- - '###'
+  - eine Klasse von Funktionen definieren 10
+- - '###'
+  - generative 147–160
+- - '####'
+  - Anwendungen in den Biowissenschaften 151–153
+- - '####'
+  - arbeiten mit 153
+- - '####'
+  - Generative Adversarial Networks (GANs) 149–151
+- - '####'
+  - Variational Autoencoder (VAEs) 147–149
+- - '###'
+  - Interpretierbarkeit von 135
+- - '###'
+  - Interpretieren von Deep-Learning-Modellen 161–173
+- - '####'
+  - Eingaben optimieren 165–168
+- - '####'
+  - Interpretierbarkeit, Erklärbarkeit和 reale Konsequenzen 172
+- - '####'
+  - Vorhersagen erklären 161–164
+- - '###'
+  - linear 10–12
+- - '###'
+  - Recurrent Neural Networks (RNNs) 22
+- - '###'
+  - trainieren 15–17
+- - '###'
+  - vorgefertigtes Modell, Verwendung von 35
+- - '###'
+  - Modelle trainieren 15–17
+- - '####'
+  - DeepChem-Fallstudie, Trainieren eines MNIST-Modells 34–41
+- - '####'
+  - Konvolutionsmodell für die Zellzählung 120
+- - '####'
+  - Konvolutionsmod型与 RNA-Interferenz 98
+- - '####'
+  - tiefe vs. flache Modelle 14
+- - '####'
+  - um die molekulare Löslichkeit vorherzusagen 54–56
+- - '####'
+  - Vorhersagemodell im Beispiel zu virtuellem Screening 182–187
+- - '####'
+  - zur Vorhersage der Toxizität von Molekülen, mit DeepChem 27–34
+- - '###'
+  - MoleculeNet 56–59
+- - '####'
+  - Grid-Featurizer für den PDBBind-Datensatz 79
+- - '####'
+  - MUV-Datensatz 153
+- - '####'
+  - SMARTS-Strings 56
+- - '####'
+  - Tox21-Datensatz 27
+- - '###'
+  - molekulare Featurizations 43
+- - '##'
+  - Moleküle
+- - '###'
+  - Anwendung von Machine Learning 4
+- - '###'
+  - clustern 191, 195
+- - '###'
+  - Erzeugen neuer mit generativen Modellen 158
+- - '###'
+  - mit VAE 153
+- - '###'
+  - Untersuchen von SMILES-Strings, die darstellen 156
+- - '###'
+  - generative Modelle molekularer Strukturen 151
+- - '###'
+  - Machine Learning mit molekularen Daten 51–59
+- - '####'
+  - Graph Convolutions 53
+- - '####'
+  - Löslichkeitsmodell, Unsicherheit der Vorhersagen 168–172
+- - '####'
+  - Merkmale für Moleküle entwickeln 51–53
+- - '####'
+  - MoleculeNet 56–59
+- - '####'
+  - Trainieren eines Modells zur Vorhersage der Löslichkeit 54–56
+- - '###'
+  - Standarddarstellung 9
+- - '###'
+  - Trainieren des Modells zur Vorhersage der Toxizität von, mit DeepChem 27–34
+- - '###'
+  - Übersicht über die 44–51
+- - '####'
+  - Chiralität 50
+- - '####'
+  - dynamisch, Quanteneinheiten 46
+- - '####'
+  - Identifizierung von Molekülen mit der Massenspektrometrie 44
+- - '####'
+  - molekulare Bindungen 46–48
+- - '####'
+  - molekulare Konformationen 49–50
+- - '####'
+  - Molekülgraph 48
+- - '###'
+  - Deep Learning in der Signalverarbeitung 139
+- - '##'
+  - N
+- - '#'
+  - Mehrlagige Perzeptronen和 ihre Varianten 13
+- - '#'
+  - Rekurrente Neuronale Netze (RNNs) 22
+- - '#'
+  - Wahre vs. vorhergesagte Labels bei der Ausführung auf den Testdaten 81
+- - '#'
+  - Neuronales Netz 204
+- - '#'
+  - NGLView (Proteinvisualisierung) 77
+- - '#'
+  - Nicht-kovalente Bindungen 47
+- - '#'
+  - Nichtlinearität (in MLPs) 12
+- - '#'
+  - NMR *siehe* Kernspinresonanz
+- - '#'
+  - Nukleinsäure 75
+- - '#'
+  - NumPy-Arrays 73, 119
+- - '#'
+  - NumpyDataset-Objekt 26
+- - '##'
+  - O
+- - '#'
+  - One-Hot-Codierung 38
+- - '#'
+  - Im Konvolutionsmodell für die TF-Bindung 91
+- - '#'
+  - Optimierungsalgorithmen im Deep Learning 17
+- - '#'
+  - Optisches Schneiden 104
+- - '#'
+  - Overfitting 17, 55, 79, 81, 99
+- - '#'
+  - CNNs vs. MLPs 22
+- - '#'
+  - Hyperparameteroptimierung 和 20
+- - '#'
+  - Vermeiden
+- - '#'
+  - Im Konvolutionsmodell für die TF-Bindung 92
+- - '#'
+  - Regularisierung verwenden 18–19
+- - '##'
+  - P
+- - '#'
+  - Pandas-DataFrame 176
+- - '#'
+  - Active_df-DataFrame untersuchen 177
+- - '#'
+  - DataFrames mit aktiven和 inaktiven Molekülen kombinieren 178
+- - '#'
+  - Decoy_df-DataFrame untersuchen 177
+- - '#'
+  - Erstellen eines neuen DataFrame für SMILES-Strings, IDs 和 Labels für inaktive
+    Moleküle 180
+- - '#'
+  - Hinzufügen berechneter Eigenschaften aktiver和 inaktiven Moleküle zu 177
+- - '#'
+  - Option shape gibt die Anzahl an Zeilen和 Spalten zurück 180
+- - '#'
+  - Parameter
+- - '#'
+  - Begrenzen der Größe beim Trainieren von Modellen 19
+- - '#'
+  - Für von einem Modell definierte Funktionen 10
+- - '#'
+  - Hyperparameteroptimierung 19
+- - '#'
+  - PDB *siehe* Protein Data Bank
+- - '#'
+  - PDBBind-Datensatz 62, 74–82
+- - '#'
+  - Strukturen von biomolekularen Komplexen 75
+- - '#'
+  - Pearson-Korrelationskoeffizient 55
+- - '#'
+  - Entwicklung des Konvolutionsmodells für die TF-Bindung während des Trainings 98
+- - '#'
+  - Für ein Konvolutionsmodell mit RNA-Interferenz 98
+- - '#'
+  - Pearson R²\-Score 80
+- - '#'
+  - Peptide 66
+- - '#'
+  - Perfusionsmethode für die Probenfixierung 113
+- - '#'
+  - Personalisierte Medizin 201
+- - '#'
+  - Perzeptronen 10
+- - '#'
+  - Mehrlagige 12–15
+- - '#'
+  - Phototoxizität 107
+- - '#'
+  - Mit Elektronenmikroskopen 108
+- - '#'
+  - Physikalische Modellierung von Proteinstrukturen 67
+- - '#'
+  - Plancks Konstante 108
+- - '#'
+  - Polypharmakologie 61
+- - '#'
+  - Positions-Gewichts-Matrix 90
+- - '#'
+  - Präklinische Studien 203
+- - '#'
+  - Proben für die Mikroskopie, Vorbereitung *siehe* Mikroskopie
+- - '#'
+  - Protein Data Bank (PDB) 64
+- - '#'
+  - PDB-Datei für Protein-Ligand-Komplex 2D3U 76
+- - '#'
+  - PDB-Dateien和 ihre Fallstricke 69
+- - '#'
+  - Protein-DNA-Wechselwirkungen 82
+- - '#'
+  - Proteine
+- - '#'
+  - Beschreibung der Funktionsweise von Genomen in der Praxis 87–90
+- - '#'
+  - Design von 152
+- - '#'
+  - DNA, RNA 和 Proteine 85–87
+- - '#'
+  - Konformationen 49
+- - '#'
+  - PDBBind-Fallstudie 74–82
+- - '#'
+  - Strukturen 63–66
+- - '#'
+  - Primer zur Proteinbindung 67
+- - '#'
+  - Proteinsequenz 65
+- - '#'
+  - Rechnergestützte Vorhersage von 66
+- - '#'
+  - Targeting eines Arzneistoffs 61
+- - '#'
+  - Visualisierungstools 78
+- - '#'
+  - Wechselwirkungen zwischen Arzneimittelmolekülen和 6
+- - '#'
+  - Protein-Ligand-Strukturen 62
+- - '#'
+  - Protein-Protein-Wechselwirkungen 82
+- - '#'
+  - Python
+- - '#'
+  - Generatorfunktion, um über Batches zu iterieren 95
+- - '#'
+  - NumPy-Arrays 119
+- - '#'
+  - NumpyDataset-Objekt 26
+- - '#'
+  - Script rd_filters.py 187
+- - '#'
+  - PyTorch 25
+- - '##'
+  - Q
+- - '#'
+  - QED-Metrik für Moleküle 156
+- - '#'
+  - Quanteneinheiten, Moleküle als 46
+- - '##'
+  - R
+- - '#'
+  - Racemische Mischungen 50
+- - '#'
+  - Radiologie, Deep Learning in der 133–139
+- - '#'
+  - Andere Arten von Scans 139
+- - '#'
+  - Fragen darüber, was Deep-Learning-Modelle tatsächlich lernen 135
+- - '#'
+  - Histologie 138
+- - '#'
+  - MRT-Scans 138
+- - '#'
+  - Nahezu menschliche Genauigkeit 137
+- - '#'
+  - Röntgenaufnahmen和 CT-Scans 135–138
+- - '#'
+  - Random-Forest-Modell 79
+- - '#'
+  - Gute Wahl für ein Baseline-Modell 80
+- - '#'
+  - Wahre vs. vorhergesagte Labels bei der Ausführung auf den Testdaten 81
+- - '#'
+  - Rasterelektronenmikroskop 108
+- - '#'
+  - Rasterkraftmikroskopie (AFM) 110
+- - '#'
+  - RDKit 52
+- - '#'
+  - Berechnen von QED-Werten für Moleküle 157
+- - '#'
+  - ECFP4-Fingerabdrücke für Moleküle berechnen 52
+- - '#'
+  - Grid-Featurizer 70, 73
+- - '#'
+  - Physiochemische Deskriptoren für Moleküle, Berechnung 53
+- - '#'
+  - SMARTS-String, Übereinstimmung 58
+- - '#'
+  - SMILES-Strings zerlegen 55, 155
+- - '#'
+  - Receiver Operating Characteristic 33
+- - '#'
+  - '*Siehe auch* ROC AUC Score'
+- - '#'
+  - Rechnergestützte Assays in der Mikroskopie 124
+- - '#'
+  - Rechnergestützte Vorhersage von Proteinstrukturen 66
+- - '#'
+  - Vorhersage von Strukturen für Protein-Ligand-Komplexe 76
+- - '#'
+  - Rectified Linear Unit (ReLU) 13
+- - '#'
+  - Recurrent Neural Networks (RNNs) 22
+- - '#'
+  - Referenzmaterial, online, für dieses Buch 141
+- - '#'
+  - Regressionsmodell 55, 98
+- - '#'
+  - Regularisierung 18–19
+- - '#'
+  - ResNet-Architektur 133
+- - '#'
+  - Reste 76
+- - '#'
+  - R-Form (rechtshändige Form) chiraler Moleküle 50
+- - '#'
+  - ribosomale RNA 88
+- - '#'
+  - Ribosome 88
+- - '#'
+  - Riboswitches 89
+- - '#'
+  - Ribozyme 89
+- - '#'
+  - RISC (RNA-induced Silencing Complex) 97
+- - '#'
+  - RMSProp-Algorithmus 17
+- - '#'
+  - RNA 87
+- - '#'
+  - RNA-Interferenz 96–99
+- - '#'
+  - RNA-induced Silencing Complex (RISC) 97
+- - '#'
+  - RNNs (Recurrent Neural Networks) 22
+- - '#'
+  - ROC AUC Score 33
+- - '#'
+  - Röntgenaufnahmen 135
+- - '##'
+  - S
+- - '#'
+  - Saliency Mapping 162–164
+- - '#'
+  - JUND-Saliency 166
+- - '#'
+  - Salzbrücken 71
+- - '#'
+  - Schneiden der Proben für die Mikroskopie 113
+- - '#'
+  - Scikit-learn-Paket 80
+- - '#'
+  - Segmentierungsmaske 121
+- - '#'
+  - S-Form (linkshändige Form) chiraler Moleküle 50
+- - '#'
+  - short interfering RNA (siRNA) 88, 97
+- - '#'
+  - Sigmoidfunktion 92
+- - '#'
+  - Signalverarbeitung, Deep Learning in der 139
+- - '#'
+  - Skript `rd_filters.py` 187
+- - '#'
+  - SMARTS-Strings 57, 197
+- - '#'
+  - SMILES-Strings 51
+- - '#'
+  - SoftMaxCrossEntropy-Objekt (DeepChem) 40
+- - '#'
+  - Softmax-Funktion 39
+- - '#'
+  - softwaregesteuerte Therapeutika 140
+- - '#'
+  - Spektrometrie (Masse) 44
+- - '#'
+  - Spektrum 44
+- - '#'
+  - spleißen 88
+- - '#'
+  - Spleißvarianten 88
+- - '#'
+  - Splitter für Datensätze 183
+- - '#'
+  - Spracherkennung
+- - '#'
+  - STED-Mikroskopie 110
+- - '#'
+  - stochastische superauflösende Mikroskopie 110
+- - '#'
+  - stochastisches Gradientenverfahren (SGD) 16
+- - '#'
+  - Struktur-Aktivitäts-Beziehungen (SARs) 3
+- - '#'
+  - strukturbasiertes virtuelles Screening 175
+- - '#'
+  - Strukturen 62
+- - '#'
+  - Sucht, digital 140
+- - '#'
+  - superauflösende Mikroskopie 110
+- - '##'
+  - T
+- - '#'
+  - Tanimoto-Koeffizient 194
+- - '#'
+  - TensorFlow
+- - '#'
+  - Testdatensatz 17
+- - '#'
+  - Therapeutika, Lernmodelle als 139
+- - '#'
+  - Thymin (T) 86
+- - '#'
+  - tiefe Modelle 14
+- - '#'
+  - Toxizität von Molekülen, Trainieren eines Modells zur Vorhersage 27–34
+- - '#'
+  - Trainingsdatensatz 15
+- - '#'
+  - Transfer-RNAs (tRNAs) 88
+- - '#'
+  - Transformer 31
+- - '#'
+  - Transkriptionsfaktor (TFs) 87
+- - '#'
+  - Transmissionselektronenmikroskop 108
+- - '##'
+  - U
+- - '#'
+  - Überlegungen zum Verlust von Arbeitsplätzen für Deep Learning in der Medizin 145
+- - '#'
+  - Übersetzung, Entwicklungen durch Deep Learning 2
+- - '#'
+  - U-Net-Architektur für die Bildsegmentierung 122
+- - '#'
+  - Trainieren eines U-Net 124
+- - '#'
+  - universeller Approximator 14
+- - '#'
+  - Unsicherheit, vorhersagen 168–172
+- - '#'
+  - unüberwachtes Lernen
+- - '#'
+  - Uracil (U) 96
+- - '##'
+  - V
+- - '#'
+  - Validierung 17
+- - '#'
+  - Validierungsdatensatz 20
+- - '#'
+  - van Leeuwenhoek, Anton 103
+- - '#'
+  - Variational Autoencoder (VAEs) 147–149
+- - '#'
+  - Vektoren 9
+- - '#'
+  - VGG-Architektur 133
+- - '#'
+  - 索引
+- - '##'
+  - V
+- - '##'
+  - W
+- - '##'
+  - Z
+- - '#'
+  - 关于作者
+- - '##'
+  - Bharath Ramsundar
+- - '##'
+  - Peter Eastman
+- - '##'
+  - Pat Walters
+- - '##'
+  - Vijay Pande
+- - '#'
+  - Vijay
+- - '#'
+  - 版权页

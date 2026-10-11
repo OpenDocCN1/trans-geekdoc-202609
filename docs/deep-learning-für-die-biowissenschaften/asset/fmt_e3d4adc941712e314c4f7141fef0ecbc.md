@@ -1,0 +1,50 @@
+
+# Bewertung generierter Moleküle
+
+Wir können eine Reihe anderer berechneter Eigenschaften verwenden, um die Qualität der erzeugten Moleküle zu bewerten. Mehrere kürzlich erschienene Publikationen generativer Modelle nutzen berechnete Moleküleigenschaften, um zu bestimmen, welche der erzeugten Moleküle beibehalten oder verworfen werden sollen. Eine der geläufigeren Methoden zur Bestimmung, ob Moleküle bekannten Arzneimitteln ähneln oder »wirkstoffartig« sind, ist die quantitative Abschätzung der Arzneimittelähnlichkeit (QED). Die QED-Metrik, die von Bickerton und Kollegen veröffentlicht wurde^[1](#Footnote_9783960103516.xhtml#ch9fn1), bewertet Moleküle durch Vergleichen einer Reihe von Eigenschaften, die für jedes Molekül berechnet wurden, mit Verteilungen der gleichen Eigenschaften in vermarkteten Arzneimitteln. Dieser Score liegt zwischen 0 und 1, wobei Werte, die näher bei 1 liegen, als wirkstoffartiger angesehen werden.
+
+Wir können `RDKit` wie folgt verwenden, um QED-Werte für unsere verbleibenden Moleküle zu berechnen und nur die Moleküle mit `QED > 0.5` beizubehalten:
+
+```python
+qed_list = [QED.qed(x) for x in good_mol_list]
+
+final_mol_list = [(a,b) for a,b in
+zip(good_mol_list,qed_list) if b > 0.5]
+```
+
+Im letzten Schritt visualisieren wir die chemischen Strukturen von `final_mol_list` und die entsprechenden QED-Scores:
+
+```python
+MolsToGridImage([x[0] for x in final_mol_list],
+molsPerRow=3, useSVG=True,
+subImgSize=(250, 250),
+legends=[f"{x[1]:.2f}" for x in final_mol_list])
+```
+
+Die Ergebnisse sehen Sie in [Abbildung 9-3](#Chapter09_9783960103516.xhtml#abb9-3).
+
+![image](Images/p157-01.png)
+
+*Abbildung 9-3: Chemische Strukturen der erzeugten Moleküle und ihre QED-Scores*.
+
+Obwohl diese Strukturen gültig sind und einigermaßen hohe QED-Werte aufweisen, können sie dennoch chemisch instabil sein. Strategien zur Identifizierung und Entfernung solcher problematischen Moleküle werden im folgenden Abschnitt besprochen.
+
+## Fazit
+
+Obwohl generative Modelle ein interessantes Mittel darstellen, um Ideen für neue Moleküle zu erhalten, müssen noch einige Schlüsselfragen geklärt werden, um ihre allgemeine Anwendbarkeit sicherzustellen. Zunächst gilt es sicherzustellen, dass die erzeugten Moleküle chemisch stabil sind und synthetisiert werden können. Eine aktuelle Methode zur Bewertung der Qualität von Molekülen, die mit einem generativen Modell hergestellt werden, besteht darin, den Anteil der generierten Moleküle zu beobachten, der den Standardregeln der chemischen Wertigkeit entspricht. Anders gesagt, es wird sichergestellt, dass jedes Kohlenstoffatom vier Bindungen, jedes Sauerstoffatom zwei Bindungen, jedes Fluoratom eine Bindung usw. aufweist. Diese Faktoren werden besonders dann wichtig, wenn eine `SMILES`-Darstellung aus einem `Latent Space` decodiert wird. Obwohl ein generatives Modell möglicherweise die Grammatik von `SMILES` gelernt hat, könnten Nuancen fehlen.
+
+Die Tatsache, dass ein Molekül den üblichen Wertigkeitsregeln entspricht, garantiert nicht unbedingt, dass es chemisch stabil ist. In einigen Fällen kann ein generatives Modell Moleküle herstellen, die funktionelle Gruppen enthalten, von denen bekannt ist, dass sie sich leicht zersetzen. Ein Beispiel hierfür sehen Sie in [Abbildung 9-4](#Chapter09_9783960103516.xhtml#abb9-4). Es ist bekannt, dass die eingekreiste funktionelle Gruppe, die als Halbacetal bekannt ist, sich leicht zersetzt.
+
+![image](Images/p158-01.png)
+
+*Abbildung 9-4: Ein Molekül mit einer instabilen Gruppe*.
+
+Die Wahrscheinlichkeit, dass dieses Molekül existiert und chemisch stabil ist, ist sehr gering. Es gibt Dutzende solcher chemischen Funktionalitäten, von denen bekannt ist, dass sie instabil oder reaktiv sind. Bei der Synthese von Molekülen in einem Wirkstoffentwicklungsprojekt sollten Chemiker diese funktionellen Gruppen vermeiden. Eine Möglichkeit, dieses »Wissen« einem generativen Modell zu vermitteln, besteht darin, eine Reihe von Filtern bereitzustellen, mit denen die Ausgabe des Modells nachbearbeitet und möglicherweise problematische Moleküle entfernt werden können. In [Kapitel 11](#Chapter11_9783960103516.xhtml#ch11) werden wir einige dieser Filter und ihre Verwendung im virtuellen Screening näher betrachten. Viele der Methoden zur Identifizierung potenziell problematischer Screening-Verbindungen können auch zur Bewertung virtueller Moleküle verwendet werden, die ein generatives Modell erstellt.
+
+Um die biologische Aktivität eines von einem generativen Modell erzeugten Moleküls zu testen, muss dieses Molekül zuerst von einem Chemiker synthetisiert werden. Die Wissenschaft der organisch-chemischen Synthese blickt auf eine mehr als hundertjährige Geschichte zurück. In diesem Zeitraum haben Chemiker Tausende von chemischen Reaktionen entwickelt, um Medikamente und wirkstoffähnliche Moleküle zu synthetisieren. Die Synthese eines arzneimittelähnlichen Moleküls erfordert üblicherweise zwischen fünf und zehn chemische Reaktionen, die oft als »Schritte« bezeichnet werden. Während einige arzneimittelähnliche Moleküle leicht synthetisiert werden können, kann der Vorgang bei komplexeren Arzneimittelmolekülen mehr als 20 Schritte erfordern. Trotz der mehr als 50-jährigen Arbeit an der Automatisierung der Planung organischer Synthesen ist ein Großteil des Prozesses immer noch durch menschliche Intuition und anschließendes Ausprobieren bestimmt.
+
+Glücklicherweise bieten die jüngsten Entwicklungen im Bereich des Deep Learning neue Möglichkeiten für die Planung der Synthese von wirkstoffartigen Molekülen. Mehrere Forschergruppen haben Methoden veröffentlicht, die Deep Learning verwenden, um Wege vorzuschlagen, die zur Synthese von Molekülen verwendet werden können. Als Eingabe erhält das Modell ein Molekül, das oft als *Produkt* bezeichnet wird, und die Schritte, die zur Synthese dieses Moleküls verwendet wurden. Durch Training mit Tausenden von Produktmolekülen und den zur Synthese verwendeten Schritten kann ein `Deep Neural Network` die Beziehung zwischen Produktmolekülen und Reaktionsschritten erlernen. Erhält das Modell ein neues Molekül, schlägt es eine Reihe von Reaktionen vor, die zur Synthese des Moleküls verwendet werden könnten. Bei einem Versuch wurden die von diesen Modellen erzeugten Synthesewege Chemikern zur Bewertung vorgelegt. Diese Bewerter waren der Ansicht, dass die von solchen Modellen generierten Routen qualitativ mit den von Chemikern generierten Routen vergleichbar waren.
+
+Die Anwendung von Deep Learning auf die organische Synthese ist ein relativ neues Forschungsgebiet. Es bleibt zu hoffen, dass hier eine Weiterentwicklung stattfindet und diese Modelle zu einem wichtigen Werkzeug für organische Chemiker werden. In nicht allzu ferner Zukunft könnte diese Funktion für die Syntheseplanung mit der Robotik kombiniert werden, um eine voll automatisierte Plattform zu schaffen. Es gibt jedoch Schwierigkeiten, die überwunden werden müssen.
+
+Ein mögliches Hindernis für die Akzeptanz von Deep Learning in der organischen Synthese ist die Datenverfügbarkeit. Die meisten Informationen, die zum Trainieren dieser Modelle verwendet werden, befinden sich in Datenbanken, die Eigentum einer kleinen Anzahl von Organisationen sind. Beschließen diese Organisationen, die Daten lediglich für interne Zwecke zu verwenden, bleiben nur sehr wenige Alternativen übrig.

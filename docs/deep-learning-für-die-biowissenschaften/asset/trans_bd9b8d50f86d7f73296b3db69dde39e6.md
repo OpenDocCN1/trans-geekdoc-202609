@@ -1,0 +1,50 @@
+
+
+## Salzbrücken
+
+Eine Salzbrücke ist eine nicht kovalente Anziehung zweier Aminosäuren, wobei eine positiv und die andere negativ geladen ist (siehe [Abbildung 5-7](#Chapter05_9783960103516.xhtml#abb5-7)). Sie kombiniert sowohl Ionen- als auch Wasserstoffbindungen. Obwohl diese Bindungen relativ schwach sind, können sie dabei helfen, die Struktur eines Proteins zu stabilisieren, indem sie zwischen entfernten Aminosäuren in der Proteinsequenz interagieren.
+
+![image](Images/p71-1.png)
+
+*Abbildung 5-7: Die Abbildung einer Salzbrücke zwischen Glutaminsäure und Lysin. Die Salzbrücke ist eine Kombination aus einer ionisch-elektrostatischen Wechselwirkung und einer Wasserstoffbrücke und dient zur Stabilisierung der Struktur. (Quelle: Wikimedia, [https://commons.wikimedia.org/wiki/File:Revisited\_Glutamic\_Acid\_Lysine\_salt\_bridge.png](https://commons.wikimedia.org/wiki/File:Revisited_Glutamic_Acid_Lysine_salt_bridge.png))*
+
+Der `Grid-Featurizer` versucht, Salzbrücken zu entdecken, indem er explizit nach Paaren von Aminosäuren (wie Glutaminsäure und Lysin) sucht, die für solche Wechselwirkungen bekannt sind und die in der 3-D-Struktur nah beieinanderliegen.
+
+## π-π-Wechselwirkungen
+
+π-π-Wechselwirkungen sind eine Form nicht kovalenter Bindung zwischen `aromatischen Ringen` (siehe [Abbildung 5-8](#Chapter05_9783960103516.xhtml#abb5-8)). Hierbei handelt es sich um planare, ringförmige Strukturen, die in vielen biologischen Molekülen, einschließlich DNA und RNA, vorkommen. Daneben kommen in den Seitenketten einiger Aminosäuren vor, darunter Phenylalanin, Tyrosin und Tryptophan.
+
+![image](Images/p72-1.png)
+
+*Abbildung 5-8: Ein aromatischer Ring im Benzolmolekül. Solche Ringstrukturen sind für ihre außergewöhnliche Stabilität bekannt. Darüber hinaus liegen bei aromatischen Ringen alle Atome in einer Ebene. Im Gegensatz dazu befinden sich die Atome heterogener Ringe nicht auf einer Ebene*.
+
+Grob gesagt, treten π-π-Wechselwirkungen auf, wenn zwei aromatische Ringe aufeinander »stapeln«. [Abbildung 5-9](#Chapter05_9783960103516.xhtml#abb5-9) zeigt einige der Interaktionen zwischen zwei Benzolringen. Ebenso wie Ionenbrücken können solche stapelnden Wechselwirkungen zur Stabilisierung verschiedener makromolekularer Strukturen beitragen. Wichtig ist, dass π-π-Wechselwirkungen in Protein-Ligand-Interaktionen zu finden sind, da aromatische Ringe häufig in kleinen Molekülen vorkommen. Der `Grid-Featurizer` zählt diese Wechselwirkungen, indem er das Vorliegen von aromatischen Ringen erkennt und die Abstände zwischen ihren Schwerpunkten sowie die Winkel zwischen den beiden Ebenen überprüft.
+
+![image](Images/p72-2.png)
+
+*Abbildung 5-9: Verschiedene nicht kovalente Wechselwirkungen von aromatischen Ringen. Bei der verschobenen Wechselwirkung sind die Zentren der beiden aromatischen Ringe geringfügig voneinander versetzt. Bei den Interaktionen Edge-to-Face liegt der Rand eines aromatischen Rings auf dem Gesicht des anderen. Die Sandwich-Konfiguration hat zwei direkt gestapelte Ringe, ist jedoch energetisch ungünstiger als verschobene oder Edge-to-Face-Interaktionen, da gleich geladene Bereiche eng zusammenwirken*.
+
+Inzwischen fragen Sie sich vermutlich, weshalb diese Interaktion als π-π-Wechselwirkungen bezeichnet wird. Der Name bezieht sich auf die π-Bindungen, eine Form der kovalenten chemischen Bindung, bei der sich die Elektronenorbitale zweier kovalent gebundener Atome überlappen. In einem aromatischen Ring sind alle Atome im Ring Teil einer gemeinsamen π-Bindung. Diese gemeinsame Bindung ist für die Stabilität des aromatischen Rings verantwortlich und erklärt auch viele seiner einzigartigen chemischen Eigenschaften.
+
+Für die Nichtchemiker unter Ihnen: Es ist nicht schlimm, wenn diese Darstellung noch keinen Sinn ergibt. `DeepChem` entfernt viele dieser Implementierungsdetails, sodass Sie sich bei der Entwicklung nicht oft um π-π-Wechselwirkungen kümmern müssen. Es ist jedoch hilfreich, zu wissen, dass diese Wechselwirkungen bestehen und eine wichtige Rolle in der zugrunde liegenden Chemie spielen.
+
+| ![image](Images/insert.jpg) | | **Komplexe Geometrien und Momentaufnahmen** In diesem Abschnitt haben wir mehrere Interaktionen hinsichtlich der statisch geometrischen Konfigurationen vorgestellt. Es ist wichtig, zu verstehen, dass Bindungen dynamische Einheiten sind und dass sich diese Bindungen in realen physikalischen Systemen mit rasanter Geschwindigkeit dehnen, dass sie reißen, brechen und sich neu ordnen. Denken Sie daran und beachten Sie, dass, wenn jemand sagt, dass eine Salzbrücke existiert, tatsächlich gemeint ist, dass eine Salzbrücke in einem statistisch durchschnittlichen Sinn wahrscheinlich häufiger an einem bestimmten Ort vorhanden ist als nicht. |
+
+## Fingerabdrücke
+
+Vielleicht können Sie sich noch an die kreisförmigen Fingerabdrücke aus dem vorherigen Kapitel erinnern. Diese Fingerabdrücke zählen die Anzahl bestimmter Fragmente eines Moleküls und verwenden anschließend eine Hash-Funktion, um diese Anzahl in einen Vektor gegebener Länge einzupassen. Diese Fragmentzahlen können ebenfalls für 3-D-Molekülkomplexe verwendet werden. Obwohl das bloße Zählen der Fragmente oft nicht ausreicht, um die Geometrie des Systems zu berechnen, kann das Wissen über vorhandene Fragmente dennoch nützlich für `Machine-Learning-Systeme` sein. Dies könnte möglicherweise auf die Tatsache zurückzuführen sein, dass das Vorliegen bestimmter Fragmente ein starkes Indiz für einige molekulare Ereignisse ist.
+
+## Einige Details zur Implementierung
+
+Um nach chemischen Merkmalen wie Wasserstoffbrücken zu suchen, muss `dc.feat.RdkitGridFeaturizer` in der Lage sein, effektiv mit der Geometrie des Moleküls zu arbeiten. `DeepChem` verwendet die `RDKit`-Bibliothek, um jedes Molekül, Protein und jeden Liganden in ein gemeinsames In-Memory-Objekt zu laden. Diese Moleküle werden anschließend in `NumPy`-Arrays umgewandelt, die die räumliche Anordnung aller Atome enthalten. Zum Beispiel kann ein Molekül mit `N` Atomen als `NumPy`-Array der Form `(N, 3)` dargestellt werden, wobei jede Zeile die Position eines Atoms im 3-D-Raum symbolisiert.
+
+Um (grob) eine Suche nach Wasserstoffbrücken durchzuführen, müssen dann lediglich alle Atompaare betrachtet werden, die nahe genug beieinanderliegen, um eine Wasserstoffbrücke bilden zu können (wie Sauerstoff und Wasserstoff). Die gleiche analytische Taktik wird zum Erkennen anderer Bindungsarten verwendet. Für den Umgang mit aromatischen Ringen gibt es einen speziellen Code, mit dem das Vorhandensein aromatischer Ringe in der Struktur erkannt und deren Schwerpunkte berechnet werden können.
+
+## Atomare Featurisierung
+
+Am Ende des letzten Abschnitts gaben wir einen kurzen Überblick darüber, wie Merkmale wie Wasserstoffbrücken vom `RdkitGridFeaturizer` berechnet werden. Meistens wird ein Molekül mit `N` Atomen in ein `NumPy`-Array der Form `(N, 3)` umgewandelt, um ausgehend von diesen Arrays eine Reihe zusätzlicher Berechnungen durchzuführen.
+
+Man kann sich leicht vorstellen, dass Featurisierung eines bestimmten Moleküls lediglich die Berechnung dieses `(N, 3)`-Arrays und die Weitergabe an einen geeigneten `Machine-Learning-Algorithmus` beinhaltet. Das Modell könnte dann selbst lernen, welche Features wichtig sind, anstatt sich auf einen Menschen zu verlassen, der diese auswählt und von Hand eingibt.
+
+Tatsächlich funktioniert das mit einigen zusätzlichen Schritten. Das `(N, 3)`-Array unterscheidet nicht zwischen Atomtypen, daher muss ein weiteres Array bereitgestellt werden, das die Ordnungszahl jedes Atoms auflistet. Eine zweite implementierungsorientierte Anmerkung ist, dass das Berechnen paarweiser Abstände zwischen zwei Positionsarrays der Form `(N, 3)` sehr rechenintensiv sein kann. Es ist daher hilfreich, in einem zuvor erfolgten Schritt »Nachbarlisten« zu erstellen, die benachbarte Atome in der Nähe eines bestimmten Atoms auflisten.
+
