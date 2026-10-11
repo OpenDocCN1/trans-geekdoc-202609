@@ -1,0 +1,456 @@
+## 大数据交通系统
+### 前言
+#### 此外，信息孤岛问题尤为严重
+### 作者简介
+## 第一部分：认知：理解大数据
+### 第一章：什么是大数据交通？
+#### 1.1 大数据交通与互联网+
+##### 1.1.1 大数据来势汹汹
+##### 1.1.2 大数据交通完美契合
+##### 1.1.3 “互联网+”交通正当其时
+#### 1.2 大数据交通与智能交通
+##### 1.2.1 什么是智能交通
+###### 对于中央新批准的雄安新区，政府主导以智能公共交通为主要出行方式进行建设。
+##### 1.2.2 智能交通中的大数据
+###### 智能交通管理平台与系统
+#### 1.3 大数据交通与云计算
+#### 1.4 大数据交通与人工智能
+###### “大城市病”如交通拥堵已被诟病许久
+### 第 2 章：大数据交通：走近生活
+#### 2.1 大数据交通的自助出行
+##### 2.1.1 自行车自助出行
+##### 2.1.2 其他自助出行
+###### 亮点 1：手机进站快捷方便，或将告别“排队”
+###### 亮点 2：一键充值，随时随地充值
+###### 亮点 3：地铁信息可查，“管家”护航出行
+###### 亮点 4：到站信息早知道，约会不迟到
+###### 亮点 5：多功能合一，没有比 APP 更懂你的
+#### 2.2 大数据交通之高铁出行
+##### 2.2.1 智能化
+##### 2.2.2 自助服务
+##### 2.2.3 低成本
+##### 2.2.4 安全性
+#### 2.3 大数据交通中的公路出行
+##### 2.3.1 大数据背景下的公路出行
+##### 2.3.2 大数据背景下的城市道路出行
+##### 2.3.3 智能交通系统构成
+###### (2) 交通管理信息
+###### (3) 公共交通系统
+###### (4) 车辆控制系统
+###### (5) 电子收费系统
+###### (6) 应急救援系统
+#### 2.4 大数据交通中的民航出行
+##### 2.4.1 民航大数据是宝藏
+##### 2.4.2 民航高度自助服务
+###### (1) 自助出行
+###### (2) 自助值机
+###### (3) 自助行李托运
+##### 2.4.3 民航大数据可提升服务质量
+##### 2.4.4 民航大数据提升航空安全指数
+#### 2.5 大数据交通的货运运输
+##### 2.5.1 如何提前预测货运运输
+##### 2.5.2 实施货运运输计划与错峰运输
+##### 2.5.3 货运数据可更好地服务货运参与者
+### 第 3 章：大数据交通战略蓝图
+#### 3.1 美国的大数据交通
+##### 3.1.1 多年的技术积累与创新
+##### 3.1.2 极度开放的数据
+###### 美国长期以来一直在实施开放政府，其中包括开放数据。
+##### 3.1.3 众多创新要素与完整产业链
+#### 3.2 欧洲的大数据交通
+##### 3.2.1 大数据交通发展更人性化、更惠民
+##### 3.2.2 财政投入加大
+##### 3.2.3 大数据交通建设聚焦公共交通
+#### 3.3 日本的大数据交通
+##### 3.3.1 政府主导、统一规范
+##### 3.3.2 车企电子化程度高
+##### 3.3.3 市场化程度高
+##### 3.3.4 信息共享充分
+#### 3.4 中国的大数据交通
+##### 3.4.1 发展迅速
+###### 交通大数据中心建设与发展现状
+##### 3.4.2 交通大数据中心建设规划
+##### 3.4.3 数据类型多样，数据资源丰富
+##### 3.4.4 后发优势明显
+##### 3.4.5 统筹规划不足
+##### 3.4.6 政府职能分割导致闭环管理缺失
+##### 3.4.7 财政投入应当均衡
+##### 3.4.8 数据资源共享不足
+##### 3.4.9 行业人才匮乏
+### 第 4 章：大数据交通：八大创新模式
+#### 4.1 大数据交通特征之一：共享经济
+##### Case Study of China's Shared Bicycle Success
+##### Technical Implementation and Big Data Application of Shared Bicycles
+#### 4.2 Big Data Transportation Feature Two: Full Utilization of Resources
+#### 4.3 Big Data Transportation Feature Three: Precise Demand
+##### Precise Matching of Needs and Services: Big Data Applications in Transportation
+###### "Data Cage" Big Data Fusion Platform Enables Full-Process Supervision
+###### Customized Bus: Filling Public Transport Blind Spots
+####### Passenger Perspective: From Anxiety to Composure
+###### Customized Bus Network Service Platform: Big Data-Driven Smart Scheduling
+###### "Self-Processing" Data Push Enhances Law Enforcement Precision
+#### 4.4 大数据交通特征四：实时掌控
+#### 4.5 大数据交通特征五：高效便捷
+##### 系统架构与专家知识库
+#### 4.6 大数据特征六：智能化
+##### (1) 依托“警务云”实时管控 4,764 条车道
+##### (2) 拥堵预控：拥堵自动报警
+###### (3) 济南交警官方账号上线三大模块八大功能
+## 第二部分：应用篇 大数据交通的实战落地
+### 第 5 章：大数据交通的入口
+#### 5.1 交通一卡通
+##### 5.1.1 T-union 数据入口的准确性
+##### 5.1.2 交通一卡通入口的科学性
+##### 5.1.3 交通一卡通数据的广泛应用
+##### 5.1.4 交通一卡通数据采集的未来发展
+#### 5.2 GPS 与北斗系统
+##### 5.2.1 出租车车载系统的数据应用
+###### 出租车是城市交通中不可或缺的一部分，其速度和交通密度在很大程度上能反映道路交通状况。因此，车载 GPS 和北斗系统反映的出租车轨迹数据可用于分析城市交通拥堵的变化。例如，建立交通流密度模型并利用大量出租车轨迹数据库，自动确定各路段的通行能力，从而估算路段平均车速，预测交通状况和潜在拥堵。
+##### 5.2.2 城市交通的运行、管理与保障
+#### 5.3 智能手机移动数据应用
+#### 5.4 车联网
+##### 5.4.1 车辆与路侧设施的数据交换
+##### 5.4.2 车辆互联互动数据
+##### 5.4.3 车辆与交通管理部门的数据交换
+##### 5.4.4 车联网数据集成服务
+#### 5.5 路网监控
+##### (2) 路况检测系统
+##### 5.5.1 路网监控的技术优势
+#### 5.6 电子导航地图
+##### (1) 直接数据获取与共享
+##### (2) 利用 GPS 和北斗系统进行数据采集
+##### (3) 与 GIS 智能交通监管系统进行数据共享
+#### 5.7 ETC
+##### 5.7.1 高效采集车辆通行信息
+##### 5.7.2 为主管部门提供分析报告
+##### 5.7.3 精准获取路段行程数据
+###### 利用 ETC 系统进行交通数据分析
+##### 5.7.4 尝试利用收费调节缓解交通拥堵
+### 第 6 章：大数据交通平台
+#### 6.1 高速公路管理平台
+##### 6.1.1 高速公路大数据管理需求定义
+##### 6.1.2 平台总体框架设计
+##### 6.1.3 系统数据流设计
+###### 高速公路管理平台数据流与事故检测平台
+##### 6.1.4 数据接口系统设计
+#### 6.2 事故检测平台
+##### 6.2.1 事故检测平台设计
+##### 6.2.2 事故检测平台运行模式
+##### 6.2.3 交通事故定位
+#### 6.3 客流检测平台
+##### 6.3.1 客流检测平台设计
+##### 6.3.2 关键节点客流监测
+#### 6.4 交通执法平台
+##### 6.4.1 交通执法平台数据云中心
+##### 6.4.2 交通综合执法协同系统
+##### 6.4.3 交通执法信息服务系统
+###### 智能交通监控系统
+#### 6.5 物流信息平台
+##### 6.5.1 利用大数据提升物流信息平台运营功能
+##### 6.5.2 强化大数据信息利用能力
+##### 6.5.3 提高物流信息平台安全等级
+#### 6.6 应急指挥平台
+##### 潍坊交通应急指挥中心
+##### 6.6.1 应急平台的大数据共享
+##### 6.6.2 云应急系统
+##### 6.6.3 移动监测与应急响应的应用
+### 第 7 章：大数据交通与物流
+#### 7.1 大数据交通与运输组织
+##### 7.1.1 Transport Environment Prediction
+##### 7.1.2 Transport Node Location Selection
+##### 7.1.3 Transport Route Optimization
+##### 7.1.4 Cargo Position Optimization
+#### 7.2 Big Data Transportation and Rural Logistics
+##### 7.2.1 Transport Service Innovation
+###### 应建设特种运输能力生态系统
+##### 7.2.2 解决“最后一公里”运输能力不足的问题
+##### 7.2.3 加快农村物流信息网络建设
+#### 7.3 大数据运输与城市配送
+##### 7.3.1 政府牵头建立城市物流资源共享平台
+##### 7.3.2 行业联盟建设共享平台
+##### 7.3.3 重视城市物流仓储平台建设
+#### 7.4 大数据交通与快递物流
+##### 7.4.1 快递物流中电子面单的应用
+##### 7.4.2 大数据路由分拣的应用
+##### 7.4.3 意外情况管理的大数据技术
+#### 7.5 大数据交通与冷链物流
+##### Integration of China's Cold Chain Logistics and Big Data Technology
+###### (1) Establishing a Cold Chain Product Traceability System Using Big Data Technology
+###### (2) Comprehensively Coordinating Cold Chain Logistics Transportation Using Big Data Technology
+###### (3) Ensuring Timely and Accurate Adjustment of Back-end Operational Strategies
+#### 7.6 Big Data Transportation and Multimodal Transport
+##### 7.6.1 铁路供应链中大数据的应用空间
+##### 7.6.2 多式联运路线的优化与调度
+##### 7.6.3 大数据推动集装箱多式联运的改进
+#### 7.7 大数据运输与跨境物流
+##### Cross-border Logistics Big Data Application Strategies
+###### (1) Establish a Unified Cross-border Logistics Big Data Platform
+###### (2) Establish a Cross-border Logistics Big Data Information Center
+###### (3) Build a Big Data Transnational Logistics System
+###### (4) Improve Overseas Warehouse Utilization Rate
+#### 7.8 Big Data Transportation and Air Logistics
+##### 大数据与航空物流行业的结合
+###### 1. 有效管理预订服务项目
+###### 2. 提升物流服务能力
+###### 3. 变革航运公司管理
+#### 7.9 大数据运输与无车承运人
+##### 7.9.1 由大数据建立并保障的风控体系
+##### 7.9.2 提升用户体验与粘性
+##### 7.9.3 对接公共平台 保障运输质量
+#### 7.10 大数据运输与物流成本
+##### 7.10.1 规划层面的有效成本节约
+##### 7.10.2 制造企业物流成本核算方法的优化
+##### 7.10.3 挖掘配送客户潜在需求 实现战略延伸
+### 第 8 章：大数据交通与交通规划
+#### 8.1 大数据交通与路线规划
+##### 8.1.1 传统路线规划存在的问题
+##### 8.1.2 大数据交通规划的新模式
+##### 8.1.3 自贡大数据“交通大脑”建设
+#### 8.2 大数据交通与网络线路规划
+##### 8.2.1 大数据技术对网络线路规划的意义
+##### 8.2.2 网络线路规划的完整性
+#### 8.3 大数据交通与道路规划
+##### 8.3.1 传统道路规划的弊端
+##### 8.3.2 大数据带来的道路规划新思路
+##### 8.3.3 大数据给道路规划带来的便利
+###### 3. 智慧街道建设的支撑保障
+#### 8.4 大数据交通与站点规划
+##### 8.4.1 大数据在主动停车系统中的应用
+##### 8.4.2 大数据在公交站中的应用
+##### 8.4.3 定制公交：大数据公共交通系统的应用
+#### 8.5 大数据交通与枢纽规划
+##### 8.5.1 Exploration of Big Data in Hub Planning
+##### 8.5.2 Intercity Transportation Hubs
+###### (1) Subway Planning
+###### (2) Bus Planning
+#### 8.6 Big Data Transportation and Capacity Planning
+##### 8.6.1 综合利用大数据优化交通运力
+#### 8.7 大数据交通与应急规划
+##### 8.7.1 交通应急体系建设
+###### 大数据时代的应急体系建设与重大活动交通保障
+####### 1. 事前监督预测
+####### 2. 事中应急响应调度
+####### 3. 事后总结归档
+##### 8.7.2 大数据智能设备的应用
+##### 8.7.3 应急机制运行模式
+### 第 9 章：大数据交通与重大活动
+#### 9.1 大数据交通与北京奥运会
+##### 9.1.1 大数据设备应用
+##### 9.1.2 大数据交通的提前应对
+##### 9.1.3 大数据系统的应用
+#### 9.2 大数据交通与上海世博会
+##### 9.2.1 大数据预测
+##### 9.2.2 大数据智能系统的利用
+###### Comprehensive Transportation Information Service System
+###### Electronic Toll Collection System
+###### Traffic Monitoring System
+###### Decision Support System
+#### 9.3 Big Data Traffic and the Hangzhou G20 Summit
+##### 9.3.1 Government-Level Attention to Big Data Traffic
+##### 9.3.2 Big Data Support for Road Traffic
+##### 9.3.3 大数据精准预测
+##### 9.3.4 智能大数据生根发芽
+###### (1) 海信智能公交系统的应用
+###### (2) 交通社区的建立
+###### (3) “互联网+交通”的应用
+#### 9.4 Big Data Transportation and the "Belt and Road" International Forum
+##### 9.4.1 Traffic Restriction Measures Under Big Data
+##### 9.4.2 Application of Beijing Intelligent Transportation
+###### (2) TOCC 系统的持续改进
+###### (3) 智能预测系统
+### 第 10 章：大数据交通与交通管理
+#### 10.1 大数据交通的状态诊断
+##### 10.1.1 信息采集模块的运行
+##### 10.1.2 大数据分析模块的应用
+##### 10.1.3 Application of Traffic Data Processing Modules
+#### 10.2 Information Analysis of Big Data Transportation
+##### 10.2.1 Defects of Traditional Information Analysis
+##### 10.2.2 Information Analysis and Promotion of Big Data Models
+##### 10.2.3 Analysis and Application of Guiyang Big Data Traffic Information
+###### 大数据分析重塑贵阳城市交通
+#### 10.3 大数据交通的技术变革
+##### 10.3.1 硬件设备升级
+##### 10.3.2 新大数据技术变革
+##### 10.3.3 深圳：大数据交通应用的先行者与领跑者
+#### 10.4 大数据交通的组织模式
+##### 10.4.1 大数据模式改变“信息孤岛”效应
+##### 10.4.2 大数据三级管理组织架构
+###### 三层结构
+####### (1) 信息层
+####### (2) 网络通信层
+####### (3) 云服务层
+##### 10.4.3 大数据交通组织体系
+###### (1) 数据采集
+###### (2) 数据获取
+###### (3) 数据分析
+###### (4) 数据思维
+###### (5) 信息服务
+#### 10.5 大数据交通管理模式
+##### 10.5.1 通用大数据管理模式
+###### (1) 空间状态分析
+##### 10.5.2 Upgrading the Big Data Traffic Management Model
+##### 10.5.3 The Hangzhou Model: Comprehensive Utilization of Big Data
+#### 10.6 Big Data Traffic Credit Model
+##### 10.6.1 多渠道与专业发布
+##### 10.6.2 通俗易懂与专业解读
+##### 10.6.3 联合公安部门打击谣言
+### 第 11 章：大数据交通的未来发展
+#### 11.1 大数据交通行业的个性化服务
+##### 11.1.1 智能车路协同技术
+##### 11.1.2 自动驾驶技术
+##### 11.1.3 Connected Vehicles (Internet of Vehicles)
+##### 11.1.4 Rapid Promotion of ETC Technology
+##### 11.1.5 Deep Integration with Individuals
+##### 11.1.6 Ride-Hailing "Going Rural"
+#### 11.2 Expansion Trends of the Big Data Transportation Industry
+##### 11.2.1 Cross-Border Integration Becomes the General Trend
+##### 11.2.2 共享文化的进一步发展
+##### 11.2.3 大数据智能导航产业的新机遇
+##### 11.2.4 大数据行车记录仪的应用
+#### 11.3 大数据交通产业的投融资
+##### 11.3.1 中交兴路与 Inrix 的战略合作
+##### 11.3.2 初创企业融资概率大增
+##### 11.3.3 大数据交通产业投资激增
+###### Layout of Baidu, Alibaba, and Tencent in the Big Data Transportation Sector
+#### 11.4 Policy Guidance for the Big Data Transportation Industry
+##### 11.4.1 Clear Support in the "13th Five-Year Plan"
+##### 11.4.2 The State Council's Guiding Opinions on Actively Promoting the "Internet Plus" Action
+##### 11.4.3 交通运输部通知
+##### 11.4.4 智能交通发展实施方案
+### 第 12 章：无人驾驶：席卷全球的交通革命
+#### 12.1 无人驾驶技术的起源、发展与应用
+##### 12.1.1 无人驾驶开启智能交通新纪元
+###### 12.1.1.1 无人驾驶技术发展概况
+###### 12.1.1.2 无人驾驶技术应用方向
+###### 12.1.1.3 无人驾驶技术发展瓶颈
+###### 12.1.1.4 无人驾驶技术未来展望
+##### 12.1.2 无人驾驶技术发展的四个阶段
+###### 12.1.2.1 Level 0：无自动化
+####### 自动驾驶分级与无人驾驶技术演进路径
+##### 12.1.3 自动驾驶分级标准
+###### 12.1.3.1 Level 0：无自动化
+###### 12.1.3.2 Level 1：单一功能自动化
+###### 12.1.3.3 Level 2：部分自动化
+###### 12.1.3.4 Level 3：有条件自动化
+###### 12.1.3.5 Level 4：高度自动化（无人驾驶）
+##### 12.1.4 无人驾驶技术演进路径
+###### 12.1.4.1 Application of Autonomous Driving Technology
+###### 12.1.4.2 Promotion of Autonomous Driving Technology
+###### 12.1.4.3 Mission of Autonomous Driving Technology
+##### 12.1.5 Autonomous Driving Disrupts and Reshapes the Transportation Ecology
+###### 12.1.5.1 无人驾驶汽车对汽车工业的影响
+###### 12.1.5.2 提升高速公路安全
+###### 12.1.5.3 缓解交通拥堵
+###### 12.1.5.4 减少空气污染
+#### 12.2 全球分布：争夺无人驾驶制高点
+##### 12.2.1 全球无人驾驶产业竞争格局
+###### 12.2.1.1 从加利福尼亚州道路测试资质看无人驾驶产业
+####### 图 12.1 加利福尼亚州无人驾驶路测许可发放数量加速增长。
+###### 12.2.1.2 全球自动驾驶渗透率将快速提升，市场空间或超千亿美元
+###### 12.2.1.3 初创企业是全球无人驾驶产业推动多产业融合的重要力量
+###### 12.2.1.4 初创企业高速发展重塑无人驾驶产业竞争格局
+##### 12.2.2 全球无人驾驶技术发展现状
+###### 12.2.2.1 国外无人驾驶技术发展
+####### 无人驾驶技术的发展与商业应用前景
+##### 12.2.3 无人驾驶技术的发展历程
+###### 12.2.3.1 中国无人驾驶技术的发展
+##### 12.2.4 无人驾驶商业应用的全球前景
+###### 12.2.4.1 公共交通
+###### 12.2.4.2 快递车辆与工业应用
+###### 12.2.4.3 老年人与残疾人
+##### 12.2.5 世界领先企业的无人驾驶汽车研发
+###### 12.2.5.1 特斯拉计划实现全无人驾驶
+###### 12.2.5.2 沃尔沃计划 2021 年实现自动驾驶
+###### 12.2.5.3 百度计划分拆自动驾驶汽车业务实现量产
+###### 12.2.5.4 奥迪成立自动驾驶子公司
+###### 12.2.5.5 微软寻求与车企合作
+###### 12.2.5.6 丰田的“守护天使”
+#### 12.3 技术路线：无人驾驶行业的关键技术
+##### 12.3.1 无人驾驶技术的关键组件
+###### 12.3.1.1 汽车的系统架构
+###### 12.3.1.2 外部环境的感知与识别
+###### 12.3.1.3 定位导航系统
+###### 12.3.1.4 路径规划技术
+###### 12.3.1.5 车辆控制技术
+##### 12.3.2 感知层：采集环境与驾驶信息
+##### 12.3.3 决策层：路径规划与实时导航
+##### 12.3.4 智能交通执行层：对汽车运行的精准控制
+###### Application of Autonomous Driving Technology in Intelligent Transportation and Its Impact on Urban Traffic Flow
+##### 12.3.5 Application of Autonomous Driving in the Field of Intelligent Transportation
+###### (1) Human-Machine Interaction Technology Ensuring Driving Safety
+###### (2) Intelligent Control Systems Enhancing Travel Experience
+###### (3) Anti-lock Braking System Reducing Traffic Accidents
+###### (4) Traction or Stability Control Systems Supporting Autonomous Vehicle Movement
+###### (5) Interaction of Various Systems Truly Realizing Autonomous Driving
+##### 12.3.6 Impact of Autonomous Vehicles on Urban Traffic Flow
+###### 12.3.6.1 Analysis of Influencing Factors
+###### 12.3.6.2 Analysis of the Effects of Introducing Autonomous Vehicles on Different Roads
+#### 12.4 Intelligent Traffic Management Model Based on Autonomous Driving
+##### 12.4.1 Deep Integration of Free Travel and Sharing Modes
+###### Analysis of Intelligent Traffic Management Modes and Travel Modes
+####### 1. Free Travel
+####### 2. Shared Travel
+####### 3. Special Case: Taking a Taxi
+####### 4. Advantage Comparison
+####### 5. Classification by Travel Tool Ownership
+##### 12.4.2 Driverless Taxis and Free Travel Modes
+##### 12.4.3 Intelligent Traffic Management Based on Vehicle-Road Integration
+###### 12.4.3.1 Vehicle Classification and Dedicated Use
+###### 12.4.3.2 Lane-Separated Driving
+#### 12.5 Key Factors for Autonomous Driving from Concept to Practice
+##### 12.5.1 Safety: The Inevitable Destination of Autonomous Driving Development
+###### Safety and Development of Autonomous Vehicles
+####### How to Solve Autonomous Vehicle Safety Issues?
+##### 12.5.2 Practice: Autonomous Driving Practice
+###### 未来无人驾驶汽车的发展愿景
+##### 12.5.3 体验：满足用户的生活与娱乐需求
+###### 12.5.3.1 外观造型、空间布局与基础功能的优化
+###### 12.5.3.2 基于车联网提供通信办公与生活娱乐服务
+#### 12.6 Application of Autonomous Driving Technology in Urban Rail Transit
+##### 12.6.1 Overview of Metro Automation Technology Application at Home and Abroad
+###### 12.6.1.1 Advantages of Autonomous Driving Technology
+###### 12.6.1.2 Overview of Autonomous Driving Technology Application in Urban Rail Transit Abroad
+###### 12.6.1.3 Overview of Autonomous Driving Technology Application in China
+##### 12.6.2 Functional Characteristics of Unmanned Urban Rail Transit Systems
+###### 自动化控制在列车运行中的体现
+##### 12.6.3 城市轨道交通无人驾驶的要求
+##### 12.6.4 城市轨道交通无人驾驶应用难点
+###### (3) 运营中的紧急事故处理
+##### 12.6.5 基于无人驾驶的城市轨道交通解决方案
+###### 12.6.5.1 设施设备保障
+###### 12.6.5.2 创新管理模式
+###### 12.6.5.3 人员素质
+####### 无人驾驶技术在轨道交通中的应用前景与挑战
+######## 控制中心与车站的新要求
+######### (1) 控制中心
+######### (2) 车站
+###### 12.6.5.4 乘客配合
+## 参考文献
+## 索引
+### A
+### B
+### C
+### D
+### E
+### F
+### G
+### H
+### I
+### J
+### K
+### L
+### M
+### N
+### O
+### P
+### Q
+### R
+### S
+### T
+### U
+### V
+### W
+### X
+### Y
+### Z
+### 数字
