@@ -1,0 +1,524 @@
+<p><img src="image_rsrc1BH.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" preserveaspectratio="xMidYMid meet" viewbox="0 0 1207 1920" height="100%" width="100%">
+<image href="image_rsrc1BH.jpg" height="1920" width="1207"></image>
+</svg>
+<p><span id="part0001.xhtml"></span></p>
+<p><span class="class_s19J">101 </span><br />
+<span class="class_s19J">DATA SCIENCE </span><br />
+<span class="class_s19J">DRAWINGS</span></p>
+<p>Raymond Lim</p>
+<p>@MinuteData</p>
+<p><span id="part0002.xhtml"></span></p>
+<p><span class="class_s15M">Copyright © 2025</span><br />
+<span class="class_s15M">Raymond Lim</span></p>
+<p>All rights reserved. This book or any portion thereof may not be reproduced or used in any manner whatsoever without the express written permission of the author except for the use of brief quotations in a book review.</p>
+<p>ISBN 9798317027308</p>
+<p>Published through Amazon KDP</p>
+<p><span id="part0003.xhtml"></span></p>
+<p>Introduction</p>
+<p>One spring day in 2018, I strolled past my childhood elementary school. I glanced through the windows to see if I’d recognized the teacher. Nope - it was a young teacher enthusiastically teaching first graders shapes… using PowerPoint! Call me old-school, but how are kids learning how to draw shapes when they just magically appear on PowerPoint slides?!</p>
+<p>Fast forward to 2024. I was preparing for data science interviews using online courses, YouTube videos and mobile apps. However, as a millennial who went to school before smartphones, passively scrolling through online content did not work.</p>
+<p>I soon created TikToks drawing out data topics with colorful markers, hoping others would draw along. This book is a compilation of those drawings.</p>
+<p><span class="class_s164">Who this book is for: </span><span class="class_s165">People who previously learned</span><span class="class_s15M"> statistics, machine learning, econometrics, SQL, and want to refresh with colorful one-pagers (think flash cards!). This book is intentionally </span><span class="class_s165">informal, colorful and raw</span><span class="class_s15M">. You’ll find scribbles, corrections, obscure handwriting that will make you learn more actively.</span></p>
+<p>Watch the accompanying videos on social media!</p>
+<p>tiktok.com/@MinuteData</p>
+<p>youtube.com/@MinuteData</p>
+<p>instagram.com/MinuteData</p>
+<p>facebook.com/MinuteData</p>
+<p>minutedata22@gmail.com</p>
+<p><span class="class_s164">About the author: </span><span class="class_s15M">Raymond Lim graduated from Columbia University before data science classes even existed. He worked for 15+ years as an economics researcher in academia, biostatistician in healthcare, data scientist at Meta and Google. He’s also a latin ballroom dancer!</span></p>
+<p>Table of Contents</p>
+<p><a href="#part0003.xhtml#a19P">Part 1: Supervised Learnin<span class="class_s13X">g</span>             6</a></p>
+<p><a href="#part0003.xhtml#a199">1. Supervised vs Unsupervised Learnin<span class="class_s12Y">g</span>             6</a></p>
+<p><a href="#part0004.xhtml#a181"><span class="class_s182">2. K-Nearest Neighbo</span><span class="class_s183">r</span><span class="class_s184">             </span><span class="class_s182">7</span></a></p>
+<p><a href="#part0005.xhtml#a15N">3. Decision Tree<span class="class_s12Y">s</span>             8</a></p>
+<p><a href="#part0005.xhtml#a192">4. Random Fores<span class="class_s12Y">t</span>             9</a></p>
+<p><a href="#part0005.xhtml#a13N">5. Gradient Boosted Tree<span class="class_s12Y">s</span>             10</a></p>
+<p><a href="#part0005.xhtml#a13H">6. Gradient Descen<span class="class_s12Y">t</span>             11</a></p>
+<p><a href="#part0005.xhtml#a13J">7. Support Vector Machin<span class="class_s12Y">e</span>             12</a></p>
+<p><a href="#part0005.xhtml#a15W">8. Bias-Variance Tradeof<span class="class_s12Y">f</span>             13</a></p>
+<p><a href="#part0005.xhtml#a142">9. Cross Validatio<span class="class_s12Y">n</span>             14</a></p>
+<p><a href="#part0005.xhtml#a14M">10. Regularization - Lasso vs Ridg<span class="class_s12Y">e</span>             15</a></p>
+<p><a href="#part0005.xhtml#a16X">11. Hyperparameter Tunin<span class="class_s12Y">g</span>             16</a></p>
+<p><a href="#part0005.xhtml#a19K">12. Stepwise Feature Selectio<span class="class_s12Y">n</span>             17</a></p>
+<p><a href="#part0005.xhtml#a18U">13. Naive Baye<span class="class_s12Y">s</span>             18</a></p>
+<p><a href="#part0005.xhtml#a15X">14. Collaborative Filterin<span class="class_s12Y">g</span>             19</a></p>
+<p><a href="#part0005.xhtml#a19N">15. Bagging vs Boosting vs Stackin<span class="class_s12Y">g</span>             20</a></p>
+<p><a href="#part0005.xhtml#a187">16. Multi-Armed Bandi<span class="class_s12Y">t</span>             21</a></p>
+<p><a href="#part0005.xhtml#a15G">Part 2: Unsupervised Learnin<span class="class_s13X">g</span>             22</a></p>
+<p><a href="#part0005.xhtml#a197">17. K-Means Clusterin<span class="class_s12Y">g</span>             22</a></p>
+<p><a href="#part0005.xhtml#a195">18. Hierarchical Clusterin<span class="class_s12Y">g</span>             23</a></p>
+<p><a href="#part0005.xhtml#a17Y">19. Density Clusterin<span class="class_s12Y">g</span>             24</a></p>
+<p><a href="#part0005.xhtml#a18J">20. How Many Clusters? Calinski Inde<span class="class_s12Y">x</span>             25</a></p>
+<p><a href="#part0005.xhtml#a137">21. Dendrogra<span class="class_s12Y">m</span>             26</a></p>
+<p><a href="#part0005.xhtml#a18Y">22. Distance Measure<span class="class_s12Y">s</span>             27</a></p>
+<p><a href="#part0005.xhtml#a138">23. Cosine Similarit<span class="class_s12Y">y</span>             28</a></p>
+<p><a href="#part0005.xhtml#a13T">24. String Distanc<span class="class_s12Y">e</span>             29</a></p>
+<p><a href="#part0005.xhtml#a151">25. Earth Mover's Distanc<span class="class_s12Y">e</span>             30</a></p>
+<p><a href="#part0006.xhtml#a15Y">26. Principal Components Analysi<span class="class_s12Y">s</span>             31</a></p>
+<p><a href="#part0006.xhtml#a16V">27. Topic Modeling - Latent Dirichlet Allocatio<span class="class_s12Y">n</span>             32</a></p>
+<p><a href="#part0006.xhtml#a163">Part 3: Probability &amp; Statistic<span class="class_s13X">s</span>             33</a></p>
+<p><a href="#part0006.xhtml#a17T">28. Levels of Measuremen<span class="class_s12Y">t</span>             33</a></p>
+<p><a href="#part0006.xhtml#a16G">29. Bernoulli vs Binomia<span class="class_s12Y">l</span>             34</a></p>
+<p><a href="#part0006.xhtml#a135">30. Law of Large Numbers vs Central Limit Theore<span class="class_s12Y">m</span>             35</a></p>
+<p><a href="#part0006.xhtml#a13D">31. Bayes Theore<span class="class_s12Y">m</span>             36</a></p>
+<p><a href="#part0006.xhtml#a19W">32. Monty Hall Proble<span class="class_s12Y">m</span>             37</a></p>
+<p><a href="#part0006.xhtml#a17H">33. Variance, Standard Deviatio<span class="class_s12Y">n</span>             38</a></p>
+<p><a href="#part0006.xhtml#a17D">34. Confidence Interva<span class="class_s12Y">l</span>             39</a></p>
+<p><a href="#part0006.xhtml#a170">35. Standard Normal Distributio<span class="class_s12Y">n</span>             40</a></p>
+<p><a href="#part0006.xhtml#a17E">36. Coefficient of Variatio<span class="class_s12Y">n</span>             41</a></p>
+<p><a href="#part0006.xhtml#a149">37. P-valu<span class="class_s12Y">e</span>             42</a></p>
+<p><a href="#part0006.xhtml#a14R">38. Type I vs Type II Erro<span class="class_s12Y">r</span>             43</a></p>
+<p><a href="#part0006.xhtml#a17Z">39. Bivariate Test<span class="class_s12Y">s</span>             44</a></p>
+<p><a href="#part0006.xhtml#a17N">40. Pearson Correlatio<span class="class_s12Y">n</span>             45</a></p>
+<p><a href="#part0006.xhtml#a16H">41. Chi-Square Tes<span class="class_s12Y">t</span>             46</a></p>
+<p><a href="#part0006.xhtml#a16R">42. ANOV<span class="class_s12Y">A</span>             47</a></p>
+<p><a href="#part0006.xhtml#a19U">43. Rank Sum Tes<span class="class_s12Y">t</span>             48</a></p>
+<p><a href="#part0006.xhtml#a194">44. Wilcoxon Signed Rank Tes<span class="class_s12Y">t</span>             49</a></p>
+<p><a href="#part0006.xhtml#a18A">45. Accuracy, Precision, Recal<span class="class_s12Y">l</span>             50</a></p>
+<p><a href="#part0006.xhtml#a18C">46. ROC Curv<span class="class_s12Y">e</span>             51</a></p>
+<p><a href="#part0006.xhtml#a18E">47. Standardization, Feature Scalin<span class="class_s12Y">g</span>             52</a></p>
+<p><a href="#part0006.xhtml#a18R">48. Outlier Detectio<span class="class_s12Y">n</span>             53</a></p>
+<p><a href="#part0006.xhtml#a17W">49. Log Transformatio<span class="class_s12Y">n</span>             54</a></p>
+<p><a href="#part0006.xhtml#a13S">50. Winsorizatio<span class="class_s12Y">n</span>             55</a></p>
+<p><a href="#part0006.xhtml#a16C">51. Missing Dat<span class="class_s12Y">a</span>             56</a></p>
+<p><a href="#part0006.xhtml#a19E">52. Switchback Tes<span class="class_s12Y">t</span>             57</a></p>
+<p><a href="#part0006.xhtml#a143">53. Kolmogorov-Smirnov Tes<span class="class_s12Y">t</span>             58</a></p>
+<p><a href="#part0007.xhtml#a13G">54. Reliability, Validit<span class="class_s12Y">y</span>             59</a></p>
+<p><a href="#part0007.xhtml#a190">55. Sample Size Calculatio<span class="class_s12Y">n</span>             60</a></p>
+<p><a href="#part0007.xhtml#a144">56. Multiple Comparison<span class="class_s12Y">s</span>             61</a></p>
+<p><a href="#part0007.xhtml#a176">57. Blocked vs Stratified Samplin<span class="class_s12Y">g</span>             62</a></p>
+<p><a href="#part0008.xhtml#a16Y">58. Anscombe’s Quarte<span class="class_s12Y">t</span>             63</a></p>
+<p><a href="#part0008.xhtml#a158">59. Power La<span class="class_s12Y">w</span>             64</a></p>
+<p><a href="#part0008.xhtml#a154">60. Survivorship Bia<span class="class_s12Y">s</span>             65</a></p>
+<p><a href="#part0008.xhtml#a14W">61. Meta Analysi<span class="class_s12Y">s</span>             66</a></p>
+<p><a href="#part0009.xhtml">Part 4: Econometric<span class="class_s13X">s</span>             67</a></p>
+<p><a href="#part0009.xhtml#a18D">62. Linear Regressio<span class="class_s12Y">n</span>             67</a></p>
+<p><a href="#part0010.xhtml#a12W">63. Deriving OL<span class="class_s12Y">S</span>             68</a></p>
+<p><a href="#part0011.xhtml#a171">64. Interaction Effec<span class="class_s12Y">t</span>             69</a></p>
+<p><a href="#part0012.xhtml#a17R">65. Chow Test (Structural Break<span class="class_s12Y">)</span>             70</a></p>
+<p><a href="#part0013.xhtml#a148">66. Linear Probability Mode<span class="class_s12Y">l</span>             71</a></p>
+<p><a href="#part0014.xhtml#a14F">67. Logistic Regressio<span class="class_s12Y">n</span>             72</a></p>
+<p><a href="#part0015.xhtml#a15Z">68. Ordered Logistic Regressio<span class="class_s12Y">n</span>             73</a></p>
+<p><a href="#part0016.xhtml#a17X">69. Censored Regression (Tobit<span class="class_s12Y">)</span>             74</a></p>
+<p><a href="#part0017.xhtml#a161">70. Poisson Regressio<span class="class_s12Y">n</span>             75</a></p>
+<p><a href="#part0018.xhtml#a16K">71. R-Square<span class="class_s12Y">d</span>             76</a></p>
+<p><a href="#part0019.xhtml#a16T">72. Heteroskedasticit<span class="class_s12Y">y</span>             77</a></p>
+<p><a href="#part0020.xhtml#a14G">73. Multicollinearity, Variance Inflation Facto<span class="class_s12Y">r</span>             78</a></p>
+<p><a href="#part0021.xhtml#a17S">74. Standardized Coefficient<span class="class_s12Y">s</span>             79</a></p>
+<p><a href="#part0022.xhtml#a13Z">75. Regression to the Mea<span class="class_s12Y">n</span>             80</a></p>
+<p><a href="#part0023.xhtml#a13F">76. Spline Regressio<span class="class_s12Y">n</span>             81</a></p>
+<p><a href="#part0024.xhtml#a18G">77. Simpson’s Parado<span class="class_s12Y">x</span>             82</a></p>
+<p><a href="#part0025.xhtml#a17M">78. Fixed Effects vs Random Effect<span class="class_s12Y">s</span>             83</a></p>
+<p><a href="#part0026.xhtml#a13B">79. Hausman Tes<span class="class_s12Y">t</span>             84</a></p>
+<p><a href="#part0027.xhtml#a18H">80. Fixed Effects as Abilit<span class="class_s12Y">y</span>             85</a></p>
+<p><a href="#part0028.xhtml#a18P">81. Causal Inferenc<span class="class_s12Y">e</span>             86</a></p>
+<p><a href="#part0029.xhtml#a193">82. Propensity Score Matchin<span class="class_s12Y">g</span>             87</a></p>
+<p><a href="#part0030.xhtml#a17K">83. Difference-in-Difference<span class="class_s12Y">s</span>             88</a></p>
+<p><a href="#part0031.xhtml#a16M">84. Regression Discontinuit<span class="class_s12Y">y</span>             89</a></p>
+<p><a href="#part0032.xhtml#a19G">85. 2-Stage-Least-Squares; Instrumental Variable<span class="class_s12Y">s</span>             90</a></p>
+<p><a href="#part0033.xhtml#a15D">86. Heckman Selection Mode<span class="class_s12Y">l</span>             91</a></p>
+<p><a href="#part0034.xhtml">Part 5: SQ<span class="class_s13X">L</span>             92</a></p>
+<p><a href="#part0034.xhtml#a18W">87. Inner vs Outer Joi<span class="class_s12Y">n</span>             92</a></p>
+<p><a href="#part0035.xhtml#a18F">88. Cross Joi<span class="class_s12Y">n</span>             93</a></p>
+<p><a href="#part0036.xhtml#a15A">89. Where vs Havin<span class="class_s12Y">g</span>             94</a></p>
+<p><a href="#part0037.xhtml#a13C">90. Group B<span class="class_s12Y">y</span>             95</a></p>
+<p><a href="#part0038.xhtml#a177">91. Window Function<span class="class_s12Y">s</span>             96</a></p>
+<p><a href="#part0039.xhtml#a159">92. La<span class="class_s12Y">g</span>             97</a></p>
+<p><a href="#part0040.xhtml#a15U">93. Moving Averag<span class="class_s12Y">e</span>             98</a></p>
+<p><a href="#part0041.xhtml#a198">94. Union vs Union Al<span class="class_s12Y">l</span>             99</a></p>
+<p><a href="#part0042.xhtml#a14X">95. Rank vs Dense Ran<span class="class_s12Y">k</span>             100</a></p>
+<p><a href="#part0043.xhtml#a15C">96. CTE vs Subquer<span class="class_s12Y">y</span>             101</a></p>
+<p><a href="#part0044.xhtml#a17V">97. Table Alia<span class="class_s12Y">s</span>             102</a></p>
+<p><a href="#part0045.xhtml#a17F">98. Wildcar<span class="class_s12Y">d</span>             103</a></p>
+<p><a href="#part0046.xhtml#a16P">99. Lik<span class="class_s12Y">e</span>             104</a></p>
+<p><a href="#part0047.xhtml#a13Y">100. Regular Expression<span class="class_s12Y">s</span>             105</a></p>
+<p><a href="#part0048.xhtml">Part 6: Caree<span class="class_s13X">r</span>             106</a></p>
+<p><a href="#part0048.xhtml#a19R">101. Academic vs Tec<span class="class_s12Y">h</span>             106</a></p>
+<p><a href="#part0049.xhtml#a175">102. [BONUS] Case Study: Man in Financ<span class="class_s12Y">e</span>             107</a></p>
+<p><a href="#part0049.xhtml#a13V">Closing Thought<span class="class_s13X">s</span>             108</a></p>
+<h1 id="part0003.xhtml#a19P" class="heading_s5D-1">Part 1: Supervised Learning</h1>
+<h2 id="part0003.xhtml#id__798_11_" class="heading_s5F-1"><span class="class_s130">1.</span><span class="class_s131">  </span><span id="part0003.xhtml#a199"></span><a href="https://www.tiktok.com/@minutedata/video/7328791238952439046" class="class_s132">Supervised vs Unsupervised Learning</a></h2>
+<div id="part0003.xhtml#page_9" class="class_s5K-1">
+<img src="image_rsrc1BJ.jpg" class="class_s5K-0" />
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<h2 class="heading_s5W"><span class="class_s130">2.</span><span class="class_s131">  </span><span id="part0004.xhtml#a181"></span><a href="https://www.tiktok.com/@minutedata/video/7273832570977275141" class="class_s132">K-Nearest Neighbor</a></h2>
+<div>
+<img src="image_rsrc1BK.jpg" class="class_s60" />
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<h2 class="heading_s5W"><span class="class_s130">3.</span><span class="class_s131">  </span><span id="part0005.xhtml#a15N"></span><a href="https://www.tiktok.com/@minutedata/video/7272465826043759878" class="class_s132">Decision Trees</a></h2>
+<div>
+<img src="image_rsrc1BM.jpg" class="class_s60" />
+</div>
+<h2 id="part0005.xhtml#id__798_14_" class="heading_s5F-0"><span class="class_s130">4.</span><span class="class_s131">  </span><span id="part0005.xhtml#a192"></span><a href="https://www.tiktok.com/@minutedata/video/7274188400687648006" class="class_s132">Random Forest</a></h2>
+<div id="part0005.xhtml#page_12">
+<img src="image_rsrc1BN.jpg" class="class_s6G" />
+</div>
+<h2 id="part0005.xhtml#id__798_15_" class="heading_s5F-0"><span class="class_s130">5.</span><span class="class_s131">  </span><span id="part0005.xhtml#a13N"></span><a href="https://www.tiktok.com/@minutedata/video/7448304139924294955" class="class_s132">Gradient Boosted Trees</a></h2>
+<div id="part0005.xhtml#page_13">
+<img src="image_rsrc1BP.jpg" class="class_s6N" />
+</div>
+<h2 id="part0005.xhtml#id__798_16_" class="heading_s5F-0"><span class="class_s130">6.</span><span class="class_s131">  </span><span id="part0005.xhtml#a13H"></span><a href="https://www.tiktok.com/@minutedata/video/7384736566188510470" class="class_s132">Gradient Descent</a></h2>
+<div id="part0005.xhtml#page_14">
+<img src="image_rsrc1BR.jpg" class="class_s6U" />
+</div>
+<h2 id="part0005.xhtml#id__798_17_" class="heading_s5F-0"><span class="class_s130">7.</span><span class="class_s131">  </span><span id="part0005.xhtml#a13J"></span><a href="https://www.tiktok.com/@minutedata/video/7273433569970720005" class="class_s132">Support Vector Machine</a></h2>
+<div id="part0005.xhtml#page_15" class="class_s6Z-0">
+<img src="image_rsrc1BS.jpg" class="class_s6Z-1" />
+</div>
+<h2 id="part0005.xhtml#id__798_18_" class="heading_s5F-0"><span class="class_s130">8.</span><span class="class_s131">  </span><span id="part0005.xhtml#a15W"></span><a href="https://www.tiktok.com/@minutedata/video/7273458327420538117" class="class_s132">Bias-Variance Tradeoff</a></h2>
+<div id="part0005.xhtml#page_16">
+<img src="image_rsrc1BT.jpg" class="class_s74" />
+</div>
+<h2 id="part0005.xhtml#id__798_19_" class="heading_s5F-0"><span class="class_s130">9.</span><span class="class_s131">  </span><span id="part0005.xhtml#a142"></span><a href="https://www.tiktok.com/@minutedata/video/7283123147103210758" class="class_s132">Cross Validation</a></h2>
+<div id="part0005.xhtml#page_17">
+<img src="image_rsrc1BU.jpg" class="class_s74" />
+</div>
+<h2 id="part0005.xhtml#id__798_20_" class="heading_s5F-0"><span class="class_s130">10.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a14M"></span><a href="https://www.tiktok.com/@minutedata/video/7367735762382556421" class="class_s132">Regularization - Lasso vs Ridge</a></h2>
+<div id="part0005.xhtml#page_18">
+<img src="image_rsrc1BV.jpg" class="class_s5K-0" />
+</div>
+<h2 id="part0005.xhtml#id__798_21_" class="heading_s5F-0"><span class="class_s130">11.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a16X"></span><a href="https://www.tiktok.com/@minutedata/video/7379251948161109253" class="class_s132">Hyperparameter Tuning</a></h2>
+<div id="part0005.xhtml#page_19">
+<img src="image_rsrc1BW.jpg" class="class_s5K-0" />
+</div>
+<h2 id="part0005.xhtml#id__798_22_" class="heading_s5F-0"><span class="class_s130">12.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a19K"></span><a href="https://www.tiktok.com/@minutedata/video/7349550090106703110" class="class_s132">Stepwise Feature Selection</a></h2>
+<div id="part0005.xhtml#page_20">
+<img src="image_rsrc1BX.jpg" class="class_s7N" />
+</div>
+<h2 id="part0005.xhtml#id__798_23_" class="heading_s5F-0"><span class="class_s130">13.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a18U"></span><a href="https://www.tiktok.com/@minutedata/video/7393719005476867334" class="class_s132">Naive Bayes</a></h2>
+<div id="part0005.xhtml#page_21">
+<img src="image_rsrc1BY.jpg" class="class_s7N" />
+</div>
+<h2 id="part0005.xhtml#id__798_24_" class="heading_s5F-0"><span class="class_s130">14.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a15X"></span><a href="https://www.tiktok.com/@minutedata/video/7275832619948985606" class="class_s132">Collaborative Filtering</a></h2>
+<div id="part0005.xhtml#page_22">
+<img src="image_rsrc1BZ.jpg" class="class_s6G" />
+</div>
+<h2 id="part0005.xhtml#id__798_25_" class="heading_s5F-0"><span class="class_s130">15.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a19N"></span><a href="https://www.tiktok.com/@minutedata/video/7286840428064967941" class="class_s132">Bagging vs Boosting vs Stacking</a></h2>
+<div id="part0005.xhtml#page_23">
+<img src="image_rsrc1C0.jpg" class="class_s60" />
+</div>
+<h2 id="part0005.xhtml#id__798_26_" class="heading_s5F-0"><span class="class_s130">16.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a187"></span><a href="https://www.tiktok.com/@minutedata/video/7307994669399444742" class="class_s132">Multi-Armed Bandit</a></h2>
+<div id="part0005.xhtml#page_24" class="class_s6Z-0">
+<img src="image_rsrc1C1.jpg" class="class_s6Z-1" />
+</div>
+<h1 id="part0005.xhtml#a15G" class="heading_s5D-0">Part 2: Unsupervised Learning</h1>
+<h2 id="part0005.xhtml#id__798_27_" class="heading_s5F-0"><span class="class_s130">17.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a197"></span><a href="https://www.tiktok.com/@minutedata/video/7272158813283716358" class="class_s132">K-Means Clustering</a></h2>
+<div class="class_s8B-0">
+<img src="image_rsrc1C2.jpg" class="class_s8B-1" />
+</div>
+<h2 id="part0005.xhtml#page_26" class="heading_s5F-0"><span class="class_s130">18.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a195"></span><a href="https://www.tiktok.com/@minutedata/video/7272512671935696133" class="class_s132">Hierarchical Clustering</a></h2>
+<div class="class_s8G-1">
+<img src="image_rsrc1C3.jpg" class="class_s8G-0" />
+</div>
+<h2 id="part0005.xhtml#page_27" class="heading_s5F-0"><span class="class_s130">19.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a17Y"></span><a href="https://www.tiktok.com/@minutedata/video/7336572535556836613" class="class_s132">Density Clustering</a></h2>
+<div class="class_s8N-1">
+<img src="image_rsrc1C4.jpg" class="class_s8N-0" />
+</div>
+<h2 id="part0005.xhtml#page_28" class="heading_s5F-0"><span class="class_s130">20.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a18J"></span><a href="https://www.tiktok.com/@minutedata/video/7272173372966964485" class="class_s132">How Many Clusters? Calinski Index</a></h2>
+<div class="class_s8U-0">
+<img src="image_rsrc1C5.jpg" class="class_s8U-1" />
+</div>
+<h2 id="part0005.xhtml#page_29" class="heading_s5F-0"><span class="class_s130">21.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a137"></span><a href="https://www.tiktok.com/@minutedata/video/7351753709413485829" class="class_s132">Dendrogram</a></h2>
+<div>
+<img src="image_rsrc1C6.jpg" class="class_s8Z" />
+</div>
+<h2 id="part0005.xhtml#id__798_32_" class="heading_s5F-0"><span class="class_s130">22.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a18Y"></span><a href="https://www.tiktok.com/@minutedata/video/7374147332549512454" class="class_s132">Distance Measures</a></h2>
+<div id="part0005.xhtml#page_30" class="class_s8G-1">
+<img src="image_rsrc1C7.jpg" class="class_s8G-0" />
+</div>
+<h2 id="part0005.xhtml#id__798_33_" class="heading_s5F-0"><span class="class_s130">23.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a138"></span><a href="https://www.tiktok.com/@minutedata/video/7370329004550655238" class="class_s132">Cosine Similarity</a></h2>
+<div id="part0005.xhtml#page_31">
+<img src="image_rsrc1C8.jpg" class="class_s8Z" />
+</div>
+<h2 id="part0005.xhtml#id__798_34_" class="heading_s5F-0"><span class="class_s130">24.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a13T"></span><a href="https://www.tiktok.com/@minutedata/video/7471665854489496878" class="class_s132">String Distance</a></h2>
+<div id="part0005.xhtml#page_32">
+<img src="image_rsrc1C9.jpg" class="class_s5K-0" />
+</div>
+<h2 id="part0005.xhtml#id__798_35_" class="heading_s5F-0"><span class="class_s130">25.</span><span class="class_s131">                    </span><span id="part0005.xhtml#a151"></span><a href="https://www.tiktok.com/@minutedata/video/7463821039949106478" class="class_s132">Earth Mover's Distance</a></h2>
+<div id="part0005.xhtml#page_33">
+<img src="image_rsrc1CA.jpg" class="class_s7N" />
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<h2 class="heading_s5W"><span class="class_s130">26.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a15Y"></span><a href="https://www.tiktok.com/@minutedata/video/7422241457311943982" class="class_s132">Principal Components Analysis</a></h2>
+<div>
+<img src="image_rsrc1CB.jpg" class="class_s60" />
+</div>
+<h2 id="part0006.xhtml#id__798_37_" class="heading_s5F-0"><span class="class_s130">27.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a16V"></span><a href="https://www.tiktok.com/@minutedata/video/7383334782421257477" class="class_s132">Topic Modeling - Latent Dirichlet Allocation</a></h2>
+<div id="part0006.xhtml#page_35" class="class_s9Y-0">
+<img src="image_rsrc1CC.jpg" class="class_s9Y-1" />
+</div>
+<h1 id="part0006.xhtml#a163" class="heading_s5D-0">Part 3: Probability &amp; Statistics</h1>
+<h2 id="part0006.xhtml#page_36" class="heading_s5F-0"><span class="class_s130">28.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a17T"></span><a href="https://www.tiktok.com/@minutedata/video/7320994567925288197" class="class_s132">Levels of Measurement</a></h2>
+<div>
+<img src="image_rsrc1CD.jpg" class="class_s5K-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_39_" class="heading_s5F-0"><span class="class_s130">29.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a16G"></span><a href="https://www.tiktok.com/@minutedata/video/7273429809311665413" class="class_s132">Bernoulli vs Binomial</a></h2>
+<div id="part0006.xhtml#page_37">
+<img src="image_rsrc1CE.jpg" class="class_s60" />
+</div>
+<h2 id="part0006.xhtml#id__798_40_" class="heading_s5F-0"><span class="class_s130">30.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a135"></span><a href="https://www.tiktok.com/@minutedata/video/7273234089778482438" class="class_s132">Law of Large Numbers vs Central Limit Theorem</a></h2>
+<div id="part0006.xhtml#page_38">
+<img src="image_rsrc1CF.jpg" class="class_sAC" />
+</div>
+<h2 id="part0006.xhtml#id__798_41_" class="heading_s5F-0"><span class="class_s130">31.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a13D"></span><a href="https://www.tiktok.com/@minutedata/video/7284964722930191621" class="class_s132">Bayes Theorem</a></h2>
+<div id="part0006.xhtml#page_39">
+<img src="image_rsrc1CG.jpg" class="class_sAC" />
+</div>
+<h2 id="part0006.xhtml#id__798_42_" class="heading_s5F-0"><span class="class_s130">32.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a19W"></span><a href="https://www.tiktok.com/@minutedata/video/7386994948475735302" class="class_s132">Monty Hall Problem</a></h2>
+<div id="part0006.xhtml#page_40" class="class_s8U-0">
+<img src="image_rsrc1CH.jpg" class="class_s8U-1" />
+</div>
+<h2 id="part0006.xhtml#page_41" class="heading_s5F-0"><span class="class_s130">33.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a17H"></span><a href="https://www.tiktok.com/@minutedata/video/7391086131355340037" class="class_s132">Variance, Standard Deviation</a></h2>
+<div>
+<img src="image_rsrc1CJ.jpg" class="class_sAT" />
+</div>
+<h2 id="part0006.xhtml#id__798_44_" class="heading_s5F-0"><span class="class_s130">34.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a17D"></span><a href="https://www.tiktok.com/@minutedata/video/7304694821736762630" class="class_s132">Confidence Interval</a></h2>
+<div id="part0006.xhtml#page_42">
+<img src="image_rsrc1CK.jpg" class="class_sAC" />
+</div>
+<h2 id="part0006.xhtml#id__798_45_" class="heading_s5F-0"><span class="class_s130">35.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a170"></span><a href="https://www.tiktok.com/@minutedata/video/7417044609982795039" class="class_s132">Standard Normal Distribution</a></h2>
+<div id="part0006.xhtml#page_43" class="class_sB2-1">
+<img src="image_rsrc1CM.jpg" class="class_sB2-0" />
+</div>
+<h2 id="part0006.xhtml#page_44" class="heading_s5F-0"><span class="class_s130">36.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a17E"></span><a href="https://www.tiktok.com/@minutedata/video/7453940817078537514" class="class_s132">Coefficient of Variation</a></h2>
+<div class="class_sB2-1">
+<img src="image_rsrc1CN.jpg" class="class_sB2-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_47_" class="heading_s5F-0"><span class="class_s130">37.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a149"></span><a href="https://www.tiktok.com/@minutedata/video/7273963663676017925" class="class_s132">P-value</a></h2>
+<div id="part0006.xhtml#page_45" class="class_s8N-1">
+<img src="image_rsrc1CP.jpg" class="class_s8N-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_48_" class="heading_s5F-0"><span class="class_s130">38.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a14R"></span><a href="https://www.tiktok.com/@minutedata/video/7280462823505825029" class="class_s132">Type I vs Type II Error</a></h2>
+<div id="part0006.xhtml#page_46" class="class_s8N-1">
+<img src="image_rsrc1CR.jpg" class="class_s8N-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_49_" class="heading_s5F-0"><span class="class_s130">39.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a17Z"></span><a href="https://www.tiktok.com/@minutedata/video/7411884175587904799" class="class_s132">Bivariate Tests</a></h2>
+<div id="part0006.xhtml#page_47" class="class_s9Y-0">
+<img src="image_rsrc1CS.jpg" class="class_s9Y-1" />
+</div>
+<h2 id="part0006.xhtml#id__798_50_" class="heading_s5F-0"><span class="class_s130">40.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a17N"></span><a href="https://www.tiktok.com/@minutedata/video/7435273613063867694" class="class_s132">Pearson Correlation</a></h2>
+<div id="part0006.xhtml#page_48" class="class_sBR-0">
+<img src="image_rsrc1CT.jpg" class="class_sBR-1" />
+</div>
+<h2 id="part0006.xhtml#id__798_51_" class="heading_s5F-0"><span class="class_s130">41.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a16H"></span><a href="https://www.tiktok.com/@minutedata/video/7400028850681302303" class="class_s132">Chi-Square Test</a></h2>
+<div id="part0006.xhtml#page_49" class="class_sBW-0">
+<img src="image_rsrc1CU.jpg" class="class_sBW-1" />
+</div>
+<h2 id="part0006.xhtml#id__798_52_" class="heading_s5F-0"><span class="class_s130">42.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a16R"></span><a href="https://www.tiktok.com/@minutedata/video/7375899872844696838" class="class_s132">ANOVA</a></h2>
+<div id="part0006.xhtml#page_50" class="class_s8N-1">
+<img src="image_rsrc1CV.jpg" class="class_s8N-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_53_" class="heading_s5F-0"><span class="class_s130">43.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a19U"></span><a href="https://www.tiktok.com/@minutedata/video/7430095738148834603" class="class_s132">Rank Sum Test</a></h2>
+<div id="part0006.xhtml#page_51">
+<img src="image_rsrc1CW.jpg" class="class_s5K-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_54_" class="heading_s5F-0"><span class="class_s130">44.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a194"></span><a href="https://www.tiktok.com/@minutedata/video/7469059181287460138" class="class_s132">Wilcoxon Signed Rank Test</a></h2>
+<div id="part0006.xhtml#page_52" class="class_sC9-0">
+<img src="image_rsrc1CX.jpg" class="class_sC9-1" />
+</div>
+<h2 id="part0006.xhtml#id__798_55_" class="heading_s5F-0"><span class="class_s130">45.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a18A"></span><a href="https://www.tiktok.com/@minutedata/video/7273233132218895622" class="class_s132">Accuracy, Precision, Recall</a></h2>
+<div id="part0006.xhtml#page_53" class="class_sCE-1">
+<img src="image_rsrc1CY.jpg" class="class_sCE-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_56_" class="heading_s5F-0"><span class="class_s130">46.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a18C"></span><a href="https://www.tiktok.com/@minutedata/video/7344369840192376069" class="class_s132">ROC Curve</a></h2>
+<div id="part0006.xhtml#page_54" class="class_sCE-1">
+<img src="image_rsrc1CZ.jpg" class="class_sCE-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_57_" class="heading_s5F-0"><span class="class_s130">47.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a18E"></span><a href="https://www.tiktok.com/@minutedata/video/7278451645837626629" class="class_s132">Standardization, Feature Scaling</a></h2>
+<div id="part0006.xhtml#page_55" class="class_sCR-1">
+<img src="image_rsrc1D0.jpg" class="class_sCR-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_58_" class="heading_s5F-0"><span class="class_s130">48.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a18R"></span><a href="https://www.tiktok.com/@minutedata/video/7277576322623212806" class="class_s132">Outlier Detection</a></h2>
+<div id="part0006.xhtml#page_56">
+<img src="image_rsrc1D1.jpg" class="class_sAC" />
+</div>
+<h2 id="part0006.xhtml#id__798_59_" class="heading_s5F-0"><span class="class_s130">49.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a17W"></span><a href="https://www.tiktok.com/@minutedata/video/7334362781023472902" class="class_s132">Log Transformation</a></h2>
+<div id="part0006.xhtml#page_57" class="class_sD0-1">
+<img src="image_rsrc1D2.jpg" class="class_sD0-0" />
+</div>
+<h2 id="part0006.xhtml#id__798_60_" class="heading_s5F-0"><span class="class_s130">50.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a13S"></span><a href="https://www.tiktok.com/@minutedata/video/7369232724265159942" class="class_s132">Winsorization</a></h2>
+<div id="part0006.xhtml#page_58">
+<img src="image_rsrc1D3.jpg" class="class_sD5" />
+</div>
+<h2 id="part0006.xhtml#id__798_61_" class="heading_s5F-0"><span class="class_s130">51.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a16C"></span><a href="https://www.tiktok.com/@minutedata/video/7401489098189393183" class="class_s132">Missing Data</a></h2>
+<div id="part0006.xhtml#page_59">
+<img src="image_rsrc1D4.jpg" class="class_sAT" />
+</div>
+<h2 id="part0006.xhtml#id__798_62_" class="heading_s5F-0"><span class="class_s130">52.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a19E"></span><a href="https://www.tiktok.com/@minutedata/video/7445671119614496042" class="class_s132">Switchback Test</a></h2>
+<div id="part0006.xhtml#page_60">
+<img src="image_rsrc1D5.jpg" class="class_sAT" />
+</div>
+<h2 id="part0006.xhtml#id__798_63_" class="heading_sDF-1"><span class="class_s130">53.</span><span class="class_s131">                    </span><span id="part0006.xhtml#a143"></span><a href="https://www.tiktok.com/@minutedata/video/7334371572569869573" class="class_s132">Kolmogorov-Smirnov Test</a></h2>
+<div id="part0006.xhtml#id__798_64_" class="heading_sDN">
+<div id="part0006.xhtml#page_61">
+<img src="image_rsrc1D6.jpg" class="class_sDK" />
+</div>
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<h2 class="heading_s5W"><span class="class_s130">54.</span><span class="class_s131">                    </span><span id="part0007.xhtml#a13G"></span><a href="https://www.tiktok.com/@minutedata/video/7419687616469142826" class="class_s132">Reliability, Validity</a></h2>
+<div class="class_s8G-1">
+<img src="image_rsrc1D7.jpg" class="class_s8G-0" />
+</div>
+<h2 id="part0007.xhtml#page_63" class="heading_s5F-0"><span class="class_s130">55.</span><span class="class_s131">                    </span><span id="part0007.xhtml#a190"></span><a href="https://www.tiktok.com/@minutedata/video/7346953124302621958" class="class_s132">Sample Size Calculation</a></h2>
+<div class="class_sD0-1">
+<img src="image_rsrc1D8.jpg" class="class_sD0-0" />
+</div>
+<h2 id="part0007.xhtml#page_64" class="heading_s5F-0"><span class="class_s130">56.</span><span class="class_s131">                    </span><span id="part0007.xhtml#a144"></span><a href="https://www.tiktok.com/@minutedata/video/7354747368878787846" class="class_s132">Multiple Comparisons</a></h2>
+<div class="class_s9Y-0">
+<img src="image_rsrc1D9.jpg" class="class_s9Y-1" />
+</div>
+<h2 id="part0007.xhtml#page_65" class="heading_s5F-0"><span class="class_s130">57.</span><span class="class_s131">                    </span><span id="part0007.xhtml#a176"></span><a href="https://www.tiktok.com/@minutedata/video/7339179599479262470" class="class_s132">Blocked vs Stratified Sampling</a></h2>
+<div>
+<img src="image_rsrc1DA.jpg" class="class_sED" />
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<h2 class="heading_s5W"><span class="class_s130">58.</span><span class="class_s131">                    </span><span id="part0008.xhtml#a16Y"></span><a href="https://www.tiktok.com/@minutedata/video/7315813283787738369" class="class_s132">Anscombe’s Quartet</a></h2>
+<div class="class_sCR-1">
+<img src="image_rsrc1DB.jpg" class="class_sCR-0" />
+</div>
+<h2 id="part0008.xhtml#page_67" class="heading_s5F-0"><span class="class_s130">59.</span><span class="class_s131">                    </span><span id="part0008.xhtml#a158"></span><a href="https://www.tiktok.com/@minutedata/video/7289825534375202054" class="class_s132">Power Law</a></h2>
+<div>
+<img src="image_rsrc1DC.jpg" class="class_sEW" />
+</div>
+<h2 id="part0008.xhtml#page_68" class="heading_s5F-0"><span class="class_s130">60.</span><span class="class_s131">                    </span><span id="part0008.xhtml#a154"></span><a href="https://www.tiktok.com/@minutedata/video/7283637581575785733" class="class_s132">Survivorship Bias</a></h2>
+<div>
+<img src="image_rsrc1DD.jpg" class="class_sAC" />
+</div>
+<h2 id="part0008.xhtml#id__798_72_" class="heading_sDF-1"><span class="class_s130">61.</span><span class="class_s131">                    </span><span id="part0008.xhtml#a14W"></span><a href="https://www.tiktok.com/@minutedata/video/7430487627507240234" class="class_s132">Meta Analysis</a></h2>
+<div id="part0008.xhtml#id__798_3_" class="heading_s5D-2">
+<div id="part0008.xhtml#page_69">
+<img src="image_rsrc1DE.jpg" class="class_s5K-0" />
+</div>
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<h1 class="heading_sFD">Part 4: Econometrics</h1>
+<h2 id="part0009.xhtml#id__798_73_" class="heading_sDF-0"><span class="class_s130">62.</span><span class="class_s131">                    </span><span id="part0009.xhtml#a18D"></span><a href="https://www.tiktok.com/@minutedata/video/7272160357349657862" class="class_s132">Linear Regression</a></h2>
+<h2 id="part0009.xhtml#id__798_74_" class="heading_sFM-0"><img src="image_rsrc1DF.jpg" class="class_sFJ" /></h2>
+<p><span id="part0010.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">63.</span><span class="class_s131">                    </span><span id="part0010.xhtml#a12W"></span><a href="https://www.tiktok.com/@minutedata/video/7364391928982424837" class="class_s132">Deriving OLS</a></h2>
+<h2 id="part0010.xhtml#id__798_76_" class="heading_sFM-0"><img src="image_rsrc1DG.jpg" class="class_sG1" /></h2>
+<p><span id="part0011.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">64.</span><span class="class_s131">                    </span><span id="part0011.xhtml#a171"></span><a href="https://www.tiktok.com/@minutedata/video/7376638415795752197" class="class_s132">Interaction Effect</a></h2>
+<h2 id="part0011.xhtml#id__798_78_" class="heading_sFM-1"><img src="image_rsrc1DH.jpg" class="class_s6G" /></h2>
+<p><span id="part0012.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">65.</span><span class="class_s131">                    </span><span id="part0012.xhtml#a17R"></span><a href="https://www.tiktok.com/@minutedata/video/7427832792249093419" class="class_s132">Chow Test (Structural Break)</a></h2>
+<h2 id="part0012.xhtml#id__798_80_" class="heading_sFM-1"><img src="image_rsrc1DJ.jpg" class="class_s60" /></h2>
+<p><span id="part0013.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">66.</span><span class="class_s131">                    </span><span id="part0013.xhtml#a148"></span><a href="https://www.tiktok.com/@minutedata/video/7381819195505380614" class="class_s132">Linear Probability Model</a></h2>
+<h2 id="part0013.xhtml#id__798_82_" class="heading_sFM-0"><img src="image_rsrc1DK.jpg" class="class_sCE-0" /></h2>
+<p><span id="part0014.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">67.</span><span class="class_s131">                    </span><span id="part0014.xhtml#a14F"></span><a href="https://www.tiktok.com/@minutedata/video/7305577569561234693" class="class_s132">Logistic Regression</a></h2>
+<h2 id="part0014.xhtml#id__798_84_" class="heading_sFM-0"><img src="image_rsrc1DM.jpg" class="class_s8N-0" /></h2>
+<p><span id="part0015.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">68.</span><span class="class_s131">                    </span><span id="part0015.xhtml#a15Z"></span><a href="https://www.tiktok.com/@minutedata/video/7466425750670052654" class="class_s132">Ordered Logistic Regression</a></h2>
+<h2 id="part0015.xhtml#id__798_86_" class="heading_sFM-0"><img src="image_rsrc1DN.jpg" class="class_sCE-0" /></h2>
+<p><span id="part0016.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">69.</span><span class="class_s131">                    </span><span id="part0016.xhtml#a17X"></span><a href="https://www.tiktok.com/@minutedata/video/7458677073490611502" class="class_s132">Censored Regression (Tobit)</a></h2>
+<h2 id="part0016.xhtml#id__798_88_" class="heading_sFM-0"><img src="image_rsrc1DP.jpg" class="class_s8G-0" /></h2>
+<p><span id="part0017.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">70.</span><span class="class_s131">                    </span><span id="part0017.xhtml#a161"></span><a href="https://www.tiktok.com/@minutedata/video/7437879440421489962" class="class_s132">Poisson Regression</a></h2>
+<h2 id="part0017.xhtml#id__798_90_" class="heading_sFM-0"><img src="image_rsrc1DR.jpg" class="class_sD0-0" /></h2>
+<p><span id="part0018.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">71.</span><span class="class_s131">                    </span><span id="part0018.xhtml#a16K"></span><a href="https://www.tiktok.com/@minutedata/video/7385873692955315461" class="class_s132">R-Squared</a></h2>
+<h2 id="part0018.xhtml#id__798_92_" class="heading_sFM-1"><img src="image_rsrc1DS.jpg" class="class_sJU" /></h2>
+<p><span id="part0019.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">72.</span><span class="class_s131">                    </span><span id="part0019.xhtml#a16T"></span><a href="https://www.tiktok.com/@minutedata/video/7337314998533836038" class="class_s132">Heteroskedasticity</a></h2>
+<h2 id="part0019.xhtml#id__798_94_" class="heading_sFM-1"><img src="image_rsrc1DT.jpg" class="class_s6U" /></h2>
+<p><span id="part0020.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">73.</span><span class="class_s131">                    </span><span id="part0020.xhtml#a14G"></span><a href="https://www.tiktok.com/@minutedata/video/7310982307815460102" class="class_s132">Multicollinearity, Variance Inflation Factor</a></h2>
+<h2 id="part0020.xhtml#id__798_96_" class="heading_sFM-0"><img src="image_rsrc1DU.jpg" class="class_sKH" /></h2>
+<p><span id="part0021.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">74.</span><span class="class_s131">                    </span><span id="part0021.xhtml#a17S"></span><a href="https://www.tiktok.com/@minutedata/video/7406663556080422174" class="class_s132">Standardized Coefficients</a></h2>
+<h2 id="part0021.xhtml#id__798_98_" class="heading_sFM-1"><img src="image_rsrc1DV.jpg" class="class_s6G" /></h2>
+<p><span id="part0022.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">75.</span><span class="class_s131">                    </span><span id="part0022.xhtml#a13Z"></span><a href="https://www.tiktok.com/@minutedata/video/7326180131960098053" class="class_s132">Regression to the Mean</a></h2>
+<h2 id="part0022.xhtml#id__798_100_" class="heading_sFM-0"><img src="image_rsrc1DW.jpg" class="class_sD0-0" /></h2>
+<p><span id="part0023.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">76.</span><span class="class_s131">                    </span><span id="part0023.xhtml#a13F"></span><a href="https://www.tiktok.com/@minutedata/video/7313208608701893893" class="class_s132">Spline Regression</a></h2>
+<h2 id="part0023.xhtml#id__798_102_" class="heading_sFM-0"><img src="image_rsrc1DX.jpg" class="class_sMK" /></h2>
+<p><span id="part0024.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">77.</span><span class="class_s131">                    </span><span id="part0024.xhtml#a18G"></span><a href="https://www.tiktok.com/@minutedata/video/7276033354598747397" class="class_s132">Simpson’s Paradox</a></h2>
+<h2 id="part0024.xhtml#id__798_104_" class="heading_sFM-1"><img src="image_rsrc1DY.jpg" class="class_s60" /></h2>
+<p><span id="part0025.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">78.</span><span class="class_s131">                    </span><span id="part0025.xhtml#a17M"></span><a href="https://www.tiktok.com/@minutedata/video/7276382032324758789" class="class_s132">Fixed Effects vs Random Effects</a></h2>
+<h2 id="part0025.xhtml#id__798_106_" class="heading_sFM-0"><img src="image_rsrc1DZ.jpg" class="class_s8N-0" /></h2>
+<p><span id="part0026.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">79.</span><span class="class_s131">                    </span><span id="part0026.xhtml#a13B"></span><a href="https://www.tiktok.com/@minutedata/video/7432675432945798443" class="class_s132">Hausman Test</a></h2>
+<h2 id="part0026.xhtml#id__798_108_" class="heading_sFM-0"><img src="image_rsrc1E0.jpg" class="class_sCE-0" /></h2>
+<p><span id="part0027.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">80.</span><span class="class_s131">                    </span><span id="part0027.xhtml#a18H"></span><a href="https://www.tiktok.com/@minutedata/video/7440458304553291054" class="class_s132">Fixed Effects as Ability</a></h2>
+<h2 id="part0027.xhtml#id__798_110_" class="heading_sFM-1"><img src="image_rsrc1E1.jpg" class="class_s8Z" /></h2>
+<p><span id="part0028.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">81.</span><span class="class_s131">                    </span><span id="part0028.xhtml#a18P"></span><a href="https://www.tiktok.com/@minutedata/video/7292803089449422086" class="class_s132">Causal Inference</a></h2>
+<h2 id="part0028.xhtml#id__798_112_" class="heading_sFM-0"><img src="image_rsrc1E2.jpg" class="class_s8N-0" /></h2>
+<p><span id="part0029.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">82.</span><span class="class_s131">                    </span><span id="part0029.xhtml#a193"></span><a href="https://www.tiktok.com/@minutedata/video/7281230505620655366" class="class_s132">Propensity Score Matching</a></h2>
+<h2 id="part0029.xhtml#id__798_114_" class="heading_sFM-1"><img src="image_rsrc1E3.jpg" class="class_s6G" /></h2>
+<p><span id="part0030.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">83.</span><span class="class_s131">                    </span><span id="part0030.xhtml#a17K"></span><a href="https://www.tiktok.com/@minutedata/video/7272495555694169350" class="class_s132">Difference-in-Differences</a></h2>
+<h2 id="part0030.xhtml#id__798_116_" class="heading_sFM-1"><img src="image_rsrc1E4.jpg" class="class_sD5" /></h2>
+<p><span id="part0031.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">84.</span><span class="class_s131">                    </span><span id="part0031.xhtml#a16M"></span><a href="https://www.tiktok.com/@minutedata/video/7273213592713923846" class="class_s132">Regression Discontinuity</a></h2>
+<h2 id="part0031.xhtml#id__798_118_" class="heading_sFM-1"><img src="image_rsrc1E5.jpg" class="class_sJU" /></h2>
+<p><span id="part0032.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">85.</span><span class="class_s131">                    </span><span id="part0032.xhtml#a19G"></span><a href="https://www.tiktok.com/@minutedata/video/7424874851468397867" class="class_s132">2-Stage-Least-Squares; Instrumental Variables</a></h2>
+<h2 id="part0032.xhtml#id__798_120_" class="heading_sFM-1"><img src="image_rsrc1E6.jpg" class="class_s8Z" /></h2>
+<p><span id="part0033.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">86.</span><span class="class_s131">                    </span><span id="part0033.xhtml#a15D"></span><a href="https://www.tiktok.com/@minutedata/video/7396327471794228486" class="class_s132">Heckman Selection Model</a></h2>
+<h1 id="part0033.xhtml#id__798_5_" class="heading_s5D-3"><img src="image_rsrc1E7.jpg" class="class_s5K-0" /></h1>
+<p><span id="part0034.xhtml"></span></p>
+<h1 class="heading_sFD">Part 5: SQL</h1>
+<h2 id="part0034.xhtml#id__798_122_" class="heading_sDF-0"><span class="class_s130">87.</span><span class="class_s131">                    </span><span id="part0034.xhtml#a18W"></span><a href="https://www.tiktok.com/@minutedata/video/7318405787829767429" class="class_s132">Inner vs Outer Join</a></h2>
+<h2 id="part0034.xhtml#id__798_123_" class="heading_sFM-0"><img src="image_rsrc1E8.jpg" class="class_sSE" /></h2>
+<p><span id="part0035.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">88.</span><span class="class_s131">                    </span><span id="part0035.xhtml#a18F"></span><a href="https://www.tiktok.com/@minutedata/video/7380760269301091590" class="class_s132">Cross Join</a></h2>
+<h2 id="part0035.xhtml#id__798_125_" class="heading_sFM-0"><img src="image_rsrc1E9.jpg" class="class_sCE-0" /></h2>
+<p><span id="part0036.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">89.</span><span class="class_s131">                    </span><span id="part0036.xhtml#a15A"></span><a href="https://www.tiktok.com/@minutedata/video/7360354277556063494" class="class_s132">Where vs Having</a></h2>
+<h2 id="part0036.xhtml#id__798_127_" class="heading_sFM-0"><img src="image_rsrc1EA.jpg" class="class_sCR-0" /></h2>
+<p><span id="part0037.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">90.</span><span class="class_s131">                    </span><span id="part0037.xhtml#a13C"></span><a href="https://www.tiktok.com/@minutedata/video/7323613042816634117" class="class_s132">Group By</a></h2>
+<h2 id="part0037.xhtml#id__798_129_" class="heading_sFM-0"><img src="image_rsrc1EB.jpg" class="class_sD0-0" /></h2>
+<p><span id="part0038.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">91.</span><span class="class_s131">                    </span><span id="part0038.xhtml#a177"></span><a href="https://www.tiktok.com/@minutedata/video/7275113981310979333" class="class_s132">Window Functions</a></h2>
+<h2 id="part0038.xhtml#id__798_131_" class="heading_sFM-1"><img src="image_rsrc1EC.jpg" class="class_s74" /></h2>
+<p><span id="part0039.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">92.</span><span class="class_s131">                    </span><span id="part0039.xhtml#a159"></span><a href="https://www.tiktok.com/@minutedata/video/7275304984877518086" class="class_s132">Lag</a></h2>
+<h2 id="part0039.xhtml#id__798_133_" class="heading_sFM-1"><img src="image_rsrc1ED.jpg" class="class_s60" /></h2>
+<p><span id="part0040.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">93.</span><span class="class_s131">                    </span><span id="part0040.xhtml#a15U"></span><a href="https://www.tiktok.com/@minutedata/video/7276044708357377285" class="class_s132">Moving Average</a></h2>
+<h2 id="part0040.xhtml#id__798_135_" class="heading_sFM-1"><img src="image_rsrc1EE.jpg" class="class_s60" /></h2>
+<p><span id="part0041.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">94.</span><span class="class_s131">                    </span><span id="part0041.xhtml#a198"></span><a href="https://www.tiktok.com/@minutedata/video/7398896687206403334" class="class_s132">Union vs Union All</a></h2>
+<h2 id="part0041.xhtml#id__798_137_" class="heading_sFM-0"><img src="image_rsrc1EF.jpg" class="class_sUW" /></h2>
+<p><span id="part0042.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">95.</span><span class="class_s131">                    </span><span id="part0042.xhtml#a14X"></span><a href="https://www.tiktok.com/@minutedata/video/7286102078106144006" class="class_s132">Rank vs Dense Rank</a></h2>
+<h2 id="part0042.xhtml#id__798_139_" class="heading_sFM-1"><img src="image_rsrc1EG.jpg" class="class_sAC" /></h2>
+<p><span id="part0043.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">96.</span><span class="class_s131">                    </span><span id="part0043.xhtml#a15C"></span><a href="https://www.tiktok.com/@minutedata/video/7331357454187416837" class="class_s132">CTE vs Subquery</a></h2>
+<h2 id="part0043.xhtml#id__798_141_" class="heading_sFM-1"><img src="image_rsrc1EH.jpg" class="class_s8Z" /></h2>
+<p><span id="part0044.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">97.</span><span class="class_s131">                    </span><span id="part0044.xhtml#a17V"></span><a href="https://www.tiktok.com/@minutedata/video/7341785232347073797" class="class_s132">Table Alias</a></h2>
+<h2 id="part0044.xhtml#id__798_143_" class="heading_sFM-1"><img src="image_rsrc1EJ.jpg" class="class_s74" /></h2>
+<p><span id="part0045.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">98.</span><span class="class_s131">                    </span><span id="part0045.xhtml#a17F"></span><a href="https://www.tiktok.com/@minutedata/video/7357328600011459846" class="class_s132">Wildcard</a></h2>
+<h2 id="part0045.xhtml#id__798_145_" class="heading_sFM-0"><img src="image_rsrc1EK.jpg" class="class_sKH" /></h2>
+<p><span id="part0046.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">99.</span><span class="class_s131">                    </span><span id="part0046.xhtml#a16P"></span><a href="https://www.tiktok.com/@minutedata/video/7324417354551790854" class="class_s132">Like</a></h2>
+<h2 id="part0046.xhtml#id__798_147_" class="heading_sFM-0"><img src="image_rsrc1EM.jpg" class="class_sD0-0" /></h2>
+<p><span id="part0047.xhtml"></span></p>
+<h2 class="heading_sFX-0"><span class="class_s130">100.</span><span class="class_s131">             </span><span id="part0047.xhtml#a13Y"></span><a href="https://www.tiktok.com/@minutedata/video/7414127584595741983" class="class_s132">Regular Expressions</a></h2>
+<h1 id="part0047.xhtml#id__798_7_" class="heading_s5D-4"><img src="image_rsrc1EN.jpg" class="class_sWZ" /></h1>
+<p><span id="part0048.xhtml"></span></p>
+<h1 class="heading_sFD">Part 6: Career</h1>
+<h2 id="part0048.xhtml#id__798_149_" class="heading_sDF-0"><span class="class_s130">101.</span><span class="class_s131">             </span><span id="part0048.xhtml#a19R"></span><a href="https://www.tiktok.com/@minutedata/video/7362934467259944198" class="class_s132">Academic vs Tech</a></h2>
+<h2 id="part0048.xhtml#id__798_150_" class="heading_sFM-0"><img src="image_rsrc1EP.jpg" class="class_sXC" /></h2>
+<p><span id="part0049.xhtml"></span></p>
+<h2 class="heading_sFX-1"><span class="class_s130">102.</span><span class="class_s131">             </span><span id="part0049.xhtml#a175"></span><a href="https://www.tiktok.com/@minutedata/video/7378116786052533509" class="class_s132">[BONUS] Case Study: Man in Finance</a></h2>
+<h2 id="part0049.xhtml#id__798_152_" class="heading_sFM-2"><img src="image_rsrc1ER.jpg" class="class_sB2-0" /></h2>
+<h1 id="part0049.xhtml#a13V" class="heading_sXU">Closing Thoughts</h1>
+<p>Online courses, education apps and AI summaries make learning so accessible. We consume more information than ever, yet barely remember half of it. Next time you’re learning something, write it out! Draw, scribble, erase, cross out, doodle! You may be surprised how much more you’ll remember!</p>

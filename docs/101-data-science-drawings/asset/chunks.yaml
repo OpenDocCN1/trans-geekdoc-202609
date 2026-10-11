@@ -1,0 +1,1663 @@
+- raw: "\n\n![](image_rsrc1BH.jpg)\n\n101   \n\nDATA SCIENCE   \n\nDRAWINGS\n\nRaymond\
+    \ Lim\n\n@MinuteData\n\nCopyright © 2025  \n\nRaymond Lim\n\nAll rights reserved.\
+    \ This book or any portion thereof may not be reproduced or used in any manner\
+    \ whatsoever without the express written permission of the author except for the\
+    \ use of brief quotations in a book review.\n\nISBN 9798317027308\n\nPublished\
+    \ through Amazon KDP\n\nIntroduction\n\nOne spring day in 2018, I strolled past\
+    \ my childhood elementary school. I glanced through the windows to see if I’d\
+    \ recognized the teacher. Nope - it was a young teacher enthusiastically teaching\
+    \ first graders shapes… using PowerPoint! Call me old-school, but how are kids\
+    \ learning how to draw shapes when they just magically appear on PowerPoint slides?!\n\
+    \nFast forward to 2024. I was preparing for data science interviews using online\
+    \ courses, YouTube videos and mobile apps. However, as a millennial who went to\
+    \ school before smartphones, passively scrolling through online content did not\
+    \ work.\n\nI soon created TikToks drawing out data topics with colorful markers,\
+    \ hoping others would draw along. This book is a compilation of those drawings.\n\
+    \nWho this book is for: People who previously learned statistics, machine learning,\
+    \ econometrics, SQL, and want to refresh with colorful one-pagers (think flash\
+    \ cards!). This book is intentionally informal, colorful and raw. You’ll find\
+    \ scribbles, corrections, obscure handwriting that will make you learn more actively.\n\
+    \nWatch the accompanying videos on social media!\n\ntiktok.com/@MinuteData\n\n\
+    youtube.com/@MinuteData\n\ninstagram.com/MinuteData\n\nfacebook.com/MinuteData\n\
+    \nminutedata22@gmail.com\n\nAbout the author: Raymond Lim graduated from Columbia\
+    \ University before data science classes even existed. He worked for 15+ years\
+    \ as an economics researcher in academia, biostatistician in healthcare, data\
+    \ scientist at Meta and Google. He’s also a latin ballroom dancer!\n\nTable of\
+    \ Contents\n\n[Part 1: Supervised Learning             6](#part0003.xhtml#a19P)\n\
+    \n[1\\. Supervised vs Unsupervised Learning             6](#part0003.xhtml#a199)\n\
+    \n[2\\. K-Nearest Neighbor             7](#part0004.xhtml#a181)\n\n[3\\. Decision\
+    \ Trees             8](#part0005.xhtml#a15N)\n\n[4\\. Random Forest             9](#part0005.xhtml#a192)\n\
+    \n[5\\. Gradient Boosted Trees             10](#part0005.xhtml#a13N)\n\n[6\\.\
+    \ Gradient Descent             11](#part0005.xhtml#a13H)\n\n[7\\. Support Vector\
+    \ Machine             12](#part0005.xhtml#a13J)\n\n[8\\. Bias-Variance Tradeoff             13](#part0005.xhtml#a15W)\n\
+    \n[9\\. Cross Validation             14](#part0005.xhtml#a142)\n\n[10\\. Regularization\
+    \ - Lasso vs Ridge             15](#part0005.xhtml#a14M)\n\n[11\\. Hyperparameter\
+    \ Tuning             16](#part0005.xhtml#a16X)\n\n[12\\. Stepwise Feature Selection             17](#part0005.xhtml#a19K)\n\
+    \n[13\\. Naive Bayes             18](#part0005.xhtml#a18U)\n\n[14\\. Collaborative\
+    \ Filtering             19](#part0005.xhtml#a15X)\n\n[15\\. Bagging vs Boosting\
+    \ vs Stacking             20](#part0005.xhtml#a19N)\n\n[16\\. Multi-Armed Bandit             21](#part0005.xhtml#a187)\n\
+    \n[Part 2: Unsupervised Learning             22](#part0005.xhtml#a15G)\n\n[17\\\
+    . K-Means Clustering             22](#part0005.xhtml#a197)\n\n[18\\. Hierarchical\
+    \ Clustering             23](#part0005.xhtml#a195)\n\n[19\\. Density Clustering             24](#part0005.xhtml#a17Y)\n\
+    \n[20\\. How Many Clusters? Calinski Index             25](#part0005.xhtml#a18J)\n\
+    \n[21\\. Dendrogram             26](#part0005.xhtml#a137)\n\n[22\\. Distance Measures             27](#part0005.xhtml#a18Y)\n\
+    \n[23\\. Cosine Similarity             28](#part0005.xhtml#a138)\n\n[24\\. String\
+    \ Distance             29](#part0005.xhtml#a13T)\n\n[25\\. Earth Mover's Distance             30](#part0005.xhtml#a151)\n\
+    \n[26\\. Principal Components Analysis             31](#part0006.xhtml#a15Y)\n\
+    \n[27\\. Topic Modeling - Latent Dirichlet Allocation             32](#part0006.xhtml#a16V)\n\
+    \n[Part 3: Probability & Statistics             33](#part0006.xhtml#a163)\n\n\
+    [28\\. Levels of Measurement             33](#part0006.xhtml#a17T)\n\n[29\\. Bernoulli\
+    \ vs Binomial             34](#part0006.xhtml#a16G)\n\n[30\\. Law of Large Numbers\
+    \ vs Central Limit Theorem             35](#part0006.xhtml#a135)\n\n[31\\. Bayes\
+    \ Theorem             36](#part0006.xhtml#a13D)\n\n[32\\. Monty Hall Problem             37](#part0006.xhtml#a19W)\n\
+    \n[33\\. Variance, Standard Deviation             38](#part0006.xhtml#a17H)\n\n\
+    [34\\. Confidence Interval             39](#part0006.xhtml#a17D)\n\n[35\\. Standard\
+    \ Normal Distribution             40](#part0006.xhtml#a170)\n\n[36\\. Coefficient\
+    \ of Variation             41](#part0006.xhtml#a17E)\n\n[37\\. P-value             42](#part0006.xhtml#a149)\n\
+    \n[38\\. Type I vs Type II Error             43](#part0006.xhtml#a14R)\n\n[39\\\
+    . Bivariate Tests             44](#part0006.xhtml#a17Z)\n\n[40\\. Pearson Correlation             45](#part0006.xhtml#a17N)\n\
+    \n[41\\. Chi-Square Test             46](#part0006.xhtml#a16H)\n\n[42\\. ANOVA             47](#part0006.xhtml#a16R)\n\
+    \n[43\\. Rank Sum Test             48](#part0006.xhtml#a19U)\n\n[44\\. Wilcoxon\
+    \ Signed Rank Test             49](#part0006.xhtml#a194)\n\n[45\\. Accuracy, Precision,\
+    \ Recall             50](#part0006.xhtml#a18A)\n\n[46\\. ROC Curve             51](#part0006.xhtml#a18C)\n\
+    \n[47\\. Standardization, Feature Scaling             52](#part0006.xhtml#a18E)\n\
+    \n[48\\. Outlier Detection             53](#part0006.xhtml#a18R)\n\n[49\\. Log\
+    \ Transformation             54](#part0006.xhtml#a17W)\n\n[50\\. Winsorization             55](#part0006.xhtml#a13S)\n\
+    \n[51\\. Missing Data             56](#part0006.xhtml#a16C)\n\n[52\\. Switchback\
+    \ Test             57](#part0006.xhtml#a19E)\n\n[53\\. Kolmogorov-Smirnov Test             58](#part0006.xhtml#a143)\n\
+    \n[54\\. Reliability, Validity             59](#part0007.xhtml#a13G)\n\n[55\\\
+    . Sample Size Calculation             60](#part0007.xhtml#a190)\n\n[56\\. Multiple\
+    \ Comparisons             61](#part0007.xhtml#a144)\n\n[57\\. Blocked vs Stratified\
+    \ Sampling             62](#part0007.xhtml#a176)\n\n[58\\. Anscombe’s Quartet             63](#part0008.xhtml#a16Y)\n\
+    \n[59\\. Power Law             64](#part0008.xhtml#a158)\n\n[60\\. Survivorship\
+    \ Bias             65](#part0008.xhtml#a154)\n\n[61\\. Meta Analysis             66](#part0008.xhtml#a14W)\n\
+    \n[Part 4: Econometrics             67](#part0009.xhtml)\n\n[62\\. Linear Regression             67](#part0009.xhtml#a18D)\n\
+    \n[63\\. Deriving OLS             68](#part0010.xhtml#a12W)\n\n[64\\. Interaction\
+    \ Effect             69](#part0011.xhtml#a171)\n\n[65\\. Chow Test (Structural\
+    \ Break)             70](#part0012.xhtml#a17R)\n\n[66\\. Linear Probability Model             71](#part0013.xhtml#a148)\n\
+    \n[67\\. Logistic Regression             72](#part0014.xhtml#a14F)\n\n[68\\. Ordered\
+    \ Logistic Regression             73](#part0015.xhtml#a15Z)\n\n[69\\. Censored\
+    \ Regression (Tobit)             74](#part0016.xhtml#a17X)\n\n[70\\. Poisson Regression             75](#part0017.xhtml#a161)\n\
+    \n[71\\. R-Squared             76](#part0018.xhtml#a16K)\n\n[72\\. Heteroskedasticity             77](#part0019.xhtml#a16T)\n\
+    \n[73\\. Multicollinearity, Variance Inflation Factor             78](#part0020.xhtml#a14G)\n\
+    \n[74\\. Standardized Coefficients             79](#part0021.xhtml#a17S)\n\n[75\\\
+    . Regression to the Mean             80](#part0022.xhtml#a13Z)\n\n[76\\. Spline\
+    \ Regression             81](#part0023.xhtml#a13F)\n\n[77\\. Simpson’s Paradox             82](#part0024.xhtml#a18G)\n\
+    \n[78\\. Fixed Effects vs Random Effects             83](#part0025.xhtml#a17M)\n\
+    \n[79\\. Hausman Test             84](#part0026.xhtml#a13B)\n\n[80\\. Fixed Effects\
+    \ as Ability             85](#part0027.xhtml#a18H)\n\n[81\\. Causal Inference             86](#part0028.xhtml#a18P)\n\
+    \n[82\\. Propensity Score Matching             87](#part0029.xhtml#a193)\n\n[83\\\
+    . Difference-in-Differences             88](#part0030.xhtml#a17K)\n\n[84\\. Regression\
+    \ Discontinuity             89](#part0031.xhtml#a16M)\n\n[85\\. 2-Stage-Least-Squares;\
+    \ Instrumental Variables             90](#part0032.xhtml#a19G)\n\n[86\\. Heckman\
+    \ Selection Model             91](#part0033.xhtml#a15D)\n\n[Part 5: SQL             92](#part0034.xhtml)"
+  fmt: "\n# Data Science Drawings\n\n**Raymond Lim**  \n@MinuteData  \n\nCopyright\
+    \ © 2025 Raymond Lim  \nAll rights reserved. This book or any portion thereof\
+    \ may not be reproduced or used in any manner whatsoever without the express written\
+    \ permission of the author except for the use of brief quotations in a book review.\n\
+    \nISBN 9798317027308  \nPublished through Amazon KDP\n\n---\n\n## Introduction\n\
+    \nOne spring day in 2018, I strolled past my childhood elementary school. I glanced\
+    \ through the windows to see if I'd recognized the teacher. Nope—it was a young\
+    \ teacher enthusiastically teaching first graders shapes… using PowerPoint! Call\
+    \ me old-school, but how are kids learning how to draw shapes when they just magically\
+    \ appear on PowerPoint slides?!\n\nFast forward to 2024. I was preparing for data\
+    \ science interviews using online courses, YouTube videos, and mobile apps. However,\
+    \ as a millennial who went to school before smartphones, passively scrolling through\
+    \ online content did not work.\n\nI soon created TikToks drawing out data topics\
+    \ with colorful markers, hoping others would draw along. This book is a compilation\
+    \ of those drawings.\n\n**Who this book is for:** People who previously learned\
+    \ statistics, machine learning, econometrics, SQL, and want to refresh with colorful\
+    \ one-pagers (think flash cards!). This book is intentionally informal, colorful,\
+    \ and raw. You'll find scribbles, corrections, obscure handwriting that will make\
+    \ you learn more actively.\n\n**Watch the accompanying videos on social media!**\n\
+    \n- tiktok.com/@MinuteData\n- youtube.com/@MinuteData\n- instagram.com/MinuteData\n\
+    - facebook.com/MinuteData\n- minutedata22@gmail.com\n\n**About the author:** Raymond\
+    \ Lim graduated from Columbia University before data science classes even existed.\
+    \ He worked for 15+ years as an economics researcher in academia, biostatistician\
+    \ in healthcare, data scientist at Meta and Google. He's also a latin ballroom\
+    \ dancer!\n\n---\n\n## Table of Contents\n\n### Part 1: Supervised Learning\n\n\
+    1. [Supervised vs Unsupervised Learning](#part0003.xhtml#a199)\n2. [K-Nearest\
+    \ Neighbor](#part0004.xhtml#a181)\n3. [Decision Trees](#part0005.xhtml#a15N)\n\
+    4. [Random Forest](#part0005.xhtml#a192)\n5. [Gradient Boosted Trees](#part0005.xhtml#a13N)\n\
+    6. [Gradient Descent](#part0005.xhtml#a13H)\n7. [Support Vector Machine](#part0005.xhtml#a13J)\n\
+    8. [Bias-Variance Tradeoff](#part0005.xhtml#a15W)\n9. [Cross Validation](#part0005.xhtml#a142)\n\
+    10. [Regularization - Lasso vs Ridge](#part0005.xhtml#a14M)\n11. [Hyperparameter\
+    \ Tuning](#part0005.xhtml#a16X)\n12. [Stepwise Feature Selection](#part0005.xhtml#a19K)\n\
+    13. [Naive Bayes](#part0005.xhtml#a18U)\n14. [Collaborative Filtering](#part0005.xhtml#a15X)\n\
+    15. [Bagging vs Boosting vs Stacking](#part0005.xhtml#a19N)\n16. [Multi-Armed\
+    \ Bandit](#part0005.xhtml#a187)\n\n### Part 2: Unsupervised Learning\n\n17. [K-Means\
+    \ Clustering](#part0005.xhtml#a197)\n18. [Hierarchical Clustering](#part0005.xhtml#a195)\n\
+    19. [Density Clustering](#part0005.xhtml#a17Y)\n20. [How Many Clusters? Calinski\
+    \ Index](#part0005.xhtml#a18J)\n21. [Dendrogram](#part0005.xhtml#a137)\n22. [Distance\
+    \ Measures](#part0005.xhtml#a18Y)\n23. [Cosine Similarity](#part0005.xhtml#a138)\n\
+    24. [String Distance](#part0005.xhtml#a13T)\n25. [Earth Mover's Distance](#part0005.xhtml#a151)\n\
+    26. [Principal Components Analysis](#part0006.xhtml#a15Y)\n27. [Topic Modeling\
+    \ - Latent Dirichlet Allocation](#part0006.xhtml#a16V)\n\n### Part 3: Probability\
+    \ & Statistics\n\n28. [Levels of Measurement](#part0006.xhtml#a17T)\n29. [Bernoulli\
+    \ vs Binomial](#part0006.xhtml#a16G)\n30. [Law of Large Numbers vs Central Limit\
+    \ Theorem](#part0006.xhtml#a135)\n31. [Bayes Theorem](#part0006.xhtml#a13D)\n\
+    32. [Monty Hall Problem](#part0006.xhtml#a19W)\n33. [Variance, Standard Deviation](#part0006.xhtml#a17H)\n\
+    34. [Confidence Interval](#part0006.xhtml#a17D)\n35. [Standard Normal Distribution](#part0006.xhtml#a170)\n\
+    36. [Coefficient of Variation](#part0006.xhtml#a17E)\n37. [P-value](#part0006.xhtml#a149)\n\
+    38. [Type I vs Type II Error](#part0006.xhtml#a14R)\n39. [Bivariate Tests](#part0006.xhtml#a17Z)\n\
+    40. [Pearson Correlation](#part0006.xhtml#a17N)\n41. [Chi-Square Test](#part0006.xhtml#a16H)\n\
+    42. [ANOVA](#part0006.xhtml#a16R)\n43. [Rank Sum Test](#part0006.xhtml#a19U)\n\
+    44. [Wilcoxon Signed Rank Test](#part0006.xhtml#a194)\n45. [Accuracy, Precision,\
+    \ Recall](#part0006.xhtml#a18A)\n46. [ROC Curve](#part0006.xhtml#a18C)\n47. [Standardization,\
+    \ Feature Scaling](#part0006.xhtml#a18E)\n48. [Outlier Detection](#part0006.xhtml#a18R)\n\
+    49. [Log Transformation](#part0006.xhtml#a17W)\n50. [Winsorization](#part0006.xhtml#a13S)\n\
+    51. [Missing Data](#part0006.xhtml#a16C)\n52. [Switchback Test](#part0006.xhtml#a19E)\n\
+    53. [Kolmogorov-Smirnov Test](#part0006.xhtml#a143)\n54. [Reliability, Validity](#part0007.xhtml#a13G)\n\
+    55. [Sample Size Calculation](#part0007.xhtml#a190)\n56. [Multiple Comparisons](#part0007.xhtml#a144)\n\
+    57. [Blocked vs Stratified Sampling](#part0007.xhtml#a176)\n58. [Anscombe's Quartet](#part0008.xhtml#a16Y)\n\
+    59. [Power Law](#part0008.xhtml#a158)\n60. [Survivorship Bias](#part0008.xhtml#a154)\n\
+    61. [Meta Analysis](#part0008.xhtml#a14W)\n\n### Part 4: Econometrics\n\n62. [Linear\
+    \ Regression](#part0009.xhtml#a18D)\n63. [Deriving OLS](#part0010.xhtml#a12W)\n\
+    64. [Interaction Effect](#part0011.xhtml#a171)\n65. [Chow Test (Structural Break)](#part0012.xhtml#a17R)\n\
+    66. [Linear Probability Model](#part0013.xhtml#a148)\n67. [Logistic Regression](#part0014.xhtml#a14F)\n\
+    68. [Ordered Logistic Regression](#part0015.xhtml#a15Z)\n69. [Censored Regression\
+    \ (Tobit)](#part0016.xhtml#a17X)\n70. [Poisson Regression](#part0017.xhtml#a161)\n\
+    71. [R-Squared](#part0018.xhtml#a16K)\n72. [Heteroskedasticity](#part0019.xhtml#a16T)\n\
+    73. [Multicollinearity, Variance Inflation Factor](#part0020.xhtml#a14G)\n74.\
+    \ [Standardized Coefficients](#part0021.xhtml#a17S)\n75. [Regression to the Mean](#part0022.xhtml#a13Z)\n\
+    76. [Spline Regression](#part0023.xhtml#a13F)\n77. [Simpson's Paradox](#part0024.xhtml#a18G)\n\
+    78. [Fixed Effects vs Random Effects](#part0025.xhtml#a17M)\n79. [Hausman Test](#part0026.xhtml#a13B)\n\
+    80. [Fixed Effects as Ability](#part0027.xhtml#a18H)\n81. [Causal Inference](#part0028.xhtml#a18P)\n\
+    82. [Propensity Score Matching](#part0029.xhtml#a193)\n83. [Difference-in-Differences](#part0030.xhtml#a17K)\n\
+    84. [Regression Discontinuity](#part0031.xhtml#a16M)\n85. [2-Stage-Least-Squares;\
+    \ Instrumental Variables](#part0032.xhtml#a19G)\n86. [Heckman Selection Model](#part0033.xhtml#a15D)\n\
+    \n### Part 5: SQL\n\n"
+  trans: "\n\n# 数据科学手绘笔记\n\n**Raymond Lim**  \n@MinuteData  \n\n版权所有 © 2025 Raymond\
+    \ Lim  \n保留所有权利。未经作者明确书面许可，本书或其任何部分不得以任何形式复制或使用，书评中引用简短片段除外。\n\nISBN 9798317027308\
+    \  \n通过 Amazon KDP 出版\n\n---\n\n## 简介\n\n2018 年的一个春日，我漫步经过儿时的母校小学。我透过窗户张望，想看看能否认出当年的老师。没有——那是一位年轻的老师正热情地教一年级学生认识形状……用的是\
+    \ PowerPoint！说我老派也好，但当形状只需在 PowerPoint 幻灯片上神奇地出现时，孩子们该如何学会画图呢？！\n\n快进到 2024 年。我正通过在线课程、YouTube\
+    \ 视频和手机应用准备数据科学面试。然而，作为一个在智能手机普及前上学的千禧一代，被动地刷屏在线内容根本行不通。\n\n不久，我开始制作 TikTok 视频，用彩色记号笔手绘数据科学主题，希望其他人能跟着一起画。本书即是那些手绘笔记的汇编。\n\
+    \n**适读人群：** 曾学习过统计学、机器学习、计量经济学、SQL，想通过生动的单页笔记复习巩固的人群（可视为闪卡！）。本书有意保持非正式、多彩且原生态的风格。你会看到涂鸦、修正、难以辨认的手写字迹，这些都将促使你更主动地学习。\n\
+    \n**关注社交媒体配套视频！**\n\n- tiktok.com/@MinuteData\n- youtube.com/@MinuteData\n- instagram.com/MinuteData\n\
+    - facebook.com/MinuteData\n- minutedata22@gmail.com\n\n**关于作者：** Raymond Lim 毕业于哥伦比亚大学，那时尚未开设数据科学课程。他在学术界担任经济学研究员、医疗领域担任生物统计师、Meta\
+    \ 和 Google 担任数据科学家，累计工作 15 年以上。他还是一位拉丁舞舞者！\n\n---\n\n## 目录\n\n### 第 1 部分：监督学习\n\
+    \n1. 监督学习 vs 无监督学习\n2. K 近邻算法\n3. 决策树\n4. 随机森林\n5. 梯度提升树\n6. 梯度下降\n7. 支持向量机\n\
+    8. 偏差-方差权衡\n9. 交叉验证\n10. 正则化 - Lasso 回归 vs Ridge 回归\n11. 超参数调优\n12. 逐步特征选择\n13.\
+    \ 朴素贝叶斯\n14. 协同过滤\n15. Bagging vs Boosting vs Stacking\n16. 多臂老虎机\n\n### 第 2 部分：无监督学习\n\
+    \n17. K 均值聚类\n18. 层次聚类\n19. 密度聚类\n20. 如何确定簇数量？Calinski 指数\n21. 树状图\n22. 距离度量\n\
+    23. 余弦相似度\n24. 字符串距离\n25. 土方距离\n26. 主成分分析\n27. 主题建模 - 隐含狄利克雷分布\n\n### 第 3 部分：概率与统计\n\
+    \n28. 测量层级\n29. 伯努利分布 vs 二项分布\n30. 大数定律 vs 中心极限定理\n31. 贝叶斯定理\n32. 蒙提霍尔问题\n33.\
+    \ 方差、标准差\n34. 置信区间\n35. 标准正态分布\n36. 变异系数\n37. P 值\n38. 第一类错误 vs 第二类错误\n39. 双变量检验\n\
+    40. 皮尔逊相关系数\n41. 卡方检验\n42. 方差分析 (ANOVA)\n43. 秩和检验\n44. Wilcoxon 符号秩检验\n45. 准确率、精确率、召回率\n\
+    46. ROC 曲线\n47. 标准化、特征缩放\n48. 异常值检测\n49. 对数变换\n50. 温莎化处理\n51. 缺失数据\n52. 切换回溯实验\
+    \ / Switchback Test\n53. Kolmogorov-Smirnov 检验\n54. 信度、效度\n55. 样本量计算\n56. 多重比较\n\
+    57. 区组抽样 vs 分层抽样\n58. Anscombe 四重奏\n59. 幂律分布\n60. 幸存者偏差\n61. 荟萃分析\n\n### 第 4 部分：计量经济学\n\
+    \n62. 线性回归\n63. OLS 推导\n64. 交互效应\n65. Chow 检验 (结构性断点)\n66. 线性概率模型\n67. 逻辑回归\n\
+    68. 有序逻辑回归\n69. 截尾回归 (Tobit 模型)\n70. 泊松回归\n71. R 平方\n72. 异方差\n73. 多重共线性、方差膨胀因子\n\
+    74. 标准化系数\n75. 向均值回归\n76. 样条回归\n77. 辛普森悖论\n78. 固定效应 vs 随机效应\n79. Hausman 检验\n\
+    80. 作为能力的固定效应\n81. 因果推断\n82. 倾向得分匹配\n83. 双重差分法\n84. 回归不连续设计\n85. 两阶段最小二乘法；工具变量\n\
+    86. Heckman 选择模型\n\n### 第 5 部分：SQL\n\n"
+  toc: []
+- raw: '[87\. Inner vs Outer Join             92](#part0034.xhtml#a18W)
+
+
+    [88\. Cross Join             93](#part0035.xhtml#a18F)
+
+
+    [89\. Where vs Having             94](#part0036.xhtml#a15A)
+
+
+    [90\. Group By             95](#part0037.xhtml#a13C)
+
+
+    [91\. Window Functions             96](#part0038.xhtml#a177)
+
+
+    [92\. Lag             97](#part0039.xhtml#a159)
+
+
+    [93\. Moving Average             98](#part0040.xhtml#a15U)
+
+
+    [94\. Union vs Union All             99](#part0041.xhtml#a198)
+
+
+    [95\. Rank vs Dense Rank             100](#part0042.xhtml#a14X)
+
+
+    [96\. CTE vs Subquery             101](#part0043.xhtml#a15C)
+
+
+    [97\. Table Alias             102](#part0044.xhtml#a17V)
+
+
+    [98\. Wildcard             103](#part0045.xhtml#a17F)
+
+
+    [99\. Like             104](#part0046.xhtml#a16P)
+
+
+    [100\. Regular Expressions             105](#part0047.xhtml#a13Y)
+
+
+    [Part 6: Career             106](#part0048.xhtml)
+
+
+    [101\. Academic vs Tech             106](#part0048.xhtml#a19R)
+
+
+    [102\. \[BONUS\] Case Study: Man in Finance             107](#part0049.xhtml#a175)
+
+
+    [Closing Thoughts             108](#part0049.xhtml#a13V)
+
+
+    # Part 1: Supervised Learning
+
+
+    ## 1.  [Supervised vs Unsupervised Learning](https://www.tiktok.com/@minutedata/video/7328791238952439046)
+
+
+    ![](image_rsrc1BJ.jpg)
+
+
+    ## 2.  [K-Nearest Neighbor](https://www.tiktok.com/@minutedata/video/7273832570977275141)
+
+
+    ![](image_rsrc1BK.jpg)
+
+
+    ## 3.  [Decision Trees](https://www.tiktok.com/@minutedata/video/7272465826043759878)
+
+
+    ![](image_rsrc1BM.jpg)
+
+
+    ## 4.  [Random Forest](https://www.tiktok.com/@minutedata/video/7274188400687648006)
+
+
+    ![](image_rsrc1BN.jpg)
+
+
+    ## 5.  [Gradient Boosted Trees](https://www.tiktok.com/@minutedata/video/7448304139924294955)
+
+
+    ![](image_rsrc1BP.jpg)
+
+
+    ## 6.  [Gradient Descent](https://www.tiktok.com/@minutedata/video/7384736566188510470)
+
+
+    ![](image_rsrc1BR.jpg)
+
+
+    ## 7.  [Support Vector Machine](https://www.tiktok.com/@minutedata/video/7273433569970720005)
+
+
+    ![](image_rsrc1BS.jpg)
+
+
+    ## 8.  [Bias-Variance Tradeoff](https://www.tiktok.com/@minutedata/video/7273458327420538117)
+
+
+    ![](image_rsrc1BT.jpg)
+
+
+    ## 9.  [Cross Validation](https://www.tiktok.com/@minutedata/video/7283123147103210758)
+
+
+    ![](image_rsrc1BU.jpg)
+
+
+    ## 10.                    [Regularization - Lasso vs Ridge](https://www.tiktok.com/@minutedata/video/7367735762382556421)
+
+
+    ![](image_rsrc1BV.jpg)
+
+
+    ## 11.                    [Hyperparameter Tuning](https://www.tiktok.com/@minutedata/video/7379251948161109253)
+
+
+    ![](image_rsrc1BW.jpg)
+
+
+    ## 12.                    [Stepwise Feature Selection](https://www.tiktok.com/@minutedata/video/7349550090106703110)
+
+
+    ![](image_rsrc1BX.jpg)
+
+
+    ## 13.                    [Naive Bayes](https://www.tiktok.com/@minutedata/video/7393719005476867334)
+
+
+    ![](image_rsrc1BY.jpg)
+
+
+    ## 14.                    [Collaborative Filtering](https://www.tiktok.com/@minutedata/video/7275832619948985606)
+
+
+    ![](image_rsrc1BZ.jpg)
+
+
+    ## 15.                    [Bagging vs Boosting vs Stacking](https://www.tiktok.com/@minutedata/video/7286840428064967941)
+
+
+    ![](image_rsrc1C0.jpg)
+
+
+    ## 16.                    [Multi-Armed Bandit](https://www.tiktok.com/@minutedata/video/7307994669399444742)
+
+
+    ![](image_rsrc1C1.jpg)
+
+
+    # Part 2: Unsupervised Learning
+
+
+    ## 17.                    [K-Means Clustering](https://www.tiktok.com/@minutedata/video/7272158813283716358)
+
+
+    ![](image_rsrc1C2.jpg)
+
+
+    ## 18.                    [Hierarchical Clustering](https://www.tiktok.com/@minutedata/video/7272512671935696133)
+
+
+    ![](image_rsrc1C3.jpg)
+
+
+    ## 19.                    [Density Clustering](https://www.tiktok.com/@minutedata/video/7336572535556836613)
+
+
+    ![](image_rsrc1C4.jpg)
+
+
+    ## 20.                    [How Many Clusters? Calinski Index](https://www.tiktok.com/@minutedata/video/7272173372966964485)
+
+
+    ![](image_rsrc1C5.jpg)
+
+
+    ## 21.                    [Dendrogram](https://www.tiktok.com/@minutedata/video/7351753709413485829)
+
+
+    ![](image_rsrc1C6.jpg)
+
+
+    ## 22.                    [Distance Measures](https://www.tiktok.com/@minutedata/video/7374147332549512454)
+
+
+    ![](image_rsrc1C7.jpg)
+
+
+    ## 23.                    [Cosine Similarity](https://www.tiktok.com/@minutedata/video/7370329004550655238)
+
+
+    ![](image_rsrc1C8.jpg)
+
+
+    ## 24.                    [String Distance](https://www.tiktok.com/@minutedata/video/7471665854489496878)
+
+
+    ![](image_rsrc1C9.jpg)
+
+
+    ## 25.                    [Earth Mover''s Distance](https://www.tiktok.com/@minutedata/video/7463821039949106478)
+
+
+    ![](image_rsrc1CA.jpg)
+
+
+    ## 26.                    [Principal Components Analysis](https://www.tiktok.com/@minutedata/video/7422241457311943982)
+
+
+    ![](image_rsrc1CB.jpg)
+
+
+    ## 27.                    [Topic Modeling - Latent Dirichlet Allocation](https://www.tiktok.com/@minutedata/video/7383334782421257477)
+
+
+    ![](image_rsrc1CC.jpg)
+
+
+    # Part 3: Probability & Statistics
+
+
+    ## 28.                    [Levels of Measurement](https://www.tiktok.com/@minutedata/video/7320994567925288197)
+
+
+    ![](image_rsrc1CD.jpg)
+
+
+    ## 29.                    [Bernoulli vs Binomial](https://www.tiktok.com/@minutedata/video/7273429809311665413)
+
+
+    ![](image_rsrc1CE.jpg)
+
+
+    ## 30.                    [Law of Large Numbers vs Central Limit Theorem](https://www.tiktok.com/@minutedata/video/7273234089778482438)
+
+
+    ![](image_rsrc1CF.jpg)
+
+
+    ## 31.                    [Bayes Theorem](https://www.tiktok.com/@minutedata/video/7284964722930191621)
+
+
+    ![](image_rsrc1CG.jpg)
+
+
+    ## 32.                    [Monty Hall Problem](https://www.tiktok.com/@minutedata/video/7386994948475735302)
+
+
+    ![](image_rsrc1CH.jpg)
+
+
+    ## 33.                    [Variance, Standard Deviation](https://www.tiktok.com/@minutedata/video/7391086131355340037)
+
+
+    ![](image_rsrc1CJ.jpg)
+
+
+    ## 34.                    [Confidence Interval](https://www.tiktok.com/@minutedata/video/7304694821736762630)
+
+
+    ![](image_rsrc1CK.jpg)
+
+
+    ## 35.                    [Standard Normal Distribution](https://www.tiktok.com/@minutedata/video/7417044609982795039)
+
+
+    ![](image_rsrc1CM.jpg)
+
+
+    ## 36.                    [Coefficient of Variation](https://www.tiktok.com/@minutedata/video/7453940817078537514)
+
+
+    ![](image_rsrc1CN.jpg)
+
+
+    ## 37.                    [P-value](https://www.tiktok.com/@minutedata/video/7273963663676017925)
+
+
+    ![](image_rsrc1CP.jpg)
+
+
+    ## 38.                    [Type I vs Type II Error](https://www.tiktok.com/@minutedata/video/7280462823505825029)
+
+
+    ![](image_rsrc1CR.jpg)
+
+
+    ## 39.                    [Bivariate Tests](https://www.tiktok.com/@minutedata/video/7411884175587904799)
+
+
+    ![](image_rsrc1CS.jpg)
+
+
+    ## 40.                    [Pearson Correlation](https://www.tiktok.com/@minutedata/video/7435273613063867694)
+
+
+    ![](image_rsrc1CT.jpg)
+
+
+    ## 41.                    [Chi-Square Test](https://www.tiktok.com/@minutedata/video/7400028850681302303)
+
+
+    ![](image_rsrc1CU.jpg)
+
+
+    ## 42.                    [ANOVA](https://www.tiktok.com/@minutedata/video/7375899872844696838)
+
+
+    ![](image_rsrc1CV.jpg)
+
+
+    ## 43.                    [Rank Sum Test](https://www.tiktok.com/@minutedata/video/7430095738148834603)
+
+
+    ![](image_rsrc1CW.jpg)
+
+
+    ## 44.                    [Wilcoxon Signed Rank Test](https://www.tiktok.com/@minutedata/video/7469059181287460138)
+
+
+    ![](image_rsrc1CX.jpg)
+
+
+    ## 45.                    [Accuracy, Precision, Recall](https://www.tiktok.com/@minutedata/video/7273233132218895622)
+
+
+    ![](image_rsrc1CY.jpg)
+
+
+    ## 46.                    [ROC Curve](https://www.tiktok.com/@minutedata/video/7344369840192376069)
+
+
+    ![](image_rsrc1CZ.jpg)
+
+
+    ## 47.                    [Standardization, Feature Scaling](https://www.tiktok.com/@minutedata/video/7278451645837626629)
+
+
+    ![](image_rsrc1D0.jpg)
+
+
+    ## 48.                    [Outlier Detection](https://www.tiktok.com/@minutedata/video/7277576322623212806)
+
+
+    ![](image_rsrc1D1.jpg)
+
+
+    ## 49.                    [Log Transformation](https://www.tiktok.com/@minutedata/video/7334362781023472902)
+
+
+    ![](image_rsrc1D2.jpg)
+
+
+    ## 50.                    [Winsorization](https://www.tiktok.com/@minutedata/video/7369232724265159942)
+
+
+    ![](image_rsrc1D3.jpg)
+
+
+    ## 51.                    [Missing Data](https://www.tiktok.com/@minutedata/video/7401489098189393183)
+
+
+    ![](image_rsrc1D4.jpg)'
+  fmt: "\n# 目录\n\n- [87. Inner vs Outer Join](#part0034.xhtml#a18W)\n- [88. Cross\
+    \ Join](#part0035.xhtml#a18F)\n- [89. Where vs Having](#part0036.xhtml#a15A)\n\
+    - [90. Group By](#part0037.xhtml#a13C)\n- [91. Window Functions](#part0038.xhtml#a177)\n\
+    - [92. Lag](#part0039.xhtml#a159)\n- [93. Moving Average](#part0040.xhtml#a15U)\n\
+    - [94. Union vs Union All](#part0041.xhtml#a198)\n- [95. Rank vs Dense Rank](#part0042.xhtml#a14X)\n\
+    - [96. CTE vs Subquery](#part0043.xhtml#a15C)\n- [97. Table Alias](#part0044.xhtml#a17V)\n\
+    - [98. Wildcard](#part0045.xhtml#a17F)\n- [99. Like](#part0046.xhtml#a16P)\n-\
+    \ [100. Regular Expressions](#part0047.xhtml#a13Y)\n- [Part 6: Career](#part0048.xhtml)\n\
+    \  - [101. Academic vs Tech](#part0048.xhtml#a19R)\n  - [102. [BONUS] Case Study:\
+    \ Man in Finance](#part0049.xhtml#a175)\n- [Closing Thoughts](#part0049.xhtml#a13V)\n\
+    \n# Part 1: Supervised Learning\n\n## 1. [Supervised vs Unsupervised Learning](https://www.tiktok.com/@minutedata/video/7328791238952439046)\n\
+    \n![](image_rsrc1BJ.jpg)\n\n## 2. [K-Nearest Neighbor](https://www.tiktok.com/@minutedata/video/7273832570977275141)\n\
+    \n![](image_rsrc1BK.jpg)\n\n## 3. [Decision Trees](https://www.tiktok.com/@minutedata/video/7272465826043759878)\n\
+    \n![](image_rsrc1BM.jpg)\n\n## 4. [Random Forest](https://www.tiktok.com/@minutedata/video/7274188400687648006)\n\
+    \n![](image_rsrc1BN.jpg)\n\n## 5. [Gradient Boosted Trees](https://www.tiktok.com/@minutedata/video/7448304139924294955)\n\
+    \n![](image_rsrc1BP.jpg)\n\n## 6. [Gradient Descent](https://www.tiktok.com/@minutedata/video/7384736566188510470)\n\
+    \n![](image_rsrc1BR.jpg)\n\n## 7. [Support Vector Machine](https://www.tiktok.com/@minutedata/video/7273433569970720005)\n\
+    \n![](image_rsrc1BS.jpg)\n\n## 8. [Bias-Variance Tradeoff](https://www.tiktok.com/@minutedata/video/7273458327420538117)\n\
+    \n![](image_rsrc1BT.jpg)\n\n## 9. [Cross Validation](https://www.tiktok.com/@minutedata/video/7283123147103210758)\n\
+    \n![](image_rsrc1BU.jpg)\n\n## 10. [Regularization - Lasso vs Ridge](https://www.tiktok.com/@minutedata/video/7367735762382556421)\n\
+    \n![](image_rsrc1BV.jpg)\n\n## 11. [Hyperparameter Tuning](https://www.tiktok.com/@minutedata/video/7379251948161109253)\n\
+    \n![](image_rsrc1BW.jpg)\n\n## 12. [Stepwise Feature Selection](https://www.tiktok.com/@minutedata/video/7349550090106703110)\n\
+    \n![](image_rsrc1BX.jpg)\n\n## 13. [Naive Bayes](https://www.tiktok.com/@minutedata/video/7393719005476867334)\n\
+    \n![](image_rsrc1BY.jpg)\n\n## 14. [Collaborative Filtering](https://www.tiktok.com/@minutedata/video/7275832619948985606)\n\
+    \n![](image_rsrc1BZ.jpg)\n\n## 15. [Bagging vs Boosting vs Stacking](https://www.tiktok.com/@minutedata/video/7286840428064967941)\n\
+    \n![](image_rsrc1C0.jpg)\n\n## 16. [Multi-Armed Bandit](https://www.tiktok.com/@minutedata/video/7307994669399444742)\n\
+    \n![](image_rsrc1C1.jpg)\n\n# Part 2: Unsupervised Learning\n\n## 17. [K-Means\
+    \ Clustering](https://www.tiktok.com/@minutedata/video/7272158813283716358)\n\n\
+    ![](image_rsrc1C2.jpg)\n\n## 18. [Hierarchical Clustering](https://www.tiktok.com/@minutedata/video/7272512671935696133)\n\
+    \n![](image_rsrc1C3.jpg)\n\n## 19. [Density Clustering](https://www.tiktok.com/@minutedata/video/7336572535556836613)\n\
+    \n![](image_rsrc1C4.jpg)\n\n## 20. [How Many Clusters? Calinski Index](https://www.tiktok.com/@minutedata/video/7272173372966964485)\n\
+    \n![](image_rsrc1C5.jpg)\n\n## 21. [Dendrogram](https://www.tiktok.com/@minutedata/video/7351753709413485829)\n\
+    \n![](image_rsrc1C6.jpg)\n\n## 22. [Distance Measures](https://www.tiktok.com/@minutedata/video/7374147332549512454)\n\
+    \n![](image_rsrc1C7.jpg)\n\n## 23. [Cosine Similarity](https://www.tiktok.com/@minutedata/video/7370329004550655238)\n\
+    \n![](image_rsrc1C8.jpg)\n\n## 24. [String Distance](https://www.tiktok.com/@minutedata/video/7471665854489496878)\n\
+    \n![](image_rsrc1C9.jpg)\n\n## 25. [Earth Mover's Distance](https://www.tiktok.com/@minutedata/video/7463821039949106478)\n\
+    \n![](image_rsrc1CA.jpg)\n\n## 26. [Principal Components Analysis](https://www.tiktok.com/@minutedata/video/7422241457311943982)\n\
+    \n![](image_rsrc1CB.jpg)\n\n## 27. [Topic Modeling - Latent Dirichlet Allocation](https://www.tiktok.com/@minutedata/video/7383334782421257477)\n\
+    \n![](image_rsrc1CC.jpg)\n\n# Part 3: Probability & Statistics\n\n## 28. [Levels\
+    \ of Measurement](https://www.tiktok.com/@minutedata/video/7320994567925288197)\n\
+    \n![](image_rsrc1CD.jpg)\n\n## 29. [Bernoulli vs Binomial](https://www.tiktok.com/@minutedata/video/7273429809311665413)\n\
+    \n![](image_rsrc1CE.jpg)\n\n## 30. [Law of Large Numbers vs Central Limit Theorem](https://www.tiktok.com/@minutedata/video/7273234089778482438)\n\
+    \n![](image_rsrc1CF.jpg)\n\n## 31. [Bayes Theorem](https://www.tiktok.com/@minutedata/video/7284964722930191621)\n\
+    \n![](image_rsrc1CG.jpg)\n\n## 32. [Monty Hall Problem](https://www.tiktok.com/@minutedata/video/7386994948475735302)\n\
+    \n![](image_rsrc1CH.jpg)\n\n## 33. [Variance, Standard Deviation](https://www.tiktok.com/@minutedata/video/7391086131355340037)\n\
+    \n![](image_rsrc1CJ.jpg)\n\n## 34. [Confidence Interval](https://www.tiktok.com/@minutedata/video/7304694821736762630)\n\
+    \n![](image_rsrc1CK.jpg)\n\n## 35. [Standard Normal Distribution](https://www.tiktok.com/@minutedata/video/7417044609982795039)\n\
+    \n![](image_rsrc1CM.jpg)\n\n## 36. [Coefficient of Variation](https://www.tiktok.com/@minutedata/video/7453940817078537514)\n\
+    \n![](image_rsrc1CN.jpg)\n\n## 37. [P-value](https://www.tiktok.com/@minutedata/video/7273963663676017925)\n\
+    \n![](image_rsrc1CP.jpg)\n\n## 38. [Type I vs Type II Error](https://www.tiktok.com/@minutedata/video/7280462823505825029)\n\
+    \n![](image_rsrc1CR.jpg)\n\n## 39. [Bivariate Tests](https://www.tiktok.com/@minutedata/video/7411884175587904799)\n\
+    \n![](image_rsrc1CS.jpg)\n\n## 40. [Pearson Correlation](https://www.tiktok.com/@minutedata/video/7435273613063867694)\n\
+    \n![](image_rsrc1CT.jpg)\n\n## 41. [Chi-Square Test](https://www.tiktok.com/@minutedata/video/7400028850681302303)\n\
+    \n![](image_rsrc1CU.jpg)\n\n## 42. [ANOVA](https://www.tiktok.com/@minutedata/video/7375899872844696838)\n\
+    \n![](image_rsrc1CV.jpg)\n\n## 43. [Rank Sum Test](https://www.tiktok.com/@minutedata/video/7430095738148834603)\n\
+    \n![](image_rsrc1CW.jpg)\n\n## 44. [Wilcoxon Signed Rank Test](https://www.tiktok.com/@minutedata/video/7469059181287460138)\n\
+    \n![](image_rsrc1CX.jpg)\n\n## 45. [Accuracy, Precision, Recall](https://www.tiktok.com/@minutedata/video/7273233132218895622)\n\
+    \n![](image_rsrc1CY.jpg)\n\n## 46. [ROC Curve](https://www.tiktok.com/@minutedata/video/7344369840192376069)\n\
+    \n![](image_rsrc1CZ.jpg)\n\n## 47. [Standardization, Feature Scaling](https://www.tiktok.com/@minutedata/video/7278451645837626629)\n\
+    \n![](image_rsrc1D0.jpg)\n\n## 48. [Outlier Detection](https://www.tiktok.com/@minutedata/video/7277576322623212806)\n\
+    \n![](image_rsrc1D1.jpg)\n\n## 49. [Log Transformation](https://www.tiktok.com/@minutedata/video/7334362781023472902)\n\
+    \n![](image_rsrc1D2.jpg)\n\n## 50. [Winsorization](https://www.tiktok.com/@minutedata/video/7369232724265159942)\n\
+    \n![](image_rsrc1D3.jpg)\n\n## 51. [Missing Data](https://www.tiktok.com/@minutedata/video/7401489098189393183)\n\
+    \n![](image_rsrc1D4.jpg)\n"
+  trans: "\n\n# 目录\n\n- 87. 内连接 vs 外连接\n- 88. 交叉连接\n- 89. Where vs Having\n- 90. 分组\n\
+    - 91. 窗口函数\n- 92. Lag\n- 93. 移动平均\n- 94. Union vs Union All\n- 95. Rank vs Dense\
+    \ Rank\n- 96. CTE vs 子查询\n- 97. 表别名\n- 98. 通配符\n- 99. Like\n- 100. 正则表达式\n- 第\
+    \ 6 部分：职业发展\n  - 101. 学术界 vs 技术界\n  - [102. [额外福利] 案例研究：金融男](#part0049.xhtml#a175)\n\
+    - 结束语\n\n# 第 1 部分：监督学习\n\n## 1. [监督学习 vs 无监督学习](https://www.tiktok.com/@minutedata/video/7328791238952439046)\n\
+    \n![](img/image_rsrc1BJ.jpg)\n\n## 2. [K-近邻算法](https://www.tiktok.com/@minutedata/video/7273832570977275141)\n\
+    \n![](img/image_rsrc1BK.jpg)\n\n## 3. [决策树](https://www.tiktok.com/@minutedata/video/7272465826043759878)\n\
+    \n![](img/image_rsrc1BM.jpg)\n\n## 4. [随机森林](https://www.tiktok.com/@minutedata/video/7274188400687648006)\n\
+    \n![](img/image_rsrc1BN.jpg)\n\n## 5. [梯度提升树](https://www.tiktok.com/@minutedata/video/7448304139924294955)\n\
+    \n![](img/image_rsrc1BP.jpg)\n\n## 6. [梯度下降](https://www.tiktok.com/@minutedata/video/7384736566188510470)\n\
+    \n![](img/image_rsrc1BR.jpg)\n\n## 7. [支持向量机](https://www.tiktok.com/@minutedata/video/7273433569970720005)\n\
+    \n![](img/image_rsrc1BS.jpg)\n\n## 8. [偏差-方差权衡](https://www.tiktok.com/@minutedata/video/7273458327420538117)\n\
+    \n![](img/image_rsrc1BT.jpg)\n\n## 9. [交叉验证](https://www.tiktok.com/@minutedata/video/7283123147103210758)\n\
+    \n![](img/image_rsrc1BU.jpg)\n\n## 10. [正则化 - Lasso vs Ridge](https://www.tiktok.com/@minutedata/video/7367735762382556421)\n\
+    \n![](img/image_rsrc1BV.jpg)\n\n## 11. [超参数调优](https://www.tiktok.com/@minutedata/video/7379251948161109253)\n\
+    \n![](img/image_rsrc1BW.jpg)\n\n## 12. [逐步特征选择](https://www.tiktok.com/@minutedata/video/7349550090106703110)\n\
+    \n![](img/image_rsrc1BX.jpg)\n\n## 13. [朴素贝叶斯](https://www.tiktok.com/@minutedata/video/7393719005476867334)\n\
+    \n![](img/image_rsrc1BY.jpg)\n\n## 14. [协同过滤](https://www.tiktok.com/@minutedata/video/7275832619948985606)\n\
+    \n![](img/image_rsrc1BZ.jpg)\n\n## 15. [Bagging vs Boosting vs Stacking](https://www.tiktok.com/@minutedata/video/7286840428064967941)\n\
+    \n![](img/image_rsrc1C0.jpg)\n\n## 16. [多臂老虎机](https://www.tiktok.com/@minutedata/video/7307994669399444742)\n\
+    \n![](img/image_rsrc1C1.jpg)\n\n# 第 2 部分：无监督学习\n\n## 17. [K-均值聚类](https://www.tiktok.com/@minutedata/video/7272158813283716358)\n\
+    \n![](img/image_rsrc1C2.jpg)\n\n## 18. [层次聚类](https://www.tiktok.com/@minutedata/video/7272512671935696133)\n\
+    \n![](img/image_rsrc1C3.jpg)\n\n## 19. [密度聚类](https://www.tiktok.com/@minutedata/video/7336572535556836613)\n\
+    \n![](img/image_rsrc1C4.jpg)\n\n## 20. [聚类数量如何确定？Calinski 指数](https://www.tiktok.com/@minutedata/video/7272173372966964485)\n\
+    \n![](img/image_rsrc1C5.jpg)\n\n## 21. [树状图](https://www.tiktok.com/@minutedata/video/7351753709413485829)\n\
+    \n![](img/image_rsrc1C6.jpg)\n\n## 22. [距离度量](https://www.tiktok.com/@minutedata/video/7374147332549512454)\n\
+    \n![](img/image_rsrc1C7.jpg)\n\n## 23. [余弦相似度](https://www.tiktok.com/@minutedata/video/7370329004550655238)\n\
+    \n![](img/image_rsrc1C8.jpg)\n\n## 24. [字符串距离](https://www.tiktok.com/@minutedata/video/7471665854489496878)\n\
+    \n![](img/image_rsrc1C9.jpg)\n\n## 25. [土方距离](https://www.tiktok.com/@minutedata/video/7463821039949106478)\n\
+    \n![](img/image_rsrc1CA.jpg)\n\n## 26. [主成分分析](https://www.tiktok.com/@minutedata/video/7422241457311943982)\n\
+    \n![](img/image_rsrc1CB.jpg)\n\n## 27. [主题建模 - 隐含狄利克雷分布](https://www.tiktok.com/@minutedata/video/7383334782421257477)\n\
+    \n![](img/image_rsrc1CC.jpg)\n\n# 第 3 部分：概率与统计\n\n## 28. [测量层级](https://www.tiktok.com/@minutedata/video/7320994567925288197)\n\
+    \n![](img/image_rsrc1CD.jpg)\n\n## 29. [伯努利分布 vs 二项分布](https://www.tiktok.com/@minutedata/video/7273429809311665413)\n\
+    \n![](img/image_rsrc1CE.jpg)\n\n## 30. [大数定律 vs 中心极限定理](https://www.tiktok.com/@minutedata/video/7273234089778482438)\n\
+    \n![](img/image_rsrc1CF.jpg)\n\n## 31. [贝叶斯定理](https://www.tiktok.com/@minutedata/video/7284964722930191621)\n\
+    \n![](img/image_rsrc1CG.jpg)\n\n## 32. [蒙提霍尔问题](https://www.tiktok.com/@minutedata/video/7386994948475735302)\n\
+    \n![](img/image_rsrc1CH.jpg)\n\n## 33. [方差，标准差](https://www.tiktok.com/@minutedata/video/7391086131355340037)\n\
+    \n![](img/image_rsrc1CJ.jpg)\n\n## 34. [置信区间](https://www.tiktok.com/@minutedata/video/7304694821736762630)\n\
+    \n![](img/image_rsrc1CK.jpg)\n\n## 35. [标准正态分布](https://www.tiktok.com/@minutedata/video/7417044609982795039)\n\
+    \n![](img/image_rsrc1CM.jpg)\n\n## 36. [变异系数](https://www.tiktok.com/@minutedata/video/7453940817078537514)\n\
+    \n![](img/image_rsrc1CN.jpg)\n\n## 37. [P 值](https://www.tiktok.com/@minutedata/video/7273963663676017925)\n\
+    \n![](img/image_rsrc1CP.jpg)\n\n## 38. [第一类错误 vs 第二类错误](https://www.tiktok.com/@minutedata/video/7280462823505825029)\n\
+    \n![](img/image_rsrc1CR.jpg)\n\n## 39. [双变量检验](https://www.tiktok.com/@minutedata/video/7411884175587904799)\n\
+    \n![](img/image_rsrc1CS.jpg)\n\n## 40. [皮尔逊相关系数](https://www.tiktok.com/@minutedata/video/7435273613063867694)\n\
+    \n![](img/image_rsrc1CT.jpg)\n\n## 41. [卡方检验](https://www.tiktok.com/@minutedata/video/7400028850681302303)\n\
+    \n![](img/image_rsrc1CU.jpg)\n\n## 42. [方差分析](https://www.tiktok.com/@minutedata/video/7375899872844696838)\n\
+    \n![](img/image_rsrc1CV.jpg)\n\n## 43. [秩和检验](https://www.tiktok.com/@minutedata/video/7430095738148834603)\n\
+    \n![](img/image_rsrc1CW.jpg)\n\n## 44. [Wilcoxon 符号秩检验](https://www.tiktok.com/@minutedata/video/7469059181287460138)\n\
+    \n![](img/image_rsrc1CX.jpg)\n\n## 45. [准确率，精确率，召回率](https://www.tiktok.com/@minutedata/video/7273233132218895622)\n\
+    \n![](img/image_rsrc1CY.jpg)\n\n## 46. [ROC 曲线](https://www.tiktok.com/@minutedata/video/7344369840192376069)\n\
+    \n![](img/image_rsrc1CZ.jpg)\n\n## 47. [标准化，特征缩放](https://www.tiktok.com/@minutedata/video/7278451645837626629)\n\
+    \n![](img/image_rsrc1D0.jpg)\n\n## 48. [异常值检测](https://www.tiktok.com/@minutedata/video/7277576322623212806)\n\
+    \n![](img/image_rsrc1D1.jpg)\n\n## 49. [对数变换](https://www.tiktok.com/@minutedata/video/7334362781023472902)\n\
+    \n![](img/image_rsrc1D2.jpg)\n\n## 50. [缩尾处理](https://www.tiktok.com/@minutedata/video/7369232724265159942)\n\
+    \n![](img/image_rsrc1D3.jpg)\n\n## 51. [缺失数据](https://www.tiktok.com/@minutedata/video/7401489098189393183)\n\
+    \n![](img/image_rsrc1D4.jpg)\n\n"
+  toc: []
+- raw: '## 52.                    [Switchback Test](https://www.tiktok.com/@minutedata/video/7445671119614496042)
+
+
+    ![](image_rsrc1D5.jpg)
+
+
+    ## 53.                    [Kolmogorov-Smirnov Test](https://www.tiktok.com/@minutedata/video/7334371572569869573)
+
+
+    ![](image_rsrc1D6.jpg)
+
+
+    ## 54.                    [Reliability, Validity](https://www.tiktok.com/@minutedata/video/7419687616469142826)
+
+
+    ![](image_rsrc1D7.jpg)
+
+
+    ## 55.                    [Sample Size Calculation](https://www.tiktok.com/@minutedata/video/7346953124302621958)
+
+
+    ![](image_rsrc1D8.jpg)
+
+
+    ## 56.                    [Multiple Comparisons](https://www.tiktok.com/@minutedata/video/7354747368878787846)
+
+
+    ![](image_rsrc1D9.jpg)
+
+
+    ## 57.                    [Blocked vs Stratified Sampling](https://www.tiktok.com/@minutedata/video/7339179599479262470)
+
+
+    ![](image_rsrc1DA.jpg)
+
+
+    ## 58.                    [Anscombe’s Quartet](https://www.tiktok.com/@minutedata/video/7315813283787738369)
+
+
+    ![](image_rsrc1DB.jpg)
+
+
+    ## 59.                    [Power Law](https://www.tiktok.com/@minutedata/video/7289825534375202054)
+
+
+    ![](image_rsrc1DC.jpg)
+
+
+    ## 60.                    [Survivorship Bias](https://www.tiktok.com/@minutedata/video/7283637581575785733)
+
+
+    ![](image_rsrc1DD.jpg)
+
+
+    ## 61.                    [Meta Analysis](https://www.tiktok.com/@minutedata/video/7430487627507240234)
+
+
+    ![](image_rsrc1DE.jpg)
+
+
+    # Part 4: Econometrics
+
+
+    ## 62.                    [Linear Regression](https://www.tiktok.com/@minutedata/video/7272160357349657862)
+
+
+    ## ![](image_rsrc1DF.jpg)
+
+
+    ## 63.                    [Deriving OLS](https://www.tiktok.com/@minutedata/video/7364391928982424837)
+
+
+    ## ![](image_rsrc1DG.jpg)
+
+
+    ## 64.                    [Interaction Effect](https://www.tiktok.com/@minutedata/video/7376638415795752197)
+
+
+    ## ![](image_rsrc1DH.jpg)
+
+
+    ## 65.                    [Chow Test (Structural Break)](https://www.tiktok.com/@minutedata/video/7427832792249093419)
+
+
+    ## ![](image_rsrc1DJ.jpg)
+
+
+    ## 66.                    [Linear Probability Model](https://www.tiktok.com/@minutedata/video/7381819195505380614)
+
+
+    ## ![](image_rsrc1DK.jpg)
+
+
+    ## 67.                    [Logistic Regression](https://www.tiktok.com/@minutedata/video/7305577569561234693)
+
+
+    ## ![](image_rsrc1DM.jpg)
+
+
+    ## 68.                    [Ordered Logistic Regression](https://www.tiktok.com/@minutedata/video/7466425750670052654)
+
+
+    ## ![](image_rsrc1DN.jpg)
+
+
+    ## 69.                    [Censored Regression (Tobit)](https://www.tiktok.com/@minutedata/video/7458677073490611502)
+
+
+    ## ![](image_rsrc1DP.jpg)
+
+
+    ## 70.                    [Poisson Regression](https://www.tiktok.com/@minutedata/video/7437879440421489962)
+
+
+    ## ![](image_rsrc1DR.jpg)
+
+
+    ## 71.                    [R-Squared](https://www.tiktok.com/@minutedata/video/7385873692955315461)
+
+
+    ## ![](image_rsrc1DS.jpg)
+
+
+    ## 72.                    [Heteroskedasticity](https://www.tiktok.com/@minutedata/video/7337314998533836038)
+
+
+    ## ![](image_rsrc1DT.jpg)
+
+
+    ## 73.                    [Multicollinearity, Variance Inflation Factor](https://www.tiktok.com/@minutedata/video/7310982307815460102)
+
+
+    ## ![](image_rsrc1DU.jpg)
+
+
+    ## 74.                    [Standardized Coefficients](https://www.tiktok.com/@minutedata/video/7406663556080422174)
+
+
+    ## ![](image_rsrc1DV.jpg)
+
+
+    ## 75.                    [Regression to the Mean](https://www.tiktok.com/@minutedata/video/7326180131960098053)
+
+
+    ## ![](image_rsrc1DW.jpg)
+
+
+    ## 76.                    [Spline Regression](https://www.tiktok.com/@minutedata/video/7313208608701893893)
+
+
+    ## ![](image_rsrc1DX.jpg)
+
+
+    ## 77.                    [Simpson’s Paradox](https://www.tiktok.com/@minutedata/video/7276033354598747397)
+
+
+    ## ![](image_rsrc1DY.jpg)
+
+
+    ## 78.                    [Fixed Effects vs Random Effects](https://www.tiktok.com/@minutedata/video/7276382032324758789)
+
+
+    ## ![](image_rsrc1DZ.jpg)
+
+
+    ## 79.                    [Hausman Test](https://www.tiktok.com/@minutedata/video/7432675432945798443)
+
+
+    ## ![](image_rsrc1E0.jpg)
+
+
+    ## 80.                    [Fixed Effects as Ability](https://www.tiktok.com/@minutedata/video/7440458304553291054)
+
+
+    ## ![](image_rsrc1E1.jpg)
+
+
+    ## 81.                    [Causal Inference](https://www.tiktok.com/@minutedata/video/7292803089449422086)
+
+
+    ## ![](image_rsrc1E2.jpg)
+
+
+    ## 82.                    [Propensity Score Matching](https://www.tiktok.com/@minutedata/video/7281230505620655366)
+
+
+    ## ![](image_rsrc1E3.jpg)
+
+
+    ## 83.                    [Difference-in-Differences](https://www.tiktok.com/@minutedata/video/7272495555694169350)
+
+
+    ## ![](image_rsrc1E4.jpg)
+
+
+    ## 84.                    [Regression Discontinuity](https://www.tiktok.com/@minutedata/video/7273213592713923846)
+
+
+    ## ![](image_rsrc1E5.jpg)
+
+
+    ## 85.                    [2-Stage-Least-Squares; Instrumental Variables](https://www.tiktok.com/@minutedata/video/7424874851468397867)
+
+
+    ## ![](image_rsrc1E6.jpg)
+
+
+    ## 86.                    [Heckman Selection Model](https://www.tiktok.com/@minutedata/video/7396327471794228486)
+
+
+    # ![](image_rsrc1E7.jpg)
+
+
+    # Part 5: SQL
+
+
+    ## 87.                    [Inner vs Outer Join](https://www.tiktok.com/@minutedata/video/7318405787829767429)
+
+
+    ## ![](image_rsrc1E8.jpg)
+
+
+    ## 88.                    [Cross Join](https://www.tiktok.com/@minutedata/video/7380760269301091590)
+
+
+    ## ![](image_rsrc1E9.jpg)
+
+
+    ## 89.                    [Where vs Having](https://www.tiktok.com/@minutedata/video/7360354277556063494)
+
+
+    ## ![](image_rsrc1EA.jpg)
+
+
+    ## 90.                    [Group By](https://www.tiktok.com/@minutedata/video/7323613042816634117)
+
+
+    ## ![](image_rsrc1EB.jpg)
+
+
+    ## 91.                    [Window Functions](https://www.tiktok.com/@minutedata/video/7275113981310979333)
+
+
+    ## ![](image_rsrc1EC.jpg)
+
+
+    ## 92.                    [Lag](https://www.tiktok.com/@minutedata/video/7275304984877518086)
+
+
+    ## ![](image_rsrc1ED.jpg)
+
+
+    ## 93.                    [Moving Average](https://www.tiktok.com/@minutedata/video/7276044708357377285)
+
+
+    ## ![](image_rsrc1EE.jpg)
+
+
+    ## 94.                    [Union vs Union All](https://www.tiktok.com/@minutedata/video/7398896687206403334)
+
+
+    ## ![](image_rsrc1EF.jpg)
+
+
+    ## 95.                    [Rank vs Dense Rank](https://www.tiktok.com/@minutedata/video/7286102078106144006)
+
+
+    ## ![](image_rsrc1EG.jpg)
+
+
+    ## 96.                    [CTE vs Subquery](https://www.tiktok.com/@minutedata/video/7331357454187416837)
+
+
+    ## ![](image_rsrc1EH.jpg)
+
+
+    ## 97.                    [Table Alias](https://www.tiktok.com/@minutedata/video/7341785232347073797)
+
+
+    ## ![](image_rsrc1EJ.jpg)
+
+
+    ## 98.                    [Wildcard](https://www.tiktok.com/@minutedata/video/7357328600011459846)
+
+
+    ## ![](image_rsrc1EK.jpg)
+
+
+    ## 99.                    [Like](https://www.tiktok.com/@minutedata/video/7324417354551790854)
+
+
+    ## ![](image_rsrc1EM.jpg)
+
+
+    ## 100.             [Regular Expressions](https://www.tiktok.com/@minutedata/video/7414127584595741983)
+
+
+    # ![](image_rsrc1EN.jpg)
+
+
+    # Part 6: Career
+
+
+    ## 101.             [Academic vs Tech](https://www.tiktok.com/@minutedata/video/7362934467259944198)
+
+
+    ## ![](image_rsrc1EP.jpg)
+
+
+    ## 102.             [\[BONUS\] Case Study: Man in Finance](https://www.tiktok.com/@minutedata/video/7378116786052533509)
+
+
+    ## ![](image_rsrc1ER.jpg)
+
+
+    # Closing Thoughts
+
+
+    Online courses, education apps and AI summaries make learning so accessible. We
+    consume more information than ever, yet barely remember half of it. Next time
+    you’re learning something, write it out! Draw, scribble, erase, cross out, doodle!
+    You may be surprised how much more you’ll remember!'
+  fmt: '
+
+    # Part 3: Statistics (Continued)
+
+
+    ## 52. [Switchback Test](https://www.tiktok.com/@minutedata/video/7445671119614496042)
+
+
+    ![](image_rsrc1D5.jpg)
+
+
+    ## 53. [Kolmogorov-Smirnov Test](https://www.tiktok.com/@minutedata/video/7334371572569869573)
+
+
+    ![](image_rsrc1D6.jpg)
+
+
+    ## 54. [Reliability, Validity](https://www.tiktok.com/@minutedata/video/7419687616469142826)
+
+
+    ![](image_rsrc1D7.jpg)
+
+
+    ## 55. [Sample Size Calculation](https://www.tiktok.com/@minutedata/video/7346953124302621958)
+
+
+    ![](image_rsrc1D8.jpg)
+
+
+    ## 56. [Multiple Comparisons](https://www.tiktok.com/@minutedata/video/7354747368878787846)
+
+
+    ![](image_rsrc1D9.jpg)
+
+
+    ## 57. [Blocked vs Stratified Sampling](https://www.tiktok.com/@minutedata/video/7339179599479262470)
+
+
+    ![](image_rsrc1DA.jpg)
+
+
+    ## 58. [Anscombe''s Quartet](https://www.tiktok.com/@minutedata/video/7315813283787738369)
+
+
+    ![](image_rsrc1DB.jpg)
+
+
+    ## 59. [Power Law](https://www.tiktok.com/@minutedata/video/7289825534375202054)
+
+
+    ![](image_rsrc1DC.jpg)
+
+
+    ## 60. [Survivorship Bias](https://www.tiktok.com/@minutedata/video/7283637581575785733)
+
+
+    ![](image_rsrc1DD.jpg)
+
+
+    ## 61. [Meta Analysis](https://www.tiktok.com/@minutedata/video/7430487627507240234)
+
+
+    ![](image_rsrc1DE.jpg)
+
+
+    # Part 4: Econometrics
+
+
+    ## 62. [Linear Regression](https://www.tiktok.com/@minutedata/video/7272160357349657862)
+
+
+    ![](image_rsrc1DF.jpg)
+
+
+    ## 63. [Deriving OLS](https://www.tiktok.com/@minutedata/video/7364391928982424837)
+
+
+    ![](image_rsrc1DG.jpg)
+
+
+    ## 64. [Interaction Effect](https://www.tiktok.com/@minutedata/video/7376638415795752197)
+
+
+    ![](image_rsrc1DH.jpg)
+
+
+    ## 65. [Chow Test (Structural Break)](https://www.tiktok.com/@minutedata/video/7427832792249093419)
+
+
+    ![](image_rsrc1DJ.jpg)
+
+
+    ## 66. [Linear Probability Model](https://www.tiktok.com/@minutedata/video/7381819195505380614)
+
+
+    ![](image_rsrc1DK.jpg)
+
+
+    ## 67. [Logistic Regression](https://www.tiktok.com/@minutedata/video/7305577569561234693)
+
+
+    ![](image_rsrc1DM.jpg)
+
+
+    ## 68. [Ordered Logistic Regression](https://www.tiktok.com/@minutedata/video/7466425750670052654)
+
+
+    ![](image_rsrc1DN.jpg)
+
+
+    ## 69. [Censored Regression (Tobit)](https://www.tiktok.com/@minutedata/video/7458677073490611502)
+
+
+    ![](image_rsrc1DP.jpg)
+
+
+    ## 70. [Poisson Regression](https://www.tiktok.com/@minutedata/video/7437879440421489962)
+
+
+    ![](image_rsrc1DR.jpg)
+
+
+    ## 71. [R-Squared](https://www.tiktok.com/@minutedata/video/7385873692955315461)
+
+
+    ![](image_rsrc1DS.jpg)
+
+
+    ## 72. [Heteroskedasticity](https://www.tiktok.com/@minutedata/video/7337314998533836038)
+
+
+    ![](image_rsrc1DT.jpg)
+
+
+    ## 73. [Multicollinearity, Variance Inflation Factor](https://www.tiktok.com/@minutedata/video/7310982307815460102)
+
+
+    ![](image_rsrc1DU.jpg)
+
+
+    ## 74. [Standardized Coefficients](https://www.tiktok.com/@minutedata/video/7406663556080422174)
+
+
+    ![](image_rsrc1DV.jpg)
+
+
+    ## 75. [Regression to the Mean](https://www.tiktok.com/@minutedata/video/7326180131960098053)
+
+
+    ![](image_rsrc1DW.jpg)
+
+
+    ## 76. [Spline Regression](https://www.tiktok.com/@minutedata/video/7313208608701893893)
+
+
+    ![](image_rsrc1DX.jpg)
+
+
+    ## 77. [Simpson''s Paradox](https://www.tiktok.com/@minutedata/video/7276033354598747397)
+
+
+    ![](image_rsrc1DY.jpg)
+
+
+    ## 78. [Fixed Effects vs Random Effects](https://www.tiktok.com/@minutedata/video/7276382032324758789)
+
+
+    ![](image_rsrc1DZ.jpg)
+
+
+    ## 79. [Hausman Test](https://www.tiktok.com/@minutedata/video/7432675432945798443)
+
+
+    ![](image_rsrc1E0.jpg)
+
+
+    ## 80. [Fixed Effects as Ability](https://www.tiktok.com/@minutedata/video/7440458304553291054)
+
+
+    ![](image_rsrc1E1.jpg)
+
+
+    ## 81. [Causal Inference](https://www.tiktok.com/@minutedata/video/7292803089449422086)
+
+
+    ![](image_rsrc1E2.jpg)
+
+
+    ## 82. [Propensity Score Matching](https://www.tiktok.com/@minutedata/video/7281230505620655366)
+
+
+    ![](image_rsrc1E3.jpg)
+
+
+    ## 83. [Difference-in-Differences](https://www.tiktok.com/@minutedata/video/7272495555694169350)
+
+
+    ![](image_rsrc1E4.jpg)
+
+
+    ## 84. [Regression Discontinuity](https://www.tiktok.com/@minutedata/video/7273213592713923846)
+
+
+    ![](image_rsrc1E5.jpg)
+
+
+    ## 85. [2-Stage-Least-Squares; Instrumental Variables](https://www.tiktok.com/@minutedata/video/7424874851468397867)
+
+
+    ![](image_rsrc1E6.jpg)
+
+
+    ## 86. [Heckman Selection Model](https://www.tiktok.com/@minutedata/video/7396327471794228486)
+
+
+    ![](image_rsrc1E7.jpg)
+
+
+    # Part 5: SQL
+
+
+    ## 87. [Inner vs Outer Join](https://www.tiktok.com/@minutedata/video/7318405787829767429)
+
+
+    ![](image_rsrc1E8.jpg)
+
+
+    ## 88. [Cross Join](https://www.tiktok.com/@minutedata/video/7380760269301091590)
+
+
+    ![](image_rsrc1E9.jpg)
+
+
+    ## 89. [Where vs Having](https://www.tiktok.com/@minutedata/video/7360354277556063494)
+
+
+    ![](image_rsrc1EA.jpg)
+
+
+    ## 90. [Group By](https://www.tiktok.com/@minutedata/video/7323613042816634117)
+
+
+    ![](image_rsrc1EB.jpg)
+
+
+    ## 91. [Window Functions](https://www.tiktok.com/@minutedata/video/7275113981310979333)
+
+
+    ![](image_rsrc1EC.jpg)
+
+
+    ## 92. [Lag](https://www.tiktok.com/@minutedata/video/7275304984877518086)
+
+
+    ![](image_rsrc1ED.jpg)
+
+
+    ## 93. [Moving Average](https://www.tiktok.com/@minutedata/video/7276044708357377285)
+
+
+    ![](image_rsrc1EE.jpg)
+
+
+    ## 94. [Union vs Union All](https://www.tiktok.com/@minutedata/video/7398896687206403334)
+
+
+    ![](image_rsrc1EF.jpg)
+
+
+    ## 95. [Rank vs Dense Rank](https://www.tiktok.com/@minutedata/video/7286102078106144006)
+
+
+    ![](image_rsrc1EG.jpg)
+
+
+    ## 96. [CTE vs Subquery](https://www.tiktok.com/@minutedata/video/7331357454187416837)
+
+
+    ![](image_rsrc1EH.jpg)
+
+
+    ## 97. [Table Alias](https://www.tiktok.com/@minutedata/video/7341785232347073797)
+
+
+    ![](image_rsrc1EJ.jpg)
+
+
+    ## 98. [Wildcard](https://www.tiktok.com/@minutedata/video/7357328600011459846)
+
+
+    ![](image_rsrc1EK.jpg)
+
+
+    ## 99. [Like](https://www.tiktok.com/@minutedata/video/7324417354551790854)
+
+
+    ![](image_rsrc1EM.jpg)
+
+
+    ## 100. [Regular Expressions](https://www.tiktok.com/@minutedata/video/7414127584595741983)
+
+
+    ![](image_rsrc1EN.jpg)
+
+
+    # Part 6: Career
+
+
+    ## 101. [Academic vs Tech](https://www.tiktok.com/@minutedata/video/7362934467259944198)
+
+
+    ![](image_rsrc1EP.jpg)
+
+
+    ## 102. [BONUS Case Study: Man in Finance](https://www.tiktok.com/@minutedata/video/7378116786052533509)
+
+
+    ![](image_rsrc1ER.jpg)
+
+
+    # Closing Thoughts
+
+
+    Online courses, education apps and AI summaries make learning so accessible. We
+    consume more information than ever, yet barely remember half of it. Next time
+    you''re learning something, write it out! Draw, scribble, erase, cross out, doodle!
+    You may be surprised how much more you''ll remember!
+
+    '
+  trans: '
+
+
+    # 第 3 部分：统计学（续）
+
+
+    ## 52. [回溯测试](https://www.tiktok.com/@minutedata/video/7445671119614496042)
+
+
+    ![](img/image_rsrc1D5.jpg)
+
+
+    ## 53. [柯尔莫戈罗夫-斯米尔诺夫检验](https://www.tiktok.com/@minutedata/video/7334371572569869573)
+
+
+    ![](img/image_rsrc1D6.jpg)
+
+
+    ## 54. [信度，效度](https://www.tiktok.com/@minutedata/video/7419687616469142826)
+
+
+    ![](img/image_rsrc1D7.jpg)
+
+
+    ## 55. [样本量计算](https://www.tiktok.com/@minutedata/video/7346953124302621958)
+
+
+    ![](img/image_rsrc1D8.jpg)
+
+
+    ## 56. [多重比较](https://www.tiktok.com/@minutedata/video/7354747368878787846)
+
+
+    ![](img/image_rsrc1D9.jpg)
+
+
+    ## 57. [分组抽样 vs 分层抽样](https://www.tiktok.com/@minutedata/video/7339179599479262470)
+
+
+    ![](img/image_rsrc1DA.jpg)
+
+
+    ## 58. [安斯库姆四重奏](https://www.tiktok.com/@minutedata/video/7315813283787738369)
+
+
+    ![](img/image_rsrc1DB.jpg)
+
+
+    ## 59. [幂律](https://www.tiktok.com/@minutedata/video/7289825534375202054)
+
+
+    ![](img/image_rsrc1DC.jpg)
+
+
+    ## 60. [幸存者偏差](https://www.tiktok.com/@minutedata/video/7283637581575785733)
+
+
+    ![](img/image_rsrc1DD.jpg)
+
+
+    ## 61. [荟萃分析](https://www.tiktok.com/@minutedata/video/7430487627507240234)
+
+
+    ![](img/image_rsrc1DE.jpg)
+
+
+    # 第 4 部分：计量经济学
+
+
+    ## 62. [线性回归](https://www.tiktok.com/@minutedata/video/7272160357349657862)
+
+
+    ![](img/image_rsrc1DF.jpg)
+
+
+    ## 63. [OLS 推导](https://www.tiktok.com/@minutedata/video/7364391928982424837)
+
+
+    ![](img/image_rsrc1DG.jpg)
+
+
+    ## 64. [交互效应](https://www.tiktok.com/@minutedata/video/7376638415795752197)
+
+
+    ![](img/image_rsrc1DH.jpg)
+
+
+    ## 65. [Chow 检验（结构性断点）](https://www.tiktok.com/@minutedata/video/7427832792249093419)
+
+
+    ![](img/image_rsrc1DJ.jpg)
+
+
+    ## 66. [线性概率模型](https://www.tiktok.com/@minutedata/video/7381819195505380614)
+
+
+    ![](img/image_rsrc1DK.jpg)
+
+
+    ## 67. [Logistic 回归](https://www.tiktok.com/@minutedata/video/7305577569561234693)
+
+
+    ![](img/image_rsrc1DM.jpg)
+
+
+    ## 68. [有序 Logistic 回归](https://www.tiktok.com/@minutedata/video/7466425750670052654)
+
+
+    ![](img/image_rsrc1DN.jpg)
+
+
+    ## 69. [截尾回归](https://www.tiktok.com/@minutedata/video/7458677073490611502)
+
+
+    ![](img/image_rsrc1DP.jpg)
+
+
+    ## 70. [泊松回归](https://www.tiktok.com/@minutedata/video/7437879440421489962)
+
+
+    ![](img/image_rsrc1DR.jpg)
+
+
+    ## 71. [R 平方](https://www.tiktok.com/@minutedata/video/7385873692955315461)
+
+
+    ![](img/image_rsrc1DS.jpg)
+
+
+    ## 72. [异方差](https://www.tiktok.com/@minutedata/video/7337314998533836038)
+
+
+    ![](img/image_rsrc1DT.jpg)
+
+
+    ## 73. [多重共线性，方差膨胀因子](https://www.tiktok.com/@minutedata/video/7310982307815460102)
+
+
+    ![](img/image_rsrc1DU.jpg)
+
+
+    ## 74. [标准化系数](https://www.tiktok.com/@minutedata/video/7406663556080422174)
+
+
+    ![](img/image_rsrc1DV.jpg)
+
+
+    ## 75. [向均值回归](https://www.tiktok.com/@minutedata/video/7326180131960098053)
+
+
+    ![](img/image_rsrc1DW.jpg)
+
+
+    ## 76. [样条回归](https://www.tiktok.com/@minutedata/video/7313208608701893893)
+
+
+    ![](img/image_rsrc1DX.jpg)
+
+
+    ## 77. [辛普森悖论](https://www.tiktok.com/@minutedata/video/7276033354598747397)
+
+
+    ![](img/image_rsrc1DY.jpg)
+
+
+    ## 78. [固定效应 vs 随机效应](https://www.tiktok.com/@minutedata/video/7276382032324758789)
+
+
+    ![](img/image_rsrc1DZ.jpg)
+
+
+    ## 79. [Hausman 检验](https://www.tiktok.com/@minutedata/video/7432675432945798443)
+
+
+    ![](img/image_rsrc1E0.jpg)
+
+
+    ## 80. [固定效应即能力](https://www.tiktok.com/@minutedata/video/7440458304553291054)
+
+
+    ![](img/image_rsrc1E1.jpg)
+
+
+    ## 81. [因果推断](https://www.tiktok.com/@minutedata/video/7292803089449422086)
+
+
+    ![](img/image_rsrc1E2.jpg)
+
+
+    ## 82. [倾向得分匹配](https://www.tiktok.com/@minutedata/video/7281230505620655366)
+
+
+    ![](img/image_rsrc1E3.jpg)
+
+
+    ## 83. [双重差分法](https://www.tiktok.com/@minutedata/video/7272495555694169350)
+
+
+    ![](img/image_rsrc1E4.jpg)
+
+
+    ## 84. [回归不连续设计](https://www.tiktok.com/@minutedata/video/7273213592713923846)
+
+
+    ![](img/image_rsrc1E5.jpg)
+
+
+    ## 85. [两阶段最小二乘法；工具变量](https://www.tiktok.com/@minutedata/video/7424874851468397867)
+
+
+    ![](img/image_rsrc1E6.jpg)
+
+
+    ## 86. [Heckman 选择模型](https://www.tiktok.com/@minutedata/video/7396327471794228486)
+
+
+    ![](img/image_rsrc1E7.jpg)
+
+
+    # 第 5 部分：SQL
+
+
+    ## 87. [内连接 vs 外连接](https://www.tiktok.com/@minutedata/video/7318405787829767429)
+
+
+    ![](img/image_rsrc1E8.jpg)
+
+
+    ## 88. [交叉连接](https://www.tiktok.com/@minutedata/video/7380760269301091590)
+
+
+    ![](img/image_rsrc1E9.jpg)
+
+
+    ## 89. [Where vs Having](https://www.tiktok.com/@minutedata/video/7360354277556063494)
+
+
+    ![](img/image_rsrc1EA.jpg)
+
+
+    ## 90. [Group By](https://www.tiktok.com/@minutedata/video/7323613042816634117)
+
+
+    ![](img/image_rsrc1EB.jpg)
+
+
+    ## 91. [窗口函数](https://www.tiktok.com/@minutedata/video/7275113981310979333)
+
+
+    ![](img/image_rsrc1EC.jpg)
+
+
+    ## 92. [Lag](https://www.tiktok.com/@minutedata/video/7275304984877518086)
+
+
+    ![](img/image_rsrc1ED.jpg)
+
+
+    ## 93. [移动平均](https://www.tiktok.com/@minutedata/video/7276044708357377285)
+
+
+    ![](img/image_rsrc1EE.jpg)
+
+
+    ## 94. [Union vs Union All](https://www.tiktok.com/@minutedata/video/7398896687206403334)
+
+
+    ![](img/image_rsrc1EF.jpg)
+
+
+    ## 95. [Rank vs Dense Rank](https://www.tiktok.com/@minutedata/video/7286102078106144006)
+
+
+    ![](img/image_rsrc1EG.jpg)
+
+
+    ## 96. [CTE vs 子查询](https://www.tiktok.com/@minutedata/video/7331357454187416837)
+
+
+    ![](img/image_rsrc1EH.jpg)
+
+
+    ## 97. [表别名](https://www.tiktok.com/@minutedata/video/7341785232347073797)
+
+
+    ![](img/image_rsrc1EJ.jpg)
+
+
+    ## 98. [通配符](https://www.tiktok.com/@minutedata/video/7357328600011459846)
+
+
+    ![](img/image_rsrc1EK.jpg)
+
+
+    ## 99. [Like](https://www.tiktok.com/@minutedata/video/7324417354551790854)
+
+
+    ![](img/image_rsrc1EM.jpg)
+
+
+    ## 100. [正则表达式](https://www.tiktok.com/@minutedata/video/7414127584595741983)
+
+
+    ![](img/image_rsrc1EN.jpg)
+
+
+    # 第 6 部分：职业发展
+
+
+    ## 101. [学术界 vs 科技界](https://www.tiktok.com/@minutedata/video/7362934467259944198)
+
+
+    ![](img/image_rsrc1EP.jpg)
+
+
+    ## 102. [额外案例研究：金融男](https://www.tiktok.com/@minutedata/video/7378116786052533509)
+
+
+    ![](img/image_rsrc1ER.jpg)
+
+
+    # 结束语
+
+
+    在线课程、教育应用和 AI 摘要让学习变得触手可及。我们获取的信息比以往任何时候都多，却几乎只能记住其中的一半。下次学习新知识时，把它写下来！画图、涂鸦、擦除、划掉、随意绘画！你可能会惊讶地发现，自己能记住的东西会多得多！
+
+
+    '
+  toc: []
