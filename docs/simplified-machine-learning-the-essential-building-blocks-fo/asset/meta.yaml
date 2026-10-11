@@ -1,0 +1,2053 @@
+name: Simplified Machine Learning： The essential building blocks for Machine Learning
+  expertise
+slug: simplified-machine-learning-the-essential-building-blocks-fo
+name_cn: 简化机器学习：机器学习专业知识的核心构建模块
+toc:
+- - '##'
+  - 简化机器学习：机器学习专业知识的核心构建模块
+- - '#'
+  - 作者简介
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '#'
+  - 代码包与彩色图片
+- - '#'
+  - 勘误表
+- - '#'
+  - 加入我们的书籍 Discord 空间
+- - '#'
+  - 第 1 章：机器学习简介
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 机器学习的必要性
+- - '##'
+  - 科学发现
+- - '##'
+  - 易用性
+- - '##'
+  - 可持续性
+- - '##'
+  - 医疗进步
+- - '##'
+  - 网络安全
+- - '##'
+  - 人工智能与机器学习的关系
+- - '##'
+  - 自动化
+- - '##'
+  - 适应性
+- - '##'
+  - 自然语言处理
+- - '##'
+  - 计算机视觉
+- - '##'
+  - 机器学习的类型
+- - '###'
+  - 监督学习
+- - '###'
+  - 无监督学习
+- - '###'
+  - 半监督学习
+- - '###'
+  - 强化学习
+- - '###'
+  - 自监督学习
+- - '###'
+  - 在线学习
+- - '###'
+  - 元学习
+- - '###'
+  - 集成学习
+- - '##'
+  - 机器学习的应用
+- - '###'
+  - 推荐系统
+- - '###'
+  - 医疗保健
+- - '###'
+  - 金融
+- - '###'
+  - 自动驾驶汽车
+- - '###'
+  - 电子商务
+- - '###'
+  - 制造业
+- - '###'
+  - 能源管理
+- - '###'
+  - 农业
+- - '###'
+  - 市场营销与客户细分
+- - '###'
+  - 人力资源
+- - '###'
+  - 机器人技术
+- - '###'
+  - 网络安全
+- - '###'
+  - 游戏
+- - '##'
+  - 机器学习的生命周期
+- - '###'
+  - 问题定义
+- - '###'
+  - 数据收集
+- - '###'
+  - 数据预处理
+- - '###'
+  - 数据集划分
+- - '###'
+  - 特征工程
+- - '###'
+  - 模型选择与训练
+- - '###'
+  - 超参数调优
+- - '###'
+  - 模型评估
+- - '###'
+  - 模型部署
+- - '###'
+  - 监控与维护
+- - '###'
+  - 文档与报告
+- - '###'
+  - 反馈循环
+- - '##'
+  - 安装 Anaconda 和 Python 的步骤
+- - '###'
+  - 在 Windows 上安装 Anaconda
+- - '##'
+  - 结论
+- - '##'
+  - 习题
+- - '##'
+  - 加入我们的图书 Discord 社区
+- - '#'
+  - 第 2 章：数据预处理
+- - '##'
+  - 简介
+- - '##'
+  - 章节结构
+- - '##'
+  - 学习目标
+- - '##'
+  - 数据集
+- - '##'
+  - CSV 文件
+- - '###'
+  - CSV 文件格式
+- - '###'
+  - 数据集获取来源
+- - '##'
+  - 数据预处理的必要性
+- - '###'
+  - 数据质量保证
+- - '###'
+  - 数据兼容性
+- - '###'
+  - 处理缺失数据
+- - '###'
+  - 降噪
+- - '###'
+  - 缩放与归一化
+- - '###'
+  - 处理分类数据
+- - '###'
+  - 特征工程
+- - '###'
+  - 降维
+- - '###'
+  - 数据集划分
+- - '###'
+  - 处理不平衡数据
+- - '##'
+  - 数据预处理
+- - '###'
+  - 数据清洗
+- - '###'
+  - 数据转换
+- - '###'
+  - 数据集成与聚合
+- - '###'
+  - 数据划分
+- - '###'
+  - 处理不平衡数据
+- - '###'
+  - 数据归一化与缩放
+- - '###'
+  - 面向 NLP 的文本预处理
+- - '###'
+  - 处理缺失数据
+- - '###'
+  - 数据清洗详解
+- - '####'
+  - Sample DataFrame with missing values
+- - '####'
+  - Display the original DataFrame
+- - '####'
+  - Impute missing values using mean for numeric columns
+- - '####'
+  - Display the DataFrame after imputation
+- - '###'
+  - 处理重复值
+- - '##'
+  - 处理重复数据
+- - '###'
+  - Sample DataFrame with duplicate values
+- - '###'
+  - Display the original DataFrame
+- - '###'
+  - Identify duplicate rows
+- - '###'
+  - Display duplicate rows
+- - '###'
+  - Remove duplicate rows (keep the first occurrence)
+- - '###'
+  - Display the DataFrame without duplicates
+- - '##'
+  - 处理不一致数据
+- - '###'
+  - Sample DataFrame with inconsistent data
+- - '###'
+  - Display the original DataFrame
+- - '###'
+  - Standardize inconsistent data
+- - '###'
+  - Convert 'Category' column to lowercase to standardize case
+- - '###'
+  - Display the DataFrame after standardizing data
+- - '##'
+  - 处理异常值
+- - '###'
+  - Sample DataFrame with outliers
+- - '###'
+  - Display the original DataFrame
+- - '###'
+  - Identify outliers using the Interquartile Range (IQR) method
+- - '###'
+  - Cap outliers by replacing them with the upper or lower bound
+- - '###'
+  - Display the DataFrame after handling outliers
+- - '##'
+  - 降噪
+- - '###'
+  - Generate a noisy signal
+- - '###'
+  - Add impulsive noise (spikes)
+- - '###'
+  - Plot the original signal with noise
+- - '###'
+  - Apply Gaussian filter for noise reduction
+- - '###'
+  - Plot the smoothed signal
+- - '##'
+  - 数据转换
+- - '###'
+  - 分类数据编码
+- - '####'
+  - 带有分类列的示例 DataFrame
+- - '####'
+  - 显示原始 DataFrame
+- - '####'
+  - 独热编码
+- - '####'
+  - 标签编码（使用类别代码）
+- - '####'
+  - 二进制编码（将类别代码转为二进制）
+- - '####'
+  - 显示编码后的 DataFrame
+- - '###'
+  - 特征工程
+- - '####'
+  - 带有合成特征的示例数据集
+- - '####'
+  - 显示原始 DataFrame
+- - '####'
+  - 特征工程：创建新特征
+- - '#####'
+  - 1. 年龄组
+- - '#####'
+  - 2. 收入水平
+- - '#####'
+  - 3. 二元教育指标（学士学位或更高）
+- - '####'
+  - 显示特征工程后的 DataFrame
+- - '###'
+  - 数据缩减
+- - '####'
+  - 生成大型示例数据集
+- - '####'
+  - 显示原始数据集的大小
+- - '####'
+  - 随机采样一部分数据（例如 10%）
+- - '####'
+  - 显示缩减后数据集的大小
+- - '####'
+  - 数据缩减技术
+- - '##'
+  - 日期时间转换
+- - '###'
+  - 带有日期时间列的示例 DataFrame
+- - '###'
+  - 将 'Date' 列转换为日期时间格式
+- - '###'
+  - 显示原始 DataFrame
+- - '###'
+  - 日期时间转换
+- - '###'
+  - 提取年、月、日
+- - '###'
+  - 计算距离参考日期的时间跨度
+- - '###'
+  - 显示日期时间转换后的 DataFrame
+- - '##'
+  - 对数变换
+- - '###'
+  - 具有正值的示例数据集
+- - '###'
+  - 对数变换
+- - '###'
+  - 显示原始数据和变换后的数据
+- - '##'
+  - 数据集成
+- - '###'
+  - 来自两个不同来源的示例数据
+- - '###'
+  - 从两个来源创建 DataFrame
+- - '###'
+  - 连接或合并 DataFrame 以执行数据集成
+- - '###'
+  - 显示集成后的 DataFrame
+- - '##'
+  - 聚合
+- - '###'
+  - 样本数据
+- - '###'
+  - 显示原始 DataFrame
+- - '###'
+  - 数据聚合：按日期汇总销售额
+- - '###'
+  - 显示聚合后的 DataFrame
+- - '##'
+  - 数据拆分
+- - '###'
+  - 样本数据集（特征和标签）
+- - '###'
+  - 将数据拆分为训练集、验证集和测试集
+- - '###'
+  - 显示生成的各集合大小
+- - '##'
+  - 归一化
+- - '###'
+  - 样本数据
+- - '###'
+  - 创建 MinMaxScaler 实例
+- - '###'
+  - 拟合缩放器并转换数据
+- - '###'
+  - 显示归一化后的数据
+- - '##'
+  - 标准化
+- - '###'
+  - 样本数据
+- - '###'
+  - 创建 StandardScaler 实例
+- - '###'
+  - 拟合缩放器并转换数据
+- - '###'
+  - 显示标准化后的数据
+- - '##'
+  - 标准化数据格式
+- - '###'
+  - Sample DataFrame with mixed data formats
+- - '###'
+  - Display the original DataFrame
+- - '###'
+  - Standardize data formats
+- - '###'
+  - Convert 'Date' column to datetime format
+- - '###'
+  - Remove non-numeric characters and convert 'Amount' column to float
+- - '###'
+  - Remove non-numeric characters and convert 'Quantity' column to float
+- - '###'
+  - Display the DataFrame after standardizing data formats
+- - '##'
+  - 使用 NLP 进行文本处理
+- - '###'
+  - Import necessary libraries
+- - '###'
+  - Sample text data
+- - '###'
+  - Corresponding labels (0 for negative, 1 for positive)
+- - '###'
+  - Split the data into training and testing sets
+- - '###'
+  - Text vectorization using Bag-of-Words (CountVectorizer)
+- - '###'
+  - Train a simple classifier (Naive Bayes in this case)
+- - '###'
+  - Make predictions on the test set
+- - '###'
+  - Evaluate the classifier
+- - '###'
+  - Print the results
+- - '##'
+  - 分箱与离散化
+- - '###'
+  - Sample data
+- - '###'
+  - Display the original DataFrame
+- - '###'
+  - Binning and Discretization for 'Age'
+- - '###'
+  - Binning and Discretization for 'Income'
+- - '###'
+  - Display the DataFrame after binning and discretization
+- - '##'
+  - 结论
+- - '##'
+  - 编程练习
+- - '##'
+  - 问题
+- - '#'
+  - 第 3 章 监督学习：回归
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 监督学习的关键特征
+- - '##'
+  - 回归
+- - '##'
+  - 回归的核心概念
+- - '##'
+  - 回归的主要目标
+- - '##'
+  - 回归的必要性
+- - '##'
+  - 回归的应用
+- - '##'
+  - 简单线性回归
+- - '##'
+  - 关于简单线性回归的关键点
+- - '###'
+  - 样本数据（自变量 X 和因变量 Y）
+- - '###'
+  - 将 X 重塑为二维数组（scikit-learn 要求此格式）
+- - '###'
+  - 创建线性回归模型
+- - '###'
+  - 将模型拟合到数据
+- - '###'
+  - 使用训练好的模型进行预测
+- - '###'
+  - 绘制原始数据和回归线
+- - '###'
+  - 获取回归系数（截距和斜率）
+- - '##'
+  - 多元线性回归
+- - '##'
+  - 假设
+- - '##'
+  - 模型复杂度
+- - '##'
+  - 评估
+- - '##'
+  - 应用
+- - '##'
+  - 在 Python 中执行多元线性回归
+- - '###'
+  - 代码 3.2：多元线性回归的 Python 代码
+- - '####'
+  - Sample data with multiple independent variables (X1, X2, X3) and a dependent variable
+    (Y)
+- - '####'
+  - Split the data into training and testing sets
+- - '####'
+  - Create a linear regression model
+- - '####'
+  - Fit the model to the training data
+- - '####'
+  - Make predictions using the trained model
+- - '####'
+  - Calculate the mean squared error (MSE) to evaluate the model's performance
+- - '####'
+  - Get the regression coefficients (intercept and slopes)
+- - '####'
+  - Plot the original data points and the regression plane
+- - '##'
+  - 多项式回归
+- - '###'
+  - 多项式回归
+- - '###'
+  - 代码 3.3：多项式回归的 Python 代码
+- - '####'
+  - 生成一些示例数据
+- - '####'
+  - 拟合多项式回归模型
+- - '####'
+  - 计算得到的斜率和截距
+- - '####'
+  - 计算误差
+- - '####'
+  - 创建一系列用于预测的 X 值
+- - '####'
+  - 使用多项式回归模型预测 y 值
+- - '####'
+  - 绘制原始数据点和多项式回归曲线
+- - '####'
+  - 在图中显示斜率、截距和误差
+- - '##'
+  - 岭回归
+- - '###'
+  - 代码 3.4：岭回归的 Python 代码
+- - '####'
+  - 生成示例数据
+- - '####'
+  - 将数据划分为训练集和测试集
+- - '####'
+  - 使用不同的 alpha 值进行岭回归
+- - '##'
+  - 调查数据分析
+- - '##'
+  - 高维数据
+- - '##'
+  - 图像处理
+- - '##'
+  - Lasso 回归
+- - '###'
+  - 代码 3.5：Lasso 回归的 Python 代码
+- - '####'
+  - 生成样本数据
+- - '####'
+  - 将数据拆分为训练集和测试集
+- - '####'
+  - 使用不同的 alpha 值进行 Lasso 回归
+- - '##'
+  - 回归模型性能评估
+- - '###'
+  - 平均绝对误差 (MAE)
+- - '###'
+  - 均方误差 (MSE)
+- - '###'
+  - 均方根误差 (RMSE)
+- - '###'
+  - R 平方 (R²) 分数
+- - '###'
+  - SST：总平方和（因变量的方差）
+- - '###'
+  - 调整后的 R 平方（adjusted R²）
+- - '###'
+  - 平均绝对百分比误差（MAPE）
+- - '###'
+  - 残差分析
+- - '###'
+  - 交叉验证
+- - '###'
+  - 特征重要性
+- - '###'
+  - 领域特定指标
+- - '###'
+  - 样本实际值和预测值
+- - '###'
+  - 平均绝对误差 (MAE)
+- - '###'
+  - 均方误差 (MSE)
+- - '###'
+  - 均方根误差 (RMSE)
+- - '###'
+  - R 平方 (R²) 分数
+- - '###'
+  - 计算平均绝对百分比误差 (MAPE)
+- - '##'
+  - 结论
+- - '##'
+  - 编程练习
+- - '##'
+  - 问题
+- - '##'
+  - 加入我们的图书 Discord 空间
+- - '#'
+  - 第 4 章：监督学习：分类
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '###'
+  - 本章小结
+- - '##'
+  - 分类的关键要素
+- - '##'
+  - 分类的必要性
+- - '##'
+  - 分类的应用
+- - '##'
+  - 逻辑回归
+- - '###'
+  - 逻辑回归的关键特征
+- - '###'
+  - 代码 4.1：逻辑回归的 Python 代码
+- - '####'
+  - 创建用于二分类的合成数据集
+- - '####'
+  - 将数据集划分为训练集和测试集
+- - '####'
+  - 创建逻辑回归模型
+- - '####'
+  - 使用训练数据拟合模型
+- - '####'
+  - 在测试数据上进行预测
+- - '####'
+  - 计算准确率和其他性能指标
+- - '####'
+  - 可视化决策边界
+- - '####'
+  - 打印性能指标
+- - '##'
+  - K 近邻
+- - '###'
+  - 代码 4.2
+- - '####'
+  - 加载鸢尾花数据集（scikit-learn 内置数据集）
+- - '####'
+  - 将数据划分为训练集和测试集
+- - '####'
+  - 创建具有指定邻居数量 (K) 的 KNN 分类器
+- - '####'
+  - 使用训练数据拟合模型
+- - '####'
+  - 在测试数据上进行预测
+- - '####'
+  - 计算准确率并打印分类报告
+- - '##'
+  - 决策树
+- - '###'
+  - 决策树的关键特征
+- - '###'
+  - 决策树的工作原理
+- - '###'
+  - 决策树的优势
+- - '###'
+  - 决策树的劣势
+- - '###'
+  - 加载鸢尾花数据集
+- - '###'
+  - 将数据划分为训练集和测试集
+- - '###'
+  - 创建决策树分类器
+- - '###'
+  - 在训练数据上拟合模型
+- - '###'
+  - 对测试数据进行预测
+- - '###'
+  - 计算准确率
+- - '###'
+  - 树诱导算法
+- - '###'
+  - 分类与回归树
+- - '####'
+  - 分类与回归树 (CART)
+- - '###'
+  - 代码 4.4：CART 的 Python 代码
+- - '####'
+  - 生成用于演示的合成数据集
+- - '####'
+  - 将数据集划分为训练集和测试集
+- - '####'
+  - 创建 CART 分类器
+- - '####'
+  - 在训练数据上拟合分类器
+- - '####'
+  - 在测试数据上进行预测
+- - '####'
+  - 评估分类器的准确率
+- - '####'
+  - 显示树结构
+- - '###'
+  - 基于信息论的分割算法
+- - '####'
+  - ID3 算法
+- - '###'
+  - 代码 4.5：使用 ID3 的分割算法 Python 代码
+- - '####'
+  - 定义一个玩具数据集（特征和标签）
+- - '####'
+  - 计算熵的函数
+- - '####'
+  - 根据特征分割数据集的函数
+- - '###'
+  - 代码示例：基于信息增益的决策树构建
+- - '####'
+  - Function to select the best feature to split on
+- - '####'
+  - Function to build the decision tree
+- - '####'
+  - Main function to build and print the decision tree
+- - '###'
+  - 基于基尼指数的分裂算法
+- - '####'
+  - Define a toy dataset (features and labels)
+- - '####'
+  - Calculate Gini index for a dataset
+- - '####'
+  - Split the dataset based on a feature and value
+- - '####'
+  - Select the best split based on Gini index
+- - '####'
+  - Recursive function to build the decision tree
+- - '####'
+  - Main function to build and print the decision tree
+- - '##'
+  - 随机森林
+- - '###'
+  - 关键概念
+- - '###'
+  - 随机森林的工作原理
+- - '###'
+  - 投票（分类）或平均（回归）
+- - '###'
+  - 随机森林的优势
+- - '###'
+  - 局限性与注意事项
+- - '###'
+  - 代码 4.7：随机森林的 Python 代码
+- - '####'
+  - 加载鸢尾花数据集
+- - '####'
+  - 将数据集划分为训练集和测试集
+- - '####'
+  - 创建随机森林分类器
+- - '####'
+  - 在训练数据上拟合分类器
+- - '####'
+  - 在测试数据上进行预测
+- - '####'
+  - 评估分类器的准确性
+- - '##'
+  - 朴素贝叶斯分类器
+- - '###'
+  - 朴素贝叶斯的工作原理
+- - '###'
+  - 朴素贝叶斯分类器的类型
+- - '###'
+  - 代码 4.8：朴素贝叶斯分类器的 Python 代码
+- - '####'
+  - 示例文本数据（替换为您的数据集）
+- - '####'
+  - 将数据划分为训练集和测试集
+- - '####'
+  - 使用 CountVectorizer 对文本数据进行向量化
+- - '####'
+  - 创建多项式朴素贝叶斯分类器
+- - '####'
+  - 在训练数据上训练分类器
+- - '####'
+  - 在测试数据上进行预测
+- - '####'
+  - 评估分类器
+- - '####'
+  - 打印结果
+- - '##'
+  - 支持向量机
+- - '###'
+  - 支持向量机 (SVM)
+- - '###'
+  - SVM 的工作原理
+- - '###'
+  - 代码 4.9：支持向量机的 Python 代码
+- - '####'
+  - 加载示例数据集（您可以替换为自己的数据）
+- - '####'
+  - 将数据划分为训练集和测试集
+- - '####'
+  - 创建 SVM 分类器
+- - '####'
+  - 在训练数据上训练分类器
+- - '####'
+  - 在测试数据上进行预测
+- - '####'
+  - 评估分类器
+- - '####'
+  - 打印结果
+- - '##'
+  - 分类器的评估指标
+- - '###'
+  - 代码 4.10：分类各种评估指标的 Python 代码
+- - '####'
+  - 加载鸢尾花数据集
+- - '####'
+  - 将数据集拆分为训练集和测试集
+- - '####'
+  - 创建随机森林分类器
+- - '####'
+  - 在训练数据上拟合分类器
+- - '####'
+  - 在测试数据上进行预测
+- - '####'
+  - 计算各种性能指标
+- - '####'
+  - 打印性能指标
+- - '##'
+  - 结论
+- - '##'
+  - 编程练习
+- - '##'
+  - 问题
+- - '#'
+  - 第 5 章 无监督学习：聚类
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 聚类的必要性
+- - '##'
+  - 特征工程
+- - '##'
+  - 异常检测
+- - '##'
+  - 聚类的应用
+- - '##'
+  - 基于划分的聚类方法
+- - '##'
+  - K-Means 聚类
+- - '###'
+  - 示例
+- - '####'
+  - Generate example data
+- - '####'
+  - Specify the number of clusters (K)
+- - '####'
+  - Create a K-Means model
+- - '####'
+  - Fit the model to the data
+- - '####'
+  - Get cluster assignments for each data point
+- - '####'
+  - Get cluster centers
+- - '####'
+  - Plot the data points and cluster centers
+- - '####'
+  - Display cluster assignments
+- - '##'
+  - 层次聚类
+- - '###'
+  - 层次聚类方法的主要特征
+- - '###'
+  - 层次聚类方法的应用
+- - '####'
+  - Generate example data
+- - '####'
+  - Create an AgglomerativeClustering model with the desired number of clusters (n_clusters)
+- - '####'
+  - Fit the model to the data and obtain cluster assignments
+- - '####'
+  - Visualize the data and dendrogram
+- - '##'
+  - 基于密度的聚类
+- - '###'
+  - 基于密度的聚类方法的主要特征
+- - '###'
+  - 密度聚类方法的优势
+- - '###'
+  - 基于密度的聚类方法的应用
+- - '###'
+  - 代码 5.3：DBSCAN 的 Python 代码
+- - '####'
+  - Generate a synthetic dataset
+- - '####'
+  - Create a DBSCAN model with the desired parameters (eps and min_samples)
+- - '####'
+  - Fit the model to the data and obtain cluster assignments
+- - '####'
+  - Visualize the clusters
+- - '###'
+  - 代码 5.4：OPTICS 的 Python 代码
+- - '####'
+  - Generate sample data
+- - '####'
+  - Fit OPTICS clustering model
+- - '####'
+  - Plotting the reachability plot
+- - '####'
+  - Reachability plot
+- - '####'
+  - OPTICS clustering result
+- - '##'
+  - 主成分分析
+- - '###'
+  - 代码 5.5：PCA 的 Python 代码
+- - '####'
+  - Load the Iris dataset
+- - '####'
+  - Create a PCA model with 2 components
+- - '####'
+  - Fit and transform the data to the first 2 principal components
+- - '####'
+  - Plot the reduced data
+- - '###'
+  - PCA 分析
+- - '##'
+  - 异常检测
+- - '###'
+  - 异常类型
+- - '###'
+  - 异常检测的应用
+- - '###'
+  - 异常检测方法
+- - '####'
+  - Generate a synthetic dataset with anomalies
+- - '####'
+  - Create an Isolation Forest model
+- - '####'
+  - Fit the model to the data
+- - '####'
+  - Predict anomalies (outliers)
+- - '####'
+  - Visualize the data and anomalies
+- - '##'
+  - 结论
+- - '##'
+  - 编程练习
+- - '##'
+  - 问题
+- - '###'
+  - 10. 对比 OPTICS 与其他基于密度的聚类算法（如 DBSCAN）。
+- - '###'
+  - 11. 什么是可达性图，它在 OPTICS 中有何用处？
+- - '###'
+  - 12. OPTICS 如何处理簇内的变化密度？
+- - '###'
+  - 13. 解释 PCA 中主成分的概念。
+- - '###'
+  - 14. PCA 如何帮助降维？
+- - '###'
+  - 15. 讨论 PCA 中特征值与特征向量的关系。
+- - '###'
+  - 16. 描述一个 PCA 可能有用的实际场景。
+- - '###'
+  - 17. PCA 如何助力特征选择与压缩？
+- - '###'
+  - 18. 解释主成分数量与解释方差之间的权衡。
+- - '###'
+  - 19. 讨论使用 PCA 相关的挑战或局限性。
+- - '###'
+  - 20. PCA 如何处理数据集中的多重共线性？
+- - '###'
+  - 21. 解释孤立森林算法背后的核心思想。
+- - '###'
+  - 22. 讨论孤立森林在异常检测中的优势与局限性。
+- - '###'
+  - 23. 孤立森林如何处理高维数据？
+- - '##'
+  - 加入我们书籍的 Discord 空间
+- - '#'
+  - 第 6 章：降维与特征选择
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 降维的必要性
+- - '##'
+  - 特征重要性
+- - '##'
+  - 递归特征消除
+- - '###'
+  - RFE：递归特征消除
+- - '###'
+  - RFE 的工作原理
+- - '###'
+  - RFE 的优势
+- - '###'
+  - 代码 6.1：RFE 的工作原理
+- - '####'
+  - Create a synthetic dataset
+- - '####'
+  - Create a logistic regression model
+- - '####'
+  - Create an RFE model
+- - '####'
+  - Fit RFE on the data
+- - '####'
+  - List of selected features (Boolean mask)
+- - '##'
+  - 特征选择
+- - '###'
+  - 方差阈值
+- - '###'
+  - 代码 6.2：方差阈值方法的表示
+- - '####'
+  - Create a synthetic dataset
+- - '####'
+  - Set a variance threshold
+- - '####'
+  - Apply variance threshold
+- - '####'
+  - Selected features
+- - '###'
+  - SelectKBest
+- - '###'
+  - 代码 6.3：SelectKBest 方法的表示
+- - '####'
+  - Create a synthetic dataset with class labels
+- - '####'
+  - Select the top 2 features using chi-squared
+- - '####'
+  - Select the top 2 features using mutual information
+- - '####'
+  - Select the top 2 features using ANOVA F-statistic
+- - '####'
+  - Print selected features for each method
+- - '###'
+  - 递归特征消除
+- - '###'
+  - 代码 6.4：RFE 方法的表示
+- - '####'
+  - Load the Iris dataset
+- - '####'
+  - Create a logistic regression model
+- - '####'
+  - Create an RFE model
+- - '####'
+  - Fit RFE on the data
+- - '####'
+  - Selected features
+- - '##'
+  - 降维中的权衡
+- - '###'
+  - 降维中的权衡与考量
+- - '####'
+  - 信息丢失
+- - '####'
+  - 可解释性
+- - '####'
+  - 计算复杂度
+- - '####'
+  - 抗噪性
+- - '####'
+  - 算法选择
+- - '####'
+  - 过拟合
+- - '####'
+  - 关键特征的保留
+- - '##'
+  - 结论
+- - '##'
+  - 编程练习
+- - '##'
+  - 问题
+- - '##'
+  - 加入我们的图书 Discord 空间
+- - '#'
+  - 第 7 章：关联规则挖掘
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '###'
+  - 关联规则挖掘概述
+- - '##'
+  - 关联规则挖掘的简要工作原理
+- - '##'
+  - 关联规则挖掘的必要性
+- - '##'
+  - 关联规则挖掘的实时案例
+- - '###'
+  - 实时案例 1：零售市场
+- - '####'
+  - 关联规则挖掘
+- - '###'
+  - 实时案例 2：在线流媒体服务
+- - '####'
+  - 关联规则挖掘
+- - '##'
+  - 关联规则挖掘的应用
+- - '###'
+  - 电信
+- - '###'
+  - 生物信息学
+- - '###'
+  - 制造与质量控制
+- - '###'
+  - 交叉销售
+- - '##'
+  - 关联规则挖掘算法
+- - '##'
+  - Apriori 算法
+- - '##'
+  - Apriori 算法步骤
+- - '###'
+  - 示例事务数据集
+- - '###'
+  - 将事务转换为独热编码格式
+- - '###'
+  - 应用 Apriori 算法查找频繁项集
+- - '###'
+  - 显示频繁项集
+- - '###'
+  - 生成关联规则
+- - '###'
+  - 指定生成规则的度量指标和阈值
+- - '###'
+  - 显示关联规则
+- - '#'
+  - 第 8 章 人工神经网络
+- - '##'
+  - 本章结束时
+- - '##'
+  - 人工神经网络的组件
+- - '###'
+  - 神经元
+- - '###'
+  - 层
+- - '####'
+  - 输入层
+- - '####'
+  - 隐藏层
+- - '####'
+  - 输出层
+- - '###'
+  - 权重和偏置
+- - '###'
+  - 激活函数
+- - '##'
+  - 人工神经网络的工作原理
+- - '##'
+  - 人工神经网络的类型
+- - '###'
+  - 感知机神经网络
+- - '###'
+  - 前馈神经网络 (FNN)
+- - '###'
+  - 循环神经网络 (RNN)
+- - '###'
+  - 卷积神经网络 (CNN)
+- - '###'
+  - 长短期记忆 (LSTM) 网络
+- - '###'
+  - 门控循环单元 (GRU) 网络
+- - '###'
+  - 自编码器神经网络
+- - '##'
+  - 对人工神经网络的需求
+- - '###'
+  - 复杂模式识别
+- - '###'
+  - 适应性和学习能力
+- - '###'
+  - 非线性
+- - '###'
+  - 并行处理
+- - '###'
+  - 特征提取
+- - '###'
+  - 跨领域的通用性
+- - '###'
+  - 抗噪鲁棒性
+- - '###'
+  - 容错性
+- - '###'
+  - 自动化决策
+- - '###'
+  - 持续改进
+- - '##'
+  - 人工神经网络的应用
+- - '##'
+  - 激活函数
+- - '###'
+  - Sigmoid 激活函数
+- - '###'
+  - 双曲正切激活函数
+- - '###'
+  - ReLU 激活函数
+- - '###'
+  - 带泄漏的线性修正单元激活函数
+- - '###'
+  - 参数化线性修正单元激活函数
+- - '###'
+  - 指数线性单元激活函数
+- - '##'
+  - 激活函数的重要性
+- - '###'
+  - 梯度消失
+- - '###'
+  - 效率
+- - '###'
+  - 建模能力
+- - '###'
+  - 梯度爆炸
+- - '##'
+  - 感知机神经网络
+- - '###'
+  - Example usage
+- - '##'
+  - 前馈神经网络
+- - '###'
+  - Define the model
+- - '###'
+  - Add input layer with 2 neurons and specify input shape (assuming 2 features)
+- - '###'
+  - Add a hidden layer with 4 neurons
+- - '###'
+  - Add output layer with 1 neuron (binary classification) and sigmoid activation
+- - '###'
+  - Compile the model with binary cross-entropy loss and Adam optimizer
+- - '###'
+  - Example data
+- - '###'
+  - Train the model
+- - '###'
+  - Test the model
+- - '##'
+  - 反向传播网络
+- - '###'
+  - 反向传播的关键概念
+- - '###'
+  - 反向传播过程
+- - '####'
+  - Define the sigmoid activation function and its derivative
+- - '####'
+  - Define the dataset
+- - '####'
+  - Initialize the neural network architecture
+- - '####'
+  - Initialize weights and biases
+- - '####'
+  - Set learning rate and number of epochs
+- - '####'
+  - Training the neural network
+- - '####'
+  - Testing the trained network
+- - '##'
+  - 卷积神经网络
+- - '###'
+  - 卷积神经网络的关键组件
+- - '####'
+  - Load and preprocess the MNIST dataset
+- - '###'
+  - CNN 模型实现
+- - '####'
+  - Build the CNN model
+- - '####'
+  - Flatten the output and add dense layers for classification
+- - '####'
+  - Compile the model
+- - '####'
+  - Train the model
+- - '####'
+  - Evaluate the model on the test set
+- - '##'
+  - 循环神经网络
+- - '###'
+  - 循环神经网络的关键组件
+- - '####'
+  - Generate synthetic data
+- - '####'
+  - Build the RNN model
+- - '####'
+  - Compile the model
+- - '####'
+  - Train the model
+- - '####'
+  - Generate test data
+- - '####'
+  - Evaluate the model on the test set
+- - '##'
+  - 长短期记忆网络
+- - '###'
+  - 长短期记忆网络结构
+- - '###'
+  - 长短期记忆网络中的学习
+- - '####'
+  - Generate synthetic data
+- - '####'
+  - Build the LSTM model
+- - '####'
+  - Compile the model
+- - '####'
+  - Train the model
+- - '####'
+  - Generate test data
+- - '####'
+  - Evaluate the model on the test set
+- - '##'
+  - 门控循环单元网络
+- - '###'
+  - 门控循环单元的关键组件
+- - '####'
+  - 输入层
+- - '####'
+  - 隐藏状态（输出）
+- - '####'
+  - 重置门
+- - '####'
+  - 更新门
+- - '####'
+  - 候选隐藏状态
+- - '###'
+  - 门控循环单元网络中的学习
+- - '####'
+  - Generate synthetic data
+- - '####'
+  - Build the GRU model
+- - '####'
+  - Compile the model
+- - '####'
+  - Train the model
+- - '####'
+  - Generate test data
+- - '####'
+  - Evaluate the model on the test set
+- - '##'
+  - 自编码器
+- - '###'
+  - 编码器
+- - '###'
+  - 编码表示
+- - '###'
+  - 解码器
+- - '##'
+  - 自编码器架构
+- - '###'
+  - 输入层
+- - '###'
+  - 编码器层
+- - '###'
+  - 编码层（瓶颈）
+- - '###'
+  - 解码器层
+- - '###'
+  - 输出层
+- - '##'
+  - 自编码器中的学习
+- - '###'
+  - Generate synthetic data
+- - '###'
+  - Build the autoencoder model
+- - '###'
+  - Compile the autoencoder
+- - '###'
+  - Train the autoencoder
+- - '###'
+  - Encode and decode the data
+- - '###'
+  - Display original and reconstructed data
+- - '##'
+  - 结论
+- - '###'
+  - 在本章中，我们深入探讨了人工神经网络（ANN），涵盖了其应用、重要性及工作原理。
+- - '##'
+  - 编程练习
+- - '##'
+  - 问题
+- - '#'
+  - 第 9 章 强化学习
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 强化学习示例
+- - '###'
+  - 环境
+- - '###'
+  - 智能体
+- - '##'
+  - RL 的关键组件
+- - '###'
+  - 强化学习概念
+- - '###'
+  - 强化学习过程
+- - '###'
+  - 强化学习的应用
+- - '###'
+  - 强化学习的主要算法
+- - '##'
+  - Q 值、V 值和 Alpha 值
+- - '###'
+  - Q 值（动作价值函数）
+- - '###'
+  - V 值（价值函数）
+- - '###'
+  - Alpha 值（学习率）
+- - '##'
+  - 探索与利用
+- - '##'
+  - Q 学习算法
+- - '###'
+  - 代码 9.1：Q 学习方法的实现
+- - '####'
+  - Define the environment (grid-world)
+- - '####'
+  - '''S'' is the starting point, ''G'' is the goal, ''H'' is the hole, ''F'' is the
+    frozen surface'
+- - '####'
+  - Define parameters
+- - '####'
+  - Initialize Q-table
+- - '####'
+  - Helper function to convert (x, y) coordinates to state index
+- - '####'
+  - Helper function to choose an action using epsilon-greedy strategy
+- - '####'
+  - Q-learning algorithm
+- - '##'
+  - ε-贪婪算法
+- - '###'
+  - Epsilon-Greedy 算法
+- - '###'
+  - Example usage
+- - '###'
+  - Q-values for each action (for example, from a Q-table or neural network)
+- - '###'
+  - Select an action using the epsilon-greedy policy
+- - '##'
+  - Softmax 动作选择
+- - '###'
+  - Example usage
+- - '##'
+  - 置信上界
+- - '###'
+  - 'Example usage:'
+- - '###'
+  - Run multiple episodes
+- - '###'
+  - Print the estimated reward for each arm
+- - '##'
+  - 马尔可夫决策过程
+- - '###'
+  - Example MDP
+- - '###'
+  - Solve MDP using value iteration
+- - '###'
+  - Print results
+- - '##'
+  - 结论
+- - '##'
+  - 编程练习
+- - '###'
+  - 3. 实现 Softmax 动作选择以解决多臂老虎机问题或简单的网格世界。使用温度参数调节来控制探索程度，并将 Softmax 与 ε-greedy 进行比较。
+- - '###'
+  - 4. 为多臂老虎机问题实现 UCB。利用置信界平衡探索与利用，并将其性能与其他探索策略进行比较。
+- - '###'
+  - 5. 模拟一个离散 MDP，其中智能体随时间与环境交互。实现价值迭代或策略迭代算法，以针对不同的奖励结构和状态转移动态寻找最优策略。
+- - '###'
+  - 6. 实现 Q-learning 或 DQN，利用原始像素输入玩经典 Atari 游戏。使用帧堆叠和帧跳过等技术预处理观测值。
+- - '###'
+  - 7. 实现带有 UCB 的情境老虎机，根据用户上下文推荐个性化物品。使用合成或真实世界数据评估 UCB 与其他老虎机算法相比的有效性。
+- - '##'
+  - 问题
+- - '#'
+  - 第 10 章 项目
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 详细机器学习项目
+- - '###'
+  - Load the dataset
+- - '###'
+  - 'detailed observations of the dataset are retrieved by the following #function'
+- - '##'
+  - 数据预处理与探索性分析
+- - '###'
+  - 列分类处理
+- - '###'
+  - 数值列直方图与统计分析
+- - '####'
+  - Histogram of numerical values
+- - '###'
+  - 分类列条形图分析
+- - '####'
+  - Bar plot of categorical values
+- - '###'
+  - 数值箱线图与异常值检测
+- - '####'
+  - Box plot of numerical values
+- - '###'
+  - 目标列关联分析（卡方检验）
+- - '####'
+  - check the association of every column of dataset with the target column
+- - '###'
+  - 列间相关性分析（Spearman 秩相关热力图）
+- - '####'
+  - Spearsman Rank Correlation of each column with every other column of dataset
+- - '####'
+  - Load the heart disease dataset
+- - '####'
+  - Compute the Spearman rank correlation
+- - '####'
+  - Draw a correlation plot using seaborn
+- - '####'
+  - Load the heart disease dataset
+- - '####'
+  - Compute the Spearman rank correlation
+- - '####'
+  - Draw a correlation plot using seaborn
+- - '##'
+  - 分类模型构建与评估
+- - '###'
+  - 代码 10.9：使用逻辑回归构建模型
+- - '####'
+  - Model building (Classification)
+- - '####'
+  - Logistic regression
+- - '###'
+  - 代码示例：多种分类模型构建与评估
+- - '##'
+  - 逻辑回归模型
+- - '###'
+  - Load the dataset
+- - '###'
+  - Preprocessing
+- - '###'
+  - Split the data into training and testing sets
+- - '###'
+  - Standardize the features
+- - '###'
+  - Model training
+- - '###'
+  - Model evaluation
+- - '###'
+  - Classification report
+- - '##'
+  - K-近邻（KNN）分类模型
+- - '###'
+  - Load the dataset
+- - '###'
+  - Preprocessing
+- - '###'
+  - Split the data into training and testing sets
+- - '###'
+  - Standardize the features
+- - '###'
+  - Model training
+- - '###'
+  - Model evaluation
+- - '###'
+  - Classification report
+- - '##'
+  - 决策树分类模型
+- - '###'
+  - Load the dataset
+- - '###'
+  - Preprocessing
+- - '###'
+  - Split the data into training and testing sets
+- - '###'
+  - Standardize the features
+- - '###'
+  - Model training
+- - '###'
+  - Model evaluation
+- - '###'
+  - Classification report
+- - '##'
+  - 随机森林分类模型
+- - '###'
+  - Load the dataset
+- - '###'
+  - Preprocessing
+- - '###'
+  - Split the data into training and testing sets
+- - '###'
+  - Standardize the features
+- - '###'
+  - Model training
+- - '###'
+  - Model evaluation
+- - '###'
+  - Classification report
+- - '##'
+  - AdaBoost 分类模型
+- - '###'
+  - Load the dataset
+- - '###'
+  - Preprocessing
+- - '###'
+  - Split the data into training and testing sets
+- - '###'
+  - Standardize the features
+- - '###'
+  - Model training
+- - '###'
+  - Model evaluation
+- - '###'
+  - Classification report
+- - '##'
+  - 模型性能对比结论
+- - '##'
+  - 加入我们书籍的 Discord 空间
+- - '#'
+  - 附录 I 标准 Python 包及其方法列表
+- - '##'
+  - 包名：`numpy`
+- - '###'
+  - 数组创建
+- - '###'
+  - 数组操作
+- - '###'
+  - 数组运算
+- - '###'
+  - 数学函数
+- - '###'
+  - 统计函数
+- - '###'
+  - 随机数生成
+- - '###'
+  - 线性代数
+- - '##'
+  - 包名：`pandas`
+- - '###'
+  - 数据输入/输出
+- - '###'
+  - 数据查看
+- - '###'
+  - 索引与选择
+- - '###'
+  - 数据操作
+- - '###'
+  - 数据清洗
+- - '###'
+  - 数据聚合
+- - '###'
+  - 时间序列分析
+- - '###'
+  - 可视化
+- - '##'
+  - 包名：`matplotlib`
+- - '###'
+  - 基础绘图
+- - '###'
+  - 图表自定义
+- - '###'
+  - 图表注释
+- - '###'
+  - 子图
+- - '###'
+  - 保存与显示
+- - '###'
+  - 图表样式与颜色
+- - '###'
+  - 3D 绘图
+- - '###'
+  - 杂项
+- - '##'
+  - 包名：`scikit/sklearn`
+- - '###'
+  - 预处理
+- - '####'
+  - Scikit-learn API 参考
+- - '###'
+  - Imputer
+- - '###'
+  - 模型选择
+- - '###'
+  - 监督学习
+- - '###'
+  - 无监督学习
+- - '###'
+  - 指标
+- - '###'
+  - 集成方法
+- - '###'
+  - 流水线
+- - '##'
+  - 包名：`seaborn`
+- - '###'
+  - 数据可视化函数
+- - '###'
+  - 分类图
+- - '###'
+  - 分布图
+- - '###'
+  - 矩阵图
+- - '###'
+  - 样式与美学
+- - '###'
+  - Axes 级函数
+- - '###'
+  - 实用工具
+- - '##'
+  - 包名：`keras`
+- - '###'
+  - 模型
+- - '###'
+  - 层
+- - '###'
+  - 激活函数
+- - '###'
+  - 损失函数
+- - '###'
+  - 优化器
+- - '###'
+  - 回调函数
+- - '###'
+  - 预处理
+- - '###'
+  - 指标
+- - '###'
+  - 实用工具
+- - '###'
+  - 嵌入
+- - '#'
+  - 参考文献
+- - '#'
+  - 索引
+- - '##'
+  - A
+- - '#'
+  - 索引
+- - '##'
+  - A
+- - '##'
+  - B
+- - '##'
+  - C
+- - '##'
+  - D
+- - '##'
+  - E
+- - '###'
+  - 指数线性单元（ELU）激活函数 170
+- - '##'
+  - F
+- - '###'
+  - 特征工程 34
+- - '###'
+  - 特征重要性
+- - '####'
+  - 方法 139
+- - '###'
+  - 特征选择 141
+- - '####'
+  - 递归特征消除 144
+- - '####'
+  - SelectKBest 142, 143
+- - '####'
+  - 方差阈值 142
+- - '###'
+  - 前馈神经网络（FNNs） 164, 173
+- - '####'
+  - 激活函数 174
+- - '####'
+  - 隐藏层 174
+- - '####'
+  - 实现 174, 175
+- - '####'
+  - 输入层 173
+- - '####'
+  - 输出层 174
+- - '####'
+  - 权重和偏置 174
+- - '###'
+  - 模糊 C 均值（FCM） 119
+- - '##'
+  - G
+- - '###'
+  - 门控循环单元（GRU）网络 164, 187
+- - '####'
+  - 组件 187, 188
+- - '####'
+  - 创建 188
+- - '####'
+  - 实现 188, 189
+- - '####'
+  - 学习 188
+- - '###'
+  - 高斯朴素贝叶斯 106
+- - '###'
+  - 地理信息系统（GIS） 119
+- - '###'
+  - 基尼指数 100
+- - '###'
+  - '`grab_col_name()` 函数 217'
+- - '##'
+  - H
+- - '###'
+  - 供暖、通风与空调（HVAC）系统 199
+- - '###'
+  - 层次聚类 123
+- - '####'
+  - 应用 123\-125
+- - '####'
+  - 特征 123
+- - '###'
+  - 双曲正切激活函数（tanh） 167
+- - '##'
+  - I
+- - '###'
+  - 增量学习 6
+- - '###'
+  - 物联网（IoT） 19
+- - '###'
+  - 四分位距（IQR）方法 29
+- - '###'
+  - 迭代二叉树 3（ID3）算法 97\-100
+- - '####'
+  - 属性选择 97\-100
+- - '####'
+  - 熵 97
+- - '####'
+  - 信息增益 97
+- - '####'
+  - 叶节点标记 97
+- - '####'
+  - 树构建 97
+- - '##'
+  - K
+- - '###'
+  - Kaggle 18
+- - '###'
+  - K-Means++ 119
+- - '###'
+  - K 均值聚类 119, 120
+- - '####'
+  - 示例 120\-122
+- - '###'
+  - K 中心点聚类 119
+- - '###'
+  - K 近邻（KNN） 87
+- - '####'
+  - 特征 87, 88
+- - '####'
+  - 实现 88\-91
+- - '##'
+  - L
+- - '###'
+  - Lasso 回归 72\-74
+- - '####'
+  - 应用 74, 75
+- - '###'
+  - Leaky ReLU 激活函数 169
+- - '###'
+  - 对数变换 38
+- - '###'
+  - 逻辑回归 83
+- - '####'
+  - 特征 84\-87
+- - '###'
+  - 长短期记忆（LSTM）网络 162, 164, 184
+- - '####'
+  - 创建 185
+- - '####'
+  - 实现 186, 187
+- - '####'
+  - 学习 185
+- - '####'
+  - 结构 184, 185
+- - '##'
+  - M
+- - '###'
+  - 机器学习（ML） 1
+- - '####'
+  - 应用 6, 7
+- - '####'
+  - 集成学习 6
+- - '####'
+  - 生命周期 8, 9
+- - '####'
+  - 元学习 6
+- - '####'
+  - 必要性 2, 3
+- - '####'
+  - 在线学习 6
+- - '####'
+  - 强化学习 6
+- - '####'
+  - 与 AI 的关系 4
+- - '####'
+  - 自监督学习 6
+- - '####'
+  - 半监督学习 5
+- - '####'
+  - 监督学习 5
+- - '####'
+  - 无监督学习 5
+- - '###'
+  - 马尔可夫决策过程（MDPs） 200, 211, 213
+- - '###'
+  - 平均绝对误差（MAE） 76
+- - '###'
+  - 平均绝对百分比误差（MAPE） 77
+- - '###'
+  - 均方误差（MSE） 64, 76
+- - '###'
+  - 元学习 6
+- - '###'
+  - 修正版美国国家标准技术研究院（MNIST）数据集 182
+- - '###'
+  - 蒙特卡洛方法 200
+- - '###'
+  - 多智能体强化学习（MARL） 200
+- - '###'
+  - 多层感知机（MLP） 173
+- - '###'
+  - 多项式朴素贝叶斯 106\-108
+- - '###'
+  - 多元线性回归 62, 63
+- - '####'
+  - 关键点 63, 64
+- - '####'
+  - 执行 64\-66
+- - '##'
+  - N
+- - '###'
+  - 朴素贝叶斯 106
+- - '####'
+  - 伯努利朴素贝叶斯 106
+- - '####'
+  - 高斯朴素贝叶斯 106
+- - '####'
+  - 多项式朴素贝叶斯 106
+- - '####'
+  - 工作原理 106
+- - '###'
+  - 美国国家生物技术信息中心（NCBI） 19
+- - '###'
+  - 自然语言处理（NLP） 4
+- - '###'
+  - 降噪技术 29
+- - '###'
+  - 非玩家角色（NPCs） 7, 166
+- - '##'
+  - O
+- - '###'
+  - 在线学习 6
+- - '###'
+  - 普通最小二乘法（OLS） 69
+- - '##'
+  - P
+- - '###'
+  - pandas 库 36
+- - '###'
+  - 基于划分的聚类方法 119, 120
+- - '###'
+  - 感知机神经网络 164, 171
+- - '####'
+  - 组件 171\-173
+- - '###'
+  - 策略梯度方法 200
+- - '###'
+  - 策略迭代和价值迭代 200
+- - '###'
+  - 多项式回归 66, 67
+- - '####'
+  - 关键点 67
+- - '####'
+  - 执行 68, 69
+- - '###'
+  - PReLU 激活函数 169
+- - '###'
+  - 主成分分析（PCA） 5, 21, 129
+- - '####'
+  - 工作原理 129\-131
+- - '###'
+  - 近端策略优化（PPO） 200
+- - '###'
+  - 剪枝决策 93
+- - '###'
+  - Python
+- - '####'
+  - 安装 9
+- - '##'
+  - Q
+- - '###'
+  - Q 学习 199, 202, 203
+- - '###'
+  - Q 值 200, 201
+- - '##'
+  - R
+- - '###'
+  - 随机森林 103
+- - '####'
+  - 优势 104
+- - '####'
+  - 考量因素 104
+- - '####'
+  - 关键概念 103
+- - '####'
+  - 局限性 104, 105
+- - '####'
+  - 工作原理 103, 104
+- - '###'
+  - 真实案例，关联规则挖掘
+- - '####'
+  - 在线流媒体服务 152, 153
+- - '####'
+  - 零售市场 151, 152
+- - '###'
+  - 循环神经网络（RNNs） 162, 164, 182
+- - '####'
+  - 组件 182\-184
+- - '###'
+  - 递归特征消除（RFE） 140
+- - '####'
+  - 优势 140, 141
+- - '####'
+  - 工作原理 140
+- - '###'
+  - 回归 55
+- - '####'
+  - 应用 56\-58
+- - '####'
+  - 组件 55
+- - '####'
+  - Lasso 回归 72
+- - '####'
+  - 多元线性回归 62
+- - '####'
+  - 必要性 55, 56
+- - '####'
+  - 多项式回归 66
+- - '####'
+  - 主要目标 55
+- - '####'
+  - 岭回归 69
+- - '####'
+  - 简单线性回归 59
+- - '###'
+  - 回归线 60
+- - '###'
+  - 回归模型
+- - '#'
+  - 索引
+- - '##'
+  - P
+- - '##'
+  - R
+- - '##'
+  - S
+- - '##'
+  - T
+- - '##'
+  - U
+- - '##'
+  - V
+- - '##'
+  - Z

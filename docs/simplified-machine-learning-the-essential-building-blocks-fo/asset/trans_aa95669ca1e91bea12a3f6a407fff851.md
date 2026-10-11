@@ -1,0 +1,232 @@
+
+
+# 代码示例：多种分类模型构建与评估
+
+## 逻辑回归模型
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
+
+# Load the dataset
+data = pd.read_csv('e:/dataset/heart.csv')  # Read heart disease dataset
+
+# Preprocessing
+X = data.drop('target', axis=1)  # Replace 'target_column' with the column containing the target variable
+y = data['target']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Model training
+model = LogisticRegression()
+model.fit(X_train_scaled, y_train)
+
+# Model evaluation
+y_pred = model.predict(X_test_scaled)
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+# Classification report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+```
+
+请参考[图 10.9](#ch10.xhtml#fig10-9)查看代码输出：
+
+![](images/10.9.png)
+
+**图 10.9：代码 10.9 的输出**
+
+## K-近邻（KNN）分类模型
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, classification_report
+
+# Load the dataset
+data = pd.read_csv('e:/dataset/heart.csv')  # Read heart disease dataset
+
+# Preprocessing
+X = data.drop('target', axis=1)  # Replace 'target_column' with the column containing the target variable
+y = data['target']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Model training
+model = KNeighborsClassifier()
+model.fit(X_train_scaled, y_train)
+
+# Model evaluation
+y_pred = model.predict(X_test_scaled)
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+# Classification report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+```
+
+请参考[图 10.10](#ch10.xhtml#fig10-10)查看代码输出：
+
+![](images/10.10.png)
+
+**图 10.10：代码 10.10 的输出**
+
+## 决策树分类模型
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, classification_report
+
+# Load the dataset
+data = pd.read_csv('e:/dataset/heart.csv')  # Read heart disease dataset
+
+# Preprocessing
+X = data.drop('target', axis=1)  # Replace 'target_column' with the column containing the target variable
+y = data['target']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Model training
+model = DecisionTreeClassifier()
+model.fit(X_train_scaled, y_train)
+
+# Model evaluation
+y_pred = model.predict(X_test_scaled)
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+# Classification report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+```
+
+请参考[图 10.11](#ch10.xhtml#fig10-11)查看代码输出：
+
+![](images/10.11.png)
+
+**图 10.11：代码 10.11 的输出**
+
+## 随机森林分类模型
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+
+# Load the dataset
+data = pd.read_csv('e:/dataset/heart.csv')  # Read heart disease dataset
+
+# Preprocessing
+X = data.drop('target', axis=1)  # Replace 'target_column' with the column containing the target variable
+y = data['target']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Model training
+model = RandomForestClassifier()
+model.fit(X_train_scaled, y_train)
+
+# Model evaluation
+y_pred = model.predict(X_test_scaled)
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+# Classification report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+```
+
+请参考[图 10.12](#ch10.xhtml#fig10-12)查看代码输出：
+
+![](images/10.12.png)
+
+**图 10.12：代码 10.12 的输出**
+
+## AdaBoost 分类模型
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.metrics import accuracy_score, classification_report
+
+# Load the dataset
+data = pd.read_csv('e:/dataset/heart.csv')  # Read heart disease dataset
+
+# Preprocessing
+X = data.drop('target', axis=1)  # Replace 'target_column' with the column containing the target variable
+y = data['target']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Standardize the features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Model training
+model = AdaBoostClassifier()
+model.fit(X_train_scaled, y_train)
+
+# Model evaluation
+y_pred = model.predict(X_test_scaled)
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+# Classification report
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+```
+
+请参考[图 10.13](#ch10.xhtml#fig10-13)查看代码输出：
+
+![](images/10.13.png)
+
+**图 10.13：代码 10.13 的输出**
+
+## 模型性能对比结论
+
+上述各模型的输出结果如代码所示。从各模型的输出结果可以看出，`KNeighborsClassifier`（KNN）表现最佳，准确率约为 90%；其次是 `LogisticRegression`（逻辑回归），约 85%；`RandomForestClassifier`（随机森林）约 83%；`AdaBoostClassifier`（AdaBoost）约 80%；`DecisionTreeClassifier`（决策树）约 77%。
+
+需要注意的是，选择特定的预测模型是一项艰巨的任务。这纯粹基于实验以及为各模型设置最优参数值。例如，在 KNN 模型中设置 `k` 的最优值。
+
+[结论](#contents.xhtml#sc2_222a)
+
