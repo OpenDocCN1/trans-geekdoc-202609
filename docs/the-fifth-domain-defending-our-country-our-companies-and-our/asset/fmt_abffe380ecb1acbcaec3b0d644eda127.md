@@ -1,0 +1,32 @@
+
+# When the potential for cyber war began to emerge in the 1990s
+
+When the potential for cyber war began to emerge in the 1990s, the U.S. military called it “information warfare.” The problem with that was that they had already called the massive propaganda operations of the Cold War “information warfare” too. It was confusing, the Pentagon labeling two different things with the same phrase. Eventually, the computer network operations were labeled “cyber,” in part due to the Clinton administration, to the eternal frustration of language purists.
+
+The Russians, however, never saw cyber war and propaganda as separate. From before the Russian Revolution, they had been masters at spying, deception, and disinformation. They had Russian words and phrases for their tools, such as `maskirovka`, `disinformatia`, and `kompromat`. It was literally part of their military’s checklist. The advent of computer networks just gave them another place to practice spying, deception, and disinformation when permitted by civilian authorities. Putin not only permitted, he ordered.
+
+In the words of Alex Stamos, Facebook’s former CSO, “Their [U.S. adversaries’] dream is when most Americans say [about the election], ‘I don’t have a choice in this.’” Putin ordered an attack to undermine America by heightening its internal divisions and undermining its citizens’ confidence in their democracy. He unleashed hybrid war against a score or more of countries of the former Soviet Union and Europe, but the campaign against the United States was specifically tailored to take advantage of our own vulnerabilities. It is on his cyber-enabled attack on U.S. democracy that we will focus in this chapter.
+
+## Defenders of Democracy
+
+Laura Rosenberger and Eric Rosenbach not only share similar last names, but also both served as Obama administration officials, one at State and one at Defense, and are now separately spending their days trying to counteract Russian efforts to subvert U.S. democracy.
+
+Like so many other Americans of her generation, Laura Rosenberger saw her life change in 2001, on 9/11.
+
+A senior in college and to the ever-changing global situation. Staffing the “DC,” as it’s called inside the Beltway, Rosenberger saw it all, including Putin’s hybrid war and military invasion of Ukraine. The U.S. response, however, was less than optimum, in large part because the United States did not fully recognize what a hybrid war was at the time.
+
+“We weren’t seeing the whole picture, given the kinds of tools the Russians were using,” she told us. “Connecting how the hacks related to the Little Green Men (the Russian troops pretending to be local militia or civilian volunteers), related to the `disinformatia`, related to the financial manipulation.” Putin, the career intelligence officer, had orchestrated the use of all of the tools available to the Russian state to invade and occupy a large and valuable chunk of the neighboring country, but had done so in ways that did not look like a traditional war and, therefore, never quite triggered a fullthroated U.S. and NATO response. It worked.
+
+“So I had that experience around Ukraine, and then fast-forward to the [2016] election and I am watching from inside the campaign and I see the same things happening again.” Rosenberger had left the White House in 2016 to work as a national security adviser to candidate Hillary Clinton. “We were trying to raise alarm bells right and left, but people thought we were crazy or alarmist or doing it for political purposes.”
+
+Like many who worked in the Clinton campaign, Rosenberger thought then, and even more so now, that the Obama administration should have done more to say what the U.S. government knew about Russian interference before the American people voted. Clinton herself has tried to understand why there were few alarms sounding, and has written about Initial Occurrence Syndrome, citing Dick Clarke’s 2017 book *Warnings*. The first time a phenomenon occurs, there is a cognitive bias against believing it is true, or as significant as the data indicates.
+
+For Rosenberger, as for us, the day after the election gave her a very brief insight into what clinical depression might feel like. “I don’t even know how to describe what recovery was like. I was trying to fall off the face of the earth for a while.” Then, when it was less raw, she looked back at what had happened and realized that before the vote neither the Clinton campaign nor even the U.S. intelligence community were fully aware of some of the hybrid war tools that were being used.
+
+“There were a lot of things we did not know were happening,” she told us. “The social media stuff, all of that, was a postelection realization.” Then, as she had on 9/12, she asked herself what she could personally do about it. The result was the Alliance for Securing Democracy (ASD), a new, bipartisan, transatlantic, nongovernmental organization dedicated to exposing the continued Russian subversion and explaining its corrosion of Western democracies.
+
+Sitting in the German Marshall Fund building in downtown D.C., Rosenberger codirects the ASD in the United States and Europe with Jamie Fly, a former national security adviser to Republican Marco Rubio. “I knew from the beginning it had to be truly bipartisan. Putin’s strategy is to divide us, so if you respond from a divided perspective, you really play into his hands.” Together, along with a team on both sides of the Atlantic, they created the Policy Blueprint for Countering Authoritarian Interference in Democracies, an action plan for defending against hybrid war.
+
+The ASD is transatlantic because the Russian cyber and disinformation operations haven’t just been directed at the United States. In fact, they had tested them extensively in Europe before bringing them to America. “Our European friends had been sounding the alarm for a long time and maybe, we thought, we should start listening to them in ways that we hadn’t been.”
+
+Two of the key recommendations in the Policy Blueprint are closing known cyber and information vulnerabilities, and exposing ongoing activities. What frustrates Rosenberger is that many of the vulnerabilities remain. “Our house was robbed, so at least let’s lock the door,” she vented to us. The problem is that there are many doors in the United States. There are more than three thousand county governments, each of which has some modicum of sovereignty over how it manages and secures, or doesn’t secure, the election process.

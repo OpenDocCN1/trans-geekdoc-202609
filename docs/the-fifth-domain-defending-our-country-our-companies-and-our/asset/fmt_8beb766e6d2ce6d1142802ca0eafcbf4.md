@@ -1,0 +1,42 @@
+
+## 章节注释
+
+### 第2章：永恒之蓝
+
+**[issue a patch for the problem](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText20)**：Ellen Nakashima and Craig Timberg, “NSA officials worried about the day its potent hacking tool would get loose. Then it did.,” *Washington Post*, May 16, 2017, [www.washingtonpost.com/business/technology/nsa-officials-worried-about-the-day-its-potent-hacking-tool-would-get-loose-then-it-did/2017/05/16/50670b16-3978-11e7-a058-ddbb23c75d82_story.html](http://www.washingtonpost.com/business/technology/nsa-officials-worried-about-the-day-its-potent-hacking-tool-would-get-loose-then-it-did/2017/05/16/50670b16-3978-11e7-a058-ddbb23c75d82_story.html).
+
+**[walking out of NSA facilities](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText21)**：Josh Gerstein, “Judge Won’t Release Ex-NSA Contractor Accused of Hoarding Classified Data,” *Politico,* October 21, 2016, [www.politico.com/story/2016/10/hal-harold-martin-nsa-classified-data-230168](http://www.politico.com/story/2016/10/hal-harold-martin-nsa-classified-data-230168).
+
+**[Kaspersky denies that this is what happened](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText22)**：Shane Harris and Gordon Lubold, “Russian Hackers Stole NSA Data on U.S. Cyber Defense,” *Wall Street Journal*, October 5, 2017, [www.wsj.com/articles/russian-hackers-stole-nsa-data-on-u-s-cyber-defense-1507222108](http://www.wsj.com/articles/russian-hackers-stole-nsa-data-on-u-s-cyber-defense-1507222108).
+
+**[Israel’s military intelligence Unit 8200](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText23)**：Alex Hern and Peter Beaumont, “Israel hack uncovered Russian spies’ use of Kaspersky in 2015, report says,” *Guardian*, October 11, 2017, [www.theguardian.com/technology/2017/oct/11/israel-hack-uncovered-russian-spies-use-kaspersky-lab-2015-report-us-software-federal-government](http://www.theguardian.com/technology/2017/oct/11/israel-hack-uncovered-russian-spies-use-kaspersky-lab-2015-report-us-software-federal-government).
+
+**[no one in the U.S. government](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText24)**：Brad Smith, “The Need for Urgent Collective Action to Keep People Safe Online: Lessons from Last Week’s Cyberattack,” *Microsoft Blog,* May 14, 2017, [blogs.microsoft.com/on-the-issues/2017/05/14/need-urgent-collective-action-keep-people-safe-online-lessons-last-weeks-cyberattack](http://blogs.microsoft.com/on-the-issues/2017/05/14/need-urgent-collective-action-keep-people-safe-online-lessons-last-weeks-cyberattack).
+
+**[in the Vault 7 documents](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText25)**：Semantic Security Response, “Longhorn: Tools used by cyberespionage group linked to Vault 7,” Symantec Official Blog, April 10, 2017, [www.symantec.com/connect/blogs/longhorn-tools-used-cyberespionage-group-linked-vault-7](http://www.symantec.com/connect/blogs/longhorn-tools-used-cyberespionage-group-linked-vault-7).
+
+**[groups known as APT 3 and APT 10](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText26)**：Andrew Griffin, “Wikileaks Files Detail CIA ‘Umbrage’ Project, Which Would Allow Spies to Pin Attacks on Other Countries,” *Independent*, March 8, 2017, [www.independent.co.uk/life-style/gadgets-and-tech/news/wikileaks-files-cia-umbrage-hacker-secret-spies-explained-countries-donald-trump-russia-a7618661.html](http://www.independent.co.uk/life-style/gadgets-and-tech/news/wikileaks-files-cia-umbrage-hacker-secret-spies-explained-countries-donald-trump-russia-a7618661.html).
+
+**[most “reckless and indiscriminate”](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText27)**：This quote is attributed to British Defense Secretary Gavin Williamson, said at a meeting with U.S. Defense Secretary Jim Mattis and other defense ministers in Brussels in 2018.
+
+**[shut down a French television network](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText28)**：Joseph Menn and Leigh Thomas, “France Probes Russian Lead in TV5Monde Hacking: Sources,” Reuters, June 10, 2015, [reut.rs/1IGfCBo](http://reut.rs/1IGfCBo).
+
+**[“the warning lights are blinking red”](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText29)**：On July 13, 2018, DNI Coats made these statements at a Hudson Institute event regarding cyber threats posed by Russia.
+
+**[shut down by an Iranian attack](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText30)**：David Sanger, “US Indicts 7 Iranians in Cyberattacks on Banks and a Dam,” *New York Times,* March 24, 2016, [www.nytimes.com/2016/03/25/world/middleeast/us-indicts-iranians-in-cyberattacks-on-banks-and-a-dam.html](http://www.nytimes.com/2016/03/25/world/middleeast/us-indicts-iranians-in-cyberattacks-on-banks-and-a-dam.html).
+
+**[lethal chemical leak in the future](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText31)**：Clifford Krauss and Nicole Perlroth, “A Cyberattack in Saudi Arabia Had a Deadly Goal. Experts Fear Another Try.,” *New York Times*, March 15, 2018, [www.nytimes.com/2018/03/15/technology/saudi-arabia-hacks-cyberattacks.html](http://www.nytimes.com/2018/03/15/technology/saudi-arabia-hacks-cyberattacks.html).
+
+**[disrupt other nation’s cyber activities](#08_Chapter_2_Eternalblue.xhtml#EndnotePhraseInText32)**：Robert Chesney, “The 2018 DOD Cyber Strategy: Understanding ‘Defense Forward’ in Light of the NDAA and PPD-20 Changes,” *Lawfare*, September 25, 2018, [www.lawfareblog.com/2018-dod-cyber-strategy-understanding-defense-forward-light-ndaa-and-ppd-20-changes](http://www.lawfareblog.com/2018-dod-cyber-strategy-understanding-defense-forward-light-ndaa-and-ppd-20-changes).
+
+### 第3章：两类公司？
+
+**[“If we have data”](#10_Chapter_3_Two_Kinds_o.xhtml#EndnotePhraseInText33)**：Nick Theodore, “‘We Have Data, Let’s Look at Data,’” Virtual Store Trials, June 7, 2017, [https://casestudies.storetrials.com/we-have-data-lets-look-at-data-e8a06e2e3331](https://casestudies.storetrials.com/we-have-data-lets-look-at-data-e8a06e2e3331).
+
+**[Very quickly, CrowdStrike observed](#10_Chapter_3_Two_Kinds_o.xhtml#EndnotePhraseInText34)**：Joseph Menn, “China Tried to Hack U.S. Firms Even After Cyber Pact: CrowdStrike,” Reuters, October 19, 2015, [www.reuters.com/article/us-usa-china-cybersecurity-idUSKCN0SD0AT20151020](http://www.reuters.com/article/us-usa-china-cybersecurity-idUSKCN0SD0AT20151020).
+
+**[Alperovitch wrote on the company blog](#10_Chapter_3_Two_Kinds_o.xhtml#EndnotePhraseInText35)**：Dmitri Alperovitch, “The Latest on Chinese-affiliated Intrusions into Commercial Companies,” CrowdStrike, October 19, 2015, [www.crowdstrike.com/blog/the-latest-on-chinese-affiliated-intrusions-into-commercial-companies](http://www.crowdstrike.com/blog/the-latest-on-chinese-affiliated-intrusions-into-commercial-companies).
+
+**[significant opponent of Obama-era rules](#10_Chapter_3_Two_Kinds_o.xhtml#EndnotePhraseInText36)**：Rob Knake and Aitel have a long-running feud over the VEP process. It’s complicated. For a more thorough discussion, see Ari Schwartz and Rob Knake, “Government’s Role in Vulnerability Disclosure,” Cyber Security Project, Belfer Center, Harvard Kennedy School, Harvard University, June 2016, [www.belfercenter.org/sites/default/files/legacy/files/vulnerability-disclosure-web-final3.pdf](http://www.belfercenter.org/sites/default/files/legacy/files/vulnerability-disclosure-web-final3.pdf); Dave Aitel and Matt Tait, “Everything You Know About the Vulnerability Equities Process Is Wrong,” *LawFare*, August 18, 2016, [www.lawfareblog.com/everything-you-know-about-vulnerability-equities-process-wrong](http://www.lawfareblog.com/everything-you-know-about-vulnerability-equities-process-wrong).
+
+**[Only months after *Cyber War* was published](#10_Chapter_3_Two_Kinds_o.xhtml#EndnotePhraseInText37)**：For a thorough discussion of Stuxnet, see Kim Zetter, *Countdown to Zero Day: Stuxnet and the Launch of the World’s First Digital Weapon* (New York: Crown, 2014); for the movie version, see Alex Gibney’s 2016 documentary *Zero Days*.
