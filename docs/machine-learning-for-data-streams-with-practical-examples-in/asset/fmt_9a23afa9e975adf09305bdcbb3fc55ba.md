@@ -1,0 +1,62 @@
+
+# Stacking
+
+Stacking [247] 是 Weighted Majority 的推广，实际上是组合专家最通用的方法。假设有 *N* 个专家 `C[1]` 到 `C[N]`，元学习算法用于在形式为 `(C[1](x), …, C[N](x))` 的实例上训练元模型，即专家 `C[i]` 的预测被视为第 *i* 个特征。实例 `x` 也可以选择性地提供给元分类器。
+
+Stacking 中使用的元学习器通常是相对简单的，例如感知机。Weighted Majority 和 Exponentiated Gradient 可以被视为 Stacking 的特例，其中元学习器使用乘法更新规则（而非感知机中的加法规则）来学习线性分类器。
+
+# 7.4 Bagging
+
+*Bagging* 方法由 Breiman [52] 提出，适用于批处理设置，其工作方式截然不同。基础学习算法用于推断 *M* 个不同的模型，它们之所以可能不同，是因为它们是用不同的 *bootstrap samples*（自助样本）训练的。每个样本通过从原始训练集中有放回地随机抽取样本创建。生成的元模型通过对这 *M* 个分类器的预测进行简单多数投票来进行预测。
+
+Bagging 背后的基本原理是投票可以降低基础算法的样本方差，即从同一源分布中抽取的不同样本训练出的分类器之间的差异。事实上，bootstrapped 分类器之间的方差越大，效果越好。
+
+## 7.4.1 Online Bagging Algorithm
+
+在流式设置中，最初似乎很难从流中有放回地抽取样本。然而，以下性质允许模拟自助法：在一个 bootstrap 副本中，训练集中 *n* 个样本每个样本的副本数 *K* 服从二项分布：
+
+```
+images/pg133-1.png
+```
+
+对于较大的 *n* 值，该二项分布趋于 Poisson(1) 分布，其中 Poisson(1) = exp(−1)*/k*!。利用这一性质，Oza 和 Russell 提出了 Online Bagging [189, 190]，它不进行有放回采样，而是根据 Poisson(1) 给每个到达的样本赋予权重。其伪码见 [Figure 7.2](#chapter_7.xhtml#fig7-2)。它在 MOA 中作为 OZABAG 实现。
+
+![Figure 7.2 Online Bagging for M models. The indicator function I(condition) returns 1 if the condition is true, and 0 otherwise.](images/Fig7-2.png)
+
+**Figure 7.2**
+
+Online Bagging for *M* models. The indicator function *I*(condition) returns 1 if the condition is true, and 0 otherwise.
+
+## 7.4.2 Bagging with a Change Detector
+
+上述方法的一个问题是它并非专门设计用于应对流中的概念漂移，除非基础分类器本身具有高度自适应能力。
+
+ADWIN Bagging [38]（在 MOA 中作为 OZABAGADWIN 实现）通过以下方式改进了 Online Bagging：它使用 *M* 个 ADWIN 实例来监控基础分类器的错误率。当任意一个检测到变化时，集成中最差的分类器被移除，并添加一个新分类器。这种策略有时被称为“replace the loser”（替换失败者）。
+
+## 7.4.3 Leveraging Bagging
+
+使用 Online Bagging 时的一个实验观察是，增加输入的随机性似乎能提高性能。由于增加随机性会增加基础分类器的多样性或方差，这与“bagging 受益于更高的分类器方差”这一直觉相符。
+
+可以通过使用 Poisson(1) 以外的分布进行采样来引入额外的随机性。例如，Lee 和 Clyde [155] 使用 Γ(1,1) 分布获得了 bagging 的贝叶斯版本。注意 Γ(1,1) 等于 `Exp(1)`。Bühlmann 和 Yu [60] 提出了 subbagging，即不放回重采样。
+
+Leveraging Bagging [36] 使用分布 Poisson(*λ*) 对流进行采样，其中 *λ* ≥ 1 是算法的参数。由于 Poisson 分布的方差（和均值）为 *λ*，这相对于常规 Online Bagging 增加了 bootstrap 样本中的方差。它在 MOA 中作为 LEVERAGINGBAG 实现。
+
+除了增加输入随机性，Leveraging Bagging 还使用输出码在集成输出端增加随机化。Dietterich 和 Bakiri [87] 引入了一种基于纠错输出码的方法，仅使用二分类器处理多分类问题。分配给每个样本的类别被修改，以创建由从类别集到 {0,1} 的映射诱导的新的二元分类。Schapire [222] 提出的该方法变体展示了一种使用输出码的 boosting 形式。Leveraging Bagging 使用随机输出码而非确定性码。在标准集成方法中，所有分类器试图预测同一函数。然而，使用输出码时，每个分类器将预测不同的函数。这可能减少分类器间相关性的影响，并增加集成的多样性。
+
+Leveraging Bagging 还结合了 ADWIN Bagging 中的“replace the loser”策略。[36] 中的实验表明，Leveraging Bagging 优于常规 Online Bagging 和 ADWIN Bagging。
+
+# 7.5 Boosting
+
+与 bagging 一样，boosting 算法结合多个用输入样本训练的基础模型以实现更低的分类错误。与 bagging 不同，模型是顺序创建而非并行创建的，每个新模型的构建取决于先前构建模型的性能。Boosting 的直观思想是给当前集成分类器误分类的样本更大的权重，使序列中的下一个分类器更关注这些样本。AdaBoost.M1 [108] 是批处理 boosting 最流行的变体。
+
+这种顺序性质使得 boosting 比 bagging 更难迁移到流式场景。对于在线设置，Oza 和 Russell [189, 190] 提出了 *Online Boosting*，这是一种在线方法，它不是每次新实例到达时都顺序构建新模型，而是根据前序分类器的性能计算权重来更新每个模型。它在 MOA 中作为 OZABOOST 实现。其他类在线 boosting 方法见 [53, 54, 65, 85, 197, 243, 259]。
+
+根据 [187] 等，在批处理设置中，boosting 通常优于 bagging，但它也更敏感于噪声，因此 bagging 能更一致地带来改进。早期比较在线 boosting 和在线 bagging 方法的研究似乎倾向于 bagging [38, 189, 190]。一个例外是 [100]，报告 Arc-x4 boosting 算法 [53] 优于在线 bagging。比较更新变体的额外研究会很有意思。此外，如何让 boosting 算法处理概念漂移尚不清楚，因为“replace the loser”这类策略在 boosting 中似乎不如在 bagging 中合理。
+
+# 7.6 Ensembles of Hoeffding Trees
+
+由于 Hoeffding Trees 是最有用、研究最深入的流式分类器之一，因此已提出多种将它们组合成集成的方法。
+
+## 7.6.1 Hoeffding Option Trees
+
+Hoeffding Option Trees (HOT) [198] 在单棵树结构中隐式地表示树的集成。除了测试一个属性的常规节点，HOT 还包含 *option nodes*（选项节点），它们不进行测试，只是分支为多棵子树。当实例到达选项节点时，它会继续下降通过所有子节点，最终到达多个叶节点。该树对实例的输出则由所有到达的叶节点投票决定。

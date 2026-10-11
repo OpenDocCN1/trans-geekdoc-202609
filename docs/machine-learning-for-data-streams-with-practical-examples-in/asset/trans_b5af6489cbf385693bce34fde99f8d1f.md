@@ -1,0 +1,63 @@
+
+
+# MOA 扩展组件
+
+*   **MOA-AdaGraphMiner:** `AdaGraphMiner` \[35\]（参见第 10.4 节）是一个用于在时变流中挖掘频繁子图的框架。它包含三种用于挖掘频繁闭合子图的新方法。所有方法均在闭合子图的核心集（图集合的压缩表示）上工作，并以批增量方式维护这些集合，但采用不同的方法来应对潜在的概念漂移。
+
+*   **MOA-Moment:** `Moment` \[70\] 是一种基于流滑动窗口的闭合频繁项集挖掘器。此版本由 M. Jarka 实现（[www.admire-project.eu](http://www.admire-project.eu)）。
+
+*   **MOA-TweetReader:** 该扩展从 Twitter Streaming API 读取并转换推文为 MOA 实例，以促进推文的流式分析。
+
+*   **Classifiers & DDMs:** 该扩展提供多种已发布的集成分类器（`DWM`、`RCD`、`Learn++.NSE`、`EB`）、概念漂移检测器（`ECDD`、`PHT`、`Paired Learners`）和人工数据集（`Sine` 和 `Mixed`）。
+
+*   **MODL split criterion and GK class summary:** 这种用于数值属性的新分裂标准基于 `MODL` 方法 \[48\]。`GK class summary` 基于 Greenwald 和 Khanna 的分位数摘要（参见第 6.4.3 节），但在该版本中，类别计数包含在摘要的每个元组中。
+
+*   **Incrementally Optimized Very Fast Decision Tree (iOVFDT):** `Hoeffding tree`（第 6.3.2 节）的一种新扩展，提出于文献 \[132\]。
+
+*   **Anytime Nearest Neighbor**: `Liu` 和 `Bell` 实现的基于文献 \[227\] 的随时分类器。
+
+*   **Social Adaptive Ensemble 2 (SAE2)**: 基于社会的算法，包括 `Scale-Free Network Classifier (SFNClassifier)` \[25, 126\] 和 `Social Network Clusterer Stream (SNCStream)` \[26\]。
+
+*   **Framework for Sentiment Analysis of a Stream of Texts**: 该项目旨在构建一个在线实时系统，能够分析传入的文本流并使用最小化的桌面应用程序可视化其主要特征 \[18\]。
+
+*   **MOAReduction**: 一个允许用户在无漂移流上执行数据缩减技术的 MOA 扩展。它包含用于不同任务的多种缩减方法，如离散化、实例选择和特征选择，如文献 \[205\] 所述。
+
+*   **MOA for Android**: 包含使 MOA 可作为 Android 应用程序一部分使用的软件。
+
+# 11.5 ADAMS
+
+`WEKA` 和 `MOA` 是执行数据挖掘分析任务的强大工具。通常在实际应用和专业环境中，数据挖掘过程复杂且包含多个步骤。这些步骤可视为工作流。专业数据挖掘人员会使用工作流构建解决方案，而非编写 Java 程序，这样非程序员用户也能更轻松地理解和维护。`Advanced Data mining And Machine learning System (ADAMS)` \[213, 214\] 是一个灵活的工作流引擎，旨在快速构建和维护真实世界的复杂工作流。它集成了 `MOA`、`WEKA` 和 `MEKA` 等数据挖掘应用，支持 `R` 语言、图像和视频处理及特征生成能力、电子表格和数据库访问、可视化、`GIS`、Web 服务，并支持使用脚本语言（`Groovy`/`Jython`）快速原型开发新功能。
+
+ADAMS 的核心是工作流引擎，遵循“少即是多”的理念。它不让用户在画布上放置操作符（或称作 `actor`）并手动连接输入输出，而是使用树状结构。该结构和控制 `actor` 定义了数据在工作流中的流动方式；无需显式连接。树状结构源于内部对象表示和 `actor` 处理程序中子 `actor` 的嵌套。
+
+[图 11.1](#chapter_11.xhtml#fig11-1) 展示了加载了 `adams-moa-classifier-evaluation` 流的 ADAMS 流编辑器。它使用 `Kappa` 统计量和决策桩（仅有一个内部节点的决策树）。[图 11.2](#chapter_11.xhtml#fig11-2) 展示了运行工作流的结果。
+
+![图 11.1 ADAMS 流编辑器](images/Fig11-1.png)
+
+**图 11.1**  
+ADAMS 流编辑器。
+
+![图 11.2 ADAMS 流示例](images/Fig11-2.png)
+
+**图 11.2**  
+ADAMS 流示例。
+
+ADAMS 还可执行推文分析。可使用公共 Twitter API 记录推文及其关联元数据，并存储以供未来重放。此推文流重放功能允许按需重复实验，每次使用相同的推文流，并应用不同的过滤器（如检查元数据）和算法。带有地理标记信息的推文可利用 `OpenStreetMap` `GIS` 功能显示，从而实现地理现象的可视化。
+
+ADAMS 还能近实时处理视频，按特定间隔获取帧。除了跟踪对象外，还可利用图像处理和特征生成功能为 `MOA` 或 `WEKA` 等机器学习平台生成输入。
+
+# 11.6 MEKA
+
+`MEKA` \[212\] 是怀卡托大学发起的一个开源项目，用于执行和评估多标签分类。它使用所谓的问题转换方法，使 `WEKA` 单标签（二分类或多分类）方法可作为多标签分类的基分类器；参见第 6.7 节。
+
+`MEKA` 包含所有基本问题转换方法、高级方法（包括常作为近期多标签文献基准的各种分类器链变体），以及算法适配（如多标签神经网络和深度神经网络）。它包含两种自动阈值校准策略和多种文献中的评估指标。`MEKA` 易于通过 `CLI` 或 `GUI` 使用（[图 11.3](#chapter_11.xhtml#fig11-3)）。因此无需编程即可参数化、运行和评估分类器，适合不熟悉 Java 的从业者。不过，扩展 `MEKA` 的新分类器并将其集成到其他框架中非常简单。熟悉 `WEKA` 的用户几乎没有学习曲线——`WEKA` 的大部分文档和操作模式直接适用。任何新的 `MEKA` 分类器均可结合 `MEKA` 现有的任何集成方案和任何 `WEKA` 基分类器，无需编写额外代码，并可轻松与基准及最先进方法比较。`MEKA` 还支持多标签背景下的半监督和流式分类，如第 6.7 节所述。
+
+![图 11.3 MEKA GUI](images/Fig11-3.png)
+
+**图 11.3**  
+MEKA GUI。
+
+# 11.7 OpenML
+
+`OpenML` \[238, 239\] 是一个在线平台，科学家可在其中自动记录和共享机器学习数据集、代码和实验，在线组织它们，并直接基于他人的工作构建。它有助于自动化研究中许多繁琐的方面，易于集成到多种机器学习工具中，并提供易用的 `API`。它还支持大规模和实时协作，允许研究人员共享最新结果，同时追踪其影响力和复用情况。组合和关联的结果提供了丰富信息，可加速研究、辅助数据分析或实现实验全自动化。
+
