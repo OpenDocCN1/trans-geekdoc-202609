@@ -1,0 +1,39 @@
+
+- [108] WANG, Z., YAN, W., 和 OATES, T. 使用深度神经网络从头进行时间序列分类：一个强有力的基线。载 *2017 年国际神经网络联合会议 (IJCNN)*。2017，第 1578–1585 页。网址：doi.org/10.1109/IJCNN.2017.7966039。
+- [109] WELPER, G. 梯度下降训练的神经网络的近似结果。*arXiv:2309.04860* (2023)。网址：arxiv.org/abs/2309.04860。
+- [110] WEN, G., LI, Z., AZIZZADENEHSILI, K., ANANDKUMAR, A., 和 BENSON, S. M. U-FNO – 一种用于多相流的基于傅里叶神经算子增强型深度学习模型。*arXiv:2109.03697* (2021)。网址：arxiv.org/abs/2109.03697。
+- [111] WEST, D. 《图论导论》。Prentice Hall，2001。588 页。
+- [112] WU, F., SOUZA, A., ZHANG, T., FIFTY, C., YU, T., 和 WEINBERGER, K. 简化图卷积网络。载 *第 36 届国际机器学习会议论文集* （美国加利福尼亚州长滩，2019 年 6 月 9–15 日）。由 Chaudhuri, K. 和 Salakhutdinov, R. 编辑。第 97 卷。Machine Learning Research 论文集。PMLR，2019，第 6861–6871 页。网址：proceedings.mlr.press/v97/wu19e.html。
+- [113] WU, K., YAN, X.-B., JIN, S., 和 MA, Z. 渐近保持卷积 DeepONets 捕捉多尺度线性输运方程的扩散行为。*arXiv:2306.15891* (2023)。网址：arxiv.org/abs/2306.15891。
+- [114] WU, Z., RAMSUNDAR, B., FEINBERG, E. N., GOMES, J., GENIESSE, C., PAPPU, A. S., LESWING, K., 和 PANDE, V. MoleculeNet：分子机器学习基准。*Chem. Sci.* 9 (2018), 第 513–530 页。网址：doi.org/10.1039/C7SC02664A。
+- [115] WU, Z., PAN, S., CHEN, F., LONG, G., ZHANG, C., 和 YU, P. S. 图神经网络综述。*IEEE Trans. Neural Netw. Learn. Syst.* 32, 1 (2021), 第 4–24 页。网址：doi.org/10.1109/TNNLS.2020.2978336。
+- [116] XIE, J., XU, L., 和 CHEN, E. 使用深度神经网络进行图像去噪和修补。载 *Advances in Neural Information Processing Systems*。由 Pereira, F., Burges, C., Bottou, L., 和 Weinberger, K. 编辑。第 25 卷。Curran Associates, Inc., 2012。网址：proceedings.neurips.cc/paper_files/paper/2012/file/6cdd60ea0045eb7a6ec44c5d429ed402-Paper.pdf。
+- [117] XIE, S., GIRSHICK, R., DOLLÁR, P., TU, Z., 和 HE, K. 用于深度神经网络的聚合残差变换。载 *2017 年 IEEE 计算机视觉与模式识别会议 (CVPR)* （美国夏威夷，2017 年 7 月 21–26 日）。IEEE 计算机学会，2017，第 5987–5995 页。网址：doi.org/10.1109/CVPR.2017.634。
+- [18] XIONG, R., YANG, Y., HE, D., ZHENG, K., ZHENG, S., XING, C., ZHANG, H., LAN, Y., WANG, L., 和 LIU, T.-Y. 关于 Transformer 架构中的层归一化。载 *第 37 届国际机器学习会议论文集* （2020 年 7 月 13–18 日）。ICML’20。JMLR.org，2020，975，第 10524–10533 页。网址：proceedings.mlr.press/v119/xiong20b.html。
+- [19] XIONG, W., HUANG, X., ZHANG, Z., DENG, R., SUN, P., 和 TIAN, Y. 作为非线性偏微分方程无网格求解器的 Koopman 神经算子。*arXiv:2301.10022* (2023)。网址：arxiv.org/abs/2301.10022。
+- [20] XU, R., ZHANG, D., RONG, M., 和 WANG, N. 弱形式理论指导神经网络 (TgNN-wf) 用于深度学习地下单相和两相流。*J. Comput. Phys.* 436 (2021), 文章编号 110318，共 20 页。网址：doi.org/10.1016/j.jcp.2021.110318。
+- [21] YANG, L., MENG, X., 和 KARNIADAKIS, G. E. B-PINNs：用于带有噪声数据的前向和反向偏微分方程问题的贝叶斯物理信息神经网络。*J. Comput. Phys.* 425 (2021), 文章编号 109913。网址：doi.org/10.1016/j.jcp.2020.109913。
+- [22] YANG, Z., DAI, Z., YANG, Y., CARBONELL, J., SALAKHUTDINOV, R., 和 LE, Q. V. XLNet：用于语言理解的广义自回归预训练。*arXiv:1906.08237* (2019)。网址：arxiv.org/abs/1906.08237。
+- [23] YAROTSKY, D. 深度 ReLU 网络近似的误差界限。*Neural Networks* 94 (2017), 第 103–114 页。网址：doi.org/10.1016/j.neunet.2017.07.002。
+- [24] YING, R., HE, R., CHEN, K., EKSOMBATCHAI, P., HAMILTON, W. L., 和 LESKOVEC, J. 用于 Web 规模推荐系统的图卷积神经网络。载 *第 24 届 ACM SIGKDD 知识发现和数据挖掘国际会议论文集* （英国伦敦，2018 年 8 月 19–23 日）。KDD ’18。纽约，美国：Association for Computing Machinery，2018，第 974–983 页。网址：doi.org/10.1145/3219819.3219890。
+- [25] YU, Y., SI, X., HU, Y., 和 ZHANG, J. 循环神经网络综述：LSTM 单元和网络架构。*Neural Comput.* 31, 7 (2019 年 7 月), 第 1235–1270 页。网址：doi.org/10.1162/neco_a_01199。
+- [26] YUN, S., JEONG, M., KIM, R., KANG, J., 和 KIM, H. J. 图 Transformer 网络。载 *Advances in Neural Information Processing Systems*。由 Wallach, H., Larochelle, H., Beygelzimer, A., d’Alché-Buc, F., Fox, E., 和 Garnett, R. 编辑。第 32 卷。Curran Associates, Inc., 2019。网址：proceedings.neurips.cc/paper_files/paper/2019/file/9d63484a8b477c97640154d40595a3bb-Paper.pdf。
+- [27] ZAGORUYKO, S. 和 KOMODAKIS, N. 宽残差网络。*arXiv:1605.07146* (2016)。网址：arxiv.org/abs/1605.07146。
+
+### 参考文献
+- ZANG, Y., BAO, G., YE, X., AND ZHOU, H. 用于高维偏微分方程的弱对抗网络。 *J. Comput. Phys.* 411 (2020), pp. 109409, 14. 网址: doi.org/10.1016/j.jcp.2020.109409.
+- ZEILLER, M. D. ADADelta: 一种自适应学习率方法。arXiv:1212.5701 (2012). 网址: arxiv.org/abs/1212.5701.
+- ZENG, D., LIU, K., LAI, S., ZHOU, G., AND ZHAO, J. 通过卷积深度神经网络进行关系分类。收录于 *Proceedings of CoNLL 2014, the 25th International Conference on Computational Linguistics: Technical Papers*。Dublin, Ireland: Dublin City University and Association for Computational Linguistics, Aug. 2014, pp. 2335–2344. 网址: aclanthology.org/C14-1220.
+- ZHANG, A., LIPTON, Z. C., LI, M., AND SMOLA, A. J. 深入深度学习。剑桥大学出版社, 2023。网址: d21.ai.
+- ZHANG, J., ZHANG, S., SHEN, J., AND LIN, G. 能量耗散进化深度算子神经网络。arXiv:2306.06281 (2023). 网址: arxiv.org/abs/2306.06281.
+- ZHANG, J., MOKHTARI, A., SRA, S., AND JADBABAIE, A. 直接 Runge-Kutta 离散化实现加速。arXiv:1805.00521 (2018). 网址: arxiv.org/abs/1805.00521.
+- ZHAO, X., ZHAO, J., AND LECUN, Y. 用于文本分类的字符级卷积网络。收录于 *Advances in Neural Information Processing Systems*。由 Cortes, C., Lawrence, N., Lee, D., Sugiyama, M., and Garnett, R. 编辑。卷 28。Curran Associates, Inc., 2015。网址: proceedings.neurips.cc/paper_files/paper/2015/file/250cf8b51c773f318fcd8c84be867a9a02-Paper.pdf.
+- ZHANG, Y., LI, Y., ZHANG, Z., LUO, T., AND XU, Z-Q. J. 嵌入原理：深度神经网络损失景观的层级结构。arXiv:2111.15527 (2021). 网址: arxiv.org/abs/2111.15527.
+- ZHANG, Y., ZHANG, Z., LUO, T., AND XU, Z-Q. J. 深度神经网络损失景观的嵌入原理。arXiv:2105.14573 (2021). 网址: arxiv.org/abs/2105.14573.
+- ZHANG, Y. AND WALLACE, B. 用于句子分类的卷积神经网络的敏感性分析（及从业者指南）。收录于 *Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 1: Long Papers)* (Taipei, Taiwan, Nov. 27–Dec. 1, 2017)。Asian Federation of Natural Language Processing, 2017, pp. 253–263。网址: aclanthology.org/I17-1026.
+- ZHANG, Y., CHEN, C., SHI, N., SUN, R., AND LUO, Z-Q. Adam 可以在不修改更新规则的情况下收敛。arXiv:2208.09632 (2022). 网址: arxiv.org/abs/2208.09632.
+- ZHANG, Z., CUI, P., AND ZHU, W. 图上的深度学习：综述。 *IEEE Trans. Knowledge Data Enggr.* 34, 1 (2022), pp. 249–270。网址: <doi.org/10.1109/TKDE.2020.2981333>.
+- ZHENG, Y., LIU, Q., CHEN, E., GE, Y., AND ZHAO, J. L. 使用多通道深度卷积神经网络进行时间序列分类。收录于 *Web-Age Information Management*。由 Li, F., Li, G., Hwang, S.-w., Yao, B., and Zhang, Z. 编辑。Springer, Cham, 2014, pp. 298–310。网址: <doi.org/10.1007/978-3-319-08010-9_33>.
+- ZHOU, H., ZHANG, S., PENG, J., ZHANG, S., LI, J., XIONG, H., AND ZHANG, W. Informer: 超越用于长序列时间序列预测的高效 Transformer。 *Proceedings of the AAAI Conference on Artificial Intelligence* 35, 12 (2021), pp. 11106–11115。网址: <doi.org/10.1609/aaai.v35i12.17325>.
+- ZHOU, J., CUI, G., HU, S., ZHANG, Z., YANG, C., LIU, Z., WANG, L., LI, C., AND SUN, M. 图神经网络：方法与应用的综述。 *AI Open* 1 (2020), pp. 57–81。网址: <doi.org/10.1016/j.aiopen.2021.01.001>.
+- ZHU, Y., AND ZABARAS, N. 用于代理建模和不确定性量化的贝叶斯深度卷积编码器-解码器网络。 *J. Comput. Phys.* 366 (2018), pp. 415–447。网址: <doi.org/10.1016/j.jcp.2018.04.018>.
