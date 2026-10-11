@@ -1,0 +1,38 @@
+
+
+## 相关工作综述
+
+在 [Falah et al. (2020)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor270) 中，作者开发了一种方法，用于从现有工具中识别一组特征并创建新特征。这改进了 PDF 恶意软件检测，并延长了当前分析和检测技术的生命周期。
+
+在 [Li et al. (2020)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor276) 中，引入了一种利用特征向量生成对抗网络（fvGAN）的新型逃逸技术，以攻击基于学习的恶意软件分类器。该方法使用 fvGAN 在特征空间中创建对抗特征向量，然后将其转换为实际的对抗恶意软件样本。结果表明，fvGAN 模型能在短时间内实现较高的逃逸率。此外，与现有的两种攻击算法 Mimicry 和 GD-KDE 相比，该技术在逃逸率和执行成本方面表现更优。
+
+作者 [Shijo, P. V., & Salim, A. (2015)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor283) 提出了用于恶意软件检测的集成静态与动态分析。该方法利用了静态分析和动态分析各自的优势。
+
+在 [Li et al. (2019)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor274) 中，研究强调了典型 K 近邻（KNN）分类算法在对抗环境下的脆弱性。作者使用梯度下降攻击方法修改测试集中的恶意样本，以逃避分类器检测。他们提出了一种将这些对抗样本加入训练集、并创建新的 KNN 分类器以测试其对不同攻击强度鲁棒性的方法。结果表明，在训练集中包含由梯度下降攻击生成的对抗样本，能显著增强 KNN 分类器的鲁棒性，且不影响其整体性能。
+
+在 [Smutz, C., & Stavrou, A. (2016)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor284) 中，作者介绍了一种识别集成分类器中数据问题的新方法。他们发现，当单个分类器的投票在检测期间发生冲突时，集成分类器的预测可能不正确。他们的方法称为集成分类器相互一致性分析，允许在不需要额外外部真实标签的情况下检测各类分类器逃逸。
+
+在 M. [Zubair Shafiq et al. (2008)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor287) 中，作者利用统计异常检测技术引入了一种新的嵌入式恶意软件检测系统。这是首个能精确定位文件内感染位置的方法。其马尔可夫 n-gram 检测器在检测恶意软件方面优于现有检测器。结合当前杀毒软件时，由于能发现嵌入式恶意软件，它提供了极低的误报率。
+
+在 [He et al. (2020)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor271) 中，作者系统地介绍了用于最小化逃逸潜力同时保持高准确率的特征选择关键原则。这些准则被应用于提取特征并训练两阶段分类器。实验结果表明，该模型在准确性、泛化能力和鲁棒性方面表现出色，能有效区分恶意文件中利用的漏洞。
+
+[Table 1](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor248) 给出了基于 PDF 的恶意软件检测技术的综合调查。
+
+#### 表 1. 基于 PDF 的恶意软件检测技术文献调查概览
+
+| 作者 | 机器学习/深度学习模型 | 数据集 | 总体观察 |
+| --- | --- | --- | --- |
+| Bilal Sowan et al. (2024) | Hybrid RF-KNN | Evasive-PDFMal2022 | ▪ 利用随机森林和 KNN 的组合。可进一步工作以提高模型准确率。 |
+| [Liu, R., & Nicholas, C. (2023)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor277) | XGBoost, Navie Bayes, Multi-Layer Perceptron 等 | Contagio dataset | ▪ 旨在解决在不需要太多 PDF 文件领域知识的情况下寻找小特征集的需求。 |
+| Muhammad [Binsawad, (2024)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor266) | Logistic Model Trees | Canadian Institute for Cybersecurity (UNB CIC) at the University of New Brunswick | ▪ 使用了广泛的特征选择方法<br>▪ 总体准确率 97.5%，仍可提升<br>▪ 特征选择过程非常复杂且耗时 |
+| [Al-Haija et al. (2022)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor265) | Optimizable Decision Tree | Evasive-PDFMal2022 | ▪ 使用静态方法<br>▪ 因树的插入和删除而耗时 |
+| [Li et al. (2021)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor275) | Supervised ML | Created Dataset | ▪ 使用混合方法<br>▪ 独立运行时效率提升<br>▪ 耗时 |
+| [Issakhani et al. (2022)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor272) | Base and Meta Learner | Evasive PDF Dataset | ▪ 使用静态方法<br>▪ 准确率可提升 |
+| [Falah et al. (2020)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor270) | RF, C5.0 (DT), and SVM (2 class) | Virus Total + Contagio | ▪ 使用静态方法<br>▪ 因所选特征导致训练时间增加<br>▪ Virus-Total 数据集对良性样本偏倚更大 |
+| [Li et al. (2020)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor276) | Feature Vector - GAN | Contagio Malware Dump, PRA Lab | ▪ 使用混合方法<br>▪ 在恶意软件检测和分析中取得良好结果<br>▪ 耗时 |
+| [Shijo, P. V., & Salim, A. (2015)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor283) | SVM, Random Forest | 997 Malicious and 490 clean files | ▪ 使用混合方法<br>▪ 数据集非常小<br>▪ 高准确率和误报率 |
+| [Li et al. (2019)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor274) | KNN | Created Dataset | ▪ 使用静态方法<br>▪ 无可用逃逸测试<br>▪ 降低假阴性并提高检测准确率 |
+| [He et al. (2020)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor271) | CNN | Virus Total | ▪ 使用静态方法<br>▪ 对逃逸样本具有鲁棒性<br>▪ 无法检测对抗样本 |
+| [Smutz, C., & Stavrou, A. (2016)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor284) | Ensemble classifier (random sampling/bagging) | Contagio | ▪ 使用动态方法<br>▪ 未检查任何可能的嵌入式 PDF 有效载荷<br>▪ 使用真实数据 |
+| M. [Zubair Shafiq et al. (2008)](#979-8-3693-9225-6.ch010.bits-pdf.xhtml#_idTextAnchor287) | Markov n-gram | 37,000 malware and 1800 benign | ▪ 使用静态方法<br>▪ 与其他恶意软件相比，检测率和误报率较高<br>▪ 无可用逃逸测试 |
+
