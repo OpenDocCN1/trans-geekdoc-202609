@@ -1,0 +1,46 @@
+
+
+## 参考文献
+
+[103] M. Bury, C. Schwiegelshohn, and M. Sorella. “Sketch ’Em All: Approximate Similarity Search for Dynamic Data Streams”. In: *Procs. of the ACM Int. Conference on Web Search and Data Mining 2018*. Ed. by Y. Maarek and Y. Liu. ACM, 2018 (cit. on p. 10). SFB876-A2
+
+[104] M. Buschhoff. “Energy-Aware Design of Hardware and Software for Ultra-Low-Power Systems”. PhD thesis. Dortmund: TU Dortmund University, 2019. doi: [http://dx.doi.org/10.17877/DE290R-20241](http://dx.doi.org/10.17877/DE290R-20241) (cit. on pp. 35, 42, 43). [a](#9783110785937_002446.xhtml#xref_d1990e3439), [b](#9783110785937_002446.xhtml#xref_d1990e3735), [c](#9783110785937_002446.xhtml#xref_d1990e3770)
+
+[105] M. Buschhoff, R. Falkenberg, and O. Spinczyk. “Energy-Aware Device Drivers for Embedded Operating Systems”. In: *SIGBED Review* 16.3 (Nov. 2019), pp. 8–13. doi: [https://doi.org/10.1145/3373400.3373401](https://doi.org/10.1145/3373400.3373401) (cit. on pp. 6, 41). SFB876-A4 [→](#9783110785937_002446.xhtml#xref_d1990e3691)
+
+[106] M. Buschhoff, D. Friesel, and O. Spinczyk. “Energy Models in the Loop”. In: *Procedia Computer Science* 130 (2018), pp. 1063–1068 (cit. on pp. 6, 43, 44). SFB876-A4 [a](#9783110785937_002446.xhtml#xref_d1990e3780), [b](#9783110785937_002446.xhtml#xref_d1990e4185)
+
+[107] S. Buschjäger. “Ensemble Learning with Discrete Classifiers on Small Devices”. PhD thesis. TU Dortmund University, 2022 (cit. on p. 339). [→](#9783110785937_078254.xhtml#xref_d1990e87187)
+
+[108] S. Buschjäger, K.-h. Chen, J.-j. Chen, and K. Morik. “Realization of Random Forest for Real-Time Evaluation through Tree Framing”. In: 2018. url: [https://ieeexplore.ieee.org/document/8594826](https://ieeexplore.ieee.org/document/8594826) (cit. on pp. 339, 341). SFB876-A1, SFB876-B2, SFB876-C3 [a](#9783110785937_078254.xhtml#xref_d1990e87184), [b](#9783110785937_078254.xhtml#xref_d1990e87256)
+
+[109] S. Buschjäger, P.-J. Honysz, L. Pfahler, and K. Morik. “Very Fast Streaming Submodular Function Maximization”. In: *Procs. of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases 2021*. Berlin, Heidelberg: Springer-Verlag, 2021, pp. 151–166. doi: [https://doi.org/10.1007/978-3-030-86523-8_10](https://doi.org/10.1007/978-3-030-86523-8_10). url: [https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_178.pdf](https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_178.pdf) (cit. on pp. 74–76, 80, 81). SFB876-A1 [a](#9783110785937_007154.xhtml#xref_d1990e6847), [b](#9783110785937_007154.xhtml#xref_d1990e7256), [c](#9783110785937_007154.xhtml#xref_d1990e7295), [d](#9783110785937_007154.xhtml#xref_d1990e9044), [e](#9783110785937_007154.xhtml#xref_d1990e9196)
+
+[110] S. Buschjäger and K. Morik. “Decision Tree and Random Forest Implementations for Fast Filtering of Sensor Data”. In: *IEEE Transactions on Circuits and Systems I: Regular Papers* 65-I.1 (Jan. 2018), pp. 209–222. doi: [https://doi.org/10.1109/TCSI.2017.2710627](https://doi.org/10.1109/TCSI.2017.2710627) (cit. on pp. 7, 341, 342). [a](#9783110785937_001550.xhtml#xref_d1990e1364), [b](#9783110785937_078254.xhtml#xref_d1990e87253), [c](#9783110785937_078254.xhtml#xref_d1990e87402)
+
+[111] S. Buschjäger, K. Morik, and M. Schmidt. “Summary Extraction on Data Streams in Embedded Systems”. In: *Procs. of the ECML Workshop on IoT Large Scale Learning From Data Streams 2017*. 2017. url: [http://ceur-ws.org/Vol-1958/IOTSTREAMING3.pdf](http://ceur-ws.org/Vol-1958/IOTSTREAMING3.pdf) (cit. on p. 81). SFB876-A1 [→](#9783110785937_007154.xhtml#xref_d1990e9356)
+
+[112] S. Buschjäger, L. Pfahler, J. Buss, K. Morik, and W. Rhode. “On-Site Gamma-Hadron Separation with Deep Learning on FPGAs”. In: *Procs. of the Joint European Conference on Machine Learning and Knowledge Discovery in Databases 2020*. Springer, 2020. url: [https://link.springer.com/content/pdf/10.1007/978-3-030-67667-4_29.pdf](https://link.springer.com/content/pdf/10.1007/978-3-030-67667-4_29.pdf) (cit. on p. 10). SFB876-A1, SFB876-C3 [→](#9783110785937_001550.xhtml#xref_d1990e1477)
+
+[113] S. Buschjäger et al. “Margin-Maximization in Binarized Neural Networks for Optimizing Bit Error Tolerance”. In: *Procs. of the Design, Automation and Test in Europe Conference 2021*. 2021. url: [https://ls12-www.cs.tu-dortmund.de/daes/media/documents/publications/downloads/2021dateyayla.pdf](https://ls12-www.cs.tu-dortmund.de/daes/media/documents/publications/downloads/2021dateyayla.pdf) (cit. on pp. 10, 326, 331, 332). SFB876-A1 [a](#9783110785937_001550.xhtml#xref_d1990e1483), [b](#9783110785937_078254.xhtml#xref_d1990e83657), [c](#9783110785937_078254.xhtml#xref_d1990e85927), [d](#9783110785937_078254.xhtml#xref_d1990e86233)
+
+[114] S. Buschjäger et al. *Towards Explainable Bit Error Tolerance of Resistive RAM-Based Binarized Neural Networks*. 2020. url: [https://www-ai.cs.tu-dortmund.de/PublicPublicationFiles/buschjaeger_etal_2020b.pdf](https://www-ai.cs.tu-dortmund.de/PublicPublicationFiles/buschjaeger_etal_2020b.pdf) (cit. on p. 331). SFB876-A1 [→](#9783110785937_078254.xhtml#xref_d1990e85934)
+
+[115] J. Buss, C. Bockermann, K. Morik, W. Rhode, and T. Ruhe. “FACT-Tools – Processing High-Volume Telescope Data”. In: *Procs. of the Astronomical Data Analysis Software and Systems Conference 2019*. Ed. by M. Molinaro, K. Shortridge, and F. Pasian. Vol. 521. Astronomical Society of the Pacific, 2019, p. 584. url: [http://www.aspbooks.org/a/volumes/article_details/?paper_id=39082](http://www.aspbooks.org/a/volumes/article_details/?paper_id=39082) (cit. on p. 339). SFB876-C3 [→](#9783110785937_078254.xhtml#xref_d1990e87137)
+
+[116] J. Byrka, T. Pensyl, B. Rybicki, A. Srinivasan, and K. Trinh. “An Improved Approximation for *k*-Median and Positive Correlation in Budgeted Optimization”. In: *ACM Transactions on Algorithms* 13.2 (2017), 23:1–23:31. doi: [https://doi.org/10.1145/2981561](https://doi.org/10.1145/2981561) (cit. on p. 201). [→](#9783110785937_041148.xhtml#xref_d1990e49461)
+
+[117] J. Cai, M. Fürer, and N. Immerman. “An optimal lower bound on the number of variables for graph identifications”. In: *Combinatorica* 12.4 (1992), pp. 389–410 (cit. on p. 120). [→](#9783110785937_013188.xhtml#xref_d1990e22662)
+
+[118] C. Cangea, P. Veličković, N. Jovanović, T. N. Kipf, and P. Liò. “Towards Sparse Hierarchical Graph Classifiers”. In: *Advances in Neural Information Processing Systems 31: Procs. of the 2018 Conference*. 2018 (cit. on p. 135).
+
+[119] B. M. Cantrill, M. W. Shapiro, and A. H. Leventhal. “Dynamic instrumentation of production systems”. In: *Procs. of the Conference on USENIX Annual Technical Conference 2004*. Berkeley, CA, USA: USENIX Association, 2004, pp. 2–2 (cit. on pp. 17, 18). [a](#9783110785937_002446.xhtml#xref_d1990e1887), [b](#9783110785937_002446.xhtml#xref_d1990e1994)
+
+[120] R. Caruana, N. Karampatziakis, and A. Yessenalina. “An empirical evaluation of supervised learning in high dimensions”. In: *Procs. of the Int. Conference on Machine Learning 2008*. ACM. 2008, pp. 96–103 (cit. on p. 339).
+
+[121] A. Chakrabarti and S. Kale. “Submodular Maximization Meets Streaming: Matchings, Matroids, and More”. In: *arXiv: Computing Research Repository* (2013). doi: [arXiv:1309.2038](https://arxiv.org/abs/1309.2038) (cit. on p. 76). [→](#9783110785937_007154.xhtml#xref_d1990e7707)
+
+[122] I. Chami, S. Abu-El-Haija, B. Perozzi, C. Ré, and K. Murphy. “Machine Learning on Graphs: A Model and Comprehensive Taxonomy”. In: *arXiv: Computing Research Repository* (2020). doi: [arXiv:2005.03675](https://arxiv.org/abs/2005.03675) (cit. on p. 116).
+
+[123] M. Charikar, K. Chen, and M. Farach-Colton. “Finding frequent items in data streams”. In: *Theoretical Computer Science* 312.1 (2004), pp. 3–15 (cit. on p. 88). [→](#9783110785937_007154.xhtml#xref_d1990e10621)
+

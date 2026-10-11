@@ -1,0 +1,52 @@
+
+## 参考文献
+
+[592] R. Rajkumar, L. Sha, and J. P. Lehoczky. “Real-Time Synchronization Protocols for Multiprocessors”. In: *Procs. of the IEEE Real-Time Systems Symposium 1988*. 1988, pp. 259–269 (cit. on pp. 361, 362). [a](#9783110785937_085767.xhtml#xref_d1990e89636), [b](#9783110785937_085767.xhtml#xref_d1990e89701)
+
+[593] Y. K. Ramadass et al. “A batteryless thermoelectric energy-harvesting interface circuit with 35mV startup voltage”. In: *IEEE J Solid-State Circuits* (2010) (cit. on p. 57). [→](#9783110785937_002446.xhtml#xref_d1990e5789)
+
+[594] S. J. Reddi, B. Póczos, and A. J. Smola. “Communication Efficient Coresets for Empirical Loss Minimization”. In: *Procs. of the Conference on Uncertainty in Artificial Intelligence 2015*. 2015, pp. 752–761. url: [http://auai.org/uai2015/proceedings/papers/141.pdf](http://auai.org/uai2015/proceedings/papers/141.pdf) (cit. on p. 87).
+
+[595] A. P. Reynolds, G. Richards, B. de la Iglesia, and V. J. Rayward-Smith. “Clustering Rules: A Comparison of Partitioning and Hierarchical Clustering Algorithms”. In: *Journal of Mathematical Modelling and Algorithms* 5.4 (2006), pp. 475–504 (cit. on p. 184).
+
+[596] J. Richter, H. Kotthaus, B. Bischl, P. Marwedel, J. Rahnenführer, and M. Lang. “Faster Model-Based Optimization through Resource-Aware Scheduling Strategies”. In: *Procs. of the Int. Conference: Learning and Intelligent Optimization 2016*. Vol. 10079. Lecture Notes in Computer Science (LNCS). Springer Int. Publishing, 2016, pp. 267–273. url: [http://link.springer.com/chapter/10.1007/978-3-319-50349-3_22](http://link.springer.com/chapter/10.1007/978-3-319-50349-3_22) (cit. on p. 11). SFB876-A3 [→](#9783110785937_001550.xhtml#xref_d1990e1552)
+
+[597] B. Rieck, C. Bock, and K. M. Borgwardt. “A Persistent Weisfeiler-Lehman Procedure for Graph Classification”. In: *Procs. of the Int. Conference on Machine Learning 2019*. 2019, pp. 5448–5458 (cit. on p. 125). [→](#9783110785937_013188.xhtml#xref_d1990e25234)
+
+[598] Robotnik. *Mobile Robot RB-1 Base*. 2021. url: [https://www.robotnik.eu/mobile-robots/rb-1-base-2/](https://www.robotnik.eu/mobile-robots/rb-1-base-2/) (cit. on p. 374). [→](#9783110785937_085767.xhtml#xref_d1990e93468)
+
+[599] M. Roidl et al. “Performance Availability Evaluation of Smart Devices in Materials Handling Systems”. In: *Procs. of the IEEE ICCC Workshops on Internet of Things 2014*. Shanghai, China, Oct. 2014 (cit. on p. 35). [→](#9783110785937_002446.xhtml#xref_d1990e3427)
+
+[600] Y. Rong, W. Huang, T. Xu, and J. Huang. “DropEdge: Towards Deep Graph Convolutional Networks on Node Classification”. In: *Procs. of the Int. Conference on Learning Representation 2020*. 2020 (cit. on pp. 130, 136). [→](#9783110785937_013188.xhtml#xref_d1990e30906)
+
+[601] ROS. *Robot Operating System (ROS)*. 2021. url: [https://www.ros.org/](https://www.ros.org/) (cit. on p. 374). [→](#9783110785937_085767.xhtml#xref_d1990e93471)
+
+[602] L. Rosasco, E. De, V. A. Caponnetto, M. Piana, and A. Verri. “Are loss functions all the same”. In: *Neural Computation* 15 (2004), p. 2004 (cit. on p. 332). [→](#9783110785937_078254.xhtml#xref_d1990e86239)
+
+[603] K. E. Rosing, E. L. Hillsman, and H. Rosing-Vogelaar. “A Note Comparing Optimal and Heuristic Solutions To the p-Median Problem”. In: *Geographical Analysis* 11.1 (1979), pp. 86–89 (cit. on p. 184).
+
+[604] R. A. Rossi and N. K. Ahmed. “The Network Data Repository with Interactive Graph Analytics and Visualization”. In: *Procs. of the AAAI Conference on Artificial Intelligence 2015*. 2015. url: [http://networkrepository.com](http://networkrepository.com) (cit. on p. 154). [→](#9783110785937_013188.xhtml#xref_d1990e39244)
+
+[605] O. Roustant, D. Ginsbourger, and Y. Deville. “DiceKriging, DiceOptim: Two R packages for the Analysis of Computer Experiments by Kriging-based Metamodeling and Optimization”. In: *Journal of Statistical Software* 51.1 (2012), pp. 1–55 (cit. on p. 294). [→](#9783110785937_066530.xhtml#xref_d1990e80068)
+
+[606] A. Sailer, S. Schmidhuber, M. Deubzer, M. Alfranseder, M. Mucha, and J. Mottok. “Optimizing the task allocation step for multi-core processors within AUTOSAR”. In: *Procs. of the Int. Conference on Applied Electronics 2013*. Sept. 2013, pp. 1–6 (cit. on p. 368).
+
+[607] Y. Saito, F. Sato, T. Azumi, S. Kato, and N. Nishio. “ROSCH:Real-Time Scheduling Framework for ROS”. In: *Procs. of the IEEE Int. Conference on Embedded and Real-Time Computing Systems and Applications 2018*. Aug. 2018, pp. 52–58 (cit. on p. 374). [→](#9783110785937_085767.xhtml#xref_d1990e93477)
+
+[608] F. Saki, A. Sehgal, I. M. S. Panahi, and N. Kehtarnavaz. “Smartphone-based real-time classification of noise signals using subband features and random forest classifier”. In: *Procs. of the Int. Conference on Acoustics, Speech and Signal Processing 2016*. 2016, pp. 2204–2208 (cit. on p. 339). [→](#9783110785937_078254.xhtml#xref_d1990e87146)
+
+[609] E. Sari, M. Belbahri, and V. P. Nia. “How Does Batch Normalization Help Binary Training?” In: *arXiv: Computing Research Repository* (2019). doi: arXiv:1909.09139 (cit. on p. 329).
+
+[610] R. E. Schapire and Y. Freund. “Boosting: Foundations and algorithms”. In: *Kybernetes* (2012) (cit. on p. 341). [→](#9783110785937_078254.xhtml#xref_d1990e87332)
+
+[611] L. Schönberger, W.-H. Huang, G. v. d. Brüggen, K.-H. Chen, and J.-J. Chen. “Schedulability Analysis and Priority Assignment for Segmented Self-Suspending Tasks”. In: *Procs. of the IEEE Int. Conference on Embedded and Real-Time Computing Systems and Applications 2018*. Hakodate, Japan, Aug. 2018 (cit. on p. 363). SFB876-B2 [→](#9783110785937_085767.xhtml#xref_d1990e89762)
+
+[612] L. Schönberger et al. “Offloading Safety- and Mission-Critical Tasks via Unreliable Connections”. In: *Procs. of the Euromicro Conference on Real-Time Systems 2020*. 2020 (cit. on p. 373). SFB876-A1, SFB876-A3, SFB876-A4, SFB876-B4 [→](#9783110785937_085767.xhtml#xref_d1990e93374)
+
+[613] E. Schubert. “HACAM: Hierarchical Agglomerative Clustering Around Medoids – and its Limitations”. In: *Procs. of the Lernen.Wissen.Daten.Analysen Workshops: FGWM, KDML, FGWI-BIA, and FGIR 2021*. Ed. by T. Seidl, M. Fromm, and S. Obermeier. Vol. 2993. CEUR Workshop Proceedings. CEUR-WS.org, 2021, pp. 191–204. url: [http://ceur-ws.org/Vol-2993/paper-19.pdf](http://ceur-ws.org/Vol-2993/paper-19.pdf) (cit. on pp. 216, 219). [→](#9783110785937_041148.xhtml#xref_d1990e59187)
+
+[614] E. Schubert and M. Gertz. “Numerically Stable Parallel Computation of (Co-)Variance”. In: *Procs. of the Int. Conference on Scientific and Statistical Database Management 2018*. SSDBM 2018 best paper award. 2018, 10:1–10:12. doi: [https://doi.org/10.1145/3221269.3223036](https://doi.org/10.1145/3221269.3223036) (cit. on p. 220). [→](#9783110785937_041148.xhtml#xref_d1990e60510)
+
+[615] E. Schubert, H.-P. Kriegel, and A. Zimek. “The (black) art of runtime evaluation: Are we comparing algorithms or implementations?” In: *Knowledge and Information Systems* 52.2 (2017), pp. 341–3778 (cit. on p. 339). [→](#9783110785937_078254.xhtml#xref_d1990e87156)
+
+[616] E. Schubert and P. J. Rousseeuw. “Fast and Eager k-Medoids Clustering: O(k) Runtime Improvement of the PAM, CLARA, and CLARANS Algorithms”. In: *Information Systems* 101 (2021), p. 101804. doi: [https://doi.org/10.1016/j.is.2021.101804](https://doi.org/10.1016/j.is.2021.101804) (cit. on pp. 184, 188, 189, 191). SFB876-A2 [a](#9783110785937_041148.xhtml#xref_d1990e43519), [b](#9783110785937_041148.xhtml#xref_d1990e44681), [c](#9783110785937_041148.xhtml#xref_d1990e46984)
