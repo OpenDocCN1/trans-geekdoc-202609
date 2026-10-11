@@ -1,0 +1,252 @@
+
+
+# 区块链编程基础
+
+## 智能合约示例：产品管理
+
+```solidity
+mapping(uint256 => Product) public products;
+
+function addProduct(uint256 id, string memory name, uint256 price) public {
+    products[id] = Product(name, price, msg.sender);
+}
+
+function transferOwnership(uint256 id, address newOwner) public {
+    require(products[id].owner == msg.sender, "Not the owner");
+    products[id].owner = newOwner;
+}
+```
+
+上述合约展示了区块链在供应链管理中的基本应用，产品可以被注册并在所有者之间转移。
+
+## 测试与验证
+
+在全面实施之前，必须在受控环境中测试系统。测试必须包括：
+
+1. **功能性**：验证智能合约是否按计划执行任务。
+2. **安全性**：确保系统能抵御攻击和入侵。
+3. **可扩展性**：评估解决方案能否处理预期的交易量。
+
+## 部署与监控
+
+验证通过后，系统可部署到生产环境。持续监控对于识别问题、优化性能和确保合规性至关重要。
+
+## 案例研究
+
+### 物流：供应链
+
+**企业**：沃尔玛  
+**目标**：提高可追溯性和食品安全。  
+**解决方案**：  
+沃尔玛实施区块链技术，以追踪供应链中的食品产品。使用 `Hyperledger Fabric`，该公司将追踪产品来源所需的时间从几周缩短至几秒。
+
+**收益**：
+1. **透明度**：链上所有参与者（包括农户和分销商）均可获取最新信息。
+2. **风险降低**：快速识别受污染食品的来源，将财务和健康影响降至最低。
+
+### 金融：跨境支付
+
+**企业**：桑坦德银行  
+**目标**：降低跨境支付的成本和处理时间。  
+**解决方案**：  
+桑坦德银行使用 `Ripple` 创建了一个跨境支付平台，支持各国之间近乎即时的转账。
+
+**收益**：
+1. **速度**：以前需要数天的交易，现在几分钟内即可处理完成。
+2. **成本**：交易手续费大幅降低。
+
+### 医疗：患者数据管理
+
+**机构**：爱沙尼亚  
+**目标**：保护医疗数据并改善患者及医护人员的访问体验。  
+**解决方案**：  
+爱沙尼亚将区块链集成到其医疗系统中，允许患者控制对其医疗数据的访问，并确保记录不可篡改且安全。
+
+**收益**：
+1. **隐私**：仅经授权的患者可访问其数据。
+2. **效率**：促进医院和诊所之间的安全信息共享。
+
+### 能源：P2P 能源交易
+
+**平台**：Power Ledger  
+**目标**：允许太阳能消费者直接与其他用户交易盈余电力。  
+**解决方案**：  
+Power Ledger 利用区块链管理点对点能源合约，在去中心化网络上记录所有交易。
+
+**收益**：
+1. **自主性**：用户可直接交易，无需依赖大型能源公司。
+2. **可持续性**：鼓励使用可再生能源。
+
+在企业中实施区块链需要采取战略性方法，从问题识别到验证及持续监控。真实案例研究表明，若应用得当，该技术可变革行业，提升效率、透明度和安全性。
+
+在规划区块链项目时，让所有利益相关者参与、进行严格测试、并做好随时调整的准备至关重要。借助合适的工具和清晰的愿景，企业可发掘区块链潜力，获得持久的竞争优势。
+
+# 第 21 章 区块链编程基础
+
+---
+
+区块链编程是构建去中心化解决方案的支柱之一，而 `Solidity` 是此目的最流行的语言之一。`Solidity` 旨在创建运行在 `以太坊虚拟机 (EVM)` 和其他受支持平台上的智能合约。本章将介绍 `Solidity` 的入门步骤，从环境搭建到创建简单的智能合约。
+
+## Solidity 入门
+
+### 环境配置
+
+开始使用 `Solidity` 编程前，需要搭建合适的开发环境。
+
+**安装 IDE**：
+- **Remix IDE**：一款基于 Web 的工具，简化了智能合约的开发、测试和部署。访问 `remix.ethereum.org` 即可直接在浏览器中开始编程。
+
+**Node.js 和 Truffle**：
+- 安装 `Node.js` 以管理包和依赖。
+- 使用 `Truffle Framework` 开发、测试和部署合约。
+
+```bash
+npm install -g truffle
+```
+
+**Ganache**：  
+用于测试智能合约的本地区块链。可通过官网安装，或作为 npm 包安装。
+
+```bash
+npm install -g ganache-cli
+```
+
+**Metamask**：  
+一款浏览器扩展，允许你与以太坊区块链交互。设置钱包以在测试网络上测试交易。
+
+### 理解 Solidity 合约结构
+
+智能合约是存储在区块链特定地址上的代码（函数）和数据（状态）的集合。
+
+```solidity
+pragma solidity ^0.8.0;
+
+contract HelloWorld {
+    string public message;
+
+    constructor(string memory initialMessage) {
+        message = initialMessage;
+    }
+
+    function updateMessage(string memory newMessage) public {
+        message = newMessage;
+    }
+}
+```
+
+1. **Pragma**：定义合约使用的 `Solidity` 版本。
+2. **Contract**：`Solidity` 程序的基本单元。
+3. **State**：如 `message` 等变量存储在区块链上。
+4. **Functions**：执行操作并修改状态。示例中，`updateMessage` 允许修改消息。
+
+### 数据类型
+
+`Solidity` 支持多种数据类型，包括：
+
+1. **基本类型**：
+   - `uint`：无符号整数。
+   - `bool`：布尔值（true 或 false）。
+   - `address`：代表以太坊地址。
+
+2. **复杂类型**：
+   - `struct`：用于创建自定义类型。
+   - `mapping`：将键映射到值的数据结构。
+
+```solidity
+pragma solidity ^0.8.0;
+
+contract DataTypes {
+    struct Product {
+        string name;
+        uint price;
+    }
+
+    mapping(uint => Product) public products;
+
+    function addProduct(uint id, string memory name, uint price) public {
+        products[id] = Product(name, price);
+    }
+}
+```
+
+在此合约中，`mapping` 使用 ID 作为键来存储产品。
+
+## 创建简单的智能合约
+
+### 简单存储合约
+
+存储合约演示了如何在区块链上创建、更新和检索信息。
+
+```solidity
+pragma solidity ^0.8.0;
+
+contract SimpleStorage {
+    uint public storedData;
+
+    function set(uint data) public {
+        storedData = data;
+    }
+
+    function get() public view returns (uint) {
+        return storedData;
+    }
+}
+```
+
+1. **函数 `set`**：更新存储的值。
+2. **函数 `get`**：检索存储的值。
+
+### 投票合约
+
+该合约允许用户对不同选项进行投票。
+
+```solidity
+pragma solidity ^0.8.0;
+
+contract Voting {
+    mapping(string => uint) public votes;
+
+    function vote(string memory candidate) public {
+        votes[candidate]++;
+    }
+
+    function getVotes(string memory candidate) public view returns (uint) {
+        return votes[candidate];
+    }
+}
+```
+
+1. **函数 `vote`**：为候选人增加票数。
+2. **函数 `getVotes`**：返回特定候选人的得票数。
+
+### 支付合约
+
+该合约演示了如何发送和接收以太币。
+
+```solidity
+pragma solidity ^0.8.0;
+
+contract Payment {
+    address public owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function sendPayment() public payable {
+        require(msg.value > 0, "Payment must be greater than 0");
+    }
+
+    function withdraw() public {
+        require(msg.sender == owner, "Only owner can withdraw");
+        payable(owner).transfer(address(this).balance);
+    }
+
+    function getBalance() public view returns (uint) {
+        return address(this).balance;
+    }
+}
+```
+
+1. **函数 `sendPayment`**：允许用户向合约发送以太币。
+
