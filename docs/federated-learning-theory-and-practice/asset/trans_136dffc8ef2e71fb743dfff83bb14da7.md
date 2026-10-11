@@ -1,0 +1,67 @@
+
+
+# 第5章：联邦学习中的对抗鲁棒性
+
+Chulin Xie; Xiaoyang Wang  
+伊利诺伊大学香槟分校，香槟，伊利诺伊州，美国
+
+## 摘要
+
+虽然联邦学习（FL）支持在来自不同客户端的分散且私有的数据上训练共享机器学习模型，但其分布式特性增加了脆弱性，因为客户端可能不可信。本章总结并提供了联邦学习中常见攻击与防御的分类法。攻击部分包括通过数据投毒和模型投毒破坏局部模型的方法。防御部分相应总结，包括基于鲁棒统计的方法和基于平滑的方法，并讨论了它们对多种攻击的有效性。此外，我们强调了数据异质性和隐私顾虑如何给保障FL系统安全带来新的挑战。
+
+### 关键词
+
+联邦学习；鲁棒性；攻击；防御
+
+## 5.1 简介
+
+针对日益广泛部署的机器学习模型的对抗性攻击引发了诸多担忧。例如，在欺诈检测等广泛的异常检测任务中，对手可能希望降低机器学习模型的准确性，或误导其对给定数据样本集的预测。在联邦学习系统中，服务器无法知晓客户端的训练过程，这使其更容易受到对抗性攻击，并给抵御此类攻击带来了挑战。
+
+## 参考文献
+
+*   [[27]](#Chp004_75-90_B9780443190377000120.xhtml#cf0220) Y. Ma, X. Zhu, J. Hsu, Data poisoning against differentially-private learners: attacks and defenses, *Proceedings of the 28th International Joint Conference on Artificial Intelligence*. 2019:4732–4738.
+
+*   [28] A. Madry, A. Makelov, L. Schmidt, D. Tsipras, A. Vladu, Towards deep learning models resistant to adversarial attacks, *6th International Conference on Learning Representations, ICLR*. 2018.
+
+*   [[29]](#Chp004_75-90_B9780443190377000120.xhtml#cf0035) B. McMahan, E. Moore, D. Ramage, S. Hampson, B. Aguera y Arcas, Communication-efficient learning of deep networks from decentralized data, *Proceedings of the 20th AISTATS, PMLR*. 2017;vol. 54:1273–1282.
+
+*   [30] E.M.E. Mhamdi, R. Guerraoui, S. Rouault, et al., The hidden vulnerability of distributed learning in Byzantium, *International Conference on Machine Learning*. PMLR; 2018:3521–3530.
+
+*   [[31]](#Chp004_75-90_B9780443190377000120.xhtml#cs0020_2) L. Muñoz-González, B. Biggio, A. Demontis, A. Paudice, V. Wongrassamee, E.C. Lupu, F. Roli, Towards poisoning of deep learning algorithms with back-gradient optimization, *Proceedings of the 10th ACM Workshop on Artificial Intelligence and Security*. 2017:27–38.
+
+*   [[32]](#Chp004_75-90_B9780443190377000120.xhtml#cf0240) M.S. Ozdayi, M. Kantarcioglu, Y.R. Gel, Defending against backdoors in federated learning with robust learning rate, *Proceedings of the AAAI Conference on Artificial Intelligence* 2021;35:9268–9276.
+
+*   [[33]](#Chp004_75-90_B9780443190377000120.xhtml#cf0245) A. Panda, S. Mahloujifar, A.N. Bhagoji, S. Chakraborty, P. Mittal Sparsefed, Mitigating model poisoning attacks in federated learning with sparsification, *International Conference on Artificial Intelligence and Statistics*. PMLR; 2022:7587–7624.
+
+*   [34] A. Raghunathan, J. Steinhardt, P. Liang, Certified defenses against adversarial examples, *6th International Conference on Learning Representations, ICLR*. 2018.
+
+*   [[35]](#Chp004_75-90_B9780443190377000120.xhtml#cs0080_2) A. Schwarzschild, M. Goldblum, A. Gupta, J.P. Dickerson, T. Goldstein, Just how toxic is data poisoning? A unified benchmark for backdoor and data poisoning attacks, *International Conference on Machine Learning*. PMLR; 2021:9389–9398.
+
+*   [[36]](#Chp004_75-90_B9780443190377000120.xhtml#cf0275) D. Shah, P. Dube, S. Chakraborty, A. Verma, Adversarial training in communication constrained federated learning, [arXiv:2103.01319](http://www.arxiv.org/abs/2103.01319); 2021.
+
+*   [[37]](#Chp004_75-90_B9780443190377000120.xhtml#cf0310) V. Shejwalkar, A. Houmansadr, P. Kairouz, D. Ramage, Back to the drawing board: a critical evaluation of poisoning attacks on production federated learning, *2022 IEEE Symposium on Security and Privacy (SP)*. 2022:1354–1371.
+
+*   [38] Z. Sun, P. Kairouz, A.T. Suresh, H.B. McMahan, Can you really backdoor federated learning? [arXiv:1911.07963](http://www.arxiv.org/abs/1911.07963); 2019.
+
+*   [[39]](#Chp004_75-90_B9780443190377000120.xhtml#cs0050_3) C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan, I. Goodfellow, R. Fergus, Intriguing properties of neural networks, *International Conference on Learning Representations*. 2014.
+
+*   [[40]](#Chp004_75-90_B9780443190377000120.xhtml#cs0075_4) B. Wang, Y. Yao, S. Shan, H. Li, B. Viswanath, H. Zheng, B.Y. Zhao, Neural cleanse: identifying and mitigating backdoor attacks in neural networks, *2019 IEEE Symposium on Security and Privacy (SP)*. IEEE; 2019:707–723.
+
+*   [41] H. Wang, K. Sreenivasan, S. Rajput, H. Vishwakarma, S. Agarwal, J.-y. Sohn, K. Lee, D. Papailiopoulos, Attack of the tails: yes, you really can backdoor federated learning, H. Larochelle, M. Ranzato, R. Hadsell, M. Balcan, H. Lin, eds. *Advances in Neural Information Processing Systems*. Curran Associates, Inc.; 2020;vol. 33:16070–16084.
+
+*   [42] C. Xie, K. Huang, P.-Y. Chen, B. Li, DBA: Distributed backdoor attacks against federated learning, *International Conference on Learning Representations*. 2020.
+
+*   [[43]](#Chp004_75-90_B9780443190377000120.xhtml#cs0040_3) C. Xie, O. Koyejo, I. Gupta, Fall of empires: Breaking Byzantine-tolerant SGD by inner product manipulation, *Uncertainty in Artificial Intelligence*. PMLR; 2020:261–270.
+
+*   [44] C. Xie, M. Chen, P.-Y. Chen, B. Li, CRFL: Certifiably robust federated learning against backdoor attacks, *International Conference on Machine Learning*. PMLR; 2021:11372–11382.
+
+*   [[45]](#Chp004_75-90_B9780443190377000120.xhtml#cs0075_5) X. Xu, Q. Wang, H. Li, N. Borisov, C.A. Gunter, B. Li, Detecting AI trojans using meta neural analysis, *2021 IEEE Symposium on Security and Privacy (SP)*. IEEE; 2021:103–120.
+
+*   [[46]](#Chp004_75-90_B9780443190377000120.xhtml#cs0010_2) Q. Yang, Y. Liu, T. Chen, Y. Tong, Federated machine learning: concept and applications, *ACM Transactions on Intelligent Systems and Technology (TIST)* 2019;10(2):1–19.
+
+*   [47] D. Yin, Y. Chen, R. Kannan, P. Bartlett, Byzantine-robust distributed learning: towards optimal statistical rates, *International Conference on Machine Learning*. PMLR; 2018:5650–5659.
+
+*   [[48]](#Chp004_75-90_B9780443190377000120.xhtml#cf0055) Z. Zhang, A. Panda, L. Song, Y. Yang, M. Mahoney, P. Mittal, R. Kannan, J. Gonzalez, Neurotoxin: Durable backdoors in federated learning, *International Conference on Machine Learning*. PMLR; 2022:26429–26446.
+
+*   [49] G. Zizzo, A. Rawat, M. Sinn, B. Buesser, FAT: Federated adversarial training, [arXiv:2012.01791](http://www.arxiv.org/abs/2012.01791); 2020.
+

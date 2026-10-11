@@ -1,0 +1,91 @@
+
+*   heterogeneous, [346](#Chp019_343-352_B9780443190377000296.xhtml#page_346)
+*   scalability, [346](#Chp019_343-352_B9780443190377000296.xhtml#page_346)
+
+*   Collaborative fairness (CF), [143](#Chp008_143-160_B9780443190377000168.xhtml), [144](#Chp008_143-160_B9780443190377000168.xhtml#page_144), [148–150](#Chp008_143-160_B9780443190377000168.xhtml#page_148), [155](#Chp008_143-160_B9780443190377000168.xhtml#page_155), [157](#Chp008_143-160_B9780443190377000168.xhtml#page_157), [158](#Chp008_143-160_B9780443190377000168.xhtml#page_158), [301](#Chp016_299-309_B9780443190377000260.xhtml#page_301), [304–307](#Chp016_299-309_B9780443190377000260.xhtml#page_304)
+    *   guarantee, [158](#Chp008_143-160_B9780443190377000168.xhtml#page_158)
+    *   Shapley, [149](#Chp008_143-160_B9780443190377000168.xhtml#page_149), [150](#Chp008_143-160_B9780443190377000168.xhtml#page_150), [155](#Chp008_143-160_B9780443190377000168.xhtml#page_155), [156](#Chp008_143-160_B9780443190377000168.xhtml#page_156)
+
+*   Collaborative learning, [136](#Chp007_125-141_B9780443190377000107.xhtml#page_136)
+
+*   Collaborative machine learning (CML), [281](#Chp015_281-296_B9780443190377000247.xhtml), [287](#Chp015_281-296_B9780443190377000247.xhtml#page_287)
+
+*   Collective personalized model vectors, [130](#Chp007_125-141_B9780443190377000107.xhtml#page_130)
+
+*   Colluding malicious clients, [80](#Chp004_75-90_B9780443190377000120.xhtml#page_80), [81](#Chp004_75-90_B9780443190377000120.xhtml#page_81)
+
+*   Common contractual federated learning projects, [386](#Chp021_369-391_B9780443190377000326.xhtml#page_386)
+
+*   Communication
+    *   asynchronous, [205](#Chp011_199-217_B978044319037700020X.xhtml#page_205)
+    *   channel, [321–323](#Chp017_311-328_B9780443190377000272.xhtml#page_321)
+    *   costs, [64](#Chp003_57-74_B9780443190377000119.xhtml#page_64), [65](#Chp003_57-74_B9780443190377000119.xhtml#page_65), [155–158](#Chp008_143-160_B9780443190377000168.xhtml#page_155)
+    *   data, [281](#Chp015_281-296_B9780443190377000247.xhtml)
+    *   efficiency, [57](#Chp003_57-74_B9780443190377000119.xhtml), [181](#Chp010_181-197_B9780443190377000181.xhtml), [183](#Chp010_181-197_B9780443190377000181.xhtml#page_183), [184](#Chp010_181-197_B9780443190377000181.xhtml#page_184), [199](#Chp011_199-217_B978044319037700020X.xhtml), [200](#Chp011_199-217_B978044319037700020X.xhtml#page_200), [241](#Chp013_237-255_B9780443190377000223.xhtml#page_241), [261](#Chp014_257-279_B9780443190377000235.xhtml#page_261), [330](#Chp018_329-341_B9780443190377000284.xhtml#page_330)
+    *   effort, [284](#Chp015_281-296_B9780443190377000247.xhtml#page_284)
+    *   frequency, [183](#Chp010_181-197_B9780443190377000181.xhtml#page_183)
+    *   graph, [182](#Chp010_181-197_B9780443190377000181.xhtml#page_182)
+    *   infrastructures, [313](#Chp017_311-328_B9780443190377000272.xhtml#page_313)
+    *   intensive, [247](#Chp013_237-255_B9780443190377000223.xhtml#page_247)
+    *   iteration, [125](#Chp007_125-141_B9780443190377000107.xhtml)
+    *   load, [231](#Chp012_219-235_B9780443190377000211.xhtml#page_231)
+    *   overhead, [64](#Chp003_57-74_B9780443190377000119.xhtml#page_64), [132](#Chp007_125-141_B9780443190377000107.xhtml#page_132), [181](#Chp010_181-197_B9780443190377000181.xhtml), [240](#Chp013_237-255_B9780443190377000223.xhtml#page_240), [242](#Chp013_237-255_B9780443190377000223.xhtml#page_242), [243](#Chp013_237-255_B9780443190377000223.xhtml#page_243), [247](#Chp013_237-255_B9780443190377000223.xhtml#page_247), [251](#Chp013_237-255_B9780443190377000223.xhtml#page_251), [320](#Chp017_311-328_B9780443190377000272.xhtml#page_320), [331](#Chp018_329-341_B9780443190377000284.xhtml#page_331)
+    *   performance, [240](#Chp013_237-255_B9780443190377000223.xhtml#page_240)
+    *   reduction, [125](#Chp007_125-141_B9780443190377000107.xhtml)
+    *   round, [57](#Chp003_57-74_B9780443190377000119.xhtml), [58](#Chp003_57-74_B9780443190377000119.xhtml#page_58), [63–65](#Chp003_57-74_B9780443190377000119.xhtml#page_63), [76](#Chp004_75-90_B9780443190377000120.xhtml#page_76), [78](#Chp004_75-90_B9780443190377000120.xhtml#page_78), [128](#Chp007_125-141_B9780443190377000107.xhtml#page_128), [132–135](#Chp007_125-141_B9780443190377000107.xhtml#page_132), [200](#Chp011_199-217_B978044319037700020X.xhtml#page_200), [294](#Chp015_281-296_B9780443190377000247.xhtml#page_294)
+    *   secure, [323](#Chp017_311-328_B9780443190377000272.xhtml#page_323)
+    *   single round, [243](#Chp013_237-255_B9780443190377000223.xhtml#page_243)
+    *   step, [65](#Chp003_57-74_B9780443190377000119.xhtml#page_65)
+    *   time, [231](#Chp012_219-235_B9780443190377000211.xhtml#page_231)
+
+*   Complete
+    *   data, [288](#Chp015_281-296_B9780443190377000247.xhtml#page_288)
+    *   dataset, [60](#Chp003_57-74_B9780443190377000119.xhtml#page_60)
+    *   training, [294](#Chp015_281-296_B9780443190377000247.xhtml#page_294)
+    *   training system, [222](#Chp012_219-235_B9780443190377000211.xhtml#page_222)
+
+*   Completed federated SV (ComFedSV), [292](#Chp015_281-296_B9780443190377000247.xhtml#page_292)
+
+*   Complexity, [17](#Chp001_3-28_B9780443190377000089_split_001.xhtml#page_17)
+    *   analysis, [17](#Chp001_3-28_B9780443190377000089_split_001.xhtml#page_17)
+    *   oracle, [17](#Chp001_3-28_B9780443190377000089_split_001.xhtml#page_17)
+
+*   Composite optimization, [4](#Chp001_3-28_B9780443190377000089_split_000.xhtml#page_4)
+
+*   Composition, [45](#Chp002_29-55_B9780443190377000090_split_001.xhtml#page_45), [60](#Chp003_57-74_B9780443190377000119.xhtml#page_60)
+
+*   Computation
+    *   complexity, [134](#Chp007_125-141_B9780443190377000107.xhtml#page_134)
+    *   steps, [18](#Chp001_3-28_B9780443190377000089_split_001.xhtml#page_18)
+
+*   Computational
+    *   complexity, [17](#Chp001_3-28_B9780443190377000089_split_001.xhtml#page_17)
+    *   cost, [9](#Chp001_3-28_B9780443190377000089_split_000.xhtml#page_9), [129](#Chp007_125-141_B9780443190377000107.xhtml#page_129), [132](#Chp007_125-141_B9780443190377000107.xhtml#page_132)
+    *   hard problem, [40](#Chp002_29-55_B9780443190377000090_split_000.xhtml#page_40)
+    *   mathematics, [17](#Chp001_3-28_B9780443190377000089_split_001.xhtml#page_17)
+    *   perspective, [10](#Chp001_3-28_B9780443190377000089_split_000.xhtml#page_10)
+    *   resources, [40](#Chp002_29-55_B9780443190377000090_split_000.xhtml#page_40)
+    *   security, [40](#Chp002_29-55_B9780443190377000090_split_000.xhtml#page_40)
+    *   techniques, [9](#Chp001_3-28_B9780443190377000089_split_000.xhtml#page_9)
+
+*   Concentrated Differential Privacy (CDP), [42](#Chp002_29-55_B9780443190377000090_split_000.xhtml#page_42)
+
+*   Conditional gradient, [7](#Chp001_3-28_B9780443190377000089_split_000.xhtml#page_7)
+
+*   Conditional mutual information (CMI), [290](#Chp015_281-296_B9780443190377000247.xhtml#page_290)
+
+*   Confidential computing, [51](#Chp002_29-55_B9780443190377000090_split_001.xhtml#page_51)
+
+*   Constant learning rate, [7](#Chp001_3-28_B9780443190377000089_split_000.xhtml#page_7)
+
+*   Contemporary defense, [162](#Chp009_161-179_B978044319037700017X.xhtml#page_162), [163](#Chp009_161-179_B978044319037700017X.xhtml#page_163), [171](#Chp009_161-179_B978044319037700017X.xhtml#page_171), [172](#Chp009_161-179_B978044319037700017X.xhtml#page_172)
+
+*   Contract theory, [306](#Chp016_299-309_B9780443190377000260.xhtml#page_306)
+
+*   Contributed gradients, [293](#Chp015_281-296_B9780443190377000247.xhtml#page_293)
+
+*   Contribution evaluation, [299–301](#Chp016_299-309_B9780443190377000260.xhtml)
+
+*   Controller, [370](#Chp021_369-391_B9780443190377000326.xhtml#page_370)
+
+*   Conventional data valuation, [284](#Chp015_281-296_B9780443190377000247.xhtml#page_284), [289](#Chp015_281-296_B9780443190377000247.xhtml#page_289), [290](#Chp015_281-296_B9780443190377000247.xhtml#page_290), [295](#Chp015_281-296_B9780443190377000247.xhtml#page_295)
