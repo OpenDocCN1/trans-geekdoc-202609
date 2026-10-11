@@ -1,0 +1,235 @@
+
+# PHP SOAP 非 WSDL 模式客户端示例
+
+## 代码示例：Hello_There_Non_WSDL.php
+
+```php
+<?php
+#  Hello_There_Non_WSDL.php
+#- Copyright 2009-2015 (c) HerongYang.com. All Rights Reserved.
+#
+   $client = new SoapClient(null, array(
+      'location' =>
+         "https://www.herongyang.com/Service/Hello_SOAP_11.php",
+      'uri'      => "https://www.herongyang.com/Service/",
+      'trace'    => 1 ));
+
+   echo("\nDumping client object:\n");
+   var_dump($client);
+
+   $return = $client->__soapCall("Hello",array());
+   echo("\nReturning value of __soapCall() call: ".$return);
+
+   echo("\nDumping request headers:\n"
+      .$client->__getLastRequestHeaders());
+
+   echo("\nDumping request:\n".$client->__getLastRequest());
+
+   echo("\nDumping response headers:\n"
+      .$client->__getLastResponseHeaders());
+
+   echo("\nDumping response:\n".$client->__getLastResponse());
+?>
+```
+
+## 运行输出
+
+运行此示例脚本将得到以下输出：
+
+```
+Dumping client object:
+object(SoapClient)#1 (4) {
+  ["uri"]=>
+  string(34) "https://www.herongyang.com/Service/"
+  ["location"]=>
+  string(51) "https://www.herongyang.com/Service/Hello_SOAP_11.php"
+  ["trace"]=>
+  int(1)
+  ["_soap_version"]=>
+  int(1)
+}
+
+Returning value of __soapCall() call:
+Dumping request headers:
+POST /Service/Hello_SOAP_11.php HTTP/1.1
+Host: www.herongyang.com
+Connection: Keep-Alive
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "https://www.herongyang.com/Service/#Hello"
+Content-Length: 399
+
+
+Dumping request:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:ns1="https://www.herongyang.com/Service/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+ <SOAP-ENV:Body>
+  <ns1:Hello/>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+Dumping response headers:
+HTTP/1.1 200 OK
+Server: Apache
+Keep-Alive: timeout=2, max=200
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/xml
+
+Dumping response:
+<soapenv:Envelope
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:hy="https://www.herongyang.com/Service/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <hy:HelloResponse>
+      Hello from server - herongyang.com.
+    </hy:HelloResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
+```
+
+## 输出分析
+
+输出显示：
+
+*   `Hello_There_Non_WSDL.php` 的工作方式与 WSDL 模式版本相同。
+*   如果将此输出与 WSDL 输出进行比较，SOAP 扩展生成的请求头有一个区别：`SOAPAction` 不再为空。它的值为 `"https://www.herongyang.com/Service/#Hello"`。
+
+---
+
+# SOAP 服务器函数和示例
+
+本章提供关于 SOAP 服务器函数和示例的教程示例和说明。主题包括 SOAP 服务器类和函数简介、SOAP 服务器示例 `HelloServer.php`、SOAP 1.1 和 1.2 的服务器示例、WSDL 模式下的服务器示例。
+
+## 相关章节
+
+*   [SoapServer - SOAP 服务器类和函数](#part0155.xhtml)
+*   [HelloServer.php - 第一个 SOAP 服务器应用程序](#part0156.xhtml)
+*   [HelloServer12.php - 第一个 SOAP 1.2 服务器应用程序](#part0157.xhtml)
+*   [HelloServerWsdl.php - WSDL 模式下的 SOAP 1.2 服务器应用程序](#part0158.xhtml)
+
+## 核心要点
+
+*   SOAP 扩展易于使用，可快速设置 SOAP 服务器以提供 Web 服务。
+*   SOAP 扩展支持 SOAP 1.1 和 1.2 规范。
+*   WSDL 文档实际上很容易理解。
+
+## 练习
+
+编写一个温度转换 SOAP 服务。
+
+---
+
+# SoapServer - SOAP 服务器类和函数
+
+本节介绍 SOAP 扩展库中提供的 `SoapServer` 类和函数，用于编写 SOAP 服务器应用程序。
+
+如果阅读 SOAP 扩展参考页面，你将看到 SOAP 扩展通过一个名为 `SoapServer` 的类支持 SOAP 服务器应用程序，该类提供以下函数：
+
+*   `SoapServer->__construct()` - 构造一个新的 `SoapServer` 对象
+*   `SoapServer->addFunction()` - 添加一个或多个处理 SOAP 请求的函数
+*   `SoapServer->setClass()` - 设置处理 SOAP 请求的类
+*   `SoapServer->handle()` - 处理 SOAP 请求
+*   `SoapServer->getFunctions()` - 返回已定义函数的列表
+*   ...
+
+### `SoapServer->__construct()`
+
+`SoapServer->__construct()` 允许你使用以下语法构造一个新的 `SoapServer` 对象：
+
+```php
+__construct ( mixed $wsdl [, array $options] );
+```
+
+其中 `wsdl` 指定 WSDL 文档的 URL，`options` 指定选项列表：
+
+```php
+'uri'          => "...", # SOAP 服务的命名空间
+'soap_version' => SOAP_1_1 | SOAP_1_2,
+'actor'        => "...", # 角色
+'encoding'     => "...", # 编码名称
+'classmap'     => "...", # WSDL 类型到 PHP 类的映射
+...
+```
+
+请注意，`SoapServer` 对象可以通过两种模式构造：WSDL 模式和非 WSDL 模式：
+
+```php
+__construct( "..."[, array $options] ); # WSDL 模式，许多选项由 WSDL 文档提供
+__construct( null, array $options );    # 非 WSDL 模式，'uri' 是必需选项
+```
+
+### `SoapServer->addFunction()`
+
+`SoapServer->addFunction()` 允许你添加一个或多个函数来处理 SOAP 请求。要添加的函数是在当前 PHP 程序文件中定义的函数。
+
+```php
+$obj->addFunction("func");              # 添加一个函数
+$obj->addFunction(array("func1",...));  # 添加多个函数
+$obj->addFunction(SOAP_FUNCTIONS_ALL);  # 添加所有函数
+```
+
+### `SoapServer->setClass()`
+
+`SoapServer->setClass()` 允许你调用指定类中的方法来处理 SOAP 请求。
+
+```php
+$obj->setClass("cls");
+```
+
+### `SoapServer->handle()`
+
+`SoapServer->handle()` 允许你将执行控制权返回给 SOAP 扩展以处理传入的 SOAP 请求。
+
+```php
+$obj->handle();
+```
+
+### `SoapServer->getFunctions()`
+
+`SoapServer->getFunctions()` 允许你获取已分配处理 SOAP 请求的所有函数的列表。
+
+```php
+array $a = $obj->getFunctions();
+```
+
+---
+
+# HelloServer.php - 第一个 SOAP 服务器应用程序
+
+本节提供关于如何编写简单 SOAP 服务器应用程序的教程示例。`HelloServer.php` 示例定义了一个 `hello()` 函数，将其添加到 SOAP 服务器，并等待客户端程序调用。
+
+好了，现在让我们构建第一个 SOAP 服务器。我希望第一个服务器执行一个非常简单的功能：根据输入的名称返回问候字符串。以下是我的版本，名为 `HelloServer.php`：
+
+```php
+<?php
+#  HelloServer.php
+#- Copyright 2009-2015 (c) HerongYang.com. All Rights Reserved.
+#
+function hello($someone) {
+   return "Hello " . $someone . "!";
+}
+   $server = new SoapServer(null,
+      array('uri' => "urn://www.herong.home/res"));
+   $server->addFunction("hello");
+   $server->handle();
+?>
+```
+
+服务器应用程序已准备就绪。请注意：
+
+*   此 SOAP 服务器应用程序不能作为独立的 SOAP 服务器使用。它需要一个 HTTP 服务器来接收 SOAP 请求，以及一个 PHP 运行时作为 CGI 来处理 SOAP 请求。
+*   `uri` 值只是一个唯一标识，用作响应消息的命名空间。
+
+我将使用的 HTTP 服务器是 Apache Server。它已经正确配置以与 PHP CGI 接口配合工作。我所要做的就是将服务器应用程序移动到 Apache 文档目录：
+
+```bash
+herong> copy HelloServer.php \apache\htdocs
+```
+
+为了测试我的服务器应用程序，我编写了这个客户端应用程序 `HelloClient.php`：

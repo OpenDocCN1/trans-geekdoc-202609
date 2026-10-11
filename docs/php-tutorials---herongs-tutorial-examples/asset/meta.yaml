@@ -1,0 +1,906 @@
+name: PHP Tutorials - Herong's Tutorial Examples
+slug: php-tutorials---herongs-tutorial-examples
+name_cn: PHP 教程 - Herong 的教程示例
+toc:
+- - '##'
+  - PHP 教程 - Herong 的教程示例
+- - '###'
+  - PHP 7.3 简介与安装
+- - '####'
+  - 什么是 PHP
+- - '###'
+  - PHP 7.3 简介与安装
+- - '####'
+  - 在 Windows 上下载并安装 PHP 7.3
+- - '####'
+  - '"php -help" - 命令行选项'
+- - '####'
+  - '"php -m" - 内置模块'
+- - '####'
+  - '"php -i" - PHP 引擎信息'
+- - '####'
+  - php.ini - PHP 运行时配置
+- - '####'
+  - Hello.php - 我的第一个 PHP 脚本
+- - '####'
+  - '"php -a" - PHP 交互式 Shell'
+- - '####'
+  - 下载和安装 PHP 文档
+- - '###'
+  - PHP 脚本文件语法
+- - '####'
+  - PHP 脚本源代码文件格式
+- - '####'
+  - PHP 脚本处理规则
+- - '####'
+  - PHP 语句分隔符和注释
+- - '###'
+  - PHP 数据类型和数据字面量
+- - '####'
+  - 要点
+- - '####'
+  - PHP 支持的数据类型
+- - '####'
+  - PHP 支持的数据字面量
+- - '###'
+  - 整数、字符串及其他数据类型的数据字面量示例
+- - '###'
+  - 整数和浮点数值的溢出
+- - '####'
+  - 什么是溢出？
+- - '####'
+  - PHP 数值溢出处理
+- - '####'
+  - NumericOverflow.php 示例脚本
+- - '###'
+  - PHP 变量、引用和常量
+- - '####'
+  - 要点总结
+- - '####'
+  - 什么是变量？
+- - '####'
+  - VariableTest.php 示例脚本
+- - '####'
+  - 什么是引用？
+- - '####'
+  - PHP 引用规则
+- - '####'
+  - ReferenceTest.php 示例
+- - '####'
+  - 变量变量名
+- - '####'
+  - PHP 变量变量
+- - '####'
+  - VariableVariableName.php
+- - '####'
+  - 什么是常量？
+- - '####'
+  - ConstantTest.php
+- - '###'
+  - 表达式、运算和类型转换
+- - '####'
+  - 什么是表达式
+- - '####'
+  - 什么是运算
+- - '####'
+  - OperationTest.php
+- - '####'
+  - 运算的优先级
+- - '####'
+  - PrecedenceTest.php
+- - '####'
+  - TypeAutoConversion.php
+- - '####'
+  - '"if ... elseif" 语句'
+- - '####'
+  - IfStatements.php
+- - '####'
+  - SwitchStatements.php
+- - '####'
+  - “while” 语句
+- - '####'
+  - 单语句 “while”
+- - '####'
+  - 多语句 “while”
+- - '####'
+  - 多语句 “while ... endwhile”
+- - '####'
+  - WhileStatements.php
+- - '####'
+  - “for” 语句
+- - '####'
+  - 1. 空语句 “for”
+- - '####'
+  - 2. 单语句 “for”
+- - '####'
+  - 3. 多语句 “for”
+- - '####'
+  - 4. 多语句 “for ... endfor”
+- - '####'
+  - ForStatements.php
+- - '####'
+  - “do ... while” 语句
+- - '####'
+  - 1. 单语句 “do ... while”
+- - '####'
+  - 2. 多语句 “do ... while”
+- - '####'
+  - “break” 和 “continue” 语句
+- - '####'
+  - 1. 无选项的 “break” 语句
+- - '####'
+  - 2. 带整数选项 n 的 "break" 语句
+- - '####'
+  - 3. 不带选项的 "continue" 语句
+- - '####'
+  - 4. 带整数选项 n 的 "continue" 语句
+- - '####'
+  - 要点
+- - '####'
+  - What Is a Function?
+- - '###'
+  - 函数声明、参数和返回值
+- - '####'
+  - 函数调用操作
+- - '####'
+  - FunctionCallOperations.php
+- - '####'
+  - 定义一个返回值的函数
+- - '####'
+  - 定义一个返回 NULL 的函数
+- - '####'
+  - 向函数传递参数
+- - '####'
+  - 按值传递参数的示例
+- - '####'
+  - PassByValue.php 示例
+- - '####'
+  - 在传值参数中使用引用
+- - '####'
+  - PassByValueWithReference.php
+- - '####'
+  - PHP 5 致命错误
+- - '####'
+  - PHP 7 解析错误
+- - '####'
+  - 传引用参数示例
+- - '####'
+  - PassByReference.php
+- - '####'
+  - 可变长度参数列表
+- - '####'
+  - ArgumentList.php
+- - '####'
+  - 为参数变量提供默认值
+- - '####'
+  - ArgumentDefaultValues.php
+- - '####'
+  - 示例：函数参数默认值
+- - '####'
+  - FunctionReturnValues.php
+- - '####'
+  - FunctionReturnReferences.php
+- - '####'
+  - FunctionTips.php
+- - '####'
+  - 禁止按值传递参数并使用引用
+- - '###'
+  - 数组 - 有序映射
+- - '####'
+  - 要点
+- - '####'
+  - 什么是数组
+- - '####'
+  - 创建数组 - 示例
+- - '####'
+  - ArrayTest.php 示例代码
+- - '####'
+  - 运行结果
+- - '####'
+  - 数组相关内置函数
+- - '####'
+  - ArrayLoop.php 示例代码
+- - '####'
+  - 运行结果
+- - '####'
+  - 数组函数使用示例
+- - '####'
+  - ArrayTips.php
+- - '####'
+  - split() 在 PHP 5.3.0 中被弃用，在 PHP 7.0.0 中被移除
+- - '####'
+  - each() 自 PHP 7.2.0 起被弃用
+- - '###'
+  - 与操作系统交互
+- - '####'
+  - '`$argv[]` - 命令行参数'
+- - '####'
+  - 执行外部程序的选项
+- - '####'
+  - 1. `` `command` `` 反引号运算符
+- - '####'
+  - 2. `shell_exec()` 函数
+- - '####'
+  - shell_exec() 函数
+- - '####'
+  - exec() 函数
+- - '####'
+  - system() 函数
+- - '####'
+  - passthru() 函数
+- - '####'
+  - popen() 函数
+- - '####'
+  - proc_open() 函数
+- - '####'
+  - 反引号操作符 \`command\`
+- - '####'
+  - 使用示例
+- - '####'
+  - exec() 函数详解
+- - '####'
+  - 使用示例
+- - '####'
+  - system() 函数详解
+- - '####'
+  - 使用示例
+- - '####'
+  - passthru() 函数详解
+- - '####'
+  - popen() - 执行外部程序
+- - '####'
+  - proc_open() - 执行外部程序
+- - '####'
+  - memory_get_usage() - 内存使用信息
+- - '####'
+  - memory-test.php
+- - '####'
+  - 内存溢出错误分析
+- - '####'
+  - set_time_limit() - max_execution_time
+- - '####'
+  - 要点总结
+- - '###'
+  - 类与对象简介
+- - '####'
+  - 主题
+- - '####'
+  - 核心要点
+- - '####'
+  - 什么是类
+- - '####'
+  - 什么是对象
+- - '####'
+  - 什么是构造函数
+- - '####'
+  - 什么是静态方法
+- - '####'
+  - 什么是静态变量
+- - '####'
+  - 什么是超类和子类
+- - '####'
+  - 什么是抽象类？
+- - '####'
+  - 什么是抽象方法？
+- - '####'
+  - 什么是接口？
+- - '####'
+  - 什么是 Trait
+- - '####'
+  - 什么是重载属性
+- - '####'
+  - 什么是重载方法
+- - '####'
+  - 什么是对象属性迭代
+- - '####'
+  - 什么是对象克隆
+- - '####'
+  - 什么是对象序列化
+- - '####'
+  - 对象变量中包含什么
+- - '####'
+  - 更新共享对象的变量
+- - '####'
+  - 作为函数参数传递对象
+- - '###'
+  - 将 PHP 与 Apache Web 服务器集成
+- - '####'
+  - 要点
+- - '####'
+  - 下载适用于 Windows 的 Apache 2.4.37 二进制版
+- - '####'
+  - 在 Windows 系统上安装 Apache 2.4.37
+- - '####'
+  - 将 HTML 文档发布为网页
+- - '####'
+  - 启动和停止 Apache 服务器
+- - '####'
+  - 为 PHP CGI 脚本配置 Apache
+- - '####'
+  - PHP 引擎和 `$_SERVER` 数组
+- - '####'
+  - '`$_SERVER` 中的操作系统信息'
+- - '####'
+  - HttpRequestDetails.php
+- - '####'
+  - '`$_SERVER` 中的 Web 服务器信息'
+- - '####'
+  - '`$_GET` 和 `$_REQUEST` 中的信息'
+- - '####'
+  - 将 `$_REQUEST` 键注册为全局变量
+- - '####'
+  - RequestVariables.php
+- - '###'
+  - 在 PHP 脚本中创建和管理会话
+- - '####'
+  - 要点：
+- - '####'
+  - 什么是会话
+- - '####'
+  - 什么是会话？
+- - '####'
+  - PHP 如何支持会话
+- - '####'
+  - PHP 会话管理
+- - '####'
+  - 内置会话变量和函数
+- - '####'
+  - 会话测试脚本页面
+- - '####'
+  - 1. SessionPage1.php
+- - '####'
+  - SessionPage1.php
+- - '####'
+  - 2. SessionPage2.php
+- - '####'
+  - SessionPage2.php
+- - '####'
+  - 3. SessionPage3.php
+- - '####'
+  - SessionPage3.php
+- - '####'
+  - 运行会话测试脚本页面
+- - '####'
+  - 不使用 Cookie 管理会话 ID
+- - '####'
+  - What Is a Cookie?
+- - '####'
+  - CookieTest.php
+- - '####'
+  - 当我点击浏览器的刷新按钮时，页面发生了如下变化：
+- - '####'
+  - ob_start() - 输出缓冲函数
+- - '####'
+  - CookieOutputBuffer.php
+- - '####'
+  - 保存在硬盘上的持久 Cookie
+- - '####'
+  - CookiePersisted.php
+- - '####'
+  - 其他 Cookie 属性 - Domain 和 Path
+- - '####'
+  - CookieProperties.php
+- - '###'
+  - 在 PHP 脚本中控制 HTTP 响应头行
+- - '####'
+  - 什么是 HTTP 响应
+- - '####'
+  - HTTP 响应头行
+- - '####'
+  - header() - 插入原始头行
+- - '####'
+  - HttpRequestGet.php - 查看头行
+- - '####'
+  - 静态文件的响应头行
+- - '####'
+  - HttpHeaderLines.php - 插入头行的示例
+- - '####'
+  - 'Location: - 强制浏览器重定向到另一个 URL'
+- - '####'
+  - 'Content-Type: - 生成非 HTML 响应体'
+- - '####'
+  - 'Content-Disposition: - 发送文件供下载'
+- - '####'
+  - PHP HTTP 响应头控制教程
+- - '####'
+  - PHP 引擎如何定义头部行
+- - '####'
+  - HttpHeaderLines.php
+- - '####'
+  - HttpRedirect.php
+- - '####'
+  - GetFile.php
+- - '####'
+  - Download.php
+- - '###'
+  - 管理文件上传
+- - '####'
+  - 文件上传 Web 表单
+- - '####'
+  - 文件上传 PHP 脚本
+- - '####'
+  - PHP 文件上传处理脚本
+- - '####'
+  - file-upload-handler.php
+- - '###'
+  - MySQL 服务器连接和访问函数
+- - '####'
+  - 要点
+- - '####'
+  - 为 MySQL 服务器访问配置 PHP
+- - '####'
+  - for PHP 7
+- - '####'
+  - for PHP 5
+- - '####'
+  - MySqlTest.php
+- - '####'
+  - mysqli_connect() 和其他 MySQL 函数
+- - '####'
+  - MySqlLoop.php - MySQL 函数测试
+- - '####'
+  - MySqlLoop.php
+- - '###'
+  - 管理目录、文件和图像的函数
+- - '####'
+  - 要点
+- - '####'
+  - opendir() 和目录管理函数
+- - '####'
+  - OpendirTest.php
+- - '####'
+  - file_exists() 和文件测试函数
+- - '####'
+  - FileExistsTest.php - 文件测试示例
+- - '####'
+  - FileExistsTest.php
+- - '####'
+  - fopen() 和文件输入/输出函数
+- - '####'
+  - PHP 文件操作函数参考
+- - '####'
+  - 文件指针操作函数
+- - '####'
+  - File_Input_Output_Test.php - 文件输入/输出示例
+- - '####'
+  - File_Input_Output_Test.php
+- - '####'
+  - readfile() 和特殊文件处理函数
+- - '####'
+  - ShowPhoto.php - 简单幻灯片展示脚本
+- - '####'
+  - PhotoShow.php
+- - '###'
+  - SOAP 扩展函数和调用 Web 服务
+- - '####'
+  - 章节导航
+- - '####'
+  - 核心要点
+- - '####'
+  - WSDL 和 SOAP 概述
+- - '####'
+  - PHP 的 SOAP 实现
+- - '####'
+  - 什么是 SOAP？
+- - '####'
+  - 开启默认 SOAP 扩展
+- - '####'
+  - PHP 7
+- - '####'
+  - PHP 5
+- - '####'
+  - Hello_There.php - SOAP 第一个示例
+- - '####'
+  - Hello_There.php
+- - '####'
+  - SoapClient - SOAP 客户端类和函数
+- - '####'
+  - SoapClient->__getLastResponse()
+- - '####'
+  - Hello_There_Dump.php - 调试 SOAP 消息
+- - '####'
+  - Hello_There_Dump.php
+- - '####'
+  - 什么是 WSDL
+- - '####'
+  - 什么是 WSDL？
+- - '####'
+  - 在非 WSDL 模式下使用 SOAP 扩展
+- - '####'
+  - PHP SOAP 非 WSDL 模式客户端示例
+- - '####'
+  - 代码示例：Hello_There_Non_WSDL.php
+- - '####'
+  - Hello_There_Non_WSDL.php
+- - '####'
+  - 运行输出
+- - '####'
+  - 输出分析
+- - '####'
+  - SOAP 服务器函数和示例
+- - '####'
+  - 相关章节
+- - '####'
+  - 核心要点
+- - '####'
+  - 练习
+- - '####'
+  - SoapServer - SOAP 服务器类和函数
+- - '####'
+  - '`SoapServer->__construct()`'
+- - '####'
+  - '`SoapServer->addFunction()`'
+- - '####'
+  - '`SoapServer->setClass()`'
+- - '####'
+  - '`SoapServer->handle()`'
+- - '####'
+  - '`SoapServer->getFunctions()`'
+- - '####'
+  - HelloServer.php - 第一个 SOAP 服务器应用程序
+- - '####'
+  - HelloServer.php
+- - '####'
+  - HelloClient.php - SOAP 1.1 客户端应用程序
+- - '####'
+  - HelloClient.php
+- - '####'
+  - HelloServer12.php
+- - '####'
+  - HelloClient12.php
+- - '####'
+  - 创建 WSDL 模式的 SOAP 1.2 服务器应用
+- - '####'
+  - HelloServerWsdl.php
+- - '####'
+  - HelloClientWsdl.php
+- - '###'
+  - Web 应用程序本地化概述
+- - '####'
+  - 概述
+- - '####'
+  - 字符串传输路径
+- - '####'
+  - 从 PHP 文件到 Web 浏览器
+- - '####'
+  - 从数据库到 Web 浏览器
+- - '####'
+  - 从 Web 浏览器到数据库
+- - '####'
+  - 从 PHP 脚本输出 ASCII 字符串
+- - '####'
+  - HelpASCII.php
+- - '####'
+  - 在 HTML 文档中使用非 ASCII 字符
+- - '####'
+  - 要点
+- - '####'
+  - 在 HTML 文档中使用非 ASCII 字符的基本规则
+- - '####'
+  - HTML 文档中的法文字符 - UTF-8 编码
+- - '####'
+  - HTML 文档中的法文字符 - ISO-8859-1 编码
+- - '####'
+  - 使用非 ASCII 字符的 HTML 文档
+- - '####'
+  - 法文字符 - ISO-8859-1 编码
+- - '####'
+  - 中文字符 - UTF-8 编码
+- - '####'
+  - 中文字符 - GB2312 编码
+- - '####'
+  - HTML 文档中的多语言字符
+- - '####'
+  - 在 PHP 脚本字符串字面量中使用非 ASCII 字符
+- - '####'
+  - 要点：
+- - '####'
+  - HTML 文档中使用非 ASCII 字符的基本规则
+- - '####'
+  - 字符串字面量中的法文字符 - UTF-8 编码
+- - '####'
+  - HelpUtf8French.php
+- - '####'
+  - HTML 文档中的法文字符 - ISO-8859-1 编码
+- - '####'
+  - HelpIsoFrench.php
+- - '####'
+  - 字符串字面量中的中文字符 - UTF-8 编码
+- - '####'
+  - HelpUtf8Chinese.php
+- - '####'
+  - 字符串字面量中的中文字符 - GB2312 编码
+- - '####'
+  - HelpGb2312Chinese.php
+- - '####'
+  - 字符串字面量中的多语言字符
+- - '####'
+  - HelpUtf8MultiLanguages.php
+- - '####'
+  - 从输入表单接收非 ASCII 字符
+- - '####'
+  - 从输入表单接收非 ASCII 字符的基本规则
+- - '####'
+  - 使用 GET 方法接收非 ASCII 字符
+- - '####'
+  - InputIsoGet.php
+- - '####'
+  - 在 UTF-8 编码中接收非 ASCII 字符
+- - '####'
+  - InputUtf8Get.php
+- - '####'
+  - 解码 HTML 实体
+- - '####'
+  - InputIsoGetDecoded.php 示例
+- - '####'
+  - InputIsoGetDecoded.php
+- - '####'
+  - '"mbstring" 扩展和非 ASCII 编码管理'
+- - '####'
+  - 要点
+- - '####'
+  - '"mbstring" - 多字节字符串扩展'
+- - '####'
+  - mb_convert_encoding() 和其他 mbstring 函数
+- - '####'
+  - 使用 "mbstring" 函数的示例
+- - '####'
+  - MbStringBasic.php
+- - '####'
+  - 管理 HTTP 输入和输出编码
+- - '####'
+  - MbStringHttp.php 示例分析
+- - '####'
+  - PHP 脚本代码
+- - '####'
+  - MbStringHttp.php
+- - '####'
+  - 测试输入
+- - '####'
+  - 返回页面源码分析
+- - '####'
+  - 观察结果
+- - '####'
+  - 转储文件内容
+- - '####'
+  - 结论
+- - '####'
+  - 使用 MySQL 服务器管理非 ASCII 字符串
+- - '####'
+  - 相关章节
+- - '####'
+  - 核心要点
+- - '####'
+  - 在数据库中存储非 ASCII 字符
+- - '####'
+  - 与数据库传输非 ASCII 字符
+- - '####'
+  - 字符集列表
+- - '####'
+  - 指定字符集层级
+- - '####'
+  - 传输非 ASCII 字符
+- - '####'
+  - MySqlUnicode.php - MySQL Unicode UTF-8 编码示例
+- - '####'
+  - MySqlUnicode.php
+- - '###'
+  - 解析和管理 HTML 文档
+- - '####'
+  - 用于 HTML 文档的 DOM 扩展
+- - '####'
+  - 解析和遍历 HTML 文档
+- - '####'
+  - Traverses-HTML-DOM-Tree.php
+- - '####'
+  - 构建新的 HTML 文档
+- - '####'
+  - Create-HTML-DOM-Document.php
+- - '####'
+  - 使用 LIBXML_NOBLANKS 加载 HTML 文档
+- - '####'
+  - 测试 1 - 不使用 LIBXML_NOBLANKS 运行脚本以查看所有空白节点：
+- - '####'
+  - 测试 2 - 使用 LIBXML_NOBLANKS 运行脚本以查看移除了哪些空白节点。
+- - '####'
+  - Load-HTML-with-NOBLANKS.php
+- - '####'
+  - 移除 HTML 文档中的空白字符
+- - '####'
+  - Remove-Whitespaces-in-HTML.php
+- - '####'
+  - HTML 文档中的 DOCTYPE 元素
+- - '####'
+  - 移除 HTML 文档中的虚拟元素
+- - '####'
+  - PHP 脚本：移除 HTML 中的虚拟元素
+- - '####'
+  - Remove-Dummy-Elements-in-HTML.php
+- - '####'
+  - 脚本说明
+- - '####'
+  - 包含虚拟元素和空白字符的 HTML 文档示例
+- - '####'
+  - 移除虚拟元素后的输出
+- - '####'
+  - 输出分析
+- - '####'
+  - 在 CentOS 上安装 DOM 扩展
+- - '###'
+  - 配置和发送电子邮件
+- - '####'
+  - 要点总结
+- - '####'
+  - 使用本地 Windows 系统作为邮件服务器
+- - '####'
+  - 从 PHP 脚本发送电子邮件
+- - '####'
+  - 配置 PHP 并发送测试邮件
+- - '####'
+  - MailTest.php
+- - '####'
+  - 在 Linux 系统上发送电子邮件
+- - '####'
+  - Mail-Test-2.php
+- - '####'
+  - 在 CentOS 系统上安装 PHPMailer
+- - '####'
+  - PHPMailer-Test.php
+- - '####'
+  - 使用 PHPMailer 发送本地邮件
+- - '####'
+  - PHPMailer 本地发送邮件选项
+- - '####'
+  - PHPMailer-Send-Email-Locally.php
+- - '####'
+  - 使用 PHPMailer 发送远程邮件
+- - '####'
+  - PHPMailer-Send-Email-Remotely.php
+- - '####'
+  - 使用 PHPMailer 配合 SMTPS 协议
+- - '####'
+  - PHPMailer 发送邮件教程
+- - '####'
+  - PHPMailer 使用 SMTPS 协议发送邮件
+- - '####'
+  - PHPMailer-Send-Email-SMTPS.php
+- - '####'
+  - 常见错误：证书验证失败
+- - '####'
+  - PHP 5.6 和 PHPMailer 5.2
+- - '####'
+  - 1. 检查 PHP 版本
+- - '####'
+  - 2. 安装 Remi 的 RPM 仓库
+- - '####'
+  - 3. 从 Remi 仓库安装 php-PHPMailer
+- - '####'
+  - 4. 查找 php-PHPMailer 安装路径
+- - '####'
+  - 5. 运行测试脚本
+- - '####'
+  - PHPMailer-PHP-5.php
+- - '####'
+  - 避免直接使用 `rpm` 命令安装
+- - '####'
+  - 从源代码安装 PHPMailer
+- - '####'
+  - PHPMailer 安装步骤
+- - '###'
+  - 图像和图片处理
+- - '####'
+  - GD 图像函数库
+- - '####'
+  - GD 库 - 绘制图形元素
+- - '####'
+  - GD 库 - 创建图像
+- - '####'
+  - GD-Create-Image.php
+- - '####'
+  - GD 库 - 在 1 页上打印 2 张图片
+- - '####'
+  - GD-2-To-1-Page.php
+- - '####'
+  - GD 库 - 创建透明图像
+- - '####'
+  - GD-Create-Transparent-Image.php
+- - '####'
+  - 文字网页上的透明图像
+- - '####'
+  - GD 库 - 填充透明图像
+- - '###'
+  - 管理 ZIP 归档文件
+- - '####'
+  - ZipArchive 类
+- - '####'
+  - 创建新的 ZIP 归档
+- - '####'
+  - zip-create-new.php
+- - '####'
+  - 从 ZIP 归档中提取文件
+- - '####'
+  - zip-extract-file.php
+- - '####'
+  - 带目录创建 ZIP 归档
+- - '####'
+  - zip-with-directory.php
+- - '####'
+  - 创建用于下载的 ZIP 归档
+- - '####'
+  - zip-in-temp-file.php
+- - '####'
+  - 要点
+- - '###'
+  - 在 macOS 上管理 PHP 引擎和模块
+- - '####'
+  - macOS 预装的 PHP 版本
+- - '####'
+  - 在 macOS 上升级 PHP 引擎
+- - '###'
+  - 在 CentOS 上管理 PHP 引擎和模块
+- - '####'
+  - CentOS 预装的 PHP 版本
+- - '####'
+  - 在 CentOS 上安装 PHP 扩展
+- - '####'
+  - CentOS 6 预装的 PHP 版本
+- - '####'
+  - 在 CentOS 计算机上使用 PHP Composer
+- - '####'
+  - 什么是 PHP Composer？
+- - '###'
+  - 归档教程
+- - '####'
+  - 归档：下载和安装用于 Windows 的 PHP 7.0
+- - '####'
+  - 归档：下载和安装用于 Windows 的 PHP 7.0.2
+- - '####'
+  - 归档：下载和安装用于 Windows 的 PHP 5.6.6
+- - '####'
+  - 归档：下载和安装用于 Windows 的 PHP 5.4.3
+- - '####'
+  - 归档：下载和安装用于 Windows 的 PHP 5.2.2
+- - '####'
+  - 归档：下载和安装用于 Windows 的 PHP 5.0.4
+- - '####'
+  - 归档：将 PHP 作为 CGI 添加到 IIS
+- - '####'
+  - 归档：下载用于 Windows 的 Apache HTTP Server 2.4.12
+- - '####'
+  - 归档：在 Windows 上安装 Apache HTTP Server 2.4.12
+- - '####'
+  - Apache HTTP Server 2.4.12 安装与配置
+- - '####'
+  - 已归档：将 PHP 脚本发布为网页
+- - '####'
+  - 已归档：php_mysql.dll 库的配置
+- - '####'
+  - MySqlTest.php
+- - '####'
+  - 已归档：使用 php_mysql.dll 库的 mysql_connect()
+- - '####'
+  - 已归档：使用 php_mysql.dll 库的 MySqlLoop.php
+- - '####'
+  - MySqlLoop.php
+- - '####'
+  - Get_Temperature.php - SOAP 的第一个示例
+- - '####'
+  - Get_Temperature.php
+- - '####'
+  - Get_Temperature_Dump.php - 转储调试信息
+- - '####'
+  - Get_Temperature_Dump.php
+- - '####'
+  - MySqlUnicode.php 使用 php_mysql.dll 库
+- - '####'
+  - MySQL Unicode PHP 示例
+- - '####'
+  - PHP 代码
+- - '####'
+  - MySqlUnicode.php
+- - '####'
+  - 运行结果
+- - '####'
+  - 参考资料
+- - '####'
+  - 关于本书
