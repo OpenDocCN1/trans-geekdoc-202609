@@ -1,0 +1,22 @@
+![](cover.jpg)
+
+## Deep Learning with PyTorch, Second Edition
+
+1.  [Welcome](#welcome.html)
+2.  [1\_Introducing\_deep\_learning\_and\_the\_PyTorch\_Library](#chapter-1.html)
+3.  [2\_Pretrained\_networks](#chapter-2.html)
+4.  [3\_It\_starts\_with\_a\_tensor](#chapter-3.html)
+5.  [4\_Real-world\_data\_representation\_using\_tensors](#chapter-4.html)
+6.  [5\_The\_mechanics\_of\_learning](#chapter-5.html)
+7.  [6\_Using\_a\_neural\_network\_to\_fit\_the\_data](#chapter-6.html)
+8.  [7\_Telling\_birds\_from\_airplanes:\_Learning\_from\_images](#chapter-7.html)
+9.  [8\_Using\_convolutions\_to\_generalize](#chapter-8.html)
+10.  [9\_How\_transformers\_work](#chapter-9.html)
+11.  [10\_Diffusion\_models\_for\_images](#chapter-10.html)
+12.  [11\_Using\_PyTorch\_to\_fight\_cancer](#chapter-11.html)
+13.  [12\_Combining\_data\_sources\_into\_a\_unified\_dataset](#chapter-12.html)
+14.  [13\_Training\_a\_classification\_model\_to\_detect\_suspected\_tumors](#chapter-13.html)
+15.  [14\_Improving\_training\_with\_metrics\_and\_augmentation](#chapter-14.html)
+16.  [15\_Using\_segmentation\_to\_find\_suspected\_nodules](#chapter-15.html)
+17.  [16\_Training\_models\_on\_multiple\_GPUs](#chapter-16.html)
+18.  [17\_Deploying\_to\_production](#chapter-17.html)

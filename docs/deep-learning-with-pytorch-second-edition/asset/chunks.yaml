@@ -1,0 +1,154 @@
+- raw: '
+
+
+    ![](cover.jpg)
+
+
+    ## Deep Learning with PyTorch, Second Edition
+
+
+    1.  [Welcome](#welcome.html)
+
+
+    2.  [1\_Introducing\_deep\_learning\_and\_the\_PyTorch\_Library](#chapter-1.html)
+
+
+    3.  [2\_Pretrained\_networks](#chapter-2.html)
+
+
+    4.  [3\_It\_starts\_with\_a\_tensor](#chapter-3.html)
+
+
+    5.  [4\_Real-world\_data\_representation\_using\_tensors](#chapter-4.html)
+
+
+    6.  [5\_The\_mechanics\_of\_learning](#chapter-5.html)
+
+
+    7.  [6\_Using\_a\_neural\_network\_to\_fit\_the\_data](#chapter-6.html)
+
+
+    8.  [7\_Telling\_birds\_from\_airplanes:\_Learning\_from\_images](#chapter-7.html)
+
+
+    9.  [8\_Using\_convolutions\_to\_generalize](#chapter-8.html)
+
+
+    10.  [9\_How\_transformers\_work](#chapter-9.html)
+
+
+    11.  [10\_Diffusion\_models\_for\_images](#chapter-10.html)
+
+
+    12.  [11\_Using\_PyTorch\_to\_fight\_cancer](#chapter-11.html)
+
+
+    13.  [12\_Combining\_data\_sources\_into\_a\_unified\_dataset](#chapter-12.html)
+
+
+    14.  [13\_Training\_a\_classification\_model\_to\_detect\_suspected\_tumors](#chapter-13.html)
+
+
+    15.  [14\_Improving\_training\_with\_metrics\_and\_augmentation](#chapter-14.html)
+
+
+    16.  [15\_Using\_segmentation\_to\_find\_suspected\_nodules](#chapter-15.html)
+
+
+    17.  [16\_Training\_models\_on\_multiple\_GPUs](#chapter-16.html)
+
+
+    18.  [17\_Deploying\_to\_production](#chapter-17.html)'
+  fmt: '
+
+    ![](cover.jpg)
+
+
+    # Deep Learning with PyTorch, Second Edition
+
+
+    1. [Welcome](#welcome.html)
+
+    2. [1_Introducing_deep_learning_and_the_PyTorch_Library](#chapter-1.html)
+
+    3. [2_Pretrained_networks](#chapter-2.html)
+
+    4. [3_It_starts_with_a_tensor](#chapter-3.html)
+
+    5. [4_Real-world_data_representation_using_tensors](#chapter-4.html)
+
+    6. [5_The_mechanics_of_learning](#chapter-5.html)
+
+    6. [6_Using_a_neural_network_to_fit_the_data](#chapter-6.html)
+
+    7. [7_Telling_birds_from_airplanes:_Learning_from_images](#chapter-7.html)
+
+    8. [8_Using_convolutions_to_generalize](#chapter-8.html)
+
+    9. [9_How_transformers_work](#chapter-9.html)
+
+    10. [10_Diffusion_models_for_images](#chapter-10.html)
+
+    11. [11_Using_PyTorch_to_fight_cancer](#chapter-11.html)
+
+    12. [12_Combining_data_sources_into_a_unified_dataset](#chapter-12.html)
+
+    13. [13_Training_a_classification_model_to_detect_suspected_tumors](#chapter-13.html)
+
+    14. [14_Improving_training_with_metrics_and_augmentation](#chapter-14.html)
+
+    15. [15_Using_segmentation_to_find_suspected_nodules](#chapter-15.html)
+
+    16. [16_Training_models_on_multiple_GPUs](#chapter-16.html)
+
+    17. [17_Deploying_to_production](#chapter-17.html)
+
+    '
+  trans: '
+
+
+    ![](img/cover.jpg)
+
+
+    # 使用 PyTorch 进行深度学习，第二版
+
+
+    1. 欢迎
+
+    2. 1_ 深度学习和 PyTorch 库简介
+
+    3. 2_ 预训练网络
+
+    4. 3_ 从张量开始
+
+    5. 4_ 使用张量表示现实世界的数据
+
+    6. 5_ 学习的机制
+
+    7. 6_ 使用神经网络拟合数据
+
+    8. 7_ 区分鸟类与飞机：从图像中学习
+
+    9. 8_ 使用卷积进行泛化
+
+    10. 9_Transformer 如何工作
+
+    11. 10_ 用于图像的扩散模型
+
+    12. 11_ 使用 PyTorch 抗击癌症
+
+    13. 12_ 将数据源组合为统一数据集
+
+    14. 13_ 训练分类模型以检测疑似肿瘤
+
+    15. 14_ 使用指标和增强改进训练
+
+    16. 15_ 使用分割查找疑似结节
+
+    17. 16_ 在多 GPU 上训练模型
+
+    18. 17_ 部署到生产环境
+
+
+    '
+  toc: []
