@@ -1,0 +1,36 @@
+
+# Palm oil supply chains are incredibly complex
+
+The product is often mixed with other sources. Also, the biggest palm oil producing countries have little or no regulations on palm oil production, thanks to its contribution to the countries’ exports earnings.
+
+The journey of palm oil starts when fresh fruit bunches (FFB) from plantations are supplied to a mill, from where they are taken by various intermediaries to refineries for processing before the palm oil enters a company’s supply chain.
+
+Palm oil companies source FFB supplies from two primary channels. The first channel comprises the plantations the companies own directly or manage for smallholder farmers. The direct channel, controlled by companies, is relatively transparent, where companies ensure compliance with global regulations. The second channel comprises third-party suppliers, who collect FFB from different sources including independent farmers, which makes it difficult to regulate.
+
+In March 2018 Hermawati Widyapratami and Bukti Bagja of the research organization WRI Indonesia conducted field research at PPTN V, a plantation company located in Rokan Hulu, Riau, Indonesia. The researchers found that the agents who collected FFB directly from farmers usually mixed the bunches and sorted them based on quality before they were transported to mill. The mixing and sorting made it difficult to track the origin of the FFB since the transaction between smallholder farmers and intermediaries did not have a record. The researchers noted that the middlemen were unregulated actors since no system is currently present to control their business despite their significant role in the palm oil supply chain.
+
+Not only are the palm oil chains complex, but they also cause many environmental and social issues. Farmers burn forests to clear areas where they can grow oil palms. The rapid intensification and expansion of palm oil production has caused widespread destruction of rainforests in the producer countries. Palm oil production is said to have been responsible for about 8 per cent of the world’s deforestation between 1990 and 2008. A recent *Scientific American* article noted that palm oil production has been the most significant cause of deforestation in Indonesia and other equatorial countries.
+
+![Figure 7.4 The palm oil supply chain](content/images/M07NF004.jpg)
+
+**Figure 7.4 The palm oil supply chain**
+
+Deforestation not only causes flooding and soil depletion, but it also contributes to global warming because cutting of trees reduces the Earth’s capacity to absorb carbon dioxide (CO2). Besides, deforestation poses a clear and present danger to wildlife in these regions. In July 2017 a *Guardian* article reported that Pepsico, Unilever and Nestlé have been accused of complicity in the destruction of Sumatra’s last tract of rainforest shared by elephants, orangutans, rhinos and tigers together in one ecosystem. Indonesia’s endangered orangutan population, which depends upon the rainforest, has been reduced by as much as 50 per cent in recent years (Neslen, 2017).
+
+The report cited a Rainforest Action Network field investigation that found evidence of active, illegal clearance of critically endangered Sumatran elephant habitat within the rainforests of the Leuser ecosystem. Leuser is Sumatra’s largest rainforest and a UNESCO world heritage site. The alleged culprit was a company called PT Agra Bumi Niaga (PT denotes a limited liability company in Indonesia), which reached major brands via a complex supply chain through some of the world’s largest traders. The fragmentation of animal habitats due to the expansion of palm oil plantations leads to an increase in human–animal conflicts – between 2012 and 2015, at least 35 elephants were killed in Leuser. The vanishing rainforest ecosystem has made many species such as tigers, clouded leopards and sun bears more vulnerable to poachers in these areas. ‘If more immediate action is not taken to enforce “no deforestation” policies, these brands will be remembered as the corporate giants responsible for the destruction of the last place on earth where Sumatran elephants, orangutans, rhinos and tigers roamed side by side,’ said the RAN study.
+
+Palm oil sourced from plantations in these areas finds its way to products made by well-known brands such as McDonald’s, Kellogg’s, Mars, Unilever, Nestlé and Procter & Gamble. In 2010 Nestlé was accused by Greenpeace of abetting deforestation in tropical countries by using unsustainable palm oil in its products. Public outcry over deforestation due to palm oil and the alleged complicity of major brands has urged industry stakeholders to launch and pursue major initiatives and campaigns over the years.
+
+## Toward a transparent, sustainable supply chain
+
+Various initiatives have been launched over the years to streamline the production of palm oil and mitigate its impact on the environment, but most of them have not made much difference.
+
+Roundtable on Sustainable Palm Oil (RSPO), the world’s most significant and most influential palm oil industry association, has led the most effective drive for sustainability in the palm oil supply chain. An RSPO certification assures the buyers of palm oil products that the standards of production are socially and environmentally sustainable. To obtain the certificate, the oil producers must fulfil the principles and criteria, a set of conditions that mandate best agricultural practices, fair treatment of workers, proper acquisition of the land, care for the environment, biodiversity and other similar guidelines.
+
+Consumer goods companies such as Nestlé and PepsiCo and major palm oil traders such as Cargill also make commitments for achieving sustainability in their supply chains. In 2010 Nestlé made a ‘no deforestation commitment’, stating that all its products globally will not be associated with deforestation by 2020. It has made good progress – in 2017 the company reported that 58 per cent of its total palm oil purchased in 2017 was responsibly sourced, while 48 per cent was traceable to its source. In September 2018 Nestlé took a big step toward meeting its 2020 goal by implementing Starling, a satellite-based service to monitor the entirety of its global palm oil supply chains.
+
+Unilever, on its part, laid bare in 2018 its entire palm oil supply chain, including all the suppliers and mills it sources from, to boost transparency in a rare industry initiative. The fast-moving consumer goods (FMCG) behemoth disclosed the location of more than 1,400 mills and over 300 direct suppliers of the oil used in products from snacks and soaps to cosmetics and biofuels.
+
+Marc Engel, Unilever’s Chief Supply Chain Officer, said the company hoped sharing the information would be the start of a new industry-wide movement toward supply chain transparency. ‘This is a big step toward greater transparency, but we know there is more work to be done to achieve a truly sustainable palm oil industry, and we will continue our efforts to make this a reality,’ Engel said in a statement posted on Unilever’s website. Unilever noted that transparency and the ability to trace palm oil are vital in addressing deforestation and human rights abuses.
+
+## Finding an ally in blockchain
