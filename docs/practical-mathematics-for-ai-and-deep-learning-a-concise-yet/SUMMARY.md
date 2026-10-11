@@ -1,0 +1,2 @@
++   [AI 与深度学习实用数学：计算机视觉、NLP、复杂深度神经网络与机器学习基础的简明而深度指南](README.md)
++   [AI 与深度学习实用数学：计算机视觉、NLP、复杂深度神经网络与机器学习基础的简明而深度指南](practical-mathematics-for-ai-and-deep-learning-a-concise-yet_0.md)
