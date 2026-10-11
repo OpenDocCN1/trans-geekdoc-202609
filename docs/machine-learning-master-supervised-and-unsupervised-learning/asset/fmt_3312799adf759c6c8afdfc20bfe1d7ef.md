@@ -1,0 +1,201 @@
+
+# 机器学习概述
+
+## 定义
+
+机器学习是人工智能（AI）的一个子领域。机器学习的目标通常是理解数据的结构，并将这些数据匹配到人类可以理解和使用的模型中。
+
+Arthur Samuel 指出：学习使计算机具有无需显式编程即可学习的能力。
+
+Tom Mitchell 给出了一个数学和关系定义：如果计算机程序在任务 T 上的性能（由性能度量 P 衡量）随着经验 E 的增加而提高，则称该程序从经验 E 中学习了任务 T。
+
+## 传统编程与机器学习对比
+
+- **传统编程**：程序员手动编写规则（程序）。
+- **机器学习**：数据和输出作为输入，学习到的规则作为输出。
+
+## 机器学习七步骤
+
+1. 数据收集
+2. 数据准备
+3. 选择模型
+4. 训练
+5. 评估
+6. 超参数调优
+7. 预测
+
+## 机器学习应用
+
+- 社交媒体功能
+- 产品推荐
+- 图像与语音识别
+- 情感分析
+- 自动驾驶汽车
+- 邮件垃圾与恶意软件过滤
+- 股票交易
+- 医疗诊断
+- 在线欺诈检测
+- 自动语言翻译
+
+## 学习类型
+
+### 监督学习
+
+数据包含输入变量和输出变量，即数据集带有标签。监督学习进一步分为**回归**和**分类**。
+
+- **回归**：当输入变量与输出变量之间存在关系时使用。适用于输出变量值为连续或实数的情况。
+- **分类**：基于一个或多个输入变量将输出分组为不同类别。适用于输出变量值为离散或分类的情况。
+
+### 无监督学习
+
+处理无标签数据，即只有输入数据，没有对应的输出变量。进一步分为**聚类**和**关联**。
+
+- **聚类**：用于在未分类数据中发现隐藏结构或模式。算法根据相似性将数据划分为不同簇（组）。
+- **关联**：用于在大型数据集中发现数据间的关系。确定数据集中同时出现的项集。
+
+### 强化学习
+
+基于反馈的机器学习。智能体通过反馈自主学习，无需标签数据，从自身经验中学习。
+
+## 优缺点
+
+### 优点
+
+- 轻松识别趋势和模式
+- 无需人工干预，实现自动化
+- 高效处理各类数据
+- 持续改进
+
+### 缺点
+
+- 可能存在较高错误率
+- 数据获取困难
+- 耗时且消耗资源
+- 算法选择复杂
+
+---
+
+# 练习（选择题）
+
+## 1. 关于机器学习，以下哪项正确？
+
+- Machine learning (ML) is a field of computer science
+- ML is a type of artificial intelligence that extracts patterns out of raw data by using an algorithm or method.
+- The main focus of ML is to allow computer systems to learn from their experience without being explicitly programmed or involving human intervention.
+- **All of the above**
+
+## 2. 机器学习是包含学习算法的 AI 领域，这些算法：
+
+- Improve their performance
+- At executing some task
+- Overtime with experience
+- **All of the above**
+
+## 3. 关于机器学习与人工智能，选择正确选项：
+
+I. Machine learning is an alternate way of programming intelligent machines
+II. AI & ML have very different goals
+III. Machine learning is a set of techniques that turn a dataset into software
+IV. AI is software that can emulate the human mind
+
+- I, II, IV
+- I, III, IV
+- II, III, IV
+- All are correct
+
+## 4. 在无标签数据中寻找隐藏结构的问题称为：
+
+- Supervised learning
+- **Unsupervised learning**
+- Reinforcement learning
+- None of the above
+
+## 5. 从带标签的训练数据推断模型的任务称为：
+
+- Unsupervised learning
+- **Supervised learning**
+- Reinforcement learning
+- None of the above
+
+## 6. 电商公司将客户分群以发送合适优惠，这属于：
+
+- **Unsupervised learning**
+- Supervised learning
+- Reinforcement learning
+- None of the above
+
+## 7. 关于回归，以下哪句是**错误**的？
+
+- It relates inputs to outputs.
+- It is used for prediction.
+- It may be used for interpretation.
+- **It discovers causal relationships.**
+
+## 8. 以下哪项是回归任务？
+
+I. Predicting the monthly sales of a cloth store in rupees.
+II. Predicting if a user would like to listen to a newly released song or not based on historical data.
+III. Predicting the confirmation probability (in fraction) of your train ticket whose current status is waiting list based on historical data
+IV. Predicting if a patient has diabetes or not based on historical medical records.
+
+- I, IV
+- I, II, IV
+- **I, III**
+- II, III, IV
+
+## 9. 以下哪项是无监督任务？
+
+- Grouping images of footwear and caps separately for a given set of images
+- Learning to play chess
+- Predicting if an edible item is sweet or spicy based on the information of the ingredients and their quantities.
+- all of the above
+
+## 10. 在哪类学习中，教师向学习者返回奖励和惩罚？
+
+- Active learning
+- **Reinforcement learning**
+- Supervised learning
+- Unsupervised learning
+
+## 11. 以下哪些是分类任务？
+
+I. Find the gender of a person by analyzing his writing style.
+II. Predict the price of a house based on the floor area, the number of rooms, and so on.
+III. Predict whether there will be abnormally heavy rainfall next year.
+IV. Predict the number of copies of a book that will be sold this month.
+
+- I, II
+- II, III, IV
+- **I, III**
+- I, III, IV
+
+## 12. 我是某电商网站的营销顾问，需根据用户 Facebook 活动推荐产品。用户兴趣多变，我决定：
+
+1. 首先将用户聚类为志同道合的社区
+2. 然后为每个社区训练单独模型，预测最相关的产品类别（如电子产品、化妆品等）
+
+第一个任务是 **Unsupervised** 学习问题，第二个是 **Supervised** 学习问题。
+
+- Supervised and unsupervised
+- **Unsupervised and supervised**
+- Supervised and supervised
+- Unsupervised and unsupervised
+
+## 13. 以下哪些是监督学习问题？
+
+I. Predicting the outcome of a cricket match as a win or loss based on historical data.
+II. Recommending a movie to an existing user on a website like IMDb based on the search history (including other users)
+III. Predicting the gender of a person from his/her image. You are given the data of 1 million images along with the gender
+IV. Given the class labels of old news articles, predicting the class of a new news article from its content. Class of a news article can be such as sports, politics, technology, and so on
+
+- I, II, III
+- I, III, IV
+- II, III, IV
+- **I, II, III, IV**
+
+## 14. 以下哪些是分类特征？
+
+- Height of a person
+- Price of petroleum
+- **Mother tongue of a person**
+- Amount of rainfall in a day
