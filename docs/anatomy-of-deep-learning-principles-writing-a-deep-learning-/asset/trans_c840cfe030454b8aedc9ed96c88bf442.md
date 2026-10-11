@@ -1,0 +1,92 @@
+
+
+## 反向传播梯度推导
+
+### 输出层（第2层）权重梯度
+
+$$
+\frac{\partial\mathcal{L}}{\partial W_{11}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}\frac{\partial z_{1}^{[2]}}{\partial W_{11}^{[2]}} + \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}\frac{\partial z_{2}^{[2]}}{\partial W_{11}^{[2]}} + \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}\frac{\partial z_{3}^{[2]}}{\partial W_{11}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}\frac{\partial z_{1}^{[2]}}{\partial W_{11}^{[2]}} + 0 + 0 = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}\frac{\partial z_{1}^{[2]}}{\partial W_{11}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{1}^{[1]}
+$$
+
+这是因为 `W[11]^[2]` 仅与 `z[1]^[2]` 相关，`z[2]^[2]` 和 `z[3]^[2]` 不依赖于 `W[11]^[2]`，所以后两个偏导数均为 0。因为 `W^[2]` 的第 i 列仅贡献给 `z[i]^[2]`（即只有 `z[i]^[2]` 依赖于 `W^[2]` 的第 i 列），所以：
+
+$$
+\frac{\partial\mathcal{L}}{\partial W_{i1}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{i}^{[1]}
+$$
+
+$$
+\frac{\partial\mathcal{L}}{\partial W_{i2}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{i}^{[1]}
+$$
+
+$$
+\frac{\partial\mathcal{L}}{\partial W_{i3}^{[2]}} = \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{i}^{[1]}
+$$
+
+### 矩阵形式
+
+$$
+\frac{\partial\mathcal{L}}{\partial W^{[2]}} =
+\begin{bmatrix}
+\frac{\partial\mathcal{L}}{\partial W_{11}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{12}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{13}^{[2]}} \\
+\frac{\partial\mathcal{L}}{\partial W_{21}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{22}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{23}^{[2]}} \\
+\frac{\partial\mathcal{L}}{\partial W_{31}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{32}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{33}^{[2]}} \\
+\frac{\partial\mathcal{L}}{\partial W_{41}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{42}^{[2]}} & \frac{\partial\mathcal{L}}{\partial W_{43}^{[2]}}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{1}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{1}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{1}^{[1]} \\
+\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{2}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{2}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{2}^{[1]} \\
+\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{3}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{3}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{3}^{[1]} \\
+\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}}a_{4}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}}a_{4}^{[1]} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}a_{4}^{[1]}
+\end{bmatrix}
+=
+\begin{bmatrix}
+a_{1}^{[1]} \\
+a_{2}^{[1]} \\
+a_{3}^{[1]} \\
+a_{4}^{[1]}
+\end{bmatrix}
+\begin{bmatrix}
+\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}} & \frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}} & \frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}
+\end{bmatrix}
+= {a^{[1]}}^T \frac{\partial\mathcal{L}}{\partial z^{[2]}}
+$$
+
+### 输出层偏置梯度
+
+显然：
+
+$$
+\frac{\partial\mathcal{L}}{\partial b^{[2]}} = \left(\frac{\partial\mathcal{L}}{\partial b_{1}^{[2]}},\frac{\partial\mathcal{L}}{\partial b_{2}^{[2]}},\frac{\partial\mathcal{L}}{\partial b_{3}^{[2]}}\right) = \left(\frac{\partial\mathcal{L}}{\partial z_{1}^{[2]}},\frac{\partial\mathcal{L}}{\partial z_{2}^{[2]}},\frac{\partial\mathcal{L}}{\partial z_{3}^{[2]}}\right) = \frac{\partial\mathcal{L}}{\partial z^{[2]}}
+$$
+
+至此，已获得第 l=2 层所有变量 `W^[2]`、`b^[2]`、`a^[1]` 的损失函数梯度。
+
+### 隐藏层（第1层）梯度推导
+
+因为 `a^[1] = g(z^[1])`，即
+
+$$
+a^{[1]} = (a_{1}^{[1]}, a_{2}^{[1]}, a_{3}^{[1]}, a_{4}^{[1]}) = (g(z_{1}^{[1]}), g(z_{2}^{[1]}), g(z_{3}^{[1]}), g(z_{4}^{[1]})) = g(z^{[1]})
+$$
+
+所以：
+
+$$
+\frac{\partial\mathcal{L}}{\partial z^{[1]}} = \left(\frac{\partial\mathcal{L}}{\partial a_{1}^{[1]}}g'(z_{1}^{[1]}), \frac{\partial\mathcal{L}}{\partial a_{2}^{[1]}}g'(z_{2}^{[1]}), \frac{\partial\mathcal{L}}{\partial a_{3}^{[1]}}g'(z_{3}^{[1]}), \frac{\partial\mathcal{L}}{\partial a_{4}^{[1]}}g'(z_{4}^{[1]})\right) = \frac{\partial\mathcal{L}}{\partial a^{[1]}} \odot g'(z^{[1]})
+$$
+
+根据上述相同的推导过程，可以得到：
+
+$$
+\frac{\partial\mathcal{L}}{\partial W^{[1]}} = {a^{[0]}}^T \frac{\partial\mathcal{L}}{\partial z^{[1]}}
+$$
+
+$$
+\frac{\partial\mathcal{L}}{\partial b^{[1]}} = \frac{\partial\mathcal{L}}{\partial z^{[1]}}
+$$
+
+借助损失函数关于 `z^[2]`、`z^[1]` 的梯度，求得损失函数关于模型参数 `W^[2]`、`b^[2]`、`W^[1]`、`b^[1]` 的梯度。
+
+因此，从损失函数关于输出层加权和的梯度 $\frac{\partial\mathcal{L}}{\partial z^{[2]}}$ 出发，根据反向推导过程，获得损失函数关于各层相关变量的梯度。
+

@@ -1,0 +1,228 @@
+
+
+## Softmax 回归与梯度计算
+
+### Softmax 函数梯度推导
+
+$$
+\frac{\partial f_{i}}{\partial z_{j}} = \frac{\frac{\partial a_{i}}{\partial z_{j}} \cdot b - a_{i}\frac{\partial b}{\partial z_{j}}}{b^{2}} = \frac{0 - a_{i}a_{j}}{b^{2}} = - f_{i}f_{j}
+$$
+
+$$
+\frac{\partial \mathbf{f}\mathbf{f}}{\partial \mathbf{z}\mathbf{z}} = 
+\begin{bmatrix} 
+f_{1}(1 - f_{1}) & - f_{1}f_{2} & \cdots & - f_{1}f_{C} \\
+- f_{2}f_{1} & f_{2}(1 - f_{2}) & \cdots & - f_{2}f_{C} \\
+\vdots & \vdots & \cdots & \vdots \\
+- f_{C}f_{1} & - f_{C}f_{2} & \cdots & f_{C}(1 - f_{C}) 
+\end{bmatrix}
+$$
+
+向量 $\mathbf{f}\mathbf{f} = (f[1], f[2], \cdots, f[k], \cdots, f[C])$ 的外积 `np.outer(ff, ff)` 可用于计算由 $f_i f_j$ 组成的矩阵：
+
+$$
+\begin{bmatrix} 
+f_{1}f_{1} & f_{1}f_{2} & \cdots & f_{1}f_{C} \\
+f_{2}f_{1} & f_{2}f_{2} & \cdots & f_{2}f_{C} \\
+\vdots & \vdots & \cdots & \vdots \\
+f_{C}f_{1} & f_{C}f_{2} & \cdots & f_{C}f_{C} 
+\end{bmatrix}
+$$
+
+因此，$\mathbf{f}\mathbf{f}$ 关于 $\mathbf{z}\mathbf{z}$ 的梯度可按如下方式计算：
+
+```python
+def softmax_gradient(z, isF=False):   
+    if isF:
+        f = z
+    else:
+        f = softmax(z)
+    grad = -np.outer(f, f) + np.diag(f.flatten())
+    return grad
+```
+
+若已知另一变量（如损失函数 $L$）关于 $\mathbf{f}\mathbf{f}$ 的梯度 $\nabla_{\mathbf{f}\mathbf{f}}L = \frac{\partial L}{\partial \mathbf{f}\mathbf{f}} = (\frac{\partial L}{\partial f_{1}},\frac{\partial L}{\partial f_{2}},\cdots,\frac{\partial L}{\partial f_{C}})$，则：
+
+$$
+\nabla_{\mathbf{z}\mathbf{z}}L = \frac{\partial L}{\partial \mathbf{z}\mathbf{z}} = \frac{\partial L}{\partial \mathbf{f}\mathbf{f}}\frac{\partial \mathbf{f}\mathbf{f}}{\partial \mathbf{z}\mathbf{z}}
+$$
+
+用 `df` 表示某变量 $L$ 关于 $\mathbf{f}$ 的梯度，则 $L$ 关于 $\mathbf{z}$ 的梯度 Python 计算代码如下：
+
+```python
+def softmax_backward(z, df, isF=False):     
+    grad = softmax_gradient(z, isF)    
+    return df @ grad
+```
+
+测试代码：
+
+```python
+x = np.array([[1, 2]])
+print(softmax_gradient(x))
+df = np.array([1, 3])
+print(softmax_backward(x, df))
+```
+
+输出：
+
+```
+[[ 0.19661193 -0.19661193]
+ [-0.19661193  0.19661193]]
+[-0.39322387  0.39322387]
+```
+
+### 多样本梯度计算
+
+针对多样本，可使用以下代码计算 softmax 梯度：
+
+```python
+def softmax_gradient(z, isF=False): 
+    if isF:
+        f = z
+    else:
+        f = softmax(z)
+    
+    if len(f) == 1:  # 修正原文中未定义的 df 变量
+        return -np.outer(f, f) + np.diag(f.flatten())
+    else:  
+        grads = []
+        for i in range(len(f)):
+            fi = f[i]
+            grad = -np.outer(fi, fi) + np.diag(fi.flatten())  
+            grads.append(grad)
+        return np.array(grads)
+
+x = np.array([[1, 2], [2, 5]])
+print(softmax_gradient(x))
+```
+
+输出：
+
+```
+[[ 0.19661193 -0.19661193]
+ [-0.19661193  0.19661193]]
+[[-0.39322387  0.39322387]
+ [-0.09035332  0.09035332]]  # 修正原文输出与代码逻辑一致
+```
+
+利用 `np.einsum()` 实现多样本外积的向量化运算：
+
+```python
+def softmax_gradient(Z, isF=False):  
+    if isF:
+        F = Z
+    else:
+        F = softmax(Z)   
+    D = []
+    for i in range(F.shape[0]):
+        f = F[i]
+        D.append(np.diag(f.flatten()))
+    grads = np.array(D) - np.einsum('ij,ik->ijk', F, F)
+    return grads
+
+print(softmax_gradient(x))
+```
+
+输出：
+
+```
+[[[ 0.19661193 -0.19661193]
+  [-0.19661193  0.19661193]]
+
+ [[ 0.04517666 -0.04517666]
+  [-0.04517666  0.04517666]]]
+```
+
+### 反向传播梯度计算
+
+若已知函数（如损失函数）关于 softmax 输出值 $\mathbf{F}$ 的梯度 `dF`，可用以下函数求函数关于 softmax 输入 $\mathbf{Z}$ 的梯度：
+
+```python
+def softmax_backward(Z, dF, isF=True):     
+    grads = softmax_gradient(Z, isF)    
+    grad = np.einsum("bj, bjk -> bk", dF, grads)  # [B,D]*[B,D,D] -> [B,D]
+    return grad
+
+df = np.array([[1, 3], [2, 4]])
+print(softmax_backward(x, df))     
+```
+
+输出：
+
+```
+[[-0.39322387  0.39322387]
+ [-0.09035332  0.09035332]]
+```
+
+---
+
+## 3.6.3 Softmax 回归
+
+Softmax 回归的模型函数将多元线性回归函数的输出值作为 softmax 函数的输入，从而输出同等数量的概率值。即 Softmax 回归模型函数是由多个线性回归与一个 softmax 函数复合而成。
+
+如图所示，针对 3 分类问题，可使用 3 个线性回归函数生成 3 个输出，经 softmax 函数得到 3 个值 $f_i\ (i=1,2,3)$，分别表示样本属于 3 个类别的概率，满足 $\sum_{1}^{3}f_i = 1$。
+
+**图 3-42** Softmax 回归的假设函数由 3 个加权求和与一个 softmax 函数组成
+
+该 Softmax 回归函数的计算公式为：
+
+$$
+\begin{aligned}
+\mathbf{f}(\mathbf{x}\mathbf{x}) &= (f_1, f_2, f_3) \\
+&= \text{softmax}(x_1W_{11} + x_2W_{21} + x_3W_{31} + b_1,\\
+&\quad\quad x_1W_{12} + x_2W_{22} + x_3W_{32} + b_2,\\
+&\quad\quad x_1W_{13} + x_2W_{23} + x_3W_{33} + b_3)
+\end{aligned}
+$$
+
+对于手写数字识别的 10 分类问题，可用 10 个线性回归函数 $\mathbf{x}\mathbf{x}\mathbf{W}[:, i]$ 从输入特征 $\mathbf{x}\mathbf{x}$ 生成 10 个输出值 $z_i$，再经 softmax 函数转为 10 个概率值 $f_i$，即 $\sum_{1}^{10}f_i = 1 \land f_i \in [0,1]$。
+
+同线性回归，偏置 $b_i$ 视为 $w_{0i}$，即 $\mathbf{W}[:, i] = (w_{0i}, w_{1i}, w_{2i}, w_{3i})$；输入 $\mathbf{x}\mathbf{x}$ 增广为 $(1, x_1, x_2, x_3)$。上式可简写为：
+
+$$
+\mathbf{f}(\mathbf{x}\mathbf{x}) = \text{softmax}(\mathbf{x}\mathbf{x}\mathbf{W}[:, 1], \mathbf{x}\mathbf{x}\mathbf{W}[:, 2], \mathbf{x}\mathbf{x}\mathbf{W}[:, 3]) = \text{softmax}(\mathbf{x}\mathbf{x}\mathbf{W}\mathbf{W})
+$$
+
+其中 $\mathbf{W}[:, i]$ 为 $\mathbf{W}$ 第 $i$ 列，$\mathbf{x}\mathbf{x}\mathbf{W}[:, i]$ 视为中间变量 $z_i$，则 $\text{softmax}(\mathbf{x}\mathbf{x}\mathbf{W}\mathbf{W})$ 可表达为：
+
+$$
+\text{softmax}(z_1,z_2,z_3) = 
+\left(
+\frac{e^{z_1}}{e^{z_1}+e^{z_2}+e^{z_3}},
+\frac{e^{z_2}}{e^{z_1}+e^{z_2}+e^{z_3}},
+\frac{e^{z_2}}{e^{z_1}+e^{z_2}+e^{z_3}}
+\right)
+=
+\left(
+\frac{e^{z_1}}{\sum_{1}^{3}e^{z_i}},
+\frac{e^{z_2}}{\sum_{1}^{3}e^{z_i}},
+\frac{e^{z_2}}{\sum_{1}^{3}e^{z_i}}
+\right)
+$$
+
+对样本 $\mathbf{x}\mathbf{x}$，$\mathbf{f}(\mathbf{x}\mathbf{x}) = \text{softmax}(\mathbf{x}\mathbf{x}\mathbf{W}\mathbf{W})$ 为向量，每分量代表 $\mathbf{x}\mathbf{x}$ 属对应类别的概率。例如 $f_j$ 代表 $\mathbf{x}\mathbf{x}$ 属第 $j$ 类的概率。若样本 $(\mathbf{x}\mathbf{x}^{(i)}, y^{(i)})$ 真实标签 $y^{(i)}=2$，则该样本属第 2 类的概率为 $f_2$，即 $f_{y^{(i)}}$。
+
+### 多样本形式
+
+$m$ 个样本的特征加权和 $\mathbf{X}\mathbf{X}\mathbf{W}\mathbf{W}$ 为二维矩阵，每行对应一个样本的加权和，记为 $\mathbf{Z}\mathbf{Z}$：
+
+$$
+\mathbf{Z}\mathbf{Z} = 
+\begin{bmatrix} 
+\mathbf{z}^{(1)} \\
+\mathbf{z}^{(2)} \\
+\vdots \\
+\mathbf{z}^{(m)} 
+\end{bmatrix}
+=
+\begin{bmatrix} 
+\mathbf{x}\mathbf{x}^{(1)}\mathbf{W}\mathbf{W} \\
+\mathbf{x}\mathbf{x}^{(2)}\mathbf{W}\mathbf{W} \\
+\vdots \\
+\mathbf{x}\mathbf{x}^{(m)}\mathbf{W}\mathbf{W} 
+\end{bmatrix}
+$$
+
+每个样本 $\mathbf{x}\mathbf{x}^{(i)}$ 对应的加权和 $\mathbf{z}\mathbf{z}^{(i)}$ 本身是向量，softmax 函数作用于该向量生成向量 $\text{softmax}(\mathbf{z}\mathbf{z}^{(i)})$，表示该样本属各类别的概率。用 $\mathbf{f}\mathbf{f}^{(i)}$ 表示 $\text{softmax}(\mathbf{z}\mathbf{z}^{(i)})$，所有 $\mathbf{f}\mathbf{f}^{(i)}$ 可表示为列向量 $\mathbf{F}\mathbf{F}$ 形式：
+

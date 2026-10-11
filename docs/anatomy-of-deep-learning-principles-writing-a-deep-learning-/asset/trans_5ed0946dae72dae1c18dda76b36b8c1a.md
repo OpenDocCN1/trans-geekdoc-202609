@@ -1,0 +1,196 @@
+
+
+# 批量归一化实现
+
+```python
+class BatchNorm(Layer):
+    def __init__(self, num_features, gamma_beta_method=None, eps=1e-5, momentum=0.9, std=0.02):
+        super().__init__()
+        self.eps = eps
+        self.momentum = momentum
+        if not gamma_beta_method:
+            self.gamma = np.ones((1, num_features))
+            self.beta = np.zeros((1, num_features))
+        else:
+            self.gamma = np.random.normal(1, std, (1, num_features))
+            self.beta = np.zeros((1, num_features))
+        # self.gamma *= random_value
+        self.params = [self.gamma, self.beta]
+        self.grads = [np.zeros_like(self.gamma), np.zeros_like(self.beta)]
+
+        self.running_mu = np.zeros((1, num_features))
+        self.running_var = np.zeros((1, num_features))
+
+    def forward(self, X, training=True):
+        # N, C, H, W = X.shape
+        self.X_shape = X.shape
+        if len(self.X_shape) > 2:
+            N, C, H, W = self.X_shape
+
+        if training:
+            # X = np.swapaxes(X, 0, 1)  # C to fitst axis
+            if len(self.X_shape) > 2:
+                X = np.moveaxis(X, 1, 3)   # move C to last axis: N,H,W,C
+                X_flat = X.reshape(-1, X.shape[3])
+            else:
+                X_flat = X
+
+            NHW = X_flat.shape[0]
+            self.n_X = NHW
+            mu = np.mean(X_flat, axis=0)
+            var = 1 / float(NHW) * np.sum((X_flat - mu) ** 2, axis=0)  # self.var = np.var(self.X_flat, axis=0) #
+            X_hat = (X_flat - mu) / np.sqrt(var + self.eps)
+            out = self.gamma * X_hat + self.beta
+
+            if len(self.X_shape) > 2:
+                out = out.reshape(N, H, W, C)
+                out = np.moveaxis(out, 3, 1)
+
+            self.mu, self.var, self.X_flat, self.X_hat = mu, var, X_flat, X_hat
+
+            # Compute the moving average of means and variances
+            running_mu, running_var, momentum = self.running_mu, self.running_var, self.momentum
+            running_mu = momentum * running_mu + (1 - momentum) * self.mu
+            running_var = momentum * running_var + (1 - momentum) * self.var
+        else:
+            if len(self.X_shape) > 2:
+                X = np.moveaxis(X, 1, 3)
+                self.X_flat = X.reshape(-1, X.shape[3])
+            else:
+                self.X_flat = X
+
+            # Normalization
+            X_hat = (self.X_flat - self.running_mu) / np.sqrt(self.running_var + eps)
+            # translate and pan
+            out = self.gamma * X_hat + self.beta
+            if len(self.X_shape) > 2:
+                out = out.reshape(N, H, W, C)
+                out = np.moveaxis(out, 3, 1)
+        return out
+
+    def __call__(self, X):
+        return self.forward(X)
+
+    def backward(self, dout):
+        if len(dout.shape) > 2:    # len(self.X_shape) > 2 and
+            dout = np.moveaxis(dout, 1, 3)
+            dout = dout.reshape(-1, dout.shape[3])
+
+        eps = self.eps
+
+        X_mu = self.X_flat - self.mu
+        var_inv = 1. / np.sqrt(self.var + eps)
+
+        dbeta = np.sum(dout, axis=0)
+        dgamma = np.sum(dout * self.X_hat, axis=0)  # dout * self.X_hat
+
+        dX_hat = dout * self.gamma
+        dvar = np.sum(dX_hat * X_mu, axis=0) * -0.5 * (self.var + eps) ** (-3/2)
+        dmu = np.sum(dX_hat * (-var_inv), axis=0) + dvar * 1 / self.n_X * np.sum(-2. * X_mu, axis=0)
+        dX = (dX_hat * var_inv) + (dmu / self.n_X) + (dvar * 2 / self.n_X * X_mu)
+
+        if len(self.X_shape) > 2:
+            N, C, H, W = self.X_shape
+            dX = dX.reshape(N, H, W, C)
+            dX = np.moveaxis(dX, 3, 1)
+            # dX = dX.reshape(self.X_shape)
+
+        self.grads[0] += dgamma
+        self.grads[1] += dbeta
+        return dX  # , dgamma, dbeta
+```
+
+## BN 对网络性能的影响
+
+为了观察 BN 对网络性能的影响，在 4.3.9 节基于 Fashion Mnist 数据集训练的网络模型中，在前两个网络层的加权和与激活函数之间添加了一个批量归一化（BN）层，因为 BN 可以避免模型权重参数变得非常复杂；也就是说，BN 也是一种正则化技术，可以在代码中移除权重衰减的正则化（`reg=0`）：
+
+```python
+import numpy as np
+import util
+from NeuralNetwork import *
+from train import *
+import mnist_reader
+import matplotlib.pyplot as plt
+%matplotlib inline
+np.random.seed(1)
+
+X_train, y_train = mnist_reader.load_mnist('data/fashion', kind='train')
+X_test, y_test = mnist_reader.load_mnist('data/fashion', kind='t10k')
+trainX = X_train.reshape(-1, 28, 28)
+train_X = trainX.astype('float32') / 255.0
+
+nn = NeuralNetwork()
+
+nn.add_layer(Dense(784, 500))
+nn.add_layer(Relu())
+
+nn.add_layer(Dense(500, 200))
+nn.add_layer(BatchNorm_1d(200))
+nn.add_layer(Relu())
+
+nn.add_layer(Dense(200, 100))
+nn.add_layer(BatchNorm_1d(100))
+nn.add_layer(Relu())
+
+nn.add_layer(Dense(100, 10))
+
+learning_rate = 0.01
+momentum = 0.9
+optimizer = SGD(nn.parameters(), learning_rate, momentum)
+
+epochs = 8
+batch_size = 64
+reg = 0  # 1e-3
+print_n = 1000
+
+losses = train_nn(nn, train_X, y_train, optimizer, cross_entropy_grad_loss, epochs, batch_size, reg, print_n)
+
+plt.plot(losses)
+```
+
+训练损失输出：
+
+```
+[ 1, 1] loss: 2.291
+[ 1001, 2] loss: 0.416
+[ 2001, 3] loss: 0.261
+[ 3001, 4] loss: 0.342
+[ 4001, 5] loss: 0.222
+[ 5001, 6] loss: 0.196
+[ 6001, 7] loss: 0.157
+[ 7001, 8] loss: 0.295
+```
+
+![训练损失曲线](EPUB/media/file121.png)
+
+最终模型预测准确率：
+
+```python
+print(np.mean(nn.predict(train_X) == y_train))
+test_X = X_test.reshape(-1, 28, 28).astype('float32') / 255.0
+print(np.mean(nn.predict(test_X) == y_test))
+```
+
+```
+0.9066833333333333
+0.8766
+```
+
+可以看出，使用批量归一化后，训练模型的预测准确率有所提高。
+
+# 5.4 正则化
+
+当模型更复杂时（例如模型参数更多），正则化是防止模型过拟合的基本技术。除了回归中直接对权重进行正则化外，深度学习还经常使用一种称为 `Dropout` 的正则化来防止过拟合。
+
+## 5.4.1 权重正则化
+
+这是回归中已经熟悉的正则化，通过在损失函数中为权重参数添加惩罚项，防止权重参数的绝对值变得过大。总损失函数包括数据本身预测的损失 `L_data` 和正则项 `R_W`：
+
+`L_data + R_W`
+
+对于权重 `w`，其 `L2` 正则项为 `R_W = λw²`，其中 `λ` 控制正则项相对于数据损失的比例。值越大，正则化项的作用越大，越能防止过拟合。值越小，正则化项的作用越小，防止过拟合的效果越小。`L2` 正则项使参数趋于变小并接近 0。
+
+`L1` 正则项为 `R_W = λ|w|`，其功能与 `L2` 正则项相似，但略有不同。`L2` 正则项会使所有值一致地减小，而 `L1` 正则项会使权重变得稀疏，即许多权重变得接近 0，只有少数非零值，也就是说，非零值非常稀疏。`L1` 使机器学习倾向于选择少数好的特征，而不是使用所有特征，即有助于选择好的特征。稀疏性是机器学习中的一个重要课程，由于篇幅限制，本书不作讨论。
+
+也可以将 `L1` 正则化项和 `L2` 正则化项结合起来，形成所谓的弹性网络正则化：`R_W = λ₁|w| + λ₂w²`。其范围介于 `L1` 和 `L2` 之间，或者说是 `L1` 和 `L2` 弹性组合的作用。
+

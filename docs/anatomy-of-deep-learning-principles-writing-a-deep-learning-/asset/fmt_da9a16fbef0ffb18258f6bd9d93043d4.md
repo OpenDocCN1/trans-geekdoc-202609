@@ -1,0 +1,293 @@
+
+# NumPy 索引矩阵生成与卷积索引计算
+
+## 基础索引生成
+
+```python
+import numpy as np
+
+kH, kW = 2, 2
+
+i0 = np.repeat(np.arange(kH), kW)  # row subscript [0,1] repeats along the column direction: [0,0,1,1]
+print(i0)
+
+j0 = np.tile(np.arange(kW), kH)    # column subscript [0,1] is spliced along the direction of the row [0,1,0,1]
+print(j0)
+```
+
+输出结果：
+
+```
+[0 0 1 1]
+[0 1 0 1]
+```
+
+利用 `i0` 和 `j0` 的组合索引，可以获得左上角数据块的元素。
+
+## 索引矩阵构造函数
+
+```python
+def idx_matrix(H, W):
+    a = np.empty((H, W), dtype='object')
+    for i in range(H):
+        for j in range(W):
+            a[i, j] = str(i) + str(j)
+    return a
+```
+
+以 4×4 矩阵 `x` 为例：
+
+```python
+x = idx_matrix(4, 4)
+print(x)
+print(x[i0, j0])
+```
+
+输出结果：
+
+```
+[['00' '01' '02' '03']
+ ['10' '11' '12' '13']
+ ['20' '21' '22' '23']
+ ['30' '31' '32' '33']]
+['00' '01' '10' '11']
+```
+
+## 多通道数据块索引
+
+对于多通道数据块，每个通道对应元素的行、列下标相同。以 2 通道左上角数据块为例（如图 6-49 所示）。
+
+**图 6-49** 通道 2 左上角数据块的行列下标
+
+一般地，对于通道数为 `C` 的左上角数据块，其元素的行列下标可通过以下代码生成：
+
+```python
+i0 = np.repeat(np.arange(kH), kW)
+i0 = np.tile(i0, C)
+j0 = np.tile(np.arange(kW), kH * C)
+```
+
+当 `C=2` 时运行该代码：
+
+```python
+C = 2
+i0 = np.repeat(np.arange(kH), kW)
+i0 = np.tile(i0, C)
+j0 = np.tile(np.arange(kW), kH * C)
+print(i0)
+print(j0)
+```
+
+输出结果：
+
+```
+[0 0 1 1 0 0 1 1]  # 2 channel subscripts
+[0 1 0 1 0 1 0 1]  # 2 channel subscripts
+```
+
+## 跨度坐标与完整索引计算
+
+要生成原始数据张量中所有数据块元素的坐标，不仅需要知道每个数据块相对于其左上角 (0,0) 的行列下标，还需根据跨度 `S` 增加偏移量以获得最终正确的行列坐标。
+
+若特征图被划分为 `oH × oW` 个数据块，这些数据块相对于左上角数据块的偏移称为**跨度坐标**。例如划分为 3×3 共 9 个数据块，当跨度 `S=1` 时，这 9 个数据块的行（高度）列（宽度）跨度坐标如下（如图 6-50 所示）。
+
+**图 6-50** 跨度坐标
+
+这些跨度坐标同样可使用生成数据块内元素行列坐标的代码来生成：
+
+```python
+oH, oW = 3, 3
+i1 = S * np.repeat(np.arange(oH), oW)
+j1 = S * np.tile(np.arange(oW), oH)
+print(i1)
+print(j1)
+```
+
+输出结果：
+
+```
+[0 0 0 1 1 1 2 2 2]
+[0 1 2 0 1 2 0 1 2]
+```
+
+将左上角数据块的行列坐标与这些数据块的跨度坐标相加，即可得到原始数据张量中所有数据块元素的行列坐标：
+
+```python
+i = i0.reshape(-1, 1) + i1.reshape(1, -1)
+j = j0.reshape(-1, 1) + j1.reshape(1, -1)
+```
+
+输出这 9 个数据块的行下标 `i`：
+
+```python
+print("i0:", i0)
+print("i1:", i1)
+print(i)
+```
+
+输出结果：
+
+```
+i0: [0 0 1 1 0 0 1 1]
+i1: [0 0 0 1 1 1 2 2 2]
+[[0 0 0 1 1 1 2 2 2]
+ [0 0 0 1 1 1 2 2 2]
+ [1 1 1 2 2 2 3 3 3]
+ [1 1 1 2 2 2 3 3 3]
+ [0 0 0 1 1 1 2 2 2]
+ [0 0 0 1 1 1 2 2 2]
+ [1 1 1 2 2 2 3 3 3]
+ [1 1 1 2 2 2 3 3 3]]
+```
+
+每一列对应一个数据块的行下标。前 3 列是跨度行坐标为 0 时 3 个数据块的行下标。
+
+以下代码将跨度坐标与数据块内元素下标结合，得到原始输入（单通道）张量中所有数据块的行列下标：
+
+```python
+C, S = 1, 1
+oH, oW = 3, 3
+kH, kW = 2, 2
+
+i0 = np.repeat(np.arange(kH), kW)
+i0 = np.tile(i0, C)
+j0 = np.tile(np.arange(kW), kH * C)
+
+i1 = S * np.repeat(np.arange(oH), oW)
+j1 = S * np.tile(np.arange(oW), oH)
+
+i = i0.reshape(-1, 1) + i1.reshape(1, -1)
+j = j0.reshape(-1, 1) + j1.reshape(1, -1)
+
+print(i)
+print(j)
+```
+
+输出结果：
+
+```
+[[0 0 0 1 1 1 2 2 2]
+ [0 0 0 1 1 1 2 2 2]
+ [1 1 1 2 2 2 3 3 3]
+ [1 1 1 2 2 2 3 3 3]]
+[[0 1 2 0 1 2 0 1 2]
+ [1 2 3 1 2 3 1 2 3]
+ [0 1 2 0 1 2 0 1 2]
+ [1 2 3 1 2 3 1 2 3]]
+```
+
+所有数据块左上角元素的行下标如图 6-51 所示。
+
+**图 6-51** 所有数据块左上角元素的行下标
+
+所有数据块右下角元素的行下标如图 6-52 所示。
+
+**图 6-52** 所有数据块右下角元素的行下标
+
+可以观察到，该索引矩阵的每一列对应一个数据块。
+
+若希望每个数据块的索引下标成为矩阵的一行，则需修改数据块下标与跨度下标是按行还是按列排列，即修改 `reshape` 代码：
+
+```python
+C, S = 1, 1
+oH, oW = 3, 3
+kH, kW = 2, 2
+
+i0 = np.repeat(np.arange(kH), kW)
+i0 = np.tile(i0, C)
+j0 = np.tile(np.arange(kW), kH * C)
+
+i1 = S * np.repeat(np.arange(oH), oW)
+j1 = S * np.tile(np.arange(oW), oH)
+
+i = i0.reshape(1, -1) + i1.reshape(-1, 1)
+j = j0.reshape(1, -1) + j1.reshape(-1, 1)
+
+print(i)
+print(j)
+```
+
+输出结果：
+
+```
+[[0 0 1 1]
+ [0 0 1 1]
+ [0 0 1 1]
+ [1 1 2 2]
+ [1 1 2 2]
+ [1 1 2 2]
+ [2 2 3 3]
+ [2 2 3 3]
+ [2 2 3 3]]
+[[0 1 0 1]
+ [1 2 1 2]
+ [2 3 2 3]
+ [0 1 0 1]
+ [1 2 1 2]
+ [2 3 2 3]
+ [0 1 0 1]
+ [1 2 1 2]
+ [2 3 2 3]]
+```
+
+## 通道坐标
+
+上述讨论的是数据块各元素相对于其通道的图像行列坐标。索引每个数据元素还应考虑通道坐标。若有 `C` 个通道，单个元素在 `C` 个通道中的坐标值为 `(0, 1, 2, ..., C-1)`（如图 6-53 所示）。但每个数据块在单通道上有 `kH × kW` 个元素，因此结合通道坐标与图像（特征图）坐标，形状为 `kH × kW × C` 的数据块共有 `kH × kW × C` 个坐标。
+
+**图 6-53** 通道坐标，通道 i 中所有元素的通道坐标均为 i
+
+以下代码计算数据块的通道坐标：
+
+```python
+C = 2
+k = np.repeat(np.arange(C), kH * kW).reshape(1, -1)  # (-1, 1)
+print(k)
+```
+
+输出结果：
+
+```
+[[0 0 0 0 1 1 1 1]]
+```
+
+## 卷积层索引映射函数 `get_im2row_indices()`
+
+若卷积层输入的原始数据张量形状为 `(N, C, H, W)`，卷积层有 `F` 个形状为 `(C, H, W)` 的卷积核，即卷积栈形状为 `(F, C, H, W)`。若进行跨度 `S` 和边缘填充 `P` 的卷积操作，根据上述分析，可获得参与卷积运算的原始数据张量中所有数据块元素的通道坐标 `k`、行下标 `i` 和列下标 `j`。函数 `get_im2row_indices()` 可获取这些映射坐标 `(k, i, j)`：
+
+```python
+import numpy as np
+
+def get_im2row_indices(x_shape, kH, kW, S=1, P=0):
+    N, C, H, W = x_shape
+    assert (H + 2 * P - kH) % S == 0
+    assert (W + 2 * P - kW) % S == 0
+    oH = (H + 2 * P - kH) // S + 1
+    oW = (W + 2 * P - kW) // S + 1
+
+    i0 = np.repeat(np.arange(kH), kW)
+    i0 = np.tile(i0, C)
+    i1 = S * np.repeat(np.arange(oH), oW)
+    j0 = np.tile(np.arange(kW), kH * C)
+    j1 = S * np.tile(np.arange(oW), oH)
+
+    # i = i0.reshape(-1, 1) + i1.reshape(1, -1)
+    # j = j0.reshape(-1, 1) + j1.reshape(1, -1)
+    i = i0.reshape(1, -1) + i1.reshape(-1, 1)
+    j = j0.reshape(1, -1) + j1.reshape(-1, 1)
+
+    k = np.repeat(np.arange(C), kH * kW).reshape(1, -1)
+    return (k, i, j)
+```
+
+以下代码测试上述函数：
+
+```python
+H, W = 4, 4
+kH, kW = 2, 2
+oH, oW = 3, 3
+N, C, S, P, F = 2, 2, 1, 0, 4
+
+k, i, j = get_im2row_indices((N, C, H, W), kH, kW, S, P)
+print(k.shape)
+print(i.shape)
+```

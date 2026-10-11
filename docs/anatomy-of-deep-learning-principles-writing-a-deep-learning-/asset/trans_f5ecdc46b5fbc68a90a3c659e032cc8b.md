@@ -1,0 +1,217 @@
+
+
+## 线性回归的梯度推导与法方程求解
+
+### 梯度推导
+
+$$
+\frac{\partial\delta^{(i)}}{\partial f^{(i)}} = 1
+$$
+
+$$
+\frac{\partial f^{(i)}}{\partial w_{j}} = x_{j}^{(i)}
+$$
+
+$$
+\begin{matrix}
+\frac{\partial{LL(\pmb{w})}}{\partial w_{j}} & {= \sum\limits_{i = 1}^{m}{\frac{\partial{LL(\pmb{w})}}{\partial\delta^{(i)}} \times \frac{\partial\delta^{(i)}}{\partial f^{(i)}} \times \frac{\partial f^{(i)}}{\partial w_{j}}} = \frac{1}{m}\sum\limits_{i = 1}^{m}\delta^{(i)} \times 1 \times x_{j}^{(i)}} \\
+& {= \frac{1}{m}\sum\limits_{i = 1}^{m}{(f^{(i)} - y^{(i)})x_{j}^{(i)}} = \frac{1}{m}\sum\limits_{i = 1}^{m}(f_{\pmb{w}}(x^{(i)}) - y^{(i)})x_{j}^{(i)}}
+\end{matrix}
+$$
+
+右侧公式中除系数外的值可视为两个向量的点积：
+
+$$
+\begin{matrix}
+{\sum\limits_{i = 1}^{m}(f_{\pmb{w}}(x^{(i)}) - y^{(i)})x_{j}^{(i)}} & {= \begin{pmatrix} {f_{\pmb{w}}(x^{(1)}) - y^{(1)}} & {f_{\pmb{w}}(x^{(2)}) - y^{(2)}} & \cdots & {f_{\pmb{w}}(x^{(m)}) - y^{(m)}} \end{pmatrix}\begin{pmatrix} x_{j}^{(1)} \\ x_{j}^{(2)} \\ \vdots \\ x_{j}^{(m)} \end{pmatrix}} \\
+& {= \begin{pmatrix} x_{j}^{(1)} & x_{j}^{(2)} & \cdots & x_{j}^{(m)} \end{pmatrix}\begin{pmatrix} {f_{\pmb{w}}(x^{(1)}) - y^{(1)}} \\ {f_{\pmb{w}}(x^{(2)}) - y^{(2)}} \\ \vdots \\ {f_{\pmb{w}}(x^{(m)}) - y^{(m)}} \end{pmatrix}} \\
+& {= \begin{pmatrix} x_{j}^{(1)} & x_{j}^{(2)} & \cdots & x_{j}^{(m)} \end{pmatrix}\begin{pmatrix} {x^{(1)}\pmb{w} - y^{(1)}} \\ {x^{(2)}\pmb{w} - y^{(2)}} \\ \vdots \\ {x^{(m)}\pmb{w} - y^{(m)}} \end{pmatrix}} \\
+& {= X_{:,j}^{T}(X\pmb{w} - y)}
+\end{matrix}
+$$
+
+其中，`X_{:,j}^T` 是 `X` 矩阵第 `j` 列的转置（即所有样本的第 `j` 个特征）。因此，偏导数 $\frac{\partial{LL(\pmb{w})}}{\partial w_{j}}$ 可写成向量形式：
+
+$$
+\frac{\partial{L(\pmb{w})}}{\partial w_{j}} = \frac{1}{m}X_{:,j}^{T}(X\pmb{w} - y)
+$$
+
+因为关于 `w` 的梯度 `L(w)` 的列向量形式为：
+
+$$
+\nabla L(\pmb{w}) = (\frac{\partial{L(\pmb{w})}}{\partial w_{1}},\cdots,\frac{\partial{L(\pmb{w})}}{\partial w_{j}},\cdots)^{T} = \frac{1}{m}X^{T}(X\pmb{w} - y)
+$$
+
+可以检验矩阵乘法各维度边界是否一致：
+
+∇`L(w)` = `X^T` (`X` `w` − `y`)
+
+`n` × 1   `n` × `m`  (`m` × `n`  `n` × 1  `m` × 1)
+
+对于上述示例，可直接使用此公式计算损失函数关于 `w` 的梯度：
+
+```python
+y = np.array([2.3, 1.7])
+(1/len(y))*X.transpose() @ (X@w-y)  # or: (1/m)*X.T @ (X@W-y)
+```
+
+```
+array([ 19.3 , 144.95, 76.8 ])
+```
+
+令梯度 ∇`L(w)` = 0，得到法方程：
+
+`X^T`(`X``w` − `y`) = 0
+
+根据法方程，可得 `w`：
+
+`w` = (`X^T``X`)^(-1)`X^T``y`
+
+### 2. 拟合平面
+
+以下代码生成一组从平面 `z` = 2`x` + 3`y` + `c` 采样的数据点样本，每个数据样本由 (`x`, `y`) 表征，其目标值是该点在平面上对应的 `z` 值加上噪声：
+
+```python
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+
+n_points = 20
+
+a = 3
+b = 2
+c  = 5
+x_range = 5
+y_range = 5
+noise = 3
+
+xs = np.random.uniform(-x_range, x_range, n_points)
+ys = np.random.uniform(-y_range, y_range, n_points)
+zs = xs*a + ys*b + c + np.random.normal(scale=noise)
+
+#-----Draw the plane-------------
+# Create grid points xx,yy
+xx, yy = np.meshgrid([x for x in range(-x_range, x_range+1)], [y for y in range(-y_range, y_range+1)])
+# Calculate the z value zz corresponding to the grid point (xx, yy)
+zz = a * xx + b * yy + c
+# draw the surface
+plt3d = plt.figure().gca(projection='3d')
+plt3d.plot_surface(xx, yy, zz, alpha=0.2)
+
+#-----Plot data points-------------
+ax = plt.gca()
+
+ax.scatter(xs, ys, zs, color='b')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+
+plt.show()
+```
+
+![](EPUB/media/file46.png)
+
+**Figure 3-11** 三维空间采样的二维平面数据集
+
+使用上述样本点求解法方程拟合一个平面，并用拟合函数计算原始数据点 (`xs`, `ys`) 的预测值 `zs2`，然后显示原始数据点和拟合数据点，以及原始平面和拟合平面，可以看到拟合效果很好。
+
+```python
+# fit a plane
+X = np.hstack((xs[:, None], ys[:, None]))
+X = np.hstack((np.ones((len(xs), 1), dtype=xs.dtype), xs[:, None], ys[:, None]))
+y = zs
+
+# Compute the normal equation
+XT = X.transpose()
+XTy = XT @ y
+w = np.linalg.inv(XT@X) @ XTy
+
+# Calculate the fitting error
+errors = y - X@w
+residual = np.linalg.norm(errors)
+
+print("Fitted plane equation:")
+print("z = %f x + %f y + %f" % (w[1], w[2], w[0]))
+print("residual:", residual)
+
+# draw the fitted plane
+xlim = ax.get_xlim()
+ylim = ax.get_ylim()
+xx2, yy2 = np.meshgrid(np.arange(xlim[0], xlim[1]),
+                  np.arange(ylim[0], ylim[1]))
+zz2 = w[1] * xx2 + w[2] * yy2 + w[0]
+
+zs2 = w[1] * xs + w[2] * ys + w[0]
+#ax.plot_wireframe(xx,yy,zz, color='k')
+plt3d = plt.figure().gca(projection='3d')
+plt3d.plot_surface(xx, yy, zz, alpha=0.5)
+plt3d.plot_wireframe(xx2, yy2, zz2, color='k', alpha=0.2)
+
+ax = plt.gca()
+ax.scatter(xs, ys, zs, color='b')
+ax.scatter(xs, ys, zs2, color='r')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+plt.show()
+```
+
+```
+    Fitted plane equation:
+    z = 3.000000 x + 2.000000 y + 5.257362
+    residual: 1.5379794977104662e-14
+```
+
+![](EPUB/media/file47.png)
+
+**Figure 3-12** 拟合平面
+
+当样本数量大或样本特征多时，法方程需要求逆矩阵，耗时较长。因此一般采用迭代法求解方程组，最典型的迭代法是**梯度下降法**。
+
+以下是用 NumPy 向量运算实现的梯度下降算法：
+
+```python
+learning_rate = 0.02
+num_iters = 100
+X = np.hstack((xs[:, None], ys[:, None]))
+w, cost_history = gradient_descent_vec(X, y, learning_rate, num_iters)
+print("w:", w)
+print(cost_history[:5])
+
+plt.plot(cost_history, linewidth=2)
+plt.title("Gradient descent with learning rate = " + str(learning_rate), fontsize=16)
+plt.xlabel("number of iterations", fontsize=14)
+plt.ylabel("cost", fontsize=14)
+plt.grid()
+plt.show()
+```
+
+```
+    w: [5.2574307 3.00002524 1.99999406]
+    [67.35604162168268, 50.488263686179806, 29.597233252531048, 15.413911756207108, 10.830666806860211]
+```
+
+![](EPUB/media/file48.png)
+
+```python
+def gradient_descent_vec(X, y, alpha, num_iters, gamma=0.8, epsilon=1e-8):
+    history = []               # Record the parameters in the iteration process
+    X = np.hstack((np.ones((X.shape[0], 1), dtype=X.dtype), X))  # Add a column of features 1
+    num_features = X.shape[1]
+    v = np.zeros(num_features)
+    w = np.zeros(num_features)
+    for n in range(num_iters):
+        predictions = X @ w       # Find the predicted value of the hypothesis function, i.e. f(x)
+        errors = predictions - y         # The error between the predicted value and the real value
+        gradient = X.transpose() @ errors / len(y)         # calculate the gradient
+        if np.max(np.abs(gradient)) < epsilon:
+            print("gradient is small enough!")
+            print("iterated num is :", n)
+            break
+        # w -= alpha * gradient # Update the parameters of the model
+        v = gamma * v + alpha * gradient
+        w = w - v
+        history.append(w)
+    return history                  # return the history of optimized parameters
+```
+

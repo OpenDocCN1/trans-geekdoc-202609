@@ -1,0 +1,214 @@
+
+
+## 数值梯度验证
+
+$$
+\frac{\partial\mathcal{L}}{\partial p_{j}} = \sum\limits_{i}\frac{\partial\mathcal{L}}{\partial f_{i}}\frac{f_{i}(p + \epsilon) - f_{i}(p - \epsilon)}{2\epsilon} = \frac{\partial\mathcal{L}}{\partial f} \cdot \frac{f(p_{j} + \epsilon) - f(p_{j} - \epsilon)}{2\epsilon} = df \cdot \frac{f(p_{j} + \epsilon) - f(p_{j} - \epsilon)}{2\epsilon}
+$$
+
+其中，`f` 是网络层 `dense` 的 `forward()` 输出。如果使用 `f = dense.forward(x)` 来表示该函数的计算，该函数的计算依赖于某个参数 `p`，则损失函数对参数 `p` 的导数可以通过以下函数实现：
+
+```
+def numerical_gradient_from_df(f, p, df, h=1e-5):
+  grad = np.zeros_like(p)
+  it = np.nditer(p, flags=['multi_index'], op_flags=['readwrite'])
+  while not it.finished:
+    idx = it.multi_index
+    
+    oldval = p[idx]
+    p[idx] = oldval + h
+    pos = f()    # Recall f() to calculate its output after a dependent parameter p[idx] of f changes
+    p[idx] = oldval - h
+    neg = f()    # Recall f() to calculate its output after a dependent parameter p[idx] of f changes
+    p[idx] = oldval
+       
+    grad[idx] = np.sum((pos - neg) * df) / (2 * h)
+    # grad[idx] = np.dot((pos - neg), df) / (2 * h)
+    it.iternext()
+  return grad
+```
+
+以下代码首先模拟 `dense` 输出的损失函数梯度 `df`，然后调用 `dense.backward(df)` 反向传播 `dense` 模型参数的梯度。输出 `dx` 是 `dense` 输入 `x` 的梯度 `dx`，然后使用上述数值梯度函数 `numerical_gradient_from_df` 计算关于 `x` 的数值梯度 `dx_num`，最后比较 `dx` 和 `dx_num` 的误差：
+
+```
+df = np.random.randn(3, 10)
+dx = dense.backward(df)
+dx_num = numerical_gradient_from_df(lambda: dense.forward(x), x, df)
+
+diff_error = lambda x, y: np.max(np.abs(x - y)) 
+print(diff_error(dx, dx_num))
+```
+
+```
+2.1851062625977136e-12
+```
+
+数值梯度与解析梯度之间的误差非常小，表明 `backward()` 计算的解析梯度和数值梯度几乎相同。我们也可以比较 `dense` 模型参数的梯度是否一致。以下代码检查 `dense` 模型参数 `W` 的梯度是否一致：
+
+```
+dW_num = numerical_gradient_from_df(lambda: dense.forward(x), dense.W, df)
+print(diff_error(dense.dW, dW_num))
+```
+
+```
+2.2715163083830703e-12
+```
+
+说明模型参数的数值梯度和解析梯度也非常接近。因此，可以判断解析梯度的代码基本正确。
+
+## 4.3.4 神经网络类
+
+在层的基础上，可以定义一个表示整个神经网络的 `NeuralNetwork` 类：
+
+```
+class NeuralNetwork:   
+    def __init__(self):
+        self._layers = []
+ 
+    def add_layer(self, layer):       
+        self._layers.append(layer)
+    
+    def forward(self, X):    
+        self.X = X
+        for layer in self._layers:           
+            X = layer.forward(X)      
+        return X     
+    
+    def predict(self, X):        
+        p = self.forward(X)
+     
+        if p.ndim == 1:     # single sample
+            return np.argmax(p)
+        
+        # multiple samples
+        return np.argmax(p, axis=1)
+  
+
+    def backward(self, loss_grad, reg=0.):
+        for i in reversed(range(len(self._layers))):
+            layer = self._layers[i] 
+            loss_grad = layer.backward(loss_grad)
+            
+        for i in range(len(self._layers)):
+            self._layers[i].dW += 2 * reg * self._layers[i].W
+    
+    def reg_loss(self, reg):
+        loss = 0
+        for i in range(len(self._layers)):
+            loss += reg * np.sum(self._layers[i].W * self._layers[i].W)
+        return loss
+    
+    def update_parameters(self, learning_rate):
+        for i in range(len(self._layers)):  
+            self._layers[i].W += -learning_rate * self._layers[i].dW
+            self._layers[i].b += -learning_rate * self._layers[i].db 
+            
+    def parameters(self):
+        params = []
+        for i in range(len(self._layers)):
+            params.append(self._layers[i].W)
+            params.append(self._layers[i].b)
+        return params
+    
+    def grads(self):
+        grads = []
+        for i in range(len(self._layers)):
+            grads.append(self._layers[i].dW)
+            grads.append(self._layers[i].db)
+        return grads
+```
+
+有了网络层 `Layer` 和神经网络类 `NeuralNetwork`，就可以为实际问题（如二维平面点集分类问题）定义一个两层神经网络模型：
+
+```
+nn = NeuralNetwork()
+nn.add_layer(Dense(2, 100, 'relu'))
+nn.add_layer(Dense(100, 3, 'softmax'))
+```
+
+对于多分类问题，可以使用之前的 `softmax_cross_entropy()` 和 `cross_entropy_grad` 来计算多分类交叉熵损失的梯度和加权和：
+
+```
+X_temp = np.random.randn(2, 2)
+y_temp = np.random.randint(3, size=2)
+F = nn.forward(X_temp)
+loss = softmax_cross_entropy(F, y_temp)
+loss_grad = cross_entropy_grad(F, y_temp)
+print(loss, np.mean(loss_grad))
+```
+
+```
+1.098695480580774 -9.25185853854297e-18
+```
+
+## 4.3.5 神经网络梯度测试
+
+为确保神经网络的前向计算、损失函数计算和反向导数计算正确，可以将数值梯度与解析梯度进行比较。
+
+```
+import util
+
+# 根据损失函数在输出上的梯度 loss_grad 计算模型参数的梯度
+nn.backward(loss_grad)
+grads = nn.grads()
+
+def loss_fun():
+    F = nn.forward(X_temp)
+    return softmax_cross_entropy(F, y_temp)
+
+params = nn.parameters()
+numerical_grads = util.numerical_gradient(loss_fun, params, 1e-6)
+
+for i in range(len(params)):
+    print(numerical_grads[i].shape, grads[i].shape)
+  
+
+def diff_error(x, y):
+  return np.max(np.abs(x - y)) 
+
+def diff_errors(xs, ys):
+    errors = []
+    for i in range(len(xs)):
+        errors.append(diff_error(xs[i], ys[i]))
+    return np.max(errors)
+
+diff_errors(numerical_grads, grads)
+```
+
+```
+(2, 100) (2, 100)
+(1, 100) (1, 100)
+(100, 3) (100, 3)
+(1, 3) (1, 3)
+2.3017241064515748e-10
+```
+
+数值梯度与解析梯度之间的误差非常小，表明解析梯度基本正确。以下是梯度下降算法的代码：
+
+```
+def cross_entropy_grad_loss(F, y, softmax_out=False, onehot=False):
+    if softmax_out:
+        loss = cross_entropy_loss(F, y, onehot)
+    else:    
+        loss = softmax_cross_entropy(F, y, onehot)
+    loss_grad = cross_entropy_grad(F, y, onehot, softmax_out)
+    return loss, loss_grad
+    
+def train(nn, X, y, loss_function, epochs=10000, learning_rate=1e-0, reg=1e-3, print_n=10):
+    for epoch in range(epochs):
+        f = nn.forward(X)        
+        loss, loss_grad = loss_function(f, y)        
+        loss += nn.reg_loss(reg)
+        
+        nn.backward(loss_grad, reg)
+      
+        nn.update_parameters(learning_rate);        
+       
+        if epoch % print_n == 0:
+            print("iteration %d: loss %f" % (epoch, loss)) 
+```
+
+对于训练样本 `(X, y)`，梯度下降法的每次迭代首先计算前向输出 `f = nn.forward(X)`，然后计算损失函数关于输出的梯度 `loss, loss_grad = loss_function(f, y)`，接着基于该梯度通过反向传播计算模型参数的梯度 `nn.backward(loss_grad, reg)`，最后更新模型参数 `nn.update_parameters(learning_rate)`。
+
+使用上述数据训练集训练模型并输出模型预测的准确率：
+
