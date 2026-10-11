@@ -1,0 +1,92 @@
+
+# 参考文献
+
+Lu, Y. (2018). Blockchain: A survey on functions, applications and open issues. *Journal of Industrial Integration and Management*, 3(04), 1850015. doi:10.1142/S242486221850015X
+
+Lu, Z., Liu, W., Wang, Q., Qu, G., & Liu, Z. (2018). A privacy-preserving trust model based on blockchain for VANETs. *IEEE Access: Practical Innovations, Open Solutions*, 6, 45655–45664. doi:10.1109/ACCESS.2018.2864189
+
+Macleod, M. R., Michie, S., Roberts, I., Dirnagl, U., Chalmers, I., Ioannidis, J. P., Salman, R. A.-S., Chan, A.-W., & Glasziou, P. (2014). Biomedical research: Increasing value, reducing waste. *Lancet*, 383(9912), 101–104. doi:10.1016/S0140-6736(13)62329-6
+
+Maggs, B. M., Matheson, L. R., & Tarjan, R. E. (1995). Models of parallel computation: A survey and synthesis. In *Proceedings of the Twenty-Eighth Annual Hawaii International Conference on System Sciences* (Vol. 2, pp. 61-70). IEEE. doi:10.1109/HICSS.1995.375476
+
+Mahjabin, T., Xiao, Y., Sun, G., & Jiang, W. (2017). A survey of distributed denial-of-service attack, prevention, and mitigation techniques. *International Journal of Distributed Sensor Networks*, 13(12), 155014771774146. doi:10.1177/1550147717741463
+
+Makhdoom, I., Abolhasan, M., Abbas, H., & Ni, W. (2018). Blockchain’s adoption in IoT: The challenges, and a way forward. *Journal of Network and Computer Applications*.
+
+Maroufi, M., Abdolee, R., & Tazekand, B. M. (2019). On the convergence of blockchain and internet of things (iot) technologies. *arXiv preprint arXiv:1904.01936*.
+
+Mazhanda, F. (2019). How Blockchain and IoT Are Opening New Capabilities in the Construction Industry. Retrieved from https://www.iotforall.com/iot-in-construction/
+
+Mettler, M. (2016, September). Blockchain technology in healthcare: The revolution starts here. In *2016 IEEE 18th International Conference on e-Health Networking, Applications and Services (Healthcom)* (pp. 1-3). IEEE.
+
+Minoli, D., & Occhiogrosso, B. (2018). Blockchain mechanisms for IoT security. *Internet of Things*, 1-2, 1–13. doi:10.1016/j.iot.2018.05.002
+
+Minoli, D., & Occhiogrosso, B. (2018). Blockchain mechanisms for IoT security. *Internet of Things*, 1, 1–13. doi:10.1016/j.iot.2018.05.002
+
+Miorandi, D., Sicari, S., De Pellegrini, F., & Chlamtac, I. (2012). Internet of things: Vision, applications and research challenges. *Ad Hoc Networks*, 10(7), 1497–1516. doi:10.1016/j.adhoc.2012.02.016
+
+Miraz, M. H. (2019). Blockchain of Things (BCoT): The Fusion of Blockchain and IoT Technologies. *Cuhk Law*.
+
+Moubarak, J., Filiol, E., & Chamoun, M. (2018, April). On blockchain security and relevant attacks. In *2018 IEEE Middle East and North Africa Communications Conference (MENACOMM)* (pp. 1-6). IEEE. doi:10.1109/MENACOMM.2018.8371010
+
+Muhammad, S., Aziz, M., Charles, K., Kevin, H., & Laurent, N. (2018). Countering double spending in next-generation blockchains. *IEEE ICC 2018*.
+
+Murthy, D. N., & Kumar, B. V. (2015). Internet of things (IoT): Is IoT a disruptive technology or a disruptive business model? *Indian Journal of Marketing*, 45(8), 18–27. doi:10.17010/ijom/2015/v45/i8/79915
+
+Myllylahti, M. (2014). Newspaper paywalls–the hype and the reality. *Digit. Journal.*, 2(2), 179–194. doi:10.1080/21670811.2013.813214
+
+Nadeem, S., Rizwan, M., Ahmad, F., & Manzoor, J. (2019). Securing Cognitive Radio Vehicular Ad Hoc Network with Fog Node based Distributed Blockchain Cloud Architecture. *International Journal of Advanced Computer Science and Applications*, 10(1), 288–295. doi:10.14569/IJACSA.2019.0100138
+
+Nagaraj, K., & Maguire, E. (2017). *Securing the Chain*. KPMG International. https://assets.kpmg.com/content/dam/kpmg/xx/pdf/2017/05/securing-the-chain.pdf
+
+Nagothu, D., Xu, R., Nikouei, S. Y., & Chen, Y. (2018, September). A microservice-enabled architecture for smart surveillance using blockchain technology. In *2018 IEEE International Smart Cities Conference (ISC2)* (pp. 1-4). IEEE. doi:10.1109/ISC2.2018.8656968
+
+Nakamoto, S. (2008). Bitcoin: A Peer to Peer electronic cash system. https://bitcoin.org/bitcoin.pdf
+
+Nakamoto, S. (2008). Bitcoin: A peer-to-peer electronic cash system. Retrieved from https://bitcoin.org/bitcoin.pdf
+
+Nakamoto, S. (2008). Bitcoin: A Peer-to-Peer Electronoic Cash Aystem, 2008.
+
+Nakamoto, S. (2008). Bitcoin: A. Peer to Peer. Electronic cash system. https://bitcoin.org/bitcoin.pdf
+
+Nakamoto, S. (2019). Bitcoin: A peer-to-peer electronic cash system. *Manubot*.
+
+Nikouei, S. Y., Xu, R., Nagothu, D., Chen, Y., Aved, A., & Blasch, E. (2018, September). Real-time index authentication for event-oriented surveillance video query using blockchain. In *2018 IEEE International Smart Cities Conference (ISC2)* (pp. 1-8). IEEE. doi:10.1109/ISC2.2018.8656668
+
+Ning, H., & Hu, S. (2012). Technology classification, industry, and education for Future Internet of Things. *International Journal of Communication Systems*, 25(9), 1230–1241. doi:10.1002/dac.2373
+
+Niranjanamurthy, M., Nithya, B. N., & Jagannatha, S. (2018). Analysis of Blockchain technology: Pros, cons and SWOT. *Cluster Computing*, •••, 1–15.
+
+Nunberg, G. (2012). *The advent of the internet*. Academic Press.
+
+Ocheja, P., Flanagan, B., Ueda, H., & Ogata, H. (2019). Managing lifelong learning records through blockchain. *Research and Practice in Technology Enhanced Learning*. doi:10.1186/s41039-019-0097-0
+
+Osgood, R. (2016). The future of democracy: Blockchain voting. *COMP116: Information Security*, 1-21.
+
+Otte, P., de Vos, M., & Pouwelse, J. (2017, Sept.). TrustChain: A Sybil-resistant scalable blockchain. *Future Generation Computer Systems*.
+
+Paillisse, J., Subira, J., Lopez, L., Rodriguez-Natal, A., Ermagan, V., Maino, F., & Cabellos, A. (2019). *Distributed Access Control with Blockchain*. Academic Press.
+
+Pal, K. (2019). Algorithmic Solutions for RFID Tag Anti-Collision Problem in Supply Chain Management. *Procedia Computer Science*, 929-934.
+
+Pal, K. (2020). Information Sharing for Manufacturing Supply Chain Management Based on Blockchain Technology. In *Cross-industry Use of Blockchain Technology and Opportunities for the Future*. IGI Global.
+
+Pal, K. (2020a). Ontology-Assisted Enterprise Information Systems Integration in Manufacturing Supply Chain. In *Handbook of Research on Developments and Trends in Industrial and Material Engineering*. IGI Global.
+
+Pal, K., & Ul-Haque, A. (2020). Internet of Things and Blockchain Technology in Apparel Manufacturing Supply Chain Data Management. *Proceeding of 11th International Conference on Ambient Systems, Networks and Technologies (ANT-2020)*.
+
+Pal, K. (2017). Supply Chain Coordination Based on Web Services. In Chan, H. K., Subramanian, N., & Abdulrahman, M. D. (Eds.), *Supply Chain Management in the Big Data Era* (pp. 137–171). IGI Global Publication. doi:10.4018/978-1-5225-0956-1.ch009
+
+Panarello, A., Tapas, N., Merlino, G., Longo, F., & Puliafito, A. (2018). Blockchain and iot integration: A systematic survey. *Sensors (Basel)*, 18(8), 2575.
+
+Pappalardo, G., Di Matteo, T., Caldarelli, G., & Aste, T. (2018). Blockchain inefficiency in the bitcoin peers network. *EPJ Data Science*, 7(1), 30. doi:10.1140/epjds/s13688-018-0159-3
+
+Park, S. J. (2009). An Analysis of GPU Parallel Computing. In *2009 DoD High Performance Computing Modernization Program Users Group Conference* (pp. 365-369). IEEE. doi:10.1109/HPCMP-UGC.2009.59
+
+Perugini, S. (2018). The design of an emerging/multi-paradigm programming languages course. *Journal of Computing Sciences in Colleges*, 34(1), 52–59.
+
+Pieroni, A., Scarpato, N., Di Nunzio, L., Fallucchi, F., & Raso, M. (2018). Smarter city: Smart energy grid based on blockchain technology. *Int. J. Adv. Sci. Eng. Inf. Technol*, 8(1), 298–306. doi:10.18517/ijaseit.8.1.4954
+
+Pilkington. (2016). Blockchain technology: Principle and applications. *Research Handbook on Digital Transformations*.
+
+Pilkington, M. (2016). Blockchain technology: Principle and applications. *Research Handbook on Digital Transformations*.

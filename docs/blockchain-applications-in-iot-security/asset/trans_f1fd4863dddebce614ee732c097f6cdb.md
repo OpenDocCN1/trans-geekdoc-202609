@@ -1,0 +1,76 @@
+
+
+# 参考文献
+
+van Rossum, J. (2017). Blockchain for Research - Perspectives on a New Paradigm for Scholarly Communication. Technical report. Digital Science. doi:10.6084/m9.figshare.5607778
+
+Vujičić, D., Jagodić, D., & Ranđić, S. (2018). Blockchain technology, bitcoin, and Ethereum: A brief overview. In *2018 17th International Symposium Infoteh-Jahorina (INFOTEH)*. IEEE. doi:10.1109/INFOTEH.2018.8345547
+
+Waller, M. A., & Fawcett, S. E. (2013). Data science, predictive analytics, and big data: A revolution that will transform supply chain design and management. *Journal of Business Logistics*, 34(2), 77–84. doi:10.1111/jbl.12010
+
+Wang, Q., Qin, B., Hu, J., & Xiao, F. (2017, Sept.). Preserving transaction privacy in bitcoin. *Future Generation Computer Systems*.
+
+Wang, B., Sun, J., He, Y., Pang, D., & Lu, N. (2018). Large-scale Election Based On Blockchain. *Procedia Computer Science*, 129, 234–237. doi:10.1016/j.procs.2018.03.063
+
+Wang, K., Kulkarni, A., Lang, M., Arnold, D., & Raicu, I. (2015). Exploring the design tradeoffs for extreme-scale high-performance computing system software. *IEEE Transactions on Parallel and Distributed Systems*, 27(4), 1070–1084. doi:10.1109/TPDS.2015.2430852
+
+Wang, S. J., Liu, S. F., & Wang, W. L. (2008). The simulated impact of RFID-enabled supply chain on pull-based inventory replenishment in TFT-LCD industry. *International Journal of Production Economics*, 112(2), 570–586. doi:10.1016/j.ijpe.2007.05.002
+
+Wang, S., Zhang, Y., & Zhang, Y. (2018). A blockchain-based framework for data sharing with fine-grained access control in decentralized storage systems. *IEEE Access: Practical Innovations, Open Solutions*, 6, 38437–38450. doi:10.1109/ACCESS.2018.2851611
+
+Wan, J., Li, J., Imran, M., Li, D., & Fazal-e-Amin. (2019). A blockchain-based solution for enhancing security and privacy in smart factory. *IEEE Transactions on Industrial Informatics*, 15(6), 3652–3660. doi:10.1109/TII.2019.2894573
+
+Washington, L. C. (2008). *Elliptic Curves: Number Theory and Cryptography* (2nd ed.). Chapman & Hall/CRC. doi:10.1201/9781420071474
+
+Weyrich, M., & Ebert, C. (2015). Reference architectures for the internet of things. *IEEE Software*, 33(1), 112–116. doi:10.1109/MS.2016.20
+
+Witkowski, K. (2017). Internet of Things, Big Data, Industry 4.0 - Innovative Solutions in Logistics and Supply Chains Management. *Procedia Engineering*, 2017(182), 763–769. doi:10.1016/j.proeng.2017.03.197
+
+Wolf, M., Wiegand, M., & Drichel, A. (2016). PEvO (Publish and Evaluate Onchain). Available online at: https://pevo.science/files/pevo_whitepaper.pdf
+
+Wortner, P., Schubotz, M., Breitinger, C., Leible, S., & Gipp, B. (2019). Securing the integrity of time series data in open science projects using blockchain-based trusted timestamping. *Proceedings of the Workshop on Web Archiving and Digital Libraries (WADL ’19)*, 1–3.
+
+Wuille, P. (2019). Segregated-witness-and-its-impact-on-scalability. Retrieved 24 July 2019, from https://diyhpl.us/wiki/transcripts/scalingbitcoin/hong-kong/segregated-witness-and-its-impact-on-scalability/
+
+Wüst, K. & Gervais, A. (2018, June). Do you need a blockchain? In *2018 Crypto Valley Conference on Blockchain Technology (CVCBT)* (pp. 45-54). IEEE. doi:10.1109/CVCBT.2018.00011
+
+Xu, R., Chen, Y., Blasch, E., & Chen, G. (2018). Blendcac: A blockchain-enabled decentralized capability-based access control for iots. In *2018 IEEE International Conference on Internet of Things (iThings) and IEEE Green Computing and Communications (GreenCom) and IEEE Cyber, Physical and Social Computing (CPSCom) and IEEE Smart Data (SmartData)* (pp. 1027-1034). IEEE. doi:10.1109/Cybermatics_2018.2018.00191
+
+Xu, R., Nikouei, S. Y., Chen, Y., Blasch, E., & Aved, A. (2019, July). Blendmas: A blockchain-enabled decentralized microservices architecture for smart public safety. In *2019 IEEE International Conference on Blockchain (Blockchain)* (pp. 564-571). IEEE. doi:10.1109/Blockchain.2019.00082
+
+Xu, Y., Ren, J., Wang, G., Zhang, C., Yang, J., & Zhang, Y. (2019). A blockchain-based nonrepudiation network computing service scheme for industrial IoT. *IEEE Transactions on Industrial Informatics*, 15(6), 3632–3641. doi:10.1109/TII.2019.2897133
+
+Yan-e, D. (2011). Design of intelligent agriculture management information system based on IoT. *Proceedings of the 2011 Fourth International Conference on Intelligent Computation Technology and Automation*, 1, 1045–1049. doi:10.1109/ICICTA.2011.262
+
+Yin, W., Wen, Q., Li, W., Zhang, H., & Jin, Z. (2018). An Anti-Quantum Transaction Authentication Approach in Blockchain. *IEEE Access: Practical Innovations, Open Solutions*, 6, 5393–5401. doi:10.1109/ACCESS.2017.2788411
+
+Yli-Huumo, J., Ko, D., Choi, S., Park, S., & Smolander, K. (2016). Where is current research on blockchain technology?—A systematic review. *PLoS One*, 11(10), e0163477. doi:10.1371/journal.pone.0163477 PubMed
+
+Yuan, Y., & Wang, F. Y. (2016, November). Towards blockchain-based intelligent transportation systems. In *2016 IEEE 19th International Conference on Intelligent Transportation Systems (ITSC)* (pp. 2663-2668). IEEE. doi:10.1109/ITSC.2016.7795984
+
+Yu, Y., Li, Y., Tian, J., & Liu, J. (2018). Blockchain-based solutions to security and privacy issues in the Internet of Things. *IEEE Wireless Communications*, 25(6), 12–18. doi:10.1109/MWC.2017.1800116
+
+Zhang, Y., Wu, S., Jin, B., & Du, J. (2017). A blockchain-based process provenance for cloud forensics. In *2017 3rd IEEE International Conference on Computer and Communications (ICCC)* (pp. 2470-2473). IEEE. doi:10.1109/CompComm.2017.8322979
+
+Zhang, Y., & Wen, J. (2015). An IoT electric business model based on the protocol of bitcoin. In *ICIN*. IEEE.
+
+Zhao, S., Li, S., & Yao, Y. (2019). Blockchain enabled industrial Internet of Things technology. *IEEE Transactions on Computational Social Systems*, 6(6), 1442–1453. doi:10.1109/TCSS.2019.2924054
+
+Zheng, Z., Xie, S., Dai, H., Chen, X., & Wang, H. (2017). An overview of blockchain technology: Architecture, consensus and future trends. *IEEE International Congress on Big Data (Big Data Congress)*.
+
+Zheng, Z., Xie, S., Dai, H., Chen, X., & Wang, H. (2017). An Overview of Blockchain Technology: Architecture, Consensus, and Future Trends. *2017 IEEE International Congress on Big Data (BigData Congress)*, 557–564.
+
+Zheng, Z., Xie, S., Dai, H., Chen, X., & Wang, H. (2017, June). An overview of blockchain technology: Architecture, consensus, and future trends. In *2017 IEEE International Congress on Big Data (BigData Congress)* (pp. 557-564). IEEE. doi:10.1109/BigDataCongress.2017.85
+
+Zheng, Z., Xie, S., Dai, H., Chen, X., & Wang, H. (2017). An overview of blockchain technology: Architecture, consensus, and future trends. In *2017 IEEE International Congress on Big Data (BigData Congress)* (pp. 557-564). IEEE. doi:10.1109/BigDataCongress.2017.85
+
+Zheng, Z., Xie, S., Dai, H., Chen, X., & Wang, H. (2017). An overview of blockchain technology: Architecture, consensus, and future trends. In *Big Data (Big DataCongress)*. IEEE International.
+
+Zhou, Z. (2012). Applying RFID to reduce bullwhip effect in a FMCG supply chain. In *Proceedings of the Advances in Computational Environment Science* (pp. 193-199). Springer.
+
+Zhou, L., Wang, L., Sun, Y., & Lv, P. (2018). BeeKeeper: A Blockchain-Based IoT System With Secure Storage and Homomorphic Computation. *IEEE Access: Practical Innovations, Open Solutions*, 6, 43472–43488. doi:10.1109/ACCESS.2018.2847632
+
+Zhou, Y., Han, M., Liu, L., Wang, Y., Liang, Y., & Tian, L. (2018). Improving IoT Services in Smart-Home Using Blockchain Smart Contract. *IEEE International Conference on Internet of Things (iThings) and IEEE Green Computing and Communications (GreenCom) and IEEE Cyber, Physical and Social Computing (CPSCom) and IEEE Smart Data (SmartData)*, 81-87. doi:10.1109/Cybermatics_2018.2018.00047
+
+Ziegeldorf, J. H., Matzutt, R., Henze, M., Grossmann, F., & Wehrle, K. (2018). Secure and anonymous decentralized Bitcoin mixing. *Future Generation Computer Systems*, 80, 448–466. doi:10.1016/j.future.2016.05.018
+

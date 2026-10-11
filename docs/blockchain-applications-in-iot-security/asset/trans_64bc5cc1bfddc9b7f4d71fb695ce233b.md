@@ -1,0 +1,88 @@
+
+
+# 参考文献
+
+Fernández-Caramés, T. M., & Fraga-Lamas, P. (2018). A Review on the Use of Blockchain for the Internet of Things. *IEEE Access: Practical Innovations, Open Solutions*, 6, 32979–33001. doi:10.1109/ACCESS.2018.2842685
+
+Ferrag, M. A., Derdour, M., Mukherjee, M., Derhab, A., Maglaras, L., & Janicke, H. (2018). Blockchain technologies for the internet of things: Research issues and challenges. *IEEE Internet of Things Journal*, 6(2), 2188–2204. doi:10.1109/JIOT.2018.2882794
+
+Filament. (2018). *Blocklet USB Enclave Data Sheet*. Academic Press.
+
+Finextra. (2016). Everledger secures the first bottle of wine on the blockchain. https://www.finextra.com/pressaritcle/67381/everledger-secures-the-first-bottle-of-wine-on-the-blockchain
+
+Finney, H. (2004). Reusable proofs of work (rpow). http://web.archive.org/web/20071222072154/http://rpow.net/
+
+Fleisch, E. (2010). What is the internet of things? An economic perspective. *Economics, Management, and Financial Markets*, 5(2), 125-157.
+
+Fruhlinger, J. (2018). The Mirai botnet explained: How teen scammers and CCTV cameras almost brought down the internet. Retrieved from https://www.csoonline.com/article/3258748/the-mirai-botnet-explained-how-teen-scammers-and-cctv-cameras-almost-brought-down-the-internet.html
+
+Galvez, J. F., Mejuto, J. C., & Gandara, J. S. (2018). Future challenges on the use of blockchain for food traceability analysis. *Trends in Analytical Chemistry*, 107, 222–232. doi:10.1016/j.trac.2018.08.011
+
+Garg, S., Gentry, C., Halevi, S., Sahai, A., & Waters, W. (2013). Attribute-Based Encryption for Circuits from Multilinear Maps. Academic Press. doi:10.1007/978-3-642-40084-1_27
+
+Gartner Research. (n.d.). https://www.gartner.com/it-glossary/internet-of-things/
+
+Gaurav, A. B., Kumar, P., Kumar, V., & Thakur, R. S. (2020). Conceptual Insights in Blockchain Technology: Security and Applications. In *Transforming Businesses with Bitcoin Mining and Blockchain Applications* (pp. 221-233). IGI Global.
+
+Gaurav, A. B., Kumar, P., Kumar, V., & Thakur, R. S. (2020). Conceptual Insights in Blockchain Technology: Security and Applications. In *Transforming Businesses With Bitcoin Mining and Blockchain Applications* (pp. 221-233). IGI Global.
+
+Giusto D., Iera A., Morabito G., & Atzori L. (2014). The Internet of Things. In *20th Tyrrhenian Workshop on Digital Communication*. Springer Publishing Company, Incorporated.
+
+Golem. (2016). The Golem Project - Global Market for Idle Computer Power. Available online at: https://golem.network/crowdfunding
+
+Gord, M. (2016). Smart Contracts Described by Nick Szabo 20 Years ago now becoming Reality. *Bitcoin Magazine*.
+
+GSMAs Internet of Things Programme. (2018). *Opportunities and Use Cases for Distributed Ledger Technologies in IoT*. Academic Press.
+
+Gubbi, J., Buyya, R., Marusic, S., & Palaniswami, M. (2013). Internet of Things (IoT): A vision, architectural elements, and future directions. *Future Generation Computer Systems*, 29(7), 1645-1660.
+
+Gubbi, J., Buyya, R., Marusic, S., & Palaniswami, M. (2013). Internet of Things (IoT): A vision, architectural elements, and future directions. *Future Generation Computer Systems*, 29(7), 1645–1660. doi:10.1016/j.future.2013.01.010
+
+Gu, J., Sum, B., Du, X., Wang, J., Zhuang, Y., & Wang, Z. (2018). Consortium Blockchain-Based Malware Detection in Mobile Devices. *IEEE Access: Practical Innovations, Open Solutions*, 6, 12118–12128. doi:10.1109/ACCESS.2018.2805783
+
+Gundersen, T. (2011). An introduction to the concept of exergy and energy quality. *Department of Energy and Process Engineering Norwegian University of Science and Technology*, Version, 4.
+
+Gupta, S., & Sadoghi, M. (2018). Blockchain transaction processing. In *Encyclopedia of big data technologies* (pp. 1–11). doi:10.1007/978-3-319-63962-8_333-1
+
+Haber, S., & Stometta, W. S. (1991). How to time stamp a digital documents. *Journal of Cryptography*, 3(2), 99-111. doi:10.1007/3-540-38424-3_32
+
+Hamida, E. B., Brousmiche, K. L., Levard, H., & Thea, E. (2017, July). Blockchain for enterprise: overview, opportunities and challenges. Academic Press.
+
+Hanada Y., Hsiao L., & Levis P. (2018, November). Smart contracts for machine-to-machine communication: Possibilities and limitations. In *2018 IEEE International Conference on Internet of Things and Intelligence System (IOTAIS)* (pp. 130-136). IEEE. doi:10.1109/IOTAIS.2018.8600854
+
+Hang, L., & Kim, D. H. (2019). Design and implementation of an integrated IoT blockchain platform for sensing data integrity. *Sensors (Basel)*, 19(10), 2228. doi:10.3390/s19102228
+
+Hao Z., Ji R., & Li Q. (2018, October). FastPay: A Secure Fast Payment Method for Edge-IoT Platforms using Blockchain. In *2018 IEEE/ACM Symposium on Edge Computing (SEC)* (pp. 410-415). IEEE. doi:10.1109/SEC.2018.00055
+
+He, Y., Li, H., Cheng, X., Liu, Y., Yang, C., & Sun, L. (2018). A Blockchain based Truthful Incentive Mechanism for Distributed P2P Applications. *IEEE Access: Practical Innovations, Open Solutions*, 6, 1–1. doi:10.1109/ACCESS.2018.2821705
+
+Hîrţan, L. A., Dobre, C., & González-Vélez, H. (2020). Blockchain-based reputation for intelligent transportation systems. *Sensors (Basel)*, 20(3), 791. doi:10.3390/s20030791
+
+Howells, R. (2015). The Business Case for IoT. SAP. http://scn.sap.com/community/business-trends/blog/2015/06/18/the-business-case-for-iot
+
+Hua J., Wang X., Kang M., Wang H., & Wang F. (2018). Blockchain based Provenance for Agricultural Products: A Distributed Platform with Duplicated and Shared Bookkeeping. *Proceedings of the IEEE Intelligent Vehicles Symposium (IV)*. doi:10.1109/IVS.2018.8500647
+
+Huang, X., Xu, C., Wang, P., & Liu, H. (2018). LNSC: A security model for electric vehicle and charging pile management based on blockchain ecosystem. *IEEE Access: Practical Innovations, Open Solutions*, 6, 13565–13574. doi:10.1109/ACCESS.2018.2812176
+
+Huh & Seo. (2018). Blockchain-based mobile fingerprint verification and automatic log-in platform for future computing. Springer Science+Business Media, LLC.
+
+Huh, Cho, & Kim. (2017). Managing IoT Devices using Blockchain Platform. *ICACT2017*.
+
+Hulse Apple, C. (2015). Block Verify uses blockchains to end counterfeiting and making world more honest. https://cointelegraph.com/news/block-verify-uses-blockchains-to-end-counterfeiting-and-make-world-more-honest
+
+Hur, J., & Noh, D. K. (2011). Attribute-based access control with efficient revocation in data outsourcing systems. *IEEE Transactions on Parallel and Distributed Systems*, 22(7), 1214–1221. doi:10.1109/TPDS.2010.203
+
+Hyperledger Architecture Working Group. (2017). *Hyperledger Architecture* (Vol. 1). Introduction to Hyperledger Business Blockchain Design Philosophy and Consensus.
+
+Internet of things beyond-bitcoin. (n.d.). https://www.cio.com/article/3027522/internet-of-things/beyond-bitcoin-can-the-blockchain-power-industrial-iot.html
+
+Jankowski, S., Covello, J., Bellini, H., Ritchie, J., & Costa, D. (2014). *The Internet of Things: Making sense of the next mega-trend*. Goldman Sachs.
+
+Janowicz, K., Regalia, B., Hitzler, P., Mai, G., Delbecque, S., Fröhlich, M., Martinent, P., & Lazarus, T. (2018). On the prospects of blockchain and distributed ledger technologies for open science and academic publishing. *Semantic Web*, 9(5), 545–555. doi:10.3233/SW-180322
+
+Jemel, M., & Serhrouchni, A. (2017). Decentralized access control mechanism with temporal dimension based on blockchain. In *2017 IEEE 14th International Conference on e-Business Engineering (ICEBE)*. IEEE.
+
+Jesus, E. F., Chicarino, V. R., de Albuquerque, C. V., & Rocha, A. A. D. A. (2018). A survey of how to use blockchain to secure internet of things and the stalker attack. *Security and Communication Networks*, 2018, 2018. doi:10.1155/2018/9675050
+
+Kamilaris, A., Fonts, A., & Prenafeta-Boldv, F. X. (2019). The rise of blockchain technology in agriculture and food supply chain. *Trends in Food Science & Technology*, 91, 640–652. doi:10.1016/j.tifs.2019.07.034
+

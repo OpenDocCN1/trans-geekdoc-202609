@@ -1,0 +1,96 @@
+
+# IOTA：面向物联网的无区块链加密货币
+
+(Elsts, Mitskas, and Oikonomou 2018) IOTA 是一种专为物联网设计的无区块链加密货币，旨在将物联网设备与区块链技术相结合。它是一种抗量子的有向无环图（DAG），运行在其自有的名为 Tangle 的账本之上。在该图中，节点代表 IOTA 交易，验证对应于边。每笔交易在加入网络前必须验证其他两笔交易。验证过程采用工作量证明机制。IOTA 旨在提供零手续费交易和独特的验证流程，以解决区块链的可扩展性问题。
+
+## DAG 与区块链的区别
+
+DAG 与其他区块链的区别在于：DAG 基于“水平”方案运行，而区块链基于“垂直”方案；此外，DAG 中没有矿工和区块，因此得名“blocklesschain”（无区块链）。该图的本质是无环的，且沿特定方向流动。IOTA 中的交易不会重复，也没有等待区块确认的时间，这反过来降低了飙升的交易费用。尽管 IOTA 试图成为完美解决方案，但将物联网设备与 IOTA 区块链集成仍存在通信开销。
+
+## 区块链技术增强物联网效率的特性
+
+以下区块链技术特性使其在物联网中应用更高效，如图 2 所示：
+
+| Figure 2. Features of Blockchain, enhancing efficiency of IoT |
+| --- |
+| ![Figure978-1-7998-2414-5.ch008.f02](i/ch008.f02.png) |
+
+### 去中心化
+
+由于物联网和区块链的架构非常相似，区块链的去中心化概念促进了其在物联网中的应用。区块链为物联网提供了解决方案，无需第三方即可管理所有连接设备的数据和运行。因此，网络中任一设备的故障永远不会导致数据不可用。
+
+### 隐私
+
+在物联网中部署区块链网络概念，增强了单个设备数据的隐私。由于设备连接在互联网上，任何黑客都可以轻松访问设备并篡改数据，但由于使用了区块链技术，其共识协议防止了此类数据记录的篡改。
+
+### 成本
+
+使用区块链数据库是使物联网设备更实惠的主要原因。由于成本降低，物联网设备和技术已轻松应用于许多其他领域。因为不需要第三方来维护和验证数据，成本有效降低。连接的节点本身参与验证数据。
+
+### 无需信任
+
+区块链的无需信任特性使物联网更安全。去中心化数据库允许通过其连接的智能节点进行验证，防止设备和数据被恶意分子攻击。
+
+### 离心性/自主性
+
+传统上，网络中连接的设备或传感器由某个中心设备控制。但区块链允许网络中设备的离心行为，设备可以在没有第三方干扰的情况下自动响应并与其他设备交互。
+
+### 可追溯性/漏洞暴露性
+
+由于区块链中的数据对所有人公开。数据和设备的可追溯性有助于防止物联网设备被盗。通过区块链连接的物联网设备可以被轻松识别和追踪，因为设备的位置和管理数据始终可以被保存并通过分布式数据库访问。
+
+## 结论
+
+权力和数据的去中心化是区块链最大的特性。区块链背后的多功能技术赋予了物联网和其他基于网络的应用更强大、高效和安全的能力。如今，研究人员和工程师正在许多领域部署区块链以增强数据安全。上述讨论的区块链特性不仅使物联网应用强大，也有助于加强各领域应用的能力。
+
+## 参考文献
+
+Ali M. S., Dolui K., Antonelli F. (2017). IoT data privacy via blockchains and IPFS. In *International Conference on the Internet of Things*. ACM. 10.1145/3131542.3131563
+
+Androulaki, E., Barger, A., Bortnikov, V., Cachin, C., Christidis, K., De Caro, A., . . . (2018). Hyperledger fabric: a distributed operating system for permissioned blockchains. In *EuroSys '18 - Proceedings of the Thirteenth EuroSys Conference*. Porto: ACM. 10.1145/3190508.3190538
+
+Antonopoulos, A. M. (2014). *Mastering Bitcoin* (1st ed.). O’Reilly Media.
+
+Atzori, L., Iera, A., & Morabito, G. (2010). The Internet of Things: A survey. *Computer Networks*, 54(15), 2787–2805. doi:10.1016/j.comnet.2010.05.010
+
+Banerjee, M., Lee, J., & Choo, K.-K. R. (2017). A blockchain future to Internet of Things security: A position paper. *Digital Communications and Networks*. doi:10.1016/j.dcan.2017.10.006
+
+Banerjee, M., Lee, J., & Choo, K. K. R. (2018). A Blockchain future for internet of things security: A position paper. *Digit. Commun. Networks*, 4(3), 149–160. doi:10.1016/j.dcan.2017.10.006
+
+Belluz, J., & Hoffman, S. (2015). The One Chart You Need to Understand Any Health Study. *Vox*. Available online at: https://www.vox.com/2015/1/5/7482871/types-of-study-design
+
+Chollet, Castiaux, Bruneton, & Sainlez. (2013). Continuous interconnected supply chain using blockchain and internet of things supply chain traceability. Deloitte Blockchain.
+
+Christidis, K., & Devetsikiotis, M. (2016). Blockchains and Smart Contracts for the Internet of Things. *IEEE Access: Practical Innovations, Open Solutions*, 4, 2292–2303. doi:10.1109/ACCESS.2016.2566339
+
+Conoscenti, M., Torino, D., Vetr, A., Torino, D., & De Martin, J. C. (2016). Blockchain for the Internet of Things: a Systematic Literature Review. *IEEE/ACS 13th International Conference of Computer Systems and Applications (AICCSA)*. 10.1109/AICCSA.2016.7945805
+
+Dai, W. (1998). B-money. http://www.weidai.com/bmoney.txt
+
+Dhillon, V. (2016). Blockchain-Enabled Open Science Framework. O'Reilly Media. Available online at: https://www.oreilly.com/ideas/blockchain-enabled-open-science-framework
+
+Dhillon, V., Metcalf, D., & Hooper, M. (2017). “Blockchain in science,” in *Blockchain Enabled Applications* (1st ed.). Apress. doi:10.1007/978-1-4842-3081-7
+
+Dorri, A., Kanhere, S., & Jurdak, R. (2016). Blockchain in internet of things: challenges and solutions. arXiv: 1608.05187
+
+Draskovic, D., & Saleh, G. (2017). Datapace - Decentralized Data Marketplace Based on Blockchain. Available online at: https://www.datapace.io/datapace_whitepaper.pdf
+
+Elsts, Mitskas, & Oikonomou. (2018). Distributed Ledger Technology and the Internet of Things: A Feasibility Study. In *BlockSys*, Shenzhen, China.
+
+Giusto D., Iera A., Morabito G., Atzori L. (2014). The Internet of Things. In *20th Tyrrhenian Workshop on Digital Communication*. Springer Publishing Company, Incorporated.
+
+Golem. (2016). The Golem Project - Global Market for Idle Computer Power. Available online at: https://golem.network/crowdfunding
+
+Gord, M. (2016). Smart Contracts Described by Nick Szabo 20 Years ago now becoming Reality. *Bitcoin Magazine*.
+
+Haber, S., & Stometta, W. S. (1991). How to time stamp a digital documents. *Journal of Cryptography*, 3(2), 99-111. doi:10.1007/3-540-38424-3_32
+
+Huh, Cho, & Kim. (2017). Managing IoT Devices using Blockchain Platform. *ICACT2017*.
+
+Janowicz, K., Regalia, B., Hitzler, P., Mai, G., Delbecque, S., Fröhlich, M., Martinent, P., & Lazarus, T. (2018). On the prospects of blockchain and distributed ledger technologies for open science and academic publishing. *Semantic Web*, 9(5), 545–555. doi:10.3233/SW-180322
+
+Khan & Salah. (2017). IoT security: Review, blockchain solutions, and open challenges. *Future Generation Computer Systems*.
+
+Kombe, C., Manyilizu, M., & Mvuma, A. (2017). Design of land administration and title registration model based on blockchain technology. *Journal of Information Engineering and Applications*, 7, 8–15.
+
+Liang X., Zhao J., Shetty S., Li D. (2017). Towards data assurance and resilience in IoT using blockchain. *Conference Paper*. 10.1109/MILCOM.2017.8170858
