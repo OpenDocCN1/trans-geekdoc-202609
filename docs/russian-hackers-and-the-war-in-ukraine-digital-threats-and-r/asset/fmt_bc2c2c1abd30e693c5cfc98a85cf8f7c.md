@@ -1,0 +1,110 @@
+
+## 参考文献
+
+———. 2022. *KillNet jewelry.* June 2. Accessed December 22, 2022. [https://t.me/killnet_reservs/1702](https://t.me/killnet_reservs/1702).
+
+———. 2022. *KillNet statement on its affiliation.* Edited by Author’s Archive. April 20.
+
+———. 2022. *KillNet Support statement.* Author’s archive, March 9.
+
+———. 2022. *KillNet survey.* Author’s Archive, March 4.
+
+———. 2022. *KillNet’s statement for European media.* no. 13(9). Edited by J Sweet. April 25.
+
+———. 2022. *My purchases. KillMilk.* September 29. Accessed November 23, 2022. [https://t.me/killnet_reservs/2898](https://t.me/killnet_reservs/2898).
+
+———. 2022. *Nevzorov website turned down!* May 13. Accessed November 13, 2022. [https://t.me/killnet_reservs/1275](https://t.me/killnet_reservs/1275).
+
+———. 2022. *Our attack is ended.* August 10. Accessed January 13, 2022. [https://t.me/killnet_reservs/2291](https://t.me/killnet_reservs/2291).
+
+———. 2022. *Our birthday is today!* November 13. Accessed December 24, 2022. [https://t.me/killnet_reservs/3499](https://t.me/killnet_reservs/3499).
+
+———. 2022. *Our explanation: We do not regret.* July 14. Accessed November 29, 2022. [https://t.me/killnet_reservs/2159](https://t.me/killnet_reservs/2159).
+
+———. 2022. *Our joined attack on Rutor.* August 15. Accessed October 20, 2022. [https://t.me/killnet_reservs/2356](https://t.me/killnet_reservs/2356).
+
+———. 2022. *Our last promises.* March 3. Accessed 13 January, 2023. [https://t.me/killnet_reservs/46](https://t.me/killnet_reservs/46).
+
+———. 2022. *Our new ally: Stop-NATO group.* April 17. Accessed May 12, 2022. [https://t.me/killnet_reservs/595](https://t.me/killnet_reservs/595).
+
+———. 2022. *Our response to online blackmailers.* July 26. Accessed November 29, 2022. [https://t.me/killnet_reservs/2204](https://t.me/killnet_reservs/2204).
+
+———. 2022. *Our survey about NATO and the U.S.* February 28. Accessed November 20, 2022. [https://t.me/killnet_reservs/20](https://t.me/killnet_reservs/20).
+
+———. 2022. *Our thoughts about this war.* March 22. Accessed May 12, 2022. [https://t.me/killnet_reservs/232](https://t.me/killnet_reservs/232).
+
+———. 2022. *Our warriors were banned from Zhykov’s bar!* December 3. Accessed January 13, 2023. [https://t.me/killnet_reservs/4123](https://t.me/killnet_reservs/4123).
+
+———. 2022. *Patriarch Kirill’s statement.* November 6. Accessed November 23, 2022. [https://t.me/killnet_reservs/3382](https://t.me/killnet_reservs/3382).
+
+———. 2022. *Please, write complaints on this account!* June 3. Accessed January 2, 2023. [https://t.me/killnet_reservs/1717](https://t.me/killnet_reservs/1717).
+
+———. 2022. *Post about Ukraine.* Edited by Julia Sweet. Author’s Archive, February 26.
+
+———. 2022. *Pugacheva is back?!* August 29. Accessed December 25, 2022. [https://t.me/c/1688942657/676581](https://t.me/c/1688942657/676581).
+
+———. 2022. *Putin’s birthday!* October 7. Accessed January 10, 2023. [https://t.me/killnet_reservs/2978](https://t.me/killnet_reservs/2978).
+
+———. 2022. *Someone sells t-shirts with our logo on AliExpress.* September 15. Accessed January 1, 2023. [https://t.me/killnet_reservs/2660](https://t.me/killnet_reservs/2660).
+
+———. 2022. *Telegram blocked out wallet.* September 25. Accessed January 1, 2023. [https://t.me/killnet_reservs/2824](https://t.me/killnet_reservs/2824).
+
+———. 2022. *Thank you note.* September 28. Accessed November 22, 2022. [https://t.me/killnet_reservs/2870](https://t.me/killnet_reservs/2870).
+
+———. 2022. *The European Parliament website was attacked.* November 29. Accessed November 29, 2022. [https://t.me/killnet_reservs/3721?comment=1203637](https://t.me/killnet_reservs/3721?comment=1203637).
+
+———. 2022. *The interview with the Zarya leader.* November 6. Accessed November 23, 2022. [https://t.me/killnet_reservs/3375](https://t.me/killnet_reservs/3375).
+
+———. 2022. *To our officials and oligarchs! We need money!* September 25. Accessed December 25, 2022. [https://t.me/killnet_reservs/2829](https://t.me/killnet_reservs/2829).
+
+———. 2022. *Upcoming attacks on Poland.* July 13. Accessed December 1, 2022. [https://t.me/killnet_reservs/2156](https://t.me/killnet_reservs/2156).
+
+———. 2022. *Utro Dagestan: A full report.* September 27. Accessed January 13, 2023. [https://telegra.ph/Kto-ustraivaet-besporyadki-v-Dagestane-09-27](https://telegra.ph/Kto-ustraivaet-besporyadki-v-Dagestane-09-27).
+
+———. 2022. *We are busy!* August 29. Accessed December 25, 2022. [https://t.me/killnet_reservs/2472](https://t.me/killnet_reservs/2472).
+
+———. 2022. *We are celebrating!* November 5. Accessed November 30, 2022. [https://t.me/killnet_reservs/3364](https://t.me/killnet_reservs/3364).
+
+———. 2022. *We attack Ukrainian cyber police.* March 6. Accessed December 20, 2022. [https://t.me/killnet_reservs/94](https://t.me/killnet_reservs/94).
+
+———. 2022. *We attacked the Anonymous website.* Vol. Author’s Archive. no. 8. February 26.
+
+———. 2022. *We found spies.* Author’s Archive, July 4.
+
+———. 2022. *We gather money for our Army.* March 11. Accessed December 23, 2022. [https://t.me/killnet_reservs/112](https://t.me/killnet_reservs/112).
+
+———. 2022. *We hacked the car service in retaliation.* July 5. Accessed November 29, 2022. [https://t.me/killnet_reservs/2071](https://t.me/killnet_reservs/2071).
+
+———. 2022. *We initiated a new offensive campaign.* July 31. Accessed December 30, 2022. [https://t.me/killnet_reservs/2184](https://t.me/killnet_reservs/2184).
+
+———. 2022. *We killed his website!* December 3. Accessed January 13, 2023. [https://t.me/killnet_reservs/4125](https://t.me/killnet_reservs/4125).
+
+———. 2022. *We promise to defend CIS Internet.* February 28. Accessed December 23, 2022. [https://t.me/killnet_reservs/18](https://t.me/killnet_reservs/18).
+
+———. 2022. *What is Rutor?* August 15. Accessed October 12, 2022. [https://t.me/killnet_reservs/2350](https://t.me/killnet_reservs/2350).
+
+———. 2022. *What will Poland do?* March 23. Accessed December 22, 2022. [https://t.me/killnet_reservs/239](https://t.me/killnet_reservs/239).
+
+———. 2022. *Who is from Vilnius here?* July 8. Accessed November 29, 2022. [https://t.me/killnet_reservs/2108](https://t.me/killnet_reservs/2108).
+
+———. 2022. *Zelensky gave an interview.* April 27. Accessed January 12, 2023. [https://t.me/killnet_reservs/601](https://t.me/killnet_reservs/601).
+
+Writer from the Center. 2022. *Utro Dagestan is rich!* September 26. Accessed January 13, 2023. [https://t.me/killnet_mirror/2303](https://t.me/killnet_mirror/2303).
+
+XakNet (DDoS). 2022. *DDoS recruitment.* October 30. Accessed December 23, 2022. [https://t.me/XakNet_Cyber_DDoS/16](https://t.me/XakNet_Cyber_DDoS/16).
+
+———. 2022. *Survey about DDoS skills.* October 28. Accessed October 28, 2022. [https://t.me/XakNet_Cyber_DDoS/12](https://t.me/XakNet_Cyber_DDoS/12).
+
+———. 2022. *We united with other hackers.* October 28. Accessed December 23, 2022. [https://t.me/XakNet_Cyber_DDoS/11](https://t.me/XakNet_Cyber_DDoS/11).
+
+XakNet. 2022. *Our final statement about the Kropyva hacking.* May 25. Accessed December 24, 2022. [https://t.me/xaknet_team/229](https://t.me/xaknet_team/229).
+
+———. 2022. *We open an online auction.* December 6. Accessed December 23, 2022. [https://t.me/xaknet_team/489](https://t.me/xaknet_team/489).
+
+XakNet Team. 2022. *A note from our Army.* May 22. Accessed December 20, 2022. [https://t.me/xaknet_team/209](https://t.me/xaknet_team/209).
+
+———. 2022. *A statement about the DTEK Group attack.* June 28. Accessed December 21, 2022. [https://t.me/xaknet_team/275](https://t.me/xaknet_team/275).
+
+———. 2022. *Attack on the President.gov.ua.* March 1. Accessed November 24, 2022. [https://t.me/xaknet_team/2](https://t.me/xaknet_team/2).
+
+———. 2022. *Attacks on the DTEK Group.* June 28. Accessed December 22, 2022. [https://t.me/xaknet_team/274](https://t.me/xaknet_team/274).

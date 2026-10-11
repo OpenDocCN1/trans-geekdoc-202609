@@ -1,0 +1,43 @@
+
+
+# 实证研究：黑客组织
+
+这项关于黑客组织的实证研究主要依赖于对案例研究的详细审查，涵盖的时间段为 2022 年 2 月 24 日至 2023 年 1 月 1 日。研究基于从以下黑客组织收集的数据：Joker DPR、Beregini、XakNet、From Russia with Love、NoName057(16)、KillNet、Anonymous Russia、Zarya、RaHDIt (Russian Angry Hackers did it) 和 People’s Cyber Army。这些组织必须满足一组条件：(1) 从事黑客活动；(2) 存在公开的社交媒体账号，并在线持续存在至少三个月；(3) 拥有亲俄政治议程。
+
+本书呈现的分析主要基于开源情报，例如社交媒体条目（包括文本、视频、图片和聊天评论），这些内容通过对黑客组织活动的每日监控收集而来。数据库包含来自 30 个 Telegram 账号、12 个 Twitter 账号、5 个 Vkontakte 页面和 2 个网站的 5,000 多条社交媒体条目。研究涵盖了来自联邦媒体（如 Russia Today、TASS、Ria News、Vedomosti、Kommersant、Sputnik、RBC 的在线版）、地方媒体（如 Fontanka、Vest、URA、Sakh Online 的在线版）、电视媒体（如 TV Rain、TV Center）、俄罗斯和乌克兰政府部门官方网站（如 Gosuslugi、Kremlin、Ministry of Defence of Ukraine）、金融机构和官员的社交媒体账号（如 Sberbank、Banki、普斯科夫州长 Michael Vedernikov、前 Roscosmos 总监 Dmitry Rogozin），以及评论网络安全的媒体来源（Kaspersky Lab、Tadviser、SecurityMag）的信息。此外，黑客接受俄罗斯媒体采访的内容也被发现是有用的信息来源。尽管有几个组织积极寻求宣传并乐于沟通，但本研究并未对受审查实体的成员黑客进行独家采访，因为几乎不可能验证受访者的身份。
+
+研究聚焦于最活跃和最受关注的黑客组织，并不声称具有整体性，因为无法涵盖在网络空间运作的每一个甚至大多数黑客组织。研究承认许多黑客组织仍隐匿于暗网，同时也认识到对于某些黑客组织而言，宣传和认可已成为其品牌建设的关键补充。此外，并非黑客活动的所有方面都完全呈现在网络上，特别是核心成员、成员间的纠纷和沟通、真实姓名、工作单位、教育水平、地理位置等引人入胜的信息。
+
+通过在线活动的视角审视乌克兰战争，本书试图揭示网络战和黑客行动主义现象的复杂性。本书探讨了俄罗斯黑客如何建设和推进其品牌并管理其公众形象。鉴于宣传对于受审查的黑客实体而言是相对较新的事物，研究利用这一点尽可能地考察黑客组织、其结构、组间关系、背景、目标、观点、身份、非黑客相关活动、攻击准备、媒体沟通，以及其预算及来源。为此，研究分五章呈现。
+
+- [Chapter 1](#c1.xhtml#c1) 描绘了 2022 年 2 月乌克兰战争爆发如何使俄罗斯媒体机构的在线形象在本地和联邦层面（Russia Today、Sputnik、TASS）变得复杂。还包括了关于企业遭遇的多重网络挑战的讨论，这些挑战不仅源于全球公司拒绝与俄罗斯实体合作，还源于外国黑客行动主义者为报复入侵乌克兰而发动的攻击。
+- [Chapter 2](#c2.xhtml#c2) 提供了从成立至今对每个受审查黑客组织进行研究的结果。
+- [Chapters 3](#c3.xhtml#c3) 和 4 从不同方面审视黑客组织如何进入并学习社交媒体营销，并在某些情况下将其数字在线形象推进至创建可识别品牌的地步。在此过程中，研究基于 Kotler 的品牌模型框架和 Aaker 的品牌资产模型，梳理出一套品牌建设维度。在此框架下，章节考察了黑客的社交媒体网络及其如何维护账号可信度、黑客的象征文化与政治观点、黑客组织间的合作及其与俄罗斯政府的关联、与追随者的沟通，以及内容策略。
+- [Chapter 5](#c5.xhtml#c5) 探讨了俄罗斯黑客声称对欧洲、乌克兰和美国数字实体发动的网络攻击。
+
+## 参考文献
+
+Arquilla, J. 2011. “The computer mouse that roared: Cyberwar in the twenty-first century.” *The Brown Journal of World Affairs* 18 (1): 39–48. [https://www.jstor.org/stable/pdf/24590774.pdf?refreqid=excelsior%3Aff85335883694a46eb90650772ee05b9&ab_segments=&origin=&initiator=&acceptTC=1](https://www.jstor.org/stable/pdf/24590774.pdf?refreqid=excelsior%3Aff85335883694a46eb90650772ee05b9&ab_segments=&origin=&initiator=&acceptTC=1).
+
+Arquilla, J., and D. Ronfeldt. 1993. “Cyberwar is coming!” *Comparative Strategy* 12 (2): 141–165. [https://doi.org/10.1080/01495939308402915](https://doi.org/10.1080/01495939308402915).
+
+Bodó, Balázs. 2014. “Hacktivism 1-2-3: How privacy enhancing technologies change the face of anonymous hacktivism.” *Internet Policy Review* 3 (4): 1–13. Accessed January 10, 2023. [https://policyreview.info/articles/analysis/hacktivism-1-2-3-how-privacy-enhancing-technologies-change-face-anonymous](https://policyreview.info/articles/analysis/hacktivism-1-2-3-how-privacy-enhancing-technologies-change-face-anonymous).
+
+Carr, Jeffrey. 2012. *Inside cyber warfare: Mapping the cyber underworld.* O’Reilly Media.
+
+Choo, Kim-Kwang Raymond. 2010. “High tech criminal threats to the national information infrastructure.” *Information Security Technical Report* 15 (3): 104–111. Accessed May 20, 2023. [https://www.sciencedirect.com/science/article/pii/S136341270900034X](https://www.sciencedirect.com/science/article/pii/S136341270900034X).
+
+Clarke, Richard A., and Robert Knake. 2011. *Cyber War: The next threat to national security and what to do about It.* Ecco.
+
+Coleman, Gabriella. 2011. “Hacker politics and publics.” *Public Culture* 23 (3): 511–516. Accessed May 20, 2023. [https://gabriellacoleman.org/wp-content/uploads/2012/08/Coleman-hacker-politics-publics.pdf](https://gabriellacoleman.org/wp-content/uploads/2012/08/Coleman-hacker-politics-publics.pdf).
+
+———. 2015. *Hacker, hoaxer, whistleblower, spy: The many faces of Anonymous.* Verso Books.
+
+Corera, Gordon. 2021. *Iran nuclear attack: Mystery surrounds nuclear sabotage at Natanz.* April 12. [https://www.bbc.com/news/world-middle-east-56722181](https://www.bbc.com/news/world-middle-east-56722181).
+
+Dahan, Michael. 2013. “Hacking for the homeland: Patriotic hackers versus hacktivists.” The International Conference on Information Warfare and Security. 51–57. Accessed May 19, 2023. [https://www.researchgate.net/publication/290587245_Hacking_for_the_homeland_Patriotic_hackers_versus_hacktivists](https://www.researchgate.net/publication/290587245_Hacking_for_the_homeland_Patriotic_hackers_versus_hacktivists).
+
+Davis, A. 2012. “Hacktivism.” *IT Now* 54 (2): 30–31. Accessed May 20, 2023. [https://doi.org/10.1093/itnow/bws042](https://doi.org/10.1093/itnow/bws042).
+
+Dombrowski, P., and C. C. Demchak. 2014. “Cyber war, cybered conflict, and the maritime domain.” *Naval War College Review* 67 (2): 70–96.
+
