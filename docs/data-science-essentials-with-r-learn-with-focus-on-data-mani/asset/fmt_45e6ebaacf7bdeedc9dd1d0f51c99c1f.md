@@ -1,0 +1,131 @@
+
+# 分层抽样示例
+
+```r
+shopping_frequency = sample(c("occasional", "regular", "frequent"), 1000, replace = TRUE, prob = c(0.4, 0.3, 0.3))
+```
+
+此处，分层基于客户人口统计学特征定义：年龄组（18-25、26-35、36-45、46+）和购物频率（偶尔、定期、频繁）。现在，让我们使用 `dplyr` 执行分层抽样以选择客户样本。
+
+## 分层抽样代码
+
+```r
+# Stratified sampling
+stratified_sample <- customers %>%
+  group_by(age_group, shopping_frequency) %>%
+  sample_n(size = 20, replace = FALSE)
+```
+
+在上述命令中，我们使用 `group_by()` 函数按 `age_group` 和 `shopping_frequency` 对数据集进行分组。然后使用 `sample_n()` 从每个层（组）中选择大小为 20 的样本且不放回，确保 `age_group` 和 `shopping_frequency` 的每种组合都在样本中得到体现。下表显示了 `stratified_sample` 数据集中 `age_group` 和 `shopping_frequency` 变量的交叉列联表。
+
+## age_group 和 shopping_frequency 的交叉列联表
+
+```r
+# Cross-Tabulation of the age_group and shopping_frequency
+table(stratified_sample$age_group, stratified_sample$shopping_frequency)
+```
+
+| | frequent | occasional | regular |
+| --- | --- | --- | --- |
+| 18-25 | 20 | 20 | 20 |
+| 26-35 | 20 | 20 | 20 |
+| 36-45 | 20 | 20 | 20 |
+| 46+ | 20 | 20 | 20 |
+
+**表 9.1：age_group 和 shopping_frequency 变量的交叉列联表**
+
+在上表中，行代表 `age_group` 的不同取值，列代表 `shopping_frequency` 的不同取值。表中的每个单元格表示落入特定 `age_group` 和 `shopping_frequency` 组合的观测值计数（每个单元格均为 20）。
+
+# 描述性统计
+
+描述性统计是理解任何数据集的基础。它们提供了数据集关键特征的简明摘要，使我们能够了解其集中趋势、变异性和形状。均值、中位数和众数等指标捕捉典型值，而方差、标准差和极差则量化数据的离散程度和潜在异常值。从本质上讲，描述性统计使我们能够回答诸如“平均值是多少？”和“数据有多分散？”等基本问题，为进一步的分析和模型构建奠定基础。
+
+## 集中趋势度量
+
+集中趋势度量是一种统计摘要，代表数据集中的中心或典型值。这些度量有助于总结和理解数据分布的中心位置或趋势。
+
+考虑这样一个场景：快递服务经理想要分析其快递员的派送时间。她想要确定包裹送达目的地的典型时间，同时承认由于不可预见的情况可能存在偶尔的异常值。
+
+**均值**（或平均数）是通过将数据集中的所有值相加，然后将总和除以观测数量来获得的。平均派送时间是通过将所有派送时间相加并除以总派送次数来计算的。例如，如果有七个派送时间：18、20、22、25、28、30，以及因异常事件导致的意外异常值 3 小时，则均值为 (18 + 20 + 22 + 25 + 28 + 30 + 3) / 7 = 146 / 7 ≈ 20.86 小时。
+
+虽然均值是常用的集中趋势度量，但在某些场景下它可能无法提供准确的洞察。均值对极端值（即异常值）敏感，这会扭曲其值并错误地代表集中趋势，正如 3 小时的派送时间所示。在这种情况下，对极端值不那么敏感的**中位数**可能提供更稳健的指标。
+
+### 创建数据框并计算均值
+
+```r
+# Create a dataframe
+delivery_data <- data.frame(
+  delivery_times = c(18, 20, 22, 25, 28, 30, 3),
+  package_types = c("Small", "Large", "Medium", "Large", "Small", "Medium", "Small")
+)
+
+# Calculate mean
+mean_delivery_time <- mean(delivery_data$delivery_times)
+cat("Mean Delivery Time:", mean_delivery_time, "hours")
+## Mean Delivery Time: 20.85714 hours
+```
+
+相比之下，**中位数**是一种对极端值不敏感的集中趋势度量。它代表数据按升序或降序排列后的中间值。请注意，中位数不依赖于数据中的每一个值，这与均值不同。在给定的派送时间数据集中，按顺序排列为 3、18、20、22、25、28 和 30，中位数被确定为第 4 项的值。在该实例中，有七个派送时间（奇数个），中位数为 25 小时。与均值不同，中位数不取决于数据集中的每个值，这使其成为一种能够抵御异常值影响的稳健度量。
+
+### 计算中位数
+
+```r
+# Calculate median
+median_delivery_time <- median(delivery_data$delivery_times)
+cat("Median Delivery Time:", median_delivery_time, "hours")
+## Median Delivery Time: 22 hours
+```
+
+**众数**是数据集中出现频率最高的值。经理现在想了解快递员中最普遍的包裹类型。例如，如果数据集显示“Small”包裹出现频率最高，则“Small”即为众数。基础 R 中没有内置的众数函数，因此我们可以创建一个自定义函数。
+
+### 众数计算
+
+```r
+# Mode calculation
+get_mode <- function(x) {
+  unique_values <- unique(x)
+  frequencies <- tabulate(match(x, unique_values))
+  mode_value <- unique_values[which.max(frequencies)]
+  return(mode_value)
+}
+
+# Calculate the mode for package types
+mode_package_type <- get_mode(delivery_data$package_types)
+cat("Mode Package Type:", mode_package_type)
+## Mode Package Type: Small
+```
+
+必须仔细评估数据的特征，并选择最符合数据集固有性质的集中趋势度量。
+
+## 离散程度度量
+
+离散程度是指数据集内部传播或变异性的程度。它提供了关于单个值偏离集中趋势程度的洞察。离散程度度量对于理解数据点的分布和变异性至关重要。
+
+**极差**是一种简单而有效的测量数据变异性的方法，定义为观测到的最高值和最低值之间的差距。通常，较大的极差意味着观测值之间的差异较大。虽然极差易于理解，但它有局限性。其主要缺点在于受异常值影响很大。当一个异常数据点极高或极低时，会极大地影响整个极差。
+
+假设您正在分析电商平台的每日网站流量。您的数据包含一个名为 `daily_visits` 的向量，表示一个月内的网站访问量。
+
+### 创建向量并计算极差
+
+```r
+# Create a vector, daily_visits
+daily_visits <- c(1200, 950, 1500, 800, 1100, 1350, 1000, 1800, 750, 1400)
+
+# Calculate Range
+visits_range <- diff(range(daily_visits))
+cat("Range of daily website visits:", visits_range, "visits\n")
+## Range of daily website visits: 1050 visits
+```
+
+此处，`range()` 返回一个包含 `daily_visits` 向量最小值和最大值的双元素向量。`diff()` 计算向量中连续元素之间的差异。在这种情况下，它计算从 `range()` 函数获得的最大值和最小值之间的差值。极差告诉我们网站流量在 1050 次访问范围内变化。
+
+**方差**量化数据集内部离散的程度。它度量单个数据点与均值之间的平均平方差。样本方差公式如下：
+
+![](images/eq-11.jpg)
+
+其中，
+
+- `s2` = 样本方差
+- `xi` = 每个观测值的值
+- ![](images/eq-21.jpg) = 样本均值
+- `n–1` = 自由度

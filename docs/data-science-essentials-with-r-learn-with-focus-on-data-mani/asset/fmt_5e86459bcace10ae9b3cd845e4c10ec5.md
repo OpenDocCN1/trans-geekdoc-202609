@@ -1,0 +1,213 @@
+
+# 数据框合并操作
+
+## merge 函数参数说明
+
+| 参数 | 类型 | 说明 |
+|------|------|------|
+| `all.y` | 逻辑值 | 指示是否包含第二个数据框中的所有观测值，即使在第一个数据框中没有匹配的行（右连接）。 |
+
+**表 4.4：merge 函数参数说明**
+
+## 创建示例数据框
+
+### transactions 数据框
+
+创建一个包含借记卡交易信息的 `transactions` 数据框：
+
+```r
+# Create the transactions DataFrame
+transactions <- data.frame(
+  transaction_id = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  transaction_date = as.Date(c("2023-05-01", "2023-05-02", "2023-05-03", "2023-05-04",
+                               "2023-05-04", "2023-05-04", "2023-05-05", "2023-05-06", "2023-05-07")),
+  transaction_amount = c(1050, 1075.50, 2050.00, 1120.00, 190.75, 1150.00, 160.00, 2580.50, 1825.00),
+  customer_id = c(101, 102, 103, 104, 105, 106, 107, 108, 109),
+  stringsAsFactors = FALSE
+)
+
+# print transactions DataFrame
+transactions
+```
+
+输出结果：
+
+```
+##   transaction_id transaction_date transaction_amount customer_id
+## 1              1       2023-05-01           1050.00         101
+## 2              2       2023-05-02           1075.50         102
+## 3              3       2023-05-03           2050.00         103
+## 4              4       2023-05-04           1120.00         104
+## 5              5       2023-05-04            190.75         105
+## 6              6       2023-05-04           1150.00         106
+## 7              7       2023-05-05            160.00         107
+## 8              8       2023-05-06           2580.50         108
+## 9              9       2023-05-07           1825.00         109
+```
+
+### customers 数据框
+
+创建一个包含客户信息的 `customers` 数据框：
+
+```r
+# create the customers DataFrame
+customers <- data.frame(
+  customer_id = c(102, 103, 104, 105, 107, 108, 109, 110),
+  customer_name = c("Penny", "Sheldon", "Howard", "Amy",
+                    "Raj", "Stuart", "Emily", "Missy"),
+  customer_email = c("penny@gmail.com", "sheldon@gmail.com", "howard@gmail.com", "amy@gmail.com",
+                     "raj@gmail.com", NA, "emily@gmail.com", NA),
+  stringsAsFactors = FALSE
+)
+
+# print customers DataFrame
+customers
+```
+
+输出结果：
+
+```
+##   customer_id customer_name   customer_email
+## 1         102         Penny  penny@gmail.com
+## 2         103       Sheldon sheldon@gmail.com
+## 3         104        Howard  howard@gmail.com
+## 4         105           Amy    amy@gmail.com
+## 5         107           Raj    raj@gmail.com
+## 6         108       Stuart             <NA>
+## 7         109         Emily  emily@gmail.com
+## 8         110         Missy             <NA>
+```
+
+> **注意**：`customer_email` 列中 `customer_id` 为 108 和 110 的记录存在缺失值。
+
+## 合并前的准备
+
+在合并数据集之前，识别每个数据集的**主键**非常重要。主键是唯一标识数据集中每个观测值的列或列集合，这意味着没有两个观测值应具有相同的主键值。
+
+下面将演示如何在这两个数据框上执行不同类型的合并操作。
+
+## 连接类型示例
+
+### 内连接
+
+内连接仅返回两个数据框中都有匹配值的行，即返回两个数据框的交集。使用 `merge()` 函数且不添加额外参数即可执行内连接：
+
+```r
+# perform an inner join
+inner_join_df <- merge(transactions, customers, by = "customer_id")
+```
+
+此处 `by` 参数设置为 `customer_id`，即两个数据框间的公共变量。生成的 `inner_join_df` 仅包含 `customer_id` 在 `transactions` 和 `customers` 中均存在的行：
+
+```r
+# print inner_join_df
+inner_join_df
+```
+
+输出结果：
+
+```
+##   customer_id transaction_id transaction_date transaction_amount customer_name customer_email
+## 1         102              2       2023-05-02           1075.50         Penny  penny@gmail.com
+## 2         103              3       2023-05-03           2050.00       Sheldon sheldon@gmail.com
+## 3         104              4       2023-05-04           1120.00        Howard  howard@gmail.com
+## 4         105              5       2023-05-04            190.75           Amy    amy@gmail.com
+## 5         107              7       2023-05-05            160.00           Raj    raj@gmail.com
+## 6         108              8       2023-05-06           2580.50       Stuart            <NA>
+## 7         109              9       2023-05-07           1825.00         Emily  emily@gmail.com
+```
+
+### 外连接
+
+外连接返回两个数据框中的所有行，并用 `NA` 填充无匹配列的值。将 `all` 参数设置为 `TRUE` 可执行外连接：
+
+```r
+# perform an outer join
+outer_join_df <- merge(transactions, customers, by = "customer_id", all = TRUE)
+```
+
+合并后的 `outer_join_df` 包含两个数据框的所有行，无匹配处以 `NA` 填充：
+
+```r
+# print outer_join_df
+outer_join_df
+```
+
+输出结果：
+
+```
+##    customer_id transaction_id transaction_date transaction_amount customer_name customer_email
+## 1          101              1       2023-05-01           1050.00          <NA>           <NA>
+## 2          102              2       2023-05-02           1075.50         Penny  penny@gmail.com
+## 3          103              3       2023-05-03           2050.00       Sheldon sheldon@gmail.com
+## 4          104              4       2023-05-04           1120.00        Howard  howard@gmail.com
+## 5          105              5       2023-05-04            190.75           Amy    amy@gmail.com
+## 6          106              6       2023-05-04           1150.00          <NA>           <NA>
+## 7          107              7       2023-05-05            160.00           Raj    raj@gmail.com
+## 8          108              8       2023-05-06           2580.50       Stuart            <NA>
+## 9          109              9       2023-05-07           1825.00         Emily  emily@gmail.com
+## 10         110             NA             <NA>               NA         Missy           <NA>
+```
+
+### 左连接
+
+左连接返回左侧数据框（`transactions`）的所有行，以及右侧数据框（`customers`）中匹配的行。若右侧无匹配行，结果中右侧列将显示 `NA`。将 `all.x` 设置为 `TRUE` 执行左连接：
+
+```r
+# perform a left join
+left_join_df <- merge(transactions, customers, by = "customer_id", all.x = TRUE)
+```
+
+```r
+# print left_join_df
+left_join_df
+```
+
+输出结果：
+
+```
+##   customer_id transaction_id transaction_date transaction_amount customer_name customer_email
+## 1         101              1       2023-05-01           1050.00          <NA>           <NA>
+## 2         102              2       2023-05-02           1075.50         Penny  penny@gmail.com
+## 3         103              3       2023-05-03           2050.00       Sheldon sheldon@gmail.com
+## 4         104              4       2023-05-04           1120.00        Howard  howard@gmail.com
+## 5         105              5       2023-05-04            190.75           Amy    amy@gmail.com
+## 6         106              6       2023-05-04           1150.00          <NA>           <NA>
+## 7         107              7       2023-05-05            160.00           Raj    raj@gmail.com
+## 8         108              8       2023-05-06           2580.50       Stuart            <NA>
+## 9         109              9       2023-05-07           1825.00         Emily  emily@gmail.com
+```
+
+### 右连接
+
+右连接返回右侧数据框（`customers`）的所有行，以及左侧数据框（`transactions`）中匹配的行。若左侧无匹配行，结果中左侧列将显示 `NA`。将 `all.y` 设置为 `TRUE` 执行右连接：
+
+```r
+# perform a right join
+right_join_df <- merge(transactions, customers, by = "customer_id", all.y = TRUE)
+```
+
+生成的 `right_join_df` 保留 `customers` 的所有行，仅包含 `transactions` 中匹配的行：
+
+```r
+# print right_join_df
+right_join_df
+```
+
+输出结果：
+
+```
+##   customer_id transaction_id transaction_date transaction_amount customer_name customer_email
+## 1         102              2       2023-05-02           1075.50         Penny  penny@gmail.com
+## 2         103              3       2023-05-03           2050.00       Sheldon sheldon@gmail.com
+## 3         104              4       2023-05-04           1120.00        Howard  howard@gmail.com
+## 4         105              5       2023-05-04            190.75           Amy    amy@gmail.com
+## 5         107              7       2023-05-05            160.00           Raj    raj@gmail.com
+## 6         108              8       2023-05-06           2580.50       Stuart            <NA>
+## 7         109              9       2023-05-07           1825.00         Emily  emily@gmail.com
+## 8         110             NA             <NA>               NA         Missy           <NA>
+```
+
+## 结论
+
+[Conclusion](#contents.xhtml#sc2_67a)
