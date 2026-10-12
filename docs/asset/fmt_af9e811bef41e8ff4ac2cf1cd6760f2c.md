@@ -1,0 +1,257 @@
+
+# HelloServer.php - 第一个 SOAP 1.1 服务端应用程序
+
+```php
+<?php
+#### HelloServer.php
+#- Copyright 2009-2015 (c) HerongYang.com. All Rights Reserved.
+#
+function hello($someone) {
+   return "Hello " . $someone . "!";
+}
+   $server = new SoapServer(null,
+      array('uri' => "urn://www.herong.home/res"));
+   $server->addFunction("hello");
+   $server->handle();
+?>
+```
+
+服务器应用程序已准备就绪。请注意：
+
+*   此 SOAP 服务器应用程序不能作为独立的 SOAP 服务器使用。它需要一个 HTTP 服务器来接收 SOAP 请求，以及一个 PHP 运行时作为 CGI 来处理 SOAP 请求。
+*   `uri` 值只是一个唯一标识，用作响应消息的命名空间。
+
+我将使用的 HTTP 服务器是 Apache Server。它已经正确配置以与 PHP CGI 接口配合工作。我所要做的就是将服务器应用程序移动到 Apache 文档目录：
+
+```bash
+herong> copy HelloServer.php \apache\htdocs
+```
+
+为了测试我的服务器应用程序，我编写了这个客户端应用程序 `HelloClient.php`：
+
+## HelloClient.php - SOAP 1.1 客户端应用程序
+
+```php
+<?php
+#### HelloClient.php
+#- Copyright 2009-2015 (c) HerongYang.com. All Rights Reserved.
+#
+   $client = new SoapClient(null, array(
+      'location' => "http://localhost/HelloServer.php",
+      'uri'      => "urn://www.herong.home/req",
+      'trace'    => 1 ));
+
+   $return = $client->__soapCall("hello",array("world"));
+   echo("\nReturning value of __soapCall() call: ".$return);
+
+   echo("\nDumping request headers:\n"
+      .$client->__getLastRequestHeaders());
+
+   echo("\nDumping request:\n".$client->__getLastRequest());
+
+   echo("\nDumping response headers:\n"
+      .$client->__getLastResponseHeaders());
+
+   echo("\nDumping response:\n".$client->__getLastResponse());
+?>
+```
+
+检查 Web 服务器以确保其正在运行。然后运行 `HelloClient.php`。您将获得：
+
+```
+Returning value of __soapCall() call: Hello world!
+
+Dumping request headers:
+POST /HelloServer.php HTTP/1.1
+Host: localhost
+Connection: Keep-Alive
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "urn://www.herong.home/req#hello"
+Content-Length: 499
+
+Dumping request:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:ns1="urn://www.herong.home/req"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+ <SOAP-ENV:Body><ns1:hello>
+  <param0 xsi:type="xsd:string">world</param0>
+ </ns1:hello></SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+Dumping response headers:
+HTTP/1.1 200 OK
+Server: Apache
+Connection: close
+Content-Type: text/xml; charset=utf-8
+Content-Length: 522
+
+Dumping response:
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:ns1="urn://www.herong.home/res"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+ <SOAP-ENV:Body><ns1:helloResponse>
+  <return xsi:type="xsd:string">Hello world!</return>
+ </ns1:helloResponse></SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+
+非常令人兴奋，对吧？服务端和客户端都工作正常。
+
+如果您对服务端上执行是如何进行的感兴趣，我有一个简化的服务端执行流程图：
+
+```
+                 IIS      PHP (SOAP Extension)      HelloServer.php
+    HTTP request  |
+   -------------->|
+    SOAP message  |
+                  |  CGI   |      PHP CGI API
+                  |------->|------------------------>|
+                                                     | addFunction()
+                                                     |
+                                SOAP Extension API   | handle()
+                           |<------------------------|
+                           |
+                           |    SOAP Extension API
+                           |------------------------>|
+                                                     |
+                                SOAP Extension API   | hello()
+                           |<------------------------|
+                     CGI   |
+                  |<-------|
+    HTTP response |
+   <--------------|
+    SOAP message  |
+```
+
+---
+
+# HelloServer12.php - 第一个 SOAP 1.2 服务端应用程序
+
+本节提供了一个关于如何编写简单 SOAP 1.2 服务端应用程序的教程示例。`HelloServer.php` 示例定义了一个 `hello()` 函数，将其添加到 SOAP 服务端，等待客户端程序调用。
+
+到目前为止，我们只尝试了 SOAP 1.1。我们可以用 SOAP 1.2 进行一些测试吗？当然可以。这是我为 SOAP 1.2 修改的 hello 服务端，`HelloServer12.php`：
+
+```php
+<?php
+#### HelloServer12.php
+#- Copyright 2009-2015 (c) HerongYang.com. All Rights Reserved.
+#
+function hello($someone) {
+   return "Hello " . $someone . "! - SOAP 1.2";
+}
+   $server = new SoapServer(null, array(
+      'uri' => "urn://www.herong.home/res",
+      'soap_version' => SOAP_1_2));
+   $server->addFunction("hello");
+   $server->handle();
+?>
+```
+
+这是我为 SOAP 1.2 修改的 hello 客户端，`HelloClient12.php`：
+
+```php
+<?php
+#### HelloClient12.php
+#- Copyright 2009-2015 (c) HerongYang.com. All Rights Reserved.
+#
+   $client = new SoapClient(null, array(
+      'location' => "http://localhost/HelloServer12.php",
+      'uri'      => "urn://www.herong.home/req",
+      'soap_version' => SOAP_1_2,
+      'trace'    => 1 ));
+
+   $return = $client->__soapCall("hello",array("world"));
+   echo("\nReturning value of __soapCall() call: ".$return);
+
+   echo("\nDumping request headers:\n"
+      .$client->__getLastRequestHeaders());
+
+   echo("\nDumping request:\n".$client->__getLastRequest());
+
+   echo("\nDumping response headers:\n"
+      .$client->__getLastResponseHeaders());
+
+   echo("\nDumping response:\n".$client->__getLastResponse());
+?>
+```
+
+请记得将 `HelloServer12.php` 移动到 IIS 文档目录。然后运行 `HelloClient12.php`。您将获得：
+
+```
+Returning value of __soapCall() call: Hello world! - SOAP 1.2
+
+Dumping request headers:
+POST /HelloServer12.php HTTP/1.1
+Host: localhost
+Connection: Keep-Alive
+Content-Type: application/soap+xml;
+   charset=utf-8; action="urn://www.herong.home/req#hello"
+Content-Length: 458
+
+Dumping request:
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope
+ xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+ xmlns:ns1="urn://www.herong.home/req"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:enc="http://www.w3.org/2003/05/soap-encoding">
+ <env:Body>
+  <ns1:hello
+   env:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+   <param0 xsi:type="xsd:string">world</param0>
+  </ns1:hello>
+ </env:Body>
+</env:Envelope>
+
+Dumping response headers:
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/5.1
+Connection: close
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: 570
+
+Dumping response:
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope
+ xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+ xmlns:ns1="urn://www.herong.home/res"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:enc="http://www.w3.org/2003/05/soap-encoding">
+ <env:Body
+  xmlns:rpc="http://www.w3.org/2003/05/soap-rpc">
+  <ns1:helloResponse
+   env:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+   <rpc:result>return</rpc:result>
+   <return xsi:type="xsd:string">Hello world! - SOAP 1.2</return>
+  </ns1:helloResponse>
+ </env:Body>
+</env:Envelope>
+```
+
+现在输出更有趣了：
+
+*   应用了 SOAP 1.2 HTTP 绑定规则。请参阅 HTTP 请求头行：`Content-Type`。它的值为 `"application/soap+xml"`，并带有 `"action=..."` 参数。
+*   应用了 SOAP 1.2 消息规则。请参阅请求消息和响应消息中的信封命名空间值：`xmlns:env="http://www.w3.org/2003/05/soap-envelope`。
+*   应用了 SOAP 1.2 RPC 表示规则。请参阅响应消息中响应元素的 `"result"` 子元素。但 SOAP Extension 并没有将返回值直接放在这个子元素中。它在响应元素中插入了第二个子元素，并将返回值放在这个第二个元素中。必需的 `"result"` 元素中的值只是对第二个元素的引用。这似乎违反了 SOAP 1.2 RPC 表示规范。
+
+---
+
+# HelloServerWsdl.php - WSDL 模式下的 SOAP 1.2 服务端应用程序
+
+本节提供了一个关于如何以 WSDL 模式编写简单 SOAP 1.2 服务端应用程序的教程示例。`HelloServer.php` 示例定义了一个 `hello()` 函数，将其添加到 SOAP 服务端，等待客户端程序调用。
+
+## 创建 WSDL 模式的 SOAP 1.2 服务器应用
+
+现在让我们更进一步：在 WSDL 模式下创建一个 SOAP 1.2 服务器应用。以下是修改为 WSDL 模式的相同 hello 服务器，`HelloServerWdsl.php`：
