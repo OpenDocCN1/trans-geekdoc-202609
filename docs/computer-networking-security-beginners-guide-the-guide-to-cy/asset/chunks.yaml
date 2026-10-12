@@ -1,0 +1,2262 @@
+- raw: "\n\n![](rsrc7.jpg)\n\n![](rsrc7.jpg)\n\nComputer Networking Security Beginners\
+    \ Guide The Guide to CyberSecurity to Learn through a Top-Down Approach all the\
+    \ Defensive Actions to be taken to Protect yourself from the Dangers of the Network\
+    \ © Copyright 2019 by Kevin Morgan \n\nAll rights reserved. No part of this guide\
+    \ may be reproduced in any form without written permission of the publisher, except\
+    \ in the case of short quotations incorporated in articles or critical reviews.\
+    \ Disclaimer The information contained in this book and its contents are not designed\
+    \ to replace any form of professional advice; and it is not intended to replace\
+    \ the need for advice or other independent services as may be required. The content\
+    \ and information in this book have been provided for educational and entertainment\
+    \ purposes only. The content and information contained in this book have been\
+    \ compiled from sources believed to be reliable and cared for to the best of the\
+    \ author's knowledge, information and beliefs. However, the author cannot guarantee\
+    \ its accuracy and validity and cannot be held responsible for any errors and/or\
+    \ omissions. In addition, changes are periodically made to this book as and when\
+    \ necessary. Where appropriate and/or necessary, you should consult a professional\
+    \ before using any of the remedies, techniques or information suggested in this\
+    \ book. By using the contents and information contained in this book, you agree\
+    \ to indemnify the Author from and against any damages, costs and expenses, including\
+    \ any legal fees potentially arising from the application of any of the information\
+    \ provided in this book. This disclaimer applies to any loss, damage or injury\
+    \ caused by the use and application, either directly or indirectly, of any advice\
+    \ or information presented, whether for breach of contract, tort, negligence,\
+    \ personal injury, criminal intent or any other cause of action. You agree to\
+    \ accept all risks associated with the use of the information presented in this\
+    \ book. You agree that by continuing to read this book, where appropriate and/or\
+    \ necessary, you must consult a professional before using any of the suggested\
+    \ remedies, techniques or information in this book. © Copyright 2019 by Kevin\
+    \ Morgan \n\nTablet of Contents [Introduction](#part0004.xhtml) [Chapter 1](#part0005.xhtml)\
+    \ [Creation, use and management of passwords](#part0005.xhtml#toc7_Creation__use_and_management_of_passwords)\
+    \ [How to use passwords](#part0005.xhtml#toc2_How_to_use_passwords) [Choosing\
+    \ your password](#part0005.xhtml#aKB) [Password creation tools](#part0006.xhtml)\
+    \ [How to manage your passwords](#part0006.xhtml#aKD) [How to keep your passwords](#part0006.xhtml#toc6_How_to_keep_your_passwords)\
+    \ [Chapter 2](#part0007.xhtml) [How to prevent risks from infected emails](#part0007.xhtml#aKG)\
+    \ [Attention to phishing](#part0007.xhtml#aKH) [Warnings to prevention](#part0007.xhtml#toc10_Warnings_to_prevention)\
+    \ [Protective tools](#part0007.xhtml#aKK) [Chapter 3](#part0007.xhtml#aKM) [Avoid\
+    \ downloading Software or Apps from unreliable sources](#part0007.xhtml#aKN) [Chapter\
+    \ 4](#part0008.xhtml) [Making updates](#part0008.xhtml#aKR) [Types of updates](#part0008.xhtml#aKS)\
+    \ [Chapter 5](#part0009.xhtml) [Safely surfing on Internet](#part0009.xhtml#aKU)\
+    \ [Free Wi-Fi networks](#part0009.xhtml#aKV) [How to protect oneself](#part0009.xhtml#aKW)\
+    \ [Use a firewall to monitor activity](#part0009.xhtml#toc20_Use_a_firewall_to_monitor_activity)\
+    \ [Chapter 6](#part0010.xhtml) [How to protect oneself from external devices](#part0010.xhtml#aKZ)\
+    \ [In case of theft or loss of the hardware device](#part0010.xhtml#toc24_In_case_of_theft_or_loss_of_the_hardware_device)\
+    \ [Chapter 7](#part0011.xhtml) [How to delete viruses](#part0011.xhtml#toc30_How_to_delete_viruses)\
+    \ [Eliminate the virus from your smartphone](#part0011.xhtml#toc27_Eliminate_the_virus_from_your_smartphone)\
+    \ [Deleting the virus from your computer](#part0011.xhtml#toc28_Deleting_the_virus_from_your_computer)\
+    \ [How to manually delete viruses from your computer](#part0011.xhtml#aM5) [Glossary](#part0012.xhtml)\
+    \ [Conclusion](#part0013.xhtml) \n\nIntroduction Congratulations on downloading\
+    \ your copy of Computer Networking Security. It is a source of joy for me that\
+    \ you have chosen this book to learn more about computer security. Computer networking\
+    \ is an important part of our lives at work, at school and even at home, which\
+    \ is why many people try to figure out how to protect their professional and personal\
+    \ information. As you continue to read, you will discover the importance of protecting\
+    \ our computers/smartphones from possible attacks and information theft. The Internet\
+    \ is not only virtual but what we do every day on the network (bank transfers,\
+    \ purchases etc. ...) is real Information Security can be defined as the set of\
+    \ measures to ensure user authentication and confidentiality of information and\
+    \ services managed or delivered digitally. This practice consists in defending\
+    \ computers, servers and mobile devices from dangerous attacks. It is also called\
+    \ electronic information security. The threats that cyber security seeks to counter\
+    \ are threefold in nature: \n\n1.  Cybercrime, when individuals attack systems\
+    \ for financial gain. \n\n2.  Cyber war, which concerns the collection of information\
+    \ for political purposes. \n\n3.  Cyber-terrorism, intent on undermining computer\
+    \ systems to unleash panic or terror. \n\nThe most common methods used by crackers\
+    \ to control computers are: \n\n*   Viruses and worms can self-replicate and damage\
+    \ files or systems \n\n*   Spyware and Trojans are often used to stealthily collect\
+    \ data. The average user generally comes into contact with malicious codes through\
+    \ unwanted email attachments or through downloading programs that appear legitimate\
+    \ but actually carry malware with them. \n\nChapter 1 Creation, use and management\
+    \ of passwords How to use passwords The password or access key is, in computer\
+    \ science or cryptography, a series of alphanumeric characters and special signs\
+    \ used to access a computer resource (Internet connection, email, networks, computers,\
+    \ ATMs, programs, etc...). With a password and user name, the identity of a person\
+    \ is verified, allowing access to various types of IT services. The password is\
+    \ also used to carry out encryption operations. Protecting our computer data with\
+    \ a password is of paramount importance to avoid unpleasant consequences that\
+    \ could result from unauthorized access by external individuals (hackers). The\
+    \ consequences can range from unpleasant annoyances to real corporate disasters.\
+    \ For example, if a co-worker discovers your password and wants to cause damage\
+    \ to the company using your PC, the blame for everything will be yours because\
+    \ you have a duty to keep your passwords. If your email password is discovered,\
+    \ the intruder may use your email address to send computer viruses or take criminal\
+    \ action on your behalf. It is very difficult to identify the person responsible\
+    \ for the criminal operations after the act has been carried out, because he can\
+    \ operate from anywhere without the need for physical access to your computer.\
+    \ A statistical survey has shown that the most commonly used passwords in the\
+    \ USA are as follows: \n\n| 123456  || password  || 12345  || 12345678  || qwerty\
+    \  |\n\n| --- | --- | --- | --- | --- |\n\n| 123456789  || 1234  || baseball \
+    \ || 1234567  || abc123  |\n\n| 111111  || iloveyou  || sunshine  || princes \
+    \ || admin  |\n\n| welcome  || 666666  || football  || 123123  || monkey  |\n\n\
+    | 654321  || !@#$%^&\\*  || charlie  || aa123456  || donald  |"
+  fmt: "\n# Computer Networking Security Beginners Guide\n\nThe Guide to CyberSecurity\
+    \ to Learn through a Top-Down Approach all the Defensive Actions to be taken to\
+    \ Protect yourself from the Dangers of the Network\n\n© Copyright 2019 by Kevin\
+    \ Morgan\n\nAll rights reserved. No part of this guide may be reproduced in any\
+    \ form without written permission of the publisher, except in the case of short\
+    \ quotations incorporated in articles or critical reviews.\n\n## Disclaimer\n\n\
+    The information contained in this book and its contents are not designed to replace\
+    \ any form of professional advice; and it is not intended to replace the need\
+    \ for advice or other independent services as may be required. The content and\
+    \ information in this book have been provided for educational and entertainment\
+    \ purposes only. The content and information contained in this book have been\
+    \ compiled from sources believed to be reliable and cared for to the best of the\
+    \ author's knowledge, information and beliefs. However, the author cannot guarantee\
+    \ its accuracy and validity and cannot be held responsible for any errors and/or\
+    \ omissions. In addition, changes are periodically made to this book as and when\
+    \ necessary. Where appropriate and/or necessary, you should consult a professional\
+    \ before using any of the remedies, techniques or information suggested in this\
+    \ book. By using the contents and information contained in this book, you agree\
+    \ to indemnify the Author from and against any damages, costs and expenses, including\
+    \ any legal fees potentially arising from the application of any of the information\
+    \ provided in this book. This disclaimer applies to any loss, damage or injury\
+    \ caused by the use and application, either directly or indirectly, of any advice\
+    \ or information presented, whether for breach of contract, tort, negligence,\
+    \ personal injury, criminal intent or any other cause of action. You agree to\
+    \ accept all risks associated with the use of the information presented in this\
+    \ book. You agree that by continuing to read this book, where appropriate and/or\
+    \ necessary, you must consult a professional before using any of the suggested\
+    \ remedies, techniques or information in this book.\n\n© Copyright 2019 by Kevin\
+    \ Morgan\n\n## Table of Contents\n\n- [Introduction](#part0004.xhtml)\n- [Chapter\
+    \ 1](#part0005.xhtml)\n  - [Creation, use and management of passwords](#part0005.xhtml#toc7_Creation__use_and_management_of_passwords)\n\
+    \  - [How to use passwords](#part0005.xhtml#toc2_How_to_use_passwords)\n  - [Choosing\
+    \ your password](#part0005.xhtml#aKB)\n  - [Password creation tools](#part0006.xhtml)\n\
+    \  - [How to manage your passwords](#part0006.xhtml#aKD)\n  - [How to keep your\
+    \ passwords](#part0006.xhtml#toc6_How_to_keep_your_passwords)\n- [Chapter 2](#part0007.xhtml)\n\
+    \  - [How to prevent risks from infected emails](#part0007.xhtml#aKG)\n  - [Attention\
+    \ to phishing](#part0007.xhtml#aKH)\n  - [Warnings to prevention](#part0007.xhtml#toc10_Warnings_to_prevention)\n\
+    \  - [Protective tools](#part0007.xhtml#aKK)\n- [Chapter 3](#part0007.xhtml#aKM)\n\
+    \  - [Avoid downloading Software or Apps from unreliable sources](#part0007.xhtml#aKN)\n\
+    - [Chapter 4](#part0008.xhtml)\n  - [Making updates](#part0008.xhtml#aKR)\n  -\
+    \ [Types of updates](#part0008.xhtml#aKS)\n- [Chapter 5](#part0009.xhtml)\n  -\
+    \ [Safely surfing on Internet](#part0009.xhtml#aKU)\n  - [Free Wi-Fi networks](#part0009.xhtml#aKV)\n\
+    \  - [How to protect oneself](#part0009.xhtml#aKW)\n  - [Use a firewall to monitor\
+    \ activity](#part0009.xhtml#toc20_Use_a_firewall_to_monitor_activity)\n- [Chapter\
+    \ 6](#part0010.xhtml)\n  - [How to protect oneself from external devices](#part0010.xhtml#aKZ)\n\
+    \  - [In case of theft or loss of the hardware device](#part0010.xhtml#toc24_In_case_of_theft_or_loss_of_the_hardware_device)\n\
+    - [Chapter 7](#part0011.xhtml)\n  - [How to delete viruses](#part0011.xhtml#toc30_How_to_delete_viruses)\n\
+    \  - [Eliminate the virus from your smartphone](#part0011.xhtml#toc27_Eliminate_the_virus_from_your_smartphone)\n\
+    \  - [Deleting the virus from your computer](#part0011.xhtml#toc28_Deleting_the_virus_from_your_computer)\n\
+    \  - [How to manually delete viruses from your computer](#part0011.xhtml#aM5)\n\
+    - [Glossary](#part0012.xhtml)\n- [Conclusion](#part0013.xhtml)\n\n## Introduction\n\
+    \nCongratulations on downloading your copy of Computer Networking Security. It\
+    \ is a source of joy for me that you have chosen this book to learn more about\
+    \ computer security. Computer networking is an important part of our lives at\
+    \ work, at school and even at home, which is why many people try to figure out\
+    \ how to protect their professional and personal information. As you continue\
+    \ to read, you will discover the importance of protecting our computers/smartphones\
+    \ from possible attacks and information theft. The Internet is not only virtual\
+    \ but what we do every day on the network (bank transfers, purchases etc. ...)\
+    \ is real.\n\nInformation Security can be defined as the set of measures to ensure\
+    \ user authentication and confidentiality of information and services managed\
+    \ or delivered digitally. This practice consists in defending computers, servers\
+    \ and mobile devices from dangerous attacks. It is also called electronic information\
+    \ security.\n\nThe threats that cyber security seeks to counter are threefold\
+    \ in nature:\n\n1.  **Cybercrime**, when individuals attack systems for financial\
+    \ gain.\n2.  **Cyber war**, which concerns the collection of information for political\
+    \ purposes.\n3.  **Cyber-terrorism**, intent on undermining computer systems to\
+    \ unleash panic or terror.\n\nThe most common methods used by crackers to control\
+    \ computers are:\n\n-   **Viruses and worms** can self-replicate and damage files\
+    \ or systems.\n-   **Spyware and Trojans** are often used to stealthily collect\
+    \ data.\n\nThe average user generally comes into contact with malicious codes\
+    \ through unwanted email attachments or through downloading programs that appear\
+    \ legitimate but actually carry malware with them.\n\n## Chapter 1: Creation,\
+    \ use and management of passwords\n\n### How to use passwords\n\nThe password\
+    \ or access key is, in computer science or cryptography, a series of alphanumeric\
+    \ characters and special signs used to access a computer resource (Internet connection,\
+    \ email, networks, computers, ATMs, programs, etc...). With a password and user\
+    \ name, the identity of a person is verified, allowing access to various types\
+    \ of IT services. The password is also used to carry out encryption operations.\n\
+    \nProtecting our computer data with a password is of paramount importance to avoid\
+    \ unpleasant consequences that could result from unauthorized access by external\
+    \ individuals (hackers). The consequences can range from unpleasant annoyances\
+    \ to real corporate disasters. For example, if a co-worker discovers your password\
+    \ and wants to cause damage to the company using your PC, the blame for everything\
+    \ will be yours because you have a duty to keep your passwords. If your email\
+    \ password is discovered, the intruder may use your email address to send computer\
+    \ viruses or take criminal action on your behalf. It is very difficult to identify\
+    \ the person responsible for the criminal operations after the act has been carried\
+    \ out, because he can operate from anywhere without the need for physical access\
+    \ to your computer.\n\nA statistical survey has shown that the most commonly used\
+    \ passwords in the USA are as follows:\n\n| 123456 | password | 12345 | 12345678\
+    \ | qwerty |\n| :--- | :--- | :--- | :--- | :--- |\n| 123456789 | 1234 | baseball\
+    \ | 1234567 | abc123 |\n| 111111 | iloveyou | sunshine | princes | admin |\n|\
+    \ welcome | 666666 | football | 123123 | monkey |\n| 654321 | !@#$%^&* | charlie\
+    \ | aa123456 | donald |\n"
+  trans: "\n\n# 计算机网络安全初学者指南\n\n通过自顶向下的方法学习网络安全指南，了解为保护自己免受网络危害而采取的所有防御措施\n\n© 版权所有\
+    \ 2019 Kevin Morgan\n\n版权所有。未经出版商书面许可，不得以任何形式复制本指南的任何部分，但文章或评论中引用的短段落除外。\n\n##\
+    \ 免责声明\n\n本书所含信息及其内容并非旨在替代任何形式的专业建议；也不旨在替代可能需要的咨询或其他独立服务。本书的内容和信息仅供教育和娱乐目的。本书的内容和信息源自作者认为可靠的来源，并根据作者的知识、信息和信念进行了最大程度的审慎编排。然而，作者无法保证其准确性和有效性，也不对任何错误和/或遗漏承担责任。此外，本书将根据需要定期进行修改。在适当和/或必要的情况下，您应在使用本书建议的任何补救措施、技术或信息之前咨询专业人士。通过使用本书包含的内容和信息，您同意就因应用本书提供的任何信息而可能产生的任何损害、费用和开支（包括任何法律费用）对作者进行赔偿。本免责声明适用于因直接或间接使用和应用任何建议或信息而造成的任何损失、损害或伤害，无论是由于违约、侵权、疏忽、人身伤害、犯罪意图还是任何其他诉因。您同意承担使用本书所呈现信息所涉及的所有风险。您同意，继续阅读本书即表示在适当和/或必要的情况下，您必须在使用本书建议的任何补救措施、技术或信息之前咨询专业人士。\n\
+    \n© 版权所有 2019 Kevin Morgan\n\n## 目录\n\n- 简介\n- 第 1 章\n  - 密码的创建、使用和管理\n  - 如何使用密码\n\
+    \  - 选择您的密码\n  - 密码创建工具\n  - 如何管理您的密码\n  - 如何保管您的密码\n- 第 2 章\n  - 如何防范受感染邮件的风险\n\
+    \  - 警惕网络钓鱼\n  - 预防警示\n  - 防护工具\n- 第 3 章\n  - 避免从不可靠来源下载软件或应用程序\n- 第 4 章\n  -\
+    \ 进行更新\n  - 更新类型\n- 第 5 章\n  - 安全上网\n  - 免费 Wi-Fi 网络\n  - 如何保护自己\n  - 使用防火墙监控活动\n\
+    - 第 6 章\n  - 如何防范外部设备\n  - 硬件设备被盗或丢失时\n- 第 7 章\n  - 如何删除病毒\n  - 清除智能手机中的病毒\n \
+    \ - 清除计算机中的病毒\n  - 如何手动删除计算机中的病毒\n- 词汇表\n- 结语\n\n## 简介\n\n恭喜您下载了《计算机网络安全》一书。您选择这本书来了解更多关于计算机安全的知识，这让我倍感欣慰。计算机网络是我们工作、学习甚至家庭生活的重要组成部分，这也是为什么许多人试图弄清楚如何保护他们的专业和个人信息。随着您继续阅读，您将发现保护我们的计算机/智能手机免受可能的攻击和信息窃取的重要性。互联网不仅仅是虚拟的，我们每天在网络上所做的事情（银行转账、购物等……）是真实的。\n\
+    \n信息安全可以定义为确保用户身份验证以及以数字方式管理或交付的信息和服务保密性的一系列措施。这种做法旨在保护计算机、服务器和移动设备免受危险攻击。它也被称为电子信息安全。\n\
+    \n网络安全旨在应对的威胁具有三重性质：\n\n1.  **网络犯罪**，即个人攻击系统以获取经济利益。\n2.  **网络战**，涉及为政治目的收集信息。\n\
+    3.  **网络恐怖主义**，旨在破坏计算机系统以引发恐慌或恐惧。\n\n破解者控制计算机最常用的方法包括：\n\n-   **病毒和蠕虫**能够自我复制并破坏文件或系统。\n\
+    -   **间谍软件和特洛伊木马**常被用于隐秘地收集数据。\n\n普通用户通常通过不需要的电子邮件附件，或通过下载看似合法实则携带恶意软件的程序，接触到恶意代码。\n\
+    \n## 第 1 章：密码的创建、使用和管理\n\n### 如何使用密码\n\n密码或访问密钥，在计算机科学或密码学中，是一串用于访问计算机资源（互联网连接、电子邮件、网络、计算机、ATM、程序等……）的字母数字字符和特殊符号系列。通过密码和用户名，可以验证一个人的身份，从而允许访问各种类型的\
+    \ IT 服务。密码也用于执行加密操作。\n\n使用密码保护我们的计算机数据至关重要，可避免外部人员（黑客）未经授权访问而导致的不愉快后果。后果可能从令人恼火的骚扰发展到真正的企业灾难。例如，如果同事发现了您的密码，并想利用您的电脑破坏公司，一切责任都在您，因为您有责任保管好您的密码。如果您的电子邮件密码被发现，入侵者可能会利用您的电子邮件地址发送计算机病毒，或以您的名义采取犯罪行动。案发后很难确定犯罪操作的责任人，因为他可以在任何地方操作，无需物理接触您的计算机。\n\
+    \n一项统计调查显示，美国最常用的密码如下：\n\n| 123456 | password | 12345 | 12345678 | qwerty |\n\
+    | :--- | :--- | :--- | :--- | :--- |\n| 123456789 | 1234 | baseball | 1234567\
+    \ | abc123 |\n| 111111 | iloveyou | sunshine | princes | admin |\n| welcome |\
+    \ 666666 | football | 123123 | monkey |\n| 654321 | !@#$%^&* | charlie | aa123456\
+    \ | donald |\n\n"
+  toc: []
+- raw: "The cracker, i.e. the hacker with illicit intentions, can discover your simple\
+    \ passwords in a few days, using special programs capable of automatically trying\
+    \ even a thousand passwords per second. Therefore, if a cracker decides to discover\
+    \ your password, you will be defenseless. If the cracker decides to launch a \"\
+    brute force attack\" and with the use of technical specifications, it can shorten\
+    \ the access time by a lot. Choosing your password When choosing your password\
+    \ it is important to avoid common words and make sure, you choose unusual terms.\
+    \ Avoid proper names (children, parents, and spouses), team names, cities, movies,\
+    \ artists, etc. The most effective way to choose a good password is to use an\
+    \ automatic generator that creates unusual and therefore unique character sequences.\
+    \ These passwords are usually difficult to remember, but the generator has a system\
+    \ for storing the generated passwords. In this case, you only need to choose a\
+    \ password that allows you to activate the generator and then access the other\
+    \ passwords. To choose the only password to keep in mind, we recommend two approaches.\
+    \ \n\n1.  Choose 4/5 words and merge them together. They should not be famous\
+    \ sentences but different words joined together without giving a logical sense\
+    \ \n\n2.  Choose a verse from a song or poem and use only a few letters from each\
+    \ word. \n\nYou can use multiple techniques in combination. \n\nPassword creation\
+    \ tools F-Secure F-Secure is a program that can generate complex passwords for\
+    \ each type of service, store them and associate them to email addresses, pin\
+    \ codes, credit card credentials and current accounts. This program uses the AES-256\
+    \ encryption system. In addition, the main encryption key is obtained from your\
+    \ master password through a complex algorithm that makes it almost impossible\
+    \ for crackers to detect it. Last Pass and its installation Last Pass can be conveniently\
+    \ used through the browser thanks to its official extensions to create robust\
+    \ and secure passwords in a matter of seconds. After downloading the software\
+    \ from the official website, proceed with the installation of the extension according\
+    \ to the procedure provided by your browser. Once you have installed the extension\
+    \ in your browser, you will need to create an account to use the service. Enter\
+    \ your email address, check \"I agree to the LastPass Terms and Privacy Policy\"\
+    \ and click on the \"Create an account\" button. Fill out the form, enter your\
+    \ master password and click on \"next\" to complete the registration. Once you\
+    \ have registered, you will be able to generate your own passwords. Click on the\
+    \ Lapses icon and \"generate secure password\". Set the various options, such\
+    \ as password length, upper/lower case letters, digits, special characters or\
+    \ avoid ambiguous characters. Once you have created your password, click the \"\
+    use password\" button. Last Pass synchronizes passwords on all devices associated\
+    \ with the same account and is available as a mobile application. There are other\
+    \ software or applications that you can use as \n\n*   1Password \n\n*   PassworG\
+    \ \n\n*   Random Password Generator \n\n*   Password Creator \n\n*   Norton Password\
+    \ Generator \n\n*   RoboForm Password Generator "
+  fmt: '
+
+    # 密码安全指南
+
+
+    ## 破解者的威胁
+
+
+    破解者，即怀有非法意图的黑客，可以在几天内利用特殊程序发现您的简单密码，这些程序能够自动尝试每秒多达一千个密码。因此，如果破解者决定发现您的密码，您将毫无防备。如果破解者决定发起“暴力破解攻击”并利用技术规范，可以大幅缩短访问时间。
+
+
+    ## 选择密码
+
+
+    选择密码时，重要的是避免常用单词，并确保选择不常见的术语。避免使用专有名词（子女、父母、配偶的名字）、球队名称、城市、电影、艺术家等。
+
+
+    选择强密码最有效的方法是使用自动生成器，创建不寻常且因此唯一的字符序列。这些密码通常难以记忆，但生成器拂有一套存储生成密码的系统。在这种情况下，您只需选择一个密码来激活生成器，然后访问其他密码。
+
+
+    为了选择唯一需要记住的主密码，我们推荐两种方法：
+
+
+    1.  选择 4/5 个单词并将它们合并。它们不应是著名的句子，而是拼接在一起且不构成逻辑含义的不同单词。
+
+    2.  选择一首歌或诗的诗句，并仅使用每个单词的少数字母。
+
+
+    您可以组合使用多种技术。
+
+
+    ## 密码创建工具
+
+
+    ### F-Secure
+
+
+    **F-Secure** 是一款可以为各类服务生成复杂密码、存储密码并将其与电子邮件地址、PIN 码、信用卡凭证和活期账户关联的程序。该程序使用 `AES-256`
+    加密系统。此外，主加密密钥通过复杂算法从您的主密码获取，使得破解者几乎无法检测到它。
+
+
+    ### LastPass 及其安装
+
+
+    **LastPass** 可通过浏览器官方扩展方便地使用，能在几秒钟内创建强健安全的密码。从官方网站下载软件后，按照浏览器提供的程序安装扩展。在浏览器中安装扩展后，您需要创建一个帐户以使用该服务。输入您的电子邮件地址，勾选“我同意
+    LastPass 条款和隐私政策”，然后点击“创建帐户”按钮。填写表单，输入您的主密码，然后点击“下一步”完成注册。
+
+
+    注册后，您将能够生成自己的密码。点击 LastPass 图标并选择“生成安全密码”。设置各种选项，如密码长度、大小写字母、数字、特殊字符或避免歧义字符。创建密码后，点击“使用密码”按钮。LastPass
+    会同步与同一帐户关联的所有设备上的密码，并提供移动应用程序。
+
+
+    ### 其他软件或应用程序
+
+
+    您还可以使用以下软件或应用程序：
+
+
+    *   1Password
+
+    *   PassworG
+
+    *   Random Password Generator
+
+    *   Password Creator
+
+    *   Norton Password Generator
+
+    *   RoboForm Password Generator
+
+    '
+  trans: '
+
+
+    # 密码安全指南
+
+
+    ## 破解者的威胁
+
+
+    破解者，即怀有非法意图的黑客，可以在几天内利用特殊程序发现您的简单密码，这些程序能够自动尝试每秒多达一千个密码。因此，如果破解者决定发现您的密码，您将毫无防备。如果破解者决定发起“暴力破解攻击”并利用技术规范，可以大幅缩短访问时间。
+
+
+    ## 选择密码
+
+
+    选择密码时，重要的是避免常用单词，并确保选择不常见的术语。避免使用专有名词（子女、父母、配偶的名字）、球队名称、城市、电影、艺术家等。
+
+
+    选择强密码最有效的方法是使用自动生成器，创建不寻常且因此唯一的字符序列。这些密码通常难以记忆，但生成器**拥有一套存储生成密码的系统**。在这种情况下，您只需选择一个密码来激活生成器，然后访问其他密码。
+
+
+    为了选择唯一需要记住的主密码，我们推荐两种方法：
+
+
+    1.  选择 4/5 个单词并将它们合并。它们不应是著名的句子，而是拼接在一起且不构成逻辑含义的不同单词。
+
+    2.  选择一首歌或诗的诗句，并仅使用每个单词的少数字母。
+
+
+    您可以组合使用多种技术。
+
+
+    ## 密码创建工具
+
+
+    ### F-Secure
+
+
+    **F-Secure** 是一款可以为各类服务生成复杂密码、存储密码并将其与电子邮件地址、PIN 码、信用卡凭证和活期账户关联的程序。该程序使用 `AES-256`
+    加密系统。此外，主加密密钥通过复杂算法从您的主密码获取，使得破解者几乎无法检测到它。
+
+
+    ### LastPass 及其安装
+
+
+    **LastPass** 可通过浏览器官方扩展方便地使用，能在几秒钟内创建强健安全的密码。从官方网站下载软件后，按照浏览器提供的程序安装扩展。在浏览器中安装扩展后，您需要创建一个帐户以使用该服务。输入您的电子邮件地址，勾选“我同意
+    LastPass 条款和隐私政策”，然后点击“创建帐户”按钮。填写表单，输入您的主密码，然后点击“下一步”完成注册。
+
+
+    注册后，您将能够生成自己的密码。点击 LastPass 图标并选择“生成安全密码”。设置各种选项，如密码长度、大小写字母、数字、特殊字符或避免歧义字符。创建密码后，点击“使用密码”按钮。LastPass
+    会同步与同一帐户关联的所有设备上的密码，并提供移动应用程序。
+
+
+    ### 其他软件或应用程序
+
+
+    您还可以使用以下软件或应用程序：
+
+
+    *   1Password
+
+    *   PassworG
+
+    *   Random Password Generator
+
+    *   Password Creator
+
+    *   Norton Password Generator
+
+    *   RoboForm Password Generator
+
+
+    '
+  toc: []
+- raw: "How to manage your passwords The advice is to use a different password for\
+    \ each service you use (email account, home banking, credit cards, etc.). If you\
+    \ use a single password for all services, you will be more vulnerable. In fact,\
+    \ the security system of any normal website (ex. Badoo) where you register is\
+    \ definitely more vulnerable than the security system of your bank. So if you\
+    \ use the same password, it is more likely that a cracker will be able to penetrate\
+    \ the database of users of the well-known online service and can then try to get\
+    \ into more appetizing services. In the past years, crackers have stolen the access\
+    \ data of millions of users on LinkedIn, Yahoo, Adobe, selling those credentials\
+    \ on the dark web. There are websites that allow you to check if your data are\
+    \ part of those stolen in hacking episodes. A website that you can use to check\
+    \ if your passwords have been stolen in some hacking episode is haveinbeenpwned.com.\
+    \ If a cracker thinks he can make a lot of money by logging into your account,\
+    \ he can invest time and resources in finding your password. He can put a \"botnet\"\
+    \ to work, that is a network of computers under his control thanks to a malware,\
+    \ which generates thousands of passwords, until he finds the right one. In this\
+    \ way, the shortest passwords (8/10 words) can be decrypted in a few months. To\
+    \ make your computer system more secure, you should change your passwords. This\
+    \ way, a new door to open will always be presented to the hypothetical thief.\
+    \ It is necessary to determine how often passwords should be changed. A too thin\
+    \ change gives the cracker time to decode the password. Changing passwords too\
+    \ often exposes the cracker to the risk of forgetting them. The password change\
+    \ used by companies is usually every three months. Everything depends on the data\
+    \ to be protected. If it is simple accounting data or similar, the frequency of\
+    \ change can be greater than three months. If, on the other hand, the data is\
+    \ more attractive to crime (trade secrets, access to bank accounts), then the\
+    \ exchange rate will certainly be less than three months. Do not use the same\
+    \ passwords in your company as for personal profiles. A very valid and effective\
+    \ countermeasure is the double level authentication. Two-factor authentication\
+    \ performs two controls to give access. The server that receives our access request\
+    \ can send us on the mobile phone a code to be entered in the second level of\
+    \ verification to confirm access and confirm that it is we at the keyboard. How\
+    \ to keep your passwords Generally, there is a total superficiality on the part\
+    \ of employees of a company in storing passwords to access their terminal. Often\
+    \ passwords are transcribed into a post-it attacked at best under the computer\
+    \ keyboard. In theory, employees should only frequent a company’s offices, but\
+    \ it is possible for other people to come in as messengers, technicians to repair\
+    \ failures in air conditioning systems or cleaners, or more. “Social engineering\"\
+    \ is often used by hackers to steal passwords to access the company network. Hackers\
+    \ can sneak into offices, for example as messengers, and use the access data.\
+    \ Another \"social engineering\" technique used by hackers is to obtain information\
+    \ by making a false phone call or sending false e-mails. In general, these techniques\
+    \ do not arouse particular suspicion in the case of large organizations. In fact,\
+    \ in these cases, the malevolent hacker can pass himself off as a bank employee\
+    \ who has to do accounting checks. Passwords that are not kept properly can be\
+    \ stolen not only by malevolent external individuals, but also by your colleagues\
+    \ who want to create damage to the company. Also in this case, if the malicious\
+    \ colleague creates damage to the company from your computer, the responsibility\
+    \ is yours because you have not done everything possible to prevent other people\
+    \ from becoming aware of your access data. Also keeping all your passwords in\
+    \ a file is a lack of custody because the evil intent can copy without your knowledge\
+    \ the above file in a USB and search for what it needs in a second momentum and\
+    \ calmly. The best solution to store passwords is to use a password manager tool\
+    \ such as Key F-Secure Key. It is based on encrypting the master password by subjecting\
+    \ it to a complex mathematical function and adding an authentication code based\
+    \ on 256-bit hashes, by entering causal data. Other tools: Google Smart Lock :\
+    \ This tool allows you to save passwords to the cloud and synchronize them on\
+    \ various devices. In this way, it allows you to use your passwords whenever you\
+    \ access the Internet via Google Chrome or from your Android device. To activate\
+    \ Smart Lock, scroll to the right and go to \"Security\" to activate \"vases\"\
+    \ on \"settings\", then on Google and Google accounts. Scroll to \"how to access\
+    \ other sites\" and click on \"saved passwords\". Here you can decide whether\
+    \ to enable or disable \"Ask to save passwords\". If you want to set this option\
+    \ on your PC, go to your profile and click on \"password\". Now decide whether\
+    \ to enable or disable the \"Ask to save passwords\" option. iCloud Keyring: This\
+    \ is an Apple tool. To activate, go to \"Settings\" and click on your name and\
+    \ press \"iCloud\". On the next screen click on \"keychain\" and turn the switch\
+    \ on. If you want to set up the Keychain on your Mac, go to the top left and click\
+    \ on the Apple logo. Select the \"System Preferences\" option and check the \"\
+    Keychain\" box. \n\nChapter 2 How to prevent risks from infected emails Email\
+    \ control is one of the first actions that each employee takes every morning when\
+    \ they arrive at the office. The worst threats can reach our computer from e-mail. \
+    \ Usually, your email provider eliminates junk mail (spam), such as advertisements\
+    \ and emails that contain malware. However, every now and then some of them manage\
+    \ to get to our computer. Attention to phishing Phishing is one of the oldest\
+    \ and most effective techniques used by crackers to hack computer systems. Opening\
+    \ an email that contains a virus can cause significant damage to your business.\
+    \ For example, an email with a PDF attachment may arrive; perhaps in the email\
+    \ trap it is indicated to open the attachment for more details. When the attachment\
+    \ is opened, the hard disk is moved and in a few seconds all our documents are\
+    \ encrypted and a screen appears that warns us of the incident and that to get\
+    \ our documents back we have to pay a ransom. In the meantime, the virus reaches\
+    \ the server and infects the entire company network. This type of virus is called\
+    \ Ransomware. This described is the worst-case scenario that can arise. Other\
+    \ emails may contain Trojan viruses of various types such as keyloggers. This\
+    \ virus records everything you type on your computer's keyboard and transmits\
+    \ it to hackers who then come into possession of accounts and passwords. Not all\
+    \ infected emails contain attachments, but they may contain links that activate\
+    \ the virus at the same time as you click on the link. Warnings to prevention\
+    \ The first thing to do is to have a good anti-spam system. This is usually offered\
+    \ free of charge by your e-mail provider. In case you want to improve your security,\
+    \ providers offer paid anti-spam systems that have advanced security features.\
+    \ Let us give you some simple tips in case suspicious emails arrive: \n\n*   Do\
+    \ not respond to emails that deceptively seem to come from banks, where you are\
+    \ asked to confirm your credentials. The banks know your data and in case of confirmation,\
+    \ they will invite you to go physically to the bank. \n\n*   Move the cursor over\
+    \ the sender's address and you will see that the address changes. It is no longer\
+    \ the address of the known bank or courier. \n\n*   Passing the cursor over the\
+    \ link contained within the suspicious email will show you that the web address\
+    \ is not what appears in the email. \n\n*   Be wary of any emails that tell you\
+    \ they are winners or heirs of anything. It sounds absurd, but these types of\
+    \ emails are still being sent so it means that someone is still falling for them. "
+  fmt: '
+
+    # How to manage your passwords
+
+
+    The advice is to use a different password for each service you use (email account,
+    home banking, credit cards, etc.). If you use a single password for all services,
+    you will be more vulnerable. In fact, the security system of any normal website
+    (ex. Badoo) where you register is definitely more vulnerable than the security
+    system of your bank. So if you use the same password, it is more likely that a
+    cracker will be able to penetrate the database of users of the well-known online
+    service and can then try to get into more appetizing services. In the past years,
+    crackers have stolen the access data of millions of users on LinkedIn, Yahoo,
+    Adobe, selling those credentials on the dark web. There are websites that allow
+    you to check if your data are part of those stolen in hacking episodes. A website
+    that you can use to check if your passwords have been stolen in some hacking episode
+    is `haveinbeenpwned.com`. If a cracker thinks he can make a lot of money by logging
+    into your account, he can invest time and resources in finding your password.
+    He can put a "botnet" to work, that is a network of computers under his control
+    thanks to a malware, which generates thousands of passwords, until he finds the
+    right one. In this way, the shortest passwords (8/10 words) can be decrypted in
+    a few months.
+
+
+    To make your computer system more secure, you should change your passwords. This
+    way, a new door to open will always be presented to the hypothetical thief. It
+    is necessary to determine how often passwords should be changed. A too thin change
+    gives the cracker time to decode the password. Changing passwords too often exposes
+    the cracker to the risk of forgetting them. The password change used by companies
+    is usually every three months. Everything depends on the data to be protected.
+    If it is simple accounting data or similar, the frequency of change can be greater
+    than three months. If, on the other hand, the data is more attractive to crime
+    (trade secrets, access to bank accounts), then the exchange rate will certainly
+    be less than three months. Do not use the same passwords in your company as for
+    personal profiles. A very valid and effective countermeasure is the double level
+    authentication. Two-factor authentication performs two controls to give access.
+    The server that receives our access request can send us on the mobile phone a
+    code to be entered in the second level of verification to confirm access and confirm
+    that it is we at the keyboard.
+
+
+    ## How to keep your passwords
+
+
+    Generally, there is a total superficiality on the part of employees of a company
+    in storing passwords to access their terminal. Often passwords are transcribed
+    into a post-it attacked at best under the computer keyboard. In theory, employees
+    should only frequent a company’s offices, but it is possible for other people
+    to come in as messengers, technicians to repair failures in air conditioning systems
+    or cleaners, or more. “Social engineering" is often used by hackers to steal passwords
+    to access the company network. Hackers can sneak into offices, for example as
+    messengers, and use the access data. Another "social engineering" technique used
+    by hackers is to obtain information by making a false phone call or sending false
+    e-mails. In general, these techniques do not arouse particular suspicion in the
+    case of large organizations. In fact, in these cases, the malevolent hacker can
+    pass himself off as a bank employee who has to do accounting checks. Passwords
+    that are not kept properly can be stolen not only by malevolent external individuals,
+    but also by your colleagues who want to create damage to the company. Also in
+    this case, if the malicious colleague creates damage to the company from your
+    computer, the responsibility is yours because you have not done everything possible
+    to prevent other people from becoming aware of your access data. Also keeping
+    all your passwords in a file is a lack of custody because the evil intent can
+    copy without your knowledge the above file in a USB and search for what it needs
+    in a second momentum and calmly.
+
+
+    The best solution to store passwords is to use a password manager tool such as
+    `Key F-Secure Key`. It is based on encrypting the master password by subjecting
+    it to a complex mathematical function and adding an authentication code based
+    on 256-bit hashes, by entering causal data.
+
+
+    ### Other tools
+
+
+    #### Google Smart Lock
+
+
+    This tool allows you to save passwords to the cloud and synchronize them on various
+    devices. In this way, it allows you to use your passwords whenever you access
+    the Internet via Google Chrome or from your Android device. To activate Smart
+    Lock, scroll to the right and go to "Security" to activate "vases" on "settings",
+    then on Google and Google accounts. Scroll to "how to access other sites" and
+    click on "saved passwords". Here you can decide whether to enable or disable "Ask
+    to save passwords". If you want to set this option on your PC, go to your profile
+    and click on "password". Now decide whether to enable or disable the "Ask to save
+    passwords" option.
+
+
+    #### iCloud Keyring
+
+
+    This is an Apple tool. To activate, go to "Settings" and click on your name and
+    press "iCloud". On the next screen click on "keychain" and turn the switch on.
+    If you want to set up the Keychain on your Mac, go to the top left and click on
+    the Apple logo. Select the "System Preferences" option and check the "Keychain"
+    box.
+
+
+    # Chapter 2 How to prevent risks from infected emails
+
+
+    Email control is one of the first actions that each employee takes every morning
+    when they arrive at the office. The worst threats can reach our computer from
+    e-mail. Usually, your email provider eliminates junk mail (spam), such as advertisements
+    and emails that contain malware. However, every now and then some of them manage
+    to get to our computer.
+
+
+    ## Attention to phishing
+
+
+    Phishing is one of the oldest and most effective techniques used by crackers to
+    hack computer systems. Opening an email that contains a virus can cause significant
+    damage to your business. For example, an email with a PDF attachment may arrive;
+    perhaps in the email trap it is indicated to open the attachment for more details.
+    When the attachment is opened, the hard disk is moved and in a few seconds all
+    our documents are encrypted and a screen appears that warns us of the incident
+    and that to get our documents back we have to pay a ransom. In the meantime, the
+    virus reaches the server and infects the entire company network. This type of
+    virus is called Ransomware. This described is the worst-case scenario that can
+    arise. Other emails may contain Trojan viruses of various types such as keyloggers.
+    This virus records everything you type on your computer''s keyboard and transmits
+    it to hackers who then come into possession of accounts and passwords. Not all
+    infected emails contain attachments, but they may contain links that activate
+    the virus at the same time as you click on the link.
+
+
+    ## Warnings to prevention
+
+
+    The first thing to do is to have a good anti-spam system. This is usually offered
+    free of charge by your e-mail provider. In case you want to improve your security,
+    providers offer paid anti-spam systems that have advanced security features. Let
+    us give you some simple tips in case suspicious emails arrive:
+
+
+    *   Do not respond to emails that deceptively seem to come from banks, where you
+    are asked to confirm your credentials. The banks know your data and in case of
+    confirmation, they will invite you to go physically to the bank.
+
+    *   Move the cursor over the sender''s address and you will see that the address
+    changes. It is no longer the address of the known bank or courier.
+
+    *   Passing the cursor over the link contained within the suspicious email will
+    show you that the web address is not what appears in the email.
+
+    *   Be wary of any emails that tell you they are winners or heirs of anything.
+    It sounds absurd, but these types of emails are still being sent so it means that
+    someone is still falling for them.
+
+    '
+  trans: '
+
+
+    # 如何管理您的密码
+
+
+    建议为您使用的每个服务（电子邮件账户、网上银行、信用卡等）使用不同的密码。如果您对所有服务使用单一密码，您将更加脆弱。事实上，您注册的任何普通网站（例如 Badoo）的安全系统，绝对比您银行的安全系统更脆弱。因此，如果您使用相同的密码，破解者更有可能渗透知名在线服务的用户数据库，然后尝试进入更具吸引力的服务。在过去几年中，破解者窃取了
+    LinkedIn、Yahoo、Adobe 数百万用户的访问数据，并在暗网上出售这些凭证。有一些网站允许您检查您的数据是否属于黑客攻击事件中被盗的数据。您可以用来检查密码是否在某次黑客攻击中被盗的网站是
+    `haveinbeenpwned.com`。如果破解者认为通过登录您的账户能赚大钱，他就会投入时间和资源来寻找您的密码。他可以调动“僵尸网络”工作，即受恶意软件控制的计算机网络，生成数千个密码，直到找到正确的那个。这样，最短的密码（8/10
+    个字符）可以在几个月内被破解。
+
+
+    为了使您的计算机系统更安全，您应该更改密码。这样，假设的窃贼将始终面临一扇新的待开启的门。有必要确定密码更改的频率。更改过于稀疏会给破解者留出破解密码的时间。更改密码过于频繁则会让您面临忘记密码的风险。公司通常采用的密码更改周期是每三个月一次。一切取决于要保护的数据。如果是简单的会计数据或类似数据，更改频率可以大于三个月。相反，如果数据对犯罪更具吸引力（商业机密、银行账户访问权限），那么更换周期肯定会小于三个月。请勿在公司使用与个人资料相同的密码。一种非常有效的对策是双因素认证。双因素认证通过两重控制来授予访问权限。接收我们访问请求的服务器可以向我们的手机发送一个代码，该代码需在第二级验证中输入，以确认访问并确认是我们本人在键盘前操作。
+
+
+    ## 如何保管您的密码
+
+
+    通常，公司员工在存储用于访问其终端的密码方面存在完全的疏忽。密码经常被抄写在便利贴上，充其量贴在电脑键盘下。理论上，员工只应在公司办公室活动，但也可能有其他人进入，如信使、维修空调系统故障的技术人员、清洁工等。“社会工程学”常被黑客用来窃取访问公司网络的密码。黑客可以潜入办公室，例如伪装成信使，并使用访问数据。黑客使用的另一种“社会工程学”技术是通过虚假电话或发送虚假电子邮件获取信息。通常，这些技术在大型组织中不会引起特别的怀疑。事实上，在这种情况下，恶意黑客可以冒充前来核对账目的银行职员。未妥善保管的密码不仅可能被恶意外部人员窃取，也可能被想要破坏公司的同事窃取。在这种情况下，如果恶意同事从您的电脑对公司造成破坏，责任在于您，因为您没有尽一切可能防止他人知晓您的访问数据。将所有密码保存在一个文件中也是一种保管不善，因为恶意人员可以在您不知情的情况下将上述文件复制到
+    U 盘中，并在稍后从容地搜索所需内容。
+
+
+    存储密码的最佳解决方案是使用密码管理工具，例如 `Key F-Secure Key`。它基于通过复杂的数学函数加密主密码，并通过输入随机数据添加基于 256
+    位哈希的认证代码。
+
+
+    ### 其他工具
+
+
+    #### Google Smart Lock（Google 智能锁）
+
+
+    此工具允许您将密码保存到云端，并在各种设备上同步。这样，无论您何时通过 Google Chrome 访问互联网或从 Android 设备访问，都可以使用您的密码。要激活
+    Smart Lock，向右滑动并进入“安全性”以在“设置”中激活“密码”，然后进入 Google 和 Google 账户。向下滚动至“访问其他网站的方式”并点击“已保存的密码”。在这里，您可以决定是启用还是停用“询问是否保存密码”。如果您想在电脑上设置此选项，请转到您的个人资料并点击“密码”。现在决定是启用还是停用“询问是否保存密码”选项。
+
+
+    #### iCloud Keyring（iCloud 钥匙串）
+
+
+    这是一个 Apple 工具。要激活，请前往“设置”，点击您的姓名并按“iCloud”。在下一个屏幕上点击“钥匙串”并打开开关。如果您想在 Mac 上设置钥匙串，请前往左上角并点击
+    Apple 标志。选择“系统偏好设置”选项并勾选“钥匙串”复选框。
+
+
+    # 第 2 章 如何防范受感染邮件的风险
+
+
+    邮件控制是每位员工每天早上到办公室时采取的首批行动之一。最严重的威胁可能通过电子邮件到达我们的计算机。通常，您的电子邮件提供商会清除垃圾邮件，如广告和包含恶意软件的邮件。然而，偶尔会有一些漏网之鱼到达我们的计算机。
+
+
+    ## 警惕网络钓鱼
+
+
+    网络钓鱼是破解者用来攻击计算机系统最古老、最有效的技术之一。打开一封包含病毒的电子邮件可能会给您的业务造成重大损害。例如，可能会收到一封带有 PDF 附件的电子邮件；邮件正文可能提示打开附件以获取更多详情。打开附件后，硬盘开始运转，几秒钟内我们所有的文档都被加密，并出现一个屏幕警告我们发生了事故，并要求支付赎金才能取回文档。与此同时，病毒到达服务器并感染整个公司网络。这种类型的病毒称为勒索软件。上述描述是可能出现的最坏情况。其他邮件可能包含各种类型的特洛伊木马病毒，如键盘记录器。这种病毒会记录您在计算机键盘上输入的所有内容，并将其传输给黑客，黑客随即掌握账户和密码。并非所有受感染的邮件都包含附件，但它们可能包含链接，点击链接的同时即会激活病毒。
+
+
+    ## 预防警示
+
+
+    首先要做的是拥有一个良好的反垃圾邮件系统。这通常由您的电子邮件提供商免费提供。如果您想提高安全性，提供商会提供具有高级安全功能的付费反垃圾邮件系统。以下是一些简单的建议，以防可疑邮件到达：
+
+
+    *   请勿回复那些欺骗性地看似来自银行的邮件，其中要求您确认凭证。银行知道您的数据，如需确认，他们会邀请您亲自前往银行。
+
+    *   将光标移至发件人地址上方，您将看到地址发生变化。它不再是已知银行或快递公司的地址。
+
+    *   将光标悬停在可疑邮件内包含的链接上，将向您显示该网址并非邮件中显示的地址。
+
+    *   对任何声称您中奖或继承遗产的邮件保持警惕。这听起来荒谬，但这类邮件仍在发送，说明仍有人上当受骗。
+
+
+    '
+  toc: []
+- raw: "Protective tools In most cases, it is sufficient to leave the protections\
+    \ offered by the operating system active: the antivirus \"Windows Defender\" on\
+    \ Microsoft operating systems, the protection system \"Gatekeeper\" on Macs and\
+    \ \"Google Play Protect\" on Android. A good email protection system is the one\
+    \ offered by F-Secure, \"E-mail and Server Security\", which protects your company's\
+    \ servers, email and cloud systems. This tool is based on behavior analysis and\
+    \ the use of whitelists and blacklists. Installing an anti-virus can guarantee\
+    \ the security of your emails. You can also add anti-malware for a higher level\
+    \ of security. These programs can be run on an occasional basis to detect any\
+    \ running threats that are well hidden and/or invisible to the antivirus. One\
+    \ of the most powerful and effective malware around is Malwarebyte. You can find\
+    \ it free on the Internet. Chapter 3 Avoid downloading Software or Apps from unreliable\
+    \ sources Downloading and installing pirated software is prohibited by law, but\
+    \ this is not a good deterrent given the huge amount of software that is downloaded.\
+    \ Initially, such software was contained in the P2P circuits (the famous Torrent\
+    \ and eMule). Today we also find them in file sharing circuits (heirs of Rapidshare).\
+    \ Generally, the virus is hidden in the program that generates the fake serial\
+    \ number to activate the main program. When the \"keygen\" is started, it asks\
+    \ permission to make changes to the system. At this point, it can do whatever\
+    \ it wants. It can install a Keylogger and at worst a Ransomware. Even the installation\
+    \ of legal software does not protect you from the risks. Not all Apps downloaded\
+    \ from Play store are what they seem. In particular, clones of famous apps and\
+    \ games are often traps. These clones are often available on the platform even\
+    \ before the official App came out. The most vulnerable devices are mobile ones\
+    \ like smartphones and tablets. In particular, those that use Android because\
+    \ the controls of the official store are not very thorough and often Google removes\
+    \ only afterwards the infected Apps. You can check the reliability of programs\
+    \ that are downloaded from the store with some online services such as VirusTotal,\
+    \ the online antivirus that uses 68 different antivirus engines to check any type\
+    \ of file (or Internet address). All this is completely free and without any registration.\
+    \ WOT is an online service that allows you to analyze the reliability of websites\
+    \ through the opinions and reviews of users. In the case of a corporate network,\
+    \ the ideal solution is the implementation of precise corporate policies regarding\
+    \ the software on the various devices. In addition, it is advisable that user\
+    \ accounts are not \"administrator\" type. Position riserve for IT staff. We always\
+    \ recommend the presence of an anti-virus such as \"Client Security\" and \"Protection\
+    \ service for Business\", able to scan files and provide greater security, blocking\
+    \ software that tries to perform dangerous operations. \n\nChapter 4 Making updates\
+    \ Programming a software or an App is such a broad process that it is almost impossible\
+    \ to predict all possible defects. All software or operating systems when they\
+    \ are programmed contain critical points, i.e. defects, which can be exploited\
+    \ by crackers to fit into other people's computers or computer networks and install\
+    \ malicious programs without the user noticing anything. In the computer world,\
+    \ there is a continuous war that sees on the one hand crackers trying to discover\
+    \ the critical points in software, operated systems and Apps, to exploit them\
+    \ to their advantage, usually illegal. On the other hand, there are hackers who\
+    \ test programs to improve them, detect defects and communicate them to manufacturers\
+    \ so that they can update software by eliminating critical points. When a cracker\
+    \ discovers a \"critical point\", which in jargon is called \"zero day\", he tries\
+    \ to prepare an \"exploit\". The exploit allows you to enter the PC, becoming\
+    \ its administrator. Once inside the PC, the cracker can read the data, modify\
+    \ or delete the files, steal credentials or install a keylogger. After the first\
+    \ infections have spread, the software manufacturer intervenes by eliminating\
+    \ the critical points and updating the program. Subsequently, the update alert\
+    \ is sent to all users. Here is the importance of performing updates. Types of\
+    \ updates In general, there are two types of updates. Major update : These updates\
+    \ are used to improve performance and introduce new features. Before making such\
+    \ updates, you will need to check your computer for compatibility. In other words,\
+    \ features that are more powerful may be required. For example, if the operating\
+    \ system is affected by such updates, a more powerful memory or processor may\
+    \ be required. In this case, if this involves a company network, you will first\
+    \ need to analyze the devices and then update them if necessary. In fact, if the\
+    \ devices are not adequate, the update could cause a malfunction of the network.\
+    \ Minor update : these updates are used to fix errors, bugs or vulnerabilities.\
+    \ These updates are issued without notice and must be installed immediately. In\
+    \ Apps, automatic availability notifications are usually activated for these types\
+    \ of updates. In the case of version updates, one unit increases the serial number\
+    \ of the software. Example, Windows 7 to Windows 8. In the case of limited changes\
+    \ or improvements from the previous version, the first decimal place of the serial\
+    \ number is increased. Example, Windows 8 to Windows 8.1. If the update concerns\
+    \ security, then the second decimal place is increased. Example, Windows 8.1.2.\
+    \ If the security management concerns a computer network, we recommend using a\
+    \ centralized management system such as \"Software Updater\" included in \"Protection\
+    \ Service for Business\" and \"Premium Business Suite\" of F-Secure. Smartphone\
+    \ Upgrading your smartphone means protecting yourself from all possible dangers.\
+    \ Not only Google, but also smartphone manufacturers are constantly updating their\
+    \ devices. Moreover, the reason is always the same: Updates correct leaks and\
+    \ protect against new threats. There is no reason to refuse to download updates.\
+    \ If you think that the applications in the official markets are completely safe,\
+    \ you are wrong. Apps can contain infected links and because of our superficiality,\
+    \ we download apps and open links even if they come from unknown sources. "
+  fmt: '
+
+    # Protective tools
+
+
+    In most cases, it is sufficient to leave the protections offered by the operating
+    system active: the antivirus "Windows Defender" on Microsoft operating systems,
+    the protection system "Gatekeeper" on Macs and "Google Play Protect" on Android.
+    A good email protection system is the one offered by F-Secure, "E-mail and Server
+    Security", which protects your company''s servers, email and cloud systems. This
+    tool is based on behavior analysis and the use of whitelists and blacklists. Installing
+    an anti-virus can guarantee the security of your emails. You can also add anti-malware
+    for a higher level of security. These programs can be run on an occasional basis
+    to detect any running threats that are well hidden and/or invisible to the antivirus.
+    One of the most powerful and effective malware around is Malwarebyte. You can
+    find it free on the Internet.
+
+
+    # Chapter 3: Avoid downloading Software or Apps from unreliable sources
+
+
+    Downloading and installing pirated software is prohibited by law, but this is
+    not a good deterrent given the huge amount of software that is downloaded. Initially,
+    such software was contained in the P2P circuits (the famous Torrent and eMule).
+    Today we also find them in file sharing circuits (heirs of Rapidshare). Generally,
+    the virus is hidden in the program that generates the fake serial number to activate
+    the main program. When the "keygen" is started, it asks permission to make changes
+    to the system. At this point, it can do whatever it wants. It can install a Keylogger
+    and at worst a Ransomware. Even the installation of legal software does not protect
+    you from the risks. Not all Apps downloaded from Play store are what they seem.
+    In particular, clones of famous apps and games are often traps. These clones are
+    often available on the platform even before the official App came out. The most
+    vulnerable devices are mobile ones like smartphones and tablets. In particular,
+    those that use Android because the controls of the official store are not very
+    thorough and often Google removes only afterwards the infected Apps. You can check
+    the reliability of programs that are downloaded from the store with some online
+    services such as VirusTotal, the online antivirus that uses 68 different antivirus
+    engines to check any type of file (or Internet address). All this is completely
+    free and without any registration. WOT is an online service that allows you to
+    analyze the reliability of websites through the opinions and reviews of users.
+    In the case of a corporate network, the ideal solution is the implementation of
+    precise corporate policies regarding the software on the various devices. In addition,
+    it is advisable that user accounts are not "administrator" type. Position riserve
+    for IT staff. We always recommend the presence of an anti-virus such as "Client
+    Security" and "Protection service for Business", able to scan files and provide
+    greater security, blocking software that tries to perform dangerous operations.
+
+
+    # Chapter 4: Making updates
+
+
+    Programming a software or an App is such a broad process that it is almost impossible
+    to predict all possible defects. All software or operating systems when they are
+    programmed contain critical points, i.e. defects, which can be exploited by crackers
+    to fit into other people''s computers or computer networks and install malicious
+    programs without the user noticing anything. In the computer world, there is a
+    continuous war that sees on one hand crackers trying to discover the critical
+    points in software, operated systems and Apps, to exploit them to their advantage,
+    usually illegal. On the other hand, there are hackers who test programs to improve
+    them, detect defects and communicate them to manufacturers so that they can update
+    software by eliminating critical points. When a cracker discovers a "critical
+    point", which in jargon is called "zero day", he tries to prepare an "exploit".
+    The exploit allows you to enter the PC, becoming its administrator. Once inside
+    the PC, the cracker can read the data, modify or delete the files, steal credentials
+    or install a keylogger. After the first infections have spread, the software manufacturer
+    intervenes by eliminating the critical points and updating the program. Subsequently,
+    the update alert is sent to all users. Here is the importance of performing updates.
+
+
+    ## Types of updates
+
+
+    In general, there are two types of updates.
+
+
+    ### Major update
+
+
+    These updates are used to improve performance and introduce new features. Before
+    making such updates, you will need to check your computer for compatibility. In
+    other words, features that are more powerful may be required. For example, if
+    the operating system is affected by such updates, a more powerful memory or processor
+    may be required. In this case, if this involves a company network, you will first
+    need to analyze the devices and then update them if necessary. In fact, if the
+    devices are not adequate, the update could cause a malfunction of the network.
+
+
+    ### Minor update
+
+
+    These updates are used to fix errors, bugs or vulnerabilities. These updates are
+    issued without notice and must be installed immediately. In Apps, automatic availability
+    notifications are usually activated for these types of updates. In the case of
+    version updates, one unit increases the serial number of the software. Example,
+    Windows 7 to Windows 8. In the case of limited changes or improvements from the
+    previous version, the first decimal place of the serial number is increased. Example,
+    Windows 8 to Windows 8.1. If the update concerns security, then the second decimal
+    place is increased. Example, Windows 8.1.2. If the security management concerns
+    a computer network, we recommend using a centralized management system such as
+    "Software Updater" included in "Protection Service for Business" and "Premium
+    Business Suite" of F-Secure.
+
+
+    ## Smartphone
+
+
+    Upgrading your smartphone means protecting yourself from all possible dangers.
+    Not only Google, but also smartphone manufacturers are constantly updating their
+    devices. Moreover, the reason is always the same: Updates correct leaks and protect
+    against new threats. There is no reason to refuse to download updates. If you
+    think that the applications in the official markets are completely safe, you are
+    wrong. Apps can contain infected links and because of our superficiality, we download
+    apps and open links even if they come from unknown sources.
+
+    '
+  trans: '
+
+    # 保护工具
+
+
+    在大多数情况下，保持操作系统提供的保护处于激活状态即可：Microsoft 操作系统上的“Windows Defender”杀毒软件、Mac 上的“Gatekeeper”保护系统以及
+    Android 上的“Google Play Protect”。一个优秀的电子邮件保护系统是 F-Secure 提供的“E-mail and Server
+    Security”，它能保护您公司的服务器、电子邮件和云系统。该工具基于行为分析以及白名单和黑名单的使用。安装杀毒软件可以保障您电子邮件的安全。您还可以添加反恶意软件以获得更高级别的安全性。这些程序可以定期运行，以检测任何隐藏良好和/或对杀毒软件不可见的运行中威胁。最强大有效的反恶意软件之一是
+    Malwarebytes。您可以在互联网上免费找到它。
+
+
+    # 第 3 章：避免从不可靠来源下载软件或应用
+
+
+    下载和安装盗版软件是法律禁止的，但考虑到海量的软件下载量，这并不是一个有效的威慑。最初，此类软件包含在 P2P 网络中（著名的 Torrent 和 eMule）。如今，我们也能在文件共享网络中找到它们（Rapidshare
+    的继任者）。通常，病毒隐藏在用于生成假序列号以激活主程序的程序中。当启动“Keygen”（注册机）时，它会请求更改系统的权限。此时，它可以为所欲为。它可以安装键盘记录器，甚至最坏的情况下安装勒索软件。即使安装合法软件也无法保护您免受风险。并非所有从
+    Play Store 下载的应用都是看起来那样。特别是著名应用和游戏的克隆版本往往是陷阱。这些克隆版本往往在官方 App 发布之前就已在平台上架。最脆弱的设备是智能手机和平板电脑等移动设备。特别是使用
+    Android 的设备，因为官方商店的审核不够严格，Google 往往只能在事后移除受感染的应用。您可以使用一些在线服务（如 VirusTotal）检查从商店下载的程序的可靠性，VirusTotal
+    是一款在线杀毒软件，使用 68 种不同的杀毒引擎来检查任何类型的文件（或互联网地址）。所有这些完全免费，且无需任何注册。WOT 是一项在线服务，允许您通过用户的意见和评价来分析网站的可靠性。对于企业网络，理想的解决方案是实施关于各设备软件的精确企业策略。此外，建议用户账户不应为“管理员”类型。管理员权限保留给
+    IT 人员。我们始终建议部署“Client Security”和“Protection service for Business”等杀毒软件，它们能够扫描文件并提供更高的安全性，阻止试图执行危险操作的软件。
+
+
+    # 第 4 章：进行更新
+
+
+    编写软件或 App 是一个如此庞大的过程，以至于几乎不可能预测所有可能的缺陷。所有软件或操作系统在编程时都包含关键点，即缺陷，黑客可利用这些缺陷潜入他人的计算机或计算机网络，并在用户毫不知情的情况下安装恶意程序。在计算机世界中，存在着一场持续的战争：一方是试图发现软件、操作系统和
+    App 中关键点并加以利用（通常用于非法目的）的黑客；另一方是测试程序以改进它们、检测缺陷并将其报告给制造商，以便制造商通过消除关键点来更新软件的白帽黑客。当黑客发现一个“关键点”，在行话中称为“零日漏洞”时，他会尝试准备一个“漏洞利用代码”。漏洞利用代码允许您进入
+    PC，成为其管理员。一旦进入 PC，黑客可以读取数据、修改或删除文件、窃取凭证或安装键盘记录器。在首批感染扩散后，软件制造商会通过消除关键点并更新程序来进行干预。随后，更新提醒会发送给所有用户。这就是执行更新的重要性。
+
+
+    ## 更新类型
+
+
+    一般来说，有两类更新。
+
+
+    ### 主要更新
+
+
+    这些更新用于提高性能并引入新功能。在进行此类更新之前，您需要检查计算机的兼容性。换句话说，可能需要更强大的功能。例如，如果操作系统受到此类更新的影响，可能需要更强大的内存或处理器。在这种情况下，如果涉及公司网络，您首先需要分析设备，然后在必要时进行更新。事实上，如果设备不达标，更新可能导致网络故障。
+
+
+    ### 次要更新
+
+
+    这些更新用于修复错误、漏洞或安全漏洞。这些更新无预警发布，必须立即安装。在 App 中，通常会为这些类型的更新激活自动可用性通知。在版本更新的情况下，软件序列号的个位数增加。例如，Windows
+    7 升级到 Windows 8。在从前一个版本进行有限更改或改进的情况下，软件序列号的第一位小数增加。例如，Windows 8 升级到 Windows 8.1。如果更新涉及安全性，则第二位小数增加。例如，Windows
+    8.1.2。如果安全管理涉及计算机网络，我们建议使用集中管理系统，例如包含在 F-Secure 的“Protection Service for Business”和“Premium
+    Business Suite”中的“Software Updater”。
+
+
+    ## 智能手机
+
+
+    升级智能手机意味着保护自己免受所有可能的危险。不仅是 Google，智能手机制造商也在不断更新其设备。此外，原因始终相同：更新修复漏洞并防范新威胁。没有理由拒绝下载更新。如果您认为官方市场上的应用完全安全，那您就错了。App
+    可能包含受感染的链接，由于我们的粗心大意，我们甚至会下载来自未知来源的应用并打开链接。
+
+    '
+  toc: []
+- raw: "Chapter 5 Safely surfing on Internet Surfing the Internet increases the likelihood\
+    \ of being affected by malware simply by visiting a website. The most dangerous\
+    \ sites are not those that everyone can think of, such as online gaming sites\
+    \ or porn sites. In fact, these sites are very vigilant in ensuring the safety\
+    \ of their users from possible threats such as malware. Malware is more likely\
+    \ to be contracted on airline, newspaper, food or insurance sites. These sites\
+    \ are more attractive to crackers because they generate high traffic. Typically,\
+    \ the cracker attacks the vulnerabilities of browsers or their plug-ins with Javascript\
+    \ to download and install their malware. Another method used by crackers is to\
+    \ download an infected file by passing it through a video codec, without which\
+    \ it is not possible to see a certain movie. In some cases, malware can be contained\
+    \ within advertising banners. Finally, crackers can create real web sites traps,\
+    \ by conveying the bad guys with messages on Facebook inviting them to visit these\
+    \ web sites, but using an abbreviated address that does not allow you to understand\
+    \ where you are going. Once the cracker can get the malware installed, he is free\
+    \ to do what he wants. To defend yourself from possible attacks on the web you\
+    \ need to keep your browser and plug-ins up to date. Better still if the plug-ins\
+    \ are activated only on demand. To block the execution of Javascript programs\
+    \ and advertising banners, it is advisable to install a \"scriptblocker\" in the\
+    \ first case, and an \"adblocker\" in the second case. We can compile a \"whitelist\"\
+    \ and insert all the sites we trust. A good antivirus combined with a good anti-malware\
+    \ guarantee the protection of incoming files and the control of internet traffic\
+    \ to block access to dangerous sites. Client Security can control and block access\
+    \ to websites and protect against executable files. Free Wi-Fi networks The hunting\
+    \ grounds preferred by crackers are free Wi-Fi networks, i.e. not for a fee. Free\
+    \ Wi-Fi networks are easy to access and there is no risk of being identified.\
+    \ In fact, in these networks, the cracker can perform a MitM attack \"Man in the\
+    \ middle\".  It consists of letting the bad person think that he is connected\
+    \ to the Wi-Fi, while in reality its data flow passes through the cracker's computer.\
+    \ In turn, the cracker, after checking and recording this data, passes it on to\
+    \ the hotspot, making the person who happened to be connected directly to the\
+    \ Wi-Fi network believe he is. The worst case is when the hotspot is under the\
+    \ control of the cracker or even was created by it to attack all those who will\
+    \ connect. In this case, the cracker has control of the router. A trap of this\
+    \ kind is called a \"honeypot\". There are also hardware devices capable of intercepting\
+    \ devices that try to connect to the free Wi-Fi network, and that respond to the\
+    \ connection attempt by pretending to be the desired network. Finally, it is possible\
+    \ that they will connect to the network computers already infected with malware\
+    \ and will try to transmit the virus to all other connected terminals. How to\
+    \ protect oneself As a first step, it is advisable to avoid, while connected to\
+    \ a public Wi-Fi network, operations of transfer of sensitive data or information\
+    \ access to various services. The use of a VPN system can be a good tool to ensure\
+    \ security when connecting via public networks. The VPN encrypts the data exchanged\
+    \ during the connection, making it unusable by crackers. In addition, the VPN\
+    \ should also be used for Https connections because these can be easily intercepted\
+    \ and decoded. Other preventive actions to be taken are: \n\n*   Disabling file\
+    \ sharing \n\n*   Disable the automatic connection to free Wi-Fi networks, which\
+    \ is usually set as active on the various terminals. \n\nAll these prevention\
+    \ measures are necessary because there is no way of knowing whether a public Wi-Fi\
+    \ network is secure or not. Use a firewall to monitor activity A firewall is a\
+    \ protection system, software or hardware, that prevents unauthorized access by\
+    \ protecting two different networks. The operating systems, Windows and macOS\
+    \ have integrated a firewall that is active by default (and that can be deactivated\
+    \ if necessary). But it is also possible to download third-party firewalls such\
+    \ as the so-called Windows Firewall Control (for Windows) and Little Snitch (for\
+    \ macOS), which extend the functionality of the default firewall on your computer\
+    \ and allow you to monitor network activities even more easily. \n\nChapter 6\
+    \ How to protect oneself from external devices External components, such as USB\
+    \ sticks and CDs, are susceptible to infection. Years ago, Microsoft inserted\
+    \ a file called \"Autorun.inf\" to simplify the installation of software by non-experts.\
+    \ Therefore, when you insert a component external to your computer, Windows checks\
+    \ if it contains the \"Autorun.inf\" file and runs it. Therefore, the cracker\
+    \ who wants to enter a computer can put the infected file in autorun and hide\
+    \ it on a USB stick. As soon as the USB stick is inserted into the computer, it\
+    \ starts the file in autorun and infects the computer. Tablets and smartphones\
+    \ can also be infected through USB ports. When you charge your smartphone by connecting\
+    \ it to a USB port, for example in airports, hotels or public places, a virus\
+    \ may infect you. In theory, these USB ports should be connected to simple power\
+    \ transformers. There have been reports that behind these simple USB power ports\
+    \ were real controllers that could connect to the device and steal data from it.\
+    \ Such an operation requires well-organized groups of crackers. To prevent a possible\
+    \ USB infection, it is advisable to disable autorun on your computer by changing\
+    \ the settings on the \"registry\". If you are not able to handle the \"registry\"\
+    , you should consult an expert. F-Secure's \"security for mobile\" software is\
+    \ designed to prevent infections from USB sticks. To prevent such infections on\
+    \ smartphones, we recommend using a \"USB condom\". That is, a USB extension cable\
+    \ in which the cables for the data connection have been removed, leaving only\
+    \ those for power supply. In this way, there is no possibility of starting a data\
+    \ connection. In case of theft or loss of the hardware device To protect yourself\
+    \ against the physical theft of the computer used to access our sensitive data,\
+    \ it is advisable to enter robust passwords to access the system. However, this\
+    \ does not completely protect us from the theft of our sensitive data on your\
+    \ computer. Because the intentional evil can detach the hard disk from the computer\
+    \ and install it on another computer. This way you will have the possibility to\
+    \ access the data. It is advisable to use full disk encryption. This way, even\
+    \ if you install the hard disk on another computer, the data will be unreadable\
+    \ without the access key. The side effect would be not to recover your data if\
+    \ your computer fails. That is why it is always advisable to back up your data.\
+    \ To increase security, you can enter specific software that will erase all data\
+    \ in the event of theft or loss. To protect your smartphone from theft or loss,\
+    \ software has been installed to email you the location of your device and a photo\
+    \ of who is using it. In addition, on both Apple and Android, applications have\
+    \ been introduced such as \"find my smartphone,\" that allows you to locate where\
+    \ it is. "
+  fmt: '
+
+    # Chapter 5 Safely surfing on Internet
+
+
+    Surfing the Internet increases the likelihood of being affected by malware simply
+    by visiting a website. The most dangerous sites are not those that everyone can
+    think of, such as online gaming sites or porn sites. In fact, these sites are
+    very vigilant in ensuring the safety of their users from possible threats such
+    as malware. Malware is more likely to be contracted on airline, newspaper, food
+    or insurance sites. These sites are more attractive to crackers because they generate
+    high traffic. Typically, the cracker attacks the vulnerabilities of browsers or
+    their plug-ins with Javascript to download and install their malware. Another
+    method used by crackers is to download an infected file by passing it through
+    a video codec, without which it is not possible to see a certain movie. In some
+    cases, malware can be contained within advertising banners. Finally, crackers
+    can create real web sites traps, by conveying the bad guys with messages on Facebook
+    inviting them to visit these web sites, but using an abbreviated address that
+    does not allow you to understand where you are going. Once the cracker can get
+    the malware installed, he is free to do what he wants.
+
+
+    To defend yourself from possible attacks on the web you need to keep your browser
+    and plug-ins up to date. Better still if the plug-ins are activated only on demand.
+    To block the execution of Javascript programs and advertising banners, it is advisable
+    to install a "scriptblocker" in the first case, and an "adblocker" in the second
+    case. We can compile a "whitelist" and insert all the sites we trust. A good antivirus
+    combined with a good anti-malware guarantee the protection of incoming files and
+    the control of internet traffic to block access to dangerous sites. Client Security
+    can control and block access to websites and protect against executable files.
+
+
+    ## Free Wi-Fi networks
+
+
+    The hunting grounds preferred by crackers are free Wi-Fi networks, i.e. not for
+    a fee. Free Wi-Fi networks are easy to access and there is no risk of being identified.
+    In fact, in these networks, the cracker can perform a MitM attack "Man in the
+    middle". It consists of letting the bad person think that he is connected to the
+    Wi-Fi, while in reality its data flow passes through the cracker''s computer.
+    In turn, the cracker, after checking and recording this data, passes it on to
+    the hotspot, making the person who happened to be connected directly to the Wi-Fi
+    network believe he is. The worst case is when the hotspot is under the control
+    of the cracker or even was created by it to attack all those who will connect.
+    In this case, the cracker has control of the router. A trap of this kind is called
+    a "honeypot". There are also hardware devices capable of intercepting devices
+    that try to connect to the free Wi-Fi network, and that respond to the connection
+    attempt by pretending to be the desired network. Finally, it is possible that
+    they will connect to the network computers already infected with malware and will
+    try to transmit the virus to all other connected terminals.
+
+
+    ### How to protect oneself
+
+
+    As a first step, it is advisable to avoid, while connected to a public Wi-Fi network,
+    operations of transfer of sensitive data or information access to various services.
+    The use of a VPN system can be a good tool to ensure security when connecting
+    via public networks. The VPN encrypts the data exchanged during the connection,
+    making it unusable by crackers. In addition, the VPN should also be used for Https
+    connections because these can be easily intercepted and decoded. Other preventive
+    actions to be taken are:
+
+
+    *   Disabling file sharing
+
+    *   Disable the automatic connection to free Wi-Fi networks, which is usually
+    set as active on the various terminals.
+
+
+    All these prevention measures are necessary because there is no way of knowing
+    whether a public Wi-Fi network is secure or not.
+
+
+    ## Use a firewall to monitor activity
+
+
+    A firewall is a protection system, software or hardware, that prevents unauthorized
+    access by protecting two different networks. The operating systems, Windows and
+    macOS have integrated a firewall that is active by default (and that can be deactivated
+    if necessary). But it is also possible to download third-party firewalls such
+    as the so-called `Windows Firewall Control` (for Windows) and `Little Snitch`
+    (for macOS), which extend the functionality of the default firewall on your computer
+    and allow you to monitor network activities even more easily.
+
+
+    # Chapter 6 How to protect oneself from external devices
+
+
+    External components, such as USB sticks and CDs, are susceptible to infection.
+    Years ago, Microsoft inserted a file called `Autorun.inf` to simplify the installation
+    of software by non-experts. Therefore, when you insert a component external to
+    your computer, Windows checks if it contains the `Autorun.inf` file and runs it.
+    Therefore, the cracker who wants to enter a computer can put the infected file
+    in autorun and hide it on a USB stick. As soon as the USB stick is inserted into
+    the computer, it starts the file in autorun and infects the computer. Tablets
+    and smartphones can also be infected through USB ports. When you charge your smartphone
+    by connecting it to a USB port, for example in airports, hotels or public places,
+    a virus may infect you. In theory, these USB ports should be connected to simple
+    power transformers. There have been reports that behind these simple USB power
+    ports were real controllers that could connect to the device and steal data from
+    it. Such an operation requires well-organized groups of crackers.
+
+
+    To prevent a possible USB infection, it is advisable to disable autorun on your
+    computer by changing the settings on the "registry". If you are not able to handle
+    the "registry", you should consult an expert. F-Secure''s "security for mobile"
+    software is designed to prevent infections from USB sticks. To prevent such infections
+    on smartphones, we recommend using a "USB condom". That is, a USB extension cable
+    in which the cables for the data connection have been removed, leaving only those
+    for power supply. In this way, there is no possibility of starting a data connection.
+
+
+    ## In case of theft or loss of the hardware device
+
+
+    To protect yourself against the physical theft of the computer used to access
+    our sensitive data, it is advisable to enter robust passwords to access the system.
+    However, this does not completely protect us from the theft of our sensitive data
+    on your computer. Because the intentional evil can detach the hard disk from the
+    computer and install it on another computer. This way you will have the possibility
+    to access the data. It is advisable to use full disk encryption. This way, even
+    if you install the hard disk on another computer, the data will be unreadable
+    without the access key. The side effect would be not to recover your data if your
+    computer fails. That is why it is always advisable to back up your data. To increase
+    security, you can enter specific software that will erase all data in the event
+    of theft or loss. To protect your smartphone from theft or loss, software has
+    been installed to email you the location of your device and a photo of who is
+    using it. In addition, on both Apple and Android, applications have been introduced
+    such as "find my smartphone," that allows you to locate where it is.
+
+    '
+  trans: '
+
+    # 第 5 章 在互联网上安全冲浪
+
+
+    在互联网上冲浪会增加受恶意软件影响的可能性，仅仅是访问一个网站就可能中招。最危险的网站并非人们通常能想到的那些，比如在线游戏网站或色情网站。事实上，这些网站非常警惕，会确保其用户免受恶意软件等潜在威胁的侵害。恶意软件更有可能在航空公司、报纸、食品或保险网站上感染。这些网站因产生高流量而更吸引破解者。通常，破解者利用
+    Javascript 攻击浏览器或其插件的漏洞，以下载并安装其恶意软件。破解者使用的另一种方法是通过视频编解码器下载受感染的文件，没有它就无法观看某部电影。在某些情况下，恶意软件可能包含在广告横幅中。最后，破解者可以创建真正的网站陷阱，通过
+    Facebook 上的消息引诱坏人访问这些网站，但使用缩短的地址，让你无法了解将要去往何处。一旦破解者成功安装恶意软件，他就可以为所欲为。
+
+
+    为了防御网络上的潜在攻击，你需要保持浏览器和插件为最新版本。如果插件仅按需激活，效果会更好。为了阻止 Javascript 程序和广告横幅的执行，建议在前一种情况下安装“脚本拦截器”，在后一种情况下安装“广告拦截器”。我们可以编制一个“白名单”，并将所有我们信任的网站加入其中。优秀的杀毒软件结合优秀的反恶意软件，可保证对传入文件的保护和对互联网流量的控制，以阻止访问危险网站。客户端安全软件可以控制并阻止对网站的访问，并防范可执行文件。
+
+
+    ## 免费 Wi-Fi 网络
+
+
+    破解者青睐的狩猎场是免费 Wi-Fi 网络，即无需付费的网络。免费 Wi-Fi 网络易于接入，且不存在被识别的风险。事实上，在这些网络中，破解者可以实施中间人攻击。这包括让受害者以为自己已连接到
+    Wi-Fi，而实际上其数据流经过了破解者的计算机。反过来，破解者在检查并记录这些数据后，将其传递给热点，使偶然连接的人误以为自己直接连接到了 Wi-Fi 网络。最坏的情况是热点处于破解者的控制之下，甚至是由其创建以攻击所有连接者。在这种情况下，破解者控制着路由器。这种陷阱被称为“蜜罐”。也存在能够拦截尝试连接免费
+    Wi-Fi 网络设备的硬件设备，它们通过伪装成目标网络来响应连接尝试。最后，也有可能已感染恶意软件的计算机连接到网络，并试图将病毒传播给所有其他连接的终端。
+
+
+    ### 如何保护自己
+
+
+    首先，建议在连接公共 Wi-Fi 网络时，避免进行敏感数据传输或访问各类服务的操作。使用 VPN 系统是在通过公共网络连接时确保安全的好工具。VPN 会加密连接期间交换的数据，使其对破解者不可用。此外，VPN
+    也应用于 Https 连接，因为这些连接很容易被拦截和解码。其他应采取的预防措施包括：
+
+
+    *   禁用文件共享
+
+    *   禁用自动连接免费 Wi-Fi 网络，这通常在各种终端上默认开启。
+
+
+    所有这些预防措施都是必要的，因为无法知道公共 Wi-Fi 网络是否安全。
+
+
+    ## 使用防火墙监控活动
+
+
+    防火墙是一种保护系统，可以是软件或硬件，它通过保护两个不同的网络来防止未经授权的访问。操作系统 Windows 和 macOS 都集成了一个默认激活的防火墙（如有必要可将其停用）。但也可以下载第三方防火墙，如所谓的
+    `Windows Firewall Control`（适用于 Windows）和 `Little Snitch`（适用于 macOS），它们扩展了计算机上默认防火墙的功能，并允许你更轻松地监控网络活动。
+
+
+    # 第 6 章 如何防范外部设备威胁
+
+
+    外部组件，如 USB 记忆棒和光盘，易受感染。多年前，微软插入了一个名为 `Autorun.inf` 的文件，以简化非专家安装软件的过程。因此，当你插入外部组件时，Windows
+    会检查它是否包含 `Autorun.inf` 文件并运行它。因此，想要进入计算机的破解者可以将受感染的文件放入自动运行中，并将其隐藏在 USB 记忆棒上。一旦
+    USB 记忆棒插入计算机，它就会启动自动运行中的文件并感染计算机。平板电脑和智能手机也可能通过 USB 端口被感染。当你通过将智能手机连接到 USB 端口进行充电时，例如在机场、酒店或公共场所，病毒可能会感染你的设备。理论上，这些
+    USB 端口应仅连接到简单的电源变压器。据报道，这些简单的 USB 充电端口背后竟是真正的控制器，能够连接设备并窃取其中的数据。此类行动需要组织严密的破解者团伙。
+
+
+    为防止可能的 USB 感染，建议通过更改“注册表”设置来禁用计算机上的自动运行。如果你无法处理“注册表”，应咨询专家。F-Secure 的“mobile security”软件旨在防止来自
+    USB 记忆棒的感染。为防止智能手机遭受此类感染，我们建议使用“USB 保护套”。即一种 USB 延长线，其中的数据连接线已被移除，仅保留电源线。这样就不存在发起数据连接的可能性。
+
+
+    ## 硬件设备被盗或丢失时
+
+
+    为了防止用于访问敏感数据的计算机被物理窃取，建议设置强密码以访问系统。然而，这并不能完全保护我们免受计算机上敏感数据被盗的威胁。因为蓄意作恶者可以将硬盘从计算机上拆下，并安装在另一台计算机上。这样他们就有可能访问数据。建议使用全盘加密。这样，即使将硬盘安装在另一台计算机上，没有访问密钥也无法读取数据。副作用是如果计算机故障，你可能无法恢复数据。这就是为什么始终建议备份数据。为增加安全性，你可以安装特定软件，在发生盗窃或丢失时擦除所有数据。为了保护智能手机免遭盗窃或丢失，已安装软件可将设备位置和使用者照片通过电子邮件发送给你。此外，在
+    Apple 和 Android 设备上，都引入了诸如“查找我的智能手机”之类的应用程序，允许你定位其位置。
+
+    '
+  toc: []
+- raw: 'Chapter 7 How to delete viruses If you suspect that, a virus has infected
+    your computer or phone but do not know how to verify it and possibly how to solve
+    the problem, the actions to be taken are as follows. Eliminate the virus from
+    your smartphone Android System Android devices do not need to have an antivirus,
+    as there are settings that automatically block the installation of unknown applications
+    that could harm the device. To check this, go to "settings", then click on "security"
+    and check if the entry "unknown sources is disabled. If you have an Android 8
+    or later, go to "Settings" then "Apps and Notifications" > "Advanced" > "Special
+    App Access" > "Install Unknown Apps". Make sure that all apps in the list are
+    marked "not allowed". If not, move the stick from left to right. I recommend that
+    you do not root your Android device to get all the permissions. This practice
+    can make your Android device vulnerable and expose it to serious dangers, as it
+    is often used to circumvent the protection systems of some Apps. Google Play Protect
+    is a free system for all Android systems, which regularly scans all the Apps in
+    the Play Store and those installed on your device to verify their security. To
+    verify that this service is active, go to the Play Store and from the menu at
+    the top left, select Play Protector. Make sure that the "Search for security threats"
+    box next to it is active. You can also select the next item, "Enhance malicious
+    app detection", for added security. To identify and resolve the possible problem
+    with your smartphone, Android allows you to enter Safe Mode. There is no standard
+    procedure. Here are two procedures. Procedure 1 : Press and hold the physical
+    power off/lock screen button on your Android device. When the options appear,
+    hold down the "power off" option until the "restart in safe mode" option appears
+    and press “OK”. Procedure 2 : When turning your mobile phone on or off, as soon
+    as the manufacturer''s logo for your device appears, press and hold the Volume
+    Down key (or Home key). “Safe Mode" will appear. When in Safe Mode, check the
+    list of installed Apps and see if there are any that, you think you have not installed.
+    Be careful because some apps you do not know may be useful for your operating
+    system. If you do not have root permissions, it is better because you will not
+    be able to uninstall system Apps. If you have found the malicious app, tap on
+    it and then tap on uninstall. If you cannot remove an App, it probably has permission
+    to administer your device, so you will first have to remove that permission and
+    then uninstall it. To remove this permission, go to Settings > Security > Device
+    Administrators. Once you have found the malicious App, remove the check mark.
+    To exit Safe Mode, restart your phone. If you cannot delete the virus following
+    the procedure described above, it is advisable to do a factory reset . The factory
+    reset allows you to reset your phone to the state it was in when you purchased
+    it. All data and applications installed after purchase will be deleted. Therefore,
+    it is important that you make a backup of your device''s files to avoid losing
+    anything. To start this process, go to Settings > Backup & Restore > Factory Data
+    Recovery. If you have an Android 8 go to Settings > System > Reset Options > Delete
+    all data. iOS System The operating system of Apple devices is safe and the risk
+    of getting into a virus is low. It all depends on how you use your device; jailbreaking
+    and installing Apps from unofficial sources is always not recommended. The jailbreak
+    allows you to circumvent the restrictions imposed by Apple on its iOS operating
+    system. This practice makes the system vulnerable and can cause damage to the
+    device, leading to the installation of malware. Deleting the virus from your computer
+    We assume that the best way to defend ourselves against possible attacks is through
+    prevention. Installing a good anti-virus is definitely the best prevention action.
+    Bitdefender Free is a free anti-virus that defends against all aspects of the
+    system: files opened and downloaded from the Internet, communications on instant
+    messaging services, items downloaded via P2P and much more. After downloading
+    the installation package called "Antivirus\_Free\_Edition.exe", click the Yes
+    button and select the language from the drop-down menu. To get the free version
+    of Bitdefender Free you need to register on MyBitdefender, otherwise the copy
+    of the program will expire after 30 days of trial. To start a full PC scan, right-click
+    on the newly installed program icon and select "full scan". At the end of the
+    procedure, you will be shown a report that indicates all the files scanned, any
+    threats detected and the actions taken. You can also scan individual files by
+    dragging them directly onto the Bitdefender icon. Another good free antivirus
+    is Avira free antivirus. It has the same functions as Bitdefender, but is heavier.
+    Using "self-start" antivirus In some cases, it is not possible to delete the virus
+    from the computer with the use of classic antivirus. It is necessary to intervene
+    in a forced manner. That is, it is necessary to intervene before the computer,
+    during the start-up phase, starts the operating system. This is possible with
+    ad hoc tools, downloaded and installed on a CD or USB stick. The first tool I
+    recommend is Bitdefender Recuse CD . This tool requires an active connection to
+    the Internet, so it can update the list of viruses and detect the latest threats
+    To download the program go to the website and click on "To create a Bitdefender
+    Rescue CD on a CD/DVD you need the ISO image which care be downloaded from here".
+    Then choose whether to burn the antivirus to a CD/DVD or copy it to a USB stick.
+    If you decide to burn it to a CD, then use any burning program. If you decide
+    to copy it to a USB stick, then you can download the free software provided by
+    Bitdefender itself. Click on "Stickifier executable". Select the ISO image of
+    the antivirus and then the stick to copy the files to. To scan your computer,
+    insert the USB stick (or CD). When the antivirus screen appears, click Start the
+    Bitdefender Rescue CD to start Bitdefender Rescue CD. If the screen does not appear,
+    then you will need to make a change to your BIOS. Enter the BIOS and set the CD/DVD
+    drive or USB port as the primary boot drive. In the window with the software license
+    agreement check next to "By checking this box I agree to the license agreement
+    lists above" and click on "Continue". The list of viruses will be updated and
+    to start a scan click first on "Scan now" and then on "Star". Another self-starting
+    antivirus Kaspersky Rescue Disk. Download the program from the website, then click
+    on “Download & Info”, and then on the "Distribute" button. Choose whether to download
+    the antivirus to CD or USB stick. Restart the system and boot from the newly created
+    media. Press any key when the message "Press any key to enter the menu" appears.
+    Kaspersky will start automatically. Press button 1 and select "Kaspersky Rescue
+    Disk Graphic Mode". Click on "My update center" and then "Start" to start updating
+    your antivirus definitions. Before starting a full system scan, you must make
+    sure that you have selected the items "Disk boot sectors", "Hidden startup objects"
+    and "C" on the Object scans tab. Press the "Start objects scan" button to start
+    the scan. There are some types of Malware or Adware that escape antivirus control.
+    Usually, these are less aggressive threats than viruses, but still annoying. For
+    example, those who install toolbars and redirect navigation to sites full of advertising
+    messages. To combat these types of malware, it is advisable to install free software
+    such as "Adwcleaner" and "Malwarebytes". How to manually delete viruses from your
+    computer To manually delete viruses from your computer, you need to have an advanced
+    knowledge of your computer and the operation of your operating system. In fact,
+    you need to identify the infected file and delete it or uninstall the program
+    that contains that file. If this operation is not done in an exact manner, it
+    can compromise the operation of the computer and in the worst case, it will be
+    necessary to start a formatting of the computer with the consequence of losing
+    all the data present in it. On Pc If you are using Windows, the first thing to
+    do is to create a restore point, to be used if the stability of the operating
+    system is compromised. Simultaneously press the Ctrl+Shift+Esc keys and start
+    the "Task Manager". Click on "more details" and then on the "processes" tab. Check
+    the list of running processes and if you notice something that you do not like,
+    note it down and search on Google. If you find that, the running process is a
+    virus, right-click on the suspicious process and select "Open file path". Connect
+    to the VirusTotal website and drag the suspicious file to the website pane. VirusTotal
+    will analyze the suspicious file and if you are infected, you must delete it.
+    To delete the infected file, go to the "Processes" tab, right-click on the name
+    of the infected file, select "End Processes Tree / End Activity Tree" from the
+    menu and confirm by clicking the "Yes" button. If the infected file belongs to
+    a program, go to Control Panel > Programs and Features > Uninstall a program.
+    Select the program and click on "Uninstall". You can also delete the infected
+    file by right-clicking on the file and holding down the "Shift" key select "delete"
+    and press "Yes". This procedure may affect the functioning of the operating system
+    or leave virus residues invisible. Once you have manually deleted the virus, restart
+    your computer and check the programs that start when you start Windows. If you
+    find the program again, you must remove it from the startup list. If you have
+    Windows 10, go to "Task Manager", click on "Start" and locate the file, right
+    click on the file and select "Disable". If you have previous versions of Windows,
+    press Win+R at the same time. A panel will appear where you can type the command
+    "msconfig", press "Enter" and click on the Start tab. One. Once you have identified
+    the infected program, remove the check mark, click on OK and then on Restart to
+    perform an immediate restart of the computer. As a last check to verify that the
+    infected file has been completely deleted, go and check the extensions of the
+    browsers you use. Access the settings of the browser you are using: '
+  fmt: '
+
+    # Chapter 7 How to delete viruses
+
+
+    If you suspect that a virus has infected your computer or phone but do not know
+    how to verify it and possibly how to solve the problem, the actions to be taken
+    are as follows.
+
+
+    ## Eliminate the virus from your smartphone
+
+
+    ### Android System
+
+
+    Android devices do not need to have an antivirus, as there are settings that automatically
+    block the installation of unknown applications that could harm the device. To
+    check this, go to "settings", then click on "security" and check if the entry
+    "unknown sources" is disabled. If you have an Android 8 or later, go to "Settings"
+    then "Apps and Notifications" > "Advanced" > "Special App Access" > "Install Unknown
+    Apps". Make sure that all apps in the list are marked "not allowed". If not, move
+    the stick from left to right.
+
+
+    I recommend that you do not root your Android device to get all the permissions.
+    This practice can make your Android device vulnerable and expose it to serious
+    dangers, as it is often used to circumvent the protection systems of some Apps.
+
+
+    Google Play Protect is a free system for all Android systems, which regularly
+    scans all the Apps in the Play Store and those installed on your device to verify
+    their security. To verify that this service is active, go to the Play Store and
+    from the menu at the top left, select Play Protector. Make sure that the "Search
+    for security threats" box next to it is active. You can also select the next item,
+    "Enhance malicious app detection", for added security.
+
+
+    To identify and resolve the possible problem with your smartphone, Android allows
+    you to enter Safe Mode. There is no standard procedure. Here are two procedures.
+
+
+    **Procedure 1**: Press and hold the physical power off/lock screen button on your
+    Android device. When the options appear, hold down the "power off" option until
+    the "restart in safe mode" option appears and press “OK”.
+
+
+    **Procedure 2**: When turning your mobile phone on or off, as soon as the manufacturer''s
+    logo for your device appears, press and hold the Volume Down key (or Home key).
+    “Safe Mode" will appear.
+
+
+    When in Safe Mode, check the list of installed Apps and see if there are any that
+    you think you have not installed. Be careful because some apps you do not know
+    may be useful for your operating system. If you do not have root permissions,
+    it is better because you will not be able to uninstall system Apps.
+
+
+    If you have found the malicious app, tap on it and then tap on uninstall. If you
+    cannot remove an App, it probably has permission to administer your device, so
+    you will first have to remove that permission and then uninstall it. To remove
+    this permission, go to Settings > Security > Device Administrators. Once you have
+    found the malicious App, remove the check mark.
+
+
+    To exit Safe Mode, restart your phone.
+
+
+    If you cannot delete the virus following the procedure described above, it is
+    advisable to do a factory reset. The factory reset allows you to reset your phone
+    to the state it was in when you purchased it. All data and applications installed
+    after purchase will be deleted. Therefore, it is important that you make a backup
+    of your device''s files to avoid losing anything.
+
+
+    To start this process, go to Settings > Backup & Restore > Factory Data Recovery.
+    If you have an Android 8 go to Settings > System > Reset Options > Delete all
+    data.
+
+
+    ### iOS System
+
+
+    The operating system of Apple devices is safe and the risk of getting into a virus
+    is low. It all depends on how you use your device; jailbreaking and installing
+    Apps from unofficial sources is always not recommended. The jailbreak allows you
+    to circumvent the restrictions imposed by Apple on its iOS operating system. This
+    practice makes the system vulnerable and can cause damage to the device, leading
+    to the installation of malware.
+
+
+    ## Deleting the virus from your computer
+
+
+    We assume that the best way to defend ourselves against possible attacks is through
+    prevention. Installing a good anti-virus is definitely the best prevention action.
+
+
+    Bitdefender Free is a free anti-virus that defends against all aspects of the
+    system: files opened and downloaded from the Internet, communications on instant
+    messaging services, items downloaded via P2P and much more. After downloading
+    the installation package called `Antivirus_Free_Edition.exe`, click the Yes button
+    and select the language from the drop-down menu. To get the free version of Bitdefender
+    Free you need to register on MyBitdefender, otherwise the copy of the program
+    will expire after 30 days of trial.
+
+
+    To start a full PC scan, right-click on the newly installed program icon and select
+    "full scan". At the end of the procedure, you will be shown a report that indicates
+    all the files scanned, any threats detected and the actions taken. You can also
+    scan individual files by dragging them directly onto the Bitdefender icon.
+
+
+    Another good free antivirus is Avira free antivirus. It has the same functions
+    as Bitdefender, but is heavier.
+
+
+    ### Using "self-start" antivirus
+
+
+    In some cases, it is not possible to delete the virus from the computer with the
+    use of classic antivirus. It is necessary to intervene in a forced manner. That
+    is, it is necessary to intervene before the computer, during the start-up phase,
+    starts the operating system. This is possible with ad hoc tools, downloaded and
+    installed on a CD or USB stick.
+
+
+    The first tool I recommend is Bitdefender Rescue CD. This tool requires an active
+    connection to the Internet, so it can update the list of viruses and detect the
+    latest threats.
+
+
+    To download the program go to the website and click on "To create a Bitdefender
+    Rescue CD on a CD/DVD you need the ISO image which care be downloaded from here".
+    Then choose whether to burn the antivirus to a CD/DVD or copy it to a USB stick.
+
+
+    If you decide to burn it to a CD, then use any burning program. If you decide
+    to copy it to a USB stick, then you can download the free software provided by
+    Bitdefender itself. Click on "Stickifier executable". Select the ISO image of
+    the antivirus and then the stick to copy the files to.
+
+
+    To scan your computer, insert the USB stick (or CD). When the antivirus screen
+    appears, click Start the Bitdefender Rescue CD to start Bitdefender Rescue CD.
+    If the screen does not appear, then you will need to make a change to your BIOS.
+    Enter the BIOS and set the CD/DVD drive or USB port as the primary boot drive.
+
+
+    In the window with the software license agreement check next to "By checking this
+    box I agree to the license agreement lists above" and click on "Continue". The
+    list of viruses will be updated and to start a scan click first on "Scan now"
+    and then on "Star".
+
+
+    Another self-starting antivirus is Kaspersky Rescue Disk. Download the program
+    from the website, then click on “Download & Info”, and then on the "Distribute"
+    button. Choose whether to download the antivirus to CD or USB stick.
+
+
+    Restart the system and boot from the newly created media. Press any key when the
+    message "Press any key to enter the menu" appears. Kaspersky will start automatically.
+    Press button 1 and select "Kaspersky Rescue Disk Graphic Mode". Click on "My update
+    center" and then "Start" to start updating your antivirus definitions.
+
+
+    Before starting a full system scan, you must make sure that you have selected
+    the items "Disk boot sectors", "Hidden startup objects" and "C" on the Object
+    scans tab. Press the "Start objects scan" button to start the scan.
+
+
+    There are some types of Malware or Adware that escape antivirus control. Usually,
+    these are less aggressive threats than viruses, but still annoying. For example,
+    those who install toolbars and redirect navigation to sites full of advertising
+    messages. To combat these types of malware, it is advisable to install free software
+    such as "Adwcleaner" and "Malwarebytes".
+
+
+    ## How to manually delete viruses from your computer
+
+
+    To manually delete viruses from your computer, you need to have an advanced knowledge
+    of your computer and the operation of your operating system. In fact, you need
+    to identify the infected file and delete it or uninstall the program that contains
+    that file. If this operation is not done in an exact manner, it can compromise
+    the operation of the computer and in the worst case, it will be necessary to start
+    a formatting of the computer with the consequence of losing all the data present
+    in it.
+
+
+    ### On PC
+
+
+    If you are using Windows, the first thing to do is to create a restore point,
+    to be used if the stability of the operating system is compromised.
+
+
+    Simultaneously press the `Ctrl+Shift+Esc` keys and start the "Task Manager". Click
+    on "more details" and then on the "processes" tab. Check the list of running processes
+    and if you notice something that you do not like, note it down and search on Google.
+
+
+    If you find that the running process is a virus, right-click on the suspicious
+    process and select "Open file path". Connect to the VirusTotal website and drag
+    the suspicious file to the website pane. VirusTotal will analyze the suspicious
+    file and if you are infected, you must delete it.
+
+
+    To delete the infected file, go to the "Processes" tab, right-click on the name
+    of the infected file, select "End Processes Tree / End Activity Tree" from the
+    menu and confirm by clicking the "Yes" button.
+
+
+    If the infected file belongs to a program, go to Control Panel > Programs and
+    Features > Uninstall a program. Select the program and click on "Uninstall".
+
+
+    You can also delete the infected file by right-clicking on the file and holding
+    down the "Shift" key select "delete" and press "Yes". This procedure may affect
+    the functioning of the operating system or leave virus residues invisible.
+
+
+    Once you have manually deleted the virus, restart your computer and check the
+    programs that start when you start Windows. If you find the program again, you
+    must remove it from the startup list.
+
+
+    If you have Windows 10, go to "Task Manager", click on "Start" and locate the
+    file, right click on the file and select "Disable".
+
+
+    If you have previous versions of Windows, press `Win+R` at the same time. A panel
+    will appear where you can type the command `msconfig`, press "Enter" and click
+    on the Start tab. Once you have identified the infected program, remove the check
+    mark, click on OK and then on Restart to perform an immediate restart of the computer.
+
+
+    As a last check to verify that the infected file has been completely deleted,
+    go and check the extensions of the browsers you use. Access the settings of the
+    browser you are using:
+
+    '
+  trans: '
+
+    # 第 7 章 如何删除病毒
+
+
+    如果您怀疑病毒已感染您的电脑或手机，但不知道如何验证以及如何解决问题，应采取的措施如下。
+
+
+    ## 从智能手机中清除病毒
+
+
+    ### Android 系统
+
+
+    Android 设备无需安装杀毒软件，因为系统设置会自动阻止安装可能损害设备的未知应用程序。要检查此设置，请进入“设置”，然后点击“安全”，查看“未知来源”选项是否已禁用。如果您使用的是
+    Android 8 或更高版本，请进入“设置” > “应用和通知” > “高级” > “特殊应用访问权限” > “安装未知应用”。确保列表中的所有应用均标记为“不允许”。如果不是，请将开关从左向右拨动。
+
+
+    我建议您不要对 Android 设备进行 Root 操作以获取所有权限。这种做法会使您的 Android 设备变得脆弱，并暴露于严重危险之中，因为它常被用来绕过某些
+    App 的保护系统。
+
+
+    Google Play Protect 是面向所有 Android 系统的免费服务，它会定期扫描 Play Store 中的所有应用以及您设备上已安装的应用，以验证其安全性。要验证该服务是否处于激活状态，请打开
+    Play Store，从左上角的菜单中选择“Play 保护机制”。确保其旁边的“扫描设备以查找安全威胁”复选框处于激活状态。您还可以勾选下一项“提升有害应用检测功能”，以增强安全性。
+
+
+    为了识别并解决智能手机可能存在的问题，Android 允许您进入安全模式。没有标准的统一操作流程，以下提供两种方法。
+
+
+    **方法 1**：长按 Android 设备的物理电源/锁屏按钮。当选项出现时，长按“关机”选项，直到出现“重启进入安全模式”选项，然后点击“确定”。
+
+
+    **方法 2**：在开机或关机时，一旦设备制造商的 Logo 出现，立即长按音量减键（或 Home 键）。屏幕将显示“安全模式”。
+
+
+    进入安全模式后，检查已安装应用列表，看是否有您认为未自行安装的应用。请小心甄别，因为一些您不认识的应用可能对操作系统至关重要。如果您没有 Root 权限，反而更好，因为您将无法卸载系统应用。
+
+
+    如果您找到了恶意应用，点击它，然后点击卸载。如果无法移除某个 App，它很可能拥有设备管理权限，因此您必须先撤销该权限，然后再卸载。要移除此权限，请进入“设置”
+    > “安全” > “设备管理器”。找到恶意 App 后，取消勾选。
+
+
+    要退出安全模式，请重启手机。
+
+
+    如果无法按照上述步骤删除病毒，建议执行恢复出厂设置。恢复出厂设置可将手机恢复到购买时的状态。购买后安装的所有数据和应用程序将被删除。因此，备份设备文件以防止数据丢失非常重要。
+
+
+    要开始此过程，请进入“设置” > “备份和重置” > “恢复出厂设置”。如果您使用的是 Android 8，请进入“设置” > “系统” > “重置选项”
+    > “擦除所有数据”。
+
+
+    ### iOS 系统
+
+
+    Apple 设备的操作系统很安全，感染病毒的风险很低。一切取决于您如何使用设备；越狱和从非官方来源安装 App 始终是不推荐的。越狱允许您绕过 Apple
+    对其 iOS 操作系统施加的限制。这种做法会使系统变得脆弱，并可能导致设备损坏，进而引发恶意软件的安装。
+
+
+    ## 从电脑中删除病毒
+
+
+    我们假设防御潜在攻击的最佳方式是预防。安装一款优秀的杀毒软件绝对是最好的预防措施。
+
+
+    Bitdefender Free 是一款免费杀毒软件，可全方位保护系统：从互联网打开和下载的文件、即时通讯服务上的通信、通过 P2P 下载的项目等。下载名为
+    `Antivirus_Free_Edition.exe` 的安装包后，点击“是”按钮，并从下拉菜单中选择语言。要获得 Bitdefender Free 的免费版本，您需要在
+    MyBitdefender 注册，否则该程序副本将在 30 天试用期后过期。
+
+
+    要开始全盘扫描，请右键点击新安装的程序图标，然后选择“全盘扫描”。过程结束后，将显示一份报告，列出所有扫描过的文件、检测到的任何威胁以及采取的操作。您也可以将单个文件直接拖拽到
+    Bitdefender 图标上进行扫描。
+
+
+    另一款优秀的免费杀毒软件是 Avira Free Antivirus。它具有与 Bitdefender 相同的功能，但占用资源较大。
+
+
+    ### 使用“自启动”杀毒软件
+
+
+    在某些情况下，无法使用常规杀毒软件删除计算机上的病毒。必须强制介入。也就是说，必须在计算机启动阶段、操作系统启动*之前*进行介入。这可以通过专用工具实现，将工具下载并安装在
+    CD 或 USB 闪存盘上。
+
+
+    我推荐的第一个工具是 Bitdefender Rescue CD。该工具需要活动的互联网连接，以便更新病毒库并检测最新威胁。
+
+
+    要下载该程序，请访问官方网站，点击“To create a Bitdefender Rescue CD on a CD/DVD you need the ISO
+    image which care be downloaded from here”（创建 Bitdefender Rescue CD 需要 ISO 镜像，可从此处下载）。然后选择将杀毒软件刻录到
+    CD/DVD，还是复制到 USB 闪存盘。
+
+
+    如果您决定刻录到 CD，请使用任意刻录软件。如果您决定复制到 USB 闪存盘，可以下载 Bitdefender 提供的免费软件。点击“Stickifier
+    executable”（启动盘制作工具）。选择杀毒软件的 ISO 镜像，然后选择要复制文件的 USB 闪存盘。
+
+
+    要扫描您的计算机，请插入 USB 闪存盘（或 CD）。当杀毒软件界面出现时，点击“Start the Bitdefender Rescue CD”以启动 Bitdefender
+    Rescue CD。如果界面未出现，则需要修改 BIOS 设置。进入 BIOS，将 CD/DVD 驱动器或 USB 端口设置为首选启动设备。
+
+
+    在软件许可协议窗口中，勾选“By checking this box I agree to the license agreement lists above”（勾选此框即表示我同意上述许可协议），然后点击“Continue”（继续）。病毒库将更新，要开始扫描，请先点击“Scan
+    now”（立即扫描），然后点击“Start”（开始）。
+
+
+    另一款自启动杀毒软件是 Kaspersky Rescue Disk。从官网下载程序，点击“Download & Info”（下载与信息），然后点击“Distribute”（分发）按钮。选择将杀毒软件下载到
+    CD 还是 USB 闪存盘。
+
+
+    重启系统并从新创建的介质启动。当出现“Press any key to enter the menu”（按任意键进入菜单）提示时，按任意键。Kaspersky
+    将自动启动。按数字键 1 并选择“Kaspersky Rescue Disk Graphic Mode”（卡巴斯基救援盘图形模式）。点击“My update
+    center”（我的更新中心），然后点击“Start”（开始）以启动病毒库更新。
+
+
+    在开始全系统扫描之前，您必须确保在“对象扫描”选项卡上已勾选“Disk boot sectors”（磁盘引导扇区）、“Hidden startup objects”（隐藏启动对象）和“C”。按下“Start
+    objects scan”（开始对象扫描）按钮以启动扫描。
+
+
+    有些类型的恶意软件或广告软件能逃避杀毒软件的查杀。通常，这些威胁不如病毒激进，但仍然令人烦恼。例如，那些安装工具栏并将导航重定向到充满广告的网站的软件。为了对抗这类恶意软件，建议安装免费软件，如“Adwcleaner”和“Malwarebytes”。
+
+
+    ## 如何手动从电脑中删除病毒
+
+
+    要手动从电脑中删除病毒，您需要具备对计算机及其操作系统运作的高级知识。事实上，您需要识别受感染的文件并将其删除，或卸载包含该文件的程序。如果操作不当，可能会损害计算机的运行，最坏的情况下，将不得不重新格式化电脑，导致其中所有数据丢失。
+
+
+    ### 在 PC 上
+
+
+    如果您使用的是 Windows，第一步是创建一个还原点，以便在操作系统稳定性受损时使用。
+
+
+    同时按下 `Ctrl+Shift+Esc` 键启动“任务管理器”。点击“详细信息”，然后点击“进程”选项卡。检查正在运行的进程列表，如果发现可疑项目，请记下并在
+    Google 上搜索。
+
+
+    如果您确定正在运行的进程是病毒，请右键点击可疑进程，选择“打开文件位置”。访问 VirusTotal 网站，将可疑文件拖拽到网页区域。VirusTotal
+    将分析该文件，如果确认被感染，您必须将其删除。
+
+
+    要删除受感染的文件，请转到“进程”选项卡，右键点击受感染文件的名称，从菜单中选择“结束进程树”，并点击“是”按钮确认。
+
+
+    如果受感染的文件属于某个程序，请进入“控制面板” > “程序和功能” > “卸载程序”。选择该程序并点击“卸载”。
+
+
+    您也可以通过右键点击文件，同时按住“Shift”键选择“删除”，然后按“是”来删除受感染的文件。此过程可能会影响操作系统的运行，或留下不可见的病毒残留。
+
+
+    手动删除病毒后，重启计算机，并检查 Windows 启动时自动运行的程序。如果再次发现该程序，必须将其从启动列表中移除。
+
+
+    如果您使用的是 Windows 10，请进入“任务管理器”，点击“启动”，找到该文件，右键点击并选择“禁用”。
+
+
+    如果您使用的是旧版 Windows，请同时按下 `Win+R`。将出现一个面板，输入命令 `msconfig`，按“回车”并点击“启动”选项卡。找到受感染的程序后，取消勾选，点击“确定”，然后点击“重新启动”以立即重启计算机。
+
+
+    作为最后的检查，以验证受感染文件是否已完全删除，请检查您使用的浏览器的扩展程序。访问您正在使用的浏览器的设置：
+
+    '
+  toc: []
+- raw: "*   Chrome , click on the button (⋮ ) located at the top right, go to the\
+    \ Other Tools > Extensions menu. \n\n*   Firefox , click on the ☰ button in the\
+    \ upper right corner, then on \"Add-ons\" and choose \"Extensions\" from the left\
+    \ sidebar. \n\n*   Microsoft Edge , press the button (...) and click on the \"\
+    Extensions\" item from the menu that opens. \n\nIf an error message such as \"\
+    Access denied\" or \"Cannot execute\" appears during virus deletion, you must\
+    \ start the PC in \"Safe Mode\" and delete the virus from this mode. Once you\
+    \ have permanently deleted the virus from your PC, you must take the necessary\
+    \ precautions so that this does not happen again. \n\n*   Do not download programs\
+    \ from unknown and suspicious sites, attachments received via email, social networks.\
+    \ \n\n*   Always keep your operating system up to date. \n\n*   Install a good\
+    \ solution. \n\n*   Never disable operating system or antivirus protections. \n\
+    \nNote: If you still experience a computer malfunction then the virus is still\
+    \ present. In this case, you would need to intervene on the \"Registry\". Quite\
+    \ a complicated and delicate operation. It is therefore advisable to install an\
+    \ anti-virus that performs all the necessary operations in complete safety. On\
+    \ Mac If you are using a Mac, the probability of finding an infection is very\
+    \ low. However, should your Mac be infected, the first thing to do is to check\
+    \ all the software currently running with the Mac Activity Monitoring utility.\
+    \ Click on the Go > Finder Utility menu and launch the Activity Monitoring tool. \
+    \ Carefully observe all running processes and identify suspicious ones. Search\
+    \ Google to make sure it is a threat. In case you have confirmation that it is\
+    \ a virus, go back to the Activity Monitoring window and click on the infected\
+    \ process, then on the button(s) at the top and finally twice on the Exit button.\
+    \ This will immediately deactivate the harmful activity. To permanently delete\
+    \ the virus, go to the Applications folder of your Mac, identify the \"offending\"\
+    \ program, right-click on the relevant file and select the Move to Trash item\
+    \ and then \"Empty Trash\". As a last check to make sure that the virus has been\
+    \ completely deleted, go and check the Safari browser extensions. Go to the Safari\
+    \ > Preferences menu, go to the \"Extensions\" tab, select the infected extension\
+    \ and click on \"Uninstall\". If you cannot delete the virus and its extensions\
+    \ in your browser then you will need to start your Mac in \"Safe Mode\" and delete\
+    \ the virus from this mode. To start the Mac in \"Safe Mode\", press and hold\
+    \ the Shift key while restarting the computer. When the Apple logo appears and\
+    \ you see the login window, release the Shift key and log in as usual. To verify\
+    \ that macOS protections are active, open the Mac System Preferences, select \"\
+    Security and Privacy\" and click the General tab. Now, check that Gatekeeper is\
+    \ active by checking that there is a check mark next to the App Store and identified\
+    \ developers. If not, click on the padlock at the bottom of the page, enter your\
+    \ account password and tick the box. Finally, check that the Xprotect database\
+    \ updates are active. Go to \"System Preferences\", then to the App Store and\
+    \ check the box next to \"Install system data files and security updates\". \n\
+    \nGlossary Antispam: programs and filters that can select and discard emails that\
+    \ contain malware, advertising, etc. Backup: copy the data contained in your device.\
+    \ Banner: box that contains a simple advertising message but that can contain\
+    \ a malicious file that infects the computer if it is displayed. Botnet: A set\
+    \ of computers infected with malware that allows the cracker to use them to decrypt\
+    \ passwords. Cloud: A set of technologies that allow computer resources to be\
+    \ used through the Internet connection. USB Controller: a device that can interface\
+    \ the computer with external devices connected via a USB port. Cracker: The bad\
+    \ hacker who uses his computer skills for criminal purposes. Data Recovery: A\
+    \ set of procedures put in place to recover data contained in corrupted devices.\
+    \ Exploit : indicates the set of actions to be performed to take control of an\
+    \ information system starting from its venerability. Framework : is the set of\
+    \ software modules that integrate with the operating system and make all the common\
+    \ functions available to the applications. Hacker: this is the person with computer\
+    \ skills that allow him to enter a system and check its vulnerability. Often,\
+    \ after discovering the vulnerability of a system, the hacker communicates his\
+    \ discoveries to the programmers and suggests the solution of the problem. Honeypot\
+    \ : it is a site or a computer network that acts as a trap for those who try to\
+    \ break into a computer system. Hotspot: the access point to a Wi-Fi network.\
+    \ HTML: is the language used to give shape to texts on websites. IP address: represents\
+    \ the identification number of each device connected to a network. This numeric\
+    \ code can be 32 (IPv4) bits or 128 (IPv6) bits. Javascript: programming language\
+    \ used to create interactive applications on the web. Keygen: is a serial code\
+    \ generator used to install pirated software. Crackers to carry viruses often\
+    \ use these serial code generators. In fact, the keygen asks permission to access\
+    \ computer files. Once permission has been obtained, the keygen can modify what\
+    \ it wants. Keylogger: is a type of virus that is installed on the computer, records\
+    \ everything that is typed on the keyboard and transmits it to the cracker. Malware:\
+    \ any type of software that can enter a computer illegally and compromise its\
+    \ operation. P2P: is a set of services that allows you to illegally exchange protected\
+    \ files using various protocols. Patch: is a software package that contains codes\
+    \ to update the related software. The update lets you fix errors, remove vulnerabilities\
+    \ and optimize performance. Payload: is that part of the malware that implements\
+    \ the cracker's criminal intentions. This happens after the exploit takes possession\
+    \ of the computer. Plug-in: is a module of a more complex software that adds functions\
+    \ not initially foreseen. Ransomware: is the most dangerous malware. It is able\
+    \ to encrypt all the data on the computer and ask for a ransom in exchange for\
+    \ the encryption key. Finally, it is able to infect all computers connected to\
+    \ the network. Registry: it is the Windows file that contains the settings that\
+    \ regulate the operation of the operating system. Spyware: is a type of software\
+    \ that collects information about a user's online activity without his or her\
+    \ consent. Social Engineering: A set of techniques used by crackers to obtain\
+    \ information from people through the manipulation of their good faith. Trojan\
+    \ Horse: is a type of malware disguised as a data file. Its characteristic is\
+    \ that it must have permission to install itself. Virus: is a type of malware\
+    \ that can self-install itself and replicate itself by infecting other computers\
+    \ as well. VPN: is a service that allows you to use the Internet as if it were\
+    \ a private network. Wi-Fi: is the technology of wireless communication between\
+    \ computers and peripheral devices located within a short distance. With the help\
+    \ of the router, the local Wi-Fi network is able to connect to the Internet. Worm:\
+    \ is a particular category of malware that can replicate itself. Zero day: this\
+    \ is the security flaw in a software discovered by crackers but unknown to programmers. "
+  fmt: '
+
+    # 浏览器扩展管理
+
+
+    ## Chrome
+
+    点击右上角的按钮（`⋮`），进入`Other Tools > Extensions`菜单。
+
+
+    ## Firefox
+
+    点击右上角的`☰`按钮，然后点击`Add-ons`，从左侧边栏选择`Extensions`。
+
+
+    ## Microsoft Edge
+
+    按下按钮（`...`），从打开的菜单中点击`Extensions`项。
+
+
+    # 病毒删除故障排除
+
+
+    如果在删除病毒时出现"Access denied"或"Cannot execute"等错误消息，必须在"Safe Mode"（安全模式）下启动电脑，并从此模式下删除病毒。从电脑中永久删除病毒后，必须采取必要的预防措施，以免再次发生。
+
+
+    *   不要从未知和可疑网站下载程序，也不要打开通过电子邮件、社交网络收到的附件。
+
+    *   始终保持操作系统为最新状态。
+
+    *   安装优质的安全解决方案。
+
+    *   切勿禁用操作系统或防病毒保护。
+
+
+    > **Note:** 如果仍然遇到电脑故障，说明病毒仍然存在。在这种情况下，需要干预"Registry"（注册表）。这是一个相当复杂和精细的操作。因此建议安装一款能在完全安全的情况下执行所有必要操作的防病毒软件。
+
+
+    # Mac 病毒处理指南
+
+
+    如果您使用的是 Mac，感染的概率非常低。但是，如果您的 Mac 被感染，首先要做的是使用 Mac `Activity Monitoring`（活动监视器）实用程序检查所有当前正在运行的软件。
+
+
+    1.  点击`Go > Finder Utility`菜单并启动`Activity Monitoring`工具。
+
+    2.  仔细观察所有正在运行的进程并识别可疑进程。
+
+    3.  在 Google 上搜索以确认是否为威胁。
+
+    4.  如果确认为病毒，返回`Activity Monitoring`窗口，点击受感染的进程，然后点击顶部的按钮，最后点击两次`Exit`按钮。这将立即停用有害活动。
+
+
+    ## 永久删除病毒
+
+
+    1.  进入 Mac 的`Applications`文件夹，识别"有问题的"程序。
+
+    2.  右键点击相关文件，选择`Move to Trash`（移至废纸篓），然后选择`Empty Trash`（清空废纸篓）。
+
+
+    ## 检查 Safari 浏览器扩展
+
+
+    作为最后检查以确保病毒已完全删除：
+
+
+    1.  进入`Safari > Preferences`菜单，转到`Extensions`选项卡。
+
+    2.  选择受感染的扩展并点击`Uninstall`。
+
+
+    ## Mac 安全模式
+
+
+    如果无法在浏览器中删除病毒及其扩展，则需要在"Safe Mode"（安全模式）下启动 Mac 并从此模式下删除病毒。
+
+
+    **启动 Mac 安全模式的方法：**
+
+    在重新启动电脑时按住`Shift`键。当出现 Apple 徽标并看到登录窗口时，释放`Shift`键并像往常一样登录。
+
+
+    ## 验证 macOS 保护机制
+
+
+    1.  打开 Mac `System Preferences`（系统偏好设置），选择`Security and Privacy`（安全性与隐私），点击`General`（通用）选项卡。
+
+    2.  检查`Gatekeeper`是否处于激活状态，方法是查看`App Store and identified developers`旁边是否有勾选标记。如果没有，点击页面底部的锁图标，输入您的帐户密码并勾选该框。
+
+    3.  最后，检查`Xprotect`数据库更新是否处于激活状态。进入`System Preferences`，然后进入`App Store`，勾选`Install
+    system data files and security updates`旁边的复选框。
+
+
+    # 术语表
+
+
+    *   **Antispam**（反垃圾邮件）：能够选择并丢弃包含恶意软件、广告等的电子邮件的程序和过滤器。
+
+    *   **Backup**（备份）：复制设备中包含的数据。
+
+    *   **Banner**（横幅广告）：包含简单广告消息的框，但如果显示，可能包含感染计算机的恶意文件。
+
+    *   **Botnet**（僵尸网络）：一组感染了恶意软件的计算机，允许破解者利用它们来解密密码。
+
+    *   **Cloud**（云）：一组允许通过互联网连接使用计算机资源的技术。
+
+    *   **USB Controller**（USB 控制器）：一种可以将计算机与通过 USB 端口连接的外部设备连接起来的设备。
+
+    *   **Cracker**（破解者）：利用计算机技能进行犯罪目的的坏黑客。
+
+    *   **Data Recovery**（数据恢复）：为恢复损坏设备中包含的数据而实施的一组程序。
+
+    *   **Exploit**（漏洞利用）：指从系统漏洞出发，控制信息系统所要执行的一组操作。
+
+    *   **Framework**（框架）：与操作系统集成并使所有通用功能可供应用程序使用的一组软件模块。
+
+    *   **Hacker**（黑客）：拥有计算机技能，允许其进入系统并检查其漏洞的人。通常，在发现系统漏洞后，黑客会将其发现告知程序员并建议解决方案。
+
+    *   **Honeypot**（蜜罐）：作为陷阱捕捉试图闯入计算机系统者的网站或计算机网络。
+
+    *   **Hotspot**（热点）：Wi-Fi 网络的接入点。
+
+    *   **HTML**：用于赋予网站文本形状的语言。
+
+    *   **IP address**（IP 地址）：表示连接到网络的每个设备的识别号码。此数字代码可以是 32 位（IPv4）或 128 位（IPv6）。
+
+    *   **Javascript**：用于在网络上创建交互式应用程序的编程语言。
+
+    *   **Keygen**（密钥生成器）：用于安装盗版软件的序列号生成器。破解者经常使用这些序列号生成器来传播病毒。实际上，Keygen 会请求访问计算机文件的权限。一旦获得权限，Keygen
+    可以修改它想要的任何内容。
+
+    *   **Keylogger**（键盘记录器）：一种安装在计算机上、记录键盘上输入的所有内容并将其传输给破解者的病毒类型。
+
+    *   **Malware**（恶意软件）：任何能够非法进入计算机并损害其运行的软件类型。
+
+    *   **P2P**（点对点）：一组允许您使用各种协议非法交换受保护文件的服务。
+
+    *   **Patch**（补丁）：包含更新相关软件代码的软件包。更新可让您修复错误、消除漏洞并优化性能。
+
+    *   **Payload**（有效载荷）：实施破解者犯罪意图的恶意软件部分。这发生在漏洞利用控制计算机之后。
+
+    *   **Plug-in**（插件）：更复杂软件的一个模块，添加最初未预见的功能。
+
+    *   **Ransomware**（勒索软件）：最危险的恶意软件。它能够加密计算机上的所有数据，并以加密密钥为交换要求赎金。最后，它能够感染连接到网络的所有计算机。
+
+    *   **Registry**（注册表）：包含调节操作系统运行设置的 Windows 文件。
+
+    *   **Spyware**（间谍软件）：一种未经用户同意收集其在线活动信息的软件类型。
+
+    *   **Social Engineering**（社会工程学）：破解者通过操纵人们的善意来获取信息所使用的一组技术。
+
+    *   **Trojan Horse**（特洛伊木马）：伪装成数据文件的一种恶意软件类型。其特点是必须获得权限才能安装自身。
+
+    *   **Virus**（病毒）：一种能够自我安装并通过感染其他计算机进行自我复制的恶意软件类型。
+
+    *   **VPN**（虚拟专用网络）：一种允许您像使用专用网络一样使用互联网的服务。
+
+    *   **Wi-Fi**：位于短距离内的计算机和外围设备之间的无线通信技术。在路由器的帮助下，本地 Wi-Fi 网络能够连接到互联网。
+
+    *   **Worm**（蠕虫）：一种能够自我复制的特定类别的恶意软件。
+
+    *   **Zero day**（零日漏洞）：由破解者发现但程序员未知的软件安全缺陷。
+
+    '
+  trans: '
+
+
+    # 浏览器扩展管理
+
+
+    ## Chrome
+
+    点击右上角的按钮（`⋮`），进入`Other Tools > Extensions`菜单。
+
+
+    ## Firefox
+
+    点击右上角的`☰`按钮，然后点击`Add-ons`，从左侧边栏选择`Extensions`。
+
+
+    ## Microsoft Edge
+
+    按下按钮（`...`），从打开的菜单中点击`Extensions`项。
+
+
+    # 病毒删除故障排除
+
+
+    如果在删除病毒时出现"Access denied"或"Cannot execute"等错误消息，必须在"Safe Mode"（安全模式）下启动电脑，并从此模式下删除病毒。从电脑中永久删除病毒后，必须采取必要的预防措施，以免再次发生。
+
+
+    *   不要从未知和可疑网站下载程序，也不要打开通过电子邮件、社交网络收到的附件。
+
+    *   始终保持操作系统为最新状态。
+
+    *   安装优质的安全解决方案。
+
+    *   切勿禁用操作系统或防病毒保护。
+
+
+    > **注意：** 如果仍然遇到电脑故障，说明病毒仍然存在。在这种情况下，需要干预"Registry"（注册表）。这是一个相当复杂和精细的操作。因此建议安装一款能在完全安全的情况下执行所有必要操作的防病毒软件。
+
+
+    # Mac 病毒处理指南
+
+
+    如果您使用的是 Mac，感染的概率非常低。但是，如果您的 Mac 被感染，首先要做的是使用 Mac `Activity Monitoring`（活动监视器）实用程序检查所有当前正在运行的软件。
+
+
+    1.  点击`Go > Finder Utility`菜单并启动`Activity Monitoring`工具。
+
+    2.  仔细观察所有正在运行的进程并识别可疑进程。
+
+    3.  在 Google 上搜索以确认是否为威胁。
+
+    4.  如果确认为病毒，返回`Activity Monitoring`窗口，点击受感染的进程，然后点击顶部的按钮，最后点击两次`Exit`按钮。这将立即停用有害活动。
+
+
+    ## 永久删除病毒
+
+
+    1.  进入 Mac 的`Applications`文件夹，识别"有问题的"程序。
+
+    2.  右键点击相关文件，选择`Move to Trash`（移至废纸篓），然后选择`Empty Trash`（清空废纸篓）。
+
+
+    ## 检查 Safari 浏览器扩展
+
+
+    作为最后检查以确保病毒已完全删除：
+
+
+    1.  进入`Safari > Preferences`菜单，转到`Extensions`选项卡。
+
+    2.  选择受感染的扩展并点击`Uninstall`。
+
+
+    ## Mac 安全模式
+
+
+    如果无法在浏览器中删除病毒及其扩展，则需要在"Safe Mode"（安全模式）下启动 Mac 并从此模式下删除病毒。
+
+
+    **启动 Mac 安全模式的方法：**
+
+    在重新启动电脑时按住`Shift`键。当出现 Apple 徽标并看到登录窗口时，释放`Shift`键并像往常一样登录。
+
+
+    ## 验证 macOS 保护机制
+
+
+    1.  打开 Mac `System Preferences`（系统偏好设置），选择`Security and Privacy`（安全性与隐私），点击`General`（通用）选项卡。
+
+    2.  检查`Gatekeeper`是否处于激活状态，方法是查看`App Store and identified developers`旁边是否有勾选标记。如果没有，点击页面底部的锁图标，输入您的帐户密码并勾选该框。
+
+    3.  最后，检查`Xprotect`数据库更新是否处于激活状态。进入`System Preferences`，然后进入`App Store`，勾选`Install
+    system data files and security updates`旁边的复选框。
+
+
+    # 术语表
+
+
+    *   **Antispam**（反垃圾邮件）：能够选择并丢弃包含恶意软件、广告等的电子邮件的程序和过滤器。
+
+    *   **Backup**（备份）：复制设备中包含的数据。
+
+    *   **Banner**（横幅广告）：包含简单广告消息的框，但如果显示，可能包含感染计算机的恶意文件。
+
+    *   **Botnet**（僵尸网络）：一组感染了恶意软件的计算机，允许破解者利用它们来解密密码。
+
+    *   **Cloud**（云）：一组允许通过互联网连接使用计算机资源的技术。
+
+    *   **USB Controller**（USB 控制器）：一种可以将计算机与通过 USB 端口连接的外部设备连接起来的设备。
+
+    *   **Cracker**（破解者）：利用计算机技能进行犯罪目的的坏黑客。
+
+    *   **Data Recovery**（数据恢复）：为恢复损坏设备中包含的数据而实施的一组程序。
+
+    *   **Exploit**（漏洞利用）：指从系统漏洞出发，控制信息系统所要执行的一组操作。
+
+    *   **Framework**（框架）：与操作系统集成并使所有通用功能可供应用程序使用的一组软件模块。
+
+    *   **Hacker**（黑客）：拥有计算机技能，允许其进入系统并检查其漏洞的人。通常，在发现系统漏洞后，黑客会将其发现告知程序员并建议解决方案。
+
+    *   **Honeypot**（蜜罐）：作为陷阱捕捉试图闯入计算机系统者的网站或计算机网络。
+
+    *   **Hotspot**（热点）：Wi-Fi 网络的接入点。
+
+    *   **HTML**：用于赋予网站文本形状的语言。
+
+    *   **IP address**（IP 地址）：表示连接到网络的每个设备的识别号码。此数字代码可以是 32 位（IPv4）或 128 位（IPv6）。
+
+    *   **Javascript**：用于在网络上创建交互式应用程序的编程语言。
+
+    *   **Keygen**（密钥生成器）：用于安装盗版软件的序列号生成器。破解者经常使用这些序列号生成器来传播病毒。实际上，Keygen 会请求访问计算机文件的权限。一旦获得权限，Keygen
+    可以修改它想要的任何内容。
+
+    *   **Keylogger**（键盘记录器）：一种安装在计算机上、记录键盘上输入的所有内容并将其传输给破解者的病毒类型。
+
+    *   **Malware**（恶意软件）：任何能够非法进入计算机并损害其运行的软件类型。
+
+    *   **P2P**（点对点）：一组允许您使用各种协议非法交换受保护文件的服务。
+
+    *   **Patch**（补丁）：包含更新相关软件代码的软件包。更新可让您修复错误、消除漏洞并优化性能。
+
+    *   **Payload**（有效载荷）：实施破解者犯罪意图的恶意软件部分。这发生在漏洞利用控制计算机之后。
+
+    *   **Plug-in**（插件）：更复杂软件的一个模块，添加最初未预见的功能。
+
+    *   **Ransomware**（勒索软件）：最危险的恶意软件。它能够加密计算机上的所有数据，并以加密密钥为交换要求赎金。最后，它能够感染连接到网络的所有计算机。
+
+    *   **Registry**（注册表）：包含调节操作系统运行设置的 Windows 文件。
+
+    *   **Spyware**（间谍软件）：一种未经用户同意收集其在线活动信息的软件类型。
+
+    *   **Social Engineering**（社会工程学）：破解者通过操纵人们的善意来获取信息所使用的一组技术。
+
+    *   **Trojan Horse**（特洛伊木马）：伪装成数据文件的一种恶意软件类型。其特点是必须获得权限才能安装自身。
+
+    *   **Virus**（病毒）：一种能够自我安装并通过感染其他计算机进行自我复制的恶意软件类型。
+
+    *   **VPN**（虚拟专用网络）：一种允许您像使用专用网络一样使用互联网的服务。
+
+    *   **Wi-Fi**：位于短距离内的计算机和外围设备之间的无线通信技术。在路由器的帮助下，本地 Wi-Fi 网络能够连接到互联网。
+
+    *   **Worm**（蠕虫）：一种能够自我复制的特定类别的恶意软件。
+
+    *   **Zero day**（零日漏洞）：由破解者发现但程序员未知的软件安全缺陷。
+
+
+    '
+  toc: []
+- raw: "Conclusion The Internet has not turned anything into \"virtual\", but has\
+    \ simply provided everyone with a very versatile tool that has facilitated our\
+    \ real life with undoubted advantages in terms of cost and convenience. Today,\
+    \ with our computer or smartphone connected to the internet we can do things that\
+    \ previously required our physical presence (such as making a transfer, making\
+    \ endless queues to pay bills, booking a vacation, etc.). The Internet is real\
+    \ life and as in real life, we must take precautions. In real life, we know that\
+    \ we have to be careful of thieves and not to trust strangers. Even on the internet,\
+    \ we must take the same precautions; use complex passwords, do not click on equivocal\
+    \ banners, do not open unknown emails, do not click on suspicious links. This\
+    \ book aims to provide all possible precautions to surf the Internet safely. \n\
+    \nOther books: “Hacking Beginners Guide “ “The Basic Guide to Information Network\
+    \ Security and the Basic Concepts of Kali Linux.”  Kindle Edition © Copyright\
+    \ 2019 by Kevin Morgan “Computer Networking Beginners Guide” “The Complete Basic\
+    \ Guide to Master Network Security, Computer Architecture, Wireless Technology,\
+    \ and Communications Systems Including Cisco, CCNA and the OSI Model.”  Kindle\
+    \ Edition © Copyright 2019 by Kevin Morgan"
+  fmt: "\n## Conclusion\n\nThe Internet has not turned anything into \"virtual\",\
+    \ but has simply provided everyone with a very versatile tool that has facilitated\
+    \ our real life with undoubted advantages in terms of cost and convenience. Today,\
+    \ with our computer or smartphone connected to the internet we can do things that\
+    \ previously required our physical presence (such as making a transfer, making\
+    \ endless queues to pay bills, booking a vacation, etc.). The Internet is real\
+    \ life and as in real life, we must take precautions. In real life, we know that\
+    \ we have to be careful of thieves and not to trust strangers. Even on the internet,\
+    \ we must take the same precautions; use complex passwords, do not click on equivocal\
+    \ banners, do not open unknown emails, do not click on suspicious links. This\
+    \ book aims to provide all possible precautions to surf the Internet safely.\n\
+    \n## Other Books\n\n- **“Hacking Beginners Guide”**  \n  **“The Basic Guide to\
+    \ Information Network Security and the Basic Concepts of Kali Linux.”** Kindle\
+    \ Edition © Copyright 2019 by Kevin Morgan\n\n- **“Computer Networking Beginners\
+    \ Guide”**  \n  **“The Complete Basic Guide to Master Network Security, Computer\
+    \ Architecture, Wireless Technology, and Communications Systems Including Cisco,\
+    \ CCNA and the OSI Model.”** Kindle Edition © Copyright 2019 by Kevin Morgan\n"
+  trans: "\n\n## 结论\n\n互联网并没有将任何事物变成“虚拟”的，而只是为每个人提供了一个非常多功能的工具，该工具在成本和便利性方面具有无可争议的优势，从而便利了我们的现实生活。如今，通过连接互联网的电脑或智能手机，我们可以做以前需要亲自到场才能完成的事情（例如转账、排长队缴费、预订假期等）。互联网就是现实生活，正如在现实生活中一样，我们必须采取预防措施。在现实生活中，我们知道要提防小偷，不轻信陌生人。即使在互联网上，我们也必须采取同样的预防措施：使用复杂的密码，不点击模棱两可的横幅广告，不打开未知邮件，不点击可疑链接。本书旨在提供所有可能的预防措施，以安全地浏览互联网。\n\
+    \n## 其他书籍\n\n- **《黑客入门指南》**  \n  **《信息网络安全基础指南及 Kali Linux 基本概念。》** Kindle 版 ©\
+    \ 版权所有 2019 Kevin Morgan\n\n- **《计算机网络入门指南》**  \n  **《掌握网络安全、计算机架构、无线技术和通信系统（包括\
+    \ Cisco、CCNA 和 OSI 模型）的完整基础指南。》** Kindle 版 © 版权所有 2019 Kevin Morgan\n\n"
+  toc: []
