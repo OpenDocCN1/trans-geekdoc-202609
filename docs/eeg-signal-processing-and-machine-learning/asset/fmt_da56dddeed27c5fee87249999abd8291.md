@@ -1,0 +1,70 @@
+
+## 方程推导与算法更新
+
+[(4.98)](#c04.xhtml#R_c04-disp-0100)  
+![equation](images/c4-disp-0100.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi>η</mi><mfenced open="(" close=")"><mi mathvariant="bold">w</mi></mfenced><mo>+</mo><mi mathvariant="normal">Δ</mi><msup><mi mathvariant="bold">w</mi><mi>T</mi></msup><msub><mo>∇</mo><mi mathvariant="bold-italic">w</mi></msub><mfenced open="(" close=")"><mrow><mi>η</mi><mfenced open="(" close=")"><mi mathvariant="bold">w</mi></mfenced></mrow></mfenced><mo>≤</mo><mi>η</mi><mfenced open="(" close=")"><mi mathvariant="bold">w</mi></mfenced></math>
+
+其中，`∇[w] (.)` 表示关于 `w` 的梯度。这意味着通过设置 `Δw = −μ∇[w] (.)` 可满足上述方程 ([Eq. 4.98](#c04.xhtml#c4-disp-0100))，其中 `μ` 为学习率或收敛参数。因此，通用更新方程形式为：
+
+(4.99)  
+![equation](images/c4-disp-0101.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi mathvariant="bold">w</mi><mfenced open="(" close=")"><mi mathvariant="bold">n</mi></mfenced><mo>=</mo><mi mathvariant="bold">w</mi><mi>T</mi><mo>−</mo><mi>η</mi><msub><mo>∇</mo><mi mathvariant="bold-italic">w</mi></msub><mfenced open="(" close=")"><mrow><mi>η</mi><mfenced open="(" close=")"><mi mathvariant="bold">w</mi><mfenced open="(" close=")"><mi>n</mi></mfenced></mfenced></mrow></mfenced></math>
+
+采用最小均方 (LMS) 方法，`∇[w] (η(w))` 由平方误差信号的瞬时梯度替代，即：
+
+(4.100)  
+![equation](images/c4-disp-0102.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><msub><mo>∇</mo><mi mathvariant="bold">W</mi></msub><mfenced open="(" close=")"><mrow><mi>η</mi><mfenced open="(" close=")"><mrow><mi mathvariant="bold">w</mi><mfenced open="(" close=")"><mi>n</mi></mfenced></mrow></mfenced></mrow></mfenced><mo>≃</mo><mo form="prefix">−</mo><mn>2</mn><mi>e</mi><mfenced open="(" close=")"><mi>n</mi></mfenced><mi mathvariant="bold">r</mi><mfenced open="(" close=")"><mi>n</mi></mfenced></math>
+
+因此，基于 LMS 的更新方程为：
+
+(4.101)  
+![equation](images/c4-disp-0103.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi mathvariant="bold">w</mi><mfenced open="(" close=")"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mfenced><mo>=</mo><mi mathvariant="bold">w</mi><mfenced open="(" close=")"><mi>n</mi></mfenced><mo>+</mo><mn>2</mn><mi mathvariant="italic">μe</mi><mfenced open="(" close=")"><mi>n</mi></mfenced><mi mathvariant="bold">r</mi><mfenced open="(" close=")"><mi>n</mi></mfenced></math>
+
+此外，收敛参数 `μ` 必须为正，并满足以下条件：
+
+(4.102)  
+![equation](images/c4-disp-0104.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mn>0</mn><mo>&lt;</mo><mi>μ</mi><mo>&lt;</mo><mfrac><mn>1</mn><msub><mi>λ</mi><mi mathvariant="italic">max</mi></msub></mfrac></math>
+
+其中 `λ[max]` 表示自相关矩阵 `R` 的最大特征值。LMS 算法是最简单且计算效率最高的算法。然而，收敛速度可能较慢，特别是对于相关信号。递归最小二乘 (RLS) 算法试图提供高速稳定滤波器，但对于实时应用在数值上不稳定 [[40](#c04.xhtml#c4-bib-0040), [41](#c04.xhtml#c4-bib-0041)]。
+
+定义性能指标为：
+
+[(4.103)](#c04.xhtml#R_c04-disp-0105)  
+![equation](images/c4-disp-0105.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi>η</mi><mfenced open="(" close=")"><mi mathvariant="bold">w</mi></mfenced><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><msup><mi>γ</mi><mrow><mi>n</mi><mo>−</mo><mi>i</mi></mrow></msup><msup><mi>e</mi><mn>2</mn></msup><mfenced open="(" close=")"><mi>i</mi></mfenced></math>
+
+然后，对 `w` 求导可得：
+
+[(4.104)](#c04.xhtml#R_c04-disp-0106)  
+![equation](images/c4-disp-0106.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><msub><mo>∇</mo><mi mathvariant="bold">w</mi></msub><mi>η</mi><mfenced open="(" close=")"><mi mathvariant="bold">w</mi></mfenced><mo>=</mo><mo form="prefix">−</mo><mn>2</mn><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><msup><mi>γ</mi><mrow><mi>n</mi><mo>−</mo><mi>i</mi></mrow></msup><mi>e</mi><mfenced open="(" close=")"><mi>i</mi></mfenced><mi mathvariant="bold">r</mi><mfenced open="(" close=")"><mi>i</mi></mfenced></math>
+
+其中 `0 < γ ≤ 1` 为遗忘因子 [[40](#c04.xhtml#c4-bib-0040), [41](#c04.xhtml#c4-bib-0041)]。将上述方程 ([Eq. 4.104](#c04.xhtml#c4-disp-0106)) 中的 `e(n)` 代入并写成向量形式，得到：
+
+(4.105)  
+![equation](images/c4-disp-0107.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi mathvariant="bold">R</mi><mfenced open="(" close=")"><mi>n</mi></mfenced><mi mathvariant="bold">w</mi><mfenced open="(" close=")"><mi>n</mi></mfenced><mo>=</mo><mi mathvariant="bold">p</mi><mfenced open="(" close=")"><mi>n</mi></mfenced></math>
+
+其中：
+
+(4.106)  
+![equation](images/c4-disp-0108.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi mathvariant="bold">R</mi><mfenced open="(" close=")"><mi>n</mi></mfenced><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><msup><mi>λ</mi><mrow><mi>n</mi><mo>−</mo><mi>i</mi></mrow></msup><mi mathvariant="bold">r</mi><mfenced open="(" close=")"><mi>i</mi></mfenced><msup><mi mathvariant="bold">r</mi><mi>T</mi></msup><mfenced open="(" close=")"><mi>i</mi></mfenced></math>
+
+以及：
+
+(4.107)  
+![equation](images/c4-disp-0109.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi mathvariant="bold">p</mi><mfenced open="(" close=")"><mi>n</mi></mfenced><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><msup><mi>λ</mi><mrow><mi>n</mi><mo>−</mo><mi>i</mi></mrow></msup><mi>x</mi><mfenced open="(" close=")"><mi>i</mi></mfenced><mi mathvariant="bold">r</mi><mfenced open="(" close=")"><mi>i</mi></mfenced></math>
+
+由此方程得出：
+
+(4.108)  
+![equation](images/c4-disp-0110.png)  
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi mathvariant="bold">w</mi><mfenced open="(" close=")"><mi>n</mi></mfenced><mo>=</mo><msup><mi mathvariant="bold">R</mi><mrow><mo form="prefix">−</mo><mn>1</mn></mrow></msup><mfenced open="(" close=")"><mi>n</mi></mfenced><mi mathvariant="bold">p</mi><mfenced open="(" close=")"><mi>n</mi></mfenced></math>
+
+RLS 算法以递归方式执行上述运算，使得 `P` 和 `R` 在当前时刻 `n` 处被估计为：

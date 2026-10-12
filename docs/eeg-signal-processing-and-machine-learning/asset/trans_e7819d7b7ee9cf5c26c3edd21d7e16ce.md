@@ -1,0 +1,78 @@
+
+
+## 参考文献
+
+90. **90** De Lathauwer, L. and Castaing, J. (2008). Blind identification of underdetermined mixtures by simultaneous matrix diagonalization. *IEEE Transactions on Signal Processing* 56 (3): 1096–1105.
+
+91. **91** Makkiabadi, B., Sanei, S., and Marshall, D. (2010). A k‐subspace based tensor factorization approach for under‐determined blind identification. *Proceedings of the IEEE Asilomar Conference on Signals, Systems, and Computers*, 18–22. CA, USA.
+
+92. **92** Bro, R. (1997). PARAFAC. Tutorial and applications. *Chemometrics and Intelligent Laboratory Systems* 38 (2): 149–171.
+
+93. **93** Shoker, L., Sanei, S., Wang, W., and Chambers, J. (2004). Removal of eye blinking artefact from EEG incorporating a new constrained BSS algorithm. *IEEE Journal of Medical and Biological Engineering and Computing*: 290–295.
+
+94. **94** Almeida, L. (2005). Nonlinear source separation. In: *Synthesis Lectures on Signal Processing*, vol. 1, 1–114. Morgan & Claypool Publishers.
+
+95. **95** Jutten, C. and Karhunen, J. (2004). Advances in blind source separation (BSS) and independent component analysis (ICA) for nonlinear mixtures. *International Journal of Neural Systems* 14 (5): 267–292.
+
+96. **96** Nazarpour, K., Mohseni, H.R., Hesse, C. et al. (2008). A novel semi‐blind signal extraction approach incorporating PARAFAC for the removal of eye‐blink artefact from EEGs. *EURASIP Journal on Advances in Signal Processing* 2008: 857459. [https://doi.org/10.1155/2008/857459](https://doi.org/10.1155/2008/857459).
+
+97. **97** Kouchaki, S. and Sanei, S. (2015). A new tensor factorisation approach for convolutive separation of complex signals. *Proceedings of 12th International Conference on Latent Variable Analysis and Signal Separation (LVA/ICA 2015)* (25–28 August). Liberec: Czech Republic.
+
+98. **98** Makkiabadi, B., Jarchi, D., Abolghasemi, V., and Sanei, S. (2011). A time domain geometrically constrained multimodal approach for convolutive blind source separation. *Proceedings of EUSIPCO 2011 (19th European Signal Processing Conference 2011)*. Barcelona, Spain.
+
+99. **99** Makkiabadi, B., Jarchi, D., and Sanei, S. (2011). Blind separation and localization of correlated P300 subcomponents from single trial recordings using extended PARAFAC2 tensor model. *Proceedings of IEEE EMBC 2011*, 6955–6958. Boston, USA.
+
+100. **100** Dyrholm, M., Makeig, S., and Hansen, L.K. (2007). Model selection for convolutive ICA with an application to spatio‐temporal analysis of EEG. *Neural Computation* 19 (4): 934–955.
+
+101. **101** Wang, L. and Ohtsuki, T. (2018). Nonlinear blind source separation unifying vanishing component analysis and temporal structure. *IEEE Access* 6: 42837–42850.
+
+102. **102** Belouchrani, A., Abed‐Meraim, K., Cardoso, J.‐F., and Moulines, E. (1997). A blind source separation technique using second order statistics. *IEEE Transactions on Signal Processing* 45 (2): 434–444.
+
+103. **103** Cirillo, L. and Zoubir, A. (2005). On blind separation of nonstationary signals. *Proceedings of the 8th Symposium on Signal Processing and its Applications (ISSPA)*, Sydney, Australia.
+
+104. **104** Cherry, C.E. (1953). Some experiments in the recognition of speech, with one and two ears. *Journal of the Acoustical Society of America* 25: 975–979.
+
+105. **105** Belouchrani, A., Abed‐Mariam, K., Amin, M.G., and Zoubir, A.M. (2004). Blind source separation of nonstationary signals. *IEEE Signal Processing Letters* 11 (7): 605–608.
+
+106. **106** Golyandina, N., Nekrutkin, V., and Zhigljavsky, A. (2001). *Analysis of Time Series Structure: SSA and Related Techniques*. New York: Chapman & Hall/CRC.
+
+107. **107** Sanei, S. and Hassani, H. (2015). *Singular Spectrum Analysis of Biomedical Signals*. CRC.
+
+108. **108** Haavisto, O. (2010). Detection and analysis of oscillations in a mineral flotation circuit. *Journal of Control Engineering Practice* 18 (1): 23–30.
+
+109. **109** Eqlimi, E., Makkiabadi, B., Samadzadehaghdam, N. et al. A novel underdetermined source recovery algorithm based on k‐sparse component analysis. *Circuits, Systems, and Signal Processing* 38: 1264–1286. [https://doi.org/10.1007/s00034‐018‐0910‐9](https://doi.org/10.1007/s00034-018-0910-9).
+
+110. **110** Chichocki, A., Li, Y., Georgiev, P., and Amari, S. (2004). Beyond ICA: robust sparse signal representations. *Proceedings of the 2004 International Symposium on Circuits and Systems, ISCAS’04*, 5: V–V.
+
+111. **111** Georgiev, P., Theis, F., and Cichocki, A. (2004). Blind source separation and sparse component analysis of overcomplete mixtures. *Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing ICASSP’04*, 5: V–493.
+
+112. **112** Georgiev, P., Theis, F., and Cichocki, A. (2005). Sparse component analysis and blind source separation of underdetermined mixtures. *IEEE Transactions on Neural Networks* 16 (4): 992–996. [https://doi.org/10.1109/TNN.2005.849840](https://doi.org/10.1109/TNN.2005.849840).
+
+113. **113** Georgiev, P., Theis, F., Cichocki, A., and Bakardjian, H. (2007). Sparse component analysis: a new tool for data mining. In: *Data Mining in Biomedicine*. *Springer Optimization and Its Applications*, vol. 7 (eds. P.M. Pardalos, V.L. Boginski and A. Vazacopoulos), 91–116. Boston, MA: Springer.
+
+114. **114** Zibulevsky, M. and Pearlmutter, B.A. (2001). Blind source separation by sparse decomposition in a signal dictionary. *Neural Computation* 13 (4): 863–882.
+
+115. **115** Li, Y., Cichocki, A., and Amari, S.I. (2006). Blind estimation of channel parameters and source components for EEG signals: a sparse factorization approach. *IEEE Transactions on Neural Networks* 17 (2): 419–431.
+
+116. **116** Li, Y., Yu, Z.L., Bi, N. et al. (2014). Sparse representation for brain signal processing: a tutorial on methods and applications. *IEEE Signal Processing Magazine* 31 (3): 96–106.
+
+117. **117** Mallat, S.G. and Zhang, Z. (1993). Matching pursuits with time–frequency dictionaries. *IEEE Transactions on Signal Processing* 41 (12): 3397–3415.
+
+118. **118** Donoho, D.L., Elad, M., and Temlyakov, V.N. (2006). Stable recovery of sparse overcomplete representations in the presence of noise. *IEEE Transactions on Information Theory* 52 (1): 6–18.
+
+119. **119** Mohimani, H., Babaie‐Zadeh, M., and Jutten, C. (2009). A fast approach for overcomplete sparse decomposition based on smoothed *l*[*0*]‐norm. *IEEE Transactions on Signal Processing* 57 (1): 289–301.
+
+120. **120** He, Z., Cichocki, A., Li, Y. et al. (2009). K‐hyperline clustering learning for sparse component analysis. *Signal Processing* 89 (6): 1011–1022.
+
+121. **121** Marvasti, F., Amini, A., Haddadi, F. et al. (2012). A unified approach to sparse signal processing. *EURASIP Journal on Advances in Signal Processing* 2012 (1): 44.
+
+122. **122** Tropp, J.A. (2004). Greed is good: algorithmic results for sparse approximation. *IEEE Transactions on Information Theory* 50 (10): 2231–2242.
+
+123. **123** Needell, D. and Tropp, J.A. (2009). CoSaMP: iterative signal recovery from incomplete and inaccurate samples. *Applied and Computational Harmonic Analysis* 26 (3): 301–321.
+
+124. **124** Zhou, G., Cichocki, A., Zhang, Y., and Mandic, D.P. (2015). Group component analysis for multiblock data: common and individual feature extraction. *IEEE Transactions on Neural Networks and Learning Systems* 27 (11): 2426–2439.
+
+125. **125** Abdi‐Sargezeh, B., Valentin, A., Alarcon, G. et al. (2020). Sparse common feature analysis for detection of interictal epileptiform discharges from concurrent intracranial and scalp EEGs. *IEEE Transactions on Biomedical Engineering* [https://doi.org/10.1142/s0129065721500192](https://doi.org/10.1142/s0129065721500192).
+
+126. **126** Kaya, H., Eyben, F., Ali Salah, A., and Schuller, B. (2014). CCA based feature selection with application to continuous depression recognition from acoustic speech features. *IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)*. Florence, Italy.
+

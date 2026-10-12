@@ -1,0 +1,38 @@
+
+Although nowhere in this book do the authors attempt to comment on the physiological aspects of brain activities, there are several issues related to the nature of the original sources, their actual patterns, and the characteristics of the medium, that have to be addressed. The medium defines the path from the neurons, so‐called signal sources, to the electrodes, which are the sensors where some form of mixtures of the sources (for the case of scalp electrodes) or individual sources (e.g. for subdural electrodes) are measured.
+
+Understanding of neuronal functions and neurophysiological properties of the brain together with the mechanisms underlying the generation of signals and their recordings is however, vital for those who deal with these signals for detection, diagnosis, and treatment of brain disorders and the related diseases.
+
+Examining brain activity or abnormality, however, is not limited to the use of EEG. For the abnormalities which affect the brain structure, different radiographical methods can be used. Also, for detecting the brain functional abnormalities, which is the main agenda for activity detection and functional monitoring, magnetoencephalography (MEG) and functional magnetic resonance imaging (fMRI) may be used. However, MEG is expensive and not readily accessible, and fMRI has very low temporal resolution and is not widely available. Therefore, EEG remains the main functional brain scanning modality as it is cheap, portable, and widely available.
+
+We begin by providing a brief history of EEG measurements and looking at the journey from the time the brain function was initially recognized to the current time when new techniques in data processing, machine learning, and artificial intelligence have become popular research focuses.
+
+## 1.2 History
+
+The first understanding of the brain was in 1700 BCE when Imhotep lived in Egypt (in Edwin Smith Surgical Papyrus). At that time the hieroglyphic for 'brain' was presented as that in [Figure 1.1](#c01.xhtml#c1-fig-0001). Then, during 460–379 BCE, Hippocrates discussed and introduced epilepsy as a disturbance of the brain. Since then many physicians, clinicians, and philosophers from around the world, particularly from Greece (Roman) and Iran (Persian), have encountered various brain diseases. In his Canon of Medicine (Al‐Qanun fi al‐Tibb), Avicenna (980–1037, also known as Abu Ali Sina), a Persian physician and philosopher, categorizes the causes of epilepsy into two main groups: those caused by brain diseases and those associated with the abnormalities and diseases of other organs.
+
+However, the history of EEG, as an instrument to record the brain activity, goes back to when for the first time some activity of the brain was recorded or displayed. Carlo Matteucci (1811–1868, Pisa, Italy) and Emil Du Bois‐Reymond (1818–1896, Berlin, Germany) were the first people who registered the electrical signals emitted from muscle nerves using a galvanometer and established the concept of neurophysiology [[1]](#c01.xhtml#c1-bib-0001), [[2]](#c01.xhtml#c1-bib-0002). However, the concept of `action current` introduced by Hermann Von Helmholtz (1821–1894, Potsdam Germany) [[3]](#c01.xhtml#c1-bib-0003) clarified and confirmed the negative variations occurring during muscle contraction via measuring the speed of frog nerve impulses in 1849.
+
+Richard Caton (British, 1842–1926) measured the brain activities of rabbits and monkeys from over the cortex in 1875. He discovered the electrical nature of the brain and laid the groundwork for Hans Berger to discover alpha wave activity in the human brain. He also placed two electrodes over the human scalp to record for the first time the brain activity in the form of electrical signals in 1875. Since then, the concepts of electro‐ (referring to registration of brain electrical activities) encephal‐ (referring to emitting the signals from head) and gram (or graphy), which means drawing or writing, were combined so that the term EEG was henceforth used to denote electrical neural activity of the brain.
+
+![Figure 1.1 Hieroglyphic symbol for the ancient Egyptian word for 'brain'.](images/c01f001.gif)
+
+**Figure 1.1** Hieroglyphic symbol for the ancient Egyptian word for 'brain'.
+
+![Figure 1.2 Physiologists Adolf Beck (Polish, 1863–1942) on the left and Vladimir Pravdich‐Neminsky (Ukrainian, 1879–1952) on the right who performed the first recording of brain activities from over the skull.](images/c01f002.jpg)
+
+**Figure 1.2** Physiologists Adolf Beck (Polish, 1863–1942) on the left and Vladimir Pravdich‐Neminsky (Ukrainian, 1879–1952) on the right who performed the first recording of brain activities from over the skull.
+
+Fritsch (1838–1927) and Hitzig (1838–1907) discovered that the human cerebral can be electrically stimulated. Vasily Yakovlevich Danilevsky (1852–1939) followed Caton's work and finished his PhD thesis in the investigation of brain physiology in 1877 [[4]](#c01.xhtml#c1-bib-0004). In this work he investigated the brain activity following electrical stimulation as well as spontaneous electrical activity in the brain of animals.
+
+The cerebral electrical activity observed over the visual cortex of different species of animals was reported by Ernst Fleischl von Marxow (1845–1891). Napoleon Cybulski (1854–1919) provided EEG evidence of an epileptic seizure in a dog caused by electrical stimulation.
+
+The idea of the association of epileptic attacks with abnormal electrical discharges was expressed by Kaufman [[5]](#c01.xhtml#c1-bib-0005).
+
+Adolf Beck (Polish, 1863–1942) and Vladimir Pravdich‐Neminsky (Ukrainian, 1879–1952) measured the EEG from over the skull of dogs. Therefore, these two scientists are indeed the pioneers in scalp EEG recording ([Figure 1.2](#c01.xhtml#c1-fig-0002)).
+
+Pravdich‐Neminsky recorded EEG from the brain, termed the dura, and the intact skull of a dog in 1912. He observed a 12–14 cycles s^(−1) rhythm under normal conditions which slowed under asphyxia and later called it the `electrocerebrogram`.
+
+Although much research work on EEG principles and measurements has been performed by the above scientists, Hans Berger (1873–1941, Germany) was credited and named the first one for discovering and measuring human EEG signals. He began his study of human EEGs in 1920 [[6]](#c01.xhtml#c1-bib-0006). Berger is well known by almost all electroencephalographers. He started working with a string galvanometer in 1910, then migrated to a smaller Edelmann model, and after 1924, to a larger Edelmann model. In 1926, Berger started to use the more powerful Siemens double coil galvanometer (attaining a sensitivity of 130 μV cm^(−1)) [[7]](#c01.xhtml#c1-bib-0007). His first report of human EEG recordings of one to three minutes duration on photographic paper was in 1929. In this recording he only used a one channel bipolar method with fronto‐occipital leads. Recording of the EEG became popular in 1924. The first report of 1929 by Berger included the alpha rhythm, as the major component of the EEG signals as described later in this chapter, and the alpha blocking response.
+
+During the 1930s, the first EEG recording of sleep spindles was undertaken by Berger. He then reported the effect of hypoxia on the human brain, the nature of several diffuse and localized brain disorders, and gave an inkling of epileptic discharges [[8]](#c01.xhtml#c1-bib-0008). During this time another group established in Berlin‐Buch and led by Kornmüller, provided more precise recording of the EEG [[9]](#c01.xhtml#c1-bib-0009). Berger was also interested in cerebral localization and particularly in the localization of brain tumours. He also found some correlation between mental activities and the changes in the EEG signals.

@@ -1,0 +1,38 @@
+
+
+## 约束优化问题与拉格朗日乘数法
+
+(13.12)![equation](images/c13-disp-0013.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mo>min</mo><msubsup><mfenced open="&#8214;" close="&#8214;"><mrow><msubsup><mi mathvariant="bold">w</mi><mn>1</mn><mi>T</mi></msubsup><mi mathvariant="bold">X</mi><mo>&#8722;</mo><msub><mi mathvariant="bold">r</mi><mn>1</mn></msub></mrow></mfenced><mn>2</mn><mn>2</mn></msubsup><mspace width="1.5em"/><mtext>subject to</mtext><mspace width="1.25em"/><msubsup><mi mathvariant="bold">w</mi><mn>1</mn><mi>T</mi></msubsup><msub><mi mathvariant="bold">a</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></math>
+
+其中 `w` 是分离向量，`r`[1] 是第一个分量的模板（例如 P3a），`a`[2] 是第二个分量（例如 P3b）。`r`[1] 被建模为伽马函数，上述约束问题通过拉格朗日乘数法转化为无约束问题。新的代价函数形式如下：
+
+(13.13)![equation](images/c13-disp-0014.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi>J</mi><mo>=</mo><msubsup><mfenced open="&#8214;" close="&#8214;"><mrow><msubsup><mi mathvariant="bold">w</mi><mn>1</mn><mi>T</mi></msubsup><mi mathvariant="bold">X</mi><mo>&#8722;</mo><msub><mi mathvariant="bold">r</mi><mn>1</mn></msub></mrow></mfenced><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi mathvariant="bold">w</mi><mn>1</mn><mi>T</mi></msubsup><msub><mi mathvariant="bold">a</mi><mn>2</mn></msub><mi>q</mi><mo>=</mo><mn>0</mn></math>
+
+其中 `q` 是拉格朗日乘数。该参数也已被准确估计为 [\[44\]](#c13.xhtml#c13-bib-0044)：
+
+(13.14)![equation](images/c13-disp-0015.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi>q</mi><mo>=</mo><mfrac><mrow><mn>2</mn><msub><mi mathvariant="bold">r</mi><mn>1</mn></msub><msup><mi mathvariant="bold">X</mi><mi>T</mi></msup><msubsup><mi mathvariant="bold">C</mi><mi>x</mi><mrow><mo form="prefix">&#8722;</mo><mn>1</mn></mrow></msubsup><msub><mi mathvariant="bold">a</mi><mn>2</mn></msub></mrow><mrow><msubsup><mi mathvariant="bold">a</mi><mn>2</mn><mi>T</mi></msubsup><msubsup><mi mathvariant="bold">C</mi><mi>x</mi><mrow><mo form="prefix">&#8722;</mo><mn>1</mn></mrow></msubsup><msub><mi mathvariant="bold">a</mi><mn>2</mn></msub></mrow></mfrac><mspace width="0.2em"/></math>
+
+其中 ![images](images/c13-i0012.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><msubsup><mi mathvariant="bold">C</mi><mi>x</mi><mrow><mo form="prefix">&#8722;</mo><mn>1</mn></mrow></msubsup></math> 是 `X` 的逆协方差矩阵。`a`[1] 和 `a`[2] 的合适选择分别被考虑为 `r`[1] 和 `r`[2] 在 `X` 上的投影，即 `r`[1]`X` 和 `r`[2]`X`。通过使用为寻找 P3a 和 P3b 分别定义的参数，关于 `w`[1] 和 `w`[2] 最小化 `J`（第二个源 P3b 以类似方式处理）得到 [\[44\]](#c13.xhtml#c13-bib-0044)：
+
+(13.15)![equation](images/c13-disp-0016.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><msub><mi mathvariant="bold">w</mi><mn>1</mn></msub><mo>=</mo><msubsup><mi mathvariant="bold">C</mi><mi>x</mi><mrow><mo form="prefix">&#8722;</mo><mn>1</mn></mrow></msubsup><mi mathvariant="bold">X</mi><msubsup><mi mathvariant="bold">r</mi><mn>1</mn><mi>T</mi></msubsup><mo>&#8722;</mo><mn>0.5</mn><mi>q</mi><msubsup><mi mathvariant="bold">C</mi><mi>x</mi><mrow><mo form="prefix">&#8722;</mo><mn>1</mn></mrow></msubsup><mi mathvariant="bold">X</mi><msubsup><mi mathvariant="bold">r</mi><mn>2</mn><mi>T</mi></msubsup></math>
+
+(13.16)![equation](images/c13-disp-0017.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><msub><mi mathvariant="bold">w</mi><mn>2</mn></msub><mo>=</mo><msubsup><mi mathvariant="bold">C</mi><mi>x</mi><mrow><mo form="prefix">&#8722;</mo><mn>1</mn></mrow></msubsup><mi mathvariant="bold">X</mi><msubsup><mi mathvariant="bold">r</mi><mn>2</mn><mi>T</mi></msubsup><mo>&#8722;</mo><mn>0.5</mn><mi>q</mi><msubsup><mi mathvariant="bold">C</mi><mi>x</mi><mrow><mo form="prefix">&#8722;</mo><mn>1</mn></mrow></msubsup><mi mathvariant="bold">X</mi><msubsup><mi mathvariant="bold">r</mi><mn>1</mn><mi>T</mi></msubsup></math>
+
+此外，`r`[1] 和 `r`[2] 的伽马函数具有以下一般形式：
+
+(13.17)![equation](images/c13-disp-0018.png)<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" overflow="scroll"><mi>r</mi><mfenced open="(" close=")"><mi>t</mi></mfenced><mo>=</mo><mi>&#946;</mi><msup><mi>t</mi><mrow><mi>k</mi><mo>&#8722;</mo><mn>1</mn></mrow></msup><mo mathvariant="italic">exp</mo><mfenced open="(" close=")"><mfrac><mrow><mo form="prefix">&#8722;</mo><mi>t</mi></mrow><mi>&#952;</mi></mfrac></mfenced></math>
+
+其中 `k` > 0 是形状参数，`θ` > 0 是尺度参数，`β` 是归一化常数。
+
+## 仿真验证
+
+为了验证该方法，使用具有不同相关性水平的伽马函数，在两个不同的假设脑部位置生成了两个分量。利用这些源，生成了一个 20 通道的数据集。每个通道包含 40 次试验。在所有试验中，P3a 的潜伏期固定为 150 ms，P3b 的潜伏期固定为 200 ms。P3a 和 P3b 的振幅在不同试验中变化。噪声方差在所有试验中保持固定。
+
+在第一次尝试中，该方法被应用于仿真数据，将参考信号视为实际合成源。这被称为 **exact match**（精确匹配）。在另一次试验中，P3a 和 P3b 的参考信号与实际合成源不完全相同。这些 P3a 和 P3b 的波形被视为具有不同参数的伽马波 [\[44\]](#c13.xhtml#c13-bib-0044)。考虑这些参考信号的方法称为 **mismatch**（失配）。由于本工作中的时间相关性较高，因此将结果与空间 PCA 而非时间 PCA 进行比较是合理的 [[45](#c13.xhtml#c13-bib-0045), [46](#c13.xhtml#c13-bib-0046)]。因此，使用了空间 PCA（来自 ERP PCA Toolkit [[47](#c13.xhtml#c13-bib-0047)])，其中采用 Infomax [[48](#c13.xhtml#c13-bib-0048)] 作为旋转算法以对信号混合进行白化。结果表明，上述方法优于空间 PCA。相反，**mismatch** 系统的表现与 **exact match** 系统非常接近，后者的源模型与模板完全相同。结果还根据原始源与估计源之间的相关性，在 0 和 -5 dB 信噪比 (SNR) 下进行了比较，详见 [Figure 13.4](#c13.xhtml#c13-fig-0004)。
+
+## 实际 EEG 数据应用
+
+在一项应用中记录了 EEG 数据。刺激通过插入耳道的耳塞呈现。1 kHz 的音调在 2 kHz 的音调中随机且不频繁地播放 40 次，后者更频繁地出现 160 次。它们的强度为 65 dB，稀有音调和频繁音调的持续时间分别为 10 ms 和 50 ms。受试者被要求在听到低音调 (1 kHz) 时尽快按下按钮。该任务中测量的 ERP 分量包括 N100、P200、N200、P3a 和 P3b。选取了与稀有音调相关的 40 次试验，并采用上述方法估计 P3a 和 P3b 的潜伏期、振幅和头皮投影。这些试验及其在 Fz 导道上的平均值如 [Figure 13.5](#c13.xhtml#c13-fig-0005)(a) 所示。估计的振幅也描绘在 [Figure 13.5](#c13.xhtml#c13-fig-0005)(b) 中。
+
+![Figure 13.4 Comparison of three methods (spatial PCA, exact match and mismatch) versus the correlation coefficients between the original and estimated scalp projections of P3a and P3b in different spatial correlations and two SNR levels of 0 and −5 dB.](images/c13f004.gif)
+

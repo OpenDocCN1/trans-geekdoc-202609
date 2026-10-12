@@ -1,0 +1,38 @@
+
+In [34] the authors have shown that six features namely, power spectral density (`PSD`), differential entropy (`DE`), differential asymmetry (`DASM`), rational asymmetry (`RASM`), asymmetry (`ASM`), and differential causality (`DCAU`) features from EEG, are associated with emotions and can be classified for emotion recognition.
+
+Further unpublished research has focused on brain connectivity for emotion recognition. The patterns of interdependency between different brain regions for emotional and non‐emotional film stimuli from EEGs have been analyzed and the emotion‐related differences evaluated. A simple measure of synchronization index (`SI`) has then been used to detect interdependencies in EEG signals mainly for happiness and sadness. The `SI` significantly changes/increases during emotional stimulation and, in particular, during sadness, yielding an enhanced connectivity among frontal channels. Conversely, happiness is associated with a wider synchronization among frontal and occipital sites, although happiness itself was less synchronized [35].
+
+## 2.6 Neurodevelopmental Disorders
+
+Neurodevelopmental disorders are a group of disorders that affect the development of the nervous system, leading to abnormal brain function which may affect emotion, learning ability, self‐control, and memory [36]. Such disorders, often starting from childhood, though their effects vary over time, usually remain with the subject and affect the person throughout their lifetime.
+
+Examples of neurodevelopmental disorders in children include attention deficit hyperactivity disorder (`ADHD`), autism, also called autism spectrum disorder (`ASD`), learning disabilities, intellectual disability (also known as mental retardation), conduct disorders, cerebral palsy, and impairments in vision and hearing. One may add depression to this category of disorders.
+
+`ADHD`, `ASD`, and depression have been under EEG studies in recent years and therefore some examples are provided in the later chapters of this book.
+
+## 2.7 Abnormal EEG Patterns
+
+Variations in the EEG patterns for certain states of the subject indicate abnormality. This may be due to distortion and disappearance of abnormal patterns, appearance and increase of abnormal patterns, or disappearance of all patterns. Sharbrough [37] divided the nonspecific abnormalities in the EEGs into three categories: (i) widespread intermittent slow‐wave abnormalities often in the delta wave range and associated with brain dysfunction, (ii) bilateral persistent EEG usually associated with impaired conscious cerebral reactions, and (iii) focal persistent EEG usually associated with focal cerebral disturbance.
+
+The first category is a burst type signal, which is attenuated by alerting the individual and eye opening, and accentuated with eye closure, hyperventilation, or drowsiness. The peak amplitude in adults is usually localized in the frontal region and influenced by age. In children, however, it appears over the occipital or posterior head region. Early findings showed that this abnormal pattern frequently appears with an increased intracranial pressure with tumour or aqueductal stenosis. Also, it correlates with grey matter disease, both in cortical and subcortical locations. However, it can be seen in association with a wide variety of pathological processes varying from systemic toxic or metabolic disturbances to focal intracranial lesions.
+
+Regarding the second category, i.e. bilateral persistent EEG, the phenomenon in different stages of impaired, conscious, purposeful responsiveness are etiologically nonspecific and the mechanisms responsible for their generation are only partially understood. However, the findings in connection with other information concerning aetiology and chronicity may be helpful in arriving more quickly at an accurate prognosis concerning the patient's chance of recovering his previous conscious life.
+
+As for the third category, i.e. focal persistent EEG, these abnormalities may be in the form of distortion and disappearance of normal patterns, appearance and increase of abnormal patterns, or disappearance of all patterns, but such changes are seldom seen at the cerebral cortex. The focal distortion of normal rhythms may produce an asymmetry of amplitude, frequency, or reactivity of the rhythm. The unilateral loss of reactivity of a physiological rhythm, such as the loss of reactivity of the alpha rhythm to eye opening [38] or to mental alerting [39], may reliably identify the focal side of abnormality. A focal lesion may also distort or eliminate the normal activity of sleep‐inducing spindles and vertex waves.
+
+Focal persistent nonrhythmic delta activity (`PNRD`) may be produced by focal abnormalities. This is one of the most reliable findings of a focal cerebral disturbance. The more persistent, the less reactive, and the more nonrhythmic and polymorphic is such focal slowing, the more reliable an indicator it becomes for the appearance of a focal cerebral disturbance [40]–[42]. There are other cases such as focal inflammation, trauma, vascular disease, brain tumour, or almost any other cause of focal cortical disturbance, including an asymmetrical onset of CNS degenerative diseases that may result in similar abnormalities in the brain signal patterns.
+
+The scalp EEG amplitude from cerebral cortical generators underlying a skull defect is also likely to increase unless acute or chronic injury has resulted in significant depression of underlying generator activity. The distortions in cerebral activities are because focal abnormalities may alter the interconnections, number, frequency, synchronicity, voltage output, and access orientation of individual neuron generators, as well as the location and amplitude of the source signal itself.
+
+With regards to the three categories of abnormal EEGs, their identification and classification requires a dynamic tool for various neurological conditions and any other available information. A precise characterization of the abnormal patterns leads to a clearer insight into some specific pathophysiologic reactions, such as epilepsy, or specific disease processes, such as subacute sclerosing panencephalitis (`SSPE`) or Creutzfeldt–Jakob disease (`CJD`) [37].
+
+Over and above the reasons mentioned above there are many other causes for abnormal EEG patterns. The most common abnormalities are briefly described in the following sections.
+
+## 2.8 Ageing
+
+The ageing process affects the normal cerebral activity in awake and sleep human, and changes the response of the brain to stimuli. The changes stem from reducing the number of neurons and due to a general change in the brain pathology. This pathology indicates that the frontal and temporal lobes of the brain are more affected than the parietal lobes, resulting in shrinkage of large neurons and increasing the number of small neurons and glia [43]. A diminished cortical volume indicates that there is age related neuronal loss. A general cause for ageing of the brain may be the decrease in cerebral blood flow [43].
+
+A reduction of the alpha frequency is probably the most frequent abnormality in EEG. This often introduces a greater anterior spread to frontal regions in the elderly and reduces the alpha wave blocking response and reactivity. The diminished mental function is somehow related to the degree of bilateral slowing in the theta and delta waves [43].
+
+Although the changes in high‐frequency brain rhythms have not been well established, some researchers have reported an increase in beta wave activity. This change in beta wave activity may be considered as an early indication of intellectual loss [43].
