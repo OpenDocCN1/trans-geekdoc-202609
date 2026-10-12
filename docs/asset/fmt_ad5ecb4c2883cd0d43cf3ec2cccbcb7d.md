@@ -1,0 +1,275 @@
+
+# 函数：`L_Layer_DeepModel`
+
+执行一个 L 层深度学习模型。
+
+## 代码实现
+
+```r
+L_Layer_DeepModel <- function(X, Y, layersDimensions,
+                              hiddenActivationFunc = 'relu',
+                              outputActivationFunc = 'sigmoid',
+                              learningRate = 0.5,
+                              lambd = 0,
+                              keep_prob = 1,
+                              numIterations = 10000,
+                              initType = "default",
+                              print_cost = FALSE) {
+
+  # Initialize costs vector as NULL
+  costs <- NULL
+
+  # Parameters initialization.
+  if (initType == "He") {
+    parameters = HeInitializeDeepModel(layersDimensions)
+  } else if (initType == "Xav") {
+    parameters = XavInitializeDeepModel(layersDimensions)
+  } else {
+    print("Here")
+    parameters = initializeDeepModel(layersDimensions)
+  }
+
+  # Loop (gradient descent)
+  for (i in 0:numIterations) {
+
+    # Forward propagation: [LINEAR -> RELU]*(L-1) -> LINEAR -> SIGMOID/SOFTMAX.
+    retvals = forwardPropagationDeep(X, parameters, keep_prob,
+                                     hiddenActivationFunc,
+                                     outputActivationFunc = outputActivationFunc)
+
+    AL <- retvals[['AL']]
+    caches <- retvals[['caches']]
+    dropoutMat <- retvals[['dropoutMat']]
+
+    # Compute cost.
+    if (lambd == 0) {
+      cost <- computeCost(AL,
+                          Y, outputActivationFunc = outputActivationFunc,
+                          numClasses = layersDimensions[length(layersDimensions)])
+    } else {
+      cost <- computeCostWithReg(parameters, AL, Y, lambd,
+                                 outputActivationFunc = outputActivationFunc,
+                                 numClasses = layersDimensions[length(layersDimensions)])
+    }
+
+    # Backward propagation.
+    gradients = backwardPropagationDeep(AL, Y, caches, dropoutMat, lambd, keep_prob, hiddenActivationFunc,
+                                        outputActivationFunc = outputActivationFunc,
+                                        numClasses = layersDimensions[length(layersDimensions)])
+
+    # Update parameters.
+    parameters = gradientDescent(parameters, gradients, learningRate, outputActivationFunc = outputActivationFunc)
+
+    if (i %% 1000 == 0) {
+      costs = c(costs, cost)
+      print(cost)
+    }
+  }
+
+  retvals <- list("parameters" = parameters, "costs" = costs)
+  return(retvals)
+}
+```
+
+# 函数：`L_Layer_DeepModel_SGD`
+
+执行一个带有随机梯度下降 (SGD) 的 L 层深度学习模型。
+
+## 输入参数
+
+| 参数 | 说明 |
+| :--- | :--- |
+| `X` | 输入特征 |
+| `Y` | 输出标签 |
+| `layersDimensions` | 各层维度向量 |
+| `hiddenActivationFunc` | 隐藏层激活函数 (`relu` / `tanh`) |
+| `outputActivationFunc` | 输出层激活函数 (`sigmoid` / `softmax`) |
+| `learningRate` | 学习率 |
+| `mini_batch_size` | 小批量大小 |
+| `num_epochs` | 训练轮数 |
+| `print_cost` | 是否打印成本 |
+
+## 输出
+
+每次迭代后更新的权重。
+
+## 代码实现
+
+```r
+L_Layer_DeepModel_SGD <- function(X, Y, layersDimensions,
+                                  hiddenActivationFunc = 'relu',
+                                  outputActivationFunc = 'sigmoid',
+                                  learningRate = .3,
+                                  mini_batch_size = 64,
+                                  num_epochs = 2500,
+                                  print_cost = FALSE) {
+
+  set.seed(1)
+
+  # Initialize costs vector as NULL
+  costs <- NULL
+
+  # Parameters initialization.
+  parameters = initializeDeepModel(layersDimensions)
+
+  seed = 10
+
+  # Loop for number of epochs
+  for (i in 0:num_epochs) {
+
+    seed = seed + 1
+    minibatches = random_mini_batches(X, Y, mini_batch_size, seed)
+
+    for (batch in 1:length(minibatches)) {
+
+      mini_batch_X = minibatches[[batch]][['mini_batch_X']]
+      mini_batch_Y = minibatches[[batch]][['mini_batch_Y']]
+
+      # Forward propagation:
+      retvals = forwardPropagationDeep(mini_batch_X,
+                                       parameters, hiddenActivationFunc,
+                                       outputActivationFunc = outputActivationFunc)
+
+      AL <- retvals[['AL']]
+      caches <- retvals[['caches']]
+
+      # Compute cost.
+      cost <- computeCost(AL,
+                          mini_batch_Y, outputActivationFunc = outputActivationFunc,
+                          numClasses = layersDimensions[length(layersDimensions)])
+
+      # Backward propagation.
+      gradients = backwardPropagationDeep(AL, mini_batch_Y,
+                                          caches, hiddenActivationFunc,
+                                          outputActivationFunc = outputActivationFunc,
+                                          numClasses = layersDimensions[length(layersDimensions)])
+
+      # Update parameters.
+      parameters = gradientDescent(parameters, gradients, learningRate, outputActivationFunc = outputActivationFunc)
+    }
+
+    if (i %% 100 == 0) {
+      costs = c(costs, cost)
+      print(cost)
+    }
+  }
+
+  retvals <- list("parameters" = parameters, "costs" = costs)
+  return(retvals)
+}
+```
+
+# 函数：`predict`
+
+根据给定输入预测输出。
+
+## 输入参数
+
+*   `parameters`：模型参数
+*   `X`：输入数据
+*   `keep_prob`：Dropout 保留概率 (默认 1)
+*   `hiddenActivationFunc`：隐藏层激活函数 (默认 `relu`)
+
+## 输出
+
+预测结果 (布尔值)。
+
+## 代码实现
+
+```r
+predict <- function(parameters, X, keep_prob = 1, hiddenActivationFunc = 'relu') {
+  fwdProp <- forwardPropagationDeep(X, parameters, keep_prob, hiddenActivationFunc)
+  predictions <- fwdProp$AL > 0.5
+  return(predictions)
+}
+```
+
+# 函数：`plotDecisionBoundary`
+
+绘制决策边界 (使用 `ggplot2`)。
+
+## 输入参数
+
+*   `z`：数据集
+*   `retvals`：包含参数的返回列表
+*   `keep_prob`：Dropout 保留概率
+*   `hiddenActivationFunc`：隐藏层激活函数
+*   `lr`：学习率 (用于标题显示)
+
+## 代码实现
+
+```r
+plotDecisionBoundary <- function(z, retvals, keep_prob = 1, hiddenActivationFunc = "sigmoid", lr = 0.5) {
+
+  # Find the minimum and maximum for the data
+  xmin <- min(z[, 1])
+  xmax <- max(z[, 1])
+  ymin <- min(z[, 2])
+  ymax <- max(z[, 2])
+
+  # Create a grid of values
+  a = seq(xmin, xmax, length = 100)
+  b = seq(ymin, ymax, length = 100)
+  grid <- expand.grid(x = a, y = b)
+  colnames(grid) <- c('x1', 'x2')
+  grid1 <- t(grid)
+
+  # Predict the output for this grid
+  q <- predict(retvals$parameters, grid1, keep_prob = 1, hiddenActivationFunc)
+  q1 <- t(data.frame(q))
+  q2 <- as.numeric(q1)
+  grid2 <- cbind(grid, q2)
+  colnames(grid2) <- c('x1', 'x2', 'q2')
+
+  z1 <- data.frame(z)
+  names(z1) <- c("x1", "x2", "y")
+  atitle = paste("Decision boundary for learning rate:", lr)
+
+  # Plot the contour of the boundary
+  ggplot(z1) +
+    geom_point(data = z1, aes(x = x1, y = x2, color = y)) +
+    stat_contour(data = grid2, aes(x = x1, y = x2, z = q2, color = q2), alpha = 0.9) +
+    ggtitle(atitle) + scale_colour_gradientn(colours = brewer.pal(10, "Spectral"))
+}
+```
+
+# 函数：`computeScores`
+
+计算给定数据集的概率分数。
+
+## 输入参数
+
+*   `parameters`：模型参数
+*   `X`：输入数据
+*   `hiddenActivationFunc`：隐藏层激活函数 (默认 `relu`)
+
+## 输出
+
+输出概率 (`AL`)。
+
+## 代码实现
+
+```r
+computeScores <- function(parameters, X, hiddenActivationFunc = 'relu') {
+  fwdProp <- forwardPropagationDeep(X, parameters, hiddenActivationFunc)
+  scores <- fwdProp$AL
+  return(scores)
+}
+```
+
+# 函数：`random_mini_batches`
+
+创建随机小批量数据。
+
+## 输入参数
+
+*   `X`：输入特征
+*   `Y`：输出标签
+*   `miniBatchSize`：小批量大小 (默认 64)
+*   `seed`：随机种子 (默认 0)
+
+## 输出
+
+`mini_batches` 列表。
+
+## 代码实现
