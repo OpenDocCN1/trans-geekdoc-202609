@@ -1,0 +1,180 @@
+
+During prediction, the forward computation of data also needs to be processed by the BN layer, but it does not need and should not perform the BN operation again. This requires using the determined BN layer mean, variance, and parameters (such as `β`, `γ`) from the training process for transformation. However, the mean and mean squared error calculated at each iteration step during the iteration process are different; the mean and variance used for prediction should not rely solely on the result of a certain iteration step. For this, one can average the means and mean squared errors of all iteration steps, usually using the **Moving Average** method to calculate the moving mean and variance.
+
+If `running_mu` and `running_var` represent the moving averages of the mean and variance during the training process, the calculation code is as follows:
+
+```python
+running_mu = momentum * running_mu + (1 - momentum) * mu
+running_var = momentum * running_var + (1 - momentum) * var
+```
+
+即对当前均值和方差的移动平均与当前样本的均值和方差进行简单的加权平均。动量参数 `momentum` 表示移动平均的比例。
+
+预测时的前向计算可以通过移动平均和公式进行变换：
+
+```python
+X_flat = X.ravel().reshape(X.shape[0],-1)
+#### normalization
+X_hat = (X_flat - running_mean) / np.sqrt(running_var + eps)
+#### translate and pan
+out = self.gamma * X_hat + self.beta    
+```
+
+### 5.3.2 批归一化的反向推导
+
+如果已知外部函数 `f` 对 BN 层输出 `z` 的梯度，则可以根据链式求导法则计算损失函数 `f` 对 `x`、`β` 和 `γ` 的梯度。
+
+由 $z = \gamma \odot \hat{\mathbf{x}} + \beta$，可得：
+
+$\frac{\partial f}{\partial\beta} = \sum\limits_{i = 1}^{m}\frac{\partial f}{\partial z_{i}}\frac{\partial z_{i}}{\partial \beta} = \sum\limits_{i = 1}^{m}\frac{\partial f}{\partial z_{i}}$
+
+$\frac{\partial f}{\partial\gamma} = \sum\limits_{i = 1}^{m}\frac{\partial f}{\partial z_{i}}\frac{\partial z_{i}}{\partial \gamma} = \sum\limits_{i = 1}^{m}\frac{\partial f}{\partial z_{i}} \cdot {\hat{x}}_{i}$
+
+$\frac{\partial f}{\partial{\hat{x}}_{i}} = \frac{\partial f}{\partial z_{i}} \cdot \frac{\partial z_{i}}{\partial{\hat{x}}_{i}} = \frac{\partial f}{\partial z_{i}} \cdot \gamma$
+
+如何根据已知的 $\frac{\partial f}{\partial{\hat{x}}_{i}}$ 求 $\frac{\partial f}{\partial x_{i}}$？
+
+因为 ${\hat{x}}_{i} = \frac{(x_{i} - \mu)}{\sqrt{\sigma^{2} + \epsilon}}$，其中 $\mu$、$\sigma^{2}$ 也是 $x$ 的函数，所以：
+
+$\frac{\partial f}{\partial x_{i}} = \frac{\partial f}{\partial{\hat{x}}_{i}} \cdot \frac{\partial{\hat{x}}_{i}}{\partial x_{i}} + \frac{\partial f}{\partial\mu} \cdot \frac{\partial\mu}{\partial x_{i}} + \frac{\partial f}{\partial\sigma^{2}} \cdot \frac{\partial\sigma^{2}}{\partial x_{i}}$
+
+由以下公式：
+
+${\hat{x}}_{i} = \frac{(x_{i} - \mu)}{\sqrt{\sigma^{2} + \epsilon}}$
+
+$\sigma^{2} = \frac{1}{m}\sum\limits_{i = 1}^{m}(x_{i} - \mu)^{2}$
+
+$\mu = \frac{1}{m}\sum\limits_{i = 1}^{m}x_{i}$
+
+可得：
+
+$\frac{\partial{\hat{x}}_{i}}{\partial x_{i}} = \frac{1}{\sqrt{\sigma^{2} + \epsilon}}$
+
+$\frac{\partial\mu}{\partial x_{i}} = \frac{1}{m}$
+
+$\frac{\partial\sigma^{2}}{\partial x_{i}} = \frac{2(x_{i} - \mu)}{m}$
+
+因此有：
+
+$\frac{\partial f}{\partial x_{i}} = (\frac{\partial f}{\partial{\hat{x}}_{i}}\frac{1}{\sqrt{\sigma^{2} + \epsilon}}) + (\frac{\partial f}{\partial\mu}\frac{1}{m}) + (\frac{\partial f}{\partial\sigma^{2}}\frac{2(x_{i} - \mu)}{m})$
+
+其中之一：
+
+$\frac{\partial f}{\partial\sigma^{2}} = \frac{\partial f}{\partial\hat{x}} \cdot \frac{\partial\hat{x}}{\partial\sigma^{2}} = \frac{\partial f}{\partial\hat{x}} \cdot ( - 0.5(x - \mu) \cdot (\sigma^{2} + \epsilon)^{- 1.5}) = - (0.5\sum\limits_{j = 1}^{m}\frac{\partial f}{\partial{\hat{x}}_{j}}(x_{j} - \mu)(\sigma^{2} + \epsilon)^{- 1.5})$
+
+$\frac{\partial f}{\partial\mu} = (\sum\limits_{i = 1}^{m}\frac{\partial f}{\partial{\hat{x}}_{i}} \cdot \frac{- 1}{\sqrt{\sigma^{2} + \epsilon}}) + (\frac{\partial f}{\partial\sigma^{2}} \cdot \frac{1}{m}\sum\limits_{i = 1}^{m} - 2(x_{i} - \mu))$
+
+### 5.3.3 批归一化的代码实现
+
+以下代码用一个类封装了 BN 层的前向计算和反向推导：
+
+```python
+from NeuralNetwork import *
+
+class BatchNorm_1d(Layer):
+    def __init__(self,num_features,gamma_beta_method = None,eps = 1e-8,momentum = 0.9):
+       # self.d_X, self.h_X, self.w_X = X_dim
+       # self.gamma = np.ones((1, int(np.prod(X_dim)) ))
+       # self.beta = np.zeros((1, int(np.prod(X_dim))))
+       # self.params = [self.gamma,self.beta]
+        super().__init__()
+        self.eps= eps
+        self.momentum = momentum
+        if not gamma_beta_method:
+            self.gamma = np.ones((1, num_features ))
+            self.beta = np.zeros((1, num_features ))             
+        else:
+            self.gamma = np.random.randn(1, num_features)
+            self.beta =  np.random.randn(1, num_features)  #np.zeros((1, num_features )) 
+         
+        self.running_mu = np.zeros((1, num_features ))  
+        self.running_var = np.zeros((1, num_features )) 
+        
+        self.params = [self.gamma,self.beta]
+        self.grads = [np.zeros_like(self.gamma),np.zeros_like(self.beta)]
+
+   def forward(self,X,training = True):
+        if training:
+            self.n_X = X.shape[0]
+            self.X_shape = X.shape
+
+            self.X_flat = X.ravel().reshape(self.n_X,-1)
+            self.mu = np.mean(self.X_flat,axis=0)
+            self.var = np.var(self.X_flat, axis=0)   # var = 1 / float(N) * np.sum((x - mu) ** 2, axis=0)
+            self.X_hat = (self.X_flat - self.mu)/np.sqrt(self.var +self.eps)
+            out = self.gamma * self.X_hat + self.beta
+
+            # Compute the moving average of means and variances
+            running_mu, running_var, momentum = self.running_mu, self.running_var, self.momentum
+            running_mu = momentum * running_mu + (1 - momentum) * self.mu
+            running_var = momentum * running_var + (1 - momentum) * self.var
+        else:
+            X_flat = X.ravel().reshape(X.shape[0],-1)
+            # Normalization
+            X_hat = (X_flat - running_mean) / np.sqrt(running_var + eps)
+            # zoom and pan
+            out = self.gamma * X_hat + self.beta
+        return out.reshape(self.X_shape)
+
+    
+    def __call__(self,X):
+        return self.forward(X)
+
+    def backward(self,dout):
+        eps = self.eps
+        dout = dout.ravel().reshape(dout.shape[0],-1)
+        X_mu = self.X_flat - self.mu
+        var_inv = 1./np.sqrt(self.var + eps)
+        
+        dbeta = np.sum(dout,axis=0)
+        dgamma = np.sum(dout * self.X_hat, axis=0) #dout * self.X_hat
+
+        dX_hat = dout * self.gamma
+        dvar = np.sum(dX_hat * X_mu,axis=0) * -0.5 * (self.var + eps)**(-3/2)           
+        dmu = np.sum(dX_hat * (-var_inv) ,axis=0) + dvar * 1/self.n_X * np.sum(-2.* X_mu, axis=0)
+        dX = (dX_hat * var_inv) + (dmu / self.n_X) + (dvar * 2/self.n_X * X_mu)        
+        dX = dX.reshape(self.X_shape)
+        
+        self.grads[0] += dgamma
+        self.grads[1] += dbeta
+        return dX#, dgamma, dbeta
+     
+```
+
+对于这个 `BatchNorm` 类，以下代码使用数值梯度检查解析梯度是否正确：
+
+```python
+# diff_error = lambda x, y: np.max(np.abs(x - y)) 
+from util import *
+import numpy as np 
+
+diff_error = lambda x, y: np.max(np.abs(x - y)) 
+
+np.random.seed(231)
+N, D = 100, 5
+x = 3 * np.random.randn(N, D) + 5
+
+bn = BatchNorm_1d(D,"no")
+x_norm = bn(x)
+
+do = np.random.randn(N, D)+0.5
+dx = bn.backward(do)
+
+dx_num = numerical_gradient_from_df(lambda :bn.forward(x),x,do)
+print(diff_error(dx,dx_num))
+
+if False:
+    dx_gamma = numerical_gradient_from_df(lambda :bn.forward(x),bn.gamma,do)
+    print(diff_error(dgamma,dx_gamma))
+
+    dx_beta = numerical_gradient_from_df(lambda :bn.forward(x),bn.beta,do)
+    print(diff_error(dbeta,dx_beta))
+```
+
+```
+7.684454184087031e-10
+```
+
+在下面的卷积神经网络中，输入样本（如彩色图像）通常是一个三维张量 $C \times H \times W$，其中 $C$、$H$ 和 $W$ 分别是通道数（彩色图像的）、高度、宽度；一批样本是一个四维张量 $N \times C \times H \times W$，其中 $N$ 是样本数量。上述代码可以重写以处理这种 4D 张量输入，以下代码是针对每个通道进行批归一化，而不是针对每个（像素）特征：
+
+#### 批量归一化实现
