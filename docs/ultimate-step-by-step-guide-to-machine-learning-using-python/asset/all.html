@@ -1,0 +1,1390 @@
+<p><img src="rsrcTA.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="rsrcTA.jpg" class="s8-1" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div class="sF">
+Ultimate Step by Step Guide to Machine Learning Using Python
+</div>
+<div class="sH">
+Predictive modelling concepts explained in simple terms for beginners
+</div>
+<div class="sK">
+Learn how to train an Artificial Intelligence Model in 7 days!
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div class="sY">
+Text copyright <img src="rsrcTB.jpg" class="sX" /> 2020 Daneyal Anis
+</div>
+<div class="sY">
+All rights reserved.
+</div>
+<div class="sY">
+No part of this book may be reproduced, or transmitted in any form or by any means, electronic, mechanical, magnetic, or photographic, including photocopying, recording, or by any information storage or retrieval system or otherwise, without express written permission of the publisher. No warranty liability whatsoever is assumed with respect to the use of the information contained herein. Although every precaution has been taken in the preparation of this book, the publisher and author assume no responsibility for errors or omissions.
+</div>
+<div class="sY">
+<span class="sT2">​</span> Published by: Daneyal Anis
+</div>
+<div class="sY">
+<span class="sT2">​</span> Date of Publication: February 2020
+</div>
+<div class="sY">
+<span class="sT2">​</span> Language: English
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div class="s1A">
+This book is dedicated to my parents who gave me the confidence to chase after my dreams and to my wife &amp; kids who make those dreams worth chasing
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div class="s1H">
+Table of Contents
+</div>
+<div id="part0004.xhtml#Table_of_Contents" class="s1K">
+<a href="#part0005.xhtml" class="sSX">1. Introduction</a>
+</div>
+<div class="s1K">
+<a href="#part0006.xhtml" class="sSX">2. Getting Started</a>
+</div>
+<div class="s1K">
+<a href="#part0007.xhtml" class="sSX">3. Data Types</a>
+</div>
+<div class="s1R">
+<a href="#part0007.xhtml#aRE" class="sSX">3.1 Booleans</a>
+</div>
+<div class="s1R">
+<a href="#part0007.xhtml#toc3_3.2_Numbers" class="sSX">3.2 Numbers</a>
+</div>
+<div class="s1R">
+<a href="#part0007.xhtml#aRG" class="sSX">3.3 Strings</a>
+</div>
+<div class="s1K">
+<a href="#part0008.xhtml" class="sSX">4. Data Structures</a>
+</div>
+<div class="s1R">
+<a href="#part0008.xhtml#toc6_4.1_Tuples" class="sSX">4.1 Tuples</a>
+</div>
+<div class="s1R">
+<a href="#part0008.xhtml#aRK" class="sSX">4.2 Lists</a>
+</div>
+<div class="s1R">
+<a href="#part0008.xhtml#toc8_4.3_Dictionaries" class="sSX">4.3 Dictionaries</a>
+</div>
+<div class="s1R">
+<a href="#part0008.xhtml#aRN" class="sSX">4.4 Sets</a>
+</div>
+<div class="s1R">
+<a href="#part0008.xhtml#toc10_4.5_Custom_Objects" class="sSX">4.5 Custom Objects</a>
+</div>
+<div class="s1K">
+<a href="#part0009.xhtml" class="sSX">5. Data Traversing</a>
+</div>
+<div class="s1R">
+<a href="#part0009.xhtml#aRS" class="sSX">5.1 If Then Else Statements</a>
+</div>
+<div class="s1R">
+<a href="#part0009.xhtml#toc13_5.2_Loops" class="sSX">5.2 Loops</a>
+</div>
+<div class="s1R">
+<a href="#part0009.xhtml#aRU" class="sSX">5.3 Functions</a>
+</div>
+<div class="s1K">
+<a href="#part0010.xhtml" class="sSX">6. Data Exploration and Analysis</a>
+</div>
+<div class="s1R">
+<a href="#part0010.xhtml#toc16_6.1_Explore_and_Clean_Data_with_Pandas" class="sSX">6.1 Explore and Clean Data with Pandas</a>
+</div>
+<div class="s1R">
+<a href="#part0010.xhtml#aRX" class="sSX">6.2 Find Outliers with Numpy and Scipy</a>
+</div>
+<div class="s1R">
+<a href="#part0010.xhtml#aRY" class="sSX">6.3 Visualize Data with Matplotlib and Seaborn</a>
+</div>
+<div class="s1K">
+<a href="#part0011.xhtml" class="sSX">7. Building Predictive Models</a>
+</div>
+<div class="s1R">
+<a href="#part0011.xhtml#aS0" class="sSX">7.1 Linear Regression Model</a>
+</div>
+<div class="s1R">
+<a href="#part0011.xhtml#aS1" class="sSX">7.2 Decision Tree Regression Model</a>
+</div>
+<div class="s1K">
+<a href="#part0012.xhtml" class="sSX">8. Understanding Machine Learning</a>
+</div>
+<div class="s1R">
+<a href="#part0012.xhtml#toc23_8.1_Supervised_Machine_Learning_Models" class="sSX">8.1 Supervised Machine Learning Models</a>
+</div>
+<div class="s1R">
+<a href="#part0014.xhtml" class="sSX">8.2 Unsupervised Machine Learning Models</a>
+</div>
+<div class="s1R">
+<a href="#part0014.xhtml#aS5" class="sSX">8.3 Deep Learning</a>
+</div>
+<div class="s1K">
+<a href="#part0015.xhtml" class="sSX">9. How to Problem Solve Using Machine Learning</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#aS7" class="sSX">9.1 Establish Your Use Case</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#toc28_9.2_Get_Agreement_on_Project_Drivers__Time__Cost_and_Scope" class="sSX">9.2 Get Agreement on Project Drivers: Time, Cost and Scope</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#aS9" class="sSX">9.3 Confirm If Data Is Readily Available</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#aSA" class="sSX">9.4 Confirm Quality of Your Data</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#toc31_9.5_Confirm_Interpretability_of_Your_Data" class="sSX">9.5 Confirm Interpretability of Your Data</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#aSC" class="sSX">9.6 Visualize Your Data</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#toc33_9.7_Fit_the_Right_Machine_Learning_Model_to_Your_Use_Case" class="sSX">9.7 Fit the Right Machine Learning Model to Your Use Case</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#aSE" class="sSX">9.8 Train Your Model</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#aSF" class="sSX">9.9 Test Your Model</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#toc36_9.10_Productionize_Your_Model" class="sSX">9.10 Productionize Your Model</a>
+</div>
+<div class="s1R">
+<a href="#part0015.xhtml#toc37_9.11_Iterate_" class="sSX">9.11 Iterate!</a>
+</div>
+<div class="s1R">
+<a href="#part0016.xhtml" class="sSX">9.11 Summary Data Science Workflow</a>
+</div>
+<div class="s1K">
+<a href="#part0017.xhtml" class="sSX">10. Conclusion</a>
+</div>
+<div class="s1K">
+<a href="#part0018.xhtml" class="sSX">Post your Review</a>
+</div>
+<div class="s1K">
+<a href="#part0019.xhtml" class="sSX">Website and Free Gift!</a>
+</div>
+<div>
+<a href="#part0020.xhtml" class="sSX">References</a>
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div id="part0005.xhtml#toc0_1._Introduction" class="s37">
+1. Introduction
+</div>
+<div class="sY">
+Python was developed in 1980s by Guido Van Rossum of Netherlands. Python was developed as an object-oriented language with an emphasis on simplicity, extensibility and flexibility [<a href="#part0020.xhtml" class="sSX">1</a> ]. Python also comes with a large library of pre-built functionality for data science, statistical analysis and data visualizations which make this language very easy to learn and use.
+</div>
+<div class="sY">
+In this book we will focus on data science applications of Python with hands on examples that allow you to go from novice to expert in a short period of time! We will start with getting you set up with Python, introducing you to its data structures and libraries and then finally getting into the data science applications of this beautiful language.
+</div>
+<div class="sY">
+What you will find different about this book is the visual and hands on approach it takes to teaching Python. Since this book is directed at beginners, we will not drone on and on about complex concepts or make this book text heavy. Instead, we will take inspiration from the Zen of Python by Tim Peters [<a href="#part0020.xhtml" class="sSX">2</a> ]:
+</div>
+<div class="sY">
+“Beautiful is better than ugly…simple is better than complex….sparse is better than dense….”.
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<div id="part0006.xhtml#aRC" class="s37">
+2. Getting Started
+</div>
+<div class="sY">
+There are detailed instructions available via the Python website on how to install Python on your machine – whether it is Windows, Mac OS or Linux under on <a href="https://www.python.org/about/gettingstarted/" class="sSX">Python website in the Getting Started section</a>  [<a href="#part0020.xhtml" class="sSX">3</a> ].
+</div>
+<div class="sY">
+I recommend you read through it as there is a lot of good information and helpful links for beginners. However, installing Python by itself is not very helpful or user friendly. You are better off installing Python alongside an IDE (Integrated Development Environment) – as that comes with tools and development environment to execute and debug your code.
+</div>
+<div class="sY">
+For that I recommend starting with <a href="https://www.anaconda.com/distribution/" class="sSX">Anaconda Distribution</a> [<a href="#part0020.xhtml" class="sSX">4</a> ]. It is an open-source tool that installs industry standard IDEs and foundational Python libraries that we will be describing in this book in more detail. When you click on the above link, it will take you to a page to download and install package for your operating system e.g. Windows, macOS or Linux.
+</div>
+<div class="sY">
+We will be using <a href="https://jupyter.org/" class="sSX">Jupyter Notebook</a> [<a href="#part0020.xhtml" class="sSX">5</a> ] as our development environment for this book – Jupyter is part of the Anaconda distribution package and will be installed on your machine along with Python.
+</div>
+<div class="sY">
+Jupyter is a powerful web-based development environment that we will be using in this book to execute our code and I have made all the source code used in this book available on my website as a ‘.ipnyb’ Jupyter file. You can access all the code by going to my website here: <a href="https://www.daneyalauthor.com" class="sSX">https://www.daneyalauthor.com</a> and open the code in Jupyter Notebook.
+</div>
+<div class="sY">
+Once Anaconda is installed on your machine, launch Anaconda Navigator from your menu. Screenshot below for reference:
+</div>
+<div class="s3V-1">
+<img src="rsrcTC.jpg" class="s3V-0" />
+</div>
+<div class="sY">
+Once open, you should see the following Anaconda Navigator dashboard with all the tools available to you:
+</div>
+<div class="s40-0">
+<img src="rsrcTD.jpg" class="s40-1" />
+</div>
+<div class="sY">
+Launch Jupyter Notebook by clicking on the ‘Launch’ button under that application icon. Once you do that, the following web browser window will open:
+</div>
+<div class="s40-0">
+<img src="rsrcTE.jpg" class="s40-1" />
+</div>
+<div class="sY">
+Click on ‘New’ and the ‘Python 3’ in the top right. Once you do that, a new browser window will open with your new project and Python environment ready to execute. You can rename your project as ‘My First Python Project’ by clicking on ‘Untitled’ at the top of the screen (highlighted below for reference).
+</div>
+<div class="s47">
+Done? Alright, you are ready to go!
+</div>
+<div class="s40-0">
+<img src="rsrcTF.jpg" class="s40-1" />
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<div id="part0007.xhtml#aRD" class="s37">
+3. Data Types
+</div>
+<div class="sY">
+In Python, there are 3 main types of data types, like most programming languages:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Booleans</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Numbers</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Strings</span>
+</div>
+<div id="part0007.xhtml#aRE" class="s4R">
+3.1 Booleans
+</div>
+<div class="sY">
+Boolean values are True or False. You can use the following Boolean operators to compare different values:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Is equal to: ==</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Is greater than: &gt;</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Is less than: &lt;</span>
+</div>
+<div class="s4K">
+<span class="sSU">4)</span> <span class="sSV">      </span> <span class="sSU">Is greater than or equal to: &gt;=</span>
+</div>
+<div class="s4Y">
+<span class="sSU">5)</span> <span class="sSV">      </span> <span class="sSU">Is less than or equal to: &lt;=</span>
+</div>
+<div class="sY">
+Try out this code in the Python notebook you created above as follows:
+</div>
+<div>
+<img src="rsrcTG.jpg" class="s53" />
+</div>
+<div id="part0007.xhtml#toc3_3.2_Numbers" class="s4R">
+3.2 Numbers
+</div>
+<div class="sY">
+In Python, numbers can be integers i.e. whole numbers like 1, 2, 3 or floats i.e. numbers with decimals like 1.1, 2.3, 4.5 etc. You can use the basic mathematical operators like:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Plus: +</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Minus: -</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Multiplication: *</span>
+</div>
+<div class="s4K">
+<span class="sSU">4)</span> <span class="sSV">      </span> <span class="sSU">Division: /</span>
+</div>
+<div class="s4Y">
+<span class="sSU">5)</span> <span class="sSV">      </span> <span class="sSU">Parenthesis: () to enforce precedence in operations</span>
+</div>
+<div class="sY">
+Try out this code in the Python notebook you created above as follows:
+</div>
+<div class="s5F-0">
+<img src="rsrcTH.jpg" class="s5F-1" />
+</div>
+<div class="sY">
+You can also check the type of a number by using the type command in Python. See below:
+</div>
+<div>
+<img src="rsrcTJ.jpg" class="s5M" />
+</div>
+<div id="part0007.xhtml#aRG" class="s4R">
+3.3 Strings
+</div>
+<div class="sY">
+Strings are essentially a string of characters. For example, words or sentences. In Python, Strings are designated by single (‘ ‘) or double quotes (“”). Just like Booleans and Numbers above, there are certain operators and functions you can use in Python on Strings.
+</div>
+<div class="sY">
+You can use + sign to concatenate two strings. See below:
+</div>
+<div class="s5V-0">
+<img src="rsrcTK.jpg" class="s5V-1" />
+</div>
+<div class="sY">
+You can also change strings to upper and lower case using upper() and lower() functions in Python and you can use count() function to determine number of characters in a string. See below:
+</div>
+<div class="s60-0">
+<img src="rsrcTM.jpg" class="s60-1" />
+</div>
+<div class="sY">
+Another useful function is the replace() that lets you replace one character with another in a string. See below:
+</div>
+<div class="s65-1">
+<img src="rsrcTN.jpg" class="s65-0" />
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml#toc11_4._Data_Structures" class="s37">
+4. Data Structures
+</div>
+<div class="sY">
+Now that we have learned about data types in Python, let’s go over how Python organizes these data types into different types of data structures. We will cover the following data structures in this book:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Tuples</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Lists</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Dictionaries</span>
+</div>
+<div class="s4K">
+<span class="sSU">4)</span> <span class="sSV">      </span> <span class="sSU">Sets</span>
+</div>
+<div class="s4K">
+<span class="sSU">5)</span> <span class="sSV">      </span> <span class="sSU">Custom Objects</span>
+</div>
+<div id="part0008.xhtml#toc6_4.1_Tuples" class="s4R">
+4.1 Tuples
+</div>
+<div class="sY">
+Tuples are ordered sequences of data represented as data contained within parenthesis separated by commas. For example:
+</div>
+<div class="sY">
+(1, ‘two’, 3.5, False)
+</div>
+<div class="sY">
+As you can see from the above example, Tuples can contain data of all types at the same time.
+</div>
+<div class="sY">
+Tuples are immutable – as in data within Tuples cannot be changed. For example, look at this sequence of code:
+</div>
+<div class="s40-0">
+<img src="rsrcTP.jpg" class="s40-1" />
+</div>
+<div class="sY">
+Python throws an error when we tried to assign the value of 4 to the second index in the tuple, indicating that tuples objects do not support item assignment.
+</div>
+<div class="sY">
+Tuples can also contain other data structures like tuples – this concept is defined as ‘nesting’. Imagine visualizing it as a tree as follows:
+</div>
+<div>
+<img src="rsrcTR.jpg" class="s6Z" />
+</div>
+<div id="part0008.xhtml#aRK" class="s4R">
+4.2 Lists
+</div>
+<div class="sY">
+Lists are also sequenced data structures with data represented as separated by brackets (as opposed to parenthesis for tuples). For example:
+</div>
+<div class="sY">
+[1, ‘two’, 3.5, False]
+</div>
+<div class="sY">
+Unlike tuples, lists are mutable i.e. data in lists can be changed. See the following sequence of code:
+</div>
+<div class="s77-1">
+<img src="rsrcTS.jpg" class="s77-0" />
+</div>
+<div class="sY">
+Python allows us to change the list by replacing the value 3.5 with 4 in index 2 position and does not throw an error like in the case of tuples.
+</div>
+<div>
+Just like tuples, lists can hold multiple data types at the same time including other data structures like tuples and lists i.e. nesting as outlined above.
+</div>
+<div id="part0008.xhtml#toc8_4.3_Dictionaries" class="s4R">
+4.3 Dictionaries
+</div>
+<div class="sY">
+Dictionaries are like tuples and lists in that they help order and sequence the data. However, the main difference is that they are represented by data separated by commas in curly braces and the index for dictionaries can be string labels. See code example below:
+</div>
+<div class="sY">
+{‘leader’:’Abraham Lincoln’, ‘fighter’:’Mike Tyson’, ‘city’:’Toronto’}
+</div>
+<div class="sY">
+In the case of dictionaries, the index or keys are immutable i.e. cannot be changed. However, the values represented by the labels can be changed. See the code sample below:
+</div>
+<div class="s40-0">
+<img src="rsrcTT.jpg" class="s40-1" />
+</div>
+<div>
+In the above example, Python allows us to change the leader in the dictionary to Winston Churchill – and we used the string ‘leader’ as our index as opposed to 0 to access the first data element in the structure.
+</div>
+<div id="part0008.xhtml#aRN" class="s4R">
+4.4 Sets
+</div>
+<div class="sY">
+Sets are another example of data structures like tuples, lists and dictionaries – the key difference being that sets are not ordered i.e. they do not have indexes. The reason behind that is that the sets only contain unique elements. They are represented by data elements separated by commas in curly brackets. See code example below:
+</div>
+<div class="s7R-1">
+<img src="rsrcTU.jpg" class="s7R-0" />
+</div>
+<div class="sY">
+In the above example, even though 3.5 was duplicated in the curly brackets, when the set was created, the duplicates were removed.
+</div>
+<div class="sY">
+Sets can have values added or removed from them using ‘add’ and ‘remove’ functions. See code example below:
+</div>
+<div class="s7X-1">
+<img src="rsrcTV.jpg" class="s7X-0" />
+</div>
+<div class="sY">
+You can also perform additional mathematical functions on sets by showing the common elements in two sets by using the ‘&amp;’ function. See code example below:
+</div>
+<div class="s82-0">
+<img src="rsrcTW.jpg" class="s82-1" />
+</div>
+<div class="sY">
+As you would remember, set1 had data elements 1 and 3.5 that are also present in set2. So the ‘&amp;’ function found the commonality and returned the common data elements between the two sets.
+</div>
+<div class="sY">
+Now let’s try combining the two sets by using the ‘union’ function. See code example below:
+</div>
+<div class="s88-1">
+<img src="rsrcTX.jpg" class="s88-0" />
+</div>
+<div>
+Notice how while combining the two data sets, Python consolidated the common elements 1 and 3.5 and did not repeat them – as duplicates are not allowed in sets.
+</div>
+<div id="part0008.xhtml#toc10_4.5_Custom_Objects" class="s4R">
+4.5 Custom Objects
+</div>
+<div class="sY">
+While tuples, lists, dictionaries and sets are built in data structures in Python, sometimes you may find the need to create custom objects or data structures in Python with their own attributes. Suppose you wanted to create a custom object in Python called ‘Human’ with its own specific attributes for re-usability in your code. Consider this code sample:
+</div>
+<div class="s40-0">
+<img src="rsrcTY.jpg" class="s40-1" />
+</div>
+<div class="sY">
+Notice the following in the above lines of code:
+</div>
+<div class="s4K">
+<span class="sSU">-</span> <span class="sSV">         </span> <span class="sSU">Custom class Human was initialized using the def key word and the ‘__init__’ initialization function (notice the two underscores on each side of the init keyword)</span>
+</div>
+<div class="s4K">
+<span class="sSU">-</span> <span class="sSV">         </span> <span class="sSU">In the initialization function, ‘self’ is an instance of the object being created along with the two attributes ‘height’ and ‘weight’ that define the human object in this instance</span>
+</div>
+<div class="s4K">
+<span class="sSU">-</span> <span class="sSV">         </span> <span class="sSU">After the custom class has been defined, we use that to initialize a new Human object and pass it the attribute values for height (60 inches) and weight (180 pounds).</span>
+</div>
+<div class="s4Y">
+<span class="sSU">-</span> <span class="sSV">          </span> <span class="sSU">When we print out the results the object attributes assigned, we get the desired output</span>
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div id="part0009.xhtml#aRR" class="s37">
+5. Data Traversing
+</div>
+<div class="sY">
+Now that we have introduced different types of data structures in Python, let’s see how we navigate and traverse through them. We can do so in the following ways:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">If then else statements</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Loops</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Functions</span>
+</div>
+<div id="part0009.xhtml#aRS" class="s4R">
+5.1 If Then Else Statements
+</div>
+<div class="sY">
+We will start with if then else statements. These conditional structures are a common presence in all object-oriented programming languages. They make use of Boolean operators introduced earlier in this book and depending on the outcome of the Boolean condition, the path forward is defined. Consider this sample of code:
+</div>
+<div class="s65-1">
+<img src="rsrcTZ.jpg" class="s65-0" />
+</div>
+<div class="sY">
+In the above example, we set the wizard variable to String value of ‘Gandalf’. We then used the Boolean equals operator (==) to check if the wizard value is ‘Sauron’ instead. Clearly the result of that condition will be false, so Python will not print “oh no” and instead it picks the else path and prints “keep going”.
+</div>
+<div class="sY">
+In the syntax, notice how there is a colon at the end of both if and else lines of code. Also, notice how the dependent output is indented to show dependency on the if and else conditions.
+</div>
+<div class="sY">
+Now, what if you wanted to have multiple if conditions in your code? Check out this sample of code:
+</div>
+<div class="s99-0">
+<img src="rsrcU0.jpg" class="s99-1" />
+</div>
+<div class="sY">
+Notice that we changed the wizard variable to ‘Sauron’ now and we also introduced a new elf variable ‘Frodo’. We have also added to the if condition by using the Boolean operator AND – basically checking if both the wizard == Sauron and elf == Frodo conditions are true. Since that is the case, Python prints “oh no” and skips the remaining conditions in the code.
+</div>
+<div class="sY">
+What happens if we change the elf to ‘Sam’? Let’s find out:
+</div>
+<div class="s9F-0">
+<img src="rsrcU1.jpg" class="s9F-1" />
+</div>
+<div>
+Since our first if condition is dependent on wizard being ‘Sauron’ and elf being ‘Frodo’, it is no longer true. So Python skips that condition and goes to the condition branch elif (short for else if). We know that helpComing is set to True, so Python will print “keep going” as the output.
+</div>
+<div id="part0009.xhtml#toc13_5.2_Loops" class="s4R">
+5.2 Loops
+</div>
+<div class="sY">
+Just like if then else statements, for loops and while loops are a common presence in object-oriented programming languages.
+</div>
+<div class="sY">
+For loops are used to traverse data structures based on specific conditions. See code example below:
+</div>
+<div class="s9R-1">
+<img src="rsrcU2.jpg" class="s9R-0" />
+</div>
+<div class="sY">
+In the above example, we started with a list of odd numbers and we wanted to convert them to even numbers. We start out with using the ‘enumerate’ function in Python which essentially produces the index for each data element in the list. We then iterate through the list by assigning the index to i variable and adding 1 to each element in the list until we are done going through the entire list as follows:
+</div>
+<div class="sY">
+list [0] = 1+1 = 2
+</div>
+<div class="sY">
+list [1] = 3+1 = 4
+</div>
+<div class="sY">
+list [3] = 5+1 = 6
+</div>
+<div class="sY">
+and so on…
+</div>
+<div class="sY">
+The outcome is a list of even numbers: [2, 4, 6, 8, 10]. Remember earlier in the book we mentioned that, lists are mutable and that’s why we were able to change the odd numbers to even numbers in the list – this function will not have worked for tuples which are immutable.
+</div>
+<div class="sY">
+Now let’s try traversing a set – if you recall, sets are shown in curly braces and do not have indices. So what do we do in that case? Not to worry, Python has an answer for that as well. Check out this sample code:
+</div>
+<div class="sA2-0">
+<img src="rsrcU3.jpg" class="sA2-1" />
+</div>
+<div class="sY">
+Notice how without using an index, Python assigns the value of each data element to the set variable and lets you iterate through the entire length of the set? That’s the elegance and simplicity of Python!
+</div>
+<div class="sY">
+Now let’s look at another example of loops in Python – while loops. While loops are great for traversing data structures where the size of the data structures is not known, and you would like to traverse until a specific condition is met. Consider this sample code:
+</div>
+<div class="s40-0">
+<img src="rsrcU4.jpg" class="s40-1" />
+</div>
+<div>
+In the above example, we were trying to find ‘gold’ but don’t know how many hops it will take to hit gold. So, we set our index to 0 and set the Boolean condition in the while loop to keep going while the metal is not equal to gold. We finally find gold after 3 total hops and end the loop before hitting ‘bronze’ or ‘diamond’ which are later in the list.
+</div>
+<div id="part0009.xhtml#aRU" class="s4R">
+5.3 Functions
+</div>
+<div class="sY">
+In Python, you have the option to define your own functions if there is specific set of operations you expect to repeat on a data structure. For example, suppose you always wanted to return multiples of a specific number anytime a list of numeric values is provided to you. You can define a function as follows:
+</div>
+<div class="s3V-1">
+<img src="rsrcU5.jpg" class="s3V-0" />
+</div>
+<div class="sY">
+In the above example, we defined a function called ‘multiples’ using the def keyword in Python. We define the function as taking two parameters ‘x’ – that being the number that we will multiply the list with and ‘list1’ – that being the list we will convert to multiples of x.
+</div>
+<div>
+Once we are done defining the function, we try it out by passing it a list of values of 13, 15, 17 and 19 and ask the multiples function to convert the list by multiplying it by 4. The outcome is 52, 60, 68 and 76 – all multiples of 4 as desired. Now you can re-use this custom defined function later in your code as well – as required.
+</div>
+<p><span id="part0010.xhtml"></span></p>
+<div id="part0010.xhtml#toc19_6._Data_Exploration_and_Analysis" class="s37">
+6. Data Exploration and Analysis
+</div>
+<div class="sY">
+Now that we have covered different data types, structures and how to use them, we will take it one step further and cover how we work with data files and data frames. We will also introduce two foundational Python libraries: Pandas and Numpy.
+</div>
+<div class="sY">
+For the purposes of this and upcoming chapters, we will use a sample fictional dataset that contains house sales prices based on various house features such as:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Year Built – Year house was built</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Square Footage – Size of the house in square feet</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">     </span> <span class="sSU">House Type – Whether the house is a detached, semi-detached or townhouse</span>
+</div>
+<div class="s4K">
+<span class="sSU">4)</span> <span class="sSV">      </span> <span class="sSU">Garage Size – Number of cars that the garage can accommodate</span>
+</div>
+<div class="s4K">
+<span class="sSU">5)</span> <span class="sSV">      </span> <span class="sSU">Fireplaces – Whether house has a fireplace or not</span>
+</div>
+<div class="s4K">
+<span class="sSU">6)</span> <span class="sSV">      </span> <span class="sSU">Pool – Whether house has a pool or not</span>
+</div>
+<div class="s4Y">
+<span class="sSU">7)</span> <span class="sSV">     </span> <span class="sSU">Sale Price – Actual sale price of the house based on the above features</span>
+</div>
+<div>
+You can download this sample dataset as a .csv file from my website by following this link: <a href="https://daneyalauthor.com/wp-content/uploads/2020/01/House-Sales-Values.csv" class="sSX">House Sales Data</a>
+</div>
+<div id="part0010.xhtml#toc16_6.1_Explore_and_Clean_Data_with_Pandas" class="s4R">
+6.1 Explore and Clean Data with Pandas
+</div>
+<div class="sY">
+Now that we have selected our dataset to work with, let’s first start with reading the train.csv file that we downloaded earlier. For that we will use a built in Python library called ‘Pandas’. Pandas are cute furry animals but in Python they also allow us to work with data as organized data frames. This library also has built in functions that we can perform on these data frames. We start with importing this library as follows:
+</div>
+<div class="sB5-0">
+<img src="rsrcU6.jpg" class="sB5-1" />
+</div>
+<div class="sY">
+Here we have used the import keyword to create an instance of pandas to process the house sales data and named it ‘pd’. We now import the House Sales Values.csv file as follows:
+</div>
+<div class="s40-0">
+<img src="rsrcU7.jpg" class="s40-1" />
+</div>
+<div class="sY">
+In the above code sample, we used the pandas function ‘read_csv’ by passing it the path to the train.csv file and stored it into our data frame called ‘df’.
+</div>
+<div class="sY">
+We are now ready to use pandas’ data exploratory functions, so we can understand our dataset better.
+</div>
+<div class="sY">
+Let’s start by looking at the first 10 records of the data set. For that we use the pandas head() function. See code sample below:
+</div>
+<div class="s40-0">
+<img src="rsrcU8.jpg" class="s40-1" />
+</div>
+<div class="sBH">
+Note that in the above code sample, we passed 10 as an argument to the head() function. If we had passed 20 as an argument e.g. df.head(20), Python would have returned first 20 rows.
+</div>
+<div class="sY">
+Let’s also have a look at how many rows and columns our dataset has, using the pandas shape attribute. See code sample below:
+</div>
+<div class="sBP-1">
+<img src="rsrcU9.jpg" class="sBP-0" />
+</div>
+<div class="sY">
+Looks like our dataset has 1000 rows and 7 columns. Ok great, now let’s find out what are data types in each column of the data frame. For that we will use the pandas dtypes attribute. See code sample below:
+</div>
+<div class="sBV-1">
+<img src="rsrcUA.jpg" class="sBV-0" />
+</div>
+<div class="sY">
+Looks like we have a mix of integers, floats and strings (objects) in our dataset. Good to know and this will come in handy as we transform our data for further processing later in this book.
+</div>
+<div class="sY">
+Let’s further describe this data set using the describe() function to understand it better. See code sample below:
+</div>
+<div class="s40-0">
+<img src="rsrcUB.jpg" class="s40-1" />
+</div>
+<div class="sY">
+The describe function gave us additional important statistics on our dataset – for example what is the count, mean, max and min values for different numeric features like Year Built, Square Footage, Car Garage Size and Sale Price of the house.
+</div>
+<div class="sY">
+Ok now let’s clean this data before processing it further. Let’s find out how many null values we have for each column.
+</div>
+<div class="s40-0">
+<img src="rsrcUC.jpg" class="s40-1" />
+</div>
+<div class="sY">
+Looks like for certain columns, a small percentage of data is null. For example, House Type is missing in 10 records and Sale Price is missing in 5 records. As this amount of missing data will introduce discrepancies in our analysis, we will drop these columns for simplicity and re-shape and describe our data set. See code sample below:
+</div>
+<div class="s40-0">
+<img src="rsrcUD.jpg" class="s40-1" />
+</div>
+<div>
+We now have a smaller data set to work with, consisting of 980 rows, 7 columns and no null values!
+</div>
+<div id="part0010.xhtml#aRX" class="s4R">
+6.2 Find Outliers with Numpy and Scipy
+</div>
+<div class="sY">
+Before we go further though, let’s introduce a few more foundational libraries in Python.
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">     </span> <span class="sSW-1">Numpy</span> <span class="sSU">is a library that is used for performing numeric operations on data structures like lists and matrices</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSW-1">Scipy</span> <span class="sSU">is a library that leverages Numpy data structures for advanced algebra and calculus operations</span>
+</div>
+<div class="s4Y">
+<span class="sSU">3)</span> <span class="sSV">     </span> <span class="sSW-1">Scikit-learn (also known as Sklearn)</span> <span class="sSU">is a foundational Python library for building predictive models</span>
+</div>
+<div class="sY">
+To leverage the numeric calculations (Numpy), statistical analysis (Scipy) and predictive modeling (Scikit-learn) functions in the above libraries, we need to replace categorical string values in our dataset with numeric values. Since this is a common issue, Sklearn library has built-in functions that allow you to do exactly that in very few lines of code. See below:
+</div>
+<div class="s40-0">
+<img src="rsrcUE.jpg" class="s40-1" />
+</div>
+<div class="sY">
+In the above code snapshot, we completed the following steps:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">     </span> <span class="sSU">We created an array of column names with non-numeric (Boolean or String) values – House Type, Fireplaces and Pool</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">We then used the LabelEncoder() function in Scikit-learn library to transform all the non-numeric columns to numeric values – essentially replacing string values with numeric codes like 0, 1, 2. Notice how we used the for loop introduced earlier in this book to traverse this data structure</span>
+</div>
+<div class="s4Y">
+<span class="sSU">3)</span> <span class="sSV">     </span> <span class="sSU">We then print out the first 10 rows of our dataset and as well as data types. See below:</span>
+</div>
+<div class="s40-0">
+<img src="rsrcUF.jpg" class="s40-1" />
+</div>
+<div class="sY">
+Notice how for Fireplaces and Pool, before we had ‘Yes’ and ‘No’ values and they have now been replaced with 1 and 0 respectively. Also, for House Type different house types have been re-coded as follows 0, 1, 2.
+</div>
+<div class="sY">
+Our data types for different columns in the dataset are also numeric:
+</div>
+<div class="sD0-0">
+<img src="rsrcUG.jpg" class="sD0-1" />
+</div>
+<div class="sY">
+We will use Numpy and SciPy libraries to find outliers in our data set to clean it further. For that we will use Z-score method.
+</div>
+<div class="sY">
+Z-score basically indicates how far from the mean a data point is. Typically, a Z-score of 3 or more is a good indicator of an outlier. Let’s look for these outliers in our data set.
+</div>
+<div class="s40-0">
+<img src="rsrcUH.jpg" class="s40-1" />
+</div>
+<div class="sY">
+In the above code, we followed the following steps to calculate and remove our outliers:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">We imported Numpy and Scipy libraries</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">We then calculated Z scores for each of the numeric values in our data frame using the Scipy stats.zscore function</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">     </span> <span class="sSU">We then re-formed the data frame with data that has Z score of less than 3 to eliminate all the outliers</span>
+</div>
+<div class="s4Y">
+<span class="sSU">4)</span> <span class="sSV">      </span> <span class="sSU">Finally, we printed out the shape of this updated data set</span>
+</div>
+<div class="s40-0">
+<img src="rsrcUJ.jpg" class="s40-1" />
+</div>
+<div>
+Good news! Z-Score function did not find any outliers and our dataset still has the same size – 980 rows and 7 columns.
+</div>
+<div id="part0010.xhtml#aRY" class="s4R">
+6.3 Visualize Data with Matplotlib and Seaborn
+</div>
+<div class="sY">
+Now that we have removed all null values, replaced string values and checked for outliers, let’s find out which features of the house have the biggest impact on house sales price. Easiest way to see that is by visualizing your data. For that we will use two additional Python libraries:
+</div>
+<div class="s4K">
+<span class="sSW-1">1)</span> <span class="sSV">     </span> <span class="sSW-1">Matplotlib</span> <span class="sT1">is the foundational library for creating graphs and plots in Python</span>
+</div>
+<div class="s4Y">
+<span class="sSW-1">2)</span> <span class="sSV">     </span> <span class="sSW-1">Seaborn</span> <span class="sT1">is a more advanced data visualization library and is based on the Matplotlib as its foundation</span>
+</div>
+<div class="sY">
+Let’s use the above two libraries to visualize our data and see which features impact the house sale prices the most. We will first look at the distribution of the house sale prices as follows:
+</div>
+<div class="s40-0">
+<img src="rsrcUK.jpg" class="s40-1" />
+</div>
+<div class="sY">
+In the above snapshot, we covered the following steps:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">We first imported the matplotlib and seaborn libraries</span>
+</div>
+<div class="s4Y">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">We then called the distribution plot function called ‘distplot’ and passed it the Sale Price column to generate the distribution plot visualization</span>
+</div>
+<div class="sY">
+The distribution plot shows us that that the sale prices range between $500,000 to $1 million and then $2 million.
+</div>
+<div class="sY">
+Now, let’s create a new data visualization called box plots – to see house prices by different house types. As you may recall, we re-coded the house types in the previous chapter as follows:
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div>
+House Type – String Value
+</div></td>
+<td><div>
+House Type – Numeric Encoding
+</div></td>
+</tr>
+<tr class="even">
+<td><div>
+Detached
+</div></td>
+<td><div>
+0
+</div></td>
+</tr>
+<tr class="odd">
+<td><div>
+Semi-Detached
+</div></td>
+<td><div>
+1
+</div></td>
+</tr>
+<tr class="even">
+<td><div>
+Town-home
+</div></td>
+<td><div>
+2
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="sBH">
+Let’s see how we generate a box plot visualization using the following code:
+</div>
+<div class="s40-0">
+<img src="rsrcUM.jpg" class="s40-1" />
+</div>
+<div class="s40-0">
+<img src="rsrcUN.jpg" class="s40-1" />
+</div>
+<div class="sY">
+Based on the above visual, we see that detached house prices can range from $800,000 to $2,000,000, semi-detached houses are just below the $800,000 mark and townhomes are in the $400,000 to under $800,000 range.
+</div>
+<div class="sY">
+While the above visualizations give us a good idea of impact of individual variables on the house sales price, it is even better to be able to see the relative impact of all variables on the house sales price.
+</div>
+<div class="sY">
+For that we will use the correlation matrix and heatmap visualization – see snapshot below:
+</div>
+<div class="s40-0">
+<img src="rsrcUP.jpg" class="s40-1" />
+</div>
+<div class="sF3">
+
+</div>
+<div class="s40-0">
+<img src="rsrcUR.jpg" class="s40-1" />
+</div>
+<div>
+From the above heatmap, we can see that Square Footage and House Type are the two distinctive features that have a material impact on the house sales price (based on their distinctive colors on the gradient scale on the right).
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div id="part0011.xhtml#aRZ" class="s37">
+7. Building Predictive Models
+</div>
+<div class="sY">
+Now that we have selected a dataset and cleaned it for null values and outliers, we are ready to build different predictive models. But what is a predictive model? In the simplest terms, predictive models use the past to predict the future. They analyze current state factors, correlations and data relationships to determine how things will play out based on these dependences.
+</div>
+<div class="sY">
+We will build two different kind of predictive models in this chapter using the dataset we have been working with so far:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Linear Regression</span>
+</div>
+<div class="s4Y">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Decision Tree Regression</span>
+</div>
+<div class="sY">
+We will then test and compare the accuracy of these predictive models.
+</div>
+<div class="sY">
+Regression: Before we go too far, we just mentioned a new term – regression. Why would predictive models, that predict the future, be referencing regression? Regression is a statistical technique and the term was first used by Francis Galton ([<a href="#part0020.xhtml" class="sSX">6</a> ]) in 1877 when describing how the heights of descendants tended to regress towards the mean as opposed to increasing with each new generation. This term then evolved into the statistical concept of describing the relationship between dependent variables like house sale price and independent variables like house square footage and number of garages.
+</div>
+<div class="sY">
+There is a wide variety of different machine learning and predictive algorithms and I will go over some of them at a higher level in the next chapter. However, I will go over in more detail why Linear Regression and Decision Tree are suitable algorithms for this specific problem.
+</div>
+<div class="sY">
+To train our models, we will first split our data into train and test data sets as per below:
+</div>
+<div class="s40-0">
+<img src="rsrcUS.jpg" class="s40-1" />
+</div>
+<div class="sY">
+In the above code sample, we used the train_test_split function in the Scikit-learn library. As you can see, we defined ‘y’ as the target / dependent variable ‘SalePrice’ and ‘X’ as all the independent variables that will be used to predict the price.
+</div>
+<div class="sY">
+We will take a moment here to describe the purpose of the additional parameters in the train_test_split function:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">     </span> <span class="sSU">test_size – defines what percentage of your data will be treated as test dataset. For this example, we used 50%</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">random_state – is used as an input into random number generation during the split. For our example, we used 80</span>
+</div>
+<div class="s4Y">
+<span class="sSU">3)</span> <span class="sSV">     </span> <span class="sSU">shuffle – is used to determine whether data should be shuffled before splitting. For our purpose, we set that to true</span>
+</div>
+<div>
+Now we are ready to build, train and test the predictive models!
+</div>
+<div id="part0011.xhtml#aS0" class="s4R">
+7.1 Linear Regression Model
+</div>
+<div class="sY">
+A linear regression model assumes a linear relationship between a dependent or target variable e.g. Sale Price for the house and independent variables like square footage, number of garages etc.
+</div>
+<div class="sY">
+It can be illustrated as an equation as follows:
+</div>
+<div class="sY">
+Y = cX + I
+</div>
+<div class="sY">
+Where
+</div>
+<div class="sY">
+Y = dependent variable aka Sale Price of the House
+</div>
+<div class="sY">
+X = independent variable e.g. Square footage
+</div>
+<div class="sY">
+c = coefficient – that will be calculated by the linear regression model
+</div>
+<div class="sY">
+I = intercept – that will be calculated by the linear regression model as well
+</div>
+<div class="sY">
+The above is a case of Simple Linear Regression, where you only have one dependent and one independent variables.
+</div>
+<div class="sY">
+When you have multiple independent variables, like in our case, we use the equation below and this can be defined as Multiple Linear Regression
+</div>
+<div class="sY">
+Y = I+ (c1X1)+ (c2X2)+ (c3X3)+……
+</div>
+<div class="sY">
+We can initialize, train and test the Linear Regression Model as follows:
+</div>
+<div class="s40-0">
+<img src="rsrcUT.jpg" class="s40-1" />
+</div>
+<div class="sY">
+In the above code snapshot, we covered the following steps:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">We initialized the Linear Regression Model from the Scikit-Learn library</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">We then fit (or trained) the model using the training data set</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">We made the prediction using the test data set</span>
+</div>
+<div class="s4K">
+<span class="sSU">4)</span> <span class="sSV">      </span> <span class="sSU">We tested the accuracy of the model using two methods:</span>
+</div>
+<ol>
+<li>Mean Squared Error (MSE) – that calculates the difference between actual and predicted values</li>
+<li>R-Squared (also known as co-efficient of determination) – that calculates how close is the data to the fitted regression line. Or to say it simply, how well does our model ‘fit’ the data. R-squared is on a scale of 0 to 1 and a negative score typically indicates an issue with the model fit. In our case, we got around an R-squared value of .39 for the test data. That means roughly 39% of the variation in house sale prices is due to the variation in the independent variables like square footage and house type we identified earlier</li>
+</ol>
+<div id="part0011.xhtml#aS1" class="s4R">
+7.2 Decision Tree Regression Model
+</div>
+<div class="sY">
+Now let’s try a different kind of predictive model algorithm called decision tree. Why would we want to use this type of algorithm to predict house sale prices?
+</div>
+<div class="sY">
+A decision tree regression model forms a tree structure as it breaks down the dataset into smaller subsets and keeps traversing down different nodes to arrive at a prediction. In case of house sales prices, a decision tree can be visualized as follows:
+</div>
+<div class="sGZ-0">
+<img src="rsrcUU.jpg" class="sGZ-1" />
+</div>
+<div class="sBH">
+The above is an overly simplified illustration of the decision tree on how the model will arrive at a sale price prediction but it gets the point across.
+</div>
+<div class="sY">
+Below is how we will initiate, train, test and evaluate a Decision Tree Regression model in Python.
+</div>
+<div class="s40-0">
+<img src="rsrcUV.jpg" class="s40-1" />
+</div>
+<div class="sY">
+The above is a very basic illustration of how you would initialize a Decision Tree Regression model. In the above sample code, we covered the following steps:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">We initialized the Decision Tree Regression Model from the Scikit-Learn library</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">We then fit (or trained) the model using the training data set</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">We made the prediction using the test data set</span>
+</div>
+<div class="s4Y">
+<span class="sSU">4)</span> <span class="sSV">     </span> <span class="sSU">We tested the accuracy of the model using the metrics.accuracy_score function in the Scikit-Learn library and got an accuracy score of 67% - that is an improvement over the Linear Regression model result we got earlier</span>
+</div>
+<div class="sY">
+Typically finding the best fitting model for your dataset is a trial and error exercise and we work with the one that is giving us the highest degree of accuracy based on our training and test datasets.
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<div id="part0012.xhtml#toc26_8._Understanding_Machine_Learning" class="s37">
+8. Understanding Machine Learning
+</div>
+<div class="sY">
+In the previous chapter, I described two machine learning models: Linear Regression and Decision Tree analysis. I also mentioned that there are many other machine learning models that can be applied based on the nature of the problem at hand. In this chapter, we will explain additional machine learning models and algorithms in simple terms – with a goal for the reader to be able to understand them at a high level and know when to apply them given the nature of the data and their data science use case.
+</div>
+<div class="sY">
+At the highest level, machine learning models can be classified into three categories:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Supervised Machine Learning Models</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Unsupervised Machine Learning Models</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Deep Learning Models</span>
+</div>
+<div id="part0012.xhtml#toc23_8.1_Supervised_Machine_Learning_Models" class="s4R">
+8.1 Supervised Machine Learning Models
+</div>
+<div class="sY">
+In case of supervised machine learning models, the model is provided some direction in terms of how to classify the data and it uses those instructions to learn before making its predictions. In the house sales example that we used in the previous chapter, that was an example of supervised learning as we told the model what the different types of houses were and even which house features have an impact on the sales price. We then split the data set into training and test sets, that the model used to make its prediction.
+</div>
+<div class="sY">
+Examples of supervised machine learning models include:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Regression analysis</span>
+</div>
+<div class="s4Y">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Classification analysis</span>
+</div>
+<div class="sY">
+<span class="sSW-0">Regression analysis</span> – in case of regression analysis, given several factors, the model is expected to predict a number. In case of the house sales price example, the model considered several house features to predict the house sales price. Note that above was an example of <span class="sSW-0">linear regression</span> where there is a straight-line correlation between dependent variable (e.g. house sales price) and independent variables (e.g. house type, number of garages etc.).
+</div>
+<div class="sY">
+There are certainly situations where that straight-line correlation does not exist and typically in those situations, <span class="sSW-0">polynomial regression</span> analysis is used – or a curved line instead of a straight line.
+</div>
+<div>
+In other words, all the machine learning model is doing when performing regression analysis is it is trying to fit a line between scattered data points to find a correlation between independent and dependent variables. That can be illustrated visually as follows:
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><div>
+Linear Regression
+</div>
+<div>
+<img src="rsrcUW.jpg" class="sJ7" />
+</div></td>
+<td><div>
+Polynomial Regression
+</div>
+<div>
+<img src="rsrcUX.jpg" class="sJD" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="sBH">
+Other real-world examples of where regression analysis is used is in the finance industry predicting stock price based on historical and market trends as well as in the retail industry where certain product prices are often predictable based on seasonality and time of the year e.g. clothing, outdoor patio and gardening products.
+</div>
+<div class="sY">
+<span class="sSW-0">Classification analysis –</span> in case of classification analysis, the machine learning model predicts the category for an object based on its features. So the main difference between classification model and regression model is that the classification model is categorizing the objects and regression model is predicting a number associated with an object.
+</div>
+<div class="sY">
+Like regression analysis, since classification analysis is a supervised model, it will need to be provided labeled data with instructions to learn before it can make its predictions. If house sales data example in the previous chapter was a classification problem, the model would have been given house sales data without the house type and model would have been asked to predict the house type (e.g. detached, semi-detached or townhome) based on the different features included in the dataset.
+</div>
+<div class="sY">
+Other real-world examples where classification algorithm can be used include:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">     </span> <span class="sSU">Classifying insurance applicant into different risk categories based on their health data</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">Categorizing call center calls as potential escalations, based language and sentiment used</span>
+</div>
+<div class="s4Y">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Categorizing incoming emails based on specific parameters</span>
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<div id="part0014.xhtml#aS4" class="sK0">
+8.2 Unsupervised Machine Learning Models
+</div>
+<div class="sY">
+Unsupervised models are basically like intelligent but unsupervised children – who are given a whole bunch of data but without a lot of direction or labelling of the data. The models then assess this data and draw conclusions. These conclusions continue to be refined as more data is provided to the model.
+</div>
+<div class="sY">
+Examples of unsupervised machine learning models include:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Clustering</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Dimension Reduction</span>
+</div>
+<div class="s4Y">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Association Learning</span>
+</div>
+<div class="sY">
+<span class="sSW-0">Clustering</span> is, as the name suggests, like classification model above where it defines clusters of similar objects but the main difference being that the model is not given any pre-defined categories to label the data with. It comes up with them on its own. As an example, imagine the model being asked to classify different kinds of unlabeled data – some data loosely fits in the time category, some data fits in the geographical category and some data is not fitting either of these dimensions and instead is grouped in the general data cluster as illustrated below:
+</div>
+<div class="sKA-1">
+<img src="rsrcUY.jpg" class="sKA-0" />
+</div>
+<div class="sY">
+Real-world examples of clustering include detecting anomalies in cancer research based on cancerous cell properties as well as fraud detection based on irregular insurance claims or financial investment patterns in case of money laundering.
+</div>
+<div class="sY">
+K-means algorithms is a popular algorithm in Python that is an example of clustering. Basically the algorithm finds its nearest K neighbors that have similar properties – with K defining the number of neighbors you are pre-setting the model to find.
+</div>
+<div class="sY">
+<span class="sSW-0">Dimension Reduction</span> is another example of unsupervised machine learning model that takes a set of features of different objects and tries to categorize them to a higher degree of categories. Think of Netflix algorithm to classify incoming movies and TV shows – it typically will roll up the different types of content to several high-level categories automatically like action, horror or comedy. As new content gets added to the platform, the algorithm will further refine itself to cluster the movies more accurately. In certain cases, certain content on Netflix may fit multiple clusters. For example, a vampire movie with a lot of action can likely be in both the action and horror clusters.
+</div>
+<div>
+<span class="sSW-0">Association Learning</span> is a more sophisticated form of unsupervised machine learning model that is learning from customer behavior and recommending new products and services to you based on your prior purchasing habits. These types of systems are often called recommender systems that associate client profile with the product clusters and based on that generate recommendations. To extend the Netflix example, once the model has built clusters of different online viewable content, it associates the content with your prior viewing habits and recommends new movies and tv shows to you that fit the categories you most often watch. The same logic applies to when Amazon recommends new books or products to you each time you login.
+</div>
+<div id="part0014.xhtml#aS5" class="s4R">
+8.3 Deep Learning
+</div>
+<div class="sY">
+If you have ever heard the terms machine learning and deep learning interchangeably, I am here to tell you that they are not the same. Deep learning is an advanced form of machine learning where you combine several machine learning models in a network, often called a neural network, to arrive at a final conclusion or decision.
+</div>
+<div class="sY">
+The reason why it is called ‘deep learning’, is based on how deep the neural network goes or how many nodes are part of the network – with each node representing a decision point or recommendation from an interconnecting model.
+</div>
+<div class="sY">
+The neural network can be made more sophisticated by applying different weighting to different decision points or nodes and this weighting gets adjusted over time as the model becomes smarter by learning from more experience, trial and error and more data provided to it. One example of this could be when you are looking for another job, when you are early in your career, you may put a higher weight on salary. However, as you gain more experience, you may start to add more weight to other aspects like work-life balance, benefits and career progression opportunities. A sample neural network is illustrated below as an example:
+</div>
+<div class="s40-0">
+<img src="rsrcUZ.jpg" class="s40-1" />
+</div>
+<div class="sY">
+Popular deep learning Python libraries include:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">TensorFlow</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Keras</span>
+</div>
+<div class="s4Y">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">PyTorch</span>
+</div>
+<div class="sY">
+<span class="sSW-0">TensorFlow</span> is an open source framework and API for programming deep learning neural networks and can be imported as a library in Python. It is capable of working with large data sets and is very efficient in data processing – that is why it is gaining a lot of popularity in data science and academic communities.
+</div>
+<div class="sY">
+<span class="sSW-0">Keras</span> can run on top of the TensorFlow framework but is more suitable for smaller datasets and rapid prototyping. You will see it mostly in use when you are experimenting with neural networks in development and traversing the nodes of the neural networks as part of the trial and error process in teaching the model.
+</div>
+<div class="sY">
+<span class="sSW-0">PyTorch</span> is most commonly used for natural language processing and was developed by Facebook. What is Natural Language Processing (NLP) you ask? It is a way for the machine learning models to interpret human language and process that as input into their algorithm. For example, instead of providing the model if-then-else conditions and code as in the previous chapter, you can ask the model questions in human language like, “What would be my predicted house price based on the square footage?” and the model returns the prediction after running the question through the algorithm. Think of AI devices like Amazon’s Alexa and Google Home. Those are examples of Natural Language Processing.
+</div>
+<p><span id="part0015.xhtml"></span></p>
+<div id="part0015.xhtml#aS6" class="s37">
+9. How to Problem Solve Using Machine Learning  
+</div>
+<div class="sY">
+Now that we understand how to build machine learning models in Python and different kinds of machine and deep learning algorithms, how do we apply them to real world problems in our day to day lives or in our organization? In this chapter, I will go over a structured process on how you can go from an initial problem statement all the way to a machine learning model to address that problem.
+</div>
+<div class="sY">
+As part of this framework, we will cover the following steps:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">      </span> <span class="sSU">Establish your use case</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">      </span> <span class="sSU">Gain agreement on your project drivers: Time, Cost and Scope</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">      </span> <span class="sSU">Confirm if data is readily available</span>
+</div>
+<div class="s4K">
+<span class="sSU">4)</span> <span class="sSV">      </span> <span class="sSU">Confirm quality of your data</span>
+</div>
+<div class="s4K">
+<span class="sSU">5)</span> <span class="sSV">      </span> <span class="sSU">Confirm interpretability of your data</span>
+</div>
+<div class="s4K">
+<span class="sSU">6)</span> <span class="sSV">      </span> <span class="sSU">Visualize your data</span>
+</div>
+<div class="s4K">
+<span class="sSU">7)</span> <span class="sSV">      </span> <span class="sSU">Fit the right machine learning model to your use case</span>
+</div>
+<div class="s4K">
+<span class="sSU">8)</span> <span class="sSV">     </span> <span class="sSU">If your use case allows for a supervised model, train your model</span>
+</div>
+<div class="s4K">
+<span class="sSU">9)</span> <span class="sSV">     </span> <span class="sSU">If real world data is available, test your model’s predictions against this data for accuracy</span>
+</div>
+<div class="s4K">
+<span class="sSU">10)</span> <span class="sSV"> </span> <span class="sSU">Productionize your model</span>
+</div>
+<div class="s4K">
+<span class="sSU">11)</span> <span class="sSV">  </span> <span class="sSU">Iterate!</span>
+</div>
+<div id="part0015.xhtml#aS7" class="s4R">
+9.1 Establish Your Use Case
+</div>
+<div class="sY">
+This step involves formulation of your problem statement and I recommend that this problem statement should be formulated as a question that needs to be addressed or insight that needs to be gained. More specific the question is, the better. This step is particularly critical when you are trying to determine which machine learning algorithm best fits your problem. Some examples of use cases below for reference:
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">     </span> <span class="sSU">“How many call center representatives should I have managing my life insurance claim queues during downtime in the summer based on historical volumes and seasonality?”</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">“Based on the language and tone used in the call center call, how likely is this client to leave our organization or escalate the issue?”</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">     </span> <span class="sSU">“Depending on purchase pattern of this client, what additional products is he / she likely to buy in the next 6 months?”</span>
+</div>
+<div id="part0015.xhtml#toc28_9.2_Get_Agreement_on_Project_Drivers__Time__Cost_and_Scope" class="s4R">
+9.2 Get Agreement on Project Drivers: Time, Cost and Scope
+</div>
+<div class="sY">
+Once you have nailed down your problem statement, it is important to understand what constraints you are working with for your data science project.
+</div>
+<div class="s4K">
+<span class="sSU">1)</span> <span class="sSV">     </span> <span class="sSU">If your project is time driven, it likely requires a quick resolution or incremental deliverables that need to provide immediate insights</span>
+</div>
+<div class="s4K">
+<span class="sSU">2)</span> <span class="sSV">     </span> <span class="sSU">If your project is cost driven, you likely will not have a lot of budget for data sourcing or additional resources</span>
+</div>
+<div class="s4K">
+<span class="sSU">3)</span> <span class="sSV">     </span> <span class="sSU">If your project is scope or quality driven, you have additional flexibility to truly perfect your model and corresponding predictions before the result is shared with your clients</span>
+</div>
+<div id="part0015.xhtml#aS9" class="s4R">
+9.3 Confirm If Data Is Readily Available
+</div>
+<div class="sY">
+Depending on the nature of the problem, sometimes data may or may not be readily available. For example, if you are trying to analyze the patterns of the flu virus to inform efforts to create the vaccine for upcoming flu seasons, you may not have the most up to date dataset based on the current flu season – due to the timing or data being provided by the health institutions. In those cases, you must work with what is available and extrapolate / make assumptions where possible.
+</div>
+<div>
+In a cost or time driven project, this situation will be a barrier. In the absence of actionable data, you will likely have to convince the stakeholders via a business case as to why investing in sourcing additional data to address the problem is the right investment to make.
+</div>
+<div id="part0015.xhtml#aSA" class="s4R">
+9.4 Confirm Quality of Your Data
+</div>
+<div class="sY">
+You can be swimming in data but it is possible that the quality of your data is not good i.e. you have a lot of missing, incomplete or generally uninterpretable information. You will have to spend a lot of time in data cleaning and manipulation before it is ready for analysis. In a lot of data science projects, this is the least sexy and most time intensive exercise.
+</div>
+<div>
+Good news here is that Python has a lot of built in functions, as we illustrated earlier in this book that allow you to clean your data and visualize it to eliminate any outliers as well as null values.
+</div>
+<div id="part0015.xhtml#toc31_9.5_Confirm_Interpretability_of_Your_Data" class="sN1">
+9.5 Confirm Interpretability of Your Data
+</div>
+<div class="sY">
+You can have lots of data of great quality. However, you will have a hard time analyzing or training the model if no one in your organization understands it. In case your parachuted into an organization to work on their data science project, it is highly likely that the organization has a lot of old legacy systems, that use their own internal encoding and knowledge of the data and how to interpret it is often in people’s heads or is tribal knowledge i.e. its known to a select few old timers but is not documented or widely shared.
+</div>
+<div>
+In an organization that is very operationally focused and cannot make data subject matter experts (SMEs) available to assist on data science projects, this is often a stumbling block. Often, availability of these SMEs must be business cased to move the data science project forward.
+</div>
+<div id="part0015.xhtml#aSC" class="s4R">
+9.6 Visualize Your Data
+</div>
+<div class="sY">
+Now that you have good quality data that is interpretable and you have ready access to SMEs, you are ready to analyze your data and the fun truly begins! As a first step, you visualize your data to look at patterns, anomalies and outliers.
+</div>
+<div class="sY">
+This is also the step where you start to decide which machine learning model and algorithm is most suited to your problem and the structure of your data. For example, as shown earlier in this book, if you are seeing straight-line correlation between your variables, maybe it is a simple linear regression problem. Or maybe, it is a bunch of undefined data points and you need to find groupings and commonalities – sounds like a job for a clustering algorithm!
+</div>
+<div>
+Luckily Python has really powerful visualization libraries like seaborn that allow you to look at your data from various angles before you decide on which model will be the best fit.
+</div>
+<div id="part0015.xhtml#toc33_9.7_Fit_the_Right_Machine_Learning_Model_to_Your_Use_Case" class="s4R">
+9.7 Fit the Right Machine Learning Model to Your Use Case
+</div>
+<div class="sY">
+As mentioned above, visualization of your data along with the nature of your use case and project drivers will determine which model you will ultimately choose as your best fit. It is basically like selecting the best tool in your tool belt for the job at hand or using the best golf club depending on whether you need to drive or putt. You get the idea!
+</div>
+<div>
+As mentioned earlier in this book and illustrated in the house sales example, often it is a trial and error process before you find the model that gives you the highest degree of accuracy when tested against real world data.
+</div>
+<div id="part0015.xhtml#aSE" class="s4R">
+9.8 Train Your Model
+</div>
+<div class="sY">
+In case of a supervised machine learning model, you have an opportunity to provide your model with labeled data and a training data set to get it ready for real world problems. Even in unsupervised or deep learning models, you can refine your models as more data becomes available and you can adjust your algorithm.
+</div>
+<div>
+For example, in the house sales data we were using, we saw that house type and square footage played a big role in driving house sales prices. However, it was also a relatively small dataset. It is quite possible that as more data became available, additional house features like number of garages or whether the house has a pool may have become more important and model will have to be re-trained.
+</div>
+<div id="part0015.xhtml#aSF" class="s4R">
+9.9 Test Your Model
+</div>
+<div>
+It is not enough that you built your model and trained it once. You constantly have to test it and keep feeding it new data as feedback loop to make sure that the model accuracy stays within acceptable limits. It is also a best practice to have monitoring mechanisms developed so that if model accuracy or error rates are exceeding certain thresholds it is time to take the model back to the drawing board for re-training.
+</div>
+<div id="part0015.xhtml#toc36_9.10_Productionize_Your_Model" class="s4R">
+9.10 Productionize Your Model
+</div>
+<div>
+If the machine learning model you built was meant for an ongoing operational setting in an organization as opposed to a one-off analysis, your final step is to operationalize and automate the model training and testing. This will likely involve additional investment in your infrastructure to automate the data flow into the model as well as automating the triggers for model re-calibration in case accuracy metrics are falling below acceptable limits.
+</div>
+<div id="part0015.xhtml#toc37_9.11_Iterate_" class="s4R">
+9.11 Iterate!
+</div>
+<div class="sY">
+Once you are done building and productionizing your model, you will get new insights from the model predictions. These predictions and insights can be used to refine your use case and problem statement. As you adjust your problem statement, you will repeat the above steps to continue updating and enhancing your model.
+</div>
+<p><span id="part0016.xhtml"></span></p>
+<div id="part0016.xhtml#aSJ" class="sK0">
+9.11 Summary Data Science Workflow
+</div>
+<div class="sY">
+So in summary, you can visualize your data science workflow as follows:
+</div>
+<div>
+<img src="rsrcV0.jpg" class="sNY" />
+</div>
+<p><span id="part0017.xhtml"></span></p>
+<div id="part0017.xhtml#toc40_10._Conclusion" class="s37">
+10. Conclusion
+</div>
+<div class="sY">
+In summary, we started this book with an introduction to Python and covered the basics including the different data types and data structures. We then progressed to analyzing a real data set using foundational Python libraries like Pandas and Numpy. We learned to visualize and explore our data and determined how to exclude missing and outlier values.
+</div>
+<div class="sY">
+We were also able to train and test two predictive models using different algorithms namely Linear Regression and Decision Tree Regression. We then learned about additional machine learning models as well as deep learning and neural networks.
+</div>
+<div class="sY">
+Last but not least, we also covered how you can problem solve using machine learning algorithms and how to go from use case all the way to fully fleshed machine learning model.
+</div>
+<div class="sY">
+We did all the above using visual examples and illustrations – using the power of Python!
+</div>
+<div>
+I hope this book helped with your understanding of building machine learning models in Python and you feel more confident in getting hands-on with Python! Look for future books in this series to continue your data science journey!
+</div>
+<p><span id="part0018.xhtml"></span></p>
+<div id="part0018.xhtml#aSM" class="s37">
+Post your Review
+</div>
+<div class="sY">
+Your review will help me improve this book and future content and will also help other readers find this book!
+</div>
+<div class="sY">
+Thanks again for purchasing this book and your continued support!
+</div>
+<p><span id="part0019.xhtml"></span></p>
+<div id="part0019.xhtml#toc42_Website_and_Free_Gift_" class="s37">
+Website and Free Gift!
+</div>
+<div class="sY">
+Don’t be a stranger and please check out my website:
+</div>
+<div class="sY">
+<a href="https://www.daneyalauthor.com/" class="sSX">https://www.daneyalauthor.com</a>
+</div>
+<div class="sY">
+You will be able to download all the Python code used in this book by visiting the above link.
+</div>
+<p><span id="part0020.xhtml"></span></p>
+<div id="part0020.xhtml#toc43_References" class="s37">
+References
+</div>
+<ol>
+<li>Python Main Site: <a href="https://www.python.org/" class="sSX">https://www.python.org/</a></li>
+<li>Zen of Python: <a href="https://www.python.org/dev/peps/pep-0020/" class="sSX">https://www.python.org/dev/peps/pep-0020/</a></li>
+<li>Getting Started with Python: <a href="https://www.python.org/about/gettingstarted/" class="sSX">https://www.python.org/about/gettingstarted/</a></li>
+<li>Anaconda Distribution: <a href="https://www.anaconda.com/distribution/" class="sSX">https://www.anaconda.com/distribution/</a></li>
+<li>Jupyter Notebook: <a href="https://jupyter.org/" class="sSX">https://jupyter.org/</a></li>
+<li>Galton, F. (1877). Regression in Statistical Analysis - Typical laws of heredity. III. Nature, 15(389), 512-514.</li>
+</ol>

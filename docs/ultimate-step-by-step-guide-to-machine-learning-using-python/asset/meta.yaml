@@ -1,0 +1,49 @@
+name: Ultimate Step by Step Guide to Machine Learning Using Python： Predictive Modelling
+  Concepts Explained in Simple Terms for Beginners
+slug: ultimate-step-by-step-guide-to-machine-learning-using-python
+name_cn: Python 机器学习终极分步指南：面向初学者的预测建模概念通俗解析
+toc:
+- - '##'
+  - 3. 数据类型
+- - '##'
+  - 4. 数据结构
+- - '##'
+  - 5. 数据遍历
+- - '##'
+  - 6. 数据探索与分析
+- - '###'
+  - 7. 构建预测模型
+- - '####'
+  - 7.1 线性回归模型
+- - '####'
+  - 7.2 决策树回归模型
+- - '##'
+  - 8. 理解机器学习
+- - '###'
+  - 8.1 Supervised Machine Learning Models（监督式机器学习模型）
+- - '####'
+  - Regression analysis（回归分析）
+- - '####'
+  - Classification analysis（分类分析）
+- - '###'
+  - 8.2 无监督机器学习模型
+- - '####'
+  - 聚类
+- - '####'
+  - 降维
+- - '####'
+  - 关联学习
+- - '###'
+  - 8.3 深度学习
+- - '##'
+  - 9. 如何利用机器学习解决问题
+- - '###'
+  - 9.11 总结 数据科学工作流
+- - '##'
+  - 10. 结语
+- - '###'
+  - 发表你的评价
+- - '###'
+  - 网站与免费礼物！
+- - '###'
+  - 参考资料
