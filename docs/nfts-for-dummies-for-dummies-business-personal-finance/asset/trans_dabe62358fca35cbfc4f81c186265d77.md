@@ -1,0 +1,116 @@
+
+
+## 重命名 MetaMask 账户
+
+2. 点击账户名称右侧的垂直省略号，如[图 7-8](#c07.xhtml#c07-fig-0008)所示。
+   ![FIGURE 7-8: Navigating account options on MetaMask.](images/9781119843313-fg0708.png)
+
+   [图 7-8：](#c07.xhtml#rc07-fig-0008) 在 MetaMask 上导航账户选项。
+
+3. 在出现的下拉菜单中，选择“Account Details”（账户详情）。
+
+   此时会显示一个新窗口，账户名称位于二维码上方，如[图 7-9](#c07.xhtml#c07-fig-0009)所示。
+   ![FIGURE 7-9: Specific account details on MetaMask.](images/9781119843313-fg0709.png)
+
+   [图 7-9：](#c07.xhtml#rc07-fig-0009) MetaMask 上的特定账户详情。
+
+4. 点击账户名称旁边的铅笔图标。
+
+5. 重命名账户，然后选中文本输入框右侧的复选框以确认更改，如[图 7-10](#c07.xhtml#c07-fig-0010)所示。
+   ![FIGURE 7-10: Renaming an account on MetaMask.](images/9781119843313-fg0710.png)
+
+   [图 7-10：](#c07.xhtml#rc07-fig-0010) 在 MetaMask 上重命名账户。
+
+完成！账户现在显示其新名称。
+
+![Remember](images/remember.png)在 MetaMask 上更改账户名称不会改变提交交易所需的私钥，也不会改变用于接收资金的公共账户地址。这些账户名称纯粹是一个外观功能，旨在帮助您在心理上为不同用途组织不同的账户。
+
+### 向不同账户添加不同的 ETH
+
+在您设置好三个账户并为其命名以便于组织管理后，您需要向每个账户注入一些 ETH。以下列表重点介绍了在为每种类型的账户注资时需要牢记的重要差异：
+
+*   **Mainnet account（主网账户）**：您需要在此账户中拥有真实的 ETH，以便在主网上为以太坊交易提供燃料。（有关如何用实际 ETH 为您的主网账户注资的详细信息，请参阅[第 2 章](#c02.xhtml)和[第 4 章](#c04.xhtml)。）
+
+*   **Local account（本地账户）**：为本地账户注资要简单且廉价得多，因为测试环境仅局限于您的个人系统，且 ETH 在此本地测试环境之外没有实际价值。（您无法在该本地环境之外花费这些 ETH。）
+
+    当您启动一个私有的练习区块链时，您的本地开发环境也会启动预先注入了本地测试 ETH 的本地账户。我们将在第 8 章中解释如何将这些本地账户及其测试资金导入 MetaMask，届时我们将向您展示如何设置您的以太坊技术栈。
+
+*   **Testnet account（测试网账户）**：为了在公共测试网上为您的测试交易提供燃料，您需要特定网络的测试 ETH。这就是水龙头的用武之地。测试 ETH *水龙头* 会定期提供测试 ETH，但在给定时间段内您只能请求有限数量的测试 ETH。（有关测试水龙头的更多信息，请查看下一节。）
+
+### 为您的测试网账户注资
+
+您可以从各种测试网络获取测试 ETH 为您的测试网账户注资。MetaMask 很贴心地提供了一个列表供您选择，然后您可以去获取您的测试 ETH。我们使用 Ropsten 以太坊水龙头为我们的测试网账户注资，因为我们稍后将使用 Ropsten 测试网络来练习部署智能合约。
+
+要为您的测试网账户注资，请执行以下步骤：
+
+1.  前往 Ropsten 以太坊水龙头页面 [`https://faucet.ropsten.be`](https://faucet.ropsten.be)，如[图 7-11](#c07.xhtml#c07-fig-0011)所示。
+    ![FIGURE 7-11: The Ropsten Ethereum Faucet.](images/9781119843313-fg0711.png)
+
+    [图 7-11：](#c07.xhtml#rc07-fig-0011) Ropsten 以太坊水龙头。
+
+2.  登录您的 MetaMask 钱包。
+
+3.  点击中间的下拉菜单，将网络从以太坊主网切换到 Ropsten 测试网络，如[图 7-12](#c07.xhtml#c07-fig-0012)所示。
+
+4.  选择您的测试网账户，然后点击复制公共账户地址，如[图 7-13](#c07.xhtml#c07-fig-0013)所示。
+
+    在我们的示例中，该账户地址为 `0x43371B75585785D62e3a50533aa15ee8D350273F`。
+
+5.  将此账户地址粘贴到 Ropsten 以太坊水龙头中，然后点击“Send Me Test Ether”按钮，如[图 7-14](#c07.xhtml#c07-fig-0014)所示。
+
+6.  等待约 1 分钟。
+
+    请耐心等待——可能需要稍长一点时间。
+
+7.  仔细检查您现在是否在 MetaMask 上拥有测试网账户余额，如[图 7-15](#c07.xhtml#c07-fig-0015)所示。
+    ![FIGURE 7-12: Switching networks in your MetaMask wallet.](images/9781119843313-fg0712.png)
+
+    [图 7-12：](#c07.xhtml#rc07-fig-0012) 在 MetaMask 钱包中切换网络。
+
+    ![FIGURE 7-13: Copying a public account address from your MetaMask wallet.](images/9781119843313-fg0713.png)
+
+    [图 7-13：](#c07.xhtml#rc07-fig-0013) 从 MetaMask 钱包复制公共账户地址。
+
+    ![FIGURE 7-14: Requesting test ETH from the Ropsten Ethereum Faucet.](images/9781119843313-fg0714.png)
+
+    [图 7-14：](#c07.xhtml#rc07-fig-0014) 从 Ropsten 以太坊水龙头请求测试 ETH。
+
+    ![FIGURE 7-15: Updated testnet account balance, after requesting test ETH.](images/9781119843313-fg0715.png)
+
+    [图 7-15：](#c07.xhtml#rc07-fig-0015) 请求测试 ETH 后更新的测试网账户余额。
+
+恭喜！您的测试网账户现在有 1 个测试 ETH 了。
+
+![Remember](images/remember.png)如果您等待超过 10 分钟仍未在测试网账户中看到测试 ETH，请确保您已按照前面步骤列表中的步骤 3 所述，将网络切换到 Ropsten 测试网络。
+
+![Warning](images/warning.png)测试网水龙头并不提供无限量的测试 ETH，如果您在收到测试 ETH（亲切地称为“一滴”）后过早再次请求，您将被加入灰名单。Ropsten 以太坊水龙头甚至要求两次请求之间有 24 小时的冷却期。如果您在该期限结束前提出另一个请求，您将被*加入灰名单*，并且必须再等待 24 小时才能请求更多测试 ETH。([图 7-16](#c07.xhtml#c07-fig-0016) 展示了此类警告的样子。)
+
+![FIGURE 7-16: The greylist, warning when you request more test ETH too soon.](images/9781119843313-fg0716.png)
+
+[图 7-16：](#c07.xhtml#rc07-fig-0016) 灰名单，当您过早请求更多测试 ETH 时发出警告。
+
+### 探索 Ropsten 测试网区块链
+
+与以太坊主网上的交易一样，您可以在 Ropsten 测试网区块链上查看您的测试网交易，以及所有其他测试网交易区块。具体方法如下：
+
+1.  前往 [`https://ropsten.etherscan.io`](https://ropsten.etherscan.io/)。
+
+2.  输入特定的交易哈希、区块号或账户地址进行探索，如[图 7-17](#c07.xhtml#c07-fig-0017)所示，然后点击搜索按钮（带有放大镜图标的按钮）。
+
+    让我们粘贴上一个示例中的测试网账户地址：
+
+    `0x43371B75585785D62e3a50533aa15ee8D350273F`
+
+    此搜索显示了向我们在第 2 步中输入的测试网账户转账单个测试 ETH 的交易，如[图 7-18](#c07.xhtml#c07-fig-0018)所示。
+    ![FIGURE 7-17: Exploring transactions on the Ropsten testnet.](images/9781119843313-fg0717.png)
+
+    [图 7-17：](#c07.xhtml#rc07-fig-0017) 在 Ropsten 测试网上探索交易。
+
+    ![FIGURE 7-18: Finding transactions and account balances on the Ropsten testnet.](images/9781119843313-fg0718.png)
+
+    [图 7-18：](#c07.xhtml#rc07-fig-0018) 在 Ropsten 测试网上查找交易和账户余额。
+
+    当然，与该测试网账户关联的交易和 ETH 不会被转移到以太坊主网，主网可通过 [`https://etherscan.io`](https://etherscan.io) 访问，如[图 7-19](#c07.xhtml#c07-fig-0019)所示。
+
+### “消失”的余额
+
