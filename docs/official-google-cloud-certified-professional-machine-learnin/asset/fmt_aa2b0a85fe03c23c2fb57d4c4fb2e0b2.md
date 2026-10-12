@@ -1,0 +1,74 @@
+
+# 15. 你是一家初创公司的数据科学家，正在使用 TensorFlow 进行多个项目。你需要提高训练性能，并且已经在使用缓存和预取。你想使用 GPU 进行训练，但为了具有成本效益，必须只使用一台机器。你应该使用以下哪种 `tf` 分发策略？
+
+1.  `MirroredStrategy`
+2.  `MultiWorkerMirroredStrategy`
+3.  `TPUStrategy`
+4.  `ParameterServerStrategy`
+
+# 第 8 章 模型训练与超参数调优
+
+在本章中，我们将讨论各种文件类型以及它们如何在 GCP 中存储和摄取用于 AI/ML 工作负载。然后我们将讨论如何使用 Vertex AI 训练模型。Vertex AI 训练支持 scikit-learn、TensorFlow、PyTorch 和 XGBoost 等框架。我们将讨论如何使用预构建容器和自定义容器训练模型。我们还将介绍为什么以及如何对机器学习的数据和模型进行单元测试。然后，我们将介绍超参数调优以及 Google Cloud 中可用的各种超参数搜索算法。我们还将介绍 Vertex AI Vizier 以及它与超参数调优的区别。我们将讨论如何使用 Vertex AI 指标、Vertex AI 交互式 Shell、TensorFlow Profiler 和 What-If Tool 跟踪和调试 Vertex AI 中的训练模型。最后，我们将讨论数据漂移、概念漂移，以及何时应该重新训练模型以避免漂移。
+
+## 将各种文件类型摄取到训练中
+
+训练数据可以是多种类型，例如：
+
+*   结构化数据，如来自本地数据库的表或 CSV 文件
+*   半结构化数据，如 PDF 或 JSON 文件
+*   非结构化数据，如聊天记录、电子邮件、音频、图像或视频
+
+此外，这些数据可以是批处理数据，也可以是实时流数据——例如，从物联网 (IoT) 传感器流式传输的数据。而且，数据可以很小（如几兆字节），也可以达到 PB 级规模。正如您在前几章中所学，在训练数据之前，清理和转换数据非常重要，以便您可以对其应用 ML 训练。Google Cloud 分析产品组合提供了收集、存储、处理和分析这些数据的工具，如图 8.1 所示。
+
+![图 8.1 Google Cloud 数据和分析概览](images/c08f001.png)
+
+**图 8.1** Google Cloud 数据和分析概览
+
+让我们看看各个步骤。
+
+### 收集
+
+如果您需要从各种来源（如 IoT 设备、电子商务网站或任何第三方应用程序）收集批处理或流数据，可以通过 Google Cloud 服务完成。
+
+*   **用于实时流式传输的 Pub/Sub 和 Pub/Sub Lite**：`Pub/Sub` 是一种无服务器的可扩展服务（1 KB 到 100 GB，性能一致），用于消息传递和实时分析。`Pub/Sub` 可以在全球范围内进行发布和订阅，无论您的摄取或处理应用程序位于何处。它与处理服务 (`Dataflow`) 和分析服务 (`BigQuery`) 深度集成。您可以使用 `Pub/Sub` 直接从第三方将数据流式传输到 `BigQuery`。`Pub/Sub Lite` 也是一种无服务器产品，但针对成本而非可靠性进行了优化。`Pub/Sub Lite` 适用于负载更可预测且一致的工作负载。
+
+*   **用于将本地 Oracle 和 MySQL 数据库迁移到 Google Cloud 数据存储的 Datastream**：`Datastream` 是一种无服务器且易于使用的变更数据捕获 (CDC) 和复制服务。它允许您跨异构数据库和应用程序可靠地同步数据，且延迟和停机时间极短。`Datastream` 支持从 Oracle 和 MySQL 数据库流式传输到 `Cloud Storage`。`Datastream` 与 `Dataflow` 集成，并利用 `Dataflow` 模板将数据加载到 `BigQuery`、`Cloud Spanner` 和 `Cloud SQL` 中。
+
+*   **BigQuery Data Transfer Service**：您可以使用 `BigQuery Data Transfer Service` 从以下来源将数据加载到 `BigQuery`：
+    *   数据仓库，如 `Teradata` 和 `Amazon Redshift`
+    *   外部云存储提供商 `Amazon S3`
+    *   Google 软件即服务 (SaaS) 应用，如 `Cloud Storage`、`Google Ads` 等
+
+配置数据传输后，`BigQuery Data Transfer Service` 会定期自动将数据加载到 `BigQuery` 中。
+
+### 处理
+
+从各种来源收集数据后，您需要工具在数据准备好进行 ML 训练之前对其进行处理或转换。以下部分介绍一些有用的工具。
+
+#### Cloud Dataflow
+
+`Cloud Dataflow` 是一种无服务器、全托管的数据处理或 ETL 服务，用于处理流数据和批数据。`Dataflow` 在开源其 SDK 之前使用 `Apache Beam`。`Apache Beam` 提供精确一次流语义，这意味着它具有机制不仅能至少处理每条消息一次，而且能恰好处理一次。这简化了您的业务逻辑，因为您不必担心处理重复项或错误。
+
+数据流是执行一组操作的处理管道，这使您能够构建管道、监控其执行情况，并转换和分析数据。它旨在解决使用 MapReduce 构建管道时的性能问题。许多 Hadoop 工作负载可以通过 `Dataflow` 轻松完成并更易于维护。`Cloud Dataflow` 允许您从源 Google Cloud 数据服务处理和读取数据到接收端，如图 8.2 所示。
+
+![图 8.2 Cloud Dataflow 源和接收端](images/c08f002.png)
+
+**图 8.2** Cloud Dataflow 源和接收端
+
+例如，您可以使用 `Cloud Dataflow` 从 `Cloud Pub/Sub`（源）处理和转换数据到 `BigQuery`（接收端）。
+
+#### Cloud Data Fusion
+
+我们在[第 3 章](#c03.xhtml)“特征工程”中介绍了 `Cloud Data Fusion`。`Cloud Data Fusion` 是一种基于 UI 的 ETL 工具，无需代码实现。
+
+#### Cloud Dataproc
+
+`Dataproc` 是一种全托管且高度可扩展的服务，用于运行 `Apache Spark`、`Apache Flink`、`Presto` 和 30 多种开源工具和框架。`Dataproc` 让您利用开源数据工具进行批处理、查询、流处理和机器学习。`Dataproc` 自动化可帮助您快速创建集群、轻松管理它们，并在不需要时将其关闭以节省资金。
+
+`Dataproc` 与其他 Google Cloud Platform 服务（如 `BigQuery`、`Cloud Storage`、`Cloud Bigtable`、`Cloud Logging` 和 `Cloud Monitoring`）具有内置集成，提供了一个完整的数据平台。例如，您可以使用 `Dataproc` 轻松地将 TB 级原始日志数据直接 ETL（提取、转换、加载）到 `BigQuery` 中以进行业务报告。`Dataproc` 使用 Hadoop 分布式文件系统 (`HDFS`) 进行存储。此外，`Dataproc` 会自动安装兼容 `HDFS` 的 `Cloud Storage` 连接器，从而支持将 `Cloud Storage` 与 `HDFS` 并行使用。数据可以通过上传/下载到 `HDFS` 或 `Cloud Storage` 进出集群。表 8.1 总结了 `Dataproc` 的连接器。
+
+**表 8.1** Dataproc 连接器
+
+| 连接器 | 说明 |
+| --- | --- |
+| Cloud Storage 连接器 | 默认在 `Dataproc` 上可用，此连接器有助于直接在 `Cloud Storage` 中的数据上运行 `Apache Hadoop` 或 `Apache Spark` 作业。将数据存储在 `Cloud Storage` 中，并使用 Cloud Storage 连接器直接访问。您无需先将其传输到 `HDFS`。 |
