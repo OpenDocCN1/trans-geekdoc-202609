@@ -1,0 +1,28 @@
+
+## Ethical Consideration
+
+![](images/ufig1_23.jpg)
+
+When we work with data, especially a large amount of it, we naturally have to consider ethical questions. Data often includes personal, private, and sensitive information. While this information can help us develop good predictive algorithms, if it is leaked, it can harm those individuals. Accordingly, before we conduct data mining research, we must evaluate and address any ethical concerns to ensure no harm comes to human subjects.
+
+### Ethical Principles and Data Collection
+
+Ethical consideration is an important topic in data mining because we must ensure compliance with requirements and restrictions regarding data access to protect human subjects and avoid violating privacy. Essentially, ethical considerations refer to the principles, guidelines, and moral values that govern the responsible and respectful use of data throughout the entire data mining process. According to the Belmont Report ([U.S. Department of Health & Human Service, 1979](#bibab10c.xhtml#refbib_108)), there are three basic ethical principles that all researchers or investigators must follow: (1) respect for persons, (2) beneficence, and (3) justice.
+
+First, respect for persons means treating individuals as autonomous agents, and persons with diminished autonomy are entitled to protection. Second, beneficent actions ensure that the research does not harm persons and maximizes possible benefits while minimizing possible harms. Finally, justice ensures “fairness in distribution” to all participants. All researchers and investigators must comply with these ethical principles in their research projects.
+
+Acquiring data is challenging, as few organizations are willing to share their data with the public. Some websites provide example datasets for practice purposes, but these could be fictional or have been de-identified, modified, or even reduced, making them unsuitable for research purposes. They may also lack validity or sufficient information on the variables, timeframe, or context needed to make a project meaningful.
+
+There are limited organizations that provide de-identified data for public use, such as NASA, FAA, NTSB, BTS, the U.S. Census Bureau, and the Department of Education. These datasets have been carefully scrubbed to ensure no personal information or identification is revealed. Although these databases are valid and can be used for research, they are limited and may not provide the data needed for specific projects. An advantage of these publicly accessible data sources is that no permission or condition is required to use the data. Since the data have been cleaned and de-identified, researchers are allowed to publish their results on the Internet or in peer-reviewed journals without ethical concerns.
+
+Private organizations usually have current and relevant data collected for business purposes, such as airlines, manufacturers, retailers, e-commerce companies, hotels, hospitals, social network providers, media providers, banks, and real estate companies. However, they consider the data proprietary and do not want to publish it for public use. They typically have in-house data analytics teams to analyze the data for business insights. Sometimes, these organizations may agree to share data for research purposes under restricted conditions, often through research grants or contracts. In such cases, researchers need permission from the organization to access the data under the terms established by the organization. This permission is formalized through a non-disclosure agreement (NDA), which all parties should agree to and sign before sharing the data. Researchers must ensure they have permission before accessing and collecting the data and carefully review the terms and conditions before accepting them. Permission may include an expiration date for data access, the project's purpose, expectations for the final report submission, and whether the findings can be published in a peer-reviewed journal. Usually, permission to publish comes with restrictions, such as thorough de-identification of the data and non-disclosure of the data provider's identity in the report.
+
+![](images/ufig1_24.jpg)
+
+In some cases, government agencies or private parties agree to provide non-public data for research purposes but require the researcher to hold the publication of the results for a certain period. For example, a funding organization might provide the necessary data, which may contain time-sensitive information that should be kept from the public initially but can be publicly available after two years. Hence, the organization may require the researcher to hold the publication of the results for two years. After this expiration date, the researcher is free to publish the results, provided that the paper is approved by the data provider. This requirement is usually included in the contract or NDA signed by both the organization and the researcher.
+
+When working with datasets provided by these organizations, we need to adhere to the three basic ethical principles mentioned earlier. We should begin by performing a systematic assessment of risks and benefits to the organization and individuals involved in the data. By understanding potential risks and harms to these parties, we can devise an appropriate action plan to avoid any harm. Revealing sensitive and private information can harm individuals and organizations alike. Additionally, misinformation or misinterpretation of the results poses a similar level of risk. Once we complete the risk and benefit analysis, we develop an action plan to ensure no harm is done to individuals or organizations.
+
+### Institutional Research Board (IRB) and the Review Process
+
+![](images/ufig1_25.jpg)
