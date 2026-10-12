@@ -1,0 +1,2038 @@
+## 机器学习的第一步：为ML雕琢数据
+
+
+
+## 前言
+
+## Julian McAuley 撰
+
+机器学习领域的许多最新突破，包括自然语言处理、计算机视觉等，既得益于更好的模型，也得益于更好的数据。很自然地，现代机器学习数据集应当具备大规模特性，以便模型能够捕捉其复杂的底层语义。然而，拥有足够的数据只是问题的一小部分：数据还必须经过处理、适当表示、妥善采样，并解决平衡性与偏见等问题，更别提从中提取有意义的预测信息的挑战了。机器学习从业者的共同经验是，这种“数据清洗整理”工作占用的时间和精力比建模还要多；但它也极具回报，因为新数据集的收集与整理往往能催生最新颖、最激动人心的研究，并能为研究社区做出重大贡献。很高兴看到一本涵盖了收集和整理数据这一未被充分探索却至关重要技能的书籍。我期待这本书将对开始收集自有数据集、或好奇热门数据集通常如何收集的从业者大有裨益。此类主题在机器学习的学术论述中通常缺失，因为数据收集和准备这一庞大任务常被一笔带过。得知 Jigyasa 和 Rishabh 正在撰写此书，我欣喜不已：两人都拥有在学术和工业界收集、整理和建模大规模数据集的经验。我预计读会发现关于数据提取和数据准备的章节特别有用，因为这些是我在自己的职业生涯中发现最实用的技能。
+
+**Julian McAuley**  
+加州大学圣地亚哥分校 副教授
+
+## Laurence Moroney 撰
+
+这是一本重要的书！数据是任何机器学习或 AI 解决方案的命脉，仅靠公开可用的数据集只能走这么远。让我对这本书感到兴奋的是，Jigyasa 和 Rishabh 超越了这些范畴，教你如何有效地创建、整理和管理数据。他们将通过多个场景带你了解如何从在线零售和新闻聚合网站等多样化来源获取真实世界的数据，但他们不会止步于粗糙的复制粘贴，而是会演示使数据集极具可用性的完整流程。本书第 3 章尤为强大，你将看到如何从第一性原理出发，经历数据修剪、匿名化、标准化、转换和平衡的过程。第 4 章将带你完成特征工程这一重要任务，你不再只是将原始数据扔给问题，而是可以通过裁剪、缩放、分桶等更多手段对其进行细化和改进。所有这些都将为你使用自己采集、清洗和管理的、为实现最佳模型创建而优化的自定义数据进行机器学习做好准备。我对这个领域真的很兴奋，也很高兴存在这么一本书。拿起它，阅读，学习，享受吧！
+
+**Laurence Moroney**  
+Google 首席人工智能布道师
+
+## Mengting Wan 撰
+
+这些年来，随着机器学习和数据科学的快速发展，数据始终是几乎所有下游研究、分析或智能产品功能开发的关键基石。人们很容易注意到，如今存在大量关于帮助人们掌握“消费数据”技能的书籍和课程；然而，鲜有资源探讨如何仔细收集、处理和整理高质量数据集。我曾在加州大学圣地亚哥分校与 Rishabh Misra 合作过多个研究项目，并从他那里学到了许多实用的数据收集和处理技能。因此，得知 Jigyasa 和 Rishabh 愿意分享他们在该领域的知识，我感到万分兴奋，并真心感谢他们为这本书付出的努力。本书介绍了关键的数据收集、提取、准备和处理技能。它还提供了多个机器学习应用示例，并从面向应用的角度切入数据问题。我个人认为，这本书对研究人员和从业者非常有帮助，能帮他们消除数据可用性障碍，主动且负责任地收集所需数据，并理解其数据集的优势和局限性。在这方面，我认为对于愿意从零开始学习数据集收集流程的数据爱好者来说，这本书将是理想的起点。
+
+**Mengting Wan**  
+Microsoft 高级应用科学家
+
+## 序言
+
+在当代人工智能和机器学习的世界里，数据是新石油。理所当然，该领域的巨大飞跃归功于大规模数据的获取。尽管事实如此，关注点往往仍集中在机器学习的方法论层面，这虽利于入门，却可能限制我们的进步。当我们对时髦的方法论达到一定的舒适度后，仅去解决那些已有现成完善数据集的问题，会遏制我们的潜力。因此，要让机器学习算法施展魔力，必须通过掌握整理高质量数据集的知识来奠定坚实基础。随着社交网络、在线零售商、流媒体平台以及知识和经验分享平台的现代繁荣，任何形式的数据——无论是文本、音频还是视觉——都不再短缺。因此，海量的原始数据触手可及。我们所需要的，只是识别有价值信息并提取有意义数据集的技能，以打造更精准的模型。
+
+《Sculpting Data for ML》（为 ML 雕琢数据）是机器学习这出大戏的第一幕。它旨在启迪机器学习和人工智能爱好者、从业者及数据科学家，让他们了解这一领域的基本面向之一——**数据集整理**。这一阶段往往得不到应有的聚光灯，却在学术界和工业界都具有高度相关性。本书的显著特点在于，它提供了一份从零构建高质量数据集的分步指南。书中内嵌的实操教程使用 Python 及 `BeautifulSoup` 和 `Selenium` 等工具，指导如何从各类网络来源合乎道德地收集数据。整个流程建立在这样一个事实之上：预测模型需要访问相关的、结构化的和独特的数据才能有效运作。总体而言，本书涵盖了数据集构建、预处理和工程化有影响力特征的不同技术，从而凸显了数据表示对机器学习模型的重要性。除了将数据塑造成其应有的格式，本书还讨论了处理嘈杂和不可靠数据的方法。向后部分，它阐述了各种机器学习范式及其数据需求，展示了如何识别合适的学习算法以有效解决棘手问题。本书邀请读者踏上数据集整理的务实之旅。其目标是确立数据的重要性，尤其是其应有的格式，并认识到其对提升机器学习系统能力的影响。
+
+**Jigyasa Grover & Rishabh Misra**
+
+
+
+
+
+
+
+
+
+
+
+## 第 1 章 简介
+
+### 现代繁荣
+
+过去几年见证了机器学习在各个领域的应用与采用呈现爆发式增长。这背后有多种原因：信息过载、自动化繁琐任务的需求、推动当前技术水平的发展，有时仅仅是对可能性边界的好奇。
+
+以下是机器学习在上述各个维度中的部分应用：
+
+*   **信息过载：** 机器学习通过根据人们的喜好提供推荐来应对信息过载，例如推荐购买什么产品、与谁建立联系、听什么歌、看什么类型的内容，所有这些都基于他们过去的互动和推断出的兴趣。
+*   **繁琐任务的自动化：** 机器学习实现了许多日常任务的自动化，如为职位发布筛选简历、识别文本中的语法错误、转录视频或播客中的音频、建议合适的文本回复等。无需处理此类繁琐任务节省了大量人力时间和精力，这些资源可用于更关键的任务。
+*   **技术进步：** 学术机构和商业公司也在应用机器学习以进一步推动当前的科学认知水平。例如开发自动驾驶汽车、通过推进早期疾病诊断技术来提高医疗质量、利用计算机视觉技术监测作物以提升农业产量。
+*   **探索极限：** 机器学习的创意用例包括在无人干预的情况下创作音乐或有意义的歌词、合成不存在的人的图片和视频、自动生成食谱、检测文本片段中的讽刺或剧透。
+
+毫无疑问，机器学习目前是人工智能中应用最广、也最被滥用的子领域。无论我们对它是着迷还是厌恶，它都深刻影响着我们的决策能力，并主导着我们当下的生活。简而言之，让计算机自主学习即是机器学习的核心。无需编程即可发现模式的能力，是这些决策系统相较于其他系统最显著的优势。研究人员不断探索机器学习的未知领域，而据专家称，企业仅仅看到了算法冰山的一角。
+
+据财经在线数据，仅 2019 年第一季度，全球机器学习投入就达 285 亿美元，这一数字令人震惊，因为 2016 年该数字仅为 13 亿美元。近 50% 的公司已开始探索或计划近期引入机器学习。专注于机器学习服务的初创公司数量目前呈 14 倍增长率。97% 的移动用户在设备上使用经过机器学习训练的语音助手，40% 的搜索现仅由语音驱动。软件层面的进步也推动了全球 AI 硬件销售额的预期增长，预计到 2025 年底将达 1200 亿美元。安全、分析和营销等企业领域借助机器学习达到新高度，采用率分别增长了 25%、33% 和 16%。
+
+巨大的飞跃让科学家、投资者、决策者、商业领袖和大众为之着迷，暗示机器具备类人智能或许已近在咫尺。尽管如此，机器学习的进展虽令人印象深刻，但仍有大量待解释和待审视之处，这推动着研究持续进行。
+
+### 数据的重要性
+
+为了让最先进的机器学习算法施展魔力，必须重点关注三个关键维度：
+
+1.  
+2.  
+3.  
+
+
+
+
+
+### 算法从实验和验证假设的迭代过程中逐渐成熟
+
+此外，高效计算要求利用分布式处理优化算法以大规模运行。这些绝对是必须考虑的关键方面；然而，以完美的数据质量和数量奠定流程基础，才是让机器学习行之有效的“秘诀”。
+
+![](img/Image00006.jpg)
+
+### AI 需求层次理论
+
+既然我们已从原始的基于规则的方法进步到更数据驱动的方法，那么不言而喻，我们训练机器学习算法是为了捕捉所提供数据中的隐式模式。输入算法的数据类型因此对算法的成功有着深远影响。值得信赖的数据收集构成了 AI 需求层次金字塔的基石，该金字塔由著名数据科学家兼 AI 顾问 Monica Rogati 参照马斯洛人类需求层次理论绘制而成。Rogati 提出，数据素养、数据收集和数据流构成了必须满足的基本需求，以实现自我实现，而自我实现即为达成 AI。怀揣着攀登数据科学阶梯、为构建成功的机器学习算法贡献力量的愿望，人们也应专注于处理数据。在采用机器学习解决方案之前，理解问题和数据需求至关重要，随后是从正确来源研究和积累数据。在大多数情况下，我们无法直接使用收集到的数据。它可能需要借助适当的工具和技术进行一些“加工处理”。完成这些后，我们就可以引入合适的学习算法来解决手头的问题。此时，有必要注意并理解：**任何程度的算法复杂度和高效计算都无法弥补数据质量和数量的不足**。当前正见证智能系统的加速发展。几乎每一位机器学习和数据科学爱好者、传统开发者及企业组织都试图“跳上这趟顺风车”。在这股急躁劲儿中，普遍现象是在训练和评估机器学习模型前，跳过“雕琢数据”的标准操作程序，最终碰壁。因此，为了避免在构建完美人工智能原型的竞赛中错付时间、金钱和精力，系统地遵循流程至关重要。
+
+## 3• 磨练数据集策展技能
+
+正如我们上面所讨论的，经过良好校准的数据是驱动机器学习引擎的燃料。有各种来源可供挑选已经预处理过的数据集，这些数据集可能不需要进一步的修剪、匿名化、标准化、归一化等操作。这些数据可以直接输入模型而无需任何更改，从而为我们提供了一种轻松上手、尝试各种机器学习技术的途径。使用预处理数据集在只想检查端到端机器学习流水线运行情况时也很方便；然而，它可能无法保证卓越的性能。有时可用的数据集不能精确匹配我们问题的“频率”，或数量不足以满足我们的用例。在这种情况下，合成我们自己的数据集，并按所需数量装入对用例潜在有价值的信息，会很方便。当代世界的网络上有海量各类原始数据。手持机器学习这把“木槌”，凭借识别和提取有意义数据集的额外技能，我们可以在这个数据导向的世界里钉下所有钉子。
+
+### I• 学术界的重要性
+
+全球范围内，从事高等教育和研究的科学界近来在机器学习和数据科学领域忙得不可开交。学术界的核心机器学习和数据科学研究小组更倾向于新颖性和推动领域发展，往往将其权重置于盈利逻辑或性能扩展之上。在致力于新问题研究的过程中，寻找相关领域的合作者、为研究项目争取资金并非他们面临的唯一障碍。与通常拥有数据访问权的企业巨头不同，他们还必须在缺乏内部数据的情况下寻找相关数据来源。获取相关数据的一种方式是与行业研究人员合作；然而，这并不总是可行。在这种情况下，克服这一障碍的唯一途径是自行收集一个合理的数据集。尽管具有挑战性，许多知名学术研究人员近来一直在寻找创造性的方法来实现这一目标。攻克这一壁垒使他们能够自给自足，并有机会在新领域引领研究。数据集策展成为研究界备受推崇技能的另一个原因是，它促进了透明度，并鼓励结果的可复现性。
+
+### II• 工业界的重要性
+
+全球商业导向的企业正越来越多地投资机器学习，因为它们意识到技术为其产品和业务增加了价值。与学术界不同，工业界优先考虑盈利逻辑和大规模高性能，而非新颖性和理论知识的进步。因此，大多数用例涉及利用学习算法在大规模上的性能来改善用户体验或创收。成熟组织很少在获取算力、雇佣相关领域专家或访问相关数据方面遇到障碍。然而，挑战在于将其解决方案扩展到庞大的用户群。任何组织手头都会有大量非结构化的原始日志数据；然而，开发高效的数据处理流水线仍是一项任务。为了创建这种有弹性的流水线，除了相关的技术知识外，我们还需要具备从海量非结构化数据中识别和策展有意义、无偏见数据集的技能。
+
+## 4• 本书将教会你什么？
+
+现代社会见证了社交网络、在线购物门户、博客、视频流平台等众多知识和经验分享平台的蓬勃发展，这些平台支持文本、视觉、音频等各类媒体。因此，如今海量原始数据可通过众多来源获取。本书旨在为机器学习最基本的方面之一——**数据集策展**——提供一份深度指南。数据集策展往往得不到应有的聚光灯，却在学术界和工业界具有高度相关性。我们将演示如何使用 `Python` [[1]](#text00010.html#a1KF) 及 `BeautifulSoup` 和 `Selenium` 等工具，从零开始构建稳健的数据集。翻开下一页，开始策展满足所有需求的数据集吧！
+
+---
+
+
+
+
+
+# 第 2 章：数据集提取
+
+### 规划阶段
+
+在我们开始这场数据集提取之旅之前，有句忠告：**请保持耐心**。要构建一个顶尖水平的数据集，我们首先必须在网络上广泛搜寻，然后对其进行相应的加工整理，这是一项繁琐的任务。别担心！我们根据过往在学术界和工业界的经验，梳理出了一套简单直接的分步流程，帮助大家使探索过程系统化、高效化。
+
+### 1. 数据在哪里？数据源概览
+
+据著名记者、《Information Is Beautiful》（信息即美）视觉博客创始人大卫·麦坎德利斯所言：“在当今复杂的信息丛林中，数据是新的土壤。”麦坎德利斯将数据视为一种无处不在的资源，它提供了肥沃且富有创造力的媒介，新思想和新理解可由此生长。在现代世界中，我们时刻都被海量信息淹没。将数据视为填满数字的表格将是一个过时的概念。数据存在的地方远超我们的想象。每一秒，数字平台上都在发生无数事情：邮件收发、各类搜索引擎中的词条搜索、社交网络上的内容发布、产品评论、加入购物车进行网购、不同手持和穿戴设备上的应用下载、博客发布、餐厅签到与美食评价、股票交易、货币兑换，等等。数据流是无限的，诀窍不在于被这些信息压垮，而是磨练技能，为社会和企业利益提取有价值的洞见。
+
+### 2. 示例数据集
+
+简单来说，数据集是由相关信息集合组成的，这些集合构成了独立的知识元素。本书将使用作者们精心策划的少量数据集，贯穿整个数据雕琢过程。
+
+#### 服装版型数据集——用于尺码推荐 [[1]](#text00011.html#page_50)
+
+为改善顾客的网购体验并降低产品退货率，建立一个巧妙的服装尺码推荐框架至关重要。我们使用了**ModCloth**（一家销售独立设计及复古风格女装的在线零售商）来创建此用例的数据集。该数据集包含顾客对购买服装的版型反馈，以及评分、评论、类别信息、顾客身材测量数据等其他信息。该数据集有助于识别决定特定服装产品尺码对特定顾客是否合身的关键特征。
+
+#### 新闻类别数据集 [[2]](#text00011.html#a1K6)
+
+我们从**HuffPost**（一家美国新闻聚合网站和博客）构建了该数据集。它包含 2012 年至 2018 年约 20 万条新闻标题，包含新闻类别、新闻标题、新闻故事简短描述、发布日期等详情。该数据集可用于多种目的，例如识别未追踪新闻文章的标签，或识别不同新闻类别中使用的语言类型。
+
+#### 讽刺检测数据集 [[3]](#text00011.html#a1JH)
+
+过往针对讽刺检测任务的研究大多使用来自**Twitter**（一家微博客和社交网络服务平台）的数据。其数据是基于标签监督收集的。然而，此类数据集噪声较大，特别是在标签分配和语言使用方面。为克服这些局限，我们使用了**TheOnion**和**HuffPost**来为我们的目的创建自定义数据集。**TheOnion**是一家美国讽刺类数字媒体公司，发布关于国际、国家和地方新闻的讽刺文章；而**HuffPost**则报道相应的真实新闻。
+
+### 3. 形势分析
+
+根据收集数据的目的不同，构建高质量数据集的方法也各异。考虑到我们有一个希望借助数据解决的具体问题，我们便有了“北极星”，遵循**引导式搜索**方法。如果我们只是出于好奇，想获取一些有趣的数据点，**非引导式搜索**足以满足这种探索欲。这两种情况都有各自的挑战，在以下章节中，我们将学习如何克服它们。
+
+#### I. 引导式搜索
+
+正如上文所述，当我们心中有具体问题，并必须构建数据集来解决该问题时，我们采用**引导式搜索**方法。在前文提到的示例数据集中，我们策划**服装版型**和**讽刺检测**数据集是为了解决具体问题，因此它们是深入讨论此方法的绝佳候选。
+
+##### A. 挑战
+
+**引导式搜索**数据集最大的挑战在于透彻理解问题陈述。这也包括列出**机器学习**模型为完整解决该问题所需的关键数据信号。
+
+##### B. 相关数据识别
+
+####### 正式问题定义
+
+在识别关键数据信号之前，我们必须尝试正式定义问题。让我们以**服装版型**和**讽刺检测**数据集为例演练这一过程。
+
+**尺码推荐**问题背后的思路是：我们希望开发一个**机器学习**模型，给定产品目录尺码，能准确预测最适合顾客的尺码。因此，我们可以正式定义该问题为：
+
+> “给定顾客过往交易记录（包含其购买尺码和版型反馈），开发一个**机器学习**模型，输入未来交易，输出该购买是否合身。”
+
+**讽刺检测**背后的思路是：识别特定文本片段是否具有讽刺意味。因此我们可以正式定义该问题为：
+
+> “给定一组已知哪些句子带讽刺、哪些不带讽刺的句子，构建一个**机器学习**模型，输入任意随机句子，输出其是否带讽刺。”
+
+####### 关键数据信号确定
+
+通俗地说，**数据信号**可定义为特定数据点传递的一条信息。在**尺码推荐**问题中，我们要向顾客推荐服装尺码。基于正式定义，我们可以识别出某次购买的关键数据信号如下：
+
+`UserID`、`ProductID`、`购买尺码` 和 `版型反馈`。
+
+ID 特征在关联所需信息和使数据点唯一化方面起着至关重要的作用。毫无疑问，我们可以为一笔交易收集其他数据信号，如 `产品类别` 或 `用户年龄`；然而，这些并非绝对必要。识别关键数据信号的技巧源于对问题的理解和领域知识，以下方法可辅助完成该任务。
+
+**在网络上搜索包含所有必需信号的合法来源：** 这正是我们 Google 搜索技巧大显身手之处。我们利用网络冲浪专长探索不同网站，检查它们是否提供所有必需的关键数据信号。例如，考虑**Zappos**（一家在线鞋类和服装零售商）来创建**服装版型**数据集。它看起来很有希望，因为 **Zappos** 提供 `UserID`、`ProductID`、`版型评论` 等众多数据信号。然而，缺失 `购买尺码` 信号敲响了警钟。另一方面，探索像 **ModCloth** 这样的在线零售商，则能让我们获得上述所有已识别的关键数据信号（尽管可能需要额外调整；稍后详述）。
+
+![Zappos 上典型的产品评论页面](img/Image00007.jpg)
+
+**融合来自多个来源的信号：** 当无法找到单一提供所有关键数据信号的来源时，信号融合技术便派上用场。**讽刺检测**数据集就是融合多源数据以构建实用数据集的完美例子。既然我们知道问题（即检测讽刺语气的使用）和想要的数据类型（即带讽刺和不带讽刺的文本片段，以学习二者差异），我们就不必拘泥于单一数据源提供所有信息。快速网络搜索后，我们确定 **TheOnion** 可作为获取讽刺文本的来源，而对于非讽刺片段，我们依赖 **HuffPost** 这类真实新闻报道网站。
+
+![TheOnion 上一篇讽刺文章的经典示例](img/Image00008.jpg)
+
+####### 数据量需求
+
+选择数据源时的另一考量是：该源是否包含足够的历史数据以构建规模足够大的数据集。不利情况包括：在线零售商没有足够的顾客评论报告版型反馈，或新闻源没有旧帖子的存档。在这种情况下，相应的**机器学习**模型可能无法学习到合适的模型参数来捕捉这种“动力不足”数据集中的模式。遇到此类情况，明智的做法是融合多个小型来源的数据，或寻找能提供足够大数据集的单一数据源。
+
+此时可能会问：什么算“足够大”的数据集？数据量需求通常与用例或问题类型相关（我们稍后将讨论不同类型的**机器学习**问题）。对于回归问题，我们可以根据目标变量范围划定区间，推断大多数区间是否至少有少量数据点。对于分类问题，我们可以检查数据点数量与类别数量之比是否足够大。例如，20,000 个数据点可能足够应对 2 个类别，但对 10,000 个类别则远远不够。
+
+####### 多源数据整合
+
+此步骤非常开放，可根据个人偏好考量。一旦我们筛选出同时提供所有关键数据信号且数据量充足的数据源，仍有不同方式进一步优化数据集。一个思路是通过融合多个来源获取更多元数据，这可能为我们的**机器学习**模型提供更多数据信号。在此过程中，我们应始终思考：这是否会带来更好的特征工程（稍后详述）？或是否能解决更广泛的问题？
+
+#### II. 非引导式搜索
+
+对于计划打造一个激动人心、独特且有价值的数据集的创意灵魂，**非引导式搜索**是他们的选择。我们将参考**新闻类别**数据集，进一步解释挑战及各类数据搜索问题。由于我们在没有具体问题的情况下收集该数据集，它是该方法的绝佳范例。
+
+##### A. 挑战
+
+**非引导式搜索**数据集最大的挑战在于其涉及极大程度的不确定性。既然我们不确定数据集需要哪些数据信号，后续搜索操作便缺乏合理的结构。
+
+##### B. 通用数据搜索
+
+尽管不知晓问题增加了难度，以下维度仍试图为搜索高质量数据集带来一些结构。
+
+####### 有趣问题识别
+
+**该来源是否包含值得估计的数据信号？** 在分析某网站作为潜在数据源时，我们应思考：它是否提供独特且值得以估计为目的深入研究的精彩信息？这不必完全标新立异；可以像下面的例子一样直观。浏览知名美国新闻网站 **HuffPost** 时，我们观察到每篇故事都带有类别标签（如 `体育`、`政治`、`娱乐`、`购物`）。我们认为，根据故事文本预测类别将是一个值得尝试的想法。相比之下，对于一个不那么直观的案例，我们分别从 **TheOnion** 和 **HuffPost** 收集标题作为带讽刺和不带讽刺的文本片段，并将预测文本片段是否带讽刺这一间接数据信号纳入考量。
+
+![HuffPost 上可用的新闻文章不同类别](img/Image00009.jpg)
+
+**估计上述数据信号是否能得出迷人的结果？** 优质数据集的一个标志是：其信号能解决一些当代实际问题。或者，它也可能帮助我们深入洞察某些现象。例如，在**新闻类别**数据集上训练分类器，可帮助识别任何散文的写作风格，无论它是 `政治性` 的、带有 `幽默语气` 的、属于 `刑事报道`，还是基于 `最新时尚潮流`。它还能帮助标记未追踪的新闻文章，或理解不同新闻类型的写作风格差异。
+
+####### 侧信息或元数据关联
+
+根据 Rico Jonschkowski、Sebastian Höfer 和 Oliver Brock 的研究出版物 *Patterns for Learning with Side Information*（带侧信息学习的模式）所述：“通过将侧信息融入学习，可以改善学习函数对未见数据的泛化能力。侧信息既不来自函数的输入空间，也不来自输出空间，但包含对学习该函数有用的信息。”因此，我们的数据集必须包含关于数据本身的数据，这将有助于预测结果。
+
+一旦某数据信号被认为值得估计，就必须确保网络来源为预测任务提供足够的侧信息。若无，则我们应能关联其他数据源以实现这一点。例如，仅凭关键数据信号预测产品价格可能效果不佳，若我们没有诸如产品 `品牌` 或 `面料` 等元数据。因此，在数据集中包含充足的侧信息，有助于**机器学习**模型更好地解读模式。
+
+####### 数据量需求
+
+**引导式搜索**对应章节的大多数要点在此同样适用。不过，约束条件放宽了：不存在绑定我们的具体问题定义。基于数据可用性，我们可以修改潜在问题陈述。但必须确保由此产生的问题仍值得求解。例如，在**新闻类别**数据集中，许多类别的标题不足 100 条。既然没有问题定义要求预测低频类别，我们可以从数据集中移除相应记录。这样，学习算法能为剩余类别确定更好的参数。
+
+####### 数据集唯一性检查
+
+此步骤至关重要，旨在确认我们为社区贡献了独特且有价值的成果，而非仅重复互联网上已有的内容。为快速检查，我们可进行简单的 Google 搜索。若发现某来源已有现成数据集，一种改进的贡献方式是找出现有数据集的不足。提出如下问题将大有裨益：
+
+> “现有数据集是否来自嘈杂来源（即标签是否不可靠）？数据集中侧信息的质量和数量如何？数据集规模如何，机器学习模型能否从更大规模数据中受益？我们能否将此数据集与其他来源的数据融合以创建更好的数据集？数据集有多新？”
+
+解决新颖性问题至关重要，因为复制已有成果可能并非对我们时间和精力的公平利用。
+
+### 提取阶段
+
+在仔细敲定网络来源后，我们将收集数据。现在让我们进入**提取阶段**，这是实际工作开展的地方。
+
+### 1. 工具箱概览
+
+本节将概述我们在策划数据集方面有过经验的所有工具。我们将在本书的数据提取过程中反复提及这些工具。这些不一定是唯一可用的工具，请随意使用任何可用的替代方案。
+
+#### I. Chrome 与 Chrome Driver
+
+**Chrome** 是由 **Google** 开发的一款广受欢迎的跨平台网页浏览器。除了在隐私、速度和稳定性方面表现出色，**Chrome** 还提供了检查网站原始代码的优秀工具。**WebDriver** 是一款开源工具，用于跨多种浏览器自动化测试 Web 应用。它提供导航到网页、用户输入、`JavaScript` 执行等功能。**ChromeDriver** 是一个独立服务器，实现了 **W3C WebDriver** 标准，助力自动化我们的抓取工作。我们可以下载 [[4]](#text00011.html#a1NV) 与我们的 **Chrome** 浏览器匹配的合适版本 **ChromeDriver**。
+
+#### II. Beautiful Soup
+
+**哎呀**，抱歉吊起胃口；我们说的不是一碗美味温热的浓汤！**Beautiful Soup** 是一个广泛用于从 `HTML` 和 `XML` 文件中提取数据的 `Python` 库。众所周知，浏览器基于 `HTML` 代码渲染每个网页。**Beautiful Soup** 解锁了快速导航和修改 `HTML` 树结构的能力，为我们节省数小时甚至数天的工作。此外，它还允许我们编写自动化脚本从网络抓取数据。为更好理解，让我们看一个例子。假设我们有一个编码如下的 `HTML` 页面：
+
+```
+html_doc = """
+```
+
+
+
+
+
+#### HTML 文档示例
+
+```html
+<html>
+<head><title>Humpty Dumpty</title></head>
+<body>
+<p class="title"><b>Humpty Dumpty</b></p>
+<p class="lyrics"> Humpty Dumpty sat on a <a href="http://example.com/wall" class="noun" id="link1">wall</a>, Humpty Dumpty had a great <a href="http://example.com/fall" class="verb" id="link2">fall</a>. All the king’s <a href="http://example.com/horses" class="horses" id="link3">horses</a> and all the king’s men, Couldn’t put Humpty together again. </p>
+<p class="lyrics">......</p>
+......
+</body>
+</html>
+```
+
+#### Beautiful Soup 解析演示
+
+运行上述 HTML 文档通过 `BeautifulSoup` 会得到一个 `BeautifulSoup` 对象，它将文档表示为嵌套的数据结构，如下所示：
+
+```python
+from bs4 import BeautifulSoup
+
+soup = BeautifulSoup(html_doc, 'lxml')
+print(soup.prettify())
+```
+
+输出结果：
+
+```html
+<html>
+ <head>
+  <title>
+   Humpty Dumpty
+  </title>
+ </head>
+ <body>
+  <p class="title">
+   <b>
+    Humpty Dumpty
+   </b>
+  </p>
+  <p class="lyrics">
+   Humpty Dumpty sat on a
+   <a href="http://example.com/wall" class="noun" id="link1">
+    wall
+   </a>
+   ,Humpty Dumpty had a great
+   <a href="http://example.com/fall" class="verb" id="link2">
+    fall
+   </a>
+   . All the king’s
+   <a href="http://example.com/horses" class="noun" id="link3">
+    horses
+   </a>
+   and all the king’s men, Couldn’t put Humpty together again.
+  </p>
+  <p class="lyrics">
+   ......
+  </p>
+  ......
+ </body>
+</html>
+```
+
+请仔细观察构造函数 `BeautifulSoup(html_doc, 'lxml')`。其中 `'lxml'` 是一个 HTML 解析器，它在解析时比较宽容，且运行速度比其他类型的解析器快得多。其他一些解析器包括：
+
+- **lxml 的 XML 解析器**：`BeautifulSoup(markup, "lxml-xml")` 或 `BeautifulSoup(markup, "xml")`
+
+解析完成并获得 `BeautifulSoup` 对象后，浏览数据结构变得非常轻松，示例如下：
+
+```python
+soup.title
+# <title>Humpty Dumpty</title>
+
+soup.title.name
+# u'title'
+
+soup.title.string
+# u'Humpty Dumpty'
+
+soup.title.parent.name
+# u'head'
+
+soup.p
+# <p class="title"><b>Humpty Dumpty</b></p>
+
+soup.p['class']
+# u'title'
+
+soup.a
+# <a href="http://example.com/wall" class="noun" id="link1">wall</a>
+
+soup.find_all('a')
+# [<a href="http://example.com/wall" class="noun" id="link1">wall</a>,
+#  <a href="http://example.com/fall" class="verb" id="link2">fall</a>,
+#  <a href="http://example.com/horses" class="noun" id="link3">horses</a>]
+
+soup.find(id="link3")
+```
+
+
+
+
+>>> `<a href="http://example.com/horses" class="noun" id="link3">horses</a>`
+
+正如我们从这个示例中所观察到的，它使得操控任何给定的 HTML 文档变得容易。
+
+#### Selenium
+
+Selenium 是一种广泛使用的可移植框架，用于通过程序控制 Web 浏览器。我们主要将其用于自动化 Web 应用程序以进行测试，而使用 Selenium 进行自动化的极限是无穷的。它允许我们执行诸如启动 Web 浏览器、点击特定按钮、在表单中输入信息、使用搜索引擎等任务。使用 Selenium 类人的动作执行日常任务在从网站收集数据时非常有用，尤其是当内容不是静态的时候。某些网站的内容可能会随着按钮的点击或从菜单中选择一个选项而改变。结合 Chrome Driver，Selenium 允许我们自动化打开网站、浏览页面、模拟按钮点击动作等等。
+
+#### 基本规则
+
+一旦我们缩小了用于数据集策划的网络来源范围，并掌握了所需工具的知识，立即开始抓取内容的诱惑力非常大。尽管如此，请稍等！我们需要遵循游戏规则以确保公平竞争。因此我们必须遵守以下指令：
+
+1.  在开始抓取过程之前，仔细阅读所选网络来源的“条款与条件”至关重要。仔细阅读关于该来源发布数据合法使用的声明。从根本上说，我们不应将从网络来源收集的数据用于任何商业目的。
+2.  由于我们使用的是自动化工具，我们需要合理控制我们的工具在任何给定时间向网络来源请求数据的次数。激进地扫取数据可能被视为垃圾邮件行为，甚至可能导致来源站点崩溃。通常，一种安全的做法是每秒请求一次，这也模拟了人类操作的速度。
+
+#### 分步流程
+
+让我们使用一个实际示例来讲解这一部分，因为没有它很难理解该过程。我们将以 Clothing Fit（服装版型）数据集的抓取脚本为例来解释各个要点。
+
+##### 数据源结构理解
+
+首要任务是浏览网站，熟悉网站的结构。作为一个持续的示例，让我们考虑 ModCloth 网站。探索该网站，我们看到顶栏有各种产品类别，如 `dresses`（连衣裙）、`tops`（上装）、`bottoms`（下装）、`swim`（泳装）、`outerwear`（外套）、`shoes`（鞋类）、`accessories`（配饰）和 `home`（家居）。点击任意一个类别，例如 `tops`，我们会看到产品以网格格式显示。默认情况下，页面显示前 100 个结果，我们可以通过位于产品列表上方右侧的滚动按钮查看剩余产品。
+
+![](img/Image00010.jpg)
+*ModCloth 网站上装类别页面的视图。*
+
+进一步点击任意一个产品，我们通过截图了解产品页面的样子。在产品页面上，顶部是产品元数据，底部是评论。
+
+![](img/Image00011.jpg)
+*ModCloth 产品详情页面示例。*
+
+![](img/Image00012.jpg)
+*ModCloth 上典型的产品评论。*
+
+在探索其他产品列表时，我们注意到每个页面最多只包含 10 条评论。如果超过 10 条评论，网站会将它们分成不同的页面，我们可以使用右下角的 `NEXT`（下一页）按钮进行导航。
+
+![](img/Image00013.jpg) ![](img/Image00014.jpg)
+*产品页面上 PREVIOUS（上一页）和 NEXT（下一页）导航按钮的快照。*
+
+一个重要的现象是，当我们点击 `NEXT` 按钮时，会获得接下来的 10 条评论，但 URL 并不会改变。这一特殊性引出了我们将在下一节讨论的静态与动态内容的概念。尽管如此，简单来说，除了点击 `NEXT` 按钮外，没有其他方式访问后续评论。同样，`PREVIOUS` 按钮会开始出现，用于访问之前的评论。在规划提取时，跟踪这些微小但至关重要的细节至关重要。此时，我们建议深入探索选定的网络来源。我们应该记录关键方面，直到对网站结构有相当好的了解。我们应该牢记最终目标：从每个产品类别的每个产品中提取评论。
+
+##### 静态与动态内容提取
+
+网站通常包含两类不同的内容：静态和动态。网站的固定内容称为静态部分。无论其他因素如何，它都向每个用户显示相同的内容，通常纯粹用 HTML 编写。另一方面，动态部分是即时生成的。在我们的案例中，它取决于哪个用户登录及其交互，利用 `PHP`、`ASP`、`JSP` 等高级编程脚本。如何渲染动态内容超出了本书的范围；然而，知道它的存在对于我们简化抓取工作至关重要。
+
+考虑到以上因素，可以想象从静态网页提取内容比从动态网页更直接。通过指向静态页面的固定 URL，该 URL 不受任何用户操作影响，像 Python Request Library 这样的简单工具就可以提取内容。例如，下面展示将静态页面的 URL 传递给 `requests` 对象将以 `<Element html at 0x211954a0c28>` 的形式返回 HTML 页面内容。我们可以像前面章节演示的那样，使用 `BeautifulSoup` 轻松抓取此内容：
+
+```
+import requests
+
+from lxml import html
+
+html_page = requests.get('https://en.wikipedia.org/wiki/Static_web_page')
+
+print(html_page)
+
+>>> <Response [200]>
+
+html_code = tree = html.fromstring(html_page.content)
+
+print(html_code)
+
+>>> <Element html at 0x211954a0c28>
+```
+
+尽管如此，我们不能使用相同的过程来提取动态内容。显示的内容不绑定到 URL，并且会随着用户操作不断变化。这就是 `Selenium` 派上用场的地方，因为它可以模拟用户操作，如点击按钮、填写表单等，并返回相应的 HTML 页面。由于如今大多数网站依赖服务端和客户端脚本，学习如何抓取内容并实现自动化至关重要。在下一节中，我们将学习如何提取此类动态内容。
+
+##### 关键信息获取
+
+牢记从 ModCloth 每个产品类别的每个产品中提取评论的目标，我们将关键信息确定为产品详情和评论。让我们分别了解一下这些内容。
+
+###### 产品链接提取
+
+正如我们之前所见，ModCloth 上的产品类别固定，如 `dresses`、`tops`、`bottoms`、`swim`、`outerwear`、`shoes`、`accessories`、`wedding` 和 `home`。因此，没有必要编写脚本来提取它们的链接。令人惊讶的是，手动操作会更高效、更快。链接如下所示：
+
+| • |
+| --- |
+| • |
+| • |
+
+本节重点是从这些类别中的一个（例如 `tops`）提取不同产品的链接。我们考察到，在每个类别中，网站每页以 102 个为一组展示产品。我们可以使用位于产品列表上方右侧的滚动按钮查看接下来的 102 个。对于这 102 个产品中的每一个，我们都有一个页面滚动器来垂直访问所有产品。首先，我们注意到各个页面链接的变化方式，它遵循一种模式：
+
+| • |
+| --- |
+| • |
+| • |
+
+
+
+
+####### 抓取产品链接和评论
+
+对于每个页面，我们现在需要提取每个产品的链接。让我们利用网页浏览器的**检查**功能。此功能可让我们查看特定元素的幕后信息，包括源代码、图片、CSS、字体和图标、驱动动画的 JavaScript 代码等。要使用此功能，请右键单击该元素并选择**检查**选项。接下来，确定包含产品链接的锚元素，即 `<a>`，并记下其 CSS 类。在下面的示例中，我们看到 CSS 类为 `thumb-link`。通常，所有产品链接都会使用相同的类，但最好进行验证。
+
+![使用 Google Chrome 检查 ModCloth 上产品的链接](img/Image00015.jpg)
+
+利用我们收集到的上述信息，可以编写以下代码来提取上衣类别中所有产品的链接。
+
+```python
+import time
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+####### 从 chromedriver.chromium.org/downloads 下载驱动程序
+path_to_chromedriver = './chromedriver.exe'
+browser = webdriver.Chrome(executable_path=path_to_chromedriver)
+
+urls = []
+counter = 0
+tops_link = []
+
+####### 由于上衣类别有 7 页，每页链接遵循上述确定的特定模式，我们可以按如下方式创建指向它们的链接：
+for i in range(7):
+    urls.append('https://www.modcloth.com/shop/tops?sz=102&start=' + str(counter))
+    counter += 102
+
+####### 提取每页中产品的链接
+for url in urls:
+    # 打开 URL
+    browser.get(url)
+    # 故意等待一段时间，以便网站完全加载
+    time.sleep(4)
+    # 获取页面内容
+    content = browser.page_source
+
+    soup = BeautifulSoup(content, "lxml")
+    product_links = []
+
+    # 从页面中提取所有 class 为 "thumb-link" 的锚元素即 <a> 元素
+    data_links = soup.find_all("a", {"class": "thumb-link"})
+
+    # 从每个 <a> 元素中提取 URL
+    for i in data_links:
+        product_links.append('https://www.modcloth.com' + i['href'])
+
+    tops_link.extend(product_links)
+
+    # 故意等待一段时间，以避免在短时间内发送请求
+    time.sleep(10)
+```
+
+请注意脚本中包含的故意等待时间。我们这样做是为了确保在提取内容之前网站正确加载，并在发送另一个请求之前等待，以避免过载。回顾我们之前讨论的基本规则，每秒发送一个请求以模拟人类行为是不错的做法。然而，考虑到 ModCloth 是一个相对较小的网站（如果将其规模与亚马逊相比），我们可能需要更长的等待时间。在这方面可以自行判断，但我们应保持谨慎。
+
+###### 产品评论的提取
+
+现在我们有了上衣类别中每个产品的链接，可以深入提取每个产品的评论。让我们检查每个评论实体的 HTML 代码是什么样的。我们注意到每个评论都包含在一个 class 为 `pr-review` 的 `<article>` 元素中。
+
+![检查客户评论](img/Image00016.jpg)
+
+让我们通过点击左侧的小箭头按钮来展开一个 `<article>` 元素内部的内容。当我们将鼠标悬停在 `<article>` 标签内的各个组件上时，网页上对应的视图会被高亮显示。
+
+![检查客户评论的结构化组件](img/Image00017.jpg)
+
+如上图所示，有一个 class 为 `pr-rd-content-block pr-accordion pr-accordion-collapsed` 的 `<section>` 元素。它对应产品合身度的反馈以及客户的尺寸数据。同样，评论的其他部分位于不同的 `<section>` 元素下。深入 `<section>` 元素，我们注意到它们进一步嵌套在一个 class 为 `pr-accordion-content` 的 `<div>` 元素内。
+
+![检查客户评论的合身反馈组件](img/Image00018.jpg)
+
+里面有一个定义列表，即 class 为 `pr-rd-def-list` 的 `<dl>` 元素，其中每个元素对应一个合身反馈信号或一项客户测量数据。`<dt>` 元素包含字段名称的原始文本，`<dd>` 标签包含字段值。这种键值结构可能会让我们联想到 Python 中的字典数据结构。我们的最终目标是以字典格式提取这些反馈信号。
+
+掌握了上述知识，我们现在从上衣类别产品的评论中提取合身反馈信号：
+
+####### 使用 Selenium 设置自动化浏览器
+
+```python
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+####### 从 http://chromedriver.chromium.org/downloads 下载驱动程序
+path_to_chromedriver = './chromedriver.exe'
+browser = webdriver.Chrome(executable_path=path_to_chromedriver)
+```
+
+####### 对于上衣类别中的每个产品页面，提取着陆页上的评论内容
+
+```python
+scraped_data = []
+
+for i in range(0, len(tops_link)):
+    url = tops_link[i]
+
+    # 打开产品的着陆页
+    browser.get(url)
+
+    # 获取网页内容
+    content = browser.page_source
+    soup = BeautifulSoup(content, "lxml")
+```
+
+####### 提取所有评论的原始内容
+
+```python
+review_data = soup.find_all("article", {"class": "pr-review"})
+```
+
+####### 对于每条评论，我们提取合身反馈和客户尺寸数据
+
+```python
+review_metadata_raw = []
+
+for i in range(len(review_data)):
+    review_metadata_raw.append(review_data[i].find("div", {"class": "pr-accordion-content"}))
+```
+
+####### 从原始评论数据中制作列表的列表
+
+```python
+review_metadata_elements = [review_metadata_raw[i].find_all("dl", {"class", "pr-rd-def-list"}) for i in range(len(review_metadata_raw))]
+```
+
+####### 最后，以字典格式提取详细信息
+
+```python
+review_metadata = []
+
+for element in review_metadata_elements:
+    # <dt> 元素包含元数据字段名称，如 "fit"、"length" 等。
+    # <dd> 元素包含评论者对这些元数据字段的回答，如 "small"、"just right" 等。
+    review_metadata.append(
+        {
+            element[i].find("dt").text.lower(),
+            element[i].find("dd").text.lower()
+        } for i in range(len(element))
+    )
+
+scraped_data.extend(review_metadata)
+```
+
+##### 流程自动化
+
+在上一节中，我们成功编写了脚本，从网站上衣类别中每个产品的着陆页提取评论。太棒了！然而，我们距离从整个网站创建数据集的最终目标还很远。本节将帮助我们在无需太多人工协助的情况下，对每个产品类别重复相同的任务。为了实现脚本自动化，我们必须弄清楚如何通过点击“下一页”按钮或使用 Selenium 模拟该操作，自动导航到其他评论页面。
+
+![产品页面上“下一页”导航按钮的快照](img/Image00019.jpg)
+
+```python
+browser.execute_script(
+    "arguments[0].click();",
+    browser.find_element_by_xpath(<BUTTON_XPATH>)
+)
+```
+
+理解上述片段可能还需要了解 XPath 到底是什么。为了方便理解，可以将 XPath 视为一种在 HTML 文档中浏览元素和属性的方式。它就像 HTML 文档中每个组件的唯一地址，在上面的示例中，该地址位于 `BUTTON_XPATH` 占位符中。要确定元素的 XPath，我们再次使用检查功能，如下所示：
+
+![在 Google Chrome 上查找“下一页”按钮 XPath 的方法](img/Image00020.jpg)
+
+例如，在示例片段中填入所需“下一页”按钮的 XPath 将得到类似以下的内容：
+
+```python
+browser.execute_script(
+    "arguments[0].click();",
+    browser.find_element_by_xpath(
+        '//*[@id="pr-review-display"]/footer/div/aside/button'
+    )
+)
+```
+
+
+
+
+
+##### 网站结构分析与 XPath 变化
+
+密切关注网站结构，我们会发现：点击 **NEXT** 按钮进入第一页之后的评论页时，**PREVIOUS** 按钮会出现（而在着陆评论页是缺失的）。这意味着 **PREVIOUS** 按钮的引入改变了 **NEXT** 按钮的 XPath。
+
+![产品页面上 PREVIOUS 和 NEXT 导航按钮的快照](img/Image00021.jpg)
+
+重新检查元素并提取相应的 XPath，发现从第二页开始 XPath 发生变化，导致 `Selenium` 脚本需做如下调整：
+
+```python
+browser.execute_script(
+    "arguments[0].click();",
+    browser.find_element_by_xpath(
+        '//*[@id="pr-review-display"]/footer/div/aside/button[2]'
+    )
+)
+```
+
+##### 更新自动化脚本
+
+综合上述发现，更新之前的脚本以实现自动化流程。在内容提取前遍历产品的所有评论页。
+
+```python
+# Repeat until we run out of review pages
+while True:
+    # Get the webpage content
+    content = browser.page_source
+    soup = BeautifulSoup(content, "lxml")
+
+    ......
+    ......
+
+    # Mimic the click of NEXT button after appending review_metadata
+    # to scraped_data to jump to the next page (if available)
+    # else break the infinite loop introduced above.
+    ......
+
+    scraped_data.extend(review_metadata)
+
+    # If current page is the initial one, it contains only NEXT button
+    if init == 0:
+        try:
+            init = 1
+            # Execute click on NEXT by utilizing the XPath of NEXT
+            browser.execute_script(
+                "arguments[0].click();",
+                browser.find_element_by_xpath(
+                    '//*[@id="pr-review-display"]/footer/div/aside/button'
+                )
+            )
+        except NoSuchElementException:
+            # No NEXT button present, less than 10 reviews
+            break
+    else:
+        try:
+            browser.execute_script(
+                "arguments[0].click();",
+                browser.find_element_by_xpath(
+                    '//*[@id="pr-review-display"]/footer/div/aside/button[2]'
+                )
+            )
+        except NoSuchElementException:
+            # No NEXT button, no more pages left
+            break
+```
+
+`NoSuchElementException` 广泛用于在选择器未返回 `WebElement` 时抛出异常。我们可以按如下方式导入该 `Selenium` 异常：
+
+```python
+from selenium.common.exceptions import NoSuchElementException
+```
+
+至此，脚本已完全准备好从顶级类别的产品中跨多页提取所有评论。在理想世界中，这将是结束。然而，在当前形式下运行脚本时，可能会遇到一些干扰数据收集过程的错误。下一节将帮助我们优雅地处理这些错误。
+
+## V· 错误处理
+
+我们需要学会识别故障点，尤其是希望脚本平稳运行时。然而，正如生活中大多数情况一样，我们不知道自己不知道什么！开始错误处理流程，首先对脚本进行**空跑**。我们将识别潜在故障点并相应更新脚本。以下描述了我们在试运行中遇到的一些实例及处理方式。
+
+### 1. 无效 URL
+
+尝试从网页获取产品详情时，发现 URL 无效。潜在原因可能是网站维护不善或近期更新，导致新旧 URL 不再兼容。我们使用 `Selenium` 的 `WebDriverException` 处理此情况，当所需会话不存在或格式无效时会抛出错误。
+
+```python
+from selenium.common.exceptions import WebDriverException
+
+......
+......
+
+####### Open the URL in browser
+try:
+    browser.get(url)
+except WebDriverException:
+    # If the extracted URL is invalid
+    print('invalid url', iterr)
+    continue
+
+......
+......
+```
+
+### 2. 评论元数据缺失
+
+有时提取评论元数据时其不存在，导致整个脚本失败。我们通过在提取数据前的多处添加有效性检查来应对。
+
+```python
+review_metadata_elements = [
+    review_metadata_raw[i].find_all(
+        "dl", {"class", "pr-rd-def-list"}
+    )
+    if review_metadata_raw[i] is not None
+    else None
+    for i in range(len(review_metadata_raw))
+]
+
+review_metadata = []
+for element in review_metadata_elements:
+    if element is None:
+        review_metadata.append(None)
+        continue
+    review_metadata.append([
+        (
+            element[i].find("dt").text.lower(),
+            element[i].find("dd").text.lower()
+        ) for i in range(len(element))
+    ])
+```
+
+### 3. 页面加载延迟导致内容为空
+
+有时尽管页面包含所有信息，提取的内容却为 `null`。这主要是因为网站加载内容需要时间，而提取代码已提前运行。我们引入睡眠时间，让网页加载完成后再开始提取。
+
+```python
+browser.get(url)
+time.sleep(4)
+content = browser.page_source
+soup = BeautifulSoup(content, "lxml")
+```
+
+### 4. 进度丢失与断点续传
+
+认为脚本万无一失时，端到端运行不同案例仍遇到问题：断网、笔记本电量耗尽等。多种场景可能导致进度丢失。记录进程中断时的迭代次数，有助于从中断点恢复而非重头开始。例如，可按如下方式保存 `NumPy` 数组：
+
+```python
+np.save('./scraped_data_tops.npy', scraped_data)
+```
+
+## VI· 请求速率限制
+
+简单来说，网站的请求速率是指单位时间内其能处理并返回有效响应而不超载的次数。我们必须通过合理控制请求数量来尊重网站的速率限制。失控的行为可能拖垮网站。此外，许多网站有故障保护设计，会自动屏蔽发送异常高流量的 IP。为避免被屏蔽或干扰正常流量，两次网页加载请求之间必须有不可避免的延迟。
+
+例如，每次模拟点击 **NEXT** 按钮访问评论页时，都在发起加载请求。因此需在两个动作点之间引入等待时间，具体做法如下：
+
+```python
+###### If the current page is the initial one, it contains only NEXT button (PREVIOUS is missing)
+if init == 0:
+    try:
+        init = 1
+        browser.execute_script(
+            "arguments[0].click();",
+            browser.find_element_by_xpath(
+                '//*[@id="pr-review-display"]/footer/div/aside/button'
+            )
+        )
+        time.sleep(10 + random.randint(0, 5))
+    except NoSuchElementException:
+        # No NEXT button present, that is less than 10 reviews
+        time.sleep(15 + random.randint(0, 10))
+        break
+else:
+    try:
+        # Execute click on NEXT by utilizing the XPath of NEXT
+        # XPath of NEXT is different here since PREVIOUS is also present
+        browser.execute_script(
+            "arguments[0].click();",
+            browser.find_element_by_xpath(
+                '//*[@id="pr-review-display"]/footer/div/aside/button[2]'
+            )
+        )
+        time.sleep(10 + random.randint(0, 5))
+    except NoSuchElementException:
+        # No NEXT button present, that is less than 10 reviews
+        time.sleep(15 + random.randint(0, 10))
+```
+
+
+
+
+
+# 第 3 章：数据集准备
+
+在完成上一章的数据提取阶段后，我们现在已以结构化格式获得了所需数据。这标志着我们创建有意义数据集旅程中的一个重要里程碑，但在达到最终目标之前还有更多工作要做。我们必须处理提取出的数据，以消除在输入机器学习模型之前可能混入的杂质。在本章中，我们将探讨数据准备阶段的几个方面。
+
+## 1. 数据修剪
+
+回顾我们之前关于识别相关数据源时对关键数据信号的讨论。如前所述，如果缺少关键数据信号，无论模型多么复杂，我们的数据都无法帮助机器学习模型。关于在线零售商 ModCloth，该网站允许客户提供详细的版型反馈，这对解决尺码推荐问题至关重要。然而，我们注意到并非所有客户评论都提及版型（如下例所示）。
+
+![ModCloth 上缺少关键版型反馈组件的评论示例](img/Image00022.jpg)
+
+显而易见，我们收集的数据可能包含一定比例的无版型反馈评论。由于这些评论缺少关键数据信号，因此对我们毫无用处。因此，我们需要从数据中移除这些交易，或利用现有信息找到一种生成关键数据信号的方法。在技术术语中，由于数据的不相关性、冗余性或极端性而将特定值从数据集中排除的过程称为**数据修剪**。认为更多训练数据能产生更好的机器学习算法泛化能力，是该领域众多误解之一。训练样本的质量在很大程度上至关重要。实验已证明，丢弃部分训练样本（尤其是有噪声的样本）后，模型表现会更好。**数据修剪**在许多关于该主题的资料中与**数据剪枝**同义。
+
+让我们回顾一下之前从 ModCloth 抓取的原始数据的一些具体场景：
+
+1.  许多评论不包含版型反馈，也不提供任何关于产品尺码的信息，如前所述。这些不太符合我们尺码推荐问题的目的。
+
+    ![ModCloth 上缺少关键版型反馈组件的评论示例](img/Image00023.jpg)
+
+2.  如果我们回想一下，我们是以字典的形式收集每条评论的。该字典还包含 `fit` 和 `size` 作为键，分别表示关于产品版型的反馈和购买的产品尺码。由于这些是关键数据信号，我们可以消除这些键缺失值的记录，如下所示：
+
+    ```
+    trimmed_data = []
+    for record in scraped_data:
+        if 'fit' in record.keys() and 'size' in record.keys():
+            trimmed_data.append(record)
+    ```
+
+3.  购买产品并在网站上留下评论的客户/用户信息也很有价值。ModCloth 为每个产品分配了一个唯一标识符；但是，它没有为评论者分配唯一 ID。相反，网站仅提及每位评论者的姓名，这极有可能不唯一。由于我们将 `UserID` 确定为尺码推荐问题的关键数据信号（连同 `ProductID`、`购买尺码` 和 `版型反馈`），缺乏独特标识符颇具挑战性。
+
+    ![ModCloth 上的评论似乎不与唯一 UserID 关联](img/Image00024.jpg)
+    ![网站上的许多评论包含关于用户的重要详细信息](img/Image00025.jpg)
+
+    网站上的许多评论包含关于用户的重要详细信息，如身体测量数据，这些数据与购买尺码和随之而来的版型反馈高度相关。由于用户的身体测量数据是可识别细节且在很大程度上是唯一的，我们可以将这些数据与评论者姓名结合使用来构建个体身份。为了创建唯一标识符并确保没有两个用户被分配相同的标识符（仅凭姓名这很有可能），我们考虑身体测量属性。我们从八种不同的测量值集合中使用三个或更多身体测量值，即 `height`（身高）、`bust`（胸围）、`bra size`（胸罩尺码）、`cup size`（罩杯尺码）、`hips`（臀围）、`waist`（腰围）、`shoe size`（鞋码）和 `shoe width`（鞋宽），将它们与用户名组合来创建唯一标识符。此过程确保提供了至少三项身体测量值的用户获得标识符。因此，我们可以从数据集中移除未关联标识符的记录。
+
+    ```
+    trimmed_data = []
+    unique_users = set()
+    user_measurement_attributes = {
+        'height',
+        'bra size',
+        'cup size',
+        'bust',
+        'hips',
+        'waist',
+        'shoe size',
+        'shoe width'
+    }
+    for record in scraped_data:
+        attributes_present = len(set(record.keys()) & user_measurement_attributes)
+        if attributes_present < 3:
+            # Since the user can not be uniquely identified,
+            # we skip that review/record
+            continue
+        unique_user_name = record['user_name'].lower()
+        unique_user_name = unique_user_name \
+            + (record['height'] if 'height' in record else '') \
+            + (record['bra size'] if 'bra size' in record else '') \
+            + (record['cup size'] if 'cup size' in record else '') \
+            + (record['bust'] if 'bust' in record else '') \
+            + (record['hips'] if 'hips' in record else '') \
+            + (record['waist'] if 'waist' in record else '') \
+            + (record['shoe size'] if 'shoe size' in record else '') \
+            + (record['shoe width'] if 'shoe width' in record else '')
+        record['unique_user_name'] = unique_user_name
+        if unique_user_name not in unique_users:
+            unique_users.add(unique_user_name)
+    ```
+
+
+
+
+
+#### 数据清洗与匿名化处理
+
+#### 数据修剪
+
+`trimmed_data.append(record)`
+
+值得注意的是，这里我们为每个用户分配了一个标识符，该标识符是用户姓名与其身体测量数据的组合。在后续的**数据匿名化**章节中，我们将讨论如何利用这一点为每个用户分配唯一的 `UserID`。
+
+##### 处理缺失尺码数据
+
+进一步分析数据时，我们发现部分评论中客户报告的尺码不在对应产品的尺码目录中。缺失尺码可能源于报告错误，导致数据差异。必须从记录集中移除这些数据，以防止模型在训练时学习到这些错误信息。
+
+为净化数据，首先需要收集特定产品的所有可用尺码，并交叉核对评论中购买产品报告的尺码是否属于该集合。
+
+![检查特定产品的可用目录尺码](img/Image00026.jpg)
+
+例如，针对上装类产品，我们首先检查 ModCloth 产品页面的尺码部分。尺码位于一个 class 名为 `swatches size` 的无序 HTML 列表（`<ul>`）属性中。利用此信息，操作如下：
+
+```python
+product_sizes = {}
+
+for iterr in range(len(top_links)):
+    init = 0
+    flag = 0
+    count = 0
+    url = tops_links[iterr]
+    try:
+        browser.get(url)
+        time.sleep(4)
+    except WebDriverException:
+        print('invalid url', iterr)
+        continue
+    content = browser.page_source
+    soup = BeautifulSoup(content, "lxml")
+    product_id = soup.find("div", {"class": "product-number"}).find("span").text
+    try:
+        product_sizes[product_id] = [i.text.strip() for i in soup.find("ul", {"class": "swatches size"}).find_all("li")]
+    except AttributeError:
+        print('sizes not available for ', product_id)
+    time.sleep(10 + random.randint(0,10))
+```
+
+随后可按如下方式修剪数据记录：
+
+```python
+trimmed_data = []
+
+for record in scraped_data:
+    if record['size'] in product_sizes[record[product_id]]:
+        trimmed_data.append(record)
+```
+
+上述讨论与示例有助于理解噪声数据如何损害学习算法，以及如何使用简单技术从数据集中移除劣质记录。此数据修剪阶段显著缩减了数据集规模，提供了干净的数据版本。使用该干净数据训练模型，可能提升其泛化能力。
+
+#### 数据匿名化
+
+当今，各国政府机构严格执行用户隐私与数据保护法规。对于跨国巨头而言，用户数据如金矿。若缺乏适当制衡，企业极易利用并滥用数据谋利。鉴于此敏感问题，我们在构建数据集时有责任满足数据隐私要求，确保数据可安全公开发布。
+
+通过删除或加密数据集中的个人可识别信息（PII）来保护私密敏感信息的过程，称为**数据匿名化**。全名、社会安全号、驾照号、银行账号、护照号、电子邮箱地址等均为 PII 示例，可用于识别特定个人。数据匿名化可在降低敏感数据无意泄露风险的前提下，支持数据的多用途安全使用。
+
+常见匿名化技术包括：
+
+1.  **掩码**：用改动后的值隐藏数据。例如字符替换，如将 `X` 替换为 `*`，`4` 替换为 `&`，`H` 替换为 `#` 等。符号映射需无规律，以防去匿名化风险。
+2.  **假名化**：用虚构标识符替换特定标识符，从而保持统计准确性与数据完整性。例如将全名 `Raquel Murillo` 替换为 `Lisbon`（《纸钞屋》粉丝会秒懂！）。
+3.  **泛化**：刻意丢弃部分信息以降低可识别性，同时保持数据准确性。例如在用户地址集中移除门牌号但保留街道名。
+4.  **打乱**：将包含 PII 的数据列打乱，使新值与其余记录属性无法辅助唯一识别。此法应用极广。
+5.  **扰动**：以基数四舍五入并加噪声修改数值。基数过小导致弱匿名化，过大则破坏数据准确性。因此取值范围需与扰动程度成比例。例如以 `4` 为基数四舍五入用户年龄可保留比例关系，而基数 `14` 乍看即显虚假。
+6.  **合成**：利用数据集中发现的模式制造与真实情况无关的合成数据，人工创建数据并替换 PII 以保护数据。
+
+在本案例中，从 ModCloth 爬取的数据包含用户敏感信息，涉及 `height`、`bust`、`bra size`、`cup size`、`hips`、`waist`、`shoe size`、`shoe width` 等身体测量数据。遵循优质数据集构建惯例，必须移除任何可能协助恶意人员追溯用户具体产品评论并实施剥削的信息。
+
+可采用上述合成技术，生成随机数字合成数据替换原始 `UserID` 与 `ProductID`。进一步可移除产品链接并掩码产品名称，最大程度降低追溯至具体评论的风险。若数据源非公开、需认证访问（如登录后方可阅读评论），此实践愈发关键。
+
+```python
+import numpy as np
+
+user_index = {}
+product_index = {}
+base_user = np.random.randint(0,10000)
+base_product = np.random.randint(0,10000)
+
+for record in trimmed_data:
+    if record['unique_user_name'] not in user_index:
+        user_index[record['unique_user_name']] = base_user + np.random.randint(0,200)
+        base_user += 200
+        record['user_id'] = str(user_index[record['unique_user_name']])
+
+    if record['product_id'] not in product_index:
+        product_index[record['product_id']] = base_product + np.random.randint(0,200)
+        base_product += 200
+```
+
+
+
+
+
+#### 数据标准化
+
+优质数据集的关键特征之一是可解释性；不同的人应当能严格按照我们预期的方式精准理解该数据集。由于我们收集的数据包含十几个甚至更多属性，这些值极有可能在不同记录中采用不同的表示法。
+
+一个简单的例子是“出生日期”字段，部分值采用 `MM-DD-YYYY` 格式，而另一些采用 `DD/MM/YYYY` 格式。另一个例子是“州”字段，有的记录写完整名称如 `CALIFORNIA`，有的则使用双字母代码如 `CA`。虽然这些例子乍看微不足道，但此类因素可能会限制机器学习模型的学习能力；同一日期的不同格式会被视为两个不同的对象，从而影响模型参数调优。
+
+强制执行数据标准以使属性保持统一格式的过程称为**数据标准化**。我们可以通过领域知识、直觉或实验来实现这一点。采用标准可能需要投入大量时间和技巧，但**更好的输入产出更好的输出**；基于标准化输入训练的机器学习模型可能泛化能力更强、表现更优。
+
+在我们的示例中，观察到产品存在不同的尺码惯例。例如，底装类别中的某些产品采用美码，而另一些采用英码。其他服装类别也存在此类差异。值得注意的是，我们的尺码推荐问题属于**序数回归**类型。即我们要预测一个序数变量（即尺码），其值存在于任意刻度上，只有不同值之间的相对顺序至关重要。因此，我们必须建立数据源中所有不同尺码之间的顺序关系；否则无法将数据用于解决当前问题。
+
+如果所有产品遵循相同的尺码惯例，建立顺序并非难事，但对于不同刻度尺码的产品则变得棘手。
+
+![Image00027.jpg](img/Image00027.jpg)
+
+展示 ModCloth 上不同产品采用不同尺码惯例的示例。
+
+- 应对这一挑战的一种方法是利用 ModCloth 上提供的尺码对照表。该对照表将不同惯例下的尺码映射关联，有助于创建一个保留顺序的标准刻度。然而，我们遇到某些场景下特定产品的尺码未出现在对照表中。例如，`XXXS` 尺码不在尺码表内。此时，我们可以利用它比 `XXS`（存在于尺码表中）更小这一知识将其转换至标准刻度，或者直接丢弃该记录。
+
+- 然而，使用尺码映射表并不能解决所有问题。例如，底装类别的多个产品可能具有相同尺码，但 `length`（长度）、`hips`（臀围）或 `waist`（腰围）测量值不同。我们可以看到尺码 `24`、`26`、`28` 和 `30` 对应两组不同的测量值。左下角的图表来自牛仔裤系列，而右侧图表来自连衣裙系列。
+
+![Image00028.jpg](img/Image00028.jpg)
+
+ModCloth 上提供的不同尺码表。
+
+针对评论中出现的冲突尺码，我们可以查看对应产品的所有目录尺码。如果最小尺码未出现在牛仔裤的尺码映射中，则使用连衣裙的映射。因此，基于我们对不同尺码对应测量值的观察，可以开发一张映射表，表示不同惯例下尺码的顺序关系。
+
+```python
+size_map_bottom = {'0':1, '1':2, '2':3, '3':4, '4':5, '5':6, '6':7, '7':8, '8':9, '9':10, '10':11, '11':12, '12':13, '13':14, '14':15, '14w':16, '15':17, '16':18, '16w':19, '18':21, '18w':22, '20':24, '20w':25, '22':27, '22w':28, '24':30, '24w':31, '26':33, '26w':34, '28':36, '28w':37, '30':39, '30w':40, '6uk':3, '8uk':5, '10uk':7, '12uk':9, '14uk':11, '16uk':13, '18uk':15, '20uk':18, '22uk':21, '24uk':24, '26uk':27, '28uk':30, '30uk':33, 'xxs':0, 'xs':1, 's':4, 'sm':6, 'm':8, 'ml':10, 'l':12, 'lxl':14, 'xl':15, '1x':20, '1x2x':23, '2x':26, '3x':32, '3x4x':35, '4x':38, 'xxl':23, 'xxxl':31}
+
+size_map_jeans = {'24':1, '25':2, '26':4, '27':5, '28':8, '29':9, '30':12, '31':13}
+
+conflicting_sizes = {'24', '26', '28', '30'}
+```
+
+拥有上述映射后，我们可以使用以下代码片段来标准化数据：
+
+```python
+for record in trimmed_data:
+    if record['category'] == 'bottoms':
+        if record['size'] in conflicting_sizes:
+            if product_sizes[record['product_id']][0] == '24':
+                record['size'] = size_map_jeans[record['size']]
+            else:
+                record['size'] = size_map_bottom[record['size']]
+        elif record['size'] in size_map_bottom:
+            record['size'] = size_map_bottom[record['size']]
+        else:
+            record['size'] = size_map_jeans[record['size']]
+```
+
+上述讨论的示例展示了通过简单映射技术执行数据标准化的情况。现实中，当我们为多种复杂目的构建数据集时，多个属性需要对齐数据定义、表示和结构。因此请牢记，**数据标准化**是促进信息连接、一致性和同步、培育数据质量的核心方法论。
+
+#### 数据集成
+
+在理想场景下，我们仅使用单一网络来源（如 ModCloth）即可构建数据集。然而，有时我们必须从多个来源收集属性片段，以获得更包容、更有意义、更有价值的数据集。将来自不同来源的数据合并以提供统一视图，称为**数据集成**。该阶段的产出是一组无缝融合的数据记录，随后可将其输入机器学习模型。
+
+从更宏观的角度来看，数据集成过程分为两类：
+
+##### 纵向集成
+
+回顾我们用于讽刺检测问题的数据集，数据源自两个不同网站：TheOnion 和 HuffPost。TheOnion 提供时事的讽刺版本，而 HuffPost 报道真实且非讽刺的新闻。为创建最终数据集，我们通过**纵向**追加记录，融合了来自两个来源的数据。由于两个数据集的属性相似，均为 `article_link`、`headline` 和 `is_sarcastic` 标签，因此将它们连接形成包含讽刺与非讽刺记录的数据集相对容易。
+
+在数据集成阶段，我们需留意有意打破各自数据集中观察到的模式，进而打破合并后数据集的模式。例如，在顺序处理 TheOnion 和 HuffPost 的数据以进行集成时，最终数据集显然会先包含所有讽刺记录，后跟所有非讽刺新闻记录。假设我们不打破这一模式直接输入标准预测模型。模型通常要求按 80:20 拆分训练集和评估集。这会带来麻烦：训练集将因讽刺新闻记录多于非讽刺记录而不平衡；且评估集将全是非讽刺新闻！因此，为解决此问题，我们在追加两源记录后通过打乱数据集来打破模式，从而构建平衡数据集，示例如下：
+
+```python
+import random
+
+data = []
+
+for record in sarcastic_data:
+    temp = dict()
+    temp['is_sarcastic'] = 1
+    temp['headline'] = record['headline']
+    temp['article_link'] = record['link']
+    data.append(temp)
+
+for record in non_sarcastic_data:
+    temp = dict()
+```
+
+
+
+
+
+##### 水平集成
+
+让我们考虑这样一个任务：我们需要构建一个包含全球不同城市特定字段的数据集：`state`（州/省）、`country`（国家）、`area`（面积）、`population`（人口）、`climate`（气候）、`pollution`（污染）、`civic administration`（市政管理）、`religion`（宗教）、`languages`（语言）、`festivals`（节日）和 `cuisine`（菜系）。我们极有可能需要参考网络上的多个来源来收集所有信息。某些属性如 `state`、`country`、`area` 和 `population` 可能来自一个来源，而人口统计和文化信息则来自另一个来源。在这种情况下，我们需要执行数据的水平集成。
+
+假设我们已经从不同来源获得了两个数据集，分别是 `city_general_info` 和 `city_demographics_info`。
+
+*   `city_general_info` 是一个字典列表，包含每个城市的以下信息：`city_id`、`state`、`country` 和 `area`。
+*   `city_demographics_info` 是一个字典列表，包含每个城市的以下信息：`city_id`、`demonym`（居民称谓）、`official_languages`（官方语言）和 `popular_cuisine`（流行菜系）。
+
+那么，为了使最终数据集拥有所有属性，我们需要根据 `CityID` 合并所有信息。该过程大致如下：
+
+```python
+import random
+from copy import deepcopy
+
+city_general_info = {'987654': {'name': 'Delhi', 'country': 'India', ...}, '123456': {'name': 'San Francisco', 'country': 'United States of America', ...}}
+
+city_demographics_info = {'987654': {'demonym': 'Delhiite', ...}, '123456': {'demonym': 'San Franciscan', ...}}
+
+merged_data = []
+
+for city_id in city_general_info:
+    temp_dict = deepcopy(city_general_info[city_id])
+    temp_dict.update({'city_id': city_id})
+    if city_id in city_demographics_info:
+        temp_dict.update(city_demographics_info[city_id])
+    merged_data.append(temp_dict)
+
+random.shuffle(merged_data)
+```
+
+#### 数据转换
+
+目前，网络上有海量内容，不可能核查所有内容的正确性。发布者发布的内容，如产品名称、产品尺寸和产品描述，可能已在一定程度上经过审核。然而，用户生成的内容，如产品质量和版型的评价、身体测量数据，我们却毫不犹豫地用来喂养模型，这些内容极有可能包含噪声。因此，有必要使用特定技术清洗数据集以生成高质量数据集，这一过程称为**数据转换**。
+
+像尺码推荐这类问题的数据集可能涉及解析用户评论以提取关于版型的相关反馈作为额外特征。在这种情况下，文本中的不一致性可以通过一些简单的字符串转换轻松去除。**数据转换**的主要重点是清洗数据集的原始值，以消除冗余并修正语言和逻辑语义。上述过程与**数据预处理**管道中的转换有显著不同，后者涉及将这些清洗后的值进一步变换为模型易于理解的格式。
+
+作为一个区分示例，转换字符串以纠正拼写错误属于**数据转换**过程的一部分。相比之下，将更新后的字符串编码为词袋（BoW）表示则属于**数据预处理**的一部分。不必担心，我们将在本书后面详细讨论**数据预处理**！现在，请阅读我们提供的一些快速转换建议：
+
+*   当用户留下产品评价时，他们可能会撰写包含多个特殊字符和表情符号的文本。对这些字符进行编码可能需要额外的工作。我们必须在将它们作为输入喂给模型之前，将这些表情符号转换为其 Unicode 表示。如果我们进行情感分析任务，这种编码将大有裨益。然而，在版型反馈的情况下，它们可能不会提供大量有用的信号。因此，我们可以移除它们，仅使用纯文本。以下示例使用 Python 的正则表达式库的替换方法进行此类处理：
+
+```python
+import re
+
+def preprocess_review(review):
+    return re.sub(r"[^a-zA-Z0-9\s]+", ' ', review)
+```
+
+在上述 `preprocess_review()` 方法中，我们将每个非字母数字或非 Unicode 空白字符（包括 `\t`、`\n`、`\r`、`\f` 和 `\v`）替换为简单的空白字符。这种处理降低了字符串的复杂度，有助于算法专注于关于版型反馈的关键部分。
+
+**输入：**
+
+```
+“heyy!!! I am Cr@zi-@**-St@# !
+welcome aboard , love this website <3
+purchased this dress, fit perfectly 1000000%%%%
+will I buy this again??? #eLL Ye$$$”
+```
+
+**输出：**
+
+```
+“heyy    I am Cr zi     St
+welcome aboard  love this website  3
+purchased this dress  fit perfectly 1000000
+will I buy this again    eLL Ye  ”
+```
+
+*   用户在在线平台留下产品评价时，很少注意语法、拼写和句子结构。用户极有可能拼错一些单词，这最终会影响机器学习模型的性能。因此，提高数据集质量的一个快速方法是使用一些 Python 库来执行拼写检查。
+
+```python
+from spellchecker import SpellChecker
+
+spellChecker = SpellChecker()
+
+def spellcheck_review(review):
+    words = review.split()
+    corrected_words = []
+    for word in words:
+        corrected_words.append(spellChecker.correction(word))
+    return ' '.join(corrected_words)
+```
+
+**输入：**
+
+```
+“heyy!!! I am Cr@zyStacie !
+wlecome aboard , love this webste <3
+purchsaed this amzing dress, and it fit perfctly 1000000%%%%
+will I buy this agian??? #eLL Ye$$$”
+```
+
+**输出：**
+
+```
+“heyy!!! I am Cr@zyStacie !
+welcome aboard , love this webster a3
+purchased this amazing dress, and it fit perfectly 1000000%%%%
+```
+
+
+
+
+
+#### 数据平衡
+
+我们可以根据数据集中记录的标签值，将其划分为不同的组或类别。例如，新闻类别数据集中的每个类别（如 `sports`、`politics`、`entertainment` 和 `community`）都可能包含多条记录。同样，在讽刺检测数据集中，我们可以将记录分类为 `sarcastic`（讽刺）或 `non-sarcastic`（非讽刺）。通常，不同类别的数量并不相同。学习算法可以处理一定程度的类别分布差异（例如 2:3）；然而，当差异变得极端时（例如 1:99），问题就出现了。我们将具有极度偏斜类别分布的数据集称为**不平衡数据集**。
+
+让我们尝试理解在二分类场景下，学习算法在类别不平衡条件下是如何工作的，此时模型会为每个类别分配一个权重。数据集中拥有大量记录的类别被称为**多数类**，而另一个则是**少数类**。如果处理不当，多数类的大量样本可能会影响模型的预测能力。在极端情况下，模型会通过不给少数类分配任何权重，从而学会完全忽略少数类。我们可以通过一种称为**混淆矩阵**的评估指标来检测分类模型的这种偏斜行为。处理不平衡数据集有多种方法；让我们逐一了解。
+
+## I. 移除低频数据记录
+
+此技术仅适用于数据集包含多个类别，且无需特定类别必须存在即可解决手头问题的情况。例如，服装合身度数据集只有三个类别：`small`、`fit` 和 `large`，它们对于解决尺码推荐问题都是必不可少的。而在新闻类别数据集中，我们有许多可用的类别，如 `sports`、`politics`、`entertainment`、`fashion`、`medicine` 和 `community`。解决新闻类别检测问题并不严格要求某个特定类别必须存在。
+
+应对极端偏斜的一个直接方法是从数据集中移除极低频类别的记录。我们也可以考虑采取另一种途径，即丢弃高频类别的记录以匹配低频类别的比例；然而，这可能会大幅缩减数据集的规模。前一种方法在此处显得更合理，因为它保持了数据量，并有助于模型可靠地进行分类。
+
+在从 HuffPost 提取的新闻类别数据集中，我们进行了初步的**探索性数据分析 (EDA)**。我们发现有几个类别下列出的文章少于 500 篇。为了平衡数据集，我们仅移除了它们，并观察到分类模型的性能有所提升。
+
+```python
+import json
+from collections import defaultdict
+
+category_count = defaultdict(int)
+
+for record in data:
+    category_count[record['category']] += 1
+
+filtered_data = []
+
+for record in data:
+    if category_count[record['category']] >= 500:
+        filtered_data.append(record)
+
+output_file = open('./News_Category_Dataset.json', 'w', encoding='utf-8')
+
+for record in filtered_data:
+    output_file.write(json.dumps(record) + '\n')
+
+output_file.close()
+```
+
+## II. 随机采样数据记录
+
+采样是处理不平衡数据集的一种广泛流行且简单的方法。该技术涉及从数据集中的丰富类别中随机采样记录以消除偏斜，这一过程通常称为**随机欠采样**。作为替代方案，我们也可以通过有放回地随机采样来增加低频类别的记录，这被称为**随机过采样**。
+
+在讽刺检测数据集中，我们从 TheOnion 提取了讽刺标题，从 HuffPost 提取了真实新闻标题。统计数据显示，非讽刺新闻标题（约 20 万条）远多于讽刺标题（约 1.1 万条）。为了消除这种偏斜，我们使用了欠采样技术：从非讽刺数据中随机采样了约 1.5 万条标题。重要的是要注意，我们并不总是旨在让类别达到 1:1 的比例；如前所述，轻微的偏斜（如 2:3）可以被学习算法有效处理。
+
+```python
+data = deepcopy(sarcastic_data)
+
+random.shuffle(non_sarcastic_data)
+
+for i in range(0, 15000):
+    hh = preprocess_headline(non_sarcastic_data[i]['headline'])
+    if len(hh.split()) > 1:
+        temp = dict()
+        temp['is_sarcastic'] = 0
+        temp['headline'] = hh
+        temp['article_link'] = non_sarcastic_data[i]['link']
+```
+
+
+
+
+
+#### 分配类别权重
+
+加权参数是机器学习中的一个基本概念，它描述了特定实体具有多大的重要性。权重可能与特定特征、特定数据记录或人工神经网络中的神经元有关。在不平衡数据集中，我们可以给不频繁类别的记录分配比频繁类别记录更高的权重。这一步使得学习算法对不频繁类别的误预测施加更大的惩罚，从而弥补了因数量较少而提供的有限信号。
+
+例如，考虑一个包含 100 万条贷款记录的数据集，其中标签指示借款人是否按时还款。假设只有 0.01% 的人未按时还款，我们有 99.9 万条按时还款记录（例如 `label = 1`）作为多数类，其余 1 千条作为少数类（例如 `label = 0`）。在这种情况下，我们可以使用一种基本方法，即分配与其各自频率成反比的类别权重，即 `w_i = N / (C * n_i)`。这里，`w_i` 是第 i 个类别的权重，`N` 是数据集中的总记录数，`C` 是类别总数，`n_i` 是属于第 i 个类别的数据集记录数。使用这种技术，我们发现由于频率较高，按时还款的记录被分配了 0.5 的权重，而另一类则被分配了 500 的值！这意味着对后一类的误分类将比前一类受到 1000 倍的惩罚。
+
+#### 选择正确的评估指标
+
+在处理即使轻微不平衡的数据集时，选择一个相关的评估指标以有效评估模型性能是必要的。准确率并不总是最佳指标。考虑一个预测外星人是否会在未来 24 小时内登陆地球的模型。毫无疑问，该模型会以 99.99% 的准确率预测答案为“否”，表明该模型非常准确。然而，实际上，如果模型无法准确预测答案为“是”的记录，则该模型可能不可用。在这样的情况下，F1 分数可能是我们可以考虑的更相关的指标。
+
+在分类问题的统计分析中，F1 分数是模型精确率和召回率的调和平均数。其范围从 0 到 1，值为 1 表示完美的精确率和召回率。然而，其缺点是它仅针对特定的分类阈值定义（通常二分类场景的默认值为 0.5）。该阈值通常需要一些调整，特别是在我们存在数据不平衡问题的情况下。此类情况下更好的指标是精确率-召回率曲线下面积（PR-AUC），即通过改变分类阈值产生的精确率-召回率曲线下的面积。PR-AUC 也可以被视为针对每个召回阈值计算的精确率分数的平均值。
+
+#### 改变问题定义
+
+这种方法是处理高度不平衡数据集（少数类可能仅在 1000 条记录中出现 1 次）最有趣的方法之一。到目前为止，我们一直将问题视为简单分类，即训练模型将数据记录智能地分类为不同组别，无论是多数类还是少数类。我们观察到，简单的分类学习算法在处理倾斜数据集时会遇到困难，因为多数类掩盖了少数类的特征，并破坏了模型的预测能力。因此，改变问题定义并从异常检测的角度来看待它会很明智。异常检测是一类识别数据集中异常点的问题，即识别那些与常规（在我们的例子中是多数类）不同的发生情况（这里可能是少数类）。这种技术通常被称为离群点检测。在这种情况下修改我们的问题解释，有助于我们在不改变数据集组成的情况下使用不平衡数据集。
+
+#### 数据导出
+
+在我们完成了清洗、修剪和平衡数据的所有繁琐任务后，最后的任务是导出并发布数据供公众使用。选择合适的结构和适当的格式来导出数据集至关重要。如果数据集结构简单且采用易于在不同学习框架中导入的易用格式，则更有可能被更多人访问、使用和共享。数据集的可管理性是另一个基本特征。它有助于数据在系统中长期无故障地存在，并推动创新。
+
+我们可以考虑不同的结构来适当表达数据集，关键结构如下：
+
+- **表格型**：这是最常见的结构，我们将数据组织为数据记录的行和列出记录属性的列。它最适合独立的数据记录，并可以有效地以 CSV 格式导出。
+- **层次型**：这些数据结构支持数据记录在垂直树状组合中链接到其他数据记录的集合。也就是说，属性本身可能是键值对。层次型数据结构可以功能性地以 JSON 格式导出。
+- **网络型**：在这种数据结构中，不同数据记录之间存在多重关联，就像蜘蛛网或社交网络一样。
+
+我们也可以快速讨论一下可以用来导出数据集的不同格式：
+
+##### 逗号分隔值 (CSV)
+
+如前所述，这种格式对于表格型数据集非常有效，简单来说就是行和列。每条数据记录由新行分隔，单条数据记录中的属性由逗号 (`,`) 分隔。第一行应始终为表头行，指示后续属性的名称。它看起来类似于以下内容：
+
+```
+username,pin,first_name,last_name
+heylaura,1234,Laura,Wu
+iampc,999,Paige,Carter
+...
+```
+
+CSV 文件以 `.csv` 扩展名保存。CSV 文件有许多优点：它们易于人眼浏览，简单易于实现和解析。导入和操作数据毫无麻烦。数据处理速度更快，并提供紧凑的版本。然而，它仅支持基本类型，如果属性值本身包含逗号，会造成解析混乱。它不支持特殊字符，且没有通用标准。
+
+##### 制表符分隔值 (TSV)
+
+这种格式与 CSV 非常相似，但使用制表符（或 `\t`）代替逗号来分隔单条记录中的属性值。TSV 是常见 CSV 的一种替代方案，主要是因为属性值中包含逗号（例如文本数据）的情况非常普遍，会导致解析时出现问题，而制表符则不常见。文件以 `.tsv` 扩展名保存，看起来类似于以下内容：
+
+```
+username    pin    first_name    last_name
+heylaura    1234    Laura    Wu
+iampc    999    Paige    Carter
+...    ...    ...
+```
+
+##### JavaScript 对象表示法 (JSON)
+
+如前所述，层次型数据最适合 JSON 格式，因为它允许以人类可读的格式传输树状数据。它将多个键值对嵌套为字典，且独立于所使用的数据类型或编程语言。JSON 语法既易读又解析快。它支持嵌套模式，与其他格式相比，使数据结构的操作变得轻而易举。相应的文件以 `.json` 扩展名保存，看起来类似于以下内容：
+
+```json
+[
+  {
+    "username": "heylaura",
+    "pin": 1234,
+    "first_name": "Laura",
+    "last_name": "Wu"
+  },
+  {
+    "username": "iampc",
+    "pin": 999,
+    "first_name": "Paige",
+    "last_name": "Carter"
+  },
+  ...
+]
+```
+
+
+
+
+
+##### 可扩展标记语言 (XML)
+
+以此标记语言导出的数据集作为 `.xml` 文件，其格式既易于人类阅读，也易于机器解析。XML 主要用于文本数据，因为它通过 Unicode 提供了对多语言的强力支持。尽管 XML 可能易于使用和推广，但它非常冗长，会导致数据量膨胀，因此不广泛用于导出数据集。
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <row>
+    <username>heylaura</username>
+    <pin>1234</pin>
+    <first_name>Laura</first_name>
+    <last_name>Wu</last_name>
+  </row>
+  <row>
+    <username>iampc</username>
+    <pin>999</pin>
+    <first_name>Paige</first_name>
+    <last_name>Carter</last_name>
+  </row>
+  ...
+</root>
+```
+
+还有其他极少用于导出数据集的格式，如 HTML (`.html`)、电子表格 (`.xls`、`.ods` 或 `.gsheet`)、统计产品与服务解决方案 SPSS (`.dat` 或 `.sps`) 等。然而，鉴于其诸多优点，CSV 和 JSON 是导出和导入数据集的两种最流行格式。
+
+回顾一下，我们一直在处理从 ModCloth 提取的层级数据结构。为简单起见，我们可以将所有数据导出为 JSON 格式。
+
+```
+import json
+
+output_file = open('./ModCloth_scraped_data.json', 'w', encoding='utf-8')
+
+for r in scraped_data:
+    output_file.write(json.dumps(r) + '\n')
+
+output_file.close()
+```
+
+导出的数据集随后可以按如下方式导入学习框架：
+
+```
+def parseJson(fname):
+    for line in open(fname, 'r'):
+        yield eval(line)
+
+scraped_data = list(parseJson('./ModCloth_scraped_data.json'))
+```
+
+
+
+
+
+## 第 4 章 数据集预处理与特征工程
+
+在上一章中，我们了解了清洗所提取的原始数据并构建其结构的各种步骤，以便其他人能够使用该数据集应对各种挑战。利用数据集最直接的方法之一是将其输入机器学习流水线；然而，这可能并不十分有效。在使用数据训练模型之前，我们可能需要再经过几个步骤，使其适合模型的“理解”，而非我们之前旨在实现的人类“理解”。
+
+数据预处理和特征工程是机器学习流水线中模型训练前的两个基础过程。这两个过程在很大程度上取决于我们使用的数据集、学习算法的要求、问题的领域以及许多其他因因素。因此，理解这两大范畴下各种方法论的基础至关重要。
+
+### 数据预处理
+
+在从 ModCloth 提取的服装合身度数据集中，我们拥有诸如 `length: 'just right'` 和 `original_size: 'xxxl'` 之类的属性。毫无疑问，这些是有价值的信息片段，指示了产品比例的重要方面。人类很容易理解这些值；然而，机器学习模型可能难以从这类数据中学习。将数据编码为机器可理解的形式可能效果更好。此外，数据提取过程在质量方面管控不够严格，导致出现一些异常值。例如，存在 `original_size: 'q'` 这样的条目，或奇怪的数据组合，如 `height: '100m'` 和 `waist: '25cm'`。这些不稳定且任意的数据点使得模型难以发现模式，因此在使用数据集前需要对其进行处理。
+
+为克服这些缺陷，我们需要彻底改造数据集的属性，以填补空白、解决不一致性，并以适合机器学习模型运行的格式表示数据。这一过程称为**数据预处理**。让我们回顾一些常用的数据预处理技术。
+
+### 1. 向量化
+
+机器学习模型是期望输入数据为数值格式的数学模型。为此，非数字形式（或数字集合）的数据属性在训练机器学习模型前需要进行转换。将特征转换为合适的数值形式的过程称为**向量化**。此步骤是数据预处理的强制环节，涉及将文本、图形和分类等各类非数值数据转换为数值形式。在本节中，我们将通过一些示例讨论文本向量化、图像向量化和分类向量化。
+
+##### 文本向量化
+
+根据概述，文本向量化涉及将文本转换为机器可理解的形式，如实数向量（或数组）。这一步骤对于进行语言感知分析至关重要。向量化文本的主要方法之一是**词袋**技术，该技术假设文本的含义和相似性编码在词汇表中。给定一个包含多个句子的文本块，BoW 会创建一个包含该文本所有不同单词的词汇表。然后，它创建一个长度等于词汇表长度的向量，并为每个单词的位置分配一个分数，以表示该单词对文本的贡献。计算单词分数有多种方式：
+
+- **词频计数**：单词在文本中出现的总次数。
+- **词频**：单词在文本中出现的总次数除以文本中单词的总数。
+- **词频-逆文档频率**：基于这样一个概念计算单词在文本中的重要性：频繁出现在特定文档中的单词，比普遍频繁出现在各类文档中的单词更重要。
+
+让我们通过一个示例，观察结实而简单的词频计数 BoW 技术是如何工作的。假设我们拥有以下词汇表，它由所有评论文本中的唯一小写单词组成：
+
+```
+word_vocabulary = { outfit, shirt, blouse, bottom, jeans, pants, skirt, dress, love, hate, favorite, trash, yes, no, me, i, mine, my, this, that }
+```
+
+使用 BoW 技术，我们可以将评论 “I love this dress, my favorite dress” 表示为以下向量：
+
+```
+“I love this dress, my favorite dress” → [0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,1,0,0,1,0]
+```
+
+该表示也称为**嵌入**。我们可以使用以下技术进一步改进表示：
+
+1. 我们可以过滤掉那些无法提供文本语义洞察的常用词。在自然语言处理（NLP）领域，此类词被称为**停用词**。以下是自然语言工具包（NLTK）中定义的英语停用词列表。
+
+```
+{‘ourselves’, ‘hers’, ‘between’, ‘yourself’, ‘but’, ‘again’, ‘there’, ‘about’, ‘once’, ‘during’, ‘out’, ‘very’, ‘having’, ‘with’, ‘ they’, ‘own’, ‘an’, ‘be’, ‘some’, ‘for’, ‘do’, ‘its’, ‘yours’, ‘such’, ‘into’, ‘of’, ‘most’, ‘itself’, ‘other’, ‘off’, ‘is’, ‘s’, ‘am’, ‘or’, ‘who’, ‘as’, ‘from’, ‘him’, ‘each’, ‘the’, ‘themselves’, ‘until’, ‘below’, ‘are’, ‘we’, ‘these’, ‘your’, ‘his’, ‘through’, ‘don’, ‘nor’, ‘me’, ‘were’, ‘her’, ‘more’, ‘himself’, ‘this’, ‘down’, ‘should’, ‘our’, ‘their’, ‘while’, ‘above’, ‘both’, ‘up’, ‘to’, ‘ours’, ‘had’, ‘she’, ‘all’, ‘no’, ‘when’, ‘at’, ‘any’, ‘before’, ‘them’, ‘same’, ‘and’, ‘been’, ‘have’, ‘in’, ‘will’, ‘on’, ‘does’, ‘yourselves’, ‘then’, ‘that’, ‘because’, ‘what’, ‘over’, ‘why’, ‘so’, ‘can’, ‘did’, ‘not’, ‘now’, ‘under’, ‘he’, ‘you’, ‘herself’, ‘has’, ‘just’, ‘where’, ‘too’, ‘only’, ‘myself’, ‘which’, ‘those’, ‘i’, ‘after’, ‘few’, ‘whom’, ‘t’, ‘being’, ‘if’, ‘theirs’, ‘my’, ‘against’, ‘a’, ‘by’, ‘doing’, ‘it’, ‘how’, ‘further’, ‘was’, ‘here’, ‘than’}
+```
+
+2. 我们可以通过将派生词还原为其基本形式或词干，来缩减词汇表规模，这一过程称为**词干提取**。当我们在搜索引擎中搜索特定关键词，而它返回包含其派生词的结果时，常能见到此技术。值得注意的是，词干不一定是单词的形态学词根。
+
+
+
+
+
+###### 词干提取
+
+词干提取是一种将相关词汇归类的粗略方法，通常通过从词尾切除字符直到到达词的词干来完成。例如，将以下单词：‘fit’、‘fitter’、‘fitted’、‘fitting’、‘fittable’、‘fittest’ 提取到其词干 ‘fit’ 有助于用更少的词汇量传达几乎相同的含义。虽然这种切除词尾的方法在许多情况下效果很好，但会导致许多例外情况，尤其是在英语这类语言中。为此，我们有其他复杂的技术，如 `Porter Algorithm`、`Snowball Algorithm` 等。
+
+###### 词形还原
+
+我们可以继续通过将派生词还原为其基本形式来缩减词汇量，其中基本形式是单词的形态学词根，这一过程称为**词形还原**。词形还原不仅仅是简单地切除单词，而是依赖词汇含义来获取正确的基本形式，从而提供更丰富的信息视角。例如，词形还原会将以下单词 ‘be’、‘been’、‘being’、‘was’ 还原为其词元，即 ‘be’。
+
+###### N-gram
+
+我们可以统计一系列单词的出现次数，而非单个单词。由于单词的含义在很大程度上取决于其使用的上下文，因此这种技术比统计单个单词更有用。在统计语言模型中，n 个单词的序列称为**n-gram**。N-gram 应用于句子自动补全和拼写检查等领域。上述基于计数的方法有助于为文本向量化生成稳健的嵌入；然而，它们无法以最高精度捕捉文本的确切语义含义。因此，探索使用 `Recurrent Neural Networks (RNN)` 等高级技术来构建复杂的上下文文本嵌入是值得的。
+
+##### 图像向量化
+
+在处理图像时，当我们放大图像，会开始看到单个像素（如下图）。这些像素无非是图片的单个元素，是数字图像可编程颜色的基本单位。因此，图像以网格形式表示像素，每个像素都有其颜色。
+
+![](img/Image00029.jpg)
+
+随着我们放大图像，开始看到单个像素。在彩色世界中，每个像素通过三原色的组合获得颜色：红色 (R)、绿色 (G) 和蓝色 (B)。因此，在数学术语中，图像中的每个像素可以用三个不同的数字表示，分别表示 RGB 三种颜料的强度，每种有 256 个等级。例如，深红色像素可以表示为 `RGB(220,20,60)`。
+
+我们可以应用上述知识将基于像素的图像转换为仅包含数字的基于向量的图像，以便模型理解。例如，尺寸为 `1028*768 px` 的高分辨率彩色 PNG 图像可以作为大小为 `1028*768*3` 的三维向量输入模型。对于灰度图像，我们可以用单个值表示每个像素，指示白色强度。`0` 表示黑色像素值，`255` 表示白色，中间的数字表示不同的灰度。因此，灰度图像可以向量化为大小为 `1028*768` 的二维向量。这种基于像素的方法是向量化图像最直接的技术之一。根据用例和问题复杂度，我们还可以尝试其他方法，如 `Color Histogram Vectorization`。
+
+##### 分类向量化
+
+当我们查看服装合身度数据集的产品尺码列时，会发现数值始终属于一个特定集合，即 `XXS`、`XS`、`S`、`M`、`L`、`XL` 和 `XXL`。在将数据输入模型之前，我们需要将这些类别向量化并编码为数值。让我们讨论一下编码数据集中该分类列的不同方法。
+
+###### 整数编码
+
+最简单的方法之一是为每个类别（本例中为产品尺码）分配一个唯一的数值，如下所示。
+
+![](img/Image00030.jpg)
+
+整数分配遵循与其对应尺码相似的自然顺序。这种编码有助于模型理解尺码 `XXS` 比 `XL` 更接近 `S`（因为 `1` 比 `6` 更接近 `3`）。该方法的一个细节是：仅当分类值之间存在自然顺序时才有效。如果编码为 `{S:1, M:2, L:3, XS:4, XL:5, XXS:6, XXL:7}`，可能就不起作用。因此，明智地编码分类值至关重要，因为错误的分配可能导致意外结果。
+
+###### 独热编码
+
+对于不存在序数关系的分类特征，上述整数编码可能大材小用或完全无效。在这种情况下，我们使用一种广泛流行且富有创意的方法，以二进制形式对类别进行编码，称为**独热编码**。它将每个值表示为一个二进制向量，其大小等于可能的分类值数量。仅相应数据记录中假设的值被置为 `1`，其余均置为 `0`。例如，如果所有产品尺码为 `{XXS, XS, S, M, L, XL, XXL}`，则可以对不同产品尺码进行如下编码：
+
+![](img/Image00031.jpg)
+
+这种编码方式可轻松适应新的可能输入。例如，假设 ModCloth 为娇小体型推出了新尺码 `PS`、`PM` 和 `PL`。在这种情况下，我们可以通过在现有向量后追加三个额外的零来扩展向量，并利用这额外的 3 位为新尺码引入编码，如下所示：
+
+![](img/Image00032.jpg)
+
+#### 归一化
+
+回顾上一章讨论的世界城市数据集示例，其中包含一个指示每个城市人口的属性。逻辑上，该列的值范围可能从 `1`（内布拉斯加州莫诺维仅拥有 1 位居民！难以置信，对吧？）到几百万。在该数据集上训练可能导致陷入 `NaN`，因为梯度更新因数值范围过大而变得太大而无法处理。现在考虑平均年龄作为一个属性。该列的值主要位于 `0` 到 `100` 之间。这个范围与人口范围截然不同。使用包含这两个属性的数据集训练机器学习模型会导致梯度因两种不同的尺度而剧烈震荡，从而减缓收敛过程。很多时候，会使用 `AdaGrad` 或 `Adam` 等优化器通过为每个特征创建不同的学习率来防范此问题。然而，优化器并不总能拯救我们免受所有问题困扰，特别是当每个特征都有很宽的取值范围时。为了解决上述问题，我们应该转换属于不同尺度的特征值，将它们带到相似的尺度上，同时不改变其原始行为，这一过程称为**归一化**。在更复杂的场景中，归一化也指复杂的调整，以引导调整后值的整个概率分布对齐。归一化通过帮助梯度以适当的速度上升（或下降），而不是跳跃过大（导致来回震荡）或过小（导致永不收敛），从而提高模型的数值稳定性。这种行为进一步有助于加快模型训练速度。有多种方法校准特征分布；让我们讨论最常见的四种。
+
+##### 特征裁剪
+
+如果我们绘制世界城市数据集中所有城市的人口分布图，可能会观察到图表两侧都有长尾。人口极少的城市（想象一下只有单个居民或不足十人的城市有多少！）和人口极多的城市实际上都是异常值。在这种情况下，我们可以设定最小和最大人口（例如设定范围从 `2,000` 到 `20,000,000`）并裁剪异常值。我们将小于最小值的值设为最小值，将大于最大值的值设为最大值。这种技术称为**特征裁剪**。
+
+![](img/Image00033.jpg)
+
+不同城市人口的概率密度图。概念上，两端的极值可以被裁剪。寻找特征值最小值和最大值的一种复杂方法是使用标准差度量，例如裁剪超出 `(-nσ, +nσ)` 范围的值。特征裁剪是一种简单而有效的数据归一化方法。最大的优势是它可以在其他归一化技术之前或之后应用。
+
+##### 范围缩放
+
+考虑世界城市数据集中的年龄特征，裁剪后其范围明确为 `0` 到 `100` 岁。每个年龄值对应大量人口。我们可以固定特征分布的上下界，因为异常值的概率很低（只有 `0.0173%` 的美国人活到 `100` 岁！）。在这种情况下，范围缩放是一种有效的归一化方法。该技术将特征值从现有范围（此处为 `[0, 100]`）变换到标准范围，通常为 `[0, 1]` 或 `[-1, 1]`。由于变换范围的方式，这种方法也称为**最小-最大缩放**。以下定义了重缩放到 `[0, 1]` 范围的公式，其中 `x’` 表示变换后的值，`x` 是特征的原始值。`min(x)` 和 `max(x)` 分别表示原始范围的下界和上界。
+
+![](img/Image00034.jpg)
+
+以下是可用于重缩放到任意范围 `[p, q]` 的通用公式：
+
+![](img/Image00035.jpg)
+
+##### 对数缩放
+
+观察世界城市数据集中的“使用语言数量”特征，我们发现它遵循**幂律分布**。简单来说，少数语言覆盖了大多数城市，其余语言仅覆盖剩下的极少数城市。虽然这种分布准确地代表了数据，但不利于模型训练过程。为了处理此类偏态分布，我们使用**对数缩放**，它将分布转换为正态分布。对数缩放通过对所有值执行对数变换来缩小特征值的原始范围，如下所示（其中 `x` 为原始值，`x’` 为变换后的值）：
+
+![](img/Image00036.jpg)
+
+对数缩放将宽范围压缩为窄范围，并普遍降低数据的变异性。这种变换有助于提高学习算法的性能。异常值可能导致对数变换后的分布仍有轻微偏斜，并不完全正态。然而，与原始分布相比，它们更接近正态分布。
+
+![](img/Image00037.jpg)
+
+不同城市使用语言数量的概率密度图（左）。明显地，对数缩放后的图（右）有助于减少数据的偏度。
+
+##### Z-Score 缩放
+
+当特征值分布仅包含少量异常值且特征裁剪可能不会产生显著变化时，我们倾向于使用**Z-Score 缩放**技术。这种归一化方法通过将值转换为均值为 `0`、标准差为 `1` 的通用尺度来转换数据。在统计学中，**Z-Score** 是一个指标，它以标准差 (`σ`) 的数量来量化某个值与整个群体均值 (`μ`) 的关系。例如，如果该值等于群体的均值，Z-Score 为 `0`。以下公式用于从原始值 `x` 计算变换后的值（或 Z-Score），记为 `x’`：
+
+![](img/Image00038.jpg)
+
+上述描述了归一化数据的四种广泛流行技术。然而，选择基于用例、学习算法和数据分布的适当方法取决于我们。无论使用哪种技术，为了使模型表现良好，我们的数据应具有以下特征：
+
+- **狭窄范围**：这意味着特征值的范围应刚好足以准确表示分布。作为标准，许多数据从业者喜欢将特征值重缩放到 `[0,1]` 或 `[-1,1]` 范围内。
+- **同质性**：这要求数据集中的不同特征列遵循近似校准的范围，或位于相似的特征值范围内。
+
+#### 分桶
+
+当数据集包含来自调查或实验的观测值时，必然存在一些差异。因此，为了减少这些微小观测误差的影响，我们使用一种称为**分桶**的技术。这种方法涉及用相应箱体的值替换原始值。特征值到箱体的映射可以通过在连续尺度上定义小区间（基于某些阈值）来完成，这一过程称为**数据分箱**。聚合数值有时伴随着信息损失；然而，它减少了待处理的数据量。从而减轻了模型训练负担，且不会造成剧烈的性能变化。它还能减少噪声的影响，例如在图像处理问题中。
+
+##### 对称分桶
+
+在**对称分桶**方法中，我们将整个特征值范围划分为等大小的区间。阈值等距分布，每个区间具有固定边界。当特征值在整个范围内均匀分布时，这种分箱类型很有用。然而，假设特征值不是均匀分布的。在这种情况下，某些箱体可能包含极高数量的点，而其他箱体可能非常少甚至没有，从而导致不平衡。因此，在应用此技术前确保特征值的均匀分布至关重要，因为它可能阻碍学习。
+
+##### 分位数分桶
+
+**分位数分桶**旨在弥补上述对称分桶的不足。它巧妙地创建包含相同数量数据点的箱体。在统计学中，分位数是将整个分布划分为多组的切点，使得每组包含总体相同比例的数据。基于此概念，阈值并非在整个特征值范围内等距分布。相反，它们由任意两个阈值之间的数据点数量决定，该数量对所有区间应相等。根据这种逻辑，数据密度较高的区域会有更多箱体（尺寸较小），而数据较分散的区域箱体较少（尺寸较大）。因此，当数据分布偏态时，分位数分桶更受青睐，因为它具有自适应性并紧密模拟原始分布。
+
+![](img/Image00039.jpg)
+
+对称分箱与分位数分箱风格的并排对比。
+
+### 特征工程
+
+数据预处理后，我们可以使用数据训练机器学习模型并将其部署到生产环境处理未见数据。这个简单模型拥有显而易见的特征集，通常镜像数据集的属性，在解决手头问题时可能表现尚可。为了进一步提升模型性能，我们有两种选择：
+
+1.  **模型迭代**：一种方法是迭代构建复杂的机器学习模型，例如增加神经网络的隐藏层数量，或集成不同类型的模型，希望能更有效地学习。结合使用多个机器学习模型以获得更好的预测性能称为**集成学习**。这一行动计划可能产生预期结果；然而，它需要大量时间和精力开发，且尽管付出所有努力，仍存在无法完全奏效的风险。它还需要更大体量的训练数据，这带来另一个风险：模型可能无法扩展到生产流量。
+2.  **特征迭代**：另一种途径是构建新的、更好的特征。特征镜像数据的结构，即使是次优模型也能识别。因此，拥有更好的数据表示会影响预测模型的性能。**特征工程**的过程识别可能为现有模型提供额外信号以提升性能的特征。构建特征是一个令人兴奋的方面，所有的直觉、创造性和“黑魔法”都发生在这里。Andrew Ng 说：“构思特征很困难、耗时，且需要专家知识。应用机器学习基本上就是特征工程本身。”采用这种方法，我们可以保持简单模型在生产环境运行，进一步降低在可扩展性和性能方面失败的风险。
+
+当我们开始用机器学习解决现实问题时，瞄准“触手可及的果实”很有意义。权衡两种方法的利弊，我们应首先专注于构建更好的特征以快速提升性能，然后再转向更具挑战性和风险的任务。有了创新特征，我们可以避免使用复杂的集成学习技术，或花费永恒的时间寻找最佳模型参数，这一过程称为**超参数调优**。此外，尝试新特征能改善我们对模型如何对新信息做出反应的理解，并更贴切地解决问题。然而，这仅在探索完所有可能性的范围内有效。我们不希望过度“特征过度工程”，最终导致难以驾驭的维度（我们将在本章后面讨论）。
+
+#### 什么不是特征工程？
+
+在深入探讨有助于为模型训练创建详尽特征列表的特征工程各个子任务之前，有必要暂停并强调什么**不是**特征工程，以描绘更清晰的图景：
+
+-   不包括从数据源收集数据时识别数据集中存在的数据信号。
+-   不包含在训练集或测试集中发现目标变量或每条数据记录的标签。
+-   不涵盖数据清洗过程，如移除标点符号和停用词或整理词嵌入等任务。
+-   也不包含通过将值缩放到特定范围、归一化值、编码分类值等方式处理数据的过程。
+
+#### 迭代过程
+
+将特征工程理解为一项应用机器学习任务，凸显了它不是孤立存在的。它是一个迭代过程，伴随着一个明确定义的问题，在特征构思和模型评估之间振荡，直到达到瓶颈。一旦发生这种情况，我们便可以尝试复杂的模型架构或超参数调优。正式场合下特征工程遵循的逐步过程通常如下：
+
+1.  理解问题陈述和领域，通过分析近期趋势和与专家讨论来头脑风暴新特征想法。
+2.  经过一些变换后，提取特征值进行离线统计分析。
+3.  在包含新特征的数据上训练现有模型，并分析模型性能指标。
+4.  如果特征未带来性能提升，我们可以尝试不同的变换想法，或直接回到头脑风暴其他特征。否则，我们进一步致力于使特征生产化，将其集成到模型服务管道中。补充背景：模型服务是一种将训练好的模型作为端点暴露的方法，我们只需输入数据即可获得预测结果。
+
+#### 特征类型
+
+现代机器学习模型贪婪地需要数据，但根本方面是以正确的格式提供数据。直接传递数据中的原始特征可能会使模型训练变慢。它们阻碍模型的泛化能力并对性能产生负面影响。必须理解特征的数据类型显著影响处理方法。以下简要概述四种常用特征类型：
+
+1.  **连续特征**：连续特征可以取任意实数，包括浮点数。任意两个特征值之间没有明确边界，即在这两者之间可能存在无限多个可能的值。这些特征值本质上是数值型的，因此可以进行数学运算。例如，ModCloth 上的产品价格如 `US$14.99`、`US$25.00`、`US$99.99` 等。此外，分区之间没有严格区分（不像我们将在下面学习的其他类型），即产品甚至可以标价 `US$15.10`，这也完全可行！
+2.  **二元特征**：这是最简单的特征类型之一，只能取两个可能值之一：`1` 或 `0`、`true` 或 `false`、`on` 或 `off`、`yes` 或 `no` 等。这类二分特征易于实验，因为不需要花哨的变换。例如，我们可以标记 ModCloth 上的用户是否已验证。一个潜在场景是模型学会给已验证用户的评论分配比未验证用户更高的权重。
+3.  **字符串特征**：字符串特征的值可以是任意文本块，无论是字母、符号还是表情符号。如前所述，这些字符串特征需要处理，并应转换为数值向量。明显的例子是用户留下的任何产品评论文本，如 “I love this dress, it is my favorite. The size first me perfectly and flatters my curves!”
+4.  **离散特征**：这些特征通常也称为**分类特征**。离散特征的值只能取 N 个可能值之一，且它们之间有明确边界。简单来说，在预定义的 N 个可赋值的值之间不存在其他值。值得注意的是，类别至少应有 3 个，最多可延伸至无限。它们可进一步分为两类：
+    -   **名义分类特征**：这些特征的值之间没有关系，也不遵循任何特定顺序。例如，将夹克类型编码为 `{bomber:1, biker:2, trucker:3, denim:4, track:5, parka:6}` 就是离散值相互独立的绝佳例子。
+    -   **序数分类特征**：这些分类特征的值有顺序。例如，将产品尺码编码为 `{XXS:1, XS:2, S:3, M:4, L:5, XL:6, XXL:7}`，其中离散值遵循与产品尺码相同的顺序，即 `S<M` 对应 `3<4` 等。
+
+#### 特征与有价值特征
+
+组装足以对学习算法产生显著预测力的有意义特征需要大量精力和时间。在深入探讨后续章节中的特征提取、特征选择等不同技术之前，有必要理解特征与有价值特征的区别。以下要点可能有所帮助：
+
+-   我们应避免在数据集中极少出现的离散特征。根据经验法则，一个好的特征值出现率至少应为 `1%`。检查特征值的分布使模型能够学习特征与标签之间的关系。反之，罕见特征不增加显著价值，模型无法基于该特征做出任何预测。例如，如果只有 `0.05%` 的产品具有 `XXXS` 尺码，最好丢弃这些样本。
+-   最好拥有能简洁传达其含义的特征名称。例如，如果记录用户体重，`weight_lb` 或 `weight_kg` 这样的特征比 `weight` 更有意义。
+-   在进行特征工程时，必须非常小心地处理特征值中的不连续性。有意义的浮点特征不应包含奇特的超范围值。以产品评分为例，`user_rating=3.2` 有意义，而 `user_rating=-0.5` 则没有。克服它的最佳方法是使用自定义布尔标志标记有效值，如 `is_user_rating_defined`。
+-   为保持特征稳定性，我们应避免使用来自外部源的映射作为特征值。例如，最好拥有特征 `user_language= ‘en’` 并将其作为模型输入（创建词汇表并转换后），而不是使用将 ‘en’ 映射为 `8` 的外部源，并用 `user_language=8` 作为模型输入。
+
+#### 特征选择
+
+随着我们解决复杂问题的进展，我们尝试构建先进模型并拥有信息丰富的特征。随着特征数量增加，模型为了具备足够的泛化能力以获得良好性能所需的数据量也呈指数级增长。这增加了存储空间和模型处理时间。从这个意义上说，额外特征增加的价值可能变得微不足道，相比之下它增加的开销却很大。这种现象称为**维度灾难**。即使我们有足够数据来应对额外的维度以避免模型过拟合，额外特征也会使模型变重，因为训练和服务需要额外的时间和资源。因此，通过仅保留最有影响力的特征来保持最小特征空间总是好的。这一为模型选择相关特征子集的过程称为**特征选择**。选择特征选择的关键前提是数据包含许多冗余或无关特征，可以在不丢失信息的情况下丢弃。著名机器学习科学家 Peter Norvig 以引人入胜的方式阐述了数据和特征的力量：“更多数据胜过聪明算法，但更好的数据胜过更多数据。”因此，特征选择有助于避免维度灾难，并为更短的训练和服务时间铺平道路，最终转化为更好的最终用户体验。生成的模型更易于解释和推理。我们也可以用**奥卡姆剃刀**或**简约法则**来推论这一观点：特征过多会失去可解释性。通过减少可学习参数的数量，我们也可以观察到模型过拟合的减少。相反，如果可学习参数与可用数据的比率很高，模型可能会记住训练数据，从而损害其泛化能力。最优特征的选择可分为两个阶段：提出新特征的搜索技术和衡量这些特征有用性的评估度量。通常有三大类特征选择算法：
+
+1.  **过滤法** 使用统计度量对特征评分，并评估特征与标签之间的关系，如互信息或相关系数。根据度量值，我们筛选出模型所需的特征。
+2.  **包装法** 将特征子集的选择视为一个搜索问题。例如使用**递归特征消除 (RFE)** 技术，该方法通过添加或移除特征来评估多个模型，直到找到最大化模型性能的最佳组合。
+3.  **嵌入法** 使用具有内置特征选择例程的算法，作为模型学习过程的一部分。这些算法仅选择对性能贡献最大的特征。此类算法的例子包括 `LASSO Regression` 和 `Random Forest`。
+
+让我们浏览一些业界和学术界常用的特征选择技术，它们在大多数用例中提供最佳结果。
+
+##### LASSO 回归分析
+
+**最小绝对收缩和选择算子 (LASSO)** 是一种回归分析方法，它选择最优特征子集以提高模型性能。它使用**L1 正则化**，惩罚目标函数系数的绝对值，以限制其值过大导致过拟合。结果是，重要特征的系数增大，无关特征的系数变为零以减少系数绝对值之和，从而自动选择重要特征。
+
+##### 主成分分析
+
+**主成分分析 (PCA)** 是一种统计方法，它在不损失信息的情况下降低维度以提高模型的可解释性。PCA 将包含可能相关特征的数据转换为具有线性不相关特征（也称为**主成分**）的数据。变换的定义方式使得第一主成分捕获最大可能方差。每个后续成分在与其他成分保持零相关的同时，按递减顺序捕获方差。PCA 是一种自适应数据分析技术，可轻松针对各种领域、数据结构和算法进行定制。它通过仅选择捕获数据中最大方差的特征，在对抗维度灾难方面发挥了重要作用。
+
+##### 特征重要性排序
+
+**特征重要性排序** 是一种统计方法，量化每个特征相对于标签的预测能力，并根据相对重要性得分对其进行排序。一般来说，对模型性能有正面影响或具有高预测能力的特征被认为比其他特征更重要。理解特征的贡献提高了模型的可解释性和可说明性。评估现实场景，我们通常有特征数量预算，因扩展担忧而无法超支。在这种情况下，从所有可能特征中选择贡献最大的子集以提供最佳性能变得至关重要。以下是计算特征重要性得分的三种流行方法，随后可用于特征选择：
+
+###### 回归分析
+
+**回归分析** 是一种估计特征与目标变量之间关系的统计方法。利用回归模型的参数，我们可以识别哪些特征对准确预测目标变量有相对较高的影响。除了粗略计算单个特征的重要性外，该方法还能揭示特征在预测目标变量时如何相互作用，即是否存在协同效应。在只有一个特征的情况下，我们可以使用线性回归模型学习一条最佳拟合数据的直线。例如，考虑 `y = b + mx`，其中 `y` 是目标变量，`x` 是特征，`b` 和 `m` 是算法学到的常数项。在这种情况下，`m` 的值可以量化 `y` 和 `x` 之间关系的强度。我们可以将此概念扩展到多个特征，即 `y = b + ∑mᵢxᵢ`，其中每个特征 `xᵢ` 的系数 `mᵢ` 代表该特征的重要性得分（假设特征已归一化）。然而，线性回归模型仅在特征与目标变量线性相关时有用。在进行回归分析时，应牢记“相关不代表因果”这一重要格言，因为回归分析无法有效传达特征与目标之间的因果关系。
+
+##### 决策树
+
+作为一种机器学习模型，**决策树** 对数据变化敏感，因为计算最终是基于特征值与其各自阈值比较的分支操作序列。由于它们倾向于过拟合，即使数据发生微小变化，它们也容易在预测目标变量时表现出高方差。因此，首选 `Random Forest` 等集成学习方法，因为它们在不同数据分割上构建多棵决策树，通过平均各种深度决策树来降低方差。`Random Forest` 通过在每棵树内随机选择特征子集进一步降低方差。决策树中决策节点的相对秩（或深度）可用于评估与该节点关联特征的相对重要性。由于靠近树顶部的特征影响更大比例输入样本的决策，它们可被视为更关键。当我们在决策树中基于特征值将数据分成两部分时，生成的分割更均匀，数据不纯度更低。相对不纯度减少量结合决策节点处理的样本比例，可作为该特征预测能力的归一化估计。通过对多棵随机树的预测能力估计进行平均，我们可以降低此类度量的方差，通常称为**平均不纯度减少 (MDI)**，并用于特征选择。
+
+###### 排列测试
+
+**排列特征重要性** 是一种计算相对重要性得分的模型无关方法。其值量化为当单个特征值被随机打乱时，模型性能指标（准确率、交叉熵等）的下降程度。随机打乱特征值（或完全丢弃）会破坏该特定特征与目标值之间的关系。模型性能的下降可归因于该特征的预测能力，表明模型对其依赖程度。我们对每个特征重复此过程并比较模型性能的差异。概念上，重要特征导致的模型性能下降比其他不重要特征更大。排列测试计算成本可能很高，特别是当特征集非常大时。然而，它优于决策树等模型特定技术，因为它可应用于任何模型，且关注感兴趣的性能指标。
+
+#### 特征相关性
+
+在讨论回归分析等特征重要性排序技术时，我们提到它们如何帮助理解特征与目标变量之间的相关性。基于这一概念，**特征相关性** 是一种确定特征之间相关性的统计方法。它建立特征对之间的统计关联，以及输入变量线性相关的程度。特征相关性研究有助于更好地理解数据。高度相关的特征在预测目标变量时不提供额外信号。因此，在所有相关特征中仅保留一个对模型性能影响极小。这有助于特征选择，并最终减少特征空间的维度。此外，特征相关性研究有助于预测可能缺失的特征值。例如，我们可以将缺失值的特征视为目标变量，训练单独模型从其他相关特征预测其值。如果缺失特征很重要，这一技巧已知能提升模型性能。决定输入变量关系强度的相关性数值度量称为**相关系数**。计算相关系数有多种方法，最流行的是**皮尔逊积矩相关系数 (PPMCC)**。它将两个特征 `X` 和 `Y` 之间的线性相关量化为 `ρ(X,Y) = cov(X,Y) ÷ σₓσᵧ`，其中 `cov(X,Y)` 是两个输入变量的协方差，`σₓ`、`σᵧ` 分别表示它们的标准差。PPMCC 的值介于 `+1` 和 `-1` 之间，`+1` 表示完全正线性相关，`0` 表示无线性相关，`-1` 表示完全负线性相关。应注意 PPMCC 不反映非线性关系。在一对特征中，两者可能以以下方式之一相关：
+
+1.  **正相关**：当两个特征同步变动，即朝同一方向变化时，它们呈正相关。它们之间的线性关系使得如果一个增加，另一个也增加，反之亦然。对于正相关，系数大于零。
+2.  **负相关**：在这种情况下，两个特征也同步变动，但方向相反。当一个增加时，另一个减少，因此也称为**反相关**。系数值小于零表示特征对之间存在负相关。
+3.  **无相关**：系数为零表示特征之间不存在线性关系。其中一个的增加或减少不影响另一个，因此两者是无关特征。
+
+#### 特征插补
+
+毋庸置疑，可用于建模的数据，尤其是来自现实世界来源的数据，本质上是嘈杂的。属性（或特征）的缺失值是常见的噪声形式。这些缺失值引入大量偏差，导致复杂的数据分析。因此，在进行分析或建模前，我们尝试填补数据空白。这一用替代值替换缺失值以实现数据完整性的过程称为**特征插补**。缺失值通常编码为 `none`、`null`、`blank`、`not a number (NaN)` 或某些预定义占位符。如前所述，这些缺失值显著影响数据质量并阻碍模型性能。有人可能认为删除缺失值记录是最简单的出路。然而，这会导致有价值信息的丢失，也会减少数据集体量。一种复杂的策略是使用估计技术填补裂缝，使其不扰乱固有的数据表示或分布。在讨论不同插补技术前，值得先提出三种缺失值类型：
+
+1.  **完全随机缺失 (MCAR)**：属性缺失值无可辨别模式。缺失值也不与数据集中其他属性相关。特定数据点缺失的概率在整个数据集中相同，即值的缺失完全随机。例如，用户评价产品时忘记提及购买尺码。
+2.  **随机缺失 (MAR)**：缺失值有模式或与其他观测属性的值相关。特定数据点缺失的概率仅在由非缺失或观测数据定义的组内相同。例如，女性用户在产品评价或个人资料中跳过添加体重的概率极高，远高于男性用户。
+3.  **非随机缺失 (MNAR)**：特定数据点缺失的概率无法确定或未知。这是最复杂的类型之一，因为它可能源于外部故障或具有时效性。考虑一个技术错误导致用户评分字段在 UI 中未渲染。因此，相当一段时间内所有产品评价都没有关联评分。这些缺失值块，可能都属于特定产品或聚集在同一周，不能归因为随机缺失数据。
+
+现在让我们讨论一些提高输入数据质量的插补技术：
+
+-   **统计插补**：此方法涉及计算观测值的均值或中位数等统计量，然后用这些值替代缺失值。必须分别为每个属性计算这些统计量，因为值的尺度或范围可能不同。虽然这是一种直接且干净的插补缺失值方法，但仅适用于数值数据。显而易见，用于分类或二元特征值时效果不佳。因为它不考虑数据相关性，所以不能带来高精度插补。该技术的另一种变体是使用最高频值替代。这对分类特征效果较好，尽管会引入偏差并扰乱数据分布。对于数值数据，也可以简单地用 `0` 或预定义常数值替代，这可能是也可能不是最高频值。
+-   **热平台插补**：这是一种常用插补方法，随机选择一个与当前记录最相似的数据记录，并用所选记录中的观测值替换缺失值。
+-   **冷平台插补**：此方法使用本质上最接近当前数据集的完全不同数据集，并用其属性填补缺失值。此方法完全不推荐，因为它会导致错误结果。
+-   **回归插补**：部署回归模型，将有缺失值的属性视为目标变量，其余属性作为特征。利用非缺失值训练，我们可以用预测值填补空白。此方法相对于统计插补有额外优势，因为它考虑了特征相关性。简单回归方法试图遵循总体趋势并拟合最佳直线，但不在插补值中引入误差项。因此，使用**随机回归插补**，它向回归插补值添加平均回归方差，以在插补值中引入误差。
+-   **k-近邻 (k-NN) 插补**：此方法利用特征相似性概念，使用非缺失数据记录预测缺失值。它找到待考虑数据记录的 `k` 个最近邻，并基于 `k-NN` 方法插补值。它通常比统计插补技术更准确，但计算成本高。它对包含异常值的数据反应也不佳。
+-   **深度神经网络 (DNN) 插补**：最精确的技术之一，适用于分类和数值特征，使用深度神经网络。在非缺失值上训练 `DNN`，预测值作为缺失属性的插补值。与上述其他技术相比非常准确，但对于海量数据集计算成本可能很高。
+
+尽管讨论了多种插补技术，我们无法确定最佳技术。每种方法都针对不同需求精心设计。基于用例、缺失属性的数据类型和相关数据集，我们通常必须实验直到找到最适合的策略。
+
+#### 特征交互
+
+**特征交互** 是一种在现有特征之上构建特征的有效快速过程。为清晰理解，考虑一个原始仅有两个特征 `F1` 和 `F2` 的数据集。我们可以将预测函数分解为以下项：偏置项、`F1` 的系数、`F2` 的系数，以及 (`F1 x F2`) 的系数。最后一项代表两个特征之间的交互商。两个特征之间的交互可定义为：在考虑了单个特征效应后，通过改变特征而导致的预测函数结果的变化。如果预测函数可分解为两个单独特征的聚合，我们可以假设它们之间的交互为空。该概念可推广到具有 `n` 个不同特征的数据集，其中交互可能发生在所有 `n` 个特征之间或更少。在这种情况下，我们可以生成 `nC2` 个二度交互特征、`nC3` 个三度交互特征，以此类推。虽然此过程有助于以低成本生成更多特征，但我们必须谨慎选择最大交互度。较高的交互度可能导致显著更多特征，如果数据不足，可能导致模型过拟合，即维度灾难。
+
+**Friedman H 统计量** 是计算交互强度的常用度量。该统计量本质上无量纲，通常取 `0` 到 `1` 之间的值。Friedman H 统计量为 `0` 表示交互项无预测能力，值为 `1` 表示交互项单独负责预测。值大于 1 也是可能的，但很难解释。当交互项的方差远大于两个特征单独效应的方差时会发生这种情况。我们可以利用 Friedman H 统计量，通过仅挑选高影响交互水平的特征并丢弃低于阈值的特征，从大量特征中巧妙地选择特征，以避免维度灾难。然而，计算 Friedman H 统计量是一个计算成本高昂的过程，因为它涉及在没有交互项的情况下估计单个特征的边际分布。由于这些估计本身也带有方差，结果高度不稳定。此外，该统计方法假设特征可以全部独立打乱，或不存在相关性。因此，在相关系数高的情况下，假设被违反，Friedman H 统计量会导致无效结果。值得注意的是，此技术不适合以像素为输入，因此在涉及图像数据的问题中应避免使用。量化特征交互的替代方法包括 **Variable Interaction Networks (VIN)** 和 **Greenwell Partial Dependence Functions**。
+
+#### 特征可视化
+
+到目前为止，很明显特征在机器学习模型性能中起着重要作用。因此，理解输入特征如何影响模型结果以增强模型可解释性并指导未来的模型改进和扩展迭代是有价值的。计算特征重要性和交互得分有助于识别关键特征；然而，如果我们想更深入地了解这些特征如何影响模型结果，可以使用可视化方法。**特征可视化** 是一种应用于强调模型中特征学习路径并使其更具可解释性的方法。特征可视化技术通常与神经网络一起使用，以更好地理解其工作原理。**深度神经网络 (DNN)** 以其在隐藏层学习高级特征的能力而闻名，这大大减轻了特征工程负担。然而，它们的不透明性降低了模型的可解释性。那个隐藏层黑盒中的无数变换一直是个秘密，直到我们得到输出。因此，特征可视化旨在发现与特定结果相关的关键输入并进行可视化检查。对于 `DNN` 的一个单元，特征可视化可通过检测最大化该单元激活的输入来执行。该单元可以是一个神经元、一整层，甚至是最终预测。`DNN` 中可能有数百万个神经元；因此为每个神经元可视化既繁琐又耗时。为优化这一点，我们改用更大的单元进行可视化，例如激活图。在特定情况下，如主要用于图像识别任务的**卷积神经网络 (CNN 或 ConvNet)**，单元甚至可以指从原始图像提取的特征图。训练 `ConvNet` 后，我们可以输入特定图像进行预测，并可视化特征映射的热力图。热力图可能指示每个特定单元正在学习什么类型的特征，从而提供对网络决策的更多洞察。
+
+![](img/Image00040.jpg)
+
+一个 `5x5` 卷积核在 `16x16` 输入上卷积并产生 `12x12` 激活（或特征）图的可视化。
+
+另一种可视化特征的精彩方式，特别是那些提高神经网络预测性能的特征，是在网络中引入**注意力层**。其思想类似于计算特征重要性得分。然而，与为整个预测任务通用地排序特征的特征重要性排序不同，注意力层捕捉上下文重要性。本质上，注意力层高亮（或赋予更高权重）那些会积极影响特定输出预测的特征。通过进一步可视化这些注意力层的输出，我们能更好地理解神经网络的工作原理。注意力层的添加对**循环神经网络 (RNN)** 最为有用。`RNN` 的结构使其能捕捉语音识别等任务的时序动态上下文。注意力层帮助其专注于存储关键部分，从而提高性能。
+
+![](img/Image00041.jpg)
+
+基于西班牙语到英语翻译的序列到序列模型，这张热力图显示模型在翻译时关注输入句子的哪些部分。目前，神经特征可视化领域正在进行活跃研究，具有各种优化和归因目标。它已成为理解神经元交互、激活机制最有前景的技术之一，从而增强可解释性。作为一个独立过程，它可能无法产生令人满意的解释；然而，如果作为协同构建块与其他模型可解释性工具结合使用，它能赋能人类揭示这些复杂网络的运作。
+
+#### 特征自动化
+
+到目前为止，我们讨论了为提高模型性能和可解释性而构建特征的各种过程。这项研究清楚地表明，特征工程通常是一项漫长的手工工作。它严重依赖领域知识、直觉探索、数据分析和操作。包含多个此类组件，尽管最终特征集受限于个人主观性、想象力和时间，但这一过程可能过于繁琐和耗时。我们可以通过选择自动化特征工程技术来克服这一手工过程，以加速特征生成和实验。**特征自动化** 是一种从给定数据集生成所有可能候选特征的技术，从中筛选出最佳特征用于模型训练。自动生成的特征集可能巨大且不总是最优，但它提供了一个能产生良好基线指标的输入特征集。利用领域知识、直觉探索和本章讨论的特征选择技术，我们可以进一步改进这一特征集。随着数据集体量增加，提取尽可能多的信息以创建有效解决方案变得至关重要。Pedro Domingos 在其广受欢迎的文章《A Few Useful Things to Know about Machine Learning》中对特征自动化提出了一个令人兴奋的观点：“机器学习的圣杯之一是自动化越来越多的特征工程过程。”目前用于特征自动化的流行工具是 **Featuretools**。它是一个开源 Python 框架，可自动创建特征，甚至来自时间和关系数据集。它基于**深度特征合成 (DFS)** 原理工作，将基元堆叠在直接从数据集提取的特征上以构建复杂特征。**基元** 可视为 `Featuretools` 的基本单元，定义为可单独或结合应用的单个计算。基元示例可以是聚合操作，如 `mean`、`sum`、`average`，或变换操作。应用组合基元可产生更具描述性的特征。这些描述性特征具有更多“深度”，每次我们夹紧一个额外基元时深度都会增加。这些复杂描述性特征已被证明能更有效地从数据中提取复杂模式并辅助模型训练。尽管是最近开发的，自动化特征工程正获得巨大关注。它通过减少头脑风暴和实验时间、提供可解释的特征集、通过过滤时间依赖数据在一定程度上修复数据泄露问题，改善了标准的易错工作流。尽管仍在开发中，这种方法已提供显著收益，使多个领域的机器学习建模者能够利用关于数据的内置知识，而无需花费大量时间、精力和金钱。
+
+
+
+
+## 第 5 章 机器学习算法应用
+
+到目前为止，我们已经掌握了从多个网络来源创建数据集的能力，并学习了各种处理数据以构建特征来为机器学习模型提供动力的技术。为了进一步巩固我们的知识，我们现在将学习机器学习的不同范式。本章重点在于针对我们创建的数据集，识别适合解决具有挑战性问题的算法。其目的是从数据需求的角度提供对算法的基本理解，而不讨论其他来源已有的枯燥细节。
+
+## 1• 机器学习范式识别
+
+尽管机器学习应用领域多样，但工作流的高层概览保持不变。标准步骤包括以下内容：
+
+![](img/Image00042.jpg)
+*机器学习应用的高层工作流。*
+
+全面理解该工作流表明，构思和问题定义步骤通过包含数据获取和预处理的步骤，与实际的机器学习应用和部署步骤分离开来。这一流程表明，应用特定算法来学习机器学习模型的参数，取决于我们拥有的数据的性质和数量。所谓学习，是指模型从过去的经验（通过提供的训练数据）中保留知识，并将其用于新的未见经验（即测试数据）的能力。
+
+我们将通过考察三种机器学习范式：`Supervised Learning`（监督学习）、`Unsupervised Learning`（无监督学习）和 `Reinforcement Learning`（强化学习）来开始本节。这三种范式是我们今天可用的各种技术的高层分类。我们还将说明如何将我们收集的高质量数据集映射到每种范式，以解决预测问题。
+
+### I• 监督学习
+
+`Supervised Learning`（监督学习）是应用最广泛的机器学习范式之一。在 `Supervised Learning`（监督学习）范式中，我们拥有一组输入-输出对（以标记训练数据集的形式），任务是学习一个映射函数，以尽可能准确地预测未见输入的输出（即训练数据集中不存在的输入）。其命名贴切，因为算法拥有标记的训练数据集来观察并学习映射函数，就像有一位监督者一样。
+
+用简单的数学术语来说，假设我们有一个标记的训练数据集，用 `X` 表示输入变量，用 `Y` 表示标签。我们有一个函数 `f` 在两者之间提供映射，即 `f(X) = Y`。我们的目标是学习映射函数 `f`，以便在给定任何未见样本 `X’` 时，能以最高的准确性计算出其标签 `Y’`。
+
+`Supervised Learning`（监督学习）主要有两种不同的技术，即 `Classification`（分类）和 `Regression`（回归），我们将在本章后面讨论它们。这种学习范式与我们之前讨论的指导性数据集搜索理念非常契合，当时我们学习了如何为已定义的问题收集数据。在那个例子中，我们有问题陈述和关键数据信号作为指路明灯。搜索过程在于寻找相关的输入-输出对，以便轻松应用 `Supervised Learning`（监督学习）技术。
+
+让我们考虑一下我们一直在用于尺码推荐问题的服装合身度数据集。我们拥有的输入包括：客户购买的产品尺码、合身情况，以及产品和客户身体测量的其他详细信息。我们的任务是学习映射函数，以便将来能推荐用户应购买的产品尺码以获得良好的合身度。然而，我们需要注意一点：我们从外部来源收集的数据集不会直接解决 `Supervised Learning`（监督学习）问题。例如，在尺码推荐问题中，理想的数据集应该包含信息，说明在所有可用的不同尺码中，哪个尺码最适合该用户。但在现实中，客户只会试穿给定产品的 1-2 个尺码。他们无法评测所有可用尺码的完整目录。在这样的情况下，我们需要修改问题定义。更新后的陈述应近似原始问题，并与收集到的数据集良好契合。将这一原则应用于尺码推荐问题，我们可以将其校准为尺码合身度问题。我们拥有用户画像（即 `UserID` 和身体测量数据）和购买的产品尺码这一输入对。目标是学习该产品的哪个尺码最适合那位潜在客户。一旦我们能可靠且准确地预测产品目录尺码在用户身上的合身度，就能推断出向客户推荐的完美尺码。实际上，我们推荐的是对于特定用户而言，成为最佳合身度概率最高的目录尺码。
+
+### II• 无监督学习
+
+`Unsupervised Learning`（无监督学习）是一种不需要标记数据点的机器学习范式。理论认为它们足够智能，能在没有人工监督的情况下，在提供的无标签数据中寻找模式。`Unsupervised Learning`（无监督学习）通常本身就是一个目标，即在数据中发现模式就是目的。既然我们不提供关于要寻找什么模式的任何提示，算法就会自我组织。它会制定规则来整理数据并发现模式。
+
+`Unsupervised Learning`（无监督学习）主要有两种不同的技术，即 `Clustering`（聚类）和 `Association`（关联），我们将在本章后面讨论它们。这种学习范式与我们之前讨论的非指导性数据集搜索理念非常契合，当时我们学习了如何在没有任何目标的情况下收集数据。既然对这些数据集适合解决什么问题的直觉已足够，我们就专注于收集尽可能多的信息，以帮助算法高效地检测模式。
+
+让我们考虑一下新闻类别数据集。它包含新闻类别、新闻标题、新闻故事的简短描述、发布日期、作者等详细信息。乍一看，我们可以利用该数据集根据标题预测新闻类别，作为 `Supervised Learning`（监督学习）的一个简单示例。该数据集更令人兴奋的用途是识别每个类别中值得报道的主题，如 `entertainment`（娱乐）、`politics`（政治）、`fashion`（时尚）等。如果我们观察一下，数据中没有关于新闻价值或标题间共同主题的标签。因此，从数据中发现这些模式就是 `Unsupervised Learning`（无监督学习）算法的工作。
+
+检测标题间共同主题的一种基本方法是对每个类别的标题文本使用主题建模。`Topic Modeling`（主题建模）是一种流行的学习技术，尤其适用于自然语言处理任务。它扫描提供的文本文档集合，提取其中相似的词语和短语模式，然后自动学习聚类词语分组和相似表达，以最好地表征给定的文本文档集合。使用这种统计模型来发现数据中的抽象主题，能加深我们对什么能成为新闻文章的理解，从而在未来识别有新闻价值的故事。
+
+##### 半监督学习
+
+在当代，存在一些将少量标记数据与大量未标记数据相结合以提高学习准确性的情况。这种学习类型通常被称为 `Semi-Supervised Learning`（半监督学习），因为它介于 `Supervised Learning`（监督学习）和 `Unsupervised Learning`（无监督学习）之间。
+
+一个简单的例子是：我们有一大组文章，想象一下互联网上所有的内容，我们需要在不实际提供类别的情况下对它们进行分类。我们可以从极少量的标记文章开始，让算法学习对其余文章进行分类。这种方法之所以有效，是因为手动对所有数据进行分类可能非常昂贵，但未标记数据获取成本低廉。在某些情况下，算法可以自由构建新类别。这种自我训练技术对于对文章进行分类和排序非常有用。
+
+`Semi-Supervised Learning`（半监督学习）的另一个典型例子是语音分析，因为给多个音频文件的每一部分打标签太繁琐了。由于这种学习范式结合了 `Supervised`（监督）和 `Unsupervised Learning`（无监督学习），它在以下假设下具有两者的特征：
+
+*   **Continuity Assumption（连续性假设）**：在提供的数据点中，彼此更接近的数据点映射到相似的标签。
+*   **Cluster Assumption（聚类假设）**：我们可以根据特定标准对所有提供的数据点进行分组，同一组中的数据点映射到相同的标签。
+
+### III• 强化学习
+
+`Reinforcement Learning`（强化学习）是一种机器学习范式，其中算法学习如何在不确定的环境中做出一系列决策。目标是通过做出一系列决策来最大化获得的累积奖励。
+
+想象面临一个类似游戏的情境，每个动作要么获得奖励，要么受到惩罚，但我们事先不知道它们是什么。游戏的目标是在最后最大化总奖励。既然我们没有关于如何最优地玩游戏的任何提示，我们最初会通过试错方法来玩，并收集关于奖励策略的信息。然后我们利用这些信息指导后续决策，试图最大化奖励。
+
+同样，`Reinforcement Learning`（强化学习）模型从简单的随机试验开始学习如何执行任务，并根据接收到的奖励调整其参数。随着模型参数收敛，模型变得更加复杂，能更优地执行所述任务。我们将这一范式与人类智能的工作方式进行比较，如果提供足够的计算资源，`Reinforcement Learning`（强化学习）可以整合来自多个并行游戏过程的经验。它可以利用搜索的力量，在短时间内想出开创性的算法。
+
+这一范式不同于 `Supervised Learning`（监督学习），因为它不需要输入-输出对的标记数据集。相反，它使用函数逼近将当前状态与下一个动作联系起来。它在探索未知领域和利用迄今获得的知识之间取得平衡，以制定一种在长期内最大化奖励的策略。
+
+这种学习范式的一个简单例子是 `Autonomous Driving`（自动驾驶）。既然我们无法知晓驾驶过程中可能发生的每一种路况，我们就无法提供标记数据集。基于路况、交通或天气等外部因素，我们的目标是在不超速、不违章、安全到达目的地且不引发事故的前提下，最小化乘车时间。
+
+`Reinforcement Learning`（强化学习）可能比其他范式更直观，但它也有一些显著的警示：
+
+*   **Data collection（数据收集）** 对于这一范式并不简单；我们必须依赖运行模拟来进行。
+*   **Designing the reward（设计奖励）** 本身就是一个挑战，如果草率行事，可能会产生不可预见的后果。例如，如果没有速度限制、方向等适当约束，以最小化行驶时间作为自动驾驶汽车的奖励可能会非常危险。
+*   `Reinforcement Learning`（强化学习）能高效地最大化长期奖励；然而，算法的即时决策可能不符合直觉。
+*   衡量最坏情况性能可能具有挑战性，因为可能无法以标准形式收集此类场景的数据。
+
+## 2• 深度解析：监督学习技术及其应用
+
+如前所述，`Supervised Learning`（监督学习）技术旨在通过示例进行学习。通常，新的机器学习从业者通过尝试各种 `Supervised Learning`（监督学习）技术来开启他们的旅程。让我们深入探讨 `Supervised Learning`（监督学习）的两种基本技术，即 `Classification`（分类）和 `Regression`（回归）。
+
+### I• 分类
+
+`Classification`（分类）是一种流行的 `Supervised Learning`（监督学习）方法，机器学习将数据映射到训练数据集中定义的 `N` 个标签之一。然后利用这些知识，尽可能准确地对新的未见数据点（称为测试数据集）进行分类。通常，训练数据集中定义的 `N` 个类别相互独立。算法不应将测试数据分类到定义的 `N` 个类别之外。
+
+一个简单的例子是利用身体扫描图像和大小、颜色、生长速度等其他特征，将人体内的肿瘤分类为 `malignant`（恶性）或 `benign`（良性）。这种预测建模技术大致可进一步分类如下：
+
+1.  **Binary Classification（二元分类）**：这些任务要求算法将数据记录分类到两个类别之一，如 `yes`/`no`（是/否）、`malignant`/`benign`（恶性/良性）、`spam`/`not spam`（垃圾/非垃圾）、`sarcastic`/`non-sarcastic`（讽刺/非讽刺）等。
+2.  **Multi-Class Classification（多类分类）**：这些任务训练并期望算法分类到多个可能的类别之一，例如原色：`red`/`blue`/`yellow`（红/蓝/黄），水果：`orange`/`apple`/`peach`/`guava`（橙子/苹果/桃子/番石榴）等。
+
+值得注意的是，为二元分类任务设计的建模技术也可应用于多类分类问题。有一些简单的启发式方法将多类分类问题拆分为多个二元分类任务。两种这样的启发式方法是：
+
+*   **One-Vs-Rest (OVR)**：`OVR` 也称为 One-Vs-All (`OVA`) 方法。这种启发式方法选取一个类别，训练一个模型将该选取的类别与所有剩余类别区分开。我们重复此过程，直到拥有多个模型，它们学会为每个类别分配概率分数。例如，考虑一个将色板分类为 `Red`/`Blue`/`Yellow`/`Green`（红/蓝/黄/绿）之一的任务。我们将训练四个二元分类模型，即 `Model 1`：`Red` vs. (`Blue` or `Yellow` or `Green`)，`Model 2`：`Blue` vs. (`Yellow` or `Green` or `Red`)，`Model 3`：`Yellow` vs. (`Green` or `Red` or `Blue`)，以及 `Model 4`：`Green` vs. (`Red` or `Blue` or `Yellow`)。毫无疑问，当我们有许多类别、大型数据集或模型过于复杂而需多次训练时，这会变得繁琐。
+*   **One-vs-One (OVO)**：这种启发式方法选取不同的类别对，为每一对训练一个二元分类模型，直到我们学会如何为每个类别分配概率分数。使用上面相同的例子，只不过在这种情况下，我们将有六个不同的模型，即 `Model 1`：`Red` vs. `Blue`，`Model 2`：`Red` vs. `Yellow`，`Model 3`：`Red` vs. `Green`，`Model 4`：`Blue` vs. `Yellow`，`Model 5`：`Blue` vs. `Green`，`Model 6`：`Yellow` vs. `Green`。
+
+现在，让我们讨论一些流行的分类技术，专门针对二元分类任务。
+
+#### A• 逻辑回归
+
+`Logistic Regression`（逻辑回归）基于统计对数几率模型，利用先验经验对特定事件的概率进行建模。它是用于二元分类的首选算法，用于建模二元响应变量（即两个结果类别之一）与一组预测变量（即数据特征）之间的关系。在推理阶段，算法计算数据记录与每个类别相关联的概率，并将其分配给发生概率最高的类别。如果两个类别中一个的似然为 `p`，其中 `p` 介于 `0` 和 `1` 之间，则另一个类别的似然为 `1-p`。
+
+逻辑回归算法派上用场的一些常见示例包括：
+
+
+
+* 将传入邮件分类为垃圾邮件或非垃圾邮件：`Spam: 1`，`Not Spam: 0`
+* 将肿瘤分类为恶性或良性：`Malignant: 1`，`Benign: 0`
+* 将交易分类为欺诈或正常：`Fraud: 1`，`Standard: 0`
+
+
+
+
+###### 算法概述
+
+##### 逻辑回归
+
+该算法名称中包含“回归”一词，因为输出值是通过输入变量（即特征）的线性函数得出的，这与线性回归类似（本节后文将详述）。不同之处在于，我们进一步将这个特征的线性函数通过一个 Logit 函数，将其值压缩在 0 到 1 的范围内，表示某个类别发生的概率。算法通过最大化观测到的类别出现的似然性来学习权重或回归方程的系数。
+
+![](img/Image00043.jpg)
+
+**Sigmoid 激活函数**
+
+该技术最显著的优势之一是其易于实现、训练效率高，且模型性能不错。除了实际标签的概率外，我们还能获得用于其他目的的条件概率。然而，作为一种线性模型，当分类边界是非线性时，它的效果不佳。逻辑回归算法也不适用于不平衡类别和包含异常值的数据。因此，在应用该算法之前，有必要充分探索和平衡数据。
+
+##### 决策树
+
+决策树使用流程图般的结构，帮助有效地可视化决策点及其结果。树中的每个节点代表基于某些阈值对特定特征做出的决策，将数据分割成两个或多个同质集合。生成这棵树涉及决定选择哪些特征以及使用什么条件进行分割。此过程重复进行，直到达到预期的停止准则。然后，树的叶子节点可用于进行准确分类。完成后，从根节点到任意叶子节点的整条路径代表不同的分类规则。
+
+决策树的目标是学习在哪些特征上分割并决定相应的阈值。之后，当观察到一条未见过的数据记录（来自测试数据集）时，它会通过树的不同决策点。最终的类别归属取决于未见数据记录所到达的叶子节点相关联的数据点的多数投票。
+
+决策树有用的简单示例：
+- 给定宠物的图片，我们需要将其分类为猫或狗。
+- 基于关于一个人特征的问卷，我们需要将其分类为玩家或非玩家。
+
+![](img/Image00044.jpg)
+
+**尺寸推荐问题中一个简单的决策树示例**
+
+决策树因其强大的可视化特性而直观且易于解释。它们在没有太多高端计算需求的情况下产生不错的分类性能。它们也能有效处理非线性分类边界。决策树已被证明能妥善处理类别不平衡和异常值。
+
+然而，如果在没有适当监督和仔细剪枝的情况下生长，它们倾向于过拟合。此外，这种方法仅产生类别预测，而不产生常用于排序目的的概率分数。尽管如此，决策树分类器用于分类的归纳方法使其成为机器学习和运筹学中战略决策分析的流行工具。
+
+##### K-近邻算法 (KNN)
+
+`k-Nearest Neighbour` 是一种简单且易于实现的监督分类技术。正如谚语“物以类聚”所述，`kNN` 基于邻近性原理工作，假设彼此更近的数据点是相似的。这种分类技术在推理时找到训练数据中最接近未见数据点的 `k` 个数据点，并将其分配给这 `k` 个数据点中大多数共享的类别。
+
+为了定义“接近程度”，我们可以选择任何量化两个数据点邻近度的距离度量。
+- 对于分类变量，可以使用 `Hamming Distance`（汉明距离），它计算两个维度相等的变量在对应位置上不同的位置数量。
+- 对于连续变量，以下是一些标准距离度量：
+  - **欧几里得距离**：计算欧几里得空间中两点之间直线长度的度量。数学上，它是坐标差的平方和的平方根。
+  
+  ![](img/Image00045.jpg)
+  
+  - **曼哈顿距离**：沿直角轴测量的两点之间的距离。数学上，它是坐标差绝对值的和。
+  
+  ![](img/Image00046.jpg)
+  
+  - **闵可夫斯基距离**：可视为向量范数空间中欧几里得距离和曼哈顿距离的推广。`z = 1` 的情况等同于曼哈顿距离，`z = 2` 的情况等同于欧几里得距离。
+  
+  ![](img/Image00047.jpg)
+
+`k-Nearest Neighbor` 是一种非参数方法。它不对训练数据的潜在数据分布做任何假设，即不管其分类边界是线性、二次等。`kNN` 的性能取决于上述的数据表示和距离度量。`k` 的值也起着至关重要的作用。通过实验选择最优值最好，这个过程称为**参数调优**。
+
+为每个数据点计算许多邻居在计算上很昂贵，而邻居太少会使模型非常嘈杂。理想情况下，我们通过交叉验证使用独立于训练集和测试集的数据集来选择 `k` 的值。
+
+`kNN` 的一个优点是其对标签噪声的鲁棒性，因为 `k` 个最近邻影响其决策，从而平均掉噪声（如果有）。`kNN` 没有显式的训练阶段，而是通过迭代测试数据点来计算邻居；因此它被恰当地称为**懒惰算法**。但这一特性导致预测时间较长。
+
+`kNN` 的另一个缺点是无法在不平衡数据上表现良好。在这种情况下，它只会计算靠近多数类的邻居，将少数类作为异常值排除在外。`kNN` 还受维度灾难影响，这是我们之前讨论过的概念。随着数据点维度的增加，`kNN` 需要更多数据才能获得不错的性能。
+
+考虑到这种易于理解的方法的所有优缺点，`kNN` 广泛用于经济预测、数据压缩和遗传学研究。
+
+#### 回归
+
+回归是一种监督学习方法，我们根据输入特征预测真实的输出值。回归技术学习一个函数来建模目标值（连续的）与训练数据特征之间的关系。然后利用这些知识预测未见数据点的输出值。
+
+回归算法有用的一个简单示例是预测出租车车费，价格取决于起点、终点、时长、时间、交通、城市、车型、乘客数量等输入。
+
+让我们讨论一些流行的回归算法。
+
+##### 线性回归
+
+线性回归是最简单的回归技术之一。我们通过在训练数据集上拟合一个线性函数，来建模标量输出（或目标变量，用 `y` 表示）和输入预测变量（称为特征，用 `X` 表示）之间的关系：`y = f(X) = b + mX`。
+
+项 `b` 包含自由度，称为**偏置项**或**截距**。它允许直线在坐标空间中上下移动。线性回归也称为**普通最小二乘回归**，因为模型参数 `b` 和 `m` 的学习方式。我们最小化每个数据点到最佳拟合所有训练数据点的直线的垂直偏差平方和。
+
+此外，学习到的模型参数 `m` 还可以解释目标变量与特征之间关系的强度。这个过程称为**回归分析**，我们也将其作为计算**特征重要性**的方法之一进行了讨论。也就是说，模型参数值较高的特征比数值较低的特征具有更强的预测能力。我们可以安全地移除系数为零的特征，因为它不会影响模型的预测。这个概念常用于不同的**正则化方法**中，这些方法对系数的大值施加压力以减少模型的复杂性。
+
+两种最常见的正则化方法是：
+1. **Lasso 正则化**：此方法不仅关注最小化均方误差，还关注最小化系数绝对值之和。也称为 `L1 Regularization`。
+2. **Ridge 正则化**：除了最小化均方误差外，还最小化系数平方和。也称为 `L2 Regularization`。
+
+线性回归是一个强大的统计模型，在商业中广泛采用，因为它有助于发现客户行为趋势、销售预测、风险分析等。根据用例，我们可能有不同数量的特征或回归方程要求，这引出了以下类型的线性回归：
+
+1. **简单线性回归**：仅包含一个特征的方法。使用线性方程的传统斜截式。数学上表示为：`y = mx + b`。
+2. **多元线性回归**：当我们有多个特征时（通常是这种情况），使用此方法。在这种情况下，我们将有对应特征的多个模型参数或系数。表示为：`y = b + m1*x1 + m2*x2 + … + mn*xn`。
+3. **多项式线性回归**：一种稍复杂的回归，用于有多个特征的情况。目标与输入变量之间的关系建模为 `q` 次多项式，其中 `q` 可以是任意数字。例如：`y = b + m1*x1² + m2*x2⁴ + … + mn*xn^q`。它之所以仍是线性回归，是因为不同特征的值（尽管以多项式形式）是线性组合的。
+
+各种线性回归方法流行的主要原因是易于理解和实现。空间复杂度低，因为训练阶段结束时仅保存系数（也称为**权重**）是我们唯一使用内存的地方。借助上述讨论的正则化技术，线性回归可以很好地执行特征选择任务。这种能力导致维度降低，从而有助于避免过拟合。
+
+选择该算法时，我们应注意线性回归的某些局限性。线性回归假设我们处理的数据遵循**高斯分布**（或**正态分布**），这可能并不总是准确。它还假设特征与目标之间的关系是线性的。此外，由于线性回归试图将数据拟合到一条直线，它容易受噪声影响，且不适用于包含异常值的数据。我们可以通过执行必要的数据转换来缓解其中一些限制，正如上一章所讨论的。
+
+##### 神经网络
+
+神经网络松散地模仿人脑的工作原理。这些受生物学启发的机器学习模型旨在通过解释感官数据来识别模式，就像人脑一样。神经网络由数千个简单的相互连接的处理单元组成，称为**神经元**。通常，这些神经元排列在不同的**层**中，每一层将数据前馈到其他层。此外，每一层对数据应用非线性变换，这使得神经网络能够建模特征与目标变量之间的非线性关系。这些变换使用**激活函数**应用，将神经元的输出归一化到一个范围，通常在 `(-1, 1)` 或 `(0,1)` 之间。激活函数的示例包括 `Sinusoid`、`Gaussian`、`Rectified Linear Unit (ReLU)`、`Exponential Linear Unit (ELU)` 等。一旦到达神经网络的最后一层，变换后的数据负责给出我们预测问题的输出。
+
+![](img/Image00048.jpg)
+
+**典型深度神经网络 (DNN) 架构**
+
+神经网络的学习方面来自称为**权重**的参数，表示不同神经元之间连接的强度。我们随机初始化这些权重，因为一开始知识有限或没有知识。在训练阶段，我们对训练数据中的每个输入进行一次神经网络的完整前向传递。在此传递中，我们将输入数据与相应的权重融合（通常通过乘法），并通过非线性激活函数。此输出进一步传入神经网络，直到到达负责预测的最后一层。
+
+如果预测结果不准确，则基于一种称为**反向传播**的技术调整每个神经元的权重。**反向传播**是一种允许我们将神经网络输出的不准确性有效归因于每个神经元的技术。完成后，我们通过应用迭代优化算法（如 `Gradient Descent`、`AdaGrad`、`Adam` 等）来优化这些权重。
+
+神经网络的主要优势之一是，给定输入特征和目标变量，它们能自行学习复杂的关系。这种学习得益于对数据应用非线性变换。研究一致表明，仅向网络提供更多数据（无论是新数据还是增强的原始数据）都能迅速提高模型性能。然而，除了更多数据，它们还需要强大的资源来训练和调整模型参数，这成为使用该技术的一个挑战。因此，对于可用数据集相对较小的任务，更简单的机器学习算法优于密集型神经网络。此外，随着神经元和互连数量的增加，模型参数有时变得难以解释和理解。
+
+原始类别的神经网络是**浅层**的，即只有输入层和输出层，或很少有一个隐藏层。然而，较新的神经网络复杂且**深层**，包含多个不同大小的隐藏层。深度神经网络的应用在今天被称为**深度学习**。由于神经网络能准确建模非线性过程，它们已在医学诊断、人脸识别、游戏对弈等许多学科中找到应用。
+
+### 深度解析：无监督学习技术及其应用
+
+基于之前的讨论，无监督学习算法在没有任何标签或结果先验知识的情况下推断数据中的模式。这些算法通过提取模式帮助理解数据的结构。在以下章节中，我们将讨论无监督学习的两种基本技术：**聚类**和**关联规则**。
+
+#### 聚类
+
+聚类是最流行的无监督学习技术之一，涉及自动发现数据中的自然分组。这种方法将数据点分组，使同一组（或**簇**）中的对象相似，而不在同一簇中的对象截然不同。相似性和差异性可以基于与每个数据点关联的特征使用某些度量来衡量。这种统计数据分析技术也称为**簇分析**。
+
+聚类在涉及模式识别、信息检索、图像分析的多个领域以及机器学习（主要是特征工程和异常检测）中都有应用。由于簇分析有助于了解更多关于问题领域的信息，它也是一个重要的知识发现工具。
+
+存在不同类型的聚类算法，它们主要根据发现这些相似数据点密集区域（即**簇**）的方式来定义。簇的识别是主观的，可能需要领域经验。通常，聚类是一个迭代过程，我们反复进行评估以更新算法配置，直到获得适当的结果。
+
+让我们快速了解一些可用的标准聚类算法。
+
+##### K-Means 聚类
+
+`k-Means Clustering` 是一种基于质心的聚类算法，旨在将数据点精确划分为 `k` 个簇。这 `k` 个簇的定义使得每个数据点属于具有最近质心（或簇的中心，即簇的均值）的簇。`k-Means Clustering` 倾向于根据特定距离度量最小化簇内方差。类似于我们在 `k-Nearest Neighbours` 技术中讨论的，连续变量的距离度量可以是欧几里得、曼哈顿或闵可夫斯基，而对于分类变量，汉明距离效果最好。
+
+在 `k-Means Clustering` 中，我们首先随机选择 `k` 个不同的数据点作为质心。假设数据集有 `n` 个点，我们根据剩余 `n-k` 个数据点与质心之间的距离决定它们的归属，并将它们分配给最近的一个。一旦分配了归属，我们通过计算相关点的均值来计算新的质心，并重复簇分配过程。此过程重复直到质心稳定，分配不再发生太大变化。
+
+`k-Means Clustering` 只是一个 NP-hard 问题的启发式算法，不保证全局最优解。此外，由于该算法从随机选择质心开始，不同的运行可能产生不同的结果，从而破坏算法的鲁棒性。无论如何，`k-Means Clustering` 的准确性和速度取决于数据表示、距离度量和 `k` 的值。通过实验选择最优 `k` 值最好。
+
+`k-Means Clustering` 算法易于理解和实现。通常执行速度非常快，应用于计算机视觉、词汇学习、图像分割和天文学。该技术的衍生版是 `k-Medians Clustering`，它使用簇的中位数作为质心而不是均值。由于中位数统计指标，该技术对异常值更鲁棒，但对于大规模数据集执行较慢，因为寻找中位数需要排序。
+
+##### 高斯混合模型 (GMMs)
+
+虽然 `k-Means Clustering` 是对一组数据点进行分组的最简单方法之一，但它使用基于均值的朴素方法分配簇的质心。如果两个簇的均值非常接近，`k-Means Clustering` 就难以处理，并在两者之间不断震荡，从未达到稳定。当簇的形状不是圆形时，`k-Means Clustering` 方法也会失效。因此，为了克服 `k-Means Clustering` 方法的缺点，基于**期望最大化 (EM)** 技术的**高斯混合模型 (GMMs)** 聚类方法被开发出来。
+
+`GMMs` 聚类提供比 `k-Means Clustering` 更高的灵活性。它假设底层数据是由高斯分布的混合生成的，每个分布对应一个特定的簇。这一假设用均值和标准差来表征每个簇。因此，如果我们在简单的二维坐标空间中考虑这一点，簇可以是椭圆形的，而不仅仅是圆形的。除了均值和标准差，每个簇还有一个权重参数，决定相应的高斯分布如何与其他分布混合。
+
+上述假设也意味着 `GMMs` 使用**软聚类**方法将点分配给不同的簇。这一特性导致每个数据点的混合归属，即一个数据点可以以不同的概率属于不同的簇。最初，这种归属程度是未知的（或**潜在**的），是计算模型参数时需要学习的另一个要素。
+
+我们使用一种称为**期望最大化 (EM)** 的技术计算各个簇的参数。广义上，`EM` 算法包含以下步骤：
+1. **初始化模型参数**：即每个簇的均值、标准差和权重，随机初始化，因为我们对分布了解有限或一无所知。
+2. **E-Step**：对于每个数据点，使用当前模型参数，估计其对每个簇的归属程度。
+3. **M-Step**：基于上述 `E-Step` 中估计的新簇分配，更新模型参数。
+4. **重复上述 `E-Step` 和 `M-Step`**，直到达到收敛。
+
+总结来说，我们在每个 `E-Step` 中不断改进每个数据点对每个簇的归属程度，并在 `M-Step` 中利用此估计计算 `GMM` 的参数，以最大化观测数据的似然性。
+
+出于计算原因，如果特征空间的维度高，`GMMs` 通常无法工作。它们还要求对算法停止前必须尝试的混合模型数量有初步了解。无论如何，`GMMs` 作为一种强大的聚类技术出现，比传统聚类方法更有效。作为高效的数据分析工具，`GMMs` 已广泛应用于信号和信息处理。
+
+##### 层次聚类
+
+层次聚类是一种寻求构建簇的类金字塔结构的技术，适用于分类学等层次数据。层次聚类的策略通常分为以下两类：
+
+**分裂层次聚类**
+这是一种自顶向下的方法，从一个包含所有数据点的巨大簇开始。然后我们不断将簇分裂成两个簇（通常基于贪心启发式），直到每个数据点成为自己的簇。
+
+**凝聚层次聚类**
+这是一种自底向上的方法，每个数据点开始作为一个单独的簇。然后我们根据所选距离度量，成对合并最近的簇，随着层级向上移动。当我们达到一个包含所有数据点的巨大簇时，此过程停止。
+
+层次聚类的结果是**树状图**，树的不同层级代表簇。例如，在凝聚层次聚类中，有一个包含所有数据点的根节点，底部的叶子节点是作为簇的数据点。
+
+层次聚类不要求我们指定所需的簇的数量；相反，我们可以在感觉达到所需簇数量时随时停止簇的聚合（或分裂）。这种方法对我们可能选择的距离度量不敏感，这与其他聚类算法不同。然而，这些算法计算密集且存储需求大。尽管有缺点，层次聚类是一种有效的分割方式，用于追踪病毒爆发和绘制进化图等有趣案例。
+
+![](img/Image00049.jpg)
+
+**两种层次聚类方法的树状图示例**
+
+#### 关联规则
+
+另一种无监督寻找模式的有趣方法涉及在大量未标记数据集中发现不同属性之间隐藏的关系。这种基于规则的技术旨在根据其有趣性和显著性的明确定义度量，识别数据集中的稳健关系。例如，通过分析客户在 `ModCloth` 上的购物行为，我们可以确定一组特定产品，客户极有可能一起购买。值得理解的是，这种关联揭示了**共现**的概率，并不意味着因果关系。交易顺序或单笔交易内产品购买顺序在确定规则时不起作用，这使得该技术与**序列挖掘**有显著不同。
+
+这种关联信息可用于通过战略性摆放差异化产品来挖掘客户价值。它还有助于其他营销活动，如定价和促销。除了上述**市场篮子分析**示例外，关联规则学习还用于安全系统中的恶意入侵检测、制造业中的连续流检测以及生物信息学中的医学诊断。
+
+##### 关联规则表示
+
+数据集中各属性之间的关系（如上所述）表示为关联规则。关联规则定义为形式为 `X => Y` 的蕴含表达式，其中 `X` 和 `Y` 是不相交的集合。左侧的集合称为**前件**。右侧的集合称为**后件**或**结果**。
+
+市场篮子分析中关联规则的一个简单示例可能是 `{beanie, boots, gloves} => {sweater}`，表明如果客户的购物车有 `beanie`、`boots` 和 `gloves`，他们也倾向于购买 `sweater`。这个小例子只是我们可以从 `ModCloth` 广泛的交易记录中发现的许多更复杂的关联规则之一。
+
+为了提出强有力的规则，我们需要使用以下度量从可能性中选择顶级规则：
+
+1. **Support**
+
+
+
+
+
+##### 支持度、置信度、提升度和确信度
+
+###### 支持度
+
+支持度衡量属性集（也称为项集，此处为 `X` 或 `Y`）在整个数据集中的出现频率。用数学术语表示，如果项集 `X` 在总共 `T` 笔交易中的 `t` 笔中出现，则支持度可表示为：
+
+```
+support(X) = t / T
+```
+
+###### 置信度
+
+置信度衡量 `X => Y` 成立的可能性，即在 `X` 出现的条件下 `Y` 出现的概率。相对于交易集 `T`，置信度值 `X => Y` 是包含 `X` 的交易中同时也包含 `Y` 的比例。用数学公式表示为：
+
+```
+confidence(X => Y) = support(X ∪ Y) / support(X)
+```
+
+###### 提升度
+
+规则 (`X => Y`) 的观测置信度与其后件在数据集中的支持度之比称为 **提升度**。我们也可以将提升度理解为：在已知 `X` 出现的情况下 `Y` 出现的概率，相对于在不知 `X` 是否出现的情况下 `Y` 出现的可能性，其上升的程度。提升度值越大意味着关联规则越强。用数学公式表示为：
+
+```
+lift(X => Y) = confidence(X => Y) / support(Y)
+```
+
+###### 确信度
+
+确信度量化了假设 `X` 和 `Y` 独立时 `X` 出现而 `Y` 不出现的预期频率（即错误预测）与观测到的错误预测频率之比。较高的确信度值意味着后件高度依赖于前件。确信度值越大意味着关联规则越强。用数学公式表示为：
+
+```
+conviction(X => Y) = (1 - support(Y)) / (1 - confidence(X => Y))
+```
+
+通常，关联规则的强度是通过支持度和置信度值来衡量的。然而，其他不太常用的度量指标，如 `leverage`（杠杆值/增益）、`collective strength`（集体强度）和 `all-confidence`（全置信度），也可用于量化有趣度，并可根据具体用例应用。
+
+##### 挖掘关联规则
+
+如前所述，我们从给定数据中创建一组广泛的关联规则可能性，然后根据上述定义的指标对其进行排序，以筛选出稳健的规则。生成初始规则集并选出顶级规则的过程称为 **挖掘关联规则**。关联规则生成通常是一个两步过程：
+
+1.  **频繁项集发现**
+2.  **规则生成**
+
+通常，筛选规则的步骤相对简单，而从大型数据集中高效创建项集并选择频繁项集则较为复杂。让我们详细讨论这一过程以便更好地理解。
+
+###### 频繁项集发现
+
+挖掘关联规则的第一步涉及创建所有频繁出现的项集，并将它们划分以形成相应的前件和后件，这一过程称为 **频繁项集发现**。假设数据集中有 `n` 个项，由于项集大小无限制，暴力法将会找出所有 `2^n - 1` 种组合。该过程还将涉及计算所有可能组合的支持度值。然后，我们选择支持度值高于最小阈值的项集作为 **频繁项集**。
+
+有许多从幂集中高效搜索所需项集的方法，它们利用了支持度的 **下闭包性质**。该性质确保对于一个频繁项集，其所有子集也是频繁的。因此，非频繁项集不能是频繁项集的子集。例如，这一性质意味着购买 `{beanie, boots}`（帽子，靴子）的交易频率大于或等于 `{beanie, boots, gloves}`（帽子，靴子，手套），即通过移除一个（或多个）项从项集获得的子集的支持度值总是大于或等于原项集。该性质也称为 **反单调性**，并被 `Apriori Algorithm`（先验算法）和 `Equivalence Class Transformation (ECLAT) Algorithm`（等价类变换算法）等各种算法所利用。
+
+####### Apriori 算法
+
+`Apriori Algorithm` 是用于频繁项集挖掘的最流行算法之一。它使用 **广度优先搜索 (BFS)** 策略来计算项集的 `Support` 值。然后利用上述定义的支持度下闭包性质生成候选项集。该算法涉及以下步骤：
+
+1.  确定支持度值的阈值；我们可以通过实验或根据需求目测来确定。该阈值，即 `minimum_support`（最小支持度），将有助于剪枝支持度值较低的项集。
+2.  生成所有仅包含单个项且支持度值大于或等于阈值的项集。
+3.  利用上一步选出的项的组合生成大小为二的项集。然后 **剪枝** 所有支持度值低于阈值的项集。
+4.  继续这一过程，基于上一步的结果创建大小逐步增加的项集，对其进行剪枝，以此类推，直到达到旨在构建大小为 `n` 的项集的步骤。
+
+基于支持度的反单调性质，每一步的剪枝都会显著减少搜索空间。随着可能项的数量 (`n`) 增加，该算法在计算上变得更加高效。这种比例也取决于 `minimum_support` 值，该值完全取决于具体用例。然而，`Apriori Algorithm` 也有其局限性，因为它在每一步都需要对数据集进行多次扫描，因此具有较高的时间和空间复杂度。
+
+###### 规则生成
+
+一旦发现了频繁项集，识别关联规则就是一个相对更直接的任务。规则是通过以二元方式划分频繁项集来形成的。例如，如果 `{beanie, boots, gloves, sweater}`（帽子，靴子，手套，毛衣）是一个频繁项集，则可能的规则包括：
+
+*   `{beanie, boots, gloves} => {sweater}`
+*   `{beanie, boots, sweater} => {gloves}`
+*   `{beanie, gloves, sweater} => {boots}`
+*   `{boots, gloves, sweater} => {beanie}`
+*   `{beanie, boots} => {gloves, sweater}`
+*   `{beanie, gloves} => {boots, sweater}`
+*   `{beanie, sweater} => {boots, gloves}`
+*   `{boots, gloves} => {beanie, sweater}`
+*   `{boots, sweater} => {beanie, gloves}`
+*   `{gloves, sweater} => {beanie, boots}`
+*   `{beanie} => {boots, gloves, sweater}`
+*   `{boots} => {beanie, gloves, sweater}`
+*   `{gloves} => {beanie, boots, sweater}`
+*   `{sweater} => {beanie, boots, gloves}`
+
+在所有可能性中，我们需要选出能稳健表达关系的关联规则。我们可以通过选择置信度值高于确定阈值的关联规则来实现。基于置信度的反单调性质，源自同一项集且前件规模较大的规则，其置信度值高于后件规模较大的规则。原因在于随着前件规模增加，支持度值降低，而置信度升高。简单来说：
+
+```
+confidence({beanie,boots,gloves}=>{sweater}) ≥ confidence({boots,gloves}=>{sweater,beanie}) ≥ confidence({beanie}=>{sweater,boots,gloves})
+```
+
+利用上述性质，我们可以限制生成的规则数量，并按照以下步骤仅选取所需的规则：
+
+1.  确定置信度值的阈值；我们可以通过实验或根据需求目测来确定。该阈值，即 `minimum_confidence`（最小置信度），将用于选择置信度值较高的规则。
+2.  从一个频繁项集开始，我们将形成仅包含单个后件的规则，并移除置信度值低于阈值的规则。
+3.  利用上一步的规则，我们将通过将后件数量增加一来形成新规则，并应用阈值丢弃不满意的规则。
+4.  我们重复这些步骤，直到尝试了多种后件组合，且前件数量为一。
+
+
+
+
+
+## 致谢
+
+2020 年，世界见证了前所未有的时代，尤其是全球大流行、人类悲剧和经济动荡接踵而至。这一连串不幸事件让地球人在整整一年，甚至更长的时间里，都处于持续的恐惧、担忧、压力和不确定性之中。失去了户外活动和与他人面对面交流的所有特权后，我们突然拥有了大量空闲时间。就在那时，我们决定将与机器学习中数据使用相关的想法、知识和经验汇集成书。写书确实在我们俩的“愿望清单”上，只是从未付诸行动。因此，能借此机会共同策划一本我们都充满热情的主题的书，是那一年难得的慰藉，我们对此永怀感激。我们挚爱的家人灌输给我们的纪律和勤奋的价值观被证明是值得的，尤其是在我们独立完成写书并与世界分享的这段旅程中。我们衷心感谢他们给予的巨大爱意、坚定不移的支持和坚定的鼓励，让我们追逐梦想。本书的内容源于我们在加州大学圣地亚哥分校的时光，当时我们在那里攻读计算机科学研究生学位，专攻机器学习和人工智能。值得注意的是，书中展示的技能得益于与 Julian McAuley 博士、Mengting Wan 博士和 Ndapa Nakashole 博士的合作研究，因为正是在那段时间收集了书中提到的数据集。向师长和同门研究生致敬，感谢与我们进行过有意义讨论并在研究生阶段一直支持我们的所有人。在写下这些文字时，我们也不想忘记彼此。对我们而言，彼此都是力量的支柱，并对这本书充满信心。我们都相信有一种强大的力量指引着我们每个人走向最终的归宿。这一壮举因我们在世界上建立的每一种联系和关系而得以支撑，这些关系赋予了我们一定程度的知识。为此，衷心感谢每一位与我们互动、学习、共事、共同成长的人。这本书献给你们！
+
+Jigyasa Grover & Rishabh Misra
+
+## 作者简介
+
+### JIGYASA GROVER
+
+Jigyasa Grover 是一名机器学习工程师，现就职于 Twitter, Inc.。她拥有丰富的经验，曾短暂就职于 Facebook, Inc.、加拿大国家研究委员会和法国研究与发展学院，涉及数据科学、数学建模和软件工程等领域。她毕业于加州大学圣地亚哥分校，获得计算机科学硕士学位，专攻人工智能方向，目前正将其过往经验和知识应用于在线广告预测和排序领域的应用机器学习中。她是红帽“开源领域女性”学术奖得主和 Google Summer of Code 校友，也是一位热衷于开源贡献的开发者。她曾担任 Women Who Code 总监和 Women Techmakers 负责人多年，致力于缩小科技领域的性别差距。在她建立强大的女孩和男孩社区的探索中，秉持“成就他人，成就自我”的信念，她在各种全球性项目中指导有抱负的开发者和机器学习爱好者。她还发表过许多国际会议主题演讲、技术演讲、参与小组讨论、举办研讨会，并撰写过博客和播客。除了技术事业，她喜欢探索新地方、与亲朋好友聚会，最近还沉迷于烘焙。您可以访问 `jigyasa-grover.github.io` 或在 Twitter 上关注她（`@jigyasa_grover`）。
+
+### RISHABH MISRA
+
+Rishabh Misra 是一名机器学习工程师，现就职于 Twitter, Inc.。他在印度理工学院马德拉斯分校的研究实习期间，萌发了利用机器学习识别和解决新颖且实用问题的热情，并在加州大学圣地亚哥分校攻读计算机科学硕士期间进一步探索了这一领域。他将在 Amazon 和 Arcesium（D.E. Shaw 旗下公司）设计大规模系统的过往工程经验，与应用机器学习的研究经验相结合，开发分布式机器学习相关性系统。他的探索促成了多篇研究论文在 RecSys、ACL 和 WSDM 等极具竞争力的机器学习会议上发表。作为其研究的一部分收集的数据集（也用于本书）深受机器学习社区欢迎。Kaggle 最近将他评为前 20 名数据集贡献者之一，Deeplearning.ai 在 Coursera 上的“TensorFlow 自然语言处理”课程使用了他的讽刺检测数据集进行教学。闲暇时，他喜欢看科幻剧、玩游戏和陪伴家人。他目前居住在加利福尼亚州旧金山，您可以访问 `rishabhmisra.github.io` 或在 Twitter 上关注他（`@rishabh_misra_`）。
+
+## 反馈是礼物
+
+### 留下评价
+
+本书的编写倾注了大量深思熟虑的努力。我们非常期待您的意见。请与我们和潜在读者分享您的想法，特别是在您用来获取本书的平台上。如果您对本书内容有任何其他问题，请随时通过 Twitter 或 Instagram 上的 `@dataforml` 联系我们。
+

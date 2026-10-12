@@ -1,0 +1,99 @@
+
+## HTML 文档示例
+
+```html
+<html>
+<head><title>Humpty Dumpty</title></head>
+<body>
+<p class="title"><b>Humpty Dumpty</b></p>
+<p class="lyrics"> Humpty Dumpty sat on a <a href="http://example.com/wall" class="noun" id="link1">wall</a>, Humpty Dumpty had a great <a href="http://example.com/fall" class="verb" id="link2">fall</a>. All the king’s <a href="http://example.com/horses" class="horses" id="link3">horses</a> and all the king’s men, Couldn’t put Humpty together again. </p>
+<p class="lyrics">......</p>
+......
+</body>
+</html>
+```
+
+## Beautiful Soup 解析演示
+
+运行上述 HTML 文档通过 `BeautifulSoup` 会得到一个 `BeautifulSoup` 对象，它将文档表示为嵌套的数据结构，如下所示：
+
+```python
+from bs4 import BeautifulSoup
+
+soup = BeautifulSoup(html_doc, 'lxml')
+print(soup.prettify())
+```
+
+输出结果：
+
+```html
+<html>
+ <head>
+  <title>
+   Humpty Dumpty
+  </title>
+ </head>
+ <body>
+  <p class="title">
+   <b>
+    Humpty Dumpty
+   </b>
+  </p>
+  <p class="lyrics">
+   Humpty Dumpty sat on a
+   <a href="http://example.com/wall" class="noun" id="link1">
+    wall
+   </a>
+   ,Humpty Dumpty had a great
+   <a href="http://example.com/fall" class="verb" id="link2">
+    fall
+   </a>
+   . All the king’s
+   <a href="http://example.com/horses" class="noun" id="link3">
+    horses
+   </a>
+   and all the king’s men, Couldn’t put Humpty together again.
+  </p>
+  <p class="lyrics">
+   ......
+  </p>
+  ......
+ </body>
+</html>
+```
+
+请仔细观察构造函数 `BeautifulSoup(html_doc, 'lxml')`。其中 `'lxml'` 是一个 HTML 解析器，它在解析时比较宽容，且运行速度比其他类型的解析器快得多。其他一些解析器包括：
+
+- **lxml 的 XML 解析器**：`BeautifulSoup(markup, "lxml-xml")` 或 `BeautifulSoup(markup, "xml")`
+
+解析完成并获得 `BeautifulSoup` 对象后，浏览数据结构变得非常轻松，示例如下：
+
+```python
+soup.title
+# <title>Humpty Dumpty</title>
+
+soup.title.name
+# u'title'
+
+soup.title.string
+# u'Humpty Dumpty'
+
+soup.title.parent.name
+# u'head'
+
+soup.p
+# <p class="title"><b>Humpty Dumpty</b></p>
+
+soup.p['class']
+# u'title'
+
+soup.a
+# <a href="http://example.com/wall" class="noun" id="link1">wall</a>
+
+soup.find_all('a')
+# [<a href="http://example.com/wall" class="noun" id="link1">wall</a>,
+#  <a href="http://example.com/fall" class="verb" id="link2">fall</a>,
+#  <a href="http://example.com/horses" class="noun" id="link3">horses</a>]
+
+soup.find(id="link3")
+```

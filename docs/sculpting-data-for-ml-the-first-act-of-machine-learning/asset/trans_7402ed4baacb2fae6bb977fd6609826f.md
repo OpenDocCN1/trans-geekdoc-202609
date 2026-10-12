@@ -1,0 +1,185 @@
+
+
+## 网站结构分析与 XPath 变化
+
+密切关注网站结构，我们会发现：点击 **NEXT** 按钮进入第一页之后的评论页时，**PREVIOUS** 按钮会出现（而在着陆评论页是缺失的）。这意味着 **PREVIOUS** 按钮的引入改变了 **NEXT** 按钮的 XPath。
+
+![产品页面上 PREVIOUS 和 NEXT 导航按钮的快照](Image00021.jpg)
+
+重新检查元素并提取相应的 XPath，发现从第二页开始 XPath 发生变化，导致 `Selenium` 脚本需做如下调整：
+
+```python
+browser.execute_script(
+    "arguments[0].click();",
+    browser.find_element_by_xpath(
+        '//*[@id="pr-review-display"]/footer/div/aside/button[2]'
+    )
+)
+```
+
+## 更新自动化脚本
+
+综合上述发现，更新之前的脚本以实现自动化流程。在内容提取前遍历产品的所有评论页。
+
+```python
+# Repeat until we run out of review pages
+while True:
+    # Get the webpage content
+    content = browser.page_source
+    soup = BeautifulSoup(content, "lxml")
+
+    ......
+    ......
+
+    # Mimic the click of NEXT button after appending review_metadata
+    # to scraped_data to jump to the next page (if available)
+    # else break the infinite loop introduced above.
+    ......
+
+    scraped_data.extend(review_metadata)
+
+    # If current page is the initial one, it contains only NEXT button
+    if init == 0:
+        try:
+            init = 1
+            # Execute click on NEXT by utilizing the XPath of NEXT
+            browser.execute_script(
+                "arguments[0].click();",
+                browser.find_element_by_xpath(
+                    '//*[@id="pr-review-display"]/footer/div/aside/button'
+                )
+            )
+        except NoSuchElementException:
+            # No NEXT button present, less than 10 reviews
+            break
+    else:
+        try:
+            browser.execute_script(
+                "arguments[0].click();",
+                browser.find_element_by_xpath(
+                    '//*[@id="pr-review-display"]/footer/div/aside/button[2]'
+                )
+            )
+        except NoSuchElementException:
+            # No NEXT button, no more pages left
+            break
+```
+
+`NoSuchElementException` 广泛用于在选择器未返回 `WebElement` 时抛出异常。我们可以按如下方式导入该 `Selenium` 异常：
+
+```python
+from selenium.common.exceptions import NoSuchElementException
+```
+
+至此，脚本已完全准备好从顶级类别的产品中跨多页提取所有评论。在理想世界中，这将是结束。然而，在当前形式下运行脚本时，可能会遇到一些干扰数据收集过程的错误。下一节将帮助我们优雅地处理这些错误。
+
+## V· 错误处理
+
+我们需要学会识别故障点，尤其是希望脚本平稳运行时。然而，正如生活中大多数情况一样，我们不知道自己不知道什么！开始错误处理流程，首先对脚本进行**空跑**。我们将识别潜在故障点并相应更新脚本。以下描述了我们在试运行中遇到的一些实例及处理方式。
+
+### 1. 无效 URL
+
+尝试从网页获取产品详情时，发现 URL 无效。潜在原因可能是网站维护不善或近期更新，导致新旧 URL 不再兼容。我们使用 `Selenium` 的 `WebDriverException` 处理此情况，当所需会话不存在或格式无效时会抛出错误。
+
+```python
+from selenium.common.exceptions import WebDriverException
+
+......
+......
+
+# Open the URL in browser
+try:
+    browser.get(url)
+except WebDriverException:
+    # If the extracted URL is invalid
+    print('invalid url', iterr)
+    continue
+
+......
+......
+```
+
+### 2. 评论元数据缺失
+
+有时提取评论元数据时其不存在，导致整个脚本失败。我们通过在提取数据前的多处添加有效性检查来应对。
+
+```python
+review_metadata_elements = [
+    review_metadata_raw[i].find_all(
+        "dl", {"class", "pr-rd-def-list"}
+    )
+    if review_metadata_raw[i] is not None
+    else None
+    for i in range(len(review_metadata_raw))
+]
+
+review_metadata = []
+for element in review_metadata_elements:
+    if element is None:
+        review_metadata.append(None)
+        continue
+    review_metadata.append([
+        (
+            element[i].find("dt").text.lower(),
+            element[i].find("dd").text.lower()
+        ) for i in range(len(element))
+    ])
+```
+
+### 3. 页面加载延迟导致内容为空
+
+有时尽管页面包含所有信息，提取的内容却为 `null`。这主要是因为网站加载内容需要时间，而提取代码已提前运行。我们引入睡眠时间，让网页加载完成后再开始提取。
+
+```python
+browser.get(url)
+time.sleep(4)
+content = browser.page_source
+soup = BeautifulSoup(content, "lxml")
+```
+
+### 4. 进度丢失与断点续传
+
+认为脚本万无一失时，端到端运行不同案例仍遇到问题：断网、笔记本电量耗尽等。多种场景可能导致进度丢失。记录进程中断时的迭代次数，有助于从中断点恢复而非重头开始。例如，可按如下方式保存 `NumPy` 数组：
+
+```python
+np.save('./scraped_data_tops.npy', scraped_data)
+```
+
+## VI· 请求速率限制
+
+简单来说，网站的请求速率是指单位时间内其能处理并返回有效响应而不超载的次数。我们必须通过合理控制请求数量来尊重网站的速率限制。失控的行为可能拖垮网站。此外，许多网站有故障保护设计，会自动屏蔽发送异常高流量的 IP。为避免被屏蔽或干扰正常流量，两次网页加载请求之间必须有不可避免的延迟。
+
+例如，每次模拟点击 **NEXT** 按钮访问评论页时，都在发起加载请求。因此需在两个动作点之间引入等待时间，具体做法如下：
+
+```python
+# If the current page is the initial one, it contains only NEXT button (PREVIOUS is missing)
+if init == 0:
+    try:
+        init = 1
+        browser.execute_script(
+            "arguments[0].click();",
+            browser.find_element_by_xpath(
+                '//*[@id="pr-review-display"]/footer/div/aside/button'
+            )
+        )
+        time.sleep(10 + random.randint(0, 5))
+    except NoSuchElementException:
+        # No NEXT button present, that is less than 10 reviews
+        time.sleep(15 + random.randint(0, 10))
+        break
+else:
+    try:
+        # Execute click on NEXT by utilizing the XPath of NEXT
+        # XPath of NEXT is different here since PREVIOUS is also present
+        browser.execute_script(
+            "arguments[0].click();",
+            browser.find_element_by_xpath(
+                '//*[@id="pr-review-display"]/footer/div/aside/button[2]'
+            )
+        )
+        time.sleep(10 + random.randint(0, 5))
+    except NoSuchElementException:
+        # No NEXT button present, that is less than 10 reviews
+        time.sleep(15 + random.randint(0, 10))
+```
+
