@@ -1,0 +1,237 @@
+
+#### 控制器中的删除逻辑
+
+这里我们只需对要根据路由模型绑定注入的模型进行类型提示，并调用返回的模型对象上的 `delete()` 方法，这将删除 `inventories` 表中对应的行。
+
+最后我们重定向到包含所有库存的页面并显示通知消息。
+
+```php
+public function drop(Inventory $inventory)
+{
+    $inventory->delete();
+
+    return redirect()->route('inventory.all')
+        ->with('message','New inventory successfully added!');
+}
+```
+
+### 显示通知消息
+
+在编辑器中打开 `resources/views/view-inventories.blade.php`，在开始的 `<table>` 标签上方放置下面的代码片段，以显示从控制器闪存到会话中的通知消息。
+
+```blade
+@if(session()->has('message'))
+    <div class="alert alert-info">
+        {{session('message')}} New inventory successfully added!
+    </div>
+@endif
+```
+
+### 测试功能
+
+在浏览器中刷新应用，如果已登出则重新登录，点击“新建库存”菜单然后提交空表单。你应该会被重定向回带有输入字段下错误提示的页面。
+
+![表单验证错误](img/image00201.jpeg)
+
+现在填写表单并点击“创建新库存”按钮。你应该会被重定向到列出库存的页面并显示成功通知消息。
+
+![创建成功提示](img/image00202.jpeg)
+
+继续创建任意数量的库存并删除一些。你应该会对我们取得的进展印象深刻。在继续“回收站”功能之前，让我们快速更新仪表盘以反映实际创建的库存数量。
+
+### 更新 AppController
+
+更新 `AppController` 类以匹配下面的代码：
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Inventory;
+use Illuminate\Http\Request;
+
+class AppController extends Controller
+{
+    public function dashboard(Inventory $inventory)
+    {
+        $count = $inventory->count();
+        return view('dashboard', compact('count'));
+    }
+}
+```
+
+以及 `dashboard.blade.php` 文件的第 11 行。
+
+## 构建回收站功能
+
+如果你在首选的数据库管理器（如 phpMyAdmin、MySQL Workbench 或 SqlePro）中打开数据库，你会注意到从前端删除的库存实际上仍然存在，只是 `deleted_at` 列不为 null。这是我们之前讨论的 Laravel 软删除的功能。
+
+让我们创建一个页面来列出所有已删除的库存，并提供恢复它们的操作。听起来很酷对吧？我们可以使用列表库存页面相同的内容，只需稍微编辑操作按钮：一个用于恢复，另一个用于永久删除。但首先，让我们添加额外的路由和控制器方法。
+
+在删除路由后添加以下内容：
+
+```php
+$route->get('/inventories/{inventory}/restore', 'InventoryController@restoreItem')->name('inventory.restore');
+$route->delete('/inventories/{inventory}/purge', 'InventoryController@purgeItem')->name('inventory.purge');
+$route->get('/inventories/trash', 'InventoryController@viewTrash')->name('inventory.trash');
+```
+
+接下来，将这些路由的方法添加到 `InventoryController` 中。
+
+```php
+public function viewTrash(Inventory $inventory)
+{
+    $inventories = $inventory->onlyTrashed()->get();
+    return view('trash', compact('inventories'));
+}
+
+public function restoreItem($inventory)
+{
+    if ($item = $this->inventory->withTrashed()->find($inventory)) {
+        $item->restore();
+    }
+    return redirect()->route('inventory.all')->with('message', 'Inventory successfully restored!');
+}
+
+public function purgeItem($inventory)
+{
+    if ($item = $this->inventory->withTrashed()->find($inventory)) {
+        $item->forceDelete();
+    }
+    return redirect()->route('inventory.all')->with('message', 'Inventory permanently deleted!');
+}
+```
+
+在恢复和永久删除项目的情况下，我们无法进行路由模型绑定，因为 Laravel 认为此模型已从数据库中删除，因此它将始终返回未找到异常。换句话说，我们只需捕获包含库存 ID 的片段，然后使用 `withTrashed()` 方法强制软删除的模型出现在结果中。
+
+在 `resources/views` 目录下创建一个新文件 `trash.blade.php`，并粘贴以下代码。
+
+```blade
+@extends('layout.master')
+
+@section('page-title')
+    Trash
+@endsection
+
+@section('content')
+    <div class="container-fluid">
+        <div class="col-12 col-md-8 mt-4">
+            @if(session()->has('message'))
+                <div class="alert alert-info">
+                    {{ session('message') }}
+                </div>
+            @endif
+
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($inventories as $key => $inventory)
+                        <tr>
+                            <th scope="row">{{ $key + 1 }}</th>
+                            <td>{{ $inventory->item }}</td>
+                            <td>{{ $inventory->quantity }}</td>
+                            <td>
+                                <a href="{{ route('inventory.restore', $inventory->id) }}" class="btn btn-outline-primary btn-sm">Restore</a>
+                                <a href="#" class="btn btn-outline-danger btn-sm" onclick='event.preventDefault(); document.getElementById("delete-inventory-form-{{$key}}").submit();'>
+                                    Purge
+                                    <form id="delete-inventory-form-{{$key}}" action="{{ route('inventory.purge', $inventory->id) }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                    </form>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+@endsection
+```
+
+现在点击侧边栏上的 Trash 菜单以查看回收站中的项目，尝试永久删除或恢复项目，看看此功能如何工作。
+
+## 编辑库存
+
+编辑库存就像创建它一样简单。首先，我们需要创建一个用于编辑表单的 GET 路由（采用路由模型绑定实现），以及一个用于表单提交的 POST 路由。我们仍将使用 `StoreInventory` 请求验证类，因为适用相同的验证规则；当然，如果你想尝试添加新的验证规则，也可以创建一个新类。
+
+我们将 `new-inventory.blade.php` 页面的内容复制到 `app/resources/edit-inventory.blade.php` 文件中，然后进行一些调整。让我们快速完成吧！
+
+```php
+$route->get('/inventories/{inventory}/edit', 'InventoryController@editInventory')->name('inventory.edit');
+$route->put('/inventories/{inventory}/edit', 'InventoryController@updateInventory')->name('inventory.update');
+```
+
+打开 `view-inventories.blade.php` 第 31 行，更新编辑操作的 href：
+
+```blade
+<a href="{{ route('inventory.edit', $inventory->id) }}" class="btn btn-outline-primary btn-sm">Edit</a>
+```
+
+将这些方法添加到你的 `InventoryController` 中，用于编辑和更新操作。
+
+```php
+public function editInventory(Inventory $inventory)
+{
+    return view('edit-inventory', compact('inventory'));
+}
+
+/**
+ * @param StoreInventory $storeInventory
+ * @param Inventory $inventory
+ * @return \Illuminate\Http\RedirectResponse
+ */
+public function updateInventory(StoreInventory $storeInventory, Inventory $inventory)
+{
+    $inventory->update($storeInventory->only('item', 'quantity'));
+    return redirect()->route('inventory.all')->with('message', 'Inventory successfully updated!');
+}
+```
+
+最后编辑你的 `edit-inventory.blade.php` 以匹配下方内容。
+
+```blade
+@extends('layout.master')
+
+@section('page-title')
+    Edit Inventory
+@endsection
+
+@section('content')
+    <div class="container-fluid">
+        <div class="col-12 col-md-8 mt-4">
+            <form method="POST" action="{{ route('inventory.update', $inventory->id) }}">
+                {{ csrf_field() }}
+                {{ method_field('PUT') }}
+                <div class="form-group">
+                    <label for="item">Item</label>
+                    <input type="text" class="form-control" value="{{ old('item', $inventory->item) }}" id="item" name="item" placeholder='e.g 32" Television'>
+                    @if ($errors->has('item'))
+                        <small class="form-text text-danger">
+                            {{ $errors->first('item') }}
+                        </small>
+                    @endif
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="text" class="form-control" value="{{ old('item', $inventory->quantity) }}" id="quantity" name="quantity" placeholder="e.g 50">
+                    @if ($errors->has('quantity'))
+                        <small class="form-text text-danger">
+                            {{ $errors->first('quantity') }}
+                        </small>
+                    @endif
+                </div>
+                <button type="submit" class="btn btn-primary">Update Inventory</button>
+            </form>
+        </div>
+    </div>
+@endsection
+```
