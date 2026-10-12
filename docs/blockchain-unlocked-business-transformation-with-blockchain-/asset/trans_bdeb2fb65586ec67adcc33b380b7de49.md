@@ -1,0 +1,63 @@
+
+# 区块链在保险行业的采用挑战
+
+与其他用例类似，区块链在保险行业的采用也面临挑战。最突出的挑战是需要改变法律和监管政策，以便区块链实现的某些流程不仅具有可执行性，而且得到认可。特别是，法律和监管环境必须认识到区块链技术使跨国交易变得容易。因此，它应允许保单购买者、经纪人、保险公司和再保险公司在几乎没有阻碍的情况下开展国际业务。
+
+当然，还有技术能力问题。目前，并非每个经纪人、保险公司或再保险公司都能在区块链上构建应用程序。好消息是，像 B3i 这样的联盟可以极大地帮助行业参与者获取这项新技术。我们也可能会看到更多初创公司涌现，构建开箱即用的解决方案。
+
+总之，区块链已经证明它可以通过多种方式改变保险行业。这将使保险企业及其客户受益，提高速度、安全性、隐私性，并降低成本。
+
+## 参考文献
+
+[^1]: “When Was Insurance First Used?” DailyHistory.org, Dec. 2018, [dailyhistory.org/When_was_Insurance_First_Used%3F](http://dailyhistory.org/When_was_Insurance_First_Used%3F).
+
+[^2]: “United We Brand: Toward A National Anti-Fraud Outreach Campaign.” Insurancefraud.org, Coalition Against Insurance Fraud, Dec. 2006, [www.insurancefraud.org/downloads/unitedWeBrand.pdf](http://www.insurancefraud.org/downloads/unitedWeBrand.pdf).
+
+[^3]: “Civic Secure Identity Platform.” Civic Secure Identity Platform, Civic, 23 May 2017, [www.youtube.com/watch?v=2XDGX41nr1o](http://www.youtube.com/watch?v=2XDGX41nr1o).
+
+[^4]: Meeusen, Paul. “ Shipping Containers and B3i: What’s the Connection?” B3i, 10 Jan. 2017, [b3i.tech/news-reader/Blog_2.html](http://b3i.tech/news-reader/Blog_2.html).
+
+[^5]: “OpenIDL (Open Insurance Data Link): the First Blockchain Network Connecting Data across the Insurance Industry.” AAIS, [aaisonline.com/openidl](http://aaisonline.com/openidl).
+
+[^6]: “Aon, Oxfam, and Etherisc Launch First Blockchain-Based Agricultural Insurance Policies for Smallholder Farmers in Sri Lanka.” Oxfam, 1 July 2019, [sri-lanka.oxfam.org/latest/press-release/aon-oxfam-and-etherisc-launch-first-blockchain-based-agricultural-insurance](http://sri-lanka.oxfam.org/latest/press-release/aon-oxfam-and-etherisc-launch-first-blockchain-based-agricultural-insurance).
+
+[^7]: Daley, Sam. “Nine Companies Using Blockchain to Revolutionize Insurance.” Built In, 16 Mar. 2019, [builtin.com/blockchain/blockchain-insurance-companies](http://builtin.com/blockchain/blockchain-insurance-companies).
+
+---
+
+# 用例 7：能源
+
+![image](images/ch-15.jpg)
+
+人们在区块链技术中发现的一个缺点是其极端的能源消耗。点对点网络上的计算机在就共享账本上记录的交易有效性形成共识的过程中消耗能源。《Wired》杂志在 2017 年的一篇文章中宣称：“比特币正在减缓摆脱化石燃料的快速转型努力。”《商业内幕》2018 年的一篇文章指出：“比特币交易使用了如此多的电力，以至于可能将全球气温推高到一个产生致命后果的临界点”[^1]。
+
+## 区块链的“威胁”以及治愈之道？
+
+虽然这些说法有点夸张和耸人听闻，但其前提并不离谱。特别是比特币区块链，非常耗能。根据多项研究，比特币网络消耗的电力相当于爱尔兰或奥地利等整个国家的用电量（按用电量排名约第 39 位）。因此，根据另一项研究，它产生的碳排放量相当于拉斯维加斯市[^2]。
+
+这些事实暗示，在能源和温室气体排放问题上，区块链技术不是解决方案，而是一种威胁，或者至少是一个巨大的问题来源。然而，一旦深入探究，你会发现，在很大程度上，该技术正是解决方案。确实，它能为社会利益显著改变能源行业。
+
+首先，随着时间的推移，该技术已证明它可以控制其能源消耗以及向大气释放的碳量。现在公认的事实是，区块链不需要消耗巨量能源即可运行。事实上，我们已经看到了使区块链能耗可忽略不计的共识协议的兴起。事实上，即使是最初设计为高能耗共识机制（特别是工作量证明）的区块链，也正在向权益证明等低能耗机制过渡。
+
+例如，以太坊——按市值计算的第二大区块链——在撰写本书时正通过其 Casper 核心软件实现，从工作量证明向某种形式的权益证明过渡，这将使其能耗减少多达 99%。
+
+比特币社区中的一些人建议，应将消耗最多能源的比特币共识协议替换为低能耗协议。这正演变成一场严肃的运动，未来比特币放弃工作量证明的可能性很大。
+
+## 区块链为能源带来的益处
+
+然而，区块链所做的不仅仅是采用降低能耗的共识协议。事实上，这项技术可以为能源行业面临的许多问题提供解决方案。更重要的是，它可能成为推动能源行业惊人创新的基础。
+
+特别是，区块链技术为能源行业提供以下四大核心价值：(1) 协助数据管理，(2) 支持新的能源分配系统，(3) 作为代币化能源的机制，实现更高效的管理、供应和交易，(4) 成为向绿色能源转型的后端技术。
+
+### 数据管理
+
+让我们从数据管理开始。
+
+信息是能源生产、分配和消费的核心。能源行业的参与者，特别是公用事业公司，需要收集、处理、存储和利用诸如能源生产量、生产和分配成本、每个终端客户的消费量以及账单流程等方面的数据。公用事业公司还需要跟踪其资产、资本、债务和负债，以防止不必要的损失。确实，当考虑整个供应链时，能源行业的数据管理领域非常广泛。
+
+#### 肯尼亚电力案例
+
+为了更好地解释能源行业对更好的数据管理系统的现有需求，让我们关注供应链零售环节的一个恰当例证。
+
+东非国家肯尼亚正成为创新的温床。例如，该国最早采用移动货币服务，并保持了最高的服务渗透率。如今，该国近 96% 的家庭至少拥有一个移动货币服务账户。
+
