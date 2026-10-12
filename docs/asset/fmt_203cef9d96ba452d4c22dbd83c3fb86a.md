@@ -1,0 +1,63 @@
+
+Another common triad in secure design and implementation is **prevention**, **detection**, and **response**.
+
+*   **Prevention** is the use of safeguards to stop attacks or compromises. Preventing intrusions and violations is usually more efficient, easier, and more cost-effective than dealing with them after the fact.
+*   **Detection** requires the instantaneous discovery of attempted and successful security violations. The longer the time span between a malicious act and an authoritative response, the greater the likelihood that the perpetrator will escape without punishment.
+*   **Response** means being prepared to contain the damage, limit further compromise, and implement remediation to return systems to normal.
+
+### The Importance of Authentication, Authorization, and Auditing
+
+Do not overlook the importance of **authentication**, **authorization**, and **auditing**. These services are critical to the security infrastructure. You must control who is allowed into the facility and onto the network. Place limits on what authorized users can do. Hold all entities—even upper management—accountable for their actions, activities, and results.
+
+### Establishing a "Default Deny" Philosophy
+
+Focus on establishing a philosophy of **default deny** rather than **default allow**. By starting with blocking everything, only those features, services, protocols, ports, applications, and users that you judge and deem safe and appropriate are enabled through exceptions. A default allow stance means you must create a never-ending stream of explicit denials as you detect new compromises or malicious events. **Default deny / allow by exception** is always the preferred security posture.
+
+### Implementing Application Whitelisting Controls
+
+Implement whitelisting application controls. A whitelist is a list of allowed exceptions in the context of a default deny. By configuring systems with whitelists, all executables are blocked unless they are on the allowed exception list. The whitelist contains the application name, its filename, and a hash of the file. This prevents malicious or unapproved applications from spoofing by simply renaming the executable.
+
+This set of cybersecurity management best practices should serve as your starting point for effective security work. Other valid and useful guidelines exist; therefore, do not assume this list of advice—or any other list from any other source—is exhaustive. You always have new experiences to learn, new challenges to face, and new wisdom to acquire.
+
+### Fail-Safe, Fail-Open, and Fail-Closed Options
+
+Failure is not an option; it is an inevitability. At some point in the life of an organization, failure will occur. Are you prepared to handle it properly, and how much damage will the failure cause?
+
+Failure may stem from hardware ceasing to function properly due to unknown flaws in materials or construction; it may stem from accidental electrostatic discharge damaging circuitry; it may stem from atypical weather flooding a building; or it may stem from a malware infection crashing a server or a zero-day exploit compromising security from the outside.
+
+Failure means problems, downtime, loss, and consequences. However, failure does not necessarily mean bankruptcy, going out of business, imprisonment, or catastrophic loss. The difference between a disaster and a mere inconvenience is **planning**. As with most aspects of security, proper and extensive planning helps design an infrastructure that can prevent or effectively weather any problem.
+
+Planning for failure is planning how to respond to and recover from failure. The goal is to fail into a safe state rather than an unsafe or chaotic state. This is known as **fail-safe**. A fail-safe state reverts to a condition with little to no danger, or at least no further danger. Depending on the situation, a fail-safe state may be **fail-open** or **fail-closed**.
+
+*   **Fail-open** refers to reverting to an open, accessible, or unlocked state. In the physical world, fail-open is critical for personnel safety (e.g., fail-open doors allow people to easily exit a building). However, such easily opened doors may become a weakness for intruders entering secure internal areas. In IT, fail-open refers to reverting to a state of unfiltered communication or data access.
+*   **Fail-closed** refers to reverting to a closed, inaccessible, or locked state. In the physical world, fail-closed prevents doors or containers from being opened during an emergency or compromise. In IT, fail-closed blocks access to communications and other digital resources.
+
+Depending on the specific circumstances, either a fail-open or fail-closed state can be a fail-safe or fail-secure option. In either case, you should carefully consider and plan the type of default response to be used, especially during emergencies, intrusions, compromises, or system failures.
+
+### Physical Security
+
+There is no security without physical security. Logical protections guard against logical attacks; physical protections guard against physical attacks. With just a few minutes of physical access, a hacker can overcome or bypass most logical security measures.
+
+Physical security is the prevention of unauthorized individuals from gaining direct physical contact, access, or influence over sensitive components of the IT infrastructure. Any well-designed cybersecurity solution will include physical security components. If you fail to adequately address physical security, it means you have failed to understand the threats facing the organization.
+
+Physical security includes:
+
+*   **Facilities Resistant to Forced Entry**: Select, improve, or construct facilities that prevent and deter unauthorized physical intrusion. If physical forced entry is possible and potentially profitable, theft is more likely to occur.
+*   **Monitoring All Personnel Movement**: Reliable physical access control includes logging when employees enter and exit every secure or sensitive area. Good physical access control prevents outsider access and enforces visitor escort requirements.
+*   **Deployment of Technical Means**: Should include card-key entry, burglar alarms, motion detectors, and security cameras. Utilize the best available technology to deter and detect physical security violations.
+
+### Monitoring for Signs of Compromise
+
+Everyone in the organization is part of the physical security effort. Everyone has a responsibility to respect the security perimeter and report violations or suspicious activity. Security is about "locking" and "monitoring." Not every employee can assist with the locking process, but everyone can and should assist with monitoring for violations and suspicious behavior.
+
+In addition to human monitoring, all available technology should be leveraged to look for security violations. Use auditing, `IDS` (Intrusion Detection Systems), `IPS` (Intrusion Prevention Systems), security cameras, motion detectors, etc., where appropriate. Proper cybersecurity management includes proper design for monitoring violations.
+
+Violations can occur in the physical world as well as in the logical world of computers, networks, and the Internet. Do not assume that a violation is not worth knowing about or pursuing just because it did not cause direct physical harm. Crime is crime, whether physical or logical. Design and implement detection mechanisms to notice, log, and monitor suspicious or anomalous activity.
+
+### Incident Response
+
+Incident response is the planned reaction to a negative situation or event. Security violations, or at least violation attempts, will inevitably occur. When these events affect the organization or its ability to carry out its mission in any way, incident response is triggered. The goal of incident response is to minimize downtime, minimize loss, and return the environment to a secure normal state as quickly as possible.
+
+Most incident response solutions contain six major steps or phases:
+
+#### 1. 准备
