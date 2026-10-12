@@ -1,0 +1,86 @@
+
+### 参考文献
+
+59. Georgiadis, S.D., Ranta‐aho, P.O., Tarvainen, M.P., and Karjalainen, P.A. (2005). Single‐trial dynamical estimation of event‐related potentials: a Kalman filter‐based approach. *IEEE Transactions on Biomedical Engineering* **52** (8): 1397–1406.
+
+60. Sorenson, H.W. (1980). *Parameter Estimation: Principles and Problems*. New York: Marcel Dekker.
+
+61. Melsa, J. and Cohn, D. (1978). *Decision and Estimation Theory*. New York: McGraw‐Hill.
+
+62. Yates, R.D. and Goodman, D.J. (2005). *Probability and Stochastic Processes*, 2e. Wiley.
+
+63. Mohseni, H.R., Wilding, E.L., and Sanei, S. (2008). Single trial estimation of event‐related potentials using particle filtering. *Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing*. Taiwan: ICASSP.
+
+64. Jarchi, D., Makkiabadi, B., and Sanei, S. (2009). Estimation of trial to trial variability of p300 subcomponents by coupled rao‐blackwellised particle filtering. Proceedings of Statistical Signal Processing Workshop. Cardiff, UK.
+
+65. Jarchi, D., Sanei, S., Principe, J.C., and Makkiabadi, B. (2011). A new spatiotemporal filtering method for single‐trial ERP subcomponent estimation. IEEE Transactions on Biomedical Engineering **58** (1): 132–143.
+
+66. Hoehn, M. and Yahr, M. (1967). Parkinsonism: onset, progression and mortality. Neurology **17** (5): 427–442.
+
+67. Mohseni, H.R., Ghaderi, F., Wilding, E.L., and Sanei, S. (2010). Variational Bayes for spatiotemporal identification of event‐related potential subcomponents. IEEE Transactions on Biomedical Engineering **57** (10): 2413–2428.
+
+68. Hansson, M., Gansler, T., and Salomonsson, C. (1996). Estimation of single event‐related potentials utilizing the Prony method. IEEE Transactions on Biomedical Engineering **43** (10): 973–978.
+
+69. Scharf, L.L. (1991). Statistical Signal Processing. Reading, MA: Addison‐Wesley.
+
+70. Garoosi, V. and Jansen, B.H. (2000). Development and evaluation of the piecewise Prony method for evoked potential analysis. IEEE Transactions on Biomedical Engineering **47** (12): 1549–1554.
+
+71. Barone, P., Massaro, E., and Polichetti, A. (1989). The segmented Prony method for the analysis of nonstationary time series. Astronomy and Astrophysics **209**: 435–444.
+
+72. Meyer, J.U., Burkhard, P.M., Secomb, T.W., and Intaglietta, M. (1989). The Prony spectral line estimation (PSLE) method for the analysis of vascular oscillations. IEEE Transactions on Biomedical Engineering **36**: 968–971.
+
+73. Kulp, R.W. (1981). An optimum sampling procedure for use with the Prony method. IEEE Transactions on Electromagnetic Compatibility **23**: 67–71.
+
+74. Steedly, W.M., Ying, C.J., and Moses, R.L. (1994). A modified TLS‐Prony method using data decimation. IEEE Transactions on Signal Processing **42**: 2292–2303.
+
+75. Cui, J. and Wong, W. (2006). The adaptive chirplet transform and visual evoked potentials. IEEE Transactions on Biomedical Engineering **53** (7): 1378–1384.
+
+76. Regan, D. (1989). Human Brain Electrophysiology: Evoked Potentials and Evoked Magnetic Fields in Science and Medicine. New York: Elsevier.
+
+77. Middendorf, M., McMillan, G., Galhoum, G., and Jones, K.S. (2000). Brain computer interfaces based on steady‐state visual‐evoked responses. IEEE Transactions on Rehabilitation Engineering **8** (2): 211–214.
+
+78. Cheng, M., Gao, X.R., Gao, S.G., and Xu, D.F. (2002). Design and implementation of a brain‐computer interface with high transfer rates. IEEE Transactions on Biomedical Engineering **49** (10): 1181–1186.
+
+79. Holliday, A.M. (1992). Evoked Potentials in Clinical Testing, 2e. UK: Churchill Livingston.
+
+80. Heckenlively, J.R. and Arden, J.B. (1991). Principles and Practice of Clinical Electrophysiology of Vision. St Louis, MO: Mosby Year Book.
+
+81. Mann, S. and Haykin, S. (1995). The chirplet transform – physical considerations. IEEE Transactions on Signal Processing **43** (11): 2745–2761.
+
+82. Bultan, A. (1999). A four‐parameter atomic decomposition of chirplets. IEEE Transactions on Signal Processing **47** (3): 731–745.
+
+83. Mallat, S.G. and Zhang, Z. (1993). Matching‐pursuit with time‐frequency dictionaries. IEEE Transactions on Signal Processing **41** (12): 3397–3415.
+
+84. Gribonval, R. (2001). Fast matching pursuit with a multiscale dictionary of Gaussian chirps. IEEE Transactions on Signal Processing **49** (5): 994–1001.
+
+85. Qian, S., Chen, D.P., and Yin, Q.Y. (1998). Adaptive chirplet based signal approximation. Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing. 1–6: 1781–1784. ICASSP.
+
+86. O'Neil, J.C. and Flandrin, P. (1998). Chirp hunting. Proceedings of the IEEE‐SP International Symposium on Time–Frequency and Time–Scale Analysis, 425–428.
+
+87. Ullsperger, P., Metz, A.M., and Gille, H.G. (1998). The P300 component of the event‐related brain potential and mental effort. Ergonomics **31**: 1127–1137.
+
+88. Uetake, A. and Murata, A. (2000). Assessment of mental fatigue during VDT task using event‐related potential (P300). Proceedings of the IEEE International Workshop on Root and Human Interactive Communication, 235–240. Osaka, Japan.
+
+89. Ulsperger, P., Neumann, U., Gille, H.G., and Pictschan, M. (Elsevier, 1986). P300 component of the ERP as an index of processing difficulty. In: Human Memory and Cognitive Capabilities (eds. F. Flix and H. Hagendorf), 723–773. Amsterdam.
+
+90. Neumann, U., Ulsperger, P., and Erdman, U. (1986). Effects of graduated processing difficulty on P300 component of the event‐related potential. Zeitschrift für Psychologie **194**: 25–37.
+
+91. Mc Farland, D.J., Miner, L.A., Vaugan, T.M., and Wolpaw, J.R. (2000). Mu and beta rhythms topographies during motor imagery and actual movement. Brain Topography **3**: 177–186.
+
+92. Vidal, J.J. (1977). Real‐time detection of brain events in EEG. Proceedings of the IEEE **65**: 633–664, Special Issue on Biological Signal Processing and Analysis.
+
+93. Sutter, E.E. (1992). The brain response interface communication through visually induced electrical brain response. Journal of Microcomputer Applications **15**: 31–45.
+
+94. Morgan, S.T., Hansen, J.C., and Hillyard, S.A. (1996). Selective attention to the stimulus location modulates the steady state visual evoked potential. Neurobiology **93**: 4770–4774.
+
+95. Muller, M.M. and Hillyard, S.A. (1997). Effect of spatial selective attention on the steady‐state visual evoked potential in the 20‐28 Hz range. Cognitive Brain Research **6**: 249–261.
+
+96. Birbaumer, N., Hinterberger, T., Kubler, A., and Neumann, N. (2003). The thought‐translation device (ttd): neurobehavioral mechanisms and clinical outcome. IEEE Transactions on Neural Systems and Rehabilitation Engineering **11**: 120–123.
+
+97. Sellers, E.W., Kubler, A., and Donchin, E. (2006). Brain‐computer interface research at the University of South Florida Cognitive Psychology Laboratory: the P300 speller. IEEE Transactions on Neural Systems and Rehabilitation Engineering **14** (2): 221–224.
+
+98. Diez, J., Pfurtscheller, G., Reisecker, F. et al. (1997). Event‐related desynchronization and synchronization in idiopathic Parkinson's disease. Electroencephalography and Clinical Neurophysiology **103** (1): 155–155.
+
+99. Beverina, F., Palmas, G., Silvoni, S. et al. (2003). User adaptive BCIs: SSVEP and P300 based interfaces. Journal of PsychNology **1** (4): 331–354.
+
+100. Kelly, S.P., Lalor, E.C., Finucane, C. et al. (2005). Visual spatial attention control in an independent brain‐computer interface. IEEE Transactions on Biomedical Engineering **52** (9): 1588–1596.
