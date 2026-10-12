@@ -1,0 +1,2764 @@
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<img src="OEBPS/images/cover.jpg" alt="cover" />
+</div>
+<p><span id="cvi.xhtml"></span></p>
+<p><img src="OEBPS/images/cover.jpg" alt="image" class="calibre1" /></p>
+<p><span id="tp.xhtml"></span></p>
+<article type="titlepage">
+<h1 id="tp.xhtml#s1" class="tp">Data Science<br />
+and<br />
+Machine Learning</h1>
+<h1 class="tpa">Interview Questions using</h1>
+<h1 class="tpb">Python</h1>
+<p><img src="OEBPS/images/line.jpg" class="calibre1" /></p>
+<h1 class="tp1"><em>A Complete Question Bank to<br />
+Crack Your Interview</em></h1>
+<p><img src="OEBPS/images/line.jpg" class="calibre1" /></p>
+<h1 class="aut"><em>by</em></h1>
+<h1 class="aut1">Vishwanathan Narayanan</h1>
+<figure>
+<img src="OEBPS/images/logo.jpg" class="calibre1" />
+</figure>
+</article>
+<p><span id="cop.xhtml"></span></p>
+<article type="copyright-page">
+<p><strong>SECOND REVISED AND UPDATED EDITION 2020</strong></p>
+<p><strong>FIRST EDITION 2019</strong></p>
+<p><strong>Copyright © BPB Publications, India</strong></p>
+<p><strong>ISBN: 978-93-89845-785</strong></p>
+<p>All Rights Reserved. No part of this publication may be reproduced or distributed in any form or by any means or stored in a database or retrieval system, without the prior written permission of the publisher with the exception to the program listings which may be entered, stored and executed in a computer system, but they can not be reproduced by the means of publication.</p>
+<p><strong>LIMITS OF LIABILITY AND DISCLAIMER OF WARRANTY</strong></p>
+<p>The information contained in this book is true to correct and the best of author’s &amp; publisher’s knowledge. The author has made every effort to ensure the accuracy of these publications, but cannot be held responsible for any loss or damage arising from any information in this book.</p>
+<p>All trademarks referred to in the book are acknowledged as properties of their respective owners.</p>
+<p><strong>Distributors:</strong></p>
+<p><strong>BPB PUBLICATIONS</strong></p>
+<p>20, Ansari Road, Darya Ganj</p>
+<p>New Delhi-110002</p>
+<p>Ph: 23254990/23254991</p>
+<p><strong>MICRO MEDIA</strong></p>
+<p>Shop No. 5, Mahendra Chambers,</p>
+<p>150 DN Rd. Next to Capital Cinema,</p>
+<p>V.T. (C.S.T.) Station, MUMBAI-400 001</p>
+<p>Ph: 22078296/22078297</p>
+<p><strong>DECCAN AGENCIES</strong></p>
+<p>4-3-329, Bank Street,</p>
+<p>Hyderabad-500195</p>
+<p>Ph: 24756967/24756400</p>
+<p><strong>BPB BOOK CENTRE</strong></p>
+<p>376 Old Lajpat Rai Market,</p>
+<p>Delhi-110006</p>
+<p>Ph: 23861747</p>
+<p>Published by Manish Jain for BPB Publications, 20 Ansari Road, Darya Ganj, New Delhi-110002 and Printed by him at Repro India Ltd, Mumbai</p>
+</article>
+<p><span id="ded.xhtml"></span></p>
+<article type="dedication">
+<div class="box">
+<h1 class="ded">Dedicated to</h1>
+<p><em>Dedicated to Pratyangira, Bala, Durga, Mom, Dad, Chitti my aunt, my sister Ishwarya, Sridhar my brother in law and to all my mentors especially Shiv without whom this book would still be a dream. Also the support extended by Shyam Sir, Khadak and BPB Publications is very much appreciated.</em></p>
+<p><em>Durga has been a great inspiration for this book.<br />
+She has always been and will me my encouragement to write more books.</em></p>
+<p><em>Also remember Sudarshan as a friend in need.</em></p>
+<p><em>Also dedicated to my students from whom I equally learned as I taught them.</em></p>
+<p><em>Along with all the blessing of almighty is also remembered here without which even a blade of grass does not move</em></p>
+</div>
+</article>
+<p><span id="ata.xhtml"></span></p>
+<article type="frontmatter">
+<header>
+<h1 class="chap">About the Author</h1>
+</header>
+<p><strong>Mr Vishwanathan</strong> has twenty years of hard code experience in the software industry spanning across many multinational companies and domains. Playing with data to derive meaningful insights has been his domain and that is what took him towards data science and machine learning.</p>
+</article>
+<p><span id="pre.xhtml"></span></p>
+<article type="preface">
+<header>
+<h1 class="chap">Preface</h1>
+</header>
+<p>Data science is one of the hottest topics mainly because of the application areas it is involved and things which were once upon of time, impossible with earlier software has been made easy. This book tries to comprehend the ocean of data science into small book which is mainly intended to be used as last minute revision. Before interview, all the important concepts have been given in simple and understand format.</p>
+<p>This book tries to include various terminologies and logic used both as a part of Data Science and Machine learning for last minute revision. As such you can say that this book acts as a companion whenever you want to go for interview.</p>
+<p>Simple to use words have been used in the given answers for the questions to help ease of remembering and representation of same. Examples where ever deemed necessary have been provided so that same can be used while giving answers in interview. Author tried to consolidate whatever he came across, on multiple interviews that he attended and put the same in words so that it becomes easy for the reader of the book to give direction on how the interview would be.</p>
+<p>With the number of data science jobs increasing, Author is sure that everyone who wants to pursue this field would like to keep this book as a constant companion. Soon, Author will be coming shortly with a new book on R too, so that it makes a complete data science stack.</p>
+<p>Happy reading to all the readers, your feedback is highly appreciated.</p>
+</article>
+<p><span id="frw.xhtml"></span></p>
+<article type="frontmatter">
+<header>
+<h1 class="chap">Foreword</h1>
+</header>
+<p>It is not wrong to say that today’s dynamic world is driven totally by statistics. With decision making becoming important in being successful the use of software this task has become common, Thanks to the advancement made with respect to technology. While software application always existed for doing the above task, the volume and ability of software programmes to represent complex equation related to statistics and probability was limited.</p>
+<p>Thanks to pandas, numpy, scipy and sklearn modules of Python, the above problem faced has been removed to a great extent and the problem is no more a challenge. With complex mathematical concepts easily convertible to algorithms the life of data scientist and analyst has become quite easy.</p>
+<p>This book is mainly intended to help people represent their answer in a sensible way to the interviewer. The answers have been carefully rendered in a way to make things quite simple and yet represent the seriousness and complexity of matter. Since data science is incomplete without mathematics we have also included a part of the book dedicated to statistics.</p>
+<p>Python has already taught us that small code does not mean lesser powerful the same concept has been adopted to keep the book a powerful weapon for any one attending interview.</p>
+</article>
+<p><span id="toc.xhtml"></span></p>
+<p><span id="c01.xhtml"></span></p>
+<article type="bodymatter">
+<header>
+<h1 class="chap1"><a href="#toc.xhtml#c01" class="calibre7">C<span class="small">HAPTER</span> 1</a></h1>
+<h1 class="subchap"><a href="#toc.xhtml#c01" class="calibre7">Data Science Basic Questions and Terms</a></h1>
+</header>
+<p><strong><em>Note:</em> [Q: Question Number and Ans: Answer]</strong></p>
+<p><a href="#toc.xhtml#c01q1a">Q1: Explain the steps involved in data science?</a></p>
+<p><em>Ans:</em> Following are the steps involved:</p>
+<ol>
+<li>Get data from various data sources available.</li>
+<li>Generate research question from data.</li>
+<li>Identify variables present in data. Also, identify important variables or variables to be analyzed as such.</li>
+<li>Generate hypothesis.</li>
+<li>Analyze data using graph data like histogram for example.</li>
+<li>Fit a model from analyzed data.</li>
+<li>Accept or reject the hypothesis.</li>
+<li>Research question answer found.</li>
+</ol>
+<figure>
+<img src="OEBPS/images/1.jpg" class="calibre1" />
+</figure>
+<p><strong>Example of above steps:</strong></p>
+<ol>
+<li><p>Get data related to temperature for India reference <a href="https://data.gov.in/catalog/annual-and-seasonal-maximum-temperature-india">https://data.gov.in/catalog/annual-and-seasonal-maximum-temperature-india</a></p>
+<p>A template of data set:</p>
+<p><code class="calibre10">“YEAR”,”ANNUAL”,”JAN-FEB”,”MAR-MAY”,”JUN-SEP”,”OCT-DEC”</code></p>
+<p><code class="calibre10">“1901”,”28.96”,”23.27”,”31.46”,”31.27”,”27.25”</code></p>
+<p><code class="calibre10">“1902”,”29.22”,”25.75”,”31.76”,”31.09”,”26.49”</code></p>
+<p><code class="calibre10">“1903”,”28.47”,”24.24”,”30.71”,”30.92”,”26.26”</code></p>
+<p><code class="calibre10">“1904”,”28.49”,”23.62”,”30.95”,”30.67”,”26.40”</code></p>
+<p><code class="calibre10">“1905”,”28.30”,”22.25”,”30.00”,”31.33”,”26.57”</code></p>
+<p><code class="calibre10">“1906”,”28.73”,”23.03”,”31.11”,”30.86”,”27.29”</code></p>
+<p><code class="calibre10">“1907”,”28.65”,”24.23”,”29.92”,”30.80”,”27.36”</code></p>
+<p><code class="calibre10">“1908”,”28.83”,”24.42”,”31.43”,”30.72”,”26.64”</code></p>
+<p><code class="calibre10">“1909”,”28.39”,”23.52”,”31.02”,”30.33”,”26.88”</code></p>
+<p><code class="calibre10">“1910”,”28.53”,”24.20”,”31.14”,”30.48”,”26.20”</code></p>
+<p><code class="calibre10">“1911”,”28.62”,”23.90”,”30.70”,”31.14”,”26.31”</code></p>
+<p><code class="calibre10">“1912”,”28.95”,”24.88”,”31.10”,”31.15”,”26.57”</code></p>
+<p><code class="calibre10">“1913”,”28.67”,”24.25”,”30.89”,”30.92”,”26.42”</code></p>
+<p><code class="calibre10">“1914”,”28.66”,”24.59”,”30.73”,”30.84”,”26.40”</code></p>
+<p><code class="calibre10">“1915”,”28.94”,”23.22”,”31.06”,”31.51”,”27.18”</code></p>
+<p><code class="calibre10">“1916”,”28.82”,”24.57”,”31.88”,”30.52”,”26.32”</code></p>
+<p><code class="calibre10">“1917”,”28.11”,”24.52”,”30.06”,”30.24”,”25.74”</code></p>
+<p><code class="calibre10">“1918”,”28.66”,”23.57”,”30.68”,”31.11”,”26.77”</code></p></li>
+<li>Research question, is the annual temperature in India rising?</li>
+<li>Variable of interest from the above data set ANNUAL.</li>
+<li>Hypothesis: Temperature is rising.</li>
+<li><p>Analyze data from the above data set.</p>
+<figure>
+<img src="OEBPS/images/2.jpg" class="calibre1" />
+</figure></li>
+<li>Fit the model.</li>
+<li>Hypothesis accepted or rejected.</li>
+</ol>
+<p><a href="#toc.xhtml#c01q2a">Q2: Explain variable and different types of variables?</a></p>
+<p><em>Ans:</em> Anything which keeps on changing is called variable. Variables are of different type and below are the following:</p>
+<p><strong>Dependant/Outcome:</strong> A variable being affected, for example annual temperature in above example.</p>
+<p><strong>Independent/Predictor:</strong> A variable affecting the outcome for e.g. deforestation, pollution, and so on in above example.</p>
+<p><a href="#toc.xhtml#c01q3a">Q3: Explain Categorical measurement?</a></p>
+<p><em>Ans:</em> Categorical measurement contains categories i.e. distinct entities. Example of categories of life on earth is plants, animals, and so on.</p>
+<p><a href="#toc.xhtml#c01q4a">Q4: Explain Binary variables?</a></p>
+<p><em>Ans:</em> Binary variables are those in which only two classes exist, like live or dead male or female on or off.</p>
+<p><a href="#toc.xhtml#c01q5a">Q5: Explain Nominal measurement?</a></p>
+<p><em>Ans:</em> Nominal measurements are there more than two classes. Such categories can be numbers too.</p>
+<p><a href="#toc.xhtml#c01q6a">Q6: Explain Ordinal variable?</a></p>
+<p><em>Ans:</em> These are nominal variables which have logical order. Examples include team ranks in cricket or football, merit list of students appearing for grade students.</p>
+<p><a href="#toc.xhtml#c01q7a">Q7: Explain Continuous variables?</a></p>
+<p><em>Ans:</em> These are variables which can take can any value on the measurement scale example includes pitch of voice which can take any possible value within the range.</p>
+<p><a href="#toc.xhtml#c01q8a">Q8: Explain Discrete variables?</a></p>
+<p><em>Ans:</em> These are variables which can take fixed values in range. For example, number of customers in a bank.</p>
+<p><a href="#toc.xhtml#c01q9a">Q9: Is it possible to convert continuous values to discrete and vice versa?</a></p>
+<p><em>Ans:</em> Yes, based upon the motive of study, it is possible to convert discrete values to continuous and vice versa for example, Level of water in tank can take any value in the range and as such a continuous variable.</p>
+<p>But we can approximate the same to three different levels like empty, full, or half empty and this now becomes discrete in nature.</p>
+<p><a href="#toc.xhtml#c01q10a">Q10: What are interval variables?</a></p>
+<p><em>Ans:</em> These are variables which are grouped on interval. Example is age can be divided in range like 10-20, 20-30 and so on and, person with particular age would be placed in one of the above groups. When intervals are equal, they represent difference in equal property being measured.</p>
+<p><a href="#toc.xhtml#c01q11a">Q11: What are ratio variables?</a></p>
+<p><em>Ans:</em> This is sub type of interval variables where ratio of scales is used for measurement.</p>
+<p>For Example Water representation in chemistry is H<sub>2</sub>O which represent two molecules of hydrogen and one molecule of oxygen. Thus, the ratio of elements is 2: 1.</p>
+<p><a href="#toc.xhtml#c01q12a">Q12: What are Univariate and Bivariate variables?</a></p>
+<p><em>Ans:</em> <strong>Univariate variable:</strong> When the variable under consideration is only one then it is called univariate variable study.</p>
+<p><strong>Bivariate variable:</strong> Involves study of relationship between two variables.</p>
+<p><a href="#toc.xhtml#c01q13a">Q13: What is measurement error?</a></p>
+<p><em>Ans:</em> The discrepancy between the measured value and actual value in terms of number is called measurement error.</p>
+<p>For Example While buying fruits from a vendor in kilograms, if we wanted 1 kilogram of fruits and the vendor’s weighing machine showed 1 kilogram when we brought the same. After checking the same in another machine, if the measured value shows 0.1 kilogram less than expected then this difference is what we call as measurement error.</p>
+<p><a href="#toc.xhtml#c01q14a">Q14: Explain Validity?</a></p>
+<p><em>Ans:</em> Validity implies whether an instrument measures what it is supposed to measure.</p>
+<p><a href="#toc.xhtml#c01q15a">Q15: Explain Reliability?</a></p>
+<p><em>Ans:</em> Reliability implies whether the instrument gives consistent result across different conditions.</p>
+<p>For example, if we test the same value twice on the same entity then the results from the instrument should remain same if it has to be reliable. Such tests are known as test-retest.</p>
+<p><a href="#toc.xhtml#c01q16a">Q16: What are the different ways to test hypotheses?</a></p>
+<p><em>Ans:</em> There are two ways in which hypotheses can be tested:</p>
+<ol>
+<li>Correlational research
+<ul>
+<li>This is also known as cross-sectional research</li>
+<li>This involves observing the natural pattern or occurrence to test</li>
+<li>Original occurrences are not manipulated</li>
+</ul></li>
+<li>Experimental research
+<ul>
+<li>We select the variables of interest</li>
+<li>Then we manipulate some aspect of the environment</li>
+<li>Observe the effect on selected variable</li>
+</ul></li>
+</ol>
+<p><a href="#toc.xhtml#c01q17a">Q17: Explain the different types of variation?</a></p>
+<p><em>Ans:</em> There are two types in variation explained as follows:</p>
+<p><strong>Systematic variation:</strong></p>
+<ul>
+<li>Introduced by experimenter</li>
+<li>The participants are tested under different conditions and the difference in condition is introduced by experimenter</li>
+</ul>
+<p>For Example to test use of woolen clothes w.r.t. temperature, we can test a group of 20 people, in both hot and cold climate. Thus, the difference introduced here is in terms of temperature only.</p>
+<p><strong>Unsystematic variation:</strong></p>
+<ul>
+<li>Introduced by random factors that exist between the experimental conditions.</li>
+<li>For Example To test use of woolen clothes w.r.t. temperature, we can test a group of 20 people. Of the selected set some might behave differently than expected due to factors like illness and so on.</li>
+</ul>
+<p><a href="#toc.xhtml#c01q18a">Q18: Explain repeated-measures design?</a></p>
+<p><em>Ans:</em> Same measure is measured under different conditions on same set participants.</p>
+<p>The difference in two conditions can be caused by the following:</p>
+<ul>
+<li>The manipulation/changes that was carried out on the participants</li>
+<li>Factors that might affect the way in which a participant performs from one time to the next</li>
+</ul>
+<p><a href="#toc.xhtml#c01q19a">Q19: What is independent design?</a></p>
+<p><em>Ans:</em> Same measure is measured under different conditions on different set of participants.</p>
+<p>The differences between the two conditions can be caused by the following:</p>
+<ul>
+<li>The manipulation/changes that were carried out on the participants</li>
+<li>Difference in nature or characteristics of participants in each case</li>
+</ul>
+<p><a href="#toc.xhtml#c01q20a">Q20: Explain the role of randomization w.r.t variation?</a></p>
+<p><em>Ans:</em> By using randomization we can ensure that any variation introduced, is due to changes in the conditions/variables introduced rather than any other unexpected changes during the process. Thus, it helps in removing other sources of systematic variation.</p>
+<p><a href="#toc.xhtml#c01q21a">Q21: Explain various summary measures.</a></p>
+<p><em>Ans:</em> <strong>Mode:</strong> Represents the value/score which occurs most frequently in data set.</p>
+<p>For example: In the values of occurrences of goal in football by players having T-shirt numbers is as follows:</p>
+<p>1, 2, 2, 3, 4, 1, 1, 1, 1, 1, 1</p>
+<p>If we arrange it in form of table:</p>
+<figure>
+<img src="OEBPS/images/3.jpg" class="calibre1" />
+</figure>
+<p>Thus the mode in above example is 1 which happens to have maximum frequency of 7. This can be easily determined from histogram as shown in the following screenshot:</p>
+<figure>
+<img src="OEBPS/images/4.jpg" class="calibre1" />
+</figure>
+<p><strong>Median:</strong> This is the middle value which is obtained by ordering the values/scores in ascending order. If the middle value happens to have two numbers then the average is taken as such:</p>
+<p><strong>For example:</strong></p>
+<p>Median of 2, 3, 4, 5, 6 happens to be 4.</p>
+<p>Median of 2, 3, 4, 5 happens to be average of 3 and 4 which is 3.5.</p>
+<p>Median is least affected by outliers.</p>
+<p><strong>Mean:</strong> Represents mathematical average which is sum of all the elements divided by number of elements.</p>
+<p>For example, average strike rate of the batsmen in the game of cricket is the average of strike rates in individual matches.</p>
+<p><strong>Range of scores:</strong> Subtraction between the maximum value and minimum value in range is called range of scores. This indicates dispersion.</p>
+<p><strong>Trimmed mean:</strong> Represents the mean after removing extreme cases from both the end i.e. from minimum and maximum end. Both the minimum and maximum values may represent values which are not normal and hence represent outlier. So, while fining trimmed mean, we specify the percentage of values to be ignored from both the ends. Hence, trimmed mean gives better representation of data excluding outlier.</p>
+<p><strong>Interquartile range (IQR)</strong></p>
+<p>It is a measure of variability, based on dividing a data set into quartiles.</p>
+<p>Quartiles are the three values that split the sorted data into four equal parts:</p>
+<ul>
+<li>Q1 is the <em>middle</em> value in the first half of the rank-ordered data set</li>
+<li>Q2 is the <em>median</em> value in the set</li>
+<li>Q3 is the <em>middle</em> value in the second half of the rank-ordered data set</li>
+</ul>
+<p>The interquartile range is equal to Q3 minus Q1.</p>
+<p>The lower quartile is the median of the lower half of the data.</p>
+<p>The upper quartile is the median of the upper half of the data.</p>
+<p><strong>Mean absolute deviation:</strong> Represents the mean of the absolute value of the deviations from the mean.</p>
+<p><strong>Mean absolute deviations from median:</strong> Represented by absolute value of the deviations from the median.</p>
+<p><strong>Outliers:</strong> Represents the value which are not normal or within the range and hence data which is corrupted at the time of capture or due to some other reasons. Since it affects all while finding the mean and other summary values they need to represent this data properly.</p>
+<p><a href="#toc.xhtml#c01q22a">Q22: Explain alternate hypotheses and null hypotheses.</a></p>
+<p><em>Ans:</em> <strong>Alternative hypotheses:</strong></p>
+<ul>
+<li>Also called experimental hypotheses</li>
+<li>Denoted by H<sub>1</sub></li>
+<li>It assumes that effect as per prediction would exist in the conclusion</li>
+</ul>
+<p><strong>Null hypotheses:</strong></p>
+<ul>
+<li>Denoted by H<sub>0</sub></li>
+<li>It assumes that effect as per prediction would not exist in the conclusion</li>
+<li>Thus, this represents opposite of alternative hypotheses</li>
+</ul>
+<p><a href="#toc.xhtml#c01q23a">Q23: What is p value?</a></p>
+<p><em>Ans:</em> It measures the strength of evidence in support of null hypotheses. If this value is less than significance level then null hypotheses is accepted, else rejected.</p>
+<p>The range of values that leads the researcher to accept the null hypothesis is called the region of acceptance.</p>
+<p>The region other than acceptance is called region of rejection.</p>
+<p><a href="#toc.xhtml#c01q24a">Q24: What happens when null hypotheses is rejected?</a></p>
+<p><em>Ans:</em> When a null hypothesis is rejected, it becomes Type 1 error. The probability of Type 1 error occurring is called significance level.</p>
+<p><a href="#toc.xhtml#c01q25a">Q25: Explain directional and non-directional hypotheses.</a></p>
+<p><em>Ans:</em> <strong>Directional hypotheses:</strong></p>
+<ul>
+<li>Gives an indication whether the effect which is being studied would grow positively or negatively</li>
+<li>One tailed test is generally used for such cases</li>
+</ul>
+<p><strong>Non directional hypotheses:</strong></p>
+<ul>
+<li>Does not give indication of whether the effect which is being studied would grow positively or negatively</li>
+<li>Two tailed test is generally used for such cases</li>
+</ul>
+<p><a href="#toc.xhtml#c01q26a">Q26: Explain fit of model?</a></p>
+<p><em>Ans:</em> It represents the degree till which the determined statistical model represents the data.</p>
+<p>Fit of model can represent either under fit, over fit, or perfect fit as such.</p>
+<p>A model which is good fit would have low variance between the calculated value and measured value.</p>
+<p><a href="#toc.xhtml#c01q27a">Q27: What is relation between sample and population?</a></p>
+<p><em>Ans:</em> Samples are subset or part of original data or population. If population is very big hence performing analysis on the whole population as such is not easy. Hence, a subset of population data is taken which is known as sample data.</p>
+<p>Whether the sample data is true representation of original data set considered is determined with the help of estimation, confidence interval, and so on.</p>
+<figure>
+<img src="OEBPS/images/5.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q28a">Q28: What is estimation?</a></p>
+<p><em>Ans:</em> By using information available from sample, we can make inferences w.r.t. population, which is what is known as estimation. Parameters used are mean, standard deviation, and so on.</p>
+<p><a href="#toc.xhtml#c01q29a">Q29: Explain deviation score?</a></p>
+<p><em>Ans:</em> This is defined as the difference between actual score/value and mean.</p>
+<p><a href="#toc.xhtml#c01q30a">Q30: Explain variance?</a></p>
+<p><em>Ans:</em> Variance is the average error between the mean and the measured values.</p>
+<p>It indicates the difference between the average value calculated and the observed value as such.</p>
+<p>It is an indication of how different individuals in group differ or vary from each other.</p>
+<p>The population variance is given:</p>
+<p>PV = Σ (Xi - X)2 / N</p>
+<ul>
+<li>PV is the population variance</li>
+<li>X is the population mean</li>
+<li>Xi is the i<sup>th</sup> element from the population</li>
+<li><p>N is the number of elements in the population</p>
+<p>The sample variance is given by:</p>
+<p>SV = Σ (xi – x)2 / (n – 1)</p></li>
+<li>SV is the sample variance</li>
+<li>x is the sample mean</li>
+<li>xi is the i<sup>th</sup> element from the sample</li>
+<li>n is the number of elements in the sample</li>
+</ul>
+<p><a href="#toc.xhtml#c01q31a">Q31: Explain Standard deviation.</a></p>
+<p><em>Ans:</em> Square root of the variance is also called standard deviation.</p>
+<p>This is done to keep the measurement same as original one.</p>
+<p>They indicate the nearness of the points measured w.r.t. mean.</p>
+<p>Smaller the standard deviation will be more nearer to mean and vice versa.</p>
+<p><a href="#toc.xhtml#c01q32a">Q32: Explain standard error.</a></p>
+<p><em>Ans:</em> Standard error indicates how well a sample represents the original population. When we break the original population into various small samples, we would like to know the difference between the sample considered and original population. This is represented by standard error.</p>
+<p>The smaller the standard error, the closer or true representation of original population.</p>
+<p>SE = Σ (sample mean – overall population mean)2 / (number of samples)</p>
+<p><a href="#toc.xhtml#c01q33a">Q33: What is precision?</a></p>
+<p><em>Ans:</em> It refers to the closeness between estimates from different samples. Thus indicating the opposite of standard error and are inversely related to Standard error.</p>
+<p><a href="#toc.xhtml#c01q34a">Q34: Explain confidence intervals.</a></p>
+<p><em>Ans:</em> This indicates the boundaries in which the mean value will fall.</p>
+<p>It is a range of scores constructed, such that the population mean will fall within.</p>
+<p>They are limits constructed such that for a certain percentage of the time the true value of the population mean will fall within these range.</p>
+<p><a href="#toc.xhtml#c01q35a">Q35: Explain confidence level.</a></p>
+<p><em>Ans:</em> Refers to the percentage of all possible samples that can be expected to include the true population parameter.</p>
+<p><a href="#toc.xhtml#c01q36a">Q36: Explain alpha.</a></p>
+<p><em>Ans:</em> Alpha is defined as 1-confidence interval. This implies probability that the true value remains outside the confidence interval. If confidence interval is 99% then alpha is 1-99% which is 0.01.</p>
+<p><a href="#toc.xhtml#c01q37a">Q37: Explain Beta.</a></p>
+<p><em>Ans:</em> The probability of committing Type 2 error is called beta. Type 2 error is one in which a rejected null hypotheses is accepted. The probability of avoiding Type 2 error is called power of test.</p>
+<p><a href="#toc.xhtml#c01q38a">Q38: Explain Accuracy.</a></p>
+<p><em>Ans:</em> It indicates how much does sample value or parameters matches with the population statistic. If the value of mean of both sample and population are exactly equal then we can say that the sample is fully accurate. If not fully equal then we say that sample is accurate by n limit where n is the difference between sample and population.</p>
+<p><a href="#toc.xhtml#c01q39a">Q39: Explain Bias.</a></p>
+<p><em>Ans:</em> Bias indicates whether the estimation of sample is over fit or under fit w.r.t. population data. For e.g. if the population mean is 4 and sample mean calculated is 3 then this is under estimate bias. Such estimate in which both sample and population parameter is not equal are called bias estimate.</p>
+<p><a href="#toc.xhtml#c01q40a">Q40: What is central limit theorem?</a></p>
+<p><em>Ans:</em> It states that the distribution of the mean of any independent, random variable can be approximated to normal if the sample size is large enough.</p>
+<p>Generally, the sample size of above 30 or sometimes 40 is taken as reference.</p>
+<p>This all ows us to approximate bigger samples to normal distribution without having to take hundreds or thousands of distribution.</p>
+<p>Standard Normal distribution is preferred as such because mean is equal to zero and variance is one.</p>
+<figure>
+<img src="OEBPS/images/6.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q41a">Q41: Explain Absolute value?</a></p>
+<p><em>Ans:</em> Absolute value is positive value or magnitude irrespective of its initial sign.</p>
+<p><a href="#toc.xhtml#c01q42a">Q42: What is degree of freedom?</a></p>
+<p><em>Ans:</em> It is equal to the number of independent observations in a sample minus number of population parameters to be estimated.</p>
+<p><a href="#toc.xhtml#c01q43a">Q43: Explain cluster sampling.</a></p>
+<p><em>Ans:</em> In this method the number of clusters or groups to be formed as pre decided (generally denoted by N) from population data.</p>
+<figure>
+<img src="OEBPS/images/7.jpg" class="calibre1" />
+</figure>
+<p>The number of elements in each cluster is known and each element from population data is assigned to one cluster. For e.g. clustering can be done on attributes like customer state.</p>
+<p>Sampling can be further classified as:</p>
+<ul>
+<li><strong>One-stage sampling:</strong> All of the elements within selected clusters are included in the sample.</li>
+<li><strong>Two-stage sampling:</strong> A subset of elements within selected clusters is randomly selected.</li>
+</ul>
+<p><a href="#toc.xhtml#c01q44a">Q44: Explain Correlation coefficients?</a></p>
+<p><em>Ans:</em> Correlation indicates the relationship between two variables.</p>
+<ul>
+<li>As such variables can be positively correlated in which positive change in one variable effect the other variable positively.</li>
+<li>If variables are negatively correlated the positive change in one variable affects the other variable negatively.</li>
+<li><p>The formula for above is given by:</p>
+<p><em>Correlation co-efficient</em> = Σ(<em>xy</em>)/ <em>sqrt</em>[(Σ<em>x</em><sup>2</sup>) * (Σ<em>y</em><sup>2</sup>)], where <em>x</em> and <em>y</em> are variables under consideration.</p></li>
+<li>The value of correlation co-efficient ranges from -1 to +1.</li>
+</ul>
+<p><a href="#toc.xhtml#c01q45a">Q45: Explain sample space.</a></p>
+<p><em>Ans:</em> The outcomes of any statistical experiment are denoted by sample space. Any outcome from such space is called sample point. One or more sample point is called event. When events do not have any sample point in common they are known as mutually exclusive event.</p>
+<p><a href="#toc.xhtml#c01q46a">Q46: What is non parametric algorithm?</a></p>
+<p><em>Ans:</em> Non parametric algorithm does not make any assumptions on data distribution.</p>
+<p><a href="#toc.xhtml#c01q47a">Q47: How can learning be classified?</a></p>
+<p><em>Ans:</em> Following are the classifications:</p>
+<ul>
+<li><strong>Supervised:</strong>
+<ul>
+<li>Data is clearly labeled and the algorithms learn to predict the output from the input data</li>
+<li>Offline analysis of data possible</li>
+<li>The number of classes are predefined</li>
+<li>Accuracy is high</li>
+<li>Examples include classification and regression</li>
+</ul></li>
+<li><strong>Unsupervised:</strong>
+<ul>
+<li>Much amount of data is unlabeled and the algorithms learn to inherent structure from the input data</li>
+<li>Analysis is on real time data</li>
+<li>Number of classes may be unknown</li>
+<li>Accuracy ranges from moderate to high</li>
+<li>Examples include Clustering and Association</li>
+</ul></li>
+<li><strong>Semi-supervised:</strong>
+<ul>
+<li>A mixture of data having label and no labels forms this one</li>
+<li>Can be considered as intermediate to above two</li>
+</ul></li>
+</ul>
+<p><a href="#toc.xhtml#c01q48a">Q48: What is classification?</a></p>
+<p><em>Ans:</em> Classification predictive modeling is the task of approximating a mapping function (f) from input variables (X) to discrete output variables (y).</p>
+<p>The output variables are often called labels or categories.</p>
+<p>The mapping function predicts the class or category for a given observation.</p>
+<figure>
+<img src="OEBPS/images/8.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q49a">Q49: Explain the steps involved in classification.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/9.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q50a">Q50: What is regression?</a></p>
+<p><em>Ans:</em> Regression predictive modeling is the task of approximating a mapping function (f) from input variables (X) to a continuous output variable (y).</p>
+<p>A continuous output variable can be a real-value, such as an integer or floating point value and be any measures such as size amount, and so on.</p>
+<p>Error indicates the difference between actual value and predicted value in case of regression mostly root mean square error is used w.r.t. regression.</p>
+<figure>
+<img src="OEBPS/images/10.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q51a">Q51: Explain the similarities and differences between Classification and Regression.</a></p>
+<p><em>Ans:</em> Differences between classification and regression:</p>
+<figure>
+<img src="OEBPS/images/11.jpg" class="calibre1" />
+</figure>
+<p>The similarities are that both try to make prediction based on input values.</p>
+<p><a href="#toc.xhtml#c01q52a">Q52: Explain various terms encountered during classification algorithm.</a></p>
+<p><em>Ans:</em> Classifier is an algorithm that maps the input data to a specific category.</p>
+<p><strong>Classification model:</strong> After analyzing input data, a classification model is made. The model can take new data as input and predict the class labels/categories.</p>
+<p><strong>Feature:</strong> A feature is an individual measurable property of a phenomenon being observed.</p>
+<p><strong>Binary Classification:</strong> Classification task with two possible outcomes.</p>
+<p><strong>Multi class classification:</strong> Classification with more than two classes is involved. In multi class classification each sample is assigned to one and only one target label.</p>
+<p>E.g. an item can be classified as fruit or vegetable not both.</p>
+<p><strong>Multi label classification:</strong> Classification task where each sample is mapped to a set of target labels having more than one class.</p>
+<p>Example: A fruit can be classified as sweet and sour both.</p>
+<p><a href="#toc.xhtml#c01q53a">Q53: Explain multi class classification?</a></p>
+<p><em>Ans:</em> Whenever we have more than two, that is, three or more classes to classify it is called multi class classification. This is also known as a multi nominal classification.</p>
+<p>By default, all the algorithms of scipy are multi class.</p>
+<p>Some of the strategies involved are:</p>
+<p>One vs. rest (One vs. all) trains a single classifier per class. The samples that match with the class are positive, and that which does not match is negative.</p>
+<p>One vs. One:</p>
+<ul>
+<li>We pick a pair of classes from a set of n classes</li>
+<li>Develop a binary classifier for each selected pair</li>
+<li>For n classes, all possible combinations of pairs of classes from n are selected</li>
+<li>Then, for each pair, we develop a binary support vector machine (SVM)</li>
+</ul>
+<p><a href="#toc.xhtml#c01q54a">Q54: Explain multi label classification?</a></p>
+<p><em>Ans:</em> Whenever we have more than one target variables associated with a problem, we call that as multi label classification.</p>
+<p>For example: While classifying fruit, we can classify it as fruit, sweet, red-colored, and so on. As we can clearly see, we have assigned multi labels to the same object.</p>
+<p><a href="#toc.xhtml#c01q55a">Q55: Explain how multi label problem can be solved?</a></p>
+<p><em>Ans:</em> Following are different ways in which it can be achieved:</p>
+<p><strong>Binary relevance:</strong> In this technique, we treat each label as a separate single class classification problem.</p>
+<p>Achieved with the help of skmultilearn.problem_transform.BinaryRelevance sample:</p>
+<p><code class="calibre10">fromskmultilearn.problem_transform import BinaryRelevance</code></p>
+<p><code class="calibre10">classifier = BinaryRelevance(any model)</code></p>
+<p><strong>Classifier Chains:</strong> A chain of a classifier is formed in which input passed to the first classifier is trained and passed on to the next classifier and so on.</p>
+<p>skmultilearn.problem_transform.ClassifierChain is used for this purpose:</p>
+<p><code class="calibre10">fromskmultilearn.problem_transform import ClassifierChain</code></p>
+<p><code class="calibre10">classifier = ClassifierChain(model)</code></p>
+<p><strong>Label power set:</strong> In this we try to form a single model which would try to solve the multi class model problem.</p>
+<p>skmultilearn.problem_transform.LabelPowerset is used:</p>
+<p><code class="calibre10">fromskmultilearn.problem_transform import LabelPowerset</code></p>
+<p><code class="calibre10">classifier = LabelPowerset(model)</code></p>
+<p><a href="#toc.xhtml#c01q56a">Q56: Explain some important metrics with respect to testing a model?</a></p>
+<p><em>Ans:</em> True positive indicates that the model was able to predict the positive outcome correctly. It indicates that the model is able to identify the condition when the condition is present.</p>
+<p>True negative indicates the model is able to properly predict the negative class. It indicates that the model does not find the condition when the condition is not present.</p>
+<p>False positive indicates the model wrongly predicts the positive class. It indicates that the model finds or reports a condition when the condition is not present.</p>
+<p>False negative indicates the model wrongly predicts the negative class. It indicates that the model does not report a condition when it is actually present.</p>
+<p>All the four conditions are easily indicated by confusion metrics:</p>
+<figure>
+<img src="OEBPS/images/12.jpg" class="calibre1" />
+</figure>
+<p><strong>Figure 1</strong></p>
+<p>Recall /Sensitivity / True Positive Rate (also known as TPR) ability to determine the condition when the condition is present. It can be found by:</p>
+<p><strong>True Positive/ (True Positive + False Negative)</strong></p>
+<p><strong>Specificity/ True Negative Rate (also known as TNR):</strong> It indicates the ability to not detect the condition when the condition is not actually present. It can be found by</p>
+<p><strong>True Negative/ (True Negative + False Positive)</strong></p>
+<p><strong>Precision/ Predictive value positive:</strong> This indicates the number of items correctly identified as positive from total items True Positive/ (True Positive + False Positive)</p>
+<p><strong>False Positive Rate or Type I Error:</strong> Number of items which are wrongly identified as positive from total true negatives</p>
+<p><strong>False Positive/ (False Positive + True Negative)</strong></p>
+<p><strong>False Negative Rate or Type II Error:</strong> This indicates the number of items wrongly identified as negative out of total true positives</p>
+<p><strong>False Negative/ (False Negative + True Positive)</strong></p>
+<p><a href="#toc.xhtml#c01q57a">Q57: What is logistic regression?</a></p>
+<p><em>Ans:</em> Logistic regression also known as logit model is most useful for understanding the influence of several independent variables on a single outcome variable.</p>
+<p>Function representation:</p>
+<p><em>p</em> = 1/1 + <em>e</em><sup>–(β0 + β1X1 + β2X2… β<em>n</em>X<em>n</em>)</sup></p>
+<p>It is a kind of predictive analysis.</p>
+<p>In this algorithm, the probabilities describing the possible outcomes of a single trial are modeled using a logistic function.</p>
+<p><strong>Disadvantages:</strong></p>
+<p>Assumes all predictors are independent of each other which may not always be true.</p>
+<p>Works only when the predicted or output variable is binary.</p>
+<p><a href="#toc.xhtml#c01q58a">Q58: Explain Naïve Bayes.</a></p>
+<p><em>Ans:</em> Naive Bayes algorithm based on Bayes’ theorem with the assumption of independence between every pair of features. This implies the predictors are independent of each other.</p>
+<p>Let <strong>P(c|x)</strong> is the posterior probability of class (c, target) given predictor (<strong>x</strong>, attributes).</p>
+<p><strong>P(c)</strong> is the prior probability of class.</p>
+<p><strong>P(x|c)</strong> is the likelihood which is the probability of predictor given class.</p>
+<p><strong>P(x)</strong> is the prior probability of predictor.</p>
+<figure>
+<img src="OEBPS/images/13.jpg" class="calibre1" />
+</figure>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Are extremely fast</li>
+<li>Training set required is less</li>
+<li>Performs well for categorical values</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Zero frequency problems will occur if some of the categories is missed and as a result the effect of same would be neglected</li>
+<li>Assumes independence of predictors which is not always true in real world</li>
+</ul>
+<p><a href="#toc.xhtml#c01q59a">Q59: What is Stochastic Gradient Descent?</a></p>
+<p><em>Ans:</em> Gradient is an effective method to calculate parameters or co-efficient which would cause the cost to minimum. The process involves assuming some value as co-efficient and keeping on calculating the slope and adjusting the co-efficient till a minimum cost is found.</p>
+<p>But when the logic is applied on very large data set, it becomes slow. Stochastic Gradient Descent is used for this purpose. In this, calculation is done based on batch instances rather than at the end.</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>The algorithm is extremely effective</li>
+<li>Easy to use</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Requires large number of parameters</li>
+</ul>
+<p><a href="#toc.xhtml#c01q60a">Q60: Explain decision tree algorithm.</a></p>
+<p><em>Ans:</em> Decision tree</p>
+<p>Generates the set of rules which depends on attributes or features and based upon classes.</p>
+<p>A decision tree is an inverse tree.</p>
+<p>The node at the top is called root node and the one without any child is called leaves.</p>
+<p>Each part of decision tree represents something which is indicated:</p>
+<ul>
+<li>Each attribute/feature is represented by node</li>
+<li>Rule or decision is represented by link</li>
+<li>Leaf node or node without children represents an the output class</li>
+</ul>
+<p>It uses a recursive approach.</p>
+<p>The aim is to divide the given data to various groups or classes based upon cost function.</p>
+<p><strong>Classification and Regression trees</strong> are also known as <strong>CART</strong>.</p>
+<figure>
+<img src="OEBPS/images/14.jpg" class="calibre1" />
+</figure>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Requires small data preparation</li>
+<li>Simple to understand and visualize</li>
+<li>Can handle dataset which can contain numbers</li>
+<li>Can handle dataset which can contain data in the form of categories</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<p>Outliers can have severe effect on output. Changes in input data does have an important effect on output.</p>
+<p><a href="#toc.xhtml#c01q61a">Q61: What is Gini index?</a></p>
+<p><em>Ans:</em> The Gini index is the cost function used to evaluate splits in the dataset.</p>
+<p>It gives the measure of impurity.</p>
+<p>How effective is the split of data based upon features can be easily determined by Gini index.</p>
+<p>A Gini score of 0 is ideal expected result while one having half-half probability is not preferred.</p>
+<figure>
+<img src="OEBPS/images/15.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q62a">Q62: Is Gini index the only means which can be used in decision tree?</a></p>
+<p><em>Ans:</em> Entrophy is another measure which can be used with decision tree.</p>
+<p><a href="#toc.xhtml#c01q63a">Q63: What is Pruning w.r.t. decision tree?</a></p>
+<p><em>Ans:</em> Pruning refers to the removal of branches having low importance in terms of classification or regression. The advantages are reduced complexity and reducing over fitting.</p>
+<p>The algorithm basically calculates whether removing a particular node causes an impact on prediction precision of the tree.</p>
+<p><a href="#toc.xhtml#c01q64a">Q64: What is random forest?</a></p>
+<p><em>Ans:</em> Random forest is a meta-estimator that fits a number of decision trees.</p>
+<p>It makes use of average to improve the ability to predict the model.</p>
+<p>The output from each decision tree is used to finally predict the final model and for doing this, it makes use of majority voting. The data is classified on the class which has majority voting.</p>
+<p>To generate this forest, sub samples are used and using sub samples from original data set sub trees are created.</p>
+<figure>
+<img src="OEBPS/images/16.jpg" class="calibre1" />
+</figure>
+<p><strong>Advantages:</strong> Over fitting is reduced.</p>
+<p><strong>Disadvantages:</strong> It’s slow as real time updates take time.</p>
+<p><a href="#toc.xhtml#c01q65a">Q65: Explain the difference between Random forest and decision tree.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/17.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q66a">Q66: What is overfitting and underfitting?</a></p>
+<p><em>Ans:</em> Following is the explanation for overfitting and underfitting:</p>
+<p><strong>Overfitting:</strong></p>
+<ul>
+<li>Refers to a model which performs very well w.r.t. training set. Such model is able to predict the noise and randomness w.r.t. training set very well but would not perform well when it comes to newly arrived data.</li>
+<li>Occurs with nonparametric and nonlinear models.</li>
+</ul>
+<p><strong>Underfitting:</strong></p>
+<ul>
+<li>Refers to a model that does not perform well both with training set and newly arrived data.</li>
+<li>An underfitted model would be directly rejected due to its performance via benchmark and accuracy.</li>
+</ul>
+<p><a href="#toc.xhtml#c01q67a">Q67: What are the reasons for under fitting occurrences?</a></p>
+<p><em>Ans:</em> Under fitting is said to happen when a model is unable to capture or understand the nature of data. This has a direct impact on the accuracy of the model.</p>
+<p>The reason for this could be:</p>
+<ul>
+<li>Less data available to analyze</li>
+<li>Wrong data</li>
+<li>Wrong features considered</li>
+<li>It could be also be due to wrong formed model</li>
+</ul>
+<p>The solution to under fitting is to make use of more data and possibly even clean data by removing unwanted features or columns.</p>
+<p>Shown below is how under fitting looks when plotted</p>
+<figure>
+<img src="OEBPS/images/18.jpg" class="calibre1" />
+</figure>
+<p><strong>Figure 2</strong></p>
+<p><a href="#toc.xhtml#c01q68a">Q68: Does over fitting get affected by noise?</a></p>
+<p><em>Ans:</em> Over fitting is said to happen when a model gets easily affected by noise or outliers.</p>
+<p>The details available in such a case are more, and as a result of this, model gets affected.</p>
+<p>Following is the over fitting diagram when plotted:</p>
+<figure>
+<img src="OEBPS/images/19.jpg" class="calibre1" />
+</figure>
+<p><strong>Figure 3</strong></p>
+<p><strong>Over fitting can be overcome by:</strong></p>
+<ul>
+<li><strong>Pruning:</strong> Pruning as the name suggests, is cutting. We prune wanted data in addition to nodes that gets easily affected by wrong data.</li>
+<li><strong>Cross-Validation:</strong> Sample prediction error is one way that helps on the problem of over fitting. This is generally accomplished with the help of k fold validation. In k fold validation, the original sample data is categorized into k subsets. One of the samples is used for testing, and remaining subsets are used to form the model. The output results which would be collected and then averaged out get the final estimation.</li>
+<li><strong>Regularization:</strong> The aim of this is to find out features that align with the objective of the problem and thus removing features that do not contribute to the final output.</li>
+</ul>
+<p><a href="#toc.xhtml#c01q69a">Q69: Explain KNN (K Nearest Neighbour) steps involved, advantage and disadvantage.</a></p>
+<p><em>Ans:</em> KNN abbreviation is K Nearest Neighbor and is explained down below:</p>
+<ul>
+<li>Not an eager learner i.e. learns lazily</li>
+<li>It stores instances of training set.</li>
+<li>The output is determined by majority vote which is given by k nearest neighbors of each point.</li>
+</ul>
+<p>Steps involved are as follows:</p>
+<ol>
+<li>Calculate the distance.</li>
+<li>Find the closest neighbors.</li>
+<li>Vote for labels.</li>
+</ol>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Much faster.</li>
+<li>No need to train a model for generalization.</li>
+<li>Can be used for nonlinear data and regression problems.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Large memory foot print.</li>
+<li>Performance decreases with increase in number of dimensions.</li>
+</ul>
+<p><a href="#toc.xhtml#c01q70a">Q70: Explain selection bias.</a></p>
+<p><em>Ans:</em> Selection bias is the bias introduced by the selection of individuals, groups or data for analysis in such a way that proper randomization is not achieved, thereby ensuring that the sample obtained is not representative of the population intended to be analyzed.</p>
+<p>They are systematic in nature and produced by the measurement or sampling process.</p>
+<p><a href="#toc.xhtml#c01q71a">Q71: What does selection bias indicate w.r.t. algorithm?</a></p>
+<p><em>Ans:</em> It indicates that some important variable has been left off or not considered during the algorithm.</p>
+<p><a href="#toc.xhtml#c01q72a">Q72: What is Bootstrap sample?</a></p>
+<p><em>Ans:</em> Bootstrap sample is used to estimate the distribution. A sample taken with replacement from an observed data set is called bootstrap sample.</p>
+<figure>
+<img src="OEBPS/images/20.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q73a">Q73: What is Resampling?</a></p>
+<p><em>Ans:</em> Resampling combines shuffling and bootstrapping.</p>
+<p><a href="#toc.xhtml#c01q74a">Q74: Explain tail.</a></p>
+<p><em>Ans:</em> Tail is the portion of frequency distribution where extreme values are observed at a very low frequency.</p>
+<p><a href="#toc.xhtml#c01q75a">Q75: Explain the difference between one way test and two way test.</a></p>
+<p><em>Ans:</em> <strong>One-way test</strong></p>
+<p>It is the hypothesis test where results occur only in one direction.</p>
+<p><strong>Two-way test</strong></p>
+<p>It is the hypothesis test where results occur in two directions.</p>
+<p><a href="#toc.xhtml#c01q76a">Q76: Explain degree of freedom.</a></p>
+<p><em>Ans:</em> It indicates how much value from given samples are supposed to vary to give the required result.</p>
+<p>In a sample of 5 we can say 4 values can vary if the mean is known and 4 values are known.</p>
+<p><a href="#toc.xhtml#c01q77a">Q77: What is predictive modeling?</a></p>
+<p><em>Ans:</em> Prediction modeling involves building a model which will allow predicting a result/events/behavior whether value of input variables are given. To find out the relationship of input variables and how they affect the output forms the part of regression study.</p>
+<p><a href="#toc.xhtml#c01q78a">Q78: What is time series analysis?</a></p>
+<p><em>Ans:</em> Analysis which makes use of data in a particular time interval or periods is called time series analysis. Temporal aspects continue in this type of analysis. It may involve observation of a variable at different time instances (time series data) or collecting different data at same point of time (cross sectional data) or a combination of both (pooled data).</p>
+<p><a href="#toc.xhtml#c01q79a">Q79: What is deep learning?</a></p>
+<p><em>Ans:</em> Deep learning makes it possible to learn by existing examples. The models are generated by computer by using existing examples.</p>
+<p>The underlying relationship of data can be determined with the help of neural network</p>
+<p>Neural network consists of various nodes or computers interconnected to perform complex/vast computation.</p>
+<p>To achieve deep learning we require large amount of labeled data set as well as large computing capability.</p>
+<p>Again, deep learning is a part of machine learning where the scale of operation is much higher.</p>
+<figure>
+<img src="OEBPS/images/21.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c01q80a">Q80: What is Convolutional Neural Network?</a></p>
+<p><em>Ans:</em> CNN or ConvNet stands for Convolutional neural network, is a type of learning in which model learns to perform classification of models. It eliminates the need to perform manual feature extraction. It allows this with the help of many layers many of which can be hidden.</p>
+<p><a href="#toc.xhtml#c01q81a">Q81: What are different ways to determine optimal value of clusters?</a></p>
+<p><em>Ans:</em> <strong>Elbow method:</strong> makes use of sum of squares of each cluster is calculated. The calculated values is then plotted in the form of graph. The best solution is selected based on graph by looking at the slope</p>
+<p><strong>Gap method:</strong> This makes use of gap value which is determined by looking at the variation between clusters for various values of k under null reference</p>
+<p><strong>Silhouette method:</strong> makes use of silhouette average to compute the best performing cluster. The above average is determined by looking at consistency within cluster</p>
+<p><a href="#toc.xhtml#c01q82a">Q82: What are various distance related functions for similarity measures?</a></p>
+<p><em>Ans:</em> Some of the common ones are Euclidean Distance, Cosine Similarity, Pearson’s Coefficient and Jaccard Similarity.</p>
+</article>
+<p><span id="c02.xhtml"></span></p>
+<article type="bodymatter">
+<header>
+<h1 class="chap1"><a href="#toc.xhtml#c02" class="calibre7">C<span class="small">HAPTER</span> 2</a></h1>
+<h1 class="subchap"><a href="#toc.xhtml#c02" class="calibre7">Python Programming Questions</a></h1>
+</header>
+<p><strong><em>Note:</em> [Q: Question Number and Ans: Answer]</strong></p>
+<p><a href="#toc.xhtml#c02q1a">Q1: Is Python Object oriented?</a></p>
+<p><em>Ans:</em> Yes, Python is an object oriented programming language since we can deal with classes and objects.</p>
+<p><a href="#toc.xhtml#c02q2a">Q2: Is Python case sensitive?</a></p>
+<p><em>Ans:</em> Yes</p>
+<p><a href="#toc.xhtml#c02q3a">Q3: What kind of language is Python?</a></p>
+<p><em>Ans:</em> Python is interpreted programming language.</p>
+<p><a href="#toc.xhtml#c02q4a">Q4: What are different versions of Python?</a></p>
+<p><em>Ans:</em> Python comes with two major versions 2.x and 3.x.</p>
+<p>There are lots of differences between both of them. Following are some of them:</p>
+<figure>
+<img src="OEBPS/images/22.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q5a">Q5: Explain different implementations of Python?</a></p>
+<p><em>Ans:</em> Following are different implementations:</p>
+<ul>
+<li><strong>CPython:</strong> Reference implementation written in C and native Python.</li>
+<li><strong>Stackless Python:</strong> is an addition or improvement over CPython to support micro threads.</li>
+<li><strong>PyPy:</strong> is just in time compiler where program is executed on fly rather than compile time.</li>
+<li>MicroPython and CircuitPython supports Microcontrollers.</li>
+<li>Jython compiles into Java byte code, which can then be executed by every Java virtual machine implementation.</li>
+<li>IronPython allows running Python programs on the .NET Common Language Runtime.</li>
+<li>The RPython language can be compiled to C, Java bytecode, or Common Intermediate Language, and is used to build the PyPy interpreter of Python.</li>
+<li>Pyjs compiles Python to JavaScript.</li>
+<li>Cython compiles Python to C and C++.</li>
+<li>Pythran compiles Python to C++.</li>
+</ul>
+<p><a href="#toc.xhtml#c02q6a">Q6: Is Python loosely typed?</a></p>
+<p><em>Ans:</em> Python is loosely typed programming language since the same variable can hold different data at different points of time.</p>
+<p>For example:</p>
+<p><code class="calibre10">a = 20 (holds int)</code></p>
+<p><code class="calibre10">a = ”rahul” (holds string now)</code></p>
+<p>Same variable can be used to store different value or data belonging to different data types.</p>
+<p><a href="#toc.xhtml#c02q7a">Q7: How to start a new block in Python?</a></p>
+<p><em>Ans:</em> A new block begins when the line is intended by 4 spaces.</p>
+<p><a href="#toc.xhtml#c02q8a">Q8: How to get data type of a particular variable?</a></p>
+<p><em>Ans:</em> Type function is used in the data type of enclosed variable.</p>
+<p>For example:</p>
+<p><code class="calibre10">&gt;&gt;&gt; a = 10</code></p>
+<p><code class="calibre10">&gt;&gt;&gt; type(a)</code></p>
+<p><code class="calibre10">&lt;class ‘int’&gt;</code></p>
+<p><a href="#toc.xhtml#c02q9a">Q9: How many ways can Python program be run?</a></p>
+<p><em>Ans:</em> Python programs can be run using IDLE which is the integrated IDE or it can also be run from outside using <strong>python.exe</strong> in windows or <strong>python.sh</strong> in UNIX/LINUX based environment.</p>
+<p><a href="#toc.xhtml#c02q10a">Q10: Explain the importance of Pylint and Pychecker.</a></p>
+<p><em>Ans:</em> Pylint is used to check coding standards w.r.t. modules.</p>
+<p>Pychecker is a static analysis tool that helps find out bugs in the source code.</p>
+<p><a href="#toc.xhtml#c02q11a">Q11: Explain Zen of Python.</a></p>
+<p><em>Ans:</em> Long time Pythoneer Tim Peters succinctly channels the BDFL’s guiding principles for Python’s design into 20 aphorisms, only 19 of which have been written down.</p>
+<p>The Zen of Python</p>
+<p>Beautiful is better than ugly.</p>
+<p>Explicit is better than implicit.</p>
+<p>Simple is better than complex.</p>
+<p>Complex is better than complicated.</p>
+<p>Flat is better than nested.</p>
+<p>Sparse is better than dense.</p>
+<p>Readability counts.</p>
+<p>Special cases aren’t special enough to break the rules.</p>
+<p>Although practicality beats purity.</p>
+<p>Errors should never pass silently.</p>
+<p>Unless explicitly silenced.</p>
+<p>In the face of ambiguity, refuse the temptation to guess.</p>
+<p>There should be one-- and preferably only one --obvious way to do it.</p>
+<p>Although that way may not be obvious at first unless you’re Dutch.</p>
+<p>Now is better than never.</p>
+<p>Although never is often better than *right* now.</p>
+<p>If the implementation is hard to explain, it’s a bad idea.</p>
+<p>If the implementation is easy to explain, it may be a good idea.</p>
+<p>Namespaces are one honking great idea – let’s do more of those!</p>
+<p><a href="#toc.xhtml#c02q12a">Q12: How to print Zen in Python?</a></p>
+<p><em>Ans:</em> We can print Zen of Python by using:</p>
+<p><code class="calibre10">import this</code></p>
+<p><code class="calibre10">print(this)</code></p>
+<p><a href="#toc.xhtml#c02q13a">Q13: Explain Python data types.</a></p>
+<p><em>Ans:</em></p>
+<ul>
+<li><strong>Integers:</strong> Represent numbers without decimals</li>
+<li><strong>Floating point:</strong> Represent number with decimals</li>
+<li>Complex numbers represents numbers having real and imaginary part</li>
+<li>String collection of characters</li>
+<li>Boolean represents the value as True or False</li>
+</ul>
+<p>For example:</p>
+<p><code class="calibre10">a = 5</code></p>
+<p><code class="calibre10">print(a, “belongs to this type”, type(a))</code></p>
+<p><code class="calibre10">a = 2.0</code></p>
+<p><code class="calibre10">print(a, “belongs to this type”, type(a))</code></p>
+<p><code class="calibre10">a = 1+2j</code></p>
+<p><code class="calibre10">print(a, “ has type”,type(a))</code></p>
+<p><code class="calibre10">a = ‘Hello world’</code></p>
+<p><code class="calibre10">print(a,” has type”,type(a))</code></p>
+<p><code class="calibre10">a = True</code></p>
+<p><code class="calibre10">print(a, “ has type”,type(a))</code></p>
+<p><code class="calibre10">a = 1+2j</code></p>
+<p><code class="calibre10">print(“Is complex number?”, isinstance(a,complex))</code></p>
+<p><strong>Output:</strong></p>
+<p>5 belongs to this type &lt;class ‘int’&gt;</p>
+<p>2.0 belongs to this type &lt;class ‘float’&gt;</p>
+<p>(1+2j) has type &lt;class ‘complex’&gt;</p>
+<p>Hello world has type &lt;class ‘str’&gt;</p>
+<p>True has type &lt;class ‘bool’&gt;</p>
+<p>Is complex number? True</p>
+<p><a href="#toc.xhtml#c02q14a">Q14: How can we switch variables in Python?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/23.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q15a">Q15: What is the use of pass statement in Python?</a></p>
+<p><em>Ans:</em> Pass statement indicates no operation statement. It is generally used to complete the body of classes or functions for alter use.</p>
+<p><a href="#toc.xhtml#c02q16a">Q16: Is Python pass by value or pass by reference?</a></p>
+<p><em>Ans:</em> Neither of them is used.</p>
+<p>Python passes arguments by value where all values are references to actual objects.</p>
+<p><a href="#toc.xhtml#c02q17a">Q17: Does Python supports chained operations?</a></p>
+<p><em>Ans:</em> Yes, chained operations are supported by Python.</p>
+<p><code class="calibre10">no = 8</code></p>
+<p><code class="calibre10">if 16 &gt; no &gt; 2:</code></p>
+<p><code class="calibre10">print(“Chained comparison “)</code></p>
+<p>In the above example, 16 is compared with 8 which is further compared with 2.</p>
+<p><a href="#toc.xhtml#c02q18a">Q18: Explain ALL and ANY.</a></p>
+<p><em>Ans:</em> ALL returns TRUE, only when all the conditions are TRUE.</p>
+<p>Any return TRUE even when one condition is TRUE.</p>
+<p><code class="calibre10">lst= range(20)</code></p>
+<p><code class="calibre10">print(all(value &gt; 18 for value in lst)) # returns false since range starts with 0</code></p>
+<p><code class="calibre10">lst = range(21,100)</code></p>
+<p><code class="calibre10">print(all(value &gt; 18 for value in lst)) # returns true because range starts with 21</code></p>
+<p><code class="calibre10">print(any(value &gt; 18 for value in lst)) # returns true since 22 is greater than 18 and is true</code></p>
+<p><code class="calibre10">print(any(value &lt; 18 for value in lst)) # return false since not a single value exists which satisfies given</code></p>
+<p><code class="calibre10">#condition</code></p>
+<p><a href="#toc.xhtml#c02q19a">Q19: Explain the difference between IS and ==.</a></p>
+<p><em>Ans:</em> <strong>IS:</strong> True only if 2 variables point to same object.</p>
+<p>==: True if objects which are referred by objects are equal.</p>
+<figure>
+<img src="OEBPS/images/24.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q20a">Q20: Explain supported collection of data type w.r.t. Python?</a></p>
+<p><em>Ans:</em> Python supports four collections of data types:</p>
+<p><strong>List:</strong></p>
+<ul>
+<li>Stores data in a fashion similar to array in other programming language.</li>
+<li>It is mutable and item can be added subtracted or deleted.</li>
+<li>Index starts with zero.</li>
+<li>[] is used to indicate that collection is list.</li>
+<li>It can be homogenous and heterogeneous i.e. store data of same or different data type.</li>
+<li>It can contain duplicates.</li>
+</ul>
+<p><strong>Tuples:</strong></p>
+<ul>
+<li>Immutable collection i.e. changes to elements are not possible.</li>
+<li>Indicated by ().</li>
+<li>Again can be homogenous and heterogeneous i.e. store data of same or different data type.</li>
+<li>Duplicates can be present.</li>
+</ul>
+<p><strong>Set:</strong></p>
+<ul>
+<li>Duplicates are absent in set.</li>
+<li>It makes use of {} symbol.</li>
+</ul>
+<p><strong>Dictionary:</strong></p>
+<ul>
+<li>Stores data in form of key value pair.</li>
+<li>Indicated by {} with each item having : between</li>
+<li>Key has to be immutable object.</li>
+</ul>
+<p><a href="#toc.xhtml#c02q21a">Q21: Create a simple number list?</a></p>
+<p><em>Ans: a</em> = [1,22,33]</p>
+<p>Above creates a simple list having three values.</p>
+<figure>
+<img src="OEBPS/images/25.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q22a">Q22: Can you create nested list?</a></p>
+<p><em>Ans:</em> Following is a nested list of three elements having list again at index 1 and nested list at location 2:</p>
+<ul>
+<li><em>nestedLst = [“hello”, [100,101], [‘aAA’,[‘pAA’,’rAA’]]]</em></li>
+<li><em>print(‘ Nested list’,nestedLst)</em></li>
+<li><em>print(nestedLst[0])#prints hello</em></li>
+<li><em>print(nestedLst[2][1][1])) #prints rAA</em></li>
+</ul>
+<p><a href="#toc.xhtml#c02q23a">Q23: Explain CRUD (Create, Update, and Delete) operations from list.</a></p>
+<p><em>Ans:</em> <strong>Creation:</strong></p>
+<p><code class="calibre10">lst = [11,22,33, 44]</code></p>
+<p>Above statement creates a list with the name lst.</p>
+<p><strong>Empty list creation:</strong></p>
+<p><code class="calibre10">lst =[]</code></p>
+<p>The above statement creates an empty list.</p>
+<p><strong>Adding single element in list:</strong></p>
+<p><code class="calibre10">lst.append(55)</code></p>
+<p><strong>Adding elements of another list:</strong></p>
+<p><code class="calibre10">lst.extend([44,44,33])</code></p>
+<p><strong>Concatenate list:</strong></p>
+<p>Concatenate is to join two list.</p>
+<p>Following code adds two list and creates a new list c containing elements from both list.</p>
+<p><code class="calibre10">a =[1,2,3,4]</code></p>
+<p><code class="calibre10">b=[5,65]</code></p>
+<p><code class="calibre10">c = a + b</code></p>
+<p><code class="calibre10">print(c) #Outputs 1,2,3,4,5,65</code></p>
+<p><strong>Remove element using value:</strong></p>
+<p><code class="calibre10">a =[1,2,3,4]</code></p>
+<p><code class="calibre10">a.remove(3)</code></p>
+<p><code class="calibre10">print(a) #[1,2,4]</code></p>
+<p>In above code, element with value 3 is removed.</p>
+<p><strong>Delete elements by using index:</strong></p>
+<p><code class="calibre10">a =[1,2,3,4]</code></p>
+<p><code class="calibre10">del a[2] #removes element at index 2</code></p>
+<p><code class="calibre10">print(a) #[1,2,4]</code></p>
+<p><strong>Clear or Empty a list:</strong></p>
+<p><code class="calibre10">a=[1,2,3,4]</code></p>
+<p><code class="calibre10">a.clear()</code></p>
+<p><code class="calibre10">print(a) # prints []</code></p>
+<p><strong>Length of list:</strong></p>
+<p><code class="calibre10">To print size of list len, function is used.</code></p>
+<p><code class="calibre10">a=[1,2,3,4]</code></p>
+<p><code class="calibre10">print( len(a)) #prints 4</code></p>
+<p><a href="#toc.xhtml#c02q24a">Q24: Explain operations in dictionary.</a></p>
+<p><em>Ans:</em> <strong>Creation:</strong></p>
+<p><code class="calibre10">sdict ={1:’one’,2:’two’}</code></p>
+<p>The above statement creates a dictionary of two items having keys 1 and 2 and corresponding values as one and two respectively.</p>
+<p><strong>Creation of empty</strong></p>
+<p><code class="calibre10">sdict={}</code></p>
+<p><code class="calibre10">Add key value pair</code></p>
+<p><code class="calibre10">sdict={}</code></p>
+<p><code class="calibre10">sdict[3] =’three’</code></p>
+<p>The above statement adds an item in the dictionary with the key as 3 and value as three.</p>
+<p><strong>Add or Update elements from another dictionary</strong></p>
+<p>Addition of new elements from another dictionary.</p>
+<p><code class="calibre10">dict1 ={1:’one’,2:’two’}</code></p>
+<p><code class="calibre10">dict2 ={5:’five’}</code></p>
+<p><code class="calibre10">dict1.update(dict2)</code></p>
+<p><code class="calibre10">print(dict1) //prints 1:one,2:two,5:five</code></p>
+<p>Updating of existing element from another dictionary.</p>
+<p><code class="calibre10">dict1 ={1:’one’,2:’two’,5:’FIVE’}</code></p>
+<p><code class="calibre10">dict2 ={5:’five’}</code></p>
+<p><code class="calibre10">dict1.update(dict2)</code></p>
+<p><code class="calibre10">print(dict1) # 1:one 2: two 5: five</code></p>
+<p>In the above example the value of key 5 is replaced from FIVE to five.</p>
+<p>Thus, update is taken from dict2.</p>
+<p><strong>Clear or Empty dictionary</strong></p>
+<p><code class="calibre10">dict1 ={1:’one’,2:’two’,5:’FIVE’}</code></p>
+<p><code class="calibre10">dict1.clear()</code></p>
+<p><code class="calibre10">print(dict1) #prints {}</code></p>
+<p><code class="calibre10">Length of dictionary</code></p>
+<p><code class="calibre10">len(dict) get length of dictionary</code></p>
+<p><a href="#toc.xhtml#c02q25a">Q25: Explain operation with tuples.</a></p>
+<p><em>Ans:</em> <strong>Creation</strong></p>
+<p><code class="calibre10">tup = (3, 4)</code></p>
+<p>Creation of empty tuple:</p>
+<p><code class="calibre10">tup = ()</code></p>
+<p>Creation of tuple with single element</p>
+<p>This is a bit of challenge because since (1) is taken as number as compared to tuple.</p>
+<p>So, to create tuple with one element we make use of the following:</p>
+<p><code class="calibre10">tup = (1,)</code></p>
+<p>Adding new elements or removing elements from tuples are not possible since tuples are immutable.</p>
+<p><strong>Length of tuples:</strong></p>
+<p><code class="calibre10">len(a)</code></p>
+<p><a href="#toc.xhtml#c02q26a">Q26: Explain del?</a></p>
+<p><em>Ans:</em> The del is used to remove variables from memory.</p>
+<p><code class="calibre10">a= (1,2,3)</code></p>
+<p><code class="calibre10">print(a) #prints 1 2 3</code></p>
+<p><code class="calibre10">del a</code></p>
+<p><code class="calibre10">print(a) # gives a not defined error</code></p>
+<p><a href="#toc.xhtml#c02q27a">Q27: If del can remove variable can it remove tuple variable?</a></p>
+<p><em>Ans:</em> Yes, <strong>del</strong> can remove tuple variable. A tuple has to be immutable till it lives in memory. While <strong>del</strong> removes the object or variable from memory itself hence <strong>del</strong> can remove tuple.</p>
+<p><code class="calibre10">a =(1,2)</code></p>
+<p><code class="calibre10">del a</code></p>
+<p>But if we try to remove an element from tuple using del, it won’t work.</p>
+<p><code class="calibre10">a =(1,2)</code></p>
+<p><code class="calibre10">del a[2] #TypeError: ‘tuple’ object doesn’t support item deletion</code></p>
+<p><a href="#toc.xhtml#c02q28a">Q28: Delete last element in a list.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/26.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q29a">Q29: Predict the output of following code.</a></p>
+<p><code class="calibre10">a =(1,2,3,4)</code></p>
+<p><code class="calibre10">b=(5,65)</code></p>
+<p><code class="calibre10">c = a + b</code></p>
+<p><code class="calibre10">print(c)</code></p>
+<p><em>Ans:</em> This question is tricky, mainly because it involves tuples which are immutable. So, the general answer given by many is, it would raise an error which is incorrect. The above code adds two tuples to generate new tuple. Existing tuples are untouched which satisfies immutability property. Hence, output is</p>
+<p>(1, 2, 3, 4, 5, 65). So, while reading such questions see if the immutability is affected or not. If not then operation would be successful.</p>
+<p><a href="#toc.xhtml#c02q30a">Q30: What do you mean by list comprehension?</a></p>
+<p><em>Ans:</em> The process of creating a list while performing some operation on the data so that it can be accessed using an iterator is referred to as list comprehension.</p>
+<p><a href="#toc.xhtml#c02q31a">Q31: Explain the preferred way for looping through list?</a></p>
+<p><em>Ans:</em> The preferred way of looping through list is with the help of enumerate function.</p>
+<p>Enumerate function returns index and corresponding value:</p>
+<figure>
+<img src="OEBPS/images/27.jpg" class="calibre1" />
+</figure>
+<p><strong>Output</strong></p>
+<p><code class="calibre10">0 a</code></p>
+<p><code class="calibre10">1 b</code></p>
+<p><code class="calibre10">2 c</code></p>
+<p><a href="#toc.xhtml#c02q32a">Q32: Find the reverse of the dictionary?</a></p>
+<p><em>Ans:</em> Reverse of dictionary means key becomes value and value becomes the key.</p>
+<p>It is easily achievable in Python.</p>
+<figure>
+<img src="OEBPS/images/28.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q33a">Q33: How to sort dictionary by value?</a></p>
+<p><em>Ans:</em> <code class="calibre10">import operator as o</code></p>
+<p><code class="calibre10">countryDict ={‘CN’: 4, ‘FR’: 5,’UK’: 1, ‘USA’: 2, ‘IN’: 3, ‘GM’: 6}</code></p>
+<p><code class="calibre10">print(sorted(countryDict.items(), key=o.itemgetter(1)))</code></p>
+<p><a href="#toc.xhtml#c02q34a">Q34: What is the use of shuffle function?</a></p>
+<p><em>Ans:</em> It is used to arrange the values within the list randomly.</p>
+<p><a href="#toc.xhtml#c02q35a">Q35: What is the preferred way to get a value based on key in Python?</a></p>
+<p><em>Ans:</em> The preferred way to get a value based on key is to use get method with default value.</p>
+<p>The default value will be used whenever key is absent in the dictionary.</p>
+<figure>
+<img src="OEBPS/images/29.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q36a">Q36: Explain alternate way of merging 2 or more dictionaries without using update method?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/30.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q37a">Q37: What is the preferred way of fetching last element/second last and so on from a list?</a></p>
+<p><em>Ans:</em> Python supports negative indexes on list.</p>
+<ul>
+<li>-1 refers to last element</li>
+<li><p>-2 refers to second last element</p>
+<p><code class="calibre10">l = [1, 2, 3, 4, 5]</code></p>
+<p><code class="calibre10">print(l[-1]) #prints 5</code></p>
+<p><code class="calibre10">print(l[-2]) #prints 4</code></p></li>
+</ul>
+<p><a href="#toc.xhtml#c02q38a">Q38: What is the preferred way for reversing a list?</a></p>
+<p><em>Ans:</em> The preferred way for returning a list is with help of reversed function.</p>
+<figure>
+<img src="OEBPS/images/31.jpg" class="calibre1" />
+</figure>
+<p>The above code will print the following:</p>
+<p><code class="calibre10">5,4,3,2,1</code></p>
+<p><a href="#toc.xhtml#c02q39a">Q39: Explain various string utility functions in Python.</a></p>
+<p><em>Ans:</em> <strong>capitalize():</strong> Capitalizes the first letter of string.</p>
+<p><strong>isalnum():</strong> Returns true if string has at least 1 character and all characters are alphanumeric and false otherwise.</p>
+<p><strong>isdigit():</strong> Returns true if string contains only digits and false otherwise.</p>
+<p><strong>islower():</strong> Returns true if string has at least 1 cased character and all cased characters are in lowercase and false otherwise.</p>
+<p><strong>isnumeric():</strong> Returns true if a unicode string contains only numeric characters and false otherwise.</p>
+<p><strong>isspace():</strong> Returns true if string contains only whitespace characters and false otherwise.</p>
+<p><strong>isupper():</strong> Returns true if string has at least one cased character and all cased characters are in uppercase and false otherwise.</p>
+<p><strong>lower():</strong> Converts all uppercase letters in string to lowercase.</p>
+<p><strong>lstrip():</strong> Removes all leading whitespace in string.</p>
+<p><strong>max(str):</strong> Returns the max alphabetical character from the string str.</p>
+<p><strong>replace(old, new [, max]):</strong> Replaces all occurrences of old in string with new or at most max occurrences if max given.</p>
+<p><strong>strip([chars]):</strong> Performs both lstrip() and rstrip() on string.</p>
+<p><strong>swapcase():</strong> Inverts case for all letters in string.</p>
+<p><a href="#toc.xhtml#c02q40a">Q40: How to check whether two strings are equal.</a></p>
+<p><em>Ans:</em> == operator can be used to check whether strings are equal or not.</p>
+<p><a href="#toc.xhtml#c02q41a">Q41: Can string use single quote or double quote?</a></p>
+<p><em>Ans:</em> Both single quote or double quote is allowed but combination of both is not.</p>
+<p><a href="#toc.xhtml#c02q42a">Q42: Explain type conversions on collection types.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/32.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q43a">Q43: Explain set theory operations supported by set data type.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/33.jpg" class="calibre1" />
+</figure>
+<p>Sample code for above operations:</p>
+<p><code class="calibre10">setA = {11,22,33,44,5}</code></p>
+<p><code class="calibre10">setB = {44,22,1}</code></p>
+<p><code class="calibre10">setC = {55}</code></p>
+<p><code class="calibre10">setD = {44,22,1,447}</code></p>
+<p><code class="calibre10">print(‘isdisjoint’,setA.isdisjoint(setC))</code></p>
+<p><code class="calibre10">print(‘Is setB subset of setD ‘,setB.issubset(setD))</code></p>
+<p><code class="calibre10">print(‘Is setD superset of setD ‘,setD.issuperset(setB))</code></p>
+<p><code class="calibre10">print(‘common elements are ‘,setA &amp; setB)</code></p>
+<p><code class="calibre10">print(‘common elements are ‘,setA.</code></p>
+<p><code class="calibre10">intersection(setB))</code></p>
+<p><code class="calibre10">print(‘Elements in A but not in B ‘, setA-setB)</code></p>
+<p><code class="calibre10">print(‘Elements in B but not in A ‘, setB-setA)</code></p>
+<p><code class="calibre10">print(‘Elements in A but not in B ‘, setA.difference(setB))</code></p>
+<p><code class="calibre10">print(‘Elements in B but not in A ‘, setB.difference(setA))</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">isdisjoint True</code></p>
+<p><code class="calibre10">Is setB subset of setD True</code></p>
+<p><code class="calibre10">Is setD superset of setD True</code></p>
+<p><code class="calibre10">common elements are {44, 22}</code></p>
+<p><code class="calibre10">common elements are {44, 22}</code></p>
+<p><code class="calibre10">Elements in A but not in B {33, 11, 5}</code></p>
+<p><code class="calibre10">Elements in B but not in A {1}</code></p>
+<p><code class="calibre10">Elements in A but not in B {33, 11, 5}</code></p>
+<p><code class="calibre10">Elements in B but not in A {1}</code></p>
+<p><a href="#toc.xhtml#c02q44a">Q44: Explain frozenset?</a></p>
+<p><em>Ans:</em> frozenset gives immutability to set i.e. nothing in it can be modified.</p>
+<p><a href="#toc.xhtml#c02q45a">Q45: Explain functions in Python?</a></p>
+<p><em>Ans:</em> A function is a group of statements intended to do particular task. In Python we can define functions with the help of <strong>def</strong>.</p>
+<p><code class="calibre10">def fun():</code></p>
+<p><code class="calibre10">print(‘hello’)</code></p>
+<p>Above creates a function fun which prints <strong>hello</strong> message.</p>
+<p><code class="calibre10">def fun1(ip):</code></p>
+<p><code class="calibre10">print(‘hello’,ip)</code></p>
+<p>Above creates a function with the name fun1 which takes parameter ip and prints corresponding hello message with parameters.</p>
+<p><code class="calibre10">def area(r):</code></p>
+<p><code class="calibre10">return 3.14* r * r</code></p>
+<p>Above creates a function which returns result with the help of return type.</p>
+<p><a href="#toc.xhtml#c02q46a">Q46: What is a Boolean function?</a></p>
+<p><em>Ans:</em> Boolean function is one which either returns True or False.</p>
+<p><code class="calibre10">def isdivisble(num,den):</code></p>
+<p><code class="calibre10">if num%den==0:</code></p>
+<p><code class="calibre10">return True</code></p>
+<p><code class="calibre10">else:</code></p>
+<p><code class="calibre10">return False</code></p>
+<p><code class="calibre10">print(isdivisble(10,2))</code></p>
+<p>The above functions returns true or false based upon whether the numerator is divisible by denominator.</p>
+<p><a href="#toc.xhtml#c02q47a">Q47: Can we specify data type for arguments as well as return types in Python?</a></p>
+<p><em>Ans:</em> Recent version of Python has support for type annotations which allows doing the same.</p>
+<figure>
+<img src="OEBPS/images/34.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q48a">Q48: Explain variable arguments?</a></p>
+<p><em>Ans:</em> Variable arguments in Python can be achieved with the help of *args.</p>
+<figure>
+<img src="OEBPS/images/35.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q49a">Q49: Write a program to find occurrences or count of characters in given word.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/36.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q50a">Q50: What is **kwargs?</a></p>
+<p><em>Ans:</em> **kwargs is also variable arguments but in the form of dictionary input also known as keyworded, variable-length argument.</p>
+<figure>
+<img src="OEBPS/images/37.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q51a">Q51: Write a simple Lambda expression?</a></p>
+<p><em>Ans:</em> <code class="calibre10">sumlambda = lambda x, y : x + y</code></p>
+<p><code class="calibre10">print(sumlambda(2, 3))</code></p>
+<p>In the above example, we have defined lambda expression which takes two parameters and performs the addition. The return result is x+ y but no need to return explicitly since it contains single statement only.</p>
+<p><a href="#toc.xhtml#c02q52a">Q52: Lambda forms in Python contain statements? True or False?</a></p>
+<p><em>Ans:</em> Statement is true as lambdas in Python have to be single line expressions.</p>
+<p><a href="#toc.xhtml#c02q53a">Q53: Explain filter function?</a></p>
+<p><em>Ans:</em> The filter function is a utility function which can skip values based on some condition.</p>
+<figure>
+<img src="OEBPS/images/38.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q54a">Q54: Explain steps involved in reading and writing a file?</a></p>
+<p><em>Ans:</em> In both the case, three steps are involved.</p>
+<ol>
+<li>Opening the file.</li>
+<li>Reading or writing the file using corresponding functions (read or write).</li>
+<li>Closing the file.</li>
+</ol>
+<p>Write example:</p>
+<p><code class="calibre10">a =open(‘hello.txt’,’a’) # opens a file in write mode</code></p>
+<p><code class="calibre10">a.write(‘welcome to files with python’) # writes this line in file</code></p>
+<p><code class="calibre10">a.close() # closes the file</code></p>
+<p>The above code writes the welcome message to <strong>hello.txt</strong> file.</p>
+<p>Read example:</p>
+<p><code class="calibre10">a =open(‘hello.txt’,’r’) # opens a file in read mode</code></p>
+<p><code class="calibre10">text = a.read() # reads the entire contents of file in memory</code></p>
+<p><code class="calibre10">print(text) #prints the read text</code></p>
+<p><code class="calibre10">a.close()# closes the file</code></p>
+<p><a href="#toc.xhtml#c02q55a">Q55: Explain the term “withstatement”?</a></p>
+<p><em>Ans:</em> The <strong>with</strong> statement would be useful whenever there are related operations block on each other.</p>
+<p><code class="calibre10">with expression [as variable]:</code></p>
+<p><code class="calibre10">with-block</code></p>
+<p>In the above statement, we see that <strong>with</strong> block would be used within the context of variable opened with the help of <strong>with</strong> statement.</p>
+<p><code class="calibre10">with open(‘output.txt’, ‘w’) as f:</code></p>
+<p><code class="calibre10">f.write(‘|Python!’)</code></p>
+<p>In the above example, the file would be closed as soon as the scope of <strong>with</strong> block gets over the advantage of being not to close the file explicitly using close block.</p>
+<p><a href="#toc.xhtml#c02q56a">Q56: Explain the preferred way of reading a big file?</a></p>
+<p><em>Ans:</em> <code class="calibre10"> with open(“sampleread.txt”, “r+”) as ip:</code></p>
+<p><code class="calibre10">for singleLine in ip:</code></p>
+<p><code class="calibre10">print(singleLine)</code></p>
+<p>The above code opens the file in read mode with the help of with statement. So, as soon as file operations get over, the file would be automatically closed.</p>
+<p>Further the above code loads only a single line in memory at a time thus saving memory or making it possible to run, this program even with computer having lower memory footprint.</p>
+<p><a href="#toc.xhtml#c02q57a">Q57: Explain modules in Python.</a></p>
+<p><em>Ans:</em> Modules both inbuilt and user defined are ways of writing reusable set of code or reusing common set of code.</p>
+<p>Python provides set of many inbuilt modules like mathos, sys etc.</p>
+<p>To use a module, we will have to import the same with the help of import statement or “from ..import” statement.</p>
+<p><a href="#toc.xhtml#c02q58a">Q58: Explain different ways of importing modules.</a></p>
+<p><em>Ans:</em> Modules can be imported using import statement or <em>from ..import</em> statement.</p>
+<p>The difference lies in fact whether we want the entire module or particular part of it.</p>
+<p>The <em>from..import</em>statement is preferred when we want to import particular module.</p>
+<p><code class="calibre10">from math import pi</code></p>
+<p><code class="calibre10">print(pi)</code></p>
+<p>The <strong>import</strong> statement is preferred when the entire module is to be imported.</p>
+<p><code class="calibre10">import math</code></p>
+<p><code class="calibre10">print(math.pi)</code></p>
+<p>As you can see in import statement we have to use the module name wherever we want to get variables or methods from modules.</p>
+<p><a href="#toc.xhtml#c02q59a">Q59: Can we create our own module?</a></p>
+<p><em>Ans:</em> Yes, we can create our own module. Any Python file itself is a module.</p>
+<p>Consider for example following <strong>mathop.py</strong> file containing following code:</p>
+<p><code class="calibre10">def sum(a,b):</code></p>
+<p><code class="calibre10">return a+b</code></p>
+<p><code class="calibre10">def sub(a,b):</code></p>
+<p><code class="calibre10">return (a-b)</code></p>
+<p>In another file named <strong>usage.py</strong> we can write the following code:</p>
+<p><code class="calibre10">import mathop</code></p>
+<p><code class="calibre10">print(mathop.sum(99,100))</code></p>
+<p><code class="calibre10">print(mathop.sub(99,100))</code></p>
+<p><code class="calibre10">print(dir(mathop))</code></p>
+<p>The above code reads from the modules and performs the required operations.</p>
+<p>If the files were in different directory, for example, com folder then we could have imported by giving:</p>
+<p><code class="calibre10">com.modulename</code></p>
+<p><a href="#toc.xhtml#c02q60a">Q60: Explain in brief about os module and its corresponding functions.</a></p>
+<p><em>Ans:</em> os module provides various functions to perform operating system related functions especially w.r.t. file operations.</p>
+<p>Following are some of the important functions:</p>
+<p><strong>os.chdir(“D:/pythoneg/intro/pyFolder”):</strong> It is used to change the current working directory.</p>
+<p><strong>os.mkdir(‘pyFolder’):</strong> It is used to create new directory.</p>
+<p><strong>os.remove():</strong> It removes a particular file.</p>
+<p><strong>os.getcwd():</strong> It gets the current working directory.</p>
+<p><strong>os.environ:</strong> It prints environment related details.</p>
+<p><strong>os.system(‘ dir&gt;&gt;1.txt’):</strong> It execute a command line related command. For example, executes dir command which is windows command prompt command, to list directories.</p>
+<p><strong>os.walk(dir):</strong> It lists down sub directory and files within a particular directory.</p>
+<p><a href="#toc.xhtml#c02q61a">Q61: Using os module print the directory structure.</a></p>
+<p><em>Ans:</em> <code class="calibre10">import os</code></p>
+<p><code class="calibre10">rootDir = ‘D:/nodejstraining/NodeJSExample/NodeJSExample’</code></p>
+<p><code class="calibre10">for dirName, subdirList, fileList in os.walk(rootDir):</code></p>
+<p><code class="calibre10">print(‘Found directory: %s’ % dirName)</code></p>
+<p><code class="calibre10">for fname in fileList:</code></p>
+<p><code class="calibre10">print(‘\t%s’ % fname)</code></p>
+<p>In the above example we print the directory structure with the help of <strong>os.walk</strong> function which can list down directory name, sub directory list and file list within a particular directory.</p>
+<p><a href="#toc.xhtml#c02q62a">Q62: Explain dir function.</a></p>
+<p><em>Ans:</em> The dir function is used to print various functions which are exposed by a module.</p>
+<p>For e.g dir(math) prints all the functions within math module.</p>
+<p><code class="calibre10">import math</code></p>
+<p><code class="calibre10">print(dir(math))</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">[‘__doc__’, ‘__loader__’, ‘__name__’, ‘__package__’, ‘__spec__’, ‘acos’, ‘acosh’, ‘asin’, ‘asinh’, ‘atan’, ‘atan2’, ‘atanh’, ‘ceil’, ‘copysign’, ‘cos’, ‘cosh’, ‘degrees’, ‘e’, ‘erf’, ‘erfc’, ‘exp’, ‘expm1’, ‘fabs’, ‘factorial’, ‘floor’, ‘fmod’, ‘frexp’, ‘fsum’, ‘gamma’, ‘gcd’, ‘hypot’, ‘inf’, ‘isclose’, ‘isfinite’, ‘isinf’, ‘isnan’, ‘ldexp’, ‘lgamma’, ‘log’, ‘log10’, ‘log1p’, ‘log2’, ‘modf’, ‘nan’, ‘pi’, ‘pow’, ‘radians’, ‘sin’, ‘sinh’, ‘sqrt’, ‘tan’, ‘tanh’, ‘tau’, ‘trunc’]</code></p>
+<p><a href="#toc.xhtml#c02q63a">Q63: Explain exception handling in Python.</a></p>
+<p><em>Ans:</em> Exception handling is supported with the help of <strong>try..except</strong> block.</p>
+<p>Any statements which can logically cause problems would be placed in <strong>try</strong> block.</p>
+<p>In case of exception occurring, corresponding handling is done in except block.</p>
+<p>A single try can contain multiple except block.</p>
+<figure>
+<img src="OEBPS/images/39.jpg" class="calibre1" />
+</figure>
+<p>In the above example, we place the code of accepting input from user and type casting the same to <strong>int</strong> within the try block. We have two except block one catching except block and another generic Exception. Based upon the exception raised, the corresponding except block would be called.</p>
+<p>To print the complete details of Exception we make use of alias i.e. <em>except Exception as e :</em>makesalias of the exception.</p>
+<p>In case of no exception, the else block would be executed.</p>
+<p><a href="#toc.xhtml#c02q64a">Q64: How to create user defined exception?</a></p>
+<p><em>Ans:</em> User defined exceptions are supported in Python.</p>
+<p>To create our own exception, we will have to create class with the name of Exception we want, which extends from Exception and correspondingly use it with the help of <strong>raise</strong> statement.</p>
+<figure>
+<img src="OEBPS/images/40.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q65a">Q65: What is the use of raise statement?</a></p>
+<p><em>Ans:</em> The <strong>raise</strong> statement is used to generate exception at run time, based upon some condition or constraint imposed.</p>
+<p><a href="#toc.xhtml#c02q66a">Q66: How to create own class in Python? Explain constructors.</a></p>
+<p><em>Ans:</em> We can create our own class in Python. The constructor of the class is specified with the help of <strong>__init__ method</strong>.</p>
+<p>Any function created as a part of class which is a non-static and non-class method, should have <strong>self</strong> as the first argument which represents the object.</p>
+<p>Following is the code to create a class with the name Complex which consists of two members <strong>real</strong> and <strong>img</strong> and one display function.</p>
+<figure>
+<img src="OEBPS/images/41.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q67a">Q67: Is it necessary to have the first argument of class function as self? Can’t we rename it to any other variable?</a></p>
+<p><em>Ans:</em> The name of the variable can be anything but it always represents the object. The self is the preferred and a general practice naming convention.</p>
+<p><a href="#toc.xhtml#c02q68a">Q68: Explain inheritance in Python.</a></p>
+<p><em>Ans:</em> Python supports inheritance with classes. A class extending another class needs to use ().</p>
+<p>Also, super method needs to be used to call base class constructor and methods.</p>
+<figure>
+<img src="OEBPS/images/42.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q69a">Q69: How to determine whether a particular class is sub class?</a></p>
+<p><em>Ans:</em> <strong>issubclass(ChildClass,ParentClass)</strong></p>
+<p>The above function would return true only if the <strong>ChildClass</strong> has inherited from <strong>ParentClass</strong>.</p>
+<p><a href="#toc.xhtml#c02q70a">Q70: Does Python support multiple inheritance?</a></p>
+<p><em>Ans:</em> Yes, Python supports multiple inheritance.</p>
+<p>A particular class can extend from any number of super classes.</p>
+<p>class Child(Parent1,Parent2,…..,ParentN):</p>
+<p><a href="#toc.xhtml#c02q71a">Q71: How is diamond problem resolved in case of Python?</a></p>
+<p><em>Ans:</em> Diamond problem occurs whenever Child class inherits same method with different body from two different parents.</p>
+<p>In the case of Python this is resolved by order in which parent is inherited. Parent which is inherited first is given more importance. In the following example we have two parents both having hello method.</p>
+<figure>
+<img src="OEBPS/images/43.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q72a">Q72: Does Python support private method and variables?</a></p>
+<p><em>Ans:</em> Private method and variables are supported in Python. Any variable or method having __ becomes private in nature and cannot be accessed directly by using object.</p>
+<p>To get their value we will have to use class name reference from the object.</p>
+<p>The main aim of these variables and functions is to ensure that the sub classes do not accidentally override them.</p>
+<p><a href="#toc.xhtml#c02q73a">Q73: Can __ be used for other purpose than creating private variables or functions?</a></p>
+<p><em>Ans:</em> __ has many use cases.</p>
+<p>Following are some of them:</p>
+<ol>
+<li><p>Ignoring while assigning values from tuples or list.</p>
+<p><code class="calibre10">a, _, b = (11, 220,54)</code></p>
+<p>In the above example, a gets value 11 and b gets 54. The __ is used for ignoring the central value 220.</p></li>
+<li>Used to separate numbers <em>no = 3_200</em>. This gives better understanding and readability. The number represented here is 3200.</li>
+</ol>
+<p><a href="#toc.xhtml#c02q74a">Q74: Does Python support abstract classes?</a></p>
+<p><em>Ans:</em> Python supports abstract classes with the help of module named <strong>abc</strong>.</p>
+<p>An abstract class contains abstract functions and cannot be instantiated.</p>
+<p>The abc module contains ABC which stands for Abstract base class and abstract method to do necessary things.</p>
+<figure>
+<img src="OEBPS/images/44.jpg" class="calibre1" />
+</figure>
+<p>The classes which extend the above class have to give body to abstract method else even they cannot be instantiated.</p>
+<p><a href="#toc.xhtml#c02q75a">Q75: Differentiate between static methods and class methods in Python.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/45.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q76a">Q76: What are named tuple?</a></p>
+<p><em>Ans:</em> Named tuple allows us to create classes at run time with attributes.</p>
+<figure>
+<img src="OEBPS/images/46.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q77a">Q77: How to sort using lamdas?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/47.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q78a">Q78: Explain Generators?</a></p>
+<p><em>Ans:</em> Generators are used to save memory as they store only some values in memory at a time rather than storing entire dataset in memory.</p>
+<p>Generators make use of yield function which stores the previous state to remember.</p>
+<p>Generators are invoked using next function.</p>
+<p>For example, if we want to process the entire file having million records, generator function would bring only one record at a time in the memory.</p>
+<figure>
+<img src="OEBPS/images/48.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q79a">Q79: What is generator expression?</a></p>
+<p><em>Ans:</em> The above generators concept can also be applied to expressions.</p>
+<figure>
+<img src="OEBPS/images/49.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q80a">Q80: When Python program exits, all the memory is released? Say true or false?</a></p>
+<p><em>Ans:</em> <strong>The answer is false because</strong> objects that are referenced from global namespaces of Python modules are not always de-allocated when Python exits.</p>
+<p><a href="#toc.xhtml#c02q81a">Q81: Can a function be passed as parameter to another function?</a></p>
+<p><em>Ans:</em> Yes, it is possible to do the same in Python.</p>
+<figure>
+<img src="OEBPS/images/50.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q82a">Q82: Can a function be retuned as result from another function?</a></p>
+<p><em>Ans:</em> Yes, the result of a function can be another function.</p>
+<figure>
+<img src="OEBPS/images/51.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q83a">Q83: Explain decorator function.</a></p>
+<p><em>Ans:</em> Decorator function allows performing wrapper around a function. It acts as an interceptor which allows performing pre-processing and post-processing.</p>
+<figure>
+<img src="OEBPS/images/52.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/53.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q84a">Q84: How can we represent big text in Python?</a></p>
+<p><em>Ans:</em> Representation of big text is quite simple w.r.t. Python, unlike other programming language.</p>
+<figure>
+<img src="OEBPS/images/54.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q85a">Q85: What is PEP 8?</a></p>
+<p><em>Ans:</em> PEP 8 is a coding convention, a set of recommendation, about how to make your Python code more readable. It can be said as globally accepted standards for Python programming.</p>
+<p><a href="#toc.xhtml#c02q86a">Q86: What is anaconda?</a></p>
+<p><em>Ans:</em> Anaconda is easy to use distribution which comes bundled up with lot of modules used in data science world. It provides a packaged environment to get started easily. It also manages dependencies.</p>
+<p><a href="#toc.xhtml#c02q87a">Q87: How to install external modules?</a></p>
+<p><em>Ans:</em> External modules can be easily installed with the help of pip tool which comes bundled with Python.</p>
+<p>The command to execute is <strong>python –m pip install module name</strong>.</p>
+<p><code class="calibre10">For e.g. python –m pip install numpy</code></p>
+<p>In anaconda environment we can install with <strong>conda</strong> command.</p>
+<p><code class="calibre10">conda install --name environment_name module</code></p>
+<p><a href="#toc.xhtml#c02q88a">Q88: What is Jupyter notebook?</a></p>
+<p><em>Ans:</em> Jupyter Notebook is a web application that allows you to create and share documents that contain:</p>
+<ul>
+<li>Python code</li>
+<li>visualizations</li>
+<li>explanatory text of code</li>
+</ul>
+<p>It can be installed as an external module with the help of <strong>pip</strong>.</p>
+<p><code class="calibre10">python –m pip install jupyter</code></p>
+<p>Once installed, it can be started by executing command <strong>jupyter notebook</strong>.</p>
+<p>The above command will start the web server with notebook opened on web browser.</p>
+<p>Notebooks consist of a linear sequence of cells. There are four basic cell types:</p>
+<ul>
+<li><strong>Code cells:</strong> Input and output of live code that is run in the kernel</li>
+<li><strong>Markdown cells:</strong> Narrative text with embedded LaTeX equations</li>
+<li><strong>Heading cells:</strong> 6 levels of hierarchical organization and formatting</li>
+<li><strong>Raw cells:</strong> Unformatted text that is included</li>
+</ul>
+<p><a href="#toc.xhtml#c02q89a">Q89: What is pickling and unpickling?</a></p>
+<p><em>Ans:</em> Pickling is the process of converting from Python format to intermediate string formats which can be then be stored on file.</p>
+<p>Unpickling is the process of bringing or loading the stored Python objects back into memory.</p>
+<p><a href="#toc.xhtml#c02q90a">Q90: Explain the importance of setup.py?</a></p>
+<p><em>Ans:</em> The setup.py allows setting up dependencies easily. While generating one project, it is quite natural to use various libraries. When the same code is shipped to another developer or deployment environment we can make use of setup.py which stores the dependencies on various modules which were used in project.</p>
+<p><a href="#toc.xhtml#c02q91a">Q91: Is it possible to make connections to database using Python?</a></p>
+<p><em>Ans:</em> Python supports connection to database with Db-Api modules.</p>
+<p>The mechanism to query remains same but difference lies in the classes to be imported to suit various databases.</p>
+<p>To connect to database (in our case MYSQ L) we use the following code:</p>
+<figure>
+<img src="OEBPS/images/55.jpg" class="calibre1" />
+</figure>
+<p>To fetch data from database table:</p>
+<figure>
+<img src="OEBPS/images/56.jpg" class="calibre1" />
+</figure>
+<p><strong>Delete example:</strong></p>
+<figure>
+<img src="OEBPS/images/57.jpg" class="calibre1" />
+</figure>
+<p><strong>Insert example:</strong></p>
+<p>Insert can be done using <strong>execute</strong> or <strong>executemany</strong>. Difference lies in fact that execute just takes one record while <strong>executemany</strong> takes many records.</p>
+<figure>
+<img src="OEBPS/images/58.jpg" class="calibre1" />
+</figure>
+<p><strong>Update example:</strong></p>
+<figure>
+<img src="OEBPS/images/59.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c02q92a">Q92: Explain meta programming?</a></p>
+<p><em>Ans:</em> This is a programming technique in which program itself is treated as data. Such languages do have knowledge of itself, and can change or manipulate itself during run time.</p>
+<p>Following are some of the examples of meta programming in Python:</p>
+<ol>
+<li><p>Adding attribute and method to class.</p>
+<figure>
+<img src="OEBPS/images/60.jpg" class="calibre1" />
+</figure>
+<p><code class="calibre10">print(x1.f) # prints 42 the default value.</code></p></li>
+<li><p>Creating inheritance chain using type.</p>
+<p>The type method can not only be used to get the type of variable but can also be used for meta programming.</p>
+<p>Details of overloaded type, is as follows:</p>
+<figure>
+<img src="OEBPS/images/61.jpg" class="calibre1" />
+</figure>
+<p>For example:</p>
+<p><code class="calibre10">B = type(B, (A,), dict(f=100))</code></p>
+<p>The above statement creates class B which inherits from Class A and has field f with value 100.</p></li>
+<li><p>Creating dynamic constructor or linking constructor.</p>
+<figure>
+<img src="OEBPS/images/62.jpg" class="calibre1" />
+</figure></li>
+<li><p>Complete meta class example:</p>
+<figure>
+<img src="OEBPS/images/63.jpg" class="calibre1" />
+</figure></li>
+</ol>
+<p><a href="#toc.xhtml#c02q93a">Q93: Explain Python memory model.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/64.jpg" class="calibre1" />
+</figure>
+</article>
+<p><span id="c03.xhtml"></span></p>
+<article type="bodymatter">
+<header>
+<h1 class="chap1"><a href="#toc.xhtml#c03" class="calibre7">C<span class="small">HAPTER</span> 3</a></h1>
+<h1 class="subchap"><a href="#toc.xhtml#c03" class="calibre7">Numpy Interview Questions</a></h1>
+</header>
+<p><strong><em>Note:</em> [Q: Question Number and Ans: Answer]</strong></p>
+<p><a href="#toc.xhtml#c03q1a">Q1: What is numpy?</a></p>
+<p><em>Ans:</em> The <strong>numpy</strong> is a module which is responsible for effectively storing and processing the same at a faster rate as compared to normal array. The advantage of <strong>numpy</strong> is support of large number of in built mathematical operations as compared to other programming language. Also, the support to represent n dimensions is also possible with <strong>numpy</strong>.</p>
+<p><a href="#toc.xhtml#c03q2a">Q2: How to install numpy?</a></p>
+<p><em>Ans:</em> Since <strong>numpy</strong> is an external module it can be installed using <strong>pip</strong>.</p>
+<p><code class="calibre10">python –m pip install numpy</code></p>
+<p><a href="#toc.xhtml#c03q3a">Q3: How to create single dimension numpy array?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/65.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c03q4a">Q4: Explain different attributes provided by numpy?</a></p>
+<p><em>Ans:</em> <strong>numpy</strong> provides the following attributes:</p>
+<p><strong>ndim:</strong> As <strong>numpy</strong> provides <strong>n</strong> dimensions, we can get how many dimensions currently the array is having with <strong>ndim</strong>.</p>
+<p><strong>shape:</strong> Indicates number of rows and columns which again can be in different dimensions.</p>
+<p><strong>dtype:</strong> Indicates data type of elements stored in <strong>numpy</strong>.</p>
+<figure>
+<img src="OEBPS/images/66.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/67.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c03q5a">Q5: Explain some utility methods provided by numpy for creating different elements?</a></p>
+<p><em>Ans:</em> <strong>np.zeros(length)</strong> creates a numpy array at all zeroes occupying the length specified. Can also take rows and columns and create <strong>n</strong> dimensions filled with zeroes.</p>
+<figure>
+<img src="OEBPS/images/68.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">[[0. 0. 0.]</code></p>
+<p><code class="calibre10">[0. 0. 0.]</code></p>
+<p><strong>np.ones:</strong> Can create either single dimension or <strong>n</strong> dimension, all filled with ones.</p>
+<p><code class="calibre10">ip4 =np.ones((2, 3))</code></p>
+<p><code class="calibre10">print(ip4)</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">[[1. 1. 1.]</code></p>
+<p><code class="calibre10">[1. 1. 1.]]</code></p>
+<p><strong>np.eye:</strong> Creates a representation in which diagonal elements are zeroes.</p>
+<p><code class="calibre10">ip8 =np.eye(3,3)</code></p>
+<p><code class="calibre10">print(ip8)</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">[[1. 0. 0.]</code></p>
+<p><code class="calibre10">[0. 1. 0.]</code></p>
+<p><code class="calibre10">[0. 0. 1.]]</code></p>
+<p><strong>np.arange:</strong> Create a single or <strong>n</strong> dimension array in which numbers are populated starting from 0 to the number specified as parameter.</p>
+<p><code class="calibre10">ip6=np.arange((5))</code></p>
+<p><code class="calibre10">print(ip6)</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">[0 1 2 3 4]</code></p>
+<p><a href="#toc.xhtml#c03q6a">Q6: How can we change shape of an object?</a></p>
+<p><em>Ans:</em> Shape of the object can be changed with shape attribute or reshape method.</p>
+<p><strong>Shape attribute:</strong></p>
+<figure>
+<img src="OEBPS/images/69.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">shape (2, 3)</code></p>
+<p>Before,</p>
+<p><code class="calibre10">[[1 2 3]</code></p>
+<p><code class="calibre10">[4 5 6]]</code></p>
+<p>After change,</p>
+<p><code class="calibre10">[[1 2]</code></p>
+<p><code class="calibre10">[3 4]</code></p>
+<p><code class="calibre10">[5 6]]</code></p>
+<p><strong>reshape:</strong></p>
+<p>Allows the dimensions to be specified based on which, the shape can be changed.</p>
+<p><code class="calibre10">a = np.array([[1,2,3],[4,5,6]])</code></p>
+<p><code class="calibre10">b = a.reshape(3,2)</code></p>
+<p><code class="calibre10">print(‘reshape’, b)</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">[[1 2]</code></p>
+<p><code class="calibre10">[3 4]</code></p>
+<p><code class="calibre10">[5 6]]</code></p>
+<p><a href="#toc.xhtml#c03q7a">Q7: Which all data types are supported in Python?</a></p>
+<p><em>Ans:</em> int8, uint8 i1, u1 int16, uint16 i2, u2 int32, uint32 i4, u4 int64, uint64 : Signed and unsigned 8-bit (1 byte) 16-bit integer types or 32-bit or 64-bit integer types</p>
+<p>float16 float32 float64, float128 Floating point with 16.32,64 or 128 bits</p>
+<p>complex64, complex128, complex256 Complex numbers represented by two 32, 64, or 128</p>
+<p>bool ?: Boolean type storing True and False values</p>
+<p>object O : Python object type</p>
+<p>string_ S : Fixed-length string type (1 byte per character)</p>
+<p>unicode_U : Fixed-length unicode type ( platform specific number of bytes)</p>
+<p><a href="#toc.xhtml#c03q8a">Q8: Explain various simple mathematical operations which can be done on numpy?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/70.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c03q9a">Q9: Explain slicing operation in numpy?</a></p>
+<p><em>Ans:</em> Slicing means getting data from <strong>numpy</strong> array via row or columns or both.</p>
+<p>General slicing on single dimension [start:end].</p>
+<p>Start element is inclusive end element is exclusive.</p>
+<figure>
+<img src="OEBPS/images/71.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">[5 6 7]</code></p>
+<p>For 2 dimensions and more than 2 dimensions, we can specify slicing by row and column indexes. In such case, following is the slicing.</p>
+<p>[rowStart:rowEnd,columnStart:columnEnd]</p>
+<ul>
+<li>If <strong>rowStart</strong> is not specified, starts from zero</li>
+<li>If <strong>rowEnd</strong> is not specified, goes all the way till end</li>
+<li>If <strong>columnStart</strong> not specified, starts from zero</li>
+<li>If <strong>columnEnd</strong> not specified, goes till end</li>
+</ul>
+<p>For example:</p>
+<figure>
+<img src="OEBPS/images/72.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/73.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c03q10a">Q10: Explain Boolean indexing?</a></p>
+<p><em>Ans:</em> Boolean indexing return True or False based on some condition.</p>
+<p>Consider the following numpy array with names.</p>
+<figure>
+<img src="OEBPS/images/74.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">[False True False False True]</code></p>
+<figure>
+<img src="OEBPS/images/75.jpg" class="calibre1" />
+</figure>
+<p>Boolean Indexing can also be masked that is, it can have more than one condition.</p>
+<p><code class="calibre10">(names == ‘Rahul’) | (names == ‘Raj’)</code></p>
+<p>The above code returns true for both Rahul and Raj.</p>
+<p><a href="#toc.xhtml#c03q11a">Q11: Perform matrix multiplication using numpy?</a></p>
+<p><em>Ans:</em> Matrix multiplication can be easily achieved with the help of dot function.</p>
+<figure>
+<img src="OEBPS/images/76.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c03q12a">Q12: Explain various functions available with numpy?</a></p>
+<p><em>Ans:</em> <strong>numpy</strong> supports the following function. The advantage of given functions are that they are applied on all the elements of <strong>numpy</strong> array.</p>
+<p><strong>abs, fabs:</strong> Returns the absolute value element-wise for.</p>
+<p>Fabs can be used for non-complex-valued data with additional speed.</p>
+<p><strong>sqrt:</strong> Square root of each element is calculated.</p>
+<p><strong>squar e:</strong> Square of each element is calculated.</p>
+<p><strong>exp:</strong> Exponent ex of each element is calculated.</p>
+<p><strong>log:</strong> log10, log2, log1p Natural logarithm (base e), log base 10, log base 2, and log(1 + x), respectively.</p>
+<p><strong>sign:</strong> sign of each element: 1 (positive), 0 (zero), or -1 (negative) is calculated.</p>
+<p><strong>ceil:</strong> Determines the ceiling of each element,</p>
+<p><strong>floor:</strong> Determines the floor of each element,</p>
+<p><strong>rint:</strong> Round elements to the nearest integer, preserving the dtype.</p>
+<p><strong>modf:</strong> Return fractional and integral parts of given input</p>
+<p><strong>isnan:</strong> Returns true if the value is NaN else false</p>
+<p><strong>isfinite, isinf:</strong> Return true indicating whether each element is finite or infinite, respectively.</p>
+<p><strong>Regular and hyperbolic trigonometric functions</strong></p>
+<p>cos, cosh, sin, sinh, tan, tanh, arccos, arccosh, arcsin, arcsinh, arctan, arctanh</p>
+<p>maximum, fmax Element-wise maximum. fmax ignores NaN</p>
+<p>minimum, fmin Element-wise minimum. fmin ignores NaN</p>
+<p>mod Element-wise modulus (remainder of division)</p>
+<p>copysign Copy sign of values in second argument to values in first argument</p>
+<p><a href="#toc.xhtml#c03q13a">Q13: What is broadcast?</a></p>
+<p><em>Ans:</em> The ability of <strong>numpy</strong> to treat arrays with different dimensions or shape in a uniform way is known as broadcasting.</p>
+<p>We can do broadcasting with the help of broadcast method.</p>
+<figure>
+<img src="OEBPS/images/77.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">(4, 1)</code></p>
+<p><code class="calibre10">(5, 1)</code></p>
+<p><code class="calibre10">(6, 1)</code></p>
+<p><code class="calibre10">(4, 2)</code></p>
+<p><code class="calibre10">(5, 2)</code></p>
+<p><code class="calibre10">(6, 2)</code></p>
+<p><code class="calibre10">(4, 3)</code></p>
+<p><code class="calibre10">(5, 3)</code></p>
+<p><code class="calibre10">(6, 3)</code></p>
+<p><a href="#toc.xhtml#c03q14a">Q14: Explain rules of broadcasting.</a></p>
+<ul>
+<li>Whenever two arrays have different dimensions the shape of the one with fewer dimensions is adjusted by padding with ones on its leading (left) side.</li>
+<li>If there is a difference in the shape of the two arrays, it does not match in any dimension, then dimension is stretched to match the other shape for that array with shape one.</li>
+<li>An error is raised in case the dimension and sizes disagree, and neither is equal to 1.</li>
+</ul>
+<p><a href="#toc.xhtml#c03q15a">Q15: Explain some statistical measures supported by numpy.</a></p>
+<p><em>Ans</em>: <strong>amin:</strong> Find the minimum value row wise or column wise</p>
+<p><strong>mean:</strong> Finds the mean value of given dataset</p>
+<p><strong>std:</strong> Finds standard deviation of given dataset</p>
+<p><strong>var:</strong> Finds variance of given dataset</p>
+<p><strong>average:</strong> Finds weighted average in which average is calculated based upon frequency of occurrence of variables</p>
+<p><strong>percentile:</strong> Calculates various percentile intervals mostly around 25,50 and 75%</p>
+<p><strong>ptp:</strong> Calculates peak to peak values in a given dataset</p>
+<p><strong>median:</strong> Calculates median from given dataset</p>
+<figure>
+<img src="OEBPS/images/78.jpg" class="calibre1" />
+</figure>
+<p><code class="calibre10">print (np.ptp(a, axis = 0) )</code></p>
+<p><code class="calibre10">print(‘percentile axis 1’)</code></p>
+<p><code class="calibre10">print (np.percentile(a,50, axis = 1) )</code></p>
+<p><code class="calibre10">print(‘percentile axis 0’)</code></p>
+<p><code class="calibre10">print (np.percentile(a,50, axis = 0) )</code></p>
+<p><code class="calibre10">print(‘median’)</code></p>
+<p><code class="calibre10">print (np.median(a, axis = 0) )</code></p>
+<p><code class="calibre10">print(‘mean’)</code></p>
+<p><code class="calibre10">print (np.mean(a, axis = 0) )</code></p>
+<p><code class="calibre10">a = np.array([1,2,3,4])</code></p>
+<p><code class="calibre10">wts = np.array([4,3,2,1])</code></p>
+<p><code class="calibre10">print(‘average’)</code></p>
+<p><code class="calibre10">print (np.average(a,weights = wts) )</code></p>
+<p><code class="calibre10">print(‘std’)</code></p>
+<p><code class="calibre10">print (np.std([1,2,3,4]))</code></p>
+<p><code class="calibre10">print(‘var’)</code></p>
+<p><code class="calibre10">print (np.var([1,2,3,4]))</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">a</code></p>
+<p><code class="calibre10">[[3 7 5]</code></p>
+<p><code class="calibre10">[8 4 3]</code></p>
+<p><code class="calibre10">[2 4 9]]</code></p>
+<p><code class="calibre10">amin 1</code></p>
+<p><code class="calibre10">[3 3 2]</code></p>
+<p><code class="calibre10">amin 0</code></p>
+<p><code class="calibre10">[2 4 3]</code></p>
+<p><code class="calibre10">ptp</code></p>
+<p><code class="calibre10">7</code></p>
+<p><code class="calibre10">ptp axis 0</code></p>
+<p><code class="calibre10">[6 3 6]</code></p>
+<p><code class="calibre10">percentile axis 1</code></p>
+<p><code class="calibre10">[5. 4. 4.]</code></p>
+<p><code class="calibre10">percentile axis 0</code></p>
+<p><code class="calibre10">[3. 4. 5.]</code></p>
+<p><code class="calibre10">median</code></p>
+<p><code class="calibre10">[3. 4. 5.]</code></p>
+<p><code class="calibre10">mean</code></p>
+<p><code class="calibre10">[4.33333333 5. 5.66666667]</code></p>
+<p><code class="calibre10">average</code></p>
+<p><code class="calibre10">2.0</code></p>
+<p><code class="calibre10">std</code></p>
+<p><code class="calibre10">1.118033988749895</code></p>
+<p><code class="calibre10">var</code></p>
+<p><code class="calibre10">1.25</code></p>
+<p><a href="#toc.xhtml#c03q16a">Q16: Explain functions available in numpy.linalg.</a></p>
+<p><em>Ans:</em> <strong>dot(a, b[, out]):</strong> Dot product of two arrays.</p>
+<p><strong>linalg.multi_dot(arrays):</strong> Compute the dot product of two or more arrays in a single function call, while automatically selecting the fastest evaluation order.</p>
+<p><strong>vdot(a, b):</strong> Return the dot product of two vectors.</p>
+<p><strong>inner(a, b):</strong> Inner product of two arrays.</p>
+<p><strong>outer(a, b[, out]):</strong> Compute the outer product of two vectors.</p>
+<p><strong>matmul(a, b[, out]):</strong> Matrix product of two arrays.</p>
+<p><strong>tensordot(a, b[, axes]):</strong> Compute tensor dot product along specified axes for arrays &gt;= 1-D.</p>
+<p><strong>einsum(subscripts, *operands[, out, dtype, •]):</strong> Evaluates the Einstein summation convention on the operands.</p>
+<p><strong>linalg.matrix_power(M, n):</strong> Raise a square matrix to the (integer) power <strong>n</strong>.</p>
+<p><strong>kron(a, b):</strong> Kronecker product of two arrays.</p>
+<p><strong>linalg.cholesky(a):</strong> Cholesky decomposition.</p>
+<p><strong>linalg.qr(a[, mode]):</strong> Compute the qr factorization of a matrix.</p>
+<p><strong>linalg.svd(a[, full_matrices, compute_uv]):</strong> Singular Value Decomposition.</p>
+<p><strong>Matrix eigenvalues linalg.eig(a):</strong> Compute the eigenvalues and right eigenvectors of a square array.</p>
+<p><strong>linalg.eigh(a[, UPLO]):</strong> Return the eigenvalues and eigenvectors of a Hermitian or symmetric matrix.</p>
+<p><strong>linalg.eigvals(a):</strong> Compute the eigenvalues of a general matrix.</p>
+<p><strong>linalg.eigvalsh(a[, UPLO]):</strong> Compute the eigenvalues of a Hermitian or real symmetric matrix.</p>
+<p><strong>linalg.norm(x[, ord, axis, keepdims]):</strong> Matrix or vector norm.</p>
+<p><strong>linalg.cond(x[, p]):</strong> Compute the condition number of a matrix.</p>
+<p><strong>linalg.det(a):</strong> Compute the determinant of an array.</p>
+<p><strong>linalg.matrix_rank(M[, tol]):</strong> Return matrix rank of array using SVD method.</p>
+<p><strong>linalg.slogdet(a):</strong> Compute the sign and (natural) logarithm of the determinant of an array.</p>
+<p><strong>trace(a[, offset, axis1, axis2, dtype, out]):</strong> Return the sum along diagonals of the array.</p>
+<p><strong>linalg.solve(a, b):</strong> Solve a linear matrix equation, or system of linear scalar equations.</p>
+<p><strong>linalg.tensorsolve(a, b[, axes]):</strong> Solve the tensor equation a x = b for x.</p>
+<p><strong>linalg.lstsq(a, b[, rcond]):</strong> Return the least-squares solution to a linear matrix equation.</p>
+<p><strong>linalg.inv(a):</strong> Compute the (multiplicative) inverse of a matrix.</p>
+<p><strong>linalg.pinv(a[, rcond]):</strong> Compute the (Moore-Penrose) pseudo-inverse of a matrix.</p>
+<p><strong>linalg.tensorinv(a[, ind]):</strong> Compute the ‘inverse’ of an N-dimensional array.</p>
+<p><a href="#toc.xhtml#c03q17a">Q17: How to save numpy data from memory to flat file?</a></p>
+<p><em>Ans:</em> numpy data can be stored in <strong>npy</strong> format files which are custom serialized or they can be stored in text file.</p>
+<figure>
+<img src="OEBPS/images/79.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c03q18a">Q18: What is the use of where and extract?</a></p>
+<p><em>Ans:</em> Both <strong>where</strong> and <strong>extract</strong> are used to match data based on the conditions.</p>
+<p>Where sample:</p>
+<figure>
+<img src="OEBPS/images/80.jpg" class="calibre1" />
+</figure>
+<p><strong>Extract:</strong> Specifies data and corresponding condition.</p>
+<figure>
+<img src="OEBPS/images/81.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c03q19a">Q19: What is the use of ndenumerate?</a></p>
+<p><em>Ans:</em> <strong>ndenumerate</strong> return the co-ordinates and corresponding values in the co-ordinates.</p>
+<p><code class="calibre10">A = np.array([[11, 22], [33, 43]])</code></p>
+<p><code class="calibre10">for index, x in np.ndenumerate(a):</code></p>
+<p><code class="calibre10">print(index, x)</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">(0, 0) 11</code></p>
+<p><code class="calibre10">(0, 1) 22</code></p>
+<p><code class="calibre10">(1, 0) 33</code></p>
+<p><code class="calibre10">(1, 1) 43</code></p>
+<p><a href="#toc.xhtml#c03q20a">Q20: Explain how can we draw a histogram using numpy?</a></p>
+<p><em>Ans:</em> Consider the following code:</p>
+<figure>
+<img src="OEBPS/images/82.jpg" class="calibre1" />
+</figure>
+<p>The output given will be as follows:</p>
+<figure>
+<img src="OEBPS/images/83.jpg" class="calibre1" />
+</figure>
+<p><strong>The print(be) method</strong> in the above prints bin while the hist prints the corresponding count.</p>
+</article>
+<p><span id="c04.xhtml"></span></p>
+<article type="bodymatter">
+<header>
+<h1 class="chap1"><a href="#toc.xhtml#c04" class="calibre7">C<span class="small">HAPTER</span> 4</a></h1>
+<h1 class="subchap"><a href="#toc.xhtml#c04" class="calibre7">Pandas Interview Questions</a></h1>
+</header>
+<p><strong><em>Note:</em> [Q: Question Number and Ans: Answer]</strong></p>
+<p><a href="#toc.xhtml#c04q1a">Q1: What is Pandas?</a></p>
+<p><em>Ans:</em> Pandas is a third party module which helps in easier representation of data in memory to perform analysis. Pandas help in faster representation and processing of data.</p>
+<p><a href="#toc.xhtml#c04q2a">Q2: How does Pandas represent data?</a></p>
+<p><em>Ans:</em> Pandas data representation is in similar line to an excel sheet which consists of row and columns.</p>
+<p>Columns in Pandas are known as series.</p>
+<p>Collection of series is called data frame.</p>
+<p>Thus, data frame is the unit of representation</p>
+<p>of data which is collection of various series.</p>
+<p>Shown is the representation of data frame:</p>
+<figure>
+<img src="OEBPS/images/84.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q3a">Q3: How to create Series?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/85.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q4a">Q4: How to create Data frame?</a></p>
+<p><em>Ans:</em> Data frame can be created directly from dictionary or it can also be created by combining various series.</p>
+<figure>
+<img src="OEBPS/images/86.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/87.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q5a">Q5: How are missing values represented in data frame?</a></p>
+<p><em>Ans:</em> Consider the following example:</p>
+<figure>
+<img src="OEBPS/images/88.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q6a">Q6: Explain the process of creating indexes w.r.t. pandas?</a></p>
+<p><em>Ans:</em> Indexes can be created using pd.Index function. Indexes support intersection and union.</p>
+<figure>
+<img src="OEBPS/images/89.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q7a">Q7: Explain various attributes associated with series.</a></p>
+<p><em>Ans:</em> <strong>axes:</strong> Stands for row.</p>
+<p><strong>dtype:</strong> The data type of the object is given by this attribute.</p>
+<p><strong>empty:</strong> Checks if series is empty.</p>
+<p><strong>ndim:</strong> The dimensions of data are given back.</p>
+<p><strong>size:</strong> Size or number of elements from data are given.</p>
+<p><strong>values:</strong> Gets the values in the form of ndarray.</p>
+<p><strong>head():</strong> The first n rows are returned.</p>
+<p><strong>tail():</strong> The last n rows are returned.</p>
+<p><code class="calibre10">import pandas as pd</code></p>
+<p><code class="calibre10">import numpy as np</code></p>
+<p><code class="calibre10">s = pd.Series(np.random.randn(4))</code></p>
+<p><code class="calibre10">print(‘series’,s)</code></p>
+<p><code class="calibre10">print(‘axes’,s.axes)</code></p>
+<p><code class="calibre10">print(‘Empty’,s.empty)</code></p>
+<p><code class="calibre10">print(“Dimensions:”)</code></p>
+<p><code class="calibre10">print(s.ndim)</code></p>
+<p><code class="calibre10">print (“Size of the object:”)</code></p>
+<p><code class="calibre10">print (s.size)</code></p>
+<p><code class="calibre10">print (“Underlying data is:”)</code></p>
+<p><code class="calibre10">print (s.values)</code></p>
+<p><code class="calibre10">print (“Top 2 rows:”)</code></p>
+<p><code class="calibre10">print (s.head(2))</code></p>
+<p><code class="calibre10">print (“Last 2 rows:”)</code></p>
+<p><code class="calibre10">print (s.tail(2))</code></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">eries 0 -0.200094</code></p>
+<p><code class="calibre10">1    0.923716</code></p>
+<p><code class="calibre10">2    -0.565540</code></p>
+<p><code class="calibre10">3    -0.895206</code></p>
+<p><code class="calibre10">dtype: float64</code></p>
+<p><code class="calibre10">axes [RangeIndex(start=0, stop=4, step=1)]</code></p>
+<p><code class="calibre10">Empty False</code></p>
+<p><code class="calibre10">Dimensions:</code></p>
+<p><code class="calibre10">1</code></p>
+<p><code class="calibre10">Size of the object:</code></p>
+<p><code class="calibre10">4</code></p>
+<p><code class="calibre10">Underlying data is:</code></p>
+<p><code class="calibre10">[-0.20009423 0.92371595 -0.56554023 -0.89520616]</code></p>
+<p><code class="calibre10">Top 2 rows:</code></p>
+<p><code class="calibre10">0    -0.200094</code></p>
+<p><code class="calibre10">1    0.923716</code></p>
+<p><code class="calibre10">dtype: float64</code></p>
+<p><code class="calibre10">Last 2 rows:</code></p>
+<p><code class="calibre10">2     -0.565540</code></p>
+<p><code class="calibre10">3     -0.895206</code></p>
+<p><code class="calibre10">dtype: float64</code></p>
+<p><a href="#toc.xhtml#c04q8a">Q8: Explain various statistical measures supported by pandas.</a></p>
+<p><em>Ans:</em> <strong>axes:</strong> Print row index as well as column index.</p>
+<p><strong>sum:</strong> Calculates the sum of all series.</p>
+<p><strong>mean:</strong> Calculates mean of all series.</p>
+<p><strong>median:</strong> Calculates the median of all series.</p>
+<p><strong>std:</strong> Calculates standard deviation.</p>
+<p><strong>count:</strong> Calculates sum of various series.</p>
+<p><strong>cumsum:</strong> Calculates cumulative sum.</p>
+<p><strong>import pandas as pd</strong></p>
+<p><strong>importnumpy as np</strong></p>
+<p><code class="calibre10">d = {‘Name’:pd.Series([‘Raja’, ‘Raju’, ‘Ricky’, ‘Shiv’, ‘Vishnu’, ‘Ramesh’, ‘Mahender’,</code></p>
+<p><code class="calibre10">‘Lious’, ’Salman’, ’SRK’, ’VV’, ’MM’]),</code></p>
+<p><code class="calibre10">‘Age’:pd.Series([25, 26, 25, 23, 30, 29, 23, 34, 40, 30,51, 46]),</code></p>
+<p><code class="calibre10">‘Rating’:pd.Series ([4.23, 3.24, 3.98, 2.56, 3.20, 4.6, 3.8, 3.78, 2.98, 4.80, 4.10, 3.65])}</code></p>
+<figure>
+<img src="OEBPS/images/90.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/p84.jpg" class="calibre1" />
+</figure>
+<p><code class="calibre10">axes</code></p>
+<p><code class="calibre10">[RangeIndex(start=0, stop=12, step=1), Index([‘Age’, ‘Name’, ‘Rating’], dtype=’object’)]</code></p>
+<p><code class="calibre10">sum</code></p>
+<p><code class="calibre10">sum Age 382</code></p>
+<p><code class="calibre10">Name</code></p>
+<p><code class="calibre10">RajaRajuRickyShivVishnuRameshMahenderLiousSalm•</code></p>
+<p><code class="calibre10">Rating 44.92</code></p>
+<p><code class="calibre10">dtype: object</code></p>
+<p><code class="calibre10">sum of axis 1 0 29.23</code></p>
+<p><code class="calibre10">1   29.24</code></p>
+<p><code class="calibre10">2   28.98</code></p>
+<p><code class="calibre10">3   25.56</code></p>
+<p><code class="calibre10">4   33.20</code></p>
+<p><code class="calibre10">5   33.60</code></p>
+<p><code class="calibre10">6   26.80</code></p>
+<p><code class="calibre10">7   37.78</code></p>
+<p><code class="calibre10">8   42.98</code></p>
+<p><code class="calibre10">9   34.80</code></p>
+<p><code class="calibre10">10   55.10</code></p>
+<p><code class="calibre10">11   49.65</code></p>
+<p><code class="calibre10">dtype: float64</code></p>
+<p><code class="calibre10">mean Age 31.833333</code></p>
+<p><code class="calibre10">Rating 3.743333</code></p>
+<p><code class="calibre10">dtype: float64</code></p>
+<p><code class="calibre10">std Age 9.232682</code></p>
+<p><code class="calibre10">Rating 0.661628</code></p>
+<p><code class="calibre10">dtype: float64</code></p>
+<p><code class="calibre10">count Age 12</code></p>
+<p><code class="calibre10">Name 12</code></p>
+<p><code class="calibre10">Rating 12</code></p>
+<p><code class="calibre10">dtype: int64</code></p>
+<p><code class="calibre10">median Age 29.50</code></p>
+<p><code class="calibre10">Rating 3.79</code></p>
+<p><code class="calibre10">dtype: float64</code></p>
+<p><code class="calibre10">cumsum Age Name Rating</code></p>
+<p><code class="calibre10">0 25 Raja 4.23</code></p>
+<p><code class="calibre10">1 51 RajaRaju 7.47</code></p>
+<p><code class="calibre10">2 76 RajaRajuRicky 11.45</code></p>
+<p><code class="calibre10">3 99 RajaRajuRickyShiv 14.01</code></p>
+<p><code class="calibre10">4 129 RajaRajuRickyShivVishnu 17.21</code></p>
+<p><code class="calibre10">5 158 RajaRajuRickyShivVishnuRamesh 21.81</code></p>
+<p><code class="calibre10">6 181 RajaRajuRickyShivVishnuRameshMahender 25.61</code></p>
+<p><code class="calibre10">7 215 RajaRajuRickyShivVishnuRameshMahenderLious 29.39</code></p>
+<p><code class="calibre10">8 255 RajaRajuRickyShivVishnuRameshMahenderLiousSalman 32.37</code></p>
+<p><code class="calibre10">9 285 RajaRajuRickyShivVishnuRameshMahenderLiousSalm… 37.17</code></p>
+<p><code class="calibre10">10 336 RajaRajuRickyShivVishnuRameshMahenderLiousSalm… 41.27</code></p>
+<p><code class="calibre10">11 382 RajaRajuRickyShivVishnuRameshMahenderLiousSalm… 44.92</code></p>
+<p>Most of the measures can be easily made available with the help of describe function.</p>
+<p><code class="calibre10">import pandas as pd</code></p>
+<p><code class="calibre10">import numpy as np</code></p>
+<p><code class="calibre10">d = {‘Name’:pd.Series ([‘Raja’, ’Raju’, ’Ricky’, ’Shiv’, ’Vishnu’, ’Ramesh’, ’Mahender’,</code></p>
+<p><code class="calibre10">‘Lious’, ’Salman’, ’SRK’, ’VV’, ’MM’]),</code></p>
+<p><code class="calibre10">‘Age’:pd.Series([25.00, 26, 25, 23, 30, 29, 23, 34, 40, 30, 51, 46.00]),</code></p>
+<p><code class="calibre10">‘Rating’:pd.Series ([4.2320, 3.274, 3.98, 2.5628, 3.20,4.600, 3.800, 3.780, 2.980, 4.8000, 4.1000,3.65])}</code></p>
+<p><code class="calibre10">df = pd.DataFrame(d)</code></p>
+<p><code class="calibre10">print (df.describe())</code></p>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/p86.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q9a">Q9: Explain reindexing.</a></p>
+<p><em>Ans:</em> Reindexing allows us to modify the index of one data frame by keeping the other data frame as reference.</p>
+<p>It can also be achieved by passing index and corresponding columns.</p>
+<figure>
+<img src="OEBPS/images/91.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/p87.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q10a">Q10: Explain bfill and ffill.</a></p>
+<p><em>Ans:</em> While reindexing NaN can be introduced .bfill and ffill are used to handle NaN.</p>
+<figure>
+<img src="OEBPS/images/92.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/p87a.jpg" class="calibre1" />
+</figure>
+<p><strong>Bfill:</strong></p>
+<p>Fills the value from ahead value into the previous NaN value.</p>
+<p><strong>FFill:</strong></p>
+<p>Fills the value from behind value into the missing NaN value.</p>
+<p><strong>print(df2.reindex_like(df1,method=’ffill’))</strong></p>
+<figure>
+<img src="OEBPS/images/93.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q11a">Q11: What all type of iterations are provided in pandas data frame?</a></p>
+<p><em>Ans:</em> <strong>iteritems():</strong> To iterate over the (key,value) pairs.</p>
+<p><strong>iterrows():</strong> Iterate over the rows as (index,series) pairs.</p>
+<p><strong>itertuples():</strong> Iterate over the rows as namedtuples.</p>
+<p>Consider the following data frame sample:</p>
+<figure>
+<img src="OEBPS/images/p88.jpg" class="calibre1" />
+</figure>
+<p><strong>forkey,value in df.iteritems():</strong></p>
+<p><strong>print(key,value)</strong></p>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/p88a.jpg" class="calibre1" />
+</figure>
+<p><code class="calibre10">Name: Age, dtype: int64</code></p>
+<p><code class="calibre10">Name 0 Raja</code></p>
+<p><code class="calibre10">1 Raju</code></p>
+<p><code class="calibre10">2 Ricky</code></p>
+<p><code class="calibre10">3 Shiv</code></p>
+<p><code class="calibre10">4 Vishnu</code></p>
+<p><code class="calibre10">5 Ramesh</code></p>
+<p><code class="calibre10">6 Mahender</code></p>
+<p><code class="calibre10">7 Lious</code></p>
+<p><code class="calibre10">8 Salman</code></p>
+<p><code class="calibre10">9 SRK</code></p>
+<p><code class="calibre10">10 VV</code></p>
+<p><code class="calibre10">11 MM</code></p>
+<p><code class="calibre10">Name: Name, dtype: object</code></p>
+<p><code class="calibre10">Rating 0 4.23</code></p>
+<p><code class="calibre10">1 3.24</code></p>
+<p><code class="calibre10">2 3.98</code></p>
+<p><code class="calibre10">3 2.56</code></p>
+<p><code class="calibre10">4 3.20</code></p>
+<p><code class="calibre10">5 4.60</code></p>
+<p><code class="calibre10">6 3.80</code></p>
+<p><code class="calibre10">7 3.78</code></p>
+<p><code class="calibre10">8 2.98</code></p>
+<p><code class="calibre10">9 4.80</code></p>
+<p><code class="calibre10">10 4.10</code></p>
+<p><strong>forrow_index,row in df.iterrows():</strong></p>
+<p><strong>print (row_index,row)</strong></p>
+<p><code class="calibre10">0 Age 25</code></p>
+<p><code class="calibre10">Name Raja</code></p>
+<p><code class="calibre10">Rating 4.23</code></p>
+<p><code class="calibre10">Name: 0, dtype: object</code></p>
+<p><code class="calibre10">1 Age 26</code></p>
+<p><code class="calibre10">Name Raju</code></p>
+<p><code class="calibre10">Rating 3.24</code></p>
+<p><code class="calibre10">Name: 1, dtype: object</code></p>
+<p><code class="calibre10">2 Age 25</code></p>
+<p><code class="calibre10">Name Ricky</code></p>
+<p><code class="calibre10">Rating 3.98</code></p>
+<p><code class="calibre10">Name: 2, dtype: object</code></p>
+<p><code class="calibre10">3 Age 23</code></p>
+<p><code class="calibre10">Name Shiv</code></p>
+<p><code class="calibre10">Rating 2.56</code></p>
+<p><code class="calibre10">Name: 3, dtype: object</code></p>
+<p><code class="calibre10">4 Age 30</code></p>
+<p><code class="calibre10">Name Vishnu</code></p>
+<p><code class="calibre10">Rating 3.2</code></p>
+<p><code class="calibre10">Name: 4, dtype: object</code></p>
+<p><code class="calibre10">5 Age 29</code></p>
+<p><code class="calibre10">Name Ramesh</code></p>
+<p><code class="calibre10">Rating 4.6</code></p>
+<p><code class="calibre10">Name: 5, dtype: object</code></p>
+<p><code class="calibre10">6 Age 23</code></p>
+<p><code class="calibre10">Name Mahender</code></p>
+<p><code class="calibre10">Rating 3.8</code></p>
+<p><code class="calibre10">Name: 6, dtype: object</code></p>
+<p><code class="calibre10">7 Age 34</code></p>
+<p><code class="calibre10">Name Lious</code></p>
+<p><code class="calibre10">Rating 3.78</code></p>
+<p><code class="calibre10">Name: 7, dtype: object</code></p>
+<p><code class="calibre10">8 Age 40</code></p>
+<p><code class="calibre10">Name Salman</code></p>
+<p><code class="calibre10">Rating 2.98</code></p>
+<p><code class="calibre10">Name: 8, dtype: object</code></p>
+<p><code class="calibre10">9 Age 30</code></p>
+<p><code class="calibre10">Name SRK</code></p>
+<p><code class="calibre10">Rating 4.8</code></p>
+<p><code class="calibre10">Name: 9, dtype: object</code></p>
+<p><code class="calibre10">10 Age 51</code></p>
+<p><code class="calibre10">Name VV</code></p>
+<p><code class="calibre10">Rating 4.1</code></p>
+<p><code class="calibre10">Name: 10, dtype: object</code></p>
+<p><code class="calibre10">11 Age 46</code></p>
+<p><code class="calibre10">Name MM</code></p>
+<p><code class="calibre10">Rating 3.65</code></p>
+<p><code class="calibre10">Name: 11, dtype: object</code></p>
+<p><strong>for row in df.itertuples():</strong></p>
+<p><strong>print (row)</strong></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">Pandas(Index=0, Age=25, Name=’Raja’, Rating=4.23)</code></p>
+<p><code class="calibre10">Pandas(Index=1, Age=26, Name=’Raju’, Rating=3.24)</code></p>
+<p><code class="calibre10">Pandas(Index=2, Age=25, Name=’Ricky’, Rating=3.98)</code></p>
+<p><code class="calibre10">Pandas(Index=3, Age=23, Name=’Shiv’, Rating=2.56)</code></p>
+<p><code class="calibre10">Pandas(Index=4, Age=30, Name=’Vishnu’, Rating=3.2)</code></p>
+<p><code class="calibre10">Pandas(Index=5, Age=29, Name=’Ramesh’, Rating=4.6)</code></p>
+<p><code class="calibre10">Pandas(Index=6, Age=23, Name=’Mahender’, Rating=3.8)</code></p>
+<p><code class="calibre10">Pandas(Index=7, Age=34, Name=’Lious’, Rating=3.78)</code></p>
+<p><code class="calibre10">Pandas(Index=8, Age=40, Name=’Salman’, Rating=2.98)</code></p>
+<p><code class="calibre10">Pandas(Index=9, Age=30, Name=’SRK’, Rating=4.8)</code></p>
+<p><code class="calibre10">Pandas(Index=10, Age=51, Name=’VV’, Rating=4.1)</code></p>
+<p><code class="calibre10">Pandas(Index=11, Age=46, Name=’MM’, Rating=3.65)</code></p>
+<p><a href="#toc.xhtml#c04q12a">Q12: Explain how sorting is supported in pandas?</a></p>
+<p><em>Ans:</em> <strong>sort_index:</strong> Allows sorting on index(row) or column wise.</p>
+<p><strong>sort_values:</strong> Allows sorting on values.</p>
+<p>Consider the following data frame:</p>
+<figure>
+<img src="OEBPS/images/p91.jpg" class="calibre1" />
+</figure>
+<p><strong>sorted_df = unsorted_df.sort_values(by=’col1’)</strong></p>
+<p><strong>print (sorted_df)</strong></p>
+<figure>
+<img src="OEBPS/images/94.jpg" class="calibre1" />
+</figure>
+<p><strong>sorted_df=unsorted_df.sort_index(axis=1)</strong></p>
+<p><strong>print (sorted_df)</strong></p>
+<figure>
+<img src="OEBPS/images/95.jpg" class="calibre1" />
+</figure>
+<p><strong>sorted_df=unsorted_df.sort_index()</strong></p>
+<p><strong>print (sorted_df)</strong></p>
+<figure>
+<img src="OEBPS/images/96.jpg" class="calibre1" />
+</figure>
+<p><strong>sorted_df=unsorted_df.sort_index(ascending=False)</strong></p>
+<p><strong>print (sorted_df)</strong></p>
+<figure>
+<img src="OEBPS/images/p93.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q13a">Q13: How to override default reload option in pandas?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/97.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q14a">Q14: Explain various slicing options available with pandas?</a></p>
+<p><em>Ans:</em> Pandas supports the following slicing:</p>
+<p><strong>.loc()</strong> Label based</p>
+<p><strong>.iloc()</strong> Integer based</p>
+<p><strong>.ix()</strong> Both Label and Integer based</p>
+<p>Consider the following data frame:</p>
+<figure>
+<img src="OEBPS/images/98.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/99.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/100.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/101.jpg" class="calibre1" />
+</figure>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/102.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/103.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/104.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/105.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/106.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q15a">Q15: Explain advanced statistics with pandas.</a></p>
+<p><em>Ans:</em> Pandas support peak to peak, percentage change, covariance, and correlation on different series in data frame.</p>
+<figure>
+<img src="OEBPS/images/107.jpg" class="calibre1" />
+</figure>
+<p><strong>Output</strong></p>
+<p>Data frame</p>
+<figure>
+<img src="OEBPS/images/p95.jpg" class="calibre1" />
+</figure>
+<p><strong>Pct change</strong></p>
+<figure>
+<img src="OEBPS/images/p96a.jpg" class="calibre1" />
+</figure>
+<p><strong>Covariance:</strong></p>
+<figure>
+<img src="OEBPS/images/p96b.jpg" class="calibre1" />
+</figure>
+<p><strong>Correlation:</strong></p>
+<figure>
+<img src="OEBPS/images/p96c.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q16a">Q16: Explain rolling function.</a></p>
+<p><em>Ans:</em> Rolling function allows us to define window size and perform various operations w.r.t. the window.</p>
+<p>Expanding function is an alternative to rolling statistics is to use an expanding window, which yields the value of the statistic with all the data available up to that point in time.</p>
+<p>Consider the following data frame:</p>
+<figure>
+<img src="OEBPS/images/p96d.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/108.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/109.jpg" class="calibre1" />
+</figure>
+<p><strong>print (df.expanding(min_periods=3).mean())</strong></p>
+<figure>
+<img src="OEBPS/images/110.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q17a">Q17: How can we handle NA in pandas?</a></p>
+<p><em>Ans:</em> We can handle NA in three ways:</p>
+<ol>
+<li>dropna: Removes the data where NA is present.</li>
+<li>pad</li>
+<li>backfill</li>
+</ol>
+<p>Consider the following dataframe:</p>
+<figure>
+<img src="OEBPS/images/111.jpg" class="calibre1" />
+</figure>
+<p>dropna output</p>
+<p><strong>print (df.dropna())</strong></p>
+<figure>
+<img src="OEBPS/images/112.jpg" class="calibre1" />
+</figure>
+<p><strong>Pad output</strong></p>
+<figure>
+<img src="OEBPS/images/113.jpg" class="calibre1" />
+</figure>
+<p><strong>Backfill:</strong></p>
+<figure>
+<img src="OEBPS/images/114.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q18a">Q18: Explain group by function.</a></p>
+<p><em>Ans:</em> <strong>group_by</strong> allows us to group data based on single or multiple columns.</p>
+<p>It is equivalent to <em>Group by</em> clause supported in <strong>Structured Query language (SQL)</strong>.</p>
+<p>Consider the following dataframe:</p>
+<figure>
+<img src="OEBPS/images/115.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/116.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/117.jpg" class="calibre1" />
+</figure>
+<p>2015</p>
+<figure>
+<img src="OEBPS/images/p99.jpg" class="calibre1" />
+</figure>
+<p>2016</p>
+<figure>
+<img src="OEBPS/images/p99a.jpg" class="calibre1" />
+</figure>
+<p>2017</p>
+<figure>
+<img src="OEBPS/images/p99b.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q19a">Q19: Explain merge functions w.r.t data frame.</a></p>
+<p><em>Ans:</em> Data frame in pandas support merge operations in which two related data from diverse data frames can be brought in single view.</p>
+<p>Consider the following left and right data frame:</p>
+<p><strong>Left</strong></p>
+<figure>
+<img src="OEBPS/images/118.jpg" class="calibre1" />
+</figure>
+<p><strong>Right</strong></p>
+<figure>
+<img src="OEBPS/images/119.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/120.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/121.jpg" class="calibre1" />
+</figure>
+<p><strong>Left merge:</strong></p>
+<p>In left merge, all data from left side will come and only those matching from right would come.</p>
+<figure>
+<img src="OEBPS/images/122.jpg" class="calibre1" />
+</figure>
+<p><strong>Right merge:</strong></p>
+<p>In right merge everything from right side comes and only matching in left would come else it would come as NaN.</p>
+<p><strong>print (‘right’,pd.merge(left, right, on=’id’, how=’right’))</strong></p>
+<figure>
+<img src="OEBPS/images/123.jpg" class="calibre1" />
+</figure>
+<p><strong>Outer merge:</strong></p>
+<p>Data from both left and right would come.</p>
+<p><strong>print (‘outer’,pd.merge(left, right, on=’subject_id’, how=’outer’))</strong></p>
+<figure>
+<img src="OEBPS/images/124.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q20a">Q20: Explain concat method.</a></p>
+<p><em>Ans:</em> <strong>Concat</strong> method allows combining two different data frames either at row level or at column level.</p>
+<p>Consider the following left and right data frame:</p>
+<p><strong>Left</strong></p>
+<figure>
+<img src="OEBPS/images/125.jpg" class="calibre1" />
+</figure>
+<p><strong>Right</strong></p>
+<figure>
+<img src="OEBPS/images/126.jpg" class="calibre1" />
+</figure>
+<p><strong>print (pd.concat([left,right]))</strong></p>
+<figure>
+<img src="OEBPS/images/127.jpg" class="calibre1" />
+</figure>
+<p><strong>print (pd.concat([left,right],axis=1))</strong></p>
+<figure>
+<img src="OEBPS/images/128.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q21a">Q21: Explain how time related range can be generated in pandas.</a></p>
+<p><em>Ans:</em> Pandas support generating date range with the help of two functions <strong>date_range</strong> and <strong>bdate_range</strong> (business date range).</p>
+<p>Periods and frequency can be specified as attribute to the ranges.</p>
+<p><strong>start = pd.datetime(2018, 1, 1)</strong></p>
+<p><strong>end = pd.datetime(2020, 1, 5)</strong></p>
+<p><strong>print (pd.bdate_range(start, end))</strong></p>
+<p><strong>Output:</strong></p>
+<p><code class="calibre10">DatetimeIndex([‘2018-01-01’, ‘2018-01-02’, ‘2018-01-03’, ‘2018-01-04’,</code></p>
+<p><code class="calibre10">‘2018-01-05’, ‘2018-01-08’, ‘2018-01-09’, ‘2018-01-10’,</code></p>
+<p><code class="calibre10">‘2018-01-11’, ‘2018-01-12’,</code></p>
+<p><code class="calibre10">•</code></p>
+<p><code class="calibre10">‘2019-12-23’, ‘2019-12-24’, ‘2019-</code></p>
+<p><code class="calibre10">12-25’, ‘2019-12-26’,</code></p>
+<p><code class="calibre10">‘2019-12-27’, ‘2019-12-30’, ‘2019-12-31’, ‘2020-01-01’,</code></p>
+<p><code class="calibre10">‘2020-01-02’, ‘2020-01-03’],</code></p>
+<p><code class="calibre10">dtype=’datetime64[ns]’, length=525, freq=’B’)</code></p>
+<p><strong>print (pd.date_range(‘1/1/2011’, periods=5,freq=’M’))</strong></p>
+<p><strong>Output:</strong></p>
+<p>DatetimeIndex([‘2011-01-31’, ‘2011-02-28’, ‘2011-03-31’, ‘2011-04-30’,</p>
+<p>‘2011-05-31’],</p>
+<p>dtype=’datetime64[ns]’, freq=’M’)</p>
+<p><a href="#toc.xhtml#c04q22a">Q22: Explain which all data sources can pandas retrieve values.</a></p>
+<p><em>Ans:</em> Pandas are capable of reading and writing from variety of sources.</p>
+<p>Following are the sources and the corresponding read or write methods:</p>
+<figure>
+<img src="OEBPS/images/129.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/130.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q23a">Q23: Can you compare some of the functions of R and Python?</a></p>
+<p>Ans: <strong>Filtering, sampling, and Querying</strong></p>
+<figure>
+<img src="OEBPS/images/p105.jpg" class="calibre1" />
+</figure>
+<p><strong>Sorting</strong></p>
+<figure>
+<img src="OEBPS/images/p105a.jpg" class="calibre1" />
+</figure>
+<p><strong>Transforming</strong></p>
+<figure>
+<img src="OEBPS/images/p105b.jpg" class="calibre1" />
+</figure>
+<p><strong>Aggregate/Grouping functions</strong></p>
+<figure>
+<img src="OEBPS/images/p105c.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c04q24a">Q24: How to print a histogram using pandas?</a></p>
+<p><em>Ans:</em> Using <strong>series.value_counts()</strong> functions we can easily generate the value and its corresponding count.</p>
+<p><strong>import pandas as pd</strong></p>
+<p><strong>importnumpy as np</strong></p>
+<p><strong>s = pd.Series([1,1,100,120,30,40,60,60])</strong></p>
+<p><strong>print(s)</strong></p>
+<p><strong>print(s.value_counts())</strong></p>
+<p><strong>Output:</strong></p>
+<figure>
+<img src="OEBPS/images/p106.jpg" class="calibre1" />
+</figure>
+<p>Histogram</p>
+<p>Value count</p>
+<figure>
+<img src="OEBPS/images/p106a.jpg" class="calibre1" />
+</figure>
+</article>
+<p><span id="c05.xhtml"></span></p>
+<article type="bodymatter">
+<header>
+<h1 class="chap1"><a href="#toc.xhtml#c05" class="calibre7">C<span class="small">HAPTER</span> 5</a></h1>
+<h1 class="subchap"><a href="#toc.xhtml#c05" class="calibre7">Scipy and its Applications</a></h1>
+</header>
+<p><strong><em>Note:</em> [Q: Question Number and Ans: Answer]</strong></p>
+<p><a href="#toc.xhtml#c05q1a">Q1: Explain Scipy library.</a></p>
+<p><em>Ans:</em> Scipy is used for scientific computation. It is a collection of components and provides eco system for scientific computing.</p>
+<p><strong>Data and computation:</strong></p>
+<ul>
+<li>pandas, provides ease of use and very high performing data</li>
+<li>SymPy, for symbolic mathematics and computer algebra.</li>
+<li>scikit-image used for image processing.</li>
+<li>scikit-learn is used for machine learning.</li>
+<li>h5py and PyTables can both access data stored in the HDF5 format.</li>
+</ul>
+<p><a href="#toc.xhtml#c05q2a">Q2: Explain how can we perform Normality Tests.</a></p>
+<p><em>Ans:</em> Normality tests are the ones which test for data distribution in the form of Gaussian.</p>
+<p>Each of this has following assumptions on input and output:</p>
+<p><strong>Input assumptions:</strong></p>
+<ul>
+<li>Observations in each sample are independent and identically distributed.</li>
+</ul>
+<p><strong>Output assumptions:</strong></p>
+<ul>
+<li>H0: the sample has a Gaussian distribution</li>
+<li>H1: the sample does not have a Gaussian distribution</li>
+</ul>
+<p>There are three types of test within.</p>
+<p>All the three types are supported as a part of scipy.</p>
+<p><code class="calibre10">import scipy.stats as ss</code></p>
+<p><code class="calibre10">Shapiro-Wilk Test</code></p>
+<p><code class="calibre10">stat, p = ss.shapiro(data)</code></p>
+<p><code class="calibre10">D’Agostino’s K^2 Test</code></p>
+<p><code class="calibre10">stat, p = ss.normaltest(data)</code></p>
+<p><code class="calibre10">Anderson-Darling Test</code></p>
+<p><code class="calibre10">result =ss.anderson(data)</code></p>
+<p><strong>Conclusion:</strong> If calculate p value &lt; alpha, we can conclude null hypothesis rejected else it cannot be rejected.</p>
+<p><a href="#toc.xhtml#c05q3a">Q3: Explain how can we perform correlation test?</a></p>
+<p><em>Ans:</em> <strong>Pearson’s Correlation Coefficient</strong></p>
+<p>Tests have a linear relationship that exist between two data set.</p>
+<p><strong>Input Assumptions:</strong></p>
+<p>All these are made w.r.t Observations</p>
+<ul>
+<li>They are independent and identically distributed</li>
+<li>They are normally distributed</li>
+<li>They have the same variance</li>
+</ul>
+<p><strong>Output assumptions:</strong></p>
+<ul>
+<li>H0: the two samples are independent.</li>
+<li>H1: two samples have dependancy.</li>
+</ul>
+<p><code class="calibre10">import scipy.stats</code></p>
+<p><code class="calibre10">corr, p = scipy.stats.pearsonr(data1, data2)</code></p>
+<p>Based on value of corr and p we can conclude whether their relationship between both columns.</p>
+<p>Spearman’s Rank Correlation and Kendall’s Rank Correlation.</p>
+<p>Both of them have same input and output assumptions.</p>
+<p>Tests whether monotonic relationship exists between data set.</p>
+<p><strong>Input assumptions:</strong></p>
+<p>All assumptions are made w.r.t. observations:</p>
+<ul>
+<li>They are independent and identically distributed</li>
+<li>They can be ranked</li>
+</ul>
+<p><strong>Output assumptions:</strong></p>
+<ul>
+<li>H0: The two samples are independent</li>
+<li>H1: There is a dependency between the samples</li>
+</ul>
+<p>Spearman’s Rank Correlation</p>
+<p><code class="calibre10">import scipy.stats</code></p>
+<p><code class="calibre10">corr, p = scipy.stats</code></p>
+<p><code class="calibre10">.spearmanr(data1, data2)</code></p>
+<p>Kendall’s Rank Correlation</p>
+<p><code class="calibre10">import scipy.stats</code></p>
+<p><code class="calibre10">corr, p = scipy.stats .kendalltau(data1, data2)</code></p>
+<p>Based on value of corr and p we can conclude whether their relationship between both columns.</p>
+<p>Chi-Squared Test</p>
+<p>Tests independence between two categorical variables:</p>
+<p><strong>Input assumptions:</strong></p>
+<ul>
+<li>Observations are independent.</li>
+<li>25 or more examples in each cell are required w.r.t. the contingency table.</li>
+</ul>
+<p><strong>Output assumptions:</strong></p>
+<ul>
+<li>H0: the two samples are independent.</li>
+<li>H1: there is a dependency between the samples.</li>
+</ul>
+<p><code class="calibre10">import scipy.stats</code></p>
+<p><code class="calibre10">stat, p, dof, expected = scipy.stats .chi2_contingency(table)</code></p>
+<p><a href="#toc.xhtml#c05q4a">Q4: Explain tests pertaining to Parametric Statistical Hypothesis Tests.</a></p>
+<p><em>Ans:</em> Comparison of data is done by the following test:</p>
+<p><strong>Student’s t-test</strong></p>
+<p>It tests whether the means of two independent samples are significantly different.</p>
+<p><strong>Input assumptions:</strong></p>
+<p>All assumptions are made w.r.t observation.</p>
+<ul>
+<li>They are independent and identically distributed (iid).</li>
+<li>They are normally distributed.</li>
+<li>They have the same variance.</li>
+</ul>
+<p><strong>Output assumptions:</strong></p>
+<ul>
+<li>H0: the means of the samples are equal</li>
+<li>H1: the means of the sam ples are unequal</li>
+</ul>
+<p><code class="calibre10">import scipy.stats as ss</code></p>
+<p><code class="calibre10">stat, p = ss.ttest_ind(data1, data2)</code></p>
+<p><strong>Paired Student’s t-test</strong></p>
+<p>Tests whether the significant difference exists between the means of two paired samples.</p>
+<p><strong>Input assumptions:</strong></p>
+<ul>
+<li>Observations in each sample are independent and identically distributed</li>
+<li>Observations in each sample are normally distributed</li>
+<li>Observations in each sample have the same variance</li>
+<li>Observations across each sample are paired</li>
+</ul>
+<p><strong>Output assumptions:</strong></p>
+<ul>
+<li>H0: the means of the samples are equal</li>
+<li>H1: the means of the samples are unequal</li>
+</ul>
+<p><code class="calibre10">import scipy.stats</code></p>
+<p><code class="calibre10">stat, p = scipy.stats.ttest_rel(data1, data2)</code></p>
+<p><strong>Analysis of Variance Test (ANOVA)</strong></p>
+<p>It tests whether the means of two or more independent samples are significantly different.</p>
+<p><strong>Input assumptions:</strong></p>
+<p>All assumptions are made w.r.t observation:</p>
+<ul>
+<li>They are independent and identically distributed (iid).</li>
+<li>They are normally distributed.</li>
+<li>They have the same variance.</li>
+</ul>
+<p><strong>Output assumptions:</strong></p>
+<ul>
+<li>H0: the means of the samples are equal.</li>
+<li>H1: one or more of the means of the samples are unequal.</li>
+</ul>
+<p><code class="calibre10">import scipy.stats</code></p>
+<p><code class="calibre10">stat, p = scipy.stats.f_oneway(data1, data2, •)</code></p>
+<p><a href="#toc.xhtml#c05q5a">Q5: Explain how to test Nonparametric Statistical Hypothesis Tests.</a></p>
+<p><em>Ans:</em> Mann-Whitney U Test:</p>
+<p>It tests whether the two independent samples are equal or not.</p>
+<p><strong>Input Assumptions:</strong></p>
+<p>All assumptions are made w.r.t observation:</p>
+<ul>
+<li>They are independent and identically distributed.</li>
+<li>They can be ranked.</li>
+</ul>
+<p><strong>Output Assumptions:</strong></p>
+<ul>
+<li>H0: the distributions of both samples are equal.</li>
+<li>H1: the distributions of both samples are not equal.</li>
+</ul>
+<p><code class="calibre10">import scipy.stats</code></p>
+<p><code class="calibre10">stat, p = scipy.stats.mannwhitneyu(data1, data2)</code></p>
+<p><a href="#toc.xhtml#c05q6a">Q6: Implement logistic regression in Python?</a></p>
+<p><em>Ans:</em> sklearn.linear_model contains LogisticRegression which can be used to represent logistic regression.</p>
+<figure>
+<img src="OEBPS/images/131.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q7a">Q7: Explain how to implement decision tree in Python.</a></p>
+<p><em>Ans:</em> sklearn.tree module contains DecisionTreeClassifier which can be used for classification.</p>
+<figure>
+<img src="OEBPS/images/132.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q8a">Q8: How to implement Random forest in Python?</a></p>
+<p><em>Ans:</em> sklearn.ensemble module contains RandomForestClassifier which can be used for Random forest generation.</p>
+<figure>
+<img src="OEBPS/images/133.jpg" class="calibre1" />
+</figure>
+<p>For regression type we will use <strong>RandomForestRegressor instead</strong> of <strong>RandomForestClassifier</strong>.</p>
+<p><a href="#toc.xhtml#c05q9a">Q9: How to implement support vector machine in Python?</a></p>
+<p><em>Ans:</em> <strong>sklearn.svm</strong> module contains SVC which is used for svm.</p>
+<p><strong>SVM for linear model code:</strong></p>
+<figure>
+<img src="OEBPS/images/134.jpg" class="calibre1" />
+</figure>
+<p><strong>SVM for non-linear/polynomial mode code</strong></p>
+<figure>
+<img src="OEBPS/images/135.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q10a">Q10: Which all kernels are supported by svm in Python?</a></p>
+<p><em>Ans:</em> Linear, poly, sigmoid (which returns 0 or 1 kernel=’sigmoid’) and gaussian (to support gaussian distribution kernel=rbf)</p>
+<p><a href="#toc.xhtml#c05q11a">Q11: Implement KNN algorithm using Python.</a></p>
+<p><em>Ans:</em> <strong>sklearn.neighbors</strong> module contains <strong>KNeighborsClassifier</strong> which can be used for classification:</p>
+<figure>
+<img src="OEBPS/images/136.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q12a">Q12: How to select k in KNN algorithm?</a></p>
+<p><em>Ans:</em> Finding an optimal value of <strong>k</strong> is very important in order to ensure success of KNN algorithm.</p>
+<p>The value of <strong>k</strong> is heavily dependent on the data set.</p>
+<p>A very small value of <strong>k</strong> implies noise can have a bigger influence on the result.</p>
+<p>A large value of <strong>k</strong> implies more calculations which can be time and memory consuming.</p>
+<p>Mostly Odd classes are preferred and <strong>k= sqrt(noOfElements)</strong> is generally taken as an approach to find <strong>k</strong>.</p>
+<p>Alternatively, Elbow method can also be used. In the case of Elbow method. In Elbow method we calculate the sum of squared errors (SSE) for different values of k and plot the same.</p>
+<p>The one which looks like an elbow is selected as the optimal.</p>
+<p><a href="#toc.xhtml#c05q13a">Q13: How to implement K means in Python?</a></p>
+<p><em>Ans:</em> We can implement K means with the help of <strong>sklearn.cluster</strong> module which contains KMeans.</p>
+<figure>
+<img src="OEBPS/images/137.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q14a">Q14: How can accuracy of any model be calculated?</a></p>
+<p><em>Ans:</em> Following approaches can be used to determine accuracy:</p>
+<figure>
+<img src="OEBPS/images/138.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/139.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/140.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/141.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/142.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/143.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q15a">Q15: Explain regression metrics.</a></p>
+<p><em>Ans:</em> Regression metrics gives an indication of how the regression algorithm performed.</p>
+<p>Following are the important ones:</p>
+<figure>
+<img src="OEBPS/images/144.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q16a">Q16: Explain how we can print a decision tree or see the rules of the decision tree?</a></p>
+<p><em>Ans:</em> export_text can help us in achieving the above objective.</p>
+<p>By passing the created model to the above function, we can get the rules printed out</p>
+<p><code class="calibre10">fromsklearn.tree.export import export_text</code></p>
+<p><code class="calibre10">dcrules = export_text(model, feature_names=list(train))</code></p>
+<p><code class="calibre10">print(dcrules)</code></p>
+<p>In the below example, dcrules is the extracted rule after passing the created model to export function:</p>
+<p><code class="calibre10">|---Age&lt;=0.80</code></p>
+<p><code class="calibre10">||---Salary&lt;=0.65</code></p>
+<p><code class="calibre10">|||---Age&lt;=-0.19</code></p>
+<p><code class="calibre10">||||---class:0</code></p>
+<p><code class="calibre10">|||---Age&gt;-0.19</code></p>
+<p><code class="calibre10">||||---Salary&lt;=-0.06</code></p>
+<p><code class="calibre10">|||||---class:0</code></p>
+<p><code class="calibre10">||||---Salary&gt;-0.06</code></p>
+<p><code class="calibre10">|||||---Salary&lt;=0.40</code></p>
+<p><code class="calibre10">||||||---Salary&lt;=0.03</code></p>
+<p><code class="calibre10">|||||||---class:1</code></p>
+<p><a href="#toc.xhtml#c05q17a">Q17: What is the use of boosting techniques?</a></p>
+<p><em>Ans:</em> Boosting techniques fall under the family of ensemble algorithms. In boosting techniques, a collection of many classifiersthatcan be weak in nature can be combined together to form a new classifier thatcan be strong.</p>
+<p>It can be said that in boosting, a series of various classifiers are made progressively in which each classifier tries to solve the reduced the error of earlier one. The end product after this would be a refined classifier with better performance as compared to earlier</p>
+<figure>
+<img src="OEBPS/images/145.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q18a">Q18: Explain some of the advantages and disadvantages of boosting techniques?</a></p>
+<p><em>Ans:</em> <strong>Advantages</strong></p>
+<ul>
+<li>Since they are ensemble model, the predictions are easy to interpret.</li>
+<li>Predictions are better are compared to normal classifiers.</li>
+<li>Over fitting can be handled to a good extent with the help of this technique.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Outliers are important to consider. If not handled properly they can affect the entire model.</li>
+<li>Other than XGBBoost, most other algorithms are sequential thus limiting the scope of running it in parallel.</li>
+</ul>
+<p><a href="#toc.xhtml#c05q19a">Q19: What is AdaBoost?</a></p>
+<p><em>Ans:</em> ADA, also known asthe Adaptive Boosting technique, was found by Yoav Freund and Robert Schapire. Since it is a boosting technique, the aim of this would be to find a new strong classifier from the collection of various weak classifiers.</p>
+<p>It findsa major application with a decision tree or binary classification.</p>
+<p>Generally, the ADA boost makes use of decision stumps, which are decision trees of one level.</p>
+<p>The instance in the training data set is weighted. This is very important and distinct as compared to majority voting as the importance of each output is taken as per weightage.</p>
+<p>Thus the process is to make use of decision stump to take input variable and predict binary values as classification.</p>
+<p>By using the above misclassification rate is calculated.</p>
+<p>Using the weighted sum, the stage value is then calculated.</p>
+<p>Using this, training weights are updated, which gives more weightage to wrongly predicted instances and less weightage to properly predicted instances.</p>
+<p>Weak models thatare added in the sequence are then trained using the weighted training data.</p>
+<p>The above process is repeated until the desired accuracy is achieved, or no more improvements are possible.</p>
+<p>Shown below is the code for Ada boosting</p>
+<p><code class="calibre10">fromsklearn.ensemble import AdaBoostClassifier</code></p>
+<p><code class="calibre10">booster = AdaBoostClassifier() n_estimators = 50 (default value)</code></p>
+<p><code class="calibre10">base_estimator = DecisionTreeClassifier (default value) booster.fit(x_train,y_train) booster.predict(x_test)</code></p>
+<p><a href="#toc.xhtml#c05q20a">Q20: Explain Gradient boosting?</a></p>
+<p><em>Ans:</em> Gradient boosting makes use of the trained sequence model. It makes use of Gradient descent function, which calculates the local minimum of a given function. Thus we try to find the local minimum function for loss.</p>
+<p>The procedure is to construct new learners whoare also known as the base and which can be correlated with negative gradient descent of the loss function,</p>
+<p><code class="calibre10">fromsklearn.ensemble import GradientBoostingClassifier #For Classification</code></p>
+<p><code class="calibre10">#from sklearn.ensemble import GradientBoostingRegressor #For Regression</code></p>
+<p><code class="calibre10">classifier = GradientBoostingClassifier(n_estimators, learning_rate, max_depth)</code></p>
+<p><code class="calibre10">classifier.fit(X_train, y_train)</code></p>
+<p><strong>n_estimators:</strong> indicatesthe number of weak learners</p>
+<p><strong>learning_rate:</strong> determines the contribution of weak learners in the final combination</p>
+<p><strong>max_depth:</strong> maximum depth of the individual regression estimators. This limits the number of nodes in the tree.</p>
+<p><a href="#toc.xhtml#c05q21a">Q21: Explain XGBoost?</a></p>
+<p><em>Ans:</em> TheXGBoost, also known as eXtreme Gradient Boostingis a set of algorithms /library for developing fast and high-performance gradient boosting tree models.</p>
+<p>It makes use of gradient boosting framework</p>
+<p>Some of the features are:</p>
+<ul>
+<li>Automatic handling of missing data values.</li>
+<li>Parallelization of tree construction is possible</li>
+<li>Makes use of the second partial derivatives of the loss function. This is the major difference as compared to other gradient algorithms. While other algorithms makes use of loss function which is first order derivative, XGB makes use of second order derivative which also gives the direction of the gradient</li>
+<li>Advanced regularization techniques are used.</li>
+</ul>
+<p>Sample snippet</p>
+<p><code class="calibre10">import pandas as pd</code></p>
+<p><code class="calibre10">fromxgboost import XGBClassifier</code></p>
+<p><code class="calibre10">fromsklearn.metrics import accuracy_score</code></p>
+<p><code class="calibre10">model = XGBClassifier()</code></p>
+<p><code class="calibre10">model.fit(x,y)</code></p>
+<p><code class="calibre10">predict_train = model.predict(test_x)</code></p>
+<p><code class="calibre10">accuracy_train = accuracy_score(train_y,predict_train)</code></p>
+<p><a href="#toc.xhtml#c05q22a">Q22: Explain the differences/similarities between bagging and Boosting?</a></p>
+<p><em>Ans:</em> <strong>Similarities:</strong></p>
+<ul>
+<li>Both belong to the method of algorithms which are known as ensemble i.e. which generates gets 1 learner from N classifiers</li>
+<li>Both work by dividing the original dataset into smaller units</li>
+<li>Average of outputs are taken into consideration</li>
+<li>Both try to increase performance</li>
+</ul>
+<p>Following table shows the differences:</p>
+<figure>
+<img src="OEBPS/images/p119.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c05q23a">Q23: Write a small snippet to perform operation with neural networks using tensorflow and keras?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/146.jpg" class="calibre1" />
+</figure>
+</article>
+<p><span id="c06.xhtml"></span></p>
+<article type="bodymatter">
+<header>
+<h1 class="chap1"><a href="#toc.xhtml#c06" class="calibre7">C<span class="small">HAPTER</span> 6</a></h1>
+<h1 class="subchap"><a href="#toc.xhtml#c06" class="calibre7">Matplotlib Samples to Remember</a></h1>
+</header>
+<p><strong><em>Note:</em> [Q: Question Number and Ans: Answer]</strong></p>
+<p><a href="#toc.xhtml#c06q1a">Q1: Explain how to draw bar plot.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/149.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/150.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c06q2a">Q2: How to draw histogram?</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/151.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/152.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c06q3a">Q3: How to draw line chart?</a></p>
+<p><em>Ans:</em> <strong>importnumpy as np</strong></p>
+<p><strong>frommatplotlib import pyplot as plt</strong></p>
+<p><strong>frommatplotlib.backends.backend_pdf import PdfPages</strong></p>
+<figure>
+<img src="OEBPS/images/153.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/154.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c06q4a">Q4: Draw Pie chart.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/155.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/156.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c06q5a">Q5: How to get the equation of the line printed line plot?</a></p>
+<p><em>Ans:</em> Using following snippet of code same can be achieved</p>
+<p><code class="calibre10">plt.title(‘$y= slope * x+ intercept))</code></p>
+<figure>
+<img src="OEBPS/images/157.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c06q6a">Q6: Draw scatter plot.</a></p>
+<p><em>Ans:</em></p>
+<figure>
+<img src="OEBPS/images/158.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/159.jpg" class="calibre1" />
+</figure>
+</article>
+<p><span id="c07.xhtml"></span></p>
+<article type="bodymatter">
+<header>
+<h1 class="chap1"><a href="#toc.xhtml#c07" class="calibre7">C<span class="small">HAPTER</span> 7</a></h1>
+<h1 class="subchap"><a href="#toc.xhtml#c07" class="calibre7">Statistics with Excel Sheet</a></h1>
+</header>
+<p><strong><em>Note:</em> [Q: Question Number and Ans: Answer]</strong></p>
+<p><a href="#toc.xhtml#c07q1a">Q1: Does Excel has any support for statistics?</a></p>
+<p><em>Ans:</em> Yes, Excel sheet do provide a lot of support for statistics with few add-ins like <em>Analysis Tool pack</em>. In order to enable this analysis tool pack, select excel options and the go to Add-ins option and enable <em>AnalysisToolPak</em>.</p>
+<figure>
+<img src="OEBPS/images/160.jpg" class="calibre1" />
+</figure>
+<p>Once done, the data analysis option is enabled in Data tab of excel, it can be seen under the <strong>Data</strong> tab as shown in the image down below:</p>
+<figure>
+<img src="OEBPS/images/161.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c07q2a">Q2: Find correlation using Excel.</a></p>
+<p><em>Ans:</em> Correlation can be easily found with the help of <strong>CORREL</strong> function of Analysis Toolpak.</p>
+<p>Select <strong>Data Analysis</strong> → Select <strong>correlation</strong> as an option.</p>
+<figure>
+<img src="OEBPS/images/162.jpg" class="calibre1" />
+</figure>
+<p>After selecting <strong>Correlation</strong> from Data Analysis select the corresponding input field and set output values to be displayed on the excel sheet by setting <strong>Output Range</strong> available under <strong>Output options</strong>,</p>
+<figure>
+<img src="OEBPS/images/163.jpg" class="calibre1" />
+</figure>
+<p>and after <strong>OK</strong> is clicked, the result for same of Covariance can be found on excel sheet.</p>
+<p><a href="#toc.xhtml#c07q3a">Q3: How to get Histogram in excel?</a></p>
+<p><em>Ans:</em> To get Histogram in excel we generally require values and corresponding bins. Bins represent the range in which frequency is calculated.</p>
+<p>From <strong>Data Analysis</strong> → select <strong>Histogram</strong> function → we can select input range and bins range</p>
+<figure>
+<img src="OEBPS/images/164.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/165.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/166.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c07q4a">Q4: Explain how to get Descriptive Statistics using Excel.</a></p>
+<p><em>Ans:</em> To get <strong>Descriptive Statistics</strong> select <strong>Data Analysis</strong> ⇒ Select <strong>Descriptive Analysis</strong> ⇒ then select different statistics you prefer.</p>
+<figure>
+<img src="OEBPS/images/167.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/168.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/169.jpg" class="calibre1" />
+</figure>
+<p><a href="#toc.xhtml#c07q5a">Q5: Explain how to perform Anova in excel?</a></p>
+<p><em>Ans:</em> To perform <strong>Anova</strong> select <strong>Data Analysis</strong> ⇒ <strong>Anova: Single factor</strong></p>
+<figure>
+<img src="OEBPS/images/170.jpg" class="calibre1" />
+</figure>
+<p>Select corresponding input and output values.</p>
+<figure>
+<img src="OEBPS/images/171.jpg" class="calibre1" />
+</figure>
+<figure>
+<img src="OEBPS/images/172.jpg" class="calibre1" />
+</figure>
+<p>Based upon the value of F and F critical, we can conclude whether null hypothesis is rejected or accepted.</p>
+<p><a href="#toc.xhtml#c07q6a">Q6: Explain how to perform Rank and Percentile in excel.</a></p>
+<p><em>Ans:</em> From <strong>Data Analysis</strong> → select <strong>Rank and Percentile</strong></p>
+<figure>
+<img src="OEBPS/images/173.jpg" class="calibre1" />
+</figure>
+<p>Select the input and output range to get the answer:</p>
+<figure>
+<img src="OEBPS/images/174.jpg" class="calibre1" />
+</figure>
+</article>
