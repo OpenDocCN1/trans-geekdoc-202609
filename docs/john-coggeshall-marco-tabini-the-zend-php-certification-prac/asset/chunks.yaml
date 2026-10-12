@@ -1,0 +1,4619 @@
+- raw: '
+
+
+    ![Image 1](index-1_1.png)
+
+
+    **The Zend**
+
+
+    **PHP Certification**
+
+
+    The Zend
+
+
+    **Practice Test Book**
+
+
+    As the usage of PHP grows, the need for a globally-recognized credentials program
+    PHP Certification
+
+
+    for professional developers is becoming more and more important. The Zend Engineer
+    Certification Program, launched by worldwide PHP leader Zend Technologies, finally
+    creates a professional designation that represents consistently high-quality skills
+    and knowledge in the PHP world.
+
+
+    Practice Test Book
+
+
+    Written and edited by four members of the Zend Education Board who also helped
+    create the actual Zend Certification Exam, **this book contains 200 questions**
+    on every Practice Questions for the
+
+
+    topic that is part of the exam.
+
+
+    Zend Certified Engineer Exam
+
+
+    *The Zend Certification Practice Test Book* is an invaluable resource in testing
+    your preparedness in every area of the exam, from the basics to the most advanced
+    topics.
+
+
+    **CTICE TEST BOOK**
+
+
+    Each question comes with a clear answer that provides an explanation of the question''s
+    **A**
+
+
+    John Coggeshall and Marco Tabini
+
+
+    topic, its goals and end result. Answering the questions in this book will allow
+    you to clearly and quickly identify the areas of PHP in which you are strong and
+    those in which you need further study before being able to pass the exam!
+
+
+    **TION PRA**
+
+
+    **Zend Technologies, Inc.** (http://www.zend.com) is the PHP company. Founded
+    by the creators and ongoing innovators of PHP, it is the developer of the Zend
+    Engine, the heart **TIFIC**
+
+
+    of PHP.
+
+
+    Zend focuses on enterprise-class products and services that enable organizations
+    to develop, deploy and manage business-critical PHP applications.
+
+
+    **NanoBooks** are excellent, in-depth resources created by the publishers of *php|architect*
+    (http://www.phparch.com), the world’s premier magazine dedicated to PHP professionals.
+
+
+    **THE ZEND PHP CER**
+
+
+    NanoBooks focus on delivering high-quality content with in-depth analysis and
+    expertise, centered around a single, well-defined topic and without any of the
+    fluff of larger, more expensive books.
+
+
+    USA $21.99
+
+
+    Canada $29.99
+
+
+    From the publishers of
+
+
+    U.K.
+
+
+    £16.99 Net
+
+
+    Shelve under PHP/Web Development/Certification
+
+
+    **7.50 x 9.25**
+
+
+    **7.50 x 9.25**
+
+
+    **.309**
+
+
+    ![Image 2](index-2_1.png)
+
+
+    ![Image 3](index-2_2.png)
+
+
+    December, 2004
+
+
+    Thank you for you interest in *The Zend PHP Certification Practice Test Book*.
+    This PDF file contains the front matter and a sample chapter from the book.
+
+
+    The book is currently available, both in print and PDF format, exclusively from
+    the php|architect website:
+
+
+    [Click here from the print edition](http://www.phparch.com/shop_product.php?itemid=73)
+
+
+    [Click here for the PDF edition](http://www.phparch.com/shop_product.php?itemid=74)
+
+
+    Effective January 2005, the book will also be available at bookstores throughout
+    North America and Europe, or through online retailers, such as Amazon.com or BarnesAndNoble.com.
+
+
+    If you cannot find it at your local bookstore, please inform them that the book
+    is distributed through Ingram Books and they should be able to order a copy for
+    you.
+
+
+    Thank you!
+
+
+    *The php|architect Team*
+
+
+    [*info@phparch.com*](mailto:info@phparch.com)
+
+
+    **THE ZEND**
+
+
+    **PHP CERTIFICATION**
+
+
+    **PRACTICE TEST BOOK**
+
+
+    By John Coggeshall and Marco Tabini
+
+
+    **The Zend PHP Certification Practice Test Book**
+
+
+    Contents Copyright © 2004-2005 John Coggeshall and Marco Tabini – All Right Reserved
+    Book and cover layout, design and text Copyright © 2004-2005 Marco Tabini & Associates,
+    Inc. – All Rights Reserved **First Edition: January 2005**
+
+
+    ISBN 0-9735898-8-4
+
+
+    Produced in Canada
+
+
+    Printed in the United States
+
+
+    No part of this book may be reproduced, stored in a retrieval system, or transmitted
+    in any form or by any means, without the prior written permission of the publisher,
+    except in the case of brief quotations embedded in critical reviews or articles.
+
+
+    **Disclaimer**
+
+
+    Although every effort has been made in the preparation of this book to ensure
+    the accuracy of the information contained therein, this book is provided “as-is”
+    and the publisher, the author(s), their distributors and retailers, as well as
+    all affiliated, related or subsidiary parties take no responsibility for any inaccuracy
+    and any and all damages caused, either directly or indirectly, by the use of such
+    information.
+
+
+    We have endeavoured to properly provide trademark information on all companies
+    and products mentioned in this book by the appropriate use of capitals. However,
+    we cannot guarantee the accuracy of such information.
+
+
+    Marco Tabini & Associates, The MTA logo, php|architect, the php|architect logo,
+    NanoBook and NanoBook logo are trademarks or registered trademarks of Marco Tabini
+    & Associates Inc.
+
+
+    Zend Technologies, the Zend Logo, Zend Certified Engineer, and the Zend Certified
+    Engineer logo are trademarks or registered trademarks of Zend Technologies, Inc.
+    and are used by agreement with the owner.
+
+
+    **Bulk Copies**
+
+
+    Marco Tabini & Associates, Inc. offers trade discounts on purchases of ten or
+    more copies of this book. For more information, please contact our sales offices
+    at the address or numbers below.
+
+
+    **Credits**
+
+
+    **Written by**
+
+
+    John Coggeshall
+
+
+    Marco
+
+
+    Tabini
+
+
+    **Published by**
+
+
+    Marco Tabini & Associates, Inc.
+
+
+    28
+
+
+    Bombay
+
+
+    Ave.
+
+
+    Toronto,
+
+
+    ON
+
+
+    M3H
+
+
+    1B7
+
+
+    Canada
+
+
+    (416)
+
+
+    630-6202
+
+
+    (877) 630-6202 toll free within North America
+
+
+    info@phparch.com / www.phparch.com
+
+
+    Marco
+
+
+    Tabini,
+
+
+    Publisher
+
+
+    **Technical Reviewers**
+
+
+    Derick Rethans
+
+
+    Daniel Kushner
+
+
+    **Layout and Design**
+
+
+    Arbi Arzoumani
+
+
+    **Managing Editor**
+
+
+    Emanuela Corso
+
+
+    *To Daniel Tabini and Diana Katheryn Coggeshall*
+
+
+    *May we leave you a better world than the one we found.*
+
+
+    **Table of Contents**
+
+
+    [**FOREWORD ................................................................................................................................
+    6**](#index.html#p8)
+
+
+    [**ABOUT THE AUTHORS............................................................................................................
+    8**](#index.html#p10)
+
+
+    [**INTRODUCTION ........................................................................................................................
+    9**](#index.html#p11)
+
+
+    [*Why a Book of Practice Questions? ....................................................................................
+    10*](#index.html#p12)
+
+
+    [*How is this Book Organized? ..............................................................................................
+    10*](#index.html#p12)
+
+
+    [*Finding Errata and Discussing Your Concerns...................................................................
+    11*](#index.html#p13)
+
+
+    [*Acknowledgements...............................................................................................................
+    11*](#index.html#p13)
+
+
+    [**1\. PHP PROGRAMMING BASICS .........................................................................................
+    13**](#index.html#p15)
+
+
+    [Questions..................................................................................................................................
+    14](#index.html#p16)
+
+
+    [Answers....................................................................................................................................
+    22](#index.html#p24)
+
+
+    **2\. OBJECT-ORIENTED PROGRAMMING WITH PHP 4 ..................................................
+    26**
+
+
+    Questions..................................................................................................................................
+    27
+
+
+    Answers....................................................................................................................................
+    36
+
+
+    **3\. PHP AS A WEB DEVELOPMENT LANGUAGE .............................................................
+    39**
+
+
+    Questions..................................................................................................................................
+    40
+
+
+    Answers....................................................................................................................................
+    45'
+  fmt: "\n# The Zend PHP Certification Practice Test Book\n\n## Foreword\n\nAs the\
+    \ usage of PHP grows, the need for a globally-recognized credentials program for\
+    \ professional developers is becoming more and more important. The Zend Engineer\
+    \ Certification Program, launched by worldwide PHP leader Zend Technologies, finally\
+    \ creates a professional designation that represents consistently high-quality\
+    \ skills and knowledge in the PHP world.\n\nWritten and edited by four members\
+    \ of the Zend Education Board who also helped create the actual Zend Certification\
+    \ Exam, this book contains 200 questions on every topic that is part of the exam.\n\
+    \n*The Zend Certification Practice Test Book* is an invaluable resource in testing\
+    \ your preparedness in every area of the exam, from the basics to the most advanced\
+    \ topics.\n\nEach question comes with a clear answer that provides an explanation\
+    \ of the question's topic, its goals and end result. Answering the questions in\
+    \ this book will allow you to clearly and quickly identify the areas of PHP in\
+    \ which you are strong and those in which you need further study before being\
+    \ able to pass the exam!\n\n**Zend Technologies, Inc.** (http://www.zend.com)\
+    \ is the PHP company. Founded by the creators and ongoing innovators of PHP, it\
+    \ is the developer of the Zend Engine, the heart of PHP.\n\nZend focuses on enterprise-class\
+    \ products and services that enable organizations to develop, deploy and manage\
+    \ business-critical PHP applications.\n\n**NanoBooks** are excellent, in-depth\
+    \ resources created by the publishers of *php|architect* (http://www.phparch.com),\
+    \ the world's premier magazine dedicated to PHP professionals.\n\nNanoBooks focus\
+    \ on delivering high-quality content with in-depth analysis and expertise, centered\
+    \ around a single, well-defined topic and without any of the fluff of larger,\
+    \ more expensive books.\n\nUSA $21.99 | Canada $29.99 | U.K. £16.99 Net\n\nShelve\
+    \ under PHP/Web Development/Certification\n\nFrom the publishers of *php|architect*\n\
+    \nDecember, 2004\n\nThank you for your interest in *The Zend PHP Certification\
+    \ Practice Test Book*. This PDF file contains the front matter and a sample chapter\
+    \ from the book.\n\nThe book is currently available, both in print and PDF format,\
+    \ exclusively from the php|architect website:\n\n- [Click here for the print edition](http://www.phparch.com/shop_product.php?itemid=73)\n\
+    - [Click here for the PDF edition](http://www.phparch.com/shop_product.php?itemid=74)\n\
+    \nEffective January 2005, the book will also be available at bookstores throughout\
+    \ North America and Europe, or through online retailers, such as Amazon.com or\
+    \ BarnesAndNoble.com.\n\nIf you cannot find it at your local bookstore, please\
+    \ inform them that the book is distributed through Ingram Books and they should\
+    \ be able to order a copy for you.\n\nThank you!\n\n*The php|architect Team*\n\
+    \n[info@phparch.com](mailto:info@phparch.com)\n\n---\n\n## Copyright & Credits\n\
+    \n**The Zend PHP Certification Practice Test Book**\n\nBy John Coggeshall and\
+    \ Marco Tabini\n\n**Copyright**\n\nContents Copyright © 2004-2005 John Coggeshall\
+    \ and Marco Tabini – All Rights Reserved\n\nBook and cover layout, design and\
+    \ text Copyright © 2004-2005 Marco Tabini & Associates, Inc. – All Rights Reserved\n\
+    \n**First Edition: January 2005**\n\nISBN 0-9735898-8-4\n\nProduced in Canada\n\
+    \nPrinted in the United States\n\nNo part of this book may be reproduced, stored\
+    \ in a retrieval system, or transmitted in any form or by any means, without the\
+    \ prior written permission of the publisher, except in the case of brief quotations\
+    \ embedded in critical reviews or articles.\n\n### Disclaimer\n\nAlthough every\
+    \ effort has been made in the preparation of this book to ensure the accuracy\
+    \ of the information contained therein, this book is provided \"as-is\" and the\
+    \ publisher, the author(s), their distributors and retailers, as well as all affiliated,\
+    \ related or subsidiary parties take no responsibility for any inaccuracy and\
+    \ any and all damages caused, either directly or indirectly, by the use of such\
+    \ information.\n\nWe have endeavoured to properly provide trademark information\
+    \ on all companies and products mentioned in this book by the appropriate use\
+    \ of capitals. However, we cannot guarantee the accuracy of such information.\n\
+    \nMarco Tabini & Associates, The MTA logo, php|architect, the php|architect logo,\
+    \ NanoBook and NanoBook logo are trademarks or registered trademarks of Marco\
+    \ Tabini & Associates Inc.\n\nZend Technologies, the Zend Logo, Zend Certified\
+    \ Engineer, and the Zend Certified Engineer logo are trademarks or registered\
+    \ trademarks of Zend Technologies, Inc. and are used by agreement with the owner.\n\
+    \n### Bulk Copies\n\nMarco Tabini & Associates, Inc. offers trade discounts on\
+    \ purchases of ten or more copies of this book. For more information, please contact\
+    \ our sales offices at the address or numbers below.\n\n### Credits\n\n**Written\
+    \ by**\n\n- John Coggeshall\n- Marco Tabini\n\n**Published by**\n\nMarco Tabini\
+    \ & Associates, Inc.\n28 Bombay Ave.\nToronto, ON M3H 1B7\nCanada\n(416) 630-6202\n\
+    (877) 630-6202 toll free within North America\ninfo@phparch.com / www.phparch.com\n\
+    \n**Technical Reviewers**\n\n- Derick Rethans\n- Daniel Kushner\n\n**Layout and\
+    \ Design**\n\n- Arbi Arzoumani\n\n**Managing Editor**\n\n- Emanuela Corso\n\n\
+    *To Daniel Tabini and Diana Katheryn Coggeshall*\n\n*May we leave you a better\
+    \ world than the one we found.*\n\n---\n\n## Table of Contents\n\n- [FOREWORD](#foreword)\n\
+    - [ABOUT THE AUTHORS](#about-the-authors)\n- [INTRODUCTION](#introduction)\n \
+    \ - [Why a Book of Practice Questions?](#why-a-book-of-practice-questions)\n \
+    \ - [How is this Book Organized?](#how-is-this-book-organized)\n  - [Finding Errata\
+    \ and Discussing Your Concerns](#finding-errata-and-discussing-your-concerns)\n\
+    \  - [Acknowledgements](#acknowledgements)\n- [1. PHP PROGRAMMING BASICS](#1-php-programming-basics)\n\
+    \  - [Questions](#questions)\n  - [Answers](#answers)\n- [2. OBJECT-ORIENTED PROGRAMMING\
+    \ WITH PHP 4](#2-object-oriented-programming-with-php-4)\n  - [Questions](#questions-1)\n\
+    \  - [Answers](#answers-1)\n- [3. PHP AS A WEB DEVELOPMENT LANGUAGE](#3-php-as-a-web-development-language)\n\
+    \  - [Questions](#questions-2)\n  - [Answers](#answers-2)\n"
+  trans: "\n\n# Zend PHP 认证模拟测试书\n\n## 前言\n\n随着 PHP 使用范围的扩大，面向专业开发人员的全球认可的资质认证计划的需求变得越来越重要。由全球\
+    \ PHP 领导者 Zend Technologies 推出的 Zend 工程师认证计划，终于创建了一个专业称号，代表着 PHP 世界中始终如一的高质量技能和知识。\n\
+    \n本书由 Zend 教育委员会的四位成员撰写和编辑，他们也协助创建了实际的 Zend 认证考试，书中包含了涵盖考试每个主题的 200 道题目。\n\n《Zend\
+    \ 认证模拟测试书》是一份宝贵的资源，可用于测试您在考试各个领域的准备情况，从基础到最高级的主题无不涵盖。\n\n每道题目都附带清晰的答案，并提供了关于题目主题、目标和最终结果的解释。回答本书中的问题将使您能够清晰、快速地识别出您在\
+    \ PHP 哪些方面很强，以及在哪些方面需要进一步学习，以便能够通过考试！\n\n**Zend Technologies, Inc.** (http://www.zend.com)\
+    \ 是 PHP 公司。由 PHP 的创造者和持续创新者创立，它是 Zend Engine（PHP 的核心）的开发者。\n\nZend 专注于企业级产品和服务，使组织能够开发、部署和管理业务关键型\
+    \ PHP 应用程序。\n\n**NanoBooks** 是由 *php|architect* 的出版商创建的优秀、深度的资源，后者是全球首屈一指的专注于\
+    \ PHP 专业人士的杂志。\n\nNanoBooks 专注于提供高质量的内容，包含深度分析和专业知识，围绕单一、明确定义的主题，没有大部头、昂贵书籍中的冗余内容。\n\
+    \nUSA $21.99 | Canada $29.99 | U.K. £16.99 Net\n\n归类于 PHP/Web Development/Certification（PHP/Web\
+    \ 开发/认证）\n\n来自 *php|architect* 的出版商\n\n2004 年 12 月\n\n感谢您对《Zend PHP 认证模拟测试书》的关注。此\
+    \ PDF 文件包含书籍的前言部分和样章。\n\n本书目前已上市，提供印刷版和 PDF 格式，仅在 php|architect 网站独家发售：\n\n- [点击此处购买印刷版](http://www.phparch.com/shop_product.php?itemid=73)\n\
+    - [点击此处购买 PDF 版](http://www.phparch.com/shop_product.php?itemid=74)\n\n自 2005\
+    \ 年 1 月起，本书也将在北美和欧洲的书店发售，或通过在线零售商购买，例如 Amazon.com 或 BarnesAndNoble.com。\n\n如果您在当地书店找不到，请告知他们该书通过\
+    \ Ingram Books 发行，他们应该能为您订购一本。\n\n谢谢！\n\n*php|architect 团队*\n\ninfo@phparch.com\n\
+    \n---\n\n## 版权与致谢\n\n**Zend PHP 认证模拟测试书**\n\n作者：John Coggeshall 和 Marco Tabini\n\
+    \n**版权**\n\n内容版权 © 2004-2005 John Coggeshall 和 Marco Tabini – 保留所有权利\n\n书籍及封面排版、设计和文本版权\
+    \ © 2004-2005 Marco Tabini & Associates, Inc. – 保留所有权利\n\n**第一版：2005 年 1 月**\n\
+    \nISBN 0-9735898-8-4\n\n加拿大制作\n\n美国印刷\n\n未经出版商事先书面许可，不得以任何形式或任何方式复制、存储于检索系统或传播本书的任何部分，除非是在评论或文章中引用简短片段。\n\
+    \n### 免责声明\n\n尽管在本书的准备过程中已尽最大努力确保所含信息的准确性，但本书按“原样”提供，出版商、作者、其分销商和零售商，以及所有关联、相关或子公司方，对任何不准确信息及因使用该信息直接或间接造成的任何损害概不负责。\n\
+    \n我们已努力通过适当使用大小写，为书中提及的所有公司和产品提供正确的商标信息。但我们无法保证此类信息的准确性。\n\nMarco Tabini & Associates、MTA\
+    \ 徽标、php|architect、php|architect 徽标、NanoBook 和 NanoBook 徽标均为 Marco Tabini & Associates\
+    \ Inc. 的商标或注册商标。\n\nZend Technologies、Zend 徽标、Zend Certified Engineer（Zend 认证工程师）和\
+    \ Zend Certified Engineer 徽标均为 Zend Technologies, Inc. 的商标或注册商标，经所有者同意使用。\n\n\
+    ### 批量订购\n\nMarco Tabini & Associates, Inc. 对购买十本或以上本书提供贸易折扣。如需更多信息，请联系下方地址或电话的销售办公室。\n\
+    \n### 致谢\n\n**撰写**\n\n- John Coggeshall\n- Marco Tabini\n\n**出版**\n\nMarco Tabini\
+    \ & Associates, Inc.\n28 Bombay Ave.\nToronto, ON M3H 1B7\nCanada\n(416) 630-6202\n\
+    (877) 630-6202 北美免费电话\ninfo@phparch.com / www.phparch.com\n\n**技术审阅**\n\n- Derick\
+    \ Rethans\n- Daniel Kushner\n\n**排版与设计**\n\n- Arbi Arzoumani\n\n**责任编辑**\n\n-\
+    \ Emanuela Corso\n\n*献给 Daniel Tabini 和 Diana Katheryn Coggeshall*\n\n*愿我们留给你们的世界，比我们发现的更美好。*\n\
+    \n---\n\n## 目录\n\n- 前言\n- 作者简介\n- 简介\n  - 为什么要写一本练习题书？\n  - 本书如何组织？\n  - 勘误查找与问题讨论\n\
+    \  - 致谢\n- 1. PHP 编程基础\n  - 题目\n  - 答案\n- 2. PHP 4 面向对象编程\n  - 题目\n  - 答案\n- 3.\
+    \ PHP 作为 Web 开发语言\n  - 题目\n  - 答案\n\n"
+  toc: []
+- raw: '**4\. WORKING WITH ARRAYS ...............................................................................................
+    47**
+
+
+    Questions..................................................................................................................................
+    48
+
+
+    Answers....................................................................................................................................
+    54
+
+
+    **5\. STRINGS AND REGULAR EXPRESSIONS .....................................................................
+    56**
+
+
+    Questions..................................................................................................................................
+    57
+
+
+    Answers....................................................................................................................................
+    63
+
+
+    **6\. MANIPULATING FILES AND THE FILESYSTEM........................................................
+    66**
+
+
+    Questions..................................................................................................................................
+    67
+
+
+    Answers....................................................................................................................................
+    73
+
+
+    **7\. DATE AND TIME MANAGEMENT...................................................................................
+    76**
+
+
+    Questions..................................................................................................................................
+    77
+
+
+    Answers....................................................................................................................................
+    82
+
+
+    **8\. E-MAIL HANDLING AND MANIPULATION .................................................................
+    85**
+
+
+    Questions..................................................................................................................................
+    86
+
+
+    Answers....................................................................................................................................
+    91
+
+
+    **9\. DATABASE PROGRAMMING WITH PHP......................................................................
+    94**
+
+
+    Questions..................................................................................................................................
+    95
+
+
+    Answers..................................................................................................................................
+    100
+
+
+    **10\. STREAM AND NETWORK PROGRAMMING............................................................
+    102**
+
+
+    Questions................................................................................................................................
+    103
+
+
+    Answers..................................................................................................................................
+    107
+
+
+    **11\. WRITING SECURE PHP APPLICATIONS .................................................................
+    109**
+
+
+    Questions................................................................................................................................
+    110
+
+
+    Answers..................................................................................................................................
+    116
+
+
+    **12\. DEBUGGING CODE AND MANAGING PERFORMANCE.......................................
+    119**
+
+
+    Questions................................................................................................................................
+    120
+
+
+    Answers..................................................................................................................................
+    124
+
+
+    **Foreword**
+
+
+    There are many advantages to having a PHP certification program. Foremost, it
+    allows employers, especially those of the non-technical kind, to set a certain
+    standard for their PHP
+
+
+    hiring decisions; they’ll know that people who are certified have passed a set
+    of hurdles in earning their credentials and can clearly demonstrate their knowledge
+    of PHP and its related technologies.
+
+
+    Not only does that mean that a Zend Certified Engineer will automatically match
+    such criteria and have an immediate advantage on the job market, but the certification
+    process also allows for more and more enterprises to adopt PHP. This, in turn,
+    will lead to a much more vibrant job market for PHP developers—making it easier
+    to make a living from what PHP
+
+
+    developers like doing most. I have no doubt that we will see an increase in the
+    ongoing PHP
+
+
+    proliferation due to the existence of Zend’s PHP Certification Exam.
+
+
+    A few weeks ago, I finally found time to take the Zend PHP Certification Exam.
+    Despite having written some of the questions and being part of the exam education
+    advisory board that reviewed the questions a few months ago, I was surprised to
+    realize that I was a tad bit tense—I think not only because exams in general tend
+    to have this effect on me, but also because I
+
+
+    remembered that the questions were very thorough, most probably due to the fact
+    that the exam authors themselves are leaders in the PHP community who wanted to
+    come up with the best possible questions. Without making the exam overly difficult,
+    this ensured that every question was well-thought-out, thoroughly peer-reviewed
+    and carefully constructed; this is bound to make any prospective exam-taker—especially
+    one that was an integral part of such a thorough process—a bit nervous!
+
+
+    I’m happy to say that I passed the exam—but I admit that some questions were quite
+    hard.
+
+
+    I think that, overall, the exam is fair but, unlike many other certification tests,
+    much more thorough. A PHP developer with no experience really cannot pass this
+    exam, which I think is great. It really certifies PHP developers who have experience
+    in developing PHP based web applications in the real world.
+
+
+    I believe this book will be of great help in preparing for the certification exam.
+    Both Marco and John were on the Zend PHP Certification Advisory Board and understand
+    the nature of the exam and what its goals are. Both authors also have many years
+    of experience in PHP, which is readily recognizable from the book’s contents.
+    This book very nicely covers the different topics on which you will be tested
+    and provides questions that are very similar to the ones you will see on the exam.
+    Having the answers at the end of each chapter will make it easy for you to validate
+    your strengths and weaknesses.
+
+
+    I wish you all the best with the certification progress and hope you will soon
+    join the growing family of Zend Certified Engineers.
+
+
+    Andi Gutmans
+
+
+    *Co-founder & VP of Technology, Zend Technologies* *Zend Certified Engineer*
+
+
+    **About the**
+
+
+    **Authors**
+
+
+    **John Coggeshall** is a Technical Consultant for Zend Technologies, where he
+    provides professional services to clients around the world. He got started with
+    PHP in 1997 and is the author of three published books and over 100 articles on
+    PHP technologies with some of the biggest names in the industry such as php|architect,
+    SAMS Publishing, Apress and O’Reilly.
+
+
+    John also is an active contributor to the PHP core as the author of the tidy extension,
+    a member of the Zend Education Advisory Board, and frequent speaker at PHP-related
+    conferences worldwide. His web site, http://www.coggeshall.org/ is an excellent
+    resource for any PHP
+
+
+    developer
+
+
+    **Marco Tabini** is the publisher of php|architect (http://www.phparch.com), the
+    premier magazine for PHP professionals. The author and co-author of four books,
+    he was also part of the group of Subject Matter Experts (SMEs) who helped write
+    the Zend Certification Exam. He regularly maintains a blog, which can be found
+    at http://blogs.phparch.com, where he discusses the business of open-source software.
+
+
+    **Introduction**'
+  fmt: '
+
+    # 4. WORKING WITH ARRAYS
+
+
+    Questions
+
+
+    Answers
+
+
+    # 5. STRINGS AND REGULAR EXPRESSIONS
+
+
+    Questions
+
+
+    Answers
+
+
+    # 6. MANIPULATING FILES AND THE FILESYSTEM
+
+
+    Questions
+
+
+    Answers
+
+
+    # 7. DATE AND TIME MANAGEMENT
+
+
+    Questions
+
+
+    Answers
+
+
+    # 8. E-MAIL HANDLING AND MANIPULATION
+
+
+    Questions
+
+
+    Answers
+
+
+    # 9. DATABASE PROGRAMMING WITH PHP
+
+
+    Questions
+
+
+    Answers
+
+
+    # 10. STREAM AND NETWORK PROGRAMMING
+
+
+    Questions
+
+
+    Answers
+
+
+    # 11. WRITING SECURE PHP APPLICATIONS
+
+
+    Questions
+
+
+    Answers
+
+
+    # 12. DEBUGGING CODE AND MANAGING PERFORMANCE
+
+
+    Questions
+
+
+    Answers
+
+
+    # Foreword
+
+
+    There are many advantages to having a PHP certification program. Foremost, it
+    allows employers, especially those of the non-technical kind, to set a certain
+    standard for their PHP hiring decisions; they’ll know that people who are certified
+    have passed a set of hurdles in earning their credentials and can clearly demonstrate
+    their knowledge of PHP and its related technologies.
+
+
+    Not only does that mean that a Zend Certified Engineer will automatically match
+    such criteria and have an immediate advantage on the job market, but the certification
+    process also allows for more and more enterprises to adopt PHP. This, in turn,
+    will lead to a much more vibrant job market for PHP developers—making it easier
+    to make a living from what PHP developers like doing most. I have no doubt that
+    we will see an increase in the ongoing PHP proliferation due to the existence
+    of Zend’s PHP Certification Exam.
+
+
+    A few weeks ago, I finally found time to take the Zend PHP Certification Exam.
+    Despite having written some of the questions and being part of the exam education
+    advisory board that reviewed the questions a few months ago, I was surprised to
+    realize that I was a tad bit tense—I think not only because exams in general tend
+    to have this effect on me, but also because I remembered that the questions were
+    very thorough, most probably due to the fact that the exam authors themselves
+    are leaders in the PHP community who wanted to come up with the best possible
+    questions. Without making the exam overly difficult, this ensured that every question
+    was well-thought-out, thoroughly peer-reviewed and carefully constructed; this
+    is bound to make any prospective exam-taker—especially one that was an integral
+    part of such a thorough process—a bit nervous!
+
+
+    I’m happy to say that I passed the exam—but I admit that some questions were quite
+    hard.
+
+
+    I think that, overall, the exam is fair but, unlike many other certification tests,
+    much more thorough. A PHP developer with no experience really cannot pass this
+    exam, which I think is great. It really certifies PHP developers who have experience
+    in developing PHP based web applications in the real world.
+
+
+    I believe this book will be of great help in preparing for the certification exam.
+    Both Marco and John were on the Zend PHP Certification Advisory Board and understand
+    the nature of the exam and what its goals are. Both authors also have many years
+    of experience in PHP, which is readily recognizable from the book’s contents.
+    This book very nicely covers the different topics on which you will be tested
+    and provides questions that are very similar to the ones you will see on the exam.
+    Having the answers at the end of each chapter will make it easy for you to validate
+    your strengths and weaknesses.
+
+
+    I wish you all the best with the certification progress and hope you will soon
+    join the growing family of Zend Certified Engineers.
+
+
+    Andi Gutmans
+
+
+    *Co-founder & VP of Technology, Zend Technologies*
+
+    *Zend Certified Engineer*
+
+
+    # About the Authors
+
+
+    **John Coggeshall** is a Technical Consultant for Zend Technologies, where he
+    provides professional services to clients around the world. He got started with
+    PHP in 1997 and is the author of three published books and over 100 articles on
+    PHP technologies with some of the biggest names in the industry such as php|architect,
+    SAMS Publishing, Apress and O’Reilly.
+
+
+    John also is an active contributor to the PHP core as the author of the `tidy`
+    extension, a member of the Zend Education Advisory Board, and frequent speaker
+    at PHP-related conferences worldwide. His web site, `http://www.coggeshall.org/`
+    is an excellent resource for any PHP developer.
+
+
+    **Marco Tabini** is the publisher of php|architect (`http://www.phparch.com`),
+    the premier magazine for PHP professionals. The author and co-author of four books,
+    he was also part of the group of Subject Matter Experts (SMEs) who helped write
+    the Zend Certification Exam. He regularly maintains a blog, which can be found
+    at `http://blogs.phparch.com`, where he discusses the business of open-source
+    software.
+
+
+    # Introduction
+
+    '
+  trans: '
+
+
+    # 4. 使用数组
+
+
+    问题
+
+
+    答案
+
+
+    # 5. 字符串和正则表达式
+
+
+    问题
+
+
+    答案
+
+
+    # 6. 操作文件和文件系统
+
+
+    问题
+
+
+    答案
+
+
+    # 7. 日期和时间管理
+
+
+    问题
+
+
+    答案
+
+
+    # 8. 电子邮件处理和操作
+
+
+    问题
+
+
+    答案
+
+
+    # 9. 使用 PHP 进行数据库编程
+
+
+    问题
+
+
+    答案
+
+
+    # 10. 流和网络编程
+
+
+    问题
+
+
+    答案
+
+
+    # 11. 编写安全的 PHP 应用程序
+
+
+    问题
+
+
+    答案
+
+
+    # 12. 调试代码和管理性能
+
+
+    问题
+
+
+    答案
+
+
+    # 前言
+
+
+    拥有 PHP 认证项目有许多优势。首当其冲的是，它允许雇主——尤其是非技术类雇主——为他们的 PHP 招聘决策设定一定的标准；他们会知道，获得认证的人员已经通过了一系列考核来获得证书，并能清楚地展示他们对
+    PHP 及其相关技术的掌握程度。
+
+
+    这不仅意味着 Zend 认证工程师将自动符合此类标准并在就业市场上拥有即时优势，而且认证过程还允许越来越多的企业采用 PHP。这反过来将为 PHP 开发人员带来一个更加充满活力的就业市场——使他们更容易以
+    PHP 开发人员最喜欢做的事情为生。我毫不怀疑，由于 Zend PHP 认证考试的存在，我们将看到 PHP 持续普及的增长。
+
+
+    几周前，我终于抽出时间参加了 Zend PHP 认证考试。尽管我编写了一些考题，并且几个月前作为考试教育顾问委员会成员参与了考题审核，但我惊讶地发现自己有点紧张——我想不仅是因为考试通常都会让我产生这种影响，还因为我记得考题非常全面，这很可能是因为考试作者本身就是
+    PHP 社区的领军人物，他们想要拟定最优秀的考题。在不使考试过于困难的前提下，这确保了每个问题都经过深思熟虑、彻底的同行评审和精心构建；这注定会让任何潜在的考生——尤其是像我这样参与了如此严谨过程的人——有点紧张！
+
+
+    我很高兴地说我通过了考试——但我承认有些问题相当难。
+
+
+    我认为，总体而言，考试是公平的，但与许多其他认证测试不同，它要全面得多。没有经验的 PHP 开发人员真的无法通过这项考试，我认为这很棒。它真正认证的是那些在现实世界中拥有开发基于
+    PHP 的 Web 应用程序经验的 PHP 开发人员。
+
+
+    我相信这本书将对准备认证考试大有裨益。Marco 和 John 都是 Zend PHP 认证顾问委员会的成员，了解考试的性质及其目标。两位作者在 PHP 方面也拥有多年的经验，这从书的内容中便可窥见一斑。本书非常好地涵盖了您将接受测试的各个主题，并提供了与考试中非常相似的问题。每章末尾提供的答案将使您很容易验证自己的优势和劣势。
+
+
+    我祝愿大家在认证过程中一切顺利，并希望你们很快能加入日益壮大的 Zend 认证工程师大家庭。
+
+
+    Andi Gutmans
+
+
+    *联合创始人兼技术副总裁，Zend Technologies*
+
+    *Zend 认证工程师*
+
+
+    # 作者简介
+
+
+    **John Coggeshall** 是 Zend Technologies 的技术顾问，为全球客户提供专业服务。他于 1997 年开始接触 PHP，是三本已出版书籍和
+    100 多篇关于 PHP 技术文章的作者，发表于 php|architect、SAMS Publishing、Apress 和 O''Reilly 等业内知名机构。
+
+
+    John 还是 PHP 核心的活跃贡献者，`tidy` 扩展的作者，Zend 教育顾问委员会成员，以及全球 PHP 相关会议的常邀演讲者。他的网站 `http://www.coggeshall.org/`
+    是任何 PHP 开发人员的绝佳资源。
+
+
+    **Marco Tabini** 是 php|architect（`http://www.phparch.com`）的出版人，这是面向 PHP 专业人士的首选杂志。他是四本书的作者或合著者，也是协助编写
+    Zend 认证考试的主题专家（SME）小组成员之一。他定期维护一个博客，网址为 `http://blogs.phparch.com`，在那里他讨论开源软件的商业模式。
+
+
+    # 简介
+
+
+    '
+  toc: []
+- raw: 'WRITING AN EXAM IS never an easy task. Socrates is quoted as saying that “an
+    unexamined life is not worth living,” but (although he wasn’t really referring
+    to taking technical tests) we’re sure that most people sitting in an examination
+    room would gladly exchange places with the legendary philosopher and drink his
+    hemlock rather than take a test.
+
+
+    Luckily, writing an exam doesn’t *have* to be such a traumatic experience. Given
+    enough preparation and experience, you should be able to successfully pass it
+    without much in the way of problems. The Zend exam itself is designed with two
+    goals in mind: first, to test your knowledge of PHP and, second, to do so with
+    as much of a practical approach as possible.
+
+
+    The idea of testing only your knowledge of PHP is based on a simple assumption:
+    that your experience as a PHP programmer is not measured by your knowledge of
+    external technologies. As we will reiterate in Chapter 9, you may go all your
+    life developing PHP without ever having to interface to a MySQL database and,
+    therefore, testing your knowledge of MySQL
+
+
+    Introduction
+
+
+    would be an unfair way to gauge your familiarity with PHP. Besides, MySQL AB (as
+    well as most other relevant vendors of third-party software) already has its own
+    certification program.
+
+
+    As far as the practicality of the questions goes, none of the Subject Matter Experts
+    (SMEs) believed that a good programmer should be a walking PHP reference book.
+    The truth is that PHP
+
+
+    provides in excess of 1,500 different functions—and knowing each one of them,
+    together with all its nuances, would be not only practically impossible, but useless
+    as well. The PHP Manual is promptly available online from anywhere in the world;
+    therefore, unless someone is going to lock you in a room with no Internet access,
+    the chances that you won’t be able to access it are quite minimal. Still, you
+    can’t program if you have to consult the manual every thirty seconds and, therefore,
+    the exam does feature questions that test your knowledge of some basic PHP
+
+
+    functionality in a very didactic way.
+
+
+    For the most part, however, the exam tests your ability to understand, interpret
+    and write proper PHP code. Prepare to be asked to analyze plenty of code examples
+    to find out what they do, how they work and whether they have any bugs. Some of
+    the questions may seem a little tricky and unduly complex, but, if you think about
+    it, having to deal with less-than-perfect code (written by someone else, of course!)
+    is not that uncommon for anyone who has ever worked in the real world.
+
+
+    **Why a Book of Practice Questions?**
+
+
+    It’s always best to go into an exam as prepared as possible. Your experience,
+    as well books like the Zend PHP Certification Study Guide, published by SAMS,
+    will be an invaluable tool in ensuring that you will pass, but sitting down and
+    taking the exam itself is unlike anything you’re likely to do as part of your
+    daily routine.
+
+
+    This book provides with you a highly structured series of questions designed to
+    mimic (without reproducing) the actual questions that you will find in the exam.
+    It will help you “get in the spirit” of the exam and learn how the questions are
+    phrased and what they expect you to be able to do.
+
+
+    We worked hard at building questions that, while close to the real ones, are usually
+    slightly more difficult to answer correctly. The reasoning behind this is simple:
+    if you can get the hard ones right, the real exam will be a breeze!
+
+
+    **How is this Book Organized?**
+
+
+    The Zend PHP Certification Practice Test Book is designed to work as a companion
+    to the Official Zend PHP Certification Study Guide (ISBN 0672327090) published
+    by SAMS
+
+
+    Publishing. As a result, its chapters closely reflect those of the guide in order
+    to facilitate your learning process as much as possible. You can read a chapter
+    of the guide, then turn to the corresponding chapter in the Practice Questions
+    Book and take a mini-exam centered exclusively on that particular topic. As an
+    alternative, you can use this book as a testing resource together with the PHP
+    Manual. Our table of contents will give you the basic layout of the topics covered
+    by the exam, which you can use to study directly from the manual, as well as many
+    of the other resources available on the Internet. Once you think you’re ready
+    to try your hand at some questions, you can use this book again for that purpose.
+
+
+    **12**
+
+
+    Introduction
+
+
+    Each chapter contains fifteen questions, with the exclusion of Chapters 1, 2,
+    5 and 6, which contain twenty. The reason for this is that these chapters discuss
+    the most fundamental aspects of PHP; therefore, we thought that a few additional
+    questions per chapter might have helped you better gauge your preparedness. You’ll
+    find the answers to all the questions, together with an explanation, at the end
+    of each chapter.
+
+
+    While you are, of course, free to use this book any way you like, we’d like to
+    suggest a simple approach that can help you maximize its effectiveness. First
+    of all, you should try your hand at practicing your test when you actually have
+    time to do so—allow at least ninety minutes for answering the questions, and then
+    another thirty to sixty minutes to check your answers.
+
+
+    Start by answering five questions from each fifteen-question chapter, and six
+    from the twenty-question ones. Take care of each chapter in sequence, without
+    stopping to check your answers. This will add up to around sixty-five questions,
+    a very close approximation of the actual exam, which contains seventy. Give yourself
+    around eighty minutes to complete the entire set—again, a good approximation of
+    the ninety minutes allocated in the real exam.
+
+
+    At the end of this process, you can go back and check the answers you gave against
+    the correct ones reported at the end of each chapter. This will give you an opportunity
+    to determine how prepared you are in each different area and to focus your studies
+    on those topics where your results were less than brilliant.
+
+
+    Once you feel ready, you can try again using the same technique. This will make
+    it possible for you to answer a fresh batch of questions every time and test your
+    knowledge anew.
+
+
+    **Finding Errata and Discussing Your Concerns**
+
+
+    A *lot* of work went into writing, reviewing, editing and then reviewing some
+    more the questions in this book, as well as their answers. Yet, we are but mere
+    mortals and, as such, prone to making mistakes.
+
+
+    If you think you’ve found something wrong with the contents of the book, come
+    and discuss it on the php|architect forums at this URL:
+
+
+    http://forums.phparch.com/162
+
+
+    Of course, the same is also true if one of the questions has you stumped and you
+    want to chat with other PHP enthusiasts about the how’s and the why’s of the answers
+    we provide. Both of us visit the forums regularly, and we are always happy to
+    help out.
+
+
+    **Acknowledgements**
+
+
+    Writing a book—no matter how small—is always a monumental task that involves the
+    assistance and expertise of many different people.
+
+
+    We’d like to extend our thanks to Derick Rethans, who has spent considerable time
+    performing a ruthless technical review of each question, pointing out errors and
+    suggesting ways to improve the overall quality of the practice tests. It’s thanks
+    to him that so many questions are understandable and technically accurate—and
+    entirely our responsibility if some others are not.
+
+
+    **13**
+
+
+    Introduction
+
+
+    Our thanks also go to Daniel Kushner over at Zend for his unwavering support and
+    invaluable contribution to the Zend Certification Program—without him, there would
+    be no questions to write about.
+
+
+    John Coggeshall
+
+
+    Marco Tabini
+
+
+    New York City
+
+
+    Toronto
+
+
+    **14**
+
+
+    **1**
+
+
+    **PHP**
+
+
+    **Programming**
+
+
+    **Basics**
+
+
+    THE ZEND EXAM IS designed so that you need a reasonable amount of experience in
+    order to pass it. This doesn’t mean that you have to be Superman—it simply means
+    that, in order to pass the exam, you’ve had to have a good amount of exposure
+    to PHP in your daily life.'
+  fmt: '
+
+    # Introduction
+
+
+    WRITING AN EXAM IS never an easy task. Socrates is quoted as saying that “an unexamined
+    life is not worth living,” but (although he wasn’t really referring to taking
+    technical tests) we’re sure that most people sitting in an examination room would
+    gladly exchange places with the legendary philosopher and drink his hemlock rather
+    than take a test.
+
+
+    Luckily, writing an exam doesn’t *have* to be such a traumatic experience. Given
+    enough preparation and experience, you should be able to successfully pass it
+    without much in the way of problems. The Zend exam itself is designed with two
+    goals in mind: first, to test your knowledge of PHP and, second, to do so with
+    as much of a practical approach as possible.
+
+
+    The idea of testing only your knowledge of PHP is based on a simple assumption:
+    that your experience as a PHP programmer is not measured by your knowledge of
+    external technologies. As we will reiterate in Chapter 9, you may go all your
+    life developing PHP without ever having to interface to a MySQL database and,
+    therefore, testing your knowledge of MySQL would be an unfair way to gauge your
+    familiarity with PHP. Besides, MySQL AB (as well as most other relevant vendors
+    of third-party software) already has its own certification program.
+
+
+    As far as the practicality of the questions goes, none of the Subject Matter Experts
+    (SMEs) believed that a good programmer should be a walking PHP reference book.
+    The truth is that PHP provides in excess of 1,500 different functions—and knowing
+    each one of them, together with all its nuances, would be not only practically
+    impossible, but useless as well. The PHP Manual is promptly available online from
+    anywhere in the world; therefore, unless someone is going to lock you in a room
+    with no Internet access, the chances that you won’t be able to access it are quite
+    minimal. Still, you can’t program if you have to consult the manual every thirty
+    seconds and, therefore, the exam does feature questions that test your knowledge
+    of some basic PHP functionality in a very didactic way.
+
+
+    For the most part, however, the exam tests your ability to understand, interpret
+    and write proper PHP code. Prepare to be asked to analyze plenty of code examples
+    to find out what they do, how they work and whether they have any bugs. Some of
+    the questions may seem a little tricky and unduly complex, but, if you think about
+    it, having to deal with less-than-perfect code (written by someone else, of course!)
+    is not that uncommon for anyone who has ever worked in the real world.
+
+
+    ## Why a Book of Practice Questions?
+
+
+    It’s always best to go into an exam as prepared as possible. Your experience,
+    as well books like the Zend PHP Certification Study Guide, published by SAMS,
+    will be an invaluable tool in ensuring that you will pass, but sitting down and
+    taking the exam itself is unlike anything you’re likely to do as part of your
+    daily routine.
+
+
+    This book provides with you a highly structured series of questions designed to
+    mimic (without reproducing) the actual questions that you will find in the exam.
+    It will help you “get in the spirit” of the exam and learn how the questions are
+    phrased and what they expect you to be able to do.
+
+
+    We worked hard at building questions that, while close to the real ones, are usually
+    slightly more difficult to answer correctly. The reasoning behind this is simple:
+    if you can get the hard ones right, the real exam will be a breeze!
+
+
+    ## How is this Book Organized?
+
+
+    The Zend PHP Certification Practice Test Book is designed to work as a companion
+    to the Official Zend PHP Certification Study Guide (ISBN 0672327090) published
+    by SAMS Publishing. As a result, its chapters closely reflect those of the guide
+    in order to facilitate your learning process as much as possible. You can read
+    a chapter of the guide, then turn to the corresponding chapter in the Practice
+    Questions Book and take a mini-exam centered exclusively on that particular topic.
+    As an alternative, you can use this book as a testing resource together with the
+    PHP Manual. Our table of contents will give you the basic layout of the topics
+    covered by the exam, which you can use to study directly from the manual, as well
+    as many of the other resources available on the Internet. Once you think you’re
+    ready to try your hand at some questions, you can use this book again for that
+    purpose.
+
+
+    Each chapter contains fifteen questions, with the exclusion of Chapters 1, 2,
+    5 and 6, which contain twenty. The reason for this is that these chapters discuss
+    the most fundamental aspects of PHP; therefore, we thought that a few additional
+    questions per chapter might have helped you better gauge your preparedness. You’ll
+    find the answers to all the questions, together with an explanation, at the end
+    of each chapter.
+
+
+    While you are, of course, free to use this book any way you like, we’d like to
+    suggest a simple approach that can help you maximize its effectiveness. First
+    of all, you should try your hand at practicing your test when you actually have
+    time to do so—allow at least ninety minutes for answering the questions, and then
+    another thirty to sixty minutes to check your answers.
+
+
+    Start by answering five questions from each fifteen-question chapter, and six
+    from the twenty-question ones. Take care of each chapter in sequence, without
+    stopping to check your answers. This will add up to around sixty-five questions,
+    a very close approximation of the actual exam, which contains seventy. Give yourself
+    around eighty minutes to complete the entire set—again, a good approximation of
+    the ninety minutes allocated in the real exam.
+
+
+    At the end of this process, you can go back and check the answers you gave against
+    the correct ones reported at the end of each chapter. This will give you an opportunity
+    to determine how prepared you are in each different area and to focus your studies
+    on those topics where your results were less than brilliant.
+
+
+    Once you feel ready, you can try again using the same technique. This will make
+    it possible for you to answer a fresh batch of questions every time and test your
+    knowledge anew.
+
+
+    ## Finding Errata and Discussing Your Concerns
+
+
+    A *lot* of work went into writing, reviewing, editing and then reviewing some
+    more the questions in this book, as well as their answers. Yet, we are but mere
+    mortals and, as such, prone to making mistakes.
+
+
+    If you think you’ve found something wrong with the contents of the book, come
+    and discuss it on the php|architect forums at this URL:
+
+
+    `http://forums.phparch.com/162`
+
+
+    Of course, the same is also true if one of the questions has you stumped and you
+    want to chat with other PHP enthusiasts about the how’s and the why’s of the answers
+    we provide. Both of us visit the forums regularly, and we are always happy to
+    help out.
+
+
+    ## Acknowledgements
+
+
+    Writing a book—no matter how small—is always a monumental task that involves the
+    assistance and expertise of many different people.
+
+
+    We’d like to extend our thanks to Derick Rethans, who has spent considerable time
+    performing a ruthless technical review of each question, pointing out errors and
+    suggesting ways to improve the overall quality of the practice tests. It’s thanks
+    to him that so many questions are understandable and technically accurate—and
+    entirely our responsibility if some others are not.
+
+
+    Our thanks also go to Daniel Kushner over at Zend for his unwavering support and
+    invaluable contribution to the Zend Certification Program—without him, there would
+    be no questions to write about.
+
+
+    John Coggeshall
+
+
+    Marco Tabini
+
+
+    New York City
+
+
+    Toronto
+
+
+    # Chapter 1: PHP Programming Basics
+
+
+    THE ZEND EXAM IS designed so that you need a reasonable amount of experience in
+    order to pass it. This doesn’t mean that you have to be Superman—it simply means
+    that, in order to pass the exam, you’ve had to have a good amount of exposure
+    to PHP in your daily life.
+
+    '
+  trans: '
+
+
+    # 简介
+
+
+    编写考试**从来不是一件容易的事**。苏格拉底曾说：“未经审视的人生是不值得过的”，但（尽管他并非真指参加技术测试），我们确信，坐在考场里的大多数人都会乐意与这位传奇哲学家互换位置，喝下他的毒芹汁，也不愿参加考试。
+
+
+    幸运的是，编写考试*不必*成为如此创伤性的经历。只要准备充分且经验丰富，你应该能顺利通过，而不会遇到太大麻烦。Zend 考试的设计初衷有两个目标：第一，测试你对
+    PHP 的掌握程度；第二，尽可能采取实用的方法来进行测试。
+
+
+    仅测试 PHP 知识这一想法基于一个简单的假设：你作为 PHP 程序员的经验，不应由你对外部技术的了解来衡量。正如我们将在第 9 章重申的那样，你可能一辈子都在用
+    PHP 开发，却从未需要连接 MySQL 数据库，因此，测试你的 MySQL 知识将是衡量你对 PHP 熟悉程度的不公平方式。此外，MySQL AB（以及大多数其他相关的第三方软件供应商）已有自己的认证计划。
+
+
+    至于问题的实用性，没有一位主题专家（SME）认为优秀的程序员应该是一本会走路的 PHP 参考手册。事实是，PHP 提供了超过 1,500 个不同的函数——了解每一个函数及其所有细微差别，不仅实际上不可能，而且也毫无用处。PHP
+    手册随时可在世界任何地方在线获取；因此，除非有人把你关在一个没有互联网接入的房间里，否则你无法访问它的可能性微乎其微。尽管如此，如果你每三十秒就要查阅一次手册，就无法编程，因此考试确实包含以非常指导性的方式测试你对某些基本
+    PHP 功能掌握程度的问题。
+
+
+    然而，在很大程度上，考试测试的是你理解、解读和编写正确 PHP 代码的能力。准备好分析大量代码示例，以弄清它们的作用、工作原理以及是否存在 Bug。有些问题可能看起来有点棘手且过于复杂，但仔细想想，处理不完美的代码（当然是别人写的！）对于曾在现实世界工作过的任何人来说，并不罕见。
+
+
+    ## 为什么要有这本练习题书？
+
+
+    以尽可能充分的准备参加考试总是最好的。你的经验，以及像 SAMS 出版的《Zend PHP 认证学习指南》这样的书籍，将是确保你通过考试的宝贵工具，但坐下来参加考试本身，与你日常工作中可能做的任何事情都截然不同。
+
+
+    本书为你提供了一系列高度结构化的问题，旨在模拟（而非复制）你在考试中将遇到的实际问题。它将帮助你“进入考试状态”，了解问题的措辞方式，以及它们期望你具备哪些能力。
+
+
+    我们努力构建的问题虽接近真题，但通常稍难一些。理由很简单：如果你能答对难题，真实考试就会轻而易举！
+
+
+    ## 本书如何组织？
+
+
+    《Zend PHP 认证练习测试书》旨在作为 SAMS Publishing 出版的《官方 Zend PHP 认证学习指南》（ISBN 0672327090）的配套教材。因此，其章节紧密对应指南的章节，以最大程度便利你的学习过程。你可以先阅读指南的一章，然后翻到练习题书中对应的章节，参加一个专门针对该特定主题的小测验。或者，你也可以结合
+    PHP 手册，将本书作为测试资源使用。我们的目录将为你提供考试涵盖主题的基本框架，你可以据此直接从手册以及互联网上许多其他资源进行学习。一旦你觉得准备好尝试答题，就可以再次使用本书为此目的服务。
+
+
+    除第 1、2、5、6 章包含二十道题外，每章均包含十五道题。原因在于这些章节讨论 PHP 最基础的方面；因此，我们认为每章增加几道额外题目可能有助于你更好地评估准备情况。你将在每章末尾找到所有问题的答案及解析。
+
+
+    虽然你当然可以随意使用本书，但我们建议一种简单的方法，帮助你最大化其效果。首先，你应该在真正有时间的时候练习测试——预留至少九十分钟答题，再预留三十到六十分钟核对答案。
+
+
+    从每个十五题的章节中答五道题，从二十题的章节中答六道题开始。按顺序完成每章，中途不停下来核对答案。这将累计约六十五道题，非常接近实际考试的七十道题。给自己约八十分钟完成整套题目——这也是真实考试分配的九十分钟的良好模拟。
+
+
+    过程结束后，你可以回过头将你的答案与每章末尾给出的正确答案进行核对。这将让你有机会确定自己在各个不同领域的准备程度，并将学习重点放在成绩不太理想的主题上。
+
+
+    一旦你感觉准备好，可以再次使用相同技巧尝试。这将使你每次都能回答一批新题目，重新检验你的知识。
+
+
+    ## 查找勘误表与讨论你的疑虑
+
+
+    编写、审阅、编辑、再审阅本书中的问题及答案投入了*大量*工作。然而，我们终究是凡人，难免犯错。
+
+
+    如果你认为发现了书中内容有误，请来此 URL 的 php|architect 论坛讨论：
+
+
+    `http://forums.phparch.com/162`
+
+
+    当然，如果某道题难住了你，想和其他 PHP 爱好者聊聊我们提供的答案背后的原委，也是一样。我们俩都会定期访问论坛，随时乐意提供帮助。
+
+
+    ## 致谢
+
+
+    写书——无论多薄——都是一项宏大的任务，需要许多不同人士的协助和专业知识。
+
+
+    我们要感谢 Derick Rethans，他花费大量时间对每道题进行无情的技术审阅，指出错误并提出改进练习测试整体质量的建议。正是多亏了他，才使这么多问题易懂且技术准确——如果还有些问题不够完美，那完全是我们的责任。
+
+
+    我们也要感谢 Zend 的 Daniel Kushner，感谢他坚定不移的支持和对 Zend 认证计划的宝贵贡献——没有他，就没有题目可写。
+
+
+    John Coggeshall
+
+
+    Marco Tabini
+
+
+    纽约市
+
+
+    多伦多
+
+
+    # 第 1 章：PHP 编程基础
+
+
+    ZEND 考试的设计要求你具备合理的经验才能通过。这并不意味着你必须是超人——只是意味着，为了通过考试，你在日常生活中必须有过相当多的 PHP 实战经历。
+
+
+    '
+  toc: []
+- raw: 'Therefore, it is essential that you know your “basics” very well. These are
+    the elements of PHP that you will deal with on a constant basis, since they are
+    at the very foundation of the language itself. While not being very prepared on
+    other areas of the exam may only be the result of them not being part of your
+    day-to-day programming routine, failing a considerable number of questions in
+    this chapter should raise a red flag. After all, if you don’t know the basics,
+    you’ll have trouble understanding more advanced topics as well.
+
+
+    PHP Programming Basics
+
+
+    **Questions**
+
+
+    **1.** Choose the selection that best matches the following statements: PHP is
+    a \_\_\_\_\_ scripting language based on the \_\_\_\_ engine. It is primarily
+    used to develop dynamic \_\_\_\_\_ content, although it can be used to generate
+    \_\_\_\_ documents (among others) as well.
+
+
+    A. Dynamic, PHP, Database, HTML
+
+
+    B. Embedded, Zend, HTML, XML
+
+
+    C. Perl-based, PHP, Web, Static
+
+
+    D. Embedded, Zend, Docbook, MySQL
+
+
+    E. Zend-based, PHP, Image, HTML
+
+
+    **2.** Which of the following tags is not a valid way to begin and end a PHP code
+    block?
+
+
+    A. <% %>
+
+
+    B. <? ?>
+
+
+    C. <?= ?>
+
+
+    D. <! !>
+
+
+    E. <?php ?>
+
+
+    **3.** Which of the following is not valid PHP code?
+
+
+    A. $\_10
+
+
+    B. ${“MyVar”}
+
+
+    C. &$something
+
+
+    D. $10\_somethings
+
+
+    E. $aVaR
+
+
+    **4.** What is displayed when the following script is executed?
+
+
+    <?php
+
+
+    define(myvalue, "10");
+
+
+    $myarray\[10\] = "Dog";
+
+
+    $myarray\[\] = "Human";
+
+
+    **16**
+
+
+    PHP Programming Basics
+
+
+    $myarray\[''myvalue''\] = "Cat";
+
+
+    $myarray\["Dog"\] = "Cat";
+
+
+    print "The value is: ";
+
+
+    print $myarray\[myvalue\]."\\n";
+
+
+    ?>
+
+
+    A. The value is: Dog
+
+
+    B. The value is: Cat
+
+
+    C. The value is: Human
+
+
+    D. The value is: 10
+
+
+    E. Dog
+
+
+    **5.** What is the difference between print() and echo()?
+
+
+    A. print() can be used as part of an expression, while echo() can’t B. echo()
+    can be used as part of an expression, while print() can’t C. echo() can be used
+    in the CLI version of PHP, while print() can’t D. print() can be used in the CLI
+    version of PHP, while echo() can’t E. There’s no difference: both functions print
+    out some text!
+
+
+    **6.** What is the output of the following script?
+
+
+    <?php
+
+
+    $a = 10;
+
+
+    $b = 20;
+
+
+    $c = 4;
+
+
+    $d = 8;
+
+
+    $e = 1.0;
+
+
+    $f = $c + $d \* 2;
+
+
+    $g = $f % 20;
+
+
+    $h = $b - $a + $c + 2;
+
+
+    $i = $h << $c;
+
+
+    $j = $i \* $e;
+
+
+    print
+
+
+    $j;
+
+
+    ?>
+
+
+    A. 128
+
+
+    B. 42
+
+
+    C. 242.0
+
+
+    D. 256
+
+
+    E. 342
+
+
+    **17**
+
+
+    PHP Programming Basics
+
+
+    **7.** Which values should be assigned to the variables $a, $b and $c in order
+    for the following script to display the string Hello, World!?
+
+
+    <?php
+
+
+    $string = "Hello, World!";
+
+
+    $a = ?;
+
+
+    $b = ?;
+
+
+    $c = ?;
+
+
+    if($a)
+
+
+    {
+
+
+    if($b && !$c) {
+
+
+    echo
+
+
+    "Goodbye
+
+
+    Cruel
+
+
+    World!";
+
+
+    } else if(!$b && !$c) {
+
+
+    echo
+
+
+    "Nothing
+
+
+    here";
+
+
+    }
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    if(!$b)
+
+
+    {
+
+
+    if(!$a
+
+
+    &&
+
+
+    (!$b
+
+
+    &&
+
+
+    $c))
+
+
+    {
+
+
+    echo "Hello, World!";
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    echo "Goodbye World!";
+
+
+    }
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    echo
+
+
+    "Not
+
+
+    quite.";
+
+
+    }
+
+
+    }
+
+
+    ?>
+
+
+    A. False, True, False
+
+
+    B. True, True, False
+
+
+    C. False, True, True
+
+
+    D. False, False, True
+
+
+    E. True, True, True
+
+
+    **8.** What will the following script output?
+
+
+    <?php
+
+
+    $array = ''0123456789ABCDEFG'';
+
+
+    $s = '''';
+
+
+    for ($i = 1; $i < 50; $i++) {
+
+
+    $s .= $array\[rand(0,strlen ($array) - 1)\];
+
+
+    }
+
+
+    echo $s;
+
+
+    ?>
+
+
+    **18**
+
+
+    PHP Programming Basics
+
+
+    A. A string of 50 random characters
+
+
+    B. A string of 49 copies of the same character, because the random number generator
+    has not been initialized
+
+
+    C. A string of 49 random characters
+
+
+    D. Nothing, because $array is not an array
+
+
+    E. A string of 49 ‘G’ characters
+
+
+    **9.** Which language construct can best represent the following series of if
+    conditionals?
+
+
+    <?php
+
+
+    if($a == ''a'') {
+
+
+    somefunction();
+
+
+    } else if ($a == ''b'') {
+
+
+    anotherfunction();
+
+
+    } else if ($a == ''c'') {
+
+
+    dosomething();
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    donothing();
+
+
+    }
+
+
+    ?>
+
+
+    A. A switch statement without a default case
+
+
+    B. A recursive function call
+
+
+    C. A while statement
+
+
+    D. It is the only representation of this logic
+
+
+    E. A switch statement using a default case
+
+
+    **10.** What is the best way to iterate through the $myarray array, assuming you
+    want to modify the value of each element as you do?
+
+
+    <?php
+
+
+    $myarray = array ("My String",
+
+
+    "Another String",
+
+
+    "Hi, Mom!");
+
+
+    ?>
+
+
+    A. Using a for loop
+
+
+    B. Using a foreach loop
+
+
+    C. Using a while loop
+
+
+    D. Using a do…while loop
+
+
+    E. There is no way to accomplish this goal
+
+
+    **19**
+
+
+    PHP Programming Basics
+
+
+    **11.** Consider the following segment of code:
+
+
+    <?php
+
+
+    define("STOP\_AT",
+
+
+    1024);
+
+
+    $result
+
+
+    \=
+
+
+    array();
+
+
+    /\* Missing code \*/
+
+
+    {
+
+
+    $result\[\]
+
+
+    \=
+
+
+    $idx;
+
+
+    }
+
+
+    print\_r($result);
+
+
+    ?>
+
+
+    What should go in the marked segment to produce the following array output?
+
+
+    Array
+
+
+    {
+
+
+    \[0\] => 1
+
+
+    \[1\] => 2
+
+
+    \[2\] => 4
+
+
+    \[3\] => 8
+
+
+    \[4\] => 16
+
+
+    \[5\] => 32
+
+
+    \[6\] => 64
+
+
+    \[7\] => 128
+
+
+    \[8\] => 256
+
+
+    \[9\] => 512
+
+
+    }
+
+
+    A. foreach($result as $key => $val)
+
+
+    B. while($idx \*= 2)
+
+
+    C. for($idx = 1; $idx < STOP\_AT; $idx \*= 2)
+
+
+    D. for($idx \*= 2; STOP\_AT >= $idx; $idx = 0)
+
+
+    E. while($idx < STOP\_AT) do $idx \*= 2
+
+
+    **12.** Choose the appropriate function declaration for the user-defined function
+    is\_leap(). Assume that, if not otherwise defined, the is\_leap function uses
+    the year 2000 as a default value:
+
+
+    <?php
+
+
+    /\* Function declaration here \*/
+
+
+    {
+
+
+    $is\_leap = (!($year %4) && (($year % 100) ||
+
+
+    !($year % 400)));
+
+
+    **20**
+
+
+    PHP Programming Basics
+
+
+    return $is\_leap;
+
+
+    }
+
+
+    var\_dump(is\_leap(1987));
+
+
+    /\* Displays false \*/
+
+
+    var\_dump(is\_leap());
+
+
+    /\* Displays true \*/
+
+
+    ?>
+
+
+    A. function is\_leap($year = 2000)
+
+
+    B. is\_leap($year default 2000)
+
+
+    C. function is\_leap($year default 2000)
+
+
+    D. function is\_leap($year)
+
+
+    E. function is\_leap(2000 = $year)
+
+
+    **13.** What is the value displayed when the following is executed? Assume that
+    the code was executed using the following URL:
+
+
+    testscript.php?c=25
+
+
+    <?php
+
+
+    function process($c, $d = 25)
+
+
+    {
+
+
+    global
+
+
+    $e;
+
+
+    $retval = $c + $d - $\_GET\[''c''\] - $e;
+
+
+    return
+
+
+    $retval;
+
+
+    }
+
+
+    $e = 10;
+
+
+    echo
+
+
+    process(5);
+
+
+    ?>
+
+
+    A. 25
+
+
+    B. -5
+
+
+    C. 10
+
+
+    D. 5
+
+
+    E. 0
+
+
+    **14.** Consider the following script:
+
+
+    <?php
+
+
+    function myfunction($a, $b = true)
+
+
+    {
+
+
+    if($a && !$b) {
+
+
+    echo
+
+
+    "Hello,
+
+
+    World!\\n";
+
+
+    }
+
+
+    **21**
+
+
+    PHP Programming Basics
+
+
+    }
+
+
+    $s = array(0 => "my",
+
+
+    1 => "call",
+
+
+    2 => ''$function'',
+
+
+    3 => '' '',
+
+
+    4 => "function",
+
+
+    5 => ''$a'',
+
+
+    6 => ''$b'',
+
+
+    7 => ''a'',
+
+
+    8 => ''b'',
+
+
+    9 => '''');
+
+
+    $a = true;
+
+
+    $b = false;
+
+
+    /\* Group A \*/
+
+
+    $name = $s\[?\].$s\[?\].$s\[?\].$s\[?\].$s\[?\].$s\[?\];
+
+
+    /\* Group B \*/
+
+
+    $name(${$s\[?\]},
+
+
+    ${$s\[?\]});
+
+
+    ?>
+
+
+    Each ? in the above script represents an integer index against the $s array. In
+    order to display the Hello, World! string when executed, what must the missing
+    integer indexes be?
+
+
+    A. Group A: 4,3,0,4,9,9 Group B: 7,8
+
+
+    B. Group A: 1,3,0,4,9,9 Group B: 7,6
+
+
+    C. Group A: 1,3,2,3,0,4 Group B: 5,8
+
+
+    D. Group A: 0,4,9,9,9,9 Group B: 7,8
+
+
+    E. Group A: 4,3,0,4,9,9 Group B: 7,8
+
+
+    **15.** Run-time inclusion of a PHP script is performed using the \_\_\_\_\_\_\_\_
+    construct, while compile-time inclusion of PHP scripts is performed using the
+    \_\_\_\_\_\_\_ construct.
+
+
+    A. include\_once, include
+
+
+    B. require, include
+
+
+    C. require\_once, include
+
+
+    D. include, require
+
+
+    E. All of the above are correct
+
+
+    **22**
+
+
+    PHP Programming Basics
+
+
+    **16.** Under what circumstance is it impossible to assign a default value to
+    a parameter while declaring a function?
+
+
+    A. When the parameter is Boolean
+
+
+    B. When the function is being declared as a member of a class C. When the parameter
+    is being declared as passed by reference D. When the function contains only one
+    parameter
+
+
+    E. Never
+
+
+    **17.** The \_\_\_\_ operator returns True if either of its operands can be evaluated
+    as True, but not both.
+
+
+    Your Answer: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    **18.** How does the identity operator === compare two values?
+
+
+    A. It converts them to a common compatible data type and then compares the resulting
+    values'
+  fmt: '
+
+    因此，你必须非常熟悉“基础知识”。这些是你将持续打交道的 PHP 元素，因为它们构成了语言的根基。虽然对考试其他领域准备不足可能只是因为它们不在你的日常编程工作中，但如果在本章中错失大量题目，则应引起警觉。毕竟，如果你不懂基础，也很难理解更高级的主题。
+
+
+    # PHP 编程基础
+
+
+    ## 问题
+
+
+    ### 1. 选择最符合以下描述的选项：PHP 是一种 \_\_\_\_\_ 脚本语言，基于 \_\_\_\_ 引擎。它主要用于开发动态 \_\_\_\_\_
+    内容，尽管也可用于生成 \_\_\_\_ 文档（以及其他）。
+
+
+    A. Dynamic, PHP, Database, HTML
+
+
+    B. Embedded, Zend, HTML, XML
+
+
+    C. Perl-based, PHP, Web, Static
+
+
+    D. Embedded, Zend, Docbook, MySQL
+
+
+    E. Zend-based, PHP, Image, HTML
+
+
+    ### 2. 以下哪个标签不是开始和结束 PHP 代码块的有效方式？
+
+
+    A. `<% %>`
+
+
+    B. `<? ?>`
+
+
+    C. `<?= ?>`
+
+
+    D. `<! !>`
+
+
+    E. `<?php ?>`
+
+
+    ### 3. 以下哪项不是有效的 PHP 代码？
+
+
+    A. `$_10`
+
+
+    B. `${"MyVar"}`
+
+
+    C. `&$something`
+
+
+    D. `$10_somethings`
+
+
+    E. `$aVaR`
+
+
+    ### 4. 执行以下脚本时显示什么？
+
+
+    ```php
+
+    <?php
+
+
+    define(myvalue, "10");
+
+
+    $myarray[10] = "Dog";
+
+
+    $myarray[] = "Human";
+
+
+    $myarray[''myvalue''] = "Cat";
+
+
+    $myarray["Dog"] = "Cat";
+
+
+    print "The value is: ";
+
+
+    print $myarray[myvalue]."\n";
+
+
+    ?>
+
+    ```
+
+
+    A. The value is: Dog
+
+
+    B. The value is: Cat
+
+
+    C. The value is: Human
+
+
+    D. The value is: 10
+
+
+    E. Dog
+
+
+    ### 5. `print()` 和 `echo()` 有什么区别？
+
+
+    A. `print()` 可用作表达式的一部分，而 `echo()` 不能
+
+
+    B. `echo()` 可用作表达式的一部分，而 `print()` 不能
+
+
+    C. `echo()` 可用于 PHP 的 CLI 版本，而 `print()` 不能
+
+
+    D. `print()` 可用于 PHP 的 CLI 版本，而 `echo()` 不能
+
+
+    E. 没有区别：两个函数都打印出一些文本！
+
+
+    ### 6. 以下脚本的输出是什么？
+
+
+    ```php
+
+    <?php
+
+
+    $a = 10;
+
+
+    $b = 20;
+
+
+    $c = 4;
+
+
+    $d = 8;
+
+
+    $e = 1.0;
+
+
+    $f = $c + $d * 2;
+
+
+    $g = $f % 20;
+
+
+    $h = $b - $a + $c + 2;
+
+
+    $i = $h << $c;
+
+
+    $j = $i * $e;
+
+
+    print
+
+
+    $j;
+
+
+    ?>
+
+    ```
+
+
+    A. 128
+
+
+    B. 42
+
+
+    C. 242.0
+
+
+    D. 256
+
+
+    E. 342
+
+
+    ### 7. 应向变量 `$a`、`$b` 和 `$c` 赋予哪些值，才能使以下脚本显示字符串 "Hello, World!"？
+
+
+    ```php
+
+    <?php
+
+
+    $string = "Hello, World!";
+
+
+    $a = ?;
+
+
+    $b = ?;
+
+
+    $c = ?;
+
+
+    if($a)
+
+
+    {
+
+
+    if($b && !$c) {
+
+
+    echo
+
+
+    "Goodbye
+
+
+    Cruel
+
+
+    World!";
+
+
+    } else if(!$b && !$c) {
+
+
+    echo
+
+
+    "Nothing
+
+
+    here";
+
+
+    }
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    if(!$b)
+
+
+    {
+
+
+    if(!$a
+
+
+    &&
+
+
+    (!$b
+
+
+    &&
+
+
+    $c))
+
+
+    {
+
+
+    echo "Hello, World!";
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    echo "Goodbye World!";
+
+
+    }
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    echo
+
+
+    "Not
+
+
+    quite.";
+
+
+    }
+
+
+    }
+
+
+    ?>
+
+    ```
+
+
+    A. False, True, False
+
+
+    B. True, True, False
+
+
+    C. False, True, True
+
+
+    D. False, False, True
+
+
+    E. True, True, True
+
+
+    ### 8. 以下脚本将输出什么？
+
+
+    ```php
+
+    <?php
+
+
+    $array = ''0123456789ABCDEFG'';
+
+
+    $s = '''';
+
+
+    for ($i = 1; $i < 50; $i++) {
+
+
+    $s .= $array[rand(0,strlen ($array) - 1)];
+
+
+    }
+
+
+    echo $s;
+
+
+    ?>
+
+    ```
+
+
+    A. 一个包含 50 个随机字符的字符串
+
+
+    B. 一个包含 49 个相同字符副本的字符串，因为随机数生成器未初始化
+
+
+    C. 一个包含 49 个随机字符的字符串
+
+
+    D. 无输出，因为 `$array` 不是数组
+
+
+    E. 一个包含 49 个 ''G'' 字符的字符串
+
+
+    ### 9. 哪种语言结构最能表示以下这一系列 `if` 条件判断？
+
+
+    ```php
+
+    <?php
+
+
+    if($a == ''a'') {
+
+
+    somefunction();
+
+
+    } else if ($a == ''b'') {
+
+
+    anotherfunction();
+
+
+    } else if ($a == ''c'') {
+
+
+    dosomething();
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    donothing();
+
+
+    }
+
+
+    ?>
+
+    ```
+
+
+    A. 不带 `default` 情况的 `switch` 语句
+
+
+    B. 递归函数调用
+
+
+    C. `while` 语句
+
+
+    D. 这是该逻辑的唯一表示形式
+
+
+    E. 使用 `default` 情况的 `switch` 语句
+
+
+    ### 10. 假设你想在遍历 `$myarray` 数组时修改每个元素的值，最好的迭代方式是什么？
+
+
+    ```php
+
+    <?php
+
+
+    $myarray = array ("My String",
+
+
+    "Another String",
+
+
+    "Hi, Mom!");
+
+
+    ?>
+
+    ```
+
+
+    A. 使用 `for` 循环
+
+
+    B. 使用 `foreach` 循环
+
+
+    C. 使用 `while` 循环
+
+
+    D. 使用 `do...while` 循环
+
+
+    E. 无法实现此目标
+
+
+    ### 11. 考虑以下代码片段：
+
+
+    ```php
+
+    <?php
+
+
+    define("STOP_AT",
+
+
+    1024);
+
+
+    $result
+
+
+    =
+
+
+    array();
+
+
+    /* Missing code */
+
+
+    {
+
+
+    $result[]
+
+
+    =
+
+
+    $idx;
+
+
+    }
+
+
+    print_r($result);
+
+
+    ?>
+
+    ```
+
+
+    应在标记段填入什么代码，才能产生以下数组输出？
+
+
+    ```text
+
+    Array
+
+    {
+
+    [0] => 1
+
+    [1] => 2
+
+    [2] => 4
+
+    [3] => 8
+
+    [4] => 16
+
+    [5] => 32
+
+    [6] => 64
+
+    [7] => 128
+
+    [8] => 256
+
+    [9] => 512
+
+    }
+
+    ```
+
+
+    A. `foreach($result as $key => $val)`
+
+
+    B. `while($idx *= 2)`
+
+
+    C. `for($idx = 1; $idx < STOP_AT; $idx *= 2)`
+
+
+    D. `for($idx *= 2; STOP_AT >= $idx; $idx = 0)`
+
+
+    E. `while($idx < STOP_AT) do $idx *= 2`
+
+
+    ### 12. 为用户定义函数 `is_leap()` 选择合适的函数声明。假设如果未另行定义，`is_leap` 函数使用 2000 年作为默认值：
+
+
+    ```php
+
+    <?php
+
+
+    /* Function declaration here */
+
+
+    {
+
+
+    $is_leap = (!($year %4) && (($year % 100) ||
+
+
+    !($year % 400)));
+
+
+    return $is_leap;
+
+
+    }
+
+
+    var_dump(is_leap(1987));
+
+
+    /* Displays false */
+
+
+    var_dump(is_leap());
+
+
+    /* Displays true */
+
+
+    ?>
+
+    ```
+
+
+    A. `function is_leap($year = 2000)`
+
+
+    B. `is_leap($year default 2000)`
+
+
+    C. `function is_leap($year default 2000)`
+
+
+    D. `function is_leap($year)`
+
+
+    E. `function is_leap(2000 = $year)`
+
+
+    ### 13. 执行以下代码时显示的值是什么？假设代码通过以下 URL 执行：
+
+
+    `testscript.php?c=25`
+
+
+    ```php
+
+    <?php
+
+
+    function process($c, $d = 25)
+
+
+    {
+
+
+    global
+
+
+    $e;
+
+
+    $retval = $c + $d - $_GET[''c''] - $e;
+
+
+    return
+
+
+    $retval;
+
+
+    }
+
+
+    $e = 10;
+
+
+    echo
+
+
+    process(5);
+
+
+    ?>
+
+    ```
+
+
+    A. 25
+
+
+    B. -5
+
+
+    C. 10
+
+
+    D. 5
+
+
+    E. 0
+
+
+    ### 14. 考虑以下脚本：
+
+
+    ```php
+
+    <?php
+
+
+    function myfunction($a, $b = true)
+
+
+    {
+
+
+    if($a && !$b) {
+
+
+    echo
+
+
+    "Hello,
+
+
+    World!\n";
+
+
+    }
+
+
+    }
+
+
+    $s = array(0 => "my",
+
+
+    1 => "call",
+
+
+    2 => ''$function'',
+
+
+    3 => '' '',
+
+
+    4 => "function",
+
+
+    5 => ''$a'',
+
+
+    6 => ''$b'',
+
+
+    7 => ''a'',
+
+
+    8 => ''b'',
+
+
+    9 => '''');
+
+
+    $a = true;
+
+
+    $b = false;
+
+
+    /* Group A */
+
+
+    $name = $s[?].$s[?].$s[?].$s[?].$s[?].$s[?];
+
+
+    /* Group B */
+
+
+    $name(${$s[?]},
+
+
+    ${$s[?]});
+
+
+    ?>
+
+    ```
+
+
+    上述脚本中的每个 `?` 代表针对 `$s` 数组的整数索引。为了在执行时显示 "Hello, World!" 字符串，缺失的整数索引必须是什么？
+
+
+    A. Group A: 4,3,0,4,9,9 Group B: 7,8
+
+
+    B. Group A: 1,3,0,4,9,9 Group B: 7,6
+
+
+    C. Group A: 1,3,2,3,0,4 Group B: 5,8
+
+
+    D. Group A: 0,4,9,9,9,9 Group B: 7,8
+
+
+    E. Group A: 4,3,0,4,9,9 Group B: 7,8
+
+
+    ### 15. PHP 脚本的运行时包含使用 \_\_\_\_\_\_\_\_ 结构，而 PHP 脚本的编译时包含使用 \_\_\_\_\_\_\_ 结构。
+
+
+    A. `include_once`, `include`
+
+
+    B. `require`, `include`
+
+
+    C. `require_once`, `include`
+
+
+    D. `include`, `require`
+
+
+    E. 以上皆正确
+
+
+    ### 16. 在声明函数时，什么情况下无法给参数分配默认值？
+
+
+    A. 当参数为布尔类型时
+
+
+    B. 当函数被声明为类的成员时
+
+
+    C. 当参数被声明为按引用传递时
+
+
+    D. 当函数仅包含一个参数时
+
+
+    E. 从不
+
+
+    ### 17. \_\_\_\_ 运算符在其任一操作数可被求值为 True 但不同时为 True 时返回 True。
+
+
+    你的答案：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    ### 18. 身份运算符 `===` 如何比较两个值？
+
+
+    A. 它将它们转换为通用兼容数据类型，然后比较生成的值
+
+    '
+  trans: '
+
+    因此，你必须非常熟悉“基础知识”。这些是你将持续打交道的 PHP 元素，因为它们构成了语言的根基。虽然对考试其他领域准备不足可能只是因为它们不在你的日常编程工作中，但如果在本章中错失大量题目，则应引起警觉。毕竟，如果你不懂基础，也很难理解更高级的主题。
+
+
+    # PHP 编程基础
+
+
+    ## 问题
+
+
+    ### 1. 选择最符合以下描述的选项：PHP 是一种 \_\_\_\_\_ 脚本语言，基于 \_\_\_\_ 引擎。它主要用于开发动态 \_\_\_\_\_
+    内容，尽管也可用于生成 \_\_\_\_ 文档（以及其他）。
+
+
+    A. Dynamic, PHP, Database, HTML
+
+
+    B. Embedded, Zend, HTML, XML
+
+
+    C. Perl-based, PHP, Web, Static
+
+
+    D. Embedded, Zend, Docbook, MySQL
+
+
+    E. Zend-based, PHP, Image, HTML
+
+
+    ### 2. 以下哪个标签不是开始和结束 PHP 代码块的有效方式？
+
+
+    A. `<% %>`
+
+
+    B. `<? ?>`
+
+
+    C. `<?= ?>`
+
+
+    D. `<! !>`
+
+
+    E. `<?php ?>`
+
+
+    ### 3. 以下哪项不是有效的 PHP 代码？
+
+
+    A. `$_10`
+
+
+    B. `${"MyVar"}`
+
+
+    C. `&$something`
+
+
+    D. `$10_somethings`
+
+
+    E. `$aVaR`
+
+
+    ### 4. 执行以下脚本时显示什么？
+
+
+    ```php
+
+    <?php
+
+
+    define(myvalue, "10");
+
+
+    $myarray[10] = "Dog";
+
+
+    $myarray[] = "Human";
+
+
+    $myarray[''myvalue''] = "Cat";
+
+
+    $myarray["Dog"] = "Cat";
+
+
+    print "The value is: ";
+
+
+    print $myarray[myvalue]."\n";
+
+
+    ?>
+
+    ```
+
+
+    A. The value is: Dog
+
+
+    B. The value is: Cat
+
+
+    C. The value is: Human
+
+
+    D. The value is: 10
+
+
+    E. Dog
+
+
+    ### 5. `print()` 和 `echo()` 有什么区别？
+
+
+    A. `print()` 可用作表达式的一部分，而 `echo()` 不能
+
+
+    B. `echo()` 可用作表达式的一部分，而 `print()` 不能
+
+
+    C. `echo()` 可用于 PHP 的 CLI 版本，而 `print()` 不能
+
+
+    D. `print()` 可用于 PHP 的 CLI 版本，而 `echo()` 不能
+
+
+    E. 没有区别：两个函数都打印出一些文本！
+
+
+    ### 6. 以下脚本的输出是什么？
+
+
+    ```php
+
+    <?php
+
+
+    $a = 10;
+
+
+    $b = 20;
+
+
+    $c = 4;
+
+
+    $d = 8;
+
+
+    $e = 1.0;
+
+
+    $f = $c + $d * 2;
+
+
+    $g = $f % 20;
+
+
+    $h = $b - $a + $c + 2;
+
+
+    $i = $h << $c;
+
+
+    $j = $i * $e;
+
+
+    print
+
+
+    $j;
+
+
+    ?>
+
+    ```
+
+
+    A. 128
+
+
+    B. 42
+
+
+    C. 242.0
+
+
+    D. 256
+
+
+    E. 342
+
+
+    ### 7. 应向变量 `$a`、`$b` 和 `$c` 赋予哪些值，才能使以下脚本显示字符串 "Hello, World!"？
+
+
+    ```php
+
+    <?php
+
+
+    $string = "Hello, World!";
+
+
+    $a = ?;
+
+
+    $b = ?;
+
+
+    $c = ?;
+
+
+    if($a)
+
+
+    {
+
+
+    if($b && !$c) {
+
+
+    echo
+
+
+    "Goodbye
+
+
+    Cruel
+
+
+    World!";
+
+
+    } else if(!$b && !$c) {
+
+
+    echo
+
+
+    "Nothing
+
+
+    here";
+
+
+    }
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    if(!$b)
+
+
+    {
+
+
+    if(!$a
+
+
+    &&
+
+
+    (!$b
+
+
+    &&
+
+
+    $c))
+
+
+    {
+
+
+    echo "Hello, World!";
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    echo "Goodbye World!";
+
+
+    }
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    echo
+
+
+    "Not
+
+
+    quite.";
+
+
+    }
+
+
+    }
+
+
+    ?>
+
+    ```
+
+
+    A. False, True, False
+
+
+    B. True, True, False
+
+
+    C. False, True, True
+
+
+    D. False, False, True
+
+
+    E. True, True, True
+
+
+    ### 8. 以下脚本将输出什么？
+
+
+    ```php
+
+    <?php
+
+
+    $array = ''0123456789ABCDEFG'';
+
+
+    $s = '''';
+
+
+    for ($i = 1; $i < 50; $i++) {
+
+
+    $s .= $array[rand(0,strlen ($array) - 1)];
+
+
+    }
+
+
+    echo $s;
+
+
+    ?>
+
+    ```
+
+
+    A. 一个包含 50 个随机字符的字符串
+
+
+    B. 一个包含 49 个相同字符副本的字符串，因为随机数生成器未初始化
+
+
+    C. 一个包含 49 个随机字符的字符串
+
+
+    D. 无输出，因为 `$array` 不是数组
+
+
+    E. 一个包含 49 个 ''G'' 字符的字符串
+
+
+    ### 9. 哪种语言结构最能表示以下这一系列 `if` 条件判断？
+
+
+    ```php
+
+    <?php
+
+
+    if($a == ''a'') {
+
+
+    somefunction();
+
+
+    } else if ($a == ''b'') {
+
+
+    anotherfunction();
+
+
+    } else if ($a == ''c'') {
+
+
+    dosomething();
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    donothing();
+
+
+    }
+
+
+    ?>
+
+    ```
+
+
+    A. 不带 `default` 情况的 `switch` 语句
+
+
+    B. 递归函数调用
+
+
+    C. `while` 语句
+
+
+    D. 这是该逻辑的唯一表示形式
+
+
+    E. 使用 `default` 情况的 `switch` 语句
+
+
+    ### 10. 假设你想在遍历 `$myarray` 数组时修改每个元素的值，最好的迭代方式是什么？
+
+
+    ```php
+
+    <?php
+
+
+    $myarray = array ("My String",
+
+
+    "Another String",
+
+
+    "Hi, Mom!");
+
+
+    ?>
+
+    ```
+
+
+    A. 使用 `for` 循环
+
+
+    B. 使用 `foreach` 循环
+
+
+    C. 使用 `while` 循环
+
+
+    D. 使用 `do...while` 循环
+
+
+    E. 无法实现此目标
+
+
+    ### 11. 考虑以下代码片段：
+
+
+    ```php
+
+    <?php
+
+
+    define("STOP_AT",
+
+
+    1024);
+
+
+    $result
+
+
+    =
+
+
+    array();
+
+
+    /* Missing code */
+
+
+    {
+
+
+    $result[]
+
+
+    =
+
+
+    $idx;
+
+
+    }
+
+
+    print_r($result);
+
+
+    ?>
+
+    ```
+
+
+    应在标记段填入什么代码，才能产生以下数组输出？
+
+
+    ```text
+
+    Array
+
+    {
+
+    [0] => 1
+
+    [1] => 2
+
+    [2] => 4
+
+    [3] => 8
+
+    [4] => 16
+
+    [5] => 32
+
+    [6] => 64
+
+    [7] => 128
+
+    [8] => 256
+
+    [9] => 512
+
+    }
+
+    ```
+
+
+    A. `foreach($result as $key => $val)`
+
+
+    B. `while($idx *= 2)`
+
+
+    C. `for($idx = 1; $idx < STOP_AT; $idx *= 2)`
+
+
+    D. `for($idx *= 2; STOP_AT >= $idx; $idx = 0)`
+
+
+    E. `while($idx < STOP_AT) do $idx *= 2`
+
+
+    ### 12. 为用户定义函数 `is_leap()` 选择合适的函数声明。假设如果未另行定义，`is_leap` 函数使用 2000 年作为默认值：
+
+
+    ```php
+
+    <?php
+
+
+    /* Function declaration here */
+
+
+    {
+
+
+    $is_leap = (!($year %4) && (($year % 100) ||
+
+
+    !($year % 400)));
+
+
+    return $is_leap;
+
+
+    }
+
+
+    var_dump(is_leap(1987));
+
+
+    /* Displays false */
+
+
+    var_dump(is_leap());
+
+
+    /* Displays true */
+
+
+    ?>
+
+    ```
+
+
+    A. `function is_leap($year = 2000)`
+
+
+    B. `is_leap($year default 2000)`
+
+
+    C. `function is_leap($year default 2000)`
+
+
+    D. `function is_leap($year)`
+
+
+    E. `function is_leap(2000 = $year)`
+
+
+    ### 13. 执行以下代码时显示的值是什么？假设代码通过以下 URL 执行：
+
+
+    `testscript.php?c=25`
+
+
+    ```php
+
+    <?php
+
+
+    function process($c, $d = 25)
+
+
+    {
+
+
+    global
+
+
+    $e;
+
+
+    $retval = $c + $d - $_GET[''c''] - $e;
+
+
+    return
+
+
+    $retval;
+
+
+    }
+
+
+    $e = 10;
+
+
+    echo
+
+
+    process(5);
+
+
+    ?>
+
+    ```
+
+
+    A. 25
+
+
+    B. -5
+
+
+    C. 10
+
+
+    D. 5
+
+
+    E. 0
+
+
+    ### 14. 考虑以下脚本：
+
+
+    ```php
+
+    <?php
+
+
+    function myfunction($a, $b = true)
+
+
+    {
+
+
+    if($a && !$b) {
+
+
+    echo
+
+
+    "Hello,
+
+
+    World!\n";
+
+
+    }
+
+
+    }
+
+
+    $s = array(0 => "my",
+
+
+    1 => "call",
+
+
+    2 => ''$function'',
+
+
+    3 => '' '',
+
+
+    4 => "function",
+
+
+    5 => ''$a'',
+
+
+    6 => ''$b'',
+
+
+    7 => ''a'',
+
+
+    8 => ''b'',
+
+
+    9 => '''');
+
+
+    $a = true;
+
+
+    $b = false;
+
+
+    /* Group A */
+
+
+    $name = $s[?].$s[?].$s[?].$s[?].$s[?].$s[?];
+
+
+    /* Group B */
+
+
+    $name(${$s[?]},
+
+
+    ${$s[?]});
+
+
+    ?>
+
+    ```
+
+
+    上述脚本中的每个 `?` 代表针对 `$s` 数组的整数索引。为了在执行时显示 "Hello, World!" 字符串，缺失的整数索引必须是什么？
+
+
+    A. Group A: 4,3,0,4,9,9 Group B: 7,8
+
+
+    B. Group A: 1,3,0,4,9,9 Group B: 7,6
+
+
+    C. Group A: 1,3,2,3,0,4 Group B: 5,8
+
+
+    D. Group A: 0,4,9,9,9,9 Group B: 7,8
+
+
+    E. Group A: 4,3,0,4,9,9 Group B: 7,8
+
+
+    ### 15. PHP 脚本的运行时包含使用 \_\_\_\_\_\_\_\_ 结构，而 PHP 脚本的编译时包含使用 \_\_\_\_\_\_\_ 结构。
+
+
+    A. `include_once`, `include`
+
+
+    B. `require`, `include`
+
+
+    C. `require_once`, `include`
+
+
+    D. `include`, `require`
+
+
+    E. 以上皆正确
+
+
+    ### 16. 在声明函数时，什么情况下无法给参数分配默认值？
+
+
+    A. 当参数为布尔类型时
+
+
+    B. 当函数被声明为类的成员时
+
+
+    C. 当参数被声明为按引用传递时
+
+
+    D. 当函数仅包含一个参数时
+
+
+    E. 从不
+
+
+    ### 17. \_\_\_\_ 运算符在其任一操作数可被求值为 True 但不同时为 True 时返回 True。
+
+
+    你的答案：\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    ### 18. 身份运算符 `===` 如何比较两个值？
+
+
+    A. 它将它们转换为通用兼容数据类型，然后比较生成的值
+
+    '
+  toc: []
+- raw: 'B. It returns True only if they are both of the same type and value C. If
+    the two values are strings, it performs a lexical comparison D. It bases its comparison
+    on the C strcmp function exclusively E. It converts both values to strings and
+    compares them **19.** Which of the following expressions multiply the value of
+    the integer variable $a by 4?
+
+
+    (Choose 2)
+
+
+    A. $a \*= pow (2, 2);
+
+
+    B. $a >>= 2;
+
+
+    C. $a <<= 2;
+
+
+    D. $a += $a + $a;
+
+
+    E. None of the above
+
+
+    **20.** How can a script come to a clean termination?
+
+
+    A. When exit() is called
+
+
+    B. When the execution reaches the end of the current file C. When PHP crashes
+
+
+    D. When Apache terminates because of a system problem **23**
+
+
+    PHP Programming Basics
+
+
+    **Answers**
+
+
+    **1.** Looking at the answers, the only one that makes sense for every blank is
+    B. PHP is a scripting language based on the Zend Engine that is usually embedded
+    in HTML code. As such, it is primarily used to develop HTML documents, although
+    it can be used just as nicely to develop other types of documents, such as XML.
+
+
+    **2.** While tags such as <% %> and <?= ?> are often forgotten in PHP programming,
+    they are valid ways to delimit a PHP code block. The <! and !> tags, however,
+    are not valid and, therefore, the correct answer is D. Keep in mind, in any case,
+    that some of these tags are not always available, depending on how the php.ini
+    file on which the PHP interpreter runs is configured.
+
+
+    **3.** PHP variables always start with a dollar sign and are a sequence of characters
+    and numbers within the Latin alphabet, plus the underscore character. ${"MyVar"}
+    is a valid variable name that simply uses a slightly less common naming convention,
+    while &$something is a reference to the $something variable. Variables, however
+    cannot start with numbers, making $10\_somethings invalid and Answer D correct.
+
+
+    **4.** The important thing to note here is that the $myarray array’s key value
+    is being referenced without quotes around it. Because of this, the key being accessed
+    is not the myvalue string but the value represented by the myvalue constant. Hence,
+    it is equivalent to accessing $myarray\[10\], which is Dog, and Answer A is correct.
+
+
+    **5.** Even though print() and echo() are essentially interchangeable most of
+    the time, there is a substantial difference between them. While print() behaves
+    like a function with its own return value (although it is a language construct),
+    echo() is actually a language construct that has no return value and cannot, therefore,
+    be used in an expression. Thus, Answer A is correct.
+
+
+    **6.** Other than the simple math, the % operator is a modulus, which returns
+    whatever the remainder would be if its two operands were divided. The << operator
+    is a left-shift operator, which effectively multiplies an integer number by powers
+    of two. Finally, the ultimate answer is multiplied by a floating point and, therefore,
+    its type changes accordingly.
+
+
+    However, the result is still printed out without any fractional part, since the
+    latter is nil. The final output is 256 (Answer D).
+
+
+    **7.** Following the logic of the conditions, the only way to get to the Hello,
+    World! string is in the else condition of the first if statement. Thus, $a must
+    be False. Likewise, $b must be False.
+
+
+    The final conditional relies on both previous conditions ($a and $b) being False,
+    but insists that $c be True (Answer D).
+
+
+    **8.** The correct answer is C. As of PHP 4.2.0, there is no need to initialize
+    the random number generator using srand() unless a specific sequence of pseudorandom
+    numbers is sought.
+
+
+    **24**
+
+
+    PHP Programming Basics
+
+
+    Besides, even if the random number generator had not been seeded, the script would
+    have still outputted 49 pseudo-random characters—the same ones every time. The
+    $array variable, though a string, can be accessed as an array, in which case the
+    individual characters corresponding to the numeric index used will be returned.
+    Finally, the for loop starts from 1
+
+
+    and continues until $i is less than 50—for a total of 49 times.
+
+
+    **9.** A series of if…else if code blocks checking for a single condition as above
+    is a perfect place to use a switch statement:
+
+
+    <?php
+
+
+    switch($a)
+
+
+    {
+
+
+    case
+
+
+    ''a'':
+
+
+    somefunction();
+
+
+    break;
+
+
+    case
+
+
+    ''b'':
+
+
+    anotherfunction();
+
+
+    break;
+
+
+    case
+
+
+    ''c'':
+
+
+    dosomething();
+
+
+    break;
+
+
+    default:
+
+
+    donothing();
+
+
+    }
+
+
+    ?>
+
+
+    Because there is a catch-all else condition, a default case must also be provided
+    for that situation. Answer E is correct.
+
+
+    **10.** Normally, the foreach statement is the most appropriate construct for
+    iterating through an array. However, because we are being asked to modify each
+    element in the array, this option is not available, since foreach works on a copy
+    of the array and would therefore result in added overhead. Although a while loop
+    or a do…while loop might work, because the array is sequentially indexed a for
+    statement is best suited for the task, making Answer A correct:
+
+
+    <?php
+
+
+    $myarray = array ("My String", "Another String", "Hi, Mom!"); for($i = 0; $i <
+    count($myarray); $i++)
+
+
+    {
+
+
+    $myarray\[$i\] .= " ($i)";
+
+
+    }
+
+
+    ?>
+
+
+    **11.** As it is only possible to add a single line of code to the segment provided,
+    the only statement that makes sense is a for loop, making the choice either C
+    or D. In order to select the for **25**
+
+
+    PHP Programming Basics
+
+
+    loop that actually produces the correct result, we must first of all revisit its
+    structural elements. In PHP, for loops are declared as follows:
+
+
+    for (<init statement>; <continue until statement>;
+
+
+    <iteration statement>)
+
+
+    where the <init statement> is executed prior to entering the loop. The for loop
+    then begins executing the code within its code block until the <continue until>
+    statement evaluates to False. Every time an iteration of the loop is completed,
+    the <iteration statement> is executed.
+
+
+    Applying this to our code segment, the correct for statement is: for ($idx = 1;
+    $idx < STOP\_AT; $idx \*= 2)
+
+
+    or answer C.
+
+
+    **12.** Of the five options, only two are valid PHP function declarations (A and
+    D). Of these two declarations, only one will provide a default parameter if none
+    is passed—Answer A.
+
+
+    **13.** This question is designed to test your knowledge of how PHP scopes variables
+    when dealing with functions. Specifically, you must understand how the global
+    statement works to bring global variables into the local scope, and the scope-less
+    nature of superglobal arrays such as $\_GET, $\_POST, $\_COOKIE, $\_REQUEST and
+    others. In this case, the math works out to 5 + 25 - 25 –
+
+
+    10, which is -5, or answer B.
+
+
+    **14.** Functions can be called dynamically by appending parentheses (as well
+    as any parameter needed) to a variable containing the name of the function to
+    call. Thus, for Group A the appropriate index combination is 0, 4, 9, 9, 9, 9,
+    which evaluates to the string myfunction. The parameters, on the other hand, are
+    evaluated as variables dynamically using the ${} construct.
+
+
+    This means the appropriate indexes for group B are 7 and 8, which evaluate to
+    ${''a''} and ${''b''}—meaning the variables $a and $b respectively. Therefore,
+    the correct answer is D.
+
+
+    **15.** In recent versions of PHP, the only difference between require() (or require\_once())
+    and include() (or include\_once()) is in the fact that, while the former will
+    only throw a warning and allow the script to continue its execution if the include
+    file is not found, the latter will throw an error and halt the script. Therefore,
+    Answer E is correct.
+
+
+    **16.** When a parameter is declared as being passed by reference you cannot specify
+    a default value for it, since the interpreter will expect a variable that can
+    be modified from within the function itself. Therefore, Answer C is correct.
+
+
+    **17.** The right answer here is the exclusive-or (xor) operator.
+
+
+    **18.** The identity operator works by first comparing the type of both its operands,
+    and then their values. If either differ, it returns False—therefore, Answer B
+    is correct.
+
+
+    **26**
+
+
+    PHP Programming Basics'
+  fmt: "\n## PHP Programming Basics\n\n### Questions\n\n**19.** Which of the following\
+    \ expressions multiply the value of the integer variable `$a` by 4? (Choose 2)\n\
+    \nA. `$a *= pow(2, 2);`\nB. `$a >>= 2;`\nC. `$a <<= 2;`\nD. `$a += $a + $a;`\n\
+    E. None of the above\n\n**20.** How can a script come to a clean termination?\n\
+    \nA. When `exit()` is called\nB. When the execution reaches the end of the current\
+    \ file\nC. When PHP crashes\nD. When Apache terminates because of a system problem\n\
+    \n### Answers\n\n**1.** Looking at the answers, the only one that makes sense\
+    \ for every blank is B. PHP is a scripting language based on the Zend Engine that\
+    \ is usually embedded in HTML code. As such, it is primarily used to develop HTML\
+    \ documents, although it can be used just as nicely to develop other types of\
+    \ documents, such as XML.\n\n**2.** While tags such as `<% %>` and `<?= ?>` are\
+    \ often forgotten in PHP programming, they are valid ways to delimit a PHP code\
+    \ block. The `<!` and `!>` tags, however, are not valid and, therefore, the correct\
+    \ answer is D. Keep in mind, in any case, that some of these tags are not always\
+    \ available, depending on how the `php.ini` file on which the PHP interpreter\
+    \ runs is configured.\n\n**3.** PHP variables always start with a dollar sign\
+    \ and are a sequence of characters and numbers within the Latin alphabet, plus\
+    \ the underscore character. `${\"MyVar\"}` is a valid variable name that simply\
+    \ uses a slightly less common naming convention, while `&$something` is a reference\
+    \ to the `$something` variable. Variables, however, cannot start with numbers,\
+    \ making `$10_somethings` invalid and Answer D correct.\n\n**4.** The important\
+    \ thing to note here is that the `$myarray` array's key value is being referenced\
+    \ without quotes around it. Because of this, the key being accessed is not the\
+    \ `myvalue` string but the value represented by the `myvalue` constant. Hence,\
+    \ it is equivalent to accessing `$myarray[10]`, which is `Dog`, and Answer A is\
+    \ correct.\n\n**5.** Even though `print()` and `echo()` are essentially interchangeable\
+    \ most of the time, there is a substantial difference between them. While `print()`\
+    \ behaves like a function with its own return value (although it is a language\
+    \ construct), `echo()` is actually a language construct that has no return value\
+    \ and cannot, therefore, be used in an expression. Thus, Answer A is correct.\n\
+    \n**6.** Other than the simple math, the `%` operator is a modulus, which returns\
+    \ whatever the remainder would be if its two operands were divided. The `<<` operator\
+    \ is a left-shift operator, which effectively multiplies an integer number by\
+    \ powers of two. Finally, the ultimate answer is multiplied by a floating point\
+    \ and, therefore, its type changes accordingly. However, the result is still printed\
+    \ out without any fractional part, since the latter is nil. The final output is\
+    \ 256 (Answer D).\n\n**7.** Following the logic of the conditions, the only way\
+    \ to get to the `Hello, World!` string is in the `else` condition of the first\
+    \ `if` statement. Thus, `$a` must be `False`. Likewise, `$b` must be `False`.\
+    \ The final conditional relies on both previous conditions (`$a` and `$b`) being\
+    \ `False`, but insists that `$c` be `True` (Answer D).\n\n**8.** The correct answer\
+    \ is C. As of PHP 4.2.0, there is no need to initialize the random number generator\
+    \ using `srand()` unless a specific sequence of pseudorandom numbers is sought.\
+    \ Besides, even if the random number generator had not been seeded, the script\
+    \ would have still outputted 49 pseudo-random characters—the same ones every time.\
+    \ The `$array` variable, though a string, can be accessed as an array, in which\
+    \ case the individual characters corresponding to the numeric index used will\
+    \ be returned. Finally, the `for` loop starts from 1 and continues until `$i`\
+    \ is less than 50—for a total of 49 times.\n\n**9.** A series of `if...else if`\
+    \ code blocks checking for a single condition as above is a perfect place to use\
+    \ a `switch` statement:\n\n```php\n<?php\nswitch ($a) {\n    case 'a':\n     \
+    \   somefunction();\n        break;\n    case 'b':\n        anotherfunction();\n\
+    \        break;\n    case 'c':\n        dosomething();\n        break;\n    default:\n\
+    \        donothing();\n}\n?>\n```\n\nBecause there is a catch-all `else` condition,\
+    \ a `default` case must also be provided for that situation. Answer E is correct.\n\
+    \n**10.** Normally, the `foreach` statement is the most appropriate construct\
+    \ for iterating through an array. However, because we are being asked to modify\
+    \ each element in the array, this option is not available, since `foreach` works\
+    \ on a copy of the array and would therefore result in added overhead. Although\
+    \ a `while` loop or a `do...while` loop might work, because the array is sequentially\
+    \ indexed a `for` statement is best suited for the task, making Answer A correct:\n\
+    \n```php\n<?php\n$myarray = array(\"My String\", \"Another String\", \"Hi, Mom!\"\
+    );\nfor ($i = 0; $i < count($myarray); $i++) {\n    $myarray[$i] .= \" ($i)\"\
+    ;\n}\n?>\n```\n\n**11.** As it is only possible to add a single line of code to\
+    \ the segment provided, the only statement that makes sense is a `for` loop, making\
+    \ the choice either C or D. In order to select the `for` loop that actually produces\
+    \ the correct result, we must first of all revisit its structural elements. In\
+    \ PHP, `for` loops are declared as follows:\n\n```\nfor (<init statement>; <continue\
+    \ until statement>; <iteration statement>)\n```\n\nwhere the `<init statement>`\
+    \ is executed prior to entering the loop. The `for` loop then begins executing\
+    \ the code within its code block until the `<continue until>` statement evaluates\
+    \ to `False`. Every time an iteration of the loop is completed, the `<iteration\
+    \ statement>` is executed.\n\nApplying this to our code segment, the correct `for`\
+    \ statement is: `for ($idx = 1; $idx < STOP_AT; $idx *= 2)` or answer C.\n\n**12.**\
+    \ Of the five options, only two are valid PHP function declarations (A and D).\
+    \ Of these two declarations, only one will provide a default parameter if none\
+    \ is passed—Answer A.\n\n**13.** This question is designed to test your knowledge\
+    \ of how PHP scopes variables when dealing with functions. Specifically, you must\
+    \ understand how the `global` statement works to bring global variables into the\
+    \ local scope, and the scope-less nature of superglobal arrays such as `$_GET`,\
+    \ `$_POST`, `$_COOKIE`, `$_REQUEST` and others. In this case, the math works out\
+    \ to 5 + 25 - 25 - 10, which is -5, or answer B.\n\n**14.** Functions can be called\
+    \ dynamically by appending parentheses (as well as any parameter needed) to a\
+    \ variable containing the name of the function to call. Thus, for Group A the\
+    \ appropriate index combination is 0, 4, 9, 9, 9, 9, which evaluates to the string\
+    \ `myfunction`. The parameters, on the other hand, are evaluated as variables\
+    \ dynamically using the `${}` construct. This means the appropriate indexes for\
+    \ group B are 7 and 8, which evaluate to `${'a'}` and `${'b'}`—meaning the variables\
+    \ `$a` and `$b` respectively. Therefore, the correct answer is D.\n\n**15.** In\
+    \ recent versions of PHP, the only difference between `require()` (or `require_once()`)\
+    \ and `include()` (or `include_once()`) is in the fact that, while the former\
+    \ will only throw a warning and allow the script to continue its execution if\
+    \ the include file is not found, the latter will throw an error and halt the script.\
+    \ Therefore, Answer E is correct.\n\n**16.** When a parameter is declared as being\
+    \ passed by reference you cannot specify a default value for it, since the interpreter\
+    \ will expect a variable that can be modified from within the function itself.\
+    \ Therefore, Answer C is correct.\n\n**17.** The right answer here is the exclusive-or\
+    \ (`xor`) operator.\n\n**18.** The identity operator works by first comparing\
+    \ the type of both its operands, and then their values. If either differ, it returns\
+    \ `False`—therefore, Answer B is correct.\n"
+  trans: "\n\n## PHP 编程基础\n\n### 问题\n\n**19.** 以下哪些表达式将整数变量 `$a` 的值乘以 4？（选择 2 项）\n\
+    \nA. `$a *= pow(2, 2);`\nB. `$a >>= 2;`\nC. `$a <<= 2;`\nD. `$a += $a + $a;`\n\
+    E. 以上都不是\n\n**20.** 脚本如何才能干净地终止？\n\nA. 当调用 `exit()` 时\nB. 当执行到达当前文件末尾时\nC. 当 PHP\
+    \ 崩溃时\nD. 当 Apache 因系统问题终止时\n\n### 答案\n\n**1.** 查看选项，唯一一个让每个空白都讲得通的是 B。PHP 是一种基于\
+    \ Zend Engine 的脚本语言，通常嵌入在 HTML 代码中。因此，它主要用于开发 HTML 文档，尽管它也可以同样很好地用于开发其他类型的文档，例如\
+    \ XML。\n\n**2.** 虽然诸如 `<% %>` 和 `<?= ?>` 之类的标签在 PHP 编程中经常被忽略，但它们是界定 PHP 代码块的有效方式。然而，`<!`\
+    \ 和 `!>` 标签无效，因此正确答案是 D。请记住，无论如何，这些标签中的一些并不总是可用的，这取决于 PHP 解释器运行所在的 `php.ini` 文件是如何配置的。\n\
+    \n**3.** PHP 变量总是以美元符号开头，并且是拉丁字母表中的字符和数字的序列，加上下划线字符。`${\"MyVar\"}` 是一个有效的变量名，只是使用了一种稍微不太常见的命名约定，而\
+    \ `&$something` 是对 `$something` 变量的引用。然而，变量不能以数字开头，这使得 `$10_somethings` 无效，因此答案\
+    \ D 正确。\n\n**4.** 这里要注意的重要一点是 `$myarray` 数组的键值是在没有引号的情况下被引用的。因此，被访问的键不是字符串 `myvalue`，而是由常量\
+    \ `myvalue` 所代表的值。因此，这等同于访问 `$myarray[10]`，其值为 `Dog`，答案 A 正确。\n\n**5.** 尽管 `print()`\
+    \ 和 `echo()` 在大多数情况下基本上可以互换，但它们之间存在实质性差异。虽然 `print()` 的行为类似于具有自身返回值的函数（尽管它是一个语言结构），但\
+    \ `echo()` 实际上是一个没有返回值的语言结构，因此不能用在表达式中。因此，答案 A 正确。\n\n**6.** 除了简单的数学运算外，`%` 运算符是取模运算符，它返回其两个操作数相除后的余数。`<<`\
+    \ 运算符是左移运算符，它实际上将整数乘以 2 的幂。最后，最终答案乘以了一个浮点数，因此其类型会相应改变。然而，结果仍然会在没有任何小数部分的情况下打印出来，因为小数部分为零。最终输出是\
+    \ 256（答案 D）。\n\n**7.** 遵循条件的逻辑，到达 `Hello, World!` 字符串的唯一途径是第一个 `if` 语句的 `else`\
+    \ 分支。因此，`$a` 必须为 `False`。同样，`$b` 必须为 `False`。最后的条件依赖于前两个条件（`$a` 和 `$b`）均为 `False`，但坚持要求\
+    \ `$c` 为 `True`（答案 D）。\n\n**8.** 正确答案是 C。自 PHP 4.2.0 起，除非需要特定的伪随机数序列，否则无需使用 `srand()`\
+    \ 初始化随机数生成器。此外，即使随机数生成器未被播种，该脚本仍会输出 49 个伪随机字符——每次都是相同的那些。`$array` 变量虽然是一个字符串，但可以作为数组访问，在这种情况下将返回与所用数字索引对应的单个字符。最后，`for`\
+    \ 循环从 1 开始，一直持续到 `$i` 小于 50——总共 49 次。\n\n**9.** 如上所示，一系列检查单一条件的 `if...else if`\
+    \ 代码块是使用 `switch` 语句的完美场所：\n\n```php\n<?php\nswitch ($a) {\n    case 'a':\n  \
+    \      somefunction();\n        break;\n    case 'b':\n        anotherfunction();\n\
+    \        break;\n    case 'c':\n        dosomething();\n        break;\n    default:\n\
+    \        donothing();\n}\n?>\n```\n\n因为有一个兜底的 `else` 条件，所以必须为该情况提供一个 `default`\
+    \ 分支。答案 E 正确。\n\n**10.** 通常，`foreach` 语句是遍历数组最合适的结构。然而，因为我们被要求修改数组中的每个元素，所以此选项不可用，因为\
+    \ `foreach` 在数组的副本上工作，因此会导致额外的开销。虽然 `while` 循环或 `do...while` 循环可能行得通，但因为数组是顺序索引的，`for`\
+    \ 语句最适合这项任务，因此答案 A 正确：\n\n```php\n<?php\n$myarray = array(\"My String\", \"Another\
+    \ String\", \"Hi, Mom!\");\nfor ($i = 0; $i < count($myarray); $i++) {\n    $myarray[$i]\
+    \ .= \" ($i)\";\n}\n?>\n```\n\n**11.** 因为只能向提供的代码段添加单行代码，所以唯一讲得通的语句是 `for` 循环，这将选择范围缩小到\
+    \ C 或 D。为了选择实际产生正确结果的 `for` 循环，我们首先必须重温其结构元素。在 PHP 中，`for` 循环声明如下：\n\n```\nfor\
+    \ (<初始化语句>; <继续条件语句>; <迭代语句>)\n```\n\n其中 `<初始化语句>` 在进入循环之前执行。然后 `for` 循环开始执行其代码块内的代码，直到\
+    \ `<继续条件语句>` 评估为 `False`。每完成一次循环迭代，就会执行 `<迭代语句>`。\n\n将其应用于我们的代码段，正确的 `for` 语句是：`for\
+    \ ($idx = 1; $idx < STOP_AT; $idx *= 2)`，即答案 C。\n\n**12.** 在五个选项中，只有两个是有效的 PHP\
+    \ 函数声明（A 和 D）。在这两个声明中，只有一个会在未传递参数时提供默认参数——答案 A。\n\n**13.** 这个问题旨在测试你关于 PHP 在处理函数时如何作用域变量的知识。具体来说，你必须理解\
+    \ `global` 语句如何将全局变量引入局部作用域，以及 `$_GET`、`$_POST`、`$_COOKIE`、`$_REQUEST` 等超全局数组的无作用域特性。在这种情况下，数学计算结果为\
+    \ 5 + 25 - 25 - 10，即 -5，也就是答案 B。\n\n**14.** 可以通过将括号（以及所需的任何参数）附加到包含要调用的函数名称的变量后面，来动态调用函数。因此，对于\
+    \ A 组，适当的索引组合是 0, 4, 9, 9, 9, 9，其评估结果为字符串 `myfunction`。另一方面，参数是使用 `${}` 结构作为变量动态评估的。这意味着\
+    \ B 组的适当索引是 7 和 8，它们评估为 `${'a'}` 和 `${'b'}`——分别意味着变量 `$a` 和 `$b`。因此，正确答案是 D。\n\
+    \n**15.** 在 PHP 的最新版本中，`require()`（或 `require_once()`）和 `include()`（或 `include_once()`）之间的唯一区别在于，前者在找不到包含文件时只会抛出警告并允许脚本继续执行，而后者会抛出错误并停止脚本。因此，答案\
+    \ E 正确。\n\n**16.** 当参数被声明为按引用传递时，不能为其指定默认值，因为解释器将期望一个可以在函数内部被修改的变量。因此，答案 C 正确。\n\
+    \n**17.** 这里的正确答案是异或（`xor`）运算符。\n\n**18.** 全等运算符通过首先比较其两个操作数的类型，然后比较它们的值来工作。如果两者中任意一个不同，它就返回\
+    \ `False`——因此，答案 B 正确。\n\n"
+  toc: []
+- raw: '**19.** The correct answers are A and C. In Answer A, the pow function is
+    used to calculate 22, which corresponds to 4. In Answer C, the left bitwise shift
+    operator is used to shift the value of $a by two bits to the left, which corresponds
+    to a multiplication by 4.
+
+
+    **20.** The only answer that really fits the bill is A. A script doesn’t necessarily
+    terminate when it reaches the end of any file other than the main one—so the “current”
+    file could be externally included and not cause the script to terminate at its
+    end. As far as PHP and Apache crashes, they can hardly be considered “clean” ways
+    to terminate a script.
+
+
+    **27**'
+  fmt: '
+
+    ### 19.
+
+
+    正确答案是 A 和 C。在答案 A 中，使用 `pow` 函数计算 2 的 2 次方，结果为 4。在答案 C 中，使用左位移运算符将 `$a` 的值向左移动两位，相当于乘以
+    4。
+
+
+    ### 20.
+
+
+    唯一完全符合要求的答案是 A。脚本在到达除主文件以外任何文件的末尾时，并不一定会终止——因此“当前”文件可能是外部引入的，在其末尾不会导致脚本终止。至于 PHP
+    和 Apache 的崩溃，很难将其视为“正常”终止脚本的方式。
+
+
+    ### 27
+
+    '
+  trans: '
+
+
+    ### 19.
+
+
+    正确答案是 A 和 C。在答案 A 中，使用 `pow` 函数计算 2 的 2 次方，结果为 4。在答案 C 中，使用左位移运算符将 `$a` 的值向左移动两位，相当于乘以
+    4。
+
+
+    ### 20.
+
+
+    唯一完全符合要求的答案是 A。脚本在到达除主文件以外任何文件的末尾时，并不一定会终止——因此“当前”文件可能是外部引入的，在其末尾不会导致脚本终止。至于 PHP
+    和 Apache 的崩溃，很难将其视为“正常”终止脚本的方式。
+
+
+    ### 27
+
+
+    '
+  toc: []
