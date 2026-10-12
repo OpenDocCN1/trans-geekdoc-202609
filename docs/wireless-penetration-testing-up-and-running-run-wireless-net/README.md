@@ -1,0 +1,7 @@
+# 无线渗透测试：快速上手指南：运行无线网络漏洞评估、Wi-Fi 渗透测试、Android 与 iOS 应用安全、... WPA 与 WPA2 协议
+
+> 原文：[Wireless Penetration Testing： Up and Running： Run Wireless Networks Vulnerability Assessment, Wi-Fi Pen Testing, Android and iOS Application Security, ... WPA, and WPA2 Protocols (English Edition)]()
+> 
+> 译者：[飞龙](https://github.com/wizardforcel)
+> 
+> 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
