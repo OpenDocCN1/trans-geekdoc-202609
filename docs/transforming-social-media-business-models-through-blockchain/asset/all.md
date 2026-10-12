@@ -1,0 +1,893 @@
+ ![image](images/cover.jpg)
+
+ 
+
+# Transforming Social Media Business Models Through Blockchain
+
+NITIN UPADHYAY
+
+Goa Institute of Management, India
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+![inline-image](images/fx1.jpg)
+
+United Kingdom – North America – Japan – India
+
+Malaysia – China
+
+  
+
+Emerald Publishing Limited
+
+Howard House, Wagon Lane, Bingley BD16 1WA, UK
+
+First edition 2020
+
+Copyright © 2020 Emerald Publishing Limited
+
+**Reprints and permissions service**
+
+Contact: [permissions@emeraldinsight.com](http://permissions@emeraldinsight.com)
+
+No part of this book may be reproduced, stored in a retrieval system, transmitted in any form or by any means electronic, mechanical, photocopying, recording or otherwise without either the prior written permission of the publisher or a licence permitting restricted copying issued in the UK by The Copyright Licensing Agency and in the USA by The Copyright Clearance Center. Any opinions expressed in the chapters are those of the authors. Whilst Emerald makes every effort to ensure the quality and accuracy of its content, Emerald makes no representation implied or otherwise, as to the chapters' suitability and application and disclaims any warranties, express or implied, to their use.
+
+**British Library Cataloguing in Publication Data**
+
+A catalogue record for this book is available from the British Library
+
+ISBN: 978-1-83867-302-4 (Print)
+
+ISBN: 978-1-83867-299-7 (Online)
+
+ISBN: 978-1-83867-301-7 (Epub)
+
+ 
+
+ 
+
+| ![inline-image](images/fx2.jpg) || ![inline-image](images/fx3.jpg) |
+| --- | --- |
+
+              
+
+*Dedicated*
+
+*to*
+
+Avatar Meher Baba
+
+  
+
+![image](images/fx4.jpg)
+
+              
+
+*Indebted to your love Shalini, Meherika and Brownie.*
+
+Contents
+
+1.  [*Biography*](#BIOGRAPHY.xhtml)
+2.  [*Preface*](#Preface.xhtml)
+3.  [1\. Social Media Business Model](#CH001-9781838673024.xhtml)
+4.  [2\. Blockchain](#CH002-9781838673024.xhtml)
+5.  [3\. Challenges and Opportunities](#CH003-9781838673024.xhtml)
+6.  [4\. Blockchain Value Proposition](#CH004-9781838673024.xhtml)
+7.  [5\. Blockchain-based Social Media Enterprise](#CH005-9781838673024.xhtml)
+8.  [*References*](#BM-01-9781838673024.xhtml)
+
+Biography
+
+Dr Nitin Upadhyay is a researcher, inventor, innovator, consultant, leader, coach, academician and a prolific writer. He is an influencer and a regular contributor as ‘Bloggist’ to *Times of India, Economic Times* and *India Times*. He is a Fellow of the prestigious Royal Society of Arts London and Fellow of Institute of Engineers (I). Over the years, he has engaged with select top Fortune 500 companies. He is a leading authority and speaker on innovation, design, cloud, blockchain, computing, big data and analytics, future technology and user experience. He is currently working in the area of information technology and is a core member of the Big Data Analytic programme, Goa Institute of Management, India. He is also the Chair and Head of the Centre for Innovation and Digital Business Innovation at Goa Institute of Management. He has wide industry, academic, consultancy and research experience and is a member of Board of Governors and an Executive member and Chair of Cloud SLAs (service-level agreements) for the Cloud Computing Innovation Council of India. He has worked with Samsung Advanced Research at South Korea and Bangalore for many flagship projects and drove whole gamut of innovation.
+
+He is an Expert in the Board of Panel of Experts for Startup Promotion Cell (SPC), Department of Information Technology (DIT), Government of Goa, to assist the SPC in materializing Goa Startup Policy vision to make Goa one of the most preferred start-up destinations of India and make it feature in the top 25 start-up destinations in Asia by 2025. As a startup coach, he provides innovative insights, roadmap and action plans for successfully materializing innovative process and new products. He is a founder and CEO of SkillTix, a company with a vision ‘to shape peoples future by providing “right” skill set and establishing core competencies’.
+
+He has contributed 100+ peer-reviewed publications/presentations/posters/talks and 12 books. He has contributed to best ideas/patents/inventions/innovations. He is associated with various journals and societies of repute as Deputy Editor-in-Chief/Editor/Editorial Board Member/Reviewer/Member.
+
+He is the father of the phenomenon ‘CABology’ that all the GEN-X/Y/Z are witnessing. His books *CABology: Value of Cloud, Analytics and Big Data Trio Wave* with Springer Nature Palgrave Singapore and *Big Data Management and Analytics* with Cengage publications are already taking a toll on the knowledge and business space and positioned as Amazon's Best Sellers Category. His coauthored book *Cloud Computing Innovation in India: A Framework and Roadmap*, published by IEEE-Standard USA, has already set the benchmark for the industry, government and academia to embrace cloud computing innovation.
+
+He has received many awards and recognition nationally and internationally. He is listed in the Who's Who in the World, Who's Who in the Asia, Top Innovators of the World (IBC Cambridge) and received multiple awards such as Best Professor in Information Technology Studies, Research Shepherd, Star Researcher and Innovator, Outstanding Scientist, IEEE Conference Guest of Honour, Lifetime achievement award USA, Best Research (South Korea, Intl. Conf.).
+
+He paints on canvas (acrylic/oil) and has exhibited his paintings to the wider audience and private art shows (Spain-Madrid and South Korea). He has sold/donated more than 100 artworks nationally and internationally. On the outset, he participates in marathon, plays guitar, contributes to literary corpus and is also a voracious reader.
+
+Preface
+
+The emergence of the Internet has impacted the way that we interact and perform business transactions. There is no business that is virtually untouched by social media. Social media has been democratized such that it is no longer the choice for the business but a necessary strategy. Most of the times, businesses are unclear about the strategic advantage and value proposition of the social media landscape. Thus they are unable to build the capability, brand, relationships and goodwill thereby constrained to contribute to increased efficiency, performance and productivity. Many web and mobile applications facilitate the dynamic interaction of the worldwide community. Web 2.0, as we all know has given the place for the social media platforms, is a continually evolving and expanding domain. The advancements in the Internet of Things, high-end infrastructure, smart devices and smart platforms have been able to provide an inclusive and immersive experience and different levels in participation and collaboration. The world is not restricted to Facebook, Twitter, LinkedIn, WhatsApp, Instagram, Snapchat, etc., but the choices are many, and the implications of each application bring new opportunities and possibilities for the businesses. No matter which segment of the business you are working with, chances may happen that the adoption of social media poses several risks such as reputation management, information asymmetry, information provenance, integrity and reliability.
+
+The current social media platforms have the ‘centralized focus’, and the administration and control of the content thereby lies with the centralized agency. Integrated usage of social media to deploy a unified strategy that can bring participants experience to the forefront is missing. All social media platforms are centralized focused and support the restricted sphere of reach and engagement. The early movers will get the advantage to redefine the social media and innovate with the blockchain to develop new-edge social media community.
+
+The social media enterprises need to push technology at the platform level to achieve the best performance out of it. Further, the boundary of the organizations will get affected due to the intrinsic components of the peer-to-peer participation and consensus mechanisms of the technology. However, the proper intersection of the technology, market and organization towards a unified growth strategy will pave the way to adopt and include blockchain to redefine the social media enterprise.
+
+The book adopts the coherent approach to define the changing landscape of social media enterprise. The readers will be exposed to the utility of the blockchain in redefining the social media enterprises. The future social enterprise economy will be transformed to the distributed network of trust and ownership, where the participants can get involved in the social transactions over the blockchain network by just having the Internet connection and the social media applications. Moreover, blockchain technology, when integrates with social networks, provides a platform for self-executable social codes to make possible all sorts of social interactions.
+
+  
+
+**Dr Nitin Upadhyay**
+
+## 1
+
+Social Media Business Model
+
+Social media platforms have become hugely popular and involve people's participation in content know-how. In this chapter, readers will understand the changing landscape of social media platforms.
+
+Introduction
+
+The transaction is not a new phenomenon. Human societies have always considered and observed it. The first mystical transaction between Adam and Eve unfolded the realities of the world. Perhaps one can argue the significance of the instigator to trigger the transaction, but we must understand that the transaction happened between two people accepting the consequences of the transaction. Transactions are the fundamental unit for the people and community to interact, communicate, converse, collaborate and co-exist (Agnihotri, Kothandaraman, Kashyap, & Singh, 2012; An & Weber, 2015). The changing dimensions of the social interact interface have given rise to many technology-driven ecosystems, and Internet is the prime.
+
+The emergence of the Internet has impacted the way that we interact and perform business transactions. When Internet got commercialized, people were quite apprehensive about its capability and applicability. Most parts of the world had limited access to participate in the World Wide Web network. As suggested by the researchers, the adoption of the technology follows a bell curve, which was very well applicable to the Internet (Anderson, 2006; Bjørn-Andersen, Rasmussen, & Rasmussen, 2009). The 1990s era had few adopters – innovators and early adopters, and they experimented in a variety of ways by rolling services and solutions over the World Wide Web.
+
+Social media has been democratized such that it is no longer the choice for the business but a necessary strategy and added dimensions to achieve competitiveness (Baghdadi, 2013; Bechmann & Lomborg, 2013). In a recent report by McKinsey, it has been identified that the contribution of social media to business could range between $900 billion and $1.3 trillion. Enterprises are now exposed to so much potential of social media and have a vast opportunity space to leverage and build a competitive advantage (Ballantyne, 2014). However, the only source to added value is not only the inclusion of social advertisements and campaigns but also having a proper strategic composition of collaborations and cooperation within and across the industries. Most of the times, businesses are unclear about the strategic advantage and value proposition of the social media landscape. Thus they are unable to build the capability, brand, relationships, and goodwill thereby constrained to contribute to increased efficiency, performance and productivity.
+
+There is no business that is virtually untouched by social media. It has provided great potential, which was earlier untapped, to reach to the masses, persuade them about their products and services (Berthon, Pitt, McCarthy, & Kates, 2007). Moreover, businesses have outgrown their presence and brand imprint significantly. Social media has given rise to the dynamic global community to contribute, collaborate and cooperate, through the Internet. Many web and mobile applications facilitate the dynamic interaction of the worldwide community. Web 2.0, as we all know has given the place for the social media platforms, is a continually evolving and expanding domain. It improvises and makes social media applications more user-friendly. Conventionally, the participants were restricted to view the content of the business on their websites. But, now in the cyberspace, people can comment, share, like, discuss, collaborate and generate their content. For the business, such engagement touch points are turning as treasure points. Business could understand more about their products and services from virtually everywhere.
+
+Social Media in Business
+
+Myriad applications contribute to the success of social media (Butterfield, 2003; Enders et. al., 2008). The advancements in the Internet of Things (IoT), high-end infrastructure, smart devices and smart platforms have been able to provide an inclusive and immersive experience and different levels in participation and collaboration (Choi & Varian, 2012). The world is not restricted to Facebook, Twitter, LinkedIn, WhatsApp, Instagram, Snapchat, etc., but the choices are many, and the implications of each application bring new opportunities and possibilities for the businesses. Sharing of one's augmented avatar on the new iPhone XR or a live message on Samsung Note 9 brings impeccable experience to the participation. The connected devices are breaking the physical proximities and allowing the different world to meet and provide an incredible experience. The social media platforms and applications of today's era are pushing the dynamic global community not just to come closer to collaborate, cooperate and participate but to get immersed in the environment.
+
+Businesses can take optimal benefit by using single or the combination of social media applications (Chen, 2009). With the ever-increasing demand on the added value features integrated with the new technologies, it has become quite a challenge to the businesses. They need to understand the scope, feasibility and potential of using the next-generation social media platforms and applications (Chesbrough & Rosenbloom, 2002). Though social media provide countless opportunities, let us know how we can leverage such opportunities systematically. There exist five ideal opportunities (Kunz & Werning, 2013; Tuesta et al., 2015; Wang, White, & Chen, 2015), [Fig. 1.1](#CH001-9781838673024.xhtml#fig1):
+
+![image](images/f01-01.jpg)
+
+**Fig. 1.1.**Social Media Opportunities.
+
+**Global market presence**: No matter where you run your business and which market you operate on, social media provide unprecedented channels to make you reach to virtually everywhere.
+
+Moreover, by utilizing search engine optimization techniques, one can become visible on the giant web. The higher visibility one has on the Internet, the higher market presence and business opportunity one may expect to have. Social media helped Groupon to increase its business manifold, and in just five years enabled it to reach to 12 billion dollars' worth value. Groupon became the global brand and got transformed by social media.
+
+Groupon reconfigured the industry by including social media to expand its discounted coupon offers to the vast array of customers. These offers usually are for a limited time, and thus optimal numbers are required to redeem the offers. The blend of social media in the marketing of coupons guaranteed Groupon to expand the business and also to attain customer segments.
+
+**Communication**: Business players can achieve affordable communication by appropriately using social media strategies. It can be used for both formal and informal discussions. The company employs the former, and the employees adopt the latter to channelize the communication. Social media applications can amplify informal communication structure, and people can leverage it for sharing project goals and artefacts, and gaining efficiency and knowledge. Moreover, social media applications result in diversified communication as it allows a different type of media to be shared and utilized. Companies like Salesforce.com and Cisco have strategically introduced social media into their respective business. To keep abreast about their product offerings and an edge on training capabilities, Saleforce.com started utilizing YouTube videos to train customers resulting in cut down of efforts of worth several 100 salespeople. Cisco deals with a variety of social media platforms to connect with different stakeholders. It utilizes almost 31 blogs to cater to audience covering information about the company, offerings, products and many more.
+
+Moreover, it utilizes Facebook fan pages to spread solutions, offerings, services and relevant information. It also takes advantage of Twitter in expanding its customer base. Flickr has also been used by Cisco to cover photos of products, events and offerings.
+
+**Community presence**: It is effortless to build the virtual community without the time and space barrier. Social media applications provide various ways by which people can come together to discuss, debate and share topics of common interest. For example, LinkedIn provides the professional community to come together and share concerns and solutions relevant to the group. Business can strategically identify the subcommunities and influencers in the communities. Channelizing offerings, services and solutions through the influencers help in boosting the profit margins and growth.
+
+**Collective intelligence**: It is an utmost vital part to manage, control and administer the collective knowledge build by the social media stakeholders. As more and more people join the communities, participation in communication results in the knowledge corpora. Businesses can get insights about their product and services and also gather the competitors' business product portfolio. By working on the knowledge corpora generated through the social media communities, a business can get at the edge to compete and perform. Starbucks strategically build products, services and offerings based on collective intelligence. It runs a Facebook fan page and also maintains the MyStarbucksIdea website to collect ideas from the potential consumers. The collective intelligence through social media applications helped Starbucks to acquire more customers, develop insightful experiences, produce useful offerings and execute social responsibility projects. Coca-Cola ‘Freestyle’ vending machine showcases more than 100 options of flavours. The customers get a chance to mix the flavours, taste it and share the experience with their friends on social media. Such kind of insightful details helped the company to launch new and innovative products. Cisco organized a billion-dollar ideas competition, which resulted in contribution from 3,000 participants from 157 countries generating 800 ideas. The winner bagged the 250,000 dollar price. The social media boosted the billion-dollar idea to Cisco, as it costs approximately 321 dollars per idea to yield a billion-dollar business.
+
+**Collaboration**: The most powerful feature of the social media application is collaboration. It provides various ways for the people to collaborate both on personal and professional fronts. There is a proven track record where communities came forward and have worked together and collaborated on a successful sustainable project like ‘Conserve Forests’. Accenture is a global consulting, technology services and outsourcing company employing more than 200,000 employees worldwide. It has built an interactive collaboration platform utilizing Facebook and LinkedIn to connect and collaborate to run, manage and execute projects.
+
+No matter which segment of the business you are working with, chances may happen that the adoption of social media poses several risks. These risks such as reputation management, information asymmetry, information provenance, integrity and reliability, visible and invisible reach impact the business. Some risks are tied with the core of the organization, i.e. its DNA, but some could be tackled through the technological interventions. Some companies are closed-culture, as they do not believe in sharing and disseminating the information. Thus, they are the one who gets hugely impacted by social media adoptions. For them, it is essential to have a common language and goal for social media communication. Further implementation, integration and interoperability issues need to be tackled to facilitate convergence between different social media platforms and enable data portability.
+
+New Social Media
+
+Interestingly, yesteryears' social media have fed us lots of information. Some were useful, but many were hit by unreliable, poor quality and integrity, untraceable, low credibility and unethical issues. It is a time to develop frameworks and standards to manage, control, administer and regulate the aspects of social media. Regulations to be governed by the appropriate usage of AI and data-enabled technologies.
+
+Moreover, the focus needs to shift from the centralized control, where one central authority controls the aspects of social media, to peer control where the participating peers take the ownership and controls for their actions (Casey & Vigna, 2018). We should have the mechanism to agree collectively on the credibility and integrity of the right information. Each of the contributors should get the reward for the contribution rather only one central authority like Facebook or Google gets all the revenue from the people's contributions. Besides, trust in the information dissemination on social media is crucial. Social media need to play an active role in ensuring that the information and the source provided are accurate, credible and authentic to avoid any misinformation.
+
+The IoT has become an integral part of human society, and the man–machine duo is contributing to the exponential growth of the data (Dorri, Kanhere, & Jurdak, 2016; Kitchin, 2014). Samsung Health supports many activities and challenges where people from different parts of the world participate and perform. It also provides leaderboard where one can check his/her performance for the challenges and evaluate one's position concerning the other participants. Social IoT is changing the economic, physical and behavioural aspects of human society. The smart house, when integrated with social media generates helpful information about the home and its environment. For example, the message might get automatically posted on Twitter whenever there is a change in the ambient lightings of the house or when someone checks in the house.
+
+Information search is the most important but time-consuming activity. Many business models have paved its benefit by incorporating advertising ventures on the information search model. Though such models are beneficial to the advertisers as there information comes right at the top of the giant web during the search, but the consumers are not truly getting the benefits. Moreover, search integrity is questionable if the search results are inappropriate. Thus, the future information search social media business models must rethink the roles and responsibilities of the participant and stakeholders to provide the true value proposition (Gillin & Schwartzman, 2010; Haenlein, 2011). It must safeguard the interest of the consumers during content search and personalization, and should not just be beneficial to only one class of the society.
+
+Journalism is facing a lot of turbulence due to the presence of fake news. It has become easy for everyone to contribute information to social media accessible to the broader reach. The journalistic social media is putting all efforts into making sure that an audience gets the attention for the media content. But somehow it lacks in ensuring the source and reliability of the information. The social entertainment industry is also not untouched by social media.
+
+The digital publishing industry got transformed by the value proposition that it offers by introducing the disintermediation and involving a new set of players (Garci-Agreda, 2013; Wikström & Ellonen, 2012). However, the essential roles of creating and publishing the content are still intact. The way that the content now is distributed to the masses and later consumed by them depends upon the potential use of social media platforms (Enders, Hungenberg, Denker, & Mauch, 2008; Frow, Nenonen, Payne, & Storbacka, 2015). It helps in establishing an engaging platform as the audience can discuss and be part of the creative process. Several social media platforms such as Flipboard, Medium, etc. have emerged that run communities of interest and have a robust social presence.
+
+The user-generated content is the driver to user engagement (Kaplan & Haenlein, 2010). Many social enterprises are developing social tools and framework to facilitate users. Features such as media content generation, acquisition and processing elements with the ability to distribute and monetize it are prominent.
+
+The current social media platforms have the ‘centralized focus’ and offer channels for distributing and sharing the content. Also, the administration and control of the content, thereby lies with the centralized agency. The agency curates and integrates the relevant content which needs to be delivered to the participants in the social network. The process helps the agency to draw the intent and preferences of the users for the specific content and accordingly by using the appropriate strategies the user-generated content is processed and utilized. It can be argued that the ‘centralized focus’ is the prime focus to establish the marketplace for the premium content (targeted advertisers) to contribute to the revenue growth of the agency. The centrality of such social media platforms suffers from several challenges (Lehmkuhl & Jung, 2013; Okada & Yamamoto, 2011):
+
+*   Inability to control the flow and structure of information
+*   Imprecise personalized offerings
+*   Excessive liberty in privacy and ethical controls
+*   Overpowered trust issues related to misinformation and fake news
+
+The typical centrality focus can be overcome by including the augmented model of content distribution, considering the significant impact of the IoT. The inclusion of sensory perception through digital intervention by integrating AR/VR environment stimulates the development of an inclusive environment (Csik, 2015; Spaulding, 2010; Wang & Zhang, 2012). It is not a far-reaching goal when the next-generation social media models support the dynamic real-world social interactions with the social users' environment.
+
+Today many digital natives and digital migrants use social media in different ways. Similarly, social media enterprises targeting both the digital natives and digital migrants have separate strategies for the engagements. In this environment, the organizations are developing a creative profile to nurture the social network by integrating it with the dynamic real world. We can find the requirement of the more real-world inclusive interactions not just with the people but with their environment. The significant contributions of the 3D technologies with the AR/VR will drive more personal and deep interactions. Thus, social media platforms will support machine-to-machine communication to take a proactive role in understanding human behaviour and moderating the communities. The release of the user information of the social network in the dynamic environment will lead to more personalized and targeted marketing.
+
+Due to the proliferation of mobile devices, digital news distribution and consumption are now democratized. Social networks have outgrown in scale and elevated as the news consumption platforms, though it merely means that the new-generation users can now easily surf and interact with the information layer presented to them. Moreover, it is unlikely that the relevant information is showcased to them due to the impact of the added dimension of information overload. Besides, the mesh aspect of integrating multiple social media sites to pump the information makes the overall interaction platform to be more complicated. The users face few challenges with the social media platforms, and new business models by employing new technologies are expected to overcome such challenges (Dorri et al., 2016; He et al., 2015; Lewis, 2015):
+
+*   Authenticity: The information overload is giving rise to the critical issue of the authenticity of the information. It is sometimes challenging to identify the valid source and integrity of the data. The social users tend to pass the information quickly, which falls following the snowball effect and thus difficult to obtain the actual source.
+*   Bias: The centralized social media develops over the time their specific regulation, ethics and editorial policy and thus knowingly or unknowingly enforce particular bias to the information. The denser control driven by the centrality focuses more on the bias presence visible in the social network. Such bias leads to the different interpretation of the news information.
+
+Social media applications are mostly operated in the centralized fashion. But one must not confuse centralization with the safety. Most platforms are susceptible to many issues such as information leaks, identity thefts, securities, censorship, hacking, etc. Facebook's recent information leak is an example of such a problem. The personal information of more than 87 million people was leaked and utilized to promote few candidates during the last US presidential election. Mostly, the customer data generated over the social media platforms are being used for advertising revenue. The platform acts as an intermediary to the advertisers. It helps to impart the targeting advertisements to the customers to generate the revenue. The content quality also plays a critical role in streamlining traffic. One must not jeopardize the content quality to mauve the traffic as it does not directly link with the content value. Users are not rewarded and incentivized for populating the social media platforms by contributing to the knowledge corpora. Moreover, they now realized that their data are being utilized by the service providers for profit earning to which they are not the part.
+
+In some case, few social media platforms have some added features to share the small portion of the revenue to the social users for contributing to the data. These users are typically influential in the community and thus gather massive traffic over the content. The improper distribution of value among the users triggers the dissatisfaction in the social community.
+
+The information present to the users on the social network is in the compressed form, and the user has no sufficient time and skills to verify and validate the trueness of the information. The adoption of mass information is prone to develop disturbed emotions and feelings, which is unavoidable in absolute respect. Some propaganda activities are intentional to insinuate particular emotions to the user community by sharing misrepresented information. Though it seems to be a complicated job to control such propaganda, the social enterprise must find ways to tackle through such a difficult way of executing propaganda.
+
+## 2
+
+Blockchain
+
+Blockchain provides a decentralized and distributed public ledger for all the participating parties and professes no intermediary involvement. In this chapter, readers will be exposed to the various features of the blockchain for accomplishing its functioning.
+
+Introduction
+
+Why do we need another technological revolution? Is it worth trying? Do we need to worry about the incoming technological wave of the trust-free economy? Many such questions need to be answered to unfold the real value of the blockchain. Competition is high, and we have witnessed the downfall of many Fortune 500 companies during the rise of the Internet wave. The yesteryears' Internet has changed not only the dynamics of the business but also the society. With the advent of the social media platforms, the business, society and human all have come closer as the ‘trio’ contributing towards the development, growth and benefit of each other.
+
+Blockchain technology enables the peer-to-peer transaction of the physical and digital asset without the involvement of any intermediaries or central authority. Initially, it was developed to support the cryptocurrency – Bitcoin – as the mode of financial transactions. But it is quite amazing to know that various software programs were implemented to support the responsibilities of the central authority such as verification, validation and consensus. The purpose was to remove the intermediaries in any form altogether, and the transactions of value must get executed on the network seamlessly. Later, the computational elements were added to the blockchain platform, which opened up the plethora of innovations beyond just the currency transactions.
+
+What Is Blockchain?
+
+Enables peer-to-peer transaction in a decentralized network while establishing trust among unknown peer and recording the transaction in the immutable distributed ledger.
+
+It is a long journey for all of us to move away from the centralized authority and embrace the decentralized platform without disturbing the overall outcome. Let us try to understand the scenarios for the centralized and decentralized ways of performing the transaction for a particular item.
+
+Scenario: Purchase of an Item Using a Credit Card
+
+  
+
+**Centralized System**
+
+Taking into account the centralized network to accomplish the complete transactions, let us first enumerate what all intermediaries would facilitate the transactions in part or whole.
+
+*   Credit card agency
+*   Customer's bank
+*   Credit card's bank
+*   Exchange
+*   Merchant's bank
+*   Merchant
+
+All the above intermediaries need to verify and validate the transaction to complete the purchasing of the item. Consider the same scenario where the item is to be bought over the e-commerce site, which involves five different vendors for the delivery of the item. Damn! Such a complicated interaction of the intermediaries. It does not just top up the cost by involving the transaction fee but also triggers delays (more in case the transaction requires the cross-border processing).
+
+  
+
+**Decentralized System**
+
+  
+
+The decentralized system provides an underlying infrastructure to support peer-to-peer transactions. The role of the intermediaries is substituted by the software components to push them towards the periphery with their peers. There is no desirable requirement for the peers to be known to each other to complete the transaction. Moreover, they can be anywhere, and their physical location does not hamper the transaction. Such kind of transaction becomes possible in the system when it materializes the trust among the peers by establishing the process of verification, validation and confirmation of the transaction considering the consensus.
+
+**Note: In a blockchain network, the transactions are created into the distributed ledger of blocks. These blocks are added as an immutable record to the chain of blocks once the confirmation is achieved.**
+
+In the blockchain business network, the distributed ledger is replicated and shared among the network peer participants. Whenever a new transaction happens, the updated blockchain is available once a new block is approved and added to the blockchain (Kraft, 2016). The peer replication provides the ability for the peer to act as both the publisher and the subscriber for the transaction. Each participant represents a node in the peer network, and the data and transactions are synchronized in the system. Since the efforts required to validate the transactions shift from central to peer network, the blockchain network becomes an economical and viable choice for the business (Buterin and Mougayar, 2016). There is no need for intermediaries to approve the transactions, and because of consensus mechanisms to validate the transactions, they become more reliable, secure and verifiable. The modus operandi of the transaction remains the same. For example, the participants entering into the transaction are the same. But the change is in the way that now the transaction is materialized. The transaction record is shared and available to all the participating parties as a single truth.
+
+The blockchain network typically showcases the following characteristics (Tuesta et al., 2015; Buterin and Mougayar, 2016):
+
+**Consensus:** The transaction is the fundamental unit in the system, and to approve the transaction, the peer participant in the network should validate it. There exist several consensus mechanisms by which the peers validate the transaction.
+
+**Provenance:** It helps in identifying the origin of the assets and how the ownership has changed over time. The users can get to know the details of the ownership of the assets before they freeze the transactions of interest.
+
+**Immutability:** Once the transaction is recorded on the blockchain, it cannot be altered in any form. Thus, it achieves the immutable nature. Even if a transaction results into an error, it cannot be modified, and a new transaction must be recorded to correct the thing. Both the transaction record exists in the blockchain network at all the time.
+
+**Finality:** A single truth about the ownership or the origin of the asset or the details about the transaction is available through the shared ledger. There exist no multiple versions of the transactions or information associated with the asset.
+
+It is easy to establish trust through the blockchain network. It supports cryptographic proof and consensus-based mechanisms to record the transactions. The peer participating community is responsible for authenticating, verifying and validating the transactions, and thus, central authorities like government or regulatory bodies are not required anymore to perform such operations. Blockchain network achieves trust through the following (Lemieux, 2016; Lewis, 2015):
+
+**Independency:** The ledger holding the single truth of the transactions is replicated and shared among the peer participating network. Any sole authority or party does not own such distribution. The continued existence of the blockchain is not dependent on central authority and is not prone to a single point of failure.
+
+**Auditable:** The transactions are time-stamped and ordered and can be accessed in the near real time. It becomes easy to audit the transaction trail over the blockchain network. Everyone has access to the data.
+
+**Consensus:** To record the transaction as a valid state, all the relevant peer participants in the network must agree on the same. The onus of approving the transaction remains on the peer participation and gets executed based on the consensus mechanisms.
+
+**Orchestration:** The blockchain network can redefine and reengineer the business processes. Moreover, by including the smart contracts into the network, the end-to-end process becomes economical and sustainable.
+
+Blockchain holds the potential for the business. It is not required to utilize only public blockchain for the business. Blockchain for a business can be private, permissioned where participants are known to each other and there is no need for the cryptocurrencies for establishing the transactions. Moreover, a certain level of authority is distributed to the participants. The network needs to maintain shared ledger. The shared ledger is accessible to the participants in the permissioned network, but only those transactions are visible to the participants to which they are authorized to view. The permissioned blockchain imposes a certain level of control over the blockchain network. For example, it can put up the constraint such as to record the transaction of a particular section of the participant, say auditor, must approve the transaction.
+
+Blockchain as a Technology Disrupter
+
+The exponential increase of the data due to the advent of the social media platforms poses many challenges – data provenance, privacy, security to the business and society. People on the one side worried about their identity leaks, privacy concerns, but on the other hand, not reluctant to open up their data on the social media platforms. Businesses have by far trying hard with a variety of tools and techniques to manage the complexity of the social ties. As technology progresses and human society utilizes more devices to connect (Internet of Things), the complexity of both the interaction and data for managing it efficiently will only increase. The blockchain technology seems to follow similar trends as mentioned by Geroski in his book *The Evolution of New Markets*. Blockchain adoption is influenced by:
+
+*   early movers to develop and offer solutions
+*   astonishing products that sweep out the existing and competing for products
+*   slow market development leading to dip and then technology uptake to establish the market
+
+The advocates and enthusiasts of the blockchain map its growth similar to other technologies such as mobile phones, personal computers, etc. Nonetheless, it is characterized by the ‘slow growth’ towards the ‘waiting phase’ followed by an explosive ‘take-off’ phase and finally pacing to ‘leveling-off’ phase. The participants and the players taking the blockchain roadmap (Froystad & Holm, 2015) on the lines of the innovation adoption cycle to innovate and penetrate the market can be classified as innovators (Bitcoin), early adopters (other cryptocurrencies), early majority (IBM, Softbank, consultancies, system integration providers, consortiums). The blockchain technology is yet to be embraced by the late majority and laggards.
+
+Blockchain helps in alleviating following market frictions (Chanal & Caron-Fasan, 2008; Chesbrough, 2010):
+
+**Information frictions:** Typically, in a transaction, the information details are incomplete or not shared at the same level as the participating parties. Moreover, the information due to its complex nature of storing, processing and sharing sometimes becomes unavailable or inaccessible. The risks of information damage and privacy result in poor decisions, delayed processes and damage to brand reputations. The distributed shared ledger helps in removing the information friction, and at all time the single version of the truth required for the transaction is available to all the participating parties.
+
+**Interaction frictions:** The interaction frictions become complex when there exist more interaction points among the parties. It happens either due to the presence of the degree of the separation or the complex process of the transaction. The blockchain network results in removing the unwanted interaction points due to the distribution of the trust and consensus mechanism. The smart contracts eliminate the delays in the business process as the automatic execution of the process can be embedded into the blockchain network using the smart contracts.
+
+Blockchain Structure
+
+The essential element of the Bitcoin blockchain is the transaction. The transactions are broadcasted in the network. Later, they are validated by their peers in the participating network. Many transactions are combined to form the blocks, and many blocks linked through the immutable link form the blockchain. The addition of a new block is not straightforward, preferably it has to follow a pre-defined process. Each block that is added to the blockchain must be agreed based on the underlying consensus mechanism. The peer nodes execute the validation and consensus process known as miners. The miners are nothing but the high computational nodes running the software to perform computation desirable to achieve consensus and validation.
+
+### Unspent Transaction Output
+
+At any given point of time, the state of the Bitcoin blockchain can be obtained collectively by the unspent transaction outputs (UTXOs). The UTXOs are present at both the places, first as the input to the transaction and then the output to the transaction. These UTXOs are stored by the participating nodes in the databases. For a given transaction, following UTXO details are generated:
+
+*   Unique identifier of the transaction that created the UTXO
+*   Reference of this UTXO in the transaction's output list
+*   Value of the transaction
+*   An optional condition under which the output can be spent
+
+The transaction includes:
+
+*   Reference number of the current transaction
+*   Reference(s) to one or more input UTXOs
+*   Reference(s) to one or more output UTXOs
+*   The total input and output amount
+
+Operations in the decentralized network are the responsibility of the peer participants and their respective computational and storage nodes. Some typical operations are:
+
+*   Validation of transactions
+*   Gathering transactions
+*   Broadcasting the transactions and blocks
+*   Consensus on block transactions
+*   Chaining blocks
+
+There exist two major roles for the participants:
+
+*   Initiate the transactions
+*   Mine the transactions and add the transaction into the block and integrate with the exiting blockchain. Such participants are responsible for verifying transactions, broadcast transactions, compete to create a block, validate block by consensus, broadcast new block, confirm transactions. Each such participant is incentivized to manage the blockchain. All miners carry an independent task to verify the transactions.
+
+Consensus ensures the integrity of the chain. Different consensus protocols are used for guaranteeing consensus in the blockchain. When participants are anonymous, then the validation becomes expensive. In such case, consensus mechanism like proof of work is utilized, which means every participating node is challenged to solve a particular computational problem. The node that solves the puzzle broadcasts the transaction block, and once verified by the peer participants for its validity and authenticity, it is integrated or chained in the blockchain network.
+
+The blockchain network achieves privacy and confidentiality (Christidis & Devetsikiotis, 2016). Privacy is the right to protect the data, attributes, assets for observation by the unintended and unconsented party. Confidentiality of the data ensures that only authorized entities have access to the data. Both privacy and confidentiality are essential aspects to the blockchain. The Bitcoin blockchain is the public blockchain, and thus we can see the transactions happening on the Bitcoin blockchain. The platforms like Hyperledger and Ethereum are permissioned blockchains. They limit access of the blockchain to the select entities or participants of the blockchain. It is possible to achieve confidentiality and privacy through such platforms. Operation rights such as data read, write and update are controlled and administered. Some blockchain platforms like Multichain require that the transacting nodes be on the permissioned list.
+
+Blockchain and Social Media
+
+In a decade, the blockchain technology's position in the technology S curve makes it suitable for embracing innovations, adoption and investments (Crosby, Nachiappan, Pattanayak, Verma, & Kalyanaraman, 2016). It promotes the inclusive economy and enables the person to participate in the democratic process. The success of the Bitcoin depends on the blockchain infrastructure supporting software-based validation, verification and consensus. The ever-increasing computational power sources to mine and create the blocks enable blockchain enthusiasts to look blockchain beyond the currency transfer (Don & Alex, 2016).
+
+There are a plethora of applications that can get impacted by the use of blockchain. More importantly, social media platforms and applications centred on the social entities experience will get operated and governed appropriately. Social graphs are not about the website connectedness rather the experiences.
+
+Unfortunately, integrated usage of social media to deploy a unified strategy that can bring participants’ experience to the forefront is missing (Cortimigila, Ghezzi, & Renga, 2011). All social media platforms are centralized focused and support the restricted sphere of reach and engagement. As suggested by Corcoran (2009), the social media ecosystem comprises three typical media types – owned media, paid media and earned media.
+
+*Owned media*: Such media systems are governed and owned by the organization. For example, the company's website and the postings on it about its services, solutions and offerings are entirely controlled by the concerned group such as marketers.
+
+*Paid media*: Such media system helps to create visibility and reach. Association of company's presence through sponsorship and advertising are some such ways to showcase brand effectiveness.
+
+*Earned media*: Such media systems are neither controlled nor managed by the company's resources. Word of mouth or viral media typically triggers immediate and instant buzz about the specific point of concern.
+
+According to Li and Bernoff (2008), in the social media ecosystem, active participants are segmented as per the different type of social behaviours.
+
+*   *Creator*
+    
+    They are the one who actively creates the object of sociality. They also publish, maintain, update and upload objects using appropriate features and tools as supported by the social media platforms.
+    
+*   Collector
+    
+    People under this category are responsible for collecting objects of sociality and sharing them appropriately with the peers or the participating network.
+    
+*   Joiners
+    
+    Sometimes people are sure about participating in the group or they participate in understanding the group feelings, and if it matches with their aspiration, then they indulge themselves in the further course of interaction.
+    
+*   Critics
+    
+    People under this segment typically comment and rate the objects of sociality. They are responsible for making or breaking the artefacts and moreover, if they represent the power zone of influence, then it becomes critical to monitor and administer their actions to avoid unnecessary risks.
+    
+
+The decentralized database supports effective communication or message transmission. For example, file and video sharing are becoming economically effective such that the conventional and centralized network or electronic platforms such as Google Drive, Yahoo, Gmail etc., are becoming less essential. It is possible to send, share, retrieve and access the encrypted messages and files through the decentralized mechanism without any intervention of the central authority. The decentralized network allows information to be published and distributed seamlessly eliminating the ability of the single power to censor.
+
+Organizations involving social media platforms based on blockchain usage must, therefore, analyze its applicability considering media types and active segments of participants. In Chapter 4, we will look at finding the enablers and value drivers to link the social media sphere with the value proposition. The blockchain-based social media enterprises impact both the media types and the participants significantly. The participants get reward and incentives for contributing to the media types over the blockchain network. Moreover, the inclusion of the smart contracts to initiate and execute the end-to-end process of recording transactions and distributing the reward tokens make the revenue for the peer participants (Chesebro, 2015). As the intrinsic property of the blockchain network, the participants hold the ownership of the data and can use it for the monetization purpose. [Fig. 2.1](#CH002-9781838673024.xhtml#fig1) represents the inclusion of blockchain as an underlying foundation to support media types and participants.
+
+![image](images/f02-01.jpg)
+
+**Fig. 2.1.**Blockchain and Media Types and Participants.
+
+The early movers will get the advantage to redefine the social media and innovate with the blockchain to develop new edge social media community. The social media enterprise can utilize the technology, market and organization as a structural framework to measure and redesign its strategy to enter into the blockchain market.
+
+The social media enterprises need to push technology at the platform level to achieve the best performance out of it. Further, the boundary of the organizations will get affected due to the intrinsic components of the peer-to-peer participation and consensus mechanisms of the technology. However, the proper intersection of the technology, market and organization towards a unified growth strategy will pave the way to adopt and include blockchain to redefine the social enterprise.
+
+## 3
+
+Challenges and Opportunities
+
+The Internet has created new possibilities that we didn't foresee in its early years. Blockchain technology is unique and has great potential to penetrate existing markets and to develop new markets. In this chapter, readers will understand the challenges and opportunities associated with the blockchain in the social media industry. It will help them to explore how a current business can be transformed and also how to create new markets.
+
+Introduction
+
+Redefining social media with the blockchain provides the immediate benefit of the data ownership to the contributors. Since the technology is based on the peer-to-peer transactions recorded over the distributed ledger, no one central authority controls it. The ownership shifts from a central authority to the periphery of the peers. For example, the conventional social media enterprises such as Facebook will not be able to peek into the data shared by the social participants over the social network until unless they have the right and consent to do so. The social interaction transactions will be stored on the blockchain network and support privacy, confidentiality, and immutability (Crosby, Nachiappan, Pattanayak, Verma, & Kalyanaraman, 2016; Don & Alex, 2016).
+
+Moreover, the users can also keep the data off the chain over the cloud. The social users are the key contributors to the objects of sociality. By using blockchain, social enterprises won't be able to store and mine the users' data. Since the users now can decide on who has access to the data and the purpose where the data will be used, they can get the fair chance to earn the revenue share. For example, the user might be interested in a particular set of advertisements and instead, social enterprise pushing the ads to the users, the user can share the data and decide on the advertisements based on the cryptocurrency or token share one gets.
+
+The social users in the blockchain also get the direct benefit of the token economies and network effect (Kraft, 2016; Lewis, Larsen, Goh, Tan, & Tacchi, 2016). The social enterprise can distribute the tokens during the initial coins offerings (ICOs), and the users can take the direct advantage to acquire the tokens instead of their data. They can also use the tokens to avail the services provided by social enterprises. In contrast to the well-known enterprises where only the centralized social media platforms get the direct benefit of the network of scale, the social users in the blockchain social media enterprise for their contributions and participation also receives the rewards and are incentivized. Organizations like Facebook have to rework on its business model, by including tokenization, consensus, decentralization, immutability and transparency to adopt the blockchain in its comprehensive social enterprise.
+
+Social Users – *Benefits* 
+
+The social users in the blockchain-based social media enterprise will get the following benefits:
+
+*   *Data Control*
+
+In contrast to the typical social media enterprise, the social users in the blockchain-based social media enterprise takes control of the data and in place of the services and rewards release their data to the stakeholders.
+
+*   *Information integrity and authenticity*
+
+The distributed ledger and the immutable aspect of the information help the social users to verify the information source, information integrity and its reliability. As and when the transactions are verified, they get recorded on the blockchain. The social users will be able to verify content and information provenance to avoid any fake news or misinformation.
+
+*   *Opportunities for crowdfunding*
+
+Social media enterprises can integrate blockchain to provide transparency and openness to the crowdfunding projects. The smart contracts can efficiently be utilized to perform the financial transactions, and the user can get to know in the real time the process execution state and thereby able to trace and control the assets. The users can track, monitor and capture interaction points seamlessly.
+
+*   *Direct customers*
+
+The organization can use blockchain-enabled social media applications to directly deal with the customers without the involvement of the intermediaries. Thus, it is possible for marketers to interact with the customers directly. Moreover, as more and more social users share their data statistics to the desirable organizations, they become part of the revenue sharing model. There will be a strong tie between the producers and consumers of the information. As no intermediary is involved in data services, the organizations can significantly get an increased rate of cost per impression.
+
+The blockchain will quickly change the way that users interact and participate in the social network. The onus of information integrity and reliability lies with the peer participants. The system will be able to generate accurate data, maintain traceability and provenance, showcase targeted ads, develop enhanced user experience and provide transparency. The removal of intermediaries will help organizations to increase their ROI. But, they also need to consider the incentivization models to the social users for generating the social content on the social network.
+
+[Table 3.1](#CH003-9781838673024.xhtml#tbl1) summarizes the immediate benefits of the blockchain-based social media platforms.
+
+Table 3.1.Benefits for Social Users.
+
+| Property || Description |
+| --- | --- |
+| Product perception || The consumers will no longer be treated as the product. As they have more control of the data that they generate, they have rights to provide the consent and access to their data to the selected parties for using appropriate services or availing rewards or tokens. |
+| --- | --- |
+| Data control || Users will be responsible for owning the data as they initiate the transactions which get validated by the peer participants in the network. The power and ownership lie with the contributor of the data. |
+| In-app payments || Users can use the tokenized system inside the social media applications to avail the services by contributing the appropriate number of tokens. |
+| Compensation for posts and influencers || Users will have an edge in contributing and scaling up the social network. For each such contribution and participation, they get incentivized. |
+| The legitimacy of the information || Users' contributions are recorded on the immutable distributed ledger only after the approval and validation of the peer participating network based on the consensus mechanisms. Such a process holds the legitimacy of the information |
+| Data provenance || Users can track and trace the objects of sociality as the transactions are recorded in the immutable distributed ledger. It helps in identifying the source of the data. |
+
+Social Users – *Challenges* 
+
+Though there are several benefits to the usage of the blockchain in redefining the social media enterprise, the organizations should also consider the challenges associated with it to avoid any risks. The social media network is known for the scale of transactions, and since blockchain needs to execute the consensus protocol, the speed to validate such transactions is typically low. For example, the CryptoKitties, a blockchain-based social game managed to congest the traffic on the Ethereum platform. The traffic caused by CryptoKitties over the blockchain platform is nothing as compared to the traffic over Facebook or Twitter. Everything must be verified and authenticated, which leads to higher turnaround time for the transactions. Moreover, the mining of the transactions takes a lot of energy, which is not efficient for the social network of scale, considering millions and billions of transactions for the contributions every day. Also, the transaction fee accounted for every contribution that a contributor executes on the social network hinders the sole purpose of the social interaction.
+
+The blockchain is fundamentally based on peer participation with the removal of intermediaries. The blockchain will get affected by the moderation challenge over the social network. Consider social participants posting thousands of videos over the network, which makes the peer network challenging to moderate the content of the videos. It will be a great challenge to approve or disapprove the video transactions. It may further lead to the fundamental question of whether we require the third party to moderate the transactions, which violated the principle of the blockchain. Otherwise, we will let peer participating network take the onus of such moderation, which will be very complicated. Also, the social media enterprise face challenge in updating dApps as the social communities and participants trust and consensus needs to be taken into account to do any modifications. [Table 3.2](#CH003-9781838673024.xhtml#tbl2) summarizes the challenges for the users.
+
+Table 3.2.Challenges.
+
+| Property || Description |
+| --- | --- |
+| Scalability || Blockchain needs to execute the consensus protocol resulting into low transaction speed. It is unable to support highly scalable set of transactions. |
+| --- | --- |
+| Economic value || The network is prone towards usage of high computational and energy resource for executing and recording transactions. |
+| Moderation || The scalability over the network place challenge for moderating the content. |
+| Updates || The peer needs to agree on rolling out the updates to the participating network. |
+
+## 4
+
+Blockchain Value Proposition
+
+Applicability of blockchain is massive in social media platforms; thereby, businesses can generate real value. The proposed value proposition model will help the social media industry to take leap in the digital transformation. In this chapter, readers will get to know about how to utilize the blockchain value proposition for transforming social media business models.
+
+Introduction
+
+The social media business model helps organization to discover ways by which they can derive and generate values through social media tools and platforms, which was not possible otherwise. Typically, two types of organizations utilize social media models. Firstly, those organization that owns and manages the social media platforms and tools. Secondly, the other one who use it to share, communicate, collaborate within and outside the organizations. The business model helps the business to navigate their value to the prospects, customers, partners and stakeholders (Wirtz, 2011; Zott, Raphael, & Massa, 2011). The business model covers the constructs of the business rather than the strategy that directs the implementation and action plans. The constructs help streamline the whole business vision and align the business goals. Although the business models have around us since ages, people have used varied terms and constructs to define it. For example, Morris, Schindehutte, and Allen (2005) suggested 24 different elements contributing to the business models after studying 19 definitions of the business models. However, the more common elements widely used are value proposition, target market, customer relationship, infrastructure and economic model. The business model should at the bare minimum cover value proposition, value creation and provision, as well as financial endurance (Wielki, 2010).
+
+Blockchain and Building Blocks of Social Media
+
+The business should focus on the fundamental building blocks of the social media business model (Kietzmann, Hermkens, McCarthy, & Silvestre, 2011; Singaraju, Nguyen, Niininen, & Sullivan-Mort, 2016). These blocks are neither exclusive nor all inclusion is mandatory. Instead, it directs and helps the business to align the efforts in strategizing their growth plan. Each block helps the organization to understand the specific social media user experience and its implications. [Fig. 4.1](#CH004-9781838673024.xhtml#fig1) represents the building blocks of the social media.
+
+![image](images/f04-01.jpg)
+
+**Fig. 4.1.**Social Media Building Blocks.
+
+[Table 4.1](#CH004-9781838673024.xhtml#tbl1) summarizes the functional building blocks and their implications.
+
+Table 4.1.Implications of the Social Media Building Blocks.
+
+| Building Block || Description || Implications |
+| --- | --- | --- |
+| Identity || The scope and extent to which users reveal their information and identities. || The availability of tools, features and options for creating, establishing and managing identity. |
+| --- | --- | --- |
+| Presence || The scope and extent to which users know others are available. || The availability of tools, features and options for creating, developing and managing intimacy, reality and immediacy in the context. |
+| Group || The scope and extent to which users are allowed to form communities. || The availability of tools, features and options for creating, establishing and managing communities. Features support for governing membership rules and protocols. |
+| Reputation || The scope and extent to which users are aware of the social standing of others and the content. || The availability of tools, features and options for creating, establishing and managing strength, passion, sentiment and reach of users, brands and content. |
+| Collaboration || The scope and extent to which users can collaborate. || The availability of tools, features and options for creating, establishing and managing collaborations on projects, goals tasks within the context. |
+| Conversation || The scope and extent to which users can communicate with each other and establish a conversation. || The availability of tools, features and options for creating, establishing and managing the communication considering the communication velocity and the risks of starting and joining; exchange, distribute and receive content. |
+| Collective intelligence || The scope and extent to which users are contributing to the collective intelligence. || The availability of tools, features and options for creating, establishing and managing collective intelligence covering social graphs, behaviours, etc. |
+
+### Identity
+
+Identity is associated with the individual to distinguish one from the other. Several information contribute to the identification of an individual in the social media setting. These can include name, age, sex, location and additional critical information by which one's identity is revealed. A research study (Kaplan & Haenlein, 2010) has disclosed that user knowingly or unknowingly through the conscious and unconscious efforts reveals the subjective information such as behaviour traits, thoughts, feelings and emotions. However, to tackle such issues, users have a different set of preferences and features provided by social media sites and applications manage their identities.
+
+The identity threat is the primary threat associated with social media platforms. Manipulating information and influencing the social network by the use of fake IDs are becoming common. There exist many platforms to work around people setting up their IDs (personal profiles). For example, Facebook allows users above a certain age to create self-profile before they become part of the social network. They also get various controls on the way they share their posts or messages. Keeping several IDs to work with multiple social media platforms is daunting, and thus secondary ID services like DandyID is becoming famous that provides one solution to prevent and manage all the IDs securely.
+
+Moreover, social media users are now promoting social media user profiles through services like Retaggr. It facilitates them to showcase their different profiles and encourage others to follow them. As identity is core to the social media platforms, organizations are having concerns about the privacy and security of its presence and getting engaged with other sites and applications. Several, lawsuits have been filed and got initiated in violation of privacy related to social media sites (Kravets, 2010). The social community has identified few strategies, for example, real identity vs virtual identity, to work with which help them to establish self-promotion (e.g. Facebook) or self-branding (e.g. LinkedIn). Specific sites provide anonymity to the users considering the critical context of involvement in the community. For example, Divorce360 includes help and support to the social group going through the phase of divorce, and thus, people participate in discussions when anonymity is addressed. Several technological advances have also been in progress, such as the development of OAuth protocol (Hammer-Lahav, 2007). By the OAuth protocol, an individual can give access to the information without revealing identity information. For, example, Twitter provides use of OAuth protocol by sharing several tokens and keys so that individual can handshake to utilize Twitter application and work with Twitter data.
+
+Note: Social media identity management considering the balance between sharing identities and protecting privacy is crucial and thus a solution promising such balance mix is required.
+
+### Presence
+
+The scope and extent to which users know others are available. It also means that the audience is interested in the location, position or the availability of the social users. Now, this has three key benefits, firstly, audience is interested in getting the real-time update of the social influencer, secondly, they want to participate in closing the bridge between the real and the virtual world and thirdly, the real importance of someone's presence for availing the benefits on the branding, connectedness and relationships. Social media platforms are bringing promising tools, features and options for creating, establishing and managing intimacy, reality and immediacy in the context. Organizations must realize that the social media presence is driven by the active and vibrant involvement of the social user over the relationship medium. High influential conversations are the result of improved and active social presence.
+
+Note: Social presence management considering the balance between real and virtual presence is crucial, and thus a solution promising such balance mix is required.
+
+### Reputation
+
+Reputation is the scope and extent to which users are aware of the social standing of others, including themselves, and the content on the social media platforms. Reputation at the fundamental is associated with trust, and since the technological infrastructure does not by design support the trust factors, the ‘mechanical Turks’ are the way used by the social media sites to aggregate trustworthiness of the social media users. For example, Guy Kawasaki's 292,000 followers on Twitter reveal the reputation of technical experts based on his tweets on the professional spheres. Similarly, LinkedIn facilitates reputation established by means of endorsement and recommendation. A person endorsed and recommended by the influencer has a significantly higher chance of increased trustworthiness. However, the social media reputation is not about just the people but to their content as well as different mechanisms are being employed by various social media sites to execute reputation establishment. For example, YouTube facilitates voting mechanisms through ‘likes’ or ‘#views’ to develop/destroy the reputation of the content. Currently, social media platforms lack in rewarding the contributors and their associated reputations. Mostly, the centralized governed social media platforms eat the bigger pie of the content profits, considering the revenue model of the advertisements and promotions.
+
+Note: Social media reputation management considering the balance between content and people reputation is crucial, and thus a solution promising such balance mix is required.
+
+### Groups
+
+Danbar in the research work identified that due to the presence of the cognitive limit, people are restricted to a maximum 150 to have social stability in the relationships. However, social media platforms have outgrown to huge membership number considering the way that the communities are formed and structured. The purpose of establishing groups is manifold: people participate in the group to contribute to the knowledge corpora, or they can become the observer. The more flexible is the social media platforms in facilitating the group activities, the more vulnerability it poses on the social media community. However, specific controls and preferences on the content share and access pave the way for managing the groups. Direct implications of establishing groups are to govern the focus tasks and activities while the indirect effects are complicated, for example, it might lead to the cognitive and collective intelligence which can further be used to develop new tasks and activities.
+
+Note: Social media group management considering the balance between direct and indirect implications is crucial, and thus a solution promising such balance mix is required.
+
+### Conversation
+
+Conversation is the scope and extent to which users can communicate with each other and establish a conversation. Typically, social media platforms facilitate conversation among individuals and groups. These conversations take all forms, and firms need to understand the type of conversation that could bring benefits to their business or help in establishing brands or promoting services and solutions. The reasons for the conversations are enormous, and thus, the meaningful conversations are essential to maintain the attention span of the audience participating in the discussion. For example, Twitter handles short messages, and followers are not at all obligated to respond to the messages ‘Tweets’. The organization must see it as a conversation platform rather than the identity platform. A research study (McCarthy et al., 2010) has advocated the implications of the conversational velocity on the firm's performance. The firm's needs to identify the speed and topic of the conversation, contributing favourably or unfavourably to the firm's reputation.
+
+Moreover, attempting to drive, participate and lead the ‘manipulative conversation’ is both risky and beneficial. It all depends on the right time of involving the social audience to be part of such a conversation. For example, Unilever, during its Dove Campaign in the year 2004, opened the ‘manipulative conversation’. The participants felt involved and conversed more about the product and campaign.
+
+Note: Social media conversation management considering the balance between a direct and indirect conversation is crucial, and thus a solution promising such balance mix is required.
+
+### Collaboration
+
+Collaboration is the scope and extent to which users can collaborate by exchanging, distributing and receiving content. Engeström (2005) advocated that ‘sociality’ is all about the usage of objects that mediates the ties between the social participants. Thus, the usage of the right objects and protocols to manage those to establish collaboration is crucial. Sociality objects are different for different social media platforms. For example, LinkedIn uses career, Flickr uses photos as sociality objects. In the absence of the sociality objects, the relationships might exist, but the meaningful conversation and collaboration might disappear, and thus, the social media platforms must provide tools, features and options for creating, establishing and managing partnerships on projects, goals, tasks within the context. Such social platforms should facilitate to identify useful sociality objects for collaborations.
+
+Note: Social media collaboration management considering the balance between direct and indirect sociality objects usage is crucial, and thus a solution promising such balance mix is required.
+
+### Collective Intelligence
+
+The scope and extent to which users are contributing to collective intelligence are critical for the organization. It is essential to know the purpose, the involvement of the object of sociality, the information exchange and the meaningful conversation. The social media platforms that do not value the identities also do not give importance to the relationships. Some social media platforms provide formal structure, agreements and rules for participation, while others do not offer any predefined layout. Some social media platforms focus on maintaining relationships and not expanding them. For example, Skype and AOL are the platforms being used by the people who already know each other and not for any form of expansions. The structure and the flow in the social graphs drive the collective intelligence, and denser and the larger connect graphs are responsible for driving the collective intelligence. The social media platforms should provide tools, features and options for creating, establishing and managing collective intelligence covering social graphs, behaviours, etc. The influencer or denser groups directly contributes to the corpora. While the chain of connections following the rules of the centrality could govern the disparate collective intelligence, tapping such would improve the cognitive performance.
+
+Note: Social media collective intelligence management considering the balance between direct and indirect collective intelligence usage is crucial, and thus a solution promising such balance mix is required.
+
+Blockchain Value Drivers and Value Opportunities
+
+We have noticed that foundational building blocks of the social media platforms are essential for the businesses to leverage their potential for their growth. However, the conventional or Web 2.0 social media applications have limitations, as shown in [Table 4.2](#CH004-9781838673024.xhtml#tbl2).
+
+Table 4.2. Limitations of Social Media Building Blocks.
+
+| Building Block || Description || Limitations |
+| --- | --- | --- |
+| Identity || The scope and extent to which users reveal their information and identities || Social media identity management considering the balance between sharing identities and protecting privacy is ineffective and constrained |
+| --- | --- | --- |
+| Presence || The scope and extent to which users know other are available || Social presence management considering the balance between real and virtual presence is ineffective and constrained |
+| Group || The scope and extent to which users are allowed to form communities || Social media group management considering the balance between direct and indirect implications is ineffective and constrained |
+| Reputation || The scope and extent to which users are aware of the social standing of others and the content || Social media reputation management considering the balance between content and people reputation is ineffective and constrained |
+| Collaboration || The scope and extent to which users can collaborate || Social media collaboration management considering the balance between direct and indirect sociality objects usage is ineffective and constrained |
+| Conversation || The scope and extent to which users can communicate with each other and establish a conversation || Social media conversation management considering the balance between a direct and indirect conversation is ineffective and constrained |
+| Collective intelligence || The scope and extent to which users are contributing to the collective intelligence || Social media collective intelligence management considering the balance between direct and indirect collective intelligence usage is ineffective and constrained |
+
+The future social enterprise economy will be transformed to the distributed network of trust and ownership, where the participants can get involved in the social transactions over the blockchain network by just having the Internet connections and with the social media applications. Anyone with access to the Internet can get involved with blockchain-based transactions. Blockchain technology, when integrated with social networks, provides a platform for self-executable social codes to make possible all sorts of social interactions. Since there will be no central or single authority to control the interactions, all the participants can use and help run the social enterprise economy. As a result, as long as a single node is safe in the social network, the social transactions and digital shared ledger are accessible.
+
+[Table 4.2](#CH004-9781838673024.xhtml#tbl2) shows the building blocks of social media platforms and their limitations.
+
+Four different stages, [Fig. 4.2](#CH004-9781838673024.xhtml#fig2), typically characterize the foundation of blockchain for the social media business models:
+
+![image](images/f04-02.jpg)
+
+**Fig. 4.2.**Social Media Blockchain Stages.
+
+### Social Media Blockchain 1.0
+
+Social media 1.0 considers blockchain technology as the foundation and focuses on the transactions. Thus the exchange of cryptocurrencies for boosting the content or promoting specific aspect or developing a denser network is the main driving force. The social media blockchain 1.0 (SMB 1.0) is based on the peer-to-peer transactions where there is no central authority to monitor and control the generation, delivery and exchange of the content. The use of the blockchain impacts the social media building blocks. The identity block is no longer responsible and governed by the central authority. Social transactions can happen without knowing the identity details of the other participants. Moreover, the contributors get rewarded for preforming meaningful contributions such as generating active and meaningful conversations, leading and building groups, executing collaborative projects. The central authority does not manage the reputation of the content and the people; instead, the whole participating network decides on the reputation as a democratic way.
+
+### Social Media Blockchain 2.0
+
+The social media blockchain 2.0 (SMB 2.0) is the extension of the SMB 1.0 and also integrates privacy; smart contracts; and non-native assets, tokens and capabilities. For example, Everipedia helps people to contribute information to the decentralized platforms where the platform is not subjected to unwarranted regulation and inhibited information. Moreover, it provides rewards to the contributor through smart contracts for every legitimate contribution
+
+### Social Media Blockchain 3.0
+
+The social media blockchain 3.0 focuses on the inclusion of decentralized applications (dApps) to facilitate the participating network. The dApp utilizes the open, decentralized blockchain network and the cryptographic token system.
+
+### Social Media Blockchain 4.0
+
+It involves the inclusion of intelligent and automated agents and artificial intelligence to drive social media on the blockchain. The management of the foundational building blocks is accomplished automatically in SMB 4.0, and still, it is a far-reaching goal.
+
+The various social media business models built on the blockchain technology typically share the foundational aspects but serve different purposes. The organizations should develop the value creation roadmap for the SMB project. The first step is to identify the functionality of social block to offer or utilize rather than the technology per se. For example, SMB 1.0 inherently supports security, transparency and transactional advantages in the cryptocurrency financial process. However, SMB 2.0, with the inclusion of the smart contracts in the business processes provide several added benefits to the participating users apart from the financial transactions. In the second step, each enabler to be mapped with the foundational blocks of the social media and respective value driver to be examined for its inclusions. [Table 4.3](#CH004-9781838673024.xhtml#tbl3) summarizes the mapping of SMBs, enablers, value drivers and foundational blocks.
+
+Table 4.3.Mapping – Social Media Blockchains (SMBs), Enablers, Value Drivers and Foundational Blocks.
+
+| SMBs || Enablers || Value Drivers || Foundational Blocks |
+| --- | --- | --- | --- |
+| SMB 1.0 || Decentralized validation and consensus || Transaction cost || Identity |
+| --- | --- | --- | --- |
+| SMB 2.0 || Smart contracts || Non-native, added service || Identity, reputation, group |
+| SMB 3.0 || Decentralized applications, processes, resources, storage and computing || Organizational scope and boundaries || Presence, collaboration, conversation |
+| SMB 4.0 || Decentralized automated intelligence and artificial intelligence || Autonomous decision-making || Collective intelligence |
+
+Social media enterprises, when not earning revenue from the advertising, then can be used for advertising purposes. For example, musicians and bands can advertise their creative artworks, and the social enterprise can become the marketplace for the creative artists. The smart contracts can be executed automatically to disperse the amount automatically for every song being played or music being sold. The SMB can also be combined by integrating dApp to provide unified space to social users. For example, the social media platform can allow participants to share the movie that they are watching to their Skype contacts. And for every such share which is accepted and observed, the participants can get the financial rewards.
+
+## 5
+
+Blockchain-based Social Media Enterprise
+
+Blockchain provides an excellent opportunity for social media enterprises to transform its business model by incorporating inclusive and collective growth. The readers will get the chance in this chapter to explore the potential business use cases impacting the social community and the business. Also, the emerging blockchain-based social enterprises are also covered to understand their strategic advantage and business model for the new-age social media business.
+
+Introduction
+
+In this chapter, we will investigate several case studies showing the implementation of blockchain in emerging social media enterprises. Further, we will cover and discuss the role of technology in bringing success to the social media business. However, the social media enterprises are still in the nascent stage to embrace the blockchain. Thus the use cases are still developing. The underlying rationale to select the emerging social media enterprises is twofold. Firstly, to describe the characteristics and solution of the blockchain-based social media enterprises already covered in the previous chapters. Secondly, most of the emerging social media enterprises based on blockchain have already reached the market and thus show potentials of the technology in redefining the social media platforms. Each business use case is supported by a brief description of the social media enterprise, highlighting the main characteristics of the application or software. Further, information related to the key stakeholders and motivations behind the offerings are covered. Also, the time to market and user perception indicators are discussed to measure the feasibility of the proposed solution.
+
+Blockchain Use Cases in Practice
+
+The blockchain is shaping the social media enterprises, and there exist several potential use cases to mitigate the risks and limitations of conventional social media applications.
+
+*   *User is no longer a product:* The social media platforms offer services to the customers so that they can build the revenue empire by collecting customers' data and share that with the potential advertisers. Moreover, the target advertising industry flourishes on such accounts and monetization benefits the service provider that acts as an intermediary. The decentralized nature of the blockchain enables and empowers the social users to take the onus of their data and contribution, and as such, they are no longer be a product but now can be the part of the revenue. Blockchain social media organizations like Sapien and Killi are solving such an issue. Sapien provides the control, access and ownership to all the users who participates and contributes to its network. Killi compensates social users for their contributions. In both cases, the users are not treated as a product; instead, they contribute to the social economy.
+*   *Effective content control:* Manipulation of social user emotions by leveraging the data is not uncommon, and several stories have been around us, which has recorded such events. One potential reason to trigger such events is due to the sole authority of utilizing the data as the data of the social users are accessible to the central and governing authority. But, with the blockchain, no single entity can dictate the content and thus manipulative content on the network are easy to eliminate. There will be more effective control on the content over the social networks due to the inherent decentralized nature of the network. Organizations like DTube are solving such an issue. It is a decentralized video distribution platform based on STEEM blockchain. The purpose is to eliminate the central authority and reduce the control on the content distribution. STEEM is a decentralized, blockchain-based public content system. It supports the building of community by addressing the promotion of social interactions based on the rewards system. The platform rewards the community participants for making quality contributions. The STEEM is a liquid currency as such it can be bought or sold at the exchanges.
+*   *Improved security:* The social media platforms can go far to reach and breach the social interactions to govern social users' behaviors. Few allegations have been reported against Facebook for accessing social users' data without their explicit permissions. Moreover, the less secured channel for communications over the social network raises many potential data leaks and identity theft issues. The blockchain technology provides a convenient and robust security layer for the exchange of the messages or communications. Organizations like SoMee are working in this direction to give a secured social communication network. It is a platform based on the decentralized blockchain to cryptographically secure users' data.
+*   *Expanding and protecting freedom of speech:* In the democratic culture of expression, the technological dominance of controlling the speech and expression is somewhat detrimental to the growth of the society. Many incidences of blocking and control access to social media sites have been attempted. Even though popular sites promise to encrypt the communication messages to avoid any identity issues, it becomes identifiable due to the presence of the metadata with the message. The blockchain provides an effective solution to such a problem as the metadata is not tied to a single identity and moreover, it is distributed across the network. Thus, it provides true anonymity. An organization like Civil has based their solution on the decentralized blockchain network. They are supporting freedom of speech, and services are offered to small outlets and journalists. The civil community governs the civil registry. Members of the community approve the newsrooms which join the civil society. Civil tokens can be used to raise the issues against any newsrooms.
+*   *In-app payments:* It is not uncommon for social media platforms to offer varied service to its user base to increase their engagement level and value proposition. Few social media platforms have pioneered inclusion of in-app payments systems to initiate financial transactions without leaving the social media application. It has resulted not only in increased customer base but also improving the customer engagement and retention time. But all such applications are not run safe and prone to data leaks and identity thefts, and thus many high-profile social media sites have withdrawn such services. Blockchain technology paves such an issue and provides an effective solution. The fundamental transaction can be supported through the smart contracts apart from offering the financial transactions through the Bitcoin cryptocurrency. Organizations like Steemit, SocialX are introducing several in-app offerings for its customer base. Steemit rewards its native currency to the customer base for contributing to social interaction and influence. SocialX users earn SOCX tokens by contributing video and images in the social network and utilize those to avail services and products.
+*   *Compensation and rewards:* The fundamental principle for the growth of the social economy is inclusive and collective contributions. The well-known social media enterprises ignored the real social, economic growth by leaving the social users aside and concentrating on the sole benefit by earning and saving the bigger pie of the revenue. Only a few influencers get the fraction of the revenue. For example, Youtube provides the influencer portion of the targeted ads revenue over the content contribution. Such models are unfair and most beneficial to the single entity. The blockchain technology solves this problem, and whosoever contributes to the social network using valid, authentic and approved transactions get the rewards. No more the days when the content creator is unpaid for his/her creative contributions. The smart contracts embedded in the process will be able to process compensation and rewards to the contributor immediately once the contributions are acceptable and available on the network. Steemit and Sapien are new-age blockchain-based organizations that provide such offerings to the user base. Foresting is a lifestyle social media platform on the blockchain which offers its community base a compensation policy considering their content creation, sharing/activities, rewarding and use of rewards over the network.
+*   Confirming the legitimacy of the content: The media credibility and the truth are questionable due to the issue related to the quality of the information circulated and published on social media platforms. In the research study done by MIT, it was found that false news and information reach faster to the social community, and have deeper impressions. It is somewhat challenging to identify the source of the credibility of the data. But blockchain provides a robust solution to the fake and misinformation. All the information on the blockchain are considered as the transactions, and since transactions are time-stamped and traceable, it becomes easy to trace the origin and source of the data.
+
+Moreover, the credibility of the information can also be established. The social network Flixxo is a decentralized, peer-to-peer video sharing blockchain-based platform. The users in the platform community get rewarded for sharing quality legal video through Flixx tokens. The users in the platform need to support the proof of evidence or information about the legality of the video, and once approved by the participants, the video is available on the network. The creator can set up the Flixx for watching and sharing the video. Similarly, the advertisers can place some Flixx for introducing targeted video whenever the user in the platform watches them. Users in the community need to stake the tokens to upload the video on the platform.
+
+*   Information accessibility: The conventional social media enterprise not only drives the social interactions but is also able to control the information shown to the users. Such information can also be restricted and limited to access by the regulatory agencies. For example, access to Wikipedia is limited to specific communities and geographical locations. Considering blockchain as a platform to store and disseminate information, it offers an unprecedented choice to the user to access the data as long as a node is up in the network. There is no way that anyone can put a restriction or impose any form of censorship exclusively on information access. Everipedia is a blockchain-based content distribution platform to support information sharing and community consensus. In contrast to the centralized Wikipedia, the Everipedia endorses the mission of universal information as a peer-to-peer resource.
+*   Verified marketplaces: The social marketplace suffers from the inability to provide value to the customers, as they are often cluttered with the goods and services that are not personalized or relevant to the customers. The social interactions in the social network over the blockchain network will enable and empower varied stakeholders such as users, merchant, vendors and service providers to accept and release their information to provide a better a significant marketplace. Blockchain social platforms like Indorse provide a better career marketplace for its user. The participating user can claim a particular set of skills which will be Indorsed by the peer participants. The participants get the rewards and showcase the indorsed claims to the recruiters, which becomes prominent in the career solution offerings.
+*   User participation motivation: Social media platforms needs to offer continuous innovation and features to the social community so that they always feel motivated to the part of the community. One way is to compensate and reward each user for providing contributions to the community. By including smart contracts capable of transferring financial values for the recorded contributions, the platforms can tie the values with the popularity of the social community. The user will be motivated to contribute more as they become eligible for more significant monetization process. YouNow, an application offered through the Props project, allows social users to contribute to the community and share their rewards across the variety of applications over the platform.
+*   Identities: The social media platforms are affected by the contributions of the fake identities and bots, which are significantly hampering the social community growth. It is essential to verify the true identity of the contributions to avoid unnecessary circulation, distribution and population of misinformation and information overload. The blockchain can solve the problem of the fake identities. The social community can vote and agree on the consensus for the legitimate identity of the contributor and thus at the very first place avoid and eliminate the contributions from the fake identities. The blockchain network will also be able to reprimand the user involving throwaway of the staked tokens in case contributions are not legitimate or fake identities are concerned. The platform provided by Civic offers the tools to control and protect the identities.
+
+Blockchain-based Social Media
+
+Considering the nascent stage of the blockchain, we will cover a few practical business examples that have the potential to emerge as a successful social media enterprise based on blockchain. These businesses have utilized the underlying framework of blockchain that supports decentralization, distributed shared ledger, immutable transactions, consensus mechanisms, smart contracts and tokenization system.
+
+### Indorse
+
+Indorse is a professionals platform based on the emerging blockchain-powered social network platform covering tokenization and decentralization. It was founded in the year 2017 and is based in Singapore. Indorse was founded in 2017. The Indorse platform is promoting the professionals to share professional skills on the platform and get validated by the peer participating network. Doing so have dual benefits: first, for each endorsement the professionals get incentivized, and second, the professional stake gets increased and visible in the community. The Indorse community envisions the future where the members will build their professional profile and get benefits from their reputation.
+
+#### Platform Model
+
+Indorse give back the ownership of the data to the contributors. The in-platform token system incentivized the honest contributions while for every wrong indorsements the contributors are penalized. The Indorse utilized the Ethereum platform as the compute engine, and for the storage, it uses Inter Planetary File System (IPFS). Each platform users participates in two roles:
+
+*   Claimant
+
+Responsible for making a ‘claim’ about a particular skill and thus initiates the ‘claim’ transaction into the Indorse platform. The claimant also needs to submit the proof of evidence or information to support the claim. Once the ‘claim’ and the associated data are available on the peer network platform, the moderator chooses the work on the claims and either Indorse it or flag it.
+
+*   Moderator
+
+A moderator is responsible for approving or flagging the claims raised by the claimant. An Indorse score based on the proof of stake is utilized where claimant and moderator stake his/her reputation on the claims or indorsement.
+
+The platforms support the following third-party DApps:
+
+*   Indorse DE: It facilitates the members to deploy profiles and content on the platform.
+*   Attores Certificate Issuance (CI) Platform: It is a certificate issuance module, which can map the certificate with the smart contract on the platform.
+*   IPFS: it is decentralized storage, and most of the documents, claims, information are going to be stored on the IPFS.
+*   uPort: It is a self-sovereign identity system to facilitate people to identify and authenticate themselves.
+*   Truffle: Module to support Ethereum smart contracts.
+*   Spectrum: It is a wallet which can be used by both the users and the developers.
+*   Status: It is an open-source messaging platform and mobile interface and facilitates interaction with the decentralized applications.
+
+#### Use Case
+
+Let us understand the use case scenario for the functioning of the Indorse platform. Consider Nick joins the Indorse platform for the first time. So he gets the minimum eligible Indorse tokens on the platform. Further, he creates his profile on the platform and raises several claims about his skills. For every skills claim, he shares proof of information or evidence. The Indorse platform randomly chooses the moderator, say John, to verify the claims and then claim enters the gestation period. John checks the claims based on the proof of information and Indorse Nick. The gestation period ends, and consensus about the verification is achieved. Both Nick and John get the rewards in terms of SCR tokens, which can be utilized to avail the services over the Indorse platform. Moreover, the Indorse score and reputation are increased for both Nick and John.
+
+The claimant has two options for the skills indorsement. The selection is based on the Anonymous Indorsement protocol. Firstly, through the random process chosen by the platform, and second, where a claimant can choose the particular moderator by giving SCR tokens to the platforms. The tokenization model adopted by the platform provides two types of tokens: tradeable (IND token) and internal accounting token (SCR token). The SCR tokens are not exchangeable tokens and never leave the platform. The IND tokens are the source to contribute to the revenue model. For example, the advertising space can be bought by using IND tokens. The advertiser needs to purchase the IND tokens through the exchange. Moreover, the human resource and talent acquisition service will be enabled only through the use of tradeable tokens.
+
+The indorse platform resolves the issues for ‘Know Your Customer’ aspect by associating identity, profile and achievements of an individual to an Ethereum address in a decentralized manner. Further, a step forward in the prediction market they can acquire the data from the professionals to predict on the feasibility and capability of the future professional skills.
+
+| Solution || Indorse |
+| --- | --- |
+| Founded || 2017 |
+| --- | --- |
+| Core team || Seven members |
+| Client || Enterprise |
+| Market dimensions || Growing |
+| Competitors || Few |
+| Enabling infrastructure || Ethereum |
+| Partners || Different levels of partnership |
+| Use case || KYC, advertising, identity, and professional skills claims |
+
+### Everipedia
+
+It is a platform to support and facilitate the contributions from anyone, anywhere in the world. The purpose is to develop a decentralized, distributed knowledge-sharing platform. Each contributor can participate and contribute to what they know and value to the participating network. It was founded in the year 2014. The blockchain-based platform replicates the contributory information over thousands of nodes in the participating system, and thus, the information becomes accessible to most of the world. Even few players if attempt to block certain nodes to avoid information access, due to the inherent nature of the blockchain, the information can be accessed via other nodes of the network until the complete blockchain is blocked, and theoretically that is not possible. Over the centralized Wikipedia, the Everipedia supports the mission of universal information as a peer-to-peer resource.
+
+#### Platform Model
+
+The platform supports the peer-to-peer information base, and thus, it provides uninterrupted information access to the participating network. It also means that the information website is accessible and effectively becomes uncensorable. Everipedia is built on EOS. The participant needs to hold and stake EOS to perform the edit or vote transaction. The EOS represents the computing resources (RAM and bandwidth) and provides the ability to own the shares in the platform that supports the Everipedia network. The platform supports the tokenization model and distributes the token ‘IQ’ to the contributors. The token system promises to engage more contributors in the collective effort to create the world's largest encyclopedia. The platform aims at developing the universal knowledge base where the participants can read, participate and contribute to the articles that interest them. Initially, the platform has imported all the articles from Wikipedia. The contributor can access the platform through Scatter and can participate in the approval and rejection of the proposed edits.
+
+Contributors are provided with the IQ tokens for participating in the Everipedia network. The contributors are incentivized to create and maintain content on the platform. Each contributor performs a few tasks to claim the tokens:
+
+*   Edit the content
+*   Add the content
+*   Create the articles
+*   Vote on proposed edits
+
+The contributors can view the activity feed of the platform to look at the activity log for all the suggested edits. It contains two parts:
+
+*   Latest edits: activity edit proposals that show on the top of the activity log.
+*   Expiring soon: lists those activity edit proposals those are expiring soon to vote.
+
+User can sign through existing social media accounts or Scatter. When signed-in through Scatter, the user gets the chance to authorize the proposed edit. While OreID is used, that is generated through the existing social media accounts, to confirm the proposed edit in conjunction with the pin code. Once Scatter or OreID authorize the changes, then the articles or edits are open to the community for the voting, and once approved the edits are incorporated in the articles.
+
+The readers, instead of passively reading the articles, can also shape the information to be presented to the world by way of votings. Any user who has an EOS account and holds the IQ token and logged in through the Scatter has the ability to vote. Each contributor who votes to the majority can earn the reward proportional to the amount that they vote. In case the submitted edit is rejected, or the vote is to the minority then the contributor's tokens are locked for a while under the phase ‘slashing’.
+
+#### Use Case
+
+Let us understand the use case scenario for the functioning of the Everipedia platform. Consider Nick joins the Everipedia platform for the first time using the existing social media accounts, for example, Facebook. Nick gets by default 250 IQ tokens and maximum five edits proposal ability. Each edit proposal cost Nick 50 IQ tokens. Since Nick has joined though social media account, he is restricted to creating articles and proposing edits. He is not eligible to participate in votes.
+
+Further, no reward in return to Nick is provided for any of his contributions due to his limited account feature access. On the other side, John joins the Everipedia network through Scatter account and holds EOS via IQ tokens. He immediately gets the fully functional feature set to contribute to the Everipedia's network. For every edit, contribution and vote that he participates in towards the majority vote, he gets the reward.
+
+| Solution || Everipedia |
+| --- | --- |
+| Founded || 2014 |
+| --- | --- |
+| Core team || Seven members |
+| Client || Enterprise |
+| Market dimensions || Growing |
+| Competitors || Few |
+| Enabling Infrastructure || EOS |
+| Partners || Different levels of partnership |
+| Use case || Peer-to-peer information creation and maintenance |
+
+### Sapien
+
+It is a social blockchain decentralized news platform. The conventional social media platforms hold all the data and monetize it for its benefits and promote fake news and invasive advertisements. To promote accurate news, the platform uses SPN tokens to provide the capability to the contributors to generate quality content. The content generated on the platform can also be monetized through the micropayment feature supported by the platform. The users can opt in to share their data with the advertising partners on the platforms and get the benefits of extra rewards points. Other stakeholders such as a merchant, publishers, etc. in the Sapien's marketplace and platform participate and get the benefits through the reward system for their transactions and contributions. The users build their reputation in the community when the contributions are rated highly by the peer reputed participation in the community. The global reputation system employed by the platform discourages the obscure and poor quality contributions. Sapien is the democratized platform that supports the involvement of the peer participants to generate quality content as its real value.
+
+#### Platform Model
+
+Sapien is using the Ethereum blockchain platform model along with the tokenization system. It uses the SPN token for posting quality content, commenting and upvoting, and perform other actions over the network. The platform is more than the virtual bulletin board. Instead of having multiple social media applications like Facebook, Twitter, YouTube for different forms of news and media, Sapien platform promises to support all kinds of media and information by overcoming the limitations of the conventional platforms. Also, it allows the users to create groups and be the part of the information-sharing community. The platform compensates the content curators through its reward system. Sapien promotes several types of users on its platforms:
+
+*   Creator: Users who submit original contributions to the network
+*   Curator: Users who discover and share high-quality content within their tribes on the Sapien network.
+*   Freelancer: Users who willingly provide services to the Sapien network in exchange for SPN tokens.
+*   Developer: Users who would contribute to the platform by developing third-party decentralized applications to enhance the functionality of the ecosystem.
+*   Media: Users who can become partners to establish independent publishing and thereby involve in exclusive pricing for the content.
+
+The SPN tokens are staked to access the social features on the platform. The staked tokens are used for commenting, contributing proposals, curating, sharing and posting content, etc. The contributions made by the participants on the network contribute to a reputation score. An individual's reputation score describes the historical involvement and transaction of the individual within the network or the participating community. The community based on the user's action evaluates the reputation score and scores it positive or negative accordingly. The Sapien network also supports the marketplace for users to create ad access exclusive compensations, incentives and components both within the network and through third-party businesses. Moreover, since the platform provides the right to ownership of the data to the users, they can decide to share the same with the advertisers instead of the revenue share on the targeted ads. The tribe can also participate in placing particular ads on the tribes and get reward for the same.
+
+#### Use Case
+
+Let us understand the use case scenario for the functioning of the Sapien platform. Consider Nick joins the Sapien network. To receive a reward for posting, commenting or voting, Nick has first to stake his SPN tokens on the platform. In case the SPN tokens are not staked, then Nick will not get any reward to perform social activities on the network. Since Nick has staked his SPN tokens, he participates in voting the post. The post's quality is scored based on the upvotes, considering the reputation score. The rewards are distributed to both the creator of the post and the users who upvote the post. The platform helps Nick to avoid any indulgence in any malicious activities by restricting him to utilize only a fixed amount of SPN tokens for the activities. In case, the reputation score results in negative, then all his staked token are transferred to the platform.
+
+| Solution || Sapien |
+| --- | --- |
+| Founded || 2018 |
+| --- | --- |
+| Core team || Seven members |
+| Client || Enterprise |
+| Partners || DAOstack, BitClave, BlockchainLab, Civic |
+| Market dimensions || Growing |
+| Competitors || Few |
+| Enabling infrastructure || EOS |
+| Partners || Different levels of partnership |
+| Use case || Peer-to-peer information creation and maintenance |
+
+### Props
+
+It is a platform to promote the tokenized digital media economy. It supports the network of digital media applications and enables the contributors to get rewards for their activity on the Props network. The Props token are given to the users in the community who engage, contribute and participate in the content creation. The Props utilizes the Ethereum platform for supporting the Props applications and is connected by the data layer and a tokenized model to enable the collective network effects. The users can accumulate the Prop token in place of their reputation, identity and contribution. The Props network builds its first category of the application enabling interactive live video service on the blockchain network. The ‘YouNow’ application over the Props network enabled the microtransaction-driven two-side virtual economy in the domain of interactive video. It provides several functionalities to the users on the network. For example, user can use service to broadcast video to the live audience, be engaged with the content creators, broadcasters and other users.
+
+#### Platform Model
+
+The platform promises to support numerous consumer-facing applications by integrating the reward system. The platform provides several useful characteristics to the user community:
+
+*   Props tokens: The user gets the chance to utilize the Props token to avail the services over the network. Further, the tokens are used across the network with varied applications seamlessly.
+*   In-app wallet: The user gets the wallet to hold the Props token which can be used for any form of the transaction within the network. For example,
+*   Data sharing: The user can share, move or distribute their data across the applications within the network. The access becomes possible using the reputation, relationships and capital that they hold across the Props network.
+*   Rewards: The user gets the Props rewards across the application portfolio on the Props network. The reward layer integrates any such experience over the network and then monetizes it accordingly in exchange for the Props tokens. Also, the Props network user will be able to ‘tip’ the other user directly to promote their content on the network. The validators need to stake its tokens to avail the rewards.
+
+The typical structure of the platform comprises:
+
+*   Props Apps: The consumer-facing application by facilitating reward, data sharing and experience monetization capabilities.
+*   Open-source software and tools: Such resources are useful to integrate and interface multiapplication on the network.
+*   Smart contracts: It enables the automatic transaction of the tokens based on the contribution made by the contributors.
+
+#### Use Case
+
+Let us understand the use case scenario for the functioning of the Props platform. Consider Nick joins the Props network. Nick has decided to host a broadcasting session and triggers the live video sharing application. The participants join and watch the particular session contributing to the reward for Nick. Nick decided to check the content legitimacy of the posted video and to get a reward on the content validation, he needs to stake the Props token into the network. By upvoting and posting comments which are accepted by the Props community makes Nick eligible to get the Props token as rewards. The creator of the interactive video content also gets the Props token as reward.
+
+| Solution || Props – YouNow |
+| --- | --- |
+| Founded || 2017 |
+| --- | --- |
+| Core team || Seven members |
+| Client || Enterprise |
+| Market dimensions || Growing |
+| Competitors || Few |
+| Enabling infrastructure || Ethereum |
+| Partners || Different levels of partnership |
+| Use case || In-app communication, content sharing |
+
+References
+
+Agnihotri, R., Kothandaraman, P., Kashyap, R., & Singh, R. (2012). Bringing ‘social’ into sales: The impact of salespeople's social media use on service behaviors and value creation. *Journal of Personal Selling and Sales Management*, 32(3), 333–348.
+
+An, J., & Weber, I. (2015). Whom should we sense in “social sensing” analyzing which users work best for social media now-casting. *EPJ Data Science*, 4(1), 1–22.
+
+Anderson, C. (2006). *The long tail: Why the future of business is selling less of more* (1st ed.). New York, NY: Hyperion.
+
+Baghdadi, Y. (2013). From e-commerce to social commerce: A framework to guide enabling cloud computing. *Journal of Theoretical and Applied Electronic Commerce Research*, 8(3), 12–38.
+
+Ballantyne, D. (2014). Reexamining the place of servicescape in marketing: A service-dominant logic perspective. *Journal of Services Marketing*, 28, 374–379.
+
+Bechmann, A., & Lomborg, S. (2013). Mapping actor roles in social media: Different perspectives on value creation in theories of user participation. *New Media & Society*, 15(5), 765–781.
+
+Berthon, P., Pitt, L., McCarthy, I., & Kates, S. (2007). When customers get clever: Managerial approaches to dealing with creative consumers. *Business Horizons*, 50(1), 39–47.
+
+Bjørn-Andersen, N., Rasmussen, L. B., & Rasmussen, S. (2009). Web 2.0 adoption by Danish newspapers—Urgent need for new business models? *Journal of Universal Computer Science*, 15(3), 692–703.
+
+Buterin, V., & Mougayar, W. (2016). *The Business Blockchain: Promise, practice, and application of the next Internet technology hardcover*. Hoboken, NJ: John Wiley & Sons.
+
+Butterfield, S. (2003). An article complaining about ‘social soft- ware’. Retrieved from [http://www.sylloge.com/personal/2003\_03\_01\_s.html#91273866](http://www.sylloge.com/personal/2003_03_01_s.html#91273866). Accessed on June 5, 2019.
+
+Casey, M., & Vigna, P. (2018). *The truth machine*. London: HarperCollins.
+
+Chanal, V., & Caron-Fasan, M.-L. (2008). How to invent a new business model based on crowdsourcing: The Crowdspirit^® case. In *Conférence de l'Association Internationale de Management Stratégique* (pp. 1–27).
+
+Chen, T. F. (2009). Building a platform of business model 2.0 to creating real business value with Web 2.0 for web information services industry. *International Journal of Electronic Business Management*, 7(3), 168–180.
+
+Chesbrough, H. (2010). Business model innovation: Opportunities and barriers. *Long Range Planning*, 43(2), 354–363.
+
+Chesbrough, H., & Rosenbloom, R. S. (2002). The role of the business model in capturing value from innovation: Evidence from Xerox Corporation's technology spin-off companies. *Industrial and Corporate Change*, 11(3), 529–555.
+
+Chesebro R. (2015). A contract that manages itself: The time has arrived. *Defense AT&L*, January–February, pp. 1–5.
+
+Choi, H., & Varian, H. (2012). Predicting the present with Google trends. *The Economic Record*, 88(1), 2–9.
+
+Christidis, K., & Devetsikiotis, M. (2016). Blockchains and smart contracts for the internet of things. *IEEE Access*, 4, 2292–2303.
+
+Corcoran, S. (2009, December 16). Defining owned, earned, and paid media. Retrieved from [http://blogs.forrester.com/interactive\_marketing/2009/12/defining-earned-owned-and-paid-media.html](http://blogs.forrester.com/interactive_marketing/2009/12/defining-earned-owned-and-paid-media.html). Accessed on June 30, 2019.
+
+Cortimiglia, N. M., Ghezzi, A., & Renga, F. (2011). Social applications: Revenue models, delivery channels, and critical success factors—An exploratory study and evidence from the Spanish-speaking market. *Journal of Theoretical and Applied Electronic Commerce Research*, 6(2), 18–19.
+
+Crosby, M., Nachiappan, N., Pattanayak, P., Verma, S., & Kalyanaraman, V. (2016). Blockchain technology: Beyond bitcoin. *Applied Innovation Review*, 2, 6–10.
+
+Csik, M. (2015). *The business model navigator: 55 models that will revolutionise your business* (2nd ed.). Upper Saddle River, NJ: FT Press.
+
+Don, T., & Alex, T. (2016). *The blockchain revolution*. New York, NY: Penguin Random House.
+
+Dorri, A., Kanhere, S. S., & Jurdak, R. (2016). *Blockchain in Internet of Things: Challenges and solutions*. ArXiv: abs/1608.05187.
+
+Enders, A., Hungenberg, H., Denker, H.-P., & Mauch, S. (2008). The long tail of social networking: Revenue models of social networking sites. *European Management Journal*, 26(3), 199–211.
+
+Engeström, J. (2005). Why some social network services work and others don't — Or: The case for object-centered sociality. Retrieved from [http://www.zengestrom.com/blog/2005/04/why-some-social-network-services-work-and-others-dont-or-the-case-for-object-centered-sociality.html](http://www.zengestrom.com/blog/2005/04/why-some-social-network-services-work-and-others-dont-or-the-case-for-object-centered-sociality.html). Accessed on June 30, 2019.
+
+Frow, P., Nenonen, S., Payne, A., & Storbacka, K. (2015). Managing co-creation design: A strategic approach to innovation. *British Journal of Management*, 26(3), 463–483.
+
+Garcia-Agreda, S. (2013). Entrepreneurial intervention in electronic markets: The influence of customer participation. *International Entrepreneurship and Management Journal*, 9(4), 521–529.
+
+Gassman, O., Frankenberger, K., Froystad, P., & Holm, J. (2015). *Blockchain: Powering the internet of value*. White paper. EVRY Financial Services, Fornebu.
+
+Gillin, P., & Schwartzman, E. (2010). *Social marketing to the business customer: Listen to your B2B market, generate major account leads, and build client relationships*. Hoboken, NJ: John Wiley & Sons.
+
+Haenlein, M. (2011). The early bird catches the news: Nine things you should know about micro-blogging. *Business Horizons*, 54(2), 105–113.
+
+Hammer-Lahav, E. (2007). Introduction: Explaining OAuth. Retrieved from [https://hueniverse.com/hueniverse/2007/09/explaining-oaut.html](https://hueniverse.com/hueniverse/2007/09/explaining-oaut.html). Accessed on June 25, 2019.
+
+He, W., Schen, J., Tian, X., Li, X., Akula, V., Yan, G., & Tao, R. (2015). Gaining competitive intelligence from social media data. Evidence from two largest retail chains in the world. *Industrial Management & Data Systems*, 115(9), 1622–1636.
+
+Kaplan, A., & Haenlein, M. (2010). Users of the world, unite! The challenges and opportunities of social media. *Business Horizons*, 53(1), 59–68.
+
+Kietzmann, J. H., Hermkens, K., McCarthy, I. P., & Silvestre, B. S. (2011). Social media? Get serious! Understanding the functional building blocks of social media. *Business Horizons*, 54(3), Special Issue: Social Media), 241–251.
+
+Kitchin, R. (2014). Big Data, new epistemologies and paradigm shifts. *Big Data & Society*, 1, 1–12.
+
+Kraft, D. (2016). Difficulty control for blockchain-based consensus systems. *Peer-to-Peer Networking and Applications*, 9, 397–413.
+
+Kravets, D. (2010). Judge approves $9.5 million Facebook ‘Beacon’ accord. *Wired*, March 17. Retrieved from [http://www.wired.com/threatlevel/2010/03/facebook-beacon-2/](http://www.wired.com/threatlevel/2010/03/facebook-beacon-2/). Accessed on June 30, 2019.
+
+Kunz, R., & Werning, S. (2013). Media management and social media business: New forms of value creation in the context of increasingly interconnected media applications. In M. Friedrichsen & W. Mühl-Benninghaus (Eds.), *Handbook of social media management* (pp. 253–267). Berlin; Heidelberg: Springer-Verlag.
+
+Lehmkuhl, T., & Jung, R. (2013). Value creation potential of web 2.0 for SME—Insights and lessons learnt from a European producer of consumer electronics. *International Journal of Cooperative Information Systems*, 22(3), 1–22.
+
+Lemieux, V. L. (2016). Trusting records: Is blockchain technology the answer? *Records Management Journal*, 26, 110–139.
+
+Lewis, A. (2015). *A gentle introduction to blockchain technology*. Singapore: Brave New Coin.
+
+Lewis, A., Larsen, M., Goh, C. Y., Tan, G., & Tacchi, M. (2016). Understanding blockchain technology and what it means for your business. DBS Asian Insights Sector Briefing 19. Asian Insights Office, DBS Group Research.
+
+Li, C., & Bernoff, J. (2008). *Groundswell: Winning in a world transformed by social technologies* (1st ed.). Boston, MA: Harvard Business Press.
+
+McCarthy, I., Lawrence, T., Wixted, B., & Gordon, B. (2010). A multidimensional conceptualization of environmental velocity. *Academy of Management Review*, 35(4), 604–626.
+
+Morris, M., Schindehutte, M., & Allen, J. (2005). The entrepreneur's business model: Toward a unified perspective. *Journal of Business Research*, 58, 726–735.
+
+Okada, I., & Yamamoto, H. (2011). Effects of information diffusion in online word-of-mouth communication among consumers. *Journal of Advanced Computational Intelligence and Intelligent Informatics*, 15(2), 197–203.
+
+Singaraju, S. P., Nguyen, Q. A., Niininen, O., & Sullivan-Mort, G. (2016). Social media and value co-creation in multi-stakeholder systems: A resource integration approach. *Industrial Marketing Management*, 54, 44–55.
+
+Spaulding, T. J. (2010). How can virtual communities create value for business? *Electronic Commerce Research and Applications*, 9(1), 38–49.
+
+Tuesta, D., Alonso, J., Cámara, N., Urbiola, P., Vegas, I., & Luisa Pérez, M. (2015). Smart contracts: The ultimate automation of trust? *Digital Economy Outlook*, October. BBVA Research.
+
+Wang, C., & Zhang, P. (2012). The evolution of social commerce: The people, management, technology, and information dimensions. *Communications of the Association for Information Systems*, 31(1), article 5.
+
+Wang, X., White, L., & Chen, X. (2015). Big data research for the knowledge economy: Past, present, and future. *Industrial Management & Data Systems*, 115(9), guest editorial.
+
+Wielki, J. (2010). The impact of the Internet on the development of web-based business models. *Journal of Internet Banking and Commerce*, 15(3), 1–9.
+
+Wikström, P., & Ellonen, H.-K. (2012). The impact of social media features on print media firms' online business models. *Journal of Media Business Studies*, 9(3), 63–80.
+
+Wirtz, B. W. (2011). *Business model management: Design – Instruments – Success factors*. Wiesbaden: Gabler.
+
+Zott, C., Raphael, A., & Massa, L. (2011). The business model: Recent developments and future research. *Journal of Management*, 37(4), 1018–1042.
+
+### Other Links (Chapter 5)
+
+Indorse. (2018). Retrieved from [https://indorse.io](https://indorse.io). Accessed on May 26, 2019.
+
+Props. (2018). Retrieved from [https://www.propsproject.com](https://www.propsproject.com). Accessed on May 26, 2019.
+
+Sapien. (2018). Retrieved from [https://www.sapien.network](https://www.sapien.network). Accessed on May 27, 2019.
+
+Everipedia. (2018). Retrieved from [https://everipedia.org](https://everipedia.org). Accessed on May 27, 2019.
+
+FLixxo. (2018). Retrieved from [https://www.flixxo.com](https://www.flixxo.com). Accessed on June 27, 2019.
+
+Steemit. (2018). Retrieved from [https://steemit.com](https://steemit.com). Accessed on June 27, 2019.
+
+SocialX. (2018). Retrieved from [https://socialx.network](https://socialx.network). Accessed on June 27, 2019.
+
+DTube. (2018). Retrieved from [https://d.tube](https://d.tube). Accessed on June 27, 2019.
+
+SoMee. (2018). Retrieved from [https://www.ongcoin.com](https://www.ongcoin.com). Accessed on June 28, 2019.
