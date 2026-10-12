@@ -1,0 +1,56 @@
+
+## 参考文献
+
+*   [Bhagat, V](#ch23.xhtml#r523b). (2020, September 8). What Is Blockchain-as-a-Service and Its Business Benefits? *Techiexpert.Com*. [https://www.techiexpert.com/what-is-blockchain-as-a-service-its-business-benefits/](https://www.techiexpert.com)
+
+*   [\[5\]](#ch23.xhtml#r524b) Blockchain-as-a-Service (BaaS) Market Size, Share and Trends, 2027. (n.d.). *Fortune Business Insights*. Retrieved from [https://www.fortunebusinessinsights.com/blockchain-as-a-service-baas-market-102721](https://www.fortunebusinessinsights.com)
+
+*   [\[6\]](#ch23.xhtml#r525b) Blockchain Service (BCS)\_Blockchain Platform-HUAWEI CLOUD. (n.d.). *Huawei*. [https://www.huaweicloud.com/en-us/product/bcs.html](https://www.huaweicloud.com)
+
+*   [Bourne, J](#ch23.xhtml#r526b). (2020b, December 16). Xbox to Use Blockchain for Gaming Royalties with Microsoft and EY Collaboration. *The Block*. [https://blockchaintechnology-news.com/2020/12/xbox-to-use-blockchain-for-gaming-royalties-with-microsoft-and-ey-collaboration/](https://blockchaintechnology-news.com)
+
+*   [CargoSmart](#ch23.xhtml#r527b). (n.d.). CargoSmart Launches Blockchain Initiative to Simplify Shipment Documentation Processes – CargoSmart. *ArgoSmart Launches Blockchain Initiative to Simplify Shipment Documentation Processes*. Retrieved from [https://www.cargosmart.com/en/news/cargosmart-launches-blockchain-initiative-to-simplify-shipment-documentation-processes.htm](https://www.cargosmart.com)
+
+*   [Chen, H](#ch23.xhtml#r528b)., & Zhang, L. J. (2018). FBaaS: Functional Blockchain as a Service. *Lecture Notes in Computer Science*, 243–250. [https://doi.org/10.1007/978-3-319-94478-4\_17](https://doi.org/10.1007/978-3-319-94478-4_17)
+
+*   [Chuanyi Liu](#ch23.xhtml#r529b), Guofeng Wang, Peiyi Han, Hezhong Pan, & Binxing Fang. (2017). A Cloud Access Security Broker Based Approach for Encrypted Data Search and Sharing. *2017 International Conference on Computing, Networking and Communications*, 2–7. [https://doi.org/10.1109/iccnc.2017.7876165](https://doi.org/10.1109/iccnc.2017.7876165)
+
+*   [Crepax, T](#ch23.xhtml#r530b)., & Rao, S. P. (2020). Blockchain in the Cloud: A Primer on Data Security for Blockchain as a Service (BaaS). *SSRN Electronic Journal*. [https://doi.org/10.2139/ssrn.3766900](https://doi.org/10.2139/ssrn.3766900)
+
+*   [Dhillon, V](#ch23.xhtml#r531b)., Metcalf, D., & Hooper, M. (2021). *Blockchain Enabled Applications: Understand the Blockchain Ecosystem and How to Make It Work for You* (2nd ed.). Apress. [https://learning.oreilly.com/library/view/blockchain-enabled-applications/9781484265345/html/430562\_2\_En\_14\_Chapter.xhtml](https://learning.oreilly.com)
+
+*   [D’Mello, Y](#ch23.xhtml#r532b). (2018, January 19). Baidu Has Launched Its Own Blockchain-as-a-Service (BaaS) Platform. *AiThority*. [https://aithority.com/technology/blockchain/baidu-has-launched-its-own-blockchain-as-a-service-baas-platform/](https://aithority.com)
+
+*   [Fritz, J](#ch23.xhtml#r533b)., & Hamel, B. (2019). AWS. *Enterprise Solutions with Blockchain: Use Cases from Nestlé, Sony Music, and Workday*, 1–71. [https://d1.awsstatic.com/events/reinvent/2019/Enterprise\_solutions\_with\_blockchain\_Use\_cases\_from\_Nestle\_Sony\_Music\_and\_Workday\_BLC204.pdf](https://d1.awsstatic.com)
+
+*   [Gupta, R. P](#ch23.xhtml#r534b). (2018, December 25). SAP HANA Blockchain Service – Explained in Simple Words. *SAP Blogs*. [https://blogs.sap.com/2018/11/15/sap-hana-blockchain-service-explained-in-simple-words/](https://blogs.sap.com)
+
+*   [Hall, M](#ch23.xhtml#r535b). (2018, November 18). *Oracle Blogs*. [https://blogs.oracle.com/blockchain/post/cargosmart-leads-global-shipping-consortium-formation-built-on-blockchain-technology](https://blogs.oracle.com)
+
+*   [Hogan, M](#ch23.xhtml#r536b)., Hogan, M., Liu, F., Sokol, A., & Tong, J. (2013, May 24). *NIST Cloud Computing Standards Roadmap*. US, NIST, Department of Commerce. Retrieved January 26, 2021, from [https://www.nist.gov/system/files/documents/itl/cloud/NIST\_SP-500-291\_Version-2\_2013\_June18\_FINAL.pdf](https://www.nist.gov)
+
+*   [IBM](#ch23.xhtml#r537b). (n.d.). *IBM Cloud Docs*. Which IBM Blockchain Platform Offering Is Right for Your Business? Retrieved 2021, from [https://cloud.ibm.com/docs/blockchain/index.html](https://cloud.ibm.com)
+
+*   [Kernahan, A](#ch23.xhtml#r538b)., Bernskov, U., & Beck, R. (2021). Blockchain Out of the Box: Where Is the Blockchain in Blockchain-as-a-Service? *Proceedings of the 54th Hawaii International Conference on System Sciences*. [https://doi.org/10.24251/HICSS.2021.520](https://doi.org/10.24251/HICSS.2021.520)
+
+*   [Kilroy, K](#ch23.xhtml#r539b). (2019). *Blockchain as a Service*. Retrieved February 2021 from [https://www.oreilly.com/library/view/blockchain-as-a/9781492073475/](https://www.oreilly.com)
+
+*   [Kushida, K. E](#ch23.xhtml#r540b)., Murray, J. & Zysman, J. (2011). Diffusing the Cloud: Cloud Computing and Implications for Public Policy. *Journal of Industry, Competition and Trade*, 209–237. Retrieved from [https://doi.org/10.1007/s10842-011-0106-5](https://doi.org/10.1007/s10842-011-0106-5)
+
+*   [Li, X](#ch23.xhtml#r541b)., Zheng, Z., & Dai, H. N. (2021). When Services Computing Meets Blockchain: Challenges and Opportunities. *Journal of Parallel and Distributed Computing*, *150*, 1–14. [https://doi.org/10.1016/j.jpdc.2020.12.003](https://doi.org/10.1016/j.jpdc.2020.12.003)
+
+*   [Malisow, B](#ch23.xhtml#r542b). (2017). *CCSP (ISC)2 Certified Cloud Security Professional Official Study Guide* (2nd ed.). Hoboken, NJ: Sybex. Retrieved January 26, 2021, from [https://learning.oreilly.com/library/view/isc2-ccsp-certified/9781119603375/](https://learning.oreilly.com)
+
+*   [Microsoft](#ch23.xhtml#r543b). (2019). *Shared Responsibility for Cloud Computing*. White Paper. [https://azure.microsoft.com/mediahandler/files/resourcefiles/shared-responsibility-for-cloud-computing/Shared%20Responsibility%20for%20Cloud%20Computing-2019-10-25.pdf](https://azure.microsoft.com)
+
+*   [Microsoft](#ch23.xhtml#r544b). (n.d.-b). Xbox Game Publishers Access Royalties Statements Even Faster Now That Microsoft Uses Azure Blockchain Service. *Microsoft Customers Stories*. Retrieved 2021 from [https://customers.microsoft.com/en-us/story/microsoft-financial-operations-professional-services-azure](https://customers.microsoft.com)
+
+*   [Müller, S. D](#ch23.xhtml#r545b)., Holm, S. R., & Søndergaard, J. (2015). Benefits of Cloud Computing: Literature Review in a Maturity Model Perspective. *Communications of the Association for Information Systems*, *37*, 1–15. [https://doi.org/10.17705/1cais.03742](https://doi.org/10.17705/1cais.03742)
+
+*   [Onik, M. M](#ch23.xhtml#r546b)., & Miraz, M. H. (2019). Performance Analytical Comparison of Blockchain-as-a-Service (BaaS) Platforms. *Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering*, 3–18. [https://doi.org/10.1007/978-3-030-23943-5\_1](https://doi.org/10.1007/978-3-030-23943-5_1)
+
+*   [P.](#ch23.xhtml#r547b) (2021, March 15). Azure Blockchain Service Overview – Azure Blockchain. *Microsoft Docs*. [https://docs.microsoft.com/en-us/azure/blockchain/service/overview](https://docs.microsoft.com)
+
+*   [Shi, J](#ch23.xhtml#r548b). (2019). The Application of Blockchain-as-a-Service (BaaS) and Its Providers in China. *Proceedings of the Fourth International Conference on Economic and Business Management*, 127–130. [https://doi.org/10.2991/febm-19.2019.28](https://doi.org/10.2991/febm-19.2019.28)
+
+*   [Singh, J](#ch23.xhtml#r549b)., & Michels, J. D. (2018). Blockchain as a Service (BaaS): Providers and Trust. *2018 IEEE European Symposium on Security and Privacy Workshops*, 67–74. [https://doi.org/10.1109/eurospw.2018.00015](https://doi.org/10.1109/eurospw.2018.00015)

@@ -1,0 +1,39 @@
+
+# Preface
+
+In January 2021, I put together a research team comprised of second-year graduate students from our master programs in information system security and assurance who were at the time enrolled in their research methodology courses. For our final group research project, I came up with the initial draft of a table of contents for a book on auditing blockchain technologies; a topic that had not received much attention at all until that time. Next, I divided my research students (53 of them!) into small teams of two to four and assigned a chapter topic to each group. For the next two academic semesters (a total of 26 weeks), each team researched and wrote their assigned chapter under my close coaching and supervision. At about the same time, while my students were busy reading, understanding and analyzing reference material pertinent to their assigned chapters, I started to create a comprehensive book proposal around our new research project. During my book proposal research, I quickly found that while there was a large amount of blockchain-related material on the Internet, there were relatively fewer research papers and published books focusing specifically on blockchain technology, despite having found a multitude of books that focused on various cryptocurrencies, especially Bitcoin. My proposal for a book on blockchain auditing was subsequently submitted to CRC Press for review, and much to my delight, I received the green light from CRC Press a few months later!
+
+The book that you are currently reading is the result of this effort. As you study the various chapters of this book, you will come across the names of the authors of each chapter; a total of 53 bright and highly motivated graduate students from our information systems security and assurance programs at Concordia University of Edmonton in Alberta, Canada.
+
+## Who Should Read This Book?
+
+The idea behind this work is to create a comprehensive study and reference guide for IT assurance specialists who have little knowledge of the emerging technology. As such, this book may be of great interest to a number of readers as follows:
+
+*   IT and business readers interested in gaining a solid understanding of blockchains' types, components, challenges and potential use cases;
+*   Undergraduate and graduate students interested in understanding blockchain technology for research purposes;
+*   Various business leaders interested in gaining an in-depth understanding of the various aspects of this emerging technology for evaluation and/or implementation purposes;
+*   Undergraduate and/or graduate-level IT faculty looking to adopt a comprehensive textbook title for courses focusing on blockchain technology;
+*   Accountants and external auditors looking to deepen their understanding of the technology and its potential use cases in business, accounting and auditing;
+*   Internal and information systems auditors looking to gain competency in blockchain;
+*   Individuals looking for a concise, yet comprehensive, reference book on blockchain;
+*   Individuals looking to efficiently learn all the essentials of blockchain technology as a first step to entering the lucrative blockchain-related job market.
+
+## How Does This Book Benefit Auditing Professionals?
+
+As the title clearly suggests, this work was primarily designed for assurance professionals. It not only lays out a solid foundation around auditors' understanding of the mechanics and major components of blockchain technology, but also discusses the current state challenges of this emerging and potentially disruptive technology, such as its risks, vulnerabilities and implementation barriers. Furthermore, the book also discusses a number of potential use cases in sectors such as supply chain management, financial services and accounting/auditing. There are also many other potential use cases, especially in government, that are being investigated currently. However, as the research project advisor and supervisor, I decided to limit our use case studies to the fields and sectors that I have had prior non-academic work experience. As such, it is my sincere belief that both external and internal auditors can greatly expand their blockchain knowledge base and incorporate greater effectiveness into their audit plan that involves this rapidly growing technology.
+
+## How to Read This Book
+
+This work is designed to be both a comprehensive read on blockchain technology, as well as a valuable reference tool for IT and assurance professionals. While this book can be read or studied with a great deal of flexibility, it is important for all readers to start by studying the first three chapters of this work in the order they appear. IT professionals with a great deal of knowledge and experience in networking and cybersecurity will perceive at least some of the concepts discussed in these first three chapters as review. However, as I always remind my information systems security and assurance students, the first condition to become an expert in a field is to solidly master its fundamentals. Once you develop a solid foundation, adding to it will not be an overly difficult task!
+
+Once the first three chapters are studied, readers have the option to pick and choose which remaining chapters are of the most interest and use to them. A quick look at this work's table of content should signal to readers that in addition to covering the fundamentals of blockchain, this work also discusses the architecture, security aspects, several potential use cases and implementations considerations related to the technology, in addition to several blockchain-specific auditing tools and checklists.
+
+## How Is This Book Organized?
+
+Each and every chapter in this work follows a similar, overall organizational structure as follows:
+
+*   The names of the authors/researchers for each chapter are disclosed at the beginning of their assigned chapter. These individuals were in charge of searching, compiling and analyzing dozens of references during the first part of the research project for each chapter. In the latter part of the research project, the team was responsible for writing the content of the chapter with editing help from me and copy-editing support from my two trusted graduate assistants, Mr. Aman Dev Singh and Ms. Yetunde Akinsanmi. Once the Spring 2021 semester was completed at Concordia University of Edmonton, I spent several months doing a final deep edit of each chapter, before the manuscript was finally ready to go to the CRC editors with some help this time from my wife, Susan.
+
+*   Every chapter begins with a brief *Abstract*. Similar to their use in research papers, the abstract enables readers to quickly get an idea in terms of the content and scope of every chapter before delving into it. The rationale behind this is to allow readers the option of skipping some chapters that may not be of interest to them. For example, it is possible that some readers may wish to skip over the more technical chapters, while more technically oriented readers may want to focus primarily on such chapters and skip over chapters focusing on some use cases. As mentioned before, while [Chapters 1](#ch09.xhtml#c1)–[3](#ch11.xhtml#c3) should be read by all readers, the remaining chapters can be studied in any order, and some chapters may even be skipped by some readers.
+
+*   While all chapters always begin with an abstract section, every chapter also concludes with two sections entitled *Summary and Conclusions*, followed by a list of *Core Concepts*. The rationale for including these two sections is two-fold: (a) it enables readers with adequate knowledge, vis-à-vis the chapter content, to forgo reading the entire chapter and instead quickly review some of its core concepts; and (b) these sections can help readers to quickly review and remember some of the more important chapter concepts, as needed.
