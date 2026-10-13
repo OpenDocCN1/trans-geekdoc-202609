@@ -1,0 +1,32 @@
+
+
+**[367](#15_ch006.html#fn367).** Nancy L. Sanborn, Phillip R. Mills, and Saswat Bohidar, “Going Private Transactions: Overview,” Practical Law Company, 2010. Davis Polk & Wardwell LLP, [davispolk.com/files/uploads/davis.polk.going.private.pdf](http://davispolk.com/files/uploads/davis.polk.going.private.pdf), accessed 30 Oct. 2017. 他们断言：“《证券交易法》和《萨班斯-奥克斯利法案》[……]除其他要求外，要求定期披露可能属于竞争性或战略性的商业信息，并强制实施僵化的公司治理要求。” 确实，许多文献研究《萨班斯-奥克斯利法案》是否导致了私有化交易的日益普遍；参见 Ellen Engel, Rachel M. Hayes, and Xue Wang, “The Sarbanes–Oxley Act and Firms’ Going-Private Decisions,” *Journal of Accounting and Economics* 44, No. 1–2 (2007): 116–145. [doi.org/10.1007/BF03342753](http://doi.org/10.1007/BF03342753) 或 [leeds-faculty.colorado.edu/Bhagat/SOX-GoingPrivate.pdf](http://leeds-faculty.colorado.edu/Bhagat/SOX-GoingPrivate.pdf), accessed 17 Oct. 2019.
+
+**[368](#15_ch006.html#fn368).** Denise L. Parris et al., “Exploring Transparency: A New Framework for Responsible Business Management,” *Management Decision* 54, No. 1(2016): 222–247. [doi.org/10.1108/MD-07-2015-0279](http://doi.org/10.1108/MD-07-2015-0279), accessed 30 Oct. 2017.
+
+**[369](#15_ch006.html#fn369).** Don Tapscott, “Transparency as a Business Imperative,” *Association Management* 57, No. 4 (April 2005): 17–18. EBSCO, [connection.ebscohost.com/c/articles/16701312/transparency-as-business-imperative](http://connection.ebscohost.com/c/articles/16701312/transparency-as-business-imperative), accessed 30 Oct. 2017.
+
+**[370](#15_ch006.html#fn370).** Denise L. Parris et al., “Exploring Transparency.”
+
+**[371](#15_ch006.html#fn371).** 首个 DAO 于 2015 年秋季通过众筹活动启动。当时，它是规模最大的众筹项目。参见 David Z. Morris, “Leaderless, Blockchain-Based Venture Capital Fund Raises $100 Million, and Counting,” *Fortune*, Fortune Media IP Ltd., 15 May 2016. [fortune.com/2016/05/15/leaderless-blockchain-vc-fund](http://fortune.com/2016/05/15/leaderless-blockchain-vc-fund), accessed 16 May 2016.
+
+**[372](#15_ch006.html#fn372).** 从博弈论的角度来看，DAO 投票结构是否会导致理想结果这一点并不完全清楚。依据 Kenneth Arrow 其关于不可能定理研究中的见解，大量博弈论文献探讨了对备选方案进行投票的含义。主要见解在于：设计投票系统存在诸多陷阱，必须谨慎行事才能确保其正确性。
+
+**[373](#15_ch006.html#fn373).** Jack Bao, Maureen O’Hara, and Xing (Alex) Zhou, “The Volcker Rule and Market-Making in Times of Stress,” Finance and Economics Discussion Series 2016-102 (8 Dec. 2016). Washington: Board of Governors of the Federal Reserve System. [doi.org/10.17016/FEDS.2016.102](http://doi.org/10.17016/FEDS.2016.102), accessed 30 Oct. 2017.
+
+**[374](#15_ch006.html#fn374).** Katya Malinova and Andreas Park, “Market Design with Blockchain Technology,” *[SSRN.com](http://SSRN.com)*, 26 July 2017. Elsevier, [ssrn.com/abstract=2785626](http://ssrn.com/abstract=2785626), accessed 30 Oct. 2017.
+
+**[375](#15_ch006.html#fn375).** 例如，Jay Ritter 和 Donghang Zhang 为此类裙带关系在互联网泡沫顶峰时期的存在提供了一些证据；参见 Jay R. Ritter and Donghang Zhang, “Affiliated Mutual Funds and the Allocation of Initial Public Offerings,” *Journal of Financial Economics* 86, No. 2 (Nov. 2007): 337–368. [doi.org/10.1016/j.jfineco.2006.08.005](http://doi.org/10.1016/j.jfineco.2006.08.005), accessed 30 Oct. 2017. 另请参阅 Tim Jenkinson and Alexander P. Ljungqvist, *Going Public: The Theory and Evidence on How Companies Raise Equity Finance*, 2nd ed. (New York: Oxford University Press, 2001)。
+
+**[376](#15_ch006.html#fn376).** Qing Hao, “Laddering in Initial Public Offerings,” *Journal of Financial Economics* 85, No. 1 (2007): 102–122. [doi.org/10.1016/j.jfineco.2006.05.008](http://doi.org/10.1016/j.jfineco.2006.05.008), accessed 30 Oct. 2017.
+
+**[377](#15_ch006.html#fn377).** 代币究竟是什么存在灰色地带。所谓的美国 *Howey* 测试用于判断一笔交易是否属于证券：是否存在资金投入？是否存在盈利预期？投资是否针对共同企业？利润是否来自推广者的努力？许多代币被设定为“使用型”币种，但我的理解是：(a) 存在一种默示的价值承诺，从而导致币价升值；(b) 这些币种旨在作为公司内部人员的补偿。第一点产生资本利得收益，第二点意味着财务回报并暗示期权价值。在实践中，代币在加密证券交易所像股票一样交易。事实上，SEC 曾声明 DAO 代币属于证券 ([sec.gov/news/press-release/2017-131](http://sec.gov/news/press-release/2017-131))。同样，在其投资者咨询栏目中，SEC 强调代币通常属于证券，应按此对待 ([investor.gov/additional-resources/news-alerts/alerts-bulletins/investor-bulletin-initial-coin-offerings](http://investor.gov/additional-resources/news-alerts/alerts-bulletins/investor-bulletin-initial-coin-offerings))。
+
+**[378](#15_ch006.html#fn378).** 讨论 ICO 的机制超出了本文的范围。然而，基本思路是：迄今为止，大多数 ICO 涉及使用以太坊区块链发行代币。对于该区块链，代币是用以太坊智能合约语言 Solidity 编写的智能合约。该合约或代码管控发行协议。通常，合约指定一个特定时间（以区块高度衡量），在此期间接受付款，并指定收到付款后谁接收代币（例如按比例分配、先到先得等）。合约代码公开可见。更多信息请见 [blockgeeks.com/guides/ico-basics](http://blockgeeks.com/guides/ico-basics)。
+
+**[379](#15_ch006.html#fn379).** David Yermack, “Corporate Governance and Blockchains,” *Review of Finance* 21, No. 1 (1 March 2017): 7—31. [doi.org/10.1093/rof/rfw074](http://doi.org/10.1093/rof/rfw074), accessed 30 Oct. 2017.
+
+**[380](#15_ch006.html#fn380).** Susan E.K. Christoffersen et al., “A. Vote Trading and Information Aggregation,” *Journal of Finance* 62 (2007): 2897–2927. Univ. of Penn. Scholarly Commons, [repository.upenn.edu/cgi/viewcontent.cgi?article=1132&context=fnce\_papers](http://repository.upenn.edu/cgi/viewcontent.cgi?article=1132&context=fnce_papers), accessed 30 Oct. 2017.
+
+**[381](#15_ch006.html#fn381).** 一个例子是 2012 年 Telus 与美国对冲基金 Mason Capital 之间的纠纷。Mason 持有 Telus 有表决权股票的多头头寸，并用 Telus 无表决权股票的空头头寸对冲了这一头寸。因此，Mason 拥有表决权益但无经济权益。
+
