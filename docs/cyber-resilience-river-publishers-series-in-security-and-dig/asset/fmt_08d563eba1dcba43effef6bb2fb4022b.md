@@ -1,0 +1,79 @@
+
+## 问题分析
+
+*   软硬件规格说明书中实际系统行为参数的不一致性；
+*   对编程技术发展水平和计算机技术的重新评估；
+*   外部和内部因素对系统的破坏性信息和技术影响，特别是在大规模入侵攻击下；
+*   对现代网络空间系统信息保护方法和技术、基础设施弹性及软件可靠性能力的重新评估。
+
+忽视或疏忽这些原因会导致 `Industry 4.0 cyber-systems` 功能有效性降低。此外，在群体和大规模网络攻击下，这一问题会显著恶化 [83, [221](#Reference.xhtml#ref0225)]。
+
+**第二个问题是** `Industry 4.0 cyber-systems` 结构和行为复杂性的不断增长。（[Figures 1.85](#Ch02.xhtml#cap_lbl0129)–[1.89](#Ch02.xhtml#cap_lbl0133)） [88, [90](#Reference.xhtml#ref0091), [210](#Reference.xhtml#ref0214), [214](#Reference.xhtml#ref0218)]。
+
+系统结构特征包括以下内容。通常，现代网络空间系统是异构分布式计算机网络和系统，由许多不同架构的组件组成。根据作者所述，上述系统的组成包括：
+
+![Figure 1.81 The focus on the previously unknown cyber-attacks detection and neutralization.](Images/fig00091.jpg)
+
+**Figure 1.81** The focus on the previously unknown cyber-attacks detection and neutralization.
+
+*   28 种基于大数据和流数据处理的 BI 类型；
+*   15 种 ERP 类型；
+*   16 种电子文档管理系统类型；
+*   28 个操作系统家族变体；
+*   1040 个编译器和解释器；
+*   2500 个网络协议；
+*   20 种网络设备类型；
+*   28 种信息安全工具类型（`SOC`、`SIEM`、`IDS/IPV`、`DPI and ME`、`SDN/FPV`、`VPN`、`PKI`、防病毒软件、安全策略控制、专用渗透测试软件、未授权访问安全工具、加密信息安全工具等）。
+
+![Figure 1.82 The corporate cyber resilience management program components.](Images/fig00092.jpg)
+
+[**Figure 1.82**](#Ch02.xhtml#bck_cap_lbl0126) The corporate cyber resilience management program components.
+
+![Figure 1.83 The importance to manage cyber risks for business and a state.](Images/fig00093.jpg)
+
+[**Figure 1.83**](#Ch02.xhtml#bck_cap_lbl0127) The importance to manage cyber risks for business and a state.
+
+![Figure 1.84 The main risks of the Industry 4.0 enterprise business interruption.](Images/fig00094.jpg)
+
+[**Figure 1.84**](#Ch02.xhtml#bck_cap_lbl0128) The main risks of the `Industry 4.0` enterprise business interruption.
+
+![Figure 1.85 Prospects for state and business digital transformation.](Images/fig00095.jpg)
+
+[**Figure 1.85**](#Ch02.xhtml#bck_cap_lbl0129) Prospects for state and business digital transformation.
+
+![Figure 1.86 The research object characteristics.](Images/fig00096.jpg)
+
+**Figure 1.86** The research object characteristics.
+
+![Figure 1.87 The complexity of the research object structure.](Images/fig00097.jpg)
+
+**Figure 1.87** The complexity of the research object structure.
+
+![Figure 1.88 The research object behavior complexity.](Images/fig00098.jpg)
+
+**Figure 1.88** The research object behavior complexity.
+
+![Figure 1.89 The diversity of the research object representation levels.](Images/fig00099.jpg)
+
+[**Figure 1.89**](#Ch02.xhtml#bck_cap_lbl0133) The diversity of the research object representation levels.
+
+网络空间系统功能特征包括以下内容：
+
+*   系统中最轻微的空闲时间都可能导致复杂工艺流程停机。巨大的灾难恢复成本；
+*   系统故障后果可能是灾难性的；
+*   设备制造商使用的专有技术协议隐藏着难以检测的漏洞；
+*   导致工艺过程正常运行维护中断的误报是不可接受的；
+*   使用缓冲区、非军事区来组织 `MES`、`ERP`、`BI` 及其他系统与企业系统的交互；
+*   需要为承包商提供远程系统访问和管理等。
+
+上述网络空间系统特征导致网络安全威胁谱系扩大，并决定了系统的高脆弱性 [164, 214, 215, [217](#Reference.xhtml#ref0221)–[219](#Reference.xhtml#ref0223), [222](#Reference.xhtml#ref0226), [223](#Reference.xhtml#ref0227)]。
+
+**第三个问题** 是难以识别允许在群体和大规模网络攻击下研究 `Industry 4.0` 系统网络弹性的定量规律 [22, 164, [224](#Reference.xhtml#ref0228)–[232](#Reference.xhtml#ref0236)]。事实是，外部和内部环境因素显著影响上述系统功能过程。在所考虑的结构框架内，这些因素要么从根本上无法控制，要么以不可接受的延迟进行管理。此外，外部和内部环境具有其未来可能状态不完全确定的属性，即影响网络空间系统行为的因素会随时间发生变化，从根本上改变其功能算法或使设定目标无法实现。外部和内部环境因素经历的变化既有自然的也有随机的，因此在一般情况下无法精确预测，导致其值存在一定的不确定性。面临特定目的的网络空间系统具有一定的“安全边际”，即允许它们在影响因素有一定偏差的情况下实现目标的特性 [111–130, 133]。
+
+直到最近，主要应用两种主要方法来识别技术系统功能规律：`experimental method`（例如，`mathematical statistics methods and experiment planning methods`）和 `analytical` 方法（例如，`analytical software verification methods`）。与 `experimental methods` 允许研究单个网络空间系统行为不同，`analytical verification methods` 允许考虑系统行为最普遍的特征，这些特征是功能过程类的共性。然而，这些方法有显著缺点。实验方法的缺点是无法将实验中获得的结果推广到不同于所研究的系统行为。分析验证方法的缺点是难以从由普遍显著属性推导所表征的系统功能过程类，过渡到由额外相关功能条件指定的单个过程（特别是，`group mass cyber-attacks` 中 `cyber system behavior` 的 `specific parameter values`）。
+
+因此，单独使用每种方法都不足以对群体和大规模网络攻击下的网络空间系统功能弹性进行有效分析。似乎只有利用两种方法的优势，将它们结合成一种统一的方法，才能获得识别所需定量规律的必要数学工具。
+
+### 问题解决思路
+
+`Industry 4.0 cyber system` 的设计和开发实践表明以下几点。网络空间中的现代对抗条件赋予这些系统一些特征，使得无法用传统方式设计网络弹性系统 [[59](#Reference.xhtml#ref0060)–64, [233](#Reference.xhtml#ref0237)]。同时出现的复杂性因素及产生的困难见 [Table 1.7](#Ch02.xhtml#cap_lbl0134)。
