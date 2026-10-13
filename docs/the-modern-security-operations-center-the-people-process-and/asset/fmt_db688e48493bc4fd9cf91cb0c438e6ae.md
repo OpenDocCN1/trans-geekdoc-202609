@@ -1,0 +1,38 @@
+
+When testing capabilities, it is common to use testing tools to speed up the process as well as to provide a third-party, vendor-agnostic view of the testing process being delivered. `BreakingPoint` is an example of a tool that can apply stress to a tool to evaluate how it performs under real-world conditions. Tools such as `BreakingPoint` also can provide templates for common attacks, sometimes called a `strike pack`, which can be used to test how a security tool detects and prevents attacks. To avoid obtaining inaccurate results, it is absolutely critical to consider how close to real-world conditions a `strike pack` is designed to represent. Using an outdated `strike pack` would mean testing security tools for threats that might not exist anymore or have been patched; hence, the security tools may no longer be blocking certain attacks launched by the `strike pack`, resulting in a reported miss even though the threat really doesn’t exist since a patch would mean the vulnerability has been mitigated. Consultants such as technology resellers that have access to different vendors can help with building a lab to test different vendor capabilities as well as provide their experience with different tools.
+
+One common question I often receive is, “I understand how to test security tools when I know what I’m looking for; however, how do I know what security capability my organization needs based on our existing investments and, more importantly, which tool should I buy first?” Essentially, the question is asking what materials should be referenced prior to researching what is best of breed for a specific security capability. My answer to this question is to not rely solely on the advice of a specific vendor or even a third-party consultant. Both parties can evaluate your organization and provide recommendations; however, both parties could also be financially motivated to recommend specific technology, hence offering biased advice. To truly obtain a vendor-neutral view of what security tools you need to consider for your organization, you should leverage industry standards, guidelines, and frameworks.
+
+## Standards, Guidelines, and Frameworks
+
+Many organizations look to industry standards, guidelines, and frameworks for help with developing security architectures for their environment. With the exception of industry standards such as `PCI DSS`, standards, guidelines, and frameworks provide recommendations and guidance that organizations can choose to follow, not mandatory practices that they are required to follow for compliance reasons. Many organizations will turn industry recommendations into corporate policies, which could have both advantages and disadvantages. Benefits of standards, guidelines, and frameworks come from how they are typically developed by industry experts and tested against common threats such as using threat modeling, which is a topic I cover shortly. Recommendations from standards, guidelines, and frameworks are usually vendor-agnostic and focus on capabilities and services generic enough to provide value to any type of organization.
+
+The downside of these resources is that they take time to develop and update, during which time threats continue to rapidly change. I have seen situations where technology is found to be vulnerable and the manufacturer has developed a fix, but the customer will not install the fix until the version of software meets an industry standard, guideline, or framework. This exposes the customer to unnecessary risk during the time it takes for industry recommendations to catch up with the change in the threat landscape. Recommendations from these sources can also be too generic to address threats that are specific to an organization. As an example, suppose an organization has an HR employee who will open any resume file without considering security. The risk of the employee exposing the organization to malware infection could be reduced by following generic framework recommendations for implementing segmentation and anti-malware; however, to fully address this situation effectively, the organization also needs to directly educate the user of the malware risk and develop a specific process to sanitize files before they are sent to the user. The key point of this example is that you should use standards, guidelines, and frameworks only as a baseline for your security architecture rather than as an all-encompassing blueprint for implementing security in your specific environment. Organizations need to develop their own maturity-grading structure and work on improving security based on what matters to their specific organization, which will extend well beyond the average standard, guideline, and framework.
+
+> **Note**
+>
+> Many of these external security resources now include self-assessment procedures to help an organization more closely align the recommendations with what the organization actually needs to implement. As a result, fewer adjustments are needed to be made outside of what is being recommended by the specific guidance the organization needs to incorporate. I believe that this trend of including self-assessment capabilities within standards, guidelines, and frameworks will continue and the capabilities will get even better.
+
+Some examples of commonly used standards, guidelines, and frameworks are `NIST`, `ISO`, and frameworks from `FIRST.org`. [Chapter 6](#ch06.xhtml#ch06), “[Reducing Risk and Exceeding Compliance](#ch06.xhtml#ch06),” will cover each of these in greater detail. For now, let’s take a quick look at each of these resources, starting with what `NIST` has to offer your SOC.
+
+### NIST Cybersecurity Framework
+
+The National Institute of Standards and Technology (`NIST`) developed the NIST Cybersecurity Framework (`CSF`), one of the most popular frameworks consisting of standards, guidelines, and best practices related to dealing with cybersecurity-related risk. The latest version, CSF Version 1.1 ([https://www.nist.gov/cyberframework](https://www.nist.gov/cyberframework)), presents a Framework Core based on the following five Functions, as depicted in [Figure 1-6](#ch01.xhtml#ch01fig06) (from `NIST`):
+
+*   **Identify** applies to managing systems, people, assets, data, and capabilities.
+*   **Protect** focuses on defending services.
+*   **Detect** covers how to identify that a specific event has occurred.
+*   **Respond** is what actions are taken when an incident is detected.
+*   **Recover** applies to how an organization attempts to be resilient during the attack as well as how to restore services impacted by the event.
+
+![FIGURE 1-6 NIST Cybersecurity Framework Core](Images/01fig06.jpg)
+
+**FIGURE 1-6** NIST Cybersecurity Framework Core
+
+Within this Core Framework are Categories, Subcategories, and Informative References, which all are methods to further divide the five functions into more focused topics. For example, the Protect Function includes a Category named Identity Management and Access Control (`PR.AC`), which has a Subcategory labeled `PR.AC-7` that specifies that users, devices, and other assets must be authenticated commensurate with the risk of the transaction. The industry references `802.1X` as a leading method for providing access control with multi-factor authentication, meaning it isn’t required but highly suggested by the industry. [Figure 1-7](#ch01.xhtml#ch01fig07) shows the structure of the 2018 NIST Framework Core as presented by `NIST` in CSF Version 1.1.
+
+![FIGURE 1-7 NIST Framework Core Structure](Images/01fig07.jpg)
+
+**FIGURE 1-7** NIST Framework Core Structure
+
+#### Using NIST
