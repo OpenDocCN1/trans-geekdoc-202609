@@ -1,0 +1,85 @@
+
+### 表 3.1 ReRAM 模型参数
+
+| 符号 | 说明 |
+| :--- | :--- |
+| `w` | 归一化漂移速度 |
+| `R_on` | 低阻态电阻 (LRS) |
+| `R_off` | 高阻态电阻 (HRS) |
+| `f(w)` | 定义边界条件 `w=0` 或 `w=1` 的窗口函数 |
+| `μ_v` | 小电场下的迁移率 |
+| `F_c` | 晶体中特定移动原子的特征场 |
+
+此外，ReRAM 的减速效应如[图 3.4](#Chapter3.html#c03_fig4)(a)所示，当 `w` 接近边界 `w=0` 或 `1` 时，漂移速度迅速下降，不再与施加的电流呈线性关系。这种非线性动态效应可以用以下任一窗口函数来表征 [135, 136]：
+
+```
+f(w) = 1 - (2w - 1)^(2p)  (Joglekar 窗口函数)
+```
+
+```
+f(w) = w(1 - w)  (Biolek 窗口函数)
+```
+
+因此，考虑掺杂因子 `w` 的电荷诱导漂移效应、减速效应和强电场效应的完整非线性动态 ReRAM 模型可从式 (2.2) 到 (2.6) 得出：
+
+```
+dw/dt = μ_v * (R_on / D^2) * i(t) * f(w)
+```
+
+```
+R(w) = R_on * w + R_off * (1 - w)
+```
+
+将推导出的 ReRAM 动态函数 (3.5)–(3.7) 结合到修正节点分析 (MNA) 矩阵中，可以推导出以下雅可比项：
+
+```
+∂i/∂v = G(w)
+```
+
+```
+∂i/∂w = (∂G/∂w) * v
+```
+
+```
+∂(dw/dt)/∂w = (∂/∂w)[μ_v * (R_on / D^2) * i(t) * f(w)]
+```
+
+其中 `G(w)` 是电导，`∂G/∂w` 是电导的非易失性状态变量导数；`μ_v`、`R_on`、`D` 为常数；`f(w)` 为窗口函数。回顾一下，其他参数定义见[表 3.1](#Chapter3.html#c03_tbl1)。因此，线性化系统方程所需的所有雅可比项均可建立，据此可在类 SPICE 仿真器中相应地实现考虑非易失性状态变量的 ReRAM 器件仿真。
+
+为了验证动态 ReRAM 模型及功能，需要进行生成 ReRAM 磁滞回线的仿真。基于模型的操作特性效率根据文献 [62] 的实验测量进行验证，以评估效率。器件参数设置为：`D = 10 nm`，`R_on = 100 Ω`，`R_off = 16 kΩ`；初始电阻 `w_0 = 0.01`，`R_off = 16 kΩ`，`R_on = 100 Ω`；应用 Joglekar 窗口函数，`p = 5`。在驱动电压 `V = 1.2 V` 下研究动态行为。如[图 3.5](#Chapter3.html#c03_fig5)所示，仿真结果能很好地捕捉文献 [62] 报告的实验结果。
+
+![Figure 3.5 ReRAM device simulation with Joglekar window function: I–V curve, which is consistent with the measured results reported](images/PBPC0390-03-f05.jpg)
+
+除了建模和仿真结果外，本章还介绍了一些漂移型 ReRAM 器件的测量。为此，首先需要对 ReRAM 进行成形过程，如[图 3.6](#Chapter3.html#c03_fig6)所示。实验中顺应电流设置为 `100 μA`。
+
+![Figure 3.6 Measurement results of voltage and current of a drift ReRAM in forming process](images/PBPC0390-03-f06.jpg)
+
+成形过程后，此处分析了 ReRAM 器件 SET 和 RESET 的一些实验。首先，研究了 17 次 SET 和 18 次 RESET 的直流测量，ReRAM 的行为显示出如[图 3.7](#Chapter3.html#c03_fig7)所示的磁滞回线。对于 SET 过程，我们使用 `100 μA` 作为顺应电流。
+
+![Figure 3.7 Measurement results of an ReRAM hysteresis loop drift in SET and RESET processes](images/PBPC0390-03-f07.jpg)
+
+此外，瞬态测量也是研究的重点。为此，考虑使用三个脉冲，第一和第三个脉冲用于读取，第二个电压脉冲用于 SET 或 RESET。瞬态测量结果使用 `100 ns` 作为时间间隔。首先，[图 3.8](#Chapter3.html#c03_fig8) 描绘了 SET 操作，并展示了 ReRAM 电阻如何从 1 MΩ 变化到 50 kΩ。此处，`0.1 V` 脉冲用于读操作，而 `1.5 V` 用于写操作。我们可以看到 SET 延迟在 `100 ns` 量级，因此很难看到电阻变化的过程。其次，我们用[图 3.9](#Chapter3.html#c03_fig9) 展示 RESET 操作，ReRAM 电阻从 50 kΩ 变化到 100 kΩ。`0.1 V` 脉冲用于读操作，而 `-1.5 V` 用于写操作。
+
+![Figure 3.8 Transient measurement results of resistance, voltage and current of a drift ReRAM in SET operation](images/PBPC0390-03-f08.jpg)
+
+![Figure 3.9 Transient measurement results of resistance, voltage and current of a drift ReRAM in RESET operation](images/PBPC0390-03-f09.jpg)
+
+#### 3.1.2 扩散型 ReRAM 器件
+
+近期研究 [137, 138] 报道了一种扩散型 ReRAM 器件。不同于常见的漂移型 ReRAM，扩散型 ReRAM 的初始状态在无外部电压或电流施加时始终为 HRS，且 `R_off = 1 MΩ`。当输入电压超过阈值 `V_th = 1 V` 持续一段时间（如 1 ms）后，扩散型 ReRAM 将切换到 LRS，`R_on = 1 kΩ`。器件开启后，若施加电压降至另一阈值 `V_hold = 0.5 V` 以下约 20 ms，电阻将缓慢恢复回 HRS。此类器件作为自动开/关选择器显示出巨大潜力。下文中，我们用 `R_on` 和 `R_off` 表示扩散型 ReRAM 的两种状态。
+
+在大多数应用中，扩散型 ReRAM 与漂移型 ReRAM 串联，形成一选择器一 ReRAM (1S1R) 结构。这种扩散型 ReRAM 可作为突触模拟器 [137] 和选择器 [138]。我们在[图 3.10](#Chapter3.html#c03_fig10) 中使用 SPICE 仿真表征这两种 ReRAM。此处根据文献 [139] 设置漂移型 ReRAM 参数 `R_on = 100 Ω`，`R_off = 16 kΩ`，根据文献 [138] 设置扩散型 ReRAM 参数 `R_on = 1 kΩ`，`R_off = 1 MΩ`。后续章节将使用 SPICE 模型进行 1S1R 性能评估。
+
+![Figure 3.10 Characterization of drift ReRAM and diffusive ReRAM](images/PBPC0390-03-f10.jpg)
+
+### 3.2 ReRAM 交叉阵列结构
+
+如前所述，ReRAM 是一种两端器件，可观察到夹在金属电极之间的亚化学计量比过渡金属氧化物 (`TMO_x`)。这种器件可用作具有离子电阻状态的非易失性存储器，从而产生两种非易失性状态：HRS 和 LRS。通过施加 SET 电压 (`V_set`) 或 RESET 电压 (`V_reset`)，可将状态从 HRS 变为 LRS，或反之亦然。
+
+两种状态 RHS 和 LRS 分别代表 `R_off` 和 `R_on`。读取 ReRAM 单元时，可向 ReRAM 施加读电压 `V_read`。`I_read_HRS` 和 `I_read_LRS` 遵循：
+
+```
+I_read = V_read / R(w)
+```
+
+其中 `V_th` 是 ReRAM 的阈值电压。
