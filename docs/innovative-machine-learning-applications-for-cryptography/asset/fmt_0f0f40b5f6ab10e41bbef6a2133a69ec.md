@@ -1,0 +1,129 @@
+
+# IGI Global 图书目录
+
+## 2016 年出版
+
+### *Innovative Research in Attention Modeling and Computer Vision Applications*
+**作者**：Rajarshi Pal (Institute for Development and Research in Banking Technology, India)  
+**出版信息**：Information Science Reference • copyright 2016 • 456pp • H/C (ISBN: 9781466687233) • US $200.00 (our price)
+
+## 2015 年出版
+
+### *Handbook of Research on Swarm Intelligence in Engineering*
+**作者**：Siddhartha Bhattacharyya (RCC Institute of Information Technology, India) and Paramartha Dutta (Visva-Bharati University, India)  
+**出版信息**：Engineering Science Reference • copyright 2015 • 743pp • H/C (ISBN: 9781466682917) • US $335.00 (our price)
+
+### *Handbook of Research on Advancements in Robotics and Mechatronics*
+**作者**：Maki K. Habib (The American University in Cairo, Egypt)  
+**出版信息**：Engineering Science Reference • copyright 2015 • 994pp • H/C (ISBN: 9781466673878) • US $515.00 (our price)
+
+### *Handbook of Research on Advanced Intelligent Control Engineering and Automation*
+**作者**：Ahmad Taher Azar (Benha University, Egypt) and Sundarapandian Vaidyanathan (Vel Tech University, India)  
+**出版信息**：Engineering Science Reference • copyright 2015 • 794pp • H/C (ISBN: 9781466672482) • US $335.00 (our price)
+
+### *Handbook of Research on Artificial Intelligence Techniques and Algorithms*
+**作者**：Pandian Vasant (University of Technology Petronas, Malaysia)  
+**出版信息**：Information Science Reference • copyright 2015 • 796pp • H/C (ISBN: 9781466672581) • US $495.00 (our price)
+
+### *Handbook of Research on Synthesizing Human Emotion in Intelligent Systems and Robotics*
+**作者**：Jordi Vallverdú (Universitat Autònoma de Barcelona, Spain)  
+**出版信息**：Information Science Reference • copyright 2015 • 469pp • H/C (ISBN: 9781466672789) • US $245.00 (our price)
+
+### *Recent Advances in Ambient Intelligence and Context-Aware Computing*
+**作者**：Kevin Curran (University of Ulster, UK)  
+**出版信息**：Information Science Reference • copyright 2015 • 375pp • H/C (ISBN: 9781466672840) • US $225.00 (our price)
+
+### *Recent Advances in Intelligent Technologies and Information Systems*
+**作者**：Vijayan Sugumaran (Oakland University, USA & Sogang University, Seoul, Korea)  
+**出版信息**：Information Science Reference • copyright 2015 • 309pp • H/C (ISBN: 9781466666399) • US $200.00 (our price)
+
+### *Emerging Research on Swarm Intelligence and Algorithm Optimization*
+**作者**：Yuhui Shi (Southern University of Science and Technology (SUSTech), China)  
+**出版信息**：Information Science Reference • copyright 2015 • 341pp • H/C (ISBN: 9781466663282) • US $225.00 (our price)
+
+## 2014 年出版
+
+### *Face Recognition in Adverse Conditions*
+**作者**：Maria De Marsico (Sapienza University of Rome, Italy) Michele Nappi (University of Salerno, Italy) and Massimo Tistarelli (University of Sassari, Italy)  
+**出版信息**：Information Science Reference • copyright 2014 • 480pp • H/C (ISBN: 9781466659667) • US $235.00 (our price)
+
+### *Computer Vision and Image Processing in Intelligent Systems and Multimedia Technologies*
+**作者**：Muhammad Sarfraz (Kuwait University, Kuwait)  
+**出版信息**：Information Science Reference • copyright 2014 • 312pp • H/C (ISBN: 9781466660304) • US $215.00 (our price)
+
+### *Mathematics of Uncertainty Modeling in the Analysis of Engineering and Science Problems*
+**作者**：S. Chakraverty (National Institute of Technology - Rourkela, India)  
+**出版信息**：Information Science Reference • copyright 2014 • 441pp • H/C (ISBN: 9781466649910) • US $225.00 (our price)
+
+### *Global Trends in Intelligent Computing Research and Development*
+**作者**：B.K. Tripathy (VIT University, India) and D. P. Acharjya (VIT University, India)  
+**出版信息**：Information Science Reference • copyright 2014 • 601pp • H/C (ISBN: 9781466649361) • US $235.00 (our price)
+
+### *Exploring Innovative and Successful Applications of Soft Computing*
+**作者**：Antonio D. Masegosa (Universidad de Granada, Spain) Pablo J. Villacorta (Universidad de Granada, Spain) Carlos Cruz-Corona (Universidad de Granada, Spain) M. Socorro García-Cascales (Universidad Politécnica de Cartagena, Spain) María T. Lamata (Universidad de Granada, Spain) and José L. Verdegay (Universidad de Granada, Spain)  
+**出版信息**：Information Science Reference • copyright 2014 • 375pp • H/C (ISBN: 9781466647855) • US $190.00 (our price)
+
+### *Research Developments in Computer Vision and Image Processing Methodologies and Applications*
+**作者**：Rajeev Srivastava (Indian Institute of Technology (BHU), India) S. K. Singh (Indian Institute of Technology (BHU), India) and K. K. Shukla (Indian Institute of Technology (BHU), India)  
+**出版信息**：Information Science Reference • copyright 2014 • 451pp • H/C (ISBN: 9781466645585) • US $195.00 (our price)
+
+### *Handbook of Research on Novel Soft Computing Intelligent Algorithms Theory and Practical Applications*
+**作者**：Pandian M. Vasant (Petronas University of Technology, Malaysia)  
+**出版信息**：Information Science Reference • copyright 2014 • 1018pp • H/C (ISBN: 9781466644502) • US $495.00 (our price)
+
+## 2013 年出版
+
+### *Intelligent Technologies and Techniques for Pervasive Computing*
+**作者**：Kostas Kolomvatsos (University of Athens, Greece) Christos Anagnostopoulos (Ionian University, Greece) and Stathes Hadjiefthymiades (University of Athens, Greece)  
+**出版信息**：Information Science Reference • copyright 2013 • 351pp • H/C (ISBN: 9781466640382) • US $195.00 (our price)
+
+### *Mobile Ad Hoc Robots and Wireless Robotic Systems Design and Implementation*
+**作者**：Raul Aquino Santos (University of Colima, Mexico) Omar Lengerke (Universidad Autónoma de Bucaramanga, Colombia) and Arthur Edwards-Block (University of Colima, Mexico)  
+**出版信息**：Information Science Reference • copyright 2013 • 344pp • H/C (ISBN: 9781466626584) • US $190.00 (our price)
+
+### *Intelligent Planning for Mobile Robotics Algorithmic Approaches*
+**作者**：Ritu Tiwari (ABV – Indian Institute of Information, India) Anupam Shukla (ABV – Indian Institute of Information, India) and Rahul Kala (School of Systems Engineering, University of Reading, UK)  
+**出版信息**：Information Science Reference • copyright 2013 • 322pp • H/C (ISBN: 9781466620742) • US $195.00 (our price)
+
+### *Simultaneous Localization and Mapping for Mobile Robots Introduction and Methods*
+**作者**：Juan-Antonio Fernández-Madrigal (Universidad de Málaga, Spain) and José Luis Blanco Claraco (Universidad de Málaga, Spain)  
+**出版信息**：Information Science Reference • copyright 2013 • 499pp • H/C (ISBN: 9781466621046) • US $195.00 (our price)
+
+## 2012 年出版
+
+### *Prototyping of Robotic Systems Applications of Design and Implementation*
+**作者**：Tarek Sobh (University of Bridgeport, USA) and Xingguo Xiong (University of Bridgeport, USA)  
+**出版信息**：Information Science Reference • copyright 2012 • 522pp • H/C (ISBN: 9781466601765) • US $195.00 (our price)
+
+### *Cross-Disciplinary Applications of Artificial Intelligence and Pattern Recognition Advancing Technologies*
+**作者**：Vijay Kumar Mago (Simon Fraser University, Canada) and Nitin Bhatia (DAV College, India)  
+**出版信息**：Information Science Reference • copyright 2012 • 786pp • H/C (ISBN: 9781613504291) • US $195.00 (our price)
+
+## 2011 年出版
+
+### *Handbook of Research on Ambient Intelligence and Smart Environments Trends and Perspectives*
+**作者**：Nak-Young Chong (Japan Advanced Institute of Science and Technology, Japan) and Fulvio Mastrogiovanni (University of Genova, Italy)  
+**出版信息**：Information Science Reference • copyright 2011 • 770pp • H/C (ISBN: 9781616928575) • US $265.00 (our price)
+
+## 2010 年出版
+
+### *Particle Swarm Optimization and Intelligence Advances and Applications*
+**作者**：Konstantinos E. Parsopoulos (University of Ioannina, Greece) and Michael N. Vrahatis (University of Patras, Greece)  
+**出版信息**：Information Science Reference • copyright 2010 • 328pp • H/C (ISBN: 9781615206667) • US $180.00 (our price)
+
+### *Artificial Intelligence Applications for Improved Software Engineering Development New Prospects*
+**作者**：Farid Meziane (University of Salford, UK) and Sunil Vadera (University of Salford, UK)  
+**出版信息**：Information Science Reference • copyright 2010 • 372pp • H/C (ISBN: 9781605667584) • US $180.00 (our price)
+
+---
+
+![IGI_Logo](i/IGI_Logo.png)
+
+**联系方式**  
+701 E. Chocolate Ave., Hershey, PA 17033  
+
+**在线订购**：[http://www.igi-global.com](http://www.igi-global.com/) 或致电 717-533-8845 x100  
+
+**系列订阅**：联系 [Acquisitions@igi-global.com](mailto:Acquisitions@igi-global.com)  
+
+**服务时间**：Mon-Fri 8:30 - 5:00 pm (est) 或 24 小时传真 717-533-8661

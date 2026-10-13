@@ -1,0 +1,178 @@
+
+
+# 图书列表
+
+## *Global Perspectives on Robotics and Autonomous Systems Development and Applications*
+
+**作者**：Maki K. Habib (The American University in Cairo, Egypt)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 405pp • H/C (ISBN: 9781668477915) • US $360.00 (our price)
+
+---
+
+## *Stochastic Processes and Their Applications in Artificial Intelligence*
+
+**作者**：Christo Ananth (Samarkand State University, Uzbekistan)、N. Anbazhagan (Alagappa University, India)、Mark Goh (National University of Singapore, Singapore)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 220pp • H/C (ISBN: 9781668476796) • US $270.00 (our price)
+
+---
+
+## *Handbook of Research on Deep Learning Techniques for Cloud-Based Industrial IoT*
+
+**作者**：P. Swarnalatha (Department of Information Security, School of Computer Science and Engineering, Vellore Institute of Technology, India)、S. Prabu (Department Banking Technology, Pondicherry University, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 432pp • H/C (ISBN: 9781668480984) • US $335.00 (our price)
+
+---
+
+## *Handbook of Research on AI-Based Technologies and Applications in the Era of the Metaverse*
+
+**作者**：Alex Khang (Global Research Institute of Technology and Engineering, USA)、Vrushank Shah (Institute of Technology and Engineering, Indus University, India)、Sita Rani (Department of Computer Science and Engineering, Guru Nanak Dev Engineering College, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 517pp • H/C (ISBN: 9781668488515) • US $345.00 (our price)
+
+---
+
+## *Applying AI-Based IoT Systems to Simulation-Based Information Retrieval*
+
+**作者**：Bhatia Madhulika (Amity University, India)、Bhatia Surabhi (King Faisal University, Saudi Arabia)、Poonam Tanwar (Manav Rachna International Institute of Research and Studies, India)、Kuljeet Kaur (Université du Québec, Canada)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 229pp • H/C (ISBN: 9781668452554) • US $270.00 (our price)
+
+---
+
+## *AI-Enabled Social Robotics in Human Care Services*
+
+**作者**：Sandeep Kautish (Lord Buddha Education Foundation, Nepal)、Nirbhay Kumar Chaubey (Ganpat University, India)、S.B. Goyal (City University, Malaysia)、Pawan Whig (Vivekananda Insitute of Professional Studies, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 321pp • H/C (ISBN: 9781668481714) • US $270.00 (our price)
+
+---
+
+## *Handbook of Research on AI and Knowledge Engineering for Real-Time Business Intelligence*
+
+**作者**：Kamal Kant Hiran (Aalborg University, Denmark)、K. Hemachandran (Woxsen University, India)、Anil Pise (University of the Witwatersrand, South Africa)、B. Justus Rabi (Christian College of Engineering and Technology, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 359pp • H/C (ISBN: 9781668465196) • US $380.00 (our price)
+
+---
+
+## *Applied AI and Multimedia Technologies for Smart Manufacturing and CPS Applications*
+
+**作者**：Emmanuel Oyekanlu (Drexel University, USA)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 377pp • H/C (ISBN: 9781799878520) • US $270.00 (our price)
+
+---
+
+## *Exploring Future Opportunities of Brain-Inspired Artificial Intelligence*
+
+**作者**：Madhulika Bhatia (Amity University, India)、Tanupriya Choudhury (University of Petroleum and Energy Studies, India)、Bhupesh Kumar Dewangan (School of Engineering, Department of Computer Science and Engineering, O.P. Jindal University, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 215pp • H/C (ISBN: 9781668469804) • US $270.00 (our price)
+
+---
+
+## *Developments in Artificial Intelligence Creativity and Innovation*
+
+**作者**：Ziska Fields (University of Johannesburg, South Africa)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 300pp • H/C (ISBN: 9781668462706) • US $270.00 (our price)
+
+---
+
+## *Handbook of Research on Applications of AI, Digital Twin, and Internet of Things for Sustainable Development*
+
+**作者**：Brojo Kishore Mishra (NIST Institute of Science and Technology (Autonomous), India & Saveetha College of Liberal Arts and Sciences, SIMATS, Chennai, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 538pp • H/C (ISBN: 9781668468210) • US $325.00 (our price)
+
+---
+
+## *Constraint Decision-Making Systems in Engineering*
+
+**作者**：Santosh Kumar Das (Sarala Birla University, Ranchi, India)、Nilanjan Dey (Techno International New Town, Kolkata, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 312pp • H/C (ISBN: 9781668473436) • US $270.00 (our price)
+
+---
+
+## *Handbook of Research on Artificial Intelligence Applications in Literary Works and Social Media*
+
+**作者**：Pantea Keikhosrokiani (School of Computer Sciences, Universiti Sains Malaysia, Malaysia)、Moussa Pourya Asl (School of Humanities, Universiti Sains Malaysia, Malaysia)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 376pp • H/C (ISBN: 9781668462423) • US $325.00 (our price)
+
+---
+
+## *Convergence of Deep Learning and Internet of Things Computing and Technology*
+
+**作者**：T. Kavitha (New Horizon College of Engineering (Autonomous), India & Visvesvaraya Technological University, India)、G. Senbagavalli (AMC Engineering College, Visvesvaraya Technological University, India)、Deepika Koundal (University of Petroleum and Energy Studies, Dehradun, India)、Yanhui Guo (University of Illinois, USA)、Deepak Jain (Chongqing University of Posts and Telecommunications, China)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 349pp • H/C (ISBN: 9781668462751) • US $270.00 (our price)
+
+---
+
+## *Deep Learning Research Applications for Natural Language Processing*
+
+**作者**：L. Ashok Kumar (PSG College of Technology, India)、Dhanaraj Karthika Renuka (PSG College of Technology, India)、S. Geetha (Vellore Institute of Technology, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 290pp • H/C (ISBN: 9781668460016) • US $270.00 (our price)
+
+---
+
+## *Controlling Epidemics With Mathematical and Machine Learning Models*
+
+**作者**：Abraham Varghese (University of Technology and Applied Sciences, Muscat, Oman)、Eduardo M. Lacap, Jr. (University of Technology and Applied Sciences, Muscat, Oman)、Ibrahim Sajath (University of Technology and Applied Sciences, Muscat, Oman)、M. Kamal Kumar (University of Technology and Applied Sciences, Muscat, Oman)、Shajidmon Kolamban (University of Technology and Applied Sciences, Muscat, Oman)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 269pp • H/C (ISBN: 9781799883432) • US $270.00 (our price)
+
+---
+
+## *Handbook of Research on Computer Vision and Image Processing in the Deep Learning Era*
+
+**作者**：A. Srinivasan (SASTRA University (Deemed), India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 440pp • H/C (ISBN: 9781799888925) • US $325.00 (our price)
+
+---
+
+## *Multidisciplinary Applications of Deep Learning-Based Artificial Emotional Intelligence*
+
+**作者**：Chiranji Lal Chowdhary (Vellore Institute of Technology, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 296pp • H/C (ISBN: 9781668456736) • US $270.00 (our price)
+
+---
+
+## *Principles and Applications of Socio-Cognitive and Affective Computing*
+
+**作者**：S. Geetha (Vellore Institute of Technology, Chennai, India)、Karthika Renuka (PSG College of Technology, India)、Asnath Victy Phamila (Vellore Institute of Technology, Chennai, India)、Karthikeyan N. (Syed Ammal Engineering College, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 253pp • H/C (ISBN: 9781668438435) • US $270.00 (our price)
+
+---
+
+## *Revolutionizing Industrial Automation Through the Convergence of Artificial Intelligence and the Internet of Things*
+
+**作者**：Divya Upadhyay Mishra (ABES Engineering College, Ghaziabad, India)、Shanu Sharma (ABES Engineering College, Ghaziabad, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 279pp • H/C (ISBN: 9781668449912) • US $270.00 (our price)
+
+---
+
+## *Convergence of Big Data Technologies and Computational Intelligent Techniques*
+
+**作者**：Govind P. Gupta (National Institute of Technology, Raipur, India)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • 233pp • H/C (ISBN: 9781668452646) • US $270.00 (our price)
+
+---
+
+## *Design and Control Advances in Robotics*
+
+**作者**：Mohamed Arezk Mellal (M'Hamed Bougara University, Algeria)
+
+**出版信息**：Engineering Science Reference • copyright 2023 • H/C
+
