@@ -1,0 +1,52 @@
+
+
+# 数据管理系统框架
+
+[图 A.5](#appendix.xhtml#figNaN_5a) 展示了我们的框架，它可被视为数据管理系统的模型。该框架包含三个层。可以认为，属于特定层的组件技术（我们也将其称为组件）或多或少建立在下层提供的技术之上。
+
+*   **第 I 层：数据库技术与分发层**。该层包含数据库系统和分布式数据库系统技术。
+*   **第 II 层：互操作性与迁移层**。该层包含异构数据库集成、客户端/服务器数据库和多媒体数据库系统等技术，用于处理异构数据类型和迁移遗留数据库。
+*   **第 III 层：信息抽取与共享层**。该层主要包含数据管理系统支持的较新服务技术。这些包括数据仓库、数据挖掘 [[THUR1998](#appendix.xhtml#refAppendixA_10)]、Web 数据库和面向协作应用的数据库支持。
+
+数据管理系统可利用网络、分布式处理和大容量存储等底层技术。我们将这些技术归类为**支撑技术层**。该支撑层不属于数据管理系统框架。该支撑层还包含一些高层技术，如分布式对象管理和代理。
+
+此外，[图 A.5](#appendix.xhtml#FfigNaN_5) 中还展示了**应用技术层**。属于该层的系统（如协同计算系统和基于知识的系统）可利用数据管理系统。注意，应用技术层也在数据管理系统框架之外。
+
+![Figure A.5 Data management systems framework.](images/appendixa_5.jpg)
+
+[Figure A.5 Data management systems framework.](#appendix.xhtml#FfigNaN_5)
+
+构成数据管理系统框架的技术可被视为数据管理领域的一些核心技术。然而，利用数据管理技术（如医疗、金融或军事等）的许多应用需要安全性、完整性、实时处理、容错和高性能计算等特性。我们在 [图 A.6](#appendix.xhtml#figNaN_6a) 中对此进行了说明，该图给出了一个将数据管理技术与特性及应用相关联的三维视图。例如，可以为医疗应用开发安全的分布式数据库管理系统，或为金融应用开发容错的多媒体数据库管理系统。
+
+![Figure A.6 A Three-dimensional view of data management.](images/appendixa_6.jpg)
+
+[Figure A.6 A Three-dimensional view of data management.](#appendix.xhtml#FfigNaN_6)
+
+整合属于各层的组件对于开发高效的数据管理系统至关重要。此外，数据管理技术必须与应用技术集成，才能开发出成功的信息系统。然而，目前这些各个组件之间的集成有限。我们的著作已经涵盖了与该框架各层相关的概念。
+
+注意，安全性贯穿所有层。支撑层（如代理和分布式系统）需要安全性。框架中的所有层都需要安全性，包括数据库安全、分布式数据库安全、数据仓库安全、Web 数据库安全和协作数据管理安全。
+
+## A.5 从框架构建信息系统
+
+[图 A.5](#appendix.xhtml#figNaN_5a) 展示了数据管理系统的框架。如该图所示，数据管理技术包括数据库系统、分布式数据库系统、异构数据库系统、遗留数据库迁移、多媒体数据库系统、数据仓库、数据挖掘、Web 数据库和面向协作的数据库支持。此外，数据管理系统利用分布式处理和代理等支撑技术。同样，协同计算、可视化、专家系统和移动计算等应用技术利用数据管理系统。
+
+我们许多人在许多场合都听说过“信息系统”这一术语。这些系统有时与数据管理系统混用。在我们的术语体系中，信息系统比数据管理系统广泛得多，但它们确实包含数据管理系统。事实上，信息系统框架不仅包含数据管理系统层，还包含支撑技术层和应用技术层。即，信息系统涵盖各类计算系统。它可被视为可用于各种应用的成品。即，硬件处于频谱的最低端，而应用处于最高端。
+
+我们可以结合 [图 A.5](#appendix.xhtml#figNaN_5a) 的技术来构建信息系统。例如，在应用技术层面，可能需要协作和可视化技术，以便分析师协同执行某些任务。在数据管理层面，可能同时需要多媒体和分布式数据库技术。在支撑层面，可能需要大容量存储以及一些分布式处理能力。这种专用框架如 [图 A.7](#appendix.xhtml#figNaN_7a) 所示。另一个例子是互操作性专用框架。可能需要一些可视化技术来显示来自异构数据库的集成信息。在数据管理层面，我们有异构数据库系统技术。在支撑技术层面，可使用分布式对象管理技术来封装异构数据库。这种专用框架如 [图 A.8](#appendix.xhtml#figNaN_8a) 所示。
+
+![Figure A.7 Framework for multimedia data management for collaboration.](images/appendixa_7.jpg)
+
+[Figure A.7 Framework for multimedia data management for collaboration.](#appendix.xhtml#FfigNaN_7)
+
+![Figure A.8 Framework for heterogeneous database interoperability.](images/appendixa_8.jpg)
+
+[Figure A.8 Framework for heterogeneous database interoperability.](#appendix.xhtml#FfigNaN_8)
+
+最后，让我们通过一个具体例子来说明上述概念。假设一组医生/外科医生想要一个系统，以便他们协作并就各种患者做出决策。这可能是一个医疗视频会议应用。即，在最高层，该应用是医疗应用，更具体地说是医疗视频会议应用。在应用技术层面，需要包括协作和电视会议在内的多种技术。这些应用技术将使用分布式数据库系统和多媒体数据库系统等数据管理技术。即，可能需要支持音频和视频等多媒体数据。数据管理技术反过来又依赖于分布式处理和网络等底层技术。我们在 [图 A.9](#appendix.xhtml#figNaN_9a) 中对此进行了说明。
+
+![Figure A.9 Specific example.](images/appendixa_9.jpg)
+
+[Figure A.9 Specific example.](#appendix.xhtml#FfigNaN_9)
+
+总之，信息系统不仅包含数据管理系统，还包含协同计算系统等应用层系统，以及分布式对象管理系统等支撑层系统。
+

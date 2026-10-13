@@ -1,0 +1,42 @@
+
+## PPDTC4.5 阈值方法
+
+在 PPDTC4.5 阈值方法中，我们知道选择不同的阈值会影响数据挖掘的准确性。选择阈值以获得良好的数据挖掘结果与添加到数据中的随机噪声分布以及数据本身有关。在我们的实验中，当使用均匀分布随机噪声扭曲数据时，`0.5` 是获得高准确率分类器的良好阈值；当使用高斯分布随机噪声扭曲数据时，`0.3` 是获得高准确率分类器的良好阈值。数据挖掘准确性与阈值之间的关系如 [Figure 12.2](#ch12.xhtml#fig12_2a) 和 [Figure 12.3](#ch12.xhtml#fig12_3a) 所示。最佳阈值应随数据而变化。换句话说，这取决于数据属性。
+
+![Figure 12.2 Threshold method of PPDTC4.5 classifier accuracy on 10k uniform perturbed training data 16k original test data.](images/fig12_2.jpg)
+
+[Figure 12.2 Threshold method of PPDTC4.5 classifier accuracy on 10k uniform perturbed training data 16k original test data.](#ch12.xhtml#Ffig12_2)
+
+![Figure 12.3 Threshold method of PPDTC4.5 classifier accuracy on 32K Gaussian Perturbed training data 16k original test data.](images/fig12_3.jpg)
+
+[Figure 12.3 Threshold method of PPDTC4.5 classifier accuracy on 32K Gaussian Perturbed training data 16k original test data.](#ch12.xhtml#Ffig12_3)
+
+## 12.7.5 算法复杂度
+
+给定 `n` 个实例、`m` 个属性和 `p` 个标签值，数值连续属性的潜在分裂点数量 `t` 最大为 `n - 1`。C4.5 算法在训练阶段的复杂度为 `O(nlgn + tmp)`。我们的算法为每个给定的潜在分裂点 `t` 评估实例 `w[j]` 的概率，这在最坏情况下将算法复杂度增加到 `O(ntmp)`。由于我们的算法跳过了为每个属性重建原始分布的步骤，与 [AGRA2000] 中给出的 BE 重建算法相比，运行时间非常合理。在 BE 重建算法中，有一个停止参数来确定何时停止估计分布的计算。然而，当循环计算更多时，运行时间更高，但我们能获得更好的估计分布准确性。在我们的实验中，基于停止参数的不同选择，BE 重建算法的运行时间比我们在相同配置计算机上运行的提议算法长三到五倍。
+
+## 12.8 总结与展望
+
+我们描述了一种修改后的 C4.5 决策树分类器，适用于隐私保护数据挖掘。该分类器基于扰动数据集构建，模型可用于以高准确性对原始数据进行分类。在多方参与全局数据挖掘而不泄露隐私的场景中，与基于密码学的方法相比，我们的算法降低了通信和计算成本。我们的算法基于扰动方案，但跳过了重建原始数据分布的步骤。我们的技术在减少计算时间的同时增强了隐私保护。
+
+如前所述，由于扰动过程保留了数据的某些本质，某些数据挖掘技术可以直接应用于扰动数据。朴素贝叶斯分类器可直接应用于加性扰动数据，基于欧氏距离的数据挖掘工具（例如 `k-Nearest Neighbor Classifier`、`Support Vector Machines` 和 `Perceptrons Neural Network`）可应用于乘性扰动数据。但是，由于过程中的信息损失以及某些数据挖掘方法本身可能表现不佳，数据挖掘准确性会降低。正如我们所知，`k-Nearest Neighbor` 是一种简单但性能较差的分类器。在本章中，我们讨论了一种修改数据挖掘函数以适应扰动数据的方法。我们的方法跳过了从扰动数据重建原始数据分布的步骤。这样，该方法在不解决困难分布问题的情况下执行隐私保护数据挖掘。值得注意的是，当数据集足够大时，直接在扰动数据集上执行数据挖掘技术可以获得良好的数据挖掘准确性。例如，将决策树分类器应用于加性扰动数据可以获得良好的数据挖掘准确性。这可以在我们的实验结果中观察到。
+
+未来的一个方向是构建可用于对扰动数据集进行分类的分类器。正如我们之前提到的，利用概率作为加权，结合随机噪声数据 `R` 的更好边界，是一个需要进一步研究的方法。此外，随着新型机器学习技术的发展（如基于深度学习的方法），我们需要探索针对这些方法的隐私保护机器学习。
+
+## 参考文献
+
+*   [AGGA2004] [C.C. Aggarwal](#ch12.xhtml#Cref12_1), P.S. Yu, A Condensation Approach to Privacy Preserving Data Mining, EDBT, Crete, Greece, 2004.
+*   [AGRA2000] [R. Agrawal](#ch12.xhtml#Cref12_2), R. Srikant, Privacy-Preserving Data Mining, SIGMOD Conference, 2000, pp. 439–450.
+*   [AGRA2001] [D. Agrawal](#ch12.xhtml#Cref12_3), C.C. Aggarwal, On the Design and Quantification of Privacy Preserving Data Mining Algorithms, PODS, ACM, 2001.
+*   [CHEN2005] [K. Chen](#ch12.xhtml#Cref12_4), L. Liu, Privacy Preserving Data Classification with Rotation Perturbation, ICDM, 2005, pp. 589–592.
+*   [CLIF2002] [C. Clifton](#ch12.xhtml#Cref12_5), M. Kantarcioglu, J. Vaidya, X. Lin, M.Y. Zhu, Tools for Privacy Preserving Data Mining, SIGKDD Explorations, Volume 4, # 2, 2002, 28–34.
+*   [DU2003] [W. Du](#ch12.xhtml#Cref12_6), Z. Zhan, Using Randomized Response Techniques for Privacy-Preserving Data Mining, KDD, 2003, pp. 505–510.
+*   [EVFI2002] [A.V. Evfimievski](#ch12.xhtml#Cref12_7), R. Srikant, R. Agrawal, J. Gehrke, Privacy Preserving Mining of Association Rules. *Proceedings of the Eighth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 2002, pp. 217–228.
+*   [KANT2004] [M. Kantarcioglu](#ch12.xhtml#Cref12_8), C. Clifton, Privately Computing a Distributed k-nn Classifier, In J.-F. Boulicaut, F. Esposito, F. Giannotti, D. Pedreschi, editors, PKDD, Volume 3202 of Lecture Notes in Computer Science, Springer, 2004, pp. 279–290.
+*   [KARG2003] [H. Kargupta](#ch12.xhtml#Cref12_9), S. Datta, Q. Wang, K. Sivakumar. On the Privacy Preserving Properties of Random Data Perturbation Techniques. ICDM, IEEE Computer Society, 2003, pp. 99–106.
+*   [LIND2000] [Y. Lindell](#ch12.xhtml#Cref12_10), B. Pinkas. Privacy Preserving Data Mining In M. Bellare, editor, CRYPTO, volume 1880 of Lecture Notes in Computer Science, Springer, 2000, pp. 36–54.
+*   [LIU2006] [K. Liu](#ch12.xhtml#Cref12_11), H. Kargupta, J. Ryan. Random Projection-Based Multiplicative Data Perturbation for Privacy Preserving Distributed Data Mining. IEEE Transactions on Knowledge and Data Engineering (TKDE), Volume 18, # 1, 2006, 92–106.
+*   [LIU2007] [L. Liu](#ch12.xhtml#Cref12_12), M. Kantarcioglu, B. Thuraisingham, The Applicability of the Perturbation Based Privacy Preserving Data Mining for Real-world Data. Data and Knowledge Engineering Journal, Volume 65, # 1, 2008, pp. 5–21.
+*   [LIU2009] [Li Liu](#ch12.xhtml#Cref12_13), M. Kantarcioglu, B.M. Thuraisingham, Privacy Preserving Decision Tree Mining from Perturbed Data, HICSS, 2009, pp. 1–10.
+*   [MITC1997] [T.M. Mitchell](#ch12.xhtml#Cref12_14), Machine Learning, Mcgraw-Hill, 1997.
+*   [QUIN1993] [J.R. Quinlan](#ch12.xhtml#Cref12_15), C4.5: Programs for Machine Learning, Morgan Kaufmann, 1993.
