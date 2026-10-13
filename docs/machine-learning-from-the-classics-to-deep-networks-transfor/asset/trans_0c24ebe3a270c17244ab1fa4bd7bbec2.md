@@ -1,0 +1,56 @@
+
+
+## 数学公式与习题
+
+### Frobenius 范数与 2-范数的正交不变性
+
+$$
+\|X\|_F = \|QXU\|_F
+$$
+
+![Equation](images/B9780443292385000123/si413.png)
+
+1.  和
+
+$$
+\|X\|_2 = \|QXU\|_2,
+$$
+
+![Equation](images/B9780443292385000123/si414.png)
+
+1.  若 $QQ^T = UU^T = I$。
+
+![Equation](images/B9780443292385000123/si415.png)
+
+### 习题 6.13
+
+证明秩为 $r$ 的 $m \times l$ 矩阵 $X$ 的零空间和列空间由下式给出：
+
+$$
+\mathcal{N}(X) = \text{span}\{\mathbf{v}_{r+1}, \dots, \mathbf{v}_l\}, \quad \mathcal{R}(X) = \text{span}\{\mathbf{u}_1, \dots, \mathbf{u}_r\},
+$$
+
+![Equation](images/B9780443292385000123/si416.png)
+
+其中
+
+$$
+X = [\mathbf{u}_1, \dots, \mathbf{u}_m] \begin{bmatrix} D & O \\ O & O \end{bmatrix} \begin{bmatrix} \mathbf{v}_1^T \\ \vdots \\ \mathbf{v}_l^T \end{bmatrix}.
+$$
+
+![Equation](images/B9780443292385000123/si417.png)
+
+### 习题 6.14
+
+证明对于岭回归
+
+$$
+\widehat{\mathbf{y}} = \sum_{i=1}^{l} \frac{\sigma_i^2}{\lambda + \sigma_i^2} (\mathbf{u}_i^T \mathbf{y}) \mathbf{u}_i.
+$$
+
+![Equation](images/B9780443292385000123/si418.png)
+
+### 习题 6.15
+
+证明目标函数 $J(\boldsymbol{\theta})$ 在点 $\boldsymbol{\theta}_0$ 处关于 $P$-加权范数 $\|v\|_P$ 的归一化最速下降方向由下式给出：
+

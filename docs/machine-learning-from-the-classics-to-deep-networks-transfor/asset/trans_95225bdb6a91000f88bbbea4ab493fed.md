@@ -1,0 +1,32 @@
+
+
+### 公式推导
+
+$$
+\Sigma_{\theta|y}^{(j)} = \mathbb{E} \left[ (\boldsymbol{\theta} - \boldsymbol{\mu}_{\theta|y}^{(j)})(\boldsymbol{\theta} - \boldsymbol{\mu}_{\theta|y}^{(j)})^T \right]
+$$
+
+![Equation](images/B9780443292385000184/si185.png) (12.46)
+
+1.  或者
+
+$$
+\mathbb{E} \left[ \boldsymbol{\theta}\boldsymbol{\theta}^T \right] = \Sigma_{\theta|y}^{(j)} + \boldsymbol{\mu}_{\theta|y}^{(j)}\boldsymbol{\mu}_{\theta|y}^{(j)T}
+$$
+
+![Equation](images/B9780443292385000184/si186.png) (12.47)
+
+1.  由此得到
+
+$$
+\begin{aligned}
+A &:= \mathbb{E} \left[ \boldsymbol{\theta}^T\boldsymbol{\theta} \right] = \mathbb{E} \left[ \text{trace}\{\boldsymbol{\theta}\boldsymbol{\theta}^T\} \right] \\
+  &= \text{trace}\{\boldsymbol{\mu}_{\theta|y}^{(j)}\boldsymbol{\mu}_{\theta|y}^{(j)T} + \Sigma_{\theta|y}^{(j)}\} \\
+  &= \|\boldsymbol{\mu}_{\theta|y}^{(j)}\|^2 + \text{trace}\{\Sigma_{\theta|y}^{(j)}\}.
+\end{aligned}
+$$
+
+![Equation](images/B9780443292385000184/si187.png) (12.48)
+
+1.  
+

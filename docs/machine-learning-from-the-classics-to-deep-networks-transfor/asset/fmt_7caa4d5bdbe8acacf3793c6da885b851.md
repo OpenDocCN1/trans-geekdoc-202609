@@ -1,0 +1,96 @@
+
+## References
+
+*   **[25]** P.L. Combettes, Inconsistent signal feasibility problems: least-squares solutions in a product space, *IEEE Trans. Signal Process.* 1994;42(11):2955–2966.
+
+*   **[26]** P.L. Combettes, V.R. Wajs, Signal recovery by proximal forward-backward splitting, *Multiscale Model. Simul.* 2005;4:1168–1200.
+
+*   **[27]** P.L. Combettes, J.-C. Pesquet, A Douglas-Rachford splitting approach to nonsmooth convex variational signal recovery, *IEEE J. Sel. Top. Signal Process.* 2007;1:564–574.
+
+*   **[28]** P.L. Combettes, J.-C. Pesquet, Proximal splitting methods in signal processing, H.H. Bauschke, R.S. Burachik, P.L. Combettes, V. Elser, D.R. Luke, H. Wolkowicz, eds. *Fixed-Point Algorithms for Inverse Problems in Science and Engineering*. Springer-Verlag; 2011:185–212.
+
+*   **[29]** J.R. Deller, Set-membership identification in digital signal processing, *IEEE Signal Process. Mag.* 1989;6:4–20.
+
+*   **[30]** F. Deutsch, *Best Approximation in Inner Product Spaces*. CMS. Springer; 2000.
+
+*   **[31]** L. Devroye, L. Györfi, G. Lugosi, *A Probabilistic Theory of Pattern Recognition*. Springer; 1991.
+
+*   **[32]** P.S.R. Diniz, S. Werner, Set-membership binormalized data-reusing LMS algorithms, *IEEE Trans. Signal Process.* 2003;52(1):124–134.
+
+*   **[33]** P.S.R. Diniz, *Adaptive Filtering: Algorithms and Practical Implementation*. fourth ed. Springer Verlag; 2014.
+
+*   **[34]** P.S.R. Diniz, Convergence performance of the simplified set-membership affine projection algorithm, *J. Circuits Syst. Signal Process.* 2011;30(2):439–462.
+
+*   **[35]** J. Duchi, S.S. Shwartz, Y. Singer, T. Chandra, Efficient projections onto the `ℓ₁`-ball for learning in high dimensions, *Proceedings of the International Conference on Machine Learning*. *ICML*. 2008:272–279.
+
+*   **[36]** J. Duchi, Y. Singer, Efficient online and batch learning using forward backward splitting, *J. Mach. Learn. Res.* 2009;10:2899–2934.
+
+*   **[37]** J. Duchi, S. Shalev-Shwartz, Y. Singer, A. Tewari, Composite objective mirror descent, *Proceedings of the 23rd Annual Conference on Computational Learning Theory*. 2010.
+
+*   **[38]** J. Duchi, E. Hazan, Y. Singer, Adaptive subgradient methods for online learning and stochastic optimization, *J. Mach. Learn. Res.* 2011;12:2121–2159.
+
+*   **[39]** J. Duchi, A. Agrawal, M. Wainright, Dual averaging for distributed optimization: convergence analysis and network scaling, *IEEE Trans. Autom. Control* 2012;57(3):592–606.
+
+*   **[40]** M. Fortin, R. Glowinski, *Augmented Lagrangian Methods: Applications to the Numerical Solution of Boundary-Value Problems*. Amsterdam: Elsevier Science/North-Holland; 1983.
+
+*   **[41]** A.A. Goldstein, Convex programming in Hilbert spaces, *Bull. Am. Math. Soc.* 1964;70(5):709–710.
+
+*   **[42]** L.G. Gubin, B.T. Polyak, E.V. Raik, The method of projections for finding the common point of convex sets, *USSR Comput. Math. Phys.* 1967;7(6):1–24.
+
+*   **[43]** E. Hazan, A. Agarwal, S. Kale, Logarithmic regret algorithms for online convex optimization, *Mach. Learn.* 2007;69(2–3):169–192.
+
+*   **[44]** J.B. Hiriart-Urruty, C. Lemarechal, *Convex Analysis and Minimization Algorithms*. Berlin: Springer-Verlag; 1993.
+
+*   **[45]** J. Kivinen, A.J. Smola, R.C. Williamson, Online learning with kernels, *IEEE Trans. Signal Process.* 2004;52(8):2165–2176.
+
+*   **[46]** N. Komodakis, J.-C. Pesquet, Playing with duality: an overview of recent primal-dual approaches for solving large scale optimization problems, [arXiv:1406.5429v1 [cs.NA]](http://www.arxiv.org/abs/1406.5429v1); 20 June 2014.
+
+*   **[47]** Y. Kopsinis, K. Slavakis, S. Theodoridis, Online sparse system identification and signal reconstruction using projections onto weighted `ℓ₁`-balls, *IEEE Trans. Signal Process.* 2011;59(3):936–952.
+
+*   **[48]** J. Langford, L. Li, T. Zhang, Sparse online learning via truncated gradient, *J. Mach. Learn. Res.* 2009;10:747–776.
+
+*   **[49]** Y. LeCun, L. Bottou, G.B. Orr, K.R. Müller, Efficient BackProp, G.B. Orr, K.-R. Müller, eds. *Neural Networks: Tricks of the Trade*. Springer; 1998:9–50.
+
+*   **[50]** N. Le Roux, M. Schmidt, F. Bach, A stochastic gradient method with an exponential convergence rate for finite training sets, [arXiv:1202.6258v4 [math.OC]](http://www.arxiv.org/abs/1202.6258v4); 2013.
+
+*   **[51]** W.S. Lee, P.L. Bartlett, R.C. Williamson, The importance of convexity in learning with squared loss, *IEEE Trans. Inf. Theory* 1998;44(5):1974–1980.
+
+*   **[52]** B.S. Levitin, B.T. Polyak, Constrained minimization methods, *Zh. Vychisl. Mat. Mat. Fiz.* 1966;6(5):787–823.
+
+*   **[53]** D.D. Lewis, Y. Yang, T.G. Rose, F. Li, RCV1: a new benchmark collection for text categorization research, *J. Mach. Learn. Res.* 2004;5:361–397.
+
+*   **[54]** P. Lions, B. Mercier, Splitting algorithms for the sum of two nonlinear operators, *SIAM J. Numer. Anal.* 1979;16:964–979.
+
+*   **[55]** P.E. Maingé, Strong convergence of projected subgradient methods for nonsmooth and nonstrictly convex minimization, *Set-Valued Anal.* 2008;16:899–912.
+
+*   **[56]** N. Murata, S. Amari, Statistical analysis of learning dynamics, *Signal Process.* 1999;74(1):3–28.
+
+*   **[57]** B. Martinet, Régularisation d' inéquations variationnelles par approximations successives, *Rev. Fr. Inform. Rech. Oper.* 1970;4:154–158.
+
+*   **[58]** C. Moler, Iterative refinement in floating point, *J. ACM* 1967;14(2):316–321.
+
+*   **[59]** J.J. Moreau, Fonctions convexes duales et points proximaux dans un espace Hilbertien, *Rep. Paris Acad. Sci. A* 1962;255:2897–2899.
+
+*   **[60]** J.J. Moreau, Proximité et dualité dans un espace hilbertien, *Bull. Soc. Math. Fr.* 1965;93:273–299.
+
+*   **[61]** S. Nagaraj, S. Gollamudi, S. Kapoor, Y.F. Huang, BEACON: an adaptive set-membership filtering technique with sparse updates, *IEEE Trans. Signal Process.* 1999;47(11):2928–2941.
+
+*   **[62]** A. Nedic, A. Olshevsky, Distributed optimization over time varying directed graphs, *Proceedings 52nd IEEE Conference on Decision and Control*. 2013:6855–6860.
+
+*   **[63]** A. Nedic, A. Olshevsky, Stochastic gradient-push for strongly convex functions on time varying directed graphs, *IEEE Trans. Autom. Control* 2016;61(12):3936–3947.
+
+*   **[64]** A. Nemirovsky, D. Yudin, *Problem Complexity and Method Efficiency in Optimization*. New York: J. Wiley & Sons; 1983.
+
+*   **[65]** Y.E. Nesterov, A method of solving a convex programming problem with convergence rate `O(1/k²)`, *Sov. Math. Dokl.* 1983;27(2):372–376.
+
+*   **[66]** Y. Nesterov, Primal-dual subgradient methods for convex problems, *Math. Program.* 2009;120(1):221–259.
+
+*   **[67]** N. Parish, S. Boyd, Proximal algorithms, *Found. Trends Optim.* 2013;1(2):123–231.
+
+*   **[68]** G. Pierra, Decomposition through formalization in a product space, *Math. Program.* 1984;8:96–115.
+
+*   **[69]** T. Poggio, S. Voinea, L. Rosasco, Online learning, stability and stochastic gradient descent, [arXiv:1105.4701 [cs.LG]](http://www.arxiv.org/abs/1105.4701); September 2011.
+
+*   **[70]** B.T. Polyak, Minimization of unsmooth functionals, *Zh. Vychisl. Mat. Mat. Fiz.* 1969;9(3):509–521.
+
+*   **[71]** R.T. Rockafellar, *Convex Analysis*. Princeton, NJ: Princeton University Press; 1970.

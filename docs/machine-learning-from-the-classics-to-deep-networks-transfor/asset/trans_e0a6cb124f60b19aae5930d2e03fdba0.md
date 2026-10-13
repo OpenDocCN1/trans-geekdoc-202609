@@ -1,0 +1,14 @@
+
+估计输出由下式给出
+
+$$\widehat{y}_n = \mathbf{\varphi}^{H}\widetilde{\mathbf{x}}_n.$$
+
+![Equation](images/B9780443292385000123/si266.png)
+
+相关的正则化代价函数变为
+
+$$J(\mathbf{\varphi}) = \sum_{i=0}^{n}\beta^{n-i}\left( y_n - \mathbf{\varphi}^{H}\widetilde{\mathbf{x}}_n \right)\left( y_n - \mathbf{\varphi}^{H}\widetilde{\mathbf{x}}_n \right)^{\ast} + \lambda\beta^{n+1}\mathbf{\varphi}^{H}\mathbf{\varphi},$$
+
+![Equation](images/B9780443292385000123/si267.png)
+
+或者

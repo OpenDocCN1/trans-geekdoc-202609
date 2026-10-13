@@ -1,0 +1,13 @@
+
+$$
+\mu_{f_{b}\rightarrow x_{2}}(x_{2}) = \sum\limits_{x_{6}}\sum\limits_{x_{5}}f_{b}(x_{2},x_{5},x_{6}),\quad
+\mu_{f_{e}\rightarrow x_{4}}(x_{4}) = \sum\limits_{x_{9}}\sum\limits_{x_{10}}f_{e}(x_{4},x_{9},x_{10}),\quad
+\mu_{f_{d}\rightarrow x_{4}}(x_{4}) = \sum\limits_{x_{7}}\sum\limits_{x_{8}}f_{d}(x_{4},x_{7},x_{8}),\quad
+\mu_{f_{c}\rightarrow x_{3}}(x_{3}) = f_{c}(x_{3}),
+$$
+
+$$
+\mu_{x_{4}\rightarrow f_{a}}(x_{4}) = \mu_{f_{d}\rightarrow x_{4}}(x_{4})\mu_{f_{e}\rightarrow x_{4}}(x_{4}),\quad
+\mu_{x_{2}\rightarrow f_{a}}(x_{2}) = \mu_{f_{b}\rightarrow x_{2}}(x_{2}),\quad
+\mu_{x_{3}\rightarrow f_{a}}(x_{3}) = \mu_{f_{c}\rightarrow x_{3}}(x_{3}).
+$$

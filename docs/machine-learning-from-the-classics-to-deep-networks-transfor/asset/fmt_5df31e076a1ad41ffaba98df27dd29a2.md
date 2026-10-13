@@ -1,0 +1,53 @@
+
+## 9. The “Accelerated Proximal Gradient” Method
+
+The “Accelerated Proximal Gradient” method and the accompanied `proximal_gradient_rpca.m` MATLAB® function are a good and easy-to-use choice. Set `λ = 0.01`. Note, however, that depending on the video used, this regularization parameter might need to be fine-tuned.
+
+## References
+
+*   [1] D. Achlioptas, F. McSherry, Fast computation of low-rank approximations, *Proceedings of the ACM STOC Conference*. 2001:611–618.
+*   [2] T. Adali, H. Li, M. Novey, J.F. Cardoso, Complex ICA using nonlinear functions, *IEEE Trans. Signal Process.* 2008;56(9):4536–4544.
+*   [3] T. Adali, M. Anderson, G.S. Fu, Diversity in independent component and vector analyses: identifiability, algorithms, and applications in medical imaging, *IEEE Signal Process. Mag.* 2014;31(3):18–33.
+*   [4] M. Aharon, M. Elad, A. Bruckstein, *k*-SVD: an algorithm for designing overcomplete dictionaries for sparse representation, *IEEE Trans. Signal Process.* 2006;54(11):4311–4322.
+*   [5] T.W. Anderson, Asymptotic theory for principal component analysis, *Ann. Math. Stat.* 1963;34:122–148.
+*   [6] T.W. Anderson, *An Introduction to Multivariate Analysis*. second ed. New York: John Wiley; 1984.
+*   [7] M. Anderson, X.L. Li, T. Adali, Joint blind source separation with multivariate Gaussian model: algorithms and performance analysis, *IEEE Trans. Signal Process.* 2012;60(4):2049–2055.
+*   [8] C. Archambeau, F. Bach, Sparse probabilistic projections, D. Koller, D. Schuurmans, Y. Bengio, L. Bottou, eds. *Neural Information Processing Systems*. *NIPS, Vancouver, Canada*. 2008.
+*   [9] J. Arenas-García, K.B. Petersen, G. Camps-Valls, L.K. Hansen, Kernel multivariate analysis framework for supervised subspace learning, *IEEE Signal Process. Mag.* 2013;30(4):16–29.
+*   [10] A. Argyriou, T. Evgeniou, M. Pontil, Multi-task feature learning, *Advances in Neural Information Processing Systems, vol. 19*. Cambridge, MA: MIT Press; 2007.
+*   [11] V. Abolghasemi, S. Ferdowsi, S. Sanei, Fast and incoherent dictionary learning algorithms with application to fMRI, *Signal Image Video Process.* 2013 [10.1007/s11760-013-0429-2](http://dx.doi.org/10.1007/s11760-013-0429-2).
+*   [12] G.I. Allen, Sparse and functional principal components analysis, arXiv preprint [arXiv:1309.2895](http://www.arxiv.org/abs/1309.2895); 2013.
+*   [13] F.R. Bach, M.I. Jordan, Kernel independent component analysis, *J. Mach. Learn. Res.* 2002;3:1–48.
+*   [14] F. Bach, R. Jenatton, J. Mairal, G. Obozinski, Structured sparsity through convex optimization, *Stat. Sci.* 2012;27(4):450–468.
+*   [15] F. Bach, M. Jordan, *A Probabilistic Interpretation of Canonical Correlation Analysis*. [Technical Report 688] University of Berkeley; 2005.
+*   [16] E. Barshan, A. Ghodsi, Z. Azimifar, M.Z. Jahromi, Supervised principal component analysis: visualization, classification and regression on subspaces and submanifolds, *Pattern Recognit.* 2011;44:1357–1371.
+*   [17] H.B. Barlow, Unsupervised learning, *Neural Comput.* 1989;1:295–311.
+*   [18] A.J. Bell, T.J. Sejnowski, An information maximization approach to blind separation and blind deconvolution, *Neural Comput.* 1995;7:1129–1159.
+*   [19] M. Belkin, P. Niyogi, Laplacian eigenmaps for dimensionality reduction and data representation, *Neural Comput.* 2003;15(6):1373–1396.
+*   [20] E. Benetos, M. Kotti, C. Kotropoulos, Applying supervised classifiers based on non-negative matrix factorization to musical instrument classification, *Proceedings IEEE International Conference on Multimedia and Expo*. *Toronto, Canada*. 2006:2105–2108.
+*   [21] Y. Bengio, J.-F. Paiement, P. Vincent, O. Delalleau, N. Le Roux, M. Quimet, Out of sample extensions for LLE, Isomap, MDS, eigenmaps and spectral clustering, S. Thrun, L. Saul, B. Schölkopf, eds. *Advances in Neural Information Processing Systems Conference*. Cambridge, MA: MIT Press; 2004.
+*   [22] M. Berry, S. Dumais, G. O'Brie, Using linear algebra for intelligent information retrieval, *SIAM Rev.* 1995;37:573–595.
+*   [23] A. Beygelzimer, S. Kakade, J. Langford, Cover trees for nearest neighbor, *Proceedings of the 23rd International Conference on Machine Learning*. *Pittsburgh, PA*. 2006.
+*   [24] C.M. Bishop, Variational principal components, *Proceedings 9th International Conference on Artificial Neural Networks, ICANN, vol. 1*. 1999:509–514.
+*   [25] L. Bolzano, R. Nowak, B. Recht, Online identification and tracking of subspaces from highly incomplete information, [arXiv:1006.4046v2 [cs.IT]](http://www.arxiv.org/abs/1006.4046v2); 12 July 2011.
+*   [26] M. Borga, *Canonical Correlation Analysis: a Tutorial*. [Technical Report] 2001. [www.imt.liu.se/~magnus/cca/tutorial/tutorial.pdf](http://www.imt.liu.se/~magnus/cca/tutorial/tutorial.pdf).
+*   [27] M. Brand, Charting a manifold, *Advances in Neural Information Processing Systems, vol. 15*. Cambridge, MA: MIT Press; 2003:985–992.
+*   [28] J.-P. Brunet, P. Tamayo, T.R. Golub, J.P. Mesirov, Meta-genes and molecular pattern discovery using matrix factorization, *Proc. Natl. Acad. Sci.* 2004;101(2):4164–4169.
+*   [29] C.J.C. Burges, *Geometric Methods for Feature Extraction and Dimensional Reduction: A Guided Tour*. [Technical Report MSR-TR-2004-55] Microsoft Research; 2004.
+*   [30] D. Cai, X. He, Orthogonal locally preserving indexing, *Proceedings 28th Annual International Conference on Research and Development in Information Retrieval*. 2005.
+*   [31] J.-F. Cai, E.J. Candès, Z. Shen, A singular value thresholding algorithm for matrix completion, *SIAM J. Optim.* 2010;20(4):1956–1982.
+*   [32] F. Camastra, Data dimensionality estimation methods: a survey, *Pattern Recognit.* 2003;36:2945–2954.
+*   [33] E.J. Candès, B. Recht, Exact matrix completion via convex optimization, *Found. Comput. Math.* 2009;9(6):717–772.
+*   [34] E.J. Candès, P. Yaniv, Matrix completion with noise, *Proc. IEEE* 2010;98(6):925–936.
+*   [35] E.J. Candès, T. Tao, The power of convex relaxation: near-optimal matrix completion, *IEEE Trans. Inf. Theory* 2010;56(3):2053–2080.
+*   [36] E.J. Candès, X. Li, Y. Ma, J. Wright, Robust principal component analysis, *J. ACM* 2011;58(3):1–37.
+*   [37] J.F. Cardoso, Infomax and maximum likelihood for blind source separation, *IEEE Signal Process. Lett.* 1997;4:112–114.
+*   [38] J.-F. Cardoso, Blind signal separation: statistical principles, *Proc. IEEE* 1998;9(10):2009–2025.
+*   [39] J.-F. Cardoso, High-order contrasts for independent component analysis, *Neural Comput.* 1999;11(1):157–192.
+*   [40] L. Carin, R.G. Baraniuk, V. Cevher, D. Dunson, M.I. Jordan, G. Sapiro, M.B. Wakin, Learning low-dimensional signal models, *IEEE Signal Process. Mag.* 2011;34(2):39–51.
+*   [41] V. Casteli, A. Thomasian, C.-S. Li, CSVD: clustering and singular value decomposition for approximate similarity searches in high-dimensional space, *IEEE Trans. Knowl. Data Eng.* 2003;15(3):671–685.
+*   [42] V. Cevher, P. Indyk, L. Carin, R.G. Baraniuk, Sparse signal recovery and acquisition with graphical models, *IEEE Signal Process. Mag.* 2010;27(6):92–103.
+*   [43] V. Chandrasekaran, S. Sanghavi, P.A. Parrilo, A.S. Willsky, Rank-sparsity incoherence for matrix decomposition, *SIAM J. Optim.* 2011;21(2):572–596.
+*   [44] C. Chatfield, A.J. Collins, *Introduction to Multivariate Analysis*. London: Chapman Hall; 1980.
+*   [45] C. Chatzichristos, E. Kofidis, M. Morante, S. Theodoridis, Blind fMRI source unmixing via higher-order tensor decompositions, *J. Neurosci. Methods* 2019;315(8):17–47.
+*   [46] P. Chen, D. Suter, Recovering the missing components in a large noisy low-rank matrix: application to SFM, *IEEE Trans. Pattern Anal. Mach. Intell.* 2004;26(8):1051–1063.

@@ -1,0 +1,8 @@
+
+The cross-correlation vector of order $m$, $\mathbf{p}_m$, admits the following partition:
+
+$$
+\mathbf{p}_m = \begin{bmatrix} \mathbb{E}[u_n d_n^*] \\ \vdots \\ \mathbb{E}[u_{n-m+2} d_n^*] \\ \mathbb{E}[u_{n-m+1} d_n^*] \end{bmatrix} = \begin{bmatrix} \mathbf{p}_{m-1} \\ p_{m-1} \end{bmatrix}, \quad \text{where} \quad p_{m-1} := \mathbb{E}[u_{n-m+1} d_n^*].
+$$
+
+Combining Eqs. [(4.63)](#Chp004_119-175_B978044329238500010X.xhtml#deq111) and [(4.65)](#Chp004_119-175_B978044329238500010X.xhtml#deq113), the following elegant relation results:

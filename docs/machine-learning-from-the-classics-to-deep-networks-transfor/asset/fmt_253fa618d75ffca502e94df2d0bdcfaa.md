@@ -1,0 +1,80 @@
+
+## References
+
+*   **[59]** J. Friedman, T. Hastie, R. Tibshirani, A note on the group LASSO and a sparse group LASSO, [arXiv:1001.0736v1 [math.ST]](http://www.arxiv.org/abs/1001.0736v1); 2010.
+
+*   **[60]** P.J. Garrigues, B. Olshausen, Learning horizontal connections in a sparse coding model of natural images, *Advances in Neural Information Processing Systems*. *NIPS*. 2008.
+
+*   **[61]** A.C. Gilbert, S. Muthukrisnan, M.J. Strauss, Improved time bounds for near-optimal sparse Fourier representation via sampling, *Proceedings of SPIE (Wavelets XI)*. *San Diego, CA*. 2005.
+
+*   **[62]** R. Giryes, S. Nam, M. Elad, R. Gribonval, M. Davies, Greedy-like algorithms for the cosparse analysis model, *Linear Algebra Appl.* 2014;441:22–60.
+
+*   **[63]** T. Goldstein, S. Osher, The split Bregman algorithm for `ℓ₁` regularized problems, *SIAM J. Imaging Sci.* 2009;2(2):323–343.
+
+*   **[64]** I.F. Gorodnitsky, B.D. Rao, Sparse signal reconstruction from limited data using FOCUSS: a re-weighted minimum norm algorithm, *IEEE Trans. Signal Process.* 1997;45(3):600–614.
+
+*   **[65]** L. Hageman, D. Young, *Applied Iterative Methods*. New York: Academic Press; 1981.
+
+*   **[66]** T. Hale, W. Yin, Y. Zhang, *A Fixed-Point Continuation Method for `l₁` Regularized Minimization with Applications to Compressed Sensing*. [Tech. Rep. TR07-07] Department of Computational and Applied Mathematics, Rice University; 2007.
+
+*   **[67]** D. Han, D.R. Larson, *Frames, Bases and Group Representations*. Providence, RI: American Mathematical Society; 2000.
+
+*   **[68]** T. Hastie, R. Tibshirani, J. Friedman, *The Elements of Statistical Learning: Data Mining, Inference and Prediction*. second ed. Springer; 2008.
+
+*   **[69]** J.C. Hoch, A.S. Stern, D.L. Donoho, I.M. Johnstone, Maximum entropy reconstruction of complex (phase sensitive) spectra, *J. Magn. Res.* 1990;86(2):236–246.
+
+*   **[70]** P.A. Jansson, *Deconvolution: Applications in Spectroscopy*. New York: Academic Press; 1984.
+
+*   **[71]** R. Jenatton, J.-Y. Audibert, F. Bach, Structured variable selection with sparsity-inducing norms, *J. Mach. Learn. Res.* 2011;12:2777–2824.
+
+*   **[72]** S.-J. Kim, K. Koh, M. Lustig, S. Boyd, D. Gorinevsky, An interior-point method for large-scale `ℓ₁`-regularized least squares, *IEEE J. Sel. Top. Signal Process.* 2007;1(4):606–617.
+
+*   **[73]** N.G. Kingsbury, T.H. Reeves, Overcomplete image coding using iterative projection-based noise shaping, *Proceedings IEEE International Conference on Image Processing*. *ICIP*. 2002:597–600.
+
+*   **[74]** K. Knight, W. Fu, Asymptotics for the LASSO-type estimators, *Ann. Stat.* 2000;28(5):1356–1378.
+
+*   **[75]** Y. Kopsinis, E. Aboutanios, D.E. Waters, S. McLaughlin, Time-frequency and advanced frequency estimation techniques for the investigation of bat echolocation calls, *J. Acoust. Soc. Am.* 2010;127(2):1124–1134.
+
+*   **[76]** Y. Kopsinis, K. Slavakis, S. Theodoridis, Online sparse system identification and signal reconstruction using projections onto weighted `ℓ₁` balls, *IEEE Trans. Signal Process.* 2011;59(3):936–952.
+
+*   **[77]** Y. Kopsinis, K. Slavakis, S. Theodoridis, S. McLaughlin, Reduced complexity online sparse signal reconstruction using projections onto weighted `ℓ₁` balls, *2011 17th International Conference on Digital Signal Processing*. *DSP*. July 2011:1–8.
+
+*   **[78]** Y. Kopsinis, K. Slavakis, S. Theodoridis, S. McLaughlin, Generalized thresholding sparsity-aware algorithm for low complexity online learning, *Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing*. *ICASSP, Kyoto, Japan*. March 2012:3277–3280.
+
+*   **[79]** Y. Kopsinis, K. Slavakis, S. Theodoridis, S. McLaughlin, Thresholding-based online algorithms of complexity comparable to sparse LMS methods, *2013 IEEE International Symposium on Circuits and Systems*. *ISCAS*. May 2013:513–516.
+
+*   **[80]** Y. Kopsinis, S. Chouvardas, S. Theodoridis, Sparsity-aware learning in the context of echo cancelation: a set theoretic estimation approach, *Proceedings of the European Signal Processing Conference*. *EUSIPCO, Lisbon, Portugal*. September 2014.
+
+*   **[81]** J. Kovacevic, A. Chebira, Life beyond bases: the advent of frames, *IEEE Signal Process. Mag.* 2007;24(4):86–104.
+
+*   **[82]** J. Langford, L. Li, T. Zhang, Sparse online learning via truncated gradient, *J. Mach. Learn. Res.* 2009;10:777–801.
+
+*   **[83]** Y.M. Lu, M.N. Do, Sampling signals from a union of subspaces, *IEEE Signal Process. Mag.* 2008;25(2):41–47.
+
+*   **[84]** Z.Q. Luo, P. Tseng, On the convergence of the coordinate descent method for convex differentiable minimization, *J. Optim. Theory Appl.* 1992;72(1):7–35.
+
+*   **[85]** A. Maleki, D.L. Donoho, Optimally tuned iterative reconstruction algorithms for compressed sensing, *IEEE J. Sel. Top. Signal Process.* 2010;4(2):330–341.
+
+*   **[86]** D.M. Malioutov, M. Cetin, A.S. Willsky, Homotopy continuation for sparse signal representation, *IEEE International Conference on Acoustics, Speech and Signal Processing*. *ICASSP*. 2005:733–736.
+
+*   **[87]** S. Mallat, *A Wavelet Tour of Signal Processing: The Sparse Way*. third ed. Academic Press; 2008.
+
+*   **[88]** S. Mallat, S. Zhang, Matching pursuit in a time-frequency dictionary, *IEEE Trans. Signal Process.* 1993;41:3397–3415.
+
+*   **[89]** G. Mateos, J. Bazerque, G. Giannakis, Distributed sparse linear regression, *IEEE Trans. Signal Process.* 2010;58(10):5262–5276.
+
+*   **[90]** G. Mileounis, B. Babadi, N. Kalouptsidis, V. Tarokh, An adaptive greedy algorithm with application to nonlinear communications, *IEEE Trans. Signal Process.* 2010;58(6):2998–3007.
+
+*   **[91]** A. Mousavi, A. Maleki, R.G. Baraniuk, Parameterless optimal approximate message passing, [arXiv:1311.0035v1 [cs.IT]](http://www.arxiv.org/abs/1311.0035v1); 2013.
+
+*   **[92]** S. Nam, M. Davies, M. Elad, R. Gribonval, The cosparse analysis model and algorithms, *Appl. Comput. Harmon. Anal.* 2013;34(1):30–56.
+
+*   **[93]** D. Needell, J.A. Tropp, COSAMP: iterative signal recovery from incomplete and inaccurate samples, *Appl. Comput. Harmon. Anal.* 2009;26(3):301–321.
+
+*   **[94]** D. Needell, R. Ward, Stable image reconstruction using total variation minimization, *SIAM J. Imaging Sci.* 2013;6(2):1035–1058.
+
+*   **[95]** Y. Nesterov, *Introductory Lectures on Convex Optimization: A Basic Course*. Kluwer Academic Publishers; 2004.
+
+*   **[96]** Y.E. Nesterov, A method for solving the convex programming problem with convergence rate `O(1/k²)`, *Dokl. Akad. Nauk SSSR* 1983;269:543–547 (in Russian).
+
+*   **[97]** G. Obozinski, B. Taskar, M. Jordan, *Multi-Task Feature Selection*. [Tech. Rep.] Berkeley: Department of Statistics, University of California; 2006.

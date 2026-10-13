@@ -1,0 +1,34 @@
+
+$$
+\mathbf{x}_{n} = \mathbf{x}_{n - 1} + \mu_{n}\left( \sum\limits_{k = 1}^{K}\omega_{k}P_{C_{k}}(\mathbf{x}_{n - 1}) - \mathbf{x}_{n - 1} \right),
+$$
+
+![Equation](images/B9780443292385000147/si153.png) (8.26)
+
+*弱收敛于* $\bigcap\limits_{k = 1}^{K}C_{k}$ *中的一点*
+
+*如果*
+
+$$ 0 < \mu_{n} \le M_{n}, $$
+
+![Equation](images/B9780443292385000147/si155.png)
+
+*并且*
+
+$$
+M_{n} := \sum\limits_{k = 1}^{K}\frac{\omega_{k}\| P_{C_{k}}(\mathbf{x}_{n - 1}) - \mathbf{x}_{n - 1}\|^{2}}{\left\| \sum_{k = 1}^{K}\omega_{k}P_{C_{k}}(\mathbf{x}_{n - 1}) - \mathbf{x}_{n - 1} \right\|^{2}},
+$$
+
+![Equation](images/B9780443292385000147/si156.png) (8.27)
+
+*其中* $\omega_{k} > 0,\ k = 1, 2, \dots, K$
+
+![Equation](images/B9780443292385000147/si157.png)
+
+*使得*
+
+$$
+\sum\limits_{k = 1}^{K}\omega_{k} = 1.
+$$
+
+![Equation](images/B9780443292385000147/si158.png)

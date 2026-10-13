@@ -1,0 +1,32 @@
+
+
+## 协方差矩阵推导
+
+$$
+\Sigma_{\hat{\theta}_{LS}} = \mathbb{E} \left[ (X^T X)^{-1} X^T \boldsymbol{\eta} \boldsymbol{\eta}^T X (X^T X)^{-1} \right] = (X^T X)^{-1} X^T \mathbb{E}[\boldsymbol{\eta} \boldsymbol{\eta}^T] X (X^T X)^{-1} = \sigma_{\eta}^2 (X^T X)^{-1}.
+$$
+
+![Equation](images/B9780443292385000123/si41.png) (6.7)
+
+注意，对于较大的 $N$ 值，我们可以写成：
+
+$$
+X^T X = \sum_{n=1}^{N} \mathbf{x}_n \mathbf{x}_n^T \approx N \Sigma_x,
+$$
+
+![Equation](images/B9780443292385000123/si42.png)
+
+其中 $\Sigma_x$ 是我们的（零均值）输入变量的协方差矩阵，即：
+
+$$
+\Sigma_x := \mathbb{E} \left[ \mathbf{x}_n \mathbf{x}_n^T \right] \approx \frac{1}{N} \sum_{n=1}^{N} \mathbf{x}_n \mathbf{x}_n^T.
+$$
+
+![Equation](images/B9780443292385000123/si44.png)
+
+因此，对于较大的 $N$ 值，我们可以写成：
+
+![Equation](images/B9780443292385000123/fx003.jpg) (6.8)
+
+换句话说，在采用的假设下，LS 估计量不仅是无偏的，而且其协方差矩阵**渐近趋于零**。也就是说，以高概率，通过大量测量获得的估计值 ${\widehat{\boldsymbol{\theta}}}_{LS}$ 将接近真实值 $\boldsymbol{\theta}_o$。从略微不同的角度来看，注意到 LS 解趋向于第 [4](#Chp004_119-175_B978044329238500010X.xhtml) 章讨论的 MSE 解。确实，对于中心化数据的情况，
+

@@ -1,0 +1,18 @@
+
+
+### 3.25
+假设 $\mu \sim \mathcal{N}(\mu_0, \sigma_0^2)$，且随机变量 $x$ 满足 $p(x|\mu) = \mathcal{N}(x|\mu, \sigma^2)$。考虑 $N$ 个观测值，令 $\mathcal{X} := \{x_1, x_2, \dots, x_N\}$，证明条件于 $\mathcal{X}$ 的后验概率 $p(\mu|\mathcal{X})$ 为高斯分布，其均值为 $\mu_N$，方差为 $\sigma_N^2$，其中
+
+$$
+\mu_N := \frac{N\sigma_0^2\bar{x} + \sigma^2\mu_0}{N\sigma_0^2 + \sigma^2}, \quad \sigma_N^2 := \frac{\sigma^2\sigma_0^2}{N\sigma_0^2 + \sigma^2}.
+$$
+
+### 3.26
+证明对于线性回归模型，
+
+$$
+\mathbf{y} = \mathbf{X}\boldsymbol{\theta} + \boldsymbol{\eta},
+$$
+
+1. 如果先验分布概率由 $p(\boldsymbol{\theta}) = \mathcal{N}(\boldsymbol{\theta}|\boldsymbol{\theta}_0, \boldsymbol{\Sigma}_0)$ 给出，且噪声样本服从多元高斯分布 $p(\boldsymbol{\eta}) = \mathcal{N}(\boldsymbol{\eta}|\mathbf{0}, \boldsymbol{\Sigma}_\eta)$，则后验概率 $p(\boldsymbol{\theta}|\mathbf{y})$ 为高斯分布。计算后验分布的均值向量和协方差矩阵。
+

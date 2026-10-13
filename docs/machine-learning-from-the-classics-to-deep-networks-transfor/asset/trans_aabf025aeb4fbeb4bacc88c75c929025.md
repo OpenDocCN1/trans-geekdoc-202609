@@ -1,0 +1,32 @@
+
+
+## 目标函数
+
+目标函数为：
+
+$$
+\text{minimize}\quad L(\mathbf{\theta},\lambda) = \sum\limits_{n = 1}^{N}\left( y_{n} - \theta_{0} - \sum\limits_{i = 1}^{l}\theta_{i}x_{ni} \right)^{2} + \lambda\sum\limits_{i = 1}^{l}|\theta_{i}|^{2}
+$$
+
+![Equation](images/B9780443292385000093/si431.png)
+
+## 等价形式
+
+该问题等价于最小化：
+
+$$
+\text{minimize}\quad L(\mathbf{\theta},\lambda) = \sum\limits_{n = 1}^{N}\left( (y_{n} - \overline{y}) - \sum\limits_{i = 1}^{l}\theta_{i}(x_{ni} - \overline{x}_{i}) \right)^{2} + \lambda\sum\limits_{i = 1}^{l}|\theta_{i}|^{2},
+$$
+
+![Equation](images/B9780443292385000093/si211.png)
+
+## 参数估计
+
+参数 $\theta_0$ 的估计值由下式给出：
+
+$$
+{\widehat{\theta}}_{0} = \overline{y} - \sum\limits_{i = 1}^{l}{\widehat{\theta}}_{i}\overline{x}_{i}.
+$$
+
+![Equation](images/B9780443292385000093/si433.png)
+

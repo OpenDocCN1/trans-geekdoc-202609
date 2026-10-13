@@ -1,0 +1,50 @@
+
+
+## 累积损失与遗憾分析
+
+累积损失定义为：
+
+$$
+\mathcal{L}_{\text{cum}}(N) := \sum_{n=1}^{N} \mathcal{L}(y_n, \widehat{y}_n).
+$$
+
+令 $f$ 为一个**固定**预测器。则在线算法相对于 $f$ 的**遗憾**，当运行至时间瞬间 $N$ 时，定义为：
+
+![Equation](images/B9780443292385000147/fx029.jpg)(8.76)
+
+“遗憾”这一名称源自博弈论，意指算法或学习者（机器学习术语）在回顾时，因未遵循固定预测器 $f$ 的预测而感到多么“后悔”。预测器 $f$ 也称为**假设**。此外，若 $f$ 从一组函数 $\mathcal{F}$ 中选取，该集合称为**假设类**。
+
+在线算法运行 $N$ 个时间瞬间时，相对于函数族 $\mathcal{F}$ 的遗憾定义为：
+
+$$
+\text{Regret}_N(\mathcal{F}) := \max_{f \in \mathcal{F}} \text{Regret}_N(f).
+$$
+
+![Equation](images/B9780443292385000147/si406.png)(8.77)
+
+在遗憾分析背景下，目标变为设计一种在线学习规则，使得相对于最优固定预测器的遗憾较小；即学习者的遗憾应随迭代次数 $N$ **次线性**（慢于线性）增长。次线性增长保证了学习者遭受的**平均**损失与最优预测器的平均损失之差将渐近趋于零。
+
+对于线性函数类，我们有：
+
+$$
+\widehat{y}[n] = \boldsymbol{\theta}[n-1]^{(T)}\boldsymbol{x}[n],
+$$
+
+![Equation](images/B9780443292385000147/si407.png)
+
+损失可写为：
+
+$$
+\mathcal{L}(y[n], \widehat{y}[n]) = \mathcal{L}(y[n], \boldsymbol{\theta}[n-1]^{(T)}\boldsymbol{x}[n]) := \mathcal{L}_n(\boldsymbol{\theta}[n-1]).
+$$
+
+![Equation](images/B9780443292385000147/si408.png)
+
+将公式 [(8.77)](#Chp008_343-416_B9780443292385000147.xhtml#deq155) 适配至上述符号，可得：
+
+$$
+\text{Regret}_N(\mathbf{h}) = \sum_{n=1}^{N} \mathcal{L}_n(\boldsymbol{\theta}_{n-1}) - \sum_{n=1}^{N} \mathcal{L}_n(\mathbf{h}).
+$$
+
+![Equation](images/B9780443292385000147/si409.png)(8.78)
+

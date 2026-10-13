@@ -1,0 +1,24 @@
+
+
+### 算法步骤
+
+2. 选择 $\mu_k(n) \in (0, 2M_k(n))$。
+
+   1. $\mathbf{\theta}_k(n) = \mathbf{\psi}_k(n - 1) + \mu_k(n)\left( \sum_{j = 1}^{n}\omega_j P_{S_{\epsilon,j}^{(k)}}\left( \mathbf{\psi}_k(n - 1) \right) - \mathbf{\psi}_k(n - 1) \right)$
+
+4. **End For**
+
+* **For** $n = q, q + 1 \dots$, **Do**
+
+    1. **For** $k = 1, 2, \dots, K$, **Do**
+
+        1. $\mathbf{\psi}_k(n - 1) = \sum_{m \in \mathcal{N}_k} a_{mk} \mathbf{\theta}_m(n - 1)$
+
+    2. **End For**
+
+    3. **For** $k = 1, 2, \dots, K$, **Do**
+
+        1. 选择 $\omega_n, \dots, \omega_{n - q + 1}$：$\sum_{j = n - q + 1}^{n}\omega_j = 1,\ \omega_j > 0$。
+
+        2. 选择 $\mu_k(n) \in (0, 2M_k(n))$。
+

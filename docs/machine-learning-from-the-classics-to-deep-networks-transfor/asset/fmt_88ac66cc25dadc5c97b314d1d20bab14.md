@@ -1,0 +1,50 @@
+
+### 数学推导
+
+$$
+\Delta\mathbf{\theta} = \frac{y_{n} - \mathbf{x}_{n}^{T}\mathbf{\theta}_{n - 1}}{||\mathbf{x}_{n}||}\frac{\mathbf{x}_{n}}{||\mathbf{x}_{n}||}.
+$$
+
+![Equation](images/B9780443292385000111/si306.png)
+
+因此，对于这种特定情况，修正公式
+
+$$
+\mathbf{\theta}[n] = \mathbf{\theta}[n-1] + \Delta\mathbf{\theta}
+$$
+
+![Equation](images/B9780443292385000111/si307.png)
+
+与 APA 的递归公式一致。
+
+![Figure 5.15 Δθ is equal to the (signed) distance of θn−1 from the plane times the unit vector \frac{\mathbf{x}_{n}}{||\mathbf{x}_{n}||}Equation; xn should be at the origin, but it is drawn so that it is clearly shown that it is perpendicular to the line segment.](images/B9780443292385000111/gr015.jpg)
+
+[Figure 5.15](#Chp005_177-248_B9780443292385000111.xhtml#cf0810) $\Delta\mathbf{\theta}$ 等于 $\mathbf{\theta}[n-1]$ 到平面的（有符号）距离乘以单位向量 $\frac{\mathbf{x}_{n}}{||\mathbf{x}_{n}||}$；$\mathbf{x}[n]$ 应位于原点，但绘制位置经过调整以清晰显示其垂直于该线段。
+
+### 5.6.1 归一化 LMS (NLMS)
+
+NLMS 是 APA 在 $q=1$ 情况下的特例（参见 [Fig. 5.13](#Chp005_177-248_B9780443292385000111.xhtml#f0070)）。由于其广泛应用，我们单独对其进行介绍，总结见 [Algorithm 5.3](#Chp005_177-248_B9780443292385000111.xhtml#enun0045)。
+
+#### Algorithm 5.3：归一化 LMS
+
+*   **初始化**
+    1.  $\mathbf{\theta}[-1] = \mathbf{0} \in \mathbb{R}^{(l)}$，或任意其他值。
+    2.  选择 $0 < \mu < 2$，以及一个较小的值 $\delta$。
+
+*   **For** $n = 0, 1, 2, \dots$ **Do**
+    1.  $e[n] = y[n] - \mathbf{\theta}[n-1]^{(T)}\mathbf{x}[n]$
+    2.  $$
+        \mathbf{\theta}_{n} = \mathbf{\theta}_{n - 1} + \frac{\mu}{\delta + \mathbf{x}_{n}^{T}\mathbf{x}_{n}}\mathbf{x}_{n}e_{n}
+        $$
+
+*   **End For**
+
+NLMS 的计算复杂度为 $3l$ MADs。若满足
+
+$$
+0 < \mu < 2.
+$$
+
+则保证 NLMS 稳定。
+
+![Equation](images/B9780443292385000111/si310.png)

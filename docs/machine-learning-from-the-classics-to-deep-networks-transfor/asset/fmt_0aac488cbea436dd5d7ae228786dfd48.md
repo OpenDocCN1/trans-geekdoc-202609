@@ -1,0 +1,12 @@
+
+In other words, computing the solution becomes equivalent to solving an eigenvalue-eigenvector problem. Substituting Eq. [(20.115)](#Chp020_1103-1179_B9780443292385000263.xhtml#deq174) into the cost function in [(20.113)](#Chp020_1103-1179_B9780443292385000263.xhtml#deq172) and taking into account the constraint in [(20.114)](#Chp020_1103-1179_B9780443292385000263.xhtml#deq173), it turns out that the value of the cost associated with the optimal `y` is equal to `λ`. Hence, the solution is the eigenvector corresponding to the minimum eigenvalue. However, the minimum eigenvalue of `L̃` is zero and the corresponding eigenvector corresponds to a trivial solution. Indeed, observe that
+
+```
+L̃ D^(1/2) 1 = D^(-1/2) L D^(-1/2) D^(1/2) 1 = D^(-1/2) (D - W) 1 = 0
+```
+
+where `1` is the vector having all its elements equal to 1. In words, `y = D^(1/2) 1` is an eigenvector corresponding to the zero eigenvalue and it results in the trivial solution, `z[i] = 1, i = 1, 2, …, N`. That is, all the points are mapped onto the same point in the real line. To exclude this undesired solution, recall that `L̃` is a positive semidefinite matrix and, hence, 0 is its smallest eigenvalue. In addition, if the graph is assumed to be connected, that is, there is at least one path (see Chapter [15](#Chp015_755-803_B9780443292385000214.xhtml)) that connects any pair of vertices, `D^(1/2) 1` is the only eigenvector associated with the zero eigenvalue, `λ[0]` [19]. Also, as `L̃` is a symmetric matrix, we know (Appendix A.2) that its eigenvectors are orthogonal to each other. In the sequel, we impose an extra constraint and we now require the solution to be *orthogonal* to `D^(1/2) 1`. Constraining the solution to be orthogonal to the eigenvector corresponding to the smallest (zero) eigenvalue drives the solution to the next eigenvector corresponding to the next smallest (nonzero) eigenvalue `λ[1]`. Note that the eigendecomposition of `L̃` is equivalent to what we called generalized eigendecomposition of `L` in Step 3 before.
+
+For the more general case of `m > 1`, we have to compute the `m` eigenvectors associated with `λ[1] ≤ … ≤ λ[m]`. As a matter of fact, for this case, the constraints prevent us from mapping onto a subspace of dimension less than the desired `m`. For example, we do not want to project in a three-dimensional space and the points to lie on a two-dimensional plane or on a one-dimensional line. For more details, the interested reader is referred to the insightful paper [19].
+
+### Local linear embedding (LLE)

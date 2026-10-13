@@ -1,0 +1,34 @@
+
+## 主成分分析推导
+
+$J(\mathbf{u}_1) = \frac{1}{N}\sum_{n=1}^{N}(\mathbf{u}_1^T\mathbf{x}_n)^2 = \frac{1}{N}\sum_{n=1}^{N}(\mathbf{u}_1^T\mathbf{x}_n)(\mathbf{x}_n^T\mathbf{u}_1) = \mathbf{u}_1^T\widehat{\Sigma}\mathbf{u}_1$
+
+![Equation](images/B9780443292385000263/si14.png)
+
+其中
+
+$\widehat{\Sigma} := \frac{1}{N}\sum_{n=1}^{N}\mathbf{x}_n\mathbf{x}_n^T$
+
+![Equation](images/B9780443292385000263/si15.png) (20.1)
+
+是数据的样本协方差矩阵。对于较大的 $N$ 值或如果统计量可计算，可以使用协方差矩阵（而非样本协方差矩阵）。现在的任务变为最大化方差。然而，因为我们只关心方向，主轴将由相应的单位范数向量表示。因此，优化任务表述为
+
+![](images/B9780443292385000263/fx001.jpg)
+
+这是一个约束优化问题，对应的拉格朗日函数为
+
+$L(\mathbf{u}, \lambda) = \mathbf{u}^T\widehat{\Sigma}\mathbf{u} - \lambda(\mathbf{u}^T\mathbf{u} - 1)$
+
+![Equation](images/B9780443292385000263/si16.png) (20.4)
+
+求梯度并令其等于零，得到
+
+$\widehat{\Sigma}\mathbf{u} = \lambda\mathbf{u}$
+
+![Equation](images/B9780443292385000263/si17.png) (20.5)
+
+换句话说，主方向是样本协方差矩阵的特征向量。将公式 [(20.5)](#Chp020_1103-1179_B9780443292385000263.xhtml#deq5) 代入公式 (20.2) 并考虑 (20.3)，可得
+
+$\mathbf{u}^T\widehat{\Sigma}\mathbf{u} = \lambda$
+
+![Equation](images/B9780443292385000263/si18.png) (20.6)

@@ -1,0 +1,55 @@
+
+原始 GPT 架构采用微调来完成下游任务。然而，在语言处理中，这可能仍然需要数千到数万个学习样本的数据集，参见 \[27\]。这与人类形成对比，人类可以通过从少量示例或简单指令中泛化来执行新的语言任务。为了弥合这一差距，GPT 的后续版本用采用 *meta-learning* 理论的方法，替代了针对每个特定下游任务都需要的微调步骤。^([^(139)](#fn139))
+
+正如 \[27\] 所指出的，在预训练期间，语言模型会发展出一套 *broad set of skills* 和 *pattern recognition abilities*，这些能力以某种方式编码在学习到的参数中。这些“知识”随后可在 *inference* 阶段用于适应或识别特定任务，例如翻译、问答等。此外，事实证明，这种“上下文”学习能力可以随规模显著提升。为此，GPT-1 的后续版本，如 GPT-2 (\[148\]) 和 GPT-3 (\[27\])，其规模比 GPT-1 大得多。[表 19.2](#Chp019_997-1102_B9780443292385000251.xhtml#t0015) 总结了相关数字。
+
+[表 19.2](#Chp019_997-1102_B9780443292385000251.xhtml#cf1385)
+
+GPT 系列模型参数值
+
+| Model | GPT-1 | GPT-2 | GPT-3 |
+| --- | --- | --- | --- |
+| Size | | | |
+| Numbers of parameters | 117 millions | 1.5 billions | 175 billions |
+| Number of blocks | 12 | 48 | 96 |
+| Context window | 512 | 1024 | 2048 |
+| Embedding dimensions | 768 | 1600 | 12288 |
+| Number of attention heads | 12 | 25 | 96 |
+
+![Table 19.2](images/B9780443292385000251/t0015.png)
+
+所有版本均构建在 GPT-1 的基础架构之上，具体变体可在相关论文中找到。GPT-3 的模型容量使得在推理阶段能够利用上下文学习能力，通过少量示例和/或对网络预期行为的描述来识别要执行的特定任务。换句话说，这些在海量无标签数据上预训练的大语言模型，已获得将给定示例的模式与预训练期间在类似数据集上学到的内容进行“匹配”的能力，并利用这些“知识”执行特定任务。此外，正如已述，这种能力似乎随模型参数数量的增加而增强。目前 NLP 中流行的相关方案主要有三类：
+
+*Few-shot setting*：在推理时，向训练好的模型提供任务描述和特定任务的少量示例演示。这些作为约束条件，*condition*（驱动）输出朝向特定任务。每个示例包含 a) 一个“context” 和 b) 一个“completion”。在 few-shot setting 中，提供 *K* 个此类示例，典型 *K* 值在 10–100 范围内，取决于在给定 context window size 下能容纳多少。在这些示例之后，给出一个仅包含“context”的最终示例。模型预期输出“completion”。下面在法语到英语翻译任务框架下提供一个典型案例。
+
+*   •  Task description：“Translate French to English”
+*   •  Example #1：“Bon jour” ⟨EOS⟩<mml:math><mml:mo stretchy="false">〈</mml:mo><mml:mtext>EOS</mml:mtext><mml:mo stretchy="false">〉</mml:mo></mml:math>![Equation](images/B9780443292385000251/si176.png) “Good morning”
+*   •  Example #2：“Belle journée” ⟨EOS⟩<mml:math><mml:mo stretchy="false">〈</mml:mo><mml:mtext>EOS</mml:mtext><mml:mo stretchy="false">〉</mml:mo></mml:math>![Equation](images/B9780443292385000251/si176.png) “Nice day”
+*   •  Prompt (context)：“Je suis étudiant”
+
+模型预期预测（completion）：“I am a student.”
+
+*One-shot setting*：这是前一种情况的特例，仅提供一个示例。
+
+*Zero-shot setting*：在此设置中，仅给出任务描述，不提供任何示例。
+
+Remarks 19.8
+
+*   •  GPT-3 在五个语料库的混合上训练，即 Common Crawl、WebText2、Books1、Books2 和 Wikipedia。采用加权过程，使高质量数据集被更频繁地采样。
+*   •  后续版本，如 ChatGPT 和 GPT-4 (\[63\])，规模大得多，且也融入了强化学习技术。GPT-4 版本包含 170 trillion 参数。此外，GPT-4 是多模态模型，除文本外，还能处理图像等其他模态。
+
+## 19.5 BERT：来自 Transformers 的双向编码器表示
+
+GPT 系列构建于单个 transformer block 栈之上，采用 masked self-attention 机制。换句话说，GPT 是 *unidirectional* 语言模型，每个 token 只能关注序列中的前序 token。
+
+在 BERT (\[43\]) 中，同样使用单个 transformer block 栈。然而，与 GPT 不同，其 block 结构类似于 [19.3.3 节](#Chp019_997-1102_B9780443292385000251.xhtml#s0085) 中完整 encoder-decoder transformer 的 encoder block。即，在 block 的相应层中采用（完整的）self-attention。这显然使 BERT 模型成为 *bidirectional*，每个 token 同时关注过去和未来的 token。例如，在将微调应用于 token 级任务（如问答）时，这很有益处，因为必须结合两个方向的上下文，参见 \[43\]。
+
+本节旨在阐述 BERT 背后的总体原理，更详细的描述可参考相关文献。[图 19.15](#Chp019_997-1102_B9780443292385000251.xhtml#f0080) 显示了一个简化框图，聚焦于输入输出变量。BERT 的内部结构由若干类似于 [图 19.10](#Chp019_997-1102_B9780443292385000251.xhtml#f0055) 中 encoder block 的 block 组成。
+
+![Figure 19.15 The first input token is the special classification token, 〈CLS〉, and the corresponding output is denoted as c. For some applications, more than two sentences are used, e.g., sentence A and sentence B, separated by the special token 〈SEP〉.](images/B9780443292385000251/gr015.jpg)
+
+Figure 19.15 第一个输入 token 是特殊分类 token 〈CLS〉，对应的输出记为 `c`。某些应用使用两个以上句子，例如句子 A 和句子 B，由特殊 token 〈SEP〉 分隔。
+
+然而，BERT 引入了一些新特性。具体而言：
+
+*   •  引入特殊分类 token ⟨CLS⟩<mml:math><mml:mo stretchy="false">〈</mml:mo><mml:mtext>CLS</mml:mtext><mml:mo stretchy="false">〉</mml:mo></mml:math>![Equation](images/B9780443292385000251/si378.png)，添加在每个输入 token 序列的开头；见 [图 19.15](#Chp019_997-1102_B9780443292385000251.xhtml#f0080)。对应该特殊 token 的最终状态/嵌入/表示向量（即最后一个 block 的输出），在 [图 19.15](#Chp019_997-1102_B9780443292385000251.xhtml#f0080) 中记为 `c`，用作分类任务中整个序列的 *aggregate class* 表示。

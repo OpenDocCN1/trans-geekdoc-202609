@@ -1,0 +1,6 @@
+
+
+$$e_{\lambda{\| \cdot \|}\_{1}}(\mathbf{x}) = \sum\limits\_{i = 1}^{l}\left( \frac{1}{2\lambda}\left( x\_{i} - {Prox}\_{\lambda{\| \cdot \|}\_{1}}(\mathbf{x})|\_{i} \right)^{2} + \left| {Prox}\_{\lambda{\| \cdot \|}\_{1}}(\mathbf{x})|\_{i} \right| \right) = \sum\limits\_{i = 1}^{l}\left( \chi\_{[ 0,\lambda]}(|x\_{i}|)\frac{x\_{i}^{2}}{2\lambda} + \chi\_{(\lambda, + \infty)}(|x\_{i}|)\left( |x\_{i} - {sgn}(x\_{i})\lambda| + \frac{\lambda}{2} \right) \right) = \sum\limits\_{i = 1}^{l}\left( \chi\_{[ 0,\lambda]}(|x\_{i}|)\frac{x\_{i}^{2}}{2\lambda} + \chi\_{(\lambda, + \infty)}(|x\_{i}|)\left( |x\_{i}| - \frac{\lambda}{2} \right) \right),$$
+
+![Equation](images/B9780443292385000147/si506.png)
+

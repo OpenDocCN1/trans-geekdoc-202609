@@ -1,0 +1,22 @@
+
+## 对数似然代价函数
+
+$$L(\mathbf{\theta}) = - \sum\limits_{n = 1}^{N}\left( y_{n}\ln s_{n} + (1 - y_{n})\ln(1 - s_{n}) \right), \tag{7.38}$$
+
+其中
+
+$$s[n] := \sigma(\mathbf{\theta}^{(T)}\mathbf{x}[n]). \tag{7.39}$$
+
+公式 [(7.38)](#Chp007_293-342_B9780443292385000135.xhtml#deq64) 中的对数似然代价函数也称为**交叉熵**代价函数。通过任何迭代最小化方案（如梯度下降法或牛顿法），对`L(\mathbf{\theta})`关于`\mathbf{\theta}`进行迭代最小化。这两种方案都需要计算相应的梯度，而梯度又基于Sigmoid链接函数的导数（问题 [7.6](#Chp007_293-342_B9780443292385000135.xhtml#o0035)）：
+
+$$\frac{d\sigma(t)}{dt} = \sigma(t)\left( 1 - \sigma(t) \right). \tag{7.40}$$
+
+梯度由下式给出（问题 [7.7](#Chp007_293-342_B9780443292385000135.xhtml#o0040)）：
+
+$$\nabla L(\mathbf{\theta}) = \sum\limits_{n = 1}^{N}(s_{n} - y_{n})\mathbf{x}_{n} = X^{T}(\mathbf{s} - \mathbf{y}), \tag{7.41}$$
+
+其中
+
+$$X^{(T)} = [\mathbf{x}[1], \dots, \mathbf{x}[N]],\quad \mathbf{s} := [s[1], \dots, s[N]]^{(T)},\quad \mathbf{y} = [y[1], \dots, y[N]]^{(T)}.$$
+
+Hessian矩阵由下式给出（问题 [7.8](#Chp007_293-342_B9780443292385000135.xhtml#o0045)）：

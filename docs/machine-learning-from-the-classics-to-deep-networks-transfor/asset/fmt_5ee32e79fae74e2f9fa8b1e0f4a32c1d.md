@@ -1,0 +1,10 @@
+
+This definition was introduced in [19]. We loosely say that matrix `X` obeys the RIP of order `k` if `δ[k]` is not too close to one. When this property holds true, it implies that the Euclidean norm of `θ` is approximately *preserved* after projecting it onto the rows of `X`. Obviously, if matrix `X` was orthonormal, we would have `δ[k] = 0`. Of course, because we are dealing with nonsquare matrices, this is not possible. However, the closer `δ[k]` is to zero, the closer to orthonormal *all* subsets of `k` columns of `X` are. Another viewpoint of the condition in [(9.29)](#Chp009_417-462_B9780443292385000159.xhtml#deq65) is that `X` preserves Euclidean distances between `k`-sparse vectors. Let us consider two `k`-sparse vectors, `θ[1]`, `θ[2]`, and apply [(9.29)](#Chp009_417-462_B9780443292385000159.xhtml#deq65) to their difference, `θ[1] − θ[2]`, which, in general, is a `2k`-sparse vector. Then we obtain
+
+```
+(1 − δ[2k])‖θ[1]−θ[2]‖[2]² ≤ ‖X(θ[1]−θ[2])‖[2]² ≤ (1 + δ[2k])‖θ[1]−θ[2]‖[2]².
+```
+
+Thus, when `δ[2k]` is small enough, the Euclidean distance is preserved after projection in the lower-dimensional observations' space. In words, if the RIP holds true, this means that searching for a sparse vector in the lower-dimensional subspace, `ℝ^(N)`, formed by the observations, and not in the original `l`-dimensional space, one can still recover the vector since distances are preserved and the target vector is not “confused” with others. After projection onto the rows of `X`, the discriminatory power of the method is retained. It is interesting to point out that the RIP is also related to the condition number of the Grammian matrix. In [6,19], it is pointed out that if `X[r]` denotes the matrix that results by considering only `r` of the columns of `X`, then the RIP in [(9.29)](#Chp009_417-462_B9780443292385000159.xhtml#deq65) is equivalent to requiring the respective Grammian, `X[r]^(T)X[r]`, `r ≤ k`, to have its eigenvalues within the interval `[1 − δ[k], 1 + δ[k]]`. Hence, the more well-conditioned the matrix is, the better we dig out the information hidden in the lower-dimensional space.
+
+## Theorem 9.3

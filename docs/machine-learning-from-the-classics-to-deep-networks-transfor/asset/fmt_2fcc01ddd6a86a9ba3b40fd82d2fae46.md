@@ -1,0 +1,36 @@
+
+and looking only at them, no cause–effect relationship can be deduced. Bertrand Russell (1872–1970) was a British philosopher, mathematician, and logician. He is considered one of the founders of analytic philosophy. In *Principia Mathematica*, coauthored with A.N. Whitehead, they made an attempt to ground mathematics on mathematical logic. He was also an antiwar activist and a liberal.
+
+The previously stated provocative arguments have been inspired by Judea Pearl's book [38], and we provided them in order to persuade the reader to read this book; he or she can only become wiser. Pearl has made a number of significant contributions to the field and was the recipient of the Turing award in 2011.
+
+Although one cannot deduce causality by looking only at the laws of physics or probabilities, ways of identifying it have been developed. One way is to carry out *controlled* experiments; one can change the values of a variable and study the effect of the change on another. However, this has to be done in a controlled way in order to guarantee that the caused effects are not due to other related factors.
+
+Besides experimentation, there has been a major effort to discover causal relationships from nonexperimental evidence. In modern applications, such as microarray measurements for gene expressions or fMRI brain imaging, the number of the involved variables can easily reach the order of a few thousand. Performing experiments for such tasks is out of the question. In [38], the notion of causality is related to that of the minimality in the structure of the obtained possible DAGs. Such a view ties causality with Occam's razor rule. More recently, inferring causality was attempted by comparing the conditional distributions of variables given their direct causes, for all hypothetical causal directions, and choosing the most plausible. The method builds upon some smoothness arguments that underlie the conditional distributions of the effect given the causes, compared to the marginal distributions of the effect/cause [43]. In [24], an interesting alternative for inferring causality is built upon arguments from Kolmogorov's complexity theory; causality is verified by comparing shortest description lengths of strings associated with the involved distributions. For further information, the interested reader may consult, for example, [42] and the references therein.
+
+### 15.3.3 d-separation
+
+Dependencies and independencies among a set of random variables play a key role in understanding their statistical behavior. Moreover, as we have already commented, they can be exploited to substantially reduce the computational load for solving inference tasks.
+
+By the definition and the properties of a BN structure, *G*, we know that certain independencies hold and are readily observed via the parent–child links. The question that is now raised is whether there are additional independencies that the structure of the graph imposes on any joint probability distribution that factorizes over *G*. Unveiling extra independencies offers the designer more freedom to deal with computational complexity issues more aggressively.
+
+We will attack the task of searching for conditional independencies across a network by observing whether probabilistic evidence that becomes available at a node x can propagate and influence our certainty about another node, y.
+
+**Serial or head-to-tail connection**. This type of node connection is shown in [Fig. 15.6](#Chp015_755-803_B9780443292385000214.xhtml#f0035)A. Evidence on x will influence the certainty about y, which in turn will influence that of z. This is also true for the reverse direction, starting from z and propagating to x. However, if the state of y is known, then x and z become (conditionally) independent. In this case, we say that y *blocks* the path from x to z, and vice versa. When the state at a node is fixed/known, we say that the node is *instantiated*.
+
+![Figure 15.6 Three different types of connections: (A) serial, (B) diverging, and (C) converging.](images/B9780443292385000214/gr006.jpg)
+
+Figure 15.6 Three different types of connections: (A) serial, (B) diverging, and (C) converging.
+
+**Diverging or tail-to-tail connection**. In this type of connection, shown in [Fig. 15.6](#Chp015_755-803_B9780443292385000214.xhtml#f0035)B, evidence can propagate from y to x and from y to z, and also from x to z and from z to x via y, unless y is instantiated. In the latter case, y *blocks* the path from x to z, and vice versa. That is, x and z become independent given the value of y. For example, if y represents “flu,” x “runny nose,” and z “sneezing,” then if we do not know whether someone has the flu, a runny nose is evidence that can change our certainty about her/him having the flu; this in turn changes our belief about sneezing. However, if we know that someone has the flu, seeing the nose running gives no extra information about sneezing.
+
+**Converging or head-to-head connection or ν-structure**. This type of connection is slightly more subtle than the previous two cases, and it is shown in [Fig. 15.6](#Chp015_755-803_B9780443292385000214.xhtml#f0035)C. Evidence from x does not propagate to z and thus cannot change our certainty about it. Knowing something about x tells us nothing about z. For example, let z denote either of two countries (e.g., England and Greece), x “season,” and y “cloudy weather.” Obviously, knowing the season says nothing about a country. However, having some evidence about cloudy weather y, knowing that it is summer provides information that can change our certainty about the country. This is in accordance with our intuition. Knowing that it is summer and that the weather is cloudy *explains away* that the country is Greece. This is the reason we sometimes refer to this type of reasoning as *explaining away*. Explaining away is an instance of a general reasoning pattern called *intercausal reasoning*, where different causes of the same effect can interact; this is a very common pattern of reasoning in humans.
+
+For this particular type of connection, explaining away is also achieved by evidence that is provided by *any one* of the descendants of y. [Fig. 15.7](#Chp015_755-803_B9780443292385000214.xhtml#f0040) illustrates the case via an example. Having evidence about the rain will also establish a path so that evidence about the season (country), x (z), changes our certainty about the country (season), z (x).
+
+![Figure 15.7 Having some evidence about the weather being either cloudy or rainy establishes the path for information flow between the nodes “season” and “country.”](images/B9780443292385000214/gr007.jpg)
+
+[Figure 15.7](#Chp015_755-803_B9780443292385000214.xhtml#cf0350) Having some evidence about the weather being either cloudy or rainy establishes the path for information flow between the nodes “season” and “country.”
+
+To recapitulate, let us stress the delicate point here. For the first two cases, head-to-tail and tail-to-tail, the path is blocked if node y is instantiated, that is, when its state is disclosed to us. However, in the head-to-head connection, the path between x and z “*opens*” when probabilistic evidence becomes available, either at y or *at any one* of its descendants.
+
+Definition 15.3
