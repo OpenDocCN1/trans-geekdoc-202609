@@ -1,0 +1,34825 @@
+# 动态网站开发的 PHP 与 MySQL：Visual QuickPro 指南（第 4 版）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 献词
+
+献给我的母校东北密苏里州立大学的优秀师资。特别要感谢：Monica Barron 博士、Dennis Leavens 博士、Ed Tyler 博士和 Cole Woodcox 博士，后者我还有幸称为我的挚友。如果没有这些教育工作者慷慨、深刻且卓越的教导，我就不会成为今天作为作家、学生、教师或一个人的我。
+
+## 特别鸣谢
+
+衷心感谢 Peachpit Press 的所有人，一如既往。
+
+感谢杰出的编辑 Rebecca Gulick，她让我的工作轻松了许多。感谢 Patricia Pane 的辛勤工作、有益的建议和令人印象深刻的细致关注。感谢 Valerie Haynes-Perry 编写索引，感谢 Myrna Vladic 和 Deb Roberti 负责书籍排版，感谢 Anselm Bradford 进行技术审阅。
+
+向 PHP、MySQL、Apache、phpMyAdmin、MAMP 和 XAMPP 等其他优秀项目的开发者们致敬。向各新闻组、邮件列表、支持论坛等的热心人士致以衷心的“干杯”，他们为有需要的人提供帮助和建议。
+
+感谢读者们一如既往的支持，赋予了我的工作意义。特别多谢那些为第 17 章“示例——留言板”提供翻译的人员，以及提出希望在本版中看到什么内容建议的人员。
+
+感谢 Karnesha 和 Sarah 照顾和陪伴孩子们，让我能腾出手来完成一些工作。
+
+最后，如果没有妻子 Jessica 的爱与支持，我无法完成任何一本书。特别向 Zoe 和 Sam 致意，他们给了我写书的理由，也给了我不写书的理由！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+如今的 Web 用户期望看到精彩的页面，这些页面经常更新并提供定制化的体验。对他们而言，Web 站点更像是*社区*，他们会一次又一次地回访。同时，Web 站点管理员希望站点更易于更新和维护，因为他们明白这是跟上访问者期望的唯一合理途径。基于这些原因及其他原因，PHP 和 MySQL 已成为创建动态、数据库驱动型 Web 站点的事实标准。
+
+本书汇集了我多年的 Web 开发经验，并结合了我撰写的几本关于本书所讨论技术的前作的精华。本书的重点是以最高效的方式涵盖最重要的知识。它将教你如何开始开发动态 Web 站点，并提供大量示例代码帮助你入门。你只需提供一颗渴望学习的心。
+
+当然，还得有一台电脑。
+
+### 什么是动态 Web 站点？
+
+动态 Web 站点是灵活且强大的，更准确地说应将其描述为*应用程序*，而不仅仅是站点。动态 Web 站点
+
+- 响应不同的参数（例如，一天中的时间或访问者 Web 浏览器的版本）
+- 拥有“记忆”，允许用户注册和登录、电子商务及类似流程
+- 几乎总是集成 HTML 表单，允许访问者执行搜索、提供反馈等
+- 通常具有供管理员管理站点内容的界面
+- 比静态制作的站点更易于维护、升级和扩展
+
+有许多技术可用于创建动态 Web 站点。最常见的是 ASP.NET（Active Server Pages，微软的构架）、JSP（Java Server Pages）、ColdFusion、Ruby on Rails（Ruby 编程语言的 Web 开发框架）和 PHP。动态 Web 站点并不总是依赖数据库，但越来越多的站点开始依赖数据库，特别是当像 MySQL 这样优秀的数据库应用程序几乎零成本可用时。
+
+#### 什么是 PHP？
+
+PHP 最初代表“Personal Home Page”（个人主页），因为它是由 Rasmus Lerdorf 于 1994 年创建的，用于追踪访问其在线简历的访问者。随着其实用性和功能的增强（以及它开始被用于更专业的场合），其含义演变为“PHP: Hypertext Preprocessor”（PHP：超文本预处理器）。
+
+根据官方 PHP 网站 **[www.php.net](http://www.php.net)** 的说法，PHP 是一种“广泛使用的通用脚本语言，特别适合 Web 开发，并可嵌入 HTML 中。”这是一个冗长但描述准确的定义，我将为你解释其含义。
+
+![Image](img/00_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) PHP 的主页。
+
+
+
+
+从该声明的末尾开始说，PHP `可以嵌入 HTML` 意味着你可以获取一个标准的 HTML 页面，在需要的地方插入一些 PHP，最终得到一个动态结果。这一特性使得 PHP 对任何做过哪怕一点点 HTML 工作的人都非常容易上手。
+
+此外，PHP 是一种 `脚本` 语言，相对于 `编译型` 语言：PHP 旨在编写 Web 脚本，而非独立应用程序（尽管现在付出一些额外努力，你也可以用 PHP 创建应用程序）。PHP 脚本仅在事件发生后运行——例如，当用户提交表单或访问一个 URL（统一资源定位符，Web 地址的技术术语）时。
+
+我应该补充说明，PHP 是一种服务端的、跨平台的技术，这两个描述都很重要。`服务端` 指的是 PHP 所做的一切都发生在服务器上。需要一个 Web 服务器应用程序，如 Apache 或微软的 IIS（Internet Information Services，互联网信息服务），并且所有 PHP 脚本都必须通过 URL（`http://`*某物*）来访问。其跨平台的本质意味着 PHP 可在大多数操作系统上运行，包括 Windows、Unix（及其众多变体）和 Macintosh。更重要的是，在一台服务器上编写的 PHP 脚本通常无需修改或仅需少量修改即可在另一台服务器上运行。
+
+***
+
+### PHP 6 发生了什么？
+
+当我撰写本书的上一版 *PHP 6 and MySQL 5 for Dynamic Web Sites: Visual QuickPro Guide* 时，PHP 的下一个主要版本——PHP 6——大约完成了 50%。考虑到 PHP 6 会在书出版后某个时候发布，我在该版的部分内容中依赖了一个 PHP 6 的测试版。然后……PHP 6 夭折了。
+
+PHP 6 计划的关键特性之一是支持 Unicode，这意味着 PHP 6 能够原生地处理任何语言。这将是对一个已广受欢迎的编程工具的极佳补充。不幸的是，实现 Unicode 支持从复杂变得非常困难，语言背后的开发者们搁置了 PHP 6 的开发。然而，并非一无所获：PHP 6 计划中的其他一些特性，例如对 `命名空间`（一种面向对象编程概念）的支持，被加入到了 PHP 5.3 中。
+
+在撰写本书时，尚不清楚 Unicode 支持何时能完成，也不清楚 PHP 6 会如何发展。我的直觉是，PHP 将在版本 5 的主干上进行一段时间的增量开发。
+
+***
+
+在本书撰写时，PHP 处于 5.3.6 版本，本书假设你使用的是至少 5.0 版本。书中涵盖的一些函数和特性将需要更具体或更新的版本，如 PHP 5.2 或更高版本。在这些情况下，我会明确说明该功能是在哪个 PHP 版本中添加的，并为使用稍旧版本语言的读者提供替代方案。
+
+如果你仍在使用 PHP 4 版本，你真的应该升级。如果这不在你的计划中，请改阅读本书的第二版。
+
+关于 PHP 的更多信息，始终可以在 PHP.net 或 Zend（[www.zend.com](http://www.zend.com)）——PHP 核心背后的智囊团——找到。
+
+### 为什么使用 PHP？
+
+简单来说，在开发动态 Web 网站方面，PHP 比其他替代方案更好、更快、更容易学习。使用 PHP 你将获得卓越的性能、与几乎所有可用数据库的紧密集成、稳定性、可移植性，以及因其可扩展性而带来的近乎无限的功能集。所有这些都无需成本（PHP 是开源的），且拥有非常平缓的学习曲线。PHP 是我见过的最完美的结合之一，它既让初学者能轻松上手，又能让高级程序员做他们需要的一切。
+
+最后，事实胜于雄辩：自诞生以来，PHP 的使用量呈指数级增长，是超过 76% 所有网站的首选服务端技术 ![Image](img/circle-b.jpg)。就所有编程语言而言，PHP 是第五大最流行的语言 ![Image](img/circle-c.jpg)。
+
+![Image](img/00_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg)Web Technology Surveys 网站提供了这张关于服务端技术的图表（[www.w3techs.com/technologies/overview/programming_language/all](http://www.w3techs.com/technologies/overview/programming_language/all)）。
+
+![Image](img/00_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg)Tiobe 指数（[`www.tiobe.com/index.php/content/paperinfo/tpci/index.html`](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html)）使用多种因素组合对编程语言的流行度进行排名。
+
+当然，你可能会认为，作为一本 PHP 书的作者（实际上是好几本），我的观点有偏见。虽然程度远不如 PHP 深，但我也曾使用 Java Server Pages (JSP)、Ruby on Rails (RoR) 和 ASP.NET 开发过网站。各有优劣，但 PHP 是我始终会回归的技术。你可能会听说它的性能或扩展性不如其他技术，但 Yahoo!、Wikipedia 和 Facebook 都在使用 PHP，你找不到比这些访问量更大、要求更高的网站了。
+
+你可能也会想知道 PHP 有多安全。但 `安全性不在于语言本身`；而在于如何使用该语言。请放心，本书提供了关于所有相关安全问题的完整且最新的讨论。
+
+### PHP 如何工作
+
+如前所述，PHP 是一种服务端语言。这意味着你编写的 PHP 代码位于一台称为 `服务器` 的主机计算机上。服务器将网页发送给请求的访问者（即你，客户端，使用你的 Web 浏览器）。
+
+当访问者访问一个用 PHP 编写的网站时，服务器读取 PHP 代码，然后根据其脚本指令进行处理。在 ![Image](img/circle-d.jpg) 所示的示例中，PHP 代码指示服务器将适当的数据——HTML 代码——发送给 Web 浏览器，浏览器将接收到的代码视为标准的 HTML 页面处理。
+
+![Image](img/00_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg)当用户请求网页时，PHP 如何融入客户端/服务器模型。
+
+这与静态 HTML 网站不同，后者在发出请求时，服务器仅将 HTML 数据发送给 Web 浏览器，不会发生任何服务端解释 ![Image](img/circle-e.jpg)。因为不需要服务端动作，你可以在不使用服务器的情况下在 Web 浏览器中运行 HTML 页面。
+
+![Image](img/00_figure_05_e.jpg)
+
+![Image](img/circle-e.jpg)请求静态 HTML 页面时的客户端/服务器流程。
+
+对于最终用户和 Web 浏览器而言，`home.html` 和 `home.php` 看起来可能没有可感知的差别，但该页面内容的创建方式将截然不同。
+
+### 什么是 MySQL？
+
+MySQL（[www.mysql.com](http://www.mysql.com)） ![Image](img/circle-f.jpg) 是世界上最流行的开源数据库。事实上，如今 MySQL 是昂贵的巨头如 Oracle 和微软 SQL Server 的有力竞争者（具有讽刺意味的是，MySQL 归 Oracle 所有）。像 PHP 一样，MySQL 提供卓越的性能、可移植性和可靠性，拥有适度的学习曲线，且几乎零成本。
+
+![Image](img/00_figure_06_f.jpg)
+
+![Image](img/circle-f.jpg)MySQL 数据库应用程序的主页。
+
+MySQL 是关系型数据库的数据库管理系统（DBMS）（因此，MySQL 是一个 RDBMS）。用最简单的术语来说，数据库是数据的集合，无论是文本、数字还是二进制文件，由 DBMS 存储并保持有序。
+
+
+
+
+# 数据库类型与 MySQL 简介
+
+数据库类型多种多样，从简单的平面文件到关系型和面向对象型。关系型数据库使用多张表以最清晰的方式存储信息。虽然关系型数据库在设计和编程阶段可能需要更多思考，但它们提供了更高的可靠性和数据完整性，足以弥补所需的额外工作量。此外，关系型数据库更易于搜索，并支持并发用户。
+
+通过将数据库集成到 Web 应用程序中，部分由 PHP 生成的数据可以从 MySQL 中检索。这进一步将网站内容从静态（硬编码）基础转移到灵活的基础上，而灵活性是动态网站的关键。
+
+![动态 Web 应用程序工作流程](img/00_figure_07_g.jpg)
+
+![MySQL 图标](img/circle-g.jpg) 大多数本书中的动态 Web 应用程序将如何工作，同时使用 PHP 和 MySQL。
+
+MySQL 是一款开源应用程序，就像 PHP 一样，这意味着它可以免费使用甚至修改（源代码本身可供下载）。在某些情况下，你需要支付 MySQL 许可证费用，特别是当你通过销售或集成 MySQL 产品获利时。请查阅 MySQL 的许可政策以获取更多信息。
+
+MySQL 软件由多个组件组成，包括 MySQL 服务器（`mysqld`，运行并管理数据库）、MySQL 客户端（`mysql`，提供与服务器交互的界面）以及用于维护和其他目的的众多实用程序。PHP 一直对 MySQL 有良好的支持，在最新版本的语言中这一点更加明显。
+
+MySQL 已知可处理多达 60,000 张表、超过 50 亿行的数据库。在某些操作系统上，MySQL 可处理高达 800 万 TB 的表，通常情况下为 4 GB。NASA 和美国人口普查局等众多机构都在使用 MySQL。
+
+截至本书撰写时，MySQL 版本为 5.5.13，5.6 和 6.0 版本正在开发中。你所使用的 MySQL 版本会影响可用功能，因此了解你正在使用的版本非常重要。本书使用 MySQL 5.1.44 和 5.5.8 版本，但只要你使用的 MySQL 版本大于 5.0，就应该能完成本书中的所有操作。
+
+---
+
+## 发音指南
+
+虽然这微不足道，但我应提前澄清：MySQL 的标准发音是 “My Ess Que Ell”，正如 SQL 应发音为 “Ess Que Ell”。这是许多初次接触这些技术的人常有的疑问。虽然这不是关键问题，但正确发音首字母缩略词总是最好的。
+
+---
+
+## 所需工具
+
+要学习本书中的示例，你需要以下工具：
+
+- Web 服务器应用程序（例如 Apache、Abyss 或 IIS）
+- PHP
+- MySQL
+- Web 浏览器（Microsoft Internet Explorer、Mozilla Firefox、Apple Safari、Google Chrome 等）
+- 文本编辑器、支持 PHP 的 WYSIWYG 应用程序（Adobe Dreamweaver 符合要求）或 IDE（集成开发环境）
+- FTP 应用程序（如果使用远程服务器）
+
+使用 PHP 和 MySQL 开发动态网站的一大优势是，无论你的操作系统是什么，所有需求都可以零成本满足！Apache、PHP 和 MySQL 均免费；Web 浏览器免费获取；许多优秀的文本编辑器也免费提供。
+
+附录（可从 `http://www.peachpit.com` 下载）讨论了在 Windows 和 Mac OS X 操作系统上的安装过程。如果你有一台电脑，只需下载几个文件就能创建动态网站（在这种情况下，你的电脑将同时代表客户端和服务器）。相反，你也可以每月只需几美元购买 Web 托管服务，这将为你提供一个已上线的、支持 PHP 和 MySQL 的环境。
+
+> **Tip**
+> 要从 peachpit.com 下载本书的附录，请在 `http://peachpit.com` 创建一个免费账户，然后使用 ISBN 号 0321784073 注册本书。注册后，你将获得额外内容的访问权限。
+
+---
+
+## 关于本书
+
+本书教授如何使用 PHP 和 MySQL 开发动态网站，涵盖大多数开发者可能需要的知识。秉承 Visual QuickPro 系列的格式，信息通过循序渐进的方法配合相应图像进行讲解。重点放在真实、实用的示例上，避免了 “你可以做但永远不会做” 的场景。作为一名实践的 Web 开发者，我撰写了我使用的信息，避免了与手头任务无关的主题。作为一名实践的作家，我确保包含了我知道读者正在询问的主题和技术。
+
+本书结构线性，旨在按顺序阅读。前三章涵盖 PHP 基础（到第二章时，你将已开发出第一个动态网页）。随后四章讲解 SQL（结构化查询语言，用于与所有数据库交互）和 MySQL。这些章节教授 SQL 基础、数据库设计及 MySQL 应用的具体细节。接着有一章关于调试和错误管理的内容，这是每个人都需要的。随后是一章介绍如何将 PHP 和 MySQL 结合使用，这非常容易。
+
+接下来的五章教授更多应用技术以完善你的知识。特别是安全性，在这些页面中反复被提及。两章新内容将拓展你的新知识。最后，我包含了三个示例章节，在其中开发不同 Web 应用程序的核心，并附带说明。
+
+### 这本书适合你吗？
+
+本书面向初级到中级的广泛读者。本书使用 XHTML，因此扎实的 XHTML 或 HTML 经验是必须的。虽然本书涵盖许多内容，但不正式教授 HTML 或网页设计。书中穿插了一些 CSS 但也不教授。
+
+其次，本书期望你具备以下条件之一：
+
+- 无需过多指导即可学习的动力和能力，或……
+- 熟悉另一种编程语言（即使扎实的 JavaScript 技能也符合要求），或……
+- 对 PHP 有浅显的了解
+
+毫无疑问：本书从 A 到 Z 涵盖了 PHP 和 MySQL，教授开发真实网站所需的一切，但特别是早期章节讲解 PHP 的节奏较快。因此，我建议要么有一些编程经验，要么在学习新事物时拥有好奇心和独立精神。如果你觉得进度太快，最好从我的另一本书《PHP for the World Wide Web: Visual QuickStart Guide》最新版开始，节奏平缓得多。
+
+无需数据库经验，因为 SQL 和 MySQL 从更基础的层面开始讲解。
+
+### 本版新增内容
+
+前三版广受欢迎，我收到了很多积极反馈（谢谢！）。在撰写新版时，我不仅想更新内容以适配最新版 PHP 和 MySQL（这是全书的首要考量），还增加了以下新特性：
+
+- 展示读者常请求技术的新示例
+- 更多高级 MySQL 和 SQL 指导及示例
+- 使用 jQuery JavaScript 框架的教程
+- 面向对象编程基础及基本用法介绍
+- 更多提升脚本和网站安全性的信息和示例
+
+
+
+
+• 扩展并更新了安装和配置说明
+
+• 移除了过时内容（例如旧版 PHP 中使用的内容或不再适用的内容）
+
+• 每章末尾增加了“复习与深入”部分，包含复习问题和提示，引导您如何根据刚学的知识进一步拓展知识面
+
+对于拥有前几版书籍的读者（谢谢，谢谢，谢谢！），我相信这些新特性也将使本书成为您案头或书架上必备的参考书。
+
+#### 本书与我的其他著作对比
+
+这是我的第四本 PHP 和/或 MySQL 书籍，按顺序依次为：
+
+• *《PHP for the World Wide Web: Visual QuickStart Guide》（PHP 万维网开发：可视化快速入门指南）*
+
+• *《PHP 5 Advanced for the World Wide Web: Visual QuickPro Guide》（PHP 5 万维网高级开发：可视化快速专业指南）*
+
+• *《MySQL: Visual QuickStart Guide》（MySQL：可视化快速入门指南）*
+
+希望这份履历能暗示我具备撰写本书的资格，但作为站在书店里的读者，您该如何决定哪本书适合您？当然，您非常欢迎大方购买全套，这将让我感激不尽，但是……
+
+*《PHP for the World Wide Web: Visual QuickStart Guide》* 是一本非常面向初学者的 PHP 指南。本书与它有部分重叠，主要集中在前三章，但使用了新示例以避免冗余。对于新手，本书可作为那本书的后续进阶读物。那本高级指南实际上是本书的续集，因为它假设读者已具备相当的知识基础，并建立在本书所教授的许多概念之上。MySQL 那本书几乎完全专注于 MySQL（只有两章涉及 PHP）。
+
+考虑到这一点，请阅读“本书适合您吗？”部分，看看要求是否符合您的情况。如果您完全没有编程经验，并希望更循序渐进地学习 PHP，我的第一本书会更合适。如果您已经非常熟练掌握 PHP 并想学习其更多高级功能，请选择第二本。如果您主要对 MySQL 感兴趣，且不关心学习太多 PHP 知识，请看第三本。
+
+也就是说，如果您想学习今天使用 PHP 和 MySQL 开发动态网站所需的一切知识，那么本书就是为您准备的！它参考了两项技术的最新版本，使用了其他书籍中未曾讨论的技巧，并包含独家示例。
+
+无论您选择哪本书，请确保购买最新版本，或者至少选择与您将要使用的技术版本最匹配的版本。
+
+### 配套网站
+
+我专门为本书开发了一个配套网站，您可以访问 **[www.LarryUllman.com](http://www.LarryUllman.com)**。在那里，您将找到本书中的每一个脚本、一个包含冗长 SQL 命令的文本文件，以及出版过程中出现的勘误表。（如果您在命令或脚本上遇到问题，且完全按照书中操作，请查阅勘误表，确认不是印刷错误，以免让自己抓狂。）在该网站上，您还将找到有用的网络链接、一个读者可以互相提问和解答的热门论坛（我亲自解答许多问题），以及更多内容！
+
+#### 问题、意见或建议？
+
+如果您有任何关于 PHP 或 MySQL 的问题，可以求助于现有的众多网站、邮件列表、新闻组和 FAQ 资源库。快速在线搜索将获得几乎无限的资源。话虽如此，如果您需要即时答案，这些来源或快速网络搜索肯定能满足您的需求（极有可能其他人已经遇到并解决了您的同款问题）。
+
+您也可以直接向我提出问题、意见和建议。使用本书对应的论坛能获得最快回复（我总是优先回答那些问题）。如果您更倾向于发邮件，我的联系方式在网站上提供。我会尽量回复收到的每一封邮件，但无法保证快速回复。
+
+***
+
+**出版商提示：查看作者 Larry Ullman 的配套视频培训！**
+
+Visual QuickStart Guides 现在更加直观：基于畅销书 Visual QuickStart Guides 的成功，Peachpit 现推出 Video QuickStarts。作为本书的配套资料，Peachpit 提供了一小时以上的短小、任务导向的视频，帮助您掌握关键特性和技巧；您不必只是阅读如何编写 PHP 和 MySQL 脚本，而是可以亲眼看到它们的运行过程。这是学习所有基础知识以及一些较新或更复杂语言特性的绝佳方式。登录 Peachpit 网站 [www.peachpit.com/register](http://www.peachpit.com/register) 注册您的书籍，即可找到免费的流媒体试看样片；购买其余内容快速简便。
+
+***
+
+## 1. PHP 简介
+
+本章内容
+
+基本语法 2
+
+向 Web 浏览器发送数据 6
+
+编写注释 10
+
+什么是变量？ 14
+
+字符串简介 18
+
+字符串拼接 21
+
+数字简介 23
+
+常量简介 26
+
+单引号与双引号 29
+
+基本调试步骤 33
+
+复习与深入 34
+
+虽然本书侧重于 MySQL 和 PHP 的结合使用，但您绝大部分的基础工作将仅使用 PHP 完成。在本章和下一章中，您将学习其基础知识，从语法到变量、运算符和语言结构（条件判断、循环等）。在掌握这些基础知识的同时，您也将开始编写可用的代码，稍后将在本书中将其集成到更大的应用程序中。
+
+本介绍性章节将带您快速浏览 PHP 语言的大部分基础知识。您将学习 PHP 编码语法、如何向 Web 浏览器发送数据，以及如何使用两种变量（字符串和数字）加上常量。有些示例可能看似微不足道，但它们将演示您必须掌握的思想，以便日后编写更高级的脚本。本章最后提供了一些快速调试技巧……您懂的……以防万一！
+
+### 基本语法
+
+正如本书导言所述，PHP 是一种 *HTML-embedded*（HTML 嵌入式）脚本语言，这意味着您可以在同一个文件中混合编写 PHP 和 HTML 代码。因此，要开始 PHP 编程，请从一个简单的网页入手。**脚本 1.1** 是一个无花哨、无内容的 XHTML Transitional 文档示例，将作为本书中大多数网页的基础（本书不正式讨论 [X]HTML；更多信息请参阅专门资源）。请注意，该模板使用 UTF-8 编码，此主题将在侧边栏讨论。
+
+要向页面添加 PHP 代码，请将其放在 PHP 标签内：
+
+```
+<?php  
+
+?>
+```
+
+**脚本 1.1.** 一个基本的 XHTML 1.0 Transitional 网页。
+
+***
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML  
+      1.0 Transitional//EN" "http://www.w3.org/  
+      TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+2   <html xmlns="http://www.w3.org/1999/  
+      xhtml" xml:lang="en" lang="en">  
+3   <head>  
+4       <meta http-equiv="Content-Type"  
+          content="text/html; charset=utf-8" />  
+5       <title>Page Title</title>  
+6   </head>  
+7   <body>  
+8       <!-- Script 1.1 - template.html -->  
+9   </body>  
+10  </html>
+```
+
+***
+
+### 理解编码
+
+
+
+编码是一个庞大的主题，但你最需要理解的是：文件中使用的编码决定了可以表示哪些字符（因此，也决定了可以使用哪些语言）。要选择一种编码，你必须首先确认你的文本编辑器或集成开发环境（IDE）——无论你用什么应用程序来创建 HTML 和 PHP 脚本——能否使用该编码保存文档。有些应用程序允许你在首选项或选项区域设置编码；而另一些则在你保存文件时设置编码。
+
+要向 Web 浏览器指明编码，有一个对应的 `meta` 标签：
+
+```
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+```
+
+`charset=utf-8` 部分表明正在使用 UTF-8 编码，即 8 位 Unicode 转换格式的简称。Unicode 是一种可靠地表示每种字母表中每个符号的方式。撰写本书时，Unicode 的第 6 版——即当前版本——支持超过 99,000 个字符！
+
+如果你想创建一个多语言网页，UTF-8 是首选，本书的示例也将使用它。当然，你也可以不这么做。但无论你使用什么编码，都要确保 XHTML 页面指明的编码与你的文本编辑器或 IDE 中实际设置的编码相匹配。如果不匹配，当你在 Web 浏览器中查看页面时，很可能会看到乱码。
+
+---
+
+### 脚本 1.2
+
+这个第一个 PHP 脚本不执行任何操作，但演示了 PHP 脚本的编写方式。在深入复杂的 PHP 代码之前，它也将作为一个测试脚本使用。
+
+---
+
+```
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+      1.0 Transitional//EN" "http://www.w3.org/
+      TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/
+      xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+5      <title>Basic PHP Page</title>
+6  </head>
+7  <body>
+8      <!-- Script 1.2 - first.php -->
+9      <p>This is standard HTML.</p>
+10 <?php
+11 ?>
+12  </body>
+13  </html>
+```
+
+---
+
+### HTML5
+
+撰写本书时，HTML 的下一个主要版本——HTML5——正在积极开发和讨论中，但尚未准备好用于生产环境，这就是为什么我选择不在书中使用它。事实上，当我开始写这本书的第五版时，HTML5 可能仍未发布，而浏览器对该语言的广泛采用将需要更长的时间。尽管如此，作为一个令人振奋的未来发展方向，本书将偶尔提及你可以期待随时间推移而引入和支持的特性。
+
+---
+
+任何写在这些标签内的内容都将被 Web 服务器视为 PHP 处理，意味着 PHP 解释器会解析该代码。PHP 标签之外的任何文本都会作为常规 HTML 立即发送给 Web 浏览器。（因为 PHP 最常用于创建在 Web 浏览器中显示的内容，所以 PHP 标签通常放在页面主体的某个位置。）
+
+除了将 PHP 代码放在 PHP 标签内，你的 PHP 文件还必须具有正确的扩展名。扩展名告诉服务器以特殊方式处理该脚本，即将其作为 PHP 页面处理。大多数 Web 服务器对标准 HTML 页面使用 `.html`，对 PHP 文件使用 `.php`。
+
+在进入步骤之前，请明白你必须已经拥有一个可用的 PHP 安装环境！这可能是在托管网站上，也可能是在你自己的电脑上，遵循附录 A“安装”中的说明操作后即可，该附录可从 peachpit.com 免费下载。
+
+#### 创建基本 PHP 脚本
+
+**1.** 在文本编辑器或 IDE 中创建一个新文档，命名为 `first.php`（**脚本 1.2**）。
+
+通常你使用什么应用程序并不重要，无论是 Adobe Dreamweaver（一个功能强大的 IDE）、TextMate（一款优秀且流行的 Mac 纯文本编辑器），还是 vi（一款缺乏图形界面的 Unix 纯文本编辑器）。尽管如此，某些文本编辑器和 IDE 会让 HTML 和 PHP 的编写与调试变得更容易（反之，Windows 上的记事本做某些事会让编码变得更难：别用记事本！）。如果你还没有钟爱的应用程序，请搜索网络或使用本书对应的论坛（**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)**）来寻找一个。
+
+**2.** 创建一个基本的 HTML 文档：
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Basic PHP Page</title>
+</head>
+<body>
+  <!-- Script 1.2 - first.php -->
+<p>This is standard HTML.</p>
+</body>
+</html>
+```
+
+虽然本书全程使用这种语法，但你可以更改 HTML 以匹配你打算使用的任何标准（例如 HTML 4.0 Strict）。同样，如果你对这些 HTML 代码不熟悉，请参阅专门的 (X)HTML 资源。
+
+**3.** 在结束 `body` 标签之前，插入 PHP 标签：
+
+```
+<?php
+?>
+```
+
+这些是正式的 PHP 标签，也称为 XML 风格标签。虽然 PHP 支持其他类型的标签，但我建议你使用正式类型，本书也将始终如此。
+
+**4.** 将文件保存为 `first.php`。
+
+请记住，如果你不使用适当的 PHP 扩展名保存文件，脚本将无法正常执行。（不使用记事本的原因之一就是它会偷偷给 PHP 文件加上 `.txt` 扩展名，从而导致许多麻烦。）
+
+**5.** 将文件放置在 Web 服务器的适当目录中。
+
+如果你在自己的电脑上运行 PHP（推测是遵循了附录 A 中的安装说明），你只需将文件移动、复制或保存到电脑上的特定文件夹。如果你不知道正确的目录是什么，请查阅附录 A 或你特定 Web 服务器的文档以确定正确的目录。
+
+如果你在托管服务器上运行 PHP（即在远程计算机上），你需要使用文件传输协议（FTP）应用程序将文件上传到适当的目录。你的托管公司会提供访问权限和其他必要信息。
+
+**6.** 在 Web 浏览器中运行 `first.php`。
+
+![Image](img/01_figure_01_a.jpg)
+
+虽然它看起来像任何其他（简单的）HTML 页面，但这实际上是一个 PHP 脚本，也是本书其余示例的基础。
+
+因为 PHP 脚本需要由服务器解析，所以你绝对必须通过 URL 访问它们（即浏览器地址栏必须以 `http://` 开头）。你不能像在其他应用程序中打开文件那样直接在 Web 浏览器中打开它们（那种情况下地址会以 `file://` 或 `C:\` 或类似路径开头）。
+
+如果你在自己的电脑上运行 PHP，你需要使用类似 `http://localhost/first.php`、`http://127.0.0.1/first.php` 或 `http://localhost/~<user>/first.php`（在 Mac OS X 上，将 `<user>` 替换为你的实际用户名）这样的 URL。如果你使用 Web 主机，你需要使用 `http://your-domain-name/first.php`（例如 **[`www.example.com/first.php`](http://www.example.com/first.php)**）。
+
+**7.** 如果你看不到类似图中所示的结果，开始调试！
+
+学习任何编程语言的一部分就是掌握调试。这是一个有时痛苦但绝对必要的过程。对于这个第一个例子，如果你看不到一个简单但完全有效的网页，请遵循以下步骤：
+
+**1.** 确认你拥有一个可用的 PHP 安装环境（测试说明见附录 A）。
+
+
+
+
+## 2. 确保你是通过 URL 运行脚本
+
+Web 浏览器中的地址必须以 `http://` 开头。如果它以 `file://` 开头，那就是个问题。
+
+![Image](img/01_figure_02_b.jpg)
+
+只有通过 `http://` 运行时，PHP 代码才会被执行（就这个特定脚本而言，无论哪种方式都不受影响）。
+
+## 3. 如果你遇到“文件未找到”（或类似）错误
+
+你很可能把文件放错了目录，或者文件名拼写错误（无论是在保存时还是在 Web 浏览器中输入时）。
+
+如果你已经完成了所有这些步骤但仍然有问题，请求助于本书对应的论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+***
+
+### 提示
+
+要查找有关 HTML 和 XHTML 的更多信息，请参阅 Elizabeth Castro 的优秀著作 *HTML, XHTML, and CSS, Sixth Edition: Visual QuickStart Guide*（Peachpit Press, 2006）或在网络上搜索。
+
+***
+
+### 提示
+
+你可以在单个 HTML 文档中嵌入多个 PHP 代码段（即，你可以在两种语言之间来回切换）。你将在全书中看到这方面的示例。
+
+***
+
+### 提示
+
+在 UTF-8 之前，ISO-8859-1 是较常用的编码之一。它代表大多数西欧语言。它仍然是许多 Web 浏览器和其他应用程序的默认编码。
+
+***
+
+### 提示
+
+你可以通过在外部 CSS 文件的第一行添加 `@charset "utf-8"` 来声明其编码。如果你不使用 UTF-8，请相应地更改该行。
+
+***
+
+#### 向 Web 浏览器发送数据
+
+要使用 PHP 创建动态网站，你必须知道如何向 Web 浏览器发送数据。PHP 有许多内置函数可实现此目的，最常用的是 `echo` 和 `print`。我个人倾向于使用 `echo`：
+
+```
+echo 'Hello, world!';
+
+echo "What's new?";
+```
+
+如果你愿意，也可以使用 `print`（这个名称更明显地表明了它的作用）：
+
+```
+print 'Hello, world!';
+
+print "What's new?";
+```
+
+正如这些示例所示，你可以使用单引号或双引号（但这两种引号有区别，到本章结束时会清楚地说明）。函数名后的第一个引号表示要打印的消息的开始。下一个匹配的引号（即与开始引号同类型的下一个引号）表示要打印的消息的结束。
+
+除了学习如何向 Web 浏览器发送数据，你还应该注意到，在 PHP 中，所有语句——用外行话来说就是一行执行的代码——都必须以分号结尾。此外，PHP 在函数名方面是*不区分大小写*的，所以 `ECHO`、`echo`、`eCHo` 等都能工作。当然，全小写版本最容易输入。
+
+***
+
+#### 需要转义
+
+正如你可能发现的，向 Web 发送数据时的一个麻烦在于打印单引号和双引号。以下任一情况都会导致错误：
+
+```
+echo "She said, "How are you?"";
+
+echo 'I'm just ducky.';
+```
+
+解决此问题有两种方法。首先，打印双引号时使用单引号，反之亦然：
+
+```
+echo 'She said, "How are you?"';
+
+echo "I'm just ducky.";
+```
+
+或者，你可以通过在有问题的字符前加上反斜杠来*转义*它：
+
+```
+echo "She said, \"How are you?\"";
+
+echo 'I\'m just ducky.';
+```
+
+被转义的引号将像其他字符一样仅被打印出来。理解如何使用反斜杠转义字符是一个重要概念，本章末尾将更深入地介绍。
+
+***
+
+#### 脚本 1.3. 使用 `print` 或 `echo`，PHP 可以向 Web 浏览器发送数据。
+
+***
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+        1.0 Transitional//EN" "http://www.w3.org/
+        TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+        xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+            content="text/html; charset=utf-8" />
+5       <title>Using Echo</title>
+6   </head>
+7   <body>
+8       <!-- Script 1.3 - second.php -->
+9       <p>This is standard HTML.</p>
+10  <?php
+11  echo 'This was generated using PHP!';
+12  ?>
+13  </body>
+14  </html>
+```
+
+***
+
+#### 向 Web 浏览器发送数据
+
+**1.** 在文本编辑器或 IDE 中打开 `first.php`（参考脚本 1.2）。
+
+**2.** 在 PHP 标签之间（第 10 行和第 11 行），添加一条简单的消息（脚本 1.3）：
+
+```
+echo 'This was generated using PHP!';
+```
+
+你输入什么消息、使用哪个函数（`echo` 或 `print`），甚至使用哪种引号，其实都无关紧要——只是如果你的消息中包含单引号或双引号，请务必小心（请参阅侧边栏“需要转义”）。
+
+**3.** 如果愿意，更改页面标题以更好地描述此脚本（第 5 行）：
+
+```
+<title>Using Echo</title>
+```
+
+此更改仅影响浏览器窗口的标题栏。
+
+**4.** 将文件保存为 `second.php`，将其放入你的 Web 目录，并在 Web 浏览器中测试它。
+
+![Image](img/01_figure_03_a.jpg)
+
+结果仍然不算漂亮，但此页面是由 PHP 部分动态生成的。
+
+请记住，所有 PHP 脚本都必须通过 URL（`http://` `某物`）运行！
+
+**5.** 如有必要，调试脚本。
+
+如果你看到解析错误而不是你的消息，请检查是否已同时打开和关闭引号，并转义了任何有问题的字符（请参阅侧边栏）。此外，确保每个语句都以分号结尾。
+
+![Image](img/01_figure_04_b.jpg)
+
+这可能是你作为 PHP 程序员将看到的许多解析错误中的第一个（这个是由省略结束引号引起的）。
+
+如果你看到一个完全空白的页面，这可能有两个原因之一：
+
+*   HTML 有问题。通过查看页面源代码并寻找那里的 HTML 问题来测试这一点。
+
+    ![Image](img/01_figure_05_c.jpg)
+
+    导致 PHP 空白页面的一个可能原因是简单的 HTML 错误，比如这里的结束 `title` 标签（它缺少了斜杠）。
+
+*   发生了错误，但你的 PHP 配置中关闭了 `display_errors`，因此什么也没显示。在这种情况下，请参阅附录 A 中关于如何配置 PHP 以便重新开启 `display_errors` 的部分。
+
+***
+
+### 提示
+
+从技术上讲，`echo` 和 `print` 是*语言结构*，而非函数。话虽如此，不要因此感到困惑，为了方便我继续称它们为“函数”。此外，正如你稍后在本书中将看到的，我提及函数时会包含括号——例如 `number_format()`，而不仅仅是 `number_format`——以帮助将它们与变量和 PHP 的其他部分区分开来。这只是我自己的一个小习惯。
+
+***
+
+### 提示
+
+你可以而且经常会使用 `echo` 和 `print` 向 Web 浏览器发送 HTML 代码，如下所示：
+
+```
+echo '<p>Hello, <b>world</b>!</p>';
+```
+
+![Image](img/01_figure_06_d.jpg)
+
+PHP 可以向 Web 浏览器发送 HTML 代码（如此处的格式）以及简单文本。
+
+***
+
+### 提示
+
+`echo` 和 `print` 都可以跨多行使用：
+
+```
+echo 'This sentence is
+printed over two lines.';
+```
+
+***
+
+### 提示
+
+
+
+
+
+### 理解空白字符
+
+使用 PHP 时，你会将数据（如 HTML 标签和文本）发送给 Web 浏览器，浏览器随即会将这些数据渲染为最终用户所看到的 Web 页面。因此，你用 PHP 所做的工作通常是在创建 Web 页面的 *HTML 源代码*。牢记这一点，有三个值得注意的 *空白字符*（额外的空格、制表符和空行）区域：你的 PHP 脚本中、你的 HTML 源代码中，以及渲染后的 Web 页面中。
+
+PHP 通常对空白字符不敏感，这意味着你可以随意安排代码的间距，以使脚本更具可读性。HTML 通常也不敏感。具体来说，HTML 中唯一影响渲染页面的空白字符是单个空格（多个空格仍会被渲染为一个）。如果你的 HTML 源代码中的文本分布在多行上，并不意味着它在渲染后的页面中会显示为多行（![Image](img/graycircle-e.jpg) 和 ![Image](img/graycircle-f.jpg)）。
+
+要改变渲染后 Web 页面中的间距，请使用 HTML 标签 `<br />`（换行，旧版 HTML 标准中为 `<br>`）和 `<p></p>`（段落）。要改变用 PHP 创建的 HTML *源代码*的间距，你可以：
+
+*   在多行中使用 `echo` 或 `print`。
+*   在双引号内打印换行符（`\n`），这等同于按下 Enter 或 Return 键。
+
+---
+
+### 编写注释
+
+创建可执行的 PHP 代码只是编程过程的一部分（诚然，这是最重要的部分）。任何编程工作中另一个次要但仍至关重要的方面是为代码编写文档。事实上，当有人问我什么特质能区分初级程序员和经验丰富的程序员时，我坚定的回答是：对注释的良善且彻底的使用。
+
+在 HTML 中，你可以使用特殊标签添加注释：
+
+```html
+<!-- Comment goes here. -->
+```
+
+HTML 注释可在源代码中查看，但不会出现在渲染后的页面中（请参阅上一节中的 ![Image](img/graycircle-e.jpg) 和 ![Image](img/graycircle-f.jpg)）。
+
+PHP 注释的不同之处在于它们根本不会被发送给 Web 浏览器，这意味着最终用户甚至无法在查看 HTML 源代码时看到它们。
+
+PHP 支持三种注释语法。第一种使用井号或数字符号（`#`）：
+
+```php
+# This is a comment.
+```
+
+第二种使用双斜杠：
+
+```php
+// This is also a comment.
+```
+
+这两种方式都会导致 PHP 忽略从该符号开始直到行尾（当你按下 Return 或 Enter 键时）的所有内容。因此，这两种注释仅用于单行。它们也常用于在包含 PHP 代码的同一行末尾添加注释：
+
+```php
+print 'Hello!'; // Say hello.
+```
+
+第三种风格允许注释跨越多行：
+
+```php
+/* This is a longer comment
+that spans two lines. */
+```
+
+**脚本 1.4。** 这些基本注释演示了可在 PHP 中使用的三种注释语法。
+
+---
+
+```php
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+        1.0 Transitional//EN" "http://www.w3.org/
+        TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+        xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+            content="text/html; charset=utf-8" />
+5       <title>Comments</title>
+6   </head>
+7   <body>
+8   <?php
+
+9   # Script 1.4 - comments.php
+10  # Created March 16, 2011
+11  # Created by Larry E. Ullman
+12  # This script does nothing much.
+
+13  echo '<p>This is a line of text.<br />
+            This is another line of text.</p>';
+
+14  /*
+15  echo 'This line will not be
+            executed.';
+16  */
+
+17  echo "<p>Now I'm done.</p>";
+        // End of PHP code.
+
+18  ?>
+19  </body>
+20  </html>
+```
+
+---
+
+#### 为脚本添加注释
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `comments.php`，从初始 HTML 开始（**脚本 1.4**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Comments</title>
+</head>
+<body>
+```
+
+**2.** 添加初始 PHP 标签并编写第一批注释：
+
+```php
+<?php
+# Script 1.4 - comments.php
+# Created March 16, 2011
+# Created by Larry E. Ullman
+# This script does nothing much.
+```
+
+每个脚本应包含的首批注释之一是一个介绍性块，列出创建日期、修改日期、创建者、创建者联系方式、脚本用途等。有人建议 Shell 风格的注释（`#`）在脚本中更醒目，因此最适合此类标注。
+
+**3.** 向 Web 浏览器发送一些 HTML：
+
+```php
+echo '<p>This is a line of text.<br />This is another line of text.</p>';
+```
+
+此处具体做什么并不重要，只要生成一些供 Web 浏览器显示的内容即可。为了多样化，`echo` 语句将打印一些 HTML 标签，包括一个换行符（`<br />`）以增加生成的 HTML 页面的间距。
+
+**4.** 使用多行注释将第二条 `echo` 语句注释掉：
+
+```php
+/*
+echo 'This line will not be executed.';
+*/
+```
+
+通过用 `/*` 和 `*/` 包裹任意 PHP 代码块，你可以使该代码失效，而无需将其从脚本中删除。稍后移除注释标签，即可重新激活该部分 PHP 代码。
+
+**5.** 在第三条 `echo` 语句后添加最后一条注释：
+
+```php
+echo "<p>Now I'm done.</p>"; // End of PHP code.
+```
+
+这最后一条（多余的）注释展示了如何在行尾放置注释，这是一种常见做法。注意此处消息由双引号括起，因为单引号会与撇号冲突（请参阅本章前面的“需要转义”侧边栏）。
+
+**6.** 关闭 PHP 部分并完成 HTML 页面：
+
+```php
+?>
+</body>
+</html>
+```
+
+**7.** 将文件保存为 `comments.php`，将其放入 Web 目录，并在 Web 浏览器中测试 ![Image](img/circle-a.jpg)。
+
+![Image](img/01_figure_09_a.jpg)
+
+![Image](img/circle-a.jpg) 脚本 1.4 中的 PHP 注释不会出现在 Web 页面或 HTML 源代码中 ![Image](img/graycircle-b.jpg)。
+
+**8.** 如果你想一探究竟，请在 Web 浏览器中查看源代码，以确认 PHP 注释确实不在那里 ![Image](img/circle-b.jpg)。
+
+![Image](img/01_figure_10_b.jpg)
+
+![Image](img/circle-b.jpg) 脚本 1.4 中的 PHP 注释在客户端浏览器中无处可寻。
+
+---
+
+> **提示**
+>
+> 你不应该嵌套多行注释（`/* */`）（将一个放在另一个里面）。这样做会导致问题。
+
+---
+
+> **提示**
+
+
+
+
+任何 PHP 注释都可以用在行尾（例如，在函数调用之后）：
+
+```
+echo 'Howdy'; /* Say 'Howdy' */
+```
+
+虽然这是允许的，但这种用法远不如前者常见。
+
+***
+
+***
+
+提示
+
+你的脚本几乎不可能注释过多。编码时，始终宁可多写注释也不要少写。话虽这么说，为了节省篇幅，本书中的脚本不会像我建议的那样有详尽的文档注释。
+
+***
+
+***
+
+提示
+
+同样重要的是，当你修改脚本时，要保持注释的更新和准确。没有什么比注释说一套而代码实际做另一套更令人困惑的了。
+
+***
+
+### 什么是变量？
+
+变量是用于临时存储值的容器。这些值可以是数字、文本，或更复杂的数据。PHP 支持八种类型的变量。其中包括四种标量（单值）类型——`Boolean`（`TRUE` 或 `FALSE`）、`integer`（整数）、`floating point`（浮点数/小数）和 `strings`（字符串/字符）；两种非标量（多值）类型——`arrays`（数组）和 `objects`（对象）；加上 `resources`（资源，你会在与数据库交互时见到）和 `NULL`（这是一种没有值的特殊类型）。
+
+无论你创建哪种类型，PHP 中所有变量名都遵循特定的语法规则：
+
+*   变量名必须以美元符号（`$`）开头，例如 `$name`。
+*   变量名可以包含字母、数字和下划线的组合，例如 `$my_report1`。
+*   美元符号后的第一个字符必须是字母或下划线（不能是数字）。
+*   **PHP 中的变量名区分大小写！** 这是一条非常重要的规则。这意味着 `$name` 和 `$Name` 是完全不同的两个变量。
+
+要开始使用变量，接下来的脚本将输出三个*预定义变量*的值。标准变量是在脚本执行期间赋值的，而预定义变量在脚本开始执行时就已经有值了。这些预定义变量大多反映了服务器整体的属性，例如正在使用的操作系统。
+
+在进入脚本之前，还有两件事你应该知道。首先，变量可以使用等号（`=`）赋值，这也称为*赋值运算符*。其次，要显示变量的值，可以不加引号直接打印变量：
+
+```
+print $some_var;
+```
+
+或者变量可以在*双*引号内打印：
+
+```
+print "Hello, $name";
+```
+
+你不能在单引号内打印变量：
+
+```
+print 'Hello, $name'; // 不会生效！
+```
+
+**脚本 1.5.** 该脚本打印 PHP 众多预定义变量中的三个。
+
+***
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+       1.0 Transitional//EN" "http://www.w3.org/
+       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+       xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+           content="text/html; charset=utf-8" />
+5       <title>Predefined Variables</title>
+6   </head>
+7   <body>
+8   <?php # Script 1.5 - predefined.php
+
+9   // Create a shorthand version of the
+       variable names:
+10  $file = $_SERVER['SCRIPT_FILENAME'];
+11  $user = $_SERVER['HTTP_USER_AGENT'];
+12  $server = $_SERVER['SERVER_SOFTWARE'];
+
+13  // Print the name of this script:
+14  echo "<p>You are running the
+       file:<br /><b>$file</b>.</p>\n";
+
+15  // Print the user's information:
+16  echo "<p>You are viewing this page
+       using:<br /><b>$user</b></p>\n";
+
+17  // Print the server's information:
+18  echo "<p>This server is running:
+       <br /><b>$server</b>.</p>\n";
+
+19  ?>
+20  </body>
+21  </html>
+```
+
+***
+
+#### 使用变量
+
+**1.** 在文本编辑器或 IDE 中新建一个名为 `predefined.php` 的 PHP 文档，从最初的 HTML 开始（**脚本 1.5**）：
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Predefined Variables</title>
+</head>
+<body>
+```
+
+**2.** 添加 PHP 开启标签和第一条注释：
+
+```
+<?php # Script 1.5 - predefined.php
+```
+
+从这里开始，脚本将不再注释创建者、创建日期等信息，尽管你应该继续为你的脚本编写详尽的文档。不过，脚本会添加注释以指示脚本的编号和文件名，以便于交叉引用（无论是在书中还是当你从本书配套网站 **www.LarryUllman.com** 下载它们时）。
+
+**3.** 创建本脚本中要用到的第一个变量的简写版本：
+
+```
+$file = $_SERVER['SCRIPT_FILENAME'];
+```
+
+本脚本将使用三个变量，每个变量都来自更大的预定义变量 `$_SERVER`。`$_SERVER` 指代大量与服务器相关的信息。脚本使用的第一个变量是 `$_SERVER['SCRIPT_FILENAME']`。该变量存储正在运行的脚本的完整路径和名称（例如 `C:\Program Files\Apache\ htdocs\predefined.php`）。
+
+存储在 `$_SERVER['SCRIPT_FILENAME']` 中的值将被赋给新变量 `$file`。创建名称更短的新变量并将 `$_SERVER` 的值赋给它们，将使在打印时更容易引用这些变量。（这也绕过了另一个你将在适当时候了解到的问题。）
+
+**4.** 创建另外两个变量的简写版本：
+
+```
+$user = $_SERVER['HTTP_USER_AGENT'];
+$server = $_SERVER['SERVER_SOFTWARE'];
+```
+
+`$_SERVER['HTTP_USER_AGENT']` 代表访问脚本的用户的 Web 浏览器和操作系统。该值被赋给 `$user`。
+
+`$_SERVER['SERVER_SOFTWARE']` 代表服务器上运行 PHP 的 Web 应用程序（例如 Apache、Abyss、Xitami、IIS）。这是必须安装（见 **附录 A**）的程序，以便在该计算机上运行 PHP 脚本。
+
+**5.** 打印正在运行的脚本名称：
+
+```
+echo "<p>You are running the file:<br /><b>$file</b>.</p>\n";
+```
+
+要打印的第一个变量是 `$file`。注意该变量必须在双引号内使用，且该语句还使用了 PHP 换行符（`\n`），这将在生成的 HTML 源代码中添加一个换行。添加了一些基本的 HTML 标签——段落和粗体——以使生成的页面稍微美观一些。
+
+**6.** 打印访问脚本的用户信息：
+
+```
+echo "<p>You are viewing this page using:<br /><b>$user</b>.</p>\n";
+```
+
+这一行打印第二个变量 `$user`。重申第四步的内容，`$user` 对应 `$_SERVER['HTTP_USER_AGENT']`，指的是用于访问网页的操作系统、浏览器类型和浏览器版本。
+
+**7.** 打印服务器信息：
+
+```
+echo "<p>This server is running: <br /><b>$server</b>.</p>\n";
+```
+
+**8.** 完成 PHP 代码块和 HTML 页面：
+
+```
+?>
+</body>
+</html>
+```
+
+**9.** 将文件保存为 `predefined.php`，将其放在你的 Web 目录中，并在 Web 浏览器中测试它。
+
+![Image](img/01_figure_11_a.jpg)
+
+`predefined.php` 脚本向查看者报告关于脚本、用于查看它的 Web 浏览器以及服务器本身的信息。
+
+***
+
+提示
+
+如果你在运行此脚本或任何其他脚本时遇到问题，请求助于本书对应的 Web 论坛（**www.LarryUllman.com/forums/**）。
+
+***
+
+***
+
+提示
+
+
+
+如果可能，请使用不同的 Web 浏览器和/或在另一台服务器上运行此脚本 ![Image](img/circle-b.jpg)。
+
+![Image](img/01_figure_12_b.jpg)
+
+![Image](img/circle-b.jpg)这是本书中第一个真正动态的脚本，因为 Web 页面会根据运行它的服务器和查看它的 Web 浏览器而发生变化（请与 ![Image](img/graycircle-a.jpg) 进行比较）。
+
+***
+
+提示
+
+变量名不能包含空格。下划线通常用于代替空格。
+
+***
+
+提示
+
+创建变量时最重要的考虑因素是使用一致的命名方案。在本书中，你将看到我对变量名使用全小写字母，并用下划线分隔单词（`$first_name`）。一些程序员更喜欢使用大小写混合：`$FirstName`（称为“驼峰式”风格）。
+
+***
+
+提示
+
+PHP 对待变量非常随意，这意味着你不需要初始化它们（设置初始值）或声明它们（设置特定类型），并且你可以在多种类型之间转换变量而不会出现问题。
+
+***
+
+### 字符串简介
+
+既然你已经了解了变量的一般概念，让我们详细了解一下变量。要深入探讨的第一种变量类型是*字符串*。字符串仅仅是一段带引号的字符：字母、数字、空格、标点符号等。以下都是字符串：
+
+• ‘Tobias’
+
+• “In watermelon sugar”
+
+• ‘100’
+
+• ‘August 2, 2011’
+
+要创建一个字符串变量，请将一个字符串值赋给一个有效的变量名：
+
+```php
+$first_name = 'Tobias';
+
+$today = 'August 2, 2011';
+```
+
+创建字符串时，你可以使用单引号或双引号来封装字符，就像打印文本时一样。同样，你必须为字符串的开头和结尾使用同一种引号。如果该引号出现在字符串内部，则必须对其进行转义：
+
+```php
+$var = "Define \"platitude\", please.";
+```
+
+或者你也可以使用另一种引号：
+
+```php
+$var = 'Define "platitude", please.';
+```
+
+要打印字符串的值，请使用 `echo` 或 `print`：
+
+```php
+echo $first_name;
+```
+
+要在上下文中打印字符串的值，必须使用双引号：
+
+```php
+echo "Hello, $first_name";
+```
+
+你已经使用过一次字符串了——在上一节使用预定义变量时（那些变量的值恰好是字符串）。在下一个示例中，你将创建并使用自己的字符串。
+
+**脚本 1.6。** 此脚本创建字符串变量，并将它们的值发送到 Web 浏览器。
+
+***
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+      1.0 Transitional//EN" "http://www.w3.org/
+      TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+      xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+5       <title>Strings</title>
+6   </head>
+7   <body>
+8   <?php # Script 1.6 - strings.php
+
+9   // Create the variables:
+10  $first_name = 'Haruki';
+11  $last_name = 'Murakami';
+12  $book = 'Kafka on the Shore';
+
+13  // Print the values:
+14  echo "<p>The book <em>$book</em>
+          was written by $first_name
+          $last_name.</p>";
+
+15  ?>
+16  </body>
+17  </html>
+```
+
+***
+
+#### 使用字符串
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `strings.php`，从初始 HTML 开始，包含开启 PHP 标签（**脚本 1.6**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Strings</title>
+</head>
+<body>
+<?php # Script 1.6 - strings.php
+```
+
+**2.** 在 PHP 标签内，创建三个变量：
+
+```php
+$first_name = 'Haruki';
+
+$last_name = 'Murakami';
+
+$book = 'Kafka on the Shore';
+```
+
+这个基本示例创建了 `$first_name`、`$last_name` 和 `$book` 变量，随后将在一条消息中将它们打印出来。
+
+**3.** 添加一条 `echo` 语句：
+
+```php
+echo "<p>The book <em>$book</em> was written by $first_name $last_name.</p>";
+```
+
+该脚本所做的只是根据三个既定变量打印一条作者声明。为了使其更美观，还加入了一点 HTML 格式化（书名加了强调）。请记住，此处要使用双引号，以便变量值能被适当地打印出来（关于双引号重要性的更多内容见本章末尾）。
+
+**4.** 完成 PHP 代码块和 HTML 页面：
+
+```php
+?>
+</body>
+</html>
+```
+
+**5.** 将文件保存为 `strings.php`，将其放在你的 Web 目录中，并在 Web 浏览器中测试它 ![Image](img/circle-a.jpg)。
+
+![Image](img/01_figure_13_a.jpg)
+
+![Image](img/circle-a.jpg)生成的 Web 页面基于打印出的三个变量的值。
+
+**6.** 如果需要，更改三个变量的值，保存文件，并再次运行脚本 ![Image](img/circle-b.jpg)。
+
+![Image](img/01_figure_14_b.jpg)
+
+![Image](img/circle-b.jpg)通过更改脚本中的变量，脚本的输出也随之改变。
+
+***
+
+提示
+
+如果你给一个现有变量（例如 `$book`）赋予另一个值，新值将覆盖旧值。例如：
+
+```php
+$book = 'High Fidelity';
+
+$book = 'The Corrections';
+
+/* $book 现在的值为
+'The Corrections'。 */
+```
+
+***
+
+提示
+
+PHP 对字符串的大小没有设定限制。理论上你可能会受到服务器资源的限制，但你不太可能遇到这种问题。
+
+***
+
+**脚本 1.7。** 连接操作使你能够向字符串追加更多字符。
+
+***
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+      1.0 Transitional//EN" "http://www.w3.org/
+      TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+      xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+5       <title>Concatenation</title>
+6   </head>
+7   <body>
+8   <?php # Script 1.7 - concat.php
+
+9   // Create the variables:
+10  $first_name = 'Melissa';
+11  $last_name = 'Bank';
+12  $author = $first_name . ' ' .
+      $last_name;
+
+13  $book = 'The Girls\' Guide to Hunting
+      and Fishing';
+
+14  //Print the values:
+15  echo "<p>The book <em>$book</em>
+          was written by $author.</p>";
+
+16  ?>
+17  </body>
+18  </html>
+```
+
+***
+
+### 连接字符串
+
+*连接* 就像是字符串的加法，即将字符添加到字符串的末尾。它使用*连接运算符*执行，即英文句点 (`.`)：
+
+```php
+$city = 'Seattle';
+
+$state = 'Washington';
+
+$address = $city . $state;
+```
+
+`$address` 变量现在的值为 *SeattleWashington*，这几乎达到了预期结果 (*Seattle, Washington*)。为了改进这一点，你可以编写：
+
+```php
+$address = $city . ', ' . $state;
+```
+
+这样逗号和空格也会被连接到变量中。
+
+由于 PHP 对待变量非常宽松，因此字符串和数字之间也可以进行连接。以下任一语句都将产生相同的结果 (*Seattle, Washington 98101*)：
+
+```php
+$address = $city . ', ' . $state .
+' 98101';
+
+$address = $city . ', ' . $state .
+' ' . 98101;
+```
+
+让我们修改 `strings.php` 以使用这个新运算符。
+
+#### 使用连接
+
+**1.** 在文本编辑器或 IDE 中打开 `strings.php`（参考 **脚本 1.6**）。
+
+**2.** 在建立 `$first_name` 和 `$last_name` 变量之后（第 11 行和第 12 行），添加此行（**脚本 1.7**）：
+
+```php
+$author = $first_name . ' ' . $last_name;
+```
+
+
+
+作为连接演示，将创建一个新变量——`$author`——作为两个现有字符串及中间一个空格的连接结果。
+
+### 3. 更改 `echo` 语句以使用此新变量：
+
+```php
+echo "<p>The book <em>$book</em> was written by $author.</p>";
+```
+
+由于这两个变量已合二为一，因此应相应地修改 `echo` 语句。
+
+### 4. 如有需要，更改 HTML 页面标题以及名、姓和书名变量的值。
+
+### 5. 将文件保存为 `concat.php`，放入 Web 目录，并在 Web 浏览器中测试 ![Image](img/circle-a.jpg)。
+
+![Image](img/01_figure_15_a.jpg)
+
+![Image](img/circle-a.jpg) 在此修订后的脚本中，连接的最终结果对用户不可见。
+
+***
+
+### Tip
+
+PHP 拥有大量实用的字符串专用函数，您将在本书中逐一见到。例如，要计算字符串的长度（包含多少字符），请使用 `strlen()`：
+
+```php
+$num = strlen('some string'); // 11
+```
+
+***
+
+### Tip
+
+您可以使用以下函数让 PHP 转换字符串的大小写：`strtolower()` 将其全部转为小写；`strtoupper()` 将其全部转为大写；`ucfirst()` 将首字符大写；`ucwords()` 将每个单词的首字符大写。
+
+***
+
+### Tip
+
+如果只是将一个值连接到另一个值后面，可以使用连接赋值运算符 (`.=`) 。以下两种写法等效：
+
+```php
+$title = $title . $subtitle;
+$title .= $subtitle;
+```
+
+***
+
+### Tip
+
+本节开头的示例可改写为以下任意一种形式：
+
+```php
+$address = "$city, $state";
+```
+
+或
+
+```php
+$address = $city;
+$address .= ', ';
+$address .= $state;
+```
+
+***
+
+### 使用 PHP 手册
+
+PHP 手册——可在线访问 **[www.php.net/manual](http://www.php.net/manual)**——列出了该语言的每个函数和特性。手册首先讨论一般概念（安装、语法、变量），最后按主题分类列出函数（MySQL、字符串函数等）。
+
+要在 PHP 手册中快速查找任意函数，请在 Web 浏览器中访问 **[www.php.net/`functionname`](http://www.php.net/)**（例如 **[www.php.net/print](http://www.php.net/print)**）。手册针对每个函数均指明：
+
+*   该函数可用的 PHP 版本。
+*   函数接受的参数个数及类型（可选参数用方括号括起）。
+*   函数的返回值类型。
+
+手册还包含函数的说明。
+
+您应养成习惯：每当对某函数感到困惑、不确定如何正确使用，或需要深入了解语言的任何特性时，都去查阅 PHP 手册。了解您正在运行的 PHP 版本也至关重要，因为函数和 PHP 的其他细节会随时间变化。
+
+***
+
+### 数字简介
+
+在介绍变量时，我提到 PHP 同时拥有整型和浮点型（小数）两种数字类型。但根据我的经验，这两种类型在大多数情况下均可归类为通用的“数字”，而不会丢失任何有价值的区别。PHP 中合法的数字类型变量可以是：
+
+*   8
+*   3.14
+*   10980843985
+*   -4.2398508
+*   4.4e2
+
+请注意，这些值从不加引号——加引号的数字是具有数值的字符串——也不包含用于表示千位的逗号。此外，除非前面有减号 (`-`)，否则数字默认为正数。
+
+除了可以对数字使用标准算术运算符（**表 1.1**）外，PHP 还内置了数十个函数。其中两个常用函数是 `round()` 和 `number_format()`。前者将小数四舍五入为最接近的整数：
+
+```php
+$n = 3.14;
+$n = round($n); // 3
+```
+
+**表 1.1. 算术运算符**
+
+![Image](img/01tab01.jpg)
+
+`round()` 也可四舍五入到指定的小数位数：
+
+```php
+$n = 3.142857;
+$n = round($n, 3); // 3.143
+```
+
+`number_format()` 函数将数字转换为更常见的书写形式，即使用逗号分隔千位：
+
+```php
+$n = 20943;
+$n = number_format($n); // 20,943
+```
+
+该函数也可设置指定的小数位数：
+
+```php
+$n = 20943;
+$n = number_format($n, 2); // 20,943.00
+```
+
+为了练习数字操作，让我们编写一个模拟脚本，执行电子商务购物车中可能用到的计算。
+
+#### 使用数字
+
+### 1. 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `numbers.php`（**脚本 1.8**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Numbers</title>
+</head>
+<body>
+<?php # Script 1.8 - numbers.php
+```
+
+### 2. 建立所需变量：
+
+```php
+$quantity = 30;
+$price = 119.95;
+$taxrate = .05;
+```
+
+本脚本将使用三个硬编码变量进行计算。稍后您将看到如何动态确定这些值（即通过用户与 HTML 表单的交互）。
+
+### 3. 执行计算：
+
+```php
+$total = $quantity * $price;
+$total = $total + ($total * $taxrate);
+```
+
+第一行将订单总额设为购买的部件数量乘以单价。第二行再加上税额（通过税率乘以总额计算得出）。
+
+**脚本 1.8.** `numbers.php` 脚本执行基本数学计算，如电子商务应用中所用。
+
+***
+
+```php
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+       1.0 Transitional//EN" "http://www.w3.org/
+       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+       xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+            content="text/html; charset=utf-8" />
+5       <title>Numbers</title>
+6   </head>
+7   <body>
+8   <?php # Script 1.8 - numbers.php
+
+9   // Set the variables:
+10  $quantity = 30; // Buying 30 widgets.
+11  $price = 119.95;
+12  $taxrate = .05; // 5% sales tax.
+
+13  // Calculate the total:
+14  $total = $quantity * $price;
+15  $total = $total + ($total * $taxrate);
+       // Calculate and add the tax.
+
+16  // Format the total:
+17  $total = number_format($total, 2);
+
+18  // Print the results:
+19  echo '<p>You are purchasing <b>' .
+       $quantity . '</b> widget(s) at a cost
+       of <b>$' . $price . '</b> each. With
+       tax, the total comes to <b>$' .
+       $total . '</b>.</p>';
+
+20  ?>
+21  </body>
+22  </html>
+```
+
+***
+
+### 4. 格式化总额：
+
+```php
+$total = number_format($total, 2);
+```
+
+`number_format()` 函数将总额按千位分组并四舍五入到两位小数。应用此函数可正确格式化计算值。
+
+### 5. 输出结果：
+
+```php
+echo '<p>You are purchasing <b>' . $quantity . '</b> widget(s) at a cost of <b>$' . $price . '</b> each. With tax, the total comes to <b>$' . $total . '</b>.</p>';
+```
+
+脚本的最后一步是输出结果。`echo` 语句结合单引号文本和连接的变量，以输出 HTML、美元符号和变量值的完整组合。本章最后一个示例将展示另一种方法。
+
+### 6. 完成 PHP 代码和 HTML 页面：
+
+```php
+?>
+</body>
+</html>
+```
+
+### 7. 将文件保存为 `numbers.php`，放入 Web 目录，并在 Web 浏览器中测试 ![Image](img/circle-a.jpg)。
+
+![Image](img/01_figure_16_a.jpg)
+
+
+
+
+![Image](img/circle-a.jpg)数字 PHP 页面（脚本 1.8）根据设定的值执行计算。
+
+**8.** 如果需要，更改最初的三个变量并重新运行脚本 ![Image](img/circle-b.jpg)。
+
+![Image](img/01_figure_17_b.jpg)
+
+![Image](img/circle-b.jpg)要更改生成的网页，请更改任意或所有三个变量（与 ![Image](img/graycircle-a.jpg) 对比）。
+
+* * *
+
+**提示**
+
+在大多数平台上，PHP 支持的最大整数约为二十亿。对于大于该值的数字，PHP 将自动使用浮点类型。
+
+* * *
+
+**提示**
+
+在处理算术运算时，*优先级* 问题会出现（复杂计算的执行顺序）。虽然 PHP 手册和其他资料倾向于列出优先级的层级，但我发现将子句放在括号中以强制执行顺序会使编程更安全、更易读（请参阅 脚本 1.8 的第 17 行）。
+
+* * *
+
+**提示**
+
+计算机以处理小数著称不精。例如，数字 2.0 实际上可能被存储为 1.99999。大多数情况下这不会构成问题，但在数学精度至关重要的情况下，请依赖整数，而非小数。PHP 手册中有关于此主题的信息，以及用于提高计算精度的替代函数。
+
+* * *
+
+**提示**
+
+许多数学运算符也有对应的赋值运算符，允许你创建赋值的简写。这一行代码，
+
+```
+$total = $total + ($total * $taxrate);
+```
+
+可以重写为
+
+```
+$total += ($total * $taxrate);
+```
+
+* * *
+
+**提示**
+
+如果你设置 `$price` 值时未使用两位小数（例如 119.9 或 34），你会想要在打印前对 `$price` 应用 `number_format()`。
+
+* * *
+
+### 介绍常量
+
+常量与变量一样，用于临时存储值，但除此之外，常量和变量在许多方面有所不同。首先，要创建常量，你需要使用 `define()` 函数，而不是赋值运算符（`=`）：
+
+```
+define ('NAME', value);
+```
+
+请注意，根据经验法则，常量名称通常使用全大写，尽管这不是强制要求。最重要的是，常量不像变量那样使用初始美元符号（因为常量不是变量）。
+
+常量只能被赋予 *标量* 值，如字符串或数字：
+
+```
+define ('USERNAME', 'troutocity');  
+define ('PI', 3.14);
+```
+
+与变量不同，常量的值一旦定义就不能更改。
+
+要访问常量的值（例如当你想打印它时），不能将常量放在引号内：
+
+```
+echo "Hello, USERNAME"; // 不会生效！
+```
+
+使用该代码，PHP 会按字面意思打印 *Hello, USERNAME* ![Image](img/circle-a.jpg)，而不是 `USERNAME` 常量的值（因为没有迹象表明 `USERNAME` 不是字面文本）。相反，要么单独打印常量：
+
+```
+echo 'Hello, ';  
+echo USERNAME;
+```
+
+![Image](img/01_figure_18_a.jpg)
+
+![Image](img/circle-a.jpg)常量不能放在带引号的字符串中。
+
+要么使用连接运算符：
+
+```
+echo 'Hello, ' . USERNAME;
+```
+
+PHP 运行时带有几个预定义常量，这很像本章前面使用的预定义变量。这些常量包括 `PHP_VERSION`（正在运行的 PHP 版本）和 `PHP_OS`（服务器的操作系统）。下一个脚本将打印这两个值，以及用户定义常量的值。
+
+**脚本 1.9.** 常量是你可以在 PHP 中使用的另一种临时存储工具，区别于变量。
+
+* * *
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML  
+    1.0 Transitional//EN" "http://www.w3.org/  
+    TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+2   <html xmlns="http://www.w3.org/1999/  
+    xhtml" xml:lang="en" lang="en">  
+3   <head>  
+4       <meta http-equiv="Content-Type"  
+            content="text/html; charset=utf-8" />  
+5       <title>Constants</title>  
+6   </head>  
+7   <body>  
+8   <?php # Script 1.9 - constants.php  
+9   
+10  // Set today's date as a constant:  
+11  define ('TODAY', 'March 16, 2011');  
+12   
+13  // Print a message, using predefined  
+        constants and the TODAY constant:  
+14  echo '<p>Today is ' . TODAY . '.<br />  
+        This server is running version <b>' .  
+        PHP_VERSION . '</b> of PHP on the <b>' .  
+        PHP_OS . '</b> operating system.</p>';  
+15   
+16  ?>  
+17  </body>  
+18  </html>
+```
+
+* * *
+
+#### 使用常量
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `constants.php`（**脚本 1.9**）。
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  
+<head>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+  <title>Constants</title>  
+</head>  
+<body>  
+<?php # Script 1.9 - constants.php
+```
+
+**2.** 创建一个新的日期常量：
+
+```
+define ('TODAY', 'March 16, 2011');
+```
+
+这是一个公认微不足道的常量用法，但这个例子将说明要点。在第 9 章“将 PHP 与 MySQL 结合使用”中，你将看到如何使用常量来存储数据库访问信息。
+
+**3.** 打印出日期、PHP 版本和操作系统信息：
+
+```
+echo '<p>Today is ' . TODAY . '.<br />This server is running version <b>' . PHP_VERSION . '</b> of PHP on the <b>' . PHP_OS . '</b> operating system.</p>';
+```
+
+由于常量不能在引号内打印，请在 `echo` 语句中使用连接运算符。
+
+**4.** 完成 PHP 代码和 HTML 页面：
+
+```
+?>  
+</body>  
+</html>
+```
+
+**5.** 将文件保存为 `constants.php`，将其放在你的 Web 目录中，并在 Web 浏览器中测试它 ![Image](img/circle-b.jpg)。
+
+![Image](img/01_figure_19_b.jpg)
+
+![Image](img/circle-b.jpg)通过利用 PHP 的常量，你可以了解更多关于你的 PHP 设置的信息。
+
+* * *
+
+**提示**
+
+如果可能，在另一台启用了 PHP 的服务器上运行此脚本 ![Image](img/circle-c.jpg)。
+
+![Image](img/01_figure_20_c.jpg)
+
+![Image](img/circle-c.jpg)在不同的服务器上运行相同的脚本（请参阅 脚本 1.9）会得到不同的结果。
+
+* * *
+
+**提示**
+
+称为 *Darwin* 的操作系统 ![Image](img/graycircle-b.jpg) 是 Mac OS X 的技术术语。
+
+* * *
+
+**提示**
+
+在第 12 章“Cookie 和 Session”中，你将了解另一个常量 `SID`（代表 *session ID*）。
+
+* * *
+
+### 单引号与双引号
+
+在 PHP 中，理解单引号与双引号的区别很重要。对于 `echo` 和 `print`，或给字符串赋值时，你可以使用任意一种，正如迄今为止使用的示例所示。但这两种引号之间存在关键差异，且何时使用哪种也有讲究。你已经见过这种差异，但这是一个重要到足以值得进一步讨论的概念。
+
+在 PHP 中，*单引号内的值将被视为字面量*，而*双引号内的值将被解析*。换句话说，将变量和特殊字符（**表 1.2**）放在双引号内将导致打印出它们所代表的值，而不是它们的字面值。例如，假设你有
+
+```
+$var = 'test';
+```
+
+**表 1.2. 转义序列**
+
+![Image](img/01tab02.jpg)
+
+代码 `echo "var is equal to $var";` 将打印 *var is equal to test*，但代码 `echo 'var is equal to $var';` 将打印 *var is equal to $var*。使用转义的美元符号，代码 `echo "\$var is equal to $var";` 将打印 *$var is equal to test*，而代码 `echo '\$var is equal to $var';` 将打印 *\$var is equal to $var* ![Image](img/circle-a.jpg)。
+
+
+
+
+
+![Image](img/01_figure_21_a.jpg)
+
+![Image](img/circle-a.jpg)单引号和双引号如何影响 PHP 的打印输出。
+
+正如这些示例所示，双引号会将变量名（`$var`）替换为其值（*test*），将特殊字符的代码（`\$`）替换为其所代表的值（*$*）。单引号始终会原样显示你输入的内容，转义的单引号（`\'`）和转义的反斜杠（`\\`）除外，它们分别打印为单引号和单个反斜杠。
+
+作为引号类型差异的另一个示例，让我们修改 `numbers.php` 脚本进行实验。
+
+#### 使用单引号和双引号
+
+**1.** 在文本编辑器或 IDE 中打开 `numbers.php`（参考 脚本 1.8）。
+
+**2.** 删除现有的 `echo` 语句（脚本 1.10）。
+
+**3.** 打印一个标题，然后使用双引号重写原来的 `echo` 语句：
+
+```
+echo "<h3>Using double quotation marks:</h3>";
+
+echo "<p>You are purchasing <b>$quantity</b> widget(s) at a cost of <b>\\$$price</b> each. With tax, the total comes to <b>\\$$total</b>.</p>\\n";
+```
+
+在原始脚本中，结果是使用单引号和连接运算符打印的。使用双引号可以达到相同的效果。使用双引号时，变量可以直接放在字符串内部。
+
+但有一个注意事项：尝试将美元金额打印为 $12.34（其中 12.34 来自变量）可能会让你想要编写 `$$var`。这行不通（原因比较复杂）。相反，应转义第一个美元符号，得到 `\$$var`，正如本代码中出现的两次那样。第一个美元符号将被打印，第二个则成为变量名的开头。
+
+**脚本 1.10.** 本章的最后一个脚本，演示了使用单引号和双引号的区别。
+
+* * *
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+      1.0 Transitional//EN" "http://www.w3.org/
+      TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+      xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+         content="text/html; charset=utf-8" />
+5       <title>Quotation Marks</title>
+6   </head>
+7   <body>
+8   <?php # Script 1.10 - quotes.php
+
+9   // Set the variables:
+10  $quantity = 30; // Buying 30 widgets.
+11  $price = 119.95;
+12  $taxrate = .05; // 5% sales tax.
+
+13  // Calculate the total.
+14  $total = $quantity * $price;
+15  $total = $total + ($total * $taxrate);
+      // Calculate and add the tax.
+
+16  // Format the total:
+17  $total = number_format ($total, 2);
+
+18  // Print the results using double
+      quotation marks:
+19  echo "<h3>Using double quotation
+      marks:</h3>";
+20  echo "<p>You are purchasing
+      <b>$quantity</b> widget(s) at a cost
+      of <b>\\$$price</b> each. With tax,
+      the total comes to <b>\\$$total</b>.
+      </p>\\n";
+
+21  // Print the results using single
+      quotation marks:
+22  echo '<h3>Using single quotation
+      marks:</h3>';
+23  echo '<p>You are purchasing
+      <b>$quantity</b> widget(s) at a cost
+      of <b>\\$$price</b> each. With tax,
+      the total comes to <b>\\$$total</b>.
+      </p>\\n';
+
+24  ?>
+25  </body>
+26  </html>
+```
+
+* * *
+
+**4.** 重复 `echo` 语句，这次使用单引号：
+
+```
+echo '<h3>Using single quotation marks:</h3>';
+
+echo '<p>You are purchasing <b>$quantity</b> widget(s) at a cost of <b>\\$$price</b> each. With tax, the total comes to <b>\\$$total</b>.</p>\\n';
+```
+
+此 `echo` 语句用于突出显示使用单引号或双引号的区别。它不会按预期工作，生成的页面将准确显示实际发生的情况。
+
+**5.** 如果需要，更改页面标题。
+
+**6.** 将文件保存为 `quotes.php`，将其放在 Web 目录中，并在 Web 浏览器中测试 ![Image](img/circle-b.jpg)。
+
+![Image](img/01_figure_22_b.jpg)
+
+![Image](img/circle-b.jpg)这些结果演示了何时以及如何使用一种引号而非另一种。
+
+**7.** 查看网页源代码，了解在每种引号类型中使用换行符（`\n`）的区别。
+
+你应该会看到，当你将换行符放在双引号内时，它会在 HTML 源代码中创建一个新行。而放在单引号内时，则会打印字面字符 `\` 和 `n`。
+
+* * *
+
+> **提示**
+>
+> 因为 PHP 会尝试在双引号内查找变量，所以使用单引号在理论上更快。不过，如果你需要打印变量的值，则必须使用双引号。
+
+* * *
+
+> **提示**
+>
+> 由于有效的 HTML 通常包含大量双引号属性，因此在用 PHP 打印 HTML 时，使用单引号通常最方便：
+>
+> ```
+> echo '<table width="80%" border="0" cellspacing="2" cellpadding="3" align="center">';
+> ```
+>
+> 如果你要使用双引号打印这段 HTML，就必须转义字符串中的所有双引号：
+>
+> ```
+> echo "<table width=\\"80%\\" border=\\"0\\" cellspacing=\\"2\\" cellpadding=\\"3\\" align=\\"center\\">";
+> ```
+
+* * *
+
+> **提示**
+>
+> 在较新版本的 PHP 中，你实际上可以直接使用 `$$price` 和 `$$total`，而无需在前面加上反斜杠（得益于某些内部机制）。在旧版本的 PHP 中则不行。为了确保无论 PHP 版本如何都能获得可靠的结果，当你需要打印一个紧跟变量值的美元符号时，我建议使用 `\$$var` 语法。
+
+* * *
+
+> **提示**
+>
+> 如果你仍不清楚引号类型的区别，请使用双引号，这样不太可能出现问题。
+
+* * *
+
+### 基本调试步骤
+
+调试绝非一个易于掌握的概念，遗憾的是，它只有通过实践才能真正精通。接下来的 50 页都可以专门讲这个主题，你仍只能掌握日后将要获得和需要的调试技能的一小部分。
+
+之所以以这种略带吓人的方式介绍调试，是因为重要的是不要带着幻觉进入编程领域。有时代码不会按预期工作，你不可避免地会犯粗心的错误，甚至有些日子你会想拔光头发，即使使用像 PHP 这样相对用户友好的语言也是如此。简而言之，要做好准备，有时会感到困惑和沮丧。我从 1999 年开始编写 PHP 代码，偶尔仍会陷入编程的泥潭。但调试是一项非常重要的技能，你最终会出于必要和经验而掌握它。当你开始 PHP 编程之旅时，我可以提供以下基本但具体的调试技巧。
+
+请注意，这些只是一些通用的调试技巧，专门为 PHP 初学者量身定制。第 8 章“错误处理与调试”将更详细地介绍其他技巧。
+
+#### 调试 PHP 脚本
+
+• **确保始终通过 URL 运行 PHP 脚本！**
+
+这也许是最常见的初学者错误。PHP 代码必须通过 Web 服务器应用程序运行，这意味着必须通过 `http://`*`something`* 来请求。当你看到实际的 PHP 代码而不是该代码执行的结果时，极有可能是你没有通过 URL 运行 PHP 脚本。
+
+• **了解你正在运行的 PHP 版本。**
+
+
+
+
+### 所用 PHP 版本可能引发一些问题
+
+在使用任何支持 PHP 的服务器之前，请先运行 `phpinfo.php` 脚本（参见 附录 A）或参考 `PHP_VERSION` 常量，以确认正在使用的 PHP 版本。
+
+- **确保 `display_errors` 处于开启状态。**
+
+这是一个基本的 PHP 配置设置（在 附录 A 中也有讨论）。你可以通过执行 `phpinfo()` 函数来确认此设置（只需在生成的页面中用浏览器搜索 `display_errors`）。出于安全原因，PHP 可能被设置为不显示发生的错误。如果是这种情况，当问题发生时，你最终看到的将是空白页面。要调试大多数问题，你需要看到错误信息，因此在学习期间请开启此设置。你可以在 附录 A 中找到相关操作说明。
+
+- **检查 HTML 源代码。**
+
+有时问题隐藏在页面的 HTML 源代码中。事实上，有时 PHP 错误信息就藏在其中！
+
+- **信任错误信息。**
+
+另一个非常常见的初学者错误是未完整阅读或不信任 PHP 报告的错误。尽管错误信息往往晦涩难懂，看似毫无意义，但绝不能忽视。至少，PHP 通常能正确指出问题所在的行号。如果你需要将该错误信息转达给他人（比如向我寻求帮助时），请务必包含完整的错误信息！
+
+- **暂停一下！**
+
+多年来我遇到的许多编程问题，以及绝大多数最棘手的问题，都是通过暂时离开电脑一段时间而解决的。很容易产生挫败感和困惑，在这种情况下，你采取的任何进一步步骤都可能只会让事情变得更糟。
+
+### 复习与拓展
+
+本书新增了“复习与拓展”板块，位于每章末尾。在这些板块中，你将看到关于刚才所学内容的问题，以及自行拓展知识和经验的提示。如果你在回答问题或自行探索时遇到任何问题，请访问本书的配套论坛 ([www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/))。
+
+#### 复习
+
+- 哪些标签用于包裹 PHP 代码？
+- PHP 文件应具有什么扩展名？
+- 页面的*编码*指的是什么？编码对页面有什么影响？
+- 可以使用哪些 PHP 函数或语言结构向 Web 浏览器发送数据？
+- 在创建或输出字符串时，使用单引号与双引号有何不同？
+- 在字符串中*转义*字符是什么意思？
+- PHP 中有哪三种注释语法？哪一种可以跨多行使用？
+- 所有变量名以什么字符开头？紧接着可以是什么字符？变量名中还可以使用哪些其他字符？
+- 变量名是区分大小写还是不区分大小写？
+- 什么是赋值运算符？
+- 如何创建字符串变量？
+- 什么是连接运算符？什么是连接赋值运算符？
+- 常量如何定义和使用？
+
+#### 拓展
+
+- 如果你还不确定自己运行的 PHP 版本，请立即检查。
+- 在 PHP 手册中查找提到的某个字符串函数。然后查看其中列出的其他可用字符串函数。
+- 在 PHP 手册中查找提到的某个数字函数。然后查看其中列出的其他可用数字函数。
+- 在 PHP 手册中搜索 `$_SERVER` 变量，了解它还包含哪些其他信息。
+- 从头创建一个新脚本，定义并显示一些字符串变量的值。在输出值的 `echo` 或 `print` 语句中使用双引号。为增加复杂性，在输出中包含一些 HTML。然后重写该脚本，使其使用单引号和连接运算符代替双引号。
+- 从头创建一个新脚本，定义、操作并显示一些数值变量的值。
+
+## 2. PHP 编程
+
+### 本章内容
+
+- 创建 HTML 表单
+- 处理 HTML 表单
+- 条件判断与运算符
+- 验证表单数据
+- 数组简介
+- For 循环和 While 循环
+- 复习与拓展
+
+现在你已掌握 PHP 脚本语言的基础知识，是时候以此为基础开始真正的编程了。在本章中，你将开始创建更复杂的脚本，同时继续学习该语言的一些标准结构、函数和语法。
+
+你将从创建一个 HTML 表单开始，然后学习如何使用 PHP 处理提交的值。随后，本章将介绍条件判断和剩余的运算符（第 1 章“PHP 简介”已介绍赋值、连接和数学运算符）、数组（另一种变量类型）以及最后一种语言结构——循环。
+
+#### 创建 HTML 表单
+
+使用 PHP 处理 HTML 表单或许是任何动态网站中最重要的过程。这涉及两个步骤：首先创建 HTML 表单本身，然后创建相应的 PHP 脚本来接收和处理表单数据。
+
+详细讲解 HTML 表单超出了本书范围，但我将带你快速浏览一个示例，以便在本章中反复使用。如果你不熟悉 HTML 表单的基础知识（包括各种元素类型），请参阅 HTML 相关资源获取更多信息。
+
+HTML 表单使用 `form` 标签和各种输入元素创建。`form` 标签如下所示：
+
+```
+<form action="script.php" method="post">
+
+</form>
+```
+
+就 PHP 而言，`form` 标签最重要的属性是 `action`，它决定表单数据将提交到哪个页面。第二个属性 `method` 自有其考量（参见“选择方法”侧边栏），但 `post` 是你最常用的值。
+
+不同的输入元素——无论是文本框、单选按钮、下拉菜单、复选框等——都放置在开始和结束 `form` 标签之间。正如你在下一节将看到的，表单包含何种输入类型对处理它的 PHP 脚本影响不大。然而，你应注意给表单输入起的名称，因为它们在 PHP 代码中至关重要。
+
+---
+
+#### 选择方法
+
+表单的 `method` 属性决定数据如何发送到处理页面。两个选项 `get` 和 `post` 指的是要使用的 HTTP（超文本传输协议）方法。`GET` 方法将提交的数据作为一系列名称-值对追加到 URL 后，发送给接收页面。例如：
+
+```
+http://www.example.com/script.php?name=Homer&gender=M&age=35
+```
+
+使用 `GET` 方法的好处是，生成的页面可以在用户的 Web 浏览器中加书签（因为它是一个完整的 URL）。此外，你也可以在浏览器中点击“后退”返回 `GET` 页面，或重新加载而不会出现问题（这些对 `POST` 均不适用）。但 `GET` 传输的数据量有限制，且安全性较低（因为数据可见）。
+
+
+
+一般来说，`GET` 用于请求信息，例如从数据库获取特定记录或搜索结果（搜索几乎总是使用 `GET`）。当预期会执行某个操作时，则使用 `POST` 方法：例如更新数据库记录或发送电子邮件。基于这些原因，我将在本书中主要使用 `POST`，特殊情况会另行说明。
+
+---
+
+**脚本 2.1。** 这个简单的 HTML 表单将在本章的多个示例中使用。
+
+---
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD
+        XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/
+        xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+        xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+            content="text/html; charset=utf-8" />
+5       <title>Simple HTML Form</title>
+6       <style type="text/css" title="text/
+            css" media="all">
+7       label {
+8           font-weight: bold;
+9           color: #300ACC;
+10      }
+11      </style>
+12  </head>
+13  <body>
+14  <!-- Script 2.1 - form.html -->
+
+15  <form action="handle_form.php"
+        method="post">
+
+16      <fieldset><legend>Enter your
+            information in the form below:
+            </legend>
+
+17      <p><label>Name: <input type="text"
+            name="name" size="20" maxlength=
+            "40" /></label></p>
+
+18      <p><label>Email Address: <input
+            type="text" name="email" size="40"
+            maxlength="60" /></label></p>
+
+19      <p><label for="gender">Gender:
+            </label><input type="radio"
+            name="gender" value="M" /> Male
+            <input type="radio" name="gender"
+            value="F" /> Female</p>
+
+20      <p><label>Age:
+        <select name="age">
+            <option value="0-29">Under 30
+            </option>
+            <option value="30-60">Between 30
+            and 60</option>
+            <option value="60+">Over 60
+            </option>
+        </select></label></p>
+
+21      <p><label>Comments: <textarea
+            name="comments" rows="3" cols="40"></
+            textarea></label></p>
+
+22      </fieldset>
+
+23      <p align="center"><input type=
+            "submit" name="submit" value=
+            "Submit My Information" /></p>
+
+24  </form>
+
+25  </body>
+26  </html>
+```
+
+---
+
+#### 创建 HTML 表单
+
+**1.** 在文本编辑器或 IDE 中新建一个 HTML 文档，命名为 `form.html`（**脚本 2.1**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Simple HTML Form</title>
+  <style type="text/css" title="text/css" media="all">
+  label {
+    font-weight: bold;
+    color: #300ACC;
+  }
+  </style>
+</head>
+<body>
+<!-- Script 2.1 - form.html -->
+```
+
+该文档使用与上一章相同的基本 HTML 页面语法。我添加了一些内联 CSS（层叠样式表），以便稍微美化表单（具体来说，让 `label` 元素变粗并变蓝）。
+
+CSS 是处理 HTML 页面中许多格式和布局问题的首选方式。你将在本书中看到一些 CSS 片段；如果你不熟悉该主题，请查阅专门的 CSS 参考资料。
+
+最后，一个 HTML 注释标明了文件的名称和编号。
+
+**2.** 添加初始 `form` 标签：
+
+```html
+<form action="handle_form.php" method="post">
+```
+
+由于 `action` 属性决定表单数据将提交到哪个脚本，你应该给它一个合适的名称（`handle_form` 以对应此页面：`form.html`）和 `.php` 扩展名（因为将由 PHP 脚本处理该表单的数据）。
+
+**3.** 开始 HTML 表单：
+
+```html
+<fieldset><legend>Enter your information in the form below:</legend>
+```
+
+我使用 `fieldset` 和 `legend` HTML 标签，因为我喜欢它们让 HTML 表单呈现的效果（它们在表单周围添加一个带有顶部标题的边框）。不过，这与表单功能本身无关。
+
+**4.** 添加两个文本输入框：
+
+```html
+<p><label>Name: <input type="text" name="name" size="20" maxlength="40" /></label></p>
+<p><label>Email Address: <input type="text" name="email" size="40" maxlength="60" /></label></p>
+```
+
+这些只是简单的文本输入框，允许用户输入姓名和电子邮件地址 ![Image](img/circle-a.jpg)。如果你想知道，每个输入标签末尾额外的空格和斜杠是有效 XHTML 所要求的。在标准 HTML 中，这些标签将以 `maxlength="40">` 结尾。`label` 标签只是将每个文本标签与相关联的元素绑定起来。
+
+![Image](img/02_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) 两个文本输入框。
+
+**5.** 添加一组单选按钮：
+
+```html
+<p><label for="gender">Gender:</label><input type="radio" name="gender" value="M" /> Male <input type="radio" name="gender" value="F" /> Female</p>
+```
+
+这两个单选按钮 ![Image](img/circle-b.jpg) 具有相同的名称，意味着两者只能二选一。但它们的值不同。
+
+![Image](img/02_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg) 如果多个单选按钮具有相同的 `name` 值，用户只能选择其中一个。
+
+**6.** 添加一个下拉菜单：
+
+```html
+<p><label>Age:
+<select name="age">
+  <option value="0-29">Under 30</option>
+  <option value="30-60">Between 30 and 60</option>
+  <option value="60+">Over 60</option>
+</select></label></p>
+```
+
+`select` 标签启动下拉菜单，然后每个 `option` 标签将在选项列表中创建另一行 ![Image](img/circle-c.jpg)。
+
+![Image](img/02_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg) 下拉菜单提供三个选项，其中只能选择一个（在本例中）。
+
+**7.** 添加一个用于评论的文本域：
+
+```html
+<p><label>Comments: <textarea name="comments" rows="3" cols="40"></textarea></label></p>
+```
+
+文本域不同于文本输入框；它们呈现为一个方框 ![Image](img/circle-d.jpg)，而不是单行。它们允许输入更多信息，适用于接收用户评论。
+
+![Image](img/02_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg) textarea 表单元素类型允许输入大量文本。
+
+**8.** 完成表单：
+
+```html
+</fieldset>
+<p align="center"><input type="submit" name="submit" value="Submit My Information" /></p>
+</form>
+```
+
+第一个标签关闭第 3 步中打开的 `fieldset`。然后创建一个提交按钮，并使用 `p` 标签将其居中。最后，关闭表单。
+
+**9.** 完成 HTML 页面：
+
+```html
+</body>
+</html>
+```
+
+**10.** 将文件保存为 `form.html`，将其放入 Web 目录，并在 Web 浏览器中查看 ![Image](img/circle-e.jpg)。
+
+![Image](img/02_figure_05_e.jpg)
+
+![Image](img/circle-e.jpg) 完整的表单，请求用户提供一些基本信息。
+
+---
+
+> **提示**
+>
+> 由于此页面仅包含 HTML，因此使用 `.html` 扩展名。它也可以使用 `.php` 扩展名而不会有任何问题（因为 PHP 标签之外的代码被视为 HTML 处理）。
+
+---
+
+> **提示**
+>
+> 你也可以在 HTML 表单标签中指定接受的编码：
+>
+> ```html
+> <form accept-charset="utf-8">
+> ```
+>
+> 默认情况下，网页将使用与页面本身相同的编码来处理任何提交的数据。
+
+---
+
+#### 处理 HTML 表单
+
+
+
+
+
+#### 使用 PHP 处理 HTML 表单
+
+既然 HTML 表单已经创建完毕，现在是时候编写一个基础的 PHP 脚本来处理它了。所谓“处理”表单，是指 PHP 页面将对接收到的数据（即用户在表单中输入的数据）执行某些操作。在本章中，脚本仅将数据原样打印回 Web 浏览器。在后续示例中，表单数据将被存储在 MySQL 数据库中、与先前存储的值进行比较、通过电子邮件发送，等等。
+
+PHP 的魅力所在——也是它如此易学易用的原因——在于它与 HTML 表单交互的效果极佳。PHP 脚本将接收到的信息存储在特殊变量中。例如，假设你有一个表单，其中包含如下定义的输入框：
+
+```html
+<input type="text" name="city" />
+```
+
+用户在该输入框中输入的任何内容都可以通过名为 `$_REQUEST['city']` 的 PHP 变量访问。拼写和大小写必须*完全匹配*，这一点至关重要！PHP 在变量名方面区分大小写，因此 `$_REQUEST['city']` 可行，但 `$_Request['city']` 和 `$_REQUEST['City']` 将没有任何值。
+
+下一个示例将是一个处理已创建的 HTML 表单（脚本 2.1）的 PHP 脚本。该脚本会将表单数据赋值给新变量（作为简写形式使用，就像脚本 1.5 `predefined.php` 中那样）。然后脚本会打印接收到的值。
+
+#### 处理 HTML 表单
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `handle_form.php`，从 HTML 部分开始编写（脚本 2.2）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Form Feedback</title>
+
+</head>
+
+<body>
+```
+
+**2.** 添加 PHP 开启标签并创建表单数据变量的简写版本：
+
+```php
+<?php # Script 2.2 - handle_form.php
+
+$name = $_REQUEST['name'];
+
+$email = $_REQUEST['email'];
+
+$comments = $_REQUEST['comments'];
+```
+
+遵循前面概述的规则，输入到名为 *name* 的第一个表单输入框中的数据，将可通过变量 `$_REQUEST['name']` 访问（表 2.1）。输入到 email 表单输入框（其 `name` 值为 *email*）中的数据，将可通过 `$_REQUEST['email']` 访问。comments 数据同理。再次强调，此处变量的拼写和大小写必须与 HTML 表单中对应的 `name` 值*完全匹配*。
+
+**脚本 2.2.** 该脚本接收并打印出 HTML 表单（脚本 2.1）中输入的信息。
+
+***
+
+```html
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD
+      XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/
+      xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/
+      xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type"
+         content="text/html; charset=utf-8" />
+5      <title>Form Feedback</title>
+6  </head>
+7  <body>
+8  <?php # Script 2.2 - handle_form.php
+9
+10  // Create a shorthand for the form data:
+11  $name = $_REQUEST['name'];
+12  $email = $_REQUEST['email'];
+13  $comments = $_REQUEST['comments'];
+14  /* Not used:
+15  $_REQUEST['age']
+16  $_REQUEST['gender']
+17  $_REQUEST['submit']
+18  */
+
+19  // Print the submitted information:
+20  echo "<p>Thank you, <b>$name</b>,
+      for the following comments:<br />
+21  <tt>$comments</tt></p>
+22  <p>We will reply to you at
+      <i>$email</i>.</p>\n";
+23
+24  ?>
+25  </body>
+26  </html>
+```
+
+***
+
+**表 2.1. 表单元素到 PHP 变量的对应关系**
+
+![Image](img/02tab01.jpg)
+
+此时，你不会用到 age、gender 和 submit 这几个表单元素。
+
+**3.** 打印接收到的 name、email 和 comments 值：
+
+```php
+echo "<p>Thank you, <b>$name</b>, for the following comments:<br />
+<tt>$comments</tt></p>
+<p>We will reply to you at <i>$email</i>.</p>\n";
+```
+
+提交的值只是通过 `echo` 语句、双引号以及少量的 HTML 格式化打印出来。
+
+**4.** 完成页面：
+
+```php
+?>
+
+</body>
+
+</html>
+```
+
+**5.** 将文件保存为 `handle_form.php`，并将其放置在与 `form.html` 相同的 Web 目录下。
+
+**6.** 在 Web 浏览器中通过 URL（`http://something`）加载 `form.html` 来测试这两个文档，然后填写 ![Image](img/circle-a.jpg) 并提交表单 ![Image](img/circle-b.jpg)。
+
+![Image](img/02_figure_06_a.jpg)
+
+![Image](img/circle-a.jpg) 要测试 `handle_form.php`，必须通过 URL 加载表单，然后填写并提交。
+
+![Image](img/02_figure_07_b.jpg)
+
+![Image](img/circle-b.jpg) 脚本应显示如下结果。
+
+因为 PHP 脚本必须通过 URL 运行（见第 1 章），所以表单也必须通过 URL 运行。否则，当你提交表单时，你将看到 PHP 代码 ![Image](img/circle-c.jpg) 而不是正确的结果 ![Image](img/graycircle-b.jpg)。
+
+![Image](img/02_figure_08_c.jpg)
+
+![Image](img/circle-c.jpg) 如果提交表单后看到 PHP 代码，问题很可能是你没有通过 URL 访问表单。
+
+***
+
+**提示**
+
+`$_REQUEST` 是一种特殊的变量类型，称为*超全局变量*。它存储通过 GET 或 POST 方法发送到 PHP 页面的所有数据，以及 Cookie 中可访问的数据。超全局变量将在本章后面讨论。
+
+***
+
+***
+
+**提示**
+
+如果你在使用此脚本时遇到任何问题，请应用第 1 章建议的调试技巧。如果仍无法解决问题，请查看第 8 章“错误处理与调试”中列出的扩展调试技巧。如果依然无法解决，请求助于本书的支持论坛（www.LarryUllman.com/forums/）。
+
+***
+
+***
+
+**提示**
+
+如果 PHP 脚本在本应打印变量值的位置显示空白，则意味着该变量没有值。最可能的两个原因是：你未在表单中输入值；或者你拼写错误或大小写错误地书写了变量名。
+
+***
+
+***
+
+**提示**
+
+如果你看到任何 *Undefined variable: variablename*（未定义变量：变量名）错误，这是因为你引用的变量没有值，且 PHP 设置了最高级别的错误报告。上一条提示提供了变量为何没有值的建议原因。第 8 章将详细讨论错误报告。
+
+***
+
+***
+
+**提示**
+
+要查看 PHP 如何处理不同的表单输入类型，请打印出 `$_REQUEST['age']` 和 `$_REQUEST['gender']` 的值 ![Image](img/circle-d.jpg)。
+
+![Image](img/02_figure_09_d.jpg)
+
+![Image](img/circle-d.jpg) gender 和 age 的值对应表单 HTML 中定义的值。
+
+***
+
+***
+
+#### 魔术引号
+
+PHP 早期版本有一个称为*魔术引号*的功能，该功能现已被弃用，并最终将被完全移除。魔术引号——当启用时——会自动转义提交的表单数据中发现的单引号和双引号（实际上有三种魔术引号，但此处最重要的就是这一种）。例如，魔术引号会将字符串 *I’m going out* 转换为 *I\'m going out*。
+
+在某些情况下，转义潜在的问题字符可能很有用，甚至是必要的。但如果你的 PHP 安装启用了魔术引号，当 PHP 脚本打印表单数据时，你将看到这些反斜杠。你可以使用 `stripslashes()` 函数来撤销魔术引号的效果：
+
+
+
+
+$var = stripslashes($var);
+
+此函数将移除 `$var` 中发现的任何反斜杠。其结果是将转义后的提交字符串还原为其原始的、非转义的值。
+
+要在 `handle_form.php`（脚本 2.2）中使用此函数，你需要编写：
+
+$name = stripslashes($_REQUEST['name']);
+
+如果你没有看到表单数据中添加了反斜杠，那么你就不需要担心 Magic Quotes（魔术引号）。
+
+---
+
+### 条件语句与运算符
+
+PHP 用于创建条件语句的三个主要关键字是 `if`、`else` 和 `elseif`（也可以写成两个单词：`else if`）。
+
+每个条件语句都以 `if` 子句开始：
+
+```
+if (condition) {
+    // Do something!
+}
+```
+
+`if` 也可以包含 `else` 子句：
+
+```
+if (condition) {
+    // Do something!
+} else {
+    // Do something else!
+}
+```
+
+`elseif` 子句允许你添加更多条件：
+
+```
+if (condition1) {
+    // Do something!
+} elseif (condition2) {
+    // Do something else!
+} else {
+    // Do something different!
+}
+```
+
+如果条件为真，则执行后面花括号（`{ }`）中的代码。如果为假，PHP 将继续向下执行。如果有第二个条件（在 `elseif` 之后），则会检查该条件的真假。此过程将持续下去——你可以使用任意数量的 `elseif` 子句——直到 PHP 遇到 `else`（此时将自动执行），或者条件语句在没有 `else` 的情况下终止。因此，`else` 必须始终放在最后，并作为默认操作处理，除非满足特定标准——即条件。
+
+在 PHP 中，条件为真可能有多种原因。首先，以下情况为真条件：
+
+- `$var`，如果 `$var` 的值不为 0、空字符串、`FALSE` 或 `NULL`
+- `isset($var)`，如果 `$var` 有除 `NULL` 以外的任何值，包括 0、`FALSE` 或空字符串
+- `TRUE`、`true`、`True` 等。
+
+在第二个示例中，引入了一个新函数 `isset()`。此函数检查变量是否已“设置”，即其值不为 `NULL`（提醒一下，`NULL` 是 PHP 中的一种特殊类型，表示未设置值）。你还可以结合括号使用比较运算符和逻辑运算符（表 2.2）来构建更复杂的表达式。
+
+**表 2.2. 比较运算符和逻辑运算符**
+
+![Image](img/02tab02.jpg)
+
+#### 使用条件语句
+
+**1.** 在文本编辑器或 IDE 中打开 `handle_form.php`（参考脚本 2.2），如果尚未打开的话。
+
+**2.** 在 `echo` 语句之前，添加一个条件语句来创建 `$gender` 变量（脚本 2.3）：
+
+```
+if (isset($_REQUEST['gender'])) {
+    $gender = $_REQUEST['gender'];
+} else {
+    $gender = NULL;
+}
+```
+
+这是一种简单有效的验证表单输入的方法（特别是单选按钮、复选框或下拉菜单）。如果用户选中了任一性别单选按钮，则 `$_REQUEST['gender']` 将拥有值，这意味着条件 `isset($_REQUEST['gender'])` 为真。在这种情况下，该变量的简写版本——`$gender`——将被赋予 `$_REQUEST['gender']` 的值，重复了对 `$name`、`$email` 和 `$comments` 使用的技巧。如果用户未点击任何单选按钮，则此条件不为真，`$gender` 将被赋予 `NULL` 值，表示它没有值。请注意 `NULL` 不在引号中。
+
+**脚本 2.3.** 在此重制版 `handle_form.php` 中，使用了两个条件语句来验证性别单选按钮。
+
+---
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD
+        XHTML 1.0 Transitional//EN"
+            "http://www.w3.org/TR/xhtml1/DTD/
+            xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+    xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+            content="text/html; charset=utf-8" />
+5       <title>Form Feedback</title>
+6   </head>
+7   <body>
+8   <?php # Script 2.3 - handle_form.php #2
+
+9   // Create a shorthand for the form data:
+10  $name = $_REQUEST['name'];
+11  $email = $_REQUEST['email'];
+12  $comments = $_REQUEST['comments'];
+
+13  // Create the $gender variable:
+14  if (isset($_REQUEST['gender'])) {
+15      $gender = $_REQUEST['gender'];
+16  } else {
+17      $gender = NULL;
+18  }
+
+19  // Print the submitted information:
+20  echo "<p>Thank you, <b>$name</b>,
+            for the following comments:<br />
+        <tt>$comments</tt></p>
+        <p>We will reply to you at
+            <i>$email</i>.</p>\n";
+
+21  // Print a message based upon the
+        gender value:
+22  if ($gender == 'M') {
+23      echo '<p><b>Good day, Sir!</b>
+            </p>';
+24  } elseif ($gender == 'F') {
+25      echo '<p><b>Good day, Madam!
+            </b></p>';
+26  } else { // No gender selected.
+27      echo '<p><b>You forgot to enter
+            your gender!</b></p>';
+28  }
+
+29  ?>
+30  </body>
+31  </html>
+```
+
+---
+
+**3.** 在 `echo` 语句之后，添加另一个条件语句，根据 `$gender` 的值打印消息：
+
+```
+if ($gender == 'M') {
+    echo '<p><b>Good day, Sir!</b></p>';
+} elseif ($gender == 'F') {
+    echo '<p><b>Good day, Madam!</b></p>';
+} else {
+    echo '<p><b>You forgot to enter your gender!</b></p>';
+}
+```
+
+此 `if-elseif-else` 条件语句检查 `$gender` 变量的值，并针对每种可能性打印不同的消息。务必牢记双等号（`==`）表示“等于”，而单等号（`=`）表示赋值。这种区别很重要，因为条件 `$gender == 'M'` 可能为真也可能为假，但 `$gender = 'M'` 永远为真。
+
+此外，此处使用的值——*M* 和 *F*——必须与 HTML 表单中的值（每个单选按钮的值）完全相同。字符串的相等比较区分大小写，因此 *m* 不等于 *M*。
+
+**4.** 保存文件，将其放入 Web 目录，并在 Web 浏览器中测试 ![Image](img/circle-a.jpg)、![Image](img/circle-b.jpg) 和 ![Image](img/circle-c.jpg)。
+
+![Image](img/02_figure_10_a.jpg)
+
+![Image](img/circle-a.jpg)基于性别的条件语句会根据表单中的每个选择打印不同的消息。
+
+![Image](img/02_figure_11_b.jpg)
+
+![Image](img/circle-b.jpg)当性别值改变时，同一脚本会生成不同的称呼（对比 ![Image](img/graycircle-a.jpg)）。
+
+![Image](img/02_figure_12_c.jpg)
+
+![Image](img/circle-c.jpg)如果未选择性别，将打印一条消息提示用户疏忽。
+
+---
+
+> **提示**
+>
+> 虽然 PHP 没有严格的格式规则，但标准流程和良好的编程习惯要求明确标识一块代码何时属于条件语句的子集。缩进代码块是常规做法。
+
+---
+
+> **提示**
+>
+> 你可以——且经常会——嵌套条件语句（将一个条件语句放在另一个内部）。
+
+---
+
+> **提示**
+>
+> 本脚本中的第一个条件语句（`isset()`）是如何使用默认值的完美示例。假设（即 `else` 部分）是 `$gender` 拥有 `NULL` 值，除非满足一个条件：`$_REQUEST['gender']` 已设置。
+
+---
+
+> **提示**
+>
+> 如果你只执行一条语句，则用于指示条件语句开始和结束的花括号不是必需的。不过，我建议你出于清晰度考虑，几乎总是使用它们。
+
+---
+
+> **提示**
+>
+> *and* 和 *or* 都有两个代表运算符，它们之间存在细微的技术差别。没有特别的原因，我倾向于使用 `&&` 和 `||` 而不是 `AND` 和 `OR`。
+
+---
+
+
+
+### XOR 运算符
+
+XOR 称为*异或*运算符。条件表达式 `$x XOR $y` 在 `$x` 为真或 `$y` 为真时为真，但不能两者同时为真。
+
+---
+
+### Switch
+
+PHP 还有一种条件结构，称为 `switch`，最适合用来替代冗长的 `if-elseif-else` 条件结构。`switch` 的语法如下：
+
+```
+switch ($variable) {
+    case 'value1':
+        // Do this.
+        break;
+    case 'value2':
+        // Do this instead.
+        break;
+    default:
+        // Do this then.
+        break;
+}
+```
+
+`switch` 条件结构将 `$variable` 的值与不同的 case 进行比较。当找到匹配项时，将执行后续代码，直到遇到 `break`。如果未找到匹配项，则执行 `default`（假设它存在，因为它是可选的）。`switch` 条件结构在用法上受到限制，因为它只能检查变量的值是否等于特定的 case；无法轻松检查更复杂的条件。
+
+---
+
+### 验证表单数据
+
+与处理 HTML 表单相关的一个关键概念是验证表单数据。就错误管理和安全性而言，你绝对永远不应该信任 HTML 表单提交的数据。无论错误的数据是蓄意恶意的，还是无意中不合适的，作为 Web 架构师，你都有责任根据预期对其进行测试。
+
+验证表单数据需要使用条件结构以及任意数量的函数、运算符和表达式。一个标准的函数是 `isset()`，它用于测试变量是否已设置值（包括 0、`FALSE` 或空字符串，但不包括 `NULL`）。你在前面的脚本中已经看到了它的示例。
+
+`isset()` 函数的一个问题是空字符串测试结果为真，这意味着 `isset()` 不是验证 HTML 表单中文本输入框和文本域的有效方法。要检查用户是否在文本元素中输入了内容，可以使用 `empty()` 函数。它检查变量是否具有*空*值：空字符串、0、`NULL` 或 `FALSE`。
+
+表单验证的首要目标是查看表单元素中是否*输入或选择了*某些内容。第二个目标是确保提交的数据类型正确（数字、字符串等）、格式正确（如电子邮件地址），或为特定的可接受值（如 `$gender` 等于 *M* 或 *F*）。由于处理表单是 PHP 的主要用途之一，验证表单数据是一个将在后续章节中反复强调的重点。但首先，让我们创建一个新的 `handle_form.php`，以确保在引用变量之前它们已有值（此版本变化足够大，以至于单纯更新脚本 2.3 已说不通）。
+
+#### 验证你的表单
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 脚本，命名为 `handle_form.php`，从初始 HTML 开始（**脚本 2.4) {
+18      $name = $_REQUEST['name'];
+19  } else {
+20      $name = NULL;
+21      echo '<p class="error">You forgot to enter your name!</p>';
+22  }
+23
+24  // Validate the email:
+25  if (!empty($_REQUEST['email'])) {
+26      $email = $_REQUEST['email'];
+27  } else {
+28      $email = NULL;
+29      echo '<p class="error">You forgot to enter your email address!</p>';
+30  }
+31
+32  // Validate the comments:
+33  if (!empty($_REQUEST['comments'])) {
+34      $comments = $_REQUEST['comments'];
+35  } else {
+36      $comments = NULL;
+37      echo '<p class="error">You forgot to enter your comments!</p>';
+38  }
+39
+40  // Validate the gender:
+41  if (isset($_REQUEST['gender'])) {
+42
+43      $gender = $_REQUEST['gender'];
+44
+45      if ($gender == 'M') {
+46          echo '<p><b>Good day, Sir!</b></p>';
+47      } elseif ($gender == 'F') {
+48          echo '<p><b>Good day, Madam!</b></p>';
+49      } else { // Unacceptable value.
+50          $gender = NULL;
+51          echo '<p class="error">Gender should be either "M" or "F"!</p>';
+52      }
+53
+54  } else { // $_REQUEST['gender'] is not set.
+55      $gender = NULL;
+56      echo '<p class="error">You forgot to select your gender!</p>';
+57  }
+58
+59  // If everything is OK, print the message:
+60  if ($name && $email && $gender && $comments) {
+61
+62      echo "<p>Thank you, <b>$name</b>, for the following comments:<br />
+63      <tt>$comments</tt></p>
+64      <p>We will reply to you at <i>$email</i>.</p>\n";
+65
+66  } else { // Missing form value.
+67      echo '<p class="error">Please go back and fill out the form again.</p>';
+68  }
+69
+70  ?>
+71  </body>
+72  </html>
+```
+
+**2.** 在 HTML `head` 中添加一些 CSS 代码：
+
+```
+<style type="text/css" title="text/css" media="all">
+.error {
+  font-weight: bold;
+  color: #C00;
+}
+</style>
+```
+
+这段代码定义了一个名为 *error* 的 CSS 类。任何拥有此类名的 HTML 元素将以粗体、红色显示（在你的 Web 浏览器中会比在这本黑白书中更明显）。
+
+**3.** 在 PHP 代码块中，检查姓名是否已输入：
+
+```
+if (!empty($_REQUEST['name'])) {
+  $name = $_REQUEST['name'];
+} else {
+  $name = NULL;
+  echo '<p class="error">You forgot to enter your name!</p>';
+}
+```
+
+检查表单文本输入框是否已填写的一个简单方法是使用 `empty()` 函数。如果 `$_REQUEST['name']` 的值不是空字符串、0、`NULL` 或 `FALSE`，则假定已输入姓名，并将简写变量赋予该值。如果 `$_REQUEST['name']` 为空，则将 `$name` 变量设为 `NULL` 并打印一条错误消息。此错误消息使用了该 CSS 类。
+
+**4.** 对电子邮件地址和评论重复相同的过程：
+
+```
+if (!empty($_REQUEST['email'])) {
+  $email = $_REQUEST['email'];
+} else {
+  $email = NULL;
+  echo '<p class="error">You forgot to enter your email address!</p>';
+}
+
+if (!empty($_REQUEST['comments'])) {
+  $comments = $_REQUEST['comments'];
+} else {
+  $comments = NULL;
+  echo '<p class="error">You forgot to enter your comments!</p>';
+}
+```
+
+这两个变量接受的处理与步骤 3 中的 `$_REQUEST['name']` 相同。
+
+**5.** 开始验证 gender 变量：
+
+```
+if (isset($_REQUEST['gender'])) {
+  $gender = $_REQUEST['gender'];
+```
+
+gender 的验证是一个两步过程。首先，使用 `isset()` 检查它是否有值。这启动了主 `if-else` 条件结构，其行为类似于姓名、电子邮件地址和评论的处理。
+
+**6.** 将 `$gender` 与特定值进行对比：
+
+
+
+
+```php
+if ($gender == 'M') {
+
+  $greeting = '<p><b>Good day, Sir!</b></p>';
+
+} elseif ($gender == 'F') {
+
+  $greeting = '<p><b>Good day, Madam!</b></p>';
+
+} else {
+
+  $gender = NULL;
+
+  echo '<p class="error">Gender should be either "M" or "F"!</p>';
+
+}
+```
+
+在 gender 的 `if` 子句中嵌套了一个 `if-elseif-else` 条件语句，用于将变量的值与可接受的值进行比对。这是两步性别验证的第二部分。
+
+条件本身与上一个脚本中的相同。如果 gender 最终既不等于 `M` 也不等于 `F`，则表明出现了问题，并会打印一条错误消息。在这种情况下，`$gender` 变量也会被设置为 `NULL`，因为它拥有不可接受的值。
+
+如果 `$gender` 确实拥有有效值，则将特定性别的消息赋值给一个新变量，以便稍后在脚本中打印。
+
+### 7. 完成主 gender `if-else` 条件语句：
+
+```php
+} else {
+
+  $gender = NULL;
+
+  echo '<p class="error">You forgot to select your gender!</p>';
+
+}
+```
+
+如果 `$_REQUEST['gender']` 未设置，则适用此 `else` 子句。完整的嵌套条件语句（参见 Script 2.4 的第 41-57 行）成功检查了每一种可能性：
+
+* `$_REQUEST['gender']` 未设置
+* `$_REQUEST['gender']` 的值为 `M`
+* `$_REQUEST['gender']` 的值为 `F`
+* `$_REQUEST['gender']` 拥有其他值
+
+您可能会想知道最后一种情况如何可能发生，因为值是在 HTML 表单中设置的。如果恶意用户创建他们自己的表单并提交给您的 `handle_form.php` 脚本（这非常容易做到），他们可以赋予 `$_REQUEST['gender']` 任何他们想要的值。
+
+### 8. 打印指示验证结果的消息：
+
+```php
+if ($name && $email && $gender && $comments) {
+
+  echo "<p>Thank you, <b>$name</b>, for the following comments:<br />
+  <tt>$comments</tt></p>
+  <p>We will reply to you at <i>$email</i>.</p>\n";
+  echo $greeting;
+
+} else {
+
+  echo '<p class="error">Please go back and fill out the form again.</p>';
+
+}
+```
+
+如果列出的每个变量都拥有真值，则主条件为真。如果变量通过了测试，它将拥有一个值；如果未通过，则值为 `NULL`。如果每个变量都有值，则表单已完整填写，因此将打印 *Thank you* 消息，以及特定性别的问候语。如果有任何变量为 `NULL`，则将打印第二条消息。
+
+![Image](img/02_figure_13_a.jpg)
+
+脚本现在会检查每个表单元素是否已填写（age 除外），并报告那些未填写的元素。
+
+![Image](img/02_figure_14_b.jpg)
+
+即使只漏填了一两个字段，*Thank you* 消息也不会被打印。
+
+### 9. 关闭 PHP 部分并完成 HTML 页面：
+
+```php
+?>
+</body>
+</html>
+```
+
+### 10. 将文件保存为 `handle_form.php`，将其与 `form.html` 放在同一 Web 目录中，并在 Web 浏览器中测试。
+
+以不同程度的完整性填写表单，以测试新脚本。
+
+![Image](img/02_figure_15_c.jpg)
+
+如果表单填写正确，脚本的行为将与之前相同。
+
+---
+
+> **Tip**
+>
+> 要测试提交的值是否为数字，请使用 `is_numeric()` 函数。
+
+---
+
+> **Tip**
+>
+> 在 Chapter 14 “Perl-Compatible Regular Expressions” 中，您将看到如何使用正则表达式验证表单数据。
+
+---
+
+> **Tip**
+>
+> 让用户在填写表单时知道哪些字段是必填项，以及在适用的情况下该字段的格式（如日期或电话号码），这被认为是良好的规范（此处有双关语，form 既指“表单”也指“规范/礼仪”）。
+
+---
+
+### 数组简介
+
+Chapter 1 介绍了两种 *scalar*（单值）变量类型：字符串和数字。现在是时候了解另一种类型——*array*（数组）了。与字符串和数字不同，*array* 可以容纳多个独立的信息片段。因此，数组就像一个值列表，其中每个值可以是字符串、数字，甚至是另一个数组。
+
+数组的结构是一系列 *key-value*（键值）对，其中一对是该数组的一个项目或 *element*（元素）。列表中的每个项目都有一个与之关联的 *key*（键）或 *index*（索引）（Table 2.3）。
+
+**Table 2.3. Array Example 1: `$artists`**
+
+![Image](img/02tab03.jpg)
+
+PHP 支持两种数组：*indexed*（索引数组），使用数字作为键（如 Table 2.3 所示）；以及 *associative*（关联数组），使用字符串作为键（Table 2.4）。与大多数编程语言一样，索引数组的第一个索引从 0 开始，除非您显式指定键。
+
+**Table 2.4. Array Example 2: `$states`**
+
+![Image](img/02tab04.jpg)
+
+数组遵循与其他变量相同的命名规则。这意味着，乍一看，您可能无法分辨 `$var` 是数组，还是字符串或数字。重要的语法差异出现在访问单个数组元素时。
+
+要引用数组中的特定值，从数组变量名开始，后跟方括号中的键：
+
+```php
+$band = $artists[0]; // The Mynabirds
+echo $states['MD']; // Maryland
+```
+
+您可以看到，数组键在 PHP 中像其他值一样使用：数字（如 0）从不加引号，而字符串（`MD`）必须加引号。
+
+---
+
+### 超全局数组
+
+PHP 包含几个称为 *superglobal*（超全局）变量的预定义数组。它们包括：`$_GET`、`$_POST`、`$_REQUEST`、`$_SERVER`、`$_ENV`、`$_SESSION` 和 `$_COOKIE`。
+
+`$_GET` 变量存储通过 `GET` 方法发送给 PHP 脚本的所有值（可能但不一定来自 HTML 表单）。`$_POST` 存储从使用 `POST` 方法的 HTML 表单发送给 PHP 脚本的所有数据。这两者——连同 `$_COOKIE`——都是 `$_REQUEST` 的子集，您一直在使用它。
+
+`$_SERVER` 在 Chapter 1 中已使用过，它存储关于 PHP 运行所在服务器的信息，`$_ENV` 也是如此。`$_SESSION` 和 `$_COOKIE` 将在 Chapter 12 “Cookies and Sessions” 中讨论。
+
+良好的安全性和编程的一个方面是引用变量时要精确。这意味着，虽然您可以使用 `$_REQUEST` 访问通过 `POST` 方法提交的表单数据，但 `$_POST` 会更准确。
+
+---
+
+由于数组使用不同于其他变量的语法，且可包含多个值，因此打印它们可能比较棘手。以下代码将无法工作：
+
+```php
+echo "My list of states: $states";
+```
+
+![Image](img/02_figure_16_a.jpg)
+
+尝试仅使用变量名打印数组会导致打印出单词 *Array*。
+
+然而，如果使用索引（数字）键，打印单个元素的值很简单：
+
+```php
+echo "The first artist is $artists[0].";
+```
+
+但如果数组使用字符串作为键，用于包裹键的引号会搞乱语法。以下代码将导致解析错误：
+
+```php
+echo "IL is $states['IL']."; // BAD!
+```
+
+![Image](img/02_figure_17_b.jpg)
+
+尝试在*不*使用花括号的情况下打印关联数组中的元素会导致解析错误。
+
+要修复此问题，当数组使用字符串作为键时，请将数组名和键包裹在花括号中：
+
+```php
+echo "IL is {$states['IL']}.";
+```
+
+![Image](img/02_figure_18_c.jpg)
+
+在使用花括号的情况下尝试打印关联数组中的元素可按预期工作。
+
+
+
+
+如果数组对你来说似乎有点眼熟，那是因为你已经使用过两个了：`$_SERVER`（见第 1 章）和`$_REQUEST`（见本章）。为了让你熟悉另一个数组并练习直接打印数组值，将使用更具体的`$_POST`数组创建`handle_form.php`页面的一个最终的、基础的版本（见“超全局数组”侧边栏）。
+
+#### 使用数组
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 脚本，命名为`handle_form.php`，从初始 HTML 开始（**脚本 2.5**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Form Feedback</title>
+
+</head>
+
+<body>
+
+<?php # Script 2.5 - handle_form.php #4
+```
+
+**2.** 执行一些基本的表单验证：
+
+```php
+if (!empty($_POST['name']) && !empty($_POST['comments']) && !empty($_POST['email'])) {
+```
+
+在该脚本的前一个版本中，通过引用`$_REQUEST`数组来访问值。但由于这些变量来自一个使用 POST 方法的表单（见脚本 2.1），`$_POST`将是一个更精确、因此更安全的引用。
+
+此条件检查这三个文本输入是否都不为空。使用`and`运算符（`&&`），仅当三个子条件都为真时，整个条件才为真。
+
+**3.** 打印消息：
+
+```php
+echo "<p>Thank you, <b>{$_POST['name']}</b>, for the following comments:<br />
+
+<tt>{$_POST['comments']}</tt></p>
+
+<p>We will reply to you at <i>{$_POST['email']}</i>.</p>\n";
+```
+
+**脚本 2.5.** 超全局变量，如这里的`$_POST`，只是你在 PHP 中将使用的数组的一种类型。
+
+---
+
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/
+2    DTD/xhtml1-transitional.dtd">
+3  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+4  <head>
+5      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+6      <title>Form Feedback</title>
+7  </head>
+8  <body>
+8  <?php # Script 2.5 - handle_form.php #4
+9
+10  // Print the submitted information:
+11  if (!empty($_POST['name']) && !empty($_POST['comments']) && !empty($_POST['email'])) {
+12      echo "<p>Thank you, <b>{$_POST['name']}</b>, for the following comments:<br />
+13  <tt>{$_POST['comments']}</tt></p>
+14  <p>We will reply to you at <i>{$_POST['email']}</i>.</p>\n";
+15  } else { // Missing form value.
+16      echo '<p>Please go back and fill out the form again.</p>';
+17  }
+18  ?>
+19  </body>
+20  </html>
+
+---
+
+理解了数组的概念后，你仍然需要掌握打印数组所涉及的语法。当打印一个使用字符串作为键的数组元素时，使用花括号（如这里的`{$_POST['name']}`）以避免解析错误。
+
+**4.** 完成步骤 2 中开始的条件语句：
+
+```php
+} else {
+
+  echo '<p>Please go back and fill out the form again.</p>';
+
+}
+```
+
+如果步骤 2 中的三个子条件中的任何一个不为真（也就是说，如果任何变量的值为空），则适用此`else`子句并打印错误消息 ![Image](img/circle-d.jpg)。
+
+![Image](img/02_figure_19_d.jpg)
+
+![Image](img/circle-d.jpg)如果三个测试的表单输入中有任何一个为空，则会打印此通用错误消息。
+
+**5.** 完成 PHP 和 HTML 代码：
+
+```php
+?>
+
+</body>
+
+</html>
+```
+
+**6.** 将文件保存为`handle_form.php`，将其与`form.html`放在同一 Web 目录中，并在 Web 浏览器中测试它 ![Image](img/circle-e.jpg)。
+
+![Image](img/02_figure_20_e.jpg)
+
+![Image](img/circle-e.jpg)脚本现在使用`$_POST`数组这一事实对可见结果没有影响。
+
+---
+
+> **Tip**
+>
+> 因为 PHP 对其变量结构要求不严格，数组甚至可以使用数字和字符串的组合作为键。唯一重要的规则是数组的键必须各不相同。
+
+---
+
+> **Tip**
+>
+> 如果你发现直接访问超全局数组的语法令人困惑（例如`$_POST['name']`），你可以继续在脚本顶部使用简写技术，就像你一直做的那样：
+>
+> ```php
+> $name = $_POST['name'];
+> ```
+>
+> 在此脚本中，你将需要更改条件语句和`echo`语句以引用`$name`等。
+
+---
+
+> **Tip**
+>
+> 只有当关联数组在引号内使用时，才需要使用花括号将其括起来。所有这些数组引用都没问题：
+>
+> ```php
+> echo $_POST['name'];
+> echo "The first item is $item[0].";
+> $total = number_format($cart['total']);
+> ```
+
+---
+
+#### 创建数组
+
+前面的示例使用了一个 PHP 生成的数组，但经常会有你想要创建自己的数组的时候。定义自己的数组主要有两种方法。首先，你可以一次添加一个元素来构建一个：
+
+```php
+$band[] = 'Jemaine';
+$band[] = 'Bret';
+$band[] = 'Murray';
+```
+
+由于数组索引从 0 开始，`$band[0]`的值为*Jemaine*；`$band[1]`为*Bret*，`$band[2]`为*Murray*。
+
+或者，你可以在添加元素时指定键。但重要的是要理解，如果你指定了一个键且已有一个值使用该键进行索引，则新值将覆盖现有值：
+
+```php
+$band['fan'] = 'Mel';
+$band['fan'] = 'Dave'; // New value
+$fruit[2] = 'apple';
+$fruit[2] = 'orange'; // New value
+```
+
+你可以使用`array()`函数一次性构建整个数组，而不必一次添加一个元素：
+
+```php
+$states = array (
+  'IA' => 'Iowa',
+  'MD' => 'Maryland'
+);
+```
+
+（由于 PHP 通常不敏感空白字符，你可以跨多行使用此函数以增加清晰度。）
+
+无论你是否显式设置键，都可以使用`array()`函数：
+
+```php
+$artists = array ('Clem Snide', 'Shins', 'Eels');
+```
+
+或者，如果你设置了第一个数字键值，随后添加的值将从那里开始按增量键控：
+
+```php
+$days = array (1 => 'Sun', 'Mon', 'Tue');
+echo $days[3]; // Tue
+```
+
+`array()`函数也用于在引用数组之前对其进行初始化：
+
+```php
+$tv = array();
+$tv[] = 'Flight of the Conchords';
+```
+
+在 PHP 中初始化数组（或任何变量）不是必需的，但它使代码更清晰并有助于避免错误。
+
+最后，如果你想创建一个连续数字的数组，可以使用`range()`函数：
+
+```php
+$ten = range (1, 10);
+```
+
+#### 访问整个数组
+
+你已经看到了如何使用键访问单个数组元素（例如`$_POST['email']`）。当你确切知道键是什么，或者只想引用单个元素时，这很有效。要访问每个数组元素，请使用`foreach`循环：
+
+```php
+foreach ($array as $value) {
+    // Do something with $value.
+}
+```
+
+`foreach`循环将遍历`$array`中的每个元素，将每个元素的值赋给`$value`变量。要同时访问键和值，请使用：
+
+```php
+foreach ($array as $key => $value) {
+    echo "The value at $key is $value.";
+}
+```
+
+**脚本 2.6.** 此表单使用数组动态创建三个下拉菜单。
+
+---
+
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD
+2    XHTML 1.0 Transitional//EN"
+3    "http://www.w3.org/TR/xhtml1/DTD/
+4    xhtml1-transitional.dtd">
+5  <html xmlns="http://www.w3.org/1999/
+6    xhtml" xml:lang="en" lang="en">
+7  <head>
+8      <meta http-equiv="Content-Type"
+9          content="text/html; charset=utf-8" />
+10      <title>Calendar</title>
+11  </head>
+12  <body>
+13  <form action="calendar.php"
+14    method="post">
+15  <?php # Script 2.6 - calendar.php
+```
+
+
+
+
+#### 创建和访问数组
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `calendar.php`，从初始 HTML 开始（Script 2.6）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Calendar</title>
+</head>
+<body>
+<form action="calendar.php" method="post">
+<?php # Script 2.6 - calendar.php
+```
+
+这里要注意的一点是，即使页面不包含完整的 HTML 表单，仍然需要表单标签来创建下拉菜单。
+
+**2.** 创建月份数组：
+
+```php
+$months = array (1 => 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+```
+
+该数组将使用数字作为键，范围从 1 到 12。由于指定了第一个键的值，后续值将按顺序递增索引（换句话说，`1 =>` 代码创建的数组索引是从 1 到 12，而不是从 0 到 11）。
+
+**3.** 创建月份日期和年份的数组：
+
+```php
+$days = range (1, 31);
+$years = range (2011, 2021);
+```
+
+使用 `range()` 函数，可以轻松创建一个数字数组。
+
+**4.** 生成月份下拉菜单：
+
+```php
+echo '<select name="month">';
+foreach ($months as $key => $value) {
+  echo "<option value=\"$key\">$value</option>\n";
+}
+echo '</select>';
+```
+
+`foreach` 循环可以快速生成月份下拉菜单的所有 HTML 代码。每次循环执行都会创建一行类似 `<option value="1">January</option>` 的代码。
+
+**5.** 生成日期和年份下拉菜单：
+
+```php
+echo '<select name="day">';
+foreach ($days as $value) {
+  echo "<option value=\"$value\">$value</option>\n";
+}
+echo '</select>';
+echo '<select name="year">';
+foreach ($years as $value) {
+  echo "<option value=\"$value\">$value</option>\n";
+}
+echo '</select>';
+```
+
+与月份示例不同，日期和年份下拉菜单将对选项的值和标签使用相同的数据（数字）。因此，无需在每次循环迭代中获取数组的键。
+
+**6.** 关闭 PHP、表单标签和 HTML 页面：
+
+```php
+?>
+</form>
+</body>
+</html>
+```
+
+**7.** 将文件保存为 `calendar.php`，放入 Web 目录，并在 Web 浏览器中测试。
+
+---
+
+> **Tip**
+>
+> 要确定数组中的元素数量，请使用 `count()`：
+>
+> ```php
+> $num = count($array);
+> ```
+
+---
+
+> **Tip**
+>
+> `range()` 函数也可以创建一个顺序字母数组：
+>
+> ```php
+> $alphabet = range ('a', 'z');
+> ```
+
+---
+
+> **Tip**
+>
+> 数组的键可以是多词字符串，例如 `first name` 或 `phone number`。
+
+---
+
+> **Tip**
+>
+> `is_array()` 函数用于确认变量是否为数组类型。
+
+---
+
+> **Tip**
+>
+> 如果看到 *Invalid argument supplied for foreach()* 错误消息，意味着你正尝试在非数组变量上使用 `foreach` 循环。
+
+---
+
+### 多维数组
+
+在介绍数组时，我提到数组的值可以是数字、字符串，甚至是其他数组的任意组合。最后一种情况——由其他数组组成的数组——创建了*多维数组*。
+
+多维数组比你想象的要常见得多，但使用起来非常简单。例如，从一个质数数组开始：
+
+```php
+$primes = array(2, 3, 5, 7, ...);
+```
+
+然后创建一个*楔形数*（别担心：我最初也不知道什么是楔形数；我是查阅资料才知道的）：
+
+```php
+$sphenic = array(30, 42, 66, 70, ...);
+```
+
+这两个数组可以组合成一个多维数组，如下所示：
+
+```php
+$numbers = array ('Primes' => $primes, 'Sphenic' => $sphenic);
+```
+
+现在，`$numbers` 是一个多维数组。要访问质数子数组，请引用 `$numbers['Primes']`。要访问质数 5，请使用 `$numbers['Primes'][2]`（它是数组中的第三个元素，但数组索引从 0 开始）。要输出其中一个值，请将整个结构用花括号括起来：
+
+```php
+echo "The first sphenic number is {$numbers['Sphenic'][0]}.";
+```
+
+当然，你也可以使用 `foreach` 循环访问多维数组，如有必要可将一个循环嵌套在另一个内部。下一个示例将演示这一点。
+
+#### 使用多维数组
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `multi.php`，从初始 HTML 开始（**Script 2.7**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Multidimensional Arrays</title>
+</head>
+<body>
+<p>Some North American States, Provinces, and Territories:</p>
+<?php # Script 2.7 - multi.php
+```
+
+此 PHP 页面将打印出北美三国（墨西哥、美国和加拿大）中的一些州、省和地区。
+
+**2.** 创建墨西哥州数组：
+
+```php
+$mexico = array(
+  'YU' => 'Yucatan',
+  'BC' => 'Baja California',
+  'OA' => 'Oaxaca'
+);
+```
+
+这是一个关联数组，使用州的邮政缩写作为键。州的全名是元素的值。这显然是一个不完整的列表，仅用于演示概念。
+
+**Script 2.7.** 多维数组是通过使用其他数组作为其值来创建的。两个 `foreach` 循环，一个嵌套在另一个内部，可以访问每个数组元素。
+
+---
+
+
+
+
+### 多维数组
+
+### PHP 脚本示例
+
+```php
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Multidimensional Arrays</title>
+</head>
+<body>
+<p>Some North American States, Provinces, and Territories:</p>
+<?php # Script 2.7 - multi.php
+
+// Create one array:
+$mexico = array(
+    'YU' => 'Yucatan',
+    'BC' => 'Baja California',
+    'OA' => 'Oaxaca'
+);
+
+// Create another array:
+$us = array(
+    'MD' => 'Maryland',
+    'IL' => 'Illinois',
+    'PA' => 'Pennsylvania',
+    'IA' => 'Iowa'
+);
+
+// Create a third array:
+$canada = array(
+    'QC' => 'Quebec',
+    'AB' => 'Alberta',
+    'NT' => 'Northwest Territories',
+    'YT' => 'Yukon',
+    'PE' => 'Prince Edward Island'
+);
+
+// Combine the arrays:
+$n_america = array(
+    'Mexico' => $mexico,
+    'United States' => $us,
+    'Canada' => $canada
+);
+
+// Loop through the countries:
+foreach ($n_america as $country => $list) {
+
+    // Print a heading:
+    echo "<h2>$country</h2><ul>";
+
+    // Print each state, province, or territory:
+    foreach ($list as $k => $v) {
+        echo "<li>$k - $v</li>\n";
+    }
+
+    // Close the list:
+    echo '</ul>';
+} // End of main FOREACH.
+
+?>
+</body>
+</html>
+```
+
+#### 分步解释
+
+### 3. 创建第二个和第三个数组
+
+```php
+$us = array(
+    'MD' => 'Maryland',
+    'IL' => 'Illinois',
+    'PA' => 'Pennsylvania',
+    'IA' => 'Iowa'
+);
+
+$canada = array(
+    'QC' => 'Quebec',
+    'AB' => 'Alberta',
+    'NT' => 'Northwest Territories',
+    'YT' => 'Yukon',
+    'PE' => 'Prince Edward Island'
+);
+```
+
+### 4. 将所有数组合并为一个
+
+```php
+$n_america = array(
+    'Mexico' => $mexico,
+    'United States' => $us,
+    'Canada' => $canada
+);
+```
+
+你不必非要创建三个数组然后将它们赋值给第四个数组来创建所需的多维数组，但我认为这样做更易于阅读和理解（在一步中定义多维数组会导致代码难看）。
+
+`$n_america` 数组现在包含三个元素。每个元素的键是一个字符串，即国家名称。每个元素的值是该国所包含的州、省或地区的数组。
+
+### 5. 开始主 `foreach` 循环
+
+```php
+foreach ($n_america as $country => $list) {
+    echo "<h2>$country</h2><ul>";
+}
+```
+
+遵循前面概述的语法，此循环将访问 `$n_america` 的每个元素。这意味着循环将运行三次。在循环的每次迭代中，`$country` 变量将存储 `$n_america` 数组的键（*Mexico*、*Canada* 或 *United States*）。同样在循环的每次迭代中，`$list` 变量将存储元素的值（相当于 `$mexico`、`$us` 和 `$canada`）。
+
+为了输出结果，循环首先在 `H2` 标签中打印国家名称。由于州等信息应显示为 HTML 列表，因此也会打印初始无序列表标签 (`<ul>`)。
+
+### 6. 创建第二个 `foreach` 循环
+
+```php
+foreach ($list as $k => $v) {
+    echo "<li>$k - $v</li>\n";
+}
+```
+
+此循环将遍历每个子数组（先是 `$mexico`，然后是 `$us`，最后是 `$canada`）。在该循环的每次迭代中，`$k` 将存储缩写，`$v` 存储全称。两者都在 HTML 列表标签内打印出来。同时也使用了换行符，以便更好地格式化 HTML 源代码。
+
+### 7. 完成外层 `foreach` 循环
+
+```php
+echo '</ul>';
+} // End of main FOREACH.
+```
+
+内层 `foreach` 循环结束后，外层 `foreach` 循环必须关闭第 5 步开始的无序列表。
+
+### 8. 完成 PHP 和 HTML
+
+```php
+?>
+</body>
+</html>
+```
+
+### 9. 保存并测试
+
+将文件保存为 `multi.php`，将其放在你的 Web 目录中，并在 Web 浏览器中测试。
+
+### 10. 检查 HTML 源代码
+
+如果你愿意，可以查看 HTML 源代码，看看 PHP 生成了什么。
+
+---
+
+### 提示：来自 HTML 表单的多维数组
+
+多维数组也可以来自 HTML 表单。例如，如果表单有一系列名为 `interests[]` 的复选框：
+
+```html
+<input type="checkbox" name="interests[]" value="Music" /> Music
+<input type="checkbox" name="interests[]" value="Movies" /> Movies
+<input type="checkbox" name="interests[]" value="Books" /> Books
+```
+
+接收页面中的 `$_POST` 变量将是多维的。`$_POST['interests']` 将是一个数组，其中 `$_POST['interests'][0]` 存储第一个被选中复选框的值（例如 Movies），`$_POST['interests'][1]` 存储第二个（Books），以此类推。注意只有被选中的复选框会被传递给 PHP 页面。
+
+---
+
+### 提示：来自选择菜单的多维数组
+
+如果 HTML 表单的选择菜单允许多选，也会得到一个多维数组：
+
+```html
+<select name="interests[]" multiple="multiple">
+    <option value="Music">Music</option>
+    <option value="Movies">Movies</option>
+    <option value="Books">Books</option>
+    <option value="Napping">Napping</option>
+</select>
+```
+
+同样，只有被选中的值会被传递给 PHP 页面。
+
+---
+
+### 数组与字符串
+
+因为数组和字符串经常一起使用，PHP 有两个函数用于在它们之间转换：
+
+```php
+$array = explode(separator, $string);
+$string = implode(glue, $array);
+```
+
+理解和使用这两个函数的关键在于 *separator*（分隔符）和 *glue*（粘合符）的关系。将数组转换为字符串时，你需要确定粘合符——即在生成的字符串中插在数组值之间的字符或代码。反之，将字符串转换为数组时，你需要指定分隔符，即标记什么应成为单独数组元素的标记。
+
+例如，从一个字符串开始：
+
+```php
+$s1 = 'Mon-Tue-Wed-Thu-Fri';
+$days_array = explode('-', $s1);
+```
+
+`$days_array` 变量现在是一个五元素数组，*Mon* 索引为 `0`，*Tue* 索引为 `1`，以此类推。
+
+```php
+$s2 = implode(', ', $days_array);
+```
+
+`$s2` 变量现在是一个逗号分隔的日期列表：*Mon, Tue, Wed, Thu, Fri*。
+
+---
+
+### 数组排序
+
+数组相对于其他变量类型的众多优势之一是能够对其进行排序。PHP 包含几个可用于数组排序的函数，语法都很简单：
+
+```php
+$names = array('Moe', 'Larry', 'Curly');
+sort($names);
+```
+
+排序函数执行三种类型的排序：
+
+1. **按值排序，丢弃原键**，使用 `sort()`。重要的是要理解，排序过程后数组的键将被重置，因此*如果键值关系很重要，则不应使用* `sort()`。
+2. **按值排序并保留键**，使用 `asort()`。
+3. **按键排序**，使用 `ksort()`。
+
+如果将它们分别改为 `rsort()`、`arsort()` 和 `krsort()`，则每种都可以按逆序排序。
+
+为了演示数组排序的效果，下一个脚本将创建一个电影标题和评分（我有多喜欢它们，按 1 到 10 的等级）的数组，然后以不同方式显示此列表。
+
+#### 对数组进行排序
+
+#### 1. 开始一个新的 PHP 文档
+
+在文本编辑器或 IDE 中创建一个新的 PHP 文档，命名为 `sorting.php`，从初始 HTML 开始（**脚本 2.8**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
+
+
+
+
+### 数组排序
+
+### 2. 创建 HTML 表格
+
+为了使有序列表更易于阅读，它将在 HTML 表格中打印。表格从这里开始。
+
+```html
+<table border="0" cellspacing="3" cellpadding="3" align="center">
+  <tr>
+    <td><h2>Rating</h2></td>
+    <td><h2>Title</h2></td>
+  </tr>
+```
+
+### 3. 添加 PHP 开始标签并创建新数组
+
+```php
+<?php # Script 2.8 - sorting.php
+
+$movies = array (
+  'Casablanca' => 10,
+  'To Kill a Mockingbird' => 10,
+  'The English Patient' => 2,
+  'Stranger Than Fiction' => 9,
+  'Story of the Weeping Camel' => 5,
+  'Donnie Darko' => 7
+);
+```
+
+**脚本 2.8。** 定义了一个数组，然后以两种不同的方式对其进行排序：首先按键排序，然后按值排序（逆序）。
+
+---
+
+```php
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD
+    XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/
+    xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/
+    xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type"
+        content="text/html; charset=utf-8" />
+5      <title>Sorting Arrays</title>
+6  </head>
+7  <body>
+8  <table border="0" cellspacing="3"
+    cellpadding="3" align="center">
+9      <tr>
+10         <td><h2>Rating</h2></td>
+11         <td><h2>Title</h2></td>
+12     </tr>
+13  <?php # Script 2.8 - sorting.php
+
+14  // Create the array:
+15  $movies = array (
+16  'Casablanca' => 10,
+17  'To Kill a Mockingbird' => 10,
+18  'The English Patient' => 2,
+19  'Stranger Than Fiction' => 9,
+20  'Story of the Weeping Camel' => 5,
+21  'Donnie Darko' => 7
+22  );
+
+23  // Display the movies in their
+    // original order:
+24  echo '<tr><td colspan="2"><b>In
+    their original order:</b></td></tr>';
+25  foreach ($movies as $title =>
+    $rating) {
+26      echo "<tr><td>$rating</td>
+    <td>$title</td></tr>\n";
+27  }
+
+28  // Display the movies sorted by title:
+29  ksort($movies);
+30  echo '<tr><td colspan="2"><b>Sorted by
+    title:</b></td></tr>';
+31  foreach ($movies as $title =>
+    $rating) {
+32      echo "<tr><td>$rating</td>
+    <td>$title</td></tr>\n";
+33  }
+
+34  // Display the movies sorted by
+    // rating:
+35  arsort($movies);
+36  echo '<tr><td colspan="2"><b>Sorted by
+    rating:</b></td></tr>';
+37  foreach ($movies as $title =>
+    $rating) {
+38      echo "<tr><td>$rating</td>
+    <td>$title</td></tr>\n";
+39  }
+
+40  ?>
+41  </table>
+42  </body>
+43  </html>
+```
+
+---
+
+该数组使用电影标题作为键，各自的评分作为值。这种结构将为整个列表的排序提供多种可能性。请随意更改电影列表和排名（只是别因为我的电影品味而责备我）。
+
+### 4. 按原样打印数组
+
+```php
+echo '<tr><td colspan="2"><b>In their original order:</b></td></tr>';
+foreach ($movies as $title => $rating) {
+  echo "<tr><td>$rating</td>
+  <td>$title</td></tr>\n";
+}
+```
+
+此时脚本中的数组顺序与定义时相同。为验证这一点，将其打印出来。首先在两个表格列上打印一个标题。然后，在 `foreach` 循环中，键打印在第一列，值打印在第二列。同时也会打印一个换行符，以提高 HTML 源代码的可读性。
+
+### 5. 按标题字母顺序对数组排序并再次打印
+
+```php
+ksort($movies);
+echo '<tr><td colspan="2"><b>Sorted by title:</b></td></tr>';
+foreach ($movies as $title => $rating) {
+  echo "<tr><td>$rating</td>
+  <td>$title</td></tr>\n";
+}
+```
+
+`ksort()` 函数将按键对数组进行升序排序，同时保持键值关系。其余代码重复步骤 4。
+
+### 6. 按评分数值降序对数组排序并再次打印
+
+```php
+arsort($movies);
+echo '<tr><td colspan="2"><b>Sorted by rating:</b></td></tr>';
+foreach ($movies as $title => $rating) {
+  echo "<tr><td>$rating</td>
+  <td>$title</td></tr>\n";
+}
+```
+
+要按值（评分）排序并同时保持键不变，可以使用 `asort()` 函数。但由于最高分的电影应排在最前面，因此必须反转顺序，使用 `arsort()`。
+
+### 7. 完成 PHP、表格和 HTML
+
+```php
+?>
+</table>
+</body>
+</html>
+```
+
+### 8. 将文件保存为 `sorting.php`，放入 Web 目录，并在 Web 浏览器中测试
+
+![Image](img/02_figure_24_i.jpg)
+
+此页面演示了数组排序的不同方式。
+
+---
+
+> **提示**
+>
+> 要随机化数组的顺序，请使用 `shuffle()`。
+
+---
+
+> **提示**
+>
+> PHP 的 `natsort()` 函数可用于以更自然的顺序对数组进行排序（主要是更好地处理字符串中的数字）。
+
+---
+
+> **提示**
+>
+> 多维数组在 PHP 中稍加努力即可排序。有关 `usort()` 函数的更多信息，请参阅 PHP 手册，或查看我的著作 *PHP 5 Advanced: Visual QuickPro Guide*。
+
+---
+
+### For 和 While 循环
+
+本章要讨论的最后一个语言结构是循环。你已经用过一个了，即 `foreach`，用于访问数组中的每个元素。你将使用的其他两种循环类型是 `for` 和 `while`。
+
+##### `while` 循环
+
+`while` 循环如下所示：
+
+```php
+while (condition) {
+  // Do something.
+}
+```
+
+只要循环的 *condition*（条件）部分为真，循环就会执行。一旦变为假，循环停止。如果条件从未为真，循环将永不执行。`while` 循环最常用于从数据库检索结果，正如你将在 第 9 章 “将 PHP 与 MySQL 结合使用” 中看到的那样。
+
+![Image](img/02_figure_25_a.jpg)
+
+*PHP 处理 `while` 循环的流程图表示。*
+
+#### `for` 循环
+
+`for` 循环具有更复杂的语法：
+
+```php
+for (initial expression; condition; closing expression) {
+  // Do something.
+}
+```
+
+首次执行循环时，将运行初始表达式。然后检查条件，如果为真，则执行循环体内容。执行后，运行结束表达式并再次检查条件。此过程持续直到条件为假。例如：
+
+```php
+for ($i = 1; $i <= 10; $i++) {
+  echo $i;
+}
+```
+
+![Image](img/02_figure_26_b.jpg)
+
+*PHP 处理更复杂的 `for` 循环的流程图表示。*
+
+第一次运行此循环时，`$i` 变量被设置为 1。然后检查条件（*1 是否小于或等于 10？*）。因为这是真的，所以打印出 1（`echo $i`）。然后，`$i` 增加到 2（`$i++`），再次检查条件，依此类推。该脚本的结果将打印出数字 1 到 10。
+
+这两种循环的功能足够相似，以至于 `for` 和 `while` 通常可以互换使用。尽管如此，经验会表明 `for` 循环更适合做 *已知次数* 的事情，而 `while` 用于条件将为真 *未知次数* 的情况。
+
+在本章的最后一个示例中，将使用 `for` 循环重写之前创建的日历脚本，以替换其中的两个 `foreach` 循环。
+
+#### 使用循环
+
+**1.** 在文本编辑器或 IDE 中打开 `calendar.php`（参考 脚本 2.6）。
+
+**2.** 删除 `$days` 和 `$years` 数组的创建（第 18-19 行）。
+
+
+
+
+使用循环，无需创建实际数组所涉及的额外代码和内存开销，即可实现两个下拉菜单的相同效果。因此应删除这两个数组，同时仍保留 `$months` 数组。
+
+**3.** 将 `$days foreach` 循环重写为 `for` 循环（脚本 2.9）：
+
+```php
+for ($day = 1; $day <= 31; $day++) {
+    echo "<option value=\"$day\">$day</option>\n";
+}
+```
+
+这个标准的 `for` 循环首先将 `$day` 变量初始化为 1。它将持续循环直到 `$day` 大于 31，每次迭代时 `$day` 将加 1。循环体本身（将执行 31 次）是一条 `echo` 语句。
+
+**脚本 2.9。** 循环常与数组结合使用，或替代数组使用。此处，两个 `for` 循环取代了前一个脚本中使用的数组和 `foreach` 循环。
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD
+        XHTML 1.0 Transitional//EN"
+                "http://www.w3.org/TR/xhtml1/DTD/
+                xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+        xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+            content="text/html; charset=utf-8" />
+5       <title>Calendar</title>
+6   </head>
+7   <body>
+8   <form action="calendar.php"
+        method="post">
+9   <?php # Script 2.9 - calendar.php #2
+
+10  // This script makes three pull-down
+        menus
+11  // for an HTML form: months, days, years.
+
+12  // Make the months array:
+13  $months = array (1 => 'January',
+        'February', 'March', 'April', 'May',
+        'June', 'July', 'August', 'September',
+        'October', 'November', 'December');
+
+14  // Make the months pull-down menu:
+15  echo '<select name="month">';
+16  foreach ($months as $key => $value) {
+17      echo "<option value=\"$key\">$value
+            </option>\n";
+18  }
+19  echo '</select>';
+
+20  // Make the days pull-down menu:
+21  echo '<select name="day">';
+22  for ($day = 1; $day <= 31; $day++) {
+23      echo "<option value=\"$day\">
+            $day</option>\n";
+24  }
+25  echo '</select>';
+
+26  // Make the years pull-down menu:
+27  echo '<select name="year">';
+28  for ($year = 2011; $year <= 2021;
+        $year++) {
+29      echo "<option value=\"$year\">
+            $year</option>\n";
+30  }
+31  echo '</select>';
+
+32  ?>
+33  </form>
+34  </body>
+35  </html>
+```
+
+**4.** 将 `$years foreach` 循环重写为 `for` 循环：
+
+```php
+for ($year = 2011; $year <= 2021; $year++) {
+    echo "<option value=\"$year\"> $year</option>\n";
+}
+```
+
+此循环的结构从根本上与 `$day for` 循环相同，但 `$year` 变量初始设置为 2011 而非 1。只要 `$year` 小于或等于 2021，循环就会执行。在循环内部，将运行 `echo` 语句。
+
+**5.** 保存文件，将其放入您的 Web 目录，并在 Web 浏览器中测试它 ![Image](img/circle-c.jpg)。
+
+![Image](img/02_figure_27_c.jpg)
+
+![Image](img/circle-c.jpg) 此日历表单外观与之前相同，但使用的数组减少了两个（对比 脚本 2.9 与 脚本 2.6）。
+
+***
+
+提示
+
+PHP 还有一种语法略有不同的 `do...while` 循环（请查阅手册）。此循环至少会执行一次。
+
+***
+
+提示
+
+使用循环时，请留意您的参数和条件，以避免可怕的无限循环，当循环的条件永远不会为 false 时就会发生这种情况。
+
+***
+
+### 复习与实践
+
+如果您对复习问题或实践提示有任何疑问，请访问本书的支持论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+注意：其中一些问题和提示重述了 第 1 章 中涵盖的信息，旨在加强一些最重要的要点。
+
+#### 复习
+
+*   表单的 `method` 属性有何意义？`action` 属性呢？
+*   为什么提交给 PHP 脚本的 HTML 表单必须通过 URL 加载？如果不通过 URL 加载，提交表单时会发生什么？
+*   使用单引号和双引号界定字符串有何区别？
+*   本章介绍了哪些控制结构？
+*   本章介绍了哪种新变量类型？
+*   哪个运算符用于测试相等性？赋值运算符是什么？
+*   为什么文本表单元素使用 `empty()` 验证，而其他表单元素使用 `isset()` 验证？
+*   *索引数组* 和 *关联数组* 有什么区别？
+*   索引数组默认从什么值开始？如果一个索引数组有十个元素，数组中最后一个元素的预期索引值是多少？
+*   什么是 *超全局数组*？以下超全局变量的值来源于何处？
+    *   `$_GET`
+    *   `$_POST`
+    *   `$_COOKIE`
+    *   `$_REQUEST`
+    *   `$_SESSION`
+    *   `$_SERVER`
+    *   `$_ENV`
+*   如何打印单个 *索引* 数组项？如何打印单个 *关联* 数组项？注意：这两个问题都不止一个答案。
+*   `count()` 函数有什么作用？
+*   打印 `\n` 对 Web 浏览器有什么影响？
+*   一般来说，何时使用 `while` 循环？何时使用 `for` 循环？何时使用 `foreach` 循环？每种循环类型的语法是什么？
+*   `++` 运算符是什么？它有什么作用？
+
+#### 实践
+
+*   您使用的是哪个版本的 PHP？如果不知道，现在就去查明！
+*   创建一个新表单，接收用户的一些输入（也许可以基于您已知的某个项目所需的表单）。然后创建验证表单数据并报告结果的 PHP 脚本。
+*   将 `handle_form.php`（脚本 2.4）中的性别条件判断重写为单个条件，而不是两个嵌套条件。提示：您需要使用 `AND` 运算符。
+*   重写 `handle_form.php`（脚本 2.4），使其使用 `$_POST` 代替 `$_REQUEST`。
+*   重写 `handle_form.php`（脚本 2.4），使其验证 age 元素。提示：使用 `$gender` 验证作为模板，这次根据相应的下拉选项值（`0-29`、`30-60`、`60+`）进行检查。
+*   重写 `handle_form.php` 最终版本（脚本 2.5）中的 `echo` 语句，使其使用单引号和连接运算符代替双引号。
+*   在 PHP 手册中查找本书介绍的数组函数之一。然后了解一下语言内置的其他数组相关函数。
+*   创建一个新数组并显示其元素。以不同方式对数组进行排序，然后再次显示数组内容。
+*   创建一个包含选择菜单或一系列复选框的表单，允许选择多个项目。然后，在处理的 PHP 脚本中，显示所选项目以及用户选择了多少项的计数。
+*   为了增加复杂性，获取您刚才创建的建议 PHP 脚本（处理多重选择），并让它按字母顺序显示选择项。
+
+## 第 3 章 创建动态网站
+
+本章内容
+
+*   包含多个文件 76
+*   再谈 HTML 表单处理 85
+*   创建粘性表单 91
+*   创建自定义函数 95
+*   复习与实践 110
+
+
+
+
+
+掌握了 PHP 的基础知识后，是时候开始构建真正的动态 Web 站点了。*动态* Web 站点（相对于 Web 早期构建所基于的静态站点）更易于维护，对用户响应更灵敏，并能根据不同情况改变其内容。本章介绍三个新概念，它们都常用于创建更复杂的 Web 应用程序（第 11 章“Web 应用程序开发”将涵盖另外一些相关主题）。
+
+### 包含多个文件
+
+到目前为止，本书中的每个脚本都由单个文件组成，包含所有必需的 HTML 和 PHP 代码。但随着你开发更复杂的 Web 站点，你会发现这种方法通常不切实际。创建动态 Web 应用程序的更好方式是将脚本和 Web 站点划分为不同的部分，每个部分存储在各自的文件中。你经常会使用多个文件将 HTML 从 PHP 中分离出来，或者将常用流程分离出来。
+
+PHP 有四个函数用于引入外部文件：`include()`、`include_once()`、`require()` 和 `require_once()`。使用它们时，你的 PHP 脚本会包含类似如下的代码行：
+
+```
+include_once('filename.php');
+
+require('/path/to/filename.html');
+```
+
+使用上述任一函数的最终结果都是：获取被引入文件的所有内容，并将其插入到父脚本（调用该函数的脚本）的该位置处。关于引入文件的一个重要考量是：除非文件包含 PHP 标签内的代码，否则 PHP 会将引入的代码视为 HTML（即直接发送给浏览器）。
+
+就功能而言，被引入文件使用什么扩展名（无论是 `.php` 还是 `.html`）并不重要。不过，给文件一个有意义的名称和扩展名有助于传达其用途（例如，包含 HTML 的引入文件可能使用 `.inc.html`）。另请注意，你可以使用*绝对*路径或*相对*路径来引用被引入文件（详见侧边栏）。
+
+***
+
+**绝对路径 vs. 相对路径**
+
+引用任何外部项目时，无论是 PHP 中的引入文件、HTML 中的 CSS 文档还是图片，你都可以选择使用*绝对*路径或*相对*路径。绝对路径从计算机的根目录开始引用文件：
+
+```
+include ('C:/php/includes/file.php');
+
+include('/usr/xyz/includes/file.php');
+```
+
+假设 `file.php` 存在于指定位置，无论引用（父）文件位于何处，引入都将生效（权限问题除外）。第二个例子（如果你不熟悉该语法）是 Unix（和 Mac OS X）的绝对路径。绝对路径总是以类似 `C:/` 或 `/` 的内容开头。
+
+相对路径以引用（父）文件为起点。要向上移动一级文件夹，请使用两个连续的句点。要进入一个文件夹，请使用其名称后跟一个斜杠。因此，假设当前脚本位于 `www/ex1` 文件夹中，而你想引入 `www/ex2` 中的内容，代码应为：
+
+```
+include('../ex2/file.php');
+```
+
+只要文件之间保持当前的相对关系，即使站点移至另一台服务器，相对路径仍然准确。
+
+***
+
+`include()` 和 `require()` 函数在正常工作时完全相同，但在失败时的行为不同。如果 `include()` 函数失败（因某些原因无法引入文件），会向 Web 浏览器打印一条警告，但脚本会继续运行。如果 `require()` 失败，则会打印错误并终止脚本。
+
+![Image](img/03_figure_01_a.jpg)
+
+一次失败的 `include()` 调用会生成这两条错误消息（假设 PHP 配置为显示错误），但页面其余部分继续执行。
+
+![Image](img/03_figure_02_b.jpg)
+
+`require()` 函数调用失败将打印错误并终止脚本执行。如果 PHP 未配置为显示错误，则脚本会在未先打印问题的情况下终止（即显示空白页面）。
+
+这两个函数都有 `*_once()` 版本，可确保相关文件仅被引入一次，无论脚本（推测是无意中）尝试引入多少次。
+
+```
+require_once('filename.php');
+
+include_once('filename.php');
+```
+
+因为 `require_once()` 和 `include_once()` 需要 PHP 模块做额外工作（即 PHP 必须先检查文件是否已被引入），除非可能发生重复引入（这在复杂站点上可能发生），否则最好不要使用这两个函数。
+
+在下一个示例中，引入文件将主要的 HTML 格式与 PHP 代码分离开来。然后，本章其余示例无需每次重写通用 HTML，即可拥有相同的外观——仿佛它们都是同一 Web 站点的一部分。这种技术创建了一种*模板系统*，是使大型应用程序保持一致且易于管理的简便方法。这些示例的重点在于 PHP 代码本身；你还应阅读“站点结构”侧边栏，以了解服务器上的组织方案。如果你对示例中使用的 CSS（层叠样式表）或 (X)HTML 有任何疑问，请参阅相关专门资源。
+
+#### 引入多个文件
+
+**1.** 在文本编辑器或 WYSIWYG 编辑器中设计一个 HTML 页面（脚本 3.1 和图 3）。
+
+![Image](img/03_figure_03_c.jpg)
+
+HTML 和 CSS 设计在 Web 浏览器中的显示效果（未使用任何 PHP）。
+
+要开始为 Web 站点创建模板，请像设计标准 HTML 页面一样设计布局，独立于任何 PHP 代码。对于本章的示例，我使用了 Christopher Robinson 创建的“Plain and Simple”模板的略微修改版（www.edg3.co.uk），并经他慷慨许可使用。
+
+**2.** 标记特定页面内容的位置。
+
+几乎每个 Web 站点的每个页面都有几个通用元素——页眉、导航、广告、页脚等——以及一个或多个特定页面区域。在 HTML 页面（脚本 3.1）中，用 HTML 注释将布局中将因页面而异的部分括起来，以指示其状态。
+
+***
+
+**站点结构**
+
+当你开始在 Web 应用程序中使用多个文件时，整体站点结构变得更加重要。在规划站点布局时，有两个主要考量：
+
+• 维护的便利性
+
+• 安全性
+
+使用外部文件存放标准流程（即 PHP 代码）、CSS、JavaScript 和 HTML 设计，将极大地提高站点维护的便利性，因为常需编辑的代码集中在一个位置。我经常创建一个 `includes` 或 `templates` 目录来存放这些文件，将它们与主脚本（即在 Web 浏览器中直接访问的脚本）分开。
+
+
+
+
+我建议对安全性无要求的文档（如 HTML 模板）使用 `.inc` 或 `.html` 扩展名，而对包含更敏感数据的文件（如数据库访问信息）使用 `.php`。你也可以同时使用 `.inc` 和 `.html` 或 `.php`，以便明确表明文件是特定类型的包含文件：例如 `db.inc.php` 或 `header.inc.html`。
+
+---
+
+### 脚本 3.1. 本章网页使用的 HTML 模板。
+
+从本书的配套网站 ([www.LarryUllman.com](http://www.LarryUllman.com)) 下载其使用的 `style.css` 文件。
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/
+xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div id="header">
+        <h1>Your Website</h1>
+        <h2>catchy slogan...</h2>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.php">Home Page</a></li>
+            <li><a href="calculator.php">Calculator</a></li>
+            <li><a href="#">link three</a></li>
+            <li><a href="#">link four</a></li>
+            <li><a href="#">link five</a></li>
+        </ul>
+    </div>
+    <div id="content"><!-- Start of the page-specific content. -->
+        <h1>Content Header</h1>
+
+        <p>This is where the page-specific content goes. This section, and the
+        corresponding header, will change from one page to the next.</p>
+
+        <p>Volutpat at varius sed sollicitudin et, arcu. Vivamus viverra. Nullam turpis.
+        Vestibulum sed etiam. Lorem ipsum sit amet dolore. Nulla facilisi. Sed tortor. Aenean felis.
+        Quisque eros. Cras lobortis commodo metus. Vestibulum vel purus. In eget odio in sapien
+        adipiscing blandit. Quisque augue tortor, facilisis sit amet, aliquam, suscipit vitae, cursus
+        sed, arcu lorem ipsum dolor sit amet.</p>
+
+    <!-- End of the page-specific content. --></div>
+
+    <div id="footer">
+        <p>Copyright &copy; <a href="#">Plain and Simple</a> 2007 | Designed by
+        <a href="http://www.edg3.co.uk/">edg3.co.uk</a> | Sponsored by <a href="http://
+        www.opendesigns.org/">Open Designs</a> | Valid <a href="http://jigsaw.w3.org/
+        css-validator/">CSS</a> &amp; <a href="http://validator.w3.org/">XHTML</a></p>
+    </div>
+</body>
+</html>
+```
+
+---
+
+### 3. 从布局的 HTML 源代码第一行复制到页面专用内容之前的所有内容，并粘贴到一个名为 `header.html` 的新文档中（**脚本 3.2**）：
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+    <div id="header">
+        <h1>Your Website</h1>
+        <h2>catchy slogan...</h2>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.php">Home Page</a></li>
+            <li><a href="calculator.php">Calculator</a></li>
+            <li><a href="#">link three</a></li>
+            <li><a href="#">link four</a></li>
+            <li><a href="#">link five</a></li>
+        </ul>
+    </div>
+    <div id="content"><!-- Start of the page-specific content. -->
+<!-- Script 3.2 - header.html -->
+```
+
+#### 脚本 3.2. 每个网页的初始 HTML 存储在一个头部文件中。
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/
+xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><?php echo $page_title; ?></title>
+    <link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div id="header">
+        <h1>Your Website</h1>
+        <h2>catchy slogan...</h2>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.php">Home Page</a></li>
+            <li><a href="calculator.php">Calculator</a></li>
+            <li><a href="#">link three</a></li>
+            <li><a href="#">link four</a></li>
+            <li><a href="#">link five</a></li>
+        </ul>
+    </div>
+    <div id="content"><!-- Start of the page-specific content. -->
+<!-- Script 3.2 - header.html -->
+```
+
+这个第一个文件将包含初始的 HTML 标签（从 `DOCTYPE` 到 head 以及页面 body 的开始部分）。它还包含生成网站名称和标语，以及顶部横向链接栏的代码。最后，由于每个页面的内容都位于 `id` 值为 `content` 的 `DIV` 内，因此该文件也包含这部分代码。
+
+#### 4. 将页面的标题行更改为：
+
+```
+<?php echo $page_title; ?>
+```
+
+页面标题（显示在 Web 浏览器顶部）应该可以逐页更改。要实现这一点，该值将基于一个 PHP 变量，然后将其打印出来。稍后你将看到具体效果。
+
+#### 5. 将文件保存为 `header.html`。
+
+如前所述，包含文件可以使用几乎任何扩展名。此文件名为 `header.html`，表明它是模板的头部文件，且主要包含 HTML。
+
+#### 6. 从原始模板中页面专用内容的末尾复制到页面末尾的所有内容，并粘贴到一个名为 `footer.html` 的新文件中（**脚本 3.3**）：
+
+```
+<!-- Script 3.3 - footer.html -->
+    <!-- End of the page-specific content. --></div>
+    <div id="footer">
+        <p>Copyright &copy; <a href="#">Plain and Simple</a> 2007 | Designed by <a href="http://www.edg3.co.uk/">edg3.co.uk</a> | Sponsored by <a href="http://www.opendesigns.org/">Open Designs</a> | Valid <a href="http://jigsaw.w3.org/css-validator/">CSS</a> &amp; <a href="http://validator.w3.org/">XHTML</a></p>
+    </div>
+</body>
+</html>
+```
+
+页脚文件首先关闭在头部文件中打开的 `content` `DIV`（见步骤 3）。然后添加页脚，这将是网站上每个页面都相同的部分，最后完成 HTML 文档本身。
+
+#### 脚本 3.3. 每个网页的结束 HTML 存储在这个页脚文件中。
+
+```
+<!-- Script 3.3 - footer.html -->
+    <!-- End of the page-specific content. --></div>
+
+    <div id="footer">
+        <p>Copyright &copy; <a href="#">Plain and Simple</a> 2007 | Designed by <a href=
+        "http://www.edg3.co.uk/">edg3.co.uk</a> | Sponsored by <a href="http://www.opendesigns.
+        org/">Open Designs</a> | Valid <a href="http://jigsaw.w3.org/css-validator/">CSS</a>
+        &amp; <a href="http://validator.w3.org/">XHTML</a></p>
+    </div>
+</body>
+</html>
+```
+
+#### 7. 将文件保存为 `footer.html`。
+
+#### 8. 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `index.php`（**脚本 3.4**）：
+
+```
+<?php # Script 3.4 - index.php
+```
+
+由于该脚本将使用包含文件提供大部分 HTML，因此它可以以 PHP 标签开始和结束。
+
+#### 9. 设置 `$page_title` 变量并包含 HTML 头部：
+
+
+
+$page\_title = 'Welcome to this Site!';
+
+include ('includes/header.html');
+
+`$page_title` 变量将存储显示在浏览器窗口顶部的值（因此，这也是用户将页面加入书签时的默认值）。该变量在 `header.html` 中输出（参见 脚本 3.2）。通过在包含头部文件之前定义该变量，头部文件将能够访问该变量。请记住，这行 `include()` 代码的效果是将被包含文件的内容插入到此页面的此位置。
+
+`include()` 函数调用使用 *相对* 路径指向 `header.html`（参见侧边栏“绝对路径与相对路径”）。该语法表明：在此文件所在的同一文件夹中有一个名为 `includes` 的文件夹，而在该文件夹中有一个名为 `header.html` 的文件。
+
+**10.** 关闭 PHP 标签并添加页面专用内容：
+
+```
+?>
+<h1>Content Header</h1>
+
+<p>This is where the page-specific content goes. This section, and the corresponding header, will change from one page to the next.</p>
+```
+
+对于大多数页面，PHP 将生成此内容，而不是使用静态文本。虽然可以使用 `echo` 将此信息发送给浏览器，但由于此处没有动态内容，暂时退出 PHP 标签会更简单、更高效。（脚本和图片中显示的拉丁文比此处多一点，只是为了充实页面内容。）
+
+**脚本 3.4.** 此脚本通过包含存储在两个外部文件中的模板来生成一个完整的网页。
+
+---
+
+1  <?php # 脚本 3.4 - index.php
+2  $page\_title = 'Welcome to this Site!';
+3  include ('includes/header.html');
+4  ?>
+5
+6  <h1>Content Header</h1>
+7
+8      <p>This is where the page-specific content goes. This section, and the
+         corresponding header, will change from one page to the next.</p>
+9
+10     <p>Volutpat at varius sed sollicitudin et, arcu. Vivamus viverra. Nullam turpis.
+         Vestibulum sed etiam. Lorem ipsum sit amet dolore. Nulla facilisi. Sed tortor.
+         Aenean felis. Quisque eros. Cras lobortis commodo metus. Vestibulum vel purus.
+         In eget odio in sapien adipiscing blandit. Quisque augue tortor, facilisis sit
+         amet, aliquam, suscipit vitae, cursus sed, arcu lorem ipsum dolor sit amet.</p>
+11
+12 <?php
+13 include ('includes/footer.html');
+14 ?>
+
+---
+
+**11.** 创建最后一个 PHP 部分并包含页脚文件：
+
+```
+<?php
+include ('includes/footer.html');
+?>
+```
+
+**12.** 将文件保存为 `index.php`，并将其放置在您的 Web 目录中。
+
+**13.** 在与 `index.php` 相同的文件夹中创建一个 `includes` 目录。然后将 `header.html`、`footer.html` 和 `style.css`（属于 **[www.LarryUllman.com](http://www.LarryUllman.com)** 可下载代码的一部分）放入此 `includes` 目录中。
+
+> **注意：** 为了节省空间，本示例的 CSS 文件（控制布局）未包含在书中。您可以通过本书的配套网站下载该文件，也可以不使用它（模板仍能工作，只是外观不那么美观）。
+
+**14.** 在 Web 浏览器中访问 `index.php` 页面以测试模板系统。
+
+![Image](img/03_figure_04_d.jpg)
+
+现在，使用 PHP 中的外部文件创建了相同的布局。
+
+`index.php` 页面是模板系统中的关键脚本。您无需直接访问任何被包含的文件，因为 `index.php` 将负责合并它们的内容。既然这是一个 PHP 页面，您仍然需要通过 URL 来访问它。
+
+**15.** 如果需要，查看页面的 HTML 源代码。
+
+![Image](img/03_figure_05_e.jpg)
+
+生成的网页 HTML 源代码应与原始模板中的代码相同（请参阅 脚本 3.1）。
+
+---
+
+> **提示**
+>
+> 在 `php.ini` 配置文件中，您可以调整 `include_path` 设置，该设置规定了 PHP 允许和不允许从哪里检索被包含的文件。
+
+---
+
+> **提示**
+>
+> 正如您将在 第 9 章 “将 PHP 与 MySQL 结合使用” 中看到的，任何包含敏感信息（如数据库访问权限）的被包含文件，理想情况下应存储在 Web 目录之外，以免在 Web 浏览器中被查看。
+
+---
+
+> **提示**
+>
+> 由于 `require()` 在失败时对脚本的影响更大，因此建议将其用于关键性包含（如连接数据库的文件）。`include()` 函数则用于不太重要的包含。
+
+---
+
+> **提示**
+>
+> 如果一段 PHP 代码仅包含单个可执行语句，通常会将该语句和 PHP 标签放在同一行：
+>
+> ```
+> <?php include ('filename.html'); ?>
+> ```
+
+---
+
+> **提示**
+>
+> 由于 CSS 的工作原理，如果您不使用 CSS 文件，或者浏览器不读取 CSS，生成的结果仍然是功能性的，只是在美观程度上不那么令人愉悦。
+
+---
+
+### 重温 HTML 表单处理
+
+第 2 章 “PHP 编程” 的很大一部分内容涉及使用 PHP 处理 HTML 表单（这很合理，因为 PHP Web 编程的很大一部分正是如此）。所有那些示例都使用两个单独的文件：一个用于显示表单，另一个用于接收提交的数据。虽然这种方法当然没有错，但将整个流程放在一个脚本中也有其优势。
+
+要让一个页面既显示又处理表单，必须使用条件语句来检查应采取哪种操作（*显示* 或 *处理*）：
+
+```
+if (/* 表单已提交 */) {
+    // 处理表单。
+} else {
+    // 显示表单。
+}
+```
+
+那么，问题在于如何判断表单是否已提交。稍作解释后，答案很简单。
+
+当您有一个使用 POST 方法并提交回同一页面的表单时，将对该脚本发出两种不同类型的请求。第一个请求（加载表单）将是 GET 请求。这是大多数网页的标准请求。当表单提交时，将对脚本发出第二个请求，这次是 POST 请求（前提是表单使用 POST 方法）。考虑到这一点，您可以通过检查 `$_SERVER` 数组中的请求方法来测试表单的提交情况：
+
+```
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // 处理表单。
+} else {
+    // 显示表单。
+}
+```
+
+![Image](img/03_figure_06_a.jpg)
+
+用户与此服务器上的 PHP 脚本之间的交互涉及用户对该脚本发出两次请求。
+
+如果您希望页面处理表单然后再次显示它（例如，向数据库添加一条记录，然后提供添加另一条记录的选项），请去掉 `else` 子句：
+
+```
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // 处理表单。
+}
+// 显示表单。
+```
+
+使用该代码，如果表单已提交，脚本将处理表单；每次加载页面时都会显示表单。
+
+为了演示这一重要技巧（让同一页面既显示又处理表单），让我们创建一个计算器，根据用户输入的值估算汽车旅行所需的费用和时间。
+
+![Image](img/03_figure_07_b.jpg)
+
+用户填写的 HTML 表单。
+
+#### 处理 HTML 表单
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `calculator.php`（**脚本 3.5**）：
+
+```
+<?php # 脚本 3.5 - calculator.php
+$page\_title = 'Trip Cost Calculator';
+include ('includes/header.html');
+```
+
+
+
+
+本章中此处及所有剩余示例将使用与 `index.php` 相同的模板系统（脚本 3.4）。因此每个页面的开头语法将相同，但页面标题会有所不同。
+
+## 2. 编写检查表单提交的条件语句
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+```
+
+正如之前所建议的，检查页面是否通过 POST 方法请求是判断表单提交的一个好方法（前提是表单使用 POST）。
+
+### 脚本 3.5. `calculator.php` 脚本既显示一个简单的表单，又处理表单数据：执行一些计算并报告结果。
+
+```php
+<?php # Script 3.5 - calculator.php
+
+$page_title = 'Trip Cost Calculator';
+include ('includes/header.html');
+
+// Check for form submission:
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // Minimal form validation:
+    if (isset($_POST['distance'], $_POST['gallon_price'], $_POST['efficiency']) &&
+        is_numeric($_POST['distance']) && is_numeric($_POST['gallon_price']) &&
+        is_numeric($_POST['efficiency'])) {
+
+        // Calculate the results:
+        $gallons = $_POST['distance'] / $_POST['efficiency'];
+        $dollars = $gallons * $_POST['gallon_price'];
+        $hours = $_POST['distance'] / 65;
+
+        // Print the results:
+        echo '<h1>Total Estimated Cost</h1>
+<p>The total cost of driving ' . $_POST['distance'] . ' miles, averaging ' . $_POST
+['efficiency'] . ' miles per gallon, and paying an average of $' . $_POST['gallon_price'] . '
+per gallon, is $' . number_format($dollars, 2) . '. If you drive at an average of 65 miles
+per hour, the trip will take approximately ' . number_format($hours, 2) . ' hours.</p>';
+
+    } else { // Invalid submitted values.
+        echo '<h1>Error!</h1>
+<p class="error">Please enter a valid distance, price per gallon, and fuel efficiency.</p>';
+    }
+
+} // End of main submission IF.
+
+// Leave the PHP section and create the HTML form:
+?>
+
+<h1>Trip Cost Calculator</h1>
+<form action="calculator.php" method="post">
+    <p>Distance (in miles): <input type="text" name="distance" /></p>
+    <p>Ave. Price Per Gallon: <span class="input">
+        <input type="radio" name="gallon_price" value="3.00" /> 3.00
+        <input type="radio" name="gallon_price" value="3.50" /> 3.50
+        <input type="radio" name="gallon_price" value="4.00" /> 4.00
+    </span></p>
+    <p>Fuel Efficiency: <select name="efficiency">
+        <option value="10">Terrible</option>
+        <option value="20">Decent</option>
+        <option value="30">Very Good</option>
+        <option value="50">Outstanding</option>
+    </select></p>
+    <p><input type="submit" name="submit" value="Calculate!" /></p>
+</form>
+
+<?php include ('includes/footer.html'); ?>
+```
+
+## 3. 验证表单
+
+```php
+if (isset($_POST['distance'], $_POST['gallon_price'], $_POST['efficiency']) &&
+    is_numeric($_POST['distance']) && is_numeric($_POST['gallon_price']) && is_numeric($_POST['efficiency'])) {
+```
+
+此处的验证非常简单：它仅检查三个提交的变量是否已设置且均为数字类型。你当然可以对此进行扩展，例如检查所有值是否为正数（事实上，第 13 章“安全方法”有一个该脚本的变体正是这样做的）。
+
+如果验证通过所有测试，将进行计算；否则，将要求用户重试。
+
+## 4. 执行计算
+
+```php
+$gallons = $_POST['distance'] / $_POST['efficiency'];
+$dollars = $gallons * $_POST['gallon_price'];
+$hours = $_POST['distance'] / 65;
+```
+
+第一行计算行程所需的汽油加仑数，通过将距离除以燃油效率得出。第二行计算行程的燃油费用，通过将加仑数乘以每加仑平均价格得出。第三行计算行程所需时间，通过将距离除以 65 得出（代表每小时 65 英里）。
+
+## 5. 打印结果
+
+```php
+echo '<h1>Total Estimated Cost</h1>
+<p>The total cost of driving ' . $_POST['distance'] . ' miles, averaging ' . $_POST['efficiency'] . ' miles per gallon, and paying an average of $' . $_POST['gallon_price'] . ' per gallon, is $' . number_format($dollars, 2) . '. If you drive at an average of 65 miles per hour, the trip will take approximately ' . number_format($hours, 2) . ' hours.</p>';
+```
+
+所有值均被打印输出，同时使用 `number_format()` 函数格式化费用和小时数。使用连接运算符（句点）可将格式化后的数值追加到打印的消息中。
+
+## 6. 完成条件语句并关闭 PHP 标签
+
+```php
+} else { // Invalid submitted values.
+    echo '<h1>Error!</h1>
+    <p class="error">Please enter a valid distance, price per gallon, and fuel efficiency.</p>';
+}
+} // End of main submission IF.
+?>
+```
+
+`else` 子句完成验证条件语句（步骤 3），如果提交的三个值不全为已设置且为数字，则打印错误。最后一个右花括号关闭 `isset($_SERVER['REQUEST_METHOD'] == 'POST')` 条件语句。最后，关闭 PHP 部分，以便在不使用 `echo` 的情况下创建表单（见步骤 7）。
+
+![Image](img/03_figure_08_c.jpg)
+
+如果提交的任何值未同时满足已设置和为数字的条件，将显示错误消息。
+
+## 7. 开始 HTML 表单
+
+```html
+<h1>Trip Cost Calculator</h1>
+<form action="calculator.php" method="post">
+    <p>Distance (in miles): <input type="text" name="distance" /></p>
+```
+
+表单本身相当直观，仅包含一个新技巧：`action` 属性使用该脚本自身的名称，以便表单提交回此页面，而不是提交到另一个页面。表单中的第一个元素是一个文本输入框，用户可在其中输入行程距离。
+
+## 8. 完成表单
+
+```html
+<p>Ave. Price Per Gallon: <span class="input">
+<input type="radio" name="gallon_price" value="3.00" /> 3.00
+<input type="radio" name="gallon_price" value="3.50" /> 3.50
+<input type="radio" name="gallon_price" value="4.00" /> 4.00
+</span></p>
+<p>Fuel Efficiency: <select name="efficiency">
+    <option value="10">Terrible</option>
+    <option value="20">Decent</option>
+    <option value="30">Very Good</option>
+    <option value="50">Outstanding</option>
+</select></p>
+<p><input type="submit" name="submit" value="Calculate!" /></p>
+</form>
+```
+
+表单使用单选按钮来选择每加仑平均价格（按钮被包裹在 `span` 标签内，以便使其格式与其他表单元素相似）。对于燃油效率，用户可以从包含四个选项的下拉菜单中选择。一个提交按钮完成了表单。
+
+## 9. 包含页脚文件
+
+```php
+<?php include ('includes/footer.html'); ?>
+```
+
+## 10. 将文件保存为 `calculator.php`，将其放置在你的 Web 目录中，并在 Web 浏览器中测试它。
+
+![Image](img/03_figure_09_d.jpg)
+
+该页面执行计算，报告结果，然后重新显示表单。
+
+---
+
+### 提示
+
+你也可以通过不对 `action` 属性赋值，让表单提交回其自身：
+
+```html
+<form action="" method="post">
+```
+
+这样做，表单将始终提交回同一页面，即使你稍后更改了脚本的名称。
+
+
+
+
+
+#### 创建粘性表单
+
+*粘性表单* 就是一个标准的 HTML 表单，它能记住你是如何填写的。这对最终用户来说是一个特别好的功能，特别是当你要求他们在第一次填写错误后重新提交表单时（如上一节所示）。
+
+要预设文本输入框中的内容，请使用其 `value` 属性：
+
+```html
+<input type="text" name="city" value="Innsbruck" />
+```
+
+要让 PHP 预设该值，请输出相应的变量（这假设引用的变量已存在）：
+
+```html
+<input type="text" name="city" value="<?php echo $city; ?>" />
+```
+
+（这也是 PHP HTML 嵌入特性优势的一个很好的例子：你可以将 PHP 代码放在任何地方，包括 HTML 标签内部。）
+
+要预设单选按钮或复选框的状态（即预先选中它们），请将代码 `checked="checked"` 添加到它们的 `input` 标签中。使用 PHP，你可以这样写：
+
+```html
+<input type="radio" name="gender" value="F" <?php if ($gender == 'F') { echo 'checked="checked"'; } ?>/>
+```
+
+（正如你所见，语法很快就会变得复杂；你可能会发现先创建表单元素，然后作为第二步添加 PHP 代码会更容易。）
+
+要预设文本域的值，请在 `textarea` 标签之间输出该值：
+
+```html
+<textarea name="comments" rows="10" cols="50"><?php echo $comments; ?></textarea>
+```
+
+请注意，`textarea` 标签不像标准的 `text` 输入框那样拥有 `value` 属性。
+
+要预选下拉菜单，请向相应的 option 添加 `selected="selected"`。如果你也使用 PHP 来生成菜单，这会变得非常简单：
+
+```php
+echo '<select name="year">';
+for ($y = 2011; $y <= 2021; $y++) {
+    echo "<option value=\"$y\"";
+    if ($year == $y) {
+        echo ' selected="selected"';
+    }
+    echo ">$y</option>\n";
+}
+echo '</select>';
+```
+
+掌握了这些新信息后，让我们重写 `calculator.php` 使其具有粘性。与上述示例不同，现有的值将存在于 `$_POST` 变量中。此外，由于最好不引用不存在的变量，条件语句将在输出变量值之前检查该变量是否已设置。
+
+#### 创建粘性表单
+
+**1.** 在文本编辑器或 IDE 中打开 `calculator.php`（参考 脚本 3.5），如果尚未打开的话。
+
+**2.** 修改距离输入框，使其如下所示（**脚本 3.6**）：
+
+```html
+<input type="text" name="distance" value="<?php if (isset($_POST['distance'])) echo $_POST['distance']; ?>" />
+```
+
+第一处更改是向输入框添加 `value` 属性。然后，输出提交的距离变量（`$_POST['distance']`）的值。由于页面首次加载时 `$_POST['distance']` 没有值，条件语句确保在尝试输出之前变量已设置。设置输入框值的最终 PHP 代码结果为：
+
+```php
+<?php
+if (isset($_POST['distance'])) {
+    echo $_POST['distance'];
+}
+?>
+```
+
+这可以精简为脚本中使用的更简洁形式（如果条件块中只有一条语句，可以省略大括号，尽管我极少建议这样做）。
+
+**脚本 3.6。** 计算器的表单现在可以回忆之前输入和选择的值（创建了一个粘性表单）。
+
+```php
+<?php # 脚本 3.6 - calculator.php #2
+
+$page_title = '行程成本计算器';
+include ('includes/header.html');
+
+// 检查表单提交：
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // 最小化表单验证：
+    if (isset($_POST['distance'], $_POST['gallon_price'], $_POST['efficiency']) &&
+        is_numeric($_POST['distance']) && is_numeric($_POST['gallon_price']) && is_numeric($_POST['efficiency'])) {
+
+        // 计算结果：
+        $gallons = $_POST['distance'] / $_POST['efficiency'];
+        $dollars = $gallons * $_POST['gallon_price'];
+        $hours = $_POST['distance'] / 65;
+
+        // 输出结果：
+        echo '<h1>总预估成本</h1>
+<p>驾驶 ' . $_POST['distance'] . ' 英里，平均每加仑 ' . $_POST['efficiency'] . ' 英里，平均每加仑支付 $' . $_POST['gallon_price'] '，总成本为 $' . number_format($dollars, 2) '。如果你以平均每小时 65 英里的速度驾驶，该行程将耗时约 ' . number_format($hours, 2) ' 小时。</p>';
+
+    } else { // 提交的值无效。
+        echo '<h1>错误！</h1>
+<p class="error">请输入有效的距离、每加仑价格和燃油效率。</p>';
+    }
+
+} // 主提交 IF 结束。
+
+// 离开 PHP 部分并创建 HTML 表单：
+?>
+
+<h1>行程成本计算器</h1>
+<form action="calculator.php" method="post">
+    <p>距离（英里）： <input type="text" name="distance" value="<?php if (isset($_POST['distance'])) echo $_POST['distance']; ?>" /></p>
+    <p>平均每加仑价格： <span class="input">
+        <input type="radio" name="gallon_price" value="3.00" <?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == '3.00')) echo 'checked="checked" '; ?>/> 3.00
+        <input type="radio" name="gallon_price" value="3.50" <?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == '3.50')) echo 'checked="checked" '; ?>/> 3.50
+        <input type="radio" name="gallon_price" value="4.00" <?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == '4.00')) echo 'checked="checked" '; ?>/> 4.00
+    </span></p>
+    <p>燃油效率： <select name="efficiency">
+        <option value="10"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '10')) echo ' selected="selected"'; ?>>极差</option>
+        <option value="20"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '20')) echo ' selected="selected"'; ?>>尚可</option>
+        <option value="30"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '30')) echo ' selected="selected"'; ?>>很好</option>
+        <option value="50"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '50')) echo ' selected="selected"'; ?>>卓越</option>
+    </select></p>
+    <p><input type="submit" name="submit" value="计算！" /></p>
+</form>
+
+<?php include ('includes/footer.html'); ?>
+```
+
+**3.** 修改单选按钮为：
+
+```html
+<input type="radio" name="gallon_price" value="3.00" <?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == '3.00')) echo 'checked="checked" '; ?>/> 3.00
+<input type="radio" name="gallon_price" value="3.50" <?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == '3.50')) echo 'checked="checked" '; ?>/> 3.50
+<input type="radio" name="gallon_price" value="4.00" <?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == '4.00')) echo 'checked="checked" '; ?>/> 4.00
+```
+
+对于这三个单选按钮中的每一个，必须在 `input` 标签内添加以下代码：
+
+```php
+<?php if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == 'XXX')) echo 'checked="checked" '; ?>
+```
+
+对于每个按钮，比较值（XXX）会相应更改。
+
+**4.** 修改下拉菜单选项为：
+
+```html
+<option value="10"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '10')) echo ' selected="selected"'; ?>>极差</option>
+```
+
+
+
+
+<option value="20"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '20')) echo ' selected="selected"'; ?>>尚可</option>
+
+<option value="30"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '30')) echo ' selected="selected"'; ?>>很好</option>
+
+<option value="50"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '50')) echo ' selected="selected"'; ?>>杰出</option>
+
+对于每个选项，在开始的 `option` 标签内，添加了以下代码：
+
+```
+<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == 'XX')) echo ' selected="selected"'; ?>
+```
+
+同样，只需将特定的比较值 (`XX`) 更改为与每个选项匹配即可。
+
+**5.** 将文件保存为 `calculator.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试它 ![Image](img/circle-a.jpg)和 ![Image](img/circle-b.jpg)。
+
+![Image](img/03_figure_10_a.jpg)
+
+![Image](img/circle-a.jpg)表单现在会回显先前提交的值...
+
+![Image](img/03_figure_11_b.jpg)
+
+![Image](img/circle-b.jpg)...无论表单是否已完全填写。
+
+***
+
+提示
+
+由于每加仑价格和燃油效率值均为数字，因此您可以在添加的条件语句中给比较值加引号，也可以不加。我选择给它们加引号，因为从技术上讲，它们是具有数字值的字符串。
+
+***
+
+***
+
+提示
+
+由于本示例中添加的 PHP 代码位于 HTML 表单元素标签内部，因此错误消息可能不明显。如果出现问题，请检查页面的 HTML 源代码，查看 PHP 错误是否打印在 `value` 属性和标签本身中。
+
+***
+
+***
+
+提示
+
+您应该始终为 HTML 属性加上双引号，特别是文本输入框的 `value` 属性。如果不这样做，像 *Elliott Smith* 这样的多词值在 Web 浏览器中将仅显示为 *Elliott*。
+
+***
+
+***
+
+提示
+
+某些 Web 浏览器也会为您记录输入表单的值；这是一个独立的问题，但可能与使用 PHP 实现此功能的问题有重叠。
+
+***
+
+#### 创建您自己的函数
+
+PHP 拥有大量内置函数，几乎涵盖了您可能需要的所有功能。但更重要的是，PHP 允许您为任何目的定义并使用自己的函数。创建自己的函数的语法是：
+
+```
+function function_name() {
+    // Function code.
+}
+```
+
+您的函数名称可以是字母、数字和下划线的任意组合，但必须以字母或下划线开头。您也不能将现有函数名用于您的函数（`print`、`echo`、`isset` 等）。一个完全有效的函数定义是：
+
+```
+function do_nothing() {
+    // Do nothing.
+}
+```
+
+在 PHP 中，正如第一章所述，函数名不区分大小写（这与变量名不同），因此您可以使用 `do_Nothing()`、`DO_NOTHING()` 或 `Do_Nothing()` 等来调用该函数，但不能使用 `donothing()` 或 `DoNothing()`。
+
+函数内的代码几乎可以做任何事情，从生成 HTML 到执行计算，再到调用其他函数。
+
+创建自己的函数最常见的原因有：
+
+* 将重复的代码与一次函数调用关联起来。
+* 将敏感或复杂的过程与其他代码分离开来。
+* 使常用代码片段更易于重用。
+
+本章将介绍几个示例，您将在本书的其余部分看到其他示例。在第一个示例中，将定义一个输出生成理论广告所需 HTML 代码的函数。然后将在主页上调用该函数两次 ![Image](img/circle-a.jpg)。
+
+![Image](img/03_figure_12_a.jpg)
+
+![Image](img/circle-a.jpg)这两个“广告”是通过调用同一个用户定义函数生成的。
+
+#### 创建您自己的函数
+
+**1.** 在文本编辑器或 IDE 中打开 `index.php` (脚本 3.4)。
+
+**2.** 在开始的 PHP 标签之后，开始定义一个新函数 (**脚本 3.7**)：
+
+```
+function create_ad() {
+```
+
+此处要编写的函数理论上将生成向网页添加广告所需的 HTML。函数名称清楚地说明了其用途。
+
+虽然不是必需的，但惯例是将函数定义放在脚本的最顶部附近或单独的文件中。
+
+**3.** 生成 HTML：
+
+```
+echo '<p class="ad">This is an annoying ad! This is an annoying ad! This is an annoying ad! This is an annoying ad!</p>';
+```
+
+**脚本 3.7.** 此版本的主页包含一个用户定义函数，用于输出理论广告。该函数在脚本中被调用了两次，从而创建了两个广告。
+
+```
+1   <?php # Script 3.7 - index.php #2
+2
+3   // This function outputs theoretical HTML
+4   // for adding ads to a Web page.
+5   function create_ad() {
+6       echo '<p class="ad">This is an annoying ad! This is an annoying ad! This is an
+      annoying ad! This is an annoying ad!</p>';
+7   } // End of the function definition.
+8
+9   $page_title = 'Welcome to this Site!';
+10  include ('includes/header.html');
+11
+12  // Call the function:
+13  create_ad();
+14  ?>
+15
+16  <h1>Content Header</h1>
+17
+18      <p>This is where the page-specific content goes. This section, and the
+          corresponding header, will change from one page to the next.</p>
+19
+20      <p>Volutpat at varius sed sollicitudin et, arcu. Vivamus viverra. Nullam turpis.
+          Vestibulum sed etiam. Lorem ipsum sit amet dolore. Nulla facilisi. Sed tortor.
+          Aenean felis. Quisque eros. Cras lobortis commodo metus. Vestibulum vel purus.
+          In eget odio in sapien adipiscing blandit. Quisque augue tortor, facilisis sit
+          amet, aliquam, suscipit vitae, cursus sed, arcu lorem ipsum dolor sit amet.</p>
+21
+22  <?php
+23
+24  // Call the function again:
+25  create_ad();
+26
+27  include ('includes/footer.html');
+28  ?>
+```
+
+在实际函数中，代码将输出实际的 HTML，而不是一段文本。（实际的 HTML 将由您用于生成和跟踪广告的服务提供。）
+
+**4.** 关闭函数定义：
+
+```
+} // End of the function
+definition.
+```
+
+在函数定义的末尾放置注释很有帮助，这样您就知道定义从哪里开始、到哪里结束（至少对于较长的函数定义是有帮助的）。
+
+**5.** 在包含页眉之后、退出 PHP 代码块之前，调用该函数：
+
+```
+create_ad();
+```
+
+对 `create_ad()` 函数的调用最终会在此处插入函数的输出。
+
+**6.** 在包含页脚之前，再次调用该函数：
+
+```
+create_ad();
+```
+
+**7.** 保存文件并在 Web 浏览器中测试它 ![Image](img/graycircle-a.jpg)。
+
+***
+
+提示
+
+如果您看到 *call to undefined function function_name* 错误，这意味着您正在调用一个尚未定义的函数。如果您拼错了函数名称（无论是在定义时还是调用时），或者未能包含定义该函数的文件，就可能发生这种情况。
+
+***
+
+***
+
+提示
+
+由于用户定义函数会占用一些内存，您应该谨慎决定何时使用它。一般来说，函数最适合用于可能在脚本或网站的多个位置执行的代码块。
+
+***
+
+#### 创建接受参数的函数
+
+就像 PHP 的内置函数一样，您编写的函数也可以接受*参数*。例如，`strlen()` 函数接受一个字符串作为参数，以确定其字符长度。
+
+函数可以接受任意数量的参数，但您列出它们的顺序至关重要。要允许参数，请在函数定义中添加变量：
+
+```
+function print_hello($first, $last) {
+    // Function code.
+}
+```
+
+
+
+您为参数使用的变量名与脚本的其余部分无关（更多内容请参阅本章末尾的“变量作用域”栏），但请尽量使用有效且有意义的名称。
+
+函数定义后，您可以像调用 PHP 中的任何其他函数一样调用它，向其传递字面值或变量：
+
+```
+print_hello ('Jimmy', 'Stewart');
+
+$surname = 'Stewart';
+
+print_hello ('Jimmy', $surname);
+```
+
+与 PHP 中的任何函数一样，未发送正确数量的参数会导致错误 ![Image](img/circle-b.jpg)。
+
+![Image](img/03_figure_13_b.jpg)
+
+![Image](img/circle-b.jpg)未能向函数发送适当数量（有时还有类型）的参数会产生错误。
+
+为了演示这一概念，让我们重写计算器表单，以便用户定义的函数创建每加仑价格的单选按钮。这样做将有助于清理混乱的表单代码。
+
+### 定义接受参数的函数
+
+**1.** 在文本编辑器或 IDE 中打开 **`calculator.php`** (脚本 3.6)。
+
+**2.** 在初始 PHP 标记之后，开始定义 **`create_gallon_radio()`** 函数 (**脚本 3.8**)：
+
+```
+function create_gallon_radio ($value) {
+```
+
+该函数将创建如下代码：
+
+```
+<input type="radio" name="gallon_price" value="XXX" checked="checked" /> XXX
+```
+
+或：
+
+```
+<input type="radio" name="gallon_price" value="XXX" /> XXX
+```
+
+为了能够动态设置每个单选按钮的值，每次调用时必须将该值传递给函数。因此，这是该函数接受的唯一参数。
+
+请注意，用作参数的变量不是 **`$_POST['gallon_price']`**。函数的参数变量专属于此函数，并拥有自己的名称。
+
+**脚本 3.8.** `calculator.php` 表单现在使用函数来创建单选按钮。与 `create_ad()` 用户定义函数不同，此函数接受一个参数。
+
+* * *
+
+```
+1   <?php # Script 3.8 - calculator.php #3
+2
+3   // This function creates a radio button.
+4   // The function takes one argument: the value.
+5   // The function also makes the button "sticky".
+6   function create_gallon_radio($value) {
+7
+8       // Start the element:
+9       echo '<input type="radio" name="gallon_price" value="' . $value . '"';
+10
+11      // Check for stickiness:
+12      if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == $value)) {
+13          echo ' checked="checked"';
+14      }
+15
+16      // Complete the element:
+17      echo " /> $value ";
+18
+19  } // End of create_gallon_radio() function.
+20
+21  $page_title = 'Trip Cost Calculator';
+22  include ('includes/header.html');
+23
+24  // Check for form submission:
+25  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+26
+27      // Minimal form validation:
+28      if (isset($_POST['distance'], $_POST['gallon_price'], $_POST['efficiency']) &&
+29      is_numeric($_POST['distance']) && is_numeric($_POST['gallon_price']) &&
+30          is_numeric($_POST['efficiency']) ) {
+31
+32          // Calculate the results:
+33          $gallons = $_POST['distance'] / $_POST['efficiency'];
+34          $dollars = $gallons * $_POST['gallon_price'];
+35          $hours = $_POST['distance']/65;
+36
+37          // Print the results:
+38          echo '<h1>Total Estimated Cost</h1>
+39          <p>The total cost of driving ' . $_POST['distance'] . ' miles, averaging
+40          ' . $_POST['efficiency'] . ' miles per gallon, and paying an average of $' .
+41          $_POST['gallon_price'] . ' per gallon, is $' . number_format ($dollars, 2) . '.
+42          If you drive at an average of 65 miles per hour, the trip will take
+43          approximately ' . number_format($hours, 2) . ' hours.</p>';
+44
+45      } else { // Invalid submitted values.
+46          echo '<h1>Error!</h1>
+47          <p class="error">Please enter a valid distance, price per gallon, and fuel
+48              efficiency.</p>';
+49      }
+50
+51  } // End of main submission IF.
+52
+53  // Leave the PHP section and create the HTML form:
+54  ?>
+55
+56  <h1>Trip Cost Calculator</h1>
+57  <form action="calculator.php" method="post">
+58      <p>Distance (in miles): <input type="text" name="distance" value="<?php if
+59          (isset($_POST['distance'])) echo $_POST['distance']; ?>" /></p>
+60      <p>Ave. Price Per Gallon: <span class="input">
+61      <?php
+62      create_gallon_radio('3.00');
+63      create_gallon_radio('3.50');
+64      create_gallon_radio('4.00');
+65      ?>
+66      </span></p>
+67      <p>Fuel Efficiency:
+68      <select name="efficiency">
+69          <option value="10"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency']
+70              == '10')) echo ' selected="selected"'; ?>>Terrible</option>
+71          <option value="20"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency']
+72              == '20')) echo ' selected="selected"'; ?>>Decent</option>
+73          <option value="30"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency']
+74              == '30')) echo ' selected="selected"'; ?>>Very Good</option>
+74          <option value="50"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency']
+75              == '50')) echo ' selected="selected"'; ?>>Outstanding</option>
+76      </select></p>
+77      <p><input type="submit" name="submit" value="Calculate!" /></p>
+78  </form>
+79
+80  <?php include ('includes/footer.html'); ?>
+```
+
+* * *
+
+**3.** 开始创建单选按钮元素：
+
+```
+echo '<input type="radio" name="gallon_price" value="' . $value . '"';
+```
+
+这段代码开始单选按钮的 HTML，包括其 **`value`** 属性，但不完成单选按钮，以便接下来处理“粘性”。输入的值来自函数参数。
+
+**4.** 如果合适，使输入具有“粘性”：
+
+```
+if (isset($_POST['gallon_price']) && ($_POST['gallon_price'] == $value)) {
+    echo ' checked="checked"';
+}
+```
+
+这段代码与原始表单中的代码类似，只是现在比较的值来自函数的参数。
+
+**5.** 完成表单元素和函数：
+
+```
+echo " /> $value ";
+} // End of create_gallon_radio() function.
+```
+
+最后，**`input`** 标签闭合，随后显示该值，两侧各有一个空格。
+
+**6.** 用三个函数调用替换表单中硬编码的单选按钮：
+
+```
+<?php
+create_gallon_radio('3.00');
+create_gallon_radio('3.50');
+create_gallon_radio('4.00');
+?>
+```
+
+要创建这三个按钮，只需调用三次函数，每次传递不同的值。此处数值加上引号，否则 PHP 会去掉末尾的零。
+
+**7.** 将文件保存为 **`calculator.php`**，将其放在您的 Web 目录中，并在 Web 浏览器中测试 ![Image](img/circle-c.jpg)。
+
+![Image](img/03_figure_14_c.jpg)
+
+![Image](img/circle-c.jpg)虽然使用用户定义函数来创建单选按钮（请参阅脚本 3.8），但对用户而言最终结果没有任何不同。
+
+### 设置默认参数值
+
+定义您自己的函数的另一种变体是预设参数的值。为此，在函数定义中为参数赋值：
+
+```
+function greet ($name, $msg = 'Hello') {
+    echo "$msg, $name!";
+}
+```
+
+设置默认参数值的最终结果是，调用函数时该特定参数变为可选。如果向其传递了值，则使用传递的值；否则，使用默认值。
+
+您可以为任意数量的参数设置默认值，只要这些参数在函数定义中排在最后面即可。换句话说，必需的参数必须始终列在最前面。
+
+
+
+
+利用刚才定义的示例函数，以下调用均可正常工作：
+
+`greet($surname, $message);`
+
+`greet('Zoe');`
+
+`greet('Sam', 'Good evening');`
+
+然而，仅调用 `greet()` 将无法工作。此外，若不给 `$name` 传值，就无法给 `$msg` 传值（参数值必须按顺序传递，且不能跳过必需参数）。
+
+为了利用默认参数值，让我们创建一个改进版的 `create_gallon_radio()` 函数。按原写法，该函数仅能创建名为 `gallon_price` 的单选按钮。如果该函数能在表单中多次使用，为多组单选按钮服务，那就更好了（尽管在本脚本中不会那样使用该函数）。
+
+### 设置默认参数值
+
+**1.** 在文本编辑器或 IDE 中打开 `calculator.php`（参考 脚本 3.8），如果尚未打开的话。
+
+**2.** 修改函数定义行（第 6 行），使其接收第二个可选参数（脚本 3.9）：
+
+```php
+function create_radio($value, $name = 'gallon_price') {
+```
+
+**脚本 3.9.** 重新定义的函数现在会假定一组固定的单选按钮名称，除非在调用函数时指定了名称。
+
+***
+
+```php
+1   <?php # Script 3.9 - calculator.php #4
+2
+3   // This function creates a radio button.
+4   // The function takes two arguments: the value and the name.
+5   // The function also makes the button "sticky".
+6   function create_radio($value, $name = 'gallon_price') {
+7
+8       // Start the element:
+9       echo '<input type="radio" name="' . $name .'" value="' . $value . '"';
+10
+11      // Check for stickiness:
+12      if (isset($_POST[$name]) && ($_POST[$name] == $value)) {
+13          echo ' checked="checked"';
+14      }
+15
+16      // Complete the element:
+17      echo " /> $value ";
+18
+19  } // End of create_radio() function.
+20
+21  $page_title = 'Trip Cost Calculator';
+22  include ('includes/header.html');
+23
+24  // Check for form submission:
+25  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+26
+27      // Minimal form validation:
+28      if (isset($_POST['distance'], $_POST['gallon_price'], $_POST['efficiency']) &&
+29      is_numeric($_POST['distance']) && is_numeric($_POST['gallon_price']) && is_numeric($_POST
+30          ['efficiency']) ) {
+31
+31          // Calculate the results:
+32          $gallons = $_POST['distance'] / $_POST['efficiency'];
+33          $dollars = $gallons * $_POST['gallon_price'];
+34          $hours = $_POST['distance']/65;
+35
+35          // Print the results:
+36          echo '<h1>Total Estimated Cost</h1>
+37          <p>The total cost of driving ' . $_POST['distance'] . ' miles, averaging ' . $_POST
+38              ['efficiency'] . ' miles per gallon, and paying an average of $' . $_POST['gallon_price']
+39              . ' per gallon, is $' . number_format($dollars, 2) . '. If you drive at an average of
+40              65 miles per hour, the trip will take approximately ' . number_format($hours, 2) . '
+41              hours.</p>';
+42
+43      } else { // Invalid submitted values.
+44          echo '<h1>Error!</h1>
+45          <p class="error">Please enter a valid distance, price per gallon, and fuel
+46              efficiency.</p>';
+47      }
+48
+49  } // End of main submission IF.
+50
+51  // Leave the PHP section and create the HTML form:
+52  ?>
+53
+54  <h1>Trip Cost Calculator</h1>
+55  <form action="calculator.php" method="post">
+56      <p>Distance (in miles): <input type="text" name="distance" value="<?php if (isset($_POST
+57          ['distance'])) echo $_POST['distance']; ?>" /></p>
+58      <p>Ave. Price Per Gallon: <span class="input">
+59      <?php
+60      create_radio('3.00');
+61      create_radio('3.50');
+62      create_radio('4.00');
+63      ?>
+64      </span></p>
+65      <p>Fuel Efficiency: <select name="efficiency">
+66          <option value="10"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '10'))
+67              echo ' selected="selected"'; ?>>Terrible</option>
+68          <option value="20"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '20'))
+69              echo ' selected="selected"'; ?>>Decent</option>
+70          <option value="30"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '30'))
+71              echo ' selected="selected"'; ?>>Very Good</option>
+72          <option value="50"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] == '50'))
+73              echo ' selected="selected"'; ?>>Outstanding</option>
+74      </select></p>
+75      <p><input type="submit" name="submit" value="Calculate!" /></p>
+76  </form>
+77
+78  <?php include ('includes/footer.html'); ?>
+```
+
+此处有两处更改。首先，函数名已更改以反映其更通用的性质。其次，函数现在接收第二个参数 `$name`，但该参数有一个默认值，这使得在调用函数时该参数变为可选。
+
+**3.** 修改函数定义，使其使用 `$name` 参数代替 `gallon_price`：
+
+```php
+echo '<input type="radio" name="'
+. $name .'" value="' . $value .
+'"';
+if (isset($_POST[$name]) && ($_POST[$name] == $value)) {
+    echo ' checked="checked"';
+}
+```
+
+需要做三处更改。首先，`$name` 用于元素的 `name` 属性。其次，检查“粘性”的条件语句现在两次使用 `$_POST[$name]`，而不是 `$_POST['gallon_price']`。
+
+**4.** 修改函数调用行：
+
+```php
+create_radio('3.00');
+create_radio('3.50');
+create_radio('4.00');
+```
+
+必须更改函数调用以使用新的函数名。但由于第二个参数有默认值，因此在这些调用中可以省略它。最终结果等同于执行此调用——
+
+`create_radio('4.00', 'gallon_price');`
+
+——但现在该函数也可用于创建其他单选按钮。
+
+**5.** 保存文件，将其放入 Web 目录，并在 Web 浏览器中测试 ![Image](img/circle-d.jpg)。
+
+![Image](img/03_figure_15_d.jpg)
+
+![Image](img/circle-d.jpg)添加第二个可选参数并未影响函数的功能。
+
+***
+
+> **提示**
+>
+> 要给函数的参数不传任何值，请使用空字符串（`''`）、`NULL` 或 `FALSE`。
+
+***
+
+> **提示**
+>
+> 在 PHP 手册中，方括号（`[ ]`）用于表示函数的可选参数 ![Image](img/circle-e.jpg)。
+>
+> ![Image](img/03_figure_16_e.jpg)
+>
+> ![Image](img/circle-e.jpg)PHP 手册中 `number_format()` 函数的说明显示只有第一个参数是必需的。
+
+***
+
+### 从函数返回值
+
+要讨论的用户自定义函数的最后一个属性是返回值。有些函数会返回值，但并非所有函数都会。例如，`print` 会返回 1 或 0 以指示其成功与否，而 `echo` 则不会。再如，`number_format()` 函数返回一个字符串，即数字的格式化版本（见上一节中的 ![Image](img/graycircle-e.jpg)）。
+
+要让函数返回值，请使用 `return` 语句。以下函数可能会返回给定出生月份和日期对应的星座：
+
+```php
+function find_sign($month, $day) {
+    // Function code.
+    return $sign;
+}
+```
+
+函数可以返回一个字面值（例如字符串或数字），或函数内部确定的变量的值。
+
+调用返回值的函数时，你可以将函数结果赋给一个变量：
+
+`$my_sign = find_sign('October', 23);`
+
+或将其作为参数用于调用另一个函数：
+
+`echo find_sign('October', 23);`
+
+
+
+#### 让函数返回值
+
+### 更新 `calculator.php` 脚本
+
+让我们更新 `calculator.php` 脚本，使其使用函数来确定行程成本。
+
+#### 步骤
+
+**1.** 在文本编辑器或 IDE 中打开 `calculator.php`（参考 Script 3.9），如果尚未打开。
+
+**2.** 在第一个函数定义之后，开始定义第二个函数（**Script 3.10**）：
+
+```php
+function calculate_trip_cost ($miles, $mpg, $ppg) {
+```
+
+`calculate_trip_cost()` 函数接受三个参数：行驶距离、平均每加仑英里数和平均每加仑价格。
+
+**Script 3.10.** 脚本中添加了另一个用户定义函数。它执行主要计算并返回结果。
+
+---
+
+```php
+1   <?php # Script 3.10 - calculator.php #5
+2
+3   // This function creates a radio button.
+4   // The function takes two arguments: the value and the name.
+5   // The function also makes the button "sticky".
+6   function create_radio($value, $name = 'gallon_price') {
+7
+8       // Start the element:
+9       echo '<input type="radio" name="' . $name .'" value="' . $value . '"';
+10
+11      // Check for stickiness:
+12      if (isset($_POST[$name]) && ($_POST[$name] == $value)) {
+13          echo ' checked="checked"';
+14      }
+15
+16      // Complete the element:
+17      echo " /> $value ";
+18
+19  } // End of create_radio() function.
+20
+21  // This function calculates the cost of the trip.
+22  // The function takes three arguments: the distance, the fuel efficiency, and the price
+23  // per gallon.
+24  // The function returns the total cost.
+25  function calculate_trip_cost($miles, $mpg, $ppg) {
+26
+26      // Get the number of gallons:
+27      $gallons = $miles/$mpg;
+28
+29      // Get the cost of those gallons:
+30      $dollars = $gallons/$ppg;
+31
+32      // Return the formatted cost:
+33      return number_format($dollars, 2);
+34
+35  } // End of calculate_trip_cost() function.
+36
+37  $page_title = 'Trip Cost Calculator';
+38  include ('includes/header.html');
+39
+40  // Check for form submission:
+41  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+42
+43      // Minimal form validation:
+44      if (isset($_POST['distance'], $_POST['gallon_price'], $_POST['efficiency']) &&
+45      is_numeric($_POST['distance']) && is_numeric($_POST['gallon_price'])
+46          && is_numeric($_POST['efficiency']) ) {
+47
+48          // Calculate the results:
+49          $cost = calculate_trip_cost($_POST['distance'], $_POST['efficiency'],
+              $_POST['gallon_price']);
+50          $hours = $_POST['distance']/65;
+51
+52          // Print the results:
+53          echo '<h1>Total Estimated Cost</h1>
+54          <p>The total cost of driving ' . $_POST['distance'] . ' miles, averaging ' .
+              $_POST['efficiency'] . ' miles per gallon, and paying an average of $' . $_POST
+              ['gallon_price'] . ' per gallon, is $' . $cost . '. If you drive at an average of
+              65 miles per hour, the trip will take approximately ' . number_format($hours, 2)
+              . ' hours.</p>';
+55
+56      } else { // Invalid submitted values.
+57          echo '<h1>Error!</h1>
+58          <p class="error">Please enter a valid distance, price per gallon, and fuel
+              efficiency.</p>';
+59      }
+60
+61  } // End of main submission IF.
+62
+63  // Leave the PHP section and create the HTML form:
+64  ?>
+65
+66  <h1>Trip Cost Calculator</h1>
+67  <form action="calculator.php" method="post">
+68      <p>Distance (in miles): <input type="text" name="distance" value="<?php if (isset($_POST
+              ['distance'])) echo $_POST['distance']; ?>" /></p>
+69      <p>Ave. Price Per Gallon: <span class="input">
+70      <?php
+71      create_radio('3.00');
+72      create_radio('3.50');
+73      create_radio('4.00');
+74      ?>
+75      </span></p>
+76      <p>Fuel Efficiency: <select name="efficiency">
+77          <option value="10"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] ==
+              '10')) echo ' selected="selected"'; ?>>Terrible</option>
+78          <option value="20"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] ==
+              '20')) echo ' selected="selected"'; ?>>Decent</option>
+79          <option value="30"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] ==
+              '30')) echo ' selected="selected"'; ?>>Very Good</option>
+80          <option value="50"<?php if (isset($_POST['efficiency']) && ($_POST['efficiency'] ==
+              '50')) echo ' selected="selected"'; ?>>Outstanding</option>
+81      </select></p>
+82      <p><input type="submit" name="submit" value="Calculate!" /></p>
+83  </form>
+84
+85  <?php include ('includes/footer.html'); ?>
+```
+
+---
+
+**3.** 执行计算并返回格式化后的成本：
+
+```php
+$gallons = $miles/$mpg;
+$dollars = $gallons/$ppg;
+return number_format($dollars, 2);
+} // End of calculate_trip_cost() function.
+```
+
+前两行与之前脚本使用的计算相同，但现在它们使用函数变量。该函数最后做的是返回计算出的成本的格式化版本。
+
+**4.** 将计算成本的两行代码（Script 3.9 的第 32-33 行）替换为函数调用：
+
+```php
+$cost = calculate_trip_cost ($_POST['distance'], $_POST['efficiency'], $_POST['gallon_price']);
+```
+
+调用该函数并传递三个必需的值将执行计算。由于函数返回一个值，因此函数调用的结果——即返回值——可以赋给一个变量。
+
+**5.** 更改 `echo` 语句以使用新变量：
+
+```php
+echo '<h1>Total Estimated Cost</h1>
+  <p>The total cost of driving' . $_POST['distance'] .' miles, averaging ' . $_POST['efficiency'] . ' miles per gallon, and paying an average of $' . $_POST['gallon_price'] . ' per gallon, is $' . $cost . '. If you drive at an average of 65 miles per hour, the trip will take approximately '. number_format($hours, 2) . ' hours.</p>';
+```
+
+此处的 `echo` 语句使用 `$cost` 变量，而不是 `$dollars`（如脚本的前一个版本所示）。此外，由于 `$cost` 变量在函数内部已格式化，因此无需在 `echo` 语句中对该变量应用 `number_format()` 函数。
+
+**6.** 保存文件，将其放在 Web 目录中，并在 Web 浏览器中测试它。
+
+![Image](img/circle-f.jpg)
+
+![Image](img/03_figure_17_f.jpg)
+
+![Image](img/circle-f.jpg) 计算器现在使用用户定义函数来计算并返回行程成本。但此更改不会影响用户看到的内容。
+
+---
+
+> **Tip**
+>
+> `return` 语句会在该处终止代码执行，因此位于已执行的 `return` 之后的函数内部代码永远不会运行。
+
+---
+
+> **Tip**
+>
+> 一个函数可以有多个 `return` 语句（例如在 `switch` 语句或条件语句中），但最多只会调用其中一个。例如，函数通常这样做：
+>
+> ```php
+> function some_function () {
+>     if (/* condition */) {
+>         return TRUE;
+>     } else {
+>         return FALSE;
+>     }
+> }
+> ```
+
+---
+
+> **Tip**
+>
+> 要让函数返回多个值，请使用 `array()` 函数返回一个值数组：
+>
+> ```php
+> return array ($var1, $var2);
+> ```
+
+---
+
+> **Tip**
+>
+> 调用返回数组的函数时，使用 `list()` 函数将数组元素赋值给单独的变量：
+>
+> ```php
+> list($v1, $v2) = some_function();
+> ```
+
+---
+
+##### 变量作用域
+
+
+
+PHP 中的每个变量都有一个*作用域*，也就是说，变量（及其值）可被访问的范围。首先，变量拥有其所在页面的作用域。如果你定义了 `$var`，该页面的其余部分可以访问 `$var`，但其他页面通常不能（除非你使用特殊变量）。
+
+由于包含文件的行为就好像它们是原始（包含）脚本的一部分一样，因此在 `include()` 行之前定义的变量可供包含文件使用（正如你已经在 `$page_title` 和 `header.html` 中看到的那样）。此外，在包含文件中定义的变量，在 `include()` 行*之后*可供父（包含）脚本使用。
+
+用户自定义函数拥有自己的作用域：在函数内部定义的变量在外部不可用，而在函数外部定义的变量在内部不可用。因此，函数内部的变量可以与外部的变量同名，但却是一个完全不同、具有不同值的变量。这个概念让许多初学者感到困惑。
+
+要改变函数内部的变量作用域，可以使用 `global` 语句。
+
+```
+function function_name() {
+    global $var;
+}
+
+$var = 20;
+function_name(); // 函数调用。
+```
+
+在本例中，函数内部的 `$var` 现在与外部的 `$var` 相同。这意味着函数内的 `$var` 已经拥有值 20，如果该值在函数内部发生改变，外部 `$var` 的值也会随之改变。
+
+绕过变量作用域的另一种选择是使用超全局变量：`$_GET`、`$_POST`、`$_REQUEST` 等。这些变量在你的函数内部会自动可用（因此它们是*超*全局的）。你也可以向 `$GLOBALS` 数组添加元素，使它们在函数内可用。
+
+说了这么多，在函数中最好几乎永远不要使用全局变量。函数的设计应当使其通过参数接收所需的每一个值，并返回需要返回的任何值（或值）。在函数中依赖全局变量会使它们更依赖上下文，因此用处也就更小。
+
+---
+
+### 复习与实践
+
+如果你对复习问题或实践提示有任何疑问，请访问本书的支持论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+#### 复习
+
+*   什么是*绝对*路径？什么是*相对*路径？
+*   `include()` 和 `require()` 有什么区别？
+*   `include()` 和 `include_once()` 有什么区别？通常应该避免使用哪个函数，为什么？
+*   为什么包含文件使用什么扩展名*无关紧要*？
+*   `$_SERVER['REQUEST_METHOD']` 的值有什么意义？
+*   如何使以下表单元素具有“粘性”？
+    *   文本输入框
+    *   下拉菜单
+    *   单选按钮
+    *   复选框
+    *   文本域
+*   如果你有一个由 HTML 标签内的代码引起的 PHP 错误，必须在哪里查找错误消息？
+*   定义自定义函数的语法是什么？
+*   定义接受参数的函数的语法是什么？
+*   定义接受带默认值参数的函数的语法是什么？默认值如何影响函数的调用方式？
+*   如何定义并调用一个返回值的函数？
+
+#### 实践
+
+*   为本章中的页面创建一个新的 HTML 模板。以该新模板为基础创建新的页眉和页脚文件。这样做，你应该能够在不修改任何 PHP 脚本的情况下更改整个网站的外观。
+*   创建一个新表单并赋予其“粘性”功能。让表单使用文本域和复选框（本章均未演示这两者）。
+*   修改 `calculator.php`，使其使用常量代替硬编码的平均速度 65。（按原样编写时，平均速度是一个“魔术数字”：在脚本中使用却无解释的值。）
+*   更进一步，修改 `calculator.php`，让用户可以输入平均速度或从选项列表中选择。
+*   更新 `calculator.php` 的输出，使其在小时数大于 24 时显示行程所需的天数和小时数。
+*   作为一个更高级的技巧，重写 `calculator.php`，使 `create_radio()` 函数调用在脚本中只出现一次，但仍能创建三个单选按钮。提示：使用循环。
+
+## 4. MySQL 简介
+
+### 本章内容
+
+*   命名数据库元素 112
+*   选择列类型 114
+*   选择其他列属性 118
+*   访问 MySQL 121
+*   复习与实践 128
+
+由于本书讨论如何集成多种技术（主要是 PHP、SQL 和 MySQL），在开始编写使用 SQL 与 MySQL 交互的 PHP 脚本之前，对每种技术单独有扎实的理解非常重要。本章与前几章不同，因为它暂时抛开 PHP，深入探讨 MySQL。
+
+MySQL 是世界上最流行的开源数据库应用程序（根据 MySQL 官网 [www.mysql.com](http://www.mysql.com) 的说法），常与 PHP 一起使用。MySQL 软件包含数据库服务器（存储实际数据）、不同的客户端应用程序（用于与数据库服务器交互）以及多种实用工具。在本章中，你将学习如何使用 MySQL 允许的数据类型和其他属性来定义一个简单的表。然后你将学习如何使用两种不同的客户端应用程序与 MySQL 服务器进行交互。所有这些信息将为下一章讲授的 SQL 打下基础。
+
+#### 命名数据库元素
+
+在开始使用数据库之前，你必须确定你的需求。应用程序（本例中为网站）的目的决定了数据库应如何设计。考虑到这一点，本章和下一章的示例将使用一个存储某些用户注册信息的数据库。
+
+创建数据库和表时，你应该想出清晰、有意义且易于输入的名称（正式称为*标识符*）。此外，标识符
+
+*   应仅包含字母、数字和下划线（无空格）
+*   不应与现有关键字相同（如 SQL 术语或函数名）
+*   应视为区分大小写
+*   长度不得超过 64 个字符（大约）
+*   必须在其领域内唯一
+
+最后一条规则意味着一个表不能有两个同名的列，一个数据库不能有两个同名的表。不过，你可以在同一个数据库的两个不同表中使用相同的列名（实际上，你经常会这样做）。关于前三条规则，我用了*应该*一词，因为这些是好的策略，而非绝对要求。这些规则可以有例外，但这样做的语法可能比较复杂。遵循这些建议是一种合理的限制，有助于避免麻烦。
+
+#### 命名数据库元素
+
+**1.** 确定数据库名称。
+
+这是最简单、可以说也是最不重要的一步。只需确保该数据库名称在该 MySQL 服务器上是唯一的。如果你使用的是托管服务器，你的网络主机可能会提供一个数据库名称，该名称可能包含也可能不包含你的账户名或域名。
+
+对于第一个示例，数据库将被称为 *sitename*，因为这些信息和技术可适用于任何通用网站。
+
+**2.** 确定表名。
+
+
+
+
+表名只需在此数据库内唯一，这不应成问题。对于本存储用户注册信息的示例，唯一的表将称为 `users`。
+
+**3.** 确定每个表的列名。
+
+`users` 表将包含存储用户 ID、名、姓、电子邮件地址、密码和注册日期的列。**表 4.1** 使用合适的标识符展示了这些列及示例数据。由于 MySQL 有一个名为 `password` 的函数，我已将该列名改为 `pass`。这虽非严格必须，但实属良策。
+
+**表 4.1 `users` 表**
+
+![Image](img/04tab01.jpg)
+
+***
+
+Tip
+
+第 6 章 “数据库设计” 将通过更复杂的示例更详细地讨论数据库设计。
+
+***
+
+***
+
+Tip
+
+准确地说，数据库、表和列名的长度限制实际上是 64 *字节*，而非字符。虽然许多语言中的大多数字符各占 1 字节，但标识符中可能使用多字节字符。不过 64 字节空间仍很大，因此这对你可能不是问题。
+
+***
+
+***
+
+Tip
+
+MySQL 中标识符是否区分大小写实际取决于多种因素（因为每个数据库实为服务器上的一个文件夹，每个表实为一个或多个文件）。在 Windows 和通常的 Mac OS X 上，数据库和表名一般不区分大小写。在 Unix 和某些 Mac OS X 设置下，它们区分大小写。列名始终不区分大小写。我建议始终使用全小写字母，并按区分大小写的方式工作。
+
+***
+
+#### 选择列类型
+
+确定数据库所需的所有表和列后，应确定每列的数据类型。创建表时，MySQL 要求显式声明每列将包含的信息类型。共有三大主要类型，这适用于几乎所有数据库应用：
+
+• 文本（即 *字符串*）
+
+• 数字
+
+• 日期和时间
+
+每大类下有许多变体（部分为 MySQL 特有），可供选择。正确选择列类型不仅决定可存储何种信息及存储方式，还影响数据库整体性能。**表 4.2** 列出了 MySQL 大多数可用类型、其占用空间及简要说明。注意：不同 MySQL 版本中某些限制可能变化，字符集（将在第 6 章讨论）也可能影响文本类型大小。
+
+**表 4.2 MySQL 数据类型**
+
+![Image](img/04tab02.jpg)
+
+![Image](img/04tab02a.jpg)
+
+许多类型可接受可选的 `Length` 属性以限制大小。（方括号 `[]` 表示放在括号内的可选参数。）为提升性能，应限制任意列可存储的数据量。但请理解：试图将长度为 5 字符的字符串插入 `CHAR(2)` 列会导致后三字符被截断（仅存前两字符；其余永久丢失）。这对任何设定了大小的字段均适用（`CHAR`、`VARCHAR`、`INT` 等）。因此，长度应始终对应可能存储的最大值（数值）或最长字符串（文本）。
+
+各种日期类型有诸多独特行为，最重要的你将在本书学到（所有行为见 MySQL 手册）。你主要将直接使用 `DATE` 和 `TIME` 字段，无需过多纠结其细节。
+
+还有两种特殊类型——`ENUM` 和 `SET`——允许为该列定义一系列可接受值。`ENUM` 列只能存储数千可能值中的一个，而 `SET` 允许存储多达 64 个可能值中的若干个。这些类型在 MySQL 中可用，但并非每个数据库应用都有。
+
+#### 选择列类型
+
+**1.** 判断列应为文本、数字还是日期/时间类型（**表 4.3**）。
+
+**表 4.3 `users` 表**
+
+![Image](img/04tab03.jpg)
+
+这通常是简单明了的一步，但需尽可能具体。例如，日期 `2006-08-02`（MySQL 格式）可存为字符串——`August 2, 2006`。但若使用正确的日期格式，数据库将更实用（且正如你将见到的，有函数可将 `2006-08-02` 转为 `August 2, 2006`）。
+
+**2.** 为每列选择最合适的子类型（**表 4.4**）。
+
+**表 4.4 `users` 表**
+
+![Image](img/04tab04.jpg)
+
+本例中，`user_id` 设为 `MEDIUMINT`，作为 `unsigned`（非负）数可容纳近 1700 万值。`registration_date` 为 `DATETIME`，可同时存储用户注册的日期和具体时间。在日期类型中选择时，考虑是否只需访问日期、时间，或两者皆需。*若不确定，宁可多存信息*。
+
+其他字段多为 `VARCHAR`，因其长度因记录而异。唯一例外是密码列，将为定长 `CHAR`（下章插入记录时你会明白原因）。详见 “`CHAR` vs. `VARCHAR`” 栏。
+
+***
+
+**`CHAR` vs. `VARCHAR`**
+
+两者均存字符串且可设最大长度。主要区别：存为 `CHAR` 的内容始终按列长度存储（用空格填充；检索时这些空格会被移除）。反之，`VARCHAR` 列中字符串仅占其自身大小空间。故单词 `cat` 在 `VARCHAR(10)` 列需 4 字节（字符串长度加 1），但在 `CHAR(10)` 列需 10 字节。因此，一般而言 `VARCHAR` 列比 `CHAR` 列占用更少磁盘空间。
+
+然而，数据库处理定长列通常更快，这是支持 `CHAR` 的论据。而同一三字母词 `cat` 在 `CHAR(3)` 仅用 3 字节，在 `VARCHAR(10)` 却需 4 字节。那么如何抉择？
+
+若字符串字段 *始终* 为固定长度（如州名缩写），用 `CHAR`；否则用 `VARCHAR`。你可能注意到，某些情况下 MySQL 将列定义为一种类型（如 `CHAR`），即使你创建时为另一种（`VARCHAR`）。这完全正常，是 MySQL 提升性能的方式。
+
+***
+
+**3.** 设置文本列的最大长度（**表 4.5**）。
+
+**表 4.5 `users` 表**
+
+![Image](img/04tab05.jpg)
+
+任何字段大小应限制在最小可能值，基于最大可能输入。例如，存州名缩写的列定为 `CHAR(2)`。其他时候需估算：我想不出超过 10 字符的名，但为保险起见允许最多 20 字符。
+
+***
+
+Tip
+
+
+
+数值类型的 length 属性不会影响可存储在列中的值的范围。定义为 `TINYINT(1)` 或 `TINYINT(20)` 的列可以存储完全相同的值。相反，对于整数，length 决定显示宽度；对于小数，length 是可存储的总位数。
+
+***
+
+### 提示
+
+如果在使用非整数时需要绝对精度，则首选 `DECIMAL` 而非 `FLOAT` 或 `DOUBLE`。
+
+***
+
+### 提示
+
+MySQL 有一个 `BOOLEAN` 类型，它只是 `TINYINT(1)` 的同义词，其中 0 表示 `FALSE`，1 表示 `TRUE`。
+
+***
+
+### 提示
+
+许多数据类型都有同义词名称：`INT` 和 `INTEGER`、`DEC` 和 `DECIMAL` 等。
+
+***
+
+### 提示
+
+根据所用的 MySQL 版本，当发生 `INSERT` 或 `UPDATE` 时，`TIMESTAMP` 字段类型会自动设置为当前日期和时间，即使未为该特定字段指定值。如果一个表有多个 `TIMESTAMP` 列，只有第一个会在执行 `INSERT` 或 `UPDATE` 时被更新。
+
+***
+
+### 提示
+
+MySQL 还有几种文本类型的变体，允许存储二进制数据。这些类型包括 `BINARY`、`VARBINARY`、`TINYBLOB`、`MEDIUMBLOB` 和 `LONGBLOB`。此类类型可用于存储文件或加密数据。
+
+***
+
+### 选择其他列属性
+
+除了决定列应使用什么数据类型和大小外，还应考虑其他一些属性。
+
+首先，无论类型如何，每个列都可以定义为 `NOT NULL`。在数据库和编程中，`NULL` 值等同于表示该字段没有已知值。理想情况下，在设计良好的数据库中，每个表中每行的每一列都应该有一个值，但情况并非总是如此。要强制字段必须有值，请将 `NOT NULL` 描述添加到其列类型中。例如，必填的金额可以描述为
+
+```
+cost DECIMAL(5,2) NOT NULL
+```
+
+***
+
+### 索引、键和 AUTO_INCREMENT
+
+与数据库设计密切相关的两个概念是索引和键。数据库中的*索引*是一种请求数据库关注特定列或列组合值的方式（宽泛地讲）。其最终结果是检索记录时性能得到提升，但插入或更新记录时性能会略微受阻。
+
+数据库表中的*键*是用于设计更复杂数据库的“规范化”过程的组成部分（参见第 6 章）。键分两种类型：*主键*和*外键*。每个表应恰好有一个主键，一个表中的主键通常作为外键关联到另一个表中。
+
+表的主键是引用记录的一种人为方式，必须遵守三条规则：
+
+**1.** 必须始终有值。
+
+**2.** 该值绝不能改变。
+
+**3.** 该值在表中的每条记录里必须唯一。
+
+在 *users* 表中，*user_id* 将被指定为 `PRIMARY KEY`，这既是对该列的描述，也是指示 MySQL 对其建立索引的指令。由于 *user_id* 是数字（主键几乎总是数字），因此还会向该列添加 `AUTO_INCREMENT` 描述，这会告诉 MySQL 为每条新增记录使用下一个最大的数字作为 *user_id* 值。当你开始插入记录时，你会在实践中看到这意味着什么。
+
+***
+
+创建表时，还可以为任何列指定默认值，无论其类型如何。在大多数记录对某列将具有相同值的情况下，预设默认值将免去你在插入新行时指定值的麻烦（除非该行该列的值不同于常态）。
+
+```
+gender ENUM('M', 'F') default 'F'
+```
+
+对于 *gender* 列，如果添加记录时未指定值，将使用默认值。
+
+如果某列没有默认值，且新记录未为其指定值，则该字段将根据其类型获得一个默认值。对于数值类型，默认值为 0。对于大多数日期和时间类型，该类型的“零”版本将作为默认值（例如 *0000-00-00*）。表中的第一个 `TIMESTAMP` 列将具有当前日期和时间的默认值。字符串类型使用空字符串 (`''`) 作为默认值，`ENUM` 除外，其默认值（同样，如果未另行指定）是第一个可能的枚举值（上例中的 *M*）。
+
+数值类型可以标记为 `UNSIGNED`，这将存储的数据限制为正数和零。这也实际上使可存储的正数范围翻倍（因为不再保存负数，参见表 4.2）。你也可以将数值类型标记为 `ZEROFILL`，这意味着任何多余空间将用零填充（`ZEROFILL` 列也自动成为 `UNSIGNED`）。
+
+最后，在设计数据库时，你需要考虑创建索引、添加键以及使用 `AUTO_INCREMENT` 属性。第 6 章将更详细地讨论这些概念，但同时，请查看侧边栏“索引、键和 `AUTO_INCREMENT`”，了解它们如何影响 *users* 表。
+
+#### 完成列定义
+
+**1.** 确定主键。
+
+主键具有矛盾的特性：既是任意的，又至关重要。它几乎总是一个数值，是引用特定记录的唯一方式。例如，你的电话号码没有内在价值，但它对你来说是唯一的（你的家庭电话或手机）。
+
+在 *users* 表中，*user_id* 将作为主键：一个用于引用数据行的任意数字。同样，第 6 章将更详细地介绍主键的概念。
+
+**2.** 确定哪些列不能有 `NULL` 值。
+
+在本例中，每个字段都是必填的（不能为 `NULL`）。作为一个可以有 `NULL` 值的列的例子，如果你存储人们的地址，可能会有 *address_line1* 和 *address_line2*，其中后者是可选的。一般来说，包含大量 `NULL` 值的表暗示设计不佳（更多内容请见……你猜对了……第 6 章）。
+
+**3.** 如果数值类型永远不会存储负数，则将其设为 `UNSIGNED`。
+
+作为数字的 *user_id* 应设为 `UNSIGNED`，以确保其始终为正（主键应为无符号）。其他 `UNSIGNED` 数字的例子包括电子商务示例中的商品价格、企业的电话分机号或邮政编码。
+
+**4.** 为任何列建立默认值。
+
+此处没有任何列在逻辑上暗示默认值。
+
+**5.** 确认最终的列定义（**表 4.6**）。
+
+**表 4.6. `users` 表**
+
+![Image](img/04tab06.jpg)
+
+在创建表之前，你应该重新审视将要存储的数据类型和范围，以确保数据库能有效地涵盖所有内容。
+
+***
+
+### 提示
+
+文本列也可以定义*字符集*和*排序规则*。这将意味着更多……详见第 6 章。
+
+***
+
+### 提示
+
+默认值必须始终是一个静态值，而不能是执行函数的结果，有一个例外：`TIMESTAMP` 列的默认值可以指定为 `CURRENT_TIMESTAMP`。
+
+***
+
+### 提示
+
+`TEXT` 列不能分配默认值。
+
+***
+
+### 访问 MySQL
+
+
+
+
+为了创建表、添加记录以及从数据库请求信息，需要某种*客户端*来与 MySQL 服务器通信。本书后面将使用 PHP 脚本充当此角色，但能够使用另一种界面也是必要的。虽然有大量可用的客户端应用程序，但我将重点介绍两种：*mysql 客户端*和基于 Web 的 phpMyAdmin。第三种选择是 MySQL Query Browser，本书不作讨论，但可在 MySQL 网站（**[www.mysql.com](http://www.mysql.com)**）找到，以防您对这两种选择不满意。
+
+本章其余部分假设您有权访问正在运行的 MySQL 服务器。如果您在自己的计算机上工作，请参阅附录 A“安装”，了解安装 MySQL、启动 MySQL 和创建 MySQL 用户的说明（所有这些都必须已完成，才能完成本章）。如果您使用托管服务器，您的 Web 主机应提供数据库访问权限。根据托管情况，可能会提供 phpMyAdmin，但无法使用命令行 mysql 客户端。
+
+### 使用 mysql 客户端
+
+mysql 客户端通常随 MySQL 软件的其余部分一起安装。虽然 mysql 客户端没有漂亮的图形界面，但它是一个可靠、标准的工具，易于使用，并且在许多不同的操作系统上表现一致。
+
+mysql 客户端从命令行界面访问，无论是 Linux 或 Mac OS X 中的 Terminal 应用程序 ![Image](img/circle-a.jpg)，还是 Windows 中的 DOS 提示符 ![Image](img/circle-b.jpg)。如果您不习惯命令行交互，可能会觉得此界面具有挑战性，但很快就会变得容易使用。
+
+![Image](img/04_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg)Mac OS X 中的终端窗口。
+
+![Image](img/04_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg)Windows DOS 提示符或控制台（尽管默认是黑底白字）。
+
+要从命令行启动应用程序，请输入其名称并按 Return 或 Enter 键：
+
+```
+mysql
+```
+
+根据服务器（或您的计算机），您可能需要输入完整路径才能启动应用程序。例如：
+
+`/Applications/MAMP/Library/bin/mysql`（Mac OS X，使用 MAMP）
+
+`C:\xampp\mysql\bin\mysql`（Windows，使用 XAMPP）
+
+调用此应用程序时，可以添加参数以影响其运行方式。最常见的参数是要用于连接的用户名、密码和主机名（计算机名、URL 或 IP 地址）。您可以像这样建立这些参数：
+
+```
+mysql -u username -h hostname –p
+```
+
+**`-p`** 选项将导致客户端提示您输入密码。如果您愿意，也可以直接在 **`-p`** 提示符后输入密码来指定密码——但它将是可见的，这是不安全的。**`-h`** **`hostname`** 参数是可选的，除非没有它无法连接到 MySQL 服务器，否则可以省略。
+
+在 mysql 客户端中，每条语句（SQL 命令）都需要以分号结尾。这些分号向客户端指示查询已完成并应运行。分号不是 SQL 本身的一部分（这是一个常见的混淆点）。这也意味着您可以在 mysql 客户端中跨多行继续同一 SQL 语句，这使得阅读和编辑更加容易（如果需要的话）。
+
+作为访问和使用 mysql 客户端的快速演示，以下步骤将展示如何启动 mysql 客户端、选择要使用的数据库以及退出客户端。在执行这些步骤之前，
+
+- MySQL 服务器必须正在运行。
+- 您必须拥有具有适当访问权限的用户名和密码。
+
+这两个概念都在附录 A 中解释。
+
+作为旁注，在以下步骤和本书其余部分中，我将继续提供在 Windows 和 Mac OS X 上使用 mysql 客户端的图像。虽然外观不同，但步骤和结果将完全相同。简而言之，不要担心为什么一张图片显示 DOS 提示符而下一张显示终端。
+
+### 使用 mysql 客户端
+
+**1.** 从命令行界面访问您的系统。
+
+在 Unix 系统和 Mac OS X 上，这只是打开终端或类似应用程序的问题。
+
+如果您使用 Windows 并在计算机上安装了 MySQL，请从开始菜单选择“运行”（或按 Windows 键+R），在窗口中输入 **`cmd`** ![Image](img/circle-c.jpg)，然后按 Enter（或单击 OK）以弹出 DOS 提示符。
+
+![Image](img/04_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg)在 Windows 的“运行”提示符中执行 `cmd` 是访问 DOS 提示符界面的一种方法。
+
+**2.** 使用适当的命令调用 mysql 客户端 ![Image](img/circle-d.jpg)。
+
+```
+/path/to/mysql/bin/mysql -u username -p
+```
+
+![Image](img/04_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg)输入实用程序的完整路径以及适当的参数以访问 mysql 客户端。
+
+此步骤中的 **`/`*`path`*`/`*`to`*`/`*`mysql`*** 部分将主要取决于您正在运行的操作系统以及 MySQL 的安装位置。我已经根据附录 A 中安装的 MAMP（在 Mac OS X 上）或 XAMPP（在 Windows 上）提供了两个选项。
+
+基本前提是您正在运行 mysql 客户端，以 *username* 身份连接，并请求提示输入密码。不想过分强调这一点，但您使用的用户名和密码值必须已在 MySQL 中建立为有效用户（请参阅附录 A）。
+
+**3.** 在提示符下输入密码并按 Return/Enter 键。
+
+此处使用的密码应为前一步中指定的用户的密码。如果您使用了正确的用户名/密码组合（即具有有效访问权限的人），您应该会看到如 ![Image](img/circle-e.jpg) 所示的欢迎信息。如果拒绝访问，您可能使用的值不正确（请参阅附录 A 了解创建用户的说明）。
+
+![Image](img/04_figure_05_e.jpg)
+
+![Image](img/circle-e.jpg)如果您成功登录，将看到如下欢迎消息。
+
+**4.** 选择要使用的数据库 ![Image](img/circle-f.jpg)。
+
+```
+USE test;
+```
+
+![Image](img/04_figure_06_f.jpg)
+
+![Image](img/circle-f.jpg)进入 mysql 客户端后，运行 `USE` 命令以选择要使用的数据库。
+
+**`USE`** 命令选择用于每个后续命令的数据库。*test* 数据库是 MySQL 默认安装的数据库。假设它存在于您的服务器上，所有用户都应该能够访问它。
+
+**5.** 退出 mysql ![Image](img/circle-g.jpg)。
+
+```
+exit
+```
+
+![Image](img/04_figure_07_g.jpg)
+
+![Image](img/circle-g.jpg)输入 `exit` 或 `quit` 以终止 MySQL 会话并离开 mysql 客户端。
+
+您也可以使用命令 **`quit`** 离开客户端。此步骤——与您在 mysql 客户端中输入的大多数其他命令不同——不需要在末尾加分号。
+
+**6.** 退出终端或 DOS 控制台会话。
+
+```
+exit
+```
+
+命令 **`exit`** 将终止当前会话。在 Windows 上，它还将关闭 DOS 提示符窗口。
+
+---
+
+**提示**
+
+如果您预先知道将要使用哪个数据库，可以通过以下方式启动 mysql 来简化操作：
+
+```
+/path/to/mysql/bin/mysql -u username  
+-p databasename
+```
+
+---
+
+**提示**
+
+要查看还可以对 mysql 客户端做什么，请输入：
+
+```
+/path/to/mysql/bin/mysql --help
+```
+
+---
+
+**提示**
+
+大多数系统上的 mysql 客户端允许您使用上下箭头浏览以前输入的命令。如果您在输入查询时出错，可以向上滚动找到它，然后更正错误。
+
+---
+
+**提示**
+
+
+
+
+在 mysql 客户端中，你也可以使用 `\G` 代替分号来终止 SQL 命令。对于返回结果的查询，使用 `\G` 会将这些结果显示为垂直列表，而不是水平表格，这有时更便于阅读。
+
+***
+
+### Tip
+
+如果你正在输入一条长语句并出错了，请输入 `c` 并按回车键取消当前操作。如果 mysql 认为缺少结束的单引号或双引号（由 `'>` 和 `">` 提示符指示），你需要先输入相应的引号。
+
+***
+
+#### 使用 phpMyAdmin
+
+phpMyAdmin（**[www.phpmyadmin.net](http://www.phpmyadmin.net)**）是用 PHP 编写的最优秀、最流行的应用程序之一。其唯一目的是为 MySQL 服务器提供一个界面。它比 mysql 客户端更容易、更自然地使用，但需要安装 PHP，且必须通过 Web 浏览器访问。如果你在自己的电脑上运行 MySQL，可能会发现使用 mysql 客户端更合理，因为安装和配置 phpMyAdmin 属于不必要的额外工作（尽管集成式 PHP 和 MySQL 安装程序可能会为你完成此操作）。如果使用托管服务器，你的 Web 主机几乎肯定会提供 phpMyAdmin 作为操作 MySQL 的主要方式，而 mysql 客户端可能不是一个选项。
+
+使用 phpMyAdmin 并不难，但接下来的步骤会介绍基础知识，以便你在后续章节中知道该怎么做。
+
+#### 使用 phpMyAdmin
+
+**1.** 通过 Web 浏览器访问 phpMyAdmin ![Image](img/circle-h.jpg)。
+
+![Image](img/04_figure_08_h.jpg)
+
+![Image](img/circle-h.jpg) 首个 phpMyAdmin 页面（以可访问多个数据库的 MySQL 用户身份连接时）。
+
+你使用的 URL 将取决于你的具体情况。如果在自己的电脑上运行，可能是 `http://localhost/phpMyAdmin/`。如果在托管网站上运行，你的 Web 主机会提供正确的 URL。在大多数情况下，phpMyAdmin 可以通过网站的控制面板访问（如果存在的话）。
+
+请注意，只有当 phpMyAdmin 已正确配置为使用有效的用户名/密码/主机名组合连接到 MySQL 时，它才能工作。如果你看到如 ![Image](img/circle-i.jpg) 所示的消息，你可能使用的不是正确的值（有关创建用户的说明，请参见 附录 A）。
+
+![Image](img/04_figure_09_i.jpg)
+
+![Image](img/circle-i.jpg) 每个客户端应用程序都需要正确的用户名/密码/主机名组合才能与 MySQL 服务器交互。
+
+**2.** 如果可能且必要，使用左侧的列表选择要使用的数据库 ![Image](img/circle-j.jpg)。
+
+![Image](img/04_figure_10_j.jpg)
+
+![Image](img/circle-j.jpg) 使用窗口左侧的数据库列表选择你想要使用的数据库。这相当于在 mysql 客户端中运行 `USE` *`databasename`* 查询。
+
+此处可用的选项将因 phpMyAdmin 连接时所用的 MySQL 用户而异。该用户可能有权访问一个数据库、多个数据库或所有数据库。在你只有一个数据库的托管网站上，该数据库可能已经为你选中。在你自己的电脑上，以 MySQL root 用户身份连接 phpMyAdmin 时，你会看到一个下拉菜单或可用数据库的简单列表 ![Image](img/graycircle-j.jpg)。
+
+**3.** 点击左栏中的表名以选择该表 ![Image](img/circle-k.jpg)。
+
+![Image](img/04_figure_11_k.jpg)
+
+![Image](img/circle-k.jpg) 从左栏选择表会更改页面右侧的选项。
+
+你并不总是必须选择表——事实上，如果你只使用本书中的 SQL 命令，你永远不需要选择表，但这样做通常可以简化某些任务。
+
+**4.** 使用页面右侧的标签和链接执行常见任务。
+
+在大多数情况下，标签和链接是常用 SQL 命令的快捷方式。例如，“浏览”标签执行 `SELECT` 查询，“插入”标签创建一个用于添加新记录的表单。
+
+**5.** 使用 SQL 标签 ![Image](img/circle-l.jpg) 或 SQL 查询窗口 ![Image](img/circle-m.jpg) 输入 SQL 命令。
+
+![Image](img/04_figure_12_l.jpg)
+
+![Image](img/circle-l.jpg) 窗口主体部分的 SQL 标签可用于运行任何 SQL 命令。
+
+![Image](img/04_figure_13_m.jpg)
+
+![Image](img/circle-m.jpg) SQL 窗口也可用于运行命令。点击浏览器左侧顶部的 SQL 图标后会弹出该窗口（参见 ![Image](img/graycircle-k.jpg) 中从左数第二个图标）。
+
+接下来的三章，以及本书后面的几章，将提供必须运行的 SQL 命令，用于创建、填充和操作表。这些命令可能如下所示：
+
+```
+INSERT INTO tablename (col1, col2) VALUES (x, y)
+```
+
+这些命令可以使用 mysql 客户端、phpMyAdmin 或任何其他界面来运行。要在 phpMyAdmin 中运行它们，只需将它们输入到 SQL 提示符之一并点击“执行”。
+
+***
+
+### Tip
+
+phpMyAdmin 还能做更多事情，但全面介绍需要单独一章（而且会是很长的一章）。此处提供的信息足以让你学习本书中的任何示例，如果你不想使用 mysql 客户端的话。
+
+***
+
+### Tip
+
+phpMyAdmin 可以配置为使用一个特殊的数据库，该数据库将记录你的查询历史，允许你为查询添加书签，以及更多功能。详情请参阅 phpMyAdmin 文档。
+
+***
+
+### Tip
+
+使用 phpMyAdmin 最好的理由之一是将数据库从一台电脑传输到另一台电脑。在连接到源电脑的 phpMyAdmin 中使用“导出”标签创建数据文件。然后，在目标电脑上，使用连接到该 MySQL 服务器的 phpMyAdmin 中的“导入”标签完成传输。
+
+***
+
+### 复习与实践
+
+如果你在复习问题或实践提示方面有任何问题，请访问本书的支持论坛（**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)**）。
+
+#### 复习
+
+• 你使用的是哪个版本的 MySQL？如果不知道，现在就去查明！
+
+• 数据库、表和列名中可以使用哪些字符？
+
+• 应该将数据库、表和列名视为区分大小写还是不区分大小写？
+
+• 列的三大通用类型是什么？
+
+• `CHAR` 和 `VARCHAR` 有什么区别？
+
+• 如何确定列的大小（就子类型或长度而言）？
+
+• 还可以给列分配哪些其他属性？
+
+• 什么是主键？
+
+• 如果你使用命令行 mysql 客户端连接到 MySQL，需要什么用户名和密码组合？
+
+#### 实践
+
+• 找到你所用 MySQL 版本的在线手册。将其加入书签！
+
+• 开始思考你的项目可能需要哪些数据库。
+
+• 如果你还没有更改 MySQL root 用户密码（假设你在自己的电脑上安装了 MySQL），请立即使用 附录 A 中的说明进行更改。
+
+## 5. SQL 简介
+
+### 本章内容
+
+创建数据库和表 130
+
+插入记录 133
+
+选择数据 138
+
+使用条件 140
+
+使用 LIKE 和 NOT LIKE 143
+
+对查询结果排序 145
+
+限制查询结果 147
+
+更新数据 149
+
+删除数据 151
+
+
+
+### 使用函数
+
+### 复习与深入
+
+前一章快速介绍了 MySQL。其重点在于两个主题：使用 MySQL 的规则和数据类型来定义数据库，以及如何与 MySQL 服务器交互。本章将转向数据库的*通用语言*：SQL。
+
+SQL 是 Structured Query Language（结构化查询语言）的缩写，是一组专门用于与数据库交互的特殊词汇。SQL 学习和使用起来出奇地简单，却又惊人地强大。事实上，SQL 最难的地方在于如何将其潜力发挥到极致！
+
+在本章中，你将学习创建表、填充数据以及运行其他基本查询所需的所有 SQL 知识。示例将全部使用上一章讨论的 *users* 表。此外，与上一章一样，本章假设你有权访问正在运行的 MySQL 服务器，并知道如何使用客户端应用程序与其交互。
+
+#### 创建数据库和表
+
+SQL 的第一个合乎逻辑的用途是创建数据库。创建新数据库的语法非常简单：
+
+```
+CREATE DATABASE databasename
+```
+
+就这么简单（正如我所说，SQL 很容易学）！
+
+`CREATE` 关键字也用于创建表：
+
+```
+CREATE TABLE tablename (  
+column1name description,  
+column2name description  
+...)
+```
+
+正如你从该语法中所见，在命名表之后，你需要在括号内定义每一列。每一对列名和描述应由逗号与下一对分隔。如果你选择此时创建索引，可以在创建语句的末尾添加它们，但也可以稍后再添加索引。（索引将在第 6 章“数据库设计”中正式讨论，但第 4 章“MySQL 简介”已对该主题进行了介绍。）
+
+以防你疑惑，SQL *不区分大小写*。然而，我习惯将 SQL 关键字大写，如前面的示例语法和以下步骤所示。这样做有助于将 SQL 术语与数据库、表和列名区分开来。
+
+#### 创建数据库和表
+
+**1.** 使用你喜欢的客户端访问 MySQL。
+
+第 4 章展示了如何使用两种最常见的界面——*mysql* 命令行客户端和 *phpMyAdmin*——与 MySQL 服务器通信。使用上一章的步骤，你现在应该已连接到 MySQL。
+
+在本章其余部分中，大多数 SQL 示例将使用 mysql 客户端输入，但它们在 phpMyAdmin 或大多数其他客户端工具中的工作方式完全相同。
+
+**2.** 创建并选择新数据库：
+
+```
+CREATE DATABASE sitename;  
+USE sitename;
+```
+
+一个名为 *sitename* 的新数据库在 MySQL 中被创建。随后它被选中用于后续的查询。
+
+第一行创建数据库（假设你以有权创建新数据库的用户身份连接到 MySQL）。第二行告诉 MySQL 你想从现在开始在此数据库中工作。请记住，在 mysql 客户端中，你必须用分号终止每条 SQL 命令，尽管这些分号技术上并不属于 SQL 本身的一部分。如果在 phpMyAdmin 中一次执行多个查询，它们也应用分号分隔。如果在 phpMyAdmin 中仅运行单个查询，则不需要分号。
+
+创建和选择数据库的相同命令可以在 phpMyAdmin 的 SQL 窗口中运行。
+
+如果你使用的是托管公司的 MySQL，他们可能会为你创建数据库。在这种情况下，只需连接到 MySQL 并选择该数据库即可。
+
+**3.** 创建 *users* 表：
+
+```
+CREATE TABLE users (  
+user_id MEDIUMINT UNSIGNED NOT NULL  
+AUTO_INCREMENT,  
+first_name VARCHAR(20) NOT NULL,  
+last_name VARCHAR(40) NOT NULL,  
+email VARCHAR(60) NOT NULL,  
+pass CHAR(40) NOT NULL,  
+registration_date DATETIME NOT NULL,  
+PRIMARY KEY (user_id)  
+);
+```
+
+此 `CREATE` SQL 命令将创建 *users* 表。
+
+*users* 表的设计是在第 4 章中开发的。在那里，根据许多标准确定了表中每一列的名称、类型和属性（详见该章）。在这里，这些信息被放入 `CREATE` 表语法中，以便在数据库中实际创建该表。
+
+因为 mysql 客户端直到遇到分号（或 `\G` 或 `\g`）才会运行查询，所以你可以跨多行输入语句（在每行末尾按回车键）。这通常使查询更易于阅读和调试。在 phpMyAdmin 中，你也可以跨多行运行查询，尽管它们直到你点击“执行”才会被执行。
+
+**4.** 确认表的存在：
+
+```
+SHOW TABLES;  
+SHOW COLUMNS FROM users;
+```
+
+使用 `SHOW` 命令确认表的存在及其列。
+
+`SHOW` 命令显示数据库中的表或表中的列名和类型。
+
+此外，你可能会注意到 `user_id` 的默认值为 `NULL`，即使该列被定义为 `NOT NULL`。这实际上是正确的，这与 `user_id` 是自动递增的主键有关。MySQL 经常会出于更好的性能或其他原因，对列的定义进行微小更改。
+
+在 phpMyAdmin 中，数据库的表列在浏览器窗口的左侧，数据库名称下方。点击表名可查看其列。
+
+phpMyAdmin 显示 *sitename* 数据库包含一张名为 *users* 的表。
+
+phpMyAdmin 在此屏幕上显示表的定义（通过点击左侧列中的表名访问）。
+
+***
+
+> **提示**
+>
+> 本章其余部分假设你正在使用 mysql 客户端或类似工具，并已使用 `USE` 选择了 *sitename* 数据库。
+
+***
+
+> **提示**
+>
+> 创建表时列出列的顺序没有功能性影响，但有关于如何排序的风格建议。我通常将主键列放在第一位，其次是任何外键列（更多相关内容见下一章），然后是其余列，最后是日期列。
+
+***
+
+> **提示**
+>
+> 创建表时，你可以选择指定其*类型*。MySQL 支持多种表类型，各有优劣。如果你不指定表类型，MySQL 将自动使用该 MySQL 安装的默认类型创建表。第 6 章将更详细地讨论这一点。
+
+***
+
+> **提示**
+>
+> 创建表和文本列时，你可以选择指定其*排序规则*和*字符集*。当使用多种语言或非 MySQL 服务器默认语言时，两者都会发挥作用。第 6 章也涵盖了这些主题。
+
+***
+
+> **提示**
+>
+> `DESCRIBE tablename` 与 `SHOW COLUMNS FROM tablename` 是同一条语句。
+
+***
+
+### 插入记录
+
+
+
+数据库及其表创建完成后，即可开始使用 **`INSERT`** 命令填充数据。`INSERT` 查询有两种编写方式。第一种方法是指定要填充的列名：
+
+```
+INSERT INTO tablename (column1, column2...) VALUES (value1, value2 ...)
+```
+
+```
+INSERT INTO tablename (column4, column8) VALUES (valueX, valueY)
+```
+
+使用这种结构，可以添加记录行，仅填充关键列。未赋值的列将被视为 **`NULL`**（或使用定义的默认值）。注意：若某列定义为 **`NOT NULL`** 且无默认值，不指定值将导致错误或警告 ![Image](img/circle-a.jpg)。
+
+![Image](img/05_figure_07_a.jpg)
+
+![Image](img/circle-a.jpg) 未为 `NOT NULL` 列提供或预定义值会导致错误或警告。
+
+第二种插入记录的格式是不指定任何列，但必须为每一列提供值：
+
+```
+INSERT INTO tablename VALUES (value1, NULL, value2, value3, ...)
+```
+
+使用此方法时，必须为每一列指定值，即使是 **`NULL`**。例如表有六列，则必须列出六个值。值的数量与列的数量不匹配将导致错误 ![Image](img/circle-b.jpg)。因此，第一种插入格式通常更优。
+
+![Image](img/05_figure_08_b.jpg)
+
+![Image](img/circle-b.jpg) 未为表中的每一列或 `INSERT` 查询中指定的列提供值，也会导致错误。
+
+MySQL 还允许一次插入多行，各记录间用逗号分隔：
+
+```
+INSERT INTO tablename (column1, column4) VALUES (valueA, valueB),
+(valueC, valueD),
+(valueE, valueF)
+```
+
+虽然 MySQL 支持此语法，但不符合 SQL 标准，故并非所有数据库应用都支持。不过在 MySQL 中，该语法比单独执行多条 **`INSERT`** 查询更快。
+
+注意：以上示例均使用占位符表示实际表名、列名和值，且省略了引号。实际查询中必须遵循特定规则以避免错误（参见“查询中的引号”侧边栏）。
+
+#### 向表中插入数据
+
+**1.** 向 *users* 表插入一行数据，指定要填充的列 ![Image](img/circle-c.jpg)：
+
+```
+INSERT INTO users
+(first_name, last_name, email, pass, registration_date)
+VALUES ('Larry', 'Ullman', 'email@example.com', SHA1('mypass'), NOW());
+```
+
+![Image](img/05_figure_09_c.jpg)
+
+![Image](img/circle-c.jpg) 该查询向 *users* 表插入单条记录。*1 row affected* 消息表示插入成功。
+
+同样，这种指定具体列的语法更稳健，但并非总是最方便。first_name、last_name 和 email 列使用简单字符串作为值（字符串必须加引号）。
+
+***
+
+**查询中的引号**
+
+在每条 SQL 命令中：
+
+- 数值不应加引号。
+- 字符串值（**`CHAR`**、**`VARCHAR`**、**`TEXT`** 列类型）必须始终加引号。
+- 日期和时间值必须始终加引号。
+- 函数不能加引号。
+- **`NULL`** 关键字不能加引号。
+
+给数值加不必要的引号通常不会造成问题（但仍不建议），但在其他情况下误用引号几乎总会导致错误。另外，使用单引号还是双引号无所谓，只要成对一致即可（左引号匹配右引号）。
+
+如 PHP 一样，若值中需包含引号，可用另一种引号包裹，或用反斜杠转义：
+
+```
+INSERT INTO tablename (last_name) VALUES ('O\'Toole')
+```
+
+***
+
+***
+
+**两个 MySQL 函数**
+
+虽函数详见本章后文，但此处需先介绍两个：**`SHA1()`** 和 **`NOW()`**。
+
+**`SHA1()`** 函数是一种加密数据的方式。它生成的加密字符串固定为 40 字符长（这也是 *users* 表 *pass* 列定义为 **`CHAR(40)`** 的原因）。**`SHA1()`** 是单向加密（技术上属哈希函数），不可逆。适用于存储无需再以明文查看的敏感数据。因 **`SHA1()`** 输出不可解密，不适合存储日后需查看的敏感数据（如信用卡号）。**`SHA1()`** 自 MySQL 5.0.2 起可用；早期版本可用 **`MD5()`** 代替，功能相同但算法不同，返回 32 字符字符串（若用 **`MD5()`**，*pass* 列可定义为 **`CHAR(32)`**）。
+
+**`NOW()`** 函数便于填充日期、时间、时间戳列，返回服务器当前日期和时间。
+
+***
+
+对于 password 和 registration_date 列，使用两个函数生成值（见“两个 MySQL 函数”侧边栏）。**`SHA1()`** 加密密码（示例中为 *mypass*）。**`NOW()`** 将 *registration_date* 设为当前时刻。
+
+在 SQL 语句中使用函数时，切勿将其置于引号内。函数名与后续括号间也不能有空格（即 **`NOW()`** 而非 **`NOW ()`**）。
+
+**2.** 向 *users* 表插入一行数据，不指定列名 ![Image](img/circle-d.jpg)：
+
+```
+INSERT INTO users VALUES
+(NULL, 'Zoe', 'Isabella', 'email2@example.com', SHA1('mojito'), NOW());
+```
+
+![Image](img/05_figure_10_d.jpg)
+
+![Image](img/circle-d.jpg) 另一条记录被插入表中，此次为表中每一列都提供了值。
+
+此语法示例中，每列必须赋值。*user_id* 列赋 **`NULL`**，MySQL 将按 **`AUTO_INCREMENT`** 定义自动使用下一个序号。即第一条记录 *user_id* 为 1，第二条为 2，以此类推。
+
+**3.** 向 *users* 表插入多条数据 ![Image](img/circle-e.jpg)：
+
+```
+INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES
+('John', 'Lennon', 'john@beatles.com', SHA1('Happin3ss'), NOW()),
+('Paul', 'McCartney', 'paul@beatles.com', SHA1('letITbe'), NOW()),
+('George', 'Harrison', 'george@beatles.com', SHA1('something'), NOW()),
+('Ringo', 'Starr', 'ringo@beatles.com', SHA1('thisboy'), NOW());
+```
+
+![Image](img/05_figure_11_e.jpg)
+
+![Image](img/circle-e.jpg) 这一条查询（MySQL 允许但其他数据库应用不支持）一次性向表中插入多条记录。
+
+利用 MySQL 支持一次插入多值的特性，可快速填充表记录。
+
+**4.** 重复步骤 1 和 2，直到 *users* 表数据充足。
+
+本章后续查询均基于我录入的记录。若你的数据库记录不同，请相应调整细节。因 *sitename* 数据库列和表结构固定，后续查询的核心思路仍适用。
+
+***
+
+Tip
+
+
+
+在本书配套网站（`www.LarryUllman.com`）的下载页面，你可以下载书中所有的 SQL 命令。使用其中一些命令，你可以像我一样填充你的 `users` 表。
+
+> **提示**
+>
+> 在 MySQL 中，`INSERT` 语句里的 `INTO` 项是可选的。
+
+> **提示**
+>
+> phpMyAdmin 的 `INSERT` 选项卡允许你使用 HTML 表单插入记录 ![Image](img/circle-f.jpg)。
+>
+> ![Image](img/05_figure_12_f.jpg)
+>
+> ![Image](img/circle-f.jpg) phpMyAdmin 的 `INSERT` 表单显示表的列，并提供用于输入值的文本框。下拉菜单列出了可用的函数，如用于密码的 `SHA1()` 或用于注册日期的 `NOW()`。
+
+> **提示**
+>
+> 根据所用的 MySQL 版本，未为不能为 `NULL` 的列提供值可能会发出警告但 `INSERT` 仍然生效 ![Image](img/graycircle-a.jpg)，或者报错导致 `INSERT` 失败。
+
+> **提示**
+>
+> 你偶尔会在 SQL 命令中看到反引号（`` ` ``）的用法。该字符位于与波浪号（`~`）相同的键上，不同于单引号。反引号用于安全地引用可能与现有关键字同名的表或列名。
+
+> **提示**
+>
+> 如果 MySQL 对前一个查询发出警告，`SHOW WARNINGS` 命令将显示问题所在 ![Image](img/graycircle-a.jpg)。
+
+> **提示**
+>
+> `INSERT` 的一个有趣变体是 `REPLACE`。如果用于表主键或 `UNIQUE` 索引的值已存在，则 `REPLACE` 更新该行。如果不存在，则 `REPLACE` 插入新行。
+
+### 选择数据
+
+现在数据库中已有一些记录，你可以使用所有 SQL 术语中最常用的 `SELECT` 来检索存储的信息。`SELECT` 查询使用以下语法返回记录行：
+
+```
+SELECT which_columns FROM which_table
+```
+
+最简单的 `SELECT` 查询是：
+
+```
+SELECT * FROM tablename
+```
+
+星号表示你想要检索每一列。另一种方法是指定要返回的列，每列之间用逗号分隔：
+
+```
+SELECT column1, column3 FROM tablename
+```
+
+明确指定要选择的列有几个好处。第一是性能：没有理由去获取你不会使用的列。第二是顺序：你可以按不同于表中布局的顺序返回列。第三——你稍后在本章中会看到——指定列名允许你使用函数操作这些列中的值。
+
+#### 从表中选择数据
+
+**1.** 检索 `users` 表中的所有数据 ![Image](img/circle-a.jpg)：
+
+```
+SELECT * FROM users;
+```
+
+![Image](img/05_figure_13_a.jpg)
+
+![Image](img/circle-a.jpg) `SELECT * FROM` `tablename` 查询返回表中存储的每条记录的每一列。
+
+这个非常基础的 SQL 命令将检索该表中存储的每一行的每一列。
+
+**2.** 仅从 `users` 中检索名和姓 ![Image](img/circle-b.jpg)：
+
+```
+SELECT first_name, last_name
+FROM users;
+```
+
+![Image](img/05_figure_14_b.jpg)
+
+![Image](img/circle-b.jpg) 该查询仅返回表中每条记录的两列。
+
+你可以使用 `SELECT` 语句将结果限制为仅你需要的字段，而不是显示 `users` 表中每一列的数据。
+
+> **提示**
+>
+> 在 phpMyAdmin 中，浏览选项卡运行一个简单的 `SELECT` 查询。
+
+> **提示**
+>
+> 你实际上可以在不指定表或列的情况下使用 `SELECT`。例如，`SELECT NOW()` ![Image](img/circle-c.jpg)。
+>
+> ![Image](img/05_figure_15_c.jpg)
+>
+> ![Image](img/circle-c.jpg) 许多查询可以在不指定数据库或表的情况下运行。此查询选择调用 `NOW()` 函数的结果，该函数返回当前日期和时间（根据 MySQL）。
+
+> **提示**
+>
+> `SELECT` 语句中列出列的顺序决定了值呈现的顺序（对比 ![Image](img/graycircle-b.jpg) 与 ![Image](img/circle-d.jpg)）。
+>
+> ![Image](img/05_figure_16_d.jpg)
+>
+> ![Image](img/circle-d.jpg) 如果 `SELECT` 查询指定了要返回的列，它们将按该顺序返回。
+
+> **提示**
+>
+> 使用 `SELECT` 查询，你甚至可以多次检索同一列，此功能使你能以多种不同方式操作该列的数据。
+
+#### 使用条件
+
+迄今为止使用的 `SELECT` 查询将始终检索表中的每一条记录。但通常你会想根据特定标准限制返回的行。这可以通过向 `SELECT` 查询添加条件来实现。条件使用 SQL 术语 `WHERE`，其编写方式很像你在 PHP 中编写条件：
+
+```
+SELECT which_columns FROM which_table WHERE condition(s)
+```
+
+**表 5.1** 列出了在条件中最常用的运算符。例如，一个简单的相等检查：
+
+```
+SELECT name FROM people
+WHERE birth_date = '2011-01-26'
+```
+
+**表 5.1. MySQL 运算符**
+
+![Image](img/05tab01.jpg)
+
+运算符可以结合使用，并配合括号，创建更复杂的表达式：
+
+```
+SELECT * FROM items WHERE
+(price BETWEEN 10.00 AND 20.00) AND
+(quantity > 0)
+
+SELECT * FROM cities WHERE
+(zip_code = 90210) OR (zip_code = 90211)
+```
+
+最后一个示例也可以写为：
+
+```
+SELECT * FROM cities WHERE
+zip_code IN (90210, 90211)
+```
+
+为了演示条件的使用，让我们在 `sitename` 数据库上运行更多 `SELECT` 查询。以下示例只是近乎无限可能性中的一小部分。在本章和全书的学习过程中，你将看到条件如何用于各类查询。
+
+#### 使用条件
+
+**1.** 选择姓氏为 `Simpson` 的所有用户 ![Image](img/circle-a.jpg)：
+
+```
+SELECT * FROM users
+WHERE last_name = 'Simpson';
+```
+
+![Image](img/05_figure_17_a.jpg)
+
+![Image](img/circle-a.jpg) 所有注册的 Simpson 家族成员。
+
+这个简单的查询返回 `last_name` 值为 `Simpson` 的每一行的每一列。（同样，如果你表中的数据不同，可以相应地更改这些查询。）
+
+**2.** 仅选择姓氏为 `Simpson` 的用户的名 ![Image](img/circle-b.jpg)：
+
+```
+SELECT first_name FROM users
+WHERE last_name = 'Simpson';
+```
+
+![Image](img/05_figure_18_b.jpg)
+
+![Image](img/circle-b.jpg) 所有注册的 Simpson 家族成员的名。
+
+这里每行仅返回一列（`first_name`）。虽然这看起来可能有点奇怪，但你不必选择正在对其执行 `WHERE` 操作的列。原因在于 `SELECT` 后列出的列仅决定返回*哪些列*，而 `WHERE` 中列出的列决定返回*哪些行*。
+
+**3.** 选择 `users` 表中没有电子邮件地址的每条记录的每一列 ![Image](img/circle-c.jpg)：
+
+```
+SELECT * FROM users
+WHERE email IS NULL;
+```
+
+![Image](img/05_figure_19_c.jpg)
+
+![Image](img/circle-c.jpg) 此查询未返回任何记录，因为 email 列不能有 `NULL` 值。所以这个查询*确实*生效了；只是没有匹配的记录。
+
+`IS NULL` 条件等同于*没有值*。请记住，空字符串不同于 `NULL`，因此不会匹配此条件。然而，空字符串将匹配：
+
+```
+SELECT * FROM users WHERE email='';
+```
+
+**4.** 选择密码为 `mypass` 的所有记录的用户 ID、名和姓 ![Image](img/circle-d.jpg)：
+
+```
+SELECT user_id, first_name, last_name
+FROM users
+```
+
+
+
+
+### SQL 条件查询与结果控制
+
+#### 使用函数进行条件判断
+
+```sql
+WHERE pass = SHA1('mypass');
+```
+
+![Image](img/05_figure_20_d.jpg)
+
+![Image](img/circle-d.jpg)条件判断可以使用函数，此处即为 `SHA1()`。
+
+由于存储的密码是用 `SHA1()` 函数加密的，因此可以在条件判断中使用相同的加密函数来匹配密码。`SHA1()` 区分大小写，因此只有当密码（存储的与查询的）完全匹配时，此查询才会生效。
+
+## 5. 选择用户 ID 小于 10 或大于 20 的用户名
+
+![Image](img/circle-e.jpg):
+
+```sql
+SELECT first_name, last_name
+FROM users WHERE
+(user_id < 10) OR (user_id > 20);
+```
+
+![Image](img/05_figure_21_e.jpg)
+
+![Image](img/circle-e.jpg)此查询使用了两个条件和 `OR` 运算符。
+
+同一查询也可以写作：
+
+```sql
+SELECT first_name, last_name FROM
+users WHERE user_id
+NOT BETWEEN 10 and 20;
+```
+
+甚至可以写作：
+
+```sql
+SELECT first_name, last_name FROM
+users WHERE user_id NOT IN
+(10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+```
+
+---
+
+### 提示
+
+您可以在查询中使用数学加法（`+`）、减法（`-`）、乘法（`*`）和除法（`/`）字符执行数学计算。
+
+---
+
+### 提示
+
+MySQL 支持关键字 `TRUE` 和 `FALSE`，*不区分大小写*。在内部，`TRUE` 评估为 1，`FALSE` 评估为 0。因此，在 MySQL 中，`TRUE + TRUE` 等于 2。
+
+---
+
+### 使用 LIKE 和 NOT LIKE
+
+在条件判断中使用数字、日期和 `NULL` 是一个直接的过程，但字符串可能比较棘手。您可以使用如下查询检查字符串相等性：
+
+```sql
+SELECT * FROM users
+WHERE last_name = 'Simpson'
+```
+
+然而，以更宽松的方式比较字符串需要额外的运算符和字符。例如，如果您想匹配一个人的姓氏，可能是 *Smith*、*Smiths* 或 *Smithson*，则需要更灵活的条件判断。这就是 `LIKE` 和 `NOT LIKE` 术语的用武之地。这些主要用于字符串，并结合两个通配符：下划线（ `_` ），匹配单个字符；百分号（ `%` ），匹配零个或多个字符。在姓氏示例中，查询将是：
+
+```sql
+SELECT * FROM users
+WHERE last_name LIKE 'Smith%'
+```
+
+此查询将返回所有 *last_name* 值以 *Smith* 开头的行。因为它默认是*不区分大小写*的搜索，所以也适用于以 *smith* 开头的名字。
+
+#### 使用 LIKE
+
+**1.** 选择姓氏以 *Bank* 开头的所有记录 ![Image](img/circle-a.jpg):
+
+```sql
+SELECT * FROM users
+WHERE last_name LIKE 'Bank%';
+```
+
+![Image](img/05_figure_22_a.jpg)
+
+![Image](img/circle-a.jpg)SQL 术语 `LIKE` 为您的条件判断增加了灵活性。此查询匹配姓氏值以 *Bank* 开头的任何记录。
+
+**2.** 选择电子邮件地址不符合 *something@authors.com* 形式的每条记录的姓名 ![Image](img/circle-b.jpg):
+
+```sql
+SELECT first_name, last_name
+FROM users WHERE
+email NOT LIKE '%@authors.com';
+```
+
+![Image](img/05_figure_23_b.jpg)
+
+![Image](img/circle-b.jpg)`NOT LIKE` 条件判断根据值不包含的内容返回记录。
+
+要排除字符串中存在的值，请结合通配符使用 `NOT LIKE`。
+
+---
+
+### 提示
+
+带有 `LIKE` 条件判断的查询通常较慢，因为它们无法利用索引。仅在绝对必要时才使用 `LIKE` 和 `NOT LIKE`。
+
+---
+
+### 提示
+
+通配符可以用在查询中字符串的前部和/或后部。
+
+```sql
+SELECT * FROM users
+WHERE last_name LIKE '_smith%'
+```
+
+---
+
+### 提示
+
+虽然 `LIKE` 和 `NOT LIKE` 通常用于字符串，但它们也可以应用于数值列。
+
+---
+
+### 提示
+
+要在 `LIKE` 或 `NOT LIKE` 查询中使用字面下划线或百分号，您需要对其进行转义（在字符前加上反斜杠），以免其被误认为是通配符。
+
+---
+
+### 提示
+
+下划线可以与自身组合使用；例如，`LIKE ' _ _ '` 将查找任何两个字母的组合。
+
+---
+
+### 提示
+
+在第 7 章（“高级 SQL 和 MySQL”）中，您将了解 `FULLTEXT` 搜索，这可能比 `LIKE` 搜索更有用。
+
+---
+
+### 排序查询结果
+
+默认情况下，`SELECT` 查询的结果将按无意义的顺序返回（对于许多数据库新手来说，这是一个奇怪的概念）。要使查询结果具有有意义的顺序，请使用 `ORDER BY` 子句：
+
+```sql
+SELECT * FROM tablename ORDER BY column
+SELECT * FROM orders ORDER BY total
+```
+
+使用 `ORDER BY` 时的默认顺序是升序（缩写 `ASC`），即数字从小到大，日期从最旧到最近，文本按字母顺序排序。您可以通过指定降序（缩写 `DESC`）来反转此顺序：
+
+```sql
+SELECT * FROM tablename
+ORDER BY column DESC
+```
+
+您甚至可以按多列对返回的值进行排序：
+
+```sql
+SELECT * FROM tablename
+ORDER BY column1, column2
+```
+
+您可以且经常会将 `ORDER BY` 与 `WHERE` 或其他子句一起使用。这样做时，请将 `ORDER BY` 放在条件之后：
+
+```sql
+SELECT * FROM tablename WHERE conditions
+ORDER BY column
+```
+
+#### 对数据进行排序
+
+**1.** 按姓氏字母顺序选择所有用户 ![Image](img/circle-a.jpg):
+
+```sql
+SELECT first_name, last_name FROM
+users ORDER BY last_name;
+```
+
+![Image](img/05_figure_24_a.jpg)
+
+![Image](img/circle-a.jpg)按姓氏字母顺序排列的记录。
+
+如果您将这些结果与“选择数据”部分中 ![Image](img/graycircle-b.jpg) 的结果进行比较，您将看到使用 `ORDER BY` 的好处。
+
+**2.** 先按姓氏字母顺序显示所有用户，然后按名字字母顺序 ![Image](img/circle-b.jpg):
+
+```sql
+SELECT first_name, last_name FROM
+users ORDER BY last_name ASC,
+first_name ASC;
+```
+
+![Image](img/05_figure_25_b.jpg)
+
+![Image](img/circle-b.jpg)记录按字母顺序排列，先按姓氏，然后在该姓氏内按名字。
+
+在此查询中，效果是返回每一行，先按 *last_name* 排序，然后在 *last_name* 内按 *first_name* 排序。在 Simpson 家庭成员中，这种效果最为明显。
+
+**3.** 按注册日期显示所有非 Simpson 姓氏的用户 ![Image](img/circle-c.jpg):
+
+```sql
+SELECT * FROM users
+WHERE last_name != 'Simpson'
+ORDER BY registration_date DESC;
+```
+
+![Image](img/05_figure_26_c.jpg)
+
+![Image](img/circle-c.jpg)所有姓氏不为 *Simpson* 的用户，按注册日期显示，最近注册的列在最前面。
+
+您可以在任何列类型上使用 `ORDER BY`，包括数字和日期。该子句也可用于带有条件判断的查询中，将 `ORDER BY` 放在 `WHERE` 之后。
+
+---
+
+### 提示
+
+由于 MySQL 自然支持任意数量的语言，`ORDER BY` 将基于所使用的*排序规则*（参见第 6 章）。
+
+---
+
+### 提示
+
+如果您选择用于排序的列是 `ENUM` 类型，排序将基于创建列时可能的 `ENUM` 值的顺序。例如，如果您有 *gender* 列，定义为 `ENUM('M', 'F')`，则子句 `ORDER BY gender` 将返回 *M* 记录在前的结果。
+
+---
+
+### 限制查询结果
+
+另一个可以添加到大多数查询中的 SQL 子句是 `LIMIT`。在 `SELECT` 查询中，`WHERE` 决定返回哪些记录，`ORDER BY` 决定如何对这些记录排序，但 `LIMIT` 规定返回多少记录。其用法如下：
+
+```sql
+SELECT * FROM tablename LIMIT x
+```
+
+
+
+
+在这样的查询中，将仅返回查询结果中最初的 *x* 条记录。要仅返回三条匹配记录，请使用：
+
+```sql
+SELECT * FROM tablename LIMIT 3
+```
+
+使用此格式
+
+```sql
+SELECT * FROM tablename LIMIT x, y
+```
+
+可以返回从 *x* 开始的 *y* 条记录。要返回第 11 到第 20 条记录，您应该编写
+
+```sql
+SELECT * FROM tablename LIMIT 10, 10
+```
+
+与 PHP 中的数组一样，在涉及 `LIMIT` 时，结果集从 0 开始，因此 10 代表第 11 条记录。
+
+因为 `SELECT` 不会按任何有意义的顺序返回结果，所以在使用 `LIMIT` 时，您几乎总是想要应用 `ORDER BY` 子句。您可以将 `LIMIT` 与 `WHERE` 和/或 `ORDER BY` 子句一起使用，始终将 `LIMIT` 放在最后：
+
+```sql
+SELECT which_columns FROM tablename WHERE
+conditions ORDER BY column LIMIT x
+```
+
+#### 限制返回的数据量
+
+**1.** 选择最后注册的五位用户 ![Image](img/circle-a.jpg)：
+
+```sql
+SELECT first_name, last_name
+FROM users ORDER BY
+registration_date DESC LIMIT 5;
+```
+
+![Image](img/05_figure_27_a.jpg)
+
+![Image](img/circle-a.jpg)使用 `LIMIT` 子句，查询可以返回特定数量的记录。
+
+要返回最新的任何内容，请按日期以降序对数据进行排序。然后，要仅查看最近的五条，请在查询中添加 `LIMIT 5`。
+
+**2.** 选择第二个注册的人 ![Image](img/circle-b.jpg)：
+
+```sql
+SELECT first_name, last_name
+FROM users ORDER BY
+registration_date ASC LIMIT 1, 1;
+```
+
+![Image](img/05_figure_28_b.jpg)
+
+![Image](img/circle-b.jpg)得益于 `LIMIT` 子句，查询甚至可以使用 `LIMIT` *`x`*, *`y`* 格式从一组记录的中间返回记录。
+
+这看起来可能很奇怪，但这只是对迄今所学信息的一个很好的应用。首先，按 *registration_date* 升序排列所有记录，这样最先注册的人会最先返回。然后，将返回的结果限制为从 1 开始（即第二行）并仅返回一条记录。
+
+***
+
+提示
+
+`LIMIT` *`x`*, *`y`* 子句最常用于对查询结果进行分页（跨多页分块显示）。您将在 第 10 章 “常用编程技术” 中看到这一点。
+
+***
+
+***
+
+提示
+
+`LIMIT` 子句不会提高查询的执行速度，因为 MySQL 仍然必须组装整个结果集，然后再截断列表。但 `LIMIT` 子句将在 mysql 客户端或您的 PHP 脚本处理数据时，将数据量降至最低。
+
+***
+
+***
+
+提示
+
+`LIMIT` 术语不是 SQL 标准的一部分，因此（遗憾的是）并非所有数据库都可用。
+
+***
+
+***
+
+提示
+
+`LIMIT` 子句可用于大多数类型的查询，而不仅仅是 `SELECT`。
+
+***
+
+### 更新数据
+
+一旦表中包含一些数据，您就可能需要编辑那些现有记录。如果信息录入错误或数据发生变化（例如姓氏或电子邮件地址），这可能是必要的。更新记录的语法是：
+
+```sql
+UPDATE tablename SET column=value
+```
+
+您可以一次性修改多个列，用逗号将每个列与下一个分隔开。
+
+```sql
+UPDATE tablename SET column1=valueA,
+column5=valueB...
+```
+
+您几乎总是想要使用 `WHERE` 子句来指定应更新哪些行：
+
+```sql
+UPDATE tablename SET column2=value
+WHERE column5=value
+```
+
+如果您不使用 `WHERE` 子句，更改将应用于每一条记录。
+
+更新连同删除，是使用主键最重要的原因之一。该值——永远不应改变——即使在需要更改其他每个字段时，也可以作为 `WHERE` 子句中的参考点。
+
+#### 更新记录
+
+**1.** 查找要更新记录的主键 ![Image](img/circle-a.jpg)：
+
+```sql
+SELECT user_id FROM users
+WHERE first_name = 'Michael'
+AND last_name='Chabon';
+```
+
+![Image](img/05_figure_29_a.jpg)
+
+![Image](img/circle-a.jpg)在更新记录之前，确定要在 `UPDATE` 的 `WHERE` 子句中使用哪个主键。
+
+在此示例中，我将更改该作者记录的电子邮件。为此，我必须首先找到该记录的主键，此查询即可完成。
+
+**2.** 更新记录 ![Image](img/circle-b.jpg)：
+
+```sql
+UPDATE users
+SET email='mike@authors.com'
+WHERE user_id = 18;
+```
+
+![Image](img/05_figure_30_b.jpg)
+
+![Image](img/circle-b.jpg)此查询仅更改了一行中一列的值。
+
+要更改电子邮件地址，请使用 `UPDATE` 查询，使用主键 (*user_id*) 指定更新应应用于哪条记录。MySQL 将报告查询是否成功以及受影响的行数。
+
+**3.** 确认更改已生效 ![Image](img/circle-c.jpg)：
+
+```sql
+SELECT * FROM users
+WHERE user_id=18;
+```
+
+![Image](img/05_figure_31_c.jpg)
+
+![Image](img/circle-c.jpg)作为最后一步，您可以通过再次选择该记录来确认更新。
+
+尽管 MySQL 已指示更新成功 ![Image](img/graycircle-b.jpg)，但再次选择该记录以确认发生了正确的更改也无妨。
+
+***
+
+提示
+
+除非您希望更改影响每一行，否则在使用 `UPDATE` 时请格外确定要使用 `WHERE` 条件。
+
+***
+
+***
+
+提示
+
+如果您运行的更新查询实际上没有更改任何值（如 `UPDATE users SET first_name='mike' WHERE first_name='mike'`），您不会看到任何错误，但不会有任何行受影响。较新版本的 MySQL 会显示有 *X* 行匹配查询，但 0 行被更改 ![Image](img/circle-d.jpg)。
+
+![Image](img/05_figure_32_d.jpg)
+
+![Image](img/circle-d.jpg)较新版本的 MySQL 将报告 `UPDATE` 查询的匹配记录和已更改记录。
+
+***
+
+***
+
+提示
+
+为了防止意外更新过多行，请将 `LIMIT` 子句应用于您的 `UPDATE`：
+
+```sql
+UPDATE users SET email='mike@authors.
+com' WHERE user_id = 18 LIMIT 1
+```
+
+***
+
+***
+
+提示
+
+您永远不应该对主键列执行 `UPDATE`，因为主键值永远不应改变。更改主键的值可能会产生严重后果。
+
+***
+
+***
+
+提示
+
+要在 phpMyAdmin 中更新记录，您可以使用 SQL 窗口或选项卡运行 `UPDATE` 查询。或者，运行 `SELECT` 查询以查找要更新的记录，然后单击记录旁边的铅笔图标。这将弹出一个类似于插入表单的表单，您可以在其中编辑记录的当前值。
+
+***
+
+### 删除数据
+
+除了更新现有记录外，您可能需要采取的另一步是从数据库中完全删除一条记录。为此，您可以使用 `DELETE` 命令：
+
+```sql
+DELETE FROM tablename
+```
+
+按原样编写该命令将删除表中的每一条记录，使其再次变为空。一旦删除了记录，就无法检索它。
+
+在大多数情况下，您想要删除的是单个行，而不是全部。为此，请应用 `WHERE` 子句：
+
+```sql
+DELETE FROM tablename WHERE condition
+```
+
+#### 删除记录
+
+**1.** 查找要删除记录的主键 ![Image](img/circle-a.jpg)：
+
+```sql
+SELECT user_id FROM users
+WHERE first_name='Peter'
+AND last_name='Tork';
+```
+
+![Image](img/05_figure_33_a.jpg)
+
+![Image](img/circle-a.jpg)*user_id* 值将用于在 `DELETE` 查询中引用此记录。
+
+正如 `UPDATE` 示例中一样，我首先需要确定要用于删除的主键。
+
+**2.** 预览删除时会发生什么 ![Image](img/circle-b.jpg)：
+
+```sql
+SELECT * FROM users
+WHERE user_id = 8;
+```
+
+![Image](img/05_figure_34_b.jpg)
+
+![Image](img/circle-b.jpg)要预览 `DELETE` 查询的效果，请先运行一个语法相似的 `SELECT` 查询。
+
+
+
+一个防止误删的好技巧是先使用 `SELECT *` 而不是 `DELETE` 运行查询。该查询的结果将显示哪些行将受删除影响。
+
+**3.** 删除记录：
+
+```sql
+DELETE FROM users
+WHERE user_id = 8 LIMIT 1;
+```
+
+删除表中的一条记录。
+
+与更新一样，MySQL 将报告查询成功执行及受影响的行数。此时，除非你事先备份了数据库，否则无法恢复已删除的记录。
+
+尽管 `SELECT` 查询（步骤 2）仅返回一行，但为了格外小心，还是在 `DELETE` 查询中添加了 `LIMIT 1` 子句。
+
+**4.** 确认更改已生效：
+
+```sql
+SELECT user_id FROM users
+WHERE first_name='Peter'
+AND last_name='Tork';
+```
+
+该记录不再属于此表。
+
+***
+
+Tip
+
+清空表的首选方法是使用 `TRUNCATE`：
+
+```sql
+TRUNCATE TABLE tablename
+```
+
+***
+
+***
+
+Tip
+
+要删除表中的所有数据以及表本身，请使用 `DROP TABLE`：
+
+```sql
+DROP TABLE tablename
+```
+
+***
+
+***
+
+Tip
+
+要删除整个数据库，包括其中的每个表及其所有数据，请使用
+
+```sql
+DROP DATABASE databasename
+```
+
+***
+
+***
+
+### 别名
+
+*别名* 只是查询中使用的项目的符号重命名，通常应用于表、列或函数调用。别名使用 `AS` 创建：
+
+```sql
+SELECT registration_date AS reg
+FROM users
+```
+
+别名是由数字、字母和下划线组成的区分大小写的字符串，但通常保持很短的长度。正如你在以下示例中将看到的，别名也会反映在返回结果的标题中。对于前面的示例，返回的查询结果将包含一列数据，名为 `reg`（而非 `registration_date`）。
+
+在 MySQL 中，如果你为查询中使用的表或列定义了别名，则整个查询应始终一致地使用该别名，而不是原始名称。例如：
+
+```sql
+SELECT first_name AS name FROM
+users WHERE name='Sam'
+```
+
+这与标准 SQL 不同，标准 SQL 不支持在 `WHERE` 条件中使用别名。
+
+***
+
+### 使用函数
+
+为了结束本章，你将了解许多可在 MySQL 查询中使用的函数。你已经看到了两个——`NOW()` 和 `SHA1()`——但这只是冰山一角。你将在这里看到的大多数函数用于 `SELECT` 查询，以格式化和更改返回的数据，但你也可以在其他类型的查询中使用 MySQL 函数。
+
+要将函数应用于列的值，查询如下所示：
+
+```sql
+SELECT FUNCTION(column) FROM tablename
+```
+
+要将函数应用于一列的值同时选择其他列，可以编写如下任一查询：
+
+- `SELECT *, FUNCTION(column) FROM tablename`
+- `SELECT column1, FUNCTION(column2), column3 FROM tablename`
+
+通常首选后一种语法，因为它仅返回你需要的列（而不是所有列）。
+
+在介绍实际函数之前，请注意以下几点。首先，函数通常应用于存储的数据（即列），但也可以应用于字面值。以下 `UPPER()` 函数（将字符串大写）的任一应用均有效：
+
+```sql
+SELECT UPPER(first_name) FROM users
+SELECT UPPER('this string')
+```
+
+其次，虽然函数名称本身不区分大小写，但我将继续以全大写格式编写它们，以帮助将其与表名和列名区分开来（我也将 SQL 术语大写）。第三，函数的一个重要规则是：在 MySQL 中，*函数名和左括号之间不能有空格*，尽管括号内的空格是可以接受的。最后，当使用函数格式化返回数据时，你通常想利用*别名*，这是一个在侧边栏中讨论的概念。
+
+***
+
+Tip
+
+正如存在不同的 SQL 标准且不同的数据库应用程序有其自身的语言细微差别一样，一些函数通用于所有数据库应用程序，而另一些则特定于 MySQL。本章和本书仅涉及 MySQL 函数。
+
+***
+
+***
+
+Tip
+
+第 7 章 讨论了两类更多的 MySQL 函数：分组和加密。
+
+***
+
+#### 文本函数
+
+要演示的第一组函数是用于操作文本的。此类别中最常见的函数列在 **表 5.2** 中。与大多数函数一样，这些函数可以应用于列或字面值（均由 `t`、`t1`、`t2` 等表示）。
+
+**表 5.2. 文本函数**
+
+`CONCAT()` 可能是最有用的文本函数，值得特别关注。`CONCAT()` 函数实现连接，PHP 对此使用句点（参见第 1 章“PHP 简介”）。连接的语法要求你将想要组装的各个值按顺序放在括号内，并用逗号分隔：
+
+```sql
+SELECT CONCAT(t1, t2) FROM tablename
+```
+
+虽然你可以（且通常会）将 `CONCAT()` 应用于列，但也可以包含用引号括起来的字符串。例如，要将姓名格式化为 `First<SPACE>Last`，你可以使用：
+
+```sql
+SELECT CONCAT(first_name, ' ', last_name)
+FROM users
+```
+
+因为连接通常以新格式返回值，所以这是使用别名（见侧边栏）的绝佳时机：
+
+```sql
+SELECT CONCAT(first_name, ' ', last_name)
+AS Name FROM users
+```
+
+#### 格式化文本
+
+**1.** 不使用别名连接名称：
+
+```sql
+SELECT CONCAT(last_name, ', ', first_name)
+FROM users;
+```
+
+这种简单的连接返回每个注册用户的全名。注意列标题是 `CONCAT()` 函数的用法。
+
+此查询将演示两件事。首先，用户的姓氏、一个逗号和一个空格，加上他们的名字被连接在一起形成一个字符串（格式为 `Last, First`）。其次，如图所示，如果不使用别名，返回数据的列标题将是函数调用。在 mysql 客户端或 phpMyAdmin 中，这只是难看；当使用 PHP 连接 MySQL 时，这可能会成为一个问题。
+
+**2.** 使用别名连接名称：
+
+```sql
+SELECT CONCAT(last_name, ', ', first_name)
+AS Name FROM users ORDER BY Name;
+```
+
+通过使用别名，返回的数据位于标题为 `Name` 的列下（与步骤 1 对比）。
+
+要使用别名，只需在要重命名的项目后添加 `AS` `aliasname`。别名将成为返回数据的新标题。为了使查询更有趣，同一个别名也用在 `ORDER BY` 子句中。
+
+**3.** 查找最长的姓氏：
+
+```sql
+SELECT LENGTH(last_name) AS L,
+last_name FROM users
+ORDER BY L DESC LIMIT 1;
+```
+
+通过使用 `LENGTH()` 函数、别名、`ORDER BY` 子句和 `LIMIT` 子句，此查询返回最长存储名称的长度和值。
+
+
+
+要确定哪个注册用户的姓氏最长（字符最多），请使用 `LENGTH()` 函数。要查找该姓名，请同时选择姓氏值和计算出的长度，后者被赋予别名 `L`。然后，按 `L` 以降序对所有结果进行排序，但仅返回第一条记录。
+
+***
+
+提示
+
+第 3 步中的查询（也见图 ![Image](img/graycircle-c.jpg)）可能有助于在数据库中已有记录后微调列长度。
+
+***
+
+提示
+
+MySQL 有两个函数用于对文本执行正则表达式搜索：`REGEXP()` 和 `NOT REGEXP()`。第 14 章 “Perl 兼容的正则表达式” 介绍了使用 PHP 的正则表达式。
+
+***
+
+提示
+
+`CONCAT()` 有一个相关函数叫 `CONCAT_WS()`，代表 *with separator*（带分隔符）。语法是 `CONCAT_WS(separator, t1, t2, ...)`。分隔符将插入在列出的每一列或值之间。例如，要将一个人的全名格式化为 *First<SPACE>_Middle<SPACE>_Last*，你可以编写
+
+```
+SELECT CONCAT_WS(' ', first, middle,
+last) AS Name FROM tablename
+```
+
+`CONCAT_WS()` 相较于 `CONCAT()` 有一个额外优势，即它会忽略值为 `NULL` 的列。因此该查询可能从一条记录返回 *Joe Banks*，从另一条记录返回 *Jane Sojourner Adams*。
+
+***
+
+### 数值函数
+
+除了 MySQL 使用的标准数学运算符（用于加、减、乘、除）外，还有几十个函数用于格式化数值和对数值执行计算。**表 5.3** 列出了最常用的这些函数，其中一些将在稍后演示。与大多数函数一样，这些函数既可应用于列，也可应用于字面值（均用 `n`、`n1`、`n2` 等表示）。
+
+**表 5.3. 数值函数**
+
+![Image](img/05tab03.jpg)
+
+我想特别强调其中三个函数：`FORMAT()`、`ROUND()` 和 `RAND()`。第一个函数——严格来说并非专用于数字——可将任何数字转换为更常规的格式布局。例如，如果你将汽车成本存储为 20198.20，`FORMAT(car_cost, 2)` 会将该数字转换为更常见的 20,198.20。
+
+`ROUND()` 将获取一个值（推测来自某列），并将其四舍五入到指定的小数位数。如果未指定小数位数，它将把数字四舍五入到最接近的整数。如果指定的小数位数多于原始数字中现有的位数，则剩余位用零填充（在小数点右侧）。
+
+正如你可能推断的那样，`RAND()` 函数用于返回随机数 ![Image](img/circle-d.jpg)：
+
+```
+SELECT RAND()
+```
+
+![Image](img/05_figure_40_d.jpg)
+
+![Image](img/circle-d.jpg)`RAND()` 函数返回一个 0 到 1.0 之间的随机数。
+
+`RAND()` 函数的另一个好处是它可以在查询中使用，以随机顺序返回结果：
+
+```
+SELECT * FROM tablename ORDER BY RAND()
+```
+
+#### 使用数值函数
+
+**1.** 显示一个数字，将金额格式化为美元 ![Image](img/circle-e.jpg)：
+
+```
+SELECT CONCAT('$', FORMAT(5639.6, 2))
+AS cost;
+```
+
+![Image](img/05_figure_41_e.jpg)
+
+![Image](img/circle-e.jpg)使用一个任意示例，此查询展示了 `FORMAT()` 函数的工作原理。
+
+结合 `CONCAT()` 使用 `FORMAT()` 函数（如刚才所述），你可以将任何数字转换为货币格式，以便在网页中显示。
+
+**2.** 从表中检索一个随机电子邮件地址 ![Image](img/circle-f.jpg)：
+
+```
+SELECT email FROM users
+ORDER BY RAND() LIMIT 1;
+```
+
+![Image](img/05_figure_42_f.jpg)
+
+![Image](img/circle-f.jpg)此查询使用 `RAND()` 函数选择一条随机记录。同一查询的后续执行将返回不同的随机结果。
+
+该查询的执行过程是：选取所有电子邮件地址；打乱其顺序（`ORDER BY RAND()`）；然后返回第一条。多次运行同一查询将产生不同的随机结果。请注意，你无需指定 `RAND()` 应用的列。
+
+***
+
+提示
+
+除了此处列出的数学函数外，还有几个三角函数、指数函数和其他类型的数值函数可用。
+
+***
+
+提示
+
+`MOD()` 函数等同于使用百分号：
+
+```
+SELECT MOD(9,2)
+SELECT 9%2
+```
+
+它返回除法的余数（这些示例中为 1）。
+
+***
+
+### 日期和时间函数
+
+MySQL 中的日期和时间列类型特别灵活且实用。但由于许多数据库用户不熟悉所有可用的日期和时间函数，这些选项经常未被充分利用。无论你想基于日期进行计算，还是从值中仅返回月份名称，MySQL 都有相应的函数。**表 5.4** 列出了其中大部分；完整列表请参阅 MySQL 手册。与大多数函数一样，这些函数既可应用于列，也可应用于字面值（均用 `dt` 表示，即 *datetime* 的缩写）。
+
+**表 5.4. 日期和时间函数**
+
+![Image](img/05tab04.jpg)
+
+MySQL 支持两种同时存储日期和时间的数据类型（`DATETIME` 和 `TIMESTAMP`）、一种仅存储日期的类型（`DATE`）、一种仅存储时间的类型（`TIME`）以及一种仅存储年份的类型（`YEAR`）。除了允许不同类型的值之外，每种数据类型还具有其独特的行为（同样，我建议阅读 MySQL 手册中相关页面以了解所有详情）。但 MySQL 在可对哪种类型使用哪种函数方面非常灵活。你可以将日期函数应用于任何包含日期的值（即 `DATETIME`、`TIMESTAMP` 和 `DATE`），或将小时函数应用于任何包含时间的值（即 `DATETIME`、`TIMESTAMP` 和 `TIME`）。MySQL 将使用它所需的那部分值并忽略其余部分。但是，你不能将日期函数应用于 `TIME` 值，也不能将时间函数应用于 `DATE` 或 `YEAR` 值。
+
+#### 使用日期和时间函数
+
+**1.** 显示最后一位用户注册的日期 ![Image](img/circle-g.jpg)：
+
+```
+SELECT DATE(registration_date) AS
+Date FROM users ORDER BY
+registration_date DESC LIMIT 1;
+```
+
+![Image](img/05_figure_43_g.jpg)
+
+![Image](img/circle-g.jpg)日期函数可用于从存储的值中提取信息。
+
+`DATE()` 函数返回值的日期部分。要查看最后注册的人的注册日期，`ORDER BY` 子句按注册时间从最近到最远排列用户，并将结果限制为仅一条记录。
+
+**2.** 显示第一位用户注册那天是星期几 ![Image](img/circle-h.jpg)：
+
+```
+SELECT DAYNAME(registration_date) AS
+Weekday FROM users ORDER BY
+registration_date ASC LIMIT 1;
+```
+
+![Image](img/05_figure_44_h.jpg)
+
+![Image](img/circle-h.jpg)此查询返回给定日期对应的星期名称。
+
+这与步骤 1 中的查询类似，但结果按升序返回，且 `DAYNAME()` 函数应用于 `registration_date` 列。对于给定日期，该函数返回 *Sunday*（周日）、*Monday*（周一）、*Tuesday*（周二）等。
+
+**3.** 根据 MySQL 显示当前日期和时间 ![Image](img/circle-i.jpg)：
+
+```
+SELECT CURDATE(), CURTIME();
+```
+
+![Image](img/05_figure_45_i.jpg)
+
+![Image](img/circle-i.jpg)此查询不针对任何特定表运行，返回 MySQL 服务器上的当前日期和时间。
+
+
+
+要显示 MySQL 当前认为的日期和时间，可以选择 `CURDATE()` 和 `CURTIME()` 函数，它们会返回这些值。这是另一个无需引用特定表即可运行的查询示例。
+
+**4.** 显示当前月份的最后一天 ![Image](img/circle-j.jpg)：
+
+```sql
+SELECT LAST_DAY(CURDATE()),
+MONTHNAME(CURDATE());
+```
+
+![Image](img/05_figure_46_j.jpg)
+
+![Image](img/circle-j.jpg)在 MySQL 可以对日期和时间类型执行的众多操作中，包括确定某个月的最后一天或给定日期的月份名称值。
+
+正如上一个查询所示，`CURDATE()` 返回服务器上的当前日期。该值可用作 `LAST_DAY()` 函数的参数，后者返回给定日期所在月份的最后一天。`MONTHNAME()` 函数返回当前月份的名称。
+
+***
+
+**提示**
+
+MySQL 的日期和时间函数返回的日期和时间对应服务器上的时间，而非访问数据库的客户端时间。
+
+***
+
+***
+
+**提示**
+
+本节和 表 5.4 中未提及 `ADDDATE()`、`SUBDATE()`、`ADDTIME()`、`SUBTIME()` 和 `DATEDIFF()`。这些函数均可用于对日期和时间值执行算术运算。它们非常有用（例如，查找过去一周内注册的所有人），但其语法比较繁琐。一如既往，详情请参阅 MySQL 手册。
+
+***
+
+***
+
+**提示**
+
+第 6 章 讨论了 MySQL 中时区的概念。
+
+***
+
+***
+
+**提示**
+
+自 MySQL 5.0.2 起，服务器还会阻止将无效日期（例如 2011 年 2 月 31 日）插入到日期或日期/时间列中。
+
+***
+
+#### 格式化日期和时间
+
+还有两个额外的日期和时间函数，你可能会比其他所有函数加起来使用得还要多：`DATE_FORMAT()` 和 `TIME_FORMAT()`。两者之间有些重叠，具体使用哪一个取决于场景。
+
+如果值同时包含日期和时间（例如 `YYYY-MM-DD HH:MM:SS`），`DATE_FORMAT()` 可用于同时格式化日期和时间。相比之下，`TIME_FORMAT()` 只能格式化时间值，且仅在只存储时间值（例如 `HH:MM:SS`）时必须使用。语法如下：
+
+```sql
+SELECT DATE_FORMAT(datetime, formatting)
+```
+
+*formatting*（格式化字符串）依赖于关键代码与百分号的组合，以指示你想要返回的值。**表 5.5** 列出了可用的日期和时间格式化参数。你可以将这些参数以任何组合使用，并结合标点符号等字面字符，以更直观的形式返回日期和时间。
+
+假设名为 `the_date` 的列中存储的日期和时间为 `1996-04-20 11:07:45`，常见的格式化任务及结果如下：
+
+*   时间（11:07:45 AM）
+    ```sql
+    TIME_FORMAT(the_date, '%r')
+    ```
+*   不含秒的时间（11:07 AM）
+    ```sql
+    TIME_FORMAT(the_date, '%l:%i %p')
+    ```
+*   日期（April 20th, 1996）
+    ```sql
+    DATE_FORMAT(the_date, '%M %D, %Y')
+    ```
+
+**表 5.5. \*_FORMAT() 参数**
+
+![Image](img/05tab05.jpg)
+
+#### 格式化日期和时间
+
+**1.** 以 *Month DD, YYYY - HH:MM* 格式返回当前日期和时间 ![Image](img/circle-k.jpg)：
+
+```sql
+SELECT DATE_FORMAT(NOW(),'%M %e, %Y %l:%i');
+```
+
+![Image](img/05_figure_47_k.jpg)
+
+![Image](img/circle-k.jpg)格式化后的当前日期和时间。
+
+使用返回当前日期和时间的 `NOW()` 函数，你可以练习格式化以查看返回的结果。
+
+**2.** 使用 24 小时制显示当前时间 ![Image](img/circle-l.jpg)：
+
+```sql
+SELECT TIME_FORMAT(CURTIME(),'%T');
+```
+
+![Image](img/05_figure_48_l.jpg)
+
+![Image](img/circle-l.jpg)24 小时制格式的当前时间。
+
+**3.** 选择电子邮件地址和注册日期，按注册日期排序，将日期格式化为 *Weekday (abbreviated) Month (abbreviated) Day Year*（星期缩写 月份缩写 日 年），针对最近注册的五位用户 ![Image](img/circle-m.jpg)：
+
+```sql
+SELECT email, DATE_FORMAT (registration_date, '%a %b %e %Y')
+AS Date FROM users
+ORDER BY registration_date DESC
+LIMIT 5;
+```
+
+![Image](img/05_figure_49_m.jpg)
+
+![Image](img/circle-m.jpg)从 `users` 表中选择记录时，使用 `DATE_FORMAT()` 函数预格式化注册日期。
+
+这只是使用这些格式化函数更改 SQL 查询输出的另一个示例。
+
+***
+
+**提示**
+
+在 Web 应用程序中，你几乎总是应该使用 MySQL 函数来格式化来自数据库的任何日期（而不是在用 PHP 从数据库检索后再格式化日期）。
+
+***
+
+***
+
+**提示**
+
+访问客户端（用户的机器）上的日期或时间的唯一方法是使用 JavaScript。PHP 或 MySQL 无法做到这一点。
+
+***
+
+### 复习与实践
+
+如果你对复习问题或实践提示有任何疑问，请访问本书的支持论坛（**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)**）。
+
+#### 复习
+
+*   你使用的是哪个版本的 MySQL？如果不知道，现在就去搞清楚！
+*   创建新数据库使用什么 SQL 命令？在数据库中创建新表使用什么命令？
+*   选择要使用的数据库使用什么 SQL 命令？
+*   向表中添加记录使用什么 SQL 命令？提示：有多种选项。
+*   查询中哪些类型的值必须加引号？哪些类型的值不应加引号？
+*   `SELECT * FROM` `tablename` 中的星号是什么意思？如何限制查询返回的列？
+*   `NOW()` 函数有什么作用？
+*   如何限制查询返回的*行*？
+*   `LIKE` 和 `NOT LIKE` 与简单的相等比较有何不同？哪种比较更快？`LIKE` 和 `NOT LIKE` 的两个通配符是什么？
+*   如何影响返回记录的排序？默认排序方式是什么？如何倒序排序？按多列排序的语法是什么？
+*   `LIMIT` 子句有什么作用？`LIMIT` `x` 与 `LIMIT` `x`,`y` 有何不同？
+*   更改表中已存储值使用什么 SQL 命令？如何一次更改多个列？如何限制更改应用的行？
+*   删除表中存储的行使用什么 SQL 命令？如何限制删除应用的行？
+*   什么是 SQL 别名？如何创建别名？别名有什么用？
+
+#### 实践
+
+*   如果尚未这样做，请将与你正在运行的 MySQL 版本相匹配的 MySQL 手册版本加入书签。
+*   再次通读本章中的每个步骤序列，自己编写查询来执行（演示与步骤中类似的概念）。
+*   查阅 MySQL 手册中条件运算符的页面。
+*   查阅 MySQL 手册中一些 MySQL 函数的页面。
+*   创建、填充并操作你自己的数据表。
+*   多练习使用函数和别名。
+*   查阅 MySQL 手册中各种日期和时间类型的页面。同时也查阅 `ADDDATE()` 和其他日期相关函数。
+
+## 6. 数据库设计
+
+本章内容
+
+规范化 166
+
+创建索引 179
+
+使用不同的表类型 182
+
+语言与 MySQL 184
+
+时区与 MySQL 189
+
+外键约束 195
+
+复习与实践 202
+
+
+
+
+### 真实世界的数据库设计
+
+既然你已经对数据库、SQL 和 MySQL 有了基本的了解，本章将开始深化这些知识。正如标题所述，本章的重点是真实世界的数据库设计。正如 第 4 章 "MySQL 简介" 中所做的工作那样，此处的大部分需要纸笔配合，并认真思考你的应用程序将需要做什么。
+
+本章首先全面介绍数据库*规范化*：这是设计过程的一种至关重要的方法。随后，本章将转向 MySQL 特有的设计相关概念：索引、表类型、语言支持、时间处理以及外键约束。
+
+读完本章，你将了解正确数据库设计所涉及的步骤，理解如何充分利用 MySQL，并规划几个多表数据库。在下一章中，你将学习更高级的 SQL 和 MySQL，并将这些新数据库作为示例。
+
+### 规范化
+
+每当你使用像 MySQL 这样的关系型数据库管理系统时，创建和使用数据库的第一步是确定数据库的结构（也称为数据库*模式*）。数据库设计，又称*数据建模*，对于信息的长期成功管理至关重要。通过一个称为*规范化*的过程，你可以仔细消除冗余和其他会破坏数据库完整性的问题。
+
+你将在接下来的几页中学到的技术将有助于确保数据库的可行性、实用性和可靠性。主要讨论的示例——一个用户可以发帖的论坛——将在 第 17 章 "示例——留言板" 中更明确地使用，但规范化的原则适用于你可能创建的任何数据库。（前两章中创建和使用的 *sitename* 示例*已经*过正确规范化，尽管当时从未讨论过规范化。）
+
+规范化是由一位名为 E.F. Codd 的 IBM 研究人员在 20 世纪 70 年代初开发的（他还发明了关系型数据库）。关系型数据库仅仅是以特定方式组织的数据集合，Codd 博士创建了一系列称为*范式*的规则来帮助定义这种组织。本章讨论前三个范式，这对于大多数数据库设计已经足够。
+
+在开始规范化数据库之前，你必须定义正在开发的应用程序的角色。无论这意味着你需要与客户深入讨论主题，还是自己摸索，了解信息将如何被访问决定了建模过程。因此，这个过程需要纸和笔，而不是 MySQL 软件本身（尽管数据库设计适用于任何关系型数据库，而不仅仅是 MySQL）。
+
+在本例中，我想创建一个留言板，用户可以发布消息，其他用户可以回复。我设想用户需要注册，然后使用电子邮件地址/密码组合登录，以便发布消息。我还预计可能会有针对不同主题的多个论坛。我在 **表 6.1** 中列出了一行示例数据。数据库本身将称为 *forum*。
+
+**表 6.1. 示例论坛数据**
+
+![Image](img/06tab01.jpg)
+
+> **提示**
+>
+> 确定数据库中应存储哪些信息的最佳方法之一，是思考将向数据库提出什么问题，以及答案中将包含哪些数据。
+
+> **提示**
+>
+> 始终倾向于存储*更多*你可能需要的信息。忽略不必要的数据很容易，但事后无法凭空制造从未存储过的数据。
+
+> **提示**
+>
+> 如果你纠结于细节，规范化可能很难学会。每个范式的定义都非常晦涩；即使用通俗易懂的语言表达，它们仍然可能令人困惑。我最好的建议是，在跟随学习时关注大局。一旦你完成了规范化过程并看到了最终结果，整个过程应该会变得足够清晰。
+
+### 键
+
+正如 第 4 章 简要提到的，*键*是规范化数据库不可或缺的一部分。键分为两种类型：*主键*和*外键*。主键是一个必须遵守特定规则的唯一标识符。它们必须：
+
+- 始终有一个值（不能为 `NULL`）
+- 拥有保持不变的值（永不改变）
+- 在表中为每条记录拥有唯一的值
+
+主键的一个很好的现实例子是美国的社会安全号码：每个人都有一个唯一的社会安全号码，且该号码永不改变。正如社会安全号码是用于识别人的一种人为构造一样，你经常会发现为每个表创建一个任意主键是最佳的设计实践。
+
+第二种键是外键。外键是表 A 的主键在表 B 中的体现。如果你有一个 *cinema* 数据库，包含 *movies* 表和 *directors* 表，*directors* 的主键将作为外键关联在 *movies* 表中。随着规范化过程的继续，你会更好地理解其工作原理。
+
+*forum* 数据库目前只是一个简单的表（表 6.1），但在开始规范化过程之前，至少要确定一个主键（外键将在后续步骤中出现）。
+
+#### 分配主键
+
+**1.** 寻找符合主键三个测试标准的字段。
+
+在本例中（表 6.1），没有任何一列真正符合主键的所有标准。用户名和电子邮件地址对于每个论坛用户来说是唯一的，但对于数据库中的每条记录来说并不唯一（因为同一个用户可以发布多条消息）。相同的主题也可能被多次使用。消息正文对于每条消息可能是唯一的，但可能会改变（如果被编辑），这违反了主键的规则之一。
+
+**2.** 如果不存在合乎逻辑的主键，则创建一个（**表 6.2**）。
+
+**表 6.2. 示例论坛数据**
+
+![Image](img/06tab02.jpg)
+
+通常，你需要创建一个主键，因为没有现成的好方案。在本例中，制造了一个 *message ID*（消息 ID）。当你创建的主键没有其他含义或用途时，它被称为*代理*主键。
+
+> **提示**
+>
+> 根据经验，我使用至少包含部分表名（例如 *message*）和单词 *id* 来命名主键。一些数据库开发人员还喜欢在名称中添加缩写 *pk*。一些开发人员只使用 *id*。
+
+> **提示**
+>
+> MySQL 每个表只允许有一个主键，尽管你可以基于多列创建主键（这意味着这些列的组合必须唯一且永不改变）。
+
+> **提示**
+>
+> 理想情况下，你的主键应该始终是整数，这能带来更好的 MySQL 性能。
+
+### 关系
+
+数据库关系是指一个表中的数据如何与另一个表中的数据相关联。任意两个表之间有三种关系类型：*一对一*、*一对多*或*多对多*。（数据库中的两个表也可能没有关系。）
+
+如果表 A 中的有且仅有一个项目适用于表 B 中的有且仅有一个项目，则该关系为一对一。例如，每个美国公民只有一个社会安全号码，每个社会安全号码也只适用于一个美国公民；没有公民能有两个社会安全号码，也没有社会安全号码能指向两个公民。
+
+
+
+
+
+#### 关系类型
+
+### 一对多关系
+
+如果表 A 中的一项可以应用到表 B 中的多项，则该关系为一对多。*female* 和 *male* 这两个术语将适用于许多人，但每个人只能是其中之一（理论上）。一对多关系是规范化数据库中表之间最常见的关系。
+
+### 多对多关系
+
+如果表 A 中的多项可以应用到表 B 中的多项，则该关系为多对多。一本书可以由多位作者编写，作者也可以编写多本书。虽然多对多关系在现实世界中很常见，但**你应该避免在设计中使用多对多关系**，因为它们会导致数据冗余和完整性问题。与其使用多对多关系，设计良好的数据库会使用*中介表*，将一个多对多关系分解为两个一对多关系。
+
+![Image](img/circle-a.jpg)
+
+![Image](img/06_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) 两个表之间的多对多关系，最好表示为这两个表与一个中介表所拥有的两个一对多关系。
+
+关系与键协同工作，即一个表中的键通常会关联到另一个表中的键，如前所述。
+
+---
+
+> **Tip**
+>
+> 数据库建模使用特定约定来表示数据库结构，本章将通过一系列图像遵循这些约定。三种关系类型的符号如 ![Image](img/circle-b.jpg) 所示。
+
+![Image](img/06_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg) 这些符号或其变体常用于在数据库建模方案中表示关系。
+
+---
+
+> **Tip**
+>
+> 数据库设计过程的结果是 *ERD*（实体-关系图）或 *ERM*（实体-关系模型）。这种数据库的图形化表示使用形状代表表和列，并使用 ![Image](img/graycircle-b.jpg) 中的符号来表示关系。
+
+---
+
+> **Tip**
+>
+> 有许多程序可帮助创建数据库模式，包括 MySQL Workbench ([`wb.mysql.com`](http://wb.mysql.com))。本章中的许多图像均来自 MySQL Workbench。
+
+---
+
+> **Tip**
+>
+> RDBMS 中的“关系”一词实际上源于表，表在技术上称为*关系*。
+
+---
+
+### 第一范式 (1NF)
+
+如前所述，规范化数据库是根据若干规则（称为*范式*）更改数据库结构的过程。数据库必须严格遵守每条规则，且必须按顺序遵循这些范式。
+
+数据库中的每个表必须具备以下两个特性，才符合第一范式 (1NF)：
+
+*   每列只能包含一个值（有时称为*原子性*或*不可分性*）。
+*   表中不能包含重复的相关数据组。
+
+包含一个人完整地址（街道、城市、州、邮编、国家）的单个字段的表**不**符合 1NF，因为它在一列中包含多个值，违反了上述第一条特性。至于第二条，包含 *actor1*、*actor2*、*actor3* 等列的 *movies* 表不符合 1NF，因为这些重复的列都列出了完全相同类型的信息。
+
+要开始规范化过程，请检查现有结构（表 6.2）的 1NF 合规性。任何非原子的列都应拆分为多列。如果表有重复的相似列，则应将它们转换为单独的独立表。
+
+#### 使数据库符合 1NF
+
+**1. 识别包含多条信息的字段。**
+
+查看 表 6.2，有一个字段不符合 1NF：*actual name*。示例记录在该列中同时包含了名和姓。
+
+*message date* 字段包含日、月、年及时间，但细分到该粒度之外实属不必要。而且正如上一章末尾所示，MySQL 使用 **`DATETIME`** 类型即可很好地处理日期和时间。
+
+其他问题示例包括：表使用单列存储多个电话号码（手机、家庭、工作），或在单列中存储一个人的多个兴趣（烹饪、舞蹈、滑雪等）。
+
+**2. 将步骤 1 中发现的字段拆分为不同的字段（表 6.3）。**
+
+**表 6.3. 论坛数据库，原子化**
+
+![Image](img/06tab03.jpg)
+
+为修复当前示例中的此问题，请创建单独的 *first name* 和 *last name* 字段，每个字段仅包含一个值。
+
+**3. 将任何重复的列组转换为它们自己的表。**
+
+*forum* 数据库目前没有此问题，为演示何种情况属于违规，请参考 **表 6.4**。重复列（多个演员字段）引入了两个问题。首先，以这种方式存储时，每部电影的演员数量将受到限制。即使添加 *actor 1* 到 *actor 100* 列，仍存在上限（一百）。其次，未达到最大演员数量的记录将在额外列中包含 **`NULL`** 值。通常应避免数据库模式中出现含 **`NULL`** 值的列。另一个问题是，actor 和 director 列不是原子的。
+
+**表 6.4. 电影表**
+
+![Image](img/06tab04.jpg)
+
+要修复 *movies* 表中的问题，需创建第二个表（**表 6.5**）。该表为电影中的每位演员使用一行，解决了上段提到的问题。演员姓名也被拆分为原子值。另请注意，新表应添加主键列。每个表都有主键这一概念隐含在第一范式中。
+
+**表 6.5. 电影-演员表**
+
+![Image](img/06tab05.jpg)
+
+**4. 复查步骤 2 和 3 中创建的所有新列和表是否通过 1NF 测试。**
+
+---
+
+> **Tip**
+>
+> 理解 1NF 最简单的方法是：该规则对表进行*水平*分析：检查单行中的所有列，以保证具体性并避免相似数据的重复。
+
+---
+
+> **Tip**
+>
+> 各种资源对范式的描述方式略有不同，可能使用更多技术术语。最重要的是规范化过程的精神和最终结果，而非规则的技术性措辞。
+
+---
+
+### 第二范式 (2NF)
+
+要使数据库符合第二范式 (2NF)，数据库必须先符合 1NF（必须按顺序规范化）。然后，表中每个非键列（即非外键）必须依赖于主键。通常可以通过以下方式识别违反此规则的列：它具有在多行中相同的非键值。此类值应存储在其自己的表中，并通过键关联回原表。
+
+回到 *cinema* 示例，*movies* 表（表 6.4）会将导演 Martin Scorsese 列出 20 多次。这违反了 2NF 规则，因为存储导演姓名的列不是键，也不依赖于主键（电影 ID）。解决方法是创建一个单独的 *directors* 表来存储导演信息并为每位导演分配主键。要将导演关联回电影，导演的主键也将作为外键存在于 *movies* 表中。
+
+
+
+
+
+查看表 6.5（电影中的演员），电影名称和演员名称同样违反了 2NF 规则（它们不是键，也不依赖于表的主键）。最终，这种最小化形式的 *cinema* 数据库需要四张表 ![Image](img/circle-c.jpg)。每位导演的姓名、电影名称和演员姓名将仅存储一次，且表中的任何非键列都依赖于该表的主键。事实上，规范化可以总结为创建越来越多的表，直到消除潜在的冗余为止。
+
+![Image](img/06_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg)为了使 *cinema* 数据库符合 2NF（考虑到所表示的信息），需要四张表。导演通过 *director ID* 键在 *movies* 表中表示；电影通过 *movie ID* 键在 *movies-actors* 表中表示；演员通过 *actor ID* 键在 *movies-actors* 表中表示。
+
+#### 使数据库符合 2NF
+
+**1.** 找出不依赖于表主键的任何非键列。
+
+查看表 6.3，用户名、名、姓、电子邮件和论坛值均为非键（消息 ID 当前是唯一的键列），且没有任何一列依赖于消息 ID。相反，消息主题、正文和日期也是非键，但这些确实依赖于消息 ID。
+
+**2.** 相应地创建新表 ![Image](img/circle-d.jpg)。
+
+![Image](img/06_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg)为了使 *forum* 数据库符合 2NF，需要三张表。
+
+对论坛数据库最合乎逻辑的修改是创建三张表：*users*、*forums* 和 *messages*。
+
+在数据库的可视化表示中，为每张表创建一个框，表名作为标题，其所有列（也称为*属性*）在下方列出。
+
+**3.** 分配或创建新的主键 ![Image](img/circle-e.jpg)。
+
+![Image](img/06_figure_05_e.jpg)
+
+![Image](img/circle-e.jpg)每张表都需要自己的主键。
+
+使用本章前面描述的技术，确保每张新表都有一个主键。这里我向 *users* 表添加了 *user ID* 字段，向 *forums* 表添加了 *forum ID* 字段。这些都是代理主键。因为 *users* 表中的 *username* 字段和 *forums* 表中的 *name* 字段必须对每条记录唯一且必须始终有值，所以你可以让它们充当各自表的主键。然而，这将意味着这些值永远不能更改（根据主键规则），并且数据库会稍慢一些，因为使用的是基于文本的键而不是数字键。
+
+**4.** 创建必要的外键并指明关系 ![Image](img/circle-f.jpg)。
+
+![Image](img/06_figure_06_f.jpg)
+
+![Image](img/circle-f.jpg)为了关联这三张表，向 *messages* 表添加了两个外键，每个键代表其他两张表中的一张。
+
+实现 2NF 合规性的最后一步是引入外键以关联相关联的表。请记住，一张表中的主键通常会成为另一张表中的外键。
+
+在此示例中，*users* 表中的 *user ID* 关联到 *messages* 表中的 *user ID* 列。因此，*users* 与 *messages* 存在一对多关系（因为每个用户可以发布多条消息，但每条消息只能由一位用户发布）。
+
+此外，两个 *forum ID* 列相互关联，在 *messages* 和 *forums* 之间创建了一对多关系（每条消息只能属于一个论坛，但每个论坛可以包含多条消息）。
+
+*users* 表和 *forums* 表之间没有直接关系。
+
+***
+
+提示
+
+测试 2NF 的另一种方法是查看表之间的关系。理想情况是创建一对一或一对多的情况。具有多对多关系的表可能需要重构。
+
+***
+
+***
+
+提示
+
+回顾 ![Image](img/graycircle-c.jpg)，*movies-actors* 表是一张*中间表*，它将电影和演员之间的多对多关系转变为两个一对多关系。当一张表的所有列都是键时，通常可以判断它充当了中介。事实上，在该表中，主键可以是 *movie ID* 和 *actor ID* 的组合。
+
+***
+
+***
+
+提示
+
+一个正确规范化的数据库在同一张表中绝不应有重复行（即两行或多行，其每个非主键列的值都匹配）。
+
+***
+
+***
+
+提示
+
+为了简化你对规范化过程的理解，请记住 1NF 是*水平*检查表，而 2NF 是*垂直*分析（在多行中寻找重复值）。
+
+***
+
+### 第三范式
+
+如果数据库符合 2NF，且每个非键列相互独立，则该数据库符合第三范式 (3NF)。如果你正确遵循了至此的规范化过程，可能不存在 3NF 问题。如果更改一列的值需要更改另一列的值，则表明存在 3NF 违规。在目前的 *forum* 示例中，不存在 3NF 问题，但我将解释一个假设场景，说明该规则在何种情况下发挥作用。
+
+以一个关于书籍的数据库为例。应用前两个范式后，你可能会得到一张列出书籍的表、一张列出作者的表，以及一张作为书籍和作者之间中介表的第三张表，因为两者存在多对多关系。如果 *books* 表列出了出版社的名称和地址，该表将违反 3NF ![Image](img/circle-g.jpg)。出版社的地址与书籍无关，而是与出版社本身相关。换句话说，该版本的 *books* 表包含一列依赖于非键列（出版社名称）。
+
+![Image](img/06_figure_07_g.jpg)
+
+![Image](img/circle-g.jpg)按当前设计，该数据库无法通过 3NF 测试。
+
+正如我所说，*forum* 示例目前没有问题，但我仍将概述 3NF 的步骤，展示如何修复刚才提到的书籍示例。
+
+#### 使数据库符合 3NF
+
+**1.** 找出任何表中相互依赖的字段。
+
+如前所述，要寻找的是那些相互之间的依赖程度大于对整条记录依赖程度的列。在 *forum* 数据库中，这不是问题。仅看 *messages* 表，每个 *subject* 将特定于某个 *message ID*，每个 *body* 将特定于该 *message ID*，以此类推。
+
+以书籍示例为例，有问题的字段是 *books* 表中与出版社相关的那些字段。
+
+**2.** 相应地创建新表。
+
+如果你在步骤 1 中发现了任何有问题的列，比如书籍示例中的 *address1*、*address2*、*city*、*state* 和 *zip*，你将创建一个单独的 *publishers* 表。（一旦考虑到国际出版社，地址会更复杂。）
+
+**3.** 分配或创建新的主键。
+
+每张表都必须有主键，因此向新表添加 *publisher ID*。
+
+**4.** 创建关联任意关系所需的外键 ![Image](img/circle-h.jpg)。
+
+![Image](img/06_figure_08_h.jpg)
+
+![Image](img/circle-h.jpg)采用假设的 *books* 数据库的最小版本，创建一张新表来存储出版社信息。
+
+最后，向 *books* 表添加 *publisher ID*。这能有效地将每本书关联到其出版社。
+
+***
+
+提示
+
+
+
+尽管数据库规范化有既定规则，但两个不同的人规范化同一个示例时，可能会采用略微不同的方式。数据库设计允许个人偏好和理解存在。重要的是数据库没有明显且清晰的 NF（范式）违规。任何 NF 违规日后都可能引发问题。
+
+---
+
+---
+
+### 打破规范化
+
+尽管确保数据库符合 3NF（第三范式）有助于保证其可靠性和可行性，但你不会对所处理的每个数据库都进行完全规范化。不过，在破坏正规方法之前，请理解这样做可能会产生毁灭性的长期后果。
+
+打破规范化的两个主要原因是**便利性**和**性能**。较少的表比较多的表更易于操作和理解。此外，由于其更复杂的本质，规范化的数据库在更新、检索数据和修改方面很可能会更慢。简而言之，规范化是在数据完整性/可扩展性与简单性/速度之间的权衡。另一方面，有办法提升数据库性能，但很难补救因设计不当导致的数据损坏。
+
+本章包含一个忽略规范化的示例：将消息的发布日期和时间存储在一个字段中。如前所述，因为 MySQL 处理日期非常出色，所以这种方法没有危险。另一个打破规范化的情况是：存储一个人的性别（以及其他信息）的表。如果仅存储为 M/F 或 Male/Female（而不是关联到 `genders` 表），将会有许多重复值。但在这种情况下这没问题，因为这些标签是稳定的值，不太可能随时间改变（即，不太可能发明出第三种选项，或将“Female”重命名，从而强制对表中一半的记录进行批量更新）。
+
+实践和经验将教会你如何最好地为数据库建模，但请尽量倾向于遵循范式，特别是当你仍在掌握该概念时。
+
+---
+
+#### 审查设计
+
+在完成规范化流程后，最好再次审查设计。你需要确保数据库存储了你可能需要的所有数据。通常，得益于规范化而创建的新表意味着需要记录额外的信息。例如，虽然 `cinema` 数据库最初的重点是电影，但现在有了单独的 `actors` 和 `directors` 表，关于这些人的额外事实就可以反映在这些表中。
+
+考虑到这一点，虽然可以向 `forum` 数据库添加许多额外的列（特别是关于用户方面），但还应向 `messages` 表添加一个字段。因为一条消息可能是对另一条消息的回复，所以需要某种方法来表示这种关系。一种解决方案是向 `messages` 表添加 `parent_id` 列 ![Image](img/circle-i.jpg)。如果一条消息是回复，其 `parent_id` 值将是原始消息的 `message_id`（因此 `message_id` 充当了该表自身的外键）。如果一条消息的 `parent_id` 为 0，则它是一个新主题，而非回复 ![Image](img/circle-j.jpg)。
+
+![Image](img/06_figure_09_i.jpg)
+
+![Image](img/circle-i.jpg)为了体现消息层级，向 `messages` 表添加了 `parent_id` 列。
+
+![Image](img/06_figure_10_j.jpg)
+
+![Image](img/circle-j.jpg)`parent_id` 字段如何用于追踪消息主题。
+
+对表进行任何更改后，必须再次遍历各范式，以确保数据库仍然是规范化的。最后，按照第 4 章中的步骤选择列类型和名称 ![Image](img/circle-k.jpg)。注意，每个整数列均为 `UNSIGNED`，三个主键列也被指定为 `AUTO_INCREMENT`，且每个列均设置为 `NOT NULL`。
+
+![Image](img/06_figure_11_k.jpg)
+
+![Image](img/circle-k.jpg)`forums` 数据库的最终 ERD 图。
+
+一旦模式完全开发完成，就可以使用第 5 章“SQL 简介”中所示的命令在 MySQL 中创建它。你将在本章稍后进行此操作，在学习更多内容之后。
+
+---
+
+> **提示**
+>
+> 当你有一个主键-外键关联时（如 `forums` 中的 `forum_id` 关联到 `messages` 中的 `forum_id`），两个列应具有相同的类型（在本例中为 `TINYINT UNSIGNED NOT NULL`）。
+
+---
+
+#### 创建索引
+
+*索引* 是数据库用来提高 `SELECT` 查询性能的一种特殊机制。索引可以放置在一个或多个任意数据类型的列上，实际上是告诉 MySQL 要特别关注这些值。
+
+虽然表可拥有的最大索引数量会有所不同，但 MySQL 始终保证你可以为每个表创建至少 16 个索引，且每个索引最多可包含 15 个列。虽然多列索引的必要性可能不明显，但对于频繁在相同列组合上执行的搜索（例如名和姓、城市和州等）非常有用。
+
+虽然索引是任何表不可或缺的一部分，但并非所有东西都需要索引。虽然索引确实提高了从数据库读取的速度，但会减慢修改数据库中数据的查询速度（因为更改需要记录在索引中）。
+
+最适合使用索引的列包括：
+
+- 经常用在查询的 `WHERE` 部分
+- 经常用在查询的 `ORDER BY` 部分
+- 经常作为 `JOIN` 焦点的列（连接将在下一章讨论）
+
+一般来说，你**不应**为以下列创建索引：
+
+- 允许 `NULL` 值
+- 值的范围非常有限（如仅 Y/N 或 1/0）
+
+MySQL 有四种索引类型：`INDEX`（标准）、`UNIQUE`（要求该列每行具有唯一值）、`FULLTEXT`（用于执行 `FULLTEXT` 搜索，也将在第 7 章“高级 SQL 和 MySQL”中讨论）和 `PRIMARY KEY`（这是一种特殊的 `UNIQUE` 索引，你已经在使用）。注意，一个列上只能有一个索引，所以要选择最合适的索引类型。
+
+考虑到这一点，让我们继续设计 `forum` 数据库，确定合适的索引。本章稍后将在数据库中创建表时定义这些索引。要在创建表时建立索引，需向 `CREATE TABLE` 命令添加此子句：
+
+```
+INDEX_TYPE index_name (columns)
+```
+
+索引名是可选的。如果未提供名称，索引将采用其应用的列（或列）的名称。为多列创建索引时，用逗号分隔，并按重要性从高到低排序：
+
+```
+INDEX full_name (last_name, first_name)
+```
+
+你已经在第 5 章中看过创建索引的语法。此命令创建一个在 `user_id` 字段上带有 `PRIMARY KEY` 索引的表：
+
+```
+CREATE TABLE users (
+
+user_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+
+first_name VARCHAR(20) NOT NULL,
+
+last_name VARCHAR(40) NOT NULL,
+
+email VARCHAR(40) NOT NULL,
+
+pass CHAR(40) NOT NULL,
+
+registration_date DATETIME NOT NULL,
+
+PRIMARY KEY (user_id)
+
+);
+```
+
+关于索引最后要了解的是多列索引的含义。如果你按顺序在 `col1`、`col2` 和 `col3` 上添加索引，这实际上为 `col1`、`col1` 和 `col2` 的组合、或所有三列的组合创建了索引。它**不**为单独引用 `col2` 或 `col3` 或这两列的组合提供索引。
+
+#### 创建索引
+
+**1.** 在所有主键上添加 `PRIMARY KEY` 索引。
+
+
+
+
+
+每个表都应始终拥有一个主键，因此也应拥有一个 `PRIMARY KEY` 索引。对于 *forums* 数据库，要作为主键建立索引的具体列有：`forums.forum_id`、`messages.message_id` 和 `users.user_id`。（语法 `table_name.column_name` 是引用特定表中特定列的一种方式。）
+
+## 2. 为表中值不能重复的列添加 `UNIQUE` 索引。
+
+*forums* 数据库有三列必须始终保持唯一，否则会出现问题：`forums.name`、`users.username` 和 `users.email`。
+
+## 3. 如果合适，添加 `FULLTEXT` 索引。
+
+`FULLTEXT` 索引和 `FULLTEXT` 搜索将在下一章讨论，因此我在此不再赘述，但正如你将发现的，本数据库中有一个 `FULLTEXT` 索引可供使用。
+
+## 4. 为经常在 `WHERE` 子句中使用的列添加标准索引。
+
+要预先知道哪些列会经常用在 `WHERE` 子句中（因此应该建立索引），需要一些经验。对于 *forums* 数据库，有一个常见的 `WHERE` 子句非常突出：当用户登录时，他们会提供电子邮件地址和密码。确认用户提供的信息是否正确的查询语句类似于：
+
+```
+SELECT * FROM users WHERE pass=SHA1('provided_password') AND email='provided_email_address'
+```
+
+由此查询可推断，为电子邮件地址和密码的组合建立索引将是有益的。
+
+## 5. 为经常在 `ORDER BY` 子句中使用的列添加标准索引。
+
+同样，在设计数据库的过程中，这类列终将显现出来。在 *forums* 示例中，还剩下一列会用在 `ORDER BY` 子句中且尚未建立索引：`messages.date_entered`。该列将经常用在 `ORDER BY` 子句中，因为网站默认会按消息录入的顺序显示所有消息。
+
+## 6. 为经常在 `JOIN` 中使用的列添加标准索引。
+
+你可能还不知道什么是 `JOIN`，该主题将在第 7 章中详细介绍，但最明显的候选列是外键列。请记住，表 B 中的外键关联到表 A 中的主键。从数据库中选择数据时，`JOIN` 将基于此关系编写。为了使该 `JOIN` 高效，外键必须建立索引（主键已经建立了索引）。在 *forums* 示例中，*messages* 表中的三个外键字段应建立索引：`forum_id`、`parent_id` 和 `user_id`。
+
+**表 6.6** 列出了通过这些步骤确定的所有索引。
+
+**表 6.6. forum 数据库索引**
+
+![Image](img/06tab06.jpg)
+
+---
+
+**提示**
+
+索引可以在表已有数据后创建。但是，如果你尝试向包含重复值的列添加 `UNIQUE` 索引，将会报错且索引不会被创建。
+
+---
+
+**提示**
+
+MySQL 使用术语 `KEY` 作为 `INDEX` 的同义词：
+
+```
+KEY full_name (last_name, first_name)
+```
+
+---
+
+**提示**
+
+你可以将索引长度限制为一定数量的字符，例如前 10 个：
+
+```
+INDEX index_name (column_name(10))
+```
+
+在 `ORDER BY` 子句中前 X 个字符已足够有用的情况下，你可能会这样做。
+
+---
+
+### 使用不同的表类型
+
+MySQL 有一项在其他数据库应用中不常见的功能，即能够使用不同类型的表（表的类型也称为其*存储引擎*）。每种表类型支持不同的功能，有其自身的限制（就能存储多少数据而言），甚至在特定情况下性能优劣不同。尽管如此，你与任何表类型交互的方式——就运行查询而言——在所有类型中都是一致的。
+
+历史上，最重要的表类型是 *MyISAM*。直到 MySQL 5.5.5 版本，MyISAM 都是所有操作系统上的默认表类型（在 Windows 上，更改默认类型的版本更早）。MyISAM 表适用于大多数应用，能非常快速地处理 `SELECT` 和 `INSERT`。不过，MyISAM 存储引擎无法处理*事务*，这是其主要缺点（事务将在下一章介绍）。由于缺乏该功能及行级*锁定*（必须锁定整个表），一旦发生崩溃，MyISAM 表更容易遭受损坏和数据丢失。
+
+自 MySQL 5.5.5 版本起，MySQL 在所有操作系统上的新默认存储引擎是 *InnoDB*。InnoDB 表可用于事务，且能很好地处理 `UPDATE`。InnoDB 表还支持*外键约束*（本章末尾讨论）和行级锁定。但 InnoDB 存储引擎通常比 MyISAM 慢，且在服务器上需要更多磁盘空间。此外，InnoDB 表不支持 `FULLTEXT` 索引（见第 7 章）。
+
+要在定义表时指定存储引擎，请在创建语句末尾添加一个子句：
+
+```
+CREATE TABLE tablename (
+
+column1name COLUMNTYPE,
+
+column2name COLUMNTYPE...
+
+) ENGINE = type
+```
+
+如果创建表时未指定存储引擎，MySQL 将使用该 MySQL 服务器的默认类型。
+
+MySQL 的这一功能更为重要，因为你可以在同一个数据库中混合使用不同的表类型。这样你就可以为每个表定制最佳功能和性能。继续设计 *forums* 数据库，下一步是确定每个表要使用的存储引擎。
+
+#### 确定表的类型
+
+**1.** 查找你的 MySQL 服务器可用的表类型 ![Image](img/circle-a.jpg)：
+
+```
+SHOW ENGINES;
+```
+
+![Image](img/06_figure_12_a.jpg)
+
+![Image](img/circle-a.jpg)要确认你的 MySQL 安装支持哪些表类型，请运行此命令（在 mysql 客户端中，或 phpMyAdmin 中）。
+
+执行 `SHOW ENGINES` 命令将不仅显示可用的存储引擎，还会显示默认存储引擎。在为数据库选择表类型时，了解此信息会有所帮助。
+
+**2.** 如果你的任何表需要 `FULLTEXT` 索引，将其设为 MyISAM 表。
+
+同样，`FULLTEXT` 索引和搜索将在下一章讨论，但我现在要说明的是，*forums* 示例中的 *messages* 表将需要一个 `FULLTEXT` 索引。因此，该表必须是 MyISAM。
+
+**3.** 如果你的任何表需要事务支持，将其设为 InnoDB 表。
+
+是的，同样，事务将在下一章讨论，但存储引擎现在就应确定。*forums* 数据库中的 *forums* 表和 *users* 表都不需要事务支持。
+
+**4.** 如果上述情况都不适用于某个表，则使用默认存储引擎。
+
+**表 6.7** 标明了 *forums* 数据库中各表将使用的存储引擎。
+
+**表 6.7. forum 数据库表类型**
+
+![Image](img/06tab07.jpg)
+
+---
+
+**提示**
+
+MySQL 还有其他几种表类型，但 MyISAM 和 InnoDB 迄今为止是最重要的两种。MEMORY 类型在内存中创建表，使其成为速度极快的表，但完全没有持久性。
+
+---
+
+**提示**
+
+在撰写本文时，MySQL 文档声称 InnoDB 表类型总体上比 MyISAM 更快。表类型涉及一些政治因素，所以我对这一说法持保留态度。
+
+---
+
+### 语言与 MySQL
+
+
+
+
+### 第 1 章
+
+第 1 章“PHP 简介”简要介绍了*编码*的概念。HTML 页面或 PHP 脚本可以指定其编码，这决定了支持哪些字符，进而决定了支持哪些语言。MySQL 数据库也是如此：通过设置数据库的编码，你可以影响其中可存储的字符。要查看你的 MySQL 版本支持的编码列表，请运行 `SHOW CHARACTER SET` 命令。请注意，MySQL 中使用*字符集*一词来表示*编码*（本节我通常也将遵循此用法，以与 MySQL 保持一致）。
+
+![Image](img/06_figure_13_a.jpg)
+
+该 MySQL 安装支持的字符集列表。
+
+MySQL 中的每个字符集都有一个或多个*校对规则*。校对规则是指用于比较字符集中字符的规则。它类似于按字母顺序排序，但也会考虑数字、空格和其他字符。校对规则与所用的字符集相关联，反映了该语言中存在的字符种类以及通常使用该语言人群的文化习惯。例如，英文的文本排序方式与繁体西班牙文或阿拉伯文不同。其他考量因素包括：字符的大小写形式被视为相同还是不同（即是否为区分大小写的比较）？又或者，带重音字符如何排序？空格是被计算在内还是被忽略？
+
+要查看 MySQL 可用的校对规则，请运行此查询，将 *charset* 替换为上一条查询结果中的相应值：
+
+```
+SHOW COLLATION LIKE 'charset%'
+```
+
+![Image](img/06_figure_14_b.jpg)
+
+UTF-8 字符集中可用的校对规则列表。第一个 `utf8_general_ci` 是默认值。
+
+该查询的结果还将指明该字符集的默认校对规则。校对规则的名称以 *ci* 结尾表示不区分大小写，*cs* 表示区分大小写，*bin* 表示二进制。
+
+总体而言，我建议使用 UTF-8 字符集及其默认校对规则。更重要的是，*数据库使用的字符集应与你的 PHP 脚本保持一致*。如果你的 PHP 脚本未使用 UTF-8，请在数据库中使用匹配的编码。如果默认校对规则不符合主要使用语言的习惯，则相应地调整校对规则。
+
+在 MySQL 中，整个服务器、每个数据库、每个表，甚至每个字符串列都可以定义字符集和校对规则。创建数据库时设置这些值，请使用：
+
+```
+CREATE DATABASE name CHARACTER SET charset COLLATE collation
+```
+
+创建表时设置这些值，请使用：
+
+```
+CREATE TABLE name (
+  column definitions
+) CHARACTER SET charset COLLATE collation
+```
+
+要为列建立字符集和校对规则，请在列定义中添加相应的子句（你仅会对文本类型使用此项）：
+
+```
+CREATE TABLE name (
+  something TEXT CHARACTER SET charset COLLATE collation
+  ...
+)
+```
+
+在上述每种情况下，这两个子句都是可选的。如果省略，将使用默认的字符集或校对规则。
+
+在定义数据库时建立字符集和校对规则，会影响可存储的数据（例如，如果列的编码不支持某字符，则无法在该列中存储该字符）。第二个问题是与 MySQL 通信时使用的编码。如果你想在具有中文编码的表中存储中文字符，这些字符需要使用相同的编码进行传输。要在 mysql 客户端中执行此操作，只需使用以下命令设置编码：
+
+```
+CHARSET charset
+```
+
+对于 phpMyAdmin，要使用的编码是在应用程序本身中建立的（即写在配置文件中）。
+
+此时，*forums*（论坛）示例的数据库设计各个方面均已涵盖，因此让我们在 MySQL 中创建该数据库，包括其索引、存储引擎、字符集和校对规则。
+
+### 分配字符集和校对规则
+
+**1.** 使用你喜欢的任何客户端访问 MySQL。
+
+与前一章一样，本章也将在所有示例中使用 mysql 客户端。你也可以使用 phpMyAdmin 或其他工具作为 MySQL 的界面。
+
+**2.** 创建 *forum* 数据库：
+
+```
+CREATE DATABASE forum
+CHARACTER SET utf8
+COLLATE utf8_general_ci;
+USE forum;
+```
+
+![Image](img/06_figure_15_c.jpg)
+
+第一步是创建并选择数据库。
+
+视你的设置而定，你可能不被允许创建自己的数据库。如果不允许，只需使用提供给你的数据库，并将以下表添加到其中。请注意，在 `CREATE DATABASE` 命令中，字符集和校对规则也已定义。在此处这样做，之后的每个表都将使用这些设置。
+
+**3.** 创建 *forums* 表：
+
+```
+CREATE TABLE forums (
+  forum_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(60) NOT NULL,
+  PRIMARY KEY (forum_id),
+  UNIQUE (name)
+) ENGINE = INNODB;
+```
+
+![Image](img/06_figure_16_d.jpg)
+
+创建第一个表。
+
+创建表的顺序无关紧要，但我将首先创建 *forums* 表。请记住，为方便起见，你可以在多行中输入 SQL 查询。
+
+该表仅包含两列（这在规范化数据库中经常发生）。因为我不预期会有很多论坛，所以主键使用了非常小的类型（`TINYINT`）。如果你想添加每个论坛的描述，可以向该表添加 `VARCHAR(255)` 或 `TINYTEXT` 列。此表使用 InnoDB 存储引擎。
+
+**4.** 创建 *messages* 表：
+
+```
+CREATE TABLE messages (
+  message_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  parent_id INT UNSIGNED NOT NULL DEFAULT 0,
+  forum_id TINYINT UNSIGNED NOT NULL,
+  user_id MEDIUMINT UNSIGNED NOT NULL,
+  subject VARCHAR(100) NOT NULL,
+  body LONGTEXT NOT NULL,
+  date_entered DATETIME NOT NULL,
+  PRIMARY KEY (message_id),
+  INDEX (parent_id),
+  INDEX (forum_id),
+  INDEX (user_id),
+  INDEX (date_entered)
+) ENGINE = MYISAM;
+```
+
+![Image](img/06_figure_17_e.jpg)
+
+创建第二个表。
+
+该表的主键必须足够大，因为它可能包含大量记录。三个外键列——`forum_id`、`parent_id` 和 `user_id`——的大小和类型均与其对应的主键相同。主题限制为 100 字符，每条消息的正文可以包含大量文本。`date_entered` 字段为 `DATETIME` 类型。
+
+与其他两个表不同，此表为 MyISAM 类型。
+
+**5.** 创建 *users* 表：
+
+```
+CREATE TABLE users (
+  user_id MEDIUMINT UNSIGNED NOT
+  NULL AUTO_INCREMENT,
+  username VARCHAR(30) NOT NULL,
+  pass CHAR(40) NOT NULL,
+  first_name VARCHAR(20) NOT NULL,
+  last_name VARCHAR(40) NOT NULL,
+  email VARCHAR(60) NOT NULL,
+  PRIMARY KEY (user_id),
+  UNIQUE (username),
+  UNIQUE (email),
+  INDEX login (pass, email)
+) ENGINE = INNODB;
+```
+
+![Image](img/06_figure_18_f.jpg)
+
+数据库的第三个也是最后一个表。
+
+此处的大多数列模仿前两章中创建的 *sitename* 数据库 *users* 表中的列。`pass` 列定义为 `CHAR(40)`，因为将使用 `SHA1()` 函数，它总是返回一个 40 字符长的字符串（参见第 5 章）。
+
+此表使用 InnoDB 引擎。
+
+**6.** 如果需要，确认数据库结构：
+
+```
+SHOW TABLES;
+SHOW COLUMNS FROM forums;
+```
+
+
+
+
+### 时区与 MySQL
+
+第 5 章 讨论了如何使用 `NOW()` 和其他与日期、时间相关的函数。该章解释了这些函数反映的是服务器上的时间。因此，使用这些函数存储在数据库中的值也是在存储服务器的时间。这听起来可能不是个问题，但假设你将网站从一台服务器迁移到另一台：你导出所有数据，导入到另一台服务器，一切似乎都很正常……除非这两台服务器位于不同的时区，在这种情况下，所有的日期在技术上都会变得不准确。对于某些网站，这种变化可能无关紧要，但如果你的网站提供付费会员服务呢？这意味着某些人的会员资格可能会提前几小时过期，而另一些人的则会晚几小时过期！归根结底，数据库的目标是可靠地存储信息。
+
+解决这一特定问题的方法是以时区中立的方式存储日期和时间。要做到这一点，需要用到所谓的 UTC（*协调世界时*，是的，其缩写与术语并不完全匹配）。UTC 与格林威治标准时间 (GMT) 一样，提供了一个通用的原点，世界上所有的时间都可以表示为 UTC 加上或减去若干小时和分钟（**表 6.8**）。
+
+**表 6.8. UTC 偏移量**
+
+![Image](img/06tab08.jpg)
+
+幸运的是，你不必知道这些数值，也不必执行任何计算来确定服务器的 UTC。相反，`UTC_DATE()` 函数返回 UTC 日期；`UTC_TIME()` 返回当前 UTC 时间；`UTC_TIMESTAMP()` 返回当前日期和时间。
+
+一旦你存储了 UTC 时间，就可以检索经过调整以反映服务器或用户位置的时间。要将日期和时间从一个时区转换为另一个时区，请使用 `CONVERT_TZ()` ![Image](img/circle-a.jpg)：
+
+```
+CONVERT_TZ(dt, from, to)
+```
+
+![Image](img/06_figure_20_a.jpg)
+
+![Image](img/circle-a.jpg) 将当前 UTC 日期和时间转换为美国东部夏令时间 (EDT)。
+
+第一个参数是日期和时间值，例如函数的结果或存储在列中的值。第二个和第三个参数是命名的时区。要使用此函数，时区列表必须已存储在 MySQL 中，你的安装可能满足也可能不满足此条件（请参阅侧栏）。如果你看到 `NULL` 结果 ![Image](img/circle-b.jpg)，请查阅 MySQL 手册，了解如何在服务器上安装时区。
+
+![Image](img/06_figure_21_b.jpg)
+
+![Image](img/circle-b.jpg) 如果 `CONVERT_TZ()` 函数引用了无效的时区，或者时区未在 MySQL 中安装（此处即为这种情况），它将返回 `NULL`。
+
+要使用这些信息，让我们开始填充 *forums* 数据库，使用 UTC 记录消息发布的日期和时间。
+
+***
+
+#### 在 MySQL 中使用时区
+
+MySQL 不一定会默认安装时区支持。为了使用命名时区，*mysql* 数据库中的五个表必须被填充数据。虽然 MySQL 可能不会自动为你完成此操作，但它提供了相关工具供你自行操作。
+
+此过程的复杂程度刚好使得本书没有足够的篇幅来讨论它（无法涵盖所有可能的情况、操作系统等）。但你可以通过在 MySQL 手册中查找“服务器时区支持”来找到说明。
+
+如果你继续在 MySQL 中使用时区，还需要保持 *mysql* 数据库中的此信息处于最新状态。特别是关于何时以及如何实行夏令时的时区规则，变化频繁。同样，MySQL 手册中也有更新时区的说明。
+
+***
+
+#### 使用 UTC
+
+**1.** 使用你喜欢的任何客户端访问 *forums* 数据库。
+
+与前一章一样，本章也将在所有示例中使用 mysql 客户端。你也可以使用 phpMyAdmin 或其他工具作为 MySQL 的界面。
+
+**2.** 如有必要，将编码更改为 UTF-8 ![Image](img/circle-c.jpg)：
+
+```
+CHARSET utf8;
+```
+
+![Image](img/06_figure_22_c.jpg)
+
+![Image](img/circle-c.jpg) 用于与 MySQL 通信的字符集应与数据库中使用的字符集匹配。
+
+由于数据库使用 UTF-8 作为其字符集，与数据库的通信应使用相同的字符集。上一行命令（在本章前一节中已解释）正是执行此操作。请注意，仅当使用 mysql 客户端时才需要执行此操作。此外，如果你未使用 UTF-8，请相应地更改命令。
+
+**3.** 向 *forums* 表添加一些新记录 ![Image](img/circle-d.jpg)：
+
+```
+INSERT INTO forums (name) VALUES
+('MySQL'), ('PHP'), ('Sports'),
+('HTML'), ('CSS'), ('Kindling');
+```
+
+![Image](img/06_figure_23_d.jpg)
+
+![Image](img/circle-d.jpg) 向 *forums* 表添加记录。
+
+由于 *messages* 表依赖于从 *forums* 和 *users* 表检索的值，因此必须先填充这两个表。使用此 `INSERT` 命令，只需为 *name* 列提供值（表的 *forum_id* 列将由 MySQL 自动分配自增整数）。
+
+**4.** 向 *users* 表添加一些记录 ![Image](img/circle-e.jpg)：
+
+```
+INSERT INTO users (username, pass,
+first_name, last_name, email) VALUES
+('troutster', SHA1('mypass'),
+'Larry', 'Ullman', 'lu@example.com'),
+('funny man', SHA1('monkey'),
+'David', 'Brent', 'db@example.com'),
+('Gareth', SHA1('asstmgr'), 'Gareth',
+'Keenan', 'gk@example.com');
+```
+
+![Image](img/06_figure_24_e.jpg)
+
+![Image](img/circle-e.jpg) 向 *users* 表添加记录。
+
+如果你对此处的 `INSERT` 语法或 `SHA1()` 函数的用法有任何疑问，请参阅 第 5 章。
+
+**5.** 向 *messages* 表添加新记录 ![Image](img/circle-f.jpg)：
+
+```
+SELECT * FROM forums;
+SELECT user_id, username FROM users;
+INSERT INTO messages (parent_id, forum_id, user_id, subject, body, date_entered) VALUES
+(0, 1, 1, 'Question about normalization.', 'I''m confused about normalization. For the second normal form (2NF), I read...', UTC_TIMESTAMP()),
+(0, 1, 2, 'Database Design', 'I''m creating a new database and am having problems with the structure. How many tables should I have?...', UTC_TIMESTAMP()),
+(2, 1, 2, 'Database Design', 'The number of tables your database includes...', UTC_TIMESTAMP()),
+(0, 1, 3, 'Database Design', 'Okay, thanks!', UTC_TIMESTAMP()),
+(0, 2, 3, 'PHP Errors', 'I''m using the scripts from Chapter 3 and I can''t get the first calculator example to work. When I submit the form...', UTC_TIMESTAMP());
+```
+
+![Image](img/06_figure_25_f.jpg)
+
+
+
+
+![Image](img/circle-f.jpg)填充 `messages` 表需要了解来自 `users` 和 `forums` 表的外键值。
+
+由于 `messages` 表中的两个字段（`forum_id` 和 `user_id`）关联到其他表中的值，因此在向该表插入新记录之前，你需要知道这些值。例如，当用户 `troutster` 在 `MySQL` 论坛创建一条新消息时，`INSERT` 语句将包含 `forum_id` 为 1 和 `user_id` 为 1。
+
+`parent_id` 列使情况变得更加复杂，它应存储新消息所回复的那条消息的 `message_id`。添加到数据库的第二条消息将拥有 `message_id` 为 2，因此对该消息的回复需要 `parent_id` 为 2。
+
+有了你的 PHP 脚本——一旦你为该数据库创建了界面，这个过程将容易得多，但首先理解 SQL 层面的理论很重要。
+
+对于 `date_entered` 字段，将使用 `UTC_TIMESTAMP()` 函数返回的值。使用 `UTC_TIMESTAMP()` 函数，记录将存储 UTC 日期和时间，而非服务器上的日期和时间。
+
+**6.** 重复步骤 1 到 3 以填充数据库。
+
+本章和下一章的其余示例将使用已填充的数据库。你可能想从本书对应的网站下载 SQL 命令，尽管你也可以使用自己的示例填充表，然后只需相应地更改本章其余部分的查询即可。
+
+**7.** 使用存储的日期和时间查看 `messages` 表中最近的一条记录 ![Image](img/circle-g.jpg)：
+
+```sql
+SELECT message_id, subject, date_entered FROM messages
+ORDER BY date_entered DESC LIMIT 1;
+```
+
+![Image](img/06_figure_26_g.jpg)
+
+![Image](img/circle-g.jpg)刚刚插入的记录，显示的时间超前四小时（服务器为 UTC-4）。
+
+正如你在图表和表定义中所见，UTC 时间的存储方式与非 UTC 时间完全相同。图表中不明显的是，刚插入的记录反映的时间比服务器时间超前四小时（因为我特定的服务器位于比 UTC 晚四小时的时区）。
+
+**8.** 检索同一记录，并将 `date_entered` 转换为你的时区 ![Image](img/circle-h.jpg)：
+
+```sql
+SELECT message_id, subject,
+CONVERT_TZ(date_entered, 'UTC', 'America/New_York') AS local
+FROM messages ORDER BY date_entered DESC LIMIT 1;
+```
+
+![Image](img/06_figure_27_h.jpg)
+
+![Image](img/circle-h.jpg)存储的 UTC 日期和时间已转换为我的本地时间。
+
+使用 `CONVERT_TZ()` 函数，你可以将任何日期和时间转换为不同的时区。对于 `from` 时区，使用 `UTC`。对于 `to` 时区，使用你的时区。
+
+如果得到 `NULL` 结果 ![Image](img/graycircle-b.jpg)，则可能是你的某个时区名称错误，或者 MySQL 尚未加载时区表（见侧栏）。
+
+***
+
+提示
+
+无论你决定如何处理日期，关键在于**保持一致**。如果你决定使用 UTC，则*始终*使用 UTC。
+
+***
+
+***
+
+提示
+
+UTC 也称为**祖鲁时间**，用字母 *Z* 表示。
+
+***
+
+***
+
+提示
+
+除了与时区和夏令时无关外，UTC 也更精确。它考虑了不规则的闰秒，以补偿地球运动的不精确性。
+
+***
+
+### 外键约束
+
+InnoDB 表类型的一项特性（其他存储引擎不支持）是应用*外键约束*的能力。当你拥有相关联的表时，表 B 中的外键关联到表 A 中的主键（为便于理解，可以将表 B 视为子表，表 A 视为父表）。例如，在 `forums` 数据库中，`messages.user_id` 关联到 `users.user_id`。如果管理员删除一个用户账户，这些表之间的关系就会被破坏（因为 `messages` 表将拥有 `users` 表中不存在的 `user_id` 值的记录）。外键约束设定了当这种破坏发生时应采取的规则，包括防止这种破坏。
+
+创建外键约束的语法是：
+
+```sql
+FOREIGN KEY (item_name) REFERENCES table (column)
+```
+
+（这放在 `CREATE TABLE` 或 `ALTER TABLE` 语句中。）
+
+项名是当前表中的外键列。`table(column)` 子句引用了该外键应约束到的父表列。如果你仅使用上述语法，即仅标识关系而不指定违反约束时应发生什么，MySQL 将在你尝试删除存在子记录的父记录时抛出错误 ![Image](img/circle-a.jpg)。如果你尝试使用不存在的父 ID 创建子记录，MySQL 也会抛出错误 ![Image](img/circle-b.jpg)。
+
+![Image](img/06_figure_28_a.jpg)
+
+![Image](img/circle-a.jpg)此错误表明 MySQL 正阻止删除父记录的查询，因为该记录被约束到一个或多个现有的子记录。
+
+![Image](img/06_figure_29_b.jpg)
+
+![Image](img/circle-b.jpg)外键约束也会影响 `INSERT` 查询。
+
+你可以通过在上述语法后跟随以下一项或两项来规定应发生的替代操作：
+
+```sql
+ON DELETE action
+ON UPDATE action
+```
+
+有五个操作选项，但其中两个——`RESTRICT` 和 `NO ACTION`——是同义词，也是默认值（即与完全不指定操作相同）。第三个操作选项——`SET DEFAULT`——不起作用（别问我，去问 MySQL 手册！）。剩下的就是 `CASCADE` 和 `SET NULL`。如果操作设为 `SET NULL`，删除父记录将导致子表中对应的外键被设为 `NULL`。如果该表将该列定义为 `NOT NULL`（几乎总是应该这样定义），删除父记录将触发错误。
+
+`CASCADE` 操作是最有用的选项。它告诉数据库对相关表应用相同的更改。有了这条指令，如果你删除父记录，MySQL 也将删除具有该父 ID 作为外键的子记录。
+
+由于只有 InnoDB 表类型支持外键约束，关系中的两个表都必须是 InnoDB 类型。此外，为了让 MySQL 能够比较外键-主键值，相关列必须是兼容的类型。这意味着数值列必须是相同的类型和大小；文本列必须使用相同的字符集和排序规则。
+
+以 `forums` 示例为例，无法使用外键约束，因为唯一关联到另一个表的表——`messages` 同时关联 `forums` 和 `users`——必须使用 MyISAM 表类型（以支持 `FULLTEXT` 搜索）。相反，让我们看一个用于银行业务的新假设示例 ![Image](img/circle-c.jpg)。
+
+![Image](img/06_figure_30_c.jpg)
+
+![Image](img/circle-c.jpg)`banking` 数据库可用于虚拟银行业务。
+
+
+
+
+#### 创建外键约束
+
+`customers` 表存储与客户相关的所有信息。从逻辑上讲，它也会存储联系信息等。`accounts` 表存储每个客户的账户，包括类型（支票账户或储蓄账户）和余额。每个客户可能拥有多个账户，但每个账户仅关联一个客户（为了一点简单性）。在现实世界中，该表可能还会存储账户开户日期，并使用 `BIGINT` 作为余额（从而以分而非带小数的美元来表示所有交易）。最后，`transactions` 表存储从一个账户到另一个账户的每一笔资金流动。同样，为了使示例更容易理解，示例假设仅此系统内的账户会进行交互。请注意，`transactions` 表与 `accounts` 存在两个一对多关系（而非一个多对多关系）。每笔交易的 `to_account_id` 值将关联单个账户，但每个账户都可能多次作为“收款”账户。“付款”账户同理。最后，应用外键约束以保持数据的完整性。
+
+在接下来的一系列步骤中，你将创建并填充此数据库，同时注意约束。在下一章中，将使用同一个数据库来演示事务和加密。
+
+#### 步骤
+
+**1.** 使用你喜欢的任何客户端访问 MySQL。
+
+与前一章一样，本章也将在所有示例中使用 `mysql` 客户端。你也可以使用 phpMyAdmin 或其他工具作为 MySQL 的界面。
+
+**2.** 创建 `banking` 数据库：
+
+```
+CREATE DATABASE banking
+CHARACTER SET utf8
+COLLATE utf8_general_ci;
+USE banking;
+```
+
+一如既往，取决于你的设置，你可能不被允许创建自己的数据库。如果不允许，只需使用提供给你的数据库，并将以下表添加到其中。
+
+**3.** 如有必要，将通信编码更改为 UTF-8：
+
+```
+CHARSET utf8;
+```
+
+**4.** 创建 `customers` 表：
+
+```
+CREATE TABLE customers (
+    customer_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(20) NOT NULL,
+    last_name VARCHAR(40) NOT NULL,
+    PRIMARY KEY (customer_id),
+    INDEX full_name (last_name, first_name)
+) ENGINE = INNODB;
+```
+
+`customers` 表仅存储客户的 ID（主键）和姓名（分两列）。在全名上也建立了一个索引，以防在 `ORDER BY` 和其他查询子句中使用。为了让数据库能够使用外键约束，每个表都将使用 InnoDB 存储引擎。
+
+**5.** 创建 `accounts` 表：
+
+```
+CREATE TABLE accounts (
+    account_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    customer_id INT UNSIGNED NOT NULL,
+    type ENUM('Checking', 'Savings') NOT NULL,
+    balance DECIMAL(10,2) UNSIGNED NOT NULL DEFAULT 0.0,
+    PRIMARY KEY (account_id),
+    INDEX (customer_id),
+    FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
+    ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = INNODB;
+```
+
+`accounts` 表存储账户 ID、客户 ID、账户类型和余额。`customer_id` 列上有索引，因为它将用于 `JOIN` 操作（见第 7 章）。更重要的是，该列被约束关联到 `customers.customer_id`，从而保护了这两张表。尽管 `NO ACTION` 是默认约束，但我仍在定义中包含了它，以增加清晰度。
+
+**6.** 创建 `transactions` 表：
+
+```
+CREATE TABLE transactions (
+    transaction_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    to_account_id INT UNSIGNED NOT NULL,
+    from_account_id INT UNSIGNED NOT NULL,
+    amount DECIMAL(5,2) UNSIGNED NOT NULL,
+    date_entered TIMESTAMP NOT NULL,
+    PRIMARY KEY (transaction_id),
+    INDEX (to_account_id),
+    INDEX (from_account_id),
+    INDEX (date_entered),
+    FOREIGN KEY (to_account_id) REFERENCES accounts (account_id)
+    ON DELETE NO ACTION ON UPDATE NO ACTION,
+    FOREIGN KEY (from_account_id) REFERENCES accounts (account_id)
+    ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = INNODB;
+```
+
+最后这个表将用于记录账户间的所有资金流动。为此，它存储两个账户 ID——“收款”和“付款”、金额和日期/时间。相应地添加了索引，并且两个账户 ID 都被约束关联到 `accounts` 表。
+
+**7.** 填充 customers 和 accounts 表：
+
+```
+INSERT INTO customers (first_name, last_name)
+VALUES ('Sarah', 'Vowell'), ('David', 'Sedaris'), ('Kojo', 'Nnamdi');
+INSERT INTO accounts (customer_id, balance)
+VALUES (1, 5460.23), (2, 909325.24), (3, 892.00);
+```
+
+首先，示例数据被录入前两个表（第三个表将在下一章使用）。请注意，因为 `accounts.type` 列被定义为 `ENUM NOT NULL`，如果未为该列提供值，`ENUM` 定义中的第一项——Checking——将被使用。
+
+**8.** 尝试向 `accounts` 表中插入没有对应客户的数据：
+
+```
+INSERT INTO accounts (customer_id, type, balance)
+VALUES (10, 'Savings', 200.00);
+```
+
+`accounts` 表中存在的外键约束将阻止在没有有效客户 ID 的情况下创建账户（这在现实世界中是一个非常有用的检查）。
+
+**9.** 尝试从 `customers` 表中删除在 `accounts` 表中有记录的记录：
+
+```
+DELETE FROM customers
+WHERE customer_id=2;
+```
+
+当该客户仍有账户时，该约束也将阻止删除客户记录。
+
+尽管有约束，如果客户在 `accounts` 表中没有任何记录，你仍然可以删除该客户记录。
+
+***
+
+**提示**
+
+要实际删除受约束的记录，必须先删除所有子记录，然后再删除父记录。
+
+***
+
+**提示**
+
+外键约束要求约束中的所有列都必须被索引。正常的数据库设计建议如此，但如果正确的索引不存在，MySQL 会在定义约束时创建它们。
+
+***
+
+**提示**
+
+与约束类似的是*触发器*。简单来说，触发器是一种告诉数据库“当此表发生 X 时，执行 Y”的方式。例如，当在表 A 中插入一条记录时，可能会在表 B 中创建或更新另一条记录。详见 MySQL 手册了解更多关于触发器的信息。
+
+***
+
+### 复习与实践
+
+如果你在复习问题或实践提示方面有任何问题，请访问本书的支持论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+#### 复习
+
+• 为什么规范化很重要？
+
+• 什么是两种类型的键？
+
+• 什么是三种类型的表关系？
+
+
+
+
+• 如何解决两个表之间多对多关系的问题？
+
+• 索引有哪四种类型？通常哪些类型的列*应该*建立索引？通常哪些类型的列*不应该*建立索引？
+
+• MySQL 最常见的两种表类型是什么？你的 MySQL 安装的默认表类型是什么？
+
+• 什么是*字符集*？什么是*校对规则*？字符集对数据库有什么影响？校对规则有什么影响？你使用的是什么字符集和校对规则？
+
+• 什么是 *UTC*？如何在 MySQL 中查找 UTC 时间？如何将 UTC 转换为其他时区的时间？
+
+• 什么是*外键约束*？哪种表类型支持外键约束？
+
+#### 实践
+
+• 你可以考虑下载、安装并学习使用 MySQL Workbench 应用程序。它非常实用。
+
+• 如果你没有完全掌握规范化的过程——这完全可以理解——请在网上搜索更多教程，或在我的支持论坛提问。
+
+• 利用此处提供的信息设计你自己的数据库。
+
+## 7. 高级 SQL 和 MySQL
+
+### 本章内容
+
+- 执行连接查询 204
+- 分组查询结果 214
+- 高级查询 218
+- 执行全文搜索 222
+- 优化查询 230
+- 执行事务 234
+- 数据库加密 237
+- 复习与实践 240
+
+本章是最后一章专门讲解 SQL 和 MySQL 的内容（尽管本书其余大部分仍会以某种形式使用这些技术），讨论了处理更复杂数据库（如上一章创建的那些）所需的高级概念。第一个主题是 `JOIN`，这是一个关键的 SQL 术语，用于查询包含多个表的规范化数据库。随后，本章介绍了一类专门用于分组查询结果的函数，以及从表中选择值的更复杂方法。
+
+在本章中部，你将学习如何执行 `FULLTEXT` 搜索，这可以为任何网站添加类似搜索引擎的功能。接下来是 `EXPLAIN` 命令：它提供了一种测试数据库模式和查询效率的方法。本章最后介绍事务和数据库加密。
+
+### 执行连接查询
+
+由于关系型数据库结构更复杂，有时需要特殊的查询语句来检索你最需要的信息。例如，如果你想知道 *MySQL* 论坛中有哪些消息（使用上一章创建的 *forum* 数据库），你首先需要找到 *MySQL* 的 `forum_id`：
+
+```
+SELECT forum_id FROM forums WHERE name='MySQL'
+```
+
+然后你将使用该数字从 *messages* 表中检索所有具有该 `forum_id` 的记录：
+
+```
+SELECT * FROM messages WHERE forum_id=1
+```
+
+这一简单任务（在论坛中经常需要）将需要两个单独的查询。通过使用*连接*，你可以一次性完成所有操作。
+
+连接是一种使用两个或多个表的 SQL 查询，并生成一个虚拟的结果表。任何时候当你需要同时从多个表中检索信息时，可能都会用到连接。
+
+连接可以用多种不同的方式编写，但基本语法是：
+
+```
+SELECT what_columns FROM tableA JOIN_TYPE tableB JOIN_CLAUSE
+```
+
+因为连接涉及多个表，`what_columns` 可以包含查询中指定的任何表中的列。而且由于连接通常返回大量信息，通常最好明确指定想要返回的确切列，而不是选择所有列。
+
+当从多个表中选择数据时，如果查询中指定的表具有同名列，则必须使用点语法（`table.column`）。在处理关系型数据库时，这种情况很常见，因为一个表的主键可能与另一个表的外键同名。如果引用列时不明确，会报错：
+
+```
+SELECT forum_id FROM messages INNER JOIN  
+forums ON messages.forum_id=forums.forum_id
+```
+
+连接的两种主要类型是*内连接*和*外连接*（两者都有子类型）。正如你将在外连接中看到的，引用表的顺序很重要。
+
+连接子句用于指示被连接表之间的关系。例如，`forums.forum_id` 应等于 `messages.forum_id`（如上所示）。
+
+你也可以在连接中使用 `WHERE` 和 `ORDER BY` 子句，就像在任何 `SELECT` 查询中一样。
+
+最后，在深入讲解连接之前，SQL 中*别名*的概念——在第 5 章“SQL 简介”中介绍过——在编写连接时将派上用场。别名通常用作在同一查询中多次引用同一表的简写方式。如果你不记得创建别名的语法或其用法，请回顾第 5 章的相关部分。
+
+（与前两章一样，本章将使用命令行 mysql 客户端执行查询，但你也可以使用 phpMyAdmin 或其他工具。本章假设你知道如何连接到 MySQL 服务器，并在必要时声明要使用的字符集。）
+
+#### 内连接
+
+内连接返回指定表中满足匹配条件的所有记录。例如，要查找发布在 *MySQL* 论坛中的每条消息，内连接可以这样写：
+
+```
+SELECT m.message_id, m.subject, f.name  
+FROM messages AS m INNER JOIN forums AS f  
+ON m.forum_id = f.forum_id  
+WHERE f.name = 'MySQL'
+```
+
+此连接从 *messages* 表（别名为 *m*）中选择三列，从 *forums* 表（别名为 *f*）中选择一列，基于两个条件。首先，`f.name` 列的值必须为 *MySQL*（这将返回 `forum_id` 为 1）。其次，*forums* 表中的 `forum_id` 值必须与 *messages* 表中的 `forum_id` 值匹配。由于在两个表之间进行等值比较（`m.forum_id = f.forum_id`），这被称为*等值连接*。
+
+作为替代语法，如果用于等值比较的两个表中的列同名，可以使用 `USING` 简化查询：
+
+```
+SELECT m.message_id, m.subject, f.name  
+FROM messages AS m INNER JOIN forums AS f  
+USING (forum_id)  
+WHERE f.name = 'MySQL'
+```
+
+#### 使用内连接
+
+**1.** 连接到 MySQL 并选择 *forum* 数据库。
+
+**2.** 检索 *messages* 表中每条记录的论坛名称和消息主题：
+
+```
+SELECT f.name, m.subject FROM forums  
+AS f INNER JOIN messages AS m  
+USING (forum_id) ORDER BY f.name;
+```
+
+此查询将有效地用 *forums* 表中对应的 `name` 值替换 *messages* 表中的 `forum_id` 值，针对 *messages* 表中的每条记录。最终结果是显示每条消息主题对应的论坛名称文本版本。
+
+
+
+请注意，您仍然可以在连接中使用 `ORDER BY` 子句。
+
+### 3. 检索用户 *funny man* 发布的每条消息的主题和录入日期 ![Image](img/circle-d.jpg)：
+
+```sql
+SELECT m.subject,
+DATE_FORMAT(m.date_entered, '%M %D, %Y') AS Date
+FROM users AS u
+INNER JOIN messages AS m
+USING (user_id)
+WHERE u.username = 'funny man';
+```
+
+![Image](img/07_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg) 一个基于 *users* 和 *messages* 表的稍微复杂一些的内连接版本。
+
+此连接也使用两张表：*users* 和 *messages*。两张表的关联列是 `user_id`，因此它被放置在 `USING` 子句中。`WHERE` 条件标识了目标用户，而 `DATE_FORMAT()` 函数将帮助格式化 `date_entered` 值。
+
+### 4. 查找拥有最近五条发帖的论坛 ![Image](img/circle-e.jpg)：
+
+```sql
+SELECT f.name FROM forums AS f
+INNER JOIN messages AS m
+USING (forum_id)
+ORDER BY m.date_entered DESC LIMIT 5;
+```
+
+![Image](img/07_figure_05_e.jpg)
+
+![Image](img/circle-e.jpg) 此连接应用了 `ORDER BY` 子句和 `LIMIT` 子句，返回拥有最近五条消息的论坛。
+
+由于只需要返回论坛名称，因此这是该查询选择的唯一列。然后跨 *forums* 和 *messages* 表进行连接，通过 `forum_id` 关联。到此为止，该查询将返回与其所在论坛匹配的每条消息。然后按 `date_entered` 列降序排序该结果，并限制为仅前五条记录。
+
+---
+
+**提示**
+
+内连接也可以在不正式使用 `INNER JOIN` 短语的情况下编写。为此，在表名之间放置一个逗号，并将 `ON` 或 `USING` 子句转换为另一个 `WHERE` 条件：
+
+```sql
+SELECT m.message_id, m.subject, f.name FROM messages AS m, forums AS f WHERE m.forum_id = f.forum_id
+AND f.name = 'MySQL'
+```
+
+---
+
+**提示**
+
+不包含连接子句（`ON` 或 `USING`）或 `WHERE` 子句的连接（例如 `SELECT * FROM urls INNER JOIN url_associations`）称为*全*连接，将返回两张表中的每一条记录。对于较大的表，这种结构可能会产生难以处理的结果。
+
+---
+
+**提示**
+
+内连接中引用列的 `NULL` 值永远不会被返回，因为 `NULL` 不匹配任何其他值，包括 `NULL` 本身。
+
+---
+
+**提示**
+
+MySQL 支持的连接类型与 SQL 标准略有不同。例如，SQL 将 `CROSS JOIN` 和 `INNER JOIN` 作为两种不同的东西支持，但在 MySQL 中它们在语法上是相同的。
+
+---
+
+### 外连接
+
+内连接根据在两张表之间建立匹配来返回记录，而*外*连接将返回由两张表匹配的记录，*以及不匹配的记录*。换句话说，内连接是排他性的，但外连接是包容性的。有三种外连接子类型：*左*、*右* 和 *全*，其中左连接最为重要。左连接的一个示例如下：
+
+```sql
+SELECT f.*, m.subject FROM forums AS f
+LEFT JOIN messages AS m
+ON f.forum_id = m.forum_id
+```
+
+使用左连接时最重要的考虑因素是哪张表被首先命名。在此示例中，所有 *forums* 记录将被返回，如果找到匹配，则连同所有 *messages* 信息一起返回。如果没有 *messages* 记录匹配 *forums* 行，则所选 *messages* 列将返回 `NULL` 值 ![Image](img/circle-f.jpg)。
+
+![Image](img/07_figure_06_f.jpg)
+
+![Image](img/circle-f.jpg) 外连接返回第一张列出的表中的所有记录，第二张表中不匹配的记录将被 `NULL` 值替换。
+
+与内连接一样，如果用于相等比较的两张表中的列具有相同的名称，您可以使用 `USING` 简化查询：
+
+```sql
+SELECT f.*, m.subject FROM forums AS f
+LEFT JOIN messages AS m
+USING (forum_id)
+```
+
+右外连接执行与左外连接相反的操作：它返回右侧表的所有适用记录，以及左侧表的匹配记录。此查询等同于上面的查询：
+
+```sql
+SELECT f.*, m.subject FROM messages AS m
+RIGHT JOIN forums AS f
+USING (forum_id)
+```
+
+一般来说，左连接优于右连接（而且可以说，根本不需要同时拥有两者）。
+
+全外连接类似于左外连接和右外连接的组合。换句话说，将返回两张表中所有匹配的记录，以及左侧表中在右侧表中没有匹配的所有记录，加上右侧表中在左侧表中没有匹配的所有记录。MySQL 不直接支持全外连接，但您可以使用左连接、右连接和 `UNION` 语句来复制该功能。全外连接不常用，但如果您对它或*联合*感兴趣，请参阅 MySQL 手册。
+
+### 使用外连接
+
+#### 1. 连接到 MySQL 并选择 *forum* 数据库（如果尚未选择）。
+
+#### 2. 检索每个用户名及该用户发布的每条消息 ID ![Image](img/circle-g.jpg)：
+
+```sql
+SELECT u.username, m.message_id
+FROM users AS u
+LEFT JOIN messages AS m
+USING (user_id);
+```
+
+![Image](img/07_figure_07_g.jpg)
+
+![Image](img/circle-g.jpg) 此左连接为每个用户返回每条已发布的消息 ID。如果用户尚未发布消息（如顶部的 *finchy*），消息 ID 值将为 `NULL`。
+
+如果您运行类似的内连接，尚未发布消息的用户将不会被列出 ![Image](img/circle-h.jpg)。因此，需要外连接以包含所有用户。请注意，完全包含的表（此处为 *users*）必须是在左连接中首先列出的表。
+
+![Image](img/07_figure_08_h.jpg)
+
+![Image](img/circle-h.jpg) 此内连接不会返回任何尚未发布消息的用户（请参阅 ![Image](img/graycircle-g.jpg) 顶部的 *finchy*）。
+
+#### 3. 按提交日期顺序检索每个论坛名称及该论坛中的每条消息提交日期 ![Image](img/circle-i.jpg)：
+
+```sql
+SELECT f.name,
+DATE_FORMAT(m.date_entered, '%M %D, Y') AS Date
+FROM forums AS f
+LEFT JOIN messages AS m
+USING (forum_id)
+ORDER BY date_entered DESC;
+```
+
+![Image](img/07_figure_09_i.jpg)
+
+![Image](img/circle-i.jpg) 此左外连接返回每个论坛名称及该论坛中发布的每条消息的日期。
+
+这实际上只是第 2 步中连接的一个变体，这次用 *forums* 表替换了 *users* 表。
+
+---
+
+### 执行自连接
+
+在 SQL 中可以执行*自连接*：将一张表与其自身连接。例如，对于 *messages* 表，`parent_id` 列是指示哪些发帖是对其他发帖的回复的一种方式。要检索单个发帖层级，`SELECT` 查询必须将 *messages* 表与其自身连接，在此过程中将 `parent_id` 与 `message_id` 等同起来。
+
+这听起来可能令人困惑或不可能，但实际上并非如此。自连接的诀窍是将对同一表的两个引用视为对两张不同表的单个引用。要做到这一点，请为每个表引用分配不同的别名。上述示例将编写如下：
+
+```sql
+SELECT m1.subject, m2.subject AS Reply FROM messages AS m1 LEFT JOIN messages AS m2 ON m1.message_id=m2.parent_id WHERE m1.parent_id=0
+```
+
+
+
+该查询首先在第一个 *messages* 表实例 *m1* 中选择每一条根级消息——即那些 `parent_id` 值为 `0` 的消息。然后将这些记录与第二个 *messages* 表实例 *m2* 进行外连接。如果你自己运行此查询，将会看到选出了根消息的主题，以及该消息回复的主题（如果适用）。
+
+自连接不是最流行的连接类型，但有时能比大多数其他解决方案更好地解决问题。
+
+---
+
+### 提示
+
+连接可以使用涉及任意列的条件来创建，而不仅限于主键和外键，尽管那是最常用的比较基础。
+
+---
+
+### 提示
+
+你可以使用 `database.table.column` 语法跨多个数据库执行连接，只要每个数据库都在同一台服务器上（你无法跨网络执行此操作），并且你以拥有访问所有相关数据库权限的用户身份连接。
+
+---
+
+### 提示
+
+左外连接中的单词 `OUTER` 是可选的，且经常被省略。若要正式书写，你可以写成：
+
+```sql
+SELECT f.name, DATE_FORMAT(m.date_entered, '%M %D, Y') AS Date FROM forums AS f LEFT OUTER JOIN messages AS m USING (forum_id) ORDER BY date_entered DESC;
+```
+
+---
+
+#### 连接三个或更多表
+
+连接是一个有点复杂但很重要的概念，希望你目前能跟得上。还有两种连接的用法你应该熟悉：*自连接*（在侧边栏中讨论）和三个或更多表的连接。
+
+当连接三个或更多表时，记住两个表之间的连接会创建一个结果虚拟表会有所帮助。当你添加第三个表时，连接就是在这个初始虚拟表和第三个被引用的表之间进行 ![Image](img/circle-j.jpg)。三表连接的语法格式为：
+
+```sql
+SELECT what_columns FROM tableA JOIN_TYPE tableB JOIN_CLAUSE JOIN_TYPE tableC JOIN_CLAUSE
+```
+
+![Image](img/07_figure_10_j.jpg)
+
+![Image](img/circle-j.jpg)三表连接的工作原理：首先创建一个结果虚拟表，然后将第三个表连接到该虚拟表。
+
+这两种情况下的连接类型不必相同——一种可以是内连接，另一种可以是外连接——而且连接子句几乎肯定不同。你甚至可以在末尾添加 `WHERE`、`ORDER BY` 和 `LIMIT` 子句。简单来说，要对两个以上的表执行连接，只需根据需要继续添加 `JOIN_TYPE tableX JOIN_CLAUSE` 部分即可。
+
+跨越三个或更多表的连接可能会遇到三个常见问题。第一个是简单的语法错误，特别是当你使用括号分隔子句时。第二个是列名歧义错误，这在任何连接类型中都很常见。第三个可能的问题是返回结果为空。如果发生这种情况，请将连接简化为仅两个表以确认结果，然后尝试重新应用额外的连接子句以找出问题所在。
+
+#### 在三个或更多表上使用连接
+
+**1.** 连接到 MySQL 并选择 *forum* 数据库（如果尚未选择）。
+
+**2.** 检索用户 *troutster* 发布的每条消息的消息 ID、主题和论坛名称 ![Image](img/circle-k.jpg)：
+
+```sql
+SELECT m.message_id, m.subject, f.name
+FROM users AS u
+INNER JOIN messages AS m
+USING (user_id)
+INNER JOIN forums AS f
+USING (forum_id)
+WHERE u.username = 'troutster';
+```
+
+![Image](img/07_figure_11_k.jpg)
+
+![Image](img/circle-k.jpg)跨所有三个表的内连接。
+
+此连接类似于本章前面的一个，但通过引入第三个表更进了一步。
+
+**3.** 检索每个用户的用户名、消息主题和论坛名称 ![Image](img/circle-l.jpg)：
+
+```sql
+SELECT u.username, m.subject, f.name
+FROM users AS u
+LEFT JOIN messages AS m
+USING (user_id)
+LEFT JOIN forums AS f
+USING (forum_id);
+```
+
+![Image](img/07_figure_12_l.jpg)
+
+![Image](img/circle-l.jpg)此左连接返回每个用户、每条发布的消息主题和每个论坛名称。如果用户未发布消息（如顶部的 *finchy*），其主题和论坛名称值将为 `NULL`。
+
+第 2 步中的查询执行两次内连接，而此查询执行两次外连接。此查询背后的过程由 ![Image](img/graycircle-j.jpg) 中的图表直观表示。
+
+**4.** 找出拥有最近五条发帖的用户，同时选择消息主题和论坛名称 ![Image](img/circle-m.jpg)：
+
+```sql
+SELECT u.username, m.subject, f.name
+FROM users AS u
+INNER JOIN messages AS m
+USING (user_id)
+INNER JOIN forums AS f
+USING (forum_id)
+ORDER BY m.date_entered DESC
+LIMIT 5;
+```
+
+![Image](img/07_figure_13_m.jpg)
+
+![Image](img/circle-m.jpg)此内连接返回来自所有三个表的值，并应用了 `ORDER BY` 和 `LIMIT` 子句。
+
+为了检索用户名、消息主题和论坛名称，需要跨所有三个表进行连接。由于查询仅查找已发帖的用户，因此内连接是合适的。两次连接的结果将是每个用户名、他们发布的每条消息、在每个论坛中。然后按消息的 *date_entered* 列对该结果排序，并仅限制为前五条记录。
+
+### 分组选定结果
+
+第 5 章 讨论并演示了可在 MySQL 中使用的几类不同函数。另一类用于更复杂查询的是 *分组* 或 *聚合* 函数（**表 7.1**）。
+
+**表 7.1. 分组函数**
+
+![Image](img/07tab01.jpg)
+
+第 5 章 中介绍的大多数函数一次操作单行中的单个值（例如，格式化日期列中的值），而分组函数返回的结果基于一组行中单个列出现的值。例如，要在 *banking* 数据库中查找平均账户余额，你可以运行此查询 ![Image](img/circle-a.jpg)：
+
+```sql
+SELECT AVG(balance) FROM accounts
+```
+
+![Image](img/07_figure_14_a.jpg)
+
+![Image](img/circle-a.jpg)使用 `AVG()` 函数查找所有账户余额的平均值。
+
+要查找最小和最大账户余额，请使用 ![Image](img/circle-b.jpg)：
+
+```sql
+SELECT MAX(balance), MIN(balance) FROM accounts
+```
+
+![Image](img/07_figure_15_b.jpg)
+
+![Image](img/circle-b.jpg)`MAX()` 和 `MIN()` 函数返回表中找到的最大和最小账户值。
+
+要仅计算表（或结果集）中的记录数，请将 `COUNT()` 应用于每一列或保证有值的每一列：
+
+```sql
+SELECT COUNT(*) FROM accounts
+```
+
+`AVG()`、`COUNT()` 和 `SUM()` 函数也可以使用 `DISTINCT` 关键字，以便聚合仅应用于不同的值。例如，`SELECT COUNT(customer_id) FROM accounts` 将返回账户数量，但 `SELECT COUNT(DISTINCT customer_ID) FROM accounts` 将返回拥有账户的客户数量 ![Image](img/circle-c.jpg)。
+
+![Image](img/07_figure_16_c.jpg)
+
+![Image](img/circle-c.jpg)`COUNT()` 函数，无论是否带 `DISTINCT` 关键字，只是计算记录集中的记录数。
+
+聚合函数单独使用时返回单个值（如 ![Image](img/graycircle-a.jpg)、![Image](img/graycircle-b.jpg) 和 ![Image](img/graycircle-c.jpg) 所示）。当聚合函数与 `GROUP BY` 子句一起使用时，将为结果集中的每一行返回一个聚合值 ![Image](img/circle-d.jpg)：
+
+```sql
+SELECT AVG(balance), customer_id FROM accounts GROUP BY customer_id
+```
+
+![Image](img/07_figure_17_d.jpg)
+
+
+
+
+![Image](img/circle-d.jpg)使用带有聚合函数的 `GROUP BY` 子句对聚合结果进行分组。
+
+您可以将 `WHERE`、`ORDER BY` 和 `LIMIT` 条件的组合应用于 `GROUP BY`，构建查询结构如下：
+
+```sql
+SELECT what_columns FROM table
+WHERE condition GROUP BY column
+ORDER BY column LIMIT x, y
+```
+
+`GROUP BY` 子句也可用于连接查询中。请记住，连接查询会返回一个包含数据的新虚拟表，因此任何分组都将应用于该虚拟表。
+
+#### 对数据进行分组
+
+**1.** 连接到 MySQL 并选择 *banking* 数据库。
+
+**2.** 统计已注册客户的数量 ![Image](img/circle-e.jpg)：
+
+```sql
+SELECT COUNT(*) FROM customers;
+```
+
+![Image](img/07_figure_18_e.jpg)
+
+![Image](img/circle-e.jpg)此聚合查询统计 *customers* 表中的记录数。
+
+`COUNT()` 或许是最常用的分组函数。借助它，您可以快速统计记录，例如此处 *customers* 表中的记录数。`COUNT()` 函数可应用于任何确定包含值的列，例如 `*`（即每一列）或 `customer_id`（主键）。
+
+请注意，并非所有使用聚合函数的查询都一定包含 `GROUP BY` 子句。
+
+**3.** 按客户查找所有账户的总余额，同时统计账户数量 ![Image](img/circle-f.jpg)：
+
+```sql
+SELECT SUM(balance) AS Total,
+COUNT(account_id) AS Number, customer_id
+FROM accounts
+GROUP BY (customer_id);
+```
+
+![Image](img/07_figure_19_f.jpg)
+
+![Image](img/circle-f.jpg)此 `GROUP BY` 查询按 *customer_id* 聚合所有账户，返回每个客户账户的总和以及该客户拥有的账户总数。
+
+此查询是步骤 2 中查询的扩展，但它不只是统计客户数量，而是统计与每个客户关联的账户数量，并汇总账户余额。
+
+**4.** 重复步骤 3 的查询，但选择客户姓名而非其 ID ![Image](img/circle-g.jpg)：
+
+```sql
+SELECT SUM(balance) AS Total,
+COUNT(account_id) AS Number,
+CONCAT(c.last_name, ', ', c.first_name) AS Name
+FROM accounts AS a
+INNER JOIN customers AS c
+USING (customer_id)
+GROUP BY (a.customer_id)
+ORDER BY Name;
+```
+
+![Image](img/07_figure_20_g.jpg)
+
+![Image](img/circle-g.jpg)此 `GROUP BY` 查询类似于 ![Image](img/graycircle-f.jpg) 中的查询，但也返回客户姓名，并按姓名对结果进行排序（这需要连接查询）。
+
+要检索客户姓名而非其 ID，需要进行连接查询：`INNER JOIN customers USING (customer_id)`。接下来，添加别名以便于引用，并修改 `GROUP BY` 子句以指定分组应用于哪个 *customer_id* 字段。得益于连接查询，可以将客户姓名作为名和姓的拼接（加上一个逗号和一个空格）进行选择。最后，可以按客户姓名对结果进行排序（请注意，`ORDER BY` 子句中再次引用了该别名）。
+
+请记住，如果您使用外连接而非内连接，则可以检索到没有账户余额的客户。
+
+**5.** 将每个客户的余额连接成单个字符串 ![Image](img/circle-h.jpg)：
+
+```sql
+SELECT GROUP_CONCAT(balance),
+CONCAT(c.last_name, ', ', c.first_name) AS Name
+FROM accounts AS a
+INNER JOIN customers AS c
+USING (customer_id)
+GROUP BY (a.customer_id)
+ORDER BY Name;
+```
+
+![Image](img/07_figure_21_h.jpg)
+
+![Image](img/circle-h.jpg)这是 ![Image](img/graycircle-g.jpg) 中查询的一个变体，该查询检索每个客户所有账户余额的连接字符串。
+
+`GROUP_CONCAT()` 函数是一个有用但常被忽视的聚合工具。正如图中所示，默认情况下，此函数连接值，并用逗号分隔每个值。
+
+***
+
+> **提示**
+>
+> `NULL` 是一个特殊的值，有趣的是 `GROUP BY` 会将 `NULL` 值归为一组，因为它们具有相同的非值。
+
+***
+
+> **提示**
+>
+> 您必须小心应用 `COUNT()` 函数，因为它仅统计非 `NULL` 值。请务必将其用于每一列（`*`）或永远不包含 `NULL` 值的列（如主键）。
+
+***
+
+> **提示**
+>
+> `GROUP BY` 子句及此处列出的函数需要一些时间来掌握，每当您的语法不适用时，MySQL 都会报错。请在 mysql 客户端或 phpMyAdmin 中进行试验，以确定您想要从 PHP 脚本运行的任何查询的确切措辞。
+
+***
+
+> **提示**
+>
+> 相关的子句是 `HAVING`，它类似于应用于分组的 `WHERE` 条件。
+
+***
+
+> **提示**
+>
+> 您不能将 `SUM()` 和 `AVG()` 应用于日期或时间值。相反，您需要将日期和时间值转换为秒，执行 `SUM()` 或 `AVG()`，然后将该值转换回日期和时间。
+
+***
+
+### 高级选择
+
+本章前两节介绍了从复杂结构中选择数据的更高级方法。但即使使用聚合函数，所选数据也相对简单直接。不过，有时您需要有条件地选择数据，就像在查询本身中使用 `if-else` 子句一样。得益于*控制流*和*高级比较*函数，这在 SQL 中是可行的。
+
+首先，`GREATEST()` 返回列表中的最大值 ![Image](img/circle-a.jpg)：
+
+```sql
+SELECT GREATEST(col1, col2) FROM table
+SELECT GREATEST(235, 1209, 59)
+```
+
+![Image](img/07_figure_22_a.jpg)
+
+![Image](img/circle-a.jpg)`GREATEST()` 函数返回给定列表中的最大值。
+
+`LEAST()` 返回列表中的最小值：
+
+```sql
+SELECT LEAST(col1, col2) FROM table
+SELECT LEAST(235, 1209, 59)
+```
+
+请注意，与聚合函数不同（聚合函数应用于多行中同一列找到的值列表），比较和控制流函数应用于同一行内的多个列（或值列表）。
+
+另一个有用的比较函数是 `COALESCE()`。它返回列表中的第一个非 `NULL` 值：
+
+```sql
+SELECT COALESCE(col1, col2) FROM table
+```
+
+如果列出的项均无值，则该函数返回 `NULL`（您将在后续步骤序列中看到示例）。
+
+`COALESCE()` 只是返回第一个非 `NULL` 值，而您可以使用 `IF()` 根据条件返回任意值：
+
+```sql
+SELECT IF (condition, return_if_true, return_if_false)
+```
+
+如果条件为真，则返回函数的第二个参数，否则返回第三个参数。例如，假设表在 *gender* 列中存储值 *M* 或 *F*，查询可以选择 *Male* 或 *Female* 代替 ![Image](img/circle-b.jpg)：
+
+```sql
+SELECT IF(gender='M', 'Male', 'Female') FROM people;
+```
+
+![Image](img/07_figure_23_b.jpg)
+
+![Image](img/circle-b.jpg)`IF()` 函数可根据条件决定返回值。
+
+由于这些函数返回值，它们甚至可用于其他查询类型中：
+
+```sql
+INSERT INTO people (gender) VALUES (IF(something='Male', 'M', 'F'))
+```
+
+`CASE()` 函数是一个更复杂的工具，可用于不同方式。第一种方法是将 `CASE()` 视为 PHP 的 `switch` 条件语句：
+
+```sql
+SELECT CASE col1 WHEN value1 THEN return_this ELSE return_that END FROM table
+```
+
+性别示例可重写为：
+
+```sql
+SELECT CASE gender WHEN 'M' THEN 'Male' ELSE 'Female' END FROM people
+```
+
+`CASE()` 函数可以有额外的 `WHEN` 子句。`ELSE` 也始终是可选的：
+
+```sql
+SELECT CASE gender WHEN 'M' THEN 'Male' WHEN 'F' THEN 'FEMALE' END FROM people
+```
+
+
+
+
+如果您不想执行简单的相等性测试，可以将条件写入 **`CASE()`** 中：
+
+```sql
+SELECT message_id, CASE WHEN date_entered > NOW() THEN 'Future' ELSE 'PAST' END AS Posted FROM messages
+```
+
+![Image](img/07_figure_24_c.jpg)
+
+`CASE()` 可像 `IF()` 一样使用，以自定义返回值。
+
+同样，您可以根据需要添加多个 **`WHEN...THEN`** 子句，并在不必要时省略 **`ELSE`**。
+
+为了练习使用这些函数，让我们在 *forum* 数据库上运行更多查询（提前提醒，它们会变得有点复杂）。
+
+#### 执行高级选择
+
+**1.** 连接到 MySQL 并选择 *forum* 数据库。
+
+**2.** 对于每个论坛，查找最新帖子的日期和时间，如果论坛没有帖子则返回 *N/A* ![Image](img/circle-d.jpg)：
+
+```sql
+SELECT f.name,
+COALESCE(MAX(m.date_entered), 'N/A') AS last_post
+FROM forums AS f
+LEFT JOIN messages AS m
+USING (forum_id)
+GROUP BY (m.forum_id)
+ORDER BY m.date_entered DESC;
+```
+
+![Image](img/07_figure_25_d.jpg)
+
+![Image](img/circle-d.jpg) `COALESCE()` 函数用于将 `NULL` 值转换为字符串 *N/A*（请参阅最后一条记录）。
+
+首先，为了同时查找论坛名称和该论坛中最新帖子的日期，需要进行连接。具体来说，需要外连接，因为可能存在没有帖子的论坛。为了查找每个论坛中最新的帖子，将聚合函数 **`MAX()`** 应用于 *date_entered* 列，并且结果必须按 *forum_id* 分组（以便 **`MAX()`** 应用于每个论坛内的每个帖子子集）。
+
+此时，如果不调用 **`COALESCE()`** 函数，结果将为没有任何消息的论坛返回 **`NULL`**。最后一步是应用 **`COALESCE()`**，以便当 **`MAX(m.date_entered)`** 的值为 **`NULL`** 时，返回字符串 *N/A*。
+
+**3.** 对于每条消息，如果该消息是对另一条消息的回复，则在主题后追加字符串 *(REPLY)* ![Image](img/circle-e.jpg)：
+
+```sql
+SELECT message_id,
+CASE parent_id WHEN 0 THEN subject
+ELSE CONCAT(subject, ' (Reply)') END AS subject
+FROM messages;
+```
+
+![Image](img/07_figure_26_e.jpg)
+
+![Image](img/circle-e.jpg) 在这里，字符串 *(Reply)* 会被追加到作为回复的任何消息的主题后。
+
+*messages* 表中 *parent_id* 不为 0 的记录是对现有消息的回复。对于这些消息，让我们在主题值后追加 *(REPLY)* 以示区别。为此，**`CASE`** 语句在 *parent_id* 值等于 0 时仅返回未经修改的主题。如果 *parent_id* 值不等于 0，则再次借助 **`CASE`** 将字符串 *(REPLY)* 连接到主题后。整个结构被赋予 *subject* 别名，因此它仍以原始的“subject”标题返回。
+
+**4.** 对于每个用户，查找他们发布的消息数量，将零值转换为字符串 *None* ![Image](img/circle-f.jpg)：
+
+```sql
+SELECT u.username,
+IF(COUNT(message_id) > 0, COUNT(message_id), 'None') AS Posts
+FROM users AS u
+LEFT JOIN messages AS m
+USING (user_id)
+GROUP BY (u.user_id);
+```
+
+![Image](img/07_figure_27_f.jpg)
+
+![Image](img/circle-f.jpg) 多亏了 `IF()` 调用，未发布任何消息的用户的发帖数将显示为 *None*。
+
+这在某种程度上是第 2 步查询的变体。左连接桥接 *users* 和 *messages*，以同时获取用户名和发布的消息计数。为了执行计数，结果按 *users.user_id* 分组。到此为止，查询将为从未发帖的每个用户返回 0 ![Image](img/circle-g.jpg)。为了将这些零转换为字符串 *None*，同时保留非零计数，应用了 **`IF()`** 函数。该函数的第一个参数设定条件：如果计数大于零。第二个参数表示条件为真时返回计数。第三个参数表示条件为假时返回字符串 *None*。
+
+![Image](img/07_figure_28_g.jpg)
+
+![Image](img/circle-g.jpg) 如果不使用 `IF()`，查询结果将如图所示（与 ![Image](img/graycircle-f.jpg) 对比）。
+
+***
+
+提示
+
+**`IFNULL()`** 函数有时可代替 **`COALESCE()`** 使用。其语法为：
+
+```sql
+IFNULL(value, return_if_null)
+```
+
+如果第一个参数（如命名列）的值为 **`NULL`**，则返回第二个参数。如果参数值不为 NULL，则返回该参数的值。
+
+***
+
+#### 执行 FULLTEXT 搜索
+
+在第 5 章中，介绍了 **`LIKE`** 关键字，作为执行简单字符串匹配的一种方式，例如：
+
+```sql
+SELECT * FROM users
+WHERE last_name LIKE 'Smith%'
+```
+
+***
+
+**修改表**
+
+**`ALTER`** SQL 术语主要用于修改现有表的结构。通常这意味着添加、删除或更改其中的列，但也包括添加索引。**`ALTER`** 语句甚至可用于重命名整个表。**`ALTER`** 的基本语法是：
+
+```sql
+ALTER TABLE tablename CLAUSE
+```
+
+有许多可能的子句；**表 7.2** 列出了最常用的子句，其中 *t* 代表表名，*c* 代表列名，*i* 代表索引名。一如既往，MySQL 手册详尽地涵盖了该主题。
+
+**表 7.2. ALTER TABLE 子句**
+
+![Image](img/07tab02.jpg)
+
+您还可以使用 **`ALTER t CONVERT TO CHARACTER SET x COLLATE y`** 更改表的字符集和排序规则。
+
+***
+
+这种条件判断虽然有效，但仍然非常受限。例如，它不允许您使用多个单词进行类似 Google 的搜索。对于这类情况，您需要 **`FULLTEXT`** 搜索。在接下来的几页中，您将了解关于 **`FULLTEXT`** 搜索的所有必要知识（在此过程中，您还将学到更多 SQL 技巧）。
+
+#### 创建 FULLTEXT 索引
+
+首先，**`FULLTEXT`** 搜索需要 **`FULLTEXT`** 索引。正如第 6 章“数据库设计”中预览的那样，这种索引类型只能在 MyISAM 表上创建。接下来的示例将使用 *forum* 数据库中的 *messages* 表。因此，第一步是在 *body* 和 *subject* 列上添加 **`FULLTEXT`** 索引。向现有表添加索引需要使用 **`ALTER`** 命令，如侧边栏所述。
+
+#### 添加 FULLTEXT 索引
+
+**1.** 连接到 MySQL 并选择 *forum* 数据库（如果尚未选择）。
+
+**2.** 确认 *messages* 表的类型 ![Image](img/circle-a.jpg)：
+
+```sql
+SHOW TABLE STATUS\G
+```
+
+![Image](img/07_figure_29_a.jpg)
+
+![Image](img/circle-a.jpg) 要确认表的类型，请使用 `SHOW TABLE STATUS` 命令。
+
+**`SHOW TABLE STATUS`** 查询返回数据库中每个表的大量信息，包括表的存储引擎。由于查询返回大量信息，命令以 **`\G`** 结尾，而不是分号。这会指示 mysql 客户端以垂直列表而不是表格形式返回结果（有时更易于阅读）。如果您使用 phpMyAdmin 或其他界面，可以省略 **`\G`**（就像可以省略结束分号一样）。
+
+要仅查找 *messages* 表的信息，可以使用查询 **`SHOW TABLE STATUS LIKE 'messages'`**。
+
+**3.** 如果 *messages* 表不是 MyISAM 类型，请更改存储引擎：
+
+```sql
+ALTER TABLE messages ENGINE = MyISAM;
+```
+
+同样，仅当表当前不是正确类型时才需要此步骤。
+
+**4.** 向 *messages* 表添加 **`FULLTEXT`** 索引 ![Image](img/circle-b.jpg)：
+
+
+
+ALTER TABLE messages ADD FULLTEXT (body, subject);
+
+![Image](img/07_figure_30_b.jpg)
+
+![Image](img/circle-b.jpg) `FULLTEXT` 索引已添加到 `messages` 表中。
+
+无论索引类型如何，添加索引的语法均为 `ALTER TABLE` `tablename` `ADD` `INDEX_TYPE index_name` `(` `columns` `)`。索引名称是可选的。
+
+此处，`body` 和 `subject` 列获得了一个 `FULLTEXT` 索引，将在本章后面的 `FULLTEXT` 搜索中使用。
+
+***
+
+提示
+
+由于需要复杂的索引，向带有 `FULLTEXT` 索引的表中插入记录可能会慢得多。
+
+***
+
+***
+
+提示
+
+`FULLTEXT` 搜索可成功用于简单的搜索引擎。但 `FULLTEXT` 索引一次只能应用于单个表，因此内容存储在多个表中的更复杂的网站，将受益于使用更正式的搜索引擎。
+
+***
+
+### 执行基本 FULLTEXT 搜索
+
+一旦你在一列或多列上建立了 `FULLTEXT` 索引，就可以开始使用 `WHERE` 条件中的 `MATCH`...`AGAINST` 对其进行查询：
+
+```
+SELECT * FROM tablename WHERE MATCH
+(columns) AGAINST (terms)
+```
+
+MySQL 将按数学计算出的相关性顺序返回匹配的行，就像搜索引擎一样。执行此操作时，适用以下规则：
+
+* 字符串被分解为各个关键词。
+* 长度小于四个字符的关键词将被忽略。
+* 非常常见的词（称为*停用词*）将被忽略。
+* 如果超过 50% 的记录与关键词匹配，则不返回任何记录。
+
+当用户开始使用 `FULLTEXT` 搜索并不解为何未返回结果时，最后这一事实往往会让他们感到困扰。当你的表数据稀疏时，记录数不足以让 MySQL 返回*相关*结果。
+
+#### 执行 FULLTEXT 搜索
+
+**1.** 连接到 MySQL 并选择 `forum` 数据库（如果尚未选择）。
+
+**2.** 充分填充 `messages` 表，重点添加较长的正文内容。
+
+同样，SQL `INSERT` 命令可从本书对应的网站下载。
+
+**3.** 对单词 *database* 运行一个简单的 `FULLTEXT` 搜索 ![Image](img/circle-c.jpg)：
+
+```
+SELECT subject, body FROM messages
+WHERE MATCH (body, subject)
+AGAINST('database');
+```
+
+![Image](img/07_figure_31_c.jpg)
+
+![Image](img/circle-c.jpg) 一个基本的 `FULLTEXT` 搜索。
+
+这是一个非常简单的示例，只要 `messages` 表中至少有一条且少于 50% 的记录在其正文或主题中包含单词 "database"，就会返回一些结果。请注意，`MATCH` 中引用的列必须与创建 `FULLTEXT` 索引时的列相同。在本例中，你可以使用 `body, subject` 或 `subject, body`，但不能仅使用 `body` 或仅使用 `subject` ![Image](img/circle-d.jpg)。
+
+![Image](img/07_figure_32_d.jpg)
+
+![Image](img/circle-d.jpg) `FULLTEXT` 查询只能在创建 `FULLTEXT` 索引时所用的相同列或列组合上运行。使用此查询，即使 `body` 和 `subject` 的组合拥有 `FULLTEXT` 索引，尝试仅在 `subject` 上运行匹配也会失败。
+
+**4.** 运行相同的 `FULLTEXT` 搜索，同时显示相关性 ![Image](img/circle-e.jpg)：
+
+```
+SELECT subject, body, MATCH (body,
+subject) AGAINST('database') AS R
+FROM messages WHERE MATCH (body, subject) AGAINST('database')\G
+```
+
+![Image](img/07_figure_33_e.jpg)
+
+![Image](img/circle-e.jpg) `FULLTEXT` 搜索的相关性也可以被选出。在本例中，你会看到在主题和正文中均包含单词 "database" 的两条记录，其相关性高于仅在主题中包含该词的记录。
+
+如果将相同的 `MATCH...AGAINST` 表达式用作选定值，将返回实际相关性。正如本章前一节所示，为了使结果在 mysql 客户端中更易于查看，查询使用 `\G` 终止，从而以垂直列表形式返回结果。
+
+**5.** 使用多个关键词运行 `FULLTEXT` 搜索 ![Image](img/circle-f.jpg)：
+
+```
+SELECT subject, body FROM messages
+WHERE MATCH (body, subject)
+AGAINST('html xhtml');
+```
+
+![Image](img/07_figure_34_f.jpg)
+
+![Image](img/circle-f.jpg) 使用 `FULLTEXT` 搜索，你可以轻松找到包含多个关键词的消息。
+
+使用此查询，如果主题或正文包含任一单词，即可匹配。同时包含两个单词的记录将获得更高的排名。
+
+***
+
+提示
+
+请记住，如果 `FULLTEXT` 搜索未返回记录，这意味着要么未找到匹配项，要么超过一半的记录都匹配。
+
+***
+
+***
+
+提示
+
+为求简单起见，本节所有查询均为简单的 `SELECT` 语句。你当然可以在连接或更复杂的查询中使用 `FULLTEXT` 搜索。
+
+***
+
+***
+
+提示
+
+MySQL 自带数百个预定义的停用词。这些是应用程序源代码的一部分。
+
+***
+
+***
+
+提示
+
+最小关键词长度（默认为四个字符）是一个配置设置，你可以在 MySQL 中更改它。
+
+***
+
+***
+
+提示
+
+`FULLTEXT` 搜索默认不区分大小写。
+
+***
+
+### 执行布尔 FULLTEXT 搜索
+
+基本的 `FULLTEXT` 搜索固然不错，但使用其布尔模式可以实现更复杂的 `FULLTEXT` 搜索。为此，请在 `AGAINST` 子句中添加短语 `IN BOOLEAN MODE`：
+
+```
+SELECT * FROM tablename WHERE
+MATCH(columns) AGAINST('terms' IN BOOLEAN
+MODE)
+```
+
+布尔模式拥有许多运算符（**表 7.3**），用于调整每个关键词的处理方式：
+
+```
+SELECT * FROM tablename WHERE
+MATCH(columns) AGAINST('+database
+-mysql' IN BOOLEAN MODE)
+```
+
+**表 7.3. 布尔模式运算符**
+
+![Image](img/07tab03.jpg)
+
+在该示例中，如果找到单词 *database* 且不存在 *mysql*，则匹配成功。或者，波浪号 (`~`) 用作减号的较温和形式，意味着关键词可以出现在匹配中，但此类匹配应被视为相关性较低。
+
+通配符 (`*`) 匹配单词的变体，因此 `cata*` 可匹配 *catalog*、*catalina* 等。两个运算符显式声明关键词更重要 (`>`) 或不那么重要 (`<`)。最后，你可以使用双引号搜索精确短语，并使用括号创建子表达式（只需确保使用单引号包裹关键词即可）。
+
+以下查询将查找包含短语 *Web develop* 的记录，要求必须包含单词 *html*，而单词 *JavaScript* 会降低匹配的相关性：
+
+```
+SELECT * FROM tablename WHERE
+MATCH(columns) AGAINST('>"Web develop"
++html ~JavaScript' IN BOOLEAN MODE)
+```
+
+使用布尔模式时，`FULLTEXT` 搜索的工作方式有几处不同：
+
+* 如果关键词前没有运算符，该词为可选，但如果存在，匹配的排名会更高。
+* 即使超过 50% 的记录与搜索匹配，也会返回结果。
+* 结果*不会*自动按相关性排序。
+
+鉴于最后一点，你还需要按相关性对返回的记录进行排序，这将在下一组步骤中演示。一条与布尔搜索相同的重要规则是，最小单词长度（默认四个字符）仍然适用。因此，尝试使用加号 (`+php`) 要求匹配较短的单词仍然无效。
+
+#### 执行 FULLTEXT 布尔搜索
+
+**1.** 连接到 MySQL 并选择 `forum` 数据库（如果尚未选择）。
+
+**2.** 运行一个简单的 `FULLTEXT` 搜索，查找 *HTML*、*XHTML* 或 *(X)HTML* ![Image](img/circle-g.jpg)：
+
+```
+SELECT subject, body FROM
+messages WHERE MATCH(body, subject)
+AGAINST('*HTML' IN BOOLEAN MODE)\G
+```
+
+
+
+
+![Image](img/07_figure_35_g.jpg)
+
+![Image](img/circle-g.jpg)一个简单的布尔模式 `FULLTEXT` 搜索。
+
+术语 HTML 可能以多种格式出现在消息中，包括 `HTML`、`XHTML` 或 `(X)HTML`。得益于通配符（`*`），此布尔模式查询将找到所有这些格式。
+
+为了使结果更易于查看，我使用了本章前面提到的 `\G` 技巧，它告诉 mysql 客户端垂直返回结果，而不是水平返回。
+
+**3.** 查找涉及数据库的匹配项，并强调范式 ![Image](img/circle-h.jpg)：
+
+```
+SELECT subject, body FROM messages
+WHERE MATCH (body, subject)
+AGAINST('>"normal form"* +database*'
+IN BOOLEAN MODE)\G
+```
+
+![Image](img/07_figure_36_h.jpg)
+
+![Image](img/circle-h.jpg)此搜索查找两个不同关键字的变体，将其中一个的排名置于另一个之上。
+
+此查询首先查找所有同时包含 `database`、`databases` 等以及 `normal form`、`normal forms` 等的记录。`database*` 项是必需的（由加号指示），但强调的是 normal form 子句（前面带有大于号）。
+
+**4.** 重复步骤 2 中的查询，增加 XHTML 的重要性，并按相关性顺序返回结果 ![Image](img/circle-i.jpg)：
+
+```
+SELECT subject, body, MATCH(body, subject)
+AGAINST('*HTML >XHTML' IN BOOLEAN MODE) AS R FROM
+messages WHERE MATCH(body, subject)
+AGAINST('*HTML >XHTML' IN BOOLEAN MODE) ORDER BY R DESC\G
+```
+
+![Image](img/07_figure_37_i.jpg)
+
+![Image](img/circle-i.jpg)这是早期查询的修改版本，它选择并按相关性对结果进行排序。
+
+这与早期的查询类似，但现在专门赋予了 `XHTML` 额外的权重。此外，此查询还选择了计算出的相关性，并按该顺序返回结果。
+
+***
+
+提示
+
+MySQL 5.1.7 增加了另一种 `FULLTEXT` 搜索模式：*自然语言*。如果未指定其他模式（如布尔模式），这是默认模式。
+
+***
+
+***
+
+提示
+
+`WITH QUERY EXPANSION` 修饰符可以增加返回的结果数量。此类查询执行两次搜索并返回一个结果集。它根据初始搜索中最相关结果里找到的术语进行第二次搜索。虽然 `WITH QUERY EXPANSION` 搜索可以找到原本不会返回的结果，但也可能返回与原始搜索词完全无关的结果。
+
+***
+
+### 优化查询
+
+一旦你拥有了一个完整且填充了数据的数据库，并且了解通常会在其上运行哪些查询，采取一些措施来优化你的查询和整个数据库就是个好主意。这样做将确保你从 MySQL（进而你的网站）获得最佳性能。
+
+首先，侧边栏重申了本书前面已建议的关键设计理念。除了这些技巧外，还有两种优化现有表的简单技术。提高 MySQL 性能的一种方法是偶尔运行 `OPTIMIZE` 命令。此查询将清除表中任何不必要的开销，从而提高与其交互的速度：
+
+```
+OPTIMIZE TABLE tablename
+```
+
+在通过 `ALTER` 命令更改表后，或在表上运行了大量 `DELETE` 查询后（在记录间留下虚拟空隙），运行此命令特别有益。
+
+其次，你可以偶尔使用 `ANALYZE` 命令：
+
+```
+ANALYZE TABLE tablename
+```
+
+执行此命令可更新表上的索引，从而改善它们在查询中的使用。每当表中存储的大量数据发生变化时（例如通过 `UPDATE` 或 `INSERT` 命令），你都可以执行它。
+
+说到查询，你现在可能已经意识到，完成同一目标通常有许多不同的方法。要找出最高效的方法，了解 MySQL 将如何确切运行该查询会有所帮助。这可以通过 `EXPLAIN` SQL 关键字来实现。解释查询是一个非常高级的主题，但我将在此介绍基础知识，你随时可以查阅 MySQL 手册或搜索网络以获取更多信息。
+
+***
+
+**数据库优化**
+
+数据库的性能主要取决于其结构和索引。创建数据库时，请尝试
+
+• 选择最佳的存储引擎
+• 为每列使用尽可能小的数据类型
+• 尽可能将列定义为 `NOT NULL`
+• 使用整数作为主键
+• 审慎定义索引，选择正确的类型并将其应用于正确的列
+• 如果可能，将索引限制为一定数量的字符
+• 避免创建过多的索引
+• 确保用作连接基础的列具有相同的类型，并且在字符串的情况下，使用相同的字符集和排序规则
+
+***
+
+#### 解释查询
+
+**1.** 找到一个可能消耗大量资源的查询。
+
+好的候选者是执行以下任何操作的查询：
+
+• 连接两个或更多表
+• 使用分组和聚合函数
+• 具有 `WHERE` 子句。
+
+例如，本章前面的此查询符合其中两个标准：
+
+```
+SELECT SUM(balance) AS Total,
+COUNT(account_id) AS Number, CONCAT(c.last_name, ', ', c.first_name) AS Name
+FROM accounts AS a INNER JOIN customers AS c USING (customer_id)
+GROUP BY (a.customer_id) ORDER BY Name;
+```
+
+**2.** 连接到 MySQL 并选择适用的数据库（如果尚未选择）。
+
+**3.** 在数据库上执行查询，在前面加上 `EXPLAIN` ![Image](img/circle-a.jpg)：
+
+```
+EXPLAIN SELECT SUM(balance) AS Total,
+COUNT(account_id) AS Number, CONCAT(c.last_name, ', ', c.first_name) AS Name
+FROM accounts AS a INNER JOIN customers AS c USING (customer_id)
+GROUP BY (a.customer_id) ORDER BY Name\G
+```
+
+![Image](img/07_figure_38_a.jpg)
+
+![Image](img/circle-a.jpg)此 `EXPLAIN` 输出揭示了 MySQL 将如何处理该查询。
+
+如果你使用 mysql 客户端，你会发现使用结尾的 `\G` 技巧（代替分号）也有助于使输出更易读。输出本身将包含查询中使用的每个表的一行信息。表按 MySQL 执行查询时必须访问它们的顺序列出。
+
+我将讲解输出的关键部分，但首先，对于大多数 `SELECT` 查询，`select_type` 值应为 `SIMPLE`，如果查询涉及 `UNION` 或子查询，则会有所不同（有关 `UNION` 或子查询的更多信息，请参阅 MySQL 手册）。
+
+**4.** 查看 `type` 值。
+
+**表 7.4** 列出了从最好到最坏的不同 type 值。MySQL 手册详细讨论了每个值的含义，但首先要明白 `eq_ref` 是你常见的最佳值，而 `ALL` 是最差的。`eq_ref` 类型意味着索引被正确使用且正在进行等值比较。
+
+**表 7.4. 连接类型**
+
+![Image](img/07tab04.jpg)
+
+请注意，有时你会看到 `ALL`，因为表中记录很少，在这种情况下 MySQL 扫描表比使用索引更高效。对于 ![Image](img/graycircle-a.jpg) 来说，这大概是这种情况，因为 `accounts` 表只有四条记录。
+
+**5.** 查看 `possible_keys` 值。
+
+`possible_keys` 值指示存在哪些索引是 MySQL 可能用来查找该表中对应行的。如果此处为 `NULL` 值，则没有索引是 MySQL 认为有用的。因此，你可能需要在该表的相关列上创建索引。
+
+**6.** 查看 `key`、`key_len` 和 `ref` 值。
+
+
+
+
+`possible_keys` 指示可能可用的索引，而 `key` 则显示 MySQL *实际将使用* 哪个索引来执行该查询。有时你会在这里发现一个未在 `possible_keys` 中列出的值，这没问题。如果没有使用任何索引，那几乎总是表示存在问题，可以通过添加索引或修改查询来解决。
+
+`key_len` 值表示 MySQL 所用索引的长度（即大小）。通常越短越好，但不必过分担心。
+
+`ref` 列指示 MySQL 将哪些列与 `key` 列中指定的索引进行了比较。
+
+### 7. 查看 `rows` 值。
+
+此列提供了一个估算值，即 MySQL 认为需要检查表中多少行。同样，越低越好。事实上，在连接查询中，可以通过将所有 `rows` 值相乘来粗略估算效率。
+
+在连接查询中，待检查的行数通常应从多到少，如 ![Image](img/circle-b.jpg) 所示。
+
+![Image](img/07_figure_39_b.jpg)
+
+![Image](img/circle-b.jpg) 另一个查询的解释，这是一个跨三个表的连接。
+
+### 8. 查看 `Extra` 值。
+
+最后，此列报告关于 MySQL 将如何执行查询的任何额外信息，这些信息可能很有用。你不希望在这里看到的两个短语是：`Using filesort` 和 `Using temporary`。两者都意味着完成查询需要额外的步骤（例如，`GROUP BY` 子句通常要求 MySQL 创建一个临时表）。
+
+如果 `Extra` 显示类似 `Impossible X` 或 `No matching Y` 的内容，这意味着你的查询包含始终为 false 的子句，可以将其移除。
+
+### 9. 修改你的表或查询并重复执行！
+
+如果输出表明查询执行方式存在问题，你可以考虑执行以下任意操作：
+
+- 更改查询的细节
+- 更改表列的属性
+- 添加或修改表的索引
+
+请记住，解释的有效性部分取决于涉及表中的行数（如步骤 4 所述，对于小表 MySQL 可能会跳过索引）。还要明白，并非所有查询都可修复。简单的 `SELECT` 查询甚至连接有时可以改进，但考虑到 MySQL 为聚合数据必须执行的所有操作，几乎无法提高 `GROUP BY` 查询的效率。
+
+---
+
+**提示**
+
+`EXPLAIN EXTENDED` 命令提供关于查询的更多详细信息：
+
+```
+EXPLAIN EXTENDED SELECT...
+```
+
+---
+
+**提示**
+
+通过启用某些 MySQL 日志功能也可以发现有问题的查询，但这需要对 MySQL 服务器拥有管理权限。
+
+---
+
+**提示**
+
+就性能而言，MySQL 处理更多、更小的表比处理更少、更大的表效果更好。也就是说，规范化的数据库结构应始终是首要目标。
+
+---
+
+**提示**
+
+在 MySQL 术语中，“大型”数据库拥有数千个表和数百万行。
+
+---
+
+#### 执行事务
+
+*数据库事务* 是在单个会话期间运行的一系列查询。
+
+例如，你可能向一个表插入一条记录，向另一个表插入另一条记录，并可能运行一个更新。如果不使用事务，每个单独的查询会立即生效且无法撤销（查询默认会自动提交）。使用事务，你可以设置开始和结束点，然后根据需要执行或撤销这些点之间的所有查询（例如，如果一个查询失败，所有查询都可以撤销）。
+
+商业交互通常需要事务，即使是像从我的银行账户向你的账户转账 100 美元这样基本的操作。看似简单的过程实际上包含几个步骤：
+
+- 确认我的账户有 100 美元。
+- 将我的账户减少 100 美元。
+- 验证减少操作。
+- 将你的账户金额增加 100 美元。
+- 验证增加操作是否成功。
+
+如果任何一步失败，所有步骤都应撤销。例如，如果无法将钱存入你的账户，应将其退回我的账户，直到整个事务能够完成。
+
+执行事务的能力取决于所用存储引擎的特性。要在 MySQL 中执行事务，必须使用 InnoDB 表类型（或存储引擎）。
+
+要在 mysql 客户端中开始一个新事务，请输入
+
+```
+START TRANSACTION;
+```
+
+事务开始后，你现在可以运行查询。完成后，可以输入 `COMMIT` 使所有查询生效，或输入 `ROLLBACK` 撤销所有查询的效果。
+
+在你提交或回滚查询后，事务视为完成，MySQL 返回 *autocommit*（自动提交）模式。这意味着你执行的任何查询都会立即生效。要开始另一个事务，只需输入 `START TRANSACTION`。
+
+重要的是要知道某些类型的查询无法回滚。具体来说，创建、修改、截断（清空）或删除表，或创建或删除数据库的查询无法撤销。此外，使用此类查询会导致提交并结束当前事务。
+
+其次，你应该明白事务特定于每个连接。因此，通过 mysql 客户端连接的一个用户拥有的事务与另一个 mysql 客户端用户的事务不同，两者也都不同于连接的 PHP 脚本。
+
+最后，*你无法使用 phpMyAdmin 执行事务*。通过 phpMyAdmin 的 SQL 窗口或标签提交的每个查询都是一个独立且完整的事务，无法通过后续提交来撤销。
+
+考虑到这一点，让我们使用 banking 数据库通过事务来执行前面提到的任务。在第 19 章 Chapter 19 “示例—电子商务”中，事务将通过 PHP 脚本运行。
+
+#### 执行事务
+
+**1.** 连接到 MySQL 并选择 *banking* 数据库。
+
+**2.** 开始一个事务并显示表的当前值 ![Image](img/circle-a.jpg)：
+
+```
+START TRANSACTION;
+
+SELECT * FROM accounts;
+```
+
+![Image](img/07_figure_40_a.jpg)
+
+![Image](img/circle-a.jpg) 事务已开始，显示现有的表记录。
+
+**3.** 从 David Sedaris（或任意用户）的支票账户中减去 100 美元。
+
+```
+UPDATE accounts
+SET balance = (balance-100)
+WHERE account_id=2;
+```
+
+使用 `UPDATE` 查询、简单的数学运算和 `WHERE` 条件，你可以从余额中减去 100。虽然 MySQL 会指示有一行受影响，但该效果在事务提交前并非永久生效。
+
+**4.** 向 Sarah Vowell 的支票账户增加 100 美元：
+
+```
+UPDATE accounts
+SET balance = (balance+100)
+WHERE account_id=1;
+```
+
+这与步骤 3 相反，就像将 100 美元从一个人转账给另一个人。
+
+**5.** 确认结果 ![Image](img/circle-b.jpg)：
+
+```
+SELECT * FROM accounts;
+```
+
+![Image](img/07_figure_41_b.jpg)
+
+![Image](img/circle-b.jpg) 执行了两个 `UPDATE` 查询并查看结果。
+
+正如图中所示，一个余额比原来多 100，另一个比原来少 100 ![Image](img/graycircle-a.jpg)。
+
+**6.** 回滚事务：
+
+```
+ROLLBACK;
+```
+
+为了演示事务如何被撤销，让我们撤销这些查询的效果。`ROLLBACK` 命令将数据库恢复到开始事务前的状态。该命令也会终止事务，使 MySQL 返回自动提交模式。
+
+**7.** 确认结果 ![Image](img/circle-c.jpg)：
+
+```
+SELECT * FROM accounts;
+```
+
+![Image](img/07_figure_42_c.jpg)
+
+![Image](img/circle-c.jpg) 由于使用了 `ROLLBACK` 命令，`UPDATE` 查询的潜在效果被忽略。
+
+![Image](img/07_figure_43_d.jpg)
+
+![Image](img/circle-d.jpg) 调用 `COMMIT` 命令使事务的效果永久生效。
+
+
+
+查询应显示表的内容，即其原始状态。
+
+**8.** 重复步骤 2 至 4。
+
+要查看事务提交时会发生什么，将再次运行这两条 `UPDATE` 查询。但请务必先启动事务，否则查询将自动生效！
+
+**9.** 提交事务并确认结果：
+
+```
+COMMIT;
+SELECT * FROM accounts;
+```
+
+一旦输入 `COMMIT`，整个事务即为永久性的，意味着任何更改现已生效。`COMMIT` 也会结束事务，使 MySQL 返回自动提交模式。
+
+***
+
+提示
+
+事务的一大特性是，它们能在发生随机事件（如服务器崩溃）时提供保护。要么事务完全执行，要么所有更改都被忽略。
+
+***
+
+提示
+
+要改变 MySQL 的自动提交特性，请输入
+
+```
+SET AUTOCOMMIT=0;
+```
+
+然后你就不需要输入 `START TRANSACTION`，且在你输入 `COMMIT`（或使用 `ALTER`、`CREATE` 等查询）之前，没有任何查询会是永久性的。
+
+***
+
+提示
+
+你可以在事务中创建*保存点*：
+
+```
+SAVEPOINT savepoint_name;
+```
+
+然后你可以回滚到该点：
+
+```
+ROLLBACK TO SAVEPOINT savepoint_name;
+```
+
+***
+
+### 数据库加密
+
+到目前为止，已在数据库中使用 `SHA1()` 函数实现了伪加密。在 *sitename* 和 *forum* 数据库中，用户的密码在通过 `SHA1()` 运算后存储。虽然以这种方式使用此函数完全没问题（且相当常见），但该函数并不提供*真正的*加密：`SHA1()` 函数返回的是一个值的*表现形式*（称为*哈希值*），而非该值的加密版本。通过存储某些数据的哈希版本，稍后仍可进行比较（如登录时），但无法从数据库中检索原始数据。如果你需要以受保护的方式存储数据，同时仍能在稍后某个时间点以原始形式查看数据，则需要其他 MySQL 函数。
+
+MySQL 内置了多个加密和解密函数。如果你要求以可解密的加密形式存储数据，则需使用 `AES_ENCRYPT()` 和 `AES_DECRYPT()`。`AES_ENCRYPT()` 函数被认为是最安全的加密选项。
+
+这些函数接受两个参数：被加密或解密的数据，以及一个*盐值*参数。盐值参数是一个有助于随机化加密的字符串。让我们先看看加密和解密函数，然后我再回到盐值的问题。
+
+要向表中添加记录并同时加密数据，查询可能如下所示：
+
+```
+INSERT INTO users (username, pass)
+VALUES ('troutster', AES_ENCRYPT('mypass', 'nacl19874salt!'))
+```
+
+`AES_ENCRYPT()` 函数返回的加密数据将为二进制格式。要在表中存储该数据，该列必须定义为二进制类型之一（例如 `VARBINARY` 或 `BLOB`）。
+
+要针对刚插入的记录运行登录查询（将提交的用户名和密码与数据库中的进行匹配），你可以编写：
+
+```
+SELECT * FROM users WHERE
+username='troutster' AND
+AES_DECRYPT(pass, 'nacl19874salt!') = 'mypass'
+```
+
+这等同于：
+
+```
+SELECT * FROM users WHERE
+username = 'troutster' AND
+AES_ENCRYPT('mypass', 'nacl19874salt!') = pass
+```
+
+回到*盐值*的问题，加密和解密必须使用完全相同的盐值，这意味着盐值也必须存储在某处。与你可能想的相反，将盐值存储在数据库中实际上是安全的，甚至可以与加盐数据存储在同一行中。这是因为盐值的目的是使加密过程更难被破解（具体来说，是针对“彩虹”攻击）。此类攻击是远程进行的，采用暴力破解。反之，如果有人能看到你数据库中存储的所有内容，你将有更大的问题需要担心（即你的所有数据都已泄露）。
+
+最后，为了从“给存储数据加盐”中获得最大收益，每条存储的数据都应使用唯一的盐值，且盐值越长越好。
+
+为了将所有这些结合起来，让我们向 *banking.customers* 表添加 PIN 码列和盐值列，然后存储每位客户 PIN 码的加密版本。
+
+#### 加密和解密数据
+
+**1.** 访问 MySQL 并选择 *banking* 数据库：
+
+**2.** 向 *customers* 表添加两个新列 ![Image](img/circle-a.jpg)：
+
+```
+ALTER TABLE customers ADD COLUMN pin VARBINARY(16) NOT NULL;
+ALTER TABLE customers ADD COLUMN nacl CHAR(20) NOT NULL;
+```
+
+![Image](img/07_figure_44_a.jpg)
+
+![Image](img/circle-a.jpg) 向 *customers* 表添加了两列。
+
+第一列 *pin* 将存储用户 PIN 码的加密版本。由于 `AES_ENCRYPT()` 返回一个长度为 16 字符的二进制值，因此 *pin* 列被定义为 `VARBINARY(16)`。第二列存储盐值，其为一个长度为 20 字符的字符串。
+
+**3.** 更新第一位客户的 PIN 码 ![Image](img/circle-b.jpg)：
+
+```
+UPDATE customers
+SET nacl = SUBSTRING(MD5(RAND()), -20)
+WHERE customer_id=1;
+UPDATE customers
+SET pin=AES_ENCRYPT(1234, nacl)
+WHERE customer_id=1;
+```
+
+![Image](img/07_figure_45_b.jpg)
+
+![Image](img/circle-b.jpg) 使用加密函数更新记录以保护 PIN 码。
+
+第一条查询更新客户记录，向 *nacl* 列添加一个盐值。该随机值通过将 `MD5()` 函数应用于 `RAND()` 函数的输出来获得。这将创建一个长度为 32 字符的字符串，例如 *4b8bb06aea7f3d162ad5b4d83687e3ac*。然后使用 `SUBSTRING()` 从该字符串中取出最后 20 个字符。
+
+第二条查询使用已存储的 *nacl* 值作为盐值，存储客户的 PIN 码——1234。
+
+**4.** 以未加密形式检索 PIN 码 ![Image](img/circle-c.jpg)：
+
+```
+SELECT customer_id, AES_DECRYPT(pin,
+nacl) AS pin FROM customers
+WHERE customer_id=1;
+```
+
+![Image](img/07_figure_46_c.jpg)
+
+![Image](img/circle-c.jpg) 记录已被检索，并在过程中解密了 PIN 码。
+
+此查询返回 *customer_id* 为 1 的客户的解密 PIN 码。任何使用 `AES_ENCRYPT()` 存储的值，只要使用相同的盐值，都可以使用 `AES_DECRYPT()` 进行检索（和匹配）。
+
+**5.** 在不使用解密的情况下查看客户记录 ![Image](img/circle-d.jpg)：
+
+```
+SELECT * FROM customers
+WHERE customer_id=1;
+```
+
+![Image](img/07_figure_47_d.jpg)
+
+![Image](img/circle-d.jpg) 加密数据以不可读格式存储（此处为二进制数据字符串）。
+
+正如你在图中所见，PIN 码的加密版本是不可读的。
+
+***
+
+提示
+
+根据经验法则，对于永远不需要查看的信息（如密码，或许还有用户名），请使用 `SHA1()`。对于需要保护但稍后可能需要查看的信息（如信用卡信息、社会安全号码、地址等），请使用 `AES_ENCRYPT()`。
+
+***
+
+提示
+
+顺便提醒一下，不存储信用卡号和其他高风险数据始终是最安全的选择。
+
+***
+
+提示
+
+`SHA2()` 函数是对 `SHA1()` 的改进，哈希数据时应优先使用它。我之所以在本书中未使用它，是因为 `SHA2()` 需要 MySQL 5.5.5 或更高版本。
+
+***
+
+提示
+
+相同的加盐技术可应用于 `SHA1()`、`SHA2()` 和其他函数。
+
+***
+
+提示
+
+请注意，发送到 MySQL 服务器或从其接收的数据可能被拦截和查看。通过使用 SSL 连接连接 MySQL 数据库，可以获得更好的安全性。
+
+***
+
+### 复习与实践
+
+
+
+如果您对复习题或练习题有任何疑问，请访问本书的支持论坛（**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)**）。
+
+#### 复习
+
+*   连接（Join）的两种主要类型是什么？
+*   为什么在连接中经常使用别名？
+*   为什么在连接中使用 `table.column` 语法通常被认为是必要的，至少是最佳实践？
+*   连接中表的顺序对外连接有什么影响？
+*   如何创建自连接？
+*   聚合函数有哪些？
+*   `DISTINCT` 关键字对聚合函数有什么影响？`GROUP BY` 对聚合函数有什么影响？
+*   执行 `FULLTEXT` 搜索需要什么类型的索引？需要什么类型的存储引擎？
+*   在 mysql 客户端中，用 `\G` 代替分号结束 `SELECT` 查询会有什么影响？
+*   `IN BOOLEAN MODE FULLTEXT` 搜索与标准 `FULLTEXT` 搜索有何不同？
+*   可以使用哪些命令来提高表的性能？
+*   如何检查查询的效率？
+*   为什么 `forum` 数据库不支持事务？
+*   如何开始一个事务？如何撤销进行中事务的效果？如何使当前事务的效果永久生效？
+*   存储 `AES_ENCRYPT()` 函数输出需要什么类型的列类型？
+*   加密过程中使用的盐（salt）有哪些重要标准？
+
+#### 练习
+
+*   为 `forum` 和 `banking` 数据库想出更多连接示例。执行内连接、外连接以及跨三张表的连接。
+*   如果您对 `UNION` SQL 命令或子查询感兴趣，请查阅 MySQL 手册页。
+*   在 `banking` 或 `forum` 数据库上执行更多分组练习。
+*   在 `forum` 数据库上练习运行 `FULLTEXT` 搜索。
+*   检查其他查询以查看结果。
+*   阅读 MySQL 手册页及其他在线教程，了解解释查询和优化表。
+*   进一步尝试事务。
+*   研究密码加盐和彩虹攻击相关主题以了解更多。
+
+## 第 8 章 错误处理与调试
+
+### 本章内容
+
+*   错误类型与基础调试
+*   显示 PHP 错误
+*   在 PHP 中调整错误报告
+*   创建自定义错误处理程序
+*   PHP 调试技巧
+*   SQL 和 MySQL 调试技巧
+*   复习与练习
+
+如果您正在按顺序学习本书（这将是最好的方式），接下来要学习的主题是如何将 PHP 和 MySQL 结合使用。然而，这一过程无疑会产生错误，而这些错误可能很难调试。因此，在进入新概念之前，接下来的几页将解决程序员的噩梦：**错误**。随着经验的积累，您犯的错误会减少，并学会自己的调试方法，但初学者可以使用大量工具和技术来帮助简化学习过程。
+
+本章有三条主线。一是了解开发动态网站时可能发生的各种错误及其可能的原因。二是以循序渐进的形式教授多种调试技术。最后，您将看到以尽可能优雅的方式处理发生的错误的不同技术。
+
+### 错误类型与基础调试
+
+使用 PHP 和 MySQL 开发 Web 应用程序时，您可能会在四种或更多技术中遇到潜在的 Bug。您可能会遇到 HTML 问题、PHP 问题、SQL 错误或 MySQL 错误。修复任何 Bug 的第一步是找到其源头。
+
+HTML 问题通常破坏性最小，也最容易发现。当您的布局完全乱套时，通常就知道出问题了。下一节将讨论捕获和修复这些问题的一些步骤，以及通用的调试提示。
+
+PHP 错误是您最常看到的错误，因为这种语言将成为您应用程序的核心。PHP 错误分为三大类：
+
+*   语法错误
+*   运行时错误
+*   逻辑错误
+
+语法错误最常见，也最容易修复。如果您只是遗漏了一个分号，就会看到它们。此类错误会阻止脚本执行，如果 PHP 配置中开启了 `display_errors`，PHP 将显示错误，包括 PHP 认为出错的行号 ![Image](img/circle-a.jpg)。如果 `display_errors` 关闭，您将看到一张空白页。（您将在本章后面了解更多关于 `display_errors` 的信息。）
+
+![Image](img/08_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) 解析错误——您到目前为止可能已经见过很多次了——是最常见的 PHP 错误类型，尤其是对于初学者程序员。
+
+运行时错误包括那些不会阻止 PHP 脚本执行（像解析错误那样）但会阻止脚本完成其预期功能的错误。示例包括使用错误数量或类型的参数调用函数。发生这些错误时，PHP 通常会显示一条指示确切问题的消息 ![Image](img/circle-b.jpg)（同样假设 `display_errors` 已开启）。
+
+![Image](img/08_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg) 错误使用函数（使用不当的参数调用）将在脚本执行期间产生错误。
+
+***
+
+#### 正确的心态
+
+在深入探讨之前，先谈谈错误：它们发生在我们最优秀的人身上。即使是本书的作者，在 Web 开发工作中也会遇到足够多的错误（但请放心，本书中的代码应该没有 Bug）。认为您会达到一个永远不出错的技能水平是痴人说梦，但有技术可以将错误最小化，而知道如何快速捕获、处理和修复错误本身就是一项主要技能。所以尽量不要因为犯错而沮丧；相反，要沉浸在您正在成为一名更好的调试员的知识中！
+
+***
+
+最后一类错误——逻辑错误——实际上是最糟糕的，因为 PHP 不一定会向您报告它们。这些是彻头彻尾的 Bug：不明显且不会阻止脚本执行的问题。解决所有这些 PHP 错误的技巧将在几页后演示。
+
+SQL 错误通常是语法问题，当您尝试在 MySQL 中运行查询时会被报告。例如，我犯这个错误太多次了 ![Image](img/circle-c.jpg)：
+
+```
+DELETE * FROM tablename
+```
+
+![Image](img/08_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg) MySQL 将报告 SQL 命令语法中发现的任何错误。
+
+该语法完全错误，这是与 `SELECT` 语法（`SELECT * FROM` `tablename`）混淆了。正确的语法是：
+
+```
+DELETE FROM tablename
+```
+
+同样，当您有 SQL 错误时，MySQL 会发出警报，因此这些错误不难发现和修复。对于现代网站，棘手的是您并不总是拥有静态查询，而是经常由 PHP 动态生成查询。在这种情况下，如果存在 SQL 语法问题，问题很可能出在您的 PHP 代码中。
+
+
+
+### 调试 MySQL 和动态网站
+
+除了报告 SQL 错误外，MySQL 本身也有错误需要考虑。无法访问数据库是常见错误之一，也是致命的阻碍。当你误用 MySQL 函数或在连接中模糊引用列时，也会看到错误。同样，MySQL 会以具体细节报告任何此类错误。请记住，当查询未返回预期记录或未产生预期结果时，那不是 MySQL 或 SQL 错误，而是逻辑错误。在本章末尾，你将看到如何解决 SQL 和 MySQL 问题。
+
+无法连接到 MySQL 服务器或特定数据库是常见的 MySQL 错误。
+
+但在你能跑之前得先学会走，因此下一节将介绍调试动态网站的基础知识，从你应该进行的基本检查以及如何修复 HTML 问题开始。
+
+### 基本调试步骤
+
+这第一系列步骤可能看起来显而易见，但就调试而言，遗漏其中任何一步都会导致低效且极其令人沮丧的调试体验。趁此机会，我应该提到最好的通用调试建议是：
+
+> 当你感到沮丧时，离开电脑！
+
+我解决过的几乎所有最棘手的问题，都是通过休息一下、清空大脑、然后以全新的眼光回到代码中来解决的。本书配套论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）的读者也经常发现这点。当你沮丧时试图强行推进，往往会让事情变得更糟。糟糕得多。
+
+### 开始调试任何问题
+
+*   **确保你正在运行正确的页面。**
+
+    你试图修复一个问题，但无论做什么都无济于事，这种情况太常见了。原因是：你实际上编辑的页面并非你以为的那个页面。因此请验证正在执行的文件的名称和位置，是否与你正在编辑的文件相符。在这方面，使用一站式 IDE（如 Adobe Dreamweaver [www.adobe.com/go/dreamweaver](http://www.adobe.com/go/dreamweaver)）是一个优势。
+
+*   **确保你已保存最新更改。**
+
+    未保存的文档将继续保留编辑前的问题（因为编辑未生效）。我喜欢 TextMate ([www.macromates.com](http://www.macromates.com)) 文本编辑器的众多原因之一，就是它会在应用程序失去焦点时自动保存每个文档。
+
+*   **确保通过 URL 运行所有 PHP 页面。**
+
+    因为 PHP 通过 Web 服务器（Apache、IIS 等）工作，运行任何 PHP 代码都要求你通过 URL 访问页面（`http://www.example.com/page.php` 或 `http://localhost/page.php`）。如果你双击 PHP 页面在浏览器中打开它（或使用浏览器的“文件 > 打开”选项），你将看到 PHP 代码，而不是执行结果。如果你不通过 URL 加载 HTML 页面（这本身可行），但随后将表单提交给 PHP 页面，也会发生这种情况。
+
+    PHP 代码只有通过 URL 运行时才会被执行。这意味着提交到 PHP 页面的表单也必须通过 `http://` 加载。
+
+*   **了解你正在运行的 PHP 和 MySQL 版本。**
+
+    某些问题特定于特定版本的 PHP 或 MySQL。例如，某些函数是在 PHP 后期版本中添加的，而 MySQL 在 4、4.1 和 5 版本中增加了重要新功能。运行 `phpinfo()` 脚本（示例见附录 A“安装”）并打开 mysql 客户端会话以确定此信息。phpMyAdmin 通常也会报告相关版本（但不要将 phpMyAdmin 的版本（可能是 3.*something*）与 PHP 或 MySQL 的版本混淆）。
+
+    `phpinfo()` 脚本是你调试的最佳工具之一，它会告知你 PHP 版本及其配置方式。
+
+    当你连接到 MySQL 服务器时，它会让你知晓正在使用的版本号。
+
+    我认为所用版本是如此重要、基础的信息，以至于我通常不会协助寻求帮助的人，直到他们提供此信息！
+
+*   **了解你正在运行的 Web 服务器。**
+
+    同样，某些问题和功能因你的 Web 服务应用程序——Apache、IIS 或 Abyss——而异。你应该知道你使用的是哪一个及其版本，这在你安装应用程序时就已知晓。如果你使用虚拟主机，托管公司可以提供此信息。
+
+*   **尝试在不同的 Web 浏览器中执行页面。**
+
+    每个 Web 开发人员都应该拥有并使用至少两个 Web 浏览器。如果你在不同浏览器中测试页面，就能看出问题是出在脚本上，还是特定浏览器上。通常，只有 HTML 和 CSS 问题会在切换浏览器时出现（或消失）；PHP 错误极少针对特定浏览器，更不用说 MySQL 或 SQL 错误了。
+
+*   **如果可能，尝试使用不同的 Web 服务器、PHP 版本和/或 MySQL 版本执行页面。**
+
+    PHP 和 MySQL 错误有时源于特定服务器的特定配置和版本。如果某事在一台服务器上有效而在另一台上无效，则说明脚本本身没有错。接下来就是使用 `phpinfo()` 脚本查看服务器设置有何不同。
+
+***
+
+**提示**
+
+如果休息一下是你感到沮丧时该做的一件事，那么这里是你*不该*做的事：向作者、新闻组、邮件列表或其他任何人发送一封或多封惊慌失措且挑剔的邮件。就向陌生人寻求免费帮助而言，耐心和客套能带来好得多、快得多的结果。
+
+***
+
+**提示**
+
+顺便说一句，我强烈建议*不要*随意猜测解决方案。我见过太多人因在不完全理解尝试更改的作用的情况下盲目尝试，而让事情变得更加复杂。
+
+***
+
+**提示**
+
+还有另一类不同的错误可归类为*用法*错误：即当网站用户的行为不符合你的预期时出现的问题。作为一条金科玉律，编写代码时应确保即使用户什么都不对、或全做错也不会崩溃！换句话说，不要做任何假设。Doug Linder 有一句名言适用于此：“优秀的程序员是在过单行道前也会向左右张望的人。”
+
+***
+
+### 调试 HTML
+
+调试 HTML 相对容易。源代码非常易获取，大多数问题显而易见，且修复 HTML 的尝试通常不会让事情变得更糟（PHP 则可能）。尽管如此，仍有一些基本步骤应遵循以查找和修复 HTML 问题。
+
+### 调试 HTML 错误
+
+*   **检查源代码。**
+
+    如果你遇到 HTML 问题，几乎总是需要检查页面的源代码来找到它。查看源代码的方式取决于所用浏览器，但通常只需使用类似“查看 > 页面源代码”或“查看 > 源代码”的选项。
+
+*   **使用验证工具。**
+
+    验证工具（如 [`validator.w3.org`](http://validator.w3.org)）非常适合查找标签不匹配、表格损坏和其他问题。
+
+
+
+
+### 使用 Firefox
+
+我并不想引发关于哪个 Web 浏览器最好的讨论，而且由于 Internet Explorer（至今仍然！）是使用最多的浏览器，你最终需要使用它进行测试，但我个人认为 Firefox（可从 **[www.mozilla.com](http://www.mozilla.com)** 免费获取）是 Web 开发者的最佳 Web 浏览器。Firefox 提供了其他浏览器没有的可靠性和调试功能。如果你想在日常浏览中坚持使用 IE 或 Safari，那随你便，但进行 Web 开发时，请使用 Firefox。
+
+### 使用 Firefox 的插件小工具
+
+![Image](img/08_figure_09_i.jpg)
+
+Firefox 的 Web Developer 小工具提供了快速访问许多有用工具的途径。
+
+除了是一个很棒的 Web 浏览器之外，广受欢迎的 Firefox 浏览器拥有大量 Web 开发者会欣赏的功能。此外，你可以通过安装任何可用的免费小工具来扩展 Firefox 的功能。特别是 Web Developer 小工具，它提供了快速访问很棒工具的途径，例如显示表格边框、显示 CSS、验证页面等。我也经常使用这些插件：Firebug、DOM Inspector 和 HTML Validator 等。
+
+### 在另一个浏览器中测试页面
+
+PHP 代码通常与浏览器无关，这意味着无论客户端是什么，你都会得到一致的结果。HTML 则不然。有时特定浏览器的怪癖会影响渲染的页面。在另一个浏览器中运行同一个页面是判断这是 HTML 问题还是浏览器怪癖的最简单方法。
+
+***
+
+> **Tip**
+>
+> 解决任何类型问题的第一步是了解导致问题的原因。在调试时，请记住每种技术——HTML、PHP、SQL 和 MySQL——所扮演的角色。如果你的页面看起来不对劲，那是 HTML 问题。如果你的 HTML 是由 PHP 动态生成的，这仍然是 HTML 问题，但你需要处理 PHP 代码来修正它。
+
+***
+
+### 书籍勘误
+
+如果你遵循本书中的示例操作但某些东西无法正常工作，你应该怎么做？
+
+**1.** 将你的代码或步骤与书中的内容仔细核对。
+
+**2.** 使用书后的索引查看我是否在前面的页面中引用过某个脚本或函数（你可能错过了重要的用法规则或提示）。
+
+**3.** 查阅 PHP 手册中特定函数的说明，确认该函数在你的 PHP 版本中是否可用，并验证该函数的用法。
+
+**4.** 查看书籍的勘误页面（通过支持网站 **[www.LarryUllman.com](http://www.LarryUllman.com)**），看看代码中是否存在已被报告的错误。不过暂时不要在那里发布你的具体问题！
+
+**5.** 三次检查你的代码，并使用本章概述的所有调试技术。
+
+**6.** 搜索书籍的支持论坛，看看其他人是否遇到过这个问题，以及是否已经确定了解决方案。
+
+**7.** 如果一切都失败了，使用书籍的支持论坛寻求帮助。提问时，请务必包含所有相关信息（PHP 版本、MySQL 版本、你采取的调试步骤及结果等）。
+
+***
+
+### 显示 PHP 错误
+
+当出现问题时，PHP 提供了非常有用且描述性强的错误消息。不幸的是，PHP 在使用默认配置运行时不会显示这些错误。这种策略对于正式服务器是合理的，因为你不希望最终用户看到 PHP 特定的错误消息，但这也让初学者感到更加困惑。要查看 PHP 的错误，你必须开启 `display_errors` 指令，可以在单个脚本中开启，也可以针对整个 PHP 配置开启。
+
+要在脚本中开启 `display_errors`，请使用 **`ini_set()`** 函数。该函数接受一个指令名称和该指令应具有的设置作为参数：
+
+```php
+ini_set('display_errors', 1);
+```
+
+在脚本中包含此行将为该脚本开启 `display_errors`。唯一的缺点是，如果你的脚本有语法错误导致完全无法运行，你仍然会看到空白页面。要让整个服务器的 PHP 显示错误，你需要编辑其配置，这在 附录 A 的“配置 PHP”一节中讨论。
+
+#### 开启 display_errors
+
+**1.** 在文本编辑器或 IDE 中创建一个新的 PHP 文档，命名为 **`display_errors.php`** (**脚本 8.1**)：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  
+<head>  
+  <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />  
+  <title>Displaying Errors</title>  
+</head>  
+<body>  
+<h2>Testing Display Errors</h2>  
+<?php # Script 8.1 - display_errors.php
+```
+
+**脚本 8.1.** `ini_set()` 函数可用于告诉 PHP 脚本显示可能发生的任何错误。
+
+***
+
+```html
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML  
+       1.0 Transitional//EN"  
+2          "http://www.w3.org/TR/xhtml1/DTD/  
+             xhtml1-transitional.dtd">  
+3  <html xmlns="http://www.w3.org/1999/  
+       xhtml" xml:lang="en" lang="en">  
+4  <head>  
+5      <meta http-equiv="Content-Type"  
+            content="text/html; charset=utf-8" />  
+6      <title>Displaying Errors</title>  
+7  </head>  
+8  <body>  
+9  <h2>Testing Display Errors</h2>  
+10  <?php # Script 8.1 - display_errors.php  
+11  
+12  // Show errors:  
+13  ini_set('display_errors', 1);  
+14  
+15  // Create errors:  
+16  foreach ($var as $v) {}  
+17  $result = 1/0;  
+18  
+19  ?>  
+20  </body>  
+21  </html>
+```
+
+***
+
+**2.** 在初始 PHP 标签之后，添加：
+
+```php
+ini_set('display_errors', 1);
+```
+
+从脚本的这一点开始，发生的任何错误都将被显示。
+
+**3.** 制造一些错误：
+
+```php
+foreach ($var as $v) { }  
+$result = 1/0;
+```
+
+要测试 `display_errors` 设置，脚本至少需要有一个错误。第一行甚至不尝试做任何事，但保证会导致错误。这里实际上有两个问题：首先，引用了一个不存在的变量（**`$var`**）；其次，在 **`foreach`** 循环中将非数组（**`$var`**）当作数组使用。
+
+第二行是经典的除以零错误，这在编程语言或数学中都是不允许的。
+
+**4.** 完成页面：
+
+```php
+?>  
+</body>  
+</html>
+```
+
+**5.** 将文件保存为 **`display_errors.php`**，将其放在你的 Web 目录中，并在 Web 浏览器中测试。
+
+![Image](img/08_figure_10_a.jpg)
+
+开启 `display_errors`（针对该脚本）后，页面会在错误发生时报告错误。
+
+**6.** 如果你愿意，将第一行 PHP 代码改为：
+
+```php
+ini_set('display_errors', 0);
+```
+
+然后保存并重新测试脚本。
+
+![Image](img/08_figure_11_b.jpg)
+
+关闭 `display_errors`（针对该页面）后，相同的错误不再被报告。不幸的是，它们依然存在。
+
+***
+
+> **Tip**
+>
+> `ini_set()` 函数可用于调整的 PHP 设置是有限制的。具体哪些可以更改、哪些不能，请参阅 PHP 手册。
+
+***
+
+> **Tip**
+>
+> 顺便提醒一下，在脚本中更改 `display_errors` 设置仅在该脚本运行期间有效（即，它不能有解析错误）。要始终查看发生的任何错误，你需要在 PHP 的配置文件中启用 `display_errors`（同样，请参阅附录）。
+
+***
+
+### 在 PHP 中调整错误报告
+
+
+
+配置 PHP 显示发生的错误后，你可能想要调整错误报告的级别。你的整个 PHP 安装环境，或单个脚本，都可以设置为报告或忽略不同类型的错误。表 8.1 列出了大多数级别，但它们通常可分为以下三类：
+
+* **通知**，不会停止脚本的执行，且不一定是个问题。
+* **警告**，指示存在问题，但不会停止脚本的执行。
+* **错误**，会阻止脚本继续运行（包括常见的解析错误，它会彻底阻止脚本运行）。
+
+**表 8.1. 错误报告级别**
+
+![Image](img/08tab01.jpg)
+
+根据经验法则，在开发网站时，你会希望 PHP 报告任何类型的错误；但网站上线后，则不应报告任何具体错误。出于安全和美观考虑，让公共用户看到 PHP 详细的错误信息通常是不明智的。
+
+***
+
+#### 使用 @ 抑制错误
+
+在 PHP 中，可以使用错误抑制运算符 `@` 来抑制单个错误。例如，如果你不想让 PHP 报告无法包含文件的情况，可以这样编写代码：
+
+```php
+@include ('config.inc.php');
+```
+
+或者如果你不想看到“除以零”错误：
+
+```php
+$x = 8;
+$y = 0;
+$num = @($x/$y);
+```
+
+`@` 符号仅对表达式有效，如函数调用或数学运算。你不能在条件语句、循环、函数定义等之前使用 `@`。
+
+根据经验法则，我建议仅在函数执行失败不会影响脚本整体功能时使用 `@`。或者你可以选择不显示 PHP 的错误，而是自行更优雅地处理它们（本章稍后将讨论该主题）。
+
+***
+
+### 脚本 8.2. 该脚本将演示如何在 PHP 中操控错误报告。
+
+***
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+2       1.0 Transitional//EN"
+3           "http://www.w3.org/TR/xhtml1/DTD/
+4               xhtml1-transitional.dtd">
+5   <html xmlns="http://www.w3.org/1999/
+6       xhtml" xml:lang="en" lang="en">
+7   <head>
+8       <meta http-equiv="Content-Type"
+9           content="text/html; charset=utf-8" />
+10      <title>Reporting Errors</title>
+11  </head>
+12  <body>
+13  <h2>Testing Error Reporting</h2>
+14  <?php # Script 8.2 - report_errors.php
+
+15  // Show errors:
+16  ini_set('display_errors', 1);
+
+17  // Adjust error reporting:
+18  error_reporting(E_ALL | E_STRICT);
+
+19  // Create errors:
+20  foreach ($var as $v) {}
+21  $result = 1/0;
+
+22  ?>
+23  </body>
+24  </html>
+```
+
+通常，错误消息——特别是涉及数据库的错误——会暴露 Web 应用程序某些幕后细节，这些最好不要展示给用户。虽然你希望在开发阶段解决所有这些问题，但实际情况可能并非如此。
+
+你可以按照附录 A 中的说明通用地调整错误报告级别。或者，你可以使用 `error_reporting()` 函数在每个脚本的基础上调整此行为。该函数用于设定 PHP 在特定页面中应报告何种类型的错误。该函数接受一个数字或常量，使用 表 8.1 中的值（PHP 手册还列出了其他几个与 PHP 核心相关的值）。
+
+```php
+error_reporting(0); // Show no errors.
+```
+
+设置为 0 会完全关闭错误报告（错误仍会发生；你只是看不见它们了）。相反，`error_reporting(E_ALL)` 会指示 PHP 报告发生的每一个错误。数字可以相加以自定义错误报告级别，或者你可以将位运算符——`|`（或）、`~`（非）、`&`（与）——与常量一起使用。使用以下设置，将显示除通知以外的任何错误：
+
+```php
+error_reporting(E_ALL & ~E_NOTICE);
+```
+
+#### 调整错误报告
+
+1.  在文本编辑器或 IDE 中打开 `display_errors.php`（脚本 8.1）（如果尚未打开）。
+
+    要尝试不同的错误报告级别，请使用 `display_errors.php` 作为示例。
+
+2.  调整 `display_errors` 设置后，添加（脚本 8.2）：
+
+    ```php
+    error_reporting(E_ALL | E_STRICT);
+    ```
+
+    为了开发目的，让 PHP 通知你所有的错误、通知、警告和建议。将错误报告级别设置为 `E_ALL` 即可实现这一点。但 `E_ALL` 不包含 `E_STRICT`，因此又添加了一个子句——`|`（或）`E_STRICT`。
+
+    简而言之，现在 PHP 会让你知道任何存在的、或仅仅可能存在的问题。
+
+    因为 `E_ALL` 和 `E_STRICT` 是常量，所以它们不加引号。
+
+3.  将文件保存为 `report_errors.php`，放入你的 Web 目录，并在 Web 浏览器中运行它 ![Image](img/circle-a.jpg)。
+
+    ![Image](img/08_figure_12_a.jpg)
+
+    ![Image](img/circle-a.jpg) 在最高级别的错误报告下，PHP 对该页面（脚本 8.2）显示了两个警告和一个通知。
+
+    我还修改了页面的标题和标题，但两者与此练习的重点无关。
+
+4.  将错误报告级别更改为其他设置并重新测试 ![Image](img/circle-b.jpg) 和 ![Image](img/circle-c.jpg)。
+
+    ![Image](img/08_figure_13_b.jpg)
+
+    ![Image](img/circle-b.jpg) 禁用通知报告后的同一页面（脚本 8.2）。
+
+    ![Image](img/08_figure_14_c.jpg)
+
+    ![Image](img/circle-c.jpg) 关闭错误报告（设为 0）后的同一页面（脚本 8.2）。结果与禁用 `display_errors` 相同。当然，错误仍然会发生；只是不再被报告而已。
+
+***
+
+> **提示**
+>
+> 表 8.1 中 `E_ALL` 的数值可能因 PHP 版本不同而异。
+
+***
+
+> **提示**
+>
+> 因为你经常需要为网站中的每个页面调整 `display_errors` 和 `error_reporting`，你可能想将这些代码行放在一个单独的 PHP 文件中，然后由其他 PHP 脚本包含。
+
+***
+
+> **提示**
+>
+> 本书中的所有脚本编写时都将 PHP 的错误报告设置为最高级别（旨在捕获每一个潜在问题）。
+
+***
+
+> **提示**
+>
+> `trigger_error()` 函数是一种在 PHP 脚本中以编程方式生成错误的方法。其第一个参数是错误消息；第二个可选参数是数字错误类型，对应 表 8.1 中的值。默认类型为 `E_USER`。
+>
+> ```php
+> if (/* some condition */) {
+>     trigger_error('Something Bad Happened!');
+> }
+> ```
+
+***
+
+### 创建自定义错误处理程序
+
+管理网站错误的另一种选择是更改 PHP 处理错误的方式。默认情况下，如果启用了 `display_errors` 且捕获到错误（属于错误报告级别范围内），PHP 会以一种略显简陋的形式，在极少量的 HTML 标签中打印该错误 ![Image](img/circle-a.jpg)。
+
+![Image](img/08_figure_15_a.jpg)
+
+![Image](img/circle-a.jpg) HTML 源代码显示了 PHP 默认格式化错误的方式。
+
+你可以通过创建自己的函数来覆盖错误处理方式，该函数将在错误发生时被调用。例如：
+
+```php
+function report_errors (arguments) {
+    // Do whatever here.
+}
+
+set_error_handler ('report_errors');
+```
+
+PHP `set_error_handler()` 函数用于指定发生错误时要调用的用户定义函数。处理函数（本例中为 `report_errors`）届时将接收多个值，可用于任何可能的方式。
+
+
+
+
+此函数可编写为最多接受五个参数。按顺序，这些参数分别为：错误编号（对应表 8.1）、文本错误消息、发现错误的文件名、发生错误的具体行号，以及错误发生时存在的变量。定义一个接受所有这些参数的函数可能如下所示：
+
+```
+function report_errors ($num, $msg, $file, $line, $vars) {...}
+```
+
+为了利用这一概念，`report_errors.php` 文件（脚本 8.2）将最后重写一次。
+
+### 创建您自己的错误处理程序
+
+**1.** 在文本编辑器或 IDE 中打开 `report_errors.php`（脚本 8.2）（如果尚未打开）。
+
+**2.** 删除 `ini_set()` 和 `error_reporting()` 行（脚本 8.3）。
+
+当您建立自己的错误处理函数时，错误报告级别不再有任何意义，因此调整它们的那行代码可以删除。调整 `display_errors` 设置也毫无意义，因为错误处理函数将控制错误是否显示。
+
+**脚本 8.3.** 通过定义您自己的错误处理函数，您可以自定义 PHP 脚本处理错误的方式。
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Handling Errors</title>
+</head>
+<body>
+
+<h2>Testing Error Handling</h2>
+<?php # Script 8.3 - handle_errors.php
+
+// Flag variable for site status:
+define('LIVE', FALSE);
+
+// Create the error handler:
+function my_error_handler ($e_number, $e_message, $e_file, $e_line, $e_vars) {
+
+    // Build the error message:
+    $message = "An error occurred in script '$e_file' on line $e_line: $e_message\n";
+
+    // Append $e_vars to $message:
+    $message .= print_r ($e_vars, 1);
+
+    if (!LIVE) { // Development (print the error).
+        echo '<pre>' . $message . "\n";
+        debug_print_backtrace();
+        echo '</pre><br />';
+    } else { // Don't show the error.
+        echo '<div class="error">A system error occurred. We apologize for the
+            inconvenience.</div><br />';
+    }
+
+} // End of my_error_handler() definition.
+
+// Use my error handler:
+set_error_handler ('my_error_handler');
+
+// Create errors:
+foreach ($var as $v) {}
+$result = 1/0;
+
+?>
+</body>
+</html>
+```
+
+**3.** 在脚本创建错误之前，添加：
+
+```
+define ('LIVE', FALSE);
+```
+
+此常量将作为一个标志，用于指示站点当前是否处于上线状态。这是一个重要的区别，因为您处理错误和在浏览器中揭示信息的方式，在开发站点和站点上线时应有很大不同。
+
+之所以在函数外部设置此常量，有两个原因。首先，我希望将该函数视为一个黑盒，它无需我深入内部修改即可完成我需要的工作。其次，在许多站点中，可能还有其他设置（如数据库连接信息）也是针对上线环境与开发环境特定的。因此，条件语句也可以引用此常量来调整那些设置。
+
+**4.** 开始定义错误处理函数：
+
+```
+function my_error_handler ($e_number, $e_message, $e_file, $e_line, $e_vars) {
+```
+
+`my_error_handler()` 函数设置为接收自定义错误处理程序可接收的完整五个参数。
+
+**5.** 使用接收到的值创建错误消息。
+
+```
+$message = "An error occurred in script '$e_file' on line $e_line: $e_message\n";
+```
+
+错误消息将首先引用发生错误的文件名和行号。随后附加上实际的错误消息。当函数被调用时（即发生错误时），所有这些值都会被传递给函数。
+
+**6.** 将任何现有变量添加到错误消息中：
+
+```
+$message .= print_r ($e_vars, 1);
+```
+
+发生错误时，`$e_vars` 变量将接收所有存在的变量及其值。因为这可能包含有用的调试信息，所以将其添加到消息中。
+
+`print_r()` 函数通常用于打印变量的结构和值；它对于数组特别有用。如果使用第二个参数（1 或 TRUE）调用该函数，结果将被返回而不是打印。因此，这一行将所有变量信息添加到 `$message` 中。
+
+**7.** 根据站点是否上线打印不同的消息：
+
+```
+if (!LIVE) {
+    echo '<pre>' . $message . "\n";
+    debug_print_backtrace();
+    echo '</pre><br />';
+} else {
+    echo '<div class="error">A system error occurred. We apologize for the inconvenience.</div><br />';
+}
+```
+
+如果站点未上线（即 `LIVE` 为 `FALSE`），这在站点开发期间通常是这种情况，则应打印详细的错误消息。为了便于查看，错误消息会在 HTML `PRE` 标签内打印。此外，还会调用一个有用的调试函数 `debug_print_backtrace()`。该函数返回大量关于已调用函数、已包含文件等的信息。
+
+在开发阶段，详细的错误消息会打印在 Web 浏览器中。（在包含更多代码的实际脚本中，这些消息会更有用。）
+
+如果站点已上线，将打印一条简单的道歉消息，让用户知道发生了错误，但不透露具体问题。在这种情况下，您也可以使用 `error_log()` 函数（见侧栏）将详细错误消息通过电子邮件发送或写入日志。
+
+一旦站点上线，将打印更友好（且泄露信息更少）的错误。此处，针对脚本中的三个错误，每个都打印了一条消息。
+
+**8.** 完成函数并告诉 PHP 使用它：
+
+```
+}
+set_error_handler('my_error_handler');
+```
+
+这第二行是关键，它告诉 PHP 使用自定义错误处理程序，而不是 PHP 的默认处理程序。
+
+**9.** 将文件保存为 `handle_errors.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试它。
+
+**10.** 将 `LIVE` 的值改为 TRUE，保存，然后重新测试脚本。
+
+### 记录 PHP 错误
+
+在脚本 8.3 中，错误处理方式仅是详细打印出来或不打印。另一种选择是*记录*错误：以某种方式永久记录它们。为此，`error_log()` 函数指示 PHP 如何记录错误。其语法为：
+
+```
+error_log (message, type, destination, extra headers);
+```
+
+*message* 值应为记录错误的文本（即脚本 8.3 中的 `$message`）。*type* 指示错误如何记录。选项为数字 0、1、3 和 4：使用计算机的默认记录方法 (0)、通过电子邮件发送 (1)、写入文本文件 (3) 或发送给 Web 服务器的记录处理程序 (4)。
+
+*destination* 参数可以是文件名（用于记录类型 3）或电子邮件地址（用于记录类型 1）。*extra headers* 参数仅在发送电子邮件时使用（记录类型 1）。destination 和 extra headers 都是可选的。
+
+
+
+要查看错误处理程序在实际站点上的表现，只需更改这一个值。
+
+***
+
+提示
+
+如果您的 PHP 页面使用特殊的 HTML 格式——如影响布局和字体处理的 CSS 标签——请将此信息添加到您的错误报告函数中。
+
+***
+
+提示
+
+显然，在实际站点中，您可能需要做的不仅仅是为不便道歉（特别是当错误严重影响页面功能时）。尽管如此，这个示例演示了如何轻松调整错误处理以适应具体情况。
+
+***
+
+提示
+
+如果您不想让错误处理函数报告每一个通知、错误或警告，可以检查错误编号值（传递给函数的第一个参数）。例如，要在站点上线时忽略通知，您需要将主条件语句更改为
+
+```
+if (!LIVE) {
+    echo '<pre>' . $message . "\n";
+    debug_print_backtrace();
+    echo '</pre><br />';
+} elseif ($e_number != E_NOTICE) {
+    echo '<div class="error">A system error occurred. We apologize for the inconvenience.</div><br />';
+}
+```
+
+### PHP 调试技巧
+
+说到调试，您将从经验中最好地学到特定类型错误的成因。了解常见成因将缩短修复错误所需的时间。为了加快学习过程，**表 8.2** 列出了最常见 PHP 错误的可能原因。
+
+**表 8.2. 常见 PHP 错误**
+
+![Image](img/08tab02.jpg)
+
+您将遇到的第一种、也是最常见的错误类型是语法错误，它会阻止脚本执行。此类错误会导致类似 ![Image](img/circle-a.jpg) 所示的消息，每位 PHP 开发人员都见过太多次了。为避免编程时犯此类错误，请务必：
+
+![Image](img/08_figure_18_a.jpg)
+
+![Image](img/circle-a.jpg) 解析错误因无效的 PHP 语法而阻止脚本运行。此错误是由于打印 `$array['key']` 的值时未将其放在花括号内引起的。
+
+- 每个语句（但不包括循环和条件判断等语言结构）都要以分号结尾。
+- 所有引号、圆括号、花括号和方括号必须成对匹配（每个左符号必须有对应的右符号）。
+- 引号使用要一致（单引号只能用单引号闭合，双引号只能用双引号闭合）。
+- 根据需要，使用反斜杠转义字符串中的所有单引号和双引号。
+
+关于语法错误，还有一点您应该明白：PHP 错误消息指出错误发生在第 12 行，并不意味着错误实际上就在那一行。至少，PHP 认为的第 12 行与您的文本编辑器指示的第 12 行之间存在差异的情况并不少见。因此，虽然 PHP 的指引对追踪问题很有用，但请将引用的行号视为起点而非绝对位置。
+
+如果 PHP 报告文档最后一行有错误，这几乎总是因为不匹配的圆括号、花括号或引号直到那时才被捕获。
+
+您将遇到的第二种错误类型源于函数的误用。例如，在缺少适当参数的情况下调用函数时就会发生此错误。PHP 在尝试执行代码时会发现此错误。在后续章节中，您使用 `header()` 函数、Cookie 或会话时可能会看到此类错误。
+
+要修复错误，您需要做一些侦探工作，看看犯了什么错以及错在哪里。但首先，请始终仔细阅读并信任 PHP 提供的错误消息。虽然引用的行号不一定总是正确，但 PHP 错误描述非常详细，通常很有帮助，且几乎总是 100% 正确的。
+
+#### 调试脚本
+
+- 开启 `display_errors`。
+
+使用前面的步骤为脚本启用 `display_errors`，或者如果可能，在开发应用程序时为整个服务器启用它。
+
+- 使用注释。
+
+正如您可以使用注释来记录脚本，也可以用它们来排除有问题的行。如果 PHP 报告第 12 行有错误，那么注释掉该行应该能消除错误。如果不能，则说明错误在别处。只需小心，不要因不当地仅注释掉代码块的一部分而引入更多错误：脚本的语法必须保持完整。
+
+- 使用 `print` 和 `echo` 函数。
+
+在更复杂的脚本中，我经常使用 `echo` 语句在脚本执行过程中给自己留下关于正在发生什么的提示 ![Image](img/circle-b.jpg)。当脚本有多个步骤时，可能不容易知道问题是发生在第 2 步还是第 5 步。通过使用 `echo` 语句，您可以将问题范围缩小到特定的节点。
+
+![Image](img/08_figure_19_b.jpg)
+
+![Image](img/circle-b.jpg) 通过留下脚本正在执行操作的提示，可以完成更复杂的调试。
+
+- 检查打印变量时使用的引号。
+
+程序员误用单引号，然后纳闷为什么变量无法正确打印，这种情况并不少见。请记住，单引号按字面意思处理文本，必须使用双引号才能打印出变量的值。
+
+- 跟踪变量 ![Image](img/circle-c.jpg)。
+
+![Image](img/08_figure_20_c.jpg)
+
+![Image](img/circle-c.jpg) 打印变量的名称和值是跟踪它们在脚本执行过程中变化的最简单方法。
+
+脚本无法工作，很可能是因为您引用了错误的变量、用错名称引用了正确的变量，或者变量的值不是您所预期的。要检查这些可能性，请使用 `print` 或 `echo` 语句在脚本的关键点打印出变量的值。这只是一个简单的
+
+```
+echo "<p>\$var = $var</p>\n";
+```
+
+或
+
+```
+echo "<p>\$var is $var</p>\n";
+```
+
+第一个美元符号被转义，以便打印变量的名称。第二个变量引用将打印其值。
+
+***
+
+**使用 `die()` 和 `exit()`**
+
+错误管理中常用的两个函数是 `die()` 和 `exit()`（它们技术上属于语言结构而非函数，但这有关系吗？）。当脚本中调用 `die()` 或 `exit()` 时，整个脚本将终止。如果发生重要事件失败——如建立数据库连接——两者都可用于阻止脚本继续执行。您也可以向 `die()` 和 `exit()` 传递一个字符串，该字符串将在浏览器中打印出来。
+
+您常会在 `OR` 条件语句中看到 `die()` 或 `exit()` 的用法。例如：
+
+```
+include('config.inc.php') OR die ('Could not open the file. ');
+```
+
+有了这一行，如果 PHP 无法包含配置文件，将执行 `die()` 语句并打印“Could not open the file.”消息。您将在本书和 PHP 手册中看到此用法的变体，因为这是一种无需使用自定义错误处理程序即可处理错误的快速但可能过度的方法。
+
+***
+
+- 打印数组值。
+
+对于更复杂的变量类型（数组和对象），`print_r()` 和 `var_dump()` 函数无需循环即可打印其值。两个函数完成相同的任务，尽管 `var_dump()` 的报告比 `print_r()` 更详细。
+
+***
+
+提示
+
+许多文本编辑器都包含用于检查圆括号、方括号和引号是否匹配的实用程序。
+
+***
+
+提示
+
+
+
+如果你无法在复杂的脚本中找到解析错误，请首先使用 `/* */` 注释使整个 PHP 代码失效。然后逐个取消注释各个部分（通过移动开始或结束注释字符）并重新运行脚本，直到推断出哪些行导致了错误。不过要注意如何注释掉控制结构，因为花括号必须继续匹配，以避免解析错误。例如：
+
+```
+if (condition) {  
+
+    /* Start comment.  
+
+    Inert code.  
+
+    End comment. */  
+
+}
+```
+
+---
+
+**提示**
+
+为了使 `print_r()` 的结果在 Web 浏览器中更具可读性，请将其包裹在 HTML `<pre>`（预格式化）标签中。这一行是我最喜欢的调试工具之一：
+
+```
+echo '<pre>' . print_r($var, 1) . '</pre>';
+```
+
+---
+
+### SQL 和 MySQL 调试技术
+
+最常见的 SQL 错误由以下问题引起：
+
+*   引号或括号使用不平衡
+*   列值中的撇号未转义
+*   列名、表名或函数名拼写错误
+*   在连接查询中模糊地引用列
+*   将查询的子句（`WHERE`、`GROUP BY`、`ORDER BY`、`LIMIT`）放在了错误的顺序
+
+此外，使用 MySQL 时还可能遇到以下情况：
+
+*   不可预测或不合适的查询结果
+*   无法访问数据库
+
+由于你将从 PHP 中运行动态网站的查询，因此你需要一种在该上下文中调试 SQL 和 MySQL 错误的方法（PHP 不会报告你的 SQL 问题）。
+
+#### 调试 SQL 问题
+
+要判断你遇到的是 MySQL（或 SQL）问题而不是 PHP 问题，你需要一套查找和修复问题的系统。幸运的是，调试 MySQL 和 SQL 问题应采取的步骤很容易定义，且应不假思索地遵循。如果你有任何 MySQL 或 SQL 错误需要调试，只需遵循以下步骤序列。
+
+> **为了强调重点，接下来的这一系列步骤可能是本章甚至全书中最有用的调试技术。在任何 PHP-MySQL Web 应用程序中，当你得不到预期结果时，很可能都需要遵循这些步骤。**
+
+#### 调试 SQL 查询
+
+**1.** 在 PHP 脚本中打印出任何适用的查询。
+
+确切知道 PHP 脚本试图执行什么查询，是解决 SQL 和 MySQL 问题最有用的第一步。
+
+正如你在下一章将看到的，SQL 查询通常会被赋值给一个变量，特别是当你使用 PHP 动态创建它们时。在 PHP 脚本中使用代码 `echo $query`（或查询变量的任何名称），你可以将正在运行的确切查询发送到浏览器。有时仅这一步就能帮助你看清真正的问题所在。
+
+**2.** 在 mysql 客户端或其他工具中运行查询。
+
+为了解 PHP 脚本接收到什么结果，请通过单独的界面运行相同的查询。在这种情况下，问题在于引用了 `password` 列，而该表的列实际上只叫 `pass`。
+
+调试 SQL 或 MySQL 问题最万无一失的方法是，通过独立的应用程序（mysql 客户端、phpMyAdmin 等）运行 PHP 脚本中使用的查询。这样做将给你与原始 PHP 脚本接收到的相同结果，但没有开销、麻烦或神秘感。
+
+如果独立应用程序返回了预期结果，但你在 PHP 脚本中仍未获得正确行为，那么你就会知道问题出在脚本本身，而不是你的 SQL 命令或 MySQL 数据库。
+
+**3.** 如果问题仍不明显，请以最基本的形式重写查询，然后不断添加维度，直到发现哪个子句导致了问题。继续使用第三方 MySQL 界面执行此操作（即，搁置 PHP 脚本，直到你让 SQL 查询正常工作）。
+
+有时调试查询很困难，因为其中发生的事情太多。就像注释掉 PHP 脚本的大部分内容一样，将查询简化到其最基本的结构，然后慢慢重建，可能是调试复杂 SQL 命令的最简单方法。
+
+#### 调试访问问题
+
+“访问被拒绝”错误消息是初学者在使用 PHP 与 MySQL 交互时遇到的最常见问题。以下是常见的解决方案：
+
+*   更改权限后重新加载 MySQL，以使更改生效。使用 mysqladmin 工具或在 mysql 客户端中运行 `FLUSH PRIVILEGES`。你必须以具有相应权限的用户身份登录才能执行此操作（详见 附录 A）。
+*   仔细检查所用的密码。错误消息 `Access denied for user: 'user@localhost' (Using password: YES)` 通常表明密码错误或拼写有误。（这并不总是原因，但却是首先要检查的事项。）
+*   错误消息 `Can't connect to...`（错误编号 2002）表明 MySQL 要么未运行，要么未在客户端尝试的套接字或 TCP/IP 端口上运行。
+
+---
+
+**提示**
+
+MySQL 保存着自己的错误日志，这对于解决 MySQL 问题（如 MySQL 甚至无法启动的原因）非常有用。MySQL 的错误日志位于 MySQL 数据目录中，名为 `hostname.err`。
+
+---
+
+---
+
+**提示**
+
+MySQL 手册非常详尽，包含 SQL 示例、函数参考和错误代码的含义。把手册当成朋友，当令人困惑的错误出现时就去查阅它。
+
+---
+
+### 复习与深入
+
+如果你对复习问题或深入提示有任何疑问，请访问本书的支持论坛 ([www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/))。
+
+#### 复习
+
+*   为什么 PHP 脚本必须通过 URL 运行？
+*   你使用的是哪个版本的 PHP？哪个版本的 MySQL？哪个版本的什么 Web 服务器应用程序？运行在什么操作系统上？
+*   如果渲染的网页在浏览器中显示不正确，你应该采取哪些调试步骤？
+*   你的服务器上启用 `display_errors` 了吗？为什么在开发服务器上启用 `display_errors` 很有用？为什么在生产服务器上暴露错误是件坏事？
+*   `error_reporting` 的级别如何影响 PHP 脚本？你的 PHP 服务器的 `error_reporting` 设置为何种级别？
+*   `@` 运算符有什么作用？
+*   使用自定义错误处理函数有什么好处？错误报告级别在使用自定义错误处理函数时有什么影响？
+*   `print` 或 `echo` 如何用作调试工具？提示：有很多正确答案。
+*   修复 PHP-SQL-MySQL Bug 的方法是什么？
+
+#### 深入
+
+*   如果尚未安装，请为 Firefox 安装 Firebug 和 Web Developer 扩展。如果还没装 Firefox，请先安装 Firefox！
+*   如果可以，在开发服务器上启用 `display_errors`。
+*   如果可以，将开发服务器上 PHP 的错误报告级别设置为 `E_ALL | E_STRICT`。
+*   查阅 PHP 手册中关于 `debug_print_backtrace()` 函数的页面以了解更多信息。
+*   考虑使用提供内置调试工具的专业级 IDE。
+
+## 9. 将 PHP 与 MySQL 结合使用
+
+本章内容
+
+*   修改模板 266
+*   连接 MySQL 268
+*   执行简单查询 273
+*   检索查询结果 281
+*   确保 SQL 安全 285
+*   统计返回记录数 290
+
+
+
+#### 使用 PHP 更新记录
+
+### 复习与深入
+
+既然你已拥有足够的 PHP、SQL 和 MySQL 经验，是时候将所有技术整合在一起了。PHP 与 MySQL 的强强结合只是众多程序员青睐它的原因之一；将两者结合使用是何其容易，令人印象深刻。
+
+本章将使用现有的 `sitename` 数据库——创建于第 5 章“SQL 简介”——来构建一个用于与 `users` 表交互的 PHP 界面。此处传授的知识和使用的示例将成为你所有 PHP-MySQL Web 应用程序的基础，因为所涉及的原则适用于任何 PHP-MySQL 交互。
+
+在进入本章之前，你应该熟悉前八章涵盖的所有内容，包括上一章刚讲的错误调试和处理技术。最后，请记住，你需要一个支持 PHP 的 Web 服务器和一个正在运行的 MySQL 服务器，才能执行以下示例。
+
+### 修改模板
+
+由于本章和下一章的所有页面都将属于同一个 Web 应用程序，因此使用通用的模板系统是值得的。我们不必从头创建新模板，而是再次使用第 3 章“创建动态网站”中的布局，仅对头部文件的导航链接进行少量修改。
+
+#### 创建头部文件
+
+**1.** 在文本编辑器或 IDE 中打开 `header.html`（脚本 3.2）。
+
+**2.** 将链接列表更改为如下内容（脚本 9.1）：
+
+```html
+<li><a href="index.php">Home Page</a></li>
+<li><a href="register.php">Register</a></li>
+<li><a href="view_users.php">View Users</a></li>
+<li><a href="password.php">Change Password</a></li>
+<li><a href="#">link five</a></li>
+```
+
+本章所有示例都将涉及注册、查看用户和更改密码页面。第 3 章中的日期表单和计算器链接可以删除。
+
+**3.** 将文件保存为 `header.html`。
+
+**4.** 将新的头部文件放入 Web 目录下的 `includes` 文件夹中，与 `footer.html`（脚本 3.3）和 `style.css`（可从本书配套网站 www.LarryUllman.com 下载）放在一起。
+
+**脚本 9.1.** 网站的头部文件，用于页面模板，已修改为新的导航链接。
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><?php echo $page_title; ?></title>
+    <link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div id="header">
+        <h1>Your Website</h1>
+        <h2>catchy slogan...</h2>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.php">Home Page</a></li>
+            <li><a href="register.php">Register</a></li>
+            <li><a href="view_users.php">View Users</a></li>
+            <li><a href="password.php">Change Password</a></li>
+            <li><a href="#">link five</a></li>
+        </ul>
+    </div>
+    <div id="content"><!-- Start of the page-specific content. -->
+<!-- Script 9.1 - header.html -->
+```
+
+**5.** 在 Web 浏览器中运行 `index.php` 以测试新的头部文件。
+
+![Image](img/09_figure_01_a.jpg)
+
+带有新导航链接的动态生成主页。
+
+> **提示**
+>
+> 有关该网站结构的预览，请参阅下一节中的侧边栏“组织文档”。
+
+> **提示**
+>
+> 请记住，你可以为模板文件使用任何文件扩展名，包括 `.inc` 或 `.php`。
+
+> **警告：请阅读此内容！**
+>
+> 过去十年间，PHP 和 MySQL 经历了许多变化。其中，对本章最重要的一点，也是对本书其余部分最重要的一点之一，涉及使用哪些 PHP 函数与 MySQL 通信。多年来，PHP 开发者使用标准 MySQL 函数（称为 `mysql` 扩展）。自 PHP 5 和 MySQL 4.1 起，你可以使用更新的 Improved MySQL 函数（称为 `mysqli` 扩展）。这些函数提供了更好的性能，并利用了新增功能（以及其他优势）。
+>
+> 既然本书假设你至少使用 PHP 5 和 MySQL 5，所有示例将仅使用 Improved MySQL 函数。*如果你的服务器不支持此扩展，你将无法按原样运行这些示例！* 本书其余部分的大多数示例对你也将无法运行。
+>
+> 如果你使用的服务器或家用电脑不支持 Improved MySQL 函数，你有三个选择：升级 PHP 和 MySQL，阅读本书第二版（主要教授并使用旧函数），或学习如何使用旧函数并相应修改所有示例。如有疑问或问题，请参阅本书对应的论坛（www.LarryUllman.com/forums/）。
+
+### 连接到 MySQL
+
+与 MySQL 交互的第一步——连接到服务器——需要适当命名的 `mysqli_connect()` 函数：
+
+```php
+$dbc = mysqli_connect(hostname, username, password, db_name);
+```
+
+发送给该函数的前三个参数（主机名、用户名和密码）基于 MySQL 中建立的用户和权限（详见附录 A“安装”）。通常（但不总是）情况下，主机值为 `localhost`。
+
+第四个参数是要使用的数据库名称。这相当于在 mysql 客户端中输入 `USE databasename`。
+
+如果连接成功，`$dbc` 变量（即 *database connection* 的简写，但你当然可以使用任何你想要的名称）将成为你后续所有数据库交互的引用点。大多数用于处理 MySQL 的 PHP 函数都将把此变量作为其第一个参数。
+
+如果发生连接问题，你可以调用 `mysqli_connect_error()`，它返回连接错误消息。它不接受参数，因此调用方式如下：
+
+```php
+mysqli_connect_error();
+```
+
+一旦连接到数据库，你应该设置交互的编码。自 PHP 5.0.5 起，你可以使用 `mysqli_set_charset()` 函数来实现：
+
+```php
+mysqli_set_charset($dbc, 'utf8');
+```
+
+用作编码的值——即第二个参数——应与你的 PHP 脚本编码和数据库的排序规则相匹配（有关 MySQL 排序规则的更多信息，请参见第 6 章“数据库设计”）。如果未能执行此操作，所有数据将使用默认字符集传输，这可能会导致问题。
+
+要开始将 PHP 与 MySQL 结合使用，让我们创建一个专门的脚本来建立连接。其他需要 MySQL 连接的 PHP 脚本可以包含此文件。
+
+#### 连接并选择数据库
+
+**1.** 在文本编辑器或 IDE 中创建一个新的 PHP 文档，命名为 `mysqli_connect.php`（脚本 9.2）：
+
+```php
+<?php # Script 9.2 - mysqli_connect.php
+```
+
+其他 PHP 脚本将包含此文件，因此它不需要包含任何 HTML。
+
+**2.** 将 MySQL 主机名、用户名、密码和数据库名称设置为常量：
+
+```php
+DEFINE ('DB_USER', 'username');
+DEFINE ('DB_PASSWORD', 'password');
+```
+
+
+
+DEFINE ('DB\_HOST', 'localhost');
+
+DEFINE ('DB\_NAME', 'sitename');
+
+出于安全考虑，我倾向于将这些值定义为常量（这样它们就无法被更改），但这并非强制要求。通常，将这些值设置为某种变量或常量是合理的，这样您就可以将配置参数与使用它们的函数分离开来，但同样，这也不是强制的。
+
+编写脚本时，请将这些值更改为适用于您环境的值。如果您已获得 MySQL 用户名/密码组合和数据库（例如托管网站），请在此处使用该信息。或者，如果可能，请按照附录 A 中的步骤创建一个有权访问 `sitename` 数据库的用户，并将那些值插入此处。无论您做什么，除非您确定本书代码中的值在您的服务器上一定能工作，否则请勿直接使用。
+
+### 3. 连接到 MySQL：
+
+```
+$dbc = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) OR die ('Could not connect to MySQL: ' . mysqli_connect_error() );
+```
+
+如果 `mysqli_connect()` 函数成功连接到 MySQL，将返回一个对应于打开连接的资源链接。该链接将被赋值给 `$dbc` 变量，以便其他函数可以使用此连接。
+
+函数调用前面带有错误抑制运算符（`@`）。这可以防止 PHP 错误在 Web 浏览器中显示。这是可取的，因为错误将由 `OR die()` 子句处理。
+
+### 脚本 9.2. `mysqli_connect.php` 脚本将被本章中的每个其他脚本使用。它建立与 MySQL 的连接，选择数据库，并设置编码。
+
+```
+<?php # Script 9.2 - mysqli_connect.php
+
+// This file contains the database access information.
+// This file also establishes a connection to MySQL,
+// selects the database, and sets the encoding.
+
+// Set the database access information as constants:
+DEFINE ('DB_USER', 'username');
+DEFINE ('DB_PASSWORD', 'password');
+DEFINE ('DB_HOST', 'localhost');
+DEFINE ('DB_NAME', 'sitename');
+
+// Make the connection:
+$dbc = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) OR die ('Could not connect to
+MySQL: ' . mysqli_connect_error() );
+
+// Set the encoding...
+mysqli_set_charset($dbc, 'utf8');
+```
+
+如果 `mysqli_connect()` 函数无法返回有效的资源链接，则会执行语句的 `OR die()` 部分（因为 `OR` 的第一部分将为 false，所以第二部分必须为 true）。正如前一章所讨论的，`die()` 函数会终止脚本的执行。该函数也可以接受一个字符串作为参数，该字符串将被打印到 Web 浏览器。在本例中，该字符串是 *Could not connect to MySQL:* 和具体的 MySQL 错误的组合。
+
+![Image](img/09_figure_02_a.jpg)
+
+如果连接 MySQL 出现问题，将显示一条信息性消息并停止脚本。
+
+### 4. 将文件保存为 `mysqli_connect.php`。
+
+由于此文件包含必须保密的信息——数据库访问数据——它将使用 `.php` 扩展名。使用 `.php` 扩展名时，即使恶意用户在其 Web 浏览器中运行此脚本，也无法看到页面的实际内容。
+
+您可能还会注意到，我没有包含结束 PHP 标签：`?>`。在 PHP 中这是允许的（当脚本以 PHP 代码结束时），并且这有一个将在后续章节中解释的好处。
+
+### 5. 理想情况下，将文件放在 Web 文档目录之外。
+
+![Image](img/09_figure_03_b.jpg)
+
+服务器 Web 文档的可视化表示，其中 `mysqli_connect.php` 未存储在主目录（*htdocs*）内。
+
+因为该文件包含敏感的 MySQL 访问信息，所以应安全存储。如果可以，请将其放在 Web 目录正上方或以其他方式位于 Web 目录之外的目录中。这样该文件将无法通过 Web 浏览器访问。有关更多信息，请参阅“组织您的文档”侧边栏。
+
+### 6. 将脚本的副本暂时放在 Web 目录中，并在 Web 浏览器中运行它。
+
+![Image](img/09_figure_04_c.jpg)
+
+如果 MySQL 连接脚本正常工作，最终结果将是一个空白页面（脚本不生成任何 HTML）。
+
+为了测试脚本，您需要将副本放在服务器上，以便可以从 Web 浏览器访问（这意味着它必须位于 Web 目录中）。如果脚本正常工作，结果应该是一个空白页面。如果您看到 *Access denied...* 或类似消息，这意味着用户名、密码和主机的组合无权访问特定数据库。
+
+---
+
+### 组织您的文档
+
+第 3 章 在开发第一个 Web 应用程序时介绍了*站点结构*的概念。现在页面将开始使用数据库连接脚本，该主题变得更加重要。
+
+如果数据库连接信息（用户名、密码、主机和数据库）落入恶意分子之手，可能会被用来窃取您的信息或破坏整个数据库。因此，您绝不能让 `mysqli_connect.php` 这样的脚本过于安全（此处原文 "cannot keep ... too secure" 语义为“不能不够安全/必须极其安全”，译文按语境意译为“绝不能掉以轻心/必须极其安全”）。
+
+保护此类文件的最佳建议是将其存储在 Web 文档目录之外。例如，如果图中的 *htdocs* 文件夹是 Web 目录的根目录（换句话说，URL **[www.example.com](http://www.example.com)** 指向那里），那么不在 *htdocs* 目录的任何位置存储 `mysqli_connect.php` 意味着它永远无法通过 Web 浏览器访问。诚然，PHP 脚本的源代码无法从 Web 浏览器查看（只能看到脚本发送给浏览器的数据），但小心驶得万年船。如果您不被允许将文档放在 Web 目录之外，将 `mysqli_connect.php` 放在 Web 目录中安全性较低，但也不是世界末日。
+
+其次，我建议对连接脚本使用 `.php` 扩展名。配置正确且正常运行的服务器将执行此类文件中的代码，而不是显示它。相反，如果您仅使用 `.inc` 作为扩展名，如果直接访问该页面，其内容将显示在 Web 浏览器中。
+
+---
+
+### 7. 从 Web 目录中删除临时副本。
+
+---
+
+> **提示**
+>
+> 如果您使用的 PHP 版本不支持 `mysqli_set_charset()` 函数，您将需要改为执行 `SET NAMES` `encoding` 查询：
+>
+> ```
+> mysqli_query($dbc, 'SET NAMES utf8');
+> ```
+
+---
+
+> **提示**
+>
+> 第 5 章 中用于登录 mysql 客户端的相同值，应该也适用于您的 PHP 脚本。
+
+---
+
+> **提示**
+>
+> 如果您收到错误提示 `mysqli_connect()` 是“未定义函数”，这意味着 PHP 编译时未包含对 Improved MySQL Extension（改进的 MySQL 扩展）的支持。请参阅附录了解安装信息。
+
+---
+
+> **提示**
+>
+> 运行脚本时如果看到 *Could not connect...* 错误消息，很可能意味着 MySQL 正在运行。
+>
+> ![Image](img/09_figure_05_d.jpg)
+>
+> 除了使用无效的用户名/密码/主机名/数据库信息外，PHP 可能无法连接到 MySQL 的另一个原因是 MySQL 当前未运行。
+
+---
+
+> **提示**
+
+
+
+如果你好奇，![Image](img/circle-e.jpg)展示了如果你不在`mysqli_connect()`前使用`@`且发生错误时会发生什么。
+
+![Image](img/09_figure_06_e.jpg)
+
+![Image](img/circle-e.jpg)如果你不使用错误抑制运算符（`@`），你将同时看到 PHP 错误和自定义的`OR die()`错误。
+
+---
+
+**Tip**
+
+如果在建立 MySQL 连接时不需要选择数据库，请从`mysqli_connect()`函数中省略该参数：
+
+```php
+$dbc = mysqli_connect(hostname, username, password);
+```
+
+然后，在适当的时候，你可以使用以下方式选择数据库：
+
+```php
+mysqli_select_db($dbc, db_name);
+```
+
+---
+
+#### 执行简单查询
+
+一旦你成功连接并选择了数据库，就可以开始执行查询。查询可以像插入、更新和删除一样基础，也可以像返回大量行的复杂连接一样复杂。无论 SQL 命令类型如何，执行查询的 PHP 函数都是`mysqli_query()`：
+
+```php
+result = mysqli_query(dbc, query);
+```
+
+该函数将数据库连接作为第一个参数，查询本身作为第二个参数。在完整的 PHP 脚本中，我通常将查询赋值给另一个变量，称为`$query`或仅为`$q`，因此运行查询可能如下所示：
+
+```php
+$r = mysqli_query($dbc, $q);
+```
+
+对于像`INSERT`、`UPDATE`、`DELETE`等简单查询（不返回记录），`$r`变量（result 的简写）将是 TRUE 或 FALSE，具体取决于查询是否成功执行。
+
+请记住，“成功执行”意味着它无错误运行；并不意味着查询的执行一定产生了预期结果；你需要测试这一点。
+
+对于返回记录的复杂查询（`SELECT`是其中最重要的），如果查询成功，`$r`将是指向查询结果的资源链接；如果不成功，则为 FALSE。因此，你可以在条件语句中使用这行代码来测试查询是否成功运行：
+
+```php
+$r = mysqli_query($dbc, $q);
+
+if ($r) { // Worked!
+```
+
+如果查询未成功运行，则必须发生了某种 MySQL 错误。要找出该错误是什么，请调用`mysqli_error()`函数：
+
+```php
+echo mysqli_error($dbc);
+```
+
+该函数的唯一参数是数据库连接。
+
+脚本中最后一个（尽管是可选的）步骤是在完成操作后关闭现有的 MySQL 连接：
+
+```php
+mysqli_close($dbc);
+```
+
+此函数调用不是必需的，因为 PHP 会在脚本结束时自动关闭连接，但包含它是良好的编程习惯。
+
+为了演示此过程，让我们创建一个注册脚本。它首次访问时显示表单![Image](img/circle-a.jpg)，处理表单提交，并在验证所有数据后，将注册信息插入`sitename`数据库的`users`表中。
+
+![Image](img/09_figure_07_a.jpg)
+
+![Image](img/circle-a.jpg)注册表单。
+
+作为预警，此脚本已知存在一个安全漏洞（取决于所用 PHP 版本及其设置），将在本章后面修复。
+
+#### 执行简单查询
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 脚本，命名为`register.php`（**Script 9.3**）：
+
+```php
+<?php # Script 9.3 - register.php
+
+$page_title = 'Register';
+
+include ('includes/header.html');
+```
+
+该脚本的基础——使用包含文件、让同一页面既显示又处理表单、创建粘性表单——来自第 3 章。如果你对这些概念感到困惑，请参阅该章。
+
+**2.** 创建提交条件并初始化`$errors`数组：
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $errors = array();
+```
+
+此脚本将同时显示和处理 HTML 表单。此第一个条件将检查脚本的请求方式，以便知道何时处理表单（同样来自第 3 章）。`$errors`变量将用于存储每条错误消息（每个未正确填写的表单输入一条）。
+
+**3.** 验证名：
+
+```php
+if (empty($_POST['first_name'])) {
+    $errors[] = 'You forgot to enter your first name.';
+} else {
+    $fn = trim($_POST['first_name']);
+}
+```
+
+正如第 3 章所述，`empty()`函数提供了一种确保文本字段已填写的最小方法。如果名字段未填写，则向`$errors`数组添加一条错误消息。否则，`$fn`设置为提交的值，并去除多余空格。通过使用这个新变量——显然是`first_name`的简写——稍后编写查询在语法上会更容易。
+
+**4.** 验证姓和电子邮件地址：
+
+```php
+if (empty($_POST['last_name'])) {
+    $errors[] = 'You forgot to enter your last name.';
+} else {
+    $ln = trim($_POST['last_name']);
+}
+if (empty($_POST['email'])) {
+    $errors[] = 'You forgot to enter your email address.';
+} else {
+    $e = trim($_POST['email']);
+}
+```
+
+这些行本质上与验证名字段的行相同。在两种情况下，假设通过了最小验证，都将创建一个新变量。
+
+**5.** 验证密码：
+
+```php
+if (!empty($_POST['pass1'])) {
+    if ($_POST['pass1'] != $_POST['pass2']) {
+        $errors[] = 'Your password did not match the confirmed password.';
+    } else {
+        $p = trim($_POST['pass1']);
+    }
+} else {
+    $errors[] = 'You forgot to enter your password.';
+}
+```
+
+**Script 9.3.** 注册脚本通过运行`INSERT`查询向数据库添加记录。
+
+---
+
+```php
+1   <?php # Script 9.3 - register.php
+2   // This script performs an INSERT query to add a record to the users table.
+3
+4   $page_title = 'Register';
+5   include ('includes/header.html');
+6
+7   // Check for form submission:
+8   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+9
+10      $errors = array(); // Initialize an error array.
+11
+12      // Check for a first name:
+13      if (empty($_POST['first_name'])) {
+14          $errors[] = 'You forgot to enter your first name.';
+15      } else {
+16          $fn = trim($_POST['first_name']);
+17      }
+18
+19      // Check for a last name:
+20      if (empty($_POST['last_name'])) {
+21          $errors[] = 'You forgot to enter your last name.';
+22      } else {
+23          $ln = trim($_POST['last_name']);
+24      }
+25
+26      // Check for an email address:
+27      if (empty($_POST['email'])) {
+28          $errors[] = 'You forgot to enter your email address.';
+29      } else {
+30          $e = trim($_POST['email']);
+31      }
+32
+33      // Check for a password and match against the confirmed password:
+34      if (!empty($_POST['pass1'])) {
+35          if ($_POST['pass1'] != $_POST['pass2']) {
+36              $errors[] = 'Your password did not match the confirmed password.';
+37          } else {
+38              $p = trim($_POST['pass1']);
+39          }
+40      } else {
+41          $errors[] = 'You forgot to enter your password.';
+42      }
+43
+44      if (empty($errors)) { // If everything's OK.
+45
+46          // Register the user in the database...
+47
+48          require ('../mysqli_connect.php'); // Connect to the db.
+49
+50          // Make the query:
+51          $q = "INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES
+            ('$fn', '$ln', '$e', SHA1('$p'), NOW() )";
+52          $r = @mysqli_query($dbc, $q); // Run the query.
+53          if ($r) { // If it ran OK.
+54
+55              // Print a message:
+56              echo '<h1>Thank you!</h1>
+```
+
+
+
+### 用户注册处理脚本分析
+
+#### 代码实现
+
+```php
+57          <p>You are now registered. In Chapter 12 you will actually be able to log in!</p><p>  
+              <br /></p>';  
+58  
+59          } else { // If it did not run OK.  
+60  
+61             // Public message:  
+62             echo '<h1>System Error</h1>  
+63             <p class="error">You could not be registered due to a system error. We apologize for  
+                any inconvenience.</p>';  
+64  
+65             // Debugging message:  
+66             echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';  
+67  
+68          } // End of if ($r) IF.  
+69  
+70          mysqli_close($dbc); // Close the database connection.  
+71  
+72          // Include the footer and quit the script:  
+73          include ('includes/footer.html');  
+74          exit( );  
+75  
+76      } else { // Report the errors.  
+77  
+78          echo '<h1>Error!</h1>  
+79          <p class="error">The following error(s) occurred:<br />';  
+80          foreach ($errors as $msg) { // Print each error.  
+81              echo " - $msg<br />\n";  
+82          }  
+          echo '</p><p>Please try again.</p><p><br /></p>';  
+84  
+85      } // End of if (empty($errors)) IF.  
+86  
+87  } // End of the main Submit conditional.  
+88  ?>  
+89  <h1>Register</h1>  
+90  <form action="register.php" method="post">  
+91      <p>First Name: <input type="text" name="first_name" size="15" maxlength="20" value="<?php if  
+             (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" /></p>  
+92      <p>Last Name: <input type="text" name="last_name" size="15" maxlength="40" value="<?php if  
+             (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" /></p>  
+93      <p>Email Address: <input type="text" name="email" size="20" maxlength="60" value="<?php if  
+             (isset($_POST['email'])) echo $_POST['email']; ?>" /> </p>  
+94      <p>Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if  
+             (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>  
+95      <p>Confirm Password: <input type="password" name="pass2" size="10" maxlength="20"  
+             value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>  
+96      <p><input type="submit" name="submit" value="Register" /></p>  
+97  </form>  
+98  <?php include ('includes/footer.html'); ?>
+```
+
+#### 密码验证逻辑
+
+为了验证密码，脚本需要检查 `pass1` 输入是否有值，然后确认 `pass1` 的值与 `pass2` 的值匹配（即密码和确认密码相同）。
+
+### 步骤详解
+
+### 6. 检查是否可以注册用户
+
+```php
+if (empty($errors)) {
+```
+
+如果提交的数据通过了所有条件，`$errors` 数组将没有值（为空），因此此条件为真，可以安全地将记录添加到数据库。如果 `$errors` 数组不为空，则应打印相应的错误消息（见步骤 11），并给用户另一次注册机会。
+
+### 7. 包含数据库连接
+
+```php
+require ('../mysqli_connect.php');
+```
+
+这行代码将 `mysqli_connect.php` 文件的内容插入到此脚本中，从而创建与 MySQL 的连接并选择数据库。您可能需要根据服务器上的文件位置更改文件引用（按原样编写，此行假设 `mysqli_connect.php` 位于当前文件夹的父文件夹中）。
+
+### 8. 将用户添加到数据库
+
+```php
+$q = "INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES ('$fn', '$ln', '$e', SHA1('$p'), NOW() );  
+$r = @mysqli_query ($dbc, $q);
+```
+
+查询本身类似于第 5 章中演示的查询。`SHA1()` 函数用于加密密码，`NOW()` 用于将注册日期设置为当前时刻。
+
+将查询赋值给变量后，通过 `mysqli_query()` 函数运行，该函数将 SQL 命令发送到 MySQL 数据库。与 `mysqli_connect.php` 脚本一样，`mysqli_query()` 调用前面有 `@` 以抑制任何难看的错误。如果出现问题，将在下一步中更直接地处理错误。
+
+### 9. 报告注册成功与否
+
+```php
+if ($r) {  
+    echo '<h1>Thank you!</h1>  
+    <p>You are now registered. In Chapter 12 you will actually be able to log in!</p><p><br /></p>';  
+} else {  
+    echo '<h1>System Error</h1>  
+    <p class="error">You could not be registered due to a system error. We apologize for any inconvenience.</p>';  
+    echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';  
+} // End of if ($r) IF.
+```
+
+`$r` 变量被赋予 `mysqli_query()` 返回的值，可用于条件判断以测试查询是否成功执行。
+
+如果 `$r` 为 TRUE，则显示 *Thank you!* 消息。如果 `$r` 为 FALSE，则打印错误消息。出于调试目的，错误消息将包括 MySQL 抛出的错误（得益于 `mysqli_error()` 函数）以及正在运行的查询。此信息对于调试问题至关重要。但是，您不希望在实时站点上显示此类信息。
+
+> **图示说明**
+> - 如果用户能够在数据库中注册，将显示此消息。
+> - 由查询引起的任何 MySQL 错误都将被打印，正在运行的查询也将被打印。
+
+### 10. 关闭数据库连接并完成 HTML 模板
+
+```php
+mysqli_close($dbc);  
+include ('includes/footer.html');  
+exit( );
+```
+
+关闭连接不是必需的，但这是一个好的策略。然后包含页脚并终止脚本（得益于 `exit()` 函数）。如果没有这两行，注册表单将再次显示（成功注册后这是不必要的）。
+
+### 11. 打印任何错误消息并关闭提交条件
+
+```php
+} else { // Report the errors.  
+    echo '<h1>Error!</h1>  
+    <p class="error">The following error(s) occurred:<br />';  
+    foreach ($errors as $msg) { // Print each error.  
+        echo " - $msg<br />\n";  
+    }  
+    echo '</p><p>Please try again.</p><p><br /></p>';  
+} // End of if (empty($errors)) IF.  
+} // End of the main Submit conditional.
+```
+
+如果存在任何错误，将调用 `else` 子句。在这种情况下，使用 `foreach` 循环显示所有错误。
+
+> **图示说明**
+> 每个表单验证错误都会报告给用户，以便他们可以尝试再次注册。
+
+最后的右大括号关闭主提交条件。主条件是一个简单的 `if`，而不是 `if-else`，以便使表单具有粘性（同样，请参阅第 3 章）。
+
+### 12. 关闭 PHP 部分并开始 HTML 表单
+
+```php
+?>  
+<h1>Register</h1>  
+<form action="register.php" method="post">  
+    <p>First Name: <input type="text" name="first_name" size="15" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" /></p>  
+    <p>Last Name: <input type="text" name="last_name" size="15" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name'];?>" /></p>
+```
+
+表单非常简单，针对 `users` 表中的每个字段（`user_id` 和 `registration_date` 列除外，它们将自动填充）都有一个文本输入框。每个输入都使用如下代码使其具有粘性：
+
+```php
+value="<?php if (isset($_POST['var'])) echo $_POST['var']; ?>"
+```
+
+
+
+此外，我强烈建议您将表单输入框的名称设置为与数据库中存储该值的对应列同名。此外，您应将表单中的最大输入长度设置为等于数据库中该列的最大长度。这两个习惯都有助于将错误降至最低。
+
+**13.** 完成 HTML 表单：
+
+```html
+<p>Email Address: <input type="text" name="email" size="20" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" /> </p>
+
+<p>Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>
+
+<p>Confirm Password: <input type="password" name="pass2" size="10" maxlength="20" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
+
+<p><input type="submit" name="submit" value="Register" /></p>
+
+</form>
+```
+
+这与步骤 12 中的内容非常相似，只是增加了一个提交按钮。
+
+顺便提一下，对于密码输入框，我不需要遵循我的 `maxlength` 建议（来自步骤 12），因为它们将使用 `SHA1()` 进行加密，该函数生成的字符串始终为 40 个字符长。而且由于有两个密码框，它们不能都使用与数据库列相同的名称。
+
+**14.** 完成模板：
+
+```php
+<?php include ('includes/footer.html'); ?>
+```
+
+**15.** 将文件保存为 `register.php`，将其放入您的 Web 目录中，并在 Web 浏览器中进行测试。
+
+请注意，如果您在表单值中使用了撇号，很可能会破坏查询 ![Image](img/circle-e.jpg)。本章后面的“确保 SQL 安全”一节将展示如何防范此问题。
+
+![Image](img/09_figure_11_e.jpg)
+
+![Image](img/circle-e.jpg)表单值中的撇号（如此处的姓氏）将与查询中用于界定值的撇号发生冲突。
+
+***
+
+提示
+
+运行脚本后，您始终可以使用 mysql 客户端或 phpMyAdmin 查看 *users* 表中的记录，以确保脚本已成功运行。
+
+***
+
+提示
+
+您不应在 PHP 中以分号结束查询，就像使用 mysql 客户端时那样。在使用 MySQL 时，这是一个常见的、虽然无害但容易犯的错误。而在使用其他数据库应用程序（如 Oracle）时，这样做会导致查询无法使用。
+
+***
+
+提示
+
+作为提醒，如果查询能在数据库上无错误执行，`mysqli_query()` 函数将返回 TRUE 值。这并不一定意味着查询的结果是您所期望的。后续脚本将演示如何更准确地衡量查询是否成功。
+
+***
+
+提示
+
+您没有义务像我倾向于做的那样创建一个 `$q` 变量（您可以直接将查询文本插入 `mysqli_query()` 中）。然而，随着查询构建变得更加复杂，使用变量将成为唯一的选择。
+
+***
+
+提示
+
+实际上，您在 mysql 客户端中运行的几乎任何查询，也都可以使用 `mysqli_query()` 来执行。
+
+***
+
+提示
+
+改进版 MySQL 扩展相比标准扩展的另一个优势是，`mysqli_multi_query()` 函数允许您一次执行多个查询。这样做的语法稍微复杂一些，特别是当查询返回结果时，因此如果您有这方面的需求，请参阅 PHP 手册。
+
+#### 检索查询结果
+
+本章前面的部分演示了如何在 MySQL 数据库上执行简单查询。我所谓的*简单查询*，可以定义为以 `INSERT`、`UPDATE`、`DELETE` 或 `ALTER` 开头的查询。这四者的共同点是它们不返回数据，只返回成功与否的指示。相反，`SELECT` 查询会生成信息（即返回记录行），必须由其他 PHP 函数来处理。
+
+处理 `SELECT` 查询结果的主要工具是 `mysqli_fetch_array()`，它使用查询结果变量（我一直称之为 `$r`），并以数组格式一次返回一行数据。您需要在循环中使用此函数，只要还有行可读，循环就会继续访问每一行返回的数据。读取查询返回的每一条记录的基本结构是
+
+```php
+while ($row = mysqli_fetch_array($r))
+{
+
+    // Do something with $row.
+
+}
+```
+
+*您几乎总是需要使用* `while` 循环来获取 `SELECT` 查询的结果。
+
+`mysqli_fetch_array()` 函数接受一个可选的第二个参数，用于指定返回的数组类型：关联数组、索引数组或两者兼有。关联数组允许您通过名称引用列值，而索引数组则要求您仅使用数字（第一个返回的列从 0 开始）。每个参数由 **表 9.1** 中列出的常量定义，默认值为 `MYSQLI_BOTH`。`MYSQLI_NUM` 设置比其他选项略快（且占用内存更少）。相反，`MYSQLI_ASSOC` 更加直观（使用 `$row['column']` 而非 `$row[3]`），并且即使查询发生变化，可能仍能继续工作。
+
+**表 9.1. mysqli_fetch_array() 常量**
+
+![Image](img/09tab01.jpg)
+
+使用 `mysqli_fetch_array()` 时，您可以采取的一个可选步骤是，在使用完查询结果后释放查询结果资源：
+
+```php
+mysqli_free_result ($r);
+```
+
+这行代码会移除 `$r` 占用的开销（内存）。这是一个可选步骤，因为 PHP 会在脚本结束时自动释放资源，但就像使用 `mysqli_close()` 一样，这确实是一种良好的编程习惯。
+
+为了演示如何处理查询返回的结果，让我们创建一个用于查看所有当前注册用户的脚本。
+
+#### 检索查询结果
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `view_users.php`（**脚本 9.4**）：
+
+```php
+<?php # Script 9.4 - view_users.php
+
+$page_title = 'View the Current Users';
+
+include ('includes/header.html');
+
+echo '<h1>Registered Users</h1>';
+```
+
+**2.** 连接并查询数据库：
+
+```php
+require ('../mysqli_connect.php');
+
+$q = "SELECT CONCAT(last_name, ', ', first_name) AS name, DATE_FORMAT(registration_date, '%M %d, %Y') AS dr FROM users ORDER BY registration_date ASC";
+
+$r = @mysqli_query ($dbc, $q);
+```
+
+此处的查询将返回两列 ![Image](img/circle-a.jpg)：用户姓名（格式化为 *Last Name, First Name*）和注册日期（格式化为 *Month DD, YYYY*）。由于这两列都使用 MySQL 函数进行格式化，因此给返回的结果起了别名（分别为 *name* 和 *dr*）。如果您对这些语法感到困惑，请参阅 第 5 章。
+
+![Image](img/09_figure_12_a.jpg)
+
+![Image](img/circle-a.jpg)在 mysql 客户端中运行的查询结果。
+
+**3.** 创建一个 HTML 表格以显示查询结果：
+
+```php
+if ($r) {
+    echo '<table align="center" cellspacing="3" cellpadding="3"
+    width="75%">
+    <tr><td align="left"><b>Name</b></td><td align="left"><b>Date Registered</b></td></tr>
+    ';
+```
+
+如果 `$r` 变量的值为 TRUE，则表示查询无错误运行，可以显示结果。为此，首先创建一个表格和一个 HTML 表头行。
+
+**4.** 获取并打印每一条返回的记录：
+
+```php
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    echo '<tr><td align="left">' . $row['name'] . '</td><td align="left">' . $row['dr'] . '</td></tr>
+    ';
+}
+```
+
+
+
+接下来，使用 `mysqli_fetch_array()` 循环遍历结果并打印每一行获取的数据。请注意，在 `while` 循环内部，代码使用正确的别名来引用每个返回的值：`$row['name']` 和 `$row['dr']`。脚本无法引用 `$row['first_name']` 或 `$row['date_registered']`，因为查询并未返回这些字段名 ![Image](img/graycircle-a.jpg)。
+
+**脚本 9.4。** `view_users.php` 脚本在数据库上运行一个静态查询并打印所有返回的行。
+
+---
+
+```php
+<?php # Script 9.4 - view_users.php
+
+// This script retrieves all the records from the users table.
+
+$page_title = 'View the Current Users';
+include ('includes/header.html');
+
+// Page header:
+echo '<h1>Registered Users</h1>';
+
+require ('../mysqli_connect.php'); // Connect to the db.
+
+// Make the query:
+$q = "SELECT CONCAT(last_name, ', ', first_name) AS name, DATE_FORMAT(registration_date, '%M %d,
+    %Y') AS dr FROM users ORDER BY registration_date ASC";
+$r = @mysqli_query ($dbc, $q); // Run the query.
+
+if ($r) { // If it ran OK, display the records.
+
+    // Table header.
+    echo '<table align="center" cellspacing="3" cellpadding="3" width="75%">
+    <tr><td align="left"><b>Name</b></td><td align="left"><b>Date Registered</b></td></tr>
+';
+
+    // Fetch and print all the records:
+    while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+        echo '<tr><td align="left">' . $row['name'] . '</td><td align="left">' . $row['dr'] .
+            '</td></tr>
+        ';
+    }
+
+    echo '</table>'; // Close the table.
+
+    mysqli_free_result ($r); // Free up the resources.
+
+} else { // If it did not run OK.
+
+    // Public message:
+    echo '<p class="error">The current users could not be retrieved. We apologize for any
+        inconvenience.</p>';
+
+    // Debugging message:
+    echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+
+} // End of if ($r) IF.
+
+mysqli_close($dbc); // Close the database connection.
+
+include ('includes/footer.html');
+?>
+```
+
+---
+
+**5.** 关闭 HTML 表格并释放查询资源：
+
+```php
+echo '</table>';
+mysqli_free_result ($r);
+```
+
+同样，这是一个可选步骤，但建议执行。
+
+**6.** 完成主条件判断：
+
+```php
+} else {
+    echo '<p class="error">The current users could not be retrieved. We apologize for any inconvenience.</p>';
+    echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+} // End of if ($r) IF.
+```
+
+正如 `register.php` 示例中那样，这里有两种错误消息。第一种是通用消息，是你在实际网站上会显示的类型。第二种则详细得多，同时打印 MySQL 错误和查询语句，这两者对于调试目的至关重要。
+
+**7.** 关闭数据库连接并结束页面：
+
+```php
+mysqli_close($dbc);
+include ('includes/footer.html');
+?>
+```
+
+**8.** 将文件保存为 `view_users.php`，将其放在你的 Web 目录中，并在浏览器中测试 ![Image](img/circle-b.jpg)。
+
+![Image](img/09_figure_13_b.jpg)
+
+![Image](img/circle-b.jpg)所有用户记录都从数据库中检索并在 Web 浏览器中显示。
+
+---
+
+> **提示**
+>
+> 函数 `mysqli_fetch_row()` 等同于 `mysqli_fetch_array($r, MYSQLI_NUM);`。
+
+---
+
+> **提示**
+>
+> 函数 `mysqli_fetch_assoc()` 等同于 `mysqli_fetch_array($r, MYSQLI_ASSOC);`。
+
+---
+
+> **提示**
+>
+> 与任何关联数组一样，当你从数据库检索记录时，必须严格按照数据库或查询中的列名或别名来引用所选列。也就是说，键名**区分大小写**。
+
+---
+
+> **提示**
+>
+> 如果你遇到需要在 `while` 循环内部运行第二个查询的情况，请务必为该查询使用不同的变量名。例如，内部查询应使用 `$r2` 和 `$row2`，而不是 `$r` 和 `$row`。如果不这样做，你会遇到逻辑错误。
+
+---
+
+> **提示**
+>
+> 我有时会看到初学者混淆获取查询结果的过程。请记住，你必须使用 `mysqli_query()` 执行查询，然后使用 `mysqli_fetch_array()` 来检索单行信息。如果你有多行需要检索，请使用 `while` 循环。
+
+---
+
+### 确保 SQL 安全
+
+关于 PHP 的数据库安全性归结为三大问题：
+
+**1.** 保护 MySQL 访问信息
+
+**2.** 不泄露过多关于数据库的信息
+
+**3.** 运行查询时保持谨慎，特别是涉及用户提交数据的查询
+
+你可以通过将 MySQL 连接脚本放在 Web 目录之外来实现第一个目标，这样它就永远无法通过 Web 浏览器查看（参见 ![Image](img/graycircle-c.jpg) "连接到 MySQL"）。本章前面已对此进行了详细讨论。第二个目标通过不让用户看到 PHP 的错误消息或你的查询来实现（在这些脚本中，这些信息是为你的调试目的而打印的；在实际网站上你绝不希望这样做）。
+
+对于第三个目标，你可以并且应该采取许多步骤，所有步骤都基于**永不信任用户提供的数据**这一前提。首先，验证是否已提交某个值，或者其类型是否正确（数字、字符串等）。其次，使用正则表达式确保提交的数据符合你的预期（该主题将在 第 14 章 "Perl 兼容正则表达式" 中介绍）。第三，你可以对某些值进行类型转换以确保它们是数字（将在 第 13 章 "安全方法" 中讨论）。第四个建议是将用户提交的数据通过 `mysqli_real_escape_string()` 函数处理。该函数通过转义可能有问题的字符，使数据在查询中使用时变得安全。用法如下：
+
+```php
+$safe = mysqli_real_escape_string($dbc, data);
+```
+
+要了解为什么这很有必要，请参见 ![Image](img/graycircle-e.jpg) "执行简单查询"。用户姓氏中的撇号使查询在语法上无效：
+
+```sql
+INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES ('Peter', 'O'Toole', 'pete@example.net', SHA1('aPass8'), NOW())
+```
+
+在这个特定示例中，有效的用户数据破坏了查询，这是不好的。但如果你的 PHP 允许这种可能性，恶意用户可以故意提交有问题的字符（撇号只是一个例子）来入侵或破坏你的数据库。出于安全考虑，`mysqli_real_escape_string()` 应用于表单中的**每一个**文本输入。为了演示这一点，让我们改造 `register.php`（脚本 9.3）。
+
+#### 使用 mysqli_real_escape_string()
+
+**1.** 在文本编辑器或 IDE 中打开 `register.php`（脚本 9.3）（如果尚未打开）。
+
+**2.** 将 `mysqli_connect.php` 文件的引入（脚本 9.3 第 48 行）移至主条件判断之后（脚本 9.5）。
+
+因为 `mysqli_real_escape_string()` 函数需要数据库连接，所以 `mysqli_connect.php` 脚本必须在脚本中更早地被引入。
+
+**脚本 9.5.** `register.php` 脚本现在使用 `mysqli_real_escape_string()` 函数使提交的数据在查询中使用时变得安全。
+
+---
+
+```php
+<?php # Script 9.5 - register.php #2
+
+// This script performs an INSERT query to add a record to the users table.
+
+$page_title = 'Register';
+```
+
+
+
+
+```php
+5   include ('includes/header.html');
+
+6
+
+7   // Check for form submission:
+8   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+9
+
+10      require ('../mysqli_connect.php'); // Connect to the db.
+
+11
+
+12      $errors = array(); // Initialize an error array.
+
+13
+
+14      // Check for a first name:
+15      if (empty($_POST['first_name'])) {
+16          $errors[] = 'You forgot to enter your first name.';
+17      } else {
+18          $fn = mysqli_real_escape_string($dbc, trim($_POST['first_name']));
+19      }
+
+20
+
+21      // Check for a last name:
+22      if (empty($_POST['last_name'])) {
+23          $errors[] = 'You forgot to enter your last name.';
+24      } else {
+25          $ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
+26      }
+
+27
+
+28      // Check for an email address:
+29      if (empty($_POST['email'])) {
+30          $errors[] = 'You forgot to enter your email address.';
+31      } else {
+32          $e = mysqli_real_escape_string($dbc, trim($_POST['email']));
+33      }
+
+34
+
+35      // Check for a password and match against the confirmed password:
+36      if (!empty($_POST['pass1'])) {
+37          if ($_POST['pass1'] != $_POST['pass2']) {
+38              $errors[] = 'Your password did not match the confirmed password.';
+39          } else {
+40              $p = mysqli_real_escape_string($dbc, trim($_POST['pass1']));
+41          }
+42      } else {
+43          $errors[] = 'You forgot to enter your password.';
+44      }
+
+45
+
+46      if (empty($errors)) { // If everything's OK.
+
+47
+
+48          // Register the user in the database...
+
+49
+
+50          // Make the query:
+51          $q = "INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES
+              ('$fn', '$ln', '$e', SHA1('$p'), NOW() )";
+52          $r = @mysqli_query ($dbc, $q); // Run the query.
+53          if ($r) { // If it ran OK.
+
+54
+
+55              // Print a message:
+56              echo '<h1>Thank you!</h1>
+57              <p>You are now registered. In Chapter 12 you will actually be able to log in!</p><p>
+              <br /></p>';
+
+58
+
+59          } else { // If it did not run OK.
+
+60
+
+61              // Public message:
+62              echo '<h1>System Error</h1>
+63              <p class="error">You could not be registered due to a system error. We apologize for
+                  any inconvenience.</p>';
+
+64
+
+65              // Debugging message:
+66              echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+
+67
+
+68          } // End of if ($r) IF.
+
+69
+
+70          mysqli_close($dbc); // Close the database connection.
+
+71
+
+72          // Include the footer and quit the script:
+73          include ('includes/footer.html');
+74          exit();
+
+75
+
+76      } else { // Report the errors.
+
+77
+
+78          echo '<h1>Error!</h1>
+79          <p class="error">The following error(s) occurred:<br />';
+80          foreach ($errors as $msg) { // Print each error.
+81              echo " - $msg<br />\n";
+82          }
+83          echo '</p><p>Please try again.</p><p><br /></p>';
+
+84
+
+85      } // End of if (empty($errors)) IF.
+
+86
+
+87      mysqli_close($dbc); // Close the database connection.
+
+88
+
+89  } // End of the main Submit conditional.
+90  ?>
+91  <h1>Register</h1>
+92  <form action="register.php" method="post">
+93      <p>First Name: <input type="text" name="first_name" size="15" maxlength="20" value="<?php if
+              (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" /></p>
+94      <p>Last Name: <input type="text" name="last_name" size="15" maxlength="40" value="<?php if
+              (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" /></p>
+95      <p>Email Address: <input type="text" name="email" size="20" maxlength="60" value="<?php if
+              (isset($_POST['email'])) echo $_POST['email']; ?>" /> </p>
+96      <p>Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if
+              (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>
+97      <p>Confirm Password: <input type="password" name="pass2" size="10" maxlength="20"
+              value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
+98      <p><input type="submit" name="submit" value="Register" /></p>
+99  </form>
+100 <?php include ('includes/footer.html'); ?>
+```
+
+---
+
+### 3. 修改验证流程以使用 `mysqli_real_escape_string()` 函数
+
+将每处 **`$var = trim($_POST['var'])`** 替换为 **`$var = mysqli_real_escape_string($dbc, trim($_POST['var']))`**：
+
+```php
+$fn = mysqli_real_escape_string($dbc, trim($_POST['first_name']));
+$ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
+$e = mysqli_real_escape_string($dbc, trim($_POST['email']));
+$p = mysqli_real_escape_string($dbc, trim($_POST['pass1']));
+```
+
+不仅将提交的值直接赋给各个变量（**`$fn`**、**`$ln`** 等），还会先通过 **`mysqli_real_escape_string()`** 函数处理这些值。**`trim()`** 函数依然用于去除多余的空格。
+
+---
+
+### 4. 在主条件结构结束前增加第二次 `mysqli_close()` 调用
+
+```php
+mysqli_close($dbc);
+```
+
+为了保持一致性，既然数据库连接是在主条件结构的第一步打开的，那么也应该在该条件结构的最后一步关闭它。不过，在包含页脚并终止脚本之前（第 73 行和第 74 行），仍然需要关闭连接。
+
+---
+
+### 5. 将文件保存为 `register.php`，放入 Web 目录，并在浏览器中测试
+
+![Image](img/circle-a.jpg)and ![Image](img/circle-b.jpg)
+
+![Image](img/09_figure_14_a.jpg)
+
+![Image](img/circle-a.jpg) 值中包含撇号的情况（如人名中的撇号）将不再导致 `INSERT` 查询出错，这要归功于 `mysqli_real_escape_string()` 函数。
+
+![Image](img/09_figure_15_b.jpg)
+
+![Image](img/circle-b.jpg) 现在注册流程能够处理有问题的字符，安全性更高。
+
+---
+
+> **Tip**
+>
+> **`mysqli_real_escape_string()`** 函数会根据所用语言（即排序规则）对字符串进行转义，这是该函数相对于其他替代方案的优势。
+
+---
+
+> **Tip**
+>
+> 如果出现类似 ![Image](img/circle-c.jpg) 的结果，说明 **`mysqli_real_escape_string()`** 函数无法访问数据库（因为没有连接，如 **`$dbc`**）。
+>
+> ![Image](img/09_figure_16_c.jpg)
+>
+> ![Image](img/circle-c.jpg) 由于 `mysqli_real_escape_string()` 需要数据库连接，在没有该连接的情况下使用它（例如在包含连接脚本之前）会导致其他错误。
+
+---
+
+> **Tip**
+>
+> 如果服务器启用了 Magic Quotes，则需要在使用 **`mysqli_real_escape_string()`** 函数之前，先移除 Magic Quotes 添加的斜杠。代码（尽管显得繁琐）如下所示：
+>
+> ```php
+> $fn = mysqli_real_escape_string($dbc, trim(stripslashes($_POST['first_name'])));
+> ```
+>
+> 如果不使用 **`stripslashes()`** 而 Magic Quotes 又处于启用状态，表单值将被双重转义。
+
+---
+
+> **Tip**
+>
+> 如果查看数据库中存储的值（使用 mysql 客户端、phpMyAdmin 或类似工具），你不会看到撇号和其他有问题的字符带有前导反斜杠。这是正确的。反斜杠防止有问题的字符破坏查询，但反斜杠本身不会被存储。
+
+---
+
+### 统计返回的记录数
+
+
+
+
+接下来要讨论的逻辑函数是 `mysqli_num_rows()`。该函数返回 `SELECT` 查询检索到的行数。它接受一个参数，即查询结果变量：
+
+```
+$num = mysqli_num_rows($r);
+```
+
+虽然其用途简单，但该函数非常有用。如果你想对查询结果进行分页（下一章中有此示例），则必须使用它。此外，在尝试使用 `while` 循环获取任何结果之前使用此函数也是个好主意（因为如果没有结果则无需获取，尝试这样做可能会导致错误）。在接下来的步骤序列中，让我们修改 `view_users.php` 以列出注册用户的总数。
+
+#### 修改 view_users.php
+
+**1.** 在文本编辑器或 IDE 中打开 `view_users.php`（参考 脚本 9.4），如果尚未打开的话。
+
+**2.** 在 `if ($r)` 条件判断之前，添加此行（**脚本 9.6**）：
+
+```
+$num = mysqli_num_rows($r);
+```
+
+此行将查询返回的行数赋值给 `$num` 变量。
+
+**3.** 将原来的 `$r` 条件判断更改为：
+
+```
+if ($num > 0) {
+```
+
+以前编写的条件判断是基于查询是否成功运行，而不是基于是否返回了任何记录。现在它将更加准确。
+
+**脚本 9.6.** 现在 `view_users.php` 脚本将显示注册用户的总数，这要归功于 `mysqli_num_rows()` 函数。
+
+```
+<?php # 脚本 9.6 - view_users.php #2
+
+// 此脚本从 users 表中检索所有记录。
+
+$page_title = 'View the Current Users';
+include ('includes/header.html');
+
+// 页面标题：
+echo '<h1>Registered Users</h1>';
+
+require ('../mysqli_connect.php');
+// 连接到数据库。
+
+// 执行查询：
+$q = "SELECT CONCAT(last_name, ', ',
+    first_name) AS name, DATE_FORMAT
+    (registration_date, '%M %d, %Y') AS dr
+    FROM users ORDER BY registration_date ASC";
+$r = @mysqli_query($dbc, $q); // 运行
+    // 查询。
+
+// 统计返回的行数：
+$num = mysqli_num_rows($r);
+
+if ($num > 0) { // 如果运行正常，
+    // 显示记录。
+
+    // 打印用户数量：
+    echo "<p>There are currently $num
+        registered users.</p>\n";
+
+    // 表格标题。
+    echo '<table align="center"
+        cellspacing="3" cellpadding="3"
+        width="75%">
+    <tr><td align="left"><b>Name</
+        b></td><td align="left"><b>Date
+        Registered</b></td></tr>
+    ';
+
+    // 获取并打印所有记录：
+    while ($row = mysqli_fetch_array($r,
+        MYSQLI_ASSOC)) {
+        echo '<tr><td align="left">' .
+            $row['name'] . '</td><td align=
+            "left">' . $row['dr'] . '</td></tr>
+        ';
+    }
+
+    echo '</table>'; // 关闭表格。
+
+    mysqli_free_result($r); // 释放
+        // 资源。
+
+} else { // 如果未返回记录。
+
+    echo '<p class="error">There are
+        currently no registered users.</p>';
+
+}
+
+mysqli_close($dbc); // 关闭数据库
+    // 连接。
+
+include ('includes/footer.html');
+?>
+```
+
+**4.** 在创建 HTML 表格之前，打印注册用户的数量：
+
+```
+echo "<p>There are currently $num registered users.</p>\n";
+```
+
+**5.** 将主条件判断的 `else` 部分更改为：
+
+```
+echo '<p class="error">There are currently no registered users.</p>';
+```
+
+原来的条件判断是基于查询是否工作。希望你已成功调试查询使其正常工作，因此不再需要原来的错误消息。现在错误消息仅表示未返回任何记录。
+
+**6.** 将文件保存为 `view_users.php`，将其放在你的 Web 目录中，并在 Web 浏览器中测试它 ![Image](img/circle-a.jpg)。
+
+![Image](img/09_figure_17_a.jpg)
+
+![Image](img/circle-a.jpg)注册用户的数量现在显示在页面顶部。
+
+---
+
+### 修改 register.php
+
+`mysqli_num_rows()` 函数可应用于 `register.php`，以防止某人使用同一电子邮件地址多次注册。尽管该列上的数据库 `UNIQUE` 索引将防止这种情况发生，但此类尝试会产生 MySQL 错误。要使用 PHP 防止这种情况，请运行一个 `SELECT` 查询以确认该电子邮件地址当前未被注册。该查询只需：
+
+```
+SELECT user_id FROM users WHERE email='$e'
+```
+
+你将运行此查询（使用 `mysqli_query()` 函数），然后调用 `mysqli_num_rows()`。如果 `mysqli_num_rows()` 返回 0，则表示该电子邮件地址尚未注册，可以安全地运行 `INSERT`。
+
+---
+
+#### 使用 PHP 更新记录
+
+本章的最后一项技术展示了如何通过 PHP 脚本更新数据库记录。这需要一个 `UPDATE` 查询，其成功执行可通过 PHP 的 `mysqli_affected_rows()` 函数进行验证。
+
+虽然 `mysqli_num_rows()` 函数返回 `SELECT` 查询生成的行数，但 `mysqli_affected_rows()` 返回 `INSERT`、`UPDATE` 或 `DELETE` 查询影响的行数。其用法如下：
+
+```
+$num = mysqli_affected_rows($dbc);
+```
+
+与 `mysqli_num_rows()` 不同，该函数接受的唯一参数是数据库连接（`$dbc`），而不是前一个查询的结果（`$r`）。
+
+以下示例将是一个允许注册用户更改密码的脚本。它演示了两个重要概念：
+
+• 将提交的用户名和密码与注册值进行核对（这也是登录系统的关键）
+• 使用主键作为引用来更新数据库记录
+
+与注册示例一样，这一个 PHP 脚本既会显示表单 ![Image](img/circle-a.jpg)也会处理它。
+
+![Image](img/09_figure_18_a.jpg)
+
+![Image](img/circle-a.jpg)更改用户密码的表单。
+
+#### 使用 PHP 更新记录
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 脚本，命名为 `password.php`（**脚本 9.7**）：
+
+```
+<?php # 脚本 9.7 - password.php
+
+$page_title = 'Change Your Password';
+include ('includes/header.html');
+```
+
+**脚本 9.7.** `password.php` 脚本在数据库上运行 `UPDATE` 查询，并使用 `mysqli_affected_rows()` 函数确认更改。
+
+```
+<?php # 脚本 9.7 - password.php
+// 此页面允许用户更改其密码。
+
+$page_title = 'Change Your Password';
+include ('includes/header.html');
+
+// 检查表单提交：
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    require ('../mysqli_connect.php');
+        // 连接到数据库。
+
+    $errors = array(); // 初始化错误
+        // 数组。
+
+    // 检查电子邮件地址：
+    if (empty($_POST['email'])) {
+        $errors[] = 'You forgot to enter
+            your email address.';
+    } else {
+        $e = mysqli_real_escape_string
+            ($dbc, trim($_POST['email']));
+    }
+
+    // 检查当前密码：
+    if (empty($_POST['pass'])) {
+        $errors[] = 'You forgot to enter
+            your current password.';
+    } else {
+        $p = mysqli_real_escape_string
+            ($dbc, trim($_POST['pass']));
+    }
+
+    // 检查新密码并与确认密码匹配：
+    if (!empty($_POST['pass1'])) {
+```
+
+
+
+
+### 代码片段：密码修改逻辑处理
+
+```php
+31      if ($_POST['pass1'] != $_POST['pass2']) {
+32          $errors[] = 'Your new password did not match the confirmed password.';
+33      } else {
+34          $np = mysqli_real_escape_string($dbc, trim($_POST['pass1']));
+35      }
+36  } else {
+37      $errors[] = 'You forgot to enter your new password.';
+38  }
+
+40  if (empty($errors)) { // If everything's OK.
+
+42      // Check that they've entered the right email address/password combination:
+43      $q = "SELECT user_id FROM users WHERE (email='$e' AND pass=SHA1('$p') )";
+44      $r = @mysqli_query($dbc, $q);
+45      $num = @mysqli_num_rows($r);
+46      if ($num == 1) { // Match was made.
+
+48          // Get the user_id:
+49          $row = mysqli_fetch_array($r, MYSQLI_NUM);
+
+51          // Make the UPDATE query:
+52          $q = "UPDATE users SET pass=SHA1('$np') WHERE user_id=$row[0]";
+53          $r = @mysqli_query($dbc, $q);
+
+55          if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
+
+57              // Print a message.
+58              echo '<h1>Thank you!</h1>
+59              <p>Your password has been updated. In Chapter 12 you will actually be able to log
+60              in!</p><p><br /></p>';
+
+61          } else { // If it did not run OK.
+
+63              // Public message:
+64              echo '<h1>System Error</h1>
+65              <p class="error">Your password could not be changed due to a system error. We
+66              apologize for any inconvenience.</p>';
+
+67              // Debugging message:
+68              echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+
+70          }
+
+72          mysqli_close($dbc); // Close the database connection.
+
+74          // Include the footer and quit the script (to not show the form).
+75          include ('includes/footer.html');
+76          exit();
+
+78      } else { // Invalid email address/password combination.
+79          echo '<h1>Error!</h1>
+80          <p class="error">The email
+81          address and password do not
+82          match those on file.</p>';
+
+83      }
+
+83  } else { // Report the errors.
+
+85      echo '<h1>Error!</h1>
+86      <p class="error">The following
+87      error(s) occurred:<br />';
+87      foreach ($errors as $msg) { // Print each error.
+88          echo " - $msg<br />\n";
+89      }
+90      echo '</p><p>Please try again.</p><p><br /></p>';
+
+92  } // End of if (empty($errors)) IF.
+
+94  mysqli_close($dbc); // Close the database connection.
+
+96  } // End of the main Submit conditional.
+97  ?>
+98  <h1>Change Your Password</h1>
+99  <form action="password.php" method="post">
+100     <p>Email Address: <input type="text" name="email" size="20" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" /> </p>
+101     <p>Current Password: <input type="password" name="pass" size="10" maxlength="20" value="<?php if (isset($_POST['pass'])) echo $_POST['pass']; ?>" /></p>
+102     <p>New Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>
+103     <p>Confirm New Password: <input type="password" name="pass2" size="10" maxlength="20" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
+104     <p><input type="type="submit" name="submit" value="Change Password" /></p>
+105 </form>
+106 <?php include ('includes/footer.html'); ?>
+```
+
+---
+
+### 步骤解析
+
+### 2. 启动主条件判断
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+```
+由于该页面既显示又处理表单，将使用标准条件判断来检查表单的提交。
+
+### 3. 包含数据库连接并创建错误存储数组
+
+```php
+require ('../mysqli_connect.php');
+$errors = array();
+```
+此脚本的初始部分模仿注册表单。
+
+### 4. 验证邮箱地址和当前密码字段
+
+```php
+if (empty($_POST['email'])) {
+    $errors[] = 'You forgot to enter your email address.';
+} else {
+    $e = mysqli_real_escape_string($dbc, trim($_POST['email']));
+}
+
+if (empty($_POST['pass'])) {
+    $errors[] = 'You forgot to enter your current password.';
+} else {
+    $p = mysqli_real_escape_string($dbc, trim($_POST['pass']));
+}
+```
+该表单有四个输入：邮箱地址、当前密码和两个新密码输入框。验证每个输入的过程与 `register.php` 中相同。通过验证测试的任何数据都将被修剪并通过 `mysqli_real_escape_string()` 函数运行，以便在查询中安全使用。
+
+### 5. 验证新密码
+
+```php
+if (!empty($_POST['pass1'])) {
+    if ($_POST['pass1'] != $_POST['pass2']) {
+        $errors[] = 'Your new password did not match the confirmed password.';
+    } else {
+        $np = mysqli_real_escape_string($dbc, trim($_POST['pass1']));
+    }
+} else {
+    $errors[] = 'You forgot to enter your new password.';
+}
+```
+这段代码与注册脚本中的完全相同，不同之处在于有效的新密码被赋值给变量 `$np`（因为 `$p` 代表当前密码）。
+
+### 6. 如果所有测试均通过，检索用户 ID
+
+```php
+if (empty($errors)) {
+    $q = "SELECT user_id FROM users WHERE (email='$e' AND pass=SHA1('$p') )";
+    $r = @mysqli_query($dbc, $q);
+    $num = @mysqli_num_rows($r);
+    if ($num == 1) {
+        $row = mysqli_fetch_array($r, MYSQLI_NUM);
+```
+第一个查询将仅返回与提交的邮箱地址和密码匹配的记录的 `user_id` 字段。要将提交的密码与存储的密码进行比较，请使用 `SHA1()` 函数再次对其进行加密。如果用户已注册并正确输入了邮箱地址和密码，将恰好选中一行中的一列（因为邮箱值在所有行中必须唯一）。最后，这一条记录作为一个单元素数组赋值给变量 `$row`。
+
+![Image](img/09_figure_19_b.jpg)
+
+![Image](img/circle-b.jpg) 在 mysql 客户端中运行脚本中的 `SELECT` 查询（它有两个查询中的第一个）的结果。
+
+如果这部分脚本对您不起作用，请应用标准调试方法：移除错误抑制操作符 `@` 以便查看发生的任何错误；使用 `mysqli_error()` 函数报告任何 MySQL 错误；并打印查询，然后使用其他界面运行它 ![Image](img/graycircle-b.jpg)。
+
+### 7. 更新数据库中的新密码
+
+```php
+$q = "UPDATE users SET pass=SHA1('$np') WHERE user_id=$row[0]";
+$r = @mysqli_query($dbc, $q);
+```
+此查询将使用新提交的值更改密码，条件是 `user_id` 列等于从前一个查询检索到的数字。
+
+### 8. 检查查询结果
+
+```php
+if (mysqli_affected_rows($dbc) == 1) {
+    echo '<h1>Thank you!</h1>
+    <p>Your password has been updated. In Chapter 12 you will actually be able to log in!</p><p><br /></p>';
+} else {
+    echo '<h1>System Error</h1>
+    <p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';
+    echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+}
+```
+
+
+
+
+
+这部分脚本的工作方式与 `register.php` 类似。在这种情况下，如果 `mysqli_affected_rows()` 返回数字 1，则记录已更新，并将打印成功消息。如果没有，则将打印一条公共的通用消息和一条更有用的调试消息。
+
+**9.** 关闭数据库连接，包含页脚，并终止脚本：
+
+```
+mysqli_close($dbc);
+
+include ('includes/footer.html');
+
+exit();
+```
+
+此时，`UPDATE` 查询已运行。它要么成功，要么失败（由于系统错误）。在这两种情况下，都无需再次显示表单，因此包含页脚（以完成页面）并使用 `exit()` 函数终止脚本。在此之前，为了严谨起见，关闭数据库连接。
+
+**10.** 完成 `if ($num == 1)` 条件判断：
+
+```
+} else {
+
+  echo '<h1>Error!</h1>
+  <p class="error">The email address and password do not match those on file.</p>';
+
+}
+```
+
+如果 `mysqli_num_rows()` 不返回值 1，则提交的电子邮件地址和密码与数据库中的不匹配，并打印此错误。在这种情况下，将再次显示表单，以便用户输入正确信息。
+
+**11.** 打印任何验证错误消息：
+
+```
+} else {
+
+  echo '<h1>Error!</h1>
+  <p class="error">The following error(s) occurred:<br />';
+
+  foreach ($errors as $msg) { // Print each error.
+    echo " - $msg<br />\n";
+  }
+
+  echo '</p><p>Please try again.</p><p><br /></p>';
+
+}
+```
+
+如果 `$errors` 数组不为空（意味着表单数据未通过所有验证测试），则适用此 `else` 子句。与注册页面一样，将打印错误信息。
+
+**12.** 关闭数据库连接并完成 PHP 代码：
+
+```
+  mysqli_close($dbc);
+}
+?>
+```
+
+**13.** 显示表单：
+
+```
+<h1>Change Your Password</h1>
+
+<form action="password.php" method="post">
+  <p>Email Address: <input type="text" name="email" size="20" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" /> </p>
+  <p>Current Password: <input type="password" name="pass" size="10" maxlength="20" value="<?php if (isset($_POST['pass'])) echo $_POST['pass'];?>" /></p>
+  <p>New Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1'];?>" /></p>
+  <p>Confirm New Password: <input type="password" name="pass2" size="10" maxlength="20" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
+  <p><input type="submit" name="submit" value="Change Password" /></p>
+</form>
+```
+
+该表单接受三种不同类型的密码输入——当前密码、新密码和新密码确认——以及一个用于电子邮件地址的文本输入。每个输入也是粘性的。
+
+**14.** 包含页脚文件：
+
+```
+<?php include ('includes/footer.html'); ?>
+```
+
+**15.** 将文件保存为 `password.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试。
+
+密码已在数据库中更改。
+
+如果输入的电子邮件地址和密码与存档的不匹配，则不会更新密码。
+
+***
+
+### 提示
+
+如果您使用命令 `TRUNCATE tablename` 删除表中的每一条记录，即使查询成功且每一行都被移除，`mysqli_affected_rows()` 也将返回 0。这只是一个怪癖。
+
+***
+
+### 提示
+
+如果 `UPDATE` 查询运行但没有实际更改任何列的值（例如，密码被相同的密码替换），`mysqli_affected_rows()` 将返回 0。
+
+***
+
+### 提示
+
+此处使用的 `mysqli_affected_rows()` 条件判断也可以（也可能应该）应用于 `register.php` 脚本，以确认添加了一条记录。这将比 `if ($r)` 更严格的检查条件。
+
+***
+
+### 复习与实践
+
+如果您对复习问题或实践提示有任何疑问，请访问本书的支持论坛 ([www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/))。
+
+#### 复习
+
+- 您使用的是哪个版本的 PHP？哪个版本的 MySQL？您的 PHP-MySQL 组合是否支持 MySQL Improved 扩展？
+- 调试 PHP-MySQL 问题最重要的步骤序列是什么（在第 8 章 "Error Handling and Debugging" 末尾明确介绍）？
+- 您具体使用什么主机名、用户名和密码组合连接到 MySQL？
+- 什么 PHP 代码用于连接 MySQL 服务器、选择数据库并建立编码？
+- 您使用什么编码？为什么 PHP 脚本必须使用与与 MySQL 交互相同的编码，以及与存储在数据库中的文本相同的编码？
+- 为什么最好将 `mysqli_connect.php` 脚本存储在 Web 根目录之外？什么是 Web 根目录？
+- 为什么实际运行的网站不应显示 MySQL 错误和正在运行的查询？
+- 您几乎总是使用什么语法来处理 `SELECT` 查询的结果？如果 `SELECT` 查询仅返回单行，可以使用什么语法？
+- 为什么使用 `mysqli_real_escape_string()` 函数很重要？
+- 在什么类型的查询后会使用 `mysqli_num_rows()` 函数？
+- 在什么类型的查询后会使用 `mysqli_affected_rows()` 函数？
+
+#### 实践
+
+- 如果您不记得模板系统如何工作，或如何使用 `include()` 函数，请重温第 3 章。
+- 利用第 8 章介绍的信息，将您自己的自定义错误处理程序应用于本网站的示例中。
+- 更改 `view_users.php` 中 `mysqli_num_rows()` 的用法，使其仅在查询结果为 TRUE 时被调用。
+- 将 `mysqli_num_rows()` 函数应用于 `register.php`，正如早先的侧边栏所建议的。
+- 将 `mysqli_affected_rows()` 函数应用于 `register.php`，以确认 `INSERT` 操作有效。
+- 如果您愿意，创建与 *banking* 数据库交互的脚本。简单的入门项目包括：查看所有客户、查看所有账户（执行 `JOIN` 以同时显示客户姓名），以及增加或减少账户余额。
+
+## 10. 常见编程技术
+
+### 本章内容
+
+- 向脚本发送值 300
+- 使用隐藏表单输入 304
+- 编辑现有记录 309
+- 查询结果分页 316
+- 制作可排序显示 323
+- 复习与实践 328
+
+现在您已经对 PHP 和 MySQL 的交互有了一点了解，是时候更进一步了。本章类似于第 3 章 "Creating Dynamic Web Sites"，因为它涵盖了无数独立的主题。但所有这些主题的共同点在于，它们演示了常见的 PHP-MySQL 编程技术。您不会在这里学到任何新函数；相反，您将看到如何利用您已有的知识来创建标准的 Web 功能。
+
+
+
+
+这些示例本身将通过添加新的、流行的功能来扩展上一章开始的 Web 应用程序。您将看到几种管理数据库信息的技巧，特别是使用 PHP 编辑和删除记录。同时，将介绍几种向 PHP 页面传递数据的新方法。本章的最后几节将为 `view_users.php` 页面添加功能。
+
+### 向脚本发送值
+
+在迄今为止的示例中，PHP 脚本接收的所有数据都来自用户在表单中输入的内容。但是，您可以通过两种不同的方式将变量和值传递给 PHP 脚本，这两种方式都值得了解。
+
+第一种方法是利用 HTML 的 `hidden`（隐藏）输入类型：
+
+```html
+<input type="hidden" name="do" value="this" />
+```
+
+只要这段代码位于 `form` 标签之间的任何位置，变量 `$_POST['do']` 在处理脚本中就会拥有值 `this`，前提是表单使用 POST 方法。如果表单使用 GET 方法，那么 `$_GET['do']` 将拥有该值。考虑到这一点，您实际上可以跳过创建表单的步骤，直接将一个 `name=value` 对追加到 URL 后面：
+
+```text
+www.example.com/page.php?do=this
+```
+
+同样，在这个特定示例中，`page.php` 接收到一个名为 `$_GET['do']` 的变量，其值为 `this`。
+
+为了演示这个 GET 方法技巧，将编写一个新版本的 `view_users.php` 脚本（该脚本最初是在上一章创建的）。这个新版本将提供链接到允许您编辑或删除现有用户记录的页面。这些链接将把用户的 ID 传递给处理页面，这两个处理页面也将在本章中编写。
+
+#### 手动向 PHP 脚本发送值
+
+**1.** 在文本编辑器或 IDE 中打开 `view_users.php`（脚本 9.6）。
+
+**2.** 更改 SQL 查询如下（**脚本 10.1 AS dr, user_id FROM users ORDER BY registration_date ASC";
+```
+
+**脚本 10.1.** `view_users.php` 脚本始于 第 9 章 “将 PHP 与 MySQL 结合使用”，现已修改为呈现编辑和删除链接，并在每个 URL 中传递用户的 ID 编号。
+
+* * *
+
+```php
+1   <?php # 脚本 10.1 - view_users.php #3
+
+2   // 此脚本从 users 表中检索所有记录。
+3   // 此新版本链接到编辑和删除页面。
+4
+
+5   $page_title = '查看当前用户';
+6   include ('includes/header.html');
+7   echo '<h1>已注册用户</h1>';
+8
+
+9   require_once ('../mysqli_connect.php');
+10
+
+11  // 定义查询：
+12  $q = "SELECT last_name, first_name, DATE_FORMAT(registration_date, '%M %d, %Y') AS dr,
+      user_id FROM users ORDER BY registration_date ASC";
+13  $r = @mysqli_query ($dbc, $q);
+14
+
+15  // 计算返回的行数：
+16  $num = mysqli_num_rows($r);
+17
+
+18  if ($num > 0) { // 如果运行正常，显示记录。
+19
+
+20      // 打印用户数量：
+21      echo "<p>当前有 $num 位已注册用户。</p>\n";
+22
+
+23      // 表头：
+24      echo '<table align="center" cellspacing="3" cellpadding="3" width="75%">
+25      <tr>
+26          <td align="left"><b>编辑</b></td>
+27          <td align="left"><b>删除</b></td>
+28          <td align="left"><b>姓氏</b></td>
+29          <td align="left"><b>名字</b></td>
+30          <td align="left"><b>注册日期</b></td>
+31      </tr>
+32  ';
+
+33      // 获取并打印所有记录：
+34      while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+35          echo '<tr>
+36              <td align="left"><a href="edit_user.php?id=' . $row['user_id'] . '">编辑</a></td>
+37              <td align="left"><a href="delete_user.php?id=' . $row['user_id'] . '">删除</a></td>
+38              <td align="left">' . $row['last_name'] . '</td>
+39              <td align="left">' . $row['first_name'] . '</td>
+40              <td align="left">' . $row['dr'] . '</td>
+41          </tr>
+42          ';
+35      }
+
+46      echo '</table>';
+47      mysqli_free_result ($r);
+48
+
+49  } else { // 如果没有返回记录。
+50      echo '<p class="error">当前没有已注册用户。</p>';
+51  }
+
+52  mysqli_close($dbc);
+53
+
+54  include ('includes/footer.html');
+55  ?>
+```
+
+* * *
+
+查询在几个方面进行了更改。首先，名和姓是分别选择的，而不是连接在一起。其次，现在也选择了 `user_id`，因为创建链接时需要该值。
+
+**3.** 向主表添加三列：
+
+```php
+echo '<table align="center" cellspacing="3" cellpadding="3" width="75%">
+<tr>
+  <td align="left"><b>编辑</b> </td>
+  <td align="left"><b>删除</b> </td>
+  <td align="left"><b>姓氏</b> </td>
+  <td align="left"><b>名字</b> </td>
+  <td align="left"><b>注册日期</b> </td>
+</tr>
+';
+```
+
+在脚本的上一个版本中，只有两列：一列用于姓名，另一列用于用户注册日期。姓名列已拆分为两部分，并新增了两列：一列用于*编辑*链接，另一列用于*删除*链接。
+
+**4.** 更改 `while` 循环中的 `echo` 语句以匹配表的新结构：
+
+```php
+echo '<tr>
+  <td align="left"><a href="edit_user.php?id=' . $row['user_id'] . '">编辑</a></td>
+  <td align="left"><a href="delete_user.php?id=' . $row['user_id'] . '">删除</a></td>
+  <td align="left">' . $row['last_name'] . '</td>
+  <td align="left">' . $row['first_name'] . '</td>
+  <td align="left">' . $row['dr'] . '</td>
+</tr>
+';
+```
+
+对于从数据库返回的每条记录，此行将打印出一行包含五列的内容。后三列显而易见且易于创建：只需引用返回的列名即可。
+
+对于前两列（提供编辑或删除用户的链接），语法稍微复杂一些。期望的最终结果是类似 `<a href="edit_user.php?id=`*`X`*`">编辑</a>` 的 HTML 代码，其中 *X* 是用户的 ID。了解这一点后，PHP 代码所要做的就是为 *X* 打印 `$row['user_id']`，同时注意引号的使用以避免解析错误。
+
+由于 HTML 属性使用了大量双引号，而此 `echo` 语句需要打印大量变量，我发现最简单的方法是对 HTML 使用单引号，然后将变量与打印文本连接起来。
+
+**5.** 将文件保存为 `view_users.php`，将其放在您的 Web 目录中，并在 Web 浏览器中运行它 ![Image](img/circle-a.jpg)。
+
+![Image](img/10_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg)修订后的 `view_users.php` 页面，包含新列和链接。
+
+不过，目前点击这些新链接没有任何作用，因为那些脚本尚未创建。
+
+**6.** 如果您愿意，可以查看页面的 HTML 源代码，以查看每个动态生成的链接 ![Image](img/circle-b.jpg)。
+
+![Image](img/10_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg)页面的部分 HTML 源代码（见 ![Image](img/graycircle-a.jpg)）显示了用户 ID 是如何添加到每个链接的 URL 中的。
+
+* * *
+
+> **提示**
+>
+> 要向 URL 追加多个变量，请使用以下语法：`page.php?name1=value1& name2=value2&name3=value3`。这只是使用和号（&），加上另一个 `name=value` 对的问题。
+
+* * *
+
+> **提示**
+>
+> 向 URL 添加变量的一个技巧是对字符串进行编码，以确保值被正确处理。例如，字符串 *Elliott Smith* 中的空格会造成问题。解决方法是使用 `urlencode()` 函数：
+>
+> ```php
+> $url = 'page.php?name=' . urlencode('Elliott Smith');
+> ```
+
+
+
+只有在以编程方式向 URL 添加值时，才需要这样做。当表单使用 `GET` 方法时，它会自动对数据进行编码。
+
+---
+
+#### 使用隐藏表单输入
+
+在前面的示例中，编写了 `view_users.php` 脚本的新版本。该版本现在包含指向 `edit_user.php` 和 `delete_user.php` 页面的链接，通过 URL 传递每个用户的 ID。下一个示例 `delete_user.php` 将接收传递的用户 ID，并允许管理员删除该用户。虽然你可以让此页面在被访问时立即执行 `DELETE` 查询，但出于安全考虑（并防止意外删除），应该分多个步骤进行 ![Image](img/circle-a.jpg)：
+
+1.  页面必须检查是否接收到了数字用户 ID。
+2.  一条消息将确认是否应删除该用户。
+3.  用户 ID 将存储在隐藏表单输入中。
+4.  提交此表单后，用户将实际被删除。
+
+![Image](img/10_figure_03_c.jpg)
+
+![Image](img/circle-a.jpg)此图概述了用户删除脚本将执行的步骤。
+
+#### 使用隐藏表单输入
+
+1.  在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `delete_user.php`（**脚本 10.2**）：
+
+    ```php
+    <?php # Script 10.2 - delete_user.php
+    ```
+
+2.  包含页面页眉：
+
+    ```php
+    $page_title = 'Delete a User';
+
+    include ('includes/header.html');
+
+    echo '<h1>Delete a User</h1>';
+    ```
+
+    该文档将使用与应用程序中其他页面相同的模板系统。如有需要，请参阅第 9 章和第 3 章以获取说明。
+
+3.  检查有效的用户 ID 值：
+
+    ```php
+    if ( (isset($_GET['id'])) && (is_numeric($_GET['id'])) ) {
+        $id = $_GET['id'];
+    } elseif ( (isset($_POST['id'])) && (is_numeric($_POST['id'])) ) {
+        $id = $_POST['id'];
+    } else {
+        echo '<p class="error">This page has been accessed in error.</p>';
+        include ('includes/footer.html');
+        exit();
+    }
+    ```
+
+**脚本 10.2.** 该脚本期望通过 URL 向其传递用户 ID。然后它显示一个确认表单，并在提交时删除用户。
+
+---
+
+```php
+1   <?php # Script 10.2 - delete_user.php
+2   // This page is for deleting a user record.
+3   // This page is accessed through view_
+    users.php.
+4
+5   $page_title = 'Delete a User';
+6   include ('includes/header.html');
+7   echo '<h1>Delete a User</h1>';
+8
+9   // Check for a valid user ID, through
+    // GET or POST:
+10  if ( (isset($_GET['id'])) && (is_numeric
+    ($_GET['id'])) ) { // From view_users.php
+11      $id = $_GET['id'];
+12  } elseif ( (isset($_POST['id'])) &&
+    (is_numeric($_POST['id'])) ) { // Form
+    // submission.
+13      $id = $_POST['id'];
+14  } else { // No valid ID, kill the script.
+15      echo '<p class="error">This page has
+    been accessed in error.</p>';
+16      include ('includes/footer.html');
+17      exit();
+18  }
+19
+20  require_once ('../mysqli_connect.php');
+21
+22  // Check if the form has been submitted:
+23  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+24
+25      if ($_POST['sure'] == 'Yes') {
+        // Delete the record.
+26
+27          // Make the query:
+28          $q = "DELETE FROM users WHERE
+            user_id=$id LIMIT 1";
+29          $r = @mysqli_query ($dbc, $q);
+30          if (mysqli_affected_rows($dbc) ==
+            1) { // If it ran OK.
+31
+32              // Print a message:
+33              echo '<p>The user has been
+                deleted.</p>';
+34
+35          } else { // If the query did not
+            // run OK.
+36              echo '<p class="error">The user
+                could not be deleted due to a
+                system error.</p>'; // Public
+                // message.
+37              echo '<p>' . mysqli_error($dbc)
+                . '<br />Query: ' . $q . '</p>';
+                // Debugging message.
+38          }
+39
+40      } else { // No confirmation of deletion.
+41          echo '<p>The user has NOT been
+            deleted.</p>';
+42      }
+43
+44  } else { // Show the form.
+45
+46      // Retrieve the user's information:
+47      $q = "SELECT CONCAT(last_name, ',
+    ', first_name) FROM users WHERE
+        user_id=$id";
+48      $r = @mysqli_query ($dbc, $q);
+49
+50      if (mysqli_num_rows($r) == 1) {
+        // Valid user ID, show the form.
+51
+52          // Get the user's information:
+53          $row = mysqli_fetch_array ($r,
+            MYSQLI_NUM);
+54
+55          // Display the record being deleted:
+56          echo "<h3>Name: $row[0]</h3>
+            Are you sure you want to delete
+            this user?";
+57
+57          // Create the form:
+58          echo '<form action="delete_user.
+            php" method="post">
+            <input type="radio" name="sure"
+            value="Yes" /> Yes
+            <input type="radio" name="sure"
+            value="No" checked="checked" /> No
+            <input type="submit" name="submit"
+            value="Submit" />
+            <input type="hidden" name="id"
+            value="' . $id . '" />
+            </form>';
+66
+67      } else { // Not a valid user ID.
+68          echo '<p class="error">This page
+            has been accessed in error.</p>';
+69      }
+70
+71  } // End of the main submission conditional.
+72
+73  mysqli_close($dbc);
+74
+75  include ('includes/footer.html');
+76  ?>
+```
+
+---
+
+该脚本依赖于拥有一个有效的用户 ID，以便在 `DELETE` 查询的 `WHERE` 子句中使用。首次访问此页面时，用户 ID 应通过 URL 传递（页面 URL 将以 `delete_user.php?id=X` 结尾），这是在 `view_users.php` 页面中点击 *Delete* 链接后发生的。第一个 `if` 条件检查此类值是否存在且该值是否为数字。
+
+正如你将看到的，脚本随后会将用户 ID 值存储在隐藏表单输入中。当表单提交（回到这个同一页面）时，脚本将通过 `$_POST` 接收该 ID。第二个条件检查这一点，并再次确认 ID 值为数字。
+
+如果这两个条件都不为 TRUE，则页面无法继续，因此会显示一条错误消息并终止脚本的执行 ![Image](img/circle-b.jpg)。
+
+![Image](img/10_figure_04_b.jpg)
+
+![Image](img/circle-b.jpg)如果页面未接收到数字 ID 值，将显示此错误。
+
+4.  包含 MySQL 连接脚本：
+
+    ```php
+    require_once ('../mysqli_connect.php');
+    ```
+
+    该脚本的两个过程——显示表单和处理表单——都需要数据库连接，因此此行位于主提交条件（步骤 5）之外。
+
+5.  开始主提交条件：
+
+    ```php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    ```
+
+    为了测试表单提交，脚本使用了在第 3 章中首次解释的相同条件，并在第 9 章中也已使用。
+
+6.  如果合适则删除用户：
+
+    ```php
+    if ($_POST['sure'] == 'Yes') {
+        $q = "DELETE FROM users WHERE user_id=$id LIMIT 1";
+        $r = @mysqli_query ($dbc, $q);
+    ```
+
+    表单 ![Image](img/circle-c.jpg)将强制用户点击单选按钮以确认删除。这一小小的要求可以防止任何意外。因此，处理过程首先检查是否选择了正确的单选按钮。如果是，则定义一个基本的 `DELETE` 查询，在 `WHERE` 子句中使用用户的 ID。`LIMIT` 子句作为额外的预防措施添加到查询中。
+
+![Image](img/10_figure_05_c.jpg)
+
+![Image](img/circle-c.jpg)页面使用这个简单的表单确认用户删除。
+
+7.  检查删除是否成功并做出相应响应：
+
+    ```php
+    if (mysqli_affected_rows($dbc) == 1) {
+        echo '<p>The user has been deleted.</p>';
+    } else {
+    ```
+
+
+
+
+echo '<p class="error">The user could not be deleted due to a system error.</p>';
+
+echo '<p>' . mysqli_error($dbc) . '<br />Query: ' . $q . '</p>';
+
+}
+
+`mysqli_affected_rows()` 函数检查 `DELETE` 查询是否恰好影响了一行。如果是，则显示一条成功消息 ![Image](img/circle-d.jpg)。如果不是，则发送一条错误消息。
+
+![Image](img/10_figure_06_d.jpg)
+
+![Image](img/circle-d.jpg)如果在表单中选择 *Yes*（请参阅 ![Image](img/graycircle-c.jpg)）并点击提交，结果应如下所示。
+
+请记住，在没有发生 MySQL 错误的情况下，也有可能没有行受到影响。例如，如果查询试图删除用户 ID 等于 42000 的记录（而该记录不存在），则不会删除任何行，但也不会发生 MySQL 错误。尽管如此，由于首次加载表单时所做的检查，用户要达到这一点需要进行相当程度的“黑客”操作。
+
+**8.** 完成 `$_POST['sure']` 条件判断：
+
+```php
+} else {
+  echo '<p>The user has NOT been deleted.</p>';
+}
+```
+
+如果用户没有明确勾选 *Yes* 按钮，则不会删除该用户，并显示此消息 ![Image](img/circle-e.jpg)。
+
+![Image](img/10_figure_07_e.jpg)
+
+![Image](img/circle-e.jpg)如果在表单中未选择 *Yes*，则不会对数据库进行任何更改。
+
+**9.** 开始主提交条件判断的 `else` 子句：
+
+```php
+} else {
+```
+
+页面将处理表单或显示表单。在此之前的大部分代码在表单已提交时生效（如果 `$_SERVER['REQUEST_METHOD']` 等于 *POST*）。从这里开始的代码在表单尚未提交时生效，此时应显示表单。
+
+**10.** 检索要删除用户的信息：
+
+```php
+$q = "SELECT CONCAT(last_name, ', ', first_name) FROM users WHERE user_id=$id";
+$r = @mysqli_query ($dbc, $q);
+if (mysqli_num_rows($r) == 1) {
+  $row = mysqli_fetch_array ($r, MYSQLI_NUM);
+```
+
+为了确认脚本接收到了有效的用户 ID 并明确指出要删除的是谁（请参阅 ![Image](img/graycircle-c.jpg)），将从数据库中检索要删除用户的姓名 ![Image](img/circle-f.jpg)。
+
+![Image](img/10_figure_08_f.jpg)
+
+![Image](img/circle-f.jpg)在 mysql 客户端中运行相同的 `SELECT` 查询。
+
+该条件判断——检查是否返回了单行——确保向脚本提供了有效的用户 ID。如果是，则将该记录获取到 `$row` 变量中。
+
+**11.** 显示要删除的记录：
+
+```php
+echo "<h3>Name: $row[0]</h3>
+Are you sure you want to delete this user?";
+```
+
+为了帮助防止意外删除错误的记录，首先显示要删除用户的姓名。该值可在 `$row[0]` 中获得，因为 `mysqli_fetch_array()` 函数（在第 10 步中）使用了 `MYSQLI_NUM` 常量，从而将返回的记录作为索引数组赋值给 `$row`。用户姓名是返回记录中的第一列，也是唯一一列，因此其索引为 0（数组通常从 0 开始索引）。
+
+**12.** 创建表单：
+
+```php
+echo '<form action="delete_user.php" method="post">
+<input type="radio" name="sure" value="Yes" /> Yes
+<input type="radio" name="sure" value="No" checked="checked" /> No
+<input type="submit" name="submit" value="Submit" />
+<input type="hidden" name="id" value="' . $id . '" />
+</form>';
+```
+
+该表单提交回此同一页面。它包含两个单选按钮，名称相同但值不同，一个提交按钮，和一个隐藏输入框。此处最重要的一步是将用户 ID（`$id`）存储为隐藏表单输入，以便处理过程也能访问此值 ![Image](img/circle-g.jpg)。
+
+**13.** 完成 `mysqli_num_rows()` 条件判断：
+
+```php
+} else {
+  echo '<p class="error">This page has been accessed in error.</p>';
+}
+```
+
+如果 `SELECT` 查询未返回任何记录（因为提交了无效的用户 ID），则显示此消息。
+
+如果您在测试此脚本时看到此消息但不明白原因，请应用 第 8 章 “错误处理与调试” 末尾概述的标准调试步骤。
+
+**14.** 完成 PHP 页面：
+
+```php
+}
+mysqli_close($dbc);
+include ('includes/footer.html');
+?>
+```
+
+右大括号结束主提交条件判断。然后关闭 MySQL 连接并包含页脚文件。
+
+**15.** 将文件保存为 `delete_user.php` 并将其放在您的 Web 目录中（应与 `view_users.php` 在同一目录下）。
+
+**16.** 通过首先在 `view_users.php` 页面中点击 *Delete* 链接来运行该页面。
+
+***
+
+Tip
+
+隐藏表单元素不会在 Web 浏览器中显示，但仍存在于 HTML 源代码中 ![Image](img/graycircle-g.jpg)。因此，切勿在其中存储任何必须真正保密的内容。
+
+***
+
+***
+
+Tip
+
+使用隐藏表单输入和向 URL 追加值只是让数据可供其他 PHP 页面使用的两种方法。另外两种方法——Cookie 和 Session——将在第 12 章 “Cookie 和 Session” 中详细介绍。
+
+***
+
+![Image](img/10_figure_09_g.jpg)
+
+![Image](img/circle-g.jpg)用户 ID 作为隐藏输入存储，以便在表单提交时可用。
+
+**脚本 10.3.** `edit_user.php` 页面首先在表单中显示用户的当前信息。提交表单后，将在数据库中更新该记录。
+
+***
+
+```php
+1   <?php # Script 10.3 - edit_user.php
+2   // This page is for editing a user
+      record.
+3   // This page is accessed through view_
+      users.php.
+4
+5   $page_title = 'Edit a User';
+6   include ('includes/header.html');
+7   echo '<h1>Edit a User</h1>';
+8
+9   // Check for a valid user ID, through
+      GET or POST:
+10  if ( (isset($_GET['id'])) && (is_numeric($_
+      GET['id'])) ) { // From view_users.php
+11      $id = $_GET['id'];
+12  } elseif ( (isset($_POST['id'])) &&
+      (is_numeric($_POST['id'])) ) { // Form
+      submission.
+13      $id = $_POST['id'];
+14  } else { // No valid ID, kill the script.
+15      echo '<p class="error">This page has
+      been accessed in error.</p>';
+16      include ('includes/footer.html');
+17      exit();
+18  }
+19
+20  require_once ('../mysqli_connect.php');
+21
+22  // Check if the form has been submitted:
+23  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+24
+25      $errors = array();
+26
+27      // Check for a first name:
+28      if (empty($_POST['first_name'])) {
+29          $errors[] = 'You forgot to enter
+            your first name.';
+30      } else {
+31          $fn = mysqli_real_escape_string($dbc,
+            trim($_POST['first_name']));
+32      }
+33
+34      // Check for a last name:
+35      if (empty($_POST['last_name'])) {
+36          $errors[] = 'You forgot to enter
+            your last name.';
+37      } else {
+38          $ln = mysqli_real_escape_string($dbc,
+            trim($__POST['last_name']));
+39      }
+40
+41      // Check for an email address:
+42      if (empty($_POST['email'])) {
+43          $errors[] = 'You forgot to enter
+            your email address.';
+44      } else {
+45          $e = mysqli_real_escape_string
+            ($dbc, trim($_POST['email']));
+46      }
+47
+48      if (empty($errors)) { // If
+          everything's OK.
+49
+50          // Test for unique email address:
+51          $q = "SELECT user_id FROM users
+            WHERE email='$e' AND user_id != $id";
+52          $r = @mysqli_query($dbc, $q);
+53          if (mysqli_num_rows($r) == 0) {
+54
+55              // Make the query:
+56              $q = "UPDATE users SET first_
+```
+
+
+
+
+
+### 编辑现有记录
+
+对于数据库驱动的网站，一种常见的做法是建立一套系统，以便轻松编辑现有记录。这一概念对许多初级程序员来说似乎令人望而生畏，但该过程却出奇地简单直接。对于下面的示例——编辑注册用户记录——该过程结合了本书已教授的技能：
+
+*   制作粘性表单
+*   使用隐藏输入框
+*   验证注册数据
+*   执行简单查询
+
+下一个示例总体上与 `delete_user.php` 非常相似，也将从 `view_users.php` 脚本链接过来（当用户点击*编辑*时）。将显示一个包含用户当前信息的表单，允许修改这些值。提交表单后，如果数据通过所有验证程序，将运行一条 `UPDATE` 查询来更新数据库。
+
+![Image](img/10_figure_10_a.jpg)
+
+用于编辑用户记录的表单。
+
+#### 编辑现有数据库记录
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `edit_user.php`（**脚本 10.3;
+
+echo '<h1>Edit a User</h1>';
+```
+
+**2.** 检查有效的用户 ID 值：
+
+```php
+if ( (isset($_GET['id'])) && (is_numeric($_GET['id'])) ) {
+    $id = $_GET['id'];
+} elseif ( (isset($_POST['id'])) && (is_numeric($_POST['id'])) ) {
+    $id = $_POST['id'];
+} else {
+    echo '<p class="error">This page has been accessed in error.</p>';
+    include ('includes/footer.html');
+    exit();
+}
+```
+
+此验证程序与 `delete_user.php` 中的完全相同，确认已接收到数字用户 ID，无论页面是首次从 `view_users.php` 访问（第一个条件），还是在提交表单时访问（第二个条件）。
+
+**3.** 包含 MySQL 连接脚本并开始主提交条件判断：
+
+```php
+require_once ('../mysqli_connect.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $errors = array();
+}
+```
+
+就像你已经完成的注册示例一样，此脚本使用数组来跟踪错误。
+
+**4.** 验证名字：
+
+```php
+if (empty($_POST['first_name'])) {
+    $errors[] = 'You forgot to enter your first name.';
+} else {
+    $fn = mysqli_real_escape_string($dbc, trim($_POST['first_name']));
+}
+```
+
+该表单类似于注册页面，但没有密码字段（见第二个提示）。因此，可以应用注册脚本中使用的相同技术来验证表单数据。与注册示例一样，验证后的数据会被修剪，然后通过 `mysqli_real_escape_string()` 处理以确保安全。
+
+**5.** 验证姓氏和电子邮件地址：
+
+```php
+if (empty($_POST['last_name'])) {
+    $errors[] = 'You forgot to enter your last name.';
+} else {
+    $ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
+}
+
+if (empty($_POST['email'])) {
+    $errors[] = 'You forgot to enter your email address.';
+} else {
+    $e = mysqli_real_escape_string($dbc, trim($_POST['email']));
+}
+```
+
+**6.** 如果没有错误，检查提交的电子邮件地址是否已被占用：
+
+```php
+if (empty($errors)) {
+    $q = "SELECT user_id FROM users WHERE email='$e' AND user_id != $id";
+    $r = @mysqli_query($dbc, $q);
+    if (mysqli_num_rows($r) == 0) {
+```
+
+数据库的完整性以及应用程序的整体完整性，部分取决于 *users* 表中拥有唯一的电子邮件地址值。这一要求保证了登录系统（使用电子邮件地址和密码的组合，将在第 12 章中开发）能够正常工作。因为表单允许更改用户的电子邮件地址，所以必须采取特殊步骤，确保该值在每条数据库记录中都是唯一的。要理解此查询，请考虑两种可能性。
+
+第一种情况，用户的电子邮件地址正在被更改。在这种情况下，你只需运行一条查询，确保该特定电子邮件地址尚未注册：`SELECT user_id FROM users WHERE email='$e'`。
+
+第二种可能性，用户的电子邮件地址保持不变。在这种情况下，即使该电子邮件地址已被使用也没关系，因为它是被*该用户*使用的。
+
+要编写一个同时适用于这两种可能性的查询，不要检查电子邮件地址是否被使用，而要检查它是否被*其他人*使用，因此：
+
+```sql
+SELECT user_id FROM users WHERE
+email='$e' AND user_id != $id
+```
+
+如果此查询未返回任何记录，则可以安全地运行 `UPDATE` 查询。
+
+**7.** 更新数据库：
+
+```php
+$q = "UPDATE users SET first_name='$fn', last_name='$ln', email='$e' WHERE user_id=$id LIMIT 1";
+$r = @mysqli_query($dbc, $q);
+```
+
+```php
+name='$fn', last_name='$ln',
+email='$e' WHERE user_id=$id
+LIMIT 1";
+
+$r = @mysqli_query($dbc, $q);
+
+if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
+
+    // Print a message:
+    echo '<p>The user has been
+edited.</p>';
+
+} else { // If it did not run OK.
+    echo '<p class="error">The user
+could not be edited due to a
+system error. We apologize for
+any inconvenience.</p>';
+    // Public message.
+    echo '<p>' . mysqli_error($dbc)
+    . '<br />Query: ' . $q . '</p>'; // Debugging message.
+}
+
+} else { // Already registered.
+    echo '<p class="error">The
+email address has already been
+registered.</p>';
+}
+
+} else { // Report the errors.
+
+    echo '<p class="error">The
+following error(s) occurred:<br />';
+    foreach ($errors as $msg) {
+        // Print each error.
+        echo " - $msg<br />\n";
+    }
+    echo '</p><p>Please try again.</p>';
+
+} // End of if (empty($errors)) IF.
+
+} // End of submit conditional.
+
+// Always show the form...
+
+// Retrieve the user's information:
+$q = "SELECT first_name, last_name,
+email FROM users WHERE user_id=$id";
+$r = @mysqli_query($dbc, $q);
+
+if (mysqli_num_rows($r) == 1) { // Valid
+    // user ID, show the form.
+
+    // Get the user's information:
+    $row = mysqli_fetch_array($r,
+    MYSQLI_NUM);
+
+    // Create the form:
+    echo '<form action="edit_user.php"
+    method="post">
+    <p>First Name: <input type="text"
+    name="first_name" size="15" maxlength="15"
+    value="' . $row[0] . '" /></p>
+    <p>Last Name: <input type="text"
+    name="last_name" size="15" maxlength="30"
+    value="' . $row[1] . '" /></p>
+    <p>Email Address: <input type="text"
+    name="email" size="20" maxlength="60"
+    value="' . $row[2] . '" /> </p>
+    <p><input type="submit" name="submit"
+    value="Submit" /></p>
+    <input type="hidden" name="id" value="' .
+    $id . '" />
+    </form>';
+
+} else { // Not a valid user ID.
+    echo '<p class="error">This page has
+been accessed in error.</p>';
+}
+
+mysqli_close($dbc);
+
+include ('includes/footer.html');
+?>
+```
+
+
+
+
+`UPDATE` 查询类似于你在 第 5 章 “SQL 简介” 中可能见到的示例。该查询使用表单提交的值更新三个字段——名、姓和电子邮件地址。该系统之所以有效，是因为表单预先填充了现有值。因此，如果你在表单中编辑了名但未改动其他内容，数据库中的名值将使用这个新值进行更新，但姓和电子邮件地址的值将使用其当前值进行“更新”。这比试图确定哪些表单值已更改并仅更新数据库中的那些值要容易得多。
+
+**8.** 报告更新结果：
+
+```
+if (mysqli_affected_rows($dbc) == 1) {
+    echo '<p>The user has been edited.</p>';
+} else {
+    echo '<p class="error">The user could not be edited due to a system error. We apologize for any inconvenience.</p>';
+    echo '<p>' . mysqli_error($dbc) . '<br />Query: ' . $q . '</p>';
+}
+```
+
+`mysqli_affected_rows()` 函数将返回数据库中受最近一次查询影响的行数。如果三个表单值中的任何一个被修改了，该函数将返回值 1。此条件语句检测这一点并打印一条指示成功或失败的消息。
+
+请记住，如果 `UPDATE` 命令成功运行但并未实际影响任何记录，`mysqli_affected_rows()` 函数将返回值 0。因此，如果你在不更改任何表单值的情况下提交此表单，将显示系统错误，这在技术上可能并不正确。一旦你让此脚本有效运行，你可以更改错误消息，以便在 `mysqli_affected_rows()` 返回 0 时指示未进行任何更改。
+
+**9.** 完成邮箱条件判断：
+
+```
+} else {
+    echo '<p class="error">The email address has already been registered.</p>';
+}
+```
+
+此 `else` 完成了检查电子邮件地址是否已被其他用户使用的条件判断。如果是，则打印该消息。
+
+**10.** 完成 `$errors` 条件判断：
+
+```
+} else {
+    echo '<p class="error">The following error(s) occurred:<br />';
+    foreach ($errors as $msg) {
+        echo " - $msg<br />\n";
+    }
+    echo '</p><p>Please try again.</p>';
+}
+```
+
+`else` 用于报告表单中的任何错误（即缺少名、姓或电子邮件地址），就像在注册脚本中一样。
+
+**11.** 完成提交条件判断：
+
+```
+} // End of submit conditional.
+```
+
+最后的右大括号结束主提交条件判断。在本例中，每当访问该页面时都会显示表单。提交表单后，数据库将被更新，表单将再次显示，现在显示最新信息。
+
+**12.** 检索被编辑用户的信息：
+
+```
+$q = "SELECT first_name, last_name, email FROM users WHERE user_id=$id";
+$r = @mysqli_query($dbc, $q);
+if (mysqli_num_rows($r) == 1) {
+    $row = mysqli_fetch_array($r, MYSQLI_NUM);
+}
+```
+
+为了填充表单元素，必须从数据库中检索该用户的当前信息。此查询类似于 `delete_user.php` 中的查询。条件判断——检查是否返回了单行——确保提供了有效的用户 ID。
+
+**13.** 显示表单：
+
+```
+echo '<form action="edit_user.php" method="post">
+<p>First Name: <input type="text" name="first_name" size="15" maxlength="15" value="' . $row[0] . '" /></p>
+<p>Last Name: <input type="text" name="last_name" size="15" maxlength="30" value="' . $row[1] . '" /></p>
+<p>Email Address: <input type="text" name="email" size="20" maxlength="60" value="' . $row[2] . '" /></p>
+<p><input type="submit" name="submit" value="Submit" /></p>
+<input type="hidden" name="id" value="' . $id . '" />
+</form>';
+```
+
+表单只有三个文本输入框，每个输入框都使用从数据库检索的数据使其具有粘性。同样，用户 ID（`$id`）作为隐藏表单输入存储，以便处理过程也能访问此值。
+
+**14.** 完成 `mysqli_num_rows()` 条件判断：
+
+```
+} else {
+    echo '<p class="error">This page has been accessed in error.</p>';
+}
+```
+
+如果因提交了无效的用户 ID 而导致数据库未返回任何记录，则显示此消息。
+
+**15.** 完成 PHP 页面：
+
+```
+mysqli_close($dbc);
+include('includes/footer.html');
+?>
+```
+
+**16.** 将文件保存为 `edit_user.php` 并将其放在你的 Web 目录中（与 `view_users.php` 在同一文件夹下）。
+
+**17.** 通过首先在 `view_users.php` 页面中单击 *Edit* 链接 ![Image](img/circle-b.jpg)和 ![Image](img/circle-c.jpg) 来运行该页面。
+
+![Image](img/10_figure_11_b.jpg)
+
+![Image](img/circle-b.jpg)成功更新数据库后，新值显示在表单中（与 ![Image](img/graycircle-a.jpg) 中的表单值进行比较）。
+
+![Image](img/10_figure_12_c.jpg)
+
+![Image](img/circle-c.jpg)如果你尝试将记录更改为现有的电子邮件地址，或者如果你省略了某项输入，则会报告错误。
+
+---
+
+Tip
+
+按原样编写，粘性表单始终显示从数据库检索的值。这意味着如果发生错误，将使用数据库值，而不是用户刚刚输入的值（如果它们不同）。要更改此行为，粘性表单必须检查 `$_POST` 变量是否存在，如果存在则使用它们，如果不存在则使用数据库值。
+
+---
+
+Tip
+
+此编辑页面不包含更改密码的功能。该概念已在 `password.php`（脚本 9.7）中演示。如果你想在此处加入该功能，请记住你无法显示当前密码，因为它以哈希格式存储（即不可解密）。相反，只需提供两个用于更改密码的框（新密码输入框和确认框）。如果提交了这些值，也要在数据库中更新密码。如果这些输入留空，则不更新数据库中的密码。
+
+---
+
+### 查询结果分页
+
+*分页* 是一个你熟悉的概念，即使你不知道这个术语。当你使用像 Google 这样的搜索引擎时，它会将结果显示为一系列页面，而不是一个长长的列表。`view_users.php` 脚本将受益于此功能。
+
+查询结果分页广泛使用了在 第 5 章 中介绍的 `LIMIT` SQL 子句。`LIMIT` 限制实际返回的匹配记录的子集。要对查询返回的结果进行分页，每次页面迭代将使用不同的 `LIMIT` 参数运行相同的查询。第一次查看页面将请求前 *X* 条记录；第二次查看页面，第二组 *X* 条记录；以此类推。要使其工作，必须在 URL 中从页面传递两个值到页面，就像从 `view_users.php` 页面传递用户 ID 一样。第一个值是要显示的总页数。第二个值是指示页面在此次迭代中应显示哪些记录的指标（即从何处开始获取记录）。
+
+此处将演示另一种更美观的技术：使用交替的背景颜色显示表格的每一行——每一条返回的记录 ![Image](img/circle-a.jpg)。利用三元运算符（参见侧边栏“三元运算符”），可以轻松实现此效果。
+
+![Image](img/10_figure_13_a.jpg)
+
+![Image](img/circle-a.jpg)交替表格行颜色使这份用户列表更易读（每隔一行具有浅灰色背景）。
+
+这里有很多很好的新信息需要涵盖，所以为了更容易跟上，让我们从头编写这个版本，而不是试图修改脚本 10.1。
+
+
+
+
+#### 对 `view_users.php` 进行分页
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `view_users.php`（**脚本 10.4;
+
+echo '<h1>Registered Users</h1>';
+
+require_once ('../mysqli_connect.php');
+```
+
+**2.** 设置每页显示的记录数：
+
+```php
+$display = 10;
+```
+
+通过在此处将此值设为变量，您将能在日后轻松更改每页显示的记录数。此外，此值将在本脚本中多次用到，因此最好用一个变量来表示（如果您愿意，也可以将此值表示为常量）。
+
+**3.** 检查所需页数是否已确定：
+
+```php
+if (isset($_GET['p']) && is_numeric($_GET['p'])) {
+    $pages = $_GET['p'];
+} else {
+```
+
+**脚本 10.4。** `view_users.php` 的这个新版本结合了*分页*功能，以便用户列表分布在多个 Web 浏览器页面上。
+
+---
+
+```php
+1   <?php # Script 10.4 - view_users.php #4
+2   // This script retrieves all the records
+3       from the users table.
+4   // This new version paginates the query
+5       results.
+6
+7   $page_title = 'View the Current Users';
+8   include ('includes/header.html');
+9   echo '<h1>Registered Users</h1>';
+10
+11  require_once ('../mysqli_connect.php');
+12
+13  // Number of records to show per page:
+14  $display = 10;
+15
+16  // Determine how many pages there are...
+17  if (isset($_GET['p']) && is_numeric
+18      ($_GET['p'])) { // Already been
+19      determined.
+20
+21      $pages = $_GET['p'];
+22
+23  } else { // Need to determine.
+24
+25      // Count the number of records:
+26      $q = "SELECT COUNT(user_id) FROM
+27          users";
+28      $r = @mysqli_query ($dbc, $q);
+29      $row = @mysqli_fetch_array ($r,
+30          MYSQLI_NUM);
+31      $records = $row[0];
+32
+33      // Calculate the number of pages...
+34      if ($records > $display) { // More
+35          than 1 page.
+36          $pages = ceil ($records/$display);
+37      } else {
+38          $pages = 1;
+39      }
+40
+41  } // End of p IF.
+42
+43  // Determine where in the database to
+44      start returning results...
+45  if (isset($_GET['s']) && is_numeric
+46      ($_GET['s'])) {
+47      $start = $_GET['s'];
+48  } else {
+49      $start = 0;
+50  }
+51
+52  // Define the query:
+53  $q = "SELECT last_name, first_name,
+54      DATE_FORMAT(registration_date, '%M
+55      %d, %Y') AS dr, user_id FROM users
+56      ORDER BY registration_date ASC LIMIT
+57      $start, $display";
+58  $r = @mysqli_query ($dbc, $q);
+59
+60  // Table header:
+61  echo '<table align="center" cellspacing="0"
+62      cellpadding="5" width="75%">
+63  <tr>
+64      <td align="left"><b>Edit</b></td>
+65      <td align="left"><b>Delete</b></td>
+66      <td align="left"><b>Last Name</b></td>
+67      <td align="left"><b>First Name</b></
+68  td>
+69      <td align="left"><b>Date Registered
+70          </b></td>
+71  </tr>
+72  ';
+73
+74  // Fetch and print all the records....
+75
+76  $bg = '#eeeeee'; // Set the initial
+77      background color.
+78
+79  while ($row = mysqli_fetch_array($r,
+80      MYSQLI_ASSOC)) {
+81
+82      $bg = ($bg == '#eeeeee' ? '#ffffff' :
+83          '#eeeeee'); // Switch the
+84      background color.
+85
+86      echo '<tr bgcolor="' . $bg . '">
+87          <td align="left"><a href="edit_
+90          user.php?id=' . $row['user_id'] .
+91          '">Edit</a></td>
+92          <td align="left"><a href="delete_
+93          user.php?id=' . $row['user_id'] .
+94          '">Delete</a></td>
+95          <td align="left">' . $row['last_
+96          name'] . '</td>
+97          <td align="left">' . $row['first_
+98          name'] . '</td>
+99          <td align="left">' . $row['dr'] .
+100          '</td>
+101      </tr>
+102      ';
+103
+104  } // End of WHILE loop.
+105
+106  echo '</table>';
+107  mysqli_free_result ($r);
+108  mysqli_close($dbc);
+109
+110  // Make the links to other pages, if
+111      necessary.
+112  if ($pages > 1) {
+113
+114      // Add some spacing and start a
+115      paragraph:
+116      echo '<br /><p>';
+117
+118      // Determine what page the script is
+119      on:
+120      $current_page = ($start/$display)
+121          + 1;
+122
+123      // If it's not the first page, make a
+124      Previous link:
+125      if ($current_page != 1) {
+126          echo '<a href="view_users.
+127          php?s=' . ($start - $display) .
+128          '&p=' . $pages . '">Previous</a> ';
+129      }
+130
+131      // Make all the numbered pages:
+132      for ($i = 1; $i <= $pages; $i++) {
+133          if ($i != $current_page) {
+134              echo '<a href="view_users.
+135              php?s=' . (($display *
+136              ($i - 1))) . '&p=' . $pages .
+137              '">' . $i . '</a> ';
+138          } else {
+139              echo $i . ' ';
+140          }
+141      } // End of FOR loop.
+142
+143      // If it's not the last page, make a
+144      Next button:
+145      if ($current_page != $pages) {
+146          echo '<a href="view_users.
+147          php?s=' . ($start + $display) .
+148          '&p=' . $pages . '">Next</a>';
+149      }
+150
+151      echo '</p>'; // Close the paragraph.
+152
+153  } // End of links section.
+154
+155  include ('includes/footer.html');
+156  ?>
+```
+
+---
+
+为了让该脚本在多个页面视图中显示用户，它需要确定总共需要多少页结果。首次运行脚本时，必须计算此数字。对于对该页面的每次后续调用，总页数将通过 URL 传递给脚本，从而在 `$_GET['p']` 中可用。如果该变量已设置且为数字，其值将赋给 `$pages` 变量。否则，则需要计算页数。
+
+**4.** 统计数据库中的记录数：
+
+```php
+$q = "SELECT COUNT(user_id) FROM users";
+$r = @mysqli_query ($dbc, $q);
+$row = @mysqli_fetch_array ($r, MYSQLI_NUM);
+$records = $row[0];
+```
+
+---
+
+### 三元运算符
+
+本例使用了一个之前未介绍的运算符，称为*三元*运算符。其结构为：
+
+```text
+(condition) ? valueT : valueF
+```
+
+括号中的条件将被求值；如果为 `TRUE`，则返回第一个值（`valueT`）。如果条件为 `FALSE`，则返回第二个值（`valueF`）。
+
+因为三元运算符返回一个值，所以整个结构常用于给变量赋值或作为函数的参数。例如，代码行
+
+```php
+echo (isset($var)) ? 'SET' : 'NOT SET';
+```
+
+将根据变量 `$var` 的状态打印出 *SET* 或 *NOT SET*。
+
+在 `view_users.php` 脚本的这个版本中，三元运算符用于在两个选项之间切换变量的值。然后该变量将用于决定表中每条记录的背景色。当然还有其他方法设置此值，但三元运算符是最简洁的。
+
+---
+
+使用在第 8 章“高级 SQL 和 MySQL”中介绍的 `COUNT()` 函数，您可以轻松找出 *users* 表中的记录数（即待分页的记录数）。该查询将返回一行一列：记录数 ![Image](img/circle-b.jpg)。
+
+![Image](img/10_figure_14_b.jpg)
+
+![Image](img/circle-b.jpg) 在 mysql 客户端中运行计数查询的结果。
+
+**5.** 通过数学计算确定所需页数：
+
+```php
+if ($records > $display) {
+    $pages = ceil ($records/$display);
+} else {
+    $pages = 1;
+}
+```
+
+
+
+
+
+### 分页显示记录实现步骤
+
+#### 计算总页数
+
+显示所有记录所需的页数取决于要显示的记录总数和每页显示的记录数（赋值给变量 `$display`）。如果结果集中的记录数多于每页显示的记录数，则需要多个页面。要准确计算需要多少页，取两者相除后的下一个最高整数（`ceil()` 函数返回下一个最高整数）。例如，如果返回了 25 条记录且每页显示 10 条，则需要 3 页（第一页显示 10 条，第二页显示 10 条，第三页显示 5 条）。如果 `$records` 不大于 `$display`，则只需要一页。
+
+## 6. 完成页数计算的 `if-else` 语句
+
+```php
+} // End of p IF.
+```
+
+## 7. 确定数据库中的起始记录点
+
+```php
+if (isset($_GET['s']) && is_numeric($_GET['s'])) {
+    $start = $_GET['s'];
+} else {
+    $start = 0;
+}
+```
+
+脚本接收的第二个参数（在后续查看页面时）将是起始记录。这对应于 `LIMIT x, y` 子句中的第一个数字。首次调用脚本时，应检索前十条记录（0 到 10），因为 `$display` 的值为 10。第二页将显示第 10 到 19 条记录；第三页显示第 20 到 29 条记录，以此类推。
+
+首次访问此页面时，`$_GET['s']` 变量未设置，因此 `$start` 应为 0（`LIMIT` 子句中的第一条记录索引为 0）。后续页面将从 URL 接收 `$_GET['s']` 变量，并将其赋值给 `$start`。
+
+## 8. 编写带有 `LIMIT` 子句的 `SELECT` 查询
+
+```php
+$q = "SELECT last_name, first_name, DATE_FORMAT(registration_date, '%M %d, %Y') AS dr, user_id FROM users ORDER BY registration_date ASC LIMIT $start, $display";
+$r = @mysqli_query($dbc, $q);
+```
+
+`LIMIT` 子句规定从哪条记录开始检索（`$start`）以及从该点返回多少条记录（`$display`）。首次运行页面时，查询将是 `SELECT last_name, first_name ... LIMIT 0, 10`。点击下一页将导致查询变为 `SELECT last_name, first_name ... LIMIT 10, 10`。
+
+## 9. 创建 HTML 表头
+
+```php
+echo '<table align="center" cellspacing="0" cellpadding="5" width="75%">
+<tr>
+    <td align="left"><b>Edit</b></td>
+    <td align="left"><b>Delete</b></td>
+    <td align="left"><b>Last Name</b></td>
+    <td align="left"><b>First Name</b></td>
+    <td align="left"><b>Date Registered</b></td>
+</tr>
+';
+```
+
+为简化脚本，此处假设有记录可显示。更规范的做法是，在创建表格之前，脚本应调用 `mysqli_num_rows()` 函数，并通过条件判断确认有记录返回。
+
+## 10. 初始化背景颜色变量
+
+```php
+$bg = '#eeeeee';
+```
+
+为使每行拥有自己的背景颜色，使用一个变量存储该颜色。初始时，`$bg` 变量被赋值为 `#eeeeee`（浅灰色）。该颜色将与白色（`#ffffff`）交替显示。
+
+## 11. 开始 `while` 循环检索每条记录，并交换背景颜色
+
+```php
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    $bg = ($bg == '#eeeeee' ? '#ffffff' : '#eeeeee');
+```
+
+表格中每行使用的背景颜色赋值给 `$bg` 变量。因为背景颜色应交替显示，这行代码将在循环的每次迭代中将相反的颜色赋值给 `$bg`。如果 `$bg` 等于 `#eeeeee`，则将其赋值为 `#ffffff`，反之亦然（关于三元运算符的语法和解释，请参阅侧边栏）。对于获取的第一行，`$bg` 最初等于 `#eeeeee`（见步骤 10），因此将被赋值为 `#ffffff`，形成白色背景。
+
+对于第二行，`$bg` 不等于 `#eeeeee`，因此将被赋值为该值，形成灰色背景。
+
+## 12. 在表格行中打印记录
+
+```php
+echo '<tr bgcolor="' . $bg . '">
+    <td align="left"><a href="edit_user.php?id=' . $row['user_id'] . '">Edit</a></td>
+    <td align="left"><a href="delete_user.php?id=' . $row['user_id'] . '">Delete</a></td>
+    <td align="left">' . $row['last_name'] . '</td>
+    <td align="left">' . $row['first_name'] . '</td>
+    <td align="left">' . $row['dr'] . '</td>
+</tr>
+';
+```
+
+此代码与该脚本前一版本仅有一处不同：初始的 `TR` 标签现在包含 `bgcolor` 属性，其值为 `$bg` 变量（即 `#eeeeee` 和 `#ffffff` 交替）。
+
+## 13. 完成 `while` 循环和表格，释放查询结果资源，并关闭数据库连接
+
+```php
+} // End of WHILE loop.
+echo '</table>';
+mysqli_free_result($r);
+mysqli_close($dbc);
+```
+
+## 14. 开始显示其他页面链接的部分（如有必要）
+
+```php
+if ($pages > 1) {
+    echo '<br /><p>';
+```
+
+如果脚本需要多个页面来显示所有记录，则需要在页面底部添加适当的链接。
+
+## 15. 确定当前正在查看的页码
+
+```php
+$current_page = ($start / $display) + 1;
+```
+
+要创建链接，脚本必须首先确定当前页码。这可以通过起始数除以显示数再加 1 来计算。例如，在第二次查看此页面时，`$start` 将为 10（因为第一次实例中 `$start` 为 0），使 `$current_page` 值为 2：(10/10) + 1 = 2。
+
+## 16. 创建指向上一页的链接（如有必要）
+
+```php
+if ($current_page != 1) {
+    echo '<a href="view_users.php?s=' . ($start - $display) . '&p=' . $pages . '">Previous</a> ';
+}
+```
+
+如果当前页不是第一页，则应有一个指向较早结果集的 *Previous* 链接。这虽非严格必须，但很实用。
+
+每个链接将由脚本名称、起始点和页数组成。上一页的起始点将是当前起始点减去显示的数量。这些值必须在每个链接中传递，否则分页将失败。
+
+## 17. 创建数字页码链接
+
+```php
+for ($i = 1; $i <= $pages; $i++) {
+    if ($i != $current_page) {
+        echo '<a href="view_users.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '">' . $i . '</a> ';
+    } else {
+        echo $i . ' ';
+    }
+}
+```
+
+大部分链接将通过从 1 循环到总页数来创建。除当前页外，每页都将被链接。对于每个链接，起始点值 `s` 将通过将每页显示的记录数乘以 `$i` 减 1 来计算。例如，在第 3 页时，`$i - 1` 为 2，意味着 `s` 将为 20。
+
+## 18. 创建 *Next* 链接
+
+```php
+if ($current_page != $pages) {
+    echo '<a href="view_users.php?s=' . ($start + $display) . '&p=' . $pages . '">Next</a>';
+}
+```
+
+最后，假设这不是最后一页，将显示一个 *Next* 页链接。
+
+## 19. 完成页面
+
+```php
+    echo '</p>';
+} // End of links section.
+include('includes/footer.html');
+?>
+```
+
+## 20. 保存文件
+
+将文件保存为 `view_users.php`，放置在您的 Web 目录中，并在 Web 浏览器中测试。
+
+---
+
+> **Tip**
+
+
+
+
+本示例对一个简单查询进行了分页，但如果你想对更复杂的查询（如搜索结果）进行分页，难度也不会增加太多。主要的区别在于，查询中使用的任何条件都必须通过链接从一页传递到下一页。如果从一次页面查看到下一次，主查询不是*完全相同*的，分页就会失败。
+
+***
+
+提示
+
+如果你运行此示例，发现分页与本应返回的结果数量不匹配（例如，计数查询显示有 150 条记录，但分页只创建了 3 页，每页 10 条记录），这很可能是因为主查询和 `COUNT()` 查询差异太大。这两个查询永远不会完全相同，但它们必须执行相同的连接（如果适用），并且拥有相同的 `WHERE` 和/或 `GROUP BY` 子句，才能保证准确性。
+
+***
+
+提示
+
+本脚本未包含错误处理，因为我知道这些查询按原样编写即可运行。如果你遇到问题，请记住你的 MySQL/SQL 调试步骤：打印查询语句，使用 mysql 客户端或 phpMyAdmin 运行它以确认结果，并根据需要调用 `mysqli_error()` 函数。
+
+***
+
+**脚本 10.5.** `view_users.php` 脚本的最新版本将表格的列标题变为可点击的链接。
+
+***
+
+```php
+<?php # Script 10.5 - view_users.php #5
+// This script retrieves all the records
+// from the users table.
+// This new version allows the results
+// to be sorted in different ways.
+
+$page_title = 'View the Current Users';
+include ('includes/header.html');
+echo '<h1>Registered Users</h1>';
+
+require_once ('../mysqli_connect.php');
+
+// Number of records to show per page:
+$display = 10;
+
+// Determine how many pages there are...
+if (isset($_GET['p']) && is_numeric($_GET['p'])) { // Already been determined.
+    $pages = $_GET['p'];
+} else { // Need to determine.
+    // Count the number of records:
+    $q = "SELECT COUNT(user_id) FROM users";
+    $r = @mysqli_query ($dbc, $q);
+    $row = @mysqli_fetch_array ($r, MYSQLI_NUM);
+    $records = $row[0];
+    // Calculate the number of pages...
+    if ($records > $display) { // More than 1 page.
+        $pages = ceil ($records/$display);
+    } else {
+        $pages = 1;
+    }
+} // End of p IF.
+
+// Determine where in the database to start returning results...
+if (isset($_GET['s']) && is_numeric($_GET['s'])) {
+    $start = $_GET['s'];
+} else {
+    $start = 0;
+}
+
+// Determine the sort...
+// Default is by registration date.
+$sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'rd';
+
+// Determine the sorting order:
+switch ($sort) {
+    case 'ln':
+        $order_by = 'last_name ASC';
+        break;
+    case 'fn':
+        $order_by = 'first_name ASC';
+        break;
+    case 'rd':
+        $order_by = 'registration_date ASC';
+        break;
+    default:
+        $order_by = 'registration_date ASC';
+        $sort = 'rd';
+        break;
+}
+
+// Define the query:
+$q = "SELECT last_name, first_name, DATE_FORMAT(registration_date, '%M %d, %Y') AS dr, user_id FROM users ORDER BY $order_by LIMIT $start, $display";
+$r = @mysqli_query ($dbc, $q); // Run the query.
+
+// Table header:
+echo '<table align="center" cellspacing="0" cellpadding="5" width="75%">
+<tr>
+    <td align="left"><b>Edit</b></td>
+    <td align="left"><b>Delete</b></td>
+    <td align="left"><b><a href="view_users.php?sort=ln">Last Name</a></b></td>
+    <td align="left"><b><a href="view_users.php?sort=fn">First Name</a></b></td>
+    <td align="left"><b><a href="view_users.php?sort=rd">Date Registered</a></b></td>
+</tr>
+';
+
+// Fetch and print all the records....
+$bg = '#eeeeee';
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    $bg = ($bg == '#eeeeee' ? '#ffffff' : '#eeeeee');
+    echo '<tr bgcolor="' . $bg . '">
+    <td align="left"><a href="edit_user.php?id=' . $row['user_id'] . '">Edit</a></td>
+    <td align="left"><a href="delete_user.php?id=' . $row['user_id'] . '">Delete</a></td>
+    <td align="left">' . $row['last_name'] . '</td>
+    <td align="left">' . $row['first_name'] . '</td>
+    <td align="left">' . $row['dr'] . '</td>
+</tr>
+';
+} // End of WHILE loop.
+
+echo '</table>';
+mysqli_free_result ($r);
+mysqli_close($dbc);
+
+// Make the links to other pages, if necessary.
+if ($pages > 1) {
+
+    echo '<br /><p>';
+    $current_page = ($start/$display) + 1;
+
+    // If it's not the first page, make a Previous button:
+    if ($current_page != 1) {
+        echo '<a href="view_users.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a> ';
+    }
+
+    // Make all the numbered pages:
+    for ($i = 1; $i <= $pages; $i++) {
+        if ($i != $current_page) {
+            echo '<a href="view_users.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a> ';
+        } else {
+            echo $i . ' ';
+        }
+    } // End of FOR loop.
+
+    // If it's not the last page, make a Next button:
+    if ($current_page != $pages) {
+        echo '<a href="view_users.php?s=' . ($start + $display) . '&p=' . $pages . '&sort=' . $sort . '">Next</a>';
+    }
+
+    echo '</p>'; // Close the paragraph.
+
+} // End of links section.
+
+include ('includes/footer.html');
+?>
+```
+
+***
+
+### 创建可排序的显示
+
+为了结束本章，还有一个最终功能可以添加到 `view_users.php` 中。在目前的状态下，用户列表按注册日期顺序显示。如果也能按姓名查看，那将很不错。
+
+从 MySQL 的角度来看，完成此任务很简单：只需更改 `SELECT` 查询的 `ORDER BY` 子句。因此，要向脚本添加排序功能，只需要额外的 PHP 代码来更改 `ORDER BY` 子句。一个合乎逻辑的方法是链接列标题，以便点击它们可以更改显示顺序。正如你希望猜到的那样，这涉及使用 GET 方法将一个参数传回此页面，以指示首选的排序顺序。
+
+#### 创建可排序链接
+
+**1.** 在文本编辑器或 IDE 中打开 `view_users.php`（脚本 10.4），如果尚未打开的话。
+
+**2.** 在确定起始点（`$s`）之后，定义一个 `$sort` 变量（脚本 10.5）：
+
+```php
+$sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'rd';
+```
+
+
+
+
+`$sort` 变量将用于确定查询结果的排序方式。此行使用三元运算符（请参阅本章前一节侧边栏）为 `$sort` 赋值。如果设置了 `$_GET['sort']`（用户单击任意链接后即会出现这种情况），则应将该值赋给 `$sort`。如果未设置 `$_GET['sort']`，则为 `$sort` 赋予默认值 `rd`（*registration date*，注册日期的缩写）。
+
+**3.** 确定结果应如何排序：
+
+```php
+switch ($sort) {  
+
+  case 'ln':  
+
+    $order_by = 'last_name ASC';  
+
+    break;  
+
+  case 'fn':  
+
+    $order_by = 'first_name ASC';  
+
+    break;  
+
+  case 'rd':  
+
+    $order_by = 'registration_date ASC';  
+
+    break;  
+
+  default:  
+
+    $order_by = 'registration_date ASC';  
+
+    $sort = 'rd';  
+
+    break;  
+
+}
+```
+
+`switch` 将 `$sort` 与多个预期值进行比对。例如，如果它等于 `ln`，则结果应按姓氏升序排列。所赋予的 `$order_by` 变量将用于 SQL 查询中。
+
+如果 `$sort` 的值为 `fn`，则结果应按名字升序排列。如果值为 `rd`，则结果将按注册日期升序排列。这也是默认情况。此处设置默认情况可以防止恶意用户将 `$_GET['sort']` 的值更改为可能破坏查询的内容。
+
+**4.** 修改查询以使用新的 `$order_by` 变量：
+
+```php
+$q = "SELECT last_name, first_name, DATE_FORMAT(registration_date, '%M %d, %Y') AS dr, user_id FROM users ORDER BY $order_by LIMIT $start, $display";
+```
+
+此时，`$order_by` 变量已有一个值，指明返回的结果应如何排序（例如 `registration_date ASC`），因此可以轻松地将其添加到查询中。请记住 `ORDER BY` 子句位于 `LIMIT` 子句之前。如果生成的查询在您那里无法正常运行，请将其打印出来并检查其语法。
+
+**5.** 修改表头的 `echo` 语句，使列标题变为链接：
+
+```php
+echo '<table align="center" cellspacing="0" cellpadding="5" width="75%">  
+
+<tr>  
+
+  <td align="left"><b>Edit</b></td>  
+
+  <td align="left"><b>Delete</b></td>  
+
+  <td align="left"><b><a href="view_users.php?sort=ln">Last Name</a></b></td>  
+
+  <td align="left"><b><a href="view_users.php?sort=fn">First Name</a></b></td>  
+
+  <td align="left"><b><a href="view_users.php?sort=rd">Date Registered</a></b></td>  
+
+</tr>  
+
+';
+```
+
+要将列标题变为可点击的链接，只需用 `A` 标签将其包围即可。每个链接的 `href` 属性值对应 `$_GET['sort']` 的可接受值（参见步骤 3 中的 `switch`）。
+
+**6.** 修改创建 *Previous*（上一页）链接的 `echo` 语句，以便同时传递排序值：
+
+```php
+echo '<a href="view_users.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '"> Previous</a> ';
+```
+
+向 *Previous* 链接添加另一个 *name=value* 对，以便将排序顺序也发送到结果的每一页。如果不这样做，分页将会失败，因为 `ORDER BY` 子句会因页面不同而异。
+
+**7.** 对编号页面和 *Next*（下一页）链接重复步骤 6：
+
+```php
+echo '<a href="view_users.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a> ';  
+
+echo '<a href="view_users.php?s=' . ($start + $display) . '&p=' . $pages . '&sort=' . $sort . '"> Next</a>';
+```
+
+**8.** 将文件另存为 `view_users.php`，放入您的 Web 目录中，并在 Web 浏览器中运行它 ![Image](img/circle-a.jpg)和 ![Image](img/circle-b.jpg)。
+
+![Image](img/10_figure_17_a.jpg)
+
+![Image](img/circle-a.jpg)单击名字列后，结果按名字升序显示。
+
+![Image](img/10_figure_18_b.jpg)
+
+![Image](img/circle-b.jpg)单击 *Last Name*（姓氏）列，然后单击到第二个分页显示，页面显示按姓氏升序排列的第二组结果。
+
+***
+
+提示
+
+本例还演示了一个非常重要的安全概念。代码没有直接在查询中使用 `$_GET['sort']` 的值，而是在 `switch` 中将其与假定的值进行核对。如果由于某种原因，`$_GET['sort']` 的值不是预期的值，则查询将使用默认排序顺序。关键在于：不要对接收到的数据做假设，也不要在 SQL 查询中使用未经验证的数据。
+
+***
+
+### 复习与实践
+
+如果您对复习问题或实践提示有任何疑问，请访问本书的支持论坛 ([www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/))。
+
+#### 复习
+
+• 调试 PHP-MySQL 问题的标准步骤序列是什么（在 第 8 章 末尾明确传达）？
+
+• 向 PHP 脚本传递值的两种方式是什么（除用户输入外）？
+
+• `delete_user.php` 和 `edit_user.php` 脚本采取了哪些安全措施来防止恶意或意外删除？
+
+• 为什么可以在查询中直接使用 `$id` 值，而无需先通过 `mysqli_real_escape_string()` 处理？
+
+• 在什么情况下 `mysqli_affected_rows()` 函数会返回假阴性（即报告没有记录受影响，尽管查询无错误运行）？
+
+• 什么是三元运算符？如何使用它？
+
+• 正确分页查询结果需要哪两个值？
+
+• 如何修改查询以使其结果分页？
+
+• 如果分页查询基于额外标准（超出 `LIMIT` 子句中使用的标准），如果这些标准不也在每个分页链接中传递，会发生什么？
+
+• 为什么重要的是不要直接在查询中使用 `$_GET['sort']` 的值？
+
+• 为什么重要的是在每个分页链接中传递排序值？
+
+#### 实践
+
+• 修改 `delete_user.php` 和 `edit_user.php` 页面，使它们都在浏览器窗口的标题栏中显示受影响的用户。
+
+• 修改 `edit_user.php`，以便也能更改用户的密码。
+
+• 如果您想挑战一下，修改 `edit_user.php`，使表单元素的值来自 `$_POST`（如果已设置），否则来自数据库。
+
+• 更改 `view_users.php` 中 `$display` 变量的值以改变分页。
+
+• 对另一个查询结果进行分页，例如 *banking* 数据库中找到的账户或客户列表。
+
+• 为 *banking* 数据库创建删除和编辑脚本。您必须考虑到现有的外键约束，例如，限制删除仍拥有账户的客户。
+
+## 11. Web 应用程序开发
+
+本章内容
+
+发送电子邮件 330
+
+处理文件上传 336
+
+PHP 和 JavaScript 348
+
+理解 HTTP 头部 355
+
+日期和时间函数 362
+
+复习与实践 366
+
+前两章重点介绍了如何将 PHP 和 MySQL 结合使用（毕竟这是本书的主要目的）。但仍有大量以 PHP 为中心的材料需要涵盖。在暂时告别 PHP 与 MySQL 的结合使用后，本章介绍了一些常用于更复杂 Web 应用程序的技术。
+
+
+
+
+#### 发送电子邮件
+
+PHP 最让我喜欢的特性之一就是发送电子邮件非常简单。在一台配置正确的服务器上，这个过程就像使用 `mail()` 函数一样简单：
+
+```
+mail(to, subject, body, [headers]);
+```
+
+`to` 值应为一个电子邮件地址或一系列地址，多个地址之间用逗号分隔。以下格式均被允许：
+
+- email@example.com
+- email1@example.com, email2@example.com
+- Actual Name <email@example.com>
+- Actual Name <email@example.com>, This Name <email2@example.com>
+
+`subject` 值将构成邮件的主题行，`body` 则是放置邮件正文内容的地方。为了提高可读性，通常会先给变量赋值，然后在 `mail()` 函数调用中使用这些变量：
+
+```
+$to = 'email@example.com';
+$subject = 'This is the subject';
+$body = 'This is the body.
+It goes over multiple lines.';
+mail($to, $subject, $body);
+```
+
+正如给 `$body` 变量赋值时所见，你可以通过在引号内直接换行来创建跨多行的电子邮件消息。你也可以在双引号内使用换行符（`\n`）来实现这一点：
+
+```
+$body = "This is the body.\nIt goes over multiple lines.";
+```
+
+---
+
+#### PHP mail() 依赖项
+
+PHP 的 `mail()` 函数本身并不发送电子邮件。相反，它会指示运行在计算机上的邮件服务器来发送。这意味着运行 PHP 的计算机必须装有一个工作正常的邮件服务器，该函数才能生效。
+
+如果你运行的是 Unix 变体系统，或者你的网站托管在专业主机上，这应该不是问题。但如果你在自己的台式机或笔记本电脑上运行 PHP，很可能需要做一些调整。
+
+如果你运行的是 Windows，且你的互联网服务提供商（ISP）提供了 SMTP 服务器（如 `smtp.comcast.net`），可以在 `php.ini` 文件中设置此信息（请从 peachpit.com 下载附录 A“安装”，了解如何编辑此文件）。遗憾的是，仅当你的 ISP 使用 SMTP 服务器不需要认证（用户名和密码组合）时，此方法才有效。否则，你需要在自己的计算机上安装一个 SMTP 服务器。这类软件有很多：只需在互联网上搜索 *free windows smtp server* 即可看到一些选项。附录 A 推荐使用的 XAMPP 应用程序包含 Mercury 邮件服务器。
+
+如果你运行的是 Mac OS X，你需要启用内置的 SMTP 服务器（根据具体的 Mac OS X 版本，可能是 sendmail 或 postfix）。你可以在网上找到相关说明（搜索 *enable sendmail "Mac OS X"*）。如果你按附录 A 的建议使用 MAMP，请在网上搜索通过 MAMP 发送电子邮件的方法。
+
+---
+
+这一切都非常简单，只有几个注意事项。首先，主题行不能包含换行符（`\n`）。其次，正文的每一行长度不应超过 70 个字符（这更多是一个建议而非强制要求）。你可以使用 `wordwrap()` 函数来实现这一点。它会在字符串每 *X* 个字符处插入一个换行符。要将文本折行至 70 个字符，请使用：
+
+```
+$body = wordwrap($body, 70);
+```
+
+`mail()` 函数接受第四个可选参数用于添加额外的头部信息。你可以在此设置 From、Reply-To、Cc、Bcc 等。例如：
+
+```
+mail($to, $subject, $body, 'From: reader@example.com');
+```
+
+若要在邮件中使用多个不同类型的头部，请用 `\r\n` 分隔每一个：
+
+```
+$headers = "From: John@example.com\r\n";
+$headers .= "Cc: Jane@example.com, Joe@example.com\r\n";
+mail($to, $subject, $body, $headers);
+```
+
+虽然第四个参数是可选的，但建议始终包含一个 From 值（尽管也可以在 PHP 的配置文件中设置）。
+
+要使用 `mail()` 函数，让我们创建一个页面，显示一个联系表单，然后处理表单提交，验证数据并通过电子邮件发送出去。这个例子还将提供一个实用的小技巧，你有时会在带有粘性表单的页面上用到。
+
+![Image](img/11_figure_01_a.jpg)
+
+*一个标准的联系表单。*
+
+运行此脚本前请注意两点：首先，要使本例生效，运行 PHP 的计算机必须装有工作正常的邮件服务器。如果你使用的是托管网站，这应该不是问题；在自己的电脑上，你可能需要采取一些准备步骤（见侧边栏）。我必须提前说明，这些步骤对初学者来说可能令人望而生畏；对于这个特定脚本，使用托管网站可能是最简单且最令人满意的方式。
+
+其次，虽然这个例子功能完善，但可能被恶意分子利用，通过你的联系表单发送垃圾邮件（不仅发给你，还发给任何人）。防止此类攻击的步骤将在第 13 章“安全方法”中介绍。跟着学习和测试这个例子完全没问题；但将其作为长期的联系表单解决方案则是个坏主意。
+
+#### 发送电子邮件
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 脚本，命名为 `email.php`（脚本 11.1）：
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Contact Me</title>
+</head>
+<body>
+<h1>Contact Me</h1>
+<?php # Script 11.1 - email.php
+```
+
+本章的示例都不像前两章那样使用模板，所以从标准 HTML 开始。
+
+**2.** 创建条件判断以检查表单是否已提交并验证表单数据：
+
+```
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['comments'])) {
+```
+
+表单包含三个文本输入框（严格来说，其中一个是 textarea）。`empty()` 函数将确认每个字段都有输入。在第 13 章中，你将学习如何使用 `Filter` 扩展来验证所提供的电子邮件地址格式是否有效。
+
+**脚本 11.1。** 此页面显示一个联系表单，提交后将把表单数据通过电子邮件发送到一个电子邮件地址。
+
+```
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+      1.0 Transitional//EN" "http://www.w3.org/
+      TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/
+      xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type"
+        content="text/html; charset=utf-8" />
+5      <title>Contact Me</title>
+6  </head>
+7  <body>
+8  <h1>Contact Me</h1>
+9  <?php # Script 11.1 - email.php
+10
+11  // Check for form submission:
+12  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+13
+14      // Minimal form validation:
+15      if (!empty($_POST['name']) && !empty
+        ($_POST['email']) && !empty($_POST
+        ['comments'])) {
+16
+17          // Create the body:
+```
+
+
+
+
+
+### PHP 联系表单脚本
+
+#### 代码清单 (email.php)
+
+```php
+18          $body = "Name: {$_POST['name']}\n\nComments: {$_POST['comments']}";
+
+19
+
+20          // 使其长度不超过 70 个字符：
+21          $body = wordwrap($body, 70);
+
+22
+
+23          // 发送邮件：
+24          mail('your_email@example.com',
+              'Contact Form Submission',
+              $body, "From: {$_POST['email']}");
+
+25
+
+26          // 打印一条消息：
+27          echo '<p><em>Thank you for
+              contacting me. I will reply some
+              day.</em></p>';
+
+28
+
+29          // 清空 $_POST（以便表单不再保持粘滞状态）：
+30          $_POST = array();
+
+31
+
+32      } else {
+33          echo '<p style="font-weight: bold;
+              color: #C00">Please fill out the
+              form completely.</p>';
+34      }
+
+35
+
+36  } // End of main isset() IF.
+
+37
+
+38  // 创建 HTML 表单：
+39  ?>
+40  <p>Please fill out this form to contact me.</p>
+41  <form action="email.php" method="post">
+42      <p>Name: <input type="text"
+              name="name" size="30" maxlength="60"
+              value="<?php if (isset($_POST['name']))
+              echo $_POST['name']; ?>" /></p>
+43      <p>Email Address: <input type="text"
+              name="email" size="30" maxlength="80"
+              value="<?php if (isset($_POST['email']))
+              echo $_POST['email']; ?>" /></p>
+44      <p>Comments: <textarea name="comments"
+              rows="5" cols="30"><?php if (isset
+              ($_POST['comments'])) echo $_POST
+              ['comments']; ?></textarea></p>
+45      <p><input type="submit" name="submit"
+              value="Send!" /></p>
+46  </form>
+47  </body>
+48  </html>
+```
+
+---
+
+#### 分步解释
+
+#### 3. 创建邮件正文
+
+```php
+$body = "Name: {$_POST['name']}\n\nComments: {$_POST['comments']}";
+$body = wordwrap($body, 70);
+```
+
+邮件正文将以提示词 **Name:** 开头，后跟表单中输入的姓名。然后对评论进行相同的处理。`wordwrap()` 函数随后会格式化整个正文，使每行仅 70 个字符长。
+
+#### 4. 发送邮件并在 Web 浏览器中打印消息
+
+```php
+mail('your_email@example.com', 'Contact Form Submission', $body, "From: {$_POST['email']}");
+echo '<p><em>Thank you for contacting me. I will reply some day.</em></p>';
+```
+
+假设服务器配置正确，这一行代码即可发送邮件。您需要将 *to* 值更改为您的实际邮箱地址。*From* 值将是表单中的邮箱地址。主题将是一个字面字符串。
+
+没有简单的方法来确认邮件是否成功发送，更不用说是否被接收了，但会打印一条通用消息。
+
+#### 5. 清空 `$_POST` 数组
+
+```php
+$_POST = array();
+```
+
+在本例中，表单将始终显示，即使在成功提交后也是如此。如果用户遗漏了某些内容，表单将保持粘滞状态（即保留用户输入）。但是，如果邮件已发送，则无需再在表单中显示这些值。为避免这种情况，可以使用 `array()` 函数清空 `$_POST` 数组的值。
+
+> 如果联系表单未完整填写，它将记住用户提供的值。
+
+#### 6. 完成条件判断
+
+```php
+} else {
+    echo '<p style="font-weight: bold; color: #C00">Please fill out the form completely.</p>';
+}
+} // End of main isset() IF.
+```
+
+错误消息包含一些内联 CSS，使其显示为红色且加粗。
+
+#### 7. 开始表单
+
+```html
+<p>Please fill out this form to contact me.</p>
+<form action="email.php" method="post">
+  <p>Name: <input type="text" name="name" size="30" maxlength="60" value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>" /></p>
+  <p>Email Address: <input type="text" name="email" size="30" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" /></p>
+```
+
+表单将使用 POST 方法提交回此同一页面。前两个输入框的类型为 text；通过检查相应的 `$_POST` 变量是否有值，使它们都具有粘滞性。如果有，该值将作为该输入框的当前值被打印出来。因为在第 5 步中清空了 `$_POST` 数组，当此表单在之前成功完成并提交后再次查看时，`$_POST['name']` 等将不会被设置。
+
+#### 8. 完成表单
+
+```html
+  <p>Comments: <textarea name="comments" rows="5" cols="30"> <?php if (isset($_POST['comments'])) echo $_POST['comments']; ?></textarea></p>
+  <p><input type="submit" name="submit" value="Send!" /></p>
+</form>
+```
+
+评论输入框是一个 `textarea`，它不使用 `value` 属性。相反，为了使其具有粘滞性，值会被打印在开始和结束 `textarea` 标签之间。
+
+#### 9. 完成 HTML 页面
+
+```html
+</body>
+</html>
+```
+
+#### 10. 保存并测试
+
+将文件保存为 `email.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试它。
+
+> 表单成功完成并提交。
+
+#### 11. 检查您的邮箱
+
+检查您的邮箱以确认收到了消息。
+
+> 生成的邮件（来自表单中的数据）。
+
+如果您实际上没有收到邮件，则需要进行一些调试工作。对于此示例，您应该向您的主机提供商确认（如果使用托管网站）或自行确认（如果在您的服务器上运行 PHP），是否安装了可用的邮件服务器。您还应该使用不同的邮箱地址进行测试（用于 *to* 和 *from* 值）。此外，注意您的垃圾邮件过滤器是否拦截了该消息。
+
+---
+
+### 提示
+
+#### `mail()` 函数的可选参数
+
+`mail()` 函数接受一个可选的第五个参数，用于传递给邮件发送应用程序的附加参数。
+
+#### `mail()` 函数的返回值
+
+`mail()` 函数返回 `1` 或 `0`，指示函数调用是否成功。这并不等同于邮件成功发送或接收。同样，您无法使用 PHP 轻松测试这两者。
+
+#### 发送 HTML 邮件或附件
+
+虽然使用 `mail()` 函数发送简单消息很容易，但发送 HTML 邮件或带附件的邮件涉及更多工作。我在我的著作 *PHP 5 Advanced: Visual QuickPro Guide*（Peachpit Press, 2007）中讨论了如何实现这两者。
+
+### 防止垃圾邮件
+
+使用让 PHP 发送邮件的联系表单是最大程度减少您收到垃圾邮件的好方法。使用此系统，您的实际邮箱地址在 Web 浏览器中不可见，这意味着垃圾邮件机器人无法收集它。
+
+---
+
+### 处理文件上传
+
+第 2 章“使用 PHP 编程”和第 3 章“创建动态网站”介绍了使用 PHP 处理 HTML 表单的基础知识。大部分情况下，每种类型的表单元素在 PHP 中的处理方式相同，只有一个例外：文件上传。上传文件的过程有两个维度。首先，必须显示 HTML 表单，并包含允许文件上传的适当代码。提交表单后，服务器首先将上传的文件存储在临时目录中，因此下一步是 PHP 脚本将上传的文件复制到其最终目的地。
+
+要使此过程生效，必须满足以下几个条件：
+
+- PHP 必须使用正确的设置运行。
+- 必须存在具有正确权限的临时存储目录。
+- 必须存在具有正确权限的最终存储目录。
+
+考虑到这一点，下一节将介绍允许文件上传的服务器设置；然后将创建一个实际执行上传的 PHP 脚本。
+
+#### 允许文件上传
+
+
+
+
+正如我所说，为了让 PHP 能够处理文件上传，必须建立某些设置。我将首先讨论为什么或何时需要进行这些调整，然后再引导你完成步骤。
+
+第一个问题是 PHP 本身。PHP 的配置文件 `php.ini` 中有几个设置决定了 PHP 如何处理上传，具体规定了可以上传多大的文件以及上传文件应临时存储在何处（表 11.1）。一般来说，如果出现以下任何情况，你都需要编辑此文件：
+
+*   `file_uploads` 被禁用。
+*   PHP 没有可用的临时目录。
+*   你将上传非常大的文件（大于 2MB）。
+
+**表 11.1. 文件上传配置**
+
+![Image](img/11tab01.jpg)
+
+如果你无法访问 `php.ini` 文件——例如你正在使用托管网站——推测主机提供商已经配置 PHP 以允许文件上传。
+
+第二个问题是临时目录的位置和权限。这是 PHP 将上传的文件存储到你的 PHP 脚本将其移动到最终目的地之前的地方。如果你在自己的 Windows 计算机上安装了 PHP，可能需要在此采取措施。Mac OS X 和 Unix 用户无需担心这一点，因为此类用途已存在一个临时目录（即一个名为 `/tmp` 的特殊目录）。
+
+最后，必须创建目标文件夹并在其上建立适当的权限。这是每个人为每个处理文件上传的应用程序都必须采取的步骤。由于此步骤涉及重要的安全问题，请务必阅读并理解侧边栏“安全文件夹权限”。
+
+考虑到所有这些，让我们逐步进行操作。
+
+***
+
+#### 安全文件夹权限
+
+通常在安全性和便利性之间存在权衡。在这个例子中，将 `uploads` 文件夹放在 Web 文档目录中会更方便（这种便利性体现在上传的图片可以多么容易地在 Web 浏览器中查看），但这样做安全性较低。
+
+为了让 PHP 能够将文件放入 `uploads` 文件夹，它需要对该目录拥有写入权限。在大多数服务器上，PHP 作为与 Web 服务器本身相同的用户运行。在托管服务器上，这意味着托管的所有 *X* 个站点都作为同一用户运行。创建一个 PHP 可写的文件夹意味着创建一个*所有人*都可写的文件夹。字面上讲，服务器上拥有站点的任何人现在都可以移动、复制或写入文件到你的 `uploads` 文件夹（假设他们知道它的存在）。这甚至意味着恶意用户可以将麻烦的 PHP 脚本复制到你的 `uploads` 目录。然而，由于本例中的 `uploads` 目录不在 Web 目录内，因此无法在 Web 浏览器中运行此类 PHP 脚本。这种做法不太方便，但更安全。
+
+如果你必须保持 `uploads` 文件夹公开可访问，并且你正在使用 Apache Web 服务器，你可以使用 `.htaccess` 文件限制对 `uploads` 文件夹的访问。基本上，你会声明该文件夹中只有图像文件可公开查看，这意味着即使 PHP 脚本被放置在那里，也无法执行。或者，因为你将在本章后面学习如何使用*代理脚本*，你可以拒绝对该文件夹的所有外部访问。有关如何使用 `.htaccess` 文件的信息，请参阅 附录 A，可从 peachpit.com 免费下载。
+
+有时即使是最保守的程序员也会在安全性上做出让步。重要的是你意识到潜在的担忧，并尽最大努力将危险降到最低。
+
+***
+
+#### 准备服务器
+
+**1.** 运行 `phpinfo()` 函数以确认你的服务器设置 ![Image](img/circle-a.jpg)。
+
+![Image](img/11_figure_05_a.jpg)
+
+![Image](img/circle-a.jpg) `phpinfo()` 脚本返回关于你的 PHP 设置的所有信息，包括所有文件上传处理相关内容。
+
+`phpinfo()` 函数会打印大量关于你的 PHP 设置的信息。在我看来，它是 PHP 中最重要的函数之一，如果不是最重要的话。搜索 表 11.1 中列出的设置并确认它们的值。确保 `file_uploads` 的值为 `On`，并且 `upload_max_filesize`（默认 2MB）和 `post_max_size`（8MB）的限制不会对你造成限制。如果在 Windows 上运行 PHP，请查看 `upload_tmp_dir` 是否有值。如果没有，那可能是个问题（运行处理文件上传的 PHP 脚本后你就会确定）。对于非 Windows 用户，如果此值显示 `no value`，那完全没问题。
+
+顺便说一句，使用一体化安装程序（如 Windows 的 XAMPP 或 Mac OS X 的 MAMP）的另一个优势是，安装程序也应该能正确配置这些设置。
+
+**2.** 如有必要，在文本编辑器中打开 `php.ini`。
+
+如果你在步骤 1 中看到任何需要更改的内容，或者当你实际使用 PHP 处理文件上传时发生了某些情况，你将需要编辑 `php.ini` 文件。要找到此文件，请参阅 `phpinfo()` 输出中的 *Configuration File (php.ini) path* 值。这准确地指示了该文件在你计算机上的位置（也可下载 附录 A 了解更多）。
+
+如果你不被允许编辑 `php.ini` 文件（例如，你正在使用托管服务器），那么推测任何必要的编辑已经完成以允许文件上传。如果没有，你需要向你的托管公司请求这些更改（他们可能同意，也可能不同意）。
+
+**3.** 在 `php.ini` 文件中搜索要更改的配置并进行编辑 ![Image](img/circle-b.jpg)。
+
+![Image](img/11_figure_06_b.jpg)
+
+![Image](img/circle-b.jpg) `php.ini` 文件的文件上传小节。
+
+例如，在文件上传部分，你将看到这三行：
+
+```
+file_uploads = On
+;upload_tmp_dir =
+upload_max_filesize = 2M
+```
+
+第一行规定是否允许上传。第二行说明上传的文件应临时存储在何处。在大多数操作系统中，包括 Mac OS X 和 Unix，此设置可以保持注释掉（前面带有分号）而不会有任何问题。
+
+如果你正在运行 Windows 并需要创建临时目录，请将此值设为 `C:\tmp`，确保该行*不*以分号开头。
+
+同样，在 Windows 7 上使用 XAMPP，我不需要创建临时目录，所以你可能也能不用创建。
+
+最后，设置了最大上传文件大小（配置设置中的 *M* 是兆字节的简写）。
+
+**4.** 保存 `php.ini` 文件并重启你的 Web 服务器。
+
+如何重启 Web 服务器取决于所使用的操作系统和 Web 服务应用程序。请参阅 附录 A 获取说明。
+
+**5.** 通过重新运行 `phpinfo()` 脚本来确认更改。
+
+在进一步操作之前，通过重复步骤 1 确认必要的更改已生效。
+
+**6.** 如果你正在运行 Windows 并需要创建临时目录，请在 `C:\` 中添加一个 `tmp` 文件夹，并确保每个人都可以写入该目录 ![Image](img/circle-c.jpg)。
+
+![Image](img/11_figure_07_c.jpg)
+
+![Image](img/circle-c.jpg) Windows 用户需要确保 `C:\tmp`（或使用的任何目录）可被 PHP 写入。
+
+PHP 通过你的 Web 服务器将上传的文件临时存储在 `upload_tmp_dir` 中。为了使其工作，Web 用户（如果你的 Web 服务器作为特定用户运行）必须有权限写入该文件夹。
+
+
+
+
+### 使用 PHP 上传文件
+
+很有可能，你实际上不需要更改权限，但如果需要的话，根据你运行的 Windows 版本，通常可以通过右键点击文件夹并选择“属性”来调整权限。在“属性”窗口中，应该有一个“安全”选项卡用于设置权限。也可能在“共享”下。Windows 使用的是一个更宽松的权限系统，所以除非文件夹被刻意限制，否则你可能不需要更改任何内容。
+
+Mac OS X 和 Unix 用户可以跳过此步骤，因为临时目录——`/tmp`——已经具有开放权限。
+
+**7.** 在 Web 根目录之外的目录中创建一个名为 `uploads` 的新目录。
+
+所有上传的文件将永久存储在 `uploads` 目录中。如果你将 PHP 脚本放在 `C:\xampp\htdocs\ch11` 目录中，则创建一个 `C:\xampp\uploads` 目录。或者如果文件将放在 `/Users/~<username>/Sites/ch11` 中，则创建一个 `/Users/~<username>/uploads` 文件夹。图示展示了你应该建立的结构，侧边栏讨论了为什么此步骤是必要的。
+
+![Image](img/11_figure_08_d.jpg)
+
+假设 `htdocs` 是 Web 根目录（`http://www.example.com` 或 `http://localhost` 指向那里），那么 `uploads` 目录需要放置在它的外部。
+
+**8.** 设置 `uploads` 目录的权限，以便 Web 服务器可以向其写入。
+
+同样，Windows 用户可以使用“属性”窗口进行这些更改，尽管这可能不是必需的。Mac OS X 用户可以……
+
+**A.** 在 Finder 中选择该文件夹。
+
+**B.** 按 Command+I。
+
+**C.** 在“所有者与权限”面板下，允许所有人“读取与写入”。
+
+![Image](img/11_figure_09_e.jpg)
+
+在 Mac OS X 中调整 `uploads` 文件夹的属性。
+
+如果你使用的是托管网站，主机提供商很可能会提供一个控制面板，你可以通过它调整文件夹的设置，或者你可能可以在 FTP 应用程序中完成此操作。
+
+根据你的操作系统，你可能无需先执行此步骤即可上传文件。你可以先尝试运行以下脚本，看看效果如何，然后再决定是否修改权限。如果你看到类似图中的消息，则需要进行一些调整。
+
+![Image](img/11_figure_10_f.jpg)
+
+如果 PHP 因权限问题无法将上传的图像移动到 `uploads` 文件夹，你将看到如下错误消息。修复 `uploads` 的权限即可解决此问题。
+
+---
+
+### 提示
+
+Unix 用户可以使用 `chmod` 命令来调整文件夹的权限。用 Unix 术语表示的适当权限可以是 755 或 777。
+
+---
+
+### 提示
+
+由于上传大文件可能需要较长时间，你可能还需要更改 `php.ini` 文件中的 `max_input_time` 值，或者在脚本中使用 `set_time_limit()` 函数暂时绕过它。
+
+---
+
+### 提示
+
+文件和目录权限可能相当复杂，特别是如果你以前从未处理过它们的话。如果你在执行这些步骤或运行下一个脚本时遇到问题，请搜索网络或求助于本书对应的论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+---
+
+### 使用 PHP 上传文件
+
+现在服务器已经（希望）设置为正确允许文件上传，你可以创建实际处理文件的 PHP 脚本。此类脚本分为两部分：HTML 表单和 PHP 代码。
+
+处理文件上传所需的表单语法包含三个部分：
+
+```
+<form enctype="multipart/form-data" action="script.php" method="post">
+
+<input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+
+File <input type="file" name="upload" />
+```
+
+初始 `form` 标签中的 `enctype` 部分表明该表单应能处理多种类型的数据，包括文件。如果你想接受文件上传，必须包含此 `enctype`！另请注意，表单*必须使用* POST 方法。`MAX_FILE_SIZE` 隐藏输入限制了所选文件的大小（以字节为单位），并且必须位于文件输入之前。虽然用户很容易绕过此限制，但仍应使用它。最后，文件输入类型将在表单中创建相应的按钮。
+
+![Image](img/11_figure_11_g.jpg)
+
+Windows 上 IE 9 中显示的文件输入框。
+
+![Image](img/11_figure_12_h.jpg)
+
+Mac OS X 上 Google Chrome 中显示的文件输入框。
+
+表单提交后，可以使用 `$_FILES` 超全局变量访问上传的文件。该变量将是一个值的数组，列于 **表 11.2** 中。
+
+**表 11.2. `$_FILES` 数组**
+
+![Image](img/11tab02.jpg)
+
+PHP 脚本接收到文件后，`move_uploaded_file()` 函数可将其从临时目录转移到永久位置。
+
+```
+move_uploaded_file (temporary_filename,
+/path/to/destination/filename);
+```
+
+**脚本 11.2.** 此脚本允许用户将图像文件从其计算机上传到服务器。
+
+---
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+2       1.0 Transitional//EN" "http://www.w3.org/
+3       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+4   <html xmlns="http://www.w3.org/1999/
+5       xhtml" xml:lang="en" lang="en">
+6   <head>
+7       <meta http-equiv="Content-Type"
+8           content="text/html; charset=utf-8" />
+9       <title>Upload an Image</title>
+10      <style type="text/css" title="text/css"
+11          media="all">
+12      .error {
+13          font-weight: bold;
+14          color: #C00;
+15      }
+16      </style>
+17  </head>
+18  <body>
+19  <?php # Script 11.2 - upload_image.php
+20
+21  // Check if the form has been submitted:
+22  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+23
+24      // Check for an uploaded file:
+25      if (isset($_FILES['upload'])) {
+26
+27          // Validate the type. Should be
+28          // JPEG or PNG.
+29          $allowed = array ('image/pjpeg',
+30              'image/jpeg', 'image/JPG', 'image/
+31              X-PNG', 'image/PNG', 'image/png',
+32              'image/x-png');
+33          if (in_array($_FILES['upload']
+34              ['type'], $allowed)) {
+35
+36              // Move the file over.
+37              if (move_uploaded_file
+38                  ($_FILES['upload']['tmp_name'],
+39                  "../uploads/{$_FILES['upload']
+40                  ['name']}")) {
+41                  echo '<p><em>The file has
+42                      been uploaded!</em></p>';
+43              } // End of move... IF.
+44
+45          } else { // Invalid type.
+46              echo '<p class="error">Please
+47                  upload a JPEG or PNG image.</p>';
+48          }
+49
+50      } // End of isset($_FILES['upload']) IF.
+51
+52      // Check for an error:
+53      if ($_FILES['upload']['error'] > 0) {
+54          echo '<p class="error">The file could
+55              not be uploaded because: <strong>';
+56
+57          // Print a message based upon the
+58          // error.
+59          switch ($_FILES['upload']['error']) {
+60              case 1:
+61                  print 'The file exceeds the
+62                      upload_max_filesize setting
+63                      in php.ini.';
+64                  break;
+65              case 2:
+66                  print 'The file exceeds the
+67                      MAX_FILE_SIZE setting in the
+68                      HTML form.';
+69                  break;
+70              case 3:
+71                  print 'The file was only
+```
+
+
+
+
+
+#### 在 PHP 中处理文件上传
+
+**1.** 在文本编辑器或 IDE 中创建一个新的 PHP 文档，命名为 `upload_image.php`（**脚本 11.2**）：
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Upload an Image</title>
+  <style type="text/css" title="text/css" media="all">
+  .error {
+      font-weight: bold;
+      color: #C00;
+  }
+  </style>
+</head>
+<body>
+<?php # Script 11.2 - upload_image.php
+```
+
+该脚本将使用一个 CSS 类来格式化任何错误信息。
+
+**2.** 检查表单是否已提交且已选择文件：
+
+```
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  if (isset($_FILES['upload'])) {
+```
+
+由于此表单没有其他需要验证的字段，因此这是唯一需要的条件判断。你也可以验证上传文件的大小，以确定其是否在可接受范围内（参考 `$_FILES['upload']['size']` 值）。
+
+**3.** 检查上传文件是否为正确的类型：
+
+```
+$allowed = array ('image/pjpeg', 'image/jpeg', 'image/JPG', 'image/X-PNG', 'image/PNG', 'image/png', 'image/x-png');
+if (in_array($_FILES['upload']['type'], $allowed)) {
+```
+
+文件的类型即其 *MIME* 类型，指示文件属于哪种类型。浏览器可以根据所选文件的属性来确定并可能提供此信息。
+
+要验证文件类型，首先创建一个允许选项的数组。允许的类型列表基于接受 JPEG 和 PNG 格式。某些浏览器对 MIME 类型有不同的表示方式，因此此处也将它们包含在内。如果上传文件的类型在此数组中，则该文件有效并应予以处理。
+
+**4.** 将文件复制到服务器上的新位置：
+
+```
+if (move_uploaded_file ($_FILES['upload']['tmp_name'], "../uploads/{$_FILES['upload']['name']}")) {
+  echo '<p><em>The file has been uploaded!</em></p>';
+} // End of move... IF.
+```
+
+`move_uploaded_file()` 函数将文件从临时位置移动到其永久位置（在 *uploads* 文件夹中）。文件将保留其原始名称。在第 18 章“示例——电子商务”中，你将看到如何给文件赋予新名称，这通常是个好主意。
+
+通常，你应该始终使用条件语句来确认文件是否成功移动，而不能仅假设移动操作已生效。
+
+**5.** 完成图像类型和 `isset ($_FILES['upload'])` 条件判断：
+
+```
+  } else { // Invalid type.
+    echo '<p class="error">Please upload a JPEG or PNG image.</p>';
+  }
+} // End of isset($_FILES['upload']) IF.
+```
+
+第一个 `else` 子句结束第 3 步开始的 `if`。如果文件已上传但不是正确的 MIME 类型，则适用此子句。
+
+**6.** 检查并报告任何错误：
+
+```
+if ($_FILES['upload']['error'] > 0) {
+  echo '<p class="error">The file could not be uploaded because: <strong>';
+```
+
+如果发生错误，`$_FILES['upload']['error']` 的值将大于 0。在这种情况下，该脚本将报告具体的错误原因。
+
+**7.** 开始一个 `switch` 语句以打印更详细的错误信息：
+
+```
+switch ($_FILES['upload']['error']) {
+  case 1:
+      print 'The file exceeds the upload_max_filesize setting in php.ini.';
+      break;
+  case 2:
+      print 'The file exceeds the MAX_FILE_SIZE setting in the HTML form.';
+      break;
+  case 3:
+      print 'The file was only partially uploaded.';
+      break;
+  case 4:
+      print 'No file was uploaded.';
+      break;
+```
+
+文件无法上传和移动可能有多种原因。第一个也是最明显的原因是目标目录的权限未正确设置。在这种情况下，你将看到相应的错误消息。PHP 通常也会将错误编号存储在 `$_FILES['upload']['error']` 变量中。这些数字对应 0 到 4 以及 6 到 8 的特定问题（奇怪的是，没有 5）。此处的 `switch` 条件根据错误编号打印出相应的问题。添加 `default` 情况是为了未来的兼容性（如果 PHP 后续版本添加了不同的编号）。
+
+在大多数情况下，这些错误对你（开发者）有用，而不是要展示给普通用户看的内容。
+
+**8.** 完成 `switch` 语句：
+
+```
+  case 6:
+      print 'No temporary folder was available.';
+      break;
+  case 7:
+      print 'Unable to write to the disk.';
+      break;
+  case 8:
+      print 'File upload stopped.';
+      break;
+  default:
+      print 'A system error occurred.';
+      break;
+} // End of switch.
+```
+
+**9.** 完成错误 `if` 条件判断：
+
+```
+  print '</strong></p>';
+} // End of error IF.
+```
+
+**10.** 如果临时文件仍然存在，则将其删除：
+
+```
+if (file_exists ($_FILES['upload']['tmp_name']) && is_file($_FILES['upload']['tmp_name']) ) {
+  unlink ($_FILES['upload']['tmp_name']);
+}
+```
+
+下一个脚本将允许用户选择其计算机上的文件，然后将其存储在 *uploads* 目录中。该脚本将检查文件是否为图像类型，具体为 JPEG 或 PNG。在本章的下一节中，另一个脚本将列出并创建指向已上传图像的链接。
+
+```
+<form enctype="multipart/form-data" action="upload_image.php" method="post">
+  <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+  <fieldset><legend>Select a JPEG or PNG image of 512KB or smaller to be uploaded:</legend>
+  <p><b>File:</b> <input type="file" name="upload" /></p>
+  </fieldset>
+  <div align="center"><input type="submit" name="submit" value="Submit" /></div>
+</form>
+</body>
+</html>
+```
+
+
+
+
+如果文件已上传但无法移动到最终目标位置，或发生其他错误，该文件仍将保留在服务器的临时位置。要将其删除，请应用 `unlink()` 函数。为保险起见，在应用 `unlink()` 之前，条件语句会检查文件是否存在且是否为文件（因为如果指定项是目录，`file_exists()` 函数将返回 TRUE）。
+
+**11.** 完成 PHP 部分：
+
+```php
+} // End of the submitted conditional.
+
+?>
+```
+
+**12.** 创建 HTML 表单：
+
+```html
+<form enctype="multipart/form-data" action="upload_image.php" method="post">
+  <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+  <fieldset>
+    <legend>Select a JPEG or PNG image of 512KB or smaller to be uploaded: </legend>
+    <p><b>File:</b> <input type="file" name="upload" /></p>
+  </fieldset>
+  <div align="center"><input type="submit" name="submit" value="Submit" /></div>
+</form>
+```
+
+该表单非常简单，但包含文件上传所需的三个必要部分：表单的 `enctype` 属性、`MAX_FILE_SIZE` 隐藏输入框和文件输入框。
+
+**13.** 完成 HTML 页面：
+
+```html
+</body>
+</html>
+```
+
+**14.** 将文件保存为 `upload_image.php`，将其放入 Web 目录，并在 Web 浏览器中测试。
+
+![Image](img/11_figure_15_k.jpg)
+成功上传并移动文件后的结果。
+
+![Image](img/11_figure_16_l.jpg)
+尝试上传过大文件时的结果。
+
+如果需要，可以通过检查 `uploads` 目录的内容来确认脚本是否正常工作。
+
+***
+
+Tip
+
+省略表单的 `enctype` 属性是导致文件上传神秘失败的常见原因。
+
+***
+
+Tip
+
+也可以使用 `is_uploaded_file()` 函数验证上传文件是否存在。
+
+***
+
+Tip
+
+Windows 用户引用目录时必须使用正斜杠或双反斜杠（即 `C:\\` 或 `C:/`，而非 `C:\`）。这是因为反斜杠是 PHP 中的转义字符。
+
+***
+
+Tip
+
+如果新旧文件同名，`move_uploaded_file()` 函数将在不发出警告的情况下覆盖现有文件。
+
+***
+
+Tip
+
+`MAX_FILE_SIZE` 是浏览器对文件大小的限制，但并非所有浏览器都遵守此限制。PHP 配置文件有其自身的限制。也可以在接收端的 PHP 脚本中验证上传文件的大小。
+
+***
+
+Tip
+
+在 第 13 章 中，你将学习一种通过更可靠地验证上传文件类型来提高脚本安全性的方法。
+
+***
+
+### PHP 和 JavaScript
+
+尽管 PHP 和 JavaScript 是截然不同的技术，但它们可以结合使用以构建更好的网站。两者最显著的区别在于 JavaScript 主要是客户端技术（在 Web 浏览器中运行），而 PHP 始终是服务端技术。因此，JavaScript 可以检测浏览器窗口大小、创建弹出窗口、实现图像鼠标悬停效果等，而 PHP 无法做到这些。反之，PHP 可以在服务器上与 MySQL 交互，但 JavaScript 不能。
+
+虽然 PHP 无法完成 JavaScript 能做的某些事情，但 PHP 可以用来生成 JavaScript，就像生成 HTML 一样。明确地说，在 Web 浏览器中，JavaScript 通过 HTML 引入并与其交互，但 PHP 可以动态生成 JavaScript 代码，正如你一直用 PHP 动态生成 HTML 那样。
+
+为了演示这一点，将创建一个 PHP 脚本，列出由 `upload_image.php` 脚本上传的所有图像。该 PHP 脚本还将把每个图像名称创建为可点击的链接。这些链接将调用一个 JavaScript 函数，创建一个弹出窗口，在其中显示被点击的图像。此示例绝非对 JavaScript 的详尽讨论，但足以演示 PHP、HTML 和 JavaScript 等技术如何协同工作。在 第 15 章 “jQuery 简介”中，你将学习如何使用 jQuery JavaScript 框架为基于 PHP 的脚本添加各种功能。
+
+![Image](img/11_figure_17_a.jpg)
+此 PHP 页面动态创建所有上传图像的列表。
+
+![Image](img/11_figure_18_b.jpg)
+每个图像的名称均作为调用 JavaScript 函数的链接。函数调用的参数由 PHP 创建。
+
+#### 创建 JavaScript 文件
+
+尽管 JavaScript 和 PHP 是两种不同的语言，但它们足够相似，即使没有接受过正规训练也能涉猎 JavaScript。在为本示例创建 JavaScript 代码之前，我将解释一些基础知识。
+
+首先，JavaScript 代码可以通过两种方式添加到 HTML 页面：内联或通过外部文件。要添加内联 JavaScript，请将 JavaScript 代码放在 HTML `script` 标签之间：
+
+```html
+<script type="text/javascript">
+  // Actual JavaScript code.
+</script>
+```
+
+要使用外部 JavaScript 文件，请向 `script` 标签添加 `src` 属性：
+
+```html
+<script type="text/javascript" src="somefile.js"></script>
+```
+
+HTML 页面可以多次使用 `script` 标签，但每个标签只能包含外部文件或内联 JavaScript 代码，不能两者兼有。
+
+如上所示，JavaScript 文件使用 `.js` 扩展名。该文件应使用与将包含它的 HTML 脚本相同的编码（在文本编辑器或 IDE 中设置）。可以在 `script` 标签中指定文件的编码：
+
+```html
+<script type="text/javascript" charset="utf-8" src="somefile.js"> </script>
+```
+
+无论将 JavaScript 代码放在 `script` 标签内还是外部文件中，都没有像 PHP 标签那样的 JavaScript 开始和结束标签。
+
+其次，JavaScript 中的变量区分大小写，这与 PHP 相同，但 JavaScript 变量不以美元符号开头。
+
+最后，JavaScript 和 PHP 的主要区别之一是 JavaScript 是一门面向对象编程（OOP）语言。PHP 既可用于过程式方法（本书大部分内容演示的方法），也可用于面向对象方法（见 第 16 章 “OOP 入门”），而 JavaScript 始终是面向对象语言。这意味着你将看到类似 `something.something()` 或 `something.something.something` 的“点”语法。
+
+基础知识就介绍到这里；在下面的脚本中，我将详细解释每段代码的细节。在接下来的步骤中，你将创建一个单独的 JavaScript 文件，定义一个 JavaScript 函数。该函数接受三个参数——图像的名称、宽度和高度。函数将使用这些值为该图像专门创建一个弹出窗口。
+
+### 使用 PHP 创建 JavaScript
+
+**1.** 在文本编辑器或 IDE 中创建一个新的 JavaScript 文档，命名为 `function.js`（**脚本 11.3**）：
+
+```javascript
+// Script 11.3 - function.js
+```
+
+同样，这里没有开始 JavaScript 标签，你可以直接开始编写 JavaScript 代码。JavaScript 中的注释可以使用单行（`//`）或多行（`/* */`）语法。
+
+**2.** 开始定义 JavaScript 函数：
+
+```javascript
+function create_window (image, width, height) {
+```
+
+
+
+JavaScript `create_window()` 函数将接受三个参数：图像的名称、宽度和高度。当用户点击链接时，这些参数中的每一个都将被传递给该函数。图像名称、宽度和高度的确切值将由 PHP 确定。
+
+在 JavaScript 中创建函数的语法与 PHP 中的用户定义函数非常相似，只是变量前没有初始的美元符号。
+
+### 3. 将接收到的 `width` 和 `height` 值各增加十个像素：
+
+```javascript
+width = width + 10;
+height = height + 10;
+```
+
+将向宽度和高度值添加一些像素，以创建一个比图像本身稍大的窗口。JavaScript 中的数学运算使用的运算符与几乎所有语言中的相同。
+
+### 4. 如果弹出窗口已打开，则调整其大小：
+
+```javascript
+if (window.popup && !window.popup.closed) {
+  window.popup.resizeTo(width, height);
+}
+```
+
+**脚本 11.3。** `function.js` 脚本定义了一个用于创建弹出窗口的 JavaScript 函数，该窗口将显示单个图像。
+
+---
+
+```javascript
+1  // 脚本 11.3 - function.js
+2
+3  // 创建弹出窗口函数：
+4  function create_window(image, width,
+      height) {
+5
+6      // 向宽度和高度添加一些像素：
+7      width = width + 10;
+8      height = height + 10;
+9
+10     // 如果窗口已经打开，
+11     // 将其调整为新尺寸：
+12     if (window.popup && !window.popup.
+      closed) {
+13         window.popup.resizeTo(width, height);
+14     }
+15
+16     // 设置窗口属性：
+17     var specs = "location=no,
+      scrollbars=no, menubars=no,
+      toolbars=no, resizable=yes,
+      left=0, top=0, width=" + width + ",
+      height=" + height;
+18
+19     // 设置 URL：
+20     var url = "show_image.php?image=" +
+      image;
+21
+22     // 创建弹出窗口：
+23     popup = window.open(url, "ImageWindow",
+      specs);
+24     popup.focus();
+25
+26 } // 函数结束。
+```
+
+---
+
+稍后在函数中，将创建一个窗口并与 `popup` 变量关联。如果用户点击一个图像名称，创建了弹出窗口，然后在未关闭第一个弹出窗口的情况下点击另一个图像的名称，新图像将显示在一个尺寸不合适的窗口中。为防止这种情况，此处的一段代码首先检查弹出窗口是否存在以及是否未关闭。如果这两个条件均为 TRUE（即窗口已打开），则将根据新图像的尺寸调整窗口大小。这是通过调用 `popup` 对象的 `resizeTo()` 方法来实现的（*方法* 是面向对象编程中对函数的称呼）。
+
+### 5. 确定弹出窗口的属性：
+
+```javascript
+var specs = "location=no, scrollbars=no, menubars=no, toolbars=no, resizable=yes, left=0, top=0, width=" + width + ", height=" + height;
+```
+
+此行创建一个名为 `specs` 的新 JavaScript 变量。变量名前的 `var` 关键字是在函数内创建变量的首选方式（具体来说，它创建一个*局部于*该函数的变量）。请注意，`image`、`width` 和 `height` 变量未使用此关键字，因为它们是作为函数的参数创建的。
+
+此变量将用于确定弹出窗口的属性。该窗口将没有地址栏、滚动条、菜单或工具栏；它应该是可调整大小的；它将位于屏幕的左上角；并且其宽度为 `width`，高度为 `height` ![Image](img/circle-c.jpg)。
+
+![Image](img/11_figure_19_c.jpg)
+
+![Image](img/circle-c.jpg)由 JavaScript 创建的弹出窗口。
+
+在 JavaScript 中，字符串使用加号进行连接（而 PHP 使用句点）。
+
+### 6. 定义 URL：
+
+```javascript
+var url = "show_image.php?image=" + image;
+```
+
+此代码设置弹出窗口的 URL，即指定窗口应加载的页面。该页面是 `show_image.php`，将在本章后面创建。`show_image.php` 脚本期望在 URL 中接收图像的名称，因此 `url` 变量的值是 `show_image.php?image=` 加上连接在末尾的图像名称 ![Image](img/circle-d.jpg)。
+
+![Image](img/11_figure_20_d.jpg)
+
+![Image](img/circle-d.jpg)弹出窗口的地址显示了图像值如何在 URL 中传递。
+
+### 7. 创建弹出窗口：
+
+```javascript
+popup = window.open(url, "ImageWindow", specs);
+popup.focus();
+```
+
+最后，使用 `window` 对象的 `open()` 方法创建弹出窗口。`window` 对象是由浏览器创建的全局 JavaScript 对象，用于引用打开的窗口。`open()` 方法的第一个参数是要加载的页面，第二个是赋予窗口的标题，第三个是属性列表。请注意，此窗口的创建被赋值给了 `popup` 变量。因为该变量的创建不以关键字 `var` 开头，所以 `popup` 将是一个全局变量。这是必需的，以便该函数的多次调用能够引用同一个变量。
+
+最后，将焦点给予新窗口，意味着它应出现在当前窗口之上。
+
+### 8. 将脚本另存为 `function.js`。
+
+### 9. 将该脚本或其副本放置在 Web 目录的 `js` 文件夹中。
+
+JavaScript 与 CSS 一样，在整理 Web 目录时应当分离出来。通常，外部 JavaScript 文件放置在名为 `js`、`javascript` 或 `scripts` 的文件夹中。
+
+### 创建 PHP 脚本
+
+现在，页面所需的 JavaScript 代码已创建完毕，是时候创建 PHP 脚本本身了（它将输出调用 JavaScript 函数的 HTML）。该脚本的目的是列出所有已由 `upload_image.php` 上传的图像。为此，PHP 需要动态检索 `uploads` 目录的内容。这可以通过 `scandir()` 函数完成。它返回一个数组，列出给定目录中的文件（该函数在 PHP 5 中添加）。
+
+PHP 脚本必须将显示的每个图像名称链接为对刚才定义的 JavaScript 函数的调用。该函数期望接收三个参数：图像的名称、宽度和高度。为了让 PHP 找到后两个值，脚本将使用 `getimagesize()` 函数。它返回给定图像的信息数组（**表 11.3**）。
+
+#### 表 11.3. `getimagesize()` 数组
+
+![Image](img/11tab03.jpg)
+
+### 使用 PHP 创建 JavaScript
+
+### 1. 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `images.php`（**脚本 11.4**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Images</title>
+```
+
+### 2. 包含 JavaScript 文件：
+
+```html
+<script type="text/javascript" charset="utf-8" src="js/function.js"></script>
+```
+
+你可以在 HTML 页面的任何位置使用 `script` 标签，但外部文件的引入通常在文档的 head 部分进行。对 `function.js` 的引用假设该文件将在 `js` 目录中找到，而 `js` 目录位于当前脚本所在的同一目录中（参见 ![Image](img/graycircle-d.jpg)“处理文件上传”下）。
+
+**脚本 11.4。** `images.php` 脚本使用 JavaScript 和 PHP 创建指向存储在服务器上的图像的链接。图像将通过 `show_image.php`（脚本 11.5）查看。
+
+---
+
+```html
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+      1.0 Transitional//EN" "http://www.w3.org/
+2  1.0 Transitional//EN" "http://www.w3.org/
+```
+
+
+
+
+### 代码示例：images.php
+
+```html
+TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/
+xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type"
+        content="text/html; charset=utf-8" />
+  <title>Images</title>
+  <script type="text/javascript" charset=
+          "utf-8" src="js/function.js"></script>
+</head>
+<body>
+<p>Click on an image to view it in a
+separate window.</p>
+<ul>
+<?php # Script 11.4 - images.php
+// This script lists the images in the
+// uploads directory.
+
+$dir = '../uploads'; // Define the
+// directory to view.
+
+$files = scandir($dir); // Read all the
+// images into an array.
+
+// Display each image caption as a link
+// to the JavaScript function:
+foreach ($files as $image) {
+
+  if (substr($image, 0, 1) != '.') { //
+    // Ignore anything starting with a period.
+
+    // Get the image's size in pixels:
+    $image_size = getimagesize
+      ("$dir/$image");
+
+    // Make the image's name URL-safe:
+    $image_name = urlencode($image);
+
+    // Print the information:
+    echo "<li><a href=\"javascript:
+      create_window('$image_name',
+      $image_size[0],$image_size[1])\">
+      $image</a></li>\n";
+
+  } // End of the IF.
+
+} // End of the foreach loop.
+?>
+</ul>
+</body>
+</html>
+```
+
+---
+
+### 步骤解析
+
+### 3. 完成 HTML 头部并开始 body 部分
+
+```html
+</head>
+
+<body>
+<p>Click on an image to view it in a separate window.</p>
+```
+
+### 4. 开始 HTML 无序列表
+
+```html
+<ul>
+```
+
+为了简单起见，该脚本将每个图像作为无序列表中的一个项目显示。
+
+### 5. 启动 PHP 代码并通过引用 `uploads` 目录创建图像数组
+
+```php
+<?php # Script 11.4 - images.php
+$dir = '../uploads';
+$files = scandir($dir);
+```
+
+该脚本将自动列出并链接存储在 `uploads` 文件夹中的所有图像（推测是由 **`upload_image.php`** 放置的，参见 Script 11.3）。代码首先将目录定义为一个变量，以便于引用。然后 **`scandir()`** 函数（该函数返回在文件夹中找到的文件和目录的数组）将该信息赋值给名为 **`$files`** 的数组。
+
+### 6. 开始遍历 **`$files`** 数组
+
+```php
+foreach ($files as $image) {
+  if (substr($image, 0, 1) != '.') {
+```
+
+此循环将遍历数组中的每个图像并为其创建一个列表项。在循环内部，有一个条件判断，检查文件名的第一个字符是否为句点。在非 Windows 系统中，隐藏文件以句点开头，当前目录用单个句点表示，两个句点表示父目录。由于所有这些都可能包含在 **`$files`** 中，因此需要将它们剔除。
+
+### 7. 获取图像信息并对其名称进行编码
+
+```php
+$image_size = getimagesize ("$dir/$image");
+$image_name = urlencode($image);
+```
+
+**`getimagesize()`** 函数返回一个包含图像信息的数组（参见 表 11.3）。该函数返回的值将用于设置发送给 JavaScript **`create_window()`** 函数的宽度和高度。
+
+接下来，**`urlencode()`** 函数使字符串可以安全地在 URL 中传递。因为图像名称可能包含 URL 中不允许的字符（并且在调用 **`show_image.php`** 时将在 URL 中传递），所以名称应进行编码。
+
+### 8. 打印列表项
+
+```php
+echo "<li><a href=\"javascript: create_window('$image_name', $image_size[0],$image_size[1])\"> $image</a>\n";
+```
+
+最后，循环创建 HTML 列表项，由链接的图像名称组成。链接本身是对 JavaScript **`create_window()`** 函数的调用。为了在 HTML 中执行 JavaScript 函数，请在其前面加上 **`javascript:`**。（在 HTML 中调用 JavaScript 还有更多内容，但目前只需使用此语法。）
+
+该函数的三个参数分别是：图像名称、图像宽度和图像高度。因为图像名称是字符串，所以必须用引号括起来。
+
+### 9. 完成 `if` 条件、`foreach` 循环和 PHP 部分
+
+```php
+} // End of the IF.
+} // End of the foreach loop.
+?>
+```
+
+### 10. 完成无序列表和 HTML 页面
+
+```html
+</ul>
+</body>
+</html>
+```
+
+### 11. 保存文件并测试
+
+将文件保存为 **`images.php`**，将其放在您的 Web 目录中（与 **`upload_image.php`** 位于同一目录），并在 Web 浏览器中测试。
+
+请注意，单击链接目前还不起作用，因为 **`show_image.php`**（弹出窗口尝试加载的页面）尚未创建。
+
+### 12. 查看源代码以查看动态生成的链接
+
+请注意每个函数调用的参数如何适合特定图像。
+
+---
+
+### 提示
+
+不同的浏览器处理窗口大小调整的方式不同。例如，在我的测试中，Google Chrome 始终要求窗口至少具有特定宽度，而 Internet Explorer 9 会在四周填充显示的图像。
+
+---
+
+### 提示
+
+某些版本的 Windows 会在图像文件夹中创建 **`Thumbs.db`** 文件。您可能需要在第 6 步剔除某些返回项的条件判断中检查此值。代码如下：
+
+```php
+if ( (substr($image, 0, 1) != '.') && ($image != 'Thumbs.db') ) {
+```
+
+---
+
+### 提示
+
+不想过分强调，但 Web 开发人员使用 JavaScript 所做的大多数事情（例如，调整或移动浏览器窗口）都无法使用服务端的 PHP 完成。
+
+---
+
+### 提示
+
+PHP 和 JavaScript 之间*略有*重叠。两者都可以设置和读取 Cookie、创建 HTML 以及进行一些浏览器检测。
+
+---
+
+### 理解 HTTP 头部
+
+刚创建的 **`images.php`** 脚本显示图像名称列表，每个名称都链接到一个 JavaScript 函数调用。该 JavaScript 函数创建一个弹出窗口，加载一个将实际显示图像的 PHP 脚本。这听起来可能是小题大做，但其中自有深意。采用这种方法的一个次要原因是，需要 JavaScript 才能创建一个适合图像大小的窗口（而不是创建任意大小的弹出窗口，其中包含图像）。更为重要的是，因为图像存储在 **`uploads`** 目录中，理想情况下存储在 Web 根目录之外，所以无法在 Web 浏览器中直接使用以下任一方式查看图像：
+
+- `http://www.example.com/uploads/image.png`
+- `<img src="image.png" />`
+
+上述两种方式均无效的原因是，根据定义，位于 Web 根目录之外的文件和文件夹无法通过 Web 浏览器访问。这实际上是一件好事，因为它允许您保护内容，仅在适当的时候提供内容。要通过 Web 浏览器使该内容可用，您需要在 PHP 中创建一个*代理脚本*。代理脚本只需履行一个角色，例如提供文件（显示图像实际上就是向浏览器提供文件）。因此，给定代理脚本 **`proxy.php`**，上述示例可以通过以下任一方式工作：
+
+- `http://www.example.com/proxy.php?image=image.png`
+- `<img src="proxy.php?image=image.png" />`
+
+![图 11-21：代理脚本能够提供对服务器上原本不可用内容的访问](img/11_figure_21_a.jpg)
+
+代理脚本能够提供对服务器上原本不可用内容的访问。
+
+
+
+
+这当然正是 `create_window()` JavaScript 函数中链接的 `show_image.php` 所做的事情。但是 `proxy.php` 或 `show_image.php` 是如何工作的呢？答案在于对 HTTP 头部的理解。
+
+HTTP（超文本传输协议）是万维网的核心技术，定义了客户端和服务器通信的方式（用通俗的话说）。当浏览器请求一个网页时，它会收到一系列 HTTP 头部作为响应。这发生在后台；大多数用户完全意识不到这一点。
+
+PHP 内置的 `header()` 函数可用于利用这一协议。最常见的例子将在下一章演示，那时将使用 `header()` 函数将 Web 浏览器从当前页面重定向到另一个页面。在这里，你将用它向 Web 浏览器发送文件。
+
+理论上，`header()` 函数很容易使用。其语法是：
+
+```
+header(header string);
+```
+
+可能的头部字符串列表相当长，因为头部用于从重定向 Web 浏览器、发送文件、创建 Cookie，到控制页面缓存，以及更多更多功能。从简单的开始，要使用 `header()` 重定向 Web 浏览器，请输入：
+
+```
+header('Location: http://www.example.com/page.php');
+```
+
+该行将把 Web 浏览器从当前页面发送到另一个 URL。你将在下一章看到这方面的例子。
+
+在下一个将图像文件发送到 Web 浏览器的示例中，使用了三个头部调用。第一个是 `Content-Type`。这是向 Web 浏览器指示即将发送什么类型的数据。`Content-Type` 值与数据的 MIME 类型匹配。此行让浏览器知道它即将接收一个 PDF 文件：
+
+```
+header("Content-Type:application/pdf\n");
+```
+
+接下来，你可以使用 `Content-Disposition`，它告诉浏览器如何处理数据：
+
+```
+header("Content-Disposition: attachment; filename=\"somefile.pdf\"\n");
+```
+
+`attachment` 值将提示浏览器下载该文件。另一种选择是使用 `inline`，它告诉浏览器显示数据，前提是浏览器支持。`filename` 属性顾名思义：它告诉浏览器与数据关联的名称。一些浏览器遵循此指令，另一些则不遵循。
+
+![Image](img/11_figure_22_b.jpg)
+
+由于 `attachment Content-Disposition` 值，Firefox 提示用户下载文件。
+
+用于下载文件的第三个头部是 `Content-Length`。这是一个以字节为单位的值，对应于要发送的数据量。
+
+```
+header("Content-Length: 4096\n");
+```
+
+这就是关于使用 `header()` 函数的基础知识。在进入示例之前，请注意，如果脚本使用多个 `header()` 调用，每个调用都应以换行符（`\n`）结尾，如前面的代码片段所示。更重要的是，关于 `header()` 函数必须记住的绝对关键一点是，它必须在向 Web 浏览器发送*任何内容*之前调用。这包括 HTML，甚至是空白字符。如果你的代码有任何 `echo` 或 `print` 语句，PHP 标签外有空行，或包含在调用 `header()` 之前做这些事情的文件，你将看到如下图所示的错误消息。
+
+![Image](img/11_figure_23_c.jpg)
+
+*headers already sent*（头部已发送）错误意味着在使用 `header()` 函数之前，Web 浏览器已经接收到了某些内容——HTML、纯文本，甚至是一个空格。
+
+#### 使用 header() 函数
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `show_image.php`（**脚本 11.5` 函数，所以绝对不能向 Web 浏览器发送任何内容——绝对没有任何内容。没有 HTML，甚至没有开头 PHP 标签之前的空行、制表符或空格。
+
+`$name` 变量将用作标志，指示所有验证例程是否已通过。
+
+**2.** 检查图像名称：
+
+```
+if (isset($_GET['image'])) {
+```
+
+脚本需要在 URL 中接收一个有效的图像名称。这应该由调用此页面的 JavaScript 函数追加到 URL 中（参见 `function.js`，**脚本 11.3**）。
+
+**3.** 验证图像的扩展名：
+
+```
+$ext = strtolower(substr($_GET['image'], -4));
+
+if (($ext == '.jpg') OR ($ext == 'jpeg') OR ($ext == '.png')) {
+```
+
+下一个检查是要发送给 Web 浏览器的文件是否具有 `.jpeg`、`.jpg` 或 `.png` 扩展名。这样脚本就不会尝试向用户发送不良内容。例如，如果恶意用户将弹出窗口中的地址从 `http://www.example.com/show_image.php?image=image.png` 改为 `http://www.example.com/show_image.php?image=../../../path/to/something/important`，此条件将捕获并防止该攻击。
+
+**脚本 11.5。** 此脚本从服务器检索图像并使用 HTTP 头部将其发送到浏览器。
+
+```
+<?php # Script 11.5 - show_image.php
+// This page displays an image.
+
+$name = FALSE; // Flag variable:
+
+// Check for an image name in the URL:
+if (isset($_GET['image'])) {
+
+    // Make sure it has an image's
+    extension:
+    $ext = strtolower(substr($_GET
+        ['image'], -4));
+
+    if (($ext == '.jpg') OR ($ext ==
+        'jpeg') OR ($ext == '.png')) {
+
+        // Full image path:
+        $image = "../uploads/{$_GET['image']}";
+
+        // Check that the image exists and
+        is a file:
+        if (file_exists($image) &&
+            (is_file($image))) {
+
+            // Set the name as this image:
+            $name = $_GET['image'];
+
+        } // End of file_exists() IF.
+
+    } // End of $ext IF.
+
+} // End of isset($_GET['image']) IF.
+
+// If there was a problem, use the
+default image:
+if (!$name) {
+    $image = 'images/unavailable.png';
+    $name = 'unavailable.png';
+}
+
+// Get the image information:
+$info = getimagesize($image);
+$fs = filesize($image);
+
+// Send the content information:
+header("Content-Type: {$info['mime']}\n");
+header("Content-Disposition: inline;
+    filename=\"$name\"\n");
+header("Content-Length: $fs\n");
+
+// Send the file:
+readfile($image);
+```
+
+为了验证扩展名，`substr()` 函数返回图像名称的最后四个字符（`-4` 实现这一点）。扩展名还通过 `strtolower()` 函数处理，以便 `.PNG` 和 `.png` 被同等对待。然后条件语句检查 `$ext` 是否等于三个允许值中的任意一个。
+
+**4.** 检查图像是否为服务器上的文件：
+
+```
+$image = "../uploads/{$_GET['image']}";
+
+if (file_exists($image) && (is_file($image))) {
+```
+
+在尝试将图像发送到 Web 浏览器之前，请确保它存在且为文件（而不是目录）。作为安全措施，图像的完整路径被定义为 `../uploads` 和接收到的图像名称的组合。
+
+**5.** 将标志变量的值设置为图像名称：
+
+```
+$name = $_GET['image'];
+```
+
+一旦图像通过了所有这些测试，`$name` 变量将被赋予图像的值。
+
+**6.** 完成步骤 2、3 和 4 中开始的条件语句：
+
+```
+} // End of file_exists() IF.
+} // End of $ext IF.
+} // End of isset($_GET['image']) IF.
+```
+
+
+
+这三个条件都没有 `else` 子句。如果这三个条件都不为 TRUE，那么标志变量 `$name` 仍将保持 FALSE 值。
+
+**7.** 如果此页面未接收到有效图像，则使用默认图像：
+
+```
+if (!$name) {
+  $image = 'images/unavailable.png';
+  $name = 'unavailable.png';
+}
+```
+
+如果图像不存在、不是文件或没有正确的扩展名，则 `$name` 变量的值仍将为 FALSE。在这种情况下，将改用默认图像 ![Image](img/circle-d.jpg)。该图像本身可从本书对应的网站（**[www.LarryUllman.com](http://www.LarryUllman.com)**，可在其中找到所有可下载的代码）下载，并应放置在 `images` 文件夹中。`images` 文件夹应与此脚本位于同一目录下，而不是与 `uploads` 文件夹位于同一目录下。
+
+![Image](img/11_figure_24_d.jpg)
+
+![Image](img/circle-d.jpg)每当显示请求的图像出现问题时，都将显示此图像。
+
+**8.** 检索图像的信息：
+
+```
+$info = getimagesize($image);
+$fs = filesize($image);
+```
+
+要将文件发送到 Web 浏览器，脚本需要知道文件的 MIME 类型和大小。图像文件的类型可以使用 `getimagesize()` 找到。文件的大小（以字节为单位）可以使用 `filesize()` 找到。因为 `$image` 变量代表 `../uploads/{$_GET['image']}` 或 `images/unavailable.png`，所以这些代码行对正确的图像和不可用的图像都有效。
+
+**9.** 发送文件：
+
+```
+header ("Content-Type: {$info['mime']}\n");
+header ("Content-Disposition: inline; filename=\"$name\"\n");
+header ("Content-Length: $fs\n");
+```
+
+这些 `header()` 调用将文件数据发送到 Web 浏览器。第一行使用图像的 MIME 类型作为 *Content-Type* 标头的值。第二行告诉浏览器文件的名称，并指示应在浏览器中显示（`inline`）。最后一个 `header()` 函数指示预期的数据量。
+
+文件数据本身使用 `readfile()` 函数发送，该函数读取文件并立即将内容发送到 Web 浏览器。
+
+**10.** 将文件保存为 `show_image.php`，将其放在你的 Web 目录中，与 `images.php` 在同一文件夹中，然后通过在 `images.php` 中点击链接在 Web 浏览器中测试它 ![Image](img/circle-e.jpg)。
+
+![Image](img/11_figure_25_e.jpg)
+
+![Image](img/circle-e.jpg)此图像是通过让 PHP 将文件发送到 Web 浏览器来显示的。
+
+请注意，此页面不包含 HTML。它仅将图像文件发送到 Web 浏览器。另请注意，我省略了结束 PHP 标记。这是可以接受的，在某些像这样的情况下，这是首选。如果你包含了结束 PHP 标记，并且在该标记后无意中有多余的空格或空行，浏览器可能会在显示图像时出现问题（因为浏览器将接收到长度为 *X* 的图像数据，与 *Content-Length* 标头匹配，外加一点额外的数据）。
+
+***
+
+提示
+
+我再怎么强调也不为过：在使用 `header()` 函数之前，*绝不能*有任何内容发送到 Web 浏览器。即使是一个包含文件，在结束 PHP 标记后有一个空行，也会导致 `header()` 函数无法使用。
+
+***
+
+***
+
+提示
+
+为避免使用 `header()` 时出现问题，可以先调用 `headers_sent()` 函数。它返回一个布尔值，指示是否已有内容发送到 Web 浏览器：
+
+```
+if (!headers_sent()) {
+  // 使用 header() 函数。
+} else {
+  // 执行其他操作。
+}
+```
+
+输出缓冲（在第 17 章“示例——用户注册”中演示）也可以防止使用 `header()` 时出现问题。
+
+***
+
+***
+
+提示
+
+调试此类脚本（PHP 向 Web 浏览器发送数据而非文本）可能具有挑战性。如需帮助，请使用 Firefox 浏览器的众多开发者插件之一 ![Image](img/circle-f.jpg)。
+
+![Image](img/11_figure_26_f.jpg)
+
+![Image](img/circle-f.jpg)Firefox 的 Web Developer Toolbar 扩展包含查看页面和/或服务器发送了哪些标头的功能。这对于调试很有用。
+
+***
+
+***
+
+提示
+
+你也可以使用 PHP 和 `header()` 函数向 Web 浏览器指示页面的编码：
+
+```
+<?php header ('Content-Type: text/html; charset=UTF-8'); ?>
+```
+
+这可能比使用 `META` 标签更有效，但它要求页面必须是 PHP 脚本。如果使用此方法，它必须是页面的第一行，位于任何 HTML 之前。
+
+***
+
+***
+
+提示
+
+代理脚本一次只能向浏览器发送单个文件（或图像）。
+
+***
+
+### 日期和时间函数
+
+第 5 章“SQL 简介”演示了 MySQL 支持的几个很棒的日期和时间函数。当然，PHP 也有自己的日期和时间函数。首先是 `date_default_timezone_set()`。此函数用于设置默认时区（也可以在 PHP 的配置文件中设置）。
+
+```
+date_default_timezone_set(tz);
+```
+
+*tz* 值是一个字符串，如 *America/New_York* 或 *Pacific/Auckland*。此处列举不完（仅非洲就有 50 多个），但请参阅 PHP 手册获取所有值。请注意，自 PHP 5.1 起，必须在脚本或 PHP 的配置文件中设置默认时区，然后才能调用任何日期和时间函数，否则你会看到错误。
+
+接下来是 `checkdate()` 函数，它接受月、日、年并返回一个布尔值，指示该日期是否真实存在（或曾经存在过）。它甚至会考虑闰年。此函数可用于确保用户提供了有效日期（出生日期或其他）：
+
+```
+if (checkdate(month, day, year)) { // OK!
+```
+
+也许最常用的函数是名副其实的 `date()`。它将日期和/或时间作为格式化字符串返回。它接受两个参数：
+
+```
+date (format, [timestamp]);
+```
+
+timestamp 是一个可选参数，表示从 Unix 纪元（1970 年 1 月 1 日午夜）到相关日期的秒数。它允许你获取特定日期的信息，如星期几。如果未指定 timestamp，PHP 将直接使用服务器上的当前时间。
+
+有无数可用的格式化参数（**表 11.4**），这些参数可以与字面文本结合使用。例如，
+
+```
+echo date('F j, Y'); // January 26, 2011
+echo date('H:i'); // 23:14
+echo date('D'); // Sat
+```
+
+**表 11.4. Date() 函数格式化**
+
+![Image](img/11tab04.jpg)
+
+你可以使用 `mktime()` 函数找到特定日期的时间戳：
+
+```
+$stamp = mktime (hour, minute, second, month, day, year);
+```
+
+如果不带参数调用，`mktime()` 返回当前时间戳，这与调用 `time()` 函数相同。
+
+最后，`getdate()` 函数可用于返回日期和时间的值数组（**表 11.5**）。例如，
+
+```
+$today = getdate();
+echo $today['month']; // October
+```
+
+**表 11.5. getdate() 数组**
+
+![Image](img/11tab05.jpg)
+
+此函数也接受一个可选的 timestamp 参数。如果不使用该参数，`getdate()` 将返回当前日期和时间的信息。
+
+这些只是 PHP 众多日期和时间函数中的一小部分。更多内容请参阅 PHP 手册。为了练习使用这些函数，让我们以几种方式修改 `images.php`（脚本 11.4）。首先，脚本将显示每个图像的上传日期和时间。其次，在更改布局的同时，脚本也将显示每个图像的文件大小 ![Image](img/circle-a.jpg)。
+
+![Image](img/11_figure_27_a.jpg)
+
+
+
+![Image](img/circle-a.jpg) 修订后的 `images.php` 显示了每张图片的两项更多信息。
+
+#### 使用日期和时间函数
+
+1.  在文本编辑器或 IDE 中打开 `images.php`（脚本 11.4）（如果尚未打开）。
+
+2.  在开始 PHP 标记后的第一行代码中，设置时区（脚本 11.6）：
+
+    ```
+    date_default_timezone_set ('America/New_York');
+    ```
+
+    在调用任何日期和时间函数之前，必须先设置时区。要查找您的时区，请参阅 [www.php.net/timezones](http://www.php.net/timezones)。
+
+3.  在 `foreach` 循环中，获取图片尺寸后，计算其文件大小：
+
+    ```
+    $file_size = round ( (filesize ("$dir/$image")) / 1024) . "kb";
+    ```
+
+    `filesize()` 函数首次用于 `show_image.php` 脚本中。它以字节为单位返回文件大小。要计算文件的千字节数，将该数字除以 1,024（1 千字节有这么多字节）并四舍五入。
+
+4.  在下一行，确定图片的修改日期和时间：
+
+    ```
+    $image_date = date("F d, Y H:i:s", filemtime("$dir/$image"));
+    ```
+
+    要查找文件的修改日期和时间，请调用 `filemtime()` 函数，并向该函数提供要检查的文件或目录。此函数返回一个时间戳，随后可将其作为第二个参数传递给 `date()` 函数，后者将相应地格式化该时间戳。
+
+    如果您对这里发生的事情感到困惑，可以将代码拆分为两步：
+
+    ```
+    $filemtime = filemtime ("$dir/$image");
+    $image_date = date("F d, Y H:i:s ", $filemtime);
+    ```
+
+5.  修改 echo 语句，使其同时打印文件大小和修改日期：
+
+    ```
+    echo "<li><a href=\"javascript: create_window('$image_name', $image_size[0],$image_size[1])\"> $image</a> $file_size ($image_date)</li>\n";
+    ```
+
+    这两项都打印在 `A` 标记之外，因此它们不是链接的一部分。
+
+6.  将文件另存为 `images.php`，将其放入您的 Web 目录中，并在 Web 浏览器中测试它。
+
+***
+
+> **提示**
+>
+> `date()` 函数有一些参数用于提供信息，而非格式化。例如，`date('L')` 返回 1 或 0 以指示是否为闰年；`date('t')` 返回当前月份的天数；`date('I')` 如果当前为夏令时则返回 1。
+
+***
+
+> **提示**
+>
+> PHP 的日期函数反映的是服务器上的时间（因为 PHP 运行在服务器上）；如果您想确定用户计算机上的日期和时间，则需要使用 JavaScript。
+
+***
+
+> **提示**
+>
+> 在 第 16 章 中，您将学习如何使用新的 `DateTime` 类在 PHP 中处理日期和时间。
+
+***
+
+**脚本 11.6.** `images.php` 的这个修改版本（脚本 11.4）使用 PHP 的日期和时间函数向用户报告一些信息。
+
+***
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/
+2       xhtml1-transitional.dtd">
+3   <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+4   <head>
+5       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+6       <title>Images</title>
+7       <script type="text/javascript" charset="utf-8" src="js/function.js"></script>
+8   </head>
+9   <body>
+10  <p>Click on an image to view it in a separate window.</p>
+11  <ul>
+12  <?php # Script 11.6 - images.php
+13  // This script lists the images in the uploads directory.
+14  // This version now shows each image's file size and uploaded date and time.
+15
+16  // Set the default timezone:
+17  date_default_timezone_set ('America/New_York');
+18
+19  $dir = '../uploads'; // Define the directory to view.
+20
+21  $files = scandir($dir); // Read all the images into an array.
+22
+23  // Display each image caption as a link to the JavaScript function:
+24  foreach ($files as $image) {
+25
+26      if (substr($image, 0, 1) != '.') { // Ignore anything starting with a period.
+27
+28          // Get the image's size in pixels:
+29          $image_size = getimagesize ("$dir/$image");
+30
+31          // Calculate the image's size in kilobytes:
+32          $file_size = round ( (filesize ("$dir/$image")) / 1024) . "kb";
+33
+34          // Determine the image's upload date and time:
+35          $image_date = date("F d, Y H:i:s", filemtime("$dir/$image"));
+36
+37          // Make the image's name URL-safe:
+38          $image_name = urlencode($image);
+39
+40          // Print the information:
+41          echo "<li><a href=\"javascript:create_window('$image_name',$image_size[0],
+42              $image_size[1])\">$image</a> $file_size ($image_date)</li>\n";
+43
+44      } // End of the IF.
+45
+46  } // End of the foreach loop.
+47
+48  ?>
+49  </ul>
+50  </body>
+51  </html>
+```
+
+***
+
+### 复习与实践
+
+如果您对复习问题或实践提示有任何疑问，请访问本书的支持论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+#### 复习
+
+*   发送电子邮件使用什么函数？该函数的参数有哪些？服务器发送电子邮件需要什么条件？
+*   `\n` 在单引号和双引号中使用有区别吗？
+*   能否确切知道收件人是否以及何时收到了 PHP 发送的电子邮件？
+*   如果没有收到 PHP 脚本本应发送的任何电子邮件，可以采取哪些调试步骤？
+*   文件夹权限在处理上传文件时起什么作用？
+*   处理文件上传时使用哪两个目录？
+*   为了处理文件上传，必须在开始 `form` 标记中添加什么额外属性？
+*   什么是 MIME 类型？
+*   PHP 和 JavaScript 有哪些相似之处？有哪些不同之处？
+*   向 HTML 页面添加 JavaScript 使用什么标记？
+*   JavaScript 中 `var` 关键字是什么意思？
+*   JavaScript 中的连接运算符是什么？
+*   PHP `header()` 函数有什么作用？
+*   *headers already sent*（标头已发送）错误消息是什么意思？
+*   什么是*代理脚本*？何时可能需要代理脚本？
+*   `readfile()` 函数有什么作用？
+
+#### 实践
+
+*   创建一个更定制的联系表单。让 PHP 脚本也发送一封更定制的电子邮件，包含表单请求的任何其他数据。
+*   使用关键词 *php email spam filters* 在线搜索，了解提高 PHP 发送邮件成功投递率的技巧（即最大限度地减少垃圾邮件过滤器拦截合法邮件的可能性）。
+*   制作 `upload_image.php` 的一个变体，支持上传不同的文件类型。创建相应版本的 `show_image.php`。注意：您需要研究 MIME 类型才能完成这些挑战。
+*   查看 PHP 手册中关于 `glob()` 函数的页面。
+*   本章介绍了大量信息和新函数。查阅 PHP 手册中的相关内容以了解更多。
+
+## 12. Cookie 和 Session
+
+本章内容
+
+*   制作登录页面 368
+*   制作登录函数 371
+*   使用 Cookie 376
+*   使用 Session 388
+*   提高 Session 安全性 396
+*   复习与实践 400
+
+
+
+
+
+### 超文本传输协议 (HTTP) 是一种 `stateless` 技术
+
+超文本传输协议 (HTTP) 是一种 `stateless` 技术，这意味着每个单独的 HTML 页面都是一个无关的实体。HTTP 没有跟踪用户或在用户浏览网站时保留变量的方法。如果没有服务器跟踪用户的能力，就不可能有购物车或定制的网站个性化功能。使用像 PHP 这样的服务器端技术，你可以克服 Web 的无状态性。为此目的最好的两个 PHP 工具是 `cookies` 和 `sessions`。
+
+Cookie 和 Session 的关键区别在于：Cookie 将数据存储在用户的 Web 浏览器中，而 Session 将数据存储在服务器本身上。Session 通常比 Cookie 更安全，并且可以存储更多的信息。由于这两种技术在 PHP 中都很容易使用且值得掌握，本章将同时介绍 Cookie 和 Session。用于演示这些信息的示例将是一个登录系统，基于现有的 `sitename` 数据库。
+
+#### 制作登录页面
+
+登录过程仅涉及几个组件：
+
+*   一个用于提交登录信息的表单
+*   一个确认已提交必要信息的验证例程
+*   一个将提交的信息与存储的信息进行比较的数据库查询
+*   用于存储反映登录成功数据的 Cookie 或 Session
+
+后续页面随后可以进行检查，以确认用户已登录（以限制对该页面的访问或添加功能）。当然，还有一个注销过程，它涉及清除代表已登录状态的 Cookie 或 Session 数据。
+
+为了开始这一切，让我们获取一些这些通用元素并将它们放入单独的文件中。然后，需要此功能的页面可以包含必要的文件。以这种方式分解逻辑将使一些后续脚本更易于阅读和编写，并减少冗余。你将定义两个可包含的文件。第一个脚本将包含登录页面的主要部分，包括页眉、错误报告、表单和页脚。
+
+#### 脚本 12.1：`login_page.inc.php` 脚本
+
+`login_page.inc.php` 脚本创建完整的登录页面，包括表单，并报告任何错误。它将被其他需要显示登录页面的页面包含。
+
+```
+<?php # Script 12.1 - login_page.inc.php
+// This page prints any errors
+// associated with logging in
+// and it creates the entire login page,
+// including the form.
+
+// Include the header:
+$page_title = 'Login';
+include ('includes/header.html');
+
+// Print any error messages, if they exist:
+if (isset($errors) && !empty($errors)) {
+    echo '<h1>Error!</h1>
+<p class="error">The following
+    error(s) occurred:<br />';
+    foreach ($errors as $msg) {
+        echo " - $msg<br />\n";
+    }
+    echo '</p><p>Please try again.</p>';
+}
+
+// Display the form:
+?><h1>Login</h1>
+<form action="login.php" method="post">
+    <p>Email Address: <input type="text"
+        name="email" size="20" maxlength="60" />
+    </p>
+    <p>Password: <input type="password"
+        name="pass" size="20" maxlength="20" />
+    </p>
+    <p><input type="submit" name="submit"
+        value="Login" /></p>
+</form>
+
+<?php include ('includes/footer.html'); ?>
+```
+
+#### 制作登录页面
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 页面，命名为 `login_page.inc.php`（脚本 12.1）：
+
+```
+<?php # Script 12.1 - login_page.inc.php
+```
+
+**2.** 包含页眉：
+
+```
+$page_title = 'Login';
+include ('includes/header.html');
+```
+
+本章将使用第 3 章“创建动态网站”中首创、第 9 章“将 PHP 与 MySQL 结合使用”中修改的相同模板系统。
+
+**3.** 如果存在错误消息则打印它们：
+
+```
+if (isset($errors) && !empty($errors)) {
+    echo '<h1>Error!</h1>
+    <p class="error">The following error(s) occurred:<br />';
+    foreach ($errors as $msg) {
+        echo " - $msg<br />\n";
+    }
+    echo '</p><p>Please try again.</p>';
+}
+```
+
+这段代码也是在第 9 章中开发的，尽管增加了一个额外的 `isset()` 子句作为预防措施。如果存在任何错误（在 `$errors` 数组变量中），它们将作为无序列表打印出来。
+
+**4.** 显示表单：
+
+```
+?><h1>Login</h1>
+<form action="login.php" method="post">
+    <p>Email Address: <input type="text" name="email" size="20" maxlength="60" /> </p>
+    <p>Password: <input type="password" name="pass" size="20" maxlength="20" /></p>
+    <p><input type="submit" name="submit" value="Login" /></p>
+</form>
+```
+
+HTML 表单只需要两个文本输入框：一个用于电子邮件地址，另一个用于密码。输入框的名称与 `sitename` 数据库 `users` 表中的名称相匹配（该登录系统即基于此数据库）。
+
+为了更容易创建 HTML 表单，首先关闭 PHP 部分。该表单不是粘性的，但你可以轻松添加代码来实现该功能。
+
+**5.** 完成页面：
+
+```
+<?php include ('includes/footer.html'); ?>
+```
+
+**6.** 将文件保存为 `login_page.inc.php` 并将其放在你的 Web 目录中（在 `includes` 文件夹中，与第 3 章和第 9 章的文件 `header.html`、`footer.html` 和 `style.css` 放在一起）。
+
+该页面将使用 `.inc.php` 扩展名，以表明它既是一个可包含的文件，又包含 PHP 代码。
+
+> **提示**
+>
+> 该脚本从 `includes` 目录中包含页眉和页脚文件，而该脚本本身也将位于同一目录中，这看起来可能不合逻辑。这段代码之所以有效，是因为该脚本将被主目录中的页面包含；因此包含引用是相对于父文件的，而不是相对于该文件的。
+
+### 制作登录函数
+
+除了存储在 `login_page.inc.php` 中的登录页面外，还有一小部分功能将是本章中多个脚本的通用部分。在接下来的这个脚本中（也将被登录/注销系统中的其他页面包含），将定义两个函数。
+
+首先，许多页面最终会将用户从一个页面重定向到另一个页面。例如，成功登录后，用户将被带到 `loggedin.php`。如果用户访问 `loggedin.php` 但未登录，他们应该被带到 `index.php`。重定向使用第 11 章“Web 应用程序开发”中介绍的 `header()` 函数。重定向的语法是：
+
+```
+header ('Location: http://www.example.com/page.php');
+```
+
+由于此函数会将浏览器发送到 `page.php`，因此应在之后立即使用 `exit()` 终止当前脚本：
+
+```
+header ('Location: http://www.example.com/page.php');
+exit();
+```
+
+如果不调用 `exit()`，当前脚本将继续运行（只是不在 Web 浏览器中）。
+
+`header()` 调用中的 location 值应该是一个绝对 URL（`http://www.example.com/page.php` 而不是仅仅 `page.php`）。你可以将此值硬编码到每个 `header()` 调用中，或者更好的是，让 PHP 动态确定它。这个脚本中的第一个函数将做到这一点，然后将用户重定向到该绝对 URL。
+
+
+
+
+
+#### 创建登录函数
+
+本章中多个脚本将使用的另一段代码用于验证登录表单。这是一个三步过程：
+
+1. 确认提供了电子邮件地址。
+2. 确认提供了密码。
+3. 确认提供的电子邮件地址和密码与数据库中存储的匹配（注册过程中存储）。
+
+接下来的脚本将定义两个不同的函数。每个函数的工作细节将在后续步骤中解释。
+
+#### 创建登录函数
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `login_functions.inc.php`（**脚本 12.2**）：
+
+```php
+<?php # Script 12.2 - login_functions.inc.php
+```
+
+由于此文件将被其他文件包含，因此不需要包含任何 HTML。
+
+**2.** 开始定义一个新函数：
+
+```php
+function redirect_user ($page = 'index.php') {
+```
+
+`redirect_user()` 函数将创建一个适合运行这些脚本的站点的绝对 URL，然后将用户重定向到该页面。动态执行此操作的好处（相对于硬编码 `http://www.example.com/page.php`）在于：你可以在一台服务器（如你自己的电脑）上开发代码，然后将其移至另一台服务器，而无需更改此代码。
+
+该函数接受一个可选参数：最终目标页面名称。默认值为 `index.php`。
+
+**3.** 开始定义 URL：
+
+```php
+$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+```
+
+**脚本 12.2.** `login_functions.inc.php` 脚本定义了两个函数，将在登录/注销过程中由不同脚本使用。
+
+```php
+1  <?php # Script 12.2 - login_functions.inc.php
+2  // This page defines two functions used
+3  // by the login/logout process.
+4
+5  /* This function determines an absolute
+6   * URL and redirects the user there.
+7   * The function takes one argument: the
+8   * page to be redirected to.
+9   * The argument defaults to index.php.
+10   */
+11  function redirect_user ($page = 'index.php') {
+12
+13      // Start defining the URL...
+14      // URL is http:// plus the host name
+15      // plus the current directory:
+16      $url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+17
+18      // Remove any trailing slashes:
+19      $url = rtrim($url, '/\\');
+20
+21      // Add the page:
+22      $url .= '/' . $page;
+23
+24      // Redirect the user:
+25      header("Location: $url");
+26      exit(); // Quit the script.
+27
+28  } // End of redirect_user() function.
+29
+30
+31  /* This function validates the form data
+32   * (the email address and password).
+33   * If both are present, the database is
+34   * queried.
+35   * The function requires a database
+36   * connection.
+37   * The function returns an array of
+38   * information, including:
+39   * - a TRUE/FALSE variable indicating
+40   *   success
+41   * - an array of either errors or the
+42   *   database result
+43   */
+44  function check_login($dbc, $email = '', $pass = '') {
+45
+46      $errors = array(); // Initialize error array.
+47
+48      // Validate the email address:
+49      if (empty($email)) {
+50          $errors[] = 'You forgot to enter your email address.';
+51      } else {
+52          $e = mysqli_real_escape_string($dbc, trim($email));
+53      }
+54
+55      // Validate the password:
+56      if (empty($pass)) {
+57          $errors[] = 'You forgot to enter your password.';
+58      } else {
+59          $p = mysqli_real_escape_string($dbc, trim($pass));
+60      }
+61
+62      if (empty($errors)) { // If everything's OK.
+63
+64          // Retrieve the user_id and first_name for that email/password combination:
+65          $q = "SELECT user_id, first_name FROM users WHERE email='$e' AND pass=SHA1('$p')";
+66          $r = @mysqli_query($dbc, $q); // Run the query.
+67
+68          // Check the result:
+69          if (mysqli_num_rows($r) == 1) {
+70
+71              // Fetch the record:
+72              $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
+73
+74              // Return true and the record:
+75              return array(true, $row);
+76
+77          } else { // Not a match!
+78              $errors[] = 'The email address and password entered do not match those on file.';
+79          }
+80
+81      } // End of empty($errors) IF.
+82
+83      // Return false and the errors:
+84      return array(false, $errors);
+85
+86  } // End of check_login() function.
+```
+
+首先，给 `$url` 赋值为 `http://` 加上主机名（可能是 `localhost` 或 `www.example.com`）。使用 `dirname()` 函数加上当前目录名，以防重定向发生在子文件夹内。`$_SERVER['PHP_SELF']` 指向调用此函数的当前脚本（包含目录名）。该完整值可能是 `/somedir/page.php`。`dirname()` 函数将仅返回该值的目录部分（即 `/somedir/`）。
+
+**4.** 从 URL 中移除任何尾部斜杠：
+
+```php
+$url = rtrim($url, '/\\');
+```
+
+因为子文件夹的存在可能会添加额外的斜杠（`/`）或反斜杠（`\`，用于 Windows），函数需要移除它们。为此，应用 `rtrim()` 函数。默认情况下，此函数从字符串右侧移除空格。如果提供第二个参数作为要移除的字符列表，它将移除那些字符。要移除的字符是 `/` 和 `\`。但由于反斜杠是 PHP 中的转义字符，你需要使用 `\\` 来表示单个反斜杠。通过这行代码，如果 `$url` 以这些字符中的任何一个结尾，`rtrim()` 函数将移除它们。
+
+**5.** 将特定页面追加到 URL：
+
+```php
+$url .= '/' . $page;
+```
+
+接下来，将特定页面名连接到 `$url`。它前面加上斜杠，因为第 4 步中移除了尾部斜杠，不能有 `www.example.compage.php` 这样的 URL。
+
+这看起来可能相当复杂，但这是一种非常有效的方法，可确保无论在什么服务器上、从什么目录运行脚本，重定向都能正常工作（只要重定向发生在该目录内）。
+
+**6.** 重定向用户并完成函数：
+
+```php
+header("Location: $url");
+exit(); // Quit the script.
+} // End of redirect_user() function.
+```
+
+最后步骤是发送 `Location` 头并终止脚本执行。
+
+**7.** 开始一个新函数：
+
+```php
+function check_login($dbc, $email = '', $pass = '') {
+```
+
+此函数将验证登录信息。它接受三个参数：数据库连接（必需）、电子邮件地址（可选）和密码（可选）。
+
+虽然此函数可以直接访问 `$_POST['email']` 和 `$_POST['pass']`，但最好将这些值传递给函数，使函数更加独立。
+
+**8.** 验证电子邮件地址和密码：
+
+```php
+$errors = array();
+if (empty($email)) {
+    $errors[] = 'You forgot to enter your email address.';
+} else {
+    $e = mysqli_real_escape_string($dbc, trim($email));
+}
+if (empty($pass)) {
+    $errors[] = 'You forgot to enter your password.';
+} else {
+    $p = mysqli_real_escape_string($dbc, trim($pass));
+}
+```
+
+
+
+
+此验证例程与注册页面中使用的类似。如果出现任何问题，它们将被添加到 `$errors` 数组中，该数组最终将在登录页面上使用（参见“制作登录页面”）。请注意，此 `$errors` 数组是函数的*局部*变量。即使名称相同，这也不是登录页面中使用的同一个 `$errors` 变量。函数后面的代码将返回此 `$errors` 变量的值，而调用此函数的脚本中的代码会将返回值赋给合适的全局 `$errors` 数组，以便在登录页面上使用。
+
+**9.** 如果未发生错误，运行数据库查询：
+
+```
+if (empty($errors)) {
+    $q = "SELECT user_id, first_name FROM users WHERE email='$e' AND pass=SHA1('$p')";
+    $r = @mysqli_query ($dbc, $q);
+}
+```
+
+该查询从数据库中选择 `user_id` 和 `first_name` 值，条件是提交的电子邮件地址（来自表单）与存储的电子邮件地址匹配，且提交密码的 `SHA1()` 版本与存储的密码匹配。
+
+**10.** 检查查询结果：
+
+```
+if (mysqli_num_rows($r) == 1) {
+    $row = mysqli_fetch_array ($r, MYSQLI_ASSOC);
+    return array(true, $row);
+}
+```
+
+如果查询返回一行，则登录信息正确。然后将结果获取到 `$row` 中。成功登录的最后一步是将两条信息返回给请求脚本：布尔值 `true`，表示登录成功；以及从 MySQL 获取的数据。使用 `array()` 函数，该函数可以同时返回布尔值和 `$row` 数组。
+
+**11.** 如果查询未选中任何记录，创建一个错误：
+
+```
+} else { // Not a match!
+    $errors[] = 'The email address and password entered do not match those on file.';
+}
+```
+
+如果查询未返回一行，则向数组添加一条错误消息。它最终将显示在登录页面上。
+
+**12.** 完成步骤 9 开始的条件语句并结束函数：
+
+```
+} // End of empty($errors) IF.
+return array(false, $errors);
+} // End of check_login() function.
+```
+
+最后一步是让函数返回 `false` 值，表示登录失败，并返回 `$errors` 数组，其中存储了失败的原因。此 `return` 语句可以放在此处——即函数末尾而非条件语句内部——因为只有登录失败时，函数才会执行到此处。如果登录成功，步骤 10 中的 `return` 行将停止函数继续执行（函数一旦执行 `return` 即停止）。
+
+**13.** 将文件保存为 `login_functions.inc.php` 并将其放置在您的 Web 目录中（在 `includes` 文件夹内，与 `header.html`、`footer.html` 和 `style.css` 在一起）。
+
+此页面也将使用 `.inc.php` 扩展名，以表明它既是一个可包含的文件，又包含 PHP 代码。
+
+与本书中创建的其他一些可包含文件一样（尽管 `login_page.inc.php` 除外），结束 PHP 标签——`?>`——被省略了。这样做可以防止潜在的复杂问题，即如果可包含文件在结束标签后有多余的空白或空行，可能会引发问题。
+
+***
+
+**提示**
+
+本章中的脚本不包含调试代码（如 MySQL 错误或查询）。如果您在这些脚本上遇到问题，请应用第 8 章“错误处理与调试”中概述的调试技术。
+
+***
+
+**提示**
+
+您可以在 `header()` 调用的 URL 中添加 `name=value` 对，以将值传递给目标页面：
+
+```
+$url .= '?name=' . urlencode(value);
+```
+
+### 使用 Cookie
+
+Cookie 是服务器在用户机器上存储信息的一种方式。这是网站在一次访问过程中记住或跟踪用户的一种方法。您可以将 Cookie 想象成名牌：您告诉服务器您的名字，它给您一张贴纸佩戴。然后它可以通过查看那张名牌来知道您是谁。
+
+#### 设置 Cookie
+
+关于 Cookie 最重要的一点是，它们必须在发送*任何其他信息*之前，从服务器发送到客户端。如果服务器尝试在 Web 浏览器已接收 HTML（甚至多余的空白字符）之后发送 Cookie，将导致错误消息，且 Cookie 不会被发送。这是迄今为止最常见的 Cookie 相关错误，但很容易修复。如果您看到此类消息：
+
+1. 记下 *output started at* 后面提到的脚本和行号。
+2. 打开该脚本并转到该行号。
+3. 删除该行输出的空白、行、文本、HTML 或其他任何内容。
+
+Cookie 通过 `setcookie()` 函数发送：
+
+```
+setcookie (name, value);
+setcookie ('name', 'Nicole');
+```
+
+第二行代码将向浏览器发送一个名为 `name`、值为 `Nicole` 的 Cookie。
+
+您可以通过后续使用 `setcookie()` 函数继续向浏览器发送更多 Cookie：
+
+```
+setcookie ('ID', 263);
+setcookie ('email', 'email@example.com');
+```
+
+
+
+### PHP 中的 Cookie 处理
+
+#### Cookie 命名约定
+关于 Cookie 的名称，最好不要使用空格或标点符号，并注意所用字母的大小写。
+
+#### 发送 Cookie
+
+### 1. 创建登录脚本
+在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `login.php`（**脚本 12.3 的脚本配合工作。该脚本还需要用到本章开头创建的两个文件。
+
+### 2. 表单提交时包含辅助文件
+如果表单已提交，则包含这两个辅助文件：
+
+```
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require ('includes/login_functions.inc.php');
+    require ('../mysqli_connect.php');
+```
+
+该脚本将执行两项任务：处理表单提交和显示表单。此条件语句用于检测提交行为。
+
+在条件语句内部，脚本必须同时包含 `login_functions.inc.php` 和 `mysqli_connect.php`（后者创建于 第 9 章，且相对于本脚本应仍位于同一位置；如果你的 `mysqli_connect.php` 不在当前目录的父目录中，请修改此处的代码）。
+
+我选择在两种情况下都使用 `require()` 而非 `include()`，因为无法包含这两个脚本中的任何一个都会导致登录过程无法进行。
+
+**脚本 12.3.** 登录成功后，`login.php` 脚本会创建两个 Cookie 并重定向用户。
+
+```
+1   <?php # 脚本 12.3 - login.php
+2   // 此页面处理登录表单
+3       // 的提交。
+4   // 登录成功后，用户将被
+5       // 重定向。
+6   // 需要包含两个文件。
+7   // 在 setcookie() 行之前不要向
+8       // Web 浏览器发送任何内容！
+9
+10  // 检查表单是否已提交：
+11  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+12
+13      // 用于处理登录：
+14      require ('includes/login_functions.
+15          inc.php');
+16
+17      // 需要数据库连接：
+18      require ('../mysqli_connect.php');
+19
+20      // 验证登录：
+21      list ($check, $data) = check_login($dbc,
+22          $_POST['email'], $_POST['pass']);
+23
+24      if ($check) { // 成功！
+25
+26          // 设置 Cookie：
+27          setcookie ('user_id', $data
+28              ['user_id']);
+29          setcookie ('first_name',
+30              $data['first_name']);
+31
+32          // 重定向：
+33          redirect_user('loggedin.php');
+34
+35      } else { // 失败！
+36
+37          // 将 $data 赋值给 $errors 以便
+38              // 在 login_page.inc.php 文件中
+39          // 进行错误报告。
+40          $errors = $data;
+41
+42      }
+43
+44      mysqli_close($dbc); // 关闭
+45          // 数据库连接。
+46
+47  } // 主提交条件语句结束。
+48
+49  // 创建页面：
+50  include ('includes/login_page.inc.php');
+51  ?>
+```
+
+### 3. 验证表单数据
+验证表单数据：
+
+```
+list ($check, $data) = check_login ($dbc, $_POST['email'], $_POST['pass']);
+```
+
+包含这两个文件后，即可调用 `check_login()` 函数。该函数接收数据库连接（来自 `mysqli_connect.php`）、电子邮件地址和密码（均来自表单）。作为额外的预防措施，脚本可在调用函数前先确认这两个变量均已设置且非空。
+
+该函数返回一个包含两个元素的数组：一个布尔值和一个数组（用户数据或错误信息）。要将这些返回值赋给变量，可使用 `list()` 函数。函数返回的第一个值（布尔值）将赋给 `$check`。第二个值（`$row` 或 `$errors` 数组）将赋给 `$data`。
+
+### 4. 登录成功时让用户登入
+如果用户输入的信息正确，则让其登入：
+
+```
+if ($check) { // 成功！
+    setcookie ('user_id', $data['user_id']);
+    setcookie ('first_name', $data['first_name']);
+```
+
+`$check` 变量指示登录尝试是否成功。如果其值为 TRUE，则 `$data` 包含用户的 ID 和名字。这两个值可用于 Cookie 中。
+
+一般来说，你**永远不应**将数据库表的主键值（如 `$data['user_id']`）存储在 Cookie 中，因为 Cookie 很容易被篡改。在本例中这不会造成问题，因为 `user_id` 值在网站中并未实际使用（存储它仅用于演示目的）。
+
+### 5. 重定向用户
+将用户重定向到另一页面：
+
+```
+redirect_user('loggedin.php');
+```
+
+使用本章前面定义的函数，用户登录成功后将被重定向到另一个脚本。具体的重定向目标页面是 `loggedin.php`。
+
+### 6. 完成条件语句并关闭连接
+完成 `$check` 条件语句（始于步骤 4），然后关闭数据库连接：
+
+```
+} else {
+    $errors = $data;
+}
+
+mysqli_close($dbc);
+```
+
+如果 `$check` 的值为 FALSE，则 `$data` 变量存储的是 `check_login()` 函数内产生的错误信息。如果是这种情况，应将错误赋值给 `$errors` 变量，因为显示登录页面的脚本代码——`login_page.inc.php`——期望使用该变量。
+
+### 7. 完成脚本
+结束主提交条件语句并包含登录页面：
+
+```
+}
+include ('includes/login_page.inc.php');
+?>
+```
+
+`login.php` 脚本本身主要通过调用 `check_login()` 函数来执行验证，并处理 Cookie 和重定向。`login_page.inc.php` 文件包含登录页面本身，因此只需将其包含进来即可。
+
+### 8. 保存并测试
+将文件保存为 `login.php`，放置在你的 Web 目录中（与 第 9 章 的文件在同一文件夹），并在 Web 浏览器中加载此页面（参见 ![Image](img/graycircle-b.jpg) “制作登录页面”）。
+
+如果愿意，你可以错误地提交表单进行测试，但目前还无法正确登录，因为最终的目标页面——`loggedin.php`——尚未编写。
+
+---
+
+> **提示**
+> Cookie 限制为总共约 4 KB 的数据，且每个 Web 浏览器能记住的来自同一站点的 Cookie 数量有限。目前大多数浏览器的限制是 50 个 Cookie（但如果你要发送 50 个不同的 Cookie，你可能需要重新考虑你的做法）。
+
+---
+
+> **提示**
+> `setcookie()` 函数是 PHP 中极少数可能在不同浏览器中产生不同结果的函数之一，因为每个浏览器处理 Cookie 的方式各不相同。请务必在不同平台的多种浏览器中测试你的网站，以确保一致性。
+
+---
+
+> **提示**
+> 如果前两个包含的文件向 Web 浏览器发送了任何内容，甚至在结束 PHP 标记后有空行或空格，你将会看到 *headers already sent*（标头已发送）错误。这就是为什么这两个文件都不包含结束 PHP 标记的原因。
+
+#### 访问 Cookie
+要从 Cookie 中检索值，只需引用 `$_COOKIE` 超全局变量，并使用相应的 Cookie 名称作为键（就像操作任何数组一样）。例如，要检索通过以下行建立的 Cookie 的值：
+
+```
+setcookie ('username', 'Trout');
+```
+
+你应该引用 `$_COOKIE['username']`。在下面的示例中，`login.php` 脚本设置的 Cookie 将以两种方式被访问。首先，会检查用户是否已登录（否则，他们不应访问此页面）。其次，将使用存储在 Cookie 中的名字来欢迎用户。
+
+#### 访问 Cookie
+
+### 1. 创建登录后页面
+在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `loggedin.php`（**[脚本 12.4](#ch12.html#ch12ex04）**）：
+
+```
+<?php # 脚本 12.4 - loggedin.php
+```
+
+用户登录成功后将被重定向到此页面。该脚本将使用 Cookie 中的名字来欢迎用户。
+
+### 2. 检查 Cookie 是否存在
+检查 Cookie 是否存在。
+
+
+
+### 检查用户登录状态
+
+```php
+if (!isset($_COOKIE['user_id'])) {
+```
+
+由于用户只有在登录后才应访问此页面，因此需检查一个本应在 **`login.php`** 中设置的 Cookie。
+
+### 3. 未登录则重定向用户
+
+```php
+require ('includes/login_functions.inc.php');
+redirect_user();
+}
+```
+
+若用户未登录，将自动重定向至主页。这是限制内容访问的简单方法。
+
+### 4. 引入页面页眉
+
+```php
+$page_title = 'Logged In!';
+include ('includes/header.html');
+```
+
+**脚本 12.4** `loggedin.php` 脚本利用存储的 Cookie 向用户显示问候语。
+
+---
+
+```php
+<?php # Script 12.4 - loggedin.php
+// The user is redirected here from
+    login.php.
+
+// If no cookie is present, redirect the
+    user:
+if (!isset($_COOKIE['user_id'])) {
+
+    // Need the functions:
+    require ('includes/login_functions.
+        inc.php');
+    redirect_user();
+}
+
+// Set the page title and include the
+    HTML header:
+$page_title = 'Logged In!';
+include ('includes/header.html');
+
+// Print a customized message:
+echo "<h1>Logged In!</h1>
+<p>You are now logged in, {$_COOKIE
+    ['first_name']}!</p>
+<p><a href=\"logout.php\">Logout</a></p>";
+
+include ('includes/footer.html');
+?>
+```
+
+---
+
+### 5. 欢迎用户，引用 Cookie 信息
+
+```php
+echo "<h1>Logged In!</h1>
+<p>You are now logged in, {$_COOKIE['first_name']}!</p>
+<p><a href=\"logout.php\">Logout </a></p>";
+```
+
+为按姓名问候用户，请引用 **`$_COOKIE['first_name']`** 变量（用花括号括起以避免解析错误）。同时也会打印一个指向注销页面（本章稍后编写）的链接。
+
+### 6. 完成 HTML 页面
+
+```php
+include ('includes/footer.html');
+?>
+```
+
+### 7. 保存并测试
+
+将文件保存为 **`loggedin.php`**，置于 Web 目录下（与 **`login.php`** 同一文件夹），通过 **`login.php`** 登录，在浏览器中测试。
+
+![Image](img/12_figure_09_d.jpg)
+
+若使用正确的邮箱地址和密码，登录后将看到此页面。
+
+由于这些示例使用与 第 9 章 相同的数据库，你应能使用当时注册的用户名和密码登录。
+
+### 8. 查看 Cookie 设置情况
+
+更改浏览器的 Cookie 设置并再次测试，以查看 Cookie 的设置过程。
+
+![Image](img/12_figure_10_e.jpg)
+
+`user_id` Cookie，值为 1。
+
+![Image](img/12_figure_11_f.jpg)
+
+`first_name` Cookie，值为 *Larry*（你的值可能不同）。
+
+---
+
+> **Tip**
+>
+> 部分浏览器（如 Internet Explorer）不会针对通过 localhost 发送的 Cookie 遵循你的 Cookie 提示偏好设置。
+
+---
+
+> **Tip**
+>
+> Cookie 在设置页面（如 **`login.php`**）重新加载或访问另一页面前不可访问（即无法在同一页面中设置并访问 Cookie）。
+
+---
+
+> **Tip**
+>
+> 若用户拒绝 Cookie 或浏览器设置为不接受 Cookie，本例中即使登录成功也会自动重定向至主页。因此，你可能需要告知用户必须启用 Cookie。
+
+---
+
+### 设置 Cookie 参数
+
+虽仅向 **`setcookie()`** 函数传递名称和值参数即可满足需求，但你应了解其他可用参数。该函数最多可接受五个额外参数，每个参数都会改变 Cookie 的定义。
+
+```php
+setcookie (name, value, expiration, path, host, secure, httponly);
+```
+
+`expiration` 参数用于设置 Cookie 的确切存活时长，单位为自 *纪元*（1970 年 1 月 1 日午夜）以来的秒数。若未设置或设为 0，Cookie 将持续有效直到用户关闭浏览器。这类 Cookie 称为会话 Cookie（如图所示）。
+
+要设定具体过期时间，可将分钟数或小时数加到当前时刻（通过 **`time()`** 函数获取）。以下代码将 Cookie 过期时间设为当前时刻起 30 分钟（60 秒 × 30 分钟）后：
+
+```php
+setcookie (name, value, time()+1800);
+```
+
+`path` 和 `host` 参数用于将 Cookie 限制在网站的特定文件夹（`path`）或特定主机（**www.example.com** 或 *192.168.0.1*）。例如，可将 Cookie 限制仅在域名的 `admin` 文件夹（及其子文件夹）内有效：
+
+```php
+setcookie (name, value, expire, '/admin/');
+```
+
+将路径设为 **`/`** 可使 Cookie 在整个域名（网站）下可见。将域名设为 **`.example.com`** 可使 Cookie 在整个域名及所有子域名（**www.example.com**、**admin.example.com**、**pages.example.com** 等）下可见。
+
+**脚本 12.5** `login.php` 脚本现使用 `setcookie()` 函数的所有参数。
+
+---
+
+```php
+<?php # Script 12.5 - login.php #2
+// This page processes the login form
+    submission.
+// The script now adds extra parameters
+    to the setcookie() lines.
+
+// Check if the form has been submitted:
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // Need two helper files:
+    require ('includes/login_functions.
+        inc.php');
+    require ('../mysqli_connect.php');
+
+    // Check the login:
+    list ($check, $data) = check_login
+        ($dbc, $_POST['email'], $_POST['pass']);
+
+    if ($check) { // OK!
+
+        // Set the cookies:
+        setcookie ('user_id', $data
+            ['user_id'], time()+3600,
+            '/', '', 0, 0);
+        setcookie ('first_name', $data
+            ['first_name'], time()+3600,
+            '/', '', 0, 0);
+
+        // Redirect:
+        redirect_user('loggedin.php');
+
+    } else { // Unsuccessful!
+
+        // Assign $data to $errors for
+            login_page.inc.php:
+        $errors = $data;
+
+    }
+
+    mysqli_close($dbc); // Close the
+        database connection.
+
+} // End of the main submit conditional.
+
+// Create the page:
+include ('includes/login_page.inc.php');
+?>
+```
+
+---
+
+`secure` 值规定 Cookie 仅通过安全的 HTTPS 连接发送。值 1 表示必须使用安全连接，值 0 表示标准连接即可。
+
+```php
+setcookie (name, value, expire, path, host, 1);
+```
+
+若网站使用安全连接，也应将 Cookie 限制为仅通过 HTTPS 传输。
+
+最后，PHP 5.2 新增了 `httponly` 参数。布尔值用于使 Cookie 仅通过 HTTP（和 HTTPS）访问。强制此限制可提高 Cookie 安全性（防止某些攻击），但在撰写本文时并非所有浏览器都支持。
+
+```php
+setcookie (name, value, expire, path, host, secure, TRUE);
+```
+
+与所有接受参数的函数一样，必须按顺序传递 **`setcookie()`** 的值。要跳过某参数，请使用 **`NULL`**、0 或空字符串（勿用 **`FALSE`**）。`expiration` 和 `secure` 均为整数，故不加引号。
+
+
+
+为了演示这些信息，我们给登录 Cookie 添加一个过期设置，使其仅持续一小时。
+
+#### 设置 Cookie 的参数
+
+**1.** 在文本编辑器中打开 `login.php`（参考 脚本 12.3），如果尚未打开的话。
+
+**2.** 修改两行 `setcookie()` 代码，加入一个 60 分钟后过期的过期日期（脚本 12.5）：
+
+```
+setcookie ('user_id', $data['user_id'], time()+3600, '/', '', 0, 0);
+
+setcookie ('first_name', $data['first_name'], time()+3600, '/', '', 0, 0);
+```
+
+将过期日期设为 `time() + 3600`（60 分钟乘以 60 秒）后，Cookie 将在设置后继续存在一小时。在进行此更改时，其他每个参数都被显式指定了。
+
+对于最后一个参数（接受布尔值），你也可以用 0 代表 FALSE（PHP 会为你处理转换）。这样做是个好主意，因为在任何 Cookie 参数中使用 `false` 都可能导致问题。
+
+**3.** 保存脚本，将其放入你的 Web 目录，并在 Web 浏览器中通过登录进行测试 ![Image](img/circle-g.jpg)。
+
+![Image](img/12_figure_12_g.jpg)
+
+![Image](img/circle-g.jpg)对 `setcookie()` 参数的更改（如过期日期和时间）将反映在发送给 Web 浏览器的 Cookie 中（与 ![Image](img/graycircle-f.jpg) 对比）。
+
+***
+
+提示
+
+某些浏览器在处理未列出所有参数的 Cookie 时会有困难。显式声明每个参数——即使是空字符串——将在所有浏览器中获得更可靠的结果。
+
+***
+
+提示
+
+以下是关于 Cookie 过期的一些通用准则：如果 Cookie 应在用户会话期间一直有效，则不要设置过期时间；如果 Cookie 应在用户关闭并重新打开浏览器后继续存在，则将过期时间设为几周或几个月后；如果 Cookie 可能构成安全风险，则将过期时间设为一小时或更短，以便用户离开浏览器后 Cookie 不会存在过长时间。
+
+***
+
+提示
+
+出于安全目的，你可以将 Cookie 的过期时间设为 5 或 10 分钟，并在用户访问的每个新页面上重新发送该 Cookie（假设 Cookie 存在）。这样，只要用户保持活跃，Cookie 就会持续存在，但在用户最后一次操作后 5 或 10 分钟会自动失效。
+
+***
+
+提示
+
+电子商务和其他涉及隐私的 Web 应用程序应对所有事务（包括 Cookie）使用 SSL（安全套接字层）连接。
+
+***
+
+提示
+
+要小心由目录中的脚本创建的 Cookie。如果未指定路径，则该 Cookie 将仅对该同一目录中的其他脚本可用。
+
+***
+
+#### 删除 Cookie
+
+关于使用 Cookie 最后需要了解的是如何删除一个。虽然 Cookie 会在用户关闭浏览器或达到过期日期/时间时自动过期，但通常你会想手动删除 Cookie。例如，在具有登录功能的网站中，你会希望在用户注销时删除所有 Cookie。
+
+虽然 `setcookie()` 函数最多可接受七个参数，但实际只需要一个——Cookie 名称。如果你发送一个仅包含名称而无值的 Cookie，其效果等同于删除同名的现有 Cookie。例如，要创建 `first_name` Cookie，你可以使用这行代码：
+
+```
+setcookie('first_name', 'Tyler');
+```
+
+要删除 `first_name` Cookie，你可以编写：
+
+```
+setcookie('first_name');
+```
+
+作为额外的预防措施，你也可以设置一个过去的过期日期：
+
+```
+setcookie('first_name', '', time()-3600);
+```
+
+为了演示所有这些，我们给网站添加注销功能。注销页面的链接位于 `loggedin.php` 中。
+
+作为一项额外功能，将修改页头文件，以便在用户登录时显示*注销*链接，在用户注销时显示*登录*链接。
+
+#### 删除 Cookie 的步骤
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `logout.php`（脚本 12.6）：
+
+```
+<?php # Script 12.6 - logout.php
+```
+
+**2.** 检查 `user_id` Cookie 是否存在；如果不存在，重定向用户：
+
+```
+if (!isset($_COOKIE['user_id'])) {
+
+  require ('includes/login_functions.inc.php');
+  redirect_user();
+```
+
+**脚本 12.6.** `logout.php` 脚本删除先前建立的 Cookie。
+
+***
+
+```
+1  <?php # Script 12.6 - logout.php
+2  // This page lets the user logout.
+3
+4  // If no cookie is present, redirect the
+    user:
+5  if (!isset($_COOKIE['user_id'])) {
+6
+7      // Need the function:
+8      require ('includes/login_functions.
+        inc.php');
+9      redirect_user();
+10
+11  } else { // Delete the cookies:
+12      setcookie ('user_id', '', time()-3600,
+          '/', '', 0, 0);
+13      setcookie ('first_name', '',
+          time()-3600, '/', '', 0, 0);
+14  }
+15
+16  // Set the page title and include the
+    HTML header:
+17  $page_title = 'Logged Out!';
+18  include ('includes/header.html');
+19
+20  // Print a customized message:
+21  echo "<h1>Logged Out!</h1>
+22  <p>You are now logged out, {$_COOKIE
+      ['first_name']}!</p>";
+23
+
+24  include ('includes/footer.html');
+25  ?>
+```
+
+***
+
+与 `loggedin.php` 一样，如果用户尚未登录，此页面应将用户重定向到主页。尝试注销一个未登录的用户是毫无意义的！
+
+**3.** 如果 Cookie 存在则将其删除：
+
+```
+} else {
+  setcookie ('user_id', '', time()-3600, '/', '', 0, 0);
+  setcookie ('first_name', '', time()-3600, '/', '', 0, 0);
+}
+```
+
+如果用户已登录，这两个 Cookie 将有效地删除现有的 Cookie。除值和过期时间外，其他参数的值应与创建 Cookie 时相同。
+
+**4.** 完成 PHP 页面的其余部分：
+
+```
+$page_title = 'Logged Out!';
+include ('includes/header.html');
+echo "<h1>Logged Out!</h1>
+<p>You are now logged out, {$_COOKIE['first_name']}!</p>";
+include ('includes/footer.html');
+?>
+```
+
+该页面本身也很像 `loggedin.php` 页面。虽然你可能会觉得奇怪，明明刚在脚本中删除了 `first_name` Cookie，却仍能引用它，但考虑到这个过程，这完全讲得通：
+
+**A.** 客户端请求此页面。
+
+**B.** 服务器从客户端浏览器读取可用的 Cookie。
+
+**C.** 页面运行并执行其任务（包括发送用于删除现有 Cookie 的新 Cookie）。
+
+简而言之，当此脚本首次运行时，原始的 `first_name` Cookie 数据可供使用。此页面发送的那组 Cookie（删除用的 Cookie）对此页面不可用，因此原始值仍可使用。
+
+**5.** 将文件保存为 `logout.php` 并放入你的 Web 目录（与 `login.php` 同一文件夹）。
+
+#### 创建注销链接
+
+**1.** 在文本编辑器或 IDE 中打开 `header.html`（参考 脚本 9.1）。
+
+**2.** 将第五个也是最后一个链接修改为（脚本 12.7）：
+
+```
+<li><?php
+if ( (isset($_COOKIE['user_id'])) && (basename($_SERVER['PHP_SELF']) != 'logout.php') ) {
+  echo '<a href="logout.php"> Logout</a>';
+} else {
+  echo '<a href="login.php"> Login</a>';
+}
+?></li>
+```
+
+导航区不应再有永久的登录链接，而应根据 Cookie 的存在与否，在用户未登录时显示*登录*链接 ![Image](img/circle-h.jpg)，在用户已登录时显示*注销*链接 ![Image](img/circle-i.jpg)。前面的条件语句恰好能实现这一点。
+
+![Image](img/12_figure_13_h.jpg)
+
+
+
+![Image](img/circle-h.jpg)带有 `Login` 链接的主页。
+
+![Image](img/12_figure_14_i.jpg)
+
+![Image](img/circle-i.jpg)用户登录后，页面现在有一个 `Logout` 链接。
+
+**脚本 12.7.** `header.html` 文件现在根据用户的当前状态显示 `Login` 或 `Logout` 链接。
+
+***
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+       1.0 Strict//EN" "http://www.w3.org/TR/
+       xhtml1/DTD/xhtml1-strict.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+       xhtml">
+3   <head>
+4       <title><?php echo $page_title; ?>
+       </title>
+5       <link rel="stylesheet" href="includes/
+       style.css" type="text/css"
+       media="screen" />
+6       <meta http-equiv="content-type"
+       content="text/html; charset=utf-8" />
+7   </head>
+8   <body>
+9       <div id="header">
+10          <h1>Your Website</h1>
+11          <h2>catchy slogan...</h2>
+12      </div>
+13      <div id="navigation">
+14          <ul>
+15              <li><a href="index.php">Home
+       Page</a></li>
+16              <li><a href="register.
+       php">Register</a></li>
+17              <li><a href="view_users.
+       php">View Users</a></li>
+18              <li><a href="password.
+       php">Change Password</a></li>
+19              <li><?php // Create a login/
+       logout link:
+20  if ( (isset($_COOKIE['user_id']))
+       && (basename($_SERVER['PHP_SELF'])
+       != 'logout.php') ) {
+21      echo '<a href="logout.php">Logout
+       </a>';
+22  } else {
+23      echo '<a href="login.php">Login</a>';
+24  }
+25  ?></li>
+26          </ul>
+27      </div>
+28      <div id="content"><!-- Start of the
+       page-specific content. -->
+29  <!-- Script 12.7 - header.html -->
+```
+
+***
+
+对于该条件，如果 Cookie 已设置，则用户已登录并可显示注销链接。如果 Cookie 未设置，则应向用户显示登录链接。但有一个问题：因为 `logout.php` 脚本通常会显示注销链接（因为在首次查看页面时 Cookie 存在），所以条件判断还必须检查当前页面不是 `logout.php` 脚本。动态确定当前页面的一个简单方法是将 `basename()` 函数应用于 `$_SERVER['PHP_SELF']`。
+
+**3.** 保存文件，将其放在 Web 目录中（在 `includes` 文件夹内），并在 Web 浏览器中测试登录/注销过程 ![Image](img/circle-j.jpg)。
+
+![Image](img/12_figure_15_j.jpg)
+
+![Image](img/circle-j.jpg)注销后的结果。
+
+***
+
+### 提示
+
+要在浏览器中查看 `logout.php` 脚本中 `setcookie()` 调用的结果，请开启 Cookie 提示功能 ![Image](img/circle-k.jpg)。
+
+![Image](img/12_figure_16_k.jpg)
+
+![Image](img/circle-k.jpg)这是删除 Cookie 在 Firefox 提示框中的显示方式（与 ![Image](img/graycircle-g.jpg) 对比）。
+
+***
+
+### 提示
+
+由于 Windows 版 Internet Explorer 处理 Cookie 的方式存在 Bug，为了让注销过程在您自己的电脑上开发时（即通过 *localhost* 访问）正常工作，您可能需要将 *host* 参数设置为 `false`（不带引号）。
+
+***
+
+### 提示
+
+删除 Cookie 时，您应始终使用设置 Cookie 时的相同参数（自然是除了值和过期时间之外）。如果您在创建 Cookie 时设置了主机和路径，请在删除 Cookie 时再次使用它们。
+
+***
+
+### 提示
+
+为了加深印象，请记住 Cookie 的删除直到页面重新加载或访问另一个页面才会生效。换句话说，在页面删除 Cookie 之后，该 Cookie 仍将可供该页面使用。
+
+***
+
+### 使用会话
+
+使数据可供网站多个页面使用的另一种方法是使用*会话*。会话的原理是数据存储在服务器上，而不是 Web 浏览器中，并使用会话标识符来定位特定用户的记录（会话数据）。此会话标识符通常通过 Cookie 存储在用户的 Web 浏览器中，但敏感数据本身——如用户 ID、姓名等——始终保留在服务器上。
+
+可能会出现这样的问题：既然 Cookie 工作得很好，为什么还要使用会话？首先，会话可能更安全，因为所有记录的信息都存储在服务器上，而不是在服务器和客户端之间不断来回发送。其次，您可以在会话中存储更多数据。第三，一些用户会拒绝 Cookie 或完全将其关闭。会话虽然设计为配合 Cookie 工作，但也可以在没有 Cookie 的情况下运行。
+
+为了演示会话——并将其与 Cookie 进行比较——让我们重写之前的那组脚本。
+
+#### 设置会话变量
+
+关于会话最重要的规则是，每个将要使用会话的页面都必须以调用 `session_start()` 函数开始。此函数告诉 PHP 开始一个新会话或访问一个现有会话。必须在向 Web 浏览器发送任何内容之前调用此函数！
+
+首次使用此函数时，`session_start()` 将尝试发送一个名为 `PHPSESSID`（默认会话名称）且值类似于 `a61f8670baa8e90a30c878df89a2074b`（32 位十六进制字母，即会话 ID）的 Cookie。由于尝试发送 Cookie，`session_start()` 必须在向 Web 浏览器发送任何数据之前调用，就像使用 `setcookie()` 和 `header()` 函数时一样。
+
+***
+
+### 会话 vs. Cookie
+
+本章通过示例展示了如何使用 Cookie 和会话分别完成相同的任务——登录和注销。显然，两者在 PHP 中都很容易使用，但真正的问题是何时使用其中一种。
+
+与 Cookie 相比，会话具有以下优势：
+
+*   它们通常更安全（因为数据保留在服务器上）。
+*   它们允许存储更多数据。
+*   它们可以在没有 Cookie 的情况下使用。
+
+而 Cookie 相对于会话具有以下优势：
+
+*   它们更易于编程。
+*   它们占用较少的服务器资源。
+*   它们可以持续更长的时间。
+
+一般来说，要存储和检索仅几条小信息，或存储较长时间的信息，请使用 Cookie。但对于您的大多数 Web 应用程序，您将使用会话。
+
+***
+
+**脚本 12.8.** 此版本的 `login.php` 脚本使用会话代替 Cookie。
+
+***
+
+```php
+1   <?php # Script 12.8 - login.php #3
+2   // This page processes the login form
+       submission.
+3   // The script now uses sessions.
+4
+5   // Check if the form has been submitted:
+6   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+7
+8       // Need two helper files:
+9       require ('includes/login_functions.
+       inc.php');
+10      require ('../mysqli_connect.php');
+11
+12      // Check the login:
+13      list ($check, $data) = check_login($dbc,
+       $_POST['email'], $_POST['pass']);
+14
+15      if ($check) { // OK!
+16
+17          // Set the session data:
+18          session_start();
+19          $_SESSION['user_id'] =
+               $data['user_id'];
+20          $_SESSION['first_name'] =
+               $data['first_name'];
+21
+22          // Redirect:
+23          redirect_user('loggedin.php');
+24
+25      } else { // Unsuccessful!
+26
+27          // Assign $data to $errors for
+               login_page.inc.php:
+28          $errors = $data;
+29
+30      }
+31
+32      mysqli_close($dbc); // Close the
+       database connection.
+33
+34  } // End of the main submit conditional.
+35
+36  // Create the page:
+37  include ('includes/login_page.inc.php');
+38  ?>
+```
+
+
+
+会话启动后，可以使用正常的数组语法，通过 `$_SESSION` 超全局变量向会话注册值：
+
+```php
+$_SESSION['key'] = value;
+$_SESSION['name'] = 'Roxanne';
+$_SESSION['id'] = 48;
+```
+
+让我们根据这一点更新 `login.php` 脚本。
+
+### 开启会话
+
+**1.** 在文本编辑器或 IDE 中打开 `login.php`（参考 脚本 12.5）。
+
+**2.** 将 `setcookie()` 代码行（第 18-19 行）替换为以下代码行（**脚本 12.8**）：
+
+```php
+session_start();
+$_SESSION['user_id'] = $data['user_id'];
+$_SESSION['first_name'] = $data['first_name'];
+```
+
+第一步是开启会话。由于在此之前脚本中没有 `echo` 语句、HTML 文件包含，甚至没有空白字符，因此此时在脚本中使用 `session_start()` 是安全的（尽管函数调用也可以放在脚本顶部）。然后，向 `$_SESSION` 超全局数组添加两个*键值对*，以将用户的名字和用户 ID 注册到会话中。
+
+**3.** 将页面另存为 `login.php`，放入您的 Web 目录，并在 Web 浏览器中测试 ![Image](img/circle-a.jpg)。
+
+![Image](img/12_figure_17_a.jpg)
+
+![Image](img/circle-a.jpg) 登录表单对最终用户而言保持不变，但底层功能现在使用会话。
+
+虽然 `loggedin.php`、页眉和脚本需要重写，但您仍然可以测试登录脚本并查看生成的 Cookie ![Image](img/circle-b.jpg)。`loggedin.php` 页面应该会将您重定向回主页，因为它仍在检查 `$_COOKIE` 变量是否存在。
+
+![Image](img/12_figure_18_b.jpg)
+
+![Image](img/circle-b.jpg) 这个 Cookie 由 PHP 的 `session_start()` 函数创建，在用户浏览器中存储会话 ID。
+
+***
+
+**提示**
+
+由于会话通常会发送和读取 Cookie，您应始终尝试尽早在脚本中开启它们。这样做有助于避免在头部信息（HTML 或空白字符）已发送后尝试发送 Cookie 的问题。
+
+***
+
+***
+
+**提示**
+
+如果您愿意，可以在 `php.ini` 文件中将 `session.auto_start` 设置为 1，这样就无需在每个页面上使用 `session_start()`。这会给服务器带来更大的负担，因此，如果不考虑具体情况，不应使用此设置。
+
+***
+
+***
+
+**提示**
+
+您可以在会话中存储数组（使 `$_SESSION` 成为多维数组），就像存储字符串或数字一样。
+
+***
+
+#### 访问会话变量
+
+一旦会话启动并向其注册了变量，您就可以创建其他脚本来访问这些变量。为此，每个脚本必须首先使用 `session_start()` 启用会话。
+
+如果该函数能读取存储在 Cookie 中的 `PHPSESSID` 值，它将使当前脚本能够访问先前启动的会话；如果不能，则会创建一个新会话。请理解，如果找不到当前会话 ID 并生成了新的会话 ID，则存储在旧会话 ID 下的所有数据将不可用。我在此提及这一点是因为如果您在会话方面遇到问题，检查会话 ID 值以查看其是否从一页到下一页发生变化，是第一步调试措施。
+
+假设访问当前会话没有问题，要引用会话变量，请使用 `$_SESSION['var']`，就像引用任何其他数组一样。
+
+**脚本 12.9.** `loggedin.php` 脚本已更新，使其引用 `$_SESSION` 而非 `$_COOKIE`（需在两行进行更改）。
+
+***
+
+```php
+<?php # 脚本 12.9 - loggedin.php #2
+// 用户从 login.php 重定向至此。
+
+session_start(); // 开启会话。
+
+// 如果不存在会话值，
+// 重定向用户：
+if (!isset($_SESSION['user_id'])) {
+
+    // 需要函数文件：
+    require ('includes/login_functions.inc.php');
+    redirect_user();
+}
+
+// 设置页面标题并包含
+// HTML 页眉：
+$page_title = 'Logged In!';
+include ('includes/header.html');
+
+// 打印自定义消息：
+echo "<h1>Logged In!</h1>
+<p>You are now logged in, {$_SESSION['first_name']}!</p>
+<p><a href=\"logout.php\">Logout</a></p>";
+
+include ('includes/footer.html');
+?>
+```
+
+***
+
+#### 访问会话变量
+
+**1.** 在文本编辑器或 IDE 中打开 `loggedin.php`（参考 脚本 12.4）。
+
+**2.** 添加对 `session_start()` 函数的调用（**脚本 12.9**）：
+
+```php
+session_start();
+```
+
+每个设置或访问会话变量的 PHP 脚本都必须使用 `session_start()` 函数。此行必须在包含 `header.html` 文件之前以及向 Web 浏览器发送任何内容之前调用。
+
+**3.** 将对 `$_COOKIE` 的引用替换为 `$_SESSION`（原文件第 5 行和第 19 行）：
+
+```php
+if (!isset($_SESSION['user_id'])) {
+```
+
+和
+
+```php
+echo "<h1>Logged In!</h1>
+<p>You are now logged in, {$_SESSION['first_name']}!</p>
+<p><a href=\"logout.php\">Logout </a></p>";
+```
+
+将脚本从 Cookie 切换为会话，只需将 `$_COOKIE` 的用法更改为 `$_SESSION`（假设使用了相同的名称）。
+
+**4.** 将文件另存为 `loggedin.php`，放入您的 Web 目录，并在浏览器中测试 ![Image](img/circle-c.jpg)。
+
+![Image](img/12_figure_19_c.jpg)
+
+![Image](img/circle-c.jpg) 登录后，用户将被重定向到 `loggedin.php`，该页面将使用存储的会话值以名字欢迎用户。
+
+**5.** 在 `header.html` 中将对 `$_COOKIE` 的引用替换为 `$_SESSION`（从 脚本 12.7 到 **脚本 12.10**）：
+
+```php
+if (isset($_SESSION['user_id'])) {
+```
+
+为了使*登录/注销*链接正常工作（请注意 ![Image](img/graycircle-c.jpg) 中的错误链接），必须将页眉文件中的 Cookie 变量引用切换为会话。页眉文件无需调用 `session_start()` 函数，因为它将被已调用该函数的页面包含。
+
+请注意，此条件判断无需检查当前页面是否为注销页面，因为会话数据的行为与 Cookie 数据不同（我将在本章下一节进一步解释这一点）。
+
+**6.** 保存页眉文件，将其放入您的 Web 目录（在 `includes` 文件夹中），并在浏览器中测试 ![Image](img/circle-d.jpg)。
+
+![Image](img/12_figure_20_d.jpg)
+
+![Image](img/circle-d.jpg) 修改页眉文件以适配会话后，将显示正确的*登录/注销*链接（与 ![Image](img/graycircle-c.jpg) 对比）。
+
+***
+
+**提示**
+
+为了使其他页面（`register.php`、`index.php` 等）上的*登录/注销*链接生效，您需要向这些页面中的每一个添加 `session_start()` 命令。
+
+***
+
+***
+
+**提示**
+
+再次提醒，如果您的应用程序中会话数据似乎无法从一页访问到下一页，可能是因为每个页面都在创建一个新会话。要检查这一点，请比较会话 ID（比较值的最后几个字符即可），看它们是否相同。您可以通过查看发送的会话 Cookie 或调用 `session_id()` 函数来查看会话的 ID：
+
+```php
+echo session_id();
+```
+
+***
+
+***
+
+**提示**
+
+会话变量在建立后立即可用。因此，与使用 Cookie 不同，您可以在同一脚本中为 `$_SESSION['var']` 赋值，然后稍后引用 `$_SESSION['var']`。
+
+
+
+
+**脚本 12.10。** `header.html` 文件现在也引用 `$_SESSION` 而不是 `$_COOKIE`。
+
+---
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+       1.0 Strict//EN" "http://www.w3.org/TR/
+       xhtml1/DTD/xhtml1-strict.dtd">
+2   <html xmlns="http://www.w3.org/1999/xhtml">
+3   <head">
+4       <title><?php echo $page_title; ?>
+           </title>
+5       <link rel="stylesheet" href="includes/
+           style.css" type="text/css"
+           media="screen" />
+6       <meta http-equiv="content-type"
+           content="text/html; charset=utf-8" />
+7   </head>
+8   <body>
+9       <div id="header">
+10          <h1>Your Website</h1>
+11          <h2>catchy slogan...</h2>
+12      </div>
+13      <div id="navigation">
+14          <ul>
+15              <li><a href="index.php">Home
+                   Page</a></li>
+16              <li><a href="register.php">
+                   Register</a></li>
+17              <li><a href="view_users.php">
+                   View Users</a></li>
+18              <li><a href="password.php">
+                   Change Password</a></li>
+19              <li><?php // Create a login/
+                   logout link:
+20      if (isset($_SESSION['user_id'])) {
+21          echo '<a href="logout.php">Logout</a>';
+22      } else {
+23          echo '<a href="login.php">Login</a>';
+24      }
+25      ?></li>
+26          </ul>
+27      </div>
+28      <div id="content"><!-- Start of the
+           page-specific content. -->
+29  <!-- Script 12.10 - header.html -->
+```
+
+---
+
+**脚本 12.11。** 销毁会话（如在注销页面中所做）需要特殊的语法来删除会话 Cookie 和服务器上的会话数据，以及清空 `$_SESSION` 数组。
+
+---
+
+```php
+1   <?php # Script 12.11 - logout.php #2
+2   // This page lets the user logout.
+3   // This version uses sessions.
+4
+5   session_start( ); // Access the
+       existing session.
+6
+7   // If no session variable exists,
+       redirect the user:
+8   if (!isset($_SESSION['user_id'])) {
+9
+10      // Need the functions:
+11      require ('includes/login_functions.
+           inc.php');
+12      redirect_user( );
+13
+14  } else { // Cancel the session:
+15
+16      $_SESSION = array( ); // Clear the
+           variables.
+17      session_destroy( ); // Destroy the
+           session itself.
+18      setcookie ('PHPSESSID', '', time( )-3600,
+           '/', '', 0, 0); // Destroy the cookie.
+19
+20  }
+21
+22  // Set the page title and include the
+       HTML header:
+23  $page_title = 'Logged Out!';
+24  include ('includes/header.html');
+25
+26  // Print a customized message:
+27  echo "<h1>Logged Out!</h1>
+28  <p>You are now logged out!</p>";
+29
+30  include ('includes/footer.html');
+31  ?>
+```
+
+---
+
+### 删除会话变量
+
+使用会话时，你应该创建一种删除会话数据的方法。在当前示例中，当用户注销时就需要这样做。
+
+Cookie 系统只需发送另一个 Cookie 来销毁现有 Cookie，而会话稍微要求更高，因为必须同时考虑客户端的 Cookie 和服务器上的数据。
+
+要删除单个会话变量，可以使用 `unset()` 函数（它适用于 PHP 中的任何变量）：
+
+```php
+unset($_SESSION['var']);
+```
+
+但要删除所有会话变量，不应使用 `unset()`，而应重置 `$_SESSION` 数组：
+
+```php
+$_SESSION = array();
+```
+
+最后，要从服务器移除所有会话数据，请调用 `session_destroy()`：
+
+```php
+session_destroy();
+```
+
+请注意，在使用上述任何方法之前，页面必须以 `session_start()` 开头，以便访问现有会话。让我们更新 `logout.php` 脚本以清除会话数据。
+
+### 删除会话
+
+**1.** 在文本编辑器或 IDE 中打开 `logout.php`（脚本 12.6）。
+
+**2.** 在开头的 PHP 标记之后立即启动会话（**脚本 12.11;
+```
+
+任何时候使用会话，都必须调用 `session_start()` 函数，最好在页面的最开始处调用。即使你要删除会话，这也是必须的。
+
+**3.** 更改条件语句，使其检查会话变量是否存在：
+
+```php
+if (!isset($_SESSION['user_id'])) {
+```
+
+与 Cookie 示例中的 `logout.php` 脚本一样，如果用户当前未登录，他们将被重定向。
+
+**4.** 用以下代码替换 `setcookie()` 行（删除 Cookie 的那些）：
+
+```php
+$_SESSION = array();
+session_destroy();
+setcookie ('PHPSESSID', '', time() - 3600, '/', '', 0, 0);
+```
+
+此处第一行将整个 `$_SESSION` 变量重置为一个新数组，擦除其现有值。第二行从服务器移除数据，第三行发送一个 Cookie 以删除浏览器中现有的会话 Cookie。
+
+---
+
+### 垃圾回收
+
+关于会话的垃圾回收，是指服务器自动删除会话文件（实际数据存储的地方）的过程。创建一个销毁会话的注销系统是理想的，但无法保证所有用户都会像应该的那样正式注销。因此，PHP 包含了一个清理进程。
+
+每当调用 `session_start()` 函数时，PHP 的垃圾回收就会启动，检查每个会话的最后修改日期（每当设置或检索变量时，会话就会被修改）。两个设置决定了垃圾回收：`session.gc_maxlifetime` 和 `session.gc_probability`。第一个设定在多少秒不活动后会话被视为空闲并因此被删除。第二个设定在 1 到 100 的范围内决定执行垃圾回收的概率。使用默认设置时，每次调用 `session_start()` 都有 1% 的几率触发垃圾回收。如果 PHP 启动清理，超过 1,440 秒未被使用的会话将被删除。
+
+你可以使用 `ini_set()` 函数更改这些设置，尽管这样做要小心。过于频繁或概率过高的垃圾回收会拖慢服务器，并无意中结束较慢用户的会话。
+
+---
+
+**5.** 移除消息中对 `$_COOKIE` 的引用：
+
+```php
+echo "<h1>Logged Out!</h1>
+<p>You are now logged out!</p>";
+```
+
+与使用 Cookie 版本的 `logout.php` 脚本不同，你不能再通过名字来称呼用户，因为所有那些数据已被删除。
+
+**6.** 将文件保存为 `logout.php`，放入你的 Web 目录，并在浏览器中测试 ![Image](img/circle-e.jpg)。
+
+![Image](img/12_figure_21_e.jpg)
+
+![Image](img/circle-e.jpg) 注销页面（现在采用会话）。
+
+---
+
+> **提示**
+>
+> `header.html` 文件只需检查 `$_SESSION['user_id']` 是否已设置，而无需检查页面是否为注销页面，因为当 `logout.php` 包含 header 文件时，所有会话数据已被销毁。会话数据的销毁会立即生效，这与 Cookie 不同。
+
+---
+
+> **提示**
+>
+> 切勿将 `$_SESSION` 设置为 `NULL`，也切勿使用 `unset($_SESSION)`。在某些服务器上，这两种做法都可能导致问题。
+
+---
+
+> **提示**
+>
+> 如果还不完全清楚发生了什么，会话涉及三种信息：会话标识符（默认存储在 Cookie 中）、会话数据（存储在服务器上的文本文件中）以及 `$_SESSION` 数组（脚本通过它访问文本文件中的会话数据）。仅删除 Cookie 不会移除数据文件，反之亦然。清空 `$_SESSION` 数组会擦除文本文件中的数据，但文件本身仍会存在，Cookie 也是如此。本注销脚本中概述的三个步骤能有效移除会话的所有痕迹。
+
+
+
+
+
+### 提升会话安全性
+
+由于重要信息通常存储在会话中（切勿在 Cookie 中存储敏感数据），安全性变得更加关键。对于会话，有两个方面需要注意：会话 ID（它是会话数据的引用点）以及存储在服务器上的会话数据本身。恶意人员更有可能通过会话 ID 入侵会话，而不是直接攻击服务器上的数据，因此我将在此重点关注这一侧面（在本节末尾的提示中，我提到了两种保护会话数据本身的方法）。
+
+---
+
+#### 更改会话行为
+
+作为 PHP 对会话支持的一部分，有 20 多个不同的配置选项可供设置 PHP 处理会话的方式。有关完整列表，请参阅 PHP 手册，但我将在此重点介绍其中几个最重要的选项。请注意更改会话设置的两条规则：
+
+1.  所有更改必须在调用 `session_start()` 之前进行。
+2.  必须在每个使用会话的页面上进行相同的更改。
+
+大多数设置可以在 PHP 脚本中使用 `ini_set()` 函数进行设置（详见 第 8 章）：
+
+```php
+ini_set(parameter, new_setting);
+```
+
+例如，要强制使用会话 Cookie（如前所述，会话虽可在无 Cookie 情况下工作，但安全性较低），请使用：
+
+```php
+ini_set('session.use_only_cookies', 1);
+```
+
+另一个可做的更改是会话的名称（或许是为了使用一个更友好的名称）。为此，请调用 `session_name()` 函数：
+
+```php
+session_name('YourSession');
+```
+
+创建自定义会话名称有双重好处：它在一定程度上更安全，且最终用户可能更容易接受（因为会话名称就是最终用户将看到的 Cookie 名称）。`session_name()` 函数在删除会话 Cookie 时也可使用：
+
+```php
+setcookie(session_name(), '', time() - 3600);
+```
+
+如果不提供参数，该函数将返回当前的会话名称。
+
+最后，还有 `session_set_cookie_params()` 函数。它用于调整会话 Cookie 的设置：
+
+```php
+session_set_cookie_params(expire, path, host, secure, httponly);
+```
+
+请注意，Cookie 的过期时间仅指 Cookie 在 Web 浏览器中的存活期，而非会话数据在服务器上存储的时长。
+
+---
+
+会话 ID 是访问会话数据的关键。默认情况下，PHP 会将其存储在 Cookie 中，这从安全角度来看是首选。在 PHP 中也可以不使用 Cookie 来启用会话，但这会使应用程序容易受到*会话劫持*攻击：如果恶意用户 Alice 能获取用户 Bob 的会话 ID，Alice 就可以轻松欺骗服务器，使其认为 Bob 的会话 ID 也是 *Alice* 的会话 ID。此时，Alice 将“搭便车”使用 Bob 的会话，并能访问 Bob 的数据。将会话 ID 存储在 Cookie 中会使其更难被窃取。
+
+**脚本 12.12。** `login.php` 脚本的最终版本还会在会话中存储用户 `HTTP_USER_AGENT`（客户端的浏览器和操作系统）的加密形式。
+
+---
+
+```php
+<?php # Script 12.12 - login.php #4
+
+// This page processes the login form
+// submission.
+// The script now stores the HTTP_USER_
+// AGENT value for added security.
+
+// Check if the form has been submitted:
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // Need two helper files:
+    require('includes/login_functions.inc.php');
+    require('../mysqli_connect.php');
+
+    // Check the login:
+    list($check, $data) = check_login($dbc,
+        $_POST['email'], $_POST['pass']);
+
+    if ($check) { // OK!
+
+        // Set the session data:
+        session_start();
+        $_SESSION['user_id'] = $data['user_id'];
+        $_SESSION['first_name'] = $data['first_name'];
+
+        // Store the HTTP_USER_AGENT:
+        $_SESSION['agent'] = md5($_SERVER['HTTP_USER_AGENT']);
+
+        // Redirect:
+        redirect_user('loggedin.php');
+
+    } else { // Unsuccessful!
+
+        // Assign $data to $errors for
+        // login_page.inc.php:
+        $errors = $data;
+
+    }
+
+    mysqli_close($dbc); // Close the
+    // database connection.
+
+} // End of the main submit conditional.
+
+// Create the page:
+include('includes/login_page.inc.php');
+?>
+```
+
+---
+
+防止劫持的一种方法是在会话中存储某种用户标识符，然后反复验证该值。`HTTP_USER_AGENT`（所用浏览器和操作系统的组合）是实现此目的的理想候选者。这增加了一层安全性：只有当两人运行完全相同的浏览器和操作系统时，一人才能劫持另一用户的会话。作为演示，让我们最后一次修改这些示例。
+
+#### 更安全地使用会话
+
+1.  在文本编辑器或 IDE 中打开 `login.php`（参考 脚本 12.8）。
+2.  在分配其他会话变量后，同时存储 `HTTP_USER_AGENT` 值（**脚本 12.12**）：
+
+    ```php
+    $_SESSION['agent'] = md5($_SERVER['HTTP_USER_AGENT']);
+    ```
+
+    `HTTP_USER_AGENT` 是 `$_SERVER` 数组的一部分（您可能回想起早在 第 1 章 “PHP 简介”中就用过它）。其值类似于 `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1...`。
+
+    该值不会原样存储在会话中，而是会通过 `md5()` 函数处理以增加安全性。该函数根据输入值返回一个 32 字符的十六进制字符串（称为*哈希值*）。理论上，没有两个字符串会产生相同的 `md5()` 结果。
+
+3.  保存文件并将其放入 Web 目录。
+4.  在文本编辑器或 IDE 中打开 `loggedin.php`（脚本 12.9）。
+5.  将 `!isset($_SESSION['user_id'])` 条件更改为（**脚本 12.13**）：
+
+    ```php
+    if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']))) {
+    ```
+
+    此条件检查两件事。首先，它检查 `$_SESSION['agent']` 变量是否未设置（这部分与之前一样，只是使用 *agent* 代替了 *user_id*）。条件的第二部分检查 `$_SERVER['HTTP_USER_AGENT']` 的 `md5()` 值是否不等于存储在 `$_SESSION['agent']` 中的值。如果任一条件为真，用户将被重定向。
+
+6.  保存此文件，放入 Web 目录，并在 Web 浏览器中通过登录进行测试。
+
+**脚本 12.13.** 此 `loggedin.php` 脚本现在会确认访问此页面的用户拥有与登录时相同的 `HTTP_USER_AGENT`。
+
+---
+
+```php
+<?php # Script 12.13 - loggedin.php #3
+
+// The user is redirected here from
+// login.php.
+
+session_start(); // Start the session.
+
+// If no session value is present,
+// redirect the user:
+// Also validate the HTTP_USER_AGENT!
+if (!isset($_SESSION['agent']) OR
+    ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']))) {
+
+    // Need the functions:
+    require('includes/login_functions.inc.php');
+    redirect_user();
+
+}
+
+// Set the page title and include the
+// HTML header:
+$page_title = 'Logged In!';
+include('includes/header.html');
+
+// Print a customized message:
+echo "<h1>Logged In!</h1>
+<p>You are now logged in, {$_SESSION['first_name']}!</p>
+```
+
+
+
+
+
+```php
+23  <p><a href="logout.php">Logout</a></p>";
+24
+25  include ('includes/footer.html');
+26  ?>
+```
+
+***
+
+### 防止会话固定
+
+另一种特定类型的会话攻击称为*会话固定*。这种方法与*会话劫持*截然相反。恶意用户 Alice 不是寻找并使用 Bob 的会话 ID，而是创建她自己的会话 ID（也许是通过合法登录），然后让 Bob 使用该会话访问网站。其企图是 Bob 随后会做一些无意中对 Alice 有利的事情。
+
+你可以通过在用户登录后更改会话 ID 来帮助防范此类攻击。`session_regenerate_id()` 函数正是执行此操作，它提供一个新的会话 ID 来引用当前的会话数据。你可以在安全至关重要的网站（如电子商务或网上银行）上使用此函数，或者在某些用户（即管理员）的会话被操纵将特别糟糕的情况下使用。
+
+***
+
+### 提示
+
+对于会话的关键用途，如果可能，请要求使用 Cookie 并通过安全连接传输它们。你甚至可以通过将 `session.use_only_cookies` 设置为 1 来设置 PHP 仅使用 Cookie。
+
+***
+
+### 提示
+
+默认情况下，服务器将每个站点的每个会话文件都存储在同一个临时目录中，这意味着理论上任何站点都可以读取任何其他站点的会话数据。如果你使用的是与其他域共享的服务器，将 `session.save_path` 从其默认设置更改为其他值会更安全。例如，最好将你站点的会话数据存储在专门用于你站点的专用目录中。
+
+***
+
+### 提示
+
+会话数据本身也可以存储在数据库中，而不是文本文件中。这是一种更安全但编程工作量更大的选择。我在我的著作 *PHP 5 Advanced: Visual QuickPro Guide* 中教授如何实现这一点。
+
+***
+
+### 提示
+
+用户的 IP 地址（用户连接所用的网络地址）并*不是*一个好的唯一标识符，原因有二。首先，用户的 IP 地址可以而且通常确实会频繁变更（ISP 会在短时间内动态分配它们）。其次，从同一网络（如家庭网络或办公室）访问站点的许多用户可能都拥有相同的 IP 地址。
+
+***
+
+### 复习与练习
+
+如果你对复习问题或练习提示有任何疑问，请访问本书的支持论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+#### 复习
+
+- 用什么代码将用户的浏览器从一个页面重定向到下一个页面？
+- *headers already sent*（标头已发送）错误消息是什么意思？
+- `$_SERVER['HTTP_HOST']` 存储什么值？`$_SERVER['PHP_SELF']` 存储什么值？
+- `dirname()` 函数有什么作用？
+- `rtrim()` 函数有什么作用？它可以接受什么参数？
+- 如何编写一个返回多个值的函数？如何调用这样的函数？
+- `setcookie()` 函数可以接受什么参数？
+- 如何引用之前存储在 Cookie 中的值？
+- 如何删除现有的 Cookie？
+- Cookie 发送后（在同一页面上）是否立即可用？为什么删除 Cookie 后（在同一页面上）仍然可以引用它？
+- 当你在 Cookie 方面遇到问题时，可以采取哪些调试步骤？
+- `basename()` 函数有什么作用？
+- 如何开始一个会话？
+- 如何引用之前存储在会话中的值？
+- 会话数据赋值后（在同一页面上）是否立即可用？
+- 如何终止一个会话？
+- 当你在会话方面遇到问题时，可以采取哪些调试步骤？
+
+#### 练习
+
+- 如果你还没有这样做，请学习如何在 Web 浏览器中查看 Cookie 数据。在开发使用 Cookie 的站点时，启用浏览器在接收 Cookie 时提示你的选项。
+- 使登录表单具有粘性（即保留用户输入）。
+- 在登录页面处理 `$errors` 变量的代码中添加逻辑：如果 `$errors` 是数组，则使用 `foreach` 循环；否则直接打印 `$errors` 的值。
+- 修改 `redirect_user()` 函数，使其可用于将用户重定向到另一个目录中的页面。
+- 实现另一个 Cookie 示例，例如将用户偏好存储在 Cookie 中，然后根据存储的值（如果存在）决定页面的外观或功能。
+- 更改 `logout.php`（脚本 12.11）中的代码，使其使用 `session_name()` 函数动态设置要删除的会话 Cookie 的名称值。
+- 如果你想获得更多会话练习，请实现另一个会话示例（本书后面也会有更多练习）。
+- 查阅本章介绍的你不熟悉的任何新函数的 PHP 手册页面。
+- 查阅 PHP 手册中关于 Cookie 和会话的页面（两个独立的部分）以了解更多信息。同时阅读一些用户提交的评论以获取额外提示。
+
+## 13. 安全方法
+
+### 本章内容
+
+- 防止垃圾邮件 402
+- 按类型验证数据 409
+- 按类型验证文件 414
+- 防止 XSS 攻击 418
+- 使用 Filter 扩展 421
+- 防止 SQL 注入攻击 425
+- 复习与练习 432
+
+Web 应用程序的安全性是一个极其重要的主题，怎么强调都不为过。虽然全书都提到了与安全相关的问题，但本章将帮助填补特定空白、完善其他要点，并教授几个新知识。
+
+本章讨论的主题包括：防止垃圾邮件；变量类型转换；防止跨站脚本（XSS）和 SQL 注入攻击；新的 Filter 扩展；以及按类型验证上传文件。本章将使用五个独立的示例来最好地演示这些概念。其他一些常见的安全问题和最佳实践将在侧边栏中提及。
+
+### 防止垃圾邮件
+
+垃圾邮件简直是一种瘟疫，堵塞了互联网和电子邮件收件箱。你可以采取一些措施来避免在你的电子邮件账户中接收垃圾邮件，但本书的重点是防止垃圾邮件通过你的 PHP 脚本发送。
+
+第 11 章“Web 应用程序开发”展示了使用 PHP 的 `mail()` 函数发送电子邮件是多么容易。那里的示例是一个联系表单，它从用户 ![Image](img/circle-a.jpg) 获取一些信息并将其发送到一个电子邮件地址。尽管这套系统看起来似乎无害，但实际上存在一个巨大的安全漏洞。但首先，先了解一下电子邮件实际上是什么。
+
+![Image](img/13_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) 一个简单的标准 HTML 联系表单。
+
+无论电子邮件如何发送、如何格式化、以及接收时是什么样子，电子邮件都包含两部分：标头和正文。标头包括*收件人*和*发件人*地址、主题、日期等信息 ![Image](img/circle-b.jpg)。标头中的每一项都独占一行，格式为 *名称*：*值*。电子邮件的正文正是你所想的那样：电子邮件的正文。
+
+![Image](img/13_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg) 联系表单发送的电子邮件的原始源代码版本 ![Image](img/graycircle-a.jpg)。
+
+
+
+
+
+#### PHP `mail()` 函数与垃圾邮件防范
+
+在查看 PHP 的 `mail()` 函数——`mail(to, subject, body[, headers])`——时，你可以看到其中一个参数直接进入邮件正文，其余参数则出现在邮件头中。要向*你的地址*发送垃圾邮件（如第 11 章示例所示），用户只需在表单的评论部分输入垃圾邮件内容 ![Image](img/graycircle-a.jpg)。这已经够糟糕了，但要同时向*其他人*发送垃圾邮件，用户只需在邮件头中添加 `Bcc: poorsap@example.org`，并跟上某种行终止符（如换行符或回车符）。按示例原样操作，这仅意味着在联系表单的 *from* 值中输入：`me@example.com\nBcc:poorsap@example.org`。
+
+你可能认为保护所有进入邮件头的内容就足够安全了，但由于邮件只是一个文档，正文中的恶意输入也会影响邮件头。
+
+可以针对该联系表单采取几种预防技术。首先，使用正则表达式验证邮箱地址，相关内容见第 13 章“Perl 兼容正则表达式”，或稍后讨论的 Filter 扩展。其次，既然你知道作恶者必须输入什么才能发送垃圾邮件（**表 13.1**），就在表单值中监视那些字符和字符串。如果某值包含列表中的任何内容，请勿在发送的邮件中使用该值（**表 13.1** 中最后四个值都是创建换行的不同方式）。
+
+**表 13.1. 垃圾邮件线索**
+
+![Image](img/13tab01.jpg)
+
+在下一个示例中（基于第 11 章的邮件脚本修改），我将定义一个函数，清除所提供数据中所有潜在危险字符。同时将用到两个新的 PHP 函数：`str_replace()` 和 `array_map()`。两者将在后续步骤中详细解释。
+
+---
+
+### 安全方法
+
+理解安全最重要的概念是：它不是二元状态。不要认为网站或脚本要么*安全*要么*不安全*。安全不是你开关的开关；它是一个你可以上下移动的刻度。编程时，要思考如何让网站*更安全*，以及你做了什么让它*降低安全性*。同时请记住，提高安全性通常以便利性（对你这位程序员和最终用户皆是如此）和性能为代价。增强安全性通常意味着更多代码、更多检查和更多服务器资源。开发 Web 应用时，目标是达到针对特定情况适当的安全级别。然后，为了谨慎起见，最好在安全方面稍微“过度”一点。
+
+---
+
+### 防止垃圾邮件
+
+**1.** 在文本编辑器或 IDE 中打开 `email.php`（**脚本 11.1**）。
+
+为完成垃圾邮件净化，需修改邮件脚本。
+
+**2.** 检查表单提交后，开始定义函数（**脚本 13.1**）：
+
+```php
+function spam_scrubber($value) {
+```
+
+该函数接受一个参数：字符串。通常我会在脚本顶部或单独文件中定义函数，但为简化操作，将在提交处理代码块内定义。
+
+**3.** 创建一个列表，包含合法联系表单提交中不应出现的极其恶劣内容：
+
+```php
+$very_bad = array('to:', 'cc:', 'bcc:', 'content-type:', 'mime-version:', 'multipart-mixed:', 'content-transfer-encoding:');
+```
+
+诚实的联系表单提交中不应出现这些字符串（用户在评论中合法使用 `to:` 的可能性虽存但极低）。若存在此类字符串，即为垃圾邮件尝试。为便于检测，将它们放入数组以便循环遍历（步骤 4）。步骤 4 中的比较不区分大小写，因此所有危险字符串均以小写形式编写。
+
+**4.** 循环遍历数组。若发现极其恶劣内容，返回空字符串：
+
+```php
+foreach ($very_bad as $v) {
+    if (stripos($value, $v) !== false) return '';
+}
+```
+
+**脚本 13.1.** 此版本脚本现可安全发送邮件，无需担心垃圾邮件。任何有问题的字符都会被 `spam_scrubber()` 函数捕获。
+
+---
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+2       1.0 Transitional//EN" "http://www.w3.org/
+3       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+4   <html xmlns="http://www.w3.org/1999/
+5       xhtml" xml:lang="en" lang="en">
+6   <head>
+7       <meta http-equiv="Content-Type"
+8           content="text/html; charset=utf-8" />
+9       <title>Contact Me</title>
+10  </head>
+11  <body>
+12  <h1>Contact Me</h1>
+13  <?php # Script 13.1 - email.php #2
+14  // This version now scrubs dangerous
+15      strings from the submitted input.
+16
+17  // Check for form submission:
+18  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+19
+20      /* The function takes one argument: a
+21          string.
+22       * The function returns a clean
+23          version of the string.
+24       * The clean version may be either an
+25          empty string or
+26       * just the removal of all newline
+27          characters.
+28       */
+29      function spam_scrubber($value) {
+30
+31          // List of very bad values:
+32          $very_bad = array('to:',
+33              'cc:', 'bcc:', 'content-type:',
+34              'mime-version:', 'multipart-mixed:',
+35              'content-transfer-encoding:');
+36
+37          // If any of the very bad strings
+38          are in
+39          // the submitted value, return an
+40          empty string:
+41          foreach ($very_bad as $v) {
+42              if (stripos($value, $v) !==
+43                  false) return '';
+44          }
+45
+46          // Replace any newline characters
+47          with spaces:
+48          $value = str_replace(array("\r",
+49              "\n", "%0a", "%0d"), ' ', $value);
+50
+51          // Return the value:
+52          return trim($value);
+53
+54      } // End of spam_scrubber()
+55          function.
+56
+57      // Clean the form data:
+58      $scrubbed = array_map
+59          ('spam_scrubber', $_POST);
+60
+61      // Minimal form validation:
+62      if (!empty($scrubbed['name']) &&
+63          !empty($scrubbed['email']) &&
+64          !empty($scrubbed['comments']) ) {
+65
+66          // Create the body:
+67          $body = "Name: {$scrubbed
+68              ['name']}\n\nComments:
+69              {$scrubbed['comments']}";
+70
+71          // Make it no longer than 70
+72          characters long:
+73          $body = wordwrap($body, 70);
+74
+75          // Send the email:
+76          mail('your_email@example.com',
+77              'Contact Form Submission', $body,
+78              "From: {$scrubbed['email']}");
+79
+80          // Print a message:
+81          echo '<p><em>Thank you for
+82              contacting me. I will reply some
+83              day.</em></p>';
+84
+85          // Clear $_POST (so that the form's
+86              not sticky):
+87          $_POST = array();
+88
+89      } else {
+90          echo '<p style="font-weight: bold;
+91              color: #C00">Please fill out the
+92              form completely.</p>';
+93      }
+94
+95  } // End of main isset() IF.
+96
+97  // Create the HTML form:
+98  ?>
+99  <p>Please fill out this form to contact me.</p>
+100 <form action="email.php" method="post">
+101     <p>Name: <input type="text" name="name" size="30" maxlength="60" value="<?php if
+102         (isset($scrubbed['name'])) echo $scrubbed['name']; ?>" /></p>
+103     <p>Email Address: <input type="text" name="email" size="30" maxlength="80"
+
+
+
+
+```php
+value="<?php if (isset($scrubbed['email'])) echo $scrubbed['email']; ?>" /></p>
+
+72      <p>Comments: <textarea name="comments" rows="5" cols="30"><?php if
+      (isset($scrubbed['comments'])) echo $scrubbed['comments']; ?></textarea></p>
+
+73      <p><input type="submit" name="submit" value="Send!" /></p>
+
+74  </form>
+
+75  </body>
+
+76  </html>
+```
+
+---
+
+`foreach`循环将逐个访问`$very_bad`数组中的每一项，并将每一项赋值给`$v`。在循环内部，`stripos()`函数将检查该项是否存在于作为`$value`提供给该函数的字符串中。`stripos()`函数执行不区分大小写的搜索（因此它会匹配`bcc:`、`Bcc:`、`bCC:`等）。如果在 haystack 中找到 needle（例如，在`$value`中查找`$v`的出现），该函数返回布尔值`TRUE`。因此，条件语句表示如果该函数的结果不等于`FALSE`（即在`$value`中未找到`$v`），则返回空字符串。
+
+因此，对于每一个危险字符串，首次在提交的值中发现它们中的任何一个时，该函数将返回空字符串并终止（函数一旦遇到`return`就会自动停止执行）。
+
+**5. 将任何换行符替换为空格：**
+
+```php
+$value = str_replace(array("\\r", "\\n", "%0a", "%0d"), ' ', $value);
+```
+
+换行符由`\r`、`\n`、`%0a`和`%0d`表示，可能会也可能不会造成问题。发送垃圾邮件需要换行符（否则无法创建正确的标头），但如果用户在 textarea 框中输入时按下 Enter 或 Return 键，也会出现换行符。因此，任何找到的换行符都将被替换为空格。这意味着提交的值可能会丢失部分格式，但为了阻止垃圾邮件，这是合理的代价。
+
+`str_replace()`函数遍历第三个参数中的值，并将第一个参数中的字符出现替换为第二个参数中的字符。正如 PHP 手册所述：
+
+```text
+mixed str_replace (mixed $search, mixed $replace, mixed $subject)
+```
+
+此函数非常灵活，因为它可以接受字符串或数组作为其三个参数（`mixed`意味着它接受混合的参数类型）。因此，脚本中的这行代码将`$value`变量赋值为其原始值，并将任何换行符替换为单个空格。
+
+此函数有一个不区分大小写的版本，但这里不需要，因为例如`\r`是回车符，但`\R`不是。
+
+**6. 返回值并完成函数：**
+
+```php
+return trim($value);
+} // End of spam_scrubber() function.
+```
+
+最后，该函数返回去除首尾空格后的值。请记住，只有在未发现任何非常危险的内容时，函数才会执行到这一点。
+
+**7. 在函数定义后，调用`spam_scrubber()`函数：**
+
+```php
+$scrubbed = array_map('spam_scrubber', $_POST);
+```
+
+这种方法简洁而优美！`array_map()`函数有两个必需参数。第一个是要调用的函数名。在本例中，是`spam_scrubber`（不带括号，因为你提供的是函数的*名称*，而不是调用该函数）。第二个参数是一个数组。
+
+`array_map()`会将指定的函数应用于数组的每个元素，将每个元素的值发送给该函数调用。在本脚本中，`$_POST`有四个元素——`name`、`email`、`comments`和`submit`，这意味着得益于`array_map()`，`spam_scrubber()`函数将被调用四次。执行这行代码后，`$scrubbed`数组将包含四个元素：`$scrubbed['name']`将包含`$_POST['name']`经`spam_scrubber()`处理后的值；`$scrubbed['email']`将包含`$_POST['email']`经`spam_scrubber()`处理后的值；以此类推。
+
+这一行代码获取整个潜在受污染的数据数组（`$_POST`），使用`spam_scrubber()`进行清理，并将结果赋值给新变量。该技术最重要的一点是：从现在开始，脚本必须使用干净的`$scrubbed`数组，而不是仍可能脏的`$_POST`。
+
+**8. 更改表单验证以使用这个新数组：**
+
+```php
+if (!empty($scrubbed['name']) && !empty($scrubbed['email']) && !empty($scrubbed['comments'])) {
+```
+
+这些元素中的每一个都可能有两个原因导致值为空。第一，用户将它们留空。第二，用户在字段中输入了其中一个坏字符串，这会被`spam_scrubber()`函数转换为空字符串。
+
+![Image](img/13_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg)电子邮件地址字段中存在`cc:`将阻止此提交通过电子邮件发送 ![Image](img/graycircle-d.jpg)。
+
+![Image](img/13_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg)由于电子邮件地址中使用了非常危险的字符，被垃圾邮件防止函数转换为空字符串，因此邮件未发送。
+
+**9. 更改`$body`变量的创建以使用干净的值：**
+
+```php
+$body = "Name: {$scrubbed['name']}\n\nComments: {$scrubbed['comments']}";
+```
+
+**10. 更改`mail()`函数的调用以使用干净的电子邮件地址：**
+
+```php
+mail('your_email@example.com', 'Contact Form Submission', $body, "From: {$scrubbed['email']}");
+```
+
+请记得在`mail()`调用中使用您自己的电子邮件地址，否则您永远收不到消息！
+
+**11. 更改表单以使用`$scrubbed`版本的值：**
+
+```html
+<p>Name: <input type="text" name="name" size="30" maxlength="60" value="<?php if (isset($scrubbed['name'])) echo $scrubbed['name']; ?>" /></p>
+
+<p>Email Address: <input type="text" name="email" size="30" maxlength="80" value="<?php if (isset ($scrubbed['email'])) echo $scrubbed['email']; ?>" /></p>
+
+<p>Comments: <textarea name="comments" rows="5" cols="30"><?php if (isset ($scrubbed['comments'])) echo $scrubbed['comments']; ?> </textarea></p>
+```
+
+**12. 将脚本保存为`email.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试它** ![Image](img/circle-e.jpg)和 ![Image](img/circle-f.jpg)。
+
+![Image](img/13_figure_05_e.jpg)
+
+![Image](img/circle-e.jpg)虽然 comments 字段包含换行符（由按 Enter 或 Return 键创建），但电子邮件仍将被发送 ![Image](img/graycircle-f.jpg)。
+
+![Image](img/13_figure_06_f.jpg)
+
+![Image](img/circle-f.jpg)收到的电子邮件，comments 中的换行符 ![Image](img/graycircle-e.jpg)已转换为空格。
+
+---
+
+> **Tip**
+>
+> 在此示例中使用`array_map()`函数虽然方便，但也有缺点。首先，它盲目地将`spam_scrubber()`函数应用于整个`$_POST`数组，甚至包括提交按钮。这无害但没必要。其次，`$_POST`中的任何多维数组都将丢失。在本具体示例中这不是问题，但值得注意。
+
+---
+
+> **Tip**
+>
+> 为防止任何表单的自动提交，您可以使用 CAPTCHA 测试。这些提示理论上只能被人类理解。虽然通常使用随机字符图像来实现，但也可以通过类似“二加二等于几？”或“中国在哪个大洲？”这样的问题来实现。检查此问题的正确答案将成为验证例程的一部分。
+
+---
+
+### 按类型验证数据
+
+
+
+
+#### PHP 中的表单验证与类型转换
+
+到目前为止，本书中使用的表单验证大多相当简单，通常只是检查变量是否有任何值。在许多情况下，这确实是你能做的最好的验证。例如，对于什么是有效的街道地址，或者用户可能在评论字段中输入什么内容，并不存在完美的测试标准。尽管如此，你将要处理的大部分数据都可以用更严格的方式进行验证。在下一章中，正则表达式这一复杂概念将演示如何做到这一点。但在这里，我将介绍一些更易上手的方法，通过类型来验证某些数据。
+
+---
+
+### 两种验证方法
+
+安全性很大程度上建立在验证之上：如果数据来自服务器之外——来自 HTML 表单、URL、Cookie——就不能信任它。（更高级别的安全性还会验证来自*脚本*之外的任何数据，包括会话和数据库。）验证主要有两种类型：*白名单* 和 *黑名单*。
+
+在计算器示例中，我们知道所有值必须为正数，必须都是数字，且数量必须为整数（另外两个数字可以是整数或浮点数，这无关紧要）。类型转换强制输入为数字，检查则确认它们为正数。此时，假设输入是有效的。这是白名单方法：这些值是好的；其他任何值都是坏的。
+
+防止垃圾信息的示例使用了黑名单方法。该脚本确切知道哪些字符是坏的，并使包含这些字符的输入无效。所有其他输入都被视为好。
+
+许多安全专家倾向于使用白名单方法，但它并不总是适用。每个示例将决定哪种方法效果最好，但重要的是要使用其中一种。不要在没有任何验证的情况下就假设数据是安全的。
+
+---
+
+### 类型验证函数
+
+PHP 支持多种数据类型：字符串、数字（整数和浮点数）、数组等。针对每种类型，都有一个特定的函数来检查变量是否属于该类型（表 13.2）。你在前几章中已经看到了 `is_numeric()` 函数的实际应用，而 `is_array()` 非常适合确认变量可用于 `foreach` 循环。如果提交的变量属于特定类型，每个函数返回 `TRUE`，否则返回 `FALSE`。
+
+**表 13.2. 类型验证函数**
+
+![Image](img/13tab02.jpg)
+
+在 PHP 中，甚至可以在变量被赋值后改变其类型。这样做称为 *类型转换*，通过在变量名前加上目标类型（用括号括起来）来实现：
+
+```php
+$var = 20.2;
+echo (int) $var; // 20
+```
+
+根据原始类型和目标类型的不同，PHP 会相应地转换变量的值：
+
+```php
+$var = 20;
+echo (float) $var; // 20.0
+```
+
+对于数值，转换很直接，但对于其他变量类型，则适用更复杂的规则：
+
+```php
+$var = 'trout';
+echo (int) $var; // 0
+```
+
+在大多数情况下，你不需要将变量从一种类型强制转换为另一种类型，因为 PHP 通常会在需要时自动进行转换。但在 Web 应用程序中，强制转换变量类型可以是一个很好的安全措施。为了展示如何使用这一概念，让我们创建一个计算器脚本，用于确定商品的总购买价格 ![Image](img/circle-a.jpg)。
+
+![Image](img/13_figure_07_a.jpg)
+
+![Image](img/circle-a.jpg) HTML 表单接受三个输入：数量、价格和税率。
+
+### 使用类型转换
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `calculator.php`（脚本 13.2）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Widget Cost Calculator </title>
+</head>
+<body>
+<?php # Script 13.2 - calculator.php
+```
+
+**脚本 13.2.** 通过对变量进行*类型转换*，该脚本更明确地验证数据是否为正确格式。
+
+---
+
+```php
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+       1.0 Transitional//EN" "http://www.w3.org/
+       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/
+       xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type"
+         content="text/html; charset=utf-8" />
+5      <title>Widget Cost Calculator</title>
+6  </head>
+7  <body>
+8  <?php # Script 13.2 - calculator.php
+9  // This script calculates an order total
+       based upon three form values.
+10
+11  // Check if the form has been submitted:
+12  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+13
+14      // Cast all the variables to a
+         specific type:
+15      $quantity = (int) $_POST['quantity'];
+16      $price = (float) $_POST['price'];
+17      $tax = (float) $_POST['tax'];
+18
+19      // All variables should be positive!
+20      if ( ($quantity > 0) && ($price >
+         0) && ($tax > 0) ) {
+21
+22          // Calculate the total:
+23          $total = $quantity * $price;
+24          $total += $total * ($tax/100);
+25
+26          // Print the result:
+27          echo '<p>The total cost of purchasing
+              ' . $quantity . ' widget(s) at $' .
+              number_format ($price, 2) . ' each,
+              plus tax, is $' . number_format
+              ($total, 2) . '.</p>';
+28
+29      } else { // Invalid submitted values.
+30          echo '<p style="font-weight: bold;
+              color: #C00">Please enter a valid
+              quantity, price, and tax rate.</p>';
+31      }
+32
+33  } // End of main isset() IF.
+34
+35  // Leave the PHP section and create the
+       HTML form.
+36  ?>
+37  <h2>Widget Cost Calculator</h2>
+38  <form action="calculator.php"
+         method="post">
+39      <p>Quantity: <input type="text"
+              name="quantity" size="5" maxlength="10"
+              value="<?php if (isset($quantity)) echo
+              $quantity; ?>" /></p>
+40      <p>Price: <input type="text"
+              name="price" size="5" maxlength="10"
+              value="<?php if (isset($price)) echo
+              $price; ?>" /></p>
+41      <p>Tax (%): <input type="text"
+              name="tax" size="5" maxlength="10"
+              value="<?php if (isset($tax)) echo
+              $tax; ?>" /></p>
+42      <p><input type="submit" name="submit"
+              value="Calculate!" /></p>
+43  </form>
+44  </body>
+45  </html>
+```
+
+---
+
+**2.** 检查表单是否已提交：
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+```
+
+与许多前面的示例一样，这个脚本既会显示 HTML 表单，也会处理其提交。
+
+**3.** 将所有变量转换为特定类型：
+
+```php
+$quantity = (int) $_POST['quantity'];
+$price = (float) $_POST['price'];
+$tax = (float) $_POST['tax'];
+```
+
+表单本身有三个文本框 ![Image](img/graycircle-a.jpg)，实际上可以输入任何内容（HTML 4 或 XHTML 1.1 中表单没有 number 类型的输入）。但数量必须是整数，而价格和税率可以作为浮点数（即可以包含小数点）。为了强制这些约束，将每个变量转换为特定类型。
+
+**4.** 检查变量是否具有合适的值：
+
+```php
+if ( ($quantity > 0) && ($price > 0) && ($tax > 0) ) {
+```
+
+为了使计算器正常工作，这三个变量必须是特定类型（见步骤 3）。更重要的是，它们必须都是正数。在执行计算之前，此条件检查这一点。注意，根据类型转换的规则，如果提交的值不是数字，它们将被转换为 `0`，因此无法通过此条件判断。
+
+**5.** 计算并打印结果：
+
+```php
+$total = $quantity * $price;
+$total += $total * ($tax/100);
+```
+
+
+
+
+echo '<p>The total cost of purchasing ' . $quantity . ' widget(s) at $' . number_format($price, 2) . ' each, plus tax, is $' . number_format($total, 2) . '.</p>';
+
+要计算总计，首先将数量乘以价格。要对总计应用税费，将总计值乘以税率再除以 100（例如，6.5% 变为 .065）所得的值随后被加上，使用的是加法赋值简写运算符。`number_format()` 函数用于以正确格式打印价格和总计值 ![Image](img/circle-b.jpg)。
+
+![Image](img/13_figure_08_b.jpg)
+
+![Image](img/circle-b.jpg)表单正确填写时的计算结果。
+
+**6.** 完成条件语句：
+
+```
+} else {
+    echo '<p style="font-weight: bold; color: #C00">Please enter a valid quantity, price, and tax rate.</p>';
+} // End of main isset() IF.
+```
+
+这里使用了一点 CSS 来创建加粗的红色错误消息，以防出现问题 ![Image](img/circle-c.jpg)。
+
+![Image](img/13_figure_09_c.jpg)
+
+![Image](img/circle-c.jpg)如果三个字段中的任意一个不包含正数，将打印加粗红色文本的错误消息。
+
+**7.** 开始 HTML 表单：
+
+```
+?>
+<h2>Widget Cost Calculator</h2>
+<form action="calculator.php" method="post">
+  <p>Quantity: <input type="text" name="quantity" size="5" maxlength="10" value="<?php if (isset($quantity)) echo $quantity; ?>" /></p>
+```
+
+HTML 表单非常简单，并提交回此同一页面。输入框将具有粘性，以便用户可以看到之前输入的内容。通过引用 `$quantity` 等而不是 `$_POST['quantity']` 等，表单将反映每个输入*经过类型转换后*的值。
+
+**8.** 完成 HTML 表单：
+
+```
+  <p>Price: <input type="text" name="price" size="5" maxlength="10" value="<?php if (isset($price)) echo $price; ?>" /></p>
+  <p>Tax (%): <input type="text" name="tax" size="5" maxlength="10" value="<?php if (isset($tax)) echo $tax; ?>" /></p>
+  <p><input type="submit" name="submit" value="Calculate!" /></p>
+</form>
+```
+
+**9.** 完成 HTML 页面：
+
+```
+</body>
+</html>
+```
+
+**10.** 将文件保存为 `calculator.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试它 ![Image](img/circle-d.jpg)和 ![Image](img/circle-e.jpg)。
+
+![Image](img/13_figure_10_d.jpg)
+
+![Image](img/circle-d.jpg)如果输入了无效值，例如数量输入浮点数或税率输入字符串……
+
+![Image](img/13_figure_11_e.jpg)
+
+![Image](img/circle-e.jpg)……它们将被转换为更合适的格式。负价格也将阻止此计算的进行（尽管转换不会改变该值）。
+
+***
+
+提示
+
+在 SQL 查询中处理数字时，您绝对应该使用类型转换。数字在查询中不加引号，因此如果字符串以某种方式被用在数字的位置上，将会发生 SQL 语法错误。如果您先将此类变量转换为整数或浮点数，查询可能无法工作（就返回记录而言），但语法上仍然有效。您将在本书最后三章中经常看到这种做法。
+
+***
+
+提示
+
+正如我暗示的那样，正则表达式是一种更高级的数据验证方法，有时是您的最佳选择。但在可行的情况下，使用基于类型的验证肯定会更快（就处理器速度而言），且不太容易出现程序员错误（我提到过正则表达式很复杂吗？）。
+
+***
+
+提示
+
+再重申一次，值从一种数据类型转换为另一种数据类型的规则有些复杂。如果您想深入了解细节，请参阅 PHP 手册。
+
+***
+
+#### 按类型验证文件
+
+第 11 章包含一个在 PHP 中处理文件上传的示例。由于上传文件允许用户在您的服务器上放置比通过表单发送的文本更强效的内容类型，因此在处理文件上传时，对安全性的重视程度再怎么强调都不为过。在该特定示例中，通过检查其 MIME 类型来验证上传的文件。具体来说，对于上传的文件，`$_FILES['upload']['type']` 指的是上传浏览器提供的 MIME 类型。这是一个好的开始，但恶意用户很容易欺骗浏览器提供虚假的 MIME 类型。确认文件类型的更可靠方法是使用 Fileinfo 扩展。
+
+Fileinfo 扩展在 PHP 5.3 中加入，它通过在文件中搜索“魔术字节”或“魔术数字”来确定文件的类型（和编码）。例如，构成 GIF 图像的数据必须以代表 *GIF89a* 或 *GIF87a* 的 ASCII 码开头；构成 PDF 文件的数据以 *%PDF* 开头。
+
+要使用 Fileinfo，首先创建一个 Fileinfo 资源：
+
+```
+$fileinfo = finfo_open(kind);
+```
+
+*kind* 值将是几个常量之一，指示您要创建的资源类型。要确定文件类型，该常量为 `FILEINFO_MIME_TYPE`：
+
+```
+$fileinfo = finfo_open(FILEINFO_MIME_TYPE);
+```
+
+接下来，调用 `finfo_file()` 函数，提供 Fileinfo 资源和对要检查的文件的引用：
+
+```
+finfo_file($fileinfo, $filename);
+```
+
+该函数根据文件实际的魔术字节返回文件的 MIME 类型（给定已创建的资源）。
+
+最后，完成后，您应该关闭 Fileinfo 资源：
+
+```
+finfo_close($fileinfo);
+```
+
+下一个脚本将使用此信息来确认上传的文件是 RTF（富文本格式）。请注意，只有当您使用 PHP 5.3 或更高版本时，才能测试此示例 ![Image](img/circle-a.jpg)。如果您使用的是早期版本，则需要通过 PECL（PHP 扩展社区库，[`pecl.php.net`](http://pecl.php.net)）安装 Fileinfo 扩展。在 Windows 上，如果您使用的是 PHP 5.3 或更高版本，Fileinfo DLL 文件应包含在您的安装中，但您可能需要在 `php.ini` 配置文件中启用它（从 peachpit.com 下载附录 A“安装”）。
+
+![Image](img/13_figure_12_a.jpg)
+
+![Image](img/circle-a.jpg)如果您的 PHP 安装不支持 Fileinfo 扩展，您将看到如下错误消息。
+
+**脚本 13.3.** 使用 Fileinfo 扩展，此脚本能很好地确认上传文件的类型。
+
+***
+
+```
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+      1.0 Transitional//EN" "http://www.w3.org/
+      TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/
+      xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type"
+        content="text/html; charset=utf-8" />
+5      <title>Upload a RTF Document</title>
+6  </head>
+7  <body>
+8  <?php # Script 13.3 - upload_rtf.php
+
+9  // Check if the form has been submitted:
+10 if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+11
+12    // Check for an uploaded file:
+13    if (isset($_FILES['upload']) && file_
+        exists($_FILES['upload']['tmp_name'])) {
+14
+15        // Validate the type. Should be
+RTF.
+16        // Create the resource:
+17        $fileinfo = finfo_open
+          (FILEINFO_MIME_TYPE);
+18
+19        // Check the file:
+20        if (finfo_file($fileinfo,
+          $_FILES['upload']['tmp_name']) ==
+          'text/rtf') {
+21
+22            // Indicate it's okay!
+23            echo '<p><em>The file would be
+          acceptable!</em></p>';
+24
+25            // In theory, move the file over.
+          In reality, delete the file:
+26            unlink($_FILES['upload']
+          ['tmp_name']);
+27
+28        } else { // Invalid type.
+29            echo '<p style="font-weight:
+          bold; color: #C00">Please
+          upload an RTF document.</p>';
+30        }
+31
+32
+```
+
+
+
+
+
+#### 按类型验证文件
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 脚本，命名为 `upload_rtf.php`（**脚本 13.3 {
+```
+
+同一个脚本将同时显示和处理表单。
+
+**3.** 检查上传的文件：
+
+```php
+if (isset($_FILES['upload']) && file_exists($_FILES['upload']['tmp_name'])) {
+```
+
+该脚本首先确认 `$_FILES['upload']` 变量已设置，表单提交后即会出现这种情况。条件语句随后确认上传的文件存在（默认在临时目录中）。如果上传失败（例如，所选文件过大），此子句可防止尝试验证文件类型。
+
+**4.** 创建 Fileinfo 资源：
+
+```php
+$fileinfo = finfo_open(FILEINFO_MIME_TYPE);
+```
+
+正如之前所解释的，此行创建一个 Fileinfo 资源，其特定目的是检索文件的 MIME 类型。
+
+**5.** 检查文件类型：
+
+```php
+if (finfo_file($fileinfo, $_FILES['upload']['tmp_name']) == 'text/rtf') {
+    echo '<p><em>The file would be acceptable!</em></p>';
+```
+
+如果 `finfo_file()` 函数针对上传的文件返回 `text/rtf` 值，则该文件具有适合本脚本用途的正确类型。在这种情况下，将打印一条消息。
+
+**6.** 删除上传的文件：
+
+```php
+unlink($_FILES['upload']['tmp_name']);
+```
+
+在实际示例中，脚本现在会将文件移动到服务器上的最终目标位置。由于本脚本仅用于验证文件类型，因此可以直接删除该文件。
+
+**7.** 完成类型条件判断：
+
+```php
+} else { // Invalid type.
+    echo '<p style="font-weight: bold; color: #C00">Please upload an RTF document.</p>';
+}
+```
+
+如果上传文件的 MIME 类型不是 `text/rtf`，脚本将打印一条错误消息。
+
+**8.** 关闭 Fileinfo 资源：
+
+```php
+finfo_close($fileinfo);
+```
+
+最后一步是关闭打开的 Fileinfo 资源，因为它不再需要了。
+
+**9.** 完成剩余的条件判断：
+
+```php
+} // End of isset($_FILES['upload']) IF.
+} // End of the submitted conditional.
+?>
+```
+
+如果发生错误，你还可以添加调试信息，例如相关的上传错误消息。
+
+**10.** 创建表单：
+
+```html
+<form enctype="multipart/form-data" action="upload_rtf.php" method="post">
+    <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+    <fieldset><legend>Select an RTF document of 512KB or smaller to be uploaded:</legend>
+    <p><b>File:</b> <input type="file" name="upload" /></p>
+    </fieldset>
+    <div align="center"><input type="submit" name="submit" value="Submit" /></div>
+</form>
+```
+
+该表单使用了正确的 `enctype` 属性，在隐藏表单输入中包含 `MAX_FILE_SIZE` 建议值，并使用了文件输入类型：这是接受文件上传的三个要求。本例就这些内容。
+
+**11.** 完成页面：
+
+```html
+</body>
+</html>
+```
+
+**12.** 将文件保存为 `upload_rtf.php`，将其放在 Web 目录中，并在 Web 浏览器中测试。
+
+***
+
+提示
+
+同一个 Fileinfo 资源可应用于多个文件。只需在脚本不再需要该资源后将其关闭即可。
+
+***
+
+### 防止 XSS 攻击
+
+HTML 只是纯文本，如 `<b>`，Web 浏览器赋予其特殊含义（如使文本加粗）。正因如此，你网站的用户很容易在其表单数据中放入 HTML，就像电子邮件示例中的评论字段一样。那有什么问题呢，你可能会问？
+
+许多动态驱动的 Web 应用程序获取用户提交的信息，将其存储在数据库中，然后在另一页面上重新显示这些信息。只需想到论坛即可作为一个例子。至少，如果用户在其数据中输入 HTML 代码，此类代码可能会破坏你网站的布局和美观。更进一步说，JavaScript 也只是纯文本，但在 Web 浏览器中具有特殊含义——*可执行*含义。如果输入表单的恶意代码在 Web 浏览器中重新显示，它可能会创建弹出窗口、窃取 Cookie 或将浏览器重定向到其他站点。此类攻击被称为*跨站脚本攻击*（XSS）。正如电子邮件示例中那样，你需要查找并中和数据中发现的恶意字符串，防止 XSS 攻击的方法是处理任何潜在的危险 PHP、HTML 或 JavaScript 代码。
+
+PHP 包含一组用于处理字符串中 HTML 和其他代码的函数。其中包括：
+
+*   `htmlspecialchars()`，将 `&`、`'`、`"`、`<` 和 `>` 转换为 HTML *实体* 格式（`&amp;`、`&quot;` 等）
+*   `htmlentities()`，将所有适用字符转换为其 HTML 实体格式
+*   `strip_tags()`，移除所有 HTML 和 PHP 标签
+
+这三个函数大致按破坏性从小到大的顺序列出。你想使用哪个函数取决于具体的应用场景。为了演示这些函数的工作原理及其差异，让我们创建一个简单的 PHP 页面，获取一些文本并通过这些函数运行，然后打印结果。
+
+**脚本 13.4.** 对提交的文本应用 `htmlentities()` 和 `strip_tags()` 函数可以防止 XSS 攻击。
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+    1.0 Transitional//EN" "http://www.w3.org/
+    TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/
+    xhtml" xml:lang="en" lang="en">
+<head>
+```
+
+
+
+
+
+#### XSS 攻击防范
+
+### PHP 脚本示例（脚本 13.4）
+
+```html
+4   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+5   <title>XSS Attacks</title>
+6 </head>
+7 <body>
+8 <?php # Script 13.4 - xss.php
+
+10 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+12   // Apply the different functions, printing the results:
+13   echo "<h2>Original</h2><p>{$_POST['data']}</p>";
+14   echo '<h2>After htmlentities()</h2><p>' . htmlentities($_POST['data']) . '</p>';
+15   echo '<h2>After strip_tags()</h2><p>' . strip_tags($_POST['data']) . '</p>';
+
+17 }
+
+18 // Display the form:
+19 ?>
+20 <form action="xss.php" method="post">
+21   <p>Do your worst! <textarea name="data" rows="3" cols="40"></textarea></p>
+22   <div align="center"><input type="submit" name="submit" value="Submit" /></div>
+23 </form>
+24 </body>
+25 </html>
+```
+
+---
+
+### 防范 XSS 攻击
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `xss.php`（**脚本 13.4**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>XSS Attacks</title>
+</head>
+<body>
+<?php # Script 13.4 - xss.php
+```
+
+**2.** 检查表单提交并以原始格式打印接收到的数据：
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  echo "<h2>Original</h2> <p>{$_POST['data']}</p>";
+}
+```
+
+为了对比最初接收到的值与应用函数后的结果，必须首先打印原始值。
+
+**3.** 应用 `htmlentities()` 函数并打印结果：
+
+```php
+echo '<h2>After htmlentities()</h2><p>' . htmlentities($_POST['data']) . '</p>';
+```
+
+为防止提交的信息破坏页面或攻击 Web 浏览器，需将其通过 `htmlentities()` 函数处理。该函数会转换任何 HTML 实体；例如，`<` 和 `>` 将分别变为 `&lt;` 和 `&gt;`。
+
+**4.** 应用 `strip_tags()` 函数并打印结果：
+
+```php
+echo '<h2>After strip_tags()</h2><p>' . strip_tags($_POST['data']) . '</p>';
+```
+
+`strip_tags()` 函数会彻底移除任何 HTML、JavaScript 或 PHP 标签。因此，它是用于处理提交数据的最可靠函数。
+
+**5.** 结束 PHP 部分：
+
+```php
+}
+?>
+```
+
+**6.** 显示 HTML 表单：
+
+```html
+<form action="xss.php" method="post">
+  <p>Do your worst! <textarea name="data" rows="3" cols="40"></textarea></p>
+  <div align="center"><input type="submit" name="submit" value="Submit" /></div>
+</form>
+```
+
+该表单仅包含一个供用户填写的字段：一个文本域。
+
+**7.** 完成页面：
+
+```html
+</body>
+</html>
+```
+
+**8.** 将页面保存为 `xss.php`，放入 Web 目录，并在 Web 浏览器中测试。
+
+**9.** 查看页面的源代码，以查看这些函数的完整效果。
+
+这段页面的 HTML 源代码片段展示了原始提交值、使用 `htmlentities()` 后的值以及使用 `strip_tags()` 后的值。
+
+---
+
+> **提示**
+>
+> `htmlspecialchars()` 和 `htmlentities()` 均接受一个可选参数，用于指示如何处理引号。具体细节请参阅 PHP 手册。
+
+---
+
+> **提示**
+>
+> `strip_tags()` 函数接受一个可选参数，用于指示哪些标签*不*应被剥离。
+>
+> ```php
+> $var = strip_tags($var, '<p><br />');
+> ```
+
+---
+
+> **提示**
+>
+> `strip_tags()` 函数甚至会移除无效的 HTML 标签，这可能会导致问题。例如，`strip_tags()` 会提取出它认为是 HTML 标签的所有代码，即使该标签格式不正确，如 `<b I forgot to close the tag`。
+
+---
+
+> **提示**
+>
+> 与安全性无关但非常实用的是 `nl2br()` 函数。它将每个回车符（如文本域中输入的）转换为 HTML `<br />` 标签。
+
+---
+
+#### 使用 Filter 扩展
+
+本章前面介绍了*类型转换*的概念，这是强制变量为正确类型的好方法。在下一章中，你将学习*正则表达式*，它可以验证数据的类型及其具体内容或格式。PHP 5.2 引入了 Filter 扩展（[www.php.net/filter](http://www.php.net/filter)），这是一个重要工具，填补了相对简单的类型转换方法与更复杂的正则表达式概念之间的空白。
+
+Filter 扩展可用于两个目的之一：*验证*数据或*清理*数据。正如你现在所熟知的，验证过程确认数据符合预期。相比之下，清理则通过移除不当字符来改变数据，使其符合预期。
+
+Filter 扩展中最重要的函数是 `filter_var()`：
+
+```php
+filter_var(variable, filter [,options]);
+```
+
+该函数的第一个参数是要过滤的变量；第二个是要应用的过滤器；可选的第三个参数用于添加额外的标准。**表 13.3** 列出了验证过滤器，每个过滤器均以常量形式表示。
+
+#### 表 13.3. 验证过滤器
+
+*(图片引用: graphics/13tab03.jpg)*
+
+例如，要确认变量具有十进制值，可使用：
+
+```php
+if (filter_var($var, FILTER_VALIDATE_FLOAT)) {
+```
+
+有几个过滤器接受可选参数，最常见的是 `FILTER_VALIDATE_INT` 过滤器，它具有 `min_range` 和 `max_range` 选项，用于控制最小和最大可接受值。例如，下面这段代码确认 `$age` 变量是一个介于 1 和 120 之间（含边界）的整数：
+
+```php
+if (filter_var($var, FILTER_VALIDATE_INT, array('min_range' => 1, 'max_range' => 120))) {
+```
+
+要清理数据，仍将使用 `filter_var()` 函数，但使用 **表 13.4** 中列出的清理过滤器之一。
+
+#### 表 13.4. 清理过滤器
+
+*(图片引用: graphics/13tab04.jpg)*
+
+许多过滤器复制了其他 PHP 函数的功能。例如，`FILTER_SANITIZE_MAGIC_QUOTES` 等同于应用 `addslashes()`；`FILTER_SANITIZE_SPECIAL_CHARS` 可代替 `htmlspecialchars()` 使用，而 `FILTER_SANITIZE_STRING` 可作为 `strip_tags()` 的替代品。PHP 手册列出了若干额外的标志（作为常量），可作为可选的第三个参数使用，以影响每个过滤器的行为。作为应用清理过滤器的一个示例，以下代码等同于在 `xss.php`（脚本 13.4）中 `strip_tags()` 的用法：
+
+```php
+echo '<h2>After strip_tags()</h2> <p>' . filter_var($_POST['data'], FILTER_SANITIZE_STRING) . '</p>';
+```
+
+如果你习惯于使用 Filter 扩展，你可能会欣赏它能为所有数据清理提供一致性，即使存在诸如 `strip_tags()` 之类的函数。
+
+为了练习这一点，下一个示例将更新 `calculator.php`（脚本 13.2），使其清理所有传入的数据。请记住，你需要 PHP 5.2 或更高版本才能使用 Filter 扩展。如果你使用的是较早版本的 PHP，可以使用 PECL 安装 Filter 扩展。
+
+#### 使用 Filter 扩展
+
+**1.** 在文本编辑器或 IDE 中打开 `calculator.php`（脚本 13.2）。
+
+**2.** 将 `$quantity` 变量的赋值更改为（脚本 13.5）：
+
+
+
+
+
+### 脚本 13.5：小部件成本计算器
+
+#### PHP 代码示例
+
+```php
+$quantity = (isset($_POST['quantity'])) ? filter_var($_POST['quantity'], FILTER_VALIDATE_INT, array('min_range' => 1)) : NULL;
+```
+
+**脚本 13.5。** 此脚本使用 Filter 扩展来清理传入数据，而不是像该脚本的早期版本那样使用类型转换。
+
+---
+
+```html
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+       1.0 Transitional//EN" "http://www.w3.org/
+       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+       xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+           content="text/html; charset=utf-8" />
+5       <title>Widget Cost Calculator</title>
+6   </head>
+7   <body>
+8   <?php # Script 13.5 - calculator.php #2
+9   // This version of the script uses the
+       Filter extension instead of typecasting.
+10
+11  // Check if the form has been submitted:
+12  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+13
+14      // Sanitize the variables:
+15      $quantity = (isset($_POST
+           ['quantity'])) ? filter_var($_POST
+           ['quantity'], FILTER_VALIDATE_INT,
+           array('min_range' => 1)) : NULL;
+16      $price = (isset($_POST['price']))
+           ? filter_var($_POST['price'],
+           FILTER_SANITIZE_NUMBER_FLOAT,
+           FILTER_FLAG_ALLOW_FRACTION) : NULL;
+17      $tax = (isset($_POST['tax'])) ?
+           filter_var($_POST['tax'], FILTER_
+           SANITIZE_NUMBER_FLOAT, FILTER_FLAG_
+           ALLOW_FRACTION) : NULL;
+18
+19      // All variables should be positive!
+20      if ( ($quantity > 0) && ($price > 0)
+           && ($tax > 0) ) {
+21
+21          // Calculate the total:
+23          $total = $quantity * $price;
+24          $total += $total * ($tax/100);
+25
+26          // Print the result:
+27          echo '<p>The total cost of
+              purchasing ' . $quantity . '
+              widget(s) at $' . number_format
+              ($price, 2) . ' each, plus tax,
+              is $' . number_format ($total, 2) .
+              '.</p>';
+28
+29      } else { // Invalid submitted values.
+30          echo '<p style="font-weight: bold;
+              color: #C00">Please enter a valid
+              quantity, price, and tax rate.</p>';
+31      }
+32
+33  } // End of main isset() IF.
+34
+35  // Leave the PHP section and create the
+       HTML form.
+36  ?>
+37  <h2>Widget Cost Calculator</h2>
+38  <form action="calculator.php"
+       method="post">
+39      <p>Quantity: <input type="text"
+           name="quantity" size="5" maxlength="10"
+           value="<?php if (isset($quantity)) echo
+           $quantity; ?>" /></p>
+40      <p>Price: <input type="text"
+           name="price" size="5" maxlength="10"
+           value="<?php if (isset($price)) echo
+           $price; ?>" /></p>
+41      <p>Tax (%): <input type="text"
+           name="tax" size="5" maxlength="10"
+           value="<?php if (isset($tax)) echo
+           $tax; ?>" /></p>
+42      <p><input type="submit" name="submit"
+           value="Calculate!" /></p>
+43  </form>
+44  </body>
+45  </html>
+```
+
+---
+
+与其前身相比，此版本的脚本在几个方面进行了改进。首先，使用 `isset()` 检查每个 POST 变量是否存在，而不是假设变量已存在。如果变量未设置，则将 `NULL` 赋值给 `$quantity`。如果变量已设置，则通过 `filter_var()` 对其进行处理，将值清理为大于 1 的整数。然后将清理后的值赋给 `$quantity`。所有这些代码均使用三元运算符编写（在第 10 章“常见编程技巧”中介绍），以求简洁。如果写成 `if-else` 条件语句，相同的代码如下：
+
+```php
+if (isset($_POST['quantity'])) {
+    $quantity = filter_var($_POST['quantity'], FILTER_VALIDATE_INT, array('min_range' => 1));
+} else {
+    $quantity = NULL;
+}
+```
+
+### 步骤 3：更改 `$price` 赋值
+
+将 `$price` 变量的赋值更改为：
+
+```php
+$price = (isset($_POST['price'])) ? filter_var($_POST['price'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION) : NULL;
+```
+
+此代码重复了步骤 2 中的代码，不同之处在于清理过滤器要求数据为浮点数。额外的参数 `FILTER_FLAG_ALLOW_FRACTION` 表示该值可以使用小数点。
+
+### 步骤 4：更改 `$tax` 赋值
+
+将 `$tax` 变量的赋值更改为：
+
+```php
+$tax = (isset($_POST['tax'])) ? filter_var($_POST['tax'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION) : NULL;
+```
+
+这重复了步骤 3 中的代码。
+
+### 步骤 5：测试
+
+保存页面，将其放入您的 Web 目录中，并在 Web 浏览器中测试。
+
+![提交的表单数据中的无效值...](img/13_figure_19_a.jpg)
+*提交的表单数据中的无效值...*
+
+![...将被 Filter 扩展置为 null（相反，类型转换会将字符串 cat 转换为数字 0）。](img/13_figure_20_b.jpg)
+*...将被 Filter 扩展置为 null（相反，类型转换会将字符串 cat 转换为数字 0）。*
+
+---
+
+> **提示**
+>
+> `filter_has_var()` 函数用于确认给定名称的变量是否存在。
+
+---
+
+> **提示**
+>
+> `filter_input_array()` 函数允许您在一步中将一组过滤器应用于一组变量。有关详细信息（或许会让您大吃一惊），请参阅 PHP 手册。
+
+---
+
+### 防止 SQL 注入攻击
+
+恶意用户可能尝试的另一种攻击类型是 *SQL 注入* 攻击。顾名思义，这些攻击试图将恶意代码插入网站的 SQL 查询中。此类攻击的一个目的是制造语法上无效的查询，从而在生成的错误消息中泄露有关脚本或数据库的信息。更大的企图是注入攻击可能会篡改、销毁或泄露存储的数据。
+
+![如果网站显示详细的错误消息且未正确处理提交值中的问题字符，黑客可以了解很多关于您服务器的信息。](img/13_figure_21_a.jpg)
+*如果网站显示详细的错误消息且未正确处理提交值中的问题字符，黑客可以了解很多关于您服务器的信息。*
+
+幸运的是，SQL 注入攻击相对容易预防。首先验证所有用于查询的数据（并在可能的情况下执行类型转换或应用 Filter 扩展）。其次，使用像 `mysqli_real_escape_string()` 这样的函数，使数据在查询中安全使用。该函数在第 9 章“将 PHP 与 MySQL 结合使用”中已介绍。第三，不要在正式站点上显示详细错误。
+
+---
+
+### 预处理语句性能
+
+预处理语句比以旧方式运行查询更安全，但也可能更快。如果 PHP 脚本多次向 MySQL 发送相同的查询，每次仅使用不同的值，则预处理语句可以显著提高速度。在这种情况下，查询本身仅发送给 MySQL 并解析一次。然后，值单独发送给 MySQL。
+
+作为一个简单的示例，以下代码将在 MySQL 中运行 100 个查询：
+
+```php
+$q = 'INSERT INTO counter (num) VALUES (?)';
+$stmt = mysqli_prepare($dbc, $q);
+mysqli_stmt_bind_param($stmt, 'i', $n);
+for ($n = 1; $n <= 100; $n++) {
+    mysqli_stmt_execute($stmt);
+}
+```
+
+即使查询运行了 100 次，完整的文本也仅被传输给 MySQL 并由其解析一次。MySQL 5.1.17 及更高版本包含一种缓存机制，也可能提高预处理语句其他用法的性能。
+
+---
+
+
+
+
+使用 `mysqli_real_escape_string()` 的替代方案是使用预处理语句。预处理语句在 MySQL 4.1 版本中引入，PHP 自 5 版本起即可使用（得益于改进的 MySQL 扩展）。不使用预处理语句时，整个查询（包括 SQL 语法和具体数值）会作为一个长字符串发送给 MySQL。然后 MySQL 对其进行解析并执行。使用预处理查询时，SQL 语法会首先发送给 MySQL 进行解析，确保其在语法上是有效的（例如，确认查询未引用不存在的表或列）。然后具体数值会单独发送；MySQL 使用这些数值组装查询，然后执行。预处理语句的优势非常重要：更高的安全性和潜在的更好性能。我将在此重点关注安全性方面，但关于性能的讨论请参阅侧边栏。
+
+预处理语句可以由任何 `INSERT`、`UPDATE`、`DELETE` 或 `SELECT` 查询创建。首先定义查询，使用问号标记占位符。以 `edit_user.php`（脚本 10.3）中的 `SELECT` 查询为例：
+
+```
+$q = "SELECT first_name, last_name, email FROM users WHERE user_id=$id";
+```
+
+作为预处理语句，该查询变为
+
+```
+$q = "SELECT first_name, last_name, email FROM users WHERE user_id=?";
+```
+
+接下来，在 MySQL 中准备语句，将结果赋值给一个 PHP 变量：
+
+```
+$stmt = mysqli_prepare($dbc, $q);
+```
+
+此时，MySQL 将解析查询，但不会执行它。
+
+接下来，将 PHP 变量绑定到查询的占位符。换句话说，你指定一个变量用于第一个问号，另一个变量用于下一个问号，依此类推。继续以此例为例，你应该编写
+
+```
+mysqli_stmt_bind_param($stmt, 'i', $id);
+```
+
+命令中的 `i` 部分表示预期值的类型，使用表 13.5 中列出的字符。在本例中，查询预期接收一个整数。作为另一个例子，以下是第 12 章“Cookies 和 Sessions”中登录查询的处理方式：
+
+```
+$q = "SELECT user_id, first_name FROM users WHERE email=? AND pass=SHA1(?)";
+
+$stmt = mysqli_prepare($dbc, $q);
+
+mysqli_stmt_bind_param($stmt, 'ss', $e, $p);
+```
+
+**表 13.5. 绑定值类型**
+
+![Image](img/13tab05.jpg)
+
+在这个例子中，还揭示了一件有趣的事：尽管电子邮件地址和密码值都是字符串，但它们在查询中并未放在引号内。这是预处理语句与标准查询的另一个区别。
+
+语句绑定后，你可以为 PHP 变量赋值（如果尚未赋值），然后执行语句。以登录示例为例，代码如下：
+
+```
+$e = 'email@example.com';
+
+$p = 'mypass';
+
+mysqli_stmt_execute($stmt);
+```
+
+执行预处理语句时将使用 `$e` 和 `$p` 的值。
+
+要查看此过程的实际操作，让我们编写一个脚本，向 `forum` 数据库（在第 6 章“数据库设计”中创建）的 `messages` 表添加一条帖子。我还将借此机会演示其他几个与预处理语句相关的函数。
+
+**脚本 13.6.** 该脚本代表一个简化版的消息发布页面，使用预处理语句作为防止 SQL 注入攻击的一种方式。
+
+---
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+     1.0 Transitional//EN" "http://www.w3.org/
+     TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+2   <html xmlns="http://www.w3.org/1999/
+     xhtml" xml:lang="en" lang="en">
+
+3   <head>
+
+4       <meta http-equiv="Content-Type"
+         content="text/html; charset=utf-8" />
+
+5       <title>发布消息</title>
+
+6   </head>
+
+7   <body>
+
+8   <?php # 脚本 13.6 - post_message.php
+
+9
+
+10  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+11
+
+12      // 验证数据（省略）！
+
+13
+
+14      // 连接数据库：
+
+15      $dbc = mysqli_connect ('localhost',
+         'username', 'password', 'forum');
+
+16
+
+17      // 创建查询：
+
+18      $q = 'INSERT INTO messages
+         (forum_id, parent_id, user_id,
+         subject, body, date_entered)
+         VALUES (?, ?, ?, ?, ?, NOW( ))';
+
+19
+
+20      // 准备语句：
+
+21      $stmt = mysqli_prepare($dbc, $q);
+
+22
+
+23      // 绑定变量：
+
+24      mysqli_stmt_bind_param($stmt,
+         'iiiss', $forum_id, $parent_id,
+         $user_id, $subject, $body);
+
+25
+
+26      // 为变量赋值：
+
+27      $forum_id = (int) $_POST['forum_id'];
+
+28      $parent_id = (int) $_POST['parent_id'];
+
+29      $user_id = 3; // user_id 值通常
+         来自会话。
+
+30      $subject = strip_tags($_POST['subject']);
+
+31      $body = strip_tags($_POST['body']);
+
+32
+
+33      // 执行查询：
+
+34      mysqli_stmt_execute($stmt);
+
+35
+
+36      // 根据结果打印消息：
+
+37      if (mysqli_stmt_affected_rows($stmt)
+         == 1) {
+
+38          echo '<p>您的消息已发布。</p>';
+
+39      } else {
+
+40          echo '<p style="font-weight: bold;
+             color: #C00">您的消息无法发布。</p>';
+
+41          echo '<p>' . mysqli_stmt_error
+             ($stmt) . '</p>';
+
+42      }
+
+43
+
+44      // 关闭语句：
+
+45      mysqli_stmt_close($stmt);
+
+46
+
+47      // 关闭连接：
+
+48      mysqli_close($dbc);
+
+49
+
+50  } // 提交 IF 结束。
+
+51
+
+52  // 显示表单：
+
+53  ?>
+
+54  <form action="post_message.php"
+         method="post">
+
+55
+
+56      <fieldset><legend>发布消息：
+         </legend>
+
+57
+
+58      <p><b>主题</b>：<input
+         name="subject" type="text" size="30"
+         maxlength="100" /></p>
+
+59
+
+60      <p><b>正文</b>：<textarea name="body"
+         rows="3" cols="40"></textarea></p>
+
+61
+
+62      </fieldset>
+
+63      <div align="center"><input type="submit"
+         name="submit" value="提交" /></div>
+
+64      <input type="hidden" name="forum_id"
+         value="1" />
+
+65      <input type="hidden" name="parent_id"
+         value="0" />
+
+66
+
+67  </form>
+
+68  </body>
+
+69  </html>
+```
+
+---
+
+#### 使用预处理语句
+
+**1.** 在文本编辑器或 IDE 中新建一个名为 `post_message.php` 的 PHP 脚本（脚本 13.6）：
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>发布消息</title>
+
+</head>
+
+<body>
+
+<?php # 脚本 13.6 - post_message.php
+```
+
+**2.** 检查表单提交并连接到 `forum` 数据库：
+
+```
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+  $dbc = mysqli_connect ('localhost', 'username', 'password', 'forum');
+```
+
+请注意，为求简洁，我省略了基本的数据验证和错误报告。虽然真实网站（该脚本的一个更完善版本见第 17 章“示例——留言板”）会检查消息主题和正文是否为空，以及各 ID 值是否为正整数，但得益于预处理语句提供的安全性，该脚本仍然相对安全。
+
+本例将使用第 6 章创建的 `forum` 数据库。
+
+**3.** 定义并准备查询：
+
+```
+$q = 'INSERT INTO messages (forum_id, parent_id, user_id, subject, body, date_entered) VALUES (?, ?, ?, ?, ?, NOW( ))';
+
+$stmt = mysqli_prepare($dbc, $q);
+```
+
+
+
+
+此语法已在前文解释过。查询已定义，使用占位符代表稍后将赋值的值。然后 `mysqli_prepare()` 函数将其发送给 MySQL，并将结果赋值给 `$stmt`。
+
+该查询本身首次用于 第 6 章。它填充 `messages` 表中的六个字段。`date_entered` 列的值将是 `NOW()` 函数的结果，而非绑定值。
+
+**4.** 绑定相应的变量并创建要插入的值列表：
+
+```
+mysqli_stmt_bind_param($stmt, 'iiiss', $forum_id, $parent_id, $user_id, $subject, $body);
+
+$forum_id = (int)$_POST['forum_id'];
+
+$parent_id = (int)$_POST['parent_id'];
+
+$user_id = 3;
+
+$subject = strip_tags($_POST['subject']);
+
+$body = strip_tags($_POST['body']);
+```
+
+第一行表明预处理语句中将使用三个整数和两个字符串。这些值将在后续的变量中找到。
+
+对于这些变量，subject 和 body 的值直接来自表单 ![Image](img/circle-b.jpg)，并通过 `strip_tags()` 处理以移除任何潜在的危险代码。论坛 ID 和父 ID（指示该消息是否为对现有消息的回复）也来自表单。它们将被转型为整数（为增加安全性，转型后应确认它们为正数，或可使用 Filter 扩展）。
+
+![Image](img/13_figure_22_b.jpg)
+
+![Image](img/circle-b.jpg)简单的 HTML 表单。
+
+在实际脚本中，用户 ID 的值将来自会话，在用户登录时存储于其中。
+
+**5.** 执行查询：
+
+```
+mysqli_stmt_execute($stmt);
+```
+
+最后，执行预处理语句。
+
+**6.** 输出执行结果并结束循环：
+
+```
+if (mysqli_stmt_affected_rows($stmt) == 1) {
+
+  echo '<p>您的消息已发布。</p>';
+
+} else {
+
+  echo '<p style="font-weight: bold; color: #C00">您的消息无法发布。</p>';
+
+  echo '<p>' . mysqli_stmt_error($stmt) . '</p>';
+
+}
+```
+
+可使用 `mysqli_stmt_affected_rows()` 函数确认记录是否成功插入，其工作原理正如您所料（返回受影响的行数）。若成功，则打印一条简单消息 ![Image](img/circle-c.jpg)。若发生问题，`mysqli_stmt_error()` 函数将返回具体的 MySQL 错误消息。这仅用于您的调试目的，不应用于正式站点。话虽如此，PHP 的错误消息往往比 `mysqli_stmt_error()` 返回的更有用 ![Image](img/circle-d.jpg)。
+
+![Image](img/13_figure_23_c.jpg)
+
+![Image](img/circle-c.jpg)如果查询影响了数据库中的一条记录，将显示此结果。
+
+![Image](img/13_figure_24_d.jpg)
+
+![Image](img/circle-d.jpg)预处理语句的错误报告有时会令人困惑！
+
+**7.** 关闭语句和数据库连接：
+
+```
+mysqli_stmt_close($stmt);
+
+mysqli_close($dbc);
+```
+
+第一个函数关闭预处理语句，释放资源。此时，`$stmt` 不再有值。第二个函数关闭数据库连接。
+
+**8.** 结束 PHP 部分：
+
+```
+} // End of submission IF.
+
+?>
+```
+
+**9.** 开始表单：
+
+```
+<form action="post_message.php" method="post">
+
+  <fieldset><legend>发布消息：</legend>
+
+  <p><b>主题</b>：<input name="subject" type="text" size="30" maxlength="100" /></p>
+
+  <p><b>内容</b>：<textarea name="body" rows="3" cols="40"></textarea></p>
+
+  </fieldset>
+```
+
+表单以一个主题文本输入框和一个用于消息正文的文本域开始。
+
+***
+
+**更多安全建议**
+
+本章介绍了许多提升 Web 安全性的具体技术。以下是其他几条建议：
+
+*   尽最大努力限制向用户请求的信息以及网站存储的信息。网站以任何方式处理的信息越少，意味着需要担心被窃取的数据就越少。
+*   将学习、遵循并遵守安全建议作为您的职责。不要仅依赖某一章、某本书或某位作者的建议。
+*   不要保留用户提供的上传文件名。您将在 第 19 章 “示例—电子商务” 中看到一种替代方案。
+*   注意数据库引用的使用方式。例如，如果一个人的用户 ID 是其在数据库中的主键并存储在 Cookie 中（如 第 12 章 所示），恶意用户只需修改该 Cookie 值即可访问另一个用户的账户。
+*   不要显示详细的错误消息（这一点在 第 8 章 “错误处理与调试” 中已重复强调）。
+*   使用加密技术（第 7 章 “高级 SQL 与 MySQL” 中讨论了针对数据库的加密，我的著作 *PHP 5 Advanced: Visual QuickPro Guide* (Peachpit Press, 2007) 中讨论了针对服务器的加密）。
+*   不要存储信用卡号、社会安全号、银行信息等。唯一的例外是您有足够雄厚的资金支付最好的安全防护，并承担当这些数据从您的网站被窃取时（这不可避免会发生）引发的诉讼费用。
+*   在适当的时候使用 SSL。安全连接是服务器能为用户提供的最佳保护之一。
+*   可靠且一致地保护每一个需要保护的页面和目录。永远不要假设人们仅仅因为没有链接就找不到敏感区域。如果应限制对某页面或目录的访问，请务必确保其受到限制。
+
+我最后的建议是认识到您自身的局限性。作为程序员，您处理脚本时往往考虑它*应该*如何被使用。这与它*实际*将如何被使用（无论是意外还是故意）是不同的。尝试破坏您的网站看看会发生什么。做坏事，做错事。也让其他人尝试破坏它（通常很容易找到这样的志愿者）。编码时，如果您假设没人会正确使用某个页面，它将比假设大家总会正确使用要安全得多。
+
+***
+
+**10.** 完成表单：
+
+```
+  <div align="center"><input type="submit" name="submit" value="提交" /></div>
+
+  <input type="hidden" name="forum_id" value="1" />
+
+  <input type="hidden" name="parent_id" value="0" />
+
+</form>
+```
+
+表单包含两个供用户填写的字段和两个存储查询所需值的隐藏输入框。在该脚本的实际版本中，`forum_id` 和 `parent_id` 的值将动态确定。
+
+**11.** 完成页面：
+
+```
+</body>
+
+</html>
+```
+
+**12.** 将文件保存为 `post_message.php`，放置在您的 Web 目录中，并在 Web 浏览器中测试 ![Image](img/circle-e.jpg)。
+
+***
+
+**提示**
+
+预处理语句有两种。此处演示的是绑定参数，即将 PHP 变量绑定到查询。另一种是绑定结果，即将查询结果绑定到 PHP 变量。
+
+***
+
+![Image](img/13_figure_25_e.jpg)
+
+![Image](img/circle-e.jpg)在 `messages` 表中选择最近的条目可确认预处理语句（脚本 13.6）已生效。请注意，帖子中的 HTML 标签被剥离了，但引号仍然保留。
+
+***
+
+**防止暴力攻击**
+
+
+
+
+暴力破解攻击是一种通过大量尝试来登录安全系统的攻击方式，企图最终获得成功。这种攻击并不复杂，因此得名“暴力破解”。例如，如果登录过程需要用户名和密码，可能的用户名/密码组合数量是有限的。这个限制可能达到数十亿或数万亿，但终究是有限的。利用算法和自动化流程，暴力破解攻击会反复尝试组合，直到成功为止。
+
+防止暴力破解攻击成功的最佳方法是要求用户注册强密码：包含字母、数字和标点符号；大小写混合；非字典单词；至少八位长等。此外，不要提示登录失败的具体原因：提示“用户名和密码组合不正确”不会泄露任何信息，但提示“用户名不正确”或“该用户名的密码不正确”则透露了过多信息。
+
+要阻止暴力破解攻击，还可以限制给定 IP 地址的错误登录尝试次数。IP 地址会频繁变更，但在暴力破解攻击中，同一 IP 地址会在几分钟内多次尝试登录。你需要按 IP 地址记录错误登录次数，在达到 `X` 次无效尝试后，封锁该 IP 地址 24 小时（或其他时长）。或者，如果不想采取如此严厉的措施，可以使用“延迟递增”防御策略：来自同一 IP 地址的每次错误登录都会增加响应延迟（使用 PHP 的 `sleep()` 函数创建延迟）。人类可能不会注意到或介意这种延迟，但自动化攻击肯定会受到影响。
+
+---
+
+### 复习与深入
+
+如果你在复习问题或深入练习中遇到任何问题，请访问本书的支持论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+#### 复习
+
+- 哪些不当的字符串和字符可能是潜在垃圾邮件尝试的指示？
+- `stripos()` 函数有什么作用？它的语法是什么？
+- `str_replace()` 函数有什么作用？它的语法是什么？
+- `array_map()` 函数有什么作用？它的语法是什么？
+- 什么是类型转换？在 PHP 中如何对变量进行类型转换？
+- 哪个函数用于将上传的文件移动到服务器上的最终目标位置？
+- 什么是 Fileinfo 扩展？如何使用它？
+- `htmlspecialchars()` 函数有什么作用？
+- `htmlentities()` 函数有什么作用？
+- `strip_tags()` 函数有什么作用？
+- 哪个函数将换行符转换为 HTML 换行标签？
+- Filter 扩展中最重要的函数是什么？如何使用它？
+- 什么是预处理语句？与标准数据库查询方法相比，预处理语句有哪些优势？
+- 使用预处理语句的语法是什么？
+
+#### 深入练习
+
+- 如果你尚未将用于邮箱验证的 Filter 函数和 `spam_scrubber()` 函数应用到你网站上的联系表单中，现在就去做吧！
+- 修改 `calculator.php` 以允许无税率的情况。
+- 更新第 3 章“创建动态网站”中的 `calculator.php`，使其也使用类型转换或 Filter 扩展。（提醒：该计算器根据距离、平均每加仑英里数和平均每加仑价格计算汽车旅行成本。）
+- 修改 `upload_rtf.php`，使其在上传文件的 MIME 类型不是 `text/rtf` 时，报告该文件的实际 MIME 类型。
+- 创建一个 PHP 脚本，报告任意上传文件的 MIME 类型。
+- 将 `strip_tags()` 函数应用到本书之前的脚本中（如注册示例），以防止不当代码被存入数据库。
+- 在第 12 章的登录过程中应用 Filter 函数，确保提交的邮箱地址符合格式要求，然后再在查询中使用它。
+- 在第 10 章的 `delete_user.php` 和 `edit_user.php` 脚本中应用 Filter 函数或类型转换。
+- 在第 11 章的 `show_image.php` 脚本中应用 Fileinfo 扩展。
+
+## 14. Perl 兼容正则表达式
+
+### 本章内容
+
+- 创建测试脚本 434
+- 定义简单模式 438
+- 使用量词 441
+- 使用字符类 443
+- 查找所有匹配 446
+- 使用修饰符 450
+- 匹配和替换模式 452
+- 复习与深入 456
+
+正则表达式是当今大多数编程语言甚至许多应用程序中可用的一种极其强大（但繁琐）的工具。可以将正则表达式视为一套精密的模式匹配系统。你首先编写模式，然后使用 PHP 的内置函数之一将该模式应用于某个值（正则表达式应用于字符串，即使该字符串包含数值）。字符串函数只能检查文本中是否包含名字 `John`，而正则表达式则可以同样轻松地找到 `John`、`Jon` 和 `Jonathon`。
+
+由于正则表达式语法非常复杂，而使用它们的函数却很简单，本章将重点放在循序渐进地掌握语法上。PHP 代码将非常简单；后续章节将更好地将正则表达式融入实际脚本中。
+
+### 创建测试脚本
+
+如前所述，正则表达式的核心是将模式应用于值。这种应用通过少量函数之一完成，其中最重要的函数是 `preg_match()`。该函数返回 0 或 1，指示模式是否与字符串匹配。其基本语法为：
+
+```
+preg_match(pattern, subject);
+```
+
+`preg_match()` 函数在找到单个匹配后即停止。如果需要查找所有匹配，请使用 `preg_match_all()`。该函数将在本章后面讨论。
+
+向 `preg_match()` 提供模式时，模式需放在引号内，因为它是一个字符串。由于双引号内的许多转义字符具有特殊含义（如 `\n`），我建议使用单引号来定义模式。
+
+其次，在引号内，模式需要用*定界符*括起来。定界符可以是任何非字母数字或反斜杠的字符，且必须使用相同的字符标记模式的开始和结束。通常使用正斜杠。要检查单词 `cat` 是否包含字母 `a`，代码如下（剧透：包含）：
+
+```
+if (preg_match('/a/', 'cat')) {
+```
+
+如果需要在模式中匹配正斜杠，请使用不同的定界符，如竖线（`|`）或感叹号（`!`）。
+
+本章的大部分内容涵盖定义模式的所有规则。为了通过示例更好地学习，让我们先创建一个简单的 PHP 脚本，它接收一个模式和一个字符串 ![Image](img/circle-a.jpg) 并返回正则表达式的结果 ![Image](img/circle-b.jpg)。
+
+![Image](img/14_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) 用于练习正则表达式的 HTML 表单。
+
+![Image](img/14_figure_02_b.jpg)
+
+
+
+![Image](img/circle-b.jpg)该脚本将打印正则表达式中使用的值以及结果。表单也将变得“粘性”，以记住之前提交的值。
+
+**脚本 14.1.** 使用此 PHP 脚本最能教授和演示复杂的正则表达式语法。
+
+---
+
+### 脚本 14.1 - pcre.php
+
+```php
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+       1.0 Transitional//EN" "http://www.w3.org/
+       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+2   <html xmlns="http://www.w3.org/1999/
+       xhtml" xml:lang="en" lang="en">
+3   <head>
+4       <meta http-equiv="Content-Type"
+           content="text/html; charset=utf-8" />
+5       <title>Testing PCRE</title>
+6   </head>
+7   <body>
+8   <?php // Script 14.1 - pcre.php
+9   // This script takes a submitted string
+       and checks it against a submitted pattern.
+10
+11  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+12
+13      // Trim the strings:
+14      $pattern = trim($_POST['pattern']);
+15      $subject = trim($_POST['subject']);
+16
+17      // Print a caption:
+18      echo "<p>The result of checking<br />
+           <b>$pattern</b><br />against<br />
+           $subject<br />is ";
+19
+20      // Test:
+21      if (preg_match ($pattern,
+           $subject) ) {
+22          echo 'TRUE!</p>';
+23      } else {
+24          echo 'FALSE!</p>';
+25      }
+26
+27  } // End of submission IF.
+28  // Display the HTML form.
+29  ?>
+30  <form action="pcre.php" method="post">
+31      <p>Regular Expression Pattern:
+           <input type="text" name="pattern"
+           value="<?php if (isset($pattern)) echo
+           htmlentities($pattern); ?>" size="40" />
+           (include the delimiters)</p>
+32      <p>Test Subject: <input type="text"
+           name="subject" value="<?php if (isset
+           ($subject)) echo htmlentities($subject);
+           ?>" size="40" /></p>
+33      <input type="submit" name="submit"
+           value="Test!" />
+34  </form>
+35  </body>
+36  </html>
+```
+
+---
+
+#### 匹配模式
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `pcre.php`（**脚本 14.1**）。
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Testing PCRE</title>
+</head>
+<body>
+<?php // Script 14.1 - pcre.php
+```
+
+**2.** 检查表单提交：
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+```
+
+**3.** 处理传入的值：
+
+```php
+$pattern = trim($_POST['pattern']);
+$subject = trim($_POST['subject']);
+```
+
+表单将向同一脚本提交两个值。两者都应进行修剪，以确保多余空格的存在不会扭曲结果。我省略了检查每个输入是否为空的步骤，但如果你愿意可以包含该检查。
+
+请注意，如果你的服务器启用了 Magic Quotes，你将看到表单数据中添加了额外的斜杠 ![Image](img/circle-c.jpg)。为了解决这个问题，你也需要在此处应用 `stripslashes()`：
+
+```php
+$pattern = stripslashes(trim($_POST['pattern']));
+$subject = stripslashes(trim($_POST['subject']));
+```
+
+![Image](img/14_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg)如果服务器启用了 Magic Quotes，脚本将向某些字符添加斜杠，极有可能导致正则表达式失败。
+
+**4.** 打印标题：
+
+```php
+echo "<p>The result of checking<br /><b>$pattern</b><br />against
+<br />$subject<br />is ";
+```
+
+正如你所见 ![Image](img/graycircle-b.jpg)，该脚本的表单处理部分将首先打印提交的值。
+
+**5.** 运行正则表达式：
+
+```php
+if (preg_match ($pattern, $subject) ) {
+  echo 'TRUE!</p>';
+} else {
+  echo 'FALSE!</p>';
+}
+```
+
+要测试模式与字符串是否匹配，将两者都传递给 `preg_match()` 函数。如果该函数返回 1，则表示匹配成功，此条件为 `TRUE`，并将打印 *TRUE*。如果未匹配，则条件为 `FALSE` 并会显示该结果 ![Image](img/circle-d.jpg)。
+
+![Image](img/14_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg)如果模式与字符串不匹配，将出现此结果。此提交和响应也表明正则表达式默认区分大小写。
+
+**6.** 完成提交条件判断和 PHP 代码块：
+
+```php
+} // End of submission IF.
+?>
+```
+
+**7.** 创建 HTML 表单：
+
+```html
+<form action="pcre.php" method="post">
+  <p>Regular Expression Pattern: <input type="text" name="pattern" value="<?php if (isset($pattern)) echo htmlentities($pattern); ?>" size="40" /> (include the delimiters)</p>
+  <p>Test Subject: <input type="text" name="subject" value="<?php if (isset($subject)) echo htmlentities($subject); ?>" size="40" /></p>
+  <input type="submit" name="submit" value="Test!" />
+</form>
+```
+
+表单包含两个文本框，两者均为粘性的（使用修剪后的值）。因为这两个值可能包含引号和其他会与表单的“粘性”冲突的字符，所以每个变量的值也都通过了 `htmlentities()` 处理。
+
+**8.** 完成 HTML 页面：
+
+```html
+</body>
+</html>
+```
+
+**9.** 将文件保存为 `pcre.php`，将其放入你的 Web 目录，并在 Web 浏览器中测试。
+
+虽然你还不知道创建模式的规则，但你可以使用任何其他字面值。请记住在模式周围使用定界符，否则你会看到一条错误消息 ![Image](img/circle-e.jpg)。
+
+![Image](img/14_figure_05_e.jpg)
+
+![Image](img/circle-e.jpg)如果你未能用匹配的定界符包裹模式，将会看到一条错误消息。
+
+---
+
+> **提示**
+>
+> 某些文本编辑器，如 BBEdit 和 emacs，允许你使用正则表达式在多个文档内部和贯穿始终地匹配和替换模式。
+
+---
+
+> **提示**
+>
+> 所有 PCRE 函数都使用既定的区域设置。*区域设置* 反映了计算机指定的国家和语言等设置。
+
+---
+
+> **提示**
+>
+> PHP 的早期版本支持另一种称为 *POSIX* 的正则表达式。这些已被弃用，意味着它们将在未来的语言版本中移除。
+
+---
+
+### 定义简单模式
+
+使用 PHP 的正则表达式函数非常容易；难的是定义要使用的模式。创建模式有许多规则。你可以单独或组合使用这些规则，使你的模式变得非常简单或非常复杂。首先，你将了解用于定义简单模式的字符。作为格式规则，我将用**粗体**定义模式，并用*斜体*指示模式匹配的内容。这些解释中的模式不会放在定界符或引号中（在 `preg_match()` 中使用时两者都需要），只是为了保持整洁。
+
+你将用于定义模式的第一种字符是*字面量*。字面量是完全按照其解释方式书写的值。例如，模式 **a** 将匹配字母 *a*，**ab** 将匹配 *ab*，依此类推。因此，假设执行不区分大小写的搜索，**rom** 将匹配以下任意字符串，因为它们都包含 *rom*：
+
+- CD-ROM
+- Rommel crossed the desert.
+- I’m writing a roman à clef.
+
+
+
+
+除了字面量，你的模式还将使用*元字符*。这些是含义超出其字面值的特殊符号（**表 14.1**）。虽然 `a` 仅仅代表 *a*，但句点（`.`）将匹配除换行符以外的任意单个字符（`.` 匹配 *a*、*b*、*c*、下划线、空格等，就是不匹配 `\n`）。要匹配任意元字符本身，你需要对其进行转义，就像转义引号以打印它一样。因此 `\\.` 将匹配句点本身。所以 `1.99` 匹配 *1.99* 或 *1B99* 或 *1299*（一个 1 后跟任意字符再后跟 99），但 `1\\.99` 仅匹配 *1.99*。
+
+**表 14.1. 元字符**
+
+![Image](img/14tab01.jpg)
+
+两个元字符指定某些字符必须出现的位置。有脱字符（`^`），它标记模式的开始。还有美元符号（`$`），它标记模式的结束。因此，`^a` 将匹配任何以 *a* 开头的字符串，而 `a$` 将对应任何以 *a* 结尾的字符串。所以，`^a$` 将只匹配 *a*（一个既以 *a* 开头又以 *a* 结尾的字符串）。
+
+这两个元字符——脱字符和美元符号——对*验证*至关重要，因为验证通常要求检查整个字符串的值，而不仅仅是检查一个字符串在另一个字符串中的存在性。例如，不带这两个字符使用电子邮件匹配模式将匹配任何包含电子邮件地址的字符串。使用一个以脱字符开头、以美元符号结尾的电子邮件匹配模式将匹配*仅*包含有效电子邮件地址的字符串。
+
+正则表达式还使用管道符（`|`）作为*或*的等价物：`a|b` 将匹配包含 *a* 或 *b* 的字符串。（在模式中使用管道符称为*选择*或*分支*）。所以 `yes|no` 接受这两个单词中的任意一个作为整体（选择*并非*仅发生在其周围的两个字母之间：*s* 和 *n*）。
+
+一旦你理解了基本符号，就可以开始使用括号将字符分组为更复杂的模式。分组的工作原理正如你所料：`(abc)` 匹配 *abc*，`(trout)` 匹配 *trout*。可以把括号看作用于建立一个更大尺寸的新字面量。由于 PCRE 中的优先级规则，`yes|no` 和 `(yes)|(no)` 是等价的。但 `(even|heavy) handed` 将匹配 *even handed* 或 *heavy handed*。
+
+### 使用简单模式
+
+**1.** 在 Web 浏览器中加载 `pcre.php`（如果尚未加载）。
+
+**2.** 检查字符串是否包含字母 *cat* ![Image](img/circle-a.jpg)。
+
+![Image](img/14_figure_06_a.jpg)
+
+![Image](img/circle-a.jpg)在字符串中查找 cat。
+
+为此，使用字面量 `cat` 作为模式，并使用任意数量的字符串作为目标字符串。以下任意字符串均为匹配：*catalog*、*catastrophe*、*my cat left* 等。目前请全部使用小写字母，因为 `cat` 不会匹配 *Cat* ![Image](img/circle-b.jpg)。
+
+![Image](img/14_figure_07_b.jpg)
+
+![Image](img/circle-b.jpg)PCRE 默认执行区分大小写的比较。
+
+还请记得在模式周围使用定界符（参见图示）。
+
+**3.** 检查字符串是否以 *cat* 开头 ![Image](img/circle-c.jpg)。
+
+![Image](img/14_figure_08_c.jpg)
+
+![Image](img/circle-c.jpg)模式中的脱字符意味着匹配必须在字符串的开头找到。
+
+要使模式应用于字符串的开头，请将脱字符作为第一个字符使用（`^cat`）。现在句子 *my cat left* 将不再匹配。
+
+**4.** 检查字符串是否包含单词 *color* 或 *colour* ![Image](img/circle-d.jpg)。
+
+![Image](img/14_figure_09_d.jpg)
+
+![Image](img/circle-d.jpg)通过使用管道元字符，执行的搜索可以更加灵活。
+
+查找该单词美式或英式拼写的模式是 `col(o|ou)r`。前三个字母——*col*——必须存在。其后必须跟随 *o* 或 *ou*。最后需要一个 *r*。
+
+***
+
+提示
+
+如果你想在另一个字符串中匹配一个精确的字符串，请使用 `strstr()` 函数，它比正则表达式更快。事实上，根据经验法则，只有当手头的任务无法使用任何其他函数或技术完成时，才应使用正则表达式。
+
+***
+
+***
+
+提示
+
+你可以在模式中使用 `\Q` 和 `\E` 转义一组字符。在这两者之间的每个字符都将被视为字面量（因此 `\Q$2.99?\E` 匹配 *$2.99?*）。
+
+***
+
+***
+
+提示
+
+要匹配单个反斜杠，必须使用 `\\\\`。原因在于：在正则表达式中匹配反斜杠需要转义该反斜杠，从而得到 `\\`。然后在 PHP 字符串中使用反斜杠也必须转义，所以转义这两个反斜杠总共需要四个。
+
+***
+
+#### 使用量词
+
+你刚刚看到了并练习了几个元字符，其中最重要的就是脱字符和美元符号。接下来，有三个元字符允许多次出现：`a*` 匹配零个或多个 *a*（无 *a*、*a*、*aa*、*aaa* 等）；`a+` 匹配一个或多个 *a*（*a*、*aa*、*aaa* 等，但至少要有一个）；`a?` 匹配最多一个 *a*（*a* 或无 *a* 均匹配）。这些元字符在你的模式中都充当量词，花括号也是如此。**表 14.2** 列出了所有量词。
+
+**表 14.2. 量词**
+
+![Image](img/14tab02.jpg)
+
+要匹配某物的特定数量，请将数量放在花括号（`{}`）之间，指定一个具体数字、仅最小值，或最小值和最大值两者。因此，`a{3}` 匹配 *aaa*；`a{3,}` 匹配 *aaa*、*aaaa* 等（三个或更多 *a*）；`a{3,5}` 仅匹配 *aaa*、*aaaa* 和 *aaaaa*（三到五个之间）。
+
+注意量词作用于其前面的事物，所以 `a?` 匹配零个或一个 *a*，`ab?` 匹配一个 *a* 后跟零个或一个 *b*，但 `(ab)?` 匹配零个或一个 *ab*。因此，要匹配 *color* 或 *colour*，你也可以使用 `colou?r` 作为模式。
+
+#### 使用量词
+
+**1.** 在 Web 浏览器中加载 `pcre.php`（如果尚未加载）。
+
+**2.** 检查字符串是否包含字母 *c* 和 *t*，且中间有一个或多个字母 ![Image](img/circle-a.jpg)。
+
+![Image](img/14_figure_10_a.jpg)
+
+![Image](img/circle-a.jpg)加号用作量词时，要求该事物出现一次或多次。
+
+为此，使用 `c.+t` 作为模式，并使用任意数量的字符串作为目标字符串。请记住句点匹配任意字符（换行符除外）。以下每个字符串均为匹配：*cat*、*count*、*coefficient* 等。单词 *doctor* 不会匹配，因为 *c* 和 *t* 之间没有字母（虽然 *doctor* 会匹配 `c.*t`）。
+
+**3.** 检查字符串是否匹配 *cat* 或 *cats* ![Image](img/circle-b.jpg)。
+
+![Image](img/14_figure_11_b.jpg)
+
+![Image](img/circle-b.jpg)你可以通过在模式中添加 *s*? 来检查许多单词的复数形式。
+
+首先，如果你想进行精确匹配，请同时使用脱字符和美元符号。然后是字面文本 *cat*，后跟一个 *s*，后跟一个问号（代表 0 或 1 个 *s*）。最终模式——`^cats?$`——匹配 *cat* 或 *cats*，但不匹配 *my cat left* 或 *I like cats*。
+
+**4.** 检查字符串是否以 *.33*、* .333* 或 *.3333* 结尾 ![Image](img/circle-c.jpg)。
+
+![Image](img/14_figure_12_c.jpg)
+
+![Image](img/circle-c.jpg)花括号让你能够规定可接受的数量范围。
+
+
+
+
+要查找句点，请使用反斜杠对其进行转义：`\\`。要查找数字 3，请使用字面量 `3`。要查找一系列 3，请使用花括号（`{}`）。将这些组合起来，模式为 `\\.3{2,4}`。因为字符串应以此结尾（其后不能有其他内容），所以在模式末尾加上美元符号：`\\.3{2,4}$`。
+
+诚然，这是一个有点愚蠢的例子（不确定何时需要完全这样做），但它确实演示了几个要点。此模式将匹配许多内容——`12.333`、`varmit.3333`、`.33`、look `.33`——但不匹配 `12.3` 或 `12.334`。
+
+**5.** 匹配一个五位数 ![Image](img/circle-d.jpg)。
+
+![Image](img/14_figure_13_d.jpg)
+
+![Image](img/circle-d.jpg)确认数字包含五位数的正确测试。
+
+数字可以是 0 到 9 中的任意一个，因此模式的核心是 `(0|1|2|3|4|5|6|7|8|9)`。通俗地说，这意味着：数字是 0 或 1 或 2 或 3……要使其成为五位数，在此后跟一个量词：`(0|1|2|3|4|5|6|7|8|9){5}`。最后，要精确匹配此模式（而不是匹配字符串中的五位数），请使用脱字符和美元符号：`^(0|1|2|3|4|5|6|7|8|9){5}$`。
+
+这当然是匹配美国邮政编码的一种方法，这是一个非常有用的模式。
+
+* * *
+
+提示
+
+当使用花括号指定字符数量时，必须始终包含最小数量。最大数量是可选的：`a{3}` 和 `a{3,}` 都是可以接受的，但 `a{,3}` 不行。
+
+* * *
+
+* * *
+
+提示
+
+虽然学习如何编写和执行自己的正则表达式体现了对编程的执着，但通过搜索互联网已经可以获得大量现成的可用示例。
+
+* * *
+
+#### 使用字符类
+
+正如上一个例子所示（![Image](img/graycircle-d.jpg)见上一节），在模式中仅依赖字面量会很繁琐。必须写出所有那些数字来匹配任意数字是愚蠢的。想象一下，如果你想匹配任意四字母单词：`^(a|b|c|d...){4}$`（这甚至还没考虑大写字母）！为了使这些常见引用更容易，你可以使用*字符类*。
+
+类是通过将字符放在方括号（`[ ]`）内来创建的。例如，你可以用 `[aeiou]` 匹配任意一个元音字母。这等同于 `(a|e|i|o|u)`。或者你可以使用连字符来表示字符范围：`[a-z]` 是任意单个小写字母，`[A-Z]` 是任意大写字母，`[A-Za-z]` 是任意字母，`[0-9]` 匹配任意数字。例如，`[a-z]{3}` 将匹配 `abc`、`def`、`oiw` 等。
+
+在类内部，大多数元字符被视为字面量，除了四个。反斜杠仍然是转义字符，但脱字符（`^`）在作为类中第一个字符使用时是一个否定操作符。所以 `[^aeiou]` 将匹配任意非元音字符。类内唯一的其他元字符是连字符，它表示范围。（如果连字符用作类中的最后一个字符，它就是字面量连字符。）当然，右方括号（`]`）仍然作为类的终止符具有特殊含义。
+
+自然地，一个类可以同时包含范围和字面字符。一个人的名，可以包含字母、空格、撇号和句点，可用 `[A-z ‘.]` 表示（同样，句点在类内不需要转义，因为它在那里失去了元含义）。
+
+除了创建自己的类，还有六个预定义的类拥有自己的快捷方式（**表 14.3**）。数字类和空格类很容易理解。单词字符类中的“单词”并非语言意义上的“单词”，而是指未被空格或标点符号打断的字符串。
+
+**表 14.3. 字符类**
+
+![Image](img/14tab03.jpg)
+
+利用这些信息，五位数（即邮政编码）模式可以更容易地写为 `^[0-9]{5}$` 或 `^\d{5}$`。再举一个例子，`can\s?not` 将同时匹配 `can not` 和 `cannot`（单词 `can`，后跟零个或一个空格字符，后跟 `not`）。
+
+#### 使用字符类
+
+**1.** 在 Web 浏览器中加载 `pcre.php`（如果尚未加载）。
+
+**2.** 检查字符串是否格式化为有效的美国邮政编码 ![Image](img/circle-a.jpg)。
+
+![Image](img/14_figure_14_a.jpg)
+
+![Image](img/circle-a.jpg)匹配美国邮政编码的模式，支持五位数或五位加四位格式。
+
+美国邮政编码总是以五位数字开头（`^\d{5}`）。但有效的邮政编码也可能包含一个连字符，后跟另外四位数字（`-\d{4}$`）。要使这最后一部分成为可选的，请使用问号（0 或 1 量词）。完整模式为 `^(\d{5})(-\d{4})?$`。为了更清晰，模式的第一部分（匹配五位数字）也用括号括起来，尽管在这种情况下这不是必需的。
+
+**3.** 检查字符串是否不包含空格 ![Image](img/circle-b.jpg)。
+
+![Image](img/14_figure_15_b.jpg)
+
+![Image](img/circle-b.jpg)非空白字符快捷方式可用于确保提交的字符串是连续的。
+
+`\S` 字符类快捷方式将匹配非空格字符。要确保整个字符串不包含空格，请使用脱字符和美元符号：`^\S$`。如果不使用那些，该模式仅确认主题至少包含一个非空格字符。
+
+* * *
+
+**使用边界**
+
+*边界*是帮助查找边界的快捷方式。在某种程度上，你已经见过这点了：使用脱字符和美元符号来匹配值的开头或结尾。但如果你想匹配值内部的边界怎么办？
+
+最清晰的边界是单词和非单词之间的边界。这里的“单词”不是 *cat*、*month* 或 *zeitgeist*，而是指 `\w` 快捷方式的含义：大小写字母 A 到 Z、数字 0 到 9 以及下划线。要使用单词作为边界，有 `\b` 快捷方式。要使用非单词字符作为边界，有 `\B`。因此模式 `\bfor\b` 匹配 `they’ve come for you`，但不匹配 `force` 或 `forebode`。所以 `\bfor\B` 将匹配 `force`，但不匹配 `they’ve come for you` 或 `informal`。
+
+* * *
+
+**4.** 验证电子邮件地址 ![Image](img/circle-c.jpg)。
+
+![Image](img/14_figure_16_c.jpg)
+
+![Image](img/circle-c.jpg)一个相当不错且可靠的电子邮件地址验证。
+
+模式 `^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$` 提供了相当不错的电子邮件验证。它被脱字符和美元符号包裹，因此字符串必须是一个有效的电子邮件地址，且不能包含其他内容。电子邮件地址以字母、数字和下划线（由 `\w` 表示）开头，外加句点 (.) 和连字符。第一个块将匹配 `larryullman`、`larry77`、`larry.ullman`、`larry-ullman` 等。接下来，所有电子邮件地址都包含有且仅有一个 `@`。之后，可以有任意数量的字母、数字、句点和连字符。这是域名：`larryullman`、`smith-jones`、`amazon.co`（如 `amazon.co.uk`）等。最后，所有电子邮件地址都以一个句点和两到六个字母结尾。这涵盖了 `.com`、`.edu`、`.info`、`.travel` 等。
+
+* * *
+
+提示
+
+我认为邮政编码示例很好地演示了正则表达式的复杂性和实用性。一个模式准确测试了邮政编码的两种格式，这非常棒。但当你将其放入 PHP 代码中，加上引号和定界符时，就不容易理解了：
+
+```
+if (preg_match ('/^(\d{5})(-\d{4})?$/', $zip)) {
+```
+
+那看起来确实像天书，对吧？
+
+* * *
+
+* * *
+
+提示
+
+
+
+
+
+这种电子邮件地址验证模式相当不错，虽然不完美。它会允许一些无效地址通过（比如以句点开头或包含连续多个句点的地址）。然而，一个 100% 万无一失的验证模式会长得荒谬，而且经常使用正则表达式实际上是在设法排除大部分无效输入，同时又不至于无意中排除任何有效输入。
+
+---
+
+### 提示
+
+正则表达式，特别是 PCRE（Perl 兼容正则表达式），可能极其复杂。初学者使用它们时，极有可能会破坏验证流程，而不是改进它们。这就是为什么这样练习很重要的原因。
+
+---
+
+### 查找所有匹配项
+
+回到配合 Perl 兼容正则表达式使用的 PHP 函数，`preg_match()` 仅用于查看模式是否与某个值匹配。但该脚本并未报告该值中究竟哪部分与模式匹配。你可以通过向该函数提供一个变量作为第三个参数来获取此信息：
+
+```
+preg_match(pattern, subject, $match);
+```
+
+`$match` 变量将包含找到的第一个匹配项（因为此函数仅返回值中的第一个匹配项）。要查找每一个匹配项，请使用 `preg_match_all()`。其语法相同：
+
+```
+preg_match_all(pattern, subject, $matches);
+```
+
+如果找到匹配项，此函数将返回匹配的数量；如果未找到，则返回 FALSE。它还会将找到的每一个匹配项赋值给 `$matches`。让我们更新 PHP 脚本以打印返回的匹配项，然后再运行几个测试。
+
+#### 报告所有匹配项
+
+**1.** 在文本编辑器或 IDE 中打开 `pcre.php`（**脚本 14.1**）（如果尚未打开）。
+
+**2.** 将 `preg_match()` 的调用更改为（**脚本 14.2**）：
+
+```
+if (preg_match_all ($pattern, $subject, $matches) ) {
+```
+
+这里有两处更改。首先，被调用的实际函数不同了。其次，第三个参数提供了一个变量名，该变量将被赋予每一个匹配项。
+
+**脚本 14.2.** 为了准确显示字符串中的哪些值与哪些模式匹配，此修订版脚本将打印出每一个匹配项。你可以通过在 `preg_match()` 或 `preg_match_all()` 中将变量命名为第三个参数来检索匹配项。
+
+---
+
+```
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+2       1.0 Transitional//EN" "http://www.w3.org/
+3       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+4   <html xmlns="http://www.w3.org/1999/
+5       xhtml" xml:lang="en" lang="en">
+6   <head>
+7       <meta http-equiv="Content-Type"
+8           content="text/html; charset=utf-8" />
+9       <title>Testing PCRE</title>
+10  </head>
+11  <body>
+12  <?php // Script 14.2 - matches.php
+13  // This script takes a submitted string
+14      and checks it against a submitted pattern.
+15  // This version prints every match made.
+16
+17  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+18
+19      // Trim the strings:
+20      $pattern = trim($_POST['pattern']);
+21      $subject = trim($_POST['subject']);
+22
+23      // Print a caption:
+24      echo "<p>The result of checking<br />
+25          <b>$pattern</b><br />against<br />
+26          $subject<br />is ";
+27
+28      // Test:
+29      if (preg_match_all ($pattern,
+30          $subject, $matches) ) {
+31          echo 'TRUE!</p>';
+32
+33          // Print the matches:
+34          echo '<pre>' . print_r($matches,
+35              1) . '</pre>';
+36
+37      } else {
+38          echo 'FALSE!</p>';
+39      }
+40
+41  } // End of submission IF.
+42  // Display the HTML form.
+43  ?>
+44  <form action="matches.php"
+45      method="post">
+46      <p>Regular Expression Pattern:
+47          <input type="text" name="pattern"
+48          value="<?php if (isset($pattern)) echo
+49          htmlentities($pattern); ?>" size="40" />
+50          (include the delimiters)</p>
+51      <p>Test Subject: <textarea
+52          name="subject" rows="5"
+53          cols="40"><?php if (isset($subject))
+54          echo htmlentities($subject); ?>
+55          </textarea></p>
+56      <input type="submit" name="submit"
+57          value="Test!" />
+58  </form>
+59  </body>
+60  </html>
+```
+
+---
+
+**3.** 打印 *TRUE* 值后，打印 `$matches` 的内容：
+
+```
+echo '<pre>' . print_r($matches, 1) . '</pre>';
+```
+
+使用 `print_r()` 输出变量内容是了解 `$matches` 中有什么的最简单方法（你也可以改用 `foreach` 循环）。正如你运行此脚本时将看到的，该变量将是一个数组，其第一个元素是一个包含所有匹配项的数组。
+
+**4.** 将表单的 `action` 属性更改为 *matches.php*：
+
+```
+<form action="matches.php" method="post">
+```
+
+此脚本将被重命名，因此 `action` 属性也必须相应更改。
+
+**5.** 将主题输入框更改为文本域：
+
+```
+<p>Test Subject: <textarea name="subject" rows="5" cols="40"> <?php if (isset($subject)) echo htmlentities($subject); ?></textarea></p>
+```
+
+---
+
+为了能输入更多文本作为主题，此元素将变为文本域。
+
+**6.** 将文件另存为 `matches.php`，将其放入你的 Web 目录，并在 Web 浏览器中测试它。
+
+对于第一个测试，使用 **for** 作为模式，使用 *This is a formulaic test for informal matches*. 作为主题 ![Image](img/circle-a.jpg)。这可能不算标准英语，但它是个很好的测试主题。
+
+![Image](img/14_figure_17_a.jpg)
+
+![Image](img/circle-a.jpg)第一个测试返回三个匹配项，因为字面文本 *for* 被找到了三次。
+
+对于第二个测试，将模式更改为 **for.\*** ![Image](img/circle-b.jpg)。结果可能会让你感到惊讶，其原因在侧边栏“贪婪与非贪婪”中讨论。要使此搜索变得不那么贪婪，可以将模式更改为 **for.\*?**，其结果将与 ![Image](img/graycircle-a.jpg) 中的相同。
+
+![Image](img/14_figure_18_b.jpg)
+
+![Image](img/circle-b.jpg)因为正则表达式默认是“贪婪”的（见侧边栏），此模式在字符串中只找到一个匹配项。该匹配项恰好从第一个 *for* 实例开始，一直持续到字符串末尾。
+
+对于第三个测试，使用 **for\[\S\]\***，或更简单的 **for\S\*** ![Image](img/circle-c.jpg)。这会使匹配在一发现空白字符时立即停止（因为模式要求匹配 *for* 后跟任意数量的非空白字符）。
+
+---
+
+### 贪婪与非贪婪
+
+Perl 兼容正则表达式的一个关键组成部分是*贪婪*的概念。默认情况下，PCRE 将尝试匹配尽可能多的内容。例如，模式 `<.+>` 匹配任何 HTML 标签。当在像 *<a href=”page.php”>Link</a>* 这样的字符串上测试时，它实际上会匹配整个字符串，从开头的 `<` 到结尾的 `>`。该字符串包含三个可能的匹配项：整个字符串、开始标签（从 *<a* 到 *">*），以及结束标签 (*</a>*)。
+
+要覆盖贪婪行为，需使匹配变为*惰性*（非贪婪）。惰性匹配将包含尽可能少的数据。任何量词后跟问号即可使其变为惰性。例如，模式 `<.+?>` 在前述字符串中将返回两个匹配项：开始标签和结束标签。它不会将整个字符串作为一个匹配项返回。（这是正则表达式语法令人困惑的方面之一：同一个字符——此处为问号——根据其上下文不同可能具有不同含义。）
+
+另一种使模式不那么贪婪的方法是使用排除型字符类。模式 `<[^>]+>` 匹配开始和结束 `<>` 之间除结束符 `>` 以外的所有内容。因此使用此模式将产生与使用 `<.+?>` 相同的结果。此模式还将匹配包含换行符的字符串，而句点则不匹配换行符。
+
+
+
+
+
+![Image](img/14_figure_19_c.jpg)
+
+![Image](img/circle-c.jpg)此修订后的模式匹配以 `for` 开头并以单词结尾的字符串。
+
+对于最终测试，请使用 `\b[a-z]*for[a-z]*\b` 作为模式 ![Image](img/circle-d.jpg)。此模式利用了边界，详见本章前面的侧边栏“使用边界”。
+
+![Image](img/14_figure_20_d.jpg)
+
+![Image](img/circle-d.jpg)与 ![Image](img/graycircle-c.jpg) 中的模式不同，此模式匹配包含 `for` 的完整单词（此处为 *informal*，![Image](img/graycircle-c.jpg) 中为 *formal*）。
+
+***
+
+Tip
+
+`preg_split()` 函数接受一个字符串，并使用正则表达式模式将其分割成数组。
+
+***
+
+#### 使用修饰符
+
+本章介绍了可在正则表达式模式中使用的大多数特殊字符。最后一种特殊字符是模式修饰符。**表 14.4** 列出了这些修饰符。模式修饰符与其他元字符不同，它们位于结束定界符之后。
+
+**表 14.4. 模式修饰符**
+
+![Image](img/14tab04.jpg)
+
+其中最重要的是 `i`，它启用不区分大小写的搜索。前面一系列步骤中使用 `for` 变体的所有示例都不会匹配单词 `For`。然而，`/for.*/i` 将会匹配。请注意，我在该模式中包含了定界符，因为修饰符位于结束定界符之后。同样，前面序列中的最后一步引用了侧边栏“减少贪婪”，并说明了 `for.*?` 如何执行惰性搜索。`/for.*/U` 也是如此。
+
+多行模式很有趣，因为你可以让脱字符和美元符号表现得不同。默认情况下，它们各自应用于整个值。在多行模式下，脱字符匹配任意行的开头，美元符号匹配任意行的结尾。
+
+#### 使用修饰符
+
+**1.** 在 Web 浏览器中加载 `matches.php`（如果尚未加载）。
+
+**2.** 验证电子邮件地址列表 ![Image](img/circle-a.jpg)。
+
+![Image](img/14_figure_21_a.jpg)
+
+![Image](img/circle-a.jpg)每行一个的电子邮件地址列表可使用多行模式进行验证。每个有效地址均存储在 `$matches` 中。
+
+为此，请使用 `/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}\r?$/m` 作为模式。你会看到我在美元符号前添加了一个可选的回车符 (`\r?`)。这是必要的，因为某些行将包含回车符而其他行则不会。而在多行模式下，美元符号匹配行的结尾。（为了更灵活，你可以改用 `\s?`。）
+
+**3.** 验证美国邮政编码列表 ![Image](img/circle-b.jpg)。
+
+![Image](img/14_figure_22_b.jpg)
+
+![Image](img/circle-b.jpg)验证每行一个的邮政编码列表。
+
+与步骤 2 中的示例非常相似，现在的模式是 `/^(\d{5})(-\d{4})?\s?$/m`。你会看到我使用了更灵活的 `\s?` 而不是 `\r?`。
+
+当你自己尝试此操作时（或参考 ![Image](img/graycircle-b.jpg)），你还会注意到 `$matches` 变量现在包含多得多的信息。这将在本章的下一节中解释。
+
+***
+
+Tip
+
+要始终匹配模式的开头或结尾，而不受多行设置的影响，可以使用快捷方式。在模式中，快捷方式 `\A` 仅匹配值的最开始，`\z` 匹配最末尾，而 `\Z` 匹配任意行尾，类似于单行模式下的 `$`。
+
+***
+
+***
+
+Tip
+
+如果你的 PHP 版本支持，最好使用 Filter 扩展来验证电子邮件地址或 URL。但如果你必须验证此类列表，Filter 扩展将无法胜任，则需要使用正则表达式。
+
+***
+
+#### 匹配和替换模式
+
+本章要讨论的最后一个主题是如何在值中匹配和替换模式。虽然 `preg_match()` 和 `preg_match_all()` 可以为你查找内容，但如果你想执行搜索和替换，则需要使用 `preg_replace()`。其语法为
+
+```
+preg_replace(pattern, replacement, subject);
+```
+
+该函数接受一个可选的第四个参数，用于限制替换的次数。
+
+要将所有 `cat` 实例替换为 `dog`，你可以使用
+
+```
+$str = preg_replace('/cat/', 'dog', 'I like my cat.');
+```
+
+此函数返回修改后的值（如果未进行匹配则返回未修改的值），因此你可能需要将其赋值给变量，或将其作为参数传递给另一个函数（如通过调用 `echo` 来打印）。此外，提醒一下，上面只是一个示例：你永远不应该使用正则表达式将一个字面字符串替换为另一个，应改用 `str_replace()`。
+
+还有一个相关概念涉及此函数，即*反向引用*。在邮政编码匹配模式——`^(\d{5})(-\d{4})?$`——中，括号内有两个分组：前五位数字和可选的连字符加四位扩展数字。在正则表达式模式中，PHP 会自动为括号分组编号，从 1 开始。反向引用允许你通过使用 `$` 加上相应的数字来引用各个部分。例如，如果你用此模式匹配邮政编码 `94710-0001`，引用 `$2` 将得到 `-0001`。代码 `$0` 指代整个初始字符串。这就是为什么 ![Image](img/graycircle-b.jpg) 上一节中显示 `$matches[0]` 包含完整的邮政编码匹配，`$matches[1]` 包含匹配的前五位数字，`$matches[2]` 包含匹配的连字符加四位数字。
+
+为了练习这一点，让我们修改 脚本 14.2 以也接受替换输入 ![Image](img/circle-a.jpg)。
+
+![Image](img/14_figure_23_a.jpg)
+
+![Image](img/circle-a.jpg)`preg_replace()` 的一个用途是将不当词汇的变体替换为代表省略的符号。
+
+#### 匹配和替换模式
+
+**1.** 在文本编辑器或 IDE 中打开 `matches.php`（脚本 14.2）（如果尚未打开）。
+
+**2.** 添加对第三个传入变量的引用（**脚本 14.3**）：
+
+```
+$replace = trim($_POST['replace']);
+```
+
+正如你在 ![Image](img/graycircle-a.jpg) 中所见，第三个表单输入（添加在现有两个之间）接收替换值。该值也会被修剪以去除多余的空格。
+
+如果你的服务器启用了 Magic Quotes，你在这里仍需要应用 `stripslashes()`。
+
+**脚本 14.3.** 要测试 `preg_replace()` 函数（它用另一个值替换字符串中匹配的模式），可以使用此 PCRE 测试脚本的第三个版本
+
+***
+
+```
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/
+      xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+5      <title>Testing PCRE Replace</title>
+6  </head>
+7  <body>
+8  <?php // Script 14.3 - replace.php
+9  // This script takes a submitted string and checks it against a submitted pattern.
+10 // This version replaces one value with another.
+11
+12 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+13
+14     // Trim the strings:
+15     $pattern = trim($_POST['pattern']);
+16     $subject = trim($_POST['subject']);
+17     $replace = trim($_POST['replace']);
+18
+19     // Print a caption:
+20     echo "<p>The result of replacing<br /><b>$pattern</b><br />with<br />$replace
+          <br />in<br />$subject<br /><br />";
+21
+22     // Check for a match:
+23     if (preg_match ($pattern, $subject) ) {
+```
+
+
+
+
+
+```php
+24          echo preg_replace($pattern, $replace, $subject) . '</p>';
+
+25      } else {
+
+26          echo '未找到该模式！</p>';
+
+27      }
+
+28
+
+29  } // 提交 IF 语句结束。
+
+30  // 显示 HTML 表单。
+
+31  ?>
+    <form action="replace.php" method="post">
+        <p>正则表达式模式：<input type="text" name="pattern" value="<?php if (isset($pattern)) echo htmlentities($pattern); ?>" size="40" />（包含定界符）</p>
+        <p>替换内容：<input type="text" name="replace" value="<?php if (isset($replace)) echo htmlentities($replace); ?>" size="40" /></p>
+        <p>测试主体：<textarea name="subject" rows="5" cols="40"><?php if (isset($subject)) echo htmlentities($subject); ?></textarea></p>
+        <input type="submit" name="submit" value="测试！" />
+    </form>
+    </body>
+</html>
+```
+
+---
+
+**3.** 更改标题输出：
+
+```php
+echo "<p>The result of replacing<br /><b>$pattern</b><br /> with<br />$replace<br />in<br />$subject<br /><br />";
+```
+
+该标题将输出所有传入的值，这是在应用 `preg_replace()` 之前进行的。
+
+**4.** 更改正则表达式条件判断，使其仅在匹配成功时才调用 `preg_replace()`：
+
+```php
+if (preg_match($pattern, $subject)) {
+    echo preg_replace($pattern, $replace, $subject) . '</p>';
+} else {
+    echo 'The pattern was not found!</p>';
+}
+```
+
+你可以在不先运行 `preg_match()` 的情况下直接调用 `preg_replace()`。如果未发生匹配，则不会进行替换。但为了明确是否发生了匹配（考虑到正则表达式的棘手性，这一点总是值得确认的），会先应用 `preg_match()` 函数。如果它返回 TRUE 值，则调用 `preg_replace()` 并打印结果 ![Image](img/circle-b.jpg)。否则，将打印一条消息指明未发生匹配 ![Image](img/circle-c.jpg)。
+
+![Image](img/14_figure_24_b.jpg)
+
+![Image](img/circle-b.jpg)生成的文本中，bleep、bleeps、bleeped、bleeper 和 bleeping 的用法均被替换为 `*****`。
+
+![Image](img/14_figure_25_c.jpg)
+
+![Image](img/circle-c.jpg)如果在主体中未找到该模式，主体将不会被更改。
+
+**5.** 将表单的 `action` 属性更改为 `replace.php`：
+
+```html
+<form action="replace.php" method="post">
+```
+
+该文件将被重命名，因此此值需要相应更改。
+
+**6.** 添加一个用于输入替换字符串的文本框：
+
+```html
+<p>Replacement: <input type="text" name="replace" value="<?php if (isset($replace)) echo htmlentities($replace); ?>" size="40" /></p>
+```
+
+**7.** 将文件另存为 `replace.php`，将其放置在你的 Web 目录中，并在 Web 浏览器中测试 ![Image](img/circle-d.jpg)。
+
+![Image](img/14_figure_26_d.jpg)
+
+![Image](img/circle-d.jpg)`preg_replace()` 的另一个用途是动态地将电子邮件地址转换为可点击的链接。请查看 HTML 源代码以了解替换的完整效果。
+
+作为一个很好的例子，你可以将文本中找到的电子邮件地址转换为其 HTML 链接等效项：`<a href="mailto:email@example.com">email@example.com</a>`。匹配电子邮件地址的模式现在应该很熟悉了：`^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$`。然而，因为电子邮件地址可能位于某些文本之中，所以插入符号和美元符号需要替换为单词边界快捷方式：`\b`。因此最终模式为 `/\b[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}\b/`。
+
+要引用这个匹配的电子邮件地址，可以使用 `$0`（因为 `$0` 指代整个匹配内容，无论是否使用了括号）。因此替换值应为 `<a href="mailto:$0">$0</a>`。因为涉及 HTML，请查看生成页面的 HTML 源代码，以最直观地了解发生了什么。
+
+---
+
+> **提示**
+>
+> 反向引用甚至可以在模式内部使用。例如，如果模式包含一个分组（即子模式），且该分组会被重复。
+
+---
+
+> **提示**
+>
+> 我在这里相当快速地介绍了 PCRE 语法的大部分内容，但其内容远不止这些。一旦你掌握了所有这些，可以考虑进一步学习*锚点*、*命名子模式*、*注释*、*环视*、*占有量词*等。
+
+---
+
+### 复习与实践
+
+如果你在复习问题或实践提示方面有任何疑问，请访问本书的支持论坛（[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)）。
+
+#### 复习
+
+*   哪个函数用于匹配正则表达式？哪个函数用于查找正则表达式的所有匹配项？哪个函数用于替换正则表达式的匹配项？
+*   可以使用哪些字符来定界正则表达式？哪些字符不能使用？
+*   如何匹配字面字符或字符串？
+*   什么是元字符？如何转义元字符？
+*   使用哪个元字符将模式绑定到字符串的开头？结尾呢？
+*   如何创建子模式（即分组）？
+*   什么是量词？如何要求某字符或字符串出现 0 次或 1 次？0 次或多次？1 次或多次？精确出现 *X* 次？一定范围内的次数？最少出现次数？
+*   什么是字符类？
+*   哪些元字符在字符类内部仍具有特殊含义？
+*   哪个快捷方式代表“任意数字”字符类？“任意空白字符”类呢？“任意单词字符”？哪些快捷方式代表这些的相反类？
+*   什么是边界？如何在模式中创建边界？
+*   如何使匹配变为“惰性”？这到底意味着什么？
+*   什么是模式修饰符？
+*   什么是*反向引用*？它是如何工作的？
+
+#### 实践
+
+*   在线搜索一份 PCRE“速查表”（PHP 或其他语言均可），其中列出了所有有意义的字符和类。打印出来放在电脑旁。
+*   练习，练习，再练习！
+
+## 15. jQuery 简介
+
+### 本章内容
+
+*   什么是 jQuery？ 458
+*   引入 jQuery 460
+*   使用 jQuery 463
+*   选择页面元素 466
+*   事件处理 469
+*   DOM 操作 473
+*   使用 Ajax 479
+*   复习与实践 492
+
+本书新增了本章，介绍 jQuery JavaScript 框架。随着 JavaScript 在过去十年中发展成为一种更有价值的语言，其有意义的用法已成为当今网站的常态。因此，许多 PHP 开发人员也被期望懂得一些 JavaScript。
+
+虽然本章无法全面涵盖 JavaScript 或 jQuery，但你将学到足够多的知识，以便将用户所期望的功能添加到基于 PHP 的项目中。在此过程中，你还将学习 JavaScript 编程的一些基础知识，并了解可能想要深入探究的 jQuery 领域。
+
+### 什么是 jQuery？
+
+
+
+
+
+#### 引入 jQuery
+
+要掌握 jQuery，你必须对 JavaScript 是什么有扎实的理解。正如 第 11 章 “Web 应用程序开发” 所讨论的，JavaScript 是一种编程语言，主要用于向网页添加动态功能。与始终在服务器上运行的 PHP 不同，JavaScript 通常在客户端运行（JavaScript 也开始被用作服务器端工具，尽管那仍处于边缘地带）。PHP 正是因为是服务器端的，所以在很大程度上与浏览器无关：你在 PHP 中做的很少有事情会因浏览器不同而产生不同结果。相反，正是因为它运行在 Web 浏览器中，JavaScript 代码通常必须针对浏览器的差异进行定制。多年来，这是 Web 开发人员的噩梦：创建可靠的跨浏览器代码。克服这一特定障碍是 jQuery ([www.jquery.com](http://www.jquery.com)) 的众多优势之一。
+
+![jQuery JavaScript 框架的主页。](img/15_figure_01_a.jpg)
+
+jQuery 是一个 JavaScript 框架，框架只是一个代码库，其使用可以加快并简化开发。正如你将在本章中看到的，jQuery 框架的核心能够处理所有关键的 JavaScript 功能。但该框架可通过插件进行扩展，以提供其他功能，例如创建动态、分页、可排序的数据表的能力。事实上，许多有用的用户界面工具已被封装在它们自己的包中，即 jQuery UI ([www.jqueryui.com](http://www.jqueryui.com))。
+
+![jQuery 用户界面库 (jQuery UI) 的主页，它与 jQuery 配合工作。](img/15_figure_02_b.jpg)
+
+市面上有许多 JavaScript 框架，我绝不声称 jQuery 是最好的。不过我确实偏爱 jQuery，它迅速赢得了首屈一指的 JavaScript 框架地位之一。正如你即将看到的，jQuery 具有简单但晦涩的语法，通过使用它，你可以从容地操作文档对象模型 (DOM)。这就是说你可以轻松引用 HTML 页面中的元素，从而获取表单输入的值、添加或移除任何类型的 HTML 元素、更改元素属性，等等。
+
+在深入了解使用 jQuery 的细节之前，请明白 jQuery 只是一个 JavaScript 框架，这意味着你在接下来的几页中实际要做的是 JavaScript 编程。JavaScript 作为一种语言，虽然在某些方面与 PHP 相似，但在其他方面有所不同，例如变量的创建方式、用于执行连接的字符等。此外，JavaScript 是一种*面向对象语言*，这意味着你有时会看到的语法将比你迄今为止所做的过程式 PHP 编程有更大的不同（下一章将介绍 PHP 中的面向对象编程——OOP）。因为你不可避免地会遇到问题——比如仅仅是漏掉一个分号，你需要知道一些关于如何调试 JavaScript 的知识。关于该主题的快速介绍，请参阅侧栏。
+
+有关服务器端 JavaScript 的示例，请查看 Node ([www.nodejs.org](http://www.nodejs.org)) 或 Jaxer ([www.jaxer.org](http://www.jaxer.org))。
+
+> **提示**
+>
+> 我写过一个关于 jQuery 的系列文章，涵盖了本章的许多相同主题。你可以在我的网站 ([www.LarryUllman.com](http://www.LarryUllman.com)) 上找到该系列。
+
+#### 调试 JavaScript
+
+到目前为止，你可能不觉得 PHP 将所有错误倾倒到你的 Web 浏览器中、将你的错误摆在你面前是多么美妙。直到现在。当网页出现 JavaScript 错误时，你很少会收到通知。为了调试有问题的 JavaScript 代码，你需要做的第一件事是查看实际存在什么错误。
+
+当你用 JavaScript 编程时，需要的第一个工具是一个好的 Web 浏览器。不是给*用户*用的好的 Web 浏览器，而是给*开发人员*用的。在这方面，Firefox ([www.mozilla.com](http://www.mozilla.com)) 是当之无愧的冠军，尽管 Opera ([www.opera.com](http://www.opera.com)) 和 Google Chrome ([www.google.com/chrome/](http://www.google.com/chrome/)) 可能是并列的亚军。通过打开 Firefox 内置的错误控制台（位于工具菜单下），你将能够看到发生的任何 JavaScript 错误。
+
+Firefox 相对于其他浏览器的一个额外优势是拥有悠久的优秀第三方扩展历史。特别是 Firebug 和 Web Developer，它们是理解网页内部发生情况的绝佳工具。还有像 FireQuery 这样的扩展，它们为 Firefox 添加了感知 jQuery 的开发工具。
+
+在开始本章之前，我建议你下载并安装最新版本的 Firefox 以及上述扩展（如果你尚未安装）。在 Firefox 中运行你启用了 JavaScript 的网页将使你更容易在错误发生时看到它们，从而使调试变得更加容易。
+
+#### 引入 jQuery
+
+JavaScript 默认内置于所有图形化 Web 浏览器中，这意味着无需采取特殊步骤即可在网页中包含 JavaScript（用户可以选择禁用 JavaScript，尽管统计上很少有人这么做）。jQuery 是一个代码框架；为了使用它，网页必须首先引入 jQuery 库。要在网页中包含任何外部 JavaScript 文件，需要用到 HTML `<script>` 标签，将外部文件的名称作为其 `src` 属性的值：
+
+```html
+<script src="file.js" type="text/javascript" charset="utf-8"></script>
+```
+
+jQuery 框架文件的名称类似于 `jquery-X.Y.Z.min.js`，其中 `X.Y.Z` 是版本号（撰写本文时为 1.6.1）。文件名中的 `min` 部分表示该 JavaScript 文件已被*压缩*。*压缩*是指从代码中移除空格、换行符和注释。结果是代码几乎不可读，但仍然完全功能正常。压缩代码的好处是它在浏览器中加载速度略快，因为文件体积稍微小一些。
+
+![压缩后的 jQuery 代码外观。](img/15_figure_03_a.jpg)
+
+以下步骤将指导你在 Web 服务器上安装 jQuery 库并将其引入网页；另一种方法请参阅侧栏。
+
+#### 引入 jQuery
+
+1.  在 Web 浏览器中打开 [www.jquery.com](http://www.jquery.com)。
+2.  在页面顶部，选择 **PRODUCTION**（这是默认选项），然后单击 **Download (jQuery)**。
+    ![下载当前版本 jQuery 的表单。](img/15_figure_04_b.jpg)
+    因为生成的文件只是 JavaScript，它将直接在你的 Web 浏览器中加载。
+3.  将页面保存到你的计算机上。
+    大多数浏览器提供“保存页面”、“另存为”或“网页另存为”选项。将文件保存为 `jquery-X.Y.Z.min.js`，其中 `X.Y.Z` 是实际版本号。
+
+#### 使用托管的 jQuery
+
+
+
+
+本章建议您下载一份 jQuery 副本并将其放置在您的 Web 目录中。完成后，您只需更新 **`script`** 标签以指向您网站上 jQuery 文件的位置。不过，我想提及一种替代方案：使用 *hosted*（托管）版本的 jQuery。这意味着您不使用存储在自己 Web 服务器上的 jQuery 库版本，而是使用存储在其他地方在线的版本。例如，Google 为公众提供许多 JavaScript 框架的副本（**[`code.google.com/apis/libraries/`](http://code.google.com/apis/libraries/)**）。要使用 Google 提供的 jQuery 库副本，代码如下：
+
+```html
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" charset="utf-8"></script>
+```
+
+通过使用 Google 托管的 jQuery 版本，您的网站（即您网站的访问者）可能会看到性能提升，这归功于 Google 的内容分发网络（CDN）以及浏览器缓存媒体的方式。我在本章中选择 *不* 使用 Google 提供的 jQuery 版本，仅仅是因为并非所有读者都有持续的互联网连接，而且知道如何使用本地 JavaScript 文件是一项关键技能。
+
+---
+
+**4.** 将下载的文件移动到 Web 服务器目录下的 **`js`** 文件夹中。
+
+本章示例将使用的所有 JavaScript 文件都将放置在一个名为 **`js`** 的子目录中。
+
+**5.** 在文本编辑器或 IDE 中开始一个新的 HTML 文档，命名为 **`test.html`**（**Script 15.1**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Testing jQuery</title>
+
+</head>
+
+<body>
+
+  <!-- Script 15.1 - test.html -->
+
+</body>
+
+</html>
+```
+
+这个第一个示例将简单地测试 jQuery 库的引入和基本用法。
+
+**6.** 在 HTML head 中引入 jQuery：
+
+```html
+<script type="text/javascript" src="js/jquery-1.6.1.min.js" charset="utf-8"></script>
+```
+
+**`script`** 标签用于引入 JavaScript 文件。按照惯例，**`script`** 标签放置在 HTML 页面的 head 中，尽管这不是必须的（也并非总是如此）。**`src`** 属性的值需要与您的 jQuery 库的名称和位置相匹配。在本例中，假设此 HTML 页面与作为步骤 4 一部分创建的 **`js`** 文件夹位于同一目录中。
+
+**7.** 将文件保存为 **`test.html`**。
+
+因为此脚本不会执行任何 PHP，所以它使用 **`.html`** 扩展名。
+
+**8.** 如果您愿意，可以在 Web 浏览器中加载该页面并检查错误。
+
+因为这只是一个 HTML 页面，您可以直接在 Web 浏览器中加载它，而无需通过 URL。然后您可以使用浏览器的错误控制台或其他开发工具（请参阅“调试 JavaScript”侧边栏）来检查加载 JavaScript 文件时是否发生了错误。
+
+**Script 15.1.** 这个空白 HTML 页面展示了如何引入 jQuery 库。
+
+---
+
+```html
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/
+    xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+5      <title>Testing jQuery</title>
+6      <script type="text/javascript" src="js/jquery-1.6.1.min.js" charset="utf-8"></script>
+7  </head>
+8  <body>
+9      <!-- Script 15.1 - test.html -->
+10  </body>
+11  </html>
+```
+
+---
+
+#### 使用 jQuery
+
+一旦您成功将 jQuery 引入 Web 页面，就可以开始使用它了。jQuery 或任何 JavaScript 代码都可以写在开始和结束的 **`script`** 标签之间：
+
+```html
+<script type="text/javascript">
+// JavaScript goes here.
+</script>
+```
+
+（请注意，在 JavaScript 中，双斜杠创建注释，就像在 PHP 中一样。）
+
+或者，您可以将 jQuery 和 JavaScript 代码放在一个单独的文件中，然后使用 **`script`** 标签引入该文件，就像您引入 jQuery 库一样。本章将采用这种方式，以进一步将 JavaScript 与 HTML 分离。
+
+需要明确的是，一个 Web 页面可以多次使用 **`script`** 标签，但同一个 **`script`** 标签不能既引入外部文件又包含 JavaScript 代码。
+
+放置在 **`script`** 标签中的代码将在浏览器遇到它时立即执行。不过，这通常会有问题，因为 JavaScript 经常用于与 DOM 交互：如果立即执行的 JavaScript 代码引用了 DOM 元素，代码将会失败，因为此时浏览器尚未遇到该 DOM 元素 ![Image](img/circle-a.jpg)。引用 DOM 元素唯一可靠的方法是在浏览器了解整个 DOM 之后。
+
+![Image](img/15_figure_05_a.jpg)
+
+![Image](img/circle-a.jpg) 浏览器在加载 HTML 时读取 Web 页面，这意味着 JavaScript 代码在浏览器看到所有 DOM 元素之前无法引用它们。
+
+在标准 JavaScript 中，您可以通过引用 **`window.onLoad`** 让代码在页面完全加载后执行。在 jQuery 中，首选的方法是确认 Web 文档已 *ready*（就绪）：
+
+```javascript
+$(document).ready(some_function);
+```
+
+正如已经提到的，jQuery 语法对于初学者来说可能显得特别陌生，所以我将详细解释这一点。首先，**`$(something)`** 代码是在 jQuery 中选择 Web 浏览器内元素等的方式。在该特定情况下，被选择的项目是整个 Web 文档。对此选择应用 **`ready()`** 函数。它接受一个参数：要调用的函数。请注意，该参数是对函数的引用：其名称，不带引号。单独地，**`some_function()`** 必须被定义，实际工作——即文档加载时应执行的操作——将在其中进行。
+
+另一种语法是使用 *anonymous function*（匿名函数），即没有名称的函数定义。匿名函数在 JavaScript 中很常见（在 PHP 中也可以使用匿名函数，但不常见）。要创建匿名函数，将函数的定义内联放置，以代替函数的名称：
+
+```javascript
+$(document).ready(function() {
+    // Function code.
+});
+```
+
+因为在浏览器就绪时执行代码的需求非常普遍，所以在 jQuery 中，这种整个结构通常简化为：
+
+```javascript
+$(function() {
+    // Function code.
+});
+```
+
+语法不寻常，尤其是末尾的 **`});`**，所以在编程时请留意这一点。与任何编程语言一样，不正确的 JavaScript 语法将使代码无法运行。
+
+为了测试 jQuery，接下来的步骤序列将在文档就绪后创建一个 JavaScript 警报 ![Image](img/circle-b.jpg)。在您让这个简单的测试正常工作后，就可以安全地开始更实际地使用 jQuery 了。
+
+![Image](img/15_figure_06_b.jpg)
+
+![Image](img/circle-b.jpg) 当 jQuery 识别到浏览器中的 Web 文档已就绪时，将创建此 JavaScript 警报。
+
+#### 使用 jQuery
+
+**1.** 在文本编辑器或 IDE 中创建一个新的 JavaScript 文档，命名为 **`test.js`**（**Script 15.2**）：
+
+```javascript
+// Script 15.2 - test.js
+```
+
+JavaScript 文件没有 **`script`** 标签——那些在 HTML 文档中——也没有其他开始标签。您可以直接开始输入 JavaScript 代码。同样，双斜杠创建注释。
+
+**Script 15.2.** 这个简单的 JavaScript 文件创建一个警报，以测试 jQuery 库的成功引入和使用。
+
+---
+
+```javascript
+1  // Script 15.2 - test.js
+2  // This script is included by test.html.
+3  // This script just creates an alert to
+```
+
+
+
+测试 jQuery。
+
+4
+
+5  // 当文档准备就绪时执行某些操作：
+
+6  $(function( ) {
+
+8      // 弹出警告！
+9      alert('Ready!');
+
+11 });
+
+***
+
+### 2. 当文档准备就绪时创建一个警告：
+
+```
+$(function( ) {
+  alert('Ready!');
+});
+```
+
+这只是刚才解释过的语法，只是将前面展示的 `Function code.` 注释替换为了对 `alert( )` 的调用。`alert( )` 函数接受一个字符串作为其参数，该字符串将用于呈现的警告框中 ![Image](img/graycircle-b.jpg)。
+
+### 3. 将文件另存为 `test.js`，放在您 Web 服务器的 `js` 目录中。
+
+### 4. 在文本编辑器或 IDE 中打开 `test.html`（**脚本 15.1**）。
+
+下一步是更新 HTML 页面，使其包含新的 JavaScript 文件。
+
+### 5. 在引入 jQuery 库之后，引入新的 JavaScript 文件（**脚本 15.3**）：
+
+```
+<script type="text/javascript" src="js/test.js" charset="utf-8"></script>
+```
+
+假设 `test.js` JavaScript 文件与 jQuery 库位于同一目录中，且相对于 `test.html` 的相对位置相同，这段代码将成功引入它。
+
+### 6. 保存 HTML 页面并在 Web 浏览器中测试它 ![Image](img/graycircle-b.jpg)。
+
+如果您没有看到警告窗口，则需要调试 JavaScript 代码。
+
+***
+
+> **提示**
+>
+> 从技术上讲，在 OOP 中，`function` 称为 `method`。在本章中，我将继续使用“function”这一术语，因为它对您来说可能更熟悉。
+
+***
+
+> **提示**
+>
+> 代码 `$( )` 是调用 `jQuery( )` 函数的简写。
+
+***
+
+> **提示**
+>
+> jQuery 的“ready”状态与 JavaScript 的 `onLoad` 略有不同：后者还要等待图像和其他媒体的加载，而 jQuery 的 ready 状态由 DOM 的完全加载触发。
+
+***
+
+### 脚本 15.3. 更新后的测试 HTML 页面加载一个新的 JavaScript 文件。
+
+***
+
+```
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/
+     xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+5      <title>Testing jQuery</title>
+6      <script type="text/javascript" src="js/jquery-1.6.1.min.js" charset="utf-8"></script>
+7      <script type="text/javascript" src="js/test.js" charset="utf-8"></script>
+8  </head>
+9  <body>
+10      <!-- Script 15.3 - test.html #2 -->
+11  </body>
+12  </html>
+```
+
+***
+
+### 选择页面元素
+
+一旦您让基本的 jQuery 功能开始工作，下一步要学习的就是如何选择页面元素。能够做到这一点将允许您隐藏和显示图像或文本块、操作表单等。
+
+您已经看到了如何选择 Web 文档本身：`$(document)`。要选择其他页面元素，请使用 *CSS 选择器* 代替 `document`：
+
+*   `#something` 选择 `id` 值为 *something* 的元素
+*   `.something` 选择 `class` 值为 *something* 的每个元素
+*   `something` 选择 *something* 类型的每个元素（例如，`p` 选择每个段落）
+
+这三条规则足以让您入门，但请注意，与 `document` 不同，这些选择器中的每一个都需要放在引号内。例如，代码 `$('a')` 选择每个链接，而 `$('#caption')` 选择 `id` 值为 *caption* 的元素。根据定义，单个 Web 页面中不应有两个元素具有相同的识别值，因此要引用页面上的单个元素，`#something` 是最简单的解决方案。
+
+这些规则也可以组合使用：
+
+*   `$('img.landscape')` 选择 `class` 为 *landscape* 的每个图像
+*   `$('#register input')` 选择在 `id` 为 *register* 的元素中找到的每个 input 元素
+
+对于下一个 jQuery 示例，将开发一个由 JavaScript 驱动的 Widget Cost Calculator（部件成本计算器）表单版本，类似于在 **第 13 章** “**安全方法**”中开发的那个。在接下来的几个步骤中，将创建 HTML 页面，其中包含适当的元素、类和唯一标识符，以便于被 jQuery 操作 ![Image](img/circle-a.jpg)。
+
+![Image](img/15_figure_07_a.jpg)
+
+![Image](img/circle-a.jpg) 作为 HTML 表单的 Widget Cost Calculator。
+
+#### 创建 HTML 表单
+
+### 1. 在文本编辑器或 IDE 中打开 `test.html`（**脚本 15.3**）（如果尚未打开）。
+
+由于此文件已经过 jQuery 增强，直接更新它将是最简单的。
+
+### 2. 更改页面的标题（**脚本 15.4**）：
+
+```
+<title>Widget Cost Calculator</title>
+```
+
+### 3. 在页面标题后，引入一个 CSS 文件：
+
+```
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+```
+
+为了让表单更美观，一些 CSS 代码将对其进行样式化。您可以在本书对应的下载页面 **[www.LarryUllman.com](http://www.LarryUllman.com)** 找到该 CSS 文件。
+
+该 CSS 文件还定义了两个重要的类——`error` 和 `errorMessage`，稍后将在本章中由 jQuery 操作。第一个类将所有内容变为红色；第二个类使文本斜体（但该类作为识别一组相似项目的方式会更有意义）。随着时间的推移，您将看到这些类是如何被使用的。
+
+### 4. 更改第二个 `script` 标签，使其引用 `calculator.js` 而不是 `test.js`：
+
+```
+<script type="text/javascript" src="js/calculator.js" charset="utf-8"></script>
+```
+
+此示例的 JavaScript 将放在 `calculator.js` 中，稍后将编写。它将与其他 JavaScript 文档存储在同一个 `js` 文件夹中。
+
+### 脚本 15.4. 此 HTML 页面包含一个带有三个文本输入框的表单，用于执行计算。
+
+***
+
+```
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/
+     xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+5      <title>Widget Cost Calculator</title>
+6      <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+7      <script type="text/javascript" src="js/jquery-1.6.1.min.js" charset="utf-8"></script>
+8      <script type="text/javascript" src="js/calculator.js" charset="utf-8"></script>
+9  </head>
+10 <body>
+11     <!-- Script 15.4 - calculator.html -->
+12 <h1>Widget Cost Calculator</h1>
+13 <p id="results"></p>
+14 <form action="calculator.php" method="post" id="calculator">
+15     <p id="quantityP">Quantity: <input type="text" name="quantity" id="quantity" /></p>
+16     <p id="priceP">Price: <input type="text" name="price" id="price" /></p>
+17     <p id="taxP">Tax (%): <input type="text" name="tax" id="tax" /></p>
+17     <p><input type="submit" name="submit" id="submit" value="Calculate!" /></p>
+19 </form>
+20 </body>
+21 </html>
+```
+
+***
+
+### 5. 在 HTML 主体中，创建一个空段落并开始一个表单：
+
+```
+<h1>Widget Cost Calculator</h1>
+<p id="results"></p>
+<form action="calculator.php" method="post" id="calculator">
+```
+
+`id` 为 *results* 但无内容的段落将在本章后面用于展示计算结果。它有一个唯一的 `id` 值，以便于引用。表单也有一个唯一的 `id` 值。理论上，表单将提交给 `calculator.php`（一个单独的脚本，本章并未实际编写），但该提交将被 JavaScript 拦截。
+
+### 6. 创建第一个表单元素：
+
+```
+<p id="quantityP">Quantity: <input type="text" name="quantity" id="quantity" /></p>
+```
+
+
+
+每个表单输入，正如最初在第 13 章中编写的那样，包含文本提示、元素本身以及包裹两者的一个段落。为该段落和表单输入添加了唯一的 `id` 值。
+
+请注意，我倾向于在面向对象语言（如 JavaScript）中使用“驼峰式”命名风格——`quantityP`。这种方法更符合 OOP 惯例（相反，我会在过程式 PHP 代码中使用 `quantity_p`）。
+
+**7.** 创建剩余的两个表单元素：
+
+```html
+<p id="priceP">Price: <input type="text" name="price" id="price" /></p>
+
+<p id="taxP">Tax (%): <input type="text" name="tax" id="tax" /></p>
+```
+
+**8.** 完成表单和 HTML 页面：
+
+```html
+<p><input type="submit" name="submit" id="submit" value="Calculate!" /></p>
+
+</form>
+
+</body>
+
+</html>
+```
+
+提交按钮也有一个唯一的 `id`，但这是为了 CSS 的需要；它实际上不会在 JavaScript 中被引用。
+
+**9.** 将页面另存为 `calculator.html` 并在 Web 浏览器中加载 ![Image](img/graycircle-a.jpg)。
+
+即使第二个 JavaScript 文件 `calculator.js` 尚未编写，表单仍然可以加载。
+
+---
+
+提示
+
+jQuery 拥有自己额外的自定义选择器，允许您以更复杂的方式选择页面元素。示例请参阅 jQuery 手册。
+
+---
+
+### 事件处理
+
+JavaScript 与 PHP 一样，常用于响应事件。但不同的是，JavaScript 语境下的事件主要是 Web 浏览器中的用户操作，例如：
+
+- 将光标移动到图像或文本上
+- 点击链接
+- 更改表单元素的值
+- 提交表单
+
+要在 JavaScript 中处理事件，您需要向元素应用*事件监听器*（也称为*事件处理程序*），也就是说，您告诉 JavaScript：当 A 事件发生在 B 元素上时，应调用 C 函数。在 jQuery 中，事件监听器使用以下语法分配：
+
+`selection.eventType(function);`
+
+`selection` 部分类似于 `$('.something')` 或 `$('a')`：即应用事件监听器的任何元素。`eventType` 值将根据选择内容而异。常见值有 `change`、`focus`、`mouseover`、`click`、`submit` 和 `select`：不同的 HTML 元素可以触发不同的事件。在 jQuery 中，这些实际上都是在选择集上调用的函数名。这些函数接受一个参数：当事件在该选择集上发生时要调用的函数。通常，要调用的函数会以内联匿名方式编写。例如，要处理任意图像被鼠标悬停的事件，您可以编写：
+
+```javascript
+$('img').mouseover(function() {
+
+    // Do this!
+
+});
+```
+
+这种结构看起来应该很熟悉，因为 `test.js` 分配了一个事件处理程序，用于监听 Web 文档上发生的 `ready` 事件。
+
+让我们获取这些新信息并将其应用到已经开始的 HTML 页面中。此时，可以向表单添加一个事件监听器，以便处理其提交。在该特定情况下，将对表单的三个输入进行最小化验证，执行总计计算，并通过警告框显示计算结果 ![Image](img/circle-a.jpg)。为了完成所有这些，您还需要知道一件事：获取文本表单输入中输入的值需要 `val()` 函数。它返回选择集的值，您将在接下来的步骤中看到。
+
+![Image](img/15_figure_08_a.jpg)
+
+![Image](img/circle-a.jpg)目前计算结果通过警告框显示。
+
+#### 处理表单提交
+
+**1.** 在文本编辑器或 IDE 中打开 `test.js`：
+
+由于 `test.js` 文件已经具有在浏览器就绪时执行代码的正确语法，因此从它开始是最简单且最稳妥的。
+
+**2.** 删除现有的 `alert()` 调用（**脚本 15.5**）。
+
+所有以下代码将替换原始的 `alert()`。
+
+**3.** 在 `alert()` 调用的位置，为表单提交添加事件处理程序：
+
+```javascript
+$('#calculator').submit(function() {
+
+}); // End of form submission.
+```
+
+选择器获取对表单的引用，该表单的 `id` 值为 `calculator`。向该选择集应用 `submit()` 函数，以便在表单提交时调用内联匿名函数。由于语法可能比较棘手，我的建议是先添加这块代码，然后再编写匿名函数的内容——见后续步骤。请注意，此代码和后续代码都在现有的 `$(document).ready() { }` 块内。
+
+**4.** 在新的匿名函数中，初始化四个变量：
+
+```javascript
+var quantity, price, tax, total;
+```
+
+在 JavaScript 中，`var` 关键字用于声明变量。如果用逗号分隔，它也可以一次声明多个变量。请注意，JavaScript 中的变量没有像 PHP 那样的初始美元符号。
+
+**脚本 15.5.** 此 JavaScript 文件由 `calculator.html` 包含（脚本 15.4）。表单提交时，将验证表单值并执行计算。
+
+---
+
+```javascript
+1   // Script 15.5 - calculator.js
+2   // This script is included by
+        calculator.html.
+3   // This script handles and validates the
+        form submission.
+4
+
+5   // Do something when the document is
+        ready:
+6   $(function() {
+
+7       // Assign an event handler to the form:
+8       $('#calculator').submit(function() {
+
+9           // Initialize some variables:
+10          var quantity, price, tax, total;
+
+11          // Validate the quantity:
+12          if ($('#quantity').val() > 0) {
+
+13              // Get the quantity:
+14              quantity = $('#quantity').val();
+
+15          } else { // Invalid quantity!
+
+16              // Alert the user:
+17              alert('Please enter a valid
+                        quantity!');
+18
+19          }
+
+20          // Validate the price:
+21          if ($('#price').val() > 0) {
+22              price = $('#price').val();
+23          } else {
+24              alert('Please enter a valid
+                        price!');
+25          }
+
+26          // Validate the tax:
+27          if ($('#tax').val() > 0) {
+28              tax = $('#tax').val();
+29          } else {
+30              alert('Please enter a valid
+                        tax!');
+31          }
+
+32          // If appropriate, perform the
+                calculations:
+33          if (quantity && price && tax) {
+
+34              total = quantity * price;
+35              total += total * (tax/100);
+
+36              // Display the results:
+37              alert('The total is $' + total);
+
+38          }
+
+39          // Return false to prevent an
+                actual form submission:
+40          return false;
+
+41      }); // End of form submission.
+
+42  }); // End of document ready.
+```
+
+---
+
+**5.** 验证数量：
+
+```javascript
+if ($('#quantity').val() > 0) {
+    quantity = $('#quantity').val();
+} else {
+    alert('Please enter a valid quantity!');
+}
+```
+
+对于三个表单输入中的每一个，其值都需要是一个大于零的数字。输入的值可以通过在选定元素上调用 `val()` 函数来获取。如果返回值大于零，则将该值赋给局部变量 `quantity`。否则，警告框会向用户指示问题 ![Image](img/circle-b.jpg)。这确实是一种繁琐的警告用法；您将在本章的下一节学习更平滑的方法。
+
+![Image](img/15_figure_09_b.jpg)
+
+![Image](img/circle-b.jpg)如果表单元素没有正数值，警告框会指示错误。
+
+
+
+
+## 6. 对其他两个表单输入重复验证
+
+```javascript
+if ($('#price').val() > 0) {
+    price = $('#price').val();
+} else {
+    alert('Please enter a valid price!');
+}
+
+if ($('#tax').val() > 0) {
+    tax = $('#tax').val();
+} else {
+    alert('Please enter a valid tax!');
+}
+```
+
+## 7. 如果所有三个变量都有有效值，执行计算
+
+```javascript
+if (quantity && price && tax) {
+    total = quantity * price;
+    total += total * (tax / 100);
+}
+```
+
+到目前为止，这段代码应该相当显而易见：它看起来几乎与 PHP 中完全一样，只是每个变量名前没有美元符号。
+
+## 8. 报告总计
+
+```javascript
+alert('The total is $' + total);
+```
+
+同样，将使用一个简陋的警告窗口来显示计算结果。正如你在这段代码中所见，加号在 JavaScript 中执行连接操作。
+
+## 9. 完成第 7 步开始的条件语句并返回值 `false`
+
+```javascript
+}
+return false;
+```
+
+让函数返回 `false` 可以阻止表单实际提交给表单 `action` 属性所指定的脚本。
+
+## 10. 将页面另存为 `calculator.js`（在 `js` 文件夹中）并在 Web 浏览器中测试计算器。
+
+请注意，如果你的 Web 浏览器中已经加载了 `calculator.html`，你需要刷新浏览器以加载更新后的 JavaScript。
+
+---
+
+### 提示
+
+有许多专门用于验证表单的 jQuery 插件，但我想保持简单（并在过程中解释核心 JavaScript 概念）。
+
+---
+
+### 提示
+
+可以在 JavaScript 中格式化数字，例如使其始终包含两位小数，但这不容易实现。基于这个原因，以及因为我不想分散对所涵盖的更重要信息的关注，计算结果可能并不总是像应该的那样美观。
+
+---
+
+### 提示
+
+使用 jQuery 时，如果浏览器支持，JavaScript 代码将执行计算。如果用户禁用了 JavaScript，或者正在使用非常古老的浏览器，JavaScript 将不会生效，表单将照常提交（此处提交到不存在的 `calculator.php`）。
+
+---
+
+### DOM 操作
+
+JavaScript 总体上，特别是 jQuery，最关键的用途之一是 DOM 操作：以任何方式更改 Web 浏览器的内容。通常，DOM 操作表现为改变用户所见的内容；在 jQuery 中做到这一点有多容易是其优势之一。
+
+一旦你选中了要操作的元素，对该选择应用任意数量的 jQuery 函数都将改变其属性。首先，`hide()` 和 `show()` 函数分别隐藏和显示选择。因此，要隐藏一个表单（也许在用户成功完成后），你可以使用：
+
+```javascript
+$('#actualFormId').hide();
+```
+
+调用 `toggle()` 函数时，将隐藏可见元素并显示隐藏元素（即在这两种状态之间切换）。请注意，这些函数既不创建也不销毁选择（即无论可见与否，选择将保留为 DOM 的一部分）。
+
+与 `show()` 和 `hide()` 类似的是 `fadeIn()` 和 `fadeOut()`。这些函数也用于显示或隐藏选择，但会添加一些淡入淡出效果。
+
+影响 DOM 的另一种方法是更改应用于选择的 CSS 类。`addClass()` 函数应用一个 CSS 类，`removeClass()` 移除一个。以下代码向特定的 blockquote 添加 `emphasis` 类，并从所有段落中移除它：
+
+```javascript
+$('#blockquoteID').addClass('emphasis');
+$('p').removeClass('emphasis');
+```
+
+`toggleClass()` 函数可用于切换选择的类应用。
+
+上述提到的函数通常更改页面元素的*属性*，但你也可以更改这些元素的*内容*。在上一节中，你使用了 `val()` 函数，它返回表单元素的值。但当提供参数时，`val()` 会为该表单元素分配一个新值：
+
+```javascript
+$('#something').val('cat');
+```
+
+类似地，`html()` 函数返回元素的 HTML 内容，`text()` 返回文本内容。这两个函数也可以接受参数，分别用于分配新的 HTML 和文本。
+
+让我们利用所有这些信息来完成小部件成本计算器。将进行几项关键更改：
+
+- 通过应用 `error` 类来指示错误
+- 通过隐藏或显示错误消息来指示错误
+- 将最终总计写入页面
+- 不再使用警告框
+
+显示和隐藏错误消息有几种方法。此处实现的最简单方法是手动将消息添加到表单中，然后使用 JavaScript 切换它们的可见性。因此，这些步骤从更新 HTML 页面开始。
+
+#### 操作 DOM
+
+**1.** 在文本编辑器或 IDE 中打开 `calculator.html`（如果尚未打开）。
+
+**2.** 在数量表单元素及其结束段落标签之间，添加一条错误消息（脚本 15.6）：
+
+```html
+<p id="quantityP">Quantity: <input type="text" name="quantity" id="quantity" /> <span class="errorMessage" id="quantityError">Please enter a valid quantity!</span></p>
+```
+
+现在输入框后面跟着一条文本错误消息，它也有一个唯一的 `id`。包含错误的 span 还使用了 `errorMessage` 类。得益于外部 CSS 文档，这会影响消息的格式，并使 jQuery 在首次加载页面时更容易全局隐藏所有错误消息。
+
+**3.** 对其他两个表单输入重复步骤 2：
+
+```html
+<p id="priceP">Price: <input type="text" name="price" id="price" /><span class="errorMessage" id="priceError"> Please enter a valid price! </span></p>
+<p id="taxP">Tax (%): <input type="text" name="tax" id="tax" /><span class="errorMessage" id="taxError"> Please enter a valid tax! </span></p>
+```
+
+**4.** 保存文件。
+
+**5.** 在文本编辑器或 IDE 中打开 `calculator.js`（如果尚未打开）。
+
+**脚本 15.6。** 更新后的 HTML 页面在关键表单输入旁硬编码了错误消息。
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Widget Cost Calculator</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.6.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/calculator.js" charset="utf-8"></script>
+</head>
+<body>
+    <!-- Script 15.6 - calculator.html #2 -->
+    <h1>Widget Cost Calculator</h1>
+    <p id="results"></p>
+    <form action="calculator.php" method="post" id="calculator">
+        <p id="quantityP">Quantity: <input type="text" name="quantity" id="quantity" />
+            <span class="errorMessage" id="quantityError">Please enter a valid quantity!</span></p>
+        <p id="priceP">Price: <input type="text" name="price" id="price" /><span class="errorMessage" id="priceError">Please enter a valid price!</span></p>
+        <p id="taxP">Tax (%): <input type="text" name="tax" id="tax" /><span class="errorMessage" id="taxError">Please enter a valid tax!</span></p>
+```
+
+
+
+
+
+### 步骤 6-13：使用 jQuery 重构计算器
+
+**6.** 移除所有现有的 `alert()` 调用（Script 15.7）。
+
+**7.** 在提交事件处理程序之前，隐藏所有带有 `errorMessage` 类的元素：
+
+```javascript
+$('.errorMessage').hide();
+```
+
+该选择器获取对任何拥有 `errorMessage` 类的元素的引用。在 HTML 表单中，这仅适用于三个 `span` 标签。
+
+**8.** 在给局部变量 `quantity` 赋值后的 `if` 子句代码中，移除 `error` 类并隐藏错误消息：
+
+```javascript
+$('#quantityP').removeClass('error');
+$('#quantityError').hide();
+```
+
+正如你将在步骤 9 中看到的，当用户输入无效数量时，数量段落（`id` 为 `quantityP`）将被分配 `error` 类，数量错误消息（即 `#quantityError`）将被显示。如果用户先输入无效数量，然后输入有效数量，必须使用此处的代码撤销这两种效果。
+
+如果从未提交过无效数量，数量段落将没有 `error` 类，数量错误消息仍将隐藏。在 jQuery 被要求做不可能的事情时（如隐藏已隐藏的元素），jQuery 会直接忽略该请求。
+
+**9.** 如果数量无效，添加错误类并显示错误消息：
+
+```javascript
+$('#quantityP').addClass('error');
+$('#quantityError').show();
+```
+
+这是步骤 8 中代码的反面操作。注意它位于 `else` 子句内。
+
+**Script 15.7.** 使用 jQuery，JavaScript 代码现在通过操作 DOM 来替代 `alert()` 调用。
+
+---
+
+```javascript
+// Script 15.7 - calculator.js #2
+// This script is included by calculator.html.
+// This script handles and validates the form submission.
+
+// Do something when the document is ready:
+$(function() {
+
+    // Hide all error messages:
+    $('.errorMessage').hide();
+
+    // Assign an event handler to the form:
+    $('#calculator').submit(function() {
+
+        // Initialize some variables:
+        var quantity, price, tax, total;
+
+        // Validate the quantity:
+        if ($('#quantity').val() > 0) {
+
+            // Get the quantity:
+            quantity = $('#quantity').val();
+
+            // Clear an error, if one existed:
+            $('#quantityP').removeClass('error');
+
+            // Hide the error message, if it was visible:
+            $('#quantityError').hide();
+
+        } else { // Invalid quantity!
+
+            // Add an error class:
+            $('#quantityP').addClass('error');
+
+            // Show the error message:
+            $('#quantityError').show();
+
+        }
+
+        // Validate the price:
+        if ($('#price').val() > 0) {
+            price = $('#price').val();
+            $('#priceP').removeClass('error');
+            $('#priceError').hide();
+        } else {
+            $('#priceP').addClass('error');
+            $('#priceError').show();
+        }
+
+        // Validate the tax:
+        if ($('#tax').val() > 0) {
+            tax = $('#tax').val();
+            $('#taxP').removeClass('error');
+            $('#taxError').hide();
+        } else {
+            $('#taxP').addClass('error');
+            $('#taxError').show();
+        }
+
+        // If appropriate, perform the calculations:
+        if (quantity && price && tax) {
+
+            total = quantity * price;
+            total += total * (tax / 100);
+
+            // Display the results:
+            $('#results').html('The total is <b>$' + total + '</b>.");
+
+        }
+
+        // Return false to prevent an actual form submission:
+        return false;
+
+    }); // End of form submission.
+
+}); // End of document ready.
+```
+
+---
+
+**10.** 对价格重复步骤 8 和 9，使该 `if-else` 结构如下：
+
+```javascript
+if ($('#price').val() > 0) {
+    price = $('#price').val();
+    $('#priceP').removeClass('error');
+    $('#priceError').hide();
+} else {
+    $('#priceP').addClass('error');
+    $('#priceError').show();
+}
+```
+
+**11.** 对税率重复步骤 8 和 9，使该 `if-else` 结构如下：
+
+```javascript
+if ($('#tax').val() > 0) {
+    tax = $('#tax').val();
+    $('#taxP').removeClass('error');
+    $('#taxError').hide();
+} else {
+    $('#taxP').addClass('error');
+    $('#taxError').show();
+}
+```
+
+**12.** 在计算总计后，在同一个 `if` 子句内，更新 `results` 段落：
+
+```javascript
+$('#results').html('The total is <b>$' + total + '</b>.');
+```
+
+不使用警告框，总计消息可以直接动态写入 HTML 页面。实现方法之一是更改页面上某个元素的文本或 HTML。页面已有一个用于此目的的空段落，其 `id` 值为 `results`。要更改段落内的文本，可应用 `text()` 函数；要更改段落内的 HTML，则使用 `html()`。
+
+**13.** 将页面另存为 `calculator.js`（位于 `js` 文件夹中），并在 Web 浏览器中测试计算器。
+
+同样请记住，必须重新加载 HTML 页面（因为 HTML 和 JavaScript 都已更新）。
+
+---
+
+> **Tip**
+>
+> 如果你尝试选择不存在的页面元素，jQuery 不会抛出错误。如果你在不存在的元素上调用函数，jQuery 也不会抛出错误。
+
+---
+
+> **Tip**
+>
+> 在 JavaScript 中，与其他 OOP 语言一样，你可以“链式”调用函数，一次执行多个操作。以下代码在一行中显示了一个先前隐藏的段落，添加了一个新类，并更改了其文本内容：
+>
+> ```javascript
+> $('#pId').show().addClass('thisClass').text('Hello, world!');
+> ```
+
+---
+
+> **Tip**
+>
+> 你可以使用 `attr()` 函数更改选中元素的属性。其第一个参数是要影响的属性；第二个参数是新值。例如，以下代码将通过添加 `disabled="disabled"` 属性来禁用提交按钮：
+>
+> ```javascript
+> $('#submitButtonId').attr('disabled', 'disabled');
+> ```
+
+---
+
+> **Tip**
+>
+> 你可以使用 `prepend()`、`append()`、`remove()` 等函数添加、移动或删除元素。具体细节请参阅 jQuery 手册。
+
+---
+
+### 使用 Ajax
+
+除了 DOM 操作，JavaScript 和 jQuery 的另一个关键用途是 *Ajax*。Ajax 一词最早于 2005 年提出，尽管浏览器支持多年来好坏参半。到了 2011 年，Ajax 已成为许多动态网站的标准功能，且所有主流浏览器都提供了直接的支持。但什么是 Ajax？
+
+Ajax 可以指代许多事物，涉及多种不同的技术和方法，但归根结底，Ajax 就是使用 JavaScript 在用户不知情的情况下执行服务器端请求。在标准请求模型中（即本书几乎所有其他示例），用户可能从 `login.html` 开始。提交表单后，浏览器会跳转到 `login.php`，在那里进行实际的表单验证、数据库注册并显示结果 ![Image](img/circle-a.jpg)。（即使同一个 PHP 脚本既显示又处理表单，标准请求模型也需要对同一页面进行两次单独且明显的请求。）
+
+
+
+
+
+![Image](img/15_figure_12_a.jpg)
+
+![Image](img/circle-a.jpg) 一个标准的客户端-服务器请求模型，浏览器不断重新加载整个网页。
+
+采用 Ajax 模型时，表单提交将被 JavaScript *劫持*，后者随即将表单数据发送给服务器端的 PHP 脚本。该 PHP 脚本执行必要的验证和其他任务，然后仅将数据返回给客户端 JavaScript，以指示操作结果。客户端 JavaScript 随后使用返回的数据来更新网页 ![Image](img/circle-b.jpg)。尽管步骤变多了，但用户不会察觉到大部分过程，并能在该过程进行时继续与网页交互。
+
+![Image](img/15_figure_13_b.jpg)
+
+![Image](img/circle-b.jpg) 使用 Ajax 时，服务器请求在后台进行，网页浏览器无需重新加载即可更新。
+
+将 Ajax 融入网站可带来更好的用户体验，这更类似于桌面应用程序的行为。其次，性能会有所提升，因为来回传输的数据更少（例如，无需传输整个第二页 HTML，如 `login.php`）。
+
+你已经掌握了执行 Ajax 事务所需的大部分知识：使用 JavaScript 进行表单验证、使用 PHP 进行表单验证，以及使用 JavaScript 更新 DOM。你还需要的最后一点知识是如何使用 jQuery 执行实际的 Ajax 请求。在接下来的几页中，你将创建 HTML 表单、服务器端 PHP 脚本和中间层 JavaScript，所有这些都是为了处理一个登录表单。为了缩短并简化代码，我走了一些捷径，但我会准确指出何时这样做，而且每处简化都在你可以轻松自行完善的领域。
+
+#### 创建表单
+
+登录表单只需两个输入框：一个用于电子邮件地址，另一个用于密码 ![Image](img/circle-c.jpg)。该表单将使用与 `calculator.html` 相同的技术来显示错误和指示结果 ![Image](img/circle-d.jpg)。
+
+![Image](img/15_figure_14_c.jpg)
+
+![Image](img/circle-c.jpg) 登录表单。
+
+![Image](img/15_figure_15_d.jpg)
+
+![Image](img/circle-d.jpg) 错误消息显示在每个表单元素旁边。
+
+#### 创建表单步骤
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `login.php`（**脚本 15.8**）：
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Login</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+```
+
+**脚本 15.8.** 登录表单包含一个用于电子邮件地址的文本输入框、一个密码输入框和一个提交按钮。其他元素的存在是为了供 jQuery 操作。
+
+* * *
+
+```
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/
+      xhtml1-transitional.dtd">
+2  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+3  <head>
+4      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+5      <title>Login</title>
+6      <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+7      <script type="text/javascript" src="js/jquery-1.6.1.min.js" charset="utf-8"></script>
+8      <script type="text/javascript" src="js/login.js" charset="utf-8"></script>
+9  </head>
+10 <body>
+11     <!-- Script 15.8 - login.php -->
+12 <h1>Login</h1>
+13 <p id="results"></p>
+14 <form action="login.php" method="post" id="login">
+15     <p id="emailP">Email Address: <input type="text" name="email" id="email" /><span
+          class="errorMessage" id="emailError">Please enter your email address!</span></p>
+16     <p id="passwordP">Password: <input type="password" name="password" id="password" /><span
+          class="errorMessage" id="passwordError">Please enter your password!</span></p>
+17     <p><input type="submit" name="submit" id="submit" value="Login!" /></p>
+18 </form>
+19 </body>
+20 </html>
+```
+
+* * *
+
+这实际上是一个 PHP 脚本，而不仅仅是一个 HTML 文件。该页面使用与 `calculator.html` 相同的外部 CSS 文件。
+
+**2.** 引入 jQuery 库和第二个 JavaScript 文件：
+
+```
+<script type="text/javascript" src="js/jquery-1.6.1.min.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="js/login.js" charset="utf-8"></script>
+```
+
+该页面将使用与 `calculator.html` 相同的 jQuery 库。页面专用的 JavaScript 将放在 `login.js` 中。两者都将存储在 `js` 文件夹中，该文件夹位于该脚本所在的同一目录下。
+
+**3.** 完成 HTML 头部并开始主体部分：
+
+```
+</head>
+
+<body>
+
+  <!-- Script 15.8 - login.php -->
+
+<h1>Login</h1>
+
+<p id="results"></p>
+```
+
+在主体内部，表单之前，有一个 `id` 为 *results* 的空段落，稍后将由 jQuery 动态填充 ![Image](img/circle-e.jpg)。
+
+![Image](img/15_figure_16_e.jpg)
+
+![Image](img/circle-e.jpg) 成功登录后，表单将消失，并在标题下方出现一条消息。
+
+**4.** 创建表单：
+
+```
+<form action="login.php" method="post" id="login">
+
+  <p id="emailP">Email Address: <input type="text" name="email" id="email" /><span class="errorMessage" id="emailError">Please enter your email address!</span></p>
+
+  <p id="passwordP">Password: <input type="password" name="password" id="password" />
+  <span class="errorMessage" id="passwordError">Please enter your password!</span></p>
+
+  <p><input type="submit" name="submit" id="submit" value="Login!" /></p>
+
+</form>
+```
+
+此表单与 `calculator.html` 中的表单非常相似。两个表单元素都包裹在具有唯一 `id` 值的段落中，这使得 jQuery 在需要时能轻松应用 *error* 类。两个元素后面都跟着默认错误消息，由 jQuery 根据情况隐藏和显示。
+
+**5.** 完成 HTML 页面：
+
+```
+</body>
+
+</html>
+```
+
+**6.** 将页面保存为 `login.php` 并在 Web 浏览器中加载。
+
+请记住这是一个 PHP 脚本，因此必须通过 URL 访问（*http://something*）。
+
+### 创建服务器端脚本
+
+上一系列步骤介绍了创建过程的客户端部分：HTML 表单。接下来，我将跳过中间部分，直接查看服务器端：处理表单数据的 PHP 脚本。该脚本必须做两件事：
+
+**1.** 验证提交的数据。
+
+**2.** 返回一个指示结果的字符串。
+
+为求简单起见，PHP 脚本仅将提交的值与硬编码的值进行比较，但你可以轻松修改此代码以执行数据库查询。
+
+就 Ajax 过程而言，重要的是该 PHP 脚本仅返回单个字符串 ![Image](img/circle-f.jpg)，不包含任何 HTML 或其他标记 ![Image](img/circle-g.jpg)。这是强制性的，因为 PHP 脚本的全部输出正是执行 Ajax 请求的 JavaScript 所接收的内容。正如你将在本例的 JavaScript 中看到的，PHP 脚本的输出将成为执行错误报告和 DOM 操作的基础。
+
+![Image](img/15_figure_17_f.jpg)
+
+![Image](img/circle-f.jpg) 发出正确请求时服务器端 PHP 脚本的结果。
+
+![Image](img/15_figure_18_g.jpg)
+
+![Image](img/circle-g.jpg) 服务器端 PHP 脚本的 HTML 源代码显示其唯一输出是一个简单的字符串，完全不包含任何 HTML。
+
+#### 处理 Ajax 请求
+
+
+
+
+
+### 1. 开始一个新的 PHP 文档
+
+在您的文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `login_ajax.php` (**脚本 15.9**)：
+
+```php
+<?php # 脚本 15.9 - login_ajax.php
+```
+
+同样，此脚本不打算直接执行，因此它不包含 HTML。
+
+### 2. 验证是否在 URL 中接收到了电子邮件地址和密码
+
+```php
+if (isset($_GET['email'], $_GET['password'])) {
+```
+
+将对此脚本发出 GET 请求，因此代码做的第一件事是确认电子邮件地址和密码均已传递给它。
+
+### 3. 验证提交的电子邮件地址语法是否正确
+
+```php
+if (filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
+```
+
+使用 Filter 扩展，还会对提供的电子邮件地址进行基本语法检查。如果您的 PHP 版本不支持 Filter 扩展，可以改用正则表达式（请参阅 第 14 章，“Perl 兼容正则表达式”）。
+
+### 4. 如果提交的值正确，指示成功
+
+```php
+if ( ($_GET['email'] == 'email@example.com') && ($_GET['password'] == 'testpass') ) {
+    echo 'CORRECT';
+```
+
+**脚本 15.9。** 此 PHP 脚本将接收来自 JavaScript 的 Ajax 请求。它执行一些验证并返回简单的字符串以指示结果。
+
+---
+
+```php
+1   <?php # 脚本 15.9 - login_ajax.php
+2   // 此脚本通过 Ajax 从
+3       login.php 调用。
+4   // 此脚本期望在 URL 中接收两个
+5       值：一个电子邮件地址和
+6       一个密码。
+7   // 此脚本返回一个字符串
+8       来指示结果。
+9
+10  // 需要两条信息：
+11  if (isset($_GET['email'], $_GET['password'])) {
+12
+13      // 需要一个有效的电子邮件地址：
+14      if (filter_var($_GET['email'], FILTER_
+15          VALIDATE_EMAIL)) {
+16
+17          // 必须匹配特定值：
+18          if ( ($_GET['email'] == 'email@
+19              example.com') && ($_GET['password']
+20              == 'testpass') ) {
+21
+22              // 如果需要，设置一个 Cookie，
+23                  或开始一个会话。
+24
+24              // 指示成功：
+25              echo 'CORRECT';
+26
+27          } else { // 不匹配！
+28              echo 'INCORRECT';
+29          }
+30
+31      } else { // 电子邮件地址无效！
+32          echo 'INVALID_EMAIL';
+33      }
+34
+35  } else { // 缺少两个变量
+36      中的一个！
+37      echo 'INCOMPLETE';
+38  }
+39
+40  ?>
+```
+
+---
+
+正如已经说过的，此代码只是将提交的值与两个静态字符串进行比较。您可以轻松地用数据库查询替换此代码，就像 第 12 章，“Cookie 和会话”中的那些。此时您也可以设置 Cookie 或开始一个会话（尽管请参阅以下提示了解其中涉及的“陷阱”）。
+
+最重要的是，该脚本只是输出单词 `CORRECT`，不包含任何其他 HTML。
+
+### 5. 完成三个条件语句
+
+```php
+    } else {
+        echo 'INCORRECT';
+    }
+} else {
+    echo 'INVALID_EMAIL';
+}
+} else {
+    echo 'INCOMPLETE';
+}
+```
+
+这三个 `else` 子句完成了步骤 2、3 和 4 中开始的条件语句。每个子句只是打印一个字符串来指示特定状态。稍后将编写的与登录表单关联的 JavaScript 将根据每种可能的结果采取不同的操作。
+
+### 6. 完成 PHP 页面
+
+```php
+?>
+```
+
+### 7. 保存文件
+
+将文件另存为 `login_ajax.php`，并将其放在 Web 目录中与 `login.php` 相同的文件夹中。
+
+这两个文件位于同一目录中非常重要，以便 Ajax 请求能够工作。
+
+---
+
+### 提示
+
+在 Ajax 过程中，服务端 PHP 脚本设置 Cookie 或开始会话是完全可以接受的。但请记住，Web 浏览器中的页面已经加载完毕，这意味着该页面无法访问事后创建的 Cookie 或会话。您需要使用 JavaScript 在创建 Cookie 或开始会话后更新页面，但浏览器中随后加载的页面将完全访问 Cookie 或会话数据。
+
+---
+
+#### 创建 JavaScript
+
+最后一步是创建 JavaScript，它拦截表单提交，将数据发送到服务端 PHP 脚本，读取 PHP 脚本的结果，并相应地更新 DOM。这是客户端 HTML 表单与服务端 PHP 之间的“粘合剂”。所有的 JavaScript 表单验证和 DOM 操作将与您在本章中已经看到的非常相似。不过，将介绍两个新概念。
+
+首先，您需要知道如何在 JavaScript 中创建*通用对象*。在本例中，一个对象将表示要发送给 PHP 脚本的数据，另一个将表示 Ajax 请求的选项。以下是在 JavaScript 中创建新对象的方法：
+
+```javascript
+var objectName = new Object();
+```
+
+下一章将更详细地介绍 OOP，但现在请理解，这只是创建了一个类型为 `Object` 的新变量。大写字母 “O” `Object` 是 JavaScript 中的一个空白模板（作为一种面向对象语言，JavaScript 中的大多数变量都是某种类型的对象）。创建对象后，您可以使用以下语法向其添加值：
+
+```javascript
+objectName.property = value;
+```
+
+如果您是 JavaScript 或 OOP 新手，可以将通用对象想象为类似于关联数组，具有名称和对应的值。
+
+第二个新信息是 jQuery 的 `ajax()` 函数的用法。此函数执行 Ajax 请求。它将请求的设置作为其唯一参数。作为 jQuery 库的一部分，它是这样调用的：
+
+```javascript
+$.ajax(settings);
+```
+
+这就是基本前提；细节将在以下代码中详细讨论。
+
+#### 执行 Ajax 请求
+
+### 1. 开始一个新的 JavaScript 文件
+
+在您的文本编辑器或 IDE 中开始一个新的 JavaScript 文件，命名为 `login.js` (**脚本 15.10**)：
+
+```javascript
+// 脚本 15.10 - login.js
+```
+
+### 2. 添加处理文档“就绪”状态的 jQuery 代码
+
+```javascript
+$(function() {
+});
+```
+
+JavaScript 需要以此代码开始，以便在 Web 浏览器就绪后进行设置。由于语法比较复杂，我认为最好先添加这整块代码，然后将所有后续代码放在花括号内。
+
+### 3. 隐藏所有具有 `errorMessage` 类的元素
+
+```javascript
+$('.errorMessage').hide();
+```
+
+选择器获取对任何具有 `class` 为 *errorMessage* 的元素的引用。在 HTML 表单中，这仅适用于三个 `span` 标签。这些标签将在 DOM 加载后立即被此代码隐藏。
+
+### 4. 为表单提交创建事件监听器
+
+```javascript
+$('#login').submit(function() {
+});
+```
+
+此代码与计算器表单中的代码几乎相同。所有剩余代码都将放在这些花括号内。
+
+### 5. 初始化两个变量
+
+```javascript
+var email, password;
+```
+
+这两个变量将作为表单数据的局部表示。
+
+**脚本 15.10。** 此文件中的 JavaScript 代码对服务端脚本执行 Ajax 请求，并根据返回的响应更新 DOM。
+
+---
+
+```javascript
+1   // 脚本 15.10 - login.js
+2   // 此脚本由 login.php 包含。
+3   // 此脚本处理并验证表单
+4       提交。
+5   // 此脚本随后对 login_ajax.php
+6       发起 Ajax 请求。
+7
+8   // 当文档就绪时执行操作：
+9   $(function() {
+10
+11      // 隐藏所有错误消息：
+12      $('.errorMessage').hide();
+13
+14      // 为表单分配事件处理程序：
+15      $('#login').submit(function() {
+16
+17          // 初始化一些变量：
+18          var email, password;
+19
+20          // 验证电子邮件地址：
+21          if ($('#email').val().length >= 6) {
+```
+
+
+
+
+
+### 代码片段
+
+```javascript
+// Get the email address:
+email = $('#email').val();
+
+// Clear an error, if one existed:
+$('#emailP').removeClass('error');
+
+// Hide the error message, if it was visible:
+$('#emailError').hide();
+
+} else { // Invalid email address!
+
+// Add an error class:
+$('#emailP').addClass('error');
+
+// Show the error message:
+$('#emailError').show();
+
+}
+
+// Validate the password:
+if ($('#password').val().length > 0) {
+    password = $('#password').val();
+    $('#passwordP').removeClass('error');
+    $('#passwordError').hide();
+} else {
+    $('#passwordP').addClass('error');
+    $('#passwordError').show();
+}
+
+// If appropriate, perform the Ajax request:
+if (email && password) {
+
+    // Create an object for the form data:
+    var data = new Object();
+    data.email = email;
+    data.password = password;
+
+    // Create an object of Ajax options:
+    var options = new Object();
+
+    // Establish each setting:
+    options.data = data;
+    options.dataType = 'text';
+    options.type = 'get';
+    options.success = function(response) {
+
+        // Worked:
+        if (response == 'CORRECT') {
+
+            // Hide the form:
+            $('#login').hide();
+
+            // Show a message:
+            $('#results').removeClass('error');
+            $('#results').text('You are now logged in!');
+
+        } else if (response == 'INCORRECT') {
+            $('#results').text('The submitted credentials do not match those on file!');
+            $('#results').addClass('error');
+        } else if (response == 'INCOMPLETE') {
+            $('#results').text('Please provide an email address and a password!');
+            $('#results').addClass('error');
+        } else if (response == 'INVALID_EMAIL') {
+            $('#results').text('Please provide your email address!');
+            $('#results').addClass('error');
+        }
+
+    }; // End of success.
+    options.url = 'login_ajax.php';
+
+    // Perform the request:
+    $.ajax(options);
+
+} // End of email && password IF.
+
+// Return false to prevent an actual form submission:
+return false;
+
+}); // End of form submission.
+
+}); // End of document ready.
+```
+
+---
+
+### 6. 验证邮箱地址
+
+```javascript
+if ($('#email').val().length >= 6) {
+    email = $('#email').val();
+    $('#emailP').removeClass('error');
+    $('#emailError').hide();
+}
+```
+
+计算器表单验证所有数字是否大于零，这不适合登录表单。相反，条件判断确认邮箱输入值的字符串长度大于或等于 6（6 个字符是有效邮箱地址的绝对最小要求，例如 `a@b.cc`）。你也可以在 JavaScript 中使用正则表达式执行更严格的验证，但我试图保持简单（而且服务端 PHP 脚本也会验证邮箱地址，正如你已经看到的）。
+
+如果邮箱地址值通过了最小验证，它将被赋值给局部变量。接下来，从段落中移除 `error` 类（以防之前添加过），并隐藏特定于邮箱的错误信息（以防之前显示过）。
+
+### 7. 完成邮箱地址条件判断
+
+```javascript
+} else {
+    $('#emailP').addClass('error');
+    $('#emailError').show();
+}
+```
+
+这段代码完成了步骤 6 中开始的条件判断。代码与 `calculator.html` 中使用的相同，向整个段落添加 `error` 类并显示错误信息。
+
+### 8. 验证密码
+
+```javascript
+if ($('#password').val().length > 0) {
+    password = $('#password').val();
+    $('#passwordP').removeClass('error');
+    $('#passwordError').hide();
+} else {
+    $('#passwordP').addClass('error');
+    $('#passwordError').show();
+}
+```
+
+对于密码，最小长度可能由注册流程决定。作为占位符，此代码仅确认字符串长度为正。除此之外，这段代码基本上与前两个步骤相同。
+
+### 9. 如果两个值都已接收，将它们存储在新对象中
+
+```javascript
+if (email && password) {
+    var data = new Object();
+    data.email = email;
+    data.password = password;
+}
+```
+
+这段代码背后的前提在之前的步骤中已解释。首先创建一个新的通用对象。然后创建该对象的一个名为 `email` 的属性，并赋值为邮箱地址。最后，创建一个名为 `password` 的属性，并赋值为输入的密码。如果用 PHP 术语来想象这段代码会有帮助，等效代码如下：
+
+```php
+$data = array();
+$data['email'] = $email;
+$data['password'] = $password;
+```
+
+### 10. 为 Ajax 选项创建新对象，并建立前三个设置
+
+```javascript
+var options = new Object();
+options.data = data;
+options.dataType = 'text';
+options.type = 'get';
+```
+
+这里创建了另一个通用对象。接下来，名为 `data` 的属性被赋值为 `data` 对象。`options` 对象的此属性存储作为 Ajax 请求一部分传递给 PHP 脚本的数据。
+
+第二个设置是预期从服务端请求返回的数据类型。由于 PHP 脚本 `login_ajax.php` 返回（即打印）一个简单字符串，此处值为 `text`。`dataType` 设置影响 JavaScript 如何尝试处理返回的响应：它需要与实际的服务端响应相匹配。
+
+`type` 设置是所发出请求的类型，`get` 和 `post` 是最常见的两种。GET 请求是默认值，因此不必在此赋值，但代码显式地进行了赋值。
+
+需要明确的是，由于 `data` 对象中属性的名称——`email` 和 `password`——以及 `type` 值为 `get`，`login_ajax.php` 脚本将接收 `$_GET['email']` 和 `$_GET['password']`。如果你更改 `data` 中属性的名称，或 `options.type` 的值，服务端 PHP 脚本将在不同的超全局变量中接收 Ajax 数据。
+
+### 11. 开始定义成功的 Ajax 请求应发生的行为
+
+```javascript
+options.success = function(response) {
+}; // End of success.
+```
+
+`success` 属性定义当 Ajax 查询成功时 JavaScript 应执行的操作。所谓“成功”，是指 JavaScript 能够向服务端页面发出请求并接收结果。对于实际应发生的行为，将一个匿名函数赋值给此属性。在此步骤中，定义了匿名函数并完成了赋值行。后续步骤的代码将放在这些花括号之间。
+
+正如你所见，匿名函数接受一个参数：来自服务端脚本的响应，赋值给 `response` 变量。如前所述，JavaScript 接收到的响应将是 PHP 脚本输出内容的全部。
+
+
+
+
+
+## 12. 在步骤 11 创建的匿名函数中，如果服务器响应等于 `CORRECT`，则隐藏表单并更新页面：
+
+```
+if (response == 'CORRECT') {
+    $('#login').hide();
+    $('#results').removeClass('error');
+    $('#results').text('You are now logged in!');
+}
+```
+
+当用户提交正确的凭据——`email@example.com` 和 `testpass` 时，**`login_ajax.php`** 将返回字符串 `CORRECT`。在这种情况下，JavaScript 将隐藏整个登录表单，并向 `results` 段落分配一个字符串，以指示该状态。由于错误提交可能已向该段落添加了 `error` 类（见步骤 13），因此此处也会移除该类。
+
+## 13. 如果服务器响应等于 `INCORRECT`，则指示错误：
+
+```
+} else if (response == 'INCORRECT') {
+    $('#results').text('The submitted credentials do not match those on file!');
+    $('#results').addClass('error');
+}
+```
+
+当用户提交了密码和语法有效的电子邮件地址，但未提供正确的特定值时，服务端 PHP 脚本将返回字符串 `INCORRECT`。在这种情况下，会向 `results` 段落分配一个不同的字符串，并将 `error` 类也应用于该段落。
+
+![Image](img/15_figure_19_h.jpg)
+
+提供无效登录凭据后的结果。
+
+## 14. 为另外两种可能的服务器响应添加子句：
+
+```
+} else if (response == 'INCOMPLETE') {
+    $('#results').text('Please provide an email address and a password!');
+    $('#results').addClass('error');
+} else if (response == 'INVALID_EMAIL') {
+    $('#results').text('Please provide your email address!');
+    $('#results').addClass('error');
+}
+```
+
+这些是步骤 13 中代码的重复，只是消息不同。这是放置在 **`success`** 属性的匿名函数中的代码的结尾。
+
+## 15. 添加 **`url`** 属性并发起请求：
+
+```
+options.url = 'login_ajax.php';
+$.ajax(options);
+```
+
+Ajax 对象的 **`url`** 属性指定了请求应发送到的实际服务端脚本。只要 **`login.php`** 和 **`login_ajax.php`** 在同一目录中，此引用即可工作。
+
+最后，在建立所有请求选项后，执行该请求。
+
+## 16. 完成步骤 9 开始的条件判断并返回 **`false`**：
+
+```
+} // End of email && password IF.
+return false;
+```
+
+如果 **`email`** 和 **`password`** 变量的值不为 TRUE，则不会发起 Ajax 请求（即该条件判断没有 **`else`** 子句）。最后，此处返回值 **`false`** 以防止表单的实际提交。
+
+## 17. 将页面另存为 **`login.js`**（位于 **`js`** 文件夹中），并在 Web 浏览器中测试登录表单。
+
+---
+
+### 提示
+
+作为一个调试技巧，直接运行服务端脚本通常很有帮助，以确认其工作正常（例如，不包含解析或其他错误）。
+
+---
+
+### 提示
+
+Firefox 的 Firebug 扩展可以显示网页发起的 Ajax 请求的详细信息。
+
+![Image](img/15_figure_20_i.jpg)
+
+得益于 Firebug 扩展，您可以查看后台 Ajax 请求中发生的情况。
+
+---
+
+### 提示
+
+Opera Web 浏览器内置了一个名为 *Dragonfly* 的工具，这也是一个极佳的开发资源。
+
+---
+
+### 提示
+
+因为用户可以禁用 JavaScript，所以您永远不能完全依赖 JavaScript 表单验证。您必须始终也使用服务端 PHP 验证，以保护您的网站。
+
+---
+
+### 复习与实践
+
+如果您在复习问题或实践提示方面有任何问题，请访问本书的支持论坛 ([www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/))。
+
+#### 复习
+
+*   什么是 JavaScript？JavaScript 与 PHP 有何异同？
+*   什么是 jQuery？jQuery 与 JavaScript 的关系是什么？
+*   如何将外部 JavaScript 文件引入 HTML 页面？如何将 JavaScript 代码直接放置在 HTML 页面中？
+*   为什么在执行引用 DOM 元素的 JavaScript 代码之前，必须等待整个 DOM 加载完毕？
+*   为什么 DOM 中的唯一标识符是必需的？
+*   在 jQuery 中，如何选择给定标签类型的元素？如何选择具有特定类的元素？如何选择特定元素？
+*   在 jQuery 中，如何向页面元素（或元素们）添加事件监听器？什么*是*事件监听器？
+*   为什么修改 JavaScript 后必须重新加载 HTML 页面？
+*   有哪些可用于操作 DOM 的 jQuery 函数？
+*   什么是 Ajax？为什么说 Ajax 是一件“好事”？
+*   为什么执行服务端请求的 HTML 页面必须通过 URL 加载？
+*   如何在 JavaScript 中创建通用对象？
+*   Ajax 请求的 **`type`** 属性有何影响？**`data`** 对象中属性名称有何影响？
+
+#### 实践
+
+*   访问 jQuery 官网，开始阅读 jQuery 文档。
+*   了解 jQuery UI 及其为网页提供的功能。
+*   使用 jQuery 文档，或直接在线搜索一些 jQuery 插件。尝试在网页中使用一个或多个插件。
+*   一旦您熟悉了 Ajax 流程，请在线搜索有关使用 *JSON*（JavaScript 对象表示法）或 *XML*（可扩展标记语言）来表示传回 JavaScript 的数据来执行 Ajax 请求的信息。
+*   看看在整个 DOM 加载完毕之前，在 JavaScript 中引用 DOM 元素会发生什么。见证这一点应该有助于您识别当您不可避免地、意外地未能等待浏览器就绪即引用 DOM 时发生的情况。
+*   更新 **`calculator.js`**，以便在每次表单提交时最初清空 *results* 段落。这样做，之前提交的结果就不会在后续的无效提交时显示出来。
+*   修改 **`login_ajax.php`**，使其使用数据库来确认登录成功。
+*   修改 **`login_ajax.php`**，使其发送 Cookie 或启动会话。创建一个次要 PHP 脚本来访问所创建的 Cookie 或会话。
+*   修改 **`login.php`**，使其在用户禁用 JavaScript 时也执行登录验证。提示：这比您想象的要简单——只需使用 PHP 处理表单提交（在同一文件中），就像 JavaScript 根本不存在一样。
+
+---
+
+## 16. 面向对象编程 (OOP) 入门
+
+### 本章内容
+
+*   基础与语法
+*   操作 MySQL
+*   DateTime 类
+*   复习与实践
+
+PHP 作为一门语言有些与众不同，因为它既可以*过程化*地使用（正如本书大部分内容所示），也可以作为*面向对象编程*（OOP）语言使用。这两种方法各有优劣，人们最终应当两者都熟悉。
+
+遗憾的是，精通 OOP 需要大量的时间和知识：我的《PHP 5 进阶：Visual QuickPro Guide》（Peachpit Press 出版）就花了 150 页来讲解该主题！尽管如此，OOP 的优点之一在于您可以在*不完全了解*它的情况下*使用*它。您稍后就会明白这意味着什么。
+
+本章是本书此版本新增的，是一份 PHP 中 OOP 的入门指南。部分示例将复现本书前面展示的过程化示例，以便最好地对比这两种方法。各种侧边栏和提示将提及 PHP 中 OOP 的其他用法，其中许多没有过程化的对应写法。
+
+### 基础与语法
+
+
+
+
+#### OOP 基础
+
+如果您以前从未进行过面向对象编程，那么其概念和语法都可能显得相当陌生。简单来说，所有应用程序或脚本都涉及*对信息采取行动*：验证它、操作它、将其存储在数据库中，等等。从理念上讲，过程式编程的重点在于动作：先做这个，再做那个，然后做那个；而 OOP 以数据为中心，更关注所使用的信息种类。
+
+### OOP 与过程式编程
+
+关于 OOP 与过程式编程优劣的讨论很容易升级为口水战，双方都会极力捍卫自己的方法。PHP 在这方面有些独特，因为它给了您选择的余地（相比之下，C 语言严格来说是过程式语言，而 Java 是面向对象语言）。在我看来，每种编程风格都有其优缺点，但没有哪一种比另一种“更好”。
+
+可以说，过程式编程更容易学习和使用，特别是对于较小的项目。但过程式代码可能更难维护和扩展，尤其是在更复杂的网站中，并且更容易产生 Bug。
+
+另一方面，使用 OOP 编写的代码可能更易于维护，特别是在大型项目中，并且可能更适合团队环境。但 OOP 更难精通，一旦做得不好，补救起来就更具挑战性。
+
+随着时间的推移，您自然会形成自己的观点和偏好。对我来说，真正的教训是利用 PHP 同时支持两种语法这一事实，而不应无论在何种情况下都将自己局限于单一风格。
+
+### 类定义与成员
+
+作为一个理论示例，您可能有一个名为 `Car` 的类。请注意，按照惯例，类名以大写字母开头。`Car` 的属性将包括 `make`、`model`、`year`、`odometer` 等：即关于一辆车可以了解的所有信息。`Car` 的属性可以被设置、更改和检索，属性的值将*这辆* `Car` 与*那辆* `Car` 区分开来。`Car` 的方法——即汽车能做的事情——将包括：`start()`、`drive()`、`park()` 和 `turnOff()`。这些动作是所有 `Car` 共有的。
+
+在本章介绍中，我提到您可以在不真正*了解* OOP 的情况下*使用* OOP。我的意思是，使用现有的类定义来满足您自己的需求非常容易，也很常见。事实上，代码的可重用性——特别是由他人创建的代码——是 OOP 的主要优势之一。真正需要付出大量努力的，至少要想做好的话，是掌握设计过程：理解要定义哪些成员，以及更重要的是，如何实现复杂的 OOP 概念，例如：
+
+- 继承
+- 访问控制
+- 重写方法
+- 作用域解析
+- 抽象
+- 等等
+
+当您有兴趣学习如何正确创建自己的类时，可以参阅我的《PHP 5 进阶：Visual QuickPro Guide》等资源中的相关主题，但在本章中，让我们专注于使用现有类，而不是创建自己的自定义类。
+
+### PHP 中的 OOP 语法
+
+假设有人已经完成了设计和定义 `Car` 类的过程。大多数类不是直接使用的；相反，您需要创建该类的一个*实例*——一个该类类型的特定变量。该实例称为*对象*。在 PHP 中，使用 `new` 关键字创建实例：
+
+```
+$obj = new ClassName();
+$mine = new Car();
+```
+
+代码 `$name = 'Larry'` 创建了一个字符串类型的变量，而上述代码创建了一个 `Car` 类型的变量。`Car` 定义中的所有内容——每个属性（即变量）和方法（即函数）——现在都嵌入在 `$mine` 中。
+
+在幕后（即在类定义中），当生成该类型的新对象时，一个称为*构造函数*的特殊方法会被自动调用。构造函数通常提供该对象后续使用所需的任何初始设置。例如，`MySQLi` 类的构造函数建立与数据库的连接，而 `DateTime` 类的构造函数创建对精确日期和时间的引用（本章将显式使用 `MySQLi` 和 `DateTime` 类）。
+
+如果构造函数接受参数，像任何函数一样，这些参数可以在创建对象时提供：
+
+```
+$mine = new Car('Honda', 'Fit', 2008);
+```
+
+一旦您有了一个对象，就可以使用语法 `$object_name->member_name` 来引用其属性（即变量）并调用其方法（即函数）：
+
+```
+$mine->color = 'Purple';
+$mine->start();
+```
+
+第一行（理论上）将值 *Purple* 赋给对象的 `color` 属性。第二行调用对象的 `start()` 方法。与任何函数调用一样，括号是必需的。如果方法接受参数，也可以提供：
+
+```
+$mine->drive('Forward');
+```
+
+有时您会像使用其他变量一样使用对象的属性：
+
+```
+$mine->odometer += 20;
+echo "My car currently has $mine->odometer miles on it.";
+```
+
+如果对象的方法返回值，该方法的调用方式与任何返回值的函数相同：
+
+```
+// fill() 方法接受添加的加仑数
+// 并返回油箱有多满：
+$tank = $mine->fill(8.5);
+```
+
+了解这些关于 OOP 的知识足以开始使用它了。正如您将看到的，接下来几页的示例将复制本书前面解释过的功能，因此，对同一最终结果采取的截然不同的方法应该能帮助您更好地理解正在发生的事情。
+
+> **提示**
+>
+> 在文档中，您会看到 `ClassName::method_name()` 语法。这是一种指定方法属于哪个类的方式。
+
+> **提示**
+>
+> PHP 5.3 的主要变化之一是支持*命名空间*。通俗地说，命名空间提供了一种将多个类定义归入单一标题下的方法。命名空间有助于组织代码，以及防止冲突（例如，区分我的 `Car` 类和您的 `Car` 类）。
+
+> **提示**
+>
+> 类也可以拥有自己的常量，就像它们拥有自己的变量和函数一样。类常量通常在不需要该类实例的情况下使用，如下所示：
+>
+> ```
+> echo ClassName::CONSTANT_NAME;
+> ```
+
+> **提示**
+>
+> PHP 中的 OOP 从 PHP 3 到 PHP 4 再到 PHP 5 发生了巨大变化。本章讨论的语法仅适用于 PHP 5 及更高版本。
+
+### 更多 OOP 类
+
+PHP 中定义的 OOP 类不仅限于本章演示的那些，尽管我认为 `MySQLi` 和 `DateTime` 类是最明显、最易用的两个。最大的类库可以在*标准 PHP 库*（SPL）中找到，它从 5.0 版本内置于 PHP，并在 5.3 版本中大幅扩展。
+
+SPL 在几个类别中提供了高端类：异常处理、*迭代器*（可作用于任何数据集合的循环）、自定义数据类型等。SPL 绝对面向更高级的 PHP 程序员，对于其他方面强面向对象或完全面向对象的代码最为有益。
+
+
+
+
+还有一些为国际化目的定义的优秀类（[www.php.net/intl](http://www.php.net/intl)）。这些类定义了原本打算作为现已废弃的 PHP 6 一部分的功能，包括以针对给定 `locale`（区域设置是语言、文化习惯及某一地区其他独特选择的组合）定制的方式对单词进行排序、格式化数字等。
+
+---
+
+### 使用 MySQL
+
+正如你既可以用过程式风格也可以用面向对象风格编写 PHP 代码一样，MySQL Improved 扩展同样可以用这两种方式与数据库交互。第 9 章 "将 PHP 与 MySQL 结合使用" 介绍了过程式方法的基础知识。作为对比，本章将使用面向对象编程（OOP）演示相同的功能。
+
+这里将用到三个定义好的类：
+
+*   **`MySQLi`**，主类，提供数据库连接、查询方法等。
+*   **`MySQLi_Result`**，用于处理 **`SELECT`** 查询（及其他查询）的结果。
+*   **`MySQLi_STMT`** 用于执行预处理语句（在第 13 章 "安全方法" 中介绍）。
+
+对于每个类，我将解释基本用法并带你演练一个示例脚本。要查看所有可能性的完整列表——即每个类的所有属性和方法——请参阅 PHP 手册。
+
+#### 创建连接
+
+与过程式方法一样，使用对象表示法与 MySQL 交互的第一步是创建连接。使用 **`MySQLi`** 类时，在实例化对象（即创建对象）时，通过将适当的连接值传递给构造函数来建立连接：
+
+```php
+$mysqli = new MySQLi(hostname, username, password, database);
+```
+
+尽管这是面向对象编程，但你使用的 MySQL 值与过程式编程时相同，也与使用命令行客户端或其他界面连接 MySQL 时相同。
+
+如果无法建立连接，**`connect_error`** 属性将存储原因：
+
+```php
+if ($mysqli->connect_error) {
+    echo $mysqli->connect_error;
+}
+```
+
+不幸的是，在 PHP 5.2.9 之前的版本中，这种方法有 bug（或者干脆就是坏的），所以你会在 PHP 手册中看到这个 *kludge*（丑陋的权宜之计）代替：
+
+```php
+if (mysqli_connect_error()) {
+    echo mysqli_connect_error();
+}
+```
+
+如果你使用的不是 PHP 5.2.9 或更高版本，你就必须在自己的脚本中使用这最后一段代码。
+
+接下来，你应该设置字符集：
+
+```php
+$mysqli->set_charset(charset);
+$mysqli->set_charset('utf8');
+```
+
+此时，你已准备好执行查询，下文将介绍。
+
+执行完查询后，调用 **`close()`** 方法关闭数据库连接：
+
+```php
+$mysqli->close();
+```
+
+为了更加整洁，你也可以删除该对象：
+
+```php
+unset($mysqli);
+```
+
+为了练习这一点，让我们编写一个连接 MySQL 的 PHP 脚本。由于后续两个脚本将是 第 9 章 脚本的更新版，并将使用与 第 9 章 相同的模板，因此你需要将接下来的这三个脚本放在用于 第 9 章 的相同 Web 目录中。
+
+#### 创建一个 OOP MySQL 连接
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 脚本，命名为 **`mysqli_oop_connect.php`**（**脚本 16.1**）：
+
+```php
+<?php # Script 16.1 - mysqli_oop_connect.php
+```
+
+该脚本将基本遵循 第 9 章 中 **`mysqli_connect.php`** 的相同方法。它不包含 HTML。
+
+**脚本 16.1.** 该脚本创建一个新的 `MySQLi` 对象，数据库交互将通过该对象进行。
+
+---
+
+```php
+1   <?php # Script 16.1 - mysqli_oop_
+        connect.php
+2   // This file contains the database
+        access information.
+3   // This file also establishes a
+        connection to MySQL,
+4   // selects the database, and sets the
+        encoding.
+5   // The MySQL interactions use OOP!
+6
+7   // Set the database access information
+        as constants:
+8   DEFINE ('DB_USER', 'username');
+9   DEFINE ('DB_PASSWORD', 'password');
+10  DEFINE ('DB_HOST', 'localhost');
+11  DEFINE ('DB_NAME', 'sitename');
+12
+13  // Make the connection:
+14  $mysqli = new MySQLi(DB_HOST,
+        DB_USER, DB_PASSWORD, DB_NAME);
+15
+16  // Verify the connection:
+17  if ($mysqli->connect_error) {
+18      echo $mysqli->connect_error;
+19      unset($mysqli);
+20  } else { // Establish the encoding.
+21      $mysqli->set_charset('utf8');
+22  }
+```
+
+---
+
+**2.** 将数据库连接参数设置为常量：
+
+```php
+DEFINE ('DB_USER', 'username');
+DEFINE ('DB_PASSWORD', 'password');
+DEFINE ('DB_HOST', 'localhost');
+DEFINE ('DB_NAME', 'sitename');
+```
+
+一如既往，你需要根据你的服务器情况修改具体细节。与 第 9 章 一样，本章示例将使用 *sitename* 数据库。
+
+**3.** 创建一个 **`MySQLi`** 对象：
+
+```php
+$mysqli = new MySQLi(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+```
+
+这是前面解释过的语法，使用常量作为传递给构造函数的值。
+
+**4.** 如果发生错误，显示它：
+
+```php
+if ($mysqli->connect_error) {
+    echo $mysqli->connect_error;
+    unset($mysqli);
+```
+
+如果 **`MySQLi`** 对象的 **`connect_error`** 属性有值，则意味着脚本无法建立与数据库的连接。在这种情况下，显示连接错误，并取消设置对象变量，因为它已无用处。
+
+请记住，如果你使用的是 PHP 5.2.9 之前的版本（你确实知道你使用的确切版本，对吧？），你需要将此代码更改为：
+
+```php
+if (mysqli_connect_error()) {
+    echo mysqli_connect_error();
+    unset($mysqli);
+}
+```
+
+**5.** 如果连接成功，设置编码：
+
+```php
+} else {
+    $mysqli->set_charset('utf8');
+}
+```
+
+请记住，用于与 MySQL 通信的编码需要与 HTML 页面设置的编码以及数据库设置的编码相匹配。
+
+**6.** 将脚本保存为 **`mysqli_oop_connect.php`**。
+
+与本书中大多数旨在被其他脚本包含的文件一样，此文件省略了结束 PHP 标签。
+
+**7.** 理想情况下，将文件放在 Web 文档目录之外。
+
+因为该文件包含敏感的 MySQL 访问信息，所以应安全存储。如果可以，请将其放在 Web 目录正上方或其他 Web 目录之外的目录中（详见 第 9 章）。
+
+同样，后面两个脚本将使用 第 9 章 使用的模板，因此你应该将此连接脚本存放在与 第 9 章 中的 **`mysqli_connect.php`** 相同的目录中。
+
+**8.** 将脚本的副本临时放在 Web 目录中，并在 Web 浏览器中运行它。
+
+为了测试脚本，你需要将副本放在服务器上，以便从 Web 浏览器访问（这意味着它必须位于 Web 目录中）。如果脚本正常工作，结果应该是一张空白页。如果你看到 *Access denied...* 或类似消息，则意味着用户名、密码和主机的组合无权访问该特定数据库。
+
+**9.** 从 Web 目录中删除临时副本。
+
+---
+
+> **提示**
+>
+> 你可以使用 **`print_r()`** 来了解和调试 PHP 代码中的对象：
+>
+> ```php
+> echo '<pre>' . print_r($mysqli, 1) . '</pre>';
+> ```
+
+
+
+
+![Image](img/circle-b.jpg)对对象使用 `print_r()`，或许将其包裹在预格式化标签中以使其输出更易读，可显示该对象的许多属性名称和值。
+
+***
+
+提示
+
+由于如果未建立连接，`$mysqli` 对象会被销毁，因此任何需要它的脚本都可以通过以下方式测试连接是否成功：
+
+```
+if (isset($mysqli)) { // 执行相应操作。
+```
+
+为简洁起见，后续脚本中省略了此测试，但请知晓这是可行的。
+
+***
+
+提示
+
+MySQLi 构造函数还接受两个参数：要使用的端口和套接字。运行 MAMP 或 XAMPP 时（参见附录 A“安装”，可从 peachpit.com 下载），可能需要提供端口号。
+
+***
+
+提示
+
+`MySQLi::character_set_name()` 方法返回当前字符集。`MySQLi::get_charset()` 方法返回字符集、排序规则等信息。
+
+***
+
+提示
+
+您可以通过 `select_db()` 方法更改当前连接使用的数据库：
+
+```
+$mysqli->select_db(dbname);
+```
+
+***
+
+#### 执行简单查询
+
+成功建立与 MySQL 服务器的连接后，即可开始使用 `MySQLi` 对象查询数据库。为此，调用名为 `query()` 的方法：
+
+```
+$mysqli->query(query);
+```
+
+其唯一参数是要执行的 SQL 命令，我通常会预先将其赋值给一个单独的变量：
+
+```
+$q = 'SELECT * FROM tablename';
+
+$mysqli->query($q);
+```
+
+您可以将方法调用用作条件，以测试查询是否无错误执行：
+
+```
+if ($mysqli->query($q)) { // 成功！
+```
+
+或者，您可以检查 `error` 属性 ![Image](img/circle-c.jpg)：
+
+```
+if ($mysqli->error) { // 失败！
+
+    echo $mysqli->error;
+
+}
+```
+
+![Image](img/16_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg)查询出现问题会导致 MySQL 错误。
+
+如果刚执行的查询是 `INSERT`，您可以通过 `insert_id` 属性检索自动生成的主键值：
+
+```
+$id = $mysqli->insert_id;
+```
+
+如果刚执行的查询是 `UPDATE`、`INSERT` 或 `DELETE`，您可以从 `affected_rows` 属性获取受影响的行数——即有多少行被更新、插入或删除：
+
+```
+echo "$mysqli->affected_rows rows were affected by the query.";
+```
+
+在执行任何查询之前，最后要了解的是如何*净化*查询中使用的数据。为此，请预先对字符串变量应用 `real_escape_string()`：
+
+```
+$var = $mysqli->real_escape_string($var);
+```
+
+这等同于调用 `mysqli_real_escape_string()`，可防止撇号和其他有问题的字符破坏 SQL 命令的语法。
+
+利用所有这些信息，下一组步骤将使用 OOP 重写来自第 9 章的 `register.php`（脚本 9.5）。
+
+#### 执行简单查询
+
+**1.** 在文本编辑器或 IDE 中打开 `register.php`（脚本 9.5）。
+
+**2.** 将 MySQL 连接脚本的引入更改为（**脚本 16.2**）：
+
+```
+require ('../mysqli_oop_connect.php');
+```
+
+假设 `mysqli_oop_connect.php` 位于上一级目录中，此代码将正常工作。如果您的目录结构不同，请相应地更改对该文件的引用。
+
+**3.** 将每处 `mysqli_real_escape_string()` 的用法更改为：
+
+```
+$mysqli->real_escape_string():
+$fn = $mysqli->real_escape_string (trim($_POST['first_name']));
+$ln = $mysqli->real_escape_string (trim($_POST['last_name']));
+$e = $mysqli->real_escape_string (trim($_POST['email']));
+$p = $mysqli->real_escape_string (trim($_POST['pass1']));
+```
+
+四个数据项——自然全是字符串——均经过转义以便在查询中获得额外保护。由于脚本现在采用面向对象方式使用 MySQL Improved 扩展，这四行代码应作相应更改。
+
+**4.** 更新查询的执行方式（原脚本第 52 行）：
+
+```
+$mysqli->query($q);
+```
+
+要使用 OOP 在数据库上执行查询，请调用对象的 `query()` 方法，并将要运行的查询提供给它。
+
+**脚本 16.2.** 此注册脚本的更新版本通过 OOP 使用 MySQL Improved 扩展。
+
+***
+
+```
+1   <?php # 脚本 16.2 - register.php
+
+2   // 此脚本执行 INSERT 查询
+       以向 users 表添加一条记录。
+3   // 这是来自第 9 章脚本的 OOP 版本。
+
+4
+
+5   $page_title = 'Register';
+6   include ('includes/header.html');
+
+7   // 检查表单提交：
+8   if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+
+9
+
+10      require ('../mysqli_oop_connect.php');
+      // 连接到数据库。
+
+11
+
+12      $errors = array(); // 初始化错误
+         数组。
+
+13
+
+14      // 检查名：
+15      if (empty($_POST['first_name'])) {
+16          $errors[] = 'You forgot to enter
+            your first name.';
+17      } else {
+18          $fn = $mysqli->real_escape_
+            string(trim($_POST['first_name']));
+19      }
+
+20
+
+21      // 检查姓：
+22      if (empty($_POST['last_name'])) {
+23          $errors[] = 'You forgot to enter
+            your last name.';
+24      } else {
+25          $ln = $mysqli->real_escape_
+            string(trim($_POST['last_name']));
+26      }
+
+27
+
+28      // 检查电子邮件地址：
+29      if (empty($_POST['email'])) {
+30          $errors[] = 'You forgot to enter
+            your email address.';
+31      } else {
+32          $e = $mysqli->real_escape_
+            string(trim($_POST['email']));
+33      }
+
+34
+
+35      // 检查密码并与确认密码匹配：
+36      if (!empty($_POST['pass1'])) {
+37      if ($_POST['pass1'] != $_POST
+         ['pass2']) {
+38          $errors[] = 'Your password
+            did not match the confirmed
+            password.';
+39      } else {
+40          $p = $mysqli->real_escape_
+            string(trim($_POST['pass1']));
+41      }
+42  } else {
+43      $errors[] = 'You forgot to enter
+         your password.';
+44  }
+
+45
+
+46  if (empty($errors)) { // 如果
+         一切正常。
+
+47
+
+48      // 在数据库中注册用户...
+
+49
+
+50      // 创建查询：
+51      $q = "INSERT INTO users
+         (first_name, last_name, email,
+         pass, registration_date) VALUES
+         ('$fn', '$ln', '$e', SHA1('$p'),
+         NOW() )";
+
+52
+
+53      // 执行查询：
+54      $mysqli->query($q);
+
+55
+
+56      if ($mysqli->affected_rows ==
+         1) { // 如果运行正常。
+
+57
+
+58          // 打印消息：
+59          echo '<h1>Thank you!</h1>
+         <p>You are now registered. In
+         Chapter 12 you will actually be
+         able to log in!</p><p><br /></p>';
+
+60
+
+61      } else { // 如果运行不正常。
+
+62
+
+63          // 公共消息：
+64          echo '<h1>System Error</h1>
+         <p class="error">You could not
+            be registered due to a system
+            error. We apologize for any
+            inconvenience.</p>';
+
+65
+
+66          // 调试消息：
+67          echo '<p>' . $mysqli->error .
+            '<br /><br />Query: ' . $q .
+            '</p>';
+
+68
+
+69          } // End of if ($r) IF.
+
+70
+
+71          $mysqli->close(); // 关闭数据库
+            连接。
+72          unset($mysqli);
+
+73
+
+74          // 引入页脚并退出脚本：
+75          include ('includes/footer.html');
+76          exit();
+
+77
+
+78      } else { // 报告错误。
+
+79
+
+80          echo '<h1>Error!</h1>
+         <p class="error">The following
+```
+
+
+
+
+
+### 错误处理与数据库连接关闭
+
+```php
+84        echo 'error(s) occurred:<br />';
+85        foreach ($errors as $msg) {
+86            // Print each error.
+87            echo " - $msg<br />\n";
+88        }
+89        echo '</p><p>Please try again.</p><p><br /></p>';
+90    } // End of if (empty($errors)) IF.
+91
+92    $mysqli->close(); // Close the database connection.
+93    unset($mysqli);
+94
+95 } // End of the main Submit conditional.
+96 ?>
+```
+
+### 注册表单
+
+```php
+97 <h1>Register</h1>
+98 <form action="register.php" method="post">
+99     <p>First Name: <input type="text" name="first_name" size="15" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" /></p>
+100     <p>Last Name: <input type="text" name="last_name" size="15" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" /></p>
+101     <p>Email Address: <input type="text" name="email" size="20" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" /> </p>
+102     <p>Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>
+103     <p>Confirm Password: <input type="password" name="pass2" size="10" maxlength="20" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
+104     <p><input type="submit" name="submit" value="Register" /></p>
+105 </form>
+106 <?php include ('includes/footer.html'); ?>
+```
+
+---
+
+### 5. 修改查询执行的确认逻辑（原第 53 行）
+
+将条件改为：
+
+```php
+if ($mysqli->affected_rows == 1) {
+```
+
+之前的脚本版本使用结果变量来确认查询是否成功：
+
+```php
+if ($r) {
+```
+
+此处，条件判断更正式地断言受影响的行数等于 1。
+
+### 6. 更新调试错误信息以使用对象（原脚本第 66 行）
+
+```php
+echo '<p>' . $mysqli->error . '<br /><br />Query: ' . $q . '</p>';
+```
+
+不再调用 `mysqli_error()` 函数，而是使用对象的 `error` 属性来存储数据库报告的问题。
+
+### 7. 修改关闭数据库连接的两处代码
+
+```php
+$mysqli->close();
+unset($mysqli);
+```
+
+第一行关闭连接，第二行销毁变量。此步骤释放已用内存，虽非强制，但属于专业规范。原脚本在两处关闭了数据库连接，请确保两处均已更新。
+
+### 8. 保存脚本，放入 Web 目录，并在 Web 浏览器中测试。
+
+如果所有代码均已按要求更新，注册脚本应能像以前一样正常工作。
+
+### 获取查询结果
+
+上一节演示了如何执行“简单”查询，即不返回结果行的查询。执行 `SELECT` 查询时，代码略有不同，因为必须处理查询结果。首先，建立 `MySQLi` 对象后，使用 `query()` 方法在数据库上运行查询。若查询预期返回结果集，将方法调用的结果赋值给另一个变量：
+
+```php
+$q = 'SELECT * FROM tablename';
+$result = $mysqli->query($q);
+```
+
+变量 `$result` 将是 `MySQLi_Result` 类型的对象：正如某些函数返回字符串或整数，`MySQLi::query()` 将返回 `MySQLi_Result` 对象。其 `num_rows` 属性反映查询结果中的记录数：
+
+```php
+if ($result->num_rows > 0) { // Handle the results.
+```
+
+若查询仅返回一行，可直接调用 `fetch_array()` 方法获取：
+
+```php
+$row = $result->fetch_array();
+```
+
+该方法与过程式对应函数 `mysqli_fetch_array()` 类似，接受一个常量作为可选参数，指示返回的行应视为关联数组 (`MYSQLI_ASSOC`)、索引数组 (`MYSQLI_NUM`) 还是两者兼有 (`MYSQLI_BOTH`)。`MYSQLI_BOTH` 为默认值。
+
+若有多条记录需获取，可使用循环：
+
+```php
+while ($row = $result->fetch_array(MYSQLI_NUM)) {
+    // Use $row.
+}
+```
+
+此时循环中的 `$row` 为数组，可使用 `$row[0]` 或 `$row['column']` 访问单个列（假设使用了相应常量）。若偏好 OOP 语法，可改用 `fetch_object()` 方法，从而创建对象而非数组：
+
+```php
+$q = 'SELECT user_id, first_name FROM users';
+$result = $mysqli->query($q);
+while ($row = $result->fetch_object()) {
+    // Use $row->user_id
+    // Use $row->first_name
+}
+```
+
+处理完结果后，应释放其占用的资源：
+
+```php
+$result->free();
+```
+
+让我们利用这些信息更新 `view_users.php`（Script 9.6）。
+
+#### 检索查询结果的步骤
+
+**1.** 在文本编辑器或 IDE 中打开 `view_users.php`（Script 9.6）。
+
+**2.** 将 MySQL 连接脚本的引入改为（**Script 16.3**）：
+
+```php
+require ('../mysqli_oop_connect.php');
+```
+
+同样，路径需根据您的设置进行调整。
+
+**3.** 将查询执行代码改为（原第 14 行）：
+
+```php
+$r = $mysqli->query($q);
+```
+
+无论执行何种类型的查询，均调用同一个 `MySQLi::query()` 方法。但此处将查询执行的结果赋值给一个新变量，该变量将为 `MySQLi_Result` 类型的对象。为简洁起见，此处变量名为 `$r`，您也可使用更正式的 `$result`。
+
+**4.** 修改确定返回行数的方式（原脚本第 17 行）：
+
+```php
+$num = $r->num_rows;
+```
+
+结果对象的 `num_rows` 属性反映查询返回的记录数。该值赋给变量 `$num`，与之前一致。
+
+请注意这是一个**属性**，而非**方法**（即 `$r->num_rows`，而非 `$r->num_rows()`）。
+
+**5.** 将 `while` 循环改为：
+
+```php
+while ($row = $r->fetch_object()) {
+```
+
+此处改为调用 `MySQLi_Result` 对象的 `fetch_object()` 方法，而非调用 `mysqli_fetch_array()`。
+
+---
+
+**Script 16.3.** 本脚本使用 `MySQLi` 和 `MySQLi_Result` 类从数据库获取记录。
+
+```php
+1  <?php # Script 16.3 - view_users.php
+2  // This script retrieves all the records
+3  // from the users table.
+4  // This is an OOP version of the script
+5  // from Chapter 9.
+6
+7  $page_title = 'View the Current Users';
+8  include ('includes/header.html');
+9
+10 // Page header:
+11 echo '<h1>Registered Users</h1>';
+12
+13 require ('../mysqli_oop_connect.php');
+14 // Connect to the db.
+15
+16 // Make the query:
+17 $q = "SELECT CONCAT(last_name, ', ',
+18     first_name) AS name, DATE_FORMAT
+19     (registration_date, '%M %d, %Y')
+20     AS dr FROM users ORDER BY
+21     registration_date ASC";
+22 $r = $mysqli->query($q); // Run the query.
+23
+24 // Count the number of returned rows:
+25 $num = $r->num_rows;
+26
+27 if ($num > 0) { // If it ran OK, display the records.
+28
+29     // Print how many users there are:
+30     echo "<p>There are currently $num registered users.</p>\n";
+31
+32     // Table header.
+33     echo '<table align="center"
+34         cellspacing="3" cellpadding="3"
+35         width="75%">
+36     <tr><td align="left"><b>Name</b>
+37         </td><td align="left"><b>Date Registered</b></td></tr>
+38 ';
+```
+
+
+
+
+
+```php
+30  // 获取并打印所有记录：
+31  while ($row = $r->fetch_object()) {
+32      echo '<tr><td align="left">' .
+             $row->name . '</td><td align="left">' . $row->dr . '</td></tr>';
+33  }
+34
+35  echo '</table>'; // 关闭表格。
+36
+37  $r->free(); // 释放资源。
+38  unset($r);
+39
+40  } else { // 如果没有返回记录。
+41
+42      echo '<p class="error">There are currently no registered users.</p>';
+43
+44  }
+45
+46  // 关闭数据库连接。
+47  $mysqli->close();
+48  unset($mysqli);
+49
+50  include('includes/footer.html');
+51  ?>
+```
+
+---
+
+**6.** 在 `while` 循环中，更改每列值的打印方式：
+
+```php
+echo '<tr><td align="left">' . $row->name . '</td><td align="left">' . $row->dr . '</td></tr>';
+```
+
+由于 `$row` 变量现在是一个对象，必须使用对象表示法，而不是数组表示法，来引用每行中的列：`$row->name` 和 `$row->dr` 代替 `$row['name']` 和 `$row['dr']`。
+
+**7.** 更改资源释放方式：
+
+```php
+$r->free();
+unset($r);
+```
+
+要释放返回结果占用的内存，请调用 `MySQLi_Result` 对象的 `free()` 方法。此外，由于该对象在脚本中不再使用，可以将其销毁。
+
+**8.** 更新数据库连接的关闭方式：
+
+```php
+$mysqli->close();
+unset($mysqli);
+```
+
+**9.** 保存脚本，将其放置在您的 Web 目录中，并在 Web 浏览器中测试它。
+
+`view_users.php`（脚本 16.3）的面向对象版本看起来与原始过程式版本相同。
+
+> **提示**
+>
+> 使用 `fetch_object()` 方法的真正好处在于，您可以将结果作为*特定类型的对象*获取。例如，假设您在 PHP 中定义了一个 `Car` 类，并且一个脚本从数据库中获取了关于汽车的所有存储信息。在 PHP 脚本中，每条记录都可以作为 `Car` 类类型的对象获取。通过这样做，您将创建一个 PHP `Car` 对象，其数据来自数据库记录填充，但仍然可以调用 `Car` 类的方法。
+
+---
+
+#### 预处理语句
+
+第 13 章介绍了执行查询的另一种方式：使用*预处理语句*。与运行查询的标准方法相比，预处理语句可以提供更好的安全性，甚至可能获得更好的性能。当然，您可以使用 MySQL Improved 扩展以对象的方式执行预处理语句。步骤是相同的：创建一个 `MySQLi` 对象（从而建立与数据库的连接）后，您需要
+
+*   准备查询
+*   绑定参数
+*   执行查询
+
+在实际代码中如下所示：
+
+```php
+$q = 'INSERT INTO tablename (this, that) VALUES (?, ?)';
+$stmt = $mysqli->prepare($q);
+$stmt->bind_param('si', $this, $that);
+$this = 'Larry';
+$that = 234;
+$stmt->execute();
+```
+
+`MySQLi::prepare()` 方法返回一个 `MySQLi_STMT` 类型的对象。该对象有几个关键属性：
+
+*   `affected_rows` 存储语句影响的行数，通常适用于 `INSERT`、`UPDATE` 和 `DELETE` 查询。
+*   `num_rows` 反映 `SELECT` 查询结果集中的记录数。
+*   `insert_id` 存储上一个 `INSERT` 查询自动生成的 ID 值。
+*   `error` 表示可能发生的任何错误。
+
+执行完预处理语句后，您应该关闭该语句：
+
+```php
+$stmt->close();
+```
+
+让我们通过更新 `post_message.php`（脚本 13.6）来应用这些信息。这是一个独立的脚本，使用 *forum* 数据库，并且在第 13 章或本章中未与任何其他脚本关联。
+
+#### 执行预处理语句
+
+**1.** 在文本编辑器或 IDE 中打开 `post_message.php`（脚本 13.6）。
+
+**2.** 将数据库连接的创建更改为（脚本 16.4）：
+
+```php
+$mysqli = new MySQLi('localhost', 'username', 'password', 'forum');
+$mysqli->set_charset('utf8');
+```
+
+该脚本的先前版本未使用单独的连接脚本，此版本也不会。请确保您的值对于连接到服务器上的 *forum* 数据库是正确的。
+
+**3.** 将查询的准备更改为（原脚本第 21 行）：
+
+```php
+$stmt = $mysqli->prepare($q);
+```
+
+`MySQLi::prepare()` 方法准备一条语句，将查询作为其唯一参数。它返回一个 `MySQLi_STMT` 类型的对象，此处赋值给 `$stmt`。
+
+**4.** 将参数绑定更改为：
+
+```php
+$stmt->bind_param('iiiss', $forum_id, $parent_id, $user_id, $subject, $body);
+```
+
+此代码更改仅是从 `mysqli_stmt_bind_param($stmt...` 改为 `$stmt->bind_param(...`。该方法的第一个参数是后续数据类型的指示符。后续参数是查询占位符所绑定的 PHP 变量。
+
+**5.** 将语句的执行更新为：
+
+```php
+$stmt->execute();
+```
+
+**脚本 16.4.** 在本章 13 脚本的此版本中，使用 `MySQLi_STMT` 类来执行预处理语句。
+
+```php
+1   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+2       1.0 Transitional//EN" "http://www.w3.org/
+3       TR/xhtml1/DTD/xhtml1-transitional.dtd">
+4   <html xmlns="http://www.w3.org/1999/
+5       xhtml" xml:lang="en" lang="en">
+6   <head>
+7       <meta http-equiv="Content-Type"
+8           content="text/html; charset=utf-8" />
+9       <title>Post a Message</title>
+10  </head>
+11  <body>
+12  <?php # Script 16.4 - post_message.php
+13  // This is an OOP version of the script
+14      from Chapter 13.
+15
+16  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+17
+18      // Validate the data (omitted)!
+19
+20      // Connect to the database:
+21      $mysqli = new MySQLi('localhost',
+22          'username', 'password', 'forum');
+23      $mysqli->set_charset('utf8');
+24
+25      // Make the query:
+26      $q = 'INSERT INTO messages (forum_id,
+27          parent_id, user_id, subject, body,
+28          date_entered) VALUES (?, ?, ?, ?, ?,
+29          NOW())';
+30
+31      // Prepare the statement:
+32      $stmt = $mysqli->prepare($q);
+33
+34      // Bind the variables:
+35      $stmt->bind_param('iiiss',
+36          $forum_id, $parent_id, $user_id,
+37          $subject, $body);
+38
+39      // Assign the values to variables:
+40      $forum_id = (int) $_POST['forum_id'];
+41      $parent_id = (int) $_POST['parent_id'];
+42      $user_id = 3; // The user_id value
+43          would normally come from the session.
+44      $subject = strip_tags($_POST
+45          ['subject']);
+46      $body = strip_tags($_POST['body']);
+47
+48      // Execute the query:
+49      $stmt->execute();
+50
+51      // Print a message based upon the
+52          result:
+53      if ($stmt->affected_rows == 1) {
+54          echo '<p>Your message has been
+55              posted.</p>';
+56      } else {
+57          echo '<p style="font-weight: bold;
+58              color: #C00">Your message could
+59              not be posted.</p>';
+60          echo '<p>' . $stmt->error . '</p>';
+61      }
+62
+63      // Close the statement:
+64      $stmt->close();
+65      unset($stmt);
+66
+67      // Close the connection:
+68      $mysqli->close();
+69      unset($mysqli);
+70
+71  } // End of submission IF.
+72
+73  // Display the form:
+74  ?>
+75  <form action="post_message.php"
+76      method="post">
+77
+78      <fieldset><legend>Post a message:
+79          </legend>
+80
+81      <p><b>Subject</b>: <input
+```
+
+
+
+
+
+### 修改条件判断
+
+将测试成功的条件更改为：
+
+```php
+if ($stmt->affected_rows == 1) {
+```
+
+要确认 `INSERT` 查询的成功，请检查受影响的行数，此处引用 `MySQLi_STMT` 对象的 `affected_rows` 属性。
+
+---
+
+### 出站参数
+
+正如 第 13 章 所示，`post_message.php` 脚本演示了使用**入站参数**：将查询中的占位符与 PHP 变量关联。您也可以使用**出站参数**：将查询返回的值绑定到 PHP 变量。
+
+首先，准备查询：
+
+```php
+$q = 'SELECT this, that FROM tablename';
+$stmt = $mysqli->prepare($q);
+```
+
+然后将返回的行绑定到变量：
+
+```php
+$stmt->bind_result($this, $that);
+```
+
+接下来，调用 `MySQLi_STMT::fetch()` 方法，通常作为 `while` 循环的一部分：
+
+```php
+while ($stmt->fetch()) {
+}
+```
+
+在 `while` 循环内，`$this` 和 `$that` 将存储每条记录返回的列。
+
+出站参数不像入站参数那样提供额外的安全性，也不一定提供更好的性能，但如果您有一个使用预处理语句的查询，同时使用入站和出站参数是合理的。例如，以登录查询为例：
+
+```sql
+SELECT user_id, first_name FROM users WHERE email='?' AND pass=SHA1('?')
+```
+
+您将使用入站参数来表示提交的电子邮件地址和密码，但对同一查询中检索到的用户 ID 和名字使用出站参数。
+
+---
+
+### 步骤 7：更改错误报告
+
+更改为使用：
+
+```php
+echo '<p>' . $stmt->error . '</p>';
+```
+
+此时脚本中的错误很可能是由于对必须唯一的列使用了重复值。如果查询中存在语法错误，那将在准备查询后出现在 `$mysqli->error` 中。
+
+---
+
+### 步骤 8：更新语句关闭方式
+
+```php
+$stmt->close();
+unset($stmt);
+```
+
+---
+
+### 步骤 9：更改数据库连接关闭方式
+
+```php
+$mysqli->close();
+unset($mysqli);
+```
+
+---
+
+### 步骤 10：保存并测试
+
+保存脚本，将其放在您的 Web 目录中，并在 Web 浏览器中测试。
+
+![图 16-6](img/16_figure_06_f.jpg)
+*HTML 表单，用于发布新消息。*
+
+![图 16-7](img/16_figure_07_g.jpg)
+*新消息已成功存储在数据库中。*
+
+---
+
+### DateTime 类
+
+PHP 5.2 版本新增了 `DateTime` 类。作为 第 11 章 “Web 应用程序开发” 中介绍的日期和时间相关函数的替代方案，`DateTime` 类将您可能需要的所有操作日期和时间的功能打包在一起。它对于转换和比较日期时间特别有用。
+
+首先，创建一个新的 `DateTime` 对象：
+
+```php
+$dt = new DateTime();
+```
+
+如果不向构造函数提供任何参数，生成的 `DateTime` 对象将表示当前日期和时间。要创建特定日期和时间的表示，请将其作为第一个参数提供：
+
+```php
+$dt = new DateTime('2011-04-20');
+$dt = new DateTime('2011-04-20 11:15');
+```
+
+PHP 手册中详细列出了指定日期和时间的许多可接受格式。您也可以在创建对象后，使用 `setDate()` 和 `setTime()` 方法来设定日期或时间。`setDate()` 方法按顺序接收所需的年、月、日。`setTime()` 方法将小时、分钟和可选的秒作为其参数：
+
+```php
+$dt = new DateTime();
+$dt->setDate(2001, 4, 20);
+$dt->setTime(11, 15);
+```
+
+`DateTime` 对象仅允许您设定有效的日期和时间，对于无效的日期时间会抛出**异常**：
+
+```php
+$dt = new DateTime('2011-13-42');
+```
+
+![异常示例](img/16_figure_08_a.jpg)
+*尝试使用无效日期或时间创建 `DateTime` 对象会导致异常。*
+
+异常是之前未介绍过的主题。过程式代码可能会生成错误，而对象则**抛出异常**（确实称为“抛出”）。随着您进一步深入面向对象编程（OOP），您将学习如何使用 `try...catch` 块来“捕获”并处理抛出的异常。
+
+`DateTime` 构造函数接受一个可选的第二个参数，即要使用的时区。如果未提供，则适用于该 PHP 安装的默认时区。您也可以事后使用 `setTimezone()` 更改时区。请注意，`setTimezone()` 方法和构造函数都接受 `DateTimeZone` 对象作为参数，而不是字符串：
+
+```php
+$tz = new DateTimeZone('America/New_York');
+$dt->setTimezone($tz);
+```
+
+拥有 `DateTime` 对象后，您可以通过添加和减去时间段来操作其值。一种方法是使用 `modify()` 方法：
+
+```php
+$dt->modify('+1 day');
+$dt->modify('-1 month');
+$dt->modify('next Thursday');
+```
+
+您可以提供给该方法的值非常灵活，对应于 `strtotime()` 函数（将字符串转换为时间戳；详见 PHP 手册）中可用的值。
+
+`add()` 方法用于向表示的日期和时间添加一个时间段。它接受一个类型为 `DateInterval` 的对象作为唯一参数：
+
+```php
+$di = new DateInterval(interval);
+$dt->add($di);
+```
+
+设置间隔有一种特定的表示法，始终以字母 `P`（“period”，时期）开头。之后，添加一个整数和一个时期标识符：`Y` 代表年；`M` 代表月；`D` 代表日；`W` 代表周；`H` 代表小时；`M` 代表分；`S` 代表秒。您可能会好奇字母 `M` 如何同时代表月和分：这是可能的，因为小时、分钟和秒也应以 `T`（“time”，时间）为前缀。这些字符应按从大到小的顺序组合（即从年到秒）。以下是一些示例：
+
+- `P3W` 代表三周
+- `P2Y3M` 代表两年三个月
+- `P2M3DT4H18M43S` 代表两个月、三天、四小时、18 分钟和 43 秒
+
+`sub()` 方法的功能与 `add()` 完全相同，但从对象中减去时间段：
+
+```php
+$di = new DateInterval('P2W'); // 2 weeks
+$dt->sub($di);
+```
+
+`diff()` 方法返回一个 `DateInterval` 对象，反映两个 `DateTime` 对象之间的时间差：
+
+```php
+$diff = $dt->diff($dt2);
+```
+
+`DateInterval` 类定义了几个属性来表示计算出的间隔：`y` 代表年，`m` 代表月，`d` 代表日，`h` 代表小时，`i` 代表分，`s` 代表秒，以及 `days`，也代表天数。
+
+您应该熟悉的最后一个 `DateTime` 类方法是 `format()`，它返回按您想要的格式表示的日期：
+
+```php
+echo $dt->format(format);
+```
+
+对于格式化，您可以使用与 第 11 章 中介绍的 `date()` 函数相同的字符。
+
+
+
+
+
+#### DateTime 使用演示
+
+为了演示所有这些信息，接下来的脚本将执行许多网站所需的任务：允许用户输入两个日期以创建一个范围。该脚本将对提交的日期执行高质量验证，并计算它们之间的天数。所呈现的信息可以很容易地应用于酒店注册系统等场景。该脚本将使用刚才介绍的大量信息，甚至会直接比较两个 `DateTime` 对象，这是 PHP 5.2.2 版本起支持的功能。
+
+![一个用于输入两个日期的简单表单，并指明了格式。](img/16_figure_09_b.jpg)
+
+![如果提交了两个有效日期，且结束日期在开始日期之后，则会再次显示这些日期，并显示计算出的间隔。](img/16_figure_10_c.jpg)
+
+### 脚本 16.5：模拟常见的日期选择功能
+
+该脚本接受并验证两个日期。
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DateTime Usage</title>
+    <style type="text/css" media="screen">
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin: 10px;
+        }
+        label { font-weight: bold; }
+        .error { color: #F00; }
+    </style>
+</head>
+<body>
+<?php # Script 16.5 - datetime.php
+
+// 默认将开始日期和结束日期设为今天和明天：
+$start = new DateTime();
+$end = new DateTime();
+$end->modify('+1 day');
+
+// 显示日期的默认格式：
+$format = 'm/d/Y';
+
+// 此函数验证提供的日期字符串。
+// 如果有效，函数返回一个数组——月、日、年。
+function validate_date($date) {
+
+    // 将字符串拆分为各个部分：
+    $date_array = explode('/', $date);
+
+    // 如果不是 3 个项目，返回 FALSE：
+    if (count($date_array) != 3) return false;
+
+    // 如果不是有效日期，返回 FALSE：
+    if (!checkdate($date_array[0], $date_array[1], $date_array[2])) return false;
+
+    // 返回数组：
+    return $date_array;
+
+} // End of validate_date() function.
+
+// 检查表单提交：
+if (isset($_POST['start'], $_POST['end'])) {
+
+    // 对两个日期调用验证函数：
+    if ( (list($sm, $sd, $sy) = validate_date($_POST['start'])) && (list($em, $ed, $ey) = validate_date($_POST['end'])) ) {
+
+        // 如果没问题，调整 DateTime 对象：
+        $start->setDate($sy, $sm, $sd);
+        $end->setDate($ey, $em, $ed);
+
+        // 开始日期必须在前：
+        if ($start < $end) {
+
+            // 确定间隔：
+            $interval = $start->diff($end);
+
+            // 打印结果：
+            echo "<p>The event has been planned starting on {$start->format($format)} and ending on {$end->format($format)}, which is a period of $interval->days day(s).</p>";
+
+        } else { // 结束日期必须更晚！
+            echo '<p class="error">The starting date must precede the ending date.</p>';
+        }
+
+    } else { // 日期无效！
+        echo '<p class="error">One or both of the submitted dates was invalid.</p>';
+    }
+
+} // End of form submission.
+
+// 显示表单：
+?>
+<h2>Set the Start and End Dates for the Thing</h2>
+<form action="datetime.php" method="post">
+
+    <p><label for="start_date">Start Date:</label> <input type="text" name="start_date" value="<?php echo $start->format($format); ?>" /> (MM/DD/YYYY)</p>
+    <p><label for="end_date">End Date:</label> <input type="text" name="end_date" value="<?php echo $end->format($format); ?>" /> (MM/DD/YYYY)</p>
+
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
+```
+
+---
+
+### 使用 DateTime 类
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 脚本，命名为 `datetime.php`，从 HTML 开始（**脚本 16.5**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DateTime Usage</title>
+```
+
+**2.** 添加少量 CSS：
+
+```css
+<style type="text/css" media="screen">
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 10px;
+}
+label { font-weight: bold; }
+.error { color: #F00; }
+</style>
+```
+
+只有 `error` 类在功能方面是重要的。它将以红色文本格式化错误消息。
+
+**3.** 完成 head 并开始 body 和 PHP 部分：
+
+```html
+</head>
+<body>
+<?php # Script 16.5 - datetime.php
+```
+
+**4.** 创建两个 `DateTime` 对象：
+
+```php
+$start = new DateTime();
+$end = new DateTime();
+```
+
+无论表单是否已提交，首先都会创建两个 `DateTime` 对象，它们都将使用当前日期和时间进行实例化。随后，一个或两个对象将被赋予新值。
+
+**5.** 给结束日期加一天：
+
+```php
+$end->modify('+1 day');
+```
+
+默认情况下，当页面首次加载时，表单将预设今天为开始日期，明天为结束日期。要确定结束日期，只需修改对象的当前值，加上一天即可。
+
+使用 `DateInterval` 对象和 `DateTime::add()` 方法，可以用如下方式做同样的事情：
+
+```php
+$day = new DateInterval('P1D');
+$end->add($day);
+```
+
+**6.** 确定显示日期的默认格式：
+
+```php
+$format = 'm/d/Y';
+```
+
+脚本将在四个地方显示格式化后的日期版本。将首选格式——`MM/DD/YYYY`——赋值给变量，使得日后若需更改会更容易。
+
+**7.** 开始定义一个函数：
+
+```php
+function validate_date($date) {
+    $array = explode('/', $date);
+```
+
+两个提交的日期都需要通过几种方式进行验证，每当脚本或应用程序中有重复代码时，定义一个函数来执行该代码可能是合理的。该函数接受一个日期字符串（而非 `DateTime` 对象）作为其唯一参数。该字符串将是用户提交的值，类似 `08/02/2011`。函数做的第一件事是使用 `explode()` 函数将字符串拆分为三个独立的部分——月、日、年。生成的数组赋值给 `$array` 变量。
+
+**8.** 如果数组不包含三个元素，返回 `false`：
+
+```php
+if (count($array) != 3) return false;
+```
+
+函数做的第一件事是确认它正好有三个离散的值可供使用，分别代表月、日、年。如果数组不包含三个元素，函数返回值 `false` 以指示日期无效。第 7 步中的 `explode()` 行和这一行会使任何不符合 `X/Y/Z` 模式的提交值无效（尽管那仍可能是 `cat/dog/zebra`）。
+
+
+
+
+请注意，通常我建议在条件语句中始终使用花括号，但为了让代码尽可能简短，我省略了它们，并将整个结构保持在单行上。同时请记住，一旦函数执行了 `return` 语句，函数就会立即退出。
+
+**9.** 如果提供的日期不是有效日期，则返回 `false`：
+
+```
+if (!checkdate($array[0], $array[1], $array[2])) return false;
+```
+
+与步骤 8 类似，这段代码调用 PHP 的 `checkdate()` 函数来确认提供的日期确实存在。如果日期不存在（例如 `13/43/2011`），函数再次返回 `false`。
+
+**10.** 返回日期数组并结束函数：
+
+```
+return $array;
+} // End of validate_date() function.
+```
+
+如果提供的日期格式正确且对应一个存在的日期，该函数将返回日期元素数组。
+
+**11.** 如果表单已提交，验证用户提交的值：
+
+```
+if (isset($_POST['start'], $_POST['end'])) {
+    if ((list($sm, $sd, $sy) = validate_date($_POST['start'])) && (list($em, $ed, $ey) = validate_date($_POST['end']))) {
+```
+
+如果这两个变量已设置（意味着表单已提交），两者都会通过 `validate_date()` 函数进行验证。如果该函数对任一日期返回 `FALSE`，此条件判断将为 `FALSE`。如果函数对两个日期均返回数组，并分别赋值给对应的月、日、年变量，则可以确定并显示结果。
+
+**12.** 将日期重置为用户提交的日期：
+
+```
+$start->setDate($sy, $sm, $sd);
+$end->setDate($ey, $em, $ed);
+```
+
+因为此时提供的日期均为有效，所以可以更新这两个对象以代表用户输入的日期。为此，调用 `setDate()` 方法并向其传入各个单独的值。
+
+**13.** 如果结束日期在开始日期之后，计算它们之间的间隔：
+
+```
+if ($start < $end) {
+    $interval = $start->diff($end);
+```
+
+正如你可以比较两个数字以查看哪个更大或更小一样，你也可以比较两个 `DateTime` 对象。如果结束日期确实较晚，则通过在一个对象上调用 `diff()` 方法并将另一个对象作为参数传入，来计算两个日期之间的差值。结果被赋值给 `$interval` 变量，它将是一个 `DateInterval` 类型的对象。
+
+**14.** 打印结果：
+
+```
+echo "<p>The event has been planned starting on {$start->format($format)} and ending on {$end->format($format)}, which is a period of $interval->days day(s).</p>";
+```
+
+最后，显示结果 ![Image](img/graycircle-c.jpg)。正如你所见，可以在引号内调用对象方法，从而打印该函数调用的输出，但必须将整个结构包裹在花括号中。引用属性（如 `$interval->days`）则不需要花括号。
+
+**15.** 完成步骤 11 和 13 开始的条件判断：
+
+```
+} else { // End date must be later!
+    echo '<p class="error">The starting date must precede the ending date.</p>';
+}
+} else { // An invalid date!
+    echo '<p class="error">One or both of the submitted dates was invalid.</p>';
+}
+```
+
+第一个 `else` 子句适用于两个日期都有效，但结束日期不在开始日期之后的情况 ![Image](img/circle-d.jpg)。第二个 `else` 子句适用于任一提交的日期未通过 `validate_date()` 测试的情况。在这种情况下，两个日期将保留默认设置 ![Image](img/circle-e.jpg)。
+
+![Image](img/16_figure_11_d.jpg)
+
+![Image](img/circle-d.jpg) 如果提供的开始日期实际上晚于输入的结束日期，将显示此结果。
+
+![Image](img/16_figure_12_e.jpg)
+
+![Image](img/circle-e.jpg) 如果任一提交的日期不对应有效日期，将显示此结果。
+
+**16.** 完成表单提交条件判断，关闭 PHP 代码块，并开始 HTML 表单：
+
+```
+} // End of form submission.
+?>
+<h2>Set the Start and End Dates for the Thing</h2>
+<form action="datetime.php" method="post">
+```
+
+**17.** 创建两个日期输入框：
+
+```
+<p><label for="start">Start Date:</label> <input type="text" name="start" value="<?php echo $start->format($format); ?>" /> (MM/DD/YYYY)</p>
+<p><label for="end">End Date: </label> <input type="text" name="end" value="<?php echo $end->format($format); ?>" /> (MM/DD/YYYY)</p>
+```
+
+对于每个输入框，其值通过调用关联对象的 `format()` 方法进行预设。日期需要采用的格式也在括号中说明了。
+
+**18.** 完成表单和 HTML 页面：
+
+```
+<p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
+```
+
+**19.** 将脚本保存为 `datetime.php`，将其放入你的 Web 目录，并在 Web 浏览器中测试。
+
+如果运行此脚本时，你看到关于依赖系统时区设置的异常，请在创建 `DateTime` 对象之前调用 `date_default_timezone_set()`，正如 第 11 章 所解释的那样。
+
+***
+
+提示
+
+`DateTime::getTimestamp()` 方法返回所代表日期和时间的 Unix 时间戳。
+
+***
+
+***
+
+提示
+
+在内部，`DateTime` 类将日期和时间表示为 64 位数字，这意味着它可以表示从大约 2920 亿年前到 2920 亿年后的日期。
+
+***
+
+***
+
+提示
+
+`DateTime` 类中的若干常量代表常见的日期时间格式，例如 `DateTime::COOKIE`。
+
+***
+
+***
+
+提示
+
+`DateTime` 方法也有对应的过程式版本。
+
+***
+
+### 复习与实践
+
+如果你对复习题或实践提示有任何疑问，请访问本书的支持论坛 ([www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/))。
+
+#### 复习
+
+• 什么是*类*？什么是*方法*？类中定义的变量叫什么？
+
+• 什么是对象？如何在 PHP 中创建对象？如何调用对象的方法？
+
+• 什么是*构造函数*？
+
+• 创建 `MySQLi` 对象的语法是什么？
+
+• 如何使用 `MySQLi` 执行任何类型的查询？
+
+• 使用 `MySQLi` 时，如何使字符串数据在查询中安全使用？提示：有两种答案。
+
+• 如何检查并显示 `MySQLi` 错误？
+
+• 如何使用 `MySQLi`（及其他）对象获取 `SELECT` 查询的结果？`MySQLi_Result::fetch_array()` 和 `MySQLi_Result::fetch_object()` 有什么区别？
+
+• 如何使用 `MySQLi` 和 `MySQLi_STMT` 类执行预处理语句？
+
+• 创建新 `DateTime` 对象的语法是什么？设置对象日期和/或时间的两种方式是什么？
+
+• 什么是*异常*？
+
+#### 实践
+
+• 当你有兴趣深入了解面向对象编程（OOP）时，不妨阅读一本关于 OOP 通用主题的书籍或教程，而不局限于某门特定编程语言。
+
+• 查阅 PHP 手册中关于 PHP 面向对象编程的文档 ([www.php.net/oop](http://www.php.net/oop))。
+
+• 如果你不清楚为何需要对查询中使用的字符串数据应用 `real_escape_string()`，请重温 第 9 章。
+
+• 使用 `MySQLi` 重写 第 9 章 “将 PHP 与 MySQL 结合使用” 和 第 10 章 “常见编程技巧” 中的其他脚本。
+
+• 阅读 PHP 手册中 `DateTime` 类的完整文档 ([www.php.net/datetime](http://www.php.net/datetime))。
+
+• 学习 PHP 手册中的 `strtotime()` 函数 ([www.php.net/strtotime](http://www.php.net/strtotime))。
+
+
+
+• 如果你想挑战高难度，可以应用上一章介绍的信息，结合 jQuery UI `Datepicker` 工具，为 `datetime.php` 脚本创建两个漂亮的 JavaScript 日期选择器。
+
+## 17. 示例——留言板
+
+### 本章内容
+
+- 创建数据库 520
+- 创建首页 537
+- 创建论坛页面 538
+- 创建主题页面 543
+- 发布消息 548
+- 复习与实践 558
+
+留言板（又称论坛）的功能其实非常简单：帖子要么发起新话题，要么回复现有话题；帖子被添加到数据库，然后在页面上显示。基本就这些。当然，有时实现简单的概念可能相当困难！
+
+为了让这个示例更精彩、更实用，它不仅仅是一个留言板，而是一个*多语言*留言板。每种语言将拥有自己的论坛，关键元素——导航、提示、介绍性文本等——将针对特定语言。
+
+为了专注于这个 Web 应用程序最重要的方面，本章省略了其他一些方面。三个明显的遗漏将是：用户管理、错误处理和管理功能。这对你来说不应该是个问题，因为下一章将详细介绍用户管理和错误处理。至于管理功能，你会在本章末尾找到一些建议。
+
+#### 创建数据库
+
+第一步，自然是创建数据库。一个示例留言板数据库 ![Image](img/circle-a.jpg) 在 第 6 章 “数据库设计” 中开发。虽然那个数据库完全没问题，但这里将使用其一个变体 ![Image](img/circle-b.jpg)。我将对比这两者，以更好地解释这些变更。
+
+![Image](img/17_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) 在 第 6 章 中开发的 *forum* 数据库模型。
+
+![Image](img/17_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg) 本章将使用的论坛数据库修订模型。
+
+首先，`forums` 表被 `languages` 表取代。两者服务于相同目的：允许多个论坛。在这个新数据库中，主题——*PHP 和 MySQL 动态网站开发*——在每个论坛中将保持相同，但每个论坛将使用不同的语言。各论坛中的帖子将有所不同（这不会是同一个论坛的多语言翻译版本）。`languages` 表以该语言自己的字母表和英语存储语言名称，以便管理员识别（这当然假设英语是管理员的主要语言）。
+
+新数据库中的 `threads` 表的作用类似于旧数据库中的 `messages` 表，但有一个主要区别。正如旧 `messages` 表关联 `forums` 一样，`threads` 关联 `languages` 和 `users` 表（每条消息只能属于一个论坛且由一个用户发布；每个论坛可以有多条消息，每个用户可以发布多条消息）。然而，这个 `threads` 表将只存储主题，而不存储消息正文。这样更改有几个原因。首先，让主题随每条回复重复多次是不必要的（根据我的经验，回复几乎总是拥有相同的主题）。其次，`lang_id` 关联也是如此（只要每条回复关联单个主题，就不需要在每条回复中存储它）。第三，我将改变在数据库中指示主题层级的方式（你将在下一段看到具体做法），更改表结构有助于实现这一点。最后，每当用户查看论坛中的帖子时都会用到 `threads` 表。从该表中移除消息正文将提高这些查询的性能。
+
+再说 `posts` 表，其唯一目的是存储与主题关联的消息正文。在 第 6 章 的数据库中，`messages` 表有一个 `parent_id` 列，用于指示新消息是对哪条消息的回复。它是分层的：消息 3 可能是起始帖；消息 18 可能是对 3 的回复，消息 20 是对 18 的回复，以此类推 ![Image](img/circle-c.jpg)。那个版本的数据库更直接地指示了回复关系；这个版本将只存储消息所属的主题：消息 18 和 20 都使用 `thread_id` 为 3。这种改动将使显示主题的效率大大提高（就所需的 PHP 和 MySQL 而言），并且可以使用每条消息的发布日期/时间对它们进行排序。
+
+![Image](img/17_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg) 旧数据库模式中如何指示消息间的关系。
+
+这三个表提供了论坛的核心功能。数据库还需要一个 `users` 表。在这个版本的论坛中，只有注册用户才能发布消息，我认为这是一个非常、非常、非常好的策略（它能大幅减少垃圾信息和黑客攻击尝试）。注册用户还可以将其默认语言（来自 `languages` 表）和时区连同账户信息一起记录，以提供更个性化的体验。将使用用户名和密码的组合来登录。
+
+最后一个表 `words` 是实现网站多语言所必需的。该表将存储常用元素的翻译：导航链接、表单提示、标题等。网站中的每种语言将在该表中拥有一条记录。这将是一个很好用且令人惊讶地简单的功能。可以争辩说，此表中列出的词汇也可以放在 `languages` 表中，但那将暗示这些词汇也与 `threads` 表相关，而实际上并非如此。
+
+这就是新数据库设计背后的思路。在接下来的步骤创建表的过程中，你将了解更多细节。与本书中的其他示例一样，你也可以从本书对应的网站（**[www.LarryUllman.com](http://www.LarryUllman.com)**）下载本章所需的 SQL——这些步骤建议的命令，外加更多内容。
+
+#### 创建数据库步骤
+
+**1.** 访问你的 MySQL 服务器并设置用于通信的字符集 ![Image](img/circle-d.jpg)：
+
+```
+CHARSET utf8;
+```
+
+![Image](img/17_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg) 为了在查询中使用 Unicode 数据，你需要更改与 MySQL 通信时使用的字符集。
+
+图中我将使用 mysql 客户端，但你可以使用任何你喜欢的界面。不过第一步必须是将字符集更改为 UTF-8，以便进行后续查询。如果不这样做，查询中的某些字符将在数据库中以乱码形式存储（参见侧边栏“奇怪字符”）。注意，如果你使用 phpMyAdmin，需要在其配置文件中设置字符集。
+
+---
+
+**奇怪字符**
+
+如果在实现本章示例时，你看到奇怪的字符——方框、数字代码或问号，而不是实际的语言字符——可能有几个原因。发生这种情况时，根本问题是*编码不匹配*（或用数据库术语说是*字符集不匹配*）。
+
+
+
+
+计算机显示字符的能力取决于文件的编码以及操作系统支持的字符（即字体）。这意味着每个 PHP 或 HTML 页面都必须使用正确的编码。其次，MySQL 数据库必须使用正确的编码（如创建数据库的步骤所示）。第三，这可能是常见的问题原因，PHP 和 MySQL 之间的通信也必须使用正确的编码。我在 **`mysqli_connect.php`** 脚本中解决了这个问题（请参阅第一条提示）。最后，如果您使用 mysql 客户端、phpMyAdmin 或其他工具填充数据库，该交互也必须使用正确的编码。
+
+---
+
+### 2. 创建新数据库
+
+```sql
+CREATE DATABASE forum2 CHARACTER SET utf8;
+USE forum2;
+```
+
+创建并选择本示例的数据库。此数据库使用 UTF-8 字符集，以便支持多种语言。
+
+为避免与原始 *forum* 数据库（来自第 6 章）中创建的表混淆，将创建一个新数据库。
+
+如果您使用的是托管站点且无法创建自己的数据库，请使用为您提供的数据库并选择它。如果您现有的数据库具有同名的表——*words*、*languages*、*threads*、*users* 和 *posts*，请重命名这些表（现有的或新的），并相应地更改本章其余部分的代码。
+
+无论您是从头创建此数据库还是使用新数据库，表都必须使用 UTF-8 编码，以便能够支持多种语言（详见第 6 章）。如果您使用的是现有数据库，且不想通过更改所有表的字符集而潜在引发问题，只需将 **`CHARACTER SET utf8`** 子句添加到每个表定义中（步骤 3 至 7）。
+
+### 3. 创建 *languages* 表
+
+```sql
+CREATE TABLE languages (
+    lang_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    lang VARCHAR(60) NOT NULL,
+    lang_eng VARCHAR(20) NOT NULL,
+    PRIMARY KEY (lang_id),
+    UNIQUE (lang)
+);
+```
+
+创建 *languages* 表。
+
+这是最简单的表。不会有太多语言，因此主键（`lang_id`）可以是 **`TINYINT`**。`lang` 列定义得稍大一些，因为它将存储其他语言的字符，这可能需要更多空间。此列也必须是唯一的。请注意，我没有将此列命名为 “language”，因为这是 MySQL 中的保留关键字（实际上，我*仍然*可以这样命名，您将在第 7 步中看到需要做什么）。`lang_eng` 列是语言的英文对应词，以便管理员轻松查看是哪种语言。
+
+### 4. 创建 *threads* 表
+
+```sql
+CREATE TABLE threads (
+    thread_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    lang_id TINYINT(3) UNSIGNED NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
+    subject VARCHAR(150) NOT NULL,
+    PRIMARY KEY (thread_id),
+    INDEX (lang_id),
+    INDEX (user_id)
+);
+```
+
+创建 *threads* 表。此表存储主题并将其与一种语言（即一个论坛）关联。
+
+`threads` 表包含四列，并通过 `lang_id` 和 `user_id` 外键分别关联 `languages` 和 `users` 表。`subject` 此处需要足够长，以存储多种语言的主题（非西方语言的字符占用更多字节）。
+
+将在连接和 **`WHERE`** 子句中使用的列——`lang_id` 和 `user_id`——建立了索引，`thread_id` 作为主键也会被索引。
+
+### 5. 创建 *posts* 表
+
+```sql
+CREATE TABLE posts (
+    post_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    thread_id INT UNSIGNED NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
+    message TEXT NOT NULL,
+    posted_on DATETIME NOT NULL,
+    PRIMARY KEY (post_id),
+    INDEX (thread_id),
+    INDEX (user_id)
+);
+```
+
+创建 *posts* 表，它同时关联 threads 和 users。
+
+此表的主要列是 `message`，用于存储每条帖子的正文。两列是外键，关联 `threads` 和 `users` 表。`posted_on` 列的类型为 **`DATETIME`**，但将使用 UTC（协调世界时，详见第 6 章）。此处无需为其做特殊处理。
+
+### 6. 创建 *users* 表
+
+```sql
+CREATE TABLE users (
+    user_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    lang_id TINYINT UNSIGNED NOT NULL,
+    time_zone VARCHAR(30) NOT NULL,
+    username VARCHAR(30) NOT NULL,
+    pass CHAR(40) NOT NULL,
+    email VARCHAR(60) NOT NULL,
+    PRIMARY KEY (user_id),
+    UNIQUE (username),
+    UNIQUE (email),
+    INDEX login (username, pass)
+);
+```
+
+创建 *users* 表的简化版本。
+
+为简洁起见，我省略了通常会放在此表中的其他列，如注册日期、名和姓。有关创建和使用此类表的更多信息，请参阅下一章。
+
+在我的设想中，用户注册时会选择其首选语言和时区，以获得更个性化的体验。他们也可以拥有一个用户名，该用户名将显示在帖子中（而不是他们的电子邮件地址）。用户名和电子邮件地址都必须唯一，这是您在注册过程中需要处理的事项。
+
+### 7. 创建 *words* 表
+
+```sql
+CREATE TABLE words (
+    word_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    lang_id TINYINT UNSIGNED NOT NULL,
+    title VARCHAR(80) NOT NULL,
+    intro TINYTEXT NOT NULL,
+    home VARCHAR(30) NOT NULL,
+    forum_home VARCHAR(40) NOT NULL,
+    `language` VARCHAR(40) NOT NULL,
+    register VARCHAR(30) NOT NULL,
+    login VARCHAR(30) NOT NULL,
+    logout VARCHAR(30) NOT NULL,
+    new_thread VARCHAR(40) NOT NULL,
+    subject VARCHAR(30) NOT NULL,
+    body VARCHAR(30) NOT NULL,
+    submit VARCHAR(30) NOT NULL,
+    posted_on VARCHAR(30) NOT NULL,
+    posted_by VARCHAR(30) NOT NULL,
+    replies VARCHAR(30) NOT NULL,
+    latest_reply VARCHAR(40) NOT NULL,
+    post_a_reply VARCHAR(40) NOT NULL,
+    PRIMARY KEY (word_id),
+    UNIQUE (lang_id)
+);
+```
+
+创建 *words* 表，它存储不同语言中关键词的表示形式。
+
+此表将存储站点上使用的常见元素的不同翻译。某些元素——`home`、`forum_home`、`language`、`register`、`login`、`logout` 和 `new_thread`——将作为链接名称。其他元素——`subject`、`body`、`submit`——用于发布消息的页面。另一类元素用于论坛主页：`posted_on`、`posted_by`、`replies` 和 `latest_reply`。
+
+其中一些将在站点中多次使用，但这仍然是一个不完整的列表。当您自己实现站点时，会看到其他可以添加词汇定义的地方。
+
+除 `intro` 为用于主页的正文文本外，每列均为 **`VARCHAR`** 类型。大多数列的长度限制为 30，以容纳其他语言中需要更多字节的字符，少数列可能需要更大。
+
+
+
+对于每一列，其名称暗示了要存储在该列中的值。其中一列——`language`——我使用了一个 MySQL 关键字，仅仅是为了演示如何操作。解决方法是用反引号将列名括起来，这样 MySQL 就不会将该列名与关键字“language”混淆。
+
+**8.** 填充 `languages` 表：
+
+```sql
+INSERT INTO languages (lang, lang_eng) VALUES
+('English', 'English'),
+('Português', 'Portuguese'),
+('Français', 'French'),
+('Norsk', 'Norwegian'),
+('Romanian', 'Romanian'),
+('![Image](img/greek.jpg)', 'Greek'),
+('Deutsch', 'German'),
+('Srpski', 'Serbian'),
+('![Image](img/japanese.jpg)', 'Japanese'),
+('Nederlands', 'Dutch');
+```
+
+这只是该站点将要支持的语言中的一小部分，得益于一些协助（参见侧边栏“关于翻译的说明”）。对于每一种语言，都存储了该语言的原文名称和英文名称 ![Image](img/circle-k.jpg)。
+
+![Image](img/17_figure_11_k.jpg)
+
+![Image](img/circle-k.jpg)已填充数据的 `languages` 表，每种语言均用其自己的字母书写。
+
+**9.** 填充 `users` 表 ![Image](img/circle-l.jpg)：
+
+```sql
+INSERT INTO users (lang_id, time_zone, username, pass, email) VALUES
+(1, 'America/New_York', 'troutster', SHA1('password'), 'email@example.com'),
+(7, 'Europe/Berlin', 'Ute', SHA1('pa24word'), 'email1@example.com'),
+(4, 'Europe/Oslo', 'Silje', SHA1('2kll13'), 'email2@example.com'),
+(2, 'America/Sao_Paulo', 'João', SHA1('fJDLN34'), 'email3@example.com'),
+(1, 'Pacific/Auckland', 'kiwi', SHA1('conchord'), 'kiwi@example.org');
+```
+
+![Image](img/17_figure_12_l.jpg)
+
+![Image](img/circle-l.jpg)手动添加了几个用户，因为本站点没有注册流程（但请参见第 18 章“示例——用户注册”以了解相关内容）。
+
+由于 PHP 脚本将显示与帖子关联的用户，因此需要几个用户。每个用户都关联一种语言和一个时区（有关 MySQL 中时区的更多信息，请参见第 6 章）。每个用户的密码将使用 `SHA1()` 函数进行加密。
+
+**10.** 填充 `words` 表：
+
+```sql
+INSERT INTO words VALUES
+(NULL, 1, 'PHP and MySQL for Dynamic Web Sites: The Forum!', '<p>Welcome to our site.... please use the links above... blah, blah, blah.</p>\r\n <p>Welcome to our site....please use the links above...blah, blah, blah.</p>', 'Home', 'Forum Home', 'Language', 'Register', 'Login', 'Logout', 'New Thread', 'Subject', 'Body', 'Submit', 'Posted on', 'Posted by', 'Replies', 'Latest Reply', 'Post a Reply');
+```
+
+这些是与英文中每个术语关联的单词。该记录的 `lang_id` 为 1，与 `languages` 表中英文对应的 `lang_id` 匹配。用于将其他语言的单词插入此表的 SQL 可从本书的配套网站获取。
+
+***
+
+提示
+
+本章不讲解创建 `mysqli_connect.php` 页面的步骤，该页面用于连接数据库。相反，只需复制第 9 章“将 PHP 与 MySQL 结合使用”中的那个文件。然后更改脚本中的参数，以使用有效的用户名/密码/主机名组合来连接 `forum2` 数据库。
+
+***
+
+提示
+
+提醒一下，一张表中的外键应该与另一张表中匹配的主键具有完全相同的类型和大小。
+
+***
+
+### 关于翻译的说明
+
+世界各地的几位读者慷慨地为我提供了关键词、名称、消息主题和消息正文的翻译。对于他们的帮助，我要致以最诚挚的谢意（排名不分先后）：Angelo（葡萄牙语）；Iris（德语）；Johan（挪威语）；Gabi（罗马尼亚语）；Darko（塞尔维亚语）；Emmanuel 和 Jean-François（法语）；Andreas 和 Simeon（希腊语）；Darius（菲律宾语/他加禄语）；Olaf（荷兰语）；以及 Tsutomu（日语）。
+
+如果您懂其中一种语言，可能会发现本文或相应图片中存在语言错误。如果是这样，那几乎可以肯定是我的错，因为我未能准确传达我需要翻译的单词，或将回复错误地录入了数据库。对于任何此类错误，我提前致歉，但希望您能更多地关注数据库、代码和功能。再次感谢那些提供帮助的人！
+
+***
+
+### 编写模板
+
+本示例与其他包含大量页面的站点一样，将利用模板将展示层的大部分内容与逻辑分离开来。遵循第 3 章“创建动态网站”中规定的说明，页眉文件和页脚文件将存储大部分 HTML 代码。然后每个 PHP 脚本将包含这些文件以生成完整的 HTML 页面 ![Image](img/circle-a.jpg)。但本示例稍微复杂一些。
+
+![Image](img/17_figure_13_a.jpg)
+
+![Image](img/circle-a.jpg)站点的基本布局和外观。
+
+本站点的目标之一是为使用多种不同语言的用户提供服务。实现这一点不仅涉及让他们用母语*发布消息*，还要确保他们能用母语使用*整个网站*。这意味着页面标题、导航链接、标题、提示，甚至菜单都需要以他们的语言显示 ![Image](img/circle-b.jpg)。
+
+![Image](img/17_figure_14_b.jpg)
+
+![Image](img/circle-b.jpg)以法语查看的主页（与 ![Image](img/graycircle-a.jpg) 对比）。
+
+创建数据库的说明展示了如何实现这一点：通过在一张表中存储所有关键词的翻译。因此，页眉文件需要提取所有这些关键词，以便在需要时使用。其次，该页眉文件还将根据用户是否已登录显示不同的链接。还有一个小变化：如果用户位于论坛页面，正在查看某语言下的所有主题，则还将为用户提供发布新主题的选项 ![Image](img/circle-c.jpg)。
+
+![Image](img/17_figure_15_c.jpg)
+
+![Image](img/circle-c.jpg)与 ![Image](img/graycircle-a.jpg) 相同的主页，但增加了一个允许用户发起新主题的链接。
+
+模板本身使用 CSS 进行一些格式设置（实际上没多少内容）。您可以从本书的配套网站（**[www.LarryUllman.com](http://www.LarryUllman.com)**）下载所有这些文件。
+
+### 创建模板
+
+**1.** 在文本编辑器或 IDE 中新建一个文档，命名为 `header.html`（**脚本 17.1**）：
+
+```php
+<?php # Script 17.1 - header.html
+
+header ('Content-Type: text/html; charset=UTF-8');
+```
+
+由于该脚本需要进行相当数量的数据验证和检索，因此它以一个 PHP 代码块开始。该脚本还通过 `header()` 函数向 Web 浏览器指明其编码——UTF-8。通过 `header()` 函数调用设置编码的想法在第 11 章“Web 应用程序开发”的一个提示中提到过。
+
+**2.** 启动会话：
+
+```php
+$_SESSION['user_id'] = 1;
+$_SESSION['user_tz'] = 'America/New_York';
+// $_SESSION = array();
+```
+
+为了在用户登录后跟踪用户，站点将使用会话。由于本章中站点没有注册和登录功能，两行代码即可虚拟地让用户登录。通常，这两个值都来自数据库，但为了测试目的，它们在此处被设置。要虚拟地让用户登出，请取消第三行的注释。
+
+**3.** 包含数据库连接：
+
+```php
+require ('../mysqli_connect.php');
+```
+
+与本书中的许多其他示例一样，这里假设 `mysqli_connect.php` 脚本存储在当前目录的上一级目录中，位于 Web 根目录之外。如果您的情况并非如此，请相应地更改此代码。
+
+
+
+
+### 脚本 17.1. `header.html` 文件
+
+`header.html` 文件启动模板。它还设置页面的编码，启动会话，并从数据库中检索特定语言的关键词。
+
+---
+
+```php
+<?php # 脚本 17.1 - header.html  
+/* 此脚本...  
+ * - 启动 HTML 模板。  
+ * - 使用 header() 指定编码。  
+ * - 启动会话。  
+ * - 从数据库获取特定语言的词汇  
+ * - 列出可用语言。  
+ */
+
+// 指定编码：
+header ('Content-Type: text/html;  
+    charset=UTF-8');
+
+// 启动会话：
+session_start();
+
+// 仅供测试目的：
+$_SESSION['user_id'] = 1;
+$_SESSION['user_tz'] = 'America/New_York';
+// 用于注销：
+//$_SESSION = array();
+
+// 需要数据库连接：
+require ('../mysqli_connect.php');
+
+// 检查是否有新的语言 ID...
+// 然后将语言 ID 存储在
+// 会话中：
+if ( isset($_GET['lid']) &&
+    filter_var($_GET['lid'], FILTER_
+        VALIDATE_INT, array('min_range' => 1))
+    ) {
+    $_SESSION['lid'] = $_GET['lid'];
+} elseif (!isset($_SESSION['lid'])) {
+    $_SESSION['lid'] = 1; // 默认值。
+}
+
+// 获取该语言的词汇：
+$q = "SELECT * FROM words WHERE lang_id
+    = {$_SESSION['lid']}";
+$r = mysqli_query($dbc, $q);
+if (mysqli_num_rows($r) == 0) { //
+    // 无效的语言 ID！
+
+    // 使用默认语言：
+    $_SESSION['lid'] = 1; // 默认值。
+    $q = "SELECT * FROM words WHERE
+        lang_id = {$_SESSION['lid']}";
+    $r = mysqli_query($dbc, $q);
+
+}
+
+// 将结果获取到变量中：
+$words = mysqli_fetch_array($r,
+    MYSQLI_ASSOC);
+
+// 释放结果：
+mysqli_free_result($r);
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+    1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/
+        xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="content-type"
+        content="text/html; charset=utf-8" />
+    <title><?php echo $words['title']; ?>
+        </title>
+    <style type="text/css" media="screen">
+    body { background-color: #ffffff; }
+
+    .content {
+        background-color: #f5f5f5;
+        padding-top: 10px; padding-right:
+            10px; padding-bottom: 10px;
+            padding-left: 10px;
+        margin-top: 10px; margin-right:
+            10px; margin-bottom: 10px;
+            margin-left: 10px;
+    }
+
+    a.navlink:link { color: #003366;
+        text-decoration: none; }
+    a.navlink:visited { color: #003366;
+        text-decoration: none; }
+    a.navlink:hover { color: #cccccc;
+        text-decoration: none; }
+
+    .title {
+        font-size: 24px; font-weight:
+            normal; color: #ffffff;
+        margin-top: 5px; margin-bottom:
+            5px; margin-left: 20px;
+        padding-top: 5px; padding-bottom:
+            5px; padding-left: 20px;
+    }
+    </style>
+</head>
+<body>
+
+<table width="90%" border="0"
+    cellspacing="10" cellpadding="0"
+    align="center">
+
+    <tr>
+    <td colspan="2" bgcolor="#003366"
+        align="center"><p class="title"><?php
+        echo $words['title']; ?></p></td>
+    </tr>
+
+    <tr>
+    <td valign="top" nowrap="nowrap"
+        width="10%"><b>
+    <?php // 显示链接：
+
+    // 默认链接：
+    echo '<a href="index.php"
+        class="navlink">' . $words['home'] .
+        '</a><br />
+    <a href="forum.php" class="navlink">' .
+        $words['forum_home'] . '</a><br />';
+
+    // 根据登录状态显示链接：
+    if (isset($_SESSION['user_id'])) {
+
+        // 如果这是论坛页面，添加一个
+        // 发布新主题的链接：
+        if (basename($_SERVER['PHP_SELF']) ==
+            'forum.php') {
+            echo '<a href="post.php"
+                class="navlink">' . $words['new_
+                thread'] . '</a><br />';
+        }
+
+        // 添加注销链接：
+        echo '<a href="logout.php"
+            class="navlink">' . $words['logout'] .
+            '</a><br />';
+
+    } else {
+
+        // 注册和登录链接：
+        echo '<a href="register.php"
+            class="navlink">' . $words['register']
+            . '</a><br />
+        <a href="login.php" class="navlink">' .
+            $words['login'] . '</a><br />';
+
+    }
+
+    // 用于选择论坛/语言：
+    echo '</b><p><form action="forum.php"
+        method="get">
+    <select name="lid">
+    <option value="0">' . $words['language']
+        . '</option>
+    ';
+
+    // 检索所有语言...
+    $q = "SELECT lang_id, lang FROM
+        languages ORDER BY lang_eng ASC";
+    $r = mysqli_query($dbc, $q);
+    if (mysqli_num_rows($r) > 0) {
+        while ($menu_row = mysqli_fetch_
+            array($r, MYSQLI_NUM)) {
+            echo "<option value=\"$menu_row
+                [0]\">$menu_row[1]</option>\n";
+        }
+    }
+    mysqli_free_result($r);
+
+    echo '</select><br />
+    <input name="submit" type="submit"
+        value="' . $words['submit'] . '" />
+    </form></p>
+        </td>
+
+    <td valign="top" class="content">';
+?>
+```
+
+---
+
+## 4. 确定语言 ID
+
+```php
+if ( isset($_GET['lid']) &&
+    filter_var($_GET['lid'], FILTER_VALIDATE_INT, array('min_range' => 1))
+    ) {
+    $_SESSION['lid'] = $_GET['lid'];
+} elseif (!isset($_SESSION['lid'])) {
+    $_SESSION['lid'] = 1; // 默认值。
+}
+```
+
+接下来，需要确定语言 ID 值（缩写为 `lid`）。语言 ID 控制网站所有元素使用的语言，也决定了要查看的论坛。语言 ID 可能存在于会话中，在成功登录后检索该信息时获得（因为用户的语言 ID 存储在 `users` 表中）。或者，任何用户都可以通过提交导航链接中的语言表单（参见 ![Image](img/graycircle-a.jpg)）即时更改显示语言。在这种情况下，提交的语言 ID 需要被验证为大于 1 的整数：使用 Filter 扩展可以轻松实现（参见 第 13 章，“安全方法”）。如果你使用的 PHP 版本不支持 Filter 扩展，则需要改用类型转换（同样，参见 第 13 章）。
+
+第二个分支适用于页面 URL 中未接收到语言 ID 且会话中尚未建立语言 ID 的情况。在这种情况下，将选择一种默认语言。此值在数据库的 `languages` 表中对应英语。你可以将其更改为与你想要使用的默认语言匹配的任何 ID。
+
+## 5. 获取该语言的关键词
+
+```php
+$q = "SELECT * FROM words WHERE lang_id = {$_SESSION['lid']}";
+$r = mysqli_query($dbc, $q);
+```
+
+头部文件的下一步是从数据库中检索给定语言的所有关键词。
+
+## 6. 如果查询未返回记录，则获取默认词汇
+
+```php
+if (mysqli_num_rows($r) == 0) {
+    $_SESSION['lid'] = 1;
+    $q = "SELECT * FROM words WHERE lang_id = {$_SESSION['lid']}";
+    $r = mysqli_query($dbc, $q);
+}
+```
+
+
+
+
+虽然不太可能，但 `$_SESSION['lid']` 可能不等同于 `words` 表中的任何记录。在这种情况下，查询将返回零条记录（但不会报错地运行）。因此，现在必须检索默认语言的词汇。请注意，这段代码块和步骤 5 中的代码都没有实际获取返回的记录。这将在第 7 步中针对两个潜在查询进行。
+
+### 7. 将检索到的词汇获取到数组中，释放资源，并关闭 PHP 部分：
+
+```php
+$words = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
+mysqli_free_result($r);
+
+?>
+```
+
+在此之后，`$words` 数组代表用户所选语言（或默认语言）中的所有导航和通用元素。
+
+调用 `mysqli_free_result()` 并非必要，但能使编程更加规范。
+
+### 8. 开始 HTML 页面：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title><?php echo $words['title']; ?></title>
+```
+
+请注意，编码也在 `META` 标签中指定了，尽管 PHP 的 `header()` 调用已经标识了编码。这只是为了严谨起见。
+
+正如所写的页头文件，它使用 `$words` 数组中的一个值作为每个页面的标题（即，对于所选语言中的每个页面，页面标题将始终相同）。您可以轻松修改此代码，使页面标题成为语言词汇与特定页面变量的组合，例如第 3 章和后续示例中使用的 `$page_title`。
+
+### 9. 添加 CSS：
+
+```css
+<style type="text/css" media="screen">
+body { background-color: #ffffff; }
+.content {
+  background-color: #f5f5f5;
+  padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;
+  margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;
+}
+  a.navlink:link { color: #003366; text-decoration: none; }
+  a.navlink:visited { color: #003366; text-decoration: none; }
+  a.navlink:hover { color: #cccccc; text-decoration: none; }
+  .title {
+    font-size: 24px; font-weight: normal; color: #ffffff;
+    margin-top: 5px; margin-bottom: 5px; margin-left: 20px;
+    padding-top: 5px; padding-bottom: 5px; padding-left: 20px;
+  }
+</style>
+```
+
+这都是从我以前在某处找到的一个模板中获取的。它为网站增加了一点装饰。
+
+### 10. 完成 HTML 头部并开始页面主体：
+
+```html
+</head>
+<body>
+<table width="90%" border="0" cellspacing="10" cellpadding="0" align="center">
+<tr>
+  <td colspan="2" bgcolor= "#003366" align="center"> <p class="title"><?php echo $words['title']; ?></p></td>
+</tr>
+<tr>
+  <td valign="top" nowrap= "nowrap" width="10%"><b>
+```
+
+页面本身使用表格进行布局，第一行显示页面标题，下一行左侧包含导航链接，右侧包含特定页面内容，最后一行包含版权信息 ![Image](img/circle-d.jpg)。您将在代码中看到页面标题也将是特定语言的。
+
+![Image](img/17_figure_16_d.jpg)
+
+![Image](img/circle-d.jpg)页面布局显示主 HTML 表格的行和列。
+
+### 11. 开始显示链接：
+
+```php
+<?php
+echo '<a href="index.php" class="navlink">' . $words['home'] . '</a><br />
+<a href="forum.php" class="navlink">' . $words['forum_home'] . '</a><br />';
+```
+
+无论用户是否登录，以及无论他们当前正在查看哪个页面，前两个链接将始终出现。对于每个链接，链接文本本身将是特定语言的。
+
+### 12. 如果用户已登录，显示“新主题”和注销链接：
+
+```php
+if (isset($_SESSION['user_id'])) {
+  if (basename($_SERVER['PHP_SELF']) == 'forum.php') {
+    echo '<a href="post.php" class="navlink">' . $words['new_thread'] . '</a><br />';
+  }
+  echo '<a href="logout.php" class="navlink">' . $words['logout'] . '</a><br />';
+```
+
+通过检查 `$_SESSION['user_id']` 变量是否存在来确认用户的登录状态。如果已设置，则可以创建注销链接。在此之前，会检查这是否为 `forum.php` 页面。如果是，则创建一个开始新主题的链接（用户只有在论坛页面上才能创建新主题；您不会希望他们在其他页面（如主页）上创建新主题，因为不清楚该主题应发布到哪个论坛）。使用 `basename()` 函数检查当前页面的代码首次出现在第 12 章“Cookies 和 Session”中。
+
+### 13. 显示未登录用户的链接：
+
+```php
+} else {
+  echo '<a href="register.php" class="navlink">' . $words['register'] . '</a><br />
+  <a href="login.php" class= "navlink">' . $words['login'] . '</a><br />';
+}
+```
+
+如果用户未登录，则提供注册和登录的链接。
+
+### 14. 开始一个用于选择语言的表单：
+
+```php
+echo '</b><p><form action="forum.php" method="get">
+<select name="lid">
+<option value="0">' . $words['language'] . '</option>
+';
+```
+
+用户可以通过下拉菜单 ![Image](img/circle-e.jpg) 选择一种语言（这同时也是一个论坛）。菜单中的第一个值将是用户默认语言中的“language”一词。选择菜单的 `name` 为 *lid*（*language ID* 的缩写），其 `action` 属性指向 `forum.php`。当用户提交这个简单的表单时，他们将被带到其选择的论坛。
+
+![Image](img/17_figure_17_e.jpg)
+
+![Image](img/circle-e.jpg)语言下拉菜单，每个选项均以其原生语言显示。
+
+### 15. 从数据库检索每种语言，并将每种语言添加到菜单中：
+
+```php
+$q = "SELECT lang_id, lang FROM languages ORDER BY lang_eng ASC";
+$r = mysqli_query($dbc, $q);
+if (mysqli_num_rows($r) > 0) {
+  while ($menu_row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+    echo "<option value=\"$menu_row[0]\">$menu_row[1] </option>\n";
+  }
+}
+mysqli_free_result($r);
+```
+
+此查询从 `languages` 表中检索语言和语言 ID。每一种都作为一个选项添加到选择菜单中。
+
+同样，调用 `mysqli_free_result()` 并非必需，但这样做有助于减少 Bug 并提高性能。特别是当您的页面运行多个 `SELECT` 查询时，`mysqli_free_result()` 可以帮助避免 PHP 和 MySQL 之间的混淆问题。
+
+### 16. 完成表单和 PHP 页面：
+
+```php
+echo '</select><br />
+<input name="submit" type="submit" value="' . $words['submit'] . '" />
+</form></p>
+    </td>
+    <td valign="top" class="content">';
+?>
+```
+
+### 17. 将文件保存为 `header.html`。
+
+尽管它包含相当数量的 PHP 代码，但该脚本仍将使用 `.html` 扩展名（我倾向于将其用于模板文件）。请确保文件以 UTF-8 编码保存。
+
+### 18. 在文本编辑器或 IDE 中创建一个新文档，命名为 `footer.html`（脚本 17.2）：
+
+```html
+<!-- Script 17.2 - footer.html -->
+```
+
+### 19. 完成 HTML 页面：
+
+```html
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">&copy; 2011 Larry Ullman</td>
+  </tr>
+</table>
+</body>
+</html>
+```
+
+### 20. 将文件保存为 `footer.html`。
+
+同样，请确保文件以 UTF-8 编码保存。
+
+### 21. 将这两个文件放置在您的 Web 目录中，位于一个名为 `includes` 的文件夹内。
+
+**脚本 17.2.** 页脚文件完成 HTML 页面。
+
+---
+
+1   `<!-- Script 17.2 - footer.html -->`
+2     `</td>`
+3      `</tr>`
+4
+5      `<tr>`
+6      `<td colspan="2" align="center">&copy;`
+
+
+
+
+
+### 创建索引页面
+
+本示例中的索引页面功能不多。它将提供一些介绍性文本，以及供用户注册、登录、选择首选语言/论坛等的链接。从编程角度来看，它将展示如何使用模板文件。
+
+#### 制作主页
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `index.php`（**脚本 17.3**）：
+
+```
+<?php # Script 17.3 - index.php
+```
+
+因为所有 HTML 都在包含的文件中，所以此页面可以从 PHP 开始标签开始。
+
+**2.** 包含 HTML 页头：
+
+```
+include ('includes/header.html');
+```
+
+包含的文件使用了 `header()` 和 `session_start()` 函数，因此你必须确保在此行之前没有任何内容发送到 Web 浏览器。只要 PHP 开始标签前没有空格，这应该不成问题。
+
+**3.** 打印特定语言的内容：
+
+```
+echo $words['intro'];
+```
+
+`$words` 数组在页头文件中定义。由于页头文件刚被包含，因此可以在此处引用它。索引为 `intro` 的值是一段欢迎文本，采用选定或默认语言。
+
+**4.** 完成页面：
+
+```
+include ('includes/footer.html');
+?>
+```
+
+主页就此完成！
+
+**5.** 将文件保存为 `index.php`，将其放入你的 Web 目录，并在 Web 浏览器中测试（参见上一节中的 ![Image](img/graycircle-a.jpg) 和 ![Image](img/graycircle-b.jpg)）。
+
+再次提醒，确保文件使用 UTF-8 编码保存。这是我最后一次提醒你！
+
+**脚本 17.3。** 主页包含页头和页脚文件以构成一个完整的 HTML 文档。它还会按选定语言打印一些介绍性文本。
+
+```
+1  <?php # Script 17.3 - index.php
+2  // This is the main page for the site.
+3
+4  // Include the HTML header:
+5  include ('includes/header.html');
+6
+7  // The content on this page is introductory text
+8  // pulled from the database, based upon the
+9  // selected language:
+10 echo $words['intro'];
+11
+12 // Include the HTML footer file:
+13 include ('includes/footer.html');
+14 ?>
+```
+
+---
+
+### 创建论坛页面
+
+网站的下一个页面是论坛页面，它显示论坛中的主题（每种语言对应一个论坛）。该页面将使用通过 URL 传递并/或存储在会话中的语言 ID，来确定要显示哪些主题。
+
+该页面的基本功能——运行查询、显示结果——很简单 ![Image](img/circle-a.jpg)。该页面使用的查询可能是全书中最复杂的一个。它之所以复杂，有三个原因：
+
+![Image](img/17_figure_18_a.jpg)
+
+![Image](img/circle-a.jpg) 论坛页面，列出给定语言中主题的相关信息。主题链接到可阅读它们的页面。
+
+**1.** 它跨三个表执行 `JOIN` 操作。
+
+**2.** 它使用了三个聚合函数和一个 `GROUP BY` 子句。
+
+**3.** 它将日期转换为用户的时区，但仅当查看页面的人已登录时才转换。
+
+因此，查询确实错综复杂，但我将在以下步骤中详细讲解。
+
+#### 编写论坛页面
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `forum.php`（**脚本 17.4**）：
+
+```
+<?php # Script 17.4 - forum.php
+include ('includes/header.html');
+```
+
+**脚本 17.4。** 此脚本执行一个相当复杂的查询，以显示论坛中每个主题的五条信息——主题、原始发帖人、主题创建日期、回复数量和最新回复日期。
+
+```
+1  <?php # Script 17.4 - forum.php
+2  // This page shows the threads in a
+3      forum.
+4  include ('includes/header.html');
+5
+6  // Retrieve all the messages in this
+7      forum...
+8
+9  // If the user is logged in and has
+10      chosen a time zone,
+11  // use that to convert the dates and
+12      times:
+13  if (isset($_SESSION['user_tz'])) {
+14      $first = "CONVERT_TZ(p.posted_on,
+15          'UTC', '{$_SESSION['user_tz']}')";
+16      $last = "CONVERT_TZ(p.posted_on,
+17          'UTC', '{$_SESSION['user_tz']}')";
+18  } else {
+19      $first = 'p.posted_on';
+20      $last = 'p.posted_on';
+21  }
+22
+23  // The query for retrieving all the threads in this forum, along with the original user,
+24  // when the thread was first posted, when it was last replied to, and how many replies it's had:
+25  $q = "SELECT t.thread_id, t.subject, username, COUNT(post_id) - 1 AS responses, MAX(DATE_FORMAT
+26      ($last, '%e-%b-%y %l:%i %p')) AS last, MIN(DATE_FORMAT($first, '%e-%b-%y %l:%i %p')) AS first
+27      FROM threads AS t INNER JOIN posts AS p USING (thread_id) INNER JOIN users AS u ON t.user_id =
+28      u.user_id WHERE t.lang_id = {$_SESSION['lid']} GROUP BY (p.thread_id) ORDER BY last DESC";
+29  $r = mysqli_query($dbc, $q);
+30  if (mysqli_num_rows($r) > 0) {
+31
+32      // Create a table:
+33      echo '<table width="100%" border="0" cellspacing="2" cellpadding="2" align="center">
+34          <tr>
+35          <td align="left" width="50%"><em>' . $words['subject'] . '</em>:</td>
+36          <td align="left" width="20%"><em>' . $words['posted_by'] . '</em>:</td>
+37          <td align="center" width="10%"><em>' . $words['posted_on'] . '</em>:</td>
+38          <td align="center" width="10%"><em>' . $words['replies'] . '</em>:</td>
+39          <td align="center" width="10%"><em>' . $words['latest_reply'] . '</em>:</td>
+40          </tr>';
+41
+42      // Fetch each thread:
+43      while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+44
+45          echo '<tr>
+46              <td align="left"><a href="read.php?tid=' . $row['thread_id'] . '">' . $row['subject']
+47                  . '</a></td>
+48              <td align="left">' . $row['username'] . '</td>
+49              <td align="center">' . $row['first'] . '</td>
+50              <td align="center">' . $row['responses'] . '</td>
+51              <td align="center">' . $row['last'] . '</td>
+52          </tr>';
+53
+54      }
+55
+56      echo '</table>'; // Complete the table.
+57
+58  } else {
+59      echo '<p>There are currently no messages in this forum.</p>';
+60  }
+61
+62  // Include the HTML footer file:
+63  include ('includes/footer.html');
+64  ?>
+```
+
+---
+
+**2.** 确定要使用的日期和时间：
+
+```
+if (isset($_SESSION['user_tz'])) {
+  $first = "CONVERT_TZ (p.posted_on, 'UTC', '{$_SESSION['user_tz']}')";
+  $last = "CONVERT_TZ(p.posted_on, 'UTC', '{$_SESSION['user_tz']}')";
+} else {
+  $first = 'p.posted_on';
+  $last = 'p.posted_on';
+}
+```
+
+如前所述，查询会将日期和时间格式化为用户的时区（推测在注册过程中选择），但仅当查看者已登录时才会转换。推测，此信息将在登录时从数据库检索并存储在会话中。
+
+为了使查询具有动态性，具体应选择哪个日期/时间值将存储在变量中，以便稍后在脚本的查询中使用。如果用户*未*登录，意味着 `$_SESSION['user_tz']` 未设置，这两个日期——主题创建时间和最近回复发布时间——将是来自表的原始值。在两种情况下，引用的表列都是 `posts` 表（`p` 将在查询中作为 `posts` 的别名）中的 `posted_on` 列。
+
+
+
+
+如果用户**已登录**，将使用`CONVERT_TZ()`函数将存储在`posted_on`中的值从 UTC 转换为用户选择的时区。详见第 6 章。请注意，使用此函数要求 MySQL 安装包含时区列表（详见第 6 章）。
+
+**3. 定义并执行查询：**
+
+```php
+$q = "SELECT t.thread_id, t.subject, username, COUNT(post_id) - 1 AS responses, MAX(DATE_FORMAT($last, '%e-%b-%y %l:%i %p')) AS last, MIN(DATE_FORMAT($first, '%e-%b-%y  %l:%i %p')) AS first FROM threads AS t INNER JOIN posts AS p USING (thread_id) INNER JOIN users AS u ON t.user_id = u.user_id WHERE t.lang_id = {$_SESSION['lid']} GROUP BY (p.thread_id) ORDER BY last DESC";
+
+$r = mysqli_query($dbc, $q);
+
+if (mysqli_num_rows($r) > 0) {
+```
+
+该查询需要返回六项内容：每个主题的 ID 和主题（来自`threads`表）、发布主题的用户名（来自`users`）、每个主题的回复数、主题创建日期以及主题最后回复日期（均来自`posts`表）。
+
+该查询的整体结构是使用`thread_id`列将`threads`和`posts`表连接（该列在两表中相同）。然后将结果使用`user_id`列与`users`表连接。
+
+至于选定的值，使用了三个聚合函数（见第 7 章）：`COUNT()`、`MIN()`和`MAX()`。每个函数均应用于`posts`表中的一列，因此查询包含`GROUP BY (p.thread_id)`子句。`MIN()`和`MAX()`用于返回最早（原始帖子）和最晚的日期。两者都将显示在论坛页面上（见图![Image](img/graycircle-a.jpg)）。最晚日期还用于对结果排序，使最近的活动始终排在最前。`COUNT()`函数用于统计给定主题中的帖子数。由于原始帖子也在`posts`表中，它也会被计入`COUNT()`，因此要从该值中减去 1。
+
+最后，使用别名使查询编写更简短，并使在 PHP 脚本中使用结果更容易。如果您对该查询返回的内容感到困惑，请使用 mysql 客户端![Image](img/circle-b.jpg)或 phpMyAdmin 执行它。
+
+![Image](img/17_figure_19_b.jpg)
+
+![Image](img/circle-b.jpg)在 mysql 客户端中运行复杂查询的结果。
+
+**4. 创建结果表：**
+
+```php
+echo '<table width="100%" border="0" cellspacing="2" cellpadding="2" align="center">
+  <tr>
+    <td align="left" width="50%"> <em>' . $words['subject'] . '</em>:</td>
+    <td align="left" width="20%"><em>' . $words['posted_by'] . '</em>:</td>
+    <td align="center" width="10%"><em>' . $words['posted_on'] . '</em>:</td>
+    <td align="center" width="10%"><em>' . $words['replies'] . '</em>:</td>
+    <td align="center" width="10%"><em>' . $words['latest_reply'] . '</em>:</td>
+  </tr>';
+```
+
+与头部文件中的某些项目一样，此 HTML 页面中列的标题将使用特定语言的术语。
+
+**5. 获取并打印每条返回的记录：**
+
+```php
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+  echo '<tr>
+      <td align="left"><a href="read.php?tid=' . $row['thread_id'] . '">' . $row['subject'] . '</a></td>
+      <td align="left">' . $row['username'] . '</td>
+      <td align="center">' . $row['first'] . '</td>
+      <td align="center">' . $row['responses'] . '</td>
+      <td align="center">' . $row['last'] . '</td>
+    </tr>';
+}
+```
+
+这段代码相当简单，书中有许多类似的示例。主题的主题链接到`read.php`，在 URL 中传递该主题的 ID。
+
+**6. 完成页面：**
+
+```php
+  echo '</table>';
+} else {
+  echo '<p>There are currently no messages in this forum.</p>';
+}
+
+include ('includes/footer.html');
+?>
+```
+
+此`else`子句适用于查询无结果返回的情况。实际上，此消息也应使用用户选择的语言。为简洁起见，此处省略了该功能。要完全实现此功能，请在`words`表中创建另一列，并为每种语言存储该文本的翻译版本。
+
+**7. 将文件保存为`forum.php`，放入 Web 目录，并在 Web 浏览器中测试![Image](img/circle-c.jpg)。**
+
+![Image](img/17_figure_20_c.jpg)
+
+![Image](img/circle-c.jpg)`forum.php`页面，以另一种语言查看（对比![Image](img/graycircle-a.jpg)）。
+
+***
+
+**提示**
+
+如果运行此脚本时日期和时间无值，很可能是因为您的 MySQL 安装未更新完整的时区列表。
+
+***
+
+***
+
+**提示**
+
+正如本章介绍所述，本示例省略了所有错误处理。如果查询有问题，请应用第 8 章“错误处理与调试”中概述的调试技术。
+
+***
+
+### 创建主题页面
+
+接下来是查看主题中所有消息的页面![Image](img/circle-a.jpg)。通过单击`forum.php`中的链接访问此页面![Image](img/circle-b.jpg)。得益于简化的数据库结构，此脚本使用的查询并不复杂（若使用第 6 章的数据库设计，此页面将复杂得多）。该页面只需确保接收到有效的主题 ID，显示每条消息，并显示供用户添加回复的表单。
+
+![Image](img/17_figure_21_a.jpg)
+
+![Image](img/circle-a.jpg)`read.php`页面显示主题中的每条消息。
+
+![Image](img/17_figure_22_b.jpg)
+
+![Image](img/circle-b.jpg)`forum.php`部分源代码显示如何在 URL 中将主题 ID 传递给`read.php`。
+
+#### 创建 `read.php`
+
+**1. 在文本编辑器或 IDE 中开始新建 PHP 文档，命名为`read.php`（**脚本 17.5**）：**
+
+```php
+<?php # Script 17.5 - read.php
+include ('includes/header.html');
+```
+
+**2. 开始验证主题 ID：**
+
+```php
+$tid = FALSE;
+if (isset($_GET['tid']) && filter_var($_GET['tid'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
+  $tid = $_GET['tid'];
+```
+
+首先，定义一个标志变量为`FALSE`，意为：证明主题 ID 有效，这是该脚本最重要的方面。接着，检查主题 ID 是否通过 URL 传递，且是否为大于 1 的整数。这是使用 Filter 扩展完成的（见第 13 章）。最后，将传递给页面的值赋给`$tid`变量，使其不再为`FALSE`值。
+
+如果您的 PHP 版本不支持 Filter 扩展，则需将`$_GET['tid']`转型为整数，再确认其值大于 1（如第 13 章所示）。
+
+**脚本 17.5.** `read.php`页面按发布日期升序显示主题中的所有消息。页面顶部显示主题主题，底部包含添加回复的表单。
+
+***
+
+```php
+1  <?php # Script 17.5 - read.php
+2  // This page shows the messages in a thread.
+3  include ('includes/header.html');
+4
+5  // Check for a thread ID...
+6  $tid = FALSE;
+7  if (isset($_GET['tid']) && filter_var($_GET['tid'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
+8
+9      // Create a shorthand version of the thread ID:
+10     $tid = $_GET['tid'];
+11
+12     // Convert the date if the user is logged in:
+13     if (isset($_SESSION['user_tz'])) {
+14         $posted = "CONVERT_TZ(p.posted_on, 'UTC', '{$_SESSION['user_tz']}')";
+```
+
+
+
+
+### 3. 确定是否应调整日期和时间
+
+```php
+if (isset($_SESSION['user_tz'])) {
+    $posted = "CONVERT_TZ (p.posted_on, 'UTC', '{$_SESSION['user_tz']}')";
+} else {
+    $posted = 'p.posted_on';
+}
+```
+
+正如在 `forum.php` 页面（脚本 17.4）中一样，如果用户已登录，查询将把所有日期和时间格式化为用户的时区。为了能够相应地调整查询，此变量存储列名（来自 `posts` 表的 `posted_on`）或 MySQL `CONVERT_TZ()` 函数的调用。
+
+### 4. 运行查询
+
+```php
+$q = "SELECT t.subject, p.message, username, DATE_FORMAT($posted, '%e-%b-%y %l:%i %p') AS posted FROM threads AS t LEFT JOIN posts AS p USING (thread_id) INNER JOIN users AS u ON p.user_id = u.user_id WHERE t.thread_id = $tid ORDER BY p.posted_on ASC";
+$r = mysqli_query($dbc, $q);
+if (!(mysqli_num_rows($r) > 0)) {
+    $tid = FALSE;
+}
+```
+
+此查询类似于论坛页面上的查询，但已以两种方式简化。首先，它不使用任何聚合函数或 `GROUP BY` 子句。其次，它仅返回一个日期和时间。该查询仍然是跨三个表的 `JOIN`，以便获取主题、消息正文和用户名。记录按发布日期升序排列（即从第一条帖子到最近的帖子）。
+
+如果查询未返回任何行，则线程 ID 无效，标志变量再次被设为 false。
+
+### 5. 完成 `$_GET['tid']` 条件并再次检查有效的线程 ID
+
+```php
+} // End of isset($_GET['tid']) IF.
+if ($tid) {
+```
+
+在打印线程中的消息之前，使用最后一个条件判断。如果出现以下情况，此条件将为 false：
+
+*   未向此页面传递 `$_GET['tid']` 值。
+*   向页面传递了 `$_GET['tid']` 值，但它不是大于 0 的整数。
+*   向页面传递了 `$_GET['tid']` 值且它是大于 0 的整数，但它在数据库中未匹配任何线程记录。
+
+### 6. 打印每条消息
+
+```php
+$printed = FALSE;
+while ($messages = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    if (!$printed) {
+        echo "<h2>{$messages['subject']}</h2>\n";
+        $printed = TRUE;
+    }
+    echo "<p>{$messages['username']} ({$messages['posted']})<br /> {$messages['message']}</p> <br />\n";
+} // End of WHILE loop.
+```
+
+正如您在 ![Image](img/graycircle-a.jpg) 中所见，线程主题只需打印一次。然而，查询将为每条返回的消息返回主题 ![Image](img/circle-c.jpg)。
+
+![Image](img/17_figure_23_c.jpg)
+
+![Image](img/circle-c.jpg) 在 mysql 客户端中运行 `read.php` 查询的结果。此版本的查询将日期转换为登录用户的首选时区。
+
+为实现此效果，创建了一个标志变量。如果 `$printed` 为 FALSE，则需要打印主题。这将是从数据库获取的第一行的情况。一旦显示完毕，`$printed` 将设为 TRUE，以便不再重复打印主题。然后显示用户名、发布日期和消息。
+
+### 7. 包含发布消息的表单
+
+```php
+include ('includes/post_form.php');
+```
+
+由于用户可以通过两种方式发布消息——作为对现有线程的回复，以及作为新线程中的第一条帖子，因此发布消息的表单定义在一个单独的文件中（接下来将创建），存储在 `includes` 目录内。
+
+### 8. 完成页面
+
+```php
+} else { // Invalid thread ID!
+    echo '<p>This page has been accessed in error.</p>';
+}
+include ('includes/footer.html');
+?>
+```
+
+同样，在一个完整的站点中，此错误消息也将以每种语言存储在 `words` 表中。然后您将在此处编写：
+
+```php
+echo "<p>{$words['access_error']} </p>";
+```
+
+### 9. 将文件保存为 `read.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试它 ![Image](img/circle-d.jpg)。
+
+![Image](img/17_figure_24_d.jpg)
+
+![Image](img/circle-d.jpg) 用日语查看的 `read.php` 页面。
+
+### 发布消息
+
+该应用程序中最后两个页面最为重要，因为没有它们就不会有线程可读。发布消息需要两个文件：一个将*生成*表单，另一个将*处理*表单。
+
+#### 创建表单
+
+发布消息所需的第一个页面是 `post_form.php`。它有一些前提条件：
+
+**1.** 它只能被其他文件包含，绝不能直接访问。
+
+**2.** 只有在用户已登录时才应显示（也就是说只有登录用户才能发布消息）。
+
+**3.** 如果它被用于添加对现有消息的回复，则只需要一个消息正文输入 ![Image](img/circle-a.jpg)。
+
+![Image](img/17_figure_25_a.jpg)
+
+![Image](img/circle-a.jpg) 线程查看页面上显示的发布消息表单。
+
+**4.** 如果它被用于创建新线程，则需要主题和正文输入 ![Image](img/circle-b.jpg)。
+
+![Image](img/17_figure_26_b.jpg)
+
+![Image](img/circle-b.jpg) 如果用于创建新线程，发布消息的同一表单。
+
+**5.** 它需要是粘性的 ![Image](img/circle-c.jpg)。
+
+![Image](img/17_figure_27_c.jpg)
+
+![Image](img/circle-c.jpg) 表单在未正确完成时将回显输入的值。
+
+尽管如此，所有这些都可以在 60 行代码和一些智能条件判断中完成。
+
+#### 创建 post_form.php
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `post_form.php`（脚本 17.6）：
+
+```php
+<?php # Script 17.6 - post_form.php
+```
+
+**2.** 如果直接访问此页面，则重定向 Web 浏览器：
+
+```php
+if (!isset($words)) {
+    header ("Location: http://www.example.com/index.php");
+    exit( );
+}
+```
+
+**脚本 17.6.** 此脚本将被其他页面包含（特别是 `read.php` 和 `post.php`）。它显示一个用于发布消息的表单，该表单也是粘性的。
+
+---
+
+```php
+1   <?php # Script 17.6 - post_form.php
+2   // This page shows the form for posting
+3       messages.
+4   // It's included by other pages, never
+5       called directly.
+6
+7   // Redirect if this page is called
+8       directly:
+9   if (!isset($words)) {
+10      header ("Location: http://www.example.
+11          com/index.php");
+12      exit( );
+13  }
+14
+15  // Only display this form if the user is
+```
+
+
+
+
+
+### 代码片段：`post_form.php` 部分实现
+
+```php
+logged in:
+
+12  if (isset($_SESSION['user_id'])) {
+
+13
+
+14      // Display the form:
+15      echo '<form action="post.php"
+            method="post" accept-charset="utf-8">';
+
+16
+
+17      // If on read.php...
+18      if (isset($tid) && $tid) {
+
+19
+
+20          // Print a caption:
+21          echo '<h3>' . $words['post_a_reply']
+                . '</h3>';
+
+22
+
+23          // Add the thread ID as a hidden
+            input:
+24          echo '<input name="tid" type=
+            "hidden" value="' . $tid . '" />';
+
+25
+
+26      } else { // New thread
+
+27
+
+28          // Print a caption:
+29          echo '<h3>' . $words['new_thread']
+                . '</h3>';
+
+30
+
+31          // Create subject input:
+32          echo '<p><em>' . $words['subject']
+                . '</em>: <input name="subject"
+                type="text" size="60"
+                maxlength="100" ';
+
+33
+
+34          // Check for existing value:
+35          if (isset($subject)) {
+36              echo "value=\"$subject\" ";
+37          }
+
+38
+
+39          echo '/></p>';
+
+40
+
+41      } // End of $tid IF.
+
+42
+
+43      // Create the body textarea:
+44      echo '<p><em>' . $words['body'] .
+            '</em>: <textarea name="body"
+            rows="10" cols="60">';
+
+45
+
+46      if (isset($body)) {
+47          echo $body;
+48      }
+
+49
+
+50      echo '</textarea></p>';
+
+51
+
+52      // Finish the form:
+53      echo '<input name="submit" type="submit"
+            value="' . $words['submit'] . '" />
+54      </form>';
+
+55
+
+56  } else {
+57      echo '<p>You must be logged in to
+            post messages.</p>';
+58  }
+
+59
+
+60  ?>
+```
+
+---
+
+此脚本不包含页眉和页脚，因此无法构成完整的 HTML 页面。因此，该脚本必须由一个包含这些内容的脚本来引入。PHP 没有 `been_included()` 函数来指示此页面是被引入还是直接加载。作为替代，既然我知道页眉文件会创建一个 `$words` 变量，如果该变量未设置，则说明 `header.html` 尚未在此脚本之前被引入，此时应重定向浏览器。
+
+请修改 `header()` 调用中的 URL 以匹配您的站点。
+
+**3. 确认用户已登录并开始表单：**
+
+```php
+if (isset($_SESSION['user_id'])) {
+    echo '<form action="post.php" method="post"
+accept-charset="utf-8">';
+```
+
+由于只有注册用户才能发帖，脚本会在显示表单前检查 `$_SESSION['user_id']` 是否存在。表单将提交给 `post.php`（稍后编写）。`accept-charset` 属性被添加到表单中，以明确表明接受 UTF-8 文本（尽管从技术上讲这不是必需的，因为每个页面都已使用 UTF-8 编码）。
+
+**4. 检查线程 ID：**
+
+```php
+if (isset($tid) && $tid) {
+    echo '<h3>' . $words['post_a_reply'] . '</h3>';
+    echo '<input name="tid" type="hidden" value="' . $tid . '" />';
+}
+```
+
+这里逻辑稍微有点棘手。如前所述，并如图 ![Image](img/graycircle-a.jpg) 和 ![Image](img/graycircle-b.jpg) 所示，表单会根据使用方式略有不同。当在 `read.php` 中引入时，表单用于回复现有线程。为检测此场景，脚本会查看 `$tid`（即 *thread ID*，线程 ID 简写）是否已设置且值为 TRUE。当此页面由 `read.php` 引入时即为这种情况。当由 `post.php` 引入时，`$tid` 会被设置但值为 FALSE。
+
+如果此条件为真，将打印特定语言版本的“Post a Reply”（发表回复），并将线程 ID 存储在隐藏表单输入中。
+
+**5. 完成步骤 4 中开始的条件判断：**
+
+```php
+} else { // New thread
+    echo '<h3>' . $words['new_thread'] . '</h3>';
+    echo '<p><em>' . $words['subject'] . '</em>: <input name="subject" type="text" size="60" maxlength="100" ';
+    if (isset($subject)) {
+        echo "value=\"$subject\" ";
+    }
+    echo '/></p>';
+} // End of $tid IF.
+```
+
+如果不是回复，则标题应为特定语言版本的“New Thread”（新主题），并创建主题输入框。该输入框需具有粘性。为此，检查 `$subject` 变量是否存在。该变量将在 `post.php` 中创建，随后该文件会引入此页面。
+
+**6. 创建消息正文的文本域：**
+
+```php
+echo '<p><em>' . $words['body'] . '</em>: <textarea name="body" rows="10" cols="60">';
+if (isset($body)) {
+    echo $body;
+}
+echo '</textarea></p>';
+```
+
+此页面的两种用法都包含此文本域。与主题一样，如果存在 `$body` 变量（在 `post.php` 中定义），它也将具有粘性。对于这两个输入框，提示均为特定语言版本。
+
+**7. 完成表单：**
+
+```php
+echo '<input name="submit" type="submit" value="' . $words['submit'] . '" />
+</form>';
+```
+
+剩下的就是一个特定语言版本的提交按钮 ![Image](img/circle-d.jpg)。
+
+![Image](img/17_figure_28_d.jpg)
+
+![Image](img/circle-d.jpg) 表单提示甚至提交按钮都将使用用户选择的语言（可与本章节中的其他图表对比）。
+
+**8. 完成页面：**
+
+```php
+} else {
+    echo '<p>You must be logged in to post messages.</p>';
+}
+?>
+```
+
+同样，您可以将此消息存储在 `words` 表中并使用翻译版本。此处未这么做仅为求简洁。
+
+**9. 将文件保存为 `post_form.php`，放置在 Web 目录的 `includes` 文件夹中，并通过访问 `read.php` 在 Web 浏览器中测试 ![Image](img/circle-e.jpg)。**
+
+![Image](img/17_figure_29_e.jpg)
+
+![Image](img/circle-e.jpg) 如果用户未登录，`post_form.php` 页面的显示结果（请记住，您可以通过在页眉文件中使用 `$_SESSION = array();` 这行代码来模拟未登录状态）。
+
+### 处理表单
+
+此文件 `post.php` 主要用于处理来自 `post_form.php` 的表单提交。听起来很简单，但还有更多细节。此页面实际上会以三种不同方式被调用：
+
+1.  处理线程回复的表单
+2.  显示新主题提交的表单
+3.  处理新主题提交的表单
+
+这意味着页面将通过 POST（模式 1 和 3）或 GET（模式 2）访问。此外，发送到页面并因此需要验证的数据在模式 1 和 3 之间会有所不同 ![Image](img/circle-f.jpg)。
+
+![Image](img/17_figure_30_f.jpg)
+
+![Image](img/circle-f.jpg) `post.php` 页面的各种用法。
+
+增加复杂性的是，如果要创建新主题，必须运行两个查询：一个将主题添加到 `threads` 表，另一个将新主题正文添加到 `posts` 表。如果是对现有主题的回复，则只需一个查询，向 `posts` 表插入一条记录。
+
+当然，成功实现这一点只是使用正确条件判断的问题，您马上就会看到。就验证而言，主题和正文作为文本类型，只需检查非空值。主题将去除所有标签（因为它为什么要包含标签？），正文中的标签将转换为实体。这将允许在帖子中*书写* HTML、JavaScript 和 PHP 代码，但在显示主题时*不会执行*这些代码（因为在一个 Web 开发论坛中，您需要展示一些代码）。
+
+#### Script 17.7. `post.php` 页面将处理发布消息时的表单提交。此页面既用于创建新主题，也用于处理对现有主题的回复。
+
+---
+
+```php
+1   <?php # Script 17.7 - post.php
+2   // This page handles the message post.
+3   // It also displays the form if creating
+        a new thread.
+4   include ('includes/header.html');
+5
+```
+
+
+
+
+### 创建 post.php
+
+## 1. 开始新的 PHP 文档
+在文本编辑器或 IDE 中创建一个名为 `post.php` 的新 PHP 文档（**Script 17.7**）：
+
+```php
+<?php # Script 17.7 - post.php
+
+include ('includes/header.html');
+```
+
+此页面将使用页眉和页脚文件，这与 `post_form.php` 不同。
+
+## 2. 检查表单提交并验证线程 ID
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['tid']) && filter_var($_POST['tid'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
+        $tid = $_POST['tid'];
+    } else {
+        $tid = FALSE;
+    }
+}
+```
+
+线程 ID 将在表单作为对现有线程的回复提交时出现（线程 ID 作为隐藏输入存储 ![Image](img/circle-g.jpg)）。得益于 Filter 扩展，验证过程相当常规。
+
+![Image](img/17_figure_31_g.jpg)
+
+![Image](img/circle-g.jpg) `read.php` 的源代码展示了线程 ID 如何存储在表单中。这向 `post.php` 指示该提交是回复，而非新线程。
+
+## 3. 验证消息主题
+
+```php
+if (!$tid && empty($_POST['subject'])) {
+    $subject = FALSE;
+    echo '<p>Please enter a subject for this post.</p>';
+} elseif (!$tid && !empty($_POST['subject'])) {
+    $subject = htmlspecialchars(strip_tags($_POST['subject']));
+} else { // Thread ID, no need for subject.
+    $subject = TRUE;
+}
+```
+
+验证主题的棘手之处在于存在三种场景：
+1. **无有效线程 ID**：这应为新线程，主题不能为空。若 `subject` 元素为空，则发生错误并打印消息。
+2. **无有效线程 ID 但主题非空**：这是新线程且已输入主题，故应进行处理。此时使用 `strip_tags()` 函数移除所有标签，`htmlspecialchars()` 将剩余引号转为实体格式。调用第二个函数可防止表单再次显示且主题被置于输入框以使其“粘滞”时出现问题。明确说，若提交的主题包含双引号但正文未填写，表单将再次显示并将主题置于 `value=""` 中，主题中的双引号将导致问题。
+3. **作为对现有线程的回复提交**：此时 `$tid` 有效，无需主题。
+
+## 4. 验证正文
+
+```php
+if (!empty($_POST['body'])) {
+    $body = htmlentities($_POST['body']);
+} else {
+    $body = FALSE;
+    echo '<p>Please enter a body for this post.</p>';
+}
+```
+
+此验证简单得多，因为正文始终是必需的。若存在，将通过 `htmlentities()` 处理。
+
+## 5. 检查表单是否正确填写
+
+```php
+if ($subject && $body) {
+```
+
+## 6. 在适当情况下创建新线程
+
+```php
+if (!$tid) { // Create a new thread.
+    $q = "INSERT INTO threads (lang_id, user_id, subject) VALUES ({$_SESSION['lid']}, {$_SESSION['user_id']}, '" . mysqli_real_escape_string($dbc, $subject) . "')";
+    $r = mysqli_query($dbc, $q);
+    if (mysqli_affected_rows($dbc) == 1) {
+        $tid = mysqli_insert_id($dbc);
+    } else {
+        echo '<p>Your post could not be handled due to a system error.</p>';
+    }
+} // No $tid.
+```
+
+若无线程 ID，则为新线程，必须在 `threads` 表上运行查询。该查询很简单，填充三列。其中两个值来自会话（用户登录后）。另一个是主题，已通过 `mysqli_real_escape_string()` 处理。因主题已应用 `strip_tags()` 和 `htmlspecialchars()`，你或许可不使用此函数，但无需冒险。
+
+若查询生效（即影响一行），则检索新线程 ID。
+
+## 7. 向 `posts` 表添加记录
+
+```php
+if ($tid) { // Add this to the replies table:
+    $q = "INSERT INTO posts (thread_id, user_id, message, posted_on) VALUES ($tid, {$_SESSION['user_id']}, '" . mysqli_real_escape_string($dbc, $body) . "', UTC_TIMESTAMP())";
+    $r = mysqli_query($dbc, $q);
+    if (mysqli_affected_rows($dbc) == 1) {
+        echo '<p>Your post has been entered.</p>';
+    } else {
+        echo '<p>Your post could not be handled due to a system error.</p>';
+    }
+} // Valid $tid.
+```
+
+仅当线程 ID 存在时才应运行此查询。这在作为现有线程的回复或新线程刚在数据库创建（步骤 6）时成立。若前一查询失败，则不运行此查询。
+
+该查询填充表中四列：线程 ID、用户 ID（来自会话）、消息正文（通过 `mysqli_real_escape_string()` 保安全）、发布日期。最后一值使用 `UTC_TIMESTAMP()` 列，使其不绑定任何单一时区（见第 6 章）。
+
+
+
+
+请注意，本页面所有打印的消息我都只是使用了硬编码的英语。为了完善这些示例，每条消息都应存储在 `words` 表中，并在此处打印，而不是硬编码。
+
+***
+
+### 本示例为何复杂
+
+在本章介绍中，我指出该示例从根本上说是简单的，但有时简单的事情需要一些额外的努力才能完成。那么，依我之见，这个示例复杂在哪里？
+
+首先，支持多语言确实增加了几个问题。如果编码没有在所有地方都得到妥善处理——无论是在文本编辑器或 IDE 中创建页面时、与 MySQL 通信时、在 Web 浏览器中，等等——事情就会出错。此外，你必须为网站可能需要的每一段文本，在每种语言中都准备好恰当的翻译。这包括错误消息（用户实际能看到的那些）、邮件正文等。
+
+PHP 文件的组织方式及其功能也使事情变得复杂。特别是，某些变量在一个文件中创建，却在另一个文件中使用。这样做充其量会导致困惑，最坏的情况会引入 Bug。为克服这些问题，我建议添加大量注释，指明变量来自何处或还可能在何处使用。此外，尝试在页面内使用唯一的变量名，这样它们就不太可能与包含文件中的变量冲突。
+
+最后，由于消息可以通过两种不同的方式发布，且预期不同，但示例却仅使用一个页面来显示发布表单，仅用一个页面来处理它，这也增加了复杂性。
+
+***
+
+### 8. 完成页面：
+
+```php
+} else { // 包含表单：
+    include ('includes/post_form.php');
+}
+
+} else { // 显示表单：
+    include ('includes/post_form.php');
+}
+
+include ('includes/footer.html');
+
+?>
+```
+
+第一个 `else` 子句适用于表单已提交但未完成的情况。在这种情况下，表单将再次被包含，并且可以是粘滞的，因为它将能访问该脚本创建的 `$subject` 和 `$body` 变量。第二个 `else` 子句适用于直接访问此页面（通过单击导航中的链接）的情况，从而产生一个 GET 请求（即，无表单提交）。
+
+### 9. 将文件保存为 `post.php`，将其放在 Web 目录中，并在 Web 浏览器中测试。
+
+![Image](img/17_figure_32_h.jpg)
+*图：尝试发布新主题时未提供主题的结果。*
+
+![Image](img/17_figure_33_i.jpg)
+*图：回复已成功添加到主题中。*
+
+***
+
+### 管理论坛
+
+论坛的大部分管理工作将涉及用户管理，这将在下一章讨论。根据管理论坛的人员，你可能还需要创建用于管理语言和翻译词汇列表的表单。
+
+管理员也可能拥有编辑和删除帖子或主题的权限。要实现这一点，也要在会话中存储用户级别（下一章将向你展示如何操作）。如果登录用户是管理员，在 `forum.php` 上添加编辑和删除主题的链接。每个链接都会将主题 ID 传递给一个新页面（类似于第 10 章“常见编程技术”中的 `edit_user.php` 和 `delete_user.php`）。删除主题时，必须确保同时删除 `posts` 表中同样具有该主题 ID 的所有记录。外键约束（见第 6 章）在这方面会有所帮助。
+
+最后，管理员可以编辑或删除单个帖子（对主题的回复）。同样，检查用户级别，然后在 `read.php` 中添加链接（在每条消息后添加一对链接）。这些链接将把帖子 ID 传递给编辑和删除页面（与主题页面上使用的不同页面）。
+
+***
+
+### 复习与实践
+
+如果你在复习问题或实践提示方面有任何困难，请求助于本书的配套论坛 ([www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/))。
+
+注意：大多数这些问题和部分提示重述了前几章涵盖的信息，旨在加强一些最重要的要点。
+
+#### 复习
+
+*   数据库的 `character set`（字符集）或 PHP/HTML 页面的 `encoding`（编码）有什么影响？
+*   为什么编码和字符集到处都必须相同？如果存在差异会发生什么？
+*   什么是 `primary key`（主键）？什么是 `foreign key`（外键）？
+*   使用 `UTC` 存储日期和时间有什么好处？
+*   当每个用户的密码长度可变时，为什么 `users` 表中的 `pass` 列设为 `CHAR` 而不是 `VARCHAR`？
+*   如何在 PHP 中开始会话？如何在会话中存储值？如何检索先前存储的值？
+*   如何在 SQL 命令中创建 `alias`（别名）？使用别名有什么好处？
+
+#### 实践
+
+*   如果需要复习数据库设计，请回顾第 6 章。
+*   回顾第 6 章，提醒自己表中哪些列应该建立索引。
+*   如果你的 MySQL 安装未能正确将日期和时间从 UTC 时区转换为其他时区（即，返回的转换日期值为 `NULL`），请回顾第 6 章关于时区的部分。
+*   回顾第 7 章“高级 SQL 和 MySQL”，复习连接和聚合函数。
+*   修改页头和其他文件，使每个页面的标题同时使用默认语言的页面标题和基于所查看页面的副标题（例如，当前显示的主题名称）。
+*   向 `forum.php` 脚本添加分页功能——见第 10 章。
+*   如果愿意，向 `words` 表添加必要的列，并向 PHP 脚本添加适当的代码，使每个导航、错误和其他元素都具有语言特异性。使用 Yahoo! Babel Fish ([`babelfish.yahoo.com`](http://babelfish.yahoo.com)) 等网站进行翻译。
+*   将第 12 章中的 `redirect_user()` 函数应用到此处的 `post_form.php` 中。
+*   为该论坛创建一个搜索页面。如果需要帮助，请参阅可下载代码中提供的 `search.php` 基础示例。
+
+## 18. 示例——用户注册
+
+### 本章内容
+
+*   创建模板 560
+*   编写配置脚本 566
+*   创建主页 574
+*   注册 576
+*   激活账户 586
+*   登录与登出 589
+*   密码管理 594
+*   复习与实践 604
+
+本书的第二个示例——用户注册系统——已经在其他几章中涉及过，因为注册、登录和登出过程是许多概念的绝佳示例。但本章将把所有这些想法置于同一语境中，采用一致的编程方法。
+
+用户将能够注册、登录、登出和更改密码。本章包含其他地方未展示的三个功能：*重置密码*（以防遗忘）；要求用户在登录前*激活其账户*；以及支持*不同的用户级别*，允许你根据登录用户的类型控制可用内容。
+
+
+
+
+
+### 创建模板
+
+本章的应用程序将使用一种新的模板设计。该模板广泛使用了**层叠样式表（CSS）**，无需图片即可创建整洁的外观。它在所有当前浏览器上测试良好，并且在不支持 CSS2 的浏览器上将显示为无格式文本。该站点的布局源自 BlueRobot ([www.bluerobot.com](http://www.bluerobot.com)) 免费提供的模板之一。
+
+![Image](img/18_figure_01_a.jpg)
+
+该 Web 应用程序的基本外观。
+
+创建本章示例的工作从两个模板文件开始：`header.html` 和 `footer.html`。正如 第 12 章 “Cookies 和 Sessions” 的示例一样，页脚文件将根据用户是否已登录来显示特定链接，这是通过检查会话变量是否存在来确定的。更进一步，如果已登录用户也是管理员（会话值将指示这一点），则将显示额外的链接。
+
+页眉文件将启动会话和 `输出缓冲`，而页脚文件将终止输出缓冲。本书未正式涵盖输出缓冲，但在侧边栏中已作足够介绍。
+
+#### 制作 header.html
+
+**1.** 在文本编辑器或 IDE 中新建一个名为 `header.html` 的文档（脚本 18.1）：
+
+```php
+<?php # Script 18.1 - header.html
+```
+
+**脚本 18.1.** 页眉文件启动 HTML、开始会话并开启输出缓冲。
+
+```php
+1   <?php # Script 18.1 - header.html
+2   // This page begins the HTML header for
+3       the site.
+4
+5   // Start output buffering:
+6   ob_start();
+7
+8   // Initialize a session:
+9   session_start();
+10
+11  // Check for a $page_title value:
+12  if (!isset($page_title)) {
+13      $page_title = 'User Registration';
+14  }
+15  ?>
+16  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+17      1.0 Transitional//EN"
+18      "http://www.w3.org/TR/xhtml1/DTD/
+19      xhtml1-transitional.dtd">
+20  <html xmlns="http://www.w3.org/1999/
+21      xhtml" xml:lang="en" lang="en">
+22  <head>
+23      <meta http-equiv="content-type"
+24      content="text/html; charset=utf-8" />
+25      <title><?php echo $page_title; ?></title>
+26      <style type="text/css"
+27      media="screen">@import "includes/
+28      layout.css";</style>
+29  </head>
+30  <body>
+31  <div id="Header">User Registration</div>
+32      <div id="Content">
+33  <!-- End of Header -->
+```
+
+**2.** 开启输出缓冲并启动会话：
+
+```php
+ob_start();
+session_start();
+```
+
+本网站将使用输出缓冲，消除在使用 HTTP 头、重定向用户或发送 Cookie 时可能出现的错误消息。每个页面也都将使用会话。在 `ob_start()` 之后调用 `session_start()` 是安全的，因为此时尚未向 Web 浏览器发送任何内容。
+
+由于每个公共页面都将同时使用输出缓冲和会话，将这些代码行放在 `header.html` 文件中，免去了在每个页面中重复放置的麻烦。其次，如果以后想要更改会话设置（例如），只需编辑这一个文件即可。
+
+**3.** 检查 `$page_title` 变量并关闭 PHP 部分：
+
+```php
+if (!isset($page_title)) {
+    $page_title = 'User Registration';
+}
+?>
+```
+
+正如本书其他使用模板系统的示例一样，页面标题——显示在浏览器窗口顶部——将在每个页面单独设置。此条件检查 `$page_title` 变量是否有值，如果没有，则将其设置为默认字符串。这是一个很好的（但可选的）检查，值得包含在页眉中。
+
+### 使用输出缓冲
+
+默认情况下，PHP 脚本打印的任何内容或 PHP 标签外的任何 HTML（即使在包含的文件中）都会立即发送给 Web 浏览器。`输出缓冲`（PHP 手册称之为 `输出控制`）是一项 PHP 功能，可覆盖此行为。HTML 不会立即发送给 Web 浏览器，而是被放入缓冲区——临时内存中。然后，当缓冲区被*刷新*时，内容才会发送给 Web 浏览器。输出缓冲可以提高性能，但主要好处是消除了那些讨厌的*headers already sent*（头信息已发送）错误消息。某些函数——`header()`、`setcookie()` 和 `session_start()`——只有在未向 Web 浏览器发送任何内容时才能调用。有了输出缓冲，直到页面结束前都不会向 Web 浏览器发送任何内容，因此你可以在脚本的任何位置自由调用这些函数。
+
+要开始输出缓冲，请调用 `ob_start()` 函数。一旦调用它，每个 `echo`、`print` 和类似函数调用的输出将被发送到内存缓冲区，而不是 Web 浏览器。相反，HTTP 调用（如 `header()` 和 `setcookie()`）不会被缓冲，将照常运行。
+
+在脚本结束时，调用 `ob_end_flush()` 函数将累积的缓冲区发送给 Web 浏览器。或者，使用 `ob_end_clean()` 函数删除缓冲数据而不发送它。这两个函数都有关闭输出缓冲的副作用。
+
+**4.** 创建 HTML 头部：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title><?php echo $page_title; ?></title>
+    <style type="text/css" media="screen">@import "includes/layout.css";</style>
+</head>
+```
+
+PHP `$page_title` 变量在此处的 `title` 标签之间输出。然后，包含 CSS 文档。它将命名为 `layout.css` 并存储在一个名为 `includes` 的文件夹中。你可以在本书配套网站 ([www.LarryUllman.com](http://www.LarryUllman.com)) 的可下载代码中找到该 CSS 文件。
+
+**5.** 开始 HTML 主体：
+
+```html
+<body>
+<div id="Header">User Registration</div>
+<div id="Content">
+```
+
+主体创建页面顶部的横幅，然后开始网页的内容部分（直到 ![Image](img/graycircle-a.jpg) 中的 *Welcome!* 为止）。
+
+**6.** 将文件保存为 `header.html`。
+
+**脚本 18.2.** 页脚文件结束 HTML，根据用户状态（是否登录、是否为管理员）显示链接，并将输出刷新发送给 Web 浏览器。
+
+```php
+1   <!-- Start of Footer -->
+2   </div><!-- Content -->
+3
+4   <div id="Menu">
+5       <a href="index.php" title="Home
+6       Page">Home</a><br />
+7       <?php # Script 18.2 - footer.html
+8       // This page completes the HTML
+9       template.
+10
+11      // Display links based upon the login
+12      status:
+13      if (isset($_SESSION['user_id'])) {
+14
+15          echo '<a href="logout.php"
+16          title="Logout">Logout</a><br />
+17      <a href="change_password.php"
+18      title="Change Your Password">Change
+19      Password</a><br />
+20      ';
+21
+22          // Add links if the user is an
+23          administrator:
+24          if ($_SESSION['user_level'] == 1) {
+25              echo '<a href="view_users.php"
+26              title="View All Users">View
+27              Users</a><br />
+28      <a href="#">Some Admin Page</a><br
+29      />
+30      ';
+31          }
+32
+```
+
+
+
+
+
+#### 创建 `footer.html`
+
+**1.** 在文本编辑器或 IDE 中新建一个名为 **`footer.html`** 的文档（**Script 18.2**）：
+
+```php
+</div>
+
+<div id="Menu">
+<a href="index.php" title="Home Page">Home</a><br />
+<?php # Script 18.2 - footer.html
+```
+
+**2.** 如果用户已登录，显示注销和修改密码链接：
+
+```php
+if (isset($_SESSION['user_id'])) {
+  echo '<a href="logout.php" title="Logout">Logout</a><br />
+<a href="change_password.php" title="Change Your Password">Change Password</a><br />
+';
+```
+
+如果用户已登录（意味着 **`$_SESSION['user_id']`** 已设置），用户将看到注销和修改密码的链接。
+
+![Image](img/18_figure_02_b.jpg)
+
+登录状态下用户将看到的导航链接。
+
+**3.** 如果用户也是管理员，显示其他链接：
+
+```php
+if ($_SESSION['user_level'] == 1) {
+  echo '<a href="view_users.php" title="View All Users">View Users</a><br />
+<a href="#">Some Admin Page</a><br />
+';
+}
+```
+
+如果登录用户同时也是管理员，则应看到额外链接。为此，需检查用户的访问级别，该级别同样存储在会话中。级别值为 1 表示用户为管理员（非管理员级别为 0）。
+
+![Image](img/18_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg) 登录的管理员将看到额外链接（对比 ![Image](img/graycircle-b.jpg)）。
+
+**4.** 显示未登录用户的链接并结束 PHP 代码块：
+
+```php
+} else { //  Not logged in.
+  echo '<a href="register.php" title="Register for the Site">Register</a><br />
+<a href="login.php" title="Login">Login</a><br />
+<a href="forgot_password.php" title="Password Retrieval">Retrieve Password</a><br />
+';
+}
+?>
+```
+
+如果用户未登录，将看到注册、登录和重置密码的链接。
+
+![Image](img/18_figure_04_d.jpg)
+
+未登录用户将看到的链接。
+
+**5.** 完成 HTML 结构：
+
+```html
+<a href="#">Some Page</a><br />
+<a href="#">Another Page</a><br />
+</div>
+
+</body>
+</html>
+```
+
+此处包含两个虚拟链接，可用于添加其他页面。
+
+**6.** 刷新缓冲区：
+
+```php
+<?php
+ob_end_flush();
+?>
+```
+
+`footer.html` 会将累积的缓冲区发送给浏览器，完成在 `header.html` 中开始的输出缓冲（详见侧边栏）。
+
+**7.** 将文件保存为 **`footer.html`**，并连同 **`header.html`** 和 **`layout.css`**（来自本书配套网站）放入 Web 目录下的 **`includes`** 文件夹中。
+
+![Image](img/18_figure_05_e.jpg)
+
+站点在 Web 服务器上的目录结构，假设 `htdocs` 为文档根目录（即 `www.example.com` 指向的位置）。
+
+---
+
+> **Tip**
+>
+> 如果站点有页面未使用 `header.html` 但需要使用会话，该脚本必须自行调用 **`session_start()`**。否则该页面将无法访问会话数据。
+
+---
+
+> **Tip**
+>
+> 在较新版本的 PHP 中，输出缓冲默认启用。缓冲区大小（内存中存储的最大字节数）为 4096，可在 PHP 配置文件中修改。
+
+---
+
+> **Tip**
+>
+> **`ob_get_contents()`** 函数返回当前缓冲区内容，可将其赋值给变量以备后用。
+
+---
+
+> **Tip**
+>
+> **`ob_flush()`** 将当前缓冲区内容发送给浏览器并清空，允许启动新缓冲区，有助于维持适度的缓冲区大小。相反，**`ob_end_flush()`** 在发送缓冲区后关闭输出缓冲。
+
+---
+
+> **Tip**
+>
+> **`ob_clean()`** 删除当前缓冲区内容但不停止缓冲进程。
+
+---
+
+> **Tip**
+>
+> 若脚本结束时未显式调用，PHP 会自动执行 **`ob_end_flush()`**。
+
+---
+
+### 编写配置脚本
+
+本网站将使用两类配置脚本。其中 **`config.inc.php`** 是整个应用最重要的脚本，它将：
+
+- 包含关于站点的整体注释
+- 定义常量
+- 确立站点设置
+- 规定错误处理方式
+- 定义所需函数
+
+因承担上述所有职责，配置脚本将被应用中每个页面引入。
+
+第二个配置脚本 **`mysqli_connect.php`** 存储所有数据库相关信息，仅被需要与数据库交互的页面引入。
+
+#### 创建配置文件
+
+配置文件将发挥多重重要作用，既像站点的“使用手册”又像“首选项文件”。首先用于记录站点整体信息：创建者、时间、原因、受众等（书中版本省略了这些，但您应在自己的脚本中补充）。其次定义各页面将使用的各类常量和设置。
+
+第三，配置文件将确立站点的错误管理策略。相关技术——创建自定义错误处理函数——已在 第 8 章 “错误处理与调试” 中介绍。同该章一样，开发阶段将以最详细方式报告每个错误。
+
+![Image](img/18_figure_06_a.jpg)
+
+开发阶段所有错误应尽可能明显且信息丰富。
+
+**Script 18.3.** 该配置脚本规定错误处理方式、定义全站设置与常量，并可（但未）声明所需函数。
+
+```php
+<?php # Script 18.3 - config.inc.php
+/* This script:
+ * - define constants and settings
+ * - dictates how errors are handled
+ * - defines useful functions
+ */
+
+// Document who created this site, when,
+// why, etc.
+
+
+// ********** SETTINGS ********** //
+
+// Flag variable for site status:
+define('LIVE', FALSE);
+
+// Admin contact address:
+define('EMAIL', 'InsertRealAddressHere');
+
+// Site URL (base for all redirections):
+define ('BASE_URL', 'http://www.example.com/');
+
+// Location of the MySQL connection script:
+define ('MYSQL', '/path/to/mysqli_connect.php');
+
+// Adjust the time zone for PHP 5.1 and greater:
+date_default_timezone_set ('US/Eastern');
+
+// ********** SETTINGS ********** //
+```
+
+
+
+
+#### 编写配置文件
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 **`config.inc.php`** (**脚本 18.3**)：
+
+```php
+<?php # Script 18.3 - config.inc.php
+```
+
+**2.** 为错误报告建立两个常量：
+
+```php
+define('LIVE', FALSE);
+define('EMAIL', 'InsertRealAddress Here');
+```
+
+**`LIVE`** 常量的用法与 第 8 章 中相同。如果为 `FALSE`，详细错误消息将发送到 Web 浏览器。网站上线后，应将此常量设置为 `TRUE`，以便永远不向 Web 用户显示详细错误消息。**`EMAIL`** 常量是网站上线时发送错误消息的地址。显然，您应使用自己的电子邮件地址作为该值。
+
+**3.** 为全站设置建立两个常量：
+
+```php
+define ('BASE_URL', 'http://www.example.com/');
+define ('MYSQL', '/path/to/mysqli_connect.php');
+```
+
+定义这两个常量只是为了让在其他脚本中执行某些操作更加容易。第一个 **`BASE_URL`** 指的是根域名 (*http://www.example.com/*)，并带有结尾斜杠。如果在自己的电脑上开发，这可能是 *http://localhost/* 或 *http://localhost/ch18/*。当脚本重定向浏览器时，代码可以简单地写成：
+
+```php
+header('Location: ' . BASE_URL . 'page.php');
+```
+
+第二个常量 **`MYSQL`** 是 MySQL 连接脚本（接下来要编写）的绝对路径。通过将其设置为绝对路径，任何文件都可以通过引用此常量来包含连接脚本：
+
+```php
+require (MYSQL);
+```
+
+将这两个值都更改为与您的环境相对应。例如，在 Windows 上使用 XAMPP 时，**`MYSQL`** 常量的正确值可能是 **`C:\\xampp\mysqli_connect.php`**。
+
+如果将网站从一台服务器或域迁移到另一台，只需更改这两个常量，应用程序仍可正常工作。
+
+**4.** 建立其他全站设置：
+
+```php
+date_default_timezone_set ('US/Eastern');
+```
+
+正如 第 11 章 “Web 应用程序开发” 中所述，任何使用 PHP 日期或时间函数的情况（自 PHP 5.1 起）都要求设置时区。请将此值更改为匹配您的时区（请参阅 PHP 手册获取时区列表）。
+
+**5.** 开始定义错误处理函数：
+
+```php
+function my_error_handler ($e_number, $e_message, $e_file, $e_line, $e_vars) {
+  $message = "An error occurred in script '$e_file' on line $e_line: $e_message\n";
+```
+
+函数定义将与 第 8 章 中解释的非常相似。该函数预期接收五个参数：错误编号、错误消息、发生错误的脚本、PHP 认为发生错误的行号，以及错误发生时存在的变量数组。然后函数开始定义 **`$message`** 变量，从传递给该函数的信息入手。
+
+**6.** 添加当前日期和时间：
+
+```php
+$message .= "Date/Time: " . date('n-j-Y H:i:s') . "\n";
+```
+
+为了使错误报告更有用，消息中将包含当前日期和时间。换行符终止字符串，使生成的显示更易读。
+
+**7.** 如果网站未上线，详细显示错误消息：
+
+```php
+if (!LIVE) {
+  echo '<div class="error">' . nl2br($message);
+  echo '<pre>' . print_r ($e_vars, 1) . "\n";
+  debug_print_backtrace( );
+  echo '</pre></div>';
+```
+
+如前所述，如果网站*未*上线，对于任何类型的错误，都会打印完整的错误消息。消息放置在 **`<div class="error">`** 内，将根据网站 CSS 文件中定义的规则对消息进行格式化。错误消息的第一部分是已定义的字符串，并额外将换行符转换为 HTML 换行标签。然后，在预格式化标签内，显示错误发生时存在的所有变量，以及一个*回溯*（函数调用历史等）。有关更多解释，请参阅 第 8 章。
+
+**8.** 如果网站已上线，将详细信息通过电子邮件发送给管理员，并为访客打印一条通用消息：
+
+```php
+} else { // Don't show the error:
+  $body = $message . "\n" . print_r ($e_vars, 1);
+  mail(EMAIL, 'Site Error!', $body, 'From: email@example.com');
+  if ($e_number != E_NOTICE) {
+    echo '<div class="error">A system error occurred. We apologize for the inconvenience.</div><br />';
+  }
+} // End of !LIVE IF.
+```
+
+除了具体的错误消息外，所有现有变量以及当前日期和时间也将显示出来。错误报告将被格式化以适应网站的模板。在网站的生产或上线阶段，错误将得到更优雅的处理。那时，详细错误消息不会在 Web 浏览器中打印，而是发送到电子邮件地址。
+
+如果网站上线时发生错误，用户将只看到如下消息（但详细错误消息将通过电子邮件发送给管理员）。
+
+最后，此脚本可以定义网站中可能多次使用的任何函数。本网站没有此类函数，但这也是此类文件的另一个合乎逻辑的用途。
+
+
+
+
+如果站点*已上线*，详细错误信息应通过电子邮件发送，而 Web 用户只能看到一条通用消息。更进一步，如果错误类型为特定的 **`E_NOTICE`**，则不会打印该通用消息。此类错误发生在引用不存在的变量等情况，这可能是个问题，也可能不是。为避免用户可能被大量错误消息淹没，仅当 **`$e_number`** 不等于 **`E_NOTICE`** 时才打印错误消息，`E_NOTICE` 是 PHP 中定义的常量（参见 PHP 手册）。
+
+**9.** 完成函数定义并告知 PHP 使用您的错误处理程序：
+
+```
+}
+set_error_handler('my_error_handler');
+```
+
+您必须使用 **`set_error_handler()`** 函数来告知 PHP 使用您自己的函数处理错误。
+
+**10.** 将文件保存为 **`config.inc.php`**，并将其放置在您的 Web 目录下的 **`includes`** 文件夹中。
+
+请注意，遵循本书中许多其他示例的惯例，由于此脚本将被其他 PHP 脚本包含，因此省略了结束的 PHP 标签。
+
+### 创建数据库脚本
+
+第二个配置类脚本是 **`mysqli_connect.php`**，即本书多次使用的数据库连接文件。其目的是连接到 MySQL、选择数据库并建立使用的字符集。如果发生问题，此脚本将利用 **`config.inc.php`** 中建立的错误处理工具。为此，此脚本将在适当的时候调用 **`trigger_error()`** 函数。**`trigger_error()`** 函数让您通知 PHP 发生了错误。当然，PHP 将使用配置脚本中建立的 **`my_error_handler()`** 函数来处理该错误。
+
+#### 脚本 18.4
+此脚本连接到 *ch18* 数据库。如果无法连接，则会触发错误处理程序，并将 MySQL 连接错误传递给它。
+
+```
+<?php # Script 18.4 - mysqli_connect.php
+// This file contains the database
+// access information.
+// This file also establishes a
+// connection to MySQL
+// and selects the database.
+
+// Set the database access information
+// as constants:
+DEFINE ('DB_USER', 'username');
+DEFINE ('DB_PASSWORD', 'password');
+DEFINE ('DB_HOST', 'localhost');
+DEFINE ('DB_NAME', 'ch18');
+
+// Make the connection:
+$dbc = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+// If no connection could be made,
+// trigger an error:
+if (!$dbc) {
+    trigger_error ('Could not connect to MySQL: ' . mysqli_connect_error() );
+} else { // Otherwise, set the encoding:
+    mysqli_set_charset($dbc, 'utf8');
+}
+```
+
+### 连接到数据库
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 **`mysqli_connect.php`**（**脚本 18.4**）：
+
+```
+<?php # Script 18.4 - mysqli_connect.php
+```
+
+**2.** 设置数据库访问信息：
+
+```
+DEFINE ('DB_USER', 'username');
+DEFINE ('DB_PASSWORD', 'password');
+DEFINE ('DB_HOST', 'localhost');
+DEFINE ('DB_NAME', 'ch18');
+```
+
+一如既往，请将这些值更改为适合您的 MySQL 安装的值。
+
+**3.** 尝试连接到 MySQL 并选择数据库：
+
+```
+$dbc = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+```
+
+在之前的脚本中，如果此函数未返回正确结果，则会调用 **`die()`** 函数，终止脚本执行。由于本站点将使用自定义错误处理函数，我将重写连接过程。
+
+由于 **`@`** 抑制运算符，此函数调用引发的任何错误都将被抑制，并由下一步中的代码处理。
+
+**4.** 如果未建立数据库连接，处理错误：
+
+```
+if (!$dbc) {
+    trigger_error ('Could not connect to MySQL: ' . mysqli_connect_error() );
+```
+
+如果脚本无法连接到数据库，错误消息应发送给 **`my_error_handler()`** 函数。这样，错误将根据当前设置的管理技术（上线阶段与开发阶段）进行处理。我们不直接调用 **`my_error_handler()`**，而是使用 **`trigger_error()`**，其第一个参数是错误消息。
+
+![Image](img/circle-c.jpg)
+
+![Image](img/18_figure_08_c.jpg)
+
+![Image](img/circle-c.jpg) 网站开发期间发生的数据库连接错误。
+
+**5.** 设置编码：
+
+```
+} else {
+    mysqli_set_charset($dbc, 'utf8');
+}
+```
+
+如果能够建立数据库连接，则建立用于与数据库通信的编码。详情请参见第 9 章 “将 PHP 与 MySQL 结合使用”。
+
+**6.** 将文件保存为 **`mysqli_connect.php`**，并将其放置在 Web 文档根目录的上一级目录中。
+
+此脚本作为一个可包含文件，同样省略了结束的 PHP 标签。与本书中的其他示例一样，理想情况下该文件不应位于 Web 目录中，但无论您将其放在何处，请确保 **`config.inc.php`** 中 **`MYSQL`** 常量的值相匹配。
+
+**7.** 创建数据库。
+
+![Image](img/circle-d.jpg)
+
+![Image](img/18_figure_09_d.jpg)
+
+![Image](img/circle-d.jpg) 创建本章使用的数据库。
+
+有关数据库的讨论以及创建该表所需的命令，请参见侧边栏“数据库方案”。如果您无法创建自己的数据库，只需将该表添加到您有权访问的任何数据库中即可。此外，请确保编辑 **`mysqli_connect.php`** 文件，使其使用正确的用户名/密码/主机名组合来连接到该数据库。
+
+> **提示**
+>
+> 一方面，为了方便参考，将两个配置文件的内容放在一个脚本中似乎讲得通。但遗憾的是，这样做会给不需要数据库连接的脚本（例如 **`index.php`**）带来不必要的开销（即连接并选择数据库）。
+
+> **提示**
+>
+> 通常，应在配置文件或单独的函数文件中定义通用函数。一个例外是任何需要数据库连接的函数。如果您知道某个函数仅用于也连接到 MySQL 的页面上，那么在 **`mysqli_connect.php`** 脚本中定义该函数是合乎逻辑的。
+
+### 数据库方案
+
+该应用程序使用的数据库称为 *ch18*。该数据库目前仅包含一张表：*users*。要创建该表，请使用以下 SQL 命令：
+
+```
+CREATE TABLE users (
+user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+first_name VARCHAR(20) NOT NULL,
+last_name VARCHAR(40) NOT NULL,
+email VARCHAR(60) NOT NULL,
+pass CHAR(40) NOT NULL,
+user_level TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+active CHAR(32),
+registration_date DATETIME NOT NULL,
+PRIMARY KEY (user_id),
+UNIQUE KEY (email),
+INDEX login (email, pass)
+);
+```
+
+到目前为止，该表的大部分结构应该对您很熟悉；它与本书多个示例中使用的 *sitename* 数据库中的 *users* 表非常相似。一个新增内容是 *active* 列，它将指示用户是否已激活其账户（通过单击注册邮件中的链接）。该列将存储 32 字符长的激活码，或具有 **`NULL`** 值。因为 *active* 列可能具有 **`NULL`** 值，所以不能将其定义为 **`NOT NULL`**。如果您将 *active* 定义为 **`NOT NULL`**，则没有人能够登录（稍后您将在本章中了解原因）。另一个新增内容是 *user_level* 列，它将区分站点拥有的用户类型。
+
+
+
+在 `email` 字段上建立了唯一索引，而在 `email` 和 `pass` 字段的组合上建立了另一个索引。这两个字段将在登录查询中一起使用，因此将它们作为一个整体建立索引，创建一个名为 `login` 的索引，是合情合理的。
+
+---
+
+### 创建主页
+
+网站的主页名为 `index.php`，它将作为公共前台其他页面的模板。它将引入配置文件（用于错误管理）以及页眉和页脚文件来创建 HTML 设计。假设用户已登录，此页面还将以姓名欢迎用户。
+
+![Image](img/18_figure_10_a.jpg)
+
+如果用户已登录，索引页将以姓名向其问好。
+
+#### 编写 index.php
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `index.php`（**脚本 18.5;
+
+$page_title = 'Welcome to this Site!';
+
+include ('includes/header.html');
+```
+
+脚本首先引入配置文件，以便此后发生的所有操作都将使用其中建立的错误管理流程进行处理。然后引入 `header.html` 文件，它将启动输出缓冲、开启会话，并创建 HTML 布局的初始部分。
+
+**脚本 18.5。** 网站主页的脚本，将以姓名向已登录用户问好。
+
+---
+
+```php
+1   <?php # Script 18.5 - index.php
+2   // This is the main page for the site.
+3
+4   // Include the configuration file:
+5   require ('includes/config.inc.php');
+6
+7   // Set the page title and include the
+8       HTML header:
+9   $page_title = 'Welcome to this Site!';
+10  include ('includes/header.html');
+11
+12  // Welcome the user (by name if they are
+13      logged in):
+14  echo '<h1>Welcome';
+15  if (isset($_SESSION['first_name'])) {
+16      echo ", {$_SESSION['first_name']}";
+17  }
+18  echo '!</h1>';
+19  ?>
+20  <p>Spam spam spam spam spam spam
+21  spam spam spam spam spam spam
+22  spam spam spam spam spam spam
+23  spam spam spam spam spam spam.</p>
+24  <p>Spam spam spam spam spam spam
+25  spam spam spam spam spam spam
+26  spam spam spam spam spam spam
+27  spam spam spam spam spam spam.</p>
+28
+29  <?php include ('includes/footer.html'); ?>
+```
+
+**3.** 向用户问好并完成 PHP 代码：
+
+```php
+echo '<h1>Welcome';
+
+if (isset($_SESSION['first_name'])) {
+    echo ", {$_SESSION['first_name']}";
+}
+
+echo '!</h1>';
+?>
+```
+
+*Welcome*（欢迎）消息将打印给所有用户。如果设置了 `$_SESSION['first_name']` 变量，也将打印用户的名字。因此最终结果将是 *Welcome!* 或 *Welcome, <Your Name>!*。
+
+![Image](img/18_figure_11_b.jpg)
+
+如果用户未登录，这是他们将看到的主页。
+
+**4.** 创建页面内容：
+
+```html
+<p>Spam spam...</p>
+```
+
+您可能需要考虑在真实网站的主页上放置一些更有用的内容。仅供参考……
+
+**5.** 引入 HTML 页脚：
+
+```php
+<?php include ('includes/footer.html'); ?>
+```
+
+页脚文件将完成 HTML 布局（主要是页面右侧的菜单栏）并结束输出缓冲。
+
+**6.** 将文件保存为 `index.php`，将其放置在您的 Web 目录中，并在 Web 浏览器中测试它。
+
+### 注册
+
+注册脚本最早始于第 9 章。此后它在许多方面得到了改进。此版本的 `register.php` 将执行以下操作：
+
+*   同时显示和处理表单
+*   使用正则表达式和 Filter 扩展验证提交的数据
+*   如果出现问题，重新显示表单并保留值（表单将具有*粘性*）
+*   使用 `mysqli_real_escape_string()` 函数处理提交的数据以确保安全
+*   确保邮箱地址唯一
+*   发送一封包含激活链接的电子邮件（用户必须在登录前激活其账户——请参阅“激活流程”边栏）
+
+#### 编写 register.php
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `register.php`（**脚本 18.6;
+$page_title = 'Register';
+include ('includes/header.html');
+```
+
+**脚本 18.6。** 注册脚本出于安全考虑使用正则表达式，并出于用户便利考虑使用粘性表单。注册成功后会向用户发送一封电子邮件。
+
+---
+
+```php
+1   <?php # Script 18.6 - register.php
+2   // This is the registration page for the
+3       site.
+4   require ('includes/config.inc.php');
+5   $page_title = 'Register';
+6   include ('includes/header.html');
+7
+8   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+9       // Handle the form.
+10
+11      // Need the database connection:
+12      require (MYSQL);
+13
+14      // Trim all the incoming data:
+15      $trimmed = array_map('trim', $_POST);
+16
+17      // Assume invalid values:
+18      $fn = $ln = $e = $p = FALSE;
+19
+20      // Check for a first name:
+21      if (preg_match('/^[A-Z \'.-]{2,20}$/i', $trimmed['first_name'])) {
+22          $fn = mysqli_real_escape_string($dbc, $trimmed['first_name']);
+23      } else {
+24          echo '<p class="error">Please enter your first name!</p>';
+25      }
+26
+27      // Check for a last name:
+28      if (preg_match('/^[A-Z \'.-]{2,40}$/i', $trimmed['last_name'])) {
+29          $ln = mysqli_real_escape_string($dbc, $trimmed['last_name']);
+30      } else {
+31          echo '<p class="error">Please enter your last name!</p>';
+32      }
+33
+34      // Check for an email address:
+35      if (filter_var($trimmed['email'], FILTER_VALIDATE_EMAIL)) {
+36          $e = mysqli_real_escape_string($dbc, $trimmed['email']);
+37      } else {
+38          echo '<p class="error">Please enter a valid email address!</p>';
+39      }
+40
+41      // Check for a password and match against the confirmed password:
+42      if (preg_match('/^\w{4,20}$/', $trimmed['password1'])) {
+43          if ($trimmed['password1'] == $trimmed['password2']) {
+44              $p = mysqli_real_escape_string($dbc, $trimmed['password1']);
+45          } else {
+46              echo '<p class="error">Your password did not match the confirmed password!</p>';
+47          }
+48      } else {
+49          echo '<p class="error">Please enter a valid password!</p>';
+50      }
+51
+52      if ($fn && $ln && $e && $p) { // If everything's OK...
+53
+54          // Make sure the email address is available:
+55          $q = "SELECT user_id FROM users WHERE email='$e'";
+56          $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+57
+58          if (mysqli_num_rows($r) == 0) { // Available.
+59
+60              // Create the activation code:
+61              $a = md5(uniqid(rand(), true));
+62
+62              // Add the user to the database:
+63              $q = "INSERT INTO users (email, pass, first_name, last_name, active, registration_date) VALUES ('$e', SHA1('$p'), '$fn', '$ln', '$a', NOW())";
+64              $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+```
+
+
+
+
+### 代码示例：注册处理逻辑
+
+```php
+65          if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
+
+67              // Send the email:
+68              $body = "Thank you for registering at <whatever site>. To activate your account,
+    please click on this link:\n\n";
+69              $body .= BASE_URL . 'activate.php?x=' . urlencode($e) . "&y=$a";
+70              mail($trimmed['email'], 'Registration Confirmation', $body, 'From: admin@sitename.
+    com');
+
+72              // Finish the page:
+73              echo '<h3>Thank you for registering! A confirmation email has been sent to
+    your address. Please click on the link in that email in order to activate your
+    account.</h3>';
+74              include ('includes/footer.html'); // Include the HTML footer.
+75              exit( ); // Stop the page.
+
+77          } else { // If it did not run OK.
+78              echo '<p class="error">You could not be registered due to a system error. We
+    apologize for any inconvenience.</p>';
+79          }
+
+81      } else { // The email address is not available.
+82          echo '<p class="error">That email address has already been registered. If you have
+    forgotten your password, use the link at right to have your password sent to you.
+    </p>';
+83      }
+
+85  } else { // If one of the data tests failed.
+86      echo '<p class="error">Please try again.</p>';
+87  }
+
+89  mysqli_close($dbc);
+
+91  } // End of the main Submit conditional.
+92  ?>
+```
+
+### 注册表单 HTML
+
+```html
+94  <h1>Register</h1>
+95  <form action="register.php" method="post">
+96      <fieldset>
+
+98      <p><b>First Name:</b> <input type="text" name="first_name" size="20" maxlength="20"
+          value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>" /></p>
+
+100     <p><b>Last Name:</b> <input type="text" name="last_name" size="20" maxlength="40" value="<?php
+          if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>" /></p>
+
+102     <p><b>Email Address:</b> <input type="text" name="email" size="30" maxlength="60" value="<?php
+          if (isset($trimmed['email'])) echo $trimmed['email']; ?>" /> </p>
+
+104     <p><b>Password:</b> <input type="password" name="password1" size="20" maxlength="20"
+          value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>" /> <small>Use
+          only letters, numbers, and the underscore. Must be between 4 and 20 characters long.
+          </small></p>
+
+106     <p><b>Confirm Password:</b> <input type="password" name="password2" size="20" maxlength="20"
+          value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>" /></p>
+107     </fieldset>
+
+109     <div align="center"><input type="submit" name="submit" value="Register" /></div>
+
+111 </form>
+
+113 <?php include ('includes/footer.html'); ?>
+```
+
+---
+
+### 步骤详解
+
+**3. 创建检查表单提交的条件语句并包含数据库连接脚本：**
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require (MYSQL);
+}
+```
+
+由于 `mysqli_connect.php` 脚本的完整路径在配置文件中定义为常量，因此该常量可作为 `require()` 的参数。这种方法的好处是，网站中任何位置存储的文件（甚至子目录中的文件）都可以使用这段相同的代码成功包含连接脚本。
+
+**4. 清理输入数据并建立标志变量：**
+
+```php
+$trimmed = array_map('trim', $_POST);
+$fn = $ln = $e = $p = FALSE;
+```
+
+第一行代码将 `$_POST` 中的每个元素都通过 `trim()` 函数处理，并将返回结果赋值给新的 `$trimmed` 数组。关于此行的解释可见 第 13 章 “安全方法”，当时曾用 `array_map()` 处理待发送邮件的数据。简而言之，`trim()` 函数将应用于 `$_POST` 中的每个值，免去了逐个应用 `trim()` 的麻烦。
+
+第二行将四个变量初始化为 `FALSE`。这行代码只是以下写法的简写：
+
+```php
+$fn = FALSE;
+$ln = FALSE;
+$e = FALSE;
+$p = FALSE;
+```
+
+**5. 验证名和姓：**
+
+```php
+if (preg_match ('/^[A-Z \'.-]{2,20}$/i', $trimmed['first_name'])) {
+    $fn = mysqli_real_escape_string ($dbc, $trimmed['first_name']);
+} else {
+    echo '<p class="error">Please enter your first name!</p>';
+}
+
+if (preg_match ('/^[A-Z \'.-]{2,40}$/i', $trimmed['last_name'])) {
+    $ln = mysqli_real_escape_string ($dbc, $trimmed['last_name']);
+} else {
+    echo '<p class="error">Please enter your last name!</p>';
+}
+```
+
+表单的大部分验证将使用正则表达式（详见 第 14 章 “Perl 兼容正则表达式”）。对于名字值，假设其仅包含字母、句点（如首字母缩写）、撇号、空格和连字符。此外，值的长度应在 2 到 20 个字符之间。为确保值仅包含这些字符，使用了脱字符（`^`）和美元符号（`$`）分别匹配字符串的开头和结尾。使用 Perl 兼容正则表达式时，整个模式必须放在定界符（正斜杠）内。
+
+如果满足此条件，`$fn` 变量将被赋值为提交值经 `mysqli_real_escape_string()` 处理后的版本；否则 `$fn` 仍为 `FALSE` 并打印错误消息。
+
+![Image](img/circle-a.jpg)
+
+![Image](img/18_figure_12_a.jpg)
+
+![Image](img/circle-a.jpg) 如果名字值未通过正则表达式测试，将打印错误消息。
+
+验证姓氏使用相同的过程，只是该正则表达式允许更长的长度。得益于 `i` 修饰符，两个模式均不区分大小写。
+
+**6. 验证电子邮件地址：**
+
+```php
+if (filter_var($trimmed['email'], FILTER_VALIDATE_EMAIL)) {
+    $e = mysqli_real_escape_string ($dbc, $trimmed['email']);
+} else {
+    echo '<p class="error">Please enter a valid email address! </p>';
+}
+```
+
+![Image](img/circle-b.jpg)
+
+![Image](img/18_figure_13_b.jpg)
+
+![Image](img/circle-b.jpg) 提交的电子邮件地址必须格式正确。
+
+可使用 Filter 扩展轻松验证电子邮件地址（详见 第 13 章）。如果您的 PHP 版本不支持 Filter 扩展，则需改用正则表达式（电子邮件地址的模式在 第 14 章 中有描述）。
+
+**7. 验证密码：**
+
+```php
+if (preg_match ('/^\w{4,20}$/', $trimmed['password1']) ) {
+    if ($trimmed['password1'] == $trimmed['password2']) {
+        $p = mysqli_real_escape_string ($dbc, $trimmed ['password1']);
+    } else {
+        echo '<p class="error">Your password did not match the confirmed password!</p>';
+    }
+} else {
+    echo '<p class="error">Please enter a valid password!</p>';
+}
+```
+
+密码长度必须在 4 到 20 个字符之间，且只能包含字母、数字和下划线。在 Perl 兼容正则表达式中，`\w` 恰好代表这一组合。此外，第一个密码（`password1`）必须与确认密码（`password2`）匹配。
+
+![Image](img/circle-c.jpg)
+
+![Image](img/18_figure_14_c.jpg)
+
+![Image](img/circle-c.jpg) 密码将被检查格式、长度是否正确，以及……
+
+![Image](img/18_figure_15_d.jpg)
+
+![Image](img/circle-d.jpg) ……密码值是否与确认密码值匹配。
+
+
+
+
+
+## 8. 如果每项测试都通过了，检查邮箱地址是否唯一
+
+```php
+if ($fn && $ln && $e && $p) {
+    $q = "SELECT user_id FROM users WHERE email='$e'";
+    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+}
+```
+
+如果表单通过了每一项测试，此条件将为 `TRUE`。然后脚本必须搜索数据库，查看提交的邮箱地址当前是否正在被使用，因为该列的值在每条记录中必须唯一。与 MySQL 连接脚本一样，如果查询未能运行，请调用 `trigger_error()` 函数以触发自定义错误报告函数。具体的错误消息将包含正在运行的查询和 MySQL 错误，以便轻松调试问题。
+
+![Image](img/18_figure_16_e.jpg)
+
+如果发生 MySQL 查询错误，得益于这条信息丰富的错误消息，调试应该会更容易。
+
+## 9. 如果邮箱地址未被使用，注册用户
+
+```php
+if (mysqli_num_rows($r) == 0) {
+    $a = md5(uniqid(rand(), true));
+    $q = "INSERT INTO users (email, pass, first_name, last_name, active, registration_date) VALUES ('$e', SHA1('$p'), '$fn', '$ln', '$a', NOW())";
+    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+}
+```
+
+查询本身相当简单，但它确实需要创建一个唯一的激活码。生成该码需要用到 `rand()`、`uniqid()` 和 `md5()` 函数。其中，`uniqid()` 是最重要的；它创建一个唯一标识符。它接受 `rand()` 函数作为参数以帮助生成更随机的值。最后，返回的结果使用 `md5()` 进行*哈希*处理，从而创建一个恰好 32 个字符长的字符串（哈希是对一段数据进行数学计算得出的表现形式）。你不需要完全理解这三个函数，只需注意结果将是一个唯一的 32 字符字符串。
+
+至于查询本身，对你来说应该足够熟悉了。大多数值来自 PHP 脚本中的变量，在对它们应用了 `trim()` 和 `mysqli_real_escape_string()` 之后。MySQL `SHA1()` 函数用于加密密码，`NOW()` 用于将注册日期设置为当前时刻。因为 `user_level` 列的默认值为 0（即非管理员），所以该列不必在此查询中提供值。推测网站的主管理员会在用户注册后编辑用户记录，赋予其管理员权限。
+
+## 10. 如果查询成功，发送邮件
+
+```php
+if (mysqli_affected_rows($dbc) == 1) {
+    $body = "Thank you for registering at <whatever site>. To activate your account, please click on this link:\n\n";
+    $body .= BASE_URL . 'activate.php?x=' . urlencode($e) . "&y=$a";
+    mail($trimmed['email'], 'Registration Confirmation', $body, 'From: admin@sitename.com');
+}
+```
+
+对于此注册流程，重要的是确认邮件能发送给用户，因为在激活账户之前，他们将无法登录。此邮件应包含指向激活页面 `activate.php` 的链接。该页面的链接以 `BASE_URL` 开头，后者定义在 `config.inc.php` 中。链接还在 URL 中传递了两个值。第一个，通用称为 *x*，将是用户的邮箱地址，经过编码以便安全地包含在 URL 中。第二个，*y*，是激活码。因此，URL 将类似于 [`www.example.com/activate.php?x=email%40example.com&y=901e09ef25bf6e3ef95c93088450b008`](http://www.example.com/activate.php?x=email%40example.com&y=901e09ef25bf6e3ef95c93088450b008)。
+
+---
+
+### 激活流程
+
+本章新增了一个激活流程，用户必须点击邮件中的链接来确认其账户，然后才能登录。使用这样的系统可以防止虚假注册变得可用。如果输入了无效的邮箱地址，该账户永远无法被激活。如果有人注册了他人的地址，希望受害者不会激活这个不需要的账户。
+
+从编程角度来看，此流程要求为每个注册用户创建一个唯一的激活码，并将其存储在 `users` 表中。然后将该代码作为链接的一部分发送在确认邮件中给用户。当用户点击链接时，他或她将被带到网站上的一个页面，该页面通过从其记录中移除该代码来激活账户。最终结果是，没有人能在不接收确认邮件的情况下注册并激活账户（即，没有注册人控制的有效邮箱地址）。
+
+---
+
+## 11. 告知用户预期情况并完成页面
+
+```php
+echo '<h3>Thank you for registering! A confirmation email has been sent to your address. Please click on the link in that email in order to activate your account.</h3>';
+include('includes/footer.html');
+exit();
+```
+
+成功注册后会打印一条感谢消息，以及激活说明。然后包含页脚并终止页面。
+
+![Image](img/18_figure_17_f.jpg)
+
+用户成功注册后生成的页面。
+
+## 12. 如果查询失败，打印错误
+
+```php
+} else { // If it did not run OK.
+    echo '<p class="error">You could not be registered due to a system error. We apologize for any inconvenience.</p>';
+}
+```
+
+如果查询因某种原因失败，意味着 `mysqli_affected_rows()` 没有返回 1，则向浏览器打印一条错误消息。由于本脚本实施的安全方法，网站的线上版本在此节点永远不应该出现问题。
+
+## 13. 完成条件判断和 PHP 代码
+
+```php
+    } else {
+        echo '<p class="error">That email address has already been registered. If you have forgotten your password, use the link at right to have your password sent to you. </p>';
+    }
+} else {
+    echo '<p class="error">Please try again.</p>';
+}
+mysqli_close($dbc);
+}
+?>
+```
+
+如果有人尝试使用已注册的邮箱地址进行注册，将执行第一个 `else`。
+
+![Image](img/18_figure_18_g.jpg)
+
+如果邮箱地址已被注册，会告知用户。
+
+第二个 `else` 适用于提交的数据未能通过验证例程之一的情况。
+
+## 14. 开始 HTML 表单
+
+```html
+<h1>Register</h1>
+<form action="register.php" method="post">
+    <fieldset>
+    <p><b>First Name:</b> <input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>" /></p>
+```
+
+![Image](img/18_figure_19_h.jpg)
+
+用户初次到达时注册表单的样子。
+
+HTML 表单为所有值提供了文本输入框。每个输入框都有一个名称和一个最大长度，与 `users` 表中对应的列定义相匹配。表单将是粘性的，使用修剪后的值。
+
+## 15. 添加姓氏和邮箱地址的输入框
+
+```html
+<p><b>Last Name:</b> <input type="text" name="last_name" size="20" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>" /></p>
+<p><b>Email Address:</b> <input type="text" name="email" size="30" maxlength="60" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>" /></p>
+```
+
+## 16. 添加密码和确认密码的输入框
+
+
+
+
+
+### 完成 HTML 表单
+
+```html
+<p><b>Password:</b> <input type="password" name="password1" size="20" maxlength="20" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>" /> <small>Use only letters, numbers, and the underscore. Must be between 4 and 20 characters long.</small></p>
+
+<p><b>Confirm Password:</b> <input type="password" name="password2" size="20" maxlength="20" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>" /></p>
+```
+
+当使用正则表达式限制可提供的数据（包括数据长度）时，最好在表单本身中向用户说明这些要求。这样做可以避免网站因用户做了其不知道不能做的事而向用户报错。
+
+**17.** 完成 HTML 表单：
+
+```html
+</fieldset>
+
+<div align="center"><input type="submit" name="submit" value="Register" /></div>
+
+</form>
+```
+
+**18.** 包含 HTML 页脚：
+
+```php
+<?php include ('includes/footer.html'); ?>
+```
+
+**19.** 将文件保存为 `register.php`，将其放在 Web 目录中，并在 Web 浏览器中测试。
+
+***
+
+### Tip
+
+因为 `users` 表中的每一列都不能为 `NULL`（`active` 列除外），所以每个输入都必须正确填写。如果表中有可选字段，你仍应确认提交时其类型正确，但不必强制要求填写。
+
+***
+
+### Tip
+
+除加密字段（如密码）外，表单输入和正则表达式的最大长度应与数据库中列的最大长度相对应。
+
+***
+
+### 激活账户
+
+正如本章前面“激活流程”侧边栏所述，每个用户必须在能够登录之前激活其账户。成功注册后，用户将收到一封包含指向 `activate.php` 链接的电子邮件。该链接还向此页面传递两个值：用户注册的电子邮件地址和唯一的激活码。为完成注册流程——激活账户，用户需要点击该链接，从而访问网站上的 `activate.php` 脚本。
+
+![Image](img/18_figure_20_a.jpg)
+
+![Image](img/circle-a.jpg) 注册确认邮件。
+
+`activate.php` 脚本首先需要确认这两个值已在 URL 中接收到。然后，如果接收到的两个值与数据库中存储的值匹配，将从记录中移除激活码，表明账户已激活。
+
+#### 创建激活页面
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 脚本，命名为 `activate.php`（**脚本 18.7**）：
+
+```php
+<?php # Script 18.7 - activate.php
+
+require ('includes/config.inc.php');
+
+$page_title = 'Activate Your Account';
+
+include ('includes/header.html');
+```
+
+**2.** 验证页面应接收的值：
+
+```php
+if (isset($_GET['x'], $_GET['y'])
+    && filter_var($trimmed['email'], FILTER_VALIDATE_EMAIL)
+    && (strlen($_GET['y']) == 32)
+) {
+```
+
+**脚本 18.7.** 要激活账户，用户必须访问此页面，并传递其电子邮件地址和激活码（均为注册时发送的邮件链接的一部分）。
+
+***
+
+```php
+1   <?php # Script 18.7 - activate.php
+2   // This page activates the user's
+3       account.
+4   require ('includes/config.inc.php');
+5   $page_title = 'Activate Your Account';
+6   include ('includes/header.html');
+7
+8   // If $x and $y don't exist or aren't of
+9       the proper format, redirect the user:
+10  if (isset($_GET['x'], $_GET['y'])
+11      && filter_var($_GET['x'],
+12          FILTER_VALIDATE_EMAIL)
+13      && (strlen($_GET['y']) == 32)
+14      ) {
+15
+16      // Update the database...
+17      require (MYSQL);
+18      $q = "UPDATE users SET active=NULL
+19          WHERE (email='" . mysqli_real_
+20          escape_string($dbc, $_GET['x']) . "'
+21          AND active='" . mysqli_real_escape_
+22          string($dbc, $_GET['y']) . "') LIMIT
+23          1";
+24      $r = mysqli_query ($dbc, $q) or
+25          trigger_error("Query: $q\n<br />MySQL
+26          Error: " . mysqli_error($dbc));
+27
+28      // Print a customized message:
+29      if (mysqli_affected_rows($dbc) == 1) {
+30          echo "<h3>Your account is now
+31              active. You may now log in.</h3>";
+32      } else {
+33          echo '<p class="error">Your account
+34              could not be activated. Please
+35              re-check the link or contact the
+36              system administrator.</p>';
+37      }
+38
+39      mysqli_close($dbc);
+40
+41  } else { // Redirect.
+42
+43      $url = BASE_URL . 'index.php'; //
+44          Define the URL.
+45      ob_end_clean( ); // Delete the buffer.
+46      header("Location: $url");
+47      exit( ); // Quit the script.
+48
+49  } // End of main IF-ELSE.
+50
+51  include ('includes/footer.html');
+52  ?>
+```
+
+***
+
+如前所述，当用户点击注册确认邮件中的链接时，两个值将传递给此页面：电子邮件地址和激活码。在尝试使用它们执行激活用户账户的查询之前，两个值都必须存在并经过验证。
+
+第一步是确保两个值均已设置。由于 `isset()` 函数可以同时检查多个变量的存在，因此验证条件的第一部分是 `isset($_GET['x'], $_GET['y'])`。
+
+第二，`$_GET['x']` 必须符合有效电子邮件地址的格式。注册脚本中使用的相同代码可用于此目的（Filter 扩展或正则表达式均可）。
+
+第三，对于 `y`（激活码），条件中的最后一句检查该字符串的长度是否正好为 32。`md5()` 函数创建激活码，总是返回长度为 32 字符的字符串。
+
+**3.** 尝试激活用户账户：
+
+```php
+require (MYSQL);
+
+$q = "UPDATE users SET active=NULL WHERE (email='" . mysqli_real_escape_string($dbc, $_GET['x']) . "' AND active='" . mysqli_real_escape_string($dbc, $_GET['y']) . "') LIMIT 1";
+
+$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+```
+
+如果步骤 2 中的所有三个条件均为 TRUE，则运行一条 `UPDATE` 查询。该查询通过将 `active` 列设置为 `NULL` 来移除用户记录中的激活码。在查询中使用这些值之前，两者都通过 `mysqli_real_escape_string()` 进行处理以增强安全性。
+
+**4.** 报告查询执行结果：
+
+```php
+if (mysqli_affected_rows($dbc) == 1) {
+    echo "<h3>Your account is now active. You may now log in.</h3>";
+} else {
+    echo '<p class="error">Your account could not be activated. Please re-check the link or contact the system administrator.</p>';
+}
+```
+
+如果查询影响了一行，则用户账户现已激活，并显示相应消息。如果未影响任何行，则通知用户出现问题。这最可能发生在有人尝试伪造 `x` 和 `y` 值，或从电子邮件到 Web 浏览器的链接跟踪存在问题时。
+
+![Image](img/18_figure_21_b.jpg)
+
+![Image](img/circle-b.jpg) 如果数据库能使用提供的电子邮件地址和激活码进行更新，则通知用户其账户现已激活。
+
+![Image](img/18_figure_22_c.jpg)
+
+![Image](img/circle-c.jpg) 如果查询未激活账户，则告知用户该问题。
+
+**5.** 完成主条件结构：
+
+```php
+mysqli_close($dbc);
+
+} else { // Redirect.
+
+    $url = BASE_URL . 'index.php';
+
+    ob_end_clean( );
+
+    header("Location: $url");
+
+    exit( );
+
+} // End of main IF-ELSE.
+```
+
+
+
+
+`else` 子句在 `$_GET['x']` 和 `$_GET['y']` 的值和长度不正确时生效。在这种情况下，用户只会被重定向到索引页面。这里的 `ob_end_clean()` 行会删除缓冲区（即截至此时存储在内存中、准备发送给 Web 浏览器的任何内容），因为它将不再被使用。
+
+**6.** 完成页面：
+
+```php
+include ('includes/footer.html');
+?>
+```
+
+**7.** 将文件保存为 `activate.php`，将其放在您的 Web 目录中，然后通过点击注册邮件中的链接来测试它。
+
+***
+
+### 提示
+
+如果您想宽容一些，可以让此页面在未接收到正确值时打印一条错误消息，而不是将他们重定向到索引页面（就像他们试图入侵网站一样）。
+
+***
+
+### 提示
+
+我特意在 URL 中使用模糊的 `x` 和 `y` 作为名称，这是出于安全考虑。虽然有人可能会猜出其中一个是电子邮件地址，另一个是代码，但有时最好不明确指出这些细节。
+
+***
+
+### 提示
+
+另一种方法（我在本书第二版中使用过）是将激活码和用户的 ID（来自数据库）放在链接中。这也行得通，但从安全角度来看，最好让用户永远看不到，甚至不知道本不该公开的用户 ID。
+
+***
+
+**脚本 18.8。** 登录页面会在将用户 ID、名字和访问级别注册到会话后，将用户重定向到主页。
+
+***
+
+### 1. 脚本 18.8 - login.php
+
+```php
+<?php # Script 18.8 - login.php
+// This is the login page for the site.
+require ('includes/config.inc.php');
+$page_title = 'Login';
+include ('includes/header.html');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    require (MYSQL);
+
+    // Validate the email address:
+    if (!empty($_POST['email'])) {
+        $e = mysqli_real_escape_string
+        ($dbc, $_POST['email']);
+    } else {
+        $e = FALSE;
+        echo '<p class="error">You forgot
+        to enter your email address!</p>';
+    }
+
+    // Validate the password:
+    if (!empty($_POST['pass'])) {
+        $p = mysqli_real_escape_string
+        ($dbc, $_POST['pass']);
+    } else {
+        $p = FALSE;
+        echo '<p class="error">You forgot
+        to enter your password!</p>';
+    }
+
+    if ($e && $p) { // If everything's OK.
+
+        // Query the database:
+        $q = "SELECT user_id, first_name,
+        user_level FROM users WHERE
+        (email='$e' AND pass=SHA1('$p')) AND
+        active IS NULL";
+        $r = mysqli_query ($dbc, $q)
+        or trigger_error("Query: $q\n
+        <br />MySQL Error: " .
+        mysqli_error($dbc));
+
+        if (@mysqli_num_rows($r) == 1) {
+            // A match was made.
+
+            // Register the values:
+            $_SESSION = mysqli_fetch_array
+            ($r, MYSQLI_ASSOC);
+            mysqli_free_result($r);
+            mysqli_close($dbc);
+
+            // Redirect the user:
+            $url = BASE_URL . 'index.php';
+            // Define the URL.
+            ob_end_clean(); // Delete the
+            buffer.
+            header("Location: $url");
+            exit(); // Quit the script.
+        } else { // No match was made.
+            echo '<p class="error">Either
+            the email address and password
+            entered do not match those
+            on file or you have not yet
+            activated your account.</p>';
+        }
+    } else { // If everything wasn't OK.
+        echo '<p class="error">Please try
+        again.</p>';
+    }
+
+    mysqli_close($dbc);
+} // End of SUBMIT conditional.
+?>
+
+<h1>Login</h1>
+<p>Your browser must allow cookies in
+order to log in.</p>
+<form action="login.php" method="post">
+    <fieldset>
+    <p><b>Email Address:</b> <input
+        type="text" name="email" size="20"
+        maxlength="60" /></p>
+    <p><b>Password:</b> <input
+        type="password" name="pass" size="20"
+        maxlength="20" /></p>
+    <div align="center"><input
+        type="submit" name="submit"
+        value="Login" /></div>
+    </fieldset>
+</form>
+
+<?php include ('includes/footer.html'); ?>
+```
+
+***
+
+### 登录与注销
+
+第 12 章 创建了许多版本的 `login.php` 和 `logout.php` 脚本，使用了 Cookie 和会话的各种变体。这里将再次创建这两个脚本，这次遵循本章 Web 应用程序的其余部分相同的实践。本示例中的登录查询略有不同，因为它还必须检查 *active* 列是否具有 `NULL` 值，这表明用户已激活其账户。
+
+#### 编写 login.php
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `login.php`（**脚本 18.8**）：
+
+```php
+<?php # Script 18.8 - login.php
+require ('includes/config.inc.php');
+$page_title = 'Login';
+include ('includes/header.html');
+```
+
+**2.** 检查表单是否已提交并引入数据库连接：
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require (MYSQL);
+```
+
+**3.** 验证提交的数据：
+
+```php
+if (!empty($_POST['email'])) {
+    $e = mysqli_real_escape_string ($dbc, $_POST['email']);
+} else {
+    $e = FALSE;
+    echo '<p class="error">You forgot to enter your email address!</p>';
+}
+
+if (!empty($_POST['pass'])) {
+    $p = mysqli_real_escape_string ($dbc, $_POST['pass']);
+} else {
+    $p = FALSE;
+    echo '<p class="error">You forgot to enter your password!</p>';
+}
+```
+
+关于验证有两种思路。一方面，您可以使用正则表达式和 Filter 扩展，复制 `register.php` 中的相同代码来验证这些值。另一方面，检验这些值的真正标准在于登录查询是否返回记录，因此有人可以说可以跳过更严格的 PHP 验证。本脚本采用后一种思路。
+
+如果用户未在表单中输入任何值，将打印错误消息 ![Image](img/circle-a.jpg)。
+
+![Image](img/18_figure_23_a.jpg)
+
+![Image](img/circle-a.jpg) 登录表单仅检查是否输入了值，而不使用正则表达式。
+
+**4.** 如果两个验证例程都通过，检索用户信息：
+
+```php
+if ($e && $p) {
+    $q = "SELECT user_id, first_name, user_level FROM users WHERE (email='$e' AND pass=SHA1 ('$p')) AND active IS NULL";
+    $r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+```
+
+该查询将尝试检索电子邮件地址和密码与提交值匹配的记录的用户 ID、名字和用户级别。MySQL 查询在 *pass* 列上使用 `SHA1()` 函数，因为密码在注册过程中使用该函数进行加密。查询还检查 *active* 列是否具有 `NULL` 值，这意味着用户已成功访问 `activate.php` 页面。
+
+如果您知道账户已激活但仍无法使用正确的值登录，很可能是因为您的 *active* 列被错误地定义为 `NOT NULL`。
+
+**5.** 如果在数据库中找到匹配项，则登录用户：
+
+```php
+if (@mysqli_num_rows($r) == 1) {
+    $_SESSION = mysqli_fetch_array ($r, MYSQLI_ASSOC);
+    mysqli_free_result($r);
+    mysqli_close($dbc);
+```
+
+
+
+登录过程包括将检索到的值存储在会话中（该会话已在 `header.html` 中启动），然后将用户重定向到主页。由于查询将返回一个包含三个元素的数组——一个索引为 `user_id`，一个为 `first_name`，第三个为 `user_level`，因此这三个值都可以直接获取到 `$_SESSION` 中，从而生成 `$_SESSION['user_id']`、`$_SESSION['first_name']` 和 `$_SESSION['user_level']`。如果 `$_SESSION` 中已有其他值，则不应使用此快捷方式，因为这会清除那些其他元素。
+
+**6.** 重定向用户：
+
+```php
+$url = BASE_URL . 'index.php';
+ob_end_clean();
+header("Location: $url");
+exit();
+```
+
+`ob_end_clean()` 函数将删除现有缓冲区（输出缓冲也是在 `header.html` 中开始的），因为该缓冲区将不再被使用。
+
+**7.** 完成条件判断并关闭数据库连接：
+
+```php
+} else {
+    echo '<p class="error">Either the email address and password entered do not match those on file or you have not yet activated your account.</p>';
+}
+} else {
+    echo '<p class="error">Please try again.</p>';
+}
+mysqli_close($dbc);
+} // End of SUBMIT conditional.
+?>
+```
+
+错误消息 ![Image](img/circle-b.jpg) 指示登录过程可能因两个原因失败。一是提交的电子邮件地址和密码与存档的不匹配。另一个原因是用户尚未激活其账户。
+
+![Image](img/18_figure_24_b.jpg)
+
+![Image](img/circle-b.jpg) 如果登录查询未返回单个记录，则显示错误消息。
+
+**8.** 显示 HTML 登录表单 ![Image](img/circle-c.jpg)：
+
+```html
+<h1>Login</h1>
+<p>Your browser must allow cookies in order to log in.</p>
+<form action="login.php" method="post">
+  <fieldset>
+  <p><b>Email Address:</b> <input type="text" name="email" size="20" maxlength="60" /></p>
+  <p><b>Password:</b> <input type="password" name="pass" size="20" maxlength="20" /></p>
+  <div align="center"><input type="submit" name="submit" value="Login" /></div>
+  </fieldset>
+</form>
+```
+
+![Image](img/18_figure_25_c.jpg)
+
+![Image](img/circle-c.jpg) 登录表单。
+
+登录表单与注册表单一样，会将数据提交回自身。不过，此表单不是粘性的，但您可以添加该功能。
+
+请注意，页面包含一条消息，告知用户必须启用 Cookie 才能使用该网站（如果用户不允许 Cookie，则永远无法访问已登录用户页面）。
+
+**9.** 包含 HTML 页脚：
+
+```php
+<?php include ('includes/footer.html'); ?>
+```
+
+**10.** 将文件保存为 `login.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试 ![Image](img/circle-d.jpg)。
+
+![Image](img/18_figure_26_d.jpg)
+
+![Image](img/circle-d.jpg) 成功登录后，用户将被重定向到主页，并会看到按姓名显示的欢迎语。
+
+#### 编写 logout.php
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `logout.php`（**Script 18.9**）：
+
+```php
+<?php # Script 18.9 - logout.php
+require ('includes/config.inc.php');
+$page_title = 'Logout';
+include ('includes/header.html');
+```
+
+**Script 18.9.** 注销页面会销毁所有会话信息，包括 Cookie。
+
+***
+
+```php
+1  <?php # Script 18.9 - logout.php
+2  // This is the logout page for the site.
+3  require ('includes/config.inc.php');
+4  $page_title = 'Logout';
+5  include ('includes/header.html');
+6
+7  // If no first_name session variable exists, redirect the user:
+8  if (!isset($_SESSION['first_name'])) {
+9
+10     $url = BASE_URL . 'index.php'; // Define the URL.
+11     ob_end_clean(); // Delete the buffer.
+12     header("Location: $url");
+13     exit(); // Quit the script.
+14
+15  } else { // Log out the user.
+16
+17     $_SESSION = array(); // Destroy the variables.
+18     session_destroy(); // Destroy the session itself.
+19     setcookie(session_name(), '', time()-3600); // Destroy the cookie.
+20
+21  }
+22
+23  // Print a customized message:
+24  echo '<h3>You are now logged out.</h3>';
+25
+26  include ('includes/footer.html');
+27  ?>
+```
+
+***
+
+**2.** 如果用户未登录，则重定向用户：
+
+```php
+if (!isset($_SESSION['first_name'])) {
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+}
+```
+
+如果用户当前未登录（通过检查 `$_SESSION['first_name']` 变量确定），则将用户重定向到主页（因为尝试注销用户毫无意义）。
+
+**3.** 如果用户当前已登录，则注销用户：
+
+```php
+} else { // Log out the user.
+    $_SESSION = array();
+    session_destroy();
+    setcookie(session_name(), '', time()-3600);
+}
+```
+
+要注销用户，需重置会话值，在服务器上销毁会话数据，并删除会话 Cookie。这些代码行首次在 Chapter 12 中使用并描述。Cookie 名称将是 `session_name()` 函数返回的值。如果您稍后决定更改会话名称，此代码仍然准确。
+
+**4.** 打印注销消息并完成 PHP 页面：
+
+```php
+echo '<h3>You are now logged out.</h3>';
+include ('includes/footer.html');
+?>
+```
+
+**5.** 将文件保存为 `logout.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试 ![Image](img/circle-e.jpg)（在上一页）。
+
+![Image](img/18_figure_27_e.jpg)
+
+![Image](img/circle-e.jpg) 成功注销的结果。
+
+### 密码管理
+
+该网站公共部分的最后一个方面是密码管理。需要考虑两个过程：重置遗忘的密码和更改现有密码。
+
+#### 重置密码
+
+用户不可避免地会忘记网站的登录密码，因此为这些情况制定应急计划很重要。一种选择是让用户在发生这种情况时给管理员发送电子邮件，但管理网站已经够难了，没必要增加额外的麻烦。相反，本网站将有一个脚本，其目的是重置遗忘的密码。
+
+由于数据库中存储的密码使用 MySQL 的 `SHA1()` 函数进行加密，因此无法检索未加密的版本（数据库实际存储的是密码的*哈希*版本，而非*加密*版本）。替代方案是创建一个新的随机密码，并将现有密码更改为该值。与其直接在 Web 浏览器中显示新密码（那将极其不安全），不如将新密码发送到用户注册时使用的电子邮件地址。
+
+#### 编写 forgot_password.php
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `forgot_password.php`（**Script 18.10**）：
+
+```php
+<?php # Script 18.10 - forgot_password.php
+require ('includes/config.inc.php');
+$page_title = 'Forgot Your Password';
+include ('includes/header.html');
+```
+
+**2.** 检查表单是否已提交，包含数据库连接，并创建一个标志变量：
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require (MYSQL);
+    $uid = FALSE;
+}
+```
+
+此表单将接受电子邮件地址输入，并更改该记录的密码。为此，脚本首先需要检索与提交的电子邮件地址匹配的用户 ID 值。为了开始该过程，将一个标志变量赋值为 FALSE，假设不存在有效的用户 ID。
+
+**3.** 验证提交的电子邮件地址：
+
+```php
+if (!empty($_POST['email'])) {
+```
+
+
+
+
+### 脚本 18.10：`forgot_password.php`
+
+`forgot_password.php` 脚本允许用户在无需管理员协助的情况下重置密码。
+
+这是一个针对提交的电子邮件地址的简单验证（未使用正则表达式或 Filter 扩展）。如果提交的值不为空，则会尝试在数据库中检索该电子邮件地址对应的用户 ID。当然，如果您愿意，也可以添加更严格的验证。
+
+```php
+$q = 'SELECT user_id FROM users WHERE email="'. mysqli_real_escape_string ($dbc, $_POST['email']) . '"';
+$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+```
+
+#### 代码清单
+
+```php
+<?php # 脚本 18.10 - forgot_password.php
+// 此页面允许用户在忘记密码时
+// 重置其密码。
+require ('includes/config.inc.php');
+$page_title = '忘记密码';
+include ('includes/header.html');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require (MYSQL);
+
+    // 不做任何假设：
+    $uid = FALSE;
+
+    // 验证电子邮件地址...
+    if (!empty($_POST['email'])) {
+
+        // 检查该电子邮件地址是否存在...
+        $q = 'SELECT user_id FROM
+              users WHERE email="'. mysqli_
+              real_escape_string ($dbc, $_
+              POST['email']) . '"';
+        $r = mysqli_query ($dbc, $q)
+              or trigger_error("Query: $q\
+              n<br />MySQL Error: " .
+              mysqli_error($dbc));
+
+        if (mysqli_num_rows($r) == 1) { // 检索用户 ID：
+            list($uid) = mysqli_fetch_array
+                ($r, MYSQLI_NUM);
+        } else { // 数据库中无匹配记录。
+            echo '<p class="error">提交的电子邮件地址
+                  与存档的不匹配！</p>';
+        }
+
+    } else { // 未提供电子邮件！
+        echo '<p class="error">您忘记
+              输入电子邮件地址！</p>';
+    } // End of empty($_POST['email']) IF.
+
+    if ($uid) { // 如果一切正常。
+
+        // 创建一个新的随机密码：
+        $p = substr ( md5(uniqid(rand( ),
+              true)), 3, 10);
+
+        // 更新数据库：
+        $q = "UPDATE users SET pass=SHA1
+              ('$p') WHERE user_id=$uid LIMIT 1";
+        $r = mysqli_query ($dbc, $q) or
+              trigger_error("Query: $q\
+              n<br />MySQL Error: " .
+              mysqli_error($dbc));
+
+        if (mysqli_affected_rows($dbc) ==
+              1) { // 如果执行成功。
+
+            // 发送电子邮件：
+            $body = "您登录 <whatever site> 的密码
+                  已暂时更改为
+                  '$p'。请使用此密码和此电子邮件
+                  地址登录。然后您可以将
+                  密码更改为更熟悉的密码。";
+            mail ($_POST['email'], '您的
+                  临时密码。', $body,
+                  'From: admin@sitename.com');
+
+            // 打印消息并结束：
+            echo '<h3>您的密码已
+                  更改。您将在注册时使用的
+                  电子邮件地址收到新的临时
+                  密码。一旦您使用此密码
+                  登录，即可通过点击
+                  "更改密码"
+                  链接来修改它。</h3>';
+            mysqli_close($dbc);
+            include ('includes/footer.html');
+            exit( ); // 停止脚本。
+
+        } else { // 如果执行不成功。
+            echo '<p class="error">由于系统
+                  错误，您的密码无法
+                  更改。对于由此造成的
+                  不便，我们深表歉意。</p>';
+        }
+
+    } else { // 未通过验证测试。
+        echo '<p class="error">请重试
+              。</p>';
+    }
+
+    mysqli_close($dbc);
+
+} // End of the main Submit conditional.
+?>
+
+<h1>重置您的密码</h1>
+<p>在下方输入您的电子邮件地址，
+   您的密码将被重置。</p>
+<form action="forgot_password.php"
+      method="post">
+    <fieldset>
+    <p><b>电子邮件地址：</b> <input
+         type="text" name="email" size="20"
+         maxlength="60" value="<?php if
+         (isset($_POST['email'])) echo $_
+         POST['email']; ?>" /></p>
+    </fieldset>
+    <div align="center"><input
+         type="submit" name="submit"
+         value="重置我的密码" /></div>
+</form>
+
+<?php include ('includes/footer.html'); ?>
+```
+
+#### 分步解释
+
+#### 4. 检索选定的用户 ID
+
+```php
+if (mysqli_num_rows($r) == 1) {
+    list($uid) = mysqli_fetch_array ($r, MYSQLI_NUM);
+} else { // No database match made.
+    echo '<p class="error">The submitted email address does not match those on file!</p>';
+}
+```
+
+如果查询返回一行，将获取该行并赋值给 `$uid`（*用户 ID* 的简写）。更新数据库中的新密码需要此值，它也将用作标志变量。
+
+本书未正式讨论 `list()` 函数，但您可能已遇到过它。它是一个快捷函数，允许您将数组元素赋值给其他变量。由于 `mysqli_fetch_array()` 总是返回一个数组，即使它只包含一个元素，使用 `list()` 可以省去编写以下代码：
+
+```php
+$row = mysqli_fetch_array($r, MYSQLI_NUM);
+$uid = $row[0];
+```
+
+如果数据库中找不到与提交的电子邮件地址匹配的记录，将显示错误消息。
+
+![图片](img/18_figure_28_a.jpg)
+
+*如果用户输入的电子邮件地址在数据库中未找到，将显示错误消息。*
+
+#### 5. 报告未提交电子邮件地址的情况
+
+```php
+} else { // No email!
+    echo '<p class="error">You forgot to enter your email address!</p>';
+} // End of empty($_POST['email']) IF.
+```
+
+如果未提供电子邮件地址，也会报告该错误。
+
+![图片](img/18_figure_29_b.jpg)
+
+*未提供电子邮件地址也会导致错误。*
+
+#### 6. 创建一个新的随机密码
+
+```php
+if ($uid) {
+    $p = substr ( md5(uniqid(rand( ), true)), 3, 10);
+```
+
+创建新的随机密码将用到四个 PHP 函数。第一个是 `uniqid()`，它会返回一个唯一标识符。它接收参数 `rand()` 和 `true`，这使得返回的字符串更加随机。然后将此返回值传递给 `md5()` 函数，该函数计算字符串的 MD5 哈希值。此时，返回唯一 ID 的哈希版本，最终是一个长度为 32 个字符的字符串。这部分代码类似于 `activate.php`（脚本 18.7）中用于创建激活码的代码。
+
+然后使用 `substr()` 函数，从该字符串的第三个字符开始提取十个字符来创建密码。总而言之，这段代码将返回一个非常随机且无意义的十字符字符串（包含字母和数字）作为临时密码。
+
+请注意，仅当 `$uid` 此时具有 TRUE 值时，才需要创建新的随机密码。
+
+#### 7. 在数据库中更新密码
+
+```php
+$q = "UPDATE users SET pass=SHA1('$p') WHERE user_id=$uid LIMIT 1";
+$r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+```
+
+
+
+
+if (`mysqli_affected_rows($dbc) == 1`) {
+
+使用之前检索到的用户 ID（该表的主键），将该特定用户的密码更新为 `$p`（随机密码）的 `SHA1()` 版本。
+
+**8.** 将密码通过电子邮件发送给用户：
+
+```
+$body = "Your password to log into <whatever site> has been temporarily changed to '$p'. Please log in using this password and this email address. Then you may change your password to something more familiar.";
+
+mail ($_POST['email'], 'Your temporary password.', $body, 'From: admin@sitename.com');
+```
+
+接下来，需要将新密码通过电子邮件发送给用户，以便他或她能够登录。在 `mail()` 代码中使用 `$_POST['email']` 是安全的，因为要执行到这一步，`$_POST['email']` 必须与数据库中已存储的地址匹配。该地址在注册脚本中已经通过 Filter 扩展（或正则表达式）进行了验证。
+
+重置密码后收到的电子邮件消息。
+
+**9.** 完成页面：
+
+```
+echo '<h3>Your password has been changed. You will receive the new, temporary password at the email address with which you registered. Once you have logged in with this password, you may change it by clicking on the "Change Password" link.</h3>';
+
+mysqli_close($dbc);
+
+include ('includes/footer.html');
+
+exit();
+```
+
+接下来，打印一条消息并完成页面，以免再次显示表单。
+
+成功重置密码后生成的页面。
+
+**10.** 完成条件判断和 PHP 代码：
+
+```
+} else {
+
+    echo '<p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';
+
+}
+
+} else {
+
+    echo '<p class="error">Please try again.</p>';
+
+}
+
+mysqli_close($dbc);
+
+} // End of the main Submit conditional.
+
+?>
+```
+
+第一个 `else` 子句仅在 `UPDATE` 查询失败时适用，这在正式网站上希望不会发生。第二个 `else` 适用于用户未提交电子邮件地址，或提交的电子邮件地址与数据库中任何地址都不匹配的情况。
+
+**11.** 创建 HTML 表单：
+
+```
+<h1>Reset Your Password</h1>
+
+<p>Enter your email address below and your password will be reset.</p>
+
+<form action="forgot_password.php" method="post">
+
+  <fieldset>
+
+  <p><b>Email Address:</b> <input type="text" name="email" size="20" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" /></p>
+
+  </fieldset>
+
+  <div align="center"><input type="submit" name="submit" value="Reset My Password" /></div>
+
+</form>
+```
+
+该表单仅接受一个输入，即电子邮件地址。如果提交表单时出现问题，提交的电子邮件地址值将再次显示（即表单具有粘性）。
+
+**脚本 18.11。** 使用此页面，用户可以更改现有密码（前提是他们已登录）。
+
+---
+
+1.  `<?php # Script 18.11 - change_password.php`
+2.  `// This page allows a logged-in user to change their password.`
+3.  `require ('includes/config.inc.php');`
+4.  `$page_title = 'Change Your Password';`
+5.  `include ('includes/header.html');`
+6.  
+7.  `// If no first_name session variable exists, redirect the user:`
+8.  `if (!isset($_SESSION['user_id'])) {`
+9.  
+10. `    $url = BASE_URL . 'index.php'; // Define the URL.`
+11. `    ob_end_clean(); // Delete the buffer.`
+12. `    header("Location: $url");`
+13. `    exit(); // Quit the script.`
+14. 
+15. `}`
+16. 
+17. `if ($_SERVER['REQUEST_METHOD'] == 'POST') {`
+18. `    require (MYSQL);`
+19. 
+20. `    // Check for a new password and match against the confirmed password:`
+21. `    $p = FALSE;`
+22. `    if (preg_match ('/^(\w){4,20}$/', $_POST['password1']) ) {`
+23. `        if ($_POST['password1'] == $_POST['password2']) {`
+24. `            $p = mysqli_real_escape_string ($dbc, $_POST['password1']);`
+25. `        } else {`
+26. `            echo '<p class="error">Your password did not match the confirmed password!</p>';`
+27. `        }`
+28. `    } else {`
+29. `        echo '<p class="error">Please enter a valid password!</p>';`
+30. `    }`
+31. 
+32. `    if ($p) { // If everything's OK.`
+33. 
+34. `        // Make the query:`
+35. `        $q = "UPDATE users SET pass=SHA1('$p') WHERE user_id={$_SESSION['user_id']} LIMIT 1";`
+36. `        $r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));`
+37. `        if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.`
+38. 
+39. `            // Send an email, if desired.`
+40. `            echo '<h3>Your password has been changed.</h3>';`
+41. `            mysqli_close($dbc); // Close the database connection.`
+42. `            include ('includes/footer.html'); // Include the HTML footer.`
+43. `            exit();`
+44. 
+45. `        } else { // If it did not run OK.`
+46. 
+47. `            echo '<p class="error">Your password was not changed. Make sure your new password is different than the current password. Contact the system administrator if you think an error occurred.</p>';`
+48. 
+49. `        }`
+50. 
+51. `    } else { // Failed the validation test.`
+52. `        echo '<p class="error">Please try again.</p>';`
+53. `    }`
+54. 
+55. `    mysqli_close($dbc); // Close the database connection.`
+56. 
+57. `} // End of the main Submit conditional.`
+58. `?>`
+59. 
+60. `<h1>Change Your Password</h1>`
+61. `<form action="change_password.php" method="post">`
+62. `    <fieldset>`
+63. `    <p><b>New Password:</b> <input type="password" name="password1" size="20" maxlength="20" /> <small>Use only letters, numbers, and the underscore. Must be between 4 and 20 characters long.</small></p>`
+64. `    <p><b>Confirm New Password:</b> <input type="password" name="password2" size="20" maxlength="20" /></p>`
+65. `    </fieldset>`
+66. `    <div align="center"><input type="submit" name="submit" value="Change My Password" /></div>`
+67. `</form>`
+68. 
+69. `<?php include ('includes/footer.html'); ?>`
+
+---
+
+**12.** 包含 HTML 页脚：
+
+```
+<?php include ('includes/footer.html'); ?>
+```
+
+**13.** 将文件保存为 `forgot_password.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试。
+
+**14.** 检查您的电子邮件，查看成功重置密码后生成的消息。
+
+### 更改密码
+
+`change_password.php` 脚本最初是在第 9 章中编写的（当时仅称为 `password.php`），作为 `UPDATE` 查询的一个示例。此处开发的脚本在功能上非常相似，但不同之处在于只有已登录的用户才能访问它。因此，表单只需要接受新密码及其确认（用户现有的密码和电子邮件地址已经通过登录页面确认过了）。
+
+#### 编写 change_password.php
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `change_password.php`（**脚本 18.11;
+```
+
+
+
+
+### 修改密码
+
+```php
+$page_title = 'Change Your Password';
+
+include ('includes/header.html');
+```
+
+## 2. 如果用户未登录则重定向
+
+```php
+if (!isset($_SESSION['user_id'])) {
+
+    $url = BASE_URL . 'index.php';
+
+    ob_end_clean();
+
+    header("Location: $url");
+
+    exit();
+
+}
+```
+
+假设此页面仅供已登录用户访问。为强制执行此规则，脚本会检查 `$_SESSION['user_id']` 变量是否存在（`UPDATE` 查询需要此变量）。如果该变量未设置，则会重定向用户。
+
+## 3. 检查表单是否已提交并包含 MySQL 连接
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    require (MYSQL);
+}
+```
+
+理解此脚本执行流程的关键在于记住有三种可能的场景：用户未登录（因此被重定向）、用户已登录并正在查看表单、用户已登录并已提交表单。
+
+只有当用户已登录时，脚本才会执行到此处。否则，用户早就被重定向了。因此脚本只需判断表单是否已提交。
+
+## 4. 验证提交的密码
+
+```php
+$p = FALSE;
+
+if (preg_match ('/^(\w){4,20}$/', $_POST['password1']) ) {
+
+    if ($_POST['password1'] == $_POST['password2']) {
+
+        $p = mysqli_real_escape_string ($dbc, $_POST['password1']);
+
+    } else {
+
+        echo '<p class="error">Your password did not match the confirmed password!</p>';
+
+    }
+
+} else {
+
+    echo '<p class="error">Please enter a valid password!</p>';
+
+}
+```
+
+新密码应使用与注册过程中相同的测试进行验证。如果发现问题，将显示错误消息。
+
+正如注册过程一样，用户的新密码必须通过验证程序；否则，他们将看到错误消息。
+
+## 5. 在数据库中更新密码
+
+```php
+if ($p) {
+
+    $q = "UPDATE users SET pass=SHA1('$p') WHERE user_id={$_SESSION['user_id']} LIMIT 1";
+
+    $r = mysqli_query ($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));
+}
+```
+
+利用用户的 ID（用户登录时存储在会话中），可以更新数据库中的密码字段。`LIMIT 1` 子句虽非严格必需，但能增加一层保障。
+
+## 6. 如果查询成功，完成页面
+
+```php
+if (mysqli_affected_rows($dbc) == 1) {
+
+    echo '<h3>Your password has been changed.</h3>';
+
+    mysqli_close($dbc);
+
+    include ('includes/footer.html'); exit();
+
+}
+```
+
+如果更新成功，会向 Web 浏览器打印一条确认消息。
+
+脚本已成功修改用户的密码。
+
+## 7. 完成条件判断和 PHP 代码
+
+```php
+} else {
+
+    echo '<p class="error">Your password was not changed. Make sure your new password is different than the current password. Contact the system administrator if you think an error occurred.</p>';
+
+}
+
+} else {
+
+    echo '<p class="error">Please try again.</p>';
+
+}
+
+mysqli_close($dbc);
+
+} // End of the main Submit conditional.
+
+?>
+```
+
+第一个 `else` 子句适用于 `mysqli_affected_rows()` 函数未返回 1 的情况。这可能由两个原因导致。一是发生了查询或数据库错误。希望在上线网站上（在你已修复所有 bug 之后）这种情况不太可能发生。第二个原因是用户试图“修改”密码，但再次输入了相同的密码。在这种情况下，`UPDATE` 查询不会影响任何行，因为数据库中的密码列不会被更改。此时会打印一条暗示此情况的消息。
+
+---
+
+### 站点管理
+
+对于此应用程序，站点管理的工作方式取决于你希望它实现的功能。管理员可能需要的一个额外页面是 `view_users.php` 脚本，类似于第 9 章中创建并在第 10 章“常见编程技术”中修改的脚本。它已列在管理员的链接中。你可以使用此类脚本链接到 `edit_user.php` 页面，允许管理员手动激活账户、将用户指定为管理员或更改某人的密码。管理员也可使用此类页面删除用户。
+
+虽然页脚文件仅在登录用户为管理员时创建指向管理页面的链接，但每个管理页面也应包含此类检查。
+
+---
+
+## 8. 创建 HTML 表单
+
+```html
+<h1>Change Your Password</h1>
+
+<form action="change_password.php" method="post">
+
+    <fieldset>
+
+    <p><b>New Password:</b> <input type="password" name="password1" size="20" maxlength="20" /> <small>Use only letters, numbers, and the underscore. Must be between 4 and 20 characters long.</small></p>
+
+    <p><b>Confirm New Password:</b> <input type="password" name="password2" size="20" maxlength="20" /></p>
+
+    </fieldset>
+
+    <div align="center"><input type="submit" name="submit" value="Change My Password"/></div>
+
+</form>
+```
+
+修改密码表单。
+
+此表单接受两个输入：新密码及其确认。同时也给出了正确格式的说明。由于表单非常简单，所以它不是粘性的，但你可以添加该功能。
+
+## 9. 完成 HTML 页面
+
+```php
+<?php include ('includes/footer.html'); ?>
+```
+
+## 10. 将文件保存为 `change_password.php`，放入 Web 目录，并在 Web 浏览器中测试。
+
+---
+
+> **Tip**
+>
+> 完成此脚本后，用户可以使用前一个脚本重置密码，然后使用临时的随机密码登录。登录后，用户可以使用此页面将密码改回更容易记忆的内容。
+
+---
+
+> **Tip**
+>
+> 由于站点的身份验证不依赖于用户在各页面间的密码（换句话说，登录后后续页面不会检查密码），因此更改密码不会要求用户重新登录。
+
+---
+
+### 复习与实践
+
+如果你对复习问题或实践提示有任何疑问，请访问本书的支持论坛 ([www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/))。
+
+注：大多数问题和部分提示重述了前几章涵盖的信息，旨在加强一些最重要的知识点。
+
+#### 复习
+
+*   什么是*输出缓冲*？使用它有什么好处？
+*   为什么实时站点上不应显示详细的错误信息？
+*   为什么 *users* 表中的 *active* 列必须允许 `NULL` 值？如果 *active* 定义为 `NOT NULL` 会有什么结果？
+*   终止会话的三个步骤是什么？
+*   `session_name()` 函数有什么作用？
+*   真正*加密*数据和创建数据的*哈希*表示之间有什么区别？
+
+#### 实践
+
+*   查阅 PHP 手册中关于输出缓冲（或输出控制）的页面。
+*   查阅 PHP 手册中关于 `rand()`、`uniqid()` 和 `md5()` 函数的页面。
+*   查阅 PHP 手册中关于 `trigger_error()` 函数的页面。
+*   将 `register.php` 中使用的验证技术应用到 `login.php` 中。
+*   使登录表单具有粘性。
+*   向 *users* 表添加一个 *last_login* `DATETIME` 字段，并在用户登录时更新其值。利用此信息告知用户自上次访问站点以来过了多久。
+
+
+
+
+• 如果您已添加 `last_login` 字段，请使用它在主页上打印一条消息，显示过去一小时或一天内有多少用户登录过。
+
+• 在 `forgot_password.php` 中使用 Filter 扩展或正则表达式验证提交的电子邮件地址。
+
+• 查看 PHP 手册中关于 `list()` 函数的页面。
+
+• 按照最后一栏的建议创建 `view_users.php` 和 `edit_user.php` 脚本。将这些脚本的访问权限限制为管理员（即访问级别为 1 的用户）。
+
+## 19. 示例——电子商务
+
+### 本章内容
+
+- 创建数据库 606
+- 管理端 612
+- 创建公共模板 629
+- 产品目录 633
+- 购物车 645
+- 记录订单 654
+- 复习与实践 659
+
+在本书的最后一章中，您将开发最后一个 Web 应用程序：一个销售艺术品印刷品的电子商务网站。遗憾的是，编写和解释一个完整的应用程序本身就需要一整本书，而且电子商务的某些方面——比如如何处理资金——因网站而异。考虑到这些限制，本章的重点在于核心电子商务功能：设计数据库、以管理员身份填充目录、向公众展示产品、创建购物车以及在数据库中存储订单。
+
+本示例包含许多已涵盖的概念：将 PHP 与 MySQL 结合使用（当然）、处理文件上传、使用 PHP 向 Web 浏览器发送图像、预处理语句、会话等。本章还介绍了一个新主题：如何从 PHP 脚本执行 MySQL 事务。在此过程中，您将发现*大量*扩展项目的建议。
+
+#### 创建数据库
+
+本示例中的电子商务网站将使用名为 `ecommerce` 的数据库。我将在 MySQL 中创建数据库之前解释每个表的作用。
+
+对于任何类型的电子商务应用程序，都有三种数据需要存储：*产品*信息（销售什么）、*客户*信息（谁在购买）和*订单*信息（购买了什么以及由谁购买）。通过规范化过程（参见第 6 章“数据库设计”），我设计了五个表 ![Image](img/circle-a.jpg)。
+
+![Image](img/19_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) 此实体关系图（ERD）显示了 `ecommerce` 数据库中的五个表如何相互关联。
+
+前两个表存储所有待售产品。如前所述，该网站将销售艺术品印刷品。`artists` 表（**表 19.1**）存储其作品正在销售的艺术家的信息。该表仅包含最基本的信息（艺术家的名、中间名和姓），但您可以轻松添加艺术家的生卒日期、其他传记数据等。`prints` 表（**表 19.2**）是网站的主要产品表。它存储印刷品名称、价格和其他相关详情。它通过 `artist_id` 与 `artists` 表关联。`prints` 表可以说是最重要的，因为它为每个待售产品提供了唯一标识符。这一概念是任何电子商务网站的关键（没有唯一标识符，您如何知道一个人买了什么？）。
+
+**表 19.1. artists 表**
+
+![Image](img/19tab01.jpg)
+
+**表 19.2. prints 表**
+
+![Image](img/19tab02.jpg)
+
+`customers` 表（**表 19.3**）的功能正如您所料：它记录每位客户的个人信息。至少包括客户的名、姓、电子邮件地址、密码和送货地址，以及注册日期。推测电子邮件地址和密码的组合将允许用户登录、购物并访问其账户。由于该表将存储的信息显而易见，我暂时仅用三个基本列来定义它。
+
+**表 19.3. customers 表**
+
+![Image](img/19tab03.jpg)
+
+最后两个表存储所有订单信息。有多种方法可以实现这一点，但我选择将一般订单信息——总计、日期和客户 ID——存储在 `orders` 表（**表 19.4**）中。该表还可以包含单独的列来反映运费、销售税金额、适用的折扣等。`order_contents` 表（**表 19.5**）将存储实际售出的商品，包括数量和价格。`order_contents` 表本质上是一个中间表，用于解决 `prints` 和 `orders` 之间的多对多关系（每个印刷品可以出现在多个订单中，每个订单可以包含多个印刷品）。
+
+**表 19.4. orders 表**
+
+![Image](img/19tab04.jpg)
+
+**表 19.5. `order_contents` 表**
+
+![Image](img/19tab05.jpg)
+
+为了能够使用*事务*（在最后的脚本中），这两个订单表将使用 InnoDB 存储引擎。其他表将使用 MyISAM。有关可用存储引擎（即表类型）的更多信息，请参见第 6 章。
+
+#### 创建数据库
+
+**1.** 登录 mysql 客户端并创建 `ecommerce` 数据库（如果尚不存在）。
+
+```
+CREATE DATABASE ecommerce;  
+USE ecommerce;
+```
+
+对于这些步骤，您可以使用 mysql 客户端或 phpMyAdmin 等其他工具。视您的情况而定，您可能还需要在此处建立字符集，以定义与数据库应用程序的通信字符集。您也可以在创建数据库时建立默认字符集和编码（同样，请参见第 6 章）。
+
+如果您使用的是托管网站，托管公司很可能已经为您提供了数据库。
+
+**2.** 创建 `artists` 表 ![Image](img/circle-b.jpg)：
+
+```
+CREATE TABLE artists (  
+  artist_id INT UNSIGNED NOT NULL AUTO_INCREMENT,  
+  first_name VARCHAR(20) DEFAULT NULL,  
+  middle_name VARCHAR(20) DEFAULT NULL,  
+  last_name VARCHAR(40) NOT NULL,  
+  PRIMARY KEY (artist_id), UNIQUE full_name (last_name, first_name, middle_name)  
+) ENGINE=MyISAM;
+```
+
+![Image](img/19_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg) 创建第一个表。
+
+该表仅为每位艺术家存储四项信息。其中，只有 `last_name` 是必需的（定义为 `NOT NULL`），因为有些艺术家只用一个名字（例如 Christo）。我还添加了索引定义。主键是 `artist_id`，并在姓、名、中间名的组合上建立了一个索引，这可能用于 `ORDER BY` 子句。该索引更具体地说是一个*唯一*索引，以防止同一艺术家的姓名被重复录入。
+
+**3.** 创建 `prints` 表 ![Image](img/circle-c.jpg)：
+
+```
+CREATE TABLE prints (  
+  print_id INT UNSIGNED NOT NULL AUTO_INCREMENT,  
+  artist_id INT UNSIGNED NOT NULL,  
+  print_name VARCHAR(60) NOT NULL,  
+  price DECIMAL(6,2) UNSIGNED NOT NULL,  
+  size VARCHAR(60) DEFAULT NULL,  
+  description VARCHAR(255) DEFAULT NULL,  
+  image_name VARCHAR(60) NOT NULL,  
+  PRIMARY KEY (print_id),  
+  INDEX (artist_id), INDEX (print_name),  
+  INDEX (price)  
+) ENGINE=MyISAM;
+```
+
+![Image](img/19_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg) 创建第二个表。
+
+
+
+`prints` 表中的所有列都是必需的，除了 `size` 和 `description` 字段。`artist_id`、`print_name` 和 `price` 字段上都有索引，每个字段都可能在查询中使用。
+
+每个印刷品将与一张图片关联。图片将存储在服务器上，文件名与 `print_id` 相同。在 Web 浏览器中显示图片时，将使用其原始名称，因此该名称需要存储在该表中。
+
+您可以向该表添加 `in_stock` 或 `qty_on_hand` 字段，以指示产品的可用性。
+
+**4.** 创建 `customers` 表 ![Image](img/circle-d.jpg)：
+
+```
+CREATE TABLE customers (
+
+customer_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+
+email VARCHAR(60) NOT NULL,
+
+pass CHAR(40) NOT NULL,
+
+PRIMARY KEY (customer_id),
+
+UNIQUE (email), INDEX login (email, pass)
+
+) ENGINE=MyISAM;
+```
+
+![Image](img/19_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg) 创建 `customers` 表的基础版本。在真正的电子商务网站中，您需要扩展此表以存储更多信息。
+
+这是用于创建 `customers` 表的代码。您可以加入其他合适的字段（姓名、地址、电话号码、注册日期等）。由于本章不会使用这些值——甚至完全不涉及用户管理——因此将其省略。
+
+**5.** 创建 `orders` 表 ![Image](img/circle-e.jpg)：
+
+```
+CREATE TABLE orders (
+
+order_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+
+customer_id INT UNSIGNED NOT NULL,
+
+total DECIMAL(10,2) UNSIGNED NOT NULL,
+
+order_date TIMESTAMP,
+
+PRIMARY KEY (order_id),
+
+INDEX (customer_id),
+
+INDEX (order_date)
+
+) ENGINE=InnoDB;
+```
+
+![Image](img/19_figure_05_e.jpg)
+
+![Image](img/circle-e.jpg) 创建 `orders` 表。
+
+`orders` 表的所有字段都是必需的，并创建了三个索引。请注意，此处的外键列（如 `customer_id`）与其对应的主键（`customers` 表中的 `customer_id`）类型完全相同。`order_date` 字段将存储订单录入的日期和时间。由于被定义为 `TIMESTAMP`，当插入记录时，它将自动被赋予当前值（因此它不需要正式声明为 `NOT NULL`）。
+
+最后，因为事务将用于 `orders` 和 `order_contents` 表，所以两者都必须使用 InnoDB 存储引擎。
+
+**6.** 创建 `order_contents` 表 ![Image](img/circle-f.jpg)：
+
+```
+CREATE TABLE order_contents (
+
+oc_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+
+order_id INT UNSIGNED NOT NULL,
+
+print_id INT UNSIGNED NOT NULL,
+
+quantity TINYINT UNSIGNED NOT NULL DEFAULT 1,
+
+price DECIMAL(6,2) UNSIGNED NOT NULL,
+
+ship_date DATETIME DEFAULT NULL,
+
+PRIMARY KEY (oc_id),
+
+INDEX (order_id),
+
+INDEX (print_id),
+
+INDEX (ship_date)
+
+) ENGINE=InnoDB;
+```
+
+![Image](img/19_figure_06_f.jpg)
+
+![Image](img/circle-f.jpg) 为 `ecommerce` 数据库创建最后一张表。
+
+为了拥有规范化的数据库结构，每个订单被分离为其通用信息——客户、订单日期和总金额——以及其具体信息——实际订购的商品及其数量。该表具有指向 `orders` 和 `prints` 表的外键。`quantity` 有一个设定的默认值 1。`ship_date` 被定义为 `DATETIME`，以便它可以拥有 `NULL` 值，表示该商品尚未发货。同样，此表必须使用 InnoDB 存储引擎才能参与事务。
+
+您可能会好奇，为什么此表要存储商品价格，而该信息已存在于 `prints` 表中。原因很简单：产品价格可能会变动。`prints` 表指示商品的当前价格；`order_contents` 表指示商品的购买价格。
+
+***
+
+提示
+
+根据网站销售的内容，底层数据库将用不同的表来替代 `artists` 和 `prints`。任何电子商务数据库最重要的属性是存在一个“产品”表，该表列出正在销售的单个商品，并为每个商品关联一个产品 ID。因此，一件大号红色 polo 衫将拥有一个 ID，这与大号蓝色 polo 衫的 ID 不同，后者又与中号蓝色 polo 衫的 ID 不同。如果没有唯一的、单独的产品标识符，将无法跟踪订单和产品数量。
+
+***
+
+***
+
+提示
+
+如果您想为用户存储多个地址——家庭、账单、朋友等——请创建一个单独的地址表。在该表中存储所有这些信息，包括地址类型，并使用客户 ID 作为主外键将这些记录关联回 `customers` 表。
+
+***
+
+***
+
+### 安全性
+
+就电子商务网站而言，有四大安全考量。第一是数据如何存储在服务器上。您需要保护 MySQL 数据库本身（通过设置适当的访问权限）以及存储会话信息的目录（有关可更改的设置，请参见第 12 章“Cookie 和会话”）。就这些问题而言，使用非共享主机托管肯定能提高您网站的安全性。
+
+第二个安全考量涉及保护对敏感信息的访问。网站的管理端（具有查看订单和客户记录的能力）必须得到最高级别的保护。这意味着要求进行身份验证才能访问，限制知晓访问信息的人员，使用安全连接，等等。
+
+第三个因素是保护传输过程中的数据。当客户进入结账流程（涉及信用卡和送货信息）时，*必须*使用安全交易。为此需要在服务器上建立带有有效证书的安全套接字层 (SSL)，然后切换到 `https://` URL。还要注意通过电子邮件发送的信息，因为这些消息通常不通过安全途径传输。
+
+第四个问题涉及支付信息的处理。您**真的、真的、真的、真的（真的！）**不希望以任何方式保留这些信息。理想情况下，让第三方资源处理支付，使您的网站名正言顺地“两袖清风”。我在本章末尾的一个名为“结账流程”的侧边栏中对此进行了一些讨论。
+
+这个广泛的电子商务主题，包含大量具体细节和大量真实代码，在我的著作 *Effortless E-Commerce with PHP and MySQL*（New Riders, 2011）中得到了详尽阐述。
+
+***
+
+### 管理端
+
+电子商务应用的管理端主要用于管理三大核心组件：
+
+• 产品（待售商品）
+
+• 客户
+
+• 订单
+
+在本章中，您将创建两个脚本用于向目录添加产品。由于待售产品是艺术品，一个脚本将用于填充 `artists` 表，第二个脚本将用于填充 `prints` 表（该表具有指向 `artists` 的外键）。
+
+受篇幅限制，且由于没有支付系统，这无论如何都不是一个完整的电子商务示例，因此本章无法详述客户和订单方面的内容。然而，客户管理与用户管理相同，已在上一章中介绍，您将看到许多关于订单管理的建议。
+
+
+
+本章中的前两个脚本——实际上几乎所有脚本——都需要连接到 MySQL 数据库。无需从头编写新脚本，只需将 第 9 章 “将 PHP 与 MySQL 结合使用” 中的 `mysqli_connect.php`（脚本 9.2）复制到该站点文件的相应目录中。然后编辑其中的信息，使其连接到名为 `ecommerce` 的数据库，并使用拥有适当权限的用户名/密码/主机名组合。
+
+此外，这两个管理脚本将使用*预处理语句*，该技术在 第 13 章 “安全方法” 中已介绍，旨在让您积累更多使用经验。如果您对预处理语句的语法或函数感到困惑，请回顾该章。
+
+### 添加艺术家
+
+要编写的第一个脚本只是将艺术家记录添加到 `artists` 表中。该脚本显示一个包含三个输入框的表单 ![Image](img/circle-a.jpg)；提交后，将对输入进行验证——但其中两个是可选的——并将记录添加到数据库。
+
+![Image](img/19_figure_07_a.jpg)
+
+![Image](img/circle-a.jpg)用于向目录添加艺术家的 HTML 表单。
+
+**脚本 19.1。** 此管理页面将新的艺术家名称添加到数据库。
+
+---
+
+```html
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+2    1.0 Transitional//EN"
+3    "http://www.w3.org/TR/xhtml1/DTD/
+4      xhtml1-transitional.dtd">
+5  <html xmlns="http://www.w3.org/1999/
+6    xhtml" xml:lang="en" lang="en">
+7  <head>
+8    <meta http-equiv="content-type"
+9      content="text/html; charset=utf-8" />
+10   <title>Add an Artist</title>
+11 </head>
+12 <body>
+13 <?php # Script 19.1 - add_artist.php
+14 // This page allows the administrator to
+15   add an artist.
+16
+17 if ($_SERVER['REQUEST_METHOD'] == 'POST')
+18   { // Handle the form.
+19
+20   // Validate the first and middle
+21     names (neither required):
+22   $fn = (!empty($_POST['first_name'])) ?
+23     trim($_POST['first_name']) : NULL;
+24   $mn = (!empty($_POST['middle_name'])) ?
+25     trim($_POST['middle_name']) : NULL;
+26
+27   // Check for a last_name...
+28   if (!empty($_POST['last_name'])) {
+29
+30     $ln = trim($_POST['last_name']);
+31
+32     // Add the artist to the database:
+33     require ('../../mysqli_connect.
+34       php');
+35     $q = 'INSERT INTO artists (first_
+36       name, middle_name, last_name)
+37       VALUES (?, ?, ?)';
+38     $stmt = mysqli_prepare($dbc, $q);
+39     mysqli_stmt_bind_param($stmt,
+40       'sss', $fn, $mn, $ln);
+41     mysqli_stmt_execute($stmt);
+42
+43     // Check the results....
+44     if (mysqli_stmt_affected_
+45       rows($stmt) == 1) {
+46       echo '<p>The artist has been
+47         added.</p>';
+48       $_POST = array( );
+49     } else { // Error!
+50       $error = 'The new artist could not be added to the database!';
+51     }
+52
+53     // Close this prepared statement:
+54     mysqli_stmt_close($stmt);
+55     mysqli_close($dbc); // Close the database connection.
+56
+57   } else { // No last name value.
+58     $error = 'Please enter the artist\'s name!';
+59   }
+60
+61 } // End of the submission IF.
+62
+63 // Check for an error and print it:
+64 if (isset($error)) {
+65   echo '<h1>Error!</h1>
+66   <p style="font-weight: bold; color: #C00">' . $error . ' Please try again.</p>';
+67 }
+68
+69 // Display the form...
+70 ?>
+71 <h1>Add a Print</h1>
+72 <form action="add_artist.php" method="post">
+73
+74   <fieldset><legend>Fill out the form to add an artist:</legend>
+75
+76   <p><b>First Name:</b> <input type="text" name="first_name" size="10" maxlength="20"
+77     value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" /></p>
+78   <p><b>Middle Name:</b> <input type="text" name="middle_name" size="10" maxlength="20"
+79     value="<?php if (isset($_POST['middle_name'])) echo $_POST['middle_name']; ?>" /></p>
+80   <p><b>Last Name:</b> <input type="text" name="last_name" size="10" maxlength="40" value="<?php
+81     if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" /></p>
+82
+83   </fieldset>
+84
+85   <div align="center"><input type="submit" name="submit" value="Submit" /></div>
+86
+87 </form>
+88
+89 </body>
+90 </html>
+```
+
+---
+
+#### 创建 add_artist.php
+
+**1.** 开始一个新的 PHP 文档，从 HTML 头部开始，命名为 `add_artist.php`（**脚本 19.1**）：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Add an Artist</title>
+</head>
+<body>
+<?php # Script 19.1 - add_artist.php
+```
+
+通常，网站的管理端会使用模板系统（可能与前台使用不同的模板），但由于本章只有两个管理脚本，因此不会开发模板。
+
+**2.** 检查表单是否已提交：
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+```
+
+**3.** 验证艺术家的名和中间名：
+
+```php
+$fn = (!empty($_POST['first_name'])) ? trim($_POST['first_name']) : NULL;
+$mn = (!empty($_POST['middle_name'])) ? trim($_POST['middle_name']) : NULL;
+```
+
+艺术家的名和中间名是可选字段，而姓氏则不是（因为有些艺术家仅用一个名字称呼）。为了验证前两个名字输入，我使用*三元*运算符（在 第 10 章 “常见编程技术” 中介绍）减少了代码量。此处的代码等同于
+
+```php
+if (!empty($_POST['first_name'])) {
+$fn = trim($_POST['first_name']);
+} else {
+  $fn = NULL;
+}
+```
+
+因为本脚本将依赖预处理语句，所以用于查询的值无需通过 `mysqli_real_escape_string()` 处理。
+
+**4.** 验证艺术家的姓氏：
+
+```php
+if (!empty($_POST['last_name'])) {
+$ln = trim($_POST['last_name']);
+```
+
+姓氏值是必填的。为了更严格的验证，您可以使用正则表达式。为了增加安全性，您可以应用 `strip_tags()` 函数。
+
+**5.** 包含数据库连接：
+
+```php
+require ('../../mysqli_connect.php');
+```
+
+管理文件夹将位于主文件夹（`htdocs`）内部，因此比连接脚本高两级目录。包含文件时请牢记您的目录结构 ![Image](img/circle-b.jpg)。
+
+![Image](img/19_figure_08_b.jpg)
+
+![Image](img/circle-b.jpg)该 Web 应用程序的站点结构。MySQL 连接脚本和 `uploads` 目录（存储图像的位置）不在 Web 目录内（无法通过 *http://* 访问）。
+
+**6.** 将艺术家添加到数据库：
+
+```php
+$q = 'INSERT INTO artists (first_name, middle_name, last_name) VALUES (?, ?, ?)';
+$stmt = mysqli_prepare($dbc, $q);
+mysqli_stmt_bind_param($stmt, 'sss', $fn, $mn, $ln);
+mysqli_stmt_execute($stmt);
+```
+
+要将艺术家添加到数据库，查询语句类似于 `INSERT INTO artists (first_name, middle_name, last_name) VALUES ('John', 'Singer', 'Sargent')` 或 `INSERT INTO artists (first_name, middle_name, last_name) VALUES (NULL, NULL, 'Christo')`。查询使用预处理语句执行，详见 第 13 章。
+
+
+
+`mysqli_stmt_bind_param()` 函数表明查询需要三个输入（每个问号一个），类型为：字符串、字符串和字符串。有关这些内容的问题，请参阅 第 13 章。
+
+**7.** 报告结果：
+
+```
+if (mysqli_stmt_affected_rows($stmt) == 1) {
+
+  echo '<p>The artist has been added.</p>';
+
+  $_POST = array();
+
+} else {
+
+  $error = 'The new artist could not be added to the database!';
+
+}
+```
+
+如果执行预处理语句影响了一行，即创建了一行，则显示一条成功消息 ![Image](img/circle-c.jpg)。在这种情况下，`$_POST` 数组也会被重置，以便粘性表单不会重新显示艺术家的信息。
+
+![Image](img/19_figure_09_c.jpg)
+
+![Image](img/circle-c.jpg)一位艺术家已成功添加到数据库中。
+
+如果预处理语句失败，则将一条消息添加到 `$error` 变量中，以便稍后在脚本中输出。出于调试目的，您可以在此处添加其他详细信息，例如 MySQL 错误。
+
+**8.** 关闭预处理语句和数据库连接：
+
+```
+mysqli_stmt_close($stmt);
+
+mysqli_close($dbc);
+```
+
+**9.** 完成艺术家姓氏和提交条件判断：
+
+```
+} else { // No last name value.
+
+  $error = 'Please enter the artist\'s name!';
+
+}
+
+} // End of the submission IF.
+```
+
+如果未提交姓氏值，则将错误消息赋给 `$error` 变量。
+
+**10.** 如果发生错误则打印错误，并关闭 PHP 代码块：
+
+```
+if (isset($error)) {
+
+  echo '<h1>Error!</h1>
+
+  <p style="font-weight: bold; color: #C00">' . $error . ' Please try again.</p>';
+
+}
+
+?>
+```
+
+可能发生的两个错误中的任意一个都将由 `$error` 变量表示。如果该变量已设置，则可在此处将其打印出来 ![Image](img/circle-d.jpg)。错误将包含在一些 CSS 中以使其加粗并变为红色。
+
+![Image](img/19_figure_10_d.jpg)
+
+![Image](img/circle-d.jpg)如果未提供艺术家的姓氏，则显示错误消息。然而表单是粘性的，会记住其他两个表单输入中输入的值。
+
+**11.** 开始创建 HTML 表单：
+
+```
+<h1>Add a Print</h1>
+
+<form action="add_artist.php" method="post">
+
+  <fieldset><legend>Fill out the form to add an artist:</legend>
+```
+
+**12.** 创建添加新艺术家的输入框：
+
+```
+<p><b>First Name:</b> <input type="text" name="first_name" size="10" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" /></p>
+
+<p><b>Middle Name:</b> <input type="text" name="middle_name" size="10" maxlength="20" value="<?php if (isset($_POST['middle_name'])) echo $_POST['middle_name']; ?>" /></p>
+
+<p><b>Last Name:</b> <input type="text" name="last_name" size="10" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" /></p>
+```
+
+每个表单元素都设为粘性，以防表单再次显示。
+
+**13.** 完成 HTML 表单：
+
+```
+  </fieldset>
+
+  <div align="center"><input type="submit" name="submit" value="Submit" /></div>
+
+</form>
+```
+
+**14.** 完成 HTML 页面：
+
+```
+</body>
+
+</html>
+```
+
+**15.** 将文件保存为 `add_artist.php`。
+
+**16.** 将 `add_artist.php` 放置在您的 Web 目录中（在 administration 文件夹内），并在 Web 浏览器中测试它 ![Image](img/graycircle-a.jpg)和 ![Image](img/graycircle-c.jpg)。
+
+别忘了您还需要将一个经过编辑以连接到 *ecommerce* 数据库的 `mysqli_connect.php` 脚本放置在正确的目录中。
+
+***
+
+提示
+
+虽然为了简洁我在此没有这样做，但我建议为管理端和公共端创建单独的 MySQL 用户。管理用户需要 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 权限，而公共用户只需要 `SELECT`、`INSERT` 和 `UPDATE`。
+
+***
+
+***
+
+提示
+
+管理页面应以尽可能最安全的方式受到保护。这可能意味着使用 Apache 的 HTTP 认证、使用会话或 Cookie 的登录系统，甚至将管理页面放在另一台可能离线的服务器上（以便仅从一个位置管理站点）。
+
+***
+
+#### 添加版画
+
+要编写的第二个脚本用于向数据库添加新产品（具体为版画）。该页面将允许管理员从数据库中选择艺术家、上传图像并输入版画的详细信息 ![Image](img/circle-e.jpg)。图像将存储在服务器上，版画的记录将被插入数据库。这将是本章中更复杂的脚本之一，但所涉及的所有技术在本书其他地方均已介绍过。
+
+![Image](img/19_figure_11_e.jpg)
+
+![Image](img/circle-e.jpg)用于向目录添加版画的 HTML 表单。
+
+#### 创建 add_print.php
+
+**1.** 开始一个新的 PHP 文档，从 HTML 头部开始，命名为 `add_print.php`（**脚本 19.2**）：
+
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Add a Print</title>
+
+</head>
+
+<body>
+
+<?php # Script 19.2 - add_print.php
+```
+
+**脚本 19.2。** 此管理页面向数据库添加产品。它处理文件上传并将新版画插入 *prints* 表。
+
+***
+
+```
+1  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML
+      1.0 Transitional//EN"
+2        "http://www.w3.org/TR/xhtml1/DTD/
+         xhtml1-transitional.dtd">
+3  <html xmlns="http://www.w3.org/1999/
+      xhtml" xml:lang="en" lang="en">
+4  <head>
+5      <meta http-equiv="content-type"
+         content="text/html; charset=utf-8" />
+6      <title>Add a Print</title>
+7  </head>
+8  <body>
+9  <?php # Script 19.2 - add_print.php
+10 // This page allows the administrator to
+      add a print (product).
+11
+12 require ('../../mysqli_connect.php');
+13
+14 if ($_SERVER['REQUEST_METHOD'] == 'POST')
+      { // Handle the form.
+15
+16     // Validate the incoming data...
+17     $errors = array();
+18
+19     // Check for a print name:
+20     if (!empty($_POST['print_name'])) {
+21         $pn = trim($_POST['print_name']);
+22     } else {
+23         $errors[] = 'Please enter the print\'s name!';
+24     }
+25
+26     // Check for an image:
+27     if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+28
+29         // Create a temporary file name:
+30         $temp = '../../uploads/' . md5($_FILES['image']['name']);
+31
+32         // Move the file over:
+33         if (move_uploaded_file($_FILES['image']['tmp_name'], $temp)) {
+34
+35             echo '<p>The file has been uploaded!</p>';
+36
+37             // Set the $i variable to the image's name:
+38             $i = $_FILES['image']['name'];
+38         } else { // Couldn't move the file over.
+41             $errors[] = 'The file could not be moved.';
+42             $temp = $_FILES['image']['tmp_name'];
+43         }
+44
+45     } else { // No uploaded file.
+46         $errors[] = 'No file was uploaded.';
+47         $temp = NULL;
+48     }
+49
+50     // Check for a size (not required):
+51     $s = (!empty($_POST['size'])) ? trim($_POST['size']) : NULL;
+52
+53     // Check for a price:
+54     if (is_numeric($_POST['price']) && ($_POST['price'] > 0)) {
+55         $p = (float) $_POST['price'];
+56     } else {
+57         $errors[] = 'Please enter the print\'s price!';
+58     }
+59
+60     // Check for a description (not required):
+```
+
+
+
+
+```php
+61     $d = (!empty($_POST['description'])) ? trim($_POST['description']) : NULL;
+
+63     // 验证艺术家...
+
+64     if (isset($_POST['artist']) && filter_var($_POST['artist'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
+65         $a = $_POST['artist'];
+66     } else { // 未选择艺术家。
+67         $errors[] = '请选择该版画的艺术家！';
+68     }
+
+70     if (empty($errors)) { // 如果一切正常。
+
+72         // 将版画添加到数据库：
+73         $q = 'INSERT INTO prints (artist_id, print_name, price, size, description, image_name)
+74             VALUES (?, ?, ?, ?, ?, ?)';
+75         $stmt = mysqli_prepare($dbc, $q);
+76         mysqli_stmt_bind_param($stmt, 'isdsss', $a, $pn, $p, $s, $d, $i);
+77         mysqli_stmt_execute($stmt);
+
+78         // 检查结果...
+79         if (mysqli_stmt_affected_rows($stmt) == 1) {
+
+81             // 打印一条消息：
+82             echo '<p>该版画已添加。</p>';
+
+84             // 重命名图像：
+85             $id = mysqli_stmt_insert_id($stmt); // 获取版画 ID。
+86             rename($temp, "../../uploads/$id");
+
+88             // 清空 $_POST：
+89             $_POST = array();
+
+91         } else { // 出错！
+92             echo '<p style="font-weight: bold; color: #C00">您的提交无法被处理
+93                 由于系统错误。</p>';
+94         }
+
+95         mysqli_stmt_close($stmt);
+
+97     } // $errors IF 结束。
+
+99     // 如果上传的文件仍然存在则删除它：
+100    if (isset($temp) && file_exists($temp) && is_file($temp)) {
+101        unlink($temp);
+102    }
+
+104 } // 提交 IF 结束。
+
+106 // 检查是否有任何错误并打印它们：
+107 if (!empty($errors) && is_array($errors)) {
+108     echo '<h1>错误！</h1>
+109     <p style="font-weight: bold; color: #C00">发生了以下错误：<br />';
+110     foreach ($errors as $msg) {
+111         echo " - $msg<br />\n";
+112     }
+113     echo '请重新选择版画图像并再试一次。</p>';
+114 }
+
+116 // 显示表单...
+117 ?>
+118 <h1>添加版画</h1>
+119 <form enctype="multipart/form-data" action="add_print.php" method="post">
+
+121     <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+
+123     <fieldset><legend>填写表单以向目录添加版画：</legend>
+
+125     <p><b>版画名称：</b> <input type="text" name="print_name" size="30" maxlength="60"
+126         value="<?php if (isset($_POST['print_name'])) echo htmlspecialchars($_POST['print_name']); ?>"
+127         /></p>
+
+129     <p><b>艺术家：</b>
+130     <select name="artist"><option>请选择一个</option>
+131     <?php // 检索所有艺术家并添加到下拉菜单中。
+132     $q = "SELECT artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) FROM artists ORDER
+133         BY last_name, first_name ASC";
+134     $r = mysqli_query($dbc, $q);
+135     if (mysqli_num_rows($r) > 0) {
+136         while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+137             echo "<option value=\"$row[0]\"";
+138             // 检查粘滞性：
+139             if (isset($_POST['existing']) && ($_POST['existing'] == $row[0])) echo '
+140                 selected="selected"';
+141             echo ">$row[1]</option>\n";
+142         }
+143     } else {
+144         echo '<option>请先添加新艺术家。</option>';
+145     }
+146     mysqli_close($dbc); // 关闭数据库连接。
+147     ?>
+148     </select></p>
+
+150     <p><b>价格：</b> <input type="text" name="price" size="10" maxlength="10" value="<?php if
+151         (isset($_POST['price'])) echo $_POST['price']; ?>" /> <small>请勿包含美元符号或
+152         逗号。</small></p>
+
+153     <p><b>尺寸：</b> <input type="text" name="size" size="30" maxlength="60" value="<?php if
+154         (isset($_POST['size'])) echo htmlspecialchars($_POST['size']); ?>" /> (可选)</p>
+
+155     <p><b>描述：</b> <textarea name="description" cols="40" rows="5"><?php if (isset($_
+156         POST['description'])) echo $_POST['description']; ?></textarea> (可选)</p>
+
+157     </fieldset>
+
+159     <div align="center"><input type="submit" name="submit" value="提交" /></div>
+
+161 </form>
+
+162 </body>
+163 </html>
+```
+
+---
+
+### 2. 包含数据库连接脚本并检查表单是否已提交：
+
+```php
+require ('../../mysqli_connect.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $errors = array();
+}
+```
+
+任何表单验证问题都将被添加到 `$errors` 数组中，该数组在此处初始化。（因为此脚本可能会有多个错误，所以使用了数组；而在 `add_artist.php` 中，一次只能发生单个错误。）
+
+### 3. 验证版画的名称：
+
+```php
+if (!empty($_POST['print_name'])) {
+    $pn = trim($_POST['print_name']);
+} else {
+    $errors[] = '请输入版画的名称！';
+}
+```
+
+这是 *prints* 表中的必填字段之一，应检查其是否有值。同样，因为此脚本将使用预处理语句，用于查询的值不需要通过 `mysqli_real_escape_string()` 运行。
+
+如果想要格外小心，可以在此处应用 `strip_tags()`（尽管如果恶意用户已进入管理区域，你将面临更大的问题）。
+
+如果未输入值，则将错误消息添加到 `$errors` 数组中。
+
+### 4. 如果选择了上传图像，则为其创建一个临时名称：
+
+```php
+if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+    $temp = '../../uploads/' . md5($_FILES['image']['name']);
+```
+
+当介绍使用 PHP 处理文件上传的技术时（见 第 11 章 “Web 应用程序开发”），曾提到 `is_uploaded_file()` 函数。如果文件已上传，它返回 `TRUE`，否则返回 `FALSE`。如果文件已上传，脚本将尝试将文件移动到 `uploads` 目录（在第 5 步中）。
+
+这里还发生了一件事：图像不会使用其原始名称存储在服务器上（这可能是一个安全隐患）。相反，图像将使用其关联的版画 ID 进行存储。然而，由于该值尚未知晓（因为版画记录尚未添加到数据库），必须为此文件生成一个临时名称。为此，将 `md5()` 函数（返回 32 字符的哈希值）应用于图像的原始名称。该临时名称连同图像最终目的地的相对路径（相对于此脚本）被赋值给 `$temp`。
+
+您可以在此方面做一些改进。您还可以验证图像是否为正确的大小和类型。为了保持这个已经很繁忙的脚本更易于管理，我在此省略了该部分，但请参阅 第 11 章 了解要应用的确切代码。
+
+### 5. 将文件移动到其更永久的目标位置：
+
+```php
+if (move_uploaded_file($_FILES['image']['tmp_name'], $temp)) {
+    echo '<p>文件已上传！</p>';
+    $i = $_FILES['image']['name'];
+```
+
+此时，版画图像已被移动到其永久位置（`uploads` 目录），但被赋予了一个临时名称（稍后将重命名）。打印一条消息指示移动成功。最后，`$i` 变量将被赋值为文件的原始名称（供脚本后面使用）。
+
+
+
+
+![Image](img/circle-f.jpg)如果为打印图像选择了文件并成功上传，结果如下。
+
+**6.** 完成图像处理部分：
+
+```php
+} else {
+    $errors[] = 'The file could not be moved.';
+    $temp = $_FILES['image']['tmp_name'];
+}
+} else {
+    $errors[] = 'No file was uploaded.';
+    $temp = NULL;
+}
+```
+
+第一个 **`else`** 子句适用于文件无法移动到目标目录的情况。这只有在该目录的路径不正确或未在该目录上设置适当权限时才会发生 ![Image](img/circle-g.jpg)。无论哪种情况，**`$temp`** 变量都会被赋予原始上传文件的值，该文件仍驻留在其临时位置。这是必需的，因为未使用的文件稍后将在脚本中被移除。
+
+![Image](img/19_figure_13_g.jpg)
+
+![Image](img/circle-g.jpg)如果 `uploads` 目录不可由 PHP 写入，你将看到类似这样的错误。
+
+第二个 **`else`** 子句适用于未上传文件的情况。由于本网站的目的是销售打印品，实际展示待售商品显得尤为重要。如果你愿意，可以向此错误消息添加更多详细信息或建议，说明应上传何种类型和大小的文件。
+
+**7.** 验证尺寸、价格和描述输入：
+
+```php
+$s = (!empty($_POST['size'])) ? trim($_POST['size']) : NULL;
+
+if (is_numeric($_POST['price']) && ($_POST['price'] > 0)) {
+    $p = (float) $_POST['price'];
+} else {
+    $errors[] = 'Please enter the print\'s price!';
+}
+
+$d = (!empty($_POST['description'])) ? trim($_POST['description']) : NULL;
+```
+
+尺寸和描述值是可选的，但价格不是。作为基本的有效性测试，使用 **`is_numeric()`** 函数确保提交的价格是一个数字（应为小数），并且价格大于 0（以负价格销售产品可不是好事）。如果值合适，为了保险起见，将其类型转换为浮点数。如果未输入价格或输入了无效价格，将向数组添加一条错误消息。
+
+**8.** 验证艺术家：
+
+```php
+if (isset($_POST['artist']) && filter_var($_POST['artist'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
+    $a = $_POST['artist'];
+} else { // No artist selected.
+    $errors[] = 'Please select the print\'s artist!';
+}
+```
+
+要输入打印品的艺术家，管理员将使用一个下拉菜单 ![Image](img/circle-h.jpg)。结果将是一个作为正整数的 **`$_POST['artist']`** 值。请记住，如果你使用的是不支持 Filter 扩展的旧版 PHP，你将需要改用 **`is_numeric()`** 函数、类型转换以及检查值是否大于 0 的条件语句。详见 第 13 章。
+
+![Image](img/19_figure_14_h.jpg)
+
+![Image](img/circle-h.jpg)管理员可以使用此下拉菜单选择一位现有艺术家。
+
+**9.** 将记录插入数据库：
+
+```php
+if (empty($errors)) {
+    $q = 'INSERT INTO prints (artist_id, print_name, price, size, description, image_name) VALUES (?, ?, ?, ?, ?, ?)';
+    $stmt = mysqli_prepare($dbc, $q);
+    mysqli_stmt_bind_param($stmt, 'isdsss', $a, $pn, $p, $s, $d, $i);
+    mysqli_stmt_execute($stmt);
+```
+
+如果 **`$errors`** 数组仍为空，则表明所有验证测试均已通过，可以添加打印品。再次使用预处理语句，查询类似于 **`INSERT INTO prints (artist_id, print_name, price, size, description, image_name) VALUES (34, 'The Scream', 25.99, NULL, 'This classic...', 'scream.jpg')`**。
+
+**`mysqli_stmt_bind_param()`** 函数指示查询需要六个输入（每个问号对应一个），类型分别为：整数、字符串、双精度（即浮点数）、字符串、字符串和字符串。如有任何疑问，请参阅 第 13 章。
+
+**10.** 确认查询结果：
+
+```php
+if (mysqli_stmt_affected_rows($stmt) == 1) {
+    echo '<p>The print has been added.</p>';
+    $id = mysqli_stmt_insert_id($stmt);
+    rename($temp, "../../uploads/$id");
+    $_POST = array();
+} else {
+    echo '<p style="font-weight: bold; color: #C00">Your submission could not be processed due to a system error.</p>';
+}
+```
+
+如果查询影响了一行，则会在 Web 浏览器中打印一条成功消息 ![Image](img/graycircle-f.jpg)。接下来，必须检索打印品 ID，以便重命名关联的图像（它目前位于 **`uploads`** 文件夹中，但使用的是临时名称），使用 **`rename()`** 函数。该函数将文件的当前名称作为第一个参数，将文件的新名称作为第二个参数。第一个参数的值之前已赋给 **`$temp`**。第二个参数的值是 **`uploads`** 目录的路径，加上刚确定的打印品 ID 值。请注意，文件的新名称将不包含文件扩展名。在服务器上查看实际文件时这可能看起来很奇怪，但当文件（即图像）由网站的公共端提供服务时，这并不是问题，你很快就会看到。
+
+最后，清空 **`$_POST`** 数组，以便其值显示在粘性表单中。
+
+如果查询未影响一行，则可能发生了某些 MySQL 错误，你需要应用标准调试技术来弄清原因。
+
+**11.** 完成条件语句：
+
+```php
+mysqli_stmt_close($stmt);
+} // End of $errors IF.
+
+if (isset($temp) && file_exists($temp) && is_file($temp)) {
+    unlink($temp);
+}
+} // End of the submission IF.
+```
+
+第一个右大括号结束对 **`$errors`** 为空的检查。在这种情况下，应删除服务器上的文件，因为它尚未被永久移动和重命名。
+
+**12.** 打印任何错误：
+
+```php
+if (!empty($errors) && is_array($errors)) {
+    echo '<h1>Error!</h1>
+    <p style="font-weight: bold; color: #C00">The following error(s) occurred:<br />';
+    foreach ($errors as $msg) {
+        echo " - $msg<br />\n";
+    }
+    echo 'Please reselect the print image and try again.</p>';
+}
+?>
+```
+
+发生的所有错误都将位于 **`$errors`** 数组中。可以使用 **`foreach`** 循环打印这些错误 ![Image](img/circle-i.jpg)。错误会在一些 CSS 样式中打印，使其变为粗体和红色。此外，由于粘性表单无法回调选定的文件，会提醒用户重新选择打印图像。（我的著作 *Effortless E-Commerce with PHP and MySQL* 中有一个示例脚本可以回调先前上传的文件，但代码有些棘手。）
+
+![Image](img/19_figure_15_i.jpg)
+
+![Image](img/circle-i.jpg)未完整填写的表单将生成多个错误。
+
+**13.** 开始创建 HTML 表单：
+
+```html
+<h1>Add a Print</h1>
+<form enctype="multipart/form-data" action="add_print.php" method="post">
+    <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+    <fieldset><legend>Fill out the form to add a print to the catalog:</legend>
+    <p><b>Print Name:</b> <input type="text" name="print_name" size="30" maxlength="60" value="<?php if (isset($_POST['print_name'])) echo htmlspecialchars($_POST['print_name']); ?>" /></p>
+    <p><b>Image:</b> <input type="file" name="image" /></p>
+</fieldset>
+</form>
+```
+
+因为此表单将允许用户上传文件，所以必须在 **`form`** 标签中包含 **`enctype`** 属性和 **`MAX_FILE_SIZE`** 隐藏输入。得益于其输入框 **`value`** 属性中的代码，该表单将具有粘性。请注意，你无法使 **`file`** 输入类型具有粘性。
+
+以防打印品的名称、尺寸或描述使用了潜在的问题字符，每个值都通过 **`htmlspecialchars()`** 运行，以免弄乱值（例如，在 ![Image](img/graycircle-e.jpg) 中打印品的尺寸和描述中使用引号的情况）。
+
+
+
+
+## 14. 开始艺术家下拉菜单
+
+**艺术家：**
+
+```html
+<select name="artist">
+  <option>Select One</option>
+```
+
+艺术家下拉菜单将使用此 PHP 代码，根据存储在 `artists` 表中的记录动态生成。
+
+## 15. 检索每一位艺术家
+
+```php
+<?php
+$q = "SELECT artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) FROM artists ORDER BY last_name, first_name ASC";
+$r = mysqli_query($dbc, $q);
+
+if (mysqli_num_rows($r) > 0) {
+    while ($row = mysqli_fetch_array($r, MYSQLI_NUM)) {
+        echo "<option value=\"$row[0]\"";
+        // 检查粘性：
+        if (isset($_POST['existing']) && ($_POST['existing'] == $row[0])) echo ' selected="selected"';
+        echo ">$row[1]</option>\n";
+    }
+} else {
+    echo '<option>Please add a new artist first.</option>';
+}
+
+mysqli_close($dbc); // 关闭数据库连接。
+?>
+</select>
+```
+
+此查询从数据库中检索每位艺术家的姓名和 ID（它未使用预处理语句，因为实际上并不需要）。MySQL `CONCAT_WS()` 函数——即 *concatenate with separator*（使用分隔符连接）的缩写——用于将艺术家的全名作为单个值检索。如果您对查询的语法感到困惑，请在 mysql 客户端或其他界面中运行它以查看结果。
+
+如果数据库中没有现有的艺术家，则该下拉菜单将没有任何选项，因此会显示一条添加艺术家的提示。
+
+由于希望使下拉菜单具有粘性，这段原本基础的代码变得复杂起来。要使任何 `select` 菜单具有粘性，必须向适当的选项添加 `selected="selected"`。因此，`while` 循环中的代码会检查 `$_POST['existing']` 是否已设置，如果已设置，则检查其值是否与正在添加到菜单中的当前艺术家 ID 相同。
+
+## 16. 完成 HTML 表单
+
+```html
+<p><b>Price:</b> <input type="text" name="price" size="10" maxlength="10" value="<?php if (isset($_POST['price'])) echo $_POST['price']; ?>" /> <small>Do not include the dollar sign or commas.</small></p>
+<p><b>Size:</b> <input type="text" name="size" size="30" maxlength="60" value="<?php if (isset($_POST['size'])) echo htmlspecialchars($_POST['size']); ?>" /> (optional)</p>
+<p><b>Description:</b> <textarea name="description" cols="40" rows="5"><?php if (isset($_POST['description'])) echo $_POST['description']; ?></textarea> (optional)</p>
+</fieldset>
+<div align="center"><input type="submit" name="submit" value="Submit" /></div>
+</form>
+```
+
+关于每个表单元素的细节，例如描述为可选项，或价格不应包含美元符号，有助于管理员正确填写表单。
+
+## 17. 完成 HTML 页面
+
+```html
+</body>
+</html>
+```
+
+## 18. 将文件保存为 `add_print.php`。
+
+## 19. 如果尚未在服务器上创建必要的目录，请创建它们。
+
+此管理页面需要创建两个新目录。一个我将其称为 `admin`（参见参考），用于存放管理文件本身。在实际网站上，最好给管理目录起一个不那么显眼的名称。
+
+第二个目录 `uploads` 应放置在 Web 文档目录之下，并修改其权限，以便 PHP 可以将文件移入其中。有关更多信息，请参阅 第 10 章。
+
+## 20. 将 `add_print.php` 放置在您的 Web 目录中（在管理文件夹内），并在 Web 浏览器中测试它。
+
+### 脚本 19.3. 头部文件创建初始 HTML 并启动 PHP 会话。
+
+---
+
+### 创建公共模板
+
+在着手处理公共端的核心部分之前，应先创建必需的 HTML 头部和尾部文件。我将快速过一遍这些内容，因为到本书此处，所涉及的技术应该已是熟悉的领域。
+
+#### 创建 header.html
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `header.html`（**脚本 19.3**）：
+
+```php
+<?php # Script 19.3 - header.html
+```
+
+**2.** 启动会话：
+
+```php
+session_start();
+```
+
+在每个页面上维护用户的会话非常重要，因此会话将在头部文件中启动。如果在某个页面上丢失了会话，则后续页面将开始一个新会话，用户的历史记录——购物车的内容——将会丢失。
+
+**3.** 创建 HTML 头部：
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title><?php echo (isset($page_title)) ? $page_title : 'Welcome!'; ?></title>
+</head>
+```
+
+与该脚本的所有其他版本一样，页面标题将作为 PHP 变量设置，并打印在 `title` 标签内。以防在包含此页面之前未设置标题，也提供了一个默认标题。
+
+**4.** 创建表格的顶行：
+
+```html
+<body>
+<table cellspacing="0" cellpadding="0" border="0" align="center" width="600">
+  <tr>
+    <td align="center" colspan="3"><img src="images/title.jpg" width="600" height="61" border="0" alt="title" /></td>
+  </tr>
+  <tr>
+    <td><a href="index.php"><img src="images/home.jpg" width="200" height="39" border="0" alt="home page" /></a></td>
+    <td><a href="browse_prints.php"><img src="images/prints.jpg" width="200" height="39" border="0" alt="view the prints" /></a></td>
+    <td><a href="view_cart.php"><img src="images/cart.jpg" width="200" height="39" border="0" alt="view your cart" /></a></td>
+  </tr>
+```
+
+此布局将使用图像为公共页面创建链接。
+
+![Image](img/19_figure_16_a.jpg)
+
+由头部文件创建的横幅。
+
+**5.** 开始中间行：
+
+```html
+<tr>
+  <td align="left" colspan="3" bgcolor="#ffffcc"><br />
+```
+
+每个单独页面的所有内容都将放在中间行中；头部文件开始此行，尾部文件将关闭它。
+
+
+
+
+
+## 6. 将文件另存为 `header.html` 并将其放置在您的 Web 目录中（创建一个 `includes` 文件夹来存放它）。
+
+### 脚本 19.5. 网站主页的最小脚本。
+
+```php
+<?php # Script 19.5 - index.php
+// This is the main page for the site.
+
+// Set the page title and include the
+// HTML header:
+$page_title = 'Make an Impression!';
+include ('includes/header.html');
+?>
+
+<p>Welcome to our site....please use the
+links above...blah, blah, blah.</p>
+<p>Welcome to our site....please use the
+links above...blah, blah, blah.</p>
+
+<?php include ('includes/footer.html'); ?>
+```
+
+### 脚本 19.4. 页脚文件关闭 HTML，在此过程中创建版权声明。
+
+```html
+<!-- Script 19.4 - footer.html -->
+<br /></td>
+</tr>
+<tr>
+<td align="center" colspan="3" bgcolor="#669966"><font color="#ffffff">&copy; Copyright...</font></td>
+</tr>
+</table>
+</body>
+</html>
+```
+
+#### 创建 footer.html
+
+**1.** 在文本编辑器或 IDE 中创建一个新的 HTML 文档，命名为 `footer.html`（**脚本 19.4**）：
+
+```html
+<!-- Script 19.4 - footer.html -->
+```
+
+**2.** 完成中间行：
+
+```html
+<br /></td>
+</tr>
+```
+
+这完成了在页眉文件中开始的表格行。
+
+**3.** 创建底部行，完成表格，并完成 HTML：
+
+```html
+<tr>
+<td align="center" colspan="3" bgcolor="#669966"><font color="#ffffff">&copy; Copyright...</font></td>
+</tr>
+</table>
+</body>
+</html>
+```
+
+**4.** 将文件另存为 `footer.html` 并将其放置在您的 Web 目录中（同样在 `includes` 文件夹中）。
+
+#### 创建 index.php
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `index.php`（**脚本 19.5**）。
+
+```php
+<?php # Script 19.5 - index.php
+$page_title = 'Make an Impression!';
+include ('includes/header.html');
+?>
+```
+
+**2.** 添加页面内容：
+
+```html
+<p>Welcome to our site....please use the links above...blah, blah, blah.</p>
+<p>Welcome to our site....please use the links above...blah, blah, blah.</p>
+```
+
+显然，一个真正的电子商务网站在主页上会有一些实际内容。例如，您可以轻松地在此处显示最近添加的版画（请参阅第二个提示）。
+
+**3.** 完成 HTML 页面：
+
+```php
+<?php include ('includes/footer.html'); ?>
+```
+
+**4.** 将文件另存为 `index.php`，将其放置在您的 Web 目录中，并在 Web 浏览器中测试它。
+
+> **提示**
+>
+> 本示例中使用的图片可通过本书的配套网站（**[www.LarryUllman.com](http://www.LarryUllman.com)**）下载。您将在完整的可下载脚本和 SQL 命令集中找到它们。
+
+> **提示**
+>
+> 通过向 `prints` 表添加 `date_entered` 列，然后按 `date_entered` 降序检索少量产品，您可以轻松地在索引页上显示最近添加的商品。
+
+### 产品目录
+
+为了让客户能够购买产品，他们首先需要查看产品。为此，两个脚本将呈现产品目录。第一个脚本 `browse_prints.php` 将显示可用版画的列表。如果选择了特定的艺术家，则只显示该艺术家的作品；否则，将列出每一幅版画。
+
+第二个脚本 `view_print.php` 将用于显示单幅版画的信息，包括图像。在此页面上，客户将找到一个 *Add to Cart*（加入购物车）链接，以便将版画添加到购物车。由于版画的图像存储在 Web 根目录之外，`view_print.php` 将使用一个单独的脚本——与第 11 章中的 `show_image.php` 几乎相同——用于显示图像。
+
+#### 创建 browse_prints.php
+
+**1.** 在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `browse_prints.php`（**脚本 19.6**）：
+
+```php
+<?php # Script 19.6 - browse_prints.php
+$page_title = 'Browse the Prints';
+include ('includes/header.html');
+require ('../mysqli_connect.php');
+```
+
+**2.** 定义选择每幅版画的查询：
+
+```sql
+$q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name, price, description, print_id FROM artists, prints WHERE artists.artist_id = prints.artist_id ORDER BY artists.last_name ASC, prints.print_name ASC";
+```
+
+该查询是跨 `artists` 和 `prints` 表的标准连接（以便在获取每幅版画信息的同时检索艺术家姓名信息）。首次查看页面时，将返回每位艺术家的每幅版画。
+
+### 脚本 19.6. `browse_prints.php` 脚本显示目录中的每幅版画，或根据 `$_GET['aid']` 的存在情况显示特定艺术家的每幅版画。
+
+```php
+<?php # Script 19.6 - browse_prints.php
+// This page displays the available prints (products).
+
+// Set the page title and include the HTML header:
+$page_title = 'Browse the Prints';
+include ('includes/header.html');
+
+require ('../mysqli_connect.php');
+
+// Default query for this page:
+$q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist,
+print_name, price, description, print_id FROM artists, prints WHERE artists.artist_id = prints.
+artist_id ORDER BY artists.last_name ASC, prints.print_name ASC";
+
+// Are we looking at a particular artist?
+if (isset($_GET['aid']) && filter_var($_GET['aid'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
+    // Overwrite the query:
+    $q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS
+    artist, print_name, price, description, print_id FROM artists, prints WHERE artists.artist_
+    id=prints.artist_id AND prints.artist_id={$_GET['aid']} ORDER BY prints.print_name";
+}
+
+// Create the table head:
+echo '<table border="0" width="90%" cellspacing="3" cellpadding="3" align="center">
+<tr>
+<td align="left" width="20%"><b>Artist</b></td>
+<td align="left" width="20%"><b>Print Name</b></td>
+<td align="left" width="40%"><b>Description</b></td>
+<td align="right" width="20%"><b>Price</b></td>
+</tr>';
+
+// Display all the prints, linked to URLs:
+$r = mysqli_query ($dbc, $q);
+while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
+
+    // Display each record:
+    echo "\t<tr>
+    <td align=\"left\"><a href=\"browse_prints.php?aid={$row['artist_id']}\">{$row['artist']}
+    </a></td>
+```
+
+
+
+
+
+
+### PHP 代码片段
+
+```php
+35        <td align="left"><a href="view_print.php?pid={$row['print_id']}">{$row['print_name']}</a></td>
+
+36        <td align="left">{$row['description']}</td>
+
+37        <td align="right">${$row['price']}</td>
+
+38    </tr>\n";
+39
+
+40} // while 循环结束。
+
+41
+
+42echo '</table>';
+43mysqli_close($dbc);
+45include ('includes/footer.html');
+45?>
+```
+
+***
+
+### 3. 如果 URL 中传递了艺术家 ID，则覆盖查询
+
+```php
+if (isset($_GET['aid']) && filter_var($_GET['aid'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
+    $q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name, price, description, print_id FROM artists, prints WHERE artists.artist_id=prints.artist_id AND prints.artist_id={$_GET['aid']} ORDER BY prints.print_name";
+}
+```
+
+如果用户在在线目录中点击艺术家的名字，用户将返回到此页面，但现在 URL 将变为，例如 `browse_prints.php?aid=6`。在这种情况下，查询被重新定义，添加了子句 `AND prints.artist_id=`X`***`，因此仅显示该艺术家的作品（且 `ORDER BY` 子句略有修改）。因此，该脚本的两种不同角色——显示每一幅版画或仅显示个别艺术家的作品——通过同一查询的变体来处理，而脚本的其余部分在任一情况下以相同方式工作。
+
+出于安全目的，使用 Filter 扩展来验证艺术家 ID。如果您的 PHP 版本不支持 Filter 扩展，您将需要使用类型转换，并确保在查询中使用该值之前它是一个正整数。
+
+### 4. 创建表头
+
+```php
+echo '<table border="0" width="90%" cellspacing="3" cellpadding="3" align="center">
+  <tr>
+    <td align="left" width="20%"><b>Artist</b></td>
+    <td align="left" width="20%"><b>Print Name</b></td>
+    <td align="left" width="40%"><b>Description</b></td>
+    <td align="right" width="20%"><b>Price</b></td>
+  </tr>';
+```
+
+### 5. 显示每一条返回的记录
+
+```php
+$r = mysqli_query ($dbc, $q);
+while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
+    echo "\t<tr>
+        <td align=\"left\"><a href=\"browse_prints.php?aid={$row['artist_id']}\">{$row['artist']}</a></td>
+        <td align=\"left\"><a href=\"view_print.php?pid={$row['print_id']}\">{$row['print_name']}</td>
+        <td align=\"left\">{$row['description']}</td>
+        <td align=\"right\">\${$row['price']}</td>
+    </tr>\n";
+} // End of while loop.
+```
+
+该页面应显示每条返回记录的艺术家全名、版画名称、描述和价格。此外，艺术家姓名应链接回此页面（并在 URL 中附加艺术家 ID），版画名称应链接到 `view_print.php`（并在 URL 中附加版画 ID）。
+
+此代码未包含对 `mysqli_num_rows()` 的调用，以在获取结果前确认是否有结果返回，但在实际版本中您可以添加该调用，以保险起见。
+
+### 6. 关闭表、数据库连接和 HTML 页面
+
+```php
+echo '</table>';
+mysqli_close($dbc);
+include ('includes/footer.html');
+?>
+```
+
+### 7. 保存文件
+
+将文件保存为 `browse_prints.php`，将其放在您的 Web 目录中，并在 Web 浏览器中测试它。
+
+***
+
+> **Tip**
+>
+> 请参阅章节末尾的“Review and Pursue”部分，了解扩展此特定脚本的多种方法。
+
+***
+
+#### 创建 `view_print.php`
+
+### 1. 开始一个新的 PHP 文档
+
+在您的文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 `view_print.php`（**Script 19.7**）：
+
+```php
+<?php # Script 19.7 - view_print.php
+```
+
+### 2. 建立标志变量
+
+```php
+$row = FALSE;
+```
+
+`$row` 变量将用于跟踪此页面上是否发生了问题。如果一切顺利，该变量将存储来自数据库的版画信息。如果发生问题，则在脚本结束时，`$row` 仍将为 `FALSE`，页面应指示错误。
+
+### 3. 验证是否已将版画 ID 传递给此页面
+
+```php
+if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('min_range' => 1)) ) {
+    $pid = $_GET['pid'];
+```
+
+如果此页面未接收到有效的版画 ID，则此脚本将无法工作。此条件首先检查页面是否接收到版画 ID，然后检查版画 ID 是否为大于或等于 1 的整数。
+
+为了在脚本后面方便引用，`$_GET['pid']` 的值随后被赋给 `$pid`。
+
+### 4. 从数据库检索相应信息
+
+```php
+require ('../mysqli_connect.php');
+$q = "SELECT CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name, price, description, size, image_name FROM artists, prints WHERE artists.artist_id=prints.artist_id AND prints.print_id=$pid";
+$r = mysqli_query ($dbc, $q);
+```
+
+**Script 19.7.** `view_print.php` 脚本显示特定版画的详细信息。它还包含一个将产品添加到客户购物车的链接。
+
+***
+
+```php
+1   <?php # Script 19.7 - view_print.php
+2   // This page displays the details for a
+3       particular print.
+4
+5   $row = FALSE; // Assume nothing!
+6
+7   if (isset($_GET['pid']) && filter_
+8       var($_GET['pid'], FILTER_VALIDATE_INT,
+9       array('min_range' => 1)) ) { // Make
+10      sure there's a print ID!
+11
+12      $pid = $_GET['pid'];
+13
+14      // Get the print info:
+15      require ('../mysqli_connect.php'); //
+16          Connect to the database.
+17      $q = "SELECT CONCAT_WS(' ', first_
+18          name, middle_name, last_name)
+19          AS artist, print_name, price,
+20          description, size, image_name FROM
+21          artists, prints WHERE artists.artist_
+22          id=prints.artist_id AND prints.
+23          print_id=$pid";
+24      $r = mysqli_query ($dbc, $q);
+25      if (mysqli_num_rows($r) == 1) { //
+26          Good to go!
+27
+28          // Fetch the information:
+29          $row = mysqli_fetch_array ($r,
+30              MYSQLI_ASSOC);
+31
+32          // Start the HTML page:
+33          $page_title = $row['print_name'];
+34          include ('includes/header.html');
+35
+36          // Display a header:
+37          echo "<div align=\"center\">
+38          <b>{$row['print_name']}</b> by
+39          {$row['artist']}<br />";
+40
+41          // Print the size or a default
+42              message:
+43          echo (is_null($row['size'])) ? '(No
+44              size information available)' :
+45              $row['size'];
+46
+47          echo "<br />\${$row['price']}
+48          <a href=\"add_cart.php?pid=$pid\">Add to Cart</a>
+49          </div><br />";
+50
+51          // Get the image information and display the image:
+52          if ($image = @getimagesize ("../uploads/$pid")) {
+53              echo "<div align=\"center\"><img src=\"show_image.php?image=$pid&name=" . urlencode
+54                  ($row['image_name']) . "\" $image[3] alt=\"{$row['print_name']}\" /></div>\n";
+55          } else {
+56              echo "<div align=\"center\">No image available.</div>\n";
+57          }
+58
+59          // Add the description or a default message:
+60          echo '<p align="center">' . ((is_null($row['description'])) ? '(No description available)' :
+61              $row['description']) . '</p>';
+62
+63      } // End of the mysqli_num_rows() IF.
+64
+65      mysqli_close($dbc);
+66
+67  } // End of $_GET['pid'] IF.
+68
+```
+
+
+
+
+
+### 代码片段：错误处理与页面完成
+
+```php
+51  if (!$row) { // Show an error message.
+52      $page_title = 'Error';
+53      include ('includes/header.html');
+54      echo '<div align="center">This page has been accessed in error!</div>';
+55  }
+56
+57  // Complete the page:
+58  include ('includes/footer.html');
+59  ?>
+```
+
+---
+
+该查询是一个连接查询，类似于 **`browse_prints.php`** 中的查询，但它仅选择特定版画的信息。
+
+![Image](img/19_figure_24_f.jpg)
+
+在 mysql 客户端中运行 `view_print.php` 查询的结果。
+
+### 5. 检索记录、设置标题并包含页头
+
+如果返回了记录，则检索信息、设置页面标题，并包含 HTML 页头：
+
+```php
+if (mysqli_num_rows($r) == 1) {
+    $row = mysqli_fetch_array ($r, MYSQLI_ASSOC);
+    $page_title = $row['print_name'];
+    include ('includes/header.html');
+}
+```
+
+浏览器窗口的标题将是该版画的名称。
+
+### 6. 显示版画信息
+
+开始显示版画信息：
+
+```php
+echo "<div align=\"center\">
+<b>{$row['print_name']}</b> by
+{$row['artist']}<br />";
+echo (is_null($row['size'])) ? '(No size information available)' : $row['size'];
+echo "<br />\${$row['price']}
+<a href=\"add_cart.php?pid=$pid\">Add to Cart</a>
+</div><br />";
+```
+
+版画的页头将是版画名称（**粗体**），随后是艺术家姓名、版画尺寸及其价格。最后，显示一个链接，让顾客选择将该版画加入购物车。购物车链接指向 **`add_cart.php`** 脚本，并向其传递版画 ID。
+
+![Image](img/19_figure_25_g.jpg)
+
+版画信息及购买链接显示在页面顶部。
+
+由于版画尺寸可能为 **`NULL`** 值，因此使用三元运算符来输出尺寸或默认消息。
+
+### 7. 显示图像
+
+显示图像：
+
+```php
+if ($image = @getimagesize ("../uploads/$pid")) {
+    echo "<div align=\"center\"><img src=\"show_image.php?image=$pid&name=" . urlencode($row['image_name']) . "\" $image[3] alt=\"{$row['print_name']}\" /></div>\n";
+} else {
+    echo "<div align=\"center\">No image available.</div>\n";
+}
+```
+
+由于图像被安全地存储在 Web 根目录之外，因此需要另一个 PHP 脚本向浏览器提供图像（**`show_image.php`** 脚本被用作 *代理脚本*）。图像本身的名称就是版画 ID，该 ID 已通过 URL 传递给此页面。
+
+该脚本部分将首先尝试使用 **`getimagesize()`** 函数检索图像的尺寸。如果成功，则显示图像。该过程略显特殊，因为图像的来源调用了 **`show_image.php`** 页面。**`show_image.php`** 脚本（稍后编写）期望在 URL 中传递版画 ID，以及存储在数据库中的图像文件名（添加版画时存储）。这种使用 PHP 脚本显示图像的方式与 第 11 章 中 **`show_image.php`** 的用法完全相同，只是现在它发生在另一个页面内部，而不是在独立的窗口中。
+
+![Image](img/19_figure_26_h.jpg)
+
+`view_print.php` 页面的 HTML 源代码显示了 `img` 标签的 `src` 属性如何调用 `show_image.php` 脚本，并向其传递所需的值。
+
+如果脚本无法检索图像信息（因为服务器上没有该图像或未上传图像），则改为显示一条消息。
+
+### 8. 显示描述
+
+显示描述：
+
+```php
+echo '<p align="center">' . ((is_null($row['description'])) ? '(No description available)' : $row['description']) . '</p>';
+```
+
+最后，添加版画的描述。如果数据库中未存储版画描述，将创建一条默认消息。
+
+![Image](img/19_figure_27_i.jpg)
+
+版画图像及其描述。
+
+### 9. 结束主条件判断
+
+结束两个主要条件判断：
+
+```php
+} // End of the mysqli_num_rows() IF.
+mysqli_close($dbc);
+} // End of $_GET['pid'] IF.
+```
+
+### 10. 发生问题时显示错误信息
+
+如果发生问题，显示错误消息：
+
+```php
+if (!$row) {
+    $page_title = 'Error';
+    include ('includes/header.html');
+    echo '<div align="center">This page has been accessed in error!</div>';
+}
+```
+
+如果无论何种原因无法从数据库检索版画信息，则 **`$row`** 仍为 false，应显示错误。由于如果发生问题 HTML 页头尚未被包含，因此必须先在此处包含它。
+
+![Image](img/19_figure_28_j.jpg)
+
+`view_print.php` 页面，假如 URL 中未接收到有效的版画 ID。
+
+### 11. 完成页面
+
+完成页面：
+
+```php
+include ('includes/footer.html');
+?>
+```
+
+### 12. 保存文件
+
+将文件保存为 **`view_print.php`** 并放置在您的 Web 目录中。
+
+如果此时在浏览器中运行此页面，将不会显示版画图像，因为 **`show_image.php`** 尚未编写。
+
+---
+
+### 提示
+
+许多电子商务网站对 *Add to Cart*（加入购物车）链接使用图像。要在本例中实现这一点，请将 **`<a>`** 链接标签内的文本 *Add to Cart* 替换为要使用的图像代码。重要的是 **`add_cart.php`** 页面仍能接收到产品 ID 编号。
+
+---
+
+### 提示
+
+如果您想在显示多个产品的页面（如 **`browse_prints.php`**）上添加 *Add to Cart* 链接，请完全照此处针对单个产品所做的操作。只需确保每个链接将正确的版画 ID 传递给 **`add_cart.php`** 页面。
+
+---
+
+### 提示
+
+如果您想显示产品的库存情况，请在 *prints* 表中添加一个 *in_stock* 字段。然后根据该版画在该列中的值，显示 *Add to Cart* 链接或 *Product Currently Out of Stock*（产品目前缺货）消息。
+
+---
+
+### 编写 `show_image.php`
+
+### 1. 创建新 PHP 文档
+
+在文本编辑器或 IDE 中开始一个新的 PHP 文档，命名为 **`show_image.php`**（**脚本 19.8**）：
+
+```php
+<?php # Script 19.8 - show_image.php
+$image = FALSE;
+$name = (!empty($_GET['name'])) ? $_GET['name'] : 'print image';
+```
+
+该脚本将执行与 第 11 章 中的 **`show_image.php`** 相同的操作，不同之处在于有两个值被传递给此页面。服务器上实际图像的文件名将是一个数字，对应版画 ID。原始图像文件名存储在数据库中，将在向 Web 浏览器发送图像时使用。此页面不包含任何 HTML，且在此开启 PHP 标签之前，不能向 Web 浏览器发送任何内容。
+
+**脚本 19.8.** 此脚本由 `view_print.php` (脚本 19.7) 调用，并显示存储在 **`uploads`** 目录中的图像。
+
+---
+
+```php
+1   <?php # Script 19.8 - show_image.php
+2   // This pages retrieves and shows an
+3       image.
+4
+5   // Flag variables:
+6   $image = FALSE;
+7   $name = (!empty($_GET['name'])) ? $_
+8       GET['name'] : 'print image';
+9
+10  // Check for an image value in the URL:
+11  if (isset($_GET['image']) && filter_var($_GET['image'], FILTER_VALIDATE_INT,
+12      array('min_range' => 1))  ) {
+13
+14      // Full image path:
+15      $image = '../uploads/' . $_GET['image'];
+16
+17      // Check that the image exists and is
+18          a file:
+19      if (!file_exists ($image) || (!is_file($image))) {
+20          $image = FALSE;
+21      }
+22
+23  } // End of $_GET['image'] IF.
+24
+25  // If there was a problem, use the
+26      default image:
+27  if (!$image) {
+28      $image = 'images/unavailable.png';
+29      $name = 'unavailable.png';
+```
+
+
+
+
+
+### 代码片段
+
+```php
+25  }
+26
+27  // 获取图像信息：
+28  $info = getimagesize($image);
+29  $fs = filesize($image);
+30
+31  // 发送内容信息：
+32  header ("Content-Type: {$info['mime']}\n");
+33  header ("Content-Disposition: inline;
+    filename=\"$name\"\n");
+34  header ("Content-Length: $fs\n");
+35
+36  // 发送文件：
+37  readfile ($image);
+```
+
+---
+
+此处初始化了两个标志变量。第一个变量 `$image` 将引用服务器上的物理图像。它被假定为 false，需要被证明为真。`$name` 变量将作为提供给 Web 浏览器的文件名，应来自 URL。如果没有，则分配一个默认值。
+
+### 2. 检查 URL 中的图像值
+
+```php
+if (isset($_GET['image']) && filter_var($_GET['image'], FILTER_VALIDATE_INT, array('min_range' => 1))  ) {
+```
+
+在继续之前，确保脚本接收到了一个图像值，该值应是 `view_print.php` 中每个印刷品 HTML `src` 属性的一部分 ![Image](img/graycircle-h.jpg)。
+
+### 3. 检查图像是否作为文件存在于服务器上
+
+```php
+$image = '../uploads/' . $_GET['image'];
+
+if (!file_exists ($image) || (!is_file($image))) {
+  $image = FALSE;
+}
+```
+
+作为一项安全措施，图像的完整路径被硬编码为 `../uploads` 和接收到的图像名称的组合。你也可以在此处验证文件的 MIME 类型（`image/jpg`、`image/gif`），以增加安全性。
+
+接下来，脚本检查图像是否存在于服务器上，以及它是否为文件（而不是目录）。如果任一条件为 FALSE，则将 `$image` 设置为 FALSE，表示出现问题。
+
+### 4. 完成验证条件并检查问题
+
+```php
+} // End of $_GET['image'] IF.
+
+if (!$image) {
+  $image = 'images/unavailable.png';
+  $name = 'unavailable.png';
+}
+```
+
+如果图像不存在、不是文件，或者没有图像名传递给此脚本，则此条件为 TRUE。在这种情况下，将使用默认图像。然而，要使这种情况发生，用户必须进行大量的黑客攻击：`view_print.php` 脚本会对图像进行一些初步验证，只有在能够访问图像时才会调用 `show_image.php`。
+
+### 5. 检索图像信息
+
+```php
+$info = getimagesize($image);
+$fs = filesize($image);
+```
+
+为了将文件发送给 Web 浏览器，脚本需要知道文件的类型和大小。此代码与第 11 章中的相同。
+
+### 6. 发送文件
+
+```php
+header ("Content-Type: {$info['mime']}\n");
+header ("Content-Disposition: inline; filename=\"$name\"\n");
+header ("Content-Length: $fs\n");
+readfile ($image);
+```
+
+这些 `header()` 调用将向 Web 浏览器发送有关后续文件的信息，这与第 11 章中完全相同。重温一下整体语法：第一行根据 MIME 类型准备浏览器接收文件。第二行设置正在发送的文件名。
+
+最后一个 `header()` 函数指示预期接收多少数据。文件数据本身使用 `readfile()` 函数发送，该函数读取文件并立即将内容发送给 Web 浏览器。
+
+### 7. 保存并测试
+
+将文件保存为 `show_image.php`，将其放在你的 Web 目录中，并通过查看任意印刷品在 Web 浏览器中测试它。
+
+请注意，此页面不包含 HTML。它仅向 Web 浏览器发送一个图像文件。与第 11 章一样，省略了结束 PHP 标签，以避免潜在问题。
+
+---
+
+> **提示**
+>
+> 如果 `view_print.php` 页面由于某些原因未显示图像，你需要通过在 Web 浏览器中直接运行 `show_image.php` 来调试问题。查看 `view_print.php` 的 HTML 源代码，找到 `img` 标签 `src` 属性的值。然后将其用作你的 URL（换句话说，转到 `http://www.example.com/show_image.php?image=23&name=BirthOfVenus.jpeg`）。如果发生错误，直接运行 `show_image.php` 是发现它的最佳方法。
+
+---
+
+### 搜索产品目录
+
+该数据库的结构使得搜索功能相当容易实现，如果你想添加的话。目前，只有三个逻辑字段可用于搜索：印刷品的名称、其描述和艺术家的姓氏。可以使用以下语法在这些字段上运行 `LIKE` 查询：
+
+```sql
+SELECT...WHERE prints.description LIKE'%keyword%' OR prints.print_name LIKE '%keyword%' ...
+```
+
+另一种选择是创建一个高级搜索，让用户选择搜索艺术家姓名还是印刷品名称（类似于互联网电影数据库 [www.imdb.com](http://www.imdb.com) 对人名与电影标题的处理方式）。
+
+---
+
+### 脚本 19.9：add_cart.php
+
+此脚本通过引用产品（或印刷品）ID 并操作会话数据，将产品添加到购物车。
+
+```php
+<?php # Script 19.9 - add_cart.php
+// This page adds prints to the shopping
+// cart.
+
+// Set the page title and include the
+// HTML header:
+$page_title = 'Add to Cart';
+include ('includes/header.html');
+
+if (isset ($_GET['pid']) && filter_
+var($_GET['pid'], FILTER_VALIDATE_INT,
+array('min_range' => 1))  ) { // Check
+for a print ID.
+  $pid = $_GET['pid'];
+
+  // Check if the cart already contains
+  // one of these prints;
+  // If so, increment the quantity:
+  if (isset($_SESSION['cart'][$pid])) {
+
+    $_SESSION['cart'][$pid]
+      ['quantity']++; // Add another.
+
+    // Display a message:
+    echo '<p>Another copy of the print
+      has been added to your shopping
+      cart.</p>';
+
+  } else { // New product to the cart.
+
+    // Get the print's price from the
+    // database:
+    require ('../mysqli_connect.php');
+    // Connect to the database.
+    $q = "SELECT price FROM prints
+      WHERE print_id=$pid";
+    $r = mysqli_query ($dbc, $q);
+    if (mysqli_num_rows($r) == 1) { //
+      Valid print ID.
+
+      // Fetch the information.
+      list($price) = mysqli_fetch_
+      array ($r, MYSQLI_NUM);
+
+      // Add to the cart:
+      $_SESSION['cart'][$pid] = array
+        ('quantity' => 1, 'price' =>
+        $price);
+
+      // Display a message:
+      echo '<p>The print has been
+        added to your shopping cart.
+        </p>';
+
+    } else { // Not a valid print ID.
+      echo '<div align="center">This
+        page has been accessed in
+        error!</div>';
+    }
+
+    mysqli_close($dbc);
+
+  } // End of isset($_SESSION['cart']
+    [$pid] conditional.
+
+} else { // No print ID.
+  echo '<div align="center">This page
+    has been accessed in error!</div>';
+}
+
+include ('includes/footer.html');
+?>
+```
+
+---
+
+### 购物车
+
+一旦你创建了产品目录，如前面的页面所做的那样，实际的购物车本身可以出奇地简单。我在本网站中选择的方法是将产品 ID、价格和数量记录在会话中。了解这三件事将允许脚本计算总计并执行所需的其他所有操作。
+
+
+
+
+接下来的两个示例将为购物车提供所有必要的功能。第一个脚本 `add_cart.php` 用于向购物车添加商品。第二个脚本 `view_cart.php` 既显示购物车的内容，又允许顾客更新购物车。
+
+#### 添加商品
+
+`add_cart.php` 脚本将接收一个参数——所购印刷品的 ID，并利用该信息更新购物车。购物车本身存储在会话中，通过 `$_SESSION['cart']` 变量访问。购物车将是一个多维数组，其键为产品 ID。数组元素的值本身也是数组：一个元素用于数量，另一个用于价格（表 19.6）。
+
+**表 19.6. `$_SESSION['cart']` 示例值**
+
+![Image](img/19tab06.jpg)
+
+#### 创建 add_cart.php
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `add_cart.php`（脚本 19.9）：
+
+```php
+<?php # Script 19.9 - add_cart.php
+
+$page_title = 'Add to Cart';
+
+include ('includes/header.html');
+```
+
+**2.** 检查是否有印刷品 ID 传递给了该脚本：
+
+```php
+if (isset ($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
+
+    $pid = $_GET['pid'];
+```
+
+与 `view_print.php` 脚本一样，如果未接收到印刷品 ID 或接收到的 ID 非数字，则脚本不应继续执行。如果已接收到，则将其值赋给 `$pid`，供脚本后续使用。
+
+**3.** 确定该印刷品的副本是否已添加到购物车中：
+
+```php
+if (isset($_SESSION['cart'][$pid])) {
+
+    $_SESSION['cart'][$pid]['quantity']++;
+
+    echo '<p>Another copy of the print has been added to your shopping cart.</p>';
+```
+
+在将当前印刷品添加到购物车（通过将其数量设为 1）之前，先检查购物车中是否已有该副本。例如，如果顾客选择了印刷品 #519，然后决定再添加一个，购物车现在应包含该印刷品的两份副本。因此，脚本首先检查购物车是否有当前印刷品 ID 对应的值。如果有，则增加数量。代码 `$_SESSION['cart'][$pid]['quantity']++` 等同于
+
+```php
+$_SESSION['cart'][$pid]['quantity'] = $_SESSION['cart'][$pid]['quantity'] + 1.
+```
+
+最后，显示一条消息 ![Image](img/circle-a.jpg)。
+
+![Image](img/19_figure_29_a.jpg)
+
+![Image](img/circle-a.jpg) 点击购物车中已存在商品的 *Add to Cart*（加入购物车）链接后的结果。
+
+**4.** 如果产品不在购物车中，则从数据库检索其价格：
+
+```php
+} else { // New product to the cart.
+
+    require ('../mysqli_connect.php');
+
+    $q = "SELECT price FROM prints WHERE print_id=$pid";
+
+    $r = mysqli_query ($dbc, $q);
+
+    if (mysqli_num_rows($r) == 1) {
+
+        list($price) = mysqli_fetch_array ($r, MYSQLI_NUM);
+```
+
+如果产品当前不在购物车中，则执行此 `else` 子句。这里使用印刷品 ID 从数据库中检索该印刷品的价格。
+
+**5.** 将新产品添加到购物车：
+
+```php
+$_SESSION['cart'][$pid] = array ('quantity' => 1, 'price' => $price);
+
+echo '<p>The print has been added to your shopping cart.</p>';
+```
+
+检索到商品价格后，向 `$_SESSION['cart']` 多维数组添加一个新元素。由于 `$_SESSION['cart']` 中的每个元素本身就是一个数组，因此使用 `array()` 函数设置数量和价格。然后显示一条简单的消息 ![Image](img/circle-b.jpg)。
+
+![Image](img/19_figure_30_b.jpg)
+
+![Image](img/circle-b.jpg) 向购物车添加新商品后的结果。
+
+**6.** 完成条件判断结构：
+
+```php
+        } else { // Not a valid print ID.
+
+            echo '<div align="center"> This page has been accessed in error!</div>';
+
+        }
+
+        mysqli_close($dbc);
+
+    } // End of isset($_SESSION['cart'][$pid] conditional.
+
+} else { // No print ID.
+
+    echo '<div align="center">This page has been accessed in error!</div>';
+
+}
+```
+
+第一个 `else` 适用于无法从数据库检索到价格的情况，意味着提交的印刷品 ID 无效。第二个 `else` 适用于页面未接收到印刷品 ID 或接收到非数字 ID 的情况。在这两种情况下，都将显示一条错误消息 ![Image](img/circle-c.jpg)。
+
+![Image](img/19_figure_31_c.jpg)
+
+![Image](img/circle-c.jpg) `add_cart.php` 页面仅当 URL 中接收到有效的印刷品 ID 时，才会向购物车添加商品。
+
+**7.** 包含 HTML 页脚并完成 PHP 页面：
+
+```php
+include ('includes/footer.html');
+
+?>
+```
+
+**8.** 将文件保存为 `add_cart.php`，放置在您的 Web 目录中，并在 Web 浏览器中测试（通过点击 *Add to Cart* 链接）。
+
+***
+
+> **Tip**
+>
+> 购物车中最重要的存储内容是唯一的产品 ID 和该商品的数量。其他所有信息（包括价格）都可以从数据库中检索。或者，您也可以从数据库检索价格、印刷品名称和艺术家名称，并将所有这些信息存储在会话中，以便在网站的任何位置轻松显示。
+
+***
+
+> **Tip**
+>
+> 购物车存储在 `$_SESSION['cart']` 中，而不仅仅是 `$_SESSION`。推测其他信息（如数据库中的用户 ID）也会存储在 `$_SESSION` 中。
+
+***
+
+#### 查看购物车
+
+`view_cart.php` 脚本将比 `add_cart.php` 更复杂，因为它有两个用途。首先，它将详细显示购物车的内容 ![Image](img/circle-d.jpg)。其次，它将给顾客提供更新购物车的选项，通过更改其中商品的数量（或将数量设为 0 来删除商品）。为了实现这双重功能，购物车的内容将以表单形式显示，该表单提交回同一个页面。
+
+![Image](img/19_figure_32_d.jpg)
+
+![Image](img/circle-d.jpg) 以表单形式显示的购物车，可在其中更改具体数量。
+
+最后，该页面将链接到 `checkout.php` 脚本，旨在作为结账流程的第一步。
+
+#### 创建 view_cart.php
+
+**1.** 在文本编辑器或 IDE 中新建一个 PHP 文档，命名为 `view_cart.php`（脚本 19.10）：
+
+```php
+<?php # Script 19.10 - view_cart.php
+
+$page_title = 'View Your Shopping Cart';
+
+include ('includes/header.html');
+```
+
+**脚本 19.10.** `view_cart.php` 脚本既显示购物车的内容，又允许用户更新购物车的内容。
+
+***
+
+```php
+1   <?php # Script 19.10 - view_cart.php
+2   // This page displays the contents of
+        the shopping cart.
+3   // This page also lets the user update
+        the contents of the cart.
+4
+5   // Set the page title and include the
+        HTML header:
+6   $page_title = 'View Your Shopping Cart';
+7   include ('includes/header.html');
+8
+9   // Check if the form has been submitted
+        (to update the cart):
+10  if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+11
+12      // Change any quantities:
+13      foreach ($_POST['qty'] as $k => $v) {
+14
+15          // Must be integers!
+16          $pid = (int) $k;
+17          $qty = (int) $v;
+18
+19          if ( $qty == 0 ) { // Delete.
+20              unset ($_SESSION['cart'][$pid]);
+21          } elseif ( $qty > 0 ) { // Change
+                quantity.
+22              $_SESSION['cart'][$pid]
+                    ['quantity'] = $qty;
+23          }
+24
+25      } // End of FOREACH.
+26
+27  } // End of SUBMITTED IF.
+28
+29  // Display the cart if it's not empty...
+30  if (!empty($_SESSION['cart'])) {
+31
+32      // Retrieve all of the information for the prints in the cart:
+33      require ('../mysqli_connect.php'); // Connect to the database.
+```
+
+
+
+
+### 购物车查看与更新逻辑
+
+### 1. 代码实现：`view_cart.php` 核心逻辑
+
+```php
+34     $q = "SELECT print_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name
+35         FROM artists, prints WHERE artists.artist_id = prints.artist_id AND prints.print_id IN (";
+36     foreach ($_SESSION['cart'] as $pid => $value) {
+37         $q .= $pid . ',';
+38     }
+39     $q = substr($q, 0, -1) . ') ORDER BY artists.last_name ASC';
+40     $r = mysqli_query($dbc, $q);
+41
+42     // Create a form and a table:
+43     echo '<form action="view_cart.php" method="post">
+44     <table border="0" width="90%" cellspacing="3" cellpadding="3" align="center">
+45     <tr>
+46         <td align="left" width="30%"><b>Artist</b></td>
+47         <td align="left" width="30%"><b>Print Name</b></td>
+48         <td align="right" width="10%"><b>Price</b></td>
+49         <td align="center" width="10%"><b>Qty</b></td>
+50         <td align="right" width="10%"><b>Total Price</b></td>
+51     </tr>
+52     ';
+53
+54     // Print each item...
+55     $total = 0; // Total cost of the order.
+56     while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+57
+58         // Calculate the total and sub-totals.
+59         $subtotal = $_SESSION['cart'][$row['print_id']]['quantity'] * $_SESSION['cart'][$row['print_id']]['price'];
+60         $total += $subtotal;
+61
+62         // Print the row:
+63         echo "\t<tr>
+64         <td align=\"left\">{$row['artist']}</td>
+65         <td align=\"left\">{$row['print_name']}</td>
+66         <td align=\"right\">\${$_SESSION['cart'][$row['print_id']]['price']}</td>
+65         <td align=\"center\"><input type=\"text\" size=\"3\" name=\"qty[{$row['print_id']}\"
+66             value=\"{$_SESSION['cart'][$row['print_id']]['quantity']}\" /></td>
+67         <td align=\"right\">$" . number_format($subtotal, 2) . "</td>
+68         </tr>\n";
+69
+70     } // End of the WHILE loop.
+71
+72     mysqli_close($dbc); // Close the database connection.
+73
+74     // Print the total, close the table, and the form:
+75     echo '<tr>
+76         <td colspan="4" align="right"><b>Total:</b></td>
+77         <td align="right">$' . number_format($total, 2) . '</td>
+78     </tr>
+79     </table>
+80     <div align="center"><input type="submit" name="submit" value="Update My Cart" /></div>
+81     </form><p align="center">Enter a quantity of 0 to remove an item.
+82     <br /><br /><a href="checkout.php">Checkout</a></p>';
+83
+84 } else {
+85     echo '<p>Your cart is currently empty.</p>';
+86 }
+87
+88 include('includes/footer.html');
+89 ?>
+```
+
+---
+
+### 2. 表单提交时更新购物车
+
+```php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    foreach ($_POST['qty'] as $k => $v) {
+        $pid = (int) $k;
+        $qty = (int) $v;
+        if ($qty == 0) {
+            unset($_SESSION['cart'][$pid]);
+        } elseif ($qty > 0) {
+            $_SESSION['cart'][$pid]['quantity'] = $qty;
+        }
+    } // End of FOREACH.
+} // End of SUBMITTED IF.
+```
+
+如果表单已提交，脚本需要更新购物车以反映输入的数量。这些数量将在 `$_POST['qty']` 数组中传入，其索引为打印品 ID，值为新数量（参见下图 HTML 表单源码）。如果新数量为 0，则通过 `unset()` 将该项目从购物车移除。如果新数量为正数，则更新购物车中的数量。
+
+![Image](img/19_figure_33_e.jpg)
+
+![Image](img/circle-e.jpg) 上图展示了查看购物车表单的 HTML 源码，显示数量字段如何同时反映产品 ID 和购物车中该打印品的数量。
+
+如果数量不是大于或等于 0 的数字，则不会对购物车进行任何更改。这可以防止用户输入负数、产生负余额并获得退款！
+
+或者，也可以使用 Filter 扩展来验证打印品 ID 和数量。
+
+---
+
+### 3. 购物车非空时创建查询显示内容
+
+```php
+if (!empty($_SESSION['cart'])) {
+    require('../mysqli_connect.php');
+    $q = "SELECT print_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name FROM artists, prints WHERE artists.artist_id = prints.artist_id AND prints.print_id IN (";
+    foreach ($_SESSION['cart'] as $pid => $value) {
+        $q .= $pid . ',';
+    }
+    $q = substr($q, 0, -1) . ') ORDER BY artists.last_name ASC';
+    $r = mysqli_query($dbc, $q);
+```
+
+该查询是一个 `JOIN`，类似于本章前面使用的查询。它检索购物车中每个打印品的所有艺术家和打印品信息。其中一项增强是使用了 SQL `IN` 子句。不同于仅检索单个打印品信息（如 `view_print.php` 示例），此处需检索购物车中每个打印品的所有信息。为此，可在查询中使用打印品 ID 列表，如 `SELECT... print_id IN (519,42,427)...`。也可使用 `SELECT... WHERE print_id=519 OR print_id=42 or print_id=427...`，但这显得过于冗长。
+
+为生成查询中的 `IN (519,42,427)` 部分，`foreach` 循环将每个打印品 ID 加上逗号追加到 `$q`。为移除最后一个逗号，应用 `substr()` 函数截取最后一个字符。
+
+---
+
+### 4. 开始 HTML 表单并创建表格
+
+```php
+echo '<form action="view_cart.php" method="post">
+<table border="0" width="90%" cellspacing="3" cellpadding="3" align="center">
+<tr>
+    <td align="left" width="30%"><b>Artist</b></td>
+    <td align="left" width="30%"><b>Print Name</b></td>
+    <td align="right" width="10%"><b>Price</b></td>
+    <td align="center" width="10%"><b>Qty</b></td>
+    <td align="right" width="10%"><b>Total Price</b></td>
+</tr>
+';
+```
+
+---
+
+### 5. 检索返回的记录并计算总计
+
+```php
+$total = 0;
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    $subtotal = $_SESSION['cart'][$row['print_id']]['quantity'] * $_SESSION['cart'][$row['print_id']]['price'];
+    $total += $subtotal;
+```
+
+显示购物车时，页面还应计算订单总计，因此首先将 `$total` 变量初始化为 0。然后对于每一行返回记录（代表一个打印品），将该项目的价格乘以数量以确定小计（由于多维 `$_SESSION['cart']` 数组，此处语法稍显复杂）。该小计累加到 `$total` 变量中。
+
+---
+
+### 6. 打印返回的记录
+
+```php
+echo "\t<tr>
+<td align=\"left\">{$row['artist']}</td>
+<td align=\"left\">{$row['print_name']}</td>
+<td align=\"right\">\${$_SESSION['cart'][$row['print_id']]['price']}</td>
+<td align=\"center\"><input type=\"text\" size=\"3\" name=\"qty[{$row['print_id']}\" value=\"{$_SESSION['cart'][$row['print_id']]['quantity']}\" /></td>
+<td align=\"right\">$" . number_format($subtotal, 2) . "</td>
+</tr>\n";
+```
+
+每条记录作为表格一行打印，数量显示为文本输入框，其值预设为会话中的数量值。每个项目的小计金额（数量 × 价格）也会被格式化并打印。
+
+---
+
+### 7. 完成 `while` 循环并关闭数据库连接
+
+```php
+} // End of the WHILE loop.
+mysqli_close($dbc);
+```
+
+---
+
+### 8. 完成表格和表单
+
+```php
+echo '<tr>
+    <td colspan="4" align="right"><b>Total:</b></td>
+    <td align="right">$' . number_format($total, 2) . '</td>
+</tr>
+</table>
+```
+
+
+
+
+<div align="center"><input type="submit" name="submit" value="Update My Cart" /></div>
+
+</form><p align="center">输入数量 0 以移除商品。
+
+<br /><br /><a href="checkout.php">结账</a></p>';
+
+订单总计显示在表格的最后一行，使用 `number_format()` 函数进行格式化。该表单还为用户提供了如何移除商品的说明，并包含一个指向结账页面的链接。
+
+**9.** 完成主条件语句和 PHP 页面：
+
+```
+} else {
+
+  echo '<p>Your cart is currently empty.</p>';
+
+}
+
+include ('includes/footer.html');
+
+?>
+```
+
+此 `else` 子句完成了 `if (!empty($_SESSION['cart'])) {` 条件判断。
+
+**10.** 将文件保存为 `view_cart.php`，将其放置在您的 Web 目录中，并在 Web 浏览器中进行测试（![Image](img/circle-f.jpg)和 ![Image](img/circle-g.jpg)）。
+
+![Image](img/19_figure_34_f.jpg)
+
+![Image](img/circle-f.jpg)点击*更新购物车*后，对任何数量所做的更改都会更新购物车和订单总计（与 ![Image](img/graycircle-d.jpg) 对比）。
+
+![Image](img/19_figure_35_g.jpg)
+
+![Image](img/circle-g.jpg)将数量设置为 0 可移除购物车中的所有商品。
+
+***
+
+提示
+
+在更复杂的 Web 应用程序中，我倾向于编写一个专门用于显示购物车内容的 PHP 页面。由于多个页面可能都需要显示该内容，将该功能放在一个可包含的文件中是合理的。
+
+***
+
+***
+
+提示
+
+安全电子商务应用程序的一个方面是监视数据的发送和使用方式。例如，将产品价格放在 URL 中要不安全得多，因为那里很容易被篡改。
+
+***
+
+### 记录订单
+
+在将所有产品作为目录显示出来，并且用户已填满购物车之后，还有三个最后的步骤：
+
+* 用户结账
+* 在数据库中记录订单
+* 履行订单
+
+具有讽刺意味的是，最重要的部分——结账（即收取客户的钱）——无法在书中得到充分演示，因为它因网站而异，特殊性太强。因此，我改为在侧边栏中给出了该流程的概述。相比之下，我的著作 *Effortless E-Commerce with PHP and MySQL* 专门展示了如何使用两种不同的支付网关，但这本身就需要两个完整的章节来讲解。
+
+同样，履行订单的行为也超出了本书的范围。对于实体产品，这意味着需要对订单进行包装和发货。然后通过指明发货日期，将数据库中的订单标记为已发货。这个概念对您来说不难实现，但您也必须注意管理商店的库存。对于虚拟产品，订单履行就是向用户提供数字内容。
+
+***
+
+#### 结账流程
+
+结账流程包含三个步骤：
+
+**1.** 确认订单。
+
+**2.** 确认并提交账单和收货信息。
+
+**3.** 处理账单信息。
+
+到现在为止，步骤 1 和 2 对于中级程序员来说应该足够简单，可以自行完成。极有可能，步骤 2 中的大部分数据将来自 `customers` 表，前提是用户已注册并登录。
+
+步骤 3 是最棘手的一个，无法在本书中得到充分解决。该步骤的细节差异很大，取决于账单由谁以及如何处理。更复杂的是，法律法规因所售产品是稍后发货还是即时交付（如网站访问权或可下载文件）而异。
+
+中小型电子商务网站大多使用第三方来处理财务交易。通常这涉及将账单信息、订单总额和商店编号（指代电子商务网站本身的引用）发送到另一个网站。该网站将处理实际的账单流程，从客户账户扣款并给商店账户入账。然后结果代码将被发送回电子商务网站，后者会根据编程做出相应反应。在这种情况下，处理账单的第三方会向开发人员提供与其系统对接所需的相应代码和说明。
+
+如需更多信息或帮助，请参阅我的著作 *Effortless E-Commerce with PHP and MySQL* 或访问支持论坛（**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)**）。
+
+***
+
+因此，以上是本章无法很好涵盖的一些问题；而我*能*在本章中妥善演示的是订单信息如何存储在数据库中。为确保订单完整且正确地录入 `orders` 和 `order_contents` 表，脚本将使用*事务*。该主题在 第 7 章 "Advanced MySQL" 中通过 mysql 客户端进行了介绍。这里将通过 PHP 脚本执行事务。为增加安全性和性能，该脚本还将使用预处理语句，这在 第 13 章 中已讨论过。
+
+**脚本 19.11.** 电子商务应用程序中的最后一个脚本将订单信息记录在数据库中。它使用事务来确保整个订单正确提交。
+
+***
+
+```php
+1   <?php # Script 19.11 - checkout.php
+2   // This page inserts the order
+       // information into the table.
+3   // This page would come after the
+       // billing process.
+4   // This page assumes that the billing
+       // process worked (the money has been
+       // taken).
+5
+6   // Set the page title and include the
+       // HTML header:
+7   $page_title = 'Order Confirmation';
+8   include ('includes/header.html');
+9
+10  // Assume that the customer is logged
+       // in and that this page has access to the
+       // customer's ID:
+11  $cid = 1; // Temporary.
+12
+13  // Assume that this page receives the
+       // order total:
+14  $total = 178.93; // Temporary.
+15
+16  require ('../mysqli_connect.php'); // Connect to the database.
+17
+18  // Turn autocommit off:
+19  mysqli_autocommit($dbc, FALSE);
+20
+21  // Add the order to the orders table...
+22  $q = "INSERT INTO orders (customer_id,
+       total) VALUES ($cid, $total)";
+23  $r = mysqli_query($dbc, $q);
+24  if (mysqli_affected_rows($dbc) == 1) {
+25
+26      // Need the order ID:
+27      $oid = mysqli_insert_id($dbc);
+28
+29      // Insert the specific order contents
+         // into the database...
+30
+31      // Prepare the query:
+32      $q = "INSERT INTO order_contents
+         (order_id, print_id, quantity, price)
+         VALUES (?, ?, ?, ?)";
+33      $stmt = mysqli_prepare($dbc, $q);
+34      mysqli_stmt_bind_param($stmt, 'iiid',
+         $oid, $pid, $qty, $price);
+35
+36      // Execute each query; count the
+         // total affected:
+37      $affected = 0;
+38      foreach ($_SESSION['cart'] as $pid =>
+         $item) {
+39          $qty = $item['quantity'];
+40          $price = $item['price'];
+41          mysqli_stmt_execute($stmt);
+42          $affected += mysqli_stmt_affected_rows($stmt);
+43      }
+44
+45      // Close this prepared statement:
+46      mysqli_stmt_close($stmt);
+47
+48      // Report on the success....
+49      if ($affected == count($_SESSION['cart'])) { // Whohoo!
+50
+51          // Commit the transaction:
+52          mysqli_commit($dbc);
+53
+54          // Clear the cart:
+55          unset($_SESSION['cart']);
+56
+57          // Message to the customer:
+58          echo '<p>Thank you for your order.
+              You will be notified when the
+              items ship.</p>';
+59
+60          // Send emails and do whatever else.
+61
+```
+
+
+
+### 创建 checkout.php
+
+此脚本 `checkout.php` 代表客户在电子商务流程中将看到的最后一步。由于本书跳过了此脚本之前的步骤，因此需要对流程进行一些调整。
+
+#### 创建 checkout.php 的步骤
+
+**1.** 在文本编辑器或 IDE 中创建一个新的 PHP 文档，命名为 `checkout.php`（**脚本 19.11**）：
+
+```php
+<?php # Script 19.11 - checkout.php
+
+$page_title = 'Order Confirmation';
+
+include ('includes/header.html');
+```
+
+**2.** 创建两个临时变量：
+
+```php
+$cid = 1;
+$total = 178.93;
+```
+
+为了将订单录入数据库，此页面需要两项额外信息：客户的识别号（即 `customers` 表中的 `customer_id`）和订单总额。第一项值推测会在客户登录时确定（存储在会话中）。第二项值也可能存储在会话中（计入税费和运费后），或者由计费流程传递给此页面。但由于本章编写的脚本无法直接获取这两个值（已跳过相关步骤），我们创建这两个变量来模拟数据。
+
+**3.** 包含数据库连接并关闭 MySQL 的自动提交模式：
+
+```php
+require ('../mysqli_connect.php');
+mysqli_autocommit($dbc, FALSE);
+```
+
+函数 `mysqli_autocommit()` 可开启或关闭 MySQL 的 `autocommit` 特性。由于将使用**事务**来确保整个订单正确录入，因此应首先禁用自动提交行为。如果对事务有疑问，请参阅**第 7 章**或 MySQL 手册。
+
+**4.** 向 `orders` 表添加订单：
+
+```php
+$q = "INSERT INTO orders (customer_id, total) VALUES
+($cid, $total)";
+$r = mysqli_query($dbc, $q);
+if (mysqli_affected_rows($dbc) == 1) {
+```
+
+此查询非常简单，仅将客户 ID 号和订单总额录入 `orders` 表。该表中的 `order_date` 字段将自动设置为当前日期和时间，因为它是 `TIMESTAMP` 列。
+
+**5.** 获取订单 ID：
+
+```php
+$oid = mysqli_insert_id($dbc);
+```
+
+`orders` 表中的 `order_id` 值用于在 `order_contents` 表中关联两者。
+
+**6.** 准备将订单内容插入数据库的查询：
+
+```php
+$q = "INSERT INTO order_contents (order_id, print_id, quantity, price) VALUES (?, ?, ?, ?)";
+$stmt = mysqli_prepare($dbc, $q);
+mysqli_stmt_bind_param($stmt, 'iiid', $oid, $pid, $qty, $price);
+```
+
+该查询向 `order_contents` 表插入四个值，每个购买的印刷品对应一条记录。查询使用占位符定义并准备执行。函数 `mysqli_stmt_bind_param()` 将四个变量绑定到占位符，其类型依次为：整数、整数、整数、双精度（即浮点数）。
+
+**7.** 遍历购物车，将每个印刷品插入数据库：
+
+```php
+$affected = 0;
+foreach ($_SESSION['cart'] as $pid => $item) {
+  $qty = $item['quantity'];
+  $price = $item['price'];
+  mysqli_stmt_execute($stmt);
+  $affected += mysqli_stmt_affected_rows($stmt);
+}
+mysqli_stmt_close($stmt);
+```
+
+通过循环遍历购物车（同 `view_cart.php`），脚本可逐个访问每个项目。具体流程：查询已**预处理**——发送至 MySQL 并解析，变量已绑定到占位符。循环内，两个新变量从会话获取值。随后调用 `mysqli_stmt_execute()` 执行预处理语句，使用当前变量值。`$oid` 在迭代中不变，但 `$pid`、`$qty` 和 `$price` 会变化。
+
+为确认所有查询成功，需跟踪受影响的行数。变量 `$affected` 在循环外初始化为 0。循环内，每次执行预处理语句后，将受影响行数累加到该变量。
+
+**8.** 报告事务成功与否：
+
+```php
+if ($affected == count($_SESSION['cart'])) {
+  mysqli_commit($dbc);
+  unset($_SESSION['cart']);
+  echo '<p>Thank you for your order. You will be notified when the items ship.</p>';
+```
+
+条件判断插入 `order_contents` 表的记录数是否等于购物车中的商品数。简而言之：每个产品是否都已插入？若是，事务完成并提交。接着清空购物车并感谢用户。逻辑上此处还应发送确认邮件给客户。
+
+**9.** 处理 MySQL 问题：
+
+```php
+  } else {
+    mysqli_rollback($dbc);
+    echo '<p>Your order could not be processed due to a system error. You will be contacted in order to have the problem fixed. We apologize for the inconvenience.</p>';
+  }
+} else {
+  mysqli_rollback($dbc);
+  echo '<p>Your order could not be processed due to a system error. You will be contacted in order to have the problem fixed. We apologize for the inconvenience.</p>';
+}
+```
+
+第一个 `else` 子句在 `order_contents` 表插入记录数不正确时触发。第二个 `else` 子句在最初的 `orders` 表查询失败时触发。无论哪种情况，都应撤销整个事务，因此调用 `mysqli_rollback()`。
+
+若此时发生问题，情况相当严重，因为客户已被扣款但订单未入库。这本不该发生，但以防万一，应将所有数据写入文本文件和/或发送邮件给网站管理员，或采取其他措施记录该订单。否则，你将面对非常愤怒的客户。
+
+**10.** 完成页面：
+
+```php
+mysqli_close($dbc);
+include ('includes/footer.html');
+?>
+```
+
+**11.** 将文件保存为 `checkout.php`，放入 Web 目录，并在浏览器中测试。
+
+![Image](img/circle-a.jpg)
+
+![Image](img/19_figure_36_a.jpg)
+
+![Image](img/circle-a.jpg) 客户订单现已完成，所有数据已录入数据库。
+
+可通过点击 `view_cart.php` 中的链接访问此页面。
+
+**12.** 通过其他界面查看数据库，确认订单已正确存储。
+
+![Image](img/circle-b.jpg)
+
+![Image](img/19_figure_37_b.jpg)
+
+![Image](img/circle-b.jpg) 使用 mysql 客户端查看的 MySQL 数据库中的订单。
+
+---
+
+> **Tip**
+
+
+
+在一个实际运行的网站上，你应该为该脚本分配真实的值给`$customer`和`$total`变量以使其工作。你可能还需要确保购物车不为空，然后再尝试将订单存储到数据库中。
+
+---
+
+### 提示
+
+如果你想了解更多关于电子商务的信息，或查看该流程的变体，在网络上快速搜索将会找到各种使用 PHP 和 MySQL 制作电子商务应用程序的示例和教程，或者查看我的著作《Effortless E-Commerce with PHP and MySQL》。
+
+---
+
+### 复习与实践
+
+如果你在复习问题或实践提示上有任何问题，请访问本书的支持论坛（**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/）**）。
+
+注意：其中一些问题和提示重述了本书前面章节涵盖的信息，旨在加强一些最重要的要点。
+
+#### 复习
+
+*   MySQL 中哪种存储引擎支持事务？
+*   MySQL 支持哪些类型的索引？决定哪些列应该被索引以及哪种索引类型最合适的标准是什么？
+*   什么是安全套接字层（SSL）？为什么它对电子商务网站很重要？你的网站启用 SSL 了吗？
+*   为什么打印品的图片在没有文件扩展名的情况下存储并不会有问题？
+*   调试与 MySQL 数据库交互的 PHP 脚本时，应采取哪些步骤？
+*   什么是*多维数组*？
+*   MySQL 的*自动提交*功能意味着什么？
+*   `mysqli_insert_id()`函数有什么作用？
+*   *提交*或*回滚*事务意味着什么？
+
+#### 实践
+
+*   扩展`artists`表的定义以记录每位艺术家的其他信息。同时在网站的公共端显示这些其他信息。
+*   向`prints`表添加`quantity_on_hand`列。向`add_print.php`添加一个表单元素，以便管理员可以指示产品最初有多少副本在库存中。在公共端，仅为有货的产品提供“加入购物车”选项。当商品售出时（即在`checkout.php`中），将每个产品的库存数量减去售出的副本数量。
+*   扩展`customers`表的定义以包含其他相关信息。
+*   使用第 18 章“示例——用户注册”中的信息作为基础，为客户创建注册、登录和注销功能。
+*   创建客户查看其账户、更改密码、查看以往订单等的功能。
+*   为网站的管理端创建并使用一个模板。
+*   使用会话，将管理端的访问权限限制为仅限经过验证的用户。
+*   应用第 11 章中的代码来提高`add_print.php`的安全性，使其能正确验证上传文件的类型和大小。
+*   从`add_print.php`获取动态生成的艺术家下拉菜单，并将其用作公共端的导航工具。为此，将表单的`action`属性设置为`browse_print.php`，将下拉菜单的`name`更改为`aid`，使用 GET 方法，当用户选择一位艺术家并点击提交时，他或她将被带到例如`browse_print.php?aid=5`这样的页面。
+*   将*分页*应用到`browse_prints.php`。有关分页的更多信息，请参见第 10 章。
+*   在`browse_prints.php`上，通过向列标题添加链接（例如指向`browse_prints.php?order=price`）来增加影响打印品显示方式的选项。然后根据`$_GET['order']`的存在及其值更改查询中的`ORDER BY`子句。同样，这个想法在第 9 章中已有演示。
+*   结合`view_print.php`和`add_cart.php`的部分功能，使刚添加到购物车的打印品详情也显示在`add_cart.php`上。
+*   要在`add_cart.php`上显示购物车内容，将`view_cart.php`中的适用代码添加到`add_cart.php`的末尾。
+*   创建管理员查看订单列表的功能。提示：第一页的功能类似于`browse_prints.php`，不同之处在于它将跨`orders`和`customers`表执行连接。该页面可显示订单总额、订单 ID、订单日期和客户姓名。你可以将订单 ID 链接到`view_order.php`脚本，在 URL 中传递订单 ID。该脚本将使用订单 ID 从`order_contents`表中检索订单详情（在此过程中连接`prints`和`artists`表）。
+*   添加计算订单税费和运费的功能。也将这些值存储在`orders`表中。
+
+### 索引
+
+### 数字
+
+*   1NF（第一范式），169–171
+*   2NF（第二范式），172–174
+*   3NF（第三范式），175–176
+*   8 位 Unicode 转换格式，2
+
+#### 符号
+
+*   `--`运算符，23，45
+*   `−`运算符，23
+*   `!`运算符，45
+*   `!=`运算符，140
+*   `\$`转义序列，29
+*   `%`运算符，23
+*   `*`运算符，23
+*   `.`运算符，21，26–27
+*   `/`运算符，23
+*   `@`错误抑制运算符，250，270
+*   `\'`转义序列，29
+*   `\\`转义序列，29
+*   `\"`转义序列，29
+*   `|`运算符，140
+*   `||`运算符，45，48，140
+*   `+`运算符，23
+*   `++`运算符，23
+*   `<`运算符，45
+*   `<-`运算符，45
+*   `<`运算符，140
+*   `<=`运算符，140
+*   `<>`运算符，140
+*   `=`运算符，14，22，25，140
+*   `>`运算符，45，140
+*   `>-`运算符，45
+*   `>=`运算符，140
+*   `!-`运算符，45
+*   `&&`（and）运算符，45，48，56，140
+*   `*`（星号），配合`SELECT`查询使用，138
+*   `` ` ``（反引号），在 SQL 命令中使用，137
+*   {}（花括号）
+    *   配合数组使用，55，57
+    *   配合条件语句使用，45，48
+*   `$`（美元符号），配合变量使用，14
+*   `==`（双等号）与`=`（等号）的区别，47
+*   `"`（双）引号，使用方法，29–31
+*   `\`（转义），使用方法，6
+*   ()（括号）
+    *   配合子句使用，25
+    *   配合函数使用，8
+*   `#`（井号）符号，在注释中使用，10–11
+*   `;`（分号）
+    *   避免使用，280
+    *   配合语句使用，6
+*   `'`（单）引号，使用方法，29–31
+*   `//`（斜杠），在注释中使用，10–11
+*   `[]`（方括号）
+    *   配合数据库使用，114
+    *   配合函数使用，104
+*   `_`（下划线），配合变量使用，17
+
+#### A
+
+*   `ABS()`函数，157
+*   绝对路径与相对路径，76
+
+
+
+访问问题，调试，263
+
+加法运算符，符号，23
+
+`AES_DECRYPT()` 函数，237
+
+`AES_ENCRYPT()` 函数，237，239
+
+Ajax。另请参阅 jQuery
+
+创建 JavaScript，485
+
+表单，481–482
+
+处理请求，484
+
+`login_ajax.php` 脚本，484
+
+`login.php` 脚本，481–482
+
+概述，479–480
+
+执行请求，486–491
+
+服务器端脚本，483
+
+别名，153，155
+
+`ALTER` 命令，230
+
+`ALTER TABLE` 子句，222
+
+`ANALYZE` 命令，230
+
+and（`&&`）运算符，45，48，56
+
+and not（`XOR`）逻辑运算符，45，48
+
+`AND` 运算符，45，48，156，140
+
+参数值，设置默认值，101–104
+
+参数
+
+空字符串，104
+
+`FALSE` 值，104
+
+`$name`，103
+
+`NULL` 值，104
+
+配合用户定义函数使用，97–100
+
+值，104
+
+算术，优先级问题，25
+
+算术运算符
+
+加法，23
+
+递减，23
+
+除法，23
+
+递增，23
+
+取模，23
+
+乘法，23
+
+减法，23
+
+`array()` 函数，使用，58
+
+数组值，调试时打印，261
+
+`array_map()` 函数，408
+
+数组
+
+`&&`（and）运算符，56
+
+{}（花括号），55，57
+
+访问，58–59
+
+`arsort()` 函数，65，68
+
+`$artists`，54
+
+`asort()` 函数，65，68
+
+关联，54，62
+
+`calendar.php` 文档，59–61
+
+合并，63
+
+与条件语句，56–57
+
+`$_COOKIE` 超全局变量，55
+
+创建，58
+
+创建和访问，59–60
+
+定义，54
+
+`$_ENV` 超全局变量，55
+
+示例，54
+
+`foreach` 循环，58–61，63–64
+
+`$_GET` 超全局变量，55
+
+`$GLOBALS`，109
+
+用于排序的 HTML 表格，66
+
+索引，54
+
+索引编制，58
+
+键，54，57
+
+键值对，54
+
+`ksort()` 函数，65，67
+
+墨西哥州数组，62–64
+
+多维，61–64
+
+命名规则，54
+
+`natsort()` 函数，68
+
+`$_POST` 超全局变量，55–56
+
+打印，55
+
+排序后打印，67
+
+随机化顺序，68
+
+引用中的值，54
+
+`$_REQUEST` 超全局变量，55–56
+
+从函数返回，108
+
+`$_SERVER` 超全局变量，55
+
+`$_SESSION` 超全局变量，55
+
+`shuffle()` 函数，68
+
+`sort()` 函数，65
+
+排序，65–68
+
+楔形数数组，61
+
+`$states`，54
+
+与字符串，65
+
+超全局变量，55–56
+
+使用，56–57
+
+用于下拉菜单，59–60
+
+配合循环使用，70
+
+`usort()` 函数，68
+
+`arsort()` 函数，配合数组使用，65，68
+
+`asort()` 函数，配合数组使用，65，68
+
+赋值运算符（=），140
+
+示例，25
+
+用于连接，22
+
+配合变量使用，14
+
+星号（`*`），配合 `SELECT` 查询使用，138
+
+`AUTO_INCREMENT` 示例，135
+
+自动提交特性，更改，236
+
+`AVG()` 分组函数，214–215，217
+
+### B
+
+反斜杠代码，29
+
+反引号（`` ` ``），在 SQL 命令中的用法，137
+
+银行数据库
+
+*accounts* 表，198
+
+平均账户余额，214
+
+*customers* 表，197
+
+*transactions* 表，199
+
+`BETWEEN` 运算符，140
+
+黑名单验证，409
+
+空白页
+
+错误时显示，8
+
+错误，258
+
+图书数据库，176
+
+布尔 `FULLTEXT` 搜索，执行，227–229
+
+布尔模式运算符，227
+
+边界，配合正则表达式使用，444
+
+浏览器
+
+向其发送数据，7–9
+
+向其发送 HTML，12
+
+暴力破解攻击，防止，431
+
+#### C
+
+`calculator.html` 页面
+
+DOM 操作，474–478
+
+保存，468
+
+`calculator.js` 页面，保存，472
+
+`calculator.php` 文档
+
+更改 `echo` 语句，107
+
+`create_gallon_radio()` 函数，98
+
+创建，86
+
+默认参数值，101–104
+
+Filter 扩展，422–424
+
+格式化成本，107
+
+`$name` 参数，103
+
+单选按钮，98–103
+
+`return` 语句，108
+
+返回成本，107
+
+为粘性表单重写，90–94
+
+保存，90，100
+
+为粘性表单保存，94
+
+脚本，87，92–93
+
+类型转换，410–413
+
+用户定义函数，98–100
+
+`calendar.php` 文档
+
+创建，59
+
+循环示例，70–71
+
+保存，61
+
+*call to undefined function* 错误，97，258
+
+*cannot redeclare function* 错误，258
+
+CAPTCHA 测试，408
+
+回车代码，29
+
+`CASCADE` 动作，配合外键约束使用，196
+
+层叠样式表 (CSS)。请参阅 CSS (层叠样式表)
+
+`CASE()` 函数，219
+
+`ceil()` 函数，319
+
+`CEILING()` 函数，157
+
+`CHAR()` 函数，135
+
+
+
+**`CHAR`** vs. **`VARCHAR`**, 117
+
+字符类，配合正则表达式使用，443–445
+
+字符代码，替换为值，29
+
+字符集
+
+- 分配，186–188
+- 校对规则，184
+- 为列建立，186
+- 解释，184
+- UTF-8，188
+- UTF-8 编码，185
+
+字符，打印，31
+
+**`CHARSET`** 命令，186
+
+**`@charset "utf-8"`**，在 CSS 文件中使用，5
+
+影院数据库，172
+
+子句，在括号中分组，25
+
+**`COALESCE( )`** 函数，218
+
+Codd, E.F.，166
+
+校对规则
+
+- 分配，186–188
+- 为列建立，186
+- 解释，184
+- 在查询中指定，188
+- 查看，185
+
+列类型，为数据库选择，114–117
+
+列值，向其应用函数，153
+
+列，在其上使用索引，179
+
+逗号，连接到变量，21
+
+注释
+
+- 避免嵌套，13
+- 示例，15
+- 准则，13
+- HTML，10
+- 保持最新，13
+- 多行，10，12
+- PHP，10
+- 在行尾使用，13
+- 用于调试脚本，259
+- 编写，10–13
+
+**`comments.php`** 文档
+
+- 创建，11
+- 保存，12
+
+**`COMMIT`** 命令，配合查询使用，233，236
+
+比较运算符
+
+- **`--`** (等于)，45
+- **`<`** (小于)，45
+- **`<-`** (小于或等于)，45
+- **`>`** (大于)，45
+- **`>-`** (大于或等于)，45
+- **`!-`** (不等于)，45
+
+比较函数，218
+
+**`CONCAT( )`** 函数，154–156
+
+连接值，22
+
+连接
+
+- 赋值运算符（**`=`**），22
+- 定义，21
+- 运算符（**`.`**），21
+- 使用，21–22
+- 配合数字使用，21
+- 配合字符串使用，21
+
+连接运算符（**`.`**）
+
+- 使用，21
+- 配合常量使用，26–27
+
+**`concat.php`** 文件，保存，22
+
+条件语句
+
+- {} (花括号)，45，48
+- 添加到打印消息，47
+- 默认值，48
+- **`else`**，45
+- **`elseif`**，45
+- **`$gender`** 变量，46
+- **`if`**，45
+- **`if-elseif-else`**，47
+- 指示子集，48
+- **`switch`**，48
+- 使用，46–48
+- 配合数组使用，56–57
+
+连接脚本 **`.php`**，271
+
+常量
+
+- 访问值，26
+- 赋值标量值，26
+- 连接 (.) 运算符，26–27
+- 创建，26
+- 日期，27
+- **`define( )`** 函数，26
+- **`mysqli_fetch_array( )`**，281
+- 命名，26
+- 省略引号，26
+- **`PHP_OS`**，26
+- **`PHP_VERSION`**，26
+- 预定义，26
+- 使用，27–28
+- vs. 变量，26
+
+**`constants.php`** 文档
+
+- 创建，27
+- 保存，28
+
+约束 vs. 触发器，201
+
+**`CONVERT( )`** 函数，188
+
+**`CONVERT_TZ`** 函数，190
+
+Cookie
+
+- 访问，380–382
+- 创建注销链接，386–387
+- 删除，384–385
+- 过期时间，384
+- 解释，376
+- 发送，378–380
+- vs. 会话，388
+- 设置，377
+- 设置参数，382–384
+- 大小限制，380
+- 测试，376
+
+协调世界时 (UTC)
+
+- 解释，189
+- 使用，189
+
+**`COUNT( )`** 分组函数，214–215，319
+
+- 应用，217
+
+**`create_ad( )`** 函数，调用，97
+
+**`create_gallon_radio( )`** 函数，98
+
+CSS (层叠样式表)
+
+- *error* 类，51
+- 配合 HTML 表单使用，37
+
+CSS 文件，声明编码，5
+
+**`CUR( )`** 函数，159–160
+
+花括号 ({})
+
+- 配合数组使用，55，57
+- 配合条件语句使用，45，48
+
+#### D
+
+数据，按类型验证，409–413
+
+数据库设计
+
+- ERD (实体关系图)，169
+- 外键约束，195–201
+- 论坛数据，166–167
+- 索引，179–181
+- 过程，169
+- 审查，177–178
+
+数据库元素，命名，112–113
+
+数据库模式
+
+- 解释，166
+- MySQL Workbench 程序，169
+
+数据库结构，确认，188
+
+数据库表
+
+- 修改，222
+- 删除其中的数据，152
+- 清空，152
+- 连接三个或更多，211–213
+
+数据库
+
+- **`AUTO_INCREMENT`**，118–119
+- 银行，196–197
+- “大型”，233
+- 书籍，176
+- 选择列类型，114–117
+- 连接到，268–272
+- 数据类型，115
+- 列的默认值，119–120
+- 删除，152
+- 加密，237–239
+- 论坛，175，181–182
+- 索引，118
+- 键，118，167
+- *Length* 属性，114
+- 留言板，520–528
+- 建模，169
+- *movies* 表，170
+- 优化，230
+- 规划内容，166
+- **`PRIMARY KEY`**，118–119
+- 关系，168–169
+- 选择，268–272
+- 方括号 (**`[ ]`**)，114
+- **`TEXT`** 列，120
+- **`TIMESTAMP`** 列，119
+- **`UNSIGNED`** 数字类型，119–120
+- **`USE`** 命令，123，126
+- *users* 表，116，120
+- **`ZEROFILL`** 数字类型，119
+
+日期和时间
+
+
+
+
+### 索引
+
+#### A
+
+accessing on client, 163
+
+**`_FORMAT`** 参数, 162
+
+函数, 159–161, 362–365
+
+**`NOW()`** 函数, 163
+
+返回当前, 163
+
+日期常量, 创建, 27
+
+**`DATE()`** 函数, 159
+
+**`date()`** 函数格式化
+
+格式化, 362
+
+参数, 364
+
+日期, 一致处理, 194
+
+**`DateTime`** 类, 511–517
+
+**`datetime.php`** 脚本, 513–514
+
+**`DAY()`** 函数, 159–160
+
+调试. *另请参阅* 错误消息
+
+访问问题, 263
+
+基础, 242–243
+
+开始, 244–246
+
+使用 Firefox, 246
+
+**`FLUSH PRIVILEGES`**, 263
+
+HTML 错误, 246–247
+
+JavaScript, 459
+
+MySQL 技术, 262–263
+
+PHP 脚本, 5, 8, 33, 259–261
+
+使用 **`phpinfo()`** 脚本, 245
+
+SQL 技术, 262–263
+
+步骤, 243–244
+
+使用 **`display_errors`**, 33
+
+验证工具, 246
+
+小数与整数, 25
+
+递减运算符, 符号, 23
+
+**`define()`** 函数, 配合常量使用, 26
+
+**`DELETE`** 命令, 151
+
+**`delete_user.php`** 脚本, 303–305
+
+删除
+
+受约束记录, 201
+
+Cookie, 384–385
+
+数据, 151–152
+
+记录, 297
+
+会话变量, 393
+
+会话, 393–395
+
+**`die()`** 函数, 用于调试, 261, 270
+
+*display_errors*, 248–249
+
+确认, 33
+
+关闭, 8
+
+用于调试, 33
+
+用于调试脚本, 259
+
+**`display_errors.php`**, 打开, 251
+
+除法运算符, 符号, 23
+
+**`do...while`**, 70
+
+文档, 组织, 271
+
+美元符号 (**`$`**)
+
+代码, 29–31
+
+配合变量使用, 14
+
+DOM 操作, 473–478
+
+双 (**`"`**) 引号, 29–31
+
+双等号 (**`==`**) 与等号 (**`=`**), 47
+
+**`DROP`** 命令, 152
+
+动态网站. *另请参阅* 外部文件; HTML 表单; 网站
+
+维护简易性, 78
+
+处理 HTML 表单, 85–90
+
+**`.html`** 文件扩展名, 78
+
+**`.inc`** 文件扩展名, 78
+
+包含多个文件, 78–84
+
+**`$page_title`** 变量, 82
+
+安全性, 78
+
+粘性表单, 91–94
+
+结构, 78
+
+#### E
+
+**`echo`** 语言结构
+
+向浏览器发送 HTML 代码, 8
+
+使用, 6–7
+
+跨多行使用, 9
+
+用于调试脚本, 260
+
+**`echo`** 语句
+
+连接示例, 21
+
+在 HTML 表单中, 43
+
+配合字符串使用, 20
+
+电子商务
+
+**`add_artist.php`** 文档, 613–618
+
+**`add_cart.php`** 脚本, 645–648
+
+**`add_print.php`** 文档, 618–628
+
+*artists* 表, 606, 608
+
+**`browse_prints.php`** 文档, 634–637
+
+结账流程, 654
+
+**`checkout.php`** 脚本, 655–658
+
+*customers* 表, 607, 609
+
+数据库, 606–611
+
+**`footer.html`** 文档, 631
+
+**`header.html`** 文档, 629–630
+
+**`index.php`** 文档, 631–632
+
+*order_contents* 表, 607, 610
+
+*orders* 表, 607, 609
+
+*prints* 表, 606, 608–609
+
+产品目录, 633–644
+
+公共模板, 629–632
+
+记录订单, 654–658
+
+安全性, 611
+
+购物车, 645–653
+
+**`show_image.php`** 文档, 642–644
+
+**`view_cart.php`** 脚本, 648–653
+
+**`view_print.php`** 文档, 638–642, 644
+
+**`edit_user.php`** 脚本, 309–311
+
+**`else`** 条件, 45
+
+**`elseif`** 条件, 45
+
+发送邮件, 330–335
+
+**`email.php`** 脚本, 332–333
+
+**`array_map()`** 函数, 408
+
+防止垃圾邮件, 404
+
+**`empty()`** 函数, 配合表单使用, 49
+
+空变量值错误, 258
+
+编码
+
+声明外部 CSS 文件编码, 5
+
+解释, 2
+
+指示 Web 浏览器, 2
+
+列表, 184
+
+加密数据库, 237–239. *另请参阅* 安全方法
+
+**`enctype`**, 包含在 **`form`** 标签中, 342, 347
+
+**`ENUM`** 类型, 排序, 146
+
+等号 (**`=`**) 与双等号 (**`==`**), 47
+
+ERD (实体关系图)
+
+示例, 178
+
+解释, 169
+
+*error* CSS 类, 定义, 51
+
+错误处理器, 自定义, 253–257
+
+错误管理
+
+**`die()`** 函数, 261
+
+**`exit()`** 函数, 261
+
+错误消息. *另请参阅* 调试
+
+访问被拒绝, 263
+
+*call to undefined function* 错误, 97
+
+MySQL 中的列值, 137
+
+删除父记录, 195
+
+**`SHOW WARNINGS`** 命令, 137
+
+信任, 33
+
+*Undefined variable: variablename*, 44
+
+错误报告
+
+在 PHP 中调整, 250–252
+
+级别, 250
+
+通知, 250
+
+警告, 250
+
+错误
+
+书中错误, 247
+
+**`display_errors`**, 248–249
+
+PHP, 248–249
+
+使用 @ 抑制, 250
+
+语法错误, 242
+
+类型, 242–243
+
+转义 (**`\`**), 6
+
+转义序列, 29
+
+**`exit()`** 函数, 用于调试, 261
+
+**`EXPLAIN`** 命令, 231, 233
+
+扩展名, 4
+
+外部文件. *另请参阅* 网站
+
+绝对路径, 76
+
+**`include()`** 函数, 76–77, 82
+
+引用, 76
+
+相对路径, 76
+
+**`require()`** 函数, 76–77
+
+
+
+
+using, 78
+
+#### F
+
+**`fetch_object()`** 方法，507
+
+文件扩展名，4
+
+文件未找到错误，接收，5
+
+文件上传
+
+允许，336–337
+
+配置，336
+
+**`$_FILES`** 数组，342
+
+配合 PHP 使用，342–347
+
+准备服务器，338–341
+
+安全的文件夹权限，337
+
+Unix **`chmod`** 命令，341
+
+Fileinfo 扩展，415–416
+
+文件
+
+包含多个文件，76–84
+
+按类型验证，414–417
+
+**`$_FILES`** 数组，配合上传使用，342
+
+过滤器，421–424
+
+清理，421
+
+验证，421
+
+Firefox，用于调试，246
+
+第一范式 (1NF)，169–171
+
+**`first.php`** 文档
+
+创建，3
+
+在浏览器中运行，4
+
+保存，4
+
+向 Web 浏览器发送数据，7
+
+**`FLOOR()`** 函数，157
+
+**`FLUSH PRIVILEGES`**，用于调试，263
+
+文件夹权限，保护，337
+
+页脚文件，在 HTML 表单中包含，90
+
+**`footer.html`** 文件
+
+创建，81
+
+保存，82
+
+**`for`** 循环。另请参阅 循环
+
+示例，69
+
+功能，70
+
+将 **`foreach`** 循环重写为，70–71
+
+**`foreach`** 循环。另请参阅 循环
+
+重写为 **`for`** 循环，70–71
+
+配合数组使用，58–61，63–64
+
+外键约束
+
+*accounts* 表，198
+
+操作选项，195
+
+银行数据库，197
+
+**`CASCADE`** 操作，196
+
+创建，197–201
+
+*customers* 表，197
+
+**`ON DELETE`** *action*，195
+
+解释，195–196
+
+对 **`INSERT`** 查询的影响，195
+
+填充表，200
+
+语法，195
+
+*transactions* 表，199
+
+**`ON UPDATE`** *action*，195
+
+表单数据
+
+向 HTML **`head`** 添加 CSS，51
+
+**`empty()`** 函数，49，51
+
+*error* CSS 类，51
+
+**`if-else`** 条件语句，52
+
+**`is_numeric()`** 函数，53
+
+**`isset()`** 函数，49，51
+
+验证，49–53
+
+验证 gender 变量，51–52
+
+**`form`** 标签
+
+**`action`** 属性，36
+
+**`enctype`** 部分，342，347
+
+**`method`** 属性，36
+
+指定编码，40
+
+在 HTML 表单中使用，36，38
+
+**`FORMAT()`** 函数，157
+
+**`*_FORMAT`** 参数，日期和时间，162
+
+**`form.html`** 文档
+
+创建，37
+
+保存，40
+
+测试，43
+
+表单。另请参阅 HTML 表单
+
+防止自动提交，408
+
+验证，56
+
+验证错误，279
+
+论坛数据库，175。另请参阅 留言板
+
+原子性，170
+
+创建，186
+
+ERD（实体-关系图），解释，178
+
+索引，181
+
+项目，166–167
+
+表类型，182
+
+时区，190–194
+
+论坛页面，为留言板创建，538–542
+
+*forums* 表，创建，186
+
+**`FULLTEXT`** 索引，添加，180，223–224
+
+**`FULLTEXT`** 搜索
+
+布尔模式，227–229
+
+执行，222–226
+
+**`function.js`** 文档
+
+创建，350
+
+保存，352
+
+函数。另请参阅 MySQL 函数；PHP 函数；用户定义函数
+
+**`[]`**（方括号），104
+
+应用于列值，153
+
+避免在函数中使用全局变量，109
+
+调用并返回数组，108
+
+日期和时间函数，159
+
+错误，258
+
+分组，214
+
+用于数字，23
+
+数值函数，157–158
+
+可选参数，104
+
+返回多个值，108
+
+在 PHP 手册中搜索，22
+
+用于字符串，22
+
+文本函数，154–156
+
+类型验证，409
+
+#### G
+
+垃圾回收，394
+
+性别单选按钮，验证，46
+
+gender 变量，验证，51–52
+
+**`GET`** 请求，配合 HTML 表单使用，85
+
+**`$_GET`** 变量与变量作用域，109
+
+**`getdate()`** 数组，363
+
+**`getimagesize()`** 数组，352
+
+**`$GLOBALS`** 数组，添加元素到，109
+
+大于（**`>`**）运算符，45
+
+大于或等于（**`>=`**）运算符，45
+
+**`GREATEST()`** 函数，218
+
+**`GROUP BY`** 子句，配合连接使用，215
+
+**`GROUP_CONCAT()`** 分组函数，214
+
+分组
+
+函数，214–215
+
+数据，216–217
+
+#### H
+
+**`handle_form.php`** 文档
+
+用于数组，56–57
+
+条件语句示例，46–48
+
+创建，42
+
+保存，43，53
+
+在其中使用 **`stripslashes()`** 函数，44
+
+验证表单数据，49–53
+
+**`HAVING`** 子句，解释，217
+
+**`header()`** 函数，356–361
+
+**`header.html`** 文件
+
+用于注销链接，386
+
+修改，266–267
+
+保存，81，266
+
+用于会话变量，392
+
+*headers already sent* 错误，258
+
+隐藏表单输入，304–308
+
+主页，为留言板创建，537
+
+**`HOUR()`** 函数，159
+
+**`.htaccess`** 文件，337
+
+HTML
+
+使用 PHP 打印，31
+
+资源，5
+
+发送到 Web 浏览器，12
+
+HTML 属性，双引号引用，94
+
+HTML 代码，发送，8
+
+HTML 错误，调试，246–247
+
+**`.html`** 扩展名，3，78
+
+Web 页面脚本的 HTML，80
+
+HTML 表单。另请参阅 动态网站；表单；粘性表单
+
+**`age`** 元素，42
+
+开始，89
+
+**`comments`** 元素，42
+
+完成，89
+
+创建，37–40
+
+CSS（层叠样式表），37
+
+
+
+
+**`echo`** 语句，43
+
+**`email`** 元素，42
+
+**`form`** 标签的编码，39
+
+页脚文件，90
+
+表单数据变量，42
+
+**`form`** 标签，36，38
+
+**`gender`** 元素，42
+
+性别单选按钮，46
+
+**`GET`** 方法，36
+
+**`GET`** 请求，85
+
+处理，42–44，86–90
+
+**`.html`** 扩展名，39
+
+输入类型，44
+
+**`method`** 属性，36
+
+来自多维数组，64
+
+**`name`** 元素，42
+
+**`number_format()`** 函数，88
+
+执行计算，88
+
+打印中的值，42
+
+下拉菜单，39，59–60
+
+单选按钮，39，90
+
+**`$_REQUEST[]`** 变量，42–43
+
+示例脚本，37–38
+
+开始，38
+
+**`submit`** 元素，42
+
+提交回其自身，90
+
+测试，43
+
+测试提交，85–86
+
+评论文本框，39
+
+文本输入，38
+
+textarea 元素，39
+
+验证，88
+
+表单元素的变量，42
+
+HTML 源代码
+
+更改间距，9
+
+检查，33
+
+HTML 表格，创建以对数组排序，66
+
+HTML 模板脚本，79
+
+HTML5，开发，3
+
+HTML 嵌入语言，PHP 作为，2
+
+**`htmlentities()`** 函数，418–420
+
+**`.html`** 扩展名，39
+
+**`htmlspecialchars()`** 函数，418，420
+
+HTTP 标头，355–357
+
+#### I
+
+**`if`** 条件语句，45
+
+**`if-else`** 条件语句，52
+
+**`if-elseif-else`** 条件语句，47
+
+**`IFNULL()`** 函数，221
+
+**`images.php`** 文档。另请参阅 **`show_image.php`** 脚本
+
+创建，352
+
+日期和时间函数，363–365
+
+脚本，353–355
+
+**`IN`** 运算符，140
+
+**`.inc`** 文件扩展名，78
+
+**`include()`** 函数
+
+与 **`require()`** 函数对比，84
+
+使用，76–77，82
+
+递增运算符，符号，23
+
+索引页，为留言板创建，537
+
+索引
+
+创建，179–181
+
+**`FULLTEXT`**，180
+
+**`PRIMARY KEY`**，180
+
+**`UNIQUE`**，180
+
+在列上使用，179
+
+与 **`JOIN`** 连用，181
+
+**`index.php`** 文件
+
+保存，83
+
+用于创建函数，95
+
+**`ini_set()`** 函数，248–249
+
+内连接，205–207，212
+
+InnoDB 存储引擎
+
+特性，182
+
+外键约束，195
+
+与 MyISAM 对比，182
+
+整数
+
+与小数对比，25
+
+最大值，25
+
+**`is equal to`** (**`==`**) 运算符，45
+
+**`IS FALSE`** 运算符，140
+
+不等于（**`!=`**）运算符，45
+
+**`IS NOT NULL`** 运算符，140
+
+**`IS NULL`** 运算符，140–141
+
+**`IS TRUE`** 运算符，140
+
+**`is_*`** 类型验证函数，409
+
+**`is_numeric()`** 函数，配合表单使用，53
+
+**`is_uploaded_file()`** 函数，347
+
+ISO-8859-1 编码，使用，5
+
+**`isset()`** 函数
+
+配合条件语句使用，45
+
+验证表单数据，49，51
+
+#### J
+
+JavaScript
+
+**`alert()`** 调用，470
+
+调试，459
+
+事件处理，469–472
+
+表单提交，470–472
+
+表单验证，491
+
+格式化数字，472
+
+**`test.js`** 文件，470
+
+JavaScript 文件
+
+创建，349–354
+
+用 PHP 创建，352–354
+
+连接类型，232
+
+连接表，211–213
+
+连接
+
+创建，211
+
+连接中的 **`GROUP BY`** 子句，215
+
+内连接，205–207，212
+
+外连接，208–211
+
+执行，204–205
+
+自连接，210
+
+**`JOIN`**，配合索引使用，181
+
+jQuery。另请参阅 Ajax
+
+**`$(document)`**，466
+
+DOM 操作，473–478
+
+托管版，461
+
+HTML 表单，467–468
+
+引入，460–462
+
+概述，458–459
+
+选择页面元素，466–468
+
+选择 Web 文档，466
+
+**`test.html`** 脚本，462，467
+
+使用，463–465
+
+**`jQuery()`** 函数，调用，465
+
+#### K
+
+键
+
+分配，167
+
+外键，167
+
+主键，167
+
+**`ksort()`** 函数，配合数组使用，65，67
+
+#### L
+
+**`LEFT()`** 函数，154
+
+**`LENGTH()`** 函数，154，156
+
+小于（**`<`**）运算符，45
+
+小于或等于（**`<=`**）运算符，45
+
+**`LIKE`** 关键字，222
+
+字面下划线，144
+
+百分号，144
+
+使用，143–144
+
+**`LIMIT`** 子句
+
+配合查询使用，147–148
+
+配合 **`UPDATE`** 使用，150
+
+**`list()`** 函数，108
+
+**`loggedin.php`** 脚本，381，391，398
+
+逻辑运算符
+
+**`!`**（非），45
+
+**`&&`**（与），45，48
+
+**`||`**（或），45，48
+
+**`AND`**，45，48
+
+**`OR`**，45，48
+
+**`XOR`**（异或），45，48
+
+登录函数，制作，371–375
+
+登录页面，制作，368–371
+
+**`login_functions.inc.php`** 脚本，372–373
+
+**`login_page.php`** 脚本，369
+
+**`login.js`** 文件，创建，486–488
+
+**`login.php`** 脚本，378，383
+
+Ajax，481–482
+
+带加密，397
+
+带会话，389
+
+
+
+
+
+### M
+
+#### 魔术引号
+*另请参阅* 引号
+
+- **`stripslashes()`** 函数，44
+- 撤销其效果，44
+
+#### 函数与命令
+
+- **`mail()`** 函数，330–335
+- **`MAX()`** 分组函数，214
+- **`MAX_FILE_SIZE`**，347
+- **`MD5()`** 函数，135
+- **`MIN()`** 分组函数，214
+- **`MINUTE()`** 函数，159
+- **`MOD()`** 函数，157–158
+- **`MONTH()`** 函数，159
+- **`NOW()`** 函数，135，159
+- **`natsort()`** 函数，配合数组使用，68
+- **`nl2br()`** 函数，420
+
+#### 留言板
+*另请参阅* 论坛数据库
+
+- 管理，557
+- 数据库，520–528
+- 页脚文件，536
+- 论坛页面，538–542
+- **`header.html`** 模板，530–536
+- 主页，537
+- 索引页，537
+- *languages* 表，527
+- **`post_form.php`** 页面，548–551
+- 发布消息，548–557
+- **`post.php`** 文件，552–557
+- **`read.php`** 文件（用于主题页面），544–546
+- 模板，529–537
+- 主题页面，543–547
+- *threads* 表，524
+- *users* 表，525，527
+- *words* 表，526，528
+
+#### 数据库表
+
+- messages 表，创建，187
+- *movies* 表，170
+- *movies-actors* 表，171，174
+
+#### MySQL
+*另请参阅* SQL（结构化查询语言）
+
+- 访问，121–127
+- 标识符的大小写敏感性，113
+- **`CHAR()`** 函数，135
+- 列属性，118–120
+- 列类型，114–117
+- 连接到，268–272
+- 面向 OOP 的连接，497–500
+- 调试技术，262–263
+- 说明，111
+- 与列值相关的错误，137
+- **`FALSE`** 关键字，142
+- **`INSERT`** 中的 **`INTO`**，137
+- 插入行，133
+- 元素名称的长度限制，113
+- **`MD5()`** 函数，135
+- 命名数据库元素，112–113
+- 列的 **`NOT NULL`** 值，118
+- **`NOW()`** 函数，135，137
+- 列的 **`NULL`** 值，119
+- Query Browser，121
+- 选择列类型，116–117
+- **`SHA1()`** 函数，135，137，142
+- **`SHOW CHARACTER SET`** 命令，184
+- **`SHOW`** 命令，188
+- 时区，189–194
+- **`TRUE`** 关键字，142
+- *users* 表，113
+- mysql 客户端，121–124
+
+##### MySQL 数据类型
+
+- **`BIGINT`**，115
+- **`BINARY`**，117
+- **`BOOLEAN`**，117
+- **`CHAR`**，115，117
+- **`DATE`**，115
+- **`DATETIME`**，115
+- **`DECIMAL`**，115
+- **`DECIMAL`** 对比 **`FLOAT`** 或 **`DOUBLE`**，117
+- **`DOUBLE`**，115
+- **`ENUM`**，114–115
+- **`FLOAT`**，115
+- **`INSERT`**，117
+- **`INT`**，115
+- **`LONGBLOB`**，117
+- **`LONGTEXT`**，115
+- **`MEDIUMBLOB`**，117
+- **`MEDIUMINT`**，115
+- **`MEDIUMTEXT`**，115
+- **`SET`**，114–115
+- **`SHOW ENGINES`** 命令，183
+- **`SMALLINT`**，115
+- **`TEXT`**，115
+- **`TIME`**，115
+- **`TIMESTAMP`**，115，117
+- **`TINYBLOB`**，117
+- **`TINYINT`**，115，117
+- **`TINYTEXT`**，115
+- **`UPDATE`**，117
+- **`VARBINARY`**，117
+- **`VARCHAR`**，115，117
+
+- MySQL 函数，对其的支持，267。*另请参阅* 函数
+- MySQL Workbench 程序，169
+
+##### `mysqli_connect.php` 文档
+
+- 创建，268
+- 保存，270
+- 脚本，269
+- 安全性，271
+
+##### MySQLi 函数
+
+- **`mysqli_fetch_array()`** 常量，281
+- **`mysqli_num_rows()`** 函数，290–291
+- **`mysqli_real_escape_string()`** 函数，286–289，425
+
+#### N
+
+#### 特殊字符
+
+- **`\n`** (newline) 字符
+  - 转义序列，含义，29，31
+  - 打印，9
+- 换行代码，29，31
+
+#### 命名空间与规范化
+
+- 命名空间，对其的支持，496
+- 规范化
+  - 1NF（第一范式），169–171
+  - 2NF（第二范式），172–174
+  - 3NF（第三范式），175–176
+  - 定义，165
+  - 开发，166
+  - 范式，169
+  - 覆盖/凌驾，176
+  - 过程，166，169
+
+#### 运算符与关键字
+
+- not（**`!`**）运算符，45
+- **`NOT BETWEEN`** 运算符，140
+- **`NOT IN`** 运算符，140
+- **`NOT LIKE`** 关键字
+  - 字面下划线，144
+  - 百分号，144
+  - 使用，143–144
+- **`NOT`** 运算符，140
+
+#### 杂项
+
+- 记事本，避免使用，3–4
+- 通知，错误报告，250
+- **`NULL`** 类型，解释，45
+- **`NULL`** 值对比空字符串，141
+
+#### 其他条目
+
+- 注销链接，为 Cookie 创建，386–387
+- **`logout.php`** 脚本，385，393
+- 循环。*另请参阅* **`for`** 循环；**`foreach`** 循环；**`while`** 循环
+  - 条件，70
+  - **`do...while`**，70
+  - 无限，70
+  - 参数，70
+  - 使用，70–71
+  - 配合数组使用，70
+- **`LOWER()`** 函数，154
+- 多对多关系，168
+- **`matches.php`** 文档，450，452
+- 数学计算
+  - 赋值运算符，25
+  - 执行，24
+- **`meta`** 标签，在编码中使用，2
+- 元字符，在正则表达式中使用，438
+- **`method`** 属性，配合 HTML 表单使用，36
+- 取模运算符，符号，23
+- MyISAM 表类型，182
+- **`multi.php`** 文档，创建，62
+- 乘法运算符，符号，23
+
+
+
+
+**`number_format()`** 函数，23，25，88
+
+数字
+
+算术运算符，23
+
+相关函数，23
+
+引用，23
+
+楔形数，61
+
+使用，24–25
+
+配合类型转换使用，413
+
+配合变量使用，24
+
+**`numbers.php`** 文档
+
+创建，24
+
+引号示例，29–31
+
+保存，25
+
+数字类型变量，示例，23
+
+数值函数，157–158
+
+### O
+
+一对多关系，168
+
+一对一关系，168
+
+OOP（面向对象编程）。*另请参阅* 编程技术
+
+类，496
+
+**`DateTime`** 类，511–517
+
+执行查询，501–504
+
+**`fetch_object()`** 方法，507
+
+获取结果，505–507
+
+基础，494–495
+
+MySQL 连接，497–500
+
+输出参数，510
+
+预处理语句，508–510
+
+对比过程式，494
+
+PHP 中的语法，495–496
+
+操作系统（OS）常量，26
+
+运算符
+
+比较运算符，45
+
+异或运算符，48
+
+逻辑运算符，45
+
+三元运算符，317
+
+**`OPTIMIZE`** 命令，230
+
+或（**`||`**）运算符，45，48
+
+**`OR`** 运算符，45，48，140
+
+**`ORDER BY`** 子句
+
+其中的别名，155
+
+配合索引使用，180
+
+**`ORDER BY`** 子句，配合查询使用，145–146
+
+OS（操作系统）常量，26
+
+输出参数，510
+
+外连接，208–211
+
+输出缓冲，561
+
+### P
+
+分页，解释，316
+
+参数。*参见* arguments
+
+括号（（））
+
+配合子句使用，25
+
+配合函数使用，8
+
+解析错误，258
+
+针对数组，55
+
+接收，8
+
+密码，验证，277
+
+**`password.php`** 脚本，292–297
+
+路径，绝对与相对，76
+
+模式
+
+反向引用，455
+
+为正则表达式定义，438–440
+
+匹配，452–455
+
+元字符，438
+
+修饰符，450
+
+替换，452–455
+
+**`pcre.php`** 脚本
+
+字符类，444–445
+
+匹配模式，435
+
+量词，441–442
+
+报告匹配，446–449
+
+使用模式，439–440
+
+PHP
+
+调整错误报告，250–252
+
+调试技术，258–261
+
+命名空间，496
+
+PHP 中的 OOP 语法，495–496
+
+使用 PHP 更新记录，292–297
+
+PHP 和 JavaScript，348
+
+PHP 代码
+
+执行，5
+
+代码中的对象，500
+
+置于 PHP 标签中，3
+
+PHP 错误
+
+空白页，258
+
+调用未定义函数，258
+
+不能重新声明函数，258
+
+显示，248–249
+
+变量值为空，258
+
+标头已发送，258
+
+记录日志，257
+
+解析错误，258
+
+未定义变量，258
+
+**`.php`** 扩展名
+
+使用，3，78
+
+配合连接脚本使用，271
+
+PHP 文件，包含扩展名，3
+
+PHP 函数，配合 MySQL 使用，267。*另请参阅* 函数
+
+PHP **`mail()`** 依赖项，330
+
+PHP 手册，访问，22
+
+PHP 页面，存储发送至其的数据，44
+
+PHP 脚本。*另请参阅* 脚本
+
+调试，5，8，33，259–261
+
+用于 JavaScript，352–354
+
+制作，3–5
+
+通过 URL 运行，7，33
+
+发送值至，300–303
+
+编写，3
+
+PHP 标签，4
+
+**`PHP_OS`** 常量
+
+解释，26
+
+使用，27
+
+**`PHP_VERSION`** 常量
+
+解释，26
+
+使用，27，33
+
+**`phpinfo()`** 函数
+
+使用，33
+
+用于调试，245
+
+**`php.ini`** 配置文件，**`include_path`** 设置，84
+
+phpMyAdmin
+
+**`INSERT`** 表单，137
+
+**`INSERT`** 选项卡，137
+
+**`SELECT`** 查询，139
+
+**`sitename`** 数据库，132
+
+更新记录，150
+
+使用，124–127
+
+“Plain and Simple” 模板，78
+
+**`POST`** 方法，配合 HTML 表单使用，85
+
+**`$_POST`** 变量对比变量作用域，109
+
+**`post_message.php`** 脚本，427–431，508–510
+
+井号（**`#`**）符号，用于注释中，10–11
+
+**`POW()`** 函数，157
+
+优先级，解释，25
+
+**`predefined.php`** 文档
+
+创建，15
+
+保存，17
+
+**`preg_match()`** 函数，配合正则表达式使用，446–447
+
+**`preg_replace()`** 函数，452–454
+
+预处理语句
+
+在 OOP 中，508–510
+
+性能，425
+
+使用，427–431
+
+主键，分配，167
+
+**`PRIMARY KEY`** 索引，添加，180–181
+
+**`print`** 语言结构
+
+向浏览器发送 HTML 代码，8
+
+使用，6–7
+
+跨多行使用，9
+
+用于调试脚本，260
+
+**`print_r()`** 函数，500
+
+打印
+
+数组，55
+
+排序后的数组，67
+
+反斜杠，29
+
+字符，31
+
+日期，27
+
+美元符号，30–31
+
+HTML 表单，42
+
+使用 PHP 打印 HTML，31
+
+脚本名称，16
+
+操作系统信息，27
+
+接收解析错误，55
+
+PHP 版本，27
+
+引号，29
+
+HTML 表单的结果，88
+
+服务器信息，16
+
+脚本的用户信息，16
+
+表单数据的验证结果，52
+
+HTML 表单中的值，43
+
+字符串的值，18
+
+变量的值，31
+
+编程技术。*另请参阅* OOP（面向对象编程）
+
+编辑记录，309–315
+
+
+
+隐藏表单输入，304–308
+
+分页查询结果，316–322
+
+向脚本发送值，300–303
+
+可排序显示，323–327
+
+`proxy.php` 脚本，配合 HTTP 标头使用，355
+
+下拉菜单
+
+- 添加到 HTML 表单，39
+- 在粘性表单中预选，91
+- 使用数组实现，59–60
+
+### Q
+
+量词，配合正则表达式使用，441–442
+
+查询
+
+- 执行，273–280
+- 在 OOP 中执行，501–504
+- 解释，231–233
+- 识别问题，233
+- 限制结果，147–148
+- 优化，230–233
+- `ORDER BY` 子句，145–146
+- 在查询中执行计算，142
+- 查询中的引号，134
+- 排序结果，145–146
+- 在查询中指定排序规则，188
+
+查询结果
+
+- 获取，284
+- 分页，316–322
+- 检索，281–284
+
+引号。*另请参阅* Magic Quotes
+
+- 调试时检查，260
+- 转义序列，29
+- 打印，29
+- 单引号与双引号，29–31
+- 在查询中使用，134
+- 配合函数使用，6–7
+- 配合 HTML 属性使用，94
+- 配合字符串使用，18
+- 配合变量使用，14
+
+`quotes.php` 文件，保存，31
+
+#### R
+
+`\r` 转义序列，含义，29
+
+单选按钮
+
+- 添加到 HTML 表单，39
+- 在粘性表单中更改，93
+- 在粘性表单中预设，91
+- 在 HTML 表单中使用，90
+
+`RAND()` 函数，157–158
+
+RDBMS，“关系”层面，169
+
+`read.php`，为帖子页面创建，544–546
+
+记录
+
+- 统计返回数量，290–291
+- 删除，151–152，297
+- 删除受约束记录，201
+- 编辑，309–315
+- 获取，506
+- 在 *users* 表中查找，319
+- 更新，149–150
+- 使用 PHP 更新，292–297
+
+`register.php` 脚本，274–276
+
+- 修改，291
+
+`mysqli_real_escape_string()`，286–288
+
+- OOP 示例，502–504
+
+正则表达式
+
+- 边界，444
+- 字符类，443–446
+- 查找匹配，446–449
+- 匹配模式，452–455
+- 修饰符，450–451
+- 模式，438–440
+- `preg_match()` 函数，446
+- 量词，441–442
+- 减少贪婪性，447–448
+- 替换模式，452–455
+- 搜索，156
+- `strstr()` 函数，440
+- 测试脚本，434–437
+- 使用，403，409，413
+
+关系
+
+- 多对多，168
+- 一对多，168
+- 一对一，168
+
+相对路径与绝对路径，76
+
+`REPLACE` 命令，137
+
+`REPLACE()` 函数，154
+
+`$_REQUEST` 变量与变量作用域，109
+
+`require()` 函数，对比 `include()` 函数，84
+
+返回，在消息中包含，9
+
+`return` 语句，配合函数使用，105–108
+
+`RIGHT()` 函数，154
+
+`ROLLBACK` 命令，配合查询使用，233，236
+
+`round()` 函数，23
+
+`ROUND()` 函数，157
+
+行，在 MySQL 中插入，133
+
+#### S
+
+清理过滤器，421
+
+保存点，在事务中创建，236
+
+`scandir()` 函数，352
+
+模式，定义，166
+
+`script` 文件，352
+
+脚本。*另请参阅* PHP 脚本
+
+- 动态，17
+- 打印名称，16
+
+搜索，执行 `FULLTEXT`，222–226
+
+`SECOND()` 函数，159
+
+第二范式 (2NF)，172–174
+
+`second.php` 文件，保存，7
+
+安全 SQL，确保，285–289
+
+安全
+
+- 电子商务，611
+- 可排序显示的安全性，327
+
+安全方法。*另请参阅* 加密数据库
+
+- 方法，403
+- CAPTCHA 测试，408
+- Filter 扩展，421–424
+- 防止暴力攻击，431
+- 防止垃圾邮件，402–408
+- 防止 SQL 注入攻击，425–431
+- 防止 XSS 攻击，418–420
+- 建议，430
+- 按类型验证数据，409–413
+- 按类型验证文件，414–417
+
+`SELECT` 查询
+
+- 与 `*` (星号) 配合使用，138
+- 添加条件，140–143
+- 列出列，139
+- 检索列，139
+- 配合列值使用，153
+
+高级选择，218–221
+
+自连接，执行，210
+
+分号 (`;`)
+
+- 避免使用，280
+- 配合语句使用，6
+
+服务器，为文件上传做准备，338–341
+
+服务器信息，打印，16
+
+会话行为，更改，396
+
+会话固定，防止，399
+
+会话变量
+
+- 访问，390–392
+- 删除，393
+- 设置，388–389
+
+`session_start()` 函数，调用，394
+
+会话
+
+- 开始，389–390
+- 对比 Cookie，388
+- 删除，393–395
+- 销毁，393
+- 提高安全性，396–399
+- 使用，388
+
+`setcookie()` 函数，377，380
+
+- 参数，384
+- 结果，387
+
+`SHA1()` 函数，135，236，239
+
+`SHOW CHARACTER SET` 命令，184
+
+`SHOW` 命令，188
+
+`SHOW ENGINES` 命令，183
+
+`SHOW WARNINGS` 命令，137
+
+`show_image.php` 脚本。*另请参阅* `images.php` 文档
+
+- 创建，358
+- 保存，360
+
+`shuffle()` 函数，配合数组使用，68
+
+单引号 (`'`)，29–31
+
+`sitename` 数据库
+
+- 创建，130
+- `SELECT` 查询，140–142
+- *users* 表，131
+
+
+
+
+### 索引
+
+#### 符号
+
+- **`//`** (斜杠)，用于注释，10–11
+- **`\t`** 转义序列，含义，29
+- **`[ ]`** (方括号)
+  - 用于数据库，114
+  - 用于函数，104
+- **` `** (反引号)，用于 SQL 命令，137
+- **`.txt`** 扩展名，避免使用，4
+- **`Thumbs.db`** 文件，354
+- **`_`** (下划线)，用于变量，17
+- **`$_REQUEST`** (超全局变量)，44
+
+#### A
+
+- **`AUTO_INCREMENT`**，135
+
+#### C
+
+- **`CREATE DATABASE`** 语法，130
+
+#### D
+
+- **`DELETE`** 命令，151
+- **`DESCRIBE tablename`** 语法，132
+- **`DROP`** 命令，152
+
+#### E
+
+- **`echo`** 语句，20
+- **`ENUM`** 类型，排序，146
+
+#### F
+
+- 函数
+  - **`sort()`**，用于数组，65
+  - **`spam_scrubber()`**，404–406
+  - **`SQRT()`**，157
+  - **`strip_tags()`**，418，420
+  - **`stripslashes()`**，44
+  - **`strlen()`**，22
+  - **`strstr()`**，440
+  - **`strtolower()`**，22
+  - **`strtoupper()`**，22
+  - **`SUBSTRING()`**，154
+  - **`SUM()`** (分组函数)，214，217
+  - **`TRIM()`**，154
+  - **`ucfirst()`**，22
+  - **`ucwords()`**，22
+- 类型验证函数，409
+
+#### I
+
+- **`INSERT`** 命令，133–137
+- **`index.php`** 页面，83
+
+#### L
+
+- **`LIKE`**，143–144
+- **`LIMIT`** 子句，147–148
+
+#### N
+
+- **`NOT LIKE`**，143–144
+- **`NULL`** 值，133
+
+#### R
+
+- **`REPLACE`** 命令，137
+
+#### S
+
+- **`SELECT`** 查询，138–139
+- **`SHOW COLUMNS FROM tablename`**，132
+- **`SHOW TABLES`** 语法，132
+- **`sorting.php`** 文档
+  - 创建，66
+  - 保存，68
+- **`strings.php`** 文档
+  - 连接示例，21–22
+  - 创建，19
+  - 保存，20
+- **`style.css`** 文件，下载，79
+- **`switch`** 条件语句，48
+
+#### T
+
+- **`TRUNCATE`** 命令，297
+- **`TRUNCATE TABLE`** 命令，151
+
+#### U
+
+- **`UNIQUE`** 索引，添加，180
+- **`UPDATE`** 语法，149–150
+
+#### 综合主题
+
+##### 排序
+
+- 数组，65–68
+- **`ENUM`** 类型，146
+- 查询结果，145–146
+- 可排序显示，制作，323–327
+
+##### SQL (Structured Query Language)
+
+*另请参阅* MySQL
+
+- 别名，153，155
+- 字符集，132
+- 排序规则，132
+- 条件语句，140–142
+- 确认表，132
+- 创建数据库，130–132
+- 创建表，130–132
+- 日期和时间函数，159–161
+- 调试技术，262–263
+- 删除数据，151–152
+- 格式化日期和时间，162–163
+- 格式化文本，155–156
+- 函数，153–156
+- 插入记录，133–137
+- 限制查询结果，147–148
+- 列出列，132
+- 数值函数，157–158
+- 查询中的引号，134
+- 安全防护，285–289
+- 指定排序规则，132
+- 表类型，132
+- 文本列，132
+- 文本函数，154–155
+- 更新数据，149–150
+- *users* 表，131
+- **`WHERE`** 子句，140–141
+
+###### SQL 命令
+
+- 反引号 (**`` ` ``**)，137
+- 输入，127
+- **`REPLACE`**，137
+- **`SELECT`**，138–139
+
+###### SQL 注入攻击
+
+- 绑定值类型，426
+- 预处理语句，427–431
+- 预防，425–431
+
+##### 粘性表单
+
+*另请参阅* HTML 表单
+
+- 更改距离输入，92
+- 更改单选按钮，93
+- 描述，91
+- 制作，92–94
+- 预选下拉菜单，91
+- 预设单选按钮状态，91
+- 预设文本域值，91
+- 选择菜单选项，94
+- 使用，309，314–315
+- **`value`** 属性，91
+
+##### 存储引擎
+
+- 定义，182
+
+##### 字符串
+
+*另请参阅* 变量
+
+- 与数组，65
+- 赋值给变量，18
+- 计算长度，22
+- 比较，143
+- 连接，21–22
+- 转换大小写，22
+- 创建，18
+- 定义，18
+- 函数，22
+- 匹配，222
+- 打印值，18
+- 大小考量，20
+- 使用，19–20
+- 使用引号，18
+- 结合变量使用，19
+
+##### 表类型
+
+- 确认，223
+- 建立，183
+- 查找，183
+- MyISAM，182
+- 存储引擎，182
+- 使用，182
+
+##### 模板系统
+
+- 创建，77–78
+- 头部文件，266–267
+- **`index.php`** 页面，83
+
+##### 文本
+
+- 转换，188
+- 格式化，155–156
+
+##### 文本编辑器
+
+- 3
+
+##### 文本域元素
+
+- 添加到 HTML 表单，39
+- 在粘性表单中预设值，91
+
+##### 第三范式 (3NF)
+
+- 175–176
+
+##### 线程页面
+
+- 为留言板创建，543–547
+
+##### 时间
+
+*参见* 日期和时间
+
+##### 时区
+
+- 更改，190
+
+##### 事务
+
+- 创建保存点，236
+- 执行，234–236
+- 触发器与约束对比，201
+
+##### 类型转换
+
+- 410–413
+
+##### 未定义变量错误
+
+- 258
+- "Undefined variable: variablename" 错误，44
+
+##### 其他
+
+- 垃圾邮件，预防，402–408
+- 特殊字符，打印，31
+- 楔形数，创建数组，61
+- 空格，连接到变量，21
+- 间距，在网页中更改，9
+- 制表符代码，29
+- 字符串相等性，检查，143
+- 减法运算符，符号，23
+- 语法错误，242
+- 三元运算符，结构，317
+
+
+
+
+
+### 索引
+
+#### U
+
+Unix `chmod` 命令，用于文件上传，341
+
+`UNIX_TIMESTAMP()` 函数，159
+
+`UPDATE` 查询，运行，292–297
+
+`UPDATE` 语法，149–150
+
+`upload_image.php` 文档，343–345
+
+`upload_rtf.php` 脚本，415–417
+
+`UPPER()` 函数，153–154
+
+##### URLs
+
+向 URL 追加变量，303
+
+在 PHP 脚本中使用 URL，5、7、33
+
+打印用户信息，16
+
+##### 用户注册
+
+账户激活，586–588
+
+激活页面，586–588
+
+激活流程，583
+
+`change_password.php` 脚本，599–603
+
+配置脚本，566–573
+
+数据库连接，571–573
+
+数据库脚本，570
+
+`footer.html` 文件，563–565
+
+`forgot_password.php` 脚本，594–599
+
+`header.html` 文件，560–562
+
+主页，574–575
+
+`index.php` 脚本，574–575
+
+`login.php` 脚本，589–592
+
+`logout.php` 脚本，593
+
+输出缓冲，561
+
+密码管理，594–603
+
+`register.php` 脚本，576–585
+
+站点管理，602
+
+模板，560–565
+
+##### 用户自定义函数
+
+*另请参阅* 函数
+
+计算脚本，105–107
+
+创建后调用，97
+
+大小写不敏感，95
+
+`create_ad()`，97
+
+创建，95–97
+
+默认参数值，101–104
+
+内存使用，97
+
+命名，95
+
+`return` 语句，105
+
+从函数返回值，105–108
+
+接受参数，97–100
+
+变量作用域，109
+
+##### `users` 表
+
+创建，187
+
+在表中查找记录，319
+
+`usort()` 函数，配合数组使用，68
+
+##### UTC (协调世界时)
+
+解释，189
+
+使用，191–194
+
+UTC 偏移量表，189
+
+`UTC_TIMESTAMP()` 函数，159
+
+UTF-8 字符，增加列大小以支持，188
+
+UTF-8 编码，2、185、191
+
+#### V
+
+按类型验证文件，414–417
+
+##### 验证
+
+黑名单，409
+
+类型转换，410–413
+
+白名单，409
+
+验证错误，报告表单，279
+
+验证过滤器，421
+
+使用验证工具进行调试，246
+
+`$var`，移除反斜杠，44
+
+`VARCHAR` 对比 `CHAR`，117
+
+替换变量名，29
+
+##### 变量作用域
+
+修改，109
+
+规避，109
+
+`global` 语句，109
+
+超全局变量替代方案，109
+
+##### 变量
+
+*另请参阅* 字符串
+
+向函数定义添加变量，97
+
+向 URL 追加变量，303
+
+数组，14
+
+赋值，14、20
+
+赋值运算符（`=`），14
+
+布尔值，14
+
+大小写敏感，14
+
+确认变量值，44
+
+对比常量，26
+
+定义，14
+
+浮点数，14
+
+包含下划线，17
+
+整数，14
+
+命名，14、17
+
+非标量，14
+
+NULL，14
+
+对象，14
+
+省略空格，17
+
+前缀 `$`（美元符号），14
+
+预定义变量，14
+
+打印变量，14–15
+
+打印变量值，31
+
+标量，14
+
+简写版本，16
+
+字符串，14
+
+超全局变量，44
+
+语法规则，14
+
+调试时跟踪变量，260
+
+变量处理，17
+
+类型转换，410
+
+使用变量，15–17
+
+配合数字使用，24
+
+配合字符串使用，19
+
+PHP 版本常量，26、33
+
+`view_users.php` 脚本，282–283、300–302
+
+修改，290–291
+
+OOP 示例，506–507
+
+分页，316–322
+
+可排序显示，323–325
+
+#### W
+
+警告，错误报告，250
+
+##### Web 应用程序
+
+日期和时间函数，362–365
+
+文件上传，336–338
+
+PHP 文件上传，342–347
+
+HTTP 头部，355–361
+
+PHP 和 JavaScript，348–354
+
+为上传准备服务器，338–341
+
+发送邮件，330–335
+
+##### Web 浏览器
+
+向浏览器发送数据，7–9
+
+向浏览器发送 HTML，12
+
+Web 页面，修改页面中的间距，9
+
+Web 站点，动态对比静态，75 *另请参阅* 动态 Web 站点
+
+`WHEN...THEN` 子句，219
+
+`WHERE` 子句，140–141
+
+配合索引使用，180
+
+配合 `UPDATE` 使用，150
+
+##### `while` 循环
+
+*另请参阅* 循环
+
+示例，69
+
+功能，70
+
+空白区域，9
+
+白名单验证，409
+
+配合 `LIKE` 和 `NOT LIKE` 使用通配符，144
+
+`WITH QUERY EXPANSION` 修饰符，229
+
+`wordwrap()` 函数，333
+
+`www.query.com`，加载，461
+
+#### X
+
+XHTML，资源，5
+
+XHTML 1.0 Transitional 文档，2
+
+XML 风格标签，4
+
+`XOR`（异或）运算符，45、48、140
+
+XSS 攻击，防范，418–420
+
+`xss.php` 脚本，419
+
+#### Y
+
+`YEAR()` 函数，159
+
+#### Z
+
+Z (Zulu) 时间
+
+解释，189
+
+使用，191–194
+
+## 附录 A：安装
+
+---
+
+感谢下载《PHP 和 MySQL 动态网站开发：Visual QuickPro 指南》（第 4 版）的附录 A，作者 Larry Ullman（Peachpit Press，2011 年出版）。
+
+---
+
+
+
+
+
+本书所有示例的运行需要满足三个技术要求：MySQL（数据库应用程序）、PHP（脚本语言）和 Web 服务器应用程序（PHP 通过它运行）。本附录介绍了在两个不同平台（Windows 7 和 Mac OS X）上安装这些工具的方法。如果您使用的是托管网站，所有这些都已为您提供，但这些产品都是免费且易于安装的，因此在自己的计算机上安装它们仍然很有意义。
+
+在介绍完安装后，附录将讨论几乎每个用户都会关心的相关问题。首先，我将介绍如何在 MySQL 中创建用户。接下来，我将演示如何测试您的 PHP 和 MySQL 安装，展示您在第一次使用任何服务器时都会用到的技巧。然后，您将学习如何配置 PHP 以改变其运行方式。最后，本版新增内容，我将介绍如何更改 Apache Web 服务器的行为，以满足常见需求。
+
+### Windows 平台安装
+
+虽然您当然可以在 Windows 计算机上单独安装 Web 服务器（如 Apache、Abyss 或 IIS）、PHP 和 MySQL，但我强烈建议您使用一站式安装程序。这样做更简单、更可靠。
+
+Windows 平台上有多个一站式安装程序。最常被提及的两个是 XAMPP（**[www.apachefriends.org](http://www.apachefriends.org)**）和 WAMP（**[www.wampserver.com](http://www.wampserver.com)**）。本附录将使用 XAMPP，它可在大多数 Windows 版本上运行。
+
+除了 Apache、PHP 和 MySQL，XAMPP 还会安装：
+
+*   PEAR（PHP 扩展与应用仓库），一个 PHP 代码库
+*   Perl，一种非常流行的编程语言
+*   phpMyAdmin，基于 Web 的 MySQL 服务器管理界面
+*   邮件服务器（用于发送邮件）
+*   若干实用扩展
+
+编写本文时，XAMPP（版本 1.7.4）安装的版本为：PHP 5.3.5、MySQL 5.5.8、Apache 2.2.17 和 phpMyAdmin 3.3.9。
+
+下面我将逐步讲解安装过程。请注意，如果您遇到任何问题，可以使用本书的支持论坛（**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)**），但您可能更容易在 XAMPP 官网找到帮助（毕竟是他们的产品）。此外，安装程序运行良好且不难使用，因此我不会详述每一个步骤，而是重点介绍最重要的注意事项。
+
+#### 在 Windows 上安装 XAMPP
+
+**1.** 从 **[www.apachefriends.org](http://www.apachefriends.org)** 下载最新版的 Windows 版 XAMPP。
+
+您需要点击几下才能找到下载部分，但最终您会来到一个可以找到下载 ![Image](img/circle-a.jpg) 的区域。然后点击 *EXE*，这是您想要的特定项目。
+
+![Image](img/20_figure_01_a.jpg)
+
+![Image](img/circle-a.jpg) 从 Apache Friends 网站获取最新的 Windows 安装程序。
+
+**2.** 在您的计算机上，双击下载的文件以开始安装过程。
+
+**3.** 如果提示，请将 XAMPP 安装在 `Program Files` 目录以外的位置。
+
+> **关于防火墙**
+>
+> 防火墙会阻止通过*端口*（端口是计算机的访问入口）进行通信。从 XP Service Pack 2 开始的 Windows 版本包含内置防火墙。您也可以下载并安装第三方防火墙。防火墙提高了计算机的安全性，但也可能干扰您运行 Apache、MySQL 以及 XAMPP 使用的其他工具，因为它们都要使用端口。
+>
+> 运行 XAMPP 时，如果看到安全提示表明防火墙正在阻止 Apache、MySQL 等，请根据使用的 Windows 版本选择“取消阻止”或“允许”。否则，您可以手动配置防火墙（例如在 Windows 7 上，通过“控制面板” > “系统和安全”进行配置）。需要开放的端口如下：80（用于 Apache）、3306（用于 MySQL）和 25（用于 Mercury 邮件服务器）。如果您在启动或访问其中任何一个时遇到问题，请禁用防火墙看看是否能工作。如果可以，您就知道是防火墙的问题，需要重新配置它。
+>
+> 为了清楚起见，防火墙不仅存在于 Windows 上，但就本附录的说明而言，防火墙的存在更有可能困扰 Windows 用户，而非其他用户。
+
+您不应该将其安装在 `Program Files` 目录中，因为在某些 Windows 版本上存在权限问题。我建议将 XAMPP 安装在根目录下（例如 **`C:\`**）。
+
+无论您决定将程序安装在何处，请记下该位置，因为在学习本附录的过程中，您还需要多次用到它。
+
+**4.** 如果需要，创建桌面和“开始”菜单快捷方式 ![Image](img/circle-b.jpg)。
+
+![Image](img/20_figure_02_b.jpg)
+
+![Image](img/circle-b.jpg) 选择您想要的其他安装选项。
+
+**5.** 继续完成剩余提示，阅读它们并按 Enter/Return 键继续。
+
+**6.** 安装过程完成后 ![Image](img/circle-c.jpg)，点击“Yes”启动控制面板。
+
+![Image](img/20_figure_03_c.jpg)
+
+![Image](img/circle-c.jpg) XAMPP 安装完成！
+
+**7.** 根据需要，使用 XAMPP 控制面板启动、停止和配置 XAMPP ![Image](img/circle-d.jpg)。
+
+![Image](img/20_figure_04_d.jpg)
+
+![Image](img/circle-d.jpg) XAMPP 控制面板，用于管理软件。
+
+**8.** 根据需要，使用控制面板启动 Apache、MySQL 和 Mercury。
+
+本书每一章都需要 Apache 运行。大约一半的章节需要 MySQL 运行。Mercury 是 XAMPP 安装的邮件服务器。要使用 PHP 发送电子邮件（参见第 11 章“Web 应用程序开发”），Mercury 必须处于运行状态。
+
+**9.** 立即为 root MySQL 用户设置密码。
+
+具体操作方法将在本附录后面解释。
+
+> **提示**
+>
+> XAMPP 控制面板的各种管理链接将带您进入不同的网页（在您的服务器上）和其他资源 ![Image](img/circle-e.jpg)。
+>
+> ![Image](img/20_figure_05_e.jpg)
+>
+> ![Image](img/circle-e.jpg) 从控制面板链接的 XAMPP 基于 Web 的启动页面。
+
+> **提示**
+>
+> 请参阅“PHP 配置”部分，了解如何通过编辑 **`php.ini`** 文件来配置 PHP。
+
+> **提示**
+>
+> 您的 Web 根目录（即存放 PHP 脚本以便测试的位置）是 XAMPP 安装目录下的 **`htdocs`** 文件夹。按照这些安装说明，该路径应为 **`C:\xampp\htdocs`**。
+
+> **提示**
+>
+> 在 64 位 Windows 7 上使用 XAMPP 1.7.4 启动 XAMPP 控制面板时，我始终会看到关于“状态检查失败”的错误消息。我从未找到原因，但该错误并不妨碍 XAMPP 完全正常使用。
+
+### Mac OS X 平台安装
+
+虽然 Mac OS X 自带 Apache，且安装 MySQL 也不难，但我建议初学者采用一种更通用、更万无一失的方法，使用一站式 MAMP 安装程序（**[www.mamp.info](http://www.mamp.info)**）。它提供免费版和商业版，非常易于使用，且不会影响操作系统内置的 Apache 服务器。
+
+除了 Apache、PHP 和 MySQL，MAMP 还会安装 phpMyAdmin（基于 Web 的 MySQL 服务器管理界面）以及大量实用的 PHP 扩展。编写本文时，MAMP（版本 1.9.6.1）安装的版本包括 PHP 5.2.13 和 5.3.2、MySQL 5.1.44、Apache 2.0.63 和 phpMyAdmin 3.2.5。
+
+
+
+
+
+#### 在 Mac OS X 上安装 MAMP
+
+我将在接下来的步骤中介绍安装过程。如果您遇到任何问题，可以使用本书的配套论坛 (www.LarryUllman.com/forums/)，但您可能会发现直接求助 MAMP 官网更有效（毕竟这是他们的产品）。此外，安装程序运行良好且并不难用，因此我不会详述过程中的每一步，而是重点介绍最重要的注意事项。
+
+#### 在 Mac OS X 上安装 MAMP
+
+**1.** 从 www.mamp.info 下载最新版本的 MAMP。
+
+在首页上，点击 *Downloads*，然后点击 *Download: MAMP & MAMP PRO 1.9.6.1* ![Image](img/circle-a.jpg)。（随着 MAMP 新版本的发布，链接和文件名显然会相应变化。）
+
+![Image](img/20_figure_06_a.jpg)
+
+![Image](img/circle-a.jpg) 从 www.mamp.info 的此页面下载 MAMP。
+
+同一个下载文件同时包含这两个产品。事实上，MAMP Pro 只是一个用于控制和自定义同一 MAMP 软件的更友好的界面。
+
+**2.** 在您的电脑上，双击下载的文件以挂载磁盘映像 ![Image](img/circle-b.jpg)。
+
+![Image](img/20_figure_07_b.jpg)
+
+![Image](img/circle-b.jpg) 下载的 MAMP 磁盘映像的内容。
+
+**3.** 将磁盘映像中的 `MAMP` 文件夹复制到您的 `Applications`（应用程序）文件夹中。
+
+如果您认为可能更倾向于商业版 MAMP PRO，请也复制该文件夹（同样，它是 MAMP 的一个界面，因此需要两个文件夹）。MAMP PRO 附带 14 天免费试用期。
+
+无论您选择哪个文件夹，请注意您**必须**将其放置在 `Applications` 文件夹内。它不能放在子文件夹或电脑上的其他目录中。
+
+**4.** 打开 `/Applications/MAMP`（或 `/Applications/MAMP PRO`）文件夹。
+
+**5.** 双击 MAMP（或 MAMP PRO）应用程序以启动程序 ![Image](img/circle-c.jpg)。
+
+![Image](img/20_figure_08_c.jpg)
+
+![Image](img/circle-c.jpg) 简单的 MAMP 应用程序，用于控制和配置 Apache、PHP 和 MySQL。
+
+启动服务器可能只需片刻，但随后您将看到类似于 ![Image](img/graycircle-c.jpg)（针对 MAMP）或 ![Image](img/circle-d.jpg)（针对 MAMP PRO）的结果。
+
+![Image](img/20_figure_09_d.jpg)
+
+![Image](img/circle-d.jpg) MAMP PRO 应用程序，用于控制和配置 Apache、PHP、MySQL 等。
+
+启动 MAMP 时，起始页面也应在您的默认 Web 浏览器中打开 ![Image](img/circle-e.jpg)。通过此页面，您可以查看正在运行的 PHP 版本及其配置方式，并使用 phpMyAdmin 与 MySQL 数据库进行交互。
+
+![Image](img/20_figure_10_e.jpg)
+
+![Image](img/circle-e.jpg) MAMP Web 起始页面。
+
+使用 MAMP PRO，您可以通过点击 WebStart 按钮 ![Image](img/circle-d.jpg) 访问同一页面。
+
+**6.** 要启动、停止和配置 MAMP，请使用 MAMP 或 MAMP PRO 应用程序 ![Image](img/circle-c.jpg) 或 ![Image](img/circle-d.jpg)。
+
+MAMP 应用程序本身没有太多内容（这是一件好事），但如果您点击 Preferences（偏好设置），可以调整应用程序的行为 ![Image](img/circle-f.jpg)、设置要运行的 PHP 版本等。
+
+![Image](img/20_figure_11_f.jpg)
+
+![Image](img/circle-f.jpg) 这些选项决定了启动和停止 MAMP 应用程序时会发生什么。
+
+MAMP PRO 还可以轻松创建不同的*虚拟主机*（即不同的站点；稍后在本附录中单独讨论）、调整 Apache 的配置和运行方式、使用动态 DNS、更改邮件发送方式等。
+
+**7.** 立即更改 root MySQL 用户的密码。
+
+如何执行此操作将在本附录后面解释。
+
+***
+
+> **Tip**
+>
+> 就我个人而言，我很欣赏 MAMP 本身有多么出色，而且它是免费的。我也不喜欢花钱，但我发现购买 MAMP PRO 物有所值，因为它的价格相对较低。
+
+***
+
+> **Tip**
+>
+> 请参阅“PHP 配置”部分，了解如何通过编辑 `php.ini` 文件来配置 PHP。
+
+***
+
+> **Tip**
+>
+> MAMP 还附带一个 Dashboard（仪表盘）小组件，您可以用它来控制 Apache 和 MySQL 服务器。
+
+***
+
+> **Tip**
+>
+> 您的 Web 根目录——即为了测试而放置 PHP 脚本的位置——是 MAMP 安装目录中的 `htdocs` 文件夹。对于未经修改的标准 MAMP 安装，这将是 `Applications/MAMP/htdocs`。
+
+***
+
+> **Tip**
+>
+> 您可能想要将 Apache Document Root（文档根目录） ![Image](img/circle-g.jpg) 更改为主文件夹中的 `Sites` 目录。这样做可以确保您的 Web 文档将与其他文件一起被备份（而且您正在定期进行备份，对吧？）。
+
+![Image](img/20_figure_12_g.jpg)
+
+![Image](img/circle-g.jpg) MAMP 允许您更改 Web 文档的放置位置。
+
+***
+
+### 管理 MySQL 用户
+
+一旦您成功安装了 MySQL，就可以开始创建 MySQL 用户。MySQL 用户是一个基本的安全概念，用于限制对存储数据的访问和影响。为了澄清，您的数据库可以有多个不同的用户，就像您的操作系统可能有多个用户一样。但 MySQL 用户不同于操作系统用户。在您自己的电脑上学习 PHP 和 MySQL 时，不一定需要创建新用户，但实际生产站点需要拥有具有适当权限的专用 MySQL 用户。
+
+初始 MySQL 安装附带一个用户（名为 `root`），且未设置密码（使用 MAMP 时除外，MAMP 会设置默认密码为 `root`）。至少，您应该在安装 MySQL 后为 root 用户创建一个新的、安全的密码。之后，您可以创建其他权限更有限的用户。作为一条规则，您不应该将 root 用户用于正常的日常操作。
+
+在接下来的几页中，我将引导您完成这两个过程。请注意，如果您使用的是托管服务器，他们很可能会为您创建 MySQL 用户。这些说明需要使用命令行 mysql 客户端或 phpMyAdmin。如果您不知道如何在电脑上访问其中任何一个，请快速阅读第 4 章“MySQL 简介”中的 *Accessing MySQL*（访问 MySQL）部分。
+
+#### 设置 root 用户密码
+
+当您安装 MySQL 时，root 用户没有设置任何值——或没有安全密码。这当然是一个安全风险，应该在您开始使用服务器之前解决（因为 root 用户拥有无限权限）。
+
+只要 MySQL 服务器正在运行，您就可以使用 phpMyAdmin 或 mysql 客户端设置任何用户的密码。如果 MySQL 当前未运行，请立即使用附录前面概述的步骤启动它。
+
+其次，您必须以 root 用户身份连接到 MySQL，才能更改 root 用户的密码。
+
+#### 通过 MySQL 客户端为 root 用户分配密码
+
+**1.** 连接到 MySQL 客户端。
+
+如有需要，请参阅第 4 章获取详细说明。
+
+**2.** 输入以下命令，将 `thepassword` 替换为您想要使用的密码 ![Image](img/circle-a.jpg)：
+
+```
+SET PASSWORD FOR 'root'@' localhost' = PASSWORD ('thepassword');
+```
+
+![Image](img/20_figure_13_a.jpg)
+
+![Image](img/circle-a.jpg) 在 MySQL 客户端中使用 SQL 更新 root 用户的密码。
+
+请记住，MySQL 中的密码区分大小写，因此 `Kazan` 和 `kazan` 不能互换。`PASSWORD` 一词位于实际引用的密码之前，告诉 MySQL 加密该字符串。并且 `PASSWORD` 和左括号之间不能有空格。
+
+**3.** 退出 MySQL 客户端：
+
+```
+exit
+```
+
+**4.** 通过再次登录 MySQL 客户端来测试新密码。
+
+
+
+
+
+现在已经设置了密码，你需要在连接命令中添加 `-p` 标志。你将看到 `Enter password:` 提示符，输入刚刚创建的密码即可。
+
+#### 通过 phpMyAdmin 为 root 用户分配密码
+
+1.  在 Web 浏览器中打开 phpMyAdmin。
+    详细说明请参阅前面的步骤。
+2.  在主页上，单击“Privileges”（权限）选项卡。
+    你始终可以单击左上角的主页图标返回主页。
+3.  在用户列表中，单击 root 用户所在行的“Edit Privileges”（编辑权限）图标 ![Image](img/circle-b.jpg)。
+    ![Image](img/20_figure_14_b.jpg)
+    ![Image](img/circle-b.jpg)phpMyAdmin 中显示的 MySQL 用户列表。
+4.  使用页面下方的“Change Password”（更改密码）表单 ![Image](img/circle-c.jpg) 来修改密码。
+    ![Image](img/20_figure_15_c.jpg)
+    ![Image](img/circle-c.jpg)phpMyAdmin 中用于更新 MySQL 用户密码的表单。
+5.  如有必要，在 phpMyAdmin 的配置文件中更改 root 用户的密码。
+    更改 root 用户密码的结果很可能是 phpMyAdmin 被拒绝访问 MySQL 服务器。这是因为 phpMyAdmin 在本地服务器上通常以 root 用户身份连接到 MySQL，且 root 用户的密码被硬编码在配置文件中。完成步骤 1-4 后，在 phpMyAdmin 目录中找到 `config.inc.php` 文件——通常位于 `/Applications/MAMP/bin/phpMyAdmin` (Mac OS X 配合 MAMP) 或 `C:\xampp\phpMyAdmin` (Windows 配合 XAMPP)。用任意文本编辑器或 IDE 打开该文件，并将下面这行代码修改为使用新密码：
+
+```
+$cfg['Servers'][$i]['password'] = 'the_new_password';
+```
+
+    然后保存文件，并在 Web 浏览器中重新加载 phpMyAdmin。
+
+#### 创建用户和权限
+
+在 MySQL 成功启动并运行后，且为 root 用户设置好密码后，你可以添加其他用户。为了提高数据库的安全性，你应该始终创建新用户来访问数据库，而不是一直使用 root 用户。
+
+MySQL 权限系统的设计是为了确保对特定数据库上的特定命令拥有适当的权限。例如，这项技术使得 Web 主机提供商可以让多个用户访问多个数据库而无需担心。MySQL 系统中的每个用户可以在特定主机（计算机）上拥有对特定数据库的特定权限。root 用户——指 MySQL 的 root 用户，而非系统的——拥有最高权限，用于创建子用户，尽管子用户也可以被赋予类似 root 的权限（但这不建议）。
+
+当用户尝试对 MySQL 服务器执行某项操作时，MySQL 首先检查该用户是否有权连接到服务器（基于用户名、用户的主机、用户的密码以及 `mysql` 数据库 `user` 表中的信息）。其次，MySQL 检查该用户是否有权在特定数据库上运行特定的 SQL 语句——例如，选择数据、插入数据或创建新表。**表 A.1** 列出了大多数可按用户设置的各种权限。
+
+**表 A.1. MySQL 权限**
+
+![Image](img/atab01.jpg)
+
+在 MySQL 中设置用户和权限有多种方法，但我将从讨论 `GRANT` 命令开始。语法如下：
+
+```
+GRANT privileges ON database.* TO 'username'@'hostname' IDENTIFIED BY 'password';
+```
+
+对于该语句的 *privileges*（权限）部分，你可以列出来自表 A.1 的特定权限，或者使用 `ALL` 来允许所有权限（这不明智）。语句中的 `database.*` 部分指定了用户可以操作的数据库和表。你可以使用 `database.tablename` 语法指定特定表，或使用 `*.*` 允许访问所有数据库（同样不明智）。最后，你可以指定用户名、主机名和密码。
+
+用户名的最大长度为 16 个字符。创建用户名时，请务必避免空格（改用下划线），并注意用户名区分大小写。
+
+主机名是允许用户连接的计算机。这可以是域名，如 `www.example.com`，也可以是 IP 地址。通常指定 `localhost` 作为主机名，意味着 MySQL 用户必须从运行 MySQL 数据库的同一台计算机上连接。要允许任何主机，请使用主机名通配符（`%`）：
+
+```
+GRANT privileges ON database.* TO 'username'@'%' IDENTIFIED BY 'password';
+```
+
+但这也不推荐。在创建用户时，最好明确且严格地限定范围。
+
+密码没有长度限制，但同样区分大小写。密码在 MySQL 数据库中是加密存储的，这意味着无法以明文格式恢复它们。省略 `IDENTIFIED BY 'password'` 子句将导致该用户无需输入密码即可登录（这同样应避免）。
+
+作为该过程的示例，你将创建两个拥有特定权限的新用户，作用于一个名为 `temp` 的新数据库。请记住，你只能对现有数据库授予用户权限。接下来的步骤也将展示如何创建数据库。
+
+#### 创建新用户
+
+1.  以 root 用户身份登录 MySQL 客户端。
+    使用第 4 章中解释的步骤执行此操作（如果你还不知道怎么做）。你必须以具有创建数据库和其他用户权限的用户身份登录。
+2.  创建 `temp` 数据库：
+
+```
+CREATE DATABASE temp;
+```
+
+    使用上述语法创建数据库非常简单。只要你以拥有适当权限的用户身份连接，此命令即可生效。
+3.  创建一个在 `temp` 数据库上拥有基本权限的用户 ![Image](img/circle-d.jpg)：
+
+```
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON temp.*
+TO
+'webuser'@'localhost'
+IDENTIFIED BY 'BroWs1ng';
+```
+
+    ![Image](img/20_figure_16_d.jpg)
+    ![Image](img/circle-d.jpg)创建一个可在一个数据库上执行基本任务的用户。
+    通用的 `webuser` 用户可以浏览记录（从表中 `SELECT`）、添加（`INSERT`）、修改（`UPDATE`）或 `DELETE` 记录。该用户只能从 `localhost`（同一台计算机）连接，且只能访问 `temp` 数据库。
+4.  应用更改 ![Image](img/circle-e.jpg)：
+
+```
+FLUSH PRIVILEGES;
+```
+
+    ![Image](img/20_figure_17_e.jpg)
+    ![Image](img/circle-e.jpg)在尝试使用新创建的用户访问 MySQL 之前，别忘了这一步。
+    刚才所做的更改不会生效，直到你告诉 MySQL 重置可接受的用户和权限列表，这正是该命令的作用。忘记这一步，然后无法使用新创建的用户访问数据库，是一个常见错误。
+
+***
+
+**提示**
+
+任何名称以 `test_` 开头的数据库，均可被任何有权连接到 MySQL 的用户修改。因此，除非确实只是实验用途，请小心不要创建以此方式命名的数据库。
+
+***
+
+***
+
+**提示**
+
+`REVOKE` 命令用于移除用户和权限。
+
+***
+
+***
+
+#### 在 phpMyAdmin 中创建用户
+
+要在 phpMyAdmin 中创建用户，首先单击 phpMyAdmin 主页上的“Privileges”（权限）选项卡。在“Privileges”页面上，单击“Add A New User”（添加新用户）。填写“Add A New User”表单以定义用户的名称、主机、密码和权限。然后单击“Go”（执行）。这将创建一个拥有全局权限但无数据库特定权限的用户。
+
+在生成的页面上，选择要应用用户权限的数据库，然后单击“Go”。在下一页中，选择该用户在该数据库上应拥有的权限，然后再次单击“Go”。这完成了为该用户在该数据库上创建权限的过程。请注意，此过程允许你轻松地为用户在不同数据库上分配不同的权限。
+
+
+
+
+
+最后，返回主页的“权限”选项卡，然后点击“重新加载权限”链接。
+
+---
+
+### 测试您的安装
+
+既然您已经安装了所有内容并创建了必要的 MySQL 用户，就应该测试一下安装。可以使用两个快速的 PHP 脚本来实现此目的。如果发生了错误，您很可能已经知道了，但这些步骤将允许您在进行复杂的 PHP 编程或 PHP 与 MySQL 编程之前，对您的（或任何其他）服务器执行测试。
+
+要运行的第一个脚本是 `phpinfo.php`。它既测试 PHP 是否已启用，又显示大量关于 PHP 安装的信息。在我看来，尽管这个脚本非常简单，但它是 PHP 开发人员编写的最重要的脚本之一，因为它提供了如此多宝贵的知识。
+
+第二个脚本将有两个用途。首先，它将查看是否已启用对 MySQL 的支持。如果没有，您需要查看本章的下一节来更改此设置。该脚本还将测试 MySQL 用户是否有权限连接到特定的 MySQL 数据库。
+
+**脚本 A.1.** `phpinfo.php` 脚本测试并报告 PHP 安装情况。
+
+---
+
+```php
+<?php
+phpinfo();
+?>
+```
+
+---
+
+#### 测试 PHP
+
+**1.** 在文本编辑器或 IDE 中创建以下 PHP 文档（**脚本 A.1**）：
+
+```php
+<?php
+phpinfo();
+?>
+```
+
+`phpinfo()` 函数以表格形式返回 PHP 安装的配置信息。它是测试 PHP 是否正常工作的完美工具。
+
+您可以使用几乎任何应用程序来创建 PHP 脚本，只要它能以纯文本格式保存文件即可。
+
+**2.** 将文件保存为 `phpinfo.php`。
+
+您需要确保文件的扩展名仅为 `.php`。在 Windows 上使用记事本时要小心，因为它会偷偷地追加 `.txt`。同样，Mac OS X 上的 TextEdit 想要将所有内容保存为 `.rtf`。
+
+**3.** 将文件放置在服务器上的适当目录中。
+
+什么是适当目录取决于您的操作系统和 Web 服务器。如果您使用的是托管网站，请咨询托管公司。对于安装了 XAMPP 的 Windows 用户，该目录称为 `htdocs`，位于 XAMPP 目录内。对于安装了 MAMP 的 Mac OS X 用户，默认目录称为 `htdocs`，位于 MAMP 文件夹内。
+
+**4.** 在 Web 浏览器中访问该 PHP 脚本以进行测试 ![Image](img/circle-a.jpg)。
+
+![Image](img/20_figure_18_a.jpg)
+
+![Image](img/circle-a.jpg)此服务器的 PHP 配置信息。
+
+在 Web 浏览器中通过访问 `http://your.url.here/phpinfo.php` 来运行此脚本。在您自己的计算机上，这可能类似于 `http://localhost/phpinfo.php`（安装了 XAMPP 的 Windows）或 `http://localhost:8888/phpinfo.php`（安装了 MAMP 的 Mac OS X）。
+
+#### 测试 PHP 和 MySQL
+
+**1.** 在文本编辑器或 IDE 中创建一个新的 PHP 文档（**脚本 A.2**）：
+
+```php
+<?php
+mysqli_connect('localhost',
+'webuser', 'BroWsIng', 'temp');
+?>
+```
+
+此脚本将尝试使用刚才在本附录中建立的用户名和密码连接到 MySQL 服务器。
+
+**2.** 将文件保存为 `mysqli_test.php`，将其放置在 Web 服务器的适当目录中，并在 Web 浏览器中测试它。
+
+如果脚本能够连接，结果将是一张空白页面。如果无法连接，您应该会看到类似 ![Image](img/circle-b.jpg) 的错误消息。这最可能表明 MySQL 用户的权限或提供的信息有问题（请参阅本章前面的部分）。
+
+![Image](img/20_figure_19_b.jpg)
+
+![Image](img/circle-b.jpg)脚本无法连接到 MySQL 服务器。
+
+如果您看到类似 ![Image](img/circle-c.jpg) 的错误，这意味着 PHP 未启用 MySQL 支持。请参阅本章的下一节以了解解决方案。
+
+![Image](img/20_figure_20_c.jpg)
+
+![Image](img/circle-c.jpg)脚本无法连接到 MySQL 服务器，因为 PHP 未启用 MySQL 支持。
+
+---
+
+> **提示**
+>
+> 出于安全原因，您不应在生产服务器上保留 `phpinfo.php` 脚本，因为它泄露了过多信息。
+
+---
+
+> **提示**
+>
+> 如果您在 Web 浏览器中运行 PHP 脚本时它试图下载该文件，则说明您的 Web 服务器无法识别该文件扩展名为 PHP。请检查您的 Apache（或其他 Web 服务器）配置以纠正此问题。
+
+---
+
+> **提示**
+>
+> PHP 脚本必须始终从以 `http://` 开头的 URL 运行。它们不能直接从硬盘运行（就像您在浏览器中打开它一样）。
+
+---
+
+> **提示**
+>
+> 如果 PHP 脚本无法连接到 MySQL 服务器，通常是因为权限问题。请仔细检查所使用的用户名、密码和主机，并务必确定刷新了 MySQL 权限。
+
+---
+
+**脚本 A.2.** `mysqli_test.php` 脚本测试 PHP 中的 MySQL 支持以及是否已正确设置 MySQL 用户权限。
+
+---
+
+```php
+<?php
+mysqli_connect('localhost', 'webuser',
+'BroWs1ng', 'temp');
+?>
+```
+
+---
+
+### 配置 PHP
+
+在您自己的计算机上安装 PHP 的好处之一是您可以根据自己的喜好对其进行配置。PHP 的运行方式由 `php.ini` 配置文件决定，该文件通常在安装 PHP 时创建。
+
+更改 PHP 的行为非常简单，并且很有可能在某个时候需要这样做。您只需考虑调整以下几项即可
+
+- 是否开启 `display_errors`
+- 默认的错误报告级别
+- 对 Improved MySQL Extension 函数的支持
+- 用于发送邮件的 SMTP 值
+
+这些各项的含义（如果您还不知道的话）在本书的章节和 PHP 手册中都有介绍。但首先，我强烈建议您确保开启 `display_errors` 并将错误报告设置为最高级别。
+
+更改 PHP 的配置其实很简单。简短版本是：编辑 `php.ini` 文件，然后重启 Web 服务器。但由于可能出现许多不同的问题，我将更详细地介绍配置。如果您想启用对扩展的支持（如 MySQL 函数），配置会更复杂（请参阅侧栏）。
+
+---
+
+**启用扩展支持**
+
+许多 PHP 配置选项可以通过编辑 `php.ini` 文件来更改。但启用（或禁用）扩展——换句话说，添加对扩展功能的支持——需要更多工作。要仅为单个 PHP 页面启用扩展支持，可以使用 `dl()` 函数。要为所有 PHP 脚本启用扩展支持需要一些工作。不幸的是，对于 Unix 和 Mac OS X 用户，您将需要重新编译 PHP 以支持此新扩展（这个过程不是胆小者能做的）。Windows 用户则相对容易：
+
+首先，编辑 `php.ini` 文件（请参阅本节中的步骤），移除您要启用的扩展前面的分号。例如，要启用 Improved MySQL Extension 支持，您需要找到如下行
+
+`;extension=php_mysqli.dll`
+
+并移除该分号。
+
+接下来，找到设置 `extension_dir` 的行，并针对您的 PHP 安装进行调整。假设您使用 XAMPP 将 PHP 安装到了 `C:\xampp`，那么您的 `php.ini` 文件应显示
+
+`extension_dir = "C:/xampp/php/ext"`
+
+这告诉 PHP 在哪里查找扩展。
+
+接下来，确保实际的扩展文件（本例中为 `php_mysqli.dll`）存在于扩展目录中。
+
+
+
+
+保存 **`php.ini`** 文件并重启 Web 服务器。如果重启过程提示找不到扩展的错误，请再次检查以确保扩展存在于 `extension_dir` 中，并且路径名正确。如果问题仍然存在，请在网上搜索或使用本书对应的论坛寻求帮助。
+
+---
+
+#### 修改 PHP 的配置
+
+**1.** 在 Web 浏览器中，执行一个调用 **`phpinfo()`** 函数的脚本。
+
+**`phpinfo()`** 函数（在附录前一节中讨论过，参见 ![Image](img/graycircle-a.jpg)）会显示大量关于 PHP 安装的信息。
+
+**2.** 在浏览器的输出中，搜索 `Loaded Configuration File` ![Image](img/circle-a.jpg)。
+
+![Image](img/20_figure_21_a.jpg)
+
+![Image](img/circle-a.jpg) 使用 `phpinfo()` 脚本来确认要编辑的活动 PHP 配置文件。
+
+此文本旁边的值即为活动配置文件的位置。这将类似于 **`C:\xampp\php\php.ini`** 或 **`/Applications/MAMP/conf/php5.3/php.ini`**。您的服务器上可能有多个 **`php.ini`** 文件，但这个才是生效的那个。
+
+如果 `Loaded Configuration File` 没有值，说明您的服务器没有活动的 **`php.ini`** 文件。在这种情况下，您需要从 **[www.php.net](http://www.php.net)** 下载 PHP 源代码，以找到一个示例配置文件。
+
+**3.** 用任意文本编辑器打开 **`php.ini`** 文件。
+
+如果您进入列出的目录却找不到 **`php.ini`** 文件，则需要从 PHP 网站下载该文件（它是 PHP 源代码的一部分）。
+
+**4.** 进行您想要的任何更改，请记住以下几点：
+
+- 注释以分号标记。分号之后的任何内容都会被忽略。
+- 文件中包含了关于大多数设置含义的说明。
+- 文件顶部列出了带有示例的一般信息。**请勿更改这些值！** 请在文件后面出现设置的地方进行更改。
+- 为了安全起见，请勿更改任何原始设置。只需将它们注释掉（在行首加上分号），然后在之后添加新的修改后的行。
+- 添加注释（使用分号）以标记您所做的更改及时间。例如：
+
+```
+; display_errors = Off
+; Next line added by LEU
+08/28/2011
+display_errors = On
+```
+
+---
+
+**启用邮件功能**
+
+PHP **`mail()`** 函数仅在运行 PHP 的计算机可以访问 sendmail 或其他邮件服务器时才能工作。启用 **`mail()`** 函数的一种方法是在 **`php.ini`** 文件中设置 **`smtp`** 值（仅限 Windows）。例如，如果您的互联网服务提供商有一个可用的 SMTP 地址，这种方法就有效。遗憾的是，如果您 ISP 的 SMTP 服务器需要身份验证，则无法使用此值。
+
+对于 Windows，也有许多免费的 SMTP 服务器，如 Mercury。它随 XAMPP 一起安装，如果您不使用 XAMPP，也可以自行安装。
+
+Mac OS X 自带已安装的邮件服务器——postfix 和/或 sendmail——需要启用。请在 Google 上搜索关于在 Mac OS X 上手动启用邮件服务器的说明。
+
+或者，您可以搜索一些 PHP 代码库，了解如何使用需要身份验证的 SMTP 服务器。
+
+---
+
+**5.** 保存 **`php.ini`** 文件。
+
+**6.** 重启您的 Web 服务器。
+
+您不必重启整台计算机，只需重启 Web 服务应用程序（Apache、IIS 等）。具体操作取决于所用的应用程序、操作系统和安装方法。Windows 用户可以使用 XAMPP 控制面板。Mac OS X 用户可以使用 MAMP 控制面板。Unix 用户通常只需在终端窗口中输入 **`apachectl graceful`** 即可。
+
+**7.** 重新运行 **`phpinfo.php`** 脚本，以确保更改生效。
+
+---
+
+> **Tip**
+>
+> 如果您编辑了 **`php.ini`** 文件并重启了 Web 服务器，但更改未生效，请确保您编辑的是正确的 **`php.ini`** 文件（您的计算机上可能不止一个）。
+
+---
+
+> **Tip**
+>
+> Mac OS X 上的 MAMP PRO 使用 **`php.ini`** 文件的模板，必须在 MAMP PRO 本身中进行编辑。要在使用 MAMP PRO 时更改 PHP 设置，请选择“文件”>“编辑模板”>“PHP ***X***.***X***.***X*** php.ini”。
+
+---
+
+### 配置 Apache
+
+本书的新版新增了本节，介绍如何配置 Apache Web 服务器。与 PHP 一样，Apache 是一项开源技术，已成为 Web 技术中的主导力量。如果您在计算机上安装了 XAMPP 或 MAMP，您现在就拥有一个功能齐全的 Apache 版本。如果您使用的是托管网站，极有可能那里也提供了 Apache。
+
+一旦安装了支持 PHP 的 Apache，许多 PHP 程序员就再不会考虑 Web 服务器的事了。但随着您继续学习 Web 开发，掌握更多 Apache 知识是合乎逻辑的下一步。
+
+您需要进一步了解 Apache 的最常见原因包括能够执行以下操作：
+
+- 创建虚拟主机
+- 添加安全套接字层 (SSL) 支持
+- 保护目录
+- 启用 URL 重写
+
+这些以及其他对 Apache 行为的更改，可以通过两种方式实现：编辑主配置文件或创建特定目录的文件。主配置文件是 **`httpd.conf`**，位于 **`conf`** 目录中，它决定了整个 Apache Web 服务器如何运行。**`.htaccess`** 文件（读作 “H-T access”）放置在 Web 目录中，用于仅影响 Apache 在该文件夹及子文件夹中的行为。
+
+一般来说，首选在 **`httpd.conf`** 文件中进行更改，因为该文件仅在服务器每次启动时需要被 Web 服务器读取一次。相反，**.htaccess** 文件必须针对每个可能适用 **`.htaccess`** 文件的请求，被 Web 服务器读取一次。例如，如果您有 **[www.example.com/somedir/.htaccess](http://www.example.com/somedir/.htaccess)**，对 **`www.example.com/somedir/`*`whatever`*** 的任何请求都需要读取 **`.htaccess`** 文件，以及读取可能存在于 **[www.example.com/](http://www.example.com/)** 中的 **`.htaccess`** 文件。另一方面，在共享托管环境中，不允许个人用户自定义整个 Apache 配置，但可能允许使用 **`.htaccess`** 进行仅影响其自身站点的更改。
+
+在接下来的几页中，我将解释使用这两种文件类型的一些基础知识。在此过程中，您将学习如何执行一些标准的 Apache 自定义。
+
+---
+
+> **Tip**
+>
+> 为了安全起见，建议在进行后续任何编辑之前，先备份原始的 Apache 配置文件。
+
+---
+
+> **Tip**
+>
+> 在本书中，我无法充分解释如何启用 HTTPS（基于 SSL 的 HTTP），因为关键组件——获取和安装 SSL 证书——因人而异，因服务器而异，差异太大。请在网上查找具体细节，或在我的支持论坛（**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)**）发帖求助。如果您有一个想要启用 SSL 的托管账户，请咨询您的托管公司。
+
+---
+
+#### 创建虚拟主机
+
+当您在计算机上安装 Apache 时，Apache 被设置为服务于一个网站，例如 **[www.example.com](http://www.example.com)**。对于所服务的网站，Apache 将主机名（和/或 IP 地址）与服务器上的一个目录关联起来，称为 *Web 文档根目录*。当用户访问 **[www.example.com](http://www.example.com)** 时，Apache 会从该站点的目录提供文件 ![Image](img/circle-a.jpg)。
+
+![Image](img/20_figure_22_a.jpg)
+
+![Image](img/circle-a.jpg) Web 服务器将 URL 或主机名与计算机上的目录或文件关联起来。
+
+
+
+但 Apache 可以通过创建*虚拟主机*轻松配置为在同一台计算机上托管多个不同的站点。建立一个或多个虚拟主机后，Apache 就会知道：当用户请求 `www.example.com` 时，应提供来自 X 目录的文档；但请求 `www.example.net` 时，应指向来自 Y 目录的文档。
+
+![Image](img/20_figure_23_b.jpg)
+
+得益于虚拟主机，计算机上的不同目录可以与不同的主机名关联。
+
+请理解，设置虚拟主机实际上并不会使 `www.example.com` 或 `www.example.net` 成为可通过互联网访问的有效域名。实现这一点需要使用 DNS（域名系统），这是一个复杂得多的主题。不过，正如以下步骤所述，您可以使用虚拟主机在自己的家用电脑上为开发项目创建不同的主机。
+
+#### 创建虚拟主机
+
+**1.** 使用任意文本编辑器或 IDE 打开 `httpd.conf`。
+
+如果您在 Windows 上使用 XAMPP，要打开的文件是 `C:\xampp\apache\conf\httpd.conf`（假设 XAMPP 安装在 C 盘根目录）。如果您在 Mac OS X 上使用 MAMP，要打开的文件是 `/Applications/MAMP/conf/apache/httpd.conf`。请注意，如果您使用的是 MAMP Pro，虚拟主机是在该应用程序的控制面板中创建的。
+
+**2.** 在配置文件的最末尾，添加：
+
+```
+NameVirtualHost 127.0.0.1
+```
+
+按照惯例，虚拟主机定义在配置文件的末尾（或在一个单独的配置文件中，由该文件包含）。这一行表示 Apache 应在 127.0.0.1 IP 地址上监听*基于名称的*虚拟主机（相对于基于 IP 地址的虚拟主机）。这是一个特殊的 IP 地址，始终等同于*localhost*（即这台计算机本身）。
+
+视您的服务器而定，此行可能已存在于配置文件中，但前面带有一个 `#`，这使其成为注释（即使其失效）。在这种情况下，只需删除 `#` 即可。
+
+**3.** 在下一行，添加：
+
+```
+<VirtualHost 127.0.0.1>
+</VirtualHost>
+```
+
+`VirtualHost` 标签用于创建一个新的虚拟主机。每个开始标签都需要一个对应的结束标签。在开始标签内，指定了要监听的 IP 地址或主机名，此处为：127.0.0.1。此值必须与 `NameVirtualHost` 行中使用的值匹配。
+
+虚拟主机定义的其余部分将放在这对开始和结束标签之间。
+
+**4.** 在虚拟主机标签内，添加：
+
+```
+DocumentRoot /path/to/folder
+ServerName servername
+```
+
+`DocumentRoot` 指令指示虚拟主机的 Web 根目录：换句话说，就是该站点实际文件的所在位置。在 Windows 的 XAMPP 上，此值可能是 `C:/xampp/htdocs/something`。在 Mac OS X 的 MAMP 上，此值可能是 `/Applications/MAMP/htdocs/something`。
+
+`ServerName` 是放置*主机名*的地方：即您将在浏览器中输入以访问此站点的名称。
+
+例如，如果您想为第 17 章“示例——留言板”中的论坛站点创建一个虚拟主机，可以在 `htdocs` 中创建一个名为 `forums` 的新文件夹，并将所有适用的脚本复制到那里。然后将 `C:/xampp/htdocs/forums` 或 `/Applications/MAMP/htdocs/forums` 用作 `DocumentRoot` 值。对于 `ServerName` 值，我会使用一些有意义的名称，例如 `forums.local`：论坛站点的一个本地版本。
+
+**5.** 为 localhost 添加第二个虚拟主机：
+
+```
+<VirtualHost 127.0.0.1>
+  DocumentRoot "C:/xampp/htdocs"
+  ServerName localhost
+</VirtualHost>
+```
+
+![Image](img/20_figure_24_c.jpg)
+
+添加到 Apache 配置文件末尾的新指令。
+
+前面的步骤创建了一个新的虚拟主机，但在此过程中，原来的那个网站（*localhost*，您自己计算机的默认值）将变得不可用。解决方法是为该站点再创建一个虚拟主机。
+
+**6.** 保存配置文件。
+
+**7.** 重启 Apache。
+
+对配置文件的任何更改，只有在重启 Web 服务器后才会生效。您可以使用 XAMPP 或 MAMP 控制面板重启 Apache。
+
+如果配置文件中有错误，Apache 将无法启动，您需要检查错误日志以查明原因。
+
+请注意，您目前还无法使用浏览器访问虚拟主机，因为您仍需更新计算机的 hosts 列表。
+
+***
+
+提示
+
+默认的 Apache 配置文件 `httpd.conf` 中包含注释，说明每段代码的作用。您可以浏览它来了解一些关于配置 Apache 的知识。
+
+***
+
+提示
+
+如果 `DocumentRoot` 值（或 `httpd.conf` 文件中的任何值）包含空格，则必须加上引号。
+
+***
+
+提示
+
+虚拟主机的定义可以包含其他指令，但我正试图以尽可能简单的方式介绍这些基本的 Apache 概念。
+
+***
+
+提示
+
+实际上，最好让 Apache 仅监听特定端口（通常是 80）上的活动。在这种情况下，虚拟主机配置将以如下方式开始：
+
+```
+NameVirtualHost 127.0.0.1:80
+<VirtualHost 127.0.0.1:80>
+```
+
+但由于 Mac OS X 上的 MAMP 和 XAMPP 视可能的冲突而定，并不总是使用端口 80，所以我使用的是最万无一失的代码。
+
+***
+
+提示
+
+在全规模的 Web 服务器上，最好创建多个配置文件，然后由主配置文件读取并使用。在您自己的个人电脑上，如果没有太多自定义需求，单个配置文件就足够了。
+
+***
+
+##### 更新计算机的 Hosts 文件
+
+前面的步骤序列在 Apache 中创建了一个虚拟主机，允许您通过在 Web 浏览器中访问 `http://forums.local` 来浏览本例中的论坛网站。然而，这里有个问题：如果您在浏览器中输入该 URL，浏览器会尝试在互联网上寻找 `forums.local`，但无法找到。
+
+![Image](img/20_figure_25_d.jpg)
+
+Internet Explorer 在找不到本地虚拟主机时显示的错误。
+
+##### 更新计算机的 Hosts 文件
+
+**1.** 使用任意文本编辑器或 IDE 打开计算机的 `hosts` 文件。
+
+这是整个过程中唯一棘手的部分：找到并打开 `hosts` 文件。在 Mac OS X 和 Unix 上，hosts 文件是 `/etc/hosts`（没有文件扩展名），其中 `/` 指代计算机的根目录。在 Mac OS X 上，`/etc` 是一个*隐藏*目录，这使得 `hosts` 成为一个隐藏文件。有三种简单的方法可以找到此文件：
+
+- 如果您的编辑应用程序能够打开隐藏文件，请直接用它打开。
+- 在 Finder 中，选择“前往”>“前往文件夹”，在提示框中输入 `/etc` 以在 Finder 中打开 `/etc` 目录。然后将 `hosts` 文件拖动到 Dock 中的编辑应用程序图标上。
+
+![Image](img/20_figure_26_e.jpg)
+
+Finder 的“前往”>“前往文件夹”选项可用于访问隐藏目录。
+
+- 使用终端查找并打开该文件。
+
+
+
+
+在 Windows 上，除非是非标准安装，相关文件是 `C:\Windows\System32\drivers\etc\hosts`。不幸的是，你在尝试编辑此文件时可能会遇到权限问题。我通过以管理员模式打开记事本（在开始菜单中右键单击记事本以获取此选项 ![Image](img/circle-f.jpg)），然后在记事本中打开该文件，成功解决了该问题。
+
+![Image](img/20_figure_27_f.jpg)
+
+![Image](img/circle-f.jpg)你可以以管理员模式打开记事本，以便编辑系统文件。
+
+**2.** 在文件最末尾，添加：
+
+```
+127.0.0.1 forums.local
+```
+
+这将名称 `forums.local` 与 IP 地址 `127.0.0.1` 关联起来，即同一台计算机。
+
+**3.** 保存文件。
+
+**4.** 在 Web 浏览器中加载 `http://forums.local` ![Image](img/circle-g.jpg)。
+
+![Image](img/20_figure_28_g.jpg)
+
+![Image](img/circle-g.jpg)论坛站点，可通过 URL `http://forums.local` 在本地访问。
+
+---
+
+Tip
+
+重复这两个步骤序列——在 Apache 中创建虚拟主机并将主机添加到 hosts 文件——每当你想要创建一个带有自己关联主机名的新 Web 站点项目时。
+
+---
+
+#### 使用 .htaccess 文件
+
+如前所述，所有 Apache 配置实际上都可以在 `httpd.conf` 文件中完成。事实上，这样做是首选。但配置文件并不总是可供你编辑，因此了解如何使用 `.htaccess` 文件来更改站点功能也很有价值。
+
+`.htaccess` 文件只是一个纯文本文件，名为 `.htaccess`（同样，没有文件扩展名，且开头的句点使其成为隐藏文件）。当放置在 Web 目录中时，`.htaccess` 文件中定义的指令将应用于该目录及其子目录。
+
+使用 `.htaccess` 文件时常见的障碍是，必须授予权限以允许 `.htaccess` 更改服务器行为。根据安装和配置，在最严格的安全级别下，Apache 不允许 `.htaccess` 文件更改 Apache 行为。这在 `httpd.conf` 中通过如下代码实现：
+
+```
+<Directory />
+  AllowOverride None
+</Directory>
+```
+
+`Directory` 指令用于在 `httpd.conf` 中修改 Apache 在特定目录中的行为。在上述代码中，根目录（`/`）是目标，这意味着 Apache 根本不允许计算机上任何目录中进行覆盖——更改。因此，在创建 `.htaccess` 文件之前，主配置文件必须设置为允许在适用的 Web 目录（或目录）中进行覆盖。
+
+`AllowOverride` 指令接受一个或多个标志，指示具体可以覆盖什么：
+
+* `AuthConfig`，用于授权和认证
+* `FileInfo`，用于执行重定向和 URL 重写
+* `Indexes`，用于列出目录内容
+* `Limit`，用于限制对目录的访问
+* `Options`，用于设置目录行为，例如执行 CGI 脚本或索引文件夹内容的能力
+* `All`
+* `None`
+
+---
+
+**设置默认目录页面**
+
+通常，Web 浏览器在请求时不指定文件，例如 `www.example.com/` 或 `www.example.com/folder/`。在这种情况下，Apache 必须决定做什么。历史上，如果目录中存在 `index.htm` 或 `index.html` 文件，Apache 会提供该文件。如果不存在索引文件，且服务器允许目录浏览，Apache 将改为显示目录中的文件列表（这不安全，但你无疑以前在网上见过）。
+
+在这种情况下告诉 Apache 该做什么的适用指令是 `DirectoryIndex`。在其后，列出用作文件夹索引的文件，多个选项按优先顺序排列。例如，以下配置将尝试加载 `index.htm`，如果不存在则加载 `index.html`，如果仍不存在则加载 `index.php`：
+
+```
+DirectoryIndex index.htm index.html index.php
+```
+
+同样，`ErrorDocument` 指令告诉 Apache 发生服务器错误时提供什么文件。其语法是：
+
+```
+ErrorDocument error_code /page.html
+```
+
+错误代码值来自服务器状态代码，例如 401（未授权）、403（禁止）和 500（内部服务器错误）。对于每个代码，你可以指定应提供的页面。注意，你需要为错误文件提供绝对路径（即以 `/` 开头，这是 Web 根目录）。
+
+---
+
+例如，要允许在 forums 目录（刚创建）中覆盖 `AuthConfig` 和 `FileInfo`，`httpd.conf` 文件应包含：
+
+```
+<Directory /path/to/forums>
+  AllowOverride AuthConfig FileInfo
+</Directory>
+```
+
+只要这段代码位于任何 `AllowOverride None` 块之后，`forums` 目录中的 `.htaccess` 文件就能在从该目录（及其子目录）提供文件时对 Apache 的行为进行一些更改。
+
+##### 允许 .htaccess 覆盖
+
+**1.** 在任意文本编辑器或 IDE 中打开 `httpd.conf`。
+
+**2.** 在相关站点的 `VirtualHost` 标签内，添加：
+
+```
+<Directory /path/to/directory>
+</Directory>
+```
+
+`Directory` 标签是自定义 Apache 在特定目录或其子目录中行为的方式。在开始标签中，提供目标目录的绝对路径，例如 `C:\xampp\htdocs\somedir` 或 `/Applications/MAMP/htdocs/somedir`。
+
+**3.** 在 `Directory` 标签内，添加 ![Image](img/circle-h.jpg)：
+
+```
+AllowOverride All
+```
+
+![Image](img/20_figure_29_h.jpg)
+
+![Image](img/circle-h.jpg)更新后的虚拟主机配置，现在允许在 forums Web 目录中进行覆盖。
+
+这是一个激进的解决方案，但行之有效。在公开可用的实时服务器上，你需要更具体地说明可以覆盖的确切设置，但在你的家用电脑上，这不会有问题。
+
+**4.** 保存配置文件。
+
+**5.** 重启 Apache。
+
+---
+
+Tip
+
+`Directory` 指令不必放在相关站点的 `VirtualHost` 标签内，但放在那里是合理的。
+
+---
+
+---
+
+Tip
+
+如果不允许目录覆盖某项设置，`.htaccess` 文件将被忽略。
+
+---
+
+---
+
+Tip
+
+在 `.htaccess` 文件中完成的任何操作，也可以通过 `httpd.conf` 中的 `Directory` 标签来实现。
+
+---
+
+#### 受保护的目录
+
+`.htaccess` 文件的一个常见用途是保护目录的内容。有两种可能的场景：
+
+* 拒绝所有访问
+* 将访问限制为授权用户
+
+虽然最初听起来很奇怪，但在 Web 目录中放置的文件和文件夹应该不可用的情况有很多。例如，你可以创建一个包含敏感 PHP 脚本的 `includes` 目录，或一个用于存储上传文件的 `uploads` 目录。在这两种情况下，目录的内容都不打算供直接访问，而是由其他目录中的 PHP 脚本根据需要引用该内容。要拒绝对某个目录的所有访问，请将 **脚本 A.3** 中的代码放在该文件夹中的 `.htaccess` 文件中（注释指示每行的作用）。
+
+同样，这段代码只是防止通过 Web 浏览器直接访问该目录的内容。PHP 脚本仍可使用 `include()`、`require()`、`readfile()` 和其他函数访问该内容。事实上，第 11 章 中的 `show_image.php` 脚本正是如此：它充当*代理脚本*，显示存储在 Web 文档根目录之外的图像（即在 Web 浏览器中原本不可用）。
+
+
+
+
+### 脚本 A.3
+
+此代码位于 `.htaccess` 文件中，将拒绝对目录及其子目录内容的所有访问。
+
+```
+### Disable directory browsing:
+Options All -Indexes
+
+### Prevent folder listing:
+IndexIgnore *
+
+### Prevent access to any file:
+<FilesMatch "^.*$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+```
+
+有几种方法可以将访问限制为授权用户，其中 `mod_auth` 模块是最基础且最常用的。该模块会在浏览器中创建提示，用户可在其中输入凭据。Apache 会将这些凭据与服务器上文件中存储的凭据进行比较，据此允许或拒绝访问。使用 `mod_auth` 并不难，但你必须调用一个辅助 Apache 工具来创建凭据文件。如果你想采用这种方式，只需在网上搜索 Apache `mod_auth` 即可。
+
+![Image](img/20_figure_30_i.jpg)
+
+此提示（如在 Windows Internet Explorer 中显示）由 Apache 生成，用于将访问限制为经过身份验证的用户。
+
+> **提示**
+>
+> 默认情况下，Apache 不会在 Web 浏览器中显示 `.htaccess` 文件，这是一种明智的安全做法。
+
+> **提示**
+>
+> 创建 `.htaccess` 文件时，请确保你的文本编辑器或 IDE 没有偷偷添加 `.txt` 扩展名。例如，记事本就会这样做。如果你能在 Web 浏览器中加载 `www.example.com/.htaccess.txt`，就能确认发生了这种情况。在记事本中，你可以通过给文件名加引号并将保存类型设为“所有文件”来防止添加扩展名。
+
+### 启用 URL 重写
+
+本附录要讨论的最后一个主题是如何执行 *URL 重写*。URL 重写作为 *搜索引擎优化* (SEO) 过度关注的一部分而受到关注，但 URL 重写多年来一直是一个有用的工具。对于动态驱动的网站（如电子商务商店），通常会在 URL 中向页面传递一个值以指示要显示的产品类别，从而产生类似 `www.example.com/category.php?id=23` 的 URL。PHP 脚本 `category.php` 随后会使用 `$_GET['id']` 的值来知道从数据库中提取并显示什么产品（本书中有大量类似示例）。
+
+应用 URL 重写后，浏览器中显示的 URL、最终用户可见的 URL 以及搜索引擎结果中引用的 URL，可以转换为更具明显含义的内容，例如 `www.example.com/category/23/`，或者更好的是 `www.example.com/category/garden+gnomes/`。Apache 通过 URL 重写，获取更友好的用户 URL 并将其解析为 PHP 脚本可用的内容。这得益于 Apache `mod_rewrite` 模块。要使用它，`.htaccess` 文件必须首先检查该模块并开启重写引擎：
+
+```
+<IfModule mod_rewrite.c>
+RewriteEngine on
+</IfModule>
+```
+
+启用引擎后，在结束 `IfModule` 标签之前，添加规定重写规则的指令。语法如下：
+
+```
+RewriteRule match rewrite
+```
+
+例如，你可以执行以下操作（尽管这不是 `mod_rewrite` 的好用法）：
+
+```
+RewriteRule somepage.php otherpage.php
+```
+
+执行 URL 重写的部分复杂性在于，需要 Perl 兼容正则表达式 (PCRE) 以最灵活地查找匹配项。如果你还不熟悉正则表达式，则需要阅读 第 14 章 “Perl 兼容正则表达式” 才能理解后续内容。
+
+例如，要将 `www.example.com/category/23` 视为 `www.example.com/category.php?id=23`，你需要以下规则：
+
+```
+RewriteRule ^category/([0-9]+)/?$ category.php?id=$1
+```
+
+起始脱字符 (`^`) 表示表达式必须匹配字符串的开头。随后应为单词 *category*，后跟一个斜杠。然后是任意数量的数字，最后以一个可选斜杠结尾（允许 *category/23* 和 *category/23/* 两种形式）。美元符号结束匹配，意味着可选斜杠后不能有任何内容。这就是示例匹配的模式（实际上这是一个非常简单的模式）。
+
+重写部分是实际将被执行的内容，Web 浏览器和最终用户对此不知情。在此行中，即 `category.php?id=$1`。*$1* 是对匹配中第一个括号分组的 *反向引用*（例如 23）。因此，服务器将 `www.example.com/category/23` 视为 URL 实际为 `www.example.com/category.php?id=23`。
+
+这是 `mod_rewrite` 的基本前提。不幸的是，精通 `mod_rewrite` 需要精通或近乎精通 PCRE，这可能令人望而生畏。如果你想练习这一点，可以获取刚才解释的简单示例，并将其应用于本书中通过 URL 传递值的任何示例。例如，在 第 10 章 “常见编程技术” 中，用户 ID 会通过 URL 传递给 `delete_user.php` 和 `edit_user.php`。两者都可以转换为更“美观”的 URL，例如 `www.example.com/delete/45/` 或 `www.example.com/edit/895/`。
+
+一如既往，如果你感兴趣，请在网上搜索更多关于此主题的信息，如果遇到问题，请在支持论坛 (**[www.LarryUllman.com/forums/](http://www.LarryUllman.com/forums/)**) 提问。
+
+### 更改 PHP 的配置
+
+如果 PHP 作为 Apache 模块运行，你也可以使用 Apache `.htaccess` 文件更改 PHP 在特定目录中的运行方式。要使用的指令是 `php_flag` 和 `php_value`：
+
+```
+php_flag item value
+php_value item value
+```
+
+`php_flag` 指令用于任何具有开或关值的设置；`php_value` 用于任何其他设置。例如：
+
+```
+php_flag display_errors on
+php_value error_reporting 30719
+```
+
+请注意，你不能使用 PHP 常量，例如用于最高级别错误报告的 `E_ALL`，因为此代码位于 Apache 配置文件中，而非 PHP 脚本中。
+
+（你也可以通过编辑 `httpd.conf` 文件来更改 PHP 的运行方式，但如果你要进行全局服务器更改，反正都需要重启 Apache，那么不如直接编辑 PHP 配置文件）。
+

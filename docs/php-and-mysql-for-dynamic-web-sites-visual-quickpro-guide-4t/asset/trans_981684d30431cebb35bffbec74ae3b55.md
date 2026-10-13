@@ -1,0 +1,128 @@
+
+
+```php
+value="<?php if (isset($scrubbed['email'])) echo $scrubbed['email']; ?>" /></p>
+
+72      <p>Comments: <textarea name="comments" rows="5" cols="30"><?php if
+      (isset($scrubbed['comments'])) echo $scrubbed['comments']; ?></textarea></p>
+
+73      <p><input type="submit" name="submit" value="Send!" /></p>
+
+74  </form>
+
+75  </body>
+
+76  </html>
+```
+
+---
+
+`foreach`循环将逐个访问`$very_bad`数组中的每一项，并将每一项赋值给`$v`。在循环内部，`stripos()`函数将检查该项是否存在于作为`$value`提供给该函数的字符串中。`stripos()`函数执行不区分大小写的搜索（因此它会匹配`bcc:`、`Bcc:`、`bCC:`等）。如果在haystack中找到needle（例如，在`$value`中查找`$v`的出现），该函数返回布尔值`TRUE`。因此，条件语句表示如果该函数的结果不等于`FALSE`（即在`$value`中未找到`$v`），则返回空字符串。
+
+因此，对于每一个危险字符串，首次在提交的值中发现它们中的任何一个时，该函数将返回空字符串并终止（函数一旦遇到`return`就会自动停止执行）。
+
+**5. 将任何换行符替换为空格：**
+
+```php
+$value = str_replace(array("\\r", "\\n", "%0a", "%0d"), ' ', $value);
+```
+
+换行符由`\r`、`\n`、`%0a`和`%0d`表示，可能会也可能不会造成问题。发送垃圾邮件需要换行符（否则无法创建正确的标头），但如果用户在textarea框中输入时按下Enter或Return键，也会出现换行符。因此，任何找到的换行符都将被替换为空格。这意味着提交的值可能会丢失部分格式，但为了阻止垃圾邮件，这是合理的代价。
+
+`str_replace()`函数遍历第三个参数中的值，并将第一个参数中的字符出现替换为第二个参数中的字符。正如PHP手册所述：
+
+```text
+mixed str_replace (mixed $search, mixed $replace, mixed $subject)
+```
+
+此函数非常灵活，因为它可以接受字符串或数组作为其三个参数（`mixed`意味着它接受混合的参数类型）。因此，脚本中的这行代码将`$value`变量赋值为其原始值，并将任何换行符替换为单个空格。
+
+此函数有一个不区分大小写的版本，但这里不需要，因为例如`\r`是回车符，但`\R`不是。
+
+**6. 返回值并完成函数：**
+
+```php
+return trim($value);
+} // End of spam_scrubber() function.
+```
+
+最后，该函数返回去除首尾空格后的值。请记住，只有在未发现任何非常危险的内容时，函数才会执行到这一点。
+
+**7. 在函数定义后，调用`spam_scrubber()`函数：**
+
+```php
+$scrubbed = array_map('spam_scrubber', $_POST);
+```
+
+这种方法简洁而优美！`array_map()`函数有两个必需参数。第一个是要调用的函数名。在本例中，是`spam_scrubber`（不带括号，因为你提供的是函数的*名称*，而不是调用该函数）。第二个参数是一个数组。
+
+`array_map()`会将指定的函数应用于数组的每个元素，将每个元素的值发送给该函数调用。在本脚本中，`$_POST`有四个元素——`name`、`email`、`comments`和`submit`，这意味着得益于`array_map()`，`spam_scrubber()`函数将被调用四次。执行这行代码后，`$scrubbed`数组将包含四个元素：`$scrubbed['name']`将包含`$_POST['name']`经`spam_scrubber()`处理后的值；`$scrubbed['email']`将包含`$_POST['email']`经`spam_scrubber()`处理后的值；以此类推。
+
+这一行代码获取整个潜在受污染的数据数组（`$_POST`），使用`spam_scrubber()`进行清理，并将结果赋值给新变量。该技术最重要的一点是：从现在开始，脚本必须使用干净的`$scrubbed`数组，而不是仍可能脏的`$_POST`。
+
+**8. 更改表单验证以使用这个新数组：**
+
+```php
+if (!empty($scrubbed['name']) && !empty($scrubbed['email']) && !empty($scrubbed['comments'])) {
+```
+
+这些元素中的每一个都可能有两个原因导致值为空。第一，用户将它们留空。第二，用户在字段中输入了其中一个坏字符串，这会被`spam_scrubber()`函数转换为空字符串。
+
+![Image](graphics/13_figure_03_c.jpg)
+
+![Image](graphics/circle-c.jpg)电子邮件地址字段中存在`cc:`将阻止此提交通过电子邮件发送 ![Image](graphics/graycircle-d.jpg)。
+
+![Image](graphics/13_figure_04_d.jpg)
+
+![Image](graphics/circle-d.jpg)由于电子邮件地址中使用了非常危险的字符，被垃圾邮件防止函数转换为空字符串，因此邮件未发送。
+
+**9. 更改`$body`变量的创建以使用干净的值：**
+
+```php
+$body = "Name: {$scrubbed['name']}\n\nComments: {$scrubbed['comments']}";
+```
+
+**10. 更改`mail()`函数的调用以使用干净的电子邮件地址：**
+
+```php
+mail('your_email@example.com', 'Contact Form Submission', $body, "From: {$scrubbed['email']}");
+```
+
+请记得在`mail()`调用中使用您自己的电子邮件地址，否则您永远收不到消息！
+
+**11. 更改表单以使用`$scrubbed`版本的值：**
+
+```html
+<p>Name: <input type="text" name="name" size="30" maxlength="60" value="<?php if (isset($scrubbed['name'])) echo $scrubbed['name']; ?>" /></p>
+
+<p>Email Address: <input type="text" name="email" size="30" maxlength="80" value="<?php if (isset ($scrubbed['email'])) echo $scrubbed['email']; ?>" /></p>
+
+<p>Comments: <textarea name="comments" rows="5" cols="30"><?php if (isset ($scrubbed['comments'])) echo $scrubbed['comments']; ?> </textarea></p>
+```
+
+**12. 将脚本保存为`email.php`，将其放在您的Web目录中，并在Web浏览器中测试它** ![Image](graphics/circle-e.jpg)和 ![Image](graphics/circle-f.jpg)。
+
+![Image](graphics/13_figure_05_e.jpg)
+
+![Image](graphics/circle-e.jpg)虽然comments字段包含换行符（由按Enter或Return键创建），但电子邮件仍将被发送 ![Image](graphics/graycircle-f.jpg)。
+
+![Image](graphics/13_figure_06_f.jpg)
+
+![Image](graphics/circle-f.jpg)收到的电子邮件，comments中的换行符 ![Image](graphics/graycircle-e.jpg)已转换为空格。
+
+---
+
+> **Tip**
+>
+> 在此示例中使用`array_map()`函数虽然方便，但也有缺点。首先，它盲目地将`spam_scrubber()`函数应用于整个`$_POST`数组，甚至包括提交按钮。这无害但没必要。其次，`$_POST`中的任何多维数组都将丢失。在本具体示例中这不是问题，但值得注意。
+
+---
+
+> **Tip**
+>
+> 为防止任何表单的自动提交，您可以使用CAPTCHA测试。这些提示理论上只能被人类理解。虽然通常使用随机字符图像来实现，但也可以通过类似“二加二等于几？”或“中国在哪个大洲？”这样的问题来实现。检查此问题的正确答案将成为验证例程的一部分。
+
+---
+
+### 按类型验证数据
+
