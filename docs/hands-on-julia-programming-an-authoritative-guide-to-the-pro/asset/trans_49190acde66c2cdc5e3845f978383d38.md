@@ -1,0 +1,2 @@
+
+`getPDFText(src, out) -> Dict`

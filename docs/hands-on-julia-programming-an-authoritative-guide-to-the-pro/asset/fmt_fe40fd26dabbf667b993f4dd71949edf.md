@@ -1,0 +1,197 @@
+
+# 性能优化：从类型稳定到参数化类型与边界检查消除
+
+## 类型稳定性分析
+
+进入 `@code_warntype` 输出分析阶段。观察以下 IR 片段：
+
+```
+│   %28 = (%25 + %27)::Any
+└──     return %28
+```
+
+引入新的 `MemoLookup` 结构体，为 `n` 和 `lookup` 等属性定义了正确的类型。
+
+```julia
+struct MemoLookup
+    n::Int
+    lookup::Matrix{Float64}
+    
+    function MemoLookup(n)
+        step = 90/n
+        δ = pi/180*step
+        lookup = [[sin(i*δ) for i=0:n] [cos(i*δ) for i=0:n]]
+        new(n, lookup)
+    end
+end
+
+step(m::MemoLookup) = 90/m.n
+
+m = MemoLookup(6)
+```
+
+执行 `@code_warntype sindegmemo(m, 52.0)` 检查类型推断结果：
+
+**Variables**
+- `#self#::Core.Compiler.Const(sindegmemo, false)`
+- `m::MemoLookup2`
+- `x@_3::Float64`
+- `s::Float64`
+- `lookup::Array{Float64,2}`
+- `i::Int64`
+- `sinx::Float64`
+- `cosx::Float64`
+- `x@_9::Float64`
+- `Body::Float64`
+
+**Body 片段**
+```
+…
+│   %4  = Main.step(m)::Float64
+…
+2 ┄ %9  = (x@_9 >= s)::Bool
+└──     goto #4 if not %9
+…
+4 — %14 = Main.iszero(x@_9)::Bool
+└──     goto #6 if not %14
+5 — %16 = Base.getindex(lookup, i, 1)::Float64
+└──     return %16
+…
+│   %20 = (x@_9 * x@_9)::Float64
+│   %21 = (%20 / 2)::Float64
+│   %22 = (1 - %21)::Float64
+…
+│   %24 = Base.getindex(lookup, i, 1)::Float64
+│   %25 = (%24 * cosx)::Float64
+│   %26 = Base.getindex(lookup, i, 2)::Float64
+│   %27 = (%26 * sinx)::Float64
+│   %28 = (%25 + %27)::Float64
+└──     return %28
+```
+
+不存在标记为 `Any` 类型的变量。验证性能提升情况：
+
+```julia
+julia> @btime sindegmemo($m, 52.0)
+19.257 ns (0 allocations: 0 bytes)
+0.788218944092369
+```
+
+性能显著提升：从 `1170ns` 降至 `19ns`。但回顾之前编写的 `sindeg(x)` 函数，其执行时间为 `95ns`。`sindeg(x)` 是否构建得当？
+
+## `@code_warntype` 深度检查
+
+检查 `sindeg(52.0)` 的类型推断转储：
+
+```julia
+julia> @code_warntype sindeg(52.0)
+```
+
+**Variables**
+- `#self#::Core.Compiler.Const(Base.var"#62#63"{typeof(sin),typeof(deg2rad)}(sin, deg2rad), false)`
+- `x::Tuple{Float64}`
+- `Body::Float64`
+
+**Body**
+```
+1 — %1 = Core.getfield(#self#, :f)::Core.Compiler.Const(sin, false)
+│   %2 = Core.getfield(#self#, :g)::Core.Compiler.Const(deg2rad, false)
+│   %3 = Core._apply_iterate(Base.iterate, %2, x)::Float64
+│   %4 = (%1)(%3)::Float64
+└──     return %4
+```
+
+虽然类型推断无 `Any` 类型问题，但 `x` 被推断为 `Tuple{Float64}`。这意味着会创建新变量，函数输入被赋值给新创建的元组。重新定义 `sindeg` 函数：
+
+```julia
+julia> sindeg(x) = sin(deg2rad(x))
+
+julia> @btime sindeg(x)
+2.799 ns (0 allocations: 0 bytes)
+0.49999999999999994
+```
+
+性能相当于 Julia 内置函数 `sind(x)`（计算角度为度数时的正弦值）。
+
+## 参数化类型优化
+
+参数化数据类型在编译期而非运行时解析，可提升性能。关键在于识别合适的参数属性。以 `MemoLookup` 为例，表大小属性 `n` 是常量，且无需构建过多查找表，适合作为类型参数。
+
+```julia
+struct MemoLookupP{N}
+    lookup::Matrix{Float64}
+    
+    function MemoLookupP{N}() where N
+        δ = pi/2N
+        lookup = [[sin(i*δ) for i=0:N] [cos(i*δ) for i=0:N]]
+        new{N}(lookup)
+    end
+end
+
+step(m::MemoLookupP{N}) where N = 90.0/N
+
+const m3 = MemoLookupP{6}()
+```
+
+定义接受 `MemoLookupP` 的新 `sindegmemo` 函数：
+
+```julia
+function sindegmemo(m::MemoLookupP, x::Float64)
+    s, lookup = step(m), m.lookup
+    i = 1
+    while x >= s
+        x -= s
+        i += 1
+    end
+    x, sini = deg2rad(x), lookup[i, 1]
+    iszero(x) && return sini
+    sinx, cosx, cosi = x, 1 - x*x/2, lookup[i, 2]
+    return sini*cosx + cosi*sinx
+end
+
+julia> @btime sindegmemo(m3, 60.0)
+13.012 ns (0 allocations: 0 bytes)
+0.8660254037844386
+```
+
+从 `19ns` 优化至 `13ns`，仍有提升空间。接下来审查 LLVM 位码。
+
+## LLVM 位码分析与 `@inbounds` 优化
+
+LLVM 生成的位码描述性强，需理解助记符。此处仅识别明显问题，不做深度分析。截断转储示例：
+
+```llvm
+julia> @code_llvm sindegmemo($m3, 60.0)
+
+; @ In[38]:1 within `sindegmemo'
+; Function Attrs: uwtable
+define double @julia_sindegmemo_2316([1 x %jl_value_t*]* nocapture nonnull readonly dereferenceable(8), double) #0 {
+top:
+ib:     ; preds = %L9
+; @ In[38]:8 within `sindegmemo'
+; @ array.jl:810 within `getindex'
+…
+oob:    ; preds = %ib, %L9
+    %19 = alloca [2 x i64], align 8
+    %.sub = getelementptr inbounds [2 x i64], [2 x i64]* %19, i64 0, i64 0
+…
+    ret double %37
+}
+```
+
+每当通过 `getindex` 方法访问数组时，都会进行边界检查。`ib` 标签在数组索引在范围内时执行，`oob` 在索引越界时执行。若能确保索引不越界，可消除越界检查代码。使用宏 `@inbounds` 实现此目的。
+
+```julia
+function sindegmemo(m::MemoLookupP, x::Float64)
+    s, lookup = step(m), m.lookup
+    i = 1
+    while x >= s
+        x -= s
+        i += 1
+    end
+    x, sini = deg2rad(x), @inbounds lookup[i, 1]
+    iszero(x) && return sini
+    sinx, cosx, cosi = x, 1 - x*x/2, @inbounds lookup[i, 2]
+    return sini*cosx + cosi*sinx
+end
+```

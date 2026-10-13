@@ -1,0 +1,184 @@
+
+
+# Julia 几何模块设计与 Traits 模式
+
+## 初始实现与问题
+
+```julia
+bbox(x) = throw(Base.MethodError(bbox, (x,)))
+
+struct Rectangle
+    x; y; w; h
+end
+
+export Rectangle, area, bbox
+end
+
+Main.geom
+
+julia> using .geom
+
+julia> r = Rectangle(0, 0, 10, 20)
+Rectangle(0, 0, 10, 20)
+
+julia> area(r)
+ERROR: MethodError: no method matching area(::Rectangle)
+…
+```
+
+## 尝试 1：默认实现作为软接口
+
+默认实现可以是一个返回输入的恒等函数，从而使接口充当软接口。
+
+```julia
+julia> module geom1
+area(x) = identity(x)
+bbox(x) = identity(x)
+
+struct Rectangle
+    x; y; w; h
+end
+
+export Rectangle, area, bbox
+end
+
+julia> r = geom1.Rectangle(0, 0, 10, 20)
+Main.geom1.Rectangle(0, 0, 10, 20)
+
+julia> geom1.area(r)
+Main.geom1.Rectangle(0, 0, 10, 20)
+```
+
+## 尝试 2：基于继承的接口强制
+
+函数 `area` 和 `bbox` 对泛型类型 `Any` 不承载任何含义。强制 `Rectangle`、`Triangle` 或 `Circle` 等形状遵循接口的一种方法是让它们派生自 `Shape` 超类型。
+
+```julia
+julia> module geom2
+abstract type Shape end
+area(x::Shape) = nothing
+bbox(x::Shape) = nothing
+
+struct Rectangle <: Shape
+    x; y; w; h
+end
+end
+
+julia> r = geom2.Rectangle(0, 0, 10, 20)
+Main.geom2.Rectangle(0, 0, 10, 20)
+
+julia> geom2.area(r)
+```
+
+我们可以向模块引入 `Polygon`。多边形是由直线连接的多个点组成的闭合形状。
+
+```julia
+julia> module geom2
+…
+struct Polygon <: Shape
+    pts::Vector{Tuple{Any, Any}}
+end
+…
+end
+```
+
+假设考虑直线不闭合的形状，会得到 `PolyLine` 类型。对于开放形状，不存在面积概念，因此 `area()` 函数应抛出错误。通常，良好的面向对象设计要求 `isa` 关系在各方面都完备。`Polygon` 和 `PolyLine` 都必须表现出 `Shape` 的所有属性。如果 `area(::PolyLine)` 抛出错误，`PolyLine isa Shape` 关系将受损。因此有人建议引入 `OpenShape` 和 `ClosedShape` 作为抽象类型。`area()` 函数仅对 `ClosedShape` 存在。以下是可能的实现：
+
+```julia
+julia> module geom3
+abstract type Shape end
+bbox(x::Shape) = nothing
+
+abstract type OpenShape end
+struct PolyLine <: OpenShape
+    pts::Vector{Tuple{Any, Any}}
+end
+
+abstract type ClosedShape end
+area(x::ClosedShape) = nothing
+
+struct Rectangle <: ClosedShape
+    x; y; w; h
+end
+
+struct Polygon <: ClosedShape
+    pts::Vector{Tuple{Any, Any}}
+end
+end
+```
+
+如果想引入 `Circle` 和 `Arc`，它们都是不包含直线的形状。若再引入 `LinearShape` 和 `NonLinearShape` 等新抽象类型，由于 Julia 不支持多重继承，无法很好地扩展。最终会创建 `NonLinearClosedShape` 容纳 `Circle`，`NonLinearOpenShape` 容纳 `Arc` 等人为类型。虽然继承自抽象类型是强制接口的好方法，但受单继承限制，对于大量分类可能不切实际。此时可行的解决方案是 **Traits（特征）**。
+
+## Traits 模式设计
+
+Traits 由 Julia 贡献者 *Tim Holy* 提出，旨在区分功能差异与 `isa` 关系。这些功能区分称为 **Holy Traits** 或简称 Traits。针对 `geom` 模块，可按以下概念简化设计：
+
+1. 所有几何形状派生自抽象类型 `Shape`。
+2. 所有形状有包围盒，可通过 `bbox(::Shape)` 获取。
+3. 部分形状具有有效封闭面积的特征。对这些形状实现 `area()` 函数，其他形状不实现。
+
+根据上述描述，所有几何形状必须仅派生自 `Shape`。所有形状将拥有 `bbox()` 方法。
+
+```julia
+module geom4
+abstract type Shape end
+bbox(x::Shape) = nothing
+
+struct PolyLine <: Shape
+    pts::Vector{Tuple{Any, Any}}
+end
+
+struct Rectangle <: Shape
+    x; y; w; h
+end
+
+struct Polygon <: Shape
+    pts::Vector{Tuple{Any, Any}}
+end
+
+### Here, we will add the traits code ###
+end
+```
+
+但只有部分形状拥有 `area()` 方法，这些将填入高亮区域。Trait 本质上包含两个无属性类型：一个表示特征存在，另一个表示不存在。
+
+```julia
+abstract type HasAreaTrait end
+struct HasArea <: HasAreaTrait end
+struct HasNoArea <: HasAreaTrait end
+```
+
+还需指定哪个形状具有该特征。默认情况下，形状无面积。
+
+```julia
+HasAreaTrait(::Type) = HasNoArea()
+HasAreaTrait(::Type{Polygon}) = HasArea()
+HasAreaTrait(::Type{Rectangle}) = HasArea()
+```
+
+最后，确保 `area` 函数正确利用 Trait。
+
+```julia
+area(x::T) where {T<:Shape} = area(HasAreaTrait(T), x)
+area(::HasArea, x::T) where {T <: Shape} =
+    error("area(::HasArea, $T) method must be implemented")
+area(::HasArea, r::Rectangle) = r.w * r.h
+```
+
+## 运行结果
+
+```julia
+julia> geom4.area(geom4.Rectangle(0, 0, 10, 20))
+200
+
+pl = geom4.PolyLine([(0, 0), (10, 0), (10, 20), (0, 20)])
+```
+
+`area(::Rectangle)` 通过 Traits 框架分派到 `area(::HasArea, ::Rectangle)`，该方法已实现并返回 200。
+
+```julia
+julia> geom4.area(geom4.Polygon([(0, 0), (10, 0), (10, 20), (0, 20)]))
+area(::HasArea, Main.geom4.Polygon) method must be implemented
+…
+```
+
