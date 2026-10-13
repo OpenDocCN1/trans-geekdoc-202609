@@ -1,0 +1,38 @@
+name: PHP BASICS WITH PRACTICAL EXAMPLES AND PROJECT WITH SOURCE CODE
+slug: php-basics-with-practical-examples-and-project-with-source-c
+name_cn: PHP 基础实例与项目实战源码指南
+toc:
+- - '##'
+  - PHP 变量与常量
+- - '###'
+  - PHP 常量
+- - '##'
+  - PHP 字符串运算符
+- - '##'
+  - PHP 数组
+- - '##'
+  - PHP 超全局变量
+- - '##'
+  - PHP 表单
+- - '###'
+  - 表单基础
+- - '##'
+  - 用户注册、登录、受限页面与注销功能实现
+- - '###'
+  - 注册功能
+- - '####'
+  - 表单页面 (index.php)
+- - '####'
+  - 处理逻辑 (process.php?action=register)
+- - '###'
+  - 登录功能
+- - '####'
+  - 登录页面 (login.php)
+- - '####'
+  - 登录处理逻辑 (process.php?action=login)
+- - '###'
+  - 受限页面功能
+- - '####'
+  - 页面逻辑 (restricted.php)
+- - '###'
+  - 注销功能

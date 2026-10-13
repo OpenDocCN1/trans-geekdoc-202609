@@ -1,0 +1,1300 @@
+- raw: "\n\n![](image_rsrcDS.jpg)\n\nPractical Hand On Experience With Php & Mysql\
+    \  \n\nHi Friends! This book is all about PHP and Mysql.It covers almost all the\
+    \ core topics in PHP.Each and every topic is explained with practical examples\
+    \ so that you can clearly understand the topic and you can practice the same on\
+    \ your own.  \n\nThe last chapter in this book covers a small project with full\
+    \ source code. It covers the main topics and give you an understanding of how\
+    \ to build a dynamic website from scratch using PHP and Mysql. © 2021 by Dipti\
+    \ Sahay All Rights Reserved http://readerscollection.in Content : 1.Introduction\
+    \ to PHP  \n\n2.Type of applications that can be developed using Php. 3.How to\
+    \ install PHP locally  \n\n4.Run your first program with Php  \n\n5.Variable and\
+    \ Constants explained with examples  \n\n6.Php datatypes  \n\n7.Php operators.\
+    \ 8.Php operators usage explained with examples  \n\n9.Php Strings and Arrays\
+    \ with examples 10.If and Else block and it's use with practical example  \n\n\
+    11.Different types of loops in PHP.  \n\n12.Php superglobals  \n\n13.Create Php\
+    \ Forms  \n\n14.Php Form Validation:Server side Validation 15.Introduction to\
+    \ Mysql  \n\n16.How to connect to your database from your application 17.How to\
+    \ create database and tables  \n\n18.Session management in php 19.A practical\
+    \ project where you will get to know how to create  \n\ni)Database and table creation\
+    \ iii)A frontend where user can register and login and access the restricted page\
+    \ in the website  \n\nCHAPTER 1: Introduction To Php:: Php is a server side scripting\
+    \ language and is generally used to develop dynamic  webpages. It is an opensource\
+    \ scripting language.It is free,widely used and easily available for  \n\ndownload.\
+    \ It is the best ever tool for developing webapplications or dynamic websites.\
+    \  \n\nPHP was originally created by Rasmus lerdorf in 1994.  \n\nPreviously PHP\
+    \ stood for personal Home page but now PHP stands for PHP:Hypertext Preprocessor.\
+    \ Php scipts are executed on server.It is compatible with all servers like Apache,IIS,etc.\
+    \ A Php file contains HTML  \n\ncode,CSS code and Php  \n\nscript.The file is\
+    \ saved with .php extension.It is executed on server and the response generated\
+    \ is pure HTML which is displayed in the browser.  \n\nSo before we start learning\
+    \ Php we must know what Php can do . Php can be used to create  \n\ndynamic page\
+    \ content.  \n\nIt can be used to create forms and collect data from end users.\
+    \ It can create session and can maintain session for any user while he is navigating\
+    \ through multiple pages in any website. Php can be used to manipulate data in\
+    \ database by performing crud operations like  \n\ncreate,read,update and delete\
+    \ operations.  \n\nPhp can be used to create sessions and track user activity.\
+    \ To learn or work with Php you should have basic knowledge on HTML,CSS and javascript.\
+    \ HTML is hypertext markup language and CSS is cascading style sheet.HTML describes\
+    \ structure of webpage.HTML contains number of elements. These elements hold text\
+    \ and images for the webpage.It actually tells the browser how to display the\
+    \ data for a webpage. CSS is used to give a styling to those elements i.e the\
+    \ look and the feel of the webpage.  \n\nHTML and CSS topics are not covered here\
+    \ however while using HTML tags and CSS code in this book I will briefly describe\
+    \ what is the main purpose of using them. CHAPTER 2  \n\nTypes of Application\
+    \ developed using Php:: Php can used to develop any dynamic webpage.Well what\
+    \ do we mean by dynamic  website? Dynamic website means that the content of the\
+    \ website is not static i.e html pages are not storing content for the website.Data\
+    \ or content is coming from database and it is changing with user action.  \n\n\
+    So now what type of applications and websites we can develop using php.  \n\n\
+    We can develop informative websites,blogs,B2B applications, B2C applications,ecommerce\
+    \ applications,forums,erp and many more. CHAPTER 3  \n\nHow to install Php locally::\
+    \ Installing Php locally means installing it in your local PC.This is important\
+    \ step while learning Php so that you can run and test your php code locally on\
+    \ your PC. We are going to install xampp server (which contains  \n\nApache,Mysql\
+    \ and Php).Apache is a webserver which is required to run php scripts.  \n\nFollow\
+    \ the below steps to install xampp in your PC. Step 1:Go to  \n\nhttps://www.apachefriends.org/do\
+    \ wnload.html  \n\nDownload the latest xampp for your windows. Step 2:Save and\
+    \ Run the .exe file Step 3:A setup wizard dialog will get open on your screen\
+    \ for you.Follow the instructions and install your xampp in desired folder.  \n\
+    \nYour installation part is now done! CHAPTER 4  \n\nRun your first program with\
+    \ Php:: If you have done the xampp installation in C folder.Then navigate to C\
+    \ folder and manually start the server by clicking on xampp\\_start icon which\
+    \ is  \n\nalready there inside xampp folder.See the screenshot below: ![](image_rsrcDT.jpg)To\
+    \ write the php scripts we need an editor.A number of free editor tools like Notepad\
+    \ editor ++, Sublime,Netbeans are available . You can use any of them.  \n\nI\
+    \ will be using Netbeans for writing the php scripts.  \n\nNavigate manually to\
+    \ C:\\\\xampp\\\\htdocs folder. This is a folder where you can store your project\
+    \ folder and files within it. I am creating a folder here and naming it as Practicalphp.I\
+    \ will be using this folder to store all the php scripts required for practical\
+    \ examples and test them as we proceed gradually. Php code starts with open tag\
+    \ and ends with close tags.Well what are open and close tags in php? <?php is\
+    \ the open tag and ?> is the close tag.Php script goes between these two tags.You\
+    \ can find the code below: <?php  \n\n//php code goes here ?> Below we are going\
+    \ to print text on webpage with php.For this create a file in  \n\nC:\\\\xampp\\\
+    \\htdocs\\\\PracticalPhp folder and save it as index.php. Paste the below code\
+    \ to display “Hello ! I am here” on a page. <!DOCTYPE html>  \n\n<html lang=\"\
+    en\">  \n\n<head> <meta charset=\"utf-8\">  \n\n<title>MyFirstExample</title>\
+    \ </head>  \n\n<body>  \n\n<?php echo \"Hello ! I am here\" ;?>  \n\n</body> </html>\
+    \ Now if you have already started your xampp server in your PC then open any browser\
+    \ and type localhost/PracticalPhp/ and click enter.You will see “Hello ! I am\
+    \ here “ on your screen.See the screenshot below: ![](image_rsrcDU.jpg)Illustration\
+    \ 1: Example To Print Hello !I am here A normal php file contains some HTML code\
+    \ and some Php scripting code and the file is saved with .php extension. The php\
+    \ code is written within php open tag and php close tags.Each statement of Php\
+    \ code ends with semicolon. Here in the above code “  \n\nMyFirstExample” text\
+    \ is used as title within the HTML title tag which will get displayed on the top\
+    \ of the page.In Php there is a built-in function “echo” which can be used to\
+    \ output the text “Hello ! I am here”on a web page. CHAPTER 5  \n\nVariable declaration\
+    \ and it's usage with examples:: A variable is a container which store values\
+    \ in it.It can store a string of text,numbers etc.We donot have to declare the\
+    \  \n\ndatatype(ie String,Integer) of the variable.  \n\nIt automatically converts\
+    \ the variable to it's correct data type depending on it's value. The assignment\
+    \ operator is used to assign value to a variable.Once a variable is declared it\
+    \ can be used throughout the code. Php variables follow some naming conventions\
+    \ i.e follow some rules for defining a  \n\nvariable.A php variable starts with\
+    \ dollar sign $ ,followed with a name.A variable name cannot start with number.It\
+    \ can have alphanumeric characters and as well as underscore.A varaiable name\
+    \ cannot have spaces.They are case sensitive. Find below examples to define a\
+    \ variable: $var=”This is a string variable”; Since the above $var variable stores\
+    \ text.It is a variable with datatype as String . $var=10;  \n\nSince the above\
+    \ $var variable stores number.It is a variable with Integer data type. $var=array(“a”,”b”,”c”);\
+    \ Since the $var stores array data so it is an array variable. $var=2.5;  "
+  fmt: "\n![](image_rsrcDS.jpg)\n\n# Practical Hand On Experience With Php & Mysql\n\
+    \nHi Friends! This book is all about PHP and Mysql. It covers almost all the core\
+    \ topics in PHP. Each and every topic is explained with practical examples so\
+    \ that you can clearly understand the topic and you can practice the same on your\
+    \ own.\n\nThe last chapter in this book covers a small project with full source\
+    \ code. It covers the main topics and gives you an understanding of how to build\
+    \ a dynamic website from scratch using PHP and Mysql. © 2021 by Dipti Sahay All\
+    \ Rights Reserved http://readerscollection.in\n\n## Content\n\n1. Introduction\
+    \ to PHP\n2. Type of applications that can be developed using Php\n3. How to install\
+    \ PHP locally\n4. Run your first program with Php\n5. Variable and Constants explained\
+    \ with examples\n6. Php datatypes\n7. Php operators\n8. Php operators usage explained\
+    \ with examples\n9. Php Strings and Arrays with examples\n10. If and Else block\
+    \ and it's use with practical example\n11. Different types of loops in PHP\n12.\
+    \ Php superglobals\n13. Create Php Forms\n14. Php Form Validation: Server side\
+    \ Validation\n15. Introduction to Mysql\n16. How to connect to your database from\
+    \ your application\n17. How to create database and tables\n18. Session management\
+    \ in php\n19. A practical project where you will get to know how to create\n \
+    \   i) Database and table creation\n    iii) A frontend where user can register\
+    \ and login and access the restricted page in the website\n\n# CHAPTER 1: Introduction\
+    \ To Php\n\nPHP is a server side scripting language and is generally used to develop\
+    \ dynamic webpages. It is an opensource scripting language. It is free, widely\
+    \ used and easily available for download. It is the best ever tool for developing\
+    \ webapplications or dynamic websites.\n\nPHP was originally created by Rasmus\
+    \ Lerdorf in 1994.\n\nPreviously PHP stood for Personal Home Page but now PHP\
+    \ stands for PHP: Hypertext Preprocessor. PHP scripts are executed on server.\
+    \ It is compatible with all servers like Apache, IIS, etc. A PHP file contains\
+    \ HTML code, CSS code and PHP script. The file is saved with `.php` extension.\
+    \ It is executed on server and the response generated is pure HTML which is displayed\
+    \ in the browser.\n\nSo before we start learning PHP we must know what PHP can\
+    \ do. PHP can be used to create dynamic page content.\n\nIt can be used to create\
+    \ forms and collect data from end users. It can create session and can maintain\
+    \ session for any user while he is navigating through multiple pages in any website.\
+    \ PHP can be used to manipulate data in database by performing CRUD operations\
+    \ like create, read, update and delete operations.\n\nPHP can be used to create\
+    \ sessions and track user activity. To learn or work with PHP you should have\
+    \ basic knowledge on HTML, CSS and javascript. HTML is hypertext markup language\
+    \ and CSS is cascading style sheet. HTML describes structure of webpage. HTML\
+    \ contains number of elements. These elements hold text and images for the webpage.\
+    \ It actually tells the browser how to display the data for a webpage. CSS is\
+    \ used to give a styling to those elements i.e. the look and the feel of the webpage.\n\
+    \nHTML and CSS topics are not covered here however while using HTML tags and CSS\
+    \ code in this book I will briefly describe what is the main purpose of using\
+    \ them.\n\n# CHAPTER 2: Types of Application developed using Php\n\nPHP can be\
+    \ used to develop any dynamic webpage. Well what do we mean by dynamic website?\
+    \ Dynamic website means that the content of the website is not static i.e. HTML\
+    \ pages are not storing content for the website. Data or content is coming from\
+    \ database and it is changing with user action.\n\nSo now what type of applications\
+    \ and websites we can develop using PHP.\n\nWe can develop informative websites,\
+    \ blogs, B2B applications, B2C applications, ecommerce applications, forums, ERP\
+    \ and many more.\n\n# CHAPTER 3: How to install Php locally\n\nInstalling PHP\
+    \ locally means installing it in your local PC. This is important step while learning\
+    \ PHP so that you can run and test your PHP code locally on your PC. We are going\
+    \ to install XAMPP server (which contains Apache, Mysql and PHP). Apache is a\
+    \ webserver which is required to run PHP scripts.\n\nFollow the below steps to\
+    \ install XAMPP in your PC.\n\n**Step 1:** Go to `https://www.apachefriends.org/download.html`.\
+    \ Download the latest XAMPP for your windows.\n\n**Step 2:** Save and Run the\
+    \ `.exe` file.\n\n**Step 3:** A setup wizard dialog will get open on your screen\
+    \ for you. Follow the instructions and install your XAMPP in desired folder.\n\
+    \nYour installation part is now done!\n\n# CHAPTER 4: Run your first program with\
+    \ Php\n\nIf you have done the XAMPP installation in C folder. Then navigate to\
+    \ C folder and manually start the server by clicking on `xampp_start` icon which\
+    \ is already there inside XAMPP folder. See the screenshot below:\n\n![](image_rsrcDT.jpg)\n\
+    \nTo write the PHP scripts we need an editor. A number of free editor tools like\
+    \ Notepad++, Sublime, Netbeans are available. You can use any of them. I will\
+    \ be using Netbeans for writing the PHP scripts.\n\nNavigate manually to `C:\\\
+    xampp\\htdocs` folder. This is a folder where you can store your project folder\
+    \ and files within it. I am creating a folder here and naming it as `Practicalphp`.\
+    \ I will be using this folder to store all the PHP scripts required for practical\
+    \ examples and test them as we proceed gradually.\n\nPHP code starts with open\
+    \ tag and ends with close tags. Well what are open and close tags in PHP? `<?php`\
+    \ is the open tag and `?>` is the close tag. PHP script goes between these two\
+    \ tags. You can find the code below:\n\n```php\n<?php\n//php code goes here\n\
+    ?>\n```\n\nBelow we are going to print text on webpage with PHP. For this create\
+    \ a file in `C:\\xampp\\htdocs\\PracticalPhp` folder and save it as `index.php`.\
+    \ Paste the below code to display “Hello ! I am here” on a page.\n\n```html\n\
+    <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n  \
+    \  <title>MyFirstExample</title>\n</head>\n<body>\n    <?php echo \"Hello ! I\
+    \ am here\" ;?>\n</body>\n</html>\n```\n\nNow if you have already started your\
+    \ XAMPP server in your PC then open any browser and type `localhost/PracticalPhp/`\
+    \ and click enter. You will see “Hello ! I am here “ on your screen. See the screenshot\
+    \ below:\n\n![](image_rsrcDU.jpg)\n\n**Illustration 1: Example To Print Hello\
+    \ !I am here**\n\nA normal PHP file contains some HTML code and some PHP scripting\
+    \ code and the file is saved with `.php` extension. The PHP code is written within\
+    \ PHP open tag and PHP close tags. Each statement of PHP code ends with semicolon.\
+    \ Here in the above code “MyFirstExample” text is used as title within the HTML\
+    \ `<title>` tag which will get displayed on the top of the page. In PHP there\
+    \ is a built-in function `echo()` which can be used to output the text “Hello\
+    \ ! I am here” on a web page.\n\n# CHAPTER 5: Variable declaration and it's usage\
+    \ with examples\n\nA variable is a container which stores values in it. It can\
+    \ store a string of text, numbers etc. We do not have to declare the datatype\
+    \ (i.e. String, Integer) of the variable.\n\nIt automatically converts the variable\
+    \ to its correct data type depending on its value. The assignment operator is\
+    \ used to assign value to a variable. Once a variable is declared it can be used\
+    \ throughout the code. PHP variables follow some naming conventions i.e. follow\
+    \ some rules for defining a variable. A PHP variable starts with dollar sign `$`,\
+    \ followed with a name. A variable name cannot start with number. It can have\
+    \ alphanumeric characters and as well as underscore. A variable name cannot have\
+    \ spaces. They are case sensitive.\n\nFind below examples to define a variable:\n\
+    \n```php\n$var = \"This is a string variable\";\n```\nSince the above `$var` variable\
+    \ stores text. It is a variable with datatype as String.\n\n```php\n$var = 10;\n\
+    ```\nSince the above `$var` variable stores number. It is a variable with Integer\
+    \ data type.\n\n```php\n$var = array(\"a\", \"b\", \"c\");\n```\nSince the `$var`\
+    \ stores array data so it is an array variable.\n\n```php\n$var = 2.5;\n```\n"
+  trans: "\n\n![](img/image_rsrcDS.jpg)\n\n# PHP 与 MySQL 实战经验\n\n嗨，朋友们！本书主要讲解 PHP\
+    \ 和 MySQL。它涵盖了 PHP 中几乎所有的核心主题。每个主题都配有实战示例进行解释，以便您能清晰地理解主题，并能自行进行练习。\n\n本书最后一章包含一个带有完整源代码的小型项目。它涵盖了主要主题，让您了解如何从零开始使用\
+    \ PHP 和 MySQL 构建动态网站。© 2021 Dipti Sahay 版权所有 http://readerscollection.in\n\n##\
+    \ 目录\n\n1. PHP 简介\n2. 使用 PHP 可开发的应用程序类型\n3. 如何在本地安装 PHP\n4. 运行您的第一个 PHP 程序\n5.\
+    \ 变量与常量详解及示例\n6. PHP 数据类型\n7. PHP 运算符\n8. PHP 运算符用法详解及示例\n9. PHP 字符串与数组及示例\n10.\
+    \ If 和 Else 语句块及其用法实战示例\n11. PHP 中的不同循环类型\n12. PHP 超全局变量\n13. 创建 PHP 表单\n14. PHP\
+    \ 表单验证：服务端验证\n15. MySQL 简介\n16. 如何从应用程序连接到数据库\n17. 如何创建数据库和表\n18. PHP 中的会话管理\n\
+    19. 一个实战项目，您将了解如何创建\n    i) 数据库和表的创建\n    iii) 一个前端，用户可在其中注册、登录并访问网站中的受限页面\n\n\
+    # 第 1 章：PHP 简介\n\nPHP 是一种服务端脚本语言，通常用于开发动态网页。它是一种开源脚本语言。它免费、广泛使用且易于下载。它是开发 Web\
+    \ 应用程序或动态网站的最佳工具。\n\nPHP 最初由 Rasmus Lerdorf 于 1994 年创建。\n\n早期 PHP 代表 Personal\
+    \ Home Page（个人主页），但现在 PHP 代表 PHP: Hypertext Preprocessor（超文本预处理器）。PHP 脚本在服务器上执行。它兼容所有服务器，如\
+    \ Apache、IIS 等。一个 PHP 文件包含 HTML 代码、CSS 代码和 PHP 脚本。文件以 `.php` 扩展名保存。它在服务器上执行，生成的响应是纯\
+    \ HTML，并显示在浏览器中。\n\n因此，在开始学习 PHP 之前，我们必须了解 PHP 能做什么。PHP 可用于创建动态页面内容。\n\n它可用于创建表单并收集最终用户的数据。它可以创建会话，并在用户浏览网站中的多个页面时维护该用户的会话。PHP\
+    \ 可用于通过执行 CRUD 操作（如创建、读取、更新和删除操作）来操作数据库中的数据。\n\nPHP 可用于创建会话和跟踪用户活动。要学习或使用 PHP，您应该具备\
+    \ HTML、CSS 和 JavaScript 的基础知识。HTML 是超文本标记语言，CSS 是层叠样式表。HTML 描述网页的结构。HTML 包含许多元素。这些元素存放网页的文本和图像。它实际上告诉浏览器如何显示网页的数据。CSS\
+    \ 用于为这些元素赋予样式，即网页的外观和风格。\n\nHTML 和 CSS 主题未在本书中涵盖，但当在本书中使用 HTML 标签和 CSS 代码时，我将简要描述使用它们的主要目的。\n\
+    \n# 第 2 章：使用 PHP 开发的应用程序类型\n\nPHP 可用于开发任何动态网页。那么什么是动态网站呢？动态网站意味着网站内容不是静态的，即 HTML\
+    \ 页面不存储网站内容。数据或内容来自数据库，并随用户操作而变化。\n\n那么我们可以使用 PHP 开发哪些类型的应用程序和网站呢？\n\n我们可以开发资讯类网站、博客、B2B\
+    \ 应用、B2C 应用、电子商务应用、论坛、ERP 系统等等。\n\n# 第 3 章：如何在本地安装 PHP\n\n在本地安装 PHP 意味着将其安装在您的本地电脑上。这是学习\
+    \ PHP 的重要一步，以便您可以在本地电脑上运行和测试 PHP 代码。我们将安装 XAMPP 服务器（包含 Apache、MySQL 和 PHP）。Apache\
+    \ 是运行 PHP 脚本所需的 Web 服务器。\n\n请按照以下步骤在您的电脑上安装 XAMPP。\n\n**步骤 1：** 访问 `https://www.apachefriends.org/download.html`。下载适用于您\
+    \ Windows 系统的最新版 XAMPP。\n\n**步骤 2：** 保存并运行 `.exe` 文件。\n\n**步骤 3：** 您的屏幕上将打开一个安装向导对话框。按照说明在所需文件夹中安装\
+    \ XAMPP。\n\n安装部分现在完成了！\n\n# 第 4 章：运行您的第一个 PHP 程序\n\n如果您已在 C 盘完成 XAMPP 安装。然后导航到\
+    \ C 盘，通过点击 XAMPP 文件夹内已有的 `xampp_start` 图标手动启动服务器。请看下面的截图：\n\n![](img/image_rsrcDT.jpg)\n\
+    \n编写 PHP 脚本需要一个编辑器。有许多免费的编辑器工具可用，如 Notepad++、Sublime、Netbeans。您可以使用其中任何一个。我将使用\
+    \ Netbeans 编写 PHP 脚本。\n\n手动导航到 `C:\\xampp\\htdocs` 文件夹。这是一个您可以存放项目文件夹及其中文件的文件夹。我在这里创建一个文件夹并将其命名为\
+    \ `Practicalphp`。我将使用此文件夹存放所有用于实战示例的 PHP 脚本，并随着我们逐步推进进行测试。\n\nPHP 代码以开始标签开头，以结束标签结尾。那么\
+    \ PHP 中的开始和结束标签是什么？`<?php` 是开始标签，`?>` 是结束标签。PHP 脚本位于这两个标签之间。您可以在下面找到代码：\n\n```php\n\
+    <?php\n//php code goes here\n?>\n```\n\n下面我们将使用 PHP 在网页上打印文本。为此，在 `C:\\xampp\\\
+    htdocs\\PracticalPhp` 文件夹中创建一个文件并将其保存为 `index.php`。粘贴下面的代码以在页面上显示 “Hello ! I am\
+    \ here”。\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"\
+    utf-8\">\n    <title>MyFirstExample</title>\n</head>\n<body>\n    <?php echo \"\
+    Hello ! I am here\" ;?>\n</body>\n</html>\n```\n\n现在，如果您已经在电脑上启动了 XAMPP 服务器，请打开任意浏览器并输入\
+    \ `localhost/PracticalPhp/` 然后按回车。您将在屏幕上看到 “Hello ! I am here”。请看下面的截图：\n\n![](img/image_rsrcDU.jpg)\n\
+    \n**图示 1：打印 Hello !I am here 的示例**\n\n一个普通的 PHP 文件包含一些 HTML 代码和一些 PHP 脚本代码，文件以\
+    \ `.php` 扩展名保存。PHP 代码写在 PHP 开始标签和 PHP 结束标签之间。每条 PHP 代码语句以分号结尾。在上面的代码中，“MyFirstExample”\
+    \ 文本被用作 HTML `<title>` 标签内的标题，将显示在页面顶部。在 PHP 中有一个内置函数 `echo()`，可用于在网页上输出文本 “Hello\
+    \ ! I am here”。\n\n# 第 5 章：变量声明及其用法示例\n\n变量是一个存储值的容器。它可以存储文本字符串、数字等。我们不必声明变量的数据类型（即\
+    \ String、Integer）。\n\n它会根据其值自动将变量转换为其正确的数据类型。赋值运算符用于给变量赋值。一旦声明了变量，就可以在整个代码中使用它。PHP\
+    \ 变量遵循一些命名约定，即定义变量时遵循一些规则。PHP 变量以美元符号 `$` 开头，后跟名称。变量名不能以数字开头。它可以包含字母数字字符和下划线。变量名不能包含空格。它们区分大小写。\n\
+    \n请看下面定义变量的示例：\n\n```php\n$var = \"This is a string variable\";\n```\n由于上述 `$var`\
+    \ 变量存储文本。它是一个数据类型为 String 的变量。\n\n```php\n$var = 10;\n```\n由于上述 `$var` 变量存储数字。它是一个数据类型为\
+    \ Integer 的变量。\n\n```php\n$var = array(\"a\", \"b\", \"c\");\n```\n由于 `$var` 存储数组数据，所以它是一个数组变量。\n\
+    \n```php\n$var = 2.5;\n```\n\n"
+  toc: []
+- raw: "Since the $var variable stores a floating point number so it's a float variable.\
+    \ Php Constants:: An identifier which holds a value and that value remain the\
+    \ same throughout the script.The value cannot be changed throughout he script.It\
+    \ starts with a letter or underscore.It is global throughout the script.  \n\n\
+    To create a constant in your script you can use define() function. <?php  \n\n\
+    define(“STORE”,”Estore Diversity”); echo STORE;  \n\n?>  \n\nIn the above example\
+    \ I have define a constant named  \n\nSTORE.It holds the value Estore Diversity.\
+    \  \n\nNow whenever I will use and print the STORE constant in my script it will\
+    \ display the value as Estore Diversity.  \n\nSo the main purpose to define constant\
+    \ is that when we want to define some identifiers that will hold some value that\
+    \ are not going to change throughout the code and are available globally to the\
+    \ script. CHAPTER 6  \n\nPhp Datatypes:: Datatype tells the type of data.A value\
+    \ which is stored in a variable can be of any  \n\ndatatype.There are number of\
+    \ datatypes: • String  \n\n• Integer  \n\n• Boolean  \n\n• Array  \n\n• Object\
+    \  \n\n• NULL  \n\n• Float Any sequence of characters included between single\
+    \ or double quote is a String.For eaxmple:  \n\n<?php $var=”Hello World”; echo\
+    \ $var;  \n\n?> The above $var is a string variable as it holds sequence of characters\
+    \ between double quotes. A variable holding digits which is a non-decimal number\
+    \ is an Integer.Integer can be positive or negative but it should be whole numbers.\
+    \  \n\nFor example: <?php  \n\n$a= 10; echo $a; ?> In the above example variable\
+    \ $a holds a number 10 which donot have any decimal  point and thus it is an Integer.\
+    \ A variable which holds boolean value ie true or false is a boolean variable.\
+    \  \n\nBoolean values are used in conditional blocks. For example if some variable\
+    \ value is equal to true or false then the following condition will be executed.If\
+    \ and Else condtion have been explained in next section. A floating point number\
+    \ is a number which has decimal point. For example:  \n\n<?php  \n\n$b=2.45; \
+    \ \n\n?> Arrays are the datatype which stores multiple values of same type in\
+    \ one variable. We can define array by using array() function.This has been explained\
+    \ in  \n\ndetail in Array section. Objects are the datatype which stores data\
+    \ and also the  \n\ninformation on how to process the data.An object must be explicitly\
+    \ declared. First we define a class  \n\nwith Class keyword.  \n\nIt holds some\
+    \ properties and  \n\nmethods.Then we create an instance ie the object of the\
+    \ class to use the methods and  \n\nproperties.  \n\n<?php class A{  \n\npublic\
+    \ $var=”hello”;  \n\npublic function demo() {  \n\necho $this->var;  \n\n}  \n\
+    \n} $object= new A();  \n\necho $object->demo(); ?>  \n\nHere we have declared\
+    \ a class A .It holds $var property and a method demo. Property is the variable\
+    \ and method is the function in the class. ![](image_rsrcDV.jpg)Illustration 2:\
+    \ Class Datatype demo() method is accessing the variable $var and value “hello”\
+    \ will get printed.  \n\n$object is the object created for class A.Check the output\
+    \ of the code below: NULL is a special data type which holds no value.It has only\
+    \ NULL as value.  \n\nA variable can be set with NULL value. <?php  \n\n$x=NULL;\
+    \  \n\nvar\\_dump($x); ?>  \n\n![](image_rsrcDW.jpg)Illustration 3: NULL Datatype\
+    \  \n\nCHAPTER 7  \n\n PHP Operators:: Operators are used to perform different\
+    \ operations on variable and values.  \n\nSuppose we want two variables and we\
+    \ want to know the  \n\nsummation of that.Then we will perform and addition of\
+    \ that two variables using Arithmetic Operators.  \n\nWe can divide the operations\
+    \ into different groups: • Arithmetic Operators  \n\n• Assignment operators  \n\
+    \n• Comparison Operators  \n\n• Increment/Decrement Operators  \n\n• Logical Operators\
+    \  \n\n• String Operators  \n\n• Array operators  \n\n• Conditional assignment\
+    \ operators Arithmetic Operators: Addition: + is the addition operator.This is\
+    \ used when we want sum of two variables. For example: <?php $x= 10; $y=20; echo\
+    \ $x+$y; ?>  \n\n![](image_rsrcDX.jpg)Illustration 4: Addition Operator Subtraction:-\
+    \ is the subtraction operator.This is used when we want to subtract one variable\
+    \ from other variable. <?php $x=50; $y=25; echo $x-$y; ?> Here by using subtraction\
+    \ operator $y variable is deducted from $x variable.Check the output below: ![](image_rsrcDY.jpg)Illustration\
+    \ 5: Subtraction Operator Multiplication: \\* is the  \n\nmultiplication operator.This\
+    \ is used when we want a product of two variables. <?php  \n\n$x=10;  \n\n$y=20;\
+    \  \n\necho $x\\*$y;  \n\n?> Here in above example we have two variable $x and\
+    \ $y.We are mutiplying it to get the product of two variables.Check the output\
+    \ below: ![](image_rsrcDZ.jpg)Illustration 6: Mutiplication operator Division:\
+    \ / is the divison operator which is used when we want to divide one variable\
+    \ by another variable. For example: <?php  \n\n$x=100;  \n\n$y=10;  \n\necho $x/$y;\
+    \ ?> Here we have one variable $x which is getting divided by $y and return a\
+    \ value. Check the output below:  \n\n![](image_rsrcE0.jpg)Modulus:% is the modulus\
+    \ operator which returns the remainder when one variable is divided by another\
+    \ variable. For example: <?php  \n\n$x=100;  \n\n$y=40;  \n\necho $x%$y; ?> In\
+    \ the above example we have taken a variable $x and it is getting divided by $y.\
+    \ The result will be the remainder we are getting by dividing the two variables.Check\
+    \ out the output below: ![](image_rsrcE1.jpg)Illustration 7: Modulus Operator\
+    \ Exponentiation: \\*\\* is the  \n\n exponentiation operator.It is used when\
+    \ we want to print any variable with some power. For example: <?php  \n\n$x=2;\
+    \  \n\n$y=3;  \n\necho $x\\*\\*$y; ?>  \n\nIn the above example we are finding\
+    \ 2 to power of 3.Check the outut below: ![](image_rsrcE2.jpg)Illustration 8:\
+    \ Exponentiation Operator  \n\nAssignment Operators: With assignment operators\
+    \ we can set values in a variable.Basic assignment operator in PHP is “=” .  \n\
+    \nFor example: $x +=$y; is same $x= $x+ $y; $x -=$y; is same as $x=$x-$y; $x\\\
+    *=$y; is same as $x=$x\\*$y; $x /=$y; is same as $x=$x/$y; $x %=$y is same as\
+    \ $x=$x%$y; Comparison operators: \\== is Equal operator . For  \n\nexample  \n\
+    \n$x==$y Here this will return true if $x value is equal to $y value . === is\
+    \ the identical operator.For example : $x===$y returns true if and only if the\
+    \ values and type of both variables re same. != is the not equal to operator.For\
+    \ example:  \n\n$x!=$y returns true if value of both variables are different.\
+    \  \n\n <> is the not equal to operator.For example:  \n\n$x!=$y returns true\
+    \ if value of both variables are different. !== Not identical operator. For example\
+    \  \n\n$x !== $y returns true if either the value is not same or the type is not\
+    \ same \\> is the Greater operator.For example :  \n\n$x > $y is true when $x\
+    \ value is greater than $y < is the Less than operator.For example :  \n\n$x<$y\
+    \ is true when $x value is less than $y. \\>= is Greater than or equal to operator.For\
+    \ example:  \n\n$x>= $y is true when $x value is greater than or equal to $y <=\
+    \ is Less than or equal to operator .For example :  \n\n$x<=$y is true when $x\
+    \ value is less than or equal to $y < = > is the spaceship  \n\noperator.For example:\
+    \  \n\n$x < = > $y returns an integer less than ,equal to or greater than zero\
+    \ if value of $x is less  \n\nthan,equal to or greater thn $y. Increment and Decrement\
+    \ operators: $x++ will return $x and then increment it's value by one. ++$x will\
+    \ increment value of $x by oe and then return $x  \n\n$x-- will return $x and\
+    \ then decrease it's value by one  \n\n\\--$x will decrement the value by one\
+    \ and then return $x Logical operators: And operator :$x and $y gives a result\
+    \ true if both $x and $y are true.  \n\n&& operator:$x and $y gives a result true\
+    \ if both $x and $y are true.  \n\nOR operator :$x and $y gives a result true\
+    \ if either $x and $y are true.  \n\n|| operator :$x and $y gives a result true\
+    \ if either $x and $y are true.  \n\n! Not operator: !$x gives a result true if\
+    \ $x is not true. CHAPTER 8  "
+  fmt: "\n# PHP Variables and Constants\n\nSince the `$var` variable stores a floating\
+    \ point number so it's a float variable.\n\n## PHP Constants\n\nAn identifier\
+    \ which holds a value and that value remain the same throughout the script. The\
+    \ value cannot be changed throughout the script. It starts with a letter or underscore.\
+    \ It is global throughout the script.\n\nTo create a constant in your script you\
+    \ can use `define()` function.\n\n```php\n<?php\ndefine(\"STORE\", \"Estore Diversity\"\
+    );\necho STORE;\n?>\n```\n\nIn the above example I have define a constant named\
+    \ `STORE`. It holds the value `Estore Diversity`.\n\nNow whenever I will use and\
+    \ print the `STORE` constant in my script it will display the value as `Estore\
+    \ Diversity`.\n\nSo the main purpose to define constant is that when we want to\
+    \ define some identifiers that will hold some value that are not going to change\
+    \ throughout the code and are available globally to the script.\n\n# CHAPTER 6:\
+    \ PHP Datatypes\n\nDatatype tells the type of data. A value which is stored in\
+    \ a variable can be of any datatype. There are number of datatypes:\n\n- String\n\
+    - Integer\n- Boolean\n- Array\n- Object\n- NULL\n- Float\n\nAny sequence of characters\
+    \ included between single or double quote is a String. For example:\n\n```php\n\
+    <?php\n$var = \"Hello World\";\necho $var;\n?>\n```\n\nThe above `$var` is a string\
+    \ variable as it holds sequence of characters between double quotes.\n\nA variable\
+    \ holding digits which is a non-decimal number is an Integer. Integer can be positive\
+    \ or negative but it should be whole numbers.\n\nFor example:\n\n```php\n<?php\n\
+    $a = 10;\necho $a;\n?>\n```\n\nIn the above example variable `$a` holds a number\
+    \ 10 which donot have any decimal point and thus it is an Integer.\n\nA variable\
+    \ which holds boolean value ie true or false is a boolean variable. Boolean values\
+    \ are used in conditional blocks. For example if some variable value is equal\
+    \ to true or false then the following condition will be executed. If and Else\
+    \ condtion have been explained in next section.\n\nA floating point number is\
+    \ a number which has decimal point. For example:\n\n```php\n<?php\n$b = 2.45;\n\
+    ?>\n```\n\nArrays are the datatype which stores multiple values of same type in\
+    \ one variable. We can define array by using `array()` function. This has been\
+    \ explained in detail in Array section.\n\nObjects are the datatype which stores\
+    \ data and also the information on how to process the data. An object must be\
+    \ explicitly declared. First we define a class with `Class` keyword. It holds\
+    \ some properties and methods. Then we create an instance ie the object of the\
+    \ class to use the methods and properties.\n\n```php\n<?php\nclass A {\n    public\
+    \ $var = \"hello\";\n    public function demo() {\n        echo $this->var;\n\
+    \    }\n}\n$object = new A();\necho $object->demo();\n?>\n```\n\nHere we have\
+    \ declared a class `A`. It holds `$var` property and a method `demo()`. Property\
+    \ is the variable and method is the function in the class.\n\n![](image_rsrcDV.jpg)\n\
+    Illustration 2: Class Datatype\n\n`demo()` method is accessing the variable `$var`\
+    \ and value \"hello\" will get printed. `$object` is the object created for class\
+    \ `A`. Check the output of the code below:\n\nNULL is a special data type which\
+    \ holds no value. It has only NULL as value. A variable can be set with NULL value.\n\
+    \n```php\n<?php\n$x = NULL;\nvar_dump($x);\n?>\n```\n\n![](image_rsrcDW.jpg)\n\
+    Illustration 3: NULL Datatype\n\n# CHAPTER 7: PHP Operators\n\nOperators are used\
+    \ to perform different operations on variable and values. Suppose we want two\
+    \ variables and we want to know the summation of that. Then we will perform and\
+    \ addition of that two variables using Arithmetic Operators.\n\nWe can divide\
+    \ the operations into different groups:\n\n- Arithmetic Operators\n- Assignment\
+    \ operators\n- Comparison Operators\n- Increment/Decrement Operators\n- Logical\
+    \ Operators\n- String Operators\n- Array operators\n- Conditional assignment operators\n\
+    \n## Arithmetic Operators\n\n### Addition\n\n`+` is the addition operator. This\
+    \ is used when we want sum of two variables. For example:\n\n```php\n<?php\n$x\
+    \ = 10;\n$y = 20;\necho $x + $y;\n?>\n```\n\n![](image_rsrcDX.jpg)\nIllustration\
+    \ 4: Addition Operator\n\n### Subtraction\n\n`-` is the subtraction operator.\
+    \ This is used when we want to subtract one variable from other variable.\n\n\
+    ```php\n<?php\n$x = 50;\n$y = 25;\necho $x - $y;\n?>\n```\n\nHere by using subtraction\
+    \ operator `$y` variable is deducted from `$x` variable. Check the output below:\n\
+    \n![](image_rsrcDY.jpg)\nIllustration 5: Subtraction Operator\n\n### Multiplication\n\
+    \n`*` is the multiplication operator. This is used when we want a product of two\
+    \ variables.\n\n```php\n<?php\n$x = 10;\n$y = 20;\necho $x * $y;\n?>\n```\n\n\
+    Here in above example we have two variable `$x` and `$y`. We are mutiplying it\
+    \ to get the product of two variables. Check the output below:\n\n![](image_rsrcDZ.jpg)\n\
+    Illustration 6: Mutiplication operator\n\n### Division\n\n`/` is the divison operator\
+    \ which is used when we want to divide one variable by another variable. For example:\n\
+    \n```php\n<?php\n$x = 100;\n$y = 10;\necho $x / $y;\n?>\n```\n\nHere we have one\
+    \ variable `$x` which is getting divided by `$y` and return a value. Check the\
+    \ output below:\n\n![](image_rsrcE0.jpg)\n\n### Modulus\n\n`%` is the modulus\
+    \ operator which returns the remainder when one variable is divided by another\
+    \ variable. For example:\n\n```php\n<?php\n$x = 100;\n$y = 40;\necho $x % $y;\n\
+    ?>\n```\n\nIn the above example we have taken a variable `$x` and it is getting\
+    \ divided by `$y`. The result will be the remainder we are getting by dividing\
+    \ the two variables. Check out the output below:\n\n![](image_rsrcE1.jpg)\nIllustration\
+    \ 7: Modulus Operator\n\n### Exponentiation\n\n`**` is the exponentiation operator.\
+    \ It is used when we want to print any variable with some power. For example:\n\
+    \n```php\n<?php\n$x = 2;\n$y = 3;\necho $x ** $y;\n?>\n```\n\nIn the above example\
+    \ we are finding 2 to power of 3. Check the outut below:\n\n![](image_rsrcE2.jpg)\n\
+    Illustration 8: Exponentiation Operator\n\n## Assignment Operators\n\nWith assignment\
+    \ operators we can set values in a variable. Basic assignment operator in PHP\
+    \ is `=`.\n\nFor example:\n\n- `$x += $y;` is same `$x = $x + $y;`\n- `$x -= $y;`\
+    \ is same as `$x = $x - $y;`\n- `$x *= $y;` is same as `$x = $x * $y;`\n- `$x\
+    \ /= $y;` is same as `$x = $x / $y;`\n- `$x %= $y` is same as `$x = $x % $y;`\n\
+    \n## Comparison operators\n\n- `==` is Equal operator. For example `$x == $y`\
+    \ Here this will return true if `$x` value is equal to `$y` value.\n- `===` is\
+    \ the identical operator. For example: `$x === $y` returns true if and only if\
+    \ the values and type of both variables re same.\n- `!=` is the not equal to operator.\
+    \ For example: `$x != $y` returns true if value of both variables are different.\n\
+    - `<>` is the not equal to operator. For example: `$x != $y` returns true if value\
+    \ of both variables are different.\n- `!==` Not identical operator. For example\
+    \ `$x !== $y` returns true if either the value is not same or the type is not\
+    \ same.\n- `>` is the Greater operator. For example: `$x > $y` is true when `$x`\
+    \ value is greater than `$y`.\n- `<` is the Less than operator. For example: `$x\
+    \ < $y` is true when `$x` value is less than `$y`.\n- `>=` is Greater than or\
+    \ equal to operator. For example: `$x >= $y` is true when `$x` value is greater\
+    \ than or equal to `$y`.\n- `<=` is Less than or equal to operator. For example:\
+    \ `$x <= $y` is true when `$x` value is less than or equal to `$y`.\n- `<=>` is\
+    \ the spaceship operator. For example: `$x <=> $y` returns an integer less than,\
+    \ equal to or greater than zero if value of `$x` is less than, equal to or greater\
+    \ than `$y`.\n\n## Increment and Decrement operators\n\n- `$x++` will return `$x`\
+    \ and then increment it's value by one.\n- `++$x` will increment value of `$x`\
+    \ by one and then return `$x`.\n- `$x--` will return `$x` and then decrease it's\
+    \ value by one.\n- `--$x` will decrement the value by one and then return `$x`.\n\
+    \n## Logical operators\n\n- **And operator**: `$x and $y` gives a result true\
+    \ if both `$x` and `$y` are true.\n- **`&&` operator**: `$x && $y` gives a result\
+    \ true if both `$x` and `$y` are true.\n- **OR operator**: `$x or $y` gives a\
+    \ result true if either `$x` and `$y` are true.\n- **`||` operator**: `$x || $y`\
+    \ gives a result true if either `$x` and `$y` are true.\n- **`!` Not operator**:\
+    \ `!$x` gives a result true if `$x` is not true.\n\n# CHAPTER 8\n"
+  trans: "\n\n# PHP 变量与常量\n\n由于 `$var` 变量存储的是一个浮点数，因此它是一个浮点型变量。\n\n## PHP 常量\n\n标识符，它保存一个值，且该值在整个脚本执行期间保持不变。该值不能在脚本中被更改。它以字母或下划线开头。它在整个脚本中是全局的。\n\
+    \n要在脚本中创建常量，可以使用 `define()` 函数。\n\n```php\n<?php\ndefine(\"STORE\", \"Estore Diversity\"\
+    );\necho STORE;\n?>\n```\n\n在上述示例中，我定义了一个名为 `STORE` 的常量。它保存的值为 `Estore Diversity`。\n\
+    \n现在，每当我在脚本中使用并打印 `STORE` 常量时，它都将显示值 `Estore Diversity`。\n\n因此，定义常量的主要目的是：当我们想要定义一些标识符，它们将保存一些在整个代码中不会改变且在脚本中全局可用的值时。\n\
+    \n# 第 6 章：PHP 数据类型\n\n数据类型说明了数据的类型。存储在变量中的值可以是任意数据类型。有多种数据类型：\n\n- 字符串\n- 整型\n\
+    - 布尔型\n- 数组\n- 对象\n- NULL\n- 浮点型\n\n包含在单引号或双引号之间的任何字符序列都是字符串。例如：\n\n```php\n<?php\n\
+    $var = \"Hello World\";\necho $var;\n?>\n```\n\n上述 `$var` 是一个字符串变量，因为它保存的是包含在双引号之间的字符序列。\n\
+    \n保存数字（非十进制数）的变量是整型。整型可以是正数或负数，但必须是整数。\n\n例如：\n\n```php\n<?php\n$a = 10;\necho\
+    \ $a;\n?>\n```\n\n在上述示例中，变量 `$a` 保存数字 10，它没有任何小数点，因此它是一个整型。\n\n保存布尔值（即 true 或\
+    \ false）的变量是布尔型变量。布尔值用于条件块中。例如，如果某个变量的值等于 true 或 false，则将执行以下条件。If 和 Else 条件将在下一节中解释。\n\
+    \n浮点数是带有小数点的数字。例如：\n\n```php\n<?php\n$b = 2.45;\n?>\n```\n\n数组是一种数据类型，它在一个变量中存储多个相同类型的值。我们可以使用\
+    \ `array()` 函数来定义数组。这在数组章节中有详细解释。\n\n对象是一种数据类型，它存储数据，还存储如何处理这些数据的信息。对象必须显式声明。首先，我们使用\
+    \ `Class` 关键字定义一个类。它包含一些属性和方法。然后我们创建一个实例，即类的对象，以使用这些方法和属性。\n\n```php\n<?php\n\
+    class A {\n    public $var = \"hello\";\n    public function demo() {\n      \
+    \  echo $this->var;\n    }\n}\n$object = new A();\necho $object->demo();\n?>\n\
+    ```\n\n这里我们声明了一个类 `A`。它包含 `$var` 属性和一个 `demo()` 方法。属性是类中的变量，方法是类中的函数。\n\n![](img/image_rsrcDV.jpg)\n\
+    图 2：类数据类型\n\n`demo()` 方法访问变量 `$var`，将打印值 \"hello\"。`$object` 是为类 `A` 创建的对象。请查看下面代码的输出：\n\
+    \nNULL 是一种特殊的数据类型，它不保存任何值。它的值只能是 NULL。变量可以被设置为 NULL 值。\n\n```php\n<?php\n$x =\
+    \ NULL;\nvar_dump($x);\n?>\n```\n\n![](img/image_rsrcDW.jpg)\n图 3：NULL 数据类型\n\n\
+    # 第 7 章：PHP 运算符\n\n运算符用于对变量和值执行不同的操作。假设我们有两个变量，想要知道它们的总和。那么我们将使用算术运算符对这两个变量执行加法运算。\n\
+    \n我们可以将操作分为不同的组：\n\n- 算术运算符\n- 赋值运算符\n- 比较运算符\n- 自增/自减运算符\n- 逻辑运算符\n- 字符串运算符\n\
+    - 数组运算符\n- 条件赋值运算符\n\n## 算术运算符\n\n### 加法\n\n`+` 是加法运算符。当我们需要两个变量的和时使用它。例如：\n\n\
+    ```php\n<?php\n$x = 10;\n$y = 20;\necho $x + $y;\n?>\n```\n\n![](img/image_rsrcDX.jpg)\n\
+    图 4：加法运算符\n\n### 减法\n\n`-` 是减法运算符。当我们想要从一个变量中减去另一个变量时使用它。\n\n```php\n<?php\n$x\
+    \ = 50;\n$y = 25;\necho $x - $y;\n?>\n```\n\n这里通过使用减法运算符，从 `$x` 变量中减去了 `$y` 变量。请查看下面的输出：\n\
+    \n![](img/image_rsrcDY.jpg)\n图 5：减法运算符\n\n### 乘法\n\n`*` 是乘法运算符。当我们想要两个变量的乘积时使用它。\n\
+    \n```php\n<?php\n$x = 10;\n$y = 20;\necho $x * $y;\n?>\n```\n\n在上面的示例中，我们有两个变量\
+    \ `$x` 和 `$y`。我们将它们相乘以获得两个变量的乘积。请查看下面的输出：\n\n![](img/image_rsrcDZ.jpg)\n图 6：乘法运算符\n\
+    \n### 除法\n\n`/` 是除法运算符，当我们想要用一个变量除以另一个变量时使用它。例如：\n\n```php\n<?php\n$x = 100;\n\
+    $y = 10;\necho $x / $y;\n?>\n```\n\n这里我们有一个变量 `$x`，它被 `$y` 除并返回一个值。请查看下面的输出：\n\
+    \n![](img/image_rsrcE0.jpg)\n\n### 取模\n\n`%` 是取模运算符，它返回一个变量除以另一个变量的余数。例如：\n\n\
+    ```php\n<?php\n$x = 100;\n$y = 40;\necho $x % $y;\n?>\n```\n\n在上述示例中，我们取了一个变量\
+    \ `$x`，它被 `$y` 除。结果将是两个变量相除得到的余数。请查看下面的输出：\n\n![](img/image_rsrcE1.jpg)\n图 7：取模运算符\n\
+    \n### 幂运算\n\n`**` 是幂运算符。当我们想要打印某个变量的若干次幂时使用它。例如：\n\n```php\n<?php\n$x = 2;\n$y\
+    \ = 3;\necho $x ** $y;\n?>\n```\n\n在上述示例中，我们计算 2 的 3 次幂。请查看下面的输出：\n\n![](img/image_rsrcE2.jpg)\n\
+    图 8：幂运算符\n\n## 赋值运算符\n\n通过赋值运算符，我们可以给变量设置值。PHP 中基本的赋值运算符是 `=`。\n\n例如：\n\n- `$x\
+    \ += $y;` 等同于 `$x = $x + $y;`\n- `$x -= $y;` 等同于 `$x = $x - $y;`\n- `$x *= $y;`\
+    \ 等同于 `$x = $x * $y;`\n- `$x /= $y;` 等同于 `$x = $x / $y;`\n- `$x %= $y` 等同于 `$x\
+    \ = $x % $y;`\n\n## 比较运算符\n\n- `==` 是相等运算符。例如 `$x == $y`，如果 `$x` 的值等于 `$y` 的值，则返回\
+    \ true。\n- `===` 是全等运算符。例如：`$x === $y` 仅当两个变量的值和类型都相同时返回 true。\n- `!=` 是不等于运算符。例如：`$x\
+    \ != $y` 如果两个变量的值不同，则返回 true。\n- `<>` 是不等于运算符。例如：`$x != $y` 如果两个变量的值不同，则返回 true。\n\
+    - `!==` 不全等运算符。例如 `$x !== $y` 如果值不相同或类型不相同，则返回 true。\n- `>` 是大于运算符。例如：`$x > $y`\
+    \ 当 `$x` 的值大于 `$y` 时为 true。\n- `<` 是小于运算符。例如：`$x < $y` 当 `$x` 的值小于 `$y` 时为 true。\n\
+    - `>=` 是大于或等于运算符。例如：`$x >= $y` 当 `$x` 的值大于或等于 `$y` 时为 true。\n- `<=` 是小于或等于运算符。例如：`$x\
+    \ <= $y` 当 `$x` 的值小于或等于 `$y` 时为 true。\n- `<=>` 是太空船运算符。例如：`$x <=> $y` 如果 `$x`\
+    \ 的值小于、等于或大于 `$y`，则返回一个小于、等于或大于零的整数。\n\n## 自增和自减运算符\n\n- `$x++` 将返回 `$x`，然后将其值加一。\n\
+    - `++$x` 将 `$x` 的值加一，然后返回 `$x`。\n- `$x--` 将返回 `$x`，然后将其值减一。\n- `--$x` 将值减一，然后返回\
+    \ `$x`。\n\n## 逻辑运算符\n\n- **And 运算符**：`$x and $y` 如果 `$x` 和 `$y` 都为 true，则结果为 true。\n\
+    - **`&&` 运算符**：`$x && $y` 如果 `$x` 和 `$y` 都为 true，则结果为 true。\n- **OR 运算符**：`$x\
+    \ or $y` 如果 `$x` 和 `$y` 任一为 true，则结果为 true。\n- **`||` 运算符**：`$x || $y` 如果 `$x`\
+    \ 和 `$y` 任一为 true，则结果为 true。\n- **`!` 非运算符**：`!$x` 如果 `$x` 不为 true，则结果为 true。\n\
+    \n# 第 8 章\n\n"
+  toc: []
+- raw: "Php String operators: There are two operators under Php String operators.One\
+    \ is the concatenation and other one is concatenation assignment operator. Concatenation\
+    \ : $x . $y concatenates $x and $y Concatenation Assignment operator :$x .=$y\
+    \ .This appends $y to $x. CHAPTER 9  \n\n Strings In PHP:  \n\nA string is a sequence\
+    \ of characters.  \n\nHow can we define a string variable?  \n\nLets check out\
+    \ an example below:  \n\n$x=”hello world”; Here in above example we have created\
+    \ a variable $x and assign some value to it.The value assigned to it is a sequence\
+    \ of characters.thus in this way a string variable is created. In Php there are\
+    \ various PHP string functions which can be used in application.Some of them have\
+    \ been discussed below: Suppose we want to check the length of a string variable.We\
+    \ can use strlen() for that.  \n\n<?php echo strlen(“hi”)  \n\n?> This will give\
+    \ the following output: 2 since there are only two characters. There are numbers\
+    \ of other php string functions .like  \n\nstrstr,strlen,strpos etc. PHP Arrays:\
+    \  \n\nArrays is used to store multiple values in a single variable.  \n\nTo define\
+    \ array we use \\[\\] brackets.  \n\nLets define an array say fruits;  \n\n$fruits=array();\
+    \ The above $fruits is an empty array.Now we assign some values to it. $fruits=\\\
+    ['guava','apple','orange','pi neaplle','mango'\\]; Now if we print the array\\\
+    [1\\] it will give the result as apple because in this array we have apple in\
+    \ index 1. Well there are three types of arrays:  \n\nNumeric Arrays,Associative\
+    \ Arrays and Multidimensional arrays. Numeric Arrays are those where the index\
+    \ is numeric.  \n\nAssociative arrays are those where the index is not numeric.\
+    \ Multidimensional Arrays are those which contain more than 1 array. CHAPTER 10\
+    \  \n\nIf and Else block with examples:: If and Else are conditional blocks that\
+    \ perform different actions based on some  condition. For example: We want to\
+    \ print hello when the variable value is 10.For this we are going to apply If\
+    \ and else block. Example:  \n\n<?php  \n\n$var=10; if($var==10) {  \n\necho “hello”;\
+    \ }  \n\nelse  \n\n{  \n\necho “bye”; }  \n\n?>  \n\nIn this above example first\
+    \ we have defined a variable and have assigned it a value of 10.  \n\nIn the next\
+    \ statement we are applying if condition ie if the value of variable is 10 then\
+    \ it will print hello otherwise it will execute the else block ie it will print\
+    \ bye.  \n\nHere the variable value is  \n\nsatisfying the if condition ie the\
+    \ variable value is 10 so here hello will get displayed on the screen. See the\
+    \ output below: ![](image_rsrcE3.jpg)Illustration 9: If .. Else block  \n\nCHAPTER\
+    \ 11  \n\nLoops in PHP:: When we want to run a piece of code again and again when\
+    \ certain conditions are met then we use loops. There are different types of loops:\
+    \ while  \n\ndo .. while  \n\nfor  \n\nforeach :loop While loop gets executed\
+    \ till the condition is true Syntax for while loop: while(till condition is true)\
+    \ {  \n\ncode to be executed  \n\n} Example:  \n\nLet say we have a variable $var=1;\
+    \ while ($var <=6) {  \n\necho $var; $var++; }  \n\nOUTPUT: 123456 The variable\
+    \ here gets increased by 1 and is displayed on screen till it's value is less\
+    \ than or equal to 6. do....while loop always executes the block of code first\
+    \ time and then repeat the loop if condition is true. Syntax for do...while: do\
+    \  \n\n{  \n\ncode to be executed }while(condition is true) Example:  \n\n$var=1;\
+    \ do  \n\n{  \n\necho $var;  \n\n$var++;  \n\n}while($var<=6); Output: 123456\
+    \ for Loop iterates through a block of code till the specified number of times\
+    \ and till the condition is true. Syntax  \n\nfor(initialization; condition; increment)\
+    \  \n\n{ code to be executed  \n\n}  \n\nExample:  \n\nfor($x=1 ;$x<=5 ;$x ++)\
+    \ {  \n\necho $x;  \n\n} Output: 12345 Foreach loop :Loops through a block code\
+    \ for each element in an array Syntax:  \n\nforeach($array as $key=>$value)  \n\
+    \n{  \n\necho $key;  \n\necho '<br>';  \n\necho $value;  \n\n}  \n\nSuppose we\
+    \ have an array  \n\nvariable $arr. $arr=\\['a'=>'yellow','b'=>'red','c'=> 'white'\\\
+    ];  \n\nforeach($arr as $key=>$value) { echo $key; echo '<br>'; echo $value; }\
+    \ OUTPUT: a  \n\nyellow b  \n\nred  \n\nc  \n\nwhite PHP Superglobals:: The predefined\
+    \ variables which are global in scope ie they can be accessed from anywhere in\
+    \ the script.Nothing special has to be done to call these superglobal variables.Some\
+    \ of them are mentioned below: $\\_GLOBALS $\\_SERVER $\\_POST  \n\n $\\_GET \
+    \ \n\n$\\_REQUEST $\\_FILES  \n\n$\\_ENV  \n\n$\\_COOKIE $\\_SESSION $\\_SERVER\
+    \ returns information related to your headers and path $\\_POST is used to retrieve\
+    \ value of data posted from any form, $\\_GET is used to retrieve any value of\
+    \ any get variable,  \n\n$\\_REQUEST is used to retrieve both the post and get\
+    \ data.  \n\n$\\_ENV is the environment variable. PHP FORMS: Now a days we all\
+    \ are familiar with the websites on internet. Whether we have a restaurant site\
+    \ or event booking or any  \n\nblog.Every website has a form for their every functionality.\
+    \  \n\nSay we visit a restaurant website and now we want to book a table for dinner.\
+    \  \n\nSo how do the restaurant manager will come to know about the booking. \
+    \ \n\nWell he will ask his developer to create a page which will usually collect\
+    \ some information from guests . The developer will design the webpage and create\
+    \ a form where he will add some basic fields to collect information from guest.\
+    \ He will collect the Name,Mobile No. and other information. And then insert it\
+    \ in database.In this way Manager will come to know about the booking. So here\
+    \ we are going to learn how to create PHP forms.  \n\nThe PHP form start with\
+    \ <form> tag and ends with </form> The basic fields which we can include in the\
+    \ form is text  \n\nfield,password field,textarea,date calendar,radio buttons\
+    \ and  \n\ncheckboxes. Every form has a method type ie post or get.These methods\
+    \ specify how your data is being  \n\ntransferred from form to your server.  \n\
+    \nGet is the default method.If Get method is used then data will get appended\
+    \ in the url whereas if the method is post it will be more secure and the data\
+    \ will not get exposed in the url. Every form has an action attribute ie the form\
+    \ on subit will redirect to that specific action for getting the processing of\
+    \ the form. Syntax::  \n\n<form action=”action.php” method=”post”>  \n\n<field1...>\
+    \  \n\n<field2...>  \n\n</form> Example:Form for resrving a table for guests <form\
+    \ method type=”post” action=”process.php” >  \n\nName:<input type=”text”  \n\n\
+    name=”name”>  \n\nMobile:<input type=”number” name=”mobile”>  \n\nEmail:<input\
+    \ type=”text”  \n\nname=”email”>  \n\n<input type=”submit”  \n\nname=”submit”\
+    \ value=”submit”> </form> CHAPTER 14 Server Side Validation:: When we submit a\
+    \ form the form should be validated.This means we should apply a rule to check\
+    \ that the mandatory fields are not empty and the value entered is in correct\
+    \ type. For the above form we will add an action in process.php  \n\nif(isset($\\\
+    _POST\\['submit'\\])) {  \n\nif($\\_POST\\['name'\\]!='' &&  \n\n$\\_POST\\['number'\\\
+    ]!='' && $\\_POST\\['email'\\])  \n\n{  \n\ncode to be executed }  \n\nelse  \n\
+    \n{  \n\nredirect to previous page } } The code above checks if the fields contain\
+    \ some value or not.If the value is not set for any field then the guest gets\
+    \  \n\nredirected to the form page. CHAPTER 15  \n\nIntoduction to Mysql: Mysql\
+    \ is an opensource relational database system.Mysql is the mostly used database\
+    \  with PHP. It is developed,distributed and supported by Oracle Corporation.\
+    \ In Mysql there are tables.  \n\nEach table contain some rows and columns.It\
+    \ works for both small and large applications.It is fast , reliable and very easy\
+    \ to use database system.It compiles on number of platform. CHAPTER 16  \n\nConnection\
+    \ of Mysql in PHP::  \n\nWe can use Mysqli to connect to PHP.  \n\nSyntax:: <?php\
+    \  \n\n$host='localhost'; $username='root'; $password=''; //For creating a newconnection\
+    \ $conn= new mysqli($host, $username,$password); if($conn->connect\\_error) {\
+    \  \n\ndie(' Connection Failed : '.  \n\n$conn->connect\\_error);  \n\n} echo\
+    \ 'Connected Successfully'; ?>  \n\nOutput::  \n\nConnected Successfully In the\
+    \ above we are creating an instance of mysqli class  "
+  fmt: "\n# PHP String Operators\n\nPHP 字符串运算符包含两种运算符：连接运算符（`.`）和连接赋值运算符（`.=`）。\n\n\
+    - **连接运算符**：`$x . $y` 将 `$x` 和 `$y` 连接起来。\n- **连接赋值运算符**：`$x .= $y` 将 `$y` 追加到\
+    \ `$x` 后面。\n\n---\n\n# 第 9 章：PHP 中的字符串\n\n字符串是字符序列。\n\n## 如何定义字符串变量？\n\n请看下面的示例：\n\
+    \n```php\n$x = \"hello world\";\n```\n\n在上面的示例中，我们创建了一个变量 `$x` 并为其赋值。该值是一个字符序列，因此这样就创建了一个字符串变量。\n\
+    \nPHP 中有各种字符串函数可用于应用程序，下面讨论其中一些：\n\n假设我们要检查字符串变量的长度，可以使用 `strlen()`。\n\n```php\n\
+    <?php echo strlen(\"hi\"); ?>\n```\n\n输出结果为 `2`，因为只有两个字符。\n\n还有许多其他的 PHP 字符串函数，如\
+    \ `strstr()`、`strlen()`、`strpos()` 等。\n\n---\n\n# PHP 数组\n\n数组用于在单个变量中存储多个值。\n\
+    \n定义数组使用 `[]` 括号。\n\n定义一个名为 `fruits` 的数组：\n\n```php\n$fruits = array();\n```\n\
+    \n上面的 `$fruits` 是一个空数组。现在为其赋值：\n\n```php\n$fruits = ['guava', 'apple', 'orange',\
+    \ 'pineapple', 'mango'];\n```\n\n如果打印 `$fruits[1]`，结果将是 `apple`，因为 `apple` 在索引\
+    \ 1 处。\n\n数组主要有三种类型：\n\n1. **索引数组**：索引为数字。\n2. **关联数组**：索引不为数字（通常为字符串）。\n3. **多维数组**：包含一个或多个数组的数组。\n\
+    \n---\n\n# 第 10 章：If 和 Else 语句块及示例\n\n`if` 和 `else` 是条件语句块，根据条件执行不同操作。\n\n**示例**：当变量值为\
+    \ 10 时打印 \"hello\"。\n\n```php\n<?php\n$var = 10;\nif ($var == 10) {\n    echo\
+    \ \"hello\";\n} else {\n    echo \"bye\";\n}\n?>\n```\n\n在上面的示例中：\n1. 定义变量 `$var`\
+    \ 并赋值为 10。\n2. 应用 `if` 条件：如果变量值为 10 则打印 \"hello\"，否则执行 `else` 块打印 \"bye\"。\n3.\
+    \ 由于变量值满足 `if` 条件（值为 10），屏幕将显示 \"hello\"。\n\n输出示意图：\n![Illustration 9: If .. Else\
+    \ block](image_rsrcE3.jpg)\n\n---\n\n# 第 11 章：PHP 循环\n\n当需要在满足特定条件时重复执行代码块时使用循环。\n\
+    \n循环类型：\n- `while`\n- `do ... while`\n- `for`\n- `foreach`\n\n## While 循环\n\n\
+    当条件为真时持续执行。\n\n**语法**：\n```php\nwhile (condition is true) {\n    // code to be\
+    \ executed\n}\n```\n\n**示例**：\n```php\n$var = 1;\nwhile ($var <= 6) {\n    echo\
+    \ $var;\n    $var++;\n}\n```\n**输出**：`123456`\n变量每次增加 1 并显示，直到其值小于或等于 6。\n\n##\
+    \ Do...While 循环\n\n先执行一次代码块，然后在条件为真时重复循环。\n\n**语法**：\n```php\ndo {\n    // code\
+    \ to be executed\n} while (condition is true);\n```\n\n**示例**：\n```php\n$var =\
+    \ 1;\ndo {\n    echo $var;\n    $var++;\n} while ($var <= 6);\n```\n**输出**：`123456`\n\
+    \n## For 循环\n\n在条件为真时，按指定次数迭代代码块。\n\n**语法**：\n```php\nfor (initialization; condition;\
+    \ increment) {\n    // code to be executed\n}\n```\n\n**示例**：\n```php\nfor ($x\
+    \ = 1; $x <= 5; $x++) {\n    echo $x;\n}\n```\n**输出**：`12345`\n\n## Foreach 循环\n\
+    \n遍历数组中的每个元素。\n\n**语法**：\n```php\nforeach ($array as $key => $value) {\n    echo\
+    \ $key;\n    echo '<br>';\n    echo $value;\n}\n```\n\n**示例**：\n假设有数组变量 `$arr`：\n\
+    ```php\n$arr = ['a' => 'yellow', 'b' => 'red', 'c' => 'white'];\nforeach ($arr\
+    \ as $key => $value) {\n    echo $key;\n    echo '<br>';\n    echo $value;\n}\n\
+    ```\n**输出**：\n```text\na\nyellow\nb\nred\nc\nwhite\n```\n\n---\n\n# PHP 超全局变量\n\
+    \n预定义的全局作用域变量，即可在脚本任何位置访问。无需特殊操作即可调用。\n\n主要超全局变量：\n- `$GLOBALS`\n- `$_SERVER`\n\
+    - `$_POST`\n- `$_GET`\n- `$_REQUEST`\n- `$_FILES`\n- `$_ENV`\n- `$_COOKIE`\n-\
+    \ `$_SESSION`\n\n功能说明：\n- `$_SERVER`：返回与头部和路径相关的信息。\n- `$_POST`：用于获取从表单提交的数据值。\n\
+    - `$_GET`：用于获取 GET 变量的值。\n- `$_REQUEST`：用于同时获取 POST 和 GET 数据。\n- `$_ENV`：环境变量。\n\
+    \n---\n\n# PHP 表单\n\n现代网站（餐厅预订、活动报名、博客等）都包含表单功能。\n\n**场景**：访问餐厅网站预订晚餐。经理需要知道预订信息，开发人员创建页面收集客人信息（姓名、手机号等）并存入数据库。\n\
+    \n## 表单基础\n\n- 表单以 `<form>` 标签开始，以 `</form>` 结束。\n- 基本字段：文本框、密码框、文本域、日期选择器、单选按钮、复选框。\n\
+    - 每个表单有 `method` 属性：`post` 或 `get`，指定数据传输方式。\n  - `get` 为默认方法，数据追加在 URL 中。\n \
+    \ - `post` 更安全，数据不暴露在 URL 中。\n- 每个表单有 `action` 属性：提交后重定向到指定页面处理表单。\n\n**语法**：\n\
+    ```html\n<form action=\"action.php\" method=\"post\">\n    <field1...>\n    <field2...>\n\
+    </form>\n```\n\n**示例**：客人预订餐桌表单\n```html\n<form method=\"post\" action=\"process.php\"\
+    >\n    Name: <input type=\"text\" name=\"name\">\n    Mobile: <input type=\"number\"\
+    \ name=\"mobile\">\n    Email: <input type=\"text\" name=\"email\">\n    <input\
+    \ type=\"submit\" name=\"submit\" value=\"submit\">\n</form>\n```\n\n---\n\n#\
+    \ 第 14 章：服务端验证\n\n提交表单时应进行验证，即检查必填字段非空且数据类型正确。\n\n针对上述表单，在 `process.php` 中添加处理逻辑：\n\
+    \n```php\nif (isset($_POST['submit'])) {\n    if ($_POST['name'] != '' && $_POST['number']\
+    \ != '' && $_POST['email']) {\n        // code to be executed\n    } else {\n\
+    \        // redirect to previous page\n    }\n}\n```\n\n上述代码检查字段是否包含值。若任意字段未设置值，则将用户重定向回表单页面。\n\
+    \n---\n\n# 第 15 章：MySQL 简介\n\nMySQL 是开源关系型数据库系统，是 PHP 最常用的数据库。由 Oracle 公司开发、分发和支持。\n\
+    \nMySQL 中包含表，每个表包含行和列。适用于大小型应用，速度快、可靠、易用，可在多种平台编译运行。\n\n---\n\n# 第 16 章：PHP 连接\
+    \ MySQL\n\n可使用 `mysqli` 扩展连接 MySQL。\n\n**语法**：\n```php\n<?php\n$host = 'localhost';\n\
+    $username = 'root';\n$password = '';\n\n// 创建新连接\n$conn = new mysqli($host, $username,\
+    \ $password);\n\nif ($conn->connect_error) {\n    die('Connection Failed: ' .\
+    \ $conn->connect_error);\n}\n\necho 'Connected Successfully';\n?>\n```\n\n**输出**：\n\
+    ```text\nConnected Successfully\n```\n\n在上面的代码中，我们创建了 `mysqli` 类的实例。\n"
+  trans: "\n# PHP 字符串运算符\n\nPHP 字符串运算符包含两种运算符：连接运算符（`.`）和连接赋值运算符（`.=`）。\n\n- **连接运算符**：`$x\
+    \ . $y` 将 `$x` 和 `$y` 连接起来。\n- **连接赋值运算符**：`$x .= $y` 将 `$y` 追加到 `$x` 后面。\n\n\
+    ---\n\n# 第 9 章：PHP 中的字符串\n\n字符串是字符序列。\n\n## 如何定义字符串变量？\n\n请看下面的示例：\n\n```php\n\
+    $x = \"hello world\";\n```\n\n在上面的示例中，我们创建了一个变量 `$x` 并为其赋值。该值是一个字符序列，因此这样就创建了一个字符串变量。\n\
+    \nPHP 中有各种字符串函数可用于应用程序，下面讨论其中一些：\n\n假设我们要检查字符串变量的长度，可以使用 `strlen()`。\n\n```php\n\
+    <?php echo strlen(\"hi\"); ?>\n```\n\n输出结果为 `2`，因为只有两个字符。\n\n还有许多其他的 PHP 字符串函数，如\
+    \ `strstr()`、`strlen()`、`strpos()` 等。\n\n---\n\n# PHP 数组\n\n数组用于在单个变量中存储多个值。\n\
+    \n定义数组使用 `[]` 括号。\n\n定义一个名为 `fruits` 的数组：\n\n```php\n$fruits = array();\n```\n\
+    \n上面的 `$fruits` 是一个空数组。现在为其赋值：\n\n```php\n$fruits = ['guava', 'apple', 'orange',\
+    \ 'pineapple', 'mango'];\n```\n\n如果打印 `$fruits[1]`，结果将是 `apple`，因为 `apple` 在索引\
+    \ 1 处。\n\n数组主要有三种类型：\n\n1. **索引数组**：索引为数字。\n2. **关联数组**：索引不为数字（通常为字符串）。\n3. **多维数组**：包含一个或多个数组的数组。\n\
+    \n---\n\n# 第 10 章：If 和 Else 语句块及示例\n\n`if` 和 `else` 是条件语句块，根据条件执行不同操作。\n\n**示例**：当变量值为\
+    \ 10 时打印 \"hello\"。\n\n```php\n<?php\n$var = 10;\nif ($var == 10) {\n    echo\
+    \ \"hello\";\n} else {\n    echo \"bye\";\n}\n?>\n```\n\n在上面的示例中：\n1. 定义变量 `$var`\
+    \ 并赋值为 10。\n2. 应用 `if` 条件：如果变量值为 10 则打印 \"hello\"，否则执行 `else` 块打印 \"bye\"。\n3.\
+    \ 由于变量值满足 `if` 条件（值为 10），屏幕将显示 \"hello\"。\n\n输出示意图：\n![图解 9：If .. Else 语句块](img/image_rsrcE3.jpg)\n\
+    \n---\n\n# 第 11 章：PHP 循环\n\n当需要在满足特定条件时重复执行代码块时使用循环。\n\n循环类型：\n- `while`\n- `do\
+    \ ... while`\n- `for`\n- `foreach`\n\n## While 循环\n\n当条件为真时持续执行。\n\n**语法**：\n\
+    ```php\nwhile (condition is true) {\n    // code to be executed\n}\n```\n\n**示例**：\n\
+    ```php\n$var = 1;\nwhile ($var <= 6) {\n    echo $var;\n    $var++;\n}\n```\n\
+    **输出**：`123456`\n变量每次增加 1 并显示，直到其值小于或等于 6。\n\n## Do...While 循环\n\n先执行一次代码块，然后在条件为真时重复循环。\n\
+    \n**语法**：\n```php\ndo {\n    // code to be executed\n} while (condition is true);\n\
+    ```\n\n**示例**：\n```php\n$var = 1;\ndo {\n    echo $var;\n    $var++;\n} while\
+    \ ($var <= 6);\n```\n**输出**：`123456`\n\n## For 循环\n\n在条件为真时，按指定次数迭代代码块。\n\n**语法**：\n\
+    ```php\nfor (initialization; condition; increment) {\n    // code to be executed\n\
+    }\n```\n\n**示例**：\n```php\nfor ($x = 1; $x <= 5; $x++) {\n    echo $x;\n}\n```\n\
+    **输出**：`12345`\n\n## Foreach 循环\n\n遍历数组中的每个元素。\n\n**语法**：\n```php\nforeach ($array\
+    \ as $key => $value) {\n    echo $key;\n    echo '<br>';\n    echo $value;\n}\n\
+    ```\n\n**示例**：\n假设有数组变量 `$arr`：\n```php\n$arr = ['a' => 'yellow', 'b' => 'red',\
+    \ 'c' => 'white'];\nforeach ($arr as $key => $value) {\n    echo $key;\n    echo\
+    \ '<br>';\n    echo $value;\n}\n```\n**输出**：\n```text\na\nyellow\nb\nred\nc\n\
+    white\n```\n\n---\n\n# PHP 超全局变量\n\n预定义的全局作用域变量，即可在脚本任何位置访问。无需特殊操作即可调用。\n\n主要超全局变量：\n\
+    - `$GLOBALS`\n- `$_SERVER`\n- `$_POST`\n- `$_GET`\n- `$_REQUEST`\n- `$_FILES`\n\
+    - `$_ENV`\n- `$_COOKIE`\n- `$_SESSION`\n\n功能说明：\n- `$_SERVER`：返回与头部和路径相关的信息。\n\
+    - `$_POST`：用于获取从表单提交的数据值。\n- `$_GET`：用于获取 GET 变量的值。\n- `$_REQUEST`：用于同时获取 POST\
+    \ 和 GET 数据。\n- `$_ENV`：环境变量。\n\n---\n\n# PHP 表单\n\n现代网站（餐厅预订、活动报名、博客等）都包含表单功能。\n\
+    \n**场景**：访问餐厅网站预订晚餐。经理需要知道预订信息，开发人员创建页面收集客人信息（姓名、手机号等）并存入数据库。\n\n## 表单基础\n\n-\
+    \ 表单以 `<form>` 标签开始，以 `</form>` 结束。\n- 基本字段：文本框、密码框、文本域、日期选择器、单选按钮、复选框。\n- 每个表单有\
+    \ `method` 属性：`post` 或 `get`，指定数据传输方式。\n  - `get` 为默认方法，数据追加在 URL 中。\n  - `post`\
+    \ 更安全，数据不暴露在 URL 中。\n- 每个表单有 `action` 属性：提交后重定向到指定页面处理表单。\n\n**语法**：\n```html\n\
+    <form action=\"action.php\" method=\"post\">\n    <field1...>\n    <field2...>\n\
+    </form>\n```\n\n**示例**：客人预订餐桌表单\n```html\n<form method=\"post\" action=\"process.php\"\
+    >\n    Name: <input type=\"text\" name=\"name\">\n    Mobile: <input type=\"number\"\
+    \ name=\"mobile\">\n    Email: <input type=\"text\" name=\"email\">\n    <input\
+    \ type=\"submit\" name=\"submit\" value=\"submit\">\n</form>\n```\n\n---\n\n#\
+    \ 第 14 章：服务端验证\n\n提交表单时应进行验证，即检查必填字段非空且数据类型正确。\n\n针对上述表单，在 `process.php` 中添加处理逻辑：\n\
+    \n```php\nif (isset($_POST['submit'])) {\n    if ($_POST['name'] != '' && $_POST['number']\
+    \ != '' && $_POST['email']) {\n        // code to be executed\n    } else {\n\
+    \        // redirect to previous page\n    }\n}\n```\n\n上述代码检查字段是否包含值。若任意字段未设置值，则将用户重定向回表单页面。\n\
+    \n---\n\n# 第 15 章：MySQL 简介\n\nMySQL 是开源关系型数据库系统，是 PHP 最常用的数据库。由 Oracle 公司开发、分发和支持。\n\
+    \nMySQL 中包含表，每个表包含行和列。适用于大小型应用，速度快、可靠、易用，可在多种平台编译运行。\n\n---\n\n# 第 16 章：PHP 连接\
+    \ MySQL\n\n可使用 `mysqli` 扩展连接 MySQL。\n\n**语法**：\n```php\n<?php\n$host = 'localhost';\n\
+    $username = 'root';\n$password = '';\n\n// 创建新连接\n$conn = new mysqli($host, $username,\
+    \ $password);\n\nif ($conn->connect_error) {\n    die('Connection Failed: ' .\
+    \ $conn->connect_error);\n}\n\necho 'Connected Successfully';\n?>\n```\n\n**输出**：\n\
+    ```text\nConnected Successfully\n```\n\n在上面的代码中，我们创建了 `mysqli` 类的实例。\n"
+  toc: []
+- raw: "providing necessary details.If the connection is created then  \n\nconnection\
+    \ will be successful otherwise it will print some error stating that connection\
+    \ is not created. CHAPTER 17  \n\nCreate database and tables:  \n\nTo create database\
+    \ you can write the following sql command:  \n\nCREATE DATABASE dbname;  \n\n\
+    You can also create database by navigating to phpmyadmin PhpMyAdmin is a free\
+    \ and open source administration tool for MySQL and MariaDB.As a portable web\
+    \ application written primarily in PHP,it has become one of the most popular MySQL\
+    \ administartor tools. Check the screensot below:  \n\n![](image_rsrcE4.jpg)Illustration\
+    \ 10: phpMyAdmin Interface  \n\nMysql is the relational database which is used\
+    \ to store data.  \n\nConnect to Mysql database from your php code: To connect\
+    \ with database from php code we need to write code to connect with database.\
+    \ <?php $servername = \"hostname or ip address\";  \n\n$username = \"mysql username\"\
+    ; $password = \"mysql password\"; /\\*Create a connection with below code\\*/\
+    \  \n\n$connection =  \n\nmysqli\\_connect($servername, $username, $password);\
+    \  \n\n/\\*Add code to check connection\\*/ if (!$connection){  \n\ndie(\"Connection\
+    \ failed: \" .  \n\nmysqli\\_connect\\_error());  \n\n}  \n\necho \"Connected\
+    \ successfully\";  \n\n?> How to create database: You can create database in two\
+    \ ways.The first way is to go to phpmyadmin and click on  \n\n“Databases” tab.On\
+    \ clicking it an option will appear where you can enter your desired database\
+    \ name and click on :Create” button. Second option is to go to  \n\nphpmyadmin\
+    \ and click on Sql tab.  \n\nPaste the query: CREATE  \n\nDATABASE \\`database\\\
+    _name\\`; and then click on Go button.The above query will be executed and the\
+    \ database will be created. Now we need to create table in our database: I have\
+    \ created a database name \\`myproject\\`.Now I will be creating tables under\
+    \ this  \n\ndatabase.I am going to create table category under database myproject.When\
+    \ you have  \n\ncreated database you can see that will appear in the left side\
+    \ of your phpmyadmin interface.  \n\nFrom here you will click on the database\
+    \ myproject.  \n\nIn this way it gets selected. Now you can see an option to Create\
+    \ table.Enter the name of table in the text box which is there on the screen and\
+    \ number of columns ie the fields you want for your table. ![](image_rsrcE5.jpg)Now\
+    \ I have entered the name as category and 4 in column fields and click on GO button.Table\
+    \ category will be created and will ask you to enter the name of the columns and\
+    \ the datatype you want for your column names in table. ![](image_rsrcE6.jpg)Now\
+    \ click on GO button and table will be created. You can also run the below query\
+    \ under sql tab in phpmyadmin and execute the query to create table. CREATE TABLE\
+    \  \n\n\\`myproject\\`.\\`category\\` (  \n\n\\`id\\` INT NOT NULL  \n\nAUTO\\\
+    _INCREMENT ,  \n\n\\`name\\` VARCHAR(64) NOT NULL ,  \n\n\\`status\\` CHAR(1)\
+    \ NOT NULL , \\`sort\\_order\\` TINYINT(1) NOT NULL ,  \n\nPRIMARY KEY (\\`id\\\
+    `)) ENGINE = InnoDB; CHAPTER 18 Session in PHP:  \n\nWell what are sessions and\
+    \ why are they used ? Sessions are stored in server in form of variables.They\
+    \ are generally used to store webpage visitor preferences and identify him across\
+    \ multiple webpages. Session expires when we close the webpage or log out of the\
+    \ application. How to create session in PHP? We use $\\_SESSION superglobal variable\
+    \ to create session.  \n\nFor creating session we need to first start session\
+    \ and the store the varibale in session. Find the code below:  \n\nsession\\_start();\
+    \  \n\n$\\_SESSION\\['username'\\]='your\\_u sername'; How to check if the session\
+    \ is set or not? To check the session variable is set or not you can use isset\
+    \ variable and use that session variable.  \n\nif(isset($\\_SESSION\\['username'\\\
+    ])) {  \n\n/\\*your piece of code\\*/  \n\n} How to end a session? When we donot\
+    \ require session we can unset the session variable and destroy it. session\\\
+    _start();  \n\nunset($\\_SESSION\\['username'\\]); session\\_destoy(); Where do\
+    \ we use session? Session is used to store the login details of any user so he\
+    \ can access the other webpages and we can track the user.When a user usually\
+    \ logs out his session gets expired and he leave the  \n\napplication. CHAPTER\
+    \ 19 Now we are going to create a small PHP project where we will be creating\
+    \ database and table . Then we we will be creating a small project where user\
+    \ will register and can login and  \n\nnavigate to the restricted page in the\
+    \ website. CREATE DATABASE:  \n\nRun this below query to create database:  \n\n\
+    Create DATABASE \\`user\\_registration\\`; Select the database and copy the below\
+    \ code.Execute the query after pasting it under sql tab to create table \\`users\\\
+    `: CREATE TABLE  \n\n\\`user\\_registration\\`.\\`users\\` ( \\`id\\` INT NOT\
+    \ NULL  \n\nAUTO\\_INCREMENT , \\`name\\` VARCHAR (255) NOT NULL , \\`type\\`\
+    \ ENUM('user','admin') NOT NULL , \\`username\\`  \n\nVARCHAR (64) NOT NULL ,\
+    \ \\`password\\` VARCHAR (255) NOT NULL , \\`status\\` CHAR (1) NOT NULL DEFAULT\
+    \ 'A' , PRIMARY KEY (\\`id\\`)) ENGINE = InnoDB; Now we create a project folder\
+    \ name user\\_registration.  \n\nUnder this folder we are going to save php files,css,js\
+    \ and images. We will be having below file structure for our project ![](image_rsrcE7.jpg)I\
+    \ have created a folder named as ReadersCollection.  \n\nInside that I have created\
+    \ my project folder named as  \n\nuser\\_registration.  \n\nThis folder holds\
+    \ index.php which is the main registration page.Other pages are login page,restricted\
+    \ page and a  \n\nprocess.php page.process page is the one where we will be writing\
+    \ all our logic part for the code.I have created a connection.php page which holds\
+    \ code for connecting to the database. Screenshot for the main registration page:\
+    \ ![](image_rsrcE8.jpg)This folder contains a css and js folder.The css folder\
+    \ contains bootstrap.css file and js folder olds bootstrap.js file.I have not\
+    \ included here.You can go to  \n\n bootstrap website and download the respective\
+    \ files and include in your project. Code for connection.php <?php  \n\nsession\\\
+    _start();  \n\n$servername = \"localhost\"; $username = \"root\";  \n\n$password\
+    \ = \"\"; $dbname='user\\_registration'; /\\*Create a connection with below code\\\
+    */  \n\n$connection =  \n\nmysqli\\_connect($servername, $username, $password,$dbname);\
+    \ /\\*Add code to check connection\\*/ if (!$connection){  \n\ndie(\"Connection\
+    \ failed: \" . mysqli\\_connect\\_error());  \n\n}  \n\n//echo \"Connected successfully\"\
+    ; ?>  \n\nThis page will be included in the top of every php page. REGISTRATION\
+    \ FUNCTIONALITY: The register form holds three input name,username and password.Username\
+    \ should be unique and password should be stored in encrypted form.The code for\
+    \ register or index page can be found below: Code for index.php <!DOCTYPE html>\
+    \  \n\n<?php  \n\ninclude \"connection.php\"; ?>  \n\n<html> <head>  \n\n<title></title>\
+    \  \n\n<meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width,\
+    \ initial-scale=1.0\"> <link rel=\"stylesheet\" href=\"css/bootstrap.css\">  \n\
+    \n<script  \n\nsrc=\"js/bootstrap.js\"></script> </head>  \n\n<body>  \n\n<div\
+    \ class=\"container textcenter\">  \n\n<nav class=\"navbar navbar-expand-lg navbar-light\
+    \ bg-light\">  \n\n<ul class=\"navbar-nav mr-auto\">  \n\n <?php  \n\nif(isset($\\\
+    _SESSION\\['username'\\])) { ?>  \n\n<li class=\"nav-item active\"><a href=\"\
+    restricted.php\"> Restricted Page | </a></li>  \n\n<?php } ?>  \n\n<?php if(!\
+    \  \n\nisset($\\_SESSION\\['username'\\])) { ?>  \n\n<li class=\"nav-item active\"\
+    ><a href=\"login.php\"> Login |</a></li> <?php } if(isset($\\_SESSION\\['username'\\\
+    ])) { ?> <li class=\"nav-item active\"><a href=\"process.php? action=logout\"\
+    > Logout</a></li> <?php }?>  \n\n</ul>  \n\n</nav>  \n\n<?php if(! isset($\\_SESSION\\\
+    ['username'\\])) { ?>  \n\n<div class=\"row\"> <div class=\"col-md-12\"> <div\
+    \  \n\nclass=\"row\"><strong>Register  \n\nhere</strong></div>  \n\n</div>  \n\
+    \n</div>  \n\n<form name=\"frm\"  \n\nmethod=\"post\"  \n\naction=\"process.php?\
+    \  \n\naction=register\">  \n\n<div class=\"row\"> <div class=\"col-md-12\"> <div\
+    \ class=\"col-md6\">Name:</div>  \n\n<div class=\"col-md6\"><input type=\"text\"\
+    \  \n\nname=\"name\" value=\"\"></div> </div>  \n\n<div class=\"col-md12\">  \n\
+    \n<div class=\"col-md6\">UserName:</div>  \n\n<div class=\"col-md6\"><input type=\"\
+    text\"  "
+  fmt: "\n# Chapter 17: Create Database and Tables\n\n## Creating a Database\n\nTo\
+    \ create a database, you can write the following SQL command:\n\n```sql\nCREATE\
+    \ DATABASE dbname;\n```\n\nYou can also create a database by navigating to **phpMyAdmin**.\
+    \ phpMyAdmin is a free and open-source administration tool for MySQL and MariaDB.\
+    \ As a portable web application written primarily in PHP, it has become one of\
+    \ the most popular MySQL administration tools. Check the screenshot below:\n\n\
+    ![Illustration 10: phpMyAdmin Interface](image_rsrcE4.jpg)\n\nMySQL is the relational\
+    \ database used to store data.\n\n## Connect to MySQL Database from PHP Code\n\
+    \nTo connect with the database from PHP code, we need to write code to establish\
+    \ the connection.\n\n```php\n<?php\n$servername = \"hostname or ip address\";\n\
+    $username = \"mysql username\";\n$password = \"mysql password\";\n\n/* Create\
+    \ a connection with below code */\n$connection = mysqli_connect($servername, $username,\
+    \ $password);\n\n/* Add code to check connection */\nif (!$connection) {\n   \
+    \ die(\"Connection failed: \" . mysqli_connect_error());\n}\n\necho \"Connected\
+    \ successfully\";\n?>\n```\n\nIf the connection is created, then the connection\
+    \ will be successful; otherwise, it will print an error stating that the connection\
+    \ is not created.\n\n## How to Create a Database\n\nYou can create a database\
+    \ in two ways:\n\n1.  Go to phpMyAdmin and click on the **Databases** tab. On\
+    \ clicking it, an option will appear where you can enter your desired database\
+    \ name and click on the **Create** button.\n2.  Go to phpMyAdmin and click on\
+    \ the **SQL** tab. Paste the query:\n    ```sql\n    CREATE DATABASE `database_name`;\n\
+    \    ```\n    Then click on the **Go** button. The above query will be executed\
+    \ and the database will be created.\n\n## Creating Tables\n\nNow we need to create\
+    \ a table in our database. I have created a database named `myproject`. Now I\
+    \ will be creating tables under this database. I am going to create a table `category`\
+    \ under database `myproject`.\n\nWhen you have created a database, you can see\
+    \ that it will appear on the left side of your phpMyAdmin interface. From here,\
+    \ you will click on the database `myproject`. In this way, it gets selected. Now\
+    \ you can see an option to **Create table**. Enter the name of the table in the\
+    \ text box on the screen and the number of columns (i.e., the fields you want\
+    \ for your table).\n\n![Table Creation Step 1](image_rsrcE5.jpg)\n\nNow I have\
+    \ entered the name as `category` and `4` in column fields and clicked on the **Go**\
+    \ button. Table `category` will be created and will ask you to enter the name\
+    \ of the columns and the datatype you want for your column names in the table.\n\
+    \n![Table Creation Step 2](image_rsrcE6.jpg)\n\nNow click on the **Go** button\
+    \ and the table will be created.\n\nYou can also run the below query under the\
+    \ SQL tab in phpMyAdmin and execute the query to create the table:\n\n```sql\n\
+    CREATE TABLE `myproject`.`category` (\n  `id` INT NOT NULL AUTO_INCREMENT,\n \
+    \ `name` VARCHAR(64) NOT NULL,\n  `status` CHAR(1) NOT NULL,\n  `sort_order` TINYINT(1)\
+    \ NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE = InnoDB;\n```\n\n# Chapter 18: Session\
+    \ in PHP\n\n## What are Sessions?\n\nSessions are stored on the server in the\
+    \ form of variables. They are generally used to store webpage visitor preferences\
+    \ and identify them across multiple webpages. A session expires when we close\
+    \ the webpage or log out of the application.\n\n## How to Create a Session in\
+    \ PHP?\n\nWe use the `$_SESSION` superglobal variable to create a session. For\
+    \ creating a session, we need to first start the session and then store the variable\
+    \ in the session.\n\n```php\nsession_start();\n$_SESSION['username'] = 'your_username';\n\
+    ```\n\n## How to Check if the Session is Set?\n\nTo check if the session variable\
+    \ is set or not, you can use the `isset()` function with that session variable.\n\
+    \n```php\nif (isset($_SESSION['username'])) {\n    /* your piece of code */\n\
+    }\n```\n\n## How to End a Session?\n\nWhen we do not require the session, we can\
+    \ unset the session variable and destroy it.\n\n```php\nsession_start();\nunset($_SESSION['username']);\n\
+    session_destroy();\n```\n\n## Where Do We Use Sessions?\n\nSessions are used to\
+    \ store the login details of any user so they can access other webpages and we\
+    \ can track the user. When a user usually logs out, their session gets expired\
+    \ and they leave the application.\n\n# Chapter 19: PHP Project - User Registration\n\
+    \nNow we are going to create a small PHP project where we will be creating a database\
+    \ and table. Then we will create a small project where a user will register, log\
+    \ in, and navigate to a restricted page on the website.\n\n## Create Database\n\
+    \nRun the below query to create the database:\n\n```sql\nCREATE DATABASE `user_registration`;\n\
+    ```\n\nSelect the database and copy the below code. Execute the query after pasting\
+    \ it under the SQL tab to create table `users`:\n\n```sql\nCREATE TABLE `user_registration`.`users`\
+    \ (\n  `id` INT NOT NULL AUTO_INCREMENT,\n  `name` VARCHAR(255) NOT NULL,\n  `type`\
+    \ ENUM('user','admin') NOT NULL,\n  `username` VARCHAR(64) NOT NULL,\n  `password`\
+    \ VARCHAR(255) NOT NULL,\n  `status` CHAR(1) NOT NULL DEFAULT 'A',\n  PRIMARY\
+    \ KEY (`id`)\n) ENGINE = InnoDB;\n```\n\n## Project Structure\n\nNow we create\
+    \ a project folder named `user_registration`. Under this folder, we are going\
+    \ to save PHP files, CSS, JS, and images. We will have the below file structure\
+    \ for our project:\n\n![Project File Structure](image_rsrcE7.jpg)\n\nI have created\
+    \ a folder named `ReadersCollection`. Inside that, I have created my project folder\
+    \ named `user_registration`. This folder holds `index.php` which is the main registration\
+    \ page. Other pages are the login page, restricted page, and a `process.php` page.\
+    \ The `process.php` page is where we will be writing all our logic for the code.\
+    \ I have created a `connection.php` page which holds code for connecting to the\
+    \ database.\n\nScreenshot for the main registration page:\n\n![Main Registration\
+    \ Page](image_rsrcE8.jpg)\n\nThis folder contains a `css` and `js` folder. The\
+    \ `css` folder contains `bootstrap.css` file and the `js` folder holds `bootstrap.js`\
+    \ file. I have not included them here. You can go to the Bootstrap website and\
+    \ download the respective files and include them in your project.\n\n## Code for\
+    \ `connection.php`\n\nThis page will be included at the top of every PHP page.\n\
+    \n```php\n<?php\nsession_start();\n\n$servername = \"localhost\";\n$username =\
+    \ \"root\";\n$password = \"\";\n$dbname = 'user_registration';\n\n/* Create a\
+    \ connection with below code */\n$connection = mysqli_connect($servername, $username,\
+    \ $password, $dbname);\n\n/* Add code to check connection */\nif (!$connection)\
+    \ {\n    die(\"Connection failed: \" . mysqli_connect_error());\n}\n\n// echo\
+    \ \"Connected successfully\";\n?>\n```\n\n## Registration Functionality\n\nThe\
+    \ register form holds three inputs: name, username, and password. Username should\
+    \ be unique and password should be stored in encrypted form. The code for the\
+    \ register or index page can be found below:\n\n### Code for `index.php`\n\n```php\n\
+    <!DOCTYPE html>\n<?php\ninclude \"connection.php\";\n?>\n<html>\n<head>\n    <title></title>\n\
+    \    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width,\
+    \ initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"css/bootstrap.css\"\
+    >\n    <script src=\"js/bootstrap.js\"></script>\n</head>\n<body>\n    <div class=\"\
+    container text-center\">\n        <nav class=\"navbar navbar-expand-lg navbar-light\
+    \ bg-light\">\n            <ul class=\"navbar-nav mr-auto\">\n               \
+    \ <?php\n                if (isset($_SESSION['username'])) {\n               \
+    \ ?>\n                <li class=\"nav-item active\"><a href=\"restricted.php\"\
+    >Restricted Page | </a></li>\n                <?php } ?>\n                <?php\
+    \ if (!isset($_SESSION['username'])) { ?>\n                <li class=\"nav-item\
+    \ active\"><a href=\"login.php\">Login |</a></li>\n                <?php } ?>\n\
+    \                <?php if (isset($_SESSION['username'])) { ?>\n              \
+    \  <li class=\"nav-item active\"><a href=\"process.php?action=logout\">Logout</a></li>\n\
+    \                <?php } ?>\n            </ul>\n        </nav>\n\n        <?php\
+    \ if (!isset($_SESSION['username'])) { ?>\n        <div class=\"row\">\n     \
+    \       <div class=\"col-md-12\">\n                <div class=\"row\"><strong>Register\
+    \ here</strong></div>\n            </div>\n        </div>\n\n        <form name=\"\
+    frm\" method=\"post\" action=\"process.php?action=register\">\n            <div\
+    \ class=\"row\">\n                <div class=\"col-md-12\">\n                \
+    \    <div class=\"col-md-6\">Name:</div>\n                    <div class=\"col-md-6\"\
+    ><input type=\"text\" name=\"name\" value=\"\"></div>\n                </div>\n\
+    \                <div class=\"col-md-12\">\n                    <div class=\"\
+    col-md-6\">UserName:</div>\n                    <div class=\"col-md-6\"><input\
+    \ type=\"text\" name=\"username\" value=\"\"></div>\n                </div>\n\
+    \            </div>\n        </form>\n        <?php } ?>\n    </div>\n</body>\n\
+    </html>\n```\n"
+  trans: "\n\n# 第 17 章：创建数据库和表\n\n## 创建数据库\n\n要创建数据库，可以编写以下 SQL 命令：\n\n```sql\nCREATE\
+    \ DATABASE dbname;\n```\n\n你也可以通过访问 **phpMyAdmin** 来创建数据库。phpMyAdmin 是一个用于 MySQL\
+    \ 和 MariaDB 的免费开源管理工具。作为一个主要用 PHP 编写的便携式 Web 应用程序，它已成为最流行的 MySQL 管理工具之一。请查看下面的截图：\n\
+    \n![图示 10：phpMyAdmin 界面](img/image_rsrcE4.jpg)\n\nMySQL 是用于存储数据的关系型数据库。\n\n##\
+    \ 从 PHP 代码连接 MySQL 数据库\n\n要从 PHP 代码连接数据库，我们需要编写代码来建立连接。\n\n```php\n<?php\n$servername\
+    \ = \"hostname or ip address\";\n$username = \"mysql username\";\n$password =\
+    \ \"mysql password\";\n\n/* 使用下面的代码创建连接 */\n$connection = mysqli_connect($servername,\
+    \ $username, $password);\n\n/* 添加代码检查连接 */\nif (!$connection) {\n    die(\"Connection\
+    \ failed: \" . mysqli_connect_error());\n}\n\necho \"Connected successfully\"\
+    ;\n?>\n```\n\n如果连接创建成功，则连接将会成功；否则，它将打印一条错误，指出连接未创建。\n\n## 如何创建数据库\n\n你可以通过两种方式创建数据库：\n\
+    \n1.  进入 phpMyAdmin 并点击 **Databases（数据库）** 选项卡。点击后，将出现一个选项，你可以在其中输入所需的数据库名称并点击\
+    \ **Create（创建）** 按钮。\n2.  进入 phpMyAdmin 并点击 **SQL** 选项卡。粘贴查询：\n    ```sql\n  \
+    \  CREATE DATABASE `database_name`;\n    ```\n    然后点击 **Go（执行）** 按钮。上述查询将被执行，数据库将被创建。\n\
+    \n## 创建表\n\n现在我们需要在数据库中创建表。我已经创建了一个名为 `myproject` 的数据库。现在我将在这个数据库下创建表。我将在数据库 `myproject`\
+    \ 下创建一个表 `category`。\n\n当你创建好数据库后，可以看到它会出现在 phpMyAdmin 界面的左侧。从这里，你将点击数据库 `myproject`。这样它就被选中了。现在你可以看到一个\
+    \ **Create table（创建表）** 选项。在屏幕上的文本框中输入表名和列数（即你想要的表字段）。\n\n![表创建步骤 1](img/image_rsrcE5.jpg)\n\
+    \n现在我输入名称为 `category`，列字段输入 `4`，然后点击 **Go（执行）** 按钮。表 `category` 将被创建，并会要求你输入列名以及表中列名所需的数据类型。\n\
+    \n![表创建步骤 2](img/image_rsrcE6.jpg)\n\n现在点击 **Go（执行）** 按钮，表将被创建。\n\n你也可以在 phpMyAdmin\
+    \ 的 SQL 选项卡下运行下面的查询并执行查询来创建表：\n\n```sql\nCREATE TABLE `myproject`.`category` (\n\
+    \  `id` INT NOT NULL AUTO_INCREMENT,\n  `name` VARCHAR(64) NOT NULL,\n  `status`\
+    \ CHAR(1) NOT NULL,\n  `sort_order` TINYINT(1) NOT NULL,\n  PRIMARY KEY (`id`)\n\
+    ) ENGINE = InnoDB;\n```\n\n# 第 18 章：PHP 中的 Session\n\n## 什么是 Session？\n\nSession\
+    \ 以变量的形式存储在服务器上。它们通常用于存储网页访问者的偏好设置，并在多个网页中识别他们。当我们关闭网页或退出应用程序时，Session 就会过期。\n\
+    \n## 如何在 PHP 中创建 Session？\n\n我们使用 `$_SESSION` 超全局变量来创建 Session。要创建 Session，我们需要先启动\
+    \ Session，然后将变量存储在 Session 中。\n\n```php\nsession_start();\n$_SESSION['username']\
+    \ = 'your_username';\n```\n\n## 如何检查 Session 是否已设置？\n\n要检查 Session 变量是否已设置，可以对该\
+    \ Session 变量使用 `isset()` 函数。\n\n```php\nif (isset($_SESSION['username'])) {\n\
+    \    /* 你的代码片段 */\n}\n```\n\n## 如何结束 Session？\n\n当我们不再需要 Session 时，可以取消设置 Session\
+    \ 变量并销毁它。\n\n```php\nsession_start();\nunset($_SESSION['username']);\nsession_destroy();\n\
+    ```\n\n## 我们在哪里使用 Session？\n\nSession 用于存储任何用户的登录详细信息，以便他们可以访问其他网页，我们也可以跟踪用户。当用户通常注销时，他们的\
+    \ Session 会过期并离开应用程序。\n\n# 第 19 章：PHP 项目 - 用户注册\n\n现在我们将创建一个小型 PHP 项目，我们将在其中创建数据库和表。然后我们将创建一个小型项目，用户将在其中注册、登录并导航到网站上的受限页面。\n\
+    \n## 创建数据库\n\n运行下面的查询以创建数据库：\n\n```sql\nCREATE DATABASE `user_registration`;\n\
+    ```\n\n选择数据库并复制下面的代码。在 SQL 选项卡下粘贴后执行查询以创建表 `users`：\n\n```sql\nCREATE TABLE `user_registration`.`users`\
+    \ (\n  `id` INT NOT NULL AUTO_INCREMENT,\n  `name` VARCHAR(255) NOT NULL,\n  `type`\
+    \ ENUM('user','admin') NOT NULL,\n  `username` VARCHAR(64) NOT NULL,\n  `password`\
+    \ VARCHAR(255) NOT NULL,\n  `status` CHAR(1) NOT NULL DEFAULT 'A',\n  PRIMARY\
+    \ KEY (`id`)\n) ENGINE = InnoDB;\n```\n\n## 项目结构\n\n现在我们创建一个名为 `user_registration`\
+    \ 的项目文件夹。在这个文件夹下，我们将保存 PHP 文件、CSS、JS 和图片。我们的项目将具有以下文件结构：\n\n![项目文件结构](img/image_rsrcE7.jpg)\n\
+    \n我创建了一个名为 `ReadersCollection` 的文件夹。在里面，我创建了我的项目文件夹 `user_registration`。该文件夹包含\
+    \ `index.php`，这是主注册页面。其他页面包括登录页面、受限页面和一个 `process.php` 页面。`process.php` 页面是我们将编写所有代码逻辑的地方。我创建了一个\
+    \ `connection.php` 页面，其中包含连接数据库的代码。\n\n主注册页面的截图：\n\n![主注册页面](img/image_rsrcE8.jpg)\n\
+    \n此文件夹包含一个 `css` 文件夹和一个 `js` 文件夹。`css` 文件夹包含 `bootstrap.css` 文件，`js` 文件夹包含 `bootstrap.js`\
+    \ 文件。我没有在此处包含它们。你可以去 Bootstrap 网站下载相应的文件并将它们包含在你的项目中。\n\n## `connection.php` 的代码\n\
+    \n此页面将包含在每个 PHP 页面的顶部。\n\n```php\n<?php\nsession_start();\n\n$servername = \"\
+    localhost\";\n$username = \"root\";\n$password = \"\";\n$dbname = 'user_registration';\n\
+    \n/* 使用下面的代码创建连接 */\n$connection = mysqli_connect($servername, $username, $password,\
+    \ $dbname);\n\n/* 添加代码检查连接 */\nif (!$connection) {\n    die(\"Connection failed:\
+    \ \" . mysqli_connect_error());\n}\n\n// echo \"Connected successfully\";\n?>\n\
+    ```\n\n## 注册功能\n\n注册表单包含三个输入框：姓名、用户名和密码。用户名应唯一，密码应以加密形式存储。注册或索引页面的代码如下：\n\n###\
+    \ `index.php` 的代码\n\n```php\n<!DOCTYPE html>\n<?php\ninclude \"connection.php\"\
+    ;\n?>\n<html>\n<head>\n    <title></title>\n    <meta charset=\"UTF-8\">\n   \
+    \ <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\
+    \    <link rel=\"stylesheet\" href=\"css/bootstrap.css\">\n    <script src=\"\
+    js/bootstrap.js\"></script>\n</head>\n<body>\n    <div class=\"container text-center\"\
+    >\n        <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n   \
+    \         <ul class=\"navbar-nav mr-auto\">\n                <?php\n         \
+    \       if (isset($_SESSION['username'])) {\n                ?>\n            \
+    \    <li class=\"nav-item active\"><a href=\"restricted.php\">Restricted Page\
+    \ | </a></li>\n                <?php } ?>\n                <?php if (!isset($_SESSION['username']))\
+    \ { ?>\n                <li class=\"nav-item active\"><a href=\"login.php\">Login\
+    \ |</a></li>\n                <?php } ?>\n                <?php if (isset($_SESSION['username']))\
+    \ { ?>\n                <li class=\"nav-item active\"><a href=\"process.php?action=logout\"\
+    >Logout</a></li>\n                <?php } ?>\n            </ul>\n        </nav>\n\
+    \n        <?php if (!isset($_SESSION['username'])) { ?>\n        <div class=\"\
+    row\">\n            <div class=\"col-md-12\">\n                <div class=\"row\"\
+    ><strong>Register here</strong></div>\n            </div>\n        </div>\n\n\
+    \        <form name=\"frm\" method=\"post\" action=\"process.php?action=register\"\
+    >\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n\
+    \                    <div class=\"col-md-6\">Name:</div>\n                   \
+    \ <div class=\"col-md-6\"><input type=\"text\" name=\"name\" value=\"\"></div>\n\
+    \                </div>\n                <div class=\"col-md-12\">\n         \
+    \           <div class=\"col-md-6\">UserName:</div>\n                    <div\
+    \ class=\"col-md-6\"><input type=\"text\" name=\"username\" value=\"\"></div>\n\
+    \                </div>\n            </div>\n        </form>\n        <?php }\
+    \ ?>\n    </div>\n</body>\n</html>\n```\n\n"
+  toc: []
+- raw: "name=\"username\"  \n\nvalue=\"\"></div>  \n\n</div>  \n\n<div class=\"col-md-12\"\
+    > <div class=\"col-md6\">Password:</div>  \n\n<div class=\"col-md6\"><input type=\"\
+    password\"  \n\nname=\"password\"  \n\nvalue=\"\"></div>  \n\n </div> </div> \
+    \ \n\n<div class=\"row\"><input type=\"submit\" name=\"submit\" value=\"SUBMIT\"\
+    ></div> </form>  \n\n<?php } else {  \n\necho 'You are logged in.';  \n\n}?> </div>\
+    \ </body> </html> Here we have created a form and have three inputs ie name, \
+    \ \n\nusername and password. When visitor enter the above details and click on\
+    \ SUBMIT button his information gets inserted in table and he gets register in\
+    \ the system.  \n\nHe is then redirected to the restricted area. Code of process.php\
+    \ for  \n\naction=\"process.php?  \n\naction=register\" to allow user to register\
+    \ in the system if(isset($\\_REQUEST\\['action'\\]) &&  \n\n($\\_REQUEST\\['action'\\\
+    ]=='register ')){ $name=$\\_POST\\['name'\\]; $username=$\\_POST\\['username'\\\
+    ]; $password=md5($\\_POST\\['passw ord'\\]); if( isset($name) &&  \n\nisset($username)\
+    \ &&  \n\nisset($password) ){ $username\\_check=mysqli\\_query( $connection,\"\
+    SELECT \\* from \\`users\\` where  \n\n\\`username\\`=$username\"); if(mysqli\\\
+    _num\\_rows($username\\_ check)==0){  \n\n$username\\_db=$username;  \n\n} else{\
+    \ $username\\_db=rand(0,9).'\\_'. $username;  \n\n}  \n\n$sql=\"insert into \\\
+    `users\\`(\\`name\\`,\\`username\\`,\\`pass word\\`)values('\".$name.\"','\".\
+    \ $username\\_db.\"','\".  \n\n$password.\"')\"; mysqli\\_query($connection, $sql)or\
+    \ die('error');  \n\n$\\_SESSION\\['username'\\]=$userna me\\_db;  \n\n$\\_SESSION\\\
+    ['name'\\]=$name; header(\"location:restricted.php\"); }  \n\nelse{  \n\nheader(\"\
+    location:index.php? msg=Please enter fields\"); }  \n\n} Explanation: First the\
+    \ line  \n\nif(isset($\\_REQUEST\\['action'\\]) &&  \n\n($\\_REQUEST\\['action'\\\
+    ]=='regis ter')){ checks if the action value is register then it will proceed\
+    \ further and if the value is not register then it will exit from the condition.\
+    \ $username\\_check checks that whether this username already exists in the database\
+    \ or not. If it exists we are appending the username with some random numbers\
+    \ using rand() function so that it will remain unique. The next code inserts an\
+    \ entry and sets the variable name and username in session using $\\_SESSION superglobal\
+    \ variable. Then user is redirected to restricted page .  \n\nLOGIN FUNCTIONALITY:\
+    \ For login functionality we will be creating login.php page.Here we will be taking\
+    \ two inputs  \n\nusername and password and a submit button. After user enter\
+    \ the data the code checks the username and  \n\npassword matches then the user\
+    \ is succefully logged in and his login details like name and username is set\
+    \ in session.The user is then redirected to restricted page. Screenshot for login.php:\
+    \ ![](image_rsrcE9.jpg)Code for login.php page: <!DOCTYPE html>  \n\n<?php  \n\
+    \ninclude \"connection.php\";  \n\n?>  \n\n<html> <head>  \n\n<title></title>\
+    \  \n\n<meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width,\
+    \ initial-scale=1.0\"> <link rel=\"stylesheet\" href=\"css/bootstrap.css\">  \n\
+    \n<script  \n\nsrc=\"js/bootstrap.js\"></script> </head>  \n\n<body> <div class=\"\
+    container textcenter\"> <nav class=\"navbar navbar-expand-lg navbar-light bg-light\"\
+    > <ul class=\"navbar-nav mr-auto\"> <?php  \n\nif(isset($\\_SESSION\\['username'\\\
+    ])) { ?> <li class=\"nav-item active\"><a href=\"restricted.php\"> Restricted\
+    \ Page | </a></li> <?php } ?>  \n\n<?php if(!  \n\nisset($\\_SESSION\\['username'\\\
+    ])) { ?> <li class=\"nav-item active\"><a href=\"index.php\"> Register |</a></li>\
+    \ <li class=\"nav-item active\"><a href=\"login.php\"> Login |</a></li> <?php\
+    \ }  \n\nif(isset($\\_SESSION\\['username'\\])) { ?> <li class=\"nav-item active\"\
+    ><a href=\"process.php? action=logout\"> Logout</a></li> <?php }?>  \n\n</ul>\
+    \  \n\n</nav>  \n\n<div class=\"row\"><?php if(isset($\\_GET\\['msg'\\])){echo\
+    \ $\\_GET\\['msg'\\];}?></div>  \n\n<?php if(! isset($\\_SESSION\\['username'\\\
+    ])) { ?>  \n\n<div class=\"row\">  \n\n<div class=\"col-md-12\"> <div  \n\nclass=\"\
+    row\"><strong>Login  \n\nhere</strong></div>  \n\n</div>  \n\n</div>  \n\n<form\
+    \ name=\"frm\"  \n\nmethod=\"post\"  \n\naction=\"process.php?  \n\naction=login\"\
+    >  \n\n<div class=\"row\"> <div class=\"col-md12\">  \n\n<div class=\"col-md6\"\
+    >UserName:</div>  \n\n<div class=\"col-md6\"><input type=\"text\"  \n\nname=\"\
+    username\"  \n\nvalue=\"\"></div>  \n\n</div>  \n\n<div class=\"col-md-12\"> <div\
+    \ class=\"col-md6\">Password:</div>  \n\n<div class=\"col-md6\"><input type=\"\
+    password\" name=\"password\"  \n\n value=\"\"></div>  \n\n</div> </div>  \n\n\
+    <div class=\"row\"><input type=\"submit\" name=\"submit\" value=\"SUBMIT\"></div>\
+    \  \n\n</form>  \n\n<?php } else {  \n\necho 'You are logged in.';  \n\n}?> </div>\
+    \ </body> </html> Code for action=\"process.php? action=login\" in process.php\
+    \ below: if(isset($\\_REQUEST\\['action'\\]) &&  \n\n($\\_REQUEST\\['action'\\\
+    ]=='login')) { $username=$\\_POST\\['username'\\]; $password=$\\_POST\\['password'\\\
+    ]; $new\\_password=md5($password ); $sel\\_query=\"SELECT \\* from \\`users\\\
+    ` WHERE \\`username\\`='\". $username.\"' and \\`password\\`='\". $new\\_password.\"\
+    '\"; $sql=mysqli\\_query($connection, $sel\\_query);  \n\nif(mysqli\\_num\\_rows($sql)>0){\
+    \  \n\n$row=mysqli\\_fetch\\_array($sql);  \n\n$\\_SESSION\\['username'\\]=$row\\\
+    ['u sername'\\];  \n\n$\\_SESSION\\['name'\\]=$row\\['name '\\];  \n\nheader(\"\
+    location:restricted.php\");  \n\n}  \n\nelse{  \n\nheader(\"location:index.php?\
+    \ msg=Incorrect username or password\");  \n\n}  \n\n} Here the code checks for\
+    \ the username and password.As we are encrypting the password using md5 hash so\
+    \ when user enters his password we convert it into encrypted form using md5 hash\
+    \ and then data is verified with the database values and then if a match is found\
+    \ then user is redirected to restricted page. If a match is not found then the\
+    \ user is redirected to main page ie. the index.php page with a  \n\nmessage in\
+    \ the msg variable ie Incorrect username and  \n\npassword. RESTRICTED PAGE FUNCTIONALITY:\
+    \ Code in “Restricted page” ie restricted.php page checks  \n\nwhether the session\
+    \ variable is set or not.If session variable $\\_SESSION\\['username'\\] is already\
+    \ set then “Welcome to restricted access” message is displayed on page. Code for\
+    \ resticted page:  \n\n<?php  \n\ninclude \"connection.php\";  \n\nif(!  \n\n\
+    isset($\\_SESSION\\['username'\\])){ header(\"location:index.php\"); }  \n\n?>\
+    \  \n\n<!DOCTYPE html>  \n\n<html> <head>  \n\n<title></title>  \n\n<meta charset=\"\
+    UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    > <link rel=\"stylesheet\" href=\"css/bootstrap.css\">  \n\n<script  \n\nsrc=\"\
+    js/bootstrap.js\"></script> </head>  \n\n<body> <div class=\"container textcenter\"\
+    > <nav class=\"navbar navbar-expand-lg navbar-light bg-light\"> <ul class=\"navbar-nav\
+    \ mr-auto\"> <?php  \n\nif(isset($\\_SESSION\\['username'\\])) { ?> <li class=\"\
+    nav-item active\"><a href=\"restricted.php\"> Restricted Page | </a></li> <?php\
+    \ } ?>  \n\n<?php if(!  \n\nisset($\\_SESSION\\['username'\\])) { ?> <li class=\"\
+    nav-item active\"><a href=\"index.php\"> Register |</a></li> <li class=\"nav-item\
+    \ active\"><a href=\"login.php\"> Login |</a></li> <?php }  \n\n if(isset($\\\
+    _SESSION\\['username'\\])) { ?> <li class=\"nav-item active\"><a href=\"process.php?\
+    \ action=logout\"> Logout</a></li> <?php }?>  \n\n</ul>  \n\n</nav> <?php  \n\n\
+    if(isset($\\_SESSION\\['username'\\])) { ?> <div class=\"row\">  \n\n<div class=\"\
+    col-md-12\"> <div  \n\nclass=\"row\"><strong>Welcome to restricted  \n\naccess</strong></div>\
+    \ </div>  \n\n</div>  \n\n<?php } ?> </body> </html>  \n\nLOGOUT FUNCTIONALITY:\
+    \ When user no longer wants to stay in your website he may opt to exit from the\
+    \ application.In this case he will click on logout button.Clicking on this his\
+    \ session will get expired and he will be redirected to index.php with a message\
+    \ ie “Logged Out Successfully”. Code for logout action which is in the top section\
+    \ of every page. if(isset($\\_REQUEST\\['action'\\]) &&  \n\n($\\_REQUEST\\['action'\\\
+    ]=='logout' )){ unset($\\_SESSION\\['name'\\]); unset($\\_SESSION\\['username'\\\
+    ]); session\\_destroy();  \n\nheader(\"location:index.php? msg=Logged out successfully\"\
+    ); }"
+  fmt: "\n# 用户注册、登录、受限页面与注销功能实现\n\n## 注册功能\n\n### 表单页面 (index.php)\n\n页面包含一个注册表单，包含三个输入字段：`name`、`username`\
+    \ 和 `password`。访问者填写详情并点击 `SUBMIT` 按钮后，信息将被插入数据库表中，用户完成注册，随后重定向到受限区域。\n\n表单 HTML\
+    \ 结构如下：\n\n```html\n<div class=\"col-md-12\">\n  <div class=\"col-md6\">Username:</div>\n\
+    \  <div class=\"col-md6\"><input type=\"text\" name=\"username\" value=\"\"></div>\n\
+    </div>\n<div class=\"col-md-12\">\n  <div class=\"col-md6\">Password:</div>\n\
+    \  <div class=\"col-md6\"><input type=\"password\" name=\"password\" value=\"\"\
+    ></div>\n</div>\n<div class=\"row\"><input type=\"submit\" name=\"submit\" value=\"\
+    SUBMIT\"></div>\n```\n\n### 处理逻辑 (process.php?action=register)\n\n```php\n<?php\n\
+    if (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'register')) {\n   \
+    \ $name = $_POST['name'];\n    $username = $_POST['username'];\n    $password\
+    \ = md5($_POST['password']);\n\n    if (isset($name) && isset($username) && isset($password))\
+    \ {\n        $username_check = mysqli_query($connection, \"SELECT * FROM `users`\
+    \ WHERE `username` = '$username'\");\n\n        if (mysqli_num_rows($username_check)\
+    \ == 0) {\n            $username_db = $username;\n        } else {\n         \
+    \   $username_db = rand(0, 9) . '_' . $username;\n        }\n\n        $sql =\
+    \ \"INSERT INTO `users`(`name`, `username`, `password`) VALUES ('$name', '$username_db',\
+    \ '$password')\";\n        mysqli_query($connection, $sql) or die('error');\n\n\
+    \        $_SESSION['username'] = $username_db;\n        $_SESSION['name'] = $name;\n\
+    \        header(\"location:restricted.php\");\n    } else {\n        header(\"\
+    location:index.php?msg=Please enter fields\");\n    }\n}\n?>\n```\n\n**逻辑说明：**\n\
+    1.  `if(isset($_REQUEST['action']) && ($_REQUEST['action']=='register'))` 检查 `action`\
+    \ 值是否为 `register`，是则继续执行，否则退出。\n2.  `$username_check` 查询用户名是否已存在于数据库。\n3.  若用户名存在，使用\
+    \ `rand()` 函数追加随机数以保证唯一性。\n4.  插入新记录，并使用 `$_SESSION` 超全局变量设置 `username` 和 `name`。\n\
+    5.  最后重定向到 `restricted.php`。\n\n---\n\n## 登录功能\n\n### 登录页面 (login.php)\n\n页面包含两个输入字段：`username`\
+    \ 和 `password` 以及一个提交按钮。用户提交数据后，代码验证用户名和密码。若匹配成功，将登录详情（`name` 和 `username`）存入会话，并重定向到受限页面。\n\
+    \n**页面截图：**\n![](image_rsrcE9.jpg)\n\n**页面代码结构：**\n\n```html\n<!DOCTYPE html>\n\
+    <?php include \"connection.php\"; ?>\n<html>\n<head>\n    <title></title>\n  \
+    \  <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width,\
+    \ initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"css/bootstrap.css\"\
+    >\n    <script src=\"js/bootstrap.js\"></script>\n</head>\n<body>\n<div class=\"\
+    container textcenter\">\n    <nav class=\"navbar navbar-expand-lg navbar-light\
+    \ bg-light\">\n        <ul class=\"navbar-nav mr-auto\">\n            <?php if\
+    \ (isset($_SESSION['username'])) { ?>\n                <li class=\"nav-item active\"\
+    ><a href=\"restricted.php\">Restricted Page | </a></li>\n            <?php } ?>\n\
+    \            <?php if (!isset($_SESSION['username'])) { ?>\n                <li\
+    \ class=\"nav-item active\"><a href=\"index.php\">Register |</a></li>\n      \
+    \          <li class=\"nav-item active\"><a href=\"login.php\">Login |</a></li>\n\
+    \            <?php } ?>\n            <?php if (isset($_SESSION['username'])) {\
+    \ ?>\n                <li class=\"nav-item active\"><a href=\"process.php?action=logout\"\
+    >Logout</a></li>\n            <?php } ?>\n        </ul>\n    </nav>\n\n    <div\
+    \ class=\"row\"><?php if (isset($_GET['msg'])) { echo $_GET['msg']; } ?></div>\n\
+    \n    <?php if (!isset($_SESSION['username'])) { ?>\n    <form name=\"frm\" method=\"\
+    post\" action=\"process.php?action=login\">\n        <div class=\"row\">\n   \
+    \         <div class=\"col-md12\">\n                <div class=\"col-md6\">UserName:</div>\n\
+    \                <div class=\"col-md6\"><input type=\"text\" name=\"username\"\
+    \ value=\"\"></div>\n            </div>\n            <div class=\"col-md-12\"\
+    >\n                <div class=\"col-md6\">Password:</div>\n                <div\
+    \ class=\"col-md6\"><input type=\"password\" name=\"password\" value=\"\"></div>\n\
+    \            </div>\n        </div>\n        <div class=\"row\"><input type=\"\
+    submit\" name=\"submit\" value=\"SUBMIT\"></div>\n    </form>\n    <?php } else\
+    \ { echo 'You are logged in.'; } ?>\n</div>\n</body>\n</html>\n```\n\n### 登录处理逻辑\
+    \ (process.php?action=login)\n\n```php\nif (isset($_REQUEST['action']) && ($_REQUEST['action']\
+    \ == 'login')) {\n    $username = $_POST['username'];\n    $password = $_POST['password'];\n\
+    \    $new_password = md5($password);\n\n    $sel_query = \"SELECT * FROM `users`\
+    \ WHERE `username` = '$username' AND `password` = '$new_password'\";\n    $sql\
+    \ = mysqli_query($connection, $sel_query);\n\n    if (mysqli_num_rows($sql) >\
+    \ 0) {\n        $row = mysqli_fetch_array($sql);\n        $_SESSION['username']\
+    \ = $row['username'];\n        $_SESSION['name'] = $row['name'];\n        header(\"\
+    location:restricted.php\");\n    } else {\n        header(\"location:index.php?msg=Incorrect\
+    \ username or password\");\n    }\n}\n```\n\n**逻辑说明：**\n由于密码使用 `md5` 哈希加密存储，用户输入的密码会被转换为加密形式后再与数据库值比对。若匹配成功则重定向到受限页面；否则重定向回\
+    \ `index.php` 并提示 \"Incorrect username or password\"。\n\n---\n\n## 受限页面功能\n\n\
+    ### 页面逻辑 (restricted.php)\n\n页面检查会话变量 `$_SESSION['username']` 是否已设置。若已设置，显示 \"\
+    Welcome to restricted access\"；否则重定向到 `index.php`。\n\n```php\n<?php\ninclude \"\
+    connection.php\";\nif (!isset($_SESSION['username'])) {\n    header(\"location:index.php\"\
+    );\n}\n?>\n<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta charset=\"\
+    UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    >\n    <link rel=\"stylesheet\" href=\"css/bootstrap.css\">\n    <script src=\"\
+    js/bootstrap.js\"></script>\n</head>\n<body>\n<div class=\"container textcenter\"\
+    >\n    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n       \
+    \ <ul class=\"navbar-nav mr-auto\">\n            <?php if (isset($_SESSION['username']))\
+    \ { ?>\n                <li class=\"nav-item active\"><a href=\"restricted.php\"\
+    >Restricted Page | </a></li>\n            <?php } ?>\n            <?php if (!isset($_SESSION['username']))\
+    \ { ?>\n                <li class=\"nav-item active\"><a href=\"index.php\">Register\
+    \ |</a></li>\n                <li class=\"nav-item active\"><a href=\"login.php\"\
+    >Login |</a></li>\n            <?php } ?>\n            <?php if (isset($_SESSION['username']))\
+    \ { ?>\n                <li class=\"nav-item active\"><a href=\"process.php?action=logout\"\
+    >Logout</a></li>\n            <?php } ?>\n        </ul>\n    </nav>\n\n    <?php\
+    \ if (isset($_SESSION['username'])) { ?>\n    <div class=\"row\">\n        <div\
+    \ class=\"col-md-12\">\n            <div class=\"row\"><strong>Welcome to restricted\
+    \ access</strong></div>\n        </div>\n    </div>\n    <?php } ?>\n</div>\n\
+    </body>\n</html>\n```\n\n---\n\n## 注销功能\n\n当用户点击注销按钮时，会话将被销毁，用户重定向到 `index.php`\
+    \ 并提示 \"Logged out successfully\"。\n\n**注销处理代码 (位于各页面顶部公共区域)：**\n\n```php\nif\
+    \ (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'logout')) {\n    unset($_SESSION['name']);\n\
+    \    unset($_SESSION['username']);\n    session_destroy();\n    header(\"location:index.php?msg=Logged\
+    \ out successfully\");\n}\n```\n"
+  trans: "\n# 用户注册、登录、受限页面与注销功能实现\n\n## 注册功能\n\n### 表单页面 (index.php)\n\n页面包含一个注册表单，包含三个输入字段：`name`、`username`\
+    \ 和 `password`。访问者填写详情并点击 `SUBMIT` 按钮后，信息将被插入数据库表中，用户完成注册，随后重定向到受限区域。\n\n表单 HTML\
+    \ 结构如下：\n\n```html\n<div class=\"col-md-12\">\n  <div class=\"col-md6\">Username:</div>\n\
+    \  <div class=\"col-md6\"><input type=\"text\" name=\"username\" value=\"\"></div>\n\
+    </div>\n<div class=\"col-md-12\">\n  <div class=\"col-md6\">Password:</div>\n\
+    \  <div class=\"col-md6\"><input type=\"password\" name=\"password\" value=\"\"\
+    ></div>\n</div>\n<div class=\"row\"><input type=\"submit\" name=\"submit\" value=\"\
+    SUBMIT\"></div>\n```\n\n### 处理逻辑 (process.php?action=register)\n\n```php\n<?php\n\
+    if (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'register')) {\n   \
+    \ $name = $_POST['name'];\n    $username = $_POST['username'];\n    $password\
+    \ = md5($_POST['password']);\n\n    if (isset($name) && isset($username) && isset($password))\
+    \ {\n        $username_check = mysqli_query($connection, \"SELECT * FROM `users`\
+    \ WHERE `username` = '$username'\");\n\n        if (mysqli_num_rows($username_check)\
+    \ == 0) {\n            $username_db = $username;\n        } else {\n         \
+    \   $username_db = rand(0, 9) . '_' . $username;\n        }\n\n        $sql =\
+    \ \"INSERT INTO `users`(`name`, `username`, `password`) VALUES ('$name', '$username_db',\
+    \ '$password')\";\n        mysqli_query($connection, $sql) or die('error');\n\n\
+    \        $_SESSION['username'] = $username_db;\n        $_SESSION['name'] = $name;\n\
+    \        header(\"location:restricted.php\");\n    } else {\n        header(\"\
+    location:index.php?msg=Please enter fields\");\n    }\n}\n?>\n```\n\n**逻辑说明：**\n\
+    1.  `if(isset($_REQUEST['action']) && ($_REQUEST['action']=='register'))` 检查 `action`\
+    \ 值是否为 `register`，是则继续执行，否则退出。\n2.  `$username_check` 查询用户名是否已存在于数据库。\n3.  若用户名存在，使用\
+    \ `rand()` 函数追加随机数以保证唯一性。\n4.  插入新记录，并使用 `$_SESSION` 超全局变量设置 `username` 和 `name`。\n\
+    5.  最后重定向到 `restricted.php`。\n\n---\n\n## 登录功能\n\n### 登录页面 (login.php)\n\n页面包含两个输入字段：`username`\
+    \ 和 `password` 以及一个提交按钮。用户提交数据后，代码验证用户名和密码。若匹配成功，将登录详情（`name` 和 `username`）存入会话，并重定向到受限页面。\n\
+    \n**页面截图：**\n![](img/image_rsrcE9.jpg)\n\n**页面代码结构：**\n\n```html\n<!DOCTYPE html>\n\
+    <?php include \"connection.php\"; ?>\n<html>\n<head>\n    <title></title>\n  \
+    \  <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width,\
+    \ initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"css/bootstrap.css\"\
+    >\n    <script src=\"js/bootstrap.js\"></script>\n</head>\n<body>\n<div class=\"\
+    container textcenter\">\n    <nav class=\"navbar navbar-expand-lg navbar-light\
+    \ bg-light\">\n        <ul class=\"navbar-nav mr-auto\">\n            <?php if\
+    \ (isset($_SESSION['username'])) { ?>\n                <li class=\"nav-item active\"\
+    ><a href=\"restricted.php\">Restricted Page | </a></li>\n            <?php } ?>\n\
+    \            <?php if (!isset($_SESSION['username'])) { ?>\n                <li\
+    \ class=\"nav-item active\"><a href=\"index.php\">Register |</a></li>\n      \
+    \          <li class=\"nav-item active\"><a href=\"login.php\">Login |</a></li>\n\
+    \            <?php } ?>\n            <?php if (isset($_SESSION['username'])) {\
+    \ ?>\n                <li class=\"nav-item active\"><a href=\"process.php?action=logout\"\
+    >Logout</a></li>\n            <?php } ?>\n        </ul>\n    </nav>\n\n    <div\
+    \ class=\"row\"><?php if (isset($_GET['msg'])) { echo $_GET['msg']; } ?></div>\n\
+    \n    <?php if (!isset($_SESSION['username'])) { ?>\n    <form name=\"frm\" method=\"\
+    post\" action=\"process.php?action=login\">\n        <div class=\"row\">\n   \
+    \         <div class=\"col-md12\">\n                <div class=\"col-md6\">UserName:</div>\n\
+    \                <div class=\"col-md6\"><input type=\"text\" name=\"username\"\
+    \ value=\"\"></div>\n            </div>\n            <div class=\"col-md-12\"\
+    >\n                <div class=\"col-md6\">Password:</div>\n                <div\
+    \ class=\"col-md6\"><input type=\"password\" name=\"password\" value=\"\"></div>\n\
+    \            </div>\n        </div>\n        <div class=\"row\"><input type=\"\
+    submit\" name=\"submit\" value=\"SUBMIT\"></div>\n    </form>\n    <?php } else\
+    \ { echo 'You are logged in.'; } ?>\n</div>\n</body>\n</html>\n```\n\n### 登录处理逻辑\
+    \ (process.php?action=login)\n\n```php\nif (isset($_REQUEST['action']) && ($_REQUEST['action']\
+    \ == 'login')) {\n    $username = $_POST['username'];\n    $password = $_POST['password'];\n\
+    \    $new_password = md5($password);\n\n    $sel_query = \"SELECT * FROM `users`\
+    \ WHERE `username` = '$username' AND `password` = '$new_password'\";\n    $sql\
+    \ = mysqli_query($connection, $sel_query);\n\n    if (mysqli_num_rows($sql) >\
+    \ 0) {\n        $row = mysqli_fetch_array($sql);\n        $_SESSION['username']\
+    \ = $row['username'];\n        $_SESSION['name'] = $row['name'];\n        header(\"\
+    location:restricted.php\");\n    } else {\n        header(\"location:index.php?msg=Incorrect\
+    \ username or password\");\n    }\n}\n```\n\n**逻辑说明：**\n由于密码使用 `md5` 哈希加密存储，用户输入的密码会被转换为加密形式后再与数据库值比对。若匹配成功则重定向到受限页面；否则重定向回\
+    \ `index.php` 并提示 \"Incorrect username or password\"。\n\n---\n\n## 受限页面功能\n\n\
+    ### 页面逻辑 (restricted.php)\n\n页面检查会话变量 `$_SESSION['username']` 是否已设置。若已设置，显示 \"\
+    Welcome to restricted access\"；否则重定向到 `index.php`。\n\n```php\n<?php\ninclude \"\
+    connection.php\";\nif (!isset($_SESSION['username'])) {\n    header(\"location:index.php\"\
+    );\n}\n?>\n<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta charset=\"\
+    UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    >\n    <link rel=\"stylesheet\" href=\"css/bootstrap.css\">\n    <script src=\"\
+    js/bootstrap.js\"></script>\n</head>\n<body>\n<div class=\"container textcenter\"\
+    >\n    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n       \
+    \ <ul class=\"navbar-nav mr-auto\">\n            <?php if (isset($_SESSION['username']))\
+    \ { ?>\n                <li class=\"nav-item active\"><a href=\"restricted.php\"\
+    >Restricted Page | </a></li>\n            <?php } ?>\n            <?php if (!isset($_SESSION['username']))\
+    \ { ?>\n                <li class=\"nav-item active\"><a href=\"index.php\">Register\
+    \ |</a></li>\n                <li class=\"nav-item active\"><a href=\"login.php\"\
+    >Login |</a></li>\n            <?php } ?>\n            <?php if (isset($_SESSION['username']))\
+    \ { ?>\n                <li class=\"nav-item active\"><a href=\"process.php?action=logout\"\
+    >Logout</a></li>\n            <?php } ?>\n        </ul>\n    </nav>\n\n    <?php\
+    \ if (isset($_SESSION['username'])) { ?>\n    <div class=\"row\">\n        <div\
+    \ class=\"col-md-12\">\n            <div class=\"row\"><strong>Welcome to restricted\
+    \ access</strong></div>\n        </div>\n    </div>\n    <?php } ?>\n</div>\n\
+    </body>\n</html>\n```\n\n---\n\n## 注销功能\n\n当用户点击注销按钮时，会话将被销毁，用户重定向到 `index.php`\
+    \ 并提示 \"Logged out successfully\"。\n\n**注销处理代码 (位于各页面顶部公共区域)：**\n\n```php\nif\
+    \ (isset($_REQUEST['action']) && ($_REQUEST['action'] == 'logout')) {\n    unset($_SESSION['name']);\n\
+    \    unset($_SESSION['username']);\n    session_destroy();\n    header(\"location:index.php?msg=Logged\
+    \ out successfully\");\n}\n```\n"
+  toc: []

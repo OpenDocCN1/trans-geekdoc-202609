@@ -1,0 +1,1533 @@
+<p><img src="image_rsrcDS.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<svg xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="100%" preserveaspectratio="xMidYMid meet" version="1.1" viewbox="0 0 1242 1920" width="100%">
+<image height="1920" width="1242" href="image_rsrcDS.jpg"></image>
+</svg>
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div>
+<span class="class_sDG">Practical Hand On Experience With Php &amp; Mysql</span><br />
+Hi Friends!
+</div>
+<div class="class_sG">
+This book is all about PHP and Mysql.It covers almost all the core topics in PHP.Each and every topic is explained with practical examples so that you can clearly understand the topic and you can practice the same on your own.<br />
+The last chapter in this book covers a small project with full source code.
+</div>
+<div class="class_sG">
+It covers the main topics and give you an understanding of how to build a dynamic website from scratch using PHP and Mysql.
+</div>
+<div class="class_sK">
+© 2021 by Dipti Sahay All Rights Reserved <span class="class_sDM">http://readerscollection.in</span>
+</div>
+<div class="class_sN">
+Content :
+</div>
+<div class="class_sK">
+1.Introduction to PHP<br />
+2.Type of applications that can be developed using Php.
+</div>
+<div class="class_sN">
+3.How to install PHP locally<br />
+4.Run your first program with Php<br />
+5.Variable and Constants explained with examples<br />
+6.Php datatypes<br />
+7.Php operators.
+</div>
+<div class="class_sK">
+8.Php operators usage explained with examples<br />
+9.Php Strings and Arrays with examples
+</div>
+<div class="class_sN">
+10.If and Else block and it's use with practical example<br />
+11.Different types of loops in PHP.<br />
+12.Php superglobals<br />
+13.Create Php Forms<br />
+14.Php Form Validation:Server side Validation
+</div>
+<div class="class_sK">
+15.Introduction to Mysql<br />
+16.How to connect to your database from your application
+</div>
+<div class="class_sN">
+17.How to create database and tables<br />
+18.Session management in php
+</div>
+<div class="class_sK">
+19.A practical project where you will get to know how to create<br />
+i)Database and table creation iii)A frontend where user can register and login and access the restricted page in the website<br />
+CHAPTER 1:
+</div>
+<div>
+<span class="class_sDF">Introduction To Php::</span>
+</div>
+<div class="class_sG">
+Php is a server side scripting language and is generally used to develop dynamic <span id="part0001.xhtml#page_1"></span> webpages.
+</div>
+<div class="class_sG">
+It is an opensource scripting language.It is free,widely used and easily available for<br />
+download.
+</div>
+<div class="class_sG">
+It is the best ever tool for developing webapplications or dynamic websites.<br />
+PHP was originally created by Rasmus lerdorf in 1994.<br />
+Previously PHP stood for personal Home page but now PHP stands for PHP:Hypertext Preprocessor.
+</div>
+<div class="class_sG">
+Php scipts are executed on server.It is compatible with all servers like Apache,IIS,etc.
+</div>
+<div class="class_sG">
+A Php file contains HTML<br />
+code,CSS code and Php<br />
+script.The file is saved with .php extension.It is executed on server and the response generated is pure HTML which is displayed in the browser.<br />
+So before we start learning Php we must know what Php can do .
+</div>
+<div class="class_sG">
+Php can be used to create<br />
+dynamic page content.<br />
+It can be used to create forms and collect data from end users. It can create session and can maintain session for any user while he is navigating through multiple pages in any website. Php can be used to manipulate data in database by performing crud operations like<br />
+create,read,update and delete operations.<br />
+Php can be used to create sessions and track user activity.
+</div>
+<div class="class_sG">
+To learn or work with Php you should have basic knowledge on HTML,CSS and javascript.
+</div>
+<div class="class_sG">
+HTML is hypertext markup language and CSS is cascading style sheet.HTML describes structure of webpage.HTML contains number of elements. These elements hold text and images for the webpage.It actually tells the browser how to display the data for a webpage.
+</div>
+<div class="class_s17">
+CSS is used to give a styling to those elements i.e the look and the feel of the webpage.<br />
+HTML and CSS topics are not covered here however while using HTML tags and CSS code in this book I will briefly describe what is the main purpose of using them.
+</div>
+<div id="part0001.xhtml#text">
+<span class="class_sDF">CHAPTER 2<br />
+Types of Application developed using Php::</span>
+</div>
+<div class="class_sG">
+Php can used to develop any dynamic webpage.Well what do we mean by dynamic <span id="part0001.xhtml#page_2"></span> website?
+</div>
+<div class="class_s17">
+Dynamic website means that the content of the website is not static i.e html pages are not storing content for the website.Data or content is coming from database and it is changing with user action.<br />
+So now what type of applications and websites we can develop using php.<br />
+We can develop informative websites,blogs,B2B applications, B2C applications,ecommerce applications,forums,erp and many more.
+</div>
+<div id="part0001.xhtml#toc1_CHAPTER_3_How_to_install_Php_locally__">
+<span class="class_sDF">CHAPTER 3<br />
+How to install Php locally::</span>
+</div>
+<div class="class_sG">
+Installing Php locally means installing it in your local PC.This is important step while learning Php so that you can run and test your php code locally on your PC.
+</div>
+<div class="class_sG">
+We are going to install xampp server (which contains<br />
+Apache,Mysql and Php).Apache is a webserver which is required to run php scripts.<br />
+Follow the below steps to install xampp in your PC.
+</div>
+<div class="class_sG">
+Step 1:Go to<br />
+<span class="class_sDK">https://www.apachefriends.org/do wnload.html</span><br />
+Download the latest xampp for your windows.
+</div>
+<div class="class_s17">
+Step 2:Save and Run the .exe file Step 3:A setup wizard dialog will get open on your screen for you.Follow the instructions and install your xampp in desired folder.<br />
+Your installation part is now done!
+</div>
+<div id="part0001.xhtml#toc2_CHAPTER_4_Run_your_first_program_with_Php__">
+<span class="class_sDF">CHAPTER 4<br />
+Run your first program with Php::</span>
+</div>
+<div class="class_s17">
+If you have done the xampp installation in C folder.Then navigate to C folder and manually start the server by clicking on xampp_start icon which is<br />
+already there inside xampp folder.See the screenshot below:
+</div>
+<div id="part0001.xhtml#page_3">
+<img src="image_rsrcDT.jpg" class="class_s1N" />
+</div>
+<div class="class_s17">
+To write the php scripts we need an editor.A number of free editor tools like Notepad editor ++, Sublime,Netbeans are available .
+</div>
+<div>
+You can use any of them.<br />
+I will be using Netbeans for writing the php scripts.<br />
+Navigate manually to C:\xampp\htdocs folder.
+</div>
+<div class="class_sG">
+This is a folder where you can store your project folder and files within it.
+</div>
+<div class="class_sG">
+I am creating a folder here and naming it as Practicalphp.I will be using this folder to store all the php scripts required for practical examples and test them as we proceed gradually.
+</div>
+<div class="class_sG">
+Php code starts with open tag and ends with close tags.Well what are open and close tags in php?
+</div>
+<div id="part0001.xhtml#page_4" class="class_s17">
+&lt;?php is the open tag and ?&gt; is the close tag.Php script goes between these two tags.You can find the code below:
+</div>
+<div>
+&lt;?php<br />
+//php code goes here
+</div>
+<div class="class_s17">
+?&gt; Below we are going to print text on webpage with php.For this create a file in<br />
+C:\xampp\htdocs\PracticalPhp folder and save it as index.php.
+</div>
+<div>
+Paste the below code to display “Hello ! I am here” on a page.
+</div>
+<div class="class_sG">
+&lt;!DOCTYPE html&gt;<br />
+&lt;html lang="en"&gt;<br />
+&lt;head&gt;
+</div>
+<div class="class_sG">
+&lt;meta charset="utf-8"&gt;<br />
+&lt;title&gt;MyFirstExample&lt;/title&gt; &lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;?php echo "Hello ! I am here" ;?&gt;<br />
+&lt;/body&gt; &lt;/html&gt;
+</div>
+<div class="class_s17">
+Now if you have already started your xampp server in your PC then open any browser and type localhost/PracticalPhp/ and click enter.You will see “Hello ! I am here “ on your screen.See the screenshot below:
+</div>
+<div>
+<img src="image_rsrcDU.jpg" class="class_s26" /> <span class="class_sDH">Illustration 1: Example To Print Hello !I am here</span>
+</div>
+<div class="class_sG">
+A normal php file contains some HTML code and some Php scripting code and the file is saved with .php extension.
+</div>
+<div id="part0001.xhtml#page_5" class="class_sG">
+The php code is written within php open tag and php close tags.Each statement of Php code ends with semicolon.
+</div>
+<div class="class_s17">
+Here in the above code “<br />
+MyFirstExample” text is used as title within the HTML title tag which will get displayed on the top of the page.In Php there is a built-in function “echo” which can be used to output the text “Hello ! I am here”on a web page.
+</div>
+<div id="part0001.xhtml#toc3_CHAPTER_5_Variable_declaration_and_it_s_usage_with_examples__">
+<span class="class_sDF">CHAPTER 5<br />
+Variable declaration and it's usage with examples::</span>
+</div>
+<div class="class_sG">
+A variable is a container which store values in it.It can store a string of text,numbers etc.We donot have to declare the<br />
+datatype(ie String,Integer) of the variable.<br />
+It automatically converts the variable to it's correct data type depending on it's value.
+</div>
+<div class="class_sG">
+The assignment operator is used to assign value to a variable.Once a variable is declared it can be used throughout the code.
+</div>
+<div class="class_s17">
+Php variables follow some naming conventions i.e follow some rules for defining a<br />
+variable.A php variable starts with dollar sign $ ,followed with a name.A variable name cannot start with number.It can have alphanumeric characters and as well as underscore.A varaiable name cannot have spaces.They are case sensitive.
+</div>
+<div>
+Find below examples to define a variable:
+</div>
+<div class="class_sG">
+$var=”This is a string variable”; Since the above $var variable stores text.It is a variable with datatype as String .
+</div>
+<div class="class_sG">
+$var=10;<br />
+Since the above $var variable stores number.It is a variable with Integer data type.
+</div>
+<div class="class_sG">
+$var=array(“a”,”b”,”c”); Since the $var stores array data so it is an array variable.
+</div>
+<div class="class_s17">
+$var=2.5;<br />
+Since the $var variable stores a floating point number so it's a float variable.
+</div>
+<div>
+<span class="class_sDF">Php Constants::</span>
+</div>
+<div class="class_sG">
+An identifier which holds a value and that value remain the same throughout the script.The value cannot be changed throughout he script.It starts with a letter or underscore.It is global throughout the script.<br />
+To create a constant in your script you can use define() function.
+</div>
+<div class="class_sG">
+&lt;?php<br />
+define(“STORE”,”Estore Diversity”);
+</div>
+<div id="part0001.xhtml#page_6" class="class_s17">
+echo STORE;<br />
+?&gt;<br />
+In the above example I have define a constant named<br />
+STORE.It holds the value Estore Diversity.<br />
+Now whenever I will use and print the STORE constant in my script it will display the value as Estore Diversity.<br />
+So the main purpose to define constant is that when we want to define some identifiers that will hold some value that are not going to change throughout the code and are available globally to the script.
+</div>
+<div id="part0001.xhtml#toc4_CHAPTER_6_Php_Datatypes__">
+<span class="class_sDF">CHAPTER 6<br />
+Php Datatypes::</span>
+</div>
+<div class="class_sG">
+Datatype tells the type of data.A value which is stored in a variable can be of any<br />
+datatype.There are number of datatypes:
+</div>
+<div class="class_sG">
+• String<br />
+• Integer<br />
+• Boolean<br />
+• Array<br />
+• Object<br />
+• NULL<br />
+• Float
+</div>
+<div class="class_s17">
+Any sequence of characters included between single or double quote is a String.For eaxmple:<br />
+&lt;?php
+</div>
+<div>
+$var=”Hello World”; echo $var;<br />
+?&gt;
+</div>
+<div class="class_sG">
+The above $var is a string variable as it holds sequence of characters between double quotes.
+</div>
+<div class="class_sG">
+A variable holding digits which is a non-decimal number is an Integer.Integer can be positive or negative but it should be whole numbers.<br />
+For example:
+</div>
+<div class="class_s17">
+&lt;?php<br />
+$a= 10; echo $a;
+</div>
+<div>
+?&gt;
+</div>
+<div class="class_sG">
+In the above example variable $a holds a number 10 which donot have any decimal <span id="part0001.xhtml#page_7"></span> point and thus it is an Integer.
+</div>
+<div class="class_sG">
+A variable which holds boolean value ie true or false is a boolean variable.<br />
+Boolean values are used in conditional blocks.
+</div>
+<div class="class_sG">
+For example if some variable value is equal to true or false then the following condition will be executed.If and Else condtion have been explained in next section.
+</div>
+<div class="class_sG">
+A floating point number is a number which has decimal point. For example:<br />
+&lt;?php<br />
+$b=2.45;<br />
+?&gt;
+</div>
+<div class="class_sG">
+Arrays are the datatype which stores multiple values of same type in one variable.
+</div>
+<div class="class_sG">
+We can define array by using array() function.This has been explained in<br />
+detail in Array section.
+</div>
+<div class="class_sG">
+Objects are the datatype which stores data and also the<br />
+information on how to process the data.An object must be explicitly declared.
+</div>
+<div class="class_s17">
+First we define a class<br />
+with Class keyword.<br />
+It holds some properties and<br />
+methods.Then we create an instance ie the object of the class to use the methods and<br />
+properties.<br />
+&lt;?php
+</div>
+<div>
+class A{<br />
+public $var=”hello”;<br />
+public function demo()
+</div>
+<div class="class_sG">
+{<br />
+echo $this-&gt;var;<br />
+}<br />
+}
+</div>
+<div class="class_sG">
+$object= new A();<br />
+echo $object-&gt;demo(); ?&gt;<br />
+Here we have declared a class A .It holds $var property and a method demo.
+</div>
+<div class="class_s17">
+Property is the variable and method is the function in the class.
+</div>
+<div>
+<img src="image_rsrcDV.jpg" id="page_8" class="class_s3G" /> <span class="class_sDH">Illustration 2: Class Datatype</span>
+</div>
+<div class="class_sG">
+demo() method is accessing the variable $var and value “hello” will get printed.<br />
+$object is the object created for class A.Check the output of the code below:
+</div>
+<div class="class_sG">
+NULL is a special data type which holds no value.It has only NULL as value.<br />
+A variable can be set with NULL value.
+</div>
+<div class="class_s17">
+&lt;?php<br />
+$x=NULL;<br />
+var_dump($x);
+</div>
+<div>
+?&gt;<br />
+<img src="image_rsrcDW.jpg" class="class_s3S" /> <span class="class_sDH">Illustration 3: NULL Datatype</span><br />
+<span class="class_sDF">CHAPTER 7<br />
+<span id="part0001.xhtml#page_9"></span> PHP Operators::</span>
+</div>
+<div class="class_sG">
+Operators are used to perform different operations on variable and values.<br />
+Suppose we want two variables and we want to know the<br />
+summation of that.Then we will perform and addition of that two variables using Arithmetic Operators.<br />
+We can divide the operations into different groups:
+</div>
+<div class="class_sG">
+• Arithmetic Operators<br />
+• Assignment operators<br />
+• Comparison Operators<br />
+• Increment/Decrement
+</div>
+<div class="class_s17">
+Operators<br />
+• Logical Operators<br />
+• String Operators<br />
+• Array operators<br />
+• Conditional assignment operators
+</div>
+<div>
+<span class="class_sDJ">Arithmetic Operators:</span>
+</div>
+<div class="class_sG">
+Addition: + is the addition operator.This is used when we want sum of two variables. For example:
+</div>
+<div class="class_s17">
+&lt;?php $x= 10; $y=20;
+</div>
+<div>
+echo $x+$y; ?&gt;<br />
+<img src="image_rsrcDX.jpg" class="class_s43" /> <span class="class_sDH">Illustration 4: Addition Operator</span>
+</div>
+<div class="class_sG">
+Subtraction:- is the subtraction operator.This is used when we want to subtract one variable from other variable.
+</div>
+<div class="class_s17">
+&lt;?php $x=50; $y=25;
+</div>
+<div id="part0001.xhtml#page_10">
+echo $x-$y; ?&gt;
+</div>
+<div class="class_s17">
+Here by using subtraction operator $y variable is deducted from $x variable.Check the output below:
+</div>
+<div>
+<img src="image_rsrcDY.jpg" class="class_s4C" /> <span class="class_sDH">Illustration 5: Subtraction Operator</span>
+</div>
+<div class="class_sG">
+Multiplication: * is the<br />
+multiplication operator.This is used when we want a product of two variables.
+</div>
+<div class="class_sG">
+&lt;?php<br />
+$x=10;<br />
+$y=20;<br />
+echo $x*$y;<br />
+?&gt;
+</div>
+<div class="class_s17">
+Here in above example we have two variable $x and $y.We are mutiplying it to get the product of two variables.Check the output below:
+</div>
+<div>
+<img src="image_rsrcDZ.jpg" id="page_11" class="class_s4M" /> <span class="class_sDH">Illustration 6: Mutiplication operator</span>
+</div>
+<div class="class_s17">
+Division: / is the divison operator which is used when we want to divide one variable by another variable.
+</div>
+<div>
+For example:
+</div>
+<div class="class_s17">
+&lt;?php<br />
+$x=100;<br />
+$y=10;<br />
+echo $x/$y;
+</div>
+<div>
+?&gt;
+</div>
+<div class="class_s17">
+Here we have one variable $x which is getting divided by $y and return a value.
+</div>
+<div>
+Check the output below:<br />
+<img src="image_rsrcE0.jpg" id="page_12" class="class_s4Y" />
+</div>
+<div class="class_sG">
+Modulus:% is the modulus operator which returns the remainder when one variable is divided by another variable. For example:
+</div>
+<div class="class_sG">
+&lt;?php<br />
+$x=100;<br />
+$y=40;<br />
+echo $x%$y; ?&gt;
+</div>
+<div class="class_sG">
+In the above example we have taken a variable $x and it is getting divided by $y.
+</div>
+<div class="class_s17">
+The result will be the remainder we are getting by dividing the two variables.Check out the output below:
+</div>
+<div>
+<img src="image_rsrcE1.jpg" id="toc5__embedded_image_Illustration_7__Modulus_Operator" class="class_s57" /> <span class="class_sDH">Illustration 7: Modulus Operator</span>
+</div>
+<div class="class_sG">
+Exponentiation: ** is the<br />
+<span id="part0001.xhtml#page_13"></span> exponentiation operator.It is used when we want to print any variable with some power.
+</div>
+<div class="class_s17">
+For example: &lt;?php<br />
+$x=2;<br />
+$y=3;<br />
+echo $x**$y; ?&gt;<br />
+In the above example we are finding 2 to power of 3.Check the outut below:
+</div>
+<div>
+<img src="image_rsrcE2.jpg" class="class_s5E" /> <span class="class_sDH">Illustration 8: Exponentiation Operator</span><br />
+Assignment Operators:
+</div>
+<div class="class_sG">
+With assignment operators we can set values in a variable.Basic assignment operator in PHP is “=” .<br />
+For example:
+</div>
+<div class="class_s17">
+$x +=$y; is same $x= $x+ $y; $x -=$y; is same as $x=$x-$y; $x*=$y; is same as $x=$x*$y; $x /=$y; is same as $x=$x/$y; $x %=$y is same as $x=$x%$y;
+</div>
+<div>
+<span class="class_sDF">Comparison operators:</span>
+</div>
+<div class="class_sG">
+== is Equal operator . For<br />
+example<br />
+$x==$y Here this will return true if $x value is equal to $y value . === is the identical operator.For example :
+</div>
+<div class="class_s17">
+$x===$y returns true if and only if the values and type of both variables re same.
+</div>
+<div>
+!= is the not equal to operator.For example:<br />
+$x!=$y returns true if value of both variables are different.<br />
+<span id="part0001.xhtml#page_14"></span> &lt;&gt; is the not equal to operator.For example:<br />
+$x!=$y returns true if value of both variables are different.
+</div>
+<div class="class_sG">
+!== Not identical operator. For example<br />
+$x !== $y returns true if either the value is not same or the type is not same
+</div>
+<div class="class_sG">
+&gt; is the Greater operator.For example :<br />
+$x &gt; $y is true when $x value is greater than $y
+</div>
+<div class="class_sG">
+&lt; is the Less than operator.For example :<br />
+$x&lt;$y is true when $x value is less than $y.
+</div>
+<div class="class_sG">
+&gt;= is Greater than or equal to operator.For example:<br />
+$x&gt;= $y is true when $x value is greater than or equal to $y &lt;= is Less than or equal to operator .For example :<br />
+$x&lt;=$y is true when $x value is less than or equal to $y
+</div>
+<div class="class_s17">
+&lt; = &gt; is the spaceship<br />
+operator.For example:<br />
+$x &lt; = &gt; $y returns an integer less than ,equal to or greater than zero if value of $x is less<br />
+than,equal to or greater thn $y.
+</div>
+<div>
+<span class="class_sDF">Increment and Decrement operators:</span>
+</div>
+<div class="class_s17">
+$x++ will return $x and then increment it's value by one. ++$x will increment value of $x by oe and then return $x<br />
+$x-- will return $x and then decrease it's value by one<br />
+--$x will decrement the value by one and then return $x
+</div>
+<div>
+<span class="class_sDF">Logical operators:</span>
+</div>
+<div class="class_s17">
+<span class="class_sDF">And</span> operator :$x and $y gives a result true if both $x and $y are true.<br />
+<span class="class_sDF">&amp;&amp;</span> operator:$x and $y gives a result true if both $x and $y are true.<br />
+<span class="class_sDF">OR</span> operator :$x and $y gives a result true if either $x and $y are true.<br />
+<span class="class_sDF">||</span> operator :$x and $y gives a result true if either $x and $y are true.<br />
+<span class="class_sDF">!</span> Not operator: !$x gives a result true if $x is not true.
+</div>
+<div id="part0001.xhtml#toc6_CHAPTER_8_Php_String_operators_">
+<span class="class_sDF">CHAPTER 8<br />
+Php String operators:</span>
+</div>
+<div class="class_s17">
+There are two operators under Php String operators.One is the concatenation and other one is concatenation assignment operator.
+</div>
+<div>
+<span class="class_sDF">Concatenation</span> : $x . $y concatenates $x and $y
+</div>
+<div class="class_s17">
+<span class="class_sDF">Concatenation Assignment operator</span> :$x .=$y .This appends $y to $x.
+</div>
+<div id="part0001.xhtml#toc7_CHAPTER_9_Strings_In_PHP__A_string_is_a_sequence_of_characters._How_can_we_define_a_string_variable__Lets_check_out_an_example_below___x__hello_world__">
+<span class="class_sDF">CHAPTER 9<br />
+<span id="part0001.xhtml#page_15"></span> Strings In PHP:</span><br />
+<span class="class_sDJ">A string is a sequence of characters.</span><br />
+How can we define a string variable?<br />
+Lets check out an example below:<br />
+$x=”hello world”;
+</div>
+<div class="class_sG">
+Here in above example we have created a variable $x and assign some value to it.The value assigned to it is a sequence of characters.thus in this way a string variable is created.
+</div>
+<div class="class_sG">
+In Php there are various PHP string functions which can be used in application.Some of them have been discussed below:
+</div>
+<div class="class_s17">
+Suppose we want to check the length of a string variable.We can use strlen() for that.<br />
+&lt;?php
+</div>
+<div>
+echo strlen(“hi”)<br />
+?&gt;
+</div>
+<div class="class_sG">
+This will give the following output: 2 since there are only two characters.
+</div>
+<div class="class_s17">
+There are numbers of other php string functions .like<br />
+strstr,strlen,strpos etc.
+</div>
+<div>
+<span class="class_sDF">PHP Arrays:</span><br />
+Arrays is used to store multiple values in a single variable.<br />
+To define array we use [] brackets.<br />
+Lets define an array say fruits;<br />
+$fruits=array();
+</div>
+<div class="class_s17">
+The above $fruits is an empty array.Now we assign some values to it.
+</div>
+<div>
+$fruits=['guava','apple','orange','pi neaplle','mango'];
+</div>
+<div class="class_sG">
+Now if we print the array[1] it will give the result as apple because in this array we have apple in index 1.
+</div>
+<div class="class_s17">
+Well there are three types of arrays:<br />
+Numeric Arrays,Associative Arrays and Multidimensional arrays.
+</div>
+<div>
+<span class="class_sDF">Numeric Arrays</span> are those where the index is numeric.<br />
+<span class="class_sDF">Associative arrays</span> are those where the index is not numeric.
+</div>
+<div class="class_s17">
+<span class="class_sDF">Multidimensional Arrays</span> are those which contain more than 1 array.
+</div>
+<div id="part0001.xhtml#toc8_CHAPTER_10_If_and_Else_block_with_examples__">
+<span class="class_sDF">CHAPTER 10<br />
+If and Else block with examples::</span>
+</div>
+<div class="class_sG">
+If and Else are conditional blocks that perform different actions based on some <span id="part0001.xhtml#page_16"></span> condition.
+</div>
+<div class="class_s17">
+For example: We want to print hello when the variable value is 10.For this we are going to apply If and else block.
+</div>
+<div>
+Example:<br />
+&lt;?php<br />
+$var=10;
+</div>
+<div class="class_s17">
+if($var==10) {<br />
+echo “hello”; }<br />
+else<br />
+{<br />
+echo “bye”; }<br />
+?&gt;<br />
+In this above example first we have defined a variable and have assigned it a value of 10.<br />
+In the next statement we are applying if condition ie if the value of variable is 10 then it will print hello otherwise it will execute the else block ie it will print bye.<br />
+Here the variable value is<br />
+satisfying the if condition ie the variable value is 10 so here hello will get displayed on the screen. See the output below:
+</div>
+<div>
+<img src="image_rsrcE3.jpg" class="class_s6T" /> <span class="class_sDH">Illustration 9: If .. Else block</span><br />
+<span class="class_sDF">CHAPTER 11<br />
+Loops in PHP::</span>
+</div>
+<div id="part0001.xhtml#page_17" class="class_sG">
+When we want to run a piece of code again and again when certain conditions are met then we use loops.
+</div>
+<div class="class_s17">
+There are different types of loops: while<br />
+<span class="class_sDF">do .. while<br />
+for<br />
+foreach :loop</span>
+</div>
+<div>
+While loop gets executed till the condition is true
+</div>
+<div class="class_s17">
+Syntax for while loop: while(till condition is true) {<br />
+code to be executed<br />
+}
+</div>
+<div>
+Example:<br />
+Let say we have a variable $var=1;
+</div>
+<div class="class_s17">
+while ($var &lt;=6) {<br />
+echo $var; $var++;
+</div>
+<div>
+}<br />
+OUTPUT: 123456
+</div>
+<div class="class_sG">
+The variable here gets increased by 1 and is displayed on screen till it's value is less than or equal to 6.
+</div>
+<div class="class_s17">
+do....while loop always executes the block of code first time and then repeat the loop if condition is true.
+</div>
+<div>
+Syntax for do...while:
+</div>
+<div class="class_s17">
+do<br />
+{<br />
+code to be executed }while(condition is true)
+</div>
+<div>
+Example:<br />
+$var=1;
+</div>
+<div class="class_s17">
+do<br />
+{<br />
+echo $var;<br />
+$var++;<br />
+}while($var&lt;=6);
+</div>
+<div>
+Output: 123456
+</div>
+<div class="class_sG">
+for Loop iterates through a block of code till the specified number of times and till the condition is true.
+</div>
+<div id="part0001.xhtml#page_18" class="class_s17">
+Syntax<br />
+for(initialization; condition; increment)<br />
+{
+</div>
+<div>
+code to be executed<br />
+}<br />
+Example:<br />
+for($x=1 ;$x&lt;=5 ;$x ++)
+</div>
+<div class="class_sG">
+{<br />
+echo $x;<br />
+}
+</div>
+<div class="class_sG">
+Output: 12345 Foreach loop :Loops through a block code for each element in an array
+</div>
+<div class="class_sG">
+Syntax:<br />
+foreach($array as $key=&gt;$value)<br />
+{<br />
+echo $key;<br />
+echo '&lt;br&gt;';<br />
+echo $value;<br />
+}<br />
+Suppose we have an array<br />
+variable $arr.
+</div>
+<div class="class_sG">
+$arr=['a'=&gt;'yellow','b'=&gt;'red','c'=&gt; 'white'];<br />
+foreach($arr as $key=&gt;$value) {
+</div>
+<div class="class_s17">
+echo $key; echo '&lt;br&gt;'; echo $value; }
+</div>
+<div>
+OUTPUT:
+</div>
+<div class="class_s17">
+a<br />
+yellow b<br />
+red<br />
+c<br />
+white
+</div>
+<div>
+<span class="class_sDF">PHP Superglobals::</span>
+</div>
+<div class="class_sG">
+The predefined variables which are global in scope ie they can be accessed from anywhere in the script.Nothing special has to be done to call these superglobal variables.Some of them are mentioned below:
+</div>
+<div class="class_s7N">
+$_GLOBALS $_SERVER $_POST<br />
+<span id="part0001.xhtml#page_19"></span> $_GET<br />
+$_REQUEST $_FILES<br />
+$_ENV<br />
+$_COOKIE $_SESSION
+</div>
+<div class="class_s17">
+$_SERVER returns information related to your headers and path $_POST is used to retrieve value of data posted from any form, $_GET is used to retrieve any value of any get variable,<br />
+$_REQUEST is used to retrieve both the post and get data.<br />
+$_ENV is the environment variable.
+</div>
+<div>
+<span class="class_sDF">PHP FORMS:</span>
+</div>
+<div class="class_sG">
+Now a days we all are familiar with the websites on internet. Whether we have a restaurant site or event booking or any<br />
+blog.Every website has a form for their every functionality.<br />
+Say we visit a restaurant website and now we want to book a table for dinner.<br />
+So how do the restaurant manager will come to know about the booking.<br />
+Well he will ask his developer to create a page which will usually collect some information from guests .
+</div>
+<div class="class_sG">
+The developer will design the webpage and create a form where he will add some basic fields to collect information from guest.
+</div>
+<div class="class_s17">
+He will collect the Name,Mobile No. and other information. And then insert it in database.In this way Manager will come to know about the booking.
+</div>
+<div>
+So here we are going to learn how to create PHP forms.<br />
+The PHP form start with &lt;form&gt; tag and ends with &lt;/form&gt;
+</div>
+<div class="class_sG">
+The basic fields which we can include in the form is text<br />
+field,password field,textarea,date calendar,radio buttons and<br />
+checkboxes.
+</div>
+<div class="class_sG">
+Every form has a method type ie post or get.These methods specify how your data is being<br />
+transferred from form to your server.<br />
+Get is the default method.If Get method is used then data will get appended in the url whereas if the method is post it will be more secure and the data will not get exposed in the url.
+</div>
+<div class="class_sG">
+Every form has an action attribute ie the form on subit will redirect to that specific action for getting the processing of the form.
+</div>
+<div id="part0001.xhtml#page_20" class="class_s17">
+Syntax::<br />
+&lt;form action=”action.php” method=”post”&gt;<br />
+&lt;field1...&gt;<br />
+&lt;field2...&gt;<br />
+&lt;/form&gt;
+</div>
+<div>
+Example:Form for resrving a table for guests
+</div>
+<div class="class_s17">
+&lt;form method type=”post” action=”process.php” &gt;<br />
+Name:&lt;input type=”text”<br />
+name=”name”&gt;<br />
+Mobile:&lt;input type=”number” name=”mobile”&gt;<br />
+Email:&lt;input type=”text”<br />
+name=”email”&gt;<br />
+&lt;input type=”submit”<br />
+name=”submit” value=”submit”&gt; &lt;/form&gt;
+</div>
+<div id="part0001.xhtml#toc9_CHAPTER_14_Server_Side_Validation__">
+<span class="class_sDF">CHAPTER 14 Server Side Validation::</span>
+</div>
+<div class="class_s17">
+When we submit a form the form should be validated.This means we should apply a rule to check that the mandatory fields are not empty and the value entered is in correct type.
+</div>
+<div>
+For the above form we will add an action in process.php<br />
+if(isset($_POST['submit']))
+</div>
+<div class="class_s17">
+{<br />
+if($_POST['name']!='' &amp;&amp;<br />
+$_POST['number']!='' &amp;&amp; $_POST['email'])<br />
+{<br />
+code to be executed }<br />
+else<br />
+{<br />
+redirect to previous page }
+</div>
+<div>
+}
+</div>
+<div class="class_s17">
+The code above checks if the fields contain some value or not.If the value is not set for any field then the guest gets<br />
+redirected to the form page.
+</div>
+<div id="part0001.xhtml#toc10_CHAPTER_15_Intoduction_to_Mysql_">
+<span class="class_sDF">CHAPTER 15<br />
+Intoduction to Mysql:</span>
+</div>
+<div class="class_sG">
+Mysql is an opensource relational database system.Mysql is the mostly used database <span id="part0001.xhtml#page_21"></span> with PHP.
+</div>
+<div class="class_s17">
+It is developed,distributed and supported by Oracle Corporation. In Mysql there are tables.<br />
+Each table contain some rows and columns.It works for both small and large applications.It is fast , reliable and very easy to use database system.It compiles on number of platform.
+</div>
+<div id="part0001.xhtml#toc11_CHAPTER_16_Connection_of_Mysql_in_PHP___We_can_use_Mysqli_to_connect_to_PHP._Syntax__">
+<span class="class_sDF">CHAPTER 16</span><br />
+Connection of Mysql in PHP::<br />
+We can use Mysqli to connect to PHP.<br />
+Syntax::
+</div>
+<div class="class_sG">
+&lt;?php<br />
+$host='localhost'; $username='root'; $password='';
+</div>
+<div class="class_s17">
+//For creating a newconnection $conn= new mysqli($host, $username,$password);
+</div>
+<div>
+if($conn-&gt;connect_error)
+</div>
+<div class="class_s17">
+{<br />
+die(' Connection Failed : '.<br />
+$conn-&gt;connect_error);<br />
+}
+</div>
+<div>
+echo 'Connected Successfully'; ?&gt;<br />
+Output::<br />
+Connected Successfully
+</div>
+<div class="class_s17">
+In the above we are creating an instance of mysqli class<br />
+providing necessary details.If the connection is created then<br />
+connection will be successful otherwise it will print some error stating that connection is not created.
+</div>
+<div id="part0001.xhtml#toc12_CHAPTER_17_Create_database_and_tables__To_create_database_you_can_write_the_following_sql_command__CREATE_DATABASE_dbname__You_can_also_create_database_by_navigating_to_phpmyadmin">
+<span class="class_sDF">CHAPTER 17</span><br />
+Create database and tables:<br />
+To create database you can write the following sql command:<br />
+CREATE DATABASE dbname;<br />
+You can also create database by navigating to phpmyadmin
+</div>
+<div class="class_s17">
+PhpMyAdmin is a free and open source administration tool for MySQL and MariaDB.As a portable web application written primarily in PHP,it has become one of the most popular MySQL administartor tools.
+</div>
+<div>
+Check the screensot below:<br />
+<img src="image_rsrcE4.jpg" id="page_22" class="class_s8S" /> <span class="class_sDH">Illustration 10: phpMyAdmin Interface</span><br />
+Mysql is the relational database which is used to store data.<br />
+Connect to Mysql database from your php code:
+</div>
+<div class="class_s17">
+To connect with database from php code we need to write code to connect with database.
+</div>
+<div>
+&lt;?php
+</div>
+<div class="class_sG">
+$servername = "hostname or ip address";<br />
+$username = "mysql username"; $password = "mysql password";
+</div>
+<div class="class_sG">
+/*Create a connection with below code*/<br />
+$connection =<br />
+mysqli_connect($servername, $username, $password);<br />
+/*Add code to check connection*/
+</div>
+<div class="class_s17">
+if (!$connection){<br />
+die("Connection failed: " .<br />
+mysqli_connect_error());<br />
+}<br />
+echo "Connected successfully";<br />
+?&gt;
+</div>
+<div>
+How to create database:
+</div>
+<div id="part0001.xhtml#page_23" class="class_sG">
+You can create database in two ways.The first way is to go to phpmyadmin and click on<br />
+“Databases” tab.On clicking it an option will appear where you can enter your desired database name and click on :Create” button.
+</div>
+<div class="class_s17">
+Second option is to go to<br />
+phpmyadmin and click on Sql tab.<br />
+Paste the query: CREATE<br />
+DATABASE `database_name`; and then click on Go button.The above query will be executed and the database will be created.
+</div>
+<div>
+Now we need to create table in our database:
+</div>
+<div class="class_sG">
+I have created a database name `myproject`.Now I will be creating tables under this<br />
+database.I am going to create table category under database myproject.When you have<br />
+created database you can see that will appear in the left side of your phpmyadmin interface.<br />
+From here you will click on the database myproject.<br />
+In this way it gets selected.
+</div>
+<div class="class_s17">
+Now you can see an option to Create table.Enter the name of table in the text box which is there on the screen and number of columns ie the fields you want for your table.
+</div>
+<div>
+<img src="image_rsrcE5.jpg" class="class_s1N" />
+</div>
+<div class="class_s17">
+Now I have entered the name as category and 4 in column fields and click on GO button.Table category will be created and will ask you to enter the name of the columns and the datatype you want for your column names in table.
+</div>
+<div id="part0001.xhtml#page_24">
+<img src="image_rsrcE6.jpg" class="class_s1N" />
+</div>
+<div class="class_sG">
+Now click on GO button and table will be created.
+</div>
+<div class="class_sG">
+You can also run the below query under sql tab in phpmyadmin and execute the query to create table.
+</div>
+<div class="class_s17">
+CREATE TABLE<br />
+`myproject`.`category` (<br />
+`id` INT NOT NULL<br />
+AUTO_INCREMENT ,<br />
+`name` VARCHAR(64) NOT NULL ,<br />
+`status` CHAR(1) NOT NULL , `sort_order` TINYINT(1) NOT NULL ,<br />
+PRIMARY KEY (`id`)) ENGINE = InnoDB;
+</div>
+<div id="part0001.xhtml#toc13_CHAPTER_18_Session_in_PHP__Well_what_are_sessions_and_why_are_they_used__">
+<span class="class_sDF">CHAPTER 18 Session in PHP:</span><br />
+Well what are sessions and why are they used ?
+</div>
+<div class="class_sG">
+Sessions are stored in server in form of variables.They are generally used to store webpage visitor preferences and identify him across multiple webpages.
+</div>
+<div class="class_sG">
+Session expires when we close the webpage or log out of the application.
+</div>
+<div class="class_sG">
+How to create session in PHP? We use $_SESSION superglobal variable to create session.<br />
+For creating session we need to first start session and the store the varibale in session.
+</div>
+<div id="part0001.xhtml#page_25" class="class_s17">
+Find the code below:<br />
+session_start();<br />
+$_SESSION['username']='your_u sername';
+</div>
+<div>
+How to check if the session is set or not?
+</div>
+<div class="class_s17">
+To check the session variable is set or not you can use isset variable and use that session variable.<br />
+if(isset($_SESSION['username'])) {<br />
+/*your piece of code*/<br />
+}
+</div>
+<div>
+How to end a session?
+</div>
+<div class="class_sG">
+When we donot require session we can unset the session variable and destroy it.
+</div>
+<div class="class_sG">
+session_start();<br />
+unset($_SESSION['username']); session_destoy();
+</div>
+<div class="class_s17">
+Where do we use session? Session is used to store the login details of any user so he can access the other webpages and we can track the user.When a user usually logs out his session gets expired and he leave the<br />
+application.
+</div>
+<div id="part0001.xhtml#toc14_CHAPTER_19">
+<span class="class_sDF">CHAPTER 19</span>
+</div>
+<div class="class_sG">
+Now we are going to create a small PHP project where we will be creating database and table .
+</div>
+<div class="class_s17">
+Then we we will be creating a small project where user will register and can login and<br />
+navigate to the restricted page in the website.
+</div>
+<div>
+CREATE DATABASE:<br />
+Run this below query to create database:<br />
+Create DATABASE `user_registration`;
+</div>
+<div class="class_sG">
+Select the database and copy the below code.Execute the query after pasting it under sql tab to create table `users`:
+</div>
+<div class="class_sG">
+<span class="class_sDK">CREATE TABLE</span><br />
+`user_registration`.`users` ( `id` <span class="class_sDK">INT NOT</span> NULL<br />
+AUTO_INCREMENT , `name` <span class="class_sDK">VARCHAR</span> (255) <span class="class_sDK">NOT</span> NULL , `type` ENUM('user','admin') <span class="class_sDK">NOT</span> NULL , `username`<br />
+<span class="class_sDK">VARCHAR</span> (64) <span class="class_sDK">NOT</span> NULL , `password` <span class="class_sDK">VARCHAR</span> (255) <span class="class_sDK">NOT</span> NULL , `status` <span class="class_sDK">CHAR</span> (1) <span class="class_sDK">NOT</span> NULL <span class="class_sDK">DEFAULT</span> 'A' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+</div>
+<div id="part0001.xhtml#page_26" class="class_s17">
+Now we create a project folder name user_registration.<br />
+Under this folder we are going to save php files,css,js and images. We will be having below file structure for our project
+</div>
+<div>
+<img src="image_rsrcE7.jpg" class="class_s1N" />
+</div>
+<div class="class_sG">
+I have created a folder named as ReadersCollection.<br />
+Inside that I have created my project folder named as<br />
+user_registration.<br />
+This folder holds index.php which is the main registration page.Other pages are login page,restricted page and a<br />
+process.php page.process page is the one where we will be writing all our logic part for the code.I have created a connection.php page which holds code for connecting to the database.
+</div>
+<div class="class_s17">
+Screenshot for the main registration page:
+</div>
+<div>
+<img src="image_rsrcE8.jpg" class="class_s1N" />
+</div>
+<div class="class_sG">
+This folder contains a css and js folder.The css folder contains bootstrap.css file and js folder olds bootstrap.js file.I have not included here.You can go to<br />
+<span id="part0001.xhtml#page_27"></span> bootstrap website and download the respective files and include in your project.
+</div>
+<div class="class_sG">
+Code for connection.php &lt;?php<br />
+session_start();<br />
+$servername = "localhost"; $username = "root";<br />
+$password = "";
+</div>
+<div class="class_s17">
+$dbname='user_registration'; /*Create a connection with below code*/<br />
+$connection =<br />
+mysqli_connect($servername, $username, $password,$dbname);
+</div>
+<div>
+/*Add code to check connection*/
+</div>
+<div class="class_sG">
+if (!$connection){<br />
+die("Connection failed: " . mysqli_connect_error());<br />
+}<br />
+//echo "Connected successfully";
+</div>
+<div class="class_s17">
+?&gt;<br />
+This page will be included in the top of every php page.
+</div>
+<div>
+<span class="class_sDN">REGISTRATION FUNCTIONALITY:</span>
+</div>
+<div class="class_sAG">
+The register form holds three input name,username and password.Username should be unique and password should be stored in encrypted form.The code for register or index page can be found below:
+</div>
+<div class="class_sG">
+Code for index.php &lt;!DOCTYPE html&gt;<br />
+&lt;?php<br />
+include "connection.php"; ?&gt;<br />
+&lt;html&gt;
+</div>
+<div class="class_s17">
+&lt;head&gt;<br />
+&lt;title&gt;&lt;/title&gt;<br />
+&lt;meta charset="UTF-8"&gt; &lt;meta name="viewport"
+</div>
+<div>
+content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="class_s17">
+&lt;link rel="stylesheet" href="css/bootstrap.css"&gt;<br />
+&lt;script<br />
+src="js/bootstrap.js"&gt;&lt;/script&gt; &lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;div class="container textcenter"&gt;<br />
+&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;<br />
+&lt;ul class="navbar-nav mr-auto"&gt;<br />
+<span id="part0001.xhtml#page_28"></span> &lt;?php<br />
+if(isset($_SESSION['username'])) { ?&gt;<br />
+&lt;li class="nav-item active"&gt;&lt;a href="restricted.php"&gt; Restricted Page | &lt;/a&gt;&lt;/li&gt;<br />
+&lt;?php } ?&gt;<br />
+&lt;?php if(!<br />
+isset($_SESSION['username'])) { ?&gt;<br />
+&lt;li class="nav-item active"&gt;&lt;a href="login.php"&gt; Login |&lt;/a&gt;&lt;/li&gt; &lt;?php }
+</div>
+<div>
+if(isset($_SESSION['username'])) { ?&gt;
+</div>
+<div class="class_sG">
+&lt;li class="nav-item active"&gt;&lt;a href="process.php? action=logout"&gt; Logout&lt;/a&gt;&lt;/li&gt;
+</div>
+<div class="class_sG">
+&lt;?php }?&gt;<br />
+&lt;/ul&gt;<br />
+&lt;/nav&gt;<br />
+&lt;?php if(!
+</div>
+<div class="class_s17">
+isset($_SESSION['username'])) { ?&gt;<br />
+&lt;div class="row"&gt; &lt;div class="col-md-12"&gt; &lt;div<br />
+class="row"&gt;&lt;strong&gt;Register<br />
+here&lt;/strong&gt;&lt;/div&gt;<br />
+&lt;/div&gt;<br />
+&lt;/div&gt;<br />
+&lt;form name="frm"<br />
+method="post"<br />
+action="process.php?<br />
+action=register"&gt;<br />
+&lt;div class="row"&gt; &lt;div class="col-md-12"&gt; &lt;div class="col-md6"&gt;Name:&lt;/div&gt;<br />
+&lt;div class="col-md6"&gt;&lt;input type="text"<br />
+name="name" value=""&gt;&lt;/div&gt; &lt;/div&gt;<br />
+&lt;div class="col-md12"&gt;<br />
+&lt;div class="col-md6"&gt;UserName:&lt;/div&gt;<br />
+&lt;div class="col-md6"&gt;&lt;input type="text"<br />
+name="username"<br />
+value=""&gt;&lt;/div&gt;<br />
+&lt;/div&gt;<br />
+&lt;div class="col-md-12"&gt; &lt;div class="col-md6"&gt;Password:&lt;/div&gt;<br />
+&lt;div class="col-md6"&gt;&lt;input type="password"<br />
+name="password"<br />
+value=""&gt;&lt;/div&gt;<br />
+<span id="part0001.xhtml#page_29"></span> &lt;/div&gt;
+</div>
+<div>
+&lt;/div&gt;<br />
+&lt;div class="row"&gt;&lt;input type="submit" name="submit" value="SUBMIT"&gt;&lt;/div&gt; &lt;/form&gt;<br />
+&lt;?php } else {<br />
+echo 'You are logged in.';<br />
+}?&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;
+</div>
+<div class="class_sG">
+Here we have created a form and have three inputs ie name,<br />
+username and password.
+</div>
+<div class="class_sG">
+When visitor enter the above details and click on SUBMIT button his information gets inserted in table and he gets register in the system.<br />
+He is then redirected to the restricted area.
+</div>
+<div class="class_sG">
+Code of process.php for<br />
+action="process.php?<br />
+action=register" to allow user to register in the system
+</div>
+<div class="class_s17">
+if(isset($_REQUEST['action']) &amp;&amp;<br />
+($_REQUEST['action']=='register ')){
+</div>
+<div>
+$name=$_POST['name'];
+</div>
+<div class="class_sG">
+$username=$_POST['username']; $password=md5($_POST['passw ord']);
+</div>
+<div class="class_sG">
+if( isset($name) &amp;&amp;<br />
+isset($username) &amp;&amp;<br />
+isset($password) ){
+</div>
+<div class="class_s17">
+$username_check=mysqli_query( $connection,"SELECT * from `users` where<br />
+`username`=$username");
+</div>
+<div>
+if(mysqli_num_rows($username_ check)==0){<br />
+$username_db=$username;<br />
+} else{
+</div>
+<div class="class_sG">
+$username_db=rand(0,9).'_'. $username;<br />
+}<br />
+$sql="insert into
+</div>
+<div class="class_s17">
+`users`(`name`,`username`,`pass word`)values('".$name."','". $username_db."','".<br />
+$password."')";
+</div>
+<div>
+mysqli_query($connection, $sql)or die('error');<br />
+$_SESSION['username']=$userna me_db;<br />
+$_SESSION['name']=$name;
+</div>
+<div id="part0001.xhtml#page_30" class="class_sG">
+header("location:restricted.php"); }<br />
+else{<br />
+header("location:index.php?
+</div>
+<div class="class_s17">
+msg=Please enter fields"); }<br />
+}
+</div>
+<div>
+Explanation:
+</div>
+<div class="class_sG">
+First the line<br />
+<span class="class_sDF">if(isset($_REQUEST['action']) &amp;&amp;<br />
+($_REQUEST['action']=='regis ter')){</span> checks if the action value is register then it will proceed further and if the value is not register then it will exit from the condition.
+</div>
+<div class="class_sG">
+$username_check checks that whether this username already exists in the database or not.
+</div>
+<div class="class_sG">
+If it exists we are appending the username with some random numbers using rand() function so that it will remain unique.
+</div>
+<div class="class_s17">
+The next code inserts an entry and sets the variable name and username in session using $_SESSION superglobal variable.
+</div>
+<div>
+Then user is redirected to restricted page .<br />
+<span class="class_sDF">LOGIN FUNCTIONALITY:</span>
+</div>
+<div class="class_sG">
+For login functionality we will be creating login.php page.Here we will be taking two inputs<br />
+username and password and a submit button.
+</div>
+<div class="class_s17">
+After user enter the data the code checks the username and<br />
+password matches then the user is succefully logged in and his login details like name and username is set in session.The user is then redirected to restricted page. Screenshot for login.php:
+</div>
+<div>
+<img src="image_rsrcE9.jpg" id="page_31" class="class_sBM" /> Code for login.php page:
+</div>
+<div class="class_sG">
+&lt;!DOCTYPE html&gt;<br />
+&lt;?php<br />
+include "connection.php";<br />
+?&gt;<br />
+&lt;html&gt;
+</div>
+<div class="class_s17">
+&lt;head&gt;<br />
+&lt;title&gt;&lt;/title&gt;<br />
+&lt;meta charset="UTF-8"&gt; &lt;meta name="viewport"
+</div>
+<div>
+content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="class_s17">
+&lt;link rel="stylesheet" href="css/bootstrap.css"&gt;<br />
+&lt;script<br />
+src="js/bootstrap.js"&gt;&lt;/script&gt; &lt;/head&gt;<br />
+&lt;body&gt;
+</div>
+<div>
+&lt;div class="container textcenter"&gt;
+</div>
+<div class="class_s17">
+&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+</div>
+<div>
+&lt;ul class="navbar-nav mr-auto"&gt;
+</div>
+<div class="class_sG">
+&lt;?php<br />
+if(isset($_SESSION['username'])) { ?&gt;
+</div>
+<div class="class_sG">
+&lt;li class="nav-item active"&gt;&lt;a href="restricted.php"&gt; Restricted Page | &lt;/a&gt;&lt;/li&gt;
+</div>
+<div id="part0001.xhtml#page_32" class="class_sG">
+&lt;?php } ?&gt;<br />
+&lt;?php if(!<br />
+isset($_SESSION['username'])) { ?&gt;
+</div>
+<div class="class_sG">
+&lt;li class="nav-item active"&gt;&lt;a href="index.php"&gt; Register |&lt;/a&gt;&lt;/li&gt;
+</div>
+<div class="class_sG">
+&lt;li class="nav-item active"&gt;&lt;a href="login.php"&gt; Login |&lt;/a&gt;&lt;/li&gt;
+</div>
+<div class="class_sG">
+&lt;?php }<br />
+if(isset($_SESSION['username'])) { ?&gt;
+</div>
+<div class="class_sG">
+&lt;li class="nav-item active"&gt;&lt;a href="process.php? action=logout"&gt; Logout&lt;/a&gt;&lt;/li&gt;
+</div>
+<div class="class_sG">
+&lt;?php }?&gt;<br />
+&lt;/ul&gt;<br />
+&lt;/nav&gt;<br />
+&lt;div class="row"&gt;&lt;?php
+</div>
+<div class="class_sG">
+if(isset($_GET['msg'])){echo $_GET['msg'];}?&gt;&lt;/div&gt;<br />
+&lt;?php if(!
+</div>
+<div class="class_sG">
+isset($_SESSION['username'])) { ?&gt;<br />
+&lt;div class="row"&gt;<br />
+&lt;div class="col-md-12"&gt; &lt;div<br />
+class="row"&gt;&lt;strong&gt;Login<br />
+here&lt;/strong&gt;&lt;/div&gt;<br />
+&lt;/div&gt;<br />
+&lt;/div&gt;<br />
+&lt;form name="frm"<br />
+method="post"<br />
+action="process.php?<br />
+action=login"&gt;<br />
+&lt;div class="row"&gt;
+</div>
+<div class="class_sG">
+&lt;div class="col-md12"&gt;<br />
+&lt;div class="col-md6"&gt;UserName:&lt;/div&gt;<br />
+&lt;div class="col-md6"&gt;&lt;input type="text"<br />
+name="username"<br />
+value=""&gt;&lt;/div&gt;<br />
+&lt;/div&gt;<br />
+&lt;div class="col-md-12"&gt; &lt;div class="col-md6"&gt;Password:&lt;/div&gt;<br />
+&lt;div class="col-md6"&gt;&lt;input type="password" name="password"<br />
+<span id="part0001.xhtml#page_33"></span> value=""&gt;&lt;/div&gt;<br />
+&lt;/div&gt;
+</div>
+<div class="class_sG">
+&lt;/div&gt;<br />
+&lt;div class="row"&gt;&lt;input type="submit" name="submit" value="SUBMIT"&gt;&lt;/div&gt;<br />
+&lt;/form&gt;<br />
+&lt;?php } else {<br />
+echo 'You are logged in.';<br />
+}?&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;
+</div>
+<div class="class_sG">
+Code for action="process.php? action=login" in process.php below:
+</div>
+<div class="class_s17">
+if(isset($_REQUEST['action']) &amp;&amp;<br />
+($_REQUEST['action']=='login')) {
+</div>
+<div>
+$username=$_POST['username'];
+</div>
+<div class="class_sG">
+$password=$_POST['password']; $new_password=md5($password );
+</div>
+<div class="class_s17">
+$sel_query="SELECT * from `users` WHERE `username`='". $username."' and `password`='". $new_password."'";
+</div>
+<div>
+$sql=mysqli_query($connection, $sel_query);<br />
+if(mysqli_num_rows($sql)&gt;0){<br />
+$row=mysqli_fetch_array($sql);<br />
+$_SESSION['username']=$row['u sername'];<br />
+$_SESSION['name']=$row['name '];<br />
+header("location:restricted.php");<br />
+}<br />
+else{<br />
+header("location:index.php? msg=Incorrect username or password");<br />
+}<br />
+}
+</div>
+<div class="class_sG">
+Here the code checks for the username and password.As we are encrypting the password using md5 hash so when user enters his password we convert it into encrypted form using md5 hash and then data is verified with the database values and then if a match is found then user is redirected to restricted page.
+</div>
+<div class="class_s17">
+If a match is not found then the user is redirected to main page ie. the index.php page with a<br />
+message in the msg variable ie Incorrect username and<br />
+password.
+</div>
+<div id="part0001.xhtml#page_34">
+RESTRICTED PAGE FUNCTIONALITY:
+</div>
+<div class="class_s17">
+Code in “Restricted page” ie restricted.php page checks<br />
+whether the session variable is set or not.If session variable $_SESSION['username'] is already set then “Welcome to restricted access” message is displayed on page.
+</div>
+<div>
+Code for resticted page:<br />
+&lt;?php<br />
+include "connection.php";<br />
+if(!<br />
+isset($_SESSION['username'])){ header("location:index.php");
+</div>
+<div class="class_sG">
+}<br />
+?&gt;<br />
+&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;
+</div>
+<div class="class_s17">
+&lt;head&gt;<br />
+&lt;title&gt;&lt;/title&gt;<br />
+&lt;meta charset="UTF-8"&gt; &lt;meta name="viewport"
+</div>
+<div>
+content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="class_s17">
+&lt;link rel="stylesheet" href="css/bootstrap.css"&gt;<br />
+&lt;script<br />
+src="js/bootstrap.js"&gt;&lt;/script&gt; &lt;/head&gt;<br />
+&lt;body&gt;
+</div>
+<div>
+&lt;div class="container textcenter"&gt;
+</div>
+<div class="class_s17">
+&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+</div>
+<div>
+&lt;ul class="navbar-nav mr-auto"&gt;
+</div>
+<div class="class_sG">
+&lt;?php<br />
+if(isset($_SESSION['username'])) { ?&gt;
+</div>
+<div class="class_sG">
+&lt;li class="nav-item active"&gt;&lt;a href="restricted.php"&gt; Restricted Page | &lt;/a&gt;&lt;/li&gt;
+</div>
+<div class="class_sG">
+&lt;?php } ?&gt;<br />
+&lt;?php if(!<br />
+isset($_SESSION['username'])) { ?&gt;
+</div>
+<div class="class_sG">
+&lt;li class="nav-item active"&gt;&lt;a href="index.php"&gt; Register |&lt;/a&gt;&lt;/li&gt;
+</div>
+<div class="class_s17">
+&lt;li class="nav-item active"&gt;&lt;a href="login.php"&gt; Login |&lt;/a&gt;&lt;/li&gt;
+</div>
+<div>
+&lt;?php }<br />
+<span id="part0001.xhtml#page_35"></span> if(isset($_SESSION['username'])) { ?&gt;
+</div>
+<div class="class_s17">
+&lt;li class="nav-item active"&gt;&lt;a href="process.php? action=logout"&gt; Logout&lt;/a&gt;&lt;/li&gt;
+</div>
+<div>
+&lt;?php }?&gt;<br />
+&lt;/ul&gt;<br />
+&lt;/nav&gt;
+</div>
+<div class="class_s17">
+&lt;?php<br />
+if(isset($_SESSION['username'])) { ?&gt;
+</div>
+<div>
+&lt;div class="row"&gt;<br />
+&lt;div class="col-md-12"&gt;
+</div>
+<div class="class_sG">
+&lt;div<br />
+class="row"&gt;&lt;strong&gt;Welcome to restricted<br />
+access&lt;/strong&gt;&lt;/div&gt;
+</div>
+<div class="class_s17">
+&lt;/div&gt;<br />
+&lt;/div&gt;<br />
+&lt;?php } ?&gt;
+</div>
+<div>
+&lt;/body&gt; &lt;/html&gt;<br />
+LOGOUT FUNCTIONALITY:
+</div>
+<div class="class_s17">
+When user no longer wants to stay in your website he may opt to exit from the application.In this case he will click on logout button.Clicking on this his session will get expired and he will be redirected to index.php with a message ie “Logged Out Successfully”.
+</div>
+<div>
+Code for logout action which is in the top section of every page.
+</div>
+<div class="class_s17">
+if(isset($_REQUEST['action']) &amp;&amp;<br />
+($_REQUEST['action']=='logout' )){
+</div>
+<div>
+unset($_SESSION['name']);
+</div>
+<div class="class_s17">
+unset($_SESSION['username']); session_destroy();<br />
+header("location:index.php?
+</div>
+<div>
+msg=Logged out successfully"); }<br />
+
+</div>
