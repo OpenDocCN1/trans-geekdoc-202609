@@ -1,0 +1,38 @@
+
+# Use Cases vs. Business Processes
+
+A common error is to equate a use case with a business process. This may be true in very small systems, but in most major enterprises, cross-functional business processes span many organizational units. This makes it unlikely that individual actors (from whose perspective the use case is being described) will see the whole of the process. It is more likely that a use case describes a segment of a process, as shown in [Fig. 15.25](#Ch015_773-830_B9780443237904000190.xhtml#f0130) (note that this figure is *not* a UML use case diagram!).
+
+![Fig. 15.25 Relationship between use cases and processes.](images/B9780443237904000190/f15-25-9780443237904.jpg)
+
+[Fig. 15.25](#Ch015_773-830_B9780443237904000190.xhtml#B-f0130) Relationship between use cases and processes.
+
+Use cases that overlap in their descriptions (as do UC2 and UC3 in [Fig. 15.25](#Ch015_773-830_B9780443237904000190.xhtml#f0130)) should corroborate each other. If not, further investigation is required. Gaps in the coverage of the process (as between UC3 and UC4 in [Fig. 15.34](#Ch015_773-830_B9780443237904000190.xhtml#f0175)) also require investigation. Perhaps we have a missing use case? Or perhaps our understanding of the process is not correct?
+
+Although use cases can help uncover some dynamic aspects of business information, they are not sufficiently rigorous to be our primary modeling tool, and they are best seen as a step on the path to producing a more comprehensive and precise business model. The remaining two UML behavioral diagram types can be pressed into service to model dynamic business behavior, and we will look in a little more detail at some of their features.
+
+## Activity Diagrams
+
+Activity diagrams are mainly focused on the flow of control within a set of related activities. The level of granularity is not defined by UML, so the scope of each individual activity is at the discretion of the modeler. This has the advantage that activity diagrams can be used for both high-level and low-level descriptions, but places the onus of defining activity boundaries onto some other authority. Activities in UML are considered to be composed of atomic actions. Activities can be interrupted but actions cannot, which implies that any interruption to an activity must take place on a boundary between actions. We have already seen flow-of-control chaining of activities earlier in this chapter, and it’s not surprising that UML activity diagrams are seen as a candidate notation for documenting business processes. The underlying semantics of activity diagrams changed between UML versions 1 and 2. In UML 1, activity diagrams were seen as a special kind of state machine description and shared a great deal of terminology with UML statecharts. In UML 2, the semantics of activity diagrams became realigned to be closer to the semantics of Petri nets.
+
+An activity diagram consists of several nodes connected by arrowed lines (directed edges). There are three main types of nodes: action nodes, object nodes, and control nodes. Action nodes represent some work being carried out and are shown as a rectangle with rounded corners. The rectangle typically contains the name of the action; other information may optionally be added that we won’t consider here. Object nodes, shown as rectangles with square corners, represent an object type, for example, a business entity such as an invoice that may be passed from one activity to another. Object nodes are generally only shown when some special consideration needs to be given to the objects being passed; the routine use of business objects by activities is just assumed. The “flow” along the activity edges is either of control tokens, indicating the transfer of control from one activity to another, or of objects. Because the edges are directed, there is no assumed direction of flow, although diagrams are conventionally laid out so that the main flows are either left to right or top to bottom.
+
+Control nodes are abstract activity nodes that coordinate flows in an activity diagram and come in various subtypes. An *initial* node is represented by a filled circle and represents a starting point for the activity diagram. There can be more than one initial node. There are two kinds of *final* nodes. An *activity final node* is shown as a target symbol, and an activity diagram can have more than one of these. As soon as an activity final node receives a token, the entire activity immediately terminates, even if there are other control tokens active in other paths. A *flow final node*, shown as an “X” in a circle, destroys any token that reaches it without affecting any other concurrent flows.
+
+A *decision* node, denoted by a diamond shape, has one input edge and one or more output edges. A token arriving on the input edge will leave on only one of the output edges (i.e., exclusive-or). To control this, the output edges have guard conditions, denoted inside square brackets. The guard conditions should be complete and disjoint to ensure that token flow is not inadvertently halted or duplicated. A default branch can be provided by specifying it with the guard condition `[else]`.
+
+The diamond shape used for a decision node is also used for a *merge* node. This performs the complementary action to a decision node by bringing together multiple alternate flows on its input edges. Any token arriving on an input edge is offered to the output edge. There is no synchronization of tokens arriving on the incoming edges.
+
+A *fork* node splits a flow into multiple concurrent flows. It is shown as a solid bar with one input edge and two or more output edges. Each token arriving on the input edge is duplicated and offered to each output edge. There is no sequencing implied between the outgoing flows.
+
+A *join* node is used to combine parallel flow paths. The join notation is the same as for a fork, except that the join has multiple input edges and one output edge. An optional join expression determines how incoming tokens are combined to produce an output token. The default is “and”, implying that the join waits for a token to arrive on each incoming edge before producing a token on the output edge (i.e., synchronization).
+
+The UML 2 specification does not require that branches introduced in the diagram should be balanced. In other words, multiple paths introduced by decisions or forks do not necessarily have to be recombined by complementary merges or joins. Although this provides maximum flexibility in defining a process, it can also provide subtle traps for the unwary and can lead to unsound process definitions.
+
+[Fig. 15.26](#Ch015_773-830_B9780443237904000190.xhtml#f0135) shows an example activity diagram for a simple sales process. The diagram is based on an example given in the UML specification, modified slightly to contain examples of the features we discuss. Although the modified diagram is still syntactically legal, it represents an unsafe process design, as we will see shortly.
+
+![Fig. 15.26 An activity diagram for a simple sales process.](images/B9780443237904000190/f15-26-9780443237904.jpg)
+
+[Fig. 15.26](#Ch015_773-830_B9780443237904000190.xhtml#B-f0135) An activity diagram for a simple sales process.
+
+The diagram is self-explanatory, but not unique, in the sense that the same process could have been depicted in several slightly different ways. For example, the join and the fork that immediately follow it could have been combined into a join/fork construct that would have appeared as a thick bar with two edges entering and two edges leaving. Combining a join and a fork in this way can make diagrams slightly tidier but does not affect the semantics.

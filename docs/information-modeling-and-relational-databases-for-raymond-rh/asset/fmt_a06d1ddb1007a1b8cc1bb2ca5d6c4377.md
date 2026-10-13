@@ -1,0 +1,57 @@
+
+## 参考文献
+
+*   Hay D. There is no object-oriented analysis. In: Houston, TX: Business Rule Solutions, Inc.; . *DataToKnowledge Newsletter.* 1999;vol. 27(1).
+*   Hay D. Object orientation and information engineering: UML. In: Reiner R., ed. *The Data Administration Newsletter.* 1999. No. 9 (June 1999), available online at [www.tdan.com](http://www.tdan.com).
+*   Hay D. *Requirements Analysis.* New Jersey: Pearson Education; 2003.
+*   Hay D. *Data Model Patterns: A Metadata Map.* Morgan Kaufmann; 2006.
+*   Heath I. Unacceptable file operations in a relational database. In: Proc. 1971 ACM SIGFIDET Workshop on Data Description; San Diego, CA: Access and Control; 1971.
+*   Hohenstein U., Engels G. Formal semantics of an entity-relationship-based query language. In: Kangassalo H., ed. *Proc. 9th ER Conf.* Amsterdam: Elsevier Science; 1991.
+*   Inmon W. *Building the Data Warehouse.* New York: John Wiley and Sons; 1993.
+*   Jacobson I., Booch G., Rumbaugh J. *The Unified Software Development Process.* Reading, MA: Addison-Wesley; 1999.
+*   Jarke M., Mylopoulos J., Schmidt J., Vassiliou Y. DAIDA: An Environment for Evolving Information Systems. *ACM Trans. Inform. Syst.* 1992;10(1):1–50.
+*   Jeyaraj A., Sauter V. An empirical investigation into the effectiveness of systems modeling and verification tools. *CACM.* 2007;50(6):63–67.
+*   Jukik N. Modeling strategies and alternatives for data warehousing projects. *CACM.* 2006;49(4):83–88.
+*   Keet C. Part-whole relations in object-role models. In: *Proc. OTM Workshops 2006.* Springer LNCS 4278; 2006:1118–1127.
+*   Keet C. *Mapping the Object-Role Modeling language ORM2 into Description Logic Language DLR[ifd].* KRDB Research Centre TR KRDB07-2 Italy: Faculty of Computer Science, Free University of Bozen-Bolzano; 2007.
+*   Kendall K., Kendall J. *Systems Analysis and Design.* Englewood Cliffs, NJ: Prentice Hall; 1988.
+*   Kent W. Entities and Relationships in Information. In: Nijssen G., ed. *Proc. 1977 IFIP Working Conf. on Modelling in Data Base Management Systems.* Nice, France: North-Holland Publishing; 1977:67–91.
+*   Kent W. A simple guide to five normal forms in relational database theory. *CACM.* 1983;26(2):120–125.
+*   Kent W. A rigorous model of object reference, identity, and existence. *J. Obj.-Orient. Program.* 1991;1991:28–36.
+*   Kent W. *Data and Reality.* second ed. The 1st Books Library; 2000.
+*   Khoshaflan S., Copeland G. Object identity. In: Zdonik S., Maier D., eds. *Readings in Object-Oriented Database Systems.* San Mateo, CA: Morgan Kaufmann; 1990:37–46.
+*   Kimball R. *The Data Warehouse Toolkit.* New York: John Wiley and Sons; 1996.
+*   Kobayashi I. Transformation and equivalence among predicate systems. In: *Proc. French-Japanese Seminar on Deductive Databases and Artificial Intelligence.* Sophia-Antipolis: INRIN; 1990.
+*   Kulkarni K. *Overview of SQL:2003.* [www.wiscorp.com/SQL2003Features.pdf](http://www.wiscorp.com/SQL2003Features.pdf). 2006.
+*   Kurzweil R. *The Singularity is Near: When Humans Transcend Biology.* New York: Penguin Group; 2005.
+*   Lassen K., van der Aalst W. WorkflowNet2BPEL4WS: a tool for translating unstructured workflow processes to readable BPEL. In: *BETA Working Paper Series, WP 167.* Eindhoven: Eindhoven University of Technology; 2006.
+*   Leavitt N. Will NoSQL databases live up to their promise?. *IEEE Comput.* 2010;43(2):12–14.
+*   Levesque H. A fundamental trade-off in knowledge representation and reasoning. In: Proc. CSCSI-84, London, Ontario; 1984:141–152.
+*   Ling T., Tompa F., Kameda T. An improved third normal form for relational databases. *ACM Trans. Database Syst.* 1981;6(2):329–346.
+*   Mark L. *The Binary Relationship Model.* Tech. Report UMIACS-TR-88-67 University of Maryland; 1988.
+*   Martin J. *Principles of Object Oriented Analysis and Design.* Englewood Cliffs, NJ: Prentice Hall; 1993.
+*   Martin J., Odell J. *Object-Oriented Methods: A Foundation, UML Edition.* Upper Saddle River, NJ: Prentice Hall; 1998.
+*   McCreary D., Kelly A. *Making Sense of NoSQL.* Manning Publications; 2014.
+*   McLeod G. Beyond use cases. In: Proc. EMMSAD’00: 5th IFIP WG8.1 Int. Workshop on Evaluation of Modeling Methods in Systems Analysis and Design, Kista, Sweden; 2000.
+*   Meersman R. *The RIDL Conceptual Language.* Research Report Brussels: Int. Centre for Information Analysis Services, Control Data Belgium; 1982.
+*   Meersman R., Van Assche F. Modeling and manipulating production databases in terms of semantic nets. In: *Proc. 8th IJCAI Conference.* Morgan Kaufmann; 1983.
+*   Meersman R., De Troyer O., Ponsaert F. *The RIDL User Guide.* Brussels: Control Data Corp; 1984.
+*   Mellor S., Balcer M. *Executable UML: A Foundation for Model-Driven Architecture.* Addison-Wesley; 2002.
+*   Melton J., Buxton S. *Querying XML: XQuery, XPath, and SQL/XML in Context.* Morgan Kaufmann; 2006.
+*   Melton J., Simon A. *SQL: 1999 Understanding Relational Language Components.* Morgan Kaufmann; 2002.
+*   Milner R. *Communicating and Mobile Systems: The Pi Calculus.* Cambridge University Press; 1999.
+*   Mok W., Embley D. Transforming conceptual model to object-oriented database designs: practicalities, properties and peculiarities. In: *Proc. ER’96: 15th Int. Conf. on Conceptual Modeling.* Springer LNCS 1157; 1996:309–324.
+*   Moody D., Kortink M. From enterprise models to dimensional models: a methodology for data warehouse and data mart design. In: *Proc. DMDW’00: Int. Workshop on Design and Management of Data Warehouses, Report 25.* Zurich: Swiss Life IT RandD; 2000.
+*   Morgan T. Some features of state machines in ORM. In: Meersman R., Tari Z., Herrero P., et al., eds. *On the Move to Meaningful Internet Systems 2006: OTM 2006 Workshops.* Montpellier: Springer LNCS 4278; 2006.
+*   Morgan T. Business process modeling and ORM. In: Meersman R., Tari Z., Herrero P., et al., eds. *On the Move to Meaningful Internet Systems 2007: OTM 2007 Workshops.* Vilamoura: Springer LNCS 4805; 2007.
+*   Muller R. *Database Design for Smarties.* San Francisco: Morgan Kaufmann; 1999.
+*   Mylopoulos J. Information modelling in the time of the revolution. *Inform. Syst.* 1998;23(3/4):127–155 (Pergamon, Exeter).
+*   Nijssen G. A gross architecture for the next generation database management systems. In: Nijssen G., ed. *Proc. 1976 IFIP Working Conf. on Modelling in Data Base Management Systems.* Freudenstadt, Germany: North-Holland Publishing; 1976:1–24.
+*   Nijssen G. Current issues in conceptual schema concepts. In: Nijssen G., ed. *Proc. 1977 IFIP Working Conf. on Modelling in Data Base Management Systems.* Nice, France: North-Holland Publishing; 1977:31–66.
+*   Nijssen G. *A general analysis procedure: recent advances in universal informatics.* In: Proc. 2nd NIAM-ISDM Conf., Albuquerque, NM; 1994.
+*   NIST. *Integration Definition for Information Modeling (IDEF1X).* FIPS Publication 184, National Institute of Standards and Technology; 1993. [www.sdct.itl.nist.gov/~ftp/idef1x.trf](http://www.sdct.itl.nist.gov/~ftp/idef1x.trf).
+*   Odell J. *Advanced Object-Oriented Analysis and Design using UML.* New York: Cambridge University Press, and SIGS Books; 1998.
+*   Olle T., Hagelstein J., Macdonald I., Rolland C., Sol H., van Assche F., Verrijn-Stuart A. *Information Systems Methodologies: A Framework for Understanding.* second ed. Wokingham, England: Addison-Wesley; 1991.
+*   OMG. *Semantics of Business Vocabulary and Business rules (SBVR) Specification.* Available online at: [https://omg.org/spec/SBVR](https://omg.org/spec/SBVR). 2019.
+*   Orlowska M., Zhang Y. Understanding the fifth normal form (5NF). *Austral. Comput. Sci. Comm.* 1992;14:631–639.
+*   Ouyang C., van der Aalst W., Dumas M., ter Hofstede A. From BPMN process models to BPEL web services. In: *Pro 4th International Conference on Web Services (ICWS).* Chicago: IEEE Computer Society; 2006.
