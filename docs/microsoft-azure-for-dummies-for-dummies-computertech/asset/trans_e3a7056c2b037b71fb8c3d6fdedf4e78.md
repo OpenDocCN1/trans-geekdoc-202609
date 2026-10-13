@@ -1,0 +1,196 @@
+
+
+## 索引
+
+### 数字/符号
+
+*   `DELETE` 方法，[28](#c02.xhtml#Page_28)
+*   `GET` 方法，[28](#c02.xhtml#Page_28)
+
+### A
+
+*   Azure App Service
+    *   数据库与，[142](#c07.xhtml#Page_142)
+    *   域，[162](#c07.xhtml#Page_162)
+    *   使用 Docker 容器，[133](#c06.xhtml#Page_133)–136
+*   Azure Container Instances，部署，[123](#c06.xhtml#Page_123)–124
+*   Azure Container Registry (ACR)
+    *   部署，[126](#c06.xhtml#Page_126)–127
+    *   存储 Docker 镜像，[126](#c06.xhtml#Page_126)–130
+*   Azure Cosmos DB
+    *   实现，[200](#c09.xhtml#Page_200)–208
+    *   调试示例应用，[203](#c09.xhtml#Page_203)–204
+*   Azure Kubernetes Service (AKS)，Docker 容器，[131](#c06.xhtml#Page_131)–133
+*   Azure Log Analytics，环境，[316](#c14.xhtml#Page_316)–322
+*   Azure Monitor
+    *   环境，[302](#c14.xhtml#Page_302)–315
+    *   “Download As CSV” 按钮，[304](#c14.xhtml#Page_304)
+    *   “Edit Columns” 按钮，[304](#c14.xhtml#Page_304)
+    *   “Export to Event Hub” 按钮，[304](#c14.xhtml#Page_304)
+    *   “Getting Started with Log Queries in Azure Monitor” 教程，[322](#c14.xhtml#Page_322)
+*   Azure Policy，实现，[259](#c12.xhtml#Page_259)–265
+*   Azure 门户
+    *   从中部署，[68](#c04.xhtml#Page_68)–71，[96](#c05.xhtml#Page_96)–99，[144](#c07.xhtml#Page_144)–145
+    *   在其中部署资源，[180](#c08.xhtml#Page_180)
+    *   全局导航，[36](#c02.xhtml#Page_36)
+    *   全局搜索 (B)，[36](#c02.xhtml#Page_36)
+    *   全局订阅筛选器 (D)，[36](#c02.xhtml#Page_36)
+*   Azure 资源管理器 (ARM) 模板，[180](#c08.xhtml#Page_180)
+
+### B
+
+*   备份
+    *   保护数据库，[225](#c10.xhtml#Page_225)–228
+    *   恢复服务保管库，部署，[218](#c10.xhtml#Page_218)
+
+### C
+
+*   云计算特征
+    *   规模经济，[11](#c01.xhtml#Page_11)
+    *   快速弹性，[9](#c01.xhtml#Page_9)
+*   容器
+    *   Docker 容器
+        *   关于，[115](#c06.xhtml#Page_115)–117
+        *   Azure Kubernetes Service (AKS)，[131](#c06.xhtml#Page_131)–133
+        *   文档网站，[116](#c06.xhtml#Page_116)
+        *   实现实例，[122](#c06.xhtml#Page_122)–126
+        *   在 Azure 中运行，[120](#c06.xhtml#Page_120)–122
+        *   在工作站上设置，[117](#c06.xhtml#Page_117)–120
+        *   在 Azure Container Registry (ACR) 中存储镜像，[126](#c06.xhtml#Page_126)–130
+        *   使用，[117](#c06.xhtml#Page_117)
+        *   与 Azure App Service 结合使用，[133](#c06.xhtml#Page_133)–136
+    *   Docker Desktop，安装，[118](#c06.xhtml#Page_118)
+*   Cosmos DB，参见 Azure Cosmos DB
+*   一致性级别
+    *   文件系统一致，[221](#c10.xhtml#Page_221)
+*   成本管理，[21](#c01.xhtml#Page_21)
+
+### D
+
+*   数据
+    *   一致性，[202](#c09.xhtml#Page_202)
+    *   迁移选项，[269](#c13.xhtml#Page_269)–277
+    *   半结构化，[48](#c03.xhtml#Page_48)
+    *   结构化，[48](#c03.xhtml#Page_48)
+    *   类型，[47](#c03.xhtml#Page_47)–48
+    *   非结构化，[48](#c03.xhtml#Page_48)
+    *   数据流出网络流量，[58](#c03.xhtml#Page_58)
+    *   数据源，连接到工作区，[317](#c14.xhtml#Page_317)–318
+*   数据库
+    *   关于，[185](#c09.xhtml#Page_185)
+    *   Azure App Service 与，[142](#c07.xhtml#Page_142)
+    *   比较关系型和非关系型，[187](#c09.xhtml#Page_187)–189
+    *   实现 Azure Cosmos DB，[200](#c09.xhtml#Page_200)–208
+    *   实现 SQL，[190](#c09.xhtml#Page_190)–200
+    *   作为 PaaS 产品，[19](#c01.xhtml#Page_19)
+    *   PaaS 与 IaaS，[185](#c09.xhtml#Page_185)–187
+    *   保护，[225](#c10.xhtml#Page_225)–228
+    *   SQL，[188](#c09.xhtml#Page_188)–189
+*   数据库迁移服务 (DMS)，使用其执行数据库迁移，[275](#c13.xhtml#Page_275)–276
+*   数据库事务单位 (DTU)，[190](#c09.xhtml#Page_190)
+*   DTU 购买模型，[190](#c09.xhtml#Page_190)
+*   默认文档，[158](#c07.xhtml#Page_158)
+*   定义工作流，[180](#c08.xhtml#Page_180)–182
+*   部署
+    *   Azure Container Instances，[123](#c06.xhtml#Page_123)–124
+    *   Azure Container Registry (ACR)，[126](#c06.xhtml#Page_126)–127
+    *   从 Azure 门户，[68](#c04.xhtml#Page_68)–71，[96](#c05.xhtml#Page_96)–99，[144](#c07.xhtml#Page_144)–145
+    *   Linux VM，[96](#c05.xhtml#Page_96)–99
+    *   模型，[12](#c01.xhtml#Page_12)–14
+    *   使用 PowerShell，[71](#c04.xhtml#Page_71)–72
+    *   恢复服务保管库，[218](#c10.xhtml#Page_218)
+    *   在 Azure 门户中部署资源，[180](#c08.xhtml#Page_180)
+    *   SQL 数据库，[192](#c09.xhtml#Page_192)–194
+    *   SQL 数据库虚拟服务器，[191](#c09.xhtml#Page_191)–192
+    *   虚拟机 (VM)，[88](#c05.xhtml#Page_88)–91，[96](#c05.xhtml#Page_96)–106
+    *   从 Marketplace 部署虚拟机 (VM)，[96](#c05.xhtml#Page_96)–106
+    *   从 Visual Studio，[153](#c07.xhtml#Page_153)–155
+    *   Web Apps，[144](#c07.xhtml#Page_144)–157
+    *   Windows Server VM，[99](#c05.xhtml#Page_99)–106
+*   部署槽位，[155](#c07.xhtml#Page_155)–157
+*   诊断日志，启用，[111](#c05.xhtml#Page_111)–112，[302](#c14.xhtml#Page_302)–310
+*   灾难恢复 (DR)，[13](#c01.xhtml#Page_13)
+*   磁盘存储，[61](#c03.xhtml#Page_61)–63
+*   分发许可证，[240](#c11.xhtml#Page_240)
+*   域
+    *   添加到 Active Directory，[234](#c11.xhtml#Page_234)–235
+    *   Azure App Service，[162](#c07.xhtml#Page_162)
+*   DR (灾难恢复)，[13](#c01.xhtml#Page_13)
+*   DTU (数据库事务单位)，[190](#c09.xhtml#Page_190)
+*   Durable Functions HTTP Starter，作为 Azure Functions 触发器，[171](#c08.xhtml#Page_171)
+*   动态组 (AD)，[236](#c11.xhtml#Page_236)
+
+### E
+
+*   EA (企业协议)，[21](#c01.xhtml#Page_21)
+*   企业协议 (EA)，[21](#c01.xhtml#Page_21)
+*   弹性池模型，[190](#c09.xhtml#Page_190)
+*   环境
+    *   关于，[301](#c14.xhtml#Page_301)
+    *   Application Insights，[316](#c14.xhtml#Page_316)
+    *   Azure Log Analytics，[316](#c14.xhtml#Page_316)–322
+    *   Azure Monitor，[302](#c14.xhtml#Page_302)–315
+    *   控制，[186](#c09.xhtml#Page_186)
+    *   准备，[289](#c13.xhtml#Page_289)–290
+*   事件，[170](#c08.xhtml#Page_170)
+*   ExpressRoute，[284](#c13.xhtml#Page_284)，[286](#c13.xhtml#Page_286)–287
+*   扩展 VM 功能，[111](#c05.xhtml#Page_111)–113
+*   外部 Azure AD，[236](#c11.xhtml#Page_236)
+
+### F
+
+*   收藏夹 (G)，[37](#c02.xhtml#Page_37)
+*   功能可用性，[36](#c02.xhtml#Page_36)
+*   文件，作为存储帐户服务，[48](#c03.xhtml#Page_48)
+*   文件恢复功能，[222](#c10.xhtml#Page_222)
+*   文件服务，[59](#c03.xhtml#Page_59)–60
+*   防火墙，[195](#c09.xhtml#Page_195)
+*   强制删除资源组，[208](#c09.xhtml#Page_208)
+*   Function Apps
+    *   关于，[141](#c07.xhtml#Page_141)–142，[168](#c08.xhtml#Page_168)，[171](#c08.xhtml#Page_171)
+    *   与 Logic Apps 对比，[170](#c08.xhtml#Page_170)
+    *   配置设置，[177](#c08.xhtml#Page_177)–178
+    *   创建，[172](#c08.xhtml#Page_172)–173
+*   功能标记，[253](#c12.xhtml#Page_253)
+*   函数，[168](#c08.xhtml#Page_168)
+
+### G
+
+*   GCP (Google Cloud Platform)，[11](#c01.xhtml#Page_11)，[12](#c01.xhtml#Page_12)
+*   常规设置，[158](#c07.xhtml#Page_158)
+*   常规用途 v1 选项，[49](#c03.xhtml#Page_49)
+*   常规用途 v2 选项，[49](#c03.xhtml#Page_49)
+*   地理位置，[34](#c02.xhtml#Page_34)
+*   异地冗余存储 (GRS)，[50](#c03.xhtml#Page_50)
+*   异地复制，[196](#c09.xhtml#Page_196)–197
+*   Git
+    *   配置，[145](#c07.xhtml#Page_145)–147
+    *   为 Web 应用创建存储库，[148](#c07.xhtml#Page_148)–150
+*   GitHub For Dummies (Guthals 和 Haack)，[145](#c07.xhtml#Page_145)
+*   全局管理员角色，[243](#c11.xhtml#Page_243)
+*   Google Cloud Platform (GCP)，[11](#c01.xhtml#Page_11)，[12](#c01.xhtml#Page_12)
+*   治理
+    *   实现 Azure Policy，[259](#c12.xhtml#Page_259)–265
+    *   实现分类标记，[251](#c12.xhtml#Page_251)–259
+*   Gremlin，[201](#c09.xhtml#Page_201)
+*   组
+    *   操作组，[312](#c14.xhtml#Page_312)–313
+    *   创建，[234](#c11.xhtml#Page_234)–241
+*   DenyAllInBound，[74](#c04.xhtml#Page_74)，[75](#c04.xhtml#Page_75)
+*   目标属性，[74](#c04.xhtml#Page_74)
+*   开发人员计划，[25](#c01.xhtml#Page_25)
+*   开发环境，[100](#c05.xhtml#Page_100)–101
+*   开发框架，[140](#c07.xhtml#Page_140)
+*   DevOps，作为 PaaS 产品，[19](#c01.xhtml#Page_19)
+*   Dev/Test 层，[143](#c07.xhtml#Page_143)
+*   声明式代码，[105](#c05.xhtml#Page_105)
+*   调试示例 Cosmos DB 应用，[203](#c09.xhtml#Page_203)–204
+*   设计器按钮 (Logic App 设计器工具栏)，[182](#c08.xhtml#Page_182)
+*   删除快照，[214](#c10.xhtml#Page_214)–216
+*   省略号 (…) 图标，[216](#c10.xhtml#Page_216)
+*   启用
+    *   诊断日志，[111](#c05.xhtml#Page_111)–112，[302](#c14.xhtml#Page_302)–310
+    *   Web 应用中的检测，[165](#c07.xhtml#Page_165)
+*   Fowler, Adam (作者)
+    *   *NoSQL For Dummies*，[188](#c09.xhtml#Page_188)
+

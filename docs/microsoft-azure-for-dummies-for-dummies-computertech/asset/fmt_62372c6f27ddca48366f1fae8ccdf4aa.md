@@ -1,0 +1,412 @@
+
+## Figures
+
+### Chapter 13
+
+12. [FIGURE 13-12: Choosing a server onboarding method for Arc.](#c13.xhtml#c13-fig-0012)
+
+13. [FIGURE 13-13: Onboarding a Windows Server system to Arc.](#c13.xhtml#c13-fig-0013)
+
+14. [FIGURE 13-14: Viewing onboarded local VMs in the Azure portal.](#c13.xhtml#c13-fig-0014)
+
+15. [FIGURE 13-15: Viewing an Arc-managed system’s policy settings.](#c13.xhtml#c13-fig-0015)
+
+16. [FIGURE 13-16: Verifying policy compliance and remediation status.](#c13.xhtml#c13-fig-0016)
+
+17. [FIGURE 13-17: Applying taxonomic tags to an Arc resource.](#c13.xhtml#c13-fig-0017)
+
+### Chapter 14
+
+1. [FIGURE 14-1: Azure Activity Log records administrative events initiated by you ...](#c14.xhtml#c14-fig-0001)
+
+2. [FIGURE 14-2: Viewing the JSON source for an Azure Activity Log event.](#c14.xhtml#c14-fig-0002)
+
+3. [FIGURE 14-3: Azure Monitor Diagnostics settings allow you to enable diagnostics...](#c14.xhtml#c14-fig-0003)
+
+4. [FIGURE 14-4: Configuring Azure resource diagnostics.](#c14.xhtml#c14-fig-0004)
+
+5. [FIGURE 14-5: Verifying the presence of the VM diagnostics extension for an Azur...](#c14.xhtml#c14-fig-0005)
+
+6. [FIGURE 14-6: Customizing the diagnostic logging in a Windows Server VM running ...](#c14.xhtml#c14-fig-0006)
+
+7. [FIGURE 14-7: Metrics Explorer in Azure Monitor gives you at-a-glance diagnostic...](#c14.xhtml#c14-fig-0007)
+
+8. [FIGURE 14-8: Configuring signal logic for an Azure Monitor alert rule.](#c14.xhtml#c14-fig-0008)
+
+9. [FIGURE 14-9: Completing the alert rule definition.](#c14.xhtml#c14-fig-0009)
+
+10. [FIGURE 14-10: Different ways Azure informs you that an alert rule was triggered...](#c14.xhtml#c14-fig-0010)
+
+11. [FIGURE 14-11: Connecting VMs to an Azure Log Analytics workspace.](#c14.xhtml#c14-fig-0011)
+
+12. [FIGURE 14-12: Azure Log Analytics Log Search interface.](#c14.xhtml#c14-fig-0012)
+
+### Chapter 15
+
+1. [FIGURE 15-1: Sometimes, your Azure feedback results in new-product development.](#c15.xhtml#c15-fig-0001)
+
+### Chapter 16
+
+1. [FIGURE 16-1: Work from the bare metal by using the Azure REST API Browser.](#c16.xhtml#c16-fig-0001)
+
+2. [FIGURE 16-2: Find an Azure user group near you.](#c16.xhtml#c16-fig-0002)
+
+## Guide
+
+1. [Cover](#cover.xhtml)
+
+2. 
+
+3. [Begin Reading](#c00.xhtml)
+
+## Pages
+
+1. [i](#f01.xhtml#Page_i)
+
+2. [ii](#f01.xhtml#Page_ii)
+
+3. [1](#c00.xhtml#Page_1)
+
+4. [2](#c00.xhtml#Page_2)
+
+5. [3](#c00.xhtml#Page_3)
+
+6. [4](#c00.xhtml#Page_4)
+
+7. [5](#p01.xhtml#Page_5)
+
+8. [6](#p01.xhtml#Page_6)
+
+9. [7](#c01.xhtml#Page_7)
+
+10. [8](#c01.xhtml#Page_8)
+
+11. [9](#c01.xhtml#Page_9)
+
+12. [10](#c01.xhtml#Page_10)
+
+13. [11](#c01.xhtml#Page_11)
+
+14. [12](#c01.xhtml#Page_12)
+
+15. [13](#c01.xhtml#Page_13)
+
+16. [14](#c01.xhtml#Page_14)
+
+17. [15](#c01.xhtml#Page_15)
+
+18. [16](#c01.xhtml#Page_16)
+
+19. [17](#c01.xhtml#Page_17)
+
+20. [18](#c01.xhtml#Page_18)
+
+21. [19](#c01.xhtml#Page_19)
+
+22. [20](#c01.xhtml#Page_20)
+
+23. [21](#c01.xhtml#Page_21)
+
+24. [22](#c01.xhtml#Page_22)
+
+25. [23](#c01.xhtml#Page_23)
+
+26. [24](#c01.xhtml#Page_24)
+
+27. [25](#c01.xhtml#Page_25)
+
+28. [26](#c01.xhtml#Page_26)
+
+29. [27](#c02.xhtml#Page_27)
+
+30. [28](#c02.xhtml#Page_28)
+
+31. [29](#c02.xhtml#Page_29)
+
+32. [30](#c02.xhtml#Page_30)
+
+33. [31](#c02.xhtml#Page_31)
+
+34. [32](#c02.xhtml#Page_32)
+
+35. [33](#c02.xhtml#Page_33)
+
+36. [34](#c02.xhtml#Page_34)
+
+37. [35](#c02.xhtml#Page_35)
+
+38. [36](#c02.xhtml#Page_36)
+
+39. [37](#c02.xhtml#Page_37)
+
+40. [38](#c02.xhtml#Page_38)
+
+41. [39](#c02.xhtml#Page_39)
+
+42. [40](#c02.xhtml#Page_40)
+
+43. [41](#c02.xhtml#Page_41)
+
+44. [42](#c02.xhtml#Page_42)
+
+45. [43](#c02.xhtml#Page_43)
+
+46. [45](#p02.xhtml#Page_45)
+
+47. [46](#p02.xhtml#Page_46)
+
+48. [47](#c03.xhtml#Page_47)
+
+49. [48](#c03.xhtml#Page_48)
+
+50. [49](#c03.xhtml#Page_49)
+
+51. [50](#c03.xhtml#Page_50)
+
+52. [51](#c03.xhtml#Page_51)
+
+53. [52](#c03.xhtml#Page_52)
+
+54. [53](#c03.xhtml#Page_53)
+
+55. [54](#c03.xhtml#Page_54)
+
+56. [55](#c03.xhtml#Page_55)
+
+57. [56](#c03.xhtml#Page_56)
+
+58. [57](#c03.xhtml#Page_57)
+
+59. [58](#c03.xhtml#Page_58)
+
+60. [59](#c03.xhtml#Page_59)
+
+61. [60](#c03.xhtml#Page_60)
+
+62. [61](#c03.xhtml#Page_61)
+
+63. [62](#c03.xhtml#Page_62)
+
+64. [63](#c03.xhtml#Page_63)
+
+65. [65](#c04.xhtml#Page_65)
+
+66. [66](#c04.xhtml#Page_66)
+
+67. [67](#c04.xhtml#Page_67)
+
+68. [68](#c04.xhtml#Page_68)
+
+69. [69](#c04.xhtml#Page_69)
+
+70. [70](#c04.xhtml#Page_70)
+
+71. [71](#c04.xhtml#Page_71)
+
+72. [72](#c04.xhtml#Page_72)
+
+73. [73](#c04.xhtml#Page_73)
+
+74. [74](#c04.xhtml#Page_74)
+
+75. [75](#c04.xhtml#Page_75)
+
+76. [76](#c04.xhtml#Page_76)
+
+77. [77](#c04.xhtml#Page_77)
+
+78. [78](#c04.xhtml#Page_78)
+
+79. [79](#c04.xhtml#Page_79)
+
+80. [80](#c04.xhtml#Page_80)
+
+81. [81](#c04.xhtml#Page_81)
+
+82. [82](#c04.xhtml#Page_82)
+
+83. [83](#c04.xhtml#Page_83)
+
+84. [84](#c04.xhtml#Page_84)
+
+85. [85](#c04.xhtml#Page_85)
+
+86. [86](#c04.xhtml#Page_86)
+
+87. [87](#c05.xhtml#Page_87)
+
+88. [88](#c05.xhtml#Page_88)
+
+89. [89](#c05.xhtml#Page_89)
+
+90. [90](#c05.xhtml#Page_90)
+
+91. [91](#c05.xhtml#Page_91)
+
+92. [92](#c05.xhtml#Page_92)
+
+93. [93](#c05.xhtml#Page_93)
+
+94. [94](#c05.xhtml#Page_94)
+
+95. [95](#c05.xhtml#Page_95)
+
+96. [96](#c05.xhtml#Page_96)
+
+97. [97](#c05.xhtml#Page_97)
+
+98. [98](#c05.xhtml#Page_98)
+
+99. [99](#c05.xhtml#Page_99)
+
+100. [100](#c05.xhtml#Page_100)
+
+101. [101](#c05.xhtml#Page_101)
+
+102. [102](#c05.xhtml#Page_102)
+
+103. [103](#c05.xhtml#Page_103)
+
+104. [104](#c05.xhtml#Page_104)
+
+105. [105](#c05.xhtml#Page_105)
+
+106. [106](#c05.xhtml#Page_106)
+
+107. [107](#c05.xhtml#Page_107)
+
+108. [108](#c05.xhtml#Page_108)
+
+109. [109](#c05.xhtml#Page_109)
+
+110. [110](#c05.xhtml#Page_110)
+
+111. [111](#c05.xhtml#Page_111)
+
+112. [112](#c05.xhtml#Page_112)
+
+113. [113](#c05.xhtml#Page_113)
+
+114. [115](#c06.xhtml#Page_115)
+
+115. [116](#c06.xhtml#Page_116)
+
+116. [117](#c06.xhtml#Page_117)
+
+117. [118](#c06.xhtml#Page_118)
+
+118. [119](#c06.xhtml#Page_119)
+
+119. [120](#c06.xhtml#Page_120)
+
+120. [121](#c06.xhtml#Page_121)
+
+121. [122](#c06.xhtml#Page_122)
+
+122. [123](#c06.xhtml#Page_123)
+
+123. [124](#c06.xhtml#Page_124)
+
+124. [125](#c06.xhtml#Page_125)
+
+125. [126](#c06.xhtml#Page_126)
+
+126. [127](#c06.xhtml#Page_127)
+
+127. [128](#c06.xhtml#Page_128)
+
+128. [129](#c06.xhtml#Page_129)
+
+129. [130](#c06.xhtml#Page_130)
+
+130. [131](#c06.xhtml#Page_131)
+
+131. [132](#c06.xhtml#Page_132)
+
+132. [133](#c06.xhtml#Page_133)
+
+133. [134](#c06.xhtml#Page_134)
+
+134. [135](#c06.xhtml#Page_135)
+
+135. [136](#c06.xhtml#Page_136)
+
+136. [137](#p03.xhtml#Page_137)
+
+137. [138](#p03.xhtml#Page_138)
+
+138. [139](#c07.xhtml#Page_139)
+
+139. [140](#c07.xhtml#Page_140)
+
+140. [141](#c07.xhtml#Page_141)
+
+141. [142](#c07.xhtml#Page_142)
+
+142. [143](#c07.xhtml#Page_143)
+
+143. [144](#c07.xhtml#Page_144)
+
+144. [145](#c07.xhtml#Page_145)
+
+145. [146](#c07.xhtml#Page_146)
+
+146. [147](#c07.xhtml#Page_147)
+
+147. [148](#c07.xhtml#Page_148)
+
+148. [149](#c07.xhtml#Page_149)
+
+149. [150](#c07.xhtml#Page_150)
+
+150. [151](#c07.xhtml#Page_151)
+
+151. [152](#c07.xhtml#Page_152)
+
+152. [153](#c07.xhtml#Page_153)
+
+153. [154](#c07.xhtml#Page_154)
+
+154. [155](#c07.xhtml#Page_155)
+
+155. [156](#c07.xhtml#Page_156)
+
+156. [157](#c07.xhtml#Page_157)
+
+157. [158](#c07.xhtml#Page_158)
+
+158. [159](#c07.xhtml#Page_159)
+
+159. [160](#c07.xhtml#Page_160)
+
+160. [161](#c07.xhtml#Page_161)
+
+161. [162](#c07.xhtml#Page_162)
+
+162. [163](#c07.xhtml#Page_163)
+
+163. [164](#c07.xhtml#Page_164)
+
+164. [165](#c07.xhtml#Page_165)
+
+165. [166](#c07.xhtml#Page_166)
+
+166. [167](#c08.xhtml#Page_167)
+
+167. [168](#c08.xhtml#Page_168)
+
+168. [169](#c08.xhtml#Page_169)
+
+169. [170](#c08.xhtml#Page_170)
+
+170. [171](#c08.xhtml#Page_171)
+
+171. [172](#c08.xhtml#Page_172)
+
+172. [173](#c08.xhtml#Page_173)
+
+173. [174](#c08.xhtml#Page_174)
+
+174. [175](#c08.xhtml#Page_175)
+
+175. [176](#c08.xhtml#Page_176)
