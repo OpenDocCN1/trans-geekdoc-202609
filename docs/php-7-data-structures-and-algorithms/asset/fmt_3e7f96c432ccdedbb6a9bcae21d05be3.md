@@ -1,0 +1,201 @@
+
+```php
+function topologicalSort(array $matrix): SplQueue { 
+
+    $order = new SplQueue; 
+
+    $queue = new SplQueue; 
+
+    $size = count($matrix); 
+
+    $incoming = array_fill(0, $size, 0); 
+
+
+
+    for ($i = 0; $i < $size; $i++) { 
+
+      for ($j = 0; $j < $size; $j++) { 
+
+          if ($matrix[$j][$i]) { 
+
+          $incoming[$i] ++; 
+
+          } 
+
+      } 
+
+      if ($incoming[$i] == 0) { 
+
+          $queue->enqueue($i); 
+
+      } 
+
+    } 
+
+
+
+    while (!$queue->isEmpty()) { 
+
+      $node = $queue->dequeue(); 
+
+
+
+      for ($i = 0; $i < $size; $i++) { 
+
+          if ($matrix[$node][$i] == 1) { 
+
+            $matrix[$node][$i] = 0; 
+
+            $incoming[$i] --; 
+
+            if ($incoming[$i] == 0) { 
+
+                $queue->enqueue($i); 
+
+            } 
+
+          } 
+
+      } 
+
+      $order->enqueue($node); 
+
+    } 
+
+
+
+    if ($order->count() != $size) // cycle detected 
+
+      return new SplQueue; 
+
+
+
+    return $order; 
+
+} 
+```
+
+正如前面的实现所示，我们实际上已经考虑了 Kahn 算法提到的每一个步骤。我们首先计算顶点的入度，并将入度为 0 的顶点放入队列。然后，我们检查队列中的每个节点，减少其邻居顶点的入度，并再次将入度为 0 的邻居添加到队列中。最后，我们返回排序后的队列，如果有序顶点的数量与实际顶点数量不匹配，则返回空队列。我们现在可以调用该函数，以队列形式返回排序后的顶点列表。代码如下：
+
+```php
+$sorted = topologicalSort($graph);
+
+while (!$sorted->isEmpty()) {
+    echo $sorted->dequeue() . "\t";
+} 
+```
+
+现在，这将遍历队列中的每个元素并打印它们。输出将如下所示：
+
+```
+    2       1       0 
+      3       4
+```
+
+输出符合我们的预期。从前面的图表可以看出，顶点 `2` 有直接边指向顶点 `1` 和顶点 `3`，顶点 `1` 有直接边指向顶点 `0` 和顶点 `3`。由于顶点 `2` 没有入边，我们将从顶点 `2` 开始进行拓扑排序。顶点 `1` 有一条入边，顶点 `3` 有两条，所以在顶点 `2` 之后，根据算法我们将访问顶点 `1`。同理将到达顶点 `0`，随后是顶点 `3`，最后是顶点 `4`。我们还必须记住，给定图可能存在多种拓扑排序。Kahn 算法的复杂度为 `O(V+E)`，其中 `V` 是顶点数，`E` 是边数。
+
+# 使用 Floyd-Warshall 算法求最短路径
+
+披萨外卖公司的一个常见场景是尽可能快地送达披萨。图算法可以帮助我们解决此类问题。Floyd-Warshall 算法是一种非常常见的算法，用于利用所有顶点对 `(u, v)` 找到从 `u` 到 `v` 的最短路径。最短路径表示相互连接的两个节点之间最短的可能距离。用于计算最短路径的图必须是加权图。在某些情况下，权重也可以是负数。该算法非常简单，也是最容易实现的算法之一，如下所示：
+
+```
+for i:= 1 to n do 
+  for j:= 1 to n do 
+     dis[i][j] = w[i][j] 
+
+for k:= 1 to n do 
+   for i:= 1 to n do 
+      for j:= 1 to n do 
+         sum := dis[i][k] + dis[k][j] 
+         if (sum < dis[i][j]) 
+              dis[i][j] := sum 
+```
+
+首先，我们将每个权重复制到成本或距离矩阵中。然后，我们遍历每个顶点，计算从顶点 `i` 经顶点 `k` 到顶点 `j` 的成本或距离。如果该距离或成本小于顶点 `i` 和顶点 `j` 之间的直接路径，我们将选择路径 `i` -> `k` -> `j` 而不是直接路径 `i` -> `j`。让我们考虑下图：
+
+![](Image00084.gif)
+
+这里我们可以看到一个带有边权重的无向图。现在，如果我们寻找从 `A` 到 `E` 的最短路径，则有以下选项：
+
+*   `A` 经 `B` 到 `E` 的距离为 `20`
+*   `A` 经 `D` 到 `E` 的距离为 `25`
+*   `A` 经 `D` 和 `B` 到 `E` 的距离为 `20`
+*   `A` 经 `B` 和 `D` 到 `E` 的距离为 `35`
+
+因此，我们可以看到最短距离为 `20`。现在，让我们用顶点的数字表示法以编程方式实现这一点。我们将分别用 `0`、`1`、`2`、`3` 和 `4` 代替 `A`、`B`、`C`、`D` 和 `E`。现在，让我们以前面的图的邻接矩阵格式表示：
+
+```php
+$totalVertices = 5; 
+
+$graph = []; 
+
+for ($i = 0; $i < $totalVertices; $i++) { 
+
+    for ($j = 0; $j < $totalVertices; $j++) { 
+
+      $graph[$i][$j] = $i == $j ? 0 : PHP_INT_MAX; 
+
+    }
+
+}
+```
+
+这里，我们采用了不同的方法，将所有边初始化为 PHP 整数的最大值。这样做的原因是确保非边的值为 `0` 不会影响算法逻辑，因为我们在寻找最小值。现在，我们需要按照前面的图向图中添加权重：
+
+```php
+$graph[0][1] = $graph[1][0] = 10;
+$graph[2][1] = $graph[1][2] = 5;
+$graph[0][3] = $graph[3][0] = 5;
+$graph[3][1] = $graph[1][3] = 5;
+$graph[4][1] = $graph[1][4] = 10;
+$graph[3][4] = $graph[4][3] = 20;
+```
+
+由于这是一个无向图，我们为两条边分配相同的值。如果是有向图，我们可以为每个权重只创建一个条目。现在，是时候实现 Floyd-Warshall 算法以找到任意给定节点对的最短路径了。以下是该函数的实现：
+
+```php
+function floydWarshall(array $graph): array {
+
+    $dist = [];
+
+    $dist = $graph;
+
+    $size = count($dist);
+
+
+
+    for ($k = 0; $k < $size; $k++)
+      for ($i = 0; $i < $size; $i++)
+          for ($j = 0; $j < $size; $j++)
+        $dist[$i][$j] = min($dist[$i][$j],
+    $dist[$i][$k] + $dist[$k][$j]);
+
+
+
+    return $dist;
+
+} 
+```
+
+正如前面提到的，实现非常简单。我们有三个内层循环来计算最小距离，并在函数结束时返回距离数组。现在，让我们调用此函数并检查预期结果是否匹配：
+
+```php
+$distance = floydWarshall($graph); 
+
+echo "Shortest distance between A to E is:" . $distance[0][4] . "\n"; 
+echo "Shortest distance between D to C is:" . $distance[3][2] . "\n"; 
+```
+
+以下是代码输出：
+
+```
+Shortest distance between A to E is:20
+
+Shortest distance between D to C is:10
+```
+
+如果检查前面的图，我们可以看到 `D` 和 `C` 之间的最短距离实际上是 `10`，路径为 `D` → `B` → `C` (5+5)，这是所有可能路径中最短的（`D` → `A` → `B` → `C` (20)，或 `D` → `E` → `B` → `C` (35)）。
+
+Floyd-Warshall 算法的复杂度为 `O(V³)`，其中 `V` 是图中的顶点数。现在我们将探索另一种著名的单源最短路径算法。
+
+# 使用 Dijkstra 算法求单源最短路径
