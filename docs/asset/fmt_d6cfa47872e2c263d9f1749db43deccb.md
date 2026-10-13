@@ -1,0 +1,40 @@
+
+## 参考文献
+
+73. E. Lonergan, K. Yarhi-Milo, *Cyber signaling and nuclear deterrence: implications for the Ukraine crisis*, 21.04.2022, <https://warontherocks.Com/2022/04/cyber-signaling-and-nuclear-deterrence-implications-for-the-ukraine-crisis/>
+
+74. The President of the Russian Federation executive order on basic principles of state policy of the Russian Federation on nuclear deterrence, 2.06.2020, <https://archive.mid.ru/en/web/guest/foreign_policy/international_safety/disarmament/-/asset_publisher/rp0fiUBmANaH/content/id/4152094?p_p_id=101_INSTANCE_rp0fiUBmANaH&_101_INSTANCE_rp0fiUBmANaH_languageId=en_GB>
+
+75. Roman Olearchyk, Henry Foy, James Politi, 14.01.22, “US accuses Russia of planning ‘false-flag operation’ in eastern Ukraine”, Financial Times, <https://www.ft.com/content/ac431782-62c6-4f3a-a08e-d832fc4ac2a1>
+
+76. Council of EU, *Russian cyber operation against Ukraine: Declaration by the High Representative on behalf of the European Union*, 10.05.2022, <https://www.consilium.europa.eu/en/press/press-releases/2022/05/10/russian-cyber-operations-against-ukraine-declaration-by-the-high-representative-on-behalf-of-the-european-union/>; UK Foreign, Commonwealth & Development Office, *Russia behind cyber-attack with Europe-wide impact an hour before Ukraine invasion*, 10.055.2022, <https://www.gov.uk/government/news/russia-behind-cyber-attack-with-europe-wide-impact-an-hour-before-ukraine-invasion>
+
+77. Viasat, *KA-SAT Network cyber attack overview*, 30.03.2022, <https://www.viasat.com/about/newsroom/blog/ka-sat-network-cyber-attack-overview/>
+
+78. Microsoft, *Special report: Ukraine. An overview of Russia’s cyberattack activity in Ukraine*, 27.04.2022, <https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Vwwd>
+
+79. Ibid.
+
+80. F. Bajak, *A chilling Russian cyber aim in Ukraine: Digital dossiers*, 28.04.2022, <https://apnews.com/article/russia-ukraine-technology-business-border-patrols-automobiles-fa3f88e07e51bcaf81bac8a40c4da141>
+
+81. DTEK, “Enemy launches hacker attacks on the power system”, 01.07.2022, <https://dtek.com/en/media-center/news/vslid-za-raketnimi-udarami-po-tes-vorog-zavdae-khakerskikh-udariv-po-energosistemi/>
+
+82. Stefan Soesanto, “The IT Army of Ukraine. Structure, Tasking, and Ecosystem”, 06.22 <https://css.ethz.ch/content/dam/ethz/special-interest/gess/cis/center-for-securities-studies/pdfs/Cyber-Reports-2022-06-IT-Army-of-Ukraine.pdf>
+
+## 结论
+
+DOI: <https://dx.doi.org/10.1201/9781003408260-8>
+
+网络安全是一个文明问题。它是一个社会问题。它源于技术。但其影响如今已远远超出技术和网络安全本身。必须理解网络行动当前和未来的潜力与风险。这是一个高度演变和变化的环境，同时又复杂到技术、法律、政治、战略和军事问题都必须予以考量。本书的主旨和目标正是要足够广泛地展示这些问题。
+
+网络安全技术水平已显著提高。以至于普通用户无需采取任何特殊行动（在某些情况下甚至无法采取特殊行动）。所需仅是常识、适当的配置，以及网络安全基础知识、数字卫生常识。技术本应开箱即用且从一开始就保证安全。尽管问题依然存在，但它们不太可能由普通用户解决。用户只能信任软硬件供应商（并留意更新！）。然而，往往有可能、甚至有必要超越这一点。可以获取并培养意识和特定心态。可以遵循建议，并随着技术发展逐步扩展知识。这是一种必要性，因为我们干脆就依赖技术。拥有基础知识、加以应用并发展它，是个好主意。这也是网络安全哲学的一个实践要素。
+
+本书分析了用户安全的各个方面。然而，正如所强调的，其他领域也会影响用户和公民。*网络环境*影响敏感社会领域：关键基础设施、医疗保健、军事和战略事务，以及国家整体。这种影响无法逆转。计算机化和数字化将继续推进。它将成为我们生活、我们文明的永久组成部分。因此，必须考虑其含义和后果。我们必须适应它。
+
+然而，快速变化的步伐可能与人类的适应能力不兼容。因此，风险点将持续出现，因为技术和产品的创造者与开发者可能无法妥善预测这些事实的后果。不良事件可能发生，也必将发生。我们必须意识到这一点。
+
+始终需要保持意识和知识。
+
+归根结底，就国家安全而言，这甚至可能关乎生死、关乎平民生存。没有任何理由忽视这样一个社会关键问题。网络安全也是国家间谈判以及军事问题的一个要素。这一点在 2022 年俄乌战争期间表现得尤为清晰。
+
+网络空间和网络安全是稳定与不稳定的问题。我们希望稳定对所有人而言都优于不稳定，至少从长远来看。这应成为网络安全哲学的指导原则，无论我们谈论的是网络安全还是网络战。
