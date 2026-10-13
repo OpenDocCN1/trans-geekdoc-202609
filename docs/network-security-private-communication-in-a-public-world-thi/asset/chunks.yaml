@@ -1,0 +1,1674 @@
+- raw: "\n\n![](graphics/9780136643524.jpg)\n\n## About This eBook\n\nePUB is an open,\
+    \ industry-standard format for eBooks. However, support of ePUB and its many features\
+    \ varies across reading devices and applications. Use your device or app settings\
+    \ to customize the presentation to your liking. Settings that you can customize\
+    \ often include font, font size, single or double column, landscape or portrait\
+    \ mode, and figures that you can click or tap to enlarge. For additional information\
+    \ about the settings and features on your reading device or app, visit the device\
+    \ manufacturer’s Web site.\n\nMany titles include programming code or configuration\
+    \ examples. To optimize the presentation of these elements, view the eBook in\
+    \ single-column, landscape mode and adjust the font size to the smallest setting.\
+    \ ...\n\nPRIVATE Communication in a PUBLIC World\n\nThird Edition\n\nCharlie Kaufman\
+    \ • Radia Perlman\n\nMike Speciner • Ray Perlner\n\n![](graphics/pub.jpg)\n\n\
+    **Boston • Columbus • New York • San Francisco • Amsterdam • Cape TownDubai •\
+    \ London • Madrid • Milan • Munich • Paris • Montreal • Toronto • Delhi • Mexico\
+    \ CitySão Paulo • Sydney • Hong Kong • Seoul • Singapore • Taipei • Tokyo**\n\n\
+    Many of the designations used by manufacturers and sellers to distinguish their\
+    \ products are claimed as trademarks. Where those designations appear in this\
+    \ book, and the publisher was aware of a trademark claim, the designations have\
+    \ been printed with initial capital letters or in all capitals.\n\nThe authors\
+    \ and publisher have taken care in the preparation of this book, but make no expressed\
+    \ or implied warranty of any kind and assume no responsibility for errors or omissions.\
+    \ No liability is assumed for incidental or consequential damages in connection\
+    \ with or arising out of the use of the information or programs contained herein.\n\
+    \nFor information about buying this title in bulk quantities, or for special sales\
+    \ opportunities (which may include ...\n\n## Pearson’s Commitment to Diversity,\
+    \ Equity, and Inclusion\n\nPearson is dedicated to creating bias-free content\
+    \ that reflects the diversity of all learners. We embrace the many dimensions\
+    \ of diversity, including but not limited to race, ethnicity, gender, socioeconomic\
+    \ status, ability, age, sexual orientation, and religious or political beliefs.\n\
+    \nEducation is a powerful force for equity and change in our world. It has the\
+    \ potential to deliver opportunities that improve lives and enable economic mobility.\
+    \ As we work with authors to create content for every product and service, we\
+    \ acknowledge our responsibility to demonstrate inclusivity and incorporate diverse\
+    \ scholarship so that everyone can achieve their potential through learning. As\
+    \ the world’s ...\n\n*Si spy net work, big fedjaw iog link kyxogy*\n\n## Contents\n\
+    \n1.  [**Acknowledgments**](#pref02.xhtml#pref02)\n\n2.  [**About the Authors**](#pref03.xhtml#pref03)\n\
+    \n3.  [CHAPTER 1 **Introduction**](#ch01.xhtml#ch01)\n\n    1.  [1.1 Opinions,\
+    \ Products](#ch01.xhtml#sec1_1)\n\n    2.  [1.2 Roadmap to the Book](#ch01.xhtml#sec1_2)\n\
+    \n    3.  [1.3 Terminology](#ch01.xhtml#sec1_3)\n\n    4.  [1.4 Notation](#ch01.xhtml#sec1_4)\n\
+    \n    5.  [1.5 Cryptographically Protected Sessions](#ch01.xhtml#sec1_5)\n\n \
+    \   6.  [1.6 Active and Passive Attacks](#ch01.xhtml#sec1_6)\n\n    7.  [1.7 Legal\
+    \ Issues](#ch01.xhtml#sec1_7)\n\n    8.  [1.7.1 Patents](#ch01.xhtml#sec1_7_1)\n\
+    \n    9.  [1.7.2 Government Regulations](#ch01.xhtml#sec1_7_2)\n\n    10.  [1.8\
+    \ Some Network Basics](#ch01.xhtml#sec1_8)\n\n    11.  [1.8.1 Network Layers](#ch01.xhtml#sec1_8_1)\n\
+    \n    12.  [1.8.2 TCP and UDP Ports](#ch01.xhtml#sec1_8_2)\n\n    13.  [1.8.3\
+    \ DNS (Domain Name System)](#ch01.xhtml#sec1_8_3)\n\n    14.  [1.8.4 HTTP and\
+    \ URLs](#ch01.xhtml#sec1_8_4)\n\n    15.  [1.8.5 Web Cookies](#ch01.xhtml#sec1_8_5)\n\
+    \n    16.  [1.9 Names for Humans](#ch01.xhtml#sec1_9)\n\n    17.  [1.10 Authentication\
+    \ and Authorization](#ch01.xhtml#sec1_10)\n\n    18.  [1.10.1 ACL (Access Control\
+    \ List)](#ch01.xhtml#sec1_10_1)\n\n    19.  [1.10.2 Central Administration/Capabilities](#ch01.xhtml#sec1_10_2)\n\
+    \n    20.  [1.10.3 Groups](#ch01.xhtml#sec1_10_3)\n\n    21.  [1.10.4 Cross-Organizational\
+    \ and Nested Groups](#ch01.xhtml#sec1_10_4)\n\n    22.  [1.10.5 Roles](#ch01.xhtml#sec1_10_5)\n\
+    \n    23.  [1.11 Malware: Viruses, Worms, Trojan Horses](#ch01.xhtml#sec1_11)\n\
+    \n    24.  [1.11.1 Where Does Malware Come From?](#ch01.xhtml#sec1_11_1)\n\n \
+    \   25.  [1.11.2 Virus Checkers](#ch01.xhtml#sec1_11_2)\n\n    26.  [1.12 Security\
+    \ Gateway](#ch01.xhtml#sec1_12)\n\n    27.  [1.12.1 ...](#ch01.xhtml#sec1_12_1)\n\
+    \n## Acknowledgments\n\nDespite the controversies that crop up around security\
+    \ issues, it has been our experience that people in the security community are\
+    \ generally generous with their wisdom and time. It’s always a little scary thanking\
+    \ specific people, for fear we’ll leave someone out, but leaving everyone out\
+    \ seems wrong. It’s not even the fair thing to do, since some people would be\
+    \ more egregiously wronged by being left out than others.\n\nWe’d like to thank\
+    \ the reviewers of various chapters of this book, which include Luís T. A. N.\
+    \ Brandão, Bill Burr, Lisa Carnahan, Lily Chen, David Cooper, Joan Daemen, Michael\
+    \ Davidson, Morrie Dworkin, Ned Freed, Simson Garfinkel, Jonathan Katz, John Kelsey,\
+    \ Yi-Kai Liu, Kerry McKay, Carl Miller, Dustin Moody, Nicky ...\n\n## About the\
+    \ Authors\n\n**Charlie Kaufman** is currently Security Architect for Dell Storage\
+    \ Systems. Previously, he was the Security Architect for Microsoft Azure and before\
+    \ that for Lotus Notes. He has contributed to a number of IETF standards efforts\
+    \ including IPsec, S/MIME, and DNSSEC and served as a member of the Internet Architecture\
+    \ Board. He served on the National Academy of Sciences expert panel that wrote\
+    \ the book *Trust In Cyberspace*.\n\n**Radia Perlman** is currently a Fellow at\
+    \ Dell Technologies. She is known for her contributions to bridging (spanning\
+    \ tree algorithm), routing (link state routing), and security (distributed systems\
+    \ robust despite malicious participants). She’s the author of *Interconnections:\
+    \ Bridges, Routers, Switches, and Internetworking ...*\n\n## 1 Introduction\n\n\
+    It was a dark and stormy night. Somewhere in the distance a dog howled. A shiny\
+    \ object caught Alice’s eye. A diamond cufflink! Only one person in the household\
+    \ could afford diamond cufflinks! So it was the butler, after all! Alice had to\
+    \ warn Bob. But how could she get a message to him without alerting the butler?\
+    \ If she phoned Bob, the butler might listen on an extension. If she sent a carrier\
+    \ pigeon out the window with the message taped to its foot, how would Bob know\
+    \ it was Alice that was sending the message and not Trudy attempting to frame\
+    \ the butler because he spurned her advances?\n\nThat’s what this book is about.\
+    \ Not much character development for Alice and Bob, we’re afraid; nor do we really\
+    \ get to know the butler. But ...\n\n## 2 Introduction to Cryptography\n\n###\
+    \ 2.1 Introduction\n\nThe word *[cryptography](#gloss.xhtml#gloss_050)* comes\
+    \ from the Greek words κρυπτο (*hidden* or *secret*) and γραϕη (*writing*). So,\
+    \ cryptography is the art of secret writing. More generally, people think of cryptography\
+    \ as the art of mangling information into apparent unintelligibility in a manner\
+    \ allowing a secret method of unmangling. The basic service provided by cryptography\
+    \ is the ability to send information between participants in a way that prevents\
+    \ others from reading it. In this book, we will concentrate on the kind of cryptography\
+    \ that is based on representing information as numbers and mathematically manipulating\
+    \ those numbers. This kind of cryptography can provide other services, such as\n\
+    \n*   integrity checking—reassuring ...\n\n## 3 Secret Key Cryptography\n\n###\
+    \ 3.1 Introduction\n\nSecret key encryption schemes require that both the party\
+    \ that does the encryption and the party that does the decryption share a secret\
+    \ key. We will discuss two types of secret key encryption schemes:"
+  fmt: "\n![](graphics/9780136643524.jpg)\n\n# About This eBook\n\nePUB is an open,\
+    \ industry-standard format for eBooks. However, support of ePUB and its many features\
+    \ varies across reading devices and applications. Use your device or app settings\
+    \ to customize the presentation to your liking. Settings that you can customize\
+    \ often include font, font size, single or double column, landscape or portrait\
+    \ mode, and figures that you can click or tap to enlarge. For additional information\
+    \ about the settings and features on your reading device or app, visit the device\
+    \ manufacturer’s Web site.\n\nMany titles include programming code or configuration\
+    \ examples. To optimize the presentation of these elements, view the eBook in\
+    \ single-column, landscape mode and adjust the font size to the smallest setting.\
+    \ ...\n\n# PRIVATE Communication in a PUBLIC World\n\nThird Edition\n\nCharlie\
+    \ Kaufman • Radia Perlman\n\nMike Speciner • Ray Perlner\n\n![](graphics/pub.jpg)\n\
+    \n**Boston • Columbus • New York • San Francisco • Amsterdam • Cape Town Dubai\
+    \ • London • Madrid • Milan • Munich • Paris • Montreal • Toronto • Delhi • Mexico\
+    \ City São Paulo • Sydney • Hong Kong • Seoul • Singapore • Taipei • Tokyo**\n\
+    \nMany of the designations used by manufacturers and sellers to distinguish their\
+    \ products are claimed as trademarks. Where those designations appear in this\
+    \ book, and the publisher was aware of a trademark claim, the designations have\
+    \ been printed with initial capital letters or in all capitals.\n\nThe authors\
+    \ and publisher have taken care in the preparation of this book, but make no expressed\
+    \ or implied warranty of any kind and assume no responsibility for errors or omissions.\
+    \ No liability is assumed for incidental or consequential damages in connection\
+    \ with or arising out of the use of the information or programs contained herein.\n\
+    \nFor information about buying this title in bulk quantities, or for special sales\
+    \ opportunities (which may include ...\n\n# Pearson’s Commitment to Diversity,\
+    \ Equity, and Inclusion\n\nPearson is dedicated to creating bias-free content\
+    \ that reflects the diversity of all learners. We embrace the many dimensions\
+    \ of diversity, including but not limited to race, ethnicity, gender, socioeconomic\
+    \ status, ability, age, sexual orientation, and religious or political beliefs.\n\
+    \nEducation is a powerful force for equity and change in our world. It has the\
+    \ potential to deliver opportunities that improve lives and enable economic mobility.\
+    \ As we work with authors to create content for every product and service, we\
+    \ acknowledge our responsibility to demonstrate inclusivity and incorporate diverse\
+    \ scholarship so that everyone can achieve their potential through learning. As\
+    \ the world’s ...\n\n*Si spy net work, big fedjaw iog link kyxogy*\n\n# Contents\n\
+    \n1.  [Acknowledgments](#pref02.xhtml#pref02)\n2.  [About the Authors](#pref03.xhtml#pref03)\n\
+    3.  [CHAPTER 1 Introduction](#ch01.xhtml#ch01)\n    1.  [1.1 Opinions, Products](#ch01.xhtml#sec1_1)\n\
+    \    2.  [1.2 Roadmap to the Book](#ch01.xhtml#sec1_2)\n    3.  [1.3 Terminology](#ch01.xhtml#sec1_3)\n\
+    \    4.  [1.4 Notation](#ch01.xhtml#sec1_4)\n    5.  [1.5 Cryptographically Protected\
+    \ Sessions](#ch01.xhtml#sec1_5)\n    6.  [1.6 Active and Passive Attacks](#ch01.xhtml#sec1_6)\n\
+    \    7.  [1.7 Legal Issues](#ch01.xhtml#sec1_7)\n    8.  [1.7.1 Patents](#ch01.xhtml#sec1_7_1)\n\
+    \    9.  [1.7.2 Government Regulations](#ch01.xhtml#sec1_7_2)\n    10. [1.8 Some\
+    \ Network Basics](#ch01.xhtml#sec1_8)\n    11. [1.8.1 Network Layers](#ch01.xhtml#sec1_8_1)\n\
+    \    12. [1.8.2 TCP and UDP Ports](#ch01.xhtml#sec1_8_2)\n    13. [1.8.3 DNS (Domain\
+    \ Name System)](#ch01.xhtml#sec1_8_3)\n    14. [1.8.4 HTTP and URLs](#ch01.xhtml#sec1_8_4)\n\
+    \    15. [1.8.5 Web Cookies](#ch01.xhtml#sec1_8_5)\n    16. [1.9 Names for Humans](#ch01.xhtml#sec1_9)\n\
+    \    17. [1.10 Authentication and Authorization](#ch01.xhtml#sec1_10)\n    18.\
+    \ [1.10.1 ACL (Access Control List)](#ch01.xhtml#sec1_10_1)\n    19. [1.10.2 Central\
+    \ Administration/Capabilities](#ch01.xhtml#sec1_10_2)\n    20. [1.10.3 Groups](#ch01.xhtml#sec1_10_3)\n\
+    \    21. [1.10.4 Cross-Organizational and Nested Groups](#ch01.xhtml#sec1_10_4)\n\
+    \    22. [1.10.5 Roles](#ch01.xhtml#sec1_10_5)\n    23. [1.11 Malware: Viruses,\
+    \ Worms, Trojan Horses](#ch01.xhtml#sec1_11)\n    24. [1.11.1 Where Does Malware\
+    \ Come From?](#ch01.xhtml#sec1_11_1)\n    25. [1.11.2 Virus Checkers](#ch01.xhtml#sec1_11_2)\n\
+    \    26. [1.12 Security Gateway](#ch01.xhtml#sec1_12)\n    27. [1.12.1 ...](#ch01.xhtml#sec1_12_1)\n\
+    \n# Acknowledgments\n\nDespite the controversies that crop up around security\
+    \ issues, it has been our experience that people in the security community are\
+    \ generally generous with their wisdom and time. It’s always a little scary thanking\
+    \ specific people, for fear we’ll leave someone out, but leaving everyone out\
+    \ seems wrong. It’s not even the fair thing to do, since some people would be\
+    \ more egregiously wronged by being left out than others.\n\nWe’d like to thank\
+    \ the reviewers of various chapters of this book, which include Luís T. A. N.\
+    \ Brandão, Bill Burr, Lisa Carnahan, Lily Chen, David Cooper, Joan Daemen, Michael\
+    \ Davidson, Morrie Dworkin, Ned Freed, Simson Garfinkel, Jonathan Katz, John Kelsey,\
+    \ Yi-Kai Liu, Kerry McKay, Carl Miller, Dustin Moody, Nicky ...\n\n# About the\
+    \ Authors\n\n**Charlie Kaufman** is currently Security Architect for Dell Storage\
+    \ Systems. Previously, he was the Security Architect for Microsoft Azure and before\
+    \ that for Lotus Notes. He has contributed to a number of IETF standards efforts\
+    \ including IPsec, S/MIME, and DNSSEC and served as a member of the Internet Architecture\
+    \ Board. He served on the National Academy of Sciences expert panel that wrote\
+    \ the book *Trust In Cyberspace*.\n\n**Radia Perlman** is currently a Fellow at\
+    \ Dell Technologies. She is known for her contributions to bridging (spanning\
+    \ tree algorithm), routing (link state routing), and security (distributed systems\
+    \ robust despite malicious participants). She’s the author of *Interconnections:\
+    \ Bridges, Routers, Switches, and Internetworking ...*\n\n# 1 Introduction\n\n\
+    It was a dark and stormy night. Somewhere in the distance a dog howled. A shiny\
+    \ object caught Alice’s eye. A diamond cufflink! Only one person in the household\
+    \ could afford diamond cufflinks! So it was the butler, after all! Alice had to\
+    \ warn Bob. But how could she get a message to him without alerting the butler?\
+    \ If she phoned Bob, the butler might listen on an extension. If she sent a carrier\
+    \ pigeon out the window with the message taped to its foot, how would Bob know\
+    \ it was Alice that was sending the message and not Trudy attempting to frame\
+    \ the butler because he spurned her advances?\n\nThat’s what this book is about.\
+    \ Not much character development for Alice and Bob, we’re afraid; nor do we really\
+    \ get to know the butler. But ...\n\n# 2 Introduction to Cryptography\n\n## 2.1\
+    \ Introduction\n\nThe word *[cryptography](#gloss.xhtml#gloss_050)* comes from\
+    \ the Greek words κρυπτο (*hidden* or *secret*) and γραϕη (*writing*). So, cryptography\
+    \ is the art of secret writing. More generally, people think of cryptography as\
+    \ the art of mangling information into apparent unintelligibility in a manner\
+    \ allowing a secret method of unmangling. The basic service provided by cryptography\
+    \ is the ability to send information between participants in a way that prevents\
+    \ others from reading it. In this book, we will concentrate on the kind of cryptography\
+    \ that is based on representing information as numbers and mathematically manipulating\
+    \ those numbers. This kind of cryptography can provide other services, such as\n\
+    \n*   integrity checking—reassuring ...\n\n# 3 Secret Key Cryptography\n\n## 3.1\
+    \ Introduction\n\nSecret key encryption schemes require that both the party that\
+    \ does the encryption and the party that does the decryption share a secret key.\
+    \ We will discuss two types of secret key encryption schemes:\n"
+  trans: "\n![](img/9780136643524.jpg)\n\n# 关于本书\n\nePUB 是一种开放的、行业标准的电子书格式。然而，不同阅读设备和应用程序对\
+    \ ePUB 及其诸多功能的支持程度各不相同。请使用您的设备或应用程序设置来自定义呈现效果，以符合您的喜好。通常可自定义的设置包括字体、字号、单栏或双栏、横向或纵向模式，以及可点击或点按放大的图表。有关您的阅读设备或应用程序的设置和功能的更多信息，请访问设备制造商的网站。\n\
+    \n许多书目包含编程代码或配置示例。为了优化这些元素的呈现效果，请在单栏、横向模式下查看电子书，并将字号调整至最小设置。 ...\n\n# 公共世界中的私密通信\n\
+    \n第三版\n\nCharlie Kaufman • Radia Perlman\n\nMike Speciner • Ray Perlner\n\n![](img/pub.jpg)\n\
+    \n**波士顿 • 哥伦布 • 纽约 • 旧金山 • 阿姆斯特丹 • 开普敦 迪拜 • 伦敦 • 马德里 • 米兰 • 慕尼黑 • 巴黎 • 蒙特利尔 •\
+    \ 多伦多 • 德里 • 墨西哥城 圣保罗 • 悉尼 • 香港 • 首尔 • 新加坡 • 台北 • 东京**\n\n制造商和销售商用于区分其产品的许多名称均声称拥有商标权。凡本书中出现的此类名称，且出版商知晓其商标权声明的，均已以首字母大写或全大写形式印刷。\n\
+    \n作者和出版商在编写本书时已尽职尽责，但不对任何种类的明示或暗示担保负责，也不承担任何错误或遗漏的责任。对于因使用本书所含信息或程序而引起的或与之相关的附带损害或后果性损害，不承担任何责任。\n\
+    \n有关批量购买此书或特殊销售机会（可能包括 ...）的信息\n\n# Pearson 对多元化、公平与包容的承诺\n\nPearson 致力于创建无偏见的内容，以反映所有学习者的多样性。我们拥抱多元化的诸多维度，包括但不限于种族、民族、性别、社会经济地位、能力、年龄、性取向以及宗教或政治信仰。\n\
+    \n教育是世界上促进公平与变革的强大力量。它有潜力提供改善生活和实现经济流动的机会。在与作者合作为每一款产品和服务创建内容的过程中，我们认识到有责任体现包容性并融合多元化的学术成果，以便每个人都能通过学习实现其潜能。作为世界领先的\
+    \ ...\n\n*Si spy net work, big fedjaw iog link kyxogy*\n\n# 目录\n\n1.  致谢\n2. \
+    \ 作者简介\n3.  第 1 章 简介\n    1.  1.1 观点、产品\n    2.  1.2 本书路线图\n    3.  1.3 术语\n \
+    \   4.  1.4 符号表示法\n    5.  1.5 受加密保护的会话\n    6.  1.6 主动攻击和被动攻击\n    7.  1.7 法律问题\n\
+    \    8.  1.7.1 专利\n    9.  1.7.2 政府法规\n    10. 1.8 网络基础知识\n    11. 1.8.1 网络层\n\
+    \    12. 1.8.2 TCP 和 UDP 端口\n    13. 1.8.3 DNS（域名系统）\n    14. 1.8.4 HTTP 和 URL\n\
+    \    15. 1.8.5 Web Cookie\n    16. 1.9 面向人类的名称\n    17. 1.10 认证和授权\n    18. 1.10.1\
+    \ ACL（访问控制列表）\n    19. 1.10.2 集中管理/能力\n    20. 1.10.3 组\n    21. 1.10.4 跨组织和嵌套组\n\
+    \    22. 1.10.5 角色\n    23. 1.11 恶意软件：病毒、蠕虫、特洛伊木马\n    24. 1.11.1 恶意软件从何而来？\n\
+    \    25. 1.11.2 杀毒软件\n    26. 1.12 安全网关\n    27. 1.12.1 ...\n\n# 致谢\n\n尽管安全问题周围经常出现争议，但根据我们的经验，安全社区的人们通常乐于分享他们的智慧和时间。专门感谢特定的人总是有点令人生畏，因为担心会漏掉某人，但完全不提名字似乎也不妥。这甚至算不上公平，因为被遗漏对某些人造成的伤害比对其他人更大。\n\
+    \n我们要感谢本书各章节的审阅者，其中包括 Luís T. A. N. Brandão、Bill Burr、Lisa Carnahan、Lily Chen、David\
+    \ Cooper、Joan Daemen、Michael Davidson、Morrie Dworkin、Ned Freed、Simson Garfinkel、Jonathan\
+    \ Katz、John Kelsey、Yi-Kai Liu、Kerry McKay、Carl Miller、Dustin Moody、Nicky ...\n\
+    \n# 作者简介\n\n**Charlie Kaufman** 目前担任 Dell 存储系统的安全架构师。此前，他曾担任 Microsoft Azure 的安全架构师，在此之前是\
+    \ Lotus Notes 的安全架构师。他为多项 IETF 标准化工作做出了贡献，包括 IPsec、S/MIME 和 DNSSEC，并曾担任互联网架构委员会成员。他曾在撰写《Trust\
+    \ In Cyberspace》一书的美国国家科学院专家组任职。\n\n**Radia Perlman** 目前担任 Dell Technologies 研究员。她因在网桥（生成树算法）、路由（链路状态路由）和安全（能抵御恶意参与者的分布式系统）方面的贡献而闻名。她是《Interconnections:\
+    \ Bridges, Routers, Switches, and Internetworking ...》的作者。\n\n# 1 简介\n\n那是一个黑暗而多风暴的夜晚。远处传来狗吠声。一个闪亮的物体引起了\
+    \ Alice 的注意。一枚钻石袖扣！家里只有一个人买得起钻石袖扣！所以果然是管家干的！Alice 必须警告 Bob。但她如何能在不惊动管家的情况下给 Bob\
+    \ 发送消息呢？如果她给 Bob 打电话，管家可能会在分机上偷听。如果她把贴有消息的信鸽从窗户放飞，Bob 怎么知道是 Alice 发送的消息，而不是 Trudy\
+    \ 试图陷害管家，因为他拒绝了她的示好？\n\n这就是本书的内容。很遗憾，Alice 和 Bob 的人物形象并没有太多发展；我们也不太了解管家。但 ...\n\
+    \n# 2 密码学导论\n\n## 2.1 简介\n\n*密码学* 一词源自希腊语 κρυπτο（*隐藏*或*秘密*）和 γραϕη（*书写*）。因此，密码学是秘密书写的艺术。更广泛地说，人们认为密码学是以一种允许通过秘密方法还原的方式，将信息加密成看似不可理解的形式的艺术。密码学提供的基本服务是让参与者之间能够发送信息，同时防止他人阅读。在本书中，我们将重点介绍基于将信息表示为数字并对这些数字进行数学操作的密码学。这种密码学可以提供其他服务，例如\n\
+    \n*   完整性检查——确保 ...\n\n# 3 密钥密码学\n\n## 3.1 简介\n\n密钥加密方案要求加密方和解密方共享一个密钥。我们将讨论两类密钥加密方案：\n\
+    \n"
+  toc: []
+- raw: '*   **block cipher**. This takes as input a secret key and a plaintext block
+    of fixed size (older ciphers used 64-bit blocks, modern ciphers use 128-bit blocks).
+    It produces a ciphertext block the same size as the plaintext block. To encrypt
+    messages larger than the blocksize, the block cipher is used iteratively with
+    algorithms called *modes of operation* that are the subject of the next chapter.
+    A block cipher also has a decryption operation that does the reverse computation.
+
+
+    *   **stream cipher**. This uses the key ...
+
+
+    ## 4 Modes of Operation
+
+
+    ### 4.1 Introduction
+
+
+    We’ve covered how to encrypt a 128-bit block with AES, or a 64-bit block with
+    DES, and these primitives have the nice property that if an attacker changes any
+    part of the ciphertext, the result of a decryption will be effectively a random
+    number. Sadly, most useful messages are longer than 128 bits. **Modes of operation**
+    are techniques for encrypting arbitrary-sized messages using the block encryption
+    algorithms as primitives to be applied iteratively. There are additional desirable
+    properties that such algorithms can have. If we send the same message multiple
+    times, it would be desirable to have the encrypted message be different each time
+    so that an eavesdropper can’t tell that we’re sending the same message ...
+
+
+    ## 5 Cryptographic Hashes
+
+
+    ### 5.1 Introduction
+
+
+    A hash function inputs an arbitrary-sized bitstring and outputs a fixed-size bitstring,
+    ideally so that all output values are equally likely. **A cryptographic hash**
+    (also known as a **[message digest](#gloss.xhtml#gloss_112)**) has some extra
+    security properties:
+
+
+    *   **preimage resistance**: It should be computationally infeasible to find a
+    message that has a given pre-specified hash.
+
+
+    *   **collision resistance**: It should be computationally infeasible to find
+    two messages that have the same hash.
+
+
+    *   **second preimage resistance**: It should be computationally infeasible to
+    find a second message that has the same hash as a given message.
+
+
+    The term *message digest* was originally more popular, but *[hash](#gloss.xhtml#gloss_084)*
+    is more commonly used today. As evidence that the world ...
+
+
+    ## 6 First-Generation Public Key Algorithms
+
+
+    ### 6.1 Introduction
+
+
+    This chapter describes the most common public key algorithms that have been deployed
+    as of 2022 and that will probably remain the most common public key algorithms
+    in use for several years. As we will show in [Chapter 7](#ch07.xhtml#ch07) *[Quantum
+    Computing](#ch07.xhtml#ch07)*, if someone could build a quantum computer of sufficient
+    size, the algorithms in this chapter would no longer be secure. The world will
+    soon be converting to different public key algorithms (see [Chapter 8](#ch08.xhtml#ch08)
+    *[Post-Quantum Cryptography](#ch08.xhtml#ch08)*). But the current algorithms,
+    the focus of this chapter, are widely deployed and fascinating to understand.
+
+
+    Public key algorithms are a motley crew. All the hash algorithms do the same thing—they
+    take a message and perform an ...
+
+
+    ## 7 Quantum Computing
+
+
+    ### 7.1 What Is a Quantum Computer?
+
+
+    Quantum mechanics predicts that it should be possible to build a computer that
+    can do certain calculations much faster than would be possible on a conventional
+    (classical) computer. Aspects of quantum mechanics may seem nonintuitive, but
+    all evidence supports it. In this chapter, we describe how a quantum computer
+    differs from a classical computer and give intuitive descriptions of the quantum
+    algorithms most relevant to cryptography.
+
+
+    There are entire books about quantum mechanics. Our goal isn’t to pack years of
+    physics and math into a few pages but to give some insight into the concepts,
+    terminology, and notation, as well as the algorithms that run on quantum computers.
+    And for readers who ...
+
+
+    ## 8 Post-Quantum Cryptography
+
+
+    As we described in [Chapter 7](#ch07.xhtml#ch07) *[Quantum Computing](#ch07.xhtml#ch07)*,
+    a sufficiently large quantum computer implementing Shor’s algorithm would break
+    our currently deployed public key algorithms. However, long before that can happen,
+    the world will (hopefully) have converted to replacement algorithms. The replacement
+    algorithms will be based on math problems that (hopefully) not even a combination
+    of classical and quantum computers would be able to solve in a reasonable amount
+    of time.
+
+
+    These new algorithms are known by several equivalent names: quantum-resistant,
+    quantum-safe, or post-quantum cryptography (PQC). The world seems to have settled
+    on the term *post-quantum*, so that is what we will use, even though we have noticed
+    that the term ...
+
+
+    ## 9 Authentication of People
+
+
+    *Humans are incapable of storing high-quality cryptographic keys and they have
+    unacceptable speed and accuracy when performing cryptographic operations. They
+    are also large, expensive to maintain, difficult to manage, and they pollute the
+    environment. It is astonishing that these devices continue to be manufactured
+    and deployed, but they are sufficiently pervasive that we must design our systems
+    around their limitations.*
+
+
+    —Radia Perlman
+
+
+    Authentication is the process of reliably verifying the identity of someone (or
+    something). There are lots of examples of authentication in human interaction.
+    People who know you can recognize you based on your appearance or voice. A guard
+    might authenticate you by comparing you with ...
+
+
+    ## 10 Trusted Intermediaries
+
+
+    ### 10.1 Introduction
+
+
+    If nodes Alice and Bob want to be able to communicate securely, they need to know
+    keys for each other. Configuring each node with keys for every other node will
+    not scale beyond a small number, so a **trusted third party** (someone that Alice
+    and Bob trust) is used for introducing Alice and Bob to each other.
+
+
+    In this chapter we describe different types of systems based on trusted third
+    parties. One is a system that uses only secret keys, in which case the trusted
+    third party is usually known as a **KDC** (**Key Distribution Center**). In a
+    public key system, the trusted third party is usually known as a **[certification
+    authority](#gloss.xhtml#gloss_032)** (**[CA](#gloss.xhtml#gloss_028)**), and it
+    signs **[certificate](#gloss.xhtml#gloss_030)**s, which assert things such as
+    the mapping between the ...
+
+
+    ## 11 Communication Session Establishment
+
+
+    *Knock Knock!*
+
+
+    *Who’s there?*
+
+
+    *Alice.*
+
+
+    *Alice who?*
+
+
+    …and you’ll have to read on to find secure ways of continuing…
+
+
+    This chapter analyzes various considerations when designing real-time communication
+    handshakes. We start with very simple example handshakes that do authentication
+    only (rather than also creating a session key and cryptographically protecting
+    the data). These types of protocols are useful for simple scenarios, such as opening
+    a door, and were common when people just wanted to replace sending a password
+    in the clear with the least amount of effort. Even though most Internet communication
+    today is done with TLS, it is still instructive to start with analysis of very
+    simple handshakes. The second half ...
+
+
+    ## 12 IPsec
+
+
+    As we said in [Chapter 11](#ch11.xhtml#ch11) *[Communication Session Establishment](#ch11.xhtml#ch11)*,
+    IPsec is a secure session protocol that runs on top of network layer 3 (see§[11.7](#ch11.xhtml#sec11_7)
+    *[What Layer?](#ch11.xhtml#sec11_7)*). The implication of running directly on
+    layer 3 (*e.g.*, IP) is that each packet is independently cryptographically protected.
+    IPsec does not guarantee that all packets will arrive or that those that do arrive
+    will be delivered in the order they were sent. IPsec only guarantees that packets
+    that do not meet the integrity check will be discarded, and packets that are duplicates
+    will be discarded. This design makes it easy to implement in network adapters.
+    IPsec does not need to buffer packets. IPsec can process and deliver packets independently,
+    even if they arrive out of order. IPsec ...
+
+
+    ## 13 SSL/TLS and SSH'
+  fmt: '
+
+    ## Block Cipher
+
+
+    **block cipher**. This takes as input a secret key and a plaintext block of fixed
+    size (older ciphers used 64-bit blocks, modern ciphers use 128-bit blocks). It
+    produces a ciphertext block the same size as the plaintext block. To encrypt messages
+    larger than the blocksize, the block cipher is used iteratively with algorithms
+    called *modes of operation* that are the subject of the next chapter. A block
+    cipher also has a decryption operation that does the reverse computation.
+
+
+    ## Stream Cipher
+
+
+    **stream cipher**. This uses the key ...
+
+
+    ## 4 Modes of Operation
+
+
+    ### 4.1 Introduction
+
+
+    We’ve covered how to encrypt a 128-bit block with AES, or a 64-bit block with
+    DES, and these primitives have the nice property that if an attacker changes any
+    part of the ciphertext, the result of a decryption will be effectively a random
+    number. Sadly, most useful messages are longer than 128 bits. **Modes of operation**
+    are techniques for encrypting arbitrary-sized messages using the block encryption
+    algorithms as primitives to be applied iteratively. There are additional desirable
+    properties that such algorithms can have. If we send the same message multiple
+    times, it would be desirable to have the encrypted message be different each time
+    so that an eavesdropper can’t tell that we’re sending the same message ...
+
+
+    ## 5 Cryptographic Hashes
+
+
+    ### 5.1 Introduction
+
+
+    A hash function inputs an arbitrary-sized bitstring and outputs a fixed-size bitstring,
+    ideally so that all output values are equally likely. **A cryptographic hash**
+    (also known as a **[message digest](#gloss.xhtml#gloss_112)**) has some extra
+    security properties:
+
+
+    *   **preimage resistance**: It should be computationally infeasible to find a
+    message that has a given pre-specified hash.
+
+    *   **collision resistance**: It should be computationally infeasible to find
+    two messages that have the same hash.
+
+    *   **second preimage resistance**: It should be computationally infeasible to
+    find a second message that has the same hash as a given message.
+
+
+    The term *message digest* was originally more popular, but *[hash](#gloss.xhtml#gloss_084)*
+    is more commonly used today. As evidence that the world ...
+
+
+    ## 6 First-Generation Public Key Algorithms
+
+
+    ### 6.1 Introduction
+
+
+    This chapter describes the most common public key algorithms that have been deployed
+    as of 2022 and that will probably remain the most common public key algorithms
+    in use for several years. As we will show in [Chapter 7](#ch07.xhtml#ch07) *[Quantum
+    Computing](#ch07.xhtml#ch07)*, if someone could build a quantum computer of sufficient
+    size, the algorithms in this chapter would no longer be secure. The world will
+    soon be converting to different public key algorithms (see [Chapter 8](#ch08.xhtml#ch08)
+    *[Post-Quantum Cryptography](#ch08.xhtml#ch08)*). But the current algorithms,
+    the focus of this chapter, are widely deployed and fascinating to understand.
+
+
+    Public key algorithms are a motley crew. All the hash algorithms do the same thing—they
+    take a message and perform an ...
+
+
+    ## 7 Quantum Computing
+
+
+    ### 7.1 What Is a Quantum Computer?
+
+
+    Quantum mechanics predicts that it should be possible to build a computer that
+    can do certain calculations much faster than would be possible on a conventional
+    (classical) computer. Aspects of quantum mechanics may seem nonintuitive, but
+    all evidence supports it. In this chapter, we describe how a quantum computer
+    differs from a classical computer and give intuitive descriptions of the quantum
+    algorithms most relevant to cryptography.
+
+
+    There are entire books about quantum mechanics. Our goal isn’t to pack years of
+    physics and math into a few pages but to give some insight into the concepts,
+    terminology, and notation, as well as the algorithms that run on quantum computers.
+    And for readers who ...
+
+
+    ## 8 Post-Quantum Cryptography
+
+
+    As we described in [Chapter 7](#ch07.xhtml#ch07) *[Quantum Computing](#ch07.xhtml#ch07)*,
+    a sufficiently large quantum computer implementing Shor’s algorithm would break
+    our currently deployed public key algorithms. However, long before that can happen,
+    the world will (hopefully) have converted to replacement algorithms. The replacement
+    algorithms will be based on math problems that (hopefully) not even a combination
+    of classical and quantum computers would be able to solve in a reasonable amount
+    of time.
+
+
+    These new algorithms are known by several equivalent names: quantum-resistant,
+    quantum-safe, or post-quantum cryptography (PQC). The world seems to have settled
+    on the term *post-quantum*, so that is what we will use, even though we have noticed
+    that the term ...
+
+
+    ## 9 Authentication of People
+
+
+    > *Humans are incapable of storing high-quality cryptographic keys and they have
+    unacceptable speed and accuracy when performing cryptographic operations. They
+    are also large, expensive to maintain, difficult to manage, and they pollute the
+    environment. It is astonishing that these devices continue to be manufactured
+    and deployed, but they are sufficiently pervasive that we must design our systems
+    around their limitations.*
+
+    >
+
+    > —Radia Perlman
+
+
+    Authentication is the process of reliably verifying the identity of someone (or
+    something). There are lots of examples of authentication in human interaction.
+    People who know you can recognize you based on your appearance or voice. A guard
+    might authenticate you by comparing you with ...
+
+
+    ## 10 Trusted Intermediaries
+
+
+    ### 10.1 Introduction
+
+
+    If nodes Alice and Bob want to be able to communicate securely, they need to know
+    keys for each other. Configuring each node with keys for every other node will
+    not scale beyond a small number, so a **trusted third party** (someone that Alice
+    and Bob trust) is used for introducing Alice and Bob to each other.
+
+
+    In this chapter we describe different types of systems based on trusted third
+    parties. One is a system that uses only secret keys, in which case the trusted
+    third party is usually known as a **KDC** (**Key Distribution Center**). In a
+    public key system, the trusted third party is usually known as a **[certification
+    authority](#gloss.xhtml#gloss_032)** (**[CA](#gloss.xhtml#gloss_028)**), and it
+    signs **[certificate](#gloss.xhtml#gloss_030)**s, which assert things such as
+    the mapping between the ...
+
+
+    ## 11 Communication Session Establishment
+
+
+    > *Knock Knock!*
+
+    >
+
+    > *Who’s there?*
+
+    >
+
+    > *Alice.*
+
+    >
+
+    > *Alice who?*
+
+    >
+
+    > …and you’ll have to read on to find secure ways of continuing…
+
+
+    This chapter analyzes various considerations when designing real-time communication
+    handshakes. We start with very simple example handshakes that do authentication
+    only (rather than also creating a session key and cryptographically protecting
+    the data). These types of protocols are useful for simple scenarios, such as opening
+    a door, and were common when people just wanted to replace sending a password
+    in the clear with the least amount of effort. Even though most Internet communication
+    today is done with TLS, it is still instructive to start with analysis of very
+    simple handshakes. The second half ...
+
+
+    ## 12 IPsec
+
+
+    As we said in [Chapter 11](#ch11.xhtml#ch11) *[Communication Session Establishment](#ch11.xhtml#ch11)*,
+    IPsec is a secure session protocol that runs on top of network layer 3 (see§[11.7](#ch11.xhtml#sec11_7)
+    *[What Layer?](#ch11.xhtml#sec11_7)*). The implication of running directly on
+    layer 3 (*e.g.*, IP) is that each packet is independently cryptographically protected.
+    IPsec does not guarantee that all packets will arrive or that those that do arrive
+    will be delivered in the order they were sent. IPsec only guarantees that packets
+    that do not meet the integrity check will be discarded, and packets that are duplicates
+    will be discarded. This design makes it easy to implement in network adapters.
+    IPsec does not need to buffer packets. IPsec can process and deliver packets independently,
+    even if they arrive out of order. IPsec ...
+
+
+    ## 13 SSL/TLS and SSH
+
+    '
+  trans: '
+
+
+    ## 分组密码
+
+
+    **分组密码**。它以密钥和固定大小的明文分组作为输入（旧密码使用 64 位分组，现代密码使用 128 位分组）。它生成的密文分组与明文分组大小相同。要加密大于分组大小的消息，分组密码会与称为*工作模式*的算法一起迭代使用，这是下一章的主题。分组密码还具有解密操作，执行反向计算。
+
+
+    ## 流密码
+
+
+    **流密码**。它使用密钥……
+
+
+    ## 4 工作模式
+
+
+    ### 4.1 简介
+
+
+    我们已经介绍了如何使用 AES 加密 128 位分组，或使用 DES 加密 64 位分组，这些原语有一个很好的特性：如果攻击者修改了密文的任何部分，解密的结果实际上将是一个随机数。遗憾的是，大多数有用的消息都超过
+    128 位。**工作模式**是使用分组加密算法作为原语进行迭代应用，从而加密任意大小消息的技术。此类算法可以具有其他理想特性。如果我们多次发送相同的消息，最好每次加密后的消息都不同，这样窃听者就无法判断我们在发送相同的消息……
+
+
+    ## 5 密码学哈希
+
+
+    ### 5.1 简介
+
+
+    哈希函数输入任意大小的比特串，输出固定大小的比特串，理想情况下所有输出值出现的概率均等。**密码学哈希**（也称为**消息摘要**）具有一些额外的安全属性：
+
+
+    *   **原像抗性**：给定一个预先指定的哈希值，应该无法在计算上找到具有该哈希值的消息。
+
+    *   **抗碰撞性**：应该无法在计算上找到具有相同哈希值的两条消息。
+
+    *   **第二原像抗性**：给定一条消息，应该无法在计算上找到具有相同哈希值的第二条消息。
+
+
+    术语*消息摘要*最初更流行，但如今*哈希*更常用。作为证据表明世界……
+
+
+    ## 6 第一代公钥算法
+
+
+    ### 6.1 简介
+
+
+    本章介绍截至 2022 年已部署的最常见公钥算法，这些算法在未来几年内可能仍将是使用中最常见的公钥算法。正如我们将在第 7 章 *量子计算* 中所示，如果有人能够构建足够规模的量子计算机，本章中的算法将不再安全。世界很快将转向不同的公钥算法（参见第
+    8 章 *后量子密码学*)。但本章重点介绍的当前算法已广泛部署，且非常值得理解。
+
+
+    公钥算法是一群形形色色的算法。所有哈希算法做的都是同一件事——它们接收一条消息并执行……
+
+
+    ## 7 量子计算
+
+
+    ### 7.1 什么是量子计算机？
+
+
+    量子力学预测，应该有可能构建一种计算机，能以比传统（经典）计算机快得多的速度进行某些计算。量子力学的某些方面可能看似违反直觉，但所有证据都支持它。在本章中，我们将描述量子计算机与经典计算机的区别，并直观地介绍与密码学最相关的量子算法。
+
+
+    关于量子力学有整整一架子的书。我们的目标不是将数年的物理和数学知识塞进几页纸里，而是让读者对概念、术语和符号，以及在量子计算机上运行的算法有所了解。对于那些……的读者来说……
+
+
+    ## 8 后量子密码学
+
+
+    正如我们在第 7 章 *量子计算* 中所述，实现 Shor 算法的足够大规模的量子计算机将攻破我们当前部署的公钥算法。然而，在发生这种情况之前很久，世界（希望）将已经转向替代算法。替代算法将基于（希望）即使是经典和量子计算机的组合也无法在合理时间内解决的数学问题。
+
+
+    这些新算法有几个同义名称：抗量子、量子安全或后量子密码学（PQC）。世界似乎已确定使用*后量子*这一术语，因此我们也将使用该术语，尽管我们注意到该术语……
+
+
+    ## 9 人员认证
+
+
+    > *人类无法存储高质量的加密密钥，在执行加密操作时速度和准确性都不可接受。他们还体积庞大、维护成本高、难以管理，并会污染环境。令人惊讶的是，这些设备仍在持续制造和部署，但它们普及程度足够高，以至于我们必须围绕其局限性来设计系统。*
+
+    >
+
+    > ——Radia Perlman
+
+
+    认证是可靠验证某人（或某物）身份的过程。人类互动中有很多认证的例子。认识你的人可以根据你的外貌或声音认出你。卫兵可能会通过将你与……进行比较来认证你。
+
+
+    ## 10 可信中介
+
+
+    ### 10.1 简介
+
+
+    如果节点 Alice 和 Bob 想要安全通信，它们需要知道彼此的密钥。为每个节点配置与其他所有节点的密钥无法扩展到少量节点之外，因此需要**可信第三方**（Alice
+    和 Bob 都信任的人）来为 Alice 和 Bob 互相介绍。
+
+
+    在本章中，我们将介绍基于可信第三方的不同类型系统。一种是仅使用密钥的系统，在这种情况下，可信第三方通常称为**KDC**（**密钥分发中心**）。在公钥系统中，可信第三方通常称为**认证机构**（**CA**），它签署**证书**，断言诸如……之类的映射关系。
+
+
+    ## 11 通信会话建立
+
+
+    > *敲敲！*
+
+    >
+
+    > *谁啊？*
+
+    >
+
+    > *Alice。*
+
+    >
+
+    > *Alice 谁？*
+
+    >
+
+    > ……你得继续往下读才能找到安全的延续方式……
+
+
+    本章分析设计实时通信握手时的各种考量。我们从仅进行认证（而不是同时创建会话密钥并对数据进行加密保护）的非常简单的示例握手开始。这类协议适用于简单场景，例如开门，在人们只想以最小的代价用更安全的方式替代明文发送密码时很常见。尽管当今大多数互联网通信都通过
+    TLS 完成，但从分析非常简单的握手开始仍然很有启发性。后半部分……
+
+
+    ## 12 IPsec
+
+
+    正如我们在第 11 章 *通信会话建立* 中所述，IPsec 是一种运行在网络层第 3 层之上的安全会话协议（参见§11.7 *哪一层？*）。直接运行在第
+    3 层（*例如*，IP）上的含义是每个数据包都独立受到加密保护。IPsec 不保证所有数据包都会到达，也不保证到达的数据包会按发送顺序交付。IPsec 只保证未通过完整性检查的数据包将被丢弃，重复的数据包将被丢弃。这种设计使其易于在网络适配器中实现。IPsec
+    不需要缓冲数据包。即使数据包乱序到达，IPsec 也能独立处理和交付数据包。IPsec……
+
+
+    ## 13 SSL/TLS 和 SSH
+
+
+    '
+  toc: []
+- raw: 'The concepts in TLS (Transport Layer Security) have been covered in [Chapter
+    11](#ch11.xhtml#ch11) *[Communication Session Establishment](#ch11.xhtml#ch11)*,
+    and the concepts are similar to IPsec. Alice and Bob authenticate and establish
+    cryptographic keys for the session.
+
+
+    TLS grew out of Netscape’s SSL (Secure Sockets Layer) protocol. When the IETF
+    took it over to improve and standardize it, they renamed it TLS (Transport Layer
+    Security). Since being called TLS, it has gone through three revisions, so the
+    latest version is 1.3 (RFC 8446). There is no real logic to why the TLS versions
+    were named TLS 1.0, TLS 1.1, TLS 1.2, and TLS 1.3 rather than TLS version 1, TLS
+    version 2, TLS version 3, and TLS version 4 or even why TLS 1.0 was not named
+    SSL version 4. Most of ...
+
+
+    ## 14 Electronic Mail Security
+
+
+    The first thing that springs to mind with the phrase *email security* is a message
+    from Alice to Bob signed by Alice with her private key and encrypted with Bob’s
+    public key. Lotus Notes had a proprietary, widely deployed implementation of encrypted
+    email in 1989. PGP was created and released as open source by Phil Zimmermann
+    in 1991. Various email standards for user-to-user signed and encrypted email were
+    developed over twenty years ago, including
+
+
+    *   PEM \[RFC 1421—Feb 1993\]
+
+
+    *   PGP/GPG \[RFC 2015—October 1996\]
+
+
+    *   S/MIME \[RFC 2311—March 1998\]
+
+
+    In the early 1990s, there were deployment barriers such as export controls and
+    patents, but these have been resolved. So it is somewhat astonishing that none
+    of these, or anything implementing ...
+
+
+    ## 15 Electronic Money
+
+
+    Money has a long and storied history as a medium of exchange and a mechanism for
+    measuring and storing wealth. Nations control the minting of coins, the printing
+    of paper currency, and the quantity of money in circulation, trying hard through
+    physical means to avoid counterfeit bills and coins. Nowadays, almost all but
+    the smallest payments are made using credit cards, checks, and electronic funds
+    transfers. Large cash transactions (suitcases full of money) are usually used
+    only for illicit or illegal transactions.
+
+
+    Forms of electronic money have been common for many years. The Internet is used
+    to manage bank accounts, make purchases with credit cards, do wire transfers,
+    and pay bills.
+
+
+    New protocols for dealing with money, ...
+
+
+    ## 16Cryptographic Tricks
+
+
+    We’ve covered the major cryptographic building blocks, such as secret key encryption
+    and integrity checks, public key encryption and signatures, and hashes/message
+    digests. In this chapter we’ll talk about some other functions. We won’t go into
+    great detail about the math, or proofs, but we will at least demystify what these
+    functions are attempting to do, give some intuition about how they accomplish
+    it, and give examples of those that are used in actual real-world protocols.
+
+
+    ### 16.1 Secret Sharing
+
+
+    Secret sharing is a way for someone, say, Alice, to store a piece of information,
+    say, *S*, that must be kept secret from all except Alice but must also be retrievable
+    by Alice. There is a tradeoff between robustly storing *S* so ...
+
+
+    ## 17 Folklore
+
+
+    *Whenever I made a roast, I always started off by cutting off the ends, just like
+    I’d seen my grandmother do. Someone once asked me why I did it, and I realized
+    I had no idea. It had never occurred to me to wonder. It was just the way it was
+    done. Eventually I remembered to ask my grandmother. “Why do you always cut off
+    the ends of a roast?” She answered “Because my pan is small, and otherwise the
+    roasts would not fit.”*
+
+
+    —anonymous
+
+
+    Many things have become accepted security practice. Most of these are to avoid
+    problems that could be avoided in other ways if you really knew what you were
+    doing. It’s fine to get in the habit of doing these things, but it would be nice
+    to know at least *why* you’re doing them. A lot of these issues have ...
+
+
+    ## Glossary
+
+
+    **access control—**a mechanism for limiting use of some resource to authorized
+    users.
+
+
+    **access control set—**a synonym for access control list; some people make the
+    distinction that the order of entries in an access control set cannot be significant,
+    while the order of entries in an access control list might be.
+
+
+    **ACL (access control list)—**a data structure associated with a resource that
+    specifies the authorized users.
+
+
+    **active attack—**one in which an attacker does something other than simply eavesdropping,
+    for instance, transmits data, modifies data, or subverts the system so that it
+    can impersonate an address.
+
+
+    **ancilla—**a qubit that is used by a quantum computation but which is initialized
+    to a value independent of the computations’s input.
+
+
+    **ANSI— ...**
+
+
+    ## Math
+
+
+    This supplement was written solely by me[3] (Mike Speciner) with the intention
+    of providing material to expand and deepen your knowledge of the mathematics and
+    algorithms behind many of the techniques explained in the book. You should be
+    able to understand the rest of the book without this knowledge, but I[3] think
+    it could still be helpful, or at least enlightening. This supplement, including
+    the homework problems: [https://github.com/ms0/docs/blob/main/math.pdf](https://github.com/ms0/docs/blob/main/math.pdf).
+
+
+    ### M.1 Introduction
+
+
+    Computing technology has encouraged us to turn pretty much everything into bits.
+    We use bits to represent numbers, text, images, audio, video, objects, scents,
+    and even more abstract concepts like spacetime, quantum fields, and money. For
+    a few of these, the representation ...
+
+
+    ## Bibliography
+
+
+    AGRA04 Agrawal, M., Kayal, N., Saxena, N., “PRIMES is in P”, *Annals of Mathematics*,
+    Vol. 160 #2, September 2004, pp. 781–793.
+
+
+    ALAG93 Alagappan, K., *Telnet Authentication: SPX*, RFC 1412, January 1993.
+
+
+    BALE85 Balenson, D., “Automated Distribution of Cryptographic Keys Using the Financial
+    Institution Key Management Standard”, *IEEE Communications*, Vol. 23 #9, September
+    1985, pp. 41–46.
+
+
+    BALE93 Balenson, D., *Privacy Enhancement for Internet Electronic Mail: Part III:
+    Algorithms, Modes, and Identifiers*, RFC 1423, February 1993.
+
+
+    BELL74 Bell, D. E. and LaPadula, L. J., *Secure Computer Systems: Mathematical
+    Foundations and Model*, M74-244, Mitre Corp., October 1974.
+
+
+    BELL90 Bellovin, S. M. and Merritt, M., “Limitations of the Kerberos Authentication
+    ...
+
+
+    ## Index
+
+
+    Numerics
+
+
+    3DES, [61](#ch03.xhtml#page_61), [72](#ch03.xhtml#page_72)
+
+
+    A
+
+
+    Abel, Niels Henrik, M-[4](#ch01.xhtml#page_4)
+
+
+    Abelian group, M-[4](#ch01.xhtml#page_4)
+
+
+    absorb phase, [123](#ch05.xhtml#page_123)
+
+
+    Abstract Syntax Notation [1](#ch01.xhtml#page_1). *See* [ASN.1](#index.xhtml#idx23)
+
+
+    access control list, [14](#ch01.xhtml#page_14)
+
+
+    ACL, [14](#ch01.xhtml#page_14)
+
+
+    active attack, [7](#ch01.xhtml#page_7)
+
+
+    address filter, [22](#ch01.xhtml#page_22)
+
+
+    address-based authentication, [253](#ch09.xhtml#page_253)–[255](#ch09.xhtml#page_255)
+
+
+    adjugate, M-[24](#ch01.xhtml#page_24)
+
+
+    Adleman, Leonard, [140](#ch06.xhtml#page_140)
+
+
+    Advanced Encryption Standard, [75](#ch03.xhtml#page_75)–[81](#ch03.xhtml#page_81),
+    M-[16](#ch01.xhtml#page_16)–M-[18](#ch01.xhtml#page_18)
+
+
+    AES, [61](#ch03.xhtml#page_61), [75](#ch03.xhtml#page_75)–[81](#ch03.xhtml#page_81),
+    M-[16](#ch01.xhtml#page_16)–M-[18](#ch01.xhtml#page_18)
+
+
+    AES-GCM, [344](#ch11.xhtml#page_344)
+
+
+    AH, [349](#ch12.xhtml#page_349), [356](#ch12.xhtml#page_356)–[365](#ch12.xhtml#page_365)
+
+
+    alternating group, M-[27](#ch01.xhtml#page_27)
+
+
+    amplitude, [171](#ch07.xhtml#page_171)
+
+
+    ancilla, [184](#ch07.xhtml#page_184)
+
+
+    anonymity, [397](#ch14.xhtml#page_397)
+
+
+    append attack, [115](#ch05.xhtml#page_115)
+
+
+    application level gateway, [23](#ch01.xhtml#page_23)
+
+
+    ASN.1, [151](#ch06.xhtml#page_151)
+
+
+    associated data, [101](#ch04.xhtml#page_101)
+
+
+    associativity, M-[3](#ch01.xhtml#page_3)
+
+
+    asymmetric, [4](#ch01.xhtml#page_4)
+
+
+    attack
+
+
+    active, [7](#ch01.xhtml#page_7)
+
+
+    chosen-ciphertext, [206](#ch08.xhtml#page_206)
+
+
+    chosen-plaintext, [46](#ch02.xhtml#page_46), [85](#ch04.xhtml#page_85)
+
+
+    ciphertext-only, [45](#ch02.xhtml#page_45)'
+  fmt: '
+
+    The concepts in TLS (Transport Layer Security) have been covered in [Chapter 11](#ch11.xhtml#ch11)
+    *[Communication Session Establishment](#ch11.xhtml#ch11)*, and the concepts are
+    similar to IPsec. Alice and Bob authenticate and establish cryptographic keys
+    for the session.
+
+
+    TLS grew out of Netscape’s SSL (Secure Sockets Layer) protocol. When the IETF
+    took it over to improve and standardize it, they renamed it TLS (Transport Layer
+    Security). Since being called TLS, it has gone through three revisions, so the
+    latest version is 1.3 (RFC 8446). There is no real logic to why the TLS versions
+    were named TLS 1.0, TLS 1.1, TLS 1.2, and TLS 1.3 rather than TLS version 1, TLS
+    version 2, TLS version 3, and TLS version 4 or even why TLS 1.0 was not named
+    SSL version 4. Most of ...
+
+
+    ## 14 Electronic Mail Security
+
+
+    The first thing that springs to mind with the phrase *email security* is a message
+    from Alice to Bob signed by Alice with her private key and encrypted with Bob’s
+    public key. Lotus Notes had a proprietary, widely deployed implementation of encrypted
+    email in 1989. PGP was created and released as open source by Phil Zimmermann
+    in 1991. Various email standards for user-to-user signed and encrypted email were
+    developed over twenty years ago, including
+
+
+    *   PEM [RFC 1421—Feb 1993]
+
+    *   PGP/GPG [RFC 2015—October 1996]
+
+    *   S/MIME [RFC 2311—March 1998]
+
+
+    In the early 1990s, there were deployment barriers such as export controls and
+    patents, but these have been resolved. So it is somewhat astonishing that none
+    of these, or anything implementing ...
+
+
+    ## 15 Electronic Money
+
+
+    Money has a long and storied history as a medium of exchange and a mechanism for
+    measuring and storing wealth. Nations control the minting of coins, the printing
+    of paper currency, and the quantity of money in circulation, trying hard through
+    physical means to avoid counterfeit bills and coins. Nowadays, almost all but
+    the smallest payments are made using credit cards, checks, and electronic funds
+    transfers. Large cash transactions (suitcases full of money) are usually used
+    only for illicit or illegal transactions.
+
+
+    Forms of electronic money have been common for many years. The Internet is used
+    to manage bank accounts, make purchases with credit cards, do wire transfers,
+    and pay bills.
+
+
+    New protocols for dealing with money, ...
+
+
+    ## 16 Cryptographic Tricks
+
+
+    We’ve covered the major cryptographic building blocks, such as secret key encryption
+    and integrity checks, public key encryption and signatures, and hashes/message
+    digests. In this chapter we’ll talk about some other functions. We won’t go into
+    great detail about the math, or proofs, but we will at least demystify what these
+    functions are attempting to do, give some intuition about how they accomplish
+    it, and give examples of those that are used in actual real-world protocols.
+
+
+    ### 16.1 Secret Sharing
+
+
+    Secret sharing is a way for someone, say, Alice, to store a piece of information,
+    say, `S`, that must be kept secret from all except Alice but must also be retrievable
+    by Alice. There is a tradeoff between robustly storing `S` so ...
+
+
+    ## 17 Folklore
+
+
+    *Whenever I made a roast, I always started off by cutting off the ends, just like
+    I’d seen my grandmother do. Someone once asked me why I did it, and I realized
+    I had no idea. It had never occurred to me to wonder. It was just the way it was
+    done. Eventually I remembered to ask my grandmother. “Why do you always cut off
+    the ends of a roast?” She answered “Because my pan is small, and otherwise the
+    roasts would not fit.”*
+
+
+    —anonymous
+
+
+    Many things have become accepted security practice. Most of these are to avoid
+    problems that could be avoided in other ways if you really knew what you were
+    doing. It’s fine to get in the habit of doing these things, but it would be nice
+    to know at least *why* you’re doing them. A lot of these issues have ...
+
+
+    ## Glossary
+
+
+    **access control—**a mechanism for limiting use of some resource to authorized
+    users.
+
+
+    **access control set—**a synonym for access control list; some people make the
+    distinction that the order of entries in an access control set cannot be significant,
+    while the order of entries in an access control list might be.
+
+
+    **ACL (access control list)—**a data structure associated with a resource that
+    specifies the authorized users.
+
+
+    **active attack—**one in which an attacker does something other than simply eavesdropping,
+    for instance, transmits data, modifies data, or subverts the system so that it
+    can impersonate an address.
+
+
+    **ancilla—**a qubit that is used by a quantum computation but which is initialized
+    to a value independent of the computations’s input.
+
+
+    **ANSI— ...**
+
+
+    ## Math
+
+
+    This supplement was written solely by me[3] (Mike Speciner) with the intention
+    of providing material to expand and deepen your knowledge of the mathematics and
+    algorithms behind many of the techniques explained in the book. You should be
+    able to understand the rest of the book without this knowledge, but I[3] think
+    it could still be helpful, or at least enlightening. This supplement, including
+    the homework problems: `https://github.com/ms0/docs/blob/main/math.pdf`.
+
+
+    ### M.1 Introduction
+
+
+    Computing technology has encouraged us to turn pretty much everything into bits.
+    We use bits to represent numbers, text, images, audio, video, objects, scents,
+    and even more abstract concepts like spacetime, quantum fields, and money. For
+    a few of these, the representation ...
+
+
+    ## Bibliography
+
+
+    AGRA04 Agrawal, M., Kayal, N., Saxena, N., “PRIMES is in P”, *Annals of Mathematics*,
+    Vol. 160 #2, September 2004, pp. 781–793.
+
+
+    ALAG93 Alagappan, K., *Telnet Authentication: SPX*, RFC 1412, January 1993.
+
+
+    BALE85 Balenson, D., “Automated Distribution of Cryptographic Keys Using the Financial
+    Institution Key Management Standard”, *IEEE Communications*, Vol. 23 #9, September
+    1985, pp. 41–46.
+
+
+    BALE93 Balenson, D., *Privacy Enhancement for Internet Electronic Mail: Part III:
+    Algorithms, Modes, and Identifiers*, RFC 1423, February 1993.
+
+
+    BELL74 Bell, D. E. and LaPadula, L. J., *Secure Computer Systems: Mathematical
+    Foundations and Model*, M74-244, Mitre Corp., October 1974.
+
+
+    BELL90 Bellovin, S. M. and Merritt, M., “Limitations of the Kerberos Authentication
+    ...
+
+
+    ## Index
+
+
+    Numerics
+
+
+    3DES, [61](#ch03.xhtml#page_61), [72](#ch03.xhtml#page_72)
+
+
+    A
+
+
+    Abel, Niels Henrik, M-[4](#ch01.xhtml#page_4)
+
+
+    Abelian group, M-[4](#ch01.xhtml#page_4)
+
+
+    absorb phase, [123](#ch05.xhtml#page_123)
+
+
+    Abstract Syntax Notation [1](#ch01.xhtml#page_1). *See* [ASN.1](#index.xhtml#idx23)
+
+
+    access control list, [14](#ch01.xhtml#page_14)
+
+
+    ACL, [14](#ch01.xhtml#page_14)
+
+
+    active attack, [7](#ch01.xhtml#page_7)
+
+
+    address filter, [22](#ch01.xhtml#page_22)
+
+
+    address-based authentication, [253](#ch09.xhtml#page_253)–[255](#ch09.xhtml#page_255)
+
+
+    adjugate, M-[24](#ch01.xhtml#page_24)
+
+
+    Adleman, Leonard, [140](#ch06.xhtml#page_140)
+
+
+    Advanced Encryption Standard, [75](#ch03.xhtml#page_75)–[81](#ch03.xhtml#page_81),
+    M-[16](#ch01.xhtml#page_16)–M-[18](#ch01.xhtml#page_18)
+
+
+    AES, [61](#ch03.xhtml#page_61), [75](#ch03.xhtml#page_75)–[81](#ch03.xhtml#page_81),
+    M-[16](#ch01.xhtml#page_16)–M-[18](#ch01.xhtml#page_18)
+
+
+    AES-GCM, [344](#ch11.xhtml#page_344)
+
+
+    AH, [349](#ch12.xhtml#page_349), [356](#ch12.xhtml#page_356)–[365](#ch12.xhtml#page_365)
+
+
+    alternating group, M-[27](#ch01.xhtml#page_27)
+
+
+    amplitude, [171](#ch07.xhtml#page_171)
+
+
+    ancilla, [184](#ch07.xhtml#page_184)
+
+
+    anonymity, [397](#ch14.xhtml#page_397)
+
+
+    append attack, [115](#ch05.xhtml#page_115)
+
+
+    application level gateway, [23](#ch01.xhtml#page_23)
+
+
+    ASN.1, [151](#ch06.xhtml#page_151)
+
+
+    associated data, [101](#ch04.xhtml#page_101)
+
+
+    associativity, M-[3](#ch01.xhtml#page_3)
+
+
+    asymmetric, [4](#ch01.xhtml#page_4)
+
+
+    attack
+
+
+    active, [7](#ch01.xhtml#page_7)
+
+
+    chosen-ciphertext, [206](#ch08.xhtml#page_206)
+
+
+    chosen-plaintext, [46](#ch02.xhtml#page_46), [85](#ch04.xhtml#page_85)
+
+
+    ciphertext-only, [45](#ch02.xhtml#page_45)
+
+    '
+  trans: '
+
+    TLS（传输层安全）中的概念已在第 11 章 *通信会话建立* 中介绍，这些概念与 IPsec 类似。Alice 和 Bob 进行身份认证并为会话建立加密密钥。
+
+
+    TLS 起源于 Netscape 的 SSL（安全套接字层）协议。当 IETF 接管它以进行改进和标准化时，将其重命名为 TLS（传输层安全）。自称为 TLS
+    以来，它已历经三个修订版本，因此最新版本是 1.3（RFC 8446）。TLS 版本为何被命名为 TLS 1.0、TLS 1.1、TLS 1.2 和 TLS
+    1.3，而不是 TLS 版本 1、TLS 版本 2、TLS 版本 3 和 TLS 版本 4，甚至为何 TLS 1.0 未被命名为 SSL 版本 4，并没有真正的逻辑可言。大多数……
+
+
+    ## 14 电子邮件安全
+
+
+    提到 *电子邮件安全* 一词，首先浮现在脑海中的场景是：Alice 给 Bob 发送一条消息，用她的私钥签名，并用 Bob 的公钥加密。Lotus Notes
+    在 1989 年就拥有了加密电子邮件的专有且广泛部署的实现。PGP 由 Phil Zimmermann 于 1991 年创建并作为开源软件发布。二十多年前就开发了多种用于用户间签名和加密电子邮件的标准，包括
+
+
+    *   PEM [RFC 1421—1993 年 2 月]
+
+    *   PGP/GPG [RFC 2015—1996 年 10 月]
+
+    *   S/MIME [RFC 2311—1998 年 3 月]
+
+
+    在 1990 年代初期，存在出口管制和专利等部署障碍，但这些问题现已解决。因此，这些标准（或实现……）均未得到广泛部署，这多少令人惊讶。
+
+
+    ## 15 电子货币
+
+
+    货币作为交换媒介以及衡量和存储财富的机制，拥有悠久而传奇的历史。国家控制铸币、印制纸币以及货币流通量，并通过物理手段努力防止假钞和假币。如今，除最小额支付外，几乎所有支付均使用信用卡、支票和电子资金转账。大额现金交易（装满钱的手提箱）通常仅用于非法或违法交易。
+
+
+    电子货币的形式已普及多年。互联网被用于管理银行账户、信用卡购物、电汇和支付账单。
+
+
+    用于处理货币的新协议……
+
+
+    ## 16 密码学技巧
+
+
+    我们已介绍主要的密码学构建模块，如密钥加密和完整性校验、公钥加密和签名、哈希/消息摘要。在本章中，我们将讨论其他一些功能。我们不会深入探讨数学原理或证明，但至少会揭示这些功能试图实现的目标，给出一些关于它们如何实现的直观理解，并列举实际协议中使用的示例。
+
+
+    ### 16.1 秘密分享
+
+
+    秘密分享是一种方法，让某人（例如 Alice）存储一段必须对除 Alice 之外的所有人保密、但 Alice 必须能够检索的信息（例如 `S`）。在健壮地存储
+    `S` 以便……
+
+
+    ## 17 通俗认知
+
+
+    *每次烤肉时，我总是先切掉两头，就像我见祖母那样做。有人曾问我为什么这么做，我意识到我完全不知道。我从未想过要质疑。这只是惯例。后来我终于想起问祖母：“为什么烤肉总要切掉两头？”她回答：“因为我的锅小，否则烤肉放不下。”*
+
+
+    ——佚名
+
+
+    许多做法已成为公认的安全实践。大多数是为了避免那些如果你真懂行、可以用其他方式避免的问题。养成这些习惯固然好，但至少知道 *为什么* 这么做会更好。这些问题中有许多……
+
+
+    ## 术语表
+
+
+    **访问控制——**一种将某资源的使用限制为授权用户的机制。
+
+
+    **访问控制集——**访问控制列表的同义词；有人区分二者，认为访问控制集中条目的顺序不重要，而访问控制列表中条目的顺序可能重要。
+
+
+    **ACL（访问控制列表）——**与资源关联的数据结构，指定授权用户。
+
+
+    **主动攻击——**攻击者执行除单纯窃听以外的操作，例如发送数据、修改数据或颠覆系统以冒充某个地址。
+
+
+    **辅助量子比特——**量子计算使用的量子比特，其初始值独立于计算的输入。
+
+
+    **ANSI—— ……**
+
+
+    ## 数学
+
+
+    本补遗仅由我[3]（Mike Speciner）编写，旨在提供材料以拓展和深化您对书中许多技术背后的数学和算法的理解。即使没有这些知识，您也应能理解本书其余部分，但我认为[3]这些知识仍可能有帮助，至少能启发思考。本补遗（含习题）：`https://github.com/ms0/docs/blob/main/math.pdf`。
+
+
+    ### M.1 简介
+
+
+    计算技术鼓励我们将几乎所有事物转化为比特。我们用比特表示数字、文本、图像、音频、视频、物体、气味，甚至时空、量子场和货币等更抽象的概念。对于其中少数事物，其表示……
+
+
+    ## 参考文献
+
+
+    AGRA04 Agrawal, M., Kayal, N., Saxena, N., “PRIMES is in P”, *Annals of Mathematics*,
+    Vol. 160 #2, September 2004, pp. 781–793.
+
+
+    ALAG93 Alagappan, K., *Telnet Authentication: SPX*, RFC 1412, January 1993.
+
+
+    BALE85 Balenson, D., “Automated Distribution of Cryptographic Keys Using the Financial
+    Institution Key Management Standard”, *IEEE Communications*, Vol. 23 #9, September
+    1985, pp. 41–46.
+
+
+    BALE93 Balenson, D., *Privacy Enhancement for Internet Electronic Mail: Part III:
+    Algorithms, Modes, and Identifiers*, RFC 1423, February 1993.
+
+
+    BELL74 Bell, D. E. and LaPadula, L. J., *Secure Computer Systems: Mathematical
+    Foundations and Model*, M74-244, Mitre Corp., October 1974.
+
+
+    BELL90 Bellovin, S. M. and Merritt, M., “Limitations of the Kerberos Authentication
+    ...
+
+
+    ## 索引
+
+
+    数字
+
+
+    3DES, 61, 72
+
+
+    A
+
+
+    Abel, Niels Henrik, M-4
+
+
+    Abelian group, M-4
+
+
+    absorb phase, 123
+
+
+    Abstract Syntax Notation 1. *See* ASN.1
+
+
+    access control list, 14
+
+
+    ACL, 14
+
+
+    active attack, 7
+
+
+    address filter, 22
+
+
+    address-based authentication, 253–255
+
+
+    adjugate, M-24
+
+
+    Adleman, Leonard, 140
+
+
+    Advanced Encryption Standard, 75–81, M-16–M-18
+
+
+    AES, 61, 75–81, M-16–M-18
+
+
+    AES-GCM, 344
+
+
+    AH, 349, 356–365
+
+
+    alternating group, M-27
+
+
+    amplitude, 171
+
+
+    ancilla, 184
+
+
+    anonymity, 397
+
+
+    append attack, 115
+
+
+    application level gateway, 23
+
+
+    ASN.1, 151
+
+
+    associated data, 101
+
+
+    associativity, M-3
+
+
+    asymmetric, 4
+
+
+    attack
+
+
+    active, 7
+
+
+    chosen-ciphertext, 206
+
+
+    chosen-plaintext, 46, 85
+
+
+    ciphertext-only, 45
+
+    '
+  toc: []
+- raw: "denial-of-service, [26](#ch01.xhtml#page_26)–[27](#ch01.xhtml#page_27), [331](#ch11.xhtml#page_331),\
+    \ [335](#ch11.xhtml#page_335)\n\ndictionary, [260](#ch09.xhtml#page_260)\n\ndistributed-denial-of-service,\
+    \ [27](#ch01.xhtml#page_27)\n\ndowngrade, [345](#ch11.xhtml#page_345)\n\nknown-plaintext,\
+    \ ...\n\n![](graphics/pgbm-1.jpg)\n\n![](graphics/pgbm-2.jpg)\n\n## Code Snippets\n\
+    \nMany titles include programming code or configuration examples. To optimize\
+    \ the presentation of these elements, view the eBook in single-column, landscape\
+    \ mode and adjust the font size to the smallest setting. In addition to presenting\
+    \ code and configurations in the reflowable text format, we have included images\
+    \ of the code that mimic the presentation found in the print book; therefore,\
+    \ where the reflowable format may compromise the presentation of the code listing,\
+    \ you will see a “Click here to view code image” link. Click the link to view\
+    \ the print-fidelity code image. To return to the previous page viewed, click\
+    \ the Back button on your device or app.\n\n[![Image](graphics/090pro01.jpg)](#ch04.xhtml#p090pro01)\
+    \ [![Image](graphics/090pro02.jpg)](#ch04.xhtml#p090pro02) \n\n[![Image](graphics/380pro01.jpg)](#ch14.xhtml#p380pro01)\
+    \ [![Image](graphics/380pro02.jpg)](#ch14.xhtml#p380pro02) \n\n[![Image](graphics/479pro01.jpg)](#math.xhtml#p479pro01)\
+    \ [![Image](graphics/479pro02.jpg)](#math.xhtml#p479pro02) [![Image](graphics/480pro01.jpg)](#math.xhtml#p480pro01)\
+    \ [![Image](graphics/495pro01.jpg)](#math.xhtml#p495pro01)"
+  fmt: '
+
+    ## Index Entries
+
+
+    - `denial-of-service`, [26](#ch01.xhtml#page_26)–[27](#ch01.xhtml#page_27), [331](#ch11.xhtml#page_331),
+    [335](#ch11.xhtml#page_335)
+
+    - `dictionary`, [260](#ch09.xhtml#page_260)
+
+    - `distributed-denial-of-service`, [27](#ch01.xhtml#page_27)
+
+    - `downgrade`, [345](#ch11.xhtml#page_345)
+
+    - `known-plaintext`, ...
+
+
+    ## Figures
+
+
+    ![](graphics/pgbm-1.jpg)
+
+
+    ![](graphics/pgbm-2.jpg)
+
+
+    ## Code Snippets
+
+
+    Many titles include programming code or configuration examples. To optimize the
+    presentation of these elements, view the eBook in single-column, landscape mode
+    and adjust the font size to the smallest setting. In addition to presenting code
+    and configurations in the reflowable text format, we have included images of the
+    code that mimic the presentation found in the print book; therefore, where the
+    reflowable format may compromise the presentation of the code listing, you will
+    see a “Click here to view code image” link. Click the link to view the print-fidelity
+    code image. To return to the previous page viewed, click the Back button on your
+    device or app.
+
+
+    [![Image](graphics/090pro01.jpg)](#ch04.xhtml#p090pro01) [![Image](graphics/090pro02.jpg)](#ch04.xhtml#p090pro02)
+
+
+    [![Image](graphics/380pro01.jpg)](#ch14.xhtml#p380pro01) [![Image](graphics/380pro02.jpg)](#ch14.xhtml#p380pro02)
+
+
+    [![Image](graphics/479pro01.jpg)](#math.xhtml#p479pro01) [![Image](graphics/479pro02.jpg)](#math.xhtml#p479pro02)
+    [![Image](graphics/480pro01.jpg)](#math.xhtml#p480pro01) [![Image](graphics/495pro01.jpg)](#math.xhtml#p495pro01)
+
+    '
+  trans: '
+
+
+    ## 索引条目
+
+
+    - `denial-of-service`，26–27，331，335
+
+    - `dictionary`，260
+
+    - `distributed-denial-of-service`，27
+
+    - `downgrade`，345
+
+    - `known-plaintext`，...
+
+
+    ## 图示
+
+
+    ![](img/pgbm-1.jpg)
+
+
+    ![](img/pgbm-2.jpg)
+
+
+    ## 代码片段
+
+
+    许多标题包含编程代码或配置示例。为优化这些元素的呈现效果，请在单栏、横屏模式下查看电子书，并将字体大小调整至最小设置。除了以可重排文本格式呈现代码和配置外，我们还包含了模仿印刷书籍呈现效果的代码图片；因此，当可重排格式可能影响代码清单的呈现时，您将看到一个“点击此处查看代码图片”链接。点击该链接即可查看高保真代码图片。要返回之前查看的页面，请点击设备或应用上的“返回”按钮。
+
+
+    ![Image](img/#ch04.xhtml#p090pro01) ![Image](img/#ch04.xhtml#p090pro02)
+
+
+    ![Image](img/#ch14.xhtml#p380pro01) ![Image](img/#ch14.xhtml#p380pro02)
+
+
+    ![Image](img/#math.xhtml#p479pro01) ![Image](img/#math.xhtml#p479pro02) ![Image](img/#math.xhtml#p480pro01)
+    ![Image](img/#math.xhtml#p495pro01)
+
+
+    '
+  toc: []
