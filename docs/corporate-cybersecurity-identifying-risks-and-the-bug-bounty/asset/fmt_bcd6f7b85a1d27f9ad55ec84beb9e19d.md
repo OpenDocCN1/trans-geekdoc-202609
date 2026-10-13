@@ -1,0 +1,38 @@
+
+On a positive note, ad hoc programs are the cheapest possible solution. An enterprise should use this program until a baseline security posture is established, especially if they have nothing else. An ad hoc program will always be the cheapest option, but it’s apparent that it could take a toll on the communication between a researcher and an enterprise.
+
+An ad hoc program is best defined for an enterprise that has the ability to manage large volumes of vulnerability reports. For example, if an enterprise is too large, they may find better results by offloading most, if not all, of their reporting architecture to a third-party crowdsourced research platform. Large enterprises that care about the state of their security will not offload; otherwise, it could put their data and assets at risk. Imagine if the enterprise in question were an ecommerce site that ran through a web development company. The company that became entrusted with the managing aspects of the enterprises’ services would be responsible for the security posture of the web application and the server that hosted the application. An important distinction to make is what the stance on custom application plugins is, as requiring the client to keep plugins updated might be something that would have to be considered. Even if plugins have to be kept up to date, doing so usually won’t warrant a full-scale bug bounty program, in comparison to a more standard projected enterprise model. Plugins that are derived from a library of on-demand applications will be maintained by third parties. If researchers find vulnerabilities that affect the applications, it will be considered a zero-day exploit. If reported through MITRE or other appropriate means, a notice will be sent out by the third-party provider (given the appropriate scenario), but an offload to a third-party provider for most of the infrastructure may result in the partner company not informing the company in the event of exploitation, and the enterprise must be vigilant to risks no matter what program model is used.
+
+## 3.4 Note
+
+This book won’t focus on the aspect of setting up custom-built vulnerability disclosure programs or bug bounty programs. The margin for error with the legality of paying researchers through a custom program could open up unnecessary risk, and the objective of this book strays away from any fully custom program setup that utilizes a proprietary platform solution. Without leveraging the extensive features and capacity of a program run through a bug bounty crowdsourcing platform, the overall considerations for vulnerability management become a lot larger. Please exercise caution if setting up a completely in-house solution. Ensure that a risk assessment is performed and that legal agreements are up to date and comply with the local, state, and government laws. If the enterprise has in-house lawyers, consult about potential legal mitigation before setting up the program. Enterprise vulnerability program managers must remember that a completely in-house program may need to extend into the field of compliance as well, owing to researchers who may submit PII or sensitive information such as payment information, home address, and so on, coupled with the required delivery of tax documentation. This book is not a replacement for any form of legal advice, so all and any program should be setup at one’s own risk, regardless of the platform used or created.
+
+## 3.5 Applied Knowledge
+
+### 3.5.1 Applied Knowledge #1
+
+Imagine if the hacker from our earlier story takes the SQL vulnerability that was identified and searches for a way to report the vulnerability. If they search and find a lack of security email address, they may decide to use the customer support email address instead. Knowing that there’s a certain level of fragility with reporting a vulnerability with this much impact, they say something along the lines of:
+
+> Hello,
+>
+> My name is `X` and I’m a hacker. I’ve found a serious vulnerability that allows someone to obtain credit card information, passwords, addresses, and so on through a simple exploit. Please reply as soon as possible.
+
+Given a realistic scenario, a simple email that expresses the urgency is fairly effective. If a security professional were asked what should be done in the instance of an email as defined above, they would usually recommend that the customer service specialist gather more information or ask a set of questions and then forward the hacker to a specified email address for security purposes.
+
+Unfortunately, that’s just not the most realistic approach. Using an ad hoc program, vulnerability management professionals aren’t typically coordinating with their customer support team on the bug resolution process. Communication breakdown can open up the possibility of a wide variety of security issues which may hinder the professional resolution of vulnerabilities. As an organization, it feels easy enough to avoid a researcher – but no one has the power to wish away a vulnerability, not even governments or top officials.
+
+#### 3.5.1.1 Private Programs
+
+When an enterprise sets up the baseline security posture, the next step is to harden the environment further. To do so, they typically establish a private bug bounty program. Private programs are the evolution of ad hoc programs. They demonstrate a willingness to commit to rewarding and encouraging active participation. Private programs can be seen as a steppingstone to a wider vulnerability disclosure program.
+
+A private program, compared to an ad hoc program, is a day and night difference. Instead of waiting for researchers to approach the enterprise with vulnerabilities, the responsibility and expectation of the program managers and engineers is to actively seek researchers to participate in their bug bounty program. Similarities will always exist in some researcher intake processes. However, establishing a legitimate program will make it easier to manage ad hoc researchers. Private bug bounty programs facilitate enterprises to manage the flow of hackers and control which assets are tested, and when.
+
+Still, operating a private program comes with its own challenges. For example, a poorly configured, mismanaged, or neglected program can result in the same issues that an ad hoc program results in. If researchers do not feel heard, some will quit, while others won’t hesitate to attack the reputation of a company. Neglected programs have similar results. Therefore, it’s exceedingly important to remember that just because the program is private doesn’t mean that it can tolerate mismanagement.
+
+### 3.5.2 Applied Knowledge #2
+
+The hacker takes their SQL vulnerability and searches for a way to report the vulnerability. Upon finding no security email address, they decide to use the customer support email address. This scenario differs in one key way. Customer support knows that the enterprise has a team that’s responsible for vulnerability management. Customer support quickly forwards the email over to the security team, which notifies the bug bounty program manager. An email can now be sent to the hacker, and they can be onboarded into the private program.
+
+A key takeaway from this applied knowledge scenario is to ensure that the customer support team knows the appropriate point of contact for forwarding vulnerability-related email. As an engineer or a program manager responsible for managing engineers, be proactive. The sooner a meeting is held between the responsible point of contact at customer support and a bug bounty program manager, the easier it will be to deal with all future issues.
+
+#### 3.5.2.1 Public Programs
