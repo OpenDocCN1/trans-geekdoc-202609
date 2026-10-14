@@ -1,0 +1,91 @@
+
+``` 
+$$\begin{array}{l} {\mathbf{\hat{x}}_{i} \sim Prob_{G}(x_{i}|\mathbf{x}^{\text{masked}})} \\ \end{array}$$
+
+(5.74)
+
+where `i` ∈ `m`. The discriminator then learns to identify which tokens in `x^c` were in the original input `x`. Here, unlike a GAN, the generator is not being trained to trick the discriminator and a noise vector is not added to the generator's input.
+
+### 5.3.2 T5
+
+T5, the Text-to-Text Transfer Transformer [205], is the result of a survey aimed at understanding which transfer learning methods work best. It reframed standard NLP tasks as text-to-text transformations, where the input and output are strings. This is in contrast to masked language models like BERT, which output either class labels or a span of the input.
+
+The reformulation of training tasks means you can use the same model and loss function on any NLP task. Using text-to-text transformations (sequence transduction) allows you to train one model on multiple tasks at once, reusing model architecture, loss functions, and hyperparameters. Appendix D of Raffel et al. has examples of how input was formatted for each of the datasets the T5 model was trained or fine-tuned on.
+
+## 5.4 Transformer Submodule Changes
+
+This section discusses modifications to the Transformer that do not modify the attention mechanism or the model's memory profile.
+
+### 5.4.1 Switch Transformer
+
+The Mixture of Experts (MoE) model has contributed to many successes at the expense of complexity and training cost [225]. However, the mixture of expert models does not share the parameters, resulting in a sparse model with a substantial computational cost and training instabilities. Switch transformers address most of these issues with a novel routing algorithm between the experts, enabling an increase in the number of the parameters without an increase in computational cost [87]. The core innovation of switch transformers is replacing the feed-forward layer in the transformer with a switching feed-forward layer, as shown in Fig. 5.15.
+
+![Figure 5.15 Switch Transformer encoder block illustrating two input tokens `x1` and `x2` being processed through the network. The dense FFN is replaced with switching FFN as one of the experts.](img/fig5_15.jpg)
+
+Figure 5.15 Switch Transformer encoder block illustrating two input tokens `x[1]` and `x[2]` being processed through the network. The dense FFN is replaced with switching FFN as one of the experts.
+
+In the standard transformer, a single feed-forward network follows the outputs from the multi-head attention layer. It is responsible for translating the representation token-by-token to the next transformer input block. As shown in Fig. 5.15, in a switch transformer, instead of one feed-forward network, there are multiple feed-forward networks, also known as the experts. After the multi-head attention, each token representation, `x`, gets routed to only *one* expert. The expert is chosen from a set of `N` experts, `{E_i}{i = 1}^N` by computing a probability distribution over the experts:
+
+``` 
+$$\begin{array}{l} {\mathbf{p}(\mathbf{x}) = \text{softmax}({\mathbf{W}_{\text{r}} \cdot \mathbf{x}})} \\ \end{array}$$
+
+(5.75)
+
+where `W[r] ∈ ℝ^(N × d)` is a learnable weight matrix that determines which expert is selected and `d` is the dimensionality of the token representation, `x`. The expert with largest probability corresponds to the largest component of 5.75: `p(x) = (p[1], …, p[N])`, call it `p[j]`, and is used to compute the updated token representation. Thus, though the parameters have increased four times because of four feed-forward networks, hard routing guarantees that the computational cost remains the same. Thus the switching feed-forward network enables the scaling of experts to any number (bound by memory capacity) without increasing computational cost and not needing any transfer helps in the sharding process.
+
+Model parallelism shards the model across the devices (cores/machines) while consuming the same data in the batch, resulting in a large model with slower processing due to sequential flow; the bottleneck introduced by communication. On the other hand, data parallelism keeps the model weights constant and shards the data across, allowing improved computational speed but a lower capacity model due to size. Switch Transformer employs data and expert parallelism—i.e., each data gets sharded to one expert on one device, which uses its expert weights for computations. The experts themselves are distributed and not communicating with each other, resulting in total parallelism and lower computation overheads. The authors use experts, data, and model parallelism to scale up to a gigantic model where even a single expert doesn't fit a device.
+
+Compared to T5-Base and T5-large, the switch transformers show that given the same FLOPS, the models can be substantially large and excel across a diverse set of natural language tasks and in different training regimes, such as pre-training, fine-tuning and multi-task training. The multilingual results are more impressive as they show the gain compared to an equivalent MT5 model across 101 languages.
+
+## 5.5 Case Study: Sentiment Analysis
+
+### 5.5.1 Goal
+
+This case study examines the attention weights of a T5 model that was fine-tuned for sentiment span extraction. The input to this span extraction model is a span of text containing positive or negative sentiment. The output is the subsequence of the input text that causes the span to have the specified sentiment.
+
+### 5.5.2 Data, Tools, and Libraries
+
+![Listing 5.1 Python environment setup](img/comp5_1.jpg)
+
+Listing 5.1 Python environment setup
+
+To use this model, we'll need three Python libraries: Huggingface's `transformers`, Google's `sentencepiece`, and the `bertviz` library. They can be installed by running the shell command shown in Listing 5.1. Once the environment is setup, the model and tokenizer can be loaded into memory, as shown in Listing 5.2.
+
+![Listing 5.2 Load model and tokenizer](img/comp5_2.jpg)
+
+Listing 5.2 Load model and tokenizer
+
+To make extract sentiment spans with this model, you can use the function defined in Listing 5.3.
+
+![Listing 5.3 Extract sentiment span from input text](img/comp5_3.jpg)
+
+Listing 5.3 Extract sentiment span from input text
+
+The model takes input in the following form:
+
+``` 
+$$\begin{array}{l} {\text{question}:\lbrack\text{positive/negative}\rbrack\text{context}:\lbrack\text{textofspecifiedsentiment}\rbrack.} \\ \end{array}$$
+
+This case study focuses on positive sentiment in a sequence of text with both positive and negative sentiment. The text is *“You're a nice person, but your feet stink.”* Thus, for positive sentiment, the full input text to the span extraction model is `question: positive context: You're a nice person, but your feet stink.`
+
+### 5.5.3 Experiments, Results, and Analysis
+
+There are a variety of methods that have been used to analyze the influence of attention mechanisms on model output.
+
+We will look at just one: simply visualizing attention weights (with BertViz [255]).
+
+#### 5.5.3.1 Visualizing attention head weights
+
+The T5 model has 12 layers, each of which has three attention mechanisms:
+
+1. encoder self-attention
+2. decoder self-attention
+3. cross-attention
+
+Each attention mechanism has 12 heads, and thus has 144 sets of attention weights, one for each choice of layer and attention head. We'll use the BertViz [255] library to view the weights of the attention heads, this is shown in Listing 5.4.
+
+![](img/comp5_4.jpg)![](img/comp5_4a.jpg)![Listing 5.4 Visualizing attention weights](img/comp5_4b.jpg)
+
+Listing 5.4 Visualizing attention weights
+
+For starters, we want to see if the weights of any of the attention heads show the word “positive” in the input text attending to any of the tokens in the extracted subsequence.
