@@ -1,0 +1,1153 @@
+- "# PHP 开发者的 DevOps 指南\n\n\n# 前言\n\n## 本书的设计理念\n\n虽然本书专注于 PHP，但此处描述的技术可应用于任何其他语言或部署，包括但不限于容器发布、Node.js\
+  \ 应用程序、Ruby 等。\n\n我们将主要关注完整的 LEMP（Linux Nginx MySQL PHP）服务器，即所有二进制文件均运行在同一台服务器上。根据您的需求，您可以使用专用的\
+  \ MySQL 实例，以及一个作为网关的独立 Nginx 实例，您只需修改脚本以匹配您的设置即可。\n\n您可以按任何您喜欢的顺序阅读本书。参考资源均可随时获取，其中部分为开源资源。\n\
+  \n所有待执行的 Shell 命令均以前缀 `$` 或 `#` 加一串字符的形式书写，输出将紧随其后，例如：\n\n```\n$ echo 'hello world'\n\
+  hello world\n```\n\n## 谁应该阅读本书？\n\n任何软件开发人员或管理员均可阅读本书。本书非常适合自由职业者、初创企业、企业家以及所有从事服务器工作并编写少量代码的人员。\n\
+  \n由于本书主要涉及 PHP，您应了解该语言并理解您正在使用的技术栈；无论是 LAMP 还是 LEMP；并对服务器设置、SSH 和终端的使用有少许了解。\n\n\
+  ## 责任声明\n\n我已竭尽全力确保书中信息的准确性。\n\n然而，本书所含信息不提供任何担保，无论明示或暗示。作者、经销商或分销商均不对因本书中的说明，或因书中所述软件或服务提供商而直接或间接造成的任何损害承担责任。\n\
+  \n## 手动服务器设置\n\n### 寻找合适的服务器\n\n有几家提供商（[DigitalOcean](https://www.digitalocean.com/?refcode=9724e049fc4d)、[Linode\
+  \ Cloud](https://www.linode.com/products/standard-linodes/)、[AWS](https://aws.amazon.com/ec2/)、[Vultr](https://www.vultr.com/?ref=7275395)\
+  \ 等）提供极具竞争力的价格，从 [Vultr](https://www.vultr.com/?ref=7275395) 的 10GB SSD、1 vCPU 和\
+  \ 512 MB RAM 每月 2.5 美元，到 [DigitalOcean](https://www.digitalocean.com/?refcode=9724e049fc4d)\
+  \ 的 3,840GB SSD、32 vCPU 和 192GB RAM 每月 960 美元不等。\n\n在我们的案例中，我们将使用 [每月 40 美元的 DigitalOcean\
+  \ Droplet（160GB SSD，4](https://cloud.digitalocean.com/droplets/new?size=s-4vcpu-8gb)\n\
+  \n\n\n### 创建 Droplet\n\n[vCPUs and 8GB of RAM) running the latest version of Ubuntu,\
+  \ 20.04 LTS.](https://cloud.digitalocean.com/droplets/new?size=s-4vcpu-8gb)\n\n\
+  123.45.6.78 如果您想要分离服务并拥有 Redis、MySQL、Nginx 和 PHP 服务器，请在“Select additional options”下启用私有网络。这将为\
+  \ Droplet 分配私有 IP 地址，用于同一数据中心区域内的服务器间通信。\n\n根据您的需求，增加要创建的 Droplet 数量。在本例中我们仅使用一个。最后，添加您的\
+  \ SSH 密钥（[或创建一个](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)），选择所需的主机名并创建\
+  \ Droplet。\n\nDroplet 创建完成后，复制公共 IP 地址，打开终端并通过 SSH 登录服务器：\n\n```\n$ ssh root@123.45.6.78\n\
+  ```\n\n```\nThe authenticity of host '123.45.6.78 (123.45.6.78)' can't be established.\n\
+  ECDSA key fingerprint is SHA256:shashashasahashashashasaha.\nAre you sure you want\
+  \ to continue connecting (yes/no/[fingerprint])? yes\nWarning: Permanently added\
+  \ '123.45.6.78' (ECDSA) to the list of known hosts.\nWelcome to Ubuntu 20.04.1 LTS\
+  \ (GNU/Linux 5.4.0-51-generic x86_64)\n* Documentation: https://help.ubuntu.com\n\
+  * Management: https://landscape.canonical.com\n* Support: https://ubuntu.com/advantage\n\
+  System information as of Wed Oct 28 05:26:58 UTC 2020\nSystem load: 0.47  Users\
+  \ logged in: 0\nUsage of /: 0.7% of 24.06GB  IPv4 address for eth0: 123.45.6.78\n\
+  Memory usage: 4%  IPv4 address for eth0: 10.10.0.5\nSwap usage: 0%  IPv4 address\
+  \ for eth1: 10.116.0.2\nProcesses: 97\n1 update can be installed immediately.\n\
+  0 of these updates are security updates.\nTo see these additional updates run: apt\
+  \ list --upgradable\nThe list of available updates is more than a week old.\nTo\
+  \ check for new updates run: sudo apt update\nThe programs included with the Ubuntu\
+  \ system are free software; the exact distribution terms for each program are described\
+  \ in the individual files in /usr/share/doc/*/copyright.\nUbuntu comes with ABSOLUTELY\
+  \ NO WARRANTY, to the extent permitted by applicable law.\nroot@ubuntu-s-1vcpu-1gb-nyc1-01:~#\n\
+  ```\n\n太棒了！我们已成功启动！\n\n### 服务器更新\n\n默认情况下，我们的 Ubuntu 20.04 LTS 服务器有一些过时的二进制文件，因此让我们先更新它们：\n\
+  \n```\n### apt update\n```\n\n```\nGet:1 http://security.ubuntu.com/ubuntu focal-security\
+  \ InRelease [107 kB]\nGet:2 http://mirrors.digitalocean.com/ubuntu focal InRelease\
+  \ [265 kB]\n...\n...\nBuilding dependency tree\nReading state information... Done\n\
+  53 packages can be upgraded. Run 'apt list --upgradable' to see them.\n```\n\n```\n\
+  ### apt upgrade -y\n```\n\n```\nReading package lists... Done\nBuilding dependency\
+  \ tree\nReading state information... Done\nCalculating upgrade... Done\nThe following\
+  \ NEW packages will be installed:\nlinux-headers-5.4.0-53 linux-headers-5.4.0-53-generic\
+  \ linux-image-5.4.0-53-generic linux-modules-5.4.0-53-generic\nThe following packages\
+  \ will be upgraded:\n...\n...\n53 upgraded, 4 newly installed, 0 to remove and 0\
+  \ not upgraded.\nNeed to get 88.0 MB of archives.\nAfter this operation, 174 MB\
+  \ of additional disk space will be used.\nGet:1 http://mirrors.digitalocean.com/ubuntu\
+  \ focal-updates/main amd64 libperl5.30 amd64 5.30.0-9ubuntu0.2 [3,952 kB]\nGet:2\
+  \ http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 perl amd64 5.30.0-9ubuntu0.2\
+  \ [224 kB]\nGet:3 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64\
+  \ perl-base amd64 5.30.0-9ubuntu0.2 [1,513 kB]\n...\n...\ndone\n```\n\n## 无人值守升级\n\
+  \nDebian/Ubuntu 提供的 [Unattended Upgrades 包](https://help.ubuntu.com/community/AutomaticSecurityUpdates)\
+  \ 可用于自动更新系统，可将其视为 Debian 或 Ubuntu 版的 Windows Update。让我们设置它来处理安全更新。该包通常默认已安装，如果缺失，请使用以下命令安装：`apt\
+  \ install unattended-upgrades`。\n\n我们现在需要找到并修改 `/etc/apt/apt.conf.d/50unattended-upgrades`\
+  \ 以满足我们的要求。目前，我们将仅启用安全更新，但您可以随意调整该文件以满足您的需求。确认 `Unattended-Upgrade::Allowed-Origins`\
+  \ 部分具有以下活动配置：\n\n```\nUnattended-Upgrade::Allowed-Origins {\n\"${distro_id}:${distro_codename}\"\
+  ;\n\"${distro_id}:${distro_codename}-security\";\n\"${distro_id}ESMApps:${distro_codename}-apps-security\"\
+  ;\n\"${distro_id}ESM:${distro_codename}-infra-security\";\n// \"${distro_id}:${distro_codename}-updates\"\
+  ;\n// \"${distro_id}:${distro_codename}-proposed\";\n// \"${distro_id}:${distro_codename}-backports\"\
+  ;\n};\n```\n\nExtended Security Maintenance (ESM) 源并非在所有版本中都存在，但如果可用将会被使用，因此保留它无妨。\n\
+  \n您希望手动更新的所有包都应添加到 `Unattended-Upgrade::Package-Blacklist` 部分。每当运行自动更新时，这些包将被排除在更新之外。这对于有问题的包特别有用。\n\
+  \n某些包需要系统重启才能完成安装。您可以允许自动重启，也可以手动重启服务器。\n\n在本例中，我们将允许在 UTC 02:00 左右自动重启。\n\n```\n\
+  Unattended-Upgrade::Automatic-Reboot \"true\";\nUnattended-Upgrade::Automatic-Reboot-Time\
+  \ \"02:00\";\n```\n\n剩下的就是通过编辑（或创建）apt 配置文件 `/etc/apt/apt.conf.d/20auto-upgrades`\
+  \ 来启用无人值守更新，并设置我们希望多久下载一次可升级的包以及多久运行一次自动清理。\n\n```\nAPT::Periodic::Update-Package-Lists\
+  \ \"1\";\nAPT::Periodic::Download-Upgradeable-Packages \"1\";\nAPT::Periodic::AutocleanInterval\
+  \ \"7\";\nAPT::Periodic::Unattended-Upgrade \"1\";\n```\n\n搞定！我们已完成自动更新的设置。\n\n\
+  ### 安装构建工具\n\n我们现在将安装一些稍后从源代码编译其他包所需的包。\n\n```\n### apt install -y build-essential\
+  \ g++ gcc unzip\n```\n\n```\nReading package lists... Done\nBuilding dependency\
+  \ tree\nReading state information... Done\nThe following additional packages will\
+  \ be installed:\nbinutils binutils-common binutils-x86-64-linux-gnu cpp cpp-9\n\
+  ...\n...\nProcessing triggers for man-db (2.9.1-1) ...\nProcessing triggers for\
+  \ mime-support (3.64ubuntu1) ...\n```\n\n现在我们可以开始设置我们的 LEMP 服务器了。\n\n> **注意**：大部分手动步骤将被跳过，但将在自动化部分中得到充分解释。\n\
+  \n### 设置 MySQL 服务器\n\n[我个人更倾向于使用 Percona Server](https://www.percona.com/software/mysql-database/percona-server)\
+  \ [而非 MySQL Community](https://www.mysql.com/products/community)，因为它是任何 MySQL 数据库的免费、完全兼容、增强且开源的直接替代品。它提供了卓越的性能、可扩展性和检测能力。\n\
+  \n由于 Percona Server 不在标准 Ubuntu 仓库中，我们需要添加其源并启用 `ps80` 仓库以使用 MySQL 8。\n\n```\n###\
+  \ wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb\n\
+  ```\n\n```\n--2020-10-28 06:51:13-- https://repo.percona.com/apt/percona-release_latest.focal_all.deb\n\
+  Resolving repo.percona.com (repo.percona.com)... 167.99.233.229, 157.245.119.64,\
+  \ 167.71.118.3\nConnecting to repo.percona.com (repo.percona.com)|167.99.233.229|:443...\n\
+  connected.\n...\n...\n```\n\n```\n### dpkg -i percona-release_latest.$(lsb_release\
+  \ -sc)_all.deb\n```\n\n```\n(Reading database ... 100078 files and directories currently\
+  \ installed.)\nPreparing to unpack percona-release_latest.focal_all.deb ...\n...\n\
+  ...\n```\n\n```\n### percona-release setup ps80\n```\n\n```\n* Disabling all Percona\
+  \ Repositories\n* Enabling the Percona Server 8.0 repository\n* Enabling the Percona\
+  \ Tools repository\nGet:1 http://mirrors.digitalocean.com/ubuntu focal InRelease\
+  \ [265 kB]\n...\nReading package lists... Done\n```\n\n\n\n### 安装 Percona Server\n\
+  \n现在我们可以安装 Percona Server。由于大多数应用程序尚未使用新的 MySQL 认证插件，我们将指示 Percona 使用传统的 MySQL 5.x\
+  \ 认证。按照提示操作，为 `root` 用户输入一个安全密码，然后选择原生认证插件。\n\n```bash\n### apt install -y percona-server-server\n\
+  ```\n\n...\n\n...\n\n```\nProcessing triggers for man-db (2.9.1-1) ...\nProcessing\
+  \ triggers for libc-bin (2.31-0ubuntu9.1) ...\n```\n\n**注意：** 如果你未启用原生认证插件，但现在需要启用，请创建一个新的\
+  \ MySQL 配置文件以便在 MySQL 启动时设置它，然后重启 MySQL。我们还将确保 MySQL 在系统启动时自动运行。\n\n```bash\n###\
+  \ echo -e \"[mysqld]\ndefault-authentication-plugin = mysql_native_password\" >\
+  \ /etc/mysql/mysql.conf.d/default-auth-override.cnf\n### service mysql restart\n\
+  ### systemctl enable mysql\n```\n\n接下来，让我们运行 MySQL 提供的脚本以提高安装的安全性。\n\n```bash\n\
+  ### mysql_secure_installation\n```\n\n最后，我们可以清理并删除下载的文件：\n\n```bash\n### rm percona-release_latest.$(lsb_release\
+  \ -sc)_all.deb\n```\n\n大功告成！\n\n### 设置 PHP 7.4\n\n编写本文时，PHP 的最新版本是 7.4。请根据你感兴趣的版本进行调整。让我们使用\
+  \ [Ondrej's PPA](https://launchpad.net/~ondrej/+archive/ubuntu/php) 来设置我们的 PHP 7.4\
+  \ 实例。\n\n```bash\n### add-apt-repository ppa:ondrej/php\n```\n\n```\nCo-installable\
+  \ PHP versions: PHP 5.6, PHP 7.x and most requested extensions are included. Only\
+  \ Supported Versions of\nPHP (http://php.net/supported-versions.php) for Supported\
+  \ Ubuntu Releases (https://wiki.ubuntu.com/Releases) are\nprovided. Don't ask for\
+  \ end-of-life PHP versions or Ubuntu release, they won't be provided.\n```\n\n...\n\
+  \n...\n\n```\nGet:14 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main Translation-en\
+  \ [28.2 kB]\nFetched 1,030 kB in 2s (564 kB/s)\nReading package lists... Done\n\
+  ```\n\n我们现在可以选择运行应用程序所需的 PHP 模块集合。提供的这些模块对于大多数应用程序来说是一个很好的起点。\n\n```bash\n### apt\
+  \ install -y php-pear php7.4 php7.4-cli php7.4-common php7.4-curl php7.4-dev php7.4-gd\
+  \ php7.4-json php7.4-mysql php7.4-opcache php7.4-readline php7.4-sqlite3 php7.4-tidy\
+  \ php7.4-xml php7.4-bcmath php7.4-bz2 php7.4-fpm php7.4-imap php7.4-zip php7.4-mbstring\
+  \ php7.4-soap php7.4-xsl php7.4-intl imagemagick php7.4-imagick\n```\n\n```\nReading\
+  \ package lists... Done\nBuilding dependency tree\nReading state information...\
+  \ Done\nThe following additional packages will be installed:\nautoconf automake\
+  \ autopoint autotools-dev debhelper\n```\n\n...\n\n...\n\n```\nProcessing triggers\
+  \ for php7.4-cli (7.4.12-3+ubuntu20.04.1+deb.sury.org+1) ...\nProcessing triggers\
+  \ for php7.4-fpm (7.4.12-3+ubuntu20.04.1+deb.sury.org+1) ...\n```\n\n然后启用 PHP-FPM\
+  \ 以便在启动时运行。\n\n```bash\n### systemctl enable php7.4-fpm\n```\n\n```\nSynchronizing\
+  \ state of php7.4-fpm.service with SysV service script with\n/lib/systemd/systemd-sysv-install.\n\
+  Executing: /lib/systemd/systemd-sysv-install enable php7.4-fpm\n```\n\n既然我们使用他人的软件包，我们肯定需要\
+  \ [Composer 来管理依赖。请遵循 Composer 安装指南](https://getcomposer.org/doc/00-intro.md)，该指南位于\
+  \ [下载 Composer 页面，然后移动 composer 使其](https://getcomposer.org/download/) 全局可访问。\n\n\
+  **警告：** 由于每当安装文件更改时哈希值都会变化，因此以下代码片段会随着时间的推移而过时。\n\n```bash\n### php -r \"copy('https://getcomposer.org/installer',\
+  \ 'composer-setup.php');\"\n### php -r \"if (hash_file('sha384', 'composer-setup.php')\
+  \ === 'c31c1e292ad7be5f49291169c0ac8f683499edddcfd4e42232982d0fd193004208a58ff6f353fde0012d35fdd72bc394')\
+  \ { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php');\
+  \ } echo PHP_EOL;\"\n```\n\n```\nInstaller verified\n```\n\n```bash\n### php composer-setup.php\n\
+  ```\n\n```\nAll settings correct for using Composer\nDownloading...\nComposer (version\
+  \ 2.0.4) successfully installed to: /root/composer.phar\nUse it: php composer.phar\n\
+  ```\n\n```bash\n### php -r \"unlink('composer-setup.php');\"\n### mv composer.phar\
+  \ /usr/local/bin/composer\n### which composer\n```\n\n```\n/usr/local/bin/composer\n\
+  ```\n\n我们已经准备好 PHP 实例了！太棒了！\n\n### 设置 Redis 服务器\n\n[Redis](https://redis.io) 是一个很棒的内存键值存储。它可用作数据库、缓存，甚至使用\
+  \ [Pub/Sub 作为消息代理。设置它并启用](https://redis.io/topics/pubsub) 开机自启非常简单：\n\n```bash\n\
+  ### apt install -y redis-server\n```\n\n```\nReading package lists... Done\nBuilding\
+  \ dependency tree\nReading state information... Done\n```\n\n...\n\n...\n\n```\n\
+  Processing triggers for man-db (2.9.1-1) ...\nProcessing triggers for libc-bin (2.31-0ubuntu9.1)\
+  \ ...\n```\n\n```bash\n### systemctl enable redis-server\n```\n\n```\nSynchronizing\
+  \ state of redis-server.service with SysV service script with\n/lib/systemd/systemd-sysv-install.\n\
+  Executing: /lib/systemd/systemd-sysv-install enable redis-server\n```\n\n### 设置\
+  \ Nginx\n\n[Nginx 是一个开源 Web 服务器，正如其官网所述，它](https://www.nginx.com/) 为超过 4 亿个网站提供支持。Nginx\
+  \ 非常健壮，也可以充当负载均衡器。要开始使用，我们必须确认未安装 `apache2`。\n\n```bash\n### apt remove apache2\n\
+  ```\n\n```\nReading package lists... Done\nBuilding dependency tree\nReading state\
+  \ information... Done\nPackage 'apache2' is not installed, so not removed\n0 upgraded,\
+  \ 0 newly installed, 0 to remove and 5 not upgraded.\n```\n\n接下来，我们将添加官方 Nginx PPA，以便始终获得最新更新。\n\
+  \n```bash\n### add-apt-repository ppa:nginx/stable\n```\n\n```\nThis PPA contains\
+  \ the latest Stable Release version of the nginx web server software.\n**Only Non-End-of-Life\
+  \ Ubuntu Releases are supported in this PPA**\n**Development releases of Ubuntu\
+  \ are not officially supported by this PPA, and uploads for those will not be available\
+  \ until actual final releases for those versions**\nMore info: https://launchpad.net/~nginx/+archive/ubuntu/stable\n\
+  Press [ENTER] to continue or Ctrl-c to cancel adding it.\n```\n\n```\nHit:1 http://repo.percona.com/prel/apt\
+  \ focal InRelease\n...\n...\nReading package lists... Done\n```\n\n我们现在可以安装并启用 Nginx\
+  \ 以便在启动时运行。\n\n```bash\n### apt install -y nginx\n```\n\n```\nReading package lists...\
+  \ Done\nBuilding dependency tree\n...\n...\nProcessing triggers for nginx-core (1.18.0-3ubuntu1+focal2)\
+  \ ...\nTriggering nginx reload ..\n```\n\n```bash\n### systemctl enable nginx\n\
+  ```\n\n```\nSynchronizing state of nginx.service with SysV service script with\n\
+  /lib/systemd/systemd-sysv-install.\nExecuting: /lib/systemd/systemd-sysv-install\
+  \ enable nginx\n```\n\n太棒了！我们现在可以设置默认服务器块来处理 PHP 文件，并创建一个示例 PHP 文件来测试我们的安装。我们需要从配置文件中找到\
+  \ php-fpm 套接字（TCP 或 Unix 套接字）。\n\n**注意：** 你可以更改池定义中的 `listen` 选项以使用你首选的配置，默认为 Unix\
+  \ 套接字。\n\n```bash\n### cat /etc/php/7.4/fpm/pool.d/www.conf | grep 'listen ='\n\
+  ```\n\n```\nlisten = /run/php/php7.4-fpm.sock\n```\n\n从上面的输出中，我们看到 PHP-FPM 正在通过位于\
+  \ `/run/php/php7.4-fpm.sock` 的套接字进行监听。我们将在默认 Nginx 配置中使用此套接字作为 `fastcgi_pass` 参数。打开\
+  \ `/etc/nginx/sites-available/default` 并更新它，以便允许处理 PHP 文件。\n\n[我们要更改的第一件事是 index\
+  \ 指令](http://nginx.org/en/docs/http/ngx_http_index_module.html)。该指令决定了当 URL 以斜杠\
+  \ (/) 结尾时加载的默认文件。\n\n**警告：** 你设置参数的顺序很重要。如果你有一个 `index.php` 和一个 `index.html` 文件，且\
+  \ `index` 指令设置为 `index index.html index.php`，则 `index.html` 文件将优先于 `index.php` 文件。\n\
+  \n\n\n\n### 使用 Ansible 实现服务器自动化设置\n\n#### Nginx 的 PHP-FPM 配置\n\n我们还将添加一个新的 location\
+  \ 块，并使用正则表达式匹配所有以 `.php` 结尾的文件，将它们发送给正在运行的 PHP-FPM 进程。\n\n```\n#### vi /etc/nginx/sites-available/default\n\
+  \nroot /var/www/html;\n\nindex index.php index.html index.htm index.nginx-debian.html;\n\
+  server_name _;\n\nlocation / {\n    try_files $uri $uri/ =404;\n}\n\nlocation ~\
+  \ \\.php$ {\n    include snippets/fastcgi-php.conf;\n    fastcgi_pass unix:/run/php/php7.4-fpm.sock;\n\
+  }\n```\n\n完成后，保存文件，测试确认其正确且无错误，然后重启 nginx 以使新配置生效。\n\n```\n#### nginx -t\nnginx:\
+  \ the configuration file /etc/nginx/nginx.conf syntax is ok\nnginx: configuration\
+  \ file /etc/nginx/nginx.conf test is successful\n\n#### service nginx restart\n\
+  ```\n\n我们现在可以添加一个 php info 脚本，用于检查我们的安装。\n\n```\n#### echo -e \"<?php\nphpinfo();\"\
+  \ > /var/www/html/info.php\n```\n\n这太繁琐了！想象一下要对十台服务器执行所有这些步骤！\n\n好消息是我们有 Ansible\
+  \ 来帮助我们实现自动化！打开你喜欢的浏览器，访问 `http://your.ip.over.here/info.php` 并确认 php info 页面已加载。\n\
+  \n## 什么是 Ansible？\n\n[Ansible](https://www.ansible.com/) 是红帽公司的一个平台，具有无限的自动化用例，允许同时在多台服务器上执行操作。Ansible\
+  \ 使用 YAML 语言编写文件，并依赖 SSH 协议来管理机器。\n\nAnsible 安装后，不会添加数据库，也无需启动或保持任何守护进程运行。你只需在一台机器上安装它（可以轻松是一台笔记本电脑），即可从该中心点管理整个远程机器群。当\
+  \ Ansible 管理远程机器时，不会在这些机器上留下已安装或正在运行的软件，因此升级到新版本时，完全不存在如何升级 Ansible 的问题。如果你想为项目做贡献，可以查看\
+  \ [GitHub](https://github.com/ansible/ansible)。\n\n## 设置 Ansible\n\n要运行 Ansible，你需要一台运行任意版本\
+  \ Unix 的机器，无论是 Red Hat、Debian、CentOS、macOS、Ubuntu 及其衍生版等。\n\n目前不支持 Microsoft Windows。根据你的本地发行版，使用包管理器安装\
+  \ ansible。Ansible 也可通过 Python pip 获取。\n\n### Fedora\n\n```\n$ sudo dnf install ansible\n\
+  ```\n\n### CentOS\n\n```\n$ sudo yum install ansible\n```\n\n### Ubuntu\n\n```\n\
+  $ sudo apt update && sudo apt install -y software-properties-common\n$ sudo apt-add-repository\
+  \ --yes --update ppa:ansible/ansible\n$ sudo apt install ansible\n```\n\n### macOS\
+  \ 或其他系统上的本地单用户安装\n\n```\n$ pip install --user ansible\n```\n\n### macOS 或其他系统上的系统级安装\n\
+  \n```\n$ sudo pip install ansible\n```\n\n我们准备好了！当 Ansible 进行远程连接时，它将使用原生 SSH 服务，并假设你正在使用\
+  \ SSH 密钥。始终建议使用 SSH 密钥而非纯密码认证。如果你已经有一台正在运行的服务器，但尚未设置免密认证，可以在本地机器上使用 `ssh-copy-id`\
+  \ 轻松复制你的公钥。\n\n在下面的命令中替换服务器 IP 地址（如果你想为不同用户设置免密认证，也替换用户名）。\n\n```\n$ ssh-copy-id\
+  \ root@123.45.6.78\n```\n\n现在我们已经安装了 Ansible。我们需要一台全新的、未安装任何软件的服务器，以便自动化完成上一节中的手动流程。一旦我们从\
+  \ Digital Ocean（或任何其他提供商，或本地服务器）启动一个新的 Droplet，就可以开始使用 Ansible 了。在本地机器上某个很酷的地方创建一个\
+  \ ansible 目录。在我们的例子中，我们将使用 `~/devops`。\n\n## Ansible 清单\n\nAnsible 允许我们以[不同格式](https://docs.ansible.com/ansible/latest/plugins/inventory.html#inventory-plugins)列出服务器\
+  \ IP 地址。让我们同时使用 INI 和 YAML 格式来解释它们的区别。在新目录中，创建两个新文件：`hosts` 和 `hosts.yml`；以保存所有服务器\
+  \ IP 地址的[清单](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)。由于我们尚未为服务器设置其他用户，我们将使用\
+  \ root 用户。我们还可以为每台服务器命名，并根据需要对它们进行分组。\n\n```\n$ cat hosts\n### your server ip addresses\n\
+  1.x.x.x\n2.x.x.x\n\n[databases]\n3.y.y.y\n4.y.y.y\n\n[php]\nserver ansible_host=5.z.z.z\n\
+  worker ansible_host=6.z.z.z ansible_port=8888\n```\n\n在上述 INI 文件中：\n\n*   `x.x.x`\
+  \ 地址仅在 `all` 和 `ungrouped` 组中，\n*   `y.y.y` 在 `databases` 组中，\n*   `z.z.z` 在 `php`\
+  \ 组中。\n\n这两个 PHP 服务器组有别名（`server` 和 `worker`），当你想明确针对这两台服务器中的任意一台时可以使用。`worker`\
+  \ 服务器还有一个自定义 SSH 端口 `8888`，必须使用 `ansible_port` 变量定义。\n\n上述 INI 文件的 YAML 等效形式为：\n\
+  \n```\n$ cat hosts.yml\n### your server ip addresses\nall:\n  hosts:\n    1.x.x.x:\n\
+  \    2.x.x.x:\n  children:\n    databases:\n      hosts:\n        3.y.y.y:\n   \
+  \     4.y.y.y:\n    php:\n      hosts:\n        server:\n          ansible_host:\
+  \ 5.z.z.z\n        worker:\n          ansible_host: 6.z.z.z\n          ansible_port:\
+  \ 8888\n```\n\n对于 Ansible 主机，当主机不止一个时，每个列表项末尾的冒号是必需的，因此建议始终保留冒号，无论是否有多个主机。要测试我们的清单，请使用\
+  \ ansible [ping 模块](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ping_module.html)\
+  \ ping 任一列出的服务器：\n\n```\n$ ansible all -i hosts -m ping\n$ ansible all -i hosts.yml\
+  \ -m ping\n$ ansible databases -i hosts -m ping\n$ ansible databases -i hosts.yml\
+  \ -m ping\n$ ansible worker -i hosts -m ping\n$ ansible worker -i hosts.yml -m ping\n\
+  ```\n\n```\n...\n6.z.z.z | SUCCESS => {\n    \"ansible_facts\": {\n        \"discovered_interpreter_python\"\
+  : \"/usr/bin/python3\"\n    },\n    \"changed\": false,\n    \"ping\": \"pong\"\n\
+  }\n```\n\n## YAML 基础\n\nYAML 语法非常直观。在查看 playbook 之前，我们将先了解一些基础知识。\n\n按照通用约定，Ansible\
+  \ 文件可以以 `---` 开头，以 `...` 结尾，表示文档的开始和结束。大多数文件只包含开始标记。注释由 `#` 字符定义。\n\n列表在 Ansible\
+  \ 中非常常见，定义方式是使用 `-`（连字符）后跟一个空格。\n\n```\n---\n- php\n- vue\n- react\n```\n\n字典是键值对，冒号后必须始终跟一个空格。\n\
+  \n```\nphp:\n  latest: 7.3\n  Installed: 7.3\n```\n\n如果某行太长，可以使用字面块标量字符 `|`（管道符）或折叠块标量字符\
+  \ `>`（大于号）进行换行。字面块标量字符将按输入原样渲染，包括换行符和任何额外空格；而折叠块标量字符会将换行符转换为空格。可以通过缩进行或添加额外空行来强制换行。\n\
+  \n```\n### Literal\nexact_hello_world_template: |\n  this is\n  the\n  hello world\
+  \ template\n\n### same as:\n### this is\nthe\nwrapped\nhello world template\n\n\
+  ### Folded\nwrapped_hello_world_template: >\n  this is\n  the\n  wrapped\n  hello\
+  \ world template\n\n### same as:\n### this is the wrapped\nhello world template\n\
+  ```\n\n注意：如果你的字符串包含冒号或 `#`，你需要给它们加引号，因为当冒号后跟一个空格时（即 `John Doe: Look for him`），YAML\
+  \ 会期望一个映射。`#` 之后的任何内容都将被视为注释。\n\n## Ansible Playbooks\n\nPlaybook 是 Ansible 的配置、部署和编排语言。它们可以描述你希望远程系统强制执行的策略，或通用\
+  \ IT 流程中的一组步骤，在我们的例子中，就是我们希望如何设置服务器。\n\n\n\n\n\n### Ansible Playbooks 和 Roles\n\n\
+  每个 playbook 由 tasks（任务）组成，任务是在你选择的主机上执行的一组步骤。任务按照编写顺序针对选定的主机执行，一次执行一个任务。为了使我们的 playbook\
+  \ 可配置，我们必须在任务中使用变量。\n\n这些变量可以在 Ansible Inventory 文件、play 中，甚至在 task 中定义。\n\n当任务执行时，任务的名称会作为输出的一部分显示。因此，play\
+  \ 中的每个任务都应该有一个名称，即任务的简单易读描述。\n\n我们可以按照任何喜欢的结构对任务进行分组。既然我们要设置 LEMP 服务器，我们可以有 php、mysql、nginx、common\
+  \ 和 acl 组。在 Ansible 中，这些组被称为 **roles（角色）**。**角色** 的优点在于它们是自包含的，因此可以在 playbook 之间轻松共享。\n\
+  \n## 初始设置\n\n万事俱备！在 `~/devops` 目录下，添加一个新的 `site.yml` 文件。这将是我们的 play 定义文件。接下来我们需要一个目录来存放所有的角色；创建\
+  \ `roles` 目录。然后我们将使用 `ansible-galaxy` 来创建 5 个角色。\n\n```\n$ touch site.yml\n$ mkdir\
+  \ roles\n$ cd roles\n$ ansible-galaxy init php\n$ ansible-galaxy init mysql\n$ ansible-galaxy\
+  \ init nginx\n$ ansible-galaxy init common\n$ ansible-galaxy init acl\n```\n\n首先，让我们给\
+  \ Ansible 提供要使用的主机列表。按你喜欢的格式定义 Ansible Inventory。我倾向于使用 INI 格式：\n\n```\n123.45.6.78\
+  \ ansible_user=root\n```\n\n> **注意：** 既然我们在服务器上使用 `root` 账户，就必须通过添加 `ansible_user=root`\
+  \ 参数显式指示 Ansible；否则，它将尝试使用本地用户账户连接并失败。\n\n接下来，使用你喜欢的编辑器打开 `site.yml`。我倾向于使用安装了 YAML\
+  \ 和 Ansible 扩展的 Visual Studio Code。\n\n> **注意：** 每个 playbook 由一个 plays 列表组成，每个 play\
+  \ 针对一个服务器列表（主机）执行。\n\n我们要给出的第一个指令是 play 应该在其上执行的主机列表；目前用 `all` 即可。\n\n```\n---\n\
+  - hosts: all\n```\n\n接下来我们将定义一个部分来保存 play 将要使用的变量。该部分由键 `vars` 定义，并且由于它是一个字典，其属性应从边距处缩进。\n\
+  \n```\n---\n- hosts: all\n  vars:\n    KEY: sample value\n```\n\n我们现在可以通过添加一个 `ping`\
+  \ 任务来测试 playbook 是否设置正确，该任务的作用与运行 `ansible all -i hosts -m ping` 相同。\n\n```\n---\n\
+  - hosts: all\n  vars:\n    KEY: sample value\n  tasks:\n    - name: Ping our awesome\
+  \ server\n      ping:\n        data: pong\n```\n\n打开终端并导航到 `~/devops` 目录，然后执行 playbook：\n\
+  \n```\n$ cd ~/devops\n$ ansible-playbook -i ./hosts site.yml\n```\n\n```\nPLAY [all]\
+  \ *************************************************************\nTASK [Gathering\
+  \ Facts] *************************************************\nok: [123.45.6.78]\n\
+  TASK [Ping our awesome server] *****************************************\nok: [123.45.6.78]\n\
+  PLAY RECAP *************************************************************\n123.45.6.78\
+  \ : ok=2 changed=0 unreachable=0 failed=0 skipped=0 rescued=0 ignored=0\n```\n\n\
+  恭喜！你已经运行了第一个 playbook。回顾一下，playbook 的语法与 YAML hosts 文件相似。我们将对所有 playbook 信息（包括角色）使用\
+  \ YAML。\n\n移除刚才添加的 tasks，并用我们的 roles 替换它们。\n\n根据你的设置，你可能需要在 playbook 中包含多个 play，每个\
+  \ play 都有自己的主机集合。在我们的例子中，我们对所有服务使用一台通用服务器。\n\n运行 play 时，我们将首先执行 `common` 角色，以便进行基本的服务器设置并执行系统升级。我们计划通过\
+  \ unix socket 使用 PHP-FPM。unix socket 的路径取决于我们运行的 PHP 版本。如果我们选择 PHP 7.3，socket 将是\
+  \ `unix:/run/php/php7.3-fpm.sock`，而 PHP 7.4 将给我们 `unix:/run/php/php7.4-fpm.sock`。socket\
+  \ 位置同时被 Nginx 和 PHP 使用。PHP 版本也决定了要安装的 PHP 模块。如果我们使用 PHP 7.3，就必须安装 `php7.3-*` 模块。鉴于所有这些原因，将\
+  \ PHP 版本保存为变量非常合理。所以让我们把它作为第一个变量添加进去。\n\n```\n---\n- name: Spinning up our LEMP\
+  \ server.\n  hosts: all\n  vars:\n    php_version: \"7.3\"\n  roles:\n    - common\n\
+  \    - mysql\n    - php\n    - nginx\n    - acl\n```\n\n当使用不同的主机时，你可以使用：\n\n```\n\
+  ---\n- name: Common Setup\n  hosts: all\n  roles:\n    - common\n    - security\n\
+  \    - ...\n    - ...\n- name: Spin up php\n  hosts:\n    - php\n  vars:\n    php_version:\
+  \ \"7.3\"\n  roles:\n    - php\n```\n\n## 角色结构\n\n使用 `ansible-galaxy init role`\
+  \ 创建的每个角色都附带一组文件夹。并非所有文件夹都是必需的，但至少应存在 `tasks` 文件夹。以下是默认获得的文件夹：\n\n*   **Defaults（默认值）**\
+  \ => 存储角色中使用的默认变量，以防变量未定义。\n*   **Files（文件）** => 存放角色中使用的可部署文件。\n*   **Handlers（处理器）**\
+  \ => 存放可在角色内部或外部使用的 handlers（事件监听器）。\n*   **Meta（元数据）** => 定义角色将使用的一些元数据。\n*   **Tasks（任务）**\
+  \ => 存放角色将执行的任务列表。\n*   **Templates（模板）** => 包含可由角色编辑和部署的模板。\n*   **Vars（变量）** =>\
+  \ 包含角色使用的变量。\n\n你可以在 Ansible 中触发事件，这些事件将由 `handlers` 目录中定义的监听器处理。我们所有的任务都将在 `tasks`\
+  \ 目录中定义和存储。\n\n## Common 角色\n\n打开位于 `common/tasks` 下的 `main.yml`。我们将使用此文件定义在 `site.yml`\
+  \ 中定义的每个主机上执行的所有通用任务。我们将添加一些“手动服务器设置”章节中没有的内容。我们将采取的步骤是：\n\n1.  更新服务器\n2.  设置无人值守升级\n\
+  3.  安装额外软件包\n4.  执行一些系统优化\n5.  创建新用户；`deploy` 以处理我们的 CI/CD 部署\n6.  设置防火墙。\n\n我们将创建将被导入到\
+  \ `main.yml` 文件中的子任务。拥有子任务使过程非常原子化，因此更易于管理。我们将创建子任务文件，然后将它们添加到 common 任务中。\n\n```\n\
+  $ cd ~/devops/roles/common/tasks\n$ touch pre_setup.yml optimisations.yml users.yml\
+  \ security.yml\n```\n\n然后将创建的子任务导入主任务文件：\n\n```\n---\n### tasks file for common\
+  \ role\n- name: Pre-setup tasks\n  import_tasks: pre_setup.yml\n- name: Optimise\
+  \ system\n  import_tasks: optimisations.yml\n- name: Create additional users\n \
+  \ import_tasks: users.yml\n- name: Boot firewall and configure SSH\n  import_tasks:\
+  \ security.yml\n```\n\n## Pre-Setup 子任务\n\n打开 `pre_setup.yml` 并使用 `apt` 模块来更新服务器、安装软件包和设置无人值守升级。对于无人值守升级，我们将使用模板、完整文件或\
+  \ `lineinfile` 模块。`lineinfile` 模块可用于在文件中添加、编辑和删除行，如果文件不存在，它也可以创建文件。\n\n首先，让我们更新\
+  \ apt 缓存和任何过时的软件包。我们将 apt 缓存过期时间设置为 24 小时。由于 `apt` 模块以秒为单位接受 TTL，我们将使用 `86400`。\n\
+  \n```\n---\n- name: Update the system\n  apt:\n    update_cache: yes\n    cache_valid_time:\
+  \ 86400\n    upgrade: 'dist'\n```\n\n萝卜青菜，各有所爱，因此需要变量！每台服务器都不同，有不同的软件包需求，无人值守升级软件包需要有不同的表现等。我们将为角色设置默认变量并将它们存储在\
+  \ `defaults` 目录中。这些变量可以通过在 play 定义或 `vars` 目录中拥有同名变量来覆盖。\n\n\n\n\n\n### 预设置与优化\n\
+  \n我们肯定需要一些基础软件包已安装，且某些软件包可能使用 snap。因此，我们可以创建三个变量：一个用于存放 apt 软件包（`pre_setup_packages`），最后两个用于存放\
+  \ snap 软件包（`pre_setup_snap` 和 `pre_setup_snap_classic`）。\n\n[假设我们将使用 Let’s Encrypt](https://letsencrypt.org/)\
+  \ 和 Ubuntu 18.04，我们将需要添加 `ppa:certbot/certbot` 仓库。在我们的案例中，使用的是 Ubuntu 20.04，我们将使用\
+  \ snap 来安装 certbot。\n\n---\n\n## common 的 defaults 文件\n\n```yaml\npre_setup_snap:\n\
+  pre_setup_snap_classic:\n  - certbot\npre_setup_packages:\n  - wget\n  - curl\n\
+  \  - zsh\n  - software-properties-common\n  - build-essential\n  - g++\n  - gcc\n\
+  \  - git\n  - vim\n  - nscd\n  - supervisor\n  - unzip\n  - acl\n  - unattended-upgrades\n\
+  \  - ufw\n```\n\n切回到 `pre_setup` 子任务，并添加安装所需软件包的任务。\n\n---\n\n## pre_setup 任务\n\n\
+  ```yaml\n- name: Update the system\n  apt:\n    update_cache: yes\n    cache_valid_time:\
+  \ 86400\n    upgrade: 'dist'\n\n- name: Install packages\n  apt:\n    name: \"{{\
+  \ pre_setup_packages | default([], true) | list }}\"\n    state: latest\n\n- name:\
+  \ Install Snap Packages\n  snap:\n    name: \"{{ pre_setup_snap | default([], true)\
+  \ | list }}\"\n    state: present\n\n- name: Install Classic Snap Packages\n  snap:\n\
+  \    name: \"{{ pre_setup_snap_classic | default([], true) | list }}\"\n    classic:\
+  \ true\n    state: present\n```\n\n## 无人值守升级\n\n无人值守升级仅使用已启用的来源运行。我们可以创建一个文件并将其存放在\
+  \ files 目录下，或者使用变量来启用我们需要的来源。我们将采用后者。让我们在 `common/default/main.yml` 文件中添加一些默认变量。\n\
+  \n```yaml\nunattended_upgrades_security: true\nunattended_upgrades_esm: true\nunattended_upgrades_updates:\
+  \ true\nunattended_upgrades_proposed: false\nunattended_upgrades_backports: false\n\
+  unattended_upgrades_blacklisted: []\nunattended_upgrades_remove_dependencies: false\n\
+  unattended_upgrades_auto_reboot: true,\nunattended_upgrades_auto_reboot_time: \"\
+  00:00\"\nunattended_upgrades_update_period: 1\nunattended_upgrades_upgrade_period:\
+  \ 1\nunattended_upgrades_auto_clean_period: 7\nunattended_upgrades_unattended_upgrade_period:\
+  \ 1\n```\n\n请随意根据需要添加更多变量。复制 `/etc/apt/apt.conf.d/50unattended-upgrades` 并将其用作模板，保存为\
+  \ `common/templates/50unattended-upgrades.j2`，然后将值替换为变量。\n\n[Ansible 使用 Jinja 作为模板引擎。您可以在](https://jinja.palletsprojects.com)\
+  \ [文档站点](https://jinja.palletsprojects.com)上阅读更多相关信息。\n\n```jinja\nUnattended-Upgrade::Allowed-Origins\
+  \ {\n  \"${distro_id}:${distro_codename}\";\n\n  {% if unattended_upgrades_security\
+  \ %}\n  \"${distro_id}:${distro_codename}-security\";\n  {% endif %}\n\n  {% if\
+  \ unattended_upgrades_esm %}\n  \"${distro_id}ESMApps:${distro_codename}-apps-security\"\
+  ;\n  \"${distro_id}ESM:${distro_codename}-infra-security\";\n  {% endif %}\n\n \
+  \ {% if unattended_upgrades_updates %}\n  \"${distro_id}:${distro_codename}-updates\"\
+  ;\n  {% endif %}\n\n  {% if unattended_upgrades_proposed %}\n  \"${distro_id}:${distro_codename}-proposed\"\
+  ;\n  {% endif %}\n\n  {% if unattended_upgrades_backports %}\n  \"${distro_id}:${distro_codename}-backports\"\
+  ;\n  {% endif %}\n};\n\nUnattended-Upgrade::Package-Blacklist {\n  {% for item in\
+  \ unattended_upgrades_blacklisted %}\n  \"{{ item }}\";\n  {% endfor %}\n};\n\n\
+  Unattended-Upgrade::MinimalSteps \"true\";\nUnattended-Upgrade::InstallOnShutdown\
+  \ \"false\";\nUnattended-Upgrade::Remove-Unused-Dependencies \"{% if unattended_upgrades_remove_dependencies\
+  \ %}true{% else %}false{% endif %}\";\nUnattended-Upgrade::Automatic-Reboot \"{%\
+  \ if unattended_upgrades_auto_reboot %}true{% else %}false{% endif %}\";\nUnattended-Upgrade::Automatic-Reboot-Time\
+  \ \"{{ unattended_upgrades_auto_reboot_time }}\";\n```\n\n在 `pre_setup.yml` 下创建一个任务，用于替换变量并将模板部署到服务器。如果\
+  \ Ansible 任务编写得当，在已设置好的系统上重新运行它们不会破坏任何东西，只会简单地更新需要更改的内容。\n\n```yaml\n- name: Configure\
+  \ Unattended Upgrades\n  template:\n    dest: /etc/apt/apt.conf.d/50unattended-upgrades\n\
+  \    src: 50unattended-upgrades.j2\n```\n\n添加第二个模板：`common/templates/20auto-upgrades.j2`；内容如下。此文件决定自动升级的执行频率。\n\
+  \n```jinja\nAPT::Periodic::Update-Package-Lists \"{{ unattended_upgrades_update_period\
+  \ }}\";\nAPT::Periodic::Download-Upgradeable-Packages \"{{ unattended_upgrades_upgrade_period\
+  \ }}\";\nAPT::Periodic::AutocleanInterval \"{{ unattended_upgrades_auto_clean_period\
+  \ }}\";\nAPT::Periodic::Unattended-Upgrade \"{{ unattended_upgrades_unattended_upgrade_period\
+  \ }}\";\n```\n\n剩下的就是设置将复制模板的任务：\n\n```yaml\n- name: Configure Unattended Upgrades\
+  \ Frequency\n  template:\n    dest: /etc/apt/apt.conf.d/20auto-upgrades\n    src:\
+  \ 20auto-upgrades.j2\n    owner: root\n    group: root\n    mode: 0644\n```\n\n\
+  完成了！我们成功创建了两个模板文件，添加了一些变量，并创建了将渲染模板并将其部署到服务器的任务。要运行 playbook，我们将使用与之前相同的命令：`$ ansible-playbook\
+  \ -i ./hosts site.yml`\n\n以下是我们完整的预设置文件：\n\n---\n\n## 完整的 pre_setup 任务\n\n```yaml\n\
+  - name: Update the system\n  apt:\n    update_cache: yes\n    cache_valid_time:\
+  \ 86400\n    upgrade: 'dist'\n\n- name: Install packages\n  apt:\n    name: \"{{\
+  \ pre_setup_packages | default([], true) | list }}\"\n    state: latest\n\n- name:\
+  \ Install Snap Packages\n  snap:\n    name: \"{{ pre_setup_snap | default([], true)\
+  \ | list }}\"\n    state: present\n\n- name: Install Classic Snap Packages\n  snap:\n\
+  \    name: \"{{ pre_setup_snap_classic | default([], true) | list }}\"\n    classic:\
+  \ true\n    state: present\n\n- name: Configure Unattended Upgrades\n  template:\n\
+  \    dest: /etc/apt/apt.conf.d/50unattended-upgrades\n    src: 50unattended-upgrades.j2\n\
+  \    owner: root\n    group: root\n    mode: 0644\n\n- name: Configure Unattended\
+  \ Upgrades Frequency\n  template:\n    dest: /etc/apt/apt.conf.d/20auto-upgrades\n\
+  \    src: 20auto-upgrades.j2\n    owner: root\n    group: root\n    mode: 0644\n\
+  ```\n\n## 优化子任务\n\n根据我们的 `main.yml` 任务文件，队列中的下一项是优化（`optimisations.yml`）。为了充分发挥服务器的性能，我们需要增加一些默认值。`Somaxconn`\
+  \ 定义了接受新连接的内核队列大小。该值越低，最大并发用户数越低。\n\n默认情况下，该值设置为 128，最大并发用户数为 128。我们将把该值设置为 100000。打开\
+  \ `optimisations.yml` 并添加第一个任务：\n\n```yaml\n---\n- name: Update the maximum concurrent\
+  \ connections\n  sysctl:\n    name: net.core.somaxconn\n    value: \"100000\"\n\
+  \    state: present\n```\n\n`ip_local_port_range` 定义了可用和可用的端口，默认通常设置为 32768 - 61000。我们将扩大此范围，提供从端口\
+  \ 10000 到端口 65535。\n\n```yaml\n- name: Update available port range\n  sysctl:\n\
+  \    name: net.ipv4.ip_local_port_range\n    value: \"1024 65535\"\n    state: present\n\
+  ```\n\nTCP 协议提供了一种等待状态，它在连接关闭后保持套接字打开长达 4 分钟。这在繁忙的服务器上可能会有问题，因为它会耗尽套接字和端口。我们可以指示系统在安全时重用套接字，而无需等待\
+  \ 4 分钟过去。\n\n```yaml\n- name: Allow socket reuse\n  sysctl:\n    name: net.ipv4.tcp_tw_reuse\n\
+  \    value: 1\n    reload: yes\n    state: present\n```\n\n大多数开发者都遇到过每个进程允许的最大打开文件数的问题。默认值通常非常低；设置为\
+  \ 1024，这会导致问题，因为在任何 unix 系统上套接字本质上都是文件（例如\n\n\n\n\n## 优化连接限制\n\n由于 `/run/php/php7.4-fpm.sock`\
+  \ 的限制，最大并发连接数受到限制。经过计算，网关仅允许最大 512 个连接。这是因为每个客户端连接算作一个入站连接，随后会被转发到上游服务器，这又需要一个出站连接，因此每个客户端占用\
+  \ 2 个打开连接。我们必须调大该值，将软限制和硬限制均设置为 `999999`。\n\n```yaml\n- name: Set the soft and hard\
+  \ open file limits\n  pam_limits:\n    domain: \"{{ item.domain }}\"\n    value:\
+  \ \"999999\"\n    limit_item: nofile\n    limit_type: \"{{ item.type }}\"\n  with_items:\n\
+  \    - type: soft\n      domain: \"*\"\n    - type: hard\n      domain: \"*\"\n\
+  \    - type: soft\n      domain: root\n    - type: hard\n      domain: root\n```\n\
+  \n## 添加重启处理程序\n\n添加第一个处理程序，用于监听需要系统重启的事件。在修改软硬文件限制后触发该事件。打开 `common/handlers/main.yml`：\n\
+  \n```yaml\n---\n### handlers file for common\n- name: reboot server\n  reboot:\n\
+  ```\n\n## 完整的优化任务文件\n\n以下是完整的 `common/tasks/optimisations.yml` 文件：\n\n```yaml\n\
+  ---\n- name: Update the maximum concurrent connections\n  sysctl:\n    name: net.core.somaxconn\n\
+  \    value: \"100000\"\n    state: present\n\n- name: Update available port range\n\
+  \  sysctl:\n    name: net.ipv4.ip_local_port_range\n    value: \"1024 65535\"\n\
+  \    state: present\n\n- name: Allow socket reuse\n  sysctl:\n    name: net.ipv4.tcp_tw_reuse\n\
+  \    value: 1\n    reload: yes\n    state: present\n\n- name: Set the soft and hard\
+  \ open file limits\n  pam_limits:\n    domain: \"{{ item.domain }}\"\n    value:\
+  \ \"999999\"\n    limit_item: nofile\n    limit_type: \"{{ item.type }}\"\n  with_items:\n\
+  \    - type: soft\n      domain: \"*\"\n    - type: hard\n      domain: \"*\"\n\
+  \    - type: soft\n      domain: root\n    - type: hard\n      domain: root\n  notify:\n\
+  \    - reboot server\n```\n\n## 用户子任务\n\n为了克隆 Git 仓库，我们需要一个用户（当然不是 root）。我倾向于将用户命名为\
+  \ `deploy`，但你可以创建任何喜欢的用户名。让我们在 `common/defaults/main.yml` 下添加一些默认变量，然后在 `common/tasks/users.yml`\
+  \ 中编写用户创建任务。\n\n```yaml\ndeploy_user: \"deploy\"\ndeploy_user_generate_ssh_key:\
+  \ true\ndeploy_user_shell: \"/bin/bash\"\ndeploy_user_local_ssh_keys:\n  - ~/.ssh/id_rsa.pub\n\
+  deploy_user_groups:\n  - www-data\n```\n\n> **注意**：由于该用户需要处理 Web 服务器文件，我们将其添加到 `www-data`\
+  \ 组。我们未实施用户隔离。如果你打算实施，请修改附加到 `deploy` 用户的组。\n\n使用 Ansible `user` 模块创建新用户，并生成将被 CI/CD\
+  \ 流水线使用的 SSH 密钥对。我们还将使用 `authorized_key` 模块复制本地公钥以实现无密码登录。同时，我们希望允许 `deploy` 用户在从\
+  \ GitLab 使用 CI/CD 流水线时以自己的身份登录。\n\n```yaml\n---\n### tasks for users.yml\n- name:\
+  \ Create the deploy user groups\n  group:\n    name: \"{{ item }}\"\n    state:\
+  \ present\n  loop: \"{{ deploy_user_groups | default([], true) }}\"\n\n- name: Create\
+  \ the deploy user\n  user:\n    name: \"{{ deploy_user }}\"\n    groups: \"{{ (deploy_user_groups\
+  \ | default([], true) | join(',')) }}\"\n    generate_ssh_key: \"{{ deploy_user_generate_ssh_key\
+  \ }}\"\n    shell: \"{{ deploy_user_shell }}\"\n  register: created_user\n\n- name:\
+  \ Add GitLab to known hosts\n  lineinfile:\n    dest: \"/home/{{ deploy_user }}/.ssh/known_hosts\"\
+  \n    create: yes\n    state: present\n    line: \"{{ lookup('pipe', 'ssh-keyscan\
+  \ -t rsa gitlab.com') }}\"\n    regexp: \"^gitlab\\\\.com\"\n    mode: 0600\n\n\
+  - name: Allow SSH key based logins\n  authorized_key:\n    user: \"{{ deploy_user\
+  \ }}\"\n    key: \"{{ lookup('file', item) }}\"\n    state: present\n  loop: \"\
+  {{ deploy_user_local_ssh_keys | default([], true) }}\"\n\n- name: Allow Deploy User\
+  \ to Login\n  authorized_key:\n    user: \"{{ deploy_user }}\"\n    key: \"{{ created_user['ssh_public_key']\
+  \ }}\"\n    state: present\n```\n\n运行 Playbook 查看更改是否按预期应用。Playbook 运行后，尝试以创建的用户身份登录（在本例中为\
+  \ `deploy` 用户）：`ssh deploy@123.45.6.78`。你应该能够成功无密码登录。\n\n## 安全子任务\n\n让我们加强服务器安全！首先我喜欢修改默认\
+  \ SSH 端口。我们还安装了 UFW（简单防火墙）来过滤允许接受和丢弃的连接。\n\n添加一些新的默认变量。`ufw_allow` 变量将包含要使用的端口和协议（tcp/udp），可包含任意数量的端口。\n\
+  \n```yaml\nssh_port: \"4033\"\nufw_allow:\n  - port: 80\n    proto: tcp\n  - port:\
+  \ 443\n    proto: tcp\n```\n\n然后在 `common/tasks/security.yml` 中添加任务：\n\n```yaml\n\
+  ---\n### tasks for security\n- name: Update the SSH port\n  lineinfile:\n    path:\
+  \ /etc/ssh/sshd_config\n    regexp: \"^#?Port \"\n    line: \"Port {{ ssh_port }}\"\
+  \n\n- name: Allow SSH traffic through firewall\n  ufw:\n    rule: allow\n    port:\
+  \ \"{{ ssh_port }}\"\n    proto: tcp\n\n- name: Allow traffic through firewall\n\
+  \  ufw:\n    rule: allow\n    port: \"{{ item.port }}\"\n    proto: \"{{ item.proto\
+  \ }}\"\n  loop: \"{{ ufw_allow | default([], true) | list }}\"\n\n- name: Restart\
+  \ SSH\n  service:\n    name: ssh\n    state: restarted\n\n- name: Ensure we use\
+  \ the configured SSH port for the remainder of the role\n  set_fact:\n    ansible_port:\
+  \ \"{{ ssh_port }}\"\n\n- name: Start UFW\n  ufw:\n    direction: incoming\n   \
+  \ state: enabled\n    policy: deny\n```\n\n你会注意到，我们在 `Ensure we use the configured\
+  \ SSH port for the remainder of the role` 任务下更新了 `ansible_port` 事实。这使得 Ansible 在我们将默认\
+  \ SSH 端口更改为 `4033` 后，能继续执行该角色的其余部分。如果使用其他防火墙，请确保在更改端口前该端口已开放，否则任务将失败。\n\n如果尝试使用默认\
+  \ SSH 命令连接，除非指定端口，否则将失败。要以之前创建的 `deploy` 用户身份连接，请在 SSH 命令中添加 `-p 4033`。你也可以为此连接创建别名，或在本地\
+  \ SSH 配置 `~/.ssh/config` 中添加主机：\n\n```bash\n$ ssh -p 4033 deploy@123.45.6.78\n\n\
+  ### 使用别名\n$ echo 'alias devops=\"ssh -p 4033 deploy@123.45.6.78\"' >> ~/.bashrc\n\
+  $ source ~/.bashrc\n$ devops # 这将调用上述别名\n\n### 使用 ssh config\n$ vi ~/.ssh/config\n\
+  Host devops\n  Hostname 123.45.6.78\n  Port 4033\n  User deploy\n$ ssh devops #\
+  \ 这将使用 devops 配置\n```\n\n> **注意**：如果你在每次更改后运行 Playbook，需要将 `ansible_port` 变量添加到\
+  \ Ansible 清单主机文件中，待整个 Playbook 完成后再将其移除，以便新服务器获得正确配置。\n\n使用 INI 格式：\n```ini\n123.45.6.78\
+  \ ansible_user=root ansible_port=4033\n```\n\n`common` 角色完成！\n\n## MySQL 角色\n\n\
+  ### Percona 子任务\n\n在 `mysql` 角色目录下，创建一个新的 `percona.yml` 文件并放入 `tasks` 目录，用于存放 Percona\
+  \ 的准备和安装任务。我们还将添加一些 Python 库，以便 Ansible 能连接到数据库。\n\n```yaml\n---\n- name: Setup\
+  \ Percona Repository\n  apt:\n    deb: \"https://repo.percona.com/apt/percona-release_latest.{{\
+  \ ansible_distribution_release }}_all.deb\"\n\n- name: Enable Percona 8 Repository\n\
+  \  command: percona-release setup ps80\n\n- name: Install Percona Server\n  apt:\n\
+  \    name: percona-server-server\n    state: latest\n    update_cache: yes\n\n-\
+  \ name: Determine required MySQL Python libraries\n  set_fact:\n    mysql_python_package:\
+  \ \"{% if ansible_python.version.major == 3 %}python3-pymysql{% else %}python-pymysql{%\
+  \ endif %}\"\n\n- name: Ensure MySQL Python libraries are installed\n  apt:\n  \
+  \  name: \"{{ mysql_python_package }}\"\n    state: latest\n```\n\n我们还将添加一个处理程序（`mysql/handlers/main.yml`），用于重启\
+  \ MySQL 服务器。\n\n```yaml\n---\n### mysql/handlers/main.yml\n- name: restart mysql\n\
+  \  service:\n    name: mysql\n    state: restarted\n```\n\n### 配置子任务\n\n\n\n###\
+  \ 创建 MySQL 配置文件\n\n在 `mysql/tasks` 下创建一个新的任务文件 `configure.yml`，在 `mysql/templates`\
+  \ 下创建一个新的模板文件 `my.cnf.j2`。该模板将用于修改 Percona 自带的默认 `my.cnf` 文件。\n\n### `templates/my.cnf.j2`\n\
+  \n```\n[mysqld]\ndefault-authentication-plugin={{ default_authentication_plugin\
+  \ }}\n\n### 禁用符号链接以防止各种安全风险\nsymbolic-links = 0\n\n### 内存设置。\nmax_allowed_packet\
+  \ = {{ mysql_max_allowed_packet }}\nsort_buffer_size = {{ mysql_sort_buffer_size\
+  \ }}\nread_buffer_size = {{ mysql_read_buffer_size }}\nkey_buffer_size = {{ mysql_key_buffer_size\
+  \ }}\nmyisam_sort_buffer_size = {{ mysql_myisam_sort_buffer_size }}\nread_rnd_buffer_size\
+  \ = {{ mysql_read_rnd_buffer_size }}\ntable_open_cache = {{ mysql_table_open_cache\
+  \ }}\nmax_connections = {{ mysql_max_connections }}\ngroup_concat_max_len = {{ mysql_group_concat_max_len\
+  \ }}\nthread_cache_size = {{ mysql_thread_cache_size }}\njoin_buffer_size = {{ mysql_join_buffer_size\
+  \ }}\ntmp_table_size = {{ mysql_tmp_table_size }}\nmax_heap_table_size = {{ mysql_max_heap_table_size\
+  \ }}\n\n### InnoDB 设置。\ninnodb_file_per_table = {{ mysql_innodb_file_per_table }}\n\
+  innodb_buffer_pool_size = {{ mysql_innodb_buffer_pool_size }}\ninnodb_log_file_size\
+  \ = {{ mysql_innodb_log_file_size }}\ninnodb_log_buffer_size = {{ mysql_innodb_log_buffer_size\
+  \ }}\ninnodb_flush_log_at_trx_commit = {{ mysql_innodb_flush_log_at_trx_commit }}\n\
+  innodb_lock_wait_timeout = {{ mysql_innodb_lock_wait_timeout }}\n\n!includedir /etc/mysql/conf.d/\n\
+  !includedir /etc/mysql/mysql.conf.d/\n```\n\n我们还将为约 512MB 内存的服务器添加一些默认值。\n\n编辑 `mysql/defaults/main.yml`\
+  \ 并添加以下变量。\n\n### `defaults/main.yml`\n\n```yaml\n---\n### mysql 的默认文件\n### caching_sha2_password\
+  \ 是默认值，但大多数客户端不支持它\ndefault_authentication_plugin: \"mysql_native_password\"\n\n\
+  mysql_max_allowed_packet: \"64M\"\nmysql_sort_buffer_size: \"1M\"\nmysql_read_buffer_size:\
+  \ \"1M\"\nmysql_key_buffer_size: \"256M\"\nmysql_myisam_sort_buffer_size: \"64M\"\
+  \nmysql_read_rnd_buffer_size: \"4M\"\nmysql_table_open_cache: \"256\"\nmysql_max_connections:\
+  \ \"151\"\nmysql_group_concat_max_len: \"1024\"\nmysql_thread_cache_size: \"8\"\n\
+  mysql_join_buffer_size: \"262144\"\nmysql_tmp_table_size: \"16M\"\nmysql_max_heap_table_size:\
+  \ \"16M\"\nmysql_innodb_file_per_table: \"1\"\nmysql_innodb_buffer_pool_size: \"\
+  256M\"\nmysql_innodb_log_file_size: \"64M\"\nmysql_innodb_log_buffer_size: \"8M\"\
+  \nmysql_innodb_flush_log_at_trx_commit: \"1\"\nmysql_innodb_lock_wait_timeout: \"\
+  50\"\nmysql_root_password: \"t00r\"\nmysql_grant_users:\n  - name: \"devops\"\n\
+  \    password: \"devops\"\n    host: \"localhost\"\n    privileges: \"*.*:All\"\
+  \ # '*.*:ALL,GRANT' 会生成一个 \"root\" 用户\n```\n\n现在我们可以将模板文件复制到服务器上并替换现有文件。配置完成后，我们将使用之前创建的处理程序重启\
+  \ MySQL 服务器。我们还将确保 MySQL 在系统启动时自动启动。\n\n我们还将创建额外的 MySQL 用户，并赋予他们所需的权限。根据需要在 `mysql_grant_users`\
+  \ 变量下添加任意数量的用户。同时通过角色变量为 root 设置一个合理的密码。最后，我们将执行安全安装，并移除测试数据库和匿名用户。\n\n### `mysql/tasks/configure.yml`\n\
+  \n```yaml\n---\n### mysql/tasks/configure.yml\n- name: Update MySQL Configuration\n\
+  \  template:\n    src: my.cnf.j2\n    dest: /etc/mysql/my.cnf\n    owner: root\n\
+  \    group: root\n    mode: \"0644\"\n    force: true\n  notify: restart mysql\n\
+  \n- name: Enable MySQL on boot\n  service:\n    name: mysql\n    state: started\n\
+  \    enabled: true\n\n- name: Disallow remote root login\n  command: 'mysql -NBe\
+  \ \"{{ item }}\"'\n  with_items:\n    - DELETE FROM mysql.user WHERE User='root'\
+  \ AND Host NOT IN ('localhost', '127.0.0.1', '::1')\n  changed_when: false\n\n-\
+  \ name: Get defined hosts for root\n  command: mysql -NBe \"SELECT Host FROM mysql.user\
+  \ WHERE User = 'root' ORDER BY (Host='localhost') ASC\"\n  register: mysql_hosts\n\
+  \  changed_when: false\n  check_mode: false\n\n- name: Update MySQL root password\n\
+  \  shell: mysql -u root -NBe 'ALTER USER \"root\"@\"{{ item }}\" IDENTIFIED WITH\
+  \ mysql_native_password BY \"{{ mysql_root_password }}\";'\n  with_items: \"{{ mysql_hosts.stdout_lines\
+  \ | default([]) }}\"\n\n- name: Set MySQL root configuration\n  template:\n    src:\
+  \ \"root-my.cnf.j2\"\n    dest: \"/root/.my.cnf\"\n    owner: root\n    group: root\n\
+  \    mode: \"0600\"\n    force: true\n\n- name: Create additional users\n  mysql_user:\n\
+  \    name: \"{{ item.name }}\"\n    host: \"{{ item.host }}\"\n    password: \"\
+  {{ item.password }}\"\n    priv: \"{{ item.privileges }}\"\n    state: present\n\
+  \  loop: \"{{ mysql_grant_users | default([]) }}\"\n  no_log: true\n\n- name: Get\
+  \ defined hosts for the anonymous user\n  command: mysql -NBe 'SELECT Host FROM\
+  \ mysql.user WHERE User = \"\"'\n  register: mysql_anonymous_hosts\n  changed_when:\
+  \ false\n  check_mode: false\n\n- name: Remove anonymous MySQL users\n  mysql_user:\n\
+  \    name: \"\"\n    host: \"{{ item }}\"\n    state: absent\n  with_items: \"{{\
+  \ mysql_anonymous_hosts.stdout_lines | default([]) }}\"\n\n- name: Remove MySQL\
+  \ test database\n  mysql_db:\n    name: test\n    state: absent\n  notify: restart\
+  \ mysql\n```\n\n上述任务引用了一个 `root-my.cnf.j2` 模板文件，用于存储 root MySQL 用户的凭据。请在 `templates`\
+  \ 下创建该文件，并使用以下内容。\n\n### `templates/root-my.cnf.j2`\n\n```\n[client]\nuser=\"root\"\
+  \npassword=\"{{ mysql_root_password }}\"\n```\n\n剩下的就是将这两个子任务包含到 `mysql/tasks/main.yml`\
+  \ 中。\n\n### `mysql/tasks/main.yml`\n\n```yaml\n---\n### tasks file for mysql\n-\
+  \ name: Handle Percona Installation\n  import_tasks: percona.yml\n\n- name: Configure\
+  \ the database engine\n  import_tasks: configure.yml\n```\n\n这应该能搞定我们的 MySQL 服务器。你应该能够使用设置的密码登录\
+  \ MySQL，其他创建的用户也应该能够登录。\n\n## PHP 角色\n\n设置 PHP 通常很简单。由于我们使用的是 PHP 7.4，我们可以选择使用 Debian\
+  \ 维护的版本或 Ondrej 的 PPA，但既然很多人喜欢拥有灵活性，我们就使用后者。我们将设置 PHP、[Composer](https://getcomposer.org/)\
+  \ 并配置诸如 `opcache` 之类的模块。\n\n### 安装子任务\n\n添加一个新的子任务 `installs.yml`，用于存放 PHP 和其他所需二进制文件的安装。我们将从源码编译一些模块，如\
+  \ `redis`。要安装的包列表将在 `php/defaults/main.yml` 中定义。\n\n### `php/defaults/main.yml`\n\
+  \n```yaml\n---\n### defaults file for php\nphp_version: \"7.4\"\nphp_packages:\n\
+  \  - php-pear\n  - \"php{{ php_version }}\"\n  - \"php{{ php_version }}-cli\"\n\
+  \  - \"php{{ php_version }}-common\"\n  - \"php{{ php_version }}-curl\"\n  - \"\
+  php{{ php_version }}-dev\"\n  - \"php{{ php_version }}-gd\"\n  - \"php{{ php_version\
+  \ }}-json\"\n  - \"php{{ php_version }}-mysql\"\n  - \"php{{ php_version }}-opcache\"\
+  \n  - \"php{{ php_version }}-readline\"\n  - \"php{{ php_version }}-sqlite3\"\n\
+  \  - \"php{{ php_version }}-xml\"\n  - \"php{{ php_version }}-bcmath\"\n  - \"php{{\
+  \ php_version }}-bz2\"\n  - \"php{{ php_version }}-fpm\"\n  - \"php{{ php_version\
+  \ }}-intl\"\n  - \"php{{ php_version }}-mbstring\"\n  - \"php{{ php_version }}-soap\"\
+  \n  - \"php{{ php_version }}-xsl\"\n  - \"php{{ php_version }}-zip\"\n  - \"php{{\
+  \ php_version }}-imagick\"\n  - imagemagick\n  - libmcrypt-dev\nphp_pecl_install:\n\
+  \  - mcrypt\n  - redis\n```\n\n更改 playbook 中的 `php_version`（在 `site.yml` 中定义）也将改变将要安装的模块，因为我们在所有模块中都使用该变量作为引用。你可以根据需要添加任意数量的包。每个项目都有其自身所需的扩展规格。如果不需要图像处理，可以移除\
+  \ `imagick` 等图像处理扩展。\n\n有两个额外的包来自 PECL。在我们的例子中是 `mcrypt` 和 `redis`。更新 `php/tasks/installs.yml`\
+  \ 子任务并添加：\n\n### `php/tasks/installs.yml`\n\n```yaml\n---\n- name: Add Ondrej PPA\n\
+  \  apt_repository:\n    repo: ppa:ondrej/php\n    state: present\n    update_cache:\
+  \ yes\n    mode: \"0666\"\n```\n\n\n\n### 安装 PHP 包\n\n```yaml\n- name: Install PHP\
+  \ packages\n  apt:\n    name: \"{{ php_packages | default([]) }}\"\n    state: latest\n\
+  ```\n\n### 更新 PECL 协议\n\n```yaml\n- name: Update PECL protocols\n  shell: pecl channel-update\
+  \ pecl.php.net\n```\n\n### 安装 PECL 包\n\n```yaml\n- name: Install PECL Packages\n\
+  \  shell: yes '' | pecl install -s --force {{ item }}\n  loop: \"{{ php_pecl_install\
+  \ }}\"\n```\n\n按照 [Composer 官方文档](https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md)\
+  \ 中的程序化安装方法，创建一个新脚本并保存为 `files/install_composer.sh`。我们将执行该脚本并注册输出，以此判断安装是否成功。若成功，则将生成的\
+  \ `composer.phar` 文件移动至 `/usr/local/bin/composer`。\n\n```bash\n#!/bin/sh\n\nEXPECTED_CHECKSUM=\"\
+  $(wget -q -O - https://composer.github.io/installer.sig)\"\n\nphp -r \"copy('https://getcomposer.org/installer',\
+  \ 'composer-setup.php');\"\n\nACTUAL_CHECKSUM=\"$(php -r \"echo hash_file('sha384',\
+  \ 'composer-setup.php');\")\"\n\nif [ \"$EXPECTED_CHECKSUM\" != \"$ACTUAL_CHECKSUM\"\
+  \ ]\nthen\n    >&2 echo 'ERROR: Invalid installer checksum'\n    rm composer-setup.php\n\
+  \    exit 1\nfi\n\nphp composer-setup.php --quiet\n\nRESULT=$?\n\nrm composer-setup.php\n\
+  \nexit $RESULT\n```\n\n现在更新安装子任务，并添加 Composer 安装任务。\n\n```yaml\n- name: Install\
+  \ Composer\n  script: files/install_composer.sh\n  register: composer_install_status\n\
+  \n- name: Install Composer globally\n  command: mv composer.phar /usr/local/bin/composer\n\
+  \  when: composer_install_status.changed\n```\n\n### 配置子任务\n\n接下来，通过创建 `php/tasks/configure.yml`\
+  \ 并添加额外的默认变量来配置安装。在 Debian/Ubuntu 系统中，PHP 配置文件通常符号链接到 `mods-available` 文件夹，因此我们将在该文件夹中创建配置，并将其符号链接到\
+  \ `cli` 和 `fpm` 目录。在 `php/defaults/main.yml` 中添加用于生成自定义配置的默认变量及配置存储目录。\n\n```yaml\n\
+  php_common_conf_directory: /etc/php/{{ php_version }}/mods-available\nphp_conf_directories:\n\
+  \  - /etc/php/{{ php_version }}/cli/conf.d\n  - /etc/php/{{ php_version }}/fpm/conf.d\n\
+  \nphp_register_modules:\n  - name: mcrypt\n    priority: 20\n  - name: redis\n \
+  \   priority: 20\n```\n\n在上述默认变量中，我们添加了通用的 `mods-available` 目录和两个配置目录，它们均依赖于 PHP\
+  \ 版本。我们想要注册的模块列在 `php_register_modules` 下。`priority` 用于生成文件名（格式为 `priority-name.ini`，例如\
+  \ `20-mcrypt.ini`），并决定模块的加载顺序。\n\n接着，创建存储于 `mods-available` 文件夹中的文件模板，保存为 `templates/module.ini.j2`。\n\
+  \n```ini\n; configuration for php {{ item.name }} module\n; priority={{ item.priority\
+  \ }}\nextension={{ item.name }}.so\n```\n\n为稳妥起见，添加任务以确认 PHP 自定义配置目录确实存在。\n\n```yaml\n\
+  ---\n### php/tasks/configure.yml\n- name: Ensure common configuration directory\
+  \ exist\n  file:\n    path: \"{{ php_common_conf_directory }}\"\n    state: directory\n\
+  \    follow: true\n\n- name: Ensure configuration directories exist\n  file:\n \
+  \   path: \"{{ item }}\"\n    state: directory\n    follow: true\n  loop: \"{{ php_conf_directories\
+  \ }}\"\n```\n\n随后，复制配置文件。首先配置默认文件中 `php_register_modules` 列出的两个已安装模块。将以下两个任务追加到\
+  \ `configure.yml` 子任务中。\n\n```yaml\n- name: Add modules configs\n  template:\n \
+  \   dest: \"{{ php_common_conf_directory }}/{{ item.name }}.ini\"\n    src: module.ini.j2\n\
+  \    owner: root\n    group: root\n    mode: 0644\n  loop: \"{{ php_register_modules\
+  \ }}\"\n\n- name: Enable modules\n  file:\n    src: \"{{ php_common_conf_directory\
+  \ }}/{{ item.1.name }}.ini\"\n    dest: \"{{ item.0 }}/{{ item.1.priority }}-{{\
+  \ item.1.name }}.ini\"\n    state: link\n    force: yes\n  loop: \"{{ php_conf_directories\
+  \ | product(php_register_modules) | list }}\"\n```\n\n现在通过配置 Opcache 来提升 PHP 性能。添加一些\
+  \ Opcache 默认变量，供 `opcache.ini.j2` 模板文件使用。\n\n```yaml\nopcache_enable: \"1\"\nopcache_enable_cli:\
+  \ \"1\"\nopcache_memory_consumption: \"512\"\nopcache_string_buffer: \"64\"\nopcache_accelerated_files:\
+  \ \"30000\"\nopcache_validate_timestamps: \"0\"\nopcache_fast_shutdown: \"1\"\n\
+  opcache_save_comments: \"1\"\n```\n\n建议启用 Opcache，因为它通过将预编译的脚本字节码存储在共享内存中来提高 PHP\
+  \ 性能，从而消除了 PHP 在每次请求时加载和解析脚本的需要。一旦文件被读取并编译，它就会被存储在内存中，后续所有请求都无需再次读取该文件。\n\n> **注意**：禁用\
+  \ `validate_timestamps` 选项时，每次新部署都需要重启 PHP-FPM，以便刷新预编译脚本。\n\n现在创建 `opcache.ini.j2`\
+  \ 模板：\n\n```ini\nzend_extension=opcache.so\n\n[opcache]\nopcache.enable={{ opcache_enable\
+  \ }}\nopcache.enable_cli={{ opcache_enable_cli }}\nopcache.memory_consumption={{\
+  \ opcache_memory_consumption }}\nopcache.interned_strings_buffer={{ opcache_string_buffer\
+  \ }}\nopcache.max_accelerated_files={{ opcache_accelerated_files }}\nopcache.validate_timestamps={{\
+  \ opcache_validate_timestamps }}\nopcache.fast_shutdown={{ opcache_fast_shutdown\
+  \ }}\nopcache.save_comments = {{ opcache_save_comments }}\n```\n\n此模板将替换 `mods-available`\
+  \ 目录下的 `opcache.ini` 文件。该文件会自动符号链接到 `cli` 和 `fpm` 目录，其余工作自动完成。\n\n```yaml\n- name:\
+  \ Setup Opcache\n  template:\n    dest: \"{{ php_common_conf_directory }}/opcache.ini\"\
+  \n    src: opcache.ini.j2\n    owner: root\n    group: root\n    mode: 0644\n```\n\
+  \n接下来，设置 PHP-FPM 池。默认通常是 `www` 池。\n\n创建新模板文件 `www.conf.j2`，并添加以下池定义：\n\n```ini\n\
+  [www]\nuser = {{ php_fpm_user }}\ngroup = {{ php_fpm_group }}\nlisten = /run/php/php{{\
+  \ php_version }}-fpm.sock\nlisten.owner = {{ php_fpm_user }}\nlisten.group = {{\
+  \ php_fpm_group }}\npm = dynamic\npm.max_children = {{ php_pm_max_children }}\n\
+  pm.start_servers = {{ php_pm_start_servers }}\npm.min_spare_servers = {{ php_pm_min_spare_servers\
+  \ }}\npm.max_spare_servers = {{ php_pm_max_spare_servers }}\npm.max_requests = {{\
+  \ php_pm_max_requests }}\n{% if php_pm_enable_stats %}\npm.status_path = {{ php_pm_status_path\
+  \ }}\n{% endif %}\n{% if php_pm_enable_monitoring %}\nping.path = {{ php_pm_ping_path\
+  \ }}\nping.response = {{ php_pm_ping_response }}\n{% endif %}\n```\n\n此池配置文件将根据服务器需求填充。如果服务器资源不足以处理\
+  \ 100 个子进程，将 `pm.max_children` 设为 100 将毫无意义！每个子进程通常消耗 20-60 MB 内存。以运行 MySQL（约 1\
+  \ GB 内存）及系统资源和其他服务（约 0.5 GB）的 4 GB 服务器为例，剩余约 2.5 GB 内存。最大进程数可估算为 2560/60 ≈ 42.6，取整为\
+  \ 40。\n\n即使我们使用 8 GB 内存的服务器，但系统负载不高，因此将最大进程数变量设为 50。更新 `php/defaults/main.yml` 文件，添加以下变量。\n\
+  \n```yaml\nphp_fpm_user: \"www-data\"\nphp_fpm_group: \"www-data\"\nphp_pm_max_children:\
+  \ \"50\"\nphp_pm_start_servers: \"3\"\nphp_pm_min_spare_servers: \"1\"\nphp_pm_max_spare_servers:\
+  \ \"5\"\nphp_pm_max_requests: \"500\"\nphp_pm_enable_stats: true\nphp_pm_status_path:\
+  \ \"/php_status\"\nphp_pm_enable_monitoring: true\nphp_pm_ping_path: \"/php_ping\"\
+  \nphp_pm_ping_response: \"pong\"\n```\n\n> **注意**：若要实现用户隔离，请将 FPM 用户设置为你创建的用户（本例中为\
+  \ `deploy`）。\n\n现在可以添加任务来处理模板部署，并设置 FPM 开机自启。将以下两个任务追加到 `configure.yml` 子任务中。\n\n\
+  \n\n\n- name: Setup the default pool\n  template:\n    dest: \"/etc/php/{{ php_version\
+  \ }}/fpm/pool.d/www.conf\"\n    src: www.conf.j2\n    owner: root\n    group: root\n\
+  \    mode: 0644\n\n- name: Enable PHP-FPM on boot\n  service:\n    name: \"php{{\
+  \ php_version }}-fpm\"\n    state: started\n    enabled: true\n\nPHP 的配置到此结束。只剩两件事：一个用于在所有任务完成后重启\
+  \ PHP 的处理器，以及将子任务添加到主任务中。处理器将监听 `restart php-fpm` 事件，然后为我们处理重启。编辑 `php/handlers/main.yml`：\n\
+  \n```\n---\n### handlers file for php\n- name: restart php-fpm\n  service:\n   \
+  \ name: \"php{{ php_version }}-fpm\"\n    state: restarted\n```\n\n最后，更新我们的 `php/tasks/main.yml`\
+  \ 任务文件并添加子任务。请记住，在配置子任务完成后重启 PHP-FPM：\n\n```\n---\n### tasks file for php\n- name:\
+  \ Install PHP\n  import_tasks: installs.yml\n- name: Configure PHP\n  import_tasks:\
+  \ configure.yml\n  notify: restart php-fpm\n```\n\n## Nginx 角色\n\n[Nginx 可作为发行版软件包获得，也可以通过官方\
+  \ PPA 安装](https://www.nginx.com/)。发行版软件包并不总是最新的，所以让我们使用 PPA。我们将有两个子任务，一个用于安装，另一个用于配置\
+  \ Nginx。我提供了一个经过优化的 `nginx.conf` 文件，以及一个带有一些额外优化的示例默认服务器块。\n\n为了设置 `worker_processes`\
+  \ 配置值，我们将使用当前服务器可用的核心数。如果该变量未定义，该值将被提取并保存在 `nginx_worker_processes` 变量中。如果您想使用自己的值并禁用自动计算，请将\
+  \ `nginx_worker_processes` 变量添加到 playbook 变量中并为其赋值。\n\n那么让我们开始吧！创建两个子任务：`installs.yml`\
+  \ 和 `configure.yml`；并将它们添加到 nginx 的 main.yml 任务文件中。\n\n```\n---\n### tasks file\
+  \ for nginx\n- name: Install nginx\n  import_tasks: installs.yml\n- name: Configure\
+  \ Nginx\n  import_tasks: configure.yml\n```\n\n### 安装子任务\n\n我们现在可以打开 `nginx/tasks/installs.yml`\
+  \ 并添加官方 Nginx PPA，安装它并设置为在系统启动时运行。\n\n```\n---\n- name: Add Nginx PPA.\n  apt_repository:\n\
+  \    repo: 'ppa:nginx/stable'\n    state: present\n    update_cache: true\n    mode:\
+  \ 0666\n\n- name: Remove Apache if present\n  apt:\n    name: apache2\n    state:\
+  \ absent\n\n- name: Install Nginx\n  apt:\n    name: nginx\n    state: latest\n\n\
+  - name: Enable Nginx on boot\n  service:\n    name: nginx\n    state: started\n\
+  \    enabled: true\n```\n\n我们的安装子任务到此完成！很快吧？\n\n### 配置子任务\n\n接下来，我们打开 `nginx/tasks/configure.yml`\
+  \ 文件，设置 worker 进程自动计算任务，仅在 `nginx_worker_processes` 变量未定义时运行。\n\n```\n---\n- name:\
+  \ Check the available processor cores\n  shell: grep processor /proc/cpuinfo | wc\
+  \ -l\n  register: nginx_core_number\n  when: nginx_worker_processes is not defined\n\
+  \n- name: Set the nginx_worker_processes variable\n  set_fact:\n    nginx_worker_processes:\
+  \ \"{{ nginx_core_number.stdout_lines[0] }}\"\n  when: nginx_worker_processes is\
+  \ not defined\n```\n\n我们现在可以将 `nginx.conf` 模板文件添加到 `templates/nginx.conf.j2` 下。\n\
+  \n```\nuser {{ nginx_user }};\nworker_processes {{ nginx_worker_processes }};\n\
+  pid /var/run/nginx.pid;\nerror_log /var/log/nginx/error.log {{ nginx_error_level\
+  \ }};\nevents {\n  worker_connections {{ nginx_worker_connections }};\n}\nhttp {\n\
+  \  include /etc/nginx/mime.types;\n  default_type application/octet-stream;\n  log_format\
+  \ main_ext '$remote_addr - $remote_user [$time_local] \"$request\" '\n    '$status\
+  \ $body_bytes_sent \"$http_referer\" '\n    '\"$http_user_agent\" \"$http_x_forwarded_for\"\
+  \ '\n    '\"$host\" sn=\"$server_name\" '\n    'rt=$request_time '\n    'ua=\"$upstream_addr\"\
+  \ us=\"$upstream_status\" '\n    'ut=\"$upstream_response_time\" ul=\"$upstream_response_length\"\
+  \ '\n    'cs=$upstream_cache_status';\n  access_log /var/log/nginx/access.log main_ext;\n\
+  \  sendfile on;\n  tcp_nopush on;\n  tcp_nodelay on;\n  keepalive_timeout {{ nginx_keepalive_timeout\
+  \ }};\n  types_hash_max_size {{ nginx_types_hash_max_size }};\n  # allow the server\
+  \ to close connection on non responding client,\n  # this will free up memory\n\
+  \  reset_timedout_connection on;\n  ##\n  # Client Settings\n  ##\n  client_body_timeout\
+  \ {{ nginx_client_body_timeout }};\n  client_header_timeout {{ nginx_client_header_timeout\
+  \ }};\n  client_body_buffer_size {{ nginx_client_body_buffer_size }};\n  client_header_buffer_size\
+  \ {{ nginx_client_header_buffer_size }};\n  client_max_body_size {{ nginx_client_max_body_size\
+  \ }};\n  large_client_header_buffers {{ nginx_large_client_header_buffers }};\n\
+  \  {% if nginx_enable_gzip %}\n  ##\n  # Gzip Settings\n  ##\n  gzip on;\n  gzip_disable\
+  \ \"msie6\";\n  gzip_vary on;\n  gzip_proxied any;\n  gzip_comp_level 6;\n  gzip_min_length\
+  \ 1000;\n  gzip_buffers 16 8k;\n  gzip_http_version 1.1;\n  gzip_types application/atom+xml\
+  \ application/javascript application/json application/ld+json application/manifest+json\
+  \ application/rdf+xml application/rss+xml application/schema+json application/vnd.geo+json\
+  \ application/vnd.ms-fontobject application/x-font-ttf application/x-javascript\
+  \ application/x-web-app-manifest+json application/xhtml+xml application/xml font/collection\
+  \ font/eot font/opentype font/otf font/ttf image/bmp image/svg+xml image/vnd.microsoft.icon\
+  \ image/x-icon text/cache-manifest text/calendar text/css text/javascript text/plain\
+  \ text/markdown text/vcard text/vnd.rim.location.xloc text/vtt text/x-component\
+  \ text/x-cross-domain-policy text/xml;\n  {% endif %}\n  ##\n  # Server Settings\n\
+  \  ##\n  server_tokens off; # don't send the version number in error pages and headers\n\
+  \  include /etc/nginx/conf.d/*.conf;\n  include /etc/nginx/sites-enabled/*;\n}\n\
+  ```\n\n太棒了！上述配置禁用了 server tokens，以便我们保持 Nginx 详情的私密性，并启用了超时连接的重置，以便我们能尽可能多地重用内存。让我们将配置要用到的变量添加到\
+  \ `nginx/defaults/main.yml` 文件中。\n\n```\n---\n### defaults file for nginx\nnginx_user:\
+  \ \"www-data\"\nnginx_error_level: \"warn\"\nnginx_worker_connections: \"2048\"\n\
+  nginx_keepalive_timeout: \"65\"\nnginx_types_hash_max_size: \"2048\"\nnginx_client_body_timeout:\
+  \ \"12\"\nnginx_client_header_timeout: \"12\"\nnginx_client_body_buffer_size: \"\
+  10k\"\nnginx_client_header_buffer_size: \"1k\"\nnginx_client_max_body_size: \"8m\"\
+  \nnginx_large_client_header_buffers: \"4 32k\"\nnginx_enable_gzip: true\n```\n\n\
+  如前所述，如果您想设置 `worker_processes`，您需要编辑 `sites.yml` 文件并按如下方式添加 `nginx_worker_processes`\
+  \ 变量：\n\n```\n---\n- name: Spinning up our LEMP server.\n  hosts: all\n  vars:\n\
+  \    nginx_worker_processes: \"auto\"\n  roles:\n    - common\n    - mysql\n   \
+  \ - php\n    - nginx\n```\n\n我们现在可以向 `nginx/tasks/configure.yml` 文件添加任务，这些任务将验证两个配置和日志目录是否存在，并在缺失时处理创建（`/etc/nginx/conf.d`、`/etc/nginx/sites-enabled`\
+  \ 和 `/var/log/nginx`）。另一个任务将处理部署我们自定义的 `nginx.conf` 模板。\n\n```\n- name: Validate\
+  \ the config directories exist\n  file:\n    path: \"{{ item }}\"\n    state: directory\n\
+  \    owner: root\n    group: root\n  loop:\n    - /etc/nginx/conf.d\n    - /etc/nginx/sites-enabled\n\
+  \n- name: Validate the log directory exist\n  file:\n    path: /var/log/nginx\n\
+  \    state: directory\n    owner: root\n    group: adm\n\n- name: Deploy custom\
+  \ nginx.conf\n  template:\n    dest: /etc/nginx/nginx.conf\n    src: nginx.conf.j2\n\
+  \    owner: root\n    group: root\n    mode: 0644\n```\n\n注意：如果使用用户隔离，请设置 `nginx_user`\
+  \ 和\n\n\n\n\n\n## Nginx 配置与 SSL 安全加固\n\n### 生成 Diffie-Hellman 参数\n\n进入 `/var/log/nginx`\
+  \ 目录以匹配创建的用户账户。\n\n为了通过 HTTPS 提供站点服务并增强加密强度，我们需要添加一些配置。首先，让我们生成 4096 位素数字段的安全 **Diffie-Hellman\
+  \ (DH)** 参数。此过程耗时取决于服务器资源。\n\n在 `nginx/defaults/mail.yml` 文件中指定保存文件的位置：\n\n```yaml\n\
+  ### defaults/main.yml\nnginx_dhparam_location: \"/etc/ssl/certs/dhparam.pem\"\n\
+  ```\n\n在 `nginx/tasks/configure.yml` 中添加生成任务：\n\n```yaml\n- name: Generate 4096\
+  \ bit DH Params\n  community.crypto.openssl_dhparam:\n    path: \"{{ nginx_dhparam_location\
+  \ }}\"\n    size: 4096\n    mode: 0666\n```\n\n上述任务使用了 `community.crypto.openssl_dhparam`\
+  \ 模块，这是一个社区模块，不在默认 Ansible 模块中。我们需要安装 **Community Crypto Collection**（包含许多其他实用工具）：\n\
+  \n```bash\n$ ansible-galaxy collection install community.crypto\n```\n\n### 配置 SSL\
+  \ 参数模板\n\n添加 `nginx/templates/ssl-params.conf.j2` 模板，用于配置 SSL 参数。此文件应包含在每个使用 HTTPS\
+  \ 的 `server` 块中。\n\n```nginx\n### Use per block. ssl-params\n\nssl_protocols TLSv1.2\
+  \ TLSv1.3;\nssl_prefer_server_ciphers on;\nssl_ciphers \"EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH\"\
+  ;\nssl_ecdh_curve secp384r1;\nssl_session_timeout 60m;\nssl_session_cache shared:SSL:10m;\n\
+  ssl_session_tickets off;\nssl_stapling on;\nssl_stapling_verify on;\nresolver {{\
+  \ nginx_dns_ip_1 }} {{ nginx_dns_ip_2 }} valid=300s;\nresolver_timeout 5s;\n\n{%\
+  \ if nginx_enable_strict_transport_security_header %}\nadd_header Strict-Transport-Security\
+  \ \"max-age={{ nginx_hsts_max_age }}{% if nginx_hsts_include_subdomains %};includeSubdomains{%\
+  \ endif %}{% if nginx_hsts_preload %};preload{% endif %}\";\n{% endif %}\n\n{% for\
+  \ option in nginx_xframe_options %}\nadd_header X-Frame-Options {{ option }};\n\
+  {% endfor %}\n\nadd_header X-Content-Type-Options nosniff;\nadd_header X-Robots-Tag\
+  \ {{ nginx_x_robots_tag }};\nssl_dhparam {{ nginx_dhparam_location }};\n```\n\n\
+  配套的默认变量如下：\n\n```yaml\nnginx_dns_ip_1: \"8.8.8.8\"\nnginx_dns_ip_2: \"8.8.4.4\"\n\
+  nginx_enable_strict_transport_security_header: true\nnginx_hsts_max_age: \"63072000\"\
+  \nnginx_hsts_preload: false\nnginx_hsts_include_subdomains: true\nnginx_xframe_options:\n\
+  \  - \"SAMEORIGIN\"\nnginx_x_robots_tag: \"none\" # https://developers.google.com/search/reference/robots_meta_tag\n\
+  ```\n\n### SSL 配置说明\n\n查看 `ssl-params.conf.j2` 文件，我们设置了一些 Nginx 参数：\n\n- 仅保留 TLS\
+  \ 1.2 和 TLS 1.3 协议，其它协议被认为不安全。\n- 启用的 `ssl_ciphers` 被公认为最佳配置，详情请参考 [Mozilla Foundation](https://wiki.mozilla.org/Security/Server_Side_TLS)。\n\
+  - `ssl_dhparam` 和 `ssl_ecdh_curve` 用于前向保密：客户端和服务器协商一个特定于连接的预主密钥，仅在有限时间内使用，会话结束即销毁（因此称为\
+  \ Ephemeral）。我们使用这些选项指示 Nginx 使用生成的 DH 参数进行 DHE 密钥交换。\n- 通过 **HTTP Strict Transport\
+  \ Security (HSTS)** 头指示现代浏览器仅通过 HTTPS 通信；若 HTTPS 不可用则拒绝连接，保障客户端安全。详见 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)。\n\
+  - **X-Frame-Options** 头指导浏览器如何在 `<frame>`、`<iframe>`、`<embed>` 和 `<object>` 标签中展示站点，可有效防范\
+  \ [Clickjacking](https://en.wikipedia.org/wiki/Clickjacking)。详见 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)。\n\
+  - **X-Content-Type-Options** 头指示客户端服务器设置的 MIME 类型为准，不得更改。详见 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)。\n\
+  \n### 部署 SSL 片段\n\n编辑 `nginx/tasks/configure.yml`，追加以下任务以创建 snippets 目录并部署模板：\n\n\
+  ```yaml\n- name: Validate the snippets directory exist\n  file:\n    path: /etc/nginx/snippets\n\
+  \    state: directory\n    owner: root\n    group: root\n\n- name: Deploy the ssl-snippet\n\
+  \  template:\n    dest: /etc/nginx/snippets/ssl-params.conf\n    src: ssl-params.conf.j2\n\
+  \    owner: root\n    group: root\n    mode: 0644\n```\n\n### 默认 Server 块模板\n\n\
+  启用 HTTPS 时，默认 server 块将引用上述 SSL 片段及证书路径片段。由于暂未配置域名和 SSL 证书，请创建 `nginx/templates/ssl-default.conf.j2`\
+  \ 并根据实际情况更新：\n\n```nginx\nssl_certificate /etc/letsencrypt/live/domain.example.com/fullchain.pem;\n\
+  ssl_certificate_key /etc/letsencrypt/live/domain.example.com/privkey.pem;\n```\n\
+  \n默认 server 块还包含两个额外的 `location` 块，用于监控 PHP 和 Nginx 状态：\n\n1. **PHP status/ping**：将请求转发给\
+  \ PHP-FPM，输出 FPM 池状态并提供健康检查 ping 响应。\n2. **Nginx status**：提供 Nginx 状态指标。\n\n这两个块在需要采集服务器指标时非常有用。\n\
+  \n### 默认变量\n\n在 `nginx/defaults/main.yml` 中添加：\n\n```yaml\nnginx_default_server_root:\
+  \ \"/var/www/app/current/public\"\nnginx_default_server_name: \"_\"\nnginx_default_enable_https:\
+  \ false\n```\n\n### 默认 Server 块模板文件 `nginx/templates/default.j2`\n\n```nginx\nserver\
+  \ {\n    listen 80 default_server;\n    listen [::]:80 default_server;\n\n    {%\
+  \ if nginx_default_enable_https %}\n    listen 443 ssl http2 default_server;\n \
+  \   listen [::]:443 ssl http2 default_server;\n    include snippets/ssl-params.conf;\n\
+  \    include snippets/ssl-default.conf;\n    {% endif %}\n\n    root {{ nginx_default_server_root\
+  \ }};\n    index index.php index.html index.htm index.nginx-debian.html;\n    server_name\
+  \ {{ nginx_default_server_name }};\n\n    location / {\n        try_files $uri $uri/\
+  \ /index.php?$query_string;\n    }\n\n    location ~ \\.php$ {\n        include\
+  \ snippets/fastcgi-php.conf;\n        fastcgi_pass unix:/run/php/php{{ php_version\
+  \ }}-fpm.sock;\n    }\n\n    location ~ /\\.(ht) {\n        deny all;\n    }\n\n\
+  \    location ~ ^/(php_status|php_ping)$ {\n        access_log off;\n        fastcgi_param\
+  \ SCRIPT_FILENAME $fastcgi_script_name;\n        include fastcgi_params;\n     \
+  \   fastcgi_pass unix:/run/php/php{{ php_version }}-fpm.sock;\n        allow 127.0.0.1;\n\
+  \        deny all;\n    }\n\n    location /nginx_status {\n        stub_status on;\n\
+  \        access_log off;\n        allow 127.0.0.1;\n        deny all;\n    }\n}\n\
+  ```\n\n> **注意**：`/php_status`、`/php_ping` 和 `/nginx_status` 的访问仅限本地回环地址（由 `allow\
+  \ 127.0.0.1` 指令限制）。\n\n### 部署默认 Server 块\n\n在 `nginx/tasks/configure.yml` 中追加部署任务：\n\
+  \n```yaml\n- name: Validate the default server root directory exist\n  file:\n \
+  \   path: \"{{ nginx_default_server_root }}\"\n    state: directory\n    owner:\
+  \ www-data\n    group: www-data\n\n- name: Deploy the default server block\n  template:\n\
+  \    dest: /etc/nginx/sites-available/default\n    src: default.j2\n    owner: root\n\
+  \    group: root\n    mode: 0644\n  notify: restart nginx\n```\n\n\n\n\n这就搞定了！我们的\
+  \ nginx 设置应该能让我们充分发挥服务器的性能。剩下的就是给部署用户添加一些权限，以便其能写入 `/var/www` 目录，并且无需 sudo 密码即可重启\
+  \ `php-fpm`。但在此之前，让我们先重启 nginx，确保一切按预期运行。\n\n打开 nginx 处理器文件（`nginx/handlers/main.yml`）并添加重启处理器，该处理器可从任何角色调用：\n\
+  \n---\n\n### nginx 的处理器文件\n\n- name: restart nginx\n  service:\n    name: nginx\n\
+  \    state: restarted\n\n完成后，运行 playbook 看看效果。完整的配置子任务如下：\n\n---\n\n- name: Check\
+  \ the available processor cores\n  shell: grep processor /proc/cpuinfo | wc -l\n\
+  \  register: nginx_core_number\n  when: nginx_worker_processes is not defined\n\n\
+  - name: Set the nginx_worker_processes variable\n  set_fact:\n    nginx_worker_processes:\
+  \ \"{{ nginx_core_number.stdout_lines[0] }}\"\n  when: nginx_worker_processes is\
+  \ not defined\n\n- name: Validate the config directories exist\n  file:\n    path:\
+  \ \"{{ item }}\"\n    state: directory\n    owner: root\n    group: root\n  loop:\n\
+  \    - /etc/nginx/conf.d\n    - /etc/nginx/sites-enabled\n\n- name: Validate the\
+  \ log directory exist\n  file:\n    path: /var/log/nginx\n    state: directory\n\
+  \    owner: root\n    group: adm\n\n- name: Deploy custom nginx.conf\n  template:\n\
+  \    dest: /etc/nginx/nginx.conf\n    src: nginx.conf.j2\n    owner: root\n    group:\
+  \ root\n    mode: 0644\n\n- name: Generate 4096 bit DH Params\n  shell: \"openssl\
+  \ dhparam -out {{ nginx_dhparam_location }} 4096\"\n  args:\n    creates: \"{{ nginx_dhparam_location\
+  \ }}\"\n\n- name: Validate the snippets directory exist\n  file:\n    path: /etc/nginx/snippets\n\
+  \    state: directory\n    owner: root\n    group: root\n\n- name: Deploy the ssl-snippet\n\
+  \  template:\n    dest: /etc/nginx/snippets/ssl-params.conf\n    src: ssl-params.conf.j2\n\
+  \    owner: root\n    group: root\n    mode: 0644\n\n- name: Deploy the default\
+  \ certificate configuration file\n  template:\n    dest: /etc/nginx/snippets/ssl-default.conf\n\
+  \    src: ssl-default.conf.j2\n    owner: root\n    group: root\n    mode: 0644\n\
+  \n- name: Validate the server root directory exist\n  file:\n    path: \"{{ nginx_default_server_root\
+  \ }}\"\n    state: directory\n    owner: www-data\n    group: www-data\n\n- name:\
+  \ Deploy the default server block\n  template:\n    dest: /etc/nginx/sites-available/default\n\
+  \    src: default.j2\n    owner: root\n    group: root\n    mode: 0644\n  notify:\
+  \ restart nginx\n\n最后，通过登录到您的服务器并创建一个 phpinfo 索引文件来测试您的安装：`/var/www/app/current/public/index.php`。\n\
+  \n```\n$ echo -e \"<?php\\nphpinfo();\" > /var/www/app/current/public/index.php\n\
+  ```\n\n打开浏览器并确认一切正常启动！PHP 信息页面应该会渲染出来。\n\n## ACL 角色\n\n现在我们已经完成了服务器设置，我们需要允许部署用户在不需要\
+  \ sudo 密码的情况下执行某些操作。\n\n编辑 `acl/tasks/main.yml` 文件并添加以下任务。\n\n---\n\n### acl 的任务文件\n\
+  \n- name: Set up facl for /var/www\n  acl:\n    path: /var/www\n    entity: www-data\n\
+  \    etype: group\n    permissions: rwx\n    default: no\n    state: present\n \
+  \   recursive: yes\n\n- name: Set up default facl for /var/www\n  acl:\n    path:\
+  \ /var/www\n    entity: www-data\n    etype: group\n    permissions: rwx\n    default:\
+  \ yes\n    state: present\n    recursive: yes\n\n- name: Allow www-data to restart\
+  \ php\n  lineinfile:\n    path: /etc/sudoers.d/wwwdata\n    line: \"%www-data ALL=(ALL:ALL)\
+  \ NOPASSWD:/usr/sbin/service php{{ php_version }}-fpm restart,/usr/sbin/service\
+  \ php{{ php_version }}-fpm reload\"\n    create: yes\n\n- name: Change /var/www\
+  \ ownership\n  file:\n    path: /var/www\n    recurse: yes\n    group: www-data\n\
+  \    owner: www-data\n\n太棒了！您应该能够以部署用户身份登录，在 `/var/www` 下创建、编辑或删除文件，并能够无需密码运行 `sudo\
+  \ service php7.4-fpm restart`，这太酷了！\n\n## 测试与部署\n\n### 测试用例\n\n许多人一听到“测试”这个词就害怕。我们其实都想逃避测试，但测试能让软件在部署前就暴露故障，从而提高正常运行时间。当我们将\
+  \ CI/CD 集成到开发流水线中时，我们会高枕无忧，因为我们知道部署到生产环境的代码确实是可用的。\n\n[对于 PHP，我们将使用 PHPUnit，它随大多数框架捆绑在一起](https://phpunit.de/)。如果使用原生\
+  \ PHP，您仍然可以通过 composer 引入它并测试您的工作。\n\n### 本地测试\n\n#### 测试 Laravel\n\n[让我们使用 Laravel](https://laravel.com)\
+  \ 并设置一些测试。您可以使用 Laravel 安装器或 composer create-project。为简单起见，我们使用 composer create-project。\n\
+  \n```\n$ composer create-project --prefer-dist laravel/laravel devops-app\n```\n\
+  \n现在我们有了一个可用的 Laravel 安装，我们可以创建一个接收数据并将其存储在数据库中的端点。这将允许我们测试数据库连接和与应用程序的交互。\n\n导航到项目目录并编辑\
+  \ `.env` 文件。填入正确的数据库连接信息，然后创建一个新模型及其工厂、迁移和资源控制器：\n\n```\n$ php artisan make:model\
+  \ -mcrf Post\n```\n\n```\nModel created successfully.\nFactory created successfully.\n\
+  Created Migration: 2020_10_29_070516_create_posts_table\nController created successfully.\n\
+  ```\n\n在迁移文件中，只添加一个字段 `content`，类型为 text。我们将不专注于创建一个功能齐全的应用程序，而只关注测试部分。\n\n```\n\
+  <?php\n\nuse Illuminate\\Database\\Migrations\\Migration;\nuse Illuminate\\Database\\\
+  Schema\\Blueprint;\nuse Illuminate\\Support\\Facades\\Schema;\n\nclass CreatePostsTable\
+  \ extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return\
+  \ void\n     */\n    public function up()\n    {\n        Schema::create('posts',\
+  \ function (Blueprint $table) {\n            $table->id();\n            $table->text('content');\n\
+  \            $table->timestamps();\n        });\n    }\n\n    /**\n     * Reverse\
+  \ the migrations.\n     *\n     * @return void\n     */\n    public function down()\n\
+  \    {\n        Schema::dropIfExists('posts');\n    }\n}\n```\n\n完成后，我们可以运行迁移并在数据库中创建表。使用迁移作为数据库结构的蓝图非常有效，因为无需将带有数据的\
+  \ SQL 文件移入 GIT，再传到服务器。\n\n```\n$ php artisan migrate\n```\n\n```\nMigrating: 2014_10_12_000000_create_users_table\n\
+  Migrated: 2014_10_12_000000_create_users_table (40.59ms)\nMigrating: 2014_10_12_100000_create_password_resets_table\n\
+  Migrated: 2014_10_12_100000_create_password_resets_table (32.51ms)\nMigrating: 2019_08_19_000000_create_failed_jobs_table\n\
+  Migrated: 2019_08_19_000000_create_failed_jobs_table (16.03ms)\nMigrating: 2020_10_29_070516_create_posts_table\n\
+  Migrated: 2020_10_29_070516_create_posts_table (0.06 seconds)\n```\n\n我们现在可以编辑 `database/factories`\
+  \ 下的 `PostFactory`，指示工厂如何创建 Post。\n\n```\n<?php\n\nnamespace Database\\Factories;\n\
+  \nuse App\\Models\\Post;\nuse Illuminate\\Database\\Eloquent\\Factories\\Factory;\n\
+  \nclass PostFactory extends Factory\n{\n    /**\n     * The name of the factory's\
+  \ corresponding model.\n     *\n     * @var string\n     */\n    protected $model\
+  \ = Post::class;\n\n    /**\n     * Define the model's default state.\n     *\n\
+  \     * @return array\n     */\n    public function definition()\n    {\n      \
+  \  return [\n            'content' => $this->faker->paragraphs(4, true),\n     \
+  \   ];\n    }\n}\n```\n\n搞定！现在创建一个新的 posts 功能测试。我们将编写测试来执行我们设想的最终用户将执行的任何操作。在我们的例子中，我们期望最终用户能够创建新帖子、编辑它并删除它。\n\
+  \n让我们添加一个 composer 脚本来处理测试的运行。\n\n打开 `composer.json` 并在 scripts 下添加以下内容。\n\n```\n\
+  \"test\": [\n    \"./vendor/bin/phpunit\"\n]\n```\n\n此脚本将使用测试环境迁移数据库，然后运行 `phpunit`。要执行该脚本，只需运行\
+  \ `composer test`。\n\n\n\n由于我们使用的是 PHPUnit，可以使用项目根目录下的 `phpunit.xml` 来配置测试环境。取消注释两个数据库变量：`DB_CONNECTION`\
+  \ 和 `DB_DATABASE`，以便我们使用 sqlite 驱动并将内存作为测试期间数据库的存储位置。这也将加快测试速度，并防止覆盖实际数据库中可能存在的任何数据。\n\
+  \n确保你的 `phpunit.xml` 中的 php 部分看起来类似于：\n\n```xml\n<php>\n    <server name=\"APP_ENV\"\
+  \ value=\"testing\"/>\n    <server name=\"BCRYPT_ROUNDS\" value=\"4\"/>\n    <server\
+  \ name=\"CACHE_DRIVER\" value=\"array\"/>\n    <server name=\"DB_CONNECTION\" value=\"\
+  sqlite\"/>\n    <server name=\"DB_DATABASE\" value=\":memory:\"/>\n    <server name=\"\
+  MAIL_MAILER\" value=\"array\"/>\n    <server name=\"QUEUE_CONNECTION\" value=\"\
+  sync\"/>\n    <server name=\"SESSION_DRIVER\" value=\"array\"/>\n    <server name=\"\
+  TELESCOPE_ENABLED\" value=\"false\"/>\n</php>\n```\n\n注意：你可以根据需要在 php 部分下添加任意数量的环境变量。\n\
+  \n我们不会实现认证，但我们会了解一下验证和表单请求，以便在提供的输入不符合预期时进行测试。\n\n[创建一个表单请求](https://laravel.com/docs/validation#form-request-validation)[来处理验证，并创建一个功能测试来包含](https://laravel.com/docs/testing)测试。\n\
+  \n```bash\n$ php artisan make:request PostRequest\nRequest created successfully.\n\
+  \n$ php artisan make:test PostTest\nTest created successfully.\n```\n\n确认已在 `tests/Feature/PostTest.php`\
+  \ 创建了一个新的功能测试，且包含默认内容：\n\n```php\n<?php\n\nnamespace Tests\\Feature;\n\nuse Illuminate\\\
+  Foundation\\Testing\\RefreshDatabase;\nuse Illuminate\\Foundation\\Testing\\WithFaker;\n\
+  use Tests\\TestCase;\n\nclass PostTest extends TestCase\n{\n    /**\n     * A basic\
+  \ feature test example.\n     *\n     * @return void\n     */\n    public function\
+  \ testExample()\n    {\n        $response = $this->get('/');\n        $response->assertStatus(200);\n\
+  \    }\n}\n```\n\n我们需要在每次运行测试时刷新测试数据库，以便之前运行的测试不会干扰下一个测试。Laravel 方便地包含了一个 [RefreshDatabase\
+  \ trait](https://laravel.com/docs/8.x/database-testing#resetting-the-database-after-each-test)\
+  \ 来为我们完成此操作。\n\n```php\n<?php\n\nnamespace Tests\\Feature;\n\nuse Illuminate\\Foundation\\\
+  Testing\\RefreshDatabase;\nuse Tests\\TestCase;\n\nclass PostTest extends TestCase\n\
+  {\n    use RefreshDatabase;\n}\n```\n\n我们要编写的第一个测试将检查帖子是否可以被创建。由于我们已经有了一个现成的工厂，我们将获取原始内容，发起一个\
+  \ POST 请求，并断言数据已成功持久化到数据库中。\n\n```php\n/**\n * @return void\n */\npublic function\
+  \ testCanCreatePost(): void\n{\n    $post = Post::factory()->raw();\n\n    $this->assertEquals(0,\
+  \ Post::count());\n\n    $this->withExceptionHandling()\n        ->post(route('posts.store'),\
+  \ [])\n        ->assertSessionHasErrors(['content']);\n\n    $this->assertEquals(0,\
+  \ Post::count());\n\n    $this->withoutExceptionHandling()\n        ->followingRedirects()\n\
+  \        ->post(route('posts.store'), $post)\n        ->assertSuccessful();\n\n\
+  \    $this->assertDatabaseHas('posts', ['content' => $post['content']]);\n}\n```\n\
+  \n在上面的测试中，我们首先使用定义的工厂为我们生成一个帖子。由于我们想测试帖子是否已被创建，我们需要先确认在发出创建请求之前它不存在。\n\n接下来，我们通过传递一个空的请求体来测试验证是否生效。既然我们知道它应该会失败，我们就启用异常处理，以便正确渲染\
+  \ Unprocessable HTTP Exception（不可处理的 HTTP 异常）。我们还断言会话中包含预期的错误。如果你使用的是 API，你会使用 `assertJsonValidationErrors`\
+  \ 断言 JSON 响应包含验证错误。\n\n发出请求后，我们想确认它没有错误地持久化数据并返回错误，因此断言数据库中仍然没有帖子。然后我们将正确的数据发送到端点。我们禁用异常处理，以便抛出的任何错误都能在输出中显示。\n\
+  \n这在执行 CI/CD 集成时也非常有用，因为它会给你正确的输出，使调试更容易。请求发出后，我们断言它成功了，最后断言数据库中有生成的帖子。\n\n由于我们没有路由、没有验证规则，控制器也没有响应，这个测试肯定会失败，运行它来确认：\n\
+  \n```bash\n$ composer test\n> ./vendor/bin/phpunit\nPHPUnit 9.4.3 by Sebastian Bergmann\
+  \ and contributors.\n..E 3 / 3\n(100%)\nTime: 00:00.568, Memory: 26.00 MB\n\nThere\
+  \ was 1 error:\n\n1) Tests\\Feature\\PostTest::testCanCreatePost\nSymfony\\Component\\\
+  Routing\\Exception\\RouteNotFoundException: Route\n[posts.store] not defined.\n\
+  ...\n```\n\n所以让我们根据你的实现将路由添加到 `web.php` 或 `api.php`。在我们的例子中，我们将使用 `web.php`。\n\n\
+  ```php\n<?php\n\nuse App\\Http\\Controllers\\PostController;\nuse Illuminate\\Support\\\
+  Facades\\Route;\n\nRoute::view('/', 'welcome');\nRoute::resource('posts', PostController::class);\n\
+  ```\n\n接下来，编辑 `PostRequest` 以添加验证规则；将 content 字段设置为必填字符串。我们还将在 authorize 函数中返回 true\
+  \ 来授权帖子的创建。\n\n```php\n<?php\n\nnamespace App\\Http\\Requests;\n\nuse Illuminate\\\
+  Foundation\\Http\\FormRequest;\n\nclass PostRequest extends FormRequest\n{\n   \
+  \ /**\n     * Determine if the user is authorized to make this request.\n     *\n\
+  \     * @return bool\n     */\n    public function authorize()\n    {\n        return\
+  \ true;\n    }\n\n    /**\n     * Get the validation rules that apply to the request.\n\
+  \     *\n     * @return array\n     */\n    public function rules()\n    {\n   \
+  \     return [\n            'content' => ['required', 'string'],\n        ];\n \
+  \   }\n}\n```\n\n现在可以在 `PostController` 的 store 方法上使用 `PostRequest`。表单请求在被解析时就会验证，因此无需添加额外的验证逻辑。由于创建和更新时的验证逻辑相同，此表单请求也将用于\
+  \ update 方法。\n\n请求可能包含我们不需要的额外数据，所以我们不使用 `$request->all()`，而是使用 `$request->validated()`\
+  \ 仅获取经过清理的数据。\n\n```php\n<?php\n\nnamespace App\\Http\\Controllers;\n\nuse App\\\
+  Http\\Requests\\PostRequest;\nuse App\\Models\\Post;\nuse Illuminate\\Http\\Response;\n\
+  \nclass PostController extends Controller\n{\n    ...\n\n    /**\n     * Store a\
+  \ newly created resource in storage.\n     *\n     * @param PostRequest $request\n\
+  \     *\n     * @return Response\n     */\n    public function store(PostRequest\
+  \ $request)\n    {\n        Post::create($request->validated());\n\n        return\
+  \ redirect()->route('posts.index');\n    }\n\n    ...\n}\n```\n\n接下来，将帖子的 content\
+  \ 字段设置为可批量赋值。打开 `Post` 模型，添加 fillable 属性。这可以防止属性被批量赋值。我个人更喜欢 fillable 而不是 guarded，这样我总能确定到底赋值了什么。\n\
+  \n```php\n<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\\
+  Factories\\HasFactory;\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Post\
+  \ extends Model\n{\n    use HasFactory;\n\n    protected $fillable = ['content'];\n\
+  }\n```\n\n测试现在应该能运行并通过，但不要只听我的，打开终端运行：\n\n```bash\n$ composer test\n> ./vendor/bin/phpunit\n\
+  PHPUnit 9.4.3 by Sebastian Bergmann and contributors.\n... 3 / 3\n(100%)\nTime:\
+  \ 00:00.292, Memory: 28.00 MB\n\nOK (3 tests, 8 assertions)\n```\n\n太棒了！我们的第一个测试运行成功了！所以我们确定帖子可以被创建。\n\
+  \n让我们确认它也可以被编辑和删除。由于我们使用了 `RefreshDatabase` trait，每次运行测试后数据库都会被清空，所以我们需要为后续的每个测试创建一个新帖子。\n\
+  \n```php\n/**\n * @return void\n */\npublic function testCanEditPosts(): void\n\
+  {\n    $post = Post::factory()->create();\n\n    $this->withExceptionHandling()\n\
+  \        ->put(route('posts.update', ['post' => $post]), [])\n        ->assertSessionHasErrors(['content']);\n\
+  }\n```\n\n\n\n### 测试文章更新与删除功能\n\n### 更新文章测试\n\n```php\n$this->assertDatabaseHas('posts',\
+  \ [\n    'id' => $post->id,\n    'content' => $post->content,\n]);\n\n$postUpdate\
+  \ = Post::factory()->raw();\n\n$this->withoutExceptionHandling()\n    ->followingRedirects()\n\
+  \    ->put(route('posts.update', ['post' => $post]), $postUpdate)\n    ->assertSuccessful();\n\
+  \n$this->assertDatabaseHas('posts', [\n    'id' => $post->id,\n    'content' =>\
+  \ $postUpdate['content'],\n]);\n```\n\n我们使用工厂的 `create` 方法创建并持久化了文章。\n\n然后，我们发起了一个无法处理的请求，断言其失败，并检查数据库以确保失败操作未影响数据库。\n\
+  \n接下来，我们通过工厂创建新的文章内容并持久化，断言操作成功且数据已存在于数据库中。\n\n打开 `PostController` 并修改 `update`\
+  \ 函数以包含持久化代码。\n\n```php\n/**\n * Update the specified resource in storage.\n *\n\
+  \ * @param PostRequest $request\n * @param Post $post\n *\n * @return Response\n\
+  \ */\npublic function update(PostRequest $request, Post $post)\n{\n    $post->update($request->validated());\n\
+  \n    return redirect()->route('posts.index');\n}\n```\n\n我们添加了资源路由，因此无需向路由文件添加任何内容。现在可以运行测试并断言其按预期通过。\n\
+  \n```bash\n./vendor/bin/phpunit\n```\n\n```text\nPHPUnit 9.4.3 by Sebastian Bergmann\
+  \ and contributors.\n\n.... 4 / 4 (100%)\n\nTime: 00:00.321, Memory: 28.00 MB\n\n\
+  OK (4 tests, 13 assertions)\n```\n\n### 删除文章测试\n\n我们现在可以测试文章是否可以被删除。我们将添加一个新测试并更新\
+  \ `PostController` 中的 `destroy` 函数。对于此测试，删除请求无需发送负载，因此只会有一个请求。\n\n```php\n/**\n\
+  \ * @return void\n */\npublic function testCanDeletePosts(): void\n{\n    $post\
+  \ = Post::factory()->create();\n\n    $this->withoutExceptionHandling()\n      \
+  \  ->followingRedirects()\n        ->delete(route('posts.destroy', ['post' => $post]))\n\
+  \        ->assertSuccessful();\n\n    $this->assertDatabaseMissing('posts', [\n\
+  \        'id' => $post->id,\n        'content' => $post->content,\n    ]);\n}\n\
+  ```\n\n以及 `PostController` 中的对应代码：\n\n```php\n/**\n * Remove the specified resource\
+  \ from storage.\n *\n * @param Post $post\n *\n * @return Response\n */\npublic\
+  \ function destroy(Post $post)\n{\n    $post->delete();\n\n    return redirect()->route('posts.index');\n\
+  }\n```\n\n我们现在可以运行测试并确认其工作正常。\n\n```bash\ncomposer test\n```\n\n```text\n> ./vendor/bin/phpunit\n\
+  PHPUnit 9.4.3 by Sebastian Bergmann and contributors.\n\n..... 5 / 5 (100%)\n\n\
+  Time: 00:00.355, Memory: 28.00 MB\n\nOK (5 tests, 15 assertions)\n```\n\n太棒了！我们已经测试了文章的创建、更新和删除。你可以继续添加其余测试：查看所有文章、查看单篇文章、查看创建页面和编辑页面。\n\
+  \n### 完整文件\n\n### Post Controller\n\n```php\n<?php\n\nnamespace App\\Http\\Controllers;\n\
+  \nuse App\\Http\\Requests\\PostRequest;\nuse App\\Models\\Post;\nuse Illuminate\\\
+  Http\\Response;\n\nclass PostController extends Controller\n{\n    /**\n     * Display\
+  \ a listing of the resource.\n     *\n     * @return Response\n     */\n    public\
+  \ function index()\n    {\n        //\n    }\n\n    /**\n     * Show the form for\
+  \ creating a new resource.\n     *\n     * @return Response\n     */\n    public\
+  \ function create()\n    {\n        //\n    }\n\n    /**\n     * Store a newly created\
+  \ resource in storage.\n     *\n     * @param PostRequest $request\n     * @return\
+  \ Response\n     */\n    public function store(PostRequest $request)\n    {\n  \
+  \      Post::create($request->validated());\n\n        return redirect()->route('posts.index');\n\
+  \    }\n\n    /**\n     * Display the specified resource.\n     *\n     * @param\
+  \ Post $post\n     * @return Response\n     */\n    public function show(Post $post)\n\
+  \    {\n        //\n    }\n\n    /**\n     * Show the form for editing the specified\
+  \ resource.\n     *\n     * @param Post $post\n     * @return Response\n     */\n\
+  \    public function edit(Post $post)\n    {\n        //\n    }\n\n    /**\n   \
+  \  * Update the specified resource in storage.\n     *\n     * @param PostRequest\
+  \ $request\n     * @param Post $post\n     * @return Response\n     */\n    public\
+  \ function update(PostRequest $request, Post $post)\n    {\n        $post->update($request->validated());\n\
+  \n        return redirect()->route('posts.index');\n    }\n\n    /**\n     * Remove\
+  \ the specified resource from storage.\n     *\n     * @param Post $post\n     *\
+  \ @return Response\n     */\n    public function destroy(Post $post)\n    {\n  \
+  \      $post->delete();\n\n        return redirect()->route('posts.index');\n  \
+  \  }\n}\n```\n\n### Post Test\n\n```php\n<?php\n\nnamespace Tests\\Feature;\n\n\
+  use App\\Models\\Post;\nuse Illuminate\\Foundation\\Testing\\RefreshDatabase;\n\
+  use Tests\\TestCase;\n\nclass PostTest extends TestCase\n{\n    use RefreshDatabase;\n\
+  \n    /**\n     * @return void\n     */\n    public function testCanCreatePost():\
+  \ void\n    {\n        $post = Post::factory()->raw();\n\n        $this->assertEquals(0,\
+  \ Post::count());\n\n        $this->withExceptionHandling()\n            ->post(route('posts.store'),\
+  \ [])\n            ->assertSessionHasErrors(['content']);\n\n        $this->assertEquals(0,\
+  \ Post::count());\n\n        $this->withoutExceptionHandling()\n            ->followingRedirects()\n\
+  \            ->post(route('posts.store'), $post)\n            ->assertSuccessful();\n\
+  \n        $this->assertDatabaseHas('posts', ['content' => $post['content']]);\n\
+  \    }\n\n    /**\n     * @return void\n     */\n    public function testCanEditPosts():\
+  \ void\n    {\n        $post = Post::factory()->create();\n\n        $this->withExceptionHandling()\n\
+  \            ->put(route('posts.update', ['post' => $post]), [])\n            ->assertSessionHasErrors(['content']);\n\
+  \n        $this->assertDatabaseHas('posts', [\n            'id' => $post->id,\n\
+  \            'content' => $post->content,\n        ]);\n\n        $postUpdate =\
+  \ Post::factory()->raw();\n\n        $this->withoutExceptionHandling()\n       \
+  \     ->followingRedirects()\n            ->put(route('posts.update', ['post' =>\
+  \ $post]), $postUpdate)\n            ->assertSuccessful();\n\n        $this->assertDatabaseHas('posts',\
+  \ [\n            'id' => $post->id,\n            'content' => $postUpdate['content'],\n\
+  \        ]);\n    }\n\n    /**\n     * @return void\n     */\n    public function\
+  \ testCanDeletePosts(): void\n    {\n        $post = Post::factory()->create();\n\
+  \n        $this->withoutExceptionHandling()\n            ->followingRedirects()\n\
+  \            ->delete(route('posts.destroy', ['post' => $post]))\n            ->assertSuccessful();\n\
+  \n        $this->assertDatabaseMissing('posts', [\n            'id' => $post->id,\n\
+  \            'content' => $post->content,\n        ]);\n    }\n}\n```\n\n## 使用 GitLab\
+  \ CI/CD 进行自动化测试\n\n我们已成功创建测试并在本地运行。现在我们要创建一个流水线，为每次推送到 [GitLab](https://gitlab.com/)\
+  \ 的提交处理代码测试。如果失败，我们将收到邮件通知；如果是合并请求，它会警告你流水线失败。通过这种设置，我们可以确保部署到生产环境的代码是稳定的。\n\n我们需要构建一个包含运行\
+  \ Laravel 代码所需所有依赖的 Docker 镜像，并尽最大努力保持环境一致性。\n\n### 开始使用 Docker\n\n请遵循你所用平台的 Docker\
+  \ 安装及安装后说明：[Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)、[Mac](https://docs.docker.com/docker-for-mac/install/)、[Windows](https://docs.docker.com/docker-for-windows/install/)。完成后，我们可以开始构建\
+  \ Docker 镜像。\n\n### 构建与发布 Docker 镜像\n\n我们将尝试使 Docker 镜像尽可能接近服务器环境。我们将使用 Docker 提供的官方\
+  \ [Ubuntu 20.04 镜像](https://hub.docker.com/_/ubuntu)，并在其中添加我们的二进制文件和服务。由于服务器使用 PHP\
+  \ 7.4，我们在 Docker 镜像中也将使用相同版本。这些镜像仅包含运行所需的最基本组件，因此文件体积较小。\n\n首先，在项目根目录下的 `docker`\
+  \ 目录中创建 `Dockerfile`。\n\n```bash\nmkdir docker\ncd docker\ntouch Dockerfile\n```\n\
+  \n打开 `Dockerfile` 并使用 [`FROM` 指令](https://docs.docker.com/engine/reference/builder/#from)\
+  \ 指示 Docker 我们将使用基础镜像。然后我们将安装一些系统包、PHP 包，启用 PHP 包，最后[安装 Composer 和 Laravel Envoy](https://laravel.com/docs/envoy)。\n\
+  \n\n\n\n## Docker 镜像构建与 GitLab CI/CD 配置\n\n### Docker 镜像构建\n\n我们将使用 `&&` 运算符链接命令，并使用反斜杠终止长行。制作\
+  \ Docker 镜像时，请务必在执行 `apt` 请求后进行清理，这将保持镜像体积精简。\n\n[我们将使用 `RUN` 指令来执行安装。](https://docs.docker.com/engine/reference/builder/#run)\n\
+  \n开始构建吧。我们将遵循与搭建服务器时类似的步骤。\n\n```dockerfile\nFROM ubuntu:20.04\n\nLABEL maintainer=\"\
+  David Mjomba <smodavprivate@gmail.com>\"\n\nENV DEBIAN_FRONTEND noninteractive\n\
+  \nENV PHP_VERSION 7.4\n\nRUN apt update && \\\n    apt install -y software-properties-common\
+  \ curl \\\n    inetutils-syslogd build-essential pkg-config && \\\n    LC_ALL=C.UTF-8\
+  \ apt-add-repository ppa:ondrej/php -y && \\\n    apt-get update && apt install\
+  \ -y \\\n    php-pear \\\n    php-gettext \\\n    php-ast \\\n    php${PHP_VERSION}\
+  \ \\\n    php${PHP_VERSION}-bcmath \\\n    php${PHP_VERSION}-bz2 \\\n    php${PHP_VERSION}-curl\
+  \ \\\n    php${PHP_VERSION}-cli \\\n    php${PHP_VERSION}-dev \\\n    php${PHP_VERSION}-fpm\
+  \ \\\n    php${PHP_VERSION}-gd \\\n    php${PHP_VERSION}-intl \\\n    php${PHP_VERSION}-json\
+  \ \\\n    php${PHP_VERSION}-mbstring \\\n    php${PHP_VERSION}-mysql \\\n    php${PHP_VERSION}-readline\
+  \ \\\n    php${PHP_VERSION}-soap \\\n    php${PHP_VERSION}-sqlite3 \\\n    php${PHP_VERSION}-xml\
+  \ \\\n    php${PHP_VERSION}-xsl \\\n    php${PHP_VERSION}-zip \\\n    zip unzip\
+  \ g++ gcc git libmcrypt-dev libbz2-dev libmagickwand-dev \\\n    mcrypt imagemagick\
+  \ && \\\n    apt autoremove -y && \\\n    apt-get clean && \\\n    rm -rf /var/lib/apt/lists/*\
+  \ && \\\n    pecl install imagick mcrypt redis && \\\n    curl --silent --show-error\
+  \ https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer\
+  \ && \\\n    composer global require laravel/envoy\n```\n\n我们构建的镜像仅包含 PHP，因为我们只打算运行\
+  \ PHP CLI 并用它来运行 Composer、PHPUnit 和 Laravel Envoy。如果你没有 [Docker Hub 账号，请先创建一个。完成后，我们](https://hub.docker.com/)\
+  \ 将登录 Docker Hub 以便发布容器镜像。我倾向于使用 Docker Hub 而非 GitLab Registry，因为它对所有仓库可用，也可以与他人共享。开始吧！运行\
+  \ `docker login` 并输入你的 Hub 凭据。\n\n```bash\n$ docker login\nUsername: awesome_dude\n\
+  Password:\nLogin Succeeded\n```\n\n现在我们可以构建 Docker 镜像并将其标记为 `latest`。请确保你位于包含 `Dockerfile`\
+  \ 的目录中，然后构建、标记并推送 Docker 镜像。将 `docker_username` 替换为你的实际 Docker 用户名，将 `php74` 替换为你使用的\
+  \ PHP 版本。\n\n```bash\n$ docker build -t docker_username/php74:latest .\n...\n$ docker\
+  \ push docker_username/php74\nThe push refers to repository ...\n5bd5ae06fb33: Pushed\n\
+  ...\nlatest: digest: sha256:a80f55a4c34419490034e6...\n```\n\n在第一条命令中，我们通过命令末尾的句点将上下文设置为当前目录。如果你想构建容器，但身处不同于\
+  \ `Dockerfile` 所在的目录，则需将句点替换为 `Dockerfile` 的路径。\n\n成功构建并部署后，你应该能在 [`hub.docker.com/repositories`](https://hub.docker.com/repositories)\
+  \ 下看到一个标记为 `latest` 的新 `php74` 仓库。现在我们可以使用此镜像运行 GitLab 测试。\n\n### 生成 `.gitlab-ci.yml`\n\
+  \n既然我们有了测试和 Docker 镜像，就可以在仓库上启用 GitLab CI/CD。导航到 `devops` Laravel 项目并创建一个新文件 `.gitlab-ci.yml`。Ansible\
+  \ 中使用的 YAML 基础知识仍将适用于 `.gitlab-ci.yml` 文件。\n\n```bash\n$ touch .gitlab-ci.yml\n\
+  ```\n\n我们将使用的第一个指令是 `image`，它指示 GitLab 拉取特定镜像并在其上执行后续任务。让我们使用刚才创建的 Docker 镜像：\n\n\
+  ```yaml\nimage: docker_username/php74:latest\n```\n\n接下来，我们需要确定系统还需要哪些其他服务。如果需要\
+  \ Redis 和/或 MySQL，我们需要按如下方式引入它们，使用 MySQL 8 并将原生密码作为默认认证插件。正如你所料，我们将使用 `services`\
+  \ 指令来设置这些服务。GitLab Pipeline 将首先启动服务，然后再启动我们上面指定的 Docker 镜像。开始配置吧！\n\n```yaml\nservices:\n\
+  \  - name: redis:latest\n    alias: redis\n  - name: mysql:8\n    alias: mysql\n\
+  \    command: [\"--default-authentication-plugin=mysql_native_password\"]\n```\n\
+  \n我们为服务设置了别名，以便将它们作为环境变量使用。说到环境变量，让我们更新它们以匹配当前环境。我们将使用 `variables` 指令并更新 `.env`\
+  \ 变量：\n\n```yaml\nvariables:\n  MYSQL_DATABASE: homestead\n  MYSQL_ROOT_PASSWORD:\
+  \ secret\n  DB_DATABASE: homestead\n  DB_HOST: mysql\n  DB_USERNAME: root\n  DB_PASSWORD:\
+  \ secret\n  REDIS_HOST: redis\n  REDIS_PORT: 6379\n```\n\n查看 [官方 MySQL Docker 镜像文档](https://hub.docker.com/_/mysql)，我们可以获得一些在容器运行时用于设置的变量：`MYSQL_ROOT_PASSWORD`\
+  \ 设置要使用的 root 密码，`MYSQL_DATABASE` 设置服务启动后要创建的数据库。这两个变量也映射到 Laravel 使用的 `DB_PASSWORD`\
+  \ 和 `DB_DATABASE` 环境变量。`DB_USERNAME` 将为 `root`，如果你注意到了，我们将 `DB_HOST` 改为 `mysql`\
+  \ 以匹配 MySQL 服务使用的别名。我们还将 `REDIS_HOST` 设为 `redis`（Redis 服务的别名），将 `REDIS_PORT` 设为\
+  \ `6379`（Redis 默认端口）。\n\n接下来，我们将定义构成 Pipeline 的作业。每个作业独立处理，某些作业可以：\n- 被允许失败\n- 仅在单个分支上运行\n\
+  - 仅手动触发等\n\n在前置作业不允许失败的情况下，如果它失败了，后续作业将不会执行。在我们的案例中，我们将有两个作业：`test` 和 `deploy`。\n\
+  \n```yaml\nstages:\n  - test\n  - deploy\n```\n\n在运行任何脚本之前打印一些调试信息总是不错的。目前，让我们在运行脚本前打印\
+  \ PHP 版本：\n\n```yaml\nbefore_script:\n  - php -v\n```\n\n现在我们将运行功能测试以确认应用完全正常。\n\
+  \n```yaml\nfeature_tests:\n  stage: test\n  script:\n    - cp .env.example .env\n\
+  \    - composer install\n    - php artisan key:generate\n    - composer test\n```\n\
+  \n在功能测试作业中，我们首先将其分配给 `test` 阶段，然后定义要运行的控制台命令。由于这是仓库的全新克隆，我们首先创建新的 `.env` 文件，运行 `composer\
+  \ install`，生成应用密钥，然后运行预定义的 `composer` 脚本，该脚本反过来运行测试。\n\n既然我们有 Redis 服务，可以将缓存和会话驱动设置为\
+  \ `redis`。这可以在 `variables` 层面完成，也可以通过更新 `.env.example` 文件完成。我倾向于更新 `.env.example`，因为它将被克隆仓库的任何人使用。\n\
+  \n```dotenv\nBROADCAST_DRIVER=log\nCACHE_DRIVER=redis\nQUEUE_CONNECTION=sync\nSESSION_DRIVER=redis\n\
+  ```\n\n现在我们可以添加处理生产环境部署的脚本。你也可以为预发布环境添加另一个。\n\n```yaml\ndeploy_production:\n  stage:\
+  \ deploy\n  script:\n    - time\n  when: manual\n  only:\n    - master\n```\n\n\
+  这是一个虚拟阶段，我们将在测试完成后运行它以确保一切正常。我们指定它仅在 `master` 分支上运行，且需手动触发。这将防止代码自动部署到服务器。\n\n>\
+  \ **注意**：为了获得最佳的 Pipeline 体验，我建议保护 `master` 分支免受直接提交，并通过移除配置中的 `when: manual` 部分来自动运行部署。合并请求创建后，测试将运行。一旦合并到\
+  \ `master`，将自动部署到服务器。\n\n在本书的其余部分，我们将假设部署是手动的，以记录那些本应自动化的操作。以下是当前的 `.gitlab-ci.yml`\
+  \ 文件：\n\n\n\n\n## GitLab CI/CD 配置与自动化部署\n\n### GitLab CI/CD 配置文件\n\n```yaml\nimage:\
+  \ docker_username/php74:latest\n\nservices:\n  - name: redis:latest\n    alias:\
+  \ redis\n  - name: mysql:8\n    alias: mysql\n    command: [\"--default-authentication-plugin=mysql_native_password\"\
+  ]\n\nvariables:\n  MYSQL_DATABASE: homestead\n  MYSQL_ROOT_PASSWORD: secret\n  DB_DATABASE:\
+  \ homestead\n  DB_HOST: mysql\n  DB_USERNAME: root\n  DB_PASSWORD: secret\n  REDIS_HOST:\
+  \ redis\n  REDIS_PORT: 6379\n\nstages:\n  - test\n  - deploy\n\nbefore_script:\n\
+  \  - php -v\n\nfeature_tests:\n  stage: test\n  script:\n    - cp .env.example .env\n\
+  \    - composer install\n    - php artisan key:generate\n    - composer test\n\n\
+  deploy_production:\n  stage: deploy\n  script:\n    - time\n  when: manual\n  only:\n\
+  \    - master\n```\n\n### 仓库初始化与推送\n\n我们现在可以登录 GitLab 并创建一个新的仓库。创建完成后，你将获得仓库地址，将其添加为新的远程仓库。进入\
+  \ DevOps Laravel 目录并初始化 Git 仓库，添加远程仓库，提交并推送到服务器。\n\n```bash\n$ git init\nInitialized\
+  \ empty Git repository in .../devops/.git/\n\n$ git remote add origin git@gitlab.com:your_awesome_username/posts-test.git\n\
+  $ git add .\n$ git commit -m 'adds gitlab ci/cd'\n[master (root-commit) e41dd42]\
+  \ adds gitlab ci/cd\n 94 files changed, 8578 insertions(+)\n create mode 100644\
+  \ .editorconfig\n create mode 100644 .env.example\n create mode 100644 webpack.mix.js\n\
+  \ ...\n\n$ git push origin master\nEnumerating objects: 118, done.\nCounting objects:\
+  \ 100% (118/118), done.\n...\nTo gitlab.com:your_awesome_username/posts-test.git\n\
+  \ * [new branch] master -> master\n```\n\n提交完成后，GitLab Runner 会扫描仓库中的 `.gitlab-ci.yml`\
+  \ 文件，如果存在则自动执行流水线。让我们查看一下！打开你的仓库并导航到 **CI/CD -> Pipelines**。你应该能看到一个正在运行的流水线：\n\n\
+  ![Pipeline Overview](img/index-117_1.png)\n\n点击流水线将显示两个作业。点击 `feature_test` 作业将显示该作业的控制台输出。作业完成后，你将获得成功的绿色提示：**Job\
+  \ succeeded**。\n\n![Job Success](img/index-117_2.png)\n\n太棒了！我们的第一个作业已成功完成！你可以前往作业页面（**CI/CD\
+  \ -> Jobs**）并运行 `deploy_production` 作业。它应该能顺利运行！现在我们可以设置服务器以访问 GitLab，并让 GitLab\
+  \ 访问我们的服务器，以便按预期运行部署作业。\n\n### 使用 GitLab CI/CD 实现自动化部署\n\n#### SSH 配置\n\n为了让服务器能够读取我们的仓库，我们需要获取\
+  \ `deploy` 用户的公钥，并将其作为部署密钥添加到 GitLab。接下来，我们将获取 `deploy` 用户的私钥，并将其作为秘密 CI/CD 变量添加，以便\
+  \ Runner 能够登录服务器并进行必要的更改。让我们登录到服务器！\n\n```bash\n$ ssh -p 4033 deploy@123.45.6.78\n\
+  $ cat ~/.ssh/id_rsa.pub\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQc... ansible-generated\
+  \ on devops-for-php-developers\n```\n\n复制该密钥，导航到你的 GitLab 仓库 -> **Settings -> Repository**。你会找到\
+  \ **Deploy Keys** 部分。展开它并在提供的表单中粘贴复制的密钥，给它一个好的标题。完成后，点击 **Add key**。这将允许 `deploy`\
+  \ 用户从 GitLab 获取仓库，但无法推送任何更改。\n\n接下来，我们可以设置仓库密钥，以允许 GitLab Runner 登录服务器并拉取新更改。打开终端并获取\
+  \ `deploy` 用户的私有 SSH 密钥：\n\n```bash\n$ cat ~/.ssh/id_rsa\n-----BEGIN RSA PRIVATE\
+  \ KEY-----\nMICDpZGu+H...\n...gc8bN\n-----END RSA PRIVATE KEY-----\n```\n\n导航到仓库的\
+  \ **CI/CD 设置 (Settings -> CI/CD)** 并展开 **Variables** 部分。将 **Key** 设为 `SSH_KEY`，将私钥粘贴到\
+  \ **Value** 部分，将状态设为 **protected**，并保存变量。\n\n太棒了！现在 GitLab Runner 将能够登录到我们的服务器并拉取新更改！让我们设置目录结构，以实现零停机时间部署。\n\
+  \n#### 目录结构\n\n为了实现零停机时间，我们将创建一个指向应用最新版本的符号链接，并将 Nginx 指向该符号链接。\n\n由于我们将部署多个版本，我们需要某些数据在版本间持久化。在\
+  \ Laravel 中，`storage` 目录应在版本间持久化。为了实现这一点，我们将保留一个 `persistent` 文件夹来存放 `.env` 文件和\
+  \ `storage` 目录。期望的结构如下：\n\n```text\n/var/www/app/\n├── persistent/\n│   ├── .env\n\
+  │   └── storage/\n├── releases/\n│   ├── 20200101000000/\n│   └── 20200102000000/\n\
+  └── current/ -> symbolic link to latest release 20200102000000\n```\n\n我们将最多保留 5\
+  \ 个版本并删除其余版本。如果需要旧版本，我们可以随时从 GitLab 重新部署。\n\n#### Laravel Envoy\n\nLaravel Envoy\
+  \ 将用于配置我们的服务器并生成所需的目录和版本。它提供了一种简洁、极简的语法，用于定义在远程服务器上运行的常见任务。使用 Blade 风格的语法，你可以轻松设置部署任务、Artisan\
+  \ 命令等。\n\n我们将指示它在应用目录缺失时创建它们，如果 `persistent` 目录缺失，则首先将仓库克隆到 `releases` 目录，然后将所需的文件和目录复制到\
+  \ `persistent` 目录。部署完成后，脚本应移除 `current` 目录并将其符号链接到最新版本。\n\n开始之前，在 DevOps Laravel\
+  \ 应用目录的根目录下创建一个新的 `Envoy.blade.php` 文件。在该文件中，我们将定义要部署的服务器集合及其对应的 SSH 端口。为了使 Envoy\
+  \ 文件可配置且可复用，我们将通过两个选项执行它：第一个是 GitLab 仓库地址，第二个是 JSON 编码的服务器列表。这两个选项将允许 Envoy 文件跨仓库使用，而无需修改文件。\n\
+  \n在执行任何操作之前，我们将进行一些设置。在 `@setup` 部分，我们需要验证这两个选项是否已设置。其次，我们将根据目录结构设置基础路径，并检查持久化存储是否存在，以便在缺失时创建它。设置完成后，我们将使用\
+  \ JSON 解码后的服务器列表定义服务器列表。\n\n```php\n@setup\n    if (!$repo || !$servers) {\n   \
+  \     echo 'The repo and servers parameter is required';\n        die();\n    }\n\
+  \n    $servers = json_decode($servers, true, JSON_THROW_ON_ERROR);\n    if (!$servers\
+  \ || count($servers) < 1) {\n        echo 'servers parameter should be a valid json\
+  \ array of servers.';\n        die();\n    }\n\n    $persistentDir = '/var/www/app/persistent';\n\
+  \    $releasesDir = '/var/www/app/releases';\n    $appDir = '/var/www/app/current';\n\
+  \    $release = date('YmdHis');\n    $newReleaseDir = $releasesDir . '/' . $release;\n\
+  \    $persistentStorageExists = is_dir($persistentDir . '/storage');\n@endsetup\n\
+  \n@servers($servers)\n```\n\n我们现在可以设置将由 GitLab Runner 调用的 `deploy` 任务故事。你可以根据需要定义任意数量的故事。在我们的例子中，我们只需要\
+  \ `deploy` 故事，它将处理：\n\n- 克隆新版本\n- 关联持久化存储和 `.env` 文件\n- 安装 Composer（以及 yarn/npm）依赖\n\
+  - 关联公共存储目录\n- 迁移数据库\n- 缓存路由和配置\n- 激活版本为当前版本\n- 最后清理旧版本\n\n```php\n@story('deploy')\n\
+  \    cloneRelease\n    linkPersistentStorage\n    installDependencies\n    optimiseRelease\n\
+  \    activateRelease\n    cleanup\n@endstory\n```\n\n故事中的每一项都是一个任务，将在 `servers`\
+  \ 数组中定义的每台服务器上运行。Envoy 的优点在于你可以轻松地在运行的任何命令中引入变量。让我们设置所有任务，按照我们手动操作的步骤执行。我已经注释了 Horizon\
+  \ 终止步骤，因为我们尚未设置 Supervisor。\n\n\n\n\n## Laravel Envoy 部署脚本与 CI/CD 配置\n\n参考 [Laravel\
+  \ Horizon 文档](https://laravel.com/docs/horizon#deploying-horizon)。完整的 `Envoy.blade.php`\
+  \ 文件如下：\n\n```blade\n@setup\nif (!$repo || !$servers) {\n    exit('The repo and\
+  \ servers parameter is required');\n}\n\n$servers = json_decode($servers, true,\
+  \ JSON_THROW_ON_ERROR);\nif (!$servers || count($servers) < 1) {\n    exit('servers\
+  \ parameter should be a valid json array of servers.');\n}\n\n$persistentDir = '/var/www/app/persistent';\n\
+  $releasesDir = '/var/www/app/releases';\n$appDir = '/var/www/app/current';\n$release\
+  \ = date('YmdHis');\n$newReleaseDir = $releasesDir . '/' . $release;\n$persistentStorageExists\
+  \ = is_dir($persistentDir . '/storage');\n@endsetup\n\n@servers($servers)\n\n@story('deploy')\n\
+  \    cloneRelease\n    linkPersistentStorage\n    installDependencies\n    optimiseRelease\n\
+  \    activateRelease\n@endstory\n\n@task('cloneRelease')\necho 'Cloning repository\
+  \ into release {{ $release }}'\n[ -d {{ $releasesDir }} ] || mkdir -p {{ $releasesDir\
+  \ }}\ncd {{ $releasesDir }}\ngit clone -b master --depth 1 {{ $repo }} {{ $release\
+  \ }}\n\n@if(!$persistentStorageExists)\nmkdir -p {{ $persistentDir }}/storage\n\
+  cp -rf {{ $newReleaseDir }}/storage {{ $persistentDir }}\n@endif\n\nrm -rf {{ $newReleaseDir\
+  \ }}/storage\n@endtask\n\n@task('linkPersistentStorage')\necho 'Link Persistent\
+  \ Storage'\nln -nfs {{ $persistentDir }}/.env {{ $newReleaseDir }}/.env\nln -nfs\
+  \ {{ $persistentDir }}/storage {{ $newReleaseDir }}/storage\n@endtask\n\n@task('installDependencies')\n\
+  echo \"Installing Dependencies\"\ncd {{ $newReleaseDir }}\ncomposer install --no-dev\
+  \ --prefer-dist -q -o\n@endtask\n\n@task('optimiseRelease')\necho 'Linking public\
+  \ storage directory'\ncd {{ $newReleaseDir }}\nphp artisan storage:link\n\necho\
+  \ 'Migrating Database'\nphp artisan migrate --force\n\necho 'Caching routes and\
+  \ configs'\nphp artisan route:cache\nphp artisan config:cache\n@endtask\n\n@task('activateRelease')\n\
+  echo 'Linking current release'\nrm -rf {{ $appDir }}\nln -nfs {{ $newReleaseDir\
+  \ }} {{ $appDir }}\n\nsudo service php7.4-fpm restart\n\n{{-- echo 'Restarting Horizon'\
+  \ --}}\n{{-- php artisan horizon:terminate --}}\n\necho 'Removing old releases'\n\
+  cd {{ $releasesDir }}\necho 'Current Releases:'\nls\necho 'Releases to remove:'\n\
+  ls | head -n -6\nif (($(ls | head -n -6 | wc -l) > 0)); then rm -rf $(ls | head\
+  \ -n -6); fi\n@endtask\n```\n\n现在我们有了一个可工作的部署脚本。\n\n### 生产环境配置\n\n然而，我们还缺少生产环境的\
+  \ `.env` 文件和数据库。\n\n在 Laravel 应用目录下生成新的应用密钥，然后打开 `.env` 文件，通过 SSH 连接到服务器，在 `persistent`\
+  \ 文件夹中创建新的 `.env` 文件。在新文件中粘贴本地 `.env` 内容，然后按需更新值。更新数据库配置以匹配数据库用户和数据库名称（无论是已存在的还是待创建的）。我们的\
+  \ Ansible 脚本已经创建了 `/var/app/current` 目录并更新了 Nginx 指向它，因此那里无需额外操作。\n\n```bash\n$\
+  \ php artisan key:generate\n$ cat .env\nAPP_NAME=Laravel\nAPP_ENV=local\n...\n$\
+  \ ssh -p 4033 deploy@123.45.6.78\nWelcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-70-generic\
+  \ x86_64)\n...\n$ mkdir -p /var/www/app/persistent\n$ vi /var/www/app/persistent/.env\n\
+  ### paste the content\n### update the variables\n...\nDB_DATABASE=posts\nDB_USERNAME=devops\
+  \ # username and password from the mysql ansible role\nDB_PASSWORD=devops\nBROADCAST_DRIVER=log\n\
+  CACHE_DRIVER=redis\nQUEUE_CONNECTION=sync\nSESSION_DRIVER=redis\n...\n$ mysql -u\
+  \ root -p\nEnter password: #enter the root password set by ansible\nWelcome to the\
+  \ MySQL monitor. Commands end with ; or \\g.\nmysql> create database posts;\nQuery\
+  \ OK, 1 row affected (0.00 sec)\nmysql> exit;\nBye\n```\n\n预部署设置到此完成。现在我们需要配置 GitLab\
+  \ CI/CD 来调用 Envoy 并更新代码库。\n\n### 部署流程配置\n\n在部署新变更之前，我们需要对路由文件进行一项更改。闭包不可序列化，因此我们需要从路由文件中移除所有闭包，以便使用\
+  \ `php artisan route:cache` 进行缓存。打开 `routes/api.php` 并注释掉 `/user` 端点。\n\n```php\n\
+  // Route::middleware('auth:api')->get('/user', function (Request $request) {\n//\
+  \     return $request->user();\n// });\n```\n\n接下来，我们需要更新 GitLab YAML 文件以包含对 Laravel\
+  \ Envoy 的调用。我们已经在 CI/CD 变量中添加了一个密钥，定义了允许 GitLab Runner 登录服务器并使用 Envoy 脚本进行更改的部署用户私钥。我们需要添加一个新变量来保存服务器列表，称之为\
+  \ `ENVOY_HOSTS`。其值应为要部署的服务器的 JSON 字符串，例如：\n\n```json\n[{\"web\": \"deploy@123.45.6.78\
+  \ -p 4033\"}]\n```\n\n数组中可根据需要使用任意数量的主机。接下来，让我们更新 `.gitlab-ci.yml` 文件，设置 SSH agent\
+  \ 和用于登录服务器的私钥。最后，我们将执行 `envoy` 并将仓库地址和服务器列表作为参数传递。\n\n```yaml\nimage: smodav/php74:latest\n\
+  services:\n  - name: redis:latest\n    alias: redis\n  - name: mysql:8\n    alias:\
+  \ mysql\n    command: [\"--default-authentication-plugin=mysql_native_password\"\
+  ]\nvariables:\n  MYSQL_DATABASE: homestead\n  MYSQL_ROOT_PASSWORD: secret\n  DB_DATABASE:\
+  \ homestead\n  DB_HOST: mysql\n  DB_USERNAME: root\n  DB_PASSWORD: secret\n  REDIS_HOST:\
+  \ redis\n  REDIS_PORT: 6379\nstages:\n  - test\n  - deploy\nbefore_script:\n  -\
+  \ php -v\nfeature_tests:\n  stage: test\n  script:\n    - cp .env.example .env\n\
+  \    - composer install\n    - php artisan key:generate\n    - composer test\ndeploy_production:\n\
+  \  stage: deploy\n  script:\n    - 'which ssh-agent || (apt-get update -y && apt-get\
+  \ install openssh-client -y)'\n    - eval $(ssh-agent -s)\n    - ssh-add <(echo\
+  \ \"$SSH_KEY\")\n    - mkdir -p ~/.ssh\n    - '[[ -f /.dockerenv ]] && echo -e \"\
+  Host *\\n\\tStrictHostKeyChecking no\\n\\n\" > ~/.ssh/config'\n    - ~/.config/composer/vendor/bin/envoy\
+  \ run deploy --repo=$CI_REPOSITORY_URL --servers=\"$ENVOY_HOSTS\"\n  when: manual\
+  \ #only for those who want “semi-CI/CD”\n  only:\n    - master\n```\n\n搞定！剩下的就是创建一个新提交，让\
+  \ Runner 施展魔法。手动部署部分仅在设置了 `when: manual` 时生效。\n\n![Manual Deployment](img/index-129_1.png)\n\
+  \n### 手动部署\n\n首个流水线阶段完成后，即可运行手动部署阶段。该阶段可根据需要重复运行多次。\n\n现在我们可以访问服务器验证是否成功。打开浏览器访问\
+  \ IP 地址 `123.45.6.78`，应该会看到 Laravel 欢迎页。\n\n为了测试 CI/CD 流水线是否真正工作，让我们将 Laravel 欢迎页的文字从\
+  \ \"Laravel has wonderful...\" 修改为 \"DevOps is Awesome!\"，然后部署。\n\n```html\n<div\
+  \ class=\"p-6\">\n  <div class=\"flex items-center\">\n    <svg fill=\"none\" stroke=\"\
+  currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"\
+  2\" viewBox=\"0 0 24 24\" class=\"w-8 h-8 text-gray-500\">\n      <path d=\"M12\
+  \ 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754\
+  \ 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477\
+  \ 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\"></path>\n\
+  \    </svg>\n    <div class=\"ml-4 text-lg leading-7 font-semibold\"><a href=\"\
+  https://laravel.com/docs\" class=\"underline text-gray-900 dark:text-white\">Documentation</a></div>\n\
+  \  </div>\n  <div class=\"ml-12\">\n    <div class=\"mt-2 text-gray-600 dark:text-gray-400\
+  \ text-sm\"> DevOps is Awesome! </div>\n  </div>\n</div>\n```\n\n提交变更：\n\n```bash\n\
+  $ git add .\n$ git commit -m \"changes greeting message\"\n$ git push origin master\n\
+  ```\n\n现在前往 GitLab CI/CD 流水线，如果使用半自动 CI/CD 则部署手动任务，观察其运行。任务成功完成后，访问你的 IP 地址确认变更已上线。\n\
+  \n\n\n\n到此结束！你已经成功搭建了一台服务器，且无需编写任何 `apt` 命令，现在我们完成了一个零停机时间设置，让你的生活变得相当轻松。无需登录服务器手动执行\
+  \ `git` 拉取和迁移。说实话，我们都是人，难免会健忘。是否曾遇到过一个 Bug 让你调试了一整天，结果才发现只是忘记重启某个服务？有了这套自动化，你只需设置一次，其余的一切都会自动处理。\n\
+  \n## 还有更多！\n\n这还远未结束——PHP 只是你可以在这种流水线中使用的语言之一！自动化的世界如此庞大，你可以自动化任何让你觉得在浪费时间的事情。这只是冰山一角，去创造奇迹吧！\n\
+  \n## 文档大纲\n\n*   目录\n*   前言\n    *   本书的设计理念\n    *   谁应该阅读本书？\n    *   责任声明\n*\
+  \   手动服务器搭建\n    *   寻找合适的服务器\n    *   服务器更新\n    *   无人值守升级\n    *   安装构建工具\n \
+  \   *   搭建 MySQL 服务器\n    *   搭建 PHP 7.4\n    *   搭建 Redis 服务器\n    *   搭建 Nginx\n\
+  *   使用 Ansible 进行自动化服务器搭建\n    *   什么是 Ansible？\n    *   设置 Ansible\n    *   Ansible\
+  \ 清单\n    *   YAML 基础\n    *   Ansible 剧本\n    *   角色结构\n    *   Common 角色\n   \
+  \ *   MySQL 角色\n    *   PHP 角色\n    *   Nginx 角色\n    *   ACL 角色\n*   测试与部署\n  \
+  \  *   测试用例\n    *   本地测试\n    *   使用 GitLab CI/CD 进行自动化测试\n    *   使用 GitLab CI/CD\
+  \ 进行自动化部署\n    *   Laravel Envoy\n    *   部署\n    *   还有更多！\n\n"

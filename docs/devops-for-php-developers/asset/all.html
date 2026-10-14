@@ -1,0 +1,2750 @@
+<p><span id="index_split_000.html"></span></p>
+<p><span id="index_split_000.html#p1"></span><img src="index-1_1.jpg" class="calibre2" /></p>
+<p><span id="index_split_000.html#p2"></span>Table of Contents</p>
+<p><a href="#index_split_000.html#p4">Preface</a> .............................................................................................................. <a href="#index_split_000.html#p4">4</a></p>
+<p><a href="#index_split_000.html#p5">How this book is designed</a> ......................................................................... <a href="#index_split_000.html#p5">5</a></p>
+<p><a href="#index_split_000.html#p6">Who should read this book?</a> ...................................................................... <a href="#index_split_000.html#p6">6</a></p>
+<p><a href="#index_split_000.html#p7">Notice of Liability</a> ....................................................................................... <a href="#index_split_000.html#p7">7</a></p>
+<p><a href="#index_split_000.html#p8">Manual Server Setup</a> ........................................................................................ <a href="#index_split_000.html#p8">8</a></p>
+<p><a href="#index_split_000.html#p9">Finding the Right Server</a> ............................................................................ <a href="#index_split_000.html#p9">9</a></p>
+<p><a href="#index_split_000.html#p11">Server Updates</a> ........................................................................................ <a href="#index_split_000.html#p11">11</a></p>
+<p><a href="#index_split_000.html#p12">Unattended Upgrades</a> ............................................................................. <a href="#index_split_000.html#p12">12</a></p>
+<p><a href="#index_split_000.html#p14">Installing Build Tools</a> ................................................................................ <a href="#index_split_000.html#p14">14</a></p>
+<p><a href="#index_split_000.html#p15">Setting Up MySQL Server</a> ....................................................................... <a href="#index_split_000.html#p15">15</a></p>
+<p><a href="#index_split_000.html#p17">Setting Up PHP 7.4</a> .................................................................................. <a href="#index_split_000.html#p17">17</a></p>
+<p><a href="#index_split_000.html#p19">Setting Up Redis Server</a> ........................................................................... <a href="#index_split_000.html#p19">19</a></p>
+<p><a href="#index_split_000.html#p20">Setting Up Nginx</a> ..................................................................................... <a href="#index_split_000.html#p20">20</a></p>
+<p><a href="#index_split_000.html#p24">Automated Server Setup using Ansible</a> ......................................................... <a href="#index_split_000.html#p24">24</a></p>
+<p><a href="#index_split_000.html#p25">What is Ansible?</a> ....................................................................................... <a href="#index_split_000.html#p25">25</a></p>
+<p><a href="#index_split_000.html#p26">Setting up Ansible</a> ................................................................................... <a href="#index_split_000.html#p26">26</a></p>
+<p><a href="#index_split_000.html#p28">Ansible Inventory</a> ..................................................................................... <a href="#index_split_000.html#p28">28</a></p>
+<p><a href="#index_split_000.html#p30">YAML Basics</a> ............................................................................................ <a href="#index_split_000.html#p30">30</a></p>
+<p><a href="#index_split_000.html#p32">Ansible Playbooks</a> .................................................................................... <a href="#index_split_000.html#p32">32</a></p>
+<p><a href="#index_split_000.html#p36">Role Structure</a> .......................................................................................... <a href="#index_split_000.html#p36">36</a></p>
+<p><a href="#index_split_000.html#p37">The Common Role</a> ................................................................................... <a href="#index_split_000.html#p37">37</a></p>
+<p><a href="#index_split_000.html#p54">The MySQL Role</a> ...................................................................................... <a href="#index_split_000.html#p54">54</a></p>
+<p><a href="#index_split_000.html#p61">The PHP Role</a> ........................................................................................... <a href="#index_split_000.html#p61">61</a></p>
+<p><a href="#index_split_000.html#p71">The Nginx Role</a> ......................................................................................... <a href="#index_split_000.html#p71">71</a></p>
+<p><span id="index_split_000.html#p3"></span><a href="#index_split_000.html#p86">The ACL Role</a> ........................................................................................... <a href="#index_split_000.html#p86">86</a></p>
+<p><a href="#index_split_000.html#p88">Testing &amp; Deployment</a> .................................................................................... <a href="#index_split_000.html#p88">88</a></p>
+<p><a href="#index_split_000.html#p89">Test Cases</a> ................................................................................................ <a href="#index_split_000.html#p89">89</a></p>
+<p><a href="#index_split_000.html#p90">Local Testing</a> ............................................................................................ <a href="#index_split_000.html#p90">90</a></p>
+<p><a href="#index_split_000.html#p109">Automated Testing with GitLab CI/CD</a> ................................................. <a href="#index_split_000.html#p109">109</a></p>
+<p><a href="#index_split_000.html#p119">Automated Deployment with GitLab CI/CD</a> ......................................... <a href="#index_split_000.html#p119">119</a></p>
+<p><a href="#index_split_000.html#p121">Laravel Envoy</a> ......................................................................................... <a href="#index_split_000.html#p121">121</a></p>
+<p><a href="#index_split_000.html#p127">Deployment</a> ........................................................................................... <a href="#index_split_000.html#p127">127</a></p>
+<p><a href="#index_split_000.html#p131">And There’s More!</a> ................................................................................. <a href="#index_split_000.html#p131">131</a></p>
+<p><span id="index_split_000.html#p4"></span>Preface</p>
+<p>4</p>
+<p><span id="index_split_000.html#p5"></span>How this book is designed</p>
+<p>Although this book is focusing on PHP, the techniques described here can be applied to any other language or deployment, including and not limited to publishing of containers, Node.js applications, Ruby etc.</p>
+<p>We'll mainly focus on a full LEMP (Linux Nginx MySQL PHP) server, that has all binaries running in the same server. Depending on your desires, you can have a dedicated MySQL instance, and a separate Nginx instance that works as a gateway, you will just need to modify the scripts to match your setup.</p>
+<p>You can read this book in any order you prefer. The referenced resources are readily available, and some of them are opensource.</p>
+<p>All the shell commands to be executed will be written with a prefix of either $</p>
+<p>or # followed by a string of characters, and the output will follow thereafter, for example:</p>
+<p>$ echo 'hello world'</p>
+<p>hello world</p>
+<p>5</p>
+<p><span id="index_split_000.html#p6"></span>Who should read this book?</p>
+<p>Any software developer or administrator can read the book. It is ideal for freelancers, startups, entrepreneurs and anyone who works with servers, and a bit of code.</p>
+<p>Since it primarily deals with PHP, you should know the language and understand the stack that you are using; whether LAMP or LEMP; and understand a little about server setup, ssh and using the terminal.</p>
+<p>6</p>
+<p><span id="index_split_000.html#p7"></span>Notice of Liability</p>
+<p>I've made every effort to ensure the accuracy of the information herein.</p>
+<p>However, the information contained in this book is sold without warranty, either express or implied. Neither the author, nor the dealers or distributors will be held liable for any damages caused either directly or indirectly by the instructions contained in this book, or by the software or service providers described herein.</p>
+<p>7</p>
+<p><span id="index_split_000.html#p8"></span>Manual Server Setup</p>
+<p>8</p>
+<p><span id="index_split_000.html#p9"></span>Finding the Right Server</p>
+<p>There are a couple of providers (<a href="https://www.digitalocean.com/?refcode=9724e049fc4d">DigitalOcean</a>, <a href="https://www.linode.com/products/standard-linodes/">Linode Cloud</a><a href="https://aws.amazon.com/ec2/">, AWS</a><a href="https://www.vultr.com/?ref=7275395">, Vultr</a> etc.) with competitive pricing ranging from $2.5/month for a 10GB SSD, 1 vCPU</p>
+<p>and 512 MB RAM on <a href="https://www.vultr.com/?ref=7275395">Vultr</a> to a $960/month for a 3,840GB SSD, 32 vCPUs and 192GB RAM on <a href="https://www.digitalocean.com/?refcode=9724e049fc4d">DigitalOcean.</a></p>
+<p>In our case, we shall use the <a href="https://cloud.digitalocean.com/droplets/new?size=s-4vcpu-8gb">$40/month DigitalOcean Droplet (160GB SSD, 4</a></p>
+<p><a href="https://cloud.digitalocean.com/droplets/new?size=s-4vcpu-8gb">vCPUs and 8GB of RAM) running the latest version of Ubuntu, 20.04 LTS.</a></p>
+<p>123.45.6.78 If you would like to separate your services and have Redis, MySQL, Nginx and PHP servers, then enable private networking under Select additional options. This will give the droplets private IP</p>
+<p>addresses for server-to-server communication within in the same datacenter region.</p>
+<p>As per your needs, increase the number of droplets to be created. In our case we'll use only one. Finally, add your ssh key (<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">or create one), choose a desired</a></p>
+<p>hostname and create the droplet.</p>
+<p>Once your droplet is created, copy the public IP address, open your terminal and ssh into the server:</p>
+<p>9</p>
+<p><span id="index_split_000.html#p10"></span>$ ssh root@123.45.6.78</p>
+<p>The authenticity of host '123.45.6.78 (123.45.6.78)' can't be established.</p>
+<p>ECDSA key fingerprint is SHA256:shashashasahashashashasaha.</p>
+<p>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes Warning: Permanently added '123.45.6.78' (ECDSA) to the list of known hosts.</p>
+<p>Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-51-generic x86_64)</p>
+<p>* Documentation: https://help.ubuntu.com</p>
+<p>* Management: https://landscape.canonical.com</p>
+<p>* Support: https://ubuntu.com/advantage</p>
+<p>System information as of Wed Oct 28 05:26:58 UTC 2020</p>
+<p>System load: 0.47 Users logged in: 0</p>
+<p>Usage of /: 0.7% of 24.06GB IPv4 address for eth0:123.45.6.78</p>
+<p>Memory usage: 4% IPv4 address for eth0: 10.10.0.5</p>
+<p>Swap usage: 0% IPv4 address for eth1: 10.116.0.2</p>
+<p>Processes: 97</p>
+<p>1 update can be installed immediately.</p>
+<p>0 of these updates are security updates.</p>
+<p>To see these additional updates run: apt list --upgradable The list of available updates is more than a week old.</p>
+<p>To check for new updates run: sudo apt update</p>
+<p>The programs included with the Ubuntu system are free software; the exact distribution terms for each program are described in the individual files in /usr/share/doc/*/copyright.</p>
+<p>Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.</p>
+<p>root@ubuntu-s-1vcpu-1gb-nyc1-01:~#</p>
+<p>Great! We have liftoff!</p>
+<p>10</p>
+<p><span id="index_split_000.html#p11"></span>Server Updates</p>
+<p>By default, our Ubuntu 20.04 LTS server has some outdated binaries, so let’s first update them:</p>
+<p># apt update</p>
+<p>Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]</p>
+<p>Get:2 http://mirrors.digitalocean.com/ubuntu focal InRelease [265 kB]</p>
+<p>...</p>
+<p>...</p>
+<p>Building dependency tree</p>
+<p>Reading state information... Done</p>
+<p>53 packages can be upgraded. Run 'apt list --upgradable' to see them.</p>
+<p># apt upgrade -y</p>
+<p>Reading package lists... Done</p>
+<p>Building dependency tree</p>
+<p>Reading state information... Done</p>
+<p>Calculating upgrade... Done</p>
+<p>The following NEW packages will be installed:</p>
+<p>linux-headers-5.4.0-53 linux-headers-5.4.0-53-generic linux-image-5.4.0-53-generic linux-modules-5.4.0-53-generic</p>
+<p>The following packages will be upgraded:</p>
+<p>...</p>
+<p>...</p>
+<p>53 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.</p>
+<p>Need to get 88.0 MB of archives.</p>
+<p>After this operation, 174 MB of additional disk space will be used.</p>
+<p>Get:1 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64</p>
+<p>libperl5.30 amd64 5.30.0-9ubuntu0.2 [3,952 kB]</p>
+<p>Get:2 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 perl amd64 5.30.0-9ubuntu0.2 [224 kB]</p>
+<p>Get:3 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 perl-base amd64 5.30.0-9ubuntu0.2 [1,513 kB]</p>
+<p>...</p>
+<p>...</p>
+<p>done</p>
+<p>11</p>
+<p><span id="index_split_000.html#p12"></span>Unattended Upgrades</p>
+<p>Debian/Ubuntu provides <a href="https://help.ubuntu.com/community/AutomaticSecurityUpdates">Unattended Upgrades package that can be used to</a></p>
+<p>automatically update the system, think of it like the Windows Update for Debian or Ubuntu. Let’s set it up to take care of security updates. The package is usually installed by default but if it is missing install it using: apt install unattended-upgrades.</p>
+<p>We now need to locate and modify /etc/apt/apt.conf.d/50unattended-upgrades to match our requirements. For now, we'll only enable security updates, but feel free to tweak the file to meet your needs. Confirm that the Unattended-Upgrade::Allowed-Origins section has the following as active:</p>
+<p>Unattended-Upgrade::Allowed-Origins {</p>
+<p>"${distro_id}:${distro_codename}";</p>
+<p>"${distro_id}:${distro_codename}-security";</p>
+<p>"${distro_id}ESMApps:${distro_codename}-apps-security";</p>
+<p>"${distro_id}ESM:${distro_codename}-infra-security";</p>
+<p>// "${distro_id}:${distro_codename}-updates";</p>
+<p>// "${distro_id}:${distro_codename}-proposed";</p>
+<p>// "${distro_id}:${distro_codename}-backports";</p>
+<p>};</p>
+<p>The Extended Security Maintenance (ESM) origin is not always present for all releases but when available it will be used, so no harm done when we keep it there.</p>
+<p>All the packages that you would like to manually update should be added to the Unattended-Upgrade::Package-Blacklist section. Whenever the automatic update is run, those packages will be excluded from updates. This is particularly useful for problematic packages.</p>
+<p>Some packages require a system reboot to finish the installation. You can either allow the reboot to occur, or you can manually be rebooting the server.</p>
+<p>In our case, we shall allow the reboot to occur at around 02:00 UTC.</p>
+<p>12</p>
+<p><span id="index_split_000.html#p13"></span>Unattended-Upgrade::Automatic-Reboot "true"; Unattended-Upgrade::Automatic-Reboot-Time "02:00"; All that’s left now is to enable unattended updates by editing (or creating) the apt config file: /etc/apt/apt.conf.d/20auto-upgrades and setting how often we would like the upgradable packages to be downloaded and how often auto-clean should be run.</p>
+<p>APT::Periodic::Update-Package-Lists "1";</p>
+<p>APT::Periodic::Download-Upgradeable-Packages "1"; APT::Periodic::AutocleanInterval "7";</p>
+<p>APT::Periodic::Unattended-Upgrade "1";</p>
+<p>That’s it! We are all set with automatic updates.</p>
+<p>13</p>
+<p><span id="index_split_000.html#p14"></span>Installing Build Tools</p>
+<p>We’ll now install some packages that will be needed to compile other packages from source.</p>
+<p># apt install -y build-essential g++ gcc unzip</p>
+<p>Reading package lists... Done</p>
+<p>Building dependency tree</p>
+<p>Reading state information... Done</p>
+<p>The following additional packages will be installed:</p>
+<p>binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-9</p>
+<p>...</p>
+<p>...</p>
+<p>Processing triggers for man-db (2.9.1-1) ...</p>
+<p>Processing triggers for mime-support (3.64ubuntu1) ...</p>
+<p>Now we can get going with setting up our LEMP server.</p>
+<p>Notice: Most of the manual steps will be skipped but will be fully explained in the automation section.</p>
+<p>14</p>
+<p><span id="index_split_000.html#p15"></span>Setting Up MySQL Server</p>
+<p><a href="https://www.percona.com/software/mysql-database/percona-server">I personally prefer using Percona Server</a> <a href="https://www.mysql.com/products/community">over MySQL Community as it is a</a></p>
+<p>free, fully compatible, enhanced and opensource drop-in replacement for any MySQL database. It provides superior performance, scalability and instrumentation.</p>
+<p>Since Percona Server is not available in the standard Ubuntu repository, we will need to add its source and enable the ps80 repository to use MySQL</p>
+<p>8.</p>
+<p># wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -</p>
+<p>sc)_all.deb</p>
+<p>--2020-10-28 06:51:13-- https://repo.percona.com/apt/percona-release_latest.focal_all.deb</p>
+<p>Resolving repo.percona.com (repo.percona.com)... 167.99.233.229, 157.245.119.64, 167.71.118.3</p>
+<p>Connecting to repo.percona.com (repo.percona.com)|167.99.233.229|:443...</p>
+<p>connected.</p>
+<p>...</p>
+<p>...</p>
+<p># dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb (Reading database ... 100078 files and directories currently installed.) Preparing to unpack percona-release_latest.focal_all.deb ...</p>
+<p>...</p>
+<p>...</p>
+<p># percona-release setup ps80</p>
+<p>* Disabling all Percona Repositories</p>
+<p>* Enabling the Percona Server 8.0 repository</p>
+<p>* Enabling the Percona Tools repository</p>
+<p>Get:1 http://mirrors.digitalocean.com/ubuntu focal InRelease [265 kB]</p>
+<p>...</p>
+<p>Reading package lists... Done</p>
+<p>We can now install Percona Server. Since most applications are not yet using the new MySQL authentication plugin, we will instruct Percona to use the legacy MySQL 5.x authentication. Follow the prompts and enter a secure password for the root user and then select the native authentication plugin.</p>
+<p>15</p>
+<p><span id="index_split_000.html#p16"></span># apt install -y percona-server-server</p>
+<p>...</p>
+<p>...</p>
+<p>Processing triggers for man-db (2.9.1-1) ...</p>
+<p>Processing triggers for libc-bin (2.31-0ubuntu9.1) ...</p>
+<p>Notice: In case you did not enable the native authentication plugin, and you now need to, create a new MySQL config file to set it on MySQL</p>
+<p>boot up, then restart MySQL. We'll also make sure MySQL is enabled to run on system boot.</p>
+<p># echo -e "[mysqld]\ndefault-authentication-plugin =</p>
+<p>mysql_native_password" &gt; /etc/mysql/mysql.conf.d/default-auth-override.cnf</p>
+<p># service mysql restart</p>
+<p># systemctl enable mysql</p>
+<p>Next, let’s run the mysql provided script that improves the security of our installation.</p>
+<p># mysql_secure_installation</p>
+<p>Finally, we can clean up and remove the file we downloaded:</p>
+<p># rm percona-release_latest.$(lsb_release -sc)_all.deb</p>
+<p>And we're done!</p>
+<p>Next, we switch the default authentication plugin, enable it to run at startup and restart it so that our new configs are loaded: Finally, let’s run the mysql provided script that improves the security of our installation. And we’re done!</p>
+<p>16</p>
+<p><span id="index_split_000.html#p17"></span>Setting Up PHP 7.4</p>
+<p>At the time of writing, the latest version of PHP is 7.4. Switch this to match the version you are interested in. Let’s use <a href="https://launchpad.net/~ondrej/+archive/ubuntu/php">Ondrej's PPA</a> to setup our PHP 7.4</p>
+<p>instance.</p>
+<p># add-apt-repository ppa:ondrej/php</p>
+<p>Co-installable PHP versions: PHP 5.6, PHP 7.x and most requested extensions are included. Only Supported Versions of</p>
+<p>PHP (http://php.net/supported-versions.php) for Supported Ubuntu Releases (https://wiki.ubuntu.com/Releases) are</p>
+<p>provided. Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.</p>
+<p>...</p>
+<p>...</p>
+<p>Get:14 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main Translation-en</p>
+<p>[28.2 kB]</p>
+<p>Fetched 1,030 kB in 2s (564 kB/s)</p>
+<p>Reading package lists... Done</p>
+<p>We can now select the set of PHP modules that we will require to run our applications. The ones provided are a good start for most applications.</p>
+<p># apt install -y php-pear php7.4 php7.4-cli php7.4-common php7.4-curl php7.4-dev php7.4-gd php7.4-json php7.4-mysql php7.4-opcache php7.4-readline php7.4-sqlite3 php7.4-tidy php7.4-xml php7.4-bcmath php7.4-bz2 php7.4-fpm php7.4-imap php7.4-zip php7.4-mbstring php7.4-soap php7.4-xsl php7.4-intl imagemagick php7.4-imagick</p>
+<p>Reading package lists... Done</p>
+<p>Building dependency tree</p>
+<p>Reading state information... Done</p>
+<p>The following additional packages will be installed:</p>
+<p>autoconf automake autopoint autotools-dev debhelper</p>
+<p>...</p>
+<p>...</p>
+<p>Processing triggers for php7.4-cli (7.4.12-3+ubuntu20.04.1+deb.sury.org+1) ...</p>
+<p>Processing triggers for php7.4-fpm (7.4.12-3+ubuntu20.04.1+deb.sury.org+1) ...</p>
+<p>Then enable PHP-FPM to run on startup.</p>
+<p>17</p>
+<p><span id="index_split_000.html#p18"></span># systemctl enable php7.4-fpm</p>
+<p>Synchronizing state of php7.4-fpm.service with SysV service script with</p>
+<p>/lib/systemd/systemd-sysv-install.</p>
+<p>Executing: /lib/systemd/systemd-sysv-install enable php7.4-fpm Since we consume other people's packages, we will definitely require</p>
+<p><a href="https://getcomposer.org/doc/00-intro.md">Composer to manage our dependencies. Follow the Composer install guide</a></p>
+<p>found on the <a href="https://getcomposer.org/download/">Download Composer Page and then move composer so that it is</a></p>
+<p>accessible globally.</p>
+<p>Warning: The snippet below will be outdated with time since the hash changes whenever the setup file is changed.</p>
+<p># php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"</p>
+<p># php -r "if (hash_file('sha384', 'composer-setup.php') ===</p>
+<p>'c31c1e292ad7be5f49291169c0ac8f683499edddcfd4e42232982d0fd193004208a58ff6f353f de0012d35fdd72bc394') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"</p>
+<p>Installer verified</p>
+<p># php composer-setup.php</p>
+<p>All settings correct for using Composer</p>
+<p>Downloading...</p>
+<p>Composer (version 2.0.4) successfully installed to: /root/composer.phar Use it: php composer.phar</p>
+<p># php -r "unlink('composer-setup.php');"</p>
+<p># mv composer.phar /usr/local/bin/composer</p>
+<p># which composer</p>
+<p>/usr/local/bin/composer</p>
+<p>We’ve got our PHP instance! Whoop whoop!</p>
+<p>18</p>
+<p><span id="index_split_000.html#p19"></span>Setting Up Redis Server</p>
+<p><a href="https://redis.io">Redis</a> is an awesome in-memory key-value store. It’s used as a database, cache or even a message broker using <a href="https://redis.io/topics/pubsub">Pub/Sub. Setting it up and enabling it</a></p>
+<p>to run on start up is pretty straight forward:</p>
+<p># apt install -y redis-server</p>
+<p>Reading package lists... Done</p>
+<p>Building dependency tree</p>
+<p>Reading state information... Done</p>
+<p>...</p>
+<p>...</p>
+<p>Processing triggers for man-db (2.9.1-1) ...</p>
+<p>Processing triggers for libc-bin (2.31-0ubuntu9.1) ...</p>
+<p># systemctl enable redis-server</p>
+<p>Synchronizing state of redis-server.service with SysV service script with</p>
+<p>/lib/systemd/systemd-sysv-install.</p>
+<p>Executing: /lib/systemd/systemd-sysv-install enable redis-server 19</p>
+<p><span id="index_split_000.html#p20"></span>Setting Up Nginx</p>
+<p><a href="https://www.nginx.com/">Nginx is an opensource web server and as they state in their website, it</a></p>
+<p>powers over 400 million websites. Nginx is pretty robust and can also act as a load balancer. To get started, we have to confirm that apache2 is not installed.</p>
+<p># apt remove apache2</p>
+<p>Reading package lists... Done</p>
+<p>Building dependency tree</p>
+<p>Reading state information... Done</p>
+<p>Package 'apache2' is not installed, so not removed</p>
+<p>0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.</p>
+<p>Next, we will add the Official Nginx PPA so that we always have the latest updates.</p>
+<p># add-apt-repository ppa:nginx/stable</p>
+<p>This PPA contains the latest Stable Release version of the nginx web server software.</p>
+<p>**Only Non-End-of-Life Ubuntu Releases are supported in this PPA**</p>
+<p>**Development releases of Ubuntu are not officially supported by this PPA, and uploads for those will not be available until actual final releases for those versions**</p>
+<p>More info: https://launchpad.net/~nginx/+archive/ubuntu/stable Press [ENTER] to continue or Ctrl-c to cancel adding it.</p>
+<p>Hit:1 http://repo.percona.com/prel/apt focal InRelease</p>
+<p>...</p>
+<p>...</p>
+<p>Reading package lists... Done</p>
+<p>We can now install and enable Nginx to run on startup.</p>
+<p>20</p>
+<p><span id="index_split_000.html#p21"></span># apt install -y nginx</p>
+<p>Reading package lists... Done</p>
+<p>Building dependency tree</p>
+<p>...</p>
+<p>...</p>
+<p>Processing triggers for nginx-core (1.18.0-3ubuntu1+focal2) ...</p>
+<p>Triggering nginx reload ..</p>
+<p># systemctl enable nginx</p>
+<p>Synchronizing state of nginx.service with SysV service script with</p>
+<p>/lib/systemd/systemd-sysv-install.</p>
+<p>Executing: /lib/systemd/systemd-sysv-install enable nginx</p>
+<p>Great! We can now setup our default server block to process PHP files and create a sample PHP file to test our installation. We’ll need to find our php-fpm socket (TCP or Unix socket) from the configuration file.</p>
+<p>Notice: You can change the listen option in the pool definition to use the configuration you prefer, it defaults to a Unix socket.</p>
+<p># cat /etc/php/7.4/fpm/pool.d/www.conf | grep 'listen ='</p>
+<p>listen = /run/php/php7.4-fpm.sock</p>
+<p>From the output above, we see that PHP-FPM is listening via a socket located at /run/php/php7.4-fpm.sock. We will use this socket as our fastcgi_pass parameter in the default Nginx config. Open up</p>
+<p>/etc/nginx/sites-available/default and update it so that it allows processing of PHP files.</p>
+<p><a href="http://nginx.org/en/docs/http/ngx_http_index_module.html">The first thing we will change is the index directive</a>. This directive determines the default file that is loaded when the url ends with slash (/).</p>
+<p>Warning: The order that you set the parameters matters. If you have an index.php and an index.html file and the index directive is set as index index.html index.php, then the index.html file will have preference over the index.php file.</p>
+<p>21</p>
+<p><span id="index_split_000.html#p22"></span>We shall also add a new location block with a regular expression to match all files ending with .php and send them to the running PHP-FPM process.</p>
+<p># vi /etc/nginx/sites-available/default</p>
+<p>root /var/www/html;</p>
+<p>index index.php index.html index.htm index.nginx-debian.html; server_name _;</p>
+<p>location / {</p>
+<p>try_files $uri $uri/ =404;</p>
+<p>}</p>
+<p>location ~ \.php$ {</p>
+<p>include snippets/fastcgi-php.conf;</p>
+<p>fastcgi_pass unix:/run/php/php7.4-fpm.sock;</p>
+<p>}</p>
+<p>Once done, save the file, test that it is correct and with no errors, then restart nginx so that the new configuration takes over.</p>
+<p># nginx -t</p>
+<p>nginx: the configuration file /etc/nginx/nginx.conf syntax is ok nginx: configuration file /etc/nginx/nginx.conf test is successful</p>
+<p># service nginx restart</p>
+<p>We can now add a php info script that allows us to check our installation.</p>
+<p># echo -e "&lt;?php\nphpinfo();" &gt; /var/www/html/info.php That was tedious! Imagine performing all these steps to setup ten servers!</p>
+<p>The best thing is that we have Ansible to help us with automation! Open your favourite browser and navigate to http://your.ip.over.here/info.php and confirm that the php info page loaded.</p>
+<p>22</p>
+<p><span id="index_split_000.html#p23"></span><img src="index-23_1.png" class="calibre2" /></p>
+<p>23</p>
+<p><span id="index_split_000.html#p24"></span>Automated Server Setup using</p>
+<p>Ansible</p>
+<p>24</p>
+<p><span id="index_split_000.html#p25"></span>What is Ansible?</p>
+<p><a href="https://www.ansible.com/">Ansible</a> is a platform by Red Hat that has endless automation uses which allows performing actions in multiple servers at the same time. Ansible uses YAML Language for its files and depends on the SSH protocol to manage the machines.</p>
+<p>Once Ansible is installed, it will not add a database, and there will be no daemons to start or keep running. You only need to install it on one machine (which could easily be a laptop), and it can manage an entire fleet of remote machines from that central point. When Ansible manages remote machines, it does not leave software installed or running on them, so there’s no real question about how to upgrade Ansible when moving to a new version. If you would like to contribute to the project, you can have a look at <a href="https://github.com/ansible/ansible">GitHub</a></p>
+<p>25</p>
+<p><span id="index_split_000.html#p26"></span>Setting up Ansible</p>
+<p>For you to run Ansible, you need a machine running any version of unix, be it Red Hat, Debian, CentOS, macOS, Ubuntu and its flavours and many more.</p>
+<p>Microsoft Windows is currently not supported. Depending on your local distro, install ansible using your package manager. Ansible is also available via Python pip.</p>
+<p>## Fedora</p>
+<p>$ sudo dnf install ansible</p>
+<p>## CentOS</p>
+<p>$ sudo yum install ansible</p>
+<p>## Ubuntu</p>
+<p>$ sudo apt update &amp;&amp; sudo apt install -y software-properties-common $ sudo apt-add-repository --yes --update ppa:ansible/ansible</p>
+<p>$ sudo apt install ansible</p>
+<p>## local single user installation on macOS or any other system $ pip install --user ansible</p>
+<p>## system wide installation on macOS or any other system</p>
+<p>$ sudo pip install ansible</p>
+<p>We’re set! When Ansible is making remote connections, it will use the native SSH service and assumes that you are using SSH keys. It is always advised to use SSH keys over plain password authentication. If you already have a running server but you have not setup passwordless authentication, you can easily copy your public SSH key using ssh-copy-id on your local machine.</p>
+<p>Substitute the server IP address (and the user if you want passwordless authenticaion for a different user) in the command below.</p>
+<p>$ ssh-copy-id root@123.45.6.78</p>
+<p>Now we’ve installed Ansible. We need a fresh server with nothing installed so that we can automate the manual process we completed in the previous section. Once we spin up a new droplet from Digital Ocean (or any other provider, or a local server), we can start playing around with Ansible. Make an 26</p>
+<p><span id="index_split_000.html#p27"></span>ansible directory somewhere awesome on your local machine. In our case, we will use ~/devops.</p>
+<p>27</p>
+<p><span id="index_split_000.html#p28"></span>Ansible Inventory</p>
+<p>Ansible allows us to list our server IP addresses in <a href="https://docs.ansible.com/ansible/latest/plugins/inventory.html#inventory-plugins">different formats</a>. Let’s use both INI and YAML formats to explain the difference. Inside the new directory, create two new files; hosts and hosts.yml; to keep an <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html">inventory</a></p>
+<p>of all our server IP addresses. Since we have not setup another user for our servers, we shall use the root user. We can also give each of our servers names and group them as per our needs.</p>
+<p>$ cat hosts</p>
+<p># your server ip addresses</p>
+<p>1.x.x.x</p>
+<p>2.x.x.x</p>
+<p>[databases]</p>
+<p>3.y.y.y</p>
+<p>4.y.y.y</p>
+<p>[php]</p>
+<p>server ansible_host=5.z.z.z</p>
+<p>worker ansible_host=6.z.z.z ansible_port=8888</p>
+<p>In the INI file above the:</p>
+<p>x.x.x addresses are only in the all and ungrouped groups,</p>
+<p>y.y.y in the databases group and,</p>
+<p>z.z.z in the php group.</p>
+<p>The two PHP server groups have aliases (server and worker) which can be used when you explicitly want to target either of the two servers. The worker server also has a custom SSH port 8888 which must be defined using the ansible_port variable.</p>
+<p>The YAML equivalent of the INI above is:</p>
+<p>28</p>
+<p><span id="index_split_000.html#p29"></span>$ cat hosts.yml</p>
+<p># your server ip addresses</p>
+<p>all:</p>
+<p>hosts:</p>
+<p>1.x.x.x:</p>
+<p>2.x.x.x:</p>
+<p>children:</p>
+<p>databases:</p>
+<p>hosts:</p>
+<p>3.y.y.y:</p>
+<p>4.y.y.y:</p>
+<p>php:</p>
+<p>hosts:</p>
+<p>server:</p>
+<p>ansible_host: 5.z.z.z</p>
+<p>worker:</p>
+<p>ansible_host: 6.z.z.z</p>
+<p>ansible_port: 8888</p>
+<p>For the Ansible hosts, the colon at the end of each list item is required when the hosts are more than one thus, it’s always advised to keep the colon with or without multiple hosts. To test our inventory, ping any of the listed servers using the ansible <a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ping_module.html">ping module:</a></p>
+<p>$ ansible all -i hosts -m ping</p>
+<p>$ ansible all -i hosts.yml -m ping</p>
+<p>$ ansible databases -i hosts -m ping</p>
+<p>$ ansible databases -i hosts.yml -m ping</p>
+<p>$ ansible worker -i hosts -m ping</p>
+<p>$ ansible worker -i hosts.yml -m ping</p>
+<p>...</p>
+<p>6.z.z.z | SUCCESS =&gt; {</p>
+<p>"ansible_facts": {</p>
+<p>"discovered_interpreter_python": "/usr/bin/python3"</p>
+<p>},</p>
+<p>"changed": false,</p>
+<p>"ping": "pong"</p>
+<p>}</p>
+<p>29</p>
+<p><span id="index_split_000.html#p30"></span>YAML Basics</p>
+<p>The YAML syntax is pretty straight forward. We’ll go through a few basics before having a look at playbooks.</p>
+<p>As a common convention, Ansible files can begin with --- and end with ...</p>
+<p>denoting the start and end of the document. Most files will only include the beginning marker. Comments are defined by the # character.</p>
+<p>Lists are very common in Ansible and are defined by using - (hyphen) followed by a space.</p>
+<p>---</p>
+<p>- php</p>
+<p>- vue</p>
+<p>- react</p>
+<p>Dictionaries are key: value pairs in which the colon must always be followed by a space.</p>
+<p>php:</p>
+<p>latest: 7.3</p>
+<p>Installed: 7.3</p>
+<p>In the case that you have a line that is too long, it can be wrapped using the Literal Block Scalar character | (pipe character), or the Folded Block Scalar character &gt; (greater than character). The Literal Block Scalar character will render the input as typed, literally including the new lines and any additional spaces while the Folded Block Scalar character will convert the new lines into spaces. New lines can be enforced by either indenting the line or adding an extra empty line.</p>
+<p>30</p>
+<p><span id="index_split_000.html#p31"></span># Literal</p>
+<p>exact_hello_world_template: |</p>
+<p>this is</p>
+<p>the</p>
+<p>hello world template</p>
+<p># same as:</p>
+<p># this is\nthe\nwrapped\nhello world template</p>
+<p># Folded</p>
+<p>wrapped_hello_world_template: &gt;</p>
+<p>this is</p>
+<p>the</p>
+<p>wrapped</p>
+<p>hello world template</p>
+<p># same as:</p>
+<p># this is the wrapped\nhello world template</p>
+<p>Notice: In case your strings contain a colon or a #, you will need to quote them as YAML will expect a mapping when a colon is followed by a space i.e. John Doe: Look for him. Anything after the # will be regarded as a comment.</p>
+<p>31</p>
+<p><span id="index_split_000.html#p32"></span>Ansible Playbooks</p>
+<p>Playbooks are Ansible’s configuration, deployment, and orchestration language. They can describe a policy you want your remote systems to enforce, or a set of steps in a general IT process and in our case, how we want our servers to be setup.</p>
+<p>Each playbook consists of tasks, which are a set of steps that should be performed on the hosts that you select. The tasks are executed in the order that they are written against the selected hosts, one task at a time. In order to make our playbooks configurable, we must use variables within our tasks.</p>
+<p>These variables can be defined in the Ansible Inventory file or the play or even in the task.</p>
+<p>When the tasks are executed, the name of the task is displayed as part of the output. Each task within the play should therefore have a name, a simple human readable description of the task.</p>
+<p>We can group our tasks by following any structure we prefer. Since we are setting up a LEMP server, we can have php, mysql, nginx, common and acl groups. In ansible these groups are referred to as roles. The good thing with roles is that they are self-contained thus, easily sharable between playbooks.</p>
+<p>We’re good to go! In the ~/devops directory, add a new site.yml file. This will be our play definition file. Next we need a directory to store all our roles; create the roles directory. We will then use ansible-galaxy to create our 5</p>
+<p>roles.</p>
+<p>$ touch site.yml</p>
+<p>$ mkdir roles</p>
+<p>$ cd roles</p>
+<p>$ ansible-galaxy init php</p>
+<p>$ ansible-galaxy init mysql</p>
+<p>$ ansible-galaxy init nginx</p>
+<p>$ ansible-galaxy init common</p>
+<p>$ ansible-galaxy init acl</p>
+<p>First, let's give Ansible the list of hosts to use. Define your Ansible Inventory in the format you prefer. I prefer using the INI format:</p>
+<p>32</p>
+<p><span id="index_split_000.html#p33"></span>123.45.6.78 ansible_user=root</p>
+<p>Notice: Since we are using the root account in our server, we will have to explicitly instruct ansible by adding the ansible_user=root parameter; failure to which, it will try to connect using the local user account and fail.</p>
+<p>Next, open site.yml using your favourite editor. I prefer Visual Studio Code with the YAML and Ansible extensions.</p>
+<p>Notice: Each playbook consists of a list of plays and each play executed against a list or servers (hosts).</p>
+<p>The first directive we shall give is a list of hosts that the play should be executed on; all should do for now.</p>
+<p>---</p>
+<p>- hosts: all</p>
+<p>Next we’ll define a section to hold variables that will be used by the play. This section is defined by the key vars and should have its properties indented from the margin since it's a dictionary.</p>
+<p>---</p>
+<p>- hosts: all</p>
+<p>vars:</p>
+<p>KEY: sample value</p>
+<p>We can now test whether the playbook is set up correctly by adding a ping task that will do the same thing as running ansible all -i hosts -m ping.</p>
+<p>33</p>
+<p><span id="index_split_000.html#p34"></span>---</p>
+<p>- hosts: all</p>
+<p>vars:</p>
+<p>KEY: sample value</p>
+<p>tasks:</p>
+<p>- name: Ping our awesome server</p>
+<p>ping:</p>
+<p>data: pong</p>
+<p>Open up the terminal and navigate to the ~/devops directory and execute the playbook</p>
+<p>$ cd ~/devops</p>
+<p>$ ansible-playbook -i ./hosts site.yml</p>
+<p>PLAY [all] ******************************************</p>
+<p>TASK [Gathering Facts] ******************************</p>
+<p>ok: [123.45.6.78]</p>
+<p>TASK [Ping our awesome server] **********************</p>
+<p>ok: [123.45.6.78]</p>
+<p>PLAY RECAP ******************************************</p>
+<p>123.45.6.78 : ok=2 changed=0 unreachable=0 failed=0 skipped=0 rescued=0</p>
+<p>ignored=0</p>
+<p>Congratulations! You’ve run your first playbook. Looking back, the playbook has a similar syntax to the YAML hosts file. We will be using YAML for all our playbook information including the roles.</p>
+<p>Remove the tasks that we just added and replace them with our roles.</p>
+<p>Depending on your setup, you will need to have more than one play in the playbook, each with its own set of hosts. In our case, we are using one common server for all our services.</p>
+<p>When running the play, we will execute the common role first so that we do the basic server setup and perform system upgrades. We plan on using PHP-FPM via a unix socket. The path of the unix socket is dependent on the PHP</p>
+<p>version we are running. If we choose PHP 7.3, the socket will be unix:/run/php/php7.3-fpm.sock while PHP 7.4 will give us</p>
+<p>34</p>
+<p><span id="index_split_000.html#p35"></span>unix:/run/php/php7.4-fpm.sock. The socket location is used by both Nginx and PHP. The PHP version also determines the PHP modules to be installed. If we are using PHP 7.3, we will have to install the php7.3-*</p>
+<p>modules. In light of all this, it makes perfect sense to keep the PHP version as a variable. So let's add it as our first var.</p>
+<p>---</p>
+<p>- name: Spinning up our LEMP server.</p>
+<p>hosts: all</p>
+<p>vars:</p>
+<p>php_version: "7.3"</p>
+<p>roles:</p>
+<p>- common</p>
+<p>- mysql</p>
+<p>- php</p>
+<p>- nginx</p>
+<p>- acl</p>
+<p>When using different hosts you can use:</p>
+<p>---</p>
+<p>- name: Common Setup</p>
+<p>hosts: all</p>
+<p>roles:</p>
+<p>- common</p>
+<p>- security</p>
+<p>- ...</p>
+<p>- ...</p>
+<p>- name: Spin up php</p>
+<p>hosts:</p>
+<p>- php</p>
+<p>vars:</p>
+<p>php_version: "7.3"</p>
+<p>roles:</p>
+<p>- php</p>
+<p>Great! Let's get started on our roles and check out their structure.</p>
+<p>35</p>
+<p><span id="index_split_000.html#p36"></span>Role Structure</p>
+<p>Each role that is created using ansible-galaxy init role comes with a set of folders. Not all the folders are required but at the least, the tasks folder should be present. Below are the default folders that you get: Defaults =&gt; stores the default variables that will be used in the role in case a variable is undefined.</p>
+<p>Files =&gt; keeps the deployable files that are to be used in the role.</p>
+<p>Handlers =&gt; keeps the handlers (event listeners) that can be used within or without the role.</p>
+<p>Meta =&gt; defines some metadata that will be used by the role.</p>
+<p>Tasks =&gt; keeps the list of tasks to be executed by the role.</p>
+<p>Templates =&gt; contains templates that can be edited and deployed by the role.</p>
+<p>Vars =&gt; contains variables that are used by the role.</p>
+<p>You can raise events in Ansible which will be handled by the listeners that are defined in the handlers directory. All our tasks will be defined and stored in the tasks directory.</p>
+<p>36</p>
+<p><span id="index_split_000.html#p37"></span>The Common Role</p>
+<p>Open up main.yml located under common/tasks. We shall use this file to define all the common tasks to be executed on each of the hosts we defined in site.yml. We will add a couple of things that are not in the Manual Server Setup Chapter. The steps we shall take are:</p>
+<p>Update server</p>
+<p>Setup unattended upgrades</p>
+<p>Install extra packages</p>
+<p>Perform some system optimisations</p>
+<p>Create a new user; deploy to handle our CI/CD deployments</p>
+<p>Setup our firewall.</p>
+<p>We will create subtasks that will be imported into the main.yml file. Having subtasks makes the process very atomic thus, easier to manage. We'll create the subtask files then add them to the common task.</p>
+<p>$ cd ~/devops/roles/common/tasks</p>
+<p>$ touch pre_setup.yml optimisations.yml users.yml security.yml Then import the created subtasks into the main task file:</p>
+<p>---</p>
+<p># tasks file for common role</p>
+<p>- name: Pre-setup tasks</p>
+<p>import_tasks: pre_setup.yml</p>
+<p>- name: Optimise system</p>
+<p>import_tasks: optimisations.yml</p>
+<p>- name: Create additional users</p>
+<p>import_tasks: users.yml</p>
+<p>- name: Boot firewall and configure SSH</p>
+<p>import_tasks: security.yml</p>
+<p>37</p>
+<p><span id="index_split_000.html#p38"></span>Pre-Setup Subtask</p>
+<p>Open up pre_setup.yml and use the apt module to update our server, install packages and setup unattended upgrades. For the unattended upgrades, we will either use templates or complete files or the lineinfile module. The line in file module is useful for adding, editing and removing lines in a file and if the file does not exist, it can also be created.</p>
+<p>To get started, let’s update the apt cache and any outdated packages. We shall set the apt cache expiry to 24Hrs. Since the apt module takes the TTL in seconds, we’ll use 86400.</p>
+<p>---</p>
+<p>- name: Update the system</p>
+<p>apt:</p>
+<p>update_cache: yes</p>
+<p>cache_valid_time: 86400</p>
+<p>upgrade: 'dist'</p>
+<p>One man's meat is another man's poison hence, the need for variables! Each server will be different, have different package requirements, the unattended upgrades package will need to act differently, etc. We shall set default variables for our role and store them in the defaults directory. These variables can be overridden by having variables of the same name in the play definition or the vars directory.</p>
+<p>We'll definitely require some basic packages to be present, and some packages might use snap. Therefore, we can create three variables; one to hold the apt packages (pre_setup_packages), and the last two to hold the snap packages (pre_setup_snap and pre_setup_snap_classic).</p>
+<p><a href="https://letsencrypt.org/">Assuming we’ll use Let’s Encrypt</a> and Ubuntu 18.04. we will need the ppa:certbot/certbot repository to be added. In our case, Ubuntu 20.04, we shall use snap to install certbot.</p>
+<p>38</p>
+<p><span id="index_split_000.html#p39"></span>---</p>
+<p># defaults file for common</p>
+<p>pre_setup_snap:</p>
+<p>pre_setup_snap_classic:</p>
+<p>- certbot</p>
+<p>pre_setup_packages:</p>
+<p>- wget</p>
+<p>- curl</p>
+<p>- zsh</p>
+<p>- software-properties-common</p>
+<p>- build-essential</p>
+<p>- g++</p>
+<p>- gcc</p>
+<p>- git</p>
+<p>- vim</p>
+<p>- nscd</p>
+<p>- supervisor</p>
+<p>- unzip</p>
+<p>- acl</p>
+<p>- unattended-upgrades</p>
+<p>- ufw</p>
+<p>Switch back to the pre_setup subtask and add the tasks for installing the desired packages.</p>
+<p>39</p>
+<p><span id="index_split_000.html#p40"></span>---</p>
+<p># pre_setup tasks</p>
+<p>- name: Update the system</p>
+<p>apt:</p>
+<p>update_cache: yes</p>
+<p>cache_valid_time: 86400</p>
+<p>upgrade: 'dist'</p>
+<p>- name: Install packages</p>
+<p>apt:</p>
+<p>name: "{{ pre_setup_packages | default([], true) | list }}"</p>
+<p>state: latest</p>
+<p>- name: Install Snap Packages</p>
+<p>snap:</p>
+<p>name: "{{ pre_setup_snap | default([], true) | list }}"</p>
+<p>state: present</p>
+<p>- name: Install Classic Snap Packages</p>
+<p>snap:</p>
+<p>name: "{{ pre_setup_snap_classic | default([], true) | list }}"</p>
+<p>classic: true</p>
+<p>state: present</p>
+<p>Unattended Upgrades</p>
+<p>Unattended upgrades only runs using origins that have been enabled. We can either create a file and store it under the files directory or use variables to enable the origins we need. We’ll go for the latter. Let’s add some default variables into the common/default/main.yml file.</p>
+<p>40</p>
+<p><span id="index_split_000.html#p41"></span>unattended_upgrades_security: true</p>
+<p>unattended_upgrades_esm: true</p>
+<p>unattended_upgrades_updates: true</p>
+<p>unattended_upgrades_proposed: false</p>
+<p>unattended_upgrades_backports: false</p>
+<p>unattended_upgrades_blacklisted: []</p>
+<p>unattended_upgrades_remove_dependencies: false</p>
+<p>unattended_upgrades_auto_reboot: true,</p>
+<p>unattended_upgrades_auto_reboot_time: "00:00"</p>
+<p>unattended_upgrades_update_period: 1</p>
+<p>unattended_upgrades_upgrade_period: 1</p>
+<p>unattended_upgrades_auto_clean_period: 7</p>
+<p>unattended_upgrades_unattended_upgrade_period: 1</p>
+<p>Feel free to add any more variables as required. Take a copy of</p>
+<p><a href="https://help.ubuntu.com/community/AutomaticSecurityUpdates">/etc/apt/apt.conf.d/50unattended-upgrades</a> and use it as a template, saving it as common/templates/50unattended-upgrades.j2 and then replace the values with variables.</p>
+<p><a href="https://jinja.palletsprojects.com">Ansible uses Jinja as the templating engine. You can read more about it on</a></p>
+<p>the <a href="https://jinja.palletsprojects.com">documentation site</a>.</p>
+<p>41</p>
+<p><span id="index_split_000.html#p42"></span>Unattended-Upgrade::Allowed-Origins {</p>
+<p>"${distro_id}:${distro_codename}";</p>
+<p>{% if unattended_upgrades_security %}</p>
+<p>"${distro_id}:${distro_codename}-security";</p>
+<p>{% endif %}</p>
+<p>{% if unattended_upgrades_esm %}</p>
+<p>"${distro_id}ESMApps:${distro_codename}-apps-security";</p>
+<p>"${distro_id}ESM:${distro_codename}-infra-security";</p>
+<p>{% endif %}</p>
+<p>{% if unattended_upgrades_updates %}</p>
+<p>"${distro_id}:${distro_codename}-updates";</p>
+<p>{% endif %}</p>
+<p>{% if unattended_upgrades_proposed %}</p>
+<p>"${distro_id}:${distro_codename}-proposed";</p>
+<p>{% endif %}</p>
+<p>{% if unattended_upgrades_backports %}</p>
+<p>"${distro_id}:${distro_codename}-backports";</p>
+<p>{% endif %}</p>
+<p>};</p>
+<p>Unattended-Upgrade::Package-Blacklist {</p>
+<p>{% for item in unattended_upgrades_blacklisted %}</p>
+<p>"{{ item }}";</p>
+<p>{% endfor %}</p>
+<p>};</p>
+<p>Unattended-Upgrade::MinimalSteps "true";</p>
+<p>Unattended-Upgrade::InstallOnShutdown "false";</p>
+<p>Unattended-Upgrade::Remove-Unused-Dependencies "{% if unattended_upgrades_remove_dependencies %}true{% else %}false{% endif %}"; Unattended-Upgrade::Automatic-Reboot "{% if unattended_upgrades_auto_reboot</p>
+<p>%}true{% else %}false{% endif %}";</p>
+<p>Unattended-Upgrade::Automatic-Reboot-Time "{{</p>
+<p>unattended_upgrades_auto_reboot_time }}";</p>
+<p>Create a task under pre_setup.yml that will be used to replace the variables and deploy the template to the server. If the Ansible tasks are written well, re-running them on a system that is already setup will not break anything and should simply update what needs to be changed.</p>
+<p>42</p>
+<p><span id="index_split_000.html#p43"></span>- name: Configure Unattended Upgrades</p>
+<p>template:</p>
+<p>dest: /etc/apt/apt.conf.d/50unattended-upgrades</p>
+<p>src: 50unattended-upgrades.j2</p>
+<p>Add the second template; common/templates/20auto-upgrades.j2; with the following content. This file determines how frequent the auto upgrade will be performed.</p>
+<p>APT::Periodic::Update-Package-Lists "{{ unattended_upgrades_update_period }}"; APT::Periodic::Download-Upgradeable-Packages "{{</p>
+<p>unattended_upgrades_upgrade_period }}";</p>
+<p>APT::Periodic::AutocleanInterval "{{ unattended_upgrades_auto_clean_period</p>
+<p>}}";</p>
+<p>APT::Periodic::Unattended-Upgrade "{{</p>
+<p>unattended_upgrades_unattended_upgrade_period }}";</p>
+<p>All that’s left now is to set up the task that will copy over the template:</p>
+<p>- name: Configure Unattended Upgrades Frequency</p>
+<p>template:</p>
+<p>dest: /etc/apt/apt.conf.d/20auto-upgrades</p>
+<p>src: 20auto-upgrades.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>That’s it! We’ve successfully created two template files, added some variables and created tasks that will render the templates and deploy them to the server. To run the playbook, we’ll use the same command as before: $ ansible-playbook -i ./hosts site.yml</p>
+<p>Below is our complete pre-setup file:</p>
+<p>43</p>
+<p><span id="index_split_000.html#p44"></span>---</p>
+<p># pre_setup tasks</p>
+<p>- name: Update the system</p>
+<p>apt:</p>
+<p>update_cache: yes</p>
+<p>cache_valid_time: 86400</p>
+<p>upgrade: 'dist'</p>
+<p>- name: Install packages</p>
+<p>apt:</p>
+<p>name: "{{ pre_setup_packages | default([], true) | list }}"</p>
+<p>state: latest</p>
+<p>- name: Install Snap Packages</p>
+<p>snap:</p>
+<p>name: "{{ pre_setup_snap | default([], true) | list }}"</p>
+<p>state: present</p>
+<p>- name: Install Classic Snap Packages</p>
+<p>snap:</p>
+<p>name: "{{ pre_setup_snap_classic | default([], true) | list }}"</p>
+<p>classic: true</p>
+<p>state: present</p>
+<p>- name: Configure Unattended Upgrades</p>
+<p>template:</p>
+<p>dest: /etc/apt/apt.conf.d/50unattended-upgrades</p>
+<p>src: 50unattended-upgrades.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>- name: Configure Unattended Upgrades Frequency</p>
+<p>template:</p>
+<p>dest: /etc/apt/apt.conf.d/20auto-upgrades</p>
+<p>src: 20auto-upgrades.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>Optimisations Subtask</p>
+<p>As per our main.yml task file, the next item in the queue is optimisations 44</p>
+<p><span id="index_split_000.html#p45"></span>(optimisations.yml). In order to get the most out of our server, we will need to increase some default values. Somaxconn defines the size of the kernel queue for accepting new connections. The lower the value the lower the maximum concurrent users.</p>
+<p>By default, the value is set to 128, giving a max of 128 concurrent users. We’ll set this value to 100000. Open up optimisations.yml and add the first task:</p>
+<p>---</p>
+<p>- name: Update the maximum concurrent connections</p>
+<p>sysctl:</p>
+<p>name: net.core.somaxconn</p>
+<p>value: "100000"</p>
+<p>state: present</p>
+<p>The ip_local_port_range defines the available and usable ports which is usually set to 32768 - 61000 by default. We shall increase this range and offer port 10000 to port 65535.</p>
+<p>- name: Update available port range</p>
+<p>sysctl:</p>
+<p>name: net.ipv4.ip_local_port_range</p>
+<p>value: "1024 65535"</p>
+<p>state: present</p>
+<p>The TCP protocol offers a wait state which keeps a socket open for up to 4</p>
+<p>minutes after the connection has been closed. This can be problematic on a busy server as it will run out of sockets and ports. We can instruct the system to reuse sockets when it’s safe to do so without waiting for the 4 minutes to elapse.</p>
+<p>45</p>
+<p><span id="index_split_000.html#p46"></span>- name: Allow socket reuse</p>
+<p>sysctl:</p>
+<p>name: net.ipv4.tcp_tw_reuse</p>
+<p>value: 1</p>
+<p>reload: yes</p>
+<p>state: present</p>
+<p>Most developers have faced an issue with the maximum number of open files allowed per process. The default value is usually very low; set to 1024 and this causes an issue since sockets are essentially files on any unix system (e.g.</p>
+<p>/run/php/php7.4-fpm.sock) and thus, the maximum concurrent connections are limited. If we do our math right, the gateway is only allowed to have a maximum of 512 connections. This is because each connection from a client is counted as one inbound connection, which will then be forwarded to the upstream server which will require another outbound connection, making those 2 open connections per client. We definitely have to up this value and set the soft and hard limits to 999999.</p>
+<p>- name: Set the soft and hard open file limits</p>
+<p>pam_limits:</p>
+<p>domain: "{{ item.domain }}"</p>
+<p>value: "999999"</p>
+<p>limit_item: nofile</p>
+<p>limit_type: "{{ item.type }}"</p>
+<p>with_items:</p>
+<p>- type: soft</p>
+<p>domain: "*"</p>
+<p>- type: hard</p>
+<p>domain: "*"</p>
+<p>- type: soft</p>
+<p>domain: root</p>
+<p>- type: hard</p>
+<p>domain: root</p>
+<p>Let's add our first handler which will listen to events requiring a system reboot. We shall fire the event once we’ve changed our soft and hard file limits. Open common/handlers/main.yml:</p>
+<p>46</p>
+<p><span id="index_split_000.html#p47"></span>---</p>
+<p># handlers file for common</p>
+<p>- name: reboot server</p>
+<p>reboot:</p>
+<p>Here’s the complete common/tasks/optimisations.yml file:</p>
+<p>47</p>
+<p><span id="index_split_000.html#p48"></span>---</p>
+<p>- name: Update the maximum concurrent connections</p>
+<p>sysctl:</p>
+<p>name: net.core.somaxconn</p>
+<p>value: "100000"</p>
+<p>state: present</p>
+<p>- name: Update available port range</p>
+<p>sysctl:</p>
+<p>name: net.ipv4.ip_local_port_range</p>
+<p>value: "1024 65535"</p>
+<p>state: present</p>
+<p>- name: Allow socket reuse</p>
+<p>sysctl:</p>
+<p>name: net.ipv4.tcp_tw_reuse</p>
+<p>value: 1</p>
+<p>reload: yes</p>
+<p>state: present</p>
+<p>- name: Set the soft and hard open file limits</p>
+<p>pam_limits:</p>
+<p>domain: "{{ item.domain }}"</p>
+<p>value: "999999"</p>
+<p>limit_item: nofile</p>
+<p>limit_type: "{{ item.type }}"</p>
+<p>with_items:</p>
+<p>- type: soft</p>
+<p>domain: "*"</p>
+<p>- type: hard</p>
+<p>domain: "*"</p>
+<p>- type: soft</p>
+<p>domain: root</p>
+<p>- type: hard</p>
+<p>domain: root</p>
+<p>notify:</p>
+<p>- reboot server</p>
+<p>Users Subtask</p>
+<p>In order for us to be able to clone our Git repository, we'll require a user (of course not root). I prefer calling the user "deploy" but feel free to create any 48</p>
+<p><span id="index_split_000.html#p49"></span>username you like. Let’s add a couple of default variables under common/defaults/main.yml, then write the user creation task in common/tasks/users.yml.</p>
+<p>deploy_user: "deploy"</p>
+<p>deploy_user_generate_ssh_key: true</p>
+<p>deploy_user_shell: "/bin/bash"</p>
+<p>deploy_user_local_ssh_keys:</p>
+<p>- ~/.ssh/id_rsa.pub</p>
+<p>deploy_user_groups:</p>
+<p>- www-data</p>
+<p>Notice: Since this user will be required to handle the web server files, we’ve added him to the www-data group. We are not implementing User Isolation. If you intend to, modify the user groups that are attached to the deploy user.</p>
+<p>Using the ansible user module, let's create a new user and generate the SSH</p>
+<p>key pair that will be used by our CI/CD pipelines. We'll also use the authorized_key module which allows us copy our local public SSH key so that we have password-less login. We also want to allow the deploy user to login as himself when using our CI/CD pipeline from GitLab.</p>
+<p>49</p>
+<p><span id="index_split_000.html#p50"></span>---</p>
+<p># tasks for users.yml</p>
+<p>- name: Create the deploy user groups</p>
+<p>group:</p>
+<p>name: "{{ item }}"</p>
+<p>state: present</p>
+<p>loop: "{{ deploy_user_groups | default([], true) }}"</p>
+<p>- name: Create the deploy user</p>
+<p>user:</p>
+<p>name: "{{ deploy_user }}"</p>
+<p>groups: "{{ (deploy_user_groups | default([], true) | join(',')) }}"</p>
+<p>generate_ssh_key: "{{ deploy_user_generate_ssh_key }}"</p>
+<p>shell: "{{ deploy_user_shell }}"</p>
+<p>register: created_user</p>
+<p>- name: Add GitLab to known hosts</p>
+<p>lineinfile:</p>
+<p>dest: "/home/{{ deploy_user }}/.ssh/known_hosts"</p>
+<p>create: yes</p>
+<p>state: present</p>
+<p>line: "{{ lookup('pipe', 'ssh-keyscan -t rsa gitlab.com') }}"</p>
+<p>regexp: "^gitlab\\.com"</p>
+<p>mode: 0600</p>
+<p>- name: Allow SSH key based logins</p>
+<p>authorized_key:</p>
+<p>user: "{{ deploy_user }}"</p>
+<p>key: "{{ lookup('file', item) }}"</p>
+<p>state: present</p>
+<p>loop: "{{ deploy_user_local_ssh_keys | default([], true) }}"</p>
+<p>- name: Allow Deploy User to Login</p>
+<p>authorized_key:</p>
+<p>user: "{{ deploy_user }}"</p>
+<p>key: "{{ created_user['ssh_public_key'] }}"</p>
+<p>state: present</p>
+<p>Let’s run the playbook and see if the changes will be made as desired. Once the playbook is run, try logging in as the created user, in our case, the deploy user: ssh deploy@123.45.6.78. You should be able to login successfully without a password.</p>
+<p>50</p>
+<p><span id="index_split_000.html#p51"></span>Security Subtask</p>
+<p>Let’s beef up the security of our server! The first thing I like changing is the default SSH Port. We also installed UFW (uncomplicated firewall) for filtering which connections should be accepted and which should be dropped.</p>
+<p>Let's add some new default variables. The ufw_allow variable will house the port and protocol (tcp/udp) to be used and can contain as many ports as needed.</p>
+<p>ssh_port: "4033"</p>
+<p>ufw_allow:</p>
+<p>- port: 80</p>
+<p>proto: tcp</p>
+<p>- port: 443</p>
+<p>proto: tcp</p>
+<p>Then we add the tasks in common/tasks/security.yml:</p>
+<p>51</p>
+<p><span id="index_split_000.html#p52"></span>---</p>
+<p># tasks for security</p>
+<p>- name: Update the SSH port</p>
+<p>lineinfile:</p>
+<p>path: /etc/ssh/sshd_config</p>
+<p>regexp: "^#?Port "</p>
+<p>line: "Port {{ ssh_port }}"</p>
+<p>- name: Allow SSH traffic through firewall</p>
+<p>ufw:</p>
+<p>rule: allow</p>
+<p>port: "{{ ssh_port }}"</p>
+<p>proto: tcp</p>
+<p>- name: Allow traffic through firewall</p>
+<p>ufw:</p>
+<p>rule: allow</p>
+<p>port: "{{ item.port }}"</p>
+<p>proto: "{{ item.proto }}"</p>
+<p>loop: "{{ ufw_allow | default([], true) | list }}"</p>
+<p>- name: Restart SSH</p>
+<p>service:</p>
+<p>name: ssh</p>
+<p>state: restarted</p>
+<p>- name: Ensure we use the configured SSH port for the remainder of the role set_fact:</p>
+<p>ansible_port: "{{ ssh_port }}"</p>
+<p>- name: Start UFW</p>
+<p>ufw:</p>
+<p>direction: incoming</p>
+<p>state: enabled</p>
+<p>policy: deny</p>
+<p>You’ll notice that we have updated the ansible_port fact under the Ensure we use the configured SSH port for the remainder of the role task. This allows ansible to carry on working for the rest of the role since we have changed the default SSH port to 4033. If using other firewalls, make sure the port is open before changing it, otherwise the task will fail.</p>
+<p>If you try to use the default SSH command, it will fail unless the port is 52</p>
+<p><span id="index_split_000.html#p53"></span>specified. To connect as the previously created deploy user, add -p 4033 to the SSH command. You can also create an alias for this connection or add a host to your local SSH config ~/.ssh/config:</p>
+<p>$ ssh -p 4033 deploy@123.45.6.78</p>
+<p># using an alias</p>
+<p>$ echo 'alias devops="ssh -p 4033 deploy@123.45.6.78"' &gt;&gt; ~/.bashrc $ source ~/.bashrc</p>
+<p>$ devops # this calls the alias above</p>
+<p># using ssh config</p>
+<p>$ vi ~/.ssh/config</p>
+<p>Host devops</p>
+<p>Hostname 123.45.6.78</p>
+<p>Port 4033</p>
+<p>User deploy</p>
+<p>$ ssh devops # this will use the devops config</p>
+<p>Notice: If you are running the playbook after each change, you’ll need to add the ansible_port variable on your Ansible inventory hosts file and then remove it once the whole playbook is done so that new servers will get the correct configuration.</p>
+<p>Using INI format: 123.45.6.78 ansible_user=root</p>
+<p>ansible_port=4033</p>
+<p>The common role is done!</p>
+<p>53</p>
+<p><span id="index_split_000.html#p54"></span>The MySQL Role</p>
+<p>Percona Subtask</p>
+<p>Under the mysql role directory, create a new percona.yml file under tasks to house our percona preparation and installation tasks. We will also add some python libraries so that ansible can connect to our database.</p>
+<p>---</p>
+<p>- name: Setup Percona Repository</p>
+<p>apt:</p>
+<p>deb: "https://repo.percona.com/apt/percona-release_latest.{{</p>
+<p>ansible_distribution_release }}_all.deb"</p>
+<p>- name: Enable Percona 8 Repository</p>
+<p>command: percona-release setup ps80</p>
+<p>- name: Install Percona Server</p>
+<p>apt:</p>
+<p>name: percona-server-server</p>
+<p>state: latest</p>
+<p>update_cache: yes</p>
+<p>- name: Determine required MySQL Python libraries</p>
+<p>set_fact:</p>
+<p>mysql_python_package: "{% if ansible_python.version.major == 3 %}python3-pymysql{% else %}python-pymysql{% endif %}"</p>
+<p>- name: Ensure MySQL Python libraries are installed</p>
+<p>apt:</p>
+<p>name: "{{ mysql_python_package }}"</p>
+<p>state: latest</p>
+<p>Let's also add a handler (mysql/handlers/main.yml) that will allow us to restart mysql server.</p>
+<p>54</p>
+<p><span id="index_split_000.html#p55"></span>---</p>
+<p># mysql/handlers/main.yml</p>
+<p>- name: restart mysql</p>
+<p>service:</p>
+<p>name: mysql</p>
+<p>state: restarted</p>
+<p>Configure Subtask</p>
+<p>Create a new task file, configure.yml file under mysql/tasks and a new my.cnf.j2 template file under mysql/templates. The template will be used to modify the default my.cnf file that comes with Percona.</p>
+<p>55</p>
+<p><span id="index_split_000.html#p56"></span># templates/my.cnf.j2</p>
+<p>[mysqld]</p>
+<p>default-authentication-plugin={{ default_authentication_plugin }}</p>
+<p># Disabling symbolic-links is recommended to prevent assorted security risks symbolic-links = 0</p>
+<p># Memory settings.</p>
+<p>max_allowed_packet = {{ mysql_max_allowed_packet }}</p>
+<p>sort_buffer_size = {{ mysql_sort_buffer_size }}</p>
+<p>read_buffer_size = {{ mysql_read_buffer_size }}</p>
+<p>key_buffer_size = {{ mysql_key_buffer_size }}</p>
+<p>myisam_sort_buffer_size = {{ mysql_myisam_sort_buffer_size }}</p>
+<p>read_rnd_buffer_size = {{ mysql_read_rnd_buffer_size }}</p>
+<p>table_open_cache = {{ mysql_table_open_cache }}</p>
+<p>max_connections = {{ mysql_max_connections }}</p>
+<p>group_concat_max_len = {{ mysql_group_concat_max_len }}</p>
+<p>thread_cache_size = {{ mysql_thread_cache_size }}</p>
+<p>join_buffer_size = {{ mysql_join_buffer_size }}</p>
+<p>tmp_table_size = {{ mysql_tmp_table_size }}</p>
+<p>max_heap_table_size = {{ mysql_max_heap_table_size }}</p>
+<p># InnoDB settings.</p>
+<p>innodb_file_per_table = {{ mysql_innodb_file_per_table }}</p>
+<p>innodb_buffer_pool_size = {{ mysql_innodb_buffer_pool_size }}</p>
+<p>innodb_log_file_size = {{ mysql_innodb_log_file_size }}</p>
+<p>innodb_log_buffer_size = {{ mysql_innodb_log_buffer_size }}</p>
+<p>innodb_flush_log_at_trx_commit = {{ mysql_innodb_flush_log_at_trx_commit }}</p>
+<p>innodb_lock_wait_timeout = {{ mysql_innodb_lock_wait_timeout }}</p>
+<p>!includedir /etc/mysql/conf.d/</p>
+<p>!includedir /etc/mysql/mysql.conf.d/</p>
+<p>Let's also add some default values for use with a server of about 512MB RAM.</p>
+<p>Edit mysql/defaults/main.yml and add the following variables.</p>
+<p>56</p>
+<p><span id="index_split_000.html#p57"></span>---</p>
+<p># defaults file for mysql</p>
+<p># caching_sha2_password is the default but most clients are not supporting it default_authentication_plugin: "mysql_native_password"</p>
+<p>mysql_max_allowed_packet: "64M"</p>
+<p>mysql_sort_buffer_size: "1M"</p>
+<p>mysql_read_buffer_size: "1M"</p>
+<p>mysql_key_buffer_size: "256M"</p>
+<p>mysql_myisam_sort_buffer_size: "64M"</p>
+<p>mysql_read_rnd_buffer_size: "4M"</p>
+<p>mysql_table_open_cache: "256"</p>
+<p>mysql_max_connections: "151"</p>
+<p>mysql_group_concat_max_len: "1024"</p>
+<p>mysql_thread_cache_size: "8"</p>
+<p>mysql_join_buffer_size: "262144"</p>
+<p>mysql_tmp_table_size: "16M"</p>
+<p>mysql_max_heap_table_size: "16M"</p>
+<p>mysql_innodb_file_per_table: "1"</p>
+<p>mysql_innodb_buffer_pool_size: "256M"</p>
+<p>mysql_innodb_log_file_size: "64M"</p>
+<p>mysql_innodb_log_buffer_size: "8M"</p>
+<p>mysql_innodb_flush_log_at_trx_commit: "1"</p>
+<p>mysql_innodb_lock_wait_timeout: "50"</p>
+<p>mysql_root_password: "t00r"</p>
+<p>mysql_grant_users:</p>
+<p>- name: "devops"</p>
+<p>password: "devops"</p>
+<p>host: "localhost"</p>
+<p>privileges: "*.*:All" # '*.*:ALL,GRANT' generates a "root" user We can now copy the template file over to our server and replace the existing one. Once we are done with the configurations, we shall restart mysql server using the handler we created. We shall also ensure that mysql is started on system boot.</p>
+<p>We'll also create extra mysql users who will have the permissions we need.</p>
+<p>Add as many as required under the mysql_grant_users variable. Also set a sensible password for root via the role variables. Lastly, we shall perform the secure installation and remove the test database and the anonymous user.</p>
+<p>57</p>
+<p><span id="index_split_000.html#p58"></span>---</p>
+<p># mysql/tasks/configure.yml</p>
+<p>- name: Update MySQL Configuration</p>
+<p>template:</p>
+<p>src: my.cnf.j2</p>
+<p>dest: /etc/mysql/my.cnf</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>force: true</p>
+<p>notify: restart mysql</p>
+<p>- name: Enable MySQL on boot</p>
+<p>service:</p>
+<p>name: mysql</p>
+<p>state: started</p>
+<p>enabled: true</p>
+<p>- name: Disallow remote root login</p>
+<p>command: 'mysql -NBe "{{ item }}"'</p>
+<p>with_items:</p>
+<p>- DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost',</p>
+<p>'127.0.0.1', '::1')</p>
+<p>changed_when: false</p>
+<p>- name: Get defined hosts for root</p>
+<p>command: mysql -NBe "SELECT Host FROM mysql.user WHERE User = 'root' ORDER</p>
+<p>BY (Host='localhost') ASC"</p>
+<p>register: mysql_hosts</p>
+<p>changed_when: false</p>
+<p>check_mode: false</p>
+<p>- name: Update MySQL root password</p>
+<p>shell: mysql -u root -NBe 'ALTER USER "root"@"{{ item }}" IDENTIFIED WITH</p>
+<p>mysql_native_password BY "{{ mysql_root_password }}";'</p>
+<p>with_items: "{{ mysql_hosts.stdout_lines | default([]) }} "</p>
+<p>- name: Set MySQL root configuration</p>
+<p>template:</p>
+<p>src: "root-my.cnf.j2"</p>
+<p>dest: "/root/.my.cnf"</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0600</p>
+<p>force: true</p>
+<p>58</p>
+<p><span id="index_split_000.html#p59"></span>- name: Create additional users</p>
+<p>mysql_user:</p>
+<p>name: "{{ item.name }}"</p>
+<p>host: "{{ item.host }}"</p>
+<p>password: "{{ item.password }}"</p>
+<p>priv: "{{ item.privileges }}"</p>
+<p>state: present</p>
+<p>loop: "{{ mysql_grant_users | default([]) }}"</p>
+<p>no_log: true</p>
+<p>- name: Get defined hosts for the anonymous user</p>
+<p>command: mysql -NBe 'SELECT Host FROM mysql.user WHERE User = ""'</p>
+<p>register: mysql_anonymous_hosts</p>
+<p>changed_when: false</p>
+<p>check_mode: false</p>
+<p>- name: Remove anonymous MySQL users.</p>
+<p>mysql_user:</p>
+<p>name: ""</p>
+<p>host: "{{ item }}"</p>
+<p>state: absent</p>
+<p>with_items: "{{ mysql_anonymous_hosts.stdout_lines | default([]) }}"</p>
+<p>- name: Remove MySQL test database</p>
+<p>mysql_db:</p>
+<p>name: test</p>
+<p>state: absent</p>
+<p>notify: restart mysql</p>
+<p>The task above references a root-my.cnf.j2 template file which stores the credentials for the root mysql user. Create the file under templates and use the content below.</p>
+<p>[client]</p>
+<p>user="root"</p>
+<p>password="{{ mysql_root_password }}"</p>
+<p>All that’s left is to include the two sub tasks into the mysql/tasks/main.yml task.</p>
+<p>59</p>
+<p><span id="index_split_000.html#p60"></span>---</p>
+<p># tasks file for mysql</p>
+<p>- name: Handle Percona Installation</p>
+<p>import_tasks: percona.yml</p>
+<p>- name: Configure the database engine</p>
+<p>import_tasks: configure.yml</p>
+<p>That should take care of our MySQL server. You should be able to login to MySQL with the set password, and the other created users should also be able to login.</p>
+<p>60</p>
+<p><span id="index_split_000.html#p61"></span>The PHP Role</p>
+<p>Setting up PHP is usually easy. Since we are using PHP 7.4, we have an option of using the Debian maintained version or Ondrej’s PPA but since a lot of people like having the flexibly, let’s use the latter. We shall setup PHP,</p>
+<p><a href="https://getcomposer.org/">Composer and configure modules like opcache.</a></p>
+<p>Installs Subtask</p>
+<p>Add a new subtask; installs.yml; which will hold our installation of PHP</p>
+<p>and other required binaries. We shall compile some modules like redis from source. The list of packages to be installed will be defined in the php/defaults/main.yml file.</p>
+<p>61</p>
+<p><span id="index_split_000.html#p62"></span>---</p>
+<p># defaults file for php</p>
+<p>php_version: 7.4</p>
+<p>php_packages:</p>
+<p>- php-pear</p>
+<p>- php{{ php_version }}</p>
+<p>- php{{ php_version }}-cli</p>
+<p>- php{{ php_version }}-common</p>
+<p>- php{{ php_version }}-curl</p>
+<p>- php{{ php_version }}-dev</p>
+<p>- php{{ php_version }}-gd</p>
+<p>- php{{ php_version }}-json</p>
+<p>- php{{ php_version }}-mysql</p>
+<p>- php{{ php_version }}-opcache</p>
+<p>- php{{ php_version }}-readline</p>
+<p>- php{{ php_version }}-sqlite3</p>
+<p>- php{{ php_version }}-xml</p>
+<p>- php{{ php_version }}-bcmath</p>
+<p>- php{{ php_version }}-bz2</p>
+<p>- php{{ php_version }}-fpm</p>
+<p>- php{{ php_version }}-intl</p>
+<p>- php{{ php_version }}-mbstring</p>
+<p>- php{{ php_version }}-soap</p>
+<p>- php{{ php_version }}-xsl</p>
+<p>- php{{ php_version }}-zip</p>
+<p>- php{{ php_version }}-imagick</p>
+<p>- imagemagick</p>
+<p>- libmcrypt-dev</p>
+<p>php_pecl_install:</p>
+<p>- mcrypt</p>
+<p>- redis</p>
+<p>Changing the playbook's php_version (defined in site.yml) will also change the modules that will be installed since we are using the variable as a reference in all our modules. You can add as many packages above as needed. Each project will have its own specification of extensions that will be needed. If image processing will not be required, the image processing extensions like imagick can be removed.</p>
+<p>There are two extra packages sourced from PECL, In our case, mcrypt and redis. Update the php/tasks/installs.yml subtask and add:</p>
+<p>62</p>
+<p><span id="index_split_000.html#p63"></span>---</p>
+<p>- name: Add Ondrej PPA</p>
+<p>apt_repository:</p>
+<p>repo: ppa:ondrej/php</p>
+<p>state: present</p>
+<p>update_cache: yes</p>
+<p>mode: 0666</p>
+<p>- name: Install PHP packages</p>
+<p>apt:</p>
+<p>name: "{{ php_packages | default([]) }}"</p>
+<p>state: latest</p>
+<p>- name: Update PECL protocols</p>
+<p>shell: pecl channel-update pecl.php.net</p>
+<p>- name: Install PECL Packages</p>
+<p>shell: yes '' | pecl install -s --force {{ item }}</p>
+<p>loop: "{{ php_pecl_install }}"</p>
+<p><a href="https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md">Following the programatic installation of composer, create a new script and</a></p>
+<p>save it at files/install_composer.sh, which we shall execute and register the output which we shall use to determine if the installation was successful. If successful, we shall move the created composer.phar file to</p>
+<p>/usr/local/bin/composer.</p>
+<p>63</p>
+<p><span id="index_split_000.html#p64"></span>#!/bin/sh</p>
+<p>EXPECTED_CHECKSUM="$(wget -q -O - https://composer.github.io/installer.sig)"</p>
+<p>php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"</p>
+<p>ACTUAL_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"</p>
+<p>if [ "$EXPECTED_CHECKSUM" != "$ACTUAL_CHECKSUM" ]</p>
+<p>then</p>
+<p>&gt;&amp;2 echo 'ERROR: Invalid installer checksum'</p>
+<p>rm composer-setup.php</p>
+<p>exit 1</p>
+<p>fi</p>
+<p>php composer-setup.php --quiet</p>
+<p>RESULT=$?</p>
+<p>rm composer-setup.php</p>
+<p>exit $RESULT</p>
+<p>Now update the installs subtask and add the composer install task.</p>
+<p>- name: Install Composer</p>
+<p>script: files/install_composer.sh</p>
+<p>register: composer_install_status</p>
+<p>- name: Install Composer globally</p>
+<p>command: mv composer.phar /usr/local/bin/composer</p>
+<p>when: composer_install_status.changed</p>
+<p>Configure Subtask</p>
+<p>Next, configure the installation by adding a new subtask;</p>
+<p>php/tasks/configure.yml and adding some extra default variables. In Debian/Ubuntu, the PHP configuration files are usually symlinked to the mods-available folder thus, we shall create our configs in the mods-available folder and symlink them to the cli and fpm directories. Add the default variables (php/defaults/main.yml) that will be used to generate the custom configs, and the directory to store the configs.</p>
+<p>64</p>
+<p><span id="index_split_000.html#p65"></span>php_common_conf_directory: /etc/php/{{ php_version }}/mods-available php_conf_directories:</p>
+<p>- /etc/php/{{ php_version }}/cli/conf.d</p>
+<p>- /etc/php/{{ php_version }}/fpm/conf.d</p>
+<p>php_register_modules:</p>
+<p>- name: mcrypt</p>
+<p>priority: 20</p>
+<p>- name: redis</p>
+<p>priority: 20</p>
+<p>In the default variables above, we’ve added the common mods-available directory and the two config directories. These are also dependent on the PHP version. The modules we want to register are listed under php_register_modules. The priority is used in the generation of the filename (priority-name.ini: 20-mcrypt.ini). The priority determines the order in which the modules are loaded.</p>
+<p>Next we create the template for the file that will be stored in the mods-available folder. Save it as templates/module.ini.j2.</p>
+<p>; configuration for php {{ item.name }} module</p>
+<p>; priority={{ item.priority }}</p>
+<p>extension={{ item.name }}.so</p>
+<p>Better be safe than sorry! Let's add tasks to confirm that the directory for PHP custom configs is actually present.</p>
+<p>65</p>
+<p><span id="index_split_000.html#p66"></span>---</p>
+<p># php/tasks/configure.yml</p>
+<p>- name: Ensure common configuration directory exist</p>
+<p>file:</p>
+<p>path: "{{ php_common_conf_directory }}"</p>
+<p>state: directory</p>
+<p>follow: true</p>
+<p>- name: Ensure configuration directories exist</p>
+<p>file:</p>
+<p>path: "{{ item }}"</p>
+<p>state: directory</p>
+<p>follow: true</p>
+<p>loop: "{{ php_conf_directories }}"</p>
+<p>Next, we can copy over our configurations. The first configs will be the two modules we’ve installed and listed on the defaults file as php_register_modules. Append the two tasks into configure.yml subtask.</p>
+<p>- name: Add modules configs</p>
+<p>template:</p>
+<p>dest: "{{ php_common_conf_directory }}/{{ item.name }}.ini"</p>
+<p>src: module.ini.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>loop: "{{ php_register_modules }}"</p>
+<p>- name: Enable modules</p>
+<p>file:</p>
+<p>src: "{{ php_common_conf_directory }}/{{ item.1.name }}.ini"</p>
+<p>dest: "{{ item.0 }}/{{ item.1.priority }}-{{ item.1.name }}.ini"</p>
+<p>state: link</p>
+<p>force: yes</p>
+<p>loop: "{{ php_conf_directories | product(php_register_modules) | list }}"</p>
+<p>New we give our PHP installation a boost by configuring Opcache. Add some opcache default variables that will be used with the opcache template file, opcache.ini.j2.</p>
+<p>66</p>
+<p><span id="index_split_000.html#p67"></span>opcache_enable: "1"</p>
+<p>opcache_enable_cli: "1"</p>
+<p>opcache_memory_consumption: "512"</p>
+<p>opcache_string_buffer: "64"</p>
+<p>opcache_accelerated_files: "30000"</p>
+<p>opcache_validate_timestamps: "0"</p>
+<p>opcache_fast_shutdown: "1"</p>
+<p>opcache_save_comments: "1"</p>
+<p>I’d advice you to use opcache as it improves PHP performance by storing precompiled script bytecode in shared memory, thereby removing the need for PHP to load and parse scripts on each request. So once a file has been read and compiled, it’s stored in memory and all subsequent request will not need to read the file again.</p>
+<p>Notice: When you disable the validate timestamps option, you will need to restart PHP-FPM with every new deployment so that the precompiled scripts are flushed</p>
+<p>And now the opcache.ini.j2 template:</p>
+<p>zend_extension=opcache.so</p>
+<p>[opcache]</p>
+<p>opcache.enable={{ opcache_enable }}</p>
+<p>opcache.enable_cli={{ opcache_enable_cli }}</p>
+<p>opcache.memory_consumption={{ opcache_memory_consumption }}</p>
+<p>opcache.interned_strings_buffer={{ opcache_string_buffer }}</p>
+<p>opcache.max_accelerated_files={{ opcache_accelerated_files }}</p>
+<p>opcache.validate_timestamps={{ opcache_validate_timestamps }}</p>
+<p>opcache.fast_shutdown={{ opcache_fast_shutdown }}</p>
+<p>opcache.save_comments = {{ opcache_save_comments }}</p>
+<p>This template will be used to replace the opcache.ini file located under mods-available directory. It is automatically symlinked to the cli and fpm directories so the rest of the work is done for us.</p>
+<p>67</p>
+<p><span id="index_split_000.html#p68"></span>- name: Setup Opcache</p>
+<p>template:</p>
+<p>dest: "{{ php_common_conf_directory }}/opcache.ini"</p>
+<p>src: opcache.ini.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>Next, we set up our PHP-FPM pools. The default is usually the www pool.</p>
+<p>Create a new template file; www.conf.j2; and add the following pool definitions:</p>
+<p>[www]</p>
+<p>user = {{ php_fpm_user }}</p>
+<p>group = {{ php_fpm_group }}</p>
+<p>listen = /run/php/php{{ php_version }}-fpm.sock</p>
+<p>listen.owner = {{ php_fpm_user }}</p>
+<p>listen.group = {{ php_fpm_group }}</p>
+<p>pm = dynamic</p>
+<p>pm.max_children = {{ php_pm_max_children }}</p>
+<p>pm.start_servers = {{ php_pm_start_servers }}</p>
+<p>pm.min_spare_servers = {{ php_pm_min_spare_servers }}</p>
+<p>pm.max_spare_servers = {{ php_pm_max_spare_servers }}</p>
+<p>pm.max_requests = {{ php_pm_max_requests }}</p>
+<p>{% if php_pm_enable_stats %}</p>
+<p>pm.status_path = {{ php_pm_status_path }}</p>
+<p>{% endif %}</p>
+<p>{% if php_pm_enable_monitoring %}</p>
+<p>ping.path = {{ php_pm_ping_path }}</p>
+<p>ping.response = {{ php_pm_ping_response }}</p>
+<p>{% endif %}</p>
+<p>This pool file will be populated depending on the server requirements. If your server does not have enough resources to handle 100 children, setting pm.max_children to 100 will be a joke! Each child usually consumes between 20 - 60 megabytes of RAM. Taking a 4GB server with MySQL</p>
+<p>running (~ 1GB RAM) and system resources and other services (~0.5BG), we would have approximately 2.5GB of RAM remaining. So we can calculate our max processes as 2560/60 = 42.6, give it a round figure of 40.</p>
+<p>68</p>
+<p><span id="index_split_000.html#p69"></span>Even though we will be using an 8GB RAM server, our system is not that busy, so we’ll set the max processes variable to 50. Update the</p>
+<p>php/defaults/main.yml file and add the following variables.</p>
+<p>php_fpm_user: "www-data"</p>
+<p>php_fpm_group: "www-data"</p>
+<p>php_pm_max_children: "50"</p>
+<p>php_pm_start_servers: "3"</p>
+<p>php_pm_min_spare_servers: "1"</p>
+<p>php_pm_max_spare_servers: "5"</p>
+<p>php_pm_max_requests: "500"</p>
+<p>php_pm_enable_stats: true</p>
+<p>php_pm_status_path: "/php_status"</p>
+<p>php_pm_enable_monitoring: true</p>
+<p>php_pm_ping_path: "/php_ping"</p>
+<p>php_pm_ping_response: "pong"</p>
+<p>Notice: If you intend to implement User Isolation, set the fpm user to the user you created, in our case it was deploy.</p>
+<p>We can now add the task that will handle the deployment of the template and set fpm to run on system boot. Append the two tasks into the configure.yml subtask.</p>
+<p>- name: Setup the default pool</p>
+<p>template:</p>
+<p>dest: "/etc/php/{{ php_version }}/fpm/pool.d/www.conf"</p>
+<p>src: www.conf.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>- name: Enable PHP-FPM on boot</p>
+<p>service:</p>
+<p>name: "php{{ php_version }}-fpm"</p>
+<p>state: started</p>
+<p>enabled: true</p>
+<p>And that should do it for PHP. Only two things left: a handler for restarting 69</p>
+<p><span id="index_split_000.html#p70"></span>PHP once all the tasks have been completed and adding the subtasks into the main task. The handler will listen to the restart php-fpm event then handle the restart for us. Edit php/handlers/main.yml:</p>
+<p>---</p>
+<p># handlers file for php</p>
+<p>- name: restart php-fpm</p>
+<p>service:</p>
+<p>name: "php{{ php_version }}-fpm"</p>
+<p>state: restarted</p>
+<p>Finally, update our php/tasks/main.yml task file and add our subtasks.</p>
+<p>Remember to restart PHP-FPM when the configuration subtask is done:</p>
+<p>---</p>
+<p># tasks file for php</p>
+<p>- name: Install PHP</p>
+<p>import_tasks: installs.yml</p>
+<p>- name: Configure PHP</p>
+<p>import_tasks: configure.yml</p>
+<p>notify: restart php-fpm</p>
+<p>70</p>
+<p><span id="index_split_000.html#p71"></span>The Nginx Role</p>
+<p><a href="https://www.nginx.com/">Nginx is available as a distribution package and can also be installed via the</a></p>
+<p>official PPA. The distribution package is not always up to date, so let’s use the PPA. We shall have two subtasks, one for the installation, and the other to configure Nginx. I’ve provided an optimised nginx.conf file, and a sample default server block that has some extra optimisations.</p>
+<p>To set up the worker_processes configuration value, we shall use the number of cores available in the current server. This value shall be extracted and saved in the nginx_worker_processes variable if it is undefined. If you would prefer to use your own value and disable the auto calculation, add the nginx_worker_processes variable to the playbook variables and assign it a value.</p>
+<p>So let’s get going! Create the two subtasks; installs.yml and configure.yml; and add them to the nginx main.yml task file.</p>
+<p>---</p>
+<p># tasks file for nginx</p>
+<p>- name: Install nginx</p>
+<p>import_tasks: installs.yml</p>
+<p>- name: Configure Nginx</p>
+<p>import_tasks: configure.yml</p>
+<p>Installs Subtask</p>
+<p>We can now open up nginx/tasks/installs.yml and add the official Nginx PPA, install it and set it to run on system boot.</p>
+<p>71</p>
+<p><span id="index_split_000.html#p72"></span>---</p>
+<p>- name: Add Nginx PPA.</p>
+<p>apt_repository:</p>
+<p>repo: 'ppa:nginx/stable'</p>
+<p>state: present</p>
+<p>update_cache: true</p>
+<p>mode: 0666</p>
+<p>- name: Remove Apache if present</p>
+<p>apt:</p>
+<p>name: apache2</p>
+<p>state: absent</p>
+<p>- name: Install Nginx</p>
+<p>apt:</p>
+<p>name: nginx</p>
+<p>state: latest</p>
+<p>- name: Enable Nginx on boot</p>
+<p>service:</p>
+<p>name: nginx</p>
+<p>state: started</p>
+<p>enabled: true</p>
+<p>That’s it for our installs subtask! Pretty fast hey?</p>
+<p>Configure Subtask</p>
+<p>Next, we open up the nginx/tasks/configure.yml file and setup the worker process auto calculation tasks to run only when the nginx_worker_processes variable is undefined.</p>
+<p>72</p>
+<p><span id="index_split_000.html#p73"></span>---</p>
+<p>- name: Check the available processor cores</p>
+<p>shell: grep processor /proc/cpuinfo | wc -l</p>
+<p>register: nginx_core_number</p>
+<p>when: nginx_worker_processes is not defined</p>
+<p>- name: Set the nginx_worker_processes variable</p>
+<p>set_fact:</p>
+<p>nginx_worker_processes: "{{ nginx_core_number.stdout_lines[0] }}"</p>
+<p>when: nginx_worker_processes is not defined</p>
+<p>We can now add our nginx.conf template file under</p>
+<p>templates/nginx.conf.j2.</p>
+<p>user {{ nginx_user }};</p>
+<p>worker_processes {{ nginx_worker_processes }};</p>
+<p>pid /var/run/nginx.pid;</p>
+<p>error_log /var/log/nginx/error.log {{ nginx_error_level }}; events {</p>
+<p>worker_connections {{ nginx_worker_connections }};</p>
+<p>}</p>
+<p>http {</p>
+<p>include /etc/nginx/mime.types;</p>
+<p>default_type application/octet-stream;</p>
+<p>log_format main_ext '$remote_addr - $remote_user [$time_local]</p>
+<p>"$request" '</p>
+<p>'$status $body_bytes_sent "$http_referer" '</p>
+<p>'"$http_user_agent" "$http_x_forwarded_for" '</p>
+<p>'"$host" sn="$server_name" '</p>
+<p>'rt=$request_time '</p>
+<p>'ua="$upstream_addr" us="$upstream_status" '</p>
+<p>'ut="$upstream_response_time"</p>
+<p>ul="$upstream_response_length"'</p>
+<p>'cs=$upstream_cache_status';</p>
+<p>access_log /var/log/nginx/access.log main_ext;</p>
+<p>sendfile on;</p>
+<p>tcp_nopush on;</p>
+<p>tcp_nodelay on;</p>
+<p>keepalive_timeout {{ nginx_keepalive_timeout }};</p>
+<p>73</p>
+<p><span id="index_split_000.html#p74"></span> types_hash_max_size {{ nginx_types_hash_max_size }};</p>
+<p># allow the server to close connection on non responding client,</p>
+<p># this will free up memory</p>
+<p>reset_timedout_connection on;</p>
+<p>##</p>
+<p># Client Settings</p>
+<p>##</p>
+<p>client_body_timeout {{ nginx_client_body_timeout }};</p>
+<p>client_header_timeout {{ nginx_client_header_timeout }};</p>
+<p>client_body_buffer_size {{ nginx_client_body_buffer_size }}; client_header_buffer_size {{ nginx_client_header_buffer_size }}; client_max_body_size {{ nginx_client_max_body_size }};</p>
+<p>large_client_header_buffers {{ nginx_large_client_header_buffers }};</p>
+<p>{% if nginx_enable_gzip %}</p>
+<p>##</p>
+<p># Gzip Settings</p>
+<p>##</p>
+<p>gzip on;</p>
+<p>gzip_disable "msie6";</p>
+<p>gzip_vary on;</p>
+<p>gzip_proxied any;</p>
+<p>gzip_comp_level 6;</p>
+<p>gzip_min_length 1000;</p>
+<p>gzip_buffers 16 8k;</p>
+<p>gzip_http_version 1.1;</p>
+<p>gzip_types application/atom+xml application/javascript application/json application/ld+json application/manifest+json application/rdf+xml application/rss+xml application/schema+json application/vnd.geo+json application/vnd.ms-fontobject application/x-font-ttf application/x-javascript application/x-web-app-manifest+json application/xhtml+xml application/xml font/collection font/eot font/opentype font/otf font/ttf image/bmp image/svg+xml image/vnd.microsoft.icon image/x-icon text/cache-manifest text/calendar text/css text/javascript text/plain text/markdown text/vcard text/vnd.rim.location.xloc text/vtt text/x-component text/x-cross-domain-policy text/xml;</p>
+<p>{% endif %}</p>
+<p>##</p>
+<p># Server Settings</p>
+<p>##</p>
+<p>server_tokens off; # don't send the version number in error pages and headers</p>
+<p>74</p>
+<p><span id="index_split_000.html#p75"></span> include /etc/nginx/conf.d/*.conf;</p>
+<p>include /etc/nginx/sites-enabled/*;</p>
+<p>}</p>
+<p>Great! The above config disables server tokens so that we keep our Nginx details private, and enables the resetting of timed out connections so that we can have as much memory reuse as possible. Let’s add the variables that are to be used by the config to the nginx/defaults/main.yml file.</p>
+<p>---</p>
+<p># defaults file for nginx</p>
+<p>nginx_user: "www-data"</p>
+<p>nginx_error_level: "warn"</p>
+<p>nginx_worker_connections: "2048"</p>
+<p>nginx_keepalive_timeout: "65"</p>
+<p>nginx_types_hash_max_size: "2048"</p>
+<p>nginx_client_body_timeout: "12"</p>
+<p>nginx_client_header_timeout: "12"</p>
+<p>nginx_client_body_buffer_size: "10k"</p>
+<p>nginx_client_header_buffer_size: "1k"</p>
+<p>nginx_client_max_body_size: "8m"</p>
+<p>nginx_large_client_header_buffers: "4 32k"</p>
+<p>nginx_enable_gzip: true</p>
+<p>As stated before, in case you want to set the worker_processes, you will need to edit the sites.yml file and add the nginx_worker_processes variable as below:</p>
+<p>---</p>
+<p>- name: Spinning up our LEMP server.</p>
+<p>hosts: all</p>
+<p>vars:</p>
+<p>nginx_worker_processes: "auto"</p>
+<p>roles:</p>
+<p>- common</p>
+<p>- mysql</p>
+<p>- php</p>
+<p>- nginx</p>
+<p>We can now add tasks to the nginx/tasks/configure.yml file, that will 75</p>
+<p><span id="index_split_000.html#p76"></span>validate that the two config and log directories are present and handle the creation if missing (/etc/nginx/conf.d, /etc/nginx/sites-enabled and</p>
+<p>/var/log/nginx). The other task will handle the deploying of our custom nginx.conf template.</p>
+<p>- name: Validate the config directories exist</p>
+<p>file:</p>
+<p>path: "{{ item }}"</p>
+<p>state: directory</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>loop:</p>
+<p>- /etc/nginx/conf.d</p>
+<p>- /etc/nginx/sites-enabled</p>
+<p>- name: Validate the log directory exist</p>
+<p>file:</p>
+<p>path: /var/log/nginx</p>
+<p>state: directory</p>
+<p>owner: root</p>
+<p>group: adm</p>
+<p>- name: Deploy custom nginx.conf</p>
+<p>template:</p>
+<p>dest: /etc/nginx/nginx.conf</p>
+<p>src: nginx.conf.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>Notice: If using User Isolation, set the nginx_user and owner of</p>
+<p>/var/log/nginx directory to match the created user account Good! It’s a great practise to have your sites served over HTTPS, and to make your encryption even stronger, we shall add a couple of things. First, let’s generate our secure <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Diffie-Hellman (DH)</a> parameters of 4096 bit field primes. This process takes a while depending on your server resources. Let’s specify the location to save the file under our nginx/defaults/mail.yml file:</p>
+<p>76</p>
+<p><span id="index_split_000.html#p77"></span># defaults/main.yml</p>
+<p>nginx_dhparam_location: "/etc/ssl/certs/dhparam.pem"</p>
+<p>and add the task that will generate it to nginx/tasks/configure.yml:</p>
+<p>- name: Generate 4096 bit DH Params</p>
+<p>community.crypto.openssl_dhparam:</p>
+<p>path: "{{ nginx_dhparam_location }}"</p>
+<p>size: 4096</p>
+<p>mode: 0666</p>
+<p>In the task above, we use the community.crypto.openssl_dhparam module which is a community module that is not available in the default ansible modules. We will need to install the <a href="https://github.com/ansible-collections/community.crypto">Community Crypto Collection</a></p>
+<p>which includes a lot of other goodies. To install run:</p>
+<p>$ ansible-galaxy collection install community.crypto</p>
+<p>Let’s add the nginx/templates/ssl-params.conf.j2 template that will be used to configure our SSL params. This file should be included within each server block that will be using HTTPS.</p>
+<p>77</p>
+<p><span id="index_split_000.html#p78"></span>## Use per block. ssl-params</p>
+<p>ssl_protocols TLSv1.2 TLSv1.3;</p>
+<p>ssl_prefer_server_ciphers on;</p>
+<p>ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH"; ssl_ecdh_curve secp384r1;</p>
+<p>ssl_session_timeout 60m;</p>
+<p>ssl_session_cache shared:SSL:10m;</p>
+<p>ssl_session_tickets off;</p>
+<p>ssl_stapling on;</p>
+<p>ssl_stapling_verify on;</p>
+<p>resolver {{ nginx_dns_ip_1 }} {{ nginx_dns_ip_2 }} valid=300s; resolver_timeout 5s;</p>
+<p>{% if nginx_enable_strict_transport_security_header %}</p>
+<p>add_header Strict-Transport-Security "max-age={{ nginx_hsts_max_age }};{% if nginx_hsts_include_subdomains %}includeSubdomains;{% endif %}{% if nginx_hsts_preload %} preload;{% endif %} ";</p>
+<p>{% endif %}</p>
+<p>{% for option in nginx_xframe_options %}</p>
+<p>add_header X-Frame-Options {{ option }};</p>
+<p>{% endfor %}</p>
+<p>add_header X-Content-Type-Options nosniff;</p>
+<p>add_header X-Robots-Tag {{ nginx_x_robots_tag }};</p>
+<p>ssl_dhparam {{ nginx_dhparam_location }};</p>
+<p>And the default variables that go with it:</p>
+<p>78</p>
+<p><span id="index_split_000.html#p79"></span>nginx_dns_ip_1: "8.8.8.8"</p>
+<p>nginx_dns_ip_2: "8.8.4.4"</p>
+<p>nginx_enable_strict_transport_security_header: true</p>
+<p>nginx_hsts_max_age: "63072000"</p>
+<p>nginx_hsts_preload: false</p>
+<p>nginx_hsts_include_subdomains: true</p>
+<p>nginx_xframe_options:</p>
+<p>- "SAMEORIGIN"</p>
+<p>nginx_x_robots_tag: "none" #</p>
+<p>https://developers.google.com/search/reference/robots_meta_tag So far so good! If you have a look at the ssl-params.conf.j2 file, we are setting some nginx parameters. We’ve dropped all other protocols except TLS 1.2 and TLS 1.3 since they are considered unsafe. The enabled ssl_ciphers are also regarded as the best. You can read more on that at</p>
+<p><a href="https://wiki.mozilla.org/Security/Server_Side_TLS">Mozilla Foundation.</a></p>
+<p>The ssl_dhparam and ssl_ecdh_curve are used for forward security whereby the client and server negotiate a pre-master key that is: specific to the connection between them,</p>
+<p>used only for a limited amount of time, and</p>
+<p>destroyed at the end of the session thus, it's called Ephemeral.</p>
+<p>We use these configuration options to instruct nginx to use the generated DH</p>
+<p>Parameters it for DHE key-exchange.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Instructions can be sent to all modern browsers via headers. We use the HTTP</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Strict Transport Security Header</a> to instruct the browsers that are connecting to the server to only communicate via HTTPS. When HTTPS is not available, the browsers cannot connect, keeping your clients secure.</p>
+<p>Just like the HSTS Header, we have the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">Frame-Options</a> header which directs browsers how to handle your site when it comes to viewing it via the</p>
+<p>&lt;frame&gt;, &lt;iframe&gt;, &lt;embed&gt; and &lt;object&gt; tags. This is an easy way of dealing with <a href="https://en.wikipedia.org/wiki/Clickjacking">Clickjacking</a>.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options">We have the Content-Type-Options Header</a> that instructs the clients that the mime type that has been set by the server is the correct one and should not 79</p>
+<p><span id="index_split_000.html#p80"></span>be changed.</p>
+<p>We can now add the task that will handle the creation of the snippets directory if it doesn't exist, and deploy of the template. Edit nginx/tasks/configure.yml and append:</p>
+<p>- name: Validate the snippets directory exist</p>
+<p>file:</p>
+<p>path: /etc/nginx/snippets</p>
+<p>state: directory</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>- name: Deploy the ssl-snippet</p>
+<p>template:</p>
+<p>dest: /etc/nginx/snippets/ssl-params.conf</p>
+<p>src: ssl-params.conf.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>Now comes the default server block template. When HTTPS is enabled, it will use the SSL snippet we created, and an extra snippet that will direct nginx where our certificates are. In our case, we have not set up a domain, or the SSL Certificates. Create the nginx/templates/ssl-default.conf.j2 file that houses the certificate paths. Update it as needed.</p>
+<p>ssl_certificate /etc/letsencrypt/live/domain.example.com/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/domain.example.com/privkey.pem; The default server block will include two extra location blocks that can be used to monitor PHP and Nginx. The first block is the PHP status and ping location block which will forward the request to PHP-FPM which will then output the status of the FPM pool and give ping responses for health checks.</p>
+<p>The second block is for the Nginx status. These two block are useful when you need to attach some metrics to the server.</p>
+<p>Let’s add the default variables that will be used by our server blocks to nginx/defaults/main.yml:</p>
+<p>80</p>
+<p><span id="index_split_000.html#p81"></span>nginx_default_server_root: "/var/www/app/current/public"</p>
+<p>nginx_default_server_name: "_"</p>
+<p>nginx_default_enable_https: false</p>
+<p>And the default server block template file, nginx/templates/default.j2: server {</p>
+<p>listen 80 default_server;</p>
+<p>listen [::]:80 default_server;</p>
+<p>{% if nginx_default_enable_https %}</p>
+<p>listen 443 ssl http2 default_server;</p>
+<p>listen [::]:443 ssl http2 default_server;</p>
+<p>include snippets/ssl-params.conf;</p>
+<p>include snippets/ssl-default.conf;</p>
+<p>{% endif %}</p>
+<p>root {{ nginx_default_server_root }};</p>
+<p>index index.php index.html index.htm index.nginx-debian.html; server_name {{ nginx_default_server_name }};</p>
+<p>location / {</p>
+<p>try_files $uri $uri/ /index.php?$query_string;</p>
+<p>}</p>
+<p>location ~ \.php$ {</p>
+<p>include snippets/fastcgi-php.conf;</p>
+<p>fastcgi_pass unix:/run/php/php{{ php_version }}-fpm.sock;</p>
+<p>}</p>
+<p>location ~ /\.ht {</p>
+<p>deny all;</p>
+<p>}</p>
+<p>location ~ ^/(php_status|php_ping)$ {</p>
+<p>access_log off;</p>
+<p>fastcgi_param SCRIPT_FILENAME $fastcgi_script_name;</p>
+<p>include fastcgi_params;</p>
+<p>fastcgi_pass unix:/run/php/php{{ php_version }}-fpm.sock;</p>
+<p>allow 127.0.0.1;</p>
+<p>deny all;</p>
+<p>}</p>
+<p>81</p>
+<p><span id="index_split_000.html#p82"></span> location /nginx_status {</p>
+<p>stub_status on;</p>
+<p>access_log off;</p>
+<p>allow 127.0.0.1;</p>
+<p>deny all;</p>
+<p>}</p>
+<p>}</p>
+<p>Notice: The access to /php_status, php_ping and nginx_status is limited to localhost as described by the allow 127.0.0.1 directive.</p>
+<p>We can now add the task that will deploy the server block to nginx/tasks/configure.yml</p>
+<p>- name: Validate the default server root directory exist</p>
+<p>file:</p>
+<p>path: "{{ nginx_default_server_root }}"</p>
+<p>state: directory</p>
+<p>owner: www-data</p>
+<p>group: www-data</p>
+<p>- name: Deploy the default server block</p>
+<p>template:</p>
+<p>dest: /etc/nginx/sites-available/default</p>
+<p>src: default.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>notify: restart nginx</p>
+<p>That should do it! Our nginx settings should be able to give us the best of our servers. All that’s left now is to add some permissions to deploy user so that he can write to /var/www directory, and restart php-fpm without a sudo password. But before all that, let’s restart nginx and make sure everything is running as expected.</p>
+<p>Open up the nginx handlers (nginx/handlers/main.yml) and add the restart handler which can be called from any role:</p>
+<p>82</p>
+<p><span id="index_split_000.html#p83"></span>---</p>
+<p># handlers file for nginx</p>
+<p>- name: restart nginx</p>
+<p>service:</p>
+<p>name: nginx</p>
+<p>state: restarted</p>
+<p>Once done, run the playbook and see how it plays. The complete configure subtask:</p>
+<p>---</p>
+<p>- name: Check the available processor cores</p>
+<p>shell: grep processor /proc/cpuinfo | wc -l</p>
+<p>register: nginx_core_number</p>
+<p>when: nginx_worker_processes is not defined</p>
+<p>- name: Set the nginx_worker_processes variable</p>
+<p>set_fact:</p>
+<p>nginx_worker_processes: "{{ nginx_core_number.stdout_lines[0] }}"</p>
+<p>when: nginx_worker_processes is not defined</p>
+<p>- name: Validate the config directories exist</p>
+<p>file:</p>
+<p>path: "{{ item }}"</p>
+<p>state: directory</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>loop:</p>
+<p>- /etc/nginx/conf.d</p>
+<p>- /etc/nginx/sites-enabled</p>
+<p>- name: Validate the log directory exist</p>
+<p>file:</p>
+<p>path: /var/log/nginx</p>
+<p>state: directory</p>
+<p>owner: root</p>
+<p>group: adm</p>
+<p>- name: Deploy custom nginx.conf</p>
+<p>template:</p>
+<p>dest: /etc/nginx/nginx.conf</p>
+<p>src: nginx.conf.j2</p>
+<p>owner: root</p>
+<p>83</p>
+<p><span id="index_split_000.html#p84"></span> group: root</p>
+<p>mode: 0644</p>
+<p>- name: Generate 4096 bit DH Params</p>
+<p>shell: "openssl dhparam -out {{ nginx_dhparam_location }} 4096"</p>
+<p>args:</p>
+<p>creates: "{{ nginx_dhparam_location }}"</p>
+<p>- name: Validate the snippets directory exist</p>
+<p>file:</p>
+<p>path: /etc/nginx/snippets</p>
+<p>state: directory</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>- name: Deploy the ssl-snippet</p>
+<p>template:</p>
+<p>dest: /etc/nginx/snippets/ssl-params.conf</p>
+<p>src: ssl-params.conf.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>- name: Deploy the default certificate configuration file</p>
+<p>template:</p>
+<p>dest: /etc/nginx/snippets/ssl-default.conf</p>
+<p>src: ssl-default.conf.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>- name: Validate the server root directory exist</p>
+<p>file:</p>
+<p>path: "{{ nginx_default_server_root }}"</p>
+<p>state: directory</p>
+<p>owner: www-data</p>
+<p>group: www-data</p>
+<p>- name: Deploy the default server block</p>
+<p>template:</p>
+<p>dest: /etc/nginx/sites-available/default</p>
+<p>src: default.j2</p>
+<p>owner: root</p>
+<p>group: root</p>
+<p>mode: 0644</p>
+<p>84</p>
+<p><span id="index_split_000.html#p85"></span> notify: restart nginx</p>
+<p>Finally, test out your installation by logging in to your server and creating a phpinfo index file: /var/www/app/current/public/index.php.</p>
+<p>$ echo -e "&lt;?php\nphpinfo();" &gt; /var/www/app/current/public/index.php Open your browser and confirm that you have liftoff! The PHP Info page should render.</p>
+<p>85</p>
+<p><span id="index_split_000.html#p86"></span>The ACL Role</p>
+<p>Now that we are done with setting up the server, we need to allow the deploy user to perform some actions without requiring a sudo password.</p>
+<p>Edit the acl/tasks/main.yml file and add the following tasks.</p>
+<p>---</p>
+<p># tasks file for acl</p>
+<p>- name: Set up facl for /var/www</p>
+<p>acl:</p>
+<p>path: /var/www</p>
+<p>entity: www-data</p>
+<p>etype: group</p>
+<p>permissions: rwx</p>
+<p>default: no</p>
+<p>state: present</p>
+<p>recursive: yes</p>
+<p>- name: Set up default facl for /var/www</p>
+<p>acl:</p>
+<p>path: /var/www</p>
+<p>entity: www-data</p>
+<p>etype: group</p>
+<p>permissions: rwx</p>
+<p>default: yes</p>
+<p>state: present</p>
+<p>recursive: yes</p>
+<p>- name: Allow www-data to restart php</p>
+<p>lineinfile:</p>
+<p>path: /etc/sudoers.d/wwwdata</p>
+<p>line: "%www-data ALL=(ALL:ALL) NOPASSWD:/usr/sbin/service php{{</p>
+<p>php_version }}-fpm restart,/usr/sbin/service php{{ php_version }}-fpm reload"</p>
+<p>create: yes</p>
+<p>- name: Change /var/www ownership</p>
+<p>file:</p>
+<p>path: /var/www</p>
+<p>recurse: yes</p>
+<p>group: www-data</p>
+<p>owner: www-data</p>
+<p>86</p>
+<p><span id="index_split_000.html#p87"></span>Great! You should be able to login as the deploy user and create, edit or delete files under /var/www, and be able to run sudo service php7.4-fpm restart without any password, call that awesome!</p>
+<p>87</p>
+<p><span id="index_split_000.html#p88"></span>Testing &amp; Deployment</p>
+<p>88</p>
+<p><span id="index_split_000.html#p89"></span>Test Cases</p>
+<p>A lot of people are scared of the term testing. We actually strive to run away from tests, yet they improve the uptime of our software by allowing them to fail before they are deployed. When we integrate CI/CD to our development pipeline, we will be at ease knowing that whatever we have deployed to production is actually working.</p>
+<p><a href="https://phpunit.de/">For PHP, we will use PHP Unit which comes bundled up with most of the</a></p>
+<p>frameworks. If working on vanilla PHP, you can still require it using composer and test out your work.</p>
+<p>89</p>
+<p><span id="index_split_000.html#p90"></span>Local Testing</p>
+<p>Testing Laravel</p>
+<p><a href="https://laravel.com">Let’s use Laravel</a> and set up a few tests. You can either use the Laravel Installer or composer create-project. For simplicity, let’s use the composer create-project.</p>
+<p>$ composer create-project --prefer-dist laravel/laravel devops-app Now that we’ve got a working Laravel installation, we can create an endpoint that will receive some data, and store it in the database. This will allow us to test the database connectivity and interaction with our app.</p>
+<p>Navigate to the project directory and edit the .env file. Include the correct database connection, then create a new model with its factory, migration and a resource controller:</p>
+<p>$ php artisan make:model -mcrf Post</p>
+<p>Model created successfully.</p>
+<p>Factory created successfully.</p>
+<p>Created Migration: 2020_10_29_070516_create_posts_table</p>
+<p>Controller created successfully.</p>
+<p>In the migration, add just one field, body, of type text. We will not focus on the creation of a full fledged application but only on the testing bit.</p>
+<p>90</p>
+<p><span id="index_split_000.html#p91"></span>&lt;?php</p>
+<p>use Illuminate\Database\Migrations\Migration;</p>
+<p>use Illuminate\Database\Schema\Blueprint;</p>
+<p>use Illuminate\Support\Facades\Schema;</p>
+<p>class CreatePostsTable extends Migration</p>
+<p>{</p>
+<p>/**</p>
+<p>* Run the migrations.</p>
+<p>*</p>
+<p>* @return void</p>
+<p>*/</p>
+<p>public function up()</p>
+<p>{</p>
+<p>Schema::create('posts', function (Blueprint $table) {</p>
+<p>$table-&gt;id();</p>
+<p>$table-&gt;text('content');</p>
+<p>$table-&gt;timestamps();</p>
+<p>});</p>
+<p>}</p>
+<p>/**</p>
+<p>* Reverse the migrations.</p>
+<p>*</p>
+<p>* @return void</p>
+<p>*/</p>
+<p>public function down()</p>
+<p>{</p>
+<p>Schema::dropIfExists('posts');</p>
+<p>}</p>
+<p>}</p>
+<p>Once done, we can migrate and create the table in our database. Using migrations as the blueprints for our database structure is very effective as there is no need of moving SQL files with data into GIT and then, to the server.</p>
+<p>91</p>
+<p><span id="index_split_000.html#p92"></span>$ php artisan migrate</p>
+<p>Migrating: 2014_10_12_000000_create_users_table</p>
+<p>Migrated: 2014_10_12_000000_create_users_table (40.59ms)</p>
+<p>Migrating: 2014_10_12_100000_create_password_resets_table</p>
+<p>Migrated: 2014_10_12_100000_create_password_resets_table (32.51ms) Migrating: 2019_08_19_000000_create_failed_jobs_table</p>
+<p>Migrated: 2019_08_19_000000_create_failed_jobs_table (16.03ms) Migrating: 2020_10_29_070516_create_posts_table</p>
+<p>Migrated: 2020_10_29_070516_create_posts_table (0.06 seconds) We can now edit the PostFactory under database/factories and instruct the factory how it can create a Post.</p>
+<p>92</p>
+<p><span id="index_split_000.html#p93"></span>&lt;?php</p>
+<p>namespace Database\Factories;</p>
+<p>use App\Models\Post;</p>
+<p>use Illuminate\Database\Eloquent\Factories\Factory;</p>
+<p>class PostFactory extends Factory</p>
+<p>{</p>
+<p>/**</p>
+<p>* The name of the factory's corresponding model.</p>
+<p>*</p>
+<p>* @var string</p>
+<p>*/</p>
+<p>protected $model = Post::class;</p>
+<p>/**</p>
+<p>* Define the model's default state.</p>
+<p>*</p>
+<p>* @return array</p>
+<p>*/</p>
+<p>public function definition()</p>
+<p>{</p>
+<p>return [</p>
+<p>'content' =&gt; $this-&gt;faker-&gt;paragraphs(4, true),</p>
+<p>];</p>
+<p>}</p>
+<p>}</p>
+<p>Done! Now create a new posts feature test. We'll write the test to perform whatever action we are envisioning the end user performing. In our case, we expect the end user to be able to create a new post, edit it and delete it.</p>
+<p>Let’s add a composer script that will handle the running of the test.</p>
+<p>Open up composer.json and add the following under scripts.</p>
+<p>"test": [</p>
+<p>"./vendor/bin/phpunit"</p>
+<p>]</p>
+<p>This script will migrate the database using the testing environment, then 93</p>
+<p><span id="index_split_000.html#p94"></span>run phpunit. To execute the script, simply run composer test.</p>
+<p>Since we are using PHP Unit, we can configure our test environment using phpunit.xml which is present in the root of our project. Uncomment the two database variables: DB_CONNECTION and DB_DATABASE so that we run the tests using sqlite driver and memory as the location where the database will be stored for the duration of the test. This will also speed up the tests and prevent overriding any data that you might have in your actual database.</p>
+<p>Ensure that the php section of your phpunit.xml looks similar to:</p>
+<p>&lt;php&gt;</p>
+<p>&lt;server name="APP_ENV" value="testing"/&gt;</p>
+<p>&lt;server name="BCRYPT_ROUNDS" value="4"/&gt;</p>
+<p>&lt;server name="CACHE_DRIVER" value="array"/&gt;</p>
+<p>&lt;server name="DB_CONNECTION" value="sqlite"/&gt;</p>
+<p>&lt;server name="DB_DATABASE" value=":memory:"/&gt;</p>
+<p>&lt;server name="MAIL_MAILER" value="array"/&gt;</p>
+<p>&lt;server name="QUEUE_CONNECTION" value="sync"/&gt;</p>
+<p>&lt;server name="SESSION_DRIVER" value="array"/&gt;</p>
+<p>&lt;server name="TELESCOPE_ENABLED" value="false"/&gt;</p>
+<p>&lt;/php&gt;</p>
+<p>Notice: You can add as many env variables as needed under the php section.</p>
+<p>We will not implement authentication, but we’ll have a look at validation and form requests so that we can test when the input provided is not as expected.</p>
+<p><a href="https://laravel.com/docs/validation#form-request-validation">Create a Form Request</a> <a href="https://laravel.com/docs/testing">to handle the validation, and a Feature Test to contain</a></p>
+<p>the tests.</p>
+<p>$ php artisan make:request PostRequest</p>
+<p>Request created successfully.</p>
+<p>$ php artisan make:test PostTest</p>
+<p>Test created successfully.</p>
+<p>Confirm that a new feature test has been created at</p>
+<p>94</p>
+<p><span id="index_split_000.html#p95"></span>tests/Feature/PostTest.php with the default content:</p>
+<p>&lt;?php</p>
+<p>namespace Tests\Feature;</p>
+<p>use Illuminate\Foundation\Testing\RefreshDatabase;</p>
+<p>use Illuminate\Foundation\Testing\WithFaker;</p>
+<p>use Tests\TestCase;</p>
+<p>class PostTest extends TestCase</p>
+<p>{</p>
+<p>/**</p>
+<p>* A basic feature test example.</p>
+<p>*</p>
+<p>* @return void</p>
+<p>*/</p>
+<p>public function testExample()</p>
+<p>{</p>
+<p>$response = $this-&gt;get('/');</p>
+<p>$response-&gt;assertStatus(200);</p>
+<p>}</p>
+<p>}</p>
+<p>We'll need to refresh the test database with every test we run so that the previously run test does not interfere with the next test. Laravel conveniently includes a <a href="https://laravel.com/docs/8.x/database-testing#resetting-the-database-after-each-test">RefreshDatabase trait</a> that does this for us.</p>
+<p>&lt;?php</p>
+<p>namespace Tests\Feature;</p>
+<p>use Illuminate\Foundation\Testing\RefreshDatabase;</p>
+<p>use Tests\TestCase;</p>
+<p>class PostTest extends TestCase</p>
+<p>{</p>
+<p>use RefreshDatabase;</p>
+<p>}</p>
+<p>95</p>
+<p><span id="index_split_000.html#p96"></span>The first test we shall write will be to check if a post can be created. Since we have a ready factory, we shall get the raw contents, make a POST request, and assert that the data has been successfully persisted in the database.</p>
+<p>/**</p>
+<p>* @return void</p>
+<p>*/</p>
+<p>public function testCanCreatePost(): void</p>
+<p>{</p>
+<p>$post = Post::factory()-&gt;raw();</p>
+<p>$this-&gt;assertEquals(0, Post::count());</p>
+<p>$this-&gt;withExceptionHandling()</p>
+<p>-&gt;post(route('posts.store'), [])</p>
+<p>-&gt;assertSessionHasErrors(['content']);</p>
+<p>$this-&gt;assertEquals(0, Post::count());</p>
+<p>$this-&gt;withoutExceptionHandling()</p>
+<p>-&gt;followingRedirects()</p>
+<p>-&gt;post(route('posts.store'), $post)</p>
+<p>-&gt;assertSuccessful();</p>
+<p>$this-&gt;assertDatabaseHas('posts', ['content' =&gt; $post['content']]);</p>
+<p>}</p>
+<p>In the test above, we are first using the defined factory to generate for us a post. Since we want to test that the post has been created, we need to first confirm that it was not there before we made the request to create it.</p>
+<p>Next, we test whether our validation works by passing an empty request body. Since we know that it should fail, we enable exception handling so that the Unprocessable HTTP Exception is rendered correctly. We also assert that the session has the expected errors. In the event that you’re using an API, you would assert that the JSON response has validation errors using assertJsonValidationErrors.</p>
+<p>After making the request, we want to confirm that it did not erroneously persist the data and return errors, so we assert that there are still no posts in the database. We then send the correct data to the endpoint. We disable exception handling so that any error that is thrown is visible in the output.</p>
+<p>96</p>
+<p><span id="index_split_000.html#p97"></span>This is also very useful when performing the CI/CD integrations as it will give you the correct output making it easier to debug. Once the request has been made, we assert that it was successful, and finally assert that the database has the generated post.</p>
+<p>This test will definitely fail since we have no routes, no validation rules and no response from the controller, run it to confirm:</p>
+<p>$ composer test</p>
+<p>&gt; ./vendor/bin/phpunit</p>
+<p>PHPUnit 9.4.3 by Sebastian Bergmann and contributors.</p>
+<p>..E 3 / 3</p>
+<p>(100%)</p>
+<p>Time: 00:00.568, Memory: 26.00 MB</p>
+<p>There was 1 error:</p>
+<p>1) Tests\Feature\PostTest::testCanCreatePost</p>
+<p>Symfony\Component\Routing\Exception\RouteNotFoundException: Route</p>
+<p>[posts.store] not defined.</p>
+<p>...</p>
+<p>So let’s add the routes to web.php or api.php depending on your implementation. In our case, we'll use web.php.</p>
+<p>&lt;?php</p>
+<p>use App\Http\Controllers\PostController;</p>
+<p>use Illuminate\Support\Facades\Route;</p>
+<p>Route::view('/', 'welcome');</p>
+<p>Route::resource('posts', PostController::class);</p>
+<p>Next, edit the PostRequest to add the validation rules; setting the content field as a string that is required. We'll also authorise the creation of the post by returning true in the authorize function.</p>
+<p>97</p>
+<p><span id="index_split_000.html#p98"></span>&lt;?php</p>
+<p>namespace App\Http\Requests;</p>
+<p>use Illuminate\Foundation\Http\FormRequest;</p>
+<p>class PostRequest extends FormRequest</p>
+<p>{</p>
+<p>/**</p>
+<p>* Determine if the user is authorized to make this request.</p>
+<p>*</p>
+<p>* @return bool</p>
+<p>*/</p>
+<p>public function authorize()</p>
+<p>{</p>
+<p>return true;</p>
+<p>}</p>
+<p>/**</p>
+<p>* Get the validation rules that apply to the request.</p>
+<p>*</p>
+<p>* @return array</p>
+<p>*/</p>
+<p>public function rules()</p>
+<p>{</p>
+<p>return [</p>
+<p>'content' =&gt; ['required', 'string'],</p>
+<p>];</p>
+<p>}</p>
+<p>}</p>
+<p>The PostRequest can now be used on the store method of the PostController. The Form Request validates when it is resolved so no need of adding extra validation logic. This form request will also be used on the update method since the validation logic is the same when creating and updating.</p>
+<p>The request can contain extra data that we do not need, so instead of using $request-&gt;all() we shall use $request-&gt;validated() to only get the sanitised data.</p>
+<p>98</p>
+<p><span id="index_split_000.html#p99"></span>&lt;?php</p>
+<p>namespace App\Http\Controllers;</p>
+<p>use App\Http\Requests\PostRequest;</p>
+<p>use App\Models\Post;</p>
+<p>use Illuminate\Http\Response;</p>
+<p>class PostController extends Controller</p>
+<p>{</p>
+<p>...</p>
+<p>/**</p>
+<p>* Store a newly created resource in storage.</p>
+<p>*</p>
+<p>* @param PostRequest $request</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function store(PostRequest $request)</p>
+<p>{</p>
+<p>Post::create($request-&gt;validated());</p>
+<p>return redirect()-&gt;route('posts.index');</p>
+<p>}</p>
+<p>...</p>
+<p>}</p>
+<p>Next, set the post content field to be mass assignable. Open up the Post model, add the fillable property. This prevents mass assignment of properties. I personally prefer fillable over guarded so that I am always sure of what is being assigned.</p>
+<p>99</p>
+<p><span id="index_split_000.html#p100"></span>&lt;?php</p>
+<p>namespace App\Models;</p>
+<p>use Illuminate\Database\Eloquent\Factories\HasFactory;</p>
+<p>use Illuminate\Database\Eloquent\Model;</p>
+<p>class Post extends Model</p>
+<p>{</p>
+<p>use HasFactory;</p>
+<p>protected $fillable = ['content'];</p>
+<p>}</p>
+<p>The test should now run and pass, but don’t take my word for it, open up your terminal and run:</p>
+<p>$ composer test</p>
+<p>&gt; ./vendor/bin/phpunit</p>
+<p>PHPUnit 9.4.3 by Sebastian Bergmann and contributors.</p>
+<p>... 3 / 3</p>
+<p>(100%)</p>
+<p>Time: 00:00.292, Memory: 28.00 MB</p>
+<p>OK (3 tests, 8 assertions)</p>
+<p>Great! We’ve got our first test running! So we’re sure a post can be created.</p>
+<p>Let’s confirm that it can also be edited and deleted. Since we are using the RefreshDatabase trait, the database will be empty after running every test, so we will need to create a new post for every subsequent test.</p>
+<p>100</p>
+<p><span id="index_split_000.html#p101"></span> /**</p>
+<p>* @return void</p>
+<p>*/</p>
+<p>public function testCanEditPosts(): void</p>
+<p>{</p>
+<p>$post = Post::factory()-&gt;create();</p>
+<p>$this-&gt;withExceptionHandling()</p>
+<p>-&gt;put(route('posts.update', ['post' =&gt; $post]), [])</p>
+<p>-&gt;assertSessionHasErrors(['content']);</p>
+<p>$this-&gt;assertDatabaseHas('posts', [</p>
+<p>'id' =&gt; $post-&gt;id,</p>
+<p>'content' =&gt; $post-&gt;content,</p>
+<p>]);</p>
+<p>$postUpdate = Post::factory()-&gt;raw();</p>
+<p>$this-&gt;withoutExceptionHandling()</p>
+<p>-&gt;followingRedirects()</p>
+<p>-&gt;put(route('posts.update', ['post' =&gt; $post]), $postUpdate)</p>
+<p>-&gt;assertSuccessful();</p>
+<p>$this-&gt;assertDatabaseHas('posts', [</p>
+<p>'id' =&gt; $post-&gt;id,</p>
+<p>'content' =&gt; $postUpdate['content'],</p>
+<p>]);</p>
+<p>}</p>
+<p>We have created and persisted the post using the factory create method.</p>
+<p>Then, we made a request that cannot be processed, asserted that it failed, and checked the database to ensure that whatever failed did not affect the database.</p>
+<p>Next we create a new post content via the factory and persist it, asserting it was successful and that it’s present in the database.</p>
+<p>Open up PostController and modify the update function to include the persistence code.</p>
+<p>101</p>
+<p><span id="index_split_000.html#p102"></span> /**</p>
+<p>* Update the specified resource in storage.</p>
+<p>*</p>
+<p>* @param PostRequest $request</p>
+<p>* @param Post $post</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function update(PostRequest $request, Post $post)</p>
+<p>{</p>
+<p>$post-&gt;update($request-&gt;validated());</p>
+<p>return redirect()-&gt;route('posts.index');</p>
+<p>}</p>
+<p>We added a route resource, so there’s no need of adding anything to the routes file. We can now run the test and assert that it passes as expected.</p>
+<p>&gt; ./vendor/bin/phpunit</p>
+<p>PHPUnit 9.4.3 by Sebastian Bergmann and contributors.</p>
+<p>.... 4 / 4</p>
+<p>(100%)</p>
+<p>Time: 00:00.321, Memory: 28.00 MB</p>
+<p>OK (4 tests, 13 assertions)</p>
+<p>We can now test whether a post can be deleted. We’ll add a new test and update the destroy function in our PostController. For this test, there is no payload to be sent with the delete request, so we will only have one request.</p>
+<p>102</p>
+<p><span id="index_split_000.html#p103"></span> /**</p>
+<p>* @return void</p>
+<p>*/</p>
+<p>public function testCanDeletePosts(): void</p>
+<p>{</p>
+<p>$post = Post::factory()-&gt;create();</p>
+<p>$this-&gt;withoutExceptionHandling()</p>
+<p>-&gt;followingRedirects()</p>
+<p>-&gt;delete(route('posts.destroy', ['post' =&gt; $post]))</p>
+<p>-&gt;assertSuccessful();</p>
+<p>$this-&gt;assertDatabaseMissing('posts', [</p>
+<p>'id' =&gt; $post-&gt;id,</p>
+<p>'content' =&gt; $post-&gt;content,</p>
+<p>]);</p>
+<p>}</p>
+<p>And the PostController:</p>
+<p>/**</p>
+<p>* Remove the specified resource from storage.</p>
+<p>*</p>
+<p>* @param Post $post</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function destroy(Post $post)</p>
+<p>{</p>
+<p>$post-&gt;delete();</p>
+<p>return redirect()-&gt;route('posts.index');</p>
+<p>}</p>
+<p>We can now run the tests and confirm that it works.</p>
+<p>103</p>
+<p><span id="index_split_000.html#p104"></span>$ composer test</p>
+<p>&gt; ./vendor/bin/phpunit</p>
+<p>PHPUnit 9.4.3 by Sebastian Bergmann and contributors.</p>
+<p>..... 5 / 5</p>
+<p>(100%)</p>
+<p>Time: 00:00.355, Memory: 28.00 MB</p>
+<p>OK (5 tests, 15 assertions)</p>
+<p>Great! We have tested creating, updating and deleting a post. You can carry on and add the remaining tests to view all the posts, view one, view the create page and the edit page.</p>
+<p>Here are the complete files:</p>
+<p>Post Controller</p>
+<p>&lt;?php</p>
+<p>namespace App\Http\Controllers;</p>
+<p>use App\Http\Requests\PostRequest;</p>
+<p>use App\Models\Post;</p>
+<p>use Illuminate\Http\Response;</p>
+<p>class PostController extends Controller</p>
+<p>{</p>
+<p>/**</p>
+<p>* Display a listing of the resource.</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function index()</p>
+<p>{</p>
+<p>//</p>
+<p>}</p>
+<p>/**</p>
+<p>* Show the form for creating a new resource.</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>104</p>
+<p><span id="index_split_000.html#p105"></span> */</p>
+<p>public function create()</p>
+<p>{</p>
+<p>//</p>
+<p>}</p>
+<p>/**</p>
+<p>* Store a newly created resource in storage.</p>
+<p>*</p>
+<p>* @param PostRequest $request</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function store(PostRequest $request)</p>
+<p>{</p>
+<p>Post::create($request-&gt;validated());</p>
+<p>return redirect()-&gt;route('posts.index');</p>
+<p>}</p>
+<p>/**</p>
+<p>* Display the specified resource.</p>
+<p>*</p>
+<p>* @param Post $post</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function show(Post $post)</p>
+<p>{</p>
+<p>//</p>
+<p>}</p>
+<p>/**</p>
+<p>* Show the form for editing the specified resource.</p>
+<p>*</p>
+<p>* @param Post $post</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function edit(Post $post)</p>
+<p>{</p>
+<p>//</p>
+<p>}</p>
+<p>/**</p>
+<p>* Update the specified resource in storage.</p>
+<p>105</p>
+<p><span id="index_split_000.html#p106"></span> *</p>
+<p>* @param PostRequest $request</p>
+<p>* @param Post $post</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function update(PostRequest $request, Post $post)</p>
+<p>{</p>
+<p>$post-&gt;update($request-&gt;validated());</p>
+<p>return redirect()-&gt;route('posts.index');</p>
+<p>}</p>
+<p>/**</p>
+<p>* Remove the specified resource from storage.</p>
+<p>*</p>
+<p>* @param Post $post</p>
+<p>*</p>
+<p>* @return Response</p>
+<p>*/</p>
+<p>public function destroy(Post $post)</p>
+<p>{</p>
+<p>$post-&gt;delete();</p>
+<p>return redirect()-&gt;route('posts.index');</p>
+<p>}</p>
+<p>}</p>
+<p>Post Test</p>
+<p>&lt;?php</p>
+<p>namespace Tests\Feature;</p>
+<p>use App\Models\Post;</p>
+<p>use Illuminate\Foundation\Testing\RefreshDatabase;</p>
+<p>use Tests\TestCase;</p>
+<p>class PostTest extends TestCase</p>
+<p>{</p>
+<p>use RefreshDatabase;</p>
+<p>/**</p>
+<p>* @return void</p>
+<p>106</p>
+<p><span id="index_split_000.html#p107"></span> */</p>
+<p>public function testCanCreatePost(): void</p>
+<p>{</p>
+<p>$post = Post::factory()-&gt;raw();</p>
+<p>$this-&gt;assertEquals(0, Post::count());</p>
+<p>$this-&gt;withExceptionHandling()</p>
+<p>-&gt;post(route('posts.store'), [])</p>
+<p>-&gt;assertSessionHasErrors(['content']);</p>
+<p>$this-&gt;assertEquals(0, Post::count());</p>
+<p>$this-&gt;withoutExceptionHandling()</p>
+<p>-&gt;followingRedirects()</p>
+<p>-&gt;post(route('posts.store'), $post)</p>
+<p>-&gt;assertSuccessful();</p>
+<p>$this-&gt;assertDatabaseHas('posts', ['content' =&gt; $post['content']]);</p>
+<p>}</p>
+<p>/**</p>
+<p>* @return void</p>
+<p>*/</p>
+<p>public function testCanEditPosts(): void</p>
+<p>{</p>
+<p>$post = Post::factory()-&gt;create();</p>
+<p>$this-&gt;withExceptionHandling()</p>
+<p>-&gt;put(route('posts.update', ['post' =&gt; $post]), [])</p>
+<p>-&gt;assertSessionHasErrors(['content']);</p>
+<p>$this-&gt;assertDatabaseHas('posts', [</p>
+<p>'id' =&gt; $post-&gt;id,</p>
+<p>'content' =&gt; $post-&gt;content,</p>
+<p>]);</p>
+<p>$postUpdate = Post::factory()-&gt;raw();</p>
+<p>$this-&gt;withoutExceptionHandling()</p>
+<p>-&gt;followingRedirects()</p>
+<p>-&gt;put(route('posts.update', ['post' =&gt; $post]), $postUpdate)</p>
+<p>-&gt;assertSuccessful();</p>
+<p>$this-&gt;assertDatabaseHas('posts', [</p>
+<p>'id' =&gt; $post-&gt;id,</p>
+<p>107</p>
+<p><span id="index_split_000.html#p108"></span> 'content' =&gt; $postUpdate['content'],</p>
+<p>]);</p>
+<p>}</p>
+<p>/**</p>
+<p>* @return void</p>
+<p>*/</p>
+<p>public function testCanDeletePosts(): void</p>
+<p>{</p>
+<p>$post = Post::factory()-&gt;create();</p>
+<p>$this-&gt;withoutExceptionHandling()</p>
+<p>-&gt;followingRedirects()</p>
+<p>-&gt;delete(route('posts.destroy', ['post' =&gt; $post]))</p>
+<p>-&gt;assertSuccessful();</p>
+<p>$this-&gt;assertDatabaseMissing('posts', [</p>
+<p>'id' =&gt; $post-&gt;id,</p>
+<p>'content' =&gt; $post-&gt;content,</p>
+<p>]);</p>
+<p>}</p>
+<p>}</p>
+<p>108</p>
+<p><span id="index_split_000.html#p109"></span>Automated Testing with GitLab CI/CD</p>
+<p>We've successfully created the tests and run them locally. Now we want to create a pipeline that will handle the testing of our code for each commit</p>
+<p><a href="https://gitlab.com/">that is pushed into GitLab</a>. In case of a failure, we will get an email and if it was a merge request, it will warn you that the pipeline failed. With this set up, we will have a surety that the code deployed to production is stable.</p>
+<p>We will need to build a Docker image that has all the requirements to run our Laravel code, doing our best to keep the environment as similar as possible.</p>
+<p>To get started with Docker, please follow the installation and post installation instructions for your platform: <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">Linux</a>, <a href="https://docs.docker.com/docker-for-mac/install/">Mac,</a> <a href="https://docs.docker.com/docker-for-windows/install/">Windows. Once done, we can go</a></p>
+<p>ahead and start building our docker image.</p>
+<p>Building &amp; Publishing the Docker Image</p>
+<p>We'll try to have a docker image that is as close to our server environment as possible. We'll use the official <a href="https://hub.docker.com/_/ubuntu">Ubuntu 20.04 image provided by Docker, and</a></p>
+<p>add our binaries and services there. Since we are using PHP7.4 on our server, we shall do the same on the docker image. These images come with the bare minimum required to run, so they will have a small file size.</p>
+<p>To get started, create a Dockerfile in a docker directory in our project root.</p>
+<p>$ mkdir docker</p>
+<p>$ cd docker</p>
+<p>$ touch Dockerfile</p>
+<p>Open up the Dockerfile and instruct Docker that we are going to use a base image by using the <a href="https://docs.docker.com/engine/reference/builder/#from">FROM directive. We'll then install a couple of system</a></p>
+<p>packages, then PHP packages, then enable the PHP packages and finally</p>
+<p><a href="https://laravel.com/docs/envoy">install Composer and Laravel Envoy</a>.</p>
+<p>We shall chain our commands using the &amp;&amp; operator and terminate our long lines using a backslash. When making Docker images, always make sure you clean out after performing apt requests as this will keep the image small.</p>
+<p><a href="https://docs.docker.com/engine/reference/builder/#run">We will use the RUN directive to do the installs.</a></p>
+<p>109</p>
+<p><span id="index_split_000.html#p110"></span>Let’s get going. We shall follow similar steps to what we had when building up our server.</p>
+<p>FROM ubuntu:20.04</p>
+<p>LABEL maintainer="David Mjomba &lt;smodavprivate@gmail.com&gt;"</p>
+<p>ENV DEBIAN_FRONTEND noninteractive</p>
+<p>ENV PHP_VERSION 7.4</p>
+<p>RUN apt update &amp;&amp; \</p>
+<p>apt install -y software-properties-common curl \</p>
+<p>inetutils-syslogd build-essential pkg-config &amp;&amp; \</p>
+<p>LC_ALL=C.UTF-8 apt-add-repository ppa:ondrej/php -y &amp;&amp; \ apt-get update &amp;&amp; apt install -y \</p>
+<p>php-pear \</p>
+<p>php-gettext \</p>
+<p>php-ast \</p>
+<p>php${PHP_VERSION} \</p>
+<p>php${PHP_VERSION}-bcmath \</p>
+<p>php${PHP_VERSION}-bz2 \</p>
+<p>php${PHP_VERSION}-curl \</p>
+<p>php${PHP_VERSION}-cli \</p>
+<p>php${PHP_VERSION}-dev \</p>
+<p>php${PHP_VERSION}-fpm \</p>
+<p>php${PHP_VERSION}-gd \</p>
+<p>php${PHP_VERSION}-intl \</p>
+<p>php${PHP_VERSION}-json \</p>
+<p>php${PHP_VERSION}-mbstring \</p>
+<p>php${PHP_VERSION}-mysql \</p>
+<p>php${PHP_VERSION}-readline \</p>
+<p>php${PHP_VERSION}-soap \</p>
+<p>php${PHP_VERSION}-sqlite3 \</p>
+<p>php${PHP_VERSION}-xml \</p>
+<p>php${PHP_VERSION}-xsl \</p>
+<p>php${PHP_VERSION}-zip \</p>
+<p>zip unzip g++ gcc git libmcrypt-dev libbz2-dev libmagickwand-dev \ mcrypt imagemagick &amp;&amp; \</p>
+<p>apt autoremove -y &amp;&amp; \</p>
+<p>apt-get clean &amp;&amp; \</p>
+<p>rm -rf /var/lib/apt/lists/* &amp;&amp; \</p>
+<p>pecl install imagick mcrypt redis &amp;&amp; \</p>
+<p>curl --silent --show-error https://getcomposer.org/installer | php -- --</p>
+<p>install-dir=/usr/local/bin --filename=composer &amp;&amp; \ composer global require laravel/envoy</p>
+<p>110</p>
+<p><span id="index_split_000.html#p111"></span>The image we’re building will only have PHP since we are only going to run the PHP cli and use it to run Composer, PHPUnit and Laravel Envoy. If you do not have a <a href="https://hub.docker.com/">Docker Hub account, go ahead and create one. Once done, we</a></p>
+<p>shall login to Docker Hub to be able to publish our container image. I prefer using Docker Hub over gitlab registry since it is available to all repositories and can also be shared by other people. Let’s get going! Run docker login and enter your hub credentials.</p>
+<p>$ docker login</p>
+<p>Username: awesome_dude</p>
+<p>Password:</p>
+<p>Login Succeeded</p>
+<p>We can now build our docker image and tag it as the latest. Make sure you are in the directory that contains the Dockerfile then build, tag and publish the docker image. Replace docker_username with your actual Docker username and php74 with the PHP version you have used.</p>
+<p>$ docker build -t docker_username/php74:latest .</p>
+<p>...</p>
+<p>$ docker push docker_username/php74</p>
+<p>The push refers to repository ...</p>
+<p>5bd5ae06fb33: Pushed</p>
+<p>...</p>
+<p>latest: digest: sha256:a80f55a4c34419490034e6...</p>
+<p>In the first command, we set the context to the current directory by using the full stop at the end of the command. In case you wanted to build the container, and you were in a different directory than the Dockerfile, then you would replace the full stop with the path to the Dockerfile.</p>
+<p>Once you’ve successfully built and deployed, you should be able to see a new php74 <a href="https://hub.docker.com/repositories">repository under https://hub.docker.com/repositories tagged as</a></p>
+<p>latest. We can now use this image to run our gitlab tests.</p>
+<p>Generating the .gitlab-ci.yml</p>
+<p>Now that we have some tests and a docker image, we can enable Gitlab 111</p>
+<p><span id="index_split_000.html#p112"></span>CI/CD on our repository. Navigate to the devops Laravel project and create a new file, .gitlab-ci.yml. The YAML basics that were used with ansible will still be used on the .gitlab-ci.yml file.</p>
+<p>$ touch .gitlab-ci.yml</p>
+<p>The first directive we shall use is image, which instructs GitLab to pull a certain image and perform the tasks that follow on it. Let’s use the docker image we created:</p>
+<p>image: docker_username/php74:latest</p>
+<p>Next, we have to figure out what other service our system will require. If we required redis and/or MySQL, we would need to pull them in as below, using MySQL 8 with the native password as the default authentication plugin. To set up these services, as you might have guessed, we shall use the services directive. The GitLab pipeline will first boot up the services, before it boots up the docker image we specified above. Let’s get cracking!</p>
+<p>services:</p>
+<p>- name: redis:latest</p>
+<p>alias: redis</p>
+<p>- name: mysql:8</p>
+<p>alias: mysql</p>
+<p>command: [“--default-authentication-plugin=mysql_native_password"]</p>
+<p>We have aliased our services so that we can use them as environment variablea. Speaking of environment variables, let’s update them to match our current environment. We’ll use the variables directive and update the .env variables:</p>
+<p>112</p>
+<p><span id="index_split_000.html#p113"></span>variables:</p>
+<p>MYSQL_DATABASE: homestead</p>
+<p>MYSQL_ROOT_PASSWORD: secret</p>
+<p>DB_DATABASE: homestead</p>
+<p>DB_HOST: mysql</p>
+<p>DB_USERNAME: root</p>
+<p>DB_PASSWORD: secret</p>
+<p>REDIS_HOST: redis</p>
+<p>REDIS_PORT: 6379</p>
+<p>Looking at the <a href="https://hub.docker.com/_/mysql">official MySQL Docker Image docs</a>, we get some variables that can be used to set up the container when it runs: MYSQL_ROOT_PASSWORD</p>
+<p>sets the root password to be used and MYSQL_DATABASE sets the database to be created once the service has booted. These two are also mapped to the DB_PASSWORD and DB_DATABASE env variables that are used by Laravel. The DB_USERNAME will be root and if you have noticed, we changed the DB_HOST to mysql to match the alias we used on the MySQL</p>
+<p>service. We have also set the REDIS_HOST to redis; the alias of the redis service; and the REDIS_PORT to 6379; the default redis port.</p>
+<p>Next, we shall define the jobs that make up the pipeline. Each job is treated independently and some jobs can:</p>
+<p>be allowed to fail,</p>
+<p>run only on a single branch,</p>
+<p>only be manually triggered etc.</p>
+<p>In situations where the preceding job is not allowed to fail; then it fails; the next job will not be executed. In our case, we shall have two Jobs: test and deploy.</p>
+<p>stages:</p>
+<p>- test</p>
+<p>- deploy</p>
+<p>It’s always nice to print out some debug information before running any scrips. For now, let’s print the PHP version before running the script: 113</p>
+<p><span id="index_split_000.html#p114"></span>before_script:</p>
+<p>- php -v</p>
+<p>We shall now run our feature tests to confirm that our app is fully functional.</p>
+<p>feature_tests:</p>
+<p>stage: test</p>
+<p>script:</p>
+<p>- cp .env.example .env</p>
+<p>- composer install</p>
+<p>- php artisan key:generate</p>
+<p>- composer test</p>
+<p>In our feature test job, we have first assigned it to the test stage, then we have defined the console commands to be run. Since it’s a fresh clone of the repository, we first make a new .env file, run composer install, generate the application key then run or predefined composer script which in turn runs the test.</p>
+<p>Since we have a redis service, we can set our cache and session drivers to redis. This can either be done at the variables level or by updating the</p>
+<p>.env.example file. I prefer updating the .env.example since it will be used by anyone who clones the repository.</p>
+<p>BROADCAST_DRIVER=log</p>
+<p>CACHE_DRIVER=redis</p>
+<p>QUEUE_CONNECTION=sync</p>
+<p>SESSION_DRIVER=redis</p>
+<p>We can now add our script that will handle the deployment to production. You can add another for the deployment to staging.</p>
+<p>114</p>
+<p><span id="index_split_000.html#p115"></span>deploy_production:</p>
+<p>stage: deploy</p>
+<p>script:</p>
+<p>- time</p>
+<p>when: manual</p>
+<p>only:</p>
+<p>- master</p>
+<p>This is a dummy stage which we will run after the tests complete to make sure all is well. We have specified that it should only be run on master, and it’s triggered manually. This will prevent the automatic deployment of code to the server.</p>
+<p>Notice: For the best pipeline experience, I would advise protecting the master branch from direct commits and running the deployment automatically by removing the when: manual part of the</p>
+<p>configuration. After a merge request has been made, the tests will run.</p>
+<p>Once merged to master, it will automatically deploy to the server.</p>
+<p>For the remainder of this book, we shall assume that the deployment is manual, in order to document the actions that would otherwise be automated. Here's the current .gitlab-ci.yml file:</p>
+<p>115</p>
+<p><span id="index_split_000.html#p116"></span>image: docker_username/php74:latest</p>
+<p>services:</p>
+<p>- name: redis:latest</p>
+<p>alias: redis</p>
+<p>- name: mysql:8</p>
+<p>alias: mysql</p>
+<p>command: ["--default-authentication-plugin=mysql_native_password"]</p>
+<p>variables:</p>
+<p>MYSQL_DATABASE: homestead</p>
+<p>MYSQL_ROOT_PASSWORD: secret</p>
+<p>DB_DATABASE: homestead</p>
+<p>DB_HOST: mysql</p>
+<p>DB_USERNAME: root</p>
+<p>DB_PASSWORD: secret</p>
+<p>REDIS_HOST: redis</p>
+<p>REDIS_PORT: 6379</p>
+<p>stages:</p>
+<p>- test</p>
+<p>- deploy</p>
+<p>before_script:</p>
+<p>- php -v</p>
+<p>feature_tests:</p>
+<p>stage: test</p>
+<p>script:</p>
+<p>- cp .env.example .env</p>
+<p>- composer install</p>
+<p>- php artisan key:generate</p>
+<p>- composer test</p>
+<p>deploy_production:</p>
+<p>stage: deploy</p>
+<p>script:</p>
+<p>- time</p>
+<p>when: manual</p>
+<p>only:</p>
+<p>- master</p>
+<p>We can now login to GitLab, and create a new repository. Once created, you will be given the repository location which we can add as our new 116</p>
+<p><span id="index_split_000.html#p117"></span><img src="index-117_1.png" class="calibre2" /></p>
+<p><img src="index-117_2.png" class="calibre2" /></p>
+<p>remote. Navigate to the DevOps Laravel directory and initialise a Git repository, add the new remote, make a commit and push to the server.</p>
+<p>$ git init</p>
+<p>Initialized empty Git repository in .../devops/.git/</p>
+<p>$ git remote add origin git@gitlab.com:your_awesome_username/posts-test.git $ git add .</p>
+<p>$ git commit -m 'adds gitlab ci/cd'</p>
+<p>[master (root-commit) e41dd42] adds gitlab ci/cd</p>
+<p>94 files changed, 8578 insertions(+)</p>
+<p>create mode 100644 .editorconfig</p>
+<p>create mode 100644 .env.example</p>
+<p>create mode 100644 webpack.mix.js</p>
+<p>...</p>
+<p>$ git push origin master</p>
+<p>Enumerating objects: 118, done.</p>
+<p>Counting objects: 100% (118/118), done.</p>
+<p>...</p>
+<p>To gitlab.com:your_awesome_username/posts-test.git</p>
+<p>* [new branch] master -&gt; master</p>
+<p>Once you make the commit, the GitLab runners will scan the repository for a</p>
+<p>.gitlab-ci.yml file and if present, it shall automatically execute the pipeline. Let’s check it out! Open your repository and navigate to CI/CD -&gt; Pipelines. You should see one pipeline running:</p>
+<p>Clicking on the pipeline will show you two jobs. Clicking on the feature_test job will give you the console output of the job. Once the job is complete, you will get a successful green message: Job succeeded.</p>
+<p>117</p>
+<p><span id="index_split_000.html#p118"></span>Awesome! Our first job has been completed successfully! You can go to the jobs page (CI/CD -&gt; Jobs) and run the deploy production job. It should run smoothly! We can now set up our server to have access to GitLab and GitLab to have access to our server so that we can have the deployment job running as expected.</p>
+<p>118</p>
+<p><span id="index_split_000.html#p119"></span>Automated Deployment with GitLab CI/CD</p>
+<p>SSH Configuration</p>
+<p>For the server to be able to read our repository, we need to get the deploy user’s public key and add it as a deployment key on GitLab. Next we shall take the deploy user’s private key and add it as a secret CI/CD variable so that our runners can be able to login to the server and make the necessary changes. Let’s log in to the server!</p>
+<p>$ ssh -p 4033 deploy@123.45.6.78</p>
+<p>$ cat ~/.ssh/id_rsa.pub</p>
+<p>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQc... ansible-generated on devops-for-php-developers</p>
+<p>Copy the key and navigate to your GitLab repository -&gt; Settings -&gt; Repository. You will find a Deploy Keys section. Expand it and in the form provided, paste the key you copied and give it a good title. Once done, click on Add key. This will allow the deploy user to be able to fetch the repository from GitLab but he cannot push back any changes.</p>
+<p>Next, we can set up the repository secrets that will allow the GitLab runners to be able to log in to the server and pull the new changes. Open up the terminal and get the private SSH key for the deploy user:</p>
+<p>$ cat ~/.ssh/id_rsa</p>
+<p>-----BEGIN RSA PRIVATE KEY-----</p>
+<p>MICDpZGu+H...</p>
+<p>...gc8bN</p>
+<p>-----END RSA PRIVATE KEY-----</p>
+<p>Navigate to your repository’s CI/CD settings (Settings -&gt; CI/CD) and expand the Variables section. Set the Key as SSH_KEY, paste the private key in the Value section, set the state as protected and save the variable.</p>
+<p>Great! Now the GitLab runners will be able to log in to our server and pull the new changes! Let’s set up the directory structure that we will be using in 119</p>
+<p><span id="index_split_000.html#p120"></span>order to have zero downtime.</p>
+<p>Directory Structure</p>
+<p>In order to have zero downtime, we shall create a symbolic link pointing to the latest release of our application and point nginx to the symbolic link.</p>
+<p>Since we will be deploying releases, we will need some of the data to persist across releases. In Laravel, the storage directory should persist across releases. To achieve that, we will keep a persistent folder that will hold our</p>
+<p>.env file and storage directory. The desired structure will be as below:</p>
+<p>/var/www/app/</p>
+<p>persistent/</p>
+<p>.env</p>
+<p>storage/</p>
+<p>releases/</p>
+<p>20200101000000/</p>
+<p>20200102000000/</p>
+<p>current/ - symbolic link to latest release 20200102000000</p>
+<p>We shall keep a maximum of 5 releases and delete the rest. In case we need something old, we can always re-deploy from GitLab.</p>
+<p>120</p>
+<p><span id="index_split_000.html#p121"></span>Laravel Envoy</p>
+<p>Laravel Envoy will be used to configure our server and generate any new directories and releases. It provides a clean, minimal syntax for defining common tasks you run on your remote servers. Using Blade style syntax, you can easily setup tasks for deployment, Artisan commands, and more.</p>
+<p>We shall instruct it to create the app directories if they are missing and if the persistent directory is missing, it should first clone the repository to the releases directory, then copy over the needed files and directories to the persistent directory. Once the deployment is done, the script should remove the current directory and symlink it to the latest release.</p>
+<p>To get started, create a new Envoy.blade.php file at the root of the devops Laravel app directory. In this file, we shall define the set of servers we are going to deploy to with their corresponding SSH ports. To make the envoy file configurable and reusable, we shall execute it with two options; the first will be the GitLab repository, and the second will be a JSON encoded list of servers. These two options will allow the envoy file to be used across repositories without the need of changing the file.</p>
+<p>Before executing anything we shall do some setup. In the setup section, we’ll need to validate that the two options have been set. Secondly, we will setup the base paths as per our directory structure and check if the persistent storage exits so that we can create it if missing. After the setup, we shall define our servers list using the json decoded list of servers.</p>
+<p>121</p>
+<p><span id="index_split_000.html#p122"></span>@setup</p>
+<p>if (!$repo || !$servers) {</p>
+<p>echo 'The repo and servers parameter is required';</p>
+<p>die();</p>
+<p>}</p>
+<p>$servers = json_decode($servers, true, JSON_THROW_ON_ERROR); if (!$servers || count($servers) &lt; 1) {</p>
+<p>echo 'servers parameter should be a valid json array of servers.'; die();</p>
+<p>}</p>
+<p>$persistentDir = '/var/www/app/persistent';</p>
+<p>$releasesDir = '/var/www/app/releases';</p>
+<p>$appDir = '/var/www/app/current';</p>
+<p>$release = date('YmdHis');</p>
+<p>$newReleaseDir = $releasesDir .'/'. $release;</p>
+<p>$persistentStorageExists = is_dir($persistentDir . '/storage');</p>
+<p>@endsetup</p>
+<p>@servers($servers)</p>
+<p>We can now setup our deploy story that will be called by the GitLab runner. You can have as many stories as needed. In our case, we only need the deploy story which will handle:</p>
+<p>the cloning of the new release,</p>
+<p>linking of the persistent storage and env file,</p>
+<p>installing of composer (and yarn/npm) dependencies,</p>
+<p>linking of the public storage directory,</p>
+<p>migrating the database,</p>
+<p>caching routes and configs,</p>
+<p>activating the release as the current one and,</p>
+<p>finally removing old releases.</p>
+<p>122</p>
+<p><span id="index_split_000.html#p123"></span>@story('deploy')</p>
+<p>cloneRelease</p>
+<p>linkPersistentStorage</p>
+<p>installDependencies</p>
+<p>optimiseRelease</p>
+<p>activateRelease</p>
+<p>cleanup</p>
+<p>@endstory</p>
+<p>Each item in the story above is a task that will be run on each of the servers defined in the servers array. The good thing about Envoy is that you can incorporate your variables easily in any command you are running. Let’s setup all the tasks, performing the steps as we would manually do it. I have commented out the horizon termination since we have not setup supervisor</p>
+<p><a href="https://laravel.com/docs/horizon#deploying-horizon">and horizon. Checkout the docs</a>. The complete Envoy.blade.php file:</p>
+<p>@setup</p>
+<p>if (!$repo || !$servers) {</p>
+<p>exit('The repo and servers parameter is required');</p>
+<p>}</p>
+<p>$servers = json_decode($servers, true, JSON_THROW_ON_ERROR); if (!$servers || count($servers) &lt; 1) {</p>
+<p>exit('servers parameter should be a valid json array of servers.');</p>
+<p>}</p>
+<p>$persistentDir = '/var/www/app/persistent';</p>
+<p>$releasesDir = '/var/www/app/releases';</p>
+<p>$appDir = '/var/www/app/current';</p>
+<p>$release = date('YmdHis');</p>
+<p>$newReleaseDir = $releasesDir .'/'. $release;</p>
+<p>$persistentStorageExists = is_dir($persistentDir . '/storage');</p>
+<p>@endsetup</p>
+<p>@servers($servers)</p>
+<p>@story('deploy')</p>
+<p>cloneRelease</p>
+<p>linkPersistentStorage</p>
+<p>installDependencies</p>
+<p>optimiseRelease</p>
+<p>activateRelease</p>
+<p>@endstory</p>
+<p>123</p>
+<p><span id="index_split_000.html#p124"></span>@task('cloneRelease')</p>
+<p>echo 'Cloning repository into release {{ $release }}'</p>
+<p>[ -d {{ $releasesDir }} ] || mkdir -p {{ $releasesDir }}</p>
+<p>cd {{ $releasesDir }}</p>
+<p>git clone -b master --depth 1 {{ $repo }} {{ $release }}</p>
+<p>@if(!$persistentStorageExists)</p>
+<p>mkdir -p {{ $persistentDir }}/storage</p>
+<p>cp -rf {{ $newReleaseDir }}/storage {{ $persistentDir }}</p>
+<p>@endif</p>
+<p>rm -rf {{ $newReleaseDir }}/storage</p>
+<p>@endtask</p>
+<p>@task('linkPersistentStorage')</p>
+<p>echo 'Link Persistent Storage'</p>
+<p>ln -nfs {{ $persistentDir }}/.env {{ $newReleaseDir }}/.env ln -nfs {{ $persistentDir }}/storage {{ $newReleaseDir }}/storage</p>
+<p>@endtask</p>
+<p>@task('installDependencies')</p>
+<p>echo "Installing Dependencies"</p>
+<p>cd {{ $newReleaseDir }}</p>
+<p>composer install --no-dev --prefer-dist -q -o</p>
+<p>@endtask</p>
+<p>@task('optimiseRelease')</p>
+<p>echo 'Linking public storage directory'</p>
+<p>cd {{ $newReleaseDir }}</p>
+<p>php artisan storage:link</p>
+<p>echo 'Migrating Database'</p>
+<p>php artisan migrate --force</p>
+<p>echo 'Caching routes and configs'</p>
+<p>php artisan route:cache</p>
+<p>php artisan config:cache</p>
+<p>@endtask</p>
+<p>@task('activateRelease')</p>
+<p>echo 'Linking current release'</p>
+<p>rm -rf {{ $appDir }}</p>
+<p>ln -nfs {{ $newReleaseDir }} {{ $appDir }}</p>
+<p>124</p>
+<p><span id="index_split_000.html#p125"></span>sudo service php7.4-fpm restart</p>
+<p>{{-- echo 'Restarting Horizon' --}}</p>
+<p>{{-- php artisan horizon:terminate --}}</p>
+<p>echo 'Removing old releases'</p>
+<p>cd {{ $releasesDir }}</p>
+<p>echo 'Current Releases:'</p>
+<p>ls</p>
+<p>echo 'Releases to remove:'</p>
+<p>ls | head -n -6</p>
+<p>if (($(ls | head -n -6 | wc -l) &gt; 0)); then rm -rf $(ls | head -n -6); fi</p>
+<p>@endtask</p>
+<p>Great! We now have a working script that will handle our deployment.</p>
+<p>However, we are missing the production env file and a database.</p>
+<p>While in the Laravel app directory, generate a new application key then open up the .env file, SSH to the server and create a new .env file in the persistent folder. In the new file, paste the local .env content, then update the values as desired. Update the database configuration to match the database user and database name (either present or to be created). Our ansible script already created the /var/app/current directory and updated Nginx to point to it, so nothing needs to be done there.</p>
+<p>125</p>
+<p><span id="index_split_000.html#p126"></span>$ php artisan key:generate</p>
+<p>$ cat .env</p>
+<p>APP_NAME=Laravel</p>
+<p>APP_ENV=local</p>
+<p>. . .</p>
+<p>$ ssh -p 4033 deploy@123.45.6.78</p>
+<p>Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-70-generic x86_64)</p>
+<p>. . .</p>
+<p>$ mkdir -p /var/www/app/persistent</p>
+<p>$ vi /var/www/app/persistent/.env</p>
+<p># paste the content</p>
+<p># update the variables</p>
+<p>. . .</p>
+<p>DB_DATABASE=posts</p>
+<p>DB_USERNAME=devops # username and password from the mysql ansible role DB_PASSWORD=devops</p>
+<p>BROADCAST_DRIVER=log</p>
+<p>CACHE_DRIVER=redis</p>
+<p>QUEUE_CONNECTION=sync</p>
+<p>SESSION_DRIVER=redis</p>
+<p>. . .</p>
+<p>$ mysql -u root -p</p>
+<p>Enter password: #enter the root password set by ansible</p>
+<p>Welcome to the MySQL monitor. Commands end with ; or \g.</p>
+<p>mysql&gt; create database posts;</p>
+<p>Query OK, 1 row affected (0.00 sec)</p>
+<p>mysql&gt; exit;</p>
+<p>Bye</p>
+<p>That’s it for the pre-deployment setup. Now we need to configure our GitLab CI/CD to call envoy and update our codebase.</p>
+<p>126</p>
+<p><span id="index_split_000.html#p127"></span>Deployment</p>
+<p>Before we can deploy our new batch of changes, we need to add one more change to our routes file. Closures are not serializable thus, we need to remove all closures from our route files in order to cache them using php artisan route:cache. Open up routes/api.php and comment out the</p>
+<p>/user endpoint.</p>
+<p>// Route::middleware('auth:api')-&gt;get('/user', function (Request $request) {</p>
+<p>// return $request-&gt;user();</p>
+<p>// });</p>
+<p>Next, we need to update our GitLab YAML file to include the call to Laravel Envoy. We had added one secret in the CI/CD variables which defined the private key of the deploy user that will allow the GitLab runners to log in to the servers and make changes using the envoy script. We will need to add a new variable that will hold our list of servers, call it ENVOY_HOSTS. The value should be a JSON string of the servers you want to deploy to, for example:</p>
+<p>[{"web": "deploy@123.45.6.78 -p 4033"}]</p>
+<p>Use as many hosts as needed in the array. Next, let’s update the .gitlab-ci.yml file and setup the SSH agent and the private key that will be used to login to the server. Finally, we'll execute envoy and pass the repository and the servers list as parameters.</p>
+<p>image: smodav/php74:latest</p>
+<p>services:</p>
+<p>- name: redis:latest</p>
+<p>alias: redis</p>
+<p>- name: mysql:8</p>
+<p>alias: mysql</p>
+<p>command: ["--default-authentication-plugin=mysql_native_password"]</p>
+<p>variables:</p>
+<p>MYSQL_DATABASE: homestead</p>
+<p>MYSQL_ROOT_PASSWORD: secret</p>
+<p>DB_DATABASE: homestead</p>
+<p>127</p>
+<p><span id="index_split_000.html#p128"></span> DB_HOST: mysql</p>
+<p>DB_USERNAME: root</p>
+<p>DB_PASSWORD: secret</p>
+<p>REDIS_HOST: redis</p>
+<p>REDIS_PORT: 6379</p>
+<p>stages:</p>
+<p>- test</p>
+<p>- deploy</p>
+<p>before_script:</p>
+<p>- php -v</p>
+<p>feature_tests:</p>
+<p>stage: test</p>
+<p>script:</p>
+<p>- cp .env.example .env</p>
+<p>- composer install</p>
+<p>- php artisan key:generate</p>
+<p>- composer test</p>
+<p>deploy_production:</p>
+<p>stage: deploy</p>
+<p>script:</p>
+<p>- 'which ssh-agent || (apt-get update -y &amp;&amp; apt-get install openssh-client</p>
+<p>-y)'</p>
+<p>- eval $(ssh-agent -s)</p>
+<p>- ssh-add &lt;(echo "$SSH_KEY")</p>
+<p>- mkdir -p ~/.ssh</p>
+<p>- '[[ -f /.dockerenv ]] &amp;&amp; echo -e "Host *\n\tStrictHostKeyChecking no\n\n" &gt; ~/.ssh/config'</p>
+<p>- ~/.config/composer/vendor/bin/envoy run deploy --repo=$CI_REPOSITORY_URL</p>
+<p>--servers="$ENVOY_HOSTS"</p>
+<p>when: manual #only for those who want “semi-CI/CD”</p>
+<p>only:</p>
+<p>- master</p>
+<p>That should do it! All that’s left is to create a new commit and let the runners do their magic. The manual deployment section is only if you have set when: manual.</p>
+<p>128</p>
+<p><span id="index_split_000.html#p129"></span><img src="index-129_1.png" class="calibre2" /></p>
+<p>Manual Deployment</p>
+<p>Once the first stage of the pipeline completes, you should be able to run the manual deployment stage. This stage can be re-run as many times as needed.</p>
+<p>We can now go to our server and see if we have been successful in our endeavour. Open up your browser and navigate to you IP address: 123.45.6.78. You should be greeted by the Laravel Welcome page.</p>
+<p>To test if our CI/CD pipeline really works, let’s change the Laravel welcome page to read DevOps is Awesome! instead of Laravel has wonderful...</p>
+<p>then deploy it.</p>
+<p>&lt;div class="p-6"&gt;</p>
+<p>&lt;div class="flex items-center"&gt;</p>
+<p>&lt;svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"&gt;&lt;path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3</p>
+<p>6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477</p>
+<p>14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5</p>
+<p>18c-1.746 0-3.332.477-4.5 1.253"&gt;&lt;/path&gt;&lt;/svg&gt;</p>
+<p>&lt;div class="ml-4 text-lg leading-7 font-semibold"&gt;&lt;a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white"&gt;Documentation&lt;/a&gt;&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;div class="ml-12"&gt;</p>
+<p>&lt;div class="mt-2 text-gray-600 dark:text-gray-400 text-sm"&gt; DevOps is Awesome!</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>Let’s add a new commit:</p>
+<p>129</p>
+<p><span id="index_split_000.html#p130"></span>$ git add .</p>
+<p>$ git commit -m "changes greeting message"</p>
+<p>$ git push origin master</p>
+<p>We can now head to the GitLab CI/CD pipelines and deploy the manual job if using semi-CI/CD, and watch it work. Once the job has completed successfully, head over to your IP Address and confirm the changes are live.</p>
+<p>And that wraps it up! You’ve managed to set up a server without writing any apt commands and now we have just completed a zero downtime setup that makes your life pretty easy. No need of logging in to the servers to do manual git fetches and migrations. Truth be told, we are humans and we tend to forget. Ever had a bug that takes you a day to debug only to realise you did not restart a given service? Well, with this automation, you only setup once and the rest is taken care of.</p>
+<p>130</p>
+<p><span id="index_split_000.html#p131"></span>And There’s More!</p>
+<p>It doesn’t stop there - PHP is just one of the languages you can use with this type of pipeline! The automation world is so huge you can automate anything that makes you feel like you’re wasting time. This is just the tip of the iceberg, go out and do wonders!</p>
+<p>131</p>
+<p><span id="index_split_000.html#outline"></span></p>
+<p><span id="index_split_001.html"></span></p>
+<h1 id="index_split_001.html#calibre_pb_0" class="calibre3">Document Outline</h1>
+<ul>
+<li><a href="#index_split_000.html#p2">Contents</a></li>
+<li><a href="#index_split_000.html#p4">Preface</a>
+<ul>
+<li><a href="#index_split_000.html#p5">How this book is designed</a></li>
+<li><a href="#index_split_000.html#p6">Who should read this book?</a></li>
+<li><a href="#index_split_000.html#p7">Notice of Liability</a></li>
+</ul></li>
+<li><a href="#index_split_000.html#p8">Manual Server Setup</a>
+<ul>
+<li><a href="#index_split_000.html#p9">Finding the Right Server</a></li>
+<li><a href="#index_split_000.html#p11">Server Updates</a></li>
+<li><a href="#index_split_000.html#p12">Unattended Upgrades</a></li>
+<li><a href="#index_split_000.html#p14">Installing Build Tools</a></li>
+<li><a href="#index_split_000.html#p15">Setting Up MySQL Server</a></li>
+<li><a href="#index_split_000.html#p17">Setting Up PHP 7.4</a></li>
+<li><a href="#index_split_000.html#p19">Setting Up Redis Server</a></li>
+<li><a href="#index_split_000.html#p20">Setting Up Nginx</a></li>
+</ul></li>
+<li><a href="#index_split_000.html#p24">Automated Server Setup using Ansible</a>
+<ul>
+<li><a href="#index_split_000.html#p25">What is Ansible?</a></li>
+<li><a href="#index_split_000.html#p26">Setting up Ansible</a></li>
+<li><a href="#index_split_000.html#p28">Ansible Inventory</a></li>
+<li><a href="#index_split_000.html#p30">YAML Basics</a></li>
+<li><a href="#index_split_000.html#p32">Ansible Playbooks</a></li>
+<li><a href="#index_split_000.html#p36">Role Structure</a></li>
+<li><a href="#index_split_000.html#p37">The Common Role</a></li>
+<li><a href="#index_split_000.html#p54">The MySQL Role</a></li>
+<li><a href="#index_split_000.html#p61">The PHP Role</a></li>
+<li><a href="#index_split_000.html#p71">The Nginx Role</a></li>
+<li><a href="#index_split_000.html#p86">The ACL Role</a></li>
+</ul></li>
+<li><a href="#index_split_000.html#p88">Testing &amp; Deployment</a>
+<ul>
+<li><a href="#index_split_000.html#p89">Test Cases</a></li>
+<li><a href="#index_split_000.html#p90">Local Testing</a></li>
+<li><a href="#index_split_000.html#p109">Automated Testing with GitLab CI/CD</a></li>
+<li><a href="#index_split_000.html#p119">Automated Deployment with GitLab CI/CD</a></li>
+<li><a href="#index_split_000.html#p121">Laravel Envoy</a></li>
+<li><a href="#index_split_000.html#p127">Deployment</a></li>
+<li><a href="#index_split_000.html#p131">And There’s More!</a></li>
+</ul></li>
+</ul>
+</p>
