@@ -1,0 +1,172 @@
+name: Understanding Artificial Intelligence
+slug: understanding-artificial-intelligence
+name_cn: '
+
+  人工智能入门指南'
+toc:
+- - '##'
+  - COME ON, WE CAN DO BETTER!
+- - '##'
+  - THE SOLUTION SPACE
+- - '##'
+  - ONE GRAPH CAN CONCEAL ANOTHER!
+- - '##'
+  - SPACE EXPLORATION
+- - '##'
+  - NATURAL SELECTION
+- - '##'
+  - COMPUTING HERDS
+- - '##'
+  - YOU’VE GOT TO START SOMEWHERE
+- - '##'
+  - TWO BEAUTIFUL CHILDREN!
+- - '##'
+  - A LITTLE MORE RANDOMNESS
+- - '##'
+  - SO, WHAT IS THIS GOOD FOR?
+- - '##'
+  - THIS DOESN’T SOLVE EVERYTHING, HOWEVER
+- - '##'
+  - MULTI-AGENT SYSTEMS
+- - '##'
+  - THE ALGORITHM AND THE ANT
+- - '##'
+  - JUST LIKE IN THE ANT COLONY
+- - '##'
+  - CALCULATING A PATH WITH ANTS
+- - '##'
+  - THE MORE THE MERRIER!
+- - '##'
+  - THE SOLUTION EMERGES
+- - '##'
+  - THE SOLUTION TO ALL OUR PROBLEMS?
+- - '##'
+  - FIND THE ODD ONE OUT!
+- - '##'
+  - FROM ANIMALS TO GENES
+- - '##'
+  - LET’S DO SOME SORTING
+- - '##'
+  - IT’S ALL A MATTER OF DISTANCE
+- - '##'
+  - STARTING OVER AGAIN AND AGAIN
+- - '##'
+  - THERE IS NO RIGHT SOLUTION
+- - '##'
+  - TO EACH ITS OWN METHOD
+- - '##'
+  - SO, WHERE’S THE LEARNING IN ALL THIS?
+- - '##'
+  - JOY AND GOOD HUMOR!
+- - '##'
+  - ASK THE PROGRAM!
+- - '##'
+  - FROM DATA TO PROGRAMS
+- - '##'
+  - AN EXAMPLE IS BETTER THAN A LONG EXPLANATION
+- - '##'
+  - THE ADVENTURE BEGINS
+- - '##'
+  - MUCH ADO ABOUT NOTHING?
+- - '##'
+  - FROM IMAGE TO DATA
+- - '##'
+  - HOW ABOUT WE TAKE THE TRAIN?
+- - '##'
+  - IT’S LOGIC!
+- - '##'
+  - TELL ME WHAT YOU READ, AND I’LL TELL YOU WHO YOU ARE
+- - '##'
+  - FROM SYMBOLIC TO NUMERIC
+- - '##'
+  - NEW AND OLD ALIKE?
+- - '##'
+  - RIDDLE ME THIS
+- - '##'
+  - TREES AGAIN
+- - '##'
+  - A BIT OF PREDICTION
+- - '##'
+  - LOTS OF EXAMPLES, LOTS OF VARIABLES
+- - '##'
+  - TOO MUCH, IT’S TOO MUCH!
+- - '##'
+  - THE KITTIES RETURN
+- - '##'
+  - THE MATHEMATICS OF ARTIFICIAL INTELLIGENCE
+- - '##'
+  - TOO MUCH CLASS!
+- - '##'
+  - MORE TRIANGLES
+- - '##'
+  - JUST A LITTLE FINE TUNING
+- - '##'
+  - A LONG LEARNING PROCESS
+- - '##'
+  - WHERE DID MY BRAIN GO?
+- - '##'
+  - ARE VIDEO GAMES BAD FOR YOUR HEALTH?
+- - '##'
+  - PARALLEL COMPUTING
+- - '##'
+  - THE RETURN OF THE NEURAL NETWORKS
+- - '##'
+  - WHY ADD MORE?
+- - '##'
+  - THE CRUX OF THE PROBLEM
+- - '##'
+  - THE ACHIEVEMENTS OF DEEP LEARNING
+- - '##'
+  - WATCH OUT FOR TRICKS!
+- - '##'
+  - TO EACH HIS OWN METHOD
+- - '##'
+  - THE QUEST FOR THE GRAIL
+- - '##'
+  - A BIT OF CALCULATION
+- - '##'
+  - WANT TO PLAY AGAIN?
+- - '##'
+  - RED, ODD, AND LOW!
+- - '##'
+  - NO NEED TO BE STUBBORN
+- - '##'
+  - A BIT OF REINFORCEMENT
+- - '##'
+  - STRONGER THAN EVER!
+- - '##'
+  - STEP BY STEP
+- - '##'
+  - PLAYING WITHOUT RISK
+- - '##'
+  - GIVE ME THE DATA!
+- - '##'
+  - AI 滥用
+- - '##'
+  - AI 服务于人类
+- - '##'
+  - 始终解释，始终解释
+- - '##'
+  - 我们在哪里去？
+- - '#'
+  - Even More AI!
+- - '##'
+  - JAMES ALLEN
+- - '##'
+  - JOHN MCCARTHY AND PATRICK HAYES
+- - '##'
+  - RICHARD FIKES, NILS NILSSON, AND DREW MCDERMOTT
+- - '##'
+  - CHRISTOPHER WATKINS, LESLIE KAELBLING, AND MICHAEL LITTMAN
+- - '##'
+  - ROBERT KOWALSKI, ALAIN COLMERAUER, AND PHILIPPE ROUSSEL
+- - '##'
+  - EDWARD FEIGENBAUM
+- - '##'
+  - LOTFI ZADEH
+- - '##'
+  - ALLEN NEWELL
+- - '#'
+  - Acknowledgments
+- - '#'
+  - They made AI
