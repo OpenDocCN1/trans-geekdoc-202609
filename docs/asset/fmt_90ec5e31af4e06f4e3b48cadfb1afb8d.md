@@ -1,0 +1,58 @@
+
+In this section, several cipher schemes were involved in the test including triple DES (data encryption standard), Logistic mapping, dynamic Bernoulli mapping cipher and compounded BLE mapping. Weight is given both to random scrambling in space domain and stationary in a uniform distribution.
+
+本节中，测试涉及了多种密码方案，包括三重 DES（数据加密标准）、Logistic 映射、动态 Bernoulli 映射密码以及复合 BLE 映射。权重同时给予空间域中的随机置乱和在均匀分布中的平稳性。
+
+To carry out a performance analysis of different cipher schemes, we take Triple DES (`3DES`), which is symmetric-key block cipher based on `DES` algorithm [65–68], as a case of conventional cipher for a comparison study. It increases the key size of `DES` through applying three times `DES` to each data block. As an efficient protection against brute-force attacks, `3DES` is one of the most widely used cryptosystems. The basic encryption procedure `Ξ` of `3DES` is：
+
+为了对不同密码方案进行性能分析，我们采用基于 `DES` 算法的对称密钥分组密码 Triple DES（`3DES`）[65–68]作为传统密码的比较研究案例。它通过对每个数据块应用三次 `DES` 来增加 `DES` 的密钥长度。作为抵御暴力攻击的有效保护，`3DES` 是最广泛使用的密码系统之一。`3DES` 的基本加密过程 `Ξ` 为：
+
+$C = \Xi(k_1,k_2,k_3,P) = E_{k3}(D_{k2}(E_{k1}(P)))$ (3.15)
+
+where `$P$` and `$C$` refer to plaintext and ciphertext respectively, and `$E_{kx}, D_{kx}$` refer to `DES` encryption and decryption process with key `$kx \in \{k1,k2,k3\}$`, respectively. Correspondingly, the basic decryption of `3DES` is:
+
+其中 `$P$` 和 `$C$` 分别指明文和密文，`$E_{kx}, D_{kx}$` 分别指使用密钥 `$kx \in \{k1,k2,k3\}$` 的 `DES` 加密和解密过程。相应地，`3DES` 的基本解密为：
+
+$P = \Xi^{-1}((k_1,k_2,k_3,C)) = D_{k1}(E_{k2}(D_{k3}(C)))$ (3.16)
+
+The security of `3DES` mostly depends on keys `k1,k2,k3`. It is initially equivalent to 168 bit cipher if these three keys are different. `3DES` is widely used with left-right key structure, i.e., key `k = (k_i,k_r)`, which amounts to the procedure `Ξ` and `Ξ^{-1}` with `k1 = k3 = k_i`, `k2 = k_r`. In this case, `3DES` plays a role as a 112 bit cipher.
+
+`3DES` 的安全性主要取决于密钥 `k1`、`k2`、`k3`。如果这三个密钥不同，其最初相当于 168 位密码。`3DES` 通常采用左右密钥结构使用，即密钥 `k = (k_i,k_r)`，这相当于过程 `Ξ` 和 `Ξ^{-1}` 中 `k1 = k3 = k_i`，`k2 = k_r`。在这种情况下，`3DES` 充当 112 位密码。
+
+The Logistic, dynamic Bernoulli, and the compounded mapping comply with (3.2), (3.11), and (3.10) respectively, where the parameters are set as `K=10000`, `T=256`, `μ=0.5`, `ω=0.4`, `α=4`, `β=1.732105000`, `x(0)=0.32105000`.
+
+Logistic、动态 Bernoulli 和复合映射分别符合 (3.2)、(3.11) 和 (3.10)，其中参数设置为 `K=10000`，`T=256`，`μ=0.5`，`ω=0.4`，`α=4`，`β=1.732105000`，`x(0)=0.32105000`。
+
+Meanwhile, `3DES` encryption strategy is included as well in the test to present the cipher effect with standard data encryption. Left-right key structure is applied with `k_i = 32105000` for the first and the third round `DES` encryption and `k_r = 12345000` for the second round. We cipher the test materials A-D with `3DES` cipher (`3DES-C`), logistic cipher (`LC`), dynamic Bernoulli cipher (`BC`) and Bernoulli-Logistic encryption (`BLE`) to examine their effectiveness.
+
+同时，测试中也包含了 `3DES` 加密策略，以展示标准数据加密的密码效果。采用左右密钥结构，其中 `k_i = 32105000` 用于第一轮和第三轮 `DES` 加密，`k_r = 12345000` 用于第二轮。我们用 `3DES` 密码（`3DES-C`）、logistic 密码（`LC`）、动态 Bernoulli 密码（`BC`）和 Bernoulli-Logistic 加密（`BLE`）对测试材料 A-D 进行加密，以检验其有效性。
+
+![](img/f4c3bcc9f5332d57a8ec85a75075f8da_102_0.png)
+
+Figure 3.2 Encryption results of test A. From left to right: Plaintext, encryption with `3DES` cipher, logistic cipher, Bernoulli cipher, and compounded BLE cipher. The first row shows the space domain information and the other three rows show the corresponding histogram in three channels. In each histogram sub-figures, X-axis represents gray level and Y-axis represents number of pixels. (a) Plaintext, (b) `3DES` test Result, (c) `LC` test result, (d) `BC` test result, (e) `BLE` test result, (f) Ch. R plaintext histogram, (g) Ch. R `3DES-C` histogram, (h) Ch. R `LC` histogram, (i) Ch. R `BC` histogram, (j) Ch. R `BLE` histogram, (k) Ch. G plaintext histogram, (l) Ch. G `3DES-C` histogram, (m) Ch. G `LC` histogram, (n) Ch. G `BC` histogram, (o) Ch. G `BLE` histogram, (p) Ch. B plaintext histogram, (q) Ch. B `3DES-C` histogram, (r) Ch. B `LC` histogram, (s) Ch. B `BC` histogram, and (t) Ch. B `BLE` histogram.
+
+图 3.2 测试 A 的加密结果。从左到右：明文、用 `3DES` 密码加密、用 logistic 密码加密、用 Bernoulli 密码加密以及复合 BLE 密码加密。第一行显示空间域信息，其余三行显示三个通道对应的直方图。每个直方图子图中，X 轴表示灰度级，Y 轴表示像素数量。（a）明文，（b）`3DES` 测试结果，（c）`LC` 测试结果，（d）`BC` 测试结果，（e）`BLE` 测试结果，（f）Ch. R 明文直方图，（g）Ch. R `3DES-C` 直方图，（h）Ch. R `LC` 直方图，（i）Ch. R `BC` 直方图，（j）Ch. R `BLE` 直方图，（k）Ch. G 明文直方图，（l）Ch. G `3DES-C` 直方图，（m）Ch. G `LC` 直方图，（n）Ch. G `BC` 直方图，（o）Ch. G `BLE` 直方图，（p）Ch. B 明文直方图，（q）Ch. B `3DES-C` 直方图，（r）Ch. B `LC` 直方图，（s）Ch. B `BC` 直方图，以及（t）Ch. B `BLE` 直方图。
+
+In Figure 3.2, the ciphered effect and their corresponding statistics of test A are shown, where sub-figures in the first column show the information in space domain and the other 3 columns present the corresponding histogram in R, G, B channels, respectively. Sub-figures a–e in the first row present the plaintext and its encryption results with `3DES-C`, `LC`, `BC`, and `BLE`. Second to fourth rows present the histograms of each result corresponding to the above sub-figure in R, G, B channels, where X-axis represents gray level and Y-axis represents number of pixels.
+
+图 3.2 中显示了测试 A 的加密效果及其对应统计信息，其中第一列的子图显示空间域信息，其余 3 列分别显示 R、G、B 通道对应的直方图。第一行中的子图 a–e 显示明文及其使用 `3DES-C`、`LC`、`BC` 和 `BLE` 的加密结果。第二至第四行显示上述子图在 R、G、B 通道中每个结果的直方图，其中 X 轴表示灰度级，Y 轴表示像素数量。
+
+Figures 3.3 through 3.5 show the ciphered results of test B–D with strategy `3DES-C`, `LC`, `BC`, and `BLE`, respectively, where the first column presents the data in space domain form and second column presents the histogram. The histogram information in Figures 3.3 through 3.5 are all showed in one channel due to the fact that plaintext samples in test B–D are in gray level.
+
+图 3.3 至 3.5 分别显示了使用策略 `3DES-C`、`LC`、`BC` 和 `BLE` 的测试 B–D 的加密结果，其中第一列以空间域形式呈现数据，第二列呈现直方图。图 3.3 至 3.5 中的直方图信息均显示在一个通道中，这是因为测试 B–D 中的明文样本为灰度级。
+
+![](img/f4c3bcc9f5332d57a8ec85a75075f8da_103_0.png)
+
+Figure 3.3 Encryption results of test B. From left to right: Plaintext, encryption with `3DES` cipher, logistic cipher, Bernoulli cipher, and compounded BLE cipher. The sub-figures in top row shows the space domain information and the bottom row shows the corresponding histogram. In each histogram sub-figure, X-axis represents gray level and Y-axis represents number of pixels. (a) Plaintext, (b) `3DES-C` test Result, (c) `LC` test result, (d) `BC` test result, (e) `BLE` test result, (f) histogram of plaintext, (g) histogram of `3DES-C`, (h) histogram of `LC`, (i) histogram of `BC`, and (j) histogram of `BLE`.
+
+图 3.3 测试 B 的加密结果。从左到右：明文、用 `3DES` 密码加密、用 logistic 密码加密、用 Bernoulli 密码加密以及复合 BLE 密码加密。顶部行的子图显示空间域信息，底部行显示对应的直方图。每个直方图子图中，X 轴表示灰度级，Y 轴表示像素数量。（a）明文，（b）`3DES-C` 测试结果，（c）`LC` 测试结果，（d）`BC` 测试结果，（e）`BLE` 测试结果，（f）明文直方图，（g）`3DES-C` 直方图，（h）`LC` 直方图，（i）`BC` 直方图，以及（j）`BLE` 直方图。
+
+![](img/f4c3bcc9f5332d57a8ec85a75075f8da_103_1.png)
+
+Figure 3.4 Encryption results of test C. From left to right: Plaintext, encryption with `3DES` cipher, logistic cipher, Bernoulli cipher, and compounded BLE cipher. The sub-figures in top row shows the space domain information and the bottom row shows the corresponding histogram. In each histogram sub-figures, X-axis represents gray level and Y-axis represents number of pixels. (a) Plaintext, (b) `3DES-C` test Result, (c) `LC` test Result, (d) `BC` test Result, (e) `BLE` test Result, (f) histogram of plaintext, (g) histogram of `3DES-C`, (h) histogram of `LC`, (i) histogram of `BC`, and (j) histogram of `BLE`.
+
+图 3.4 测试 C 的加密结果。从左到右：明文、用 `3DES` 密码加密、用 logistic 密码加密、用 Bernoulli 密码加密以及复合 BLE 密码加密。顶部行的子图显示空间域信息，底部行显示对应的直方图。每个直方图子图中，X 轴表示灰度级，Y 轴表示像素数量。（a）明文，（b）`3DES-C` 测试结果，（c）`LC` 测试结果，（d）`BC` 测试结果，（e）`BLE` 测试结果，（f）明文直方图，（g）`3DES-C` 直方图，（h）`LC` 直方图，（i）`BC` 直方图，以及（j）`BLE` 直方图。
+
+It can be seen from the test results that different ciphered images with different methods exhibit various effectiveness. From visual representations of all four schemes, encrypted results of `BC` and `BLE` show good performance when randomly scrambled in space domain and fairly uniform in histogram distribution, which is significantly different from that of the plaintext. Comparatively, a result of `LC` scheme present inferior but acceptable effect as well.
+
+从测试结果可以看出，不同方法加密的图像表现出不同的有效性。从全部四种方案的视觉表现来看，`BC` 和 `BLE` 的加密结果在空间域中随机置乱且直方图分布相当均匀，显示出良好的性能，这与明文显著不同。相比之下，`LC` 方案的结果效果较差但仍可接受。
