@@ -1,0 +1,11 @@
+has originated from a still image. There are few systems that were implemented where video sequence was an input, and the output was trying to identify the faces in the video. Most of the research in literature is related to different classification methods for recognizing faces from video, and in most cases a single image. What they have been showing in their research studies is extraction of 2D and 3D faces from video. Mian (2011) has shown extensive work related to the face recognition model.
+
+The early research was described in Kumar, Singh, and Kumar (2010) by introducing the example based learning for view based human face detection. In Jain and Li (2011) a probabilistic method and research of application has been introduced. A very common technique being used among studies and literature is the PCA (principle component analysis). In many research projects (Kremić, 2011; Kremić & Subasi, 2016; Kremić, Subasi, & Hajdarevic, 2012) the client server model for face recognition related to mobile phone authentication has been introduced.
+
+Eigenface based: In a work by Sirovich and Kirby (1987) was an established approach for efficient application of facial expression with PCA techniques (Kremić, 2011; Kremić & Subasi, 2016; Kremić et al., 2012). Their goal of the approach is to represent a face as a coordinate system. The vectors that make up this coordinate system were referred to as Eigen pictures. Later, Turk and Pentland (Marques, 2010) used this approach to develop a eigenface-based algorithm for recognition. A known problem of visual pattern recognition is face recognition (Marques, 2010). The face is considered a 3D (three dimensional) object with its varying illumination, pose and expression. In order to be identified, it is transformed into two dimensional images. As shown in Figure 30.1, we can see that process of face recognition consists of four models. Those models are: (1) detection, (2) alignment, (3) feature extraction and (4) matching.
+
+The face detection process segments the face areas from the background. Face alignment has the goal of achieving more accurate localization where face detection
+
+![](bbox=[0.12, 0.65, 0.9, 0.92])
+
+Figure 30.1 Process flow of recognition model.

@@ -1,0 +1,13 @@
+# 21.4 Data Hiding Properties and Performance Analysis
+
+The key to successful data hiding is finding the holes that are not suitable for exploitation. A further challenge is to fill these holes with data in a way that remains invariant to a large class of host signal transformations. The trade-offs exist between the quantity of embedded data and the degree of immunity to host signal modification. By constraining the degree of host signal degradation, a data hiding method can operate with either a high embedded data rate or high resistance to modification, yet not both. As one increases, the other must decrease. While this can be shown mathematically for some data hiding systems, such as a spread spectrum, it would seem to hold true for all data hiding systems. In any system, the bandwidth can be traded for robustness by exploiting redundancy. The quantity of embedded data and degree of host signal modification vary from application to application. Consequently, different techniques are employed for different applications. From the information hiding point of view, reversible data embedding hides information in a digital image in such a way that an authorized party can decode the hidden information and also restore the image to its original, pristine state.
+
+All data hiding techniques have certain properties that are dictated by the intended application, and the most important properties are robustness, undetectability, invisibility, security, complexity, and capacity.
+
+# 21.4.1 Data Hiding Properties
+
+# 21.4.1.1 Robustness
+
+Robustness determines the behavior of the algorithm in the case of data distortions introduced through standard and malicious data processing. Embedded information is said to be robust if its presence can be reliably detected after the image has been modified, yet not destroyed beyond recognition. Without robustness, embedded secret data can be easily removed, making it useless in a legal procedure.
+
+Examples of modification include linear and nonlinear filters, such as blurring, sharpening, and median filtering, lossy compression, contrast adjustment, gamma correction, re-coloring, re-sampling, scaling, rotation, small nonlinear deformations, noise adding, cropping, printing, copying, scanning, D/A and A/D conversion, pixel permutation in small neighborhoods, color quantization as in palette images, skipping rows and columns, adding rows and columns, frame swapping, frame averaging and temporal averaging etc. Robustness does not include attacks on the embedding scheme based on knowledge of the embedding algorithm or the availability of the detector function.

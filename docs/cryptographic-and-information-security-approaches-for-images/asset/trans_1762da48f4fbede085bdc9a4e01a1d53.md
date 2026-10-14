@@ -1,0 +1,53 @@
+
+- 10. W. Luo, J. Huang, and G. Qiu. 数字图像中区域复制伪造的鲁棒检测. 载于第18届国际模式识别会议（ICPR'06），中国香港，746–749. IEEE Computer Society，2006.
+- 11. E. Ardizzone and G. Mazzola. 通过位平面分析检测篡改数字图像中的重复区域. 载于图像分析与处理——ICIAP 2009：第15届国际会议，意大利维耶特里苏尔马雷，2009年9月8日至11日，论文集，893–901. Springer，德国柏林，2009.
+- 12. Y. Cao, T. Gao, L. Fan, and Q. Yang. 数字图像中复制-移动伪造的鲁棒检测算法. Forensic Science International, 214(1):33–43, 2012.
+- 13. A. N. Myna, M. G. Venkateshmurthy, and C. G. Patil. 利用小波和对数极坐标映射检测数字图像中的区域复制伪造. 载于国际计算智能与多媒体应用会议（ICCIMA 2007），印度锡瓦卡西，371–377. IEEE，2007.
+- 14. D. G. Lowe. 来自尺度不变关键点的独特图像特征. International Journal of Computer Vision, 60(2):91–110, 2004.
+- 15. X. Pan and S. Lyu. 使用图像特征匹配的区域重复检测. IEEE Transactions on Information Forensics and Security, 5(4):857–867, 2010.
+- 16. X. Pan and S. Lyu. 使用SIFT特征检测图像区域重复. 载于2010年IEEE国际声学、语音与信号处理会议，1706–1709，2010.
+- 17. I. Amerini, L. Ballan, R. Caldelli, A. Del Bimbo, and G. Serra. 一种基于SIFT的复制-移动攻击检测与变换恢复取证方法. IEEE Transactions on Information Forensics and Security, 6(3):1099–1110, 2011.
+- 18. J. Li, X. Li, B. Yang, and X. Sun. 基于分割的图像复制-移动伪造检测方案. IEEE Transactions on Information Forensics and Security, 10(3):507–518, 2015.
+- 19. G. Jin and X. Wan. 使用非极大值抑制和优化J-Linkage的基于SIFT的复制-移动伪造检测改进方法. Signal Processing: Image Communication, 57(Supplement C):113–125, 2017.
+- 20. N. B. A. Warif, A. W. A. Wahab, M. Y. I. Idris, R. Salleh, and F. Othman. SIFT对称性：一种针对反射攻击的复制-移动伪造鲁棒检测方法. Journal of Visual Communication and Image Representation, 46(Supplement C):219–232, 2017.
+- 21. S. Wenchang, Z. Fei, Q. Bo, and L. Bin. 使用粒子群优化技术改进图像复制-移动伪造检测. China Communications, 13(1):139–149, 2016.
+- 22. E. Ardizzone, A. Bruno, and G. Mazzola. 通过匹配关键点三角形进行复制-移动伪造检测. IEEE Transactions on Information Forensics and Security, 10(10):2084–2094, 2015.
+- 23. R. Caldelli, I. Amerini, L. Ballan, G. Serra, M. Barni, and A. Costanzo. 关于局部扭曲对基于SIFT的复制-移动检测的有效性. 载于2012年第5届国际通信、控制与信号处理研讨会，1–5，2012年5月.
+- 24. I. Amerini, M. Barni, R. Caldelli, and A. Costanzo. 利用关键点分类对基于SIFT的复制-移动检测进行反取证. EURASIP Journal on Image and Video Processing, 2013(1):18, 2013.
+- 25. T.-T. Do, E. Kijak, T. Furon, and L. Amsaleg. 在基于SIFT的CBIR系统中欺骗图像识别. 载于第2届ACM多媒体取证、安全与智能研讨会论文集，7–12. ACM，纽约，2010.
+- 26. A. Costanzo, I. Amerini, R. Caldelli, and M. Barni. SIFT关键点移除与注入的取证分析. IEEE Transactions on Information Forensics and Security, 9(9):1450–1464, 2014.
+- 27. I. Amerini, M. Barni, R. Caldelli, and A. Costanzo. 用于对抗基于匹配的图像取证的SIFT关键点移除与注入. 载于第1届ACM信息隐藏与多媒体安全研讨会论文集，123–130. ACM，纽约，2013.
+- 28. T. Zhang and R. D. Wang. 数字图像中基于SVD的复制-移动伪造检测. 载于2009年第2届国际图像与信号处理大会，1–5，2009.
+- 29. G. Li, Q. Wu, D. Tu, and S. Sun. 一种基于DWT和SVD的有序邻域方法检测图像伪造中的复制区域. 载于2007年IEEE国际多媒体与博览会，1750–1753，2007.
+- 30. B. Mahdian and S. Saic. 使用基于模糊矩不变量的方法检测复制移动伪造. Forensic Science International, 171(2):180–189, 2007.
+- 31. Z. Fang, S. Wang, and X. Zhang. 使用彩色边缘不一致性检测图像拼接. 载于2010年国际多媒体信息网络与安全会议，923–926，2010.
+- 32. Z. Qu, G. Qiu, and J. Huang. 利用视觉线索检测数字图像拼接. 载于信息隐藏：第11届国际研讨会，IH 2009，德国达姆施塔特，2009年6月8日至10日，247–261. Springer，德国柏林，2009.
+- 33. M. K. Johnson and H. Farid. 通过检测光照不一致性揭露数字伪造. 载于第7届多媒体与安全研讨会论文集，1–10. ACM，纽约，2005.
+- 34. B. Mahdian and S. Saic. 利用噪声不一致性进行盲图像取证. Image and Vision Computing, 27(10):1497–1503, 2009.
+- 35. K. Bahrami, A. C. Kot, L. Li, and H. Li. 通过暴露模糊类型不一致性进行模糊图像拼接定位. IEEE Transactions on Information Forensics and Security, 10(5):999–1009, 2015.
+- 36. A. C. Popescu and H. Farid. 通过检测重采样痕迹揭露数字伪造. IEEE Transactions on Signal Processing, 53(2):758–767, 2005.
+- 37. M. Kirchner. 通过固定线性预测残差的频谱分析实现快速可靠的重采样检测. 载于第10届ACM多媒体与安全研讨会论文集，11–20. ACM，纽约，2008.
+- 38. M. Kirchner. 用于分析缩放图像的线性行与列预测器. 载于第12届ACM多媒体与安全研讨会论文集，13–18. ACM，纽约，2010.
+- 39. M. Kirchner and T. Gloe. 关于重压缩图像中的重采样检测. 载于2009年第一届IEEE国际信息取证与安全研讨会（WIFS），21–25，2009.
+- 40. A. C. Gallagher. JPEG压缩图像中线性与三次插值的检测. 载于第二届加拿大计算机与机器人视觉会议（CRV'05），65–72，2005.
+- 41. S. Prasad and K. R. Ramakrishnan. 关于重采样检测及其在图像篡改检测中的应用. 载于2006年IEEE国际多媒体与博览会，1325–1328，2006.
+- 42. B. Mahdian and S. Saic. 关于插值的周期特性及其在图像认证中的应用. 载于第三届国际信息保障与安全研讨会，439–446，2007.
+- 43. B. Mahdian and S. Saic. 利用插值周期特性的盲认证. IEEE Transactions on Information Forensics and Security, 3(3):529–538, 2008.
+- 44. B. Mahdian and S. Saic. 结合噪声不一致性分析的重采样检测用于图像取证. 载于2008年国际计算科学及其应用会议，546–556，2008.
+- 45. G. K. Birajdar and V. H. Mankar. 利用插值周期特性的数字图像重缩放检测与重缩放因子估计盲方法. AEU-International Journal of Electronics and Communications, 68(7):644–652, 2014.
+- 46. X. Hou, T. Zhang, G. Xiong, Y. Zhang, and X. Ping. 基于纹理分类的图像重采样检测. Multimedia Tools and Applications, 72(2):1681–1708, 2014.
+- 47. Y. Su, X. Jin, C. Zhang, and Y. Chen. 基于盲反卷积的分层图像重采样检测. Journal of Visual Communication and Image Representation, 48(Supplement C):480–490, 2017.
+- 48. X. Feng, I. J. Cox, and G. Doerr. 基于归一化能量密度的重采样图像取证检测. IEEE Transactions on Multimedia, 14(3):536–545, 2012.
+- 49. M. Kirchner and R. Bohme. 隐藏数字图像中的重采样痕迹. IEEE Transactions on Information Forensics and Security, 3(4):582–592, 2008.
+- 50. M. Stamm and K. J. R. Liu. 数字图像中对比度增强的盲取证. 载于2008年第15届IEEE国际图像处理会议，3112–3115，2008.
+- 51. M. C. Stamm and K. J. Liu. 使用直方图中的内在统计指纹取证检测图像篡改. 载于论文集：APSIPA ASC 2009：亚太信号与信息处理协会2009年度峰会与会议，563–572.
+- 52. M. C. Stamm and K. J. R. Liu. 对比度增强映射的取证估计与重建. 载于2010年IEEE国际声学、语音与信号处理会议，1698–1701，2010.
+- 53. G. Cao, Y. Zhao, R. Ni, and H. Tian. 数字图像中对比度增强的反取证. 载于第12届ACM多媒体与安全研讨会论文集，25–34. ACM，纽约，2010.
+- 54. B. S. Rao. 一种针对攻击的基于改进对比度增强的图像取证模糊融合方法. Multimedia Tools and Applications, 77(5): 5241–5261, 2018.
+- 55. M. C. Stamm and K. J. R. Liu. 基于小波的图像压缩反取证. 载于2010年IEEE国际图像处理会议，1737–1740，2010.
+- 56. M. C. Stamm, S. K. Tjoa, W. S. Lin, and K. J. R. Liu. JPEG压缩的反取证. 载于2010年IEEE国际声学、语音与信号处理会议，1694–1697，2010.
+- 57. M. C. Stamm, S. K. Tjoa, W. S. Lin, and K. J. R. Liu. 通过JPEG压缩反取证实现不可检测的图像篡改. 载于2010年IEEE国际图像处理会议，2109–2112，2010.
+- 58. Z. Fan and R. L. de Queiroz. 位图压缩历史的识别：JPEG检测与量化器估计. IEEE Transactions on Image Processing, 12(2):230–235, 2003.
+- 59. W. Fan, K. Wang, F. Cayre, and Z. Xiong. 在取证不可检测性与图像质量之间实现改进权衡的JPEG反取证. IEEE Transactions on Information Forensics and Security, 9(8):1211–1226, 2014.
+- 60. G. Singh and K. Singh. 具有更好图像视觉质量和取证不可检测性的改进JPEG反取证. Forensic Science International, 277:133–147, 2017.
+- 61. P. M. Shelke and R. S. Prasad. 使用最小布谷鸟搜索算法的改进反取证JPEG压缩. The Imaging Science Journal, 66(3):169–183, 2018.

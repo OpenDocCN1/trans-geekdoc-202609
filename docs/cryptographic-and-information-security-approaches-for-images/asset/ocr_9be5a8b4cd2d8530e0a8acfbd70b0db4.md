@@ -1,0 +1,19 @@
++   25. C. Barnes, E. Shechtman, A. Finkelstein, and D. B. Goldman. Patchmatch: A randomized correspondence algorithm for structural image editing. ACM Transactions on Graphics, 28(3):24–1, 2009.
++   26. E. Kee, J. F. O'brien, and H. Farid. Exposing photo manipulation from shading and shadows. ACM Transactions on Graphics, 33(5):165–171, 2014.
++   27. P. Fernández Alcantarrilla, A. Bartoli, and A. J. Davison. Kaze features. In European Conference on Computer Vision, pp. 214–227. Springer, Heidelberg, Germany, 2012.
++   28. S.-J. Ryu, M. Kirchner, M.-J. Lee, and H.-K. Lee. Rotation invariant localization of duplicated image regions based on zernike moments. IEEE Transactions on Information Forensics and Security, 8(8):1355–1370, 2013.
++   29. J. Zhao and J. Guo. Passive forensics for copy-move image forgery using a method based on dct and svd. Forensic Science International, 233(1):158–166, 2013.
++   30. S. Bravo-Solorio and A. K. Nandi. Automated detection and localisation of duplicated regions affected by reflection, rotation and scaling in image forensics. Signal Processing, 91(8):1759–1770, 2011.
++   31. Y. Cao, T. Gao, L. Fan, and Q. Yang. A robust detection algorithm for copy-move forgery in digital images. Forensic Science International, 214(1):33–43, 2012.
++   32. M. Zandi, A. Mahmoudi-Aznaveh, and A. Talebpour. Iterative copy-move forgery detection based on a new interest point detector. IEEE Transactions on Information Forensics and Security, 11(11):2499–2512, 2016.
++   33. A. Ferreira, S. C. Felipussi, C. Alfaro, P. Fonseca, J. E. Vargas-Muñoz, J. A. dos Santos, and A. Rocha. Behavior knowledge space-based fusion for copy–move forgery detection. IEEE Transactions on Image Processing, 25(10):4729–4742, 2016.
++   34. Y. Wo, K. Yang, G. Han, H. Chen, and W. Wu. Copy–move forgery detection based on multi-radius pcet. IET Image Processing, 11(2):99–108, 2016.
++   35. R. Dixit, R. Naskar, and S. Mishra. Blur-invariant copy-move forgery detection technique with improved detection accuracy utilising swt-svd. IET Image Processing, 11(5):301–309, 2017.
++   36. S. M. Fadl and N. A. Semary. Robust copy-move forgery revealing in digital images using polar coordinate system. Neurocomputing, 265(Supplement C):57–65, 2017.
++   37. H. Li, W. Luo, X. Qiu, and J. Huang. Image forgery localization via integrating tampering possibility maps. IEEE Transactions on Information Forensics and Security, 12(5):1240–1252, 2017.
++   38. Q. Wu, S. Wang, and X. Zhang. Log-polar based scheme for revealing duplicated regions in digital images. IEEE Signal Processing Letters, 18(10):559–562, 2011.
++   39. D. Cozzolino, F. Gargiulo, C. Sansone, and L. Verdoliva. Multiple Classifier Systems for Image Forgery Detection, pp. 259–268. Springer, Heidelberg, Heidelberg, Germany, 2013.
++   40. Z. He, W. Lu, W. Sun, and J. Huang. Digital image splicing detection based on Markov features in dct and dwt domain. Pattern Recognition, 45(12):4292–4299, 2012.
++   41. T. Mahmood, A. Irtaza, Z. Mehmood, and M. Tariq Mahmood. Copy–move forgery detection through stationary wavelets and local binary pattern variance for forensic analysis in digital images. Forensic Science International, 279(Supplement C):8–21, 2017.
++   42. J.-C. Lee. Copy-move image forgery detection based on gabor magnitude. Journal of Visual Communication and Image Representation, 31(Supplement C):320–334, 2015.
++   43. J.-C. Lee, C.-P. Chang, and W.-K. Chen. Detection of copy–move image forgery using histogram of orientated gradients. Information Sciences, 321(Supplement C):250–262, 2015; Security and privacy information technologies and applications for wireless pervasive computing environments.

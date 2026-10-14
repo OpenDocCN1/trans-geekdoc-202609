@@ -1,0 +1,194 @@
+
+- Méndez-Arellano-Cruz-Martínez (MACM) 266
+- message authentication 9
+- message authentication code (MAC) 199
+- message confidentiality 250–1
+- message digest (MD) algorithms 12
+- MGS (medium-grain scalability) 179–81, 180
+- microdot procedure 513
+- Mikromedia 265
+- millennium watermarking scheme 357
+- miners 748
+- mining 754, 760
+- mobile network operator’s (MNO) 898
+- model-based steganography 388
+- modern cryptosystems 144–5
+- modified GS algorithm (MGSA) 130, 131
+- mosaicking technique 865–80
+- most significant bit (MSB) 151, 844
+- motion compensated edge artifacts (MCEA) 705
+- Moving Picture Experts Group (MPEG) 358
+- motion prediction 392
+- Moving Picture Experts Group (MPEG) 157, 159
+- MP3 audio file 286, 287, 288, 289
+- MSB plane (Most Significant Bit plane) 13
+- MSE (mean squared error) 370
+- multi-attribute decision making (MADM) 413
+- multi-criteria decision making (MCDM) 410; AHP 416; attacks scenario 433, 435–6; DC coefficient 411; entropy 412; kurtosis 412; methods 415; OR 413; perceptual quality 431–2; robustness analysis 432–4; skewness 411–12; TOPSIS 416–18; WPM 415–16; WSM 415
+- multidimensional maps 73
+- multi-focus image fusion 444–5
+- multimedia content security 172–3
+- multimedia encryption 177
+- multimodal biometric: benefits and limitations 861; digital watermarking 861; fingerprint watermarking 865; privacy 861; source watermarking 865
+- multi-modal image fusion 446–8
+- multi-objective decision making (MODM) 413
+- multiple image encryption and multiplexing scheme 130–1
+- multi-source image fusion 446
+- multi-temporal image fusion 445
+- multi-view image fusion 444
+- Naïve Bayes classifier 899
+- Naïve technique 157
+- NALUs (Network Abstraction Layer Units) 173, 189; quality and spatial EL 192; root VCL 191; structure 189–91, 190; SVC 189; temporal EL 191
+- National e-Health Authority (NeHA) 298
+- National Electrical Manufacturers Association (NEMA) 299, 633
+- National Institute of Science and Technology (NIST) 918
+- National Institute of Standards and Technology (NIST) 846
+- neighbor mean interpolation (NMI) method 616–18
+- network security: classifications 34; cybersecurity and InfoSec system versus 33–4
+- noise attack analysis 307–8
+- noise residue 708
+- noise visibility function (NVF) 476
+- non-blind watermarking 325
+- non-disavowal 9
+- nonlinearity Boolean functions 104, 105
+- non-region of interest (NROI) 300
+- non-repudiation 9
+- non-VCL NALU 173, 189–90
+- normalized correlation (NC) 476
+- normalized cross correlation (NCC) metric 533
+- novel enhanced quantum representation (NEQR) 55
+- number of pixel change rate (NPCR) 153, 306, 307
+- 1-D DCT algorithm 362, 363
+- 1-D forward DCT, butterfly structure 362–4
+- one-way hash function 11–12
+- operational research (OR) 413
+- operating system (OS) 281; in chaos 281–3; MACM 282
+- optical cryptography 123
+- optical distortions 687
+- orthogonal matching pursuit (OMP) 223
+- orthogonal polynomial transformation (OPT) 150
+- overlaid timestamp 694; based authentication 694–5; limitations 694–5
+- ownership problem 355
+- PACSI (Payload Content Scalability Information) 189
+- PACSI NALU 190–2
+- palm identification 857–8
+- partial encryption algorithm 176; evaluation 178; quality scalability 179–80; review on 177–8; spatial scalability 179, 179; temporal scalability 180, 181
+- partial encryption technique 155
+- particle swarm optimization (PSO) 484; algorithm 728
+- particular steganography 28
+- passive attacks 18
+- patient clinical database integration technique: DCT 454–5; DWT 452–4; embedding process 456, 458–9; experimental results 460–3; extraction process 457, 459–60; fusion carriers 457–8; fusion results 463; image fusion method, proposed 456; model workflow 455–60; with noise results 463–4; preliminaries 452–5; watermarking 458; watermark results 463
+- pattern noise 689
+- payload/embedding capacity 542
+- payload, encryption 192–4
+- payload-protected schemes, flaw in 183–4
+- P-box (Permutation box) 12
+- peak point 650
+- peak signal to noise ratio (PSNR) 228, 475, 532, 545, 654, 837
+- peppers image, scrambling: bit-plane slice 47; using 2D mapping 42, 46; using Arnold's transformation 52; using bit-level permutation with row/column shifting 48; using Fibonacci transformation 54; using gray code with bit-plane scrambling 57
+- percentage residual difference (PRD) 553
+- performance analysis 82–3; correlation analysis 83, 84, 85, 86, 87; results 84, 89; uniform analysis 83–4, 87–8
+- personal digital assistant (PDA) 542
+- personal domains (PSDs) 309
+- personal identification number (PIN) 889
+- phase-only functions 130
+- phase retrieval algorithms 124–5; encryption involving 128–31; ERA 126–7, 127; GSA 125–6, 126; HIOA 127
+- phase truncation Fourier transform (PTFT) 133
+- photograph 666; content manipulation 670; image tampering 670; inherent vulnerability 672; malicious act 669; sole witness 674
+- photon shot noise 704
+- photo-response non-uniformity (PRNU) 689
+- picture archiving and communication system (PACS) 299, 631–3, 632; functionalities 299
+- pixel-based forgery 777, 777–8, 778
+- pixel-correlation analysis 706
+- pixel defects 688–9
+- pixel distribution analysis 302–3, 303
+- pixel interpolation 709
+- pixel non-uniformity (PNU) 689
+- pixel selection technique 151–2
+- pixel-value differencing (PVD) 600
+- plain text 7
+- plaintext attack 308
+- PNG (Portable Network Graphics) 30
+- Point Spread Function (PSF) 737
+- polar complex exponential transform (PCET) 733
+- portraitures 665
+- power consumption, HEVC 373
+- prediction macroblock 182
+- Prewitt edge detector 608, 608, 609
+- Prewitt operator 148
+- PRID (Priority ID) 173, 190
+- principal component analysis (PCA) 894
+- privacy 8, 98, 861
+- privacy protection 836
+- private/secret symmetric key cryptography 11
+- private steganography 29
+- probability density function (PDF) 308
+- probability statistical analysis 858
+- propagation criterion (PC) 109, 113; avalanche and 109–12
+- proposed transparent encryption scheme 195–6
+- protocol attack 17
+- proximal interpolation 603
+- pseudo-random generation algorithm (PRGA) 154–5
+- pseudo-random generator 357
+- pseudo-random number generator (PRNG) 39, 70, 337
+- pseudo-random sequence 47
+- pseudo-random (PR) sequences 266, 268–9
+- PSNR (peak signal to noise ratio) 370
+- pure steganography 29
+- Python language 582
+- QID (Quality ID) 173, 190
+- QP (quantization parameter) 179, 184
+- QR code 572, 574; background 574–8; contrast 577; data and error correction 575; visually recognizable 577–8; VSS scheme 578–95
+- quality scalability 175, 179–81
+- quantization-based data hiding 393
+- Quantum of Solace, The (movie) 896
+- quiet zone 574
+- radial distortions 687
+- random forests (RF) 903
+- random grids (RG) 572
+- random phase masks (RPMs) 128
+- random sample consensus (RANSAC) algorithm 790–2
+- Rayleigh channel 307
+- RC4 encryption technique 154–5
+- receiver process 278, 278; decryption stage 279–80; encrypted message 279; transmission of recovered message 280–1
+- redacting 674
+- red, green, and blue (RGB) 265
+- redundant keypoint elimination method-SIFT (RKEM-SIFT) 784; clustering 790; CMFD 789–92; exact locations 786–7, 790; extraction 784–6, 785, 786, 789, 789; orientation parameter 788; removal 788, 788–9
+- Reed-Solomon codes 574
+- reference frame index 186
+- region of interest (ROI) 300, 329, 479
+- regions of non-interest (RONI) 479; steganography methods 645–9
+- regression tree (REPTree) 902
+- relative root mean squared error (rRMSE) 554
+- reliability 630
+- remote healthcare applications: ECG 542; PDA 542
+- removal with minimum distortion (RMD) 804
+- reproduction controller 22–3
+- repudiation 833
+- residual macroblock 182–3
+- residual prediction 392
+- reversible data hiding method 600; classification 600; edge detection techniques 601, 601, 602; interpolation 601, 601, 602
+- reversible data hiding (RDH) techniques 836–7
+- RGB color space 13
+- Rician channel 308
+- Rivest–Shamir–Adleman (RSA) 11, 68, 212
+- Roberts edge detector 609
+- Roberts operator 148
+- robustness 326, 470; computerized watermarking 15–16; steganography 25
+- robust steganography, features 26
+- robust watermarking scheme 357
+- root mean squared error (RMSE) 531
+- rotation forest (RoF) 903–4
+- Sawtooth-Bernoulli mapping 72
+- scalable encryption 177
+- scale-invariant feature transform (SIFT) algorithm 774; exact locations 786–7; extraction 784–6, 785, 786; orientation parameter 788; removal 788, 788–9, 790–2; RKEM 786
+- scale-space representation 726
+- scrambling process 55
+- scrambling techniques, cryptographic image 38–9; on 2D mapping 43; bit-level permutation with row and column shifting 47, 47–9; comparative analysis 58–62; generalized matrix 49–55; gray code with bit plane scrambling 55–8; inverse scrambling 63; by row/column shifting with circular rotation 40, 40–3, 41
+- secret sharing scheme 572
+- secure and robust approach 543
+- secure scalable streaming (SSS) 195
+- Secure Sockets Layer (SSL) 937
+- secure t-ABSC scheme: bilinear pairings in prime order groups 248; hardness assumptions 249; Lagrange interpolation 248; notation 248; overview 246–7
+- secure transmission process 212, 212
+- security 326, 371–2, 470, 860; analysis 256–8; analysis/evaluation of SVC 175; attack 17; biometrics 75–6; ciphertext unforgeability 251–2; computerized watermarking 16; cryptography purposes 8–9; ECC over RSA, advantages 166; image using encryption and compression 213; levels 159; message confidentiality 250–1; requirements 175; steganography 25

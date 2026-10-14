@@ -1,0 +1,12 @@
+a three-dimensional matrix, as in case of a color image (RGB image). There is a little difference between black and white and grayscale images. In black and white image, there are only two colors, either black or white; on the other hand, a grayscale image contains values in between 0 to 255 where 0 is completely black and 255 is completely white. For example, an 8-bit grayscale image can have up to 255, or 2⁸ shades of black and white, (i.e., 8-bit color depth). A true color or RGB image has a 24-bit color depth which is almost 16 million colors, or 2²⁴. Images can be stored in JPEG, PNG, TIFF, BMP, etc. formats. All these formats differ in terms of compression technique, output size of the compressed image, and visual depth of the compressed image. In image compression lossless compression means an image can be reconstructed accurately from the compressed image. Formats like PNG, TIFF, and BMP support lossless compression while JPEG is lossy compression. Table 6.1 shows the difference in various image formats.
+
+A video, on the other hand, can be defined as a collection of images that form a moving picture. Generally, a term frame rate is associated with videos and is defined as the number of frames captured per second (FPS). The frame rate is essential for generating the illusion of moving pictures. For human perception, the frame rate for movies is 24 FPS while certain movies like “The Hobbit” have 48 FPS [5] which makes the movie more real in appearance. Aspect ratio can be
+
+# Table 6.1 Comparative Study of Few Popular Image Formats
+
+| Image Format | JPEG | PNG | TIFF | BMP |
+|---|---|---|---|---|
+| Description | Most common image format, used for transmitting image online | PNG is an upgraded version of GIF, unlike GIF, PNG has more color range than 256 colors as in GIF | Most of the general application like OCR, Scanning, faxing uses this format | Mostly supported windows system |
+| Pros | High color range and small size of image | Many application support, lossless | Lossless and high-quality images | Universal compatibility and efficient compression |
+| Cons | Lossy compression | RGB only support, large file size | Large file size | Large image size |
+| Lossless | No | Yes | Yes | Yes |

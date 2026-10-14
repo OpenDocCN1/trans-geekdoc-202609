@@ -1,0 +1,49 @@
+
+- 62. Y. Jiang, H. Zeng, X. Kang, and L. Liu. The game of countering JPEG anti-forensics based on the noise level estimation. In *2013 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference*, 1–9, 2013.
+- 63. H. Zeng, J. Yu, X. Kang, and S. Lyu. Countering JPEG anti-forensics based on noise level estimation. *Science China Information Sciences*, 61(3):032103, 2017.
+- 64. X. Liu, M. Tanaka, and M. Okutomi. Noise level estimation using weak textured patches of a single noisy image. In *2012 19th IEEE International Conference on Image Processing*, 665–668, 2012.
+- 65. G. Valenzise, V. Nobile, M. Tagliasacchi, and S. Tubaro. Countering JPEG anti-forensics. In *2011 18th IEEE International Conference on Image Processing*, 1949–1952, 2011.
+- 66. W. Fan, K. Wang, F. Cayre, and Z. Xiong. JPEG anti-forensics using non-parametric DCT quantization noise estimation and natural image statistics. In *Proceedings of the First ACM Workshop on Information Hiding and Multimedia Security*, 117–122, ACM, New York, 2013.
+- 67. H. D. Yuan. Blind forensics of median filtering in digital images. *IEEE Transactions on Information Forensics and Security*, 6(4):1335–1345, 2011.
+- 68. M. Kirchner and J. Fridrich. On detection of median filtering in digital images. In *Media Forensics and Security II*, volume 7541. International Society for Optics and Photonics, 2010.
+- 69. C. Chen, J. Ni, and J. Huang. Blind detection of median filtering in digital images: A difference domain based approach. *IEEE Transactions on Image Processing*, 22(12):4699–4710, 2013.
+- 70. Y. Zhang, S. Li, S. Wang, and Y. Q. Shi. Revealing the traces of median filtering using high-order local ternary patterns. *IEEE Signal Processing Letters*, 21(3):275–279, 2014.
+- 71. Z. H. Wu, M. C. Stamm, and K. J. R. Liu. Anti-forensics of median filtering. In *2013 IEEE International Conference on Acoustics, Speech and Signal Processing*, 3043–3047, 2013.
+- 72. W. Fan, K. Wang, F. Cayre, and Z. Xiong. Median filtered image quality enhancement and anti-forensics via variational deconvolution. *IEEE Transactions on Information Forensics and Security*, 10(5):1076–1091, 2015.
+- 73. D. T. Dang-Nguyen, I. D. Gebru, V. Conotter, G. Boato, and F. G. B. De Natale. Counter-forensics of median filtering. In *2013 IEEE 15th International Workshop on Multimedia Signal Processing (MMSP)*, 260–265, 2013.
+- 74. M. Fontani and M. Barni. Hiding traces of median filtering in digital images. In *2012 Proceedings of the 20th European Signal Processing Conference (EUSIPCO)*, 1239–1243, 2012.
+- 75. S. Sharma, A. V. Subramanyam, M. Jain, A. Mehrish, and S. Emmanuel. Anti-forensic technique for median filtering using L1-L2 TV model. In *2016 IEEE International Workshop on Information Forensics and Security (WIFS)*, 1–6, 2016.
+- 76. A. C. Popescu and H. Farid. Exposing digital forgeries in color filter array interpolated images. *IEEE Transactions on Signal Processing*, 53(10):3948–3959, 2005.
+- 77. M. Kirchner and R. Böhme. Synthesis of color filter array pattern in digital images. In *Media Forensics and Security*, volume 7254. International Society for Optics and Photonics, 2009.
+- 78. J. Lukáš, J. Fridrich, and M. Goljan. Detecting digital image forgeries using sensor pattern noise. In *Security, Steganography, and Watermarking of Multimedia Contents VIII*, volume 6072. International Society for Optics and Photonics, 2006.
+- 79. T. Gloe, M. Kirchner, A. Winkler, and R. Böhme. Can we trust digital image forensics? In Proceedings of the 15th ACM International Conference on Multimedia, MM'07, 78–86. ACM, New York, 2007.
+- 80. M. Goljan, J. Fridrich, and M. Chen. Sensor noise camera identification: Countering counter-forensics. In Media Forensics and Security II, volume 7541, pages 75410S. International Society for Optics and Photonics, 2010.
+- 81. R. D. Singh and N. Aggarwal. Video content authentication techniques: A comprehensive survey. Multimedia Systems, 24(2):211–240, 2018.
+- 82. S. Milani, M. Fontani, P. Bestagini, M. Barni, A. Piva, M. Tagliasacchi, and S. Tubaro. An overview on video forensics. APSIPA Transactions on Signal and Information Processing, 1:e2, 2012.
+- 83. D. Vazquez-Padin, M. Fontani, T. Bianchi, P. Comesaña, A. Piva, and M. Barni. Detection of video double encoding with GOP size estimation. In 2012 IEEE International Workshop on Information Forensics and Security (WIFS), 151–156. IEEE, 2012.
+- 84. W. Wang and H. Farid. Exposing digital forgeries in video by detecting double quantization. In Proceedings of the 11th ACM Workshop on Multimedia and Security, 39–48. ACM, New York, 2009.
+- 85. J. Xu, Y. Su, and Q. Liu. Detection of double MPEG-2 compression based on distributions of DCT coefficients. International Journal of Pattern Recognition and Artificial Intelligence, 27(01):1354001, 2013.
+- 86. X. Jiang, W. Wang, T. Sun, Y. Q. Shi, and S. Wang. Detection of double compression in MPEG-4 videos based on markov statistics. IEEE Signal Processing Letters, 20(5):447–450, 2013.
+- 87. A. V. Subramanyam and S. Emmanuel. Pixel estimation based video forgery detection. In 2013 IEEE International Conference on Acoustics, Speech and Signal Processing, 3038–3042. IEEE, 2013.
+- 88. W. Wang, X. Jiang, S. Wang, M. Wan, and T. Sun. Identifying video forgery process using optical flow. In International Workshop on Digital Watermarking, 244–257. Springer, Berlin, Germany, 2013.
+- 89. J. Chao, X. Jiang, and T. Sun. A novel video inter-frame forgery model detection scheme based on optical flow consistency. In International Workshop on Digital Watermarking, 267–281. Springer, Berlin, Germany, 2012.
+- 90. D.-K. Hyun, S.-J. Ryu, H.-Y. Lee, and H.-K. Lee. Detection of upscale-crop and partial manipulation in surveillance video based on sensor pattern noise. Sensors, 13(9):12605–12631, 2013.
+- 91. D.-K. Hyun, M.-J. Lee, S.-J. Ryu, H.-Y. Lee, and H.-K. Lee. Forgery detection for surveillance video. In J. S. Jin, C. Xu, and M. Xu (Eds.) The Era of Interactive Media, 25–36. Springer, New York, 2013.
+- 92. R. D. Singh and N. Aggarwal. Detection of upscale-crop and splicing for digital video authentication. Digital Investigation, 21:31–52, 2017.
+- 93. K. Sitara and B. M. Mehtre. A comprehensive approach for exposing inter-frame video forgeries. In 2017 IEEE 13th International Colloquium on Signal Processing its Applications (CSPA), 73–78, 2017.
+- 94. G.-S. Lin, J.-F. Chang, and C.-H. Chuang. Detecting frame duplication based on spatial and temporal analyses. In Computer Science & Education (ICCSE), 2011 6th International Conference on, 1396–1399. IEEE, 2011.
+- 95. J. Yang, T. Huang, and L. Su. Using similarity analysis to detect frame duplication forgery in videos. Multimedia Tools and Applications, 75(4):1793–1811, 2016.
+- 96. V. K. Singh, P. Pant, and R. C. Tripathi. Detection of frame duplication type of forgery in digital video using sub-block based features. In International Conference on Digital Forensics and Cyber Crime, 29–38. Springer, Cham, Switzerland, 2015.
+- 97. Y. Su, J. Zhang, and J. Liu. Exposing digital video forgery by detecting motion-compensated edge artifact. In Computational Intelligence and Software Engineering, 2009. International Conference on, 1–4. IEEE, 2009.
+- 98. Q. Dong, G. Yang, and N. Zhu. A MCEA based passive forensics scheme for detecting frame-based video tampering. Digital Investigation, 9(2):151–159, 2012.
+- 99. Y. Su, W. Nie, and C. Zhang. A frame tampering detection algorithm for MPEG videos. In 2011 6th IEEE Joint International Information Technology and Artificial Intelligence Conference, volume 2, 461–464, 2011.
+- 100. H. Liu, S. Li, and S. Bian. Detecting frame deletion in H.264 video. In Information Security Practice and Experience: 10th International Conference, ISPEC 2014, Fuzhou, China, May 5–8, 2014, 262–270. Springer International Publishing, Cham, Switzerland, 2014.
+- 101. A. Gironi, M. Fontani, T. Bianchi, A. Piva, and M. Barni. A video forensic technique for detecting frame deletion and insertion. In 2014 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 6226–6230, 2014.
+- 102. X. Kang, J. Liu, H. Liu, and Z. J. Wang. Forensics and counter anti-forensics of video inter-frame forgery. Multimedia Tools and Applications, 75(21):13833–13853, 2016.
+- 103. M. C. Stamm, W. S. Lin, and K. J. R. Liu. Temporal forensics and anti-forensics for motion compensated video. IEEE Transactions on Information Forensics and Security, 7(4):1315–1329, 2012.
+- 104. W. Wang and H. Farid. Exposing digital forgeries in video by detecting double MPEG compression. In Proceedings of the 8th Workshop on Multimedia and Security, 37–47. ACM, 2006.
+- 105. M. C. Stamm and K. J. R. Liu. Anti-forensics for frame deletion/addition in MPEG video. In 2011 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 1876–1879, 2011.
+- 106. P.-C. Su, P.-L. Suel, M.-K. Chang, and J. Lain. Forensic and anti-forensic techniques for video shot editing in H.264/AVC. Journal of Visual Communication and Image Representation, 29(Supplement C):103–113, 2015.
+- 107. M. Kobayashi, T. Okabe, and Y. Sato. Detecting video forgeries based on noise characteristics. In Advances in Image and Video Technology: Third Pacific Rim Symposium, PSIVT 2009, Tokyo, Japan, January 13–16, 2009, 306–317. Springer, Berlin, Germany, 2009.
+- 108. W. Wang and H. Farid. Exposing digital forgeries in interlaced and deinterlaced video. IEEE Transactions on Information Forensics and Security, 2(3):438–449, 2007.
+- 109. A. V. Subramanyam and S. Emmanuel. Video forgery detection using HOG features and compression properties. In 2012 IEEE 14th International Workshop on Multimedia Signal Processing (MMSP), 89–94, 2012.

@@ -1,0 +1,15 @@
+# 23.4.3.3 Content Authentication and Tamper Detection
+
+Once the origin of the given image/video is definitively ascertained, the next step is to validate the integrity and legitimacy of its contents by determining if they are a truthful representation of the event of interest, and that the contents have not been altered from the time the image/video was recorded to the time it was presented for authentication. Forensic techniques that help discover the presence of semantic manipulations in digital images and videos are collectively referred to as *Forgery or Tamper Detection Techniques.*
+
+Every operation that a digital image or video undergoes after it has been generated is referred to as a post-production operation, and all such operations influence the underlying characteristics of the digital content and modify its existent configuration, which in turn causes the attributes of the affected image/video to demonstrate behavior that deviates from the normal behavior exhibited by the attributes of an unmodified image/video. Every tamper detection technique relies on the successful detection of these deviations and uncharacteristic behavior, which act as identifying traces and facilitate discrimination between authentic content and content that has undergone some sort of post-production modification. Specialized tamper detection techniques are discussed in further detail in Section 23.8.
+
+# 23.4.3.4 Evidence Enhancement and Evidence Tampering
+
+Every evidence enhancement operation is technically a content modification operation because it ultimately changes the attributes of the digital visual content in question, and since both evidence enhancement and evidence tampering are characterized by eventual content modification, it becomes important to distinguish the two, especially from a forensic standpoint.
+
+While the primary function of evidence enhancement operations is to *improve* the quality of the image/video and *emphasize* vital scene details so that they become easier to comprehend and interpret, tampering is a malevolent operation which is performed with the specific intent to alter the *meaning* conveyed by the given image/video by changing the events depicted in it, a process that ultimately renders the evidence harmful for decision-making purposes.
+
+# 23.4.4 Hidden Data Detection
+
+Another important task related to forensic analysis of photographic and video evidence is to detect the presence of hidden data within the content under consideration. The art of hiding secret data within a cover medium for the purpose of covert communication is known as *steganography*, and the challenge of detecting such data is referred to as *forensic steganalysis*. The primary aim of forensic steganalysis is to discern the presence of hidden data within the given image or video file, with the additional requirement of recovering the hidden data content.

@@ -1,0 +1,55 @@
+
+- 15. Wolfgang, R., Podilchuk, C. 1999. Perceptual watermarks for digital images and video. *Proceedings of the IEEE* 87(7): 1277–1281.
+- 16. Katzenbeisser, S., Petitcolas, F. 2000. *Information Hiding Techniques for Steganography and Digital Watermarking*, Artech House, Norwood, MA.
+- 17. Irena, O. 2012. *Multimedia Signals and Systems*. Springer Science & Business Media, Boston, MA.
+- 18. Alotaibi, R., Elrefaei, L. 2015. Arabic text watermarking: A review. *International Journal of Artificial Intelligence and Applications* 6(4): 1–16.
+- 19. Anderson, R., Petitcolas, F. 1998. On the limits of steganography. *IEEE Journal of Selected Areas of Communication* 16: 474–481.
+- 20. Kalker, T., Depovere, G., Haitsma, J., Maes, M. 1999. A video watermarking system for broadcast monitoring. *Proceedings of SPIE Electronic Imaging '99, Security and Watermarking of Multimedia Contents*, San Jose, CA, 102–112.
+- 21. Wolfgang, R., Delp, E. 1999. Fragile watermarking using the VW2D watermark. *Proceedings of SPIE Electronic Imaging '99, Security and Watermarking of Multimedia Contents*, San Jose, CA, 3657: 204–213.
+- 22. Alginahi, M., Muhammad, K., Omar, T. 2014. An enhanced Kashida-based watermarking approach for increased protection in Arabic text-documents based on frequency recurrence of characters. *International Journal of Computer and Electrical Engineering* 6: 381–392.
+- 23. Jalil, Z., Mirza, A. 2009. A review of digital watermarking techniques for text documents. *International Conference on Information and Multimedia Technology*, 230–234. IEEE.
+- 24. Jalil, Z., Mirza, A. 2010. An invisible text watermarking algorithm using image watermark. *Innovations in Computing Sciences and Software Engineering*, T. Sobh, K. Elleithy (Eds.). Springer, New York, 147–152.
+- 25. Kerckhoffs, A. 1883. *La Cryptographie Militaire*. *Journal Des Sciences Militaires*, IX: 5–83, 161–191.
+- 26. Charles, C. 2002. Homeland Insecurity. *The Atlantic Monthly*, 290 (2).
+- 27. Ranganathan, S., Ali, A., Kathirvel, K., Mohan, M. 2010. Combined text watermarking. *International Journal of Computer Science and Information Technologies* 1(5).
+- 28. Kaur, M., Mahajan, K. 2015. An existential review on text watermarking techniques. *International Journal of Computer Applications* 120(18): 29–32.
+- 29. Al-Maweri, N., Ali, R., Adnan, W., Ramli, A., Rahman, S. 2016. State-of-the-art in techniques of text digital watermarking: Challenges and limitations. *Journal of Computer Sciences* 12(2): 62–80.
+- 30. Holliman, M., Memon, N. 2000. Counterfeiting attacks and block wise independent watermarking techniques. *IEEE Transactions on Image Processing* 9(3): 432–441.
+- 31. Brassil, J., O'Gorman, L. 1996. Watermarking document images with bounding box expansion. *Proceedings of 1st International Workshop on Information Hiding*, Newton Institute, Cambridge, UK, 227–235.
+- 32. Katsavounidis, I., Jay Kuo, C. 1997. A Multiscale error diffusion technique for digital half-toning. *IEEE Transactions on Image Processing* 6(3): 483–490.
+- 33. Jalil, Z., Jaffar, M., Mirza, A. 2011. A novel text watermarking algorithm using image watermark. *International Journal of Innovative Computing, Information and Control* 7(3).
+- 34. Voloshynovskiy, S., Pereira, S., Thierry, P. 2001. Attacks on digital watermarks: Classification, estimation based attacks and benchmarks. *IEEE Communications Magazine* 118–126.
+- 35. Zhou, X., Wang, S., Xiong, S., Yu, J. 2010. Attack model and performance evaluation of text digital watermarking. Journal of Computers 5(12): 1933–1941.
+- 36. Kim, Y., Moon, K., Oh, I. 2003. A text watermarking algorithm based on word classification and interword space statistics. Proceedings of the 7th International Conference on Document Analysis and Recognition 775–779.
+- 37. Wan, I., Gilani, S., Shah, S. 2006. Utilization of maximum data hiding capacity in object-based text document authentication. Proceedings of the International Conference on Intelligent Information Hiding and Multimedia Signal Processing 597–600.
+- 38. Huang, D., Yan, H. 2001. Interword distance changes represented by sine waves for watermarking text images. IEEE Transactions on Circuits and Systems for Video Technology 11(12): 1237–1245.
+- 39. Puhan, N., Ho, A., Sattar, F. 2007. Erasable authentication watermarking in binary document images. Proceedings of the 2nd International Conference on Innovative Computing, Information and Control, 288.
+- 40. Afrakhteh, M., Ibrahim, S., Salleh, M. 2010. Printed document authentication using watermarking technique. Proceedings of the 2nd International Conference on Computational Intelligence, Modelling and Simulation, Bali, 367–370.
+- 41. Du, M., Zhao, Q. 2011. Text watermarking algorithm based on human visual redundancy. Advances in Information Sciences and Service Sciences 3: 229–235.
+- 42. Xia, Z., Wang, S., Sun, X., Wang, J. 2013. Print-scan resilient watermarking for the Chinese text image. International Journal of Grid and Distributed Computing 6: 51–62.
+- 43. Yazdani, V., Doostari, M., Yazdani, H. 2013. A new method to Persian text watermarking using curvaceous letters. Journal of Basic and Applied Scientific Research 3: 125–131.
+- 44. Atallah, M., Raskin, V., Crogan, M., Hempelmann, C., Kerschbaum, F. 2001. Natural language watermarking: Design, analysis and a proof-of-concept implementation. Proceedings of the 4th International Workshop on Information Hiding 185–199.
+- 45. Chiang, Y., Chang, L., Hsieh, W., Chen, W. 2004. Natural language watermarking using semantic substitution for Chinese text. In: Digital Watermarking, Kalker, T., I. Cox and Y. Ro (Eds.). Springer, Berlin, Germany, 129–140.
+- 46. Liu, Y., Sun, X., Wu, Y. 2005. A natural language watermarking based on Chinese syntax. Proceedings of the 2nd International Conference on Advances in Natural Computation, 958–961.
+- 47. Topkara, U., Topkara, M., Atallah, M. 2006. The hiding virtues of ambiguity: Quantifiably resilient watermarking of natural language text through synonym substitutions. Proceedings of the 8th Workshop on Multimedia and Security. Geneva, Switzerland, 164–174.
+- 48. Vyborova, O., Macq, B. 2007. Natural language watermarking and robust hashing based on presuppositional analysis. Proceedings of the IEEE International Conference on Information Reuse and Integration, Las Vegas, NV, 177–182.
+- 49. Kim, M. 2008. Text watermarking by syntactic analysis. Proceedings of the 12th WSEAS International Conference on Computers, Greece, 904–909.
+- 50. Meral, H., Sankur, B., Zsoy, A., Günger, T., Sevinç, E. 2009. Natural language watermarking via morphosyntactic alterations. Computer Speech and Language 23: 107–125.
+- 51. Mali, M., Patil, N., Patil, J. 2013. Implementation of text watermarking technique using natural language watermarks. Proceedings of the International Conference on Communication Systems and Network Technologies, Gwalior, India, 482–486.
+- 52. Halvani, O., Steinebach, M., Wolf, P., Zimmermann, R. 2013. Natural language watermarking for German texts. Proceedings of the 1st ACM Workshop on Information Hiding and Multimedia Security, France, 193–202.
+- 53. Lew, C., Woo, C. 2013. Design and implementation of text based watermarking combined with pseudo-random number generator (PRNG) for cryptography application. Proceedings of the 12th International Conference on Applied Computer and Applied Computational Science, WSEAS LLC.
+- 54. Fei, W., Tang, X. 2013. Reversible text watermarking algorithm using prediction-error expansion method. Proceedings of the International Conference on Computer, Networks and Communication Engineering, Atlantis Press, Amsterdam, the Netherlands.
+- 55. Jalil, Z., Mirza, A. 2010. Text watermarking using combined image-plus-text watermark. Proceedings of the 2nd International Workshop on Education Technology and Computer Science. Wuhan, China, 11–14.
+- 56. Gutub, A., Al-Haidari, F., Al-Kahsah, K., Hamodi, J. 2010. Utilizing ‘Kashida’ extensions in Arabic language electronic writing. Journal of Emerging Technologies in Web Intelligence 2: 48–55.
+- 57. Jaseena, K., John, A. 2011. Text watermarking using combined image and text for authentication and protection. International Journal of Computer Applications 20: 8–13.
+- 58. Por, L., Wong, K., Chee, K. 2012. Unispach: A text-based data hiding method using unicode space characters. Journal of Systems and Software 85: 1075–1082.
+- 59. Rui, X., Jinjiao, C. 2013. A multiple watermarking algorithm for texts mixed Chinese and English. Procedia Computer Science 17: 844–851.
+- 60. Jaiswal, R., Patil, N. 2013. Implementation of a new technique for web document protection using unicode. Proceedings of the International Conference on Information Communication and Embedded Systems, Chennai, India, 69–72.
+- 61. Mir, N. 2014. Copyright for web content using invisible text watermarking. Computers in Human Behavior 30: 648–653.
+- 62. Jalil, Z., Mirza, A., M. Sabir 2010. Content based zero-watermarking algorithm for authentication of text documents. International Journal of Computer Science and Information Security 7: 212–217.
+- 63. Jalil, Z., Mirza, A., Jabeen, H. 2010. Word length based zero-watermarking algorithm for tamper detection in text documents. Proceedings of the 2nd International Conference on Computer Engineering and Technology, Chengdu, China, 378–382.
+- 64. Yingjie, M., Tao, G., Zhihua, G., Liming, G. 2010. Chinese text zero-watermark based on sentence’s entropy. Proceedings of the International Conference on Multimedia Technology, Ningbo, China, 1–4.
+- 65. Kuang, Q., Xu, X. 2011. A new zero-watermarking scheme based on features extraction for authentication of text. Journal of Convergence Information Technology 6: 155–165.
+- 66. Kaur, S., Babbar, G. 2013. A zero-watermarking algorithm on multiple occurrences of letters for text tampering detection. International Journal of Computer Science & Engineering 5: 294–301.
+- 67. Qi, X., Liu, Y. 2013. Cloud model based zero-watermarking algorithm for authentication of text document. Proceedings of the 9th International Conference on Computational Intelligence and Security, Leshan, China, 712–715.
+- 68. Prasannakumar, K., Balachandrudu, K. 2013. Text watermarking using combined image and text. International Journal of Engineering Research and Technology 2: 3812–3818.

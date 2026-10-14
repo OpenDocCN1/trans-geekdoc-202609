@@ -1,0 +1,14 @@
+VSSQR scheme, SC₁, SC₂, SC₃, which are random noise-like. Figure 20.6e–g show the decoding information for SC₁, SC₂, SC₃. Figure 20.6h–k show the reconstructed QR code by stacking any t (2 ≤ t ≤ 3) QR code shares. Figure 20.6h–j shows the reconstructed secret image with any less than 3 shadow images by stacking, from which there is no information could be recognized. Figure 20.6k shows the reconstructed secret image with 3 shadow images by stacking, the secret message can be seen directly based on HVS. Figure 20.6l shows the revealed QR code which is recovered by XORing three QR code shares with light-weight device. The secret message can be seen that it is recovered lossless.
+
+# 20.4.2 Visual Quality of the Revealed Secret Images
+
+In this section, the contrast [7,19] in Definition 1 is used to evaluate the visual quality of the recovered secret image. Some original binary secret images which are shown in Figures 20.3a and 20.5a are used to do the experiments of contrast. The size of secret images used will be changed to satisfy the needs of different QR code versions. Average contrast of the proposed (2,2) and (3,3) threshold for the binary secret image 1 as shown in Figure 20.3a with the abilities of stacking and XOR lossless recovery, and the proposed (2,3) threshold for binary secret image 2 as shown in Figure 20.5a with abilities of stacking and XOR recovery are shown in Table 20.1. Where t is the number of revealed shadow images.
+
+From Table 20.1, the results indicate that:
+
++   1. It means that the recovery is lossless when the contrast reaches the maximum 1.
++   2. Better visual of the reconstructed secret will be gained by stacking more shadow images and the contrast based on XOR operation is greater than stacking in the propose scheme.
++   3. In the experiments of contrast with (2,3) threshold, the contrast of the revealed secret image will be different with the different original messages of the cover QR codes. The more similar the original messages of the cover QR codes are, the higher the contrast of the revealed secret image will be gained. The contrast of the recovered secret image will achieve the highest when the original messages of the cover QR codes are the same but not the empty due to the algorithm of VSS.
++   4. In the experiments of contrast with (3,3) threshold, the contrast is smaller than that in (2,2) threshold due to the algorithm of VSS.
+
+The original messages of the cover QR codes can be the same but not empty. If the contents of the cover QR codes are empty, the QR code shares couldn’t be decoded correctly. In the (3,3) threshold, the QR code shares generated will show the part of secret images directly when the contents of the cover QR codes are the same. Although it can improve the contrast of the recovered secret image in this case, it couldn’t achieve our purpose of reducing the likelihood of attracting the attention of potential attackers.

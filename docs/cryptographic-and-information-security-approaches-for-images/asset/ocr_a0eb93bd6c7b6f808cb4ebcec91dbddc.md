@@ -1,0 +1,13 @@
+$UQI(x,y)=\frac{(4\mu_x\mu_y 2\alpha_{xy})}{(\mu_x^2+\mu_y^2)(\alpha_x^2+\alpha_y^2)}$ (22.31)
+
+Correlation coefficient (R) compares the cover and stego images by using Equation 22.32 [59].
+
+$R=\frac{\sum^{M}\sum^{N}(S_{MN}-\bar{S})-(C_{MN}-\bar{C})}{\sqrt{(\sum^{M}\sum^{N}(S_{MN}-\bar{S})^2)(\sum^{M}\sum^{N}(C_{MN}-\bar{C})^2)}}$ (22.32)
+
+Where $\bar{S}$ and $\bar{C}$ are the mean intensity values of the pixels in stego image and cover images, respectively [59].
+
+# 22.5 Conclusion
+
+In MI systems, medical data can be obtained by cyber-attacks. Encryption and steganography is generally used to secure medical data. In medical steganography application, patient personal data (name, birthdate, weight, address etc.) from a DICOM file header are embedded in spatial or transform domain, and these data can be only extracted by authority with a stego-key. Medical steganography techniques categorized into LSB based, RONI based and reversible steganography. LSB based method in spatial domain, which has high imperceptibility and embedding capacity, replaces sequentially or randomly the message’ bits by the LSBs of image pixels’ gray level values. RONI based steganography within spatial or transform domain, which has capacity problem, is used borders or black background of medical image to embed message. Reversible steganography method in spatial or transform domain, which has capacity problem, reconstruct original image without distortion after extracting message.
+
+Especially, the capacity of embedding message and robustness are essential problem for medical steganography application. If a hidden message is combined with patient personal data, doctors’ comment, diagnosis report, and biological signals, RONI- based and reversible steganography techniques may not be efficient due to high capacity. For this reason, LSB based steganography with lossless compression and encryption can ensure the confidentiality of the patient’s information, and to reduce data repository. However, steganography techniques have to be robust against attacks. ROI-based steganography techniques in transform domain with DWT or contourlet transform can be performed both to embed and to secure messages. Furthermore, if the RONI based method uses both ROI and RONIs of medical image to embed the message without affecting diagnosis or treatment, it can solve the capacity problem. Similarly, if reversible

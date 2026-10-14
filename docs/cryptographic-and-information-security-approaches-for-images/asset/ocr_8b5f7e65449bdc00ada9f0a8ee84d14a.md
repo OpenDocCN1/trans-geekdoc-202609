@@ -1,0 +1,10 @@
++   13. Wang, G., Liu, F., Yan, W.Q.: 2D Barcodes for visual cryptography. *Multimedia Tools and Applications* 75(2) (2016) 1223–1241.
++   14. Chow, Y.W., Susilo, W., Yang, G., Phillips, J.G., Pranata, I., Barmawi, A.M.: Exploiting the error correction mechanism in QR codes for secret sharing. *Australasian Conference on Information Security and Privacy*. Springer International Publishing, Cham, Switzerland (2016).
++   15. Denso, W.I.: http://www.qrcode.com. (2002)
++   16. Yan X., Guan S., Niu X.: Research on the Capacity of Error-Correcting Codes-Based Information Hiding. In: *International Conference on Intelligent Information Hiding and Multimedia Signal Processing*, IEEE Computer Society (2008) pp. 1158–1161.
++   17. Saito, K., Morii, M.: Efficient decoding of qr code using error correcting capability: Decoding method using erasure error correction and the ability. *Technical Report of IEICE ISEC 111* (2011) 79–84.
++   18. Wan, S., Lu, Y., Yan, X. et al.: High capacity embedding methods of QR code error correction. In: *International Wireless Internet Conference*. Springer, Cham, Switzerland (2016) pp. 70–79.
++   19. Yan, X., Wang, S., Niu, X.: Threshold progressive visual cryptography construction with unexpanded shares. *Multimedia Tools & Applications* 75(14) (2016) 1–18.
++   20. Yan, X., Chen, G., Yang, C.N., Cai, S.R.: Random grids-based threshold visual secret sharing with improved contrast by boolean operations. In: *Digital-Forensics and Watermarking: 13th International Workshop, IWDW 2014, Taipei, Taiwan, October 1–4, 2014*. Springer International Publishing, Cham, Switzerland (2015) pp. 319–332.
++   21. Lee, S., Yoo, C.D., Kalker, T.: Reversible image watermarking based on integer-to-integer wavelet transform. *IEEE Transactions on Information Forensics and Security* 2(3) (2007) 321–330.
++   22. Yan, X., Liu, X., Yang, C.N.: An enhanced threshold visual secret sharing based on random grids. *Journal of Real-Time Image Processing* (2015) 1–13.

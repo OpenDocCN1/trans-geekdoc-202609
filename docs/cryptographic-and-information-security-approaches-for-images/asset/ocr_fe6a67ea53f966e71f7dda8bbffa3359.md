@@ -1,0 +1,12 @@
++   14. M. Maes, T. Kalker, J.-P. Linnartz, J. Talstra, F. G. Depovere, and J. Haitsma. Digital watermarking for dvd video copy protection. *Signal Processing Magazine, IEEE*, 17(5):47–57, 2000.
++   15. N. J. Mathai, D. Kundur, and A. Sheikholeslami. Hardware implementation perspectives of digital video watermarking algorithms. *Signal Processing, IEEE Transactions on*, 51(4):925–938, 2003.
++   16. S. Vural, H. Tomii, and H. Yamauchi. Video watermarking for digital cinema contents. In *Proceedings of the 13th European Signal Processing Conference*, pp. 303–304, 2005.
++   17. S. P. Mohanty and E. Kougianos. Real-time perceptual watermarking architectures for video broadcasting. *Journal of Systems and Software*, 84(5):724–738, 2011.
++   18. S. D. Roy, X. Li, Y. Shoshan, A. Fish, and O. Yadid-Pecht. Hardware implementation of a digital watermarking system for video authentication. *Circuits and Systems for Video Technology, IEEE Transactions on*, 23(2):289–301, 2013.
++   19. A. M. Joshi, V. Mishra, and R. M. Patrikar. FPGA prototyping of video watermarking for ownership verification based on H.264/AVC. *Multimedia Tools and Applications*, 75(6):3121–3144, 2016.
++   20. S. Lian, Z. Liu, Z. Ren, and H. Wang. Commutative encryption and watermarking in video compression. *Circuits and Systems for Video Technology, IEEE Transactions on*, 17(6):774–778, 2007.
++   21. E. Y. Lam and J. W. Goodman. A mathematical analysis of the DCT coefficient distributions for images. *Image Processing, IEEE Transactions on*, 9(10):1661–1666, 2000.
++   22. O. Küçükünç, U. Güdükbay, and Ö. Ulusoy. Fuzzy color histogram-based video segmentation. *Computer Vision and Image Understanding*, 114(1):125–134, 2010.
++   23. Z. Chen, J. Xu, Y. He, and J. Zheng. Fast integer-pel and fractional-pel motion estimation for H.264/AVC. *Journal of Visual Communication and Image Representation*, 17(2):264–290, 2006.
++   24. T. Krishnan and S. Oraintara. Fast and lossless implementation of the forward and inverse mdct computation in mpeg audio coding. In *Circuits and Systems, 2002. ISCAS 2002. IEEE International Symposium on*, Vol. 2, pp. II–181. IEEE, 2002.
++   25. J. Liang and T. D Tran. Fast multiplierless approximations of the dct with the lifting scheme. *Signal Processing, IEEE Transactions on*, 49(12):3032–3044, 2001.

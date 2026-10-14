@@ -1,0 +1,55 @@
+
+- 15. Wolfgang, R., Podilchuk, C. 1999. 数字图像和视频的感知水印。 *IEEE 会议录* 87(7): 1277–1281.
+- 16. Katzenbeisser, S., Petitcolas, F. 2000. *信息隐藏技术：隐写术和数字水印*, Artech House, Norwood, MA.
+- 17. Irena, O. 2012. *多媒体信号与系统*. Springer Science & Business Media, Boston, MA.
+- 18. Alotaibi, R., Elrefaei, L. 2015. 阿拉伯文本水印：综述。 *国际人工智能与应用期刊* 6(4): 1–16.
+- 19. Anderson, R., Petitcolas, F. 1998. 隐写术的局限性。 *IEEE 通信选定领域期刊* 16: 474–481.
+- 20. Kalker, T., Depovere, G., Haitsma, J., Maes, M. 1999. 用于广播监测的视频水印系统。 *SPIE 电子成像 '99 会议录，多媒体内容的安全与水印*, San Jose, CA, 102–112.
+- 21. Wolfgang, R., Delp, E. 1999. 使用 VW2D 水印的脆弱水印。 *SPIE 电子成像 '99 会议录，多媒体内容的安全与水印*, San Jose, CA, 3657: 204–213.
+- 22. Alginahi, M., Muhammad, K., Omar, T. 2014. 基于字符频率重复的阿拉伯文文档增强 Kashida 水印方法以提高保护。 *国际计算机与电气工程期刊* 6: 381–392.
+- 23. Jalil, Z., Mirza, A. 2009. 文本文档数字水印技术综述。 *国际信息与多媒体技术会议*, 230–234. IEEE.
+- 24. Jalil, Z., Mirza, A. 2010. 基于图像水印的不可见文本水印算法。 *计算科学与软件工程创新*, T. Sobh, K. Elleithy (Eds.). Springer, New York, 147–152.
+- 25. Kerckhoffs, A. 1883. *军事密码学*. *军事科学期刊*, IX: 5–83, 161–191.
+- 26. Charles, C. 2002. 国内不安全。 *大西洋月刊*, 290 (2).
+- 27. Ranganathan, S., Ali, A., Kathirvel, K., Mohan, M. 2010. 组合文本水印。 *国际计算机科学与信息技术期刊* 1(5).
+- 28. Kaur, M., Mahajan, K. 2015. 文本水印技术存在性综述。 *国际计算机应用期刊* 120(18): 29–32.
+- 29. Al-Maweri, N., Ali, R., Adnan, W., Ramli, A., Rahman, S. 2016. 文本数字水印技术现状：挑战与局限。 *计算机科学期刊* 12(2): 62–80.
+- 30. Holliman, M., Memon, N. 2000. 伪造攻击与分块独立水印技术。 *IEEE 图像处理汇刊* 9(3): 432–441.
+- 31. Brassil, J., O'Gorman, L. 1996. 通过边界框扩展对文档图像进行水印。 *第一次国际信息隐藏研讨会论文集*, Newton Institute, Cambridge, UK, 227–235.
+- 32. Katsavounidis, I., Jay Kuo, C. 1997. 数字半色调的多尺度误差扩散技术。 *IEEE 图像处理汇刊* 6(3): 483–490.
+- 33. Jalil, Z., Jaffar, M., Mirza, A. 2011. 一种基于图像水印的新型文本水印算法。 *国际创新计算、信息与控制期刊* 7(3).
+- 34. Voloshynovskiy, S., Pereira, S., Thierry, P. 2001. 数字水印攻击：分类、基于估计的攻击和基准。 *IEEE 通信杂志* 118–126.
+- 35. Zhou, X., Wang, S., Xiong, S., Yu, J. 2010. 文本数字水印的攻击模型与性能评估。 计算机学报 5(12): 1933–1941.
+- 36. Kim, Y., Moon, K., Oh, I. 2003. 基于词分类和词间空间统计的文本水印算法。 第七届文档分析与识别国际会议论文集 775–779.
+- 37. Wan, I., Gilani, S., Shah, S. 2006. 基于对象的文本文档认证中最大数据隐藏容量的利用。 国际智能信息隐藏与多媒体信号处理会议论文集 597–600.
+- 38. Huang, D., Yan, H. 2001. 用于文本图像水印的由正弦波表示的词间距离变化。 IEEE 电路与系统视频技术汇刊 11(12): 1237–1245.
+- 39. Puhan, N., Ho, A., Sattar, F. 2007. 二值文档图像中的可擦除认证水印。 第二届创新计算、信息与控制国际会议论文集, 288.
+- 40. Afrakhteh, M., Ibrahim, S., Salleh, M. 2010. 使用水印技术的印刷文档认证。 第二届计算智能、建模与仿真国际会议论文集, Bali, 367–370.
+- 41. Du, M., Zhao, Q. 2011. 基于人类视觉冗余的文本水印算法。 信息科学与服务科学进展 3: 229–235.
+- 42. Xia, Z., Wang, S., Sun, X., Wang, J. 2013. 中文文本图像的抗打印扫描水印。 国际网格与分布式计算期刊 6: 51–62.
+- 43. Yazdani, V., Doostari, M., Yazdani, H. 2013. 利用曲线字母的波斯文本水印新方法。 基础与应用科学研究期刊 3: 125–131.
+- 44. Atallah, M., Raskin, V., Crogan, M., Hempelmann, C., Kerschbaum, F. 2001. 自然语言水印：设计、分析与概念验证实现。 第四届信息隐藏国际研讨会论文集 185–199.
+- 45. Chiang, Y., Chang, L., Hsieh, W., Chen, W. 2004. 基于语义替换的中文文本自然语言水印。 In: 数字水印, Kalker, T., I. Cox and Y. Ro (Eds.). Springer, Berlin, Germany, 129–140.
+- 46. Liu, Y., Sun, X., Wu, Y. 2005. 基于中文语法的自然语言水印。 第二届自然计算进展国际会议论文集, 958–961.
+- 47. Topkara, U., Topkara, M., Atallah, M. 2006. 模糊性的隐藏美德：通过同义词替换对自然语言文本进行可量化鲁棒水印。 第八届多媒体与安全研讨会论文集. Geneva, Switzerland, 164–174.
+- 48. Vyborova, O., Macq, B. 2007. 基于预设分析的自然语言水印与鲁棒哈希。 IEEE 信息重用与集成国际会议论文集, Las Vegas, NV, 177–182.
+- 49. Kim, M. 2008. 基于句法分析的文本水印。 第十二届 WSEAS 计算机国际会议论文集, Greece, 904–909.
+- 50. Meral, H., Sankur, B., Zsoy, A., Günger, T., Sevinç, E. 2009. 通过形态句法改动进行自然语言水印。 计算机语音与语言 23: 107–125.
+- 51. Mali, M., Patil, N., Patil, J. 2013. 使用自然语言水印实现文本水印技术。 通信系统与网络技术国际会议论文集, Gwalior, India, 482–486.
+- 52. Halvani, O., Steinebach, M., Wolf, P., Zimmermann, R. 2013. 德语文本的自然语言水印。 第一届 ACM 信息隐藏与多媒体安全研讨会论文集, France, 193–202.
+- 53. Lew, C., Woo, C. 2013. 密码学应用中结合伪随机数生成器（PRNG）的基于文本的水印设计与实现。 第十二届应用计算机与应用计算科学国际会议论文集, WSEAS LLC.
+- 54. Fei, W., Tang, X. 2013. 基于预测误差扩展方法的可逆文本水印算法。 计算机、网络与通信工程国际会议论文集, Atlantis Press, Amsterdam, the Netherlands.
+- 55. Jalil, Z., Mirza, A. 2010. 使用组合图像加文本水印的文本水印。 第二届教育技术与计算机科学国际研讨会论文集. Wuhan, China, 11–14.
+- 56. Gutub, A., Al-Haidari, F., Al-Kahsah, K., Hamodi, J. 2010. 利用阿拉伯语电子书写中的“Kashida”扩展。 网络智能新兴技术期刊 2: 48–55.
+- 57. Jaseena, K., John, A. 2011. 用于认证和保护的组合图像和文本文本水印。 国际计算机应用期刊 20: 8–13.
+- 58. Por, L., Wong, K., Chee, K. 2012. Unispach：使用 Unicode 空格字符的基于文本的数据隐藏方法。 系统与软件期刊 85: 1075–1082.
+- 59. Rui, X., Jinjiao, C. 2013. 中英文混合文本的多重水印算法。 计算机科学程序 17: 844–851.
+- 60. Jaiswal, R., Patil, N. 2013. 使用 Unicode 的网页文档保护新技术实现。 信息通信与嵌入式系统国际会议论文集, Chennai, India, 69–72.
+- 61. Mir, N. 2014. 使用不可见文本水印的网页内容版权。 计算机与人类行为 30: 648–653.
+- 62. Jalil, Z., Mirza, A., M. Sabir 2010. 基于内容的文本文档认证零水印算法。 国际计算机科学与信息安全期刊 7: 212–217.
+- 63. Jalil, Z., Mirza, A., Jabeen, H. 2010. 基于词长的文本文档篡改检测零水印算法。 第二届计算机工程与技术国际会议论文集, Chengdu, China, 378–382.
+- 64. Yingjie, M., Tao, G., Zhihua, G., Liming, G. 2010. 基于句子熵的中文文本零水印。 多媒体技术国际会议论文集, Ningbo, China, 1–4.
+- 65. Kuang, Q., Xu, X. 2011. 基于特征提取的文本认证新零水印方案。 汇聚信息技术期刊 6: 155–165.
+- 66. Kaur, S., Babbar, G. 2013. 用于文本篡改检测的字母多次出现零水印算法。 国际计算机科学与工程期刊 5: 294–301.
+- 67. Qi, X., Liu, Y. 2013. 基于云模型的文本文档认证零水印算法。 第九届计算智能与安全国际会议论文集, Leshan, China, 712–715.
+- 68. Prasannakumar, K., Balachandrudu, K. 2013. 使用组合图像和文本的文本水印。 国际工程研究与技术期刊 2: 3812–3818.

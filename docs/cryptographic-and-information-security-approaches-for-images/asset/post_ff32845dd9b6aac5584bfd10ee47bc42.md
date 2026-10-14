@@ -1,0 +1,336 @@
+
+- fingerprint identification 858, 859
+- fingerprinting 326
+- fingerprint quality improvement
+  - mosaicking technique 865–76
+  - normalize image 876–80, 880–2
+- Fingerprint Verification Competition (FVC) 923
+- FIPS (Federal Information Processing Standards) 275, 277, 277
+- FIS (Fuzzy Inference System) 420
+- Fixed Pattern Noise (FPN) 689
+- FL (fuzzy logic) 643
+- FLC data 161
+- flexible representation of quantum image (FRQI) 55
+- forensics; see also digital visual media forensics (DVMF):
+  - active 682
+  - analysis 672–82
+  - bit-plane 679
+  - blind 683–4
+  - CCTV and surveillance 667–8
+  - copy-move forgery/tampering detection 725–39
+  - detection 801
+  - DVMF 672–3
+  - frame-insertion 701
+  - integrity verification and content authentication 693–7
+  - inter-video 701–2
+  - LSB 378
+  - non-blind 684
+  - overview 665
+  - passive 682–3
+  - photographic origin and history 665–6
+  - statistical analysis methods 679
+  - steganalysis 677
+  - steganography 677
+  - structural analysis methods 679
+  - supervised learning based approaches 679–80
+  - temporal splicing 701, 703
+  - video origin 666–7
+  - visual analysis methods 678–9
+  - visual evidence 673–82
+  - watermarking 695–6
+- forgery techniques 677
+- formal concept analysis (FCA) method 419
+- Fourier transformed (FT) 125
+- FPN (fixed pattern noise) 689
+- FPR (false positive rate) 471, 792
+- FPS (frames captured per second) 146
+- fractional Fourier percentage residual difference (FrFPRD) 554
+- fractional Fourier transform (FrFT) 124, 128, 546, 550–1
+- fragile watermarking technique 835
+- fragility 470
+- frame dropping attacks 370, 370
+- frame-duplication forgeries 706
+- frame interpolation 707
+- frame rate up-conversion (FRUC) 707
+- frames captured per second (FPS) 146
+- frequency distribution 8 × 8 sub block 359
+- frequency domain techniques 155–6
+- FrFPRD (fractional Fourier percentage residual difference) 554
+- FrFT (fractional Fourier transform) 546, 550–1
+- FRQI (flexible representation of quantum image) 55
+- FRT (fractional Fourier transform) 124, 128
+- FRUC (frame rate up-conversion) 707
+- FT (Fourier transformed) 125
+- full encryption algorithm 176
+- fully convolutional network (FCN) 738
+- fuzzy C-means (FCM) 155
+- fuzzy inference system (FIS) 420
+- fuzzy logic (FL) 643
+- fuzzy vault 834
+  - biometric system 831
+  - cryptosystem 834
+- FVC (Fingerprint Verification Competition) 923
+- GA (genetic algorithm) 484
+- Gabor filter 734
+- Gaussian map 72
+- Gaussian noise removal mask 610, 610
+- Gaussian scale space function 786
+- Gaussian smoothing (GS) 804
+- generation unit 367
+- generative steganography 28
+- genetic algorithm (GA) 484
+- Gerchberg-Saxton algorithm (GSA) 125–6, 126
+- GLCM (gray level co-occurrence matrix) 528–9
+- graphic interface 282
+- gray code with bit plane scrambling 55–8
+  - peppers image 57
+  - test results using 58, 62
+- gray level co-occurrence matrix (GLCM) 528–9
+- green-screening 700, 709–10
+- GS (Gaussian smoothing) 804
+- GSA (Gerchberg-Saxton algorithm) 125–6, 126
+- H.264/scalable video coding (H.264/SVC) standard 173
+  - architecture 174
+  - authentication schemes 204
+  - block-based transparent encryption for 194–9
+  - CGS 179
+  - decoder 196
+  - format-compliant bitstreams encryption scheme for 188–94
+  - macroblock, syntax elements 182
+  - partial encryption, confidentiality/performance analysis on 176–82
+- hardware cost, HEVC 373
+- Harris detector 726
+- hash-based cryptographic technique 314, 314
+- hash-based verification 696
+- header-protected schemes, flaw in 184–5
+- health electronic record (HER) 298
+- health information systems (HIS) 631
+- Health Insurance Portability and Accountability Act (HIPAA) 299, 543
+- HER (health electronic record) 298
+- hex code watermark 339
+- Hidden Markov Model (HMM) 898
+- hiding framework 382
+- hiding schemes 400
+- hieroglyphics method 143, 143–4
+- high efficiency video coding (HEVC) 355, 358, 401
+  - 8 point 1-D forward DCT, butterfly structure 362–4
+  - 8 point 1-D inverse integer DCT algorithm 364
+  - device utilization reports 372
+  - hardware utilization reports 372
+  - implementation 362–4
+  - integer DCT algorithm implementation 362
+  - proposed secure implementation 362
+  - synthesis results 373
+  - timing reports 372
+  - video encoder 373
+- hill climbing attack 91–2
+- histograms 269
+- histogram analysis 152, 301–2, 302
+- histogram-based approach 526
+- histogram deviation 305
+- histogram information 78–9
+- histogram of orientated Gabor magnitude (HOGM) 734
+- histogram shifting (HS) 650, 651, 837
+- host signal 381
+- Huffman codeword permutation 158
+- human biometric system 893–5
+  - connection of brain 895
+  - face recognition 893
+  - machine learning methods and techniques 898–904
+  - operational concept 897–8
+  - semi-automatic system 894
+  - visual protection model 896
+- human identification 857
+- human visual system (HVS) 151, 387, 533
+- hybrid approach 212
+- hybrid authentication (HAU) scheme 200
+  - communication overhead 205
+  - operations 201
+  - SVC 201–3
+- hybrid input-output algorithm (HIOA) 127
+- hyper text markup language (HTML) 339
+- IDEA (International Data Encryption Algorithm) 68, 265
+- identity theft resource centre (ITRC) 298
+- IEEE-754 standard, microchip 270
+- image
+  - augmentation 18
+  - based document watermarking schemes 334–6, 336
+  - cryptography technique 68
+- image analysis 300
+  - attack analysis 306–8
+  - differential attack analysis 306
+  - statistical attack analysis 300–6
+- image based approach 329
+  - boundary modifications 330
+  - character features, modification 330–1
+  - fixed partitioning 329
+  - halftone images, modification 331
+  - line, word/character shifting 329, 330
+  - run-length patterns, modification 331
+- image encryption 154
+  - block selection technique 147–51
+  - chaotic key diffusion sequence 310
+  - frequency domain 155–6
+  - image encryption 154–6
+  - performance parameter 152–4
+  - pixel and block based chaotic 317
+  - pixel selection technique 151–2
+  - spatial domain 154–5
+  - techniques 147–61
+  - video encryption 157–61
+  - video encryption parameter 156–7
+- image fusion 443
+  - benefit 443, 446
+  - multi focus 444–5
+  - multi modal 446–8
+  - multi temporal 445
+  - multi view 444
+  - techniques 443
+- image quality measures 529–31
+  - AD 532
+  - classifications 530
+  - correlation based measures 530–1
+  - EME 532
+  - HVS 533–4
+  - MAE 531
+  - MD 532
+  - MSE 531
+  - NCC 533
+  - pixel difference-based measures 530
+  - RMSE 531
+  - SC 533
+  - second order texture analysis 529–30
+  - SSIM 535
+  - UIQI 534–5
+- images and videos 145–7, 146
+  - anti-forensics 710–11
+  - counter anti-forensics 711, 800
+- image scrambling method 38
+- image tampering anti-forensics 800, 802
+  - acquisition/processing chain 811–12
+  - CE 808–9
+  - copy-move detection 803–5
+  - lossy compression 809–10
+  - MF 810–11
+  - p-map 806
+  - resampling 805–8, 807
+  - SIFT based 804
+  - splicing 805
+  - watermarking 800
+- imperceptibility 325, 470, 542
+- inanimate objects 681
+- incognito message 513
+- inductive learning 898
+- information 542
+  - entropy 152, 303–4
+  - payload 16
+- information communication technology (ICT) 298
+- information security (InfoSec) systems
+  - classification 6
+  - cybersecurity and network security versus 33–4
+  - differences in 31–2
+  - techniques 32–3
+- injective steganography 28
+- inpainting 699
+- insertion unit 367
+- integer DCT algorithm, implementation 362
+- integer wavelet transform (IWT) 480, 844
+- integrated circuits (ICs) 264
+- integrity 98, 630, 774
+- intellectual property (IP) 326
+- intellectual property right (IPR) 355
+- intentional attacks 477
+- inter-integrated circuit (I2C) protocol 264
+- international data encryption algorithm (IDEA) 68, 265
+- International Telecommunication Union (ITU-T) 358
+- Internet of Things (IoT) 298
+- interpolation 603, 687
+  - bi-cubic 604
+  - bilinear 604, 605
+  - higher order 604–5
+  - nearest neighbor 603–4, 605
+- intra-prediction 392
+- inverse discrete wavelet transformation (IDWT) 453
+- inverse Fourier transformed (IFT) 125
+- inverse scrambling 63
+- iris based identification 858
+- irregular deviation 305
+- Java virtual machine (JVM) 906
+- Joint Photographic Experts Group (JPEG) 212
+- Joint Video Team (JVT) 358
+- JPEG2000 standard 155
+- Karhunen-Loeve transform (KLT) 483
+- Kerckhoffs’ principle 328
+- key 7
+  - derivation function algorithm 253
+  - restrictions 471
+  - sensitivity analysis 304
+  - space analysis 81, 304
+- keypoint detection algorithms 726
+- Key-Policy ABE (KP-ABE) 246
+- key scheduling algorithm (KSA) 154–5
+- k-nearest neighbour (k-NN) 901
+- Lagrange interpolation 248
+- Laplacian edge detector 609, 609–10
+- least significant bit (LSB) 151, 345–6, 380, 483
+- least significant bit substitution (LSBS) 513
+  - data hiding 600
+  - MI technique 637–44
+  - S-boxes 513
+  - steganography 513
+- lexicographical order matching algorithm 733
+- L. Fibonacci 51
+- Liber Abaci (book) 52
+- lifting wavelet transform (LWT) 70, 216
+- linear cryptanalysis 117–18
+- line-shifting scheme 329, 330
+- liquid crystal display (LCD) monitor 264
+- local binary pattern (LBP) operator 735
+- local linear predictor (LLP) 546
+- logistic mapping 71
+- log-polar fast Fourier transform (LPFFT) 733
+- long short-term memory (LSTM) 739
+- lossless compression method 628
+- lossy compression method 628
+- low order approximation 116
+- luminance comparison function 477
+- macroblocks 182
+- malevolent operation 677
+- malicious image editing 800
+- MANE (Media Aware Network Elements) 199, 202
+- manual region selection technique 151–2
+- Markov random fields (MRF) 898
+- master-input to slave-output (MISO) 266
+- maximum difference (MD) 532
+- mean absolute error (MAE) 153, 531, 553
+- mean squared error (MSE) 475, 531, 532, 654
+- median filtering (MF) 810–11
+- medical identity theft 468
+- medical imaging 442
+  - applications of watermarking 450–64
+  - benefits 443
+  - image fusion 443–8
+  - watermarking 448–9
+- medical information (MI) security 630–1
+  - center of image 640
+  - comparison metrics 654–6
+  - defuzzification stage 643
+  - DICOM 633–5, 634, 634
+  - FL 643
+  - gray level differences 642
+  - LSB 637–45
+  - mass of image 640
+  - MSE 654
+  - overview 627–30
+  - PACS 631–3, 632
+  - PSNR 654–5
+  - reversible steganography 650–4
+  - RONI 645–9
+  - SSIM 654–5
+  - stego image 646
+  - UQI index 655
+  - variance formula 641
+- medical steganography techniques 635
+  - LSB 637–45
+  - reversible 650–4
+  - RONI 645–9

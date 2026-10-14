@@ -1,0 +1,6 @@
+# Table 17.5 (Continued) Summary of Recent State-of-the-Art Watermarking Techniques for Tele-Health Applications
+
+| Ref No. | Proposed Objectives | Techniques to Achieve Objectives | Type of Watermarking Technique | Performance Evaluations | Size of the Cover/ Watermark Image(s) | Other Important Considerations |
+|---|---|---|---|---|---|---|
+| [57] | Watermarking with high compression rate. | TIFF/JLS Lossless compression Square-square mesh decimation Zero-padding Nearest-neighbor and cubic interpolation Interpolation with B-spline function | Blind | Avg PSNR = 46.79 (max), Avg SSIM = 0.9974 | — | – Two different databases consist of 30 images. – Method achieved high compression rate. |
+| [58] | Robust watermarking for salt and pepper attack using MRI images. | Identified the regions Spatial domain repetition noise filtering | Robust | PSNR = 47.88 dB SSIM = 0.9747 BER = 0 (salt and pepper density = 1%) (max for DB5) Embedded bits = 51720 | 256 × 256/51.712 (kbit) | – Using 179 brain MRI images for experimental purpose. |

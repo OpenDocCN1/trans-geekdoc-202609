@@ -1,0 +1,13 @@
+# 21.4.1.2 Undetectability
+
+Undetectability is typically required for secure covert communication. Embedded information is undetectable if the image with embedded data is consistent with the source model from which the image is drawn.
+
+For example, if a data hiding method uses the noise component of a digital image to embed a secret message, it should avoid making statistically significant changes to the noise in the carrier. Thus, the concept of undetectability is inherently tied to the statistical model of the cover-object source. However, in the case an attacker has a more detailed model of the source signal, they may be able to detect the presence of a hidden message.
+
+# 21.4.1.3 Invisibility
+
+Invisibility is based on the properties of the human visual system or human audio system. Embedded information should not introduce any perceptible artifacts, meaning that an average human subject should be unable to distinguish between carriers that contain hidden information and those that do not. This problem can be solved by applying human perceptual modeling in the embedding process. A commonly accepted experimental arrangement that is frequently used in psycho-visual experiments is a blind test, where large numbers of carriers with and without hidden information are randomly presented, and then the subjects are asked to identify which cover-objects contain hidden information. As a result, it has been successfully demonstrated that subjects cannot distinguish carriers with a close to 50% ratio of hidden information. Thus, a blind test can be used to determine the visibility of artifacts caused by data embedding schemes.
+
+# 21.4.1.4 Security
+
+An embedding algorithm is said to be secure if the embedded information cannot be removed beyond reliable detection by targeted attacks based on full knowledge of the embedding algorithm and detector, except the secret key, and knowledge of at least one carrier with a hidden message. Here is introduced the concept of a secure black-box public detector and secure public detector. A secure black-box public detector is a message detector implemented in tamper-proof hardware. It is assumed that the box cannot be reverse-engineered, and the secret key used to read the hidden messages is wired in the black-box and cannot be recovered. The availability of the black-box should not enable an attacker to recover the secret key or remove the hidden information from the carrier. Here, it is also assumed that the attacker has full knowledge of the embedding algorithm and inner workings of the detection function. Of course, any embedding technique that has a secure

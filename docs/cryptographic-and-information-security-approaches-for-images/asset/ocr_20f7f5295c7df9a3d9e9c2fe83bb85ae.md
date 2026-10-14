@@ -1,0 +1,15 @@
+should be established to prevent confidentially threats. In addition, firewalls can be used in open networks and the data can be encrypted while being transferred.
+
+Reliability can be damaged by production, destruction, and modification of medical files. For this reason, it is necessary to define who has the authority to erase, record, and modify data. Antivirus software and firewalls should be used to protect the system from attacks. Furthermore, the integrity of the data can be assured with digital signatures while transferring. Availability can be interrupted due to disablement on the file management system, destruction hard-disk, or alteration data [1,6,7]. The MI system should ensure data handling rules such as access and auditing.
+
+In health information systems (HIS), firewalls, virtual private networks, and encryption are used to ensure MI security. However, security tools and firewalls have limits and they can be exploited by pirates. Furthermore, encrypted medical data is sensitive to bit errors during transmission and encryption which increase the operating and running cost of medical data. In addition, the file headers of medical data can be easily captured in plain text format [1,4,6,7]. Another problem in HIS is that medical data can be recorded manually by mistake. For this reason, steganography can be used as an alternative to encryption.
+
+# 22.2.1 Picture Archiving and Communication System (PACS)
+
+PACS manages the software and platforms to acquire, store, distribute, and retrieve the medical images. It integrates with radiology and hospital information systems, as shown in Figure 22.1 [9]. PACS consists of main server and workstations which uses images from the main server or provides images to main server on local area network (LAN) or wide area network (WAN).
+
+The main server manages operations such as recording, retrieving, and backing up images. Radiology workstations provide the image retrieving, processing, and demonstrating. In PACS, patient information can be easily obtained through hospital and radiology information systems. Web servers are required to communicate over the Internet. For this reason, the web address (URL: Uniform Resource Locator) is given to the images in the PACS and all the images can be accessed by querying in the PACS archive [8].
+
+PACS should have to overcome high recording capacity of the medical images. Hence, the system disk capacity should be increased when requested. PACS should have high process capacity to synchronize with medical imaging devices. The system service should be reliable, unlimited, and uninterrupted. It has to have high bandwidth and fast data communication between servers and clients [8,9].
+
+In PACS, compression algorithms, which are lossless and lossy, reduce the size of medical images that occupy petabyte data space. Lossless compression methods, which enable the retrieval of the data, compress at a ratio of 2:1 or 3:1. Lossy compression methods which make it impossible to recover the data can compress 10:1 to 50:1 and more. Nevertheless, a lossy compressed image can affect the radiological

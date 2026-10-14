@@ -1,0 +1,7 @@
+![](bbox=[0.22, 0.18, 0.73, 0.66])
+
+# Figure 20.1 Data and error correction codewords arrangement for QR code version 7 with error correction level H.
+
+codewords arrangement for QR code version 7, with an error correction level of H, is shown in Figure 20.1.
+
+The maximum number of codewords that can be altered in QR code can be referred to as l. As a codeword equals eight modules in the QR code structure, we define the n is equal to 8l. If a QR code need to be decoded correctly, we must make sure that the codewords altered per block can't be more than r and the total codewords altered in QR code need to be equal to or less than l. In [18] of our previous work, it can be concluded that the codewords of QR code can be modified in data region, which can reach the maximum number of codewords that can be altered. In order to make sure that the three identical finder patterns of QR code could not be altered so that it does not affect the appearance of QR codes, we define the data, which is the blue region as shown in Figure 20.1, that could be modified is from the coordinate of (7,7) to the right down corner of the QR code. The altered region can be a rectangle from the coordinate of (7, p - j) to the right down corner while the value of j can be determined by the error correction capacity of the QR code so that the

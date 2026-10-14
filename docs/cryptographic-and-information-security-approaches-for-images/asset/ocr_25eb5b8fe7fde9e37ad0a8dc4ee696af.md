@@ -1,0 +1,7 @@
+# Figure 20.6 The results of QR code version 26 with error correction level H by (3,3) VSSQR scheme proposed. (a) Secret image 4 S (b) QR share SC₁ (c) QR share SC₂ (d) QR share SC₃ (e) The decoding information for SC₁ (f) The decoding information for SC₂ (g) The decoding information for SC₃ (h) Reconstructed image SC₁⊗SC₃ (i) Reconstructed image SC₂⊗SC₃ (j) Reconstructed image SC₁⊗SC₂ (k) Reconstructed image SC₁⊗SC₂⊗SC₃ (l) Reconstructed image SC₁⊗SC₂⊗SC₃.
+
+![](bbox=[0.1, 0.15, 0.95, 0.68])
+
+show the decoding information for SC₁, SC₂, SC₃. Figure 20.5h–k show the reconstructed QR code by stacking any t (2 ≤ t ≤ 3) QR code shares, from which better visual of the reconstructed secret will be gained by stacking more shadow images. Figure 20.5l–n show the reconstructed QR code by XORing a general k out of n QR code shares. Compared with the reconstructed QR code by stacking the same QR code shares, it can be seen that better visual quality of the reconstructed secret can be gained.
+
+Figure 20.6 shows the results of the twenty-six version, 26-H, QR barcode with 121 × 121 modules. The contents of cover QR codes will be different to verify the universality. Figure 20.6b–d shows the QR code shares resulting from the proposed

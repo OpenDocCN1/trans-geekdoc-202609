@@ -1,0 +1,17 @@
++   17. M. R. Freire, J. Fiérrez, and J. Ortega-Garca. Cryptographic key generation using handwritten signature. In Proceedings of SPIE-The International Society for Optical Engineering. Society of Photo-Optical Instrumentation Engineers, 588–595, Bellingham, WA, 2006.
++   18. L. Leng and A. B. J. Teoh. Alignment-free row-co-occurrence cancelable palmprint fuzzy vault. Pattern Recognition, 48(7):2290–2303, 2015.
++   19. M. Khan, L. Xie, and J. Zhang. Robust hiding of fingerprint-biometric data into audio signals. In Proceedings International Conference on Biometrics, Advances in Biometrics, 702–712. Springer, Berlin, Germany, 2007.
++   20. M. Khan, L. Xie, and J. Zhang. Robust hiding of fingerprint-biometric data into audio signals. In Proceedings International Conference on Biometrics, Advances in Biometrics, 702–712. Springer, Berlin, Germany, 2007.
++   21. M. S. Raval, P. P. Rege, and S. K. Parulkar. Secure and robust watermarking technique. In TENCON 2012-2012 IEEE Region 10 Conference, 1–6. IEEE, 2012.
++   22. H. Kaur and P. Khanna. Biometric template protection using cancelable biometrics and visual cryptography techniques. Multimedia Tools and Applications, 75(23):16333–16361, 2016.
++   23. M. S. Raval, M. Joshi, P. Rege, and S. Parulkar. Image tampering detection using compressive sensing based watermarking scheme. In Proceedings of MVIP 2011, IEEE, 16–21, 2011.
++   24. M. S. Raval and P. P. Rege. Scalar quantization based multiple patterns data hiding technique for gray scale images. GVIP Journal, 5(9):55–61, 2005.
++   25. V. B. Joshi, M. S. Raval, P. P. Rege, S. K. Parulkar et al. Multi-stage VQ based exact authentication for biometric images. Computer Society of India Journal of Computing, 2(1–2):R3–25, 2013.
++   26. J. Hämmerle-Uhl, K. Raab, and A. Uhl. Watermarking as a means to enhance biometric systems: A critical survey. In International workshop on Information Hiding, 238–254. Springer, Berlin, Germany, 2011.
++   27. M. Paunwala and S. Patnaik. Biometric template protection with DCT-based watermarking. Machine Vision and Applications, 25(1):263–275, 2014.
++   28. L. R. Haddada, B. Dorizzi, and N. E. Ben Amara. A combined watermarking approach for securing biometric data. Signal Processing: Image Communication, 55:23–31, 2017.
++   29. C. Li, Y. Wang, B. Ma, and Z. Zhang. Multi-block dependency based fragile watermarking scheme for fingerprint images protection. Multimedia Tools and Applications, 64(3):757–776, 2013.
++   30. M. M. Yeung and S. Pankanti. Verification watermarks on fingerprint recognition and retrieval. Journal of Electronic Imaging, 9(4):468–476, 2000.
++   31. M. K. Khan, J. Zhang, and L. Tian. Protecting biometric data for personal identification. In Chinese conferences on Biometric recognition Advances in Biometric Person Authentication, 629–638. Springer, Berlin, Germany, 2004.
++   32. M. S. Raval. A secure steganographic technique for blind steganalysis resistance. In Advances in Pattern Recognition, 2009. ICAPR'09. Seventh International Conference on, 25–28. IEEE, 2009.
++   33. D. Wang, J. Li, and X. Wen. Biometric image integrity authentication based on svd and fragile watermarking. In Image and Signal Processing, 2008. CISP'08. Congress on, volume 5, 679–682. IEEE, 2008.

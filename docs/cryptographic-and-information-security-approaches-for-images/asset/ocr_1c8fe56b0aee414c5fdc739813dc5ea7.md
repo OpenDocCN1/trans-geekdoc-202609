@@ -1,0 +1,11 @@
+This criteria used for uniform analysis reveals how well spread the frequency distribution of the pixel intensity in the image is. The smaller the volatility of a ciphered image is, the more uniform the frequency distribution is and that much closer to well-distributed meaningless noise.
+
+# 3.5.3.3 Analysis Results
+
+We randomly select 10⁶ pairs of two adjacent pixels from the plaintext images and corresponding ciphered results of 3DES-C, LC, BC, and BLE scheme. As to space domain distribution analysis, correlation coefficients of pairs are calculated by using the formulas (3.18) to measure the correlation between horizontally adjacent, vertically adjacent and diagonally adjacent pixels. As to statistic distribution analysis, we measuring the uniform fairness of gray scale histogram by using (3.22) to calculate volatility criteria. This criteria for uniform analysis reveals the extent of well-distribution in frequency domain.
+
+Figures 3.7 through 3.12 show the VA (sub-figures a–e), HA (sub-figures f–j), DA (sub-figures k–o) correlation distributions analysis result aiming at test A–D, where in each HA correlation analysis sub-figure, X-axis represents gray value on location (x, y) and Y-axis represents (x + 1, y); in each VA correlation analysis sub-figure, X-axis represents gray value on location (x, y) and Y-axis represents (x, y + 1); and in each DA correlation analysis sub-figure,
+
+![](bbox=[0.15, 0.7, 0.85, 0.85])
+
+Figure 3.7 Correlation analysis of test A in channel R. From left to right: Columns for plaintext, encryption with 3DES cipher, logistic cipher, Bernoulli cipher, and BLE cipher. From top to bottom: Rows in order for horizontal analysis (HA), vertical analysis (VA), diagonal analysis (DA). (a) Ch. R Plaintext HA, (b) Ch. R 3DES-C Result HA, (c) Ch. R LC test HA Result, (d) Ch. R BC test HA Result, (e) Ch. R BLE test HA Result, (f) Ch. R Plaintext VA, (g) Ch. R 3DES-C Result VA, (h) Ch. R LC Result VA, (i) Ch. R BC Result VA, (j) Ch. R BLE Result VA, (k) Ch. R Plaintext DA, (l) Ch. R 3DES-C Result DA, (m) Ch. R LC Result DA, (n) Ch. R BC Result HA, and (o) Ch. R BLE Result HA.

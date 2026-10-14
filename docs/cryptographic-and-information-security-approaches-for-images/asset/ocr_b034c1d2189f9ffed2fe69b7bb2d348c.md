@@ -1,0 +1,15 @@
+Table 31.2 gives the data obtained from the comparison of the various EER values of the already presented biometric schemes. The EER values have been considered for FVC 2002 database to select the optimal database for consideration as an input for the specific biometric comparison scheme. Since EER are ratios there is no unit. Based on the EER value of the Table 31.2, the DB2 of FVC 2002 is considered efficient for carrying out image based template generation and comparison.
+
+# 31.5 Biometrics-Based Authentication Scheme for Cloud Application
+
+In order to enhance the security and to make it applicable to mobile devices in the future, a smart card based biometric user authentication scheme is proposed. To avoid problems occurring due to key management, smart cards can be used. It is assumed that the biometric data sensor/device is available in the system used by the user. The framework of the biometric based user authentication scheme is shown in Figure 31.2.
+
+Similar to any smart card based scheme, in the biometric based user authentication scheme there exists a mandatory registration phase. In the registration phase, the user is requested to enter his/her biometric data into the SP database. Privacy as well as non-repudiated user authentication is a must for cloud computing. This is due to the fact that it involves data access, storage and metering/paying for the resource used. The smart card assumed to be used in the biometric based authentication scheme is a contactless type of a smart card. Though contactless smart cards have some security threats, it can be removed by the usage of strong cryptography (Kundarap et al. 2010). In many cases the user identifier (ID) refers to the username that is provided by the user. But in the biometric based authentication scheme, the identifier for every user is based on the username and the concatenation of the data related specifically to the server of the SP. Such a method can help identify the validity of the user identity specific to the SP. The notations used in this chapter are given in Table 31.3.
+
+During the registration phase, the user's identifier, biometric data and hashed password is collected by the SP and stored in the smart card.
+
+The data stored in the smart card can be denoted as, h(PW_i), ID_i, y_i where y_i = E_x {B_i ⊕ ID_i}. The value of 'x' indicates the secret key of the server. The data are all stored in hashed form and not in the open data form to add integrity. Every operation being performed by the user and server from login onwards is assumed to be monitored by a monitor. Since multiple services are being serviced by the SP, a proxy is issued at the end of every login.
+
+The sensor in the reader will have an in-built liveness detector to ensure that the biometric data is the live data and not data collected from a previous scan.
+
+The data which is transmitted is also encrypted so that it is unfeasible for an attacker to grab the value at that instant. Nonce values are used which ensures the

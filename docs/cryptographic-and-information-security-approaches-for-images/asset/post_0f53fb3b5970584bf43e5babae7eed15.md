@@ -1,0 +1,58 @@
+
+- 3. A. Kanso and N. Smaoui. Logistic chaotic maps for binary numbers generations. Chaos, Solitons & Fractals, 40(5):2557–2568, 2009.
+- 4. C. Rathgeb and A. Uhl. Context-based biometric key generation for iris. IET Computer Vision, 5(6):389–397, 2011.
+- 5. M. Pudzs, R. Fuksis, R. Ruskuls, T. Eglitis, A. Kadikis, and M. Greitans. FPGA based palmprint and palm vein biometric system. In Biometrics Special Interest Group (BIOSIG), 2013 International Conference of the, pp. 1–4. IEEE, 2013.
+- 6. M. Liu and T. Buma. Biometric mapping of fingertip eccrine glands with optical coherence tomography. Photonics Technology Letters, IEEE, 22(22):1677–1679, 2010.
+- 7. L. Kocarev and G. Jakimoski. Logistic map as a block encryption algorithm. Physics Letters A, 289(4):199–206, 2001.
+- 8. U. Uludag, S. Pankanti, S. Prabhakar, and A. K. Jain. Biometric cryptosystems: Issues and challenges. Proceedings of the IEEE, 92(6):948–960, 2004.
+- 9. A. K. Jain, N. Karthik, and A. Nagar. Biometric template security. EURASIP Journal on Advances in Signal Processing, 2008, 2008.
+- 10. C. Rathgeb and A. Uhl. A survey on biometric cryptosystems and cancelable biometrics. EURASIP Journal on Information Security, 2011(1):1–25, 2011.
+- 11. S. Behnia, A. Akhshani, H. Mahmodi, and A. Akhavan. A novel algorithm for image encryption based on mixture of chaotic maps. Chaos, Solitons & Fractals, 35(2):408–419, 2008.
+- 12. C.-L. Chen, C.-C. Lee, and C.-Y. Hsu. Mobile device integration of a fingerprint biometric remote authentication scheme. International Journal of Communication Systems, 25(5):585–597, 2012.
+- 13. G. Chen, Y. Mao, and C. K. Chui. A symmetric image encryption scheme based on 3d chaotic cat maps. Chaos, Solitons & Fractals, 21(3):749–761, 2004.
+- 14. R. Kolerman, J. Nissan, and H. Tal. Combined osteotome-induced ridge expansion and guided bone regeneration simultaneous with implant placement: A biometric study. Clinical Implant Dentistry and Related Research, 16(5):691–704, 2013.
+- 15. M. Martinez-Diaz, J. Fierrez-Aguilar, F. Alonso-Fernandez, J. Ortega-Garcia, and J. A. Siguenza. Hill-climbing and brute-force attacks on biometric systems: A case study in match-on-card fingerprint verification. In Carnahan Conferences Security Technology, Proceedings 2006 40th Annual IEEE International, pp. 151–159. IEEE, 2006.
+- 16. M. Al Ameen, J. Liu, and K. Kwak. Security and privacy issues in wireless sensor networks for healthcare applications. Journal of Medical Systems, 36(1):93–101, 2012.
+- 17. S. O. Southern, K. N. Montgomery, C. W. Taylor, B. H. Weigl, B. V. K. Vijaya Kumar, S. Prabhakar, and A. A. Ross. Sensing technologies for global health, military medicine, disaster response, and environmental monitoring; and biometric technology for human identification VIII. In Proceedings of SPIE, Vol. 8029, pp. 802901–1, 2011.
+- 18. T. Ignatenko and F. M. J. Willems. Biometric systems: Privacy and secrecy aspects. Information Forensics and Security, IEEE Transactions on, 4(4):956–973, 2009.
+- 19. A. Nagar and S. Chaudhury. Biometrics based asymmetric cryptosystem design using modified fuzzy vault scheme. In Pattern Recognition, 2006. ICPR 2006. 18th International Conference on, Vol. 4, pp. 537–540. IEEE, 2006.
+- 20. F. Sun, S. Liu, Z. Li, and Z. Lü. A novel image encryption scheme based on spatial chaos map. Chaos, Solitons & Fractals, 38(3):631–640, 2008.
+- 21. V. Pasham and S. Trimberger. High-speed des and triple des encryptor/decryptor. Xilinx Application Notes, 2001.
+- 22. A. Arakala, S. A. Davis, and K. J. Horadam. Retina features based on vessel graph substructures. In Biometrics (IJCB), 2011 International Joint Conference on, pp. 1–6. IEEE, 2011.
+- 23. M. A. Murillo-Escobar, C. Cruz-Hernández, L. Cardoza-Avedaño, and R. Méndez-Ramrez. A novel pseudorandom number generator based on pseudorandomly enhanced logistic map. Nonlinear Dynamics, 87(1):407–425, 2017.
+- 24. R. L. Rivest, A. Shamir, and L. Adleman. A method for obtaining digital signatures and public-key cryptosystems. Communications of the ACM, 21(2):120–126, 1978.
+- 25. V. Paridar, N. K. Pareek, and K. K. Sud. A new substitution–diffusion based image cipher using chaotic standard and logistic maps. Communications in Nonlinear Science and Numerical Simulation, 14(7):3056–3075, 2009.
+- 26. M. K. Khan, L. Xie, and J. Zhang. Chaos and NDFT-based spread spectrum concealing of fingerprint-biometric data into audio signals. Digital Signal Processing, 20(1):179–190, 2010.
+- 27. L. Kocarev. Chaos-based cryptography: A brief overview. Circuits and Systems Magazine, IEEE, 1(3):6–21, 2001.
+- 28. K. Bae, S. Noh, and J. Kim. Iris feature extraction using independent component analysis. In Audio-and Video-Based Biometric Person Authentication, pp. 838–844. Springer, Berlin, Germany, 2003.
+- 29. M. S. Baptista. Cryptography with chaos. Physics Letters A, 240(1):50–54, 1998.
+- 30. A. Jain, L. Hong, and S. Pankanti. Biometric identification. Communications of the ACM, 43(2):90–98, 2000.
+- 31. M. Barua, M. Shamsul Alam, X. Liang, and X. Shen. Secure and quality of service assurance scheduling scheme for wban with application to ehealth. In Wireless Communications and Networking Conference (WCNC), 2011 IEEE, pp. 1102–1106. 2011.
+- 32. A. K. Jain, A. Ross, and S. Prabhakar. An introduction to biometric recognition. Circuits and Systems for Video Technology, IEEE Transactions on, 14(1):4–20, 2004.
+- 33. M. E. Smid and D. K. Branstad. Data encryption standard: Past and future. Proceedings of the IEEE, 76(5):550–559, 1988.
+- 34. A. K. Awasthi and K. Srivastava. A biometric authentication scheme for telecare medicine information systems with nonce. Journal of Medical Systems, 37(5):1–4, 2013.
+- 35. J. Fierrez, J. Ortega-Garcia, A. Esposito, A. Drygajlo, and M. Faundez-Zanuy. Biometric ID Management and Multimodal Communication. In Joint COST 2101 and 2102 International Conference, BioID_MultiComm 2009, Madrid, Spain, September 16-18, 2009, Proceedings, Vol. 5707. Springer, Berlin, Germany, 2009.
+- 36. A. H. Kolk, K. N. Montgomery, S. Prabhakar, A. A. Ross, S. O. Southern, C. W. Taylor, and B. V. K. Vijaya Kumar. Sensing technologies for global health, military medicine, disaster response, and environmental monitoring II; and biometric technology for human identification IX. In Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 8371, 2012.
+- 37. S. Krishna and C. Owen. Security chip architecture and implementations for cryptography acceleration, November 29, 2005. US Patent 6,971,006.
+- 38. G. Ye. Image scrambling encryption algorithm of pixel bit based on chaos map. Pattern Recognition Letters, 31(5):347–354, 2010.
+- 39. M. S. Tavazoei and M. Haeri. Comparison of different one-dimensional maps as chaotic search pattern in chaos optimization algorithms. Applied Mathematics and Computation, 187(2):1076–1085, 2007.
+- 40. A. Vélez. Insecure identities: The approval of a biometric id card in mexico. *Surveillance & Society*, 10(1):42–50, 2012.
+- 41. S. Saleem, S. Ullah, and K. Sup Kwak. Towards security issues and solutions in wireless body area networks. In *Networked Computing (INC), 2010 6th International Conference on*, pp. 1–4. IEEE, 2010.
+- 42. H. Kummert. The PPP triple-DES encryption protocol (3DESE), Internet Engineering Task Force (IETF), RFC 2420 (Proposed Standard), pp. 1–8, 1998.
+- 43. M. M. Yeung and S. Pankanti. Verification watermarks on fingerprint recognition and retrieval. *Journal of Electronic Imaging*, 9(4):468–476, 2000.
+- 44. D. Coppersmith, D. B. Johnson, and S. M. Matyas. A proposed mode for triple-des encryption. *IBM Journal of Research and Development*, 40(2):253–262, 1996.
+- 45. C. Soutar. Biometric system security. White paper, Bioscrypt, http://www.bioscrypt.com, 2002.
+- 46. D. F. Drake and D. B. Williams. Linear, random representations of chaos. *IEEE Transactions on Signal Processing*, 55(4):1379–1389, 2007.
+- 47. G. Qi, G. Chen, S. Du, Z. Chen, and Z. Yuan. Analysis of a new chaotic system. *Physica A: Statistical Mechanics and Its Applications*, 352(2):295–308, 2005.
+- 48. Y. Wang, K.-W. Wong, X. Liao, and G. Chen. A new chaos-based fast image encryption algorithm. *Applied Soft Computing*, 11(1):514–522, 2011.
+- 49. PUB FIPS. 46-3: Data encryption standard (des). *National Institute of Standards and Technology*, 25(10), 1999.
+- 50. D. T. Kaplan and L. Glass. Coarse-grained embeddings of time series: Random walks, gaussian random processes, and deterministic chaos. *Physica D: Nonlinear Phenomena*, 64(4):431–454, 1993.
+- 51. U. Uludag and A. K. Jain. Attacks on biometric systems: A case study in fingerprints. In *Electronic Imaging 2004*, pp. 622–633. International Society for Optics and Photonics, 2004.
+- 52. E. Guillen, L. Alfonso, K. Martinez, and M. Mejia. Vulnerabilities and performance analysis over fingerprint biometric authentication network. In *Proceedings of the World Congress on Engineering and Computer Science*, Vol. 2, 2012.
+- 53. G. Jakimoski and L. Kocarev. Chaos and cryptography: Block encryption ciphers based on chaotic maps. *Circuits and Systems I: Fundamental Theory and Applications, IEEE Transactions on*, 48(2):163–169, 2001.
+- 54. M. A. Murillo-Escobar, C. Cruz-Hernández, F. Abundiz-Pérez, and R. M. López-Gutiérrez. A robust embedded biometric authentication system based on fingerprint and chaotic encryption. *Expert Systems with Applications*, 42(21):8198–8211, 2015.
+- 55. M. Jessa. Designing security for number sequences generated by means of the sawtooth chaotic map. *IEEE Transactions on Circuits and Systems I: Regular Papers*, 53(5):1140–1150, 2006.
+- 56. M. A. Murillo-Escobar, C. Cruz-Hernández, F. Abundiz-Pérez, R. M. López-Gutiérrez, and O. R. Acosta Del Campo. A RGB image encryption algorithm based on total plain image characteristics and chaos. *Signal Processing*, 109:119–131, 2015.
+- 57. L. M. Pecora and T. L. Carroll. Synchronization in chaotic systems. *Physical Review Letters*, 64(8):821, 1990.
+- 58. H. N. Agiza and M. T. Yassen. Synchronization of Rossler and Chen chaotic dynamical systems using active control. *Physics Letters A*, 278(4):191–197, 2001.
+- 59. S. Saleem, S. Ullah, and K. Sup Kwak. A study of IEEE 802.15.4 security framework for wireless body area networks. *Sensors*, 11(2):1383–1395, 2011.

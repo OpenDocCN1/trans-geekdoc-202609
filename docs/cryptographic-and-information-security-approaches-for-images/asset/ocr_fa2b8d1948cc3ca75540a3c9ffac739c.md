@@ -1,0 +1,6 @@
++   24. Y. Zhang, K. Lu, Y. Gao, and M. Wang. Neqr: A novel enhanced quantum representation of digital images. *Quantum Information Processing*, 12(8):2833–2860, 2013.
++   25. Y. Dodis and A. Smith. Entropic security and the encryption of high entropy messages. Cryptology ePrint Archive, Report 2004/219, 2004. http://eprint.iacr.org/2004/219.
++   26. C. E. Shannon. Communication theory of secrecy systems. *Bell System Technical Journal*, 28:656–715, 1949.
++   27. T. Siegenthaler. Correlation-immunity of nonlinear combining functions for cryptographic applications (corresp.). *IEEE Transactions on Information Theory*, 30(5):776–780, 1984.
++   28. H. M. Elkhamchouchi and M. A. Makar. Measuring encryption quality for bitmap images encrypted with rijndael and kamkar block ciphers. In *Proceedings of the Twenty-Second National Radio Science Conference*, 2005. NRSC 2005, pp. 277–284, March 2005.
++   29. M. A. Sutton, J. J. Orteu, and H. Schreier. *Image Correlation for Shape, Motion and Deformation Measurements: Basic Concepts, Theory and Applications*. Springer, New York, 2009.
