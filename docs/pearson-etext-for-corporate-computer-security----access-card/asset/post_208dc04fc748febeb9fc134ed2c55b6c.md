@@ -1,0 +1,353 @@
+
+## I
+- hierarchical data organization, 257–258
+- HIPAA. See Health Insurance Portability and Accountability Act (HIPAA)
+- hiring policies, 80
+- Hitler, Adolf, 42
+- HMACs. See hashed message authentication codes (HMACs)
+- hoaxes, 22
+- hold, defined, 443
+- Holocaust, 42
+- home networks, 521–523
+- home notebooks, 315
+- honeypots, 477, 502–503
+- host
+  - defined, 327, 520
+  - in DMZ, 306–307
+  - firewalls, 304–305
+  - IDS, 498
+- host hardening
+  - defined, 327
+  - elements of, 327–328
+  - group management, 343–346
+  - passwords, creating strong, 349–356
+  - patches, 339–343
+  - permission management, 346–349
+  - security baselines/images for, 328–329
+  - server operating systems, 333–338
+  - system administrators, 331
+  - user management, 343–346
+  - virtualization and, 329–331
+  - vulnerabilities, 339, 356–366
+- host IDs (HIDs), 498
+- host-to-host security, 153
+- host-to-host VPN, 146
+- hotel, 330–331
+- hot sites, 508–509
+- HSM. See hardware security module (HSM)
+- HTML. See Hypertext Markup Language (HTML)
+- HTTP. See Hypertext Transfer Protocol (HTTP)
+- Huawei, 57
+- human access control, 219
+- human issues in cryptography, 116
+- human resource department, 65
+- hush money, 33
+- HVAC (heating, ventilation, and air-conditioning), 225, 508–509
+- hybrid dictionary attacks, 353–354
+- hybrid TCP/IP-OSI standards architecture, 531
+- Hypertext Markup Language (HTML), 400, 554
+- Hypertext Transfer Protocol (HTTP), 175, 297, 554
+- IBM, 102
+- ICMP
+  - see Internet Control Messages Protocol (ICMP), 548
+- ICO. See U.K. Information Commissioner's Office (ICO)
+- identification, 243–244
+- identity, 263–266
+- identity theft, 33–34
+- IDS. See intrusion detection system (IDS)
+- ID10.T, 55
+- IETF. See Internet Engineering Task Force (IETF)
+- if-then format, 289–290
+- IIS. See Internet Information Server (IIS)
+- image backup, 425
+- image resolutions, 227
+- image spam, 400
+- IMAP, 554
+- imperfect duty, 42
+- implementation guidance, 81
+- impostors, 123
+- in-band SQL injection, 385
+- incident
+  - accuracy in, 477–475
+  - apology for, 481–482
+  - business continuity planning for, 503–507
+  - containment of, 479–480
+  - defined, 4
+  - disasters, 474
+  - false alarms, 474
+  - intrusion detection systems for, 493–503
+  - intrusion response process for major, 478–493
+  - IT disaster recovery, 507–510
+  - major, 474
+  - planning for, 475–476
+  - postmortem evaluation following, 484
+  - punishments for, 482–484
+  - recovery from, 480–481
+  - rehearsal for, 476
+  - severity of, 473–475
+  - speed and, 477–475
+- incremental backup, 427–428
+- indirect attack, 174
+- indirect DoS attack, 174–175
+- individual-based access control, 218–219
+- individual log files, 499
+- industrial espionage, 11
+- Industrial Revolution, 13
+- industry accreditation, 61
+- inferential SQL injection, 385
+- information, defined, 422
+- information assurance, 68
+- Information Systems Audit and Control Association (ISACA), 99
+- information technology (IT)
+  - auditing, 65
+  - department, 11
+  - dependency on, 1
+  - disaster recovery, 507–510
+  - independence from, 64
+  - organizational security within, 63–64
+  - security and, 64
+  - security department, 64
+  - security policies on, 1
+- information technology (IT) Governance Institute, 98
+- information triangulation, 456–458
+- ingress filtering, 278, 289
+- inherent network security, 528–529
+- inheritance, 347–348
+- initial authentication, 123, 125–128
+- initial discovery meetings, 442
+- initial handshaking stages, 122–123
+- inner authentication, 200
+- installation of patches, mechanics of, 341
+- instant messaging, 411
+- integrated log files, 495, 499–500
+- integrity, 3–4
+- intellectual property (IP), 13–14
+- intellectual property (IP) address, 24, 537
+- intellectual property theft, 12, 13–14, 32–33
+- interactive manual log analysis, 495
+- intermediaries, 175–178
+- internal auditing, 65
+- Internal Control-Internal Framework (COSO), 96
+- internal firewall, 278, 304, 315
+- internal hacker, 315
+- internal harm of unauthorized network access, 193–194
+- internal hosts, compromised, 315
+- internal rate of return (IRR), 71
+- international gangs, 31
+- international law, 487–489
+- International Organization for Standardization (ISO), 531
+- International Telecommunications Union-Telecommunications Standards Sector (ITU-T), 531
+- Internet, 520, 525–528
+- internet
+  - defined, 520, 530
+  - employee, abuse by, 12, 14–15
+  - static packet filtering on, 282
+- Internet access line, 522
+- Internet Control Messages Protocol (ICMP)
+  - defined, 548
+  - echo, 24
+  - echo probes, 313
+  - open connections, attempts to, 287
+  - TCP/IP supervisory standards, 548–549
+- Internet Engineering Task Force (IETF), 530
+- Internet Information Server (IIS), 377, 388
+- Internet Official Protocol Standards, 530
+- Internet Options, 398
+- Internet Protocol (IP), 535–539
+  - defined, 535
+- IP address, 537
+- IPsec, 539
+- IPv4, 535–537
+- IPv6, 152, 538–539
+- masks, 538
+- networks, 535–539
+- Internet Protocol security (IPsec), 151–156, 539
+  - attractions of, 151–152
+  - cryptography and, 151–156
+  - defined, 151
+  - in IPv4, 152
+  - in IPv6, 152
+  - policy servers, 156
+  - SAs for, 155–156
+  - transport mode, 152–154
+  - tunnel mode for, 154–155
+- Internet Protocol telephone, 404
+- Internet Security Threat Report 2019, 17
+- Internet service providers (ISPs), 526
+- internetworking standards, 534–535
+- "in the clear," 350
+- intransitive trust, 260
+- intrusion detection system (IDS), 299–301
+  - automated analysis by, 494
+  - defined, 299, 493
+  - distributed, 495–496
+  - false positives, 300–301
+  - firewalls, 299–301
+  - functions of, 493–495
+  - heavy processing requirements, 301
+  - honeypots, 502–503
+  - host, 498
+  - for incidents, 493–503
+  - interactive manual log analysis, support for, 495
+  - log files, 499–501
+  - logging (data collection), 493–494
+  - log summary reports, 495
+  - network, 497–498
+- intrusion prevention system (IPS), 301–302
+- intrusion prevention systems, 301–302
+- intrusion response process, 478–493
+  - analysis, 478
+  - apology, 481–482
+  - civil law, 485–486
+  - computer forensics, 490–491
+  - confidentiality in message transmission, 492
+  - containment, 479–480
+  - criminal law, 485–486
+  - CSIRT, organization of, 484–485
+  - damage thresholds, 491–492
+  - denial-of-service attacks, 491
+  - detection, 478
+  - escalation, 478
+  - Federal Rules of Evidence, 490–491
+  - hacking, 491
+  - international law, 487–489
+  - jurisdictions, 486
+  - legal considerations, 485
+  - local laws, 487
+  - malware attacks, 491
+  - postmortem evaluation, 484
+  - punishment, 482–484
+  - recovery, 480–481
+  - U.S. federal cybercrime laws, 491
+  - U.S. Federal Judicial System, 486–487
+  - U.S. state laws, 487
+- IoT devices, 315
+- IP. See intellectual property (IP); Internet Protocol (IP)
+- IPS. See intrusion prevention system (IPS)
+- IPsec. See Internet Protocol security (IPsec)
+- iris recognition, 246–247
+- IRR. See internal rate of return (IRR)
+- irreversible hashing, 126
+- ISACA. See Information Systems Audit and Control Association (ISACA)
+- ISO. See International Organization for Standardization (ISO)
+- ISO/IEC 27000, 84, 95, 99–100
+- ISO/IEC 27001, 100
+- ISO/IEC 27002, 99–100
+- ISO/IEC 27004, 100
+- ISO/IEC 27005, 100
+- ISO/IEC 27007, 100
+- ISO/IEC 27039, 100
+- ISO/IEC 27043, 100
+- ISPs. See Internet service providers (ISPs)
+- IT. See information technology (IT)
+- ITU-T. See International Telecommunications Union-Telecommunications Standards Sector (ITU-T)
+- IV. See 24-bit initialization vector (IV)
+
+## J
+- Jacob, Beth, 9
+- Java applets, 395
+- JavaScript, 395
+- jurisdictions, 486
+
+## K
+- Kant, Immanuel, 42
+- Kashmir, 281–282
+- Katz v. United States (1967), 94
+- Kerberos, 255–256
+- Kerckhoffs' Law, 110
+- kernel level, 336
+- key-hashed method authentication code (HMAC), 141–143
+- key/keying, 110
+  - 56-bit, size of, 119
+  - cryptography, stage of, 129–133
+  - defined, 110, 123, 447
+  - escrow, 454
+  - length, 114–115, 130–131
+  - private, 129
+  - public, 129–131
+  - secrecy of, 110
+  - session, 129
+  - symmetric, 131–133
+- keyloggers, 20
+- keystroke capture program, 355
+- keystroke loggers, 20
+- kickbacks, 85
+- known passwords, 233
+- Korea Credit Bureau, 6
+
+## L
+- LAN. See local area network (LAN)
+- LDAP. See Lightweight Directory Access Protocol (LDAP)
+- legacy security technologies, 75
+- legal archiving requirements, 441
+- legal department, 65
+- Lightweight Directory Access Protocol (LDAP), 258
+- limiting granularity, 448
+- LinkedIn, 7
+- linking attributes, 456
+- Linux, 337, 341. See also UNIX (Linux) Servers
+- live tests, 476
+- loading in secure areas, 224
+- local access, limiting, 186
+- local area network (LAN), 523–524
+  - connections, 187
+  - defined, 523
+  - security with, 198–200, 206–208
+- local backup, 428
+- Local Users and Groups, 344
+- lock picking, 270
+- log entry, 499
+- log file, 499–501
+  - auditing of entries, 253–254
+  - defined, 253, 278
+  - IDS, 499–501
+  - individual, 499
+  - integrated, 499–500
+  - manual analysis of, 500
+    - time-stamped events, 499
+- logging, 253, 278, 493–494
+- logins, 450
+- login screen bypass, 381
+- log reading, 253–254
+- log summary reports, 495
+- loss, 236–237
+- loss of data, prevention of, 455–464
+- lost passwords, 231–232
+
+## M
+- MAC address, 207
+- magnetic stripe cards, 235
+- magnetic tape, 431
+- main border firewalls, 304
+- major incidents, 474
+- major policies, 80
+- malformed packets, sending, 179
+- malformed statements on SQL, 385
+- malicious codes, 400
+- malicious links, 397
+- malicious payloads, 18
+- malware
+  - blended threats as, 17
+  - defined, 16
+  - malware writers and, 16
+  - mobile code and, 20, 21
+  - nonmobile, 18
+  - payloads as, 17, 18
+  - ransomware as, 17
+  - rootkits as, 20
+  - social engineering in, 20, 21–22
+  - threats from, 15–21
+  - Trojan horses as, 18–20
+  - viruses as, 16, 17
+  - worms as, 16, 17
+- malware attacks, 407, 491
+- malware writers, 16
+- managed security service provider (MSSP), 67–68
+- management
+  - firewalls, 307–314
+  - frames, defined, 198
+  - organizational security and support of, 64–65
+- patches, servers for, 343
+- permission, 346–349
+- processes, 48–50
+- manager, 460, 495

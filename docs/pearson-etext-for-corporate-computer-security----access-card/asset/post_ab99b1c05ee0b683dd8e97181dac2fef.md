@@ -1,0 +1,373 @@
+
+- processing performance, 501–502
+- production servers, 394–395
+- profiling, 457
+- program for cracking passwords, 228
+- program restoration, 510
+- promiscuous mode, 194
+- promulgation, 88
+- property removal, 225
+- prosecution, 482
+- prosecutor, 485
+- Protect America Act of 2007, 94
+- protected computers, 491
+- protected EAP (PEAP), 200
+- protection
+  - defined, 4
+  - IPsec tunnel mode, 154
+  - plan-protect-respond cycle, 51–52
+  - sniffers, 293
+  - websites, 393–394
+- provable attack packet, 277
+- provisioning, 250
+- proximity access tokens, 236
+- PSDN. *See* public switched data network (PSDN)
+- PSK. *See* pre-shared key (PSK) mode
+- PSTN gateway, 406
+- public access, 224
+- public intelligence gathering, 35
+- public key, 129–131, 249
+- public key encryption
+  - for authentication, 134, 136–137
+  - for confidentiality, 136–137
+  - costs of, 130
+  - defined, 129
+  - ECC, 130
+  - key length for, 130–131
+  - padlock and key analogy for, 130
+  - process for, 129–130
+  - RSA, 130
+  - short message lengths for, 130
+  - symmetric key keying using, 131–132, 131–133
+- public key infrastructure (PKI), 249–251
+- public server, 306
+- public switched data network (PSDN), 524
+- punishment, 482–484
+
+## Q
+- quantum key cracking, 144
+- quantum key distribution, 143
+- quantum security, 143–144
+
+## R
+- racial harassment by/against employee, 12, 14
+- radio frequency ID (RFID), 236
+- radio frequency interference (RFI), 197
+- radio frequency monitoring (RFMON), 194
+- RADIUS servers, 191–192
+- RAID, 431–438. *See also* redundant array of independent disks (RAID) levels
+  - computing parity, 437–438
+  - disk arrays, 432–433
+  - levels of, 433–438
+- magnetic tape, 431
+- no, 433
+- recovery, 436–437
+- RAID 0, 433–434
+- RAID 1, 434–435
+- RAID 5, 435–438
+- rainbow table, 354–355
+- rainbow table, 354
+- RAKBANK, 45–46
+- ransomware, 17, 424
+- RAT. *See* remote access Trojan (RAT)
+- rate limiting, 180–181
+- rationalization, 92
+- RBAC. *See* role-based access control (RBAC)
+- RC4, 118
+- read, defined, 349
+- reading firewall log files, 311–312
+- real-time data transfer, 495–496
+- Real Time Protocol (RTP), 405
+- real-time transfers, 496
+- real-world encryption, 112–113
+- reasonable risk, 68–69
+- recommended practices, 84
+- reconnaissance probes, 23, 24–25
+- record, defined, 446
+- recovery, 480–481
+- recovery point objective (RPO), 435
+- recovery time objective (RTO), 435
+- Red Hat Package Manager (RPM), 341
+- reduced sign-on, 264
+- redundant array of independent disks (RAID) levels, 433
+- reflected attack, 178
+- reflected DoS attack, 178–179
+- registered port, 293
+- registered port number, 545
+- registrar server, 405
+- registration, 405
+- regular log reading, 253
+- rehearsal for incidents, 476
+- re-identification, 456
+- relational databases, 446–448
+- relations, 446
+- relay server, 411
+- remediation server, 364
+- remote access, 146
+- remote access Trojan (RAT), 19
+- remote access VPN, 146, 148–151
+- remote connections, 78
+- remote employees, 316
+- removable media controls, 461
+- replay attack, 133
+- request control, 83
+- requests for comments (RFCs), 530
+- request-to-send (RTS) frame, 198
+- resetting passwords, 231–232
+- resources, 71, 81
+- response, 52–53
+- response packet, 293
+- restoration, 293, 448, 481
+- retention, 440–443
+- return address, 376
+- return on investment (ROI), 71, 72
+- reusable password, 228
+- revocation, 139–140, 250
+- Rex Mundi, 6
+- RFCs. *See* requests for comments (RFCs)
+- RFI. *See* radio frequency interference (RFI)
+- RFID. *See* radio frequency ID (RFID)
+- RFMON. *See* radio frequency monitoring (RFMON)
+- rigidity, 505–506
+- risk
+  - acceptance, 73
+  - assessment of, 96
+  - avoidance, 73
+  - of full identity management, 266
+  - management, 68
+  - of patches, 343
+  - reduction, 73
+  - responding to, 73–74, 96
+  - transference, 73
+- risk analysis
+  - calculations for classic, 69–71
+  - defined, 68
+  - for physical access control, 222
+  - problems with, 71–73
+  - reasonable risk, 68–69
+- Risk Based Security, 2
+- rogue access points, 193
+- ROI. *See* return on investment (ROI)
+- role-based access control (RBAC), 218–219
+- root, 344
+- rootkits, 19, 20
+- router, 497, 526
+- router NIDS, 497
+- row, 446, 448
+- RPM. *See* Red Hat Package Manager (RPM)
+- rpm command, 341
+- RPO. *See* recovery point objective (RPO)
+- RSA, 130
+- RTO. *See* recovery time objective (RTO)
+- RTP. *See* Real Time Protocol (RTP)
+- RTS. *See* request-to-send (RTS) frame
+- Run As command, 344
+- rwx, 349
+
+## S
+- SA. *See* security association (SA)
+- sabotage by employee, 12, 13
+- safeguards, 4
+- safety, 234, 292, 505
+- SAM. *See* security accounts manager (SAM)
+- SAML. *See* Security Assertion Markup Language (SAML)
+- sampling of networks, 521–528
+- sanction, 92
+- sanitization, 450, 464
+- sanitizing, 464
+- Sarbanes-Oxley Act of 2002, 58–60, 91, 96
+- SB1386, 60
+- Schneier, Bruce, 50, 67
+- screening border router, 304
+- scripting languages, 395
+- script kiddie, 28–29
+- SDLC. *See* systems development life cycle (SDLC)
+- SEC, 102
+- secret, defined, 123
+- secure area, 222–224
+- secure computer training, 386
+- secure configurations, 380
+- secured network
+  - access control for, 168–169, 186–188
+  - ARP poisoning, 181–186
+  - availability of, 168
+  - confidentiality of, 168
+  - defined, 193
+  - DoS attacks, 171–181
+  - ethernet security for, 188–192
+  - functionality of, 168
+  - future of, 169–170
+  - goals of creating, 167–171
+  - 802.11i, 207–208
+  - wireless security, 192–207
+  - WPA, 207–208
+- Secure Hash Algorithm (SHA), 126
+- secure manager-agent communication, 496
+- Secure/Multipurpose Internet Mail Extensions (S/MIME), 403
+- Secure Shell (SSH), 554
+- Secure Sockets Layer (SSL), 147–151
+  - administrative privileges on, 150
+  - authentication for, 149
+  - authorized resources on, connection to, 149–150
+  - cryptography and, 147–151
+  - gateways for, 148–151
+  - inexpensive operation with, 148
+  - nontransparent protection, 147–148
+  - perspective on, 150
+  - and remote access VPNs, 148–151
+  - security for, 150, 152
+- security
+  - baselines, 328–329
+  - data, 423
+  - DMZ, 306
+  - EAP for, 198–200
+  - for 802.11, 206
+  - as enabler, 53–54
+  - false, 206–207
+  - goals, 3
+  - within IT, 64
+  - management, 50–51, 363–364
+  - metrics, 88–89
+  - for networks, 528–529
+  - physical access control, 222–228
+  - policies on, 1, 80–81, 360–361
+  - for SSL/TLS, 150, 152
+  - through obscurity, 121
+- security accounts manager (SAM), 350
+- Security Assertion Markup Language (SAML), 263
+- security association (SA), 155–156
+- Security tab, 399
+- segregation of duties, 83
+- selling data, 457–458
+- sending voice between phones, 404–405
+- sensitive data, policies for, 362–363
+- sensitive information clearing, 226
+- separation, 410
+- September 11, 2001 terrorist attacks, 76
+- sequence number, 543
+- sequence number field, 543
+- server
+  - access, 290
+  - disconnection from, 479–480
+  - hardening applications, role in, 378
+  - port numbers on, 545–546
+  - protections, 298
+  - verification, 127–128
+- server operating system, 333–338
+  - host hardening, 333–338
+  - UNIX Servers, 336–338
+  - Windows Server, 333–335
+- service, 309
+- service packs, 340
+- Service set identifier (SSID), 207
+- Session Initiation Protocol (SIP), 405
+- session key, 129
+- severity of incidents, 473–475
+- sexual harassment by/against employee, 12, 14
+- SHA. See Secure Hash Algorithm (SHA)
+- shadow file, 351
+- shadowing, 426
+- shared accounts, 229–230
+- shared keys, 201, 204
+- shells, 338
+- Shih, Yi-Chi, 11
+- short message lengths, 130
+- shoulder surfing, 26, 355
+- signaling, 405
+- signing, 136
+- simple cipher, 110–112
+- Simple Mail Transfer Protocol (SMTP), 554
+- Simple Network Management Protocol (SNMP), 54, 411, 552–553
+- single command execution, 397
+- single-family home, 330
+- single loss expectancy, 69
+- single networks standard, 532–534
+- single point of entry, 222
+- single point of vulnerability, 76–77
+- single sign-on (SSO), 264
+- SIP. See Session Initiation Protocol (SIP)
+- SIP proxy server, 405–406
+- site-to-site VPN, 146–147
+- skill levels of hackers, 27, 28–29
+- Skype, 410
+- smart cards, 236
+- Smart Plugs, 333
+- S-MIME. See Secure/Multipurpose Internet Mail Extensions (S/MIME)
+- SMTP. See Simple Mail Transfer Protocol (SMTP)
+- Smurf flood, 178–179
+- snap-ins, 334
+- sniffers, 292–293
+- SNMP. See Simple Network Management Protocol (SNMP)
+- Snowden, Edward, 56–57
+- SNY flood, 174–175
+- social engineering
+  - attacks on, 21, 231
+  - in hack, 26–27
+  - hackers and, 26–27
+  - in malware, 20, 21–22
+  - passwords and, 231
+- social networking, 462
+- socket, 286, 546
+- soft phone, 404
+- software, 387, 481
+- source, 309
+- spam, 21, 400, 401–402
+- spam over IP telephony (SPIT), 408
+- spear phishing, 7, 22
+- special access, 451
+- Spectre, 332
+- speed, 475–477
+- SPI. See stateful packet inspection (SPI)
+- SPIT. See spam over IP telephony (SPIT)
+- spoofing, 23, 25–26, 174
+- spreadsheets, 444–445
+- spreadsheet vault servers, 444
+- spread spectrum transmission, 206
+- spyware, 19, 20, 360
+- SQL. See Structured Query Language (SQL)
+- SSD, self-encrypting, 117
+- SSH. See Secure Shell (SSH)
+- SSID. See Service set identifier (SSID)
+- SSL. See Secure Sockets Layer (SSL)
+- SSO. See single sign-on (SSO)
+- stack, 376
+- stack entry, 376
+- stack overflow, 376
+- stand-alone NIDS, 497
+- standard
+  - architecture, 529–532
+  - configurations, 363–364
+  - defined, 83
+  - for network security, 529
+  - permissions, 347
+  - VPN, 148–149
+- Starwood Hotels, 10
+- state, 285
+- stateful packet inspection (SPI), 284–292
+  - application content filtering in, 296–297
+  - connections, for representing, 286
+  - costs of, 292
+  - defined, 284
+  - dominance of, 292
+  - firewalls, 284–292
+  - open connections, attempts to, 286–291
+  - operation of, 284–286
+  - perspectives on, 292
+  - safety with, 292
+  - within two states, 285–286
+- static IP addresses, 550
+- static packet filtering, 282–284
+- static tables, 185–186
+- stealing passwords, 351
+- Steinhafel, Gregg, 9
+- storage, 502
+- stored procedures, 450
+- storing passwords, 350–351
+- strings, 385
+- striped set, 434
+- striping, 434
+- strong passwords, creating, 349–356
+- structural information, 448
+- Structured Query Language (SQL), 383–385
+- Structured Query Language (SQL) injection, 383–385
+  - database access control, 449–450

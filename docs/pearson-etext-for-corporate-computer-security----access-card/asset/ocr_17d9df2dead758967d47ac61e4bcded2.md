@@ -1,0 +1,34 @@
+# # Security Ethics
+
+# ## Free Apps For Data
+
+You’re sitting in your Introduction to MIS class, and the professor starts talking about how profitable software development can be. He points out that billionaires like Bill Gates (Microsoft), Larry Ellison (Oracle), Larry Page (Google), and Mark Zuckerberg (Facebook) all made their fortunes by developing useful software. But a vocal classmate jumps in and points out that he’s never paid any of those people a penny. He uses Google Search, Gmail, and Facebook all for free. Yes, he uses Microsoft Office, but it’s the free online version through OneDrive. Even the apps on his smartphone are free.
+
+Then comes the perennial question, which also happens to be a major point of frustration for the tech industry: How do you make money from free apps? The professor says something about capturing market share, potential income, and future innovation. You’re not buying it. You’re interested in real income, not *potential* income.
+
+# ## Nick the Data Broker
+
+The person sitting next to you, Nick, starts smiling broadly and nods his head. He’s in your group for your big class project. He leans over and whispers, “If you’re not paying for it, you are the product. Data is where you make money, not software. Give them the software, take the data, and make the money. It’s simple.”
+
+You’re a little confused at first. But then you think back to last Wednesday when you first met Nick. He said he was coming back to school to get a degree in MIS because he needed the technical knowledge for his new job with his brother’s company. He explained that his brother was a data broker (sometimes called an information broker). He buys data about individuals from companies and then sells it to other companies for a profit. It sounded like they were doing really well. Before you could even ask if it was legal,
+
+Nick quipped, “Yes, of course it’s legal. Everyone does it.” He had obviously gotten this question before.
+
+But was Nick right? He isn’t a billionaire like Bill Gates. Nick was only concerned with buying and selling data. He wasn’t interested in application development. But he did make a good point, and it got you thinking. What if you started a business that made applications that were designed to collect individual data? You could make dozens of useful apps, collect individual data, and then sell it to Nick.
+
+But what data would Nick pay for? How much of it could you get? He wouldn’t care about gaming data. But he would pay for data about user behavior which websites they visit, where they’re located, who their friends are, and what they purchase.
+
+# ## Flashlight Apps
+
+At lunch, you do a few searches about how mobile applications can access data on smartphones. It turns out that users just have to grant the application permission(s), and it can access *any* data on the phone. Could that be right? *Any* data? This could be a gold mine. You get excited at the prospect of harvesting thousands of terabytes of data and selling them to Nick.
+
+But then you find a threat report by SnoopWall looking at the permissions required by the top 10 flashlight apps for Android smartphones.¹⁴ The results were shocking. All of these apps did more than just turn a light on and off. The table lists the permissions required by each app. The bottom three rows show the changes in the number of permissions from 2013, 2014, 2016, and 2018. Why would your flashlight need your GPS coordinates? Who was getting this data? What were they using it for? All of a sudden, these free apps don’t look as attractive to you—as a consumer. Someone already stole your idea—and your data.
+
+| Permissions | Super-Bright LED Flashlight | Brightest Flashlight Free | Brightest LED Flashlight | Flashlight | High-Powered Flashlight | Tiny Flashlight + LED |
+|---|---|---|---|---|---|---|
+| Take pictures and videos | X | X | X | X | X | X |
+| Receive data from Internet | X | X** | X |  | X | X** |
+| Control flashlight | X | X | X | X* | X | X |
+| Change system display settings | X** |  | X** |  | X** |  |
+| Modify system settings | X** |  | X** |  | X** |  |
+| Prevent device from sleeping | X | X | X | X* | X | X |
