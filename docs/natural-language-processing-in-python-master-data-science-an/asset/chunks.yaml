@@ -1,0 +1,4082 @@
+- raw: '
+
+
+    Natural Language Processing in Python
+
+
+    Master Data Science and Machine Learning for spam detection, sentiment analysis,
+    latent semantic analysis, and article spinning
+
+
+    By: The LazyProgrammer ([http://lazyprogrammer.me](http://lazyprogrammer.me))
+
+
+    [Introduction](../Text/part0001.html#UGI1-409c51404c584781914e8a398e53e48b)
+
+
+    [Chapter 1: What is NLP all about?](../Text/part0002.html#chapter-2)
+
+
+    [Chapter 2: Common NLP operations](../Text/part0003.html#2RHM1-409c51404c584781914e8a398e53e48b)
+
+
+    [Chapter 3: Build your own spam detector](../Text/part0004.html#3Q281-409c51404c584781914e8a398e53e48b)
+
+
+    [Chapter 4: Build your own sentiment analysis tool](../Text/part0005.html#chapter-5)
+
+
+    [Chapter 5: Exploration of NLTK](../Text/part0006.html#chapter-6)
+
+
+    [Chapter 6: Latent Semantic Analysis](../Text/part0007.html#chapter-7)
+
+
+    [Chapter 7: Build your own article spinner](../Text/part0008.html#chapter-8)
+
+
+    [Conclusion](../Text/part0009.html#chapter-9)
+
+
+    # Introduction
+
+
+    Recently, Microsoft’s Twitter bot “Tay” was released into the wild, and quickly
+    began making racist and hateful statements after learning from other Twitter users.
+    The technology behind this? Natural language processing.
+
+
+    Natural language processing is the use of machine learning algorithms for problems
+    that involve text.
+
+
+    This is one of the most important problems of our day because a lot of the Internet
+    is made up of text. With NLP, we can analyze it, understand it, categorize it,
+    and summarize it - and do it all automatically.
+
+
+    Do you ever wonder why you get much less spam in your inbox these days compared
+    to 10 years ago? What kinds of algorithms are people using to do spam detection?
+    How can they take words in an email and know how to compute whether or not it’s
+    spam? In this book you are going to build your very own spam detector.
+
+
+    Did you know people have already used Twitter to determine the current sentiment
+    about a particular company to decide whether or not they should buy or sell stocks?
+    Having a machine that can decide how people feel about something is immensely
+    useful and immediately applicable to revenue optimization. In this course you
+    are going to build your own sentiment analyzer.
+
+
+    Are you an Internet marketer or are you interested in SEO? Have you ever wanted
+    to know how you can automatically generate content? In this course we are going
+    to take a first crack at building your own article spinner. You’ll learn to write
+    programs that can take an article as input and spit out a similar article with
+    different words as output. This can save you tons of time and thousands of dollars
+    if you’re paying someone to write content for you.
+
+
+    Natural Language Processing, or as it is often abbreviated, NLP - is the use of
+    programming and math to do language-based tasks.
+
+
+    If you have Windows or iOS then you have NLP right in front of you! Cortana and
+    Siri are applications that take what you say and turn it into something meaningful
+    that can be done programmatically.
+
+
+    The key point: NLP is highly practical. NLP is everywhere.
+
+
+    This book is split up into multiple sections based on the various practical tasks
+    that you can do with NLP:
+
+
+    Before we do any real programming exercises we’ll look at common NLP tasks (some
+    of these we will actually code ourselves, the others are mentioned so you at least
+    know they exist). We will then look at common data pre-processing techniques used
+    for text. As you’ll see, this preprocessing is what will actually take up a majority
+    of your time when you’re doing NLP.
+
+
+    The first programming exercise we’ll do is look at how to build a spam detector.
+    Your email inbox uses this, so it’s clearly very useful and it’s been the subject
+    of study for a long time.
+
+
+    Next we’ll look at “sentiment analysis” and you’ll build your own “sentiment analyzer”.
+    This is how a computer can judge how positive or negative some text is based on
+    the words and phrases that are used. This is also immediately practical - some
+    people have analyzed Twitter feeds to predict whether a stock would go up or down.
+
+
+    After that we’ll look at the NLTK library. This is a very popular library that
+    solves a lot of fundamental problems in NLP - and you can use it in conjunction
+    with other libraries in your data analysis pipeline.
+
+
+    Next we’ll look at “latent semantic analysis”. This is basically doing dimensionality
+    reduction on text - and it helps us solve the problem of 2 words having the same
+    meaning. It also helps us interpret our data and save on computation time.
+
+
+    Lastly, we’ll talk about one of the most popular applications of NLP - article
+    spinning. This is very practical for internet marketers and entrepreneurs. As
+    you know, your search rankings in Google and other search engines are affected
+    negatively when you have duplicate content - so it would be great if you could
+    alter an article you wrote just enough, so that you could put it in 2 different
+    places on the web, without being penalized by Google.
+
+
+    This book requires a minimal amount of math to understand. If there is math, it’s
+    for your own interest only, but it’s not vital to completing the programming parts.
+    Of course, you will still need to know how to code, since NLP is primarily in
+    the domain of programming, but I’ve designed this book to require a lot less math
+    than some of my other books on deep learning and neural networks.
+
+
+    All of the materials required to follow along with this book can be downloaded
+    for FREE. We use Python, NLTK, Sci-kit learn, and Numpy, all of which can be installed
+    using simple commands.
+
+
+    #  
+
+
+    # Chapter 1: What is NLP all about?
+
+
+    Since NLP is really just the application of machine learning and software engineering
+    to text and language problems, I think it’s very important in this case to talk
+    about - what are these applications? And how are they useful in real life?
+
+
+    In this chapter I’m going to go through some real applications of NLP and talk
+    about how good we are at solving these problems with current technology. A lot
+    of this book is going to skip over the theory and instead we’ll talk about, “how
+    can we code up our own solutions to these NLP problems using existing libraries?”
+    We’ll go through a few problems where the state of the art is very good, then
+    we’ll go through some problems where the state of the art is just pretty good
+    but not excellent, and then we’ll go through some problems where the state of
+    the art “kind of works” but there is definitely room for improvement.
+
+
+    Here are some problems that we are currently very good at solving:
+
+
+    Spam detection: I almost never get spam anymore in my email. Gmail even has algorithms
+    that can split up your data into different tabs, such as the “social” tab for
+    social media related posts, and the “promotions” tab for marketing emails.
+
+
+    Parts of speech (POS) tagging: We want to know which terms in a sentence are adverbs,
+    adjectives, nouns, pronouns, verbs, and so on. We are very good at classifying
+    these.
+
+
+    Input:
+
+
+    “The quick brown fox jumps over the lazy dog.”
+
+
+    Output:
+
+
+    (Determiner, adjective, adjective, noun, plural noun, …)
+
+
+    There are many online tools out there that can demonstrate this, for example:
+    [http://parts-of-speech.info/](http://parts-of-speech.info/)
+
+
+    Named entity recognition (NER):
+
+
+    Input: “Jim bought 300 shares of Apple in 2006.”
+
+
+    We want to be able to recognize that “Jim” is a person, “Apple” is an organization,
+    and “2006” is a date.
+
+
+    There are some problems that we are pretty good at but not great at:
+
+
+    Sentiment analysis: This is something we’re going to cover in this course. Let’s
+    say you’re looking at hotel reviews on the web, and you want to know if overall,
+    people think this hotel is good or bad. Well you can do this by reading the reviews
+    yourself - but if we want the machine to assign a positive or negative score,
+    it’s not that simple. One problem (among many others) is that machines can’t easily
+    detect sarcasm. So if you say something where the words mean the opposite of their
+    true definition, then this will confuse the machine.'
+  fmt: '
+
+    # Natural Language Processing in Python
+
+
+    Master Data Science and Machine Learning for spam detection, sentiment analysis,
+    latent semantic analysis, and article spinning
+
+
+    By: The LazyProgrammer ([http://lazyprogrammer.me](http://lazyprogrammer.me))
+
+
+    - [Introduction](../Text/part0001.html#UGI1-409c51404c584781914e8a398e53e48b)
+
+    - [Chapter 1: What is NLP all about?](../Text/part0002.html#chapter-2)
+
+    - [Chapter 2: Common NLP operations](../Text/part0003.html#2RHM1-409c51404c584781914e8a398e53e48b)
+
+    - [Chapter 3: Build your own spam detector](../Text/part0004.html#3Q281-409c51404c584781914e8a398e53e48b)
+
+    - [Chapter 4: Build your own sentiment analysis tool](../Text/part0005.html#chapter-5)
+
+    - [Chapter 5: Exploration of NLTK](../Text/part0006.html#chapter-6)
+
+    - [Chapter 6: Latent Semantic Analysis](../Text/part0007.html#chapter-7)
+
+    - [Chapter 7: Build your own article spinner](../Text/part0008.html#chapter-8)
+
+    - [Conclusion](../Text/part0009.html#chapter-9)
+
+
+    # Introduction
+
+
+    Recently, Microsoft’s Twitter bot “Tay” was released into the wild, and quickly
+    began making racist and hateful statements after learning from other Twitter users.
+    The technology behind this? Natural language processing.
+
+
+    Natural language processing is the use of machine learning algorithms for problems
+    that involve text.
+
+
+    This is one of the most important problems of our day because a lot of the Internet
+    is made up of text. With NLP, we can analyze it, understand it, categorize it,
+    and summarize it - and do it all automatically.
+
+
+    Do you ever wonder why you get much less spam in your inbox these days compared
+    to 10 years ago? What kinds of algorithms are people using to do spam detection?
+    How can they take words in an email and know how to compute whether or not it’s
+    spam? In this book you are going to build your very own spam detector.
+
+
+    Did you know people have already used Twitter to determine the current sentiment
+    about a particular company to decide whether or not they should buy or sell stocks?
+    Having a machine that can decide how people feel about something is immensely
+    useful and immediately applicable to revenue optimization. In this course you
+    are going to build your own sentiment analyzer.
+
+
+    Are you an Internet marketer or are you interested in SEO? Have you ever wanted
+    to know how you can automatically generate content? In this course we are going
+    to take a first crack at building your own article spinner. You’ll learn to write
+    programs that can take an article as input and spit out a similar article with
+    different words as output. This can save you tons of time and thousands of dollars
+    if you’re paying someone to write content for you.
+
+
+    Natural Language Processing, or as it is often abbreviated, NLP - is the use of
+    programming and math to do language-based tasks.
+
+
+    If you have Windows or iOS then you have NLP right in front of you! Cortana and
+    Siri are applications that take what you say and turn it into something meaningful
+    that can be done programmatically.
+
+
+    The key point: NLP is highly practical. NLP is everywhere.
+
+
+    This book is split up into multiple sections based on the various practical tasks
+    that you can do with NLP:
+
+
+    Before we do any real programming exercises we’ll look at common NLP tasks (some
+    of these we will actually code ourselves, the others are mentioned so you at least
+    know they exist). We will then look at common data pre-processing techniques used
+    for text. As you’ll see, this preprocessing is what will actually take up a majority
+    of your time when you’re doing NLP.
+
+
+    The first programming exercise we’ll do is look at how to build a spam detector.
+    Your email inbox uses this, so it’s clearly very useful and it’s been the subject
+    of study for a long time.
+
+
+    Next we’ll look at “sentiment analysis” and you’ll build your own “sentiment analyzer”.
+    This is how a computer can judge how positive or negative some text is based on
+    the words and phrases that are used. This is also immediately practical - some
+    people have analyzed Twitter feeds to predict whether a stock would go up or down.
+
+
+    After that we’ll look at the `NLTK` library. This is a very popular library that
+    solves a lot of fundamental problems in NLP - and you can use it in conjunction
+    with other libraries in your data analysis pipeline.
+
+
+    Next we’ll look at “latent semantic analysis”. This is basically doing dimensionality
+    reduction on text - and it helps us solve the problem of 2 words having the same
+    meaning. It also helps us interpret our data and save on computation time.
+
+
+    Lastly, we’ll talk about one of the most popular applications of NLP - article
+    spinning. This is very practical for internet marketers and entrepreneurs. As
+    you know, your search rankings in Google and other search engines are affected
+    negatively when you have duplicate content - so it would be great if you could
+    alter an article you wrote just enough, so that you could put it in 2 different
+    places on the web, without being penalized by Google.
+
+
+    This book requires a minimal amount of math to understand. If there is math, it’s
+    for your own interest only, but it’s not vital to completing the programming parts.
+    Of course, you will still need to know how to code, since NLP is primarily in
+    the domain of programming, but I’ve designed this book to require a lot less math
+    than some of my other books on deep learning and neural networks.
+
+
+    All of the materials required to follow along with this book can be downloaded
+    for FREE. We use `Python`, `NLTK`, `Sci-kit learn`, and `Numpy`, all of which
+    can be installed using simple commands.
+
+
+    # Chapter 1: What is NLP all about?
+
+
+    Since NLP is really just the application of machine learning and software engineering
+    to text and language problems, I think it’s very important in this case to talk
+    about - what are these applications? And how are they useful in real life?
+
+
+    In this chapter I’m going to go through some real applications of NLP and talk
+    about how good we are at solving these problems with current technology. A lot
+    of this book is going to skip over the theory and instead we’ll talk about, “how
+    can we code up our own solutions to these NLP problems using existing libraries?”
+    We’ll go through a few problems where the state of the art is very good, then
+    we’ll go through some problems where the state of the art is just pretty good
+    but not excellent, and then we’ll go through some problems where the state of
+    the art “kind of works” but there is definitely room for improvement.
+
+
+    Here are some problems that we are currently very good at solving:
+
+
+    ## Spam detection
+
+
+    I almost never get spam anymore in my email. Gmail even has algorithms that can
+    split up your data into different tabs, such as the “social” tab for social media
+    related posts, and the “promotions” tab for marketing emails.
+
+
+    ## Parts of speech (POS) tagging
+
+
+    We want to know which terms in a sentence are adverbs, adjectives, nouns, pronouns,
+    verbs, and so on. We are very good at classifying these.
+
+
+    **Input:**
+
+
+    > “The quick brown fox jumps over the lazy dog.”
+
+
+    **Output:**
+
+
+    > (Determiner, adjective, adjective, noun, plural noun, …)
+
+
+    There are many online tools out there that can demonstrate this, for example:
+    [http://parts-of-speech.info/](http://parts-of-speech.info/)
+
+
+    ## Named entity recognition (NER)
+
+
+    **Input:** “Jim bought 300 shares of Apple in 2006.”
+
+
+    We want to be able to recognize that “Jim” is a person, “Apple” is an organization,
+    and “2006” is a date.
+
+
+    There are some problems that we are pretty good at but not great at:
+
+
+    ## Sentiment analysis
+
+
+    This is something we’re going to cover in this course. Let’s say you’re looking
+    at hotel reviews on the web, and you want to know if overall, people think this
+    hotel is good or bad. Well you can do this by reading the reviews yourself - but
+    if we want the machine to assign a positive or negative score, it’s not that simple.
+    One problem (among many others) is that machines can’t easily detect sarcasm.
+    So if you say something where the words mean the opposite of their true definition,
+    then this will confuse the machine.
+
+    '
+  trans: '
+
+
+    # Python 自然语言处理
+
+
+    掌握数据科学与机器学习，用于垃圾邮件检测、情感分析、潜在语义分析与文章重写
+
+
+    作者：The LazyProgrammer ([`lazyprogrammer.me`](http://lazyprogrammer.me))
+
+
+    - 简介
+
+    - 第 1 章：NLP 究竟是做什么的？
+
+    - 第 2 章：常见 NLP 操作
+
+    - 第 3 章：构建你自己的垃圾邮件检测器
+
+    - 第 4 章：构建你自己的情感分析工具
+
+    - 第 5 章：NLTK 探索
+
+    - 第 6 章：潜在语义分析
+
+    - 第 7 章：构建你自己的文章重写器
+
+    - 结语
+
+
+    # 简介
+
+
+    最近，微软的 Twitter 机器人“Tay”被发布到网络上，在向其他 Twitter 用户学习后，迅速开始发表种族主义和仇恨言论。这背后的技术是什么？自然语言处理。
+
+
+    自然语言处理是将机器学习算法应用于涉及文本的问题。
+
+
+    这是当今最重要的问题之一，因为互联网的很大一部分由文本组成。借助 NLP，我们可以分析它、理解它、对其分类并对其进行摘要——且这一切都能自动完成。
+
+
+    你是否想过，为什么现在收件箱里的垃圾邮件比 10 年前少得多？人们在用什么样的算法进行垃圾邮件检测？它们如何获取邮件中的词汇，并计算出它是否为垃圾邮件？在本书中，你将亲手构建一个垃圾邮件检测器。
+
+
+    你是否知道，人们已经利用 Twitter 判断公众对某家公司的当前情绪，以决定是买入还是卖出股票？拥有一台能判断人们对某事物感受的机器，用处极大，且能直接应用于收入优化。在本课程中，你将构建自己的情感分析器。
+
+
+    你是互联网营销人员，还是对 SEO 感兴趣？你是否曾想过如何自动生成内容？在本课程中，我们将初步尝试构建你自己的文章重写器。你将学习编写程序，接收一篇文章作为输入，输出一篇用词不同但含义相似的文章。如果你雇人写作，这能为你节省大量时间和数千美元。
+
+
+    自然语言处理，常缩写为 NLP——即利用编程和数学来完成基于语言的任务。
+
+
+    如果你使用 Windows 或 iOS，那你面前就有 NLP！Cortana 和 Siri 就是将你所说的话转化为可通过编程处理的有意义内容的应用程序。
+
+
+    关键点：**NLP 极其实用。NLP 无处不在。**
+
+
+    本书根据 NLP 可完成的各种实际任务分为多个章节：
+
+
+    在进行真正的编程练习前，我们将先了解常见的 NLP 任务（其中一些我们将亲自编码实现，另一些仅作介绍，让你至少知道它们的存在）。随后我们将探讨文本常用的数据预处理技术。你将看到，这种预处理实际上会占据你做
+    NLP 时的大部分时间。
+
+
+    第一个编程练习是构建垃圾邮件检测器。你的电子邮箱就在用它，所以它显然非常实用，且已被研究了很长时间。
+
+
+    接下来我们将探讨“情感分析”，并构建你自己的“情感分析器”。这是计算机根据使用的词汇和短语，判断文本积极或消极程度的方法。这也极其实用——有人分析 Twitter
+    数据流来预测股票涨跌。
+
+
+    随后我们将了解 `NLTK` 库。这是一个非常流行的库，能解决 NLP 中许多基础问题——你可以在数据分析管道中将其与其他库结合使用。
+
+
+    接下来我们将探讨“潜在语义分析”。这本质上是对文本进行降维——它帮我们解决两个词含义相同的问题。它还能帮助我们解读数据并节省计算时间。
+
+
+    最后，我们将讨论 NLP 最流行的应用之一——文章重写。这对互联网营销人员和企业家非常实用。众所周知，重复内容会对你在 Google 等搜索引擎中的排名产生负面影响——所以如果能对写好的文章进行适度修改，就能将其发布在网络上的两个不同位置，而不受
+    Google 惩罚。
+
+
+    本书理解所需的数学知识极少。如果有数学内容，仅供兴趣参考，并非完成编程部分的关键。当然，你仍需懂得编程，因为 NLP 主要属于编程领域，但我设计本书所需的数学知识比我的深度学习和神经网络类书籍少得多。
+
+
+    跟随本书所需的所有材料均可**免费**下载。我们使用 `Python`、`NLTK`、`Sci-kit learn` 和 `Numpy`，均可通过简单命令安装。
+
+
+    # 第 1 章：NLP 究竟是做什么的？
+
+
+    既然 NLP 实质上是将机器学习和软件工程应用于文本和语言问题，我认为非常有必要讨论——这些应用是什么？它们在现实生活中有何用处？
+
+
+    在本章中，我将介绍 NLP 的一些实际应用，并探讨我们用现有技术解决这些问题的程度如何。本书大部分内容将略过理论，转而讨论“如何利用现有库编写代码解决这些
+    NLP 问题？”我们将先看几个当前技术非常成熟的问题，再看几个技术尚可但不够完美的问题，最后看几个技术“勉强能用”但仍有很大改进空间的问题。
+
+
+    以下是我们目前解决得非常好的问题：
+
+
+    ## 垃圾邮件检测
+
+
+    我的邮箱里几乎不再收到垃圾邮件。Gmail 甚至有算法能将邮件分到不同标签页，如社交媒体相关帖子的“社交”标签、营销邮件的“推广”标签。
+
+
+    ## 词性（POS）标注
+
+
+    我们想知道句子中哪些词是副词、形容词、名词、代词、动词等。我们对这些分类的效果非常好。
+
+
+    **输入：**
+
+
+    > “The quick brown fox jumps over the lazy dog.”
+
+
+    **输出：**
+
+
+    > (冠词, 形容词, 形容词, 名词, 复数名词, …)
+
+
+    网上有许多在线工具可演示此功能，例如：[`parts-of-speech.info/`](http://parts-of-speech.info/)
+
+
+    ## 命名实体识别（NER）
+
+
+    **输入：** “Jim bought 300 shares of Apple in 2006.”
+
+
+    我们希望识别出“Jim”是人名，“Apple”是组织名，“2006”是日期。
+
+
+    有些问题我们解决得不错，但尚未达到完美：
+
+
+    ## 情感分析
+
+
+    这是本课程将涵盖的内容。假设你在网上查看酒店评论，想知道总体上人们认为这家酒店好还是坏。你可以自己阅读评论——但如果想让机器打出正向或负向分数，就没那么简单了。其中一个问题（还有许多其他问题）是机器难以轻易识别讽刺。所以如果你说的话词面意思与真实含义相反，就会让机器困惑。
+
+
+    '
+  toc: []
+- raw: 'Machine translation: This is a tool like Google translate. Take a phrase and
+    convert it through a few different languages. You’ll see that when we return to
+    English, the result won’t make much sense. \[Exercise: Try this on your own\]
+
+
+    Information extraction: This is how iOS is able to add events to your calendar
+    automatically by reading your email and text messages. It’s able to tell that
+    this is a string of text that represents a calendar event.
+
+
+    And here are some problems that we’ve attempted but we’re not close to perfect
+    at all:
+
+
+    Machine conversations: We have apps like Siri and Cortana where you can say simple
+    phrases to command the computer to do something, and that’s actually a very hard
+    problem. There is an extra stage here in addition to just text processing, which
+    is that it has to translate your voice into a string of words. To use Geoff Hinton’s
+    favorite example, “recognize speech”, sounds almost the same as “wreck a nice
+    beach” - but using probabilistic analysis we can conclude that “recognize speech”
+    is more likely.
+
+
+    And it’s even harder for a computer to extract meaning from what you say, and
+    respond with something meaningful in return. You may have heard of something called
+    the “Turing test”, which is a test that will be passed when humans are unable
+    to detect whether they are having a conversation with a human or a machine.
+
+
+    Recently, Microsoft released a bot on Twitter called “Tay”, who was supposed to
+    have the personality of a teenaged girl. Instead, she was manipulated by other
+    Twitter users and eventually become a racist neo-Nazi.
+
+
+    Paraphrasing and summarization: Pretend you work for a news company and everyday
+    people write new articles for your site. You’d like to have little boxes on your
+    home page that put up a nice picture and a little blurb of text that represent
+    the article - how can you summarize the article correctly into a few sentences?
+    If you’ve ever used Pinterest, you’d see that they get this wrong pretty often.
+
+
+    Interesting new progress - word2vec:
+
+
+    word2vec is the application of neural networks to learn vector representations
+    of words. It has performed very well and can learn relationships such as the famous:
+
+
+    “woman” + “king” - “man” = “queen”
+
+
+    It shows us that we can extract an underlying meaning of concepts and relationships
+    from language.
+
+
+    In fact that’s what they are working on at Google - to create things called “thought
+    vectors”, where actual ideas can be represented in a vector space.
+
+
+    So I hope this gives you a sense of the wide variety of very real and very useful
+    applications that NLP can be used for.
+
+
+    Why is NLP hard?
+
+
+    Because language is ambiguous!
+
+
+    You may have heard the phrase that math is the universal language. This is true
+    because math is precise. In language, you have synonyms, two words that mean the
+    same thing, and you have homonyms, two words that sound the same or are spelled
+    the same that mean different things.
+
+
+    Some examples of ambiguity:
+
+
+    “Republicans Grill IRS Chief Over Lost Emails”
+
+
+    This type of sentence has great possibilities because of its two different interpretations:
+
+
+    \* Republicans harshly question the chief about the emails
+
+
+    \* Republicans cook the chief using email as the fuel
+
+
+    Another example:
+
+
+    “I saw a man on a hill with a telescope.”
+
+
+    It seems like a simple statement, until you begin to unpack the many alternate
+    meanings:
+
+
+    \*There’s a man on a hill, and I’m watching him with my telescope.
+
+
+    \*There’s a man on a hill, who I’m seeing, and he has a telescope.
+
+
+    \* There’s a man, and he’s on a hill that also has a telescope on it.
+
+
+    \* I’m on a hill, and I saw a man using a telescope.
+
+
+    Another reason why NLP is hard is because if you’re looking at something like
+    Twitter - which by the way, many people have applied NLP to - most people on Twitter
+    don’t even use real English words! Because of the character limit people use short
+    forms like “U”, “UR”, “LOL”. What about “netflix and chill”?
+
+
+    One last note:
+
+
+    If you don’t want to code along in the examples and you just want to download
+    and run the code, go to my github: [https://github.com/lazyprogrammer/machine\_learning\_examples/tree/master/nlp\_class](https://github.com/lazyprogrammer/machine_learning_examples/tree/master/nlp_class)
+
+
+    #  
+
+
+    # Chapter 2: Common NLP operations
+
+
+    In this chapter we are going to talk about some common data pre-processing operations
+    we do on text data, so that it “fits” with typical machine learning algorithms
+    like Naive Bayes, Decision Trees, Logistic Regression, and so on.
+
+
+    The main idea is that all these algorithms work on vectors of numbers, which is
+    definitely not what text is.
+
+
+    So how do we turn text into vectors of numbers?
+
+
+    Bag of words
+
+
+    The simplest way to convert text to numbers is the “bag of words” technique. This
+    means there is no order to the words. It’s just saying “here are the words in
+    this document”.
+
+
+    The simplest way to do this is to have a vector that just tells us, “yes this
+    word is there”, or “no this word is not there”.
+
+
+    For example, if we wanted to represent a sentence “Dog eat dog” - and my vocabulary
+    consists of the words:
+
+
+    Cat
+
+
+    Dog
+
+
+    Fish
+
+
+    Rabbit
+
+
+    Eat
+
+
+    Then my vector representation would be (0, 1, 0, 0, 1).
+
+
+    Notice what happened here. I assigned a word to each location in the vector.
+
+
+    The 0th position is “cat”, the 1st position is “dog”, the 2nd position is “fish”,
+    and so on.
+
+
+    This technique is also known as “one-hot encoding”, and is used generally when
+    you have categorical variables in data science and machine learning.
+
+
+    We do this for the same reason we do in NLP - categories aren’t numbers, and we
+    need to turn them into numbers.
+
+
+    You may also have come across this idea by the name of “indicator” variables.
+    Same thing.
+
+
+    Word frequency
+
+
+    Notice that we lose data when we use indicator variables, because it doesn’t tell
+    is how often a word showed up, just whether it did or not.
+
+
+    You can imagine that if the words “Einstein” and “physics” show up frequently
+    in a document, it’s probably a document about physics and Albert Einstein. However,
+    if you see Einstein just once, it might not have anything to do with Albert Einstein
+    and physics, because someone could just be saying something like, “Nice one, Einstein”
+    sarcastically.
+
+
+    In this case, “dog eat dog” becomes:
+
+
+    (0, 2, 0, 0, 1)
+
+
+    With many machine learning algorithms, we like our data to be normalized first.
+    Sometimes this means subtracting the mean and dividing by the standard deviation,
+    sometimes it means transforming all the values so that they are between 0 and
+    1.
+
+
+    With NLP, it’s the latter, since a negative frequency on a word wouldn’t make
+    much sense anyway.
+
+
+    In this case, “dog eat dog” becomes:
+
+
+    (0, 0.67, 0, 0, 0.33)
+
+
+    TF-IDF
+
+
+    Word frequency is still not perfect.
+
+
+    Think about words like “the”, “is”, and “it”.
+
+
+    These are common words that will probably show up in every document. Being so
+    common, they tell you almost nothing about what the document is actually about.
+    i.e. If I tell you the word “the” shows up 500 times, could you predict the topic
+    of the document?
+
+
+    TF-IDF is a technique that mitigates this problem.
+
+
+    TF stands for “term frequency”, and IDF stands for “inverse document frequency”.
+
+
+    You can tell by the above definitions that this measure will be larger when a
+    term shows up more often, and it will be smaller if it shows up in a wide variety
+    of documents.
+
+
+    We usually don’t use the raw counts to measure these, but rather we take the log().
+
+
+    There is no “official”, set way to do this.
+
+
+    The TF(t, d) part can be calculated as follows:
+
+
+    Binary: 0, 1 indicator (as discussed above)
+
+
+    Raw frequency: f(t, d) = number of times term t shows up in document d
+
+
+    Log normalized: log(1 + f(t, d))
+
+
+    The inverse document frequency also has a few variations, most of which use the
+    log() function.
+
+
+    Regular IDF: log(N / n(t)), where n(t) is the number of documents that contain
+    term t
+
+
+    Smoothed IDF: log(1 + N/n(t))
+
+
+    Probabilistic IDF: log( (N - n(t)) / n(t) )
+
+
+    N x D or D x N?'
+  fmt: '
+
+    # Machine Translation
+
+
+    This is a tool like Google Translate. Take a phrase and convert it through a few
+    different languages. You’ll see that when we return to English, the result won’t
+    make much sense. **Exercise: Try this on your own**
+
+
+    # Information Extraction
+
+
+    This is how iOS is able to add events to your calendar automatically by reading
+    your email and text messages. It’s able to tell that this is a string of text
+    that represents a calendar event.
+
+
+    # Unsolved Problems
+
+
+    Here are some problems that we’ve attempted but we’re not close to perfect at
+    all:
+
+
+    ## Machine Conversations
+
+
+    We have apps like `Siri` and `Cortana` where you can say simple phrases to command
+    the computer to do something, and that’s actually a very hard problem. There is
+    an extra stage here in addition to just text processing, which is that it has
+    to translate your voice into a string of words. To use Geoff Hinton’s favorite
+    example, “recognize speech” sounds almost the same as “wreck a nice beach” - but
+    using probabilistic analysis we can conclude that “recognize speech” is more likely.
+
+
+    And it’s even harder for a computer to extract meaning from what you say, and
+    respond with something meaningful in return. You may have heard of something called
+    the “Turing test”, which is a test that will be passed when humans are unable
+    to detect whether they are having a conversation with a human or a machine.
+
+
+    Recently, Microsoft released a bot on Twitter called “Tay”, who was supposed to
+    have the personality of a teenaged girl. Instead, she was manipulated by other
+    Twitter users and eventually became a racist neo-Nazi.
+
+
+    ## Paraphrasing and Summarization
+
+
+    Pretend you work for a news company and everyday people write new articles for
+    your site. You’d like to have little boxes on your home page that put up a nice
+    picture and a little blurb of text that represent the article - how can you summarize
+    the article correctly into a few sentences? If you’ve ever used Pinterest, you’d
+    see that they get this wrong pretty often.
+
+
+    # Interesting New Progress - word2vec
+
+
+    `word2vec` is the application of neural networks to learn vector representations
+    of words. It has performed very well and can learn relationships such as the famous:
+
+
+    > “woman” + “king” - “man” = “queen”
+
+
+    It shows us that we can extract an underlying meaning of concepts and relationships
+    from language.
+
+
+    In fact, that’s what they are working on at Google - to create things called “thought
+    vectors”, where actual ideas can be represented in a vector space.
+
+
+    So I hope this gives you a sense of the wide variety of very real and very useful
+    applications that NLP can be used for.
+
+
+    # Why is NLP Hard?
+
+
+    Because language is ambiguous!
+
+
+    You may have heard the phrase that math is the universal language. This is true
+    because math is precise. In language, you have synonyms (two words that mean the
+    same thing), and you have homonyms (two words that sound the same or are spelled
+    the same that mean different things).
+
+
+    ## Examples of Ambiguity
+
+
+    **“Republicans Grill IRS Chief Over Lost Emails”**
+
+
+    This type of sentence has great possibilities because of its two different interpretations:
+
+
+    * Republicans harshly question the chief about the emails
+
+    * Republicans cook the chief using email as the fuel
+
+
+    **“I saw a man on a hill with a telescope.”**
+
+
+    It seems like a simple statement, until you begin to unpack the many alternate
+    meanings:
+
+
+    * There’s a man on a hill, and I’m watching him with my telescope.
+
+    * There’s a man on a hill, who I’m seeing, and he has a telescope.
+
+    * There’s a man, and he’s on a hill that also has a telescope on it.
+
+    * I’m on a hill, and I saw a man using a telescope.
+
+
+    Another reason why NLP is hard is because if you’re looking at something like
+    Twitter - which by the way, many people have applied NLP to - most people on Twitter
+    don’t even use real English words! Because of the character limit people use short
+    forms like “U”, “UR”, “LOL”. What about “netflix and chill”?
+
+
+    # One Last Note
+
+
+    If you don’t want to code along in the examples and you just want to download
+    and run the code, go to my GitHub: `https://github.com/lazyprogrammer/machine_learning_examples/tree/master/nlp_class`
+
+
+    # Chapter 2: Common NLP Operations
+
+
+    In this chapter we are going to talk about some common data pre-processing operations
+    we do on text data, so that it “fits” with typical machine learning algorithms
+    like `Naive Bayes`, `Decision Trees`, `Logistic Regression`, and so on.
+
+
+    The main idea is that all these algorithms work on vectors of numbers, which is
+    definitely not what text is.
+
+
+    So how do we turn text into vectors of numbers?
+
+
+    ## Bag of Words
+
+
+    The simplest way to convert text to numbers is the “bag of words” technique. This
+    means there is no order to the words. It’s just saying “here are the words in
+    this document”.
+
+
+    The simplest way to do this is to have a vector that just tells us, “yes this
+    word is there”, or “no this word is not there”.
+
+
+    For example, if we wanted to represent a sentence “Dog eat dog” - and my vocabulary
+    consists of the words:
+
+
+    * Cat
+
+    * Dog
+
+    * Fish
+
+    * Rabbit
+
+    * Eat
+
+
+    Then my vector representation would be `(0, 1, 0, 0, 1)`.
+
+
+    Notice what happened here. I assigned a word to each location in the vector.
+
+
+    The 0th position is “cat”, the 1st position is “dog”, the 2nd position is “fish”,
+    and so on.
+
+
+    This technique is also known as “one-hot encoding”, and is used generally when
+    you have categorical variables in data science and machine learning.
+
+
+    We do this for the same reason we do in NLP - categories aren’t numbers, and we
+    need to turn them into numbers.
+
+
+    You may also have come across this idea by the name of “indicator” variables.
+    Same thing.
+
+
+    ## Word Frequency
+
+
+    Notice that we lose data when we use indicator variables, because it doesn’t tell
+    us how often a word showed up, just whether it did or not.
+
+
+    You can imagine that if the words “Einstein” and “physics” show up frequently
+    in a document, it’s probably a document about physics and Albert Einstein. However,
+    if you see Einstein just once, it might not have anything to do with Albert Einstein
+    and physics, because someone could just be saying something like, “Nice one, Einstein”
+    sarcastically.
+
+
+    In this case, “dog eat dog” becomes:
+
+
+    `(0, 2, 0, 0, 1)`
+
+
+    With many machine learning algorithms, we like our data to be normalized first.
+    Sometimes this means subtracting the mean and dividing by the standard deviation,
+    sometimes it means transforming all the values so that they are between 0 and
+    1.
+
+
+    With NLP, it’s the latter, since a negative frequency on a word wouldn’t make
+    much sense anyway.
+
+
+    In this case, “dog eat dog” becomes:
+
+
+    `(0, 0.67, 0, 0, 0.33)`
+
+
+    ## TF-IDF
+
+
+    Word frequency is still not perfect.
+
+
+    Think about words like “the”, “is”, and “it”.
+
+
+    These are common words that will probably show up in every document. Being so
+    common, they tell you almost nothing about what the document is actually about.
+    i.e. If I tell you the word “the” shows up 500 times, could you predict the topic
+    of the document?
+
+
+    TF-IDF is a technique that mitigates this problem.
+
+
+    TF stands for “term frequency”, and IDF stands for “inverse document frequency”.
+
+
+    You can tell by the above definitions that this measure will be larger when a
+    term shows up more often, and it will be smaller if it shows up in a wide variety
+    of documents.
+
+
+    We usually don’t use the raw counts to measure these, but rather we take the `log()`.
+
+
+    There is no “official”, set way to do this.
+
+
+    The `TF(t, d)` part can be calculated as follows:
+
+
+    * **Binary**: 0, 1 indicator (as discussed above)
+
+    * **Raw frequency**: `f(t, d) = number of times term t shows up in document d`
+
+    * **Log normalized**: `log(1 + f(t, d))`
+
+
+    The inverse document frequency also has a few variations, most of which use the
+    `log()` function.
+
+
+    * **Regular IDF**: `log(N / n(t))`, where `n(t)` is the number of documents that
+    contain term `t`
+
+    * **Smoothed IDF**: `log(1 + N/n(t))`
+
+    * **Probabilistic IDF**: `log((N - n(t)) / n(t))`
+
+
+    ## N x D or D x N?
+
+    '
+  trans: '
+
+    # 机器翻译
+
+
+    这是一个类似 Google Translate 的工具。输入一个短语，将其通过几种不同的语言进行转换。你会发现，当我们转回英语时，结果讲不通。**练习：亲自试一试**
+
+
+    # 信息抽取
+
+
+    这就是 iOS 能够通过阅读你的电子邮件和短信，自动将事件添加到日历的方式。它能判断出这是一段代表日历事件的文本字符串。
+
+
+    # 未解决的问题
+
+
+    以下是我们尝试过但离完美还很远的一些问题：
+
+
+    ## 机器对话
+
+
+    我们有像 `Siri` 和 `Cortana` 这样的应用，你可以对它们说出简单的短语来命令计算机做某事，这实际上是一个非常难的问题。除了文本处理之外，这里还有一个额外的阶段，即它必须将你的声音转换为单词字符串。以
+    Geoffrey Hinton 最喜欢的例子为例，“recognize speech”（识别语音）听起来几乎和 “wreck a nice beach”（毁坏一个美丽的海滩）一样——但通过概率分析，我们可以得出结论，“recognize
+    speech” 的可能性更大。
+
+
+    对于计算机来说，从你所说的话中提取含义，并做出有意义的回应，难度甚至更大。你可能听说过所谓的“图灵测试”，当人类无法分辨他们是在与人类还是机器对话时，该测试即视为通过。
+
+
+    最近，微软在 Twitter 上发布了一个名为 “Tay” 的机器人，本应拥有少女的人格。结果，她被其他 Twitter 用户操纵，最终变成了一个种族主义的新纳粹分子。
+
+
+    ## 释义与摘要
+
+
+    假设你在一家新闻公司工作，每天都有人为你的网站撰写新文章。你希望在主页上放置一些小框，配上一张漂亮的图片和一小段代表该文章的简介文本——如何才能将文章正确地概括为几句话？如果你用过
+    Pinterest，你会发现他们经常搞错这一点。
+
+
+    # 有趣的新进展 - word2vec
+
+
+    `word2vec` 是将神经网络应用于学习词向量表示。它表现非常出色，能够学习诸如著名的以下关系：
+
+
+    > “woman”（女人）+ “king”（国王） - “man”（男人）= “queen”（女王）
+
+
+    这向我们展示了我们可以从语言中提取概念和关系的潜在含义。
+
+
+    事实上，这正是 Google 正在研究的——创建所谓的“思维向量”，在向量空间中表示实际的想法。
+
+
+    所以我希望这能让你对 NLP 可以用于的各种非常真实且非常有用的应用有一个大致的了解。
+
+
+    # 为什么 NLP 很难？
+
+
+    因为语言是模棱两可的！
+
+
+    你可能听过数学是通用语言这句话。这是真的，因为数学是精确的。在语言中，你有同义词（两个意思相同的词），也有同音词/同形词（发音相同或拼写相同但意思不同的词）。
+
+
+    ## 模糊性示例
+
+
+    **“Republicans Grill IRS Chief Over Lost Emails”**
+
+
+    这种句子因其两种截然不同的解释而大有可为：
+
+
+    * 共和党人就邮件问题严厉盘问 IRS 局长
+
+    * 共和党人用邮件作燃料烤 IRS 局长
+
+
+    **“I saw a man on a hill with a telescope.”**
+
+
+    这看似是个简单的陈述，直到你开始拆解其中的多种备选含义：
+
+
+    * 山上有个男人，我用望远镜看着他。
+
+    * 山上有个男人，我看见了他，他有个望远镜。
+
+    * 有个男人，他在一座山上，那座山上也有一架望远镜。
+
+    * 我在山上，我看见一个男人在使用望远镜。
+
+
+    NLP 之所以难的另一个原因是，如果你看的是像 Twitter 这样的东西——顺便说一句，许多人已将 NLP 应用于 Twitter——Twitter 上的大多数人甚至不使用真正的英语单词！由于字符限制，人们使用像
+    “U”、“UR”、“LOL” 这样的简写。那 “netflix and chill” 又该如何处理？
+
+
+    # 最后一点说明
+
+
+    如果你不想在示例中敲代码，只想下载并运行代码，请访问我的 GitHub：`https://github.com/lazyprogrammer/machine_learning_examples/tree/master/nlp_class`
+
+
+    # 第 2 章：常见 NLP 操作
+
+
+    在本章中，我们将讨论对文本数据进行的一些常见数据预处理操作，以便使其“适配”典型的机器学习算法，如 `Naive Bayes`（朴素贝叶斯）、`Decision
+    Trees`（决策树）、`Logistic Regression`（逻辑回归）等。
+
+
+    主要思想是，所有这些算法都作用于数字向量，而文本绝对不是数字向量。
+
+
+    那么我们如何将文本转换为数字向量呢？
+
+
+    ## 词袋模型
+
+
+    将文本转换为数字的最简单方法是“词袋”技术。这意味着单词没有顺序。它只是在说“这是这篇文档中的单词”。
+
+
+    最简单的方法是拥有一个向量，只是告诉我们，“是的，这个词在”，或者“不，这个词不在”。
+
+
+    例如，如果我们想表示句子 “Dog eat dog”（狗吃狗/弱肉强食）——而我的词汇表包含以下单词：
+
+
+    * Cat（猫）
+
+    * Dog（狗）
+
+    * Fish（鱼）
+
+    * Rabbit（兔子）
+
+    * Eat（吃）
+
+
+    那么我的向量表示将是 `(0, 1, 0, 0, 1)`。
+
+
+    注意这里发生了什么。我为向量中的每个位置分配了一个单词。
+
+
+    第 0 个位置是 “cat”，第 1 个位置是 “dog”，第 2 个位置是 “fish”，依此类推。
+
+
+    这种技术也被称为“独热编码”，通常用于数据科学和机器学习中处理分类变量时。
+
+
+    我们这样做的原因与在 NLP 中相同——类别不是数字，我们需要将它们转换为数字。
+
+
+    你可能也见过这个概念被称为“指示变量”。是一回事。
+
+
+    ## 词频
+
+
+    注意，当我们使用指示变量时会丢失数据，因为它无法告诉我们一个词出现了多少次，只能告诉我们它出没出现过。
+
+
+    你可以想象，如果 “Einstein”（爱因斯坦）和 “physics”（物理）在一篇文档中频繁出现，那它很可能是一篇关于物理和阿尔伯特·爱因斯坦的文档。然而，如果你只看到一次
+    “Einstein”，它可能与阿尔伯特·爱因斯坦和物理毫无关系，因为有人可能只是在讽刺地说，“Nice one, Einstein”（干得漂亮，爱因斯坦/聪明鬼）。
+
+
+    在这种情况下，“dog eat dog” 变为：
+
+
+    `(0, 2, 0, 0, 1)`
+
+
+    对于许多机器学习算法，我们希望数据先经过归一化。有时这意味着减去均值并除以标准差，有时意味着转换所有值使其落在 0 和 1 之间。
+
+
+    在 NLP 中，通常是后者，因为词的负频率讲不通。
+
+
+    在这种情况下，“dog eat dog” 变为：
+
+
+    `(0, 0.67, 0, 0, 0.33)`
+
+
+    ## TF-IDF
+
+
+    词频仍然不完美。
+
+
+    想想 “the”、“is” 和 “it” 这样的词。
+
+
+    这些是常见词，很可能出现在每篇文档中。由于太常见，它们几乎无法告诉你文档实际讲的是什么。也就是说，如果我告诉你 “the” 出现了 500 次，你能预测文档的主题吗？
+
+
+    TF-IDF 是一种缓解此问题的技术。
+
+
+    TF 代表 “term frequency”（词频），IDF 代表 “inverse document frequency”（逆文档频率）。
+
+
+    从上述定义可以看出，当一个词出现得更频繁时，该度量值会更大；如果它出现在各种各样的文档中，该度量值会更小。
+
+
+    我们通常不使用原始计数来衡量这些，而是取 `log()`。
+
+
+    做这件事没有“官方”的、固定的方法。
+
+
+    `TF(t, d)` 部分可以按如下方式计算：
+
+
+    * **二值**：0、1 指示器（如上所述）
+
+    * **原始频率**：`f(t, d) = 词项 t 在文档 d 中出现的次数`
+
+    * **对数归一化**：`log(1 + f(t, d))`
+
+
+    逆文档频率也有几种变体，大多使用 `log()` 函数。
+
+
+    * **标准 IDF**：`log(N / n(t))`，其中 `n(t)` 是包含词项 `t` 的文档数量
+
+    * **平滑 IDF**：`log(1 + N/n(t))`
+
+    * **概率 IDF**：`log((N - n(t)) / n(t))`
+
+
+    ## N x D 还是 D x N？
+
+    '
+  toc: []
+- raw: 'In most machine learning problems we often see that the data matrix X is defined
+    such that each row is a sample, and each column is an input feature.
+
+
+    Therefore, we have an N x D matrix X where there are N samples and D features.
+
+
+    In NLP, you often see the reverse, where the matrix X is organized such that each
+    column is a sample and each row is a feature.
+
+
+    This is just a matter of convention.
+
+
+    You will see that when we do singular value decomposition, it’s actually like
+    doing 2 PCAs, one on the DxD covariance matrix of X, and one on the NxN covariance
+    matrix of X transposed.
+
+
+    # Chapter 3: Build your own spam detector
+
+
+    Data description
+
+
+    In this chapter we are going to build our own “spam detector”.
+
+
+    We’re going to look at a publicly available pre-preprocessed dataset that you
+    can find here: [https://archive.ics.uci.edu/ml/datasets/Spambase](https://archive.ics.uci.edu/ml/datasets/Spambase)
+
+
+    There are 2 important things I want you to take away from this example:
+
+
+    1) A lot of the time what we’re doing in NLP is pre-processing data for use in
+    existing algorithms. So what’s involved here is - how do we take a bunch of documents,
+    which are basically just blocks of text - and feed them into other machine learning
+    algorithms, where the input is usually a vector of numbers?
+
+
+    Note that we covered this in the last chapter, so all there really is to do now
+    is plug-n-chug into an ML library.
+
+
+    2) We can use almost ANY existing ML classifier for this problem. So you can take
+    all the knowledge you’ve gained from other statistics and machine learning classes,
+    and add a little bit of text processing and take into account the subtleties of
+    language, and you’re more or less doing NLP.
+
+
+    That said, we’re going to be using the sci-kit learn library for this example
+    - not writing Naive Bayes on our own.
+
+
+    We should however, talk about how the data was pre-processed. The documentation
+    on the website says the data is normalized like we described in the previous chapter,
+    and then subsequently multiplied by 100.
+
+
+    Notice each row is a data point (so it’s an N x D matrix). The first 48 columns
+    are “word frequency proportions”, which is just the number of times that word
+    appears in the email, divided by the total number of words in the email, times
+    100).
+
+
+    The last column is the label, 1 for spam and 0 for not spam.
+
+
+    The rest of the columns we’re going to ignore.
+
+
+    Note that we can also think of this as a “term-document” matrix, which we’ll talk
+    about more in-depth later on.
+
+
+    Basically it means that along one dimension you have each document, and along
+    the other dimension you have some measure of the frequency of the terms.
+
+
+    Now that you know how the data was generated, let’s go ahead and build our classifier.
+
+
+    The first step is importing all the libraries we’ll need:
+
+
+    from sklearn.naive\_bayes import MultinomialNB
+
+
+    import pandas as pd
+
+
+    import numpy as np
+
+
+    Next, we load in the data using Pandas, which makes it super easy to turn a CSV
+    into a matrix.
+
+
+    data = pd.read\_csv(''spambase.data'').as\_matrix()
+
+
+    np.random.shuffle(data)
+
+
+    Third, we assign our X and Y:
+
+
+    X = data\[:,:48\]
+
+
+    Y = data\[:,-1\]
+
+
+    Next, we make the last 100 rows our test set:
+
+
+    Xtrain = X\[:-100,\]
+
+
+    Ytrain = Y\[:-100,\]
+
+
+    Xtest = X\[-100:,\]
+
+
+    Ytest = Y\[-100:,\]
+
+
+    Next, we train our model on the training data, and check the classification rate
+    on the test data:
+
+
+    model = MultinomialNB()
+
+
+    model.fit(Xtrain, Ytrain)
+
+
+    print "Classification rate for NB:", model.score(Xtest, Ytest)
+
+
+    Try this and see what score you get.
+
+
+    Next, let’s try a more powerful classifier. Remember, the API for all these machine
+    learning models is the same. Much of the task is getting X and Y into the right
+    format to feed it into these APIs.
+
+
+    from sklearn.ensemble import AdaBoostClassifier
+
+
+    model = AdaBoostClassifier()
+
+
+    model.fit(Xtrain, Ytrain)
+
+
+    print "Classification rate for AdaBoost:", model.score(Xtest, Ytest)
+
+
+    Try this and see how much the score improves.
+
+
+    #  
+
+
+    # Chapter 4: Build your own sentiment analysis tool
+
+
+    In this chapter I’m going to introduce you to sentiment analysis. Sentiment is
+    the measure of how positive or negative something is. This is immediately applicable
+    to Amazon reviews, Tweets, Yelp reviews, hotel reviews, and so on.
+
+
+    We would like to know - is this statement positive or negative, given just the
+    words?
+
+
+    We’re going to build a very simple sentiment analyzer in this book, and in this
+    section I want to go into some of the details of how we’re going to build it before
+    we start to write the code. You’ll see that there are a lot of subtleties that
+    could become big issues should we choose to address them.
+
+
+    First, let’s look at the dataset we’re going to use. It can be found at this URL:
+    [https://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html](https://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html)
+
+
+    The author has been kind enough to label the data for us, so we can use that knowledge
+    to our advantage. These are Amazon reviews, which come with 5 star ratings, and
+    we’re going to look at the electronics category.
+
+
+    First, there’s the issue of what are we trying to predict? We could use the 5
+    star reviews as our target and try to do a regression on them. Instead we’re going
+    to make the problem a little simpler - and just use the fact that they’ve already
+    been classified as positive or negative.
+
+
+    Data is in XML - so we’ll use an XML parser
+
+
+    We’ll ignore all the extra data and just use the text inside the key “review\_text”.
+
+
+    To create our feature vector, we’ll do the same thing as the first data set we
+    worked with - count up the number of occurrences of each word and divide it by
+    the total number of words.
+
+
+    For that to work, we’ll have to make 2 passes through the data - one to collect
+    the total number of distinct words so that we’ll know the size of our feature
+    vector, and possibly remove stopwords like numbers and “this”, “is”, “I”, “to”,
+    etc. to reduce the vocabulary size. This is so we will know the index of each
+    token.
+
+
+    The 2nd pass will be to actually assign each data vector.
+
+
+    Notice that this is a lot more work than our spam detection example, because that
+    work was already done for us before we downloaded the data.
+
+
+    Once we have that, it’s simply a matter of creating a classifier like the one
+    we made for our spam detector!
+
+
+    If we use a model like logistic regression - we could look at the weights of our
+    learned model to get a “score” for each individual input word. That will tell
+    us, if we see a word like “horrible”, and it has a weight of -1, that this word
+    is associated with negative reviews.
+
+
+    Let’s get to the code:
+
+
+    import nltk
+
+
+    import numpy as np
+
+
+    from nltk.stem import WordNetLemmatizer
+
+
+    from sklearn.linear\_model import LogisticRegression
+
+
+    from bs4 import BeautifulSoup
+
+
+    BeautifulSoup is a Python library for parsing XML and HTML. We will discuss NLTK
+    more in the next chapter, so think of this one as a little NLTK preview.
+
+
+    wordnet\_lemmatizer = WordNetLemmatizer()
+
+
+    Lemmatization is the process of turning a word into its “base form”, e.g. “dogs”
+    becomes “dog” - you don’t want to count these as separate tokens because they
+    essentially have the same meaning.
+
+
+    Also, if you left each variation of a word as a separate token, your dimensionality
+    would be huge, slowing down computation.
+
+
+    stopwords = set(w.rstrip() for w in open(‘stopwords.txt''))
+
+
+    We need stopwords so that we don’t include words like “this”, “is”, “on”, and
+    so on. This also helps us reduce our data dimensionality and processing time.
+
+
+    The next step is to load the reviews:
+
+
+    positive\_reviews = BeautifulSoup(
+
+
+    open(
+
+
+    ‘electronics/positive.review’
+
+
+    ).read())
+
+
+    positive\_reviews =
+
+
+    positive\_reviews.findAll(''review\_text'')
+
+
+    negative\_reviews = BeautifulSoup(
+
+
+    open(
+
+
+    ‘electronics/negative.review’
+
+
+    ).read())
+
+
+    negative\_reviews =
+
+
+    negative\_reviews.findAll(‘review\_text'')
+
+
+    np.random.shuffle(positive\_reviews)
+
+
+    positive\_reviews =
+
+
+    positive\_reviews\[:len(negative\_reviews)\]'
+  fmt: "\n在大多数机器学习问题中，我们经常看到数据矩阵 `X` 的定义方式是：每一行是一个样本，每一列是一个输入特征。\n\n因此，我们得到一个 `N x\
+    \ D` 的矩阵 `X`，其中有 `N` 个样本和 `D` 个特征。\n\n在 NLP 中，你经常会看到相反的情况，即矩阵 `X` 的组织方式是：每一列是一个样本，每一行是一个特征。\n\
+    \n这只是约定俗成的问题。\n\n你会发现，当我们进行奇异值分解时，这实际上相当于做了 2 次 PCA，一次是在 `X` 的 `DxD` 协方差矩阵上，另一次是在\
+    \ `X` 转置后的 `NxN` 协方差矩阵上。\n\n# Chapter 3: Build your own spam detector\n\n## Data\
+    \ description\n\n在本章中，我们将构建自己的“垃圾邮件检测器”。\n\n我们将查看一个公开可用的预处理数据集，你可以在此处找到：[https://archive.ics.uci.edu/ml/datasets/Spambase](https://archive.ics.uci.edu/ml/datasets/Spambase)\n\
+    \n我希望你从这个例子中得到两点重要启示：\n\n1. 很多时候，我们在 NLP 中所做的工作是为现有算法预处理数据。那么问题在于：如何获取一堆文档（本质上只是文本块），并将它们输入到其他机器学习算法中，而这些算法的输入通常是一个数字向量？\n\
+    \n   注意，我们在上一章已经涵盖了这一点，所以现在要做的只是将其“即插即用”地接入 ML 库。\n\n2. 我们几乎可以使用**任何**现有的 ML 分类器来解决这个问题。因此，你可以利用从其他统计和机器学习课程中获得的所有知识，加上一点文本处理并考虑语言的细微差别，你就或多或少在做\
+    \ NLP 了。\n\n话虽如此，我们将在这个例子中使用 `sci-kit learn` 库——而不是自己编写 Naive Bayes。\n\n不过，我们应该讨论一下数据是如何预处理的。网站上的文档说数据是按我们在上一章描述的方式进行归一化的，随后再乘以\
+    \ 100。\n\n注意每一行是一个数据点（所以它是一个 `N x D` 矩阵）。前 48 列是“词频比例”，即该词在邮件中出现的次数，除以邮件中的总词数，再乘以\
+    \ 100。\n\n最后一列是标签，1 表示垃圾邮件，0 表示非垃圾邮件。\n\n其余列我们将忽略。\n\n注意，我们也可以将其视为“词-文档”矩阵，我们稍后会更深入地讨论这点。\n\
+    \n基本上这意味着在一个维度上你有每个文档，在另一个维度上你有术语频率的某种度量。\n\n既然你知道了数据是如何生成的，让我们继续构建分类器。\n\n第一步是导入所有需要的库：\n\
+    \n```python\nfrom sklearn.naive_bayes import MultinomialNB\nimport pandas as pd\n\
+    import numpy as np\n```\n\n接下来，我们使用 Pandas 加载数据，这使得将 CSV 转换为矩阵变得超级简单。\n\n```python\n\
+    data = pd.read_csv('spambase.data').as_matrix()\nnp.random.shuffle(data)\n```\n\
+    \n第三，我们分配 `X` 和 `Y`：\n\n```python\nX = data[:, :48]\nY = data[:, -1]\n```\n\n\
+    接下来，我们将最后 100 行作为测试集：\n\n```python\nXtrain = X[:-100,]\nYtrain = Y[:-100,]\nXtest\
+    \ = X[-100:,]\nYtest = Y[-100:,]\n```\n\n接下来，我们在训练数据上训练模型，并在测试数据上检查分类率：\n\n```python\n\
+    model = MultinomialNB()\nmodel.fit(Xtrain, Ytrain)\nprint(\"Classification rate\
+    \ for NB:\", model.score(Xtest, Ytest))\n```\n\n试运行一下，看看得分如何。\n\n接下来，让我们尝试一个更强大的分类器。记住，所有这些机器学习模型的\
+    \ API 是相同的。任务的很大一部分是将 `X` 和 `Y` 转换为正确的格式以输入这些 API。\n\n```python\nfrom sklearn.ensemble\
+    \ import AdaBoostClassifier\nmodel = AdaBoostClassifier()\nmodel.fit(Xtrain, Ytrain)\n\
+    print(\"Classification rate for AdaBoost:\", model.score(Xtest, Ytest))\n```\n\
+    \n试运行一下，看看分数提高了多少。\n\n# Chapter 4: Build your own sentiment analysis tool\n\n\
+    在本章中，我将向你介绍情感分析。情感是衡量某事物积极或消极程度的指标。这立即适用于亚马逊评论、推文、Yelp 评论、酒店评论等。\n\n我们想知道——仅凭词语，这句话是积极的还是消极的？\n\
+    \n我们将在本书中构建一个非常简单的情感分析器，在本节中，我想在开始编写代码之前，深入探讨一下我们将如何构建它。你会发现有很多细微之处，如果我们选择解决它们，可能会变成大问题。\n\
+    \n首先，让我们看看将要使用的数据集。它可以在此 URL 找到：[https://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html](https://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html)\n\
+    \n作者已经为我们标记了数据，所以我们可以利用这一知识。这些是亚马逊评论，带有 5 星评分，我们将查看电子产品类别。\n\n首先，是我们要预测什么的问题。我们可以将\
+    \ 5 星评论作为目标并尝试对它们进行回归。相反，我们将使问题稍微简单化——仅利用它们已被分类为正面或负面的事实。\n\n数据采用 XML 格式——所以我们将使用\
+    \ XML 解析器。\n\n我们将忽略所有额外数据，仅使用 `review_text` 键内的文本。\n\n为了创建特征向量，我们将执行与处理第一个数据集相同的操作——统计每个词的出现次数，并除以总词数。\n\
+    \n为此，我们必须对数据进行两次遍历——第一次收集不同单词的总数，以便知道特征向量的大小，并可能移除停用词（如数字、“this”、“is”、“I”、“to”等）以减小词汇表大小。这是为了知道每个\
+    \ token 的索引。\n\n第二次遍历将实际分配每个数据向量。\n\n注意，这比垃圾邮件检测示例要复杂得多，因为那个例子的数据在我们下载前已经处理好了。\n\
+    \n一旦我们有了这些，就只是创建一个像垃圾邮件检测器那样的分类器的问题了！\n\n如果我们使用像逻辑回归这样的模型——我们可以查看学习到的模型的权重，以获得每个输入词的“分数”。这将告诉我们，如果我们看到像“horrible”这样的词，且其权重为\
+    \ -1，那么这个词与负面评论相关。\n\n让我们开始写代码：\n\n```python\nimport nltk\nimport numpy as np\n\
+    from nltk.stem import WordNetLemmatizer\nfrom sklearn.linear_model import LogisticRegression\n\
+    from bs4 import BeautifulSoup\n```\n\n`BeautifulSoup` 是一个用于解析 XML 和 HTML 的 Python\
+    \ 库。我们将在下一章更多地讨论 NLTK，所以把这一章当作一个小小的 NLTK 预览。\n\n```python\nwordnet_lemmatizer\
+    \ = WordNetLemmatizer()\n```\n\n词形还原是将单词转换为其“基本形式”的过程，例如 “dogs” 变为 “dog”——你不想将这些计为单独的\
+    \ token，因为它们本质上具有相同的含义。\n\n此外，如果你将每个单词的变体都作为单独的 token 保留，你的维度将会巨大，从而拖慢计算速度。\n\n\
+    ```python\nstopwords = set(w.rstrip() for w in open('stopwords.txt'))\n```\n\n\
+    我们需要停用词，以免包含 “this”、“is”、“on” 等词。这也有助于减少数据维度和处理时间。\n\n下一步是加载评论：\n\n```python\n\
+    positive_reviews = BeautifulSoup(\n    open(\n        'electronics/positive.review'\n\
+    \    ).read()\n)\npositive_reviews = positive_reviews.findAll('review_text')\n\
+    \nnegative_reviews = BeautifulSoup(\n    open(\n        'electronics/negative.review'\n\
+    \    ).read()\n)\nnegative_reviews = negative_reviews.findAll('review_text')\n\
+    \nnp.random.shuffle(positive_reviews)\npositive_reviews = positive_reviews[:len(negative_reviews)]\n\
+    ```\n"
+  trans: "\n在大多数机器学习问题中，我们经常看到数据矩阵 `X` 的定义方式是：每一行是一个样本，每一列是一个输入特征。\n\n因此，我们得到一个 `N\
+    \ x D` 的矩阵 `X`，其中有 `N` 个样本和 `D` 个特征。\n\n在 NLP 中，你经常会看到相反的情况，即矩阵 `X` 的组织方式是：每一列是一个样本，每一行是一个特征。\n\
+    \n这只是约定俗成的问题。\n\n你会发现，当我们进行奇异值分解时，这实际上相当于做了 2 次 PCA，一次是在 `X` 的 `DxD` 协方差矩阵上，另一次是在\
+    \ `X` 转置后的 `NxN` 协方差矩阵上。\n\n# 第 3 章：构建你自己的垃圾邮件检测器\n\n## 数据描述\n\n在本章中，我们将构建自己的**“垃圾邮件检测器”**。\n\
+    \n我们将查看一个公开可用的预处理数据集，你可以在此处找到：[`archive.ics.uci.edu/ml/datasets/Spambase`](https://archive.ics.uci.edu/ml/datasets/Spambase)\n\
+    \n我希望你从这个例子中得到两点重要启示：\n\n1. 很多时候，我们在 NLP 中所做的工作是为现有算法预处理数据。那么问题在于：如何获取一堆文档（本质上只是文本块），并将它们输入到其他机器学习算法中，而这些算法的输入通常是一个数字向量？\n\
+    \n   注意，我们在上一章已经涵盖了这一点，所以现在要做的只是将其“即插即用”地接入 ML 库。\n\n2. 我们几乎可以使用**任何**现有的 ML 分类器来解决这个问题。因此，你可以利用从其他统计和机器学习课程中获得的所有知识，加上一点文本处理并考虑语言的细微差别，你就或多或少在做\
+    \ NLP 了。\n\n话虽如此，我们将在这个例子中使用 `sci-kit learn` 库——而不是自己编写 Naive Bayes。\n\n不过，我们应该讨论一下数据是如何预处理的。网站上的文档说数据是按我们在上一章描述的方式进行归一化的，随后再乘以\
+    \ 100。\n\n注意每一行是一个数据点（所以它是一个 `N x D` 矩阵）。前 48 列是“词频比例”，即该词在邮件中出现的次数，除以邮件中的总词数，再乘以\
+    \ 100。\n\n最后一列是标签，1 表示垃圾邮件，0 表示非垃圾邮件。\n\n其余列我们将忽略。\n\n注意，我们也可以将其视为“词-文档”矩阵，我们稍后会更深入地讨论这点。\n\
+    \n基本上这意味着在一个维度上你有每个文档，在另一个维度上你有术语频率的某种度量。\n\n既然你知道了数据是如何生成的，让我们继续构建分类器。\n\n第一步是导入所有需要的库：\n\
+    \n```python\nfrom sklearn.naive_bayes import MultinomialNB\nimport pandas as pd\n\
+    import numpy as np\n```\n\n接下来，我们使用 Pandas 加载数据，这使得将 CSV 转换为矩阵变得超级简单。\n\n```python\n\
+    data = pd.read_csv('spambase.data').as_matrix()\nnp.random.shuffle(data)\n```\n\
+    \n第三，我们分配 `X` 和 `Y`：\n\n```python\nX = data[:, :48]\nY = data[:, -1]\n```\n\n\
+    接下来，我们将最后 100 行作为测试集：\n\n```python\nXtrain = X[:-100,]\nYtrain = Y[:-100,]\nXtest\
+    \ = X[-100:,]\nYtest = Y[-100:,]\n```\n\n接下来，我们在训练数据上训练模型，并在测试数据上检查分类率：\n\n```python\n\
+    model = MultinomialNB()\nmodel.fit(Xtrain, Ytrain)\nprint(\"Classification rate\
+    \ for NB:\", model.score(Xtest, Ytest))\n```\n\n试运行一下，看看得分如何。\n\n接下来，让我们尝试一个更强大的分类器。记住，所有这些机器学习模型的\
+    \ API 是相同的。任务的很大一部分是将 `X` 和 `Y` 转换为正确的格式以输入这些 API。\n\n```python\nfrom sklearn.ensemble\
+    \ import AdaBoostClassifier\nmodel = AdaBoostClassifier()\nmodel.fit(Xtrain, Ytrain)\n\
+    print(\"Classification rate for AdaBoost:\", model.score(Xtest, Ytest))\n```\n\
+    \n试运行一下，看看分数提高了多少。\n\n# 第 4 章：构建你自己的情感分析工具\n\n在本章中，我将向你介绍情感分析。情感是衡量某事物积极或消极程度的指标。这立即适用于亚马逊评论、推文、Yelp\
+    \ 评论、酒店评论等。\n\n我们想知道——仅凭词语，这句话是积极的还是消极的？\n\n我们将在本书中构建一个非常简单的情感分析器，在本节中，我想在开始编写代码之前，深入探讨一下我们将如何构建它。你会发现有很多细微之处，如果我们选择解决它们，可能会变成大问题。\n\
+    \n首先，让我们看看将要使用的数据集。它可以在此 URL 找到：[`www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html`](https://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html)\n\
+    \n作者已经为我们标记了数据，所以我们可以利用这一知识。这些是亚马逊评论，带有 5 星评分，我们将查看电子产品类别。\n\n首先，是我们要预测什么的问题。我们可以将\
+    \ 5 星评论作为目标并尝试对它们进行回归。相反，我们将使问题稍微简单化——仅利用它们已被分类为正面或负面的事实。\n\n数据采用 XML 格式——所以我们将使用\
+    \ XML 解析器。\n\n我们将忽略所有额外数据，仅使用 `review_text` 键内的文本。\n\n为了创建特征向量，我们将执行与处理第一个数据集相同的操作——统计每个词的出现次数，并除以总词数。\n\
+    \n为此，我们必须对数据进行两次遍历——第一次收集不同单词的总数，以便知道特征向量的大小，并可能移除停用词（如数字、“this”、“is”、“I”、“to”等）以减小词汇表大小。这是为了知道每个\
+    \ token 的索引。\n\n第二次遍历将实际分配每个数据向量。\n\n注意，这比垃圾邮件检测示例要复杂得多，因为那个例子的数据在我们下载前已经处理好了。\n\
+    \n一旦我们有了这些，就只是创建一个像垃圾邮件检测器那样的分类器的问题了！\n\n如果我们使用像逻辑回归这样的模型——我们可以查看学习到的模型的权重，以获得每个输入词的“分数”。这将告诉我们，如果我们看到像“horrible”这样的词，且其权重为\
+    \ -1，那么这个词与负面评论相关。\n\n让我们开始写代码：\n\n```python\nimport nltk\nimport numpy as np\n\
+    from nltk.stem import WordNetLemmatizer\nfrom sklearn.linear_model import LogisticRegression\n\
+    from bs4 import BeautifulSoup\n```\n\n`BeautifulSoup` 是一个用于解析 XML 和 HTML 的 Python\
+    \ 库。我们将在下一章更多地讨论 NLTK，所以把这一章当作一个小小的 NLTK 预览。\n\n```python\nwordnet_lemmatizer\
+    \ = WordNetLemmatizer()\n```\n\n词形还原是将单词转换为其“基本形式”的过程，例如 “dogs” 变为 “dog”——你不想将这些计为单独的\
+    \ token，因为它们本质上具有相同的含义。\n\n此外，如果你将每个单词的变体都作为单独的 token 保留，你的维度将会巨大，从而拖慢计算速度。\n\n\
+    ```python\nstopwords = set(w.rstrip() for w in open('stopwords.txt'))\n```\n\n\
+    我们需要停用词，以免包含 “this”、“is”、“on” 等词。这也有助于减少数据维度和处理时间。\n\n下一步是加载评论：\n\n```python\n\
+    positive_reviews = BeautifulSoup(\n    open(\n        'electronics/positive.review'\n\
+    \    ).read()\n)\npositive_reviews = positive_reviews.findAll('review_text')\n\
+    \nnegative_reviews = BeautifulSoup(\n    open(\n        'electronics/negative.review'\n\
+    \    ).read()\n)\nnegative_reviews = negative_reviews.findAll('review_text')\n\
+    \nnp.random.shuffle(positive_reviews)\npositive_reviews = positive_reviews[:len(negative_reviews)]\n\
+    ```\n"
+  toc: []
+- raw: 'Since there are more positive reviews than negative reviews, we’ll simply
+    just take a sample of the positive reviews so that we have balanced classes. For
+    some classifiers this is not a problem, but let’s be safe and do it anyway.
+
+
+    Next, we’ll define a function to turn each review into a list of words or tokens.
+    This doesn’t means just calling string.split(). What if we have “Dog” and “dog”?
+    These are the same word. NLTK includes its own tokenization function, so we can
+    use that here.
+
+
+    def my\_tokenizer(s):
+
+
+    s = s.lower() # downcase
+
+
+    tokens = nltk.tokenize.word\_tokenize(s) # split string into words (tokens)
+
+
+    tokens = \[t for t in tokens if len(t) > 2\] # remove short words, they''re probably
+    not useful
+
+
+    tokens = \[wordnet\_lemmatizer.lemmatize(t) for t in tokens\] # put words into
+    base form
+
+
+    tokens = \[t for t in tokens if t not in stopwords\] # remove stopwords
+
+
+    return tokens
+
+
+    Note that NLTK’s tokenization function is much slower than string.split(), so
+    you may want to explore other options in your own code. More advanced systems
+    will handling things like misspellings, etc.
+
+
+    Next, we need to collect the data necessary in order to turn all the text into
+    a data matrix X. This includes: finding the total size of the vocabulary (total
+    number of words), determining the index of each word (we can start from 0 and
+    simply count upward by 1), and saving each review in tokenized form.
+
+
+    word\_index\_map = {}
+
+
+    current\_index = 0
+
+
+    positive\_tokenized = \[\]
+
+
+    negative\_tokenized = \[\]
+
+
+    for review in positive\_reviews:
+
+
+    tokens = my\_tokenizer(review.text)
+
+
+    positive\_tokenized.append(tokens)
+
+
+    for token in tokens:
+
+
+    if token not in word\_index\_map:
+
+
+    word\_index\_map\[token\] = current\_index
+
+
+    current\_index += 1
+
+
+    for review in negative\_reviews:
+
+
+    tokens = my\_tokenizer(review.text)
+
+
+    negative\_tokenized.append(tokens)
+
+
+    for token in tokens:
+
+
+    if token not in word\_index\_map:
+
+
+    word\_index\_map\[token\] = current\_index
+
+
+    current\_index += 1
+
+
+    Note that our method of determining which word goes with which index is the word\_index\_map,
+    which is a dictionary that takes in the word as the key and returns the index
+    as the value.
+
+
+    Next, let’s create a function to convert each set of tokens (representing one
+    review) into a data vector.
+
+
+    def tokens\_to\_vector(tokens, label):
+
+
+    x = np.zeros(len(word\_index\_map) + 1) # last element is for the label
+
+
+    for t in tokens:
+
+
+    i = word\_index\_map\[t\]
+
+
+    x\[i\] += 1
+
+
+    x = x / x.sum() # normalize it before setting label
+
+
+    x\[-1\] = label
+
+
+    return x
+
+
+    Notice that this function assumes we are at this point still attaching the label
+    to the vector.
+
+
+    Finally, we initialize our data matrix:
+
+
+    N = len(positive\_tokenized) + len(negative\_tokenized)
+
+
+    \# (N x D+1 matrix - keeping them together for now so we can shuffle more easily
+    later
+
+
+    data = np.zeros((N, len(word\_index\_map) + 1))
+
+
+    i = 0
+
+
+    for tokens in positive\_tokenized:
+
+
+    xy = tokens\_to\_vector(tokens, 1)
+
+
+    data\[i,:\] = xy
+
+
+    i += 1
+
+
+    for tokens in negative\_tokenized:
+
+
+    xy = tokens\_to\_vector(tokens, 0)
+
+
+    data\[i,:\] = xy
+
+
+    i += 1
+
+
+    Next, we shuffle the data and create train / test splits:
+
+
+    np.random.shuffle(data)
+
+
+    X = data\[:,:-1\]
+
+
+    Y = data\[:,-1\]
+
+
+    \# last 100 rows will be test
+
+
+    Xtrain = X\[:-100,\]
+
+
+    Ytrain = Y\[:-100,\]
+
+
+    Xtest = X\[-100:,\]
+
+
+    Ytest = Y\[-100:,\]
+
+
+    At this point, it’s very easy to train our classifier and look at the test classification
+    rate, as we did in the previous chapter.
+
+
+    model = LogisticRegression()
+
+
+    model.fit(Xtrain, Ytrain)
+
+
+    print "Classification rate:", model.score(Xtest, Ytest)
+
+
+    Again, notice that 90% of the work is just the data processing! Doing that part
+    intelligently is a big part of NLP.
+
+
+    Try this and see what classification rate you get.
+
+
+    Finally, we can look at the sentiment of each individual word, by inspecting the
+    logistic regression weights.
+
+
+    threshold = 0.5
+
+
+    for word, index in word\_index\_map.iteritems():
+
+
+    weight = model.coef\_\[0\]\[index\]
+
+
+    if weight > threshold or weight < -threshold:
+
+
+    print word, weight
+
+
+    We choose a threshold of 0.5 (meaning that any weight with absolute value less
+    than 0.5 is considered neutral). Here are some interesting results I found:
+
+
+    easy 0.919927614044
+
+
+    time -0.600961986429
+
+
+    love 0.615388184001
+
+
+    returned -0.542160355628
+
+
+    cable 0.525780463192
+
+
+    waste -0.5615910491
+
+
+    card -0.623082827818
+
+
+    price 1.79091994573
+
+
+    return -0.622817513478
+
+
+    you 0.752460553703
+
+
+    look 0.509584059602
+
+
+    quality 0.976849032448
+
+
+    speaker 0.553046521681
+
+
+    recommend 0.540623118612
+
+
+    item -0.636201081354
+
+
+    little 0.532198613503
+
+
+    sound 0.577221784706
+
+
+    n''t -1.42002037539
+
+
+    buy -0.513862313368
+
+
+    excellent 1.08015208784
+
+
+    memory 0.565900106762
+
+
+    fast 0.503794112607
+
+
+    It is encouraging that many of these make a lot of sense! In fact, “making sense”
+    is a great way to sanity check your algorithms.
+
+
+    # Chapter 5: Exploration of NLTK
+
+
+    In the previous chapter I gave you a preview of NLTK. You’ve already seen the
+    tokenize function and the lemmatizer - so you already know how NLTK can be useful.
+
+
+    “NLTK” is the natural language toolkit. It’s a library that encapsulates a lot
+    of NLP tasks for you so that you don’t have to write them yourself. In these lectures
+    we’re going to take a look at a few of them, just to give you a taste, and maybe
+    give you some ideas for how it could be used in your own projects.
+
+
+    The first thing we’ll look at is “parts of speech” or POS tagging. It’ll be pretty
+    obvious what it does when you see it, as opposed to me just trying to explain
+    it abstractly, so let’s just go into the code now.
+
+
+    If you haven’t installed NLTK already, you can just do “sudo pip install nltk”
+    in your command line.
+
+
+    Note that for some of these examples, NLTK might give you a message about some
+    resource not being found. They tell you what that resource is, and instructions
+    for how to download it - so that’s just nltk.download() in the console - you choose
+    what they asked you to download, and then the thing you were trying to do before,
+    should now work.
+
+
+    POS tag example:
+
+
+    nltk.pos\_tag("Machine learning is great".split())
+
+
+    \[(''Machine'', ''NN''), (''learning'', ''NN''), (''is'', ''VBZ''), (''great'',
+    ''JJ'')\]
+
+
+    What you see here is that the POS tagger tells us what role each word has in the
+    sentence. It’s saying that “machine” is a noun, “learning” is a noun, “is” is
+    a verb in the 3rd person present form, and “great” is an adjective.
+
+
+    For a full list of what these abbreviations mean, go to: [https://www.ling.upenn.edu/courses/Fall\_2003/ling001/penn\_treebank\_pos.html](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html)
+
+
+    The next thing we’re going to look at is “stemming” and “lemmatization”. We already
+    used this in our sentiment analyzer.
+
+
+    The basic idea for both of these is that we want to reduce a word to its base
+    form. So if it’s plural like “dogs”, it would be reduced to “dog”. “Jumping” would
+    be reduced to “jump”, and so on.
+
+
+    This can be useful if you’re trying to create a bag of words, but you want to
+    reduce the variations on each word since “dogs” and “dog” both essentially have
+    the same meaning.
+
+
+    So what’s the difference between stemming and lemmatization?
+
+
+    Think of stemming as a more “basic” or “crude” version of this task - sometimes
+    it just chops off the ends of words to give you the base form. Let’s do an example.
+
+
+    from nltk.stem.porter import PorterStemmer
+
+
+    porter\_stemmer = PorterStemmer()
+
+
+    porter\_stemmer.stem(‘wolves’)
+
+
+    Output: ‘wolv’
+
+
+    vs.
+
+
+    from nltk.stem import WordNetLemmatizer
+
+
+    wordnet\_lemmatizer = WordNetLemmatizer()
+
+
+    wordnet\_lemmatizer.lemmatize("wolves")
+
+
+    Output: ‘wolf’
+
+
+    So you see that stemming is more crude in the sense that it can return things
+    that are not even real words. This may or may not be an issue in your system,
+    that is up to you to decide. Experiment and see which one is faster.
+
+
+    Something we talked about briefly in our intro was named entity recognition or
+    NER.
+
+
+    Here are some examples of that in NLTK.
+
+
+    nltk.ne\_chunk(nltk.pos\_tag("Albert Einstein was born on March 14, 1879.".split())).draw()'
+  fmt: "\n由于正文内容较多，我们将其合理划分为多个章节和小节。\n\n# 文本处理与情感分析实战\n\n## 数据平衡与预处理\n\n由于正面评论多于负面评论，我们只需对正面评论进行采样，使类别保持平衡。对某些分类器而言这不是问题，但为稳妥起见，我们仍执行此操作。\n\
+    \n接下来，我们将定义一个函数，将每条评论转换为单词或标记的列表。这不仅仅是调用 `string.split()`。例如，如果我们有 \"Dog\" 和 \"\
+    dog\"，它们是同一个词。`NLTK` 包含自己的分词函数，我们可以直接使用。\n\n```python\ndef my_tokenizer(s):\n\
+    \    s = s.lower() # downcase\n    tokens = nltk.tokenize.word_tokenize(s) # split\
+    \ string into words (tokens)\n    tokens = [t for t in tokens if len(t) > 2] #\
+    \ remove short words, they're probably not useful\n    tokens = [wordnet_lemmatizer.lemmatize(t)\
+    \ for t in tokens] # put words into base form\n    tokens = [t for t in tokens\
+    \ if t not in stopwords] # remove stopwords\n    return tokens\n```\n\n注意，`NLTK`\
+    \ 的分词函数比 `string.split()` 慢得多，因此在自己的代码中可能需要探索其他选项。更高级的系统会处理拼写错误等情况。\n\n## 构建数据矩阵\n\
+    \n接下来，我们需要收集必要的数据，以便将所有文本转换为数据矩阵 `X`。这包括：确定词汇表总大小（单词总数），确定每个单词的索引（从 0 开始，依次递增\
+    \ 1），并保存每条评论的分词形式。\n\n```python\nword_index_map = {}\ncurrent_index = 0\npositive_tokenized\
+    \ = []\nnegative_tokenized = []\n\nfor review in positive_reviews:\n    tokens\
+    \ = my_tokenizer(review.text)\n    positive_tokenized.append(tokens)\n    for\
+    \ token in tokens:\n        if token not in word_index_map:\n            word_index_map[token]\
+    \ = current_index\n            current_index += 1\n\nfor review in negative_reviews:\n\
+    \    tokens = my_tokenizer(review.text)\n    negative_tokenized.append(tokens)\n\
+    \    for token in tokens:\n        if token not in word_index_map:\n         \
+    \   word_index_map[token] = current_index\n            current_index += 1\n```\n\
+    \n注意，我们确定单词与索引映射关系的方法是 `word_index_map`，它是一个字典，以单词为键，返回索引作为值。\n\n## 向量化表示\n\n\
+    接下来，让我们创建一个函数，将每组标记（代表一条评论）转换为数据向量。\n\n```python\ndef tokens_to_vector(tokens,\
+    \ label):\n    x = np.zeros(len(word_index_map) + 1) # last element is for the\
+    \ label\n    for t in tokens:\n        i = word_index_map[t]\n        x[i] +=\
+    \ 1\n    x = x / x.sum() # normalize it before setting label\n    x[-1] = label\n\
+    \    return x\n```\n\n请注意，此函数假设我们此时仍将标签附加到向量上。\n\n## 初始化数据矩阵\n\n最后，我们初始化数据矩阵：\n\
+    \n```python\nN = len(positive_tokenized) + len(negative_tokenized)\n# (N x D+1\
+    \ matrix - keeping them together for now so we can shuffle more easily later\n\
+    data = np.zeros((N, len(word_index_map) + 1))\n\ni = 0\nfor tokens in positive_tokenized:\n\
+    \    xy = tokens_to_vector(tokens, 1)\n    data[i,:] = xy\n    i += 1\n\nfor tokens\
+    \ in negative_tokenized:\n    xy = tokens_to_vector(tokens, 0)\n    data[i,:]\
+    \ = xy\n    i += 1\n```\n\n## 打乱数据与划分训练/测试集\n\n接下来，我们打乱数据并创建训练/测试集划分：\n\n```python\n\
+    np.random.shuffle(data)\n\nX = data[:,:-1]\nY = data[:,-1]\n\n# last 100 rows\
+    \ will be test\nXtrain = X[:-100,]\nYtrain = Y[:-100,]\nXtest = X[-100:,]\nYtest\
+    \ = Y[-100:,]\n```\n\n此时，正如上一章所做的那样，训练分类器并查看测试分类率变得非常容易。\n\n```python\nmodel =\
+    \ LogisticRegression()\nmodel.fit(Xtrain, Ytrain)\nprint \"Classification rate:\"\
+    , model.score(Xtest, Ytest)\n```\n\n再次注意，90% 的工作只是数据处理！智能地完成这部分是 NLP 的重要组成部分。\n\
+    \n请尝试运行并查看获得的分类率。\n\n## 词级情感分析\n\n最后，我们可以通过检查逻辑回归权重来查看每个单词的情感倾向。\n\n```python\n\
+    threshold = 0.5\nfor word, index in word_index_map.iteritems():\n    weight =\
+    \ model.coef_[0][index]\n    if weight > threshold or weight < -threshold:\n \
+    \       print word, weight\n```\n\n我们选择 0.5 作为阈值（即绝对值小于 0.5 的权重被视为中性）。以下是我发现的一些有趣结果：\n\
+    \n| 单词 | 权重 |\n| :--- | :--- |\n| easy | 0.919927614044 |\n| time | -0.600961986429\
+    \ |\n| love | 0.615388184001 |\n| returned | -0.542160355628 |\n| cable | 0.525780463192\
+    \ |\n| waste | -0.5615910491 |\n| card | -0.623082827818 |\n| price | 1.79091994573\
+    \ |\n| return | -0.622817513478 |\n| you | 0.752460553703 |\n| look | 0.509584059602\
+    \ |\n| quality | 0.976849032448 |\n| speaker | 0.553046521681 |\n| recommend |\
+    \ 0.540623118612 |\n| item | -0.636201081354 |\n| little | 0.532198613503 |\n\
+    | sound | 0.577221784706 |\n| n't | -1.42002037539 |\n| buy | -0.513862313368\
+    \ |\n| excellent | 1.08015208784 |\n| memory | 0.565900106762 |\n| fast | 0.503794112607\
+    \ |\n\n令人鼓舞的是，这些结果大多非常合理！事实上，“讲得通”是对算法进行合理性检查的好方法。\n\n# Chapter 5: Exploration\
+    \ of NLTK\n\n在上一章中，我向您预览了 `NLTK`。您已经看到了 `tokenize` 函数和 `lemmatizer` —— 所以您已经知道\
+    \ `NLTK` 如何发挥作用。\n\n“NLTK” 是自然语言工具包。它是一个封装了大量 NLP 任务的库，这样您就不必自己编写它们。在本系列讲座中，我们将了解其中的一些功能，让您有个大概的了解，并可能为您自己的项目提供一些思路。\n\
+    \n## 词性标注\n\n我们要看的第一件事是“词性标注”或 POS tagging。当您看到它的实际效果时，它的作用将非常明显，而不是我试图抽象地解释它，所以让我们直接进入代码。\n\
+    \n如果您尚未安装 `NLTK`，可以在命令行中执行 `sudo pip install nltk`。\n\n请注意，对于其中一些示例，`NLTK` 可能会提示找不到某些资源。它会告诉您该资源是什么，以及如何下载它的说明\
+    \ —— 只需在控制台运行 `nltk.download()`，选择它要求您下载的内容，然后您之前尝试做的事情现在应该可以工作了。\n\n**POS 标注示例：**\n\
+    \n```python\nnltk.pos_tag(\"Machine learning is great\".split())\n```\n\n输出：\n\
+    \n```text\n[('Machine', 'NN'), ('learning', 'NN'), ('is', 'VBZ'), ('great', 'JJ')]\n\
+    ```\n\n在这里，您可以看到 POS 标注器告诉我们句子中每个单词的角色。它表明 \"machine\" 是名词，\"learning\" 是名词，\"\
+    is\" 是第三人称现在时动词，\"great\" 是形容词。\n\n有关这些缩写含义的完整列表，请访问：[https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html)\n\
+    \n## 词干提取与词形还原\n\n接下来我们要看的是“词干提取”和“词形还原”。我们在情感分析器中已经使用过它们了。\n\n两者的基本思想都是将单词还原为其基本形式。因此，如果是复数如\
+    \ \"dogs\"，它会还原为 \"dog\"。\"Jumping\" 会还原为 \"jump\"，以此类推。\n\n如果您试图创建词袋模型，但希望减少每个单词的变体（因为\
+    \ \"dogs\" 和 \"dog\" 本质上具有相同的含义），这会很有用。\n\n那么，词干提取和词形还原有什么区别呢？\n\n可以将词干提取视为该任务的一个更“基本”或“粗糙”的版本\
+    \ —— 有时它只是切掉单词的结尾以给出基本形式。让我们做个例子。\n\n```python\nfrom nltk.stem.porter import PorterStemmer\n\
+    \nporter_stemmer = PorterStemmer()\nporter_stemmer.stem('wolves')\n```\n\n输出：`'wolv'`\n\
+    \n对比：\n\n```python\nfrom nltk.stem import WordNetLemmatizer\n\nwordnet_lemmatizer\
+    \ = WordNetLemmatizer()\nwordnet_lemmatizer.lemmatize(\"wolves\")\n```\n\n输出：`'wolf'`\n\
+    \n因此，您可以看到词干提取更粗糙，因为它可能返回甚至不是真实单词的内容。这在您的系统中可能是个问题，也可能不是，这取决于您的决定。请实验并查看哪个更快。\n\
+    \n## 命名实体识别\n\n我们在简介中简要讨论过命名实体识别（NER）。\n\n以下是 `NLTK` 中的一些示例。\n\n```python\nnltk.ne_chunk(nltk.pos_tag(\"\
+    Albert Einstein was born on March 14, 1879.\".split())).draw()\n```\n"
+  trans: "\n由于正文内容较多，我们将其合理划分为多个章节和小节。\n\n# 文本处理与情感分析实战\n\n## 数据平衡与预处理\n\n由于正面评论多于负面评论，我们只需对正面评论进行采样，使类别保持平衡。对某些分类器而言这不是问题，但为稳妥起见，我们仍执行此操作。\n\
+    \n接下来，我们将定义一个函数，将每条评论转换为单词或标记的列表。这不仅仅是调用 `string.split()`。例如，如果我们有 \"Dog\" 和 \"\
+    dog\"，它们是同一个词。`NLTK` 包含自己的分词函数，我们可以直接使用。\n\n```python\ndef my_tokenizer(s):\n\
+    \    s = s.lower() # downcase\n    tokens = nltk.tokenize.word_tokenize(s) # split\
+    \ string into words (tokens)\n    tokens = [t for t in tokens if len(t) > 2] #\
+    \ remove short words, they're probably not useful\n    tokens = [wordnet_lemmatizer.lemmatize(t)\
+    \ for t in tokens] # put words into base form\n    tokens = [t for t in tokens\
+    \ if t not in stopwords] # remove stopwords\n    return tokens\n```\n\n注意，`NLTK`\
+    \ 的分词函数比 `string.split()` 慢得多，因此在自己的代码中可能需要探索其他选项。更高级的系统会处理拼写错误等情况。\n\n## 构建数据矩阵\n\
+    \n接下来，我们需要收集必要的数据，以便将所有文本转换为数据矩阵 `X`。这包括：确定词汇表总大小（单词总数），确定每个单词的索引（从 0 开始，依次递增\
+    \ 1），并保存每条评论的分词形式。\n\n```python\nword_index_map = {}\ncurrent_index = 0\npositive_tokenized\
+    \ = []\nnegative_tokenized = []\n\nfor review in positive_reviews:\n    tokens\
+    \ = my_tokenizer(review.text)\n    positive_tokenized.append(tokens)\n    for\
+    \ token in tokens:\n        if token not in word_index_map:\n            word_index_map[token]\
+    \ = current_index\n            current_index += 1\n\nfor review in negative_reviews:\n\
+    \    tokens = my_tokenizer(review.text)\n    negative_tokenized.append(tokens)\n\
+    \    for token in tokens:\n        if token not in word_index_map:\n         \
+    \   word_index_map[token] = current_index\n            current_index += 1\n```\n\
+    \n注意，我们确定单词与索引映射关系的方法是 `word_index_map`，它是一个字典，以单词为键，返回索引作为值。\n\n## 向量化表示\n\n\
+    接下来，让我们创建一个函数，将每组标记（代表一条评论）转换为数据向量。\n\n```python\ndef tokens_to_vector(tokens,\
+    \ label):\n    x = np.zeros(len(word_index_map) + 1) # last element is for the\
+    \ label\n    for t in tokens:\n        i = word_index_map[t]\n        x[i] +=\
+    \ 1\n    x = x / x.sum() # normalize it before setting label\n    x[-1] = label\n\
+    \    return x\n```\n\n请注意，此函数假设我们此时仍将标签附加到向量上。\n\n## 初始化数据矩阵\n\n最后，我们初始化数据矩阵：\n\
+    \n```python\nN = len(positive_tokenized) + len(negative_tokenized)\n# (N x D+1\
+    \ matrix - keeping them together for now so we can shuffle more easily later\n\
+    data = np.zeros((N, len(word_index_map) + 1))\n\ni = 0\nfor tokens in positive_tokenized:\n\
+    \    xy = tokens_to_vector(tokens, 1)\n    data[i,:] = xy\n    i += 1\n\nfor tokens\
+    \ in negative_tokenized:\n    xy = tokens_to_vector(tokens, 0)\n    data[i,:]\
+    \ = xy\n    i += 1\n```\n\n## 打乱数据与划分训练/测试集\n\n接下来，我们打乱数据并创建训练/测试集划分：\n\n```python\n\
+    np.random.shuffle(data)\n\nX = data[:,:-1]\nY = data[:,-1]\n\n# last 100 rows\
+    \ will be test\nXtrain = X[:-100,]\nYtrain = Y[:-100,]\nXtest = X[-100:,]\nYtest\
+    \ = Y[-100:,]\n```\n\n此时，正如上一章所做的那样，训练分类器并查看测试分类率变得非常容易。\n\n```python\nmodel =\
+    \ LogisticRegression()\nmodel.fit(Xtrain, Ytrain)\nprint \"Classification rate:\"\
+    , model.score(Xtest, Ytest)\n```\n\n再次注意，90% 的工作只是数据处理！智能地完成这部分是 NLP 的重要组成部分。\n\
+    \n请尝试运行并查看获得的分类率。\n\n## 词级情感分析\n\n最后，我们可以通过检查逻辑回归权重来查看每个单词的情感倾向。\n\n```python\n\
+    threshold = 0.5\nfor word, index in word_index_map.iteritems():\n    weight =\
+    \ model.coef_[0][index]\n    if weight > threshold or weight < -threshold:\n \
+    \       print word, weight\n```\n\n我们选择 0.5 作为阈值（即绝对值小于 0.5 的权重被视为中性）。以下是我发现的一些有趣结果：\n\
+    \n| 单词 | 权重 |\n| :--- | :--- |\n| easy | 0.919927614044 |\n| time | -0.600961986429\
+    \ |\n| love | 0.615388184001 |\n| returned | -0.542160355628 |\n| cable | 0.525780463192\
+    \ |\n| waste | -0.5615910491 |\n| card | -0.623082827818 |\n| price | 1.79091994573\
+    \ |\n| return | -0.622817513478 |\n| you | 0.752460553703 |\n| look | 0.509584059602\
+    \ |\n| quality | 0.976849032448 |\n| speaker | 0.553046521681 |\n| recommend |\
+    \ 0.540623118612 |\n| item | -0.636201081354 |\n| little | 0.532198613503 |\n\
+    | sound | 0.577221784706 |\n| n't | -1.42002037539 |\n| buy | -0.513862313368\
+    \ |\n| excellent | 1.08015208784 |\n| memory | 0.565900106762 |\n| fast | 0.503794112607\
+    \ |\n\n令人鼓舞的是，这些结果大多非常合理！事实上，“讲得通”是对算法进行合理性检查的好方法。\n\n# 第 5 章：NLTK 探索\n\n在上一章中，我向您预览了\
+    \ `NLTK`。您已经看到了 `tokenize` 函数和 `lemmatizer` —— 所以您已经知道 `NLTK` 如何发挥作用。\n\n“NLTK”\
+    \ 是自然语言工具包。它是一个封装了大量 NLP 任务的库，这样您就不必自己编写它们。在本系列讲座中，我们将了解其中的一些功能，让您有个大概的了解，并可能为您自己的项目提供一些思路。\n\
+    \n## 词性标注\n\n我们要看的第一件事是“词性标注”或 POS tagging。当您看到它的实际效果时，它的作用将非常明显，而不是我试图抽象地解释它，所以让我们直接进入代码。\n\
+    \n如果您尚未安装 `NLTK`，可以在命令行中执行 `sudo pip install nltk`。\n\n请注意，对于其中一些示例，`NLTK` 可能会提示找不到某些资源。它会告诉您该资源是什么，以及如何下载它的说明\
+    \ —— 只需在控制台运行 `nltk.download()`，选择它要求您下载的内容，然后您之前尝试做的事情现在应该可以工作了。\n\n**POS 标注示例：**\n\
+    \n```python\nnltk.pos_tag(\"Machine learning is great\".split())\n```\n\n输出：\n\
+    \n```text\n[('Machine', 'NN'), ('learning', 'NN'), ('is', 'VBZ'), ('great', 'JJ')]\n\
+    ```\n\n在这里，您可以看到 POS 标注器告诉我们句子中每个单词的角色。它表明 \"machine\" 是名词，\"learning\" 是名词，\"\
+    is\" 是第三人称现在时动词，\"great\" 是形容词。\n\n有关这些缩写含义的完整列表，请访问：[`www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html`](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html)\n\
+    \n## 词干提取与词形还原\n\n接下来我们要看的是“词干提取”和“词形还原”。我们在情感分析器中已经使用过它们了。\n\n两者的基本思想都是将单词还原为其基本形式。因此，如果是复数如\
+    \ \"dogs\"，它会还原为 \"dog\"。\"Jumping\" 会还原为 \"jump\"，以此类推。\n\n如果您试图创建词袋模型，但希望减少每个单词的变体（因为\
+    \ \"dogs\" 和 \"dog\" 本质上具有相同的含义），这会很有用。\n\n那么，词干提取和词形还原有什么区别呢？\n\n可以将词干提取视为该任务的一个更“基本”或“粗糙”的版本\
+    \ —— 有时它只是切掉单词的结尾以给出基本形式。让我们做个例子。\n\n```python\nfrom nltk.stem.porter import PorterStemmer\n\
+    \nporter_stemmer = PorterStemmer()\nporter_stemmer.stem('wolves')\n```\n\n输出：`'wolv'`\n\
+    \n对比：\n\n```python\nfrom nltk.stem import WordNetLemmatizer\n\nwordnet_lemmatizer\
+    \ = WordNetLemmatizer()\nwordnet_lemmatizer.lemmatize(\"wolves\")\n```\n\n输出：`'wolf'`\n\
+    \n因此，您可以看到词干提取更粗糙，因为它可能返回甚至不是真实单词的内容。这在您的系统中可能是个问题，也可能不是，这取决于您的决定。请实验并查看哪个更快。\n\
+    \n## 命名实体识别\n\n我们在简介中简要讨论过命名实体识别（NER）。\n\n以下是 `NLTK` 中的一些示例。\n\n```python\nnltk.ne_chunk(nltk.pos_tag(\"\
+    Albert Einstein was born on March 14, 1879.\".split())).draw()\n```\n"
+  toc: []
+- raw: 'Notice that we can use the draw() method to display a tree instead of viewing
+    the result as text.
+
+
+    ￼![Screen Shot 2016-05-17 at 8.25.07 PM.png](Images/00001.jpeg)
+
+
+    So named entity recognition can tell you which parts of a sentence are people.
+
+
+    Let’s try another one.
+
+
+    nltk.ne\_chunk(nltk.pos\_tag("Steve Jobs was the CEO of Apple Corp.".split())).draw()
+
+
+    This returns:
+
+
+    \[(''Steve'', ''NNP''),
+
+
+    (''Jobs'', ''NNP''),
+
+
+    (''was'', ''VBD''),
+
+
+    (''the'', ''DT''),
+
+
+    (''CEO'', ''NNP''),
+
+
+    (''of'', ''IN''),
+
+
+    (''Apple'', ''NNP''),
+
+
+    (''Corp.'', ''NNP'')\]
+
+
+    So NER thinks the abbreviation CEO is an organization, which of course it’s not.
+    Just goes to show that NLP isn’t perfect just yet.
+
+
+    One question you might have is, “what is all this stuff useful for?”
+
+
+    A lot of times, we want to draw relationships between the items in a sentence.
+
+
+    So if one noun is performing some action on another noun, that is a special relationship
+    that is not captured by bag-of-words.
+
+
+    As you can imagine, this might be a useful feature for a machine learning algorithm.
+
+
+    Remember from our previous chapters - the algorithms are only about as powerful
+    as the features we give it.
+
+
+    I’ve worked on many interesting projects that involved using these features of
+    NLP.
+
+
+    For instance, perhaps your supervisor comes to you one day and says he needs a
+    list of every corporation working on artificial intelligence. All you have is
+    data from the web.
+
+
+    Well, you could just look through every web page manually and write down each
+    corporation that shows up after reading each page very carefully.
+
+
+    Of course, that would take you a very long time.
+
+
+    Alternatively, you could instead scrape each web page, extract the text data,
+    and filter the pages for the term “artificial intelligence” and any synonym of
+    that, like “machine learning”.
+
+
+    Next, you could use named entity recognition to extract all the corporations from
+    the filtered text. Voila! You have a list of corporations that are involved with
+    AI.
+
+
+    # Chapter 6: Latent Semantic Analysis
+
+
+    What is latent semantic analysis (also known as “latent semantic indexing”)?
+
+
+    Previously we solved some problems where we turned words into counts, and we said
+    if this word shows up a lot for spam or for negative sentiment, then that means
+    that word was associated with that label.
+
+
+    But what if you have multiple words with the same meaning? Or what if you have
+    one word that can have multiple different meanings?
+
+
+    Then we have a problem! These two problems are called synonymy and polysemy.
+
+
+    Some examples from Wikipedia:
+
+
+    Synonyms:
+
+
+    “buy” and “purchase”
+
+
+    “big” and “large”
+
+
+    “quick” and “speedy”
+
+
+    Polysemes:
+
+
+    “Man” - as in human as opposed to animal, or as in male as opposed to female,
+    or just in the casual sense, “hey man!”
+
+
+    “Milk” - as in the verb “I’m going to milk it for all it’s worth”, or as in “the
+    cat is producing milk for its babies”
+
+
+    So one way you might solve this problem is to combine words with similar meanings.
+    So for example, you’ll probably see the terms “computer”, “desktop”, and “PC”
+    together very often. That means they are highly correlated.
+
+
+    You can think of a sort of “latent variable” or hidden variable that represents
+    all of them - hence the term latent semantic analysis.
+
+
+    The job of LSA is to find these variables and transform the original data into
+    these new variables - and hopefully the dimensionality of this new data is much
+    smaller than the original - which allows us to speed up our computations.
+
+
+    It’s important to note that LSA definitely helps solve the synonymy problem by
+    combining correlated variables, but I’ve seen conflicting viewpoints of whether
+    or not it really helps with polysemy.
+
+
+    In the next section we’re going to talk about the underlying mathematics behind
+    LSA, and then we’ll look at a real-world example.
+
+
+    PCA and SVD Recap
+
+
+    LSA is basically the application of SVD to a term-document matrix. PCA is a simpler
+    form of SVD so we’ll cover that first to get an intuition.
+
+
+    SVD = singular value decomposition
+
+
+    PCA = principal components analysis
+
+
+    I want to stress that this is optional and is only for people who want to understand
+    the math behind LSA. It’s not necessary to do the coding part, since that will
+    just be interpreting the answer that LSA gives us.
+
+
+    Let’s look first at PCA, and let’s talk in general terms about what it does. At
+    its most basic it does a transformation on all our input vectors, z = Qx. This
+    is a matrix multiplication, and you know that when you multiply a vector by a
+    scalar it gives us another vector in the same direction, but if you multiply a
+    vector by a matrix you could possibly get a vector in a different direction. So
+    PCA rotates our original input vectors, or another way of thinking of it is that
+    it’s the same vectors in a different, rotated coordinate system.
+
+
+    PCA does 3 things for us:
+
+
+    1) It decorrelates all of our data. So our data in the new coordinate system has
+    0 correlation between any 2 input features.
+
+
+    2) It orders each new dimension in decreasing order by its information content.
+    So the first dimension carries the most information, the second dimension carries
+    less than the first but more than the third, and so on.
+
+
+    3) It allows us to reduce the dimensionality of our data. So if our original vocabulary
+    was 1000 words, we might find that when we join all the words by how often they
+    co-occur in each document, maybe the total number of distinct “latent” terms is
+    only 100. This is a direct consequence of #2, since you can cut off any higher
+    dimensions if they contain say, less than 5% of the total information.
+
+
+    Note that by removing information, you’re not always reducing predictive ability.
+    One perspective of PCA is that it does “denoising”. With NLP where the vocabulary
+    size is large, noise is quite prevalent, so by doing this smoothing or denoising,
+    we can actually generalize better when we look at new data.
+
+
+    These 3 ideas give us a big hint about what we need to do here. The central item
+    in all these ideas is the covariance matrix. The diagonals of a covariance matrix
+    tell us the variance of that dimension, and the off-diagonals tell us how correlated
+    2 different dimensions are with each other.
+
+
+    Recall that for most classical statistical methods, we consider more variance
+    to be synonymous with more information. As a corollary to this, think of a variable
+    that’s completely deterministic to contain 0 information. Why? Because, if we
+    already can predict this variable exactly, then measuring it won’t tell us anything
+    new, since we already knew the answer we would get!
+
+
+    The covariance is defined as:
+
+
+    C(i,j) = E\[(X\_i - mu(i))(X\_j - mu(j))\]
+
+
+    Where mu(i) is the mean of X\_i (the ith feature of X).
+
+
+    If i = j you see that this is just the sample variance.
+
+
+    The sample covariance is then:
+
+
+    C(i,j) = sum\[n=1..N\]{ (X\[n,i\] - mu\[i\])(X\[n,j\] - mu\[j\]) } / N
+
+
+    A more convenient form of this equation is the matrix notation - the matrix “X
+    transpose” times “X” divided by “N”. Notice that we’ve dropped the means since
+    we can center the data before doing any processing.
+
+
+    C = X^T X / N
+
+
+    You can convince yourself this is correct since “X transpose” is D x N and “X”
+    is N x D, so the result is D x D.
+
+
+    Ok, so now we have this D x D covariance matrix, what do we do with it? We find
+    its eigenvalues and eigenvectors of course!
+
+
+    Cq = lambda q
+
+
+    It turns out there are exactly D eigenvectors and D eigenvalues. We put them both
+    into matrices by putting the eigenvalues into a diagonal matrix called “big lambda”
+    and we stack the eigenvectors into a matrix called “Q”, which we saw earlier.
+    We will sort the eigenvalues and corresponding eigenvectors in descending order.
+
+
+    In matrix form this would be:
+
+
+    CQ = Q Lambda
+
+
+    We can prove that Big Lambda is actually just the covariance of the transformed
+    data. Since all the off-diagonals are 0, being that it’s a diagonal matrix, that
+    means the transformed data is completely decorrelated.'
+  fmt: "\n# Notice that we can use the draw() method to display a tree instead of\
+    \ viewing the result as text.\n\n![Screen Shot 2016-05-17 at 8.25.07 PM.png](Images/00001.jpeg)\n\
+    \nSo named entity recognition can tell you which parts of a sentence are people.\n\
+    \nLet’s try another one.\n\n`nltk.ne_chunk(nltk.pos_tag(\"Steve Jobs was the CEO\
+    \ of Apple Corp.\".split())).draw()`\n\nThis returns:\n\n```\n[('Steve', 'NNP'),\n\
+    \ ('Jobs', 'NNP'),\n ('was', 'VBD'),\n ('the', 'DT'),\n ('CEO', 'NNP'),\n ('of',\
+    \ 'IN'),\n ('Apple', 'NNP'),\n ('Corp.', 'NNP')]\n```\n\nSo NER thinks the abbreviation\
+    \ CEO is an organization, which of course it’s not. Just goes to show that NLP\
+    \ isn’t perfect just yet.\n\nOne question you might have is, “what is all this\
+    \ stuff useful for?”\n\nA lot of times, we want to draw relationships between\
+    \ the items in a sentence.\n\nSo if one noun is performing some action on another\
+    \ noun, that is a special relationship that is not captured by bag-of-words.\n\
+    \nAs you can imagine, this might be a useful feature for a machine learning algorithm.\n\
+    \nRemember from our previous chapters - the algorithms are only about as powerful\
+    \ as the features we give it.\n\nI’ve worked on many interesting projects that\
+    \ involved using these features of NLP.\n\nFor instance, perhaps your supervisor\
+    \ comes to you one day and says he needs a list of every corporation working on\
+    \ artificial intelligence. All you have is data from the web.\n\nWell, you could\
+    \ just look through every web page manually and write down each corporation that\
+    \ shows up after reading each page very carefully.\n\nOf course, that would take\
+    \ you a very long time.\n\nAlternatively, you could instead scrape each web page,\
+    \ extract the text data, and filter the pages for the term “artificial intelligence”\
+    \ and any synonym of that, like “machine learning”.\n\nNext, you could use named\
+    \ entity recognition to extract all the corporations from the filtered text. Voila!\
+    \ You have a list of corporations that are involved with AI.\n\n# Chapter 6: Latent\
+    \ Semantic Analysis\n\nWhat is latent semantic analysis (also known as “latent\
+    \ semantic indexing”)?\n\nPreviously we solved some problems where we turned words\
+    \ into counts, and we said if this word shows up a lot for spam or for negative\
+    \ sentiment, then that means that word was associated with that label.\n\nBut\
+    \ what if you have multiple words with the same meaning? Or what if you have one\
+    \ word that can have multiple different meanings?\n\nThen we have a problem! These\
+    \ two problems are called synonymy and polysemy.\n\nSome examples from Wikipedia:\n\
+    \n## Synonyms:\n\n- “buy” and “purchase”\n- “big” and “large”\n- “quick” and “speedy”\n\
+    \n## Polysemes:\n\n- “Man” - as in human as opposed to animal, or as in male as\
+    \ opposed to female, or just in the casual sense, “hey man!”\n- “Milk” - as in\
+    \ the verb “I’m going to milk it for all it’s worth”, or as in “the cat is producing\
+    \ milk for its babies”\n\nSo one way you might solve this problem is to combine\
+    \ words with similar meanings. So for example, you’ll probably see the terms “computer”,\
+    \ “desktop”, and “PC” together very often. That means they are highly correlated.\n\
+    \nYou can think of a sort of “latent variable” or hidden variable that represents\
+    \ all of them - hence the term latent semantic analysis.\n\nThe job of LSA is\
+    \ to find these variables and transform the original data into these new variables\
+    \ - and hopefully the dimensionality of this new data is much smaller than the\
+    \ original - which allows us to speed up our computations.\n\nIt’s important to\
+    \ note that LSA definitely helps solve the synonymy problem by combining correlated\
+    \ variables, but I’ve seen conflicting viewpoints of whether or not it really\
+    \ helps with polysemy.\n\nIn the next section we’re going to talk about the underlying\
+    \ mathematics behind LSA, and then we’ll look at a real-world example.\n\n## PCA\
+    \ and SVD Recap\n\nLSA is basically the application of SVD to a term-document\
+    \ matrix. PCA is a simpler form of SVD so we’ll cover that first to get an intuition.\n\
+    \nSVD = singular value decomposition\n\nPCA = principal components analysis\n\n\
+    I want to stress that this is optional and is only for people who want to understand\
+    \ the math behind LSA. It’s not necessary to do the coding part, since that will\
+    \ just be interpreting the answer that LSA gives us.\n\nLet’s look first at PCA,\
+    \ and let’s talk in general terms about what it does. At its most basic it does\
+    \ a transformation on all our input vectors, `z = Qx`. This is a matrix multiplication,\
+    \ and you know that when you multiply a vector by a scalar it gives us another\
+    \ vector in the same direction, but if you multiply a vector by a matrix you could\
+    \ possibly get a vector in a different direction. So PCA rotates our original\
+    \ input vectors, or another way of thinking of it is that it’s the same vectors\
+    \ in a different, rotated coordinate system.\n\nPCA does 3 things for us:\n\n\
+    1. It decorrelates all of our data. So our data in the new coordinate system has\
+    \ 0 correlation between any 2 input features.\n2. It orders each new dimension\
+    \ in decreasing order by its information content. So the first dimension carries\
+    \ the most information, the second dimension carries less than the first but more\
+    \ than the third, and so on.\n3. It allows us to reduce the dimensionality of\
+    \ our data. So if our original vocabulary was 1000 words, we might find that when\
+    \ we join all the words by how often they co-occur in each document, maybe the\
+    \ total number of distinct “latent” terms is only 100. This is a direct consequence\
+    \ of #2, since you can cut off any higher dimensions if they contain say, less\
+    \ than 5% of the total information.\n\nNote that by removing information, you’re\
+    \ not always reducing predictive ability. One perspective of PCA is that it does\
+    \ “denoising”. With NLP where the vocabulary size is large, noise is quite prevalent,\
+    \ so by doing this smoothing or denoising, we can actually generalize better when\
+    \ we look at new data.\n\nThese 3 ideas give us a big hint about what we need\
+    \ to do here. The central item in all these ideas is the covariance matrix. The\
+    \ diagonals of a covariance matrix tell us the variance of that dimension, and\
+    \ the off-diagonals tell us how correlated 2 different dimensions are with each\
+    \ other.\n\nRecall that for most classical statistical methods, we consider more\
+    \ variance to be synonymous with more information. As a corollary to this, think\
+    \ of a variable that’s completely deterministic to contain 0 information. Why?\
+    \ Because, if we already can predict this variable exactly, then measuring it\
+    \ won’t tell us anything new, since we already knew the answer we would get!\n\
+    \nThe covariance is defined as:\n\n`C(i,j) = E[(X_i - mu(i))(X_j - mu(j))]`\n\n\
+    Where `mu(i)` is the mean of `X_i` (the ith feature of X).\n\nIf `i = j` you see\
+    \ that this is just the sample variance.\n\nThe sample covariance is then:\n\n\
+    `C(i,j) = sum[n=1..N]{ (X[n,i] - mu[i])(X[n,j] - mu[j]) } / N`\n\nA more convenient\
+    \ form of this equation is the matrix notation - the matrix “X transpose” times\
+    \ “X” divided by “N”. Notice that we’ve dropped the means since we can center\
+    \ the data before doing any processing.\n\n`C = X^T X / N`\n\nYou can convince\
+    \ yourself this is correct since “X transpose” is D x N and “X” is N x D, so the\
+    \ result is D x D.\n\nOk, so now we have this D x D covariance matrix, what do\
+    \ we do with it? We find its eigenvalues and eigenvectors of course!\n\n`Cq =\
+    \ lambda q`\n\nIt turns out there are exactly D eigenvectors and D eigenvalues.\
+    \ We put them both into matrices by putting the eigenvalues into a diagonal matrix\
+    \ called “big lambda” and we stack the eigenvectors into a matrix called “Q”,\
+    \ which we saw earlier. We will sort the eigenvalues and corresponding eigenvectors\
+    \ in descending order.\n\nIn matrix form this would be:\n\n`CQ = Q Lambda`\n\n\
+    We can prove that Big Lambda is actually just the covariance of the transformed\
+    \ data. Since all the off-diagonals are 0, being that it’s a diagonal matrix,\
+    \ that means the transformed data is completely decorrelated.\n"
+  trans: "\n# 注意我们可以使用 draw() 方法来显示树，而不是将结果作为文本查看。\n\n![Screen Shot 2016-05-17 at\
+    \ 8.25.07 PM.png](img/00001.jpeg)\n\n因此，命名实体识别可以告诉你句子的哪些部分是人名。\n\n让我们再试一个。\n\n\
+    `nltk.ne_chunk(nltk.pos_tag(\"Steve Jobs was the CEO of Apple Corp.\".split())).draw()`\n\
+    \n这将返回：\n\n```\n[('Steve', 'NNP'),\n ('Jobs', 'NNP'),\n ('was', 'VBD'),\n ('the',\
+    \ 'DT'),\n ('CEO', 'NNP'),\n ('of', 'IN'),\n ('Apple', 'NNP'),\n ('Corp.', 'NNP')]\n\
+    ```\n\n所以 NER 认为缩写 CEO 是一个组织机构，当然它不是。这只是表明 NLP 目前还不完美。\n\n你可能会问的一个问题是：“这些东西到底有什么用？”\n\
+    \n很多时候，我们想要描绘句子中各项之间的关系。\n\n因此，如果一个名词对另一个名词执行某个动作，这就是一种特殊的关系，词袋模型无法捕捉到。\n\n正如你所想象的，这可能是机器学习算法的一个有用特征。\n\
+    \n还记得前几章的内容吗——算法的强弱取决于我们给它的特征。\n\n我参与过许多有趣的项目，涉及使用这些 NLP 特征。\n\n例如，也许有一天你的主管找到你，说他需要一份从事人工智能研究的每家公司的名单。你手头只有来自网络的数据。\n\
+    \n好吧，你可以手动浏览每个网页，仔细阅读每个页面后记下出现的每家公司。\n\n当然，那会花费你非常长的时间。\n\n或者，你可以抓取每个网页，提取文本数据，并筛选包含“artificial\
+    \ intelligence”（人工智能）一词及其任何同义词（如“machine learning”机器学习）的页面。\n\n接下来，你可以使用命名实体识别从筛选后的文本中提取所有公司名称。瞧！你得到了一份涉及\
+    \ AI 的公司名单。\n\n# 第 6 章：潜在语义分析\n\n什么是潜在语义分析（也称为“潜在语义索引”）？\n\n之前我们解决了一些将单词转换为计数的问题，我们说如果这个词在垃圾邮件或负面情绪中大量出现，那么意味着该词与该标签相关联。\n\
+    \n但如果你有多个含义相同的词怎么办？或者如果你有一个词可以有多个不同的含义怎么办？\n\n那我们就有麻烦了！这两个问题被称为同义词和多义词。\n\n维基百科中的一些例子：\n\
+    \n## 同义词：\n\n- “buy” 和 “purchase”\n- “big” 和 “large”\n- “quick” 和 “speedy”\n\n\
+    ## 多义词：\n\n- “Man” - 作为人类区别于动物，或作为男性区别于女性，或仅在随意语气下，“hey man！”\n- “Milk” - 作为动词\
+    \ “I’m going to milk it for all it’s worth”（我要榨干它的所有价值），或作为名词 “the cat is producing\
+    \ milk for its babies”（猫正在为宝宝产奶）\n\n所以解决这个问题的一种方法是合并含义相似的词。例如，你可能会经常看到 “computer”（计算机）、“desktop”（台式机）和\
+    \ “PC” 一起出现。这意味着它们高度相关。\n\n你可以把它想象成一种“潜在变量”或隐藏变量，代表它们所有人——因此称为潜在语义分析。\n\nLSA 的工作是找到这些变量，并将原始数据转换为这些新变量——希望这些新数据的维度远小于原始数据——这使我们能够加快计算速度。\n\
+    \n重要的是要注意，LSA 通过合并相关变量肯定有助于解决同义词问题，但我见过关于它是否真的有助于解决多义词问题的相互矛盾的观点。\n\n在下一节中，我们将讨论\
+    \ LSA 背后的底层数学原理，然后我们将看一个现实世界的例子。\n\n## PCA 和 SVD 回顾\n\nLSA 本质上是将 SVD 应用于词-文档矩阵。PCA\
+    \ 是 SVD 的一种更简单形式，所以我们将先介绍它以建立直觉。\n\nSVD = 奇异值分解\n\nPCA = 主成分分析\n\n我想强调这是可选的，仅适用于想要理解\
+    \ LSA 背后数学原理的人。对于编码部分来说这不是必需的，因为那将只是解释 LSA 给出的答案。\n\n让我们先看看 PCA，并用通用术语谈谈它的作用。从最基本的层面来看，它对所有输入向量进行变换，`z\
+    \ = Qx`。这是一个矩阵乘法，你知道当你用标量乘以向量时，会得到同方向的另一个向量，但如果你用矩阵乘以向量，可能会得到不同方向的向量。所以 PCA 旋转我们的原始输入向量，或者另一种思考方式是，这是同一个向量在一个不同的、旋转过的坐标系中。\n\
+    \nPCA 为我们做 3 件事：\n\n1.  它使我们所有的数据去相关。因此，新坐标系中的数据在任意 2 个输入特征之间具有 0 相关性。\n2.  它按信息含量递减的顺序排列每个新维度。因此，第一个维度包含最多信息，第二个维度包含的信息少于第一个但多于第三个，依此类推。\n\
+    3.  它允许我们降低数据的维度。因此，如果我们原始的词汇量是 1000 个词，我们可能会发现，当我们根据单词在每个文档中共现的频率将所有单词连接起来时，不同的“潜在”术语总数可能只有\
+    \ 100 个。这是 #2 的直接结果，因为如果较高维度包含的信息比如说少于总信息的 5%，你就可以切掉它们。\n\n请注意，通过移除信息，你并不总是降低预测能力。PCA\
+    \ 的一个视角是它进行“去噪”。在词汇量大的 NLP 中，噪声非常普遍，因此通过这种平滑或去噪，当我们查看新数据时，实际上可以更好地泛化。\n\n这 3 个想法给了我们关于这里需要做什么的重要提示。所有这些想法的核心项目是协方差矩阵。协方差矩阵的对角线告诉我们该维度的方差，非对角线告诉我们\
+    \ 2 个不同维度之间的相关程度。\n\n回想一下，对于大多数经典统计方法，我们认为方差越大等同于信息越多。作为这一推论，考虑一个完全确定性的变量包含 0\
+    \ 信息。为什么？因为，如果我们已经可以精确预测这个变量，那么测量它不会告诉我们任何新东西，因为我们已经知道会得到什么答案！\n\n协方差定义为：\n\n\
+    `C(i,j) = E[(X_i - mu(i))(X_j - mu(j))]`\n\n其中 `mu(i)` 是 `X_i` 的均值（X 的第 i 个特征）。\n\
+    \n如果 `i = j`，你会看到这只是样本方差。\n\n样本协方差则是：\n\n`C(i,j) = sum[n=1..N]{ (X[n,i] - mu[i])(X[n,j]\
+    \ - mu[j]) } / N`\n\n这个方程更方便的形式是矩阵表示法——“X 转置”乘以“X”除以“N”。注意我们去掉了均值，因为我们可以在进行任何处理之前先将数据中心化。\n\
+    \n`C = X^T X / N`\n\n你可以说服自己这是正确的，因为“X 转置”是 D x N 而“X”是 N x D，所以结果是 D x D。\n\n\
+    好的，现在我们有了这个 D x D 协方差矩阵，我们用它做什么？我们当然要找到它的特征值和特征向量！\n\n`Cq = lambda q`\n\n结果发现正好有\
+    \ D 个特征向量和 D 个特征值。我们将它们都放入矩阵中，将特征值放入一个称为“大 Lambda”的对角矩阵中，并将特征向量堆叠成一个称为“Q”的矩阵，这是我们之前见过的。我们将按降序对特征值和相应的特征向量进行排序。\n\
+    \n用矩阵形式表示就是：\n\n`CQ = Q Lambda`\n\n我们可以证明大 Lambda 实际上就是变换后数据的协方差。由于所有非对角线元素都是\
+    \ 0（因为它是对角矩阵），这意味着变换后的数据完全去相关了。\n"
+  toc: []
+- raw: 'And since we are free to sort the eigenvalues in any order we wish, we can
+    ensure that the largest eigenvalues come first - keeping in mind that the eigenvalues
+    are just the variances of the transformed data.
+
+
+    If you want to go more in depth and actually derive all the math, I would recommend
+    checking out my FREE tutorial on this - you can find it at [http://lazyprogrammer.me/tutorial-principal-components-analysis-pca/](http://lazyprogrammer.me/tutorial-principal-components-analysis-pca/)
+
+
+    Usually in NLP we create what are called “term-document” matrices. You can think
+    of each term as each input dimension, and each document as each sample. Note that
+    this is reversed from what we usually work with, where the samples go along the
+    rows and the input features go along the columns.
+
+
+    What we just did with PCA was combine similar terms. But what if we wanted to
+    combine similar documents?
+
+
+    Well, then we could just do PCA after transposing the original matrix! One weird
+    thing that happens is that even though we get an N x N covariance matrix, there
+    are still only D eigenvalues. Not only that, but remarkably, they are the same
+    eigenvalues that we find from the other covariance matrix!
+
+
+    Now that you know that PCA finds correlations between the input features, and
+    PCA on the transposed data finds correlations between the input samples, we are
+    ready to talk about SVD.
+
+
+    It turns out, SVD just does both PCAs at the same time.
+
+
+    So what we do is this. We find the eigenvectors of X X^T, and call that U.
+
+
+    Then we find the eigenvectors of X^T X, and call that V.
+
+
+    Remember we lined up these eigenvectors so that the corresponding eigenvalues
+    would be in descending order. In SVD, we actually take the square root of the
+    eigenvalues and put them into a matrix called S.
+
+
+    Once we do all this, then we can relate X, U, S, and V as:
+
+
+    X = USV^T
+
+
+    This is what we mean by “decomposition” in the term “singular value decomposition”.
+
+
+    Using LSA in your code
+
+
+    For this example we’re going to look at a dataset consisting of book titles.
+
+
+    Remember that you can get all this code, including the data, from my Github: [https://github.com/lazyprogrammer/machine\_learning\_examples/tree/master/nlp\_class](https://github.com/lazyprogrammer/machine_learning_examples/tree/master/nlp_class)
+
+
+    import nltk
+
+
+    import numpy as np
+
+
+    import matplotlib.pyplot as plt
+
+
+    from nltk.stem import WordNetLemmatizer
+
+
+    from sklearn.decomposition import TruncatedSVD
+
+
+    wordnet\_lemmatizer = WordNetLemmatizer()
+
+
+    titles = \[line.rstrip() for line in open(‘all\_book\_titles.txt'')\]
+
+
+    All similar to what we’ve seen already.
+
+
+    In this next step, I’m adding a few more stopwords to the original list of stopwords,
+    because I noticed them when I tried the example myself. A lot of them are book
+    title-related, which is why they were probably not included in this list originally.
+
+
+    stopwords = set(w.rstrip() for w in open(''stopwords.txt''))
+
+
+    \# add more stopwords specific to this problem
+
+
+    stopwords = stopwords.union({
+
+
+    ''introduction'', ''edition'', ''series'', ''application'',
+
+
+    ''approach'', ''card'', ''access'', ''package'', ''plus'', ''etext'',
+
+
+    ''brief'', ''vol'', ''fundamental'', ''guide'', ''essential'', ''printed'',
+
+
+    ''third'', ''second'', ''fourth'', })
+
+
+    Next, we again define a tokenizer.
+
+
+    def my\_tokenizer(s):
+
+
+    s = s.lower() # downcase
+
+
+    tokens = nltk.tokenize.word\_tokenize(s) # split string into words (tokens)
+
+
+    tokens = \[t for t in tokens if len(t) > 2\] # remove short words, they''re probably
+    not useful
+
+
+    tokens = \[wordnet\_lemmatizer.lemmatize(t) for t in tokens\] # put words into
+    base form
+
+
+    tokens = \[t for t in tokens if t not in stopwords\] # remove stopwords
+
+
+    tokens = \[t for t in tokens if not any(c.isdigit() for c in t)\] # remove any
+    digits, i.e. "3rd edition"
+
+
+    return tokens
+
+
+    Notice the one extra step here - if a token contains a digit, I throw it out.
+
+
+    We again create a word index mapping:
+
+
+    word\_index\_map = {}
+
+
+    current\_index = 0
+
+
+    all\_tokens = \[\]
+
+
+    all\_titles = \[\]
+
+
+    index\_word\_map = \[\]
+
+
+    for title in titles:
+
+
+    try:
+
+
+    title = title.encode(''ascii'', ''ignore'') # this will throw exception if bad
+    characters
+
+
+    all\_titles.append(title)
+
+
+    tokens = my\_tokenizer(title)
+
+
+    all\_tokens.append(tokens)
+
+
+    for token in tokens:
+
+
+    if token not in word\_index\_map:
+
+
+    word\_index\_map\[token\] = current\_index
+
+
+    current\_index += 1
+
+
+    index\_word\_map.append(token)
+
+
+    except:
+
+
+    pass
+
+
+    There were some bad characters in the dataset I downloaded, so we will just ignore
+    those lines.
+
+
+    We again define a function to turn our tokens into a feature vector:
+
+
+    def tokens\_to\_vector(tokens):
+
+
+    x = np.zeros(len(word\_index\_map))
+
+
+    for t in tokens:
+
+
+    i = word\_index\_map\[t\]
+
+
+    x\[i\] = 1
+
+
+    return x
+
+
+    Notice how in this example we have no label. PCA and SVD are unsupervised algorithms.
+    They are for learning the structure of the data, not making predictions.
+
+
+    Next, we create the data matrix.
+
+
+    N = len(all\_tokens)
+
+
+    D = len(word\_index\_map)
+
+
+    X = np.zeros((D, N)) # terms will go along rows, documents along columns
+
+
+    i = 0
+
+
+    for tokens in all\_tokens:
+
+
+    X\[:,i\] = tokens\_to\_vector(tokens)
+
+
+    i += 1
+
+
+    Notice how here we diverge from our normal N x D matrix and instead create a D
+    x N matrix of data.
+
+
+    Finally, we use SVD to create a scatterplot of the data (equivalent to reducing
+    the dimensionality to 2 dimensions), and annotate each point with the corresponding
+    word.
+
+
+    svd = TruncatedSVD()
+
+
+    Z = svd.fit\_transform(X)
+
+
+    plt.scatter(Z\[:,0\], Z\[:,1\])
+
+
+    for i in xrange(D):
+
+
+    plt.annotate(s=index\_word\_map\[i\], xy=(Z\[i,0\], Z\[i,1\]))
+
+
+    plt.show()
+
+
+    Try this on your own and look for patterns. I noticed that the sciences and the
+    arts were split along 2 orthogonal axes.
+
+
+    So on one axes you should have things like biology, business, economics, neuroscience,
+    etc.
+
+
+    On the other axes you should have things like religion, philosophy, literature,
+    etc.
+
+
+    # Chapter 7: Build your own article spinner
+
+
+    Article spinning is somewhat of a holy grail in Internet marketing. Why? Internet
+    entrepreneurs often like to automate as much of their business as possible. They
+    only have so much time in a day, so in order to scale, they have to find ways
+    for computers to do work for them.
+
+
+    One of the most time-consuming tasks is content generation. Ideally, humans would
+    create content, like how I created this book. Back in the old days, people would
+    just repeat a keyword 1000 times on their web pages in order to rank higher in
+    search engines. Eventually search engines caught onto this. Then marketers started
+    to outright steal content from others and put it on their own site. But you can
+    see how a search engine, which wants to provide the most useful results for its
+    users, would not want that to happen, because as a result, if you searched for
+    something, you’d just end up with multiple copies of the same thing. So nowadays
+    duplicate content is banned. Search engines are evolving every day, and the only
+    way to keep up is to have unique, quality content.
+
+
+    One thing Internet marketers have always been interested in is article spinning.
+    That’s essentially taking an existing article that’s very popular, and modifying
+    certain words or phrases so that it doesn’t exactly match the original, which
+    then prevents the search engines from marking it as duplicate content.
+
+
+    How do you do this? Well you can imagine that synonyms play a big role. If you
+    just replaced certain words with other words that meant the same thing, you’d
+    end up with a different article with the same meaning.
+
+
+    Of course things don’t always work that well in reality.
+
+
+    Let’s take Udemy’s description of itself for example:
+
+
+    “Udemy.com is a platform or marketplace for online learning.”
+
+
+    Now let’s replace each of the bolded words with synonyms I found at thesaurus.com.
+
+
+    “Udemy.com is a podium or forum for online research.”
+
+
+    You can see that this new sentence doesn’t make much sense.
+
+
+    With sentences and full documents, context is important. So the idea is you want
+    to use the surrounding words to influence the replacement of the current word.'
+  fmt: "\nAnd since we are free to sort the eigenvalues in any order we wish, we can\
+    \ ensure that the largest eigenvalues come first - keeping in mind that the eigenvalues\
+    \ are just the variances of the transformed data.\n\nIf you want to go more in\
+    \ depth and actually derive all the math, I would recommend checking out my FREE\
+    \ tutorial on this - you can find it at [http://lazyprogrammer.me/tutorial-principal-components-analysis-pca/](http://lazyprogrammer.me/tutorial-principal-components-analysis-pca/)\n\
+    \nUsually in NLP we create what are called “term-document” matrices. You can think\
+    \ of each term as each input dimension, and each document as each sample. Note\
+    \ that this is reversed from what we usually work with, where the samples go along\
+    \ the rows and the input features go along the columns.\n\nWhat we just did with\
+    \ PCA was combine similar terms. But what if we wanted to combine similar documents?\n\
+    \nWell, then we could just do PCA after transposing the original matrix! One weird\
+    \ thing that happens is that even though we get an `N x N` covariance matrix,\
+    \ there are still only `D` eigenvalues. Not only that, but remarkably, they are\
+    \ the same eigenvalues that we find from the other covariance matrix!\n\nNow that\
+    \ you know that PCA finds correlations between the input features, and PCA on\
+    \ the transposed data finds correlations between the input samples, we are ready\
+    \ to talk about SVD.\n\nIt turns out, SVD just does both PCAs at the same time.\n\
+    \nSo what we do is this. We find the eigenvectors of `X X^T`, and call that `U`.\n\
+    \nThen we find the eigenvectors of `X^T X`, and call that `V`.\n\nRemember we\
+    \ lined up these eigenvectors so that the corresponding eigenvalues would be in\
+    \ descending order. In SVD, we actually take the square root of the eigenvalues\
+    \ and put them into a matrix called `S`.\n\nOnce we do all this, then we can relate\
+    \ `X`, `U`, `S`, and `V` as:\n\n`X = USV^T`\n\nThis is what we mean by “decomposition”\
+    \ in the term “singular value decomposition”.\n\n# Using LSA in your code\n\n\
+    For this example we’re going to look at a dataset consisting of book titles.\n\
+    \nRemember that you can get all this code, including the data, from my Github:\
+    \ [https://github.com/lazyprogrammer/machine_learning_examples/tree/master/nlp_class](https://github.com/lazyprogrammer/machine_learning_examples/tree/master/nlp_class)\n\
+    \n```\nimport nltk\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom\
+    \ nltk.stem import WordNetLemmatizer\nfrom sklearn.decomposition import TruncatedSVD\n\
+    ```\n\n`wordnet_lemmatizer = WordNetLemmatizer()`\n\n`titles = [line.rstrip()\
+    \ for line in open(‘all_book_titles.txt’)]`\n\nAll similar to what we’ve seen\
+    \ already.\n\nIn this next step, I’m adding a few more stopwords to the original\
+    \ list of stopwords, because I noticed them when I tried the example myself. A\
+    \ lot of them are book title-related, which is why they were probably not included\
+    \ in this list originally.\n\n```\nstopwords = set(w.rstrip() for w in open('stopwords.txt'))\n\
+    \n# add more stopwords specific to this problem\nstopwords = stopwords.union({\n\
+    \    'introduction', 'edition', 'series', 'application',\n    'approach', 'card',\
+    \ 'access', 'package', 'plus', 'etext',\n    'brief', 'vol', 'fundamental', 'guide',\
+    \ 'essential', 'printed',\n    'third', 'second', 'fourth', })\n```\n\nNext, we\
+    \ again define a tokenizer.\n\n```\ndef my_tokenizer(s):\n    s = s.lower() #\
+    \ downcase\n    tokens = nltk.tokenize.word_tokenize(s) # split string into words\
+    \ (tokens)\n    tokens = [t for t in tokens if len(t) > 2] # remove short words,\
+    \ they're probably not useful\n    tokens = [wordnet_lemmatizer.lemmatize(t) for\
+    \ t in tokens] # put words into base form\n    tokens = [t for t in tokens if\
+    \ t not in stopwords] # remove stopwords\n    tokens = [t for t in tokens if not\
+    \ any(c.isdigit() for c in t)] # remove any digits, i.e. \"3rd edition\"\n   \
+    \ return tokens\n```\n\nNotice the one extra step here - if a token contains a\
+    \ digit, I throw it out.\n\nWe again create a word index mapping:\n\n```\nword_index_map\
+    \ = {}\ncurrent_index = 0\nall_tokens = []\nall_titles = []\nindex_word_map =\
+    \ []\n\nfor title in titles:\n    try:\n        title = title.encode('ascii',\
+    \ 'ignore') # this will throw exception if bad characters\n        all_titles.append(title)\n\
+    \        tokens = my_tokenizer(title)\n        all_tokens.append(tokens)\n   \
+    \     for token in tokens:\n            if token not in word_index_map:\n    \
+    \            word_index_map[token] = current_index\n                current_index\
+    \ += 1\n        index_word_map.append(token)\n    except:\n        pass\n```\n\
+    \nThere were some bad characters in the dataset I downloaded, so we will just\
+    \ ignore those lines.\n\nWe again define a function to turn our tokens into a\
+    \ feature vector:\n\n```\ndef tokens_to_vector(tokens):\n    x = np.zeros(len(word_index_map))\n\
+    \    for t in tokens:\n        i = word_index_map[t]\n        x[i] = 1\n    return\
+    \ x\n```\n\nNotice how in this example we have no label. PCA and SVD are unsupervised\
+    \ algorithms. They are for learning the structure of the data, not making predictions.\n\
+    \nNext, we create the data matrix.\n\n```\nN = len(all_tokens)\nD = len(word_index_map)\n\
+    X = np.zeros((D, N)) # terms will go along rows, documents along columns\ni =\
+    \ 0\nfor tokens in all_tokens:\n    X[:,i] = tokens_to_vector(tokens)\n    i +=\
+    \ 1\n```\n\nNotice how here we diverge from our normal `N x D` matrix and instead\
+    \ create a `D x N` matrix of data.\n\nFinally, we use SVD to create a scatterplot\
+    \ of the data (equivalent to reducing the dimensionality to 2 dimensions), and\
+    \ annotate each point with the corresponding word.\n\n```\nsvd = TruncatedSVD()\n\
+    Z = svd.fit_transform(X)\nplt.scatter(Z[:,0], Z[:,1])\nfor i in xrange(D):\n \
+    \   plt.annotate(s=index_word_map[i], xy=(Z[i,0], Z[i,1]))\nplt.show()\n```\n\n\
+    Try this on your own and look for patterns. I noticed that the sciences and the\
+    \ arts were split along 2 orthogonal axes.\n\nSo on one axes you should have things\
+    \ like biology, business, economics, neuroscience, etc.\n\nOn the other axes you\
+    \ should have things like religion, philosophy, literature, etc.\n\n# Chapter\
+    \ 7: Build your own article spinner\n\nArticle spinning is somewhat of a holy\
+    \ grail in Internet marketing. Why? Internet entrepreneurs often like to automate\
+    \ as much of their business as possible. They only have so much time in a day,\
+    \ so in order to scale, they have to find ways for computers to do work for them.\n\
+    \nOne of the most time-consuming tasks is content generation. Ideally, humans\
+    \ would create content, like how I created this book. Back in the old days, people\
+    \ would just repeat a keyword 1000 times on their web pages in order to rank higher\
+    \ in search engines. Eventually search engines caught onto this. Then marketers\
+    \ started to outright steal content from others and put it on their own site.\
+    \ But you can see how a search engine, which wants to provide the most useful\
+    \ results for its users, would not want that to happen, because as a result, if\
+    \ you searched for something, you’d just end up with multiple copies of the same\
+    \ thing. So nowadays duplicate content is banned. Search engines are evolving\
+    \ every day, and the only way to keep up is to have unique, quality content.\n\
+    \nOne thing Internet marketers have always been interested in is article spinning.\
+    \ That’s essentially taking an existing article that’s very popular, and modifying\
+    \ certain words or phrases so that it doesn’t exactly match the original, which\
+    \ then prevents the search engines from marking it as duplicate content.\n\nHow\
+    \ do you do this? Well you can imagine that synonyms play a big role. If you just\
+    \ replaced certain words with other words that meant the same thing, you’d end\
+    \ up with a different article with the same meaning.\n\nOf course things don’t\
+    \ always work that well in reality.\n\nLet’s take Udemy’s description of itself\
+    \ for example:\n\n“Udemy.com is a platform or marketplace for online learning.”\n\
+    \nNow let’s replace each of the bolded words with synonyms I found at thesaurus.com.\n\
+    \n“Udemy.com is a podium or forum for online research.”\n\nYou can see that this\
+    \ new sentence doesn’t make much sense.\n\nWith sentences and full documents,\
+    \ context is important. So the idea is you want to use the surrounding words to\
+    \ influence the replacement of the current word.\n"
+  trans: "\n\n由于我们可以按任意顺序对特征值进行排序，因此我们可以确保最大的特征值排在前面——请记住，特征值就是变换后数据的方差。\n\n如果你想更深入地了解并实际推导所有数学细节，我建议查看我的免费教程——你可以在\
+    \ [`lazyprogrammer.me/tutorial-principal-components-analysis-pca/`](http://lazyprogrammer.me/tutorial-principal-components-analysis-pca/)\
+    \ 找到它。\n\n通常在 NLP 中，我们会创建所谓的“词-文档”矩阵。你可以把每个词看作每个输入维度，把每个文档看作每个样本。请注意，这与我们通常处理的方式相反，通常样本沿行排列，输入特征沿列排列。\n\
+    \n我们刚才用 PCA 所做的就是合并相似的词。但如果我们想合并相似的文档呢？\n\n那么，我们只需在转置原始矩阵后进行 PCA 即可！会发生一件奇怪的事：即使我们得到了一个\
+    \ `N x N` 的协方差矩阵，仍然只有 `D` 个特征值。不仅如此，令人惊讶的是，它们与从另一个协方差矩阵中找到的特征值竟然是相同的！\n\n现在你知道\
+    \ PCA 能发现输入特征之间的相关性，而对转置数据进行 PCA 能发现输入样本之间的相关性，我们已经准备好来谈论 SVD 了。\n\n结果表明，SVD 只是同时完成这两个\
+    \ PCA。\n\n所以我们的做法是：我们找到 `X X^T` 的特征向量，称之为 `U`。\n\n然后我们找到 `X^T X` 的特征向量，称之为 `V`。\n\
+    \n请记住，我们排列这些特征向量，使得对应的特征值按降序排列。在 SVD 中，我们实际上取特征值的平方根，并将它们放入一个称为 `S` 的矩阵中。\n\n\
+    一旦完成所有这些步骤，我们就可以将 `X`、`U`、`S` 和 `V` 联系起来：\n\n`X = USV^T`\n\n这就是“奇异值分解”中“分解”的含义。\n\
+    \n# 在代码中使用 LSA\n\n在这个例子中，我们将查看一个由书名组成的数据集。\n\n请记住，你可以从我的 Github 获取所有这些代码，包括数据：[`github.com/lazyprogrammer/machine_learning_examples/tree/master/nlp_class`](https://github.com/lazyprogrammer/machine_learning_examples/tree/master/nlp_class)\n\
+    \n```\nimport nltk\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom\
+    \ nltk.stem import WordNetLemmatizer\nfrom sklearn.decomposition import TruncatedSVD\n\
+    ```\n\n`wordnet_lemmatizer = WordNetLemmatizer()`\n\n`titles = [line.rstrip()\
+    \ for line in open(‘all_book_titles.txt’)]`\n\n一切都与我们之前见过的相似。\n\n在下一步中，我向原始停用词列表添加了几个更多的停用词，因为我在亲自尝试示例时注意到了它们。其中很多与书名相关，这可能就是为什么它们最初未被包含在该列表中的原因。\n\
+    \n```\nstopwords = set(w.rstrip() for w in open('stopwords.txt'))\n\n# add more\
+    \ stopwords specific to this problem\nstopwords = stopwords.union({\n    'introduction',\
+    \ 'edition', 'series', 'application',\n    'approach', 'card', 'access', 'package',\
+    \ 'plus', 'etext',\n    'brief', 'vol', 'fundamental', 'guide', 'essential', 'printed',\n\
+    \    'third', 'second', 'fourth', })\n```\n\n接下来，我们再次定义一个分词器。\n\n```\ndef my_tokenizer(s):\n\
+    \    s = s.lower() # downcase\n    tokens = nltk.tokenize.word_tokenize(s) # split\
+    \ string into words (tokens)\n    tokens = [t for t in tokens if len(t) > 2] #\
+    \ remove short words, they're probably not useful\n    tokens = [wordnet_lemmatizer.lemmatize(t)\
+    \ for t in tokens] # put words into base form\n    tokens = [t for t in tokens\
+    \ if t not in stopwords] # remove stopwords\n    tokens = [t for t in tokens if\
+    \ not any(c.isdigit() for c in t)] # remove any digits, i.e. \"3rd edition\"\n\
+    \    return tokens\n```\n\n请注意这里多了一个额外步骤——如果一个词元包含数字，我就将其丢弃。\n\n我们再次创建一个词到索引的映射：\n\
+    \n```\nword_index_map = {}\ncurrent_index = 0\nall_tokens = []\nall_titles = []\n\
+    index_word_map = []\n\nfor title in titles:\n    try:\n        title = title.encode('ascii',\
+    \ 'ignore') # this will throw exception if bad characters\n        all_titles.append(title)\n\
+    \        tokens = my_tokenizer(title)\n        all_tokens.append(tokens)\n   \
+    \     for token in tokens:\n            if token not in word_index_map:\n    \
+    \            word_index_map[token] = current_index\n                current_index\
+    \ += 1\n        index_word_map.append(token)\n    except:\n        pass\n```\n\
+    \n我下载的数据集中有一些坏字符，所以我们将直接忽略那些行。\n\n我们再次定义一个函数将词元转换为特征向量：\n\n```\ndef tokens_to_vector(tokens):\n\
+    \    x = np.zeros(len(word_index_map))\n    for t in tokens:\n        i = word_index_map[t]\n\
+    \        x[i] = 1\n    return x\n```\n\n请注意，在这个例子中我们没有标签。PCA 和 SVD 是无监督算法。它们用于学习数据的结构，而不是进行预测。\n\
+    \n接下来，我们创建数据矩阵。\n\n```\nN = len(all_tokens)\nD = len(word_index_map)\nX = np.zeros((D,\
+    \ N)) # terms will go along rows, documents along columns\ni = 0\nfor tokens in\
+    \ all_tokens:\n    X[:,i] = tokens_to_vector(tokens)\n    i += 1\n```\n\n请注意，这里我们偏离了正常的\
+    \ `N x D` 矩阵，转而创建一个 `D x N` 的数据矩阵。\n\n最后，我们使用 SVD 创建数据的散点图（相当于将维度降低到 2 维），并用相应的词标注每个点。\n\
+    \n```\nsvd = TruncatedSVD()\nZ = svd.fit_transform(X)\nplt.scatter(Z[:,0], Z[:,1])\n\
+    for i in xrange(D):\n    plt.annotate(s=index_word_map[i], xy=(Z[i,0], Z[i,1]))\n\
+    plt.show()\n```\n\n亲自试试并寻找模式。我注意到科学和艺术沿着两个正交轴分开了。\n\n所以在一个轴上你应该会有生物学、商业、经济学、神经科学等。\n\
+    \n在另一个轴上你应该会有宗教、哲学、文学等。\n\n# 第 7 章：构建你自己的文章重写器\n\n文章重写是在互联网营销中某种程度上的“圣杯”。为什么？互联网企业家通常喜欢尽可能自动化他们的业务。他们一天只有那么多时间，所以为了扩大规模，他们必须找到让计算机为他们工作的方法。\n\
+    \n最耗时的任务之一是内容生成。理想情况下，人类会创建内容，就像我创建这本书一样。在早期，人们只是在网页上重复关键词 1000 次，以便在搜索引擎中获得更高的排名。最终搜索引擎识破了这一点。然后营销人员开始直接窃取他人的内容并放在自己的网站上。但你可以看出，搜索引擎旨在为用户提供最有用的结果，它不希望发生这种情况，因为结果是，如果你搜索某样东西，你最终只会得到多份相同的东西。所以现在重复内容被禁止了。搜索引擎每天都在进化，跟上它们的唯一途径就是拥有独特、高质量的内容。\n\
+    \n互联网营销人员一直感兴趣的一件事是文章重写。本质上就是获取一篇非常流行的现有文章，并修改某些词或短语，使其不完全匹配原文，从而防止搜索引擎将其标记为重复内容。\n\
+    \n如何做到这一点？你可以想象同义词扮演了重要角色。如果你只是用意思相同的其他词替换某些词，你最终会得到一篇含义相同但不同的文章。\n\n当然，现实中事情并不总是那么顺利。\n\
+    \n让我们以 Udemy 对自己的描述为例：\n\n“Udemy.com is a platform or marketplace for online learning.”\n\
+    \n现在让我们用我在 thesaurus.com 找到的同义词替换每个**加粗的词**。\n\n“Udemy.com is a podium or forum\
+    \ for online research.”\n\n你可以看到这个新句子讲不太通。\n\n对于句子和完整文档，上下文很重要。所以思路是你想利用周围的词来影响当前词的替换。\n\
+    \n"
+  toc: []
+- raw: 'How can we model the probability of a word given surrounding words? Well let’s
+    say we take an entire document and label all the words so that we have w(1), …,
+    w(N).
+
+
+    We can then model the probability of any word w(i) given all the other surrounding
+    words.
+
+
+    In probabilistic notation you can write this as:
+
+
+    P(w(i) | w(1), ... , w(i-1), w(i+1), … w(N))
+
+
+    Of course, this wouldn’t really work because if we considered every word in the
+    document, then only that document itself would match it exactly (i.e. a sample
+    size of 1), so we’ll do something like we do with Markov models where we only
+    consider the closest words.
+
+
+    We’ll use something called a trigram to accomplish this. Basically we’re going
+    to create triples, where we store combinations of 3 consecutive words. We’ll use
+    the previous word and the next word to predict the current word.
+
+
+    What this means in math is that we’ll model:
+
+
+    P(w(i) | w(i-1), w(i+1))
+
+
+    To implement this, we’ll create a dictionary with (w(i-1), w(i+1)) as the key,
+    and randomly sample w(i).
+
+
+    Now of course we won’t replace every single word in the document, because that
+    will probably not give us anything useful, so we’ll make the decision to replace
+    a word based on some small probability.
+
+
+    Both this and latent semantic analysis are what we call “unsupervised learning”
+    algorithms, because they don’t have labels and we just learn the structure. By
+    contrast, our spam classifier and sentiment analyzer were “supervised learning”
+    problems because we had labels to match to.
+
+
+    Article Spinner code
+
+
+    In this code example we’re going to re-use our Amazon review data.
+
+
+    import nltk
+
+
+    import random
+
+
+    import numpy as np
+
+
+    from bs4 import BeautifulSoup
+
+
+    positive\_reviews = BeautifulSoup(
+
+
+    open(
+
+
+    ‘electronics/positive.review''
+
+
+    ).read())
+
+
+    positive\_reviews =
+
+
+    positive\_reviews.findAll(‘review\_text'')
+
+
+    This time, let’s just look at the positive reviews.
+
+
+    Next, we extract the trigrams. The key will be the first and last words. The value
+    will be an array of possible middle words.
+
+
+    trigrams = {}
+
+
+    for review in positive\_reviews:
+
+
+    s = review.text.lower()
+
+
+    tokens = nltk.tokenize.word\_tokenize(s)
+
+
+    for i in xrange(len(tokens) - 2):
+
+
+    k = (tokens\[i\], tokens\[i+2\])
+
+
+    if k not in trigrams:
+
+
+    trigrams\[k\] = \[\]
+
+
+    trigrams\[k\].append(tokens\[i+1\])
+
+
+    Next, we want to turn each array of middle words into a probability vector.
+
+
+    trigram\_probabilities = {}
+
+
+    for k, words in trigrams.iteritems():
+
+
+    \# create a dictionary of word -> count
+
+
+    if len(set(words)) > 1:
+
+
+    \# only do this when there are different possibilities for a middle word
+
+
+    d = {}
+
+
+    n = 0
+
+
+    for w in words:
+
+
+    if w not in d:
+
+
+    d\[w\] = 0
+
+
+    d\[w\] += 1
+
+
+    n += 1
+
+
+    for w, c in d.iteritems():
+
+
+    d\[w\] = float(c) / n
+
+
+    trigram\_probabilities\[k\] = d
+
+
+    This means that if the possible middle words were \[“cat”, “cat”, “dog”\], then
+    we would now have a dictionary with {“cat”: 0.67, “dog”: 0.33}.
+
+
+    So if we were to come to a point where the context provided these possibilities,
+    then we would insert “cat” as the middle word with probability 2/3, and “dog”
+    with probability 1/3.
+
+
+    Next, we’ll create a way to randomly sample the dictionary.
+
+
+    def random\_sample(d):
+
+
+    \# choose a random sample from dictionary where values are the probabilities
+
+
+    r = random.random()
+
+
+    cumulative = 0
+
+
+    for w, p in d.iteritems():
+
+
+    cumulative += p
+
+
+    if r < cumulative:
+
+
+    return w
+
+
+    Finally, let’s write a function to test the spinner.
+
+
+    def test\_spinner():
+
+
+    review = random.choice(positive\_reviews)
+
+
+    s = review.text.lower()
+
+
+    print "Original:", s
+
+
+    tokens = nltk.tokenize.word\_tokenize(s)
+
+
+    for i in xrange(len(tokens) - 2):
+
+
+    if random.random() < 0.2: # 20% chance of replacement
+
+
+    k = (tokens\[i\], tokens\[i+2\])
+
+
+    if k in trigram\_probabilities:
+
+
+    w = random\_sample(trigram\_probabilities\[k\])
+
+
+    tokens\[i+1\] = w
+
+
+    print "Spun:"
+
+
+    print " ".join(tokens).replace(" .", ".").replace(" ''", "''").replace(" ,", ",").replace("$
+    ", "$").replace(" !", "!")
+
+
+    The last line replaces some punctuation I noticed kept showing up in odd places.
+    Alternatively, you could replace the punctuation using a custom tokenizer, as
+    we did in the previous chapters.
+
+
+    Here are some example outputs:
+
+
+    Original:
+
+
+    i downloaded the driver from trendnet''s website before installing the adapter.
+    i did not encounter any problems at all, including the issue that some users had
+    with it disconnecting when they plugged in another usb device
+
+
+    Spun:
+
+
+    i downloaded the driver from trendnet''s limits before installing the adapter.
+    i did not encounter any problems at all, including the issue that new users had
+    with it disconnecting when they plugged in another usb device
+
+
+    Another.
+
+
+    Original:
+
+
+    the reason it is not rated 5 stars is that the ink supply is utilized too rapidly
+    and the expensive cartriges have to replaced too frequently
+
+
+    Spun:
+
+
+    the reason it does not afford 5 stars is that the ink supply is utilized too rapidly
+    and the expensive cartriges have to use too frequently
+
+
+    Try it yourself and see what else you get.
+
+
+    You can see a lot of the results are quite hilarious. It definitely suggests that
+    there should be more context checking than just the two neighboring words.
+
+
+    What does this tell us about the “Markov”-like assumption? It does not hold!
+
+
+    This is maybe just 5% of what you’d need to do to build a truly-good article spinner.
+
+
+    Note that this is not an easy problem by any means. A quick google search shows
+    that even the top results are not anywhere near being good products.
+
+
+    #  
+
+
+    # Conclusion
+
+
+    I really hope you had as much fun reading this book as I did making it.
+
+
+    Did you find anything confusing? Do you have any questions?
+
+
+    I am always available to help. Just email me at: [info@lazyprogrammer.me](mailto:info@lazyprogrammer.me)
+
+
+    Do you want to learn more about data science and machine learning? Perhaps online
+    courses are more your style. I happen to have a few of them on Udemy.
+
+
+    The background and prerequisite knowledge for deep learning and neural networks
+    can be found in my class “Data Science: Deep Learning in Python” (officially known
+    as “part 1” of the series). In this course I teach you the feedforward mechanism
+    of a neural network (which I assumed you already knew for this book), and how
+    to derive the training algorithm called backpropagation (which I also assumed
+    you knew for this book):
+
+
+    [Data Science: Deep Learning in Python](https://udemy.com/data-science-deep-learning-in-python)
+
+
+    [https://udemy.com/data-science-deep-learning-in-python](https://udemy.com/data-science-deep-learning-in-python)
+
+
+    The corresponding book on Kindle is:
+
+
+    [https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01CVJ19E8](https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01CVJ19E8)
+
+
+    Are you comfortable with this material, and you want to take your deep learning
+    skillset to the next level? Then my follow-up Udemy course on deep learning is
+    for you. Similar to previous book, I take you through the basics of Theano and
+    TensorFlow - creating functions, variables, and expressions, and build up neural
+    networks from scratch. I teach you about ways to accelerate the learning process,
+    including batch gradient descent, momentum, and adaptive learning rates. I also
+    show you live how to create a GPU instance on Amazon AWS EC2, and prove to you
+    that training a neural network with GPU optimization can be orders of magnitude
+    faster than on your CPU.
+
+
+    [Data Science: Practical Deep Learning in Theano and TensorFlow](https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow/)
+
+
+    [https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow](https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow)
+
+
+    In deep learning part 3 - convolutional neural networks - I teach you about a
+    special kind of neural network, designed for classifying and learning the features
+    of images.
+
+
+    [Deep Learning: Convolutional Neural Networks in Python](https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow)'
+  fmt: "\n# Article Spinner\n\nHow can we model the probability of a word given surrounding\
+    \ words? Well let’s say we take an entire document and label all the words so\
+    \ that we have `w(1), …, w(N)`.\n\nWe can then model the probability of any word\
+    \ `w(i)` given all the other surrounding words.\n\nIn probabilistic notation you\
+    \ can write this as:\n\n`P(w(i) | w(1), ... , w(i-1), w(i+1), … w(N))`\n\nOf course,\
+    \ this wouldn’t really work because if we considered every word in the document,\
+    \ then only that document itself would match it exactly (i.e. a sample size of\
+    \ 1), so we’ll do something like we do with Markov models where we only consider\
+    \ the closest words.\n\nWe’ll use something called a trigram to accomplish this.\
+    \ Basically we’re going to create triples, where we store combinations of 3 consecutive\
+    \ words. We’ll use the previous word and the next word to predict the current\
+    \ word.\n\nWhat this means in math is that we’ll model:\n\n`P(w(i) | w(i-1), w(i+1))`\n\
+    \nTo implement this, we’ll create a dictionary with `(w(i-1), w(i+1))` as the\
+    \ key, and randomly sample `w(i)`.\n\nNow of course we won’t replace every single\
+    \ word in the document, because that will probably not give us anything useful,\
+    \ so we’ll make the decision to replace a word based on some small probability.\n\
+    \nBoth this and latent semantic analysis are what we call “unsupervised learning”\
+    \ algorithms, because they don’t have labels and we just learn the structure.\
+    \ By contrast, our spam classifier and sentiment analyzer were “supervised learning”\
+    \ problems because we had labels to match to.\n\n## Article Spinner code\n\nIn\
+    \ this code example we’re going to re-use our Amazon review data.\n\n```python\n\
+    import nltk\nimport random\nimport numpy as np\nfrom bs4 import BeautifulSoup\n\
+    \npositive_reviews = BeautifulSoup(\n    open(\n        'electronics/positive.review'\n\
+    \    ).read())\npositive_reviews = positive_reviews.findAll('review_text')\n```\n\
+    \nThis time, let’s just look at the positive reviews.\n\nNext, we extract the\
+    \ trigrams. The key will be the first and last words. The value will be an array\
+    \ of possible middle words.\n\n```python\ntrigrams = {}\n\nfor review in positive_reviews:\n\
+    \    s = review.text.lower()\n    tokens = nltk.tokenize.word_tokenize(s)\n  \
+    \  for i in xrange(len(tokens) - 2):\n        k = (tokens[i], tokens[i+2])\n \
+    \       if k not in trigrams:\n            trigrams[k] = []\n        trigrams[k].append(tokens[i+1])\n\
+    ```\n\nNext, we want to turn each array of middle words into a probability vector.\n\
+    \n```python\ntrigram_probabilities = {}\n\nfor k, words in trigrams.iteritems():\n\
+    \    # create a dictionary of word -> count\n    if len(set(words)) > 1:\n   \
+    \     # only do this when there are different possibilities for a middle word\n\
+    \        d = {}\n        n = 0\n        for w in words:\n            if w not\
+    \ in d:\n                d[w] = 0\n            d[w] += 1\n            n += 1\n\
+    \        for w, c in d.iteritems():\n            d[w] = float(c) / n\n       \
+    \ trigram_probabilities[k] = d\n```\n\nThis means that if the possible middle\
+    \ words were `[\"cat\", \"cat\", \"dog\"]`, then we would now have a dictionary\
+    \ with `{\"cat\": 0.67, \"dog\": 0.33}`.\n\nSo if we were to come to a point where\
+    \ the context provided these possibilities, then we would insert “cat” as the\
+    \ middle word with probability 2/3, and “dog” with probability 1/3.\n\nNext, we’ll\
+    \ create a way to randomly sample the dictionary.\n\n```python\ndef random_sample(d):\n\
+    \    # choose a random sample from dictionary where values are the probabilities\n\
+    \    r = random.random()\n    cumulative = 0\n    for w, p in d.iteritems():\n\
+    \        cumulative += p\n        if r < cumulative:\n            return w\n```\n\
+    \nFinally, let’s write a function to test the spinner.\n\n```python\ndef test_spinner():\n\
+    \    review = random.choice(positive_reviews)\n    s = review.text.lower()\n \
+    \   print \"Original:\", s\n    tokens = nltk.tokenize.word_tokenize(s)\n    for\
+    \ i in xrange(len(tokens) - 2):\n        if random.random() < 0.2: # 20% chance\
+    \ of replacement\n            k = (tokens[i], tokens[i+2])\n            if k in\
+    \ trigram_probabilities:\n                w = random_sample(trigram_probabilities[k])\n\
+    \                tokens[i+1] = w\n    print \"Spun:\"\n    print \" \".join(tokens).replace(\"\
+    \ .\", \".\").replace(\" '\", \"'\").replace(\" ,\", \",\").replace(\"$ \", \"\
+    $\").replace(\" !\", \"!\")\n```\n\nThe last line replaces some punctuation I\
+    \ noticed kept showing up in odd places. Alternatively, you could replace the\
+    \ punctuation using a custom tokenizer, as we did in the previous chapters.\n\n\
+    Here are some example outputs:\n\n**Original:**\n\n> i downloaded the driver from\
+    \ trendnet's website before installing the adapter. i did not encounter any problems\
+    \ at all, including the issue that some users had with it disconnecting when they\
+    \ plugged in another usb device\n\n**Spun:**\n\n> i downloaded the driver from\
+    \ trendnet's limits before installing the adapter. i did not encounter any problems\
+    \ at all, including the issue that new users had with it disconnecting when they\
+    \ plugged in another usb device\n\n**Another.**\n\n**Original:**\n\n> the reason\
+    \ it is not rated 5 stars is that the ink supply is utilized too rapidly and the\
+    \ expensive cartriges have to replaced too frequently\n\n**Spun:**\n\n> the reason\
+    \ it does not afford 5 stars is that the ink supply is utilized too rapidly and\
+    \ the expensive cartriges have to use too frequently\n\nTry it yourself and see\
+    \ what else you get.\n\nYou can see a lot of the results are quite hilarious.\
+    \ It definitely suggests that there should be more context checking than just\
+    \ the two neighboring words.\n\nWhat does this tell us about the “Markov”-like\
+    \ assumption? It does not hold!\n\nThis is maybe just 5% of what you’d need to\
+    \ do to build a truly-good article spinner.\n\nNote that this is not an easy problem\
+    \ by any means. A quick google search shows that even the top results are not\
+    \ anywhere near being good products.\n\n# Conclusion\n\nI really hope you had\
+    \ as much fun reading this book as I did making it.\n\nDid you find anything confusing?\
+    \ Do you have any questions?\n\nI am always available to help. Just email me at:\
+    \ [info@lazyprogrammer.me](mailto:info@lazyprogrammer.me)\n\nDo you want to learn\
+    \ more about data science and machine learning? Perhaps online courses are more\
+    \ your style. I happen to have a few of them on Udemy.\n\nThe background and prerequisite\
+    \ knowledge for deep learning and neural networks can be found in my class “Data\
+    \ Science: Deep Learning in Python” (officially known as “part 1” of the series).\
+    \ In this course I teach you the feedforward mechanism of a neural network (which\
+    \ I assumed you already knew for this book), and how to derive the training algorithm\
+    \ called backpropagation (which I also assumed you knew for this book):\n\n[Data\
+    \ Science: Deep Learning in Python](https://udemy.com/data-science-deep-learning-in-python)\n\
+    \n[https://udemy.com/data-science-deep-learning-in-python](https://udemy.com/data-science-deep-learning-in-python)\n\
+    \nThe corresponding book on Kindle is:\n\n[https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01CVJ19E8](https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01CVJ19E8)\n\
+    \nAre you comfortable with this material, and you want to take your deep learning\
+    \ skillset to the next level? Then my follow-up Udemy course on deep learning\
+    \ is for you. Similar to previous book, I take you through the basics of Theano\
+    \ and TensorFlow - creating functions, variables, and expressions, and build up\
+    \ neural networks from scratch. I teach you about ways to accelerate the learning\
+    \ process, including batch gradient descent, momentum, and adaptive learning rates.\
+    \ I also show you live how to create a GPU instance on Amazon AWS EC2, and prove\
+    \ to you that training a neural network with GPU optimization can be orders of\
+    \ magnitude faster than on your CPU.\n\n[Data Science: Practical Deep Learning\
+    \ in Theano and TensorFlow](https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow/)\n\
+    \n[https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow](https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow)\n\
+    \nIn deep learning part 3 - convolutional neural networks - I teach you about\
+    \ a special kind of neural network, designed for classifying and learning the\
+    \ features of images.\n\n[Deep Learning: Convolutional Neural Networks in Python](https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow)\n"
+  trans: "\n\n# 文章重写器\n\n我们如何建模给定周围单词时某个单词的概率？假设我们获取整个文档并标记所有单词，从而得到 `w(1), …, w(N)`。\n\
+    \n然后我们可以建模任意单词 `w(i)` 在给定所有其他周围单词条件下的概率。\n\n用概率符号表示为：\n\n`P(w(i) | w(1), ... ,\
+    \ w(i-1), w(i+1), … w(N))`\n\n当然，这实际上行不通，因为如果我们考虑文档中的每一个单词，那么只有该文档本身才能完全匹配（即样本量为\
+    \ 1），所以我们将采用类似马尔可夫模型的方法，只考虑最近的单词。\n\n我们将使用一种称为三元组的方法来实现这一点。基本上我们将创建三元组，存储 3 个连续单词的组合。我们将使用前一个单词和后一个单词来预测当前单词。\n\
+    \n在数学上，这意味着我们将建模：\n\n`P(w(i) | w(i-1), w(i+1))`\n\n为了实现这一点，我们将创建一个字典，以 `(w(i-1),\
+    \ w(i+1))` 作为键，并随机采样 `w(i)`。\n\n当然，我们不会替换文档中的每一个单词，因为那可能不会给我们带来任何有用的结果，所以我们将根据某个较小的概率来决定是否替换某个单词。\n\
+    \n这和潜在语义分析都是我们所谓的“无监督学习”算法，因为它们没有标签，我们只是学习结构。相比之下，我们的垃圾邮件分类器和情感分析器是“监督学习”问题，因为我们有标签可供匹配。\n\
+    \n## 文章重写器代码\n\n在这个代码示例中，我们将重用我们的亚马逊评论数据。\n\n```python\nimport nltk\nimport random\n\
+    import numpy as np\nfrom bs4 import BeautifulSoup\n\npositive_reviews = BeautifulSoup(\n\
+    \    open(\n        'electronics/positive.review'\n    ).read())\npositive_reviews\
+    \ = positive_reviews.findAll('review_text')\n```\n\n这一次，我们只看正面评论。\n\n接下来，我们提取三元组。键将是首尾单词。值将是可能的中间单词数组。\n\
+    \n```python\ntrigrams = {}\n\nfor review in positive_reviews:\n    s = review.text.lower()\n\
+    \    tokens = nltk.tokenize.word_tokenize(s)\n    for i in xrange(len(tokens)\
+    \ - 2):\n        k = (tokens[i], tokens[i+2])\n        if k not in trigrams:\n\
+    \            trigrams[k] = []\n        trigrams[k].append(tokens[i+1])\n```\n\n\
+    接下来，我们要将每个中间单词数组转换为概率向量。\n\n```python\ntrigram_probabilities = {}\n\nfor k, words\
+    \ in trigrams.iteritems():\n    # 创建一个单词 -> 计数的字典\n    if len(set(words)) > 1:\n\
+    \        # 只有当中间单词有不同可能性时才执行此操作\n        d = {}\n        n = 0\n        for w\
+    \ in words:\n            if w not in d:\n                d[w] = 0\n          \
+    \  d[w] += 1\n            n += 1\n        for w, c in d.iteritems():\n       \
+    \     d[w] = float(c) / n\n        trigram_probabilities[k] = d\n```\n\n这意味着如果可能的中间单词是\
+    \ `[\"cat\", \"cat\", \"dog\"]`，那么我们现在将得到一个字典 `{\"cat\": 0.67, \"dog\": 0.33}`。\n\
+    \n因此，如果我们遇到上下文提供了这些可能性的情况，那么我们将以 2/3 的概率插入“cat”作为中间单词，以 1/3 的概率插入“dog”。\n\n接下来，我们将创建一种从字典中随机采样的方法。\n\
+    \n```python\ndef random_sample(d):\n    # 从字典中选择一个随机样本，其中值为概率\n    r = random.random()\n\
+    \    cumulative = 0\n    for w, p in d.iteritems():\n        cumulative += p\n\
+    \        if r < cumulative:\n            return w\n```\n\n最后，让我们编写一个函数来测试重写器。\n\
+    \n```python\ndef test_spinner():\n    review = random.choice(positive_reviews)\n\
+    \    s = review.text.lower()\n    print \"Original:\", s\n    tokens = nltk.tokenize.word_tokenize(s)\n\
+    \    for i in xrange(len(tokens) - 2):\n        if random.random() < 0.2: # 20%\
+    \ 替换几率\n            k = (tokens[i], tokens[i+2])\n            if k in trigram_probabilities:\n\
+    \                w = random_sample(trigram_probabilities[k])\n               \
+    \ tokens[i+1] = w\n    print \"Spun:\"\n    print \" \".join(tokens).replace(\"\
+    \ .\", \".\").replace(\" '\", \"'\").replace(\" ,\", \",\").replace(\"$ \", \"\
+    $\").replace(\" !\", \"!\")\n```\n\n最后一行替换了我注意到总是出现在奇怪位置的一些标点符号。或者，你也可以像前几章那样使用自定义分词器来替换标点符号。\n\
+    \n以下是一些示例输出：\n\n**原文：**\n\n> i downloaded the driver from trendnet's website before\
+    \ installing the adapter. i did not encounter any problems at all, including the\
+    \ issue that some users had with it disconnecting when they plugged in another\
+    \ usb device\n\n**重写后：**\n\n> i downloaded the driver from trendnet's limits before\
+    \ installing the adapter. i did not encounter any problems at all, including the\
+    \ issue that new users had with it disconnecting when they plugged in another\
+    \ usb device\n\n**另一个。**\n\n**原文：**\n\n> the reason it is not rated 5 stars is\
+    \ that the ink supply is utilized too rapidly and the expensive cartriges have\
+    \ to replaced too frequently\n\n**重写后：**\n\n> the reason it does not afford 5\
+    \ stars is that the ink supply is utilized too rapidly and the expensive cartriges\
+    \ have to use too frequently\n\n自己试试看还能得到什么结果。\n\n你可以看到很多结果相当滑稽。这绝对表明应该有比仅检查两个相邻单词更多的上下文检查。\n\
+    \n这告诉我们关于类“马尔可夫”假设的什么？它不成立！\n\n这可能只是构建一个真正优秀的文章重写器所需工作的 5%。\n\n请注意，这绝非易事。快速谷歌搜索显示，即使是顶级结果也远称不上是好的产品。\n\
+    \n# 结语\n\n我真心希望阅读这本书给你带来的乐趣，不亚于我制作它时的乐趣。\n\n你有没有发现什么困惑的地方？有什么问题吗？\n\n我随时可以提供帮助。只需发邮件至：info@lazyprogrammer.me\n\
+    \n想了解更多关于数据科学和机器学习的知识吗？也许在线课程更适合你。我恰好在 Udemy 上有几门课程。\n\n深度学习和神经网络的背景及先修知识可以在我的课程“Data\
+    \ Science: Deep Learning in Python”（正式称为系列的“第 1 部分”）中找到。在该课程中，我教你神经网络的前向传播机制（本书假设你已知晓），以及如何推导称为反向传播的训练算法（本书也假设你已知晓）：\n\
+    \n[Data Science: Deep Learning in Python](https://udemy.com/data-science-deep-learning-in-python)\n\
+    \n[`udemy.com/data-science-deep-learning-in-python`](https://udemy.com/data-science-deep-learning-in-python)\n\
+    \nKindle 版对应书籍：\n\n[`kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01CVJ19E8`](https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01CVJ19E8)\n\
+    \n你对这些材料驾轻就熟，并想将深度学习技能提升到一个新水平吗？那么我的深度学习后续 Udemy 课程适合你。类似于前一本书，我将带你了解 Theano 和\
+    \ TensorFlow 的基础知识——创建函数、变量和表达式，并从头构建神经网络。我教你加速学习过程的方法，包括批量梯度下降、动量和自适应学习率。我还会现场演示如何在\
+    \ Amazon AWS EC2 上创建 GPU 实例，并向你证明使用 GPU 优化训练神经网络比在 CPU 上快几个数量级。\n\n[Data Science:\
+    \ Practical Deep Learning in Theano and TensorFlow](https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow/)\n\
+    \n[`www.udemy.com/data-science-deep-learning-in-theano-tensorflow`](https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow)\n\
+    \n在深度学习第 3 部分——卷积神经网络中，我教你一种特殊的神经网络，专为图像分类和特征学习而设计。\n\n[Deep Learning: Convolutional\
+    \ Neural Networks in Python](https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow)\n\
+    \n"
+  toc: []
+- raw: '[https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow](https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow)
+
+
+    In part 4 of my deep learning series, I take you through unsupervised deep learning
+    methods. We study principal components analysis (PCA), t-SNE (jointly developed
+    by the godfather of deep learning, Geoffrey Hinton), deep autoencoders, and restricted
+    Boltzmann machines (RBMs). I demonstrate how unsupervised pretraining on a deep
+    network with autoencoders and RBMs can improve supervised learning performance.
+
+
+    [Unsupervised Deep Learning in Python](https://www.udemy.com/unsupervised-deep-learning-in-python)
+
+
+    [https://www.udemy.com/unsupervised-deep-learning-in-python](https://www.udemy.com/unsupervised-deep-learning-in-python)
+
+
+    Would you like an introduction to the basic building block of neural networks
+    - logistic regression? In this course I teach the theory of logistic regression
+    (our computational model of the neuron), and give you an in-depth look at binary
+    classification, manually creating features, and gradient descent. You might want
+    to check this course out if you found the material in this book too challenging.
+
+
+    [Data Science: Logistic Regression in Python](https://udemy.com/data-science-logistic-regression-in-python)
+
+
+    [https://udemy.com/data-science-logistic-regression-in-python](https://udemy.com/data-science-logistic-regression-in-python)
+
+
+    The corresponding book for Deep Learning Prerequisites is:
+
+
+    [https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01D7GDRQ2](https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01D7GDRQ2)
+
+
+    To get an even simpler picture of machine learning in general, where we don’t
+    even need gradient descent and can just solve for the optimal model parameters
+    directly in “closed-form”, you’ll want to check out my first Udemy course on the
+    classical statistical method - linear regression:
+
+
+    [Data Science: Linear Regression in Python](https://www.udemy.com/data-science-linear-regression-in-python)
+
+
+    [https://www.udemy.com/data-science-linear-regression-in-python](https://www.udemy.com/data-science-linear-regression-in-python)
+
+
+    If you are interested in learning about how machine learning can be applied to
+    language, text, and speech, you’ll want to check out my course on Natural Language
+    Processing, or NLP:
+
+
+    [Data Science: Natural Language Processing in Python](https://www.udemy.com/data-science-natural-language-processing-in-python)
+
+
+    [https://www.udemy.com/data-science-natural-language-processing-in-python](https://www.udemy.com/data-science-natural-language-processing-in-python)
+
+
+    If you are interested in learning SQL - structured query language - a language
+    that can be applied to databases as small as the ones sitting on your iPhone,
+    to databases as large as the ones that span multiple continents - and not only
+    learn the mechanics of the language but know how to apply it to real-world data
+    analytics and marketing problems? Check out my course here:
+
+
+    [SQL for Marketers: Dominate data analytics, data science, and big data](https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data)
+
+
+    [https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data](https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data)
+
+
+    Finally, I am always giving out coupons and letting you know when you can get
+    my stuff for free. But you can only do this if you are a current student of mine!
+    Here are some ways I notify my students about coupons and free giveaways:
+
+
+    My newsletter, which you can sign up for at [http://lazyprogrammer.me](http://lazyprogrammer.me)
+    (it comes with a free 6-week intro to machine learning course)
+
+
+    My Twitter, [https://twitter.com/lazy\_scientist](https://twitter.com/lazy_scientist)
+
+
+    My Facebook page, [https://facebook.com/lazyprogrammer.me](https://facebook.com/lazyprogrammer.me)
+    (don’t forget to hit “like”!)'
+  fmt: '
+
+    # 推荐课程与资源
+
+
+    ## 深度学习系列第4部分：无监督深度学习
+
+
+    [https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow](https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow)
+
+
+    在深度学习系列的第4部分中，我将带你了解无监督深度学习方法。我们将学习主成分分析（PCA）、t-SNE（由深度学习教父 Geoffrey Hinton 共同开发）、深度自编码器和受限玻尔兹曼机（RBMs）。我将演示如何使用自编码器和
+    RBMs 对深度网络进行无监督预训练，从而提升有监督学习的性能。
+
+
+    ## Unsupervised Deep Learning in Python
+
+
+    [Unsupervised Deep Learning in Python](https://www.udemy.com/unsupervised-deep-learning-in-python)
+
+
+    [https://www.udemy.com/unsupervised-deep-learning-in-python](https://www.udemy.com/unsupervised-deep-learning-in-python)
+
+
+    ## 逻辑回归入门
+
+
+    想要了解神经网络的基本构建模块——逻辑回归吗？在本课程中，我讲解逻辑回归理论（我们的神经元计算模型），并深入探讨二分类、手动创建特征和梯度下降。如果你觉得本书内容太有挑战性，不妨看看这门课程。
+
+
+    [Data Science: Logistic Regression in Python](https://udemy.com/data-science-logistic-regression-in-python)
+
+
+    [https://udemy.com/data-science-logistic-regression-in-python](https://udemy.com/data-science-logistic-regression-in-python)
+
+
+    ## 深度学习先修知识对应书籍
+
+
+    [https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01D7GDRQ2](https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01D7GDRQ2)
+
+
+    ## 线性回归：机器学习的简化视角
+
+
+    为了获得对机器学习更简单的整体认识——我们甚至不需要梯度下降，只需以“闭式”直接求解最优模型参数——你可以看看我关于经典统计方法线性回归的第一门 Udemy
+    课程：
+
+
+    [Data Science: Linear Regression in Python](https://www.udemy.com/data-science-linear-regression-in-python)
+
+
+    [https://www.udemy.com/data-science-linear-regression-in-python](https://www.udemy.com/data-science-linear-regression-in-python)
+
+
+    ## 自然语言处理（NLP）
+
+
+    如果你对机器学习如何应用于语言、文本和语音感兴趣，你会想看看我的自然语言处理（NLP）课程：
+
+
+    [Data Science: Natural Language Processing in Python](https://www.udemy.com/data-science-natural-language-processing-in-python)
+
+
+    [https://www.udemy.com/data-science-natural-language-processing-in-python](https://www.udemy.com/data-science-natural-language-processing-in-python)
+
+
+    ## SQL for Marketers
+
+
+    如果你有兴趣学习 SQL（结构化查询语言）——一种可应用于小至你 iPhone 中的数据库、大至跨越多个大陆的数据库的语言——不仅学习语言机制，还能知道如何将其应用于真实世界的数据分析和营销问题？请看这里：
+
+
+    [SQL for Marketers: Dominate data analytics, data science, and big data](https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data)
+
+
+    [https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data](https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data)
+
+
+    ## 免费优惠券与赠品通知渠道
+
+
+    最后，我经常发放优惠券并告知何时可以免费获取我的课程。但前提是你必须是我的现有学生！以下是我通知学生优惠券和免费赠品的一些方式：
+
+
+    - **My newsletter**，你可以在 [http://lazyprogrammer.me](http://lazyprogrammer.me)
+    注册（附赠免费的 6 周机器学习入门课程）
+
+    - **My Twitter**：[https://twitter.com/lazy_scientist](https://twitter.com/lazy_scientist)
+
+    - **My Facebook page**：[https://facebook.com/lazyprogrammer.me](https://facebook.com/lazyprogrammer.me)（别忘了点“赞”！）
+
+    '
+  trans: '
+
+
+    # 推荐课程与资源
+
+
+    ## 深度学习系列第 4 部分：无监督深度学习
+
+
+    [`www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow`](https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow)
+
+
+    在深度学习系列的第 4 部分中，我将带你了解无监督深度学习方法。我们将学习主成分分析（PCA）、t-SNE（由深度学习教父 Geoffrey Hinton
+    共同开发）、深度自编码器和受限玻尔兹曼机（RBMs）。我将演示如何使用自编码器和 RBMs 对深度网络进行无监督预训练，从而提升有监督学习的性能。
+
+
+    ## Python 无监督深度学习
+
+
+    [Python 无监督深度学习](https://www.udemy.com/unsupervised-deep-learning-in-python)
+
+
+    [`www.udemy.com/unsupervised-deep-learning-in-python`](https://www.udemy.com/unsupervised-deep-learning-in-python)
+
+
+    ## 逻辑回归入门
+
+
+    想要了解神经网络的基本构建模块——逻辑回归吗？在本课程中，我讲解逻辑回归理论（我们的神经元计算模型），并深入探讨二分类、手动创建特征和梯度下降。如果你觉得本书内容太有挑战性，不妨看看这门课程。
+
+
+    [数据科学：Python 逻辑回归](https://udemy.com/data-science-logistic-regression-in-python)
+
+
+    [`udemy.com/data-science-logistic-regression-in-python`](https://udemy.com/data-science-logistic-regression-in-python)
+
+
+    ## 深度学习先修知识对应书籍
+
+
+    [`kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01D7GDRQ2`](https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01D7GDRQ2)
+
+
+    ## 线性回归：机器学习的简化视角
+
+
+    为了获得对机器学习更简单的整体认识——我们甚至不需要梯度下降，只需以“闭式”直接求解最优模型参数——你可以看看我关于经典统计方法线性回归的第一门 Udemy
+    课程：
+
+
+    [数据科学：Python 线性回归](https://www.udemy.com/data-science-linear-regression-in-python)
+
+
+    [`www.udemy.com/data-science-linear-regression-in-python`](https://www.udemy.com/data-science-linear-regression-in-python)
+
+
+    ## 自然语言处理（NLP）
+
+
+    如果你对机器学习如何应用于语言、文本和语音感兴趣，你会想看看我的自然语言处理（NLP）课程：
+
+
+    [数据科学：Python 自然语言处理](https://www.udemy.com/data-science-natural-language-processing-in-python)
+
+
+    [`www.udemy.com/data-science-natural-language-processing-in-python`](https://www.udemy.com/data-science-natural-language-processing-in-python)
+
+
+    ## 面向营销人员的 SQL
+
+
+    如果你有兴趣学习 SQL（结构化查询语言）——一种可应用于小至你 iPhone 中的数据库、大至跨越多个大陆的数据库的语言——不仅学习语言机制，还能知道如何将其应用于真实世界的数据分析和营销问题？请看这里：
+
+
+    [面向营销人员的 SQL：掌握数据分析、数据科学与大数据](https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data)
+
+
+    [`www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data`](https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data)
+
+
+    ## 免费优惠券与赠品通知渠道
+
+
+    最后，我经常发放优惠券并告知何时可以免费获取我的课程。但前提是你必须是我的现有学生！以下是我通知学生优惠券和免费赠品的一些方式：
+
+
+    - **我的通讯**，你可以在 [`lazyprogrammer.me`](http://lazyprogrammer.me) 注册（附赠免费的 6 周机器学习入门课程）
+
+    - **我的 Twitter**：[`twitter.com/lazy_scientist`](https://twitter.com/lazy_scientist)
+
+    - **我的 Facebook 主页**：[`facebook.com/lazyprogrammer.me`](https://facebook.com/lazyprogrammer.me)（别忘了点“赞”！）
+
+
+    '
+  toc: []
