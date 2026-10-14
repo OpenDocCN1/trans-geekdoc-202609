@@ -1,0 +1,105 @@
+
+Figure 7.10 Class distribution.
+
+Tables 7.1 and 7.2 show that the `BIO_ClinicalBERT` with its pre-training on a large corpus of medical records has a slight advantage over the base `BERT` for classification.
+
+### TABLE 7.1 Fine-tuned base BERT on Test Data
+
+| Class/Metrics || 精确率 || 召回率 || F1 |
+| --- | --- | --- | --- |
+| Surgery || 0.792 || 0.768 || 0.779 |
+| Medical Records || 0.612 || 0.510 || 0.556 |
+| Internal Medicine || 0.588 || 0.642 || 0.614 |
+| Other || 0.587 || 0.670 || 0.626 |
+|  |
+| accuracy ||  || 0.67 |
+| macro avg || 0.645 || 0.648 || 0.644 |
+| weighted avg || 0.673 || 0.670 || 0.670 |
+
+### TABLE 7.2 Fine-tuned Bio_Clinical BERT on Test Data
+
+| Class/Metrics || 精确率 || 召回率 || F1 |
+| --- | --- | --- | --- |
+| Surgery || 0.796 || 0.788 || 0.792 |
+| Medical Records || 0.605 || 0.676 || 0.639 |
+| Internal Medicine || 0.690 || 0.633 || 0.660 |
+| Other || 0.589 || 0.582 || 0.586 |
+|  |
+| accuracy ||  || 0.694 |
+| macro avg || 0.670 || 0.670 || 0.669 |
+| weighted avg || 0.696 || 0.694 || 0.694 |
+
+#### 7.6.3.3 Error analysis and explainability
+
+Next, we will try to perform error analysis using explainable techniques to get more insights. The error analysis on the 500 sized test data shows
+
+1. The `BIO_ClinicalBERT` performs better than the base model on 51 instances.
+2. The `BIO_ClinicalBERT` performs worse than the base model on 39 instances.
+3. Both models miss on 114 instances.
+4. Both models predict correctly on 296 instances.
+
+![Listing 7.1 Saliency explanations](img/comp7_3a.jpg)
+
+Listing 7.1 Saliency explanations
+
+The Listing 7.1 shows the saliency-based implementation for visualization of input attributions.
+
+In Figs. 7.11 and 7.12, we can see the difference in explanations for each of the models on the same record—we are attributing each token for the correct class `Surgery`. The base `BERT` model gives an incorrect prediction for this example. At a glance, we can see that the most significant negative attributions for the base `BERT` model come from kidney-related terms (kidney, renal, etc.), possibly indicating that the base `BERT` model associates such terms with a class other than `Surgery`. The domain-adapted `Bio_Clinical BERT` has positive and negative attributions for *bladder* as well as positive explanations for the descriptions of the procedures (e.g., “placed in dorsal lithotomy position” and “prepped and draped in the standard fashion”). This may give us some insight into how the additional pre-training is helping `Bio_Clinical BERT` achieve a relatively better performance.
+
+![Figure 7.11 Saliency-based visualization for a correct prediction for the base BERT.](img/fig7_12.jpg)
+
+Figure 7.11 Saliency-based visualization for a correct prediction for the base `BERT`.
+
+![Figure 7.12 Saliency-based visualization for a correct prediction for the domain adapted BIO_ClinicalBERT.](img/fig7_13.jpg)
+
+Figure 7.12 Saliency-based visualization for a correct prediction for the domain adapted `BIO_ClinicalBERT`.
+
+![Figure 7.13 Saliency-based visualization for an incorrect prediction for the base BERT.](img/fig7_14.jpg)
+
+Figure 7.13 Saliency-based visualization for an incorrect prediction for the base `BERT`.
+
+In the example as shown in Figs. 7.14 and 7.12, we can see that the `BIO_ClinicalBERT` correctly predicts `Medical Records` while the base `BERT` predicts `Internal Medicine`. Highlights on context words such as “past medical history”, “present”, “admitted”, etc. in the `BIO_ClinicalBERT` saliency visualization further highlights reasons why *Medical Records* is the predicted class for the `BIO_ClinicalBERT`.
+
+![Figure 7.14 Saliency-based visualization for an incorrect prediction for the domain adapted BIO_ClinicalBERT.](img/fig7_15.jpg)
+
+Figure 7.14 Saliency-based visualization for an incorrect prediction for the domain adapted `BIO_ClinicalBERT`.
+
+![Figure 7.15 Sample example visualized at a layer by two different architectures: (a) BERT and (b) BIO_ClinicalBERT.](img/fig7_16.jpg)
+
+Figure 7.15 Sample example visualized at a layer by two different architectures: (a) `BERT` and (b) `BIO_ClinicalBERT`.
+
+We can also visualize the self-attention weights to gain another view into the representations learned by the `BERT` models. The `BertViz` library provides an interactive front-end to explore these token weights. Unfortunately, `BertViz` does not scale well to long sequences, so we truncated the inputs to illustrate local attention effects for `BERT` and `BIO_ClinicalBERT` to highlight the relationship between the token weights and class token at a layer. These are shown in Fig. 7.15.
+
+# Bibliography
+
+1. [\[1\]](#ch7.xhtml#refbib_1b) S. ABNAR AND W. ZUIDEMA, *Quantifying attention flow in transformers*, arXiv preprint arXiv:2005.00928, (2020).
+
+2. [\[2\]](#ch7.xhtml#refbib_2b) G. ALAIN AND Y. BENGIO, *Understanding intermediate layers using linear classifier probes*, arXiv preprint arXiv:1610.01644, (2016).
+
+3. [\[3\]](#ch7.xhtml#refbib_3b) D. ALVAREZ-MELIS AND T. S. JAAKKOLA, *Towards robust interpretability with self-explaining neural networks*, arXiv preprint arXiv:1806.07538, (2018).
+
+4. [\[4\]](#ch7.xhtml#refbib_4b) S. AMERSHI, M. CHICKERING, S. M. DRUCKER, B. LEE, P. SIMARD, AND J. SUH, *Modeltracker: Redesigning performance analysis tools for machine learning*, in Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems, 2015, pp. 337–346.
+
+5. [\[5\]](#ch7.xhtml#refbib_5b) D. AMODEI, C. OLAH, J. STEINHARDT, P. CHRISTIANO, J. SCHULMAN, AND D. Mané, *Concrete problems in ai safety*, arXiv preprint arXiv:1606.06565, (2016).
+
+6. [\[6\]](#ch5.xhtml#refbib_6b) A. ANDONI, P. INDYK, T. LAARHOVEN, I. P. RAZENSHTEYN, AND L. SCHMIDT, *Practical and optimal lsh for angular distance*, in NIPS, 2015.
+
+7. [\[7\]](#ch6.xhtml#refbib_7b) D. ARACI, *Finbert: Financial sentiment analysis with pre-trained language models*, ArXiv, abs/1908.10063 (2019).
+
+8. [\[8\]](#ch7.xhtml#refbib_8b) E. ARKHANGELSKAIA AND S. DUTTA, *Whatcha lookin'at? deeplifting bert's attention in question answering*, arXiv preprint arXiv:1910.06431, (2019).
+
+9. [\[9\]](#ch4.xhtml#refbib_9b) M. ARTETXE, S. RUDER, AND D. YOGATAMA, *On the cross-lingual transferability of monolingual representations*, in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, Online, July 2020, Association for Computational Linguistics, pp. 4623–4637.
+
+10. [\[10\]](#ch4.xhtml#refbib_10b) M. ARTETXE, S. RUDER, AND D. YOGATAMA, *On the cross-lingual transferability of monolingual representations*, in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, ACL 2020, Online, July 5-10, 2020, D. Jurafsky, J. Chai, N. Schluter, and J. R. Tetreault, eds., Association for Computational Linguistics, 2020, pp. 4623–4637.
+
+11. [\[11\]](#ch4.xhtml#refbib_11b) M. ARTETXE AND H. SCHWENK, *Massively multilingual sentence embeddings for zero-shot cross-lingual transfer and beyond*, Trans. Assoc. Comput. Linguistics, 7 (2019), pp. 597–610.
+
+12. [\[12\]](#ch1.xhtml#refbib_12b) P. AZUNRE, Transfer Learning for Natural Language Processing, Manning, 2021.
+
+13. [\[13\]](#ch1.xhtml#refbib_13b) L. J. BA, J. R. KIROS, AND G. E. HINTON, *Layer normalization*, CoRR, abs/1607.06450 (2016).
+
+14. [\[14\]](#ch7.xhtml#refbib_14b) S. BACH, A. BINDER, G. MONTAVON, F. KLAUSCHEN, K.-R. MÜLLER, AND W. SAMEK, *On pixel-wise explanations for non-linear classifier decisions by layer-wise relevance propagation*, PloS one, 10 (2015), p. e0130140.
+
+15. [\[15\]](#ch7.xhtml#refbib_15b) D. BAEHRENS, T. SCHROETER, S. HARMELING, M. KAWANABE, K. HANSEN, AND K.-R. MÜLLER, *How to explain individual classification decisions*, The Journal of Machine Learning Research, 11 (2010), pp. 1803–1831.
+
+16. [\[16\]](#ch4.xhtml#refbib_16b) A. BAEVSKI, H. ZHOU, A. RAHMAN MOHAMED, AND M. AULI, *wav2vec 2.0: A framework for self-supervised learning of speech representations*, ArXiv, abs/2006.11477 (2020).
