@@ -1,0 +1,277 @@
+
+```python
+import math
+import numpy as np
+import pandas as pd
+
+import matplotlib.pyplot as plt
+from sklearn.datasets import fetch_california_housing
+
+class ridge_reg():
+    def __init__(self, n_iter=20, learning_rate=1e-3, lmbda=0.1):
+        self.n_iter = n_iter
+        self.learning_rate = learning_rate
+        self.lmbda = lmbda
+
+    def fit(self, X, y):
+        X = np.insert(X, 0, 1, axis=1)
+        self.loss = []
+        self.w = np.random.rand(X.shape[1])
+        for i in range(self.n_iter):
+            y_pred = X.dot(self.w)
+            mse = np.mean(0.5*(y - y_pred)**2 + 0.5*self.lmbda*self.w.T.dot(self.w))
+            self.loss.append(mse)
+            print(" %d iter, mse: %.4f" % (i, mse))
+            grad_w = - (y - y_pred).dot(X) + self.lmbda*self.w
+            self.w -= self.learning_rate * grad_w
+
+    def predict(self, X):
+        X = np.insert(X, 0, 1, axis=1)
+        y_pred = X.dot(self.w)
+        return y_pred
+
+if __name__ == "__main__":
+
+    X, y = fetch_california_housing(return_X_y=True)
+    X_reg = X[:,2].reshape(-1,1)
+    X_std = (X_reg - X_reg.mean())/X.std()
+    y_std = (y - y.mean())/y.std()
+
+    X_std = X_std[:200,:]
+    y_std = y_std[:200]
+
+    rr = ridge_reg()
+    rr.fit(X_std, y_std)
+    y_pred = rr.predict(X_std)
+
+    print(rr.w)
+
+    plt.figure()
+    plt.plot(rr.loss)
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.tight_layout()
+    plt.show()
+
+    plt.figure()
+    plt.scatter(X_std, y_std)
+    plt.plot(np.linspace(-1,1), rr.w[1]*np.linspace(-1,1)+rr.w[0], c='red')
+    plt.xlim([-0.01,0.01])
+    plt.xlabel("scaled average num of rooms")
+    plt.ylabel("scaled house price")
+    plt.show()
+```
+
+为偏置项插入常数 `1`
+
+计算 `NLL(w)` 关于 `w` 的梯度
+
+更新权重
+
+为偏置项插入常数 `1`
+
+房间平均数
+
+标准缩放
+
+图 6.2 显示了贝叶斯线性回归算法的输出。
+
+![](img/325742126d3ff007c6c385f4ffb5c3be_130_0.png)
+
+**图 6.2** 贝叶斯线性回归损失函数（左）和图（右）
+
+左侧可以看到损失函数随轮数（epochs）的下降情况，右侧展示了加利福尼亚房价数据集投影的拟合结果。请注意，两个坐标轴都已标准化。贝叶斯线性回归成功捕捉到了房价随平均房间数增加而上升的趋势。在下一节中，我们将探讨线性回归层次模型的优势。
+
+#### 6.3 层次贝叶斯回归
+
+层次模型能够在组之间共享特征。模型的参数被假设为从一个共同分布中采样，该分布用于建模组间的相似性。图 6.3 展示了三种情景，用以说明层次建模的优势。在左图中，我们使用一组参数 `θ` 来建模整个观测序列，这被称为合并模型（pooled model）。在这里，数据中的任何变化都没有被显式建模，因为我们假设是一组共同的参数生成了数据。另一方面，还有非合并模型（unpooled model）情景，即为每个观测建模一组不同的参数。在非合并情形下，我们假设观测组之间没有参数共享，每个参数都是独立的。层次模型结合了两者的优点：它假设存在一个共同分布，各个参数均从该分布中采样，因此能够捕捉组间的相似性。
+
+![](img/325742126d3ff007c6c385f4ffb5c3be_131_0.png)
+
+**图 6.3** 合并模型、非合并模型和层次图模型
+
+在贝叶斯层次回归中，我们可以为模型参数指定先验，并使用 MCMC 采样来推断后验分布。我们使用氡数据集，根据楼层数（特别是有无地下室）来回归不同县房屋中的氡气水平。因此，我们的回归模型如下所示。
+
+`α_c ~ N(μ_α, σ_α²)`  
+
+`β_c ~ N(μ_β, σ_β²)`  
+
+`radon_c = α_c + β_c × floor_{i,c} + ε_c  (6.10)`
+
+请注意，下标 `c` 表示县；因此，我们为每个县学习一个从共享高斯分布中采样的截距和斜率。也就是说，我们假设了一个层次模型，其中参数（`α_c` 和 `β_c`）从共同分布中采样。在代码清单 6.2 中，我们将为回归系数定义概率分布，并将数据似然建模为标准差均匀分布的正态分布。在指定图模型后，我们可以借助 PyMC 库使用无 U 形转向采样器（NUTS）进行推断。PyMC 是 Python 中的概率编程库，可从 https://docs.pymc.io/ 下载。它是贝叶斯建模的绝佳工具，并且可以从零开始编码，因为我们是从零开始定义概率图模型，然后使用现成工具对后验分布进行采样。如果你是第一次接触概率编程语言，我强烈建议完成 PyMC 在线示例，以了解更多关于其功能的内容。
+
+让我们来看一下图 6.4 中的伪代码。
+
+```text
+1: function main(X, y):
+2: with pymc3.Model() as hierarchical_model:
+3:   μa ~ N(0, 100²)
+4:   σa ~ Unif[0, 100]   → Hyperpriors
+5:   μb ~ N(0, 100²)
+6:   σb ~ Unif[0, 100]
+7:   a ~ N(μa, σa²) ← Intercept model
+8:   b ~ N(μb, σb²) ← Slope model
+9:   ε ~ Unif[0, 100] ← Error model
+10:  y_exp = a + b × X ← Expected value
+11:  y_lh ~ N(X; y_exp, ε²) ← Data likelihood
+12: with hierarchical_model:
+13:   mu, sds, elbo = pymc3.variational.advi(n = 100000)
+14:   step = pymc3.NUTS(scaling = sds², is_cov = True) → PyMC inference
+15:   trace = pymc3.sample(5000, step, start = mu)
+16: return trace
+```
+
+**图 6.4** 层次贝叶斯回归伪代码
+
+该代码由一个主函数组成。在代码的第一部分，我们定义了概率模型；在第二部分，我们使用 PyMC3 库进行变分推断。首先，我们为回归截距和斜率模型的均值和方差设置超先验。接下来，我们将截距和斜率模型定义为高斯随机变量（RV），并将误差模型定义为均匀随机变量。最后，我们计算回归表达式，并将其设为数据似然模型中的均值。然后，我们使用 PyMC 中实现的 NUTS 进行推断。
+
+### 代码清单 6.2 层次贝叶斯回归
+
+```python
+import numpy as np
+import pandas as pd
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+import pymc3 as pm
+
+def main():
+    data = pd.read_csv('./data/radon.txt')  ← Load data
+
+    county_names = data.county.unique()
+    county_idx = data['county_code'].values
+
+    with pm.Model() as hierarchical_model:
+        mu_a = pm.Normal('mu_alpha', mu=0., sd=100**2)
+        sigma_a = pm.Uniform('sigma_alpha', lower=0,
+            upper=100)
+        mu_b = pm.Normal('mu_beta', mu=0., sd=100**2)
+        sigma_b = pm.Uniform('sigma_beta', lower=0,
+            upper=100)
+        
+        a = pm.Normal('alpha', mu=mu_a, sd=sigma_a,
+            shape=len(data.county.unique()))  ← Intercept for each county
+        b = pm.Normal('beta', mu=mu_b, sd=sigma_b,
+            shape=len(data.county.unique()))  ← Slope for each county
+
+        eps = pm.Uniform('eps', lower=0, upper=100)  ← Model error
+
+        radon_est = a[county_idx] + b[county_idx] *
+            data.floor.values  ← Expected value
+
+        y_like = pm.Normal('y_like', mu=radon_est, sd=eps,
+            observed=data.log_radon)  ← Data likelihood
+
+    with hierarchical_model:
+        # Use ADVI for initialization
+        mu, sds, elbo = pm.variational.advi(n=100000)
+        step = pm.NUTS(scaling=hierarchical_model.dict_to_array(sds)**2,
+            is_cov=True)
+        hierarchical_trace = pm.sample(5000, step, start=mu)
+
+    pm.traceplot(hierarchical_trace[500:])
+    plt.show()
+
+if __name__ == "__main__":
+    main()
+```
+
+从图 6.5 的轨迹图中，我们可以看到 `α_c` 和 `β_c` 的后验分布已经收敛，这表明不同县有不同的截距和斜率。
+
+![](img/325742126d3ff007c6c385f4ffb5c3be_134_0.png)
+
+**图 6.5** 层次贝叶斯回归的 MCMC 轨迹图
+
+此外，我们还恢复了共享参数的后验分布。`μ_a` 表示氡气水平对数的组均值接近 1.5，而 `μ_b` 表示斜率为负，其均值为 −0.65，因此，没有地下室会降低氡气水平。在下一节中，我们将研究一种适用于非线性数据的算法。
+
+#### 6.4 KNN 回归
+
+K 最近邻（KNN）回归是非参数模型的一个例子。对于给定的查询数据点 `q`，我们在训练集中找到它的 `k` 个最近邻，并计算平均响应变量 `y`。在本节中，我们将计算鸢尾花（iris）数据集的 KNN 目标标签的平均值。该平均值是在距离查询 `q` 最近的 K 个点的局部邻域上计算的。
+
+$$y_q = \frac{1}{K} \sum_{i \in N_K(q,D)} y_i \quad (6.11)$$
+
+这里，$N_K(q, D)$ 表示从训练数据集 $D$ 中查询 `q` 的 `k` 个最近邻的局部邻域。要找到局部邻域 $N_K(q, D)$，我们可以计算查询点 `q` 与训练数据集中的每个点 $x_i \in D$ 之间的距离，将这些距离按升序排序，然后取前 K 个数据点。这种方法的时间复杂度为 $O(n \log n)$，其中 `n` 是训练数据集的大小，因为需要进行排序操作。我们现在准备好从头实现一个 KNN 回归器！在图 6.6 中，KNN 回归通过基于欧氏距离对 K 个最近邻的标签取平均来计算。
+
+```text
+1: class KNN:
+2: function knn_search(K, X, y, Q)
+3: for query in Q:
+4:   idx = argsort(euclidean_dist(query, X))[:K] ← KNN IDs
+5:   knn_labels = [y[i] for i in idx] ← KNN labels
+6:   y_pred = mean(knn_labels) ← KNN regression
+7: end for
+8: return y_pred
+```
+
+**图 6.6** KNN 回归伪代码
+
+代码由 `knn_search` 函数组成，在该函数中，对于每个 K 最近邻查询 `Q`，我们计算查询点与所有数据点之间的欧氏距离，对结果进行排序，并选出距离最小的 K 个 ID。然后，我们通过收集这些 KNN ID 对应的标签来形成 KNN 邻域。最后，我们对 KNN 标签取平均，计算出最终结果。
+
+### 代码清单 6.3 K 最近邻回归
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+
+np.random.seed(42)
+```
+
+```python
+class KNN():
+    def __init__(self, K):
+        self.K = K
+
+    def euclidean_distance(self, x1, x2):
+        dist = 0
+        for i in range(len(x1)):
+            dist += np.power((x1[i] - x2[i]), 2)
+        return np.sqrt(dist)
+
+    def knn_search(self, X_train, y_train, Q):
+        y_pred = np.empty(Q.shape[0])
+
+        for i, query in enumerate(Q):
+            idx = np.argsort([self.euclidean_distance(
+                query, x) for x in X_train])[:self.K]
+            knn_labels = y_train[idx]
+            y_pred[i] = np.mean(knn_labels)
+        return y_pred
+
+if __name__ == "__main__":
+
+    plt.close('all')
+
+    #iris dataset
+    iris = datasets.load_iris()
+    X = iris.data[:, :2]
+    y = iris.target
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y,
+        test_size=0.2, random_state=42)
+
+    K = 4
+    knn = KNN(K)
+    y_pred = knn.knn_search(X_train, y_train, X_test)
+
+    plt.figure(1)
+    plt.scatter(X_train[:,0], X_train[:,1], s = 100, marker = 'x', color =
+        'r', label = 'data')
+    plt.scatter(X_test[:,0], X_test[:,1], s = 100, marker = 'o', color =
+        'b', label = 'query')
+    plt.title('K Nearest Neighbors (K=%d)'% K)
+    plt.legend()
+    plt.xlabel('X1')
+    plt.ylabel('X2')
+    plt.grid(True)
+    plt.show()
+```
+
+- 获取查询点的 K 个最近邻
+
+- 计算 KNN 训练标签的平均值
+
+- 提取 KNN 训练标签
