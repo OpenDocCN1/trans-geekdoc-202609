@@ -1,0 +1,2486 @@
+- raw: "\n\nIntroduction to machine learning \n\nAn introduction to Supervised and\
+    \ Unsupervised Learning\n\nJason Kamsi \n\nCopyright © Anderson Sage\n\nAll rights\
+    \ reserved. Except for the quotation of short passages for the purposes of criticism\
+    \ and review, no part of this publication may be reproduced, stored in a retrieval\
+    \ system, or transmitted, in any form or by any means, electronic, mechanical,\
+    \ photocopying, recording, or otherwise, without the prior written permission\
+    \ of the publisher or a license from the Copyright Licensing Agency Limited.\n\
+    \nPrinted in the United States of America\n\nKJ Publishing\n\nUSA\n\nCONTENTS\n\
+    \n[CHAPTER ONE](#part0005.xhtml#_Toc116583881)\n\n[What is Machine Learning](#part0005.xhtml#_Toc116583882)\n\
+    \n[Components of Machine Learning](#part0006.xhtml#_Toc116583883)\n\n[CHAPTER\
+    \ TWO](#part0008.xhtml#_Toc116583884)\n\n[Introduction to the Five Machine Learning\
+    \ Steps](#part0008.xhtml#_Toc116583885)\n\n[Step One: Define the Problem.](#part0008.xhtml#_Toc116583886)\n\
+    \n[Step Two: Build a Dataset](#part0008.xhtml#_Toc116583887)\n\n[Step Three: Model\
+    \ Training](#part0008.xhtml#_Toc116583888)\n\n[Step Four: Model Evaluation](#part0008.xhtml#_Toc116583889)\n\
+    \n[Step Five: Model Inference](#part0008.xhtml#_Toc116583890)\n\n[CHAPTER THREE](#part0009.xhtml#_Toc116583891)\n\
+    \n[Introduction to Examples](#part0009.xhtml#_Toc116583892)\n\n[Example One: House\
+    \ Price Prediction](#part0010.xhtml#_Toc116583893)\n\n[Example Two: Book Genre\
+    \ Exploration](#part0011.xhtml#_Toc116583894)\n\n[Example Three: Spill Detection\
+    \ from Video](#part0012.xhtml#_Toc116583895)\n\n[Lesson Review](#part0012.xhtml#_Toc116583896)\n\
+    \nIntroduction\n\nWelcome to introduction to machining learning.\n\nMachine learning\
+    \ is creating rapid and exciting changes across all levels of society. \n\n* \
+    \  It is the engine behind the recent advancements in industries such as autonomous\
+    \ vehicles.\n\n*   It allows for more accurate and rapid translation of the text\
+    \ into hundreds of languages.\n\n*   It powers the AI assistants you might find\
+    \ in your home.\n\n*   It can help improve worker safety.\n\n*   It can speed\
+    \ up drug design\n\nMachine learning is a complex subject area. Our goal in this\
+    \ lesson is to introduce you to some of the most common terms and ideas used in\
+    \ machine learning. I will then walk you through the different steps involved\
+    \ in machine learning and finish with a series of examples that use machine learning\
+    \ to solve real-world situations.\n\nOutline\n\nThis lesson is divided into the\
+    \ following sections:\n\n*   First, we'll discuss what machine learning is, common\
+    \ terminology, and common components involved in creating a machine learning project.\n\
+    \n*   Next, we'll step into the shoes of a machine learning practitioner. Machine\
+    \ learning involves using trained models to generate predictions and detect patterns\
+    \ from data. To understand the process, we'll break down the different steps involved\
+    \ and examine a common process that applies to the majority of machine learning\
+    \ projects.\n\n*   Finally, we'll take you through three examples using the steps\
+    \ we described to solve real-life scenarios that might be faced by machine learning\
+    \ practitioners.\n\nSection Objective\n\nBy the end of this section, you can do\
+    \ the following:\n\n*   Differentiate between supervised and unsupervised learning\n\
+    \n*   Identify problems that can be solved with machine learning concepts\n\n\
+    *   Describe commonly used algorithm including login regression, linear regression,\
+    \ and k-means\n\n*   Describe how model training and testing works\n\n*   Evaluate\
+    \ the performance of a machine learning model using metrics.\n\n# CHAPTER ONE\n\
+    \n## What is Machine Learning\n\nMachine learning (ML) is a modern software development\
+    \ technique and a type of artificial intelligence (AI) that enables computers\
+    \ to solve problems by using examples of real-world data. It allows computers\
+    \ to automatically learn and improve from experience without being explicitly\
+    \ programmed to do so.\n\nSummary\n\nMachine learning is part of the broader field\
+    \ of artificial intelligence. This field is concerned with the capability of machines\
+    \ to perform activities using human-like intelligence. Within machine learning\
+    \ there are several different kinds of tasks or techniques:\n\n*   Supervised\
+    \ learning, is a type of machine learning technique in which every training sample\
+    \ from the dataset has a corresponding label or output value associated with it.\
+    \ As a result, the algorithm learns to predict labels or output values. You can\
+    \ use supervised learning to do things like, predict the selling price of a house,\
+    \ or classify objects in an image. We will learn more about supervised learning\
+    \ in this lesson.  \n\n    ![](Images/image00071.jpeg) \n\n*   In unsupervised\
+    \ learning, there are no labels for the training data. The algorithm tried to\
+    \ learn underlying patterns or distributions that govern the data. We will explore\
+    \ this in-depth in this lesson.  \n\n    ![](Images/image00072.jpeg) \n\n*   In\
+    \ reinforcement learning, the algorithm figures out which actions to take in a\
+    \ situation to maximize a reward (in the form of a number) on the way to reaching\
+    \ a specific goal. This is a completely different approach than supervised and\
+    \ unsupervised learning. We will dive deep into this in the next lesson.  \n\n\
+    \    ![](Images/image00073.jpeg) \n\nDifferent between machine learning and traditional\
+    \ programming-based approaches\n\n![](Images/image00074.jpeg)\n\nIn traditional\
+    \ problem-solving with software, a person analyzes a problem and engineers a solution\
+    \ in code to solve that problem. For many real-world problems, this process can\
+    \ be laborious (or even impossible) because a correct solution would need to consider\
+    \ a vast number of edge cases.\n\nImagine, for example, the challenging task of\
+    \ writing a program that can detect if a cat is present in an image. Solving this\
+    \ in the traditional way would require careful attention to details like varying\
+    \ lighting conditions, different types of cats, and various poses a cat might\
+    \ be in.\n\nIn machine learning, the problem solver abstracts away part of their\
+    \ solution as a flexible component called a model, and uses a special program\
+    \ called a model training algorithm to adjust that model to real-world data. The\
+    \ result is a trained model which can be used to predict outcomes that are not\
+    \ part of the data set used to train it.\n\nIn a way, machine learning automates\
+    \ some of the statistical reasoning and pattern-matching the problem solver would\
+    \ traditionally do.\n\nThe overall goal is to use a model created by a model training\
+    \ algorithm to generate predictions or find patterns in data that can be used\
+    \ to solve a problem.\n\nUnderstanding Terminology\n\n![](Images/image00075.jpeg)\n\
+    \nMachine learning is a new field created at the intersection of statistics, applied\
+    \ math, and computer science. Because of the rapid and recent growth of machine\
+    \ learning, each of these fields might use slightly different formal definitions\
+    \ of the same terms.\n\nTerminology\n\nMachine learning, or ML, is a modern software\
+    \ development technique that enables computers to solve problems by using examples\
+    \ of real-world data.\n\nIn supervised learning, every training sample from the\
+    \ dataset has a corresponding label or output value associated with it. As a result,\
+    \ the algorithm learns to predict labels or output values.\n\nIn reinforcement\
+    \ learning, the algorithm figures out which actions to take in a situation to\
+    \ maximize a reward (in the form of a number) on the way to reaching a specific\
+    \ goal.\n\nIn unsupervised learning, there are no labels for the training data.\
+    \ A machine learning algorithm tries to learn the underlying patterns or distributions\
+    \ that govern the data.\n\n## Components of Machine Learning\n\n### Models\n\n\
+    In machine learning, all tasks are resolved with three primary components, namely:\n\
+    \n*   A machine learning model\n\n*   A model training algorithm\n\n*   A model\
+    \ inference algorithm\n\n### Clay Analogy for Machine Learning\n\nYou can understand\
+    \ the relationships between these components by imagining the stages of crafting\
+    \ a teapot from a lump of clay."
+  fmt: "\n# Introduction to Machine Learning\n\n## An Introduction to Supervised and\
+    \ Unsupervised Learning\n\n**Jason Kamsi**\n\nCopyright © Anderson Sage\n\nAll\
+    \ rights reserved. Except for the quotation of short passages for the purposes\
+    \ of criticism and review, no part of this publication may be reproduced, stored\
+    \ in a retrieval system, or transmitted, in any form or by any means, electronic,\
+    \ mechanical, photocopying, recording, or otherwise, without the prior written\
+    \ permission of the publisher or a license from the Copyright Licensing Agency\
+    \ Limited.\n\nPrinted in the United States of America\n\nKJ Publishing\n\nUSA\n\
+    \n## Contents\n\n*   [Chapter One](#chapter-one)\n    *   [What is Machine Learning](#what-is-machine-learning)\n\
+    \    *   [Components of Machine Learning](#components-of-machine-learning)\n*\
+    \   [Chapter Two](#chapter-two)\n    *   [Introduction to the Five Machine Learning\
+    \ Steps](#introduction-to-the-five-machine-learning-steps)\n    *   [Step One:\
+    \ Define the Problem](#step-one-define-the-problem)\n    *   [Step Two: Build\
+    \ a Dataset](#step-two-build-a-dataset)\n    *   [Step Three: Model Training](#step-three-model-training)\n\
+    \    *   [Step Four: Model Evaluation](#step-four-model-evaluation)\n    *   [Step\
+    \ Five: Model Inference](#step-five-model-inference)\n*   [Chapter Three](#chapter-three)\n\
+    \    *   [Introduction to Examples](#introduction-to-examples)\n    *   [Example\
+    \ One: House Price Prediction](#example-one-house-price-prediction)\n    *   [Example\
+    \ Two: Book Genre Exploration](#example-two-book-genre-exploration)\n    *   [Example\
+    \ Three: Spill Detection from Video](#example-three-spill-detection-from-video)\n\
+    \    *   [Lesson Review](#lesson-review)\n\n## Introduction\n\nWelcome to Introduction\
+    \ to Machine Learning.\n\nMachine learning is creating rapid and exciting changes\
+    \ across all levels of society.\n\n*   It is the engine behind the recent advancements\
+    \ in industries such as autonomous vehicles.\n*   It allows for more accurate\
+    \ and rapid translation of text into hundreds of languages.\n*   It powers the\
+    \ AI assistants you might find in your home.\n*   It can help improve worker safety.\n\
+    *   It can speed up drug design.\n\nMachine learning is a complex subject area.\
+    \ Our goal in this lesson is to introduce you to some of the most common terms\
+    \ and ideas used in machine learning. I will then walk you through the different\
+    \ steps involved in machine learning and finish with a series of examples that\
+    \ use machine learning to solve real-world situations.\n\n## Outline\n\nThis lesson\
+    \ is divided into the following sections:\n\n*   First, we'll discuss what machine\
+    \ learning is, common terminology, and common components involved in creating\
+    \ a machine learning project.\n*   Next, we'll step into the shoes of a machine\
+    \ learning practitioner. Machine learning involves using trained models to generate\
+    \ predictions and detect patterns from data. To understand the process, we'll\
+    \ break down the different steps involved and examine a common process that applies\
+    \ to the majority of machine learning projects.\n*   Finally, we'll take you through\
+    \ three examples using the steps we described to solve real-life scenarios that\
+    \ might be faced by machine learning practitioners.\n\n## Section Objective\n\n\
+    By the end of this section, you can do the following:\n\n*   Differentiate between\
+    \ supervised and unsupervised learning.\n*   Identify problems that can be solved\
+    \ with machine learning concepts.\n*   Describe commonly used algorithms including\
+    \ logistic regression, linear regression, and k-means.\n*   Describe how model\
+    \ training and testing works.\n*   Evaluate the performance of a machine learning\
+    \ model using metrics.\n\n# Chapter One\n\n## What is Machine Learning\n\nMachine\
+    \ learning (ML) is a modern software development technique and a type of artificial\
+    \ intelligence (AI) that enables computers to solve problems by using examples\
+    \ of real-world data. It allows computers to automatically learn and improve from\
+    \ experience without being explicitly programmed to do so.\n\n### Summary\n\n\
+    Machine learning is part of the broader field of artificial intelligence. This\
+    \ field is concerned with the capability of machines to perform activities using\
+    \ human-like intelligence. Within machine learning there are several different\
+    \ kinds of tasks or techniques:\n\n*   **Supervised learning** is a type of machine\
+    \ learning technique in which every training sample from the dataset has a corresponding\
+    \ label or output value associated with it. As a result, the algorithm learns\
+    \ to predict labels or output values. You can use supervised learning to do things\
+    \ like predict the selling price of a house, or classify objects in an image.\
+    \ We will learn more about supervised learning in this lesson.\n\n    ![](Images/image00071.jpeg)\n\
+    \n*   **Unsupervised learning** has no labels for the training data. The algorithm\
+    \ tries to learn underlying patterns or distributions that govern the data. We\
+    \ will explore this in-depth in this lesson.\n\n    ![](Images/image00072.jpeg)\n\
+    \n*   **Reinforcement learning** enables the algorithm to figure out which actions\
+    \ to take in a situation to maximize a reward (in the form of a number) on the\
+    \ way to reaching a specific goal. This is a completely different approach than\
+    \ supervised and unsupervised learning. We will dive deep into this in the next\
+    \ lesson.\n\n    ![](Images/image00073.jpeg)\n\n### Difference Between Machine\
+    \ Learning and Traditional Programming-Based Approaches\n\n![](Images/image00074.jpeg)\n\
+    \nIn traditional problem-solving with software, a person analyzes a problem and\
+    \ engineers a solution in code to solve that problem. For many real-world problems,\
+    \ this process can be laborious (or even impossible) because a correct solution\
+    \ would need to consider a vast number of edge cases.\n\nImagine, for example,\
+    \ the challenging task of writing a program that can detect if a cat is present\
+    \ in an image. Solving this in the traditional way would require careful attention\
+    \ to details like varying lighting conditions, different types of cats, and various\
+    \ poses a cat might be in.\n\nIn machine learning, the problem solver abstracts\
+    \ away part of their solution as a flexible component called a **model**, and\
+    \ uses a special program called a **model training algorithm** to adjust that\
+    \ model to real-world data. The result is a **trained model** which can be used\
+    \ to predict outcomes that are not part of the data set used to train it.\n\n\
+    In a way, machine learning automates some of the statistical reasoning and pattern-matching\
+    \ the problem solver would traditionally do.\n\nThe overall goal is to use a model\
+    \ created by a model training algorithm to generate predictions or find patterns\
+    \ in data that can be used to solve a problem.\n\n### Understanding Terminology\n\
+    \n![](Images/image00075.jpeg)\n\nMachine learning is a new field created at the\
+    \ intersection of statistics, applied math, and computer science. Because of the\
+    \ rapid and recent growth of machine learning, each of these fields might use\
+    \ slightly different formal definitions of the same terms.\n\n#### Terminology\n\
+    \n*   **Machine learning (ML)** is a modern software development technique that\
+    \ enables computers to solve problems by using examples of real-world data.\n\
+    *   In **supervised learning**, every training sample from the dataset has a corresponding\
+    \ label or output value associated with it. As a result, the algorithm learns\
+    \ to predict labels or output values.\n*   In **reinforcement learning**, the\
+    \ algorithm figures out which actions to take in a situation to maximize a reward\
+    \ (in the form of a number) on the way to reaching a specific goal.\n*   In **unsupervised\
+    \ learning**, there are no labels for the training data. A machine learning algorithm\
+    \ tries to learn the underlying patterns or distributions that govern the data.\n\
+    \n## Components of Machine Learning\n\n### Models\n\nIn machine learning, all\
+    \ tasks are resolved with three primary components:\n\n*   A **machine learning\
+    \ model**\n*   A **model training algorithm**\n*   A **model inference algorithm**\n\
+    \n### Clay Analogy for Machine Learning\n\nYou can understand the relationships\
+    \ between these components by imagining the stages of crafting a teapot from a\
+    \ lump of clay.\n"
+  trans: "\n\n# 机器学习简介\n\n## 监督学习与无监督学习简介\n\n**Jason Kamsi**\n\n版权所有 © Anderson Sage\n\
+    \n保留所有权利。除为批评和评论目的引用短段落外，未经出版商事先书面许可或版权许可机构有限公司的许可，不得以任何形式或任何方式（电子、机械、复印、录制或其他方式）复制、存储于检索系统或传播本出版物的任何部分。\n\
+    \n美国印刷\n\nKJ Publishing\n\n美国\n\n## 目录\n\n*   第一章\n    *   什么是机器学习\n    *   机器学习的组成部分\n\
+    *   第二章\n    *   机器学习五步法简介\n    *   第一步：定义问题\n    *   第二步：构建数据集\n    *   第三步：模型训练\n\
+    \    *   第四步：模型评估\n    *   第五步：模型推理\n*   第三章\n    *   示例简介\n    *   示例一：房价预测\n\
+    \    *   示例二：图书流派探索\n    *   示例三：视频泼洒检测\n    *   课程回顾\n\n## 简介\n\n欢迎来到机器学习简介。\n\
+    \n机器学习正在社会各个层面引发快速而激动人心的变革。\n\n*   它是自动驾驶汽车等行业近期进步背后的引擎。\n*   它使文本能够更准确、快速地翻译成数百种语言。\n\
+    *   它驱动着您可能在家中发现的 AI 助手。\n*   它有助于提高工人安全。\n*   它可以加速药物设计。\n\n机器学习是一个复杂的学科领域。本课程的目标是向您介绍机器学习中一些最常用的术语和概念。然后我将带您了解机器学习中涉及的不同步骤，最后通过一系列示例，展示如何利用机器学习解决现实世界的问题。\n\
+    \n## 大纲\n\n本课程分为以下几个部分：\n\n*   首先，我们将讨论什么是机器学习、常用术语以及创建机器学习项目所涉及的常见组件。\n*   接着，我们将置身于机器学习从业者的视角。机器学习涉及使用训练好的模型从数据中生成预测和检测模式。为了理解这一过程，我们将分解所涉及的不同步骤，并研究一个适用于大多数机器学习项目的通用流程。\n\
+    *   最后，我们将通过三个示例，带您了解如何运用我们所描述的步骤，解决机器学习从业者可能面临的真实场景。\n\n## 章节目标\n\n完成本章节后，您将能够：\n\
+    \n*   区分监督学习和无监督学习。\n*   识别可用机器学习概念解决的问题。\n*   描述常用算法，包括逻辑回归、线性回归和 K-Means。\n\
+    *   描述模型训练和测试的工作原理。\n*   使用指标评估机器学习模型的性能。\n\n# 第一章\n\n## 什么是机器学习\n\n机器学习（ML）是一种现代软件开发技术，也是一种人工智能（AI）类型，它使计算机能够通过使用真实世界数据的示例来解决问题。它让计算机能够自动从经验中学习和改进，而无需进行显式编程。\n\
+    \n### 总结\n\n机器学习是更广泛的人工智能领域的一部分。该领域关注机器利用类人智能执行活动的能力。在机器学习内部，存在几种不同类型的任务或技术：\n\
+    \n*   **监督学习**是一种机器学习技术，其中数据集中的每个训练样本都有一个与之对应的标签或输出值。因此，算法学会预测标签或输出值。您可以使用监督学习来做诸如预测房屋售价或对图像中的物体进行分类等事情。我们将在本课程中进一步了解监督学习。\n\
+    \n    ![](img/image00071.jpeg)\n\n*   **无监督学习**的训练数据没有标签。算法试图学习支配数据的潜在模式或分布。我们将在本课程中深入探讨这一点。\n\
+    \n    ![](img/image00072.jpeg)\n\n*   **强化学习**使算法能够弄清在特定情境下应采取哪些行动，以便在达到特定目标的过程中最大化奖励（以数字形式）。这是一种与监督学习和无监督学习截然不同的方法。我们将在下一课深入探讨这一点。\n\
+    \n    ![](img/image00073.jpeg)\n\n### 机器学习与传统基于编程方法的区别\n\n![](img/image00074.jpeg)\n\
+    \n在使用软件进行传统问题求解时，一个人会分析问题并设计代码解决方案来解决该问题。对于许多现实世界的问题，这个过程可能非常繁琐（甚至不可能），因为正确的解决方案需要考虑大量的边缘情况。\n\
+    \n例如，想象一下编写一个能检测图像中是否有猫的程序这一极具挑战性的任务。用传统方法解决这个问题，需要仔细关注光照条件变化、猫的种类以及猫可能处于的各种姿势等细节。\n\
+    \n在机器学习中，问题求解者将其解决方案的一部分抽象为一个称为**模型**的灵活组件，并使用一种称为**模型训练算法**的特殊程序，根据真实世界数据调整该模型。结果是一个**训练好的模型**，可用于预测训练数据集中不包含的结果。\n\
+    \n从某种意义上说，机器学习自动化了问题求解者传统上会进行的部分统计推理和模式匹配。\n\n总体目标是使用由模型训练算法创建的模型，生成预测或发现数据中的模式，从而用于解决问题。\n\
+    \n### 理解术语\n\n![](img/image00075.jpeg)\n\n机器学习是一个在统计学、应用数学和计算机科学交叉处诞生的新领域。由于机器学习的快速和近期发展，这些领域中的每一个可能对相同术语使用略有不同的正式定义。\n\
+    \n#### 术语\n\n*   **机器学习（ML）**是一种现代软件开发技术，它使计算机能够通过使用真实世界数据的示例来解决问题。\n*   在**监督学习**中，数据集中的每个训练样本都有一个与之对应的标签或输出值。因此，算法学会预测标签或输出值。\n\
+    *   在**强化学习**中，算法弄清在特定情境下应采取哪些行动，以便在达到特定目标的过程中最大化奖励（以数字形式）。\n*   在**无监督学习**中，训练数据没有标签。机器学习算法试图学习支配数据的潜在模式或分布。\n\
+    \n## 机器学习的组成部分\n\n### 模型\n\n在机器学习中，所有任务都通过三个主要组件来解决：\n\n*   一个**机器学习模型**\n*  \
+    \ 一个**模型训练算法**\n*   一个**模型推理算法**\n\n### 机器学习的陶土类比\n\n您可以通过想象从一团陶土制作茶壶的各个阶段，来理解这些组件之间的关系。\n\
+    \n"
+  toc: []
+- raw: "*   First, you start with a block of raw clay. At this stage, the clay can\
+    \ be molded into many different forms and be used to serve many different purposes.\
+    \ You decide to use this lump of clay to make a teapot.\n\n*   So how do you create\
+    \ this teapot? You inspect and analyze the raw clay and decide how to change it\
+    \ to make it look more like the teapot you have in mind.\n\n*   Next, you mold\
+    \ the clay to make it look more like the teapot that is your goal.\n\nCongratulations!\
+    \ You've completed your teapot. You've inspected the materials, evaluated how\
+    \ to change them to reach your goal, and made the changes, and the teapot is now\
+    \ ready for your enjoyment.\n\n### What are machine learning models?\n\nA machine\
+    \ learning model, like a piece of clay, can be molded into many different forms\
+    \ and serve many different purposes. A more technical definition would be that\
+    \ a machine learning model is a block of code or framework that can be modified\
+    \ to solve different but related problems based on the data provided.\n\nImportant\n\
+    \nA model is an extremely generic program (or block of code), made specific by\
+    \ the data used to train it. It is used to solve different problems.\n\nExample\
+    \ 1\n\nImagine you own a snow cone cart, and you have some data about the average\
+    \ number of snow cones sold per day based on the high temperature. You want to\
+    \ better understand this relationship to make sure you have enough inventory on\
+    \ hand for those high sales days.\n\n![](Images/image00076.jpeg)\n\nIn the graph\
+    \ above, you can see one example of a model, a linear regression model (indicated\
+    \ by the solid line). You can see that, based on the data provided, the model\
+    \ predicts that as the high temperate for the day increases so do the average\
+    \ number of snow cones sold. Sweet!\n\nExample 2\n\nLet's look at a different\
+    \ example that uses the same linear regression model, but with different data\
+    \ and to answer completely different questions.\n\nImagine that you work in higher\
+    \ education and you want to better understand the relationship between the cost\
+    \ of enrollment and the number of students attending college. In this example,\
+    \ our model predicts that as the cost of tuition increases the number of people\
+    \ attending college is likely to decrease.\n\n![](Images/image00077.jpeg)\n\n\
+    Using the same linear regression model (indicated by the solid line), you can\
+    \ see that the number of people attending college does go down as the cost increases.\n\
+    \nBoth examples showcase that a model is a generic program made specific by the\
+    \ data used to train it.\n\n### Model Training\n\nHow are model training algorithms\
+    \ used to train a model?\n\nIn the preceding section, we talked about two key\
+    \ pieces of information: a model and data. In this section, we show you how those\
+    \ two pieces of information are used to create a trained model. This process is\
+    \ called model training.\n\nModel training algorithms work through an interactive\
+    \ process\n\nLet's revisit our clay teapot analogy. We've gotten our piece of\
+    \ clay, and now we want to make a teapot. Let's look at the algorithm for molding\
+    \ clay and how it resembles a machine learning algorithm:\n\n*   Think about the\
+    \ changes that need to be made. The first thing you would do is inspect the raw\
+    \ clay and think about what changes can be made to make it look more like a teapot.\
+    \ Similarly, a model training algorithm uses the model to process data and then\
+    \ compares the results against some end goal, such as our clay teapot.\n\n*  \
+    \ Make those changes. Now, you mold the clay to make it look more like a teapot.\
+    \ Similarly, a model training algorithm gently nudges specific parts of the model\
+    \ in a direction that brings the model closer to achieving the goal.\n\n*   Repeat.\
+    \ By iterating over these steps over and over, you get closer and closer to what\
+    \ you want until you determine that you’re close enough that you can stop.\n\n\
+    ![](Images/image00078.jpeg)\n\nModel Inference: Using Your Trained Model\n\nNow\
+    \ you have our completed teapot. You inspected the clay, evaluated the changes\
+    \ that needed to be made, and made them, and now the teapot is ready for you to\
+    \ use. Enjoy your tea!\n\nSo what does this mean from a machine learning perspective?\
+    \ We are ready to use the model inference algorithm to generate predictions using\
+    \ the trained model. This process is often referred to as model inference.\n\n\
+    ![](Images/image00079.jpeg)\n\nQuiz\n\nWhich of the following are the primary\
+    \ components used in machine learning? (Select Multiple Boxes)\n\n1.  A model\
+    \ integrity algorithm\n\n2.  A machine learning model\n\n3.  A model training\
+    \ algorithm\n\n4.  A preparation algorithm\n\n5.  A model inference algorithm\n\
+    \nThink back to the clay teapot analogy. Is it true or false that you always need\
+    \ to have an idea of what your’re making when you are handling your raw block\
+    \ of clay?\n\n1.  True\n\n2.  False\n\nAns: B\n\nTerminology\n\nA model is an\
+    \ extremely generic program, made specific by the data used to train it.\n\nModel\
+    \ training algorithms work through an interactive process where the current model\
+    \ iteration is analyzed to determine what changes can be made to get closer to\
+    \ the goal. Those changes are made and the iteration continues until the model\
+    \ is evaluated to meet the goals.\n\nModel inference is when the trained model\
+    \ is used to generate predictions.\n\n# CHAPTER TWO\n\n## Introduction to the\
+    \ Five Machine Learning Steps\n\nMajor Steps in the Machine Learning Process\n\
+    \nIn the preceding diagram, you can see an outline of the major steps of the machine\
+    \ learning process. Regardless of the specific model or training algorithm used,\
+    \ machine learning practitioners practice a common workflow to accomplish machine\
+    \ learning tasks.\n\nThese steps are iterative. In practice, that means that at\
+    \ each step along the process, you review how the process is going. Are things\
+    \ operating as you expected? If not, go back and revisit your current step or\
+    \ previous steps to try and identify the breakdown.\n\n![](Images/image00080.jpeg)\n\
+    \nThe rest of this book is designed around these very important steps. Check through\
+    \ them again here and get ready to dive deep into each of them.\n\n*   Step One:\
+    \ Define the problem\n\n*   Step Two: Build the dataset\n\n*   Step Three: Train\
+    \ the model\n\n*   Step Four: Evaluate the model\n\n*   Step Five: Inference (Use\
+    \ the model)\n\n## Step One: Define the Problem.\n\nHow do You Start a Machine\
+    \ Learning Task?\n\n*   Define a very specific task.\n\n*   Think back to the\
+    \ snow cone sales example. Now imagine that you own a frozen treats store and\
+    \ you sell snow cones along with many other products. You wonder, \"‘How do I\
+    \ increase sales?\" It's a valid question, but it's the opposite of a very specific\
+    \ task. The following examples demonstrate how a machine learning practitioner\
+    \ might attempt to answer that question. \n\n    *   “Does adding a $1.00 charge\
+    \ for sprinkles on a hot fudge sundae increase the sales of hot fudge sundaes?”\n\
+    \n    *   “Does adding a $0.50 charge for organic flavors in your snow cone increase\
+    \ the sales of snow cones?”\n\n*   Identify the machine learning task we might\
+    \ use to solve this problem.\n\n*   This helps you better understand the data\
+    \ you need for a project.\n\nWhat is a Machine Learning Task?\n\nAll model training\
+    \ algorithms, and the models themselves, take data as their input. Their outputs\
+    \ can be very different and are classified into a few different groups based on\
+    \ the task they are designed to solve. Often, we use the kind of data required\
+    \ to train a model as part of defining a machine-learning task.\n\nIn this lesson,\
+    \ we will focus on two common machine-learning tasks:\n\n*   Supervised learning\n\
+    \n*   Unsupervised learning\n\nSupervised and Unsupervised Learning\n\nThe presence\
+    \ or absence of labelling in your data is often used to identify a machine learning\
+    \ task.\n\n![](Images/image00081.jpeg)\n\nSupervised tasks\n\nA task is supervised\
+    \ if you are using labeled data. We use the term labeled to refer to data that\
+    \ already contains the solutions, called labels.\n\nFor example: Predicting the\
+    \ number of snow cones sold based on the temperatures is an example of supervised\
+    \ learning.\n\n![](Images/image00082.jpeg)"
+  fmt: "\n### What are machine learning models?\n\nA machine learning model, like\
+    \ a piece of clay, can be molded into many different forms and serve many different\
+    \ purposes. A more technical definition would be that a machine learning model\
+    \ is a block of code or framework that can be modified to solve different but\
+    \ related problems based on the data provided.\n\n> **Important**\n>\n> A model\
+    \ is an extremely generic program (or block of code), made specific by the data\
+    \ used to train it. It is used to solve different problems.\n\n#### Example 1\n\
+    \nImagine you own a snow cone cart, and you have some data about the average number\
+    \ of snow cones sold per day based on the high temperature. You want to better\
+    \ understand this relationship to make sure you have enough inventory on hand\
+    \ for those high sales days.\n\n![](Images/image00076.jpeg)\n\nIn the graph above,\
+    \ you can see one example of a model, a linear regression model (indicated by\
+    \ the solid line). You can see that, based on the data provided, the model predicts\
+    \ that as the high temperate for the day increases so do the average number of\
+    \ snow cones sold. Sweet!\n\n#### Example 2\n\nLet's look at a different example\
+    \ that uses the same linear regression model, but with different data and to answer\
+    \ completely different questions.\n\nImagine that you work in higher education\
+    \ and you want to better understand the relationship between the cost of enrollment\
+    \ and the number of students attending college. In this example, our model predicts\
+    \ that as the cost of tuition increases the number of people attending college\
+    \ is likely to decrease.\n\n![](Images/image00077.jpeg)\n\nUsing the same linear\
+    \ regression model (indicated by the solid line), you can see that the number\
+    \ of people attending college does go down as the cost increases.\n\nBoth examples\
+    \ showcase that a model is a generic program made specific by the data used to\
+    \ train it.\n\n### Model Training\n\nHow are model training algorithms used to\
+    \ train a model?\n\nIn the preceding section, we talked about two key pieces of\
+    \ information: a model and data. In this section, we show you how those two pieces\
+    \ of information are used to create a trained model. This process is called model\
+    \ training.\n\n#### Model training algorithms work through an interactive process\n\
+    \nLet's revisit our clay teapot analogy. We've gotten our piece of clay, and now\
+    \ we want to make a teapot. Let's look at the algorithm for molding clay and how\
+    \ it resembles a machine learning algorithm:\n\n*   **Think about the changes\
+    \ that need to be made.** The first thing you would do is inspect the raw clay\
+    \ and think about what changes can be made to make it look more like a teapot.\
+    \ Similarly, a model training algorithm uses the model to process data and then\
+    \ compares the results against some end goal, such as our clay teapot.\n*   **Make\
+    \ those changes.** Now, you mold the clay to make it look more like a teapot.\
+    \ Similarly, a model training algorithm gently nudges specific parts of the model\
+    \ in a direction that brings the model closer to achieving the goal.\n*   **Repeat.**\
+    \ By iterating over these steps over and over, you get closer and closer to what\
+    \ you want until you determine that you’re close enough that you can stop.\n\n\
+    ![](Images/image00078.jpeg)\n\n### Model Inference: Using Your Trained Model\n\
+    \nNow you have our completed teapot. You inspected the clay, evaluated the changes\
+    \ that needed to be made, and made them, and now the teapot is ready for you to\
+    \ use. Enjoy your tea!\n\nSo what does this mean from a machine learning perspective?\
+    \ We are ready to use the model inference algorithm to generate predictions using\
+    \ the trained model. This process is often referred to as model inference.\n\n\
+    ![](Images/image00079.jpeg)\n\n### Quiz\n\n**Which of the following are the primary\
+    \ components used in machine learning? (Select Multiple Boxes)**\n\n1.  A model\
+    \ integrity algorithm\n2.  A machine learning model\n3.  A model training algorithm\n\
+    4.  A preparation algorithm\n5.  A model inference algorithm\n\n**Think back to\
+    \ the clay teapot analogy. Is it true or false that you always need to have an\
+    \ idea of what your’re making when you are handling your raw block of clay?**\n\
+    \n1.  True\n2.  False\n\n**Ans: B**\n\n### Terminology\n\n*   **Model:** An extremely\
+    \ generic program, made specific by the data used to train it.\n*   **Model training\
+    \ algorithms:** Work through an interactive process where the current model iteration\
+    \ is analyzed to determine what changes can be made to get closer to the goal.\
+    \ Those changes are made and the iteration continues until the model is evaluated\
+    \ to meet the goals.\n*   **Model inference:** When the trained model is used\
+    \ to generate predictions.\n\n# Chapter Two\n\n## Introduction to the Five Machine\
+    \ Learning Steps\n\n### Major Steps in the Machine Learning Process\n\nIn the\
+    \ preceding diagram, you can see an outline of the major steps of the machine\
+    \ learning process. Regardless of the specific model or training algorithm used,\
+    \ machine learning practitioners practice a common workflow to accomplish machine\
+    \ learning tasks.\n\nThese steps are iterative. In practice, that means that at\
+    \ each step along the process, you review how the process is going. Are things\
+    \ operating as you expected? If not, go back and revisit your current step or\
+    \ previous steps to try and identify the breakdown.\n\n![](Images/image00080.jpeg)\n\
+    \nThe rest of this book is designed around these very important steps. Check through\
+    \ them again here and get ready to dive deep into each of them.\n\n*   **Step\
+    \ One:** Define the problem\n*   **Step Two:** Build the dataset\n*   **Step Three:**\
+    \ Train the model\n*   **Step Four:** Evaluate the model\n*   **Step Five:** Inference\
+    \ (Use the model)\n\n## Step One: Define the Problem\n\n### How do You Start a\
+    \ Machine Learning Task?\n\n*   Define a very specific task.\n*   Think back to\
+    \ the snow cone sales example. Now imagine that you own a frozen treats store\
+    \ and you sell snow cones along with many other products. You wonder, \"How do\
+    \ I increase sales?\" It's a valid question, but it's the opposite of a very specific\
+    \ task. The following examples demonstrate how a machine learning practitioner\
+    \ might attempt to answer that question.\n    *   “Does adding a $1.00 charge\
+    \ for sprinkles on a hot fudge sundae increase the sales of hot fudge sundaes?”\n\
+    \    *   “Does adding a $0.50 charge for organic flavors in your snow cone increase\
+    \ the sales of snow cones?”\n*   Identify the machine learning task we might use\
+    \ to solve this problem.\n*   This helps you better understand the data you need\
+    \ for a project.\n\n### What is a Machine Learning Task?\n\nAll model training\
+    \ algorithms, and the models themselves, take data as their input. Their outputs\
+    \ can be very different and are classified into a few different groups based on\
+    \ the task they are designed to solve. Often, we use the kind of data required\
+    \ to train a model as part of defining a machine-learning task.\n\nIn this lesson,\
+    \ we will focus on two common machine-learning tasks:\n\n*   Supervised learning\n\
+    *   Unsupervised learning\n\n### Supervised and Unsupervised Learning\n\nThe presence\
+    \ or absence of labelling in your data is often used to identify a machine learning\
+    \ task.\n\n![](Images/image00081.jpeg)\n\n#### Supervised tasks\n\nA task is supervised\
+    \ if you are using labeled data. We use the term labeled to refer to data that\
+    \ already contains the solutions, called labels.\n\nFor example: Predicting the\
+    \ number of snow cones sold based on the temperatures is an example of supervised\
+    \ learning.\n\n![](Images/image00082.jpeg)\n"
+  trans: "\n\n### 什么是机器学习模型？\n\n机器学习模型就像一块黏土，可以被塑造成许多不同的形状，服务于许多不同的目的。更专业的定义是：机器学习模型是一段代码或框架，可以根据提供的数据进行修改，以解决不同但相关的问题。\n\
+    \n> **重要**\n>\n> 模型是一个极其通用的程序（或代码块），通过用于训练它的数据变得具体化。它被用来解决不同的问题。\n\n#### 示例 1\n\
+    \n假设你经营一辆刨冰推车，并且拥有基于最高气温的日均刨冰销量数据。你想更好地理解这种关系，以确保在销售高峰日有足够的库存。\n\n![](img/image00076.jpeg)\n\
+    \n在上图中，你可以看到一个模型示例，即线性回归模型（由实线表示）。你可以看到，基于提供的数据，模型预测随着当天最高气温的升高，日均刨冰销量也会增加。太棒了！\n\
+    \n#### 示例 2\n\n让我们看一个不同的示例，它使用相同的线性回归模型，但采用不同的数据来回答完全不同的问题。\n\n假设你在高等教育机构工作，想更好地理解入学费用与大学在校生人数之间的关系。在这个示例中，我们的模型预测随着学费上涨，上大学的人数可能会减少。\n\
+    \n![](img/image00077.jpeg)\n\n使用相同的线性回归模型（由实线表示），你可以看到随着费用增加，上大学的人数确实会下降。\n\n\
+    这两个示例都展示了模型是一个通用程序，通过用于训练它的数据变得具体化。\n\n### 模型训练\n\n模型训练算法如何用于训练模型？\n\n在前一节中，我们讨论了两个关键信息：模型和数据。在本节中，我们将展示如何利用这两个信息来创建一个训练好的模型。这个过程称为模型训练。\n\
+    \n#### 模型训练算法通过交互式过程工作\n\n让我们重温一下黏土茶壶的比喻。我们得到了一块黏土，现在想做一个茶壶。让我们看看揉黏土的算法，以及它如何类似于机器学习算法：\n\
+    \n*   **思考需要做出的改变。** 你要做的第一件事是检查原始黏土，并思考可以做出什么改变使其更像一个茶壶。同样，模型训练算法使用模型处理数据，然后将结果与某个最终目标（如我们的黏土茶壶）进行比较。\n\
+    *   **做出这些改变。** 现在，你揉捏黏土使其更像一个茶壶。同样，模型训练算法会轻轻推动模型的特定部分朝着更接近目标的方向发展。\n*   **重复。**\
+    \ 通过反复迭代这些步骤，你会越来越接近想要的结果，直到你确定已经足够接近从而可以停止。\n\n![](img/image00078.jpeg)\n\n###\
+    \ 模型推理：使用你训练好的模型\n\n现在你有了完成的茶壶。你检查了黏土，评估了需要做出的改变，并实施了它们，现在茶壶已准备好供你使用。享受你的茶吧！\n\
+    \n那么从机器学习的角度来看，这意味着什么？我们已准备好使用模型推理算法，利用训练好的模型生成预测。这个过程通常被称为模型推理。\n\n![](img/image00079.jpeg)\n\
+    \n### 测验\n\n**以下哪些是机器学习中使用的主要组件？（选择多个框）**\n\n1.  模型完整性算法\n2.  机器学习模型\n3.  模型训练算法\n\
+    4.  准备算法\n5.  模型推理算法\n\n**回顾黏土茶壶的比喻。当你处理原始黏土块时，你是否总是需要有一个关于你在制作什么的想法？判断真或假。**\n\
+    \n1.  真\n2.  假\n\n**答案：B**\n\n### 术语\n\n*   **模型：** 一个极其通用的程序，通过用于训练它的数据变得具体化。\n\
+    *   **模型训练算法：** 通过交互式过程工作，分析当前的模型迭代以确定可以做出什么改变以更接近目标。实施这些改变并继续迭代，直到模型被评估为达到目标。\n\
+    *   **模型推理：** 使用训练好的模型生成预测。\n\n# 第二章\n\n## 机器学习五大步骤简介\n\n### 机器学习过程中的主要步骤\n\n\
+    在前面的图表中，你可以看到机器学习过程主要步骤的大纲。无论使用何种特定模型或训练算法，机器学习从业者都遵循通用的工作流程来完成机器学习任务。\n\n这些步骤是迭代的。在实践中，这意味着在流程的每一步，你都要回顾流程进展如何。事情是否按预期运行？如果不是，返回并重新审视当前步骤或之前的步骤，以尝试找出故障所在。\n\
+    \n![](img/image00080.jpeg)\n\n本书的其余部分围绕这些至关重要的步骤设计。请再次查看它们，并准备好深入了解每一个步骤。\n\n\
+    *   **第一步：** 定义问题\n*   **第二步：** 构建数据集\n*   **第三步：** 训练模型\n*   **第四步：** 评估模型\n\
+    *   **第五步：** 推理（使用模型）\n\n## 第一步：定义问题\n\n### 如何开始一项机器学习任务？\n\n*   定义一个非常具体的任务。\n\
+    *   回想一下刨冰销售的示例。现在假设你经营一家冷饮店，除了刨冰还销售许多其他产品。你想知道：“我该如何增加销售额？”这是一个有效的问题，但它与“非常具体的任务”背道而驰。以下示例演示了机器学习从业者可能如何尝试回答这个问题。\n\
+    \    *   “在热巧克力圣代上加收 1.00 美元的糖霜费，是否会增加热巧克力圣代的销量？”\n    *   “在刨冰中加收 0.50 美元的有机口味费，是否会增加刨冰的销量？”\n\
+    *   确定我们可能用来解决此问题的机器学习任务。\n*   这有助于你更好地理解项目所需的数据。\n\n### 什么是机器学习任务？\n\n所有模型训练算法和模型本身都以数据作为输入。它们的输出可能截然不同，并根据其设计解决的任务分为几个不同的组别。通常，我们将训练模型所需的数据类型作为定义机器学习任务的一部分。\n\
+    \n在本课中，我们将重点介绍两种常见的机器学习任务：\n\n*   监督学习\n*   无监督学习\n\n### 监督学习和无监督学习\n\n数据中标签的有无通常用于识别机器学习任务。\n\
+    \n![](img/image00081.jpeg)\n\n#### 监督任务\n\n如果你使用的是标记数据，则该任务为监督任务。我们用“标记”来指代已经包含解决方案（称为标签）的数据。\n\
+    \n例如：基于气温预测刨冰销量是监督学习的一个例子。\n\n![](img/image00082.jpeg)\n\n"
+  toc: []
+- raw: 'In the preceding graph, the data contains both a temperature and the number
+    of snow cones sold. Both components are used to generate the linear regression
+    shown on the graph. Our goal was to predict the number of snow cones sold, and
+    we feed that value into the model. We are providing the model with labeled data
+    and therefore, we are performing a supervised machine learning task.
+
+
+    Unsupervised tasks
+
+
+    A task is considered to be unsupervised if you are using unlabeled data. This
+    means you don''t need to provide the model with any kind of label or solution
+    while the model is being trained.
+
+
+    Let''s take a look at unlabeled data.
+
+
+    ![](Images/image00083.jpeg)
+
+
+    *   Take a look at the preceding picture. Did you notice the tree in the picture?
+    What you just did, when you noticed the object in the picture and identified it
+    as a tree, is called labeling the picture. Unlike you, a computer just sees that
+    image as a matrix of pixels of varying intensity.
+
+
+    *   Since this image does not have the labeling in its original data, it is considered
+    unlabeled.
+
+
+    How do we classify tasks when we don''t have a label?
+
+
+    Unsupervised learning involves using data that doesn''t have a label. One common
+    task is called clustering. Clustering helps to determine if there are any naturally
+    occurring groupings in the data.
+
+
+    Let''s look at an example of how clustering in unlabeled data works.
+
+
+    Identifying book micro-genres with unsupervised learning
+
+
+    Imagine that you work for a company that recommends books to readers.
+
+
+    The assumption: You are fairly confident that micro-genres exist, and that there
+    is one called Teen Vampire Romance. Because you don’t know which micro-genres
+    exist, you can''t use supervised learning techniques.
+
+
+    This is where the unsupervised learning clustering technique might be able to
+    detect some groupings in the data. The words and phrases used in the book description
+    might provide some guidance on a book''s micro-genre.
+
+
+    ![](Images/image00084.jpeg)
+
+
+    Initially, we divided tasks based on the presence or absence of labeled data while
+    training our model. Often, tasks are further defined by the type of label which
+    is present.
+
+
+    In supervised learning, there are two main identifiers you will see in machine
+    learning:
+
+
+    *   A categorical label has a discrete set of possible values. In a machine learning
+    problem in which you want to identify the type of flower based on a picture, you
+    would train your model using images that have been labeled with the categories
+    of flower you would want to identify. Furthermore, when you work with categorical
+    labels, you often carry out classification tasks\*, which are part of the supervised
+    learning family.
+
+
+    *   A continuous (regression) label does not have a discrete set of possible values,
+    which often means you are working with numerical data. In the snow cone sales
+    example, we are trying to predict the number\* of snow cones sold. Here, our label
+    is a number that could, in theory, be any value.
+
+
+    In unsupervised learning, clustering is just one example. There are many other
+    options, such as deep learning.
+
+
+    Quiz
+
+
+    Match the task with it’s corresponding data type
+
+
+    1.  Supervised learning
+
+
+    2.  Unsupervised learning
+
+
+    | Data Used || Machine learning task |
+
+
+    | --- | --- |
+
+
+    | Labeled data ||   |
+
+
+    | Unlabeled data ||   |
+
+
+    Terminology
+
+
+    *   Clustering. Unsupervised learning task that helps to determine if there are
+    any naturally occurring groupings in the data.
+
+
+    *   A categorical label has a discrete set of possible values, such as "is a cat"
+    and "is not a cat."
+
+
+    *   A continuous (regression) label does not have a discrete set of possible values,
+    which means possibly an unlimited number of possibilities.
+
+
+    *   Discrete: A term taken from statistics referring to an outcome taking on only
+    a finite number of values (such as days of the week).
+
+
+    *   A label refers to data that already contains the solution.
+
+
+    *   Using unlabeled data means you don''t need to provide the model with any kind
+    of label or solution while the model is being trained.
+
+
+    Additional Reading
+
+
+    *   The AWS Machine Learning blog is a great resource for learning more about
+    projects in machine learning.
+
+
+    *   You can use Amazon SageMaker to calculate new stats in Major League Baseball.
+
+
+    *   You can also find an article on Flagging suspicious healthcare claims with
+    Amazon SageMaker on the AWS Machine Learning blog.
+
+
+    *   What kinds of questions and problems are good for machine learning?
+
+
+    Quiz: Define the Problem
+
+
+    1.  Which of the following problem statements fit the definition of a regression-based
+    task?
+
+
+    1.  I want to detect when my cat jumps on the dinner table, so I set up a camera
+    and write a program to determine if my cat is in the frame or is not in the frame.
+
+
+    2.  I want to determine the expected reading time for online news articles, so
+    I collect data on my reading time for a week and write a browser plugin to use
+    that data to predict the reading time for new articles.
+
+
+    3.  I believe my customers fall into one of many customer segments, but I don’t
+    know what those segments are in advance. After asking for permission, I collect
+    a bunch of data on their actions when they use my product and try to determine
+    if there are any collections of users that behave in similar ways
+
+
+    4.  I work for a show company and want to provide a service to help parents predict
+    their children’s shoe sizes for any particular age. Within this system, I represent
+    shoe size as a continuum of values and then round to the nearest shoe size.
+
+
+    Answer: B, D
+
+
+    2.  As a machine learning practitioner, you’re working with stakeholders on music
+    streaming app. Your supervisor asks, “How can we increase the average number of
+    minutes a customer spends listening on our app”?
+
+
+    This is a broad question (too broad) with many different potential factors affecting
+    how long a customer might spend listening to music.
+
+
+    How might you change the scope or redefine the question to be better suited, and
+    more concise, for a machine learning task?
+
+
+    1.  Will changing the frequency of when we start playing ad affect how long a
+    customer listens to music on our service.
+
+
+    2.  Will creating customer playlist encourage customers to listen to music longer?
+
+
+    3.  Will creating artist interviews about their songs increase how long our customers
+    spend listening to music?
+
+
+    Answer: All of the Above
+
+
+    ## Step Two: Build a Dataset
+
+
+    The next step in the machine learning process is to build a dataset that can be
+    used to solve your machine learning-based problem. Understanding the data needed
+    helps you select better models and algorithms so you can build more effective
+    solutions.
+
+
+    The most important step of the machine learning process
+
+
+    Working with data is perhaps the most overlooked—yet most important—step of the
+    machine learning process. In 2017, an O’Reilly study showed that machine learning
+    practitioners spend 80% of their time working with their data.
+
+
+    The Four Aspects of Working with Data
+
+
+    ![](Images/image00085.jpeg)
+
+
+    You can take an entire class just on working with, understanding, and processing
+    data for machine learning applications. Good, high-quality data is essential for
+    any kind of machine learning project. Let''s explore some of the common aspects
+    of working with data.
+
+
+    Data collection
+
+
+    Data collection can be as straightforward as running the appropriate SQL queries
+    or as complicated as building custom web scraper applications to collect data
+    for your project. You might even have to run a model over your data to generate
+    needed labels. Here is the fundamental question:
+
+
+    Does the data you''ve collected match the machine learning task and problem you
+    have defined?
+
+
+    Data inspection
+
+
+    The quality of your data will ultimately be the largest factor that affects how
+    well you can expect your model to perform. As you inspect your data, look for:
+
+
+    *   Outliers
+
+
+    *   Missing or incomplete values
+
+
+    *   Data that needs to be transformed or preprocessed so it''s in the correct
+    format to be used by your model
+
+
+    Summary statistics'
+  fmt: "\n在前面的图表中，数据同时包含温度和售出的雪糕数量。这两个组件均用于生成图表上显示的线性回归。我们的目标是预测售出的雪糕数量，并将该值输入模型。我们向模型提供了带标签的数据，因此我们正在执行一项监督式机器学习任务。\n\
+    \n## 无监督任务\n\n如果您使用的是无标签数据，则该任务被视为无监督任务。这意味着在模型训练期间，您无需向模型提供任何类型的标签或解决方案。\n\n\
+    让我们看看无标签数据。\n\n![](Images/image00083.jpeg)\n\n*   请看前面的图片。您注意到图片中的树了吗？您刚才注意到图片中的物体并将其识别为树的过程，称为给图片打标签。与您不同，计算机只将该图像视为一个由不同强度像素组成的矩阵。\n\
+    *   由于原始数据中不包含标签，因此该图像被视为无标签数据。\n\n没有标签时，我们如何对任务进行分类？\n\n无监督学习涉及使用无标签数据。一项常见任务称为聚类。聚类有助于确定数据中是否存在天然形成的分组。\n\
+    \n让我们看一个聚类在无标签数据中如何工作的示例。\n\n### 使用无监督学习识别图书微流派\n\n假设您为一家向读者推荐图书的公司工作。\n\n假设：您相当确信微流派存在，并且其中有一个称为“青少年吸血鬼言情”。因为您不知道存在哪些微流派，所以无法使用监督学习技术。\n\
+    \n这就是无监督学习聚类技术可能检测数据中某些分组的地方。图书描述中使用的词汇和短语可能为图书的微流派提供一些指导。\n\n![](Images/image00084.jpeg)\n\
+    \n最初，我们根据训练模型时是否存在带标签数据来划分任务。通常，任务还会根据存在的标签类型进一步定义。\n\n在监督学习中，您将在机器学习中看到两个主要标识符：\n\
+    \n*   **分类标签** 拥有一组离散的可能值。在一个基于图片识别花卉类型的机器学习问题中，您会使用已按您想要识别的花卉类别打好标签的图片来训练模型。此外，当您使用分类标签时，通常会执行分类任务*，这属于监督学习系列。\n\
+    *   **连续（回归）标签** 没有一组离散的可能值，这通常意味着您正在处理数值数据。在雪糕销售示例中，我们试图预测售出的雪糕*数量*。在这里，我们的标签是一个数字，理论上可以是任何值。\n\
+    \n在无监督学习中，聚类只是一个示例。还有许多其他选项，例如深度学习。\n\n## 测验\n\n将任务与其对应的数据类型匹配\n\n1.  监督学习\n2.\
+    \  无监督学习\n\n| 使用的数据 | 机器学习任务 |\n| --- | --- |\n| 带标签数据 |   |\n| 无标签数据 |   |\n\n\
+    ## 术语\n\n*   **聚类**。一种无监督学习任务，有助于确定数据中是否存在天然形成的分组。\n*   **分类标签** 拥有一组离散的可能值，例如“是猫”和“非猫”。\n\
+    *   **连续（回归）标签** 没有一组离散的可能值，这意味着可能有无限多种可能性。\n*   **离散**：源自统计学的术语，指结果仅取有限数量值的情况（例如一周中的某天）。\n\
+    *   **标签** 指已经包含解决方案的数据。\n*   使用无标签数据意味着在模型训练期间，您无需向模型提供任何类型的标签或解决方案。\n\n## 补充阅读\n\
+    \n*   AWS 机器学习博客是了解机器学习项目更多信息的绝佳资源。\n*   您可以使用 `Amazon SageMaker` 计算美国职业棒球大联盟的新统计数据。\n\
+    *   您还可以在 AWS 机器学习博客上找到关于“使用 Amazon SageMaker 标记可疑医疗索赔”的文章。\n*   什么样的问题和难题适合机器学习？\n\
+    \n## 测验：定义问题\n\n1.  以下哪些问题陈述符合基于回归的任务定义？\n\n    1.  我想检测我的猫何时跳上餐桌，所以我设置了一个摄像头并编写程序来判断我的猫是否在画面中。\n\
+    \    2.  我想确定在线新闻文章的预期阅读时间，所以我收集了一周的阅读时间数据并编写浏览器插件，利用这些数据预测新文章的阅读时间。\n    3. \
+    \ 我认为我的客户属于许多客户细分中的一种，但我事先不知道这些细分是什么。在征得许可后，我收集了他们使用产品时的大量行为数据，并尝试确定是否存在行为方式相似的用户群体。\n\
+    \    4.  我为一家鞋业公司工作，想提供一项服务帮助父母预测孩子在特定年龄的鞋码。在此系统中，我将鞋码表示为一系列连续值，然后四舍五入到最接近的鞋码。\n\
+    \n    答案：B、D\n\n2.  作为一名机器学习从业者，您正在与音乐流媒体应用的利益相关者合作。您的主管问道：“我们如何增加客户在我们应用上收听音乐的平均分钟数？”\n\
+    \n    这是一个宽泛的问题（过于宽泛），有许多不同的潜在因素会影响客户收听音乐的时长。\n\n    您如何更改范围或重新定义问题，使其更适合且更简洁地用于机器学习任务？\n\
+    \n    1.  更改播放广告的频率是否会影响客户在我们服务上收听音乐的时长？\n    2.  创建客户播放列表是否会鼓励客户收听更长时间的音乐？\n\
+    \    3.  创建关于歌曲的艺人访谈是否会增加客户收听音乐的时长？\n\n    答案：以上皆是\n\n## 第二步：构建数据集\n\n机器学习过程的下一步是构建可用于解决机器学习问题的数据集。了解所需数据有助于您选择更好的模型和算法，从而构建更有效的解决方案。\n\
+    \n### 机器学习过程中最重要的一步\n\n处理数据或许是机器学习过程中最容易被忽视——但却是最重要——的一步。2017 年，O’Reilly 的一项研究表明，机器学习从业者\
+    \ 80% 的时间都花在处理数据上。\n\n### 处理数据的四个方面\n\n![](Images/image00085.jpeg)\n\n您可以上一整堂课来学习如何为机器学习应用处理、理解和加工数据。良好的高质量数据对于任何机器学习项目都至关重要。让我们探讨一下处理数据的一些常见方面。\n\
+    \n#### 数据收集\n\n数据收集可以像运行适当的 `SQL` 查询一样简单，也可以像构建自定义网页抓取应用程序来为项目收集数据一样复杂。您甚至可能需要在数据上运行模型以生成所需的标签。根本问题是：\n\
+    \n您收集的数据是否与您定义的机器学习任务和问题相匹配？\n\n#### 数据检查\n\n数据质量最终将成为影响模型性能预期的最大因素。在检查数据时，请注意：\n\
+    \n*   异常值\n*   缺失或不完整的值\n*   需要转换或预处理以使其格式正确、可供模型使用的数据\n\n#### 汇总统计\n"
+  trans: "\n在前面的图表中，数据同时包含温度和售出的雪糕数量。这两个组件均用于生成图表上显示的线性回归。我们的目标是预测售出的雪糕数量，并将该值输入模型。我们向模型提供了带标签的数据，因此我们正在执行一项监督式机器学习任务。\n\
+    \n## 无监督任务\n\n如果您使用的是无标签数据，则该任务被视为无监督任务。这意味着在模型训练期间，您无需向模型提供任何类型的标签或解决方案。\n\n\
+    让我们看看无标签数据。\n\n![](img/image00083.jpeg)\n\n*   请看前面的图片。您注意到图片中的树了吗？您刚才注意到图片中的物体并将其识别为树的过程，称为给图片打标签。与您不同，计算机只将该图像视为一个由不同强度像素组成的矩阵。\n\
+    *   由于原始数据中不包含标签，因此该图像被视为无标签数据。\n\n没有标签时，我们如何对任务进行分类？\n\n无监督学习涉及使用无标签数据。一项常见任务称为聚类。聚类有助于确定数据中是否存在天然形成的分组。\n\
+    \n让我们看一个聚类在无标签数据中如何工作的示例。\n\n### 使用无监督学习识别图书微流派\n\n假设您为一家向读者推荐图书的公司工作。\n\n假设：您相当确信微流派存在，并且其中有一个称为“青少年吸血鬼言情”。因为您不知道存在哪些微流派，所以无法使用监督学习技术。\n\
+    \n这就是无监督学习聚类技术可能检测数据中某些分组的地方。图书描述中使用的词汇和短语可能为图书的微流派提供一些指导。\n\n![](img/image00084.jpeg)\n\
+    \n最初，我们根据训练模型时是否存在带标签数据来划分任务。通常，任务还会根据存在的标签类型进一步定义。\n\n在监督学习中，您将在机器学习中看到两个主要标识符：\n\
+    \n*   **分类标签** 拥有一组离散的可能值。在一个基于图片识别花卉类型的机器学习问题中，您会使用已按您想要识别的花卉类别打好标签的图片来训练模型。此外，当您使用分类标签时，通常会执行分类任务*，这属于监督学习系列。\n\
+    *   **连续（回归）标签** 没有一组离散的可能值，这通常意味着您正在处理数值数据。在雪糕销售示例中，我们试图预测售出的雪糕*数量*。在这里，我们的标签是一个数字，理论上可以是任何值。\n\
+    \n在无监督学习中，聚类只是一个示例。还有许多其他选项，例如深度学习。\n\n## 测验\n\n将任务与其对应的数据类型匹配\n\n1.  监督学习\n2.\
+    \  无监督学习\n\n| 使用的数据 | 机器学习任务 |\n| --- | --- |\n| 带标签数据 |   |\n| 无标签数据 |   |\n\n\
+    ## 术语\n\n*   **聚类**。一种无监督学习任务，有助于确定数据中是否存在天然形成的分组。\n*   **分类标签** 拥有一组离散的可能值，例如“是猫”和“非猫”。\n\
+    *   **连续（回归）标签** 没有一组离散的可能值，这意味着可能有无限多种可能性。\n*   **离散**：源自统计学的术语，指结果仅取有限数量值的情况（例如一周中的某天）。\n\
+    *   **标签** 指已经包含解决方案的数据。\n*   使用无标签数据意味着在模型训练期间，您无需向模型提供任何类型的标签或解决方案。\n\n## 补充阅读\n\
+    \n*   AWS 机器学习博客是了解机器学习项目更多信息的绝佳资源。\n*   您可以使用 `Amazon SageMaker` 计算美国职业棒球大联盟的新统计数据。\n\
+    *   您还可以在 AWS 机器学习博客上找到关于“使用 Amazon SageMaker 标记可疑医疗索赔”的文章。\n*   什么样的问题和难题适合机器学习？\n\
+    \n## 测验：定义问题\n\n1.  以下哪些问题陈述符合基于回归的任务定义？\n\n    1.  我想检测我的猫何时跳上餐桌，所以我设置了一个摄像头并编写程序来判断我的猫是否在画面中。\n\
+    \    2.  我想确定在线新闻文章的预期阅读时间，所以我收集了一周的阅读时间数据并编写浏览器插件，利用这些数据预测新文章的阅读时间。\n    3. \
+    \ 我认为我的客户属于许多客户细分中的一种，但我事先不知道这些细分是什么。在征得许可后，我收集了他们使用产品时的大量行为数据，并尝试确定是否存在行为方式相似的用户群体。\n\
+    \    4.  我为一家鞋业公司工作，想提供一项服务帮助父母预测孩子在特定年龄的鞋码。在此系统中，我将鞋码表示为一系列连续值，然后四舍五入到最接近的鞋码。\n\
+    \n    答案：B、D\n\n2.  作为一名机器学习从业者，您正在与音乐流媒体应用的利益相关者合作。您的主管问道：“我们如何增加客户在我们应用上收听音乐的平均分钟数？”\n\
+    \n    这是一个宽泛的问题（过于宽泛），有许多不同的潜在因素会影响客户收听音乐的时长。\n\n    您如何更改范围或重新定义问题，使其更适合且更简洁地用于机器学习任务？\n\
+    \n    1.  更改播放广告的频率是否会影响客户在我们服务上收听音乐的时长？\n    2.  创建客户播放列表是否会鼓励客户收听更长时间的音乐？\n\
+    \    3.  创建关于歌曲的艺人访谈是否会增加客户收听音乐的时长？\n\n    答案：以上皆是\n\n## 第二步：构建数据集\n\n机器学习过程的下一步是构建可用于解决机器学习问题的数据集。了解所需数据有助于您选择更好的模型和算法，从而构建更有效的解决方案。\n\
+    \n### 机器学习过程中最重要的一步\n\n处理数据或许是机器学习过程中最容易被忽视——但却是最重要——的一步。2017 年，O’Reilly 的一项研究表明，机器学习从业者\
+    \ 80% 的时间都花在处理数据上。\n\n### 处理数据的四个方面\n\n![](img/image00085.jpeg)\n\n您可以上一整堂课来学习如何为机器学习应用处理、理解和加工数据。良好的高质量数据对于任何机器学习项目都至关重要。让我们探讨一下处理数据的一些常见方面。\n\
+    \n#### 数据收集\n\n数据收集可以像运行适当的 `SQL` 查询一样简单，也可以像构建自定义网页抓取应用程序来为项目收集数据一样复杂。您甚至可能需要在数据上运行模型以生成所需的标签。根本问题是：\n\
+    \n您收集的数据是否与您定义的机器学习任务和问题相匹配？\n\n#### 数据检查\n\n数据质量最终将成为影响模型性能预期的最大因素。在检查数据时，请注意：\n\
+    \n*   异常值\n*   缺失或不完整的值\n*   需要转换或预处理以使其格式正确、可供模型使用的数据\n\n#### 汇总统计\n"
+  toc: []
+- raw: 'Models can assume how your data is structured.
+
+
+    Now that you have some data in hand it is a good best practice to check that your
+    data is in line with the underlying assumptions of your chosen machine learning
+    model.
+
+
+    With many statistical tools, you can calculate things like the mean, inner-quartile
+    range (IQR), and standard deviation. These tools can give you insight into the
+    scope, scale, and shape of the dataset.
+
+
+    Data visualization
+
+
+    You can use data visualization to see outliers and trends in your data and to
+    help stakeholders understand your data.
+
+
+    Look at the following two graphs. In the first graph, some data seems to have
+    clustered into different groups. In the second graph, some data points might be
+    outliers.
+
+
+    ![](Images/image00086.jpeg)
+
+
+    Terminology
+
+
+    Impute is a common term referring to different statistical tools which can be
+    used to calculate missing values from your dataset.
+
+
+    Outliers are data points that are significantly different from others in the same
+    sample.
+
+
+    Additional reading
+
+
+    In machine learning, you use several statistical-based tools to better understand
+    your data. The sklearn library has many examples and tutorials, such as this example
+    demonstrating outlier detection on a real dataset.
+
+
+    Quiz: Build A Dataset
+
+
+    Use this series of True / False questions to test your knowledge of different
+    parts of building your dataset. Some questions are asking you to think just a
+    little bit deeper about some of the content you just learned.
+
+
+    1.  True or false: Your data requirements will not change based on the machine
+    learning task you are using.
+
+
+    1.  True
+
+
+    2.  False
+
+
+    Answer: B
+
+
+    2.  True or false: models are universal, so date is not relevant.
+
+
+    1.  True
+
+
+    2.  False
+
+
+    Answer: B
+
+
+    3.  True or false: data needs to be formatted so that is compatible with the model
+    and model training algorithm you plan to use
+
+
+    1.  True
+
+
+    2.  False
+
+
+    Answer: A
+
+
+    4.  True or false: Data visualizations are they only way to identify outliers
+    in your data.
+
+
+    1.  True
+
+
+    2.  False
+
+
+    Answer: B
+
+
+    5.  True or false: After you start using your model(performing inference), you
+    don’t need to check the new data that it received.
+
+
+    1.  True
+
+
+    2.  False
+
+
+    Answer: B
+
+
+    ## Step Three: Model Training
+
+
+    Splitting your Dataset
+
+
+    The first step in model training is to randomly split the dataset. This allows
+    you to keep some data hidden during training, so that data can be used to evaluate
+    your model before you put it into production. Specifically, you do this to test
+    against the bias-variance trade-off. If you''re interested in learning more, see
+    the Further learning and reading section.
+
+
+    Splitting your dataset gives you two sets of data:
+
+
+    *   Training dataset: The data on which the model will be trained. Most of your
+    data will be here. Many developers estimate about 80%.
+
+
+    *   Test dataset: The data withheld from the model during training, which is used
+    to test how well your model will generalize to new data.
+
+
+    Model Training Terminology
+
+
+    The model training algorithm iteratively updates a model''s parameters to minimize
+    some loss function.
+
+
+    Let''s define those two terms:
+
+
+    *   Model parameters: Model parameters are settings or configurations the training
+    algorithm can update to change how the model behaves. Depending on the context,
+    you’ll also hear other more specific terms used to describe model parameters such
+    as weights and biases. Weights, which are values that change as the model learns,
+    are more specific to neural networks.
+
+
+    *   Loss function: A loss function is used to codify the model’s distance from
+    this goal. For example, if you were trying to predict a number of snow cone sales
+    based on the day’s weather, you would care about making predictions that are as
+    accurate as possible. So you might define a loss function to be “the average distance
+    between your model’s predicted number of snow cone sales and the correct number.”
+    You can see in the snow cone example this is the difference between the two purple
+    dots.
+
+
+    Putting it All Together
+
+
+    The end-to-end training process is
+
+
+    *   Feed the training data into the model.
+
+
+    *   Compute the loss function on the results.
+
+
+    *   Update the model parameters in a direction that reduces loss.
+
+
+    You continue to cycle through these steps until you reach a predefined stop condition.
+    This might be based on a training time, the number of training cycles, or an even
+    more intelligent or application-aware mechanism.
+
+
+    Advice From the Experts
+
+
+    Remember the following advice when training your model.
+
+
+    *   Practitioners often use machine learning frameworks that already have working
+    implementations of models and model training algorithms. You could implement these
+    from scratch, but you probably won''t need to do so unless you’re developing new
+    models or algorithms.
+
+
+    *   Practitioners use a process called model selection to determine which model
+    or models to use. The list of established models is constantly growing, and even
+    seasoned machine learning practitioners may try many different types of models
+    while solving a problem with machine learning.
+
+
+    *   Hyperparameters are settings on the model which are not changed during training
+    but can affect how quickly or how reliably the model trains, such as the number
+    of clusters the model should identify.
+
+
+    *   Be prepared to iterate.
+
+
+    Pragmatic problem solving with machine learning is rarely an exact science, and
+    you might have assumptions about your data or problem which turn out to be false.
+    Don’t get discouraged. Instead, foster a habit of trying new things, measuring
+    success, and comparing results across iterations.
+
+
+    Extended Learning
+
+
+    This information hasn''t been covered in the above video but is provided for the
+    advanced reader.
+
+
+    Linear models
+
+
+    One of the most common models covered in introductory coursework, linear models
+    simply describe the relationship between a set of input numbers and a set of output
+    numbers through a linear function (think of y = mx + b or a line on a x vs y chart).
+
+
+    Classification tasks often use a strongly related logistic model, which adds an
+    additional transformation mapping the output of the linear function to the range
+    \[0, 1\], interpreted as “probability of being in the target class.” Linear models
+    are fast to train and give you a great baseline against which to compare more
+    complex models. A lot of media buzz is given to more complex models, but for most
+    new problems, consider starting with a simple model.
+
+
+    Tree-based models
+
+
+    Tree-based models are probably the second most common model type covered in introductory
+    coursework. They learn to categorize or regress by building an extremely large
+    structure of nested if/else blocks, splitting the world into different regions
+    at each if/else block. Training determines exactly where these splits happen and
+    what value is assigned at each leaf region.
+
+
+    For example, if you’re trying to determine if a light sensor is in sunlight or
+    shadow, you might train tree of depth 1 with the final learned configuration being
+    something like if (sensor\_value > 0.698), then return 1; else return 0;. The
+    tree-based model XGBoost is commonly used as an off-the-shelf implementation for
+    this kind of model and includes enhancements beyond what is discussed here. Try
+    tree-based models to quickly get a baseline before moving on to more complex models.
+
+
+    Deep learning models
+
+
+    Extremely popular and powerful, deep learning is a modern approach based around
+    a conceptual model of how the human brain functions. The model (also called a
+    neural network) is composed of collections of neurons (very simple computational
+    units) connected together by weights (mathematical representations of how much
+    information to allow to flow from one neuron to the next). The process of training
+    involves finding values for each weight.
+
+
+    Various neural network structures have been determined for modeling different
+    kinds of problems or processing different kinds of data.
+
+
+    A short (but not complete!) list of noteworthy examples includes:'
+  fmt: "\n# Models can assume how your data is structured\n\nNow that you have some\
+    \ data in hand it is a good best practice to check that your data is in line with\
+    \ the underlying assumptions of your chosen machine learning model.\n\nWith many\
+    \ statistical tools, you can calculate things like the mean, inner-quartile range\
+    \ (IQR), and standard deviation. These tools can give you insight into the scope,\
+    \ scale, and shape of the dataset.\n\n## Data visualization\n\nYou can use data\
+    \ visualization to see outliers and trends in your data and to help stakeholders\
+    \ understand your data.\n\nLook at the following two graphs. In the first graph,\
+    \ some data seems to have clustered into different groups. In the second graph,\
+    \ some data points might be outliers.\n\n![](Images/image00086.jpeg)\n\n## Terminology\n\
+    \n**Impute** is a common term referring to different statistical tools which can\
+    \ be used to calculate missing values from your dataset.\n\n**Outliers** are data\
+    \ points that are significantly different from others in the same sample.\n\n\
+    ## Additional reading\n\nIn machine learning, you use several statistical-based\
+    \ tools to better understand your data. The `sklearn` library has many examples\
+    \ and tutorials, such as this example demonstrating outlier detection on a real\
+    \ dataset.\n\n## Quiz: Build A Dataset\n\nUse this series of True / False questions\
+    \ to test your knowledge of different parts of building your dataset. Some questions\
+    \ are asking you to think just a little bit deeper about some of the content you\
+    \ just learned.\n\n1.  True or false: Your data requirements will not change based\
+    \ on the machine learning task you are using.\n\n    1.  True\n    2.  False\n\
+    \n    **Answer: B**\n\n2.  True or false: models are universal, so date is not\
+    \ relevant.\n\n    1.  True\n    2.  False\n\n    **Answer: B**\n\n3.  True or\
+    \ false: data needs to be formatted so that is compatible with the model and model\
+    \ training algorithm you plan to use\n\n    1.  True\n    2.  False\n\n    **Answer:\
+    \ A**\n\n4.  True or false: Data visualizations are they only way to identify\
+    \ outliers in your data.\n\n    1.  True\n    2.  False\n\n    **Answer: B**\n\
+    \n5.  True or false: After you start using your model(performing inference), you\
+    \ don’t need to check the new data that it received.\n\n    1.  True\n    2. \
+    \ False\n\n    **Answer: B**\n\n# Step Three: Model Training\n\n## Splitting your\
+    \ Dataset\n\nThe first step in model training is to randomly split the dataset.\
+    \ This allows you to keep some data hidden during training, so that data can be\
+    \ used to evaluate your model before you put it into production. Specifically,\
+    \ you do this to test against the bias-variance trade-off. If you're interested\
+    \ in learning more, see the Further learning and reading section.\n\nSplitting\
+    \ your dataset gives you two sets of data:\n\n*   **Training dataset**: The data\
+    \ on which the model will be trained. Most of your data will be here. Many developers\
+    \ estimate about 80%.\n*   **Test dataset**: The data withheld from the model\
+    \ during training, which is used to test how well your model will generalize to\
+    \ new data.\n\n## Model Training Terminology\n\nThe model training algorithm iteratively\
+    \ updates a model's parameters to minimize some loss function.\n\nLet's define\
+    \ those two terms:\n\n*   **Model parameters**: Model parameters are settings\
+    \ or configurations the training algorithm can update to change how the model\
+    \ behaves. Depending on the context, you’ll also hear other more specific terms\
+    \ used to describe model parameters such as **weights** and **biases**. **Weights**,\
+    \ which are values that change as the model learns, are more specific to neural\
+    \ networks.\n*   **Loss function**: A loss function is used to codify the model’s\
+    \ distance from this goal. For example, if you were trying to predict a number\
+    \ of snow cone sales based on the day’s weather, you would care about making predictions\
+    \ that are as accurate as possible. So you might define a loss function to be\
+    \ “the average distance between your model’s predicted number of snow cone sales\
+    \ and the correct number.” You can see in the snow cone example this is the difference\
+    \ between the two purple dots.\n\n## Putting it All Together\n\nThe end-to-end\
+    \ training process is:\n\n*   Feed the training data into the model.\n*   Compute\
+    \ the loss function on the results.\n*   Update the model parameters in a direction\
+    \ that reduces loss.\n\nYou continue to cycle through these steps until you reach\
+    \ a predefined stop condition. This might be based on a training time, the number\
+    \ of training cycles, or an even more intelligent or application-aware mechanism.\n\
+    \n## Advice From the Experts\n\nRemember the following advice when training your\
+    \ model.\n\n*   Practitioners often use machine learning frameworks that already\
+    \ have working implementations of models and model training algorithms. You could\
+    \ implement these from scratch, but you probably won't need to do so unless you’re\
+    \ developing new models or algorithms.\n*   Practitioners use a process called\
+    \ **model selection** to determine which model or models to use. The list of established\
+    \ models is constantly growing, and even seasoned machine learning practitioners\
+    \ may try many different types of models while solving a problem with machine\
+    \ learning.\n*   **Hyperparameters** are settings on the model which are not changed\
+    \ during training but can affect how quickly or how reliably the model trains,\
+    \ such as the number of clusters the model should identify.\n*   Be prepared to\
+    \ iterate.\n\nPragmatic problem solving with machine learning is rarely an exact\
+    \ science, and you might have assumptions about your data or problem which turn\
+    \ out to be false. Don’t get discouraged. Instead, foster a habit of trying new\
+    \ things, measuring success, and comparing results across iterations.\n\n## Extended\
+    \ Learning\n\nThis information hasn't been covered in the above video but is provided\
+    \ for the advanced reader.\n\n### Linear models\n\nOne of the most common models\
+    \ covered in introductory coursework, linear models simply describe the relationship\
+    \ between a set of input numbers and a set of output numbers through a linear\
+    \ function (think of `y = mx + b` or a line on a x vs y chart).\n\nClassification\
+    \ tasks often use a strongly related logistic model, which adds an additional\
+    \ transformation mapping the output of the linear function to the range `[0, 1]`,\
+    \ interpreted as “probability of being in the target class.” Linear models are\
+    \ fast to train and give you a great baseline against which to compare more complex\
+    \ models. A lot of media buzz is given to more complex models, but for most new\
+    \ problems, consider starting with a simple model.\n\n### Tree-based models\n\n\
+    Tree-based models are probably the second most common model type covered in introductory\
+    \ coursework. They learn to categorize or regress by building an extremely large\
+    \ structure of nested if/else blocks, splitting the world into different regions\
+    \ at each if/else block. Training determines exactly where these splits happen\
+    \ and what value is assigned at each leaf region.\n\nFor example, if you’re trying\
+    \ to determine if a light sensor is in sunlight or shadow, you might train tree\
+    \ of depth 1 with the final learned configuration being something like:\n\n```\n\
+    if (sensor_value > 0.698), then return 1; else return 0;\n```\n\nThe tree-based\
+    \ model `XGBoost` is commonly used as an off-the-shelf implementation for this\
+    \ kind of model and includes enhancements beyond what is discussed here. Try tree-based\
+    \ models to quickly get a baseline before moving on to more complex models.\n\n\
+    ### Deep learning models\n\nExtremely popular and powerful, deep learning is a\
+    \ modern approach based around a conceptual model of how the human brain functions.\
+    \ The model (also called a neural network) is composed of collections of neurons\
+    \ (very simple computational units) connected together by weights (mathematical\
+    \ representations of how much information to allow to flow from one neuron to\
+    \ the next). The process of training involves finding values for each weight.\n\
+    \nVarious neural network structures have been determined for modeling different\
+    \ kinds of problems or processing different kinds of data.\n\nA short (but not\
+    \ complete!) list of noteworthy examples includes:\n"
+  trans: "\n# 模型可以假设你的数据结构\n\n既然你已经掌握了一些数据，最佳实践是检查你的数据是否符合你所选机器学习模型的底层假设。\n\n借助许多统计工具，你可以计算均值、四分位距（IQR）和标准差等指标。这些工具能让你深入了解数据集的范围、尺度和形状。\n\
+    \n## 数据可视化\n\n你可以使用数据可视化来查看数据中的异常值和趋势，并帮助利益相关者理解你的数据。\n\n请看下面的两张图。在第一张图中，一些数据似乎聚集成了不同的群组。在第二张图中，一些数据点可能是异常值。\n\
+    \n![](img/image00086.jpeg)\n\n## 术语\n\n**填补** 是一个常用术语，指代可用于从数据集中计算缺失值的不同统计工具。\n\
+    \n**异常值** 是指与同一样本中其他数据点显著不同的数据点。\n\n## 扩展阅读\n\n在机器学习中，你会使用多种基于统计的工具来更好地理解你的数据。`sklearn`\
+    \ 库有许多示例和教程，例如这个演示如何在真实数据集上进行异常值检测的示例。\n\n## 测验：构建数据集\n\n使用这一系列判断题来测试你对构建数据集不同环节的了解。有些问题要求你对刚学到的内容进行更深一步的思考。\n\
+    \n1.  判断正误：无论你使用哪种机器学习任务，你的数据需求都不会改变。\n\n    1.  正确\n    2.  错误\n\n    **答案：B**\n\
+    \n2.  判断正误：模型是通用的，因此日期无关紧要。\n\n    1.  正确\n    2.  错误\n\n    **答案：B**\n\n3.  判断正误：数据需要经过格式化，以便与你计划使用的模型和模型训练算法兼容。\n\
+    \n    1.  正确\n    2.  错误\n\n    **答案：A**\n\n4.  判断正误：数据可视化是识别数据中异常值的唯一方法。\n\n\
+    \    1.  正确\n    2.  错误\n\n    **答案：B**\n\n5.  判断正误：一旦你开始使用模型（执行推理），就不需要检查它接收到的新数据了。\n\
+    \n    1.  正确\n    2.  错误\n\n    **答案：B**\n\n# 第三步：模型训练\n\n## 划分数据集\n\n模型训练的第一步是随机划分数据集。这使你能在训练期间保留部分数据隐藏，以便在将模型投入生产前使用这些数据来评估模型。具体来说，这是为了针对偏差-方差权衡进行测试。如果你有兴趣了解更多，请参阅“扩展学习与阅读”部分。\n\
+    \n划分数据集将为你提供两组数据：\n\n*   **训练数据集**：用于训练模型的数据。你的大部分数据将放在这里。许多开发者估计约占 80%。\n*  \
+    \ **测试数据集**：训练期间从模型中保留的数据，用于测试模型对新数据的泛化能力。\n\n## 模型训练术语\n\n模型训练算法会迭代地更新模型的参数，以最小化某个损失函数。\n\
+    \n让我们定义这两个术语：\n\n*   **模型参数**：模型参数是训练算法可以更新以改变模型行为的设置或配置。根据上下文，你还会听到其他更具体的术语来描述模型参数，例如**权重**和**偏置**。**权重**是随着模型学习而变化的值，更多地特指神经网络。\n\
+    *   **损失函数**：损失函数用于量化模型距离目标的程度。例如，如果你试图根据当天的天气预测刨冰的销量，你会关心预测尽可能准确。因此，你可以将损失函数定义为“模型预测的刨冰销量与正确销量之间的平均距离”。你可以在刨冰示例中看到这是两个紫点之间的差异。\n\
+    \n## 综合运用\n\n端到端的训练过程如下：\n\n*   将训练数据输入模型。\n*   根据结果计算损失函数。\n*   朝着减少损失的方向更新模型参数。\n\
+    \n你将持续循环执行这些步骤，直到达到预定义的停止条件。这可能基于训练时间、训练周期数，甚至是更智能或更具应用感知的机制。\n\n## 专家建议\n\n训练模型时请记住以下建议。\n\
+    \n*   从业者通常使用已包含模型和模型训练算法可用实现的机器学习框架。你可以从头实现这些，但除非你在开发新模型或算法，否则可能不需要这样做。\n*  \
+    \ 从业者使用一个称为**模型选择**的过程来确定使用哪个模型或模型。成熟模型的列表在不断增长，即使是经验丰富的机器学习从业者，在用机器学习解决问题时也可能会尝试许多不同类型的模型。\n\
+    *   **超参数** 是模型上的设置，它们在训练期间不会改变，但会影响模型训练的速度或可靠性，例如模型应识别的聚类数量。\n*   做好迭代的准备。\n\n\
+    用机器学习进行务实的问题解决很少是一门精确的科学，你可能对数据或问题有假设，但最终证明是错误的。不要气馁。相反，要养成尝试新事物、衡量成功并跨迭代比较结果的习惯。\n\
+    \n## 扩展学习\n\n以上信息未在视频中涵盖，但为进阶读者提供。\n\n### 线性模型\n\n线性模型是入门课程中最常见的模型之一，它通过线性函数（想想\
+    \ `y = mx + b` 或 x-y 图表上的直线）简单地描述一组输入数字和一组输出数字之间的关系。\n\n分类任务通常使用密切相关的逻辑模型，它增加了一个额外的变换，将线性函数的输出映射到范围\
+    \ `[0, 1]`，解释为“属于目标类的概率”。线性模型训练速度快，并能为你提供一个极好的基线，以便与更复杂的模型进行比较。虽然更复杂的模型获得了大量媒体关注，但对于大多数新问题，建议考虑从简单模型开始。\n\
+    \n### 树模型\n\n树模型可能是入门课程中第二常见的模型类型。它们通过构建极其庞大的嵌套 if/else 代码块结构来学习分类或回归，在每个 if/else\
+    \ 代码块处将世界分割成不同的区域。训练过程确定这些分割的确切位置以及分配给每个叶子区域的值。\n\n例如，如果你试图确定光传感器处于阳光下还是阴影中，你可能会训练一个深度为\
+    \ 1 的树，其最终学习到的配置可能如下所示：\n\n```\nif (sensor_value > 0.698), then return 1; else\
+    \ return 0;\n```\n\n基于树的模型 `XGBoost` 常被用作此类模型的开箱即用实现，并包含此处未讨论的增强功能。尝试使用树模型快速获得基线，然后再转向更复杂的模型。\n\
+    \n### 深度学习模型\n\n深度学习极其流行且强大，是一种基于人脑功能概念模型的现代方法。模型（也称为神经网络）由神经元集合（非常简单的计算单元）组成，这些神经元通过权重（表示允许多少信息从一个神经元流向下一个神经元的数学表示）连接在一起。训练过程涉及为每个权重寻找数值。\n\
+    \n针对不同类型的问题建模或处理不同类型的数据，已经确定了各种神经网络结构。\n\n一个简短（但不完整！）的值得注意的示例列表包括：\n"
+  toc: []
+- raw: "*   FFNN: The most straightforward way of structuring a neural network, the\
+    \ Feed Forward Neural Network (FFNN) structures neurons in a series of layers,\
+    \ with each neuron in a layer containing weights to all neurons in the previous\
+    \ layer.\n\n*   CNN: Convolutional Neural Networks (CNN) represent nested filters\
+    \ over grid-organized data. They are by far the most commonly used type of model\
+    \ when processing images.\n\n*   RNN/LSTM: Recurrent Neural Networks (RNN) and\
+    \ the related Long Short-Term Memory (LSTM) model types are structured to effectively\
+    \ represent for loops in traditional computing, collecting state while iterating\
+    \ over some object. They can be used for processing sequences of data.\n\n*  \
+    \ Transformer: A more modern replacement for RNN/LSTMs, the transformer architecture\
+    \ enables training over larger datasets involving sequences of data.\n\nMachine\
+    \ Learning Using Python Libraries\n\nFor more classical models (linear, tree-based)\
+    \ as well as a set of common ML-related tools, take a look at scikit-learn. The\
+    \ web documentation for this library is also organized for those getting familiar\
+    \ with space and can be a great place to get familiar with some extremely useful\
+    \ tools and techniques.\n\nFor deep learning, mxnet, tensorflow, andpytorch are\
+    \ the three most common libraries. For the purposes of the majority of machine\
+    \ learning needs, each of these is feature-paired and equivalent.\n\nTerminology\n\
+    \nHyperparameters are settings on the model which are not changed during training\
+    \ but can affect how quickly or how reliably the model trains, such as the number\
+    \ of clusters the model should identify.\n\nA loss function is used to codify\
+    \ the model’s distance from this goal\n\nTraining dataset: The data on which the\
+    \ model will be trained. Most of your data will be here.\n\nTest dataset: The\
+    \ data withheld from the model during training, which is used to test how well\
+    \ your model will generalize to new data.\n\nModel parameters are settings or\
+    \ configurations the training algorithm can update to change how the model behaves.\n\
+    \nAdditional reading\n\n*   The Wikipedia entry on the bias-variance trade-off\
+    \ can help you understand more about this common machine learning concept.\n\n\
+    *   In this AWS Machine Learning blog post, you can see how to train a machine-learning\
+    \ algorithm to predict the impact of weather on air quality using Amazon SageMaker.\n\
+    \n## Step Four: Model Evaluation\n\nAfter you have collected your data and trained\
+    \ a model, you can start to evaluate how well your model is performing. The metrics\
+    \ used for evaluation are likely to be very specific to the problem you have defined.\
+    \ As you grow in your understanding of machine learning, you will be able to explore\
+    \ a wide variety of metrics that can enable you to evaluate effectively.\n\nUsing\
+    \ Model Accuracy\n\nModel accuracy is a fairly common evaluation metric. Accuracy\
+    \ is the fraction of predictions a model gets right.\n\nHere's an example:\n\n\
+    ![](Images/image00087.jpeg)\n\nImagine that you built a model to identify a flower\
+    \ as one of two common species based on measurable details like petal length.\
+    \ You want to know how often your model predicts the correct species. This would\
+    \ require you to look at your model's accuracy.\n\nExtended Learning\n\nThis information\
+    \ hasn't been covered in the above video but is provided for the advanced reader.\n\
+    \nUsing Log Loss\n\nLog loss seeks to calculate how uncertain your model is about\
+    \ the predictions it is generating. In this context, uncertainty refers to how\
+    \ likely a model thinks the predictions being generated are to be correct.\n\n\
+    ![](Images/image00088.jpeg)\n\nFor example, let's say you're trying to predict\
+    \ how likely a customer is to buy either a jacket or t-shirt.\n\nLog loss could\
+    \ be used to understand your model's uncertainty about a given prediction. In\
+    \ a single instance, your model could predict with 5% certainty that a customer\
+    \ is going to buy a t-shirt. In another instance, your model could predict with\
+    \ 80% certainty that a customer is going to buy a t-shirt. Log loss enables you\
+    \ to measure how strongly the model believes that its prediction is accurate.\n\
+    \nIn both cases, the model predicts that a customer will buy a t-shirt, but the\
+    \ model's certainty about that prediction can change.\n\nRemember: This Process\
+    \ is lterative\n\n![](Images/image00089.jpeg)\n\nEvery step we have gone through\
+    \ is highly iterative and can be changed or re-scoped during the course of a project.\
+    \ At each step, you might find that you need to go back and reevaluate some assumptions\
+    \ you had in previous steps. Don't worry! This ambiguity is normal.\n\nTerminology\n\
+    \nLog loss seeks to calculate how uncertain your model is about the predictions\
+    \ it is generating.\n\nModel Accuracy is the fraction of predictions a model gets\
+    \ right.\n\nAdditional reading\n\nThe tools used for model evaluation are often\
+    \ tailored to a specific use case, so it's difficult to generalize rules for choosing\
+    \ them. The following articles provide use cases and examples of specific metrics\
+    \ in use.\n\n*   This healthcare-based example, which automates the prediction\
+    \ of spinal pathology conditions, demonstrates how important it is to avoid false\
+    \ positive and false negative predictions using the tree-based xgboost model.\n\
+    \n*   The popular open-source library sklearn provides information about common\
+    \ metrics and how to use them.\n\n*   This entry from the AWS Machine Learning\
+    \ blog demonstrates the importance of choosing the correct model evaluation metrics\
+    \ for making accurate energy consumption estimates using Amazon Forecast.\n\n\
+    ## Step Five: Model Inference\n\nCongratulations! You're ready to deploy your\
+    \ model.\n\nOnce you have trained your model, have evaluated its effectiveness,\
+    \ and are satisfied with the results, you're ready to generate predictions on\
+    \ real-world problems using unseen data in the field. In machine learning, this\
+    \ process is often called inference.\n\nIterative Process\n\n![](Images/image00090.jpeg)\n\
+    \nEven after you deploy your model, you're always monitoring to make sure your\
+    \ model is producing the kinds of results that you expect. There may be times\
+    \ when you reinvestigate the data, modify some of the parameters in your model\
+    \ training algorithm, or even change the model type used for training.\n\n# CHAPTER\
+    \ THREE\n\n## Introduction to Examples\n\nThrough the remainder of the lesson,\
+    \ we will be walking through 3 different case study examples of machine learning\
+    \ tasks actually solving problems in the real world.\n\n*   Supervised learning\
+    \ \n\n    *   Using machine learning to predict housing prices in a neighborhood\
+    \ based on lot size and number of bedrooms\n\n*   Unsupervised learning \n\n \
+    \   *   Using machine learning to isolate micro-genres of books by analyzing the\
+    \ wording on the back cover description.\n\n*   Deep neural network \n\n    *\
+    \   While this type of task is beyond the scope of this lesson, we wanted to show\
+    \ you the power and versatility of modern machine learning. You will see how it\
+    \ can be used to analyze raw images from lab video footage from security cameras,\
+    \ trying to detect chemical spills.\n\n## Example One: House Price Prediction\n\
+    \nHouse price prediction is one of the most common examples used to introduce\
+    \ machine learning.\n\nTraditionally, real estate appraisers use many quantifiable\
+    \ details about a home (such as number of rooms, lot size, and year of construction)\
+    \ to help them estimate the value of a house.\n\nYou detect this relationship\
+    \ and believe that you could use machine learning to predict home prices.\n\n\
+    ![](Images/image00091.jpeg)\n\n### Step One: Define the Problem\n\nCan we estimate\
+    \ the price of a house based on lot size or the number of bedrooms?\n\nYou access\
+    \ the sale prices for recently sold homes or have them appraised. Since you have\
+    \ this data, this is a supervised learning task. You want to predict a continuous\
+    \ numeric value, so this task is also a regression task.\n\n![](Images/image00092.jpeg)\n\
+    \n### Step Two: Building a Dataset"
+  fmt: "\n# Machine Learning Model Types\n\n*   **FFNN**: The most straightforward\
+    \ way of structuring a neural network, the Feed Forward Neural Network (`FFNN`)\
+    \ structures neurons in a series of layers, with each neuron in a layer containing\
+    \ weights to all neurons in the previous layer.\n\n*   **CNN**: Convolutional\
+    \ Neural Networks (`CNN`) represent nested filters over grid-organized data. They\
+    \ are by far the most commonly used type of model when processing images.\n\n\
+    *   **RNN/LSTM**: Recurrent Neural Networks (`RNN`) and the related Long Short-Term\
+    \ Memory (`LSTM`) model types are structured to effectively represent `for` loops\
+    \ in traditional computing, collecting state while iterating over some object.\
+    \ They can be used for processing sequences of data.\n\n*   **Transformer**: A\
+    \ more modern replacement for `RNN`/`LSTM`s, the transformer architecture enables\
+    \ training over larger datasets involving sequences of data.\n\n# Machine Learning\
+    \ Using Python Libraries\n\nFor more classical models (linear, tree-based) as\
+    \ well as a set of common ML-related tools, take a look at `scikit-learn`. The\
+    \ web documentation for this library is also organized for those getting familiar\
+    \ with space and can be a great place to get familiar with some extremely useful\
+    \ tools and techniques.\n\nFor deep learning, `mxnet`, `tensorflow`, and `pytorch`\
+    \ are the three most common libraries. For the purposes of the majority of machine\
+    \ learning needs, each of these is feature-paired and equivalent.\n\n# Terminology\n\
+    \n**Hyperparameters** are settings on the model which are not changed during training\
+    \ but can affect how quickly or how reliably the model trains, such as the number\
+    \ of clusters the model should identify.\n\nA **loss function** is used to codify\
+    \ the model’s distance from this goal.\n\n**Training dataset**: The data on which\
+    \ the model will be trained. Most of your data will be here.\n\n**Test dataset**:\
+    \ The data withheld from the model during training, which is used to test how\
+    \ well your model will generalize to new data.\n\n**Model parameters** are settings\
+    \ or configurations the training algorithm can update to change how the model\
+    \ behaves.\n\n# Additional Reading\n\n*   The Wikipedia entry on the bias-variance\
+    \ trade-off can help you understand more about this common machine learning concept.\n\
+    \n*   In this AWS Machine Learning blog post, you can see how to train a machine-learning\
+    \ algorithm to predict the impact of weather on air quality using Amazon SageMaker.\n\
+    \n# Step Four: Model Evaluation\n\nAfter you have collected your data and trained\
+    \ a model, you can start to evaluate how well your model is performing. The metrics\
+    \ used for evaluation are likely to be very specific to the problem you have defined.\
+    \ As you grow in your understanding of machine learning, you will be able to explore\
+    \ a wide variety of metrics that can enable you to evaluate effectively.\n\n##\
+    \ Using Model Accuracy\n\nModel accuracy is a fairly common evaluation metric.\
+    \ Accuracy is the fraction of predictions a model gets right.\n\nHere's an example:\n\
+    \n![](Images/image00087.jpeg)\n\nImagine that you built a model to identify a\
+    \ flower as one of two common species based on measurable details like petal length.\
+    \ You want to know how often your model predicts the correct species. This would\
+    \ require you to look at your model's accuracy.\n\n## Extended Learning\n\nThis\
+    \ information hasn't been covered in the above video but is provided for the advanced\
+    \ reader.\n\n## Using Log Loss\n\nLog loss seeks to calculate how uncertain your\
+    \ model is about the predictions it is generating. In this context, uncertainty\
+    \ refers to how likely a model thinks the predictions being generated are to be\
+    \ correct.\n\n![](Images/image00088.jpeg)\n\nFor example, let's say you're trying\
+    \ to predict how likely a customer is to buy either a jacket or t-shirt.\n\nLog\
+    \ loss could be used to understand your model's uncertainty about a given prediction.\
+    \ In a single instance, your model could predict with 5% certainty that a customer\
+    \ is going to buy a t-shirt. In another instance, your model could predict with\
+    \ 80% certainty that a customer is going to buy a t-shirt. Log loss enables you\
+    \ to measure how strongly the model believes that its prediction is accurate.\n\
+    \nIn both cases, the model predicts that a customer will buy a t-shirt, but the\
+    \ model's certainty about that prediction can change.\n\n## Remember: This Process\
+    \ is Iterative\n\n![](Images/image00089.jpeg)\n\nEvery step we have gone through\
+    \ is highly iterative and can be changed or re-scoped during the course of a project.\
+    \ At each step, you might find that you need to go back and reevaluate some assumptions\
+    \ you had in previous steps. Don't worry! This ambiguity is normal.\n\n## Terminology\n\
+    \n**Log loss** seeks to calculate how uncertain your model is about the predictions\
+    \ it is generating.\n\n**Model Accuracy** is the fraction of predictions a model\
+    \ gets right.\n\n## Additional Reading\n\nThe tools used for model evaluation\
+    \ are often tailored to a specific use case, so it's difficult to generalize rules\
+    \ for choosing them. The following articles provide use cases and examples of\
+    \ specific metrics in use.\n\n*   This healthcare-based example, which automates\
+    \ the prediction of spinal pathology conditions, demonstrates how important it\
+    \ is to avoid false positive and false negative predictions using the tree-based\
+    \ `xgboost` model.\n\n*   The popular open-source library `sklearn` provides information\
+    \ about common metrics and how to use them.\n\n*   This entry from the AWS Machine\
+    \ Learning blog demonstrates the importance of choosing the correct model evaluation\
+    \ metrics for making accurate energy consumption estimates using Amazon Forecast.\n\
+    \n# Step Five: Model Inference\n\nCongratulations! You're ready to deploy your\
+    \ model.\n\nOnce you have trained your model, have evaluated its effectiveness,\
+    \ and are satisfied with the results, you're ready to generate predictions on\
+    \ real-world problems using unseen data in the field. In machine learning, this\
+    \ process is often called **inference**.\n\n## Iterative Process\n\n![](Images/image00090.jpeg)\n\
+    \nEven after you deploy your model, you're always monitoring to make sure your\
+    \ model is producing the kinds of results that you expect. There may be times\
+    \ when you reinvestigate the data, modify some of the parameters in your model\
+    \ training algorithm, or even change the model type used for training.\n\n# CHAPTER\
+    \ THREE\n\n## Introduction to Examples\n\nThrough the remainder of the lesson,\
+    \ we will be walking through 3 different case study examples of machine learning\
+    \ tasks actually solving problems in the real world.\n\n*   **Supervised learning**\n\
+    \    *   Using machine learning to predict housing prices in a neighborhood based\
+    \ on lot size and number of bedrooms\n\n*   **Unsupervised learning**\n    * \
+    \  Using machine learning to isolate micro-genres of books by analyzing the wording\
+    \ on the back cover description.\n\n*   **Deep neural network**\n    *   While\
+    \ this type of task is beyond the scope of this lesson, we wanted to show you\
+    \ the power and versatility of modern machine learning. You will see how it can\
+    \ be used to analyze raw images from lab video footage from security cameras,\
+    \ trying to detect chemical spills.\n\n## Example One: House Price Prediction\n\
+    \nHouse price prediction is one of the most common examples used to introduce\
+    \ machine learning.\n\nTraditionally, real estate appraisers use many quantifiable\
+    \ details about a home (such as number of rooms, lot size, and year of construction)\
+    \ to help them estimate the value of a house.\n\nYou detect this relationship\
+    \ and believe that you could use machine learning to predict home prices.\n\n\
+    ![](Images/image00091.jpeg)\n\n### Step One: Define the Problem\n\nCan we estimate\
+    \ the price of a house based on lot size or the number of bedrooms?\n\nYou access\
+    \ the sale prices for recently sold homes or have them appraised. Since you have\
+    \ this data, this is a **supervised learning** task. You want to predict a continuous\
+    \ numeric value, so this task is also a **regression** task.\n\n![](Images/image00092.jpeg)\n\
+    \n### Step Two: Building a Dataset\n"
+  trans: "\n# 机器学习模型类型\n\n*   **FFNN**：构建神经网络最直接的方式，前馈神经网络（`FFNN`）将神经元按一系列层级构建，每层中的每个神经元都包含通往上一层所有神经元的权重。\n\
+    \n*   **CNN**：卷积神经网络（`CNN`）表示网格组织数据上的嵌套滤波器。在处理图像时，它们是迄今为止最常用的模型类型。\n\n*   **RNN/LSTM**：循环神经网络（`RNN`）和相关的长短期记忆（`LSTM`）模型类型旨在有效表示传统计算中的\
+    \ `for` 循环，在迭代某个对象时收集状态。它们可用于处理数据序列。\n\n*   **Transformer**：一种更现代的 `RNN`/`LSTM`\
+    \ 替代架构，Transformer 架构支持在涉及数据序列的更大数据集上进行训练。\n\n# 使用 Python 库进行机器学习\n\n对于更经典的模型（线性、基于树的模型）以及一组常见的机器学习相关工具，请查看\
+    \ `scikit-learn`。该库的网络文档也面向初学者组织，是熟悉一些极其有用的工具和技术的绝佳场所。\n\n对于深度学习，`mxnet`、`tensorflow`\
+    \ 和 `pytorch` 是三个最常用的库。对于绝大多数机器学习需求，这些库在功能上是配对且等效的。\n\n# 术语\n\n**超参数** 是模型上的设置，在训练期间不会改变，但会影响模型训练的速度或可靠性，例如模型应识别的聚类数量。\n\
+    \n**损失函数** 用于量化模型距离目标的程度。\n\n**训练数据集**：模型将在此数据上进行训练。您的大部分数据将位于此处。\n\n**测试数据集**：训练期间从模型中保留的数据，用于测试模型泛化到新数据的能力。\n\
+    \n**模型参数** 是训练算法可更新以改变模型行为的设置或配置。\n\n# 补充阅读\n\n*   维基百科上关于偏差-方差权衡的条目可以帮助您更多地了解这一常见的机器学习概念。\n\
+    \n*   在此 AWS 机器学习博客文章中，您可以看到如何训练机器学习算法，以使用 Amazon SageMaker 预测天气对空气质量的影响。\n\n\
+    # 第四步：模型评估\n\n收集数据并训练模型后，您可以开始评估模型的表现。用于评估的指标很可能非常具体，取决于您定义的问题。随着您对机器学习理解的加深，您将能够探索各种指标，从而进行有效评估。\n\
+    \n## 使用模型准确率\n\n模型准确率是一种相当常见的评估指标。准确率是模型预测正确的预测所占比例。\n\n示例如下：\n\n![](img/image00087.jpeg)\n\
+    \n假设您构建了一个模型，根据花瓣长度等可测量细节，将花朵识别为两种常见物种中的一种。您想知道模型预测正确物种的频率。这需要您查看模型的准确率。\n\n##\
+    \ 扩展学习\n\n以上视频未涵盖此信息，但为进阶读者提供。\n\n## 使用对数损失\n\n对数损失旨在计算模型对其生成预测的不确定程度。在此语境下，不确定性是指模型认为生成的预测正确的可能性。\n\
+    \n![](img/image00088.jpeg)\n\n例如，假设您试图预测客户购买夹克或 T 恤的可能性。\n\n对数损失可用于了解模型对特定预测的不确定性。在某一实例中，您的模型可能以\
+    \ 5% 的确定性预测客户将购买 T 恤。在另一实例中，您的模型可能以 80% 的确定性预测客户将购买 T 恤。对数损失使您能够衡量模型对其预测准确性的信念程度。\n\
+    \n在这两种情况下，模型都预测客户将购买 T 恤，但模型对该预测的确定性可能会发生变化。\n\n## 请记住：此过程是迭代的\n\n![](img/image00089.jpeg)\n\
+    \n我们经历的每一步都是高度迭代的，并且可以在项目过程中进行更改或重新界定范围。在每一步中，您可能会发现需要回头重新评估之前步骤中的某些假设。别担心！这种模糊性是正常的。\n\
+    \n## 术语\n\n**对数损失** 旨在计算模型对其生成预测的不确定程度。\n\n**模型准确率** 是模型预测正确的预测所占比例。\n\n## 补充阅读\n\
+    \n用于模型评估的工具通常针对特定用例量身定制，因此很难为选择它们制定通用规则。以下文章提供了特定指标在使用中的用例和示例。\n\n*   这个基于医疗保健的示例，可自动预测脊柱病理状况，演示了使用基于树的\
+    \ `xgboost` 模型避免假阳性和假阴性预测的重要性。\n\n*   流行的开源库 `sklearn` 提供了关于常用指标及其用法的信息。\n\n*\
+    \   AWS 机器学习博客的这篇文章演示了选择正确的模型评估指标对于使用 Amazon Forecast 进行准确能耗估计的重要性。\n\n# 第五步：模型推理\n\
+    \n恭喜！您已准备好部署模型。\n\n一旦您训练了模型，评估了其有效性，并对结果感到满意，您就可以使用现实世界中未见过的数据，通过生成预测来解决实际问题。在机器学习中，这个过程通常称为\
+    \ **推理**。\n\n## 迭代过程\n\n![](img/image00090.jpeg)\n\n即使在部署模型后，您也始终在监控，以确保模型产生您预期的结果。有时您可能需要重新调查数据、修改模型训练算法中的某些参数，甚至更改用于训练的模型类型。\n\
+    \n# 第三章\n\n## 示例简介\n\n在本课的剩余部分中，我们将演示 3 个不同的案例研究示例，展示机器学习任务如何在现实世界中实际解决问题。\n\n\
+    *   **监督学习**\n    *   使用机器学习根据地块大小和卧室数量预测社区房价\n\n*   **无监督学习**\n    *   使用机器学习通过分析封底描述的措辞来隔离书籍的微流派\n\
+    \n*   **深度神经网络**\n    *   虽然此类任务超出了本课的范围，但我们想向您展示现代机器学习的强大功能和多功能性。您将看到它如何用于分析来自安防摄像头的实验室视频素材的原始图像，尝试检测化学品泄漏。\n\
+    \n## 示例一：房价预测\n\n房价预测是介绍机器学习最常用的示例之一。\n\n传统上，房地产评估师使用关于房屋的许多可量化细节（如房间数量、地块大小和建造年份）来帮助他们估算房屋价值。\n\
+    \n您发现了这种关系，并认为可以使用机器学习来预测房价。\n\n![](img/image00091.jpeg)\n\n### 第一步：定义问题\n\n我们能否根据地块大小或卧室数量来估算房价？\n\
+    \n您获取了近期售出房屋的成交价或对其进行评估。既然您拥有这些数据，这就是一项 **监督学习** 任务。您想要预测一个连续的数值，因此该任务也是一项 **回归**\
+    \ 任务。\n\n![](img/image00092.jpeg)\n\n### 第二步：构建数据集\n"
+  toc: []
+- raw: '*   Data collection: You collect numerous examples of homes sold in your neighborhood
+    within the past year, and pay a real estate appraiser to appraise the homes whose
+    selling price is not known.
+
+
+    *   Data exploration: You confirm that all of your data is numerical because most
+    machine learning models operate on sequences of numbers. If there is textual data,
+    you need to transform it into numbers. You''ll see this in the next example.
+
+
+    *   Data cleaning: Look for things such as missing information or outliers, such
+    as the 10-room mansion. Several techniques can be used to handle outliers, but
+    you can also just remove those from your dataset.
+
+
+    | No of Rooms || Lot Size (ft2) || House Value ($) |
+
+
+    | --- | --- | --- |
+
+
+    | 4 || 10,454 || 339,900 |
+
+
+    | 3 || 9,147 || 239,000 |
+
+
+    | 3 || 10,890 || 250,000 |
+
+
+    | 10 || 25,877 || 877,000 |
+
+
+    Data Cleaning: removing outlier values
+
+
+    *   Data visualization: You can plot home values against each of your input variables
+    to look for trends in your data. In the following chart, you see that when lot
+    size increases, the house value increases.
+
+
+    ![](Images/image00093.jpeg)
+
+
+    ### Step Three: Model Training
+
+
+    Prior to actually training your model, you need to split your data. The standard
+    practice is to put 80% of your dataset into a training dataset and 20% into a
+    test dataset.
+
+
+    Linear model selection
+
+
+    As you see in the preceding chart, when lot size increases, home values increase
+    too. This relationship is simple enough that a linear model can be used to represent
+    this relationship.
+
+
+    A linear model across a single input variable can be represented as a line. It
+    becomes a plane for two variables, and then a hyperplane for more than two variables.
+    The intuition, as a line with a constant slope, doesn''t change.
+
+
+    Using a Python library
+
+
+    The Python scikit-learn library has tools that can handle the implementation of
+    the model training algorithm for you.
+
+
+    ### Step Four: Evaluation
+
+
+    One of the most common evaluation metrics in a regression scenario is called root
+    mean square or RMS. The math is beyond the scope of this lesson, but RMS can be
+    thought of roughly as the "average error” across your test dataset, so you want
+    this value to be low.
+
+
+    ![](Images/image00094.jpeg)
+
+
+    In the following chart, you can see where the data points are in relation to the
+    blue line. You want the data points to be as close to the "average" line as possible,
+    which would mean less net error.
+
+
+    You compute the root mean square between your model’s prediction for a data point
+    in your test dataset and the true value from your data. This actual calculation
+    is beyond the scope of this lesson, but it''s good to understand the process at
+    a high level.
+
+
+    ![](Images/image00095.jpeg)
+
+
+    Interpreting Results
+
+
+    In general, as your model improves, you see a better RMS result. You may still
+    not be confident about whether the specific value you’ve computed is good or bad.
+
+
+    Many machine learning engineers manually count how many predictions were off by
+    a threshold (for example, $50,000 in this house pricing problem) to help determine
+    and verify the model''s accuracy.
+
+
+    ### Step Five: Inference: Try out your model
+
+
+    Now you are ready to put your model into action. As you can see in the following
+    image, this means seeing how well it predicts with new data not seen during model
+    training.
+
+
+    ![](Images/image00096.jpeg)
+
+
+    Terminology
+
+
+    *   Continuous: Floating-point values with an infinite range of possible values.
+    The opposite of categorical or discrete values, which take on a limited number
+    of possible values.
+
+
+    *   Hyperplane: A mathematical term for a surface that contains more than two
+    planes.
+
+
+    *   Plane: A mathematical term for a flat surface (like a piece of paper) on which
+    two points can be joined by a straight line.
+
+
+    *   Regression: A common task in supervised machine learning.
+
+
+    Additional reading
+
+
+    The Machine Learning Mastery blog is a fantastic resource for learning more about
+    machine learning. The following example blog posts dive deeper into training regression-based
+    machine learning models.
+
+
+    *   How to Develop Ridge Regression Models in Python offers another approach to
+    solving the problem in the example from this lesson.
+
+
+    *   Regression is a popular machine learning task, and you can use several different
+    model evaluation metrics with it.
+
+
+    ## Example Two: Book Genre Exploration
+
+
+    In this video, you saw how the machine learning process can be applied to an unsupervised
+    machine learning task that uses book description text to identify different micro-genres.
+
+
+    ### Step One: Define the Problem
+
+
+    ![](Images/image00097.jpeg)
+
+
+    Find clusters of similar books based on the presence of common words in the book
+    descriptions.
+
+
+    You do editorial work for a book recommendation company, and you want to write
+    an article on the largest book trends of the year. You believe that a trend called
+    "micro-genres" exists, and you have confidence that you can use the book description
+    text to identify these micro-genres.
+
+
+    By using an unsupervised machine learning technique called clustering, you can
+    test your hypothesis that the book description text can be used to identify these
+    "hidden" micro-genres.
+
+
+    Earlier in this lesson, you were introduced to the idea of unsupervised learning.
+    This machine learning task is especially useful when your data is not labeled.
+
+
+    ![](Images/image00098.jpeg)
+
+
+    ### Step Two: Build your Dataset
+
+
+    To test the hypothesis, you gather book description text for 800 romance books
+    published in the current year.
+
+
+    Data exploration, cleaning and preprocessing
+
+
+    For this project, you believe capitalization and verb tense will not matter, and
+    therefore you remove capitals and convert all verbs to the same tense using a
+    Python library built for processing human language. You also remove punctuation
+    and words you don’t think have useful meaning, like ''a'' and ''the''. The machine
+    learning community refers to these words as stop words.
+
+
+    Before you can train the model, you need to do some data preprocessing, called
+    data vectorization, to convert text into numbers.
+
+
+    You transform this book description text into what is called a bag of wordsrepresentation
+    shown in the following image so that it is understandable by machine learning
+    models.
+
+
+    How the bag of words representation works is beyond the scope of this course.
+    If you are interested in learning more, see the Additional Reading section at
+    the bottom of the section.
+
+
+    ![](Images/image00099.jpeg)
+
+
+    ### Step Three: Train the Model
+
+
+    Now you are ready to train your model.
+
+
+    You pick a common cluster-finding model called k-means. In this model, you can
+    change a model parameter, k, to be equal to how many clusters the model will try
+    to find in your dataset.
+
+
+    Your data is unlabeled: you don''t how many microgenres might exist. So you train
+    your model multiple times using different values for k each time.
+
+
+    What does this even mean? In the following graphs, you can see examples of when
+    k=2 and when k=3.
+
+
+    ![](Images/image00100.jpeg)
+
+
+    During the model evaluation phase, you plan on using a metric to find which value
+    for k is most appropriate.
+
+
+    ### Step Four: Model Evaluation
+
+
+    In machine learning, numerous statistical metrics or methods are available to
+    evaluate a model. In this use case, the silhouette coefficient is a good choice.
+    This metric describes how well your data was clustered by the model. To find the
+    optimal number of clusters, you plot the silhouette coefficient as shown in the
+    following image below. You find the optimal value is when k=19.
+
+
+    ![](Images/image00101.jpeg)
+
+
+    Often, machine learning practitioners do a manual evaluation of the model''s findings.
+
+
+    You find one cluster that contains a large collection of books you can categorize
+    as “paranormal teen romance.” This trend is known in your industry, and therefore
+    you feel somewhat confident in your machine learning approach. You don’t know
+    if every cluster is going to be as cohesive as this, but you decide to use this
+    model to see if you can find anything interesting about which to write an article.'
+  fmt: '
+
+    # 机器学习流程示例
+
+
+    ## 示例一：房价预测
+
+
+    ### 步骤一：定义问题
+
+    （原文未明确列出，但隐含为预测房屋价值）
+
+
+    ### 步骤二：构建数据集
+
+
+    *   **数据收集**：收集过去一年社区内售出房屋的大量样本，并聘请房地产评估师对售价未知的房屋进行评估。
+
+    *   **数据探索**：确认所有数据均为数值型，因为大多数机器学习模型基于数字序列运行。若存在文本数据，需将其转换为数字（下个示例将演示此过程）。
+
+    *   **数据清洗**：检查缺失信息或异常值（如 10 室豪宅）。处理异常值有多种技术，也可直接从数据集中移除。
+
+
+    | 房间数 | 占地面积 (ft²) | 房屋价值 ($) |
+
+    | --- | --- | --- |
+
+    | 4 | 10,454 | 339,900 |
+
+    | 3 | 9,147 | 239,000 |
+
+    | 3 | 10,890 | 250,000 |
+
+    | 10 | 25,877 | 877,000 |
+
+
+    **数据清洗**：移除异常值
+
+
+    *   **数据可视化**：将房屋价值与各输入变量绘图以观察趋势。下图显示占地面积增加时，房屋价值也随之增加。
+
+
+    ![](Images/image00093.jpeg)
+
+
+    ### 步骤三：模型训练
+
+
+    正式训练前需划分数据。标准做法是将 80% 数据置于训练集，20% 置于测试集。
+
+
+    #### 线性模型选择
+
+
+    如前图所示，占地面积与房屋价值呈正相关。这种关系足够简单，可用线性模型表示。
+
+
+    单输入变量的线性模型可表示为一条线，两个变量为一个平面，两个以上变量则为超平面。其直觉（恒定斜率的线）不变。
+
+
+    #### 使用 Python 库
+
+
+    Python `scikit-learn` 庅提供工具处理模型训练算法的实现。
+
+
+    ### 步骤四：评估
+
+
+    回归场景中常用评估指标为均方根误差（`RMS` / `RMSE`）。数学细节超出本课范围，但可将 `RMS` 粗略理解为测试集上的“平均误差”，故期望该值越低越好。
+
+
+    ![](Images/image00094.jpeg)
+
+
+    下图展示数据点相对于蓝线（拟合线）的分布。期望数据点尽可能贴近“平均”线，意味着净误差更小。
+
+
+    计算测试集中数据点的模型预测值与真实值之间的均方根误差。具体计算超出本课范围，但理解其高层流程很有帮助。
+
+
+    ![](Images/image00095.jpeg)
+
+
+    #### 结果解读
+
+
+    通常模型改进会带来更好的 `RMS` 结果，但可能仍难判断具体数值的优劣。
+
+
+    许多机器学习工程师会手动统计偏离阈值（如本房价问题中的 $50,000）的预测数量，以辅助判断和验证模型准确性。
+
+
+    ### 步骤五：推理：试用模型
+
+
+    现可投入模型使用。下图展示其对训练未见新数据的预测效果。
+
+
+    ![](Images/image00096.jpeg)
+
+
+    ### 术语表
+
+
+    *   **连续值**：可能取值范围无限的浮点数。与分类值或离散值（仅取有限可能值）相对。
+
+    *   **超平面**：包含两个以上平面的数学曲面术语。
+
+    *   **平面**：可用直线连接两点的平坦数学曲面（如一张纸）。
+
+    *   **回归**：监督式机器学习中的常见任务。
+
+
+    ### 扩展阅读
+
+
+    *Machine Learning Mastery* 博客是深入学习机器学习的绝佳资源。以下文章深入探讨基于回归的机器学习模型训练：
+
+
+    *   *How to Develop Ridge Regression Models in Python*：提供另一种解决本课示例问题的方法。
+
+    *   回归是流行的机器学习任务，可搭配多种模型评估指标使用。
+
+
+    ---
+
+
+    ## 示例二：图书流派探索
+
+
+    本视频演示如何将机器学习流程应用于无监督学习任务，利用图书描述文本识别不同微流派。
+
+
+    ### 步骤一：定义问题
+
+
+    ![](Images/image00097.jpeg)
+
+
+    基于图书描述中共同词汇的出现情况，寻找相似图书的聚类。
+
+
+    你在图书推荐公司从事编辑工作，欲撰写年度最大图书趋势文章。你认为存在“微流派”趋势，并确信可利用图书描述文本识别这些微流派。
+
+
+    通过一种名为聚类的无监督机器学习技术，可验证你的假设：图书描述文本可用于识别这些“隐藏”的微流派。
+
+
+    本课前文介绍了无监督学习概念。当数据未标记时，此类机器学习任务尤为有用。
+
+
+    ![](Images/image00098.jpeg)
+
+
+    ### 步骤二：构建数据集
+
+
+    为验证假设，收集当年出版的 800 本言情小说的描述文本。
+
+
+    #### 数据探索、清洗与预处理
+
+
+    项目中认为大小写和动词时态不影响结果，故使用处理人类语言的 Python 库移除大写并统一动词时态。同时移除标点及无实际意义的词（如 ''a''、''the''），机器学习界称这些为**停用词**。
+
+
+    训练模型前需进行数据预处理——**数据向量化**，将文本转为数字。
+
+
+    将图书描述文本转换为下图所示的**词袋表示**，使其可被机器学习模型理解。
+
+
+    词袋表示的工作原理超出本课程范围，详见本节底部“扩展阅读”。
+
+
+    ![](Images/image00099.jpeg)
+
+
+    ### 步骤三：训练模型
+
+
+    现可开始训练模型。
+
+
+    选用常见聚类模型 **k-means**。该模型中，可调整参数 `k` 为模型尝试寻找的聚类数量。
+
+
+    数据未标记：不知可能存在多少微流派。故使用不同 `k` 值多次训练模型。
+
+
+    这意味着什么？下图展示 `k=2` 和 `k=3` 时的示例。
+
+
+    ![](Images/image00100.jpeg)
+
+
+    模型评估阶段计划使用指标寻找最适合的 `k` 值。
+
+
+    ### 步骤四：模型评估
+
+
+    机器学习中有大量统计指标或方法评估模型。本用例中，**轮廓系数** 是良好选择。该指标描述模型对数据聚类的效果。通过绘制轮廓系数（如下图）寻找最优聚类数，发现
+    `k=19` 时为最优值。
+
+
+    ![](Images/image00101.jpeg)
+
+
+    机器学习从业者常人工评估模型发现。
+
+
+    你发现一个聚类包含大量可归类为“超自然青春言情”的图书。该趋势业内已知，故对你的机器学习方法有一定信心。虽不知每个聚类是否都如此内聚，但决定使用该模型看能否发现可供撰写文章的有趣内容。
+
+    '
+  trans: '
+
+
+    # 机器学习流程示例
+
+
+    ## 示例一：房价预测
+
+
+    ### 步骤一：定义问题
+
+    （原文未明确列出，但隐含为预测房屋价值）
+
+
+    ### 步骤二：构建数据集
+
+
+    *   **数据收集**：收集过去一年社区内售出房屋的大量样本，并聘请房地产评估师对售价未知的房屋进行评估。
+
+    *   **数据探索**：确认所有数据均为数值型，因为大多数机器学习模型基于数字序列运行。若存在文本数据，需将其转换为数字（下个示例将演示此过程）。
+
+    *   **数据清洗**：检查缺失信息或异常值（如 10 室豪宅）。处理异常值有多种技术，也可直接从数据集中移除。
+
+
+    | 房间数 | 占地面积 (ft²) | 房屋价值 ($) |
+
+    | --- | --- | --- |
+
+    | 4 | 10,454 | 339,900 |
+
+    | 3 | 9,147 | 239,000 |
+
+    | 3 | 10,890 | 250,000 |
+
+    | 10 | 25,877 | 877,000 |
+
+
+    **数据清洗**：移除异常值
+
+
+    *   **数据可视化**：将房屋价值与各输入变量绘图以观察趋势。下图显示占地面积增加时，房屋价值也随之增加。
+
+
+    ![](img/image00093.jpeg)
+
+
+    ### 步骤三：模型训练
+
+
+    正式训练前需划分数据。标准做法是将 80% 数据置于训练集，20% 置于测试集。
+
+
+    #### 线性模型选择
+
+
+    如前图所示，占地面积与房屋价值呈正相关。这种关系足够简单，可用线性模型表示。
+
+
+    单输入变量的线性模型可表示为一条线，两个变量为一个平面，两个以上变量则为超平面。其直觉（恒定斜率的线）不变。
+
+
+    #### 使用 Python 库
+
+
+    Python `scikit-learn` 库提供工具处理模型训练算法的实现。
+
+
+    ### 步骤四：评估
+
+
+    回归场景中常用评估指标为均方根误差（`RMS` / `RMSE`）。数学细节超出本课范围，但可将 `RMS` 粗略理解为测试集上的“平均误差”，故期望该值越低越好。
+
+
+    ![](img/image00094.jpeg)
+
+
+    下图展示数据点相对于蓝线（拟合线）的分布。期望数据点尽可能贴近“平均”线，意味着净误差更小。
+
+
+    计算测试集中数据点的模型预测值与真实值之间的均方根误差。具体计算超出本课范围，但理解其高层流程很有帮助。
+
+
+    ![](img/image00095.jpeg)
+
+
+    #### 结果解读
+
+
+    通常模型改进会带来更好的 `RMS` 结果，但可能仍难判断具体数值的优劣。
+
+
+    许多机器学习工程师会手动统计偏离阈值（如本房价问题中的 $50,000）的预测数量，以辅助判断和验证模型准确性。
+
+
+    ### 步骤五：推理：试用模型
+
+
+    现可投入模型使用。下图展示其对训练未见新数据的预测效果。
+
+
+    ![](img/image00096.jpeg)
+
+
+    ### 术语表
+
+
+    *   **连续值**：可能取值范围无限的浮点数。与分类值或离散值（仅取有限可能值）相对。
+
+    *   **超平面**：包含两个以上平面的数学曲面术语。
+
+    *   **平面**：可用直线连接两点的平坦数学曲面（如一张纸）。
+
+    *   **回归**：监督式机器学习中的常见任务。
+
+
+    ### 扩展阅读
+
+
+    *Machine Learning Mastery* 博客是深入学习机器学习的绝佳资源。以下文章深入探讨基于回归的机器学习模型训练：
+
+
+    *   *How to Develop Ridge Regression Models in Python*：提供另一种解决本课示例问题的方法。
+
+    *   回归是流行的机器学习任务，可搭配多种模型评估指标使用。
+
+
+    ---
+
+
+    ## 示例二：图书流派探索
+
+
+    本视频演示如何将机器学习流程应用于无监督学习任务，利用图书描述文本识别不同微流派。
+
+
+    ### 步骤一：定义问题
+
+
+    ![](img/image00097.jpeg)
+
+
+    基于图书描述中共同词汇的出现情况，寻找相似图书的聚类。
+
+
+    你在图书推荐公司从事编辑工作，欲撰写年度最大图书趋势文章。你认为存在“微流派”趋势，并确信可利用图书描述文本识别这些微流派。
+
+
+    通过一种名为聚类的无监督机器学习技术，可验证你的假设：图书描述文本可用于识别这些“隐藏”的微流派。
+
+
+    本课前文介绍了无监督学习概念。当数据未标记时，此类机器学习任务尤为有用。
+
+
+    ![](img/image00098.jpeg)
+
+
+    ### 步骤二：构建数据集
+
+
+    为验证假设，收集当年出版的 800 本言情小说的描述文本。
+
+
+    #### 数据探索、清洗与预处理
+
+
+    项目中认为大小写和动词时态不影响结果，故使用处理人类语言的 Python 库移除大写并统一动词时态。同时移除标点及无实际意义的词（如 ''a''、''the''），机器学习界称这些为**停用词**。
+
+
+    训练模型前需进行数据预处理——**数据向量化**，将文本转为数字。
+
+
+    将图书描述文本转换为下图所示的**词袋表示**，使其可被机器学习模型理解。
+
+
+    词袋表示的工作原理超出本课程范围，详见本节底部“扩展阅读”。
+
+
+    ![](img/image00099.jpeg)
+
+
+    ### 步骤三：训练模型
+
+
+    现可开始训练模型。
+
+
+    选用常见聚类模型 **k-means**。该模型中，可调整参数 `k` 为模型尝试寻找的聚类数量。
+
+
+    数据未标记：不知可能存在多少微流派。故使用不同 `k` 值多次训练模型。
+
+
+    这意味着什么？下图展示 `k=2` 和 `k=3` 时的示例。
+
+
+    ![](img/image00100.jpeg)
+
+
+    模型评估阶段计划使用指标寻找最适合的 `k` 值。
+
+
+    ### 步骤四：模型评估
+
+
+    机器学习中有大量统计指标或方法评估模型。本用例中，**轮廓系数** 是良好选择。该指标描述模型对数据聚类的效果。通过绘制轮廓系数（如下图）寻找最优聚类数，发现
+    `k=19` 时为最优值。
+
+
+    ![](img/image00101.jpeg)
+
+
+    机器学习从业者常人工评估模型发现。
+
+
+    你发现一个聚类包含大量可归类为“超自然青春言情”的图书。该趋势业内已知，故对你的机器学习方法有一定信心。虽不知每个聚类是否都如此内聚，但决定使用该模型看能否发现可供撰写文章的有趣内容。
+
+
+    '
+  toc: []
+- raw: "### Step Five: Inference (Use the Model)\n\nAs you inspect the different clusters\
+    \ found when k=19, you find a surprisingly large cluster of books. Here's an example\
+    \ from fictionalized cluster #7.\n\n![](Images/image00102.jpeg)\n\nAs you inspect\
+    \ the preceding table, you can see that most of these text snippets are indicating\
+    \ that the characters are in some kind of long-distance relationship. You see\
+    \ a few other self-consistent clusters and feel you now have enough useful data\
+    \ to begin writing an article on unexpected modern romance microgenres.\n\nTerminology\n\
+    \n*   Bag of words: A technique used to extract features from the text. It counts\
+    \ how many times a word appears in a document (corpus), and then transforms that\
+    \ information into a dataset.\n\n*   Data vectorization: A process that converts\
+    \ non-numeric data into a numerical format so that it can be used by a machine\
+    \ learning model.\n\n*   Silhouette coefficient: A score from -1 to 1 describing\
+    \ the clusters found during modeling. A score near zero indicates overlapping\
+    \ clusters, and scores less than zero indicate data points assigned to incorrect\
+    \ clusters. A score approaching 1 indicates successful identification of discrete\
+    \ non-overlapping clusters.\n\n*   Stop words: A list of words removed by natural\
+    \ language processing tools when building your dataset. There is no single universal\
+    \ list of stop words used by all-natural language processing tools.\n\nAdditional\
+    \ reading\n\nMachine Learning Mastery is a great resource for finding examples\
+    \ of machine learning projects.\n\nThe How to Develop a Deep Learning Bag-of-Words\
+    \ Model for Sentiment Analysis (Text Classification) blog post provides an example\
+    \ using a bag of words–based approach pair with a deep learning model.\n\n## Example\
+    \ Three: Spill Detection from Video\n\nIn the previous two examples, we used classical\
+    \ methods like linear models and k-means to solve machine learning tasks. In this\
+    \ example, we’ll use a more modern model type.\n\nNote: This example uses a neural\
+    \ network. The algorithm for how a neural network works is beyond the scope of\
+    \ this lesson. However, there is still value in seeing how machine learning applies\
+    \ in this case.\n\n### Step One: Defining the Problem\n\nImagine you run a company\
+    \ that offers specialized on-site janitorial services. A client, an industrial\
+    \ chemical plant, requires a fast response for spills and other health hazards.\
+    \ You realize if you could automatically detect spills using the plant's surveillance\
+    \ system, you could mobilize your janitorial team faster.\n\nMachine learning\
+    \ could be a valuable tool to solve this problem.\n\n![](Images/image00103.jpeg)\n\
+    \n### Step Two: Model Training (and selection)\n\nThis task is a supervised classification\
+    \ task, as shown in the following image. As shown in the image above, your goal\
+    \ will be to predict if each image belongs to one of the following classes:\n\n\
+    *   Contains spill\n\n*   Does not contain spill\n\n![](Images/image00104.jpeg)\n\
+    \nStep Two: Building a Dataset\n\n*   Collecting \n\n    *   Using historical\
+    \ data, as well as safely staged spills, you quickly build a collection of images\
+    \ that contain both spills and non-spills in multiple lighting conditions and\
+    \ environments.\n\n*   Exploring and cleaning \n\n    *   You go through all the\
+    \ photos to ensure the spill is clearly in the shot. There are Python tools and\
+    \ other techniques available to improve image quality, which you can use later\
+    \ if you determine a need to iterate.\n\n*   Data vectorization (converting to\
+    \ numbers) \n\n    *   Many models require numerical data, so all your image data\
+    \ needs to be transformed into a numerical format. Python tools can help you do\
+    \ this automatically.\n\n    *   In the following image, you can see how each\
+    \ pixel in the image on the left can be represented in the image on the right\
+    \ by a number between 0 and 1, with 0 being completely black and 1 being completely\
+    \ white.\n\n![](Images/image00105.jpeg)\n\nSplit the data\n\n*   You split your\
+    \ image data into a training dataset and a test dataset.\n\n### Step Three: Model\
+    \ Training\n\nTraditionally, solving this problem would require hand-engineering\
+    \ features on top of the underlying pixels (for example, locations of prominent\
+    \ edges and corners in the image), and then training a model on these features.\n\
+    \nToday, deep neural networks are the most common tool used for solving this kind\
+    \ of problem. Many deep neural network models are structured to learn the features\
+    \ on top of the underlying pixels so you don’t have to learn them. You’ll have\
+    \ a chance to take a deeper look at this in the next lesson, so we’ll keep things\
+    \ high-level for now.\n\nCNN (convolutional neural network)\n\nNeural networks\
+    \ are beyond the scope of this lesson, but you can think of them as a collection\
+    \ of very simple models connected together. These simple models are called neurons,\
+    \ and the connections between these models are trainable model parameters called\
+    \ weights.\n\nConvolutional neural networks are a special type of neural network\
+    \ particularly good at processing images.\n\n### Step Four: Model Evaluation\n\
+    \nAs you saw in the last example, there are many different statistical metrics\
+    \ you can use to evaluate your model. As you gain more experience in machine learning,\
+    \ you will learn how to research which metrics can help you evaluate your model\
+    \ most effectively. Here's a list of common metrics:\n\n| Accuracy || False positive\
+    \ rate || Precision |\n\n| --- | --- | --- |\n\n| Confusion matrix || False negative\
+    \ rate || Recall |\n\n| F1 Score || Log Loss || ROC curve |\n\n|   || Negative\
+    \ predictive value || Specificity |\n\nIn cases such as this, accuracy might not\
+    \ be the best evaluation mechanism.\n\nWhy not? You realize the model will see\
+    \ the 'Does not contain spill' class almost all the time, so any model that just\
+    \ predicts “no-spill” most of the time will seem pretty accurate.\n\nWhat you\
+    \ really care about is an evaluation tool that rarely misses a real spill.\n\n\
+    After doing some internet sleuthing, you realize this is a common problem and\
+    \ that Precision and Recall will be effective. You can think of precision as answering\
+    \ the question, \"Of all predictions of a spill, how many were right?\" and recall\
+    \ as answering the question, \"Of all actual spills, how many did we detect?\"\
+    \n\nManual evaluation plays an important role. You are unsure if your staged spills\
+    \ are sufficiently realistic compared to actual spills. To get a better sense\
+    \ how well your model performs with actual spills, you find additional examples\
+    \ from historical records. This allows you to confirm that your model is performing\
+    \ satisfactorily.\n\n### Step Five: Model Inference\n\nThe model can be deployed\
+    \ on a system that enables you to run machine learning workloads such as AWS Panorama.\n\
+    \nThankfully, most of the time, the results will be from the class 'Does not contain\
+    \ spill.\n\n![](Images/image00106.jpeg)\n\nBut, when the class 'Contains spill'\
+    \ is detected, a simple paging system could alert the team to respond.\n\n![](Images/image00107.jpeg)\n\
+    \nTerminology\n\nConvolutional neural networks(CNN) are a special type of neural\
+    \ network particularly good at processing images.\n\nNeural networks: a collection\
+    \ of very simple models connected together.\n\n*   These simple models are called\
+    \ neurons\n\n*   the connections between these models are trainable model parameters\
+    \ called weights.\n\nAdditional reading\n\nAs you continue your machine learning\
+    \ journey, you will start to recognize problems that are excellent candidates\
+    \ for machine learning.\n\nThe AWS Machine Learning Blog is a great resource for\
+    \ finding more examples of machine learning projects.\n\n*   In the Protecting\
+    \ people from hazardous areas through virtual boundaries with Computer Vision\
+    \ blog post, you can see a more detailed example of the deep learning process\
+    \ described in this lesson.\n\n# Lesson Review\n\nCongratulations on making it\
+    \ through the lesson. Let's review what you learning"
+  fmt: "\n### Step Five: Inference (Use the Model)\n\nAs you inspect the different\
+    \ clusters found when `k=19`, you find a surprisingly large cluster of books.\
+    \ Here's an example from fictionalized cluster #7.\n\n![](Images/image00102.jpeg)\n\
+    \nAs you inspect the preceding table, you can see that most of these text snippets\
+    \ are indicating that the characters are in some kind of long-distance relationship.\
+    \ You see a few other self-consistent clusters and feel you now have enough useful\
+    \ data to begin writing an article on unexpected modern romance microgenres.\n\
+    \n#### Terminology\n\n*   **Bag of words**: A technique used to extract features\
+    \ from the text. It counts how many times a word appears in a document (corpus),\
+    \ and then transforms that information into a dataset.\n*   **Data vectorization**:\
+    \ A process that converts non-numeric data into a numerical format so that it\
+    \ can be used by a machine learning model.\n*   **Silhouette coefficient**: A\
+    \ score from -1 to 1 describing the clusters found during modeling. A score near\
+    \ zero indicates overlapping clusters, and scores less than zero indicate data\
+    \ points assigned to incorrect clusters. A score approaching 1 indicates successful\
+    \ identification of discrete non-overlapping clusters.\n*   **Stop words**: A\
+    \ list of words removed by natural language processing tools when building your\
+    \ dataset. There is no single universal list of stop words used by all-natural\
+    \ language processing tools.\n\n#### Additional reading\n\nMachine Learning Mastery\
+    \ is a great resource for finding examples of machine learning projects.\n\nThe\
+    \ *How to Develop a Deep Learning Bag-of-Words Model for Sentiment Analysis (Text\
+    \ Classification)* blog post provides an example using a bag of words–based approach\
+    \ pair with a deep learning model.\n\n## Example Three: Spill Detection from Video\n\
+    \nIn the previous two examples, we used classical methods like linear models and\
+    \ k-means to solve machine learning tasks. In this example, we’ll use a more modern\
+    \ model type.\n\n> **Note**: This example uses a neural network. The algorithm\
+    \ for how a neural network works is beyond the scope of this lesson. However,\
+    \ there is still value in seeing how machine learning applies in this case.\n\n\
+    ### Step One: Defining the Problem\n\nImagine you run a company that offers specialized\
+    \ on-site janitorial services. A client, an industrial chemical plant, requires\
+    \ a fast response for spills and other health hazards. You realize if you could\
+    \ automatically detect spills using the plant's surveillance system, you could\
+    \ mobilize your janitorial team faster.\n\nMachine learning could be a valuable\
+    \ tool to solve this problem.\n\n![](Images/image00103.jpeg)\n\n### Step Two:\
+    \ Model Training (and selection)\n\nThis task is a supervised classification task,\
+    \ as shown in the following image. As shown in the image above, your goal will\
+    \ be to predict if each image belongs to one of the following classes:\n\n*  \
+    \ Contains spill\n*   Does not contain spill\n\n![](Images/image00104.jpeg)\n\n\
+    #### Step Two: Building a Dataset\n\n*   **Collecting**\n    *   Using historical\
+    \ data, as well as safely staged spills, you quickly build a collection of images\
+    \ that contain both spills and non-spills in multiple lighting conditions and\
+    \ environments.\n*   **Exploring and cleaning**\n    *   You go through all the\
+    \ photos to ensure the spill is clearly in the shot. There are Python tools and\
+    \ other techniques available to improve image quality, which you can use later\
+    \ if you determine a need to iterate.\n*   **Data vectorization (converting to\
+    \ numbers)**\n    *   Many models require numerical data, so all your image data\
+    \ needs to be transformed into a numerical format. Python tools can help you do\
+    \ this automatically.\n    *   In the following image, you can see how each pixel\
+    \ in the image on the left can be represented in the image on the right by a number\
+    \ between 0 and 1, with 0 being completely black and 1 being completely white.\n\
+    \n![](Images/image00105.jpeg)\n\n*   **Split the data**\n    *   You split your\
+    \ image data into a training dataset and a test dataset.\n\n### Step Three: Model\
+    \ Training\n\nTraditionally, solving this problem would require hand-engineering\
+    \ features on top of the underlying pixels (for example, locations of prominent\
+    \ edges and corners in the image), and then training a model on these features.\n\
+    \nToday, deep neural networks are the most common tool used for solving this kind\
+    \ of problem. Many deep neural network models are structured to learn the features\
+    \ on top of the underlying pixels so you don’t have to learn them. You’ll have\
+    \ a chance to take a deeper look at this in the next lesson, so we’ll keep things\
+    \ high-level for now.\n\n#### CNN (convolutional neural network)\n\nNeural networks\
+    \ are beyond the scope of this lesson, but you can think of them as a collection\
+    \ of very simple models connected together. These simple models are called neurons,\
+    \ and the connections between these models are trainable model parameters called\
+    \ weights.\n\nConvolutional neural networks are a special type of neural network\
+    \ particularly good at processing images.\n\n### Step Four: Model Evaluation\n\
+    \nAs you saw in the last example, there are many different statistical metrics\
+    \ you can use to evaluate your model. As you gain more experience in machine learning,\
+    \ you will learn how to research which metrics can help you evaluate your model\
+    \ most effectively. Here's a list of common metrics:\n\n| Accuracy | False positive\
+    \ rate | Precision |\n| :--- | :--- | :--- |\n| Confusion matrix | False negative\
+    \ rate | Recall |\n| F1 Score | Log Loss | ROC curve |\n|  | Negative predictive\
+    \ value | Specificity |\n\nIn cases such as this, accuracy might not be the best\
+    \ evaluation mechanism.\n\nWhy not? You realize the model will see the 'Does not\
+    \ contain spill' class almost all the time, so any model that just predicts “no-spill”\
+    \ most of the time will seem pretty accurate.\n\nWhat you really care about is\
+    \ an evaluation tool that rarely misses a real spill.\n\nAfter doing some internet\
+    \ sleuthing, you realize this is a common problem and that Precision and Recall\
+    \ will be effective. You can think of precision as answering the question, \"\
+    Of all predictions of a spill, how many were right?\" and recall as answering\
+    \ the question, \"Of all actual spills, how many did we detect?\"\n\nManual evaluation\
+    \ plays an important role. You are unsure if your staged spills are sufficiently\
+    \ realistic compared to actual spills. To get a better sense how well your model\
+    \ performs with actual spills, you find additional examples from historical records.\
+    \ This allows you to confirm that your model is performing satisfactorily.\n\n\
+    ### Step Five: Model Inference\n\nThe model can be deployed on a system that enables\
+    \ you to run machine learning workloads such as `AWS Panorama`.\n\nThankfully,\
+    \ most of the time, the results will be from the class 'Does not contain spill'.\n\
+    \n![](Images/image00106.jpeg)\n\nBut, when the class 'Contains spill' is detected,\
+    \ a simple paging system could alert the team to respond.\n\n![](Images/image00107.jpeg)\n\
+    \n#### Terminology\n\n**Convolutional neural networks (CNN)** are a special type\
+    \ of neural network particularly good at processing images.\n\n**Neural networks**:\
+    \ a collection of very simple models connected together.\n\n*   These simple models\
+    \ are called neurons\n*   The connections between these models are trainable model\
+    \ parameters called weights.\n\n#### Additional reading\n\nAs you continue your\
+    \ machine learning journey, you will start to recognize problems that are excellent\
+    \ candidates for machine learning.\n\nThe AWS Machine Learning Blog is a great\
+    \ resource for finding more examples of machine learning projects.\n\n*   In the\
+    \ *Protecting people from hazardous areas through virtual boundaries with Computer\
+    \ Vision* blog post, you can see a more detailed example of the deep learning\
+    \ process described in this lesson.\n\n# Lesson Review\n\nCongratulations on making\
+    \ it through the lesson. Let's review what you learning\n"
+  trans: "\n\n### 第五步：推理（使用模型）\n\n当你检查 `k=19` 时发现的不同簇时，你发现了一个令人惊讶的大型图书簇。以下是虚构簇 #7\
+    \ 的一个示例。\n\n![](img/image00102.jpeg)\n\n当你检查上表时，可以看到这些文本片段大多表明角色处于某种异地恋中。你还看到了其他几个自洽的簇，并觉得现在拥有了足够的有用数据，可以开始撰写一篇关于意想不到的现代言情微流派的文章。\n\
+    \n#### 术语\n\n*   **词袋**：一种用于从文本中提取特征的技术。它统计单词在文档（语料库）中出现的次数，然后将该信息转换为数据集。\n* \
+    \  **数据向量化**：一种将非数值数据转换为数值格式的过程，以便机器学习模型使用。\n*   **轮廓系数**：一个从 -1 到 1 的分数，用于描述建模过程中发现的簇。接近零的分数表示簇重叠，小于零的分数表示数据点被分配到了错误的簇。接近\
+    \ 1 的分数表示成功识别出了离散的非重叠簇。\n*   **停用词**：自然语言处理工具在构建数据集时移除的一组单词。没有一份被所有自然语言处理工具通用的通用停用词列表。\n\
+    \n#### 扩展阅读\n\nMachine Learning Mastery 是一个寻找机器学习项目示例的绝佳资源。\n\n博文 *How to Develop\
+    \ a Deep Learning Bag-of-Words Model for Sentiment Analysis (Text Classification)*\
+    \ 提供了一个将基于词袋的方法与深度学习模型相结合的示例。\n\n## 示例三：从视频中检测溢出\n\n在前两个示例中，我们使用了线性模型和 k-means\
+    \ 等经典方法来解决机器学习任务。在本示例中，我们将使用一种更现代的模型类型。\n\n> **注意**：本示例使用神经网络。神经网络的工作算法超出了本课程的范围。不过，了解机器学习如何应用于这种情况仍然很有价值。\n\
+    \n### 第一步：定义问题\n\n想象你经营一家提供专业现场清洁服务的公司。一位客户——一家工业化工厂——需要对溢出物和其他健康隐患做出快速反应。你意识到，如果能利用工厂的监控系统自动检测溢出物，就能更快地调动清洁团队。\n\
+    \n机器学习可能是解决此问题的宝贵工具。\n\n![](img/image00103.jpeg)\n\n### 第二步：模型训练（与选择）\n\n此任务是一项监督分类任务，如下图所示。如上图所示，你的目标将是预测每张图像属于以下哪个类别：\n\
+    \n*   包含溢出物\n*   不包含溢出物\n\n![](img/image00104.jpeg)\n\n#### 第二步：构建数据集\n\n*   **收集**\n\
+    \    *   利用历史数据以及安全模拟的溢出场景，你快速建立了一个包含多种光照条件和环境下的溢出与非溢出图像的集合。\n*   **探索与清洗**\n\
+    \    *   你浏览所有照片，确保溢出物清晰地在镜头内。有可用的 Python 工具和其他技术来提高图像质量，如果你确定需要迭代，稍后可以使用它们。\n\
+    *   **数据向量化（转换为数字）**\n    *   许多模型需要数值数据，因此你所有的图像数据都需要转换为数值格式。Python 工具可以帮助你自动完成此操作。\n\
+    \    *   在下图中，你可以看到左侧图像中的每个像素如何用右侧图像中 0 到 1 之间的数字表示，其中 0 代表完全黑色，1 代表完全白色。\n\n\
+    ![](img/image00105.jpeg)\n\n*   **划分数据**\n    *   你将图像数据划分为训练数据集和测试数据集。\n\n###\
+    \ 第三步：模型训练\n\n传统上，解决此问题需要在底层像素之上手工设计特征（例如，图像中显著边缘和角点的位置），然后在这些特征上训练模型。\n\n如今，深度神经网络是解决此类问题最常用的工具。许多深度神经网络模型的结构旨在学习底层像素之上的特征，因此你无需手工设计它们。你将有机会在下一课中深入了解这一点，因此我们目前保持在高层级。\n\
+    \n#### CNN（卷积神经网络）\n\n神经网络超出了本课程的范围，但你可以将它们视为一组连接在一起的非常简单的模型。这些简单的模型称为神经元，这些模型之间的连接是称为权重的可训练模型参数。\n\
+    \n卷积神经网络是一种特殊类型的神经网络，特别擅长处理图像。\n\n### 第四步：模型评估\n\n正如你在上一个示例中所见，有许多不同的统计指标可用于评估模型。随着你在机器学习方面积累更多经验，你将学会如何研究哪些指标能帮助你最有效地评估模型。以下是常用指标列表：\n\
+    \n| 准确率 | 假阳性率 | 精确率 |\n| :--- | :--- | :--- |\n| 混淆矩阵 | 假阴性率 | 召回率 |\n| F1 分数\
+    \ | 对数损失 | ROC 曲线 |\n|  | 负预测值 | 特异性 |\n\n在本例这种情况下，准确率可能不是最佳的评估机制。\n\n为什么？你意识到模型几乎一直会看到“不包含溢出物”这一类别，因此任何大部分时间只预测“无溢出”的模型看起来准确率都会很高。\n\
+    \n你真正关心的是一种极少漏报真实溢出的评估工具。\n\n经过一些网络搜索，你意识到这是一个常见问题，且精确率和召回率将会有效。你可以把精确率理解为回答“在所有溢出预测中，有多少是正确的？”，把召回率理解为回答“在所有实际溢出中，我们检测到了多少？”。\n\
+    \n人工评估发挥着重要作用。你不确定模拟溢出与实际溢出相比是否足够真实。为了更好地了解模型在实际溢出上的表现，你从历史记录中寻找更多示例。这使你能够确认模型表现令人满意。\n\
+    \n### 第五步：模型推理\n\n该模型可以部署在支持运行机器学习工作负载的系统上，例如 `AWS Panorama`。\n\n值得庆幸的是，大多数时候，结果将来自“不包含溢出物”类别。\n\
+    \n![](img/image00106.jpeg)\n\n但当检测到“包含溢出物”类别时，简单的寻呼系统就能提醒团队做出响应。\n\n![](img/image00107.jpeg)\n\
+    \n#### 术语\n\n**卷积神经网络 (CNN)** 是一种特殊类型的神经网络，特别擅长处理图像。\n\n**神经网络**：一组连接在一起的非常简单的模型。\n\
+    \n*   这些简单的模型称为神经元\n*   这些模型之间的连接是称为权重的可训练模型参数。\n\n#### 扩展阅读\n\n随着你机器学习旅程的继续，你将开始识别出非常适合机器学习的问题。\n\
+    \nAWS 机器学习博客是寻找更多机器学习项目示例的绝佳资源。\n\n*   在博文 *Protecting people from hazardous areas\
+    \ through virtual boundaries with Computer Vision* 中，你可以看到本课程中描述的深度学习过程的更详细示例。\n\
+    \n# 课程回顾\n\n恭喜你完成了本课程。让我们回顾一下你所学到的内容\n\n"
+  toc: []
+- raw: "*   In the first part of the lesson, we talked about what machine learning\
+    \ actually is, introduced you to some of the most common terms and ideas used\
+    \ in machine learning, and identified the common components involved in machine\
+    \ learning projects.\n\n*   We learned that machine learning involves using trained\
+    \ models to generate predictions and detect patterns from data. We looked behind\
+    \ the scenes to see what is really happening. We also broke down the different\
+    \ steps or tasks involved in machine learning.\n\n*   We looked at three machine\
+    \ learning examples to demonstrate how each works to solve real-world situations.\
+    \ \n\n    *   A supervised learning task in which you used machine learning to\
+    \ predict housing prices for homes in your neighborhood, based on the lot size\
+    \ and the number of bedrooms.\n\n    *   An unsupervised learning task in which\
+    \ you used machine learning to find interesting collections of books in a book\
+    \ dataset, based on the descriptive words in the book description text.\n\n  \
+    \  *   Using a deep neural network to detect chemical spills in a lab from video\
+    \ and images.\n\nLearning Objectives\n\nIf you read through studied the images,\
+    \ and completed all the quizzes, then you should've mastered the learning objectives\
+    \ for the lesson. You should recognize all of these by now. Please read through\
+    \ and check off each as you go through them.\n\n*   Differentiate between supervised\
+    \ learning and unsupervised learning\n\n*   Identify problems that can be solved\
+    \ with machine learning\n\n*   Describe commonly used algorithms including linear\
+    \ regression, logistic regression, and k-means\n\n*   Describe how model training\
+    \ and testing works\n\n*   Evaluate the performance of a machine learning model\
+    \ using matrices.\n\nNote"
+  fmt: '
+
+    # 课程总结
+
+
+    在课程的第一部分，我们讨论了机器学习的实际含义，介绍了机器学习中使用的一些最常见术语和概念，并确定了机器学习项目中涉及的常见组件。
+
+
+    我们了解到，机器学习涉及使用训练好的模型从数据中生成预测并检测模式。我们深入幕后，了解了实际发生的过程。我们还分解了机器学习中涉及的不同步骤或任务。
+
+
+    我们通过三个机器学习示例演示了每种方法如何解决现实世界的问题。
+
+
+    *   **监督学习任务**：使用机器学习根据地块大小和卧室数量预测您所在社区的房价。
+
+    *   **无监督学习任务**：使用机器学习根据书籍描述文本中的描述性词汇，在书籍数据集中找到有趣的书籍集合。
+
+    *   **深度神经网络应用**：使用深度神经网络从视频和图像中检测实验室中的化学泄漏。
+
+
+    ## 学习目标
+
+
+    如果您阅读并学习了图片，并完成了所有测验，那么您应该已经掌握了本课的学习目标。您现在应该能识别所有这些内容。请阅读并逐一核对。
+
+
+    *   区分监督学习和无监督学习
+
+    *   识别可以用机器学习解决的问题
+
+    *   描述常用算法，包括线性回归、逻辑回归和 K-Means
+
+    *   描述模型训练和测试的工作原理
+
+    *   使用矩阵评估机器学习模型的性能
+
+
+    ## 注意事项
+
+    '
+  trans: '
+
+
+    # 课程总结
+
+
+    在课程的第一部分，我们讨论了机器学习的实际含义，介绍了机器学习中使用的一些最常见术语和概念，并确定了机器学习项目中涉及的常见组件。
+
+
+    我们了解到，机器学习涉及使用训练好的模型从数据中生成预测并检测模式。我们深入幕后，了解了实际发生的过程。我们还分解了机器学习中涉及的不同步骤或任务。
+
+
+    我们通过三个机器学习示例演示了每种方法如何解决现实世界的问题。
+
+
+    *   **监督学习任务**：使用机器学习根据地块大小和卧室数量预测您所在社区的房价。
+
+    *   **无监督学习任务**：使用机器学习根据书籍描述文本中的描述性词汇，在书籍数据集中找到有趣的书籍集合。
+
+    *   **深度神经网络应用**：使用深度神经网络从视频和图像中检测实验室中的化学泄漏。
+
+
+    ## 学习目标
+
+
+    如果您阅读并学习了图片，并完成了所有测验，那么您应该已经掌握了本课的学习目标。您现在应该能识别所有这些内容。请阅读并逐一核对。
+
+
+    *   区分监督学习和无监督学习
+
+    *   识别可以用机器学习解决的问题
+
+    *   描述常用算法，包括线性回归、逻辑回归和 K-Means
+
+    *   描述模型训练和测试的工作原理
+
+    *   使用矩阵评估机器学习模型的性能
+
+
+    ## 注意事项
+
+
+    '
+  toc: []
