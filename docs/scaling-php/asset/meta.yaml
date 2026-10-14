@@ -1,0 +1,627 @@
+name: Scaling PHP
+slug: scaling-php
+name_cn: '
+
+  PHP 扩展指南'
+toc:
+- - '##'
+  - Scaling PHP
+- - '###'
+  - 前言
+- - '###'
+  - 这本书是如何写成的
+- - '###'
+  - 这本书的设计
+- - '###'
+  - 谁应该阅读这本书？
+- - '###'
+  - 你需要为这本书准备什么
+- - '###'
+  - 你将学到的内容
+- - '###'
+  - 为什么你需要这本书
+- - '###'
+  - 第一个规则
+- - '##'
+  - 抛弃 LAMP 栈
+- - '###'
+  - LAMP 有什么问题？
+- - '###'
+  - 可扩展堆栈
+- - '####'
+  - Linux
+- - '####'
+  - HAProxy
+- - '####'
+  - nginx
+- - '####'
+  - PHP 5.5 / PHP-FPM
+- - '####'
+  - MySQL
+- - '####'
+  - Redis
+- - '####'
+  - Resque
+- - '####'
+  - 是否应该在 AWS 上运行？
+- - '##'
+  - 'DNS: Why you need to care'
+- - '####'
+  - 那么，我是否应该自己运行 DNS 服务器？
+- - '####'
+  - 什么是 Anycast？
+- - '###'
+  - DNS 负载分布
+- - '###'
+  - DNS 解析
+- - '####'
+  - nscd
+- - '#####'
+  - Pros
+- - '#####'
+  - Cons
+- - '####'
+  - dnsmasq
+- - '####'
+  - 什么时候需要它？
+- - '##'
+  - 使用 HAProxy 进行负载均衡
+- - '###'
+  - HAProxy
+- - '####'
+  - 相对于 Nginx 的优势
+- - '###'
+  - Layer 4 vs Layer 7
+- - '###'
+  - SSL 终止
+- - '###'
+  - 更好的健康检查和分发算法
+- - '####'
+  - 安装
+- - '####'
+  - 配置选项
+- - '###'
+  - 均衡算法
+- - '####'
+  - Web-UI
+- - '####'
+  - CLI 访问 `hatop`
+- - '###'
+  - 选择最佳硬件
+- - '###'
+  - 自动故障转移 `keepalived`
+- - '####'
+  - 它是如何工作的？
+- - '###'
+  - 调整 Linux 以应对网络密集型负载
+- - '####'
+  - '`net.core.somaxconn`'
+- - '####'
+  - '`net.ipv4.ip_local_port_range`'
+- - '####'
+  - '`net.ipv4.tcp_tw_reuse`'
+- - '####'
+  - '`ulimit -n 999999`'
+- - '###'
+  - 扩展问题
+- - '####'
+  - 饱和网络
+- - '####'
+  - 运行出内存
+- - '####'
+  - 大量 `TIME_WAIT` 连接
+- - '##'
+  - 应用服务器：使用 Nginx 和 PHP-FPM 实现水平扩展
+- - '###'
+  - 选择正确的 PHP 版本
+- - '####'
+  - 基准测试：PHP 5.3 与 PHP 5.4
+- - '###'
+  - Nginx 与 PHP-FPM
+- - '###'
+  - 选择适合你应用服务器的硬件
+- - '###'
+  - 使用 PHP 字节码缓存
+- - '####'
+  - 调优 Zend OpCache（仅 PHP 5.5）
+- - '####'
+  - APC（仅 PHP 5.4 及以下版本）
+- - '####'
+  - XCache
+- - '####'
+  - 替代方案
+- - '###'
+  - 调优 Linux 为 PHP
+- - '####'
+  - 最大打开文件数
+- - '####'
+  - 关闭文件访问时间
+- - '####'
+  - 使用 `tmpfs` 存储临时文件
+- - '####'
+  - 调优 php.ini 以提高性能
+- - '####'
+  - 反模式：在 Ramdisk 上存储代码
+- - '####'
+  - 反模式：关闭访问日志和错误日志
+- - '###'
+  - 缩放会话处理
+- - '####'
+  - 基于文件系统的会话无法缩放，原因有两个。
+- - '####'
+  - Memcached
+- - '####'
+  - Redis
+- - '####'
+  - Cookies
+- - '##'
+  - 'Database Server: Ultimate MySQL Tuning Guide'
+- - '###'
+  - 从 NoSQL 获得 MySQL 的性能提升
+- - '####'
+  - 选择正确的 MySQL 版本
+- - '#####'
+  - 为什么使用 Percona 的 MySQL 分支？
+- - '######'
+  - 安装 Percona Server
+- - '####'
+  - 是否需要对数据进行分片？
+- - '###'
+  - 处理 libmysql 无法设置超时的问题
+- - '#####'
+  - 使用 PDO 设置连接超时
+- - '#####'
+  - 使用 mysqli 设置连接超时
+- - '####'
+  - 查询超时
+- - '#####'
+  - 借助 HAProxy 的超时功能
+- - '#####'
+  - 使用 Percona Toolkit 的 `pt-kill`
+- - '####'
+  - 你应该使用持久 MySQL 连接吗？
+- - '####'
+  - 好处
+- - '####'
+  - 缺点
+- - '###'
+  - 调整 MySQL 配置
+- - '#####'
+  - innodb\_buffer\_pool\_size
+- - '#####'
+  - innodb\_flush\_log\_at\_trx\_commit
+- - '#####'
+  - innodb_flush_method
+- - '#####'
+  - sync_binlog
+- - '#####'
+  - innodb_log_file_size
+- - '###'
+  - max_connections
+- - '###'
+  - innodb_io_capacity
+- - '###'
+  - innodb_read_io_threads & innodb_write_io_threads
+- - '###'
+  - query_cache_size
+- - '#####'
+  - XtraDB/InnoDB vs MyISAM
+- - '######'
+  - 如何判断表是 MyISAM 还是 InnoDB？
+- - '######'
+  - 如何将表从 MyISAM 切换到 InnoDB？
+- - '######'
+  - 关于搜索呢？
+- - '###'
+  - 调优 Linux 以应对高强度数据库
+- - '####'
+  - 更改 I/O 调度器
+- - '####'
+  - 调整 swappiness
+- - '####'
+  - 增加打开文件数
+- - '#####'
+  - Raw Device Mode（原始设备模式）
+- - '#####'
+  - 文件系统的未来
+- - '###'
+  - MySQL 从属实例的负载均衡
+- - '####'
+  - 数据库类
+- - '####'
+  - 扩展 PDO
+- - '####'
+  - 使用 mysqlnd_ms 插件
+- - '####'
+  - 使用 HAProxy
+- - '###'
+  - 'Accepting the Master as a SPOF  '
+- - '####'
+  - 'What really happens when your master fails?  '
+- - '####'
+  - 'Promoting a slave as the master  '
+- - '####'
+  - 'Further research and reading  '
+- - '###'
+  - 理解 NUMA 相关问题
+- - '####'
+  - 什么是 NUMA？
+- - '####'
+  - NUMA 如何影响 MySQL？
+- - '####'
+  - 如何解决这个问题？
+- - '####'
+  - 进一步阅读
+- - '###'
+  - 选择最佳硬件
+- - '####'
+  - CPU 速度（影响单个查询）
+- - '####'
+  - CPU 核心数（影响并发）
+- - '####'
+  - 内存
+- - '####'
+  - 存储
+- - '#####'
+  - 硬盘
+- - '######'
+  - 将主服务器磁盘放入 RAID！
+- - '######'
+  - 避免使用 RAID-5！
+- - '######'
+  - 使用 RAID-10
+- - '######'
+  - 使用硬件 RAID 控制器
+- - '#####'
+  - 固态硬盘
+- - '######'
+  - 闪存磨损
+- - '######'
+  - RAID
+- - '####'
+  - 网络卡
+- - '###'
+  - 在线架构变更
+- - '####'
+  - The least frustrating way to make schema changes
+- - '###'
+  - Further Topics
+- - '##'
+  - 'Cache Server: Using Redis'
+- - '###'
+  - Choosing between Redis, Memcached, and APC
+- - '####'
+  - APC
+- - '####'
+  - Memcached
+- - '#####'
+  - Stuck on Memcached?
+- - '####'
+  - Redis
+- - '####'
+  - Why is Redis better?
+- - '###'
+  - Redis Commands
+- - '####'
+  - Simple Operations
+- - '####'
+  - Hashes
+- - '####'
+  - Lists
+- - '####'
+  - 集合和有序集合
+- - '####'
+  - 事务
+- - '####'
+  - 发布/订阅
+- - '###'
+  - 原子操作的重要性
+- - '###'
+  - Redis 性能限制
+- - '###'
+  - 从 Dotdeb 安装 Redis
+- - '###'
+  - 安装 `phpredis` C 扩展
+- - '###'
+  - Redis 持久化
+- - '####'
+  - RDB
+- - '####'
+  - AOF
+- - '###'
+  - 调整 Linux
+- - '###'
+  - 重要的 redis.conf 设置
+- - '####'
+  - '`maxclients`'
+- - '####'
+  - '`maxmemory`'
+- - '####'
+  - '`maxmemory-policy`'
+- - '####'
+  - '`appendonly`'
+- - '###'
+  - 选择合适的硬件
+- - '###'
+  - 分片
+- - '####'
+  - 一致性哈希工作原理
+- - '####'
+  - 使用 `phpredis` 进行分片
+- - '#####'
+  - 事务在单个主机上执行
+- - '###'
+  - “The Dogpile”
+- - '###'
+  - Russian Doll Caching
+- - '#'
+  - 这段代码的作用是将用户登录时 offset `$user->id` 位改为 1（默认是 0），这成为一种非常高效的存储 true/false 值的方式，即使有数百万用户，`logins:2012-Nov-04`
+    的大小也小于 1MB。
+- - '##'
+  - Population Count（人口计数）
+- - '##'
+  - 位运算
+- - '###'
+  - Redis 通知队列
+- - '##'
+  - Worker Server：异步 Resque 工作进程
+- - '###'
+  - 为什么使用队列？
+- - '####'
+  - 安装 Resque 和 php-resque
+- - '####'
+  - 设置 Worker
+- - '######'
+  - '`COUNT`'
+- - '######'
+  - '`QUEUES`'
+- - '######'
+  - '`APP_INCLUDE`'
+- - '####'
+  - Resque Web-UI
+- - '####'
+  - Resque 进程模型
+- - '#####'
+  - 为什么这样设计？
+- - '####'
+  - 我的补丁
+- - '####'
+  - 入队操作
+- - '####'
+  - 运行作业
+- - '#####'
+  - 处理失败
+- - '####'
+  - Kestrel
+- - '####'
+  - Gearman
+- - '####'
+  - Beanstalkd
+- - '####'
+  - RabbitMQ
+- - '###'
+  - 你应该放入队列的内容
+- - '#'
+  - 使用框架还是不使用框架？
+- - '###'
+  - 如何关于 DIY 框架？
+- - '###'
+  - ORMs 并非邪恶
+- - '###'
+  - Capistrano 用于代码部署
+- - '#'
+  - SSH User to Deploy As
+- - '#'
+  - Hostnames of your App Servers
+- - '###'
+  - 使用 strace 进行 PHP 实时调试
+- - '####'
+  - 真实 strace 场景
+- - '##'
+  - Parting Advice
+- - '###'
+  - 想升级？
+- - '###'
+  - 发送反馈和推荐语
+- - '###'
+  - 太深入了？需要立即帮助？
+- - '###'
+  - 更新？
+- - '###'
+  - 关于作者
+- - '##'
+  - 案例研究：水平扩展用户上传
+- - '#####'
+  - 1\. 上传文件需要立即可用
+- - '#####'
+  - 2\. 上传文件需在后台推送到长期存储
+- - '#####'
+  - 3\. 不存在单点故障或中心化（孩子们，说不！NFS！）
+- - '####'
+  - 直接将文件上传到 S3（或任何长期存储）是错误的做法
+- - '####'
+  - 正确处理用户上传的方法
+- - '#'
+  - 1\. 用户上传文件并立即保存到磁盘
+- - '#'
+  - 2\. 将文件推送到长期存储
+- - '#'
+  - 3\. 清理
+- - '##'
+  - 我曾经错误地处理此问题的方式
+- - '##'
+  - 案例研究：DNS 导致 Twitpic 在 2010 年停机 4 小时
+- - '##'
+  - 案例研究：垂直扩展 MySQL（从 10 台 MySQL 服务器到 3 台带 SSD）
+- - '###'
+  - 另一种思路
+- - '####'
+  - 撤销 RAID-10
+- - '####'
+  - 增加内存！
+- - '####'
+  - SSDs 来了
+- - '###'
+  - 最终结果
+- - '##'
+  - 案例研究：使用 Percona 实现热 MySQL 备份
+- - '#####'
+  - mysqldump
+- - '#####'
+  - mysqlhotcopy
+- - '#####'
+  - MySQL Enterprise InnoDB Hot Backup
+- - '#####'
+  - 备份从属服务器
+- - '#####'
+  - 直接复制 MySQL/InnoDB 数据文件
+- - '######'
+  - 进一步使用 LVM
+- - '#####'
+  - 'The BEST (and free) Solution: Percona XtraBackup'
+- - '###'
+  - 从 `mysqldump` 迁移到 Percona XtraBackup
+- - '####'
+  - 专用备份服务器
+- - '####'
+  - Percona XtraBackup
+- - '####'
+  - 数据保留与长期存储
+- - '####'
+  - 通知
+- - '##'
+  - 案例研究：Async APIs w/ Kestrel 救了我的命
+- - '####'
+  - 最坏的情况
+- - '####'
+  - 转向 Kestrel 的道路
+- - '####'
+  - 赢
+- - '##'
+  - 案例研究：Memcached 的缺失指南
+- - '###'
+  - 为何选择 Memcached 而非 Redis？
+- - '###'
+  - 安装 Memcached
+- - '###'
+  - 将 PHP 与 Memcached 连接
+- - '###'
+  - 协议
+- - '###'
+  - 压缩与序列化
+- - '###'
+  - 服务器池
+- - '####'
+  - 一致性哈希
+- - '####'
+  - 加权
+- - '####'
+  - 持久连接
+- - '###'
+  - 原子计数器
+- - '###'
+  - 避免竞争：CAS 令牌
+- - '###'
+  - 注意超时问题
+- - '###'
+  - 使用 Memcached 进行会话管理
+- - '###'
+  - 通过 Telnet 调试 Memcached
+- - '###'
+  - 我的 Memcached 配置
+- - '####'
+  - 硬件
+- - '####'
+  - 为什么要单独运行 Memcached 服务器？
+- - '#'
+  - 推荐选项
+- - '###'
+  - 进一步阅读和工具
+- - '#####'
+  - twmemproxy
+- - '#####'
+  - peep
+- - '#####'
+  - PHP igbinary / compression / memcached benchmarks
+- - '#####'
+  - twemperf
+- - '##'
+  - 案例研究：HTTP 缓存和 Nginx Fastcgi 缓存
+- - '###'
+  - 缓存静态资源
+- - '###'
+  - Caching Proxy
+- - '####'
+  - Which pages can I use my caching proxy for?
+- - '#####'
+  - Logged in / logged out navigation bars
+- - '#####'
+  - Authenticated views (private messages, etc)
+- - '#####'
+  - Highly Dynamic Content
+- - '####'
+  - Configuring Nginx to be a Cache for PHP-FPM
+- - '#####'
+  - PHP-FPM with and without a proxy cache
+- - '##'
+  - 'Case Study: CakePHP Framework Caching'
+- - '###'
+  - CakePHP, you devilish dessert
+- - '####'
+  - APC gets removed from PHP 5.4 (aka, “the core problem”)
+- - '###'
+  - The life and death of a CakePHP request
+- - '###'
+  - If it smells like a race condition…
+- - '####'
+  - 抛开文件，使用 Memcache！
+- - '####'
+  - APCu，PHP 5.5 的用户空间缓存
+- - '####'
+  - 为每个 PHP‑FPM 工作进程提供独立缓存
+- - '###'
+  - 案例研究：PHP 中优化图像处理
+- - '####'
+  - naïve “PHP Tutorial” 方式
+- - '####'
+  - 这不全是代码——通过栈追踪文件上传
+- - '#####'
+  - 拆解文件上传
+- - '####'
+  - Benchmarking the file upload process
+- - '#####'
+  - tmpfs
+- - '#####'
+  - Increasing `client_body_buffer_size`
+- - '#####'
+  - HTTP Upload Module
+- - '#####'
+  - Benchmarking file uploads with `ab` (Apache Benchmark)
+- - '###'
+  - ImageMagick vs GraphicsMagick
+- - '####'
+  - Benchmarking ImageMagick vs GraphicsMagick
+- - '###'
+  - Allowing Large File Uploads
+- - '####'
+  - nginx.conf
+- - '####'
+  - php.ini
+- - '###'
+  - Stripping EXIF Metadata
+- - '###'
+  - Autorotation
+- - '##'
+  - 'Case Study: Benchmarking and Load Testing Web Services'
+- - '###'
+  - 设置测试环境
+- - '###'
+  - 著名的 `ab`（Apache Benchmark）
+- - '###'
+  - '`siege`，一个更现代的 `ab`'
+- - '###'
+  - Bees with machine guns
+- - '###'
+  - Sysbench
+- - '###'
+  - 赞助商
