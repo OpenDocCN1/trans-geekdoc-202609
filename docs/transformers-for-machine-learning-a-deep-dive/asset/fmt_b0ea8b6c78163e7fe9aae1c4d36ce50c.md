@@ -1,0 +1,66 @@
+
+where `e`[(*p*, *t*)]^(*p**o**s*) ∈ ℝ^(*D*) is a positional encoding that includes the spatial location and frame index, `E` is a learned embedding layer, and `D` is a hidden dimension (similar to `d`[*m**o**d**e**l*] in the standard transformer). Note that the superscript (0) in `z`[(*p*, *t*)]^((0)) represents that this is for the first TimeSformer layer, which has index 0. Just like in the Vision Transformer, TimeSformer prepends a learned embedding onto `z`[(*p*, *t*)]^((0)) that corresponds to BERT's special classification token, `z`[(0, 0)]^((0)).
+
+### 6.5.2 Self-Attention
+
+In TimeSformer, the self-attention mechanism is *nearly* identical to every other transformer. In most transformers, the inputs to the multi-head attention are the query, key, and value matrices. Similar to 5.24, each is the result of transforming the input embedding into a different vector space. Each vector space is parameterized by the matrices **W**[*Q*], **W**[*K*], and **W**[*V*], respectively. The *W* matrices are used to rotate the input embeddings into the query, key, and value spaces. Thus, the query, key, and value vectors for a single patch in TimeSformer layer *l* are
+
+``` 
+\mathbf{q}\_{(p,t)}^{(l,h)} = LayerNorm(\mathbf{z}\_{(p,t)}^{(l - 1)})\mathbf{W}\_{Q}^{(l,h)} ∈ ℝ^{D/H}
+```
+
+(6.8)
+
+``` 
+\mathbf{k}\_{(p,t)}^{(l,h)} = LayerNorm(\mathbf{z}\_{(p,t)}^{(l - 1)})\mathbf{W}\_{K}^{(l,h)} ∈ ℝ^{D/H}
+```
+
+(6.9)
+
+``` 
+\mathbf{v}\_{(p,t)}^{(l,h)} = LayerNorm(\mathbf{z}\_{(p,t)}^{(l - 1)})\mathbf{W}\_{V}^{(l,h)} ∈ ℝ^{D/H}
+```
+
+(6.10)
+
+*H* is the number of attention heads, *l* is the layer index, and *h* is the attention head index. *D*/*H* is similar to the key/value dimension used in the vanilla Transformer. Note that TimeSformer gives query, key, and value the same dimension and that each **W** matrix is  ∈ ℝ^(*D*/*H* × *D*). Note that the previous layer's output is put through the *LayerNorm* operation before query, key, and value computation; this is just like in the Vision Transformer, as shown in [section 6.6](#ch6.xhtml#sec6_6).
+
+#### 6.5.2.1 Spatiotemporal self-attention
+
+TimeSformer uses scaled dot-product attention, as seen in section 5.23. Using the query, key, and value vectors defined above, we can compute the attention weights between patch (*p*, *t*) and patch (*p*^′, *t*^′) in layer *l*:
+
+``` 
+a\_{(p,t),(p^{\\prime},t^{\\prime})}^{(l,h)} = softmax(\mathbf{q}\_{(\\text{p},\\text{t})}^{(\\text{l},\\text{h})} \\cdot \\mathbf{k}\_{(\\text{p}^{\\prime},\\text{t}^{\\prime})}^{(\\text{l},\\text{h})}\\ ^{T})
+```
+
+(6.11)
+
+``` 
+= \\frac{\\exp\\left( {\\mathbf{q}\_{(p,t)}^{(l,h)} \\cdot \\mathbf{k}\_{(p^{\\prime},t^{\\prime})}^{(l,h)}\\ ^{T}} \\right)}{{\\sum\\limits\_{(u,r)\\mspace{2mu} \\in S\_{(p,t)}}{\\exp}}\\left( {\\mathbf{q}\_{(p,t)}^{(l,h)} \\cdot \\mathbf{k}\_{(u,r)}^{(l,h)}\\ ^{T}} \\right)} \\\\ \\end{array}
+```
+
+(6.12)
+
+where *S*[(*p*, *t*)] is the set of patches that patch (*p*, *t*) can attend to. Note that since `z`[(*p*, *t*)]^((*l*)) contains the classification embedding at (0, 0), the query, key, and value include the classification token term: `q`[(*p*, *t*)] = [`q`[(0, 0)]; `q`[(*p*, *t*)]]. The square root factor in section 6.12 has been omitted for brevity.
+
+The *N**F** + 1 weights for patch (*p*, *t*) can be grouped into a single vector
+
+``` 
+\mathbf{a}\_{(p,t)}^{(l,h)} = softmax(\\mathbf{q}\_{(\\text{p},\\text{t})}^{(\\text{l},\\text{h})} \\cdot \\lbrack{\\mathbf{k}\_{(\\text{0},\\text{0})}^{(\\text{l},\\text{h})}\\ ^{T};\\,\\mathbf{k}\_{(\\text{p}^{\\prime},\\text{t}^{\\prime})}^{(\\text{l},\\text{h})}\\ ^{T}}\\rbrack)
+```
+
+(6.13)
+
+By looking at the relative position of patch (*p*, *t*) and patch (*p*^′, *t*^′), one sees that there are two types of attention in section 6.12. The case where (*p*, *t*) is only allowed to attend to patches in the same frame, i.e., *t*^′ = *t*, is spatial attention. This reduces the number of dot products that need to be computed from *N**F** + 1 to *N* + 1. The case where (*p*, *t*) is only allowed to attend to patches in different frames, but at the same position (*p*^′ = *p*), then we have temporal attention. This reduces the number of dot products that need to be computed from *N**F** + 1 to *F* + 1. Both of the above simplifications amount to an attention mask and would need to be added to *S*[(*p*, *t*)] when computing the normalization factor of the softmax operation. The remainder of the multihead self-attention calculation proceeds as expected in a transformer.
+
+#### 6.5.2.2 Spatiotemporal Attention Blocks
+
+The paper \[[29](#refbib.xhtml#refbib_29)\] considers four ways of restricting *S*[(*p*, *t*)]: only spatial attention, divided space-time attention, sparse local and global attention, and axial attention.
+
+Divided space-time attention is having separate spatial and temporal attention mechanisms; a temporal block, followed by a spatial block. The output embedding of the multi-head temporal attention, `z`^′ [(*p*, *t*)]^((*l*)), is computed and then fed into the multi-head spatial attention block as input. In this scheme the temporal and spatial blocks each have their own separate query, key, and value spaces. Because the blocks are in sequence, there are *F* + 1 + *N* + 1 = *N* + *F* + 2 query-key comparisons per patch (*p*, *t*). Note that the ordering of the attention blocks was found via experiments. Sparse local and global attention is the combination of local space-time attention, where locality is defined as the neighboring *F* × *H*/2 × *W*/2 patches, and global attention with stride of 2 in temporal and spatial dimensions. As defined, sparse local and global attention is a coarse-grained approximation to the full spatiotemporal attention. Lastly, the axial attention is similar to that in the Vision Transformer, where there is spatial attention between patches in within a frame that are in the same row or column; there is also temporal attention between patches at the same location in different frames.
+
+As spatial resolution increases and the videos get longer, divided space-time attention scales better than the joint space-time attention because the spatial and temporal components are separated in the divided case. Note that, for a single patch, the spatial and temporal attention are both linear. Spatial is *O*(*N*) and temporal is *O*(*F*), so the divided scales as *O*(*N* + *F*). The joint attention is *O*(*N* ⋅ *F*).
+
+The paper finds that in many cases, spatial attention is more important than temporal attention. But, there are cases where the temporal attention is very important. Another finding is that the divided space-time attention is able to learn more than the full, joint space-time attention because the divided case treats them as two separate attention mechanisms, and thus it has twice the parameters and can learn more, in principal. Because of this, the recommended attention method is divided space-time attention.
+
+## 6.6 Graph Transformers

@@ -1,0 +1,68 @@
+
+where the frequency of each word `t` is extracted for each class `i` and normalized by the total number of words and this is weighted by the normalized number of documents per the total frequency of the word `t` across all the classes `n`. In other words, instead of computing the relative importance of a word in a document as compared to the other documents, the metric in (3.1) computed the relative importance of a word in a class (i.e., topic) as compared to the other topics.
+
+## 3.4 Bert Insights
+
+### 3.4.1 BERT Sentence Representation
+
+Due to self-attention in the Transformer encoder, the BERT representation of the special token \[CLS\] encodes both the two sentences from the input. Hence, the output layer of the MLP classifier takes X as the input, where X is the output of the MLP hidden layer whose input is the encoded \[CLS\] token. Because a pre-trained model is not fine-tuned on any downstream tasks yet. In this case, the hidden state of \[CLS\] is not a good sentence representation. If later you fine-tune the model, you may use \[CLS\] as well.
+
+BERT sentence representation can also be obtained by pooling the individual token representations. However, the last layer is too close to the target functions (i.e., masked language model and next sentence prediction) during pre-training, therefore may be biased to those targets.
+
+### 3.4.2 BERTology
+
+The great push BERT has provided to the NLP field triggered much research into understanding how it works and the type of knowledge it extracts through massive pre-training. BERTology aims to answer some of the questions about why BERT performs well on so many NLP tasks. Some of the topics addressed by BERTology include the type of knowledge learned by BERT and where it is represented. In general there three types of knowledge BERT acquires: `Syntactic knowledge`, `Semantic knowledge`, `World knowledge`.
+
+`BERT` representations of `syntactic knowledge` are hierarchical rather than linear, i.e., they include a syntactic tree structure in addition to the word order information. Additionally, `BERT` embeddings store information about speech segments, grammatical chunks, and roles. `BERT`'s understanding of syntax, on the other hand, is incomplete, since probing classifiers were unable to retrieve the labels of distant parent nodes in the syntactic tree. In terms of how syntactic information is represented, it seems that self-attention weights do not directly encode syntactic structure, but they may be changed to reflect it. When executing the cloze task, `BERT` takes subject-predicate agreement into consideration. Additionally, it was shown that `BERT` does not ”understand” negation and is indifferent to input that is faulty.
+
+Regarding aspects of `semantic knowledge`, `BERT` has shown some knowledge for semantic roles. Also `BERT` encodes information about entity types, relations, semantic roles, and proto-roles. However, it was found that `BERT` struggles with representations of numbers. Research probing into `BERT`'s world knowledge capabilities showed that, for some relation types, vanilla `BERT` is competitive with methods relying on knowledge bases. However, `BERT` cannot reason based on its world knowledge. Essentially `BERT` can “guess” the affordances and properties of many objects, but does not have the information about their interactions (e.g., it “knows” that people can walk into houses, and that houses are big, but it cannot infer that houses are bigger than people.)
+
+Additionally, `BERTology` is concerned with the localization of linguistic information inside the `BERT` architecture, either at the self-attention heads or at the layer level. It was shown that the majority of self-attention heads do not encode any non-trivial linguistic information directly, since fewer than half of them exhibited the ”heterogeneous” pattern2. The vertical pattern was stored in a large portion of the model (attention to \[CLS\], \[SEP\], and punctuation tokens). Additionally, certain `BERT` heads seem to specialize in particular sorts of syntactic relations, with heads paying much more attention to words in specific syntactic places than a random baseline. Other studies discovered that no one head contains the whole syntactic tree. Additionally, attention weights are illustrative of subject-verb agreement and reflexive anaphora. Additionally, it was shown that even when attention heads specialize in monitoring semantic relations, they do not always help `BERT` perform well on related tasks.
+
+For layer-level knowledge localization, provided that the first layer of `BERT` gets representations in the form of a mix of token, segment, and positional embeddings as input. It comes to reason that the bottom levels contain the most linear information about word order. It was shown that the knowledge of linear word order decreases around layer 4 in the `BERT-base`. This is followed by an enhanced understanding of the hierarchical structure of sentences. Numerous studies have shown that the middle `BERT` layers contain the most syntactic information and that the last `BERT` levels include the most task-specific information. Additionally, it was shown that, although the majority of syntactic information may be localized in a few levels, semantic information is distributed across the model, which explains why some non-trivial cases are initially handled wrong then successfully at higher layers.
+
+## 3.5 Case Study: Topic Modeling With Transformers
+
+### 3.5.1 Goal
+
+In this chapter, we looked at several applications of the Transformer architecture. In this case study, we see how to use pre-trained (or finetuned) Transformer models to do topic modeling. If one is exploring a new dataset, this method could be used during exploratory data analysis.
+
+### 3.5.2 Data, Tools, and Libraries
+
+![Listing 3.1 Python environment setup](images/comp3_1.jpg)
+
+[Listing 3.1](#ch3.xhtml#b3list3_1) Python environment setup
+
+We will use pre-trained transformers to explore the Yelp reviews dataset (from [https://huggingface.co/​datasets/​yelp\_review\_full](https://huggingface.co)) and see what kind of topics are in the reviews. We'll generate sentence embeddings with the sentence-transformers library (see [https://github.com/​UKPLab/​sentence-transformers](https://github.com)) which provides models pre-trained for specific tasks, such as semantic search. Lastly, we're going to use BERTopic \[[101](#refbib.xhtml#refbib_101)\] (see [https://github.com/​MaartenGr/​BERTopic](https://github.com)) for topic modeling and Huggingface Datasets for loading the data. We can install these as shown in [Listing. 3.1](#ch3.xhtml#list3_1).
+
+#### 3.5.2.1 Data
+
+![Listing 3.2 Load dataset](images/comp3_2.jpg)
+
+[Listing 3.2](#ch3.xhtml#b3list3_2) Load dataset
+
+We begin by loading the Yelp Review Full dataset via Huggingface Datasets in [Listing 3.2](#ch3.xhtml#list3_2). There are 650,000 reviews in the dataset. To keep the runtime of this case study within reason, we'll only process the first 10,000 reviews. To process more reviews, simply change the value of `N` in Listing 3.2.
+
+#### 3.5.2.2 Compute embeddings
+
+![](images/comp3_3.jpg)![Listing 3.3 Compute embeddings](images/comp3_3a.jpg)
+
+[Listing 3.3](#ch3.xhtml#b3list3_3) Compute embeddings
+
+We'll generate embeddings using the “all-mpnet-base-v2” model from sentence-transformers in [Listing 3.3](#ch3.xhtml#list3_3). It's built to perform well on semantic search when embedding sentences and longer spans of text.
+
+### 3.5.3 Experiments, Results, and Analysis
+
+#### 3.5.3.1 Building topics
+
+![Listing 3.4 Compute topics](images/comp3_4.jpg)
+
+[Listing 3.4](#ch3.xhtml#b3list3_4) Compute topics
+
+Now that we've computed the embeddings for the specified subset of Yelp reviews, we can proceed with the topic modeling in [Listing 3.4](#ch3.xhtml#list3_4).
+
+#### 3.5.3.2 Topic Size Distribution
+
+![Listing 3.5 Sampling the topics](images/comp3_5.jpg)
+
+[Listing 3.5](#ch3.xhtml#b3list3_5) Sampling the topics
