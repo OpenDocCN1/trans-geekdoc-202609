@@ -1,0 +1,283 @@
+
+Added error handling for HTTP requests.
+
+Ensured proper text extraction from `<h2>` elements.
+
+Performance and Best Practices
+
+DeepSeek AI not only fixes errors but also improves code efficiency.
+
+Example: Optimizing a Function
+
+Let's ask DeepSeek AI to optimize a function for finding the maximum number in a list.
+
+```python
+def optimize_code(code_snippet):
+    payload = {
+        "model": "deepseek-13b",
+        "prompt": f"Optimize the following Python code for efficiency:\\n{code_snippet}",
+        "temperature": 0.3,
+        "max_tokens": 200
+    }
+    response = requests.post(url, headers=headers, json=payload)
+    data = response.json()
+    return data.get("choices", [{}])[0].get("text", "").strip()
+```
+
+# Example Usage
+
+unoptimized_code = """
+
+def find_max(numbers):
+    max_number = numbers[0]
+    for num in numbers:
+        if num > max_number:
+            max_number = num
+    return max_number
+"""
+
+optimized_code = optimize_code(unoptimized_code)
+print("Optimized Code:\\n", optimized_code)
+
+Expected Output
+
+python
+def find_max(numbers):
+    return max(numbers)
+
+DeepSeek AI replaces manual loops with built-in functions, improving readability and execution speed.
+
+* * *
+
+### 6.2 Code Completion and Optimization
+
+In modern software development, code completion and optimization are essential for enhancing productivity and improving the quality of applications. DeepSeek AI provides advanced capabilities that assist developers by:
+
+- Automatically completing code snippets based on context.
+- Optimizing code for performance, readability, and maintainability.
+- Refactoring inefficient implementations for better scalability.
+
+This section provides a structured, hands-on guide on using DeepSeek AI for code completion and optimization, ensuring that both beginners and experienced developers can integrate AI-powered assistance into their workflow.
+
+* * *
+
+Understanding AI-Assisted Code Completion
+
+How Does AI Code Completion Work?
+
+DeepSeek AI's code completion functionality is powered by large language models (LLMs) trained on diverse programming languages and codebases. It predicts and suggests the next logical part of a code snippet based on:
+
+- Code structure and syntax (e.g., function definitions, loops, and conditions).
+- Best coding practices (e.g., efficient algorithms, error handling).
+- Context awareness (e.g., previously written code in the same file).
+
+Benefits of AI-Powered Code Completion
+
+- Speeds up coding: Eliminates the need to type repetitive code.
+- Reduces syntax errors: Ensures correct function signatures and constructs.
+- Improves consistency: Standardizes coding styles across projects.
+- Enhances productivity: Allows developers to focus on logic rather than boilerplate code.
+
+* * *
+
+Using DeepSeek AI for Code Completion
+
+Step 1: Set Up API Access
+
+To leverage DeepSeek AI for code completion, ensure that you have an API key and install the necessary dependencies.
+
+```bash
+pip install requests
+```
+
+Step 2: Implement Code Completion with DeepSeek AI
+
+```python
+import requests
+
+api_key = "your_api_key_here"
+url = "https://api.deepseek.ai/v1/completions"
+headers = {
+    "Authorization": f"Bearer {api_key}",
+    "Content-Type": "application/json"
+}
+
+def complete_code(prompt):
+    payload = {
+        "model": "deepseek-13b",
+        "prompt": f"Complete the following Python code snippet:\\n{prompt}",
+        "temperature": 0.3,
+        "max_tokens": 150
+    }
+    response = requests.post(url, headers=headers, json=payload)
+    data = response.json()
+    return data.get("choices", [{}])[0].get("text", "").strip()
+
+# Example Usage
+code_snippet = "def fibonacci(n):"
+completed_code = complete_code(code_snippet)
+print("Completed Code:\\n", completed_code)
+
+Expected Output
+python
+def fibonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    fib_series = [0, 1]
+    for i in range(2, n):
+        fib_series.append(fib_series[-1] + fib_series[-2])
+    return fib_series
+
+What DeepSeek AI Did
+
+- Completed the function based on best practices.
+- Included error handling for edge cases (n <= 0).
+- Implemented an iterative approach for efficiency.
+
+* * *
+
+Code Optimization with DeepSeek AI
+
+Why Code Optimization Matters
+
+Optimized code:
+
+- Improves performance: Reduces execution time and memory usage.
+- Enhances maintainability: Ensures the code is clean and readable.
+- Reduces technical debt: Helps avoid inefficient or redundant logic.
+
+Using DeepSeek AI for Code Optimization
+
+DeepSeek AI can analyze a code snippet and return an optimized version.
+
+Example: Optimizing a Sorting Algorithm
+
+```python
+def optimize_code(code_snippet):
+    payload = {
+        "model": "deepseek-13b",
+        "prompt": f"Optimize the following Python code for efficiency:\\n{code_snippet}",
+        "temperature": 0.3,
+        "max_tokens": 200
+    }
+    response = requests.post(url, headers=headers, json=payload)
+    data = response.json()
+    return data.get("choices", [{}])[0].get("text", "").strip()
+
+# Example Usage
+unoptimized_code = """
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+"""
+
+optimized_code = optimize_code(unoptimized_code)
+print("Optimized Code:\\n", optimized_code)
+
+Expected Output
+python
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quick_sort(left) + middle + quick_sort(right)
+
+What DeepSeek AI Did
+
+- Replaced Bubble Sort with a more efficient QuickSort algorithm.
+- Reduced time complexity from O(n²) to O(n log n).
+- Maintained correctness while improving performance.
+
+* * *
+
+AI-Powered Code Refactoring
+
+Understanding Code Refactoring
+
+Refactoring is the process of restructuring existing code without changing its functionality to:
+
+- Improve readability.
+- Enhance maintainability.
+- Reduce redundancy.
+
+Example: Refactoring a Function
+
+Let’s pass poorly structured code to DeepSeek AI and ask it to refactor it.
+
+```python
+messy_code = """
+
+def calculate_total_price(items):
+    total = 0
+    for item in items:
+        if 'discount' in item and item['discount'] > 0:
+            total += item['price'] - (item['price'] * item['discount'])
+        else:
+            total += item['price']
+    return total
+"""
+
+refactored_code = optimize_code(messy_code)
+print("Refactored Code:\\n", refactored_code)
+
+Expected Output
+python
+def calculate_total_price(items):
+    return sum(
+        item['price'] * (1 - item.get('discount', 0))
+        for item in items
+    )
+
+What DeepSeek AI Did
+
+- Replaced the loop with a sum() function for conciseness.
+- Used .get() to handle missing keys safely.
+- Made the code more readable while preserving its logic.
+
+* * *
+
+Performance Metrics for Optimization
+
+After optimization, we need to measure performance improvements.
+
+Key Performance Metrics
+
+1. Execution Time: How long the code runs.
+2. Memory Usage: How much RAM the program consumes.
+3. Big-O Complexity: The theoretical efficiency of the algorithm.
+
+Measuring Execution Time with Python
+
+```python
+import time
+
+def measure_time(func, *args):
+    start_time = time.time()
+    result = func(*args)
+    end_time = time.time()
+    print(f"Execution Time: {end_time - start_time:.6f} seconds")
+    return result
+```
+
+This function can be used to compare execution times before and after optimization.
+
+* * *
+
+### 6.3 AI-Powered Testing and Refactoring
+
+In modern software development, automated testing and refactoring play a crucial role in maintaining code quality, reliability, and scalability. DeepSeek AI enhances these processes by:
+
+- Generating automated test cases based on the structure of the code.
+- Detecting potential bugs and inefficiencies before they cause problems.
