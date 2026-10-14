@@ -1,0 +1,159 @@
+
+This section shows how to use PySpark's gradient boosting package to build models for the rocks versus mines problem that you've seen throughout the book. In most regards the data preparation code mirrors the data preparation code in the regression examples in the previous section. The major difference is that you need to use the `StringIndexer` to code the 0, 1 label into the correct form for PySpark classifiers. The code in this example uses the pipeline structure that's available in PySpark. The various stages in the processing of the input data are captured in a single “pipeline” that can be reused. Use of the pipeline makes subsequent code neater.
+
+#### [Listing 7-13](#c07.xhtml#R_c07-fea-0013): Using PySpark to Distinguish Mines from Rocks—rocks_v_mines_gbt_spark.py
+
+```
+__author__ = 'mike_bowles'
+
+#Import sparksession 
+from pyspark.sql import SparkSession
+from pyspark.ml.feature import VectorAssembler
+from pyspark.ml.classification import GBTClassifier
+from pyspark.ml.classification import RandomForestClassifier
+from pyspark.ml.evaluation import BinaryClassificationEvaluator
+import matplotlib.pyplot as plt
+from pyspark.ml.feature import StandardScaler
+
+spark = SparkSession.builder.appName("log_regress_rvm").getOrCreate()
+
+#read in abalone data as pandas data frame and create Spark data frame. 
+import pandas as pd
+from pandas import DataFrame
+from Read_Fcns import pd_read_rvm
+
+rvm_df = pd_read_rvm()
+
+#Create spark dataframe for wine data
+rvm_sp_df = spark.createDataFrame(rvm_df)
+print('Column Names', rvm_sp_df.columns, '\n\n')
+
+cols = rvm_sp_df.columns
+
+assembler_inputs = 
+   ['V0', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 
+   'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17', 'V18', 
+   'V19', 'V20', 'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 
+   'V28', 'V29', 'V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 
+   'V37', 'V38', 'V39', 'V40', 'V41', 'V42', 'V43', 'V44', 'V45',
+   'V46', 'V47', 'V48', 'V49', 'V50', 'V51', 'V52', 'V53', 'V54',
+    'V55', 'V56', 'V57', 'V58', 'V59']
+from pyspark.ml.feature import OneHotEncoderEstimator, StringIndexer,
+VectorAssembler
+stages = []
+label_string_idx = StringIndexer(inputCol = 'V60', outputCol = 'label')
+stages += [label_string_idx]
+
+assembler = VectorAssembler(inputCols=assembler_inputs, outputCol=
+"features")
+stages += [assembler]
+from pyspark.ml import Pipeline
+pipeline = Pipeline(stages = stages)
+pipelineModel = pipeline.fit(rvm_sp_df)
+df = pipelineModel.transform(rvm_sp_df)
+selectedCols = ['label', 'features'] + cols 
+df = df.select(selectedCols)
+df.printSchema()
+
+train, test = df.randomSplit([0.7, 0.3], seed = 2018)
+print("Training Dataset Count: " + str(train.count()))
+print("Test Dataset Count: " + str(test.count()))
+
+gbt = GBTClassifier(featuresCol = 'features', labelCol = 'label',
+maxIter=100) 
+gbt_model = gbt.fit(train)
+
+
+predictions = gbt_model.transform(test)
+predictions.select('rawPrediction', 'prediction', 'probability').show(10)
+
+evaluator = BinaryClassificationEvaluator()
+print("Test Area Under ROC: " + str(evaluator.evaluate(predictions,
+{evaluator.metricName: "areaUnderROC"})))
+
+Column Names ['V0', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8',
+'V9', 'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17', 'V18',
+'V19', 'V20', 'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 'V28',
+'V29', 'V30', 'V31', 'V32', 'V33', 'V34', 'V35', 'V36', 'V37', 'V38',
+'V39', 'V40', 'V41', 'V42', 'V43', 'V44', 'V45', 'V46', 'V47', 'V48',
+'V49', 'V50', 'V51', 'V52', 'V53', 'V54', 'V55', 'V56', 'V57', 'V58',
+'V59', 'V60'] 
+
+
+root
+ |-- label: double (nullable = false)
+ |-- features: vector (nullable = true)
+ |-- V0: double (nullable = true)
+ |-- V1: double (nullable = true)
+ |-- V2: double (nullable = true)
+............. 
+ |-- V58: double (nullable = true)
+ |-- V59: double (nullable = true)
+ |-- V60: string (nullable = true)
+
+Training Dataset Count: 146
+Test Dataset Count: 62
++--------------------+----------+--------------------+
+|       rawPrediction|prediction|         probability|
++--------------------+----------+--------------------+
+|[-1.7597810427667...|       1.0|[0.02876072590667...|
+|[1.82542450921326...|       0.0|[0.97468825140490...|
+|[-2.2263645624067...|       1.0|[0.01151265329721...|
+|[-0.1228667018215...|       1.0|[0.43887393096213...|
+|[-0.2634614568499...|       1.0|[0.37123485505299...|
+|[-2.2152521276024...|       1.0|[0.01176834016224...| 
+|[-2.2091975339739...|       1.0|[0.01191000394705...|
+|[-2.2291594195578...|       1.0|[0.01144921510524...|
+|[0.00969027556420...|       0.0|[0.50484498613265...|
+|[-0.3100908686794...|       1.0|[0.34974011922974...|
++--------------------+----------+--------------------+
+only showing top 10 rows
+
+Test Area Under ROC: 0.8885416666666667 
+```
+
+[Listing 7-14](#c07.xhtml#c07-fea-0014) shows code that runs on the same `'label'` and `'features'` columns that were generated by the pipeline in [Listing 7-13](#c07.xhtml#c07-fea-0013).
+
+#### [Listing 7-14](#c07.xhtml#R_c07-fea-0014): Using PySpark Random Forest to Distinguish Mines from Rocks—rocks_v_mines_rf_spark.py
+
+```
+from pyspark.ml.classification import RandomForestClassifier
+rf = RandomForestClassifier(featuresCol = 'features', 
+                                labelCol = 'label')
+rf_model = rf.fit(train)
+
+
+predictions = rf_model.transform(test)
+predictions.select('rawPrediction', 'prediction', 'probability').show(10)
+
+evaluator = BinaryClassificationEvaluator()
+print("Test Area Under ROC: " + 
+       str(evaluator.evaluate(predictions, 
+      {evaluator.metricName: "areaUnderROC"})))
+
++--------------------+----------+--------------------+
+|       rawPrediction|prediction|         probability|
++--------------------+----------+--------------------+
+|[9.93333333333333...|       1.0|[0.49666666666666...|
+|         [10.0,10.0]|       0.0|           [0.5,0.5]|
+|[2.69292929292929...|       1.0|[0.13464646464646...|
+|[12.8213463947460...|       0.0|[0.64106731973730...|
+|[9.77578633164038...|       1.0|[0.48878931658201...|
+|[4.03959627329192...|       1.0|[0.20197981366459...|
+|[1.37476943346508...|       1.0|[0.06873847167325...|
+|[6.90565178640626...|       1.0|[0.34528258932031...|
+|[11.1235640964849...|       0.0|[0.55617820482424...|
+|        [8.05,11.95]|       1.0|[0.4025,0.5974999...|
++--------------------+----------+--------------------+
+only showing top 10 rows
+
+Test Area Under ROC: 0.9104166666666667 
+```
+
+This section introduced the pipeline process for encapsulating the data preparation steps leading up to fitting a predictive model. It showed how you can use PySpark ensemble methods for binary regression problems.
+
+### Identifying Glass Types with PySpark Ensemble Methods
+
+[Listing 7-15](#c07.xhtml#c07-fea-0015) shows how to build a multiclass classifier using random forest in PySpark. The `StringIndexer` gets used to encode the categorical multiclass labels similar to the way it was used in the two previous examples. This example uses the pipeline framework. The performance of the model is shown at the end of the code.
+
+#### [Listing 7-15](#c07.xhtml#R_c07-fea-0015): Using PySpark Random Forest to Identify Glass Types—glass_multiclass_rf_spark.py

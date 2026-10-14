@@ -1,0 +1,116 @@
+
+
+> ```
+> __author__ = 'mike_bowles'
+> 
+> import numpy as np
+> from sklearn.metrics import mean_squared_error
+> from Read_Fcns import list_read_wine
+> from math import sqrt
+> import matplotlib.pyplot as plt
+> import xgboost as xgb
+> 
+> # 从 UCI 网站读取葡萄酒质量数据
+> names, xList, labels = list_read_wine() 
+> names = [x.replace('\"', '') for x in names]
+> print(names)
+> 
+> nrows = len(xList)
+> ncols = len(xList[0])
+> 
+> X = np.array(xList)
+> y = np.array(labels)
+> 
+> n_fold = 5
+> 
+> idx_array = np.array(range(len(y))).reshape([-1, 1])
+> params = {"objective":"reg:linear",
+>         'colsample_bytree': 0.4,
+>         'learning_rate': 0.02, 
+>         'n_estimators': 500,
+>         'max_depth': 4, 
+>         'alpha': 10, 
+>         'verbosity':1}
+> 
+> reg_model = xgb.XGBRegressor(**params)
+> results_list = []
+> for i_fold in range(n_fold):
+>     idx_test = idx_array[np.mod(idx_array, n_fold) == i_fold]
+>     idx_train = idx_array[np.mod(idx_array, n_fold) != i_fold]
+>     x_test = X[idx_test]
+>     y_test= y[idx_test]
+>     x_train = X[idx_train]
+>     y_train = y[idx_train]
+>   
+>     reg_model.fit(x_train, y_train, eval_set=[(x_train, y_train), 
+>         (x_test, y_test)], eval_metric='rmse', verbose=False)
+>     results_list.append(reg_model.evals_result())
+> 
+> train_err = [eval['validation_0']['rmse'] for eval in results_list]
+> test_err = [eval['validation_1']['rmse'] for eval in results_list]
+> 
+> train_err_array = np.array(train_err)
+> test_err_array = np.array(test_err)
+> 
+> train_avg = np.mean(train_err_array, axis = 0)
+> test_avg = np.mean(test_err_array, axis = 0)
+> 
+> print('Final training rmse', train_avg[-5:])
+> print('Final test rmse', test_avg[-5:])
+> 
+> plt.plot(train_avg)
+> plt.plot(test_avg)
+> plt.xlabel('Number of Trees in Ensemble')
+> plt.ylabel('RMSE')
+> plt.title('Train and Test Errors') 
+> plt.savefig('wineXGB_train_test_rmse.png', dpi=500)
+> plt.show()
+> 
+> # 在完整数据集上重新训练以计算重要性
+> data_matrix = xgb.DMatrix(data=X, label=y, feature_names=names[0:-1])
+> params = {"objective":"reg:linear",'colsample_bytree': 0.4,
+>      'learning_rate': 0.02, 'n_estimators': 500, 'max_depth': 4, 
+>      'alpha': 10, 'silent':1}
+> 
+> wine_xg = xgb.train(params=params, dtrain=data_matrix,
+>      num_boost_round=500)
+> xgb.plot_importance(wine_xg)
+> plt.rcParams['figure.figsize'] = [5, 5]
+> plt.savefig('wineGBM_variable_importance.png', dpi=500)
+> plt.show()
+> 
+> 
+> 打印输出：
+> ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar',
+> 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density',
+> 'pH', 'sulphates', 'alcohol', 'quality']
+> Final training rmse [0.4301812 0.4299654 0.4296578 0.429428 0.4292482]
+> Final test rmse [0.5996246 0.5995986 0.599513 0.5995322 0.5994808] 
+> ```
+
+第一部分代码读取数据集，将属性矩阵与目标值分离，转换为 NumPy 数组，然后形成训练集和测试集。下一步是定义一个名为 `params` 的 Python 字典。该字典包含定义 GBM 模型所需的参数值。其中一些参数或多或少是标准的，而另一些则会因问题而异。第一个参数是 `objective` 函数。由于这是一个回归问题，`reg:linear` 是此处的常用选择。如果你遇到标签呈指数分布的问题（无负值，正值拥挤在零附近，较大值分布稀疏），则可以尝试逻辑回归。
+
+定义参数后，下一步是实例化模型对象。此处的训练循环执行 5 折交叉验证。训练集和测试集的索引在列表推导式中定义，用于为每一折定义相应的训练集和测试集。然后，通过在名为 `reg_model` 的 `xgb.XGBRegressor` 对象上调用 `fit` 函数来训练模型。`fit` 函数中定义的 `eval_set` 参数被选为一对列表。一对是训练特征集及其对应标签。另一对是测试数据的类似组合。`eval_metric='rmse'` 告诉 `fit` 函数将模型预测应用于特征，然后计算两者之间的均方根误差（RMSE）。它对测试数据遵循相同的过程。
+
+XGBoost 机制将一个字典传递给 `reg_model.evals_result()`。这些字典中的每一个都包含在交叉验证的每一折中，随着树被添加到集成中而逐点生成的训练和测试 RMSE。这使得使用列表推导式跨交叉验证折聚合结果、将生成的数组列表转换为二维 NumPy 数组，并计算集成增长每个阶段的平均训练和测试误差变得容易。
+
+清单中的最后一部分代码在完整数据集上训练一个新模型。重新训练使用 XGBoost 的 `train` 函数完成。这具有略微不同的特性，尽管底层机制相同。使用 `train` 函数不需要实例化类对象。它是一个函数调用。该函数调用要求输入数据（训练集和测试集）采用 XGBoost 的 `DMatrix` 数据结构。你可以看到，此过程仅需一行代码即可接受 NumPy 数组作为输入。
+
+#### 评估梯度提升模型的性能
+
+[图 7.1](#c07.xhtml#c07-fig-0001) 和 [清单 7-1](#c07.xhtml#c07-fea-0001) 中的打印输出显示，梯度提升获得略低于 0.6 的 RMS 误差。你将在下一节看到，随机森林获得大致相同的结果。这种情况经常发生，但也存在差异显著的问题，因此你可能想两者都试试以确保万无一失。[图 7.1](#c07.xhtml#c07-fig-0001) 中的图表显示，样本外误差在 x 轴中途变平。有时通过略微降低学习率并重新训练，可以榨出更多性能。不妨试试看能得到什么结果。
+
+![图 7.1：梯度提升葡萄酒模型的训练和测试性能](images/c07f001.png)
+
+**[图 7.1](#c07.xhtml#R_c07-fig-0001)**：梯度提升葡萄酒模型的训练和测试性能
+
+[图 7.2](#c07.xhtml#c07-fig-0002) 显示了作为梯度提升实现一部分确定的变量重要性。请注意，酒精含量是第二重要的变量。与你在惩罚线性回归中看到的相比，它与挥发性酸度互换了位置。
+
+![图 7.2：梯度提升测量的变量重要性](images/c07f002.png)
+
+**[图 7.2](#c07.xhtml#R_c07-fig-0002)**：梯度提升测量的变量重要性
+
+### 构建随机森林模型预测葡萄酒口感
+
+随机森林不作为 XGBoost 的一部分提供，但 scikit-learn 拥有优秀的随机森林包。竞争表现的证据以及过去几年开发工作的相对强度表明，梯度提升在性能上比随机森林具有优势。但随机森林毫无疑问更容易使用。如果你遵循布雷曼（发明者）的建议，将树生长到全深并取平均。你可以调整用于训练的数据集采样比例，也可以调整每次分裂可用的特征数量，但性能通常是这两个因素的弱函数。相比之下，梯度提升具有学习率、两个正则化参数、树深度等众多参数。如果你想要快速得到答案，随机森林是个不错的选择。
+

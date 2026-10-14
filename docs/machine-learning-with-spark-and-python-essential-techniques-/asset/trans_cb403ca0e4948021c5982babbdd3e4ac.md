@@ -1,0 +1,80 @@
+
+更改颜色映射有助于在不同目标值层级上可视化关系。[Listing 2-11](#c02.xhtml#c02-fea-0012) 代码的最后一部分使用了你在箱线图中看到的归一化方法。这种归一化并不能使所有值都适配在 0 和 1 之间。首先，生成的值包含同样多的负值和正值。[Listing 2-11](#c02.xhtml#c02-fea-0012) 中的程序采用 logit 变换将值映射到 (0, 1) 区间。logit 变换由 [Equation 2.5](#c02.xhtml#c02-fig-0025) 所示表达式给出。该函数的图形如 [Figure 2.13](#c02.xhtml#c02-fig-0013) 所示。
+
+![Figure 2.13: Graph of the logit function (logitCurve.png)](images/c02f013.png)
+
+**Figure 2.13**: Graph of the logit function (logitCurve.png)
+
+![Equation 2.5: Using logit transform for soft range compression](images/c02-disp-0005.png)
+
+**Equation 2.5**: Using logit transform for soft range compression
+
+该函数的图形如 [Figure 2.13](#c02.xhtml#c02-fig-0013) 所示。正如你所见，logit 变换将大负值映射到 0（近似），大正值映射到 1（近似）；将 0 映射到 0.5。你将在 [Chapter 4](#c04.xhtml) 中再次看到 logit 函数，它在将线性函数关联到概率方面起着关键作用。
+
+[Figure 2.14](#c02.xhtml#c02-fig-0014) 展示了这些步骤的结果。这些变换使得可用的完整色彩范围得到了更好的利用。请注意，在较浅蓝色的示例中混杂着几条较深的蓝色线（对应环数较多的样本），甚至在 Whole Weight 和 Shucked Weight 区域的图表中出现了黄色和浅红色的样本。这表明这些属性可能不足以正确预测老年样本的年龄（环数）。幸运的是，其他一些属性（Diameter 和 Shell Weight）能更好地正确排序深蓝色线条。这些观察结果在后续分析预测误差时将大有裨益。
+
+![Figure 2.14: Parallel coordinate plot for the abalone data](images/c02f014.png)
+
+**Figure 2.14**: Parallel coordinate plot for the abalone data
+
+### How to Use a Correlation Heat Map for Regression—Visualize Pair-Wise Correlations for the Abalone Problem
+
+最后一步是查看各属性之间以及属性与目标之间的相关性。[Listing 2-13](#c02.xhtml#c02-fea-0014) 展示了生成鲍鱼数据相关性热力图和相关性矩阵的代码。这些计算遵循了针对岩石与地雷数据所概述的相同方法，但有一个重要区别：因为鲍鱼问题要求进行实数预测，相关性计算可以在相关性矩阵中包含目标变量。
+
+#### [Listing 2-13](#c02.xhtml#R_c02-fea-0014): Correlation Calculations for the Abalone Data — abaloneCorrHeat.py
+
+```
+__author__ = 'mike_bowles'
+
+abalone = pd_read_abalone()
+
+#calculate correlation matrix
+corr_mat = DataFrame(abalone.iloc[:,1:9].corr())
+#print correlation matrix
+print(corr_mat)
+   
+#visualize correlations using heatmap
+plt.pcolor(corr_mat)
+plt.show()
+Printed Output:  
+   
+                 Length  Diameter    Height  Whole weight     Shucked wt
+Length          1.000000  0.986812  0.827554      0.925261     0.897914
+Diameter        0.986812  1.000000  0.833684      0.925452     0.893162
+Height          0.827554  0.833684  1.000000      0.819221     0.774972
+Whole weight    0.925261  0.925452  0.819221      1.000000     0.969405
+Shucked weight  0.897914  0.893162  0.774972      0.969405     1.000000
+Viscera weight  0.903018  0.899724  0.798319      0.966375     0.931961
+Shell weight    0.897706  0.905330  0.817338      0.955355     0.882617
+Rings           0.556720  0.574660  0.557467      0.540390     0.420884
+ 
+                 Viscera weight  Shell weight     Rings  
+Length                0.903018      0.897706  0.556720  
+Diameter              0.899724      0.905330  0.574660  
+Height                0.798319      0.817338  0.557467  
+Whole weight          0.966375      0.955355  0.540390  
+Shucked weight        0.931961      0.882617  0.420884  
+Viscera weight        1.000000      0.907656  0.503819  
+Shell weight          0.907656      1.000000  0.627574  
+Rings                 0.503819      0.627574  1.000000   
+```
+
+[Figure 2.15](#c02.xhtml#c02-fig-0015) 展示了相关性热力图。在该图中，红色表示高相关性，蓝色代表弱相关性。目标变量（贝壳环数）位于最后一项，即热力图的顶行和最右列。这些位置的蓝色值意味着属性与目标之间的相关性较弱。浅蓝色对应目标与 Shell weight 之间的相关性。这证实了你在平行坐标图中所见。[Figure 2.15](#c02.xhtml#c02-fig-0015) 中其他非对角单元格的红色值表明属性之间高度相关。这在一定程度上与平行坐标图所呈现的画面相矛盾，在平行坐标图中，目标与属性之间的对应关系在视觉上似乎相当紧密。[Listing 2-13](#c02.xhtml#c02-fea-0014) 给出了相关性的数值。
+
+在本节中，你已经了解了如何将针对分类问题（岩石与地雷）描述的工具修改为适用于回归问题（鲍鱼）。所有修改都源于这两类问题的基本区别——回归问题的标签是实数，而二分类问题的标签是双值。下一节将对一个具有全数值属性的回归问题进行相同的研究。因为是回归问题，本节用于鲍鱼问题的相同工具均可使用。因为拥有全数值属性，所有属性都可以纳入研究，如相关性分析和沿实数线绘图。
+
+![Figure 2.15: Correlation heat map for the abalone data](images/c02f015.png)
+
+**Figure 2.15**: Correlation heat map for the abalone data
+
+## Real-Valued Predictions Using Real-Valued Attributes: Calculate How Your Wine Tastes
+
+葡萄酒口味数据集包含约 1500 种红葡萄酒的数据。每种葡萄酒都有多项化学成分测量值，包括酒精含量、挥发性酸度和亚硫酸盐等。每种葡萄酒还有一个口味评分，由三位专业品酒师的评分平均而得。问题在于构建一个模型，融合化学测量值来预测口味评分，使其与人工品酒师给出的评分相匹配。
+
+[Listing 2-14](#c02.xhtml#c02-fea-0015) 展示了生成葡萄酒数据集摘要的代码。代码打印出数据的数值摘要，列在该清单底部。代码还生成了归一化变量的箱线图，以便可视化数据中的离群值。[Figure 2.16](#c02.xhtml#c02-fig-0016) 展示了箱线图。数值摘要和箱线图均显示存在大量离群值。在基于此数据集训练模型时应牢记这一点。在分析训练模型的性能时，这些离群样本将是理解模型误差来源的一个切入点。
+
+![Figure 2.16: Attribute and target box plots of normalized wine data](images/c02f016.png)
+
+**Figure 2.16**: Attribute and target box plots of normalized wine data
+
+#### [Listing 2-14](#c02.xhtml#R_c02-fea-0015): Wine Data Summary — wineSummary.py
