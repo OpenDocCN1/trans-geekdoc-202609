@@ -1,0 +1,220 @@
+
+- probes, assessment of, 314
+- procedures, defined, 294
+- professional consultants, 330–332
+- programmable logic controller (PLC), 345
+- propaganda, 352–353
+- Protected Extensible Authentication Protocol (PEAP), 263
+- protective software and devices, assessment of, 311–312
+- proxies
+  - application proxies, 250
+  - proxy servers, 19, 56
+- public information, 294
+- public IP addresses, 43
+- public key encryption, 207
+  - defined, 223–224
+  - Diffie-Hellman, 227
+  - ElGamal, 227
+  - Elliptic Curve, 228
+  - MQV (Menezes-Qu-Vanstone), 227
+  - PGP (Pretty Good Privacy), 228–229
+  - RSA method, 224–227
+- public keys, 223
+- public records, 378
+- PUK (personal unblocking code), 408
+- pump and dump scams, 68–69
+- quantum computing, 237
+- quantum cryptography, 237
+- qubits, 237
+- QuickStego, 193, 234
+- RACE Integrity Primitives Evaluation Message Digest (RIPEMD), 231
+- RAID (redundant array of independent disks), 297–298
+- rail fence, 212–213
+- rainbow tables, 232–233
+- Ramos, Jeron, 77
+- Ranum, Marcus, 355
+- RAs (registration authorities), 266
+- readability analysis, 428
+- Reaper, 128
+- recent documents, viewing, 407
+- reconnaissance, 153
+- recovery. *See* disaster recovery
+- red teams, 153
+- redundant array of independent disks (RAID), 297–298
+- registration authorities (RAs), 266
+- registration DoS (denial of service) attacks, 108
+- Rejewski, Marian, 213
+- related-key attacks, 236
+- remediation steps (malware), 144
+- remote terminal units (RTUs), 351
+- removing software
+  - security policies for, 284
+  - uninstalled software, finding, 407
+- repeaters, 35
+- requests, change, 288–290
+- requirements engineering, 424–426
+- Richardson, Edward, 77
+- Rijmen, Vincent, 220
+- Rijndael cipher, 220
+- rings, AES (Advanced Encryption Standard), 222
+- RIPEMD (RACE Integrity Primitives Evaluation Message Digest), 231
+- risk assessment, 4–7, 16
+- Rivest, Ron, 224, 231
+- RJ-11 jacks, 33
+- RJ-45 jacks, 33
+- Romanian cybercrime law, 82
+- Rombertik, 124
+- rootkits, 137–138
+- `route` command, 54–55
+- router-based firewalls, 251
+- routers, 35–36
+- Rozycki, Jerzy, 213
+- RSA method, 224–227
+- RTUs (remote terminal units), 351
+- Rule 702, 414
+- Russian hackers, 345
+- sandboxes, 247
+- Sandworm, 357
+- SANS Institute, 24, 112, 152, 293, 315, 414
+- Santa Cruz Operations (SCO), 110
+- Sarbanes, Paul, 299
+- Sarbanes-Oxley (SOX), 299
+- SAs (security associations), 270
+- Sasser, 133–134
+- SCADA (Supervisory Control and Data Acquisitions) <sup>351–352</sup>
+- scanning
+  - active
+    - active code scanning <sup>247</sup>
+    - enumeration <sup>159–160</sup>
+    - MBSA (Microsoft Baseline Security Analyzer) <sup>321–323</sup>
+    - Nessus <sup>324–326</sup>
+    - OWASP (Open Web Application Security Project) <sup>326–327</sup>
+    - port scanning <sup>155–158</sup>
+    - Shodan <sup>160–162, 328–329</sup>
+    - vulnerability assessment <sup>158–159</sup>
+  - passive <sup>153–155</sup>
+- Scherbius, Arthur <sup>213</sup>
+- Schneier, Bruce <sup>222</sup>
+- SCI (sensitive compartmented information) <sup>294</sup>
+- Scientific Working Group on Digital Evidence (SWGDE) <sup>395</sup>
+- SCO (Santa Cruz Operations) <sup>110</sup>
+- screened hosts <sup>251</sup>
+- script kiddies <sup>17–18, 153</sup>
+- scripting, cross-site <sup>12–13</sup>
+- searches
+  - Facebook <sup>374–375</sup>
+  - general <sup>371–374</sup>
+  - mistaken identity <sup>377</sup>
+  - online resources <sup>378</sup>
+  - sex offender registries <sup>375–377</sup>
+  - Usenet <sup>379</sup>
+- SEC (Securities and Exchange Commission) 672
+- SecML (Security Modeling Language)
+  - data interface diagrams <sup>438–439</sup>
+  - misuse case diagrams <sup>432–436</sup>
+  - overview of <sup>428, 430–432</sup>
+  - security block diagrams <sup>439</sup>
+  - security sequence diagrams <sup>436–438</sup>
+- secret information <sup>294</sup>
+- Secret Service forensics guidelines <sup>393–394</sup>
+- Secure Hash Algorithm (SHA) <sup>231</sup>
+- Secure Shell (SSH) <sup>39</sup>
+- Secure Sockets Layer (SSL) <sup>266–268</sup>
+- Securities and Exchange Commission (SEC) 672
+- security activities <sup>19</sup>
+- security associations (SAs) <sup>270</sup>
+- security audits <sup>394</sup>
+- security block diagrams <sup>439</sup>
+- security breaches
+  - *See also* hacking; industrial espionage; threats
+  - cracking <sup>9</sup>
+  - defined <sup>7</sup>
+  - insider threats <sup>13–14</sup>
+  - social engineering <sup>9, 191</sup>
+  - war-dialing <sup>10</sup>
+  - war-driving <sup>10</sup>
+  - war-flying <sup>10</sup>
+- security devices <sup>19</sup>
+- security information event management (SIEM) <sup>436</sup>
+- Security log <sup>398</sup>
+- Security Modeling Language. *See* SecML (Security Modeling Language)
+- security policies
+  - data classification <sup>294–295</sup>
+  - disaster recovery
+    - BCPs (business continuity plans) <sup>295–296</sup>
+    - business continuity standards <sup>296</sup>
+    - DRPs (disaster recovery plans) <sup>295</sup>
+    - impact analysis <sup>296</sup>
+  - fault tolerance <sup>296–298</sup>
+  - guidelines <sup>294</sup>
+  - ISO 17799 standard <sup>279–280</sup>
+  - laws governing <sup>298–299</sup>
+  - procedures <sup>294</sup>
+  - purpose of <sup>279</sup>
+  - standards <sup>294</sup>
+  - system administration policies
+    - access control <sup>292–293</sup>
+    - change requests <sup>288–290</sup>
+    - departing employees <sup>287–288</sup>
+    - developmental policies <sup>293</sup>
+    - need for <sup>287</sup>
+    - new employees <sup>287</sup>
+    - security breaches <sup>290–293</sup>
+  - user policies
+    - BYOD (Bring Your Own Device) <sup>285</sup>
+    - consequences for violating <sup>286–287</sup>
+    - CYOD (Choose Your Own Device) <sup>285</sup>
+    - defining <sup>280</sup>
+    - desktop configuration <sup>285</sup>
+    - e-mail attachments <sup>283–284</sup>
+    - instant messaging <sup>284</sup>
+    - Internet use <sup>282–283</sup>
+    - passwords <sup>281</sup>
+    - software installation and removal <sup>284</sup>
+    - termination or expulsion and <sup>286</sup>
+- security resources <sup>23–24</sup>
+- security sequence diagrams <sup>436–438</sup>
+- security technology
+  - antispyware software <sup>194, 253–254</sup>
+  - antivirus software <sup>140–143, 248</sup>
+  - authentication <sup>262–265</sup>
+  - DAM (database activity monitoring) <sup>261</sup>
+  - DAMP (database activity monitoring and prevention) <sup>261</sup>
+  - digital certificates <sup>265–266</sup>
+  - firewalls
+    - benefits and limitations of <sup>248–249</sup>
+    - configurations <sup>250–251</sup>
+    - defined <sup>19, 55–56, 248</sup>
+    - firewall logs <sup>253</sup>
+    - selection of <sup>311–312</sup>
+    - SPI <sup>105</sup>
+    - types of <sup>249–250</sup>
+    - Windows 10 Windows Defender <sup>252–253</sup>
+    - ZoneAlarm <sup>252</sup>
+  - honey pots <sup>260–261</sup>
+  - IDSs (intrusion detection systems)
+    - active <sup>255</sup>
+    - attack identification methods <sup>255</sup>
+    - defined <sup>254</sup>
+    - elements of <sup>256</sup>
+    - passive <sup>255</sup>
+    - Snort <sup>256–260</sup>
+  - intrusion deflection <sup>261</sup>
+  - intrusion deterrence <sup>261</sup>
+  - SSL (Secure Sockets Layer) <sup>266–268</sup>
+  - TLS (Transport Layer Security) <sup>266–268</sup>
+  - virus scanners
+    - defined <sup>245</sup>
+    - how they work <sup>245–246, 247</sup>
+    - scanning techniques <sup>246–247</sup>
+  - VPNs (virtual private networks) <sup>268–270</sup>
+  - Wi-Fi security <sup>270–271</sup>
+- Security+ certification <sup>331</sup>
+- sensitive compartmented information (SCI) <sup>294</sup>
+- sensors, IDS, [256](#ch09.xhtml#page_256)
+- Serpent, [222](#ch08.xhtml#page_222)
+- Server Message Block (SMB), [40](#ch02.xhtml#page_40)
+- servers
+  - ASs (authentication servers), [264](#ch09.xhtml#page_264)
+  - errors, [46](#ch02.xhtml#page_46)
+  - proxy, [19](#ch01.xhtml#page_19), [56](#ch02.xhtml#page_56)
