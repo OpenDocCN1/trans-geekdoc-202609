@@ -1,0 +1,293 @@
+
+```python
+def createRedeemScript(pubkey_alice: str):
+    redeem_script_b = bytes([0x01,
+        105, # after 105 blocks
+        OP_CHECKSEQUENCEVERIFY, OP_DROP])
+    pubkey_b = bytes.fromhex(pubkey_alice)
+    redeem_script_b += createVarInt(len(pubkey_b)) + pubkey_b
+    redeem_script_b += bytes([OP_CHECKSIG])
+    return redeem_script_b
+```
+
+**程序 11.4：** 创建相对锁定时间赎回脚本的方法
+
+我们按如下方式调用前述方法：
+
+```python
+if __name__ == '__main__':
+    pubkey_alice = '037fadaea6edf196bf70af16cefb2bd3c830e54c0a6e9a00bf7806b241933547f7'
+    redeem_script_b = createRedeemScript(pubkey_alice)
+    print('redeem script = %s' % redeem_script_b.hex())
+    sh = hash160(redeem_script_b)
+    address = sh2address(sh)
+    print('P2SH address = %s' % address)
+```
+
+我们执行它并得到以下结果：
+
+![](img/Figure-11.17.jpg)
+
+**图 11.17：** 生成相对时间锁的赎回脚本
+
+我们生成一个区块以支付给前述赎回脚本指示的合约，然后获取交易 ID：
+
+![](img/Figure-11.18.jpg)
+
+**图 11.18：** 相对时间锁资金交易的交易 ID
+
+我们现在使用以下代码创建一个新交易：
+
+```python
+def createTransactionStruct():
+    txn = {}
+    txn['version'] = 2
+    txn['input_count'] = 1
+    txn['inputs'] = []
+    input0 = {}
+    input0['prevtxn'] = \
+        'e6a31b5c7e39a31bb12c68055c1dd6dcb6554d1546a8621e889f1026e10264c8'
+    input0['prevtxnindex'] = 0
+    input0['script_type'] = 'P2SH_RelativeTimeLock'
+    input0['privkeys'] = \
+        ['L26JcHRhqEQv8V9DaAmE4bdszwqXS7tHznGYJPp7fxEoEQxxBPcQ']
+    input0['redeem_script'] = '0169b27521037fadaea6edf196bf70af16cefb2bd3c830e54c0a6e9a00bf7806b241933547f7ac'
+    input0['hash_type'] = SIGHASH_ALL
+    input0['sequence'] = 105
+    input0['sequence_type'] = 'block'
+    txn['inputs'].append(input0)
+    txn['out_count'] = 2
+    txn['outputs'] = []
+    output0 = {}
+    output0['satoshis'] = 10*(10**8)
+    output0['script_type'] = 'P2PKH'
+    output0['address'] = 'mxzmMmVycLDgAA48VtHDeh389eDAwiJqwQ'
+    txn['outputs'].append(output0)
+    output1 = {}
+    output1['satoshis'] = 399999*(10**4)
+    output1['script_type'] = 'P2PKH'
+    output1['address'] = 'miSFmBeKXf5Wp7Luj46XTu3Yh57nAwhZAo'
+    txn['outputs'].append(output1)
+    txn['locktime'] = 0
+    return txn
+```
+
+**程序 11.5：** 创建相对锁定时间交易的方法
+
+为了领取上一笔交易中的锁定资金，我们提供 `scriptSig`，它由所需的签名和赎回脚本组成。这是 `scriptSig` 的代码：
+
+```python
+def createScriptSigForRelTimeLock(signgrp: list, script_b: bytes):
+    scriptSig_b = getWithPushdata(signgrp[0])
+    scriptSig_b += getWithPushdata(script_b)
+    return scriptSig_b
+```
+
+**程序 11.6：** 创建相对锁定时间 scriptSig 的方法
+
+在 *第 10 章，创建和验证交易* 的 **“构建交易”** 主题下，我们定义了方法 `createSignedInput`。我们向该方法添加以下行以处理 *relative-timelock* 脚本类型：
+
+```python
+elif txn_input['script_type'] == 'P2SH_RelativeTimeLock':
+    scriptSig_b = createScriptSigForRelTimeLock(signgrp, script_b)
+```
+
+我们执行代码并得到已签名的原始交易：
+
+![](img/Figure-11.19.jpg)
+
+**图 11.19：** 创建相对时间锁交易的十六进制代码
+
+如果我们在挖出 105 个区块之前发布前述交易，会得到以下错误：
+
+![](img/Figure-11.20.jpg)
+
+**图 11.20：** 在达到所需区块高度前发布相对时间锁交易
+
+一旦我们在输入交易之后挖出了 105 个区块，就可以发布前一笔交易：
+
+![](img/Figure-11.21.jpg)
+
+**图 11.21：** 在达到所需区块高度后发布相对时间锁交易
+
+### 智能合约
+
+*智能合约* 是两方或多方之间的一种合约，以可执行计算机程序的形式编写。它仅在合约允许执行时才会执行，执行时遵循合约中定义的条件。
+
+比特币提供了一种基于逆波兰表示法的原始脚本语言。该脚本不是图灵完备的，这意味着它无法解决所有计算问题。由于智能合约是以程序形式建模的合约，它们可能会变得更加复杂，包含循环和状态变量，而比特币脚本不允许这些。
+
+它拥有大量可用于创建各种智能合约的操作码。即使有大量操作码，并非所有事情都能通过脚本完成。
+
+此外，比特币交易本身也对脚本施加了限制。而且由于比特币交易费是基于每 vByte 计算且相对较高，复杂且庞大的赎回脚本会使智能合约在经济上不可行。
+
+以下是比特币上智能合约的一些局限性：
+
+*   在一笔交易中，智能合约只能影响单个输入。
+    *   智能合约只能从一个具有固定价值的 UTXO 为交易提供资金。
+    *   交易输出无法根据智能合约进行修改。
+    *   输出脚本是标准的，只能是标准脚本之一，例如 `P2SH`、`P2PKH`、`OP_RETURN`、`P2PK` 或 `P2MS` 以及标准隔离见证脚本，我们将在下一章介绍。
+*   比特币脚本不是图灵完备语言，并且没有选项：
+    *   进行非确定性操作，如循环
+    *   作为状态机运行并根据其状态执行操作。
+*   比特币脚本局限于它提供的操作码。
+*   比特币上的脚本编写成本高昂，智能合约的复杂性也取决于其经济可行性。
+
+### 支付中信任问题的解决方案
+
+我们知道，简单的支付方式是将比特币转账给接收方的地址。这可以通过手机钱包扫描二维码完成。这非常适合小额支付，但随着比特币价格上涨导致交易费增加，为低价商品付款在经济上已不可行。
+
+对于大额支付，我们需要提高支付的安全性。我们将在以下子主题中逐个解决问题，从而提高支付的安全性。
+
+### 简单多重签名支付
+
+买方和卖方之间的 2-of-2 多重签名是一种在受信任方需要依赖非受信任实体提供的服务时保障支付安全的方式。例如，考虑一家信誉良好的企业需要从一家不受监管的小供应商处获取服务。
+
+在这种情况下，企业将资金锁定在一个 2-of-2 多重签名地址中，仅在收到小供应商的服务后才完成支付。锁定的资金充当企业和供应商之间的智能合约。这让小供应商确信他们会得到付款，因为大企业无法把钱拿回去。
+
+### 使用相对时间锁改进支付
+
+上述支付用例的问题在于小供应商延迟提供所需服务。他们知道资金被锁定了，所以对自己的工作可能会有点马虎。
+
+为了解决这个问题，必须有一种方式让企业能够撤销支付。然而，企业不应能随意撤销支付。这可以通过相对时间锁来实现，让双方都知道比特币被锁定了，但有一个时间限制。如果供应商在规定时间内未完成服务，支付将被撤销。
+
+通过下图可以理解该用例。这里，Alice 代表受信任的企业，Bob 代表一家不受信任的小供应商：
+
+![](img/Figure-11.22.jpg)
+
+**图 11.22：** 使用相对时间锁改进支付
+
+为了实现这一点，我们使用带有以下赎回脚本的 P2SH 交易：
+
+```
+#IF
+### OP_2 <Alice 的公钥> <Bob 的公钥> OP_2 CHECKMULTISIG
+#ELSE
+### 105 CHECKSEQUENCEVERIFY DROP
+### <Alice 的公钥> CHECKSIG
+#ENDIF
+```
+
+在正常情况下（即无争议时），双方签名交易以支付给 Bob。如果发生争议，Alice 等待超时，然后创建一笔由她自己的私钥签名的交易，将锁定金额转回她的地址。
+
+需要记住的一点是，一旦条件有效，它将永远有效。因此，如果 Alice 想给 Bob 额外的时间，她仍然可以这样做。
+
+创建赎回脚本所需的操作码如下：
+
+*   `OP_2 = 0x52`
+*   `OP_IF = 0x63`
+*   `OP_ELSE = 0x67`
+*   `OP_ENDIF = 0x68`
+*   `OP_CHECKSEQUENCEVERIFY = 0xb2`
+*   `OP_DROP = 0x75`
+*   `OP_CHECKMULTISIG = 0xae`
+*   `OP_CHECKSIG = 0xac`
+
+赎回脚本用于生成合约地址，合约金额锁定在该地址。以下代码用于生成赎回脚本：
+
+```python
+def createRedeemScript2_2_seqcheck(pubkey_l: list):
+    redeem_script_b = bytes([OP_IF, OP_2])
+    for pubkey in pubkey_l: # Alice + Bob
+        pubkey_b = bytes.fromhex(pubkey)
+        redeem_script_b += createVarInt(len(pubkey_b)) + pubkey_b
+    redeem_script_b += bytes([OP_2, OP_CHECKMULTISIG])
+    redeem_script_b += bytes([OP_ELSE, 0x01,
+        105, # 105 个区块后
+        OP_CHECKSEQUENCEVERIFY, OP_DROP])
+    pubkey_b = bytes.fromhex(pubkey_l[0]) # Alice 公钥
+    redeem_script_b += createVarInt(len(pubkey_b)) + pubkey_b
+    redeem_script_b += bytes([OP_CHECKSIG, OP_ENDIF])
+    return redeem_script_b
+```
+
+**程序 11.7：** 带有相对时间锁的支付赎回脚本
+
+我们使用以下脚本调用该方法：
+
+```python
+if __name__ == '__main__':
+    pubkey_l = ['037fadaea6edf196bf70af16cefb2bd3c830e54c0a6e9a00bf7806b241933547f7', '02fcb1c7507db15576ab35cd7c9b1ea570141a8b81c9938dae0320392b0f7034d0']
+    redeem_script_b = createRedeemScript2_2_seqcheck(pubkey_l)
+    print('redeem script = %s' % redeem_script_b.hex())
+    sh = hash160(redeem_script_b)
+    address = sh2address(sh)
+    print('P2SH address = %s' % address)
+```
+
+调用该方法后，我们得到以下赎回脚本和地址：
+
+![](img/Figure-11.23.jpg)
+
+**图 11.23：** 生成带有相对时间锁的支付赎回脚本
+
+我们生成一个区块以支付给该地址：
+
+![](img/Figure-11.24.jpg)
+
+**图 11.24：** 生成支付赎回脚本的区块
+
+我们从区块哈希获取交易 ID：
+
+![](img/Figure-11.25.jpg)
+
+**图 11.25：** 从生成的区块获取交易 ID
+
+我们再生成 100 个区块，以便这笔交易可用于支付。正如你所学，该合约有两种可能的结果。
+
+此外，`OP_CHECKSEQUENCEVERIFY` 是一个软分叉，要求交易版本等于或大于 2。因此，在以下交易结构中，我们将使用版本 2：
+
+```python
+def createTransactionStruct():
+    txn = {}
+    txn['version'] = 2
+    txn['input_count'] = 1
+    txn['inputs'] = []
+    input0 = {}
+    input0['prevtxn'] = \
+        '624d92839eb89104d0909df89f95785cb8bb77f0fec66c6c40cf3ad2804a3966'
+    input0['prevtxnindex'] = 0
+    input0['script_type'] = 'P2SH_Condition'
+    input0['condition'] = True
+    input0['privkeys'] = \
+        ['L26JcHRhqEQv8V9DaAmE4bdszwqXS7tHznGYJPp7fxEoEQxxBPcQ',
+         'KxR8HHyfAwFPidCw2vXThXqT4vSMNeufirHFapnfCfkzLaohtujG']
+    input0['redeem_script'] = '635221037fadaea6edf196bf70af16cefb2bd3c830e54c0a6e9a00bf7806b241933547f72102fcb1c7507db15576ab35cd7c9b1ea570141a8b81c9938dae0320392b0f7034d052ae670169b27521037fadaea6edf196bf70af16cefb2bd3c830e54c0a6e9a00bf7806b241933547f7ac68'
+    input0['hash_type'] = SIGHASH_ALL
+
+    txn['inputs'].append(input0)
+    txn['out_count'] = 2
+    txn['outputs'] = []
+    output0 = {}
+    output0['satoshis'] = 10*(10**8)
+    output0['script_type'] = 'P2PKH'
+    output0['address'] = 'mxzmMmVycLDgAA48VtHDeh389eDAwiJqwQ'
+    txn['outputs'].append(output0)
+    output1 = {}
+    output1['satoshis'] = 399999*(10**4)
+    output1['script_type'] = 'P2PKH'
+    output1['address'] = 'miSFmBeKXf5Wp7Luj46XTu3Yh57nAwhZAo'
+    txn['outputs'].append(output1)
+    txn['locktime'] = 0 # block height
+    return txn
+```
+
+**程序 11.8：** 用于为 True 条件创建交易的方法
+
+对于赎回脚本，我们需要像普通多重签名脚本那样提供 Alice 和 Bob 的公钥。在这里，我们还需要向脚本提供 `OP_1` 或 True。
+
+因此，包含赎回脚本的 `scriptSig` 如下所示：
+
+```
+#OP_0
+#<Alice 的签名>
+#<Bob 的签名>
+#OP_1 (True)
+#IF
+### OP_2 <Alice 的公钥> <Bob 的公钥> OP_2 CHECKMULTISIG
+#ELSE
+### 105 CHECKSEQUENCEVERIFY DROP
+### <Alice 的公钥> CHECKSIG
+#ENDIF
+```
+
+我们在方法 `createSignedInput` 中进一步添加以下条件，以处理上述条件脚本的 `script_type` `P2SH_Condition`：
