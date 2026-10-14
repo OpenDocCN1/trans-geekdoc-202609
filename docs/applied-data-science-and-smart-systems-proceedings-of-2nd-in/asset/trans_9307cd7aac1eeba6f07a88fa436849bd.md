@@ -1,0 +1,77 @@
+
+-   [早期设计重点：该模型优先考虑设计阶段，鼓励在进入实现阶段之前进行深入的分析和规划](#)
+
+-   [全面设计：设计决策在系统架构、组件交互和整体结构的仔细考虑下做出](#)
+
+-   [迭代优化：虽然强调早期设计，但该模型承认设计决策会随着开发进展而演变和改进。设计优化的迭代周期很常见](#)
+
+-   [重用与模式：该模型推广使用设计模式和现有组件的重用，以加快开发并确保设计实践的可靠性](#)
+
+-   [效率与质量：通过在早期解决设计复杂性，该模型旨在减少潜在缺陷、降低昂贵的返工成本，并提升软件性能和可维护性](#)
+
+-   [沟通与协作：设计、开发和其他利益相关者之间的紧密协作至关重要，以确保设计决策与项目目标保持一致](#)
+
+The effort calculation, based on a standardized algorithmic model, is depicted using the given equation.
+
+(2)  
+
+*PM* = *A* *x* *S* *i* *z* *e* (*B*) *x* *M*
+
+where PM signifies the total effort in months.
+
+M = {PERS’ RCPX’ RUSE’ PDIF’ PREX’ FCIL’ SCED} Initial calibration sets A = 2.94, Size in K-LOC, and B between 1.1 and 1.24, based on the project’s originality, development flexibility, risk management strategies, and process maturity.
+
+Multipliers: Developer skill, non-functional needs, platform familiarity, and other factors are reflected in multipliers.
+
+*   RCPX – product reliability and complexity;
+
+*   RUSE – the reuse required;
+
+*   PDIF – platform difficulty;
+
+*   PREX – personnel experience;
+
+*   PERS – personnel capability;
+
+*   SCED – required schedule;
+
+*   FCIL – the team support facilities.
+
+#### 2) The reuse model
+
+The reuse model is an approach in software development that focuses on leveraging existing software components, modules, or solutions to enhance efficiency, reduce development time, and improve overall software quality. It centers on the idea that by reusing well-tested and proven components, developers can avoid reinventing the wheel and instead build upon established solutions. The reuse model encourages the systematic identification, selection, and integration of reusable assets to streamline the development process.
+
+##### a. Reuse model estimation:
+
+Estimating effort and resources for the reuse model involves considering factors unique to integrating and adapting reusable components. This estimation model uses Equation (3) to estimate the effort.
+
+(3)  
+
+$$PM = \\frac{AS\_{LOC} \\times \\left( \\frac{AT}{100} \\right)}{AT\_{PROD}}$$  
+
+*AS[LOC]* stands for “Actual Source Lines of Code,” which represents the total number of lines of code that have been created for a software project. AT refers to the “Proportion of Automatically Generated Code,” indicating the fraction of code that is generated through automated tools or processes. *AT[PROD]* represents “Engineers’ Productivity in Code Integration,” signifying how efficiently developers integrate this code. If the estimation process is based solely on manually written code, the estimated Lines of Code (LOC) can be determined using Equation (4).
+
+(4)  
+
+$$ES\_{LOC} = AS\_{LOC} \\times \\left( {1 - \\frac{AT}{100}} \\right) \\times AAM$$  
+
+*ES[LOC]* stands for “Estimated Source Lines of Code,” which refers to the calculated number of lines of code expected in a software project. The costs associated with modifying reused code, understanding how to integrate it, and making decisions about its reuse are considered in determining the adaption adjustment multiplier. This multiplier takes into account the adjustments needed based on factors like *AS[LOC]* and AT, as explained earlier. The COCOMO II model primarily relies on your estimation of the software project’s size, measured in thousands of Source Lines of Code (*KS[LOC]*), to calculate the required effort in terms of Person–Months (PM). In essence, the model’s effort estimation heavily depends on your assessment of the project’s scale, as quantified by the size of the codebase.
+
+(5)  
+
+*E**f**f**o**r**t* = 2.94 × *E*[*a**f*] × (*K**S*[*L**O**C*]) × *E*  
+
+*E[af]* stands for “Effort Adjustment Factor,” which is derived from the cost drivers. The exponent E in the formula is determined by the five scale drivers. Estimation techniques, such as expert judgment, historical data analysis, and specialized software tools, can aid in determining the effort required for the reuse model. In essence, the reuse model’s estimation involves evaluating the integration effort, customization needs, and associated activities when incorporating existing components into a new project.
+
+With a holistic approach, taking into account the intricacies of the software, the testing strategy, the team’s capabilities, and the project context, the paper contributes to provide foundation for the accurate testing effort estimation. Regular review and adjustment of estimates based on evolving project dynamics further contribute to improved project planning and successful software delivery.
+
+## V. Conclusion
+
+The paper presents a detailed analysis of various factors that are critical for accurate estimation of software testing effort that plays a critical role in project planning and management. The paper delved into existing research presented by the research community in predicting software testing effort estimation. The paper claims important contribution in laying down the foundation and preliminary factor analysis prior to estimating the testing effort for a software project. The multifaceted nature of software projects necessitates a comprehensive approach to estimation, encompassing parameters such as project complexity, size, requirements volatility, team expertise, and historical data analysis. By considering these parameters, organizations can enhance their ability to create more reliable and realistic testing effort estimates. As the software development landscape continues to evolve, the parameters influencing testing effort estimation are subject to change with the passage of time and advancement of technology. Therefore, a proactive stance towards continuous improvement and adaptation is necessary. The collaboration between development and testing teams, ongoing communication, and learning from each estimation cycle’s outcomes are crucial for refining the estimation process over time. Altogether, a successful software testing effort estimation demands a harmonious blend of empirical analysis, domain expertise, and technological advancements. With fine-tuning of the parameters discussed in this paper, organizations can pave the way for more accurate STE estimations, leading to better resource allocation, project planning, and ultimately, the delivery of high-quality software systems. In future, the study can be followed for evaluating the effect of integrating concept of machine learning in STE estimation works.
+
+*   [Badri, M., Toure, F., and Lamontagne, L.](#ch12.xhtml#R_ref12_1) (2015). Predicting unit testing effort levels of classes: An exploratory study based on multinomial logistic regression modeling. Proc. Comp. Sci., 62, 529–538.
+
+*   [Bhattacharya, P., Srivastava, P. R., and Prasad, B.](#ch12.xhtml#R_ref12_2) (2012). Software test effort estimation using particle swarm optimization. Adv. Intel. Soft Comput., 132, 827–835. doi: [10.1007/978-3-642-27443-5\_95/COVER](http://dx.doi.org/10.1007/978-3-642-27443-5_95/COVER).
+
+*   [Bluemke, I. and Malanowska, A.](#ch12.xhtml#R_ref12_3) (2021). Software testing effort estimation and related problems. ACM Comput. Sur. (CSUR), 54(3). doi: [10.1145/3442694](http://dx.doi.org/10.1145/3442694).
+

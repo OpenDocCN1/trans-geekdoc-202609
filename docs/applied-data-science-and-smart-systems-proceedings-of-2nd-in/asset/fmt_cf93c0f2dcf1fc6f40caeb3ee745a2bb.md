@@ -1,0 +1,38 @@
+
+Results of this paper are – N-fold cross-validation and both heart sound data were used to validate the model with enriched data. All fold’s results have been displayed and published in this work. The model utilized in this study had a 98.60% accuracy rate on tests designed to identify numerous heart disorders.
+
+In paper by [Tang et al., (2018](#ch45.xhtml#ref45_2)), the support vector machine (SVM) classifier’s powerful classification ability is demonstrated by the characteristics. The outcomes demonstrate that the overall score which was determined by 200 independent simulations, is 0.880.02, which is comparable to the performance of the previous top classification techniques. Furthermore, the SVM classifier performs admirably with even a minimal number of training features and consistently produces reliable results with randomly chosen training features. Five hundred and fifteen features used in this study are time interval, state amplitude, energy, high-order statistics, cepstrum, frequency spectrum, cyclostationarity, and entropy. The frequency spectrum features have the greatest classification-contributing value, according to a correlation analysis between the features and the target label.
+
+Haya [Alaskar et al., (2019](#ch45.xhtml#ref45_3)) and [Gera et al., (2021](#ch45.xhtml#ref45_6)) data gathered from the 2016 PhysioNet/CinC challenge dataset. In these papers, it examines the performance of a CNN named AlexNet, concentrating on two methods for identifying abnormalities in PCG signals. Heart sound recordings from both clinical and non-clinical settings are included in this dataset. Our thorough simulation findings showed that 87% recognition accuracy was reached utilizing AlexNet as the feature extractor and SVM as the classifier. This is an improvement of 85% accuracy attained by end-toend learning AlexNet in contrast to the benchmarked methodologies.
+
+In a work done by [Li et al., (2020](#ch45.xhtml#ref45_7)), cardiac diseases are diagnosed using heart sound as a key component. Experts struggle and take a lot of time to distinguish between various heart sounds because of the low signal-to-noise ratio (SNR). The scientific classification of heart sounds is therefore necessary. To automatically distinguish between normal and diseased heart sounds, we used deep learning algorithms in this study combined with a traditional feature engineering technique. In the beginning, 497 characteristics were yielded by 8 domains.
+
+To obtain global information about features and avoid over fitting. The features are embedded into the built-in CNN which is usually used before the classification layer but excludes all connected processes involving the global average layer.
+
+To enhance the effectiveness of the classification method, the class weights of the loss function were set in the training phase while accounting for the class imbalance. The effectiveness of the suggested technique was assessed using stratified 5-fold crossvalidation. Matthews correlation coefficient, mean accuracy, sensitivity, and specificity, respectively, 72.1%, 86.8%, 87%, and 86.6% on the PhysioNet/ CinC challenge 2016 dataset. The proposed method performs well in terms of sensitivity and specificity.
+
+In a paper by [Abbas et al., (2022](#ch45.xhtml#ref45_8)), using a unique attention-based technique, CVT-Trans also known as convolutional vision transformer recognizes and classifies PCG signals majorly in five groups. The CWTS also known as continuous wavelet transformbased spectrogram method was used to extract features from the PCG data. Accuracy of 100%, SE of 99.00%, SP of 99.5%, and F1-score of 98% indicate the overall average accuracy.
+
+In a work did by [Son et al., (2018](#ch45.xhtml#ref45_7)) explains that 97% accuracy rate is achieved for diagnosing patients with heart problems. Mel frequency cepstral coefficient, discrete wavelets transform, and centroid displacement-based k-nearest neighbor features of the heart sound signal were used to extract features, while SVM, deep neural network (DNN), and centroid displacement-based k-nearest neighbor were utilized for learning and classification. For training and classification using SVM and discrete wavelets transform (DWT), we merged Mel frequency cepstral coefficient and DWT features. This improved the results and classification accuracy. Results can be significantly enhanced when Mel frequency cepstral coefficient and DWT features are combined and used for classification via SVM, DNN, and k-nearest neighbor (KNN).
+
+In a paper by [Yadav et al., (2019](#ch45.xhtml#ref45_8)), uses heart sounds as the input. The suggested system uses frame-based processing and strategic processing to extract ML features that can distinguish between different heart sounds. A supervised classifier is trained to automatically detect heart problems using the most significant features. Differences in auscultations are brought on by biological anomalies that affect how the heart physically works. for the classification of abnormal and normal heart sounds, the suggested method had an accuracy of 97.78% and an error rate of 2.22% ([Table 45.1](#ch45.xhtml#tab45_1)).
+
+[Table 45.1. Comparisons of previous studies on classification of cardiac diseases.](#ch45.xhtml#R_tab45_1)
+
+| Reference || Objective || Technique used || Accuracy |
+| --- | --- | --- | --- |
+| \[1\] || Cardiac disorders detection using multiclassification algorithm || CNN with augmentation CNN without augmentation || Accuracy achieved – 96.23% Accuracy achieved – 98.60% |
+| \[2\] || Binary classification between abnormal sounds and normal PCG signals || SVM || Accuracy – 88% |
+| \[3\] || Binary classification between abnormal sounds and normal PCG signals || AlexNet, SVM || Accuracy – 87.65% |
+| \[4\] || Using PCG signals classification between normal and abnormal sounds || Ensemble of a feature engineering method, deep learning algorithm || Accuracy – 86.02% |
+| \[5\] || Cardiac disorders detection using multiclassification algorithm || Deep learning || Accuracy – 100% SE – 99.00% SP – 99.5% F1-score – 98%, based on 10-fold cross validation |
+| \[6\] || Heart diseases detection using multiclassification algorithm || MFCC’c DWT (using SVM and DWT) || Accuracy – 97% |
+| \[7\] || Several heart diseases detection using a multiclassification algorithm || SVM, K-NN || Accuracy – 97.78% |
+
+## Conclusion and future scope
+
+In this paper, the main emphasis is given to the involvement of several research works available in a digital repository like IEEE, springer for heart disease detection from 2016 to 2022 onwards. The systematic study clearly shows the attainments being done in heart disease detection with proper accuracy rates from the past many years.
+
+ML algorithms generally produced encouraging results, despite the fact that there are still a number of obstacles to be cleared before they can be used in clinical practice. To interpret the study in the appropriate clinical context, it is necessary to choose the suitable algorithms for the relevant research questions, compare the results to those of human specialists, use validation cohorts, and report on all potential assessment matrices. Most significantly, investigations comparing ML algorithms to traditional risk models should be conducted in the future. Once validated in this manner, ML algorithms could be implemented in clinical settings and integrated with electronic health record systems, especially in regions with abundant resources.
+
+In the future, we’ll work to identify different heart disease subtypes and further classify each one according to how severe it is.

@@ -1,0 +1,223 @@
+name: Applied Data Science and Smart Systems Proceedings of 2nd International Conference
+  on Applied Data Science and Smart Systems 2023 (ADSSS 2023) 15-16 Dec, 2023, Rajpura,
+  India First Edition
+slug: applied-data-science-and-smart-systems-proceedings-of-2nd-in
+name_cn: '
+
+  应用数据科学与智能系统 2023 第二届国际会议论文集（ADSSS 2023）'
+toc:
+- - '##'
+  - 14 图例
+- - '##'
+  - 图注
+- - '##'
+  - 图表列表
+- - '##'
+  - 图表
+- - '##'
+  - 比较分析与模型细节
+- - '##'
+  - 表格列表
+- - '##'
+  - 表格
+- - '##'
+  - 系统与算法比较
+- - '##'
+  - Table 35.1 Literature survey summary
+- - '##'
+  - Table 35.2 Parameters of the fog environment
+- - '##'
+  - Table 35.3 Final outcome
+- - '##'
+  - Table 36.1 Thyroid diseases and their symptoms
+- - '##'
+  - Table 36.2 DL segmentation performance parameter
+- - '##'
+  - Table 37.1 Literature review of studied research articles
+- - '##'
+  - Table 37.2 The stego-encryption algorithm for the PHM
+- - '##'
+  - Table 37.3 Comparison based on the size of the data set and programming language
+    used in previous research
+- - '##'
+  - Table 37.4 Encryption time for the proposed hybrid method
+- - '##'
+  - Table 37.5 Proposed method decryption time
+- - '##'
+  - Table 37.6 Comparison based result table for the proposed hybrid method with the
+    research article that led to this research
+- - '##'
+  - Table 39.1 Newton Raphson method to find first real root
+- - '##'
+  - Table 39.2 Polynomial root finding with primitive data types
+- - '##'
+  - Table 39.3 Polynomial with primitive co-efficient and big number constant
+- - '##'
+  - Table 39.4 Polynomial root convergence with big numbers
+- - '##'
+  - Table 41.1 Comparison of different existing solutions.
+- - '##'
+  - Table 44.1 Comparative analysis of existing work with limitations
+- - '##'
+  - Table 44.2 Tools and specifications
+- - '##'
+  - Table 44.3 Latency results between the proposed system and the existing system
+- - '##'
+  - Table 44.4 Throughput comparison between the baseline system and the proposed
+    system
+- - '##'
+  - Table 44.5 Comparative analysis of existing metaversebased systems
+- - '##'
+  - Table 45.1 Comparisons of previous studies on classification of cardiac diseases.
+- - '##'
+  - Table 46.1 Summary of parameters
+- - '##'
+  - Table 46.2 Top five attributes with accuracy.
+- - '##'
+  - Table 46.3 Bottom seven attributes with accuracy
+- - '##'
+  - Table 47.1 CKD dataset description.
+- - '##'
+  - Table 47.2 Performance of the proposed DNN.
+- - '##'
+  - Table 47.3 Comparative analysis.
+- - '##'
+  - Table 48.1 Descriptive statistics of feedback responses.
+- - '##'
+  - Table 49.1 Parameters list (simulation setup).
+- - '##'
+  - Table 49.2 Performance metrics.
+- - '##'
+  - Table 50.1 Features description for dataset of crop recommendation.
+- - '##'
+  - Table 50.2 Feature description for dataset of fertilizer recommendation.
+- - '##'
+  - Table 50.3 Features description for dataset of irrigation scheduling.
+- - '##'
+  - Table 50.4 Features description for dataset of soil moisture prediction.
+- - '##'
+  - Table 50.5 Classification metrics for crop recommendation system.
+- - '##'
+  - Table 50.6 Classification report for fertilizer recommendation system.
+- - '##'
+  - Table 50.7 Regression metrics for soil moisture prediction.
+- - '##'
+  - Table 50.8 Classification report for irrigation scheduling.
+- - '##'
+  - Table 52.1 Frequency of identified problem areas.
+- - '##'
+  - Table 55.1 Average value of sensitivity, specificity and accuracy for different
+    normal retinal images.
+- - '##'
+  - Table 55.2 Average values of vessel-to-vessel free area for proposed and existing
+    methods.
+- - '##'
+  - Table 56.1 Results for SLIVER
+- - '##'
+  - Table 56.2 Results for IRCAD
+- - '##'
+  - Table 57.1 Summary of state-of-the-art methods
+- - '##'
+  - Table 57.2 Summary of limitation, strength and open problems
+- - '##'
+  - Table 59.1 Descriptive statistics
+- - '##'
+  - Table 59.5 Coefficients
+- - '##'
+  - Table 59.2 Collinearity diagnostics
+- - '##'
+  - Table 59.3 Model summary
+- - '##'
+  - Table 59.4 Anova
+- - '##'
+  - Table 60.1 Comparative analysis
+- - '##'
+  - Table 60.2 Data set description
+- - '##'
+  - Table 60.3 Simulation Parameters for Assisted Learning in Quantum Dynamics (S(BAN)+
+    Q(MV))
+- - '##'
+  - Table 60.4 Analytical results on the utilization of quantum dynamics to enhance
+    learning in a multi-agent environment
+- - '##'
+  - Table 61.1 Performance comparison
+- - '##'
+  - Table 62.1 Comparative analysis
+- - '##'
+  - Table 62.2 A comprehensive overview of the impact of each variable on the main
+    performance metrics
+- - '##'
+  - Table 63.1 Comparative analysis
+- - '##'
+  - Table 63.2 Datasets relevant to quantum cyber-physical systems (QCPS) that incorporate
+    AI-enabled post-quantum model integration
+- - '##'
+  - Table 63.3 Simulation parameter
+- - '##'
+  - Table 63.4 Results analysis
+- - '##'
+  - Table 64.1 Comparative analysis
+- - '##'
+  - Table 64.2 Simulation parameters utilized in a cloud system that employs machine
+    learning techniques to achieve optimal resource allocation and optimization.
+- - '##'
+  - Table 64.3 Results analysis
+- - '##'
+  - Table 65.1 A comprehensive compilation of critical information from each study
+- - '##'
+  - Table 65.2 Simulation parameters and quantum parameters.
+- - '##'
+  - Table 65.3 Results analysis
+- - '##'
+  - Table 66.1 Comparative table.
+- - '##'
+  - Table 66.1 Encryption and data protection
+- - '##'
+  - Table 66.2 A comparative analysis of the performance of QML algorithms and standard
+    (classical) machine.
+- - '##'
+  - Table 66.3 Comparative analysis of classical and quantum search algorithms.
+- - '##'
+  - Table 66.4 A visual representation of the potential superiority of quantum algorithms.
+- - '##'
+  - Table 67.1 Optimizing 5G and beyond networks.
+- - '##'
+  - Table 67.2 Overall impact on 5G networks.
+- - '##'
+  - Table 67.3 Impact on 5G and beyond networks.
+- - '##'
+  - Table 68.1 Comparative analysis.
+- - '##'
+  - Table 68.2 Comparison of key performance metrics.
+- - '##'
+  - Table 68.3 Results analysis.
+- - '##'
+  - Table 68.4 Results analysis traditional protocol design and QC/PQC-enhanced protocol
+    design.
+- - '##'
+  - Table 69.1 Comparative analysis.
+- - '##'
+  - Table 69.2 An illustrative dataset for a robust IIoT architecture.
+- - '##'
+  - Table 69.3 A generic parameters.
+- - '##'
+  - Table 69.4 An examination of the results pertaining to a proficient IIoT framework.
+- - '##'
+  - Table 70.1 Comparative analysis between traditional IoT system and quantum-enhanced
+    IoT system.
+- - '##'
+  - Table 70.2 Results analysis between traditional IoT system and quantum-enhanced
+    IoT system.
+- - '##'
+  - Table 71.1 Training and validation results of DL models for depression detection
+- - '##'
+  - Table 71.2 Training and validation results of FL models for depression detection
+    using IID data
+- - '##'
+  - Table 72.1 Key findings in the literature
+- - '##'
+  - Table 72.2 A comparison results of encryption speed time (in frame/seconds) for
+    different videos without compression
+- - '##'
+  - Table 72.3 A comparison results of encryption speed time (in frame/seconds) for
+    different videos with compression
