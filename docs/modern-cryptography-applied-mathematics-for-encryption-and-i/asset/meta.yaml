@@ -1,0 +1,1213 @@
+name: Modern cryptography ： applied mathematics for encryption and information security
+slug: modern-cryptography-applied-mathematics-for-encryption-and-i
+name_cn: '
+
+  应用数学在密码学和信息安全中的实践'
+toc:
+- - '##'
+  - '4'
+- - '##'
+  - '5'
+- - '##'
+  - Endnotes
+- - '##'
+  - '2  '
+- - '##'
+  - History of Cryptography from the 1800s
+- - '##'
+  - 'In this chapter we will cover the following:'
+- - '###'
+  - Cryptography Marches On
+- - '###'
+  - Playfair Cipher
+- - '###'
+  - Two-Square Cipher
+- - '###'
+  - Four-Square Cipher
+- - '###'
+  - Hill Cipher
+- - '###'
+  - ADFGX and ADFGVX Ciphers
+- - '###'
+  - Bifid Cipher
+- - '###'
+  - Gronsfeld Cipher
+- - '###'
+  - Vernam Cipher
+- - '###'
+  - 加密艺术兴起
+- - '####'
+  - Enigma
+- - '#####'
+  - Enigma Variations
+- - '#####'
+  - Alan Turing
+- - '#####'
+  - SIGABA
+- - '#####'
+  - Lorenz Cipher
+- - '#####'
+  - IFF Systems
+- - '####'
+  - 'The NSA: The Early Years'
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '#####'
+  - Answers
+- - '####'
+  - Endnotes
+- - '###'
+  - '3  '
+- - '####'
+  - The Information Age
+- - '#'
+  - 信息时代的另一种视角是信息的泛滥
+- - '##'
+  - 测量数据
+- - '###'
+  - Claude Shannon
+- - '####'
+  - 'Theorem 1: Shannon’s Source Coding Theorem'
+- - '####'
+  - 'Theorem 2: Noisy Channel Theorem'
+- - '####'
+  - 密码学的核心概念
+- - '#####'
+  - 信息熵
+- - '#####'
+  - 量化信息
+- - '#####'
+  - 混淆与扩散
+- - '#####'
+  - 扩散效应（Avalanche）
+- - '#####'
+  - 汉明距离
+- - '###'
+  - Hamming Weight
+- - '###'
+  - Kerckhoffs’s Principle/Shannon’s Maxim
+- - '####'
+  - 科学与数学理论
+- - '###'
+  - 什么是数学理论？
+- - '###'
+  - 科学方法
+- - '###'
+  - 一个科学理论
+- - '####'
+  - 二进制数学
+- - '#####'
+  - 转换
+- - '#####'
+  - 二进制运算
+- - '######'
+  - 二进制 AND
+- - '#'
+  - Essential Number Theory and Discrete Math
+- - '##'
+  - 'In this chapter we will cover the following:'
+- - '##'
+  - Conclusions
+- - '##'
+  - Test Your Knowledge
+- - '###'
+  - Answers
+- - '###'
+  - Endnotes
+- - '####'
+  - 数字系统
+- - '#####'
+  - 自然数
+- - '#####'
+  - 负数
+- - '#####'
+  - 有理数和无理数
+- - '#####'
+  - 实数
+- - '#####'
+  - 虚数
+- - '#'
+  - 素数
+- - '##'
+  - 查找质数
+- - '###'
+  - Mersenne Prime（梅森质数）
+- - '###'
+  - Fermat Prime（费马质数）
+- - '###'
+  - Sieve of Eratosthenes（埃拉托斯特尼筛法）
+- - '###'
+  - 其他筛法
+- - '##'
+  - Lucas-Lehmer Test
+- - '####'
+  - Relatively Prime, or Co-prime, Numbers
+- - '####'
+  - Important Operations
+- - '#####'
+  - Divisibility Theorems
+- - '#####'
+  - Summation
+- - '#####'
+  - 对数
+- - '######'
+  - 自然对数
+- - '######'
+  - 离散对数
+- - '#####'
+  - 模运算
+- - '######'
+  - 同余
+- - '######'
+  - 同余类
+- - '####'
+  - 著名数论家及其贡献
+- - '#####'
+  - 菲波纳奇
+- - '#####'
+  - 费马
+- - '#####'
+  - 欧拉
+- - '#####'
+  - 高尔德
+- - '##'
+  - 离散数学
+- - '###'
+  - 集合论
+- - '###'
+  - 逻辑
+- - '######'
+  - Propositional Logic（命题逻辑）
+- - '######'
+  - Building Logical Constructs（构建逻辑构造）
+- - '######'
+  - Truth Tables（真值表）
+- - '###'
+  - Combinatorics
+- - '###'
+  - 排列
+- - '#####'
+  - Graph Theory
+- - '####'
+  - Conclusions
+- - '####'
+  - 测试你的知识
+- - '####'
+  - 答案
+- - '####'
+  - 尾注
+- - '###'
+  - '5  '
+- - '####'
+  - Abstract Algebraic Structures
+- - '###'
+  - 群
+- - '###'
+  - 阿贝尔群
+- - '###'
+  - 循环群
+- - '###'
+  - 环
+- - '###'
+  - 体（域）
+- - '###'
+  - Galois Fields
+- - '###'
+  - Diophantine Equations
+- - '###'
+  - Matrix Math
+- - '####'
+  - Matrix Addition and Multiplication
+- - '#'
+  - Tip
+- - '##'
+  - Matrix Transposition
+- - '##'
+  - Submatrix
+- - '##'
+  - Identity Matrix
+- - '##'
+  - Algorithms
+- - '###'
+  - Basic Algorithms
+- - '#####'
+  - 排序算法
+- - '######'
+  - 快速排序
+- - '######'
+  - 冒泡排序
+- - '######'
+  - 欧几里得算法
+- - '######'
+  - 设计算法
+- - '#####'
+  - P vs. NP
+- - '####'
+  - History Highlights
+- - '#####'
+  - 古代地中海代数
+- - '#####'
+  - 古代中国代数
+- - '#####'
+  - 古代阿拉伯代数
+- - '###'
+  - 重要数学家
+- - '####'
+  - 狄奥芬特斯
+- - '####'
+  - 塔塔利亚
+- - '####'
+  - 笛卡尔
+- - '####'
+  - 伽罗瓦
+- - '###'
+  - 结论
+- - '####'
+  - 检验你的知识
+- - '##'
+  - '6  '
+- - '###'
+  - 'Feistel 网络  '
+- - '###'
+  - '加密密钥  '
+- - '####'
+  - Feistel 函数
+- - '#####'
+  - 不平衡 Feistel
+- - '####'
+  - 伪哈达马德变换
+- - '####'
+  - MDS 矩阵
+- - '####'
+  - DES
+- - '#####'
+  - 3DES
+- - '####'
+  - S-Box 和 P-Box
+- - '####'
+  - GOST
+- - '####'
+  - Blowfish
+- - '####'
+  - Twofish
+- - '####'
+  - Skipjack
+- - '####'
+  - CAST
+- - '####'
+  - FEAL
+- - '####'
+  - MARS
+- - '####'
+  - TEA
+- - '####'
+  - LOKI97
+- - '##'
+  - '2'
+- - '##'
+  - '3'
+- - '##'
+  - '4'
+- - '##'
+  - '5'
+- - '##'
+  - '6'
+- - '##'
+  - '7'
+- - '##'
+  - '8'
+- - '##'
+  - '9'
+- - '##'
+  - '10'
+- - '###'
+  - Endnotes
+- - '###'
+  - '7  '
+- - '####'
+  - Replacing DES
+- - '####'
+  - Advanced Encryption Standard
+- - '#####'
+  - Rijndael Steps
+- - '#####'
+  - Rijndael Outline
+- - '#####'
+  - Rijndael S-Box
+- - '#####'
+  - Rijndael Key Schedule
+- - '####'
+  - Serpent Algorithm
+- - '##'
+  - Note
+- - '###'
+  - Serpent S‑Box 和密钥调度
+- - '###'
+  - Serpent 算法
+- - '##'
+  - Square
+- - '##'
+  - SHARK
+- - '##'
+  - Note
+- - '##'
+  - SAFER Ciphers
+- - '###'
+  - 轮函数
+- - '###'
+  - 密钥调度
+- - '##'
+  - KHAZAD
+- - '####'
+  - NESSIE
+- - '####'
+  - Stream Ciphers
+- - '#####'
+  - LFSR
+- - '#####'
+  - RC4
+- - '######'
+  - RC4 Key Scheduling
+- - '#####'
+  - FISH
+- - '######'
+  - PIKE
+- - '#####'
+  - eSTREAM
+- - '######'
+  - SNOW
+- - '######'
+  - Rabbit
+- - '######'
+  - HC-128
+- - '######'
+  - MICKEY
+- - '######'
+  - MISTY1
+- - '#####'
+  - A5
+- - '####'
+  - One-Time Pad
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '##'
+  - '3'
+- - '##'
+  - '4'
+- - '##'
+  - '5'
+- - '##'
+  - '6'
+- - '##'
+  - '7'
+- - '##'
+  - '8'
+- - '##'
+  - '9'
+- - '##'
+  - '10'
+- - '###'
+  - 答案
+- - '##'
+  - '1'
+- - '##'
+  - '2'
+- - '##'
+  - '3'
+- - '##'
+  - '4'
+- - '##'
+  - '5'
+- - '##'
+  - '6'
+- - '##'
+  - '7'
+- - '##'
+  - '8'
+- - '##'
+  - '9'
+- - '##'
+  - '10'
+- - '###'
+  - 尾注
+- - '#'
+  - 1. Petr Tesař, “A New Method for Generating High Non-linearity S-Boxes,” (p. 1),
+    2010, [www.radioeng.cz/fulltexts/2010/10_01_023_026.pdf](http://www.radioeng.cz/fulltexts/2010/10_01_023_026.pdf).
+- - '#'
+  - '2. A. Grocholewska-Czurylo, “Cryptographic Properties of Modified AES-Like S-Boxes,”
+    *Annales UMCS Informatica, AI XI*(2), (2011): 37–48.'
+- - '#'
+  - 3. 同一篇。
+- - '#'
+  - 4. 关于扩散效应的更多信息，请参见 E. Biham 和 A. Shamir 的《DES 类似系统的差分密码分析》，网址为[`zoo.cs.yale.edu/classes/cs426/2012/bib/biham91differential.pdf`](http://zoo.cs.yale.edu/classes/cs426/2012/bib/biham91differential.pdf)。
+- - '#'
+  - 5. 一篇提供平衡 S 盒密码函数信息的文章是“Improving the Strict Avalanche Characteristics of Cryptographic
+    Functions”，作者 J. Seberry、X. Zhang 和 Y. Zheng，网址为[www.uow.edu.au/~jennie/WEBPDF/1994_09.pdf](http://www.uow.edu.au/~jennie/WEBPDF/1994_09.pdf)。
+- - '#'
+  - 6. 关于 BIC 的更多信息，请参见“Good S-Boxes Are Easy to Find”，作者 Carlisle Adams 和 Stafford
+    Taveres，发表在《密码学杂志》第 3 卷第 1 期（1990 年），页码 27–41。
+- - '#'
+  - 7. Bruce Schneier, *Applied Cryptography* (Wiley, 1996), p. 280.
+- - '#'
+  - 8. Biham 和 Shamir, [`zoo.cs.yale.edu/classes/cs426/2012/bib/biham91differential.pdf`](http://zoo.cs.yale.edu/classes/cs426/2012/bib/biham91differential.pdf).
+- - '#'
+  - '9. J. Daemen 和 V. Rijmen, “AES Proposal: Rijndael,” 1999, [`csrc.nist.gov/archive/aes/rijndael/Rijndael-ammended.pdf`](http://csrc.nist.gov/archive/aes/rijndael/Rijndael-ammended.pdf).'
+- - '#'
+  - 10. I. Das, R. Sanjoy, N. Subhrapratim, and M. Subhash, “Random S-Box Generation
+    in AES by Changing Irreducible Polynomial,” 2012. 您可以从 IEEE Xplore 数字图书馆购买并下载该文档([`ieeexplore.ieee.org/Xplore/home.jsp`](http://ieeexplore.ieee.org/Xplore/home.jsp))。
+- - '#'
+  - 11. S. Sinha 和 C. Arya, “Algebraic Construction and Cryptographic Properties of
+    Rijndael Substitution Box,” 2012, [`publications.drdo.gov.in/ojs/index.php/dsj/article/viewFile/1439/605`](http://publications.drdo.gov.in/ojs/index.php/dsj/article/viewFile/1439/605).
+- - '#'
+  - 12. J. Cui, L. Huang, H. Zhong, C. Chang, and W. Yang, “An Improved AES S-Box
+    and Its Performance Analysis,” 2011, [www.ijicic.org/ijicic-10-01041.pdf](http://www.ijicic.org/ijicic-10-01041.pdf).
+- - '####'
+  - How Are Cryptographic Hashes Used?
+- - '#####'
+  - Message Integrity
+- - '#####'
+  - Password Storage
+- - '#####'
+  - Forensic Integrity
+- - '####'
+  - Merkle-Damgård
+- - '###'
+  - 具体算法
+- - '####'
+  - 校验和（Checksums）
+- - '######'
+  - 长距离奇偶校验（Longitudinal Parity Check）
+- - '######'
+  - Fletcher 校验和
+- - '####'
+  - MD5
+- - '####'
+  - SHA
+- - '######'
+  - SHA-1
+- - '######'
+  - SHA-2
+- - '######'
+  - SHA-3
+- - '#####'
+  - RIPEMD
+- - '###'
+  - HAVAL
+- - '###'
+  - Whirlpool
+- - '###'
+  - Skein
+- - '###'
+  - FSB
+- - '###'
+  - GOST
+- - '####'
+  - 对散列的攻击
+- - '####'
+  - Salt
+- - '####'
+  - MAC and HMAC
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '#'
+  - 非对称密码
+- - '##'
+  - '10  '
+- - '###'
+  - '常见算法  '
+- - '###'
+  - 什么是非对称加密？
+- - '###'
+  - RSA
+- - '###'
+  - RSA 算法
+- - '######'
+  - RSA 示例 1
+- - '######'
+  - RSA 示例 2
+- - '######'
+  - 因数分解 RSA 密钥
+- - '####'
+  - Rabin 加密系统
+- - '####'
+  - Diffie-Hellman
+- - '####'
+  - ElGamal
+- - '####'
+  - MQV
+- - '####'
+  - 最佳非对称加密填充
+- - '####'
+  - Cramer-Shoup
+- - '####'
+  - 应用
+- - '#####'
+  - 密钥交换
+- - '#####'
+  - 数字签名
+- - '######'
+  - 数字签名算法
+- - '#####'
+  - 数字证书
+- - '#####'
+  - SSL/TLS
+- - '####'
+  - Homomorphic Encryption
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '##'
+  - 2. U.S. Patent 5,231,668 于 1991 年 7 月 26 日提交，并归属于 David W. Kravitz。`\_\_\_\_\_\_\_\_\_\_`
+    于 1993 年被美国政府采用，编号为 FIPS 186。
+- - '##'
+  - 3. `\_\_\_\_\_\_\_\_\_\_` 可被视为一种 RSA 加密系统，其中 e 和 d 的值固定：e = 2，d = 1/2。
+- - '##'
+  - 4. 解释 Diffie-Hellman（包括基本数学）的基本设置（密钥生成）。
+- - '##'
+  - 5. 解释 RSA 密钥生成。
+- - '##'
+  - 6. RSA 加密公式是什么？
+- - '##'
+  - 7. `\_\_\_\_\_\_\_\_\_\_\_\_` 由 Bellare 和 Rogaway 引入，并在 RFC 2437 中标准化。
+- - '##'
+  - 8. PKCS 代表什么？
+- - '##'
+  - 9. 最广泛使用的数字证书标准是什么？
+- - '##'
+  - 10. X.509 证书包含的数字签名是针对谁的？
+- - '###'
+  - 答案
+- - '##'
+  - 1. ElGamal
+- - '##'
+  - 2. 数字签名算法 (DSA)
+- - '##'
+  - 3. Rabin 加密系统
+- - '##'
+  - 4. 该系统有两个参数，p 和 g。p 是质数，g（通常称为生成器）是小于 p 的整数，满足：在 1 到 p – 1 之间的每个数 n 都存在一个指数 k，使得
+    n = g^k mod p。公钥是 g^a 和 g^b。
+- - '##'
+  - '5. 设 n = pq。设 m = (p – 1)(q – 1)。选择一个小的、与 m 互质的数 e。  '
+- - '##'
+  - 6. C = M^e % n
+- - '##'
+  - 7. OAEP（Optimal Asymmetric Encryption Padding）
+- - '##'
+  - 8. 公钥加密标准 (Public Key Cryptography Standards)
+- - '##'
+  - 9. X.509
+- - '##'
+  - 10. 证书颁发者
+- - '####'
+  - 尾注
+- - '##'
+  - 1. 更多信息请参阅“768 位 RSA 模数的分解”，作者 Kleinjung、Aoki、Franke 等，网址为 [`eprint.iacr.org/2010/006.pdf`](https://eprint.iacr.org/2010/006.pdf)。
+- - '###'
+  - '11  '
+- - '####'
+  - 总体概览
+- - '#####'
+  - 什么是椭圆曲线？
+- - '#####'
+  - 椭圆曲线上的基本操作
+- - '####'
+  - The Algorithm
+- - '####'
+  - ECC 变体
+- - '#####'
+  - ECC Diffie-Hellman
+- - '#####'
+  - 椭圆曲线数字签名算法
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '#####'
+  - Answers
+- - '####'
+  - Endnotes
+- - '###'
+  - 随机性测试
+- - '####'
+  - 1-D 测试
+- - '####'
+  - 等距分布
+- - '####'
+  - 运行测试
+- - '####'
+  - 最长 1 运行测试
+- - '####'
+  - 扑克测试
+- - '####'
+  - 卡方统计检验
+- - '######'
+  - Lehmer Algorithm
+- - '#####'
+  - Mersenne Twister
+- - '#####'
+  - Blum Blum Shub
+- - '#####'
+  - Yarrow
+- - '#####'
+  - Fortuna
+- - '#####'
+  - Dual_EC_DRBG
+- - '####'
+  - The Marsaglia CD-ROM
+- - '#####'
+  - Improving PRNGs
+- - '#####'
+  - Shuffling
+- - '#####'
+  - Cryptographic Hash
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '#####'
+  - Answers
+- - '####'
+  - Endnotes
+- - '###'
+  - '13  '
+- - '####'
+  - Digital Signatures
+- - '#####'
+  - Direct Signature
+- - '#####'
+  - Arbitrated Digital Signature
+- - '######'
+  - Blind Signatures
+- - '####'
+  - Digital Certificates
+- - '#####'
+  - X.509
+- - '#####'
+  - PGP
+- - '####'
+  - Public-Key Infrastructure X.509
+- - '####'
+  - SSL and TLS Protocol Basics
+- - '#####'
+  - The Handshake Step-by-Step
+- - '#####'
+  - SSL/TLS 应用
+- - '######'
+  - OpenSSL
+- - '######'
+  - VoIP
+- - '######'
+  - 电子邮件
+- - '######'
+  - Web 服务器
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '#####'
+  - Answers
+- - '####'
+  - Endnotes
+- - '###'
+  - 认证
+- - '###'
+  - CHAP
+- - '###'
+  - EAP
+- - '######'
+  - LEAP
+- - '######'
+  - EAP‑TLS
+- - '######'
+  - PEAP
+- - '######'
+  - EAP-POTP
+- - '#####'
+  - Kerberos
+- - '#####'
+  - NTLM
+- - '####'
+  - PPTP
+- - '#####'
+  - PPTP vs. PPP
+- - '#####'
+  - PPTP 身份验证
+- - '#####'
+  - PPTP 加密
+- - '####'
+  - L2TP
+- - '####'
+  - IPSec
+- - '######'
+  - Aggressive Mode
+- - '#####'
+  - IKE Phase 2
+- - '####'
+  - SSL/TLS
+- - '####'
+  - Other Secure Communications
+- - '#####'
+  - SSH
+- - '#####'
+  - Wi-Fi Encryption
+- - '######'
+  - WEP
+- - '##'
+  - WPA
+- - '##'
+  - Note
+- - '##'
+  - WPA2
+- - '##'
+  - Conclusions
+- - '##'
+  - Test Your Knowledge
+- - '##'
+  - Endnotes
+- - '###'
+  - '15  '
+- - '####'
+  - NSA 和密码学
+- - '#####'
+  - NSA 加密标准
+- - '######'
+  - Type 1 产品
+- - '######'
+  - Type 2 产品
+- - '######'
+  - Type 3 和 Type 4 产品
+- - '######'
+  - COCOM 和瓦塞纳协议
+- - '######'
+  - 特定国家的监管
+- - '####'
+  - 加密与恶意软件
+- - '#####'
+  - 武器化恶意软件
+- - '######'
+  - Stuxnet 病毒
+- - '######'
+  - Flame 病毒
+- - '#####'
+  - 网络战
+- - '#####'
+  - TOR
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '#####'
+  - Answers
+- - '###'
+  - '16  '
+- - '####'
+  - Steganography Basics
+- - '####'
+  - Steganography History
+- - '######'
+  - MP3stego
+- - '######'
+  - OpenStego
+- - '######'
+  - Other Tools
+- - '####'
+  - Current Uses of Steganography
+- - '####'
+  - Steganalysis
+- - '####'
+  - Distributed Steganography
+- - '#####'
+  - Total Blocks and Block Order
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '####'
+  - Classic Cryptanalysis Methods
+- - '#####'
+  - Frequency Analysis
+- - '#####'
+  - Kasiski Examination
+- - '####'
+  - Modern Methods
+- - '###'
+  - 线性密码分析
+- - '###'
+  - 差分密码分析
+- - '#'
+  - Higher-Order Differential Cryptanalysis
+- - '#'
+  - Truncated Differential Cryptanalysis
+- - '#'
+  - Impossible Differential Cryptanalysis
+- - '##'
+  - Integral Cryptanalysis
+- - '##'
+  - Mod *n* Cryptanalysis
+- - '##'
+  - Asymmetric Cryptanalysis and RSA
+- - '###'
+  - 一般密码分析规则
+- - '###'
+  - 彩虹表
+- - '###'
+  - 生日悖论
+- - '####'
+  - 其他方法
+- - '#####'
+  - 其他密码
+- - '#####'
+  - 相关数据
+- - '#####'
+  - 间谍软件
+- - '###'
+  - 侧信道攻击
+- - '###'
+  - 资源
+- - '###'
+  - 结论
+- - '###'
+  - 测试你的知识
+- - '###'
+  - 答案
+- - '###'
+  - Endnotes
+- - '###'
+  - '18  '
+- - '##'
+  - 'Cryptographic Backdoors  '
+- - '##'
+  - 'In this chapter we will cover the following:  '
+- - '###'
+  - 'What Are Cryptographic Backdoors?  '
+- - '###'
+  - 'General Properties  '
+- - '###'
+  - 'Examples of Backdoors  '
+- - '######'
+  - Dual_EC_DRBG
+- - '######'
+  - RSA Backdoor
+- - '######'
+  - Compromising a Hashing Algorithm
+- - '####'
+  - 其他破坏加密的方式
+- - '#####'
+  - Heartbleed 漏洞
+- - '#####'
+  - 密钥保管（Key Escrow）
+- - '####'
+  - Backdoors 的普遍性
+- - '#####'
+  - 政府方法
+- - '#####'
+  - 私人公民/团体方法
+- - '####'
+  - Countermeasures
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '#####'
+  - Answers
+- - '###'
+  - '19  '
+- - '#'
+  - The Future of Cryptography
+- - '##'
+  - 'In this chapter we will cover the following:'
+- - '###'
+  - Cryptography and the Cloud
+- - '####'
+  - What Is the Cloud?
+- - '#'
+  - Cryptography Options for the Cloud
+- - '##'
+  - Homomorphic Cryptography
+- - '##'
+  - RSA
+- - '##'
+  - Goldwasser–Micali
+- - '#####'
+  - Paillier
+- - '####'
+  - Quantum Cryptography
+- - '#####'
+  - 什么是量子力学？
+- - '#####'
+  - Breaking Quantum Code
+- - '####'
+  - Conclusions
+- - '####'
+  - Test Your Knowledge
+- - '#####'
+  - Answers
+- - '####'
+  - Endnotes
+- - '###'
+  - 'A  '
+- - '####'
+  - Hard Drive/File Encryption
+- - '#####'
+  - VeraCrypt
+- - '#####'
+  - Windows EFS
+- - '#####'
+  - BitLocker
+- - '#####'
+  - AxCrypt
+- - '#####'
+  - FileVault
+- - '#####'
+  - AES Crypt
+- - '####'
+  - E-mail Encryption
+- - '#####'
+  - 在 Outlook 中加密
+- - '#####'
+  - 使用 gpg4o 加密
+- - '####'
+  - CrypTool
+- - '####'
+  - Endnotes
+- - '###'
+  - '**Index**'
+- - '####'
+  - Symbols
+- - '####'
+  - A
+- - '####'
+  - B
+- - '####'
+  - B
+- - '#'
+  - 目录
+- - '####'
+  - D
+- - '####'
+  - E
+- - '####'
+  - F
+- - '####'
+  - G
+- - '####'
+  - H
+- - '#'
+  - 换言验证码 (HMAC)，2，191，242
+- - '#'
+  - 哈希。 *See* 加密哈希
+- - '#'
+  - HAVAL 加密哈希，188
+- - '#'
+  - HAVE QUICK 算法，279
+- - '#'
+  - Havlevi, Shai，345
+- - '#'
+  - HC-128，157
+- - '#'
+  - HC-256，157
+- - '#'
+  - Heartbleed 漏洞，252–253，334–335
+- - '#'
+  - Heisenberg 不确定性原理，352
+- - '#'
+  - Hellman，Martin，198
+- - '#'
+  - Heninger, N.，320
+- - '#'
+  - Herodotus，295
+- - '#'
+  - High Assurance Internet Protocol Encryption (HAIPE)，279
+- - '#'
+  - higher-order differential cryptanalysis，318–319
+- - '#'
+  - Hill 算法，27–29
+- - '#'
+  - Hill, Lester S.，27，28
+- - '#'
+  - Hinek, M. Jason，97，197
+- - '#'
+  - 历史概览
+- - '#'
+  - HMAC (key-hashed message authentication code)，2，191，242
+- - '#'
+  - 同态加密，344–351
+- - '#'
+  - 同音替换密码 (homophonic substitution ciphers)，8–9
+- - '#'
+  - 假设，53–55
+- - '##'
+  - I
+- - '#'
+  - IACR (国际密码学研究协会)，210
+- - '#'
+  - ICE (信息隐藏引擎)，138
+- - '#'
+  - Identify Friend or Foe (IFF) 系统，37–38
+- - '#'
+  - 识别元素，93
+- - '#'
+  - 识别矩阵，100–101
+- - '#'
+  - IETF (Internet Engineering Task Force)，268
+- - '#'
+  - IFF (Identify Friend or Foe) 系统，37–38
+- - '#'
+  - IKE
+- - '#'
+  - '*Imitation Game, The*，35'
+- - '#'
+  - 实现加密，355–378
+- - '#'
+  - 暗示，83
+- - '#'
+  - impossible differential cryptanalysis，319
+- - '#'
+  - 归纳推理，79
+- - '#'
+  - 信息时代，41–42
+- - '#'
+  - Information Concealment Engine (ICE)，138
+- - '#'
+  - 信息熵，44–47
+- - '#'
+  - “Information Hiding Using Audio Steganography” (Jayaram, Ranganatha, and Anupam)，299
+- - '#'
+  - 信息源，43
+- - '#'
+  - 信息论
+- - '#'
+  - injection-based steganography，297
+- - '#'
+  - input/output whitening，132–133
+- - '#'
+  - integral cryptanalysis，319
+- - '#'
+  - 完整性
+- - '#'
+  - interchange control bits (ICBs)，122–123
+- - '#'
+  - International Association of Cryptological Research (IACR)，210
+- - '#'
+  - international cryptography regulations and agreements，283–286
+- - '#'
+  - International Traffic in Arms Regulations，283
+- - '#'
+  - Internet Engineering Task Force (IETF)，268
+- - '#'
+  - Internet Information Services (IIS)，254–258
+- - '#'
+  - Internet Security Association and Key Management Protocol (ISAKMP)，269
+- - '#'
+  - 交集，77
+- - '#'
+  - “Introducing the New LOKI97 Block Cipher” (Brown and Pieprzyk)，138
+- - '#'
+  - '*Introductio Arithmetica* (Nicomachus)，110'
+- - '#'
+  - '*Introduction to Algorithms, An* (Cormen et al.)，106，107，109'
+- - '#'
+  - '*Introduction to Finite Fields and Their Applications* (Lidl and Niederreiter)，171'
+- - '#'
+  - invisible ink，297
+- - '#'
+  - Invisible Secrets，301–305
+- - '#'
+  - IPSec
+- - '#'
+  - irrational numbers，63
+- - '#'
+  - irreducible polynomial in Rijndael S-box，170–171
+- - '#'
+  - ISAKMP (Internet Security Association and Key Management Protocol)，269
+- - '####'
+  - J
+- - '#'
+  - Jayaram, P.，299
+- - '#'
+  - Jefferson disk，14–15
+- - '#'
+  - Johnston, Phillip，37
+- - '#'
+  - joint entropy，47
+- - '####'
+  - K
+- - '#'
+  - Kahn Academy，72
+- - '#'
+  - Kasiski examination，315–316
+- - '#'
+  - Kasiski, Friedrich，12，315–316
+- - '#'
+  - Kaspersky Labs，287
+- - '#'
+  - KASUMI algorithm，158
+- - '#'
+  - Kay, Alan，198
+- - '#'
+  - KEA (Key Exchange Algorithm)，280
+- - '#'
+  - Keccak，186，188
+- - '####'
+  - L
+- - '####'
+  - M
+- - '####'
+  - N
+- - '####'
+  - O
+- - '#'
+  - OR 操作，57–58
+- - '##'
+  - P
+- - '####'
+  - Q
+- - '####'
+  - R
+- - '####'
+  - S
+- - '#'
+  - 公钥基础设施 X.509
+- - '####'
+  - T
+- - '####'
+  - U
+- - '####'
+  - V
+- - '####'
+  - W
+- - '####'
+  - X
+- - '##'
+  - 验证级别，245–246
+- - '##'
+  - SSL/TLS 握手过程和，249–251，252
+- - '##'
+  - SSL/TLS 使用，248
+- - '##'
+  - 验证，245
+- - '##'
+  - 异或操作，58
+- - '##'
+  - 对费 istel 密码的重要性，162
+- - '###'
+  - Y
+- - '###'
+  - Yarrow 算法，235
+- - '###'
+  - Ylonen, Tatu，272
+- - '###'
+  - Z
+- - '###'
+  - Zhao, Y.，320
+- - '###'
+  - Zheng, Yuliang，188
+- - '###'
+  - Zimmerman, Phillip，246
