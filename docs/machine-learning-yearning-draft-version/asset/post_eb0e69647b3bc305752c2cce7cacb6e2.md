@@ -1,0 +1,68 @@
+
+Looking at pictures correctly will often inspire you to come up with new categories of errors and solutions.
+
+The most helpful error categories will be ones that you have an idea for improving. For example, the Instagram category will be most helpful to add if you have an idea to “undo” Instagram filters and recover the original image. But you don’t have to restrict yourself only to error categories you know how to improve; the goal of this process is to build your intuition about the most promising areas to focus on.
+
+Error analysis is an iterative process. Don’t worry if you start off with no categories in mind. After looking at a couple of images, you might come up with a few ideas for error categories. After manually categorizing some images, you might think of new categories and re-examine the images in light of the new categories, and so on.
+
+Suppose you finish carrying out error analysis on 100 misclassified dev set examples and get the following:
+
+| Image | Dog | Great cat | Blurry | Comments |
+|---|---|---|---|---|
+| 1 | ✓ |  |  | Usual pitbull color |
+| 2 |  |  | ✓ |  |
+| 3 |  | ✓ | ✓ | Lion; picture taken at zoo on rainy day |
+| 4 |  | ✓ |  | Panther behind tree |
+| ... | ... | ... | ... | ... |
+| % of total | 8% | 43% | 61% |  |
+
+You now know that working on a project to address the Dog mistakes can eliminate 8% of the errors at most. Working on Great Cat or Blurry image errors could help eliminate more errors. Therefore, you might pick one of the two latter categories to focus on. If your team has enough people to pursue multiple directions in parallel, you can also ask some engineers to work on Great Cats and others to work on Blurry images.
+
+Error analysis does not produce a rigid mathematical formula that tells you what the highest priority task should be. You also have to take into account how much progress you expect to make on different categories and the amount of work needed to tackle each one.
+
+## 16 Cleaning up mislabeled dev and test set examples
+
+During error analysis, you might notice that some examples in your dev set are mislabeled. When I say “mislabeled” here, I mean that the pictures were already mislabeled by a human labeler even before the algorithm encountered it. I.e., the class label in an example (x,y) has an incorrect value for y. For example, perhaps some pictures that are not cats are mislabeled as containing a cat, and vice versa. If you suspect the fraction of mislabeled images is significant, add a category to keep track of the fraction of examples mislabeled:
+
+| Image | Dog | Great cat | Blurry | Mislabeled | Comments |
+| ... |  |  |  |  |  |
+| 98 |  |  |  | ✓ | Labeler missed cat in background |
+| 99 |  | ✓ |  |  |  |
+| 100 |  |  |  | ✓ | Drawing of a cat; not a real cat. |
+| % of total | 8% | 43% | 61% | 6% |  |
+
+Should you correct the labels in your dev set? Remember that the goal of the dev set is to help you quickly evaluate algorithms so that you can tell if Algorithm A or B is better. If the fraction of the dev set that is mislabeled impedes your ability to make these judgments, then it is worth spending time to fix the mislabeled dev set labels.
+
+For example, suppose your classifier’s performance is:
+- Overall accuracy on dev set.................... 90% (10% overall error.)
+- Errors due to mislabeled examples....... 0.6% (6% of dev set errors.)
+- Errors due to other causes.................... 9.4% (94% of dev set errors)
+
+Here, the 0.6% inaccuracy due to mislabeling might not be significant enough relative to the 9.4% of errors you could be improving. There is no harm in manually fixing the mislabeled images in the dev set, but it is not crucial to do so: It might be fine not knowing whether your system has 10% or 9.4% overall error.
+
+Suppose you keep improving the cat classifier and reach the following performance:
+- Overall accuracy on dev set.................. 98.0% (2.0% overall error.)
+- Errors due to mislabeled examples....... 0.6%. (30% of dev set errors.)
+- Errors due to other causes.................. 1.4% (70% of dev set errors)
+
+30% of your errors are due to the mislabeled dev set images, adding significant error to your estimates of accuracy. It is now worthwhile to improve the quality of the labels in the dev set. Tackling the mislabeled examples will help you figure out if a classifier’s error is closer to 1.4% or 2%—a significant relative difference.
+
+It is not uncommon to start off tolerating some mislabeled dev/test set examples, only later to change your mind as your system improves so that the fraction of mislabeled examples grows relative to the total set of errors.
+
+The last chapter explained how you can improve error categories such as Dog, Great Cat and Blurry through algorithmic improvements. You have learned in this chapter that you can work on the Mislabeled category as well—through improving the data’s labels.
+
+Whatever process you apply to fixing dev set labels, remember to apply it to the test set labels too so that your dev and test sets continue to be drawn from the same distribution. Fixing your dev and test sets together would prevent the problem we discussed in Chapter 6, where your team optimizes for dev set performance only to realize later that they are being judged on a different criterion based on a different test set.
+
+If you decide to improve the label quality, consider double-checking both the labels of examples that your system misclassified as well as labels of examples it correctly classified. It is possible that both the original label and your learning algorithm were wrong on an example. If you fix only the labels of examples that your system had misclassified, you might introduce bias into your evaluation. If you have 1,000 dev set examples, and if your classifier has 98.0% accuracy, it is easier to examine the 20 examples it misclassified than to examine all 980 examples classified correctly. Because it is easier in practice to check only the misclassified examples, bias does creep into some dev sets. This bias is acceptable if you are interested only in developing a product or application, but it would be a problem if you plan to use the result in an academic research paper or need a completely unbiased measure of test set accuracy.
+
+## 17 If you have a large dev set, split it into two subsets, only one of which you look at
+
+Suppose you have a large dev set of 5,000 examples in which you have a 20% error rate. Thus, your algorithm is misclassifying ~1,000 dev images. It takes a long time to manually examine 1,000 images, so we might decide not to use all of them in the error analysis.
+
+In this case, I would explicitly split the dev set into two subsets, one of which you look at, and one of which you don’t. You will more rapidly overfit the portion that you are manually looking at. You can use the portion you are not manually looking at to tune parameters.
+
+![](img/9e8f77e479d4500e7b1f65b2be9fce44_35_0.png)
+
+Let’s continue our example above, in which the algorithm is misclassifying 1,000 out of 5,000 dev set examples. Suppose we want to manually examine about 100 errors for error analysis (10% of the errors). You should randomly select 10% of the dev set and place that into what we’ll call an Eyeball dev set to remind ourselves that we are looking at it with our eyes. (For a project on speech recognition, in which you would be listening to audio clips, perhaps you would call this set an Ear dev set instead). The Eyeball dev set therefore has 500 examples, of which we would expect our algorithm to misclassify about 100.
+
+The second subset of the dev set, called the Blackbox dev set, will have the remaining 4500 examples. You can use the Blackbox dev set to evaluate classifiers automatically by measuring their error rates. You can also use it to select among algorithms or tune hyperparameters. However, you should avoid looking at it with your eyes. We use the term “Blackbox” because we will only use this subset of the data to obtain “Blackbox” evaluations of classifiers.
