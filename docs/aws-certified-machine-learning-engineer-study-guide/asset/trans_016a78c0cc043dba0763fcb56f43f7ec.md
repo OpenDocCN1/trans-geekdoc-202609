@@ -1,0 +1,52 @@
+
+Amazon CloudWatch Logs Insights 支持三种查询语言：
+
+*   专用的 **Logs Insights 查询语言**，仅包含少量简单但强大的命令
+*   **OpenSearch Service 管道处理语言 (PPL)**，支持使用管道（`|`）分隔的一组命令来分析日志
+*   **OpenSearch Service 结构化查询语言 (SQL)**，支持使用类 SQL 的声明性语法来分析日志
+
+此外，该服务还提供以下功能，以进一步简化和加速从 ML 应用程序的日志和事件中发现洞察：
+
+*   从 Amazon Route 53、AWS Lambda、AWS CloudTrail 和 Amazon VPC 等服务**自动发现日志字段**
+*   创建**字段索引**以降低成本并加快结果返回，特别是针对大量日志组或日志事件的查询
+*   使用 AWS Key Management Service **加密查询结果**以保护日志敏感数据
+*   **检测和分析模式**
+*   **保存查询**和**将查询添加到仪表板**以简化日志分析体验
+
+### 用例
+
+在 ML 场景下，Amazon CloudWatch Logs Insights 最适合以下用例：
+
+*   **训练作业监控**：通过分析 Amazon SageMaker 训练作业的日志，您可以识别训练过程中的任何问题或低效之处，例如资源瓶颈或数据不一致。
+*   **终端节点监控**：对于实时终端节点，Amazon CloudWatch Logs Insights 可帮助您跟踪请求日志并诊断模型推理问题。
+*   **批量转换监控**：通过查询批量转换作业的日志，您可以排查错误并确保批量处理顺利运行。
+
+### Amazon EventBridge
+
+Amazon EventBridge 是一种无服务器事件总线服务，可轻松使用来自各种来源的数据连接应用程序。它允许您通过将事件从支持的源路由到各种 AWS 服务和自定义目标来创建**事件驱动架构**。
+
+对于 ML 工作负载，Amazon EventBridge 可在编排工作流（补充 Amazon SageMaker Pipelines、AWS Step Functions 等其他编排服务）、基于事件触发操作以及确保 ML 管道不同组件之间无缝通信方面发挥关键作用。通过与各种 AWS 服务集成，Amazon EventBridge 提供了最佳的监控和可观测性功能，确保您的 ML 工作负载高效、可靠且安全。
+
+Amazon EventBridge 的一个关键优势是其能够与广泛的 AWS 服务集成，为事件驱动处理提供统一平台。对于 ML 工作负载，Amazon EventBridge 可与 AWS Lambda、AWS Step Functions 和 Amazon SageMaker AI 等服务集成，以自动化和简化 ML 生命周期的各个方面。例如，Amazon EventBridge 可以针对特定事件（如训练作业完成或检测到模型性能异常）触发 Lambda 函数。这使您能够自动执行数据预处理、模型部署和重新训练等操作，确保 ML 工作流能响应不断变化的条件并自适应调整。
+
+Amazon EventBridge 还支持与其他监控和可观测性服务集成，如 Amazon CloudWatch、AWS X-Ray 和 AWS Security Hub。通过将事件路由到 Amazon CloudWatch，您可以创建自定义指标、仪表板和警报来监控 ML 工作负载的性能和运行状况。AWS X-Ray 可用于追踪和分析事件在 ML 管道中的流动，提供对依赖关系、延迟和潜在瓶颈的详细洞察。AWS Security Hub 可整合来自各种来源的安全调查结果和警报，使您能够以协调高效的方式响应安全事件。这些集成确保您对 ML 环境拥有全面的可见性，并能主动解决出现的任何问题。
+
+### 用例
+
+在用例方面，Amazon EventBridge 为增强 ML 工作负载的监控和可观测性检测提供了许多可能性。例如，您可以使用 Amazon EventBridge 根据预定义触发器（如新训练数据的积累或模型偏移的检测）自动重新训练模型。Amazon EventBridge 还可用于通过协调不同步骤的执行（如数据预处理、特征工程、模型训练和部署）来编排复杂的 ML 管道。此外，您可以设置事件驱动通知，向利益相关者发出关于 ML 作业状态、性能指标和潜在问题的警报，确保及时干预和协作。借助 Amazon EventBridge，您可以构建强大、可扩展且响应迅速的 ML 工作流，提供准确可靠的推理。
+
+### AWS CloudTrail
+
+AWS CloudTrail 是一项支持 AWS 账户审计、合规性以及运营和风险管理的服务。顾名思义，AWS CloudTrail 提供了用户、角色和服务所执行操作的详细审计跟踪。对于 ML 工作负载，AWS CloudTrail 在维护 ML 环境的完整性和安全性方面发挥着重要作用。它允许您跟踪 Amazon SageMaker AI 实例中的更改和操作，确保您拥有清晰的记录来了解谁在何时执行了什么操作，这对于调试、审计和合规至关重要。
+
+AWS CloudTrail 日志提供了所采取操作的详细信息，例如创建、更新和删除 Amazon SageMaker AI 资源（如训练作业、终端节点、实例等）。通过分析这些日志，您可以识别异常或未经授权的活动，确保 ML 环境保持安全并符合组织策略和法规要求。CloudTrail 提供的可追溯性对于理解 ML 基础设施中事件和操作的顺序至关重要。
+
+### 用例
+
+AWS CloudTrail 为 ML 工作负载提供了多项优势。例如，AWS CloudTrail 日志可用于监控 Amazon SageMaker AI 资源的访问和使用模式，帮助您检测潜在安全威胁并做出响应。此外，AWS CloudTrail 提供的审计跟踪对于合规性极具价值，因为它允许您证明遵守数据治理和安全标准。此外，AWS CloudTrail 可与 Amazon CloudWatch 集成，创建警报以通知特定活动或异常，从而实现主动监控和响应。凭借其审计和可追溯性功能，AWS CloudTrail 有助于确保 ML 工作负载安全、合规且得到高效管理。
+
+### AWS X-Ray
+
+AWS X-Ray 是一项全面的追踪服务，可收集发送到应用程序的请求的详细数据，包括 ML 工作流中的请求。它提供了一套工具，使您能够查看、筛选和分析这些数据，从而识别问题并发现优化机会。借助 AWS X-Ray，您可以深入了解请求的整个生命周期，从初始请求到处理的各个阶段直至响应。
+
+对于 Amazon SageMaker AI 中的 ML 工作负载，AWS X-Ray 不仅提供对请求及其响应的细粒度洞察，还提供对应用程序对下游 AWS 资源、微服务、数据库和 Web API 进行的调用的洞察。这种详细的追踪可帮助您了解 ML 模型的性能和行为，定位瓶颈，并有效排查错误。

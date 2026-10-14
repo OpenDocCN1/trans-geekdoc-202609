@@ -1,0 +1,113 @@
+
+
+# 章节总结
+
+本章后半部分介绍了利用深度神经网络进行文本分析和图像处理的更高级算法。这些算法包括 Amazon SageMaker 内置算法：
+
+- **BlazingText**：用于高效的词嵌入和文本分类
+- **Seq2Seq**：用于序列到序列任务，如机器翻译和文本摘要
+- **Image Classification**：用于将图像分类到预定义类别中
+- **Object Detection**：用于识别和定位图像中的多个对象
+- **Semantic Segmentation**：用于图像内容的像素级分类
+
+这些深度学习模型旨在以高精度处理复杂任务，从而在 NLP、计算机视觉和自主系统等各个领域实现稳健的 AI 解决方案。
+
+本章最后提供了一份精选的模型选择标准清单，包括准确性、可解释性、可扩展性、延迟、资源需求、数据可用性、法规遵从性和成本。
+
+# 考试要点
+
+## 了解用于视觉的 AWS AI 服务
+
+AWS 提供两项针对视觉相关任务的 AI 服务。
+
+- **Amazon Rekognition**：支持图像和视频分析，允许用户检测对象、人脸、地标和文本，以及识别名人和分析情感。
+- **Amazon Textract**：从扫描文档中提取文本、表格和其他数据，使文档工作流的数字化和高效管理变得更加容易。
+
+## 了解用于语音和聊天机器人的 AWS AI 服务
+
+AWS 提供两项针对语音相关任务的 AI 服务。
+
+- **Amazon Polly**：提供文本转语音功能，将书面内容转换为多种语言的自然语音。
+- **Amazon Transcribe**：提供自动语音识别（ASR），将音频记录转换为准确的文本转录。
+- **Amazon Lex**：支持创建对话式界面，结合 ASR 和自然语言理解（NLU）来驱动聊天机器人和语音助手。
+
+## 了解用于语言处理的 AWS AI 服务
+
+AWS 提供两项针对语言处理任务的 AI 服务。
+
+- **Amazon Comprehend**：通过从文本中提取见解（如情感分析、实体识别和关键短语提取）来实现自然语言处理（NLP）。
+- **Amazon Translate**：提供实时和批量翻译服务，实现无缝的多语言通信。
+
+## 了解用于生成式 AI 的 AWS AI 服务
+
+AWS 提供 **Amazon Bedrock**，包含大量基础模型（FM），包括新发布的 Nova FMs。`Amazon Bedrock` 为创建和部署生成式 AI 应用程序提供了强大的平台，允许开发人员构建复杂的解决方案，如文本生成、图像合成、嵌入等。这些服务使用户能够轻松利用最先进的生成式 AI 模型，跨各个领域实现创新和创意应用。
+
+## 了解分类算法和回归算法的区别
+
+- **分类算法**：用于将数据分类为不同的类别或标签，例如判断电子邮件是否为垃圾邮件。
+- **回归算法**：用于预测连续数值，例如预测股票价格或根据各种特征估算房屋价值。
+
+## 了解 Amazon SageMaker 提供的线性学习器算法
+
+`Amazon SageMaker` 为分类和回归任务提供线性学习器算法，包括 `Linear Regression`、`Logistic Regression` 和 `Support Vector Machines`。这些算法具有高度可解释性，非常适合那些理解每个特征对预测的贡献至关重要的应用场景。
+
+## 了解 k-NN 算法及其使用场景
+
+`k-nearest neighbors` 算法是一种简单而强大的监督 ML 算法，用于分类和回归任务，其预测基于特征空间中最近的数据点。它是 `Amazon SageMaker` 内置算法，特别适用于决策边界复杂且非线性、且可解释性很重要的场景（因为通过检查最近邻可以清楚地了解每个预测背后的推理）。由于计算复杂度的原因，`k-NN` 最适合用于较小的数据集，以及在您清楚了解数据结构和关系的情况下使用。
+
+## 了解 Amazon SageMaker 提供的决策树监督算法及其使用场景
+
+`Amazon SageMaker` 提供强大的基于决策树的监督算法，如 `Random Forest` 和 `XGBoost`。
+
+- **Random Forest**：通过创建决策树集成并平均其预测，能够减少过拟合并提高准确性，适合涉及大量输入特征的任务。
+- **XGBoost**：以其计算效率和性能著称，特别是在大型数据集和复杂模型上，常用于需要高预测准确性和速度的分类和回归任务。
+
+## 了解 Amazon SageMaker 提供的聚类算法
+
+`Amazon SageMaker` 提供无监督 `K-Means` 算法用于聚类，**不要**将其与用于分类和回归任务的监督 `k-NN` 算法混淆。
+
+## 了解 Amazon SageMaker 提供的降维算法
+
+`Amazon SageMaker` 提供无监督 `Principal Component Analysis` 算法用于降维，这对于在保留尽可能多变异性的同时减少数据集中的特征数量非常有用。
+
+## 了解 Amazon SageMaker 提供的主题建模算法
+
+`Amazon SageMaker` 提供无监督 `Latent Dirichlet Allocation` 和 `Neural Topic Model` 算法用于主题建模用例，使用户无需标记数据即可在大量文本数据集合中发现隐藏主题。
+
+## 了解 Amazon SageMaker 提供的异常检测算法
+
+`Amazon SageMaker` 提供无监督 `Random Cut Forest` 和 `IP Insights` 算法用于异常检测用例，这些算法特别适用于识别数据中的异常模式或行为，例如检测欺诈活动或网络入侵。
+
+## 了解 Amazon SageMaker 提供的文本分析算法
+
+`Amazon SageMaker` 提供 `BlazingText` 和 `Sequence-to-Sequence` 算法用于文本分析用例，支持高效处理大规模文本数据，并支持各种自然语言处理任务，如文本分类、翻译和摘要。
+
+## 了解 Amazon SageMaker 提供的图像处理算法
+
+`Amazon SageMaker` 提供 `Image Classification`、`Object Detection` 和 `Semantic Segmentation` 算法用于图像处理用例，使开发人员能够构建、训练和部署能够分析和理解视觉数据的机器学习模型，例如识别对象、将图像分类到类别中，以及在像素级别对图像进行分割以进行详细分析。
+
+# 复习题
+
+1.  您将使用哪项 AWS AI 服务来分析大量非结构化文本并提取实体识别和情感分析等见解？
+
+    1.  `Amazon Textract`
+    2.  `Amazon Lex`
+    3.  `Amazon Comprehend`
+    4.  `Amazon Polly`
+
+2.  哪项 AWS AI 服务专为生成式 AI 应用程序设计，为创建文本、图像和其他创意输出提供强大的平台？
+
+    1.  `Amazon Rekognition`
+    2.  `Amazon Bedrock`
+    3.  `Amazon Translate`
+    4.  `Amazon Transcribe`
+
+3.  对于在实时视频流中检测对象和人员，哪项 AWS AI 服务最合适？
+
+    1.  `Amazon Textract`
+    2.  `Amazon Lex`
+    3.  `Amazon Rekognition`
+    4.  `Amazon Comprehend`
+
+4.  哪项 AWS 服务为大型数据集中的降维提供高效且可扩展的解决方案？
+
