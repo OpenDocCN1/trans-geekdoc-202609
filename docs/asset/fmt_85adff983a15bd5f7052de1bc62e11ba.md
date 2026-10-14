@@ -1,0 +1,285 @@
+
+### D
+
+- doxxing, 15
+- drive imaging, 387–391
+- DRPs (disaster recovery plans), 295, 312
+- DS0 connection lines, 36
+- DSA (数字签名算法), 228
+- dual parity, striped disks with, 298
+- dual-homed hosts, 251
+- dumpster diving, 370
+- Duronio, Roger, 139
+- Dynamic Host Control Protocol (DHCP) starvation, 108
+
+### E
+
+- EAP (可扩展认证协议), 262, 269
+- EAP-TLS (可扩展认证协议-传输层安全), 262
+- eBay, 12
+- ECB (electronic codebook) 模式, 223
+- ECC (椭圆曲线密码学), 228
+- EC-Council Certified Ethical Hacker, 152, 331
+- economic attacks, 347–349
+- economic espionage, 188–189
+- Economic Espionage Act (1996), 183
+- EDGE (Enhanced Data Rates for GSM Evolution), 409
+- Edge browser, 84
+- Edwards, John, 359
+- EffeTech HTTP Sniffer, 415
+- EFS (Encrypted File System), 195–196
+- electronic codebook (ECB) mode, 223
+- Electronic Evidence Guide, 394–395
+- Elgamal, Taher, 227
+- eLiTeWrap, 131–132
+- Elliptic Curve, 228
+- Ellison, Larry, 189
+- email
+  - attachments, security policies for, 283–284
+  - phishing, 73–74, 139, 198
+  - scanning, 246
+  - spam, 139
+- employees, security policies for
+  - departing employees, 287–288
+  - new employees, 287
+  - nondisclosure and noncompete agreements, 184
+- Encapsulating Security Payload (ESP), 270
+- EnCase, 396
+- Encrypted File System, 195–196
+- encryption, 194
+  - binary operations, 214
+  - decryption, 207
+  - cryptanalysis, 235
+  - steganography, 234
+  - defined, 206–207
+  - digital certificates, 265–266
+  - digital signatures, 230
+  - Encrypted File System, 195–196
+  - fraudulent encryption claims, identifying, 229–230
+  - history of
+    - Atbash cipher, 211
+    - Caesar cipher, 209–210
+    - Enigma, 213–214
+    - multi-alphabet substitution, 211–212
+    - online resources, 207–209
+    - rail fence, 212–213
+    - Vigenère, 212
+  - legitimate versus fraudulent encryption methods, 229–230
+  - PGP (Pretty Good Privacy), 228–229
+  - public key
+    - defined, 223–224
+    - Diffie-Hellman, 227
+    - ElGamal, 227
+    - Elliptic Curve, 228
+    - MQV (Menezes-Qu-Vanstone), 227
+    - PGP (Pretty Good Privacy), 228–229
+    - RSA method, 224–227
+  - quantum cryptography, 237
+  - single-key (symmetric), 207
+    - 3DES (Triple DES), 219
+    - AES (Advanced Encryption Standard), 220–222
+    - Blowfish, 222
+    - defined, 216
+    - DES (Data Encryption Standard), 216–219
+    - modification of, 223
+    - Serpent, 222
+    - Skipjack, 222
+    - Twofish, 220
+- Energy Technology International, 188
+- engineering. ***See*** systems engineering
+- Enhanced Data Rates for GSM Evolution (EDGE), 409
+- Enigma, 213–214
+- enumeration, 159–160
+- errors, client/server, 46
+- ESP (Encapsulating Security Payload), 270
+- espionage. ***See*** industrial espionage
+- ethical hacking, 18
+- ETSI (European Telecommunications Standards Institute), 409
+- Euler’s totient, 225
+- events, IDS, 256
+- evidence
+  - Android, 410–411
+  - browser, 397–398
+  - cell phone, 408
+  - cellular networks, 409
+  - ICCID (Integrated Circuit Card Identification), 408
+  - IMSI (International Mobile Subscriber Identity), 408
+  - SIM (Subscriber Identity Module), 408
+  - chain of custody, 392
+  - deleted files, recovering, 399–402
+  - iOS, 410
+  - operating system utilities, 402–404
+    - `fc`, 403
+    - `net sessions`, 402
+    - `netstat`, 404
+    - `openfiles`, 403
+  - system log
+    - Linux logs, 399
+    - Windows logs, 398
+  - Windows, 398, 404–407, 411
+- evil twin attack, 166
+- expert witnesses, 414
+- expulsion, 286
+- Extensible Authentication Protocol (EAP), 262, 269
+- Extensible Authentication Protocol-Transport Layer Security (EAP-TLS), 262
+
+### F
+
+- [Facebook](https://wiki.example.org/feynmans_learning_method) – 375 – 374
+- `faillog` file – 399
+- FakeAV – 125
+- false positives/negatives – 247
+- Fannie Mae – 139
+- FastMail – 111
+- fault tolerance – 296 – 298
+- FBAR (thin-film bulk acoustic resonator) technology – 188
+- FBI (Federal Bureau of Investigation) forensics guidelines – 392 – 393
+- `fc` command – 403
+- `FDISK` utility – 170
+- federal prison records – 378
+- Feistel cipher – 216 – 217
+- fields, AES (Advanced Encryption Standard) – 222
+- file recovery – 399 – 402
+- file scanning – 246
+- File Transfer Protocol (FTP) – 39
+- filtering, packet – 249
+- FinFisher – 347
+- Firefox security settings – 85 – 87
+- firewalls
+  - benefits and limitations of – 248 – 249
+  - configurations – 250 – 251
+  - defined – 19, 55 – 56, 248
+  - firewall logs – 253
+  - selection of – 311 – 312
+  - SPI – 105
+  - types of – 249 – 250
+  - Windows 10 Windows Defender – 252 – 253
+  - ZoneAlarm – 252
+- Flame – 128, 345 – 346
+- flooding
+  - TCP (Transmission Control Protocol) SYN flood attacks
+    - micro blocks – 103
+    - overview of – 102 – 103
+    - RST cookies – 104
+    - SPI firewalls – 105
+    - stack tweaking – 104
+    - SYN cookies – 103 – 104
+  - UDP (User Datagram Protocol) flood attacks – 107
+- footprinting – 348
+- foreign economic espionage – 188 – 189
+- Forensic Toolkit – 388 – 391, 396
+- forensics. ***See also*** evidence
+  - certifications – 332, 413 – 414
+  - expert witnesses – 414
+  - goal of – 386 – 387
+  - Locard’s principle of transference – 395
+  - mobile devices
+    - Android – 410 – 411
+    - cell phone components – 408
+    - cellular networks – 409
+    - general principles – 412
+    - iOS – 410
+    - Windows – 411
+  - network – 415
+  - principles for
+    - chain of custody – 392
+    - Council of Europe’s Electronic Evidence Guide – 394 – 395
+    - documentation – 391 – 392
+    - drive imaging – 387 – 391
+    - FBI (Federal Bureau of Investigation) forensics guidelines – 392 – 393
+    - SWGDE (Scientific Working Group on Digital Evidence) guidelines – 395
+    - U.S. Secret Service guidelines – 393 – 394
+  - tools
+    - AccessData Forensic Toolkit – 388 – 391, 396
+    - cell phone components – 408
+    - Cellebrite – 397
+    - EnCase – 396
+    - FTK Imager – 388 – 391
+    - OSForensics – 390 – 391, 396
+    - Oxygen – 396
+    - Sleuth Kit – 396
+  - virtual
+    - cloud – 416 – 417
+    - VMs (virtual machines) – 415 – 416
+- Forwarded Events log – 398
+- Fraggle attacks – 106
+- framework-specific modeling languages (FSMLs) – 431
+- fraud. ***See*** Internet fraud
+- frequency, online threats – 79
+- frequency analysis – 235
+- F-Secure – 24
+- FSMLs (framework-specific modeling languages) – 431
+- FTK Imager – 388 – 391
+- FTP (File Transfer Protocol) – 39
+- full backups – 296 – 297
+- functions, hash – 230 – 231
+  - HMAC – 231 – 232
+  - MAC – 231 – 232
+  - MD5 – 231
+  - rainbow tables – 232 – 233
+  - RIPEMD (RACE Integrity Primitives Evaluation Message Digest) – 231
+  - SHA (Secure Hash Algorithm) – 231
+
+### G
+
+- Gameover ZeuS – 124
+- gateways – 250
+- GCFA (GIAC Certified Forensic Analyst) – 332, 414
+- GCFE (GIAC Certified Forensic Examiner) – 332, 414
+- general cyber attacks – 350 – 351
+- general searches – 371 – 374
+- GhostNet – 356
+- GIAC certifications – 332, 414
+- Gigabit Ethernet – 34
+- GitHub, DoS (denial of service) attacks against – 99, 109
+- Global System for Mobile Communications (GSM) – 409
+- The Gobbler – 108
+- GoDaddy – 266
+- Gonzalez, Amy – 77
+- Google Chrome security settings – 87
+- GPEN certification – 332
+- gray hat hackers – 17, 153
+- grooming – 80
+- groups, AES (Advanced Encryption Standard) – 221
+- GSEC certification – 332
+- GSM (Global System for Mobile Communications) – 409
+- Guidance Software, EnCase – 396
+- guidelines, defined – 294
+
+### H
+
+- hacking. ***See also*** malware
+  - active scanning
+    - enumeration – 159 – 160
+    - MBSA (Microsoft Baseline Security Analyzer) – 321 – 323
+    - Nessus – 324 – 326
+    - OWASP (Open Web Application Security Project) – 326 – 327
+    - port scanning – 155 – 158
+    - Shodan – 160 – 162, 328 – 329
+    - vulnerability assessment – 158 – 159
+  - black hat hackers – 17, 152 – 153
+  - cell phone attacks – 166
+  - cookie poisoning – 165 – 166
+  - cross-site request forgery, 165
+  - cross-site scripting, 12 – 13, 73, 165
+  - Dark Web, 173 – 175
+  - defined, 9
+  - directory traversal, 165
+  - gray hat hackers, 17, 153
+  - hacker intrusions, 291 – 292
+  - hacktivists, 356
+  - of medical devices, 15
+  - new vulnerabilities, 15 – 16
+  - passive scanning, 153 – 155
+  - password cracking, 166 – 168
+  - penetration testing
+    - defined, 171
+    - NIST 800–115, 171
+    - NSA information assessment methodology, 171 – 172
+    - overview of, 18, 152
+    - PCI DSS (Payment Card Industry Data Security Standard), 172 – 173
+    - red/blue teams, 153
+  - phreaking, 18, 153
+  - reconnaissance phase, 153
+  - Russian hackers, 345
+  - script kiddies, 17 – 18, 153
