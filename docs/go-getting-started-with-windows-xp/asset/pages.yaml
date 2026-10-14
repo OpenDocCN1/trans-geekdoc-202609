@@ -1,0 +1,4475 @@
+- pgno: 0
+  md: '# GO!
+
+
+    with
+
+
+    # Windows® XP
+
+
+    Getting Started
+
+
+    CD included
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_0_0.png)
+
+
+    PEARSON
+
+    Prentice Hall
+
+
+    Gaskin • Ferrett • Preston • Preston'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # Students
+
+
+    # ## How to Find the Student Data Files
+
+    to Complete the Projects in This Book
+
+
+    Projects in this book begin either with a new blank file or from a student data
+    file that has already been started for you.
+
+
+    The student data files can be accessed from the enclosed CD-ROM or from the *GO!*
+    Web site.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_1_0.png)
+
+
+    # ### Files from the CD-ROM
+
+
+    As specifically directed in each project, navigate to the CD-ROM, and then save
+    and rename the file according to the instructions in the project.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_1_1.png)
+
+
+    # ### Files from www.prenhall.com/go
+
+
+    +   1. Decide where you want to store your student data files.
+
+    +      - If you are storing on the hard drive of your computer or on a network
+    drive, you may want to create a folder with an appropriate name on that drive.
+
+    +      - If you are storing on a removable storage device such as a USB flash
+    drive, Zip disk, or floppy disk, insert the device now.
+
+    +   2. From your Web browser, go to **www.prenhall.com/go**.
+
+    +   3. From the list of books provided, point to the title of this book, click
+    the active link and then follow the instructions as specified on the Web site.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# GO!
+
+
+    *with*
+
+
+    # Windows XP
+
+
+    # Getting Started
+
+
+    Shelley Gaskin, Robert L. Ferrett,
+
+
+    John Preston, and Sally Preston
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_2_0.png)
+
+
+    Upper Saddle River, New Jersey'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'This book is dedicated to my students, who inspire me every day, and to my
+    husband, Fred Gaskin.
+
+    —Shelley Gaskin
+
+
+    We dedicate this book to our granddaughters, who bring us great joy and happiness:
+
+    Clara and Siena & Alexis and Grace.
+
+    —John Preston, Sally Preston, and Robert L. Ferrett
+
+
+    # Library of Congress Cataloging-in-Publication Data
+
+
+    Go! Getting started with Windows XP / Shelley Gaskin . . . [et al.].
+
+    p. cm.
+
+    Includes index.
+
+    ISBN 0-13-231839-3
+
+    1. Microsoft Windows (Computer file) 2. Operating systems (Computers) 1. Gaskin,
+    Shelley.
+
+    QA76.76.O63G6 2007
+
+    005.4''46--dc22
+
+
+    2007009635
+
+
+    Vice President and Publisher: Natalie E. Anderson
+
+    Associate VP/Executive Acquisitions Editor,
+
+    Print: Stephanie Wall
+
+    Executive Acquisitions Editor, Media: Richard Keaveny
+
+    Product Development Manager: Eileen Bien Calabro Sr.
+
+    Editorial Project Manager: Laura Burgess
+
+    Development Editor: Ginny Munroe
+
+    Editorial Assistants: Becky Knauer, Lora Cimiluca
+
+    Content Development Manager: Cathi Profitko
+
+    Production Media Project Manager: Lorena Cerisano
+
+    Senior Media Project Manager: Steve Gagliostro
+
+    Director of Marketing: Margaret Waples
+
+    Senior Marketing Manager: Jason Sakos
+
+    Sales Associate: Rebecca Scott
+
+    Managing Editor: Lynda J. Castillo
+
+
+    Production Project Manager/Buyer: Wanda Rockwell
+
+    Production Editor: GGS Book Services
+
+    Photo Researcher: GGS Book Services
+
+    Manufacturing Buyer: Natacha Moore
+
+    Production/Editorial Assistant: Sandra K. Bernales
+
+    Design Director: Maria Lange
+
+    Art Director/Interior Design: Blair Brown
+
+    Cover Photo: Courtesy of Getty Images, Inc./Marvin Mattelson
+
+    Composition: GGS Book Services
+
+    Project Management: GGS Book Services
+
+    Cover Printer: Phoenix Color
+
+    Printer/Binder: Courier Kendallville
+
+
+    Microsoft, Windows, Word, PowerPoint, Outlook, FrontPage, Visual Basic, MSN, The
+    Microsoft Network, and/or other Microsoft products referenced herein are either
+    trademarks or registered trademarks of Microsoft Corporation in the U.S.A. and
+    other countries. Screen shots and icons reprinted with permission from the Microsoft
+    Corporation. This book is not sponsored or endorsed by or affiliated with Microsoft
+    Corporation.
+
+
+    Credits and acknowledgments borrowed from other sources and reproduced, with permission,
+    in this textbook are as follows or on the appropriate page within the text.
+
+
+    Copyright © 2008 by Pearson Education, Inc., Upper Saddle River, New Jersey, 07458.
+    All rights reserved. Printed in the United States of America. This publication
+    is protected by Copyright and permission should be obtained from the publisher
+    prior to any prohibited reproduction, storage in a retrieval system, or transmission
+    in any form or by any means, electronic, mechanical, photocopying, recording,
+    or likewise. For information regarding permission(s), write to the Rights and
+    Permissions Department.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Table of Contents
+
+
+    The GO! System Visual Walk-Through....................xxii
+
+
+    # Windows XP
+
+
+    # Chapter 1 Getting Started with Windows XP............ 1
+
+
+    PROJECT 1A Start Windows XP and Work with Windows, Folders, and Files 3
+
+
+    Objective 1 Get Started with Windows XP 4
+
+
+    Activity 1.1 Getting Started with Windows XP 4
+
+
+    Objective 2 Resize, Move, and Scroll Windows 14
+
+
+    Activity 1.2 Resizing, Moving, and Scrolling Windows 14
+
+
+    Objective 3 Maximize, Restore, Minimize, and Close Windows 19
+
+
+    Activity 1.3 Maximizing, Restoring, Minimizing, and Closing a Window 19
+
+
+    Objective 4 Create a New Folder 25
+
+
+    Activity 1.4 Creating a New Folder 25
+
+
+    Objective 5 Copy, Move, Rename, and Delete Files 32
+
+
+    Activity 1.5 Copying Files and Folders 32
+
+
+    Activity 1.6 Moving, Renaming, and Deleting Files 38
+
+
+    Activity 1.7 Capturing an Image of a Screen 41
+
+
+    Objective 6 Find Files and Folders 44
+
+
+    Activity 1.8 Finding Files and Folders 44
+
+
+    Objective 7 Compress Files 49
+
+
+    Activity 1.9 Compressing Files 50
+
+
+    Summary 54
+
+
+    Key Terms 54
+
+
+    Matching 55
+
+
+    Fill in the Blank 56
+
+
+    # Glossary..............................G-1
+
+
+    # Index................................I-1'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Letter from the Editor
+
+
+    Dear Instructors and Students,
+
+    The primary goal of the GO! Series is two-fold. The first goal is to help instructors
+    teach the course they want in less time. The second goal is to provide students
+    with the skills to solve business problems using the computer as a tool, for both
+    themselves and the organization for which they might be employed.
+
+
+    The GO! Series was originally created by Series Editor Shelley Gaskin and published
+    with the release of Microsoft Office 2003. Her ideas came from years of using
+    textbooks that didn’t meet all the needs of today’s diverse classroom and that
+    were too confusing for students. Shelley continues to enhance the series by ensuring
+    we stay true to our vision of developing quality instruction and useful classroom
+    tools.
+
+
+    But we also need your input and ideas.
+
+
+    Over time, the GO! Series has evolved based on direct feedback from instructors
+    and students using the series. We are the publisher that listens. To publish a
+    textbook that works for you, it’s critical that we continue to listen to this
+    feedback. It’s important to me to talk with you and hear your stories about using
+    GO! Your voice can make a difference.
+
+
+    My hope is that this letter will inspire you to write me an e-mail and share your
+    thoughts on using the GO! Series.
+
+
+    Stephanie Wall
+
+    Executive Editor, GO! Series
+
+    stephanie_wall@prenhall.com'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# GO! System Contributors\n\nWe thank the following people for their hard work\
+    \ and support in making the GO! System all that it is!\n\n# Additional Author\
+    \ Support\n\nCoyle, Diane\tMontgomery County Community College\nFry, Susan\tBoise\
+    \ State\nTownsend, Kris\tSpokane Falls Community College\nStroup, Tracey\tAmgen\
+    \ Corporation\n\n# Instructor Resource Authors\n\nAmer, Beverly\tNorthern Arizona\
+    \ University\nBoito, Nancy\tHarrisburg Area Community College\nCoyle, Diane\t\
+    Montgomery County Community College\nDawson, Tamara\tSouthern Nazarene University\n\
+    Driskel, Loretta\tNiagara County Community College\nElliott, Melissa\tOdessa College\n\
+    Fry, Susan\tBoise State\nGeoghan, Debra\tBucks County Community College\nHearn,\
+    \ Barbara\tCommunity College of Philadelphia\nJones, Stephanie\tSouth Plains College\n\
+    Madsen, Donna\tKirkwood Community College\nMeck, Kari\tHarrisburg Area Community\
+    \ College\nMiller, Cindy\tIvy Tech\nNowakowski, Tony\tBuffalo State\nPace, Phyllis\t\
+    Queensborough Community College\nPaterson, Jim\tParadise Valley Community College\n\
+    Prince, Lisa\tMissouri State\nRodgers, Gwen\tSouthern Nazarene University\nRuymann,\
+    \ Amy\tBurlington Community College\nRyan, Bob\tMontgomery County Community College\n\
+    Smith, Diane\tHenry Ford College\nSpangler, Candice\tColumbus State Community\
+    \ College\nThompson, Joyce\tLehigh Carbon Community College\nTiffany, Janine\t\
+    Reading Area Community College\nWatt, Adrienne\tDouglas College\nWeaver, Paul\t\
+    Bossier Parish Community College\nWeber, Sandy\tGateway Technical College\nWood,\
+    \ Dawn\nWeissman, Jonathan\tFinger Lakes Community College\n\n# Super Reviewers\n\
+    \nBrotherton, Cathy\tRiverside Community College\nCates, Wally\tCentral New Mexico\
+    \ Community College\nCone, Bill\tNorthern Arizona University\nCoverdale, John\t\
+    Riverside Community College\nFoster, Nancy\tBaker College\nHelfand, Terri\tChaffey\
+    \ College\nHibbert, Marilyn\tSalt Lake Community College\nHolliday, Mardi\tCommunity\
+    \ College of Philadelphia\nJerry, Gina\tSanta Monica College\nMartin, Carol\t\
+    Harrisburg Area Community College\nMaurer, Trina\tOdessa College\nMeck, Kari\t\
+    Harrisburg Area Community College\nMiller, Cindy\tIvy Tech Community College\n\
+    Nielson, Phil\tSalt Lake Community College\nRodgers, Gwen\tSouthern Nazarene University\n\
+    Smolenski, Robert\tDelaware Community College\nSpangler, Candice\tColumbus State\
+    \ Community College\nThompson, Joyce\tLehigh Carbon Community College\nWeber,\
+    \ Sandy\tGateway Technical College\nWells, Lorna\tSalt Lake Community College\n\
+    Zaboski, Maureen\tUniversity of Scranton\n\n# Technical Editors\n\nJanice Snyder\n\
+    Joyce Nielson\nColette Eisele\nJanet Pickard\nMara Zebest\nLindsey Allen\nWilliam\
+    \ Daley\n\n# Student Reviewers\n\nAllen, John\tAsheville-Buncombe Tech Community\
+    \ College\nAlexander, Steven\tSt. Johns River Community College\nAlexander, Melissa\t\
+    Tulsa Community College\nBolz, Stephanie\tNorthern Michigan University\nBerner,\
+    \ Ashley\tCentral Washington University\nBoomer, Michelle\tNorthern Michigan University\n\
+    Busse, Brennan\tNorthern Michigan University\nButkey, Maura\tCentral Washington\
+    \ University\nChristensen, Kaylie\tNorthern Michigan University\nConnally, Brianna\t\
+    Central Washington University\nDavis, Brandon\tNorthern Michigan University\n\
+    Davis, Christen\tCentral Washington University\nDen Boer, Lance\tCentral Washington\
+    \ University\nDix, Jessica\tCentral Washington University\nMoeller, Jeffrey\t\
+    Northern Michigan University\nDowns, Elizabeth\tCentral Washington University\n\
+    Erickson, Mike\tBall State University\nGadomski, Amanda\tNorthern Michigan University\n\
+    Gyselinc k, Craig\tCentral Washington University\nHarrison, Margo\tCentral Washington\
+    \ University\nHeacox, Kate\tCentral Washington University\nHill, Cheretta\tNorthwestern\
+    \ State University\nInnis, Tim\tTulsa Community College\nJarboe, Aaron\tCentral\
+    \ Washington University\nKlein, Colleen\tNorthern Michigan University\nMoeller,\
+    \ Jeffrey\tNorthern Michigan University\nNicholson, Regina\tAthens Tech College\n\
+    Niehaus, Kristina\tNorthern Michigan University\nNisa, Zaibun\tSanta Rosa Community\
+    \ College\nNunez, Nohelia\tSanta Rosa Community College\nOak, Samantha\tCentral\
+    \ Washington University\nOertii, Monica\tCentral Washington University\nPalenshus,\
+    \ Juliet\tCentral Washington University"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Contributors continued
+
+
+    | Name | Institution | Name | Institution |
+
+    |---|---|---|---|
+
+    | Hayes, Theresa | Broward Community College | Lord, Alexandria | Asheville Buncombe
+    Tech |
+
+    | Helfand, Terri | Chaffey College | Lowe, Rita | Harold Washington College |
+
+    | Helms, Liz | Columbus State Community College | Low, Willy Hui | Joliet Junior
+    College |
+
+    | Hernandez, Leticia | TCI College of Technology | Lucas, Vickie | Broward Community
+    College |
+
+    | Hibbert, Marilyn | Salt Lake Community College | Lynam, Linda | Central Missouri
+    State University |
+
+    | Hoffman, Joan | Milwaukee Area Technical College | Lyon, Lynne | Durham College
+    |
+
+    | Hogan, Pat | Cape Fear Community College | Lyon, Pat Rajski | Tomball College
+    |
+
+    | Holland, Susan | Southeast Community College | MacKinnon, Ruth | Georgia Southern
+    University |
+
+    | Hopson, Bonnie | Athens Technical College | Macon, Lisa | Valencia Community
+    College, West Campus |
+
+    | Horvath, Carrie | Albertus Magnus College | Machuca, Wayne | College of the
+    Sequoias |
+
+    | Horwitz, Steve | Community College of Philadelphia | Madison, Dana | Clarion
+    University |
+
+    | Hotta, Barbara | Leeward Community College | Maguire, Trish | Eastern New Mexico
+    University |
+
+    | Howard, Bunny | St. Johns River Community | Malkan, Rajiv | Montgomery College
+    |
+
+    | Howard, Chris | DeVry University | Manning, David | Northern Kentucky University
+    |
+
+    | Huckabay, Jamie | Austin Community College | Marcus, Jacquie | Niagara Community
+    College |
+
+    | Hudgins, Susan | East Central University | Marghitu, Daniela | Auburn University
+    |
+
+    | Hulett, Michelle J. | Missouri State University | Marks, Suzanne | Bellevue
+    Community College |
+
+    | Hunt, Darla A. | Morehead State University, Morehead, Kentucky | Marquez, Juanita
+    | El Centro College |
+
+    | Hunt, Laura | Tulsa Community College | Marquez, Juan | Mesa Community College
+    |
+
+    | Jacob, Sherry | Jefferson Community College | Martyn, Margie | Baldwin-Wallace
+    College |
+
+    | Jacobs, Duane | Salt Lake Community College | Maruccco, Toni | Lincoln Land
+    Community College |
+
+    | Jauken, Barb | Southeastern Community | Mason, Lynn | Lubbock Christian University
+    |
+
+    | Johnson, Kathy | Wright College | Matutis, Audrone | Houston Community College
+    |
+
+    | Johnson, Mary | Kingwood College | Matkin, Marie | University of Lethbridge
+    |
+
+    | Johnson, Mary | Mt. San Antonio College | McCain, Evelynn | Boise State University
+    |
+
+    | Jones, Stacey | Benedict College | McCannon, Melinda | Gordon College |
+
+    | Jones, Warren | University of Alabama, Birmingham | McCarthy, Marguerite | Northwestern
+    Business College |
+
+    | Jordan, Cheryl | San Juan College | McCaskill, Matt L. | Brevard Community College
+    |
+
+    | Kapoor, Bhushan | California State University, Fullerton | McClellan, Carolyn
+    | Tidewater Community College |
+
+    | Kasai, Susumu | Salt Lake Community College | McClure, Darlean | College of
+    Sequoias |
+
+    | Kates, Hazel | Miami Dade Community College, Kendall | McCrory, Sue A. | Missouri
+    State University |
+
+    | Keen, Debby | University of Kentucky | McCue, Stacy | Harrisburg Area Community
+    College |
+
+    | Keeter, Sandy | Seminole Community College | McEntire-Orbach, Teresa | Middlesex
+    County College |
+
+    | Kern-Blystone, Dorothy Jean | Bowling Green State | McLeod, Todd | Fresno City
+    College |
+
+    | Keskin, Ilknur | The University of South Dakota | McManus, Illyana | Grossmont
+    College |
+
+    | Kirk, Colleen | Mercy College | McPherson, Dori | Schoolcraft College |
+
+    | Kleckner, Michelle | Elon University | Meiklejohn, Nancy | Pikes Peak Community
+    College |
+
+    | Kliston, Linda | Broward Community College, North Campus | Mening, Rick | Hardin-Simmons
+    University |
+
+    | Kochis, Dennis | Suffolk County Community College | Meredith, Mary | University
+    of Louisiana at Lafayette |
+
+    | Kramer, Ed | Northern Virginia Community College | Mernelstein, Lisa | Baruch
+    College |
+
+    | Laird, Jeff | Northeast State Community College | Metos, Linda | Salt Lake Community
+    College |
+
+    | Lamoureaux, Jackie | Central New Mexico Community College | Meurer, Daniel |
+    University of Cincinnati |
+
+    | Lange, David | Grand Valley State | Meyer, Marian | Central New Mexico Community
+    College |
+
+    | LaPointe, Deb | Central New Mexico Community College | Miller, Cindy | Ivy Tech
+    Community College, Lafayette, Indiana |
+
+    | Larson, Donna | Louisville Technical Institute | Mitchell, Susan | Davenport
+    University |
+
+    | Laspina, Kathy | Vance-Granville Community College | Mohle, Dennis | Fresno
+    Community College |
+
+    | Le Grand, Dr. Kate | Broward Community College | Monk, Ellen | University of
+    Delaware |
+
+    | Lenhart, Sheryl | Terra Community College | Moore, Rodney | Holland College
+    |
+
+    | Letavec, Chris | University of Cincinnati | Morris, Mike | Southeastern Oklahoma
+    State University |
+
+    | Liefert, Jane | Everett Community College | Morris, Nancy | Hudson Valley Community
+    College |
+
+    | Lindaman, Linda | Black Hawk Community College | Moseler, Dan | Harrisburg Area
+    Community College |
+
+    | Lindberg, Martha | Minnesota State University | Nabors, Brent | Reedley College,
+    Clovis Center |
+
+    | Lightner, Renee | Broward Community College | Nadas, Erika | Wright College
+    |
+
+    | Lindberg, Martha | Minnesota State University | Nadelman, Cindi | New England
+    College |
+
+    | Linge, Richard | Arizona Western College | Nademlynsky, Lisa | Johnson & Wales
+    University |
+
+    | Logan, Mary G. | Delgado Community College | Ncube, Cathy | University of West
+    Florida |
+
+    | Loizeaux, Barbara | Westchester Community College | Nagengast, Joseph | Florida
+    Career College |
+
+    | Lopez, Don | Clovis-State Center Community College District | Newsome, Eloise
+    | Northern Virginia Community College Woodbridge |
+
+    |  |  | Nicholls, Doreen | Mohawk Valley Community College |
+
+    |  |  | Nunan, Karen | Northeast State Technical Community College |'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Contributors continued
+
+
+    | Name | Affiliation |
+
+    |---|---|
+
+    | Odegard, Teri | Edmonds Community College |
+
+    | Ogle, Gregory | North Community College |
+
+    | Orr, Dr. Claudia | Northern Michigan University South |
+
+    | Otieno, Derek | DeVry University |
+
+    | Otton, Diana Hill | Chesapeake College |
+
+    | Oxendale, Lucia | West Virginia Institute of Technology |
+
+    | Paiano, Frank | Southwestern College |
+
+    | Patrick, Tanya | Clackamas Community College |
+
+    | Peairs, Deb | Clark State Community College |
+
+    | Prince, Lisa | Missouri State University-Springfield Campus |
+
+    | Proietti, Kathleen | Northern Essex Community College |
+
+    | Pusins, Delores | HCCC |
+
+    | Raghuraman, Ram | Joliet Junior College |
+
+    | Reasoner, Ted Allen | Indiana University—Purdue |
+
+    | Reeves, Karen | High Point University |
+
+    | Remillard, Debbie | New Hampshire Technical Institute |
+
+    | Rhue, Shelly | DeVry University |
+
+    | Richards, Karen | Maplewoods Community College |
+
+    | Richardson, Mary | Albany Technical College |
+
+    | Rodgers, Gwen | Southern Nazarene University |
+
+    | Roselli, Diane | Harrisburg Area Community College |
+
+    | Ross, Dianne | University of Louisiana in Lafayette |
+
+    | Rousseau, Mary | Broward Community College, South |
+
+    | Samson, Dolly | Hawaii Pacific University |
+
+    | Sams, Todd | University of Cincinnati |
+
+    | Sandoval, Everett | Reedley College |
+
+    | Sardone, Nancy | Seton Hall University |
+
+    | Scafide, Jean | Mississippi Gulf Coast Community College |
+
+    | Scheeren, Judy | Westmoreland County Community College |
+
+    | Schneider, Sol | Sam Houston State University |
+
+    | Scroggins, Michael | Southwest Missouri State University |
+
+    | Sever, Suzanne | Northwest Arkansas Community College |
+
+    | Sheridan, Rick | California State University-Chico |
+
+    | Silvers, Pamela | Asheville Buncombe Tech |
+
+    | Singer, Steven A. | University of Hawai''i, Kapi''olani Community College |
+
+    | Sinha, Atin | Albany State University |
+
+    | Skolnick, Martin | Florida Atlantic University |
+
+    | Smith, T. Michael | Austin Community College |
+
+    | Smith, Tammy | Tompkins Cortland Community College |
+
+    | Smolenski, Bob | Delaware County Community College |
+
+    | Spangler, Candice | Columbus State |
+
+    | Stedham, Vicki | St. Petersburg College, Clearwater |
+
+    | Stefanelli, Greg | Carroll Community College |
+
+    | Steiner, Ester | New Mexico State University |
+
+    | Stenlund, Neal | Northern Virginia Community College, Alexandria |
+
+    | St. John, Steve | Tulsa Community College |
+
+
+    | Name | Affiliation |
+
+    |---|---|
+
+    | Sterling, Janet | Houston Community College |
+
+    | Stoughton, Catherine | Laramie County Community College |
+
+    | Sullivan, Angela | Joliet Junior College |
+
+    | Szurek, Joseph | University of Pittsburgh at Greensburg |
+
+    | Tarver, Mary Beth | Northwestern State University |
+
+    | Taylor, Michael | Seattle Central Community College |
+
+    | Thangiah, Sam | Slippery Rock University |
+
+    | Thompson-Sellers, Ingrid | Georgia Perimeter College |
+
+    | Tomasi, Erik | Baruch College |
+
+    | Toreson, Karen | Shoreline Community College |
+
+    | Trifiletti, John J. | Florida Community College at Jacksonville |
+
+    | Trivedi, Charulata | Quinsigamond Community College, Woodbridge |
+
+    | Tucker, William | Austin Community College |
+
+    | Turgeon, Cheryl | Asnuntuck Community College |
+
+    | Turpen, Linda | Central New Mexico Community College |
+
+    | Upshaw, Susan | Del Mar College |
+
+    | Unruh, Angela | Central Washington University |
+
+    | Vanderhoof, Dr. Glenna | Missouri State University-Springfield Campus |
+
+    | Vargas, Tony | El Paso Community College |
+
+    | Vicars, Mitzi | Hampton University |
+
+    | Villarreal, Kathleen | Fresno |
+
+    | Vitrano, Mary Ellen | Palm Beach Community College |
+
+    | Volker, Bonita | Tidewater Community College |
+
+    | Wahila, Lori (Mindy) | Tompkins Cortland Community College |
+
+    | Waswick, Kim | Southeast Community College, Nebraska |
+
+    | Wavle, Sharon | Tompkins Cortland Community College |
+
+    | Webb, Nancy | City College of San Francisco |
+
+    | Wells, Barbara E. | Central Carolina Technical College |
+
+    | Wells, Lorna | Salt Lake Community College |
+
+    | Welsh, Jean | Lansing Community College Nebraska |
+
+    | White, Bruce | Quinnipiac University |
+
+    | Willer, Ann | Solano Community College |
+
+    | Williams, Mark | Lane Community College |
+
+    | Wilson, Kit | Red River College |
+
+    | Wilson, Roger | Fairmont State University |
+
+    | Wimberly, Leanne | International Academy of Design and Technology |
+
+    | Worthington, Paula | Northern Virginia Community College |
+
+    | Yauney, Annette | Herkimer County Community College |
+
+    | Yip, Thomas | Passaic Community College |
+
+    | Zavala, Ben | Webster Tech |
+
+    | Zlotow, Mary Ann | College of DuPage |
+
+    | Zudeck, Steve | Broward Community College, North |'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# # About the Authors
+
+
+    **Shelley Gaskin**, Series Editor, is a professor of business and computer technology
+    at Pasadena City College in Pasadena, California. She holds a master’s degree
+    in business education from Northern Illinois University and a doctorate in adult
+    and community education from Ball State University. Dr. Gaskin has 15 years of
+    experience in the computer industry with several Fortune 500 companies and has
+    developed and written training materials for custom systems applications in both
+    the public and private sector. She is also the author of books on Microsoft Outlook
+    and word processing.
+
+
+    **Robert L. Ferrett** recently retired as the director of the Center for Instructional
+    Computing at Eastern Michigan University, where he provided computer training
+    and support to faculty. He has authored or co-authored more than 70 books on Access,
+    PowerPoint, Excel, Publisher, WordPerfect, and Word. Before writing for the *GO!
+    Series*, Bob was a series editor and author for the *Learn Series*. He has a bachelor’s
+    degree in psychology, a master’s degree in geography, and a master’s degree in
+    interdisciplinary technology from Eastern Michigan University. Bob’s doctoral
+    studies were in instructional technology at Wayne State University. For fun, Bob
+    teaches a four-week computers and genealogy class and has written genealogy and
+    local history books.
+
+
+    **John Preston** is an Associate Professor at Eastern Michigan University in the
+    College of Technology, where he teaches microcomputer application courses at the
+    undergraduate and graduate levels. He has been teaching, writing, and designing
+    computer training courses since the advent of PCs and has authored and co-authored
+    over 70 books on Microsoft Word, Excel, Access, and PowerPoint. He is a series
+    editor for the Learn 97, Learn 2000, and Learn XP books. Two books on Microsoft
+    Access that he co-authored with Robert Ferrett have been translated into Greek
+    and Chinese. He has received grants from the Detroit Edison Institute and the
+    Department of Energy to develop Web sites for energy education and alternative
+    fuels. He has also developed one of the first Internet-based microcomputer applications
+    courses at an accredited university. He has a bachelor’s degree from the University
+    of Michigan in Physics, Mathematics, and Education and a master’s degree from
+    Eastern Michigan University in Physics Education. His doctoral studies were in
+    Instructional Technology at Wayne State University.
+
+
+    **Sally Preston** is president of Preston & Associates, which provides software
+    consulting and training. She currently teaches computing in a variety of settings,
+    which gives her ample opportunity to observe how people learn, what works best,
+    and what challenges are present when learning a new software program. This diverse
+    experience provides a complementary set of skills and knowledge that blends into
+    her writing. Prior to writing for the *GO! Series*, Sally was a co-author on the
+    *Learn* series since its inception and has authored books for the *Essentials*
+    and *Microsoft Office User Specialist (MOUS) Essentials* series. Sally has a master’s
+    in business administration from Eastern Michigan University. When away from her
+    computer, she is often found planting flowers in her garden.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Visual Walk-Through of the GO! System
+
+
+    The GO! System is designed for ease of implementation on the instructor side and
+    ease of understanding on the student. It has been completely developed based on
+    professor and student feedback.
+
+
+    The GO! System is divided into three categories that reflect how you might organize
+    your course—Prepare, Teach, and Assess.
+
+
+    # Prepare
+
+
+    # Transition Guide
+
+
+    New to GO!–We''ve made it quick and easy to plan the format and activities for
+    your class.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_13_0.png)
+
+
+    # Syllabus Template
+
+
+    Includes course calendar planner for 8-,12-, and 16-week formats.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_13_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Assignment Sheet
+
+
+    One per chapter.
+
+    Lists all possible assignments; add to and delete from this simple Word table
+    according to your course plan.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_14_0.png)
+
+
+    # File Guide to the GO! Supplements
+
+
+    Tabular listing of all supplements and their file names.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_14_1.png)
+
+
+    # NEW
+
+
+    # Assignment Planning Guide
+
+
+    Description of GO! assignments with recommendations based on class size, delivery
+    mode, and student needs. Includes examples from fellow instructors.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_14_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Student Data Files
+
+
+    Music School Records discovers, launches, and develops the careers of young artists
+    in classical, jazz, and contemporary music. Our philosophy is to not only shape,
+    distribute, and sell a music product, but to help artists create a career that
+    can last a lifetime. Too often in the music industry, artists are forced to fit
+    their music to a trend that is short-lived. Music School Records doesn’t just
+    follow trends, we take a long-term view of the music industry and help our artists
+    develop a style and repertoire that is fluid and flexible and that will appeal
+    to audiences for years and even decades.
+
+
+    The music industry is constantly changing, but over the last decade the changes
+    have been enormous. New forms of entertainment such as DVDs, video games, and
+    the Internet mean there are more competition for the leisure dollar in the market.
+    New technologies give consumers more options for buying and listening to music,
+    and they are demanding high quality recordings. Young consumers are comfortable
+    with technology and want the music they love when and where they want it, no matter
+    where they are or what they are doing.
+
+
+    Music School Records embraces new technologies and the sophisticated market of
+    young music lovers. We believe that providing high quality recordings of truly
+    talented artists make for more discerning listeners who will cherish the gift
+    of music for the rest of their lives. The expertise of Music School Records includes:
+
+
+    +   - Insight into our target market and the ability to reach the desired audience
+
+    +   - The ability to access all current sources of music income
+
+    +   - A management team with years of experience in music commerce
+
+    +   - Innovative business strategies and artist development plans
+
+    +   - Investment in technology infrastructure for high quality recordings and
+    business services
+
+    +   - Initiative and proactive management of artist careers
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_15_0.png)
+
+
+    # Online Study Guide for Students
+
+
+    Interactive objective-style questions based on chapter content.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_15_1.png)
+
+
+    # PowerPoint Slides
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_15_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Learning Objectives and Student Outcomes
+
+
+    Objectives are clustered around projects that result in student outcomes. They
+    help students learn how to solve problems, not just learn software features.
+
+
+    # Project-Based Instruction
+
+
+    Students do not practice features of the application; they create real projects
+    that they will need in the real world. Projects are color coded for easy reference
+    and are named to reflect skills the students will be practicing.
+
+
+    # A and B Projects
+
+
+    Each chapter contains two instructional projects—A and B.
+
+
+    Each chapter opens with a story that sets the stage for the projects the student
+    will create; the instruction does not force the student to pretend to be someone
+    or make up a scenario.
+
+
+    Each chapter has an introductory paragraph that briefs students on what is important.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_16_0.png)
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_16_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '**Visual Summary**
+
+    Shows students upfront what their projects will look like when they are done.
+
+
+    **Project Summary**
+
+    Stated clearly and quickly in one paragraph.
+
+
+    **File Guide**
+
+    Clearly shows students which files are needed for the project and the names they
+    will use to save their documents.
+
+
+    **Objective**
+
+    The skills the student will learn are clearly stated at the beginning of each
+    project and color coded to match projects listed on the chapter opener page.
+
+
+    **Teachable Moment**
+
+    Expository text is woven into the steps— at the moment students need to know it—
+    not chunked together in a block of text that will go unread.
+
+
+    **Screen Shots**
+
+    Larger screen shots.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_17_0.png)
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_17_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Steps
+
+
+    Color coded to the current project, easy to read, and not too many to confuse
+    the student or too few to be meaningless.
+
+
+    # Sequential Pagination
+
+
+    No more confusing letters and abbreviations.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_18_0.png)
+
+
+    # Microsoft Procedural Syntax
+
+
+    All steps are written in Microsoft Procedural Syntax to put the student in the
+    right place at the right time.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_18_1.png)
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_18_2.png)
+
+
+    # End-of-Project Icon
+
+
+    All projects in the GO! Series have clearly identifiable end points, useful in
+    self-paced or on-line environments.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_18_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/9fe65c86ec4bc221ab72a7112a60115a_19_0.png)
+
+
+    # Alert box
+
+
+    Draws students’ attention to make sure they aren’t getting too far off course.
+
+
+    # Another Way box
+
+
+    Shows students other ways of doing tasks.
+
+
+    # More Knowledge box
+
+
+    Expands on a topic by going deeper into the material.
+
+
+    # Note box
+
+
+    Points out important items to remember.
+
+
+    # There''s More You Can Do!
+
+
+    Try IT! exercises that teach students additional skills.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_19_1.png)
+
+
+    # There''s More You Can Do!
+
+
+    From the student files that accompany this textbook, open the folder 05_chapter5_more_you_can_do.
+    Locate the Try IT! exercises for this chapter and follow the instructions to learn
+    additional skills.
+
+
+    # Try IT!—Convert a Document to a Different Format
+
+
+    In this Try IT! exercise, you will convert a Word document to several different
+    file formats.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# End-of-Chapter Material
+
+
+    Take your pick!
+
+    Content-based or Outcomes-based projects to choose from. Below is a table outlining
+    the various types of projects that fit into these two categories.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_20_0.png)
+
+
+    # Content-Based Assessments
+
+    (Defined solutions with solution files provided for grading)
+
+
+    | Project Letter | Name | Objectives Covered |
+
+    |---|---|---|
+
+    | N/A | Summary and Key Terms |  |
+
+    | N/A | Multiple Choice |  |
+
+    | N/A | Fill-in-the-blank |  |
+
+    | C | Skills Review | Covers A Objectives |
+
+    | D | Skills Review | Covers B Objectives |
+
+    | E | Mastering Excel | Covers A Objectives |
+
+    | F | Mastering Excel | Covers B Objectives |
+
+    | G | Mastering Excel | Covers any combination of A and B Objectives |
+
+    | H | Mastering Excel | Covers any combination of A and B Objectives |
+
+    | I | Mastering Excel | Covers all A and B Objectives |
+
+    | J | Business Running Case | Covers all A and B Objectives |
+
+
+    # Outcomes-Based Assessments
+
+    (Open solutions that require a rubric for grading)
+
+
+    | Project Letter | Name | Objectives Covered |
+
+    |---|---|---|
+
+    | N/A | Rubric |  |
+
+    | K | Problem Solving | Covers as many Objectives from A and B as possible |
+
+    | L | Problem Solving | Covers as many Objectives from A and B as possible. |
+
+    | M | Problem Solving | Covers as many Objectives from A and B as possible. |
+
+    | N | Problem Solving | Covers as many Objectives from A and B as possible. |
+
+    | O | Problem Solving | Covers as many Objectives from A and B as possible. |
+
+    | P | You and GO! | Covers as many Objectives from A and B as possible |
+
+    | Q | GO! Help | Not tied to specific objectives |
+
+    | R | * Group Business Running Case | Covers A and B Objectives |
+
+
+    * This project is provided only with the GO! with Microsoft Office 2007 Introductory
+    book.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Objectives List
+
+
+    Most projects in the end-of-chapter section begin with a list of the objectives
+    covered.
+
+
+    # End of Each Project Clearly Marked
+
+
+    Clearly identified end points help separate the end-of-chapter projects.
+
+
+    # Content-Based Assessments
+
+
+    # Skills Review
+
+
+    # Project SC — Receipt Letter
+
+
+    In this project, you will apply the skills you practiced from the Objectives in
+    Project 5A.
+
+
+    Objectives: 1. Create and Save a New Document; 2. Edit Text; 3. Select, Delete,
+    and Format Text; 4. Print a Document.
+
+
+    In the following Skills Review, you will create and edit a follow-up letter from
+    Janice Anderson, a production manager for Music School Records, to William Hawken,
+    a recording artist who has submitted a demo CD with his application. Your completed
+    letter will look similar to the one shown in Figure 5.19
+
+
+    # For Project SC, you will need the following file:
+
+
+    New Mark Word document.
+
+    You will save your document as SC_Receipt_Letter_Firstname_Lastname
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_21_0.png)
+
+
+    (Project SC-Receipt Letter continues on the next page)
+
+
+    # Content-Based Assessments
+
+
+    # Skills Review
+
+
+    (Project SC-Receipt Letter continued)
+
+
+    +   14. Save the changes you have made to your document. Press Ctrl+S to select
+    the entire document...
+
+    +   15. Select the entire first line of Music School Records...
+
+    +   16. Select the second, third, and fourth lines of text...
+
+    +   17. In the paragraph beginning Your demonstration...
+
+    +   18. Click the Insert tab in the Header & Footer group, click the Footer button.
+
+    +   19. Click the Page Layout tab in the Page Setup group...
+
+    +   20. From the Office menu, point to the Print menu...
+
+    +   21. On the Print Preview tab in the Print group, click the Print button...
+
+    +   22. From the Office menu, click Exit Word, saving any changes if prompted
+    to do so.
+
+
+    End You have completed Project SC'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Rubric
+
+
+    A matrix that states the criteria and standards for grading student work. Used
+    to grade open-ended assessments.
+
+
+    # GO! with Help
+
+
+    Students practice using the Help feature of the Office application.
+
+
+    # You and GO!
+
+
+    A project in which students use information from their own lives and apply the
+    skills from the chapter to a personal task.
+
+
+    # Outcomes-Based Assessments
+
+
+    # Rubric
+
+
+    The following outcomes-based assessments are open-ended measurements. That is,
+    there is no one specific, correct result; your result will depend on your approach
+    to the information provided. Make Professional Quality your goal. Use the following
+    scoring rubric to guide you in how to approach the problem and then to evaluate
+    how well your approach solves the problem.
+
+
+    The categories Software Mastery, Content, Format and Layout, and Process represent
+    the knowledge and skills you have gained that you can apply to solving the problem.
+    The levels of performance Professional Quality, Approaching Professional Quality,
+    or Needs Quality Improvements help you and your instructor evaluate your results.
+
+
+    Rubric matrix with columns Your completed project is of Professional Quality if
+    you, Your completed project is Approaching Professional Quality if you, Your completed
+    project Needs Quality Improvements if you and rows 1 Software Mastery, 2 Content,
+    3 Format and Layout, 4 Process.
+
+
+    # Outcomes-Based Assessments
+
+
+    # You and GO!
+
+
+    # Project 5P — You and Go!
+
+
+    In this project, you will construct a solution by applying any combination of
+    the skills you practiced from the Objectives in Projects 5A and 5B.
+
+
+    From the student files that accompany this textbook, open the folder 04_you_and_go.
+    Locate the You and GO! project for this chapter and follow the instructions to
+    create a cover letter for your resume.
+
+
+    End You have completed Project 5P
+
+
+    # GO! with Help
+
+
+    # Project 5Q — Go! with Help
+
+
+    The Word Help system is extensive and can help you as you work. In this chapter,
+    you used the Quick Access Toolbar on several occasions. You can customize the
+    Quick Access Toolbar by adding buttons that you use regularly, making them quickly
+    available to you from any tab on the Ribbon. In this project, you will use Help
+    to find out how to add buttons.
+
+
+    +   - Start Word. At the far right end of the Ribbon, click the Microsoft Office
+    Word Help button. In the Word Help dialog box, click the Search button and, then
+    click Offline Word Help.
+
+    +   - In the Type words to search for box, type Quick Access Toolbar and then
+    press Enter.
+
+    +   - From the list of search results, click Customize the Quick Access Toolbar.
+
+    +   - Click each of the links to find out how to add buttons from the Ribbon and
+    from the Options dialog box.
+
+    +   - When you are through, Close the Help window, and then Close Word.
+
+
+    End You have completed Project 5Q'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Outcomes-Based Assessments
+
+
+    # Group Business Running Case
+
+
+    # Project 5R—Group Business Running Case
+
+
+    In this project, you will apply the skills you practiced from the Objectives in
+    Projects 5A and 5B.
+
+
+    Your instructor may assign this group case project to your class. If your instructor
+    assigns this project, he or she will provide you with information and instructions
+    to work as part of a group. The group will apply the skills gained thus far to
+    help the Bell Orchid Hotel Group achieve its business goals.
+
+
+    **End** You have completed Project 5R ____________________
+
+
+    # Group Business Running Case
+
+
+    A continuing project developed for groups that spans the chapters within each
+    application.
+
+
+    # Student CD includes:
+
+
+    +   - Student Data Files
+
+    +   - There’s More You Can Do!
+
+    +   - Business Running Case
+
+    +   - You and GO!
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_23_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "# # Annotated Instructor Edition\n\nThe Annotated Instructor Edition contains\
+    \ a full version of the student textbook that includes tips, supplement references,\
+    \ and pointers on teaching with the GO! instructional system.\n\n![](img/9fe65c86ec4bc221ab72a7112a60115a_25_0.png)\n\
+    \n**Chapter Dividers**  \nClearly outline the resources per chapter by activity\
+    \ level: Prepare, Teach, Assess.\n\n![](img/9fe65c86ec4bc221ab72a7112a60115a_25_1.png)\n\
+    \n**Instructor File Guide**  \nComplete list of all Student Data Files and instructor\
+    \ Solution Files needed for the chapter."
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Helpful Hints,
+
+    Teaching Tips,
+
+    Expand the Project
+
+
+    References correspond to what is being taught in the student textbook.
+
+
+    # Full-Size Textbook Pages
+
+
+    An instructor copy of the textbook with traditional Instructor Manual content
+    incorporated.
+
+
+    # End-of-Chapter Concepts Assessments
+
+
+    contain the answers for quick reference.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_26_0.png)
+
+
+    # Content-Based Assessments
+
+
+    # Matching
+
+
+    Match each term in the second column with its correct definition in the first
+    column. Write the letter of the term on the blank line in front of the correct
+    definition.
+
+
+    +   - C 1. The location in the Word window, indicated by a blinking vertical line,
+    where text will be inserted when you start to type.
+
+    +   - F 2. In the Word window, the location of the Minimize, Maximize/Restore
+    Down, and Close buttons.
+
+    +   - Q 3. A button that represents the command to reveal nonprinting characters.
+
+    +   - K 4. The action that takes place when the insertion point reaches the right
+    margin and automatically moves down and to the left margin of the next line.
+
+    +   - B 5. The process of setting the overall appearance of the text within the
+    document.
+
+    +   - G 6. To hold down the left mouse button and move the mouse pointer over
+    text to select it.
+
+    +   - H 7. A set of ...
+
+
+    # Content-Based Assessments
+
+
+    # Fill in the Blank
+
+
+    Write the correct word in the space provided
+
+
+    +   - 1. Microsoft Word 2007 is a word ______ program that you can use to perform
+    tasks such as writing a memo, a report, or a letter.
+
+    +   - 2. Located at the bottom of the Word window, the bar that provides information
+    such as page number and word count is referred to as the ______ bar.
+
+    +   - 3. Within the scroll bar, dragging the Double Click ______ downward causes
+    the document on your screen to move up.
+
+    +   - 4. A toolbar above the Ribbon and to the right of the Office button, which
+    can be customized by adding frequently used buttons, is called the ______ Blank
+    Blank. (QAT).
+
+    +   - 5. Characters that display on the screen to show the location of paragraph
+    marks, tabs, and spaces but that do not print are called ______ Space marks.
+
+    +   - 6. If you point to a button on the Ribbon, a Help ______ displays the name
+    of the button.
+
+    +   - 7. A purple dotted line under an address or a date indicating that the information
+    could be placed into another Office program such as Outlook is a ______ URL'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# NEW
+
+
+    # Rubric
+
+
+    A matrix to guide the student on how they will be assessed is reprinted in the
+    Annotated Instructor Edition with suggested weights for each of the criteria and
+    levels of performance. Instructors can modify the weights to suit their needs.
+
+
+    # Outcomes-Based Assessments
+
+
+    | Rubric | Your completed project is of Professional Quality if you: | Your completed
+    project is Approaching Professional Quality if you: | Your completed project Needs
+    Quality Improvements if you: |
+
+    |---|---|---|---|
+
+    | Software Mastery | Criteria describing professional use of software and completion
+    of required tasks. | Criteria describing partially completed or less efficient
+    software use. | Criteria describing insufficient software use or incomplete work.
+    |
+
+    | Content | Criteria describing accurate, complete, and well-developed content.
+    | Criteria describing generally adequate content with some weaknesses. | Criteria
+    describing incomplete, inaccurate, or underdeveloped content. |
+
+    | Format and Layout | Criteria describing effective organization, formatting,
+    and visual presentation. | Criteria describing generally effective formatting
+    with some inconsistencies. | Criteria describing poor organization, formatting,
+    or visual presentation. |
+
+    | Process | Criteria describing an organized and effective work process. | Criteria
+    describing a partially organized or inconsistent process. | Criteria describing
+    an ineffective or disorganized process. |'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # Assess
+
+
+    # ## Assignment Tags
+
+    ### Scoring checklist for assignments.
+
+
+    NEW
+
+    Now also available for Problem-Solving projects.
+
+
+    # ## Assignment Tags for GO! with Office 2007
+
+    ### Word Chapter 5
+
+
+    | Project 5A — Task | Points | Your Score |
+
+    |---|---:|---:|
+
+    | Center text vertically on page | 2 | |
+
+    | Delete the word “really” | 1 | |
+
+    | Delete the words “try to” | 1 | |
+
+    | Replace “was” with “is” | 1 | |
+
+    | Insert the word “potential” | 1 | |
+
+    | Replace “John W. Diamond” with “Lucy Burrows” | 2 | |
+
+    | Change entire document to the Cambria font | 2 | |
+
+    | Change the first line of text to Arial Black 20 pt. | 2 | |
+
+    | Bold the first line of text | 2 | |
+
+    | Change the 2nd through 4th lines to Arial 10 pt. | 2 | |
+
+    | Italicize the 2nd through 4th lines of text | 2 | |
+
+    | Correct/add footer as instructed | 2 | |
+
+    | Circled information is incorrect or formatted incorrectly | 1 | |
+
+    | **Total Points** | **20** | **0** |
+
+
+    | Project 5B — Task | Points | Your Score |
+
+    |---|---:|---:|
+
+    | Insert the file W05B_Music_School_Records | 4 | |
+
+    | Insert the Music Logo | 4 | |
+
+    | Remove duplicate “and” | 2 | |
+
+    | Change baseline and grammar errors (4) | 2 | |
+
+    | Correct/add footer as instructed | 2 | |
+
+    | Circled information is incorrect or formatted incorrectly | 2 | |
+
+    | **Total Points** | **20** | **0** |
+
+
+    | Project 5C — Task | Points | Your Score |
+
+    |---|---:|---:|
+
+    | Add four-line letterhead | 2 | |
+
+    | Insert today’s date | 1 | |
+
+    | Add address block, subject line, and greeting | 2 | |
+
+    | Add two-paragraph body of letter | 2 | |
+
+    | Add closing, name, and title | 2 | |
+
+    | In subject line, capitalize “receipt” | 1 | |
+
+    | Change “standard” to “guidelines” | 1 | |
+
+    | Insert “all” | 1 | |
+
+    | Change the first line of text to Arial Black 20 pt. | 2 | |
+
+    | Bold the first line of text | 1 | |
+
+    | Change the 2nd through 4th lines to Arial 10 pt. | 1 | |
+
+    | Italicize the 2nd through 4th lines of text | 1 | |
+
+    | Correct/add footer as instructed | 2 | |
+
+    | Circled information is incorrect or formatted incorrectly | 1 | |
+
+    | **Total Points** | **20** | **0** |
+
+
+    | Project 5D — Task | Points | Your Score |
+
+    |---|---:|---:|
+
+    | Insert the file W05D_Marketing | 4 | |
+
+    | Bold the first two title lines | 2 | |
+
+    | Correct spelling of “Marketing” | 2 | |
+
+    | Correct spelling of “genres” | 2 | |
+
+    | Correct all misspellings of “already” | 2 | |
+
+    | Correct grammar error “are” to “is” | 2 | |
+
+    | Insert the logo image | 2 | |
+
+    | Correct/add footer as instructed | 2 | |
+
+    | Circled information is incorrect or formatted incorrectly | 2 | |
+
+    | **Total Points** | **20** | **0** |
+
+
+    # ## Highlighted Overlays
+
+
+    Solution files provided as transparency overlays. Yellow highlights point out
+    the gradable elements for quick and easy grading.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_28_0.png)
+
+
+    # ## Music School Records
+
+
+    2620 Vine Street
+
+    Los Angeles, CA 90028
+
+    323-555-0028
+
+
+    September 12, 2009
+
+
+    Mr. William Hawken
+
+    123 Eighth Street
+
+    Harrisville, MI 48740
+
+
+    Dear William:
+
+
+    Subject: Your Application to Music School Records
+
+
+    Thank you for submitting your application to Music School Records. Our talent
+    scout for Northern Michigan, Catherine McDonald, is very enthusiastic about your
+    music, and the demo CD you submitted certainly confirms her opinion.
+
+
+    We discuss our applications from potential clients during the first week of each
+    month. We will have a decision for you by the second week of October.
+
+
+    Yours Truly,
+
+
+    Lucy Burrows
+
+
+    +   - 20 point Arial Black, bold and underline
+
+    +   - 10 point Arial, italic
+
+    +   - Text vertically centered on page
+
+    +   - Body of document changed to Cambria font, 11 point
+
+    +   - Word “really” deleted
+
+    +   - Words “try to” deleted'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Point-Counted Production Tests (PCPTs)
+
+
+    A cumulative exam for each project, chapter, and application. Easy to score using
+    the provided checklist with suggested points for each task.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_29_0.png)
+
+
+    # Test Bank
+
+
+    Available as TestGen Software or as a Word document for customization.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_29_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Solution Files–
+
+    Application
+
+    and PDF
+
+    format
+
+
+    Music School Records
+
+
+    Music School Records discovers, launches, and develops the careers of young artists
+    in classical, jazz, and contemporary music. Our philosophy is to not only shape,
+    distribute, and sell a music product, but to help artists create a career that
+    can last a lifetime. Too often in the music industry, artists are forced to fit
+    their music to a trend that is short-lived. Music School Records does not just
+    follow trends, we take a long-term view of the music industry and help our artists
+    develop a style and repertoire that is fluid and flexible and that will appeal
+    to audiences for years and even decades.
+
+
+    The music industry is constantly changing, but over the last decade, the changes
+    have been enormous. New forms of entertainment such as DVDs, video games, and
+    the Internet mean there is more competition for the leisure dollar in the market.
+    New technologies give consumers more options for buying and listening to music,
+    and they are demanding high quality recordings. Young consumers are comfortable
+    with technology and want the music they love when and where they want it, no matter
+    where they are or what they are doing.
+
+
+    Music School Records embraces new technologies and the sophisticated market of
+    young music lovers. We believe that providing high quality recordings of truly
+    talented artists make for more discerning listeners who will cherish the gift
+    of music for the rest of their lives. The expertise of Music School Records includes
+
+
+    - Insight into our target market and the ability to reach the desired audience
+
+    - The ability to access all current sources of music income
+
+    - A management team with years of experience in music commerce
+
+    - Innovative business strategies and artist development plans
+
+    - Investment in technology infrastructure for high quality recordings and business
+    services
+
+
+    pagexxxx_top.docx
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_30_0.png)
+
+
+    # Online Assessment and Training
+
+
+    myitlab is Prentice Hall''s new performance-based solution that allows you to
+    easily deliver outcomes-based courses on Microsoft Office 2007, with customized
+    training and defensible assessment. Key features of myitlab include:
+
+
+    +   - A true "system" approach: myitlab content is the same as in your textbook.
+
+    +   - Project-based and skills-based: Students complete real-life assignments.
+
+    +   - Advanced reporting and gradebook: These include student click stream data.
+
+    +   - No installation required: myitlab is completely Web-based. You just need
+    an Internet connection, small plug-in, and Adobe Flash Player.
+
+
+    Ask your Prentice Hall sales representative for a demonstration or visit:
+
+
+    www.prenhall.com/myitlab'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '![](img/9fe65c86ec4bc221ab72a7112a60115a_32_0.png)
+
+
+    # # Chapter one
+
+
+    # ## Getting Started with Windows XP
+
+
+    # ## OBJECTIVES
+
+
+    At the end of this chapter you will be able to:
+
+
+    # ## OUTCOMES
+
+
+    Mastering these objectives will enable you to:
+
+
+    +   1. Get Started with Windows XP
+
+    +   2. Resize, Move, and Scroll Windows
+
+    +   3. Maximize, Restore, Minimize, and Close Windows
+
+    +   4. Create a New Folder
+
+    +   5. Copy, Move, Rename, and Delete Files
+
+    +   6. Find Files and Folders
+
+    +   7. Compress Files
+
+
+    # ### PROJECT 1A
+
+
+    Start Windows XP and Work with Windows, Folders, and Files'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'Windows XP is the software that coordinates the activities of your computer''s
+    hardware. Windows XP controls how your screen is displayed, how you open and close
+    programs, and the startup, shutdown, and navigation procedures for your computer.
+    It is useful to become familiar with the basic features of the Microsoft Windows
+    operating system, especially working with the Start button and taskbar; opening,
+    closing, moving, and resizing windows; and saving and managing files.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_33_0.png)
+
+
+    # Getting Started with Windows XP'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Project 1A Start Windows XP and Work with Windows, Folders, and Files
+
+
+    In Activities 1.1 through 1.9, you will practice navigating Windows XP. You will
+    manage files and folders and compress and decompress files for easy file transfer.
+    You will also capture an image of your screen, which will look similar to Figure
+    1.1.
+
+
+    # For Project 1A, you will need the following files:
+
+
+    +   - Flower.wmf
+
+    +   - Plant.wmf
+
+    +   - Roller Coaster.wmf
+
+    +   - Golfer.wmf
+
+    +   - Artist Picture.wmf
+
+    +   - Lightning.docx
+
+    +   - LSS-Charlotte NY Station.jpg
+
+    +   - LSS-Crew Pulling Lifeboat.bmp
+
+    +   - Volunteers.pptx
+
+    +   - New blank Word document
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_34_0.png)
+
+
+    Figure 1.1
+
+    Project 1A—Windows XP'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# Objective 1\nGet Started with Windows XP\n\nWindows XP is an *operating system*—software\
+    \ that controls the hardware attached to your computer including its memory, disk\
+    \ drive space, attached devices such as printers and scanners, and the central\
+    \ processing unit. Windows XP and earlier versions of Windows are similar; they\
+    \ use a *graphical user interface (GUI)*. A GUI uses graphics or pictures to represent\
+    \ commands and actions and lets you see document formatting on the screen as it\
+    \ will look when printed on paper. **Windows**, when spelled with a capital W,\
+    \ refers to the operating system that runs your computer.\n\nStarting Windows\
+    \ is an automatic procedure; you turn on your computer, and after a few moments\
+    \ the version of Windows installed on your computer displays. Some versions require\
+    \ that you log in, and some do not. If you are using a different version of Windows,\
+    \ some procedures used in this chapter may work differently. Windows XP is available\
+    \ in two versions: a Professional Edition and a Home Edition. For basic tasks,\
+    \ the two versions work the same. The Professional version includes security and\
+    \ other features necessary in large organizations.\n\n**Alert!**\n\n**Does your\
+    \ screen differ?**\nThis chapter uses Windows XP Home Edition. When you see the\
+    \ word Windows, it will often be accompanied by the version, such as Windows 98,\
+    \ Windows NT, Windows 2000, or Windows XP, which is the version introduced in\
+    \ this chapter. These operating systems are similar and use graphics or pictures\
+    \ to represent commands and actions. Different versions may result in screens\
+    \ that differ from those shown in this chapter. Your screen may also differ because\
+    \ of the setting options that have been selected for your computer.\n\n# Activity\
+    \ 1.1 Getting Started with Windows XP\n\nIn Activity 1.1, you will start Windows,\
+    \ use the mouse, and use the Start button to open the Windows Calculator program.\n\
+    \n+   1. Turn on your computer and wait for the **Windows** program to display,\
+    \ or follow the log-on instructions required for the computer you are using. For\
+    \ example, you may have to click a name on a Welcome screen, or enter a user ID\
+    \ or password. If this is your home computer and you are the only user, it is\
+    \ likely that you need do nothing except wait for a few moments.\n+   \n+    \
+    \  The Windows *desktop*, which is the working area of the Windows XP screen,\
+    \ displays. The working area is called a desktop because on it you can place electronic\
+    \ versions of things you have on your regular desk. The screen look will vary,\
+    \ depending on which version of Windows you are using and what you have on your\
+    \ own desktop.\n+   2. Compare your Windows desktop with Figure 1.2 and then take\
+    \ a moment to study the Windows elements identified in the table in Figure 1.3."
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'Figure 1.2
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_36_0.png)
+
+
+    Icons
+
+
+    Desktop
+
+
+    My Computer icon
+
+
+    Recycle Bin
+
+
+    Mouse pointer
+
+
+    Notification area
+
+
+    Quick Launch toolbar
+
+
+    Start button
+
+
+    Taskbar
+
+
+    # Windows Screen Elements
+
+
+    | Element | Description |
+
+    |---|---|
+
+    | Desktop | The working area of the Windows XP screen consisting of program icons,
+    a taskbar, and a Start button. |
+
+    | Icon | A graphic representation of an object that you can select and open, such
+    as a drive, a disk, a folder, a document, or a program. |
+
+    | Mouse pointer | The arrow, I-beam, or other symbol that moves when you move
+    the mouse or other pointing device, and that indicates a location or position
+    on your screen—also called the pointer. |
+
+    | My Computer icon | An icon that represents the computer on which you are working,
+    and that provides access to the drives, folders, and files on your computer. |
+
+    | Quick Launch toolbar | An area to the right of the Start button that contains
+    shortcut icons for commonly used programs. |
+
+
+    (Continued)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '(Continued)
+
+
+    | Element | Description |
+
+    |---|---|
+
+    | Recycle Bin | A temporary storage area for files that you have deleted. Files
+    can be either recovered or permanently removed from the Recycle Bin. |
+
+    | Taskbar | Displays the Start button and the name of any open documents. The
+    taskbar may also display shortcut buttons for other programs. |
+
+    | Notification area | The area on the right side of the taskbar, formerly called
+    the *system tray* or *status area*, where the clock and system notifications display.
+    These notifications keep you informed about processes that are occurring in the
+    background, such as antivirus software checking, network connections, and other
+    utility programs. Some notifications display only temporarily. |
+
+    | Start button | The button on the left side of the taskbar that is used to start
+    programs, change system settings, find Windows help, or shut down the computer.
+    |
+
+
+    Figure 1.3
+
+
+    3 Move the mouse across a flat surface to move the pointer on your screen. On
+    the desktop, position the tip of the pointer in the center of the **My Computer**
+    icon—referred to as **pointing**. **Double-click**—press the left mouse button
+    two times in rapid succession—using caution not to move the mouse. If the My Computer
+    icon is not visible, click the **Start** button , and then from the displayed
+    **Start** menu, click **My Computer**. Compare your screen with Figure 1.4 and
+    then take a moment to study the My Computer window elements in Figure 1.5.
+
+
+    The My Computer window displays. A **window**—spelled with a lowercase *w*—is
+    a rectangular box that displays information or a program. When a window is open,
+    the name of the window is displayed both in the title bar and in a button on the
+    taskbar at the bottom of the desktop.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Figure 1.4
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_38_0.png)
+
+
+    # Parts of a Window
+
+
+    | Screen Element | Description |
+
+    |---|---|
+
+    | Address bar | A toolbar that displays the organizational path to the active
+    file, folder, or window. |
+
+    | Close button | A shortcut button in a title bar that closes a window or a program.
+    |
+
+    | Left pane | In the My Computer window, a pane that displays information and
+    commonly used tools. |
+
+    | Menu | A list of commands within a category. |
+
+    | Menu bar | The bar beneath the title bar that lists the names of menu categories,
+    for example, *File*, *Edit*, *View*, and so on. |
+
+    | ScreenTip | A small box, activated by pointing to a button or other screen object,
+    that displays the name of or further information about the screen element. |
+
+    | Status bar | A horizontal bar at the bottom of the document window that provides
+    information about the current state of what you are viewing in the window, for
+    example, the page number of a document. |
+
+
+    (Continued)'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '**Continued**
+
+
+    | Screen Element | Description |
+
+    |---|---|
+
+    | Title bar | Displays the program icon, the name of the document, and the name
+    of the program. The Minimize, Maximize/Restore Down, and Close buttons are grouped
+    on the right side of the title bar. |
+
+    | Toolbar | A row of buttons that activate commands, such as Undo or Bold, with
+    a single click of the left mouse button. |
+
+
+    # Figure 1.5
+
+
+    ❹ In the upper right corner of the **My Computer** window title bar, point to,
+    but do not click, the **Close** button [Close button icon] and notice the *ScreenTip*
+    Close.
+
+
+    A *ScreenTip* is a small note, usually in a yellow box, that provides the name
+    of a button, or information about a screen element.
+
+
+    ❺ **Click**—press the left mouse button one time—the **Close** button [Close button
+    icon] to close the **My Computer** window. Then, point to the **My Computer**
+    icon on the desktop and click the right mouse button—this action is known as a
+    *right-click*. If the **My Computer** icon does not display on your desktop, click
+    the **Start** button [Start button icon], and then right-click **My Computer**.
+    Compare your screen with Figure 1.6.
+
+
+    A shortcut menu displays. **Shortcut menus** list commands that are *context-sensitive*—commands
+    commonly used when working with the selected object. On this shortcut menu, the
+    Open command is displayed in bold because it is the default action that occurs
+    when you double-click this icon.
+
+
+    # Figure 1.6
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_39_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '6 In the displayed shortcut menu, point to Open to highlight—select—the command,
+    and then click. In the displayed My Computer window, point to and then click the
+    disk drive labeled Local Disk (C:), and then in the left pane, notice the lower
+    panel. Compare your screen with Figure 1.7.
+
+
+    The specifications of the Local disk—the large disk drive inside your computer
+    system also referred to as the hard drive—are displayed in the Details panel of
+    the left pane. A drive is an area of storage that is formatted with the Windows
+    file system and that has a drive letter such as C, D, E, and so on. If the Details
+    panel does not display any information, click the expand/hide arrow next to Details
+    to expand this panel of the task pane.
+
+
+    # Figure 1.7
+
+
+    Window title
+
+
+    Drive C: selected
+
+
+    Close button
+
+
+    Click arrows to expand or hide the panel details
+
+
+    Details of the local disk
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_40_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '7 In the My Computer window title bar, click the Close button X. In the lower
+    left corner of the screen, point to, and then click the Start button start. Compare
+    your screen with Figure 1.8.
+
+
+    Commands in the displayed Start menu that have arrows on the right indicate that
+    a submenu is available for a command. A submenu is a second-level menu. You can
+    customize the Start menu to include shortcuts to programs and files you use often.
+
+
+    # Figure 1.8
+
+
+    Current user
+
+    (yours will differ)
+
+
+    Arrows indicate submenus are available
+
+
+    Customized shortcuts
+
+    (yours will vary)
+
+
+    Recently used programs
+
+    (yours will vary)
+
+
+    Start menu (your list will vary)
+
+
+    Start button
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_41_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '+   8. On the **Start** menu, point to, but do not click, the **All Programs**
+    command.
+
+
+    The All Programs submenu displays. Your menu will differ from the one shown in
+    Figure 1.9 because your computer will have different programs installed. Folders
+    in the menu contain more programs, or more folders, or some of each. A small arrow
+    to the right of a folder indicates that the folder contains other folders or zipped—compressed—files.
+
+
+    +   9. On the **All Programs** menu, point to, but do not click, **Accessories**.
+
+
+    # **Figure 1.9**
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_42_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '11 Click the Calculator command to open the Calculator window and close the
+    Start menu. Then, practice using the calculator, which is shown in Figure 1.11.
+    Point to click numbers and keys exactly as you would press keys on a calculator.
+
+
+    Figure 1.11
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_44_0.png)
+
+
+    Close button
+
+
+    Calculator program icon and name
+
+
+    Calculator button on the taskbar
+
+
+    12 On the Calculator title bar, click the Close button.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Objective 2
+
+
+    # Resize, Move, and Scroll Windows
+
+
+    When a window opens on your screen, it generally opens in the same size and shape
+    as it was when last used. If you are using more than one window at a time, you
+    can increase or decrease the size of a window, or move a window so that you can
+    see the information you need.
+
+
+    As you work within a program, the information you create will often grow larger
+    than the screen can display. When the information in a window extends beyond the
+    lower or right edges of the window, scroll bars display at the lower and right
+    side of the window. Using the horizontal scroll bar, you can move left and right
+    to view information that extends beyond the left or right edge of the screen.
+    Using the vertical scroll bar, you can move up and down to view information that
+    extends beyond the top or bottom of the screen.
+
+
+    # Activity 1.2 Resizing, Moving, and Scrolling Windows
+
+
+    In Activity 1.2, you will open, resize, and move the My Computer window. You will
+    also use the scroll bars in the My Computer window to view information that does
+    not fit on the screen.
+
+
+    +   1. On the Windows desktop, double-click the My Computer icon to open the My
+    Computer window. Alternatively, right-click the icon and click Open.
+
+    +   2. Check to see if the My Computer window opened as shown in 1.12, or if it
+    opened and fills the entire screen. If the My Computer window fills the entire
+    screen, on the right side of the title bar, click the Restore Down button.
+
+    +   3. Move the pointer to the lower right corner of the window to display the
+    diagonal resize pointer, and then compare your screen with Figure 1.12.
+
+
+    When the mouse pointer is in this shape, you can use it to change the size and
+    shape of a window.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Figure 1.12
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_46_0.png)
+
+
+    +   4. Hold down the left mouse button, *drag*—move the mouse while holding down
+    the left mouse button, and then release at the appropriate time—diagonally up
+    and to the left until you see a scroll bar at both the bottom and right sides.
+    Adjust as necessary so that the My Computer window is the approximate size of
+    the one shown in Figure 1.13. Adjust as necessary to be sure that scroll bars
+    display.
+
+
+    Scroll bars display on the right side and at the bottom of the window. A scroll
+    bar is added to the window whenever the window contains more than it can display.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Figure 1.13
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_47_0.png)
+
+
+    Vertical scroll bar
+
+
+    The window is smaller
+
+
+    Horizontal scroll bar
+
+
+    5 On the My Computer title bar, point to a blank area. Hold down the left mouse
+    button, drag—hold down the left mouse button, move the mouse, and then release
+    the mouse button—down approximately 2 inches and to the right approximately 2
+    inches. Compare your screen with Figure 1.14.
+
+
+    When you release the mouse button, the window drops into the new location. Use
+    this technique to move an open window on your screen.
+
+
+    # Figure 1.14
+
+
+    Title bar
+
+
+    Window moved to a different location on the screen
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_47_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '+   6. At the bottom of the vertical scroll bar, point to the **down arrow**
+    and click, and notice that information at the bottom of the window scrolls up
+    so that you can see the folders and icons that were not visible before, as shown
+    in Figure 1.15.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_48_0.png)
+
+
+    +   7. Point to the **up arrow** on the same scroll bar, and then click and hold
+    down the left mouse button.
+
+
+    The list scrolls up until the first item is displayed. You can click and hold
+    down the left mouse button on the up or down scroll arrow to scroll rapidly through
+    a long list of information.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '8 Point to the scroll box, as shown in Figure 1.16, and then drag it downward.
+
+
+    The **scroll box** displays within the vertical and horizontal scroll bars and
+    provides a visual indication of your location within the information displayed.
+    It can also be used with the mouse to reposition the information on the screen.
+    The size of the scroll box varies to indicate the relative size of the information.
+    Moving the scroll box gives you more control as you scroll because you can see
+    the information as it moves up or down in the window.
+
+
+    You can move up or down a screen at a time by clicking in the area above or below
+    the vertical scroll box. You can also move left or right a screen at a time by
+    clicking in the area to the left or right of the horizontal scroll box. The size
+    of the scroll box indicates the relative size of the display to the whole document.
+    If the scroll box is small, it means that the display is a small portion of the
+    whole document.
+
+
+    # Figure 1.16
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_49_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '9 Move the pointer to the upper edge of the **My Computer** window to display
+    the vertical resize pointer [↕]. Drag the top edge of the window to approximately
+    1 inch below the top of the screen.
+
+
+    10 Move the pointer to the left edge of the **My Computer** window to display
+    the horizontal resize pointer [↔]. Drag the left side of the window to within
+    approximately 1 inch of the left side of the screen.
+
+
+    You can see that by resizing the corners and sides of a window, and by dragging
+    the window to different positions on the screen by the title bar, you have plenty
+    of freedom to move and size any window to make it easier to use.
+
+
+    # Objective 3
+
+
+    # Maximize, Restore, Minimize, and Close Windows
+
+
+    You can **maximize** a window, which enlarges the window to occupy the entire
+    screen, and you can **restore** a window, which reduces the window to the size
+    it was before being maximized. You can also **minimize** a window, which reduces
+    the window to a button on the taskbar, removing it from the screen entirely without
+    actually closing it. When you need to view the window again, you can click the
+    taskbar button to bring it back into view.
+
+
+    # Activity 1.3 Maximizing, Restoring, Minimizing, and Closing a Window
+
+
+    In Activity 1.3, you will maximize, restore, minimize, and close the My Computer
+    window.
+
+
+    1 In the upper right corner of the **My Computer** window, on the **My Computer**
+    title bar, point to the **Maximize** button [□], and then compare your screen
+    with Figure 1.17.
+
+
+    The Maximize button is the middle button in the group of three. When you point
+    to it, a ScreenTip displays. Recall that a ScreenTip describes a button or screen
+    element.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Figure 1.18
+
+
+    Minimize button
+
+
+    Restore Down button
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_52_0.png)
+
+
+    3 On the My Computer title bar, click the Restore Down button to return the window
+    to the size it was before it was maximized.
+
+
+    4 On the My Computer title bar, click the Minimize button , and then compare your
+    screen with Figure 1.19.
+
+
+    The My Computer program is still running but the window is minimized. It is represented
+    by a button on the taskbar at the bottom of the screen. The window is not closed,
+    only temporarily hidden from view.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "# Figure 1.19\n\n![](img/9fe65c86ec4bc221ab72a7112a60115a_53_0.png)\n\n+  \
+    \ 5. On the taskbar, click the **My Computer** button.\n+   \n+      The window\
+    \ redisplays in the same size and location it occupied when you clicked the Minimize\
+    \ button.\n\n+   6. On the taskbar, click the **Start** button, point to **All\
+    \ Programs**, point to **Accessories**, and then click **Calculator**. Point to\
+    \ the **Calculator** window title bar and drag the Calculator window near the\
+    \ left side of the screen. Notice that both open programs display on the taskbar.\n\
+    \nMy Computer is a program that helps you manage and organize the space on drives\
+    \ attached to your computer. Calculator is a program that performs basic arithmetic.\
+    \ Both programs occupy their own window, with the Calculator program in front\
+    \ of the My Computer window. Calculator becomes the **active window**. When two\
+    \ or more windows are open, the active window is the window in which the insertion\
+    \ point movements, commands, or text entry occur.\n\n+   7. Click anywhere on\
+    \ the **My Computer** window, and notice that the **My Computer** window moves\
+    \ to the front, as shown in Figure 1.20."
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Figure 1.21
+
+
+    Paint button in the taskbar
+
+
+    Calculator button in the taskbar
+
+
+    My Computer button in the taskbar
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_55_0.png)
+
+
+    On the **Paint** title bar, click the **Close** button [X]. On the **Calculator**
+    title bar, click the **Close** button [X]. On the **My Computer** window title
+    bar, click the **Close** button [X].
+
+
+    # More Knowledge
+
+
+    # Keeping More Than One Program Window Open at a Time
+
+
+    The ability to keep more than one window open at a time will become more useful
+    as you become more familiar with Microsoft Office. For example, if you want to
+    take information from two word processing documents to create a third document,
+    you can open all three documents and use the taskbar to move among them, copying
+    and pasting text from one document to another. Or, you could copy a chart from
+    Excel and paste it into Word or take a table of data and paste it into PowerPoint.
+    You can even have the same document open in two windows.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Objective 4
+
+    Create a New Folder
+
+
+    Information you create in a computer program is stored in the computer''s memory,
+    which is a temporary storage location. This data will be lost if the computer
+    is turned off. To keep the information you create, you must save it as a file
+    on one of the drives available to you. For example, a five-page term paper that
+    you create in a word processing program such as Microsoft Word, when saved, is
+    a *file*. Files can be stored directly on a drive, but more commonly are stored
+    in a folder on the drive. A *folder* is a container for programs and files and
+    is represented on the screen by a picture of a common paper file folder.
+
+
+    Use folders to organize the location of your programs and files so that you can
+    easily locate them for later use. Folders and files must be created and stored
+    on one of the drives attached to your computer. Your available drives fall into
+    three categories: 1) the nonremovable hard drive, also called the local disk,
+    inside the computer; 2) removable drives that you insert into the computer such
+    as a 3 ½ inch floppy disk, a ZIP disk, a flash drive, or a writable CD; or 3)
+    a shared network drive connected to your computer through a computer network,
+    such as the network at your college.
+
+
+    # Activity 1.4 Creating a New Folder
+
+
+    In Activity 1.4, you will create a folder on one of the three types of drives
+    available to you—the local disk (hard drive), a removable drive (USB flash drive,
+    ZIP disk, 3 ½ inch floppy disk, or some other type of removable drive), or a network
+    drive. If you are using a computer in a college lab, you may have space assigned
+    to you on a shared network drive. You can create these folders on any drive that
+    is available to you. The following activity assumes that you are saving your file
+    to a USB flash drive.
+
+
+    **1** Insert your USB flash drive or other removable drive. If an action dialog
+    box displays asking what you want Windows to do, click **Cancel**. On the taskbar,
+    click the **Start** button, and then click **My Computer** to open the **My Computer**
+    window. In the **My Computer** title bar, click the **Maximize** button if the
+    window is not already maximized.
+
+
+    A *dialog box* is a window that displays and that asks you to make a decision
+    about an individual object or topic.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '+   2. On the Standard Buttons toolbar, click the **Folders** button, and then
+    compare your screen to Figure 1.22. If you do not see a list of drives, in the
+    left pane, click **My Computer**.
+
+
+    The left pane changes to the Folders task pane. A *task pane* is an area within
+    an Office program that provides commonly used commands. Its location and small
+    size enable you to use these commands while still working on your files. The Folders
+    task pane displays the drives and folders on your computer. This task pane is
+    useful when navigating among the drives and folders on your computer. A flash
+    drive, labeled F: (your drive letter may be different) is visible in both the
+    Folders task pane on the left and in the pane on the right. You can display the
+    contents of a flash drive, which is used in this instruction, using either icon.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_57_0.png)
+
+
+    +   3. On the Standard Buttons toolbar, click the **Views** button, and then,
+    if necessary, click **Tiles** to select this view option. Notice that icons and
+    a brief description display in the right pane.
+
+
+    +   4. On the Standard Buttons toolbar, click the **Views** button, and then click
+    **Details**.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Figure 1.23
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_58_0.png)
+
+
+    The drives and folders display in a list format, with more information about the
+    hard drive(s), as shown in Figure 1.23. The columns displayed on your computer
+    may be different and may also be numbered differently.
+
+
+    5 In the Folders task pane, click the USB flash drive (or other removable media
+    that you have inserted). For purposes of this instruction, the examples will indicate
+    a USB flash drive, called LEXAR MEDIA (F:).
+
+
+    The contents of the drive are displayed in the right pane—in Figure 1.23, the
+    drive is empty; your drive may contain files and folders. Your drive letter may
+    also differ.
+
+
+    6 In the right pane, right-click in a blank area. In the displayed short-cut menu,
+    point to the New command, and then compare your screen with Figure 1.24. Alternatively,
+    from the File menu, click New.
+
+
+    A submenu displays, showing the various items that can be created using the New
+    command.'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Figure 1.24
+
+
+    Folder command
+
+
+    Shortcut menu (items on your menu will likely differ)
+
+
+    New command
+
+
+    Submenu
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_59_0.png)
+
+
+    7 Click the Folder command, and then compare your screen with Figure 1.25.
+
+
+    A new folder—named New Folder—is created with the name of the folder displayed
+    in the edit mode. Edit mode enables you to change the name of a file or folder,
+    and works the same in all Windows programs.
+
+
+    Box around folder name indicates it is ready to be edited
+
+
+    # Figure 1.25
+
+
+    New folder
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_59_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '8 With **New Folder** selected in blue, substituting your name where indicated,
+    type **Word Documents of Firstname Lastname** and press Enter. Then, click anywhere
+    in the blank area of the right pane to deselect the new folder and then compare
+    your screen with Figure 1.26.
+
+
+    # Figure 1.26
+
+
+    Renamed folder
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_60_0.png)
+
+
+    # Another Way
+
+
+    # To Rename a Folder
+
+
+    If you accidentally press Enter before you have a chance to name the folder, you
+    can still rename it. Right-click the folder, click Rename from the shortcut menu,
+    type a new name, and then press Enter. Alternatively, you can click the folder
+    once, pause, and then click the folder again.
+
+
+    9 From the **File** menu, point to **New**, and then click **Folder**. Substituting
+    your name where indicated, type **Pictures of Firstname Lastname** and press Enter.
+    Compare your screen to Figure 1.27.
+
+
+    Two new folders have been created in your storage location. The folders are currently
+    in the Details view. Notice the order in which the folders display.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Figure 1.27
+
+
+    New folders
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_61_0.png)
+
+
+    10. In the right pane, click the **Name** column heading several times to sort
+    the folders and file names from *a* to *z* and from *z* to *a*. Notice that the
+    arrow in the Name column heading points up when the folders are displayed in ascending
+    (*a* to *z*) order, and points down when the folders are displayed in descending
+    (*z* to *a*) order. Stop when the folders are sorted in descending alphabetical
+    order—from *z* to *a*—as shown in Figure 1.28.
+
+
+    Name column heading with arrow indicating sort order
+
+
+    # Figure 1.28
+
+
+    Files in descending alphabetical order
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_61_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '**11** In the right pane, move the pointer to the line at the right of the
+    **Name column** heading to display the **resize pointer**, as shown in Figure
+    1.29.
+
+
+    Figure 1.29
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_62_0.png)
+
+
+    **12** Drag the resize pointer to the left about **1 inch**.
+
+
+    The column width is resized. You can resize all the columns in the right pane
+    using the resize pointer.
+
+
+    # More Knowledge
+
+
+    # Computer Storage Devices
+
+
+    The hard drive (local disk) is usually identified on your computer by the notation
+    C:\\ (and sometimes D:\\, E:\\, and so on for additional drives). A *floppy disk
+    drive* provides storage on a floppy disk and is generally identified on your computer
+    by the notation 3½ Floppy (A:). Floppy disk drives are becoming outdated—many
+    computers no longer come with a floppy drive. A Zip drive also uses a removable
+    disk that holds more information than a floppy disk. *Flash drives*—also known
+    as *USB drives* or *thumb drives*—are small storage devices that plug into a computer’s
+    Universal Serial Bus (USB) port, a connection between a computer’s and a peripheral
+    device such as a printer, a mouse, a keyboard, or a USB drive.
+
+
+    You may also have access to files on another type of storage device, a *CD-ROM
+    disc*. CD-ROM stands for Compact Disc-Read Only Memory. If you are using files
+    stored on a CD-ROM, you will need to open a file from the disc, and then save
+    it to a writable drive or copy a file from the CD-ROM disc to another disk and
+    then open it. CD drives can store information on one of two types of CDs—a CD
+    that can be written to but not erased—*CD-R*—or a CD that can be written to and
+    erased many times—*CD-RW*.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# # Objective 5
+
+    ## Copy, Move, Rename, and Delete Files
+
+
+    Recall that Windows manages your data files because your files are stored on the
+    drives attached to your computer. Copying files from one folder to another is
+    a frequent data management task. For example, you may want to make a backup copy
+    of important information, copy a file from a CD to a local disk, or copy information
+    from your local disk drive to a removable drive. Copying files and folders works
+    the same regardless of the type of drive—removable drive, local disk drive, or
+    shared network drive.
+
+
+    Performing other operations on files, such as deleting them or moving them, also
+    works the same regardless of the type of drive. As you accumulate files, you will
+    likely need to delete some to reduce clutter on your hard drive. You may also
+    want to move documents into other folders on another drive to **archive** them—place
+    them somewhere for long-term storage. Finally, you may want to change the names
+    of files or folders to make the names more descriptive. All of these tasks are
+    functions of your Windows operating system.
+
+
+    # ### Activity 1.5  Copying Files and Folders
+
+
+    In Activity 1.5, you will copy files onto your removable drive and into the folders
+    you created in Activity 1.4.
+
+
+    +   1. Be sure the **My Computer** window is displayed, and that the **Folders**
+    button on the toolbar is selected and the **Folders** task pane is displayed on
+    the left. Place the student CD that came with this book in the CD drive. In the
+    **Folders** task pane, click the **expand button (+)** to the left of the **CD
+    drive** to display the contents of the drive. If a go2007_introle dialog box opens,
+    click Cancel.
+
+
+    The folders and files in the CD drive display, and the expand button changes to
+    a **collapse button (-)**. Expanded items are in view and collapsed items are
+    hidden from view. The **expand button** indicates that additional items are available
+    but hidden from view.
+
+
+    > > **Note — If Your Student Files Are in a Different Location**
+
+    > >
+
+    > > Some instructors will place the student files in a folder on a shared network
+    drive, or in a file-sharing folder in a course Web site. If you are instructed
+    to use files from another source, follow the instructions below, substituting
+    your file location for the CD drive.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '2 In the Folders task pane, click the expand button (+) to the left of the
+    go2007_intro1e folder, click the expand button (+) to the left of the 01_student_data_files
+    folder, and then click the chapter_01_windowsxp folder. If necessary, on the Standard
+    Buttons toolbar, click the Views button , and then click Details. Compare your
+    screen with Figure 1.30.
+
+
+    The subfolders in the chapter_01_windowsxp folder display in the Folders task
+    pane on the left, and the subfolders and files in the chapter_01_windowsxp folder
+    display in the right pane. The files you see may display four letters following
+    the file name, such as .docx. These are file extensions, and most files have these
+    extensions—although they may or may not display on your system. Files created
+    by Microsoft Office programs have a standard set of extensions that identify the
+    type of program used to create the file. For example, Microsoft Word documents
+    end in .doc or .docx, Excel worksheets end in .xls or .xlsx, PowerPoint presentations
+    end with .ppt or .pptx, and so on.
+
+
+    # Figure 1.30
+
+
+    Subfolders in the chapter_01_windowsxp folder
+
+
+    Files in the chapter_01_windowsxp folder
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_64_0.png)
+
+
+    CD containing the data files for this book (if you are using the CD)
+
+
+    Indicates that the folder has been expanded
+
+
+    Indicates that there are subfolders in this folder'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '3 On the menu bar, click **Tools**, and then from the displayed menu, click
+    **Folder Options**. Near the top of the **Folder Options** dialog box, click the
+    **View tab**. Under **Advanced settings**, locate the **Hide extensions for known
+    file types** check box. If the check box is selected (there is a check mark in
+    it), click to clear the check box, and then compare your screen with Figure 1.31.
+
+
+    In this chapter, from this point on, it is assumed that the file extensions are
+    turned on and will display.
+
+
+    # Figure 1.31
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_65_0.png)
+
+
+    View tab
+
+
+    Clear this check box to display file extensions
+
+
+    4 Click **OK** to close the **Folder Options** dialog box. In the **Folders**
+    task pane, click the removable drive you used to create the *Pictures of Firstname
+    Lastname* and *Word Documents of Firstname Lastname* folders. Click the **chapter_01_windowsxp**
+    folder, which refreshes the window and re-displays the file names with their file
+    extensions. In the right pane, click the **Type** column heading. Be sure you
+    can see all of the WMF files.
+
+
+    When you click the Type column heading, the files display by file type in *a-to-z*
+    order. The displayed WMF files are images that come with Microsoft Office 2007.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '5 In the **Name** column, click to select the **Flower.wmf** file. In the **Folders**
+    task pane, scroll as necessary until you can see your removable drive. Watch the
+    shape of the pointer and begin to drag the **Flower.wmf** file over to the **Pictures
+    of Firstname Lastname** folder that you created on your removable drive.
+
+
+    The Pictures folder on your removable drive is selected, and the file name is
+    attached to the pointer, as shown in Figure 1.32. When you release the mouse button,
+    the file will be copied. Files are copied when dragged to a different drive, and
+    moved when dragged to a different location in the same drive.
+
+
+    6 Release the mouse button to copy the file to the **Pictures of Firstname Lastname**
+    folder.
+
+
+    7 In the **Name** column, click to select the **Plant.wmf** file. From the **Edit**
+    menu, click **Copy**.
+
+
+    The file is copied to a temporary storage area called the **Clipboard**. The Clipboard
+    stores the most recent item that was copied.
+
+
+    # Figure 1.32
+
+
+    Shows file that is being copied
+
+
+    File being copied
+
+
+    Selected folder
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_66_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '8 In the Folders task pane, click to select the Pictures of Firstname Lastname
+    folder. From the Edit menu, click Paste. Compare your screen to Figure 1.33.
+
+
+    The file is copied to the selected folder, and the folder contains two files—the
+    file you dragged to the folder and the file you pasted into the folder. You can
+    see that there are various ways in which you can copy a file from one location
+    to another.
+
+
+    Figure 1.33
+
+
+    Two files copied to the folder
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_67_0.png)
+
+
+    Selected folder
+
+
+    9 In the Folders task pane, under the CD containing your student files, click
+    to select the chapter_01_windowsxp folder. In the Name column, scroll as necessary,
+    and then click to select the Roller Coaster.wmf file. Then, hold down Ctrl and
+    click the Golfer.wmf file and the Artist Picture.wmf file.
+
+
+    Use this technique to select a group of files that are not adjacent to (next to)
+    each other. This technique works in all Windows programs and file lists.
+
+
+    10 From the File menu, point to Send To, and then click the name of your removable
+    disk drive.
+
+
+    The files are copied to your removable drive. This copy option enables you to
+    send a file or files to the drive of your choice, but does not permit you to specify
+    a folder on that drive.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '11 In the right pane, click the Name column heading, and then scroll to the
+    top of the list of folders and files. In the Folders task pane, scroll down if
+    necessary to see your removable drive. Drag the XML Files folder over the name
+    of your removable drive until it is selected, and then release the mouse button.
+    Compare your screen with Figure 1.34.
+
+
+    The folder and all of the files in the folder are copied to your removable drive.
+
+
+    # Folder copied from the CD
+
+
+    # Figure 1.34
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_68_0.png)
+
+
+    Folder copied to the USB drive'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# Activity 1.6 Moving, Renaming, and Deleting Files
+
+
+    In Activity 1.6, you will move files from one location on your removable drive
+    to another location on the same drive. You will also rename and delete files.
+
+
+    +   1. In the **Folders** task pane, scroll down if necessary and then click the
+    removable drive you are using to store your files. In the right pane, click the
+    **Name** column as necessary to display the files in alphabetical order. Click
+    the **Views** button arrow and then click **Thumbnails**. Compare your screen
+    with Figure 1.35.
+
+
+    The two folders you created and three of the files you copied—along with the XML
+    Files folder—display in the right pane. Small *thumbnail* images of the files—miniature
+    images of the pictures in the files—display in the right pane. These thumbnails
+    make it easy to select the correct file when you have a folder that contains a
+    large number of images. Folders that contain pictures display thumbnails of up
+    to four of the images in a large file folder icon.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_69_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '2 In the right pane, click the Artist Picture.wmf file. Hold down the mouse
+    button, drag the file to the Pictures of Firstname Lastname folder that you created,
+    and then release the mouse button.
+
+
+    When you drag a file from one folder to another in the same drive, the file is
+    moved, rather than copied.
+
+
+    3 Drag the Golfer.wmf file to the Pictures folder, and then drag the Roller Coaster.wmf
+    file to the Pictures folder.
+
+
+    4 In the Folders task pane, click the Pictures of Firstname Lastname folder in
+    your removable drive. On the Standard Buttons toolbar, click the Views button,
+    and then click Thumbnails. Compare your screen with Figure 1.36.
+
+
+    # Figure 1.36
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_70_0.png)
+
+
+    Three files have been moved'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '5. In the right pane, right-click the **Flower.wmf** file. Then, from the displayed
+    shortcut menu, click the **Rename** command. Click to position the insertion point
+    at the beginning of the file name, type **Water** and then press `Spacebar`. Press
+    `Enter` to change the file name to *Water Flower.wmf*. Compare your screen with
+    Figure 1.37.
+
+
+    When the file extensions are displayed, you need to include the extension when
+    you rename the file. There are several restrictions for naming files or folders.
+    A file name can contain up to 255 characters, including spaces, although the file
+    name cannot begin with a space. It also cannot contain the following characters:
+    `\ / : * ? " < > |`
+
+
+    Figure 1.37
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_71_0.png)
+
+
+    6. In the right pane, click to select the **Plant.wmf** file, and then press `Delete`.
+    In the **Confirm File Delete** message box, click **Yes**.
+
+
+    The file is permanently removed because it was stored on a removable drive. Files
+    that are deleted from the hard drive are moved to the **Recycle Bin**, which is
+    a storage area for files that have been deleted.
+
+
+    # Note — If You Cannot Delete a File
+
+
+    Sometimes you will try to delete a file and a message displays indicating that
+    the file cannot be deleted. This usually means that the file is open. You must
+    close a file before you can delete it.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '7 In the **Folders** task pane, click to select your removable disk. In the
+    right pane, select the **XML Files** folder, and then press Delete.
+
+
+    8 In the **Confirm Folder Delete** dialog box, click **Yes** to delete the folder.
+    The folder and all of the files and folders it contains are deleted.
+
+
+    # More Knowledge
+
+
+    # Recovering Deleted Files
+
+
+    If you accidentally delete a file from the hard disk drive that you want to keep,
+    there is a good chance you can recover it. Windows temporarily stores files deleted
+    from your hard drive in a Recycle Bin, which you can find on the desktop or in
+    the My Computer Folders pane. You can open the Recycle Bin in the same way you
+    open a file folder. If the discarded files have not been permanently removed,
+    right-click the file name in the Contents pane, and then click Restore in the
+    shortcut menu.
+
+
+    # Activity 1.7 Capturing an Image of a Screen
+
+
+    Windows includes a screen capture utility that enables you to capture an image
+    of your screen and then print it or save it as a file.
+
+
+    1 On your keyboard, locate and press PrtScr.
+
+
+    The Print Screen key on your keyboard is commonly located near the right side
+    of the top row of keys. This key captures an image of the entire screen and places
+    it in a temporary storage area called the Clipboard. Items in the Clipboard can
+    be placed in a document using the Paste command.
+
+
+    2 Click the **Start** button , point to **All Programs**, point to **Accessories**,
+    and then click **WordPad**. If necessary, maximize the WordPad window.
+
+
+    **WordPad** is a simple word-processing program that comes with Windows XP.
+
+
+    3 In the WordPad window, type **Firstname Lastname** using your own name. Press
+    Enter two times.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '4 From the WordPad menu bar, click **Edit**, and then click **Paste**. Compare
+    your screen with Figure 1.38.
+
+
+    The captured screen is pasted at the insertion point. The image is larger than
+    the WordPad page.
+
+
+    # Figure 1.38
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_73_0.png)
+
+
+    5 If necessary, use the vertical and horizontal scroll bars to display the sizing
+    handle in the lower right corner of the pasted image. In the lower right corner
+    of the image, move the pointer over the sizing handle—the little box in the corner—to
+    display the diagonal resize pointer ⤧.
+
+
+    When an image is selected, *sizing handles* display in all four corners and in
+    the middle of the side and top borders. Use handles to resize the image in a manner
+    similar to the way you resized a window.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '6 With the diagonal size pointer ⤧, drag up and to the left of **6 inches**
+    on the ruler. Compare your screen with Figure 1.39.
+
+
+    Recall that to drag an object, you need to point, click, and move the mouse to
+    the desired location. Use the ruler as a guide.
+
+
+    # Figure 1.39
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_74_0.png)
+
+
+    7 Release the mouse button, and then from the File menu click **Print Preview**
+    to display the Print Preview window. Compare your screen to Figure 1.40.
+
+
+    8 In the **Print Preview** title bar, click the **Close** button ✕. Alternatively,
+    click the **Close** button on the Print Preview toolbar.
+
+
+    9 Check your Course Syllabus or Chapter Assignment Sheet, or ask your instructor,
+    to determine if you are to submit a printed or electronic copy of this file. To
+    print, from the WordPad toolbar, click the **Print** button 🖨. To submit electronically
+    using your college''s course management system, consult your instructor''s directions
+    for saving and submitting the file.
+
+
+    10 From the **File** menu, click **Exit**. When prompted to save your work, click
+    **No**.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'Figure 1.40
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_75_0.png)
+
+
+    Close button
+
+
+    # Alert!
+
+
+    # What If the Image Does Not Display in Print Preview?
+
+
+    On some computers, if the image is larger than the page, the image will not display.
+    If you cannot see your pasted image, close the Print Preview window and use the
+    sizing handle to reduce the size of the image again. Repeat this procedure until
+    you can see the image in Print Preview.
+
+
+    # Objective 6
+
+
+    # Find Files and Folders
+
+
+    As you use a computer, you will likely accumulate a large number of files and
+    folders. It''s easy to forget where you stored a file, or what you named it. Windows
+    XP provides a search function that enables you to find files and folders.
+
+
+    # Activity 1.8 Finding Files and Folders
+
+
+    In Activity 1.8, you will use several different methods to search for files and
+    folders.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '1 In the **Folders** task pane, click **My Computer**. On the Standard Buttons
+    toolbar, click the **Search** button, and then compare your screen with Figure
+    1.41.
+
+
+    The Search Companion task pane displays on the left. Here you can search for specific
+    file types or you can search through all the files and folders.
+
+
+    # Figure 1.41
+
+
+    Search button
+
+
+    Search Companion task pane
+
+
+    Search options
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_76_0.png)
+
+
+    # Alert!
+
+
+    # What If Windows Desktop Search starts instead of the Search Companion?
+
+
+    At the bottom of the Windows Desktop Search pane, click the link to the Search
+    Companion. Maximize the Search Results window and complete the rest of Activity
+    1.8 as directed. When you are done with Activity 1.8, close both the Search Results
+    window and the Windows Desktop Search pane.
+
+
+    2 In the **Search Companion** task pane, click the **All files and folders** option.
+
+
+    A search dialog box displays. Here you can specify the file name (or part of a
+    file name) or text contained in the file. You can also narrow the search by specifying
+    the search location.
+
+
+    3 In the **All or part of the file name** box, type **coaster**, If necessary,
+    click the **Look in down arrow**, and then click **My Computer**. Compare your
+    screen with Figure 1.42.
+
+
+    The actual file name is capitalized, but this search option is not case sensitive.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Figure 1.42
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_77_0.png)
+
+
+    Part of file name to be found
+
+
+    The entire computer will be searched
+
+
+    Search button
+
+
+    4 At the bottom of the task pane, click the Search button, and then compare your
+    screen with Figure 1.43.
+
+
+    The search begins. Notice that a couple of files display rather quickly, but the
+    search program goes on and on. (You may see only one file, depending on the way
+    your computer has been set up.) This is because you did not specify a location,
+    so the program is checking all storage locations on the computer. You can click
+    the Stop button at any time if the procedure seems to be taking too long.
+
+
+    # Figure 1.43
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_77_1.png)
+
+
+    Found files
+
+
+    Shows that the program is still searching
+
+
+    Stop button'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '5 Click **Stop** to stop the current search. Click **Start a new search**,
+    and then click **Pictures, music, or video**. Click to select the **Pictures and
+    Photos** check box. In the **All or part of the file name** box, type surf
+
+
+    This is part of several file names in the Life Saving Service Drawings folder
+    on your student CD.
+
+
+    6 In the **Search Companion** task pane, click the **Use advanced search options**
+    check box to add more search options. At the right of the **Look in** box, click
+    the arrow. From the location list, click your student **CD** and then compare
+    your screen with Figure 1.44. If you are not using the CD, select the location
+    where your student files are stored.
+
+
+    # Figure 1.44
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_78_0.png)
+
+
+    The program will search for pictures and photos only
+
+
+    Partial file name
+
+
+    Search location'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '7 At the bottom of the task pane, click the Search button. Compare your screen
+    with Figure 1.45.
+
+
+    Three files are found. This time, the search only took a few seconds.
+
+
+    # Figure 1.45
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_79_0.png)
+
+
+    Results of the search
+
+
+    Files and folders containing the word surf
+
+
+    8 Scroll down, if necessary, and click the Start a new search option. Click the
+    Documents (word processing, spreadsheet, etc.) option.
+
+
+    This dialog box gives you greater control over the search. You can search for
+    documents that have specified file extensions, or you can search for documents
+    last modified during a certain time period. You can even combine the two.
+
+
+    9 Click in the All or part of the document name box and type *.docx Click the
+    Use advanced search options check box to add more search options. At the right
+    of the Look in box, click the arrow. From the location list, click your student
+    CD or other student file location. Click the Search button and view the results.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'This restricts the search to Word 2007 documents, which have the .docx extension.
+    The asterisk is called a wildcard and means that you will be searching for anything
+    that has the .docx extension. This is very helpful when you cannot remember the
+    file name or where you put it.
+
+
+    10 In the Search Companion task pane, click the Look in arrow again, and then
+    click Local Disk (C:)—or Local Hard Drives. Click the Search button. Compare your
+    screen with Figure 1.46.
+
+
+    The right pane displays the files that have the .docx extension. The list may
+    be quite long.
+
+
+    11 On the Search Companion task pane, click the Stop button.
+
+
+    Figure 1.46
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_80_0.png)
+
+
+    Word documents on the hard drive (Your results will vary)
+
+
+    # Objective 7
+
+
+    # Compress Files
+
+
+    Some files may be too large to send quickly as an e-mail attachment. For example,
+    files containing graphics tend to be quite large. Windows XP includes a feature
+    with which you can compress—reduce the file size of—one or more files into a single
+    file that uses a .zip file extension. These files can then be unzipped for editing
+    on any other computer running Windows XP.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Activity 1.9 Compressing Files
+
+
+    In Activity 1.9, you will compress a single file and then compress several files
+    at the same time.
+
+
+    **1** On the Standard Buttons toolbar, click the **Folders** button. In the Folders
+    task pane, click **My Computer**.
+
+
+    # Note — To Work with Third-Party Zip Programs
+
+
+    If you are using a third-party zip program, such as WinZip™ or PKZIP™, you will
+    need to use that program to complete this task—the procedure listed below will
+    not work.
+
+
+    **2** In the **Folders** task pane, click the drive containing your student CD,
+    or the location in which your student files are stored. Navigate to the **01_student_data_files**
+    folder, and then click **chapter_01_windowsxp**. If necessary, click the **Views**
+    button, and then click **Details**.
+
+
+    **3** Click the **Lightning.docx** file. Hold down Ctrl and then click to select
+    the **LSS-Charlotte NY Station.jpg** file, the **LSS-Crew Pulling Lifeboat.bmp**
+    file, and the **Volunteers.pptx** file. Drag these four files to copy them to
+    your removable drive.
+
+
+    **4** In the **Folders** task pane, click the icon for your removable disk. In
+    the right pane, right-click the **Volunteers.pptx** file. Notice the file size.
+    Point to **Send To**, and then click **Compressed (zipped) Folder**. If a **Compressed
+    (zipped) Folder** dialog box displays, click **Yes** to designate the Windows
+    XP compression feature to zip your file. Compare your screen with Figure 1.47.
+
+
+    A compressed version of the Volunteers.pptx file displays as Volunteers.zip. Notice
+    that the compressed folder is reduced in size compared to the original file.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_81_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '5 Repeat the procedure you used in Step 4 to compress the other three files
+    you just copied to your removable drive—Lightning.docx, LSS-Charlotte NY Station.jpg,
+    and LSS-Crew Pulling Lifeboat.bmp. Compare your screen with Figure 1.48.
+
+
+    Notice that the amount of compression depends on the type of file being compressed.
+    Word files can often be reduced by 10 to 20 percent, while files that use compression
+    features when the files are saved—such as .jpg or .pdf files—do not benefit much
+    from further compression.
+
+
+    # Figure 1.48
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_82_0.png)
+
+
+    Compressed folders
+
+
+    6 Click the Lightning.docx file. Hold down Ctrl and then click to select the LSS-Charlotte
+    NY Station.jpg file, the LSS-Crew Pulling Lifeboat.bmp file, and the Volunteers.pptx
+    file. Press Delete to remove the original files, and then click Yes when prompted.
+
+
+    7 In the Folders task pane, click the Pictures of Firstname Lastname folder. From
+    the Edit menu, click Select All to select all the files in the folder. Alternatively,
+    hold down Ctrl and press A.
+
+
+    8 Right-click the Artist Picture.wmf file, click Send To, and then click Compressed
+    (zipped) Folder.
+
+
+    All four files are compressed into one folder, called Artist Picture.zip. The
+    compressed folder takes the name of whichever file you right-click when you compress
+    more than one file at a time.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '9 Double-click the Artist Picture.zip folder to display the contents of the
+    compressed folder. Compare your screen with Figure 1.49.
+
+
+    # Figure 1.49
+
+
+    Compressed folder name in Window title bar
+
+
+    Files in the compressed folder
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_83_0.png)
+
+
+    10 In the Artist Picture.zip window title bar, click the Close button X. In the
+    Standard Buttons toolbar, click the Up button to move up a level in the Folders
+    task pane.
+
+
+    The Up button is a handy way to move up in the Windows folder hierarchy—each time
+    you click the button, you move up one folder level.
+
+
+    11 Double-click the Lightning.zip compressed folder. In the left pane, click Extract
+    all files to start the Extraction Wizard. Compare your screen with Figure 1.50.
+
+
+    # Figure 1.50
+
+
+    Extraction Wizard
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_83_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '12 Click **Next** to display the second **Extraction Wizard** dialog box, which
+    enables you to change the location of the file.
+
+
+    If you do not change the file location, the file will be extracted to the folder
+    that contains the zipped file.
+
+
+    13 In the **Extraction Wizard** dialog box, click the **Next** button to accept
+    the default location.
+
+
+    14 In the **Extraction Wizard** dialog box, clear the **Show extracted files**
+    check box, and then click **Finish**. Close the Lightning.zip window.
+
+
+    The Show extracted files option is useful when you are sending files to a different
+    location and want to move to that location when the Extraction Wizard closes.
+
+
+    The file is extracted and placed in a folder along with the compressed file, as
+    shown in Figure 1.51.
+
+
+    # Figure 1.51
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_84_0.png)
+
+
+    Original compressed folder
+
+
+    New folder
+
+
+    15 On the menu bar, click **Tools**, and then from the displayed menu, click **Folder
+    Options**. Near the top of the **Folder Options** dialog box, click the **View**
+    tab. Under **Advanced settings**, locate the **Hide extensions for known file
+    types** check box. Click to select the check box. Click **OK** to turn off the
+    file extensions.
+
+
+    16 Close the **Removable Media** window.
+
+
+    # More Knowledge
+
+
+    # File Associations and Compression Programs
+
+
+    You may see a dialog box when you click the Compressed (zipped) Folder command.
+    Because every file type needs to be associated with a program, your computer may
+    already associate files that have the .zip extension with a third-party program
+    such as WinZip. The dialog box will ask whether you want to designate Compressed
+    (zipped) Folders as the program for handling ZIP files (compressed files that
+    have a .zip extension). If you are working in a lab, ask the lab manager how to
+    answer this question. If you are working at home, click Yes, unless you want to
+    use another program to compress your files.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# Windows XP
+
+    Chapter one
+
+
+    # Summary
+
+
+    You will find that a working knowledge of Windows functions is useful as you create
+    files in various programs like those in Microsoft Office. In this chapter, you
+    practiced setting up, organizing, and navigating the Windows desktop. You adjusted
+    window size and moved windows. You created folders to store your documents and
+    then copied, moved, renamed, and deleted files. Finally, you compressed files
+    to save space.
+
+
+    # Key Terms
+
+
+    | Term | Page | Term | Page | Term | Page |
+
+    |---|---:|---|---:|---|---:|
+
+    | Active window | 22 | Floppy disk drive | 31 | Restore | 19 |
+
+    | Address bar | 7 | Folder | 25 | Right-click | 8 |
+
+    | Archive | 32 | Graphical user interface (GUI) | 4 | ScreenTip | 8 |
+
+    | CD-R | 31 | Hard drive | 9 | Scroll box | 18 |
+
+    | CD-ROM | 31 | Horizontal scroll bar | 14 | Shortcut menu | 8 |
+
+    | CD-RW | 31 | Icon | 5 | Sizing handle | 42 |
+
+    | Click | 8 | Left pane | 7 | Start button | 6 |
+
+    | Clipboard | 35 | Local disk | 9 | Status area | 6 |
+
+    | Close button | 7 | Maximize | 19 | Submenu | 10 |
+
+    | Collapse button | 32 | Menu | 7 | System tray | 6 |
+
+    | Compress | 49 | Menu bar | 7 | Task pane | 26 |
+
+    | Context-sensitive command | 8 | Minimize | 19 | Taskbar | 6 |
+
+    | Desktop | 4 | Mouse pointer | 5 | Thumb drive | 31 |
+
+    | Dialog box | 25 | My Computer | 5 | Thumbnail | 38 |
+
+    | Double-click | 6 | Notification area | 6 | Title bar | 8 |
+
+    | Drag | 15 | Operating system | 4 | Toolbar | 8 |
+
+    | Drive | 9 | Paint | 23 | USB drive | 31 |
+
+    | Edit mode | 28 | Pointer | 5 | Vertical scroll bar | 14 |
+
+    | Expand button | 32 | Pointing | 6 | Wildcard | 49 |
+
+    | File | 25 | Quick Launch toolbar | 5 | Window | 6 |
+
+    | File extension | 33 | Recycle Bin | 40 | Windows | 4 |
+
+    | Flash drive | 31 |  |  | WordPad | 41 |'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Matching
+
+
+    # Windows XP
+
+    chapter one
+
+
+    Match each term in the second column with its correct definition in the first
+    column. Write the letter of the term on the blank line in front of the correct
+    definition.
+
+
+    +   1. A bar that contains the Start button, buttons representing open programs,
+    and other buttons that will activate programs.
+
+    +   2. The arrow, I-beam, or other symbol that moves when you move the mouse or
+    other pointing device, and that indicates a location or position on your screen.
+
+    +   3. A box that displays information and usually consists of a title bar, menu
+    bar, status bar, and toolbars, and that always has a Minimize button.
+
+    +   4. The area at the top of a window that displays the file name and also contains
+    the Minimize, Maximize/Restore Down, and Close buttons.
+
+    +   5. A list of context-sensitive commands--commands that are commonly used when
+    working on the selected object—usually activated by right-clicking a screen item.
+
+    +   6. An area to the right of the Start button that contains shortcut icons for
+    commonly used programs.
+
+    +   7. The area on the right side of the taskbar where the clock and system notifications
+    display, and where notifications display that keep you informed about processes
+    that are occurring in the background, such as antivirus software checking, network
+    connections, and other utility programs.
+
+    +   8. A horizontal bar at the bottom of the document window that provides information
+    about the current state of what you are viewing in the window, for example the
+    page number of a document.
+
+    +   9. The Windows feature that enables you to view text that extends beyond the
+    edges of the screen.
+
+    +   10. A Windows object used to keep related files stored together in one location.
+
+    +   11. A compact disc that can be used over and over again to read and save files.
+
+    +   12. The three- or four-letter ending to a file—that may or may not display—and
+    that identifies the file type.
+
+    +   13. The term given to an asterisk (*) or other character used to substitute
+    for several characters in a file search.
+
+    +   14. A miniature representation of the contents of a picture file, used in
+    one of the file views in My Computer.
+
+    +   15. To reduce the size of a file.
+
+
+    +   A CD-RW
+
+    +   B Compress
+
+    +   C File extension
+
+    +   D Folder
+
+    +   E Mouse pointer
+
+    +   F Notification area
+
+    +   G Quick Launch toolbar
+
+    +   H Scroll bar
+
+    +   I Shortcut menu
+
+    +   J Status bar
+
+    +   K Taskbar
+
+    +   L Thumbnail
+
+    +   M Title bar
+
+    +   N Wildcard
+
+    +   O Window'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "# Windows XP\n\n*chapter one*\n\n# Fill in the Blank\n\nWrite the correct word\
+    \ in the space provided.\n\n+   1. A(n) **icon** is a graphic representation that\
+    \ enables you to run a program or use a program function.\n+   \n+   2. Windows\
+    \ XP is an example of a(n) **operating system**, which coordinates the activities\
+    \ of a computer.\n+   \n+   3. The **Start** button on the left end of the taskbar\
+    \ is used to run programs, change system settings, or find help.\n+   \n+   4.\
+    \ When more than one document or program is open at the same time, you can switch\
+    \ back and forth between them by clicking the appropriate button in the **taskbar**.\n\
+    +   \n+   5. A(n) **submenu** is a second-level menu that is accessed using a\
+    \ menu command.\n+   \n+   6. When you delete a file, it is stored in a temporary\
+    \ area called the **Recycle Bin**, from which it can often be recovered.\n+  \
+    \ \n+   7. A box that asks you to make a decision about an individual object or\
+    \ topic is called a(n) **dialog** box.\n+   \n+   8. The arrow, I-beam, or other\
+    \ symbol that shows the location or position of the mouse on your screen is called\
+    \ a mouse **pointer**.\n+   \n+   9. When you right-click an object, a(n) **shortcut**\
+    \ menu displays.\n+   \n+   10. The bar that usually displays under the menu bar,\
+    \ and that uses buttons to activate commands, is call a(n) **toolbar**.\n+   \n\
+    +   11. To make a window fill the screen, use the **Maximize** button from the\
+    \ title bar.\n+   \n+   12. You can hide a program or document without closing\
+    \ it by clicking the **Minimize** button.\n+   \n+   13. In My Computer, you can\
+    \ sort file names alphabetically by clicking the **View** column heading."
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Fill in the Blank
+
+
+    Windows XP
+
+    chapter one
+
+
+    14. The main storage device on your computer is the ______ disk drive.
+
+
+    15. A file extension, which consists of the last three or four characters of a
+    file name, indicates which program was used to create the file.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Glossary
+
+
+    **Active window** The window in which the mouse pointer movements, commands, or
+    text entry occur when two or more windows are open.
+
+
+    **Address bar** Displays the path of the current file or folder; also, in Internet
+    Explorer, displays the address of the active Web page.
+
+
+    **Archive** To back up files and store them somewhere other than the main hard
+    drive.
+
+
+    **CD-R** Another name for a CD-ROM disc.
+
+
+    **CD-ROM** The acronym for Compact Disc-Read Only Memory; an optical storage device
+    used to permanently store data and from which you can read and open files.
+
+
+    **CD-RW** A compact disc that can be reused to read and save files.
+
+
+    **Click** To press the left (or primary) mouse button once.
+
+
+    **Clipboard** A temporary storage area in Windows that stores the most recently
+    copied item.
+
+
+    **Close button** The button in a title bar that closes a window or a program.
+
+
+    **Collapse button** A small minus (–) button to the left of a folder that you
+    click to hide the items in that folder.
+
+
+    **Compress** A process to reduce the size of a file.
+
+
+    **Context-sensitive command** A command associated with activities in which you
+    are engaged; often activated by right-clicking a screen item.
+
+
+    **Desktop** The basic screen from which Windows and programs are run, and which
+    consists of program icons, a taskbar, a Start button, and a mouse pointer.
+
+
+    **Dialog box** A box that asks you to make a decision about an individual object
+    or topic. Dialog boxes do not have Minimize buttons.
+
+
+    **Double-click** The action of clicking the left mouse button twice in rapid succession
+    while keeping the mouse still.
+
+
+    **Drag** The action of moving something from one location on the screen to another;
+    the action of dragging includes releasing the mouse button at the desired time
+    or location.
+
+
+    **Drive** An area of storage that is formatted with the Windows file system and
+    that has a drive letter such as C.
+
+
+    **Edit mode** A Windows mode that enables you to change the name of a file or
+    folder, and works the same in all Windows programs.
+
+
+    **Expand button** A small plus (+) button to the left of a folder that you click
+    to display the items in that folder.
+
+
+    **File** Data that you save and store on a drive, such as a Word document or a
+    PowerPoint presentation.
+
+
+    **File extension** The characters to the right of the period in a file name, and
+    that tell the computer the program to use to open the file; extensions can be
+    displayed or hidden.
+
+
+    **Flash drive** A small, portable, digital storage device that connects to a computer''s
+    USB port; also called a thumb drive, jump drive, or USB drive.
+
+
+    **Floppy disk drive (or floppy drive)** The original storage device for a microcomputer,
+    which enables portable, permanent storage on floppy disks.
+
+
+    **Folder** A storage area, represented on the screen by a picture of a paper file
+    folder, used to store files or other folders.
+
+
+    **Graphical user interface (GUI)** A computer interface with which you interact
+    with the computer through the use of graphics and point-and-click technology;
+    GUIs show documents as they will look in their final form.
+
+
+    **Hard drive** A large disk drive inside your computer, also referred to as a
+    Local Disk.
+
+
+    **Horizontal scroll bar** The bar at the bottom of a window that enables you to
+    move left and right to view information that extends beyond the left and right
+    edges of the screen.
+
+
+    **Icon** A graphic representation of an object that you can click to open that
+    object.
+
+
+    **Left pane** In the My Computer window, a pane at the left that displays information
+    and commonly used tools.
+
+
+    **Local Disk** A large disk drive inside your computer, also referred to as a
+    hard disk.
+
+
+    **Maximize** To increase the size of a window to fill the screen.
+
+
+    **Menu** A list of commands within a category.
+
+
+    **Menu bar** The bar beneath the title bar that lists the names of menu categories.
+
+
+    **Minimize** Removing the window from the screen without closing it; minimized
+    windows can be reopened by clicking the associated button in the taskbar.
+
+
+    **Mouse pointer** The arrow, I-beam, or other symbol that shows the location or
+    position of the mouse on your screen; also called the pointer.
+
+
+    **My Computer** A window that gives you access to the files and folders on your
+    computer.
+
+
+    **Notification area** The area on the right side of the taskbar that keeps you
+    informed about processes that are occurring in the background, such as antivirus
+    software, network connections, and other utility programs; also displays the time.
+
+
+    **Operating system** A set of instructions that coordinates the activities of
+    your computer; Microsoft Windows XP is an operating system.'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '**Paint** A Windows program in which graphics are created or edited.
+
+
+    **Pointer** See mouse pointer.
+
+
+    **Pointing** Positioning the tip of the pointer in the center of an icon or other
+    screen object.
+
+
+    **Quick Launch toolbar** An area to the right of the Start button that contains
+    shortcut icons for commonly used programs.
+
+
+    **Recycle Bin** A storage area for files that have been deleted; files can be
+    recovered from the Recycle Bin or permanently removed.
+
+
+    **Restore** Using the Restore Down button to return a window to the size it was
+    before it was maximized.
+
+
+    **Right-click** The action of clicking the right mouse button.
+
+
+    **ScreenTip** A small box that displays useful information when you perform various
+    mouse actions such as pointing to screen elements or dragging.
+
+
+    **Scroll box** The box in the vertical and horizontal scroll bars that can be
+    dragged to reposition the document on the screen.
+
+
+    **Shortcut menu** A context-sensitive menu that displays commands and options
+    relevant to the selected object.
+
+
+    **Sizing handle** A small square or circle in the corners and the middle of the
+    sides of a graphic that can be used to increase or decrease the size of the graphic.
+
+
+    **Start button** The button on the left side of the taskbar that is used to start
+    programs, change system settings, find Windows help, or shut down the computer.
+
+
+    **Status area** Another name for the notification area on the right side of the
+    taskbar.
+
+
+    **Submenu** A second-level menu activated by selecting a menu option.
+
+
+    **System tray** Another name for the notification area on the right side of the
+    taskbar.
+
+
+    **Task pane** A pane that opens on the side of a window that is used to display
+    commonly used tools.
+
+
+    **Taskbar** The area of the screen that displays the Start button and the name
+    of any open documents. The taskbar may also display shortcut buttons for other
+    programs.
+
+
+    **Thumb drive** A small storage device that plugs into a computer USB port; also
+    called a USB drive or a flash drive.
+
+
+    **Thumbnail** A miniature representation of the contents of a picture file.
+
+
+    **Title bar** Displays the program icon, the name of the document, and the name
+    of the program. The Minimize, Maximize/Restore Down, and Close buttons are grouped
+    on the right side of the title bar.
+
+
+    **Toolbars** Rows of buttons, usually located under a menu bar, from which you
+    can perform commands using a single click.
+
+
+    **USB drive** A small storage device that plugs into a computer USB port; also
+    called a thumb drive or a flash drive.
+
+
+    **Vertical scroll bar** The bar at the right side of a window that enables you
+    to move up and down to view information that extends beyond the top and bottom
+    of the screen.
+
+
+    **Wildcard** A character, such as an asterisk, that can be used to match any number
+    of characters in a file search.
+
+
+    **Window** A box or screen that displays information or a program. Windows usually
+    consist of title bars, toolbars, menu bars, and status bars. A window will always
+    have a Minimize button and a Close button.
+
+
+    **Windows** When spelled with a capital W, refers to the operating system that
+    runs your computer.
+
+
+    **Wordpad** A simple word processing program that comes with Windows XP.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "# # Index\n\n+   **A**\n+   \n+   **Accessories submenu, 12–13**  \n+   **active\
+    \ window, 22**  \n+   **Address bar, 7**  \n+   **All Programs**  \n+   　Accessories\
+    \  \n+   　　*Calculator, 22–24*  \n+   　　*WordPad, 41–42*  \n+   　command, 11–12\
+    \  \n+   　submenu, 11  \n+   **archive files, 32**\n\n+   **C**\n+   \n+   **Calculator,\
+    \ 12–13**  \n+   **CD-ROM disc, 32**  \n+   **Close button, 7, 8**  \n+   **collapse\
+    \ button (−), 32**  \n+   **computer storage devices, 32**  \n+   **Confirm Folder\
+    \ Delete dialog box, 41**  \n+   **context-sensitive commands, 8**\n\n+   **D**\n\
+    +   \n+   **desktop, Windows, 4–5**  \n+   **double-click, 6**  \n+   **down arrow,\
+    \ 17**  \n+   **drag mouse, 15**  \n+   **drive, 9**\n\n+   **E**\n+   \n+   **edit\
+    \ mode, 28**  \n+   **expand button (+), 32–33**\n\n+   **F**\n+   \n+   **file\
+    \ extensions, 33**  \n+   **File menu**  \n+   　folder, creating new, 29–31  \n\
+    +   　Send To, 36  \n+   **files, 25**  \n+   　compressing, 49–53  \n+   　copying,\
+    \ 32–37  \n+   　deleting, 39–40  \n+   　finding, 44–49  \n+   　moving, 38  \n\
+    +   　recovering deleted, 41  \n+   　renaming, 39  \n+   　thumbnail images, 38\
+    \  \n+   **Flash drive, 32**  \n+   **floppy disk drive, 32**\n\n+   **folder,\
+    \ 25**  \n+   　copying, 32–37  \n+   　creating new, 25–31  \n+   　deleting, 39–40\
+    \  \n+   　finding, 44–49  \n+   　naming, 30–31  \n+   **Folders task pane, 41**\n\
+    \n+   **G**\n+   \n+   **graphical user interface (GUI), 4**\n\n+   **H**\n+ \
+    \  \n+   **hard drive, 9, 32**  \n+   **Hide extensions for known file types check\
+    \ box, 34**  \n+   **horizontal scroll bar, 14**\n\n+   **I**\n+   \n+   **icon,\
+    \ Windows, 5**\n\n+   **L**\n+   \n+   **Left pane, 7**  \n+   **Local Disk, 9–10**\n\
+    \n+   **M**\n+   \n+   **maximizing window, 19–20**  \n+   **menu, 7**  \n+  \
+    \ **menu bar, 7**  \n+   **minimizing window, 21–22**  \n+   **mouse pointer,\
+    \ 5**  \n+   **multiple windows, keeping open, 24**  \n+   **My Computer, 6–7**\
+    \  \n+   　closing, 8  \n+   　dialog box, 25  \n+   　Folders button, 32  \n+  \
+    \ 　icon, 5  \n+   　Maximize button, 19–20  \n+   　Minimize button, 21–22  \n+\
+    \   　moving windows, 16–18  \n+   　multiple programs, running, 22–23  \n+   　opening,\
+    \ 14–15  \n+   　resizing windows, 19  \n+   　Restore Down button, 21  \n+   　Search\
+    \ button, 45  \n+   　task pane, 25–26\n\n+   **N**\n+   \n+   **naming folders,\
+    \ 34–35**  \n+   **Notification area, 6**"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "+   P\n+   Paint, 23–24\n+   pointer, Windows, 5\n+   pointing, 6\n+   Print\
+    \ Preview, 43–44\n+   \n+   Q\n+   Quick Launch toolbar, 6\n+   \n+   R\n+   recovering\
+    \ deleted files, 41\n+   Recycle Bin, 6, 41\n+   resizing, moving, and scrolling\
+    \ windows, 14–19\n+   Restore Down button, 15\n+   restoring window, 21\n+   \n\
+    +   S\n+   screen capture utility, 41–44\n+   screen elements, 5–6\n+   ScreenTip,\
+    \ 7, 8\n+   scroll bar, 16\n+   scroll box, 18–19\n+   Search button, 46–48\n\
+    +   Search Companion task pane, 45, 47–49\n+   shortcut menus, 8\n+   Start button,\
+    \ 6, 10\n+   starting, 4\n+   status area, 6\n+   status bar, 7\n+   submenu,\
+    \ 10\n+   system tray, 6\n+   \n+   T\n+   Taskbar, 6\n+   thumbnail images, 38\n\
+    +   title bar, 8\n+   toolbar, 8\n+   Tools menu, Folder Options, 34\n+   \n+\
+    \   U\n+   up arrow, 18\n+   USB flash drive, saving file to, 25, 27\n+   \n+\
+    \   V\n+   version, Windows XP, 4\n+   vertical scroll bar, 14\n+   \n+   Views\
+    \ button, 37, 38\n+   Details, 26\n+   Tiles, 26\n+   \n+   W\n+   window, parts\
+    \ of, 6, 7–8\n+   Windows XP\n+   Accessories submenu, 12–13\n+   active window,\
+    \ 22\n+   All Programs submenu, 11\n+   calculator, 12–13\n+   described, 2\n\
+    +   desktop, 4–5\n+   files\n+   compressing, 49–53\n+   copying, 32–37\n+   deleting,\
+    \ 39–40\n+   finding, 44–49\n+   moving, 38\n+   recovering deleted, 41\n+   renaming,\
+    \ 39\n+   thumbnail images, 38\n+   folder\n+   copying, 32–37\n+   creating new,\
+    \ 25–31\n+   deleting, 39–40\n+   finding, 44–49\n+   naming, 30–31\n+   Local\
+    \ Disk, 9–10\n+   maximizing window, 19–20\n+   minimizing window, 21–22\n+  \
+    \ multiple windows, keeping open, 24\n+   My Computer, 6–7\n+   Paint, 23–24\n\
+    +   Print Preview, 43–44\n+   resizing, moving, and scrolling windows, 14–19\n\
+    +   restoring window, 21\n+   screen capture utility, 41–44\n+   screen elements,\
+    \ 5–6\n+   starting, 4\n+   submenu, 10\n+   window, parts of, 7–8\n+   WordPad\n\
+    +   Edit, 42\n+   Paste, 42\n+   Print Preview, 43–44\n+   sizing handles, 42–43\n\
+    +   \n+   Z\n+   zip programs, third-party, 50"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# SINGLE PC LICENSE AGREEMENT AND LIMITED WARRANTY
+
+
+    READ THIS LICENSE CAREFULLY BEFORE OPENING THIS PACKAGE. BY OPENING THIS PACKAGE,
+    YOU ARE AGREEING TO THE TERMS AND CONDITIONS OF THIS LICENSE. IF YOU DO NOT AGREE,
+    DO NOT OPEN THE PACKAGE. PROMPTLY RETURN THE UNOPENED PACKAGE AND ALL ACCOMPANYING
+    ITEMS TO THE PLACE YOU OBTAINED THEM. THESE TERMS APPLY TO ALL LICENSED SOFTWARE
+    ON THE DISK EXCEPT THAT THE TERMS FOR USE OF ANY SHAREWARE OR FREEWARE ON THE
+    DISKETTES ARE AS SET FORTH IN THE ELECTRONIC LICENSE LOCATED ON THE DISK:
+
+
+    1. GRANT OF LICENSE and OWNERSHIP: The enclosed computer programs (“Software”)
+    are licensed, not sold, to you by Prentice-Hall, Inc. (“We” or the “Company”)
+    and in consideration of your purchase or adoption of the accompanying Company
+    textbooks and/or other materials, and your agreement to these terms. We reserve
+    any rights not granted to you. You own only the disk(s) but we and/or our licensors
+    own the Software itself. This license allows you to use and display your copy
+    of the Software on a single computer (i.e., with a single CPU) at a single location
+    for academic use only, so long as you comply with the terms of this Agreement.
+    You may make one copy for back up, or transfer your copy to another CPU, provided
+    that the Software is usable on only one computer.
+
+
+    2. RESTRICTIONS: You may not transfer or distribute the Software or documentation
+    to anyone else. Except for backup, you may not copy the documentation or the Software.
+    You may not network the Software or otherwise use it on more than one computer
+    or computer terminal at the same time. You may not reverse engineer, disassemble,
+    decompile, modify, adapt, translate, or create derivative works based on the Software
+    or the Documentation. You may be held legally responsible for any copying or copyright
+    infringement which is caused by your failure to abide by the terms of these restrictions.
+
+
+    3. TERMINATION: This license is effective until terminated. This license will
+    terminate automatically without notice from the Company if you fail to comply
+    with any provisions or limitations of this license. Upon termination, you shall
+    destroy the Documentation and all copies of the Software. All provisions of this
+    Agreement as to limitation and disclaimer of warranties, limitation of liability,
+    remedies or damages, and our ownership rights shall survive termination.
+
+
+    4. DISCLAIMER OF WARRANTY: THE COMPANY AND ITS LICENSORS MAKE NO WARRANTIES ABOUT
+    THE SOFTWARE, WHICH IS PROVIDED “AS-IS.” IF THE DISK IS DEFECTIVE IN MATERIALS
+    OR WORKMANSHIP, YOUR ONLY REMEDY IS TO RETURN IT TO THE COMPANY WITHIN 30 DAYS
+    FOR REPLACEMENT UNLESS THE COMPANY DETERMINES IN GOOD FAITH THAT THE DISK HAS
+    BEEN MISUSED OR IMPROPERLY INSTALLED, REPAIRED, ALTERED OR DAMAGED. THE COMPANY
+    DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
+    COMPANY DOES NOT WARRANT, GUARANTEE OR MAKE ANY REPRESENTATION REGARDING THE ACCURACY,
+    RELIABILITY, CURRENTNESS, USE, OR RESULTS OF USE, OF THE SOFTWARE.
+
+
+    5. LIMITATION OF REMEDIES AND DAMAGES: IN NO EVENT, SHALL THE COMPANY OR ITS EMPLOYEES,
+    AGENTS, LICENSORS OR CONTRACTORS BE LIABLE FOR ANY INCIDENTAL, INDIRECT, SPECIAL
+    OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THIS LICENSE OR
+    THE SOFTWARE, INCLUDING, WITHOUT LIMITATION, LOSS OF USE, LOSS OF DATA, LOSS OF
+    INCOME OR PROFIT, OR OTHER LOSSES SUSTAINED AS A RESULT OF INJURY TO ANY PERSON,
+    OR LOSS OF OR DAMAGE TO PROPERTY, OR CLAIMS OF THIRD PARTIES, EVEN IF THE COMPANY
+    OR AN AUTHORIZED REPRESENTATIVE OF THE COMPANY HAS BEEN ADVISED OF THE POSSIBILITY
+    OF SUCH DAMAGES. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF DAMAGES IN
+    CERTAIN CIRCUMSTANCES, SO THE ABOVE LIMITATIONS MAY NOT ALWAYS APPLY.
+
+
+    6. GENERAL: THIS AGREEMENT SHALL BE CONSTRUED IN ACCORDANCE WITH THE LAWS OF THE
+    UNITED STATES OF AMERICA AND THE STATE OF NEW YORK, APPLICABLE TO CONTRACTS MADE
+    IN NEW YORK, AND SHALL BENEFIT THE COMPANY, ITS AFFILIATES AND ASSIGNEES. This
+    Agreement is the complete and exclusive statement of the agreement between you
+    and the Company and supersedes all proposals, prior agreements, oral or written,
+    and any other communications between you and the company or any of its representatives
+    relating to the subject matter. If you are a U.S. Government user, this Software
+    is licensed with “restricted rights” as set forth in subparagraphs (a)-(d) of
+    the Commercial Computer-Restricted Rights clause at FAR 52.227-19 or in subparagraphs
+    (c)(1)(ii) of the Rights in Technical Data and Computer Software clause at DFARS
+    252.227-7013, and similar clauses, as applicable.
+
+
+    Should you have any questions concerning this agreement or if you wish to contact
+    the Company for any reason, please contact in writing:
+
+
+    Multimedia Production
+
+    Higher Education Division
+
+    Prentice-Hall, Inc.
+
+    1 Lake Street
+
+    Upper Saddle River NJ 07458'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# WARRANTY LIMITS
+
+    READ THIS LABEL BEFORE OPENING
+
+    SOFTWARE MEDIA PACKAGE.
+
+
+    BY OPENING THIS SEALED SOFTWARE MEDIA PACKAGE, YOU ACCEPT AND AGREE TO THE TERMS
+    AND CONDITIONS PRINTED BELOW. IF YOU DO NOT AGREE, DO NOT OPEN THE PACKAGE. SIMPLY
+    RETURN THE SEALED PACKAGE.
+
+
+    The software media is distributed on an "AS IS" basis, without warranty. Neither
+    the authors, the software developers, the publisher and or Pearson Education,
+    Inc. make any representation, or warranty, either express or implied, with respect
+    to the software programs, their quality, accuracy, or fitness for a specific purpose.
+    Therefore, neither the authors, software developers, the publisher and or Pearson
+    Education, Inc. shall have any liability to you or any other person or entity
+    with respect to any liability, loss, or damage caused or alleged to have been
+    caused directly or indirectly by programs contained on the media. This includes,
+    but is not limited to, interruption of service, loss of data, loss of classroom
+    time, loss of consulting or anticipatory profits, or consequential damages from
+    the use of these programs. If media is defective, you may return it for replacement.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# GO!
+
+
+    # Teach the Course You Want in Less Time!
+
+
+    # THE GO! STORY...
+
+
+    As a professor for over 15 years, GO! Series author Shelley Gaskin used many different
+    Microsoft® Office texts only to find that none of them addressed all of the challenges
+    of today''s classroom and diverse student body—that''s why she created the GO!
+    System.
+
+
+    # EASE of IMPLEMENTATION...
+
+
+    The GO! System was developed with everyday classroom realities in mind. The primary
+    goal of the System, aside from the obvious one of teaching Microsoft® Office 2007
+    skills and concepts, is ease of implementation using any delivery method, including
+    traditional lecture, self-paced, or online.
+
+
+    # STUDENT SUCCESS...
+
+
+    The GO! System teaching approach is focused on student success. Students work
+    through engaging real-life projects that are clearly written and logically arranged.
+    The GO! System ensures that students learn computer skills and concepts without
+    getting lost or confused by misleading instruction.
+
+
+    # NEW for Office 2007!
+
+
+    +   - myitlab–assessment and training software specific to the GO! Series
+
+    +   - Audio-Visual EDDs–electronic versions of the EDDs with full animation and
+    audio
+
+    +   - End of Chapter–new types of assignments, including group running cases,
+    and more mastering and problem-solving projects
+
+    +   - Workshops–mini projects that reinforce key concepts, such as formulas in
+    Excel and design skills in PowerPoint®
+
+    +   - “There’s More You Can Do!”–additional exercises that students can use to
+    learn about and practice all of the new features of Microsoft® Office 2007
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_99_0.png)
+
+
+    # Student CD Inside!
+
+
+    The enclosed Student CD contains all of the project files needed to complete the
+    projects in this book.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_99_1.png)
+
+
+    # Companion Web site!
+
+
+    www.prenhall.com/go
+
+
+    This interactive Web site is designed to reinforce and help students test their
+    understanding of the concepts found in this GO! textbook.
+
+
+    ![](img/9fe65c86ec4bc221ab72a7112a60115a_99_2.png)'
+  merge: -1
+  img_proc: true
