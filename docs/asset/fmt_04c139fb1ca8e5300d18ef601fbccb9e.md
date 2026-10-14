@@ -1,0 +1,83 @@
+
+The GPT architecture has since been improved and extended by OpenAI with the release of subsequent models such as `GPT-2`, `GPT-3`, `GPT-3.5`, and `GPT-4`. These models are trained on larger datasets and have larger capacities, so they can generate more complex and coherent text. The GPT models have been widely adopted by researchers and industry practitioners and have contributed to significant advancements in natural language processing tasks.
+
+In this chapter, we will build our own variation of the original GPT model, trained on less data, but still utilizing the same components and underlying principles.
+
+![](img/f0f0f5d89818fdddf117bbe758ac8143_263_0.png)
+
+## Running the Code for This Example
+
+The code for this example can be found in the Jupyter notebook located at `notebooks/09_transformer/01_gpt/gpt.ipynb` in the book repository.
+
+The code is adapted from the excellent GPT tutorial created by Apoorv Nandan available on the Keras website.
+
+## The Wine Reviews Dataset
+
+We’ll be using the Wine Reviews dataset that is available through Kaggle. This is a set of over 130,000 reviews of wines, with accompanying metadata such as description and price.
+
+You can download the dataset by running the Kaggle dataset downloader script in the book repository, as shown in Example 9-1. This will save the wine reviews and accompanying metadata locally to the `/data` folder.
+
+### Example 9-1. Downloading the Wine Reviews dataset
+
+```
+bash scripts/download_kaggle_data.sh zynicide wine-reviews
+```
+
+The data preparation steps are identical to the steps used in Chapter 5 for preparing data for input into an LSTM, so we will not repeat them in detail here. The steps, as shown in Figure 9-1, are as follows:
+
+- 1. Load the data and create a list of text string descriptions of each wine.
+- 2. Pad punctuation with spaces, so that each punctuation mark is treated as a separate word.
+- 3. Pass the strings through a `TextVectorization` layer that tokenizes the data and pads/clips each string to a fixed length.
+- 4. Create a training set where the inputs are the tokenized text strings and the outputs to predict are the same strings shifted by one token.
+
+![](img/f0f0f5d89818fdddf117bbe758ac8143_264_0.png)
+
+Figure 9-1. Data processing for the Transformer
+
+## Attention
+
+The first step to understanding how GPT works is to understand how the attention mechanism works. This mechanism is what makes the Transformer architecture unique and distinct from recurrent approaches to language modeling. When we have developed a solid understanding of attention, we will then see how it is used within Transformer architectures such as GPT.
+
+When you write, the choice that you make for the next word in the sentence is influenced by other words that you have already written. For example, suppose you start a sentence as follows:
+
+```
+The pink elephant tried to get into the car but it was too
+```
+
+Clearly, the next word should be something synonymous with big. How do we know this?
+
+Certain other words in the sentence are important for helping us to make our decision. For example, the fact that it is an elephant, rather than a sloth, means that we prefer big rather than slow. If it were a swimming pool, rather than a car, we might choose scared as a possible alternative to big. Lastly, the action of getting into the car implies that size is the problem—if the elephant was trying to squash the car instead, we might choose fast as the final word, with it now referring to the car.
+
+Other words in the sentence are not important at all. For example, the fact that the elephant is pink has no influence on our choice of final word. Equally, the minor words in the sentence (`the`, `but`, `it`, `etc.`) give the sentence grammatical form, but here aren’t important to determine the required adjective.
+
+In other words, we are *paying attention* to certain words in the sentence and largely ignoring others. Wouldn’t it be great if our model could do the same thing?
+
+An attention mechanism (also known as an *attention head*) in a Transformer is designed to do exactly this. It is able to decide where in the input it wants to pull information from, in order to efficiently extract useful information without being clouded by irrelevant details. This makes it highly adaptable to a range of circumstances, as it can decide where it wants to look for information at inference time.
+
+In contrast, a recurrent layer tries to build up a generic hidden state that captures an overall representation of the input at each timestep. A weakness of this approach is that many of the words that have already been incorporated into the hidden vector will not be directly relevant to the immediate task at hand (e.g., predicting the next word), as we have just seen. Attention heads do not suffer from this problem, because they can pick and choose how to combine information from nearby words, depending on the context.
+
+## Queries, Keys, and Values
+
+So how does an attention head decide where it wants to look for information? Before we get into the details, let’s explore how it works at a high level, using our *pink elephant* example.
+
+Imagine that we want to predict what follows the word *too*. To help with this task, other preceding words chime in with their opinions, but their contributions are weighted by how confident they are in their own expertise in predicting words that follow *too*. For example, the word *elephant* might confidently contribute that it is more likely to be a word related to size or loudness, whereas the word *was* doesn’t have much to offer to narrow down the possibilities.
+
+In other words, we can think of an attention head as a kind of information retrieval system, where a *query* (“What word follows *too*?”) is made into a *key/value* store (other words in the sentence) and the resulting output is a sum of the values, weighted by the *resonance* between the query and each key.
+
+We will now walk through the process in detail (Figure 9-2), again with reference to our *pink elephant* sentence.
+
+![](img/f0f0f5d89818fdddf117bbe758ac8143_266_0.png)
+
+Figure 9-2. The mechanics of an attention head
+
+The query (`Q`) can be thought of as a representation of the current task at hand (e.g., “What word follows too?”). In this example, it is derived from the embedding of the word too, by passing it through a weights matrix `W_Q` to change the dimensionality of the vector from `d_e` to `d_k`.
+
+The key vectors (`K`) are representations of each word in the sentence—you can think of these as descriptions of the kinds of prediction tasks that each word can help with. They are derived in a similar fashion to the query, by passing each embedding through a weights matrix `W_K` to change the dimensionality of each vector from `d_e` to `d_k`. Notice that the keys and the query are the same length (`d_k`).
+
+Inside the attention head, each key is compared to the query using a dot product between each pair of vectors (`QK^T`). This is why the keys and the query have to be the same length. The higher this number is for a particular key/query pair, the more the key resonates with the query, so it is allowed to make more of a contribution to the output of the attention head. The resulting vector is scaled by `√d_k` to keep the variance of the vector sum stable (approximately equal to 1), and a softmax is applied to ensure the contributions sum to 1. This is a vector of *attention weights*.
+
+The *value* vectors (`V`) are also representations of the words in the sentence—you can think of these as the unweighted contributions of each word. They are derived by passing each embedding through a weights matrix `W_V` to change the dimensionality of each vector from `d_e` to `d_v`. Notice that the value vectors do not necessarily have to have the same length as the keys and query (but often do, for simplicity).
+
+The value vectors are multiplied by the attention weights to give the *attention* for a given `Q`, `K`, and `V`, as shown in Equation 9-1.
+
+Equation 9-1. Attention equation
