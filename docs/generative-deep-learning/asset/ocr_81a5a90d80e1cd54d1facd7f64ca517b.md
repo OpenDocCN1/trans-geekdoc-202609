@@ -1,0 +1,3 @@
+In Chapter 13 we will explore state-of-the-art multimodal models that cross over domains such as images and text. This includes text-to-image models such as DALL.E 2, Imagen, and Stable Diffusion, as well as visual language models such as Flamingo.
+
+Finally, Chapter 14 summarizes the generative AI journey so far, the current generative AI landscape, and where we may be heading in the future. We will explore how generative AI may change the way we live and work, as well as considering whether it has the potential to unlock deeper forms of artificial intelligence in the years to come.
