@@ -1,0 +1,2 @@
++   [[iiWAS '20： 第22届信息集成与基于Web的应用程序和服务国际会议（清迈 泰国 ..-..）] 第22届信息集成与基于Web的应用程序和服务国际会议论文集](README.md)
++   [[iiWAS '20： 第22届信息集成与基于Web的应用程序和服务国际会议（清迈 泰国 ..-..）] 第22届信息集成与基于Web的应用程序和服务国际会议论文集](iiwas-20-the-22nd-international-conference-on-information-in.md)
