@@ -1,0 +1,7 @@
+![](bbox=[0.07, 0.07, 0.95, 0.73])
+
+Fig. 6 Comparison of the results obtained from the four models. (a1)–(a2) Raman signal extracted from the 257th test spectra using VECTOR, Bi-LSTM, CNN, and LSTM models, respectively. (b1)–(b4) Results of the 172nd spectrum. (c1)–(c4) Results of the 108th spectrum. ‘Pred’ is the predicted Raman signal, and ‘True’ represents the actual Raman signal. Squared error corresponds to their difference.
+
+compared with the predictions of the Bi-LSTM model. The lowest predicted PCC value is ~0.81 for the Bi-LSTM; meanwhile, it is ~0.58, ~0.62, and ~0.67 for the LSTM, VECTOR, and CNN models, respectively. The test spectrum with the lowest PCC value in each model is marked with a red asterisk (*) for easy representation. For example, it is the 257th spectrum for the VECTOR prediction, the 108th spectrum for CNN, and the 172nd spectrum in the case of Bi-LSTM and LSTM models.
+
+The second lowest PCC value is presented with a blue asterisk. These test spectra, along with their Raman line shapes extracted by the four models, are shown in Fig. 6. These visualizations inherently represent the limitations of each model in retrieving the imaginary part from the CARS spectra. It also investigates the route cause for attaining the lowest PCC value for each trained model. Fig. 6(a1)–(a4) illustrates the results obtained from the 257th test spectrum using VECTOR, Bi-LSTM, CNN, and LSTM
