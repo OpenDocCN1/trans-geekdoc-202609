@@ -1,0 +1,304 @@
+
+## E
+- ENN (edited nearest neighbors) 138
+- ensemble methods 150–159
+  - bagging 151–154
+  - boosting 154–157
+  - definition 150
+  - stacking 157–159
+- entropy 57, 99, 140
+- estep function 174
+- Evidence Lower Bound (ELBO) 43, 49, 51
+- expected improvement (EI) 148
+- extremely randomized trees 154
+
+## F
+- first-order Markov chain 18
+- Fisher information matrix 141
+- fit function 83, 109
+- fixed-size array 59
+- forward algorithm 129
+- forward KL 45
+- forward LSTM model 233
+- forward_backward function 131
+- Forward–backward HMM algorithm 132
+- fully conditional distributions 28
+- fully factored approximation 47
+
+## G
+- GAs (genetic algorithms) 210–213
+- gauss_conditional function 29
+- Gaussian mixture models 16, 171–179
+  - expectation-maximization algorithm 171–179
+  - overview of 171
+- Gaussian processes (GPs) regression 117–121
+- GCNs (graph convolutional networks) 273
+- generative models 7, 279
+- Gibbs sampling 10, 28–31
+- gibbs_gauss class 29
+- Gini index 99–100
+- GMM class 174
+- gmm_em function 174
+- GMMs (Gaussian mixture models) 165, 171
+- GNNs (graph neural networks) 9, 273–279
+- GPs (Gaussian processes) regression 117–121
+- gradient descent 87, 108
+- gradient smoothing 245
+- graph lasso algorithm 206
+- greedy algorithms 62–64
+- grid search strategy 147
+
+## H
+- handwritten digit classification 226
+- hash table 60
+- hierarchical Bayesian regression 111–114
+- hierarchical regression models 107
+- high-dimensional parameter spaces, sampling from 14
+- hinge loss function 79
+- HMMs (hidden Markov models) 128–134
+- homogeneous ensembles 150
+- hyperparameter tuning 147–150
+
+## I
+- image_denoising class 52
+- images
+  - image denoising in Ising models 49–56
+  - ResNet image search 229–232
+  - t-SNE manifold learning on 182–184
+- imbalanced learning 134–138
+  - oversampling strategies 136–138
+  - undersampling strategies 134–136
+- IMDb movie reviews, sentiment analysis of 233
+- importance sampling 15, 19, 39
+- importance weights 36
+- importance_sampler class 36
+- information projection 45
+- inverse covariance estimation 202–206
+- IS (importance sampling) 35–41
+- Ising models, image denoising in 49–56
+
+## J
+- Jensen’s inequality 46
+- Joint distribution 87
+- joint posterior distribution 43
+- joint probability density 128
+
+## K
+- K-means algorithm 174
+- k-means++ 184
+- Kaggle competition 237
+- KD tree 183
+- KDE (kernel density estimator) 195–198
+- Keras/TensorFlow
+  - creating CNN Architecture with 226
+  - image search using pretrained ResNet50 with 230
+  - implementation 251
+  - practical implementations using 253
+- kernel trick 120
+- kernel_func function 118
+- kernels 82, 214
+- KL (Kullback–Leibler) divergence, variational inference and 44–47
+- knapsack problem 62
+- KNN (K nearest neighbors) bagging ensemble 153
+- KNN classifiers 153
+- KNN regression 115–117
+
+## L
+- L2 regularization 233
+- Lagrangian objective function 81
+- latent states 128
+- LDA (latent Dirichlet allocation) 187–195
+  - overview of 187–188
+  - variational Bayes 188–195
+- Least confident definition 140
+- LeCun, Yann 226
+- LeNet architecture 226–229
+- leveraging model structure 68
+- likelihood function 117
+- linear classifier 74
+- linear data structures 59
+- linear regression 107
+- linked lists 59
+- log likelihood 86–87, 178
+- log partition function 45
+- loss functions 88, 156, 260
+- low-dimensional spaces, sampling from 10
+- LR (logistic regression) 86–93, 160
+- LSTM (long short-term memory) sequence classification 233–236
+
+## M
+- M-projection (moment projection) 46
+- machine learning algorithms. See ML algorithms
+- MAP (maximum a posteriori) estimates 171
+- maps 60
+- marginal likelihood 45
+- marginal probability 130
+- Markov chain for page rank 18–19
+- Markov models 124–134
+  - hidden Markov models 128–134
+  - page rank algorithm 125–128
+- masked attention 269
+- Max margin strategy 140
+- max-pooling operations 226, 237
+- maximum likelihood (ML) 171
+- MCMC (Markov chain Monte Carlo) 14–42
+  - binomial tree model 21–24
+  - comparison with variational inference 67
+  - estimating pi 19–21
+  - Gibbs sampling 28–31
+  - importance sampling 35–41
+  - Markov chain for page rank 18–19
+  - Metropolis-Hastings sampling 32–35
+  - overview of 9–11, 15–19
+  - posterior distribution of coin flips 16–18
+  - self-avoiding random walk 24–28
+- MDNs (mixture density networks) 259–265
+- mean of binary random variable 50
+- mean-field approximation 47–48
+- mean-field factorization 11
+- mean-variance analysis 198
+- meta-classifier 157
+- meta-regressor 157
+- MH (Metropolis-Hastings) sampling 10, 32–35
+- mh_gauss class 33
+- MI (mutual information) maximization 56–57
+- mixture density networks 12
+- ML (machine learning) algorithms 3–13
+  - Bayesian inference
+  - overview of 8–9
+  - types of 9–11
+  - deep learning 11–12
+  - implementing 12–13
+  - data structures 12
+  - problem-solving paradigms 12–13
+  - mathematical concepts 7–8
+  - reasons to learn from scratch 7
+  - research
+    - deep learning 279–280
+    - sampling methods and variational inference 67–68
+    - supervised learning algorithms 160–161
+    - unsupervised learning 214
+  - research conferences 285
+  - types of 4–7
+  - using divide and conquer paradigm 64
+- ML (maximum likelihood) 171
+- MLP (multilayer perceptron) 220–224
+- MNIST dataset, LeNet architecture on 226–229
+- model selection
+  - Bayesian optimization 148–150
+  - hyperparameter tuning 147–150
+- modern deep learning algorithms 11
+- momentum parameter 243
+- MRF (Markov random field) 49
+- MSE (mean squared error) 107
+- mstep function 174
+- multi-input model 237–242
+- multiclass classification 74
+- multidimensional distribution 28
+- multihead attention 268
+- multivariate Gaussian distribution 28, 41
+
+## N
+- naive Bayes algorithm 93–98
+- narrow AI 12
+- natural language processing (NLP) 7, 280, 285
+- nearest neighbor portfolio weights 198
+- nearest neighbors approximation methods 116
+- Nesterov Momentum 243, 248
+- neural model capacity, increasing 248
+- neural network optimizers 242–248
+- NLL (negative log likelihood) 87
+- NLP (natural language processing) 7, 280, 285
+- NMI (normalized mutual information) 166
+- nonlinear data structures 60–61
+- nonnegative matrix factorization 214
+- normalizing constant 9
+
+## O
+- objective function 6
+- Occam’s razor principle 147
+- optimal latent state sequence 131
+- optimization algorithms 220
+- optimum approximating distribution 50
+- OSS (one-sided selection) method 135
+- output constraints 260
+- overfitting 222, 248
+- oversampling strategies 136–138
+
+## P
+- page rank algorithm
+  - Markov chain for 18–19
+  - supervised learning 125–128
+- parallel ensemble methods 150
+- parallel processing 237
+- parallelizing Monte Carlo algorithms 67
+- PCA (principal component analysis) 138, 179–181, 230
+- perceptron algorithm 74–80, 160
+- Perceptron binary classifier confusion matrix 79
+- perceptron classifier 74
+- perceptron update rule 80
+- perplexity hyperparameter 184
+- PGM (probabilistic graphical models) 9
+- pi, estimating 19–21
+- pool-based sampling 139
+- pooled graphical models 111
+- positional encodings 268
+- posterior distribution 8–9, 16–18, 117
+- power method algorithm 126–127
+- precision-recall plot 76
+- predict function 83, 109
+- principal component analysis (PCA) 138, 179–181, 230
+- probabilistic data structures 61
+- probabilistic graphical models (PGM) 9, 68
+- problem-solving paradigms 61–67
+  - complete search 61–62
+  - divide and conquer 64–65
+  - dynamic programming 65–67
+  - greedy 62–64
+  - overview of 12–13
+
+## Q
+- QBC (query by committee) 140–141
+- quadratic dual optimization program 81–82
+- query strategies 139–141
+  - query by committee 140–141
+  - uncertainty sampling 139–140
+- query_by_committee function 143
+- queues 59
+
+## R
+- random forests 153
+- random oversampling 136
+- random search strategy 147
+- random undersampling 134
+- random walk Metropolis algorithm 35
+- random walk square distance 27
+- random walk, self-avoiding 24–28
+- RBF (radial basis function) kernel 82, 118, 121
+- reconstruction error 179
+- regression algorithms 106–122
+  - Bayesian linear regression 107–111
+  - Gaussian processes regression 117–121
+  - hierarchical Bayesian regression 111–114
+  - K nearest neighbors regression 115–117
+  - overview of 107
+- regression models 107
+- regularized loss function 80
+- research conferences 284–285
+  - computer vision 285
+  - machine learning 285
+  - natural language processing 285
+  - theoretical computer science 285
+- ResNet image search 229–232
+- RFC (random forest classifier) 148
+- ridge_reg class 109
+- RL (reinforcement learning) 66
+- RMSProp 244–245
+- RNA-seq data 196
+- RNA-Seq density estimate 198
+- RNNs (recurrent neural networks) 9, 232–242
+  - long short-term memory sequence classification 233–236
+  - multi-input model 237–242
+- Robbins-Monro conditions 87
+- ROC (receiver operating characteristic) plot 76
+- run-time complexity 3

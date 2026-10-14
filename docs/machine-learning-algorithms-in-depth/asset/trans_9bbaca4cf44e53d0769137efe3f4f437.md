@@ -1,0 +1,205 @@
+
+
+```python
+from sklearn.ensemble import RandomForestClassifier as RFC
+from sklearn.svm import SVC
+
+from bayes_opt import BayesianOptimization
+
+np.random.seed(42)
+
+# Load data set and target values
+data, target = make_classification(
+    n_samples=1000,
+    n_features=45,
+    n_informative=12,
+    n_redundant=7
+)
+target = target.ravel()
+
+def svccv(gamma):
+    val = cross_val_score(
+        SVC(gamma=gamma, random_state=0),
+        data, target, scoring='f1', cv=2
+    ).mean()
+
+    return val
+
+def rfccv(n_estimators, max_depth):
+    val = cross_val_score(
+        RFC(n_estimators=int(n_estimators),
+            max_depth=int(max_depth),
+            random_state=0)
+        ,
+        data, target, scoring='f1', cv=2
+    ).mean()
+    return val
+
+if __name__ == "__main__":
+
+    gp_params = {"alpha": 1e-5}
+
+    #SVM
+    svcBO = BayesianOptimization(svccv,
+        {'gamma': (0.00001, 0.1)})
+
+    svcBO.maximize(init_points=3, n_iter=4, **gp_params)
+
+    #Random Forest
+    rfcBO = BayesianOptimization(
+        rfccv,
+        {'n_estimators': (10, 300),
+         'max_depth': (2, 10)}
+    )
+    rfcBO.maximize(init_points=4, n_iter=4, **gp_params)
+
+    print('Final Results')
+    print(svcBO.max)
+    print(rfcBO.max)
+```
+
+SVM分类器
+
+随机森林（RF）分类器
+
+图7.13展示了将贝叶斯优化应用于SVM和RFC。
+
+![](img/325742126d3ff007c6c385f4ffb5c3be_170_0.png)
+
+**图7.13** 贝叶斯优化在SVM和RFC上的应用
+
+F1分数被用作分类任务的性能目标函数。左图展示了F1分数的贝叶斯优化结果，该分数是SVM RBF核的gamma参数的函数，其中核函数 $K(x, x') = \exp(-\gamma \|x-x'\|^2)$ 的gamma是精度，等于方差的倒数。可以看到，仅经过七次迭代，我们就找到了能给出最大F1分数的gamma参数。底部的EI效用函数峰值告诉我们下一步应进行哪个实验。右图展示了F1分数的贝叶斯优化结果，该分数是随机森林分类器的最大深度和估计器数量的函数。从热图可以看出，当估计器数量为158、最大深度为10时，F1分数达到最大值。
+
+## 7.5 集成方法
+
+集成方法是一种元算法，它将多种机器学习技术组合到一个预测模型中，以降低方差（装袋）、降低偏差（提升）或改进预测（堆叠）。集成方法可分为两组：*顺序集成方法*，基学习器按顺序生成（如AdaBoost）；*并行集成方法*，基学习器并行生成（如随机森林）。顺序方法的基本动机是利用基学习器之间的依赖关系，因为通过对先前被错误标记的样本赋予更高的权重，可以提升整体性能。并行方法的基本动机是利用基学习器之间的独立性，因为通过平均可以显著降低误差。
+
+大多数集成方法使用单一的基学习算法来生成同质的基学习器（即类型相同的学习器），从而形成*同质集成*。也有一些方法使用异质学习器（即不同类型的学习器），从而形成*异质集成*。为了确保集成方法比其任何单个成员都更准确，基学习器必须尽可能准确且多样。
+
+### 7.5.1 装袋法（Bagging）
+
+装袋法（Bagging）代表*自助聚合*（bootstrap aggregation）。减少估计方差的一种方法是将多个估计值平均在一起。例如，我们可以在数据的不同子集（有放回地随机选取）上训练*M*棵不同的决策树 $f_m$，并计算集成模型。
+
+$f(x) = \frac{1}{M} \sum_{m=1}^{M} f_m(x)$
+
+(7.32)
+
+装袋法使用自助采样来获取用于训练基学习器的数据子集。在聚合基学习器的输出时，装袋法对分类使用投票，对回归使用平均。下面的代码清单展示了装袋集成实验。
+
+# 代码清单7.8 装袋集成
+
+```
+import itertools
+import numpy as np
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+from sklearn import datasets
+
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+
+from sklearn.ensemble import BaggingClassifier
+from sklearn.model_selection import cross_val_score, train_test_split
+
+from mlxtend.plotting import plot_learning_curves
+from mlxtend.plotting import plot_decision_regions
+
+def main():
+    iris = datasets.load_iris()
+    X, y = iris.data[:, 0:2], iris.target
+
+    clf1 = DecisionTreeClassifier(criterion='entropy',
+        max_depth=None)
+    clf2 = KNeighborsClassifier(n_neighbors=1)
+
+    bagging1 = BaggingClassifier(base_estimator=clf1, n_estimators=10,
+        max_samples=0.8, max_features=0.8)
+    bagging2 = BaggingClassifier(base_estimator=clf2, n_estimators=10,
+        max_samples=0.8, max_features=0.8)
+
+label = ['Decision Tree', 'K-NN', 'Bagging Tree', 'Bagging K-NN']
+clf_list = [clf1, clf2, bagging1, bagging2]
+
+fig = plt.figure(figsize=(10, 8))
+gs = gridspec.GridSpec(2, 2)
+grid = itertools.product([0,1],repeat=2)
+
+for clf, label, grd in zip(clf_list, label, grid):
+    scores = cross_val_score(clf, X, y, cv=3, scoring='accuracy')
+    print("Accuracy: %.2f (+/- %.2f) [%s]" %(scores.mean(),
+        scores.std(), label))
+    clf.fit(X, y)
+    ax = plt.subplot(gs[grd[0], grd[1]])
+    fig = plot_decision_regions(X=X, y=y, clf=clf, legend=2)
+    plt.title(label)
+
+plt.show()
+#plt.savefig('./figures/bagging_ensemble.png')
+
+#plot learning curves
+X_train, X_test, y_train, y_test = train_test_split(X, y,
+    test_size=0.3, random_state=0)
+
+plt.figure()
+plot_learning_curves(X_train, y_train, X_test, y_test, bagging1,
+    print_model=False, style='ggplot')
+plt.show()
+#plt.savefig('./figures/bagging_ensemble_learning_curve.png')
+
+#Ensemble Size
+num_est = list(map(int, np.linspace(1,100,20)))
+bg_clf_cv_mean = []
+bg_clf_cv_std = []
+for n_est in num_est:
+    print("num_est: ", n_est)
+    bg_clf = BaggingClassifier(base_estimator=clf1, n_estimators=n_est,
+        max_samples=0.8, max_features=0.8)
+    scores = cross_val_score(bg_clf, X, y, cv=3, scoring='accuracy')
+    bg_clf_cv_mean.append(scores.mean())
+    bg_clf_cv_std.append(scores.std())
+
+plt.figure()
+(_, caps, _) = plt.errorbar(num_est, bg_clf_cv_mean,
+    yerr=bg_clf_cv_std, c='blue', fmt='-o', capsize=5)
+for cap in caps:
+    cap.set_markeredgewidth(1)
+plt.ylabel('Accuracy'); plt.xlabel('Ensemble Size'); plt.title('Bagging
+Tree Ensemble');
+plt.show()
+#plt.savefig('./figures/bagging_ensemble_size.png')
+
+if __name__ == "__main__":
+    main()
+```
+
+因此，随机森林的偏差略微增加，但由于对相关性较低的树进行平均，其方差减小，从而得到整体上更好的模型。
+
+在*极端随机树*中，算法的随机性更进一步：分裂阈值是随机化的。它不是寻找最具判别力的阈值，而是为每个候选特征随机抽取阈值，并从这些随机生成的阈值中选出最佳值作为分裂规则。这通常可以让模型方差进一步减小一点——但代价是偏差会稍微增大。
+
+### 7.5.2 提升（Boosting）
+
+*提升（Boosting）*指一类能将弱学习器转换为强学习器的算法。提升的主要原理是在数据的加权版本上拟合一系列弱学习器（即仅比随机猜测略好的模型，如小型决策树），其中对被前几轮错误分类的样本赋予更大的权重。然后通过加权多数投票（分类）或加权求和（回归）组合预测结果，以产生最终预测。提升与委员会方法（如装袋法）的主要区别在于，基学习器是按顺序在数据的加权版本上训练的。
+
+图7.15中的算法描述了最广泛使用的提升算法形式：*AdaBoost*，即自适应提升（adaptive boosting）。可以看到，第一个基分类器 $y_1(x)$ 使用权重系数 $w_n^1$ 进行训练，这些系数全部相等。在后续的提升轮次中，对于被错误分类的数据点，权重系数 $w_n^m$ 会增大；对于被正确分类的数据点，权重系数会减小。量 $\epsilon_m$ 表示每个基分类器的加权错误率。因此，权重系数 $\alpha_m$ 会给更准确的分类器赋予更大的权重。
+
+```
+1: Init data weights $\{w_n\}$ to $\frac{1}{N}$
+2: for $m = 1$ to $M$ do
+3:    if a classifier $y_m(x)$ by minimizing weighted error function $J_m$:
+4:       $J_m = \sum_{n=1}^{N} w_n^{(m)}\,1[y_m(x_n) \ne t_n]$
+5:       compute $\epsilon_m = \frac{\sum_{n=1}^{N} w_n^{(m)}1[y_m(x_n)\ne t_n]}{\sum_{n=1}^{N} w_n^{(m)}}$
+6:       evaluate $\alpha_m = \log\left(\frac{1-\epsilon_m}{\epsilon_m}\right)$
+7:       update the data weights: $w_n^{(m+1)} = w_n^{(m)}\exp\{\alpha_m\,1[y_m(x_n)\ne t_n]\}$
+8:    end for
+9: Make predictions using the final model: $Y_M(x)=\operatorname{sign}\left(\sum_{m=1}^{M}\alpha_m y_m(x)\right)$
+```
+
+**图7.15   AdaBoost算法伪代码**
+
+下面的代码清单使用不同数量的学习器来训练AdaBoost分类器。
+
