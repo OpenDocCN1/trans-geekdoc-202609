@@ -1,0 +1,38 @@
+
+The aim of this research paper is to analyse data mined from open source social media, in this instance to ascertain if a targeted behaviour can be identified from specific keyword usage. However, the keywords are those most frequently used in two datasets, consisting of data mined from Twitter, and religious quotes from extremist publications, where both the datasets themselves and the keyword metrics gained are discussed.
+
+The results of the analyses show that it is difficult to attribute behavioural trends through specific keyword usage. Comparatively, the metrics from the extremist publications show language relating to religious ideology, whereas the Twitter data was more closely aligned with current and trending events. It was also shown that context has an important role in identification, and that an in-depth keywords-in-context approach to analysing the keyword metrics would be an interesting project for further research.
+
+*Keywords* : social media, radicalisation, psychological traits, linguistic theory, data mining, Borum’s four-stage model, law enforcement Moghaddam's model, dataset
+
+### 14.1.Introduction
+
+The prevalence, and increased use and access, of social media platforms have cemented their function in society as an interactive communications ecosystem, generating large quantities of data about users and their interactions on and between platforms.
+
+Social media has evolved from its initial networking premise to the digital communications platform seen today. This evolution has occurred through a synergic relationship with technology and its availability and development, both of which influence the other, leading to social media becoming an integral flagstone of social communication today.
+
+The use of social media as an interactive information-sharing platform, to some, is an alternative to “mainstream media”, which can be seen to be censored or biased, whereas news on social media is unfiltered and more reflective of what is happening in the world. However, paradoxically, some users also feel that the lack of rules and viral algorithms are encouraging low quality and “fake news” (Newman, 2017).
+
+The accessibility and availability of social media has also created a direct link to many users, who utilise the platforms to obtain news and information about the world around them (The Independent, 2015). This unfiltered direct feed to individuals has enabled extremists to propagate views and radicalise individuals, an occurrence that was previously more acute and less extensive before social media (Mughal OBE, 2016).
+
+Facebook sees on average 1.37 billion active daily users and 2.07 billion active monthly users (Facebook, 2017). Many of these users will also use other social networking platforms and interlink accounts and posts, creating online personas and affiliations across varying niches of the social media ecosystem.
+
+These platforms also provide a cursory method to network or build a network, communications within can be moved onto other platforms seen to be more private, such as ephemeral messaging applications (Torok, 2016).
+
+### 14.2.Literature Review
+
+The quantity of data generated and stored daily by Facebook alone is approximately 600TB (Facebook, 2017). The logistics, computing power and resources required to evaluate and monitor each data byte are considerable, and in any case the endeavour would be time prohibitive. However, if data mining techniques were used to analyse the Big Data sets in a targeted manner, they could prove to be power tools against the fast-evolving threat of cyber terrorism and affiliated radicalisation. If we were able to identify the risk factors and the methodologies used by extremists utilising cyber communications platforms, the potential threat could be mitigated.
+
+Lara-Cabrera *et al*.’s (2017) research conducts a statistical analysis of risk assessment factors and metrics to evaluate radicalisation on Twitter. Focusing on the one social media platform, they use three different data sets: keyword-based metrics, perception of discrimination and declaration of positive and negative ideas about Western Society and Jihadism. Their work concludes that using their analysis, they were able to identify Twitter users that were radicalised or at risk of radicalisation based on the terminology used and ideas expressed. They also found that more radical users tended to write longer tweets, which contradicted the expectation that introversion would be an indicative personality trait of users who were or were at risk to be radicalised.
+
+However, though the results are promising, they rely on several sets of keywords, which are limited by linguistic definition. Twitter itself is also a more streamlined social messaging platform by design, in that its purpose is to broadcast short, character-limited sentences written by the user, or tweets, on the platform, and so does not form part of a more complex communications platform. Automated users, or bots, can also be created to generate targeted tweets which in turn could be difficult to attribute to an individual.
+
+The data that is generated by users on a platform, chronicling projected behaviours and interactions, is a resource of which the surface has barely been scratched. Algorithmic modelling approaches to big data analytics have seen an increase and are being used for various tracking and correlative analytics on communications platforms.
+
+To analyse metrics for language or terminology that could reflect radicalisation, extremism or the exploitation of vulnerable people on social media, these terms first need to be defined. The guidance issued by the UK government defines radicalisation as “*the process by which a person comes to support terrorism and extremist ideologies associated with terrorist groups*.” (HM Government, orr. 12/03/2015, rev. 16/07/2015). It is the UK Government’s stance that it is possible to prevent vulnerable people from being drawn into terrorist-related activity through intervention. The “Prevent” strategy includes the identification and referral for appropriate interventions of those at risk of being drawn into terrorism. The intended aim of these interventions is to divert vulnerable people away from radicalisation (HM Government, orr. 12/03/2015, rev. 16/07/2015).
+
+The “Prevent” strategy is also backed up legislatively through the Counter-Terrorism and Security Act 2015, specifically in Part 5, Chapter 1, which defines the general duties and powers of authorities to prevent people from being drawn into terrorism (HM Government, 2015).
+
+The Terrorism Act 2000, Section 1, defines terrorism as “ *an action that endangers or causes serious violence to a person/people; causes serious damage to property; or seriously interferes with or disrupts an electronic system. And that the use or threat must be designed to influence the government or to intimidate the public for the purposes of advancing a political, religious or ideological cause”.* This legislation is also supplemented by the Terrorism Act 2006, Section 1, which widens the range of methods by which a terrorism offence can be committed under the 2000 act, by including the direct or indirect action or intention of the above described acts through a published statement (HM Government, 2006).
+
+Extremism is defined by the UK Government as “vocal or active opposition to fundamental British values, including democracy, the rule of law, individual liberty and mutual respect and tolerance of different faiths and beliefs”. The definition used by HM Government also includes “calls for death of members of the armed forces” (HM Government, orr. 12/03/2015, rev. 16/07/2015).

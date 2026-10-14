@@ -1,0 +1,78 @@
+
+9. Fowler, K. (2016). `Data Breach Preparation and Response Network Security` \[Online\]. Available at: `https://books.google.co.uk/books/about/Data_Breach_Preparation_and_Response.html?id=m5SZBgAAQBAJ&printsec=frontcover&source=kp_read_button&redir_esc=y#v=onepage&q&f=false` (Accessed: 26 May 2018).
+
+10. Garber, J. (2018). `GDPR — Compliance Nightmare or Business Opportunity`. `Computer Fraud and Security`, **2018**(6), pp. 14–15.
+
+11. General Data Protection Regulation. (2016). `OJ L119/1, Regulation (EU) 2016/679 of the European Parliament and of the Council` \[Online\]. Available at: `https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN` (Accessed: 18 October 2018).
+
+12. Hedley, D. and Jacobs, M. (2017). `The Shape of Things to Come: The Equifax Breach, the GDPR and Open-Source Security`. `Computer Fraud and Security`, **2017**(11), pp. 5–7.
+
+13. Hevner, A. R., March, S. T., Park, J. and Ram, S. (2014). `Design Science in Information Systems Research`. `Management Information Systems Quarterly`, **28**(1), pp. 75–105.
+
+14. Horvath, M. (2018). `EU Privacy Rules to Have Global Implications` \[Online\]. Available at: `https://www.gartner.com/podcasts/eu-rivacyrules-have-global-implications/` (Accessed: 6 June 2018).
+
+15. Ico.org.uk. (2018). `TalkTalk Gets Record £400,000 Fine for Failing to Prevent October 2015 Attack` \[Online\]. Available at: `https://ico.org.uk/about-the-ico/news-and-events/news-and-blogs/2016/10/talktalk-getsrecord-400-000-fine-for-failing-to-prevent-october-2015-attack/` (Accessed: 12 September 2018).
+
+16. ISO. (2018). `ISO/IEC 27001:2013: Information Technology — Security Techniques — Information Security Management Systems — Requirements` \[Online\]. Available at: `https://www.iso.org/standard/54534.html`. (Accessed: 28 October 2018).
+
+17. Kothari, C. R. (2004). `Research Methodology: Methods and Techniques` (2nd ed.). New Delhi, India: New Age International Publishers.
+
+18. Kuada, J. E. (2012). `Research Methodology — A Project Guide for University Students` (1st ed.). Frederiksberg, Denmark: Samfundslitteratur.
+
+19. Luszcz, J. (2018). `Apache Struts 2: How Technical and Development Gaps Caused the Equifax Breach`. `Network Security`, **2018**(1), pp. 5–8.
+
+20. Mansfield-Devine, S. (2016). `Data Protection: Prepare Now or Risk Disaster`. `Computer Fraud and Security`, **2016**(12), pp. 5–12.
+
+21. PwC. (2018). `Information Security Breaches Survey 2017: Redefining the Security Culture — A Better Way to Protect Your Business` \[Online\]. Available at: `https://www.pwc.be/en/news-publications/publications/2017/information-security-breaches-survey.html` (Accessed: 9 October 2018).
+
+22. Reding, V. (2010). `The Upcoming Data Protection Reform for the European Union`. `International Data Privacy Law`, **1**(1), pp. 3–5.
+
+23. Schwarz, P. (2016). `Risk and High Risk: Walking the GDPR Tightrope` \[Online\]. Available at: `https://iapp.org/news/a/risk-and-high-risk-walking-the-gdpr-tightrope/` (Accessed: 23 September 2018).
+
+24. Solterbeck, A. (2006). `Protecting Data at Rest and in Motion`. `Network Security`, 2006(9), pp. 14–17.
+
+25. Steiner, D. (2018). `Hackers Are Aggressively Targeting Law Firms’ Data` \[Online\]. Available at: `https://www.cio.com/article/3212829/cyber-attacks-espionage/hackers-are-aggressively-targeting-law-firms-data.html` (Accessed: 15 October 2018).
+
+26. Von Solms, R. and van Niekerk, J. (2013). `From Information Security to Cyber Security`. `Computers and Security`, 38, pp. 97–102.
+
+27. Wood, M. (2015). `CES: Security Risks From the Smart Home` \[Online\]. Available at: `https://www.nytimes.com/2015/01/08/technology/personaltech/ces-security-risks-from-the-smart-home.html` (Accessed: 29 September 2018).
+
+Chapter 9
+
+Evaluation of the Standardised Digital Forensic Investigation Process Model (SDFIPM)
+
+Reza Montasari\*, Richard Hill^†, Victoria Carpenter^‡ and Amin Hosseinian-Far^§
+
+\*Department of Computer Science  
+
+School of Computing and Engineering  
+
+The University of Huddersfield  
+
+[`r.montasari@hud.ac.uk`](mailto:r.montasari@hud.ac.uk)
+
+^†Department of Computer Science  
+
+School of Computing and Engineering  
+
+The University of Huddersfield  
+
+[`r.hill@hud.ac.uk`](mailto:r.hill@hud.ac.uk)
+
+^‡Research Development Innovation and Enterprise Services  
+
+University of Bedfordshire  
+
+[`victoria.carpenter@beds.ac.uk`](mailto:victoria.carpenter@beds.ac.uk)
+
+^§Faculty of Business and Law  
+
+University of Northampton  
+
+[`amin.hosseinian-far@northampton.ac.uk`](mailto:amin.hosseinian-far@northampton.ac.uk)
+
+ABSTRACT
+
+The existing digital forensic investigation process models (DFIPMs) have often been developed by digital forensic practitioners (DFPs) based on their own personal experience and on an ad‑hoc basis, without attention to the establishment of standardisation within the field. This has prevented the institution of both scientific and generic processes that are urgently required within the different fields of law enforcement, commerce and incident response. Therefore, a novel model — the Standardised Digital Forensic Investigation Process Model (the SDFIPM) — was developed to address these shortcomings. Following the selected research methodology, Peffers *et al*.’s Design Science Research Process (DSRP), the SDFIPM was also subjected to both Demonstration and Evaluation activities to determine how well it would support the solution to the stated research problem. Therefore, this paper presents the results of the Demonstration and Evaluation activities applied to the proposed model. Our study makes three significant and novel contributions to the field of Digital Forensics (DF): First, it implements a process model, the design of which is inclusive of all the advantages of the previous models through their synthesis, harmonisation and extension. No such model previously existed in the literature. Second, the SDFIPM is generic in that it can be applied within the three fields of law enforcement, commerce and incident response. Third, unlike the majority of the previous models, the effectiveness of which is unknown due to the lack of an evaluation process, the SDFIPM’s efficacy is demonstrated in relation to both components of ‘utility’ and ‘usability’.
+
+*Keywords*: SDFIPM, digital forensics, cloud forensics, chain of custody

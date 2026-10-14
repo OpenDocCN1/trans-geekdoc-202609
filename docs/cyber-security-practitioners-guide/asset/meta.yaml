@@ -1,0 +1,963 @@
+name: Cyber Security Practitioner's Guide
+slug: cyber-security-practitioners-guide
+name_cn: '
+
+  网络安全实践指南'
+toc:
+- - '##'
+  - About the Editor
+- - '###'
+  - 时代来临：提出伦理论的呼吁
+- - '####'
+  - 绩效的多维面向
+- - '####'
+  - 新维度的需求
+- - '###'
+  - '`Ethics and morals`'
+- - '###'
+  - '`The principal ethical philosophies`'
+- - '###'
+  - '`The Emerging Reality`'
+- - '##'
+  - 示例
+- - '##'
+  - 以下是需要翻译的文本
+- - '###'
+  - '*Ethics now*'
+- - '###'
+  - '*The need for pragmatism*'
+- - '###'
+  - What Next?
+- - '###'
+  - '*Ethics now*'
+- - '###'
+  - '*The need for pragmatism*'
+- - '###'
+  - What Next?
+- - '##'
+  - Attack Vectors and the Challenge of Preventing Data Theft
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 1.1.2.*Overview of the high-profile leaks*
+- - '###'
+  - 1.1.3.*High profile leaks and insider threat*
+- - '###'
+  - 1.1.4.*What exfiltration methods are possible on a corporate network?*
+- - '###'
+  - 1.2.Scope of Discussion on Data Exfiltration Methods
+- - '###'
+  - 1.2.1.*Web server attack — SQL injection*
+- - '###'
+  - 1.2.2.*Cross Site Scripting*
+- - '###'
+  - 1.2.3.*PowerShell exploits*
+- - '###'
+  - 1.2.5.*网络钓鱼邮件*
+- - '###'
+  - 1.2.6.*包含嵌入式代码的文档和其他附件*
+- - '###'
+  - 1.2.7.*商务邮件 compromize（BEC）*
+- - '###'
+  - 1.2.8.*新兴威胁：Knock-Knock 和 Office 365*
+- - '###'
+  - 1.3.1.*Exfiltration using DNS aka DNS tunnelling*
+- - '###'
+  - 1.3.2.**DNS tunnelling tools**
+- - '###'
+  - 1.3.3.*DNS tunnelling detection*
+- - '###'
+  - 1.3.4.*Malware using DNS tunnelling*
+- - '###'
+  - 1.4.The Threat Posed by Web Storage and Web Exfiltration
+- - '###'
+  - 1.4.1.*ICMP tunnelling*
+- - '###'
+  - 1.4.2.*NTP tunnelling*
+- - '###'
+  - 1.4.3.*The threat posed by email*
+- - '###'
+  - 1.4.4.*Steganography*
+- - '###'
+  - 1.4.5.*Dealing with a cyber attack*
+- - '###'
+  - 1.5.Remediation of Security Breaches
+- - '###'
+  - 1.5.1.*Detecting attacks using honeypots*
+- - '###'
+  - 1.5.2.*Detecting attacks by network monitoring*
+- - '###'
+  - 1.6.Detection of Security Breaches — Overview
+- - '###'
+  - 1.6.1.*Black hat, white hat and grey hat hacking*
+- - '###'
+  - 1.6.2.*Open-sourcing of security tools*
+- - '###'
+  - 1.7.Methods and Models for Security and Privacy
+- - '###'
+  - 1.7.1.*Methods for security reengineering*
+- - '###'
+  - 1.7.2.*Privacy-enhancing technologies and trustworthy information systems*
+- - '###'
+  - 1.9.2.*Detect and block using a proxy*
+- - '###'
+  - 1.9.3.*Detect and block using a next-generation firewall*
+- - '###'
+  - 1.9.4.*Detect and alert using network traffic analysis*
+- - '###'
+  - 1.9.5.*Detecting sensitive data*
+- - '###'
+  - 1.10.Recommendations to Protect Against Data Theft
+- - '#'
+  - 1.11. The Future — STIX, TAXII and Cyber Threat Intelligence
+- - '#'
+  - 1.12. Conclusion on How to Guard Against Attacks and Prevent Data Theft
+- - '##'
+  - Glossary
+- - '##'
+  - References
+- - '##'
+  - Chapter 2
+- - '##'
+  - Management of a Cyber Attack
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 2.1.Introduction
+- - '###'
+  - 2.1.1.*What is a cyber attack?*
+- - '###'
+  - 2.1.2.*Some cyber attack statistics*
+- - '###'
+  - 2.2. Security Incident Response from an Organization’s Viewpoint
+- - '###'
+  - 2.2.1.*Creating effective security policies*
+- - '###'
+  - 2.2.1.1.*Format and layout of a policy*
+- - '###'
+  - 2.2.1.2.*Preparing a security policy*
+- - '###'
+  - 2.2.1.3.*Exceptions to policy*
+- - '###'
+  - 2.2.2.**Cyber incident response plan**
+- - '###'
+  - 2.2.2.1.*Security procedures*
+- - '###'
+  - 2.2.2.2.*Identification*
+- - '###'
+  - 2.2.2.3.*Initial containment*
+- - '###'
+  - 2.2.2.4.*Notification*
+- - '###'
+  - 2.2.2.5.*Analysis*
+- - '###'
+  - 2.2.2.6.*Containment*
+- - '###'
+  - 2.2.2.7.*Eradication*
+- - '###'
+  - 2.2.2.8.*Recovery*
+- - '###'
+  - 2.2.2.9.*Post-incident actions*
+- - '###'
+  - 2.3.Business Risk and Cyber Insurance — Its Place in Your Cyber Response Toolkit
+- - '###'
+  - 2.3.1.*What is risk management?*
+- - '###'
+  - 2.3.2*Cyber insurance*
+- - '###'
+  - 2.4.Conclusion
+- - '###'
+  - References
+- - '###'
+  - Chapter 3
+- - '###'
+  - Practical Cyber Security for Digital Trains
+- - '###'
+  - ABSTRACT
+- - '###'
+  - 3.1. Introduction
+- - '###'
+  - 3.2. 在搜索解决方案
+- - '###'
+  - 3.3. 关键基础设施
+- - '###'
+  - 3.4. 结论
+- - '###'
+  - References
+- - '##'
+  - Chapter 4
+- - '##'
+  - An Approach to Identify Risk-Based Human Behaviour Profiling Within an Office
+    Environment
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 4.1.Background
+- - '###'
+  - 4.1.1.**The target organisation**
+- - '###'
+  - 4.2.Security Architecture
+- - '###'
+  - 4.2.1.*Proximity technology*
+- - '###'
+  - 4.2.2.*Data source*
+- - '###'
+  - '4.2.3.*Design approach*  '
+- - '###'
+  - '4.2.4.*Insider threat*  '
+- - '###'
+  - 4.3.Behaviour Traits
+- - '###'
+  - 4.4.Threat Detection Methodology
+- - '###'
+  - 4.4.1.*Roles and relationships*
+- - '###'
+  - 4.4.2.*分区*
+- - '###'
+  - 4.4.3*基础设施特征*
+- - '###'
+  - 4.4.4*业务区域*
+- - '###'
+  - 4.4.5*定位信标并与风险区域对齐*
+- - '###'
+  - 4.4.6*定位角色*
+- - '###'
+  - 4.4.7*人际交互模式*
+- - '###'
+  - 4.4.8.**热点**
+- - '###'
+  - 4.5. Anomaly Detection
+- - '###'
+  - 4.5.1.*数据噪声*
+- - '###'
+  - 4.5.2.*检测异常*
+- - '###'
+  - 4.5.3.*Classification*
+- - '###'
+  - 4.5.4.**Point-based anomalies**
+- - '###'
+  - 4.5.5.*Contextual-based anomalies*
+- - '###'
+  - 4.5.6.**Collective anomalies**
+- - '###'
+  - 4.6.Threat Model and Algorithm
+- - '###'
+  - 4.6.1.*Extracting the data*
+- - '###'
+  - 4.6.2.*威胁检测应用*
+- - '###'
+  - 4.6.3.*基线行为*
+- - '###'
+  - 4.6.4.*分析数据*
+- - '###'
+  - 4.6.5.*入口点*
+- - '###'
+  - 4.6.6.*Time of day*
+- - '###'
+  - 4.6.7.*Time spent in a zone*
+- - '###'
+  - 4.6.8.*Zone metrics*
+- - '###'
+  - 4.6.9.*模式触发*
+- - '###'
+  - 4.7. The Algorithm
+- - '###'
+  - 4.7.1.**验证过程**
+- - '###'
+  - 4.7.2.*误报*
+- - '###'
+  - 4.8.Regulations and Legal Considerations
+- - '###'
+  - 4.8.1.**GDPR**
+- - '###'
+  - 4.8.2.*Privacy laws*
+- - '###'
+  - 4.9.Conclusions and Recommendations
+- - '##'
+  - Chapter 5
+- - '##'
+  - Ransomware
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 5.1.Introduction
+- - '###'
+  - 5.2. Ransomware and Its Impact on Different Platforms
+- - '###'
+  - 5.3. Methodology of Ransomware
+- - '###'
+  - 5.5.勒索软件攻击涉及的平台
+- - '###'
+  - 5.6. 防止赎金软件攻击
+- - '###'
+  - 5.7. 结论
+- - '###'
+  - 5.7. 结论
+- - '##'
+  - Chapter 6
+- - '##'
+  - Protecting and Securing Data Through Blockchain Across Industries
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 6.1. Introduction
+- - '###'
+  - 6.2.What Is Blockchain?
+- - '###'
+  - '6.2.1. *Blockchain overview: How does it work?*'
+- - '###'
+  - 6.2.2.*Public and private blockchains*
+- - '###'
+  - 6.2.3.*Blockchain data storage*
+- - '###'
+  - 6.2.4.*Benefits of blockchain*
+- - '#'
+  - 互操作性、透明度和长期医疗记录 —  — 组织收集的数据常常被困在数据孤岛中，导致无法整合，进而使分析变得困难并限制了数据的使用方式。理想情况下，存储不同数据集的各个系统之间应实现互操作性。此外，负责每个系统的管理者应对该系统内数据的收集、存储和使用负责。该类别还包括个人对其数据的有限控制权，以及可能导致数据丢失或甚至身份盗用的数据泄露事件。区块链技术可以通过消除数据孤岛、提供更统一、无缝的数据模型来帮助解决这些问题。数据访问将通过密码学方法进行控制，但所有相关方均可获准访问。这些变革可能催生诸如患者的长期医疗记录等创新，进而通过分析提升健康结果。
+- - '##'
+  - 隐私与安全 —  — 保密性、完整性、可用性和真实性（CIAA）是四项信息安全概念，理想情况下在处理数据时应得到遵循。事实上，内部问题如意外数据丢失，以及外部威胁如针对身份和数据盗取的恶意行为，普遍存在。如前所述，行业正通过开展日常行动来降低风险，并不断学习新方法以保持数据安全。区块链可以通过使用加密技术提供额外的安全层来帮助。去中心化、分布式账本系统将提升数据的完整性。数据加密以及更复杂的权限设置将为安全的、经过验证的数据交换提供良好控制。
+- - '##'
+  - 时间戳和时间顺序 —  — 当记录和数据被困在孤岛中，数据篡改、欺诈、可追踪滥用等风险更易发生。区块链的一个显著优势是其不可否认的不可篡改性。即使区块链仅用于认证，例如允许数据存储在“数据湖”中（一种云端集中式存储解决方案），相关指纹也会被时间戳并按时间顺序保存（如智能合约所示）。无人能够篡改这些记录。根据区块链类型的不同，各方可利用智能合约提升效率和集成度。
+- - '##'
+  - 采购与合同流程 —  — 利用区块链的智能合约特性可以大幅简化当前供应链所面临的复杂流程、谈判和问题，从而提高效率、降低成本。随后可以提供自动化供应商合同和分析工具，以最大化生产力和控制力。
+- - '###'
+  - 6.2.5.*潜在的安全问题与区块链限制* —  — 尽管区块链技术的支持度在提升，且其对客户和行业的益处日益被认知，但必须正视与区块链相关的风险因素。通过了解这些风险并在使用区块链时开展进一步研究，可为制定更安全的替代方案或降低区块链部署风险的程序提供参考。
+- - '###'
+  - 量子计算 —  — 争论的焦点是量子计算是否会对密码学构成未来威胁。为了实现这一点，量子计算需要足够大且可靠，以便能够进行数百万个量子比特（qubit）的运算，从而破解当前的密码算法（Aumasson,
+    2017）。正如 Aumasson 所指出的，目前尚不清楚量子计算是否具备可扩展性和容错性，普遍共识认为它尚未能破解现有密码算法。不过，密码学家正在研究后量子密码学（post‑quantum
+    cryptography），作为未来防护的后备方案。
+- - '###'
+  - 不可恢复数据 —  — 区块链的数据访问将通过密钥实现，私钥安全机制让用户自行控制数据；但若密钥丢失，数据将变得不可恢复。仍可提出解决方案。可以引入“后门”概念，但这可能把一个问题转换为另一个（Engelhardt,
+    2017）。
+- - '###'
+  - 可扩展性与性能 —  — 必须进一步研究不同区块链类型及脚本执行方式。例如，以太坊区块链的平均交易时间约为 14 秒，而比特币的平均交易时间约为 10 分钟。密码学中已知速度与安全性呈反向关系。达成网络共识并验证交易所需的时间和计算量会影响性能，但这不太可能成为阻碍。的技术会提升，速度和计算时间也会随之改善。
+- - '###'
+  - 恶意攻击 —  — Xu（2016）研究了使用区块链技术时可能遇到的恶意攻击与欺诈行为，并对这些攻击进行评论，同时推荐防御和预防措施。
+- - '###'
+  - Google DeepMind 场景 —  — Google DeepMind 项目是数据管理不当的典型案例。该项目通过应用程序记录患者数据，为构建应用提供了便利。为了开发该应用，
+    NHS 允许 Google 访问大量敏感医疗信息，不仅包括应用用户的数据，还包括约 160 万名 NHS 患者的记录。争议在于所谓的“隐含同意”，这表明存在透明度不足，进一步模糊了隐私与安全的界限。
+- - '###'
+  - 6.3.对关键任务数据的威胁：漏洞与网络攻击 —  — 本章前一节正式评估了区块链的工作原理、方法及关键属性。本节强调漏洞数量增加以及各类网络攻击规模扩大的趋势，以便理解这些攻击的复杂性及其可能造成的毁灭性影响。高比例的网络攻击源于恶意外部人员试图进行身份盗用。恶意外部人员的类型多样，从低级
+    malware‑for‑hire 用户到黑客主义者，再到国家支持的攻击者。
+- - '###'
+  - 6.3.1.*Ransomware*
+- - '###'
+  - 6.3.2.*社交工程：钓鱼和 spear-phishing*
+- - '#'
+  - 未来类型的勒索软件攻击
+- - '##'
+  - 6.4.网络攻击和客户数据盗窃的担忧
+- - '###'
+  - 6.4.1.网络攻击分析
+- - '###'
+  - 6.4.2.深网对客户的影响
+- - '###'
+  - 6.5.区块链是否是行业寻找的数据安全解决方案？
+- - '###'
+  - 6.6.Conclusions
+- - '###'
+  - References
+- - '##'
+  - 'Bring Your Own Device: GDPR Compliant or Headache? The Human Aspect in Security
+    and Privacy'
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 7.1.Introduction
+- - '###'
+  - 7.2.BYOD 架构、安全状态与挑战
+- - '###'
+  - 7.2.1.*当前安全模型*
+- - '###'
+  - 7.2.1.1.Mobile Device Management (MDM)
+- - '###'
+  - 7.2.1.2.Mobile Application Management (MAM)
+- - '###'
+  - 7.2.1.3.Mobile Information Management (MIM)
+- - '###'
+  - 7.2.2.Security concerns
+- - '###'
+  - 7.2.3.BYOD security challenges
+- - '###'
+  - 7.3. GDPR 对 BYOD 架构的影响
+- - '###'
+  - 7.3.1.*Threats to personal data security*
+- - '###'
+  - 7.4.Guidelines to Enhance Security Posture on Mobile Devices
+- - '###'
+  - 7.4.1.*Strong passwords*
+- - '###'
+  - 7.4.2.*防病毒软件*
+- - '###'
+  - 7.4.3.*认证机制*
+- - '###'
+  - 7.4.4.*远程控制*
+- - '###'
+  - 7.4.5.*不越狱/越狱的重要性*
+- - '###'
+  - 7.4.6.*虚拟专用网络*
+- - '###'
+  - 7.4.7.*Download applications from trusted sources*
+- - '###'
+  - 7.4.8.*Update systems to latest patches*
+- - '###'
+  - 7.5.Integration of a Multi-Layer Policy and the Information Governance Framework
+    for a BYOD Security Framework
+- - '##'
+  - Layer 2 — Application Security
+- - '##'
+  - Layer 3 — Device Security
+- - '##'
+  - Information Governance Framework
+- - '###'
+  - 7.6.Conclusion
+- - '###'
+  - References
+- - '##'
+  - Chapter 8
+- - '##'
+  - 'GDPR Compliance: Incident Response and Breach Notification Challenges'
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 8.1.Introduction
+- - '###'
+  - 8.1.1.*Background*
+- - '###'
+  - 8.1.2.*Aims*
+- - '###'
+  - 8.2.Literature Review
+- - '###'
+  - 8.2.1.*Changes in the legal and regulatory landscape*
+- - '###'
+  - 8.2.2.*Exploration of a data breach and its wider impact*
+- - '###'
+  - 8.2.3.*Privacy risks in IoT and third-party apps*
+- - '###'
+  - 8.2.4.*Establishing privacy by design and default*
+- - '###'
+  - 8.2.5.*Encryption and pseudonymisation*
+- - '###'
+  - 8.2.6.*Comparison of incident response frameworks*
+- - '###'
+  - 8.2.8.*文献综述*
+- - '###'
+  - 8.3.Development of Decision Support System
+- - '###'
+  - 8.3.1.*GDPR 之前的事件响应框架*
+- - '###'
+  - 8.3.2.*符合 GDPR 框架设计*
+- - '###'
+  - 8.3.3.*组件选择的理由*
+- - '###'
+  - 8.4.焦点小组
+- - '###'
+  - 8.4.1.*参与者招募*
+- - '###'
+  - 8.4.2.*伦理考量*
+- - '###'
+  - 8.5.Results and Analysis
+- - '###'
+  - 8.5.1.*Results*
+- - '###'
+  - 8.5.2.*Usability of DSS for addressing privacy by design and default*
+- - '###'
+  - 8.5.3.*Feedback and recommendations for improving design*
+- - '###'
+  - 8.5.4.*Feasibility of DSS for implementation*
+- - '###'
+  - 8.5.5.*Summary of results and analysis*
+- - '###'
+  - 8.6.Evaluation of Research Process and Methods
+- - '###'
+  - 8.6.1.*Research limitations*
+- - '###'
+  - 8.7.Conclusion and Recommendation
+- - '###'
+  - 8.7.1.*Recommendations for future work*
+- - '###'
+  - References
+- - '###'
+  - 9.1.1.*Research problem*
+- - '###'
+  - 9.1.2.*Structure of the paper*
+- - '###'
+  - 9.2.Background to the Previous DFIPMs
+- - '###'
+  - 9.3.Research Methodology
+- - '###'
+  - 9.4. Overview of the SDFIPM
+- - '###'
+  - 9.4.1.*检查过程*
+- - '###'
+  - 9.4.2.*分析过程*
+- - '###'
+  - 9.4.3.*Interpretation process*
+- - '###'
+  - 9.4.4.*Event reconstruction process*
+- - '###'
+  - 9.4.5.*Reporting process*
+- - '###'
+  - 9.4.6.*Presentation process*
+- - '###'
+  - 9.4.7.*Investigation closure process*
+- - '###'
+  - 9.5.Demonstration of the SDFIPM
+- - '###'
+  - 9.5.1.*Case study*
+- - '##'
+  - 分析过程
+- - '##'
+  - 解释过程
+- - '##'
+  - 事件重构过程
+- - '##'
+  - 报告过程
+- - '##'
+  - 展示过程
+- - '##'
+  - 调查闭幕过程
+- - '###'
+  - 9.6. SDFIPM 的评估
+- - '###'
+  - 9.6.1.*Methods of validation*
+- - '###'
+  - 9.6.2.*Expert selection process*
+- - '###'
+  - 9.6.3.*Feedback formats and analysis*
+- - '###'
+  - 9.6.4.*通用反馈*
+- - '###'
+  - 9.6.5.*详细反馈和回应*
+- - '###'
+  - 9.6.6.`Analysis of the results`
+- - '###'
+  - 9.6.7.`Alterations made to the SDFIPM`
+- - '###'
+  - 9.7.`Conclusion`
+- - '###'
+  - 9.7.1.`Research problem addressed`
+- - '###'
+  - 9.7.2.*Research contribution*
+- - '###'
+  - 9.7.3.*Future work*
+- - '##'
+  - 参考文献
+- - '##'
+  - Appendix A
+- - '##'
+  - Appendix B
+- - '##'
+  - Appendix C
+- - '##'
+  - Chapter 10
+- - '##'
+  - Blockchain of Custody, BoC
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 10.1.Introduction
+- - '###'
+  - 10.2.Background
+- - '###'
+  - 10.3.Blockchain of Custody, BoC
+- - '###'
+  - 10.3.1.*Scope*
+- - '###'
+  - 10.3.2.*Transactions*
+- - '###'
+  - 10.3.3.*No Wi-Fi, no reception*
+- - '###'
+  - 10.3.4.*Incentives*
+- - '###'
+  - 10.3.5.*Permissioned blockchain*
+- - '###'
+  - 10.3.6.*Tokens*
+- - '###'
+  - 10.3.7.*Hyperledger*
+- - '###'
+  - 10.4.Design
+- - '###'
+  - 10.4.1.*User modelling*
+- - '###'
+  - 10.4.2.Data modelling
+- - '###'
+  - 10.4.3.*Access control*
+- - '###'
+  - 10.4.4.*Operational Logic*
+- - '#'
+  - 10.4.5.*Summary*
+- - '#'
+  - 10.5.Results
+- - '###'
+  - 10.5.1.Creating a new investigation
+- - '###'
+  - 10.5.2.*Adding a new member to the First Response Team (FRT)*
+- - '###'
+  - 10.5.3.*Seizure*
+- - '###'
+  - 10.5.4.*Exchange of artefact*
+- - '###'
+  - 10.6.Conclusions
+- - '###'
+  - 10.6.1.*Recommendations*
+- - '###'
+  - 10.6.2.*Future work*
+- - '###'
+  - 10.6.3.*Summary*
+- - '###'
+  - References
+- - '##'
+  - Chapter 11
+- - '##'
+  - New Issues in Cyber Security Forensics
+- - '##'
+  - ABSTRACT
+- - '###'
+  - 11.1.Introduction
+- - '###'
+  - 11.1.1.*Networks types and topology*
+- - '###'
+  - 11.2.Cyber Security on Mobile Devices
+- - '###'
+  - 11.2.1.*安全与信息保护*
+- - '###'
+  - 11.3.Wi-Fi Vulnerabilities
+- - '###'
+  - 11.3.1.*Threats and attacks*
+- - '###'
+  - 11.3.2.*Wireless sensor networks*
+- - '###'
+  - 11.4.Security and Privacy Adaptation
+- - '###'
+  - 11.4.1.*Network security challenges*
+- - '###'
+  - 11.5.Security in Mobile Operating Environments
+- - '###'
+  - 11.5.1.*Mobile security vulnerabilities*
+- - '###'
+  - 11.5.2.*Power in wireless devices*
+- - '###'
+  - 11.5.3.*Limitations caused by energy consumption in encryption*
+- - '###'
+  - 11.5.4.*当前安全状态*
+- - '###'
+  - 11.5.5.安全访问应用
+- - '###'
+  - 11.5.6.*Social media sites*
+- - '###'
+  - 11.6.Cross Border Security
+- - '##'
+  - 第 12 章
+- - '##'
+  - 雇佣自闭谱障碍人士在网络安全岗位时的伦理考量及拟议支持流程
+- - '##'
+  - 摘要
+- - '###'
+  - 12.1.Literature Review
+- - '###'
+  - 12.1.1.1.*基本脑部解剖学*
+- - '###'
+  - 12.1.1.2.*支持流程*
+- - '###'
+  - 12.1.2.*TEACCH (Treatment and Education of Autistic and related Communication-handicapped
+    Children)*
+- - '###'
+  - 12.1.3.*Project SEARCH*
+- - '##'
+  - 12.1.4.Transition
+- - '##'
+  - 12.1.5.Assistive technology
+- - '##'
+  - 12.1.6.Cyber security
+- - '#'
+  - 伦理是哲学的一个分支，需要多年学习才能掌握，涵盖了从元伦理到规范伦理等诸多不同方面，包括诸如美 virtue 伦理、义务论、享乐主义和结果主义等领域，以及应用伦理，如生物伦理、机器伦理和军事伦理，以及道德心理学和描述性伦理。
+- - '##'
+  - 12.2.3.*案例研究*
+- - '###'
+  - 12.2.4.*Autistic savantism*
+- - '###'
+  - 12.3.Analysis and Critical Discussion
+- - '###'
+  - 12.3.1.**Matching traits with opportunities**
+- - '###'
+  - 12.3.1.1.*Traits and strengths*
+- - '###'
+  - 12.3.2.*Potential issues*
+- - '###'
+  - 12.3.2.1.*Social communication*
+- - '###'
+  - 12.3.2.3.*Honesty*
+- - '###'
+  - 12.3.2.4.*Routines and repetitive behaviour*
+- - '###'
+  - 12.3.2.5.*Focussed interests*
+- - '###'
+  - 12.3.2.6.*Sensory perception*
+- - '###'
+  - 12.3.3.*Questionnaire response analysis*
+- - '###'
+  - 12.3.3.1.*National Autistic Society questionnaire*
+- - '###'
+  - 12.3.3.2.*Employer questionnaire*
+- - '###'
+  - 12.3.4.*自闭症大脑结构异常*
+- - '###'
+  - 12.4.Conclusions
+- - '###'
+  - References
+- - '##'
+  - 第 13 章
+- - '##'
+  - 采取伦理的网络安全认知方法
+- - '##'
+  - 摘要
+- - '###'
+  - 13.1. 介绍
+- - '###'
+  - 13.2. 伦理的工作定义
+- - '###'
+  - 13.3. Computers and Ethics in Cyber Security
+- - '###'
+  - 13.3.1.*Information governance and policy vacuum*
+- - '###'
+  - 13.3.2.*Cyber security in unknown waters*
+- - '###'
+  - 13.4.The Ethical Significance of Cyber Security
+- - '###'
+  - 13.5.The Undermining of Ethical Issues in Cyber Security
+- - '###'
+  - 13.5.1.*Hacking and computer wrongdoing*
+- - '###'
+  - 13.6.Cyber and Information Conflict
+- - '###'
+  - 13.7. Ethical View of the GDPR’s Cyber Security
+- - '###'
+  - 13.7.1.*Record keeping*
+- - '###'
+  - 13.7.2.*The “security of processing”*
+- - '###'
+  - 13.7.3.*Data ruptures*
+- - '###'
+  - 13.7.4.*Data protection impact assessment*
+- - '###'
+  - 13.7.5.**Staff mindfulness program**
+- - '###'
+  - 13.8.Ethics and Data Privacy
+- - '###'
+  - 13.8.1.*Privacy and its significance*
+- - '###'
+  - 13.8.2.*Threats to privacy*
+- - '###'
+  - 13.9.Ethics and Research in Cybersecurity
+- - '###'
+  - 13.10.Concluding Remark
+- - '###'
+  - Suggested Reading
+- - '###'
+  - 14.1. Introduction
+- - '###'
+  - 14.2. Literature Review
+- - '###'
+  - 14.2.1.*心理特征与语言理论*
+- - '##'
+  - 14.2.2.*社交媒体与时事*
+- - '##'
+  - 14.2.3.*更广泛的相关研究*
+- - '###'
+  - 14.3.研究方法
+- - '####'
+  - 14.3.1.数据集
+- - '###'
+  - 14.4.关键词分析
+- - '####'
+  - 14.4.1.词频
+- - '####'
+  - 14.4.2.关键词在上下文中
+- - '####'
+  - 14.4.3.数据分析
+- - '###'
+  - 14.5. Keyword Metric Results of the Data Analysis
+- - '###'
+  - 14.5.1.*Analytical comparison of the keyword metrics*
+- - '###'
+  - 14.5.2.*立法和司法因素与激进化和极端主义定义的关联*
+- - '###'
+  - 14.5.3.*社交媒体平台和政策的分析，以及其对当前和未来数据捕获的影响*
+- - '###'
+  - 14.5.4.*分析已汇总数据的回顾，以及心理、社会和立法研究*
+- - '###'
+  - 14.6.Conclusions
+- - '###'
+  - 参考文献
+- - '##'
+  - 第 15 章
+- - '##'
+  - 欧洲联盟的通用数据保护条例（GDPR）
+- - '##'
+  - 'ABSTRACT  '
+- - '###'
+  - '15.1.Introduction  '
+- - '###'
+  - '15.2.Legislative Background  '
+- - '###'
+  - 15.3.Personal Data Under GDPR
+- - '###'
+  - 15.4.Data Processing
+- - '###'
+  - 15.5.General Principles
+- - '###'
+  - 15.6.数据保护官
+- - '###'
+  - 15.8. 罚款与媒体
+- - '###'
+  - 15.9.信息技术与 GDPR
+- - '###'
+  - 15.10.结论
+- - '##'
+  - References
+- - '#'
+  - 网络安全
+- - '##'
+  - 网络安全框架
+- - '##'
+  - 网络战争
+- - '##'
+  - Dark Trace Enterprise
+- - '##'
+  - dark web
+- - '##'
+  - data breach notification
+- - '##'
+  - Data Loss Prevention, DLP
+- - '##'
+  - data mining
+- - '##'
+  - data modelling
+- - '##'
+  - Data Privacy
+- - '##'
+  - data protection impact assessment, DPIA
+- - '##'
+  - Data Protection Officer, DPO
+- - '##'
+  - dataset
+- - '##'
+  - decentralised applications
+- - '##'
+  - Decision Support System, DSS
+- - '##'
+  - digital age
+- - '##'
+  - digital forensic investigation, DFI
+- - '##'
+  - Digital Railway
+- - '##'
+  - Digital Train
+- - '##'
+  - Directive 95/ 46/ EC, 530–532, 536, 540, 542–544, 552
+- - '##'
+  - dynamic block algorithm
+- - '##'
+  - employment opportunities
+- - '##'
+  - encryption algorithm
+- - '##'
+  - endpoint management system, EMS
+- - '##'
+  - Ethical consideration
+- - '##'
+  - ethics
+- - '##'
+  - European Railway Traffic Management System, ERTMS
+- - '##'
+  - Exception to Policy, ETP
+- - '##'
+  - exploit kits
+- - '##'
+  - 5G
+- - '##'
+  - Failure Mode, Effects and Criticality Analysis
+- - '##'
+  - firewalls
+- - '##'
+  - focus
+- - '##'
+  - General Data Protection Regulation, GDPR
+- - '##'
+  - governance frameworks
+- - '##'
+  - hacking
+- - '##'
+  - healthcare industry
+- - '##'
+  - Hyperledger
+- - '##'
+  - Hypertext Transfer Protocol Secure, HTTPS
+- - '##'
+  - Identity Management
+- - '#'
+  - 射频识别 (RFID)
+- - '#'
+  - 勒索软件
+- - '#'
+  - 实时定位解决方案 (RTLS)
+- - '#'
+  - 韧性
+- - '#'
+  - 风险
+- - '#'
+  - RSA 公钥
+- - '#'
+  - 安全访问
+- - '#'
+  - 安全架构
+- - '#'
+  - 以设计为安全
+- - '#'
+  - 安全信息与事件管理 (SIEM)
+- - '#'
+  - 安全策略
+- - '#'
+  - SimpleLocker
+- - '#'
+  - 智能合约
+- - '#'
+  - 社交工程
+- - '#'
+  - 社交媒体
+- - '#'
+  - 靶向网络钓鱼
+- - '#'
+  - 标准化数字取证调查过程模型 (SDFIPM)
+- - '#'
+  - 对称密钥
+- - '#'
+  - 系统组合 (系统级体系)
+- - '#'
+  - 第三方承包商
+- - '#'
+  - TeslaCrypt
+- - '#'
+  - 《施 engen 协定》
+- - '#'
+  - 威胁检测
+- - '#'
+  - 训练
+- - '#'
+  - 特征
+- - '#'
+  - 使用你被告知的内容 (UWYT)
+- - '#'
+  - 漏洞
+- - '#'
+  - 漏洞评估
+- - '#'
+  - WannaCry
+- - '#'
+  - WPA2 保护的 Wi-Fi (WIFI Protected Access, WPA2)
+- - '#'
+  - 无线体域网
+- - '#'
+  - 无线网络
+- - '#'
+  - 分区
