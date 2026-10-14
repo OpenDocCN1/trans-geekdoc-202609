@@ -1,0 +1,1047 @@
+- pgno: 0
+  md: '# Green synthesized silver nanoparticles in two stages: Box Behnken Design
+    to machine learning
+
+
+    Gulizar Caliskan & Ayca Kumluca Topalli
+
+
+    **To cite this article:** Gulizar Caliskan & Ayca Kumluca Topalli (2025) Green
+    synthesized silver nanoparticles in two stages: Box Behnken Design to machine
+    learning, Inorganic and Nano-Metal Chemistry, 55:7, 775-783, DOI: 10.1080/24701556.2024.2354927
+
+
+    **To link to this article:** https://doi.org/10.1080/24701556.2024.2354927
+
+
+    Published online: 23 May 2024.
+
+
+    Submit your article to this journal
+
+
+    Article views: 201
+
+
+    View related articles
+
+
+    View Crossmark data'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Green synthesized silver nanoparticles in two stages: Box Behnken Design
+    to machine learning
+
+
+    Gulizar Caliskan and Ayca Kumluca Topalli
+
+
+    aFaculty of Engineering, Department of Genetics and Bioengineering, Izmir University
+    of Economics, Izmir, Turkey; bFaculty of Engineering, Department of Electrical
+    and Electronics Engineering, Izmir University of Economics, Izmir, Turkey
+
+
+    # ABSTRACT
+
+
+    In order to solve the modeling issues due to data scarcity problems in the disciplines
+    utilizing statistical approximations, a novel two-stage idea is proposed. As a
+    use case, nanoparticle biosynthesis was selected, for which an environmentally
+    friendly process is of vital importance. First, Box Behnken Design was used for
+    experimental setup, quadratic model formulation and data generation. The second
+    stage consists of Machine Learning, in which the data generated in the previous
+    stage were fed into a Neural Network to determine the relationship between the
+    parameters. Obtained results showed that the proposed combined strategy provided
+    better nanoparticle size estimations than the statistical approach alone. In the
+    absence of publicly available databases, data generation using experimental design
+    and machine learning, as proposed here, could be a faster, lower-cost, and greener
+    solution. Our proposed method can be applied to a wide range of biotechnology
+    and bioengineering applications with significant advanced knowledge.
+
+
+    # ARTICLE HISTORY
+
+
+    Received 13 July 2023
+
+    Accepted 5 May 2024
+
+
+    # KEYWORDS
+
+
+    Response surface methodology; data generation; deep learning; neural networks;
+    silver nanoparticle biosynthesis
+
+
+    # Introduction
+
+
+    Nanotechnology has become one of the most promising technologies applied in many
+    areas of science, such as medicine, agricultural applications, pharmaceutical
+    industries, energy, electronics and aerospace industries. Recently, there has
+    been growing interest in novel synthesis approaches for nano-scale materials,
+    such as nanofilms, nanoparticles, etc., which are increasingly being used in nanoscience,
+    and are expected to lead to many different innovations in the future. The great
+    advantages of nanotechnology stem from specific properties, such as high surface
+    to volume ratio, quantum size effects, enhanced magnetic properties, biocompatibility,
+    chemical stability, biodegradability, low toxicity, and structural diversity and
+    biomimetic character.
+
+
+    Generally, physical and chemical methods are preferred for the production of nanoparticles
+    due to their low cost at high volumes. However, these methods necessarily require
+    the use of toxic chemicals, such as organic solvents, reducing agents, stabilizers
+    and extreme reaction conditions during nanoparticle synthesis (NPS). As metal
+    nanoparticles are widely used in human contact applications, there is an increasing
+    need to develop environmentally friendly NPS processes. The use of toxic solvents
+    in the chemical and physical methods used to prepare nanoparticles limits their
+    potential applications in bio-based products. Therefore, it is important to develop
+    a safer, nontoxic synthesis method to allow nanoparticles to be used in a wider
+    range of industries.
+
+
+    Recently, there has been a trend in nanotechnology toward green synthesis, which
+    is low-cost, sustainable, environmentally friendly, cost-effective to scale up
+    and relatively easy to synthesize. In addition, the yield is higher in green synthesis,
+    which uses various biological sources such as plant extracts, bacteria, microalgae
+    and fungi as reducing agents. Due to the absence of toxic reducing and stabilizing
+    agents, biosynthesized nanoparticles are considered safer and more biocompatible
+    than chemically synthesized nanoparticles and could be used in biotechnological
+    fields such as tissue engineering, pharmaceutical industry, medicine etc.
+
+
+    The synthesis of nanoparticles is affected by many factors, such as temperature,
+    pH, solution concentration, amount and ratio of the source material. Various statistical
+    programmes can be used to design experiments to understand the effectiveness of
+    each of these factors and their interaction on NPS. Any statistical design should
+    involve the analysis of results to draw objective conclusions, and ensure the
+    sustainability of the synthesis for further studies.
+
+
+    Response Surface Methodology (RSM) is one of the experimental design methods used
+    for optimization based on various statistical and mathematical techniques, such
+    as linear, square polynomial functions, and others. These techniques are able
+    to identify conditions that allow high efficiency production using a small number
+    of experiments. Box Behnken Design (BBD) proposes experiments for RSM'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'with a three-level fraction coded as −1 (low), 0 (middle) and +1 (high) to
+    fit the design to a second order polynomial equation suitable for quadratic models.[16,19]
+
+
+    BBD, an economical approach with fewer factor levels, has been widely used in
+    NPS process; however, it does not permit extremely high or low levels.[19,20]
+    BBD has poor prediction quality due to lack of extreme values and regions, restrictions
+    that only allow the model to be fitted with second order polynomials, and its
+    need to use at least three experimental factors.[21] Moreover, increasing the
+    number of variables in the process, and the generation of experimental data are
+    costly and time consuming, especially in biotechnology and materials sciences.[22]
+
+
+    These difficulties can be overcome by incorporating Machine Learning (ML). ML,
+    a branch of artificial intelligence, is a data-driven model that can learn knowledge
+    without being explicitly programmed, using available data with remarkable accuracy.[23–25]
+    It is a powerful tool for supporting decision-making and problem-solving tasks
+    in which the relationship between the inputs and outputs is not precisely known.
+
+
+    ML has been applied to many fields in recent years, including pharmaceuticals
+    and drug delivery systems.[26–30] These are generally used to predict the output
+    of the NPS: size, shape, color, and their interactions, etc.[18,31,32] Previously
+    reported works focused on the prediction of silver NPs,[33,34] droplet size in
+    microfluidic devices,[35] and identification of operating parameters in microfluidic
+    devices.[36–38] Furthermore, in Ocampo et al. compare ANNs and data analysis (DA)
+    methods for predicting liposome size in a periodic disturbance micromixer. According
+    to their results, ANN has a lower MSE than the DA.[39] Another study combines
+    Bayesian optimization with DNN to optimize the synthesis of silver nanoprisms,
+    using data provided by an high-throughput experimental platform.[22] Ban et al.
+    used a random forest algorithm to learn the complex relationships between nanoparticle
+    properties and their corona structure. The functional protein in complex coronas
+    was accurately predicted with R² = 0.80.[32] In addition, Abhishek et al. applied
+    convolutional neural networks (CNN), a branch of machine learning techniques,
+    to reduce the traditional use of very expensive, time-consuming, repetitive and
+    cumbersome scanning electron microscopy (SEM) analysis for nanoparticle identification.
+    In their work, a CNN model classifies images of colloidal silver and gold nanoparticle
+    solutions according to their colors, which are based on their size and surface
+    plasmon resonance. A suitable SEM image is then generated by augmentation using
+    the previously loaded images, and image processing algorithms are used to determine
+    the approximate size of the nanoparticles in the sample. As the identification
+    of nanoparticles along with their sizes is a common task in optimization studies
+    for nanoparticle formation, their proposed approach improves the delays in the
+    sample preparation and characterization phase.[18]
+
+
+    Compared to traditional RSM, where the function is represented by a polynomial,
+    the ML model provides a more flexible estimation. Due to the nature of ML, the
+    need for
+
+
+    experimental re-runs and three-step cycle repetitions is reduced, resulting in
+    process acceleration and a reduction in labor/equipment costs.[40] In this sense,
+    ML provides a time and cost effective alternative to BBD; however, similar to
+    RSM and BBD, ML also performs iterations to achieve successful estimates. This
+    means that the ML also requires a satisfactory amount of pre-acquired data.[40]
+
+
+    This problem of data unavailability has been addressed in the previous works by
+    several workarounds. For example, experimental data for ML-assisted NPS are typically
+    collected from reported results and laboratory notebooks, or generated by new
+    experiments, either manually or by robotic setups.[31] In addition to the difficulties
+    of performing new experiments, data collection from the literature has its own
+    issues. Transforming literature information into training datasets poses challenges,
+    due to variation in the quality and consistency of data from different sources,
+    and data are sourced generally from the scientific literature, rather than central
+    or curated databases.[31]
+
+
+    For instance, in Wang’s work,[41] the aim was to build an ML model to predict
+    lipid nanoparticle formulations for mRNA vaccines against viruses, and data were
+    collected from publications identified by searching several keywords in Web of
+    Science and Scopus; they retrieved 325 samples from 65 studies. Similarly, Ban
+    et al. used ML to find the complex relationships between nanoparticle properties
+    and corona composition, and then to predict the formation of protein coronas and
+    related cell responses with data extracted from 56 papers.[32] As can be seen
+    from these examples, it is challenging to parse the unformatted literature and
+    find useful data for the same setup, and therefore, data sharing tools and data
+    collection initiatives between different research groups would greatly benefit
+    the field of ML-assisted NPS, to overcome the data scarcity problem.[31]
+
+
+    This study brings a new low cost, simple, and environmentally friendly approach
+    to resolve this issue of data unavailability and proposes combining two methods:
+
+
+    +   - BBD to fit the model statistically and experimentally and then to generate
+    input/output data; and
+
+    +   - ML to learn these input/output relationships for generalization.
+
+
+    Since BBD can fit a polynomial equation for the given input ranges, it is considered
+    as a starting point for the generating of data samples to be used in the ML stage.
+    A neural network (NN) is then formed for training and testing in the next stage.
+    This proposed method is appropriate for any field using RSM approaches. In order
+    to show its applicability, the NPS process was selected, and the performance of
+    the system was validated with real experimental data, leading to results showing
+    great potential.
+
+
+    In the current study, the reduction potential of the plant extract for the green
+    synthesis of silver nanoparticles was investigated. Firstly, the biosynthesis
+    of silver nanoparticles was carried out in Erlenmeyer scale for optimization using
+    statistical experimental design. Then, data generation and ML were applied to
+    learn the input/output relationship and'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'generalization. To the best of the authors’ knowledge, this kind of two-step
+    green NPS using BBD and ML, which is the novelty of this study has never been
+    presented in the literature. The size of nanoparticles is important for effective
+    surface interaction in various biotechnological studies. Therefore, it is important
+    to estimate the size with a low error rate according to the conditions used in
+    the processes. This allows an economical approach with fewer experiments. In this
+    respect, this work represents an innovative approach and a guide for the commercial
+    production of biogenic nanoparticles using ML. The details of this two-phase approach
+    are described in the following sections.
+
+
+    In this study, the biosynthesis of silver nanoparticles (AgNPs) was carried out
+    using the extract of yellow starwort plant as a bioreduction agent. The stock
+    solution containing the plant extract was added dropwise to the medium containing
+    AgNO₃ at a rate of 1 drop/s to initiate the nanoparticle production process.
+
+
+    This process has been optimized by maintaining the temperature, the ratio of metal
+    solution to extract volume (v:v), and mixing speed constant at 25 °C, 1:1 and
+    200 rpm, respectively. The pH has been set between a minimum of 4 and a maximum
+    of 8. Initial pH of batch cultivations was adjusted and was not monitored during
+    the process. Incubation time according to the recipe of experimental design has
+    been adjusted to 30–240 min. Metal solutions have been prepared in different concentrations
+    as 1–8 mM and added to the Erlenmeyer system with the help of a buret at a 1 drop
+    per second. In this design, the experiments have been set up with 17 runs, as
+    shown in the first four columns of Table 1. The response of the design is the
+    harmonic mean diameter (HMD) of the nanoparticles supplied using Malvern ZetaSizer
+    Analyzer. The results were determined by the average of three cycles of many scans
+    (auto calculated by device) and the average size has been
+
+
+    # Materials and methods
+
+
+    The proposed method consists of two stages: BBD for experimental design, statistical
+    formulation, and data generation; and ML for learning the input/output relationship
+    and generalization. NPS was chosen as the application domain: the aim was to predict
+    nanoparticle size using the proposed model for the specified inputs. Once this
+    model is trained, it can be used for various purposes, such as in the optimization
+    problems where the input values for the optimal nanoparticle size can be determined.
+    In addition, different environmental conditions could be confirmed to achieve
+    a higher desirability. The details are given in the following subsections.
+
+
+    # Experimental design with BBD and data generation
+
+
+    Experiments of NPS have been performed to evaluate the effects of selected variables,
+    namely metal concentration, incubation time and pH on a small scale with 25 mL
+    working volume in the Erlenmeyer system. Relevant experimental designs for optimization
+    processes have been carried out using the Design-Expert® software (version 7.0.0,
+    Stat-Ease Inc., Minneapolis, MN). The process has been followed by statistical
+    analysis using BBD that uses minimum-maximum levels and one point at the center
+    of the experimental region to fit quadratic polynomials as in Figure 1.[20]
+
+
+    **Table 1.** BBD’s predicted values and percent errors for the Control Set.
+
+
+    | Run | pH | Incubation Time (min) | Metal Concentration (mM) | HMD (nm) Actual
+    | HMD (nm) Prediction | Prediction Error (%) |
+
+    |---:|---:|---:|---:|---:|---:|---:|
+
+    | 1 | 4 | 30 | 4.50 | 48.00 | 46.68 | 2.76 |
+
+    | 2 | 4 | 135 | 1.00 | 149.40 | 148.20 | 0.80 |
+
+    | 3 | 8 | 135 | 8.00 | 172.00 | 173.20 | 0.70 |
+
+    | 4 | 6 | 240 | 8.00 | 137.00 | 134.48 | 1.84 |
+
+    | 5 | 8 | 30 | 4.50 | 90.50 | 89.88 | 0.69 |
+
+    | 6 | 6 | 135 | 4.50 | 135.3 | 125.84 | 6.99 |
+
+    | 7 | 6 | 135 | 4.50 | 134.00 | 125.84 | 6.09 |
+
+    | 8 | 6 | 135 | 4.50 | 124.6 | 125.84 | 1.00 |
+
+    | 9 | 4 | 135 | 8.00 | 109.00 | 110.90 | 1.74 |
+
+    | 10 | 6 | 30 | 1.00 | 81.00 | 83.53 | 3.18 |
+
+    | 11 | 8 | 135 | 1.00 | 106.00 | 104.10 | 1.79 |
+
+    | 12 | 8 | 240 | 4.50 | 89.50 | 90.83 | 1.48 |
+
+    | 13 | 4 | 240 | 4.50 | 115.20 | 115.83 | 0.54 |
+
+    | 14 | 6 | 135 | 4.50 | 116.3 | 125.84 | 8.20 |
+
+    | 15 | 6 | 240 | 1.00 | 98.50 | 99.08 | 0.59 |
+
+    | 16 | 6 | 30 | 8.00 | 80.50 | 79.93 | 0.71 |
+
+    | 17 | 6 | 135 | 4.50 | 119.00 | 125.84 | 5.75 |
+
+    | **Average prediction error (%)** |  |  |  |  |  | **2.64** |
+
+
+    ![](img/ceee3949c03b1c37ef76fff8972659a7_3_0.png)
+
+
+    **Figure 1.** Box Behnken Design (BBD).'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Table 2. Limit values, quantities and intervals of input parameters for data
+    generation.
+
+
+    | Inputs | Min | Max | Quantity | Interval |
+
+    |---|---|---|---|---|
+
+    | pH | 4 | 10 | 10 | 0.67 |
+
+    | Incubation time (min) | 10 | 240 | 50 | 4.69 |
+
+    | Metal concentration (mM) | 1 | 10 | 10 | 1.00 |
+
+    | Total run |  |  | 5,000 |  |
+
+
+    presented as the mean value ± standard error of the mean.[42] After applying these
+    designs, a quadratic polynomial equation was suggested by the BBD.
+
+
+    Using BBD’s quadratic polynomial formula obtained by Design-Expert software, hypothetical
+    outputs (HMD) were generated for the given inputs (pH, incubation time and metal
+    concentration). The minimum and the maximum values of the inputs were selected
+    as in the second and third columns of Table 2, considering their most common ranges
+    regardless of the ranges used in the previous experiments. The amount of distinct
+    values between the minimum and the maximum values to be generated are given in
+    the “Quantity” column of Table 2. The combination of 10 distinct pH values between
+    4 and 10; 50 distinct values of incubation time between 10 min and 240 min; and
+    10 distinct values of metal concentration between 1 mM and 10 mM resulted in 5,000
+    (10 × 50 × 10) data samples. Interval is the increment value for the inputs that
+    is calculated from Min, Max, and Quantity values as in Equation (1):
+
+
+    Interval = (Max-Min)/(Quantity − 1)  (1)
+
+
+    These data were generated for utilization in the training and testing of the NN
+    model in the ML stage. As can be seen from Table 2, with 5,000 samples, which
+    should be an adequate number for ML, interval values become small enough and representative.
+    If necessary, for other types of NPS and inputs, quantities can be increased and
+    more data points can be generated.
+
+
+    # ML for predicting the output of the NPS
+
+
+    A deep NN as shown in Figure 2 has been constructed to be trained and tested in
+    this stage using the data generated in the previous stage.
+
+
+    In this architecture, there are three input variables: x1 is pH value, x2 is incubation
+    time, and x3 is metal concentration. The desired output d is the HMD value generated
+    in the previous stage, and y is the predicted value of d by the NN model. The
+    forward propagation equations Equations (2) and (3) give the neuron outputs. According
+    to the terms used in Figure 2, the neuron output z_i^[l] is calculated as:
+
+
+    z_i^[l] = Σ_{j=1}^{n_{l-1}} w_{ij}^{[l]} · u_j^{[l-1]} + b_i^{[l]}   ∀i = 1,2,...,n_l,
+    ∀l = 1,2,...,L  (2)
+
+
+    where l represents the layer number, w_{ij} represents weights between the i^{th}
+    neuron and the j^{th} input u_j, b_i represents the bias associated with the i^{th}
+    neuron, n_{l-1} represents the number of neurons in the (l−1)^{th} layer, n_l
+    represents the number of neurons in the l^{th} layer, and L represents the number
+    of layers.
+
+
+    Then this output is undergone to a nonlinear activation function as:
+
+
+    u_i^[l] = a^[l](z_i^[l])   ∀i = 1,2,...,n_l, ∀l = 1,2,...,L  (3)
+
+
+    where a can be a sigmoid, ReLU, tanh, etc. In these formulas, the input variable
+    x_j is represented as u_j^{[0]}, and the NN output y as u^{[L]}.
+
+
+    The weight updates based on the gradient descent algorithm are calculated by backward
+    propagation equations, as shown below:
+
+
+    w_{ij}^{[l]} = w_{ij}^{[l]} − α ∂J/∂w_{ij}^{[l]}   ∀i = 1,2,...,n_l, ∀i = 1,2,...,n_l,
+    ∀l = 1,2,...,L  (4)
+
+
+    b_i^{[l]} = b_i^{[l]} − α ∂J/∂b_i^{[l]}   ∀i = 1,2,...,n_l, ∀l = 1,2,...,L  (5)
+
+
+    where α is the learning rate and J is the mean squared error cost function to
+    be minimized:
+
+
+    J = 1/2 (y − d)^2  (6)
+
+
+    With this two-stage method, HMD of the nanoparticle can instantly be estimated
+    for any pH, incubation time, and metal concentration, without any restrictions
+    on their minimum and maximum values.
+
+
+    # Results and discussions
+
+
+    The two-stage method proposed in this study was applied in several different circumstances,
+    and results were observed. The outcomes and discussions are provided in this section.
+
+
+    # Experimental design and data generation results
+
+
+    The values of the input parameters used in the 17 runs suggested by Design-Expert
+    software are given in the second, third, and fourth columns of Table 1. The corresponding
+    output measurements are shown in the fifth column. Based on these BBD results
+    and statistical analysis performed on the HMD as a response, equation of the quadratic
+    statistical model has been created as:
+
+
+    HMD (nm) = 65.07959 + 3.92071 × A + 1.45168 × B − 32.08531 × C − 0.08119 × A ×
+    B + 3.8 × A × C + 0.026531 × B × C − 0.64875 × A² − 0.00339637 × B² + 0.88612
+    × C²  (7)
+
+
+    where A, B and C used as pH, incubation time and metal concentration, respectively.
+
+
+    This equation shows that the positive values have a synergistic effect on NPS,
+    whereas negative means the opposite. Compared with others, the metal concentration
+    produces a'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/ceee3949c03b1c37ef76fff8972659a7_5_0.png)
+
+
+    Figure 2. Deep NN architecture.
+
+
+    greater negative effect for the analysis of the estimated nanoparticle size with
+    the coefficient in the equation. The coefficient of determination (R²) used to
+    check the fitness of the model, was calculated as 97.71% and is in reasonable
+    agreement with the “Adj.R-Squared” of 94.77%.
+
+
+    The sixth column of Table 1 represents the output values calculated by this equation.
+    Then, the percent errors between the actual measurements and these predicted values
+    were found and given in the last column, whose average was calculated as 2.64%.
+    These data were preserved for use in the ML stage as the Control Set.
+
+
+    It can be seen that the sixth, eight, fourteenth, and seventeenth runs in Table
+    1 provided different output values, albeit, with the same input values, implying
+    some unobserved parameters affecting the result. Such additional parameters and
+    increased number of variables in experiments mean an increase in the number of
+    experiments, hence labor and cost. Therefore, with the available resources at
+    hand, it was necessary to limit the number of inputs to three.
+
+
+    Using the same quadratic equation (Equation (7)), the hypothetical HMD values
+    were calculated for the generated 5,000 input values given in Table 2. Table 3
+    shows a set of data from these 5,000 generated input/output samples.
+
+
+    # Training results
+
+
+    A 3-layer deep NN with 120 and 80 nodes at the first and second hidden layer,
+    respectively, was used as the model topology. L2 regularizer was applied with
+    factor 0.01. Dropout with rate 0.1 was added to the hidden layers. ReLU activation
+    was selected for all layers. Batch size was set to 16. The model was optimized
+    with the Adam optimizer. For this purpose, a Python script with TensorFlow library
+    was written and run for 1,000 epochs on Google Colaboratory environment. Since
+    learning took place in the cloud with a relatively small network, no limitations
+    were encountered in
+
+
+    Table 3. Generated inputs and output calculated by BBD’s formula.
+
+
+    | Run | pH | Incubation time (min) | Metal concentration (mM) | Output HMD by
+    BBD (nm) |
+
+    |---|---|---|---|---|
+
+    | 1 | 4 | 10 | 1 | 65.58 |
+
+    | 2 | 4 | 10 | 2 | 51.62 |
+
+    | ... | ... | ... | ... | ... |
+
+    | 10 | 4 | 10 | 10 | 3.72 |
+
+    | 11 | 4 | 14.69 | 1 | 70.60 |
+
+    | ... | ... | ... | ... | ... |
+
+    | 500 | 4 | 240 | 10 | 128.65 |
+
+    | 501 | 4.67 | 10 | 1 | 66.43 |
+
+    | ... | ... | ... | ... | ... |
+
+    | 4,999 | 10 | 240 | 9 | 179.66 |
+
+    | 5,000 | 10 | 240 | 10 | 208.79 |
+
+
+    terms of computational capacity. The generated data of 5,000 samples were the
+    inputs for this model. After shuffling, 4,500 of these (90%) were used in training,
+    and 500 (10%), in testing. While fitting the model using the TensorFlow library,
+    10% of the training data were reserved as the validation split.
+
+
+    The generated data of 5,000 samples were the inputs for this model. After shuffling,
+    4,500 of these (90%) were used in training, and 500 (10%), in testing. As the
+    output, two cases were considered:
+
+
+    +   - BBD’s quadratic polynomial equation as is, no modification,
+
+    +   - BBD’s quadratic polynomial equation with error correction.
+
+
+    The rationale for the second output set above is that the BBD produced an average
+    error of 2.64% for the Control Set (Table 1). If it were possible to remove this
+    error, then the learning would be more successful. Therefore, for each of the
+    initial 5,000 samples, a separate random number within the 2.64% vicinity of BBD’s
+    corresponding output'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'value is either added to or subtracted from itself to generate a new value.
+    In this way, a new data set with error corrected desired outputs is formed. The
+    results for both cases are given below.
+
+
+    # Training results with no error correction
+
+
+    In this case, the model was trained with the generated data, where no error correction
+    is applied to the output. The resulting train error was achieved as 2.96% and
+    the test error as 2.85%. Furthermore, the same model was tested with the Control
+    Set having 17 real experiments, for which the input and output values are given
+    in Table 1. The average prediction error was obtained as 3.70% for this set.
+
+
+    # Training results with error correction
+
+
+    The same model underwent a new training with the error-corrected outputs. In this
+    case, the training error was 5.94%, and the test error, 5.16%. Greater error values
+    than the previous case were expected, since the outputs were altered and perturbed
+    from the data generated by BBD (Equation (7)). Nevertheless, when this model is
+    compared with the actual outputs of the Control Set given in Table 2, there was
+    a slightly reduced average prediction error, 3.62%.
+
+
+    # Validation results
+
+
+    In order to validate the performance of the model, eight new NPS experiments with
+    new input values that were not used before were conducted, and the outputs were
+    measured. In these experiments, some input values were selected from the outside
+    of the previous limits given to BBD the in order to see the generalization performance.
+    For example, pH limits were between 4 and 8 before and now 3 and 10 were chosen.
+    Similarly, for incubation time, 15 min and 20 min, which are less than the previous
+    minimum value of 30 min, were chosen. For metal concentration, 3 mM and 10 mM
+    were chosen where 1 mM and 8 mM were the previous limits.
+
+
+    Furthermore, new figures which were within the limits, but not in the Control
+    Set (for instance, 5 and 7 for pH, 45 min and 60 min for incubation time, and
+    3 mM and 7 mM for metal concentration) were selected. These new input values and
+    the measured outputs can be seen in the “Inputs” and “Actual Output” columns of
+    Table 4.
+
+
+    Table 4. Performance results with the Validation Set.
+
+
+    | Run | pH | Inc. time (min) | Metal Con. (mM) | Actual output HMD (nm) | BBD-only
+    output HMD (nm) | Prediction error (%) | BBD & ML output HMD (nm) | Prediction
+    Error (%) | BBD & ML & Err. Cor. output HMD (nm) | Prediction error (%) |
+
+    |---|---|---|---|---|---|---|---|---|---|---|
+
+    | 1 | 3 | 20 | 3 | 50.00 | 41.32 | 17.36 | 44.73 | 10.54 | 49.54 | 0.93 |
+
+    | 2 | 3 | 20 | 7 | 25.00 | -3.86 | 115.44 | 16.46 | 34.15 | 20.58 | 17.69 |
+
+    | 3 | 5 | 60 | 5 | 82.00 | 83.67 | 2.04 | 86.53 | 5.53 | 87.02 | 6.12 |
+
+    | 4 | 5 | 60 | 10 | 91.50 | 92.66 | 1.27 | 94.77 | 3.57 | 100.03 | 9.32 |
+
+    | 5 | 7 | 45 | 7 | 103.50 | 106.99 | 3.37 | 106.81 | 3.20 | 109.42 | 5.72 |
+
+    | 6 | 7 | 45 | 3 | 75.50 | 88.71 | 17.50 | 88.25 | 16.89 | 88.54 | 17.28 |
+
+    | 7 | 10 | 15 | 10 | 180.00 | 199.98 | 11.10 | 189.46 | 5.25 | 195.62 | 8.68 |
+
+    | 8 | 10 | 15 | 5 | 110.00 | 101.96 | 7.31 | 102.15 | 7.14 | 112.44 | 2.22 |
+
+    | Average prediction error (%) |  |  |  |  |  | 21.92 |  | 10.79 |  | 8.49 |
+
+
+    First, this Validation Set was given to the BBD’s quadratic formula (Equation
+    (7)) to assess its performance with previously unseen inputs. Results are given
+    in the “BBD-only Output” column of Table 4. The average prediction error (21.92%)
+    is not low, and even gives a negative prediction. When the pH, incubation time
+    and metal concentration were 3, 20 min and 7 mM, respectively as in the second
+    experiment shown in Table 4, the actual HMD measurement was 25.00 nm, whereas
+    BBD’s formula gave −3.86 nm for these inputs, which is an impossible result for
+    size measurement. This yields to a prediction error of 115.44%, but it was not
+    unexpected, as BBD’s formula was constructed only for the values in the Control
+    Set (Table 1) and had not previously used the values in the validation set (Table
+    4). However, machine learning can give better results with unseen input values
+    due to its generalization ability.
+
+
+    Therefore as the next attempt, the NN model trained with BBD’s outputs was tested
+    with this Validation Set. Results can be seen in the “BBD & ML” column of Table
+    4. Average prediction error (10.79%) was considerably lowered as compared to the
+    average prediction error of BBD-only case (21.92%). This shows the advantage of
+    using two-stage modeling.
+
+
+    As the final trial, the Validation Set was applied to the NN model trained with
+    the BBD’s error-corrected outputs. Table 4’s “BBD & ML & Err. Cor.” column lists
+    the results for this case. The average prediction error was further reduced to
+    8.49%, showing the performance improvement by two-stage modeling and error correction.
+
+
+    # Results summary
+
+
+    Average percent prediction errors between the actual and the predicted HMD values
+    of above models (“BBD-only”, “BBD & ML”, and “BBD & ML & Err. Cor.”) against two
+    real NPS experiment sets (Control and Validation Sets) are summarized in Table
+    5. With the Control Set, the BBD-only model gave the best result, as expected,
+    since its formula was tailored
+
+
+    Table 5. Prediction error summary.
+
+
+    |  | Average prediction error with the Control Set (%) | Average prediction error
+    with the Validation Set (%) |
+
+    |---|---|-------------------|
+
+    | BBD-only | 2.64 | 21.92 |
+
+    | BBD & ML | 3.70 | 10.79 |
+
+    | BBD & ML & Err. Cor. | 3.62 | 8.49 |'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Harmonic Mean Diameter
+
+
+    ![](img/ceee3949c03b1c37ef76fff8972659a7_7_0.png)
+
+
+    **Figure 3.** HMD distribution for different pH, incubation time and metal concentration
+    values.
+
+
+    specifically for that set. However, when this model was used with new and unseen
+    inputs, as in the Validation Set, error increased significantly, indicating a
+    generalization issue. “BBD & ML & Err. Cor.” case produced the best outputs for
+    the input values in the Validation Set, showing that utilizing BBD, ML, and error
+    correction approach resulted in better generalization and approximation.
+
+
+    One point that should be noted is that the error correction algorithm involves
+    random value generation within preset limits. Hence it is possible to model a
+    better NN with another error-corrected output set. Therefore, it is possible to
+    automate this part to produce multiple output sets and multiple NN trainings in
+    parallel, then to select the one giving the lowest error.
+
+
+    The ML-estimated HMD distribution for different pH, incubation time and metal
+    concentration values is shown graphically in Figure 3. This type of graph provides
+    insight for optimization studies, where the objective is finding the inputs that
+    minimize the output. Therefore, the range of the output is colored from green
+    (smallest, desired) to red (biggest, unwanted).
+
+
+    Both BBD and NN are considered powerful data modeling tools for the systems in
+    which there is no exact information on the mathematical relationship between the
+    inputs and outputs. These can capture and represent complex nonlinear relationships.[21]
+    When reviewing the literature on ML and nanoparticles, it was found that there
+    were few articles on applying experimental results. The existing articles either
+    only used RSM or only provided estimated data on size and color association with
+    ML.[18,22,32,43] The results presented here show that combining BBD and NN gives
+    even better estimations for NPS, in an approach that requires less cost, labor,
+    and less time, and is greener. This approach has not been reported in the literature
+    before.
+
+
+    # Conclusions
+
+
+    This is a model study created with both statistical experimental design and ML,
+    showing the potential of effective
+
+
+    green synthesis nanoparticle production. Utilizing ML in the process of NPS shows
+    potential, but an obstacle is obtaining sufficient data. This study attempts to
+    overcome this bottleneck, and presents promising results with a two-stage approach.
+    In the first stage, BBD was used for experimental setup, quadratic model formulation
+    and data generation. In the second stage, an ML model, namely a Neural Network
+    structure was trained with the data generated in the previous stage.
+
+
+    An automated and fast data generation method using BBD formulation that is based
+    on real experiment results is proposed so that ML could be fed with these data
+    to learn the relationship between the nanoparticle size and several affecting
+    factors.
+
+
+    Obtained results showed that the proposed combined BBD & ML strategy with enhanced
+    data provided better nanoparticle size estimations than the statistical BBD approach
+    alone. When the experiments were performed with completely new and unseen values,
+    BBD’s prediction was poor with 21.92% average error, pointing to a generalization
+    problem. However, BBD & ML combined approach with error correction gave 8.49%
+    average error for the same input set. This result clearly represents an improvement
+    in favor of ML usage.
+
+
+    This two-stage BBD & ML idea is not limited to the NPS process; it can be applied
+    to any area where statistical methods such as RSM and BBD are used for modeling
+    but data availability is limited, such as the production of valuable biotechnological
+    products (enzymes, polysaccharides, bacterial cellulose, glycan etc.), the removal
+    of pollutants, the synthesis of microorganisms, the calculation of hydrogen production
+    yields. The benefits of this approach is that it is low cost, fast, and environment
+    friendly, and shows improved performance as compared to using BBD alone.
+
+
+    In this study, 5,000 was determined as the amount of generated data required for
+    the NPS process. As a comparison, NN training can be repeated with both greater
+    and lesser amounts and results can be observed. For other processes using a different
+    number of variables, data generation could have a different sampling set. Moreover,
+    an automated process can be introduced to produce multiple output sets with different
+    random error correction values. In this way, multiple NN trainings can be performed
+    in parallel, and then the optimum NN with the lowest prediction error can be selected.
+
+
+    It is desirable to create common and accessible public pools for the data produced
+    in similar researches, but not possible at the moment. Until such possibilities,
+    data generation with BBD and ML usage idea proposed here could be a solution.
+
+
+    # Statements and declarations
+
+
+    # Authors’ contributions
+
+
+    Gulizar Caliskan: Conceptualization, Methodology, Writing-Review & Editing, Resources,
+    Investigation, Formal Analysis. Ayca Kumluca Topalli: Conceptualization, Methodology,
+    Writing-Review & Editing, Formal analysis, Software.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Competing interests
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper. As corresponding author, on the behalf of all authors, I confirm that the
+    manuscript has been read and approved for submission by all the named authors.
+
+
+    # Disclosure statement
+
+
+    No potential conflict of interest was reported by the author(s).
+
+
+    # ORCID
+
+
+    Gulizar Caliskan http://orcid.org/0000-0001-6221-9495
+
+    Ayca Kumluca Topalli http://orcid.org/0000-0001-7712-5790
+
+
+    # Data availability statement
+
+
+    Data will be made available on request.
+
+
+    # References
+
+
+    +   1. Dahounane, S. A.; Mechouet, M.; Alvarez, F. J.; Agathos, S. N.; Jeffryes,
+    C. Microalgae: An Outstanding Tool in Nanotechnology. Bionatura 2016, 1, 196–201.
+    DOI: 10.21931/RB/2016.01.04.7.
+
+    +   2. Nikaeen, G.; Yousefinejad, S.; Rahmdel, S.; Samari, F.; Mahdavinia, S.
+    Central Composite Design for Optimizing the Biosynthesis of Silver Nanoparticles
+    Using Plantago Major Extract and Investigating Antibacterial, Antifungal and Antioxidant
+    Activity. Sci. Rep. 2020, 10, 9642. DOI: 10.1038/s41598-020-66357-3.
+
+    +   3. Shah, M.; Fawcett, D.; Sharma, S.; Tripathy, S. K.; Poinern, G. E. J. Green
+    Synthesis of Metallic Nanoparticles via Biological Entities. Materials 2015, 8,
+    7278–7308. DOI: 10.3390/ma8115377.
+
+    +   4. Singh, J.; Dutta, T.; Kim, K. H.; Rawat, M.; Samddar, P.; Kumar, P. “Green”
+    Synthesis of Metals and Their Oxide Nanoparticles: Applications for Environmental
+    Remediation. J. Nanobiotechnol. 2018, 16, 84. DOI: 10.1186/s12951-018-0408-4.
+
+    +   5. Purohit, J.; Chattopadhyay, A.; Singh, N. K. Green Synthesis of Microbial
+    Nanoparticles: Approaches to Application. In Nanotechnology in Life Science, 2019;
+    pp 35–60. DOI: 10.1007/978-3-030-16534-5_3.
+
+    +   6. McNamara, K.; Tofail, S. A. M. Nanoparticles in Biomedical Applications.
+    Adv. Phys. X 2017, 2, 54–88. DOI: 10.1080/23746149.2016.1254570.
+
+    +   7. Khan, H. A.; Sakharkar, M. K.; Nayak, A.; Kishore, U.; Khan, A. Nanoparticles
+    for Biomedical Applications: An Overview; Elsevier Ltd., 2018. DOI: 10.1016/B978-0-08-100716-6.00014-3.
+
+    +   8. Pantidos, N. Biological Synthesis of Metallic Nanoparticles by Bacteria,
+    Fungi and Plants. J. Nanomed. Nanotechnol. 2014, 5, 1–10. DOI: 10.4172/2157-7439.1000233.
+
+    +   9. Narayanan, K. B.; Sakthivel, N. Biological Synthesis of Metal Nanoparticles
+    by Microbes. Adv. Colloid Interface Sci. 2010, 156, 1–13. DOI: 10.1016/j.cis.2010.02.001.
+
+    +   10. Mansoor, A.; Khurshid, A.; Z.; Mansoor, E.; Khan, M. T.; Ratnayake, J.;
+    Jamal, A. Correction to: Effect of Currently Available Nanoparticle Synthesis
+    Routes on Their Biocompatibility with Fibroblast Cell Lines. Molecules (vol 27,
+    6972, 2022). Molecules 2022, 27, 6972. DOI: 10.3390/molecules28104173.
+
+    +   11. Singh, P.; Kim, Y. J.; Zhang, D.; Yang, D. C. Biological Synthesis of
+    Nanoparticles from Plants and Microorganisms. Trends Biotechnol. 2016, 34, 588–599.
+    DOI: 10.1016/j.tibtech.2016.02.006.
+
+    +   12. Nasrollahzadeh, M.; Atarod, M.; Sajjadi, M.; Sajadi, S. M.; Issaabadi,
+    Z. Plant-Mediated Green Synthesis of Nanostructures: Mechanisms, Characterization,
+    and Applications, 1st ed.; Elsevier Ltd., 2019; Vol. 28. DOI: 10.1016/B978-0-12-813586-0.00006-7.
+
+    +   13. Nayak, S.; Sajankila, S. P.; Goveas, L. C.; Rao, V. C.; Mutalik, S.; Shreya,
+    B. A. Two Fold Increase in Synthesis of Gold Nanoparticles Assisted by Proteins
+    and Phenolic Compounds in Pongamia Seed Cake Extract: Response Surface Methodology
+    Approach. SN Appl. Sci. 2020, 2, 1–12. DOI: 10.1007/s42452-020-2348-5.
+
+    +   14. Ba-Abbad, M. M.; Chai, P. V.; Benamour, A.; Ewis, D.; Mohammad, A. W.;
+    Mahmoudi, E. Optimizing and Control of Effective Synthesize Parameters for Fe3O4
+    Nanoparticles Using Response Surface Methodology. Chem. Pap. 2022, 76, 6359–6370.
+    DOI: 10.1007/s11696-022-02320-y.
+
+    +   15. Caliskan, G.; Mutaf, T.; Agba, H. C.; Elibol, M. Green Synthesis and Characterization
+    of Titanium Nanoparticles Using Microalga, Phaeodactylum Tricornutum. Geomicrobiol.
+    J. 2022, 39, 83–96. DOI: 10.1080/01490451.2021.2008549.
+
+    +   16. Salari, M. Optimization by Box-Behnken Design and Synthesis of Magnetite
+    Nanoparticles for Removal of the Antibiotic from an Aqueous Phase. Adsorpt. Sci.
+    Technol. 2022, 2022, 1–13. DOI: 10.1155/2022/1267460.
+
+    +   17. Nayak, S.; Manjunatha, K. B.; Goveas, L. C.; Rao, C. V.; Sajankila, S.
+    P. Investigation of Nonlinear Optical Properties of AgNPs Synthesized Using Cyclea
+    Peltata Leaf Extract Post OVAT Optimization. BioNanoScience 2021, 11, 884–892.
+    DOI: 10.1007/s12668-021-00875-w.
+
+    +   18. Abhishek, S. R.; Sneha, N. J.; Karthik, P. B. H. An Emerging Treatment
+    Technology: Exploring Deep Learning and Computer Vision Approach in Revealing
+    Biosynthesized Nanoparticle Size for Optimization Studies. In Contaminants of
+    Emerging Concerns and Reigning Removal Technologies, NMAM Institute of Technology,
+    CRC Press; 2022, pp 403–428. DOI: 10.1201/978103247869-20.
+
+    +   19. Keskin Gündoğdu, T.; Deniz, İ.; Çalışkan, G.; Şahin, E. S.; Azbar, N.
+    Experimental Design Methods for Bioengineering Applications. Crit. Rev. Biotechnol.
+    2016, 36, 368–388. DOI: 10.3109/07388551.2014.973014.
+
+    +   20. Majumder, A.; Singh, A.; Goyal, A. Application of Response Surface Methodology
+    for Glucan Production from Leuconostoc Dextranicum and Its Structural Characterization.
+    Carbohydr. Polym. 2009, 75, 150–156. DOI: 10.1016/j.carbpol.2008.07.014.
+
+    +   21. Witek-Krowiak, A.; Chojnacka, K.; Podstawczyk, D.; Dawiec, A.; Bubala,
+    K. Application of Response Surface Methodology and Artificial Neural Network Methods
+    in Modelling and Optimization of Biosorption Process. Bioresour. Technol. 2014,
+    160, 150–160. DOI: 10.1016/j.biortech.2014.01.021.
+
+    +   22. Mekki-Berrada, F.; Ren, Z.; Huang, T.; Wong, W. K.; Zheng, F.; Xie, J.;
+    Tian, I. P. S.; Jayavelu, S.; Mahfoud, Z.; Bash, D.; et al. Two-Step Machine Learning
+    Enables Optimized Nanoparticle Synthesis. NPI Comput. Mater. 2021, 7, 1–10. DOI:
+    10.1038/s41524-021-00520-w.
+
+    +   23. Jordan, M. I.; Mitchell, T. M. Machine Learning: Trends, Perspectives,
+    and Prospects. Science 2015, 349, 255–260. DOI: 10.1126/science.aaa8415.
+
+    +   24. Butler, K. T.; Davies, D. W.; Cartwright, H.; Isayev, O.; Walsh, A. Machine
+    Learning for Molecular and Materials Science. Nature 2018, 559, 547–555. DOI:
+    10.1038/s41586-018-0337-2.
+
+    +   25. Ghosal, S.; Blystone, D.; Singh, A. K.; GanapathySubramanian, B.; Singh,
+    A.; Sarkar, S. An Explainable Deep Machine Vision Framework for Plant Stress Phenotyping.
+    Proc. Natl. Acad. Sci. USA 2018, 115, 4613–4618. DOI: 10.1073/pnas.1716999115.
+
+    +   26. Schuhmacher, A.; Gatto, A.; Hinder, M.; Kuss, M.; Gassmann, O. The Upside
+    of Being a Digital Pharma Player. Drug Discov. Today 2020, 25, 1569–1574. DOI:
+    10.1016/j.drudis.2020.06.002.
+
+    +   27. He, Y.; Ye, Z.; Liu, X.; Wei, Z.; Qiu, F.; Li, H. F.; Zheng, Y.; Ouyang,
+    D. Can Machine Learning Predict Drug Nanocrystals? J. Control Release 2020, 322,
+    274–285. DOI: 10.1016/j.jconrel.2020.03.043.
+
+    +   28. Zhao, Q.; Ye, Z.; Su, Y.; Ouyang, D. Predicting Complexation Performance
+    between Cyclodextrins and Guest Molecules by'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Integrated Machine Learning and Molecular Modeling Techniques. Acta Pharm.
+    Sin. B 2019, 9, 1241–1252. DOI: 10.1016/j.apsb.2019.04.004.
+
+
+    29. Gao, H.; Wang, W.; Dong, J.; Ye, Z.; Ouyang, D. An Integrated Computational
+    Methodology with Data-Driven Machine Learning, Molecular Modeling and PBPK Modeling
+    to Accelerate Solid Dispersion Formulation Design. Eur. J. Pharm. Biopharm. 2021,
+    158, 336–346. DOI: 10.1016/j.ejpb.2020.12.001.
+
+
+    30. Gao, H.; Jia, H.; Dong, J.; Yang, X.; Li, H.; Ouyang, D. Integrated in Silico
+    Formulation Design of Self-Emulsifying Drug Delivery Systems. Acta Pharm. Sin.
+    B 2021, 11, 3585–3594. DOI: 10.1016/j.apsb.2021.04.017.
+
+
+    31. Tao, H.; Wu, T.; Aldeghi, M.; Wu, T. C.; Aspuru-Guzik, A.; Kumacheva, E. Nanoparticle
+    Synthesis Assisted by Machine Learning. Nat. Rev. Mater. 2021, 6, 701–716. DOI:
+    10.1038/s41578-021-0037-5.
+
+
+    32. Ban, Z.; Yuan, P.; Yu, F.; Peng, T.; Zhou, Q.; Hu, X. Machine Learning Predicts
+    the Functional Composition of the Protein Corona and the Cellular Recognition
+    of Nanoparticles. Proc. Natl. Acad. Sci. USA 2020, 117, 10492–10499. DOI: 10.1073/pnas.1919755117.
+
+
+    33. Shabanzadeh, P.; Norazaksenu; Shameli, K.; Ismail, F.; Mohagheghtarbar, M.
+    Application of Artificial Neural Network (ANN) for the Prediction of Size of Silver
+    Nanoparticles Prepared by Green Method. Dig. J. Nanomater. Biostruct. 2013, 8,
+    541–549.
+
+
+    34. Shabanzadeh, P.; Senu, N.; Shameli, K.; Ismail, F.; Zamanian, A.; Mohagheghtarbar,
+    M. Prediction of Silver Nanoparticles’ Diameter in Montmorillonite/Chitosan Bionanocomposites
+    by Using Artificial Neural Networks. Res. Chem. Intermed. 2015, 41, 3275–3287.
+    DOI: 10.1007/s11164-013-1431-6.
+
+
+    35. Mottaghi, S.; Nazari, M.; Fattahi, S. M.; Nazari, M.; Babamohammadi, S. Droplet
+    Size Prediction in a Microfluidic Flow Focusing Device Using an Adaptive Network
+    Based Fuzzy Inference System. Biomed. Microdevices 2020, 22, 1–12. DOI: 10.1007/s10544-020-00513-4.
+
+
+    36. Damiati, S. A.; Rossi, D.; Joensson, H. N.; Damiati, S. Artificial Intelligence
+    Application for Rapid Fabrication of Size-Tunable PLGA Microparticles in Microfluidics.
+    Sci. Rep. 2020, 10, 19517. DOI: 10.1038/s41598-020-76477-5.
+
+
+    37. Lashkaripour, A.; Rodriguez, C.; Mehdipour, N.; Mardian, R.; McIntyre, D.;
+    Ortiz, L.; Campbell, J.; Densmore, D. Machine Learning Enables Design Automation
+    of Microfluidic Flow-Focusing Droplet Generation. Nat. Commun. 2021, 12, 1–14.
+    DOI: 10.1038/s41467-020-20284-z.
+
+
+    38. Rizkin, B. A.; Shkolnik, A. S.; Ferraro, N. J.; Hartman, R. L. Combining Automated
+    Microfluidic Experimentation with Machine Learning for Efficient Polymerization
+    Design. Nat. Mach. Intell. 2020, 2, 200–209. DOI: 10.1038/s42256-020-0166-5.
+
+
+    39. Ocampo, I.; López, R. R.; Camacho-León, S.; Nerguizian, V.; Stiharu, I. Comparative
+    Evaluation of Artificial Neural Networks and Data Analysis in Predicting Liposome
+    Size in a Periodic Disturbance Micromixer. Micromachines (Basel) 2021, 12, 1164.
+    DOI: 10.3390/mi12101164.
+
+
+    40. Zhang, Y.; Wu, Y. Introducing Machine Learning Models to Response Surface
+    Methodologies. In Response Surface Methodology in Engineering Science; Intech,
+    2020; Vol. 11, (tourism); p 13.
+
+
+    41. Wang, W.; Feng, S.; Ye, Z.; Gao, H.; Lin, J.; Ouyang, D. Prediction of Lipid
+    Nanoparticles for MRNA Vaccines by the Machine Learning Algorithm. Acta Pharm.
+    Sin. B 2022, 12, 2950–2962. DOI: 10.1016/j.apsb.2021.11.021.
+
+
+    42. Ilhan-Ayisigi, E.; Ulucan, F.; Saygili, E.; Saglam-Metiner, P.; Gulce-Iz,
+    S.; Yesil-Celiktas, O. Nano-Vesicular Formulation of Propolis and Cytotoxic Effects
+    in a 3D Spheroid Model of Lung Cancer. J. Sci. Food Agric. 2020, 100, 3525–3535.
+    DOI: 10.1002/jsfa.10400.
+
+
+    43. Chen, X.; Lv, H. Intelligent Control of Nanoparticle Synthesis on Microfluidic
+    Chips with Machine Learning. NPG Asia Mater. 2022, 14, 1–20. DOI: 10.1038/s41427-022-00416-1.'
+  merge: -1
+  img_proc: true
