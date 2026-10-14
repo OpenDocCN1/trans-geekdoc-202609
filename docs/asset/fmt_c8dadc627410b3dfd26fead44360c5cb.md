@@ -1,0 +1,66 @@
+
+# References
+
+21. Mattei, T. A. (2017). Privacy, Confidentiality, and Security of Health Care Information: Lessons From the Recent WannaCry Cyberattack. *World Neurosurgery*, **104**, pp. 972–974. doi: https://doi.org/10.1016/j.wneu.2017.06.104
+
+22. McAfee. (2017). *McAfee Labs Threat Report* [Online]. Available at: [www.mcafee.com/uk/resources/reports/rp-quarterly-threats-sept-2017.pdf](https://www.mcafee.com/uk/resources/reports/rp-quarterly-threats-sept-2017.pdf) (Accessed: 1 August 2018).
+
+23. McGoogan, C. (2017, 16 May). How to Protect Yourself From Ransomware [Online]. Available at: [http://www.telegraph.co.uk/technology/0/protect-ransomware/](http://www.telegraph.co.uk/technology/0/protect-ransomware/) (Accessed: 14 August 2017).
+
+24. No More Ransom. (2017). Unlocking Your Digital Life Without Paying Your Attackers [Online]. Available at: [https://www.nomoreransom.org/en/index.html](https://www.nomoreransom.org/en/index.html) (Accessed: 1 August 2018).
+
+25. Ølnes, S., Ubacht, J. and Janssen, M. (2017). Blockchain in Government: Benefits and Implications of Distributed Ledger Technology for Information Sharing. *Government Information Quarterly*, **34**(3), pp. 355–364. doi: [https://doi.org/10.1016/j.giq.2017.09.007](https://doi.org/10.1016/j.giq.2017.09.007).
+
+26. Palmer, D. (2017). This Malvertising Campaign Infected PCs With Ransomware Without Users Even Clicking a Link [Online]. Available at: [http://www.zdnet.com/article/this-malvertising-campaign-infected-pcs-with-ransomware-without-users-even-clicking-a-link/](http://www.zdnet.com/article/this-malvertising-campaign-infected-pcs-with-ransomware-without-users-even-clicking-a-link/) (Accessed: 6 August 2018).
+
+27. Parliamentary Office of Science and Technology. (2017). Cyber Security of UK Infrastructure [Online]. Available at: [http://researchbriefings.files.parliament.uk/documents/POST-PN-0554/POST-PN-0554.pdf](http://researchbriefings.files.parliament.uk/documents/POST-PN-0554/POST-PN-0554.pdf) (Accessed: 6 August 2018).
+
+28. Parent, M. and Cusack, B. (2016). Cybersecurity in 2016: People, Technology, and Processes. *Business Horizons*, **59**(6), pp. 567–569. doi: [https://doi.org/10.1016/j.bushor.2016.08.005](https://doi.org/10.1016/j.bushor.2016.08.005).
+
+29. Pinto, R. (2018). How Blockchain Can Solve Identity Management Problems [Online]. Available at: [https://www.forbes.com/sites/forbestechcouncil/2018/07/27/how-blockchain-can-solve-identity-management-problems/#1c63fa913f56](https://www.forbes.com/sites/forbestechcouncil/2018/07/27/how-blockchain-can-solve-identity-management-problems/#1c63fa913f56) (Accessed: 22 January 2019).
+
+30. RiskIQ Research. (2017). Malvertising Rises 132% in 2016 Over 2015, Says RiskIQ Research [Online]. Available at: [http://www.businesswire.com/news/home/20170131005420/en/Malvertising-Rises-132-2016-2015-RiskIQ-Research](http://www.businesswire.com/news/home/20170131005420/en/Malvertising-Rises-132-2016-2015-RiskIQ-Research) (Accessed: 6 August 2018).
+
+31. Satoshi, N. (2008). Bitcoin: A Peer-to-Peer Electronic Cash System [Online]. Available at: [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf). (Accessed: 6 August 2018).
+
+32. Sharma, U. (2017). Blockchain in Healthcare: Patient Benefits and More [Online]. Available at: [https://www.ibm.com/blogs/blockchain/2017/10/blockchain-in-healthcare-patient-benefits-and-more/](https://www.ibm.com/blogs/blockchain/2017/10/blockchain-in-healthcare-patient-benefits-and-more/) (Accessed: 25 July 2018).
+
+33. Steer, S. (2017). Defending Against Spear-Phishing. *Computer Fraud and Security*, **2017**(8), pp. 18–20. doi: [https://doi.org/10.1016/S1361-3723(17)30074-X](<https://doi.org/10.1016/S1361-3723(17)30074-X>).
+
+34. Sulleyman, A. (2017, 12 May). Medical Information Can Be Worth Ten Times More Than Credit Card Numbers on the Deep Web [Online]. Available at: [https://www.independent.co.uk/life-style/gadgets-and-tech/news/nhs-cyber-attack-medical-data-records-stolen-why-so-valuable-to-sell-financial-a7733171.html](https://www.independent.co.uk/life-style/gadgets-and-tech/news/nhs-cyber-attack-medical-data-records-stolen-why-so-valuable-to-sell-financial-a7733171.html) (Accessed: 27 June 2018).
+
+35. Swan, M. (2015). *Blockchain: Blueprint for a New Economy*. Sebastopol, CA, USA: O’Reilly Media Inc.
+
+36. The WannaCry Ransomware Attack. (2017). *Strategic Comments*, **23**(4), pp. vii–ix. doi: [http://dx.doi.org/10.1080/13567888.2017.1335101](http://dx.doi.org/10.1080/13567888.2017.1335101).
+
+37. Thomson Reuters. (2018). e-Estonia: The Power and Potential of Digital Identity [Online]. Available at: [https://blogs.thomsonreuters.com/answerson/e-estonia-power-potential-digital-identity/](https://blogs.thomsonreuters.com/answerson/e-estonia-power-potential-digital-identity/) (Accessed: 22 January 2019).
+
+38. World Bank. (2015). World Development Indicators: Health Expenditure Per Capita (Current US$) [Online]. Available at: [https://data.worldbank.org/indicator/SH.XPD.PCAP](https://data.worldbank.org/indicator/SH.XPD.PCAP) (Accessed: 6 August 2018).
+
+39. Xu, J. (2016). Are Blockchains Immune to All Malicious Attacks? *Financial Innovation*, **2**(1), p. 1. doi: [https://doi.org/10.1186/s40854-016-0046-5](https://doi.org/10.1186/s40854-016-0046-5).
+
+40. Yaqoob, I. et al. (2017). The Rise of Ransomware and Emerging Security Challenges in the Internet of Things. *Computer Networks*, **129**(2), pp. 444–458. doi: [https://doi.org/10.1016/j.comnet.2017.09.003](https://doi.org/10.1016/j.comnet.2017.09.003).
+
+41. Young, A. and Yung, M. (2017). Privacy and Security Cryptovirology: The Birth, Neglect, and Explosion of Ransomware. *Communications of the ACM*, **60**(7), pp. 24–26. doi: 10.1145/3097347
+
+# Chapter 7
+
+## Bring Your Own Device: GDPR Compliant or Headache? The Human Aspect in Security and Privacy
+
+Jaime Ibarra Jimenez\* and Hamid Jahankhani†
+
+*Northumbria University London, UK*
+
+\*jaime.jimenez@northumbria.ac.uk
+
+†hamid.jahankhani@northumbria.ac.uk
+
+## ABSTRACT
+
+The world is facing an era in which technology has a crucial impact on the growth of businesses. It is claimed that in 2020 20 billion devices will be connected to the internet, therefore, data is crucial for employees, customers and organisations. The implementation of the European General Data Protection Regulation (GDPR) gives the owner better control of their personal data. Consequently, organisations must be prepared to face cutting-edge threats to security in order to protect individuals against potential harm caused by unauthorized access to their data. Bring Your Own Device (BYOD) is a policy which provides some flexibility within organisations, and which results in better commitment in employees. This chapter analyzes the impact of GDPR in BYOD architectures and proposes the integration of a multi-layer policy with an Information Governance Framework to ensure data privacy, focusing on the human factor when protecting personal devices.
+
+*Keywords*: BYOD, GDPR, Blockchain, cyber security, mobile platforms, insider attack
+
+### 7.1. Introduction
+
+Since May of 2018, the European General Data Protection Regulation (GDPR) has been implemented, and organisations keep struggling to adapt their procedures and core functions to achieve regulatory compliance. A survey of over 1,000 companies in the UK, Germany, France, and Italy before its implementation discovered that 60% of these companies were not ready for GDPR, whilst 44% showed concern about whether their company could comply with it (Jltspecialty.com, 2018).
