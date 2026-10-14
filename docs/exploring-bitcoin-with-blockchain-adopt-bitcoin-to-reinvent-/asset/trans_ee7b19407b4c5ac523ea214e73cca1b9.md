@@ -1,0 +1,204 @@
+
+# 比特币网络消息传递
+
+比特币网络节点之间进行通信的原因多种多样，例如了解其他对等节点、确保连接仍处于活动状态、帮助其他节点与自身同步、请求缺失的区块，或广播新接收到的区块或交易。在本主题中，您将详细了解消息传递及其格式，并通过编写客户端来对其进行编程实现。
+
+## 消息格式
+
+网络上交换的消息包含消息头和载荷，载荷取决于命令类型。
+
+以下是消息格式：
+
+![](images/Figure-7.6.jpg)
+
+**图 7.6：** 协议消息格式示意图
+
+以下是消息格式中各字段的解释：
+
+*   **Magic（魔数）** 与我们在 ***[第 6 章、区块链、交易与挖矿](#c06.xhtml)*** 的区块结构中学到的相同，我们可以在 [表 6.3](#c06.xhtml#tab6_3) 中查看其数值。
+*   **Command（命令）** 是以全零填充（即 `b'\0'`）的 ASCII 码形式发送的命令。
+*   **Length（长度）** 是载荷的长度。
+*   **Checksum（校验和）** 是载荷的校验和。
+*   **Payload（载荷）** 是发送命令的参数。
+
+以下是创建此消息的方法：
+
+```
+def createMessage(command, payload):
+    magic = 0x0709110B
+    checksum = hashlib.sha256(hashlib.sha256(payload).digest()).digest()[0:4]
+    magic_b = struct.pack('<L', magic)
+    cmd_b = struct.pack('<12s', command.encode('ascii'))
+    payload_len_b = struct.pack('<L', len(payload))
+    checksum_b = struct.pack('<4s', checksum)
+    msg = magic_b + cmd_b + payload_len_b + checksum + payload
+    return msg
+```
+
+**程序 7.3：** 创建协议消息的方法
+
+## 建立连接
+
+比特币通过首先交换版本信息，然后确认接受来建立连接。在确认版本之前，节点需要发送自己的版本。因此，网络握手过程如下所示：
+
+![](images/Figure-7.7.jpg)
+
+**图 7.7：** 建立比特币连接的消息传输序列示意图
+
+以下是 `version`（版本）消息载荷结构：
+
+![](images/Figure-7.8.jpg)
+
+**图 7.8：** 版本消息载荷结构
+
+以下是 `version` 消息各字段的解释：
+
+*   `Version` 是主机上运行的协议版本。
+*   **Service（服务）** 是发送节点支持的服务。以下是服务代码列表：
+
+| **字节代码** | **提供的服务** | **描述** |
+| --- | --- | --- |
+| 1 | NODE_NETWORK | 全节点 |
+| 2 | NODE_GETUTXO | BIP 0064：支持 getutxos 和 utxos |
+| 4 | NODE_BLOOM | BIP 0111：支持布隆过滤器 |
+| 8 | NODE_WITNESS | BIP 0144：支持隔离见证 |
+| 1024 | NODE_NETWORK_LIMITED | BIP 0159：修剪节点 |
+
+**表 7.2：** Version 消息所需的服务代码列表
+
+*   **Timestamp（时间戳）** 是载荷的 Unix 纪元时间。
+*   **Addr Recv（接收方地址）** 是接收连接节点的地址。因此，发送 `version` 载荷的节点将拥有其正在连接的对等节点的地址和端口。Services 字段通常设为全零。
+*   **Addr from（发送方地址）** 是发起连接节点的地址。因此，发送 `version` 载荷的节点将拥有自己的地址和端口。它还包括发送方提供的服务。
+*   **Nonce（随机数）** 是一个随机数字，用于识别我们是否连接到了我们自己。
+*   **User Agent（用户代理）** 用于标识节点上运行的软件。它在 BIP-0014 中定义。
+*   **Start Height（起始高度）** 是节点区块链上的当前区块高度。
+*   **Relay（中继）** 是一个可选的布尔值，由 SPV 设置为 false，以指示该节点将不参与消息中继。这意味着它不希望对等节点通告带有 MSG_BLOCK 的 `inv` 消息。这可以防止节点被 `inv` 消息淹没。这在 BIP 0037 中定义。
+
+以下是撰写时节点版本的分布情况：
+
+![](images/Figure-7.9.jpg)
+
+**图 7.9：** 显示比特币网络上节点版本分布的图表
+
+以下是比特币网络中用户代理的分布情况：
+
+![](images/Figure-7.10.jpg)
+
+**图 7.10：** 显示比特币网络中用户代理分布的柱状图
+
+以下是创建 `version` 载荷的程序：
+
+```
+from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
+import struct
+import random
+
+rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:18332" % ('test', 'test'))
+
+def setVarInt(n: int):
+    if n < 0xfd:
+        n_h = '%02x' % n
+    elif n > 0xfd and n < 0xffff:
+        n_h = 'fd%04x' % n
+    elif n > 0xffff and n < 0xFFFFFFFF:
+        n_h = 'fe%08x' % n
+    else:
+        n_h = 'ff%016x' % n
+    return bytes.fromhex(n_h)
+
+def getLastBlockHeight():
+    height = rpc_connection.getblockcount()
+    return height
+
+def createUserAgent():
+    sub_version = "/MyTestAgent:0.0.1/"
+    sub_version_b = sub_version.encode()
+    len_b = setVarInt(len(sub_version_b))
+    return len_b + sub_version_b
+
+def createRecvIPAddress(ip, port):
+    service_b = struct.pack('<Q', 1)
+    ip_b = socket.inet_aton(ip)
+    ipv4_to_ipv6 = bytearray.fromhex("00000000000000000000ffff") + ip_b
+    ipv6addr_b = struct.pack('>16s', ipv4_to_ipv6)
+    port_b = struct.pack('>H', port)
+    addr_b = service_b + ipv6addr_b + port_b
+    return(addr_b)
+
+def createTransIPAddress():
+    service_b = struct.pack('<Q', 1)
+    ip_b = socket.inet_aton("0.0.0.0")
+    ipv4_to_ipv6 = bytearray.fromhex("000000000000000000000000") + ip_b
+    ipv6addr_b = struct.pack('>16s', ipv4_to_ipv6)
+    port_b = struct.pack('>H', 0)
+    addr_b = service_b + ipv6addr_b + port_b
+    return(addr_b)
+
+def createVersionPayload(s: socket, version: int):
+    version_b = struct.pack('<L', version)
+    services_b = struct.pack('<Q', 1)
+    timestamp_b = struct.pack('<Q', int(time.time()))
+    myip, myport = s.getsockname()
+    addr_recv_b = struct.pack('<26s', createRecvIPAddress(myip, myport))
+    addr_trans_b = struct.pack('<26s', createTransIPAddress())
+    nonce_b = struct.pack('<Q', random.getrandbits(64))
+    user_agent = createUserAgent()
+    user_agent_b = struct.pack('<%ds' % len(user_agent), user_agent)
+    start_height_b = struct.pack('<L', getLastBlockHeight())
+    payload = version_b \
+        + services_b \
+        + timestamp_b \
+        + addr_recv_b \
+        + addr_trans_b \
+        + nonce_b \
+        + user_agent_b \
+        + start_height_b
+    return payload
+```
+
+**程序 7.4：** 创建 Version 消息载荷的程序
+
+为了创建消息载荷，我们使用 Python 的 `struct.pack`。以下是符号及其含义：
+
+| **符号** | **含义** |
+| --- | --- |
+| `<` | 小端序 |
+| `>` | 大端序 |
+| `B` | 1 字节无符号整数 |
+| `H` | 2 字节无符号整数 |
+| `L` | 4 字节无符号整数 |
+| `Q` | 8 字节无符号整数 |
+| `xs` | 大小为 x 的字节数组 |
+
+**表 7.3：** Python struct pack 符号及其含义列表
+
+您可以查看 Python 文档以获取更多详情：
+
+[https://docs.python.org/3.8/library/struct.html](https://docs.python.org/3.8/library/struct.html)
+
+IP 地址和端口采用大端序，而消息的其余部分采用小端序格式。当我们打包 ASCII 字符串时，它会将其转换为字节数组并用零进行填充。
+
+我们按如下方式调用上述方法：
+
+```
+if __name__ == '__main__':
+    peers = getTestnetPeers()
+    p = random.choice(peers)
+    s = None
+    peerinfo = {}
+    print("Trying to connect to ", p)
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    err = s.connect(p)
+    print('TCP Connection Established')
+    payload = createVersionPayload(s, 70015)
+    print('Version payload: ', payload.hex())
+    s.close()
+```
+
+这将创建以下十六进制字符串形式的载荷：
+
+![](images/Figure-7.11.jpg)
+
+**图 7.11：** 显示由 CreateVersionPayload 程序创建的版本载荷
+
+当我们接收到 `version` 消息时，我们会执行以下操作：

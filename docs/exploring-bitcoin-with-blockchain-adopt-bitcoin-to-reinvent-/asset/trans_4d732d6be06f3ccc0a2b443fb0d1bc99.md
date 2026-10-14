@@ -1,0 +1,127 @@
+
+
+## 程序 9.9：从 WIF 编码的私钥获取公钥的程序
+
+在前面的代码中，`b'\x04'` 是非压缩公钥中的前缀，而 `b'\x02'` 和 `b'\x03'` 用作压缩公钥的前缀。
+
+我们通过执行以下代码来调用前面的程序：
+
+```
+if __name__ == '__main__':
+    privkey_wif = 'cNdY2QGfetwijtrqzCK5tAoc78NtGkQJ8smYVaugDW6puLXJvLZG'
+    print('privkey(WIF) = ', privkey_wif)
+    privkey_s, network, compress = privkeyWif2Hex(privkey_wif)
+    pubkey_b = privkeyWif2pubkey(privkey_wif)
+    print('pubkey = %s' % pubkey_b.hex())
+    print('-----------------------------------------------------------')
+    privkey_wif = '91phZVP8Q5yMLEZbD41vfnGYWwEZuxbjQ5huSxiPUkkTiQw8SL2'
+    print('privkey(WIF) = ', privkey_wif)
+    privkey_s, network, compress = privkeyWif2Hex(privkey_wif)
+    pubkey_b = privkeyWif2pubkey(privkey_wif)
+    print('pubkey = %s' % pubkey_b.hex())
+```
+
+我们得到以下公钥：
+
+![](images/Figure-9.6.jpg)
+
+**图 9.6：** 显示从 WIF 编码私钥生成的公钥
+
+# 地址
+
+当商家或交易者要求以其服务或产品换取比特币时，他们会提供自己的比特币地址。我们将请求的比特币转账到他们的地址，并将剩余的找零保存到另一个地址。在本小节中，我们将理解并从公钥生成地址。
+
+下图展示了公钥哈希地址是如何生成的：
+
+![](images/Figure-9.7.jpg)
+
+**图 9.7：** 地址生成机制示意图
+
+公钥到地址的转换是一个两步过程。在第一步中，我们计算公钥的哈希值，即 `PKH`（**public-key-hash**，公钥哈希）。在第二步中，我们使用 `base58check` 算法对 `PKH` 进行编码。使用校验和的一个重要好处是，几乎不可能在输入错误的情况下仍生成有效地址。这是比特币的一项重要安全特性。助记码也使用 `base58check` 算法，提供相同的好处。错误的顺序、错误的单词或重复的单词几乎永远不会导致资金损失。
+
+使用 `hash160` 和地址代替公钥可提供增强的安全性。如果未来量子计算机能够从公钥推导出私钥，那么对公钥进行哈希处理仍将是安全的。因此，除非我们暴露了公钥，否则我们的比特币仍将是安全的。这很重要，因为公钥-私钥加密的失效将导致互联网上几乎所有事物陷入混乱。
+
+也可以使用脚本代替公钥。在这种情况下，前图中的公钥将被脚本替换。公钥地址称为 **Pay-to-Public-Key-Hash**（**P2PKH**，支付给公钥哈希）地址，脚本地址称为 **Pay-to-Script-Hash**（**P2SH**，支付给脚本哈希）地址。
+
+下表列出了与网络和地址类型相关的版本前缀：
+
+![](images/306.jpg)
+
+**表 9.2：** 地址前缀表
+
+在前面的表中，我们可以看到 `testnet` 和 `regtest` 使用相同的版本前缀。
+
+以下程序将公钥转换为地址：
+
+```
+PKH_MAINNET_PREFIX = 0x00
+SH_MAINNET_PREFIX = 0x05
+PKH_TESTNET_PREFIX = 0x6F
+SH_TESTNET_PREFIX = 0xC4
+PKH_REGTEST_PREFIX = 0x6F
+SH_REGTEST_PREFIX = 0xC4
+
+def hash160(secret: bytes):
+    secrethash = hashlib.sha256(secret).digest()
+    h = hashlib.new('ripemd160')
+    h.update(secrethash)
+    secret_hash160 = h.digest()
+    return secret_hash160
+
+def pkh2address(pkh: bytes):
+    prefix = PKH_TESTNET_PREFIX
+    address = base58checkEncode(bytes.fromhex('%02x' % prefix), pkh)
+    return address
+
+def sh2address(sh: bytes):
+    prefix = SH_TESTNET_PREFIX
+    address = base58checkEncode(bytes.fromhex('%02x' % prefix), pkh)
+    return address
+
+def pubkey2address(pubkey: bytes):
+    pkh = hash160(pubkey)
+    address = pkh2address(pkh)
+    return address
+```
+
+**程序 9.10：** 将公钥转换为地址的程序
+
+我们使用以下程序调用前面的方法，以从压缩和非压缩公钥获取地址：
+
+```
+if __name__ == '__main__':
+    pubkey = '0240bb63da114aa89f4d2cf35d695d3e52e6add7a4bae06f190d947bef5c62b5e0'
+    pubkey_b = bytes.fromhex(pubkey)
+    print('Compressed PubKey = ', pubkey_b.hex())
+    address = pubkey2address(pubkey_b)
+    print('Address = ', address)
+    print('-----------------------------------------------')
+    pubkey = '0440bb63da114aa89f4d2cf35d695d3e52e6add7a4bae06f190d947bef5c62b5e0e99601851593a9e54e2059a25d76512698acf60089935dedc015f1bb2bc81eda'
+    pubkey_b = bytes.fromhex(pubkey)
+    print('Uncompressed PubKey = ', pubkey_b.hex())
+    address = pubkey2address(pubkey_b)
+    print('Address = ', address)
+```
+
+我们得到以下结果：
+
+![](images/Figure-9.8.jpg)
+
+**图 9.8：** 显示从公钥生成的地址
+
+# 分层确定性（HD）钱包
+
+在早期版本中，钱包是存储在文件中的私钥-公钥对集合。该文件需要多次备份并保存在多个安全位置。这很麻烦，且在早期导致许多人丢失币。然而，这有一个优势：由于这些密钥不是从单一种子生成的，意外泄露秘密不会导致派生地址中的所有币丢失。这些是非确定性钱包。
+
+替代方案是确定性钱包，它使用单一种子和索引生成。分层确定性钱包需要一个表示密钥层级位置的字符串，而不是索引值。这允许从单一种子生成大量密钥。此外，它通过在层级中选择不同的层级位置，提供了一种为不同目的对地址进行分组的方法。
+
+分层确定性钱包使用 12 个、18 个或 24 个单词的助记码，这使得种子更容易记忆，同时提供与任何复杂密码相似的安全性。记忆和输入 12 个单词更容易。如果钱包需要每次都输入它们，或者你不想写在纸上，这很有用。24 个单词的代码更安全，在大多数情况下推荐使用。
+
+使用 BIP32 中定义的确定性钱包，可以更轻松地在需要时生成私钥和公钥对，或仅生成公钥。这消除了钱包实体形式的需求。因此，当我们旅行、消费或交易时，可以根据需要生成地址和私钥。仍然存在意外泄露助记码并损失所有积蓄的风险，但如果我们始终在离线状态下生成密钥或地址，几乎可以消除这种风险。有一种称为硬件钱包的专用设备正是这样做的，因此被认为是存储比特币的最佳方式。
+
+下图说明了使用 BIP32 规范的助记码词表为分层确定性钱包生成密钥的过程：
+
+![](images/Figure-9.9.jpg)
+
+**图 9.9：** 使用助记码词表生成密钥的示意图
+
