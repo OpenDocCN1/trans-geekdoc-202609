@@ -1,0 +1,38 @@
+
+- (137) 用于大规模碳捕获的新型金属有机框架的发现。 *arXiv*, 2306.08695, 2023.
+- (138) Fu, X.; Xie, T.; Rosen, A. S.; Jaakkola, T.; Smith, J. MOFDiff：用于金属有机框架设计的粗粒化扩散。 *arXiv*, 2310.10732, 2023.
+- (139) M. Bran, A.; Cox, S.; Schilter, O.; Baldassari, C.; White, A. D.; Schwaller, P. 用化学工具增强大型语言模型。 *Nature Machine Intelligence* **2024**, 6, 525.
+- (140) Kang, Y.; Kim, J. ChatMOF：用于预测和生成金属有机框架的自主人工智能系统。 *arXiv*, 2308.01423, 2023.
+- (141) Liu, S.; Nie, W.; Wang, C.; Lu, J.; Qiao, Z.; Liu, L.; Tang, J.; Xiao, C.; Anandkumar, A. 用于基于文本的检索和编辑的多模态分子结构-文本模型。 *Nature Machine Intelligence* **2023**, 5 (12), 1447–1457.
+- (142) Besserve, M.; Sun, R.; Janzing, D.; Schölkopf, B. 生成模型中外推的独立机制理论。 In *Proceedings of the AAAI Conference on Artificial Intelligence* **2021**, 35, 6741–6749.
+- (143) Thompson, N. C.; Greenewald, K.; Lee, K.; Manso, G. F. 深度学习的计算极限。 *arXiv*, 2007.05558, 2020.
+- (144) Villalobos, P.; Sevilla, J.; Besiroglu, T.; Heim, L.; Ho, A.; Hobbahn, M. 机器学习模型规模与参数差距。 *arXiv*, 2207.02852, 2022.
+- (145) Weiss, K.; Khoshgoftaar, T. M.; Wang, D. 迁移学习综述。 *Journal of Big Data* **2016**, 3, 1–40.
+- (146) Lim, Y.; Kim, J. 迁移学习在预测金属有机框架扩散性质中的应用。 *Molecular Systems Design & Engineering* **2022**, 7 (9), 1056–1064.
+- (147) Ma, R.; Colon, Y. J.; Luo, T. 金属有机框架中气体吸附的迁移学习研究。 *ACS Appl. Mater. Interfaces* **2020**, 12 (30), 34041–34048.
+- (148) Wang, C.-H.; Huang, K.-Y.; Yao, Y.; Chen, J.-C.; Shuai, H.-H.; Cheng, W.-H. 轻量级深度学习：概述。 *IEEE Consumer Electronics Magazine* **2024**, 13, 51.
+- (149) Yang, H.; Hu, C.; Zhou, Y.; Liu, X.; Shi, Y.; Li, J.; Li, G.; Chen, Z.; Chen, S.; Zeni, C. MatterSim：跨元素、温度和压力的深度学习原子模型。 *arXiv*, 2405.04967, 2024.
+- (150) Jiao, X.; Yin, Y.; Shang, L.; Jiang, X.; Chen, X.; Li, L.; Wang, F.; Liu, Q. TinyBERT：用于自然语言理解的BERT蒸馏。 *arXiv*, 1909.10351, 2019.
+- (151) Sanh, V.; Debut, L.; Chaumond, J.; Wolf, T. DistilBERT，BERT的蒸馏版本：更小、更快、更便宜、更轻。 *arXiv*, 1910.01108, 2019.
+- (152) Lan, Z.; Chen, M.; Goodman, S.; Gimpel, K.; Sharma, P.; Soricut, R. ALBERT：用于语言表示自监督学习的轻量级BERT。 *arXiv*, 1909.11942, 2019.
+- (153) Sun, Z.; Yu, H.; Song, X.; Liu, R.; Yang, Y.; Zhou, D. MobileBERT：面向资源受限设备的紧凑型任务无关BERT。 *arXiv*, 2004.02984, 2020.
+- (154) Xu, C.; Zhou, W.; Ge, T.; Wei, F.; Zhou, M. BERT-of-Theseus：通过渐进式模块替换压缩BERT。 *arXiv*, 2002.02925, 2020.
+- (155) de Wynter, A.; Perry, D. J. BERT的最优子架构提取。 *arXiv*, 2010.10499, 2020.
+- (156) Nandy, A.; Duan, C.; Kulik, H. J. 大胆的庞大：克服计算材料发现中机器学习的数据稀缺性和数据质量挑战。 *Current Opinion in Chemical Engineering* **2022**, 36, 100778.
+- (157) Lim, D.-W.; Kitagawa, H. 质子导电金属有机框架的理性策略。 *Chem. Soc. Rev.* **2021**, 50 (11), 6349–6368.
+- (158) Sarango-Ramírez, M. K.; Park, J.; Kim, J.; Yoshida, Y.; Lim, D. W.; Kitagawa, H. 金属有机框架中质子传导的孔隙空间与表面官能化。 *Angew. Chem., Int. Ed.* **2021**, 60 (37), 20173–20177.
+- (159) Mancuso, J. L.; Mroz, A. M.; Le, K. N.; Hendon, C. H. 金属有机框架的电子结构建模。 *Chem. Rev.* **2020**, 120 (16), 8641–8715.
+- (160) He, Y.; Cubuk, E. D.; Allendorf, M. D.; Reed, E. J. 由机器学习方法与从头计算相结合预测的金属金属有机框架。 *Journal of Physical Chemistry Letters* **2018**, 9 (16), 4562–4569.
+- (161) Kirklin, S.; Saal, J. E.; Meredig, B.; Thompson, A.; Doak, J. W.; Aykol, M.; Rühl, S.; Wolverton, C. 开放量子材料数据库（OQMD）：评估DFT形成能的准确性。 *npj Computational Materials* **2015**, 1 (1), 1–15.
+- (162) Cai, Z.; Li, W.; Chung, Y. G.; Li, S.; Liang, T.; Wu, T. 迁移学习辅助的金属有机框架和共价有机框架用于Xe/Kr惰性气体分离的计算筛选。 *Sep. Purif. Technol.* **2024**, 348, 127752.
+- (163) Park, H.; Kang, Y.; Kim, J. 通过迁移学习和跨材料小样本学习增强多孔材料的结构-性能关系。 *ACS Appl. Mater. Interfaces* **2023**, 15 (48), 56375–56385.
+- (164) Park, S.; Kim, B.; Choi, S.; Boyd, P. G.; Smit, B.; Kim, J. 金属有机框架论文的文本挖掘。 *J. Chem. Inf. Model.* **2018**, 58 (2), 244–251.
+- (165) Nandy, A.; Duan, C.; Kulik, H. J. 利用机器学习和数据挖掘利用社区知识进行稳定金属有机框架的工程设计。 *J. Am. Chem. Soc.* **2021**, 143 (42), 17535–17547.
+- (166) Glasby, L. T.; Gubsch, K.; Bence, R.; Oktavian, R.; Isoko, K.; Moosavi, S. M.; Cordiner, J. L.; Cole, J. C.; Moghadam, P. Z. DigiMOF：通过文本挖掘生成的金属有机框架合成信息数据库。 *Chem. Mater.* **2023**, 35 (11), 4510–4524.
+- (167) Park, H.; Kang, Y.; Choe, W.; Kim, J. 从科学文献文本中挖掘金属有机框架合成的见解。 *J. Chem. Inf. Model.* **2022**, 62 (5), 1190–1198.
+- (168) Zheng, Z.; Zhang, O.; Borgs, C.; Chayes, J. T.; Yaghi, O. M. 用于文本挖掘和MOF合成预测的ChatGPT化学助手。 *J. Am. Chem. Soc.* **2023**, 145 (32), 18048–18062.
+- (169) Zheng, Z.; He, Z.; Khatab, O.; Rampal, N.; Zaharia, M. A.; Borgs, C.; Chayes, J. T.; Yaghi, O. M. 由GPT-4V驱动的网状化学中的图像和数据挖掘。 *Digital Discovery* **2024**, 3 (3), 491–501.
+- (170) Xie, Y.; Sattari, K.; Zhang, C.; Lin, J. 面向自主实验室：人工智能与实验自动化的融合。 *Prog. Mater. Sci.* **2023**, 132, 101043.
+- (171) Seifrid, M.; Pollice, R.; Aguilar-Granda, A.; Morgan Chan, Z.; Hotta, K.; Ser, C. T.; Vestfrid, J.; Wu, T. C.; Aspuru-Guzik, A. 自主化学实验：建立自驾实验室的挑战与展望。 *Acc. Chem. Res.* **2022**, 55 (17), 2454–2466.
+- (172) Szymanski, N. J.; Rendy, B.; Fei, Y.; Kumar, R. E.; He, T.; Milsted, D.; McDermott, M. J.; Gallant, M.; Cubuk, E. D.; Merchant, A.; et al. 用于新型材料加速合成的自主实验室。 *Nature* **2023**, 624 (7990), 86–91.
+- (173) Vriza, A.; Chan, H.; Xu, J. 用于聚合物电子学的自驾实验室。 *Chem. Mater.* **2023**, 35 (8), 3046–3056.
