@@ -1,0 +1,1419 @@
+- pgno: 0
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_0_0.png)
+
+
+    # PHP and PostgreSQL
+
+    Programming by Example'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Copyright
+
+
+    PHP and PostgreSQL Programming By Example
+
+    Agus Kurniawan
+
+    1st Edition, 2016
+
+    Copyright © 2016 Agus Kurniawan'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Table of Contents
+
+
+    Copyright
+
+
+    Preface
+
+
+    1. Setting up Development Environment
+
+
+    1.1 System Environment
+
+
+    1.1.1 IIS Web Server on Windows Platform
+
+
+    1.1.2 Apache on Ubuntu and Mac
+
+
+    1.2 Deploying PHP on Web Server
+
+
+    1.2.1 IIS for Windows Platform
+
+
+    1.2.2 Apache for Linux and Mac Platforms
+
+
+    1.3 PostgreSQL Server
+
+
+    1.4 PostgreSQL Driver for PHP
+
+
+    1.5 Development Tools
+
+
+    2. Hello World - PHP and PostgreSQL
+
+
+    2.1 Connecting to PostgreSQL
+
+
+    2.2 Creating PHP and Connecting to PostgreSQL
+
+
+    2.3 Testing
+
+
+    3. CRUD Operations
+
+
+    3.1 CRUD Operations
+
+
+    3.2 Creating Data
+
+
+    3.3 Reading Data
+
+
+    3.4 Update Data'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '3.5 Deleting Data
+
+
+    # 4. Working with Image and Blob Data
+
+
+    4.1 Image and Blob Data
+
+
+    4.2 Uploading Image
+
+
+    4.3 Listing Image Data
+
+
+    # 5. Transaction
+
+
+    5.1 PHP and PostgreSQL Transaction
+
+
+    5.2 Demo
+
+
+    # 6. Stored Procedures
+
+
+    6.1 Stored Procedures
+
+
+    6.2 Calling Stored Procedure
+
+
+    6.3 Calling Stored Procedure with Parameter
+
+
+    6.4 Calling Stored Procedure with Returning Values
+
+
+    6.5 Calling Stored Procedure with Input and Output Parameters
+
+
+    Source Code
+
+
+    Contact'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Preface
+
+
+    In general people use PHP and database MySQL. This book provides alternative approach
+    to build PHP application with database PostgreSQL. It describes how to work with
+    PHP and PostgreSQL and illustrates their use with code examples.
+
+
+    Agus Kurniawan
+
+    Berlin, March 2016'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 1. Setting up Development Environment
+
+
+    This chapter explains how to setup development to develop PHP and PostgreSQL.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_7_0.png)
+
+
+    Checked Internet Information Services and World Wide Web Services. Don’t forget
+    to checked CGI, ISAPI Extensions and ISAPI Filters. You can checked other several
+    IIS features. If finished, click OK button.
+
+
+    It will install all selected features. If done, you can check web server IIS on
+    Administrative Tools. You can see Internet Information Services (IIS) Manager.
+    Click it and then you can obtain web server IIS dialog, shown in Figure below.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 1.1.2 Apache on Ubuntu and Mac
+
+
+    On OS X , Apache already installed for you. On Ubuntu, you can install it using
+    this command.
+
+
+    ```
+
+    $ sudo apt-get update
+
+    $ sudo apt-get install apache2
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 1.2 Deploying PHP on Web Server
+
+
+    In this section, we will deploy PHP on web servers. I use IIS and Apache web servers
+    for testing.
+
+
+    Let’s go.
+
+
+    # 1.2.1 IIS for Windows Platform
+
+
+    There are two options to install PHP on IIS. You can install it via Microsoft
+    Web Platform Installer, http://php.iis.net/. After downloaded, you can run it
+    and then you obtain the following dialog.
+
+
+    ** this dialog is a sample for Web Platform Installer 4.6.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Web Platform Installer 4.6
+
+
+    # PHP 5.3.28
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_11_0.png)
+
+
+    PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open
+    source general-purpose scripting language that is especially suited for web development
+    and can be embedded into HTML. It generally runs on a web server, taking PHP code
+    as its input and creating web pages as output. The non-thread-safe build of PHP
+    offered here is the recommended build to use when running PHP on Windows via FastCGI
+    support provided in Microsoft Internet Information Services.
+
+
+    More information
+
+
+    Publisher: PHP.net
+
+
+    Download Size: 14.98 MB
+
+
+    Version: 5.3.24
+
+
+    Release date: Tuesday, May 8, 2012
+
+
+    2 Items to be installed
+
+
+    Options
+
+
+    Click Options and select IIS. If done, click OK button.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_12_0.png)
+
+
+    After that, click **Install** button to start installation.
+
+
+    In this book, I installed PHP on IIS manually. You can install the latest PHP
+    on web server IIS. How to install?
+
+
+    Firstly, we must install PHP for Windows. You can download it on http://windows.php.net/download/
+    . You can download it for x86 or x64 and Thread-Safe or Non Thread-Safe. It’s
+    recommended to download Non Thread-Safe PHP. After downloaded, you obtain ZIP
+    file (particular PHP version provides installer file). Extract it on the specific
+    folder, for instance, C:\PHP.
+
+
+    The following is a sample result of extracted PHP.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_13_0.png)
+
+
+    After that, we can install PHP Manager for IIS. You can download it on [https://phpmanager.codeplex.com/](https://phpmanager.codeplex.com/).
+    If you have install PHP Manager for IIS, you can see PHP Manager on IIS.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_15_0.png)
+
+
+    To verify, click Check phpinfo() and then you obtain a dialog as below.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_15_1.png)
+
+
+    Select Default Web Site and URL http://localhost. If done, click OK button.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'If success, you can see phpinfo() output. The following is a sample output.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_16_0.png)
+
+
+    # 1.2.2 Apache for Linux and Mac Platforms
+
+
+    For Linux platform, you can install Apache with PHP using these commands
+
+
+    ```
+
+    $ sudo apt-get update
+
+    $ sudo apt-get install apache2
+
+    $ sudo apt-get install php5 libapache2-mod-php5
+
+    ```
+
+
+    For Mac, Apache has installed by default. You can enable this service using this
+    command.
+
+
+    ```
+
+    $ sudo apachectl start
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'Then, open a browser and navigate to http://localhost
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_17_0.png)
+
+
+    To install PHP on Mac, you can use brew. For instance, I install PHP 7 with PostgreSQL
+    driver using these commands.
+
+
+    ```
+
+    $ brew tap homebrew/dupes
+
+    $ brew tap homebrew/versions
+
+    $ brew tap homebrew/homebrew-php
+
+    $ brew install php70 --with-postgresql
+
+    ```
+
+
+    After installed PHP, you can verify by checking PHP version using this statement
+
+
+    ```
+
+    $ php -v
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_18_0.png)
+
+
+    Now you can configure PHP on Apache. Firstly, backup your
+
+
+    ```
+
+    $ cd /etc/apache2/
+
+    $ sudo cp httpd.conf httpd.conf.bak
+
+    ```
+
+
+    Now edit httpd.conf file.
+
+
+    ```
+
+    $ sudo nano httpd.conf
+
+    ```
+
+
+    Disable PHP5 and enable PHP 7 as follows.
+
+
+    ```
+
+    #disable PHP5 module
+
+    #LoadModule php5_module libexec/apache2/libphp5.so
+
+
+    #Enable PHP 7 module
+
+    LoadModule php7_module /usr/local/opt/php70/libexec/apache2/libphp7.so
+
+
+    <FilesMatch \.php$>
+
+    SetHandler application/x-httpd-php
+
+    </FilesMatch>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_19_0.png)
+
+
+    Now restart Apache.
+
+
+    ```
+
+    $ sudo apachectl restart
+
+    ```
+
+
+    For testing PHP, create test.php on Document root of Apache.
+
+
+    For Mac users, you can type this command.
+
+
+    ```
+
+    $ sudo nano /Library/WebServer/Documents/test.php
+
+    ```
+
+
+    In test.php, you can wite this code.
+
+
+    ```
+
+    <?php phpinfo();
+
+    ```
+
+
+    Now you can open a browser and navigate to http://<server>/test.php'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Version 7.0.4
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_20_0.png)
+
+
+    | System | Darwin akumpb.local 15.4.0 Darwin Kernel Version 15.4.0: Fri Feb 26
+    22:08:05 PST 2016; root:xnu-3248.40.184-3/RELEASE_X86_64_x86_64 |
+
+    | Date | Mar 24 2016 06:56:14 |
+
+    | Configure Command | ''./configure'' ''--prefix=/usr/local/Cellar/php70/7.0.4''
+    ''--localstatedir=/usr/local/var'' ''--sysconfdir=/usr/local/etc/php/7.0'' ''--with-config-file-path=/usr/local/etc/php/7.0''
+    ''--with-config-file-scan-dir=/usr/local/etc/php/7.0/conf.d'' ''--mandir=/usr/local/Cellar/php70/7.0.4/share/man''
+    ''--enable-bcmath'' ''--enable-calendar'' ''--enable-dba'' ''--enable-exif'' ''--enable-ftp''
+    ''--enable-gd-native-ttf'' ''--enable-mbregex'' ''--enable-mbstring'' ''--enable-shmop''
+    ''--enable-soap'' ''--enable-sockets'' ''--enable-sysvmsg'' ''--enable-sysvsem''
+    ''--enable-sysvshm'' ''--enable-wddx'' ''--enable-zip'' ''--with-freetype-dir=/usr/local/opt/freetype''
+    ''--with-gd'' ''--with-gettext=/usr/local/opt/gettext'' ''--with-iconv-dir=/usr''
+    ''--with-icu-dir=/usr'' ''--with-jpeg-dir=/usr/local/opt/jpeg'' ''--with-kerberos=/usr''
+    ''--with-libedit'' ''--with-mhash'' ''--with-ndbm=/usr'' ''--with-pdo-odbc=/usr/local/opt/unixodbc''
+    ''--with-png-dir=/usr/local/opt/libpng'' ''--with-unixODBC=/usr/local/opt/unixodbc''
+    ''--with-xmlrpc'' ''--with-zlib=/usr'' ''--with-readline=/usr/local/opt/readline''
+    ''--without-gmp'' ''--without-snmp'' ''--with-libxml-dir=/usr/local/opt/libxml2''
+    ''--with-apxs2=/usr/sbin/apxs'' ''--libexecdir=/usr/local/Cellar/php70/7.0.4/libexec''
+    ''--with-bz2=/usr'' ''--disable-debug'' ''--with-openssl=/usr/local/opt/openssl''
+    ''--enable-fpm'' ''--with-fpm-user=_www'' ''--with-fpm-group=_www'' ''--with-curl''
+    ''--with-xsl=/usr'' ''--with-ldap'' ''--with-ldap-sasl'' ''--with-mysql-sock=/tmp/mysql.sock''
+    ''--with-mysqli=mysqlnd'' ''--with-pdo-mysql=mysqlnd'' ''--disable-opcache'' ''--enable-pcntl''
+    ''--without-pear'' ''--with-pgsql=/usr/local/opt/postgresql'' ''--with-pdo-pgsql=/usr/local/opt/postgresql''
+    ''--enable-dtrace'' ''--disable-phpdbg'' ''--enable-zend-signals'' ''CC=clang''
+    ''CXX=clang++'' |
+
+    | API | Apache 2.0 Handler |
+
+    | Directory Support | disabled |
+
+    | Configuration File (php.ini) Path | /usr/local/etc/php/7.0 |
+
+    | Loaded Configuration File | /usr/local/etc/php/7.0/php.ini |
+
+    | Scan this dir for additional .ini files | /usr/local/etc/php/7.0/conf.d |
+
+    | Additional .ini files parsed | /usr/local/etc/php/7.0/conf.d/ext-pdo_pgsql.ini
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# 1.3 PostgreSQL Server
+
+
+    You can download and install PostgreSQL server on [http://www.postgresql.org/download/](http://www.postgresql.org/download/).
+    Don’t forget to install pgAdmin tool to manage our database. You can use commandline
+    or any database tool.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_21_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# 1.5 Development Tools
+
+
+    Basically you can use any editor to develop PHP. You can find a list of PHP editor
+    on http://en.wikipedia.org/wiki/List_of_PHP_editors . I used PHP WebStorm, http://www.jetbrains.com/phpstorm/
+    , and IntelliJ IDEA, http://www.jetbrains.com/idea/ . They provide 30-days trial.
+
+
+    The following is a sample of PhpStorm.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_23_0.png)
+
+
+    I also use DataGrip to manage, https://www.jetbrains.com/datagrip/ , PostgreSQL
+    server.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# postgres.public.employee - DataGrip 1.0.3
+
+
+    PostgreSQL - postgres@localhost
+
+
+    +   - pg_catalog
+
+    +   - public
+
+    +     - sequences
+
+    +     - tables
+
+    +       - employee
+
+    +         - hrd_employee
+
+    +           - id INTEGER
+
+    +           - name CHAR(30)
+
+    +           - department CHAR(30)
+
+    +           - level CHAR(10)
+
+    +           - created TIMESTAMP
+
+    +     - routines
+
+
+    <Filter criteria>
+
+
+    0 rows
+
+
+    | id | name | department |
+
+    |---|---|---|
+
+
+    Data DDL'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# 2.1 Connecting to PostgreSQL
+
+
+    After we setup PHP and PostgreSQL driver on IIS and Apache, now we can test to
+    connect PostgreSQL Server. We can use **pg_connect()** to connect database PostgreSQL
+    Server and **pg_close()** to close connection.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# 2.2 Creating PHP and Connecting to PostgreSQL\n\nIn this section, we create\
+    \ PHP file, called **hello.php**. The objective is to connect PostgreSQL via database\
+    \ authentication.\n\nFirstly, we define server, username, password and database.\n\
+    \n```\n```php\n<?php\n\n$dbServer = \"(local)\";\n$username = \"dbtester\";\n\
+    $password = \"dbtester\";\n$database = \"postgres\";\n```\n```\n\nPlease change\
+    \ $username and $password values.\n\nThen we connect to PostgreSQL using **pg_connect()**\
+    \ by passing server information.\n\n```\n```php\n// Connecting, selecting database\n\
+    $dbconn = pg_connect(\"host=$dbServer dbname=$database user=$username password=$password\"\
+    )\nor die('Could not connect: ' . pg_last_error());\n\n$stat = pg_connection_status($dbconn);\n\
+    \    if ($stat === PGSQL_CONNECTION_OK) {\n        echo 'Connection status ok';\n\
+    \    } else {\n        echo 'Connection status bad';\n    }\n\n// Closing connection\n\
+    pg_close($dbconn);\n```\n```\n\nAt the end of code, we close connection using\
+    \ **pg_close()**.\n\nSave all code."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# 2.3 Testing
+
+
+    Deploy file hello.php into web server. I testing built-in web server from PhpStorm
+    tool. Open browser and type URL of hello.php file.
+
+
+    Here is a sample of running PHP application.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_28_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# 3. CRUD Operations
+
+
+    This chapter explains how to manipulate data PostgreSQL using PHP.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# 3.1 CRUD Operations\n\nCRUD (Create, Read, Update, Delete) operations are\
+    \ basic data manipulation for database. In this chapter we will develop PHP application\
+    \ to execute CRUD operations. We use existing database, postgres. Then, create\
+    \ a table, called **hrd_employee**. The following is a query for creating the\
+    \ table.\n\n```\nCREATE TABLE public.hrd_employee\n(\n  id SERIAL PRIMAY KEY,\n\
+    \  name character(30),\n  department character(30),\n  level character(10),\n\
+    \  created timestamp without time zone\n)\nWITH (\n  OIDS=FALSE\n);\nALTER TABLE\
+    \ public.hrd_employee\n  OWNER TO postgres;\n```\n\nYou can run it using pgAdmin.\
+    \ You also can run itu using other tool, for instance, DataGrip from Jetbrains,\
+    \ https://www.jetbrains.com/datagrip/ ."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_31_0.png)
+
+
+    A form of DataGrip.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_32_0.png)\n\nFor database connection\
+    \ configuration, I created a PHP file, called **dbinfo.php**. The following is\
+    \ a content of dbinfo.php.\n\n```\n```php\n<?php\n\n$dbServer = \"localhost\"\
+    ;\n$username = \"user_db\";\n$password = \"user_pass\";\n$database = \"postgres\"\
+    ;\n\n$connString = \"host=$dbServer dbname=$database user=$username password=$\n\
+    ```\n```\n\nPlease change database parameter values based on your configuration.\n\
+    \nYou can modify this database configuration. The next step is to create a PHP\
+    \ class, called **CRUDDemo**. This class provides several functions to execute\
+    \ CRUD operations. Let’s start. Create PHP file, called **CRUDDemo.php**. Then\
+    \ write this script.\n\n```\n```php\n<?php\n\ninclude('dbinfo.php');\n\nclass\
+    \ CRUDDemo {\n    private $msg = \"\";\n\n    public function getMsg()\n    {\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "```\nreturn $this->msg;\n    }\n}\n```\n\nDepend on your **dbinfo.php** location,\
+    \ you can change its path.\n\nWe will add some functions to execute CRUD operations\
+    \ on next section."
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# 3.2 Creating Data\n\nIn this scenario, we create new employee and try to\
+    \ retrieve inserted ID. PostgreSQL driver provides function RETURNING to retrieve\
+    \ ID from inserted query SQL statement. We will use SQL statement to insert data\
+    \ but we use parameters to prevent SQL injection.\n\nWe use function pg_fetch_row()\
+    \ to obtain ID value from query RETURNING. At the end of code, don’t forget to\
+    \ release our usage resources and close connection using pg_close().\n\nNow we\
+    \ add function createEmployee() to create new employee. Then, write this code.\n\
+    \n```\n<?php\ninclude('dbinfo.php');\n\nclass CRUDDemo {\n    private $msg = \"\
+    \";\n\n    public function getMsg()\n    {\n        return $this->msg;\n    }\n\
+    \    public function createEmployee($name,$department,$level) {\n\n        $id\
+    \ = -1;\n        try {\n\n            global $connString;\n\n            $conn\
+    \ = pg_connect($connString);\n            if( $conn === false )\n            {\n\
+    \                $this->msg = \"Unable to connect PostgreSQL Server.\";\n    \
+    \            return $id;\n            }\n\n            // insert data\n      \
+    \      $query = \"insert into hrd_employee(name,department,level,cre\n       \
+    \     $params = array(&$name,&$department,&$level);\n\n            $res = pg_query_params($conn,$query,$params);\n\
+    \            $row = pg_fetch_row($res);\n            $id = $row[0];\n\n      \
+    \      pg_close($conn);\n\n        } catch (Exception $e) {\n            $this->msg\
+    \ = $e->getMessage();\n            $id = -1;\n        }\n\n        return $id;\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "```\n```\n    }\n    }\n```\n```\n\nSave this code.\n\nTo test this class,\
+    \ we create PHP file, called **testcrud.php**. After that, we try to insert 10\
+    \ data.\n\n```\n```php\n<?php\n\ninclude('CRUDDemo.php');\n\n$obj = new CRUDDemo();\n\
+    \n// insert 10 data\nfor($i=1;$i<=10;$i++) {\n    $id = $obj->createEmployee(\"\
+    person \" . $i,\"depertment \" . $i,\"A\".$i);\n    echo \"Inserted Id: \" .$id\
+    \ . \" \\n\";\n    echo \"Error message: \" . $obj->getMsg() . \" \\n\\n\";\n\
+    }\n```\n```\n\nSave the code and try to run **testcrud.php**.\n\nThe following\
+    \ is sample running test on Intellij IDEA.\n\n![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_35_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'To verify success or not, we can check database. If success, we can see 10
+    new data on table hrd_employee. Here is a sample of 10 data from table **hrd_employee**
+    on PostgreSQL.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_36_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "```\n    return $data;\n}\n}\n```\n\nYou can see that we define $data to hold\
+    \ data from database PostgreSQL.\n\nSave this code.\n\nNow we test function readEmployeeList().\
+    \ Open file testcrud.php and add code as below.\n\n```\n<?php\n\ninclude('CRUDDemo.php');\n\
+    \n$obj = new CRUDDemo();\n\n// read data\n$list = $obj->readEmployeeList();\n\
+    if($list) {\n    foreach($list as $item) {\n        $content = \"\";\n       \
+    \ foreach($item as $key => $value) {\n            $content = $content . $key .\
+    \ \": \" . $value . \"\\n\";\n        }\n        echo $content . \"\\n\";\n  \
+    \  }\n}\n```\n\nSave this code.\n\nYou can execute file testcrud.php. The following\
+    \ is a sample of output."
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '```
+
+    /usr/local/bin/php /Users/apusk/Documents/MyBooks/pearess/php_postgresql/codes/testcrud.php
+
+    id: 28
+
+    name: person 1
+
+    department: depertment 1
+
+    level: A1
+
+    created: 2016-03-25 14:15:16.876907
+
+
+    id: 29
+
+    name: person 2
+
+    department: depertment 2
+
+    level: A2
+
+    created: 2016-03-25 14:15:16.896776
+
+
+    id: 30
+
+    name: person 3
+
+    department: depertment 3
+
+    level: A3
+
+    created: 2016-03-25 14:15:16.913929
+
+
+    id: 31
+
+    name: person 4
+
+    department: depertment 4
+
+    level: A4
+
+    created: 2016-03-25 14:15:16.931068
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# 3.4 Update Data\n\nOn this section, we will update data on particular ID.\
+    \ We use UPDATE statement and pass updated data.\n\nCreate a function called updateEmployee()\
+    \ and write this code.\n\n```\n<?php\ninclude('dbinfo.php');\n\nclass CRUDDemo\
+    \ {\n    private $msg = \"\";\n\n    public function getMsg()\n    {\n       \
+    \ return $this->msg;\n    }\n    public function updateEmployee($id,$name,$department,$level)\
+    \ {\n\n        $success = -1;\n        try {\n\n            global $connString;\n\
+    \n            $conn = pg_connect($connString);\n            if( $conn === false\
+    \ )\n            {\n                $this->msg = \"Unable to connect PostgreSQL\
+    \ Server.\";\n                return $success;\n            }\n\n            $query\
+    \ = \"update hrd_employee set name=$1,department=$2,leve\n            $params\
+    \ = array(&$name,&$department,&$level,&$id);\n\n            $res = pg_query_params($conn,$query,$params);\n\
+    \            if($res === FALSE) {\n                $this->msg = \"Error in executing\
+    \ query.\";\n                return $success;\n            }\n            $num_rows=pg_affected_rows($res);\n\
+    \            $success = $num_rows;\n            $this->msg = \"\";\n\n       \
+    \     pg_close($conn);\n\n        } catch (Exception $e) {\n            $this->msg\
+    \ = $e->getMessage();\n            $success = -1;\n        }\n\n        return\
+    \ $success;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '```
+
+    }
+
+    ```
+
+
+    Save this code.
+
+
+    Now we work on file testcrud.php to call updateEmployee(). In this testing, we
+    update employee with ID 30. You may change employee ID.
+
+
+    ```
+
+    <?php
+
+
+    include( ''CRUDDemo.php'' );
+
+
+    $obj = new CRUDDemo();
+
+
+    // update
+
+    // update data with id = 30. Change it with own id data
+
+    $success = $obj->updateEmployee(30, "update-employee","update-department
+
+    echo "Success: " . $success . "\n";
+
+    echo "Error message: " . $obj->getMsg();
+
+    ```
+
+
+    Save this code. Run file testcrud.php.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_41_0.png)
+
+
+    If we open table hrd_employee, you can find updated data on data with ID = 30.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '|  | id | name | department | level | created (yyyy-MM-dd HH:mm:ss.ffffff)
+    |
+
+    |---|---|---|---|---|---|
+
+    | 1 | 28 | person 1 | department 1 | A1 | 2016-03-25 14:15:16.876907 |
+
+    | 2 | 29 | person 2 | department 2 | A2 | 2016-03-25 14:15:16.896776 |
+
+    | 3 | 31 | person 4 | department 4 | A4 | 2016-03-25 14:15:16.931068 |
+
+    | 4 | 32 | person 5 | department 5 | A5 | 2016-03-25 14:15:16.942084 |
+
+    | 5 | 33 | person 6 | department 6 | A6 | 2016-03-25 14:15:16.957744 |
+
+    | 6 | 34 | person 7 | department 7 | A7 | 2016-03-25 14:15:16.975317 |
+
+    | 7 | 35 | person 8 | department 8 | A8 | 2016-03-25 14:15:16.986468 |
+
+    | 8 | 36 | person 9 | department 9 | A9 | 2016-03-25 14:15:16.993604 |
+
+    | 9 | 37 | person 10 | department 10 | A10 | 2016-03-25 14:15:16.999911 |
+
+    | 10 | 30 | update-employee | update-department | u-level | 2016-03-25 14:15:16.913929
+    |'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# 3.5 Deleting Data\n\nTo delete data, we use SQL statement using DELETE FROM\
+    \ and pass employee ID.\n\nCreate a function called deleteEmployee() and write\
+    \ this code.\n\n```\n<?php\ninclude('dbinfo.php');\n\nclass CRUDDemo {\n    private\
+    \ $msg = \"\";\n\n    public function getMsg()\n    {\n        return $this->msg;\n\
+    \    }\n    public function deleteEmployee($id) {\n\n        $success = -1;\n\
+    \        try {\n\n            global $connString;\n\n            $conn = pg_connect($connString);\n\
+    \            if( $conn === false )\n            {\n                $this->msg\
+    \ = \"Unable to connect PostgreSQL Server.\";\n                return $success;\n\
+    \            }\n\n            $query = \"delete from hrd_employee where id=$1\"\
+    ;\n            $params = array(&$id);\n\n            $res = pg_query_params($conn,$query,$params);\n\
+    \            if($res === FALSE) {\n                $this->msg = \"Error in executing\
+    \ query.\";\n                return $success;\n            }\n            $num_rows=pg_affected_rows($res);\n\
+    \            $success = $num_rows;\n            $this->msg = \"\";\n\n       \
+    \     pg_close($conn);\n\n        } catch (Exception $e) {\n            $this->msg\
+    \ = $e->getMessage();\n            $success = -1;\n        }\n\n        return\
+    \ $success;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'Save this code.
+
+
+    Now we test this function on file **testcrud.php**. We delete data with ID = 30.
+    You can change this ID.
+
+
+    ```
+
+    <?php
+
+
+    include(''CRUDDemo.php'');
+
+
+    $obj = new CRUDDemo();
+
+
+    // delete
+
+    // delete data with id = 30. Please change it
+
+    $success = $obj->deleteEmployee(30);
+
+    echo "Success: " . $success . "\n";
+
+    echo "Error message: " . $obj->getMsg();
+
+    ```
+
+
+    Save this code and run **testcrud.php**.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_44_0.png)
+
+
+    You can verify by opening table **hrd_employee**. Data with ID = 30 should not
+    show.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '| id | name | department | level | created (yyyy-MM-dd HH:mm:ss.ffffff) |
+
+    |----|------|------------|-------|--------------------------------------|
+
+    | 28 | person 1 | depertment 1 | A1 | 2016-03-25 14:15:16.876907 |
+
+    | 29 | person 2 | depertment 2 | A2 | 2016-03-25 14:15:16.896776 |
+
+    | 31 | person 4 | depertment 4 | A4 | 2016-03-25 14:15:16.931068 |
+
+    | 32 | person 5 | depertment 5 | A5 | 2016-03-25 14:15:16.942004 |
+
+    | 33 | person 6 | depertment 6 | A6 | 2016-03-25 14:15:16.957744 |
+
+    | 34 | person 7 | depertment 7 | A7 | 2016-03-25 14:15:16.975317 |
+
+    | 35 | person 8 | depertment 8 | A8 | 2016-03-25 14:15:16.986468 |
+
+    | 36 | person 9 | depertment 9 | A9 | 2016-03-25 14:15:16.993604 |
+
+    | 37 | person 10 | depertment 10 | A10 | 2016-03-25 14:15:16.999911 |'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# 4. Working with Image and Blob Data
+
+
+    This chapter explains how to work with image and blob data on PostgreSQL and manipulate
+    them using PHP.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "# 4.1 Image and Blob Data\n\nPostgreSQL provides data type for BYTEA which\
+    \ can store image file and binary type data.\n\nIn this chapter, we will work\
+    \ with image file on PostgreSQL. The following is table schema, called ImagesFiles.\n\
+    \n![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_47_0.png)\n\nThe following is a script\
+    \ for creating imagefiles table.\n\n```\nCREATE TABLE public.imagesfiles\n(\n\
+    \  id SERIAL PRIMARY KEY,\n  filename character(50),\n  filetype character(10),\n\
+    \  imgfile BYTEA,\n  created timestamp without time zone\n)\nWITH (\nOIDS=FALSE\n\
+    );\nALTER TABLE public.imagesfiles\nOWNER TO postgres;\n```\n\nfiletype is image\
+    \ type of uploading file. This is important while we want to display the image.\
+    \ See section 4.3 for further explanation.\n\nThe next action we create two PHP\
+    \ application, uploading image and listing image data."
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# 4.2 Uploading Image\n\nIn this section, we upload image using traditional\
+    \ way: file html. After user choose image file and then click **Submit** button,\
+    \ PHP file will process uploading file and store it into database.\n\nFirstly,\
+    \ we create **uploadimage.html** and write this script.\n\n```\n```html\n<!DOCTYPE\
+    \ html>\n<html>\n<head>\n    <title>PHP and PostgreSQL Programming by Example</title>\n\
+    </head>\n<body>\n<h1>Uploading Image file</h1>\n\n<p><br/></p>\n<p>Upload image\
+    \ file (JPG/PNG/TIF/GIF) with file size maximum 500KB.</p>\n\n<form action=\"\
+    upload_process.php\" method=\"post\"\n      enctype=\"multipart/form-data\">\n\
+    \    <label for=\"file\">Image File (JPG/PNG/TIF/GIF):</label>\n    <input type=\"\
+    file\" name=\"file\" id=\"file\"><br/><br/>\n    <input type=\"submit\" name=\"\
+    submit\" value=\"Submit\">\n</form>\n\n</body>\n</html>\n```\n```\n\nYou can see\
+    \ we use form multipart/form-data and input file to upload image file. The form\
+    \ action is POST and navigate to **upload_process.php**.\n\nNow we create **upload_process.php**\
+    \ to process uploading file. We validate file input for gif, tif, jpg and png\
+    \ and restrict file size below 500 KB. Let’s write this code into **upload_process.php**.\n\
+    \n```\n```php\n<?php\n\ninclude('dbinfo.php');\n\n$allowedExts = array(\"gif\"\
+    , \"tif\", \"jpg\", \"png\");\n$filename = $_FILES[\"file\"][\"name\"];\n$temp\
+    \ = explode(\".\", $filename);\n$fileExt = end($temp);\n$imageType = $_FILES[\"\
+    file\"][\"type\"];\n\nif ((($imageType == \"image/gif\") || ($imageType == \"\
+    image/jpg\") || ($imageType == \"image/jpeg\")\n    || ($imageType == \"image/gif\"\
+    ) || ($imageType == \"image/tiff\")\n    || ($imageType == \"image/x-png\") ||\
+    \ ($imageType == \"image/png\"))\n    && ($_FILES[\"file\"][\"size\"] < 500000)\n\
+    \    && in_array($fileExt, $allowedExts)) {\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "```\n$file_name = $_FILES['file']['tmp_name'];\n\n// open connection to database\
+    \ server\nglobal $connString;\n$conn = pg_connect($connString);\nif( $conn ===\
+    \ false )\n{\n    echo \"Unable to connect PostgreSQL Server.\";\n    return;\n\
+    }\n\n// query data to insert image file\n$query = \"insert into imagesfiles(filename,filetype,imgfile,created)\n\
+    \n$img = fopen($file_name, 'r') or die(\"cannot read image\\n\");\n$data = fread($img,\
+    \ filesize($file_name));\n$img_data = pg_escape_bytea($data);\nfclose($img);\n\
+    \n$params = array(&$filename,&$imageType,&$img_data);\n\nif(!(pg_query_params($conn,$query,$params)))\n\
+    {\n    echo \"Error in executing query.<br>\";\n    pg_close($conn);\n    return;\n\
+    }\n\npg_close($conn);\necho \"Uploaded file was success <br>\";\n\n}else {\n \
+    \   echo \"Invalid file <br>\";\n}\n```\n\nBasically it likes normal inserting\
+    \ data but for field imgfile (image data type) we pass a content of image file\
+    \ using pg_escape_bytea() into query parameter.\n\n**dbinfo.php** is a database\
+    \ configuration file. You can use the same content from section 3.1.\n\nIf done,\
+    \ save the code. Try to run.\n\nOpen file **uploadingimage.html** on browse. Choose\
+    \ image file and then click Submit button."
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Uploading Image file
+
+
+    Upload image file (JPG/PNG/TIF/GIF) with file size maximum 500KB.
+
+
+    Image File (JPG/PNG/TIF/GIF): Choose File no file selected
+
+
+    If success, we will obtain response as follows.
+
+
+    Uploaded file was success
+
+
+    To verify uploading file, you can check table **imagesfiles**. You can find this
+    uploaded file into database.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_52_0.png)
+
+
+    Try to upload another image file for testing on listing image files.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "# 4.3 Listing Image Data\n\nNow we build PHP application to show a list of\
+    \ image data. As we know, HTML provides tag img (<img />) to display an image.\
+    \ We use the following format to display the image:\n\n```\n<img src='data:image/jpeg;base64,<base64_of_imagefile>'\
+    \ width=200px heig\n```\n\nDepend on you image type, we can change data value,\
+    \ for instance PNG image file, to be image/png. <base64_of_imagefile> is base64\
+    \ value of image. We can use base64_encode() to convert image to base64. After\
+    \ obtained image data from database, we should call pg_unescape_bytea() function.\n\
+    \nNow create a PHP file, called list_images.php, and write this code.\n\n```\n\
+    <!DOCTYPE html>\n<html>\n<head>\n    <title>PHP and PostgreSQL Programming by\
+    \ Example</title>\n</head>\n<body>\n<h1>List of Image file</h1>\n\n<p><br/></p>\n\
+    \n<p>Retrieving image from database.</p>\n<br/>\n\n<?php\n\ninclude('dbinfo.php');\n\
+    \nglobal $connString;\n$conn = pg_connect($connString);\nif ($conn === false)\
+    \ {\n    echo \"Unable to connect PostgreSQL.<br>\";\n    return;\n}\n\n// query\
+    \ data to insert image file\n$query = \"select id,filename,filetype,imgfile,created\
+    \ from imagesfiles\";\n\n$result = pg_query($conn, $query);\nwhile ($row = pg_fetch_row($result))\
+    \ {\n    echo \"<div>\";\n    $imgType = $row[2];\n    $imgfile = pg_unescape_bytea($row[3]);\n\
+    \    $img = base64_encode($imgfile);\n\n    echo \"<p>ID: \" .$row[0].\"</p><p>\"\
+    .$row[1].\"<p>\".$row[4].\n        \"</p><p><img src='data:\". $imgType. \";base64,\"\
+    . $img. \"' width=\n    echo \"</div>\";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '```
+
+    }
+
+    pg_close($conn);
+
+    ?>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Save the code.
+
+
+    Now open file **list_images.php** on browser. If data is available, you can see
+    the result output, shown in Figure below.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# List of Image file
+
+
+    Retrieving image from database.
+
+
+    ID:1
+
+
+    cvr_phpost.png
+
+
+    2016-03-26 03:42:04.796469
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_55_0.png)
+
+
+    You can modify to enhance website UI using CSS or JavaScript.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# 5.1 PHP and PostgreSQL Transaction
+
+
+    PostgreSQL driver provides transaction operations via query. We use BEGIN query
+    to start a transaction and COMMIT to complete the transaction. Otherwise, we can
+    use ROLLBACK to restore our previous transaction.
+
+
+    How to use these functions? Let’s write PHP application.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# 5.2 Demo\n\nTo illustrate transaction demo, we create a simple PHP application.\
+    \ We insert 5 data into database. We use the same code from chapter 3. If one\
+    \ of them is failed we will call rollback transaction.\n\nLet’s build. Create\
+    \ PHP file, called transaction_demo.php, and write the following code:\n\n```\n\
+    <?php\n\ninclude('dbinfo.php');\n\n// connect to postgresql\nglobal $connString;\n\
+    \n$conn = pg_connect($connString);\nif( $conn === false )\n{\n    echo \"Unable\
+    \ to connect PostgreSQL Server.\";\n    return;\n}\necho \"Connected to PostgreSQL\
+    \ Server.<br>\";\n\n// start transaction\npg_query(\"BEGIN\") or die(\"Could not\
+    \ start transaction\\n\");\n\necho \"Inserting data.<br>\";\nfor($i=1;$i<=5;$i++)\
+    \ {\n\n    $name = \"person-\".$i;\n    $department = \"finance\";\n    $level\
+    \ = \"B\";\n    $query = \"insert into hrd_employee(name,department,level,created)\
+    \ va\n    $params = array(&$name,&$department,&$level);\n\n    $res = pg_query_params($conn,$query,$params);\n\
+    \    if($res === false)\n    {\n        echo \"Error in executing query.<br>\"\
+    ;\n        echo \"Rollback transaction.<br>\";\n\n        pg_query(\"ROLLBACK\"\
+    ) or die(\"Transaction rollback failed\\n\");;\n        pg_close($conn);\n   \
+    \     return;\n    }\n\n    $row = pg_fetch_row($res);\n    $id = $row[0];\n \
+    \   echo \"inserted data was success.id=\".$id.\"<br>\";\n}\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '```
+
+    ```php
+
+    pg_query("COMMIT") or die("Transaction commit failed\n");
+
+    pg_close($conn);
+
+    echo "Commited Transaction and close connection.<br>";
+
+    ```
+
+    ```
+
+
+    Save this code and run it.
+
+
+    Open file **transaction_demo.php** on browser. If success, you can see the response
+    as follows.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_59_0.png)
+
+
+    You can verify inserted data to database PostgreSQL.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '| # | id | name | department | level | created (yyyy-MM-dd HH:mm:ss.ffffff)
+    |
+
+    |---|---|---|---|---|---|
+
+    | 7 | 35 | person 8 | depertment 8 | A8 | 2016-03-25 14:15:16.986468 |
+
+    | 8 | 36 | person 9 | depertment 9 | A9 | 2016-03-25 14:15:16.993604 |
+
+    | 9 | 37 | person 10 | depertment 10 | A10 | 2016-03-25 14:15:16.999911 |
+
+    | 10 | 38 | person-1 | finance | B | 2016-03-26 04:42:18.799703 |
+
+    | 11 | 39 | person-2 | finance | B | 2016-03-26 04:42:18.799703 |
+
+    | 12 | 40 | person-3 | finance | B | 2016-03-26 04:42:18.799703 |
+
+    | 13 | 41 | person-4 | finance | B | 2016-03-26 04:42:18.799703 |
+
+    | 14 | 42 | person-5 | finance | B | 2016-03-26 04:42:18.799703 |
+
+    | 15 | 43 | person-1 | finance | B | 2016-03-26 04:42:52.573706 |
+
+    | 16 | 44 | person-2 | finance | B | 2016-03-26 04:42:52.573706 |
+
+    | 17 | 45 | person-3 | finance | B | 2016-03-26 04:42:52.573706 |
+
+    | 18 | 46 | person-4 | finance | B | 2016-03-26 04:42:52.573706 |
+
+    | 19 | 47 | person-5 | finance | B | 2016-03-26 04:42:52.573706 |
+
+    | 20 | 48 | person-1 | finance | B | 2016-03-26 04:43:35.389129 |
+
+    | 21 | 49 | person-2 | finance | B | 2016-03-26 04:43:35.389129 |
+
+    | 22 | 50 | person-3 | finance | B | 2016-03-26 04:43:35.389129 |
+
+    | 23 | 51 | person-4 | finance | B | 2016-03-26 04:43:35.389129 |
+
+    | 24 | 52 | person-5 | finance | B | 2016-03-26 04:43:35.389129 |'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# 6. Stored Procedures
+
+
+    This chapter explains how to work with Stored Procedures on PostgreSQL and call
+    them from PHP.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "# 6.1 Stored Procedures\n\nA stored procedure is a subroutine that access a\
+    \ relational database system. Stored procedure can be accessed by application.\
+    \ In this section, I will show you how to create a stored procedure in PostgreSQL\
+    \ and then call it from PHP.\n\nThere are three Stored Procedure models:\n\n+\
+    \   - Stored Procedure without parameter. It can be return value or not\n+   -\
+    \ Stored Procedure with input parameter\n+   - Stored Procedure with input and\
+    \ output parameters\n\nThese models will be implemented on next sections. Firstly,\
+    \ we create PHP class, called **SPDemo**. Then, write this skeleton code:\n\n\
+    ```\n<?php\n\ninclude('dbinfo.php');\n\nclass SPDdemo {\n    private $msg = \"\
+    \";\n    \n    public function getMsg()\n    {\n        return $this->msg;\n \
+    \   }\n}\n```\n\nSave this code as **SPDemo.php**.\n\nWe will add several functions\
+    \ to access Stored Procedure. In chapter, we use **hrd_employee** table from postgres\
+    \ database."
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "# 6.2 Calling Stored Procedure\n\nTo call Stored Procedure from PHP with a\
+    \ cursor, we do the following steps:\n\n+   - Open connection to PostgreSQL using\
+    \ pg_connect()\n+   - Do a transaction BEGIN and COMMIT\n+   - Inside a transaction,\
+    \ we call pg_query_params() to call stored procedure\n\nLet’s start.\n\nFirstly,\
+    \ we create Stored Procedure, call **get all employees**. Write this SQL statement.\n\
+    \n```\nDROP FUNCTION public.get_all_employees(refcursor);\n\nCREATE OR REPLACE\
+    \ FUNCTION get_all_employees(ref refcursor) RETURNS refc\nBEGIN\n  OPEN ref FOR\
+    \ SELECT id,name,department,level,created FROM hrd_employee\n  RETURN ref;\nEND;\n\
+    $$ LANGUAGE plpgsql;\n```\n\nThis stored procedure call a query to retrieve data\
+    \ on hrd_employee table. It returns a cursor.\n\nRun this script to PostgreSQL\
+    \ database. If success, you can see this Stored Procedure on database."
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_64_0.png)\n\nNow we create new function,\
+    \ called **getAllEmployess()** in SPDemo.php and write this code.\n\n```\n<?php\n\
+    \ninclude('dbinfo.php');\n\nclass SPDemo {\n    private $msg = \"\";\n    public\
+    \ function getMsg()\n    {\n        return $this->msg;\n    }\n    public function\
+    \ getAllEmployees() {\n        $data = array();\n        try {\n            global\
+    \ $connString;\n            $conn = pg_connect($connString);\n            if(\
+    \ $conn === false )\n            {\n                $this->msg = \"Unable to connect\
+    \ PostgreSQL Server.\";\n                return $data;\n            }\n      \
+    \  }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "```\n$cursor_name = \"crp\";\npg_query($conn,\"BEGIN\");\n$query = \"select\
+    \ * from get_all_employees($1);\";\n\n$params = array(&$cursor_name);\n$res =\
+    \ pg_query_params($conn,$query,$params);\nif($res === false)\n{\n    $this->msg\
+    \ = \"Error in executing query.\";\n    return $data;\n}\n\n$res = pg_query($conn,\
+    \ \"FETCH ALL FROM \".$cursor_name.\";\");\nif($res === false)\n{\n    $this->msg\
+    \ = \"Error in executing query.\";\n    return $data;\n}\nwhile($row = pg_fetch_row($res))\n\
+    {\n    array_push($data, array(\"id\"=>$row[0],\"name\"=>$row[1],\n    \"department\"\
+    =>$row[2],\"level\"=>$row[3],\"created\"=>$r\n}\n\npg_query($conn,\"COMMIT\");\n\
+    pg_close($conn);\n\n} catch (Exception $e) {\n    $this->msg = $e->getMessage();\n\
+    }\n\nreturn $data;\n}\n}\n```\n\nSave this code.\n\nNow we call function getAllEmployess().\
+    \ Create file PHP testsp.php and write this code:\n\n```\n<?php\n\ninclude('SPDemo.php');\n\
+    \n// call stored procedure\n$obj = new SPDemo();\n$data = $obj->getAllEmployees();\n\
+    if($data) {\n    foreach($data as $item) {\n        $content = \"\";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "```\n```php\nforeach($item as $key => $value) {\n    $content = $content .\
+    \ $key . \": \" . strval($value) . \"\\n\";\n}\necho $content . \"\\n\";\n}\n\
+    }\n```\n```\n\nSave this code.\n\nYou can execute file **testsp.php**. Here is\
+    \ a sample output.\n\n![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_66_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# 6.3 Calling Stored Procedure with Parameter\n\nOn previous section, we call\
+    \ Stored Procedure without parameter. Now we will call Stored Procedure with parameter.\
+    \ We create a Stored Procedure, called **get_employee_by_id**. Then write this\
+    \ script.\n\n```\nDROP FUNCTION public.get_employee_by_id(refcursor,INT);\n\n\
+    CREATE OR REPLACE FUNCTION get_employee_by_id(ref refcursor,empId INT) R\nBEGIN\n\
+    \    OPEN ref FOR SELECT id,name,department,level,created FROM hrd_employee\n\
+    \    RETURN ref;\nEND;\n$$ LANGUAGE plpgsql;\n```\n\nRun this script to postgres\
+    \ database on PostgreSQL.\n\nOn PHP file, **SPDemo.php**, we create a function\
+    \ **getEmployeesById()** to call stored procedure and write this code.\n\n```\n\
+    <?php\n\ninclude('dbinfo.php');\n\nclass SPDemo {\n\n    private $msg = \"\";\n\
+    \n    public function getMsg()\n    {\n        return $this->msg;\n    }\n\n \
+    \   public function getEmployeesById($id) {\n        $data = array();\n      \
+    \  try {\n\n            global $connString;\n\n            $conn = pg_connect($connString);\n\
+    \            if( $conn === false )\n            {\n                $this->msg\
+    \ = \"Unable to connect PostgreSQL Server.\";\n                return $data;\n\
+    \            }\n\n            $cursor_name = \"gtm\";\n            pg_query($conn,\"\
+    BEGIN\");\n            $query = \"select * from get_employee_by_id($1,$2);\";\n\
+    \n            $params = array(&$cursor_name,&$id);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "```\n```php\n$res = pg_query_params($conn,$query,$params);\nif($res === false)\n\
+    {\n    $this->msg = \"Error in executing query.\";\n    return $data;\n}\n$res\
+    \ = pg_query($conn, \"FETCH ALL FROM \".$cursor_name.\";\");\nif($res === false)\n\
+    {\n    $this->msg = \"Error in executing query.\";\n    return $data;\n}\nwhile($row\
+    \ = pg_fetch_row($res))\n{\n    array_push($data, array(\"id\"=>$row[0],\"name\"\
+    =>$row[1],\n    \"department\"=>$row[2],\"level\"=>$row[3],\"created\"=>$r\n}\n\
+    pg_query($conn,\"COMMIT\");\npg_close($conn);\n} catch (Exception $e) {\n    $this->msg\
+    \ = $e->getMessage();\n}\nreturn $data;\n}\n}\n```\n```\n\nNow we call function\
+    \ **getEmployeesById()**. Open file PHP testsp.php and add this code:\n\n```\n\
+    ```php\n<?php\n\ninclude( 'SPDemo.php' );\n\n$obj = new SPDemo();\n\n// call stored\
+    \ procedure with parameter\n$data = $obj->getEmployeesById(40);\nif($data) {\n\
+    \    foreach($data as $item) {\n        $content = \"\";\n        foreach($item\
+    \ as $key => $value) {\n            $content = $content . $key . \": \" . strval($value)\
+    \ .\"\\n\";\n        }\n        echo $content . \"\\n\";\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'We pass Id=40 to function. You can change this value based on your data.
+
+
+    Save this code and run it. Here is a sample output.
+
+
+    ![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_69_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "# 6.5 Calling Stored Procedure with Input and Output Parameters\n\nWe also\
+    \ can call Stored Procedure with input and output parameters. Firstly, we create\
+    \ a Stored Procedure, called **func_compute**. Write this code.\n\n```\nDROP FUNCTION\
+    \ public.func_compute(INT,OUT INT);\n\nCREATE OR REPLACE FUNCTION public.func_compute(var_a\
+    \ INT, OUT val_ret INT)\nRETURNS INT\nAS\n$BODY$\nBEGIN\n    val_ret = var_a *\
+    \ 3;\nEND;\n$BODY$\nLANGUAGE plpgsql VOLATILE;\n```\n\nYou can see we define **val_ret**\
+    \ parameter as **OUT**.\n\nBack to PHP file, **SPDemo.php**, we create a function\
+    \ **compute()** and write this code.\n\n```\n<?php\n\npublic function compute($var_a)\
+    \ {\n    $ret = -1;\n    try {\n        global $connString;\n        $conn = pg_connect($connString);\n\
+    \        if( $conn === false )\n        {\n            $this->msg = \"Unable to\
+    \ connect PostgreSQL Server.\";\n            return $ret;\n        }\n       \
+    \ $query = \"select val_ret from func_compute($1);\";\n        $params = array(&$var_a);\n\
+    \        $res = pg_query_params($conn,$query,$params);\n        if($res === false)\n\
+    \        {\n            $this->msg = \"Error in executing query.\";\n        \
+    \    return $ret;\n        }\n        if($row = pg_fetch_row($res))\n        {\n\
+    \            $ret = $row[0];\n        }\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "```\n```php\npg_close($conn);\n\n} catch (Exception $e) {\n    $this->msg =\
+    \ $e->getMessage();\n}\n\nreturn $ret;\n}\n```\n```\n\nNow we test this function\
+    \ on **testsp.php**. Add this code.\n\n```\n```php\n<?php\n\ninclude('SPDemo.php');\n\
+    \n// call stored procedure\n$obj = new SPDemo();\n\n/// call stored procedure\
+    \ with input and output parameters\n$val = $obj->compute(15);\necho \"func_compute(15):\
+    \ \" . $val;\n```\n```\n\nSave this code and run **testsp.php**. The following\
+    \ is a sample output.\n\n![](img/c57c0fe41a78a4cec34dfc1c6ad7b9d6_73_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# Source Code
+
+
+    You can download source code for this book on [http://www.aguskurniawan.net/book/phppostgres261.zip](http://www.aguskurniawan.net/book/phppostgres261.zip)'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
