@@ -1,0 +1,39 @@
+
+Securing the AI supply chain requires a different mindset than traditional software assurance. Whereas conventional application security often begins with code reviews and ends with runtime hardening, AI models inherit risk from a complex and often invisible lineage of data sources, training pipelines, third-party libraries, and hosted infrastructure. Threat actors understand this deeply, exploiting each layer with precision—from poisoned datasets and manipulated checkpoints to adversarial parameter perturbations embedded within cloud platforms and artifact repositories. Understanding the attack surfaces introduced by these dependencies is essential to building AI systems that are both trustworthy and defensible.
+
+This chapter examines the technical depth and strategic implications of supply chain exploitation across the AI lifecycle. It explores how adversaries introduce persistent vulnerabilities through model zoo contamination, library compromise, cloud training interference, and manipulated annotation pipelines. From subtly engineered backdoors that activate under specific inference conditions to the weaponization of model versioning and deployment infrastructure, each vector represents a scalable path to long-term compromise. These risks are uniquely challenging because they blend adversarial machine learning with traditional supply chain sabotage, demanding cross-disciplinary security responses.
+
+Robust AI security architecture cannot afford to treat upstream artifacts as static or inherently safe. Effective risk governance must extend beyond code integrity and runtime monitoring to include provenance tracing, adversarial resilience testing, and cryptographic attestation of every model input and output. Compliance frameworks, model validation procedures, and operational controls must evolve in parallel to account for invisible and persistent threats embedded long before a model is deployed. As the AI ecosystem grows more modular, interconnected, and opaque, defending the supply chain becomes a foundational element of both technical resilience and strategic assurance.
+
+## Technical Mechanisms of Supply Chain Poisoning in AI Models
+
+Supply chain poisoning in AI models is a highly systematic attack methodology that exploits the extended and often opaque ecosystem upon which machine learning systems depend. It targets not the model itself, but the upstream components—datasets, libraries, pretrained weights, third-party software, and training pipelines—that constitute the AI supply chain. This type of attack introduces deliberate and often hard-to-detect vulnerabilities that manifest during training, fine-tuning, or deployment, enabling persistent adversarial influence over model behavior. [Figure 13.1](#c13.xhtml#c13-fig-0001) highlights where attackers most commonly insert malicious components into the AI supply chain.
+
+![Figure 13.1 Common insertion points in the AI supply chain.](images/c13f001.png)
+
+Figure 13.1 Common insertion points in the AI supply chain.
+
+One of the most common entry points for supply chain poisoning is through contaminated training datasets. Attackers may inject malicious examples into publicly available or third-party datasets that are later ingested into AI development pipelines. These samples are not overtly erroneous; rather, they are subtly manipulated to shift the model's decision boundaries or embed latent behaviors. For example, inserting imperceptibly altered images into a large computer vision dataset can condition a model to misclassify specific objects when similar alterations appear in production.
+
+Manipulated annotations represent another vector, especially potent in domains where supervised learning depends heavily on labeled data. A threat actor could systematically distort labels—such as flipping sentiment tags or misclassifying entities—within widely reused datasets. These poisoned annotations train models to associate inputs with incorrect outputs, introducing functional vulnerabilities that can be weaponized under specific conditions. Such attacks are difficult to trace, particularly when the data origin is poorly documented or when annotation work has been outsourced.
+
+Attackers may also target model parameters directly by compromising pretrained models distributed via online repositories or model zoos. These models, often integrated without thorough verification, can contain backdoored weights—subtle parameter perturbations that do not impair general performance but cause controlled misbehavior in response to specific triggers. Once adopted and fine-tuned by downstream users, the malicious behavior persists, inheriting the backdoor from the base model even if the application context changes. [Table 13.1](#c13.xhtml#c13-tbl-0001) outlines key entry points that attackers commonly target throughout the AI development and deployment lifecycle.
+
+Model checkpoint repositories present an attractive attack surface. These checkpoints are frequently downloaded and reused for transfer learning, especially in generative and large language model contexts. A poisoned checkpoint might encode triggers or biases that remain dormant until the model is fine-tuned or queried in a particular manner. This transfer of adversarial behavior from source to downstream model makes checkpoint poisoning a particularly insidious variant of supply chain compromise.
+
+Table 13.1 Common entry points in the AI supply chain.
+
+| Lifecycle Stage || Targeted Component || Common Exploit || Impact on Downstream Models |
+| --- | --- | --- | --- |
+| Data Collection || Public Dataset Repositories || Poisoned Examples Embedded in Trusted Sources || Conditioned Inference Misbehavior |
+| --- | --- | --- | --- |
+| Annotation || Third-party Labeling Services || Adversarial Label Manipulation || Model Learns Harmful Associations |
+| Training || Preprocessing Functions || Gradient Manipulation via Injected Routines || Hidden Logic Embedded in Model Weights |
+| Checkpoint Storage || Serialized Model Artifacts || Parameter Perturbations Introduced During Save || Persistence of Backdoors Through Fine-Tuning |
+| Deployment || CI CD Pipelines || Container Injection or Poisoned Script Substitution || Model Integrity Compromised Prior to Production |
+| Inference || API Endpoints || Trigger-based Input Activation || Controlled Misclassification or Leakage on Demand |
+| Monitoring || Versioned Logs or Metadata || Modified Logs or Hashes to Hide Tampering || Forensic Visibility Reduced |
+
+Beyond data and models, the poisoning campaign may exploit the AI development environment itself. Attackers can inject malicious code into open-source machine learning libraries, data preprocessing scripts, or even widely used frameworks. If such components are pulled into a training pipeline without integrity checks, they can subtly alter training logic—for instance, skewing loss functions, adjusting sampling distributions, or injecting payloads during data loading operations. These effects may never appear in code audits, as the surface-level logic remains intact while the underlying behavior is subverted.
+
+In cases where training pipelines rely on cloud-based platforms or automated machine learning workflows, attackers may insert payloads through misconfigured containers or compromised orchestration scripts. By subtly altering pipeline configurations or replacing trusted artifacts with malicious variants, an attacker can influence large-scale training jobs without triggering alerts. These pipeline-level compromises are particularly dangerous in federated or distributed learning environments where central oversight is limited.
