@@ -1,0 +1,1 @@
+By defining the device at the beginning of the script and using it whenever you create a tensor, you can ensure your code runs on the GPU if available, and falls back to the CPU if not. This makes your code device-agnostic, as it can utilize any available hardware without requiring modification.
