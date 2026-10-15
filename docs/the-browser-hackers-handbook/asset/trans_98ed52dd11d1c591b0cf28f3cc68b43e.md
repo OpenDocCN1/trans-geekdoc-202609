@@ -1,0 +1,69 @@
+
+# 图 9-39: 使用 BeEF 钩子后门的 DD-WRT
+
+<x0.2965><y0.4305>![c09f039.tif](image_fi/662090c09/c09f039.png)<x0.7035><y0.4418>
+
+<x0.2965><y0.4539>这些相同的攻击向量同样适用于任何公开 Web 界面的网络设备，而不仅仅是路由器。利用 XSS、基本身份验证和 CSRF 漏洞是一种很好的方法，用于对 NAS 设备、交换机、监控摄像头、媒体播放器等设备进行未经授权的更改。正如你可能预期的那样，BeEF 包含了针对这些特定问题的众多命令模块。在高层面上，这些模块分为针对摄像头、NAS 设备和路由器的利用攻击。
+
+<x0.2965><y0.5305>摄像头模块尝试利用漏洞更新 DLink 和 Linksys 型号的管理员凭据。例如，在针对 AirLive 摄像头的一次实例中，模块会添加一个新的管理员用户。
+
+<x0.2965><y0.555>The NAS exploit modules target both DLink and FreeNAS devices. The DLink CSRF flaw permits remote code execution, while the CSRF flaw in the FreeNAS device is used to create a reverse shell back out to your computer.
+
+<x0.2965><y0.5797>The router exploit modules include attacks against 3COM, Belkin, CISCO, DLink, Linksys and Comtrend devices. Most of these will attempt to exploit CSRF flaws to change admin passwords, or enable remote access, as has been discussed earlier.
+
+<x0.2965><y0.6043>[Figure 9-40](#c09.html#figureanchor9-40) presents another useful resource for attacking network gateway devices: [http://www.routerpwn.com](http://www.routerpwn.com). Routerpwn, a project created by Roberto Salgado, is a collection of HTML and JavaScript payloads targeting residential routers. This allows almost anyone, anywhere, to attack his or her local router. The attacks are broken down against router manufacturers, such as Belkin, Cisco, Huawei, Netgear and so on. The webpage itself is actually just a single HTML file, and so can be downloaded and run offline in instances where perhaps Internet connectivity is not available.
+
+<x0.2965><y0.6836>start figure<x0.3352><y0.6852><class_Picture>
+
+<x0.2965><y0.6969>[**Figure 9-40:**](#c09.html#figureanchor9-40) Routerpwn - www.routerpwn.com<x0.7035><y0.7078>
+
+<x0.2965><y0.7195>![c09f040.tif](image_fi/662090c09/c09f040.png)<x0.7035><y0.7305>
+
+<x0.2965><y0.7434>end figure<x0.3352><y0.7453>
+
+<x0.2965><y0.7566>The attacks covered in this section provide a demonstration of the fragility of network routers, particularly SOHO devices often found in people’s homes. One of the primary causes of these issues is the assumption that vendors make around the security of web user interfaces. That is, web interfaces published on internal networks are safe from attackers on the Internet.
+
+<x0.2965><y0.8359>This assumption comes tumbling down like a house of cards if a browser within the network is executing JavaScript under an attacker’s control. From this vantage point, the router can be reconfigured, bypassed entirely, or become part of a botnet.
+
+# Summary
+
+<x0.2965><y0.875>This chapter has detailed a range of web application attack scenarios that can be launched from the hooked browser, many of which can be performed across origins without violating the SOP. The methods covered afford you as the attacker an increased level of anonymity and provide access to non-routable web applications residing on intranets.
+
+<x0.2965><y0.8992>Approaches to identify and exploit vulnerabilities cross-origin have also been discussed. These included Remote Command Execution (RCE), SQL injection, and Cross-site Scripting attacks (XSS).
+
+<x0.2965><y0.9242>You now know how hooking origins employing XSS vulnerabilities (discovered cross-origin) could expand the number of origins under your control and increase the attack surface. Once hooked, the newly controlled origin could be accessed via a Tunneling Proxy. This allows you to potentially ride an authenticated session and bypass some mitigations using HttpOnly. Standard security tools, like Burp and Sqlmap, could also use the Tunneling Proxy to relay their request via the hooked browser.
+
+<x0.2965><y0.9492>This chapter also showed that standard web application exploits could be launched cross-origin. These attacks can exploit RCE vulnerabilities on devices located on the intranet.
+
+<x0.2965><y0.9742>In the next chapter, you further explore taking advantage of hooked browsers positioned within internal networks. The attacks covered demonstrate how to compromise non-web services using Inter-protocol Communication and Exploitation, along with other methods.
+
+# Questions
+
+<x0.2965><y1.0094>Level1 **1.** What are preflight requests? **2.** How does cross-origin web application fingerprinting work? Is it respecting or violating the Same Origin Policy? **3.** How do you blindly hook a new domain? Describe an example. **4.** Is there a way to detect if the user is logged in to a web application, respecting the Same Origin Policy? **5.** Why can combining an XSRF vulnerability with a Cross-domain request potentially have devastating effects? How would a pseudo-random anti-XSRF token mitigate that? **6.** Which type of SQL injection is possible to detect cross-origin, respecting the Same Origin Policy? Is it blind or not? **7.** How is it possible to proxy HTTP requests through the hooked browser? **8.** Describe how the GlassFish exploit (CVE-2012-0550) explained in the last section of the chapter works. Are there any caveats? **9.** How can you exploit a liberal cross-origin policy, which allows access from all domains? Describe a practical example. **10.** Provide an example of a web application pinch point.
+
+<x0.2965><y1.0977>For answers to the questions please refer to the book’s website at [https://browserhacker.com/answers](https://browserhacker.com/answers) or the Wiley website at: [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook).<x0.7035><y1.1094>
+
+**Notes**
+
+<x0.3352><y1.1219><class_Section-header>
+
+1\. Mozilla Developer Network. (2013). HTTP access control (CORS). Retrieved June 15, 2013 from [https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS](https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS)<x0.7035><y1.1403>
+
+2\. W3C. (2013). Cross-origin Resource sharing Terminology. Retrieved June 15, 2013 from [http://www.w3.org/TR/cors/#simple-method](http://www.w3.org/TR/cors/#simple-method)<x0.7035><y1.1656>
+
+3\. W3C. (2013). Cross-origin Resource sharing Terminology. Retrieved June 15, 2013 from [http://www.w3.org/TR/cors/#simple-header](http://www.w3.org/TR/cors/#simple-header)<x0.7035><y1.1909>
+
+4\. BeEF Project. (2012). Internal Network Fingerprinter. Retrieved October 8, 2013 from [https://github.com/beefproject/beef/tree/master/modules/network/internal_network_fingerprinting](https://github.com/beefproject/beef/tree/master/modules/network/internal_network_fingerprinting)<x0.7035><y1.2164>
+
+5\. Chris Sullo. (2010). CMS Explorer. Retrieved June 15, 2013 from [http://code.google.com/p/cms-explorer/](http://code.google.com/p/cms-explorer/)<x0.7035><y1.2414>
+
+6\. Sky. (2012). Sagem router firmware. Retrieved October 8, 2013 from [http://www.skyuser.co.uk/skyinfo/the_sagem_f_st_2504_router_gets_a_new_fw.html](http://www.skyuser.co.uk/skyinfo/the_sagem_f_st_2504_router_gets_a_new_fw.html)<x0.7035><y1.2664>
+
+7\. Gareth Heyes. (2007). JS Lan Scanner. Retrieved October 8, 2013 from [http://code.google.com/p/jslanscanner/source/browse/trunk/lan_scan/js/lan_scan.js](http://code.google.com/p/jslanscanner/source/browse/trunk/lan_scan/js/lan_scan.js)<x0.7035><y1.2911>
+
+8\. Mike Cardwell. (2011). Abusing HTTP Status Codes to Expose Private Information. Retrieved June 15, 2013 from [https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information](https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information)<x0.7035><y1.3164>
+
+9\. H. Meer and M. Slaviero. (2007). It’s all about timing. Retrieved June 15, 2013 from [http://www.defcon.org/images/defcon-15/dc15-presentations/Meer_and_Slaviero/Whitepaper/dc-15-meer_and_slaviero-WP.pdf](http://www.defcon.org/images/defcon-15/dc15-presentations/Meer_and_Slaviero/Whitepaper/dc-15-meer_and_slaviero-WP.pdf)<x0.7035><y1.3414>
+
+10\. P. Watkins. (2001). Cross-site Request Forgeries. Retrieved June 15, 2013 from [http://www.tux.org/~peterw/csrf.txt](http://www.tux.org/~peterw/csrf.txt)<x0.7035><y1.3664>
+

