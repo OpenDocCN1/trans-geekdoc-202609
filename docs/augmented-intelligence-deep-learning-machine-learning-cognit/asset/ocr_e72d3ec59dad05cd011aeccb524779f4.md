@@ -1,0 +1,11 @@
+Feature selection based on genetic algorithms (GA) was introduced by Siedlecki and Sklansky [49] and have since been used with great success by several authors [50 - 52]. As GAs and other evolutionary algorithms are focused on the optimization of parameters and have gained a lot of space between the techniques of feature selection, in this section, we make a comparison between the genetic algorithms and the Boruta wrapper, which was introduced in the previous section. For this, we compared the Boruta FSS with a raw permutation importance measurement (BRFR) (Eq. 3.4) and Z scores (BRFZ) in relation to the GAs previously implemented [48] (Table 3.1).
+
+Table 3.1. Attributes selected by the BRFZ, BRFR, GILS and GCLS algorithms.
+
+| Selected Wavelengths (nm) | BRFZ | BRFR | GILS | GCLS |
+|---|---|---|---|---|
+|  | 1072, 1124, 1200,<br>1202, 1204, 1206,<br>1208,<br>1210, 1212, 1214,<br>1216, 1218, 1220,<br>1222,<br>1224, 1588, 1612,<br>1620, 1630, 1632,<br>1634,<br>1636, 1638, 1672 | 1202, 1204,<br>1206, 1208,<br>1210, 1212,<br>1214, 1216,<br>1218, 1220,<br>1638 | 1002, 1180,<br>1118, 1148,<br>1214, 1374,<br>1434, 1462,<br>1522, 1582 | 1250, 1092, 1556,<br>1582, 1328, 1336,<br>1582, 1008, 1146,<br>1136, 1378, 1106,<br>1096, 1250, 1092,<br>1556, 1336, 1582,<br>1278, 1106, 1086,<br>1336, 1582 |
+
+Even though the subsets of attributes obtained with BRFZ (24 selected features) and BRFR (11 selected features) are in full agreement, including a band between 1202 and 1220 nm, with a peak at 1210 nm that corresponds to the second overtone of the CH₂ stretching mode [53, 54] and another band between 1612 and 1672 nm with a peak selected at 1638 nm that corresponds to the first overtone region of the CH stretching vibration [55], the attributes selected with the GILS algorithms (10 selected features) and GCLS (23 selected features) differ considerably from those obtained by RF/Boruta. A probable reason is the consideration of another search region.
+
+In order to evaluate the significance and impact of the attributes selected to the response, CART decision trees with fixed hyperparameters were fitted in a 10-

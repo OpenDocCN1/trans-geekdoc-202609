@@ -1,0 +1,13 @@
+Gini index, the algorithm selects the best element to split from the available attributes in the considered nodes. A set of attribute values divide into two sections for each aᵢ, which in turn splits S_q into two subsets. Among the sections, the one that maximizes the Gini index is the optimal partition. The Gini index is obtained when records are allocated equally among all classes. From this partition, the node L_q that acquires the most valid value for the split-measure function is chosen for the split. The algorithm prolongs the process until there are no more nodes to compute, measure, and split or the algorithm fulfils the stopping criteria of choice.
+
+# 5.3.2.2. Decision Tree Classifier: J48 (C4.5)
+
+J48, also referred to as C4.5, is a non-binary decision tree. It is an upgraded version of the ID3 algorithm by Ross Quinlan [57]; it establishes the information entropy as a split-measure function. This algorithm follows almost the same steps as CART. However, instead of the Gini index, it uses the ratio of the information entropy and a function called the split information to determine the splits to extract the optimal partitions and nodes.
+
+# 5.3.2.3. OneR Classifier
+
+OneR is an algorithm implemented in classification. It generates a one-level decision tree. It is a practical and flexible technique capable of handling missing values and numeric attributes [58]. This technique generates a set of classification rules for every element. It computes the error rate of each variable. To do so, it uses the percentage of instances that do not belong to the majority class of the attributes. It subsequently selects the feature with the lowest error rate as its “one rule”; it starts with a selection of elements and produces a set of rules for each one. The algorithm generates these rules as follows: for each attribute, it sums up how often the value of every target class appears and deduces the majority class. Depending on the target class, it generates a set of rules befitting the attribute. It finishes by calculating the error ratio for each set and selects the set of rules with the lowest rate as its primary classification rule set.
+
+# 5.3.2.4. PART Classifier
+
+PART is a rule learner that uses the separate-and-conquer method. It builds a rule for each instance, then removes said instance and continues creating rules recursively until there are no instances left. It combines the C4.5 and Ripper algorithms and attempts to avoid their respective problem [59]. The algorithm

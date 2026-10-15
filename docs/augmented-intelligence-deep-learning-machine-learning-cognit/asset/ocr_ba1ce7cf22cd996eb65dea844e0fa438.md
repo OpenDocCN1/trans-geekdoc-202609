@@ -1,0 +1,9 @@
+![](bbox=[0.24, 0.15, 0.86, 0.42])
+
+Fig. (10). Co-occurrence network of author keywords.
+
+# 8.7. CONCLUSION AND FORTHCOMING OUTLOOK
+
+Computer intelligence (CI) is a properly described and challenging area of research that is speedily growing all through this COVID-19 disease to handle the race in vaccine designing. Now need a vaccine, and the scientific group is at its excessive time looking for the vaccine for this virus. Several vaccine categories are under experimental, and researchersattempt to investigate vaccine techniques for treating this lethal virus. It was also known that the typical vaccine consisting of the whole disease might also not work accurately in growing an effective vaccine [46]. Therefore, Developing technologies furnish many possibilities for enhancing the precision of infectious disease prediction [47]. Figs. (9) shows that science and technology-other topics are the top three subject categories. Recently, some research has mentioned the emerging technologies to predict infectious diseases, consisting of remote sensing technology [48], artificial intelligence [49], big data analysis [50, 51], social media [52]. The emergence of new technologies is essential for researchers and scholars to enhance the prediction precision of infectious diseases. As a result, how to find more effective and reliable new techniques for speedy responses to the demands of the prediction can be explored in the future.
+
+Many factors were measured in the prediction of infectious diseases. Based on Table 7, we can find that COVID-19 and Deep Learning are high-frequency keyword co-occurrence by authors, and these may be pathogenic factors. Some

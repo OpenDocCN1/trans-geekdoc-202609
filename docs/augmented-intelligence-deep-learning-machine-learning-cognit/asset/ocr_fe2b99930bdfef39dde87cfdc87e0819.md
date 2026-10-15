@@ -1,0 +1,10 @@
+# AUGMENTED INTELLIGENCE:
+DEEP LEARNING, MACHINE LEARNING, COGNITIVE COMPUTING, EDUCATIONAL DATA MINING
+
+Editors:
+Om Praksh Jena
+Alok Ranjan Tripathy
+Brojo Kishore Mishra
+Ahmed A. Elngar
+
+![](bbox=[0.05, 0.35, 0.95, 0.85])

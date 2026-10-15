@@ -1,0 +1,11 @@
+# 2.3. BCI SENSOR WORLD OVERVIEW
+
+The bulk of European BCI sciences include “non-invasive” sensor technology [11], *i.e.*, multi-electrode recording from EEG electrode arrays on the skull floor [12, 13]. This sensor technology has seen very little development and needs to be greatly improved [14]. In Europe, several BCI sites are capable of delivering sensing devices, which may help advance the production of “invasive” sensor technology [15].
+
+Brain-machine interfaces (BMI) [18], while they are designed to solve the same problem, are substantially different from BCIs, expressing the purpose of a subject in robotic orders [16]. BCI acts in a manner that is understood to equate with actions but is diffusing and unspecified with the macroscopic brain function (mostly EEG) [17]. BCI has already achieved progress and is ready for patients to use, building on accessible EEG research and machine learning techniques details [19, 20].
+
+# 2.4. HISTORY OF IMPLANTABLE ELECTRODES
+
+CNS history of implantation of electrodes dates back to Hess' early work with original feline implants in the 1930s' [21]. In the 1970s, however, implantable electrodes saw a more recent adaptation. The development of 50 μm tungsten microwire arrays was recorded by Selman and Bach in the early 1970s in the electrophysiological records and the early 1980ies by Chapin & Woodward (1986). In essence, many laboratories use this type of technology for more frequent single-unit recordings and many animal BCI applications. The accurate monitoring and functionality of individual wires for electrode recording sites are some of the difficulties with multi-wire arrays [22].
+
+Wise and Angell developed the principle of the use of integrated chip (IC) technology to improve the microelectrodes from 1970 to 1975 [23]. In the next several years, various articles were written; Bement Standard wire electrode works were ground breaking in the 1980s, varying in diameter, with a duration exposed of up to 1 mm, from 13 to 200 μm [24]. Fig. (2.1) provides an illustration of a high-density array of embedded micro disk for recording up to 128 wires in spontaneously movement mice. Wire electrode is widely used by rats, primates, animals, and late monitoring purposes [25].
