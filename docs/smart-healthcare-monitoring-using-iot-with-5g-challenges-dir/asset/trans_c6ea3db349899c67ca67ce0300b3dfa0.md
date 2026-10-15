@@ -1,0 +1,159 @@
+
+
++   [10]. W. T. Siow, M. F. Liew, B. R. Shrestha, F. Muchtar, 和 K. C. See, 在资源有限环境中管理COVID-19：重症监护注意事项。*重症监护*, 24 (1), 10.1186/s13054-020-02890-x (2020).
++   
++   [11]. A. Bansal, R. P. Padappayil, C. Garg, A. Singal, M. Gupta, 和 A. Klein, 人工智能在COVID-19大流行中的应用价值：综述。*医学系统杂志*, 44 (9), 1–6 (2020).
++   
++   [12]. R. Vaishya, M. Javaid, I. H. Khan, 和 A. Haleem, 人工智能在COVID-19大流行中的应用。*糖尿病与代谢综合征：临床研究与综述*, 14 (4), 337–339 (2020).
++   
++   [13]. I. E. Agbehadji, B. O. Awuzie, A. B. Ngowi, 和 R. C. Millham, 大数据分析、人工智能和自然启发计算模型在准确检测COVID-19大流行病例和接触者追踪中的综述。*国际环境研究与公共卫生杂志*, 17 (15), 5330 (2020).
++   
++   [14]. R. Yang, X. Gui, 和 Y. Xiong, 中国武汉无症状与有症状2019冠状病毒病患者的临床特征比较。*美国医学会网络开放期刊*, 3 (5), e2010182 (2020).
++   
++   [15]. A. Zeek, 和 A. Briggs, *COVID-19研究的初步结果显示病毒在印第安纳州的传播*。IU新闻. https://news.iu.edu/stories/2020/05/iupui/releases/13-preliminary-findings-impact-covid-19-indiana-coronavirus.html (2020).
++   
++   [16]. C. Menni, A. M. Valdes, M. B. Freidin, C. H. Sudre, L. H. Nguyen, D. A. Drew, S. Ganesh, T. Varsavsky, M. J. Cardoso, J. S. El-Sayed Moustafa, A. Visconti, P. Hysi, E. Bowyer, R. C. Mangino, M. Falchi, M. Wolf, J. Ourselin, S. Chan, A. T. Steves C. J. 和 T. D. Spector, 实时追踪自我报告症状以预测潜在的COVID-19。*自然医学*, 26, 1037–1040 (2020).
++   
++   [17]. A. A. Ardakani, A. R. Kanafi, U. R. Acharya, N. Khadem, 和 A. Mohammadi, 利用CT图像在常规临床实践中应用深度学习技术管理COVID-19：10个卷积神经网络的结果。*计算机在生物学和医学中的应用*, 121, 103795 (2020).
++   
++   [18]. L. Sun, F. Song, N. Shi, F. Liu, S. Li, P. Li, W. Zhang, X. Jiang, Y. Zhang, L. Sun, X. Chen, 和 Y. Shi, 四种临床指标的组合可预测感染COVID-19患者的重症/危重症症状。*临床病毒学杂志*, 128, 104431 (2020).
++   
++   [19]. M. Toğaçar, B. Ergen, 和 Z. Çömert, 利用深度学习模型进行COVID-19检测，采用社会拟态优化和基于模糊颜色与堆叠方法的结构化胸部X射线图像。*计算机在生物学和医学中的应用*, 121, 103805 (2020).
++   
++   [20]. F. Sattler, J. Ma, P. Wagner, D. Neumann, M. Wenzel, R. Schäfer, W. Samek, K. Müller, 和 T. Wiegand, 基于蓝牙低功耗测量的SARS-CoV-2传播风险评估。*NPJ数字医学*, 3(1), 1–4 (2020).
++   
++   [21]. Z. Malki, E. S. Atlam, A. E. Hassanien, G. Dagnewe, M. A. Elhossieni, 和 I. Gad, 天气数据与COVID-19大流行预测死亡率之间的关联：机器学习方法。*混沌、孤子与分形*, 138, 110137 (2020).
++   
++   [22]. C. Iwendi, A. K. Bashir, A. Peshkar, R. Sujatha, J. M. Chatterjee, S. Pasupuleti, R. Mishra, S. Pillai, 和 O. Jo, 使用提升随机森林算法预测COVID-19患者健康状况。*公共卫生前沿*, 8, 357 (2020).
++   
++   [23]. J. Matos, F. Paparo, I. Mussetto, L. Bacigalupo, A. Veneziano, S. Perugin Bernardi, E. Biscaldi, E. Melani, G. Antonicucci, P. Cremonesi, M. Lattuada, A. Pilotto, E. Pontali, 和 G. A. Rollandi, 使用定量肺部CT和临床数据评估新型冠状病毒病（COVID-19）：短期结局预测。*欧洲放射学实验*, 4(1), 1–10 (2020).
++   
+
+## 利用人工智能进行COVID-19接触者追踪
+
+[24]. J. Farooq, 和 M. A. Bazaz, 一种新的自适应深度学习模型用于COVID-19，重点关注降低死亡率策略。混沌、孤子与分形, 138, 110148 (2020).
+
+[25]. M. Yadav, M. Perumal, 和 M. Srinivas, 使用机器学习方法分析新型冠状病毒（COVID-19）。混沌、孤子与分形, 139, 110050 (2020).
+
+[26]. Z. Hu, Q. Ge, S. Li, E. Boerwinkle, L. Jin, 和 M. Xiong, 预测并评估全球针对COVID-19的多项干预措施。人工智能前沿, 3 (2020).
+
+[27]. R. Jaiswal, A. Agarwal, 和 R. Negi, 利用智慧城市技术降低COVID-19风险的智能解决方案。IET智慧城市, 2 (2), 82–88 (2020).
+
+[28]. J. Pu, J. Leader, A. Bandos, J. Shi, P. Du, J. Yu, B. Yang, S. Ke, Y. Guo, J. B. Field, C. Fuhrman, D. Wilson, F. Sciurba, 和 C. Jin, 是否存在与COVID-19相关的独特影像生物标志物？欧洲放射学, 30 (11), 6221–6227 (2020).
+
+[29]. D. Singh, V. Kumar, Vaishali, 和 M. Kaur, 使用基于多目标差分进化的卷积神经网络对胸部CT图像中的COVID-19患者进行分类。欧洲临床微生物学与传染病杂志, 39 (7), 1379–1389 (2020).
+
+[30]. X. Xu, X. Jiang, C. Ma, P. Du, X. Li, S. Lv, L. Yu, Q. Ni, Y. Chen, J. Su, G. Lang, Y. Li, H. Zhao, J. Liu, K. Xu, L. Ruan, J. Sheng, Y. Qiu, W. Wu ... L. Li, 用于筛查2019冠状病毒病肺炎的深度学习系统。工程, 6(10), 1122–1129 (2020).
+
+[31]. S. Wang, Y. Zha, W. Li, Q. Wu, X. Li, M. Niu, M. Wang, X. Qiu, H. Li, H. Yu, W. Gong, Y. Bai, L. Li, Y. Zhu, L. Wang, 和 J. Tian, 用于COVID-19诊断和预后分析的全自动深度学习系统。欧洲呼吸杂志, 56(2) (2020).
+
+[32]. M. Z. Alom, M. M. Shaifur Rahman, M. S. Nasrin, T. M. Taha, 和 V. K. Asari, COVID_MTNet：基于多任务深度学习方法的COVID-19检测。arXiv:2004.03747 [eess.IV]. https://arxiv.org/pdf/2004.03747.pdf (2020).
+
+[33]. A. A. Farid, G. I. Selim, 和 H. A. Khater, 一种用于筛查冠状病毒病（COVID-19）的CT图像特征分析与预测新方法。国际科学与工程研究杂志, 11(3), (2020). doi:10.14299/ijser.2020.03.02.
+
+[34]. A. E. Hassanien, A. Salama, 和 Darwish, 预测COVID-19患者康复的人工智能方法。EasyChair预印本, 3223 (2020).
+
+[35]. H. Yue, Q. Yu, C. Liu, Y. Huang, Z. Jiang, C. Shao, H. Zhang, B. Ma, Y. Wang, G. Xie, X. Li, N. Kang, X. Meng, S. Huang, D. Xu, J. Lei, H. Huang, J. Yang, J. Ji, H. Pan, S. Zou, S. Ju, X. Qi, 基于机器学习的CT影像组学模型预测SARS-CoV-2感染相关肺炎患者的住院时间：一项多中心研究。转化医学年鉴, 8(14), 859 (2020). doi:10.21037/atm-20-3026 PMID: 32793073; PMCID: PMC7396749.
+
+![](img/7bb239370082cb34554bae1e45e2b0d7_270_0.png)
+
+## Taylor & Francis
+
+Taylor & Francis Group
+
+http://taylorandfrancis.com
+
+## 索引
+
+- 药物不良反应 (ADR), 50
+- 阿尔茨海默病, 82, 85, 107
+- 环境辅助生活 (AAL), 11, 50
+- 人工智能 (AI), 24, 62, 132, 162, 247, 259
+- 人工神经网络 (ANN), 25
+- 无症状, 131, 139
+- 自动化的, 132, 138
+- 自主感觉系统 (ANS), 185
+
+- 后端即服务 (BaaS), 167
+- 心冲击图 (BCG), 183
+- 物联网在医疗保健中的障碍, 16
+- 生化传感器, 57
+- 生物电位传感器, 57
+- 血压 (BP), 184
+- 血压监测 (BPM), 52
+- BlueDot, 236
+- 体温监测 (BTM), 52
+- 自带设备 (BYOD), 165
+
+- 疾病控制与预防中心 (CDC), 156, 233
+- 聊天机器人, 229, 231
+- 胸部成像, 231, 232
+- 儿童医疗保健 (CH), 51
+- 计算机断层扫描 (CT) 扫描, 132
+- 接触者追踪, 247–256
+- 卷积神经网络 (CNN), 27, 133
+- COVID-19, 23, 35, 247, 249, 250
+- 基于自定义的, 135
+
+- 暗网, 30
+- 数据挖掘, 62
+- 决策支持系统, 62
+- 决策树 (DT), 212
+- 深度学习 (DL), 24, 26, 203
+- 深度神经网络 (DNN), 133
+- 深度结构化学习 (DSL), 25
+- 深度迁移学习 (DTL), 24
+- 诊断, 250
+- 数字健康技术, 12, 13
+
+- 心电图监测, 52
+- 边缘计算 (EC), 25, 33
+- 电子健康, 3
+- 电子健康记录 (EHR), 163
+- 环境传感器, 57
+
+- 患者和照护者的期望, 15
+- 专家系统, 62
+
+- 血糖水平传感, 51
+
+- 健康监测可穿戴传感器, 57
+- 医疗保健应用, 10, 11, 14, 15
+- 医疗保健能力, 9
+- 医疗保健演进, 12
+- 医疗保健管理标准, 5
+- 医疗保健安全问题, 54
+- 医疗保健服务, 50, 51
+- 分层学习 (HL), 25
+- 炒作周期, 12
+
+- 间接紧急医疗保健 (IEH), 51
+- 移动健康物联网 (IoMH), 50
+- 物联网 (IoT), 162, 178, 181, 187, 188, 198, 200, 205, 216
+- 互联网革命, 63
+
+- 物联网架构, 46, 64, 65, 66
+- 物联网定义, 62, 63
+- 物联网生态系统, 67
+- 物联网要素, 65, 68
+- 物联网的出现, 66
+- 物联网运行条件, 68
+- 物联网医疗保健, 46
+- 物联网医疗保健应用, 46, 51, 52, 53
+- 物联网医疗保健挑战, 55
+- 物联网在波兰, 73
+- 物联网互操作性视角, 64
+- 物联网机遇, 69
+- 物联网服务视角, 64
+- 物联网技术视角, 64
+- 物联网可穿戴传感器, 56
+- IT工具, 5
+
+- 机器学习 (ML), 62, 198, 199, 203, 204, 210
+- 简易精神状态检查 (MMSE), 209
+- 移动应用, 14, 15
+- 运动传感器, 57
+
+- 国家疾病控制中心 (NCDC), 152, 153
+- 自然语言处理 (NLP), 62
+

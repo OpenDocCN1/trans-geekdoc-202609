@@ -1,0 +1,15 @@
+the situation in place, enabled devices will collect useful medical and health-related data via a smart medical system linked to a mobile app. Data like ECGs, weight, oxygen, blood sugar, and blood pressure are retrieved and transmitted by the connected IoT device. The data is stored in the cloud and may, as per the sharing access authority, be shared with an authorized user.
+
++   ii. **End-to-end affordability and connectivity**—IoT will aid to simplify the workflow of patient and healthcare through mobility solutions. This solution enables machine to machine connectivity, interoperability, data movement and knowledge exchange, making it incredibly cost effective to provide healthcare services. This technology-driven set-up will reduce costs by minimizing unwanted visits and using higher performing services. This would strengthen the method of allocation and resource preparation.
+
++   iii. **Data assortment and analysis**—Handling large amount of data for healthcare professionals is not easy. Real-time collected data through mobile devices enabled by IoT can be separated and analyzed by mobility solutions powered by IoT. To reduce errors and speeding up decision-making, this can minimize raw data processing and will accelerate health care analytics and data-driven insights.
+
++   iv. **Tracking and alerts**—In life-threatening conditions, real-time tracking and alerts will turn into a blessing to safeguard the health of a serious patient with continuous update and alerts for careful diagnosis, analysis, and monitoring. IoT-powered mobility solutions allow tracking, alerting, and monitoring in real time. This helps doctors to hands-on interventions, improve accuracy and suitable intervention, while enhancing the results of patient’s care delivery.
+
++   v. **Remote Medical Support:** A situation could come in patient’s life in which he/she is seeking medical help, but because of barriers such as location and lack of expertise, unable to communicate with a doctor. The issue has solution in IoT-enabled mobility systems which can assist patients with appropriate medical support. Via healthcare delivery chains which are interconnected to patients through IoT devices, patients can take medical medications right at home. This coin has two sides. Healthcare IoT applications have also faced some challenges along the way.
+
+# ## 11.7.2 Challenges of IoT in Healthcare
+
+As there are major benefits to IoT in healthcare, still some challenges are there that need to be addressed. Without understanding these challenges, healthcare technologies of IoT could not be considered for deployment.
+
++   i. **Security and privacy**—IoT-enabled healthcare provides various advantages, but also produces numerous vulnerable security spots. There may be several possible consequences, connected devices such that sensors, smartphones, etc., could be hacked. Hackers might log into Internet-connected medical devices and can access or steal personal health information or even change it. They must be encrypted if there is data transfer

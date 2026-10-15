@@ -1,0 +1,15 @@
+![](bbox=[0.11, 0.1, 0.9, 0.24])
+
+FIGURE 2.1 Proposed schematic diagram of DL-based COVID detection.
+
+data labeling, and being limited by human ability-centric accuracy. The handcrafted function isn't required in DL [25]. With the aid of various innovative algorithms, computational power of modern computers, and the availability of large datasets, DL can make more accurate predictions and classifications.
+
+As already noted DL is a learning algorithm that falls under the AI umbrella, and it is based on ANN but in a much up-scaled level. The back propagation algorithm is used to train these models using the dataset [26]. It is a good optimizer tool for dealing with COVID-19. COVID-19 patients can be detected by checking body temperature (fever) and related symptoms. DL could be used for many other purposes such as patient care as well as detection of systematic social distancing observance and violation. Further, DL methods can be used to formulate robotic systems to handle pandemic-related crisis, provide support to patients, drug and food delivery, decontamination, drug design and discovery, identify and prevent spread of fake news, and create social awareness. The possibilities are enormous. The primary attributes of DL systems that are crucial in this case are their ability to replicate human behavior, provide prediction, and forecast (Figure 2.1).
+
+# 2.3.1 DEEP TRANSFER LEARNING
+
+After a model has been trained, transfer learning allows it to be employed on a new challenge. In comparison to traditional machine learning methods, a big training data collection is required for DL. As a result, the requirement for a large amount of labeled data is a major impediment to completing some critical domain-specific tasks, especially in the medical domain, where the development of large-scale, high-quality annotated medical data is a major challenge [27]. Although scientists work tirelessly to find ways to reduce the risk and the effects of such constraints [28,29], the basic DL model needs a lot of computing power and the use of specialized hardware like GPU-enabled servers. DTL, a DL-based transfer learning [30], was used to provide a solution to this challenge. DTL greatly minimizes the need for training data and training time for a target domain-specific job by picking a pre-trained model (trained on another large dataset of the same target domain) for a fixed feature extractor or for further fine-tuning [31]. It is now common in DL because it can train deep neural networks (DNN) with a small amount of data (Figure 2.2).
+
+# 2.3.2 EDGE DEVICES
+
+Edge or IoT devices capture and process data in real time by storing a copy of densely used data from the cloud locally and providing additional functionality to IoT devices. As a result, only the Fog server sends related data from IoT devices to the cloud.
