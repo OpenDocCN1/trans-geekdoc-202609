@@ -1,0 +1,39 @@
+
+- [279] Costanza-Chock, Sasha, Raji, Inioluwa Deborah, and Buolamwini, Joy. 2022. “Who audits the auditors? Recommendations from a field scan of the algorithmic auditing ecosystem.” In *Proceedings of the Conference on Fairness, Accountability, and Transparency*, 1571–1583. ACM.
+- [280] Ajunwa, Ifeoma. 2021. “An auditing imperative for automated hiring.” *Harvard Journal of Law & Technology*, 34(2):621–629.
+- [281] Malgieri, Gianclaudio, and Pasquale, Frank A. 2022. “From transparency to justification: Toward ex ante accountability for AI.” *Brooklyn Law School, Legal Studies Paper*, (712).
+- [282] Sinclair, Upton. 2006. *The jungle*. Penguin.
+- [283] Hoofnagle, Chris Jay. 2016. *Federal trade commission privacy law and policy*. Cambridge University Press.
+- [284] Slaughter, Rebecca Kelly. 2020. “Statement of commissioner Rebecca Kelly Slaughter in the matter of Liberty Chevrolet, Inc. d/b/a Bronx Honda.” Federal Trade Commission, matter number 162 3238. [`www.ftc.gov/system/files/documents/public_statements/1576006/bronx_honda_2020-5-27_bx_honda_rks_concurrence_for_publication.pdf`](https://www.ftc.gov/system/files/documents/public_statements/1576006/bronx_honda_2020-5-27_bx_honda_rks_concurrence_for_publication.pdf).
+- [285] Selbst, Andrew D., and Barocas, Solon. 2023. “Unfair artificial intelligence: How FTC intervention can overcome the limitations of discrimination law.” *University of Pennsylvania Law Review*, 171.
+- [286] Federal Trade Commission. 2021. “Decision and Order, In re Everalbum, Inc.” Federal Trade Commission, matter number 192 3172. [`www.ftc.gov/system/files/documents/cases/1923172_-_everalbum_decision_final.pdf`](https://www.ftc.gov/system/files/documents/cases/1923172_-_everalbum_decision_final.pdf).
+- [287] Pitofsky, Robert. 2005. “Past, present, and future of antitrust enforcement at the Federal Trade Commission.” *University of Chicago Law Review*, 72(1):209–227.
+- [288] Jillson, Elisa. 2021. “Aiming for truth, fairness, and equity in your company’s use of AI.” Federal Trade Commission, Business blog, April 19, 2021.
+- [289] Slaughter, Rebecca Kelly, Kopec, Janice, and Batal, Mohamad. 2020. “Algorithms and economic justice: A taxonomy of harms and a path forward for the Federal Trade Commission.” *Special issue, Yale Journal of Law & Technology*, 23:1.
+- [290] Richards, Neil, and Hartzog, Woodrow. 2021. “A duty of loyalty for privacy law.” *Washington University Law Review*, 99(3):961–1021.
+- [291] Bogen, Miranda, and Rieke, Aaron. 2018. “Help wanted: An examination of hiring algorithms, equity, and bias.” Technical report, Upturn, Washington, DC.
+- [292] Wienk, Ronald E., Reid, Clifford E., Simonson, John C., and Eggers, Frederick J. 1979. “Measuring racial discrimination in American housing markets: The housing market practices survey.” Technical report, Housing Market Practices Survey, US Department of Housing and Development.
+- [293] Ayres, Ian, and Siegelman, Peter. 1995. “Race and gender discrimination in bargaining for a new car.” *American Economic Review*, 85(3):304–321.
+- [294] Freeman, Jonathan B., Penner, Andrew M., Saperstein, Aliya, Scheutz, Matthias, and Ambavy, Nalini. 2011. “Looking the part: Social status cues shape race perception.” *PLOS ONE*, 6(9):e25107.
+- [295] Bertrand, Marianne, and Mullainathan, Sendhil. 2004. “Are Emily and Greg more employable than Lakisha and Jamal? A field experiment on labor market discrimination.” *American Economic Review*, 94(4):991–1013.
+- [296] Pager, Devah. 2007. “The use of field experiments for studies of employment discrimination: Contributions, critiques, and directions for the future.” *Annals of the American Academy of Political and Social Science*, 609(1):104–133.
+- [297] Kohler-Hausmann, Issa. 2019. “Eddie Murphy and the dangers of counterfactual causal thinking about detecting racial discrimination.” *Northwestern University Law Review*, 113(5):1163–1228.
+- [298] Bertrand, Marianne., and Duflo, Esther. 2017. “Field experiments on discrimination.” In *Handbook of Economic Field Experiments*, vol. 1, edited by Esther Duflo and Abhijit Banerjee, 309–393. Elsevier.
+- [299] Quillian, Lincoln, Pager, Devah, Hexel, Ole, and Midtbøen, Arnfinn H. 2017. “Meta-analysis of field experiments shows no change in racial discrimination in hiring over time.” *Proceedings of the National Academy of Sciences*, 114(41):10870–10875.
+- [300] Blank, Rebecca M. 1991. “The effects of double-blind versus single-blind reviewing: Experimental evidence from the *American Economic Review*.” *American Economic Review*, 81(5):1041–1067.
+- [301] Pischke, Jorn-Steffen. 2005. “Empirical methods in applied economics: Lecture notes.” [`econ.lse.ac.uk/staff/spischke/ec524/evaluation3.pdf`](https://econ.lse.ac.uk/staff/spischke/ec524/evaluation3.pdf).
+- [302] Bertrand, Marianne, Duflo, Esther, and Mullainathan, Sendhil. 2004. “How much should we trust differences-in-differences estimates?” *The Quarterly Journal of Economics*, 119(1):249–275.
+- [303] Kang, Sonia K., DeCelles, Katherine A., Tilcsik, András, and Jun, Sora. 2016. “Whitened resumes: Race and self-presentation in the labor market.” *Administrative Science Quarterly*, 61(3):469–502.
+- [304] Eren, Ozkan, and Mocan, Naci. 2018. “Emotional judges and unlucky juveniles.” *American Economic Journal: Applied Economics*, 10(3):171–205.
+- [305] Danziger, Shai, Levav, Jonathan, and Avnaim-Pesso, Liora. 2011. “Extraneous factors in judicial decisions.” *Proceedings of the National Academy of Sciences*, 108(17):6889–6892.
+- [306] Lakens, Daniel. 2017. “Impossibly hungry judges.” [`daniellakens.blogspot.com/2017/07/impossibly-hungry-judges.html`](https://daniellakens.blogspot.com/2017/07/impossibly-hungry-judges.html)
+- [307] Weinshall-Margel, Keren, and Shapard, John. 2011. “Overlooked factors in the analysis of parole decisions.” *Proceedings of the National Academy of Sciences*, 108(42):E833–E833.
+- [308] Norton, Helen. 2010. “The Supreme Court’s post-racial turn towards a zero-sum understanding of equality.” *William & Mary Law Review*, 52(1):197–259.
+- [309] Ayres, Ian. 2005. “Three tests for measuring unjustified disparate impacts in organ transplantation: The problem of ‘included variable’ bias.” *Perspectives in Biology and Medicine*, 48(1):S68–87.
+- [310] Simoiu, Camelia, Corbett-Davies, Sam, and Goel, Sharad. 2017. “The problem of infra-marginality in outcome tests for discrimination.” *Annals of Applied Statistics*, 11(3):1193–1216.
+- [311] Lakkaraju, Himabindu, Kleinberg, Jon, Leskovec, Jure, Ludwig, Jens, and Mullainathan, Sendhil. 2017. “The selective labels problem: Evaluating algorithmic predictions in the presence of unobservables.” In *Proceedings of the 23rd ACM International Conference on Knowledge Discovery and Data Mining*, 275–284. ACM.
+- [312] Bird, Sarah, Barocas, Solon, Crawford, Kate, Diaz, Fernando, and Wallach, Hanna. 2016. “Exploring or exploiting? Social and ethical implications of autonomous experimentation in AI.” In *Workshop on Fairness, Accountability, and Transparency in Machine Learning*. [`www.fatml.org/schedule/2016/page/papers%202016%20Papers%20::%20FAT%20ML`](https://www.fatml.org/schedule/2016/page/papers%202016%20Papers%20::%20FAT%20ML).
+- [313] Becker, Gary S. 1957. *The economics of discrimination*. University of Chicago Press.
+- [314] Phelps, Edmund S. 1972. “The statistical theory of racism and sexism.” *American Economic Review*, 62(4):659–661.
+- [315] Arrow, Kenneth J. 1973. “The theory of discrimination.” In *Discrimination in Labor Markets*, edited by Orley Ashenfelter and Albert Rees, 3–33. Princeton University Press.
+- [316] Agan, Amanda, and Starr, Sonja. 2017. “Ban the box, criminal records, and racial discrimination: A field experiment.” *Quarterly Journal of Economics*, 133(1):191–235.
