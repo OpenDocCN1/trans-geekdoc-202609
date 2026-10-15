@@ -1,0 +1,50 @@
+
+-   [恶意软件](#05_Chapter01.xhtml#page_9), [9](#05_Chapter01.xhtml#page_9), [12](#05_Chapter01.xhtml#page_12), [15](#06_Chapter02.xhtml#page_15)–[17](#06_Chapter02.xhtml#page_17), [25](#06_Chapter02.xhtml#page_25), [28](#06_Chapter02.xhtml#page_28)–[29](#06_Chapter02.xhtml#page_29), [31](#07_Chapter03.xhtml#page_31)–[37](#07_Chapter03.xhtml#page_37), [46](#08_Chapter04.xhtml#page_46), [52](#08_Chapter04.xhtml#page_52), [66](#09_Chapter05.xhtml#page_66), [68](#09_Chapter05.xhtml#page_68)
+
+history, [17](#06_Chapter02.xhtml#page_17)–[20](#06_Chapter02.xhtml#page_20)
+
+modern attacks, [20](#06_Chapter02.xhtml#page_20)–[23](#06_Chapter02.xhtml#page_23)
+
+Trojan horse, [17](#06_Chapter02.xhtml#page_17), [19](#06_Chapter02.xhtml#page_19)
+
+viruses, [16](#06_Chapter02.xhtml#page_16), [19](#06_Chapter02.xhtml#page_19)–[20](#06_Chapter02.xhtml#page_20), [25](#06_Chapter02.xhtml#page_25), [31](#07_Chapter03.xhtml#page_31)
+
+worms, [16](#06_Chapter02.xhtml#page_16), [18](#06_Chapter02.xhtml#page_18), [25](#06_Chapter02.xhtml#page_25), [52](#08_Chapter04.xhtml#page_52)
+
+Morris, Robert, [18](#06_Chapter02.xhtml#page_18), [18](#06_Chapter02.xhtml#page_18-1)
+
+National Aeronautics and Space Administration (NASA) cybersecurity division, [66](#09_Chapter05.xhtml#page_66)–[67](#09_Chapter05.xhtml#page_67), [66](#09_Chapter05.xhtml#page_66-1)
+
+National Science Foundation (NSF), [63](#09_Chapter05.xhtml#page_63), [65](#09_Chapter05.xhtml#page_65)
+
+National Security Agency (NSA), [7](#05_Chapter01.xhtml#page_7)–[8](#05_Chapter01.xhtml#page_8), [11](#05_Chapter01.xhtml#page_11), [13](#05_Chapter01.xhtml#page_13), [22](#06_Chapter02.xhtml#page_22), [49](#08_Chapter04.xhtml#page_49), [52](#08_Chapter04.xhtml#page_52), [63](#09_Chapter05.xhtml#page_63)–[65](#09_Chapter05.xhtml#page_65)
+
+nonprofit, [40](#07_Chapter03.xhtml#page_40), [58](#09_Chapter05.xhtml#page_58), [62](#09_Chapter05.xhtml#page_62)
+
+object code, [35](#07_Chapter03.xhtml#page_35)
+
+open security, [40](#07_Chapter03.xhtml#page_40)
+
+open source, [39](#07_Chapter03.xhtml#page_39)–[40](#07_Chapter03.xhtml#page_40)
+
+Pentagon, [8](#05_Chapter01.xhtml#page_8-1)
+
+phishing, [17](#06_Chapter02.xhtml#page_17)
+
+punch cards [4](#05_Chapter01.xhtml#page_4-1), [5](#05_Chapter01.xhtml#page_5)–[6](#05_Chapter01.xhtml#page_6)
+
+sandbox, [34](#07_Chapter03.xhtml#page_34)
+
+Saujani, Reshma, [60](#09_Chapter05.xhtml#page_60), [61](#09_Chapter05.xhtml#page_61-1)
+
+self-replication, [16](#06_Chapter02.xhtml#page_16), [18](#06_Chapter02.xhtml#page_18)–[19](#06_Chapter02.xhtml#page_19)
+
+signature, [31](#07_Chapter03.xhtml#page_31)–[33](#07_Chapter03.xhtml#page_33), [36](#07_Chapter03.xhtml#page_36)
+
+STEM, [59](#09_Chapter05.xhtml#page_59)
+
+About the Author
+
+Kate Shoup 写了四十多本书，并编辑了数百本。当不工作时，Shoup 喜欢旅行、观看 Indy 车 racing、滑雪、阅读和骑摩托车。她住在印第安纳波利斯，和丈夫一起生活。
+
+![](Images/backcover.jpg)
