@@ -1,0 +1,3785 @@
+- pgno: 0
+  md: "# Linear Algebra\n\n# Exercises\n\n2.1 We consider (ℝ\\{-1}, ★), where\n\n\
+    a ★ b := ab + a + b,      a,b ∈ ℝ\\{-1}      (2.1)\n\n+   - a. Show that (ℝ\\\
+    {-1}, ★) is an Abelian group.\n+   - b. Solve\n+   \n+     3 ★ x ★ x = 15\n+ \
+    \  \n+     in the Abelian group (ℝ\\{-1}, ★), where ★ is defined in (2.1).\n\n\
+    a. First, we show that ℝ\\{-1} is closed under ★: For all a, b ∈ ℝ\\{-1}:\n\n\
+    a ★ b = ab + a + b + 1 - 1 = (a + 1)(b + 1) - 1 ≠ -1\n\n⇒ a ★ b ∈ ℝ\\{-1}\n\n\
+    Next, we show the group axioms\n\n+   - **Associativity:** For all a, b, c ∈ ℝ\\\
+    {-1}:\n+     (a ★ b) ★ c = (ab + a + b) ★ c\n+     = (ab + a + b)c + (ab + a +\
+    \ b) + c\n+     = abc + ac + bc + ab + a + b + c\n+     = a(bc + b + c) + a +\
+    \ (bc + b + c)\n+     = a ★ (bc + b + c)\n+     = a ★ (b ★ c)\n+   - **Commutativity:**\n\
+    +     ∀a, b ∈ ℝ\\{-1} : a ★ b = ab + a + b = ba + b + a = b ★ a\n+   - **Neutral\
+    \ Element:** n = 0 is the neutral element since\n+     ∀a ∈ ℝ\\{-1} : a ★ 0 =\
+    \ a = 0 ★ a\n+   - **Inverse Element:** We need to find ā, such that a ★ ā = 0\
+    \ = ā ★ a.\n+     ā ★ a = 0 ⟺ āa + a + ā = 0\n+     ⟺ ā(a + 1) = -a\n+     a≠-1\n\
+    +     ⟺ ā = - a/(a + 1) = -1 + 1/(a + 1) ≠ -1 ∈ ℝ\\{-1}"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'b.
+
+
+    3 ⋆ x ⋆ x = 15 ⟺ 3 ⋆ (x² + x + x) = 15
+
+    ⟺ 3x² + 6x + 3 + x² + 2x = 15
+
+    ⟺ 4x² + 8x - 12 = 0
+
+    ⟺ (x - 1)(x + 3) = 0
+
+    ⟺ x ∈ {-3, 1}
+
+
+    # 2.2
+
+
+    Let n be in ℕ\{0}. Let k, x be in ℤ. We define the congruence class k̄ of the
+    integer k as the set
+
+
+    k̄ = {x ∈ ℤ | x - k = 0 (mod n)}
+
+    = {x ∈ ℤ | ∃a ∈ ℤ: (x - k = n · a)}.
+
+
+    We now define ℤ/nℤ (sometimes written ℤ_n) as the set of all congruence classes
+    modulo n. Euclidean division implies that this set is a finite set containing
+    n elements:
+
+
+    ℤ_n = {0̄, 1̄, …, n-1̄}
+
+
+    For all ā, b̄ ∈ ℤ_n, we define
+
+
+    ā ⊕ b̄ := a + b̄
+
+
+    +   a. Show that (ℤ_n, ⊕) is a group. Is it Abelian?
+
+    +   b. We now define another operation ⊗ for all ā and b̄ in ℤ_n as
+
+    +   ā ⊗ b̄ = a × b̄, (2.2)
+
+    +   where a × b represents the usual multiplication in ℤ.
+
+    +   Let n = 5. Draw the times table of the elements of ℤ_5\{0̄} under ⊗, i.e.,
+    calculate the products ā ⊗ b̄ for all ā and b̄ in ℤ_5\{0̄}. Hence, show that ℤ_5\{0̄}
+    is closed under ⊗ and possesses a neutral element for ⊗. Display the inverse of
+    all elements in ℤ_5\{0̄} under ⊗. Conclude that (ℤ_5\{0̄}, ⊗) is an Abelian group.
+
+    +   c. Show that (ℤ_8\{0̄}, ⊗) is not a group.
+
+    +   d. We recall that the Bézout theorem states that two integers a and b are
+    relatively prime (i.e., gcd(a,b)=1) if and only if there exist two integers u
+    and v such that au + bv = 1. Show that (ℤ_n\{0̄}, ⊗) is a group if and only if
+    n ∈ ℕ\{0} is prime.
+
+
+    a. We show that the group axioms are satisfied:
+
+
+    +   - Closure: Let ā, b̄ be in ℤ_n. We have:
+
+    +     ā ⊕ b̄ = a + b̄
+
+    +     = (a + b) mod n
+
+    +     by definition of the congruence class, and since [(a + b) mod n] ∈ {0, …,
+    n - 1}, it follows that ā ⊕ b̄ ∈ ℤ_n. Thus, ℤ_n is closed under ⊕.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '+   - Associativity: Let $\bar{c}$ be in $\mathbb{Z}_n$. We have:
+
+    +     $$(\bar{a} \oplus \bar{b}) \oplus \bar{c} = (\overline{a+b}) \oplus \bar{c}
+    = \overline{(a+b)+c} = \overline{a+(b+c)}$$
+
+    +     $$= \bar{a} \oplus \overline{(b+c)} = \bar{a} \oplus (\bar{b} \oplus \bar{c})$$
+
+    +     so that $\oplus$ is associative.
+
+    +   - Neutral element: We have
+
+    +     $$\bar{a} + \bar{0} = \overline{a+0} = \bar{a} = \bar{0} + \bar{a}$$
+
+    +     so $\bar{0}$ is the neutral element for $\oplus$.
+
+    +   - Inverse element: We have
+
+    +     $$\bar{a} + \overline{(-a)} = \overline{a-a} = \bar{0} = \overline{(-a)}
+    + \bar{a}$$
+
+    +     and we know that $\overline{(-a)}$ is equal to $\overline{(-a) \bmod n}$
+    which belongs to $\mathbb{Z}_n$ and is thus the inverse of $\bar{a}$.
+
+    +   - Commutativity: Finally, the commutativity of $(\mathbb{Z}_n, \oplus)$ follows
+    from that of $(\mathbb{Z}, +)$ since we have
+
+    +     $$\bar{a} \oplus \bar{b} = \overline{a+b} = \overline{b+a} = \bar{b} \oplus
+    \bar{a},$$
+
+    +     which shows that $(\mathbb{Z}_n, \oplus)$ is an Abelian group.
+
+
+    b. Let us calculate the times table of $\mathbb{Z}_5 \setminus \{\bar{0}\}$ under
+    $\otimes$:
+
+
+    | $\otimes$ | $\bar{1}$ | $\bar{2}$ | $\bar{3}$ | $\bar{4}$ |
+
+    |---|---|---|---|---|
+
+    | $\bar{1}$ | $\bar{1}$ | $\bar{2}$ | $\bar{3}$ | $\bar{4}$ |
+
+    | $\bar{2}$ | $\bar{2}$ | $\bar{4}$ | $\bar{1}$ | $\bar{3}$ |
+
+    | $\bar{3}$ | $\bar{3}$ | $\bar{1}$ | $\bar{4}$ | $\bar{2}$ |
+
+    | $\bar{4}$ | $\bar{4}$ | $\bar{3}$ | $\bar{2}$ | $\bar{1}$ |
+
+
+    We can notice that all the products are in $\mathbb{Z}_5 \setminus \{\bar{0}\}$,
+    and that in particular, none of them is equal to $\bar{0}$. Thus, $\mathbb{Z}_5
+    \setminus \{\bar{0}\}$ is closed under $\otimes$. The neutral element is $\bar{1}$
+    and we have $(\bar{1})^{-1} = \bar{1}$, $(\bar{2})^{-1} = \bar{3}$, $(\bar{3})^{-1}
+    = \bar{2}$, and $(\bar{4})^{-1} = \bar{4}$. Associativity and commutativity are
+    straightforward and $(\mathbb{Z}_5 \setminus \{\bar{0}\}, \otimes)$ is an Abelian
+    group.
+
+
+    c. The elements $\bar{2}$ and $\bar{4}$ belong to $\mathbb{Z}_8 \setminus \{\bar{0}\}$,
+    but their product $\bar{2} \otimes \bar{4} = \bar{8} = \bar{0}$ does not. Thus,
+    this set is not closed under $\otimes$ and is not a group.
+
+
+    +   d. Let us assume that $n$ is not prime and can thus be written as a product
+    $n = a \times b$ of two integers $a$ and $b$ in $\{2, \dots, n-1\}$. Both elements
+    $\bar{a}$ and $\bar{b}$ belong to $\mathbb{Z}_n \setminus \{\bar{0}\}$ but their
+    product $\bar{a} \otimes \bar{b} = \bar{n} = \bar{0}$ does not. Thus, this set
+    is not closed under $\otimes$ and $(\mathbb{Z}_n \setminus \{\bar{0}\}, \otimes)$
+    is not a group.
+
+    +   - Let $n$ be a prime number. Let $\bar{a}$ and $\bar{b}$ be in $\mathbb{Z}_n
+    \setminus \{\bar{0}\}$ with $a$ and $b$ in $\{1, \dots, n-1\}$. As $n$ is prime,
+    we know that $a$ is relatively prime to $n$, and so is $b$. Let us then take four
+    integers $u, v, u''$ and $v''$, such that
+
+    +     $$au + nv = 1$$
+
+    +     $$bu'' + nv'' = 1.$$
+
+    +   We thus have that $(au + nv)(bu'' + nv'') = 1$, which we can rewrite as
+
+    +     $$ab(uu'') + n(auv'' + vbu'' + nv v'') = 1$$'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'By virtue of the Bézout theorem, this implies that ab and n are relatively
+    prime, which ensures that the product \bar{a} \otimes \bar{b} is not equal to
+    \bar{0} and belongs to \mathbb{Z}_n \setminus \{\bar{0}\}, which is thus closed
+    under \otimes. The associativity and commutativity of \otimes are straightforward,
+    but we need to show that every element has an inverse. First, the neutral element
+    is \bar{1}. Let us again consider an element \bar{a} in \mathbb{Z}_n \setminus
+    \{\bar{0}\} with a in \{1, ..., n-1\}. As a and n are coprime, the Bézout theorem
+    enables us to define two integers u and v such that
+
+
+    au + nv = 1, (2.3)
+
+
+    which implies that au = 1 - nv and thus
+
+
+    au = 1 mod n, (2.4)
+
+
+    which means that \bar{a} \otimes \bar{u} = \bar{a}\bar{u} = \bar{1}, or that \bar{u}
+    is the inverse of \bar{a}. Overall, (\mathbb{Z}_n \setminus \{\bar{0}\}, \otimes)
+    is an Abelian group. Note that the Bézout theorem ensures the existence of an
+    inverse without yielding its explicit value, which is the purpose of the extended
+    Euclidean algorithm.
+
+
+    # 2.3 Consider the set \mathcal{G} of 3 × 3 matrices defined as follows:
+
+
+    \mathcal{G} = \left\{ \begin{bmatrix} 1 & x & z \\ 0 & 1 & y \\ 0 & 0 & 1 \end{bmatrix}
+    \in \mathbb{R}^{3\times3} \mid x, y, z \in \mathbb{R} \right\}
+
+
+    We define · as the standard matrix multiplication. Is (\mathcal{G}, ·) a group?
+    If yes, is it Abelian? Justify your answer.
+
+
+    +   - Closure: Let a, b, c, x, y and z be in \mathbb{R} and let us define A and
+    B in \mathcal{G} as
+
+
+    A = \begin{bmatrix} 1 & x & z \\ 0 & 1 & y \\ 0 & 0 & 1 \end{bmatrix}, B = \begin{bmatrix}
+    1 & a & c \\ 0 & 1 & b \\ 0 & 0 & 1 \end{bmatrix}. Then, A · B = \begin{bmatrix}
+    1 & x & z \\ 0 & 1 & y \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & a & c \\
+    0 & 1 & b \\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & a+x & c+xb+z \\ 0 &
+    1 & b+y \\ 0 & 0 & 1 \end{bmatrix}. Since a + x, b + y and c + xb + z are in \mathbb{R}
+    we have A · B \in \mathcal{G}. Thus, \mathcal{G} is closed under matrix multiplication.
+
+
+    +   - Associativity: Let \alpha, \beta and \gamma be in \mathbb{R} and let C in
+    \mathcal{G} be defined as C = \begin{bmatrix} 1 & \alpha & \gamma \\ 0 & 1 & \beta
+    \\ 0 & 0 & 1 \end{bmatrix}. It holds that (A · B) · C = \begin{bmatrix} 1 & a+x
+    & c+xb+z \\ 0 & 1 & b+y \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & \alpha
+    & \gamma \\ 0 & 1 & \beta \\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & \alpha
+    + a + x & \gamma + \alpha\beta + x\beta + c + xb + z \\ 0 & 1 & \beta + b + y
+    \\ 0 & 0 & 1 \end{bmatrix}.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Similarly,
+
+
+    $\mathbf{A}\cdot(\mathbf{B}\cdot\mathbf{C}) = \begin{bmatrix}1 & x & z\\0 & 1
+    & y\\0 & 0 & 1\end{bmatrix}\cdot\begin{bmatrix}1 & \alpha + a & \gamma + \alpha\beta
+    + c\\0 & 1 & \beta + b\\0 & 0 & 1\end{bmatrix} = \begin{bmatrix}1 & \alpha + a
+    + x & \gamma + \alpha\beta + x\beta + c + x b + z\\0 & 1 & \beta + b + y\\0 &
+    0 & 1\end{bmatrix} = (\mathbf{A}\cdot\mathbf{B})\cdot\mathbf{C}.$
+
+
+    Therefore, $\cdot$ is associative.
+
+
+    +   - Neutral element: For all $\mathbf{A}$ in $\mathcal{G}$, we have: $I_3\cdot\mathbf{A}=\mathbf{A}=\mathbf{A}\cdot
+    I_3$ and thus $I_3$ is the neutral element.
+
+    +   - Non-commutativity: We show that $\cdot$ is not commutative. Consider the
+    matrices $\mathbf{X},\mathbf{Y}\in\mathcal{G}$, where $\mathbf{X}=\begin{bmatrix}1&1&0\\0&1&0\\0&0&1\end{bmatrix}$,
+    $\mathbf{Y}=\begin{bmatrix}1&0&0\\0&1&1\\0&0&1\end{bmatrix}$. (2.5) Then $\mathbf{X}\cdot\mathbf{Y}=\begin{bmatrix}1&1&1\\0&1&1\\0&0&1\end{bmatrix}$,
+    $\mathbf{Y}\cdot\mathbf{X}=\begin{bmatrix}1&1&0\\0&1&1\\0&0&1\end{bmatrix}\neq\mathbf{X}\cdot\mathbf{Y}$.
+    Therefore, $\cdot$ is not commutative.
+
+    +   - Inverse element: Let us look for a right inverse $\mathbf{A}_r^{-1}$ of
+    $\mathbf{A}$. Such a matrix should satisfy $\mathbf{A}\mathbf{A}_r^{-1}=I_3$.
+    We thus solve the linear system $[\mathbf{A}|I_3]$ that we transform into $[I_3|\mathbf{A}_r^{-1}]$:
+    $\sim\begin{bmatrix}1&x&z&|&1&0&0\\0&1&y&|&0&1&0\\0&0&1&|&0&0&1\end{bmatrix}\to\begin{bmatrix}1&x&0&|&1&0&-z\\0&1&0&|&0&1&-y\\0&0&1&|&0&0&1\end{bmatrix}\to\begin{bmatrix}1&0&0&|&1&-x&xy-z\\0&1&0&|&0&1&-y\\0&0&1&|&0&0&1\end{bmatrix}$.
+    Therefore, we obtain the right inverse $\mathbf{A}_r^{-1}=\begin{bmatrix}1&-x&xy-z\\0&1&-y\\0&0&1\end{bmatrix}\in\mathcal{G}$.
+
+
+    Because of the uniqueness of the inverse element, if a left inverse $\mathbf{A}_l^{-1}$
+    exists, then it is equal to the right inverse. But as $\cdot$ is not commutative,'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'we need to check manually that we also have $AA_r^{-1}=I_3$, which we do next:
+
+
+    $$A_r^{-1}A=\begin{bmatrix}1&-x&-z+xy\\0&1&-y\\0&0&1\end{bmatrix}\begin{bmatrix}1&x&z\\0&1&y\\0&0&1\end{bmatrix}$$
+
+
+    $$=\begin{bmatrix}1&x-x&z-xy-z+xy\\0&1&y+y\\0&0&1\end{bmatrix}=I_3.$$
+
+
+    Thus, every element of $\mathcal{G}$ has an inverse. Overall, $(\mathcal{G},\cdot)$
+    is a non-Abelian group.
+
+
+    # 2.4  Compute the following matrix products, if possible:
+
+
+    +   a. $$\begin{bmatrix}1&2\\4&5\\7&8\end{bmatrix}\begin{bmatrix}1&1&0\\0&1&1\\1&0&1\end{bmatrix}$$
+
+
+    This matrix product is not defined. Highlight that the neighboring dimensions
+    have to fit (i.e., $m\times n$ matrices need to be multiplied by $n\times p$ (from
+    the right) or $k\times m$ matrices (from the left)).
+
+
+    +   b. $$\begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}\begin{bmatrix}1&1&0\\0&1&1\\1&0&1\end{bmatrix}=\begin{bmatrix}4&3&5\\10&9&11\\16&15&17\end{bmatrix}$$
+
+
+    +   c. $$\begin{bmatrix}1&1&0\\0&1&1\\1&0&1\end{bmatrix}\begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}=\begin{bmatrix}5&7&9\\11&13&15\\8&10&12\end{bmatrix}$$
+
+
+    +   d. $$\begin{bmatrix}1&2&1&2\\4&1&-1&-4\end{bmatrix}\begin{bmatrix}0&3\\1&-1\\2&1\\5&2\end{bmatrix}=\begin{bmatrix}14&6\\-21&2\end{bmatrix}$$
+
+
+    +   e. $$\begin{bmatrix}0&3\\1&-1\\2&1\\5&2\end{bmatrix}\begin{bmatrix}1&2&1&2\\4&1&-1&-4\end{bmatrix}=\begin{bmatrix}12&3&-3&-12\\-3&1&2&6\\6&5&1&0\\13&12&3&2\end{bmatrix}$$
+
+
+    # 2.5  Find the set $S$ of all solutions in $x$ of the following inhomogeneous
+    linear systems $Ax=b$, where $A$ and $b$ are defined as follows:
+
+
+    +   a. $$A=\begin{bmatrix}1&1&-1&-1\\2&5&-7&-5\\2&-1&1&3\\5&2&-4&2\end{bmatrix},\quad
+    b=\begin{bmatrix}1\\-2\\4\\6\end{bmatrix}$$'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "We apply Gaussian elimination to the augmented matrix\n\n$$\begin{bmatrix}1&1&-1&-1&|&1\\\
+    2&5&-7&-5&|&-2\\2&-1&1&3&|&4\\5&2&-4&2&|&6\\end{bmatrix}\\xrightarrow{-2R_1}\b\
+    egin{bmatrix}1&1&-1&-1&|&1\\0&3&-5&-3&|&-4\\0&-3&3&5&|&2\\0&-3&1&7&|&1\\end{bmatrix}\\\
+    xrightarrow{-\tfrac13R_2}\begin{bmatrix}1&0&\tfrac23&0&|&\tfrac73\\0&1&-\tfrac53&-1&|&-\t\
+    frac43\\0&0&-2&2&|&-2\\0&0&-4&4&|&-3\\end{bmatrix}\\xrightarrow{-2R_3}\begin{bmatrix}1&0&\t\
+    frac23&0&|&\tfrac73\\0&1&-\tfrac53&-1&|&-\tfrac43\\0&0&-2&2&|&-2\\0&0&0&0&|&1\\\
+    end{bmatrix}$$\n\nThe last row of the final linear system shows that the equation\
+    \ system has no solution and thus $S = \\emptyset$.\n\nb.\n\n$$A = \\begin{bmatrix}1&-1&0&0&1\\\
+    \\1&1&0&-3&0\\\\2&-1&0&1&-1\\\\-1&2&0&-2&-1\\end{bmatrix},\\quad b = \\begin{bmatrix}3\\\
+    \\6\\\\5\\\\-1\\end{bmatrix}$$\n\nWe start again by writing down the augmented\
+    \ matrix and apply Gaussian elimination to obtain the reduced row echelon form:\n\
+    \n$$\begin{bmatrix}1&-1&0&0&1&|&3\\\\1&1&0&-3&0&|&6\\\\2&-1&0&1&-1&|&5\\\\-1&2&0&-2&-1&|&-1\\\
+    end{bmatrix}\\xrightarrow{}\\begin{bmatrix}1&-1&0&0&1&|&3\\\\0&2&0&-3&-1&|&3\\\
+    \\0&1&0&1&-3&|&-1\\\\0&1&0&-2&0&|&2\\end{bmatrix}\\xrightarrow{}\\begin{bmatrix}1&0&0&1&-2&|&2\\\
+    \\0&1&0&1&-3&|&-1\\\\0&0&0&-5&5&|&5\\\\0&0&0&-3&3&|&3\\end{bmatrix}\\xrightarrow{}\\\
+    begin{bmatrix}1&0&0&1&-2&|&2\\\\0&1&0&1&-3&|&-1\\\\0&0&0&1&-1&|&-1\\\\0&0&0&0&0&|&0\\\
+    end{bmatrix}\\xrightarrow{}\\begin{bmatrix}1&0&0&0&-1&|&3\\\\0&1&0&0&-2&|&0\\\\\
+    0&0&0&1&-1&|&-1\\end{bmatrix}$$\n\nFrom the reduced row echelon form we apply\
+    \ the “Minus-1 Trick” in order to get the following system:"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '$$\begin{bmatrix}1&0&0&0&-1&|&3\\0&1&0&0&-2&|&0\\0&0&-1&0&0&|&0\\0&0&0&1&-1&|&-1\\0&0&0&0&-1&|&0\end{bmatrix}$$
+
+
+    The right-hand side of the system yields us a particular solution while the columns
+    corresponding to the −1 pivots are the directions of the solution space. We then
+    obtain the set of all possible solutions as
+
+
+    $\mathcal{S} := \{ x \in \mathbb{R}^6 : x = \begin{bmatrix}3\\0\\0\\-1\\0\end{bmatrix}
+    + \lambda_1 \begin{bmatrix}0\\0\\-1\\0\\0\end{bmatrix} + \lambda_2 \begin{bmatrix}-1\\-2\\0\\-1\\-1\end{bmatrix}
+    \mid \lambda_1,\lambda_2 \in \mathbb{R} \}$
+
+
+    # 2.6 Using Gaussian elimination, find all solutions of the inhomogeneous equation
+    system $Ax = b$ with
+
+
+    $\boldsymbol{A} = \begin{bmatrix}0&1&0&0&1&0\\0&0&0&1&1&0\\0&1&0&0&0&1\end{bmatrix},
+    \quad \boldsymbol{b} = \begin{bmatrix}2\\-1\\1\end{bmatrix}$.
+
+
+    We start by determining the reduced row echelon form of the augmented matrix $[A|b]$.
+
+
+    $$\begin{bmatrix}0&1&0&0&1&0&|&2\\0&0&0&1&1&0&|&-1\\0&1&0&0&0&1&|&1\end{bmatrix}
+    -R_1 \sim \begin{bmatrix}0&1&0&0&1&0&|&2\\0&0&0&1&1&0&|&-1\\0&0&0&0&-1&1&|&-1\end{bmatrix}
+    +R_3 \sim \begin{bmatrix}0&1&0&0&0&1&|&1\\0&0&0&1&0&1&|&-2\\0&0&0&0&1&-1&|&1\end{bmatrix}$$
+
+
+    This augmented matrix is now in reduced row echelon form. Applying the “Minus-1
+    trick” gives us the following augmented matrix:
+
+
+    $$\begin{bmatrix}-1&0&0&0&0&0&|&0\\0&1&0&0&0&1&|&1\\0&0&-1&0&0&0&|&0\\0&0&0&1&0&1&|&-2\\0&0&0&0&1&-1&|&1\\0&0&0&0&0&-1&|&0\end{bmatrix}$$
+
+
+    The right-hand side of this augmented matrix gives us a particular solution while
+    the columns corresponding to the −1 pivots are the span the solution'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'space $S$. Therefore, we obtain the general solution
+
+
+    $$S = \left\{ \begin{bmatrix}0\\1\\0\\-2\\1\\0\end{bmatrix} + \lambda_1 \begin{bmatrix}-1\\0\\0\\0\\0\\0\end{bmatrix}
+    + \lambda_2 \begin{bmatrix}0\\0\\-1\\0\\0\\0\end{bmatrix} + \lambda_3 \begin{bmatrix}0\\1\\0\\1\\-1\\-1\end{bmatrix}
+    \;\Big|\; \lambda_1,\lambda_2,\lambda_3 \in \mathbb{R} \right\}$$
+
+
+    Now, we find a particular solution that solves the inhomogeneous equation system.
+    From the RREF, we see that $x_2 = 1, x_4 = -2, x_5 = 1 + x_6$ and $x_1, x_3, x_6
+    \in \mathbb{R}$ are free variables (they correspond to variables that belong to
+    the non-pivot columns of the augmented matrix). Therefore, a particular solution
+    is
+
+
+    $$x_p = \begin{bmatrix}0\\1\\0\\-2\\1\\0\end{bmatrix} \in \mathbb{R}^6.$$
+
+
+    The general solution adds solutions from the homogeneous equation system $A x
+    = 0$. We can use the RREF of the augmented system to read out these solutions
+    by using the Minus-1 Trick. Padding the RREF with rows containing -1 on the diagonal
+    gives us
+
+
+    $$\begin{bmatrix}-1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 1\\0 & 0 & -1 & 0
+    & 0 & 0\\0 & 0 & 0 & 1 & 0 & 1\\0 & 0 & 0 & 0 & 1 & -1\\0 & 0 & 0 & 0 & 0 & -1\end{bmatrix}.$$
+
+
+    This yields the general solution
+
+
+    $$x_p + \lambda_1 \begin{bmatrix}-1\\0\\0\\0\\0\\0\end{bmatrix} + \lambda_2 \begin{bmatrix}0\\0\\-1\\0\\0\\0\end{bmatrix}
+    + \lambda_3 \begin{bmatrix}0\\1\\0\\1\\-1\\-1\end{bmatrix}, \quad \lambda_1,\lambda_2,\lambda_3
+    \in \mathbb{R}.$$
+
+
+    # 2.7 Find all solutions in $x = \begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix} \in
+    \mathbb{R}^3$ of the equation system $A x = 12 x$,'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'where
+
+
+    $$\boldsymbol{A} = \begin{bmatrix} 6 & 4 & 3 \\ 6 & 0 & 9 \\ 0 & 8 & 0 \end{bmatrix}$$
+
+
+    and $\sum_{i=1}^3 x_i = 1$.
+
+
+    We start by rephrasing the problem into solving a homogeneous system of linear
+    equations. Let $\boldsymbol{x}$ be in $\mathbb{R}^3$. We notice that $\boldsymbol{A}\boldsymbol{x}
+    = 12\boldsymbol{x}$ is equivalent to $(\boldsymbol{A} - 12I)\boldsymbol{x} = \boldsymbol{0}$,
+    which can be rewritten as the homogeneous system $\tilde{\boldsymbol{A}}\boldsymbol{x}
+    = \boldsymbol{0}$, where we define
+
+
+    $$\tilde{\boldsymbol{A}} = \begin{bmatrix} -6 & 4 & 3 \\ 6 & -12 & 9 \\ 0 & 8
+    & -12 \end{bmatrix}.$$
+
+
+    The constraint $\sum_{i=1}^3 x_i = 1$ can be transcribed as a fourth equation,
+    which leads us to consider the following linear system, which we bring to reduced
+    row echelon form:
+
+
+    $$\begin{bmatrix} -6 & 4 & 3 & | & 0 \\ 6 & -12 & 9 & | & 0 \\ 0 & 8 & -12 & |
+    & 0 \\ 1 & 1 & 1 & | & 1 \end{bmatrix} \sim \begin{bmatrix} 0 & -8 & 12 & | &
+    0 \\ 2 & -4 & 3 & | & 0 \\ 0 & 2 & -3 & | & 0 \\ 1 & 1 & 1 & | & 1 \end{bmatrix}
+    \sim \begin{bmatrix} 0 & 0 & 0 & | & 0 \\ 2 & 0 & -3 & | & 0 \\ 0 & 2 & -3 & |
+    & 0 \\ 1 & 1 & 1 & | & 1 \end{bmatrix} \sim \begin{bmatrix} 1 & 0 & -\tfrac{3}{2}
+    & | & 0 \\ 0 & 1 & -\tfrac{3}{2} & | & 0 \\ 1 & 1 & 1 & | & 1 \end{bmatrix} \sim
+    \begin{bmatrix} 1 & 0 & -\tfrac{3}{2} & | & 0 \\ 0 & 1 & -\tfrac{3}{2} & | & 0
+    \\ 0 & 0 & 4 & | & 1 \end{bmatrix} \sim \begin{bmatrix} 1 & 0 & 0 & | & \tfrac{3}{8}
+    \\ 0 & 1 & 0 & | & \tfrac{3}{8} \\ 0 & 0 & 1 & | & \tfrac{1}{4} \end{bmatrix}$$
+
+
+    Therefore, we obtain the unique solution
+
+
+    $$\boldsymbol{x} = \begin{bmatrix} \tfrac{3}{8} \\ \tfrac{3}{8} \\ \tfrac{1}{4}
+    \end{bmatrix} = \frac{1}{8} \begin{bmatrix} 3 \\ 3 \\ 2 \end{bmatrix}.$$'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 2.8 Determine the inverses of the following matrices if possible:
+
+
+    a.
+
+
+    ```
+
+    A = [[2, 3, 4], [3, 4, 5], [4, 5, 6]]
+
+    ```
+
+
+    To determine the inverse of a matrix, we start with the augmented matrix [A |
+    I] and transform it into [I | B], where B turns out to be A^{-1}:
+
+
+    ```
+
+    [ 2 3 4 | 1 0 0 ]
+
+    [ 3 4 5 | 0 1 0 ]  -3/2 R1
+
+    [ 4 5 6 | 0 0 1 ]  -2 R1
+
+    ```
+
+
+    ```
+
+    ~>
+
+    [ 2 3 4 | 1 0 0 ]
+
+    [ 0 -1/2 -1 | -3/2 1 0 ]  -1/2 R3
+
+    [ 0 -1 -2 | -2 0 1 ]  .(-1)
+
+    ```
+
+
+    ```
+
+    ~>
+
+    [ 2 3 4 | 1 0 0 ]
+
+    [ 0 0 0 | -1/2 1 -1/2 ]
+
+    [ 0 1 2 | 2 0 -1 ]
+
+    ```
+
+
+    Here, we see that this system of linear equations is not solvable. Therefore,
+    the inverse does not exist.
+
+
+    b.
+
+
+    ```
+
+    A = [[1, 0, 1, 0], [0, 1, 1, 0], [1, 1, 0, 1], [1, 1, 1, 0]]
+
+    ```
+
+
+    ```
+
+    [ 1 0 1 0 | 1 0 0 0 ]
+
+    [ 0 1 1 0 | 0 1 0 0 ]
+
+    [ 1 1 0 1 | 0 0 1 0 ]  -R1
+
+    [ 1 1 1 0 | 0 0 0 1 ]  -R1
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "$\\sim\\!\\!\\sim\\quad\\left[\\begin{array}{cccc|cccc}1&0&1&0&1&0&0&0\\\\\
+    0&1&0&0&-1&0&0&1\\\\0&0&-1&1&0&0&1&-1\\\\0&0&1&0&1&1&0&-1\\end{array}\\right]\\\
+    ;\\xrightarrow{-R_4}\\;\\xrightarrow{-R_4}\\;\\text{swap with }R_3$\n\n$\\sim\\\
+    !\\!\\sim\\quad\\left[\\begin{array}{cccc|cccc}1&0&0&0&0&-1&0&1\\\\0&1&0&0&-1&0&0&1\\\
+    \\0&0&1&0&1&1&0&-1\\\\0&0&0&1&1&1&1&-2\\end{array}\\right]$\n\nTherefore,\n\n\
+    $A^{-1}=\\left[\\begin{array}{rrrr}0&-1&0&1\\\\-1&0&0&1\\\\1&1&0&-1\\\\1&1&1&-2\\\
+    end{array}\\right]$\n\n# 2.9  Which of the following sets are subspaces of $\\\
+    mathbb{R}^3$?\n\n+   a. $A=\\{(\\lambda,\\lambda+\\mu^3,\\lambda-\\mu^3)\\mid\
+    \ \\lambda,\\mu\\in\\mathbb{R}\\}$\n+   \n+   b. $B=\\{(\\lambda^2,-\\lambda^2,0)\\\
+    mid \\lambda\\in\\mathbb{R}\\}$\n+   \n+   c. Let $\\gamma$ be in $\\mathbb{R}$.\
+    \  \n+   $C=\\{(\\xi_1,\\xi_2,\\xi_3)\\in\\mathbb{R}^3\\mid \\xi_1-2\\xi_2+3\\\
+    xi_3=\\gamma\\}$\n+   \n+   d. $D=\\{(\\xi_1,\\xi_2,\\xi_3)\\in\\mathbb{R}^3\\\
+    mid \\xi_2\\in\\mathbb{Z}\\}$\n\nAs a reminder: Let $V$ be a vector space. $U\\\
+    subseteq V$ is a subspace if\n\n1. $U\\neq\\varnothing$. In particular $0\\in\
+    \ U$.\n2. $\\forall a,b\\in U$: $a+b\\in U$  Closure with respect to the inner\
+    \ operation\n3. $\\forall a\\in U,\\lambda\\in\\mathbb{R}$: $\\lambda a\\in U$\
+    \  Closure with respect to the outer operation\n\nThe standard vector space properties\
+    \ (Abelian group, distributivity, associativity and neutral element) do not have\
+    \ to be shown because they are inherited from the vector space $(\\mathbb{R}^3,+,\\\
+    cdot)$.\n\nLet us now have a look at the sets $A,B,C,D$.\n\n+   a.\n+   \n+  \
+    \ 1. We have that $(0,0,0)\\in A$ for $\\lambda=0=\\mu$.\n+   \n+   2. Let $a=(\\\
+    lambda_1,\\lambda_1+\\mu_1^3,\\lambda_1-\\mu_1^3)$ and $b=(\\lambda_2,\\lambda_2+\\\
+    mu_2^3,\\lambda_2-\\mu_2^3)$ be two elements of $A$, where $\\lambda_1,\\mu_1,\\\
+    lambda_2,\\mu_2\\in\\mathbb{R}$. Then,\n+   \n+   $$\n+   \\begin{aligned}\n+\
+    \   a+b\n+   &=(\\lambda_1,\\lambda_1+\\mu_1^3,\\lambda_1-\\mu_1^3)+(\\lambda_2,\\\
+    lambda_2+\\mu_2^3,\\lambda_2-\\mu_2^3)\\\\\n+   &=(\\lambda_1+\\lambda_2,\\lambda_1+\\\
+    mu_1^3+\\lambda_2+\\mu_2^3,\\lambda_1-\\mu_1^3+\\lambda_2-\\mu_2^3)\\\\\n+   &=(\\\
+    lambda_1+\\lambda_2,(\\lambda_1+\\lambda_2)+(\\mu_1^3+\\mu_2^3),(\\lambda_1+\\\
+    lambda_2)-(\\mu_1^3+\\mu_2^3)),\n+   \\end{aligned}\n+   $$\n+   \n+   which belongs\
+    \ to $A$.\n+   \n+   3. Let $\\alpha$ be in $\\mathbb{R}$. Then,\n+   \n+   $$\\\
+    alpha(\\lambda,\\lambda+\\mu^3,\\lambda-\\mu^3)=(\\alpha\\lambda,\\alpha\\lambda+\\\
+    alpha\\mu^3,\\alpha\\lambda-\\alpha\\mu^3)\\in A.$$\n+   \n+   Therefore, $A$\
+    \ is a subspace of $\\mathbb{R}^3$."
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'b. The vector $(1, -1, 0)$ belongs to $B$, but $(-1)\cdot(1, -1, 0)=(-1,1,0)$
+    does not. Thus, $B$ is not closed under scalar multiplication and is not a subspace
+    of $\mathbb{R}^3$.
+
+
+    c. Let $A \in \mathbb{R}^{1\times3}$ be defined as $A = [1, -2, 3]$. The set $C$
+    can be written as:
+
+
+    $C = \{x \in \mathbb{R}^3 \mid A x = \gamma\}.$
+
+
+    We can first notice that $\mathbf{0}$ belongs to $B$ only if $\gamma = 0$ since
+    $A\mathbf{0}=0$.
+
+
+    Let thus consider $\gamma = 0$ and ask whether $C$ is a subspace of $\mathbb{R}^3$.
+    Let $x$ and $y$ be in $C$. We know that $A x = 0$ and $A y = 0$, so that
+
+
+    $A(x + y) = A x + A y = 0 + 0 = 0.$
+
+
+    Therefore, $x + y$ belongs to $C$. Let $\lambda$ be in $\mathbb{R}$. Similarly,
+
+
+    $A(\lambda x) = \lambda(A x) = \lambda 0 = 0$
+
+
+    Therefore, $C$ is closed under scalar multiplication, and thus is a subspace of
+    $\mathbb{R}^3$ if (and only if) $\gamma = 0$.
+
+
+    d. The vector $(0,1,0)$ belongs to $D$ but $\pi(0,1,0)$ does not and thus $D$
+    is not a subspace of $\mathbb{R}^3$.
+
+
+    # 2.10 Are the following sets of vectors linearly independent?
+
+
+    a.
+
+
+    $x_1 = \begin{bmatrix}2\\-1\\3\end{bmatrix},\quad x_2 = \begin{bmatrix}1\\1\\-2\end{bmatrix},\quad
+    x_3 = \begin{bmatrix}3\\-3\\8\end{bmatrix}$
+
+
+    To determine whether these vectors are linearly independent, we check if the $0$-vector
+    can be non-trivially represented as a linear combination of $x_1,\dots,x_3$. Therefore,
+    we try to solve the homogeneous linear equation system $\sum_{i=1}^3 \lambda_i
+    x_i = 0$ for $\lambda_i \in \mathbb{R}$. We use Gaussian elimination to solve
+    $A x = 0$ with
+
+
+    $A = \begin{bmatrix}2 & 1 & 3\\-1 & 1 & -3\\3 & -2 & 8\end{bmatrix},$
+
+
+    which leads to the reduced row echelon form
+
+
+    $\begin{bmatrix}1 & 0 & 2\\0 & 1 & -1\\0 & 0 & 0\end{bmatrix}.$
+
+
+    This means that $A$ is rank deficient/singular and, therefore, the three vectors
+    are linearly dependent. For example, with $\lambda_1 = 2, \lambda_2 = -1, \lambda_3
+    = -1$ we have a non-trivial linear combination $\sum_{i=1}^3 \lambda_i x_i = 0$.
+
+
+    b.
+
+
+    $x_1 = \begin{bmatrix}1\\2\\1\\0\\0\end{bmatrix},\quad x_2 = \begin{bmatrix}1\\1\\0\\1\\1\end{bmatrix},\quad
+    x_3 = \begin{bmatrix}1\\0\\0\\1\\1\end{bmatrix}$'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "Here, we are looking at the distribution of 0s in the vectors. $x_1$ is the\
+    \ only vector whose third component is non-zero. Therefore, $\\lambda_1$ must\
+    \ be 0. Similarly, $\\lambda_2$ must be 0 because of the second component (already\
+    \ conditioning on $\\lambda_1 = 0$). And finally, $\\lambda_3 = 0$ as well. Therefore,\
+    \ the three vectors are linearly independent. An alternative solution, using Gaussian\
+    \ elimination, is possible and would lead to the same conclusion.\n\n# 2.11 Write\n\
+    \n$\\boldsymbol{y} = \\begin{bmatrix}1\\\\-2\\\\5\\end{bmatrix}$\n\nas linear\
+    \ combination of\n\n$\\boldsymbol{x}_1 = \\begin{bmatrix}1\\\\1\\\\1\\end{bmatrix},\\\
+    quad \\boldsymbol{x}_2 = \\begin{bmatrix}1\\\\2\\\\3\\end{bmatrix},\\quad \\boldsymbol{x}_3\
+    \ = \\begin{bmatrix}2\\\\-1\\\\1\\end{bmatrix}$\n\nWe are looking for $\\lambda_1,\\\
+    dots,\\lambda_3 \\in \\mathbb{R}$, such that $\\sum_{i=1}^3 \\lambda_i \\boldsymbol{x}_i\
+    \ = \\boldsymbol{y}$. Therefore, we need to solve the inhomogeneous linear equation\
+    \ system\n\n$\\begin{bmatrix}1 & 1 & 2 & | & 1\\\\1 & 2 & -1 & | & -2\\\\1 & 3\
+    \ & 1 & | & 5\\end{bmatrix}$\n\nUsing Gaussian elimination, we obtain $\\lambda_1\
+    \ = -6$, $\\lambda_2 = 3$, $\\lambda_3 = 2$.\n\n# 2.12 Consider two subspaces\
+    \ of $\\mathbb{R}^4$: \n\n$U_1 = \\operatorname{span}\\left\\{\\begin{bmatrix}1\\\
+    \\1\\\\-3\\\\1\\end{bmatrix},\\begin{bmatrix}2\\\\-1\\\\0\\\\-1\\end{bmatrix},\\\
+    begin{bmatrix}-1\\\\1\\\\-1\\\\1\\end{bmatrix}\\right\\},\\quad U_2 = \\operatorname{span}\\\
+    left\\{\\begin{bmatrix}-1\\\\-2\\\\2\\\\1\\end{bmatrix},\\begin{bmatrix}2\\\\\
+    -2\\\\0\\\\0\\end{bmatrix},\\begin{bmatrix}-3\\\\6\\\\-2\\\\-1\\end{bmatrix}\\\
+    right\\}.$\n\nDetermine a basis of $U_1 \\cap U_2$.\n\nWe start by checking whether\
+    \ there the vectors in the generating sets of $U_1$ (and $U_2$) are linearly dependent.\
+    \ Thereby, we can determine bases of $U_1$ and $U_2$, which will make the following\
+    \ computations simpler.\n\nWe start with $U_1$. To see whether the three vectors\
+    \ are linearly dependent, we need to find a linear combination of these vectors\
+    \ that allows a non-trivial representation of $\\mathbf{0}$, i.e., $\\lambda_1,\
+    \ \\lambda_2, \\lambda_3 \\in \\mathbb{R}$, such that\n\n$\\lambda_1 \\begin{bmatrix}1\\\
+    \\1\\\\-3\\\\1\\end{bmatrix} + \\lambda_2 \\begin{bmatrix}2\\\\-1\\\\0\\\\-1\\\
+    end{bmatrix} + \\lambda_3 \\begin{bmatrix}-1\\\\1\\\\-1\\\\1\\end{bmatrix} = \\\
+    begin{bmatrix}0\\\\0\\\\0\\\\0\\end{bmatrix}.$\n\nWe see that necessarily: $\\\
+    lambda_3 = -3\\lambda_1$ (otherwise, the third component can never be 0). With\
+    \ this, we get\n\n$\\lambda_1 \\begin{bmatrix}1+3\\\\1-3\\\\-3+3\\\\1-3\\end{bmatrix}\
+    \ + \\lambda_2 \\begin{bmatrix}2\\\\-1\\\\0\\\\-1\\end{bmatrix} = \\begin{bmatrix}0\\\
+    \\0\\\\0\\\\0\\end{bmatrix}$"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "⟺ λ₁ ⎡4⎤   ⎡2⎤   ⎡0⎤\n      ⎢-2⎥ + λ₂ ⎢-1⎥ = ⎢0⎥\n      ⎢0⎥       ⎢0⎥   ⎢0⎥\n\
+    \      ⎣-2⎦       ⎣-1⎦   ⎣0⎦\n\nand, therefore, λ₂ = -2λ₁. This means that there\
+    \ exists a non-trivial linear combination of 0 using spanning vectors of U₁, for\
+    \ example: λ₁ = 1, λ₂ = -2 and λ₃ = -3. Therefore, not all vectors in the generating\
+    \ set of U₁ are necessary, such that U₁ can be more compactly represented as\n\
+    \nU₁ = span[ ⎡1⎤ , ⎡2⎤ ]\n            ⎢1⎥   ⎢-1⎥\n            ⎢-3⎥   ⎢0⎥\n   \
+    \         ⎣1⎦   ⎣-1⎦ .\n\nNow, we see whether the generating set of U₂ is also\
+    \ a basis. We try again whether we can find a non-trivial linear combination of\
+    \ 0 using the spanning vectors of U₂, i.e., a triple (α₁, α₂, α₃) ∈ ℝ³ such that\n\
+    \nα₁ ⎡-1⎤   α₂ ⎡2⎤   α₃ ⎡-3⎤   ⎡0⎤\n    ⎢-2⎥ +     ⎢-2⎥ +     ⎢6⎥ = ⎢0⎥\n    ⎢2⎥\
+    \         ⎢0⎥       ⎢-2⎥   ⎢0⎥\n    ⎣1⎦         ⎣0⎦       ⎣-1⎦   ⎣0⎦ .\n\nHere,\
+    \ we see that necessarily α₁ = α₃. Then, α₂ = 2α₁ gives a non-trivial representation\
+    \ of 0, and the three vectors are linearly dependent. However, any two of them\
+    \ are linearly independent, and we choose the first two vectors of the generating\
+    \ set as a basis of U₂, such that\n\nU₂ = span[ ⎡-1⎤ , ⎡2⎤ ]\n            ⎢-2⎥\
+    \   ⎢-2⎥\n            ⎢2⎥   ⎢0⎥\n            ⎣1⎦   ⎣0⎦ .\n\nNow, we determine\
+    \ U₁ ∩ U₂. Let x be in ℝ⁴. Then,\n\nx ∈ U₁ ∩ U₂ ⟺ x ∈ U₁ ∧ x ∈ U₂\n\n⟺ ∃λ₁, λ₂,\
+    \ α₁, α₂ ∈ ℝ: ( x = α₁ ⎡-1⎤ + α₂ ⎡2⎤ ) ∧ ( x = λ₁ ⎡1⎤ + λ₂ ⎡2⎤ )\n           \
+    \                      ⎢-2⎥     ⎢-2⎥          ⎢1⎥     ⎢-1⎥\n                 \
+    \                ⎢2⎥     ⎢0⎥          ⎢-3⎥     ⎢0⎥\n                         \
+    \        ⎣1⎦     ⎣0⎦          ⎣1⎦     ⎣-1⎦\n\n⟺ ∃λ₁, λ₂, α₁, α₂ ∈ ℝ: ( x = α₁\
+    \ ⎡-1⎤ + α₂ ⎡2⎤ )"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '⇔ ∃λ₁ ∈ ℝ: ( x = -6λ₁ [ -1; -2; 2; 1 ] + 9λ₁ [ 2; -2; 0; 0 ] )  (mutiplied
+    by 4)
+
+
+    ⇔ ∃λ₁ ∈ ℝ: ( x = λ₁ [ 24; -6; -12; -6 ] )
+
+
+    ⇔ ∃λ₁ ∈ ℝ: ( x = λ₁ [ 4; -1; -2; -1 ] )
+
+
+    Thus, we have
+
+
+    U₁ ∩ U₂ = { λ₁ [ 4; -1; -2; -1 ] | λ₁ ∈ ℝ } = span[ [ 4; -1; -2; -1 ], ]
+
+
+    i.e., we obtain vector space spanned by [4, -1, -2, -1]ᵀ.
+
+
+    2.13 Consider two subspaces U₁ and U₂, where U₁ is the solution space of the homogeneous
+    equation system A₁x = 0 and U₂ is the solution space of the homogeneous equation
+    system A₂x = 0 with
+
+
+    A₁ = [[1,0,1],[1,-2,-1],[2,1,3],[1,0,1]] ,  A₂ = [[3,-3,0],[1,2,3],[7,-5,2],[3,-1,2]]
+
+
+    a. Determine the dimension of U₁, U₂.
+
+
+    We determine U₁ by computing the reduced row echelon form of A₁ as
+
+
+    [[1,0,1],[0,1,1],[0,0,0],[0,0,0]]
+
+
+    which gives us
+
+
+    U₁ = span[ [1],[1],[-1] ]
+
+
+    Therefore, dim(U₁) = 1. Similarly, we determine U₂ by computing the reduced row
+    echelon form of A₂ as'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'which gives us
+
+
+    $$U_2 = \text{span}\begin{bmatrix}1\\1\\-1\end{bmatrix}.$$
+
+
+    Therefore, $\dim(U_2)=1.$
+
+
+    b. Determine bases of $U_1$ and $U_2$
+
+
+    The basis vector that spans both $U_1$ and $U_2$ is
+
+
+    $$\begin{bmatrix}1\\1\\-1\end{bmatrix}.$$
+
+
+    c. Determine a basis of $U_1 \cap U_2$.
+
+
+    Since both $U_1$ and $U_2$ are spanned by the same basis vector, it must be that
+    $U_1 = U_2$, and the desired basis is
+
+
+    $$U_1 \cap U_2 = U_1 = U_2 = \text{span}\begin{bmatrix}1\\1\\-1\end{bmatrix}.$$
+
+
+    2.14 Consider two subspaces $U_1$ and $U_2$, where $U_1$ is spanned by the columns
+    of $\boldsymbol{A}_1$ and $U_2$ is spanned by the columns of $\boldsymbol{A}_2$
+    with
+
+
+    $$\boldsymbol{A}_1 = \begin{bmatrix}1 & 0 & 1\\1 & -2 & -1\\2 & 1 & 3\\1 & 0 &
+    1\end{bmatrix},\quad \boldsymbol{A}_2 = \begin{bmatrix}3 & -3 & 0\\1 & 2 & 3\\7
+    & -5 & 2\\3 & -1 & 2\end{bmatrix}$$
+
+
+    a. Determine the dimension of $U_1, U_2$
+
+
+    We start by noting that $U_1, U_2 \subseteq \mathbb{R}^4$ since we are interested
+    in the space spanned by the columns of the corresponding matrices. Looking at
+    $\boldsymbol{A}_1$, we see that $-\boldsymbol{d}_1 + \boldsymbol{d}_3 = \boldsymbol{d}_2$,
+    where $\boldsymbol{d}_i$ are the columns of $\boldsymbol{A}_1$. This means that
+    the second column can be expressed as a linear combination of $\boldsymbol{d}_1$
+    and $\boldsymbol{d}_3$. $\boldsymbol{d}_1$ and $\boldsymbol{d}_3$ are linearly
+    independent, i.e., $\dim(U_1)=2$. Similarly, for $\boldsymbol{A}_2$, we see that
+    the third column is the sum of the first two columns, and again we arrive at $\dim(U_2)=2$.
+    Alternatively, we can use Gaussian elimination to determine a set of linearly
+    independent columns in both matrices.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Finally,
+
+
+    $U_1 \cap U_2 = \text{span}\begin{bmatrix} -3 \\ -1 \\ -7 \\ -3 \end{bmatrix}.$
+
+
+    Alternatively, we could have expressed the solutions of $x$ in terms of $b_1$
+    and $c_2$ with the condition on $\lambda$ being $\exists \alpha \in \mathbb{R}:
+    (\lambda_3 = \alpha) \land (\lambda_4 = -\alpha)$ to obtain $[3, 1, 7, 3]^\top$.
+
+
+    # 2.15 Let $F = \{(x, y, z) \in \mathbb{R}^3 \mid x+y-z = 0\}$ and $G = \{(a-b,
+    a+b, a-3b) \mid a, b \in \mathbb{R}\}$.
+
+
+    a. Show that $F$ and $G$ are subspaces of $\mathbb{R}^3$.
+
+
+    We have $(0,0,0) \in F$ since $0+0-0=0$. Let $a = (x,y,z) \in \mathbb{R}^3$ and
+    $b = (x'',y'',z'') \in \mathbb{R}^3$ be two elements of $F$. We have: $(x+y-z)+(x''+y''-z'')=0+0=0$
+    so $a+b \in F$. Let $\lambda \in \mathbb{R}$. We also have: $\lambda x+\lambda
+    y-\lambda z = \lambda 0 =0$ so $\lambda a \in F$ and thus $F$ is a subspace of
+    $\mathbb{R}^3$.
+
+
+    Similarly, we have $(0,0,0) \in G$ by setting $a$ and $b$ to $0$. Let $a,b,a''$
+    and $b''$ be in $\mathbb{R}$ and let $x = (a-b, a+b, a-3b)$ and $y = (a''-b'',
+    a''+b'', a''-3b'')$ be two elements of $G$. We have $x+y = ((a+a'')-(b+b''), (a+a'')+(b+b''),
+    (a+a'')-3(b+b''))$ and $(a+a'', b+b'') \in \mathbb{R}^2$ so $x+y \in G$. Let $\lambda$
+    be in $\mathbb{R}$. We have $(\lambda a, \lambda b) \in \mathbb{R}^2$ so $\lambda
+    x \in G$ and thus $G$ is a subspace of $\mathbb{R}^3$.
+
+
+    b. Calculate $F \cap G$ without resorting to any basis vector.
+
+
+    Combining both constraints, we have:
+
+    $F \cap G = \{(a-b, a+b, a-3b) \mid (a,b \in \mathbb{R}) \land [(a-b)+(a+b)-(a-3b)=0]\}$
+
+    $= \{(a-b, a+b, a-3b) \mid (a,b \in \mathbb{R}) \land (a = -3b)\}$
+
+    $= \{(-4b, -2b, -6b) \mid b \in \mathbb{R}\}$
+
+    $= \{(2b, b, 3b) \mid b \in \mathbb{R}\}$
+
+    $= \text{span}\begin{bmatrix}2\\1\\3\end{bmatrix}$
+
+
+    c. Find one basis for $F$ and one for $G$, calculate $F \cap G$ using the basis
+    vectors previously found and check your result with the previous question.
+
+
+    We can see that $F$ is a subset of $\mathbb{R}^3$ with one linear constraint.
+    It thus has dimension $2$, and it suffices to find two independent vectors in
+    $F$ to construct a basis. By setting $(x,y) = (1,0)$ and $(x,y) = (0,1)$ successively,
+    we obtain the following basis for $F$:
+
+    $\left\{\begin{bmatrix}1\\0\\1\end{bmatrix}, \begin{bmatrix}0\\1\\1\end{bmatrix}\right\}$
+
+    Let us consider the set $G$. We introduce $u, v \in \mathbb{R}$ and perform the
+    following variable substitutions: $u := a + b$ and $v := a - b$. Note that then'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'a = (u + v)/2 and b = (u - v)/2 and thus a - 3b = 2v - u, so that G can be
+    written as
+
+
+    $G = \{(v, u, 2v - u) \mid u, v \in \mathbb{R}\}.$
+
+
+    The dimension of G is clearly 2 and a basis can be found by choosing two independent
+    vectors of G, e.g.,
+
+
+    $\left\{ \begin{bmatrix}1\\0\\2\end{bmatrix}, \begin{bmatrix}0\\1\\-1\end{bmatrix}
+    \right\}$
+
+
+    Let us now find $F \cap G$. Let $\boldsymbol{x} \in \mathbb{R}^3$. It holds that
+
+
+    $\boldsymbol{x} \in F \cap G \iff \exists \lambda_1, \lambda_2, \mu_1, \mu_2 \in
+    \mathbb{R}: \left( \boldsymbol{x} = \lambda_1 \begin{bmatrix}1\\0\\1\end{bmatrix}
+    + \lambda_2 \begin{bmatrix}0\\1\\1\end{bmatrix} \right)$
+
+
+    $\land \left( \boldsymbol{x} = \mu_1 \begin{bmatrix}1\\0\\2\end{bmatrix} + \mu_2
+    \begin{bmatrix}0\\1\\-1\end{bmatrix} \right)$
+
+
+    $\iff \exists \lambda_1, \lambda_2, \mu_1, \mu_2 \in \mathbb{R}: \left( \boldsymbol{x}
+    = \lambda_1 \begin{bmatrix}1\\0\\1\end{bmatrix} + \lambda_2 \begin{bmatrix}0\\1\\1\end{bmatrix}
+    \right)$
+
+
+    $\land \left( \lambda_1 \begin{bmatrix}1\\0\\1\end{bmatrix} + \lambda_2 \begin{bmatrix}0\\1\\1\end{bmatrix}
+    + \mu_1 \begin{bmatrix}1\\0\\2\end{bmatrix} + \mu_2 \begin{bmatrix}0\\1\\-1\end{bmatrix}
+    = \boldsymbol{0} \right)$
+
+
+    Note that for simplicity purposes, we have not reversed the sign of the coefficients
+    for $\mu_1$ and $\mu_2$, which we can do since we could replace $\mu_1$ by $-\mu_1$.
+
+
+    The latter equation is a linear system in $[\lambda_1, \lambda_2, \mu_1, \mu_2]^\top$
+    that we solve next.
+
+
+    $\begin{bmatrix}1 & 0 & 1 & 0\\0 & 1 & 0 & 1\\1 & 1 & 2 & -1\end{bmatrix} (\cdots)
+    \sim \begin{bmatrix}1 & 0 & 0 & 2\\0 & 1 & 0 & 1\\0 & 0 & 1 & -2\end{bmatrix}$
+
+
+    The solution space for $(\lambda_1, \lambda_2, \mu_1, \mu_2)$ is therefore
+
+
+    $\operatorname{span}\begin{bmatrix}2\\1\\-2\\-1\end{bmatrix},$
+
+
+    and we can resume our equivalence
+
+
+    $\boldsymbol{x} \in F \cap G \iff \exists \alpha \in \mathbb{R}: \boldsymbol{x}
+    = 2\alpha \begin{bmatrix}1\\0\\1\end{bmatrix} + \alpha \begin{bmatrix}0\\1\\1\end{bmatrix}$
+
+
+    $\iff \exists \alpha \in \mathbb{R}: \boldsymbol{x} = \alpha \begin{bmatrix}2\\1\\3\end{bmatrix},$'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'which yields the same result as the previous question, i.e.,
+
+
+    $F \cap G = \text{span}\begin{bmatrix}2\\1\\3\end{bmatrix}$
+
+
+    # 2.16 Are the following mappings linear?
+
+
+    Recall: To show that $\Phi$ is a linear mapping from $E$ to $F$, we need to show
+    that for all $x$ and $y$ in $E$ and all $\lambda$ in $\mathbb{R}$:
+
+
+    +   - $\Phi(x + y) = \Phi(x) + \Phi(y)$
+
+    +   - $\Phi(\lambda x) = \lambda \Phi(x)$
+
+
+    a. Let $a, b \in \mathbb{R}$.
+
+
+    $\Phi : L^1([a,b]) \to \mathbb{R}$
+
+
+    $f \mapsto \Phi(f) = \int_a^b f(x)dx$,
+
+
+    where $L^1([a,b])$ denotes the set of integrable functions on $[a,b]$.
+
+
+    +   - Let $f, g \in L^1([a,b])$. It holds that
+
+    +   $\Phi(f)+\Phi(g)=\int_a^b f(x)dx+\int_a^b g(x)dx=\int_a^b f(x)+g(x)dx=\Phi(f+g)$.
+
+    +   - For $\lambda \in \mathbb{R}$ we have
+
+    +   $\Phi(\lambda f)=\int_a^b \lambda f(x)dx=\lambda \int_a^b f(x)dx=\lambda \Phi(f)$.
+
+
+    Therefore, $\Phi$ is a linear mapping. (In more advanced courses/books, you may
+    learn that $\Phi$ is a linear functional, i.e., it takes functions as arguments.
+    But for our purposes here this is not relevant.)
+
+
+    b.
+
+
+    $\Phi : C^1 \to C^0$
+
+
+    $f \mapsto \Phi(f) = f''$,
+
+
+    where for $k \ge 1$, $C^k$ denotes the set of $k$ times continuously differentiable
+    functions, and $C^0$ denotes the set of continuous functions.
+
+
+    +   - For $f, g \in C^1$ we have
+
+    +   $\Phi(f + g) = (f + g)'' = f'' + g'' = \Phi(f) + \Phi(g)$
+
+    +   - For $\lambda \in \mathbb{R}$ we have
+
+    +   $\Phi(\lambda f) = (\lambda f)'' = \lambda f'' = \lambda \Phi(f)$
+
+
+    Therefore, $\Phi$ is linear. (Again, $\Phi$ is a linear functional.)
+
+    From the first two exercises, we have seen that both integration and differentiation
+    are linear operations.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'c.
+
+
+    Φ : ℝ → ℝ
+
+
+    x ↦ Φ(x) = cos(x)
+
+
+    We have cos(π) = -1 and cos(2π) = 1m which is different from 2 cos(π). Therefore,
+    Φ is not linear.
+
+
+    d.
+
+
+    Φ : ℝ³ → ℝ²
+
+
+    x ↦ [[1, 2, 3], [1, 4, 3]] x
+
+
+    We define the matrix as A. Let x and y be in ℝ³. Let λ be in ℝ. Then:
+
+
+    Φ(x + y) = A(x + y) = Ax + Ay = Φ(x) + Φ(y).
+
+
+    Similarly,
+
+
+    Φ(λx) = A(λx) = λAx = λΦ(x).
+
+
+    Therefore, this mapping is linear.
+
+
+    e. Let θ be in [0, 2π[ and
+
+
+    Φ : ℝ² → ℝ²
+
+
+    x ↦ [[cos(θ), sin(θ)], [-sin(θ), cos(θ)]] x
+
+
+    We define the (rotation) matrix as A. Then the reasoning is identical to the previous
+    question. Therefore, this mapping is linear.
+
+    The mapping Φ represents a rotation of x by an angle θ. Rotations are also linear
+    mappings.
+
+
+    # 2.17 Consider the linear mapping
+
+
+    Φ : ℝ³ → ℝ⁴
+
+
+    Φ([x₁; x₂; x₃]) = [3x₁ + 2x₂ + x₃; x₁ + x₂ + x₃; x₁ − 3x₂; 2x₁ + 3x₂ + x₃]
+
+
+    +   - Find the transformation matrix A_Φ.
+
+    +   - Determine rk(A_Φ).
+
+    +   - Compute the kernel and image of Φ. What are dim(ker(Φ)) and dim(Im(Φ))?
+
+
+    The transformation matrix is
+
+
+    A_Φ = [[3, 2, -1], [1, 1, 1], [1, -3, 0], [2, 3, 1]]'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "+   - The rank of $A_\\Phi$ is the number linearly independent rows/columns.\
+    \ We use Gaussian elimination on $A_\\Phi$ to determine the reduced row echelon\
+    \ form (Not necessary to identify the number of linearly independent rows/columns,\
+    \ but useful for the next questions.):\n+   \n+   $$\n+   \\begin{bmatrix}\n+\
+    \   1 & 0 & 0 \\\\\n+   0 & 1 & 0 \\\\\n+   0 & 0 & 1 \\\\\n+   0 & 0 & 0\n+ \
+    \  \\end{bmatrix}.\n+   $$\n+   \n+   From here, we see that $\\mathrm{rk}(A_\\\
+    Phi)=3$.\n+   - $\\ker(\\Phi)=\\mathbf{0}$ and $\\dim(\\ker(\\Phi))=0$. From the\
+    \ reduced row echelon form, we see that all three columns of $A_\\Phi$ are linearly\
+    \ independent. Therefore, they form a basis of $\\mathrm{Im}(\\Phi)$, and $\\\
+    dim(\\mathrm{Im}(\\Phi))=3$.\n\n2.18 Let $E$ be a vector space. Let $f$ and $g$\
+    \ be two automorphisms on $E$ such that $f \\circ g = \\mathrm{id}_E$ (i.e., $f\
+    \ \\circ g$ is the identity mapping $\\mathrm{id}_E$). Show that $\\ker(f)=\\\
+    ker(g \\circ f)$, $\\mathrm{Im}(g)=\\mathrm{Im}(g \\circ f)$ and that $\\ker(f)\\\
+    cap\\mathrm{Im}(g)=\\{\\mathbf{0}_E\\}$.\n\nLet $\\boldsymbol{x}\\in\\ker(f)$.\
+    \ We have $g(f(\\boldsymbol{x}))=g(\\mathbf{0})=\\mathbf{0}$ since $g$ is linear.\
+    \ Therefore, $\\ker(f)\\subseteq\\ker(g\\circ f)$ (this always holds).\n\nLet\
+    \ $\\boldsymbol{x}\\in\\ker(g\\circ f)$. We have $g(f(\\boldsymbol{x}))=\\mathbf{0}$\
+    \ and as $f$ is linear, $f(g(f(\\boldsymbol{x})))=f(\\mathbf{0})=\\mathbf{0}$.\
+    \ This implies that $(f\\circ g)(f(\\boldsymbol{x}))=\\mathbf{0}$ so that $f(\\\
+    boldsymbol{x})=\\mathbf{0}$ since $f\\circ g=\\mathrm{id}_E$. So $\\ker(g\\circ\
+    \ f)\\subseteq\\ker(f)$ and thus $\\ker(g\\circ f)=\\ker(f)$.\n\nLet $\\boldsymbol{y}\\\
+    in\\mathrm{Im}(g\\circ f)$ and let $\\boldsymbol{x}\\in E$ so that $\\boldsymbol{y}=(g\\\
+    circ f)(\\boldsymbol{x})$. Then $\\boldsymbol{y}=g(f(\\boldsymbol{x}))$, which\
+    \ shows that $\\mathrm{Im}(g\\circ f)\\subseteq\\mathrm{Im}(g)$ (which is always\
+    \ true).\n\nLet $\\boldsymbol{y}\\in\\mathrm{Im}(g)$. Let then $\\boldsymbol{x}\\\
+    in E$ such that $\\boldsymbol{y}=g(\\boldsymbol{x})$. We have $\\boldsymbol{y}=g((f\\\
+    circ g)(\\boldsymbol{x}))$ and thus $\\boldsymbol{y}=(g\\circ f)(g(\\boldsymbol{x}))$,\
+    \ which means that $\\boldsymbol{y}\\in\\mathrm{Im}(g\\circ f)$. Therefore, $\\\
+    mathrm{Im}(g)\\subseteq\\mathrm{Im}(g\\circ f)$. Overall, $\\mathrm{Im}(g)=\\\
+    mathrm{Im}(g\\circ f)$.\n\nLet $\\boldsymbol{y}\\in\\ker(f)\\cap\\mathrm{Im}(g)$.\
+    \ Let $\\boldsymbol{x}\\in E$ such that $\\boldsymbol{y}=g(\\boldsymbol{x})$.\
+    \ Applying $f$ gives us $f(\\boldsymbol{y})=(f\\circ g)(\\boldsymbol{x})$ and\
+    \ as $\\boldsymbol{y}\\in\\ker(f)$, we have $\\mathbf{0}=\\boldsymbol{x}$. This\
+    \ means that $\\ker(f)\\cap\\mathrm{Im}(g)\\subseteq\\{\\mathbf{0}\\}$ but the\
+    \ intersection of two subspaces is a subspace and thus always contains $\\mathbf{0}$,\
+    \ so $\\ker(f)\\cap\\mathrm{Im}(g)=\\{\\mathbf{0}\\}$.\n\n2.19 Consider an endomorphism\
+    \ $\\Phi : \\mathbb{R}^3 \\to \\mathbb{R}^3$ whose transformation matrix (with\
+    \ respect to the standard basis in $\\mathbb{R}^3$) is\n\n$$A_\\Phi = \\begin{bmatrix}1\
+    \ & 1 & 0 \\\\ 1 & -1 & 0 \\\\ 1 & 1 & 1\\end{bmatrix}.$$\n\na. Determine $\\\
+    ker(\\Phi)$ and $\\mathrm{Im}(\\Phi)$.\n\nThe image $\\mathrm{Im}(\\Phi)$ is spanned\
+    \ by the columns of $A$. One way to determine a basis, we need to determine the\
+    \ smallest generating set of the columns of $A_\\Phi$. This can be done by Gaussian\
+    \ elimination. However, in this case, it is quite obvious that $A_\\Phi$ has full\
+    \ rank, i.e., the set of columns is already minimal, such that\n\n$$\\mathrm{Im}(\\\
+    Phi)=\\left[\\begin{matrix}1\\\\1\\\\1\\end{matrix},\\begin{matrix}1\\\\-1\\\\\
+    1\\end{matrix},\\begin{matrix}0\\\\0\\\\1\\end{matrix}\\right]=\\mathbb{R}^3$$"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'We know that dim(Im(Φ)) = 3. Using the rank-nullity theorem, we get that dim(ker(Φ))
+    = 3 − dim(Im(Φ)) = 0, and ker(Φ) = {0} consists of the 0-vector alone.
+
+
+    b. Determine the transformation matrix Â_Φ with respect to the basis
+
+
+    B = ( [1;1;1] , [1;2;1] , [1;0;0] )
+
+
+    i.e., perform a basis change toward the new basis B.
+
+
+    Let B the matrix built out of the basis vectors of B (order is important):
+
+
+    B = [[1,1,1],[1,2,0],[1,1,0]]
+
+
+    Then, Â_Φ = B^{-1} A_Φ B. The inverse is given by
+
+
+    B^{-1} = [[0,-1,2],[0,1,-1],[1,0,-1]]
+
+
+    and the desired transformation matrix of Φ with respect to the new basis B of
+    R^3 is
+
+
+    [ [0,-1,2],[0,1,-1],[1,0,-1] ] [ [1,1,0],[1,-1,0],[1,1,1] ] [ [1,1,1],[1,2,0],[1,1,0]
+    ] = [ [1,3,2],[0,-2,-1],[0,0,-1] ] [ [1,1,1],[1,2,0],[1,1,0] ] = [ [6,9,1],[-3,-5,0],[-1,-1,0]
+    ]
+
+
+    # 2.20 Let us consider b1, b2, b1'', b2'', 4 vectors of R^2 expressed in the standard
+    basis of R^2 as
+
+
+    b1 = [2;1] , b2 = [-1;-1] , b1'' = [2;-2] , b2'' = [1;1]
+
+
+    and let us define two ordered bases B = (b1, b2) and B'' = (b1'', b2'') of R^2.
+
+
+    +   a. Show that B and B'' are two bases of R^2 and draw those basis vectors.
+
+
+    The vectors b1 and b2 are clearly linearly independent and so are b1'' and b2''.
+
+
+    +   b. Compute the matrix P1 that performs a basis change from B'' to B.
+
+
+    We need to express the vector b1'' (and b2'') in terms of the vectors b1 and b2.
+    In other words, we want to find the real coefficients λ1 and λ2 such that b1''
+    = λ1 b1 + λ2 b2. In order to do that, we will solve the linear equation system
+
+
+    [ b1  b2 | b1'' ]
+
+
+    i.e.,
+
+
+    [ [2,-1 | 2],[1,-1 | -2] ]'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'and which results in the reduced row echelon form
+
+
+    $$\begin{bmatrix}1 & 0 & | & 4 \\ 0 & 1 & | & 6\end{bmatrix}.$$
+
+
+    This gives us $b''_1 = 4b_1 + 6b_2$. Similarly for $b''_2$, Gaussian elimination
+    gives us $b''_2 = -1b_2$. Thus, the matrix that performs a basis change from $B''$
+    to $B$ is given as
+
+
+    $$\boldsymbol{P}_1 = \begin{bmatrix}4 & 0 \\ 6 & -1\end{bmatrix}.$$
+
+
+    c. We consider $c_1, c_2, c_3$, three vectors of $\mathbb{R}^3$ defined in the
+    standard basis of $\mathbb{R}$ as
+
+
+    $$\boldsymbol{c}_1 = \begin{bmatrix}1\\2\\-1\end{bmatrix},\quad \boldsymbol{c}_2
+    = \begin{bmatrix}0\\-1\\2\end{bmatrix},\quad \boldsymbol{c}_3 = \begin{bmatrix}1\\0\\-1\end{bmatrix}$$
+
+
+    and we define $C = (c_1, c_2, c_3)$.
+
+
+    (i) Show that $C$ is a basis of $\mathbb{R}^3$, e.g., by using determinants (see
+    Section 4.1).
+
+
+    We have:
+
+
+    $$\det(\boldsymbol{c}_1, \boldsymbol{c}_2, \boldsymbol{c}_3) = \begin{vmatrix}1
+    & 0 & 1\\2 & -1 & 0\\-1 & 2 & -1\end{vmatrix} = 4 \neq 0$$
+
+
+    Therefore, $C$ is regular, and the columns of $C$ are linearly independent, i.e.,
+    they form a basis of $\mathbb{R}^3$.
+
+
+    (ii) Let us call $C'' = (c''_1, c''_2, c''_3)$ the standard basis of $\mathbb{R}^3$.
+    Determine the matrix $\boldsymbol{P}_2$ that performs the basis change from $C$
+    to $C''$.
+
+
+    In order to write the matrix that performs a basis change from $C$ to $C''$, we
+    need to express the vectors of $C$ in terms of those of $C''$. But as $C''$ is
+    the standard basis, it is straightforward that $c_1 = 1c''_1 + 2c''_2 -1c''_3$
+    for example. Therefore, $$\boldsymbol{P}_2 := \begin{bmatrix}1 & 0 & 1\\2 & -1
+    & 0\\-1 & 2 & -1\end{bmatrix}.$$ simply contains the column vectors of $C$ (this
+    would not be the case if $C''$ was not the standard basis).
+
+
+    d. We consider a homomorphism $\Phi : \mathbb{R}^2 \longrightarrow \mathbb{R}^3$,
+    such that $$\Phi(b_1 + b_2) = c_2 + c_3$$ $$\Phi(b_1 - b_2) = 2c_1 - c_2 + 3c_3$$
+    where $B = (b_1, b_2)$ and $C = (c_1, c_2, c_3)$ are ordered bases of $\mathbb{R}^2$
+    and $\mathbb{R}^3$, respectively. Determine the transformation matrix $\boldsymbol{A}_\Phi$
+    of $\Phi$ with respect to the ordered bases $B$ and $C$.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'Adding and subtracting both equations gives us
+
+
+    $$
+
+    \begin{cases}
+
+    \Phi(b_1 + b_2) + \Phi(b_1 - b_2) = 2c_1 + 4c_3\\
+
+    \Phi(b_1 + b_2) - \Phi(b_1 - b_2) = -2c_1 + 2c_2 - 2c_3
+
+    \end{cases}$$
+
+
+    As Φ is linear, we obtain
+
+
+    $$
+
+    \begin{cases}
+
+    \Phi(2b_1) = 2c_1 + 4c_3\\
+
+    \Phi(2b_2) = -2c_1 + 2c_2 - 2c_3
+
+    \end{cases}$$
+
+
+    And by linearity of Φ again, the system of equations gives us
+
+
+    $$
+
+    \begin{cases}
+
+    \Phi(b_1) = c_1 + 2c_3\\
+
+    \Phi(b_2) = -c_1 + c_2 - c_3
+
+    \end{cases}.$$
+
+
+    Therefore, the transformation matrix of A_Φ with respect to the bases B and C
+    is
+
+
+    $$A_\Phi = \begin{bmatrix}1 & -1\\0 & 1\\2 & -1\end{bmatrix}.$$
+
+
+    +   e. Determine A'', the transformation matrix of Φ with respect to the bases
+    B'' and C''.
+
+
+    We have:
+
+
+    $$A'' = P_2 A P_1 = \begin{bmatrix}1 & 0 & 1\\2 & -1 & 0\\-1 & 2 & -1\end{bmatrix}\begin{bmatrix}1
+    & -1\\0 & 1\\2 & -1\end{bmatrix}\begin{bmatrix}4 & 0\\6 & -1\end{bmatrix}=\begin{bmatrix}0
+    & 2\\-10 & 3\\12 & -4\end{bmatrix}.$$
+
+
+    +   f. Let us consider the vector x ∈ ℝ² whose coordinates in B'' are [2,3]ᵀ.
+    In other words, x = 2b₁'' + 3b₂''.
+
+
+    +   (i) Calculate the coordinates of x in B. By definition of P₁, x can be written
+    in B as
+
+    +   $$P_1\begin{bmatrix}2\\3\end{bmatrix}=\begin{bmatrix}4 & 0\\6 & -1\end{bmatrix}\begin{bmatrix}2\\3\end{bmatrix}=\begin{bmatrix}8\\9\end{bmatrix}$$
+
+
+    +   (ii) Based on that, compute the coordinates of Φ(x) expressed in C. Using
+    the transformation matrix A of Φ with respect to the bases B and C, we get the
+    coordinates of Φ(x) in C with
+
+    +   $$A\begin{bmatrix}8\\9\end{bmatrix}=\begin{bmatrix}1 & -1\\0 & 1\\2 & -1\end{bmatrix}\begin{bmatrix}8\\9\end{bmatrix}=\begin{bmatrix}-1\\9\\7\end{bmatrix}$$
+
+
+    +   (iii) Then, write Φ(x) in terms of c₁'', c₂'', c₃''. Going back to the basis
+    C'' thanks to the matrix P₂ gives us the expression of Φ(x) in C''
+
+    +   $$P_2\begin{bmatrix}-1\\9\\7\end{bmatrix}=\begin{bmatrix}1 & 0 & 1\\2 & -1
+    & 0\\-1 & 2 & -1\end{bmatrix}\begin{bmatrix}-1\\9\\7\end{bmatrix}=\begin{bmatrix}6\\-11\\12\end{bmatrix}$$'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'In other words, Φ(x) = 6c₁'' − 11c₂'' + 12c₃''.
+
+
+    (iv) Use the representation of x in B'' and the matrix A'' to find this result
+    directly.
+
+
+    We can calculate Φ(x) in C directly:
+
+
+    $A'' \begin{bmatrix}2\\3\end{bmatrix} = \begin{bmatrix}0 & 2\\ -10 & 3\\ 12 &
+    -4\end{bmatrix} \begin{bmatrix}2\\3\end{bmatrix} = \begin{bmatrix}6\\ -11\\ 12\end{bmatrix}$'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "# Analytic Geometry\n\n# Exercises\n\n3.1 Show that $\\langle\\cdot,\\cdot\\\
+    rangle$ defined for all $\\boldsymbol{x} = [x_1, x_2]^\\top \\in \\mathbb{R}^2$\
+    \ and $\\boldsymbol{y} = [y_1, y_2]^\\top \\in \\mathbb{R}^2$ by\n\n$\\langle\\\
+    boldsymbol{x}, \\boldsymbol{y}\\rangle := x_1 y_1 - (x_1 y_2 + x_2 y_1) + 2(x_2\
+    \ y_2)$\n\nis an inner product.\n\nWe need to show that $\\langle\\boldsymbol{x},\
+    \ \\boldsymbol{y}\\rangle$ is a symmetric, positive definite bilinear form.\n\n\
+    +   - Let $\\boldsymbol{x} := [x_1, x_2]^\\top$, $\\boldsymbol{y} = [y_1, y_2]^\\\
+    top \\in \\mathbb{R}^2$. Then,\n+   \n+     $\\langle\\boldsymbol{x}, \\boldsymbol{y}\\\
+    rangle = x_1 y_1 - (x_1 y_2 + x_2 y_1) + 2 x_2 y_2$\n+     $= y_1 x_1 - (y_1 x_2\
+    \ + y_2 x_1) + 2 y_2 x_2 = \\langle\\boldsymbol{y}, \\boldsymbol{x}\\rangle$,\
+    \ \n+   \n+     where we exploited the commutativity of addition and multiplication\
+    \ in $\\mathbb{R}$. Therefore, $\\langle\\cdot,\\cdot\\rangle$ is symmetric.\n\
+    +   - It holds that\n+   \n+     $\\langle\\boldsymbol{x}, \\boldsymbol{x}\\rangle\
+    \ = x_1^2 - (2 x_1 x_2) + 2 x_2^2 = (x_1 - x_2)^2 + x_2^2$.\n+   \n+     This\
+    \ is a sum of positive terms for $\\boldsymbol{x} \\neq \\mathbf{0}$. Moreover,\
+    \ this expression shows that if $\\langle\\boldsymbol{x}, \\boldsymbol{x}\\rangle\
+    \ = 0$ then $x_2 = 0$ and then $x_1 = 0$, i.e., $\\boldsymbol{x} = \\mathbf{0}$.\
+    \ Hence, $\\langle\\cdot,\\cdot\\rangle$ is positive definite.\n+   - In order\
+    \ to show that $\\langle\\cdot,\\cdot\\rangle$ is bilinear (linear in both arguments),\
+    \ we will simply show that $\\langle\\cdot,\\cdot\\rangle$ is linear in its first\
+    \ argument. Symmetry will ensure that $\\langle\\cdot,\\cdot\\rangle$ is bilinear.\
+    \ Do not duplicate the proof of linearity in both arguments.\n+     Let $\\boldsymbol{z}\
+    \ = [z_1, z_2]^\\top \\in \\mathbb{R}^2$ and $\\lambda \\in \\mathbb{R}$. Then,\n\
+    +   \n+     $\\langle\\boldsymbol{x} + \\boldsymbol{y}, \\boldsymbol{z}\\rangle\
+    \ = (x_1 + y_1)z_1 - ((x_1 + y_1)z_2 + (x_2 + y_2)z_2) + 2(x_2 + y_2)z_2$\n+ \
+    \    $= x_1 z_1 - (x_1 z_2 + x_2 z_1) + 2(x_2 z_2) + y_1 z_1 - (y_1 z_2 + y_2\
+    \ z_1) + 2(y_2 z_2)$\n+     $= \\langle\\boldsymbol{x}, \\boldsymbol{z}\\rangle\
+    \ + \\langle\\boldsymbol{y}, \\boldsymbol{z}\\rangle$\n+     $\\langle\\lambda\\\
+    boldsymbol{x}, \\boldsymbol{y}\\rangle = \\lambda x_1 y_1 - (\\lambda x_1 y_2\
+    \ + \\lambda x_2 y_1) + 2(\\lambda x_2 y_2)$\n+     $= \\lambda(x_1 y_1 - (x_1\
+    \ y_2 + x_2 y_1) + 2(x_2 y_2)) = \\lambda \\langle\\boldsymbol{x}, \\boldsymbol{y}\\\
+    rangle$\n+   \n+     Thus, $\\langle\\cdot,\\cdot\\rangle$ is linear in its first\
+    \ variable. By symmetry, it is bilinear. Overall, $\\langle\\cdot,\\cdot\\rangle$\
+    \ is an inner product."
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# 3.2
+
+
+    Consider ℝ² with ⟨·,·⟩ defined for all x and y in ℝ² as
+
+    ⟨x, y⟩ := xᵀ [[2,0],[1,2]] y  :=: A
+
+
+    Is ⟨·,·⟩ an inner product?
+
+    Let us define x and y as
+
+    x = [1;0], y = [0;1].
+
+
+    We have ⟨x, y⟩ = 0 but ⟨y, x⟩ = 1, i.e., ⟨·,·⟩ is not symmetric. Therefore, it
+    is not an inner product.
+
+
+    # 3.3
+
+
+    Compute the distance between
+
+    x = [1;2;3], y = [-1;-1;0]
+
+    using
+
+
+    +   a. ⟨x, y⟩ := xᵀ y
+
+    +   b. ⟨x, y⟩ := xᵀ A y, A := [[2,1,0],[1,3,-1],[0,-1,2]]
+
+
+    The difference vector is
+
+    z = x - y = [2;3;4].
+
+
+    +   a. ||z|| = √(zᵀ z) = √29
+
+    +   b. ||z|| = √(zᵀ A z) = √55
+
+
+    # 3.4
+
+
+    Compute the angle between
+
+    x = [1;2], y = [-1;-1]
+
+    using
+
+
+    +   a. ⟨x, y⟩ := xᵀ y
+
+    +   b. ⟨x, y⟩ := xᵀ B y, B := [[2,1],[1,3]]
+
+
+    It holds that
+
+    cos ω = ⟨x, y⟩ / (||x|| ||y||),
+
+    where ω is the angle between x and y.
+
+
+    +   a. cos ω = -3 / (√5 √2) = -3 / √10 ≈ 2.82 rad = 161.5°
+
+    +   b. cos ω = (xᵀ B y) / (√(xᵀ B x) √(yᵀ B y)) = -11 / (√18 √7) = -11 / 126 ≈
+    1.66 rad = 95°'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '3.5 Consider the Euclidean vector space \(\mathbb{R}^5\) with the dot product.
+    A subspace \(U \subseteq \mathbb{R}^5\) and \(x \in \mathbb{R}^5\) are given by
+
+
+    $$U=\operatorname{span}\left\{\begin{bmatrix}0\\-1\\2\\0\\2\end{bmatrix},\begin{bmatrix}1\\-3\\1\\-1\\2\end{bmatrix},\begin{bmatrix}-3\\4\\1\\2\\1\end{bmatrix},\begin{bmatrix}-1\\-3\\5\\0\\7\end{bmatrix}\right\},\qquad
+    x=\begin{bmatrix}-1\\-9\\-1\\4\\1\end{bmatrix}.$$
+
+
+    a. Determine the orthogonal projection \(\pi_U(x)\) of \(x\) onto \(U\)
+
+
+    First, we determine a basis of \(U\). Writing the spanning vectors as the columns
+    of a matrix \(A\), we use Gaussian elimination to bring \(A\) into (reduced) row
+    echelon form:
+
+
+    $$\begin{bmatrix}1&0&0&1\\0&1&0&2\\0&0&1&1\\0&0&0&0\\0&0&0&0\end{bmatrix}$$
+
+
+    From here, we see that the first three columns are pivot columns, i.e., the first
+    three vectors in the generating set of \(U\) form a basis of \(U\):
+
+
+    $$U=\operatorname{span}\left\{\begin{bmatrix}0\\-1\\2\\0\\2\end{bmatrix},\begin{bmatrix}1\\-3\\1\\-1\\2\end{bmatrix},\begin{bmatrix}-3\\4\\1\\2\\1\end{bmatrix}\right\}.$$
+
+
+    Now, we define
+
+
+    $$B=\begin{bmatrix}0&1&-3\\-1&-3&4\\2&1&1\\0&-1&2\\2&2&1\end{bmatrix},$$
+
+
+    where we define three basis vectors \(b_i\) of \(U\) as the columns of \(B\) for
+    \(1\leq i\leq 3\).
+
+
+    We know that the projection of \(x\) on \(U\) exists and we define \(p:=\pi_U(x)\).
+    Moreover, we know that \(p\in U\). We define \(\lambda:=[\lambda_1,\lambda_2,\lambda_3]^T\in\mathbb{R}^3\),
+    such that \(p\) can be written as \(p=\sum_{i=1}^{3}\lambda_i b_i=B\lambda\).
+
+
+    As \(p\) is the orthogonal projection of \(x\) onto \(U\), then \(x-p\) is orthogonal
+    to all the basis vectors of \(U\), so that
+
+
+    $$B^T(x-B\lambda)=0.$$
+
+
+    Therefore,
+
+
+    $$B^TB\lambda=B^Tx.$$
+
+
+    Solving in \(\lambda\) the inhomogeneous system \(B^TB\lambda=B^Tx\) gives us
+    a single'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'solution
+
+
+    $$\lambda=\begin{bmatrix}-3\\4\\1\end{bmatrix}$$
+
+
+    and, therefore, the desired projection
+
+
+    $$p=B\lambda=\begin{bmatrix}1\\-5\\-1\\-2\\3\end{bmatrix}\in U.$$
+
+
+    b.  Determine the distance $d(x,U)$
+
+
+    The distance is simply the length of $x-p$:
+
+
+    $$\|x-p\|=\left\|\begin{bmatrix}2\\4\\0\\-6\\2\end{bmatrix}\right\|=\sqrt{60}$$
+
+
+    # ### 3.6  Consider $\mathbb{R}^3$ with the inner product
+
+
+    $$\langle x,y\rangle:=x^T\begin{bmatrix}2&1&0\\1&2&-1\\0&-1&2\end{bmatrix}y.$$
+
+
+    Furthermore, we define $e_1,e_2,e_3$ as the standard/canonical basis in $\mathbb{R}^3$.
+
+
+    a.  Determine the orthogonal projection $\pi_U(e_2)$ of $e_2$ onto
+
+
+    $$U=\operatorname{span}[e_1,e_3].$$
+
+
+    Hint: Orthogonality is defined through the inner product.
+
+
+    Let $p=\pi_U(e_2)$. As $p\in U$, we can define $\Lambda=(\lambda_1,\lambda_3)\in\mathbb{R}^2$
+    such that $p$ can be written $p=U\Lambda$. In fact, $p$ becomes $p=\lambda_1e_1+\lambda_3e_3=[\lambda_1,0,\lambda_3]^T$
+    expressed in the canonical basis.
+
+
+    Now, we know by orthogonal projection that
+
+
+    $$p=\pi_U(e_2)\ \Longrightarrow\ (p-e_2)\perp U$$
+
+
+    $$\Longrightarrow\begin{bmatrix}\langle p-e_2,e_1\rangle\\\langle p-e_2,e_3\rangle\end{bmatrix}=\begin{bmatrix}0\\0\end{bmatrix}$$
+
+
+    $$\Longrightarrow\begin{bmatrix}\langle p,e_1\rangle-\langle e_2,e_1\rangle\\\langle
+    p,e_3\rangle-\langle e_2,e_3\rangle\end{bmatrix}=\begin{bmatrix}0\\0\end{bmatrix}$$
+
+
+    We compute the individual components as
+
+
+    $$\langle p,e_1\rangle=\begin{bmatrix}\lambda_1&0&\lambda_3\end{bmatrix}\begin{bmatrix}2&1&0\\1&2&-1\\0&-1&2\end{bmatrix}\begin{bmatrix}1\\0\\0\end{bmatrix}=2\lambda_1$$'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '<p, e3> = [λ₁ 0 λ₃] [[2,1,0],[1,2,-1],[0,-1,2]] [0;1;0] = 2λ₃
+
+    <e₂, e₁> = [0;1;0] [[2,1,0],[1,2,-1],[0,-1,2]] [1;0;0] = 1
+
+    <e₂, e₃> = [0 1 0] [[2,1,0],[1,2,-1],[0,-1,2]] [0;0;1] = -1
+
+
+    This now leads to the inhomogeneous linear equation system
+
+
+    2λ₁ = 1
+
+    2λ₃ = -1
+
+
+    This immediately gives the coordinates of the projection as
+
+
+    π_U(e₂) = [1/2; 0; -1/2]
+
+
+    b. Compute the distance d(e₂, U).
+
+
+    The distance of d(e₂, U) is the distance between e₂ and its orthogonal projection
+    p = π_U(e₂) onto U. Therefore,
+
+
+    d(e₂, U) = √⟨p - e₂, p - e₂⟩.
+
+
+    However,
+
+
+    ⟨p - e₂, p - e₂⟩ = [1/2 -1 -1/2] [[2,1,0],[1,2,-1],[0,-1,2]] [1/2; -1; -1/2] =
+    1,
+
+
+    which yields d(e₂, U) = √⟨p - e₂, p - e₂⟩ = 1
+
+
+    c. Draw the scenario: standard basis vectors and π_U(e₂)
+
+    See Figure 3.1.
+
+
+    3.7 Let V be a vector space and π an endomorphism of V.
+
+    a. Prove that π is a projection if and only if id_V - π is a projection, where
+    id_V is the identity endomorphism on V.
+
+    b. Assume now that π is a projection. Calculate Im(id_V - π) and ker(id_V - π)
+    as a function of Im(π) and ker(π).
+
+
+    a. It holds that (id_V - π)² = id_V - 2π + π². Therefore,
+
+    (id_V - π)² = id_V - π ⟺ π² = π,
+
+
+    which is exactly what we want. Note that we reasoned directly at the endomorphism
+    level, but one can also take any x ∈ V and prove the same results. Also note that
+    π² means π ∘ π as in "π composed with π".'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '![](img/ef5f5b11a3f2185609d612a3ea3272cc_33_0.png)
+
+
+    Figure 3.1
+
+    Projection π_U(e₂).
+
+
+    b. We have π ∘ (id_V − π) = π − π² = 0_V, where 0_V represents the null endomorphism.
+    Then Im(id_V − π) ⊆ ker(π).
+
+    Conversely, let x ∈ ker(π). Then
+
+    (id_V − π)(x) = x − π(x) = x,
+
+    which means that x is the image of itself by id_V − π. Hence, x ∈ Im(id_V − π).
+    In other words, ker(π) ⊆ Im(id_V − π) and thus ker(π) = Im(id_V − π).
+
+
+    Similarly, we have
+
+    (id_V − π) ∘ π = π − π² = π − π = 0_V
+
+    so Im(π) ⊆ ker(id_V − π).
+
+    Conversely, let x ∈ ker(id_V − π). We have (id_V − π)(x) = 0 and thus x − π(x)
+    = 0 or x = π(x). This means that x is its own image by π, and therefore ker(id_V
+    − π) ⊆ Im(π). Overall,
+
+    ker(id_V − π) = Im(π).
+
+
+    3.8 Using the Gram-Schmidt method, turn the basis B = (b₁, b₂) of a two-dimensional
+    subspace U ⊆ ℝ³ into an ONB C = (c₁, c₂) of U, where
+
+    b₁ := [1; 1; 1],   b₂ := [-1; 2; 0].'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "We start by normalizing $b_1$\n\n$$c_1 := \\frac{b_1}{\\lVert b_1\\rVert} =\
+    \ \\frac{1}{\\sqrt{3}}\\begin{bmatrix}1\\\\1\\\\1\\end{bmatrix}. \\tag{3.1}$$\n\
+    \nTo get $c_2$, we project $b_2$ onto the subspace spanned by $c_1$. This gives\
+    \ us (since $\\lVert c_1\\rVert=1$)\n\n$$c_1^\\mathsf{T}b_2c_1=\\frac{1}{3}\\\
+    begin{bmatrix}1\\\\1\\\\1\\end{bmatrix}\\in U.$$\n\nBy subtracting this projection\
+    \ (a multiple of $c_1$) from $b_2$, we get a vector that is orthogonal to $c_1$:\n\
+    \n$$\\begin{bmatrix}-1\\\\2\\\\0\\end{bmatrix}-\\frac{1}{3}\\begin{bmatrix}1\\\
+    \\1\\\\1\\end{bmatrix}=\\frac{1}{3}\\begin{bmatrix}-4\\\\5\\\\-1\\end{bmatrix}=\\\
+    frac{1}{3}(-b_1+3b_2)\\in U.$$\n\nNormalizing $\\tilde c_2$ yields\n\n$$c_2=\\\
+    frac{\\tilde c_2}{\\lVert\\tilde c_2\\rVert}=\\frac{3}{\\sqrt{42}}\\begin{bmatrix}-4\\\
+    \\5\\\\-1\\end{bmatrix}.$$\n\nWe see that $c_1\\perp c_2$ and that $\\lVert c_1\\\
+    rVert=1=\\lVert c_2\\rVert$. Moreover, $c_1,c_2\\in U$ it follows that $(c_1,c_2)$\
+    \ are a basis of $U$.\n\n**3.9** Let $n\\in\\mathbb{N}$ and let $x_1,\\ldots,x_n>0$\
+    \ be $n$ positive real numbers so that $x_1+\\cdots+x_n=1$. Use the Cauchy-Schwarz\
+    \ inequality and show that\n\n+   a. $\\displaystyle\\sum_{i=1}^{n}x_i^2\\ge\\\
+    frac{1}{n}$  \n+   b. $\\displaystyle\\sum_{i=1}^{n}\\frac{1}{x_i}\\ge n^2$\n\n\
+    Hint: Think about the dot product on $\\mathbb{R}^n$. Then, choose specific vectors\
+    \ $x,y\\in\\mathbb{R}^n$ and apply the Cauchy-Schwarz inequality.\n\nRecall Cauchy-Schwarz\
+    \ inequality expressed with the dot product in $\\mathbb{R}^n$. Let $x=[x_1,\\\
+    ldots,x_n]^\\mathsf{T}$ and $y=[y_1,\\ldots,y_n]^\\mathsf{T}$ be two vectors of\
+    \ $\\mathbb{R}^n$. Cauchy-Schwarz tells us that\n\n$$\\langle x,y\\rangle^2\\\
+    le\\langle x,x\\rangle\\cdot\\langle y,y\\rangle,$$\n\nwhich, applied with the\
+    \ dot product in $\\mathbb{R}^n$, can be rephrased as\n\n$$\\left(\\sum_{i=1}^{n}x_i\
+    \ y_i\\right)^2\\le\\left(\\sum_{i=1}^{n}x_i^2\\right)\\cdot\\left(\\sum_{i=1}^{n}y_i^2\\\
+    right).$$\n\na. Consider $x=[x_1,\\ldots,x_n]^\\mathsf{T}$ as defined in the question.\
+    \ Let us choose $y=[1,\\ldots,1]^\\mathsf{T}$. Then, the Cauchy-Schwarz inequality\
+    \ becomes\n\n$$\\left(\\sum_{i=1}^{n}x_i\\cdot1\\right)^2\\le\\left(\\sum_{i=1}^{n}x_i^2\\\
+    right)\\cdot\\left(\\sum_{i=1}^{n}1^2\\right)$$\n\nand thus\n\n$$1\\le\\left(\\\
+    sum_{i=1}^{n}x_i^2\\right)\\cdot n,$$"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'which yields the expected result.
+
+
+    b. Let us now choose both vectors differently to obtain the expected result. Let
+    $x = \left[\frac{1}{\sqrt{x_1}}, \dots, \frac{1}{\sqrt{x_n}}\right]^\top$ and
+    $y = \left[\sqrt{x_1}, \dots, \sqrt{n}\right]^\top$. Note that our choice is legal
+    since all $x_i$ and $y_i$ are strictly positive. The Cauchy-Schwarz inequality
+    now becomes
+
+
+    $$\left(\sum_{i=1}^n \frac{1}{\sqrt{x_i}} \cdot \sqrt{x_i}\right)^2 \leqslant
+    \left(\sum_{i=1}^n \left(\frac{1}{\sqrt{x_i}}\right)^2\right) \cdot \left(\sum_{i=1}^n
+    \sqrt{x_i}^2\right)$$
+
+
+    so that
+
+
+    $$n^2 \leqslant \left(\sum_{i=1}^n \frac{1}{x_i}\right) \cdot \left(\sum_{i=1}^n
+    x_i\right).$$
+
+
+    This yields $n^2 \leqslant \sum_{i=1}^n \frac{1}{x_i} \cdot 1$, which gives the
+    expected result.
+
+
+    # 3.10 Rotate the vectors
+
+
+    $$x_1 := \begin{bmatrix}2\\3\end{bmatrix}, \quad x_2 := \begin{bmatrix}0\\-1\end{bmatrix}$$
+
+
+    by $30^\circ$.
+
+
+    Since $30^\circ = \pi/6\ \text{rad}$ we obtain the rotation matrix
+
+
+    $$A = \begin{bmatrix}\cos\left(\frac{\pi}{6}\right) & -\sin\left(\frac{\pi}{6}\right)\\
+    \sin\left(\frac{\pi}{6}\right) & \cos\left(\frac{\pi}{6}\right)\end{bmatrix}$$
+
+
+    and the rotated vectors are
+
+    $$A x_1 = \begin{bmatrix}2\cos\left(\frac{\pi}{6}\right) - 3\sin\left(\frac{\pi}{6}\right)\\
+    2\sin\left(\frac{\pi}{6}\right) + 3\cos\left(\frac{\pi}{6}\right)\end{bmatrix}
+    \approx \begin{bmatrix}0.23\\3.60\end{bmatrix}$$
+
+    $$A x_2 = \begin{bmatrix}\sin\left(\frac{\pi}{6}\right)\\ -\cos\left(\frac{\pi}{6}\right)\end{bmatrix}
+    \approx \begin{bmatrix}0.5\\0.87\end{bmatrix}.$$'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Matrix Decompositions
+
+
+    # Exercises
+
+
+    4.1 Compute the determinant using the Laplace expansion (using the first row)
+    and the Sarrus rule for
+
+
+    **A** = $\begin{bmatrix} 1 & 3 & 5 \\ 2 & 4 & 6 \\ 0 & 2 & 4 \end{bmatrix}$.
+
+
+    The determinant is
+
+
+    |A| = det(**A**) = $\begin{vmatrix} 1 & 3 & 5 \\ 2 & 4 & 6 \\ 0 & 2 & 4 \end{vmatrix}$
+
+    = 1 $\begin{vmatrix} 4 & 6 \\ 2 & 4 \end{vmatrix}$ - 3 $\begin{vmatrix} 2 & 6
+    \\ 0 & 4 \end{vmatrix}$ + 5 $\begin{vmatrix} 2 & 4 \\ 0 & 2 \end{vmatrix}$
+
+    = 1·4 - 3·8 - 5·4 = 0  Laplace expansion
+
+    = 16 + 20 + 0 - 0 - 12 - 24 = 0  Sarrus’ rule
+
+
+    4.2 Compute the following determinant efficiently:
+
+
+    $\begin{bmatrix} 2 & 0 & 1 & 2 & 0 \\ 2 & -1 & 0 & 1 & 1 \\ 0 & 1 & 2 & 1 & 2
+    \\ -2 & 0 & 2 & -1 & 2 \\ 2 & 0 & 0 & 1 & 1 \end{bmatrix}$.
+
+
+    This strategy shows the power of the methods we learned in this and the previous
+    chapter. We can first apply Gaussian elimination to transform **A** into a triangular
+    form, and then use the fact that the determinant of a triangular matrix equals
+    the product of its diagonal elements.
+
+
+    $\begin{vmatrix} 2 & 0 & 1 & 2 & 0 \\ 2 & -1 & 0 & 1 & 1 \\ 0 & 1 & 2 & 1 & 2
+    \\ -2 & 0 & 2 & -1 & 2 \\ 2 & 0 & 0 & 1 & 1 \end{vmatrix} = \begin{vmatrix} 2
+    & 0 & 1 & 2 & 0 \\ 0 & -1 & -1 & -1 & 1 \\ 0 & 1 & 2 & 1 & 2 \\ 0 & 0 & 3 & 1
+    & 2 \\ 0 & 0 & -1 & -1 & 1 \end{vmatrix} = \begin{vmatrix} 2 & 0 & 1 & 2 & 0 \\
+    0 & -1 & -1 & -1 & 1 \\ 0 & 0 & 1 & 0 & 3 \\ 0 & 0 & 3 & 1 & 2 \\ 0 & 0 & -1 &
+    -1 & 1 \end{vmatrix}$'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '$$ = \begin{vmatrix}2&0&1&2&0\\0&-1&-1&-1&1\\0&0&1&0&3\\0&0&0&1&-7\\0&0&0&-1&4\end{vmatrix}
+    = \begin{vmatrix}2&0&1&2&0\\0&-1&-1&-1&1\\0&0&1&0&3\\0&0&0&1&-7\\0&0&0&0&-3\end{vmatrix}=6.$$
+
+
+    Alternatively, we can apply the Laplace expansion and arrive at the same solution:
+
+
+    $$\begin{vmatrix}2&0&1&2&0\\2&-1&0&1&1\\0&1&2&1&2\\-2&0&2&-1&2\\2&0&0&1&1\end{vmatrix}=
+    \begin{vmatrix}2&0&1&2&0\\0&-1&-1&-1&1\\0&1&2&1&2\\0&0&3&1&2\\0&0&-1&-1&1\end{vmatrix}$$
+
+
+    $$\stackrel{1\text{st col.}}{=}(-1)^{1+1}2\cdot\begin{vmatrix}-1&-1&-1&1\\1&2&1&2\\0&3&1&2\\0&-1&-1&1\end{vmatrix}.$$
+
+
+    If we now subtract the fourth row from the first row and multiply (−2) times the
+    third column to the fourth column we obtain
+
+
+    $$2\begin{vmatrix}-1&0&0&0\\1&2&1&0\\0&3&1&0\\0&-1&-1&3\end{vmatrix}\stackrel{1\text{st
+    row}}{=}-2\begin{vmatrix}2&1&0\\3&1&0\\-1&-1&3\end{vmatrix}\stackrel{3\text{rd
+    col.}}{=}(-2)\cdot3(-1)^{3+3}\cdot\begin{vmatrix}2&1\\3&1\end{vmatrix}=6.$$
+
+
+    # 4.3 Compute the eigenspaces of
+
+
+    +   a.
+
+
+    $$A := \begin{bmatrix}1&0\\1&1\end{bmatrix}$$
+
+
+    +   b.
+
+
+    $$B := \begin{bmatrix}-2&2\\2&1\end{bmatrix}$$
+
+
+    +   a. For
+
+
+    $$A = \begin{bmatrix}1&0\\1&1\end{bmatrix}$$
+
+
+    +   (i) Characteristic polynomial: $p(\lambda)=|A-\lambda I_2|=\begin{vmatrix}1-\lambda&0\\1&1-\lambda\end{vmatrix}=(1-\lambda)^2$.
+    Therefore $\lambda=1$ is the only root of $p$ and, therefore, the only eigenvalue
+    of $A$
+
+
+    +   (ii) To compute the eigenspace for the eigenvalue $\lambda=1$, we need to
+    compute the null space of $A-I$: $(A-1\cdot I)x=0 \iff \begin{bmatrix}0&0\\1&0\end{bmatrix}x=0
+    \Rightarrow E_1=\begin{bmatrix}0\\1\end{bmatrix}$'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'E₁ is the only eigenspace of A.
+
+
+    b. For B, the corresponding eigenspaces (for λ_i ∈ ℂ) are
+
+
+    $$E_i = \begin{bmatrix}1\\i\end{bmatrix},\quad E_{-i}=\begin{bmatrix}1\\-i\end{bmatrix}.$$
+
+
+    # 4.4 Compute all eigenspaces of
+
+
+    $$A = \begin{bmatrix}0 & -1 & 1 & 1\\-1 & 1 & -2 & 3\\2 & -1 & 0 & 0\\1 & -1 &
+    1 & 0\end{bmatrix}.$$
+
+
+    (i) Characteristic polynomial:
+
+
+    $$p(\lambda)=\begin{vmatrix}-\lambda & -1 & 1 & 1\\-1 & 1-\lambda & -2 & 3\\2
+    & -1 & -\lambda & 0\\1 & -1 & 1 & -\lambda\end{vmatrix}=\begin{vmatrix}-\lambda
+    & -1 & 1 & 1\\0 & -\lambda & -1 & 3-\lambda\\0 & 1 & -2-\lambda & 2\lambda\\1
+    & -1 & 1 & -\lambda\end{vmatrix}$$
+
+
+    $$=\begin{vmatrix}-\lambda & -1-\lambda & 0 & 1\\0 & -\lambda & -1-\lambda & 3-\lambda\\0
+    & 1 & -1-\lambda & 2\lambda\\1 & 0 & 0 & -\lambda\end{vmatrix}$$
+
+
+    $$=(-\lambda)\begin{vmatrix}-\lambda & -1-\lambda & 3-\lambda\\1 & -1-\lambda
+    & 2\lambda\\0 & 0 & -\lambda\end{vmatrix}-\begin{vmatrix}-1-\lambda & 0 & 1\\-\lambda
+    & -1-\lambda & 3-\lambda\\1 & -1-\lambda & 2\lambda\end{vmatrix}$$
+
+
+    $$=(-\lambda)^2\begin{vmatrix}-\lambda & -1-\lambda\\1 & -1-\lambda\end{vmatrix}-\begin{vmatrix}-1-\lambda
+    & 0 & 1\\-\lambda & -1-\lambda & 3-\lambda\\1 & -1-\lambda & 2\lambda\end{vmatrix}$$
+
+
+    $$=(1+\lambda)^2(\lambda^2-3\lambda+2)=(1+\lambda)^2(1-\lambda)(2-\lambda)$$
+
+
+    Therefore, the eigenvalues of A are λ₁ = -1, λ₂ = 1, λ₃ = 2.
+
+
+    (ii) The corresponding eigenspaces are the solutions of (A - λ_i I)x = 0, i =
+    1,2,3, and given by
+
+
+    $$E_{-1}=\text{span}\begin{bmatrix}0\\1\\1\\0\end{bmatrix},\quad E_{1}=\text{span}\begin{bmatrix}1\\1\\1\\1\end{bmatrix},\quad
+    E_{2}=\text{span}\begin{bmatrix}1\\0\\1\\1\end{bmatrix}.$$
+
+
+    # 4.5 Diagonalizability of a matrix is unrelated to its invertibility. Determine
+    for the following four matrices whether they are diagonalizable and/or invertible
+
+
+    $$\begin{bmatrix}1 & 0\\0 & 1\end{bmatrix},\quad \begin{bmatrix}1 & 0\\0 & 0\end{bmatrix},\quad
+    \begin{bmatrix}1 & 1\\0 & 1\end{bmatrix},\quad \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix}.$$
+
+
+    In the four matrices above, the first one is diagonalizable and invertible, the
+    second one is diagonalizable but is not invertible, the third one is invertible
+    but is not diagonalizable, and, finally, the fourth ione s neither invertible
+    nor is it diagonalizable.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '4.6 Compute the eigenspaces of the following transformation matrices. Are they
+    diagonalizable?
+
+    a. For
+
+
+    $\boldsymbol{A}=\begin{bmatrix}2&3&0\\1&4&3\\0&0&1\end{bmatrix}$
+
+
+    (i) Compute the eigenvalue as the roots of the characteristic polynomial
+
+
+    $p(\lambda)=\det(\boldsymbol{A}-\lambda\boldsymbol{I})=\begin{vmatrix}2-\lambda&3&0\\1&4-\lambda&3\\0&0&1-\lambda\end{vmatrix}=(1-\lambda)\begin{vmatrix}2-\lambda&3\\1&4-\lambda\end{vmatrix}$
+
+    $= (1-\lambda)((2-\lambda)(4-\lambda)-3)=(1-\lambda)(8-2\lambda-4\lambda+\lambda^2-3)$
+
+    $= (1-\lambda)(\lambda^2-6\lambda+5)=(1-\lambda)(\lambda-1)(\lambda-5)=-(1-\lambda)^2(\lambda-5).$
+
+
+    Therefore, we obtain the eigenvalues 1 and 5.
+
+
+    (ii) To compute the eigenspaces, we need to solve $(\boldsymbol{A}-\lambda_i\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0}$,
+    where $\lambda_1=1,\lambda_2=5:$
+
+
+    $E_1:\begin{bmatrix}1&3&0\\1&3&3\\0&0&0\end{bmatrix}\sim\begin{bmatrix}1&3&0\\0&0&1\\0&0&0\end{bmatrix}$
+
+
+    where we subtracted the first row from the second and, subsequently, divided the
+    second row by 3 to obtain the reduced row echelon form. From here, we see that
+
+
+    $E_1=\operatorname{span}\begin{bmatrix}3\\-1\\0\end{bmatrix}$
+
+
+    Now, we compute $E_5$ by solving $(\boldsymbol{A}-5\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0}$:
+
+
+    $\begin{bmatrix}-3&3&0\\1&-1&3\\0&0&-4\end{bmatrix}\xrightarrow{\cdot(-\tfrac13),\tfrac13R_1+\tfrac43R_3\atop\cdot(-\tfrac14),\text{swap
+    with }R_2}\begin{bmatrix}1&-1&0\\0&0&1\\0&0&0\end{bmatrix}$
+
+
+    Then, $E_5=\operatorname{span}\begin{bmatrix}1\\1\\0\end{bmatrix}$
+
+
+    (iii) This endomorphism cannot be diagonalized because $\dim(E_1)+\dim(E_5)\neq3$.
+
+
+    Alternative arguments:
+
+
+    +   - $\dim(E_1)$ does not correspond to the algebraic multiplicity of the eigenvalue
+    $\lambda=1$ in the characteristic polynomial
+
+    +   - $\operatorname{rk}(\boldsymbol{A}-\boldsymbol{I})\neq3-2$'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: 'b. For
+
+
+    $\boldsymbol{A}=\begin{bmatrix}1&1&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&0\end{bmatrix}$
+
+
+    (i) Compute the eigenvalues as the roots of the characteristic polynomial
+
+
+    $p(\lambda)=\det(\boldsymbol{A}-\lambda\boldsymbol{I})=(1-\lambda)\lambda^{3}$
+
+    $=\begin{vmatrix}1-\lambda&1&0&0\\0&-\lambda&0&0\\0&0&-\lambda&0\\0&0&0&-\lambda\end{vmatrix}=-(1-\lambda)\lambda^{3}$.
+
+
+    It follows that the eigenvalues are 0 and 1 with algebraic multiplicities 3 and
+    1, respectively.
+
+
+    (ii) We compute the eigenspaces $E_{0}$ and $E_{1}$, which requires us to determine
+    the null spaces $\boldsymbol{A}-\lambda_{i}\boldsymbol{I}$, where $\lambda_{i}\in\{0,1\}$.
+
+
+    (iii) We compute the eigenspaces $E_{0}$ and $E_{1}$, which requires us to determine
+    the null spaces $\boldsymbol{A}-\lambda_{i}\boldsymbol{I}$, where $\lambda_{i}\in\{0,1\}$.
+    For $E_{0}$, we compute the null space of $\boldsymbol{A}$ and obtain
+
+
+    $E_{0}=\operatorname{span}\left[\begin{bmatrix}1\\-1\\0\\0\end{bmatrix},\begin{bmatrix}0\\0\\1\\0\end{bmatrix},\begin{bmatrix}0\\0\\0\\1\end{bmatrix}\right]$
+
+
+    To determine $E_{1}$, we need to solve $(\boldsymbol{A}-\boldsymbol{I})\boldsymbol{x}=\boldsymbol{0}$
+
+
+    $\begin{bmatrix}0&1&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&-1\end{bmatrix}\xrightarrow{+R_{1}|\text{move
+    to }R_{4}\atop\cdot(-1)\atop\cdot(-1)}\begin{bmatrix}0&1&0&0\\0&0&1&0\\0&0&0&1\\0&0&0&0\end{bmatrix}$
+
+
+    From here, we see that $E_{1}=\operatorname{span}\left[\begin{bmatrix}1\\0\\0\\0\end{bmatrix}\right]$.
+
+
+    (iv) Since $\dim(E_{0})+\dim(E_{1})=4=\dim(\mathbb{R}^{4})$, it follows that a
+    diagonal form exists.
+
+
+    # 4.7 Are the following matrices diagonalizable? If yes, determine their diagonal
+    form and a basis with respect to which the transformation matrices are diagonal.
+    If no, give reasons why they are not diagonalizable.
+
+
+    a.
+
+
+    $\boldsymbol{A}=\begin{bmatrix}0&1\\-8&4\end{bmatrix}$'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'We determine the characteristic polynomial as
+
+
+    $$p(\lambda)=\det(\boldsymbol{A}-\lambda\boldsymbol{I})=-\lambda(4-\lambda)+8=\lambda^2-4\lambda+8.$$
+
+
+    The characteristic polynomial does not decompose into linear factors over $\mathbb{R}$
+    because the roots of $p(\lambda)$ are complex and given by $\lambda_{1,2}=2\pm\sqrt{-4}$.
+    Since the characteristic polynomial does not decompose into linear factors, $\boldsymbol{A}$
+    cannot be diagonalized (over $\mathbb{R}$).
+
+
+    b.
+
+
+    $$\boldsymbol{A}=\begin{bmatrix}1&1&1\\1&1&1\\1&1&1\end{bmatrix}$$
+
+
+    (i) The characteristic polynomial is $p(\lambda)=\det(\boldsymbol{A}-\lambda\boldsymbol{I})$.
+
+
+    $$p(\lambda)=\begin{vmatrix}1-\lambda&1&1\\1&1-\lambda&1\\1&1&1-\lambda\end{vmatrix}\xrightarrow{\text{subtr.
+    }R_1\text{ from }R_2,R_3}\begin{vmatrix}1-\lambda&1&1\\\lambda&-\lambda&0\\\lambda&0&-\lambda\end{vmatrix}\xrightarrow{\text{develop
+    last row}}\lambda\begin{vmatrix}1&1\\-\lambda&0\end{vmatrix}-\lambda\begin{vmatrix}1-\lambda&1\\\lambda&-\lambda\end{vmatrix}=\lambda^2+\lambda(\lambda(1-\lambda)+\lambda)=\lambda(-\lambda^2+3\lambda)=\lambda^2(\lambda-3).$$
+
+
+    Therefore, the roots of $p(\lambda)$ are 0 and 3 with algebraic multiplicities
+    2 and 1, respectively.
+
+
+    (ii) To determine whether $\boldsymbol{A}$ is diagonalizable, we need to show
+    that the dimension of $E_0$ is 2 (because the dimension of $E_3$ is necessarily
+    1: an eigenspace has at least dimension 1 by definition, and its dimension cannot
+    exceed the algebraic multiplicity of its associated eigenvalue).
+
+
+    Let us study $E_0=\ker(\boldsymbol{A}-0\boldsymbol{I})$:
+
+
+    $$\boldsymbol{A}-0\boldsymbol{I}=\begin{bmatrix}1&1&1\\1&1&1\\1&1&1\end{bmatrix}\sim\begin{bmatrix}1&1&1\\0&0&0\\0&0&0\end{bmatrix}.$$
+
+
+    Here, $\dim E_0=2$, which is identical to the algebraic multiplicity of the eigenvalue
+    0 in the characteristic polynomial. Thus $A$ is diagonalizable. Moreover, we can
+    read from the reduced row echelon form that
+
+
+    $$E_0=\operatorname{span}\left[\begin{bmatrix}1\\-1\\0\end{bmatrix},\begin{bmatrix}1\\0\\-1\end{bmatrix}\right].$$
+
+
+    (iii) For $E_3$, we obtain
+
+
+    $$\boldsymbol{A}-3\boldsymbol{I}=\begin{bmatrix}-2&1&1\\1&-2&1\\1&1&-2\end{bmatrix}\sim\begin{bmatrix}1&0&-1\\0&1&-1\\0&0&0\end{bmatrix},$$
+
+
+    which has rank 2, and, therefore (using the rank-nullity theorem),'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'E3 has dimension 1 (it could not be anything else anyway, as justified above)
+    and
+
+
+    $E_1 = \text{span}\begin{bmatrix}-1\\-1\\-1\end{bmatrix}.$
+
+
+    (iv) Therefore, we can find a new basis $P$ as the concatenation of the spanning
+    vectors of the eigenspaces. If we identify the matrix
+
+
+    $\boldsymbol{P} = \begin{bmatrix}-1 & 1 & 1\\-1 & -1 & 0\\-1 & 0 & -1\end{bmatrix},$
+
+
+    whose columns are composed of the basis vectors of basis $P$, then our endomorphism
+    will have the diagonal form: $\boldsymbol{D} = \text{diag}[3, 0, 0]$ with respect
+    to this new basis. As a reminder, $\text{diag}[3, 0, 0]$ refers to the $3 \times
+    3$ diagonal matrix with $3, 0, 0$ as values on the diagonal. Note that the diagonal
+    form is not unique and depends on the order of the eigenvectors in the new basis.
+    For example, we can define another matrix $\boldsymbol{Q}$ composed of the same
+    vectors as $\boldsymbol{P}$ but in a different order:
+
+
+    $\boldsymbol{Q} = \begin{bmatrix}1 & -1 & 1\\-1 & -1 & 0\\0 & -1 & -1\end{bmatrix}.$
+
+
+    If we use this matrix, our endomorphism would have another diagonal form: $\boldsymbol{D}''
+    = \text{diag}[0, 3, 0]$. Sceptical students can check that $\boldsymbol{Q}^{-1}
+    \boldsymbol{A} \boldsymbol{Q} = \boldsymbol{D}''$ and $\boldsymbol{P}^{-1} \boldsymbol{A}
+    \boldsymbol{P} = \boldsymbol{D}$.
+
+
+    c.
+
+
+    $\boldsymbol{A} = \begin{bmatrix}5 & 4 & 2 & 1\\0 & 1 & -1 & -1\\-1 & -1 & 3 &
+    0\\1 & 1 & -1 & 2\end{bmatrix}$
+
+
+    $p(\lambda) = (\lambda - 1)(\lambda - 2)(\lambda - 4)^2$
+
+
+    $E_1 = \text{span}\begin{bmatrix}-1\\1\\0\\0\end{bmatrix},\quad E_2 = \text{span}\begin{bmatrix}1\\-1\\0\\1\end{bmatrix},\quad
+    E_4 = \text{span}\begin{bmatrix}1\\0\\-1\\1\end{bmatrix}.$
+
+
+    Here, we see that $\dim(E_4) = 1 \neq 2$ (which is the algebraic multiplicity
+    of the eigenvalue 4). Therefore, $\boldsymbol{A}$ cannot be diagonalized.
+
+
+    d.
+
+
+    $\boldsymbol{A} = \begin{bmatrix}5 & -6 & -6\\-1 & 4 & 2\\3 & -6 & -4\end{bmatrix}$'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '(i) We compute the characteristic polynomial $p(\lambda)=\det(A-\lambda I)$
+    as
+
+
+    $p(\lambda)=\begin{vmatrix}5-\lambda & -6 & -6\\ -1 & 4-\lambda & 2\\ 3 & -6 &
+    -4-\lambda\end{vmatrix}$
+
+    $= (5-\lambda)(4-\lambda)(-4-\lambda)-36-36+18(4-\lambda)+12(5-\lambda)-6(-4-\lambda)$
+
+    $= -\lambda^3+5\lambda^2-8\lambda+4=(1-\lambda)(2-\lambda)^2,$
+
+
+    where we used Sarrus rule. The characteristic polynomial decomposes into linear
+    factors, and the eigenvalues are $\lambda_1=1,\lambda_2=2$ with (algebraic) multiplicity
+    1 and 2, respectively.
+
+
+    (ii) If the dimension of the eigenspaces is identical to multiplicity of the corresponding
+    eigenvalues, the matrix is diagonalizable. The eigenspace dimension is the dimension
+    of $\ker(A-\lambda_i I)$, where $\lambda_i$ are the eigenvalues (here: 1,2). For
+    a simple check whether the matrices are diagonalizable, it is sufficient to compute
+    the rank $r_i$ of $A-\lambda_i I$ since the eigenspace dimension is $n-r_i$ (rank-nullity
+    theorem).
+
+
+    Let us study $E_2$ and apply Gaussian elimination on $A-2I$:
+
+
+    $\begin{bmatrix}3 & -6 & -6\\ -1 & 2 & 2\\ 3 & -6 & -6\end{bmatrix}.$ (4.1)
+
+
+    (iii) We can immediately see that the rank of this matrix is 1 since the first
+    and third row are three times the second. Therefore, the eigenspace dimension
+    is $\dim(E_2)=3-1=2$, which corresponds to the algebraic multiplicity of the eigenvalue
+    $\lambda=2$ in $p(\lambda)$. Moreover, we know that the dimension of $E_1$ is
+    1 since it cannot exceed its algebraic multiplicity, and the dimension of an eigenspace
+    is at least 1. Hence, $A$ is diagonalizable.
+
+
+    (iv) The diagonal matrix is easy to determine since it just contains the eigenvalues
+    (with corresponding multiplicities) on its diagonal:
+
+
+    $D=\begin{bmatrix}1 & 0 & 0\\ 0 & 2 & 0\\ 0 & 0 & 2\end{bmatrix}.$
+
+
+    (v) We need to determine a basis with respect to which the transformation matrix
+    is diagonal. We know that the basis that consists of the eigenvectors has exactly
+    this property. Therefore, we need to determine the eigenvectors for all eigenvalues.
+    Remember that $x$ is an eigenvector for an eigenvalue $\lambda$ if they satisfy
+    $Ax=\lambda x \iff (A-\lambda I)x=0$. Therefore, we need to find the basis vectors
+    of the eigenspaces $E_1,E_2$.
+
+
+    For $E_1=\ker(A-I)$ we obtain:
+
+
+    $\begin{bmatrix}4 & -6 & -6\\ -1 & 3 & 2\\ 3 & -6 & -5\end{bmatrix}+4R_2\quad\sim\quad\begin{bmatrix}0
+    & 6 & 2\\ -1 & 3 & 2\\ 0 & 3 & 1\end{bmatrix}\cdot(1/6)$
+
+    $\cdot(-1)\text{swap with }R_1\quad -\tfrac12 R_1$'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '~→ $\begin{bmatrix}1 & -3 & -2\\0 & 1 & \frac13\\0 & 0 & 0\end{bmatrix}$ +3R₂
+    ~→ $\begin{bmatrix}1 & 0 & -1\\0 & 1 & \frac13\\0 & 0 & 0\end{bmatrix}$
+
+
+    The rank of this matrix is 2. Since 3 − 2 = 1 it follows that dim(E₁) = 1, which
+    corresponds to the algebraic multiplicity of the eigenvalue λ = 1 in the characteristic
+    polynomial.
+
+
+    (vi) From the reduced row echelon form we see that $E_1 = \text{span}\left[\begin{matrix}3\\-1\\3\end{matrix}\right]$,
+    and our first eigenvector is $[3, -1, 3]^{\top}$.
+
+
+    (vii) We proceed with determining a basis of $E_2$, which will give us the other
+    two basis vectors that we need (remember that dim$(E_2)=2$). From (4.1), we (almost)
+    immediately obtain the reduced row echelon form $\begin{bmatrix}1 & -2 & -2\\0
+    & 0 & 0\\0 & 0 & 0\end{bmatrix}$, and the corresponding eigenspace $E_2 = \text{span}\left[\begin{matrix}2\\1\\0\end{matrix},
+    \begin{matrix}2\\0\\1\end{matrix}\right]$.
+
+
+    (viii) Overall, an ordered basis with respect to which $A$ has diagonal form $D$
+    consists of all eigenvectors is $B = \left( \begin{bmatrix}3\\-1\\3\end{bmatrix},
+    \begin{bmatrix}2\\1\\0\end{bmatrix}, \begin{bmatrix}2\\0\\1\end{bmatrix} \right)$.
+
+
+    # 4.8 Find the SVD of the matrix $A = \begin{bmatrix}3 & 2 & 2\\2 & 3 & -2\end{bmatrix}$.
+    $A = \underbrace{\begin{bmatrix}\frac{1}{\sqrt2} & -\frac{1}{\sqrt2}\\\frac{1}{\sqrt2}
+    & \frac{1}{\sqrt2}\end{bmatrix}}_{=U} \underbrace{\begin{bmatrix}5 & 0 & 0\\0
+    & 3 & 0\end{bmatrix}}_{=\Sigma} \underbrace{\begin{bmatrix}\frac{1}{\sqrt2} &
+    -\frac{3}{\sqrt2} & -\frac{2}{3}\\\frac{1}{\sqrt2} & \frac{3}{\sqrt2} & \frac{2}{3}\\0
+    & -\frac{2\sqrt2}{3} & \frac{1}{3}\end{bmatrix}}_{=V}$
+
+
+    # 4.9 Find the singular value decomposition of $A = \begin{bmatrix}2 & 2\\-1 &
+    1\end{bmatrix}$.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '(i) Compute the symmetrized matrix \(A^{\mathsf T}A\). We first compute the
+    symmetrized matrix
+
+
+    \[
+
+    A^{\mathsf T}A=
+
+    \begin{bmatrix}2&-1\\2&1\end{bmatrix}
+
+    \begin{bmatrix}2&2\\-1&1\end{bmatrix}
+
+    =
+
+    \begin{bmatrix}5&3\\3&5\end{bmatrix}.
+
+    \tag{4.2}
+
+    \]
+
+
+    (ii) Find the right-singular vectors and singular values from \(A^{\mathsf T}A\).
+    The characteristic polynomial of \(A^{\mathsf T}A\) is
+
+
+    \[
+
+    (5-\lambda)^2-9=\lambda^2-10\lambda+16=0.
+
+    \tag{4.3}
+
+    \]
+
+
+    This yields eigenvalues, sorted from largest absolute first, \(\lambda_1=8\) and
+    \(\lambda_2=2\). The associated normalized eigenvectors are respectively
+
+
+    \[
+
+    v_1=\begin{bmatrix}\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}\end{bmatrix}
+
+    \quad\text{and}\quad
+
+    v_2=\begin{bmatrix}\frac{1}{\sqrt{2}}\\-\frac{1}{\sqrt{2}}\end{bmatrix}.
+
+    \tag{4.4}
+
+    \]
+
+
+    We have thus obtained the right-singular orthogonal matrix
+
+
+    \[
+
+    V=[v_1,v_2]=
+
+    \begin{bmatrix}
+
+    \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\
+
+    \frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}
+
+    \end{bmatrix}.
+
+    \tag{4.5}
+
+    \]
+
+
+    (iii) Determine the singular values. We obtain the two singular values from the
+    square root of the eigenvalues \(\sigma_1=\sqrt{\lambda_1}=\sqrt{8}=2\sqrt{2}\)
+    and \(\sigma_2=\sqrt{\lambda_2}=\sqrt{2}\). We construct the singular value diagonal
+    matrix as
+
+
+    \[
+
+    \Sigma=
+
+    \begin{bmatrix}\sigma_1&0\\0&\sigma_2\end{bmatrix}
+
+    =
+
+    \begin{bmatrix}2\sqrt{2}&0\\0&\sqrt{2}\end{bmatrix}.
+
+    \tag{4.6}
+
+    \]
+
+
+    (iv) Find the left-singular eigenvectors. We have to map the two eigenvectors
+    \(v_1,v_2\) using \(A\). This yields two self-consistent equations that enable
+    us to find orthogonal eigenvectors \(u_1,u_2\):
+
+
+    \[
+
+    Av_1=(\sigma_1u_1v_1^{\mathsf T})v_1=\sigma_1u_1(v_1^{\mathsf T}v_1)=\sigma_1u_1=
+
+    \begin{bmatrix}2\sqrt{2}\\0\end{bmatrix}.
+
+    \]
+
+
+    \[
+
+    Av_2=(\sigma_2u_2v_2^{\mathsf T})v_2=\sigma_2u_2(v_2^{\mathsf T}v_2)=\sigma_2u_2=
+
+    \begin{bmatrix}0\\\sqrt{2}\end{bmatrix}.
+
+    \]
+
+
+    We normalize the left-singular vectors by dividing them by their respective singular
+    values and obtain \(u_1=\begin{bmatrix}1\\0\end{bmatrix}\) and \(u_2=\begin{bmatrix}0\\1\end{bmatrix}\),
+    which yields
+
+
+    \[
+
+    U=[u_1,u_2]=
+
+    \begin{bmatrix}1&0\\0&1\end{bmatrix}.
+
+    \tag{4.7}
+
+    \]
+
+
+    (v) Assemble the left-/right-singular vectors and singular values. The SVD of
+    \(A\) is
+
+
+    \[
+
+    A=U\Sigma V^{\mathsf T}=
+
+    \begin{bmatrix}1&0\\0&1\end{bmatrix}
+
+    \begin{bmatrix}\sqrt{8}&0\\0&\sqrt{2}\end{bmatrix}
+
+    \begin{bmatrix}
+
+    \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\
+
+    \frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}
+
+    \end{bmatrix}.
+
+    \]'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# 4.10 Find the rank-1 approximation of
+
+
+    **A** = $\begin{bmatrix}3 & 2 & 2 \\ 2 & 3 & -2\end{bmatrix}$
+
+
+    To find the rank-1 approximation we apply the SVD to **A** (as in Exercise 4.7)
+    to obtain
+
+
+    **U** = $\begin{bmatrix}\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+    & \frac{1}{\sqrt{2}}\end{bmatrix}$
+
+
+    **V** = $\begin{bmatrix}\frac{1}{\sqrt{2}} & -\frac{1}{3\sqrt{2}} & -\frac{2}{3}
+    \\ \frac{1}{\sqrt{2}} & \frac{1}{3\sqrt{2}} & \frac{2}{3} \\ 0 & -\frac{2\sqrt{2}}{3}
+    & \frac{1}{3}\end{bmatrix}$.
+
+
+    We apply the construction rule for rank-1 matrices
+
+
+    **A**$_i$ = **u**$_i$**v**$_i^\top$.
+
+
+    We use the largest singular value ($\sigma_1$ = 5, i.e., $i$ = 1 and the first
+    column vectors of the **U** and **V** matrices, respectively):
+
+
+    **A**$_1$ = **u**$_1$**v**$_1^\top$ = $\begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix}$
+    $\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0\end{bmatrix}$ = $\frac{1}{2}$
+    $\begin{bmatrix}1 & 1 & 0 \\ 1 & 1 & 0\end{bmatrix}$.
+
+
+    # 4.11 Show that for any **A** $\in \mathbb{R}^{m\times n}$ the matrices **A**$^\top$
+    **A** and **A** **A**$^\top$ possess the same nonzero eigenvalues.
+
+
+    Let us assume that $\lambda$ is a nonzero eigenvalue of **A** **A**$^\top$ and
+    $x$ is an eigenvector belonging to $\lambda$. Thus, the eigenvalue equation
+
+
+    (**A** **A**$^\top$) $x$ = $\lambda x$
+
+
+    can be manipulated by left multiplying by **A**$^\top$ and pulling on the right-hand
+    side the scalar factor $\lambda$ forward. This yields
+
+
+    **A**$^\top$ (**A** **A**$^\top$) $x$ = **A**$^\top$ ($\lambda x$) = $\lambda$
+    (**A**$^\top$ $x$)'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'and we can use matrix multiplication associativity to reorder the left-hand
+    side factors
+
+
+    $(A^{\top} A)(A^{\top} x) = \lambda (A^{\top} x).$
+
+
+    This is the eigenvalue equation for $A^{\top} A$. Therefore, $\lambda$ is the
+    same eigenvalue for $AA^{\top}$ and $A^{\top} A$.
+
+
+    # 4.12 Show that for $x \neq 0$ Theorem 4.24 holds, i.e., show that
+
+
+    $\displaystyle \max_{x} \frac{\|A x\|_{2}}{\|x\|_{2}} = \sigma_{1},$
+
+
+    where $\sigma_{1}$ is the largest singular value of $A \in \mathbb{R}^{m \times
+    n}$.
+
+
+    (i) We compute the eigendecomposition of the symmetric matrix
+
+
+    $A^{\top} A = P D P^{\top}$
+
+
+    for diagonal $D$ and orthogonal $P$. Since the columns of $P$ are an ONB of $\mathbb{R}^{n}$,
+    we can write every $y = P x$ as a linear combination of the eigenvectors $p_{i}$
+    so that
+
+
+    $y = P x = \sum_{i=1}^{n} x_{i} p_{i}, \quad x \in \mathbb{R}. \tag{4.8}$
+
+
+    Moreover, since the orthogonal matrix $P$ preserves lengths (see Section 3.4),
+    we obtain
+
+
+    $\|y\|_{2}^{2} = \|P x\|_{2}^{2} = \|x\|_{2}^{2} = \sum_{i=1}^{n} x_{i}^{2}. \tag{4.9}$
+
+
+    (ii) Then, $\|A x\|_{2}^{2} = x^{\top} (P D P^{\top}) x = y^{\top} D y = \left\langle
+    \sum_{i=1}^{n} \sqrt{\lambda_{i}} x_{i} p_{i}, \sum_{i=1}^{n} \sqrt{\lambda_{i}}
+    x_{i} p_{i} \right\rangle,$
+
+
+    where we used $\langle \cdot, \cdot \rangle$ to denote the dot product.
+
+
+    (iii) The bilinearity of the dot product gives us $\|A x\|_{2}^{2} = \sum_{i=1}^{n}
+    \lambda_{i} \langle x_{i} p_{i}, x_{i} p_{i} \rangle = \sum_{i=1}^{n} \lambda_{i}
+    x_{i}^{2}$ where we exploited that the $p_{i}$ are an ONB and $p_{i}^{\top} p_{i}
+    = 1.$
+
+
+    (iv) With (4.8) we obtain $\|A x\|_{2}^{2} \leqslant \left( \max_{1 \leqslant
+    j \leqslant n} \lambda_{j} \right) \sum_{i=1}^{n} x_{i}^{2} \stackrel{(4.9)}{=}
+    \max_{1 \leqslant j \leqslant n} \lambda_{j} \|x\|_{2}^{2}$ so that $\frac{\|A
+    x\|_{2}^{2}}{\|x\|_{2}^{2}} \leqslant \max_{1 \leqslant j \leqslant n} \lambda_{j},$
+    where $\lambda_{j}$ are the eigenvalues of $A^{\top} A.$'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '(v) Assuming the eigenvalues of $\mathbf{A}^\top \mathbf{A}$ are sorted in
+    descending order, we get
+
+
+    $$\frac{\|\mathbf{A} \mathbf{x}\|_2}{\|\mathbf{x}\|_2} \le \sqrt{\lambda_1} =
+    \sigma_1,$$
+
+
+    where $\sigma_1$ is the maximum singular value of $\mathbf{A}$.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Vector Calculus
+
+
+    # Exercises
+
+
+    5.1 Compute the derivative $f''(x)$ for
+
+
+    $$f(x) = \log(x^4) \sin(x^3).$$
+
+
+    $f''(x) = \frac{4}{x}\sin(x^3) + 12x^2 \log(x) \cos(x^3)$
+
+
+    5.2 Compute the derivative $f''(x)$ of the logistic sigmoid
+
+
+    $$f(x) = \frac{1}{1 + \exp(-x)}.$$
+
+
+    $f''(x) = \frac{\exp(x)}{(1 + \exp(x))^2}$
+
+
+    5.3 Compute the derivative $f''(x)$ of the function
+
+
+    $$f(x) = \exp\left(-\frac{1}{2\sigma^2}(x - \mu)^2\right),$$
+
+
+    where $\mu$, $\sigma \in \mathbb{R}$ are constants.
+
+
+    $f''(x) = -\frac{1}{\sigma^2} f(x) (x - \mu)$
+
+
+    5.4 Compute the Taylor polynomials $T_n$, $n = 0, \dots, 5$ of $f(x) = \sin(x)
+    + \cos(x)$ at $x_0 = 0.$
+
+
+    +   - $T_0(x) = 1$
+
+    +   - $T_1(x) = T_0(x) + x$
+
+    +   - $T_2(x) = T_1(x) - \frac{x^2}{2}$
+
+    +   - $T_3(x) = T_2(x) - \frac{x^3}{6}$
+
+    +   - $T_4(x) = T_3(x) + \frac{x^4}{24}$
+
+    +   - $T_5(x) = T_4(x) + \frac{x^5}{120}$'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# 5.5 Consider the following functions:
+
+
+    $f_1(\mathbf{x}) = \sin(x_1)\cos(x_2),\quad \mathbf{x}\in\mathbb{R}^2$
+
+    $f_2(\mathbf{x},\mathbf{y}) = \mathbf{x}^\top\mathbf{y},\quad \mathbf{x},\mathbf{y}\in\mathbb{R}^n$
+
+    $f_3(\mathbf{x}) = \mathbf{x}\mathbf{x}^\top,\quad \mathbf{x}\in\mathbb{R}^n$
+
+
+    a. What are the dimensions of $\frac{\partial f_i}{\partial \mathbf{x}}$ ?
+
+    b. Compute the Jacobians.
+
+
+    +   - $f_1$
+
+    +     $\frac{\partial f_1}{\partial x_1}=\cos(x_1)\cos(x_2)$
+
+    +     $\frac{\partial f_1}{\partial x_2}=-\sin(x_1)\sin(x_2)$
+
+    +     $\implies J = \left[\frac{\partial f_1}{\partial x_1}\,\frac{\partial f_1}{\partial
+    x_2}\right]=\left[\cos(x_1)\cos(x_2)\ \ -\sin(x_1)\sin(x_2)\right]\in\mathbb{R}^{1\times2}$
+
+    +   - $f_2$
+
+    +     $\mathbf{x}^\top\mathbf{y}=\sum_i x_i y_i$
+
+    +     $\frac{\partial f_2}{\partial \mathbf{x}}=\left[\frac{\partial f_2}{\partial
+    x_1}\ \dots\ \frac{\partial f_2}{\partial x_n}\right]=\left[y_1\ \dots\ y_n\right]=\mathbf{y}^\top\in\mathbb{R}^n$
+
+    +     $\frac{\partial f_2}{\partial \mathbf{y}}=\left[\frac{\partial f_2}{\partial
+    y_1}\ \dots\ \frac{\partial f_2}{\partial y_n}\right]=\left[x_1\ \dots\ x_n\right]=\mathbf{x}^\top\in\mathbb{R}^n$
+
+    +     $\implies J = \left[\frac{\partial f_2}{\partial \mathbf{x}}\,\frac{\partial
+    f_2}{\partial \mathbf{y}}\right]=\left[\mathbf{y}^\top\ \mathbf{x}^\top\right]\in\mathbb{R}^{1\times2n}$
+
+    +   - $f_3:\mathbb{R}^n\to\mathbb{R}^{n\times n}$
+
+    +     $\mathbf{x}\mathbf{x}^\top = \begin{bmatrix}x_1\mathbf{x}^\top\\x_2\mathbf{x}^\top\\\vdots\\x_n\mathbf{x}^\top\end{bmatrix}=\left[\mathbf{x}x_1\
+    \mathbf{x}x_2\ \dots\ \mathbf{x}x_n\right]\in\mathbb{R}^{n\times n}$
+
+    +     $\implies \frac{\partial f_3}{\partial x_1}= \underbrace{\begin{bmatrix}\mathbf{x}^\top\\\mathbf{0}^\top\\\vdots\\\mathbf{0}^\top\end{bmatrix}}_{\in\mathbb{R}^{n\times
+    n}}+\underbrace{\left[\mathbf{x}\ \mathbf{0}_n\ \dots\ \mathbf{0}_n\right]}_{\in\mathbb{R}^{n\times
+    n}}\in\mathbb{R}^{n\times n}$
+
+    +     $\implies \frac{\partial f_3}{\partial x_i}= \underbrace{\begin{bmatrix}\mathbf{0}_{(i-1)\times
+    n}\\\mathbf{x}^\top\\\mathbf{0}_{(n-i+1)\times n}\end{bmatrix}}_{\in\mathbb{R}^{n\times
+    n}}+\underbrace{\left[\mathbf{0}_{n\times(i-1)}\ \mathbf{x}\ \mathbf{0}_{n\times(n-i+1)}\right]}_{\in\mathbb{R}^{n\times
+    n}}\in\mathbb{R}^{n\times n}$
+
+
+    To get the Jacobian, we need to concatenate all partial derivatives $\frac{\partial
+    f_3}{\partial x_i}$ and obtain
+
+    $J = \left[\frac{\partial f_3}{\partial x_1}\ \dots\ \frac{\partial f_3}{\partial
+    x_n}\right]\in\mathbb{R}^{(n\times n)\times n}$'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "5.6 Differentiate $f$ with respect to $t$ and $g$ with respect to $X$, where\n\
+    \n$$f(t)=\\sin(\\log(t^{\\mathsf T}t)),\\qquad t\\in\\mathbb{R}^D$$\n\n$$g(X)=\\\
+    operatorname{tr}(AXB),\\qquad A\\in\\mathbb{R}^{D\\times E},\\ X\\in\\mathbb{R}^{E\\\
+    times F},\\ B\\in\\mathbb{R}^{F\\times D},$$\n\nwhere $\\operatorname{tr}(\\cdot)$\
+    \ denotes the trace.\n\n$$\\frac{\\partial f}{\\partial t}=\\cos(\\log(t^{\\mathsf\
+    \ T}t))\\cdot\\frac{1}{t^{\\mathsf T}t}\\cdot 2t^{\\mathsf T}$$\n\nThe trace for\
+    \ $T\\in\\mathbb{R}^{D\\times D}$ is defined as\n\n$$\\operatorname{tr}(T)=\\\
+    sum_{i=1}^{D}T_{ii}$$\n\nA matrix product $ST$ can be written as\n\n$$(ST)_{pq}=\\\
+    sum_i S_{pi}T_{iq}$$\n\nThe product $AXB$ contains the elements\n\n$$(AXB)_{pq}=\\\
+    sum_{i=1}^{E}\\sum_{j=1}^{F}A_{pi}X_{ij}B_{jq}$$\n\nWhen we compute the trace,\
+    \ we sum up the diagonal elements of the matrix. Therefore we obtain,\n\n$$\\\
+    operatorname{tr}(AXB)=\\sum_{k=1}^{D}(AXB)_{kk}=\\sum_{k=1}^{D}\\left(\\sum_{i=1}^{E}\\\
+    sum_{j=1}^{F}A_{ki}X_{ij}B_{jk}\\right)$$\n\n$$\\frac{\\partial}{\\partial X_{ij}}\\\
+    operatorname{tr}(AXB)=\\sum_k A_{ki}B_{jk}=(BA)_{ji}$$\n\nWe know that the size\
+    \ of the gradient needs to be of the same size as $X$ (i.e., $E\\times F$). Therefore,\
+    \ we have to transpose the result above, such that we finally obtain\n\n$$\\frac{\\\
+    partial}{\\partial X}\\operatorname{tr}(AXB)=\\underbrace{A^{\\mathsf T}}_{E\\\
+    times D}\\underbrace{B^{\\mathsf T}}_{D\\times F}$$\n\n5.7 Compute the derivatives\
+    \ $df/dx$ of the following functions by using the chain rule. Provide the dimensions\
+    \ of every single partial derivative. Describe your steps in detail.\n\n+   a.\n\
+    +   \n+   $$f(z)=\\log(1+z),\\qquad z=x^{\\mathsf T}x,\\qquad x\\in\\mathbb{R}^{D}$$\n\
+    \n+   b.\n+   \n+   $$f(z)=\\sin(z),\\qquad z=Ax+b,\\qquad A\\in\\mathbb{R}^{E\\\
+    times D},\\ x\\in\\mathbb{R}^{D},\\ b\\in\\mathbb{R}^{E}$$\n+   \n+   where $\\\
+    sin(\\cdot)$ is applied to every element of $z$."
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'a.
+
+
+    \(\frac{\mathrm{d}f}{\mathrm{d}\boldsymbol{x}} = \underbrace{\frac{\partial f}{\partial
+    z}}_{\in \mathbb{R} \atop \in \mathbb{R}^{1\times D}} \underbrace{\frac{\partial
+    z}{\partial \boldsymbol{x}}}_{\in \mathbb{R}^{1\times D}} \in \mathbb{R}^{1\times
+    D}\)
+
+
+    \(\frac{\partial f}{\partial z} = \frac{1}{1+z} = \frac{1}{1+\boldsymbol{x}^\top
+    \boldsymbol{x}}\)
+
+
+    \(\frac{\partial z}{\partial \boldsymbol{x}} = 2\boldsymbol{x}^\top\)
+
+
+    \(\implies \frac{\mathrm{d}f}{\mathrm{d}\boldsymbol{x}} = \frac{2\boldsymbol{x}^\top}{1+\boldsymbol{x}^\top
+    \boldsymbol{x}}\)
+
+
+    b.
+
+
+    \(\frac{\mathrm{d}f}{\mathrm{d}\boldsymbol{x}} = \underbrace{\frac{\partial f}{\partial
+    z}}_{\in \mathbb{R}^{E\times E}} \underbrace{\frac{\partial z}{\partial \boldsymbol{x}}}_{\in
+    \mathbb{R}^{E\times D}} \in \mathbb{R}^{E\times D}\)
+
+
+    \(\sin(\boldsymbol{z}) = \begin{bmatrix} \sin z_1 \\ \vdots \\ \sin z_E \end{bmatrix}\)
+
+
+    \(\frac{\partial \sin \boldsymbol{z}}{\partial z_i} = \begin{bmatrix} 0 \\ \vdots
+    \\ 0 \\ \cos(z_i) \\ 0 \\ \vdots \\ 0 \end{bmatrix} \in \mathbb{R}^E\)
+
+
+    \(\implies \frac{\partial f}{\partial \boldsymbol{z}} = \operatorname{diag}(\cos(\boldsymbol{z}))
+    \in \mathbb{R}^{E\times E}\)
+
+
+    \(\frac{\partial \boldsymbol{z}}{\partial \boldsymbol{x}} = \boldsymbol{A} \in
+    \mathbb{R}^{E\times D}:\)
+
+
+    \(c_i = \sum_{j=1}^{D} A_{ij}x_j \implies \frac{\partial c_i}{\partial x_j} =
+    A_{ij}, \quad i=1,\dots,E,\,j=1,\dots,D\)
+
+
+    Here, we defined $c_i$ to be the $i$th component of $\boldsymbol{A}\boldsymbol{x}$.
+    The offset $\boldsymbol{b}$ is constant and vanishes when taking the gradient
+    with respect to $\boldsymbol{x}$. Overall, we obtain
+
+
+    \(\frac{\mathrm{d}f}{\mathrm{d}\boldsymbol{x}} = \operatorname{diag}(\cos(\boldsymbol{A}\boldsymbol{x}+\boldsymbol{b}))\boldsymbol{A}\)
+
+
+    5.8 Compute the derivatives $\mathrm{d}f/\mathrm{d}\boldsymbol{x}$ of the following
+    functions. Describe your steps in detail.
+
+
+    a. Use the chain rule. Provide the dimensions of every single partial derivative.
+
+
+    \(f(z) = \exp\left(-\tfrac{1}{2}z\right)\)
+
+
+    \(z = g(\boldsymbol{y}) = \boldsymbol{y}^\top \boldsymbol{S}^{-1} \boldsymbol{y}\)
+
+
+    \(\boldsymbol{y} = h(\boldsymbol{x}) = \boldsymbol{x} - \boldsymbol{\mu}\)'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: 'where $\boldsymbol{x}, \boldsymbol{\mu} \in \mathbb{R}^D$, $\boldsymbol{S}
+    \in \mathbb{R}^{D \times D}$.
+
+
+    The desired derivative can be computed using the chain rule:
+
+
+    $\displaystyle \frac{\mathrm{d}f}{\mathrm{d}\boldsymbol{x}} = \underbrace{\frac{\partial
+    f}{\partial z}}_{1\times1} \underbrace{\frac{\partial g}{\partial \boldsymbol{y}}}_{1\times
+    D} \underbrace{\frac{\partial h}{\partial \boldsymbol{x}}}_{D\times D} \in \mathbb{R}^{1\times
+    D}$
+
+
+    Here
+
+
+    $\displaystyle \frac{\partial f}{\partial z} = -\tfrac12 \exp\left(-\tfrac12 z\right)$
+
+    $\displaystyle \frac{\partial g}{\partial \boldsymbol{y}} = 2 \boldsymbol{y}^\top
+    \boldsymbol{S}^{-1}$
+
+    $\displaystyle \frac{\partial h}{\partial \boldsymbol{x}} = \boldsymbol{I}_D$
+
+
+    so that
+
+
+    $\displaystyle \frac{\mathrm{d}f}{\mathrm{d}\boldsymbol{x}} = - \exp\left(-\tfrac12
+    (\boldsymbol{x}-\boldsymbol{\mu})^\top \boldsymbol{S}^{-1} (\boldsymbol{x}-\boldsymbol{\mu})\right)
+    (\boldsymbol{x}-\boldsymbol{\mu})^\top \boldsymbol{S}^{-1}$
+
+
+    b.
+
+
+    $\displaystyle f(\boldsymbol{x}) = \operatorname{tr}(\boldsymbol{x}\boldsymbol{x}^\top
+    + \sigma^2 \boldsymbol{I}), \quad \boldsymbol{x} \in \mathbb{R}^D$
+
+
+    Here $\operatorname{tr}(\boldsymbol{A})$ is the trace of $\boldsymbol{A}$, i.e.,
+    the sum of the diagonal elements $A_{ii}$.
+
+
+    Hint: Explicitly write out the outer product.
+
+
+    Let us have a look at the outer product. We define $\boldsymbol{X}=\boldsymbol{x}\boldsymbol{x}^\top$
+    with
+
+
+    $\displaystyle X_{ij}=x_i x_j$
+
+
+    The trace sums up all the diagonal elements, such that
+
+
+    $\displaystyle \frac{\partial}{\partial x_j}\operatorname{tr}(\boldsymbol{X}+\sigma^2\boldsymbol{I})
+    = \sum_{i=1}^{D}\frac{\partial X_{ii}+\sigma^2}{\partial x_j}=2x_j$
+
+
+    for $j=1,\dots,D$. Overall, we get
+
+
+    $\displaystyle \frac{\partial}{\partial \boldsymbol{x}}\operatorname{tr}(\boldsymbol{x}\boldsymbol{x}^\top+\sigma^2\boldsymbol{I})
+    = 2\boldsymbol{x}^\top \in \mathbb{R}^{1\times D}$
+
+
+    c. Use the chain rule. Provide the dimensions of every single partial derivative.
+    You do not need to compute the product of the partial derivatives explicitly.
+
+
+    $\displaystyle \boldsymbol{f}=\tanh(\boldsymbol{z}) \in \mathbb{R}^M$
+
+    $\displaystyle \boldsymbol{z}=\boldsymbol{A}\boldsymbol{x}+\boldsymbol{b}, \quad
+    \boldsymbol{x}\in\mathbb{R}^N, \boldsymbol{A}\in\mathbb{R}^{M\times N}, \boldsymbol{b}\in\mathbb{R}^M.$
+
+
+    Here, $\tanh$ is applied to every component of $\boldsymbol{z}$.
+
+
+    $\displaystyle \frac{\partial \boldsymbol{f}}{\partial \boldsymbol{z}} = \operatorname{diag}\left(1-\tanh^2(\boldsymbol{z})\right)
+    \in \mathbb{R}^{M\times M}$
+
+    $\displaystyle \frac{\partial \boldsymbol{z}}{\partial \boldsymbol{x}} = \frac{\partial
+    \boldsymbol{A}\boldsymbol{x}}{\partial \boldsymbol{x}} = \boldsymbol{A} \in \mathbb{R}^{M\times
+    N}$'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'We get the latter result by defining $y = A x$, such that
+
+
+    $y_i = \sum_j A_{ij} x_j \implies \frac{\partial y_i}{\partial x_k} = A_{ik} \implies
+    \frac{\partial y_i}{\partial x} = [A_{i1}, ..., A_{iN}] \in \mathbb{R}^{1 \times
+    N}$
+
+
+    $\implies \frac{\partial y}{\partial x} = A$
+
+
+    The overall derivative is an $M \times N$ matrix.
+
+
+    # 5.9 We define
+
+
+    $g(z, \nu) := \log p(x, z) - \log q(z, \nu)$
+
+    $z := t(\epsilon, \nu)$
+
+
+    for differentiable functions $p, q, t$. By using the chain rule, compute the gradient
+
+
+    $\frac{\mathrm{d}}{\mathrm{d}\nu} g(z, \nu)$.
+
+
+    $\frac{\mathrm{d}}{\mathrm{d}\nu} g(z, \nu) = \frac{\mathrm{d}}{\mathrm{d}\nu}
+    (\log p(x, z) - \log q(z, \nu)) = \frac{\mathrm{d}}{\mathrm{d}\nu} \log p(x, z)
+    - \frac{\mathrm{d}}{\mathrm{d}\nu} \log q(z, \nu)$
+
+    $= \frac{\partial}{\partial z} \log p(x, z) \frac{\partial t(\epsilon, \nu)}{\partial
+    \nu} - \frac{\partial}{\partial z} \log q(z, \nu) \frac{\partial t(\epsilon, \nu)}{\partial
+    \nu} - \frac{\partial}{\partial \nu} \log q(z, \nu)$
+
+    $= \left( \frac{\partial}{\partial z} \log p(x, z) - \frac{\partial}{\partial
+    z} \log q(z, \nu) \right) \frac{\partial t(\epsilon, \nu)}{\partial \nu} - \frac{\partial}{\partial
+    \nu} \log q(z, \nu)$
+
+    $= \left( \frac{1}{p(x, z)} \frac{\partial}{\partial z} p(x, z) - \frac{1}{q(z,
+    \nu)} \frac{\partial}{\partial z} q(z, \nu) \right) \frac{\partial t(\epsilon,
+    \nu)}{\partial \nu} - \frac{\partial}{\partial \nu} \log q(z, \nu)$'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# 6
+
+
+    # Probability and Distributions
+
+
+    # Exercises
+
+
+    6.1 Consider the following bivariate distribution $p(x, y)$ of two discrete random
+    variables $X$ and $Y$.
+
+
+    | Y \ X | $x_1$ | $x_2$ | $x_3$ | $x_4$ | $x_5$ |
+
+    |---|---|---|---|---|---|
+
+    | $y_1$ | 0.01 | 0.02 | 0.03 | 0.1 | 0.1 |
+
+    | $y_2$ | 0.05 | 0.1 | 0.05 | 0.07 | 0.2 |
+
+    | $y_3$ | 0.1 | 0.05 | 0.03 | 0.05 | 0.04 |
+
+
+    Compute:
+
+
+    +   - a. The marginal distributions $p(x)$ and $p(y)$.
+
+    +   - b. The conditional distributions $p(x|Y = y_1)$ and $p(y|X = x_3)$.
+
+
+    The marginal and conditional distributions are given by
+
+
+    $p(x) = [0.16, 0.17, 0.11, 0.22, 0.34]^T$
+
+
+    $p(y) = [0.26, 0.47, 0.27]^T$
+
+
+    $p(x|Y = y_1) = [0.01, 0.02, 0.03, 0.1, 0.1]^T$
+
+
+    $p(y|X = x_3) = [0.03, 0.05, 0.03]^T.$
+
+
+    6.2 Consider a mixture of two Gaussian distributions (illustrated in Figure 6.4),
+
+
+    $0.4\mathcal{N}\left(\begin{bmatrix}10\\2\end{bmatrix}, \begin{bmatrix}1 & 0\\0
+    & 1\end{bmatrix}\right) + 0.6\mathcal{N}\left(\begin{bmatrix}0\\0\end{bmatrix},
+    \begin{bmatrix}8.4 & 2.0\\2.0 & 1.7\end{bmatrix}\right).$
+
+
+    +   - a. Compute the marginal distributions for each dimension.
+
+    +   - b. Compute the mean, mode and median for each marginal distribution.
+
+    +   - c. Compute the mean and mode for the two-dimensional distribution.
+
+
+    Consider the mixture of two Gaussians,
+
+
+    $p\left(\begin{bmatrix}x_1\\x_2\end{bmatrix}\right) = 0.4\mathcal{N}\left(\begin{bmatrix}10\\2\end{bmatrix},
+    \begin{bmatrix}1 & 0\\0 & 1\end{bmatrix}\right) + 0.6\mathcal{N}\left(\begin{bmatrix}0\\0\end{bmatrix},
+    \begin{bmatrix}8.4 & 2.0\\2.0 & 1.7\end{bmatrix}\right).$'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# a. Compute the marginal distribution for each dimension.\n\np(x₁) = ∫ 0.4\
+    \ (\U0001D4A9([10],[1 0],[2],[0 1]) + 0.6 \U0001D4A9([0],[8.4 2.0],[0],[2.0 1.7]))\
+    \ dx₂  (6.1)\n= 0.4 ∫ \U0001D4A9([10],[1 0],[2],[0 1]) dx₂ + 0.6 ∫ \U0001D4A9\
+    ([0],[8.4 2.0],[0],[2.0 1.7]) dx₂  (6.2)\n= 0.4 \U0001D4A9(10, 1) + 0.6 \U0001D4A9\
+    (0, 8.4).\n\nFrom (6.1) to (6.2), we used the result that the integral of a sum\
+    \ is the sum of the integrals.\nSimilarly, we can get\np(x₂) = 0.4 \U0001D4A9\
+    (2, 1) + 0.6 \U0001D4A9(0, 1.7).\n\n# b. Compute the mean, mode and median for\
+    \ each marginal distribution.\n\nMean:\n\U0001D53C(x₁) = ∫ x₁ p(x₁) dx₁\n= ∫ x₁\
+    \ (0.4 \U0001D4A9(x₁ | 10, 1) + 0.6 \U0001D4A9(x₁ | 0, 8.4)) dx₁  (6.3)\n= 0.4\
+    \ ∫ x₁ \U0001D4A9(x₁ | 10, 1) dx₁ + 0.6 ∫ x₁ \U0001D4A9(x₁ | 0, 8.4) dx₁  (6.4)\n\
+    = 0.4 · 10 + 0.6 · 0 = 4.\nFrom step (6.3) to step (6.4), we use the fact that\
+    \ for Y ~ \U0001D4A9(μ, σ), where \U0001D53C[Y] = μ.\nSimilarly,\n\U0001D53C(x₂)\
+    \ = 0.4 · 2 + 0.6 · 0 = 0.8.\n\nMode: In principle, we would need to solve for\n\
+    \ d p(x₁)/d x₁ = 0  and  d p(x₂)/d x₂ = 0.\nHowever, we can observe that the modes\
+    \ of each individual distribution are the peaks of the Gaussians, that is the\
+    \ Gaussian means for each dimension. Median:\n∫_{-∞}^{a} p(x₁) dx₁ = 1/2.\n\n\
+    # c. Compute the mean and mode for the 2 dimensional distribution.\n\nMean:\n\
+    From (6.30), we know that\n\U0001D53C[ [x₁],[x₂] ] = [ \U0001D53C[x₁] , \U0001D53C\
+    [x₂] ] = [ 4 , 0.8 ].\nMode:\nThe two dimensional distribution has two peaks,\
+    \ and hence there are"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'two modes. In general, we would need to solve an optimization problem to find
+    the maxima. However, in this particular case we can observe that the two modes
+    correspond to the individual Gaussian means, that is
+
+
+    $\begin{bmatrix}10\\2\end{bmatrix}$ and $\begin{bmatrix}0\\0\end{bmatrix}$.
+
+
+    # 6.3
+
+
+    You have written a computer program that sometimes compiles and sometimes not
+    (code does not change). You decide to model the apparent stochasticity (success
+    vs. no success) $x$ of the compiler using a Bernoulli distribution with parameter
+    $\mu$:
+
+
+    $p(x\mid\mu)=\mu^x(1-\mu)^{1-x},\quad x\in\{0,1\}$.
+
+
+    Choose a conjugate prior for the Bernoulli likelihood and compute the posterior
+    distribution $p(\mu\mid x_1,\ldots,x_N)$.
+
+
+    The posterior is proportional to the product of the likelihood (Bernoulli) and
+    the prior (Beta). Given the choice of the prior, we already know that the posterior
+    will be a Beta distribution. With a conjugate Beta prior $p(\mu)=\mathrm{Beta}(a,b)$
+    obtain
+
+
+    $$p(\mu\mid X)=\frac{p(\mu)p(X\mid\mu)}{p(X)}\propto \mu^{a-1}(1-\mu)^{b-1}\prod_{i=1}^{N}\mu^{x_i}(1-\mu)^{1-x_i}$$
+
+
+    $$\propto \mu^{a-1+\sum_i x_i}(1-\mu)^{b-1+N-\sum_i x_i}\propto \mathrm{Beta}\left(a+\sum_i
+    x_i,b+N-\sum_i x_i\right).$$
+
+
+    Alternative approach: We look at the log-posterior. Ignoring all constants that
+    are independent of $\mu$ and $x_i$, we obtain
+
+
+    $$\log p(\mu\mid X)=(a-1)\log\mu+(b-1)\log(1-\mu)$$
+
+
+    $$\qquad+\log\mu\sum_i x_i+\log(1-\mu)\sum_i(1-x_i)$$
+
+
+    $$\qquad=\log\mu\left(a-1+\sum_i x_i\right)+\log(1-\mu)\left(b-1+N-\sum_i x_i\right).$$
+
+
+    Therefore, the posterior is again $\mathrm{Beta}\left(a+\sum_i x_i,b+N-\sum_i
+    x_i\right)$.
+
+
+    # 6.4
+
+
+    There are two bags. The first bag contains four mangos and two apples; the second
+    bag contains four mangos and four apples.
+
+    We also have a biased coin, which shows “heads” with probability 0.6 and “tails”
+    with probability 0.4. If the coin shows “heads”, we pick a fruit at random from
+    bag 1; otherwise we pick a fruit at random from bag 2.
+
+    Your friend flips the coin (you cannot see the result), picks a fruit at random
+    from the corresponding bag, and presents you a mango.
+
+    What is the probability that the mango was picked from bag 2?
+
+
+    *Hint: Use Bayes’ theorem.*
+
+
+    We apply Bayes’ theorem and compute the posterior $p(b_2\mid m)$ of picking a
+    mango from bag 2.
+
+
+    $$p(b_2\mid m)=\frac{p(m\mid b_2)p(b_2)}{p(m)}$$'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "where\n\n\\[\np(m)=p(b_1)p(m\\mid b_1)+p(b_2)p(m\\mid b_2)=\\frac{3}{5}\\frac{2}{3}+\\\
+    frac{2}{5}\\frac{1}{2}=\\frac{2}{5}+\\frac{1}{5}=\\frac{3}{5}\\quad\\text{Evidence}\n\
+    \\]\n\n\\[\np(b_2)=\\frac{2}{5}\\quad\\text{Prior}\n\\]\n\n\\[\np(m\\mid b_2)=\\\
+    frac{1}{2}\\quad\\text{Likelihood}\n\\]\n\nTherefore,\n\n\\[\np(b_2\\mid m)=\\\
+    frac{p(m\\mid b_2)p(b_2)}{p(m)}=\\frac{\\frac{2}{5}\\frac{1}{2}}{\\frac{3}{5}}=\\\
+    frac{1}{3}.\n\\]\n\n# 6.5  Consider the time-series model\n\n\\[\nx_{t+1}=Ax_t+w,\\\
+    qquad w\\sim\\mathcal{N}(0,Q),\n\\]\n\\[\ny_t=Cx_t+v,\\qquad v\\sim\\mathcal{N}(0,R),\n\
+    \\]\n\nwhere $w,v$ are i.i.d. Gaussian noise variables. Further, assume that $p(x_0)=\\\
+    mathcal{N}(\\mu_0,\\Sigma_0)$.\n\n+   a. What is the form of $p(x_0,x_1,\\ldots,x_T)$?\
+    \ Justify your answer (you do not have to explicitly compute the joint distribution).\n\
+    +   \n+   b. Assume that $p(x_t\\mid y_1,\\ldots,y_t)=\\mathcal{N}(\\mu_t,\\Sigma_t)$.\n\
+    +   \n+      1. Compute $p(x_{t+1}\\mid y_1,\\ldots,y_t)$.\n+      2. Compute\
+    \ $p(x_{t+1},y_{t+1}\\mid y_1,\\ldots,y_t)$.\n+      3. At time $t+1$, we observe\
+    \ the value $y_{t+1}=\\hat y$. Compute the conditional distribution $p(x_{t+1}\\\
+    mid y_1,\\ldots,y_{t+1})$.\n\n+   1. The joint distribution is Gaussian: $p(x_0)$\
+    \ is Gaussian, and $x_{t+1}$ is a linear/affine transformation of $x_t$. Since\
+    \ affine transformations leave the Gaussianity of the random variable invariant,\
+    \ the joint distribution must be Gaussian.\n\n+   2. 1. We use the results from\
+    \ linear transformation of Gaussian random variables (Section 6.5.3). We immediately\
+    \ obtain\n+   \n+   \\[\n+   p(x_{t+1}\\mid y_{1:t})=\\mathcal{N}(x_{t+1}\\mid\\\
+    mu_{t+1\\mid t},\\Sigma_{t+1\\mid t})\n+   \\]\n+   \\[\n+   \\mu_{t+1\\mid t}:=A\\\
+    mu_t\n+   \\]\n+   \\[\n+   \\Sigma_{t+1\\mid t}:=A\\Sigma_tA^\\mathsf{T}+Q.\n\
+    +   \\]\n\n+   2. The joint distribution $p(x_{t+1},y_{t+1}\\mid y_{1:t})$ is\
+    \ Gaussian (linear transformation of random variables). We compute every component\
+    \ of the Gaussian separately:\n+   \n+   \\[\n+   \\mathbb{E}[y_{t+1}\\mid y_{1:t}]=C\\\
+    mu_{t+1\\mid t}:=\\mu^y_{t+1\\mid t}\n+   \\]\n+   \\[\n+   \\mathbb{V}[y_{t+1}\\\
+    mid y_{1:t}]=C\\Sigma_{t+1\\mid t}C^\\mathsf{T}+R:=\\Sigma^y_{t+1\\mid t}\n+ \
+    \  \\]\n+   \\[\n+   \\operatorname{Cov}[x_{t+1},y_{t+1}\\mid y_{1:t}]=\\operatorname{Cov}[x_{t+1},Cx_{t+1}\\\
+    mid y_{1:t}]=\\Sigma_{t+1\\mid t}C^\\mathsf{T}:=\\Sigma_{xy}\n+   \\]\n+   \n\
+    +   Therefore,\n+   \n+   \\[\n+   p(x_{t+1},y_{t+1}\\mid y_{1:t})=\\mathcal{N}\\\
+    left(\\begin{bmatrix}\\mu_{t+1\\mid t}\\\\\\mu^y_{t+1\\mid t}\\end{bmatrix},\n\
+    +   \\begin{bmatrix}\\Sigma_{t+1\\mid t}&\\Sigma_{xy}\\\\\\Sigma_{xy}&\\Sigma^y_{t+1\\\
+    mid t}\\end{bmatrix}\\right).\n+   \\]"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "+   3. We obtain the desired distribution (again: Gaussian) by applying the\
+    \ rules for Gaussian conditioning of the joint distribution in B):\n+   \n+  \
+    \ $$p(x_{t+1}\\mid y_{1:t+1})=\\mathcal{N}(\\mu_{t+1\\mid t+1},\\Sigma_{t+1\\\
+    mid t+1})$$\n+   \n+   $$\\mu_{t+1\\mid t+1}=\\mu_{t+1\\mid t}+\\Sigma_{xy}(\\\
+    Sigma^y_{t+1\\mid t})^{-1}(\\hat y-\\mu^y_{t+1\\mid t})$$\n+   \n+   $$\\Sigma_{t+1\\\
+    mid t+1}=\\Sigma_{t+1\\mid t}-\\Sigma_{xy}(\\Sigma^y_{t+1\\mid t})^{-1}\\Sigma_{yx}$$\n\
+    \n6.6  Prove the relationship in (6.44), which relates the standard definition\
+    \ of the variance to the raw-score expression for the variance.\n\nThe formula\
+    \ in (6.43) can be converted to the so called raw-score formula for variance\n\
+    \n$$\\frac{1}{N}\\sum_{i=1}^{N}(x_i-\\mu)^2=\\frac{1}{N}\\sum_{i=1}^{N}(x_i^2-2x_i\\\
+    mu+\\mu^2)$$\n\n$$=\\frac{1}{N}\\sum_{i=1}^{N}x_i^2-\\frac{2}{N}\\mu\\sum_{i=1}^{N}x_i+\\\
+    mu^2$$\n\n$$=\\frac{1}{N}\\sum_{i=1}^{N}x_i^2-\\mu^2$$\n\n$$=\\frac{1}{N}\\sum_{i=1}^{N}x_i^2-\\\
+    left(\\frac{1}{N}\\sum_{i=1}^{N}x_i\\right)^2.$$\n\n6.7  Prove the relationship\
+    \ in (6.45), which relates the pairwise difference between examples in a dataset\
+    \ with the raw-score expression for the variance.\n\nConsider the pairwise squared\
+    \ deviation of a random variable:\n\n$$\\frac{1}{N^2}\\sum_{i,j=1}^{N}(x_i-x_j)^2=\\\
+    frac{1}{N^2}\\sum_{i,j=1}^{N}x_i^2+x_j^2-2x_ix_j \\tag{6.5}$$\n\n$$=\\frac{1}{N}\\\
+    sum_{i=1}^{N}x_i^2+\\frac{1}{N}\\sum_{j=1}^{N}x_j^2-2\\frac{1}{N^2}\\sum_{i,j=1}^{N}x_ix_j\
+    \ \\tag{6.6}$$\n\n$$=\\frac{2}{N}\\sum_{i=1}^{N}x_i^2-2\\frac{1}{N}\\sum_{i=1}^{N}x_i\\\
+    left(\\frac{1}{N}\\sum_{j=1}^{N}x_j\\right) \\tag{6.7}$$\n\n$$=2\\left[\\frac{1}{N}\\\
+    sum_{i=1}^{N}x_i^2-\\left(\\frac{1}{N}\\sum_{i=1}^{N}x_i\\right)^2\\right]. \\\
+    tag{6.8}$$\n\nObserve that the last equation above is twice of (6.44).\n\nGoing\
+    \ from (6.6) to (6.7), we need to make two observations. The first two terms in\
+    \ (6.6) are sums over all examples, and the index is not important, therefore\
+    \ they can be combined into one sum. The last term is obtained by “pushing in”\
+    \ the sum over $j$. This can be seen by a small example by considering $N=3$:\n\
+    \n$$x_1x_1+x_1x_2+x_1x_3+x_2x_1+x_2x_2+x_2x_3+x_3x_1+x_3x_2+x_3x_3$$\n\n$$=x_1(x_1+x_2+x_3)+x_2(x_1+x_2+x_3)+x_3(x_1+x_2+x_3).$$"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: 'Going from (6.7) to (6.8), we consider the sum over j as a common factor, as
+    seen in the following small example:
+
+
+    $x_1(x_1 + x_2 + x_3) + x_2(x_1 + x_2 + x_3) + x_3(x_1 + x_2 + x_3) = (x_1 + x_2
+    + x_3)(x_1 + x_2 + x_3)$
+
+
+    # 6.8 Express the Bernoulli distribution in the natural parameter form of the
+    exponential family, see (6.107).
+
+
+    $p(x \mid \mu) = \mu^x (1-\mu)^{1-x}$
+
+    $= \exp\left[\log\left(\mu^x (1-\mu)^{1-x}\right)\right]$
+
+    $= \exp\left[x \log \mu + (1 - x)\log(1-\mu)\right]$
+
+    $= \exp\left[x \log \frac{\mu}{1-\mu} + \log(1-\mu)\right]$
+
+    $= \exp\left[x\theta - \log(1+\exp(\theta))\right]$
+
+
+    where the last line is obtained by substituting $\theta = \log \frac{\mu}{1-\mu}$.
+    Note that this is in exponential family form, as $\theta$ is the natural parameter,
+    the sufficient statistic $\phi(x)=x$ and the log partition function is $A(\theta)=\log(1+\exp(\theta))$.
+
+
+    # 6.9 Express the Binomial distribution as an exponential family distribution.
+    Also express the Beta distribution is an exponential family distribution. Show
+    that the product of the Beta and the Binomial distribution is also a member of
+    the exponential family.
+
+
+    Express Binomial distribution as an exponential family distribution:
+
+
+    Recall the Binomial distribution from Example 6.11
+
+
+    $p(x|N,\mu)=\binom{N}{x}\mu^x(1-\mu)^{(N-x)}\quad x=0,1,...,N.$
+
+
+    This can be written in exponential family form
+
+
+    $p(x|N,\mu)=\binom{N}{x}\exp\left[\log\left(\mu^x(1-\mu)^{(N-x)}\right)\right]$
+
+    $=\binom{N}{x}\exp\left[x\log\mu+(N-x)\log(1-\mu)\right]$
+
+    $=\binom{N}{x}\exp\left[x\log\frac{\mu}{1-\mu}+N\log(1-\mu)\right]$
+
+
+    The last line can be identified as being in exponential family form by observing
+    that
+
+
+    $h(x)=\begin{cases}\binom{N}{x} & x=0,1,...,N.\\0 & \text{otherwise}\end{cases}$
+
+    $\theta=\log\frac{\mu}{1-\mu}$'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'φ(x) = x
+
+
+    A(θ) = −N log(1 − μ) = N log(1 + e^{θ}) .
+
+
+    # Express Beta distribution as an exponential family distribution:
+
+
+    Recall the Beta distribution from Example 6.11
+
+
+    p(μ|α,β) = Γ(α + β) / [Γ(α)Γ(β)] μ^{α−1} (1 − μ)^{(β−1)}
+
+
+    = 1 / B(α,β) μ^{α−1} (1 − μ)^{(β−1)} .
+
+
+    This can be written in exponential family form
+
+
+    p(μ|α,β) = exp[ (α − 1) log μ + (β − 1) log(1 − μ) − log B(α,β) ] .
+
+
+    This can be identified as being in exponential family form by observing that
+
+
+    h(μ) = 1
+
+
+    θ|(α,β) = [α − 1   β − 1]ᵀ
+
+
+    φ(μ) = [log μ   log(1 − μ)]
+
+
+    A(θ) = log B(α + β) .
+
+
+    # Show the product of the Beta and Binomial distribution is also a member of exponential
+    family:
+
+
+    We treat μ as random variable here, x as an known integer between 0 and N. For
+    x = 0, …, N, we get
+
+
+    p(x|N,μ)p(μ|α,β) = C(N,x) μ^{x} (1 − μ)^{(N−x)} 1/B(α,β) μ^{α−1} (1 − μ)^{(β−1)}
+
+
+    = C(N,x) exp[ x log μ/(1−μ) + N log(1−μ) ] · exp[ (α−1) log μ + (β−1) log(1−μ)
+    − log B(α,β) ]
+
+
+    = exp[ (x + α − 1) log μ + (N − x + β − 1) log(1 − μ) + log C(N,x) − log B(α,β)
+    ] .
+
+
+    The last line can be identified as being in exponential family form by observing
+    that
+
+
+    h(μ) = 1
+
+
+    θ = [x + α − 1   N − x + β − 1]ᵀ
+
+
+    φ(μ) = [log μ   log(1 − μ)]
+
+
+    A(θ) = log C(N,x) + log B(α + β) .'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "# 6.10  Derive the relationship in Section 6.5.2 in two ways:\n\n+   a. By\
+    \ completing the square  \n+   b. By expressing the Gaussian in its exponential\
+    \ family form\n\nThe *product* of two Gaussians $\\mathcal{N}(x\\mid a,A)\\mathcal{N}(x\\\
+    mid b,B)$ is an unnormalized Gaussian distribution $c\\mathcal{N}(x\\mid c,C)$\
+    \ with\n\n$$C=(A^{-1}+B^{-1})^{-1}$$\n$$c=C(A^{-1}a+B^{-1}b)$$\n$$c=(2\\pi)^{-D/2}|A+B|^{-1/2}\\\
+    exp\\left(-\\frac{1}{2}(a-b)^\\top(A+B)^{-1}(a-b)\\right).$$\n\nNote that the\
+    \ normalizing constant $c$ itself can be considered a (normalized) Gaussian distribution\
+    \ either in $a$ or in $b$ with an “inflated” covariance matrix $A+B$, i.e., $c=\\\
+    mathcal{N}(a\\mid b,A+B)=\\mathcal{N}(b\\mid a,A+B)$.\n\n# (i) By completing the\
+    \ square, we obtain\n\n$$\\mathcal{N}(x\\mid a,A)=(2\\pi)^{-D/2}|A|^{-1/2}\\exp\\\
+    left[-\\frac{1}{2}(x-a)^\\top A^{-1}(x-a)\\right],$$\n\n$$\\mathcal{N}(x\\mid\
+    \ b,B)=(2\\pi)^{-D/2}|B|^{-1/2}\\exp\\left[-\\frac{1}{2}(x-b)^\\top B^{-1}(x-b)\\\
+    right].$$\n\nFor convenience, we consider the log of the product:\n\n$$\\log\\\
+    left(\\mathcal{N}(x\\mid a,A)\\mathcal{N}(x\\mid b,B)\\right)$$\n$$=\\log\\mathcal{N}(x\\\
+    mid a,A)+\\log\\mathcal{N}(x\\mid b,B)$$\n$$=-\\frac{1}{2}\\left[(x-a)^\\top A^{-1}(x-a)+(x-b)^\\\
+    top B^{-1}(x-b)\\right]+\\text{const}$$\n$$=-\\frac{1}{2}\\left[x^\\top A^{-1}x-2x^\\\
+    top A^{-1}a+a^\\top A^{-1}a+x^\\top B^{-1}x-2x^\\top B^{-1}b+b^\\top B^{-1}b\\\
+    right]+\\text{const}$$\n$$=-\\frac{1}{2}\\left[x^\\top(A^{-1}+B^{-1})x-2x^\\top(A^{-1}a+B^{-1}b)+a^\\\
+    top A^{-1}a+b^\\top B^{-1}b\\right]+\\text{const}$$\n$$+\\text{const}$$\n$$=-\\\
+    frac{1}{2}\\left[(x-(A^{-1}+B^{-1})^{-1}(A^{-1}a+B^{-1}b))^\\top(A^{-1}+B^{-1})\\\
+    right.$$\n$$\\left.\\cdot(x-(A^{-1}+B^{-1})^{-1}(A^{-1}a+B^{-1}b))\\right]+\\\
+    text{const}.$$\n\nThus, the corresponding product is $\\mathcal{N}(x\\mid c,C)$\
+    \ with\n\n$$C=(A^{-1}+B^{-1})^{-1} \\tag{6.9}$$\n$$c=(A^{-1}+B^{-1})^{-1}(A^{-1}a+B^{-1}b)=C(A^{-1}a+B^{-1}b).\
+    \ \\tag{6.10}$$\n\n# (ii) By expressing Gaussian in its exponential family form:\n\
+    \nRecall from the Example 6.13 we get the exponential form of univariate Gaussian\
+    \ distribution, similarly we can get the exponential form of multivariate Gaussian\
+    \ distribution as\n\n$$p(x\\mid a,A)=\\exp\\left(-\\frac{1}{2}x^\\top A^{-1}x+x^\\\
+    top A^{-1}a-\\frac{1}{2}a^\\top A^{-1}a\\right)$$"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: 'b. The distribution $p(y)=\int p(y\mid x)p(x)\,dx$ is Gaussian. Compute the
+    mean $\mu_y$ and the covariance $\Sigma_y$. Derive your result in detail.
+
+
+    $p(y)$ is Gaussian distributed (affine transformation of the Gaussian random variable
+    $x$) with mean $\mu_y$ and covariance matrix $\Sigma_y$. We obtain
+
+
+    $$\begin{aligned}
+
+    \mu_y &= \mathbb{E}_y[y] = \mathbb{E}_{X,W}[Ax+b+w] = A\mathbb{E}_X[x]+b+\mathbb{E}_W[w]\\
+
+    &= A\mu_x+b, \qquad \text{and}\\[4pt]
+
+    \Sigma_y &= \mathbb{E}_y[yy^\mathsf{T}]-\mathbb{E}_y[y]\mathbb{E}_y[y]^\mathsf{T}\\
+
+    &= \mathbb{E}_{X,W}[(Ax+b+w)(Ax+b+w)^\mathsf{T}]-\mu_y\mu_y^\mathsf{T}\\
+
+    &= \mathbb{E}_{X,W}[Axx^\mathsf{T}A^\mathsf{T}+Axb^\mathsf{T}+Axw^\mathsf{T}+bx^\mathsf{T}A^\mathsf{T}+bb^\mathsf{T}+bw^\mathsf{T}\\
+
+    &\qquad +w(Ax+b)^\mathsf{T}+ww^\mathsf{T}]-\mu_y\mu_y^\mathsf{T}.
+
+    \end{aligned}$$
+
+
+    We use the linearity of the expected value, move all constants out of the expected
+    value, and exploit the independence of $w$ and $x$:
+
+
+    $$\begin{aligned}
+
+    \Sigma_y &= A\mathbb{E}_X[xx^\mathsf{T}]A^\mathsf{T}+A\mathbb{E}_X[x]b^\mathsf{T}+b\mathbb{E}_X[x]^\mathsf{T}A^\mathsf{T}+bb^\mathsf{T}+\mathbb{E}_W[ww^\mathsf{T}]\\
+
+    &\qquad -(A\mu_x+b)(A\mu_x+b)^\mathsf{T},
+
+    \end{aligned}$$
+
+
+    where we used our previous result for $\mu_y$. Note that $\mathbb{E}_W[w]=0$.
+    We continue as follows:
+
+
+    $$\begin{aligned}
+
+    \Sigma_y &= A\mathbb{E}_X[xx^\mathsf{T}]A^\mathsf{T}+A\mu_xb^\mathsf{T}+b\mu_x^\mathsf{T}A^\mathsf{T}+bb^\mathsf{T}+Q\\
+
+    &\qquad -A\mu_x\mu_x^\mathsf{T}A^\mathsf{T}-A\mu_xb^\mathsf{T}-b\mu_x^\mathsf{T}A^\mathsf{T}-bb^\mathsf{T}\\
+
+    &= A\left(\mathbb{E}_X[xx^\mathsf{T}]-\mu_x\mu_x^\mathsf{T}\right)A^\mathsf{T}+Q\\
+
+    &= A\Sigma_xA^\mathsf{T}+Q.
+
+    \end{aligned}$$
+
+
+    Alternatively, we could have exploited
+
+
+    $$\begin{aligned}
+
+    \mathbb{V}_y[y] &= \mathbb{V}_{x,w}[Ax+b+w]\mathrel{\overset{\mathrm{i.i.d.}}{=}}\mathbb{V}_x[Ax+b]+\mathbb{V}_w[w]\\
+
+    &= A\mathbb{V}_xA^\mathsf{T}+Q=A\Sigma_xA^\mathsf{T}+Q.
+
+    \end{aligned}$$
+
+
+    c. The random variable $y$ is being transformed according to the measurement mapping
+
+
+    $$z=Cy+v,$$
+
+
+    where $z\in\mathbb{R}^F$, $C\in\mathbb{R}^{F\times E}$, and $v\sim\mathcal{N}(v\mid
+    0,R)$ is independent Gaussian (measurement) noise.
+
+
+    +   ▪ Write down $p(z\mid y)$.
+
+
+    $$\begin{aligned}
+
+    p(z\mid y)&=\mathcal{N}(z\mid Cy,R)\\
+
+    &=(2\pi)^{-F/2}|R|^{-1/2}\exp\left(-\frac{1}{2}(z-Cy)^\mathsf{T}R^{-1}(z-Cy)\right).
+
+    \end{aligned}$$'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '+   - Compute $p(\mathbf{z})$, i.e., the mean $\boldsymbol{\mu}_z$ and the
+    covariance $\boldsymbol{\Sigma}_z$. Derive your result in detail.
+
+
+    Remark: Since $\boldsymbol{y}$ is Gaussian and $\boldsymbol{z}$ is a linear transformation
+    of $\boldsymbol{y}$, $p(\boldsymbol{z})$ is Gaussian, too. Let''s compute its
+    moments (similar to the “time update”):
+
+
+    $$\boldsymbol{\mu}_z = \mathbb{E}_Z[\mathbf{z}] = \mathbb{E}_{Y,V}[\mathbf{C}\mathbf{y}
+    + \mathbf{v}] = \mathbf{C}\mathbb{E}_Y[\mathbf{y}] + \underbrace{\mathbb{E}_V[\mathbf{v}]}_{=0}
+    = \mathbf{C}\boldsymbol{\mu}_y.$$
+
+
+    For the covariance matrix, we compute $$\boldsymbol{\Sigma}_z = \mathbb{E}_Z[\mathbf{z}\mathbf{z}^\top]
+    - \mathbb{E}_Z[\mathbf{z}]\mathbb{E}_Z[\mathbf{z}]^\top = \mathbb{E}_{Y,V}[(\mathbf{C}\mathbf{y}+\mathbf{v})(\mathbf{C}\mathbf{y}+\mathbf{v})^\top]
+    - \boldsymbol{\mu}_z\boldsymbol{\mu}_z^\top = \mathbb{E}_{Y,V}[\mathbf{C}\mathbf{y}\mathbf{y}^\top\mathbf{C}^\top
+    + \mathbf{C}\mathbf{y}\mathbf{v}^\top + \mathbf{v}(\mathbf{C}\mathbf{y})^\top
+    + \mathbf{v}\mathbf{v}^\top] - \boldsymbol{\mu}_z\boldsymbol{\mu}_z^\top.$$
+
+
+    We use the linearity of the expected value, move all constants out of the expected
+    value, and exploit the independence of $\mathbf{v}$ and $\mathbf{y}$: $$\boldsymbol{\Sigma}_z
+    = \mathbf{C}\mathbb{E}_Y[\mathbf{y}\mathbf{y}^\top]\mathbf{C}^\top + \mathbb{E}_V[\mathbf{v}\mathbf{v}^\top]
+    - \mathbf{C}\boldsymbol{\mu}_y\boldsymbol{\mu}_y^\top\mathbf{C}^\top,$$ where
+    we used our previous result for $\boldsymbol{\mu}_z$. Note that $\mathbb{E}_V[\mathbf{v}]
+    = \mathbf{0}$. We continue as follows: $$\boldsymbol{\Sigma}_y = \mathbf{C}\left(\underbrace{\mathbb{E}_Y[\mathbf{y}\mathbf{y}^\top]
+    - \boldsymbol{\mu}_y\boldsymbol{\mu}_y^\top}_{=\boldsymbol{\Sigma}_x}\right)\mathbf{C}^\top
+    + \mathbf{R} = \mathbf{C}\boldsymbol{\Sigma}_y\mathbf{C}^\top + \mathbf{R}.$$
+
+
+    d. Now, a value $\hat{\mathbf{y}}$ is measured. Compute the posterior distribution
+    $p(\mathbf{x} \mid \hat{\mathbf{y}})$. Hint for solution: This posterior is also
+    Gaussian, i.e., we need to determine only its mean and covariance matrix. Start
+    by explicitly computing the joint Gaussian $p(\mathbf{x}, \mathbf{y})$. This also
+    requires us to compute the cross-covariances $\mathrm{Cov}_{x,y}[\mathbf{x}, \mathbf{y}]$
+    and $\mathrm{Cov}_{y,x}[\mathbf{y}, \mathbf{x}]$. Then apply the rules for Gaussian
+    conditioning.
+
+
+    We derive the posterior distribution following the second hint since we do not
+    have to worry about normalization constants: Assume, we know the joint Gaussian
+    distribution $$p(\mathbf{x}, \mathbf{y}) = \mathcal{N}\left(\begin{pmatrix}\mathbf{x}\\
+    \mathbf{y}\end{pmatrix} \bigg| \begin{pmatrix}\boldsymbol{\mu}_x\\ \boldsymbol{\mu}_y\end{pmatrix},
+    \begin{pmatrix}\boldsymbol{\Sigma}_x & \boldsymbol{\Sigma}_{xy}\\ \boldsymbol{\Sigma}_{yx}
+    & \boldsymbol{\Sigma}_y\end{pmatrix}\right), \tag{6.11}$$ where we defined $\boldsymbol{\Sigma}_{xy}
+    := \mathrm{Cov}_{x,y}[\mathbf{x}, \mathbf{y}]$. Now, we apply the rules for Gaussian
+    conditioning to obtain $$p(\mathbf{x} \mid \hat{\mathbf{y}}) = \mathcal{N}(\mathbf{x}
+    \mid \boldsymbol{\mu}_{x \mid y}, \boldsymbol{\Sigma}_{x \mid y})$$ $$\boldsymbol{\mu}_{x
+    \mid y} = \boldsymbol{\mu}_x + \boldsymbol{\Sigma}_{xy}\boldsymbol{\Sigma}_y^{-1}(\hat{\mathbf{y}}
+    - \boldsymbol{\mu}_y)$$ $$\boldsymbol{\Sigma}_{x \mid y} = \boldsymbol{\Sigma}_x
+    - \boldsymbol{\Sigma}_{xy}\boldsymbol{\Sigma}_y^{-1}\boldsymbol{\Sigma}_{yx}.$$'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'Looking at (6.11), it remains to compute the cross-covariance term Σ_xy (the
+    marginal distributions p(x) and p(y) are known and Σ_yx = Σ_xy^T):
+
+
+    Σ_xy = Cov[x, y] = E_{X,Y}[x y^T] - E_X[x] E_Y[y]^T = E_{X,Y}[x y^T] - μ_x μ_y^T,
+
+
+    where μ_x and μ_y are known. Hence, it remains to compute
+
+
+    E_{X,Y}[x y^T] = E_X[x (A x + b + w)^T] = E_X[x x^T] A^T + E_X[x] b^T = E_X[x
+    x^T] A^T + μ_x b^T.
+
+
+    With
+
+
+    μ_x μ_y^T = μ_x μ_x^T A^T + μ_x b^T
+
+
+    we obtain the desired cross-covariance
+
+
+    Σ_xy = E_X[x x^T] A^T + μ_x b^T - μ_x μ_x^T A^T - μ_x b^T = (E_X[x x^T] - μ_x
+    μ_x^T) A^T = Σ_x A^T.
+
+
+    And finally
+
+
+    μ_{x|y} = μ_x + Σ_x A^T (A Σ_x A^T + Q)^{-1} (y - A μ_x - b), Σ_{x|y} = Σ_x -
+    Σ_x A^T (A Σ_x A^T + Q)^{-1} A Σ_x.
+
+
+    # 6.13 Probability Integral Transformation
+
+
+    Given a continuous random variable x, with cdf F_X(x), show that the random variable
+    y = F_X(x) is uniformly distributed.
+
+
+    Proof We need to show that the cumulative distribution function of Y defines a
+    distribution of a uniform random variable. Recall that by the axioms of probability
+    (Section 6.1) probabilities must be non-negative and sum/integrate to one. Therefore,
+    the range of possible values of Y = F_X(x) is the interval [0, 1]. For any F_X(x),
+    the inverse F_X^{-1}(x) exists because we assumed that F_X(x) is strictly monotonically
+    increasing, which we will use in the following.
+
+
+    Given any continuous random variable X, the definition of a cdf gives F_Y(y) =
+    P(Y ≤ y) = P(F_X(x) ≤ y) transformation of interest = P(X ≤ F_X^{-1}(y)) inverse
+    exists = F_X(F_X^{-1}(y)) definition of cdf = y, where the last line is due to
+    the fact that F_X(x) composed with its inverse results in an identity transformation.
+    The statement F_Y(y) = y along with the fact that y lies in the interval [0, 1]
+    means that F_Y(x) is the cdf of the uniform random variable on the unit interval.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Continuous Optimization
+
+
+    # Exercises
+
+
+    7.1 Consider the univariate function
+
+
+    $f(x) = x^3 + 6x^2 - 3x - 5.$
+
+
+    Find its stationary points and indicate whether they are maximum, minimum, or
+    saddle points.
+
+
+    Given the function $f(x)$, we obtain the following gradient and Hessian,
+
+
+    $\frac{df}{dx} = 3x^2 + 12x - 3$
+
+
+    $\frac{d^2 f}{dx^2} = 6x + 12.$
+
+
+    We find stationary points by setting the gradient to zero, and solving for $x$.
+    One option is to use the formula for quadratic functions, but below we show how
+    to solve it using completing the square. Observe that
+
+
+    $(x + 2)^2 = x^2 + 4x + 4$
+
+
+    and therefore (after dividing all terms by 3),
+
+
+    $(x^2 + 4x) - 1 = ((x + 2)^2 - 4) - 1.$
+
+
+    By setting this to zero, we obtain that
+
+
+    $(x + 2)^2 = 5,$
+
+
+    and hence
+
+
+    $x = -2 \pm \sqrt{5}.$
+
+
+    Substituting the solutions of $\frac{df}{dx} = 0$ into the Hessian gives
+
+
+    $\frac{d^2 f}{dx^2}(-2 - \sqrt{5}) \approx -13.4\quad\text{and}\quad \frac{d^2
+    f}{dx^2}(-2 + \sqrt{5}) \approx 13.4.$
+
+
+    This means that the left stationary point is a maximum and the right one is a
+    minimum. See Figure 7.1 for an illustration.
+
+
+    7.2 Consider the update equation for stochastic gradient descent (Equation (7.15)).
+    Write down the update when we use a mini-batch size of one.
+
+
+    $\boldsymbol{\theta}_{i+1} = \boldsymbol{\theta}_i - \gamma_i (\nabla L(\boldsymbol{\theta}_i))^{\top}
+    = \boldsymbol{\theta}_i - \gamma_i \nabla L_k(\boldsymbol{\theta}_i)^{\top}$
+
+
+    where $k$ is the index of the example that is randomly chosen.
+
+
+    7.3 Consider whether the following statements are true or false:'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# 7.7 Consider the quadratic program illustrated in Figure 7.4,
+
+
+    min_{x in R^2} 1/2 [x1; x2]^T [[2,1],[1,4]] [x1; x2] + [5;3]^T [x1; x2] subject
+    to [[1,0],[-1,0],[0,1],[0,-1]] [x1; x2] <= [1;1;1;1]
+
+
+    Derive the dual quadratic program using Lagrange duality.
+
+
+    Let Q = [[2,1],[1,4]], c = [5;3], A = [[1,0],[-1,0],[0,1],[0,-1]], and b = [1;1;1;1].
+    Then by (7.45)
+
+
+    and (7.52) the dual optimization problem is
+
+
+    max_{lambda in R^4} -1/2 ( [5;3] + A^T lambda )^T Q^{-1} ( [5;3] + A^T lambda
+    ) - lambda^T b
+
+
+    subject to lambda >= 0.
+
+
+    which expands to
+
+
+    max_{lambda in R^4} -1/14 ( 88 + [33;-35;1;-3]^T lambda + lambda^T [[4,-4,-1,1],[-4,4,1,-1],[-1,1,2,-2],[1,-1,-2,2]]
+    lambda )
+
+
+    subject to lambda >= 0.
+
+
+    # Alternative derivation
+
+
+    Write down the Lagrangian:
+
+
+    L(x, lambda) = 1/2 x^T [[2,1],[1,4]] x + [5;3]^T x + lambda^T ( A x - b )
+
+
+    Differentiate with respect to x and set to zero:
+
+
+    nabla_x L = x^T [[2,1],[1,4]] + [5;3]^T + lambda^T A = 0
+
+
+    Solve for x:
+
+
+    x^T = - ( [5;3]^T + lambda^T A ) Q^{-1}'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'product.
+
+
+    *Hint: Take the gradient of an appropriate function and set the gradient to zero.*
+
+
+    From the definition of the Legendre Fenchel conjugate
+
+
+    $f^*(s) = \sup_{x \in \mathbb{R}^D} \sum_{d=1}^{D} s_d x_d - x_d \log x_d.$
+
+
+    Define a function (for notational convenience)
+
+
+    $g(x) = \sum_{d=1}^{D} s_d x_d - x_d \log x_d.$
+
+
+    The gradient of $g(x)$ with respect to $x_d$ is
+
+
+    $\frac{\mathrm{d}g(x)}{\mathrm{d}x_d} = s_d - \frac{x_d}{x_d} - \log x_d = s_d
+    - 1 - \log x_d.$
+
+
+    Setting the gradient to zero gives
+
+
+    $x_d = \exp(s_d - 1).$
+
+
+    Substituting the optimum value of $x_d$ back into $f^*(s)$ gives
+
+
+    $f^*(s) = \sum_{d=1}^{D} = s_d \exp(s_d - 1) - (s_d - 1)\exp(s_d - 1) = \exp(s_d
+    - 1).$
+
+
+    # 7.10 Consider the function
+
+
+    $f(x) = \frac{1}{2} x^{\top} A x + b^{\top} x + c,$
+
+
+    where $A$ is strictly positive definite, which means that it is invertible. Derive
+    the convex conjugate of $f(x)$.
+
+
+    *Hint: Take the gradient of an appropriate function and set the gradient to zero.*
+
+
+    From the definition of the Legendre Fenchel transform,
+
+
+    $f^*(s) = \sup_{x \in \mathbb{R}^D} s^{\top} x - \frac{1}{2} x^{\top} A x - b^{\top}
+    x - c.$
+
+
+    Define a function (for notational convenience) $g(x) = s^{\top} x - \frac{1}{2}
+    x^{\top} A x - b^{\top} x - c.$
+
+
+    The gradient of $g(x)$ with respect to $x$ is $\frac{\mathrm{d}g(x)}{\mathrm{d}x}
+    = s^{\top} - x^{\top} A - b^{\top}.$
+
+
+    Setting the gradient to zero gives (note that $A^{\top} = A$) $s A^{\top} x -
+    b = 0$, $A^{\top} x = s - b$, $x = A^{-1}(s - b).$'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
