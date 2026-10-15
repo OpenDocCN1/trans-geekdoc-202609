@@ -1,0 +1,273 @@
+
+```python
+# model averaging ensemble and a study of ensemble size on test accuracy
+from sklearn.datasets.samples_generator import make_blobs
+from keras.utils import to_categorical
+from keras.models import Sequential
+from keras.layers import Dense
+from sklearn.metrics import accuracy_score
+from matplotlib import pyplot
+from numpy import array
+from numpy import argmax
+import numpy
+
+# fit model on dataset
+def fit_model(trainX, trainy):
+    # define model
+    model = Sequential()
+    model.add(Dense(15, input_dim=2, activation='relu'))
+    model.add(Dense(3, activation='softmax'))
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    # fit model
+    model.fit(trainX, trainy, epochs=200, verbose=0)
+    return model
+
+# make an ensemble prediction for multi-class classification
+def ensemble_predictions(members, testX):
+    # make predictions
+    yhats = [model.predict(testX) for model in members]
+    yhats = array(yhats)
+    # sum across ensemble members
+    summed = numpy.sum(yhats, axis=0)
+    # argmax across classes
+    result = argmax(summed, axis=1)
+    return result
+
+# evaluate a specific number of members in an ensemble
+def evaluate_n_members(members, n_members, testX, testy):
+    # select a subset of members
+    subset = members[:n_members]
+    print(len(subset))
+    # make prediction
+    yhat = ensemble_predictions(subset, testX)
+    # calculate accuracy
+    return accuracy_score(testy, yhat)
+
+# generate 2d classification dataset
+X, y = make_blobs(n_samples=500, centers=3, n_features=2, cluster_std=2, random_state=2)
+# split into train and test
+n_train = int(0.3 * X.shape[0])
+trainX, testX = X[:n_train, :], X[n_train:, :]
+trainy, testy = y[:n_train], y[n_train:]
+trainy = to_categorical(trainy)
+# fit all models
+n_members = 20
+members = [fit_model(trainX, trainy) for _ in range(n_members)]
+# evaluate different numbers of ensembles
+scores = list()
+for i in range(1, n_members+1):
+    score = evaluate_n_members(members, i, testX, testy)
+    print('> %.3f' % score)
+    scores.append(score)
+# plot score vs number of ensemble members
+```
+
+```
+x_axis = [i for i in range(1, n_members+1)]
+pyplot.plot(x_axis, scores)
+pyplot.show()
+```
+
+清单 20.27：研究集成成员数量与 blobs 问题上预测性能关系的示例。
+
+运行该示例时，首先在同一训练数据集上拟合 20 个模型，在现代硬件上可能不到一分钟。随后，测试从 1 个成员到全部 20 个成员的不同大小集成，并打印每种集成大小的测试准确率结果。
+
+```
+...
+16
+> 0.760
+17
+> 0.763
+18
+> 0.766
+19
+> 0.763
+20
+> 0.763
+```
+
+清单 20.28：研究集成成员数量与 blobs 问题上预测性能关系的示例输出。
+
+最后，绘制折线图，展示集成大小与测试集性能之间的关系。可以看到，性能在约 5 个成员时提升，之后性能趋于平稳，准确率约为 76%。这与之前反复评估模型时观察到的平均测试集性能接近。
+
+![](img/8b574b0ce3be1eda9e1c02c72f9c8a21_428_0.png)
+
+**图 20.5：集成大小与模型测试准确率的折线图。**
+
+最后，我们可以更新重复评估实验，使用 5 个模型的集成而非单个模型，并比较得分分布。以下是在 blobs 数据集上重复评估 5 成员模型平均集成的完整示例。
+
+```
+# repeated evaluation of model averaging ensemble on blobs dataset
+from sklearn.datasets.samples_generator import make_blobs
+from sklearn.metrics import accuracy_score
+from keras.utils import to_categorical
+from keras.models import Sequential
+from keras.layers import Dense
+from numpy import array
+from numpy import argmax
+from numpy import mean
+from numpy import std
+import numpy
+
+# fit model on dataset
+def fit_model(trainX, trainy):
+    # define model
+    model = Sequential()
+    model.add(Dense(15, input_dim=2, activation='relu'))
+    model.add(Dense(3, activation='softmax'))
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    # fit model
+model.fit(trainX, trainy, epochs=200, verbose=0)
+return model
+
+# make an ensemble prediction for multi-class classification
+def ensemble_predictions(members, testX):
+    # make predictions
+    yhats = [model.predict(testX) for model in members]
+    yhats = array(yhats)
+    # sum across ensemble members
+    summed = numpy.sum(yhats, axis=0)
+    # argmax across classes
+    result = argmax(summed, axis=1)
+    return result
+
+# evaluate ensemble model
+def evaluate_members(members, testX, testy):
+    # make prediction
+    yhat = ensemble_predictions(members, testX)
+    # calculate accuracy
+    return accuracy_score(testy, yhat)
+
+# generate 2d classification dataset
+X, y = make_blobs(n_samples=500, centers=3, n_features=2, cluster_std=2, random_state=2)
+# split into train and test
+n_train = int(0.3 * X.shape[0])
+trainX, testX = X[:n_train, :], X[n_train:, :]
+trainy, testy = y[:n_train], y[n_train:]
+trainy = to_categorical(trainy)
+# repeated evaluation
+n_repeats = 30
+n_members = 5
+scores = list()
+for _ in range(n_repeats):
+    # fit all models
+    members = [fit_model(trainX, trainy) for _ in range(n_members)]
+    # evaluate ensemble
+    score = evaluate_members(members, testX, testy)
+    print('> %.3f' % score)
+    scores.append(score)
+# summarize the distribution of scores
+print('Scores Mean: %.3f, Standard Deviation: %.3f' % (mean(scores), std(scores)))
+```
+
+清单 20.29：在 blobs 问题上重复评估模型平均集成的示例。
+
+运行该示例可能需要几分钟时间，因为要拟合并评估 5 个模型，且该过程重复 30 次。每个模型在测试集上的性能都会被打印出来，以指示进展。运行结束时打印模型性能的均值和标准差。
+
+**注意：** 由于学习算法的随机性，您的具体结果可能会有所不同。建议多次运行该示例并比较平均性能。
+
+```
+...
+> 0.766
+```
+
+```
+> 0.763
+> 0.766
+> 0.771
+> 0.769
+Scores Mean: 0.768, Standard Deviation: 0.006
+```
+
+清单 20.30：在 blobs 问题上重复评估模型平均集成的示例输出。
+
+在这种情况下，我们可以看到，五成员集成在该数据集上的平均性能为 76.8%。这与单个模型的平均值 77% 非常接近。重要的区别在于标准差从单个模型的 1.4% 缩小到五个模型集成的 0.6%。我们预计在该问题上，给定的五成员集成性能落在约 74% 到约 78% 之间的概率为 99%。
+
+对同一数据集上训练的同一模型进行平均，为我们带来了更高的可靠性，这一特性在最终投入运营的模型中通常非常需要。根据大数定律，集成中更多的模型将进一步降低集成在测试数据集上准确率的标准差，至少会达到收益递减点。这表明，对于这个特定模型和预测问题，包含五个成员的模型平均集成足以降低模型的方差。这种方差的降低反过来也意味着在准备最终模型时，平均性能会更好。
+
+## 20.4 扩展
+
+本节列出了一些您可能希望探索的教程扩展思路。
+
+- **平均类别预测**。更新示例，将类别整数预测的平均值而非类别概率预测的平均值作为结果，并比较结果。
+- **保存和加载模型**。更新示例，将集成成员保存到文件中，然后从单独的脚本中加载它们以进行评估。
+- **方差的敏感性**。创建一个新示例，在给定重复次数下，对集成成员数量在测试集上模型性能的标准差进行敏感性分析，并报告收益递减点。
+
+如果您探索了这些扩展中的任何一个，我很想知道。
+
+## 20.5 延伸阅读
+
+本节提供了更多关于该主题的资源，供您深入阅读。
+
+### 20.5.1 API
+
+- Keras `Sequential` 模型入门。
+
+  https://keras.io/getting-started/sequential-model-guide/
+
+- Keras 核心层 API。
+
+  https://keras.io/layers/core/
+
+- `scipy.stats.mode` API。
+
+  https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mode.html
+
+- `numpy.argmax` API。
+
+  https://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html
+
+- `sklearn.datasets.make_blobs` API。
+
+  http://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html
+
+## 20.6 总结
+
+在本教程中，您了解了如何在 Keras 中开发模型平均集成，以降低最终模型的方差。具体来说，您学到了：
+
+- 模型平均是一种集成学习技术，可用于降低深度学习神经网络模型的预期方差。
+- 如何在 Keras 中为分类和回归预测建模问题实现模型平均。
+- 如何处理多类别分类问题，并使用模型平均来降低最终模型的方差。
+
+### 20.6.1 下一步
+
+在下一个教程中，您将了解如何根据对每个模型的信任程度，按比例加权集成成员对预测的贡献。
+
+# 第 21 章 使用加权平均集成按信任程度贡献
+
+模型平均集成将每个模型的预测同等组合，通常比给定的单个模型获得更好的平均性能。有时，某些非常好的模型我们希望它们对集成预测做出更多贡献，而一些可能有用但技能较弱的模型则应该对集成预测贡献较少。加权平均集成是一种允许多个模型按其信任程度或估计性能按比例贡献预测的方法。在本教程中，您将了解如何在 Python 中使用 Keras 开发深度学习神经网络模型的加权平均集成。完成本教程后，您将知道：
+
+- 模型平均集成有其局限性，因为它要求每个集成成员对预测的贡献相等。
+- 加权平均集成允许每个集成成员对预测的贡献按其持有数据集上的信任度或性能进行加权。
+- 如何在 Keras 中实现加权平均集成，并将结果与模型平均集成和独立模型进行比较。
+
+让我们开始吧。
+
+## 21.1 加权平均集成
+
+模型平均是一种集成学习方法，其中每个集成成员对最终预测的贡献相等。在回归情况下，集成预测计算为成员预测的平均值。在预测类别标签的情况下，预测计算为成员预测的众数。在预测类别概率的情况下，预测可计算为每个类别标签总和概率的 `argmax`。这种方法的一个局限是每个模型对集成最终预测的贡献相等。虽然所有集成成员相对于随机机会都应具备一定技能，但已知某些模型的表现比其他模型好得多或差得多。
+
+加权集成是模型平均集成的扩展，其中每个成员对最终预测的贡献根据模型的性能进行加权。模型权重是小的正值，所有权重的总和等于一，这使得权重可以表示对每个模型的信任程度或预期性能的百分比。
+
+可以把权重 `W_k` 视为对预测器 `k` 的信念，因此我们将权重约束为正值且总和为一。
+
+> — 使用集成学习：过拟合如何变得有用，1996。
+
+权重的均匀值（例如 `1/k`，其中 `k` 为集成成员的数量）意味着加权集成充当简单的平均集成。寻找权重没有解析解（我们无法计算它们）；相反，权重的值可以使用训练数据集或留出验证数据集来估计。使用与拟合集成成员相同的训练集来寻找权重很可能会导致过拟合模型。更稳健的方法是使用训练期间集成成员未见过的留出验证数据集。
+
+最简单、也许最详尽的方法是对每个集成成员在 0 到 1 之间进行网格搜索权重值。另选地，诸如线性求解器或梯度下降优化之类的优化程序可以使用单位范数权重约束来估计权重，以确保权重向量之和为一。除非留出验证数据集足够大且具有代表性，否则与简单平均集成相比，加权集成有过拟合的机会。一种无需计算显式权重系数即可为给定模型增加更多权重的简单替代方法是多次将给定模型添加到集成中。虽然灵活性较差，但它允许表现良好的给定模型对集成做出的给定预测做出多次贡献。
+
+## 21.2 加权平均集成案例研究
+
+在本节中，我们将演示如何使用加权平均集成来降低 MLP 在简单多类分类问题上的方差。此示例为将加权平均集成应用于您自己的神经网络进行分类和回归问题提供了一个模板。
+
+### 21.2.1 多类分类问题
+
+我们将使用一个小型多类分类问题作为演示加权平均集成的基础。scikit-learn 类提供了 `make_blobs()` 函数，可用于创建具有规定样本数、输入变量、类别以及类内样本方差的多类分类问题。该问题可以配置为具有两个输入变量（表示点的 `x` 和 `y` 坐标）以及每个组内点标准差为 2.0。我们将使用相同的随机状态（伪随机数生成器的种子）以确保我们始终获得相同的数据点。
+
+```
+# generate 2d classification dataset
+X, y = make_blobs(n_samples=1000, centers=3, n_features=2, cluster_std=2, random_state=2)
+```
+
+Listing 21.1：创建 blobs 问题样本的示例。
