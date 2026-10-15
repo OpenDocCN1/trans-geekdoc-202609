@@ -1,0 +1,6 @@
+# Table 3 Summary of Breach Incidents and Lessons Learned
+
+| Organization | Exploited vulnerabilities | Weaknesses | Areas for Improvement |
+|---|---|---|---|
+| Capital One | Misconfigured web application firewall. | Late detection of breach. Inability to properly configure the security settings of the third-party data server. | Be extremely deliberate and thorough in selecting a cloud-based third-party service provider for storage and other computing services. Suitable chart SLA provisions to establish a certain level of shared responsibility and accountability for protected data should also be required to provide regular security test reports. Regularly review vendor performance in protecting customer data. |
+| British Airways | Customers were the victim of a phishing attack. | The vulnerability in Modernizr, a JavaScript library, is well known and British Airways had not updated the script since 2012. Lack of robust smart capabilities. Delay in fixing the vulnerability. British Airways had not fixed the problem even a year after the attack. | Implement sophisticated monitoring and reporting capabilities and promptly act on the alerts and intelligence. Customers must participate in security training and awareness programs to mitigate the risk of them falling for a phishing attack. |

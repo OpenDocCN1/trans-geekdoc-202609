@@ -1,0 +1,13 @@
+email addresses, and passwords of every single account holder of Yahoo and its associates—Tumblr, Fantasy, and Flickr—were stolen.15
+
+Although the breach took place during the 2013–2014 period, Yahoo didn't disclose the breach till 2016 and was fined $35 million by the Securities and Exchange Commission for the notification delay. The company has also been directed by the court to create a $117.5 million settlement fund to compensate the victims. Yahoo also took a hit on its acquisition price—Verizon lowered its purchase price for the company by $350 million after learning of the breach.16
+
+According to court documents and FBI reports, a spear-phishing email was sent to Yahoo employees, and it took just one click (by an unsuspecting recipient) to install the malware. This malicious code allowed Aleksey Belan, one of the Latvian hackers hired by Russian agents, to install a backdoor on a Yahoo server and steal the company's user database. Now he had access to names, phone numbers, password challenge questions and answers, password recovery emails, and the unique cryptographic value for each user account. Using recovery email addresses and cryptographic values, the hacking team was able to generate access cookies that allowed them access to user email accounts.17
+
+Thus, a single click was all that it took to trigger the world's largest data breach. The plaintiffs accused Yahoo of negligence. For instance, an outdated hashing algorithm, MD5, was used to scramble many of the user passwords; according to experts, Yahoo should have consistently used the industry standard Bcrypt algorithm to encrypt the passwords. The plaintiffs also alleged that Yahoo consciously and deliberately did not promptly notify the affected customers.18
+
+# Lessons Learned
+
+It is imperative that organizations be honest, candid, and transparent in their communications with all stakeholders. Especially during breach incidents, victims should be promptly notified of the attack and potential consequences. In their defense, many companies have argued that they did not wish to rush the communication without being sure of the facts. While that is understandable, a brief communication of the potential breach and the steps the organization is taking to get to the bottom of it would be a more desirable practice. Stakeholders would also be most appreciative of periodic briefings and updates.
+
+Continuous training and awareness programs are essential to mitigate risks from different types of attacks, including phishing. In addition,

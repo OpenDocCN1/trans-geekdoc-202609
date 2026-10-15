@@ -1,0 +1,51 @@
+
+- 42. SoftwareTestingHelp. (2020). 2020 年 10 款最佳数据掩码工具和软件。2020 年 11 月 13 日检索自 https://www.softwaretestinghelp.com/data-masking-tools/
+- 43. Pujari, A. and Shinde, S. (2016, 七月-八月). 使用密码学和隐写术的数据安全。计算机工程期刊, 18(4), Ver. V, 130–139。
+- 44. Medium. (2017, 一月 3). 绝对免费的 5 款最佳隐写术软件。2020 年 8 月 9 日检索自 https://medium.com/@gizest/top-5-steganography-software-which-are-absolutely-free-8e568ea901b
+- 45. G2. 购买软件的地方。2020 年 7 月检索自 www.g2.com。
+- 46. Hein, D. (2019, 十月 25). 企业必备的 7 项移动安全最佳实践。移动管理解决方案评测。https://solutionsreview.com/mobile-device-management/7-essential-mobile-security-best-practices-for-businesses/
+- 47. DeBeasi, P. (2011, 二月 1). 企业移动设备安全的最佳实践。ComputerWeekly。2019 年 7 月 20 日检索自 https://www.computerweekly.com/tip/Best-practices-for-enterprise-mobile-device-security
+- 48. Globalscape. (2018, 五月 10). 保护数据最佳方式是什么？2019 年 7 月 20 日检索自 https://www.globalscape.com/blog/what-best-way-protect-your-data
+- 49. 国家标准与技术研究院。国家漏洞数据库。2019 年 6 月 6 日检索自 https://nvd.nist.gov/800-53/Rev4/control/SI-7
+- 50. Munjal, V. (2018, 七月 8). 为什么我们应该有单独的开发、测试和生产环境。Linux Together。2019 年 6 月 6 日检索自 https://linuxtogether.org/why-should-we-have-separate-development-testing-and-production-environments/
+- 51. Violino, B. (2012, 二月 6). 数据销毁深度指南。CSO Online。2020 年 12 月 16 日检索自 https://www.csoonline.com/article/2130822/the-in-depth-guide-to-data-destruction.html
+- 52. AgileIT. (2017, 八月 3). 数据备份最佳实践：避免这 6 个灾难恢复失败。https://www.agileit.com/news/data-backup-best-practices/
+- 53. 同上。
+- 54. Dobran, B. (2018, 二月 22). 数据备份策略：企业终极分步指南。PhoenixNAP。2019 年 8 月 13 日检索自 https://phoenixnap.com/blog/data-backup-strategy-guide-business
+- 55. Myerson, J. (2019, 六月 13). 遵守 SOX 数据保留政策的 4 个步骤。TechTarget Network。2020 年 8 月 5 日检索自 https://searchcompliance.techtarget.com/tip/Four-steps-to-consolidate-SOX-data-retention-and-deletion-processes
+- 56. ControlCase. PCI DSS 合规的 12 项要求是什么？https://www.controlcase.com/what-are-the-12-requirements-of-pci-dss-compliance/
+- 57. HIPAA Journal. (2018, 五月 17). 你有 GDPR 数据保留政策吗？2020 年 8 月 5 日检索自 https://www.hipaajournal.com/gdpr-data-retention-policy/#:~:text=GDPR%20data%20retention%20is%20covered, collected%20and%20are%20being%20processed
+- 58. 同上。
+- 59. Tiwari, A. (2019, 八月 24). PC 最佳 6 款硬盘擦除工具：2019 年擦除硬盘。Fossbytes。2020 年 8 月 5 日检索自 https://fossbytes.com/best-hard-drive-eraser-tools/
+- 60. Panda. (2018, 十月 6). *一个约会网站和应吸取的企业网络安全教训。* 2020 年 7 月 8 日检索自 https://www.pandasecurity.com/en/mediacenter/security/lessons-ashley-madison-data-breach/
+- 61. Carfagno, D. (2019, 八月 19). *什么是安全补丁？* Cybershark。2020 年 8 月 8 日检索自 https://www.blackstratus.com/what-is-a-security-patch/
+- 62. Roman, J. (2014, 五月 21). *eBay 泄露：1.45 亿用户收到通知。* Bank Info Security。2019 年 9 月 11 日检索自 https://www.bankinfosecurity.com/ebay-a-6858
+- 63. Boulton, C. (2017, 四月 19). *人类仍是网络安全最薄弱的环节。* CIO。https://www.cio.com/article/3191088/humans-are-still-the-weakest-cyber-security-link.html
+- 64. Mushtaq, A. (2018, 九月 6). *如何在你的安全计划中防范人为漏洞。* Security。2019 年 6 月 12 日检索自 https://www.securitymagazine.com/articles/89382-how-to-protect-against-human-vulnerabilities-in-your-security-program
+- 65. Finkle, J. and Deepa, S. (2014, 五月 27). *网络窃贼通过入侵 3 名企业员工窃取了 1.45 亿 eBay 客户数据。* Business Insider。2020 年 6 月 10 日检索自 https://www.businessinsider.com/cyber-thieves-took-data-on-145-million-ebay-customers-by-hacking-3-corporate-employees-2014-5#:~:text=Tech%20Contributors-,Cyber%20Thieves%20Took%20%20Data%20On%20145%20Million,By%20Hacking%203%20Corporate%20Employees&text=He%20said%20hackers%20got%20in,belonging%20to%20all%20eBay%20users.
+- 66. Peterson, A. (2014, 五月 21). *数据泄露后 eBay 要求 1.45 亿用户更改密码。* Washington Post。2020 年 6 月 10 日检索自 https://www.washingtonpost.com/news/the-switch/wp/2014/05/21/ebay-asks-145-million-users-to-change-passwords-after-data-breach/
+- 67. Quittner, J. (2014, 五月 30). *曾经不可攻破的 eBay 如何沦为黑客受害者（你也可能如此）。* Inc。2020 年 6 月 10 日检索自 https://www.inc.com/jeremy-quittner/new-details-emerge-on-ebay-hack-attack.html
+- 68. He, W. and Zhang, Z. (2019, 七月 29). *企业网络安全与意识计划：成功建议。* Journal of Organizational Computing and Electronic Commerce, 4, 249–57。
+- 69. CIRCADENCE. *你的网络安全目标是什么？* 2020 年 7 月 18 日检索自 https://www.circadence.com/
+- 70. 同上。
+- 71. Rosenthal, B. (2017, 十月 11). *何时以及如何创建网络安全文化。* National Cybersecurity Alliance。https://staysafeonline.org/blog/create-culture-cybersecurity/
+- 72. Disparte, D. and Furlow, C. (2017, 五月 16). *你能做的最好的网络安全投资是更好的培训。* Harvard Business Review, 2–4。
+- 73. Violino, B. (2020, 三月 19). *大流行规划的安全指南：7 个关键步骤。* CSOOnline。https://www.csoonline.com/article/3528878/a-security-guide-for-pandemic-planning-7-key-steps.html
+- 74. CTIPs. *什么是网络威胁情报以及如何使用？* [白皮书]。CREST Threat Intelligence Professionals。2019 年 7 月 23 日检索自 https://www.crest-approved.org/wp-content/uploads/CREST-Cyber-Threat-Intelligence.pdf
+- 75. LaPiedra, J. (2000-2002). *信息安全流程：预防、检测和响应* [白皮书]。SANS Institute。2019 年 7 月 27 日检索自 https://www.giac.org/paper/gsec/501/information-security-process-prevention-detection-response/101197
+- 76. Allen, Z. (2019, 二月 20). 处理代码仓库中的固有风险。Infosecurity。2020 年 8 月 21 日检索自 https://www.infosecurity-magazine.com/opinions/inherent-risks-code-repositories-1/
+- 77. Stegner, B. (2019, 十一月 11). 分享代码和文本的 4 款最佳 Pastebin 替代品。Make Use Of。检索自 https://www.makeuseof.com/tag/4-alternatives-that-may-be-better-than-pastebin/
+- 78. 同上。
+- 79. Lord, N. (2018, 九月 12). 什么是威胁检测和响应？解决方案、优势等等。Digital Guardian。2019 年 7 月 28 日检索自 https://digitalguardian.com/blog/what-threat-detection-and-response-solutions-benefits-and-more
+- 80. Splunk. 将数据带入每项安全挑战。2020 年 7 月检索自 https://www.splunk.com/en_us/enterprise-data-platform.html
+- 81. Olstik, J. (2019, 五月 1). 5 种威胁检测和响应技术正在融合。CSO Online。2019 年 7 月 27 日检索自 https://www.csoonline.com/article/3391562/5-threat-detection-and-response-technologies-are-coming-together.html
+- 82. 同上。
+- 83. Deloitte. (2016). 网络危机管理：准备、响应和恢复。2019 年 7 月 28 日检索自 https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Risk/gx-cm-cyber-pov.pdf
+- 84. Dobran, B. (2018, 八月 16). 2019 年将震惊企业主的灾难恢复统计数据。PhoenixNAP。2019 年 7 月 30 日检索自 https://phoenixnap.com/blog/disaster-recovery-statistics
+- 85. Stavridis, S. (2013, 二月 22). 灾难恢复规划指南。CIO。https://www2.cio.com.au/article/454491/guide_disaster_recovery_planning/
+- 86. Keller, M. S. (2017, 五月 8). 深入探讨：将事件响应纳入灾难恢复计划。Baker Data Counsel。2020 年 12 月 16 日检索自 https://www.bakerdatacounsel.com/cybersecurity/deeper-dive-incorporating-incident-response-into-disaster-recovery-plans/
+- 87. Kirvan, P. (2017, 八月 16). 为什么你需要一个与 DR 结合的网络安全事件响应计划。TechTarget。2019 年 7 月 30 日检索自 https://searchdisasterrecovery.techtarget.com/tip/Use-a-cybersecurity-incident-response-plan-with-BC-DR
+- 88. Schiff, J. L. (2016, 七月 5). 有效灾难恢复计划的 8 个要素。CIO。2019 年 8 月 8 日检索自 https://www.csoonline.com/article/3091716/8-ingredients-of-an-effective-disaster-recovery-plan.html
+- 89. Entech. (2018, 四月 16). 企业灾难恢复计划的 7 个关键要素。2019 年 8 月 8 日检索自 https://entechus.com/7-key-elements-of-a-business-disaster-recovery-plan/
+- 90. Flesch, M. (2019, 四月 30). 制定灾难恢复计划——5 个基本要素。Gordon Flesch Company。2019 年 8 月 8 日检索自 https://www.gflesch.com/elevity-it-blog/essential-elements-for-developing-a-disaster-recovery-plan
+- 91. Schiff, J. L. (2016, 七月 5). 有效灾难恢复计划的 8 个要素。CIO。2019 年 8 月 8 日检索自 https://www.csoonline.com/article/3091716/8-ingredients-of-an-effective-disaster-recovery-plan.html
