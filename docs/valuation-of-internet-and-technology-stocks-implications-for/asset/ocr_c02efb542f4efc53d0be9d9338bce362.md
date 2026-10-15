@@ -1,0 +1,9 @@
+![](bbox=[0.12, 0.1, 0.87, 0.55])
+
+# Figure 3.2 Moore's law and data transmission costs
+
+microchips doubles every 18 months. Moore’s law, as it came to be known, and is illustrated in Figure 3.2, governs Silicon Valley’s most important product cycles, for hardware and software alike. And its relentless drive has spawned whole new industries: digital watches, calculators, videogames, the Internet – with smart phones, digital TV, etc.
+
+In fact Moore’s law, which says that the processing power of microchips doubles every 18 months, has a corollary: the cost of computing is dropping by nearly 25% per year. In 1978, Intel Corp introduced its 8086 chip, which defined the base architecture for the later x86 series (including the 386, 486 and Pentium chips). It contained 29 000 transistors. Four years later came the 286, with 134 000 transistors. Three years after that, the 386 had 275 000 transistors. And on the trend goes: the Pentium Pro, introduced in 1995, had 5.5 million transistors in its core central processing unit. Meanwhile, the cost of all that computing power has been dropping precipitously. In 1978, the price of Intel’s 8086 was 1.2 cents per transistor, and $480 per million instructions per second (mips). By 1985, the 386 cost 0.11 cents per transistor and $50 per mips. Ten years later, the Pentium Pro’s introductory price amounted to 0.02 cents per transistor, and $4 per mips.
+
+In September 2001 Intel announced that it was selling a Pentium 4 processor that runs at two gigahertz, or two billion cycles per second, again marking the doubling of computer chip speed in only one year and a half (see Figure 3.3). The prices will no doubt continue to fall in the future.

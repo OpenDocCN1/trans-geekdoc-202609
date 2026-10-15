@@ -1,0 +1,13 @@
+cast doubts on whether these were bubbles. But it is still useful to paint the picture.
+
+# Tulipmania
+
+The first account of tulips in Europe is from 1559, when a collector of exotic flora, Councillor Hewart, received a consignment of tulip bulbs from a friend in Constantinople, which he planted in his garden in Augsburg, Germany. His tulips drew a good deal of attention and in following years this flower became more and more popular among the upper classes, particularly in Germany and Holland, where it became the custom to order bulbs at exorbitant prices directly from Constantinople. Up to 1634 this custom became increasingly common, and from that year affluent society in Holland considered the lack of a tulip collection to be proof of poor taste.
+
+Year by year tulip bulb prices rose, finally reaching astronomical heights. According to original accounts of the peak of the tulip mania, in one deal the following price was paid for one tulip bulb of the rare ‘Semper Augustus’ variety: 4600 florins, a new carriage, two grey mares and a complete bridle and harness. In today’s money 4600 florins is $US1.5 million! One single bulb of another rare variety, ‘Viceroy’, was sold for 24 carriage loads of grain, eight fat hogs, four cows, four barrels of ale, 1000 pounds of butter and a few tons of cheese.
+
+In early 1636 demand for tulip bulbs had risen so drastically that people started to trade them on exchanges in a number of Dutch towns. Tulips were no longer bought only by well-to-do collectors but also by investors and speculators. At the smallest price drop they bought up, to sell later at a profit. To facilitate trading on margin, tulip options were introduced, requiring a margin deposit of only 10–20%. Ordinary people in all business sectors started to sell off assets to invest in this attractive market.
+
+The Dutch tulip boom also drew attention from abroad and capital began to stream into the market. This capital forced up prices for land, property and luxury goods, as well as tulips, to new record heights. Fortunes grew and a growing nouveau riche group was added to the old upper classes. This new affluent class had earned its money from, and reinvested in, tulip bulbs. The story is told of a brewer in Utrecht who went so far as to exchange his brewery for three valuable tulip bulbs.
+
+In September and October of 1636 market psychology began to alter and doubts began to emerge. How could one be sure that

@@ -1,0 +1,11 @@
+# Real options and Internet and technology stock valuations
+
+Real options as a method of equity valuation have recently gained much attention. A real option is a choice in the management of real (as opposed to financial) assets or operations, such as the option to accelerate or defer capital expenditure, to change process inputs or outputs, to build or abandon capacity or to alter the nature or to change the scale of a production process. But why do we apply the term real options for investment decisions when traditionally real investment decisions are traditionally analysed using discounted cash flow techniques?
+
+# How does an investment project become an option?
+
+A corporate investment opportunity is like a call option because the corporation has the right, but not the obligation, to acquire something, let us say, the operating assets of a new business. If we could find a call option sufficiently similar to the investment opportunity, the value of the option would tell us something about the value of the opportunity. Unfortunately, most business opportunities are unique, so the likelihood of finding a similar option is low. The only reliable way to find a similar option is to construct one.
+
+To do this, we need to establish a correspondence between the project’s characteristics and the five variables that determine the value of simple call option on a stock. By mapping the characteristics of the business opportunity onto the template of a call option, we can obtain a model of the project that combines its characteristics with the structure of a call option. Assume the option we will use is a European call, which is the simplest of all options because it can be exercised on only one date, its expiration date. The option synthesized here is not a perfect substitute for the real opportunity, but it is still informative. Table 10.9 shows the correspondence illustrating the similarities.
+
+Many projects involve spending money to buy or build a productive asset. Spending money to exploit such a business opportunity is analogous to exercising an option on, for

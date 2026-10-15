@@ -1,0 +1,12 @@
+doing business? The balance sheet statement is silent about these and other components of business upon which businesses depend for future earnings.
+
+# Types of intangible assets
+
+Many businesses have intangible assets, and no list could ever be complete given that intangibles can be unique to a specific business. Some, however, are fairly common and can be found in many businesses. These more common intangibles include:
+
++   - **Proprietary lists:** Proprietary lists can include customer or client lists, patent lists or even mailing lists, whether they are made up of customers or prospects. Lists can be especially valuable to a business if the relationships they represent are ongoing. Consider, for example, a magazine’s list of advertisers. The magazine may get 75% of its advertising revenue from the companies on that list. Therefore, the list is critical to the magazine’s future profitability.
++   - **Beneficial contracts:** Long-term contracts can add value to a company. For instance, a company may have a contract that allows it to sell its product or service for a higher-than-normal mark-up. Or it may have a contract that allows it to purchase or lease items at a below-market rate.
++   - **Patents and applications for patents:** How much the patents are worth depends on the strength of the patent claim (which can be difficult to determine if the patent hasn’t withstood litigation), and the patent’s economic and legal life.
++   - **Copyrights:** Copyrights are trickier to value than patents because, while they may have a long legal life, their practical value may only be for a short period. This is especially true for technical works that become dated quickly. The value of a copyright also depends on the author’s previous success.
++   - **Trademarks and brand names:** If a brand name or trademark enables a company to sell its products for a higher price or in greater quantity than its competition, it has value.
++   - **Subscriptions and service contracts:** Subscriptions are especially important for newspapers, magazines and cable companies because a large portion of their revenues is based on subscriptions. With both subscriptions and service contracts, the longer they have been in effect, the more they are worth.
