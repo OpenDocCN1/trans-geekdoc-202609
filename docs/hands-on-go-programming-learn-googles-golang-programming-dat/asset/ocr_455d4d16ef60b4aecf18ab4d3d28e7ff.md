@@ -1,0 +1,11 @@
+Index = 0 and Element = Golang
+Index = 1 and Element = program
+Index = 2 and Element = to
+Index = 3 and Element = iterate
+Index = 4 and Element = over
+Index = 5 and Element = slice
+Index = 6 and Element = using
+Index = 7 and Element = range
+Index = 8 and Element = in
+Index = 9 and Element = for
+Index = 10 and Element = loop
