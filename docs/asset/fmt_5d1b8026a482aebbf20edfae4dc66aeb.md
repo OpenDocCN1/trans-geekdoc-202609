@@ -1,0 +1,252 @@
+
+# mlp overfit on the moons dataset
+```python
+from sklearn.datasets import make_moons
+from keras.layers import Dense
+from keras.models import Sequential
+from matplotlib import pyplot
+# generate 2d classification dataset
+X, y = make_moons(n_samples=100, noise=0.2, random_state=1)
+# split into train and test
+n_train = 30
+trainX, testX = X[:n_train, :], X[n_train:, :]
+trainy, testy = y[:n_train], y[n_train:]
+# define model
+model = Sequential()
+model.add(Dense(500, input_dim=2, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+# fit model
+history = model.fit(trainX, trainy, validation_data=(testX, testy), epochs=4000, verbose=0)
+# evaluate the model
+_, train_acc = model.evaluate(trainX, trainy, verbose=0)
+_, test_acc = model.evaluate(testX, testy, verbose=0)
+print('Train: %.3f, Test: %.3f' % (train_acc, test_acc))
+# plot loss learning curves
+pyplot.subplot(211)
+pyplot.title('Cross-Entropy Loss', pad=-40)
+pyplot.plot(history.history['loss'], label='train')
+pyplot.plot(history.history['val_loss'], label='test')
+pyplot.legend()
+# plot accuracy learning curves
+pyplot.subplot(212)
+pyplot.title('Accuracy', pad=-40)
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
+pyplot.legend()
+pyplot.show()
+```
+
+清单 18.27：在两个月亮问题上拟合MLP的示例。
+
+运行该示例会报告模型在训练集和测试集上的性能。我们可以看到模型在训练数据集上的性能优于测试数据集，这可能是过拟合的一个迹象。
+
+**注意：** 由于学习算法具有随机性，你的具体结果可能会有所不同。建议多次运行示例，并比较平均性能。
+
+```
+Train: 1.000, Test: 0.914
+```
+
+清单 18.28：在两个月亮问题上拟合MLP的示例输出。
+
+生成了一个图，显示模型在训练集和测试集上的损失和准确率折线图。我们可以看到过拟合模型的预期形状：测试准确率先上升到某一点，然后开始再次下降。查看该图，我们还可以看到验证损失在上下波动中存在平台期。任何早停（early stopping）策略都必须考虑到这些行为。我们还预计，停止训练的好时机可能是在第800轮左右。
+
+![](img/8b574b0ce3be1eda9e1c02c72f9c8a21_392_0.png)
+
+图18.2：训练过程中训练集和测试集损失曲线图，展示了一个过拟合模型。
+
+## 18.3.3 使用早停法优化过拟合MLP
+
+我们可以更新示例，加入非常简单的早停法。一旦模型在测试数据集上的损失开始增加，我们就停止训练。首先，我们可以定义`EarlyStopping`回调。
+
+```python
+# simple early stopping
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1)
+```
+
+清单18.29：为MLP定义早停回调的示例。
+
+然后我们可以更新对`fit()`函数的调用，并通过`callback`参数指定回调列表。
+
+```python
+# fit model
+history = model.fit(trainX, trainy, validation_data=(testX, testy), epochs=4000, verbose=0, callbacks=[es])
+```
+
+清单18.30：使用早停回调拟合MLP的示例。
+
+下面列出了加入简单早停法的完整示例。
+
+```python
+# mlp overfit on the moons dataset with simple early stopping
+from sklearn.datasets import make_moons
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.callbacks import EarlyStopping
+from matplotlib import pyplot
+# generate 2d classification dataset
+X, y = make_moons(n_samples=100, noise=0.2, random_state=1)
+# split into train and test
+n_train = 30
+trainX, testX = X[:n_train, :], X[n_train:, :]
+trainy, testy = y[:n_train], y[n_train:]
+# define model
+model = Sequential()
+model.add(Dense(500, input_dim=2, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+# simple early stopping
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1)
+# fit model
+history = model.fit(trainX, trainy, validation_data=(testX, testy), epochs=4000, verbose=0,
+    callbacks=[es])
+# evaluate the model
+_, train_acc = model.evaluate(trainX, trainy, verbose=0)
+_, test_acc = model.evaluate(testX, testy, verbose=0)
+print('Train: %.3f, Test: %.3f' % (train_acc, test_acc))
+# plot loss learning curves
+pyplot.subplot(211)
+pyplot.title('Cross-Entropy Loss', pad=-40)
+pyplot.plot(history.history['loss'], label='train')
+pyplot.plot(history.history['val_loss'], label='test')
+pyplot.legend()
+# plot accuracy learning curves
+pyplot.subplot(212)
+pyplot.title('Accuracy', pad=-40)
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
+pyplot.legend()
+pyplot.show()
+```
+
+清单18.31：在双月问题上使用早停法拟合MLP的示例。
+
+运行该示例会报告模型在训练集和测试集上的性能。
+
+**注意：** 由于学习算法的随机性，你的具体结果可能会有所不同。建议多次运行该示例并比较平均性能。
+
+我们还可以看到回调在第219个epoch停止了训练。这太早了，因为我们预期早停大约会在第800个epoch左右发生。训练集和测试集上的分类准确率也突出了这一点，其表现比不使用早停法时更差。
+
+```text
+Epoch 00219: early stopping
+Train: 0.967, Test: 0.814
+```
+
+清单18.32：在双月问题上使用早停法拟合MLP的示例输出。
+
+查看训练和测试损失的线图，我们确实可以看到训练在验证损失第一次开始趋于平稳的时点被停止。
+
+![](img/8b574b0ce3be1eda9e1c02c72f9c8a21_394_0.png)
+
+图18.3：使用简单早停法训练过程中训练和测试损失线图。
+
+我们可以通过等待一段时间再停止来改进早停的触发条件。这可以通过设置`patience`参数来实现。在这种情况下，我们将在训练停止前等待200个epoch。具体而言，这意味着在验证损失开始下降之后，我们允许训练继续最多200个epoch，给训练过程一个跨越平坦区域或找到额外改进的机会。
+
+```python
+# patient early stopping
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=200)
+```
+
+清单18.33：使用具有耐心的早停法拟合MLP的示例。
+
+包含此更改的完整示例如下所示。
+
+```python
+# mlp overfit on the moons dataset with patient early stopping
+from sklearn.datasets import make_moons
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.callbacks import EarlyStopping
+from matplotlib import pyplot
+# generate 2d classification dataset
+X, y = make_moons(n_samples=100, noise=0.2, random_state=1)
+# split into train and test
+n_train = 30
+trainX, testX = X[:n_train, :], X[n_train:, :]
+trainy, testy = y[:n_train], y[n_train:]
+# define model
+model = Sequential()
+model.add(Dense(500, input_dim=2, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+# patient early stopping
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=200)
+# fit model
+history = model.fit(trainX, trainy, validation_data=(testX, testy), epochs=4000, verbose=0,
+    callbacks=[es])
+# evaluate the model
+_, train_acc = model.evaluate(trainX, trainy, verbose=0)
+_, test_acc = model.evaluate(testX, testy, verbose=0)
+print('Train: %.3f, Test: %.3f' % (train_acc, test_acc))
+# plot loss learning curves
+pyplot.subplot(211)
+pyplot.title('Cross-Entropy Loss', pad=-40)
+pyplot.plot(history.history['loss'], label='train')
+pyplot.plot(history.history['val_loss'], label='test')
+pyplot.legend()
+# plot accuracy learning curves
+pyplot.subplot(212)
+pyplot.title('Accuracy', pad=-40)
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
+pyplot.legend()
+pyplot.show()
+```
+
+清单18.34：在双月问题上使用具有耐心的早停法拟合MLP的示例。
+
+运行该示例，我们可以看到训练停止得晚得多，在本例中恰好在第1,000个epoch之前。
+
+**注意：** 由于学习算法的随机性，你的具体结果可能会有所不同。建议多次运行该示例并比较平均性能。
+
+我们还可以看到测试数据集上的性能优于不使用任何早停法的情况。
+
+```
+Epoch 00986: early stopping
+Train: 1.000, Test: 0.943
+```
+
+清单18.35：在双月问题上使用具有耐心的早停法拟合MLP的示例输出。
+
+查看训练过程中的损失线图，我们可以看到耐心让训练过程跨越了一些小的平坦区域和不良区域。
+
+![](img/8b574b0ce3be1eda9e1c02c72f9c8a21_396_0.png)
+
+图18.4：使用具有耐心的早停法训练过程中训练和测试损失线图。
+
+我们还可以看到，在最后大约100个epoch中，测试损失再次开始上升。这意味着尽管模型性能有所提升，但训练结束时我们可能没有获得性能最佳或最稳定的模型。我们可以通过使用`ModelCheckpoint`回调来解决这个问题。在这种情况下，我们关注的是保存测试数据集上具有最佳准确率的模型。我们也可以寻找测试数据集上具有最佳损失的模型，但这可能对应也可能不对应于具有最佳准确率的模型。
+
+这凸显了模型选择中的一个重要概念。在训练过程中，使用不同的性能度量评估时，“最佳模型”的概念可能会相互冲突。尝试根据模型将在实际任务中被评估和呈现的指标来选择模型。在平衡的二分类问题中，这很可能是分类准确率。因此，我们将在`ModelCheckpoint`回调中使用验证集上的准确率来保存在训练过程中观察到的最佳模型。
+
+```python
+mc = ModelCheckpoint('best_model.h5', monitor='val_acc', mode='max', verbose=1,
+    save_best_only=True)
+```
+
+清单18.36：为带早停的MLP设置模型检查点回调的示例。
+
+在训练过程中，只有验证集准确率在整个训练过程中总体上有所提高时，整个模型才会被保存到文件`best_model.h5`中。每次模型被保存到同一文件时，详细输出也会告知我们对应的epoch和准确率值。
+
+文件（例如被覆盖）。这个新增的附加回调可以在调用 `fit()` 函数时添加到回调列表中。
+
+```
+history = model.fit(trainX, trainy, validation_data=(testX, testy), epochs=4000, verbose=0,
+    callbacks=[es, mc])
+```
+
+清单 18.37：使用早停和模型检查点回调拟合 MLP 模型的示例。
+
+我们不再关心训练期间的损失线图；它与上一次运行的情况基本相同。相反，我们希望从文件加载已保存的模型，并评估其在测试数据集上的表现。
+
+```
+# load the saved model
+saved_model = load_model('best_model.h5')
+# evaluate the model
+_, train_acc = saved_model.evaluate(trainX, trainy, verbose=0)
+_, test_acc = saved_model.evaluate(testX, testy, verbose=0)
+print('Train: %.3f, Test: %.3f' % (train_acc, test_acc))
+```
+
+清单 18.38：加载并评估已保存模型检查点的示例。
+
+包含这些更改的完整示例如下所示。
