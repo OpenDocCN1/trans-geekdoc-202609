@@ -1,0 +1,75 @@
+
+The machine trained with the triplet could start checking for the presence of predefined attributes in any order from the set `A`(`y`). Suppose it starts checking whether or not a given object has the attribute `y`[1]. Then, `c`[11](0, 1) = 1 indicates `y`[11] = `c`[11] and `c`[11](0, 1) = 0 indicates `y`[1] could pick a value from {`c`[21], `c`[22, …, `c`[*c*[1]1]}![si16_e](images/S0169716122000554/si16_e.png) or the attribute `y`[1] may not be present in a given object. If `y`[11] picks one of the values in {`c`[11], `c`[21], …, `c`[*c*[1]1]}![si17_e](images/S0169716122000554/si17_e.png), then the machine will decide that the object `O` has the attribute `y`[1] and proceed to check if other attributes of `O` are present. If `c`[11](0, 1) = 0 and `y`[1] does not pick any value from {`c`[21], `c`[22, …, `c`[*c*[1]1]}![si16_e](images/S0169716122000554/si16_e.png), then the machine will decide that the given object is not `O`. If `c`[*c*[*j*]1](0, 1) = 1![si19_e](images/S0169716122000554/si19_e.png) for some `j`, then the machine starts checking whether or not a given object has the attribute `y`[2] in the same way described for `y`[1]. If `c`[*c*[*j*]2](0, 1) = 1![si20_e](images/S0169716122000554/si20_e.png) for some `j`, then the machine starts checking whether or not a given object has the attribute `y`[3]. If `c`[*c*[*j*]2](0, 1) = 0![si21_e](images/S0169716122000554/si21_e.png) for all `j`, then the given object is decided by the machine as not `O`. The process of checking for the attributes in `A`(`y`) by the machine continues only if the previous attribute checked within `A`(`y`) was present. When the set `A`(`y`) exists in a given object, the machine classifies the object as `O`, else a given object is classified as not `O`. The number of all possible permutations of values of attributes that could determine a given object `O` is
+
+$\\begin{array}{r} {c\_{1} \\cdot c\_{2} \\cdot \\cdot \\cdot \\cdot \\cdot c\_{a} = \\prod\\limits\_{1}^{a}c\_{j}.} \\\\ \\end{array}$
+
+![si22_e](images/S0169716122000554/si22_e.png)  (3)
+
+Let `E`[1] be an event such that the object `O` is determined with a combination of `Y` (`c`) values, say, {`c`[11], `c`[22], …, `c`[*c*[*a*]*a*]}![si23_e](images/S0169716122000554/si23_e.png), and let `E`[2] be another event that the given object is determined as `O` with a combination of `Y` (`c`) values different than {`c`[11], `c`[22], …, `c`[*c*[*a*]*a*]}![si23_e](images/S0169716122000554/si23_e.png), then `E`[1]≠`E`[2]. A machine trained with {`O`, `A`(`y`), `Y` (`c`)} could determine an object as `O` from any of the `E`[*k*] set of distinct events (see [Fig. 1](#Ch001_1-8_S0169716122000554.xhtml#f0010))
+
+![Fig. 1 Occurrence of all possible distinct events Ek are trained into EDLMs. The elements within each row of Y (c) could be different, but the cardinalities of the events Ek are identical.](images/S0169716122000554/f01-01-9780443184307.jpg)
+
+[Fig. 1](#Ch001_1-8_S0169716122000554.xhtml#B-f0010) Occurrence of all possible distinct events *E*[*k*] are trained into EDLMs. The elements within each row of *Y* (`c`) could be different, but the cardinalities of the events *E*[*k*] are identical.
+
+$\\begin{array}{r} {E\_{k}\\;\\text{for}\\; k = 1,2,\\ldots,\\prod\\limits\_{1}^{a}c\_{j}.} \\\\ \\end{array}$
+
+![si25_e](images/S0169716122000554/si25_e.png)  (4)
+
+Let Ω be the set of all objects in the universe with distinct `E`[*k*] values in Eq. ([4](#Ch001_1-8_S0169716122000554.xhtml#fo0025)) which can be classified as `O`. Then,
+
+$\\begin{array}{r} {\\left| \\Omega \\right| \\leq \\prod\\limits\_{1}^{a}c\_{j}.} \\\\ \\end{array}$
+
+![si26_e](images/S0169716122000554/si26_e.png)  (5)
+
+Let Σ be the set of all objects in the universe, and two or more objects have identical `E`[*k*] values which can be classified as `O`. Then,
+
+$\\begin{array}{r} {\\left| \\Sigma \\right| > \\prod\\limits\_{1}^{a}c\_{j}.} \\\\ \\end{array}$
+
+![si27_e](images/S0169716122000554/si27_e.png)  (6)
+
+Alternatively, if ([6](#Ch001_1-8_S0169716122000554.xhtml#fo0035)) holds, then two or more objects in the universe that can be classified as `O` detected by the machine have identical sets in `E`[*k*]. When an arbitrary object not known whether it belongs to Ω or Σ is asked to a machine trained with the triplet, then the machine can identify whether or not the object is `O` with probability one, because one or other `E`[*k*] for `k` = 1, 2, …![si28_e](images/S0169716122000554/si28_e.png) is either attained or the given object does not satisfy any of the `E`[*k*]. If none of the `E`[*k*] occurred, then the machine will classify the given object as not `O`.
+
+Remark 1
+
+Listing the two sets `A`(`y`) and `Y` (`c`) for all kinds of objects might be impossible even if `A`(`y`) is not dynamic. [Theorem 1](#Ch001_1-8_S0169716122000554.xhtml#enun0010) although can assure the detection of `O` with probability 1 under the conditions specified, the procedure to detect `O` becomes impossible unless each and every possible trait or attribute of `O` is known and the values of each attribute are predetermined.
+
+Theorem 2
+
+Suppose the given object is detected by the machine as `O`. Then,
+
+$\\begin{array}{r} {P\\left( {\\bigcup\\limits\_{k = 1}^{a}E\_{k}} \\right) = 1.} \\\\ \\end{array}$
+
+![si29_e](images/S0169716122000554/si29_e.png)
+
+Proof
+
+Probability that one of the values of the attribute `y`[1] is picked by the machine is $\\frac{1}{c\_{1}}$![si30_e](images/S0169716122000554/si30_e.png), probability that one of the values of the attribute `y`[2] is picked by the machine is $\\frac{1}{c\_{2}},$![si31_e](images/S0169716122000554/si31_e.png) and so on. Probability of occurrence of `E`[*k*] for some `k` will be
+
+$\\begin{array}{r} {\\frac{1}{c\_{1}} \\cdot \\frac{1}{c\_{2}} \\cdot \\cdot \\cdot \\cdot \\frac{1}{c\_{a}} = \\frac{1}{\\Pi\_{j = 1}^{a}c\_{j}}} \\\\ \\end{array}$
+
+![si32_e](images/S0169716122000554/si32_e.png)  (7)
+
+Therefore,
+
+$\\begin{aligned} {Prob\\left( {\\bigcup\\limits\_{k = 1}^{a}E\_{k}} \\right)} & {= \\frac{1\\Pi\_{j = 1}^{a}c\_{j}}{+}\\frac{1\\Pi\_{j = 1}^{a}c\_{j}}{+}\\cdots + \\frac{1}{\\Pi\_{j = 1}^{a}c\_{j}}(a\\;\\text{times}) = 1.} \\\\ \\end{aligned}$
+
+![si33_e](images/S0169716122000554/si33_e.png)  (8)
+
+In the right hand side of Eq. ([8](#Ch001_1-8_S0169716122000554.xhtml#fo0050)), we have used the property that the events `E`[*k*] are disjoint.
+
+![Fig. 2 Suppose a particular type of stone from the planet Mars, say, O(A) whose attributes do not change with time is collected and information about the stone in the form of A(y) and Y (c) is stored. Then EDLMs can assist in determining any arbitrary stone in the universe is O(A) or not. Here O1(A), O\_{2}(A),\\ldots,O\_{7}(A)si1_e are stones of different sizes and different shapes of the same kind.](images/S0169716122000554/f01-02-9780443184307.jpg)
+
+[Fig. 2](#Ch001_1-8_S0169716122000554.xhtml#B-f0015) Suppose a particular type of stone from the planet Mars, say, *O*(*A*) whose attributes do not change with time is collected and information about the stone in the form of *A*(*y*) and *Y* (*c*) is stored. Then EDLMs can assist in determining any arbitrary stone in the universe is *O*(*A*) or not. Here *O*[1](*A*), *O*[2](*A*), …, *O*[7](*A*)![si1_e](images/S0169716122000554/si1_e.png) are stones of different sizes and different shapes of the same kind.
+
+Remark 2
+
+Suppose the given object is detected by the machine as `O`. Then,
+
+$\\begin{array}{r} {P\\left( {\\bigcap\\limits\_{k = 1}^{a}E\_{k}} \\right) = \\varnothing.} \\\\ \\end{array}$
+
+![si34_e](images/S0169716122000554/si34_e.png)
+
+When an object is detected as `O`, then only one of the events `E`[*k*] will occur for some `k`, and as soon as that occurs, the target is achieved and there is no scope for other events to occur [(Fig. 2)](#Ch001_1-8_S0169716122000554.xhtml#f0015).
+
+##  3: Conclusions
+

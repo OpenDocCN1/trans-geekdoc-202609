@@ -1,0 +1,64 @@
+
+-   [Perov I., Gao D., Chervoniy N., Liu K., Marangonda S., Umé C., Dpfks M., Facenheim C.S., RP L., Jiang J., et al.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0230) `Deepfacelab`: 集成、灵活且可扩展的换脸框架。`arXiv preprint:2005.05535`。2020。
+
+-   [Pu J., Mangaokar N., Kelly L., Bhattacharya P., Sundaram K., Javed M., Wang B., Viswanath B.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0235) `Deepfake videos in the wild: analysis and detection`。在：2021：981–992。`Web Conference`。
+
+-   [Qian Y., Yin G., Sheng L., Chen Z., Shao J.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0240) `Thinking in frequency`: 通过挖掘频率感知线索进行人脸伪造检测。在：Springer；2020：86–103。`ECCV`。
+
+-   [Raja K., Venkatesh S., Christoph Busch R.B., et al.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0245) `Transferable deep-cnn features for detecting digital and print-scanned morphed face images`。在：2017：10–18。`CVPRW`。
+
+-   [Robertson D.J., Kramer R.S.S., Burton A.M.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0250) `Fraudulent ID using face morphs: experiments on human and automatic recognition`。`PLoS One`。2017;12(3):e0173319。
+
+-   [Rossler A., Cozzolino D., Verdoliva L., Riess C., Thies J., Nießner M.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0255) `Faceforensics++`: 学习检测操纵的面部图像。在：2019：1–11。`ICCV`。
+
+-   [Sabir E., Cheng J., Jaiswal A., AbdAlmageed W., Masi I., Natarajan P.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0260) `Recurrent convolutional strategies for face manipulation detection in videos`。`Interfaces (GUI)`。2019;3(1):80–87。
+
+-   [Sarkar E., Korshunov P., Colbois L., Marcel S.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0265) `Vulnerability analysis of face morphing attacks from landmarks and generative adversarial networks`。`arXiv preprint:2012.05344`。2020。
+
+-   [Scherhag U., Budhrani D., Gomez-Barrero M., Busch C.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0270) `Detecting morphed face images using facial landmarks`。在：2018：444–452。`ICISP`。
+
+-   [Scherhag U., Rathgeb C., Busch C.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0275) `Morph deterction from single face image: a multi-algorithm fusion approach`。在：2018：6–12。`ICBEA`。
+
+-   [Scherhag U., Rathgeb C., Merkle J., Breithaupt R., Busch C.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0280) `Face recognition systems under morphing attacks: a survey`。`IEEE Access`。2019;7:23012–23026。
+
+-   [Seibold C., Samek W., Hilsmann A., Eisert P.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0285) `Detection of face morphing attacks by deep learning`。在：2017：107–120。`IWDW`。
+
+-   [Singh R., Agarwal A., Singh M., Nagpal S., Vatsa M.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0290) `On the robustness of face recognition algorithms against attacks and bias`。在：13583–13589。`AAAI`。2020;vol. 34 9。
+
+-   [Tan M., Le Q.V.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0295) `EfficientNet`: 重新思考卷积神经网络的模型缩放。在：Chaudhuri K., Salakhutdinov R., eds. 6105–6114。`Proceedings of the International Conference on Machine Learning`。2019。;vol. 97。[http://proceedings.mlr.press/v97/tan19a.html](http://proceedings.mlr.press/v97/tan19a.html)。
+
+-   [Trinh L., Liu Y.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0300) `An examination of fairness of AI models for deepfake detection`。`arXiv preprint:2105.00558`。2021。
+
+-   [Vaas L.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0305) * `Deepfakes have doubled, overwhelmingly targeting women.` 2019 [https://nakedsecurity.sophos.com/2019/10/09/deepfakes-have-doubled-overwhelmingly-targeting-women/](https://nakedsecurity.sophos.com/2019/10/09/deepfakes-have-doubled-overwhelmingly-targeting-women/)。
+
+-   [Venkatesh S., Ramachandra R., Raja K., Spreeuwers L., Veldhuis R., Busch C.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0310) `Detecting morphed face attacks using residual noise from deep multi-scale context aggregation network`。在：2020：280–289。`WACV`。
+
+-   [Venkatesh S., Ramachandra R., Raja K., Busch C.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0315) `Face morphing attack generation & detection: a comprehensive survey`。`IEEE TTS`。2021;2(3):128–145。doi:10.1109/TTS.2021.3066254。
+
+-   [Wang M., Deng W.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0320) `Deep face recognition: a survey`。`Neurocomputing`。2021;429:215–244。
+
+-   [Wang J., Wu Z., Chen J., Jiang Y.-G.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0325) `M2tr`: Multi-modal multi-scale transformers for deepfake detection。`arXiv preprint:2104.09770`。2021。
+
+-   [Wolberg G.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0330) `Recent advances in image morphing`。在：1996：64–71。`IEEE CG International`。
+
+-   [Wolberg G.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0335) `Image morphing: a survey`。`Vis. Comput.` 1998;14(8):360–372。
+
+-   [Yang X., Li Y., Lyu S.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0340) `Exposing deep fakes using inconsistent head poses`。在：2019：8261–8265。`ICASSP`。
+
+-   [Zhao H., Zhou W., Chen D., Wei T., Zhang W., Yu N.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0345) `Multi-attentional deepfake detection`。在：2021：2185–2194。`CVPR`。
+
+-   [Zi B., Chang M., Chen J., Ma X., Jiang Y.-G.](#Ch008_223-241_S016971612200058X.xhtml#B-bb0350) `Wilddeepfake: a challenging real-world dataset for deepfake detection`。在：2020：2382–2390。`ACM MM`。
+
+* * *
+
+# Index
+
+![](images/S0169716123000196/main-0.png)![](images/S0169716123000196/main-1.png)![](images/S0169716123000196/main-2.png)![](images/S0169716123000196/main-3.png)![](images/S0169716123000196/main-4.png)![](images/S0169716123000196/main-5.png)![](images/S0169716123000196/main-6.png)![](images/S0169716123000196/main-7.png)![](images/S0169716123000196/main-8.png)![](images/S0169716123000196/main-9.png)
+
+* * *
+
+1. ^([a](#Ch002_9-27_S0169716122000591.xhtml#xfn0010 "label")) [https://www.nlm.nih.gov/medline/medline_overview.html](https://www.nlm.nih.gov/medline/medline_overview.html).[↩](#fnref1)
+
+2. ^([a](#Ch003_29-58_S0169716123000019.xhtml#xfn0010 "label")) The term “manifold” is used to refer to the existence of lower-dimensional representations for natural images. This is a commonly used term in the generative model area. However, this definition may not satisfy the exact condition of manifolds defined in mathematics.[↩](#fnref2)
+
+3. ^([a](#Ch008_223-241_S016971612200058X.xhtml#xfn0010 "label")) The third column contains the images generated using face morphing and the fourth column are the images generated using deepfake technique.[↩](#fnref3)
