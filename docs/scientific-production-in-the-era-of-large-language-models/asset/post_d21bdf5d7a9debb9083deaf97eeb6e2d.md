@@ -1,0 +1,48 @@
+
+We obtained 101.6 million citations to prior works from bioRxiv, and SSRN to two large-scale citation databases: OpenAlex and Semantic Scholar (see SM S1.6). We then used the event study methodology (see the first figure) to compare authors’ citation behavior before and after they adopted LLMs, relative to a control group of nonusers (see SM S3.3). Our analysis explored three characteristics of cited references: publication format (citations to books), time lag (median reference age), and impact of cited work (mean log citations of referenced documents).
+
+We found that LLM use alters authors’ citation behavior, seemingly steering them toward a more diverse knowledge base (see fig. S4). LLM adopters overall were 11.9% more likely to cite books (see fig. S4D), but the effect is not statistically significant in one of the archives, SSRN. Adopters also cited documents that are on average 0.379 years younger (see fig. S4E) and have accumulated fewer citations (2.34% lower citation impact; see fig. S4F). Although the magnitude of these effects varied by preprint repository, the overall pattern appears broadly consistent (see fig. S4, G to I).
+
+We present consistent evidence that AI assistance directs scholars to a broader body of knowledge (see the second figure and fig. S4). Researchers face time and attention constraints that limit their ability to process the expanding universe of research (14). LLMs appear to help researchers overcome obstacles in discovering pertinent literature.
+
+These findings suggest that although LLMs may obscure signals of authorial effort, they broaden the path to knowledge discovery. A common concern has been that an AI-assisted search might reinforce the existing scientific canons. We found, however, that LLM adoption has had the opposite effect. Both AI-assisted search behavior and author citation patterns show a substantial shift toward a more diverse knowledge base, one that includes more books as well as younger and less-cited scholarship. This broadening of attention suggests that LLMs help researchers overcome cognitive constraints that have limited their ability to engage with the ever-expanding universe of scientific literature.
+
+## LIMITATIONS, IMPLICATIONS, AND FUTURE DIRECTIONS
+
+In this study, we explored the impact of LLMs on scientific production, but our findings are subject to several limitations that offer avenues for future research (see SM S4 and S5). First, interpreting the estimated effects as causal requires assumptions that are difficult to satisfy, given data limitations that are inherent in studying LLMs “in the wild.” Our AI detection method is imperfect and susceptible to several challenges (see SM S5.1 to S5.4): It relies on abstracts rather than full text (see SM S5.5), it cannot definitively identify which specific co-author on a team used an LLM (SM S5.6), and it almost certainly fails to detect use by authors who heavily edit LLM-assisted text. Furthermore, the nonrandom adoption of Gen AI tools creates the potential for self-selection bias, and our focus on posted preprints means the “adoption time” may be endogenous to productivity. The supplementary materials contain many additional analyses to evaluate the scope of these issues, and although our results appear robust, it is important for future work to continue to identify methodological strategies to address these challenges.
+
+Second, our findings represent a snapshot of a rapidly evolving technology. Our analysis is based on data generated before the arrival of more advanced reasoning models and deep-research capabilities. As models improve and scientists discover new ways to integrate them into their work, the future impact of these technologies will likely dwarf the effects that we have highlighted here. This presents a crucial direction for future research: to continuously track how the scientific enterprise incorporates successive generations of AI models. Studies will need to examine whether the effects we have documented are amplified, altered, or even reversed as these more powerful tools are integrated into the scientific workflow.
+
+There are many directions for future research. A primary avenue is more nuanced explorations of how LLMs are affecting scientific practice. Advancement in science has long been constrained by access to informal resources and knowledge. One hypothesis is that LLMs provide a scalable substitute for this informal knowledge, offering guidance on everything from experimental design to navigating a field’s hidden curriculum, thereby leveling the scientific playing field. Another interesting avenue for future research is the potential for LLMs to transcend disciplinary boundaries. Over time, academic disciplines have developed deep knowledge bases that are often communicated through discipline-specific jargon. If LLMs help outsiders to overcome this hurdle, siloed disciplines may more productively engage with one another.
+
+Our findings show that LLMs have begun to reshape scientific production. These changes portend an evolving research landscape in which the value of English fluency will recede but the importance of robust quality-assessment frameworks and deep methodological scrutiny is paramount. For peer reviewers and journal editors, and the community, more broadly, who create, consume, and apply this work, this represents a major issue. As a shortcut to (imperfectly) screen scientific research, writing characteristics are fast becoming uninformative signals, just as the quantity of scientific communication surges. As traditional heuristics break down, editors and reviewers may increasingly rely on status markers such as author pedigree and institutional affiliation as signals of quality, ironically counteracting the democratizing effects of LLMs on scientific production.
+
+One potential response is to leverage the same technology to assist in evaluating manuscripts. Specialized “reviewer agents” could flag methodological inconsistencies, verify claims, and even assess novelty. Whether this scalable approach will help editors and reviewers focus on substance over surface-level signals or introduce new and unforeseen challenges to the scientific process is a critical uncertainty.
+
+## REFERENCES AND NOTES
+
+- 1. J. Gao, D. Wang, Nat. Hum. Behav. 8, 2281 (2024).
+- 2. Q. Hao, F. Xu, Y. Li, J. Evans, arXiv:2412.07277 (2024).
+- 3. K. Swanson, W. Wu, N. L. Bulaong, J. E. Pak, J. Zou, Nature 646, 716 (2025).
+- 4. M. Bintz et al., Nature 644, 1002 (2025).
+- 5. W. Liang et al., Nat. Hum. Behav. 10.1038/s41562-025-02273-8 (2025).
+- 6. E. Zhou, D. Lee, Proc. Natl. Acad. Sci. U.S.A. Nexus 3, pgae052 (2024).
+- 7. S. Noy, W. Zhang, Science 381, 187 (2023).
+- 8. E. Brynjolfsson, D. L. I. Raymond, Q. J. Econ. 140, 889 (2025).
+- 9. C. Bazerman, Shaping Written Knowledge: The Genre and Activity of the Experimental Article in Science (Univ. Wisconsin Press, 1988).
+- 10. H. Peng, H. S. Qiu, H. B. Fosse, B. Uzzi, Proc. Natl. Acad. Sci. U.S.A. 121, e2320066121 (2024).
+- 11. Z. Wojtowicz, S. DeDeo, Proc. Conf. AAAI Artif. Intell. 39, 1592 (2025).
+- 12. Y. Tian, Y. Liu, Y. Bu, J. Liu, arXiv:2501.00367 (2024).
+- 13. A. Alagaba et al., arXiv:2405.15739 (2024).
+- 14. B. F. Jones, Rev. Econ. Stud. 76, 283 (2009).
+- 15. K. Kusumegi et al., Replication materials for “Scientific production in the era of large language models.”: Figshare (2025): https://doi.org/10.6084/m9.figshare.30359437.
+
+## ACKNOWLEDGMENTS
+
+K.K. and X.Y. contributed equally to this work. The authors thank M. Naaman, W. Cong, W. Zhu, J. Mateos-Garcia, and seminar participants at the Complexity Science Hub (Vienna); the University of California, Los Angeles, Price Center; the Haas Macro Research Lunch seminar; and the Columbia Management, Analytics, and Data conference for helpful discussions. We also thank A. Cui for providing academic access to the GPTZero API. This work is supported by the National Science Foundation under grant nos. 2311521, 2404035, and 2412389. All data and code are available at Figshare (15).
+
+## SUPPLEMENTARY MATERIALS
+
+science.org/doi/10.1126/science.adw3000
+
+¹Department of Information Science, Cornell University, Ithaca, NY, USA. ²Haas School of Business, University of California, Berkeley, Berkeley, CA, USA. Email: mdevaan@haas.berkeley.edu; tstuart@haas.berkeley.edu; yian.yin@cornell.edu
