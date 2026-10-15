@@ -1,0 +1,277 @@
+
+array, [`[68–69](#ch03.html#page_68)`](`#ch03.html#page_68`), [`[70–73](#ch03.html#page_70)`](`#ch03.html#page_70`)
+
+assigning values to, [`[64–65](#ch03.html#page_64)`](`#ch03.html#page_64`)
+
+defined, [`[61](#ch03.html#page_61)`](`#ch03.html#page_61`), [`[63](#ch03.html#page_63)`](`#ch03.html#page_63`)
+
+escape characters in strings, [`[69](#ch03.html#page_69)`](`#ch03.html#page_69`)
+
+naming, [`[63–64](#ch03.html#page_63)`](`#ch03.html#page_63`)
+
+objects as, [`[88](#ch03.html#page_88)`](`#ch03.html#page_88`)
+
+placement of operators with, [`[92](#ch03.html#page_92)`](`#ch03.html#page_92`)
+
+reassigning results to same, [`[95–96](#ch03.html#page_95)`](`#ch03.html#page_95`)
+
+text assigned to, [`[66](#ch03.html#page_66)`](`#ch03.html#page_66`)
+
+tracking session, [`[295](#ch08.html#page_295)`](`#ch08.html#page_295`)
+
+using in `SELECT` query, [`[244–245](#ch07.html#page_244)`](`#ch07.html#page_244`)
+
+using with quotation marks, [`[67–68](#ch03.html#page_67)`](`#ch03.html#page_67`)
+
+Vertical Split view, [`[232](#ch07.html#page_232)`](`#ch07.html#page_232`)
+
+viewing table definition files, [`[175](#ch06.html#page_175)`](`#ch06.html#page_175`)
+
+virtual hosts, [`[40–47](#ch02.html#page_40)`](`#ch02.html#page_40`)
+
+configuring on Mac OS X, [`[45–47](#ch02.html#page_45)`](`#ch02.html#page_45`)
+
+creating, [`[40](#ch02.html#page_40)`](`#ch02.html#page_40`), [`[41](#ch02.html#page_41)`](`#ch02.html#page_41`)
+
+`getimagesize()` difficulties with site-root-relative path, [`[446](#ch12.html#page_446)`](`#ch12.html#page_446`)
+
+manually adding on Mac systems, [`[46–47](#ch02.html#page_46)`](`#ch02.html#page_46`)
+
+multiple websites vs., [`[40–41](#ch02.html#page_40)`](`#ch02.html#page_40`)
+
+setting up on Windows, [`[42–45](#ch02.html#page_42)`](`#ch02.html#page_42`)
+
+unsupported on IIS, [`[41](#ch02.html#page_41)`](`#ch02.html#page_41`)
+
+using, [`[47](#ch02.html#page_47)`](`#ch02.html#page_47`)
+
+### **W**
+
+WampServer
+
+activating configuration changes for, [`[39](#ch02.html#page_39)`](`#ch02.html#page_39`)
+
+integrating PHP into IIS with, [`[29](#ch02.html#page_29)`](`#ch02.html#page_29`)
+
+locating document root for web server, [`[30](#ch02.html#page_30)`](`#ch02.html#page_30`)
+
+using subfolder of server root with, [`[48](#ch02.html#page_48)`](`#ch02.html#page_48`)
+
+warnings, [`[108](#ch03.html#page_108)`](`#ch03.html#page_108`)
+
+web pages
+
+adding log out link to, [`[188–190](#ch06.html#page_188)`](`#ch06.html#page_188`)
+
+creating master/detail set, [`[437–441](#ch12.html#page_437)`](`#ch12.html#page_437`)
+
+effect of PHP code for browsers requesting, [`[6](#ch01.html#page_6)`](`#ch01.html#page_6`)
+
+ensuring function if JavaScript disabled, [`[418](#ch12.html#page_418)`](`#ch12.html#page_418`), [`[419](#ch12.html#page_419)`](`#ch12.html#page_419`)
+
+failure to load next, [`[184](#ch06.html#page_184)`](`#ch06.html#page_184`)
+
+hiding part of page when recordset empty, [`[206–207](#ch06.html#page_206)`](`#ch06.html#page_206`)
+
+inserting widget in, [`[427–430](#ch12.html#page_427)`](`#ch12.html#page_427`)
+
+password-protecting, [`[187–188](#ch06.html#page_187)`](`#ch06.html#page_187`), [`[253](#ch07.html#page_253)`](`#ch07.html#page_253`)
+
+refreshing without reloading, [`[448–450](#ch12.html#page_448)`](`#ch12.html#page_448`)
+
+using PHP with, [`[5–6](#ch01.html#page_5)`](`#ch01.html#page_5`)
+
+web servers. *See also* Apache web servers; PHP testing environments; validating input
+
+activating PHP configuration changes for, [`[39](#ch02.html#page_39)`](`#ch02.html#page_39`)
+
+creating multiple, [`[52–53](#ch02.html#page_52)`](`#ch02.html#page_52`)
+
+defined, [`[28](#ch02.html#page_28)`](`#ch02.html#page_28`)
+
+handling asynchronous requests and responses, [`[7](#ch01.html#page_7)`](`#ch01.html#page_7`)
+
+locating document root, [`[30](#ch02.html#page_30)`](`#ch02.html#page_30`)
+
+removing spaces from Linux filenames, [`[318–321](#ch09.html#page_318)`](`#ch09.html#page_318`)
+
+storing uploaded files on, [`[334](#ch09.html#page_334)`](`#ch09.html#page_334`)
+
+support for URL rewriting, [`[457–458](#ch12.html#page_457)`](`#ch12.html#page_457`)
+
+testing and remote, [`[52–53](#ch02.html#page_52)`](`#ch02.html#page_52`)
+
+tracking logged in users on, [`[188](#ch06.html#page_188)`](`#ch06.html#page_188`)
+
+understanding PHP configuration for test, [`[32–33](#ch02.html#page_32)`](`#ch02.html#page_32`)
+
+uploading files to, [`[304](#ch09.html#page_304)`](`#ch09.html#page_304`)
+
+websites. *See also* creating PHP sites; deploying sites online; PHP testing environments
+
+creating internal links in, [`[40](#ch02.html#page_40)`](`#ch02.html#page_40`)
+
+location of Connections folder for live, [`[173](#ch06.html#page_173)`](`#ch06.html#page_173`)
+
+site definitions for, [`[48–52](#ch02.html#page_48)`](`#ch02.html#page_48`), [`[54–56](#ch02.html#page_54)`](`#ch02.html#page_54`)
+
+site root, [`[40](#ch02.html#page_40)`](`#ch02.html#page_40`), [`[55](#ch02.html#page_55)`](`#ch02.html#page_55`), [`[135](#ch04.html#page_135)`](`#ch04.html#page_135`), [`[475](#ch13.html#page_475)`](`#ch13.html#page_475`)
+
+using virtual hosts vs. multiple, [`[40–41](#ch02.html#page_40)`](`#ch02.html#page_40`)
+
+`WHERE` clause, [`[379–380](#ch11.html#page_379)`](`#ch11.html#page_379`), [`[381–382](#ch11.html#page_381)`](`#ch11.html#page_381`)
+
+`while` loops, [`[97](#ch03.html#page_97)`](`#ch03.html#page_97`)
+
+Widget dialog box, [`[428](#ch12.html#page_428)`](`#ch12.html#page_428`)
+
+widgets. *See also* Adobe Widget Browser; LightBox Gallery widget
+
+choosing from Adobe Exchange, [`[422–424](#ch12.html#page_422)`](`#ch12.html#page_422`)
+
+creating preset for, [`[425–427](#ch12.html#page_425)`](`#ch12.html#page_425`)
+
+dependent files for, [`[428](#ch12.html#page_428)`](`#ch12.html#page_428`), [`[429](#ch12.html#page_429)`](`#ch12.html#page_429`)
+
+finding, [`[420–421](#ch12.html#page_420)`](`#ch12.html#page_420`)
+
+inserting in page, [`[427–430](#ch12.html#page_427)`](`#ch12.html#page_427`)
+
+populating dynamically, [`[430–437](#ch12.html#page_430)`](`#ch12.html#page_430`)
+
+previewing, [`[423–424](#ch12.html#page_423)`](`#ch12.html#page_423`)
+
+revising in child themes, [`[123](#ch04.html#page_123)`](`#ch04.html#page_123`)
+
+Windows OS systems. *See also* IIS
+
+avoiding formatting recipient’s address for, [`[259](#ch08.html#page_259)`](`#ch08.html#page_259`)
+
+Bcc recipient’s address visible in, [`[259](#ch08.html#page_259)`](`#ch08.html#page_259`)
+
+drop shadow rendering in Live View, [`[134](#ch04.html#page_134)`](`#ch04.html#page_134`)
+
+editing php.ini in, [`[37](#ch02.html#page_37)`](`#ch02.html#page_37`)
+
+enabling other PHP extensions, [`[38–39](#ch02.html#page_38)`](`#ch02.html#page_38`)
+
+integrating PHP into IIS, [`[29](#ch02.html#page_29)`](`#ch02.html#page_29`)
+
+permissions uploading files in IIS, [`[309](#ch09.html#page_309)`](`#ch09.html#page_309`)
+
+setting remote server permissions for file uploads, [`[469–470](#ch13.html#page_469)`](`#ch13.html#page_469`)
+
+using Apache for virtual hosts, [`[41](#ch02.html#page_41)`](`#ch02.html#page_41`)
+
+virtual host setup in, [`[42–45](#ch02.html#page_42)`](`#ch02.html#page_45`)
+
+WordPress
+
+activating child theme, [`[122–127](#ch04.html#page_122)`](`#ch04.html#page_122`)
+
+adding media files to, [`[126–127](#ch04.html#page_126)`](`#ch04.html#page_126`)
+
+configuring for use with MySQL database, [`[113–114](#ch04.html#page_113)`](`#ch04.html#page_113`)
+
+Dashboard for, [`[117](#ch04.html#page_117)`](`#ch04.html#page_117`)
+
+developing themes and child themes, [`[119–120](#ch04.html#page_119)`](`#ch04.html#page_119`)
+
+editing page template for, [`[136–139](#ch04.html#page_136)`](`#ch04.html#page_136`)
+
+enabling site-specific code hints for, [`[135](#ch04.html#page_135)`](`#ch04.html#page_135`)
+
+installing in PHP testing environment, [`[115–118](#ch04.html#page_115)`](`#ch04.html#page_115`)
+
+preparing to style child themes, [`[120–122](#ch04.html#page_120)`](`#ch04.html#page_120`)
+
+replacing values and files when security breached, [`[116](#ch04.html#page_116)`](`#ch04.html#page_116`)
+
+structure of, [`[112](#ch04.html#page_112)`](`#ch04.html#page_112`)
+
+styling child themes, [`[128–134](#ch04.html#page_128)`](`#ch04.html#page_128`)
+
+WPI (Web Platform Installer), [`[29](#ch02.html#page_29)`](`#ch02.html#page_29`)
+
+### **X**
+
+XAMPP
+
+activating configuration changes for, [`[39](#ch02.html#page_39)`](`#ch02.html#page_39`)
+
+integrating PHP into IIS with, [`[29](#ch02.html#page_29)`](`#ch02.html#page_29`)
+
+locating document root for web server, [`[30](#ch02.html#page_30)`](`#ch02.html#page_30`)
+
+registering Windows-based virtual hosts in Apache, [`[42](#ch02.html#page_42)`](`#ch02.html#page_42`), [`[43](#ch02.html#page_43)`](`#ch02.html#page_43`)
+
+using subfolder of server root with, [`[48](#ch02.html#page_48)`](`#ch02.html#page_48`)
+
+XHTML (Extensible Hypertext Markup Language), [`[4](#ch01.html#page_4)`](`#ch01.html#page_4`)
+
+XML (Extensible Markup Language), [`[7](#ch01.html#page_7)`](`#ch01.html#page_7`)
+
+### **Y**
+
+`YEAR` data type, [`[154](#ch05.html#page_154)`](`#ch05.html#page_154`), [`[155](#ch05.html#page_155)`](`#ch05.html#page_155`)
+
+### **Z**
+
+Zend, [`[8](#ch01.html#page_8)`](`#ch01.html#page_8`)
+
+Zend Framework (ZF). *See also specific ZF components*
+
+about, [`[4](#ch01.html#page_4)`](`#ch01.html#page_4`), [`[212](#ch07.html#page_212)`](`#ch07.html#page_212`), [`[213–214](#ch07.html#page_213)`](`#ch07.html#page_213`)
+
+adding extra columns to `users` table, [`[220–221](#ch07.html#page_220)`](`#ch07.html#page_220`)
+
+adding unique index to `users` table, [`[219–220](#ch07.html#page_219)`](`#ch07.html#page_219`)
+
+authenticating user credentials, [`[247–255](#ch07.html#page_247)`](`#ch07.html#page_247`)
+
+building validation scripts, [`[230–236](#ch07.html#page_230)`](`#ch07.html#page_230`)
+
+chaining validators to test multiple criteria, [`[230](#ch07.html#page_230)`](`#ch07.html#page_230`), [`[234–235](#ch07.html#page_234)`](`#ch07.html#page_234`)
+
+code hinting for `Zend_Auth,` [`[250](#ch07.html#page_250)`](`#ch07.html#page_250`)
+
+components of, [`[213](#ch07.html#page_213)`](`#ch07.html#page_213`)
+
+controlling user access with, [`[248–249](#ch07.html#page_248)`](`#ch07.html#page_248`)
+
+database connections using `Zend_Db,` [`[223–226](#ch07.html#page_223)`](`#ch07.html#page_223`)
+
+documentation for, [`[215](#ch07.html#page_215)`](`#ch07.html#page_215`)
+
+handling exceptions with `try` and `catch` blocks, [`[226–227](#ch07.html#page_226)`](`#ch07.html#page_226`)
+
+improving MySQL registration form in, [`[218–223](#ch07.html#page_218)`](`#ch07.html#page_218`)
+
+input validation in, [`[227–229](#ch07.html#page_227)`](`#ch07.html#page_227`)
+
+installing, [`[214–215](#ch07.html#page_214)`](`#ch07.html#page_214`)
+
+loading class files for, [`[221–223](#ch07.html#page_221)`](`#ch07.html#page_221`)
+
+logging out with `Zend_Auth,` [`[253–254](#ch07.html#page_253)`](`#ch07.html#page_253`)
+
+password-protecting pages, [`[253](#ch07.html#page_253)`](`#ch07.html#page_253`)
+
+preserving input when validation fails, [`[236–237](#ch07.html#page_236)`](`#ch07.html#page_236`)
+
+querying database in, [`[244–245](#ch07.html#page_244)`](`#ch07.html#page_244`)
+
+scripting error messages for login, [`[249–251](#ch07.html#page_249)`](`#ch07.html#page_249`)
+
+site-specific code hints for, [`[215–218](#ch07.html#page_215)`](`#ch07.html#page_215`)
+
+testing login scripts, [`[251–252](#ch07.html#page_251)`](`#ch07.html#page_251`)
+
+uploading to remote server, [`[468–469](#ch13.html#page_468)`](`#ch13.html#page_468`)
+
+User Authentication server behaviors vs. authentication with, [`[247](#ch07.html#page_247)`](`#ch07.html#page_247`)
+
+using `Zend_Mail,` [`[261–263](#ch08.html#page_261)`](`#ch08.html#page_261`)
+
+validating strong passwords, [`[235–236](#ch07.html#page_235)`](`#ch07.html#page_235`)
+

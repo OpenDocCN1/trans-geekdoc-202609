@@ -1,0 +1,108 @@
+
+However, what happens if both variables have the same name? In function_07.php, `$title` has been changed to `$text`, and it’s passed as an argument to `upBack2()`. If you test the page, you’ll see the value of `$text` that was declared outside the function remains unchanged.
+
+![Image](graphics/fig03_17.jpg)
+
+In a small script, it’s easy to keep track of variable names. But as your project grows, you could easily end up reusing the same name for a variable that’s used inside a function. By keeping the internal working of functions separate from everything else, variable scope reduces the need to worry about names clashing.
+
+This change in the value of `$title` comes about only through capturing the return value. Forgetting to capture the return value of a function is a common beginner’s mistake. The code in function_06.php shows what happens when the return value of `upBack2($title)` is not assigned to a variable.
+
+![Image](graphics/fig03_18.jpg)
+
+As soon as a function encounters the `return` keyword, it processes the rest of the line and returns the value. Any other code inside the function is ignored.
+
+### **Using Objects and Resources**
+
+The name “object” comes from *object-oriented programming* (OOP), a practice common in most modern programming languages. As projects get bigger, code becomes more complex. Mistakes become not only more likely, but also more difficult to detect. OOP tackles this problem by breaking down complex tasks into simple units—the idea being that small units of code are easy to maintain. Once a unit has been tested, you know it will produce reliable results.
+
+OOP also promotes the reuse of code, so you’re not constantly reinventing the wheel. The code that defines an object’s features is called a *class*, which can be regarded as a blueprint for making objects. Some classes are built into core PHP, but you can also create your own, or use a third-party class library, such as the Zend Framework. What makes OOP attractive and powerful is that most classes can be extended, and the new class inherits all the features of its parent. As a result, objects are becoming an increasingly important part of PHP.
+
+PHP is not an object-oriented language, but it does have strong support for OOP. Since the release of PHP 5 in 2004, many classes have been built into the language, and the Zend Framework that you will use later in this book is written entirely in OOP. At this stage, all you really need to know about objects is what they are and how to use them.
+
+In practical terms, an object is a variable capable of storing multiple values—called *properties*—in the same way as an associative array. An object also has access to functions—called *methods*—that are directly associated with it.
+
+#### **Creating an object**
+
+You create—or *instantiate*—an object in a similar way to assigning the return value of a function to a variable. The function that creates an object is known as a class *constructor*. Like a function, the constructor may take a number of arguments. The difference is that the constructor is preceded by the keyword `new`.
+
+A copy of the example from [Lesson 1](#ch01.html#ch01), time.php, is in lesson03/completed. It uses two core PHP classes, `DateTime` and `DateTimeZone`. The code begins like this:
+
+$now = **new** DateTime();
+
+This creates a `DateTime` object called `$now`. As the class name suggests, the object represents the current date and time. Closely related to the `DateTime` class is another one called `DateTimeZone`. To create a `DateTimeZone` object, you pass the constructor a string identifying the time zone like this:
+
+$ldn = new DateTimeZone('Europe/London');
+
+That creates a `DateTimeZone` object for the part of the world where I live. To create another one for the West coast of the United States, you can use this:
+
+$westCoast = new DateTimeZone('America/Los\_Angeles');
+
+### ![Image](graphics/note.jpg)**NOTE:**
+
+The PHP documentation lists all the valid time zones at [http://docs.php.net/manual/en/timezones.php](http://docs.php.net/manual/en/timezones.php).
+
+What’s great about these two classes is that they are fully aware of daylight saving time, and they automatically adjust the time regardless of where your server is located. To set the time zone for a `DateTime` object, you use the `DateTime` class’s `setTimezone()` method, and pass it a `DateTimeZone` object as its argument. The `->` operator (a hyphen followed by a greater-than sign) gives you access to the methods and properties of an object.
+
+So, you access the `setTimezone()` method like this:
+
+$now->setTimezone($ldn);
+
+The `$now` object is now set to UK time.
+
+Another method of the `DateTime` class is `format()`. As its name suggests, it formats the date and/or time. Unfortunately, it takes as an argument an arcane set of modifiers, which even experienced users find impossible to remember (thank goodness the PHP documentation is built into Dreamweaver CS5).
+
+You display the time using the 12-hour clock like this:
+
+echo $now->format('g.i a');
+
+To change the time zone to the West coast of the United States, you can pass an object to the `setTimezone()` method like this:
+
+$now->setTimezone($westCoast);
+
+Alternatively, you can create the `DateTimeZone` object directly as the argument to the `setTimezone()` method like this:
+
+$now->setTimezone(new DateTimeZone('America/Los\_Angeles'));
+
+You can see how the time zone is changed by testing time.php in Live View or a browser.
+
+![Image](graphics/fig03_19.jpg)
+
+### ![Image](graphics/note.jpg)**NOTE:**
+
+The preceding screen shot, like the one in [Lesson 1](#ch01.html#ch01), was taken when the United States had already switched to daylight saving time but the UK had not, which explains why the time difference is seven hours rather than the normal eight.
+
+The `DateTime` class doesn’t have properties, but you access an object’s properties in exactly the same way with the `->` operator:
+
+$someObject->someProperty
+
+#### **Using resources**
+
+A resource is a reference to something outside PHP, for example, a database connection or a file that you want to read or write to. In some cases, the result of a database query is also a resource.
+
+You create a resource by assigning the result of a function to a variable. Once created, the resource is required as an argument to other functions that access the resource. For example, the `fopen()` function opens a file for writing like this:
+
+$file = fopen('somefile.txt', 'w');
+
+Assuming that the text you want to write to the file is contained in `$contents`, you pass both the resource and the text to the `fwrite()` function as arguments:
+
+fwrite($file, $contents);
+
+Finally, close the file by passing the resource to the `fclose()` function like this:
+
+fclose($file);
+
+You can’t do anything directly with a resource on its own. But it provides an essential link to the file, database, or other resource that you’re dealing with.
+
+### **Using Operators for Calculations and Joining Strings**
+
+PHP is often used for e-commerce and other applications, such as mortgage calculators. A lot of the hard number crunching can be done with mathematical functions. There are nearly 50 of them in the core distribution of PHP, and you might have access to even more, depending on your configuration (for details, see [http://docs.php.net/manual/en/refs.math.php](http://docs.php.net/manual/en/refs.math.php)).
+
+Basic calculations use the arithmetic operators listed in **[Table 3.6](#ch03.html#ch03tab6)**.
+
+**Table 3.6 PHP Arithmetic Operators**
+
+![Image](graphics/t0091-01.jpg)
+
+Modulo division finds the remainder of the division of one number by another. This can be very useful for working out whether a number is odd or even, because dividing by 2 always produces 1 or 0.
+
+The operators that increase and decrease a value by 1 are used mainly in loops (see “Automating Repetitive Tasks” later in this lesson). They work in different ways, depending on where you put the two plus or minus signs.
