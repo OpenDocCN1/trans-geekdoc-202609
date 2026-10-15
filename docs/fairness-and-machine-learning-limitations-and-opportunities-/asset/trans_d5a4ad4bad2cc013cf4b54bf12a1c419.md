@@ -1,0 +1,38 @@
+
+-   [学生为自己在标准化考试中撰写的创意作文感到自豪。她获得了满分，但失望于发现该考试实际上是由电脑评分的。](https://example.org)
+
+-   [被告发现，基于与他类似的行为的刑事风险预测系统将他标记为高风险，尽管他有意按时出庭。](https://example.org)
+
+-   [自动化系统因社交媒体用户违反平台可接受行为政策而封锁了该用户。用户坚称自己没有做错任何事，但平台既不提供更多细节，也不提供上诉流程。](https://example.org)
+
+All of these are automated decision-making or decision support systems that likely feel unfair or unjust. Yet this is a sense of unfairness that is distinct from what we talked about in the first chapter (and which we will return to in the next chapter). It is not about the relative treatment of different groups. Instead, what these questions are about is `legitimacy`—whether it is fair to deploy such a system at all in a given scenario. And this, in turn, affects the legitimacy of the organization deploying it.
+
+Most institutions need legitimacy to be able to function effectively. People have to believe that the institution is broadly aligned with social values. The reason for this is relatively clear in the case of public institutions such as the government, or schools, which are directly or indirectly accountable to the public. It is less clear why private firms need legitimacy.
+
+One answer is that the more power a firm has over individuals, the more the exercise of that power needs to be perceived as legitimate. And decision making about people involves exercising power over them, so it is important to ensure legitimacy. Otherwise, people will find various ways to resist, notably through law. A loss of legitimacy might also hurt a firm’s ability to compete in the market.
+
+Questions about firms’ legitimacy have repeatedly come up in the digital technology industry. For example, ride-sharing firms have faced such questions, leading to activism, litigation, and regulation. Firms whose business models rely on personal data, especially covertly collected data, have also undergone crises of perception. In addition to legal responses, such firms have seen competitors capitalize on their lax privacy practices. For instance, Apple made it harder for Facebook to track users on iOS, putting a dent in its revenue \[[49](#references.xhtml#ref-49)\]. This move enjoyed public support despite Facebook’s vociferous protests, arguably because the underlying business model had lost legitimacy.
+
+For these reasons, a book on fairness is incomplete without a discussion of legitimacy. Moreover, the legitimacy question should precede other fairness questions. Debating distributive justice in the context of a fundamentally unjust institution at best is a waste of time and at worst helps prop up the institution’s legitimacy, and is thus counterproductive. For example, improving facial analysis technology to decrease the disparity in error rates between racial groups is not a useful response to concerns about the use of such technologies for oppressive purposes \[[50](#references.xhtml#ref-50)\].
+
+In the discourse on fairness in machine learning, discussions of legitimacy have been overshadowed by discussions of bias and discrimination. Often, advocates have chosen to focus on distributional considerations as a way of attacking legitimacy, since it tends to be an easier argument to make. But this can backfire, as many firms have co-opted fairness discourse, and find it relatively easy to ensure parity in the decisions between demographic groups without addressing the legitimacy concerns \[[51](#references.xhtml#ref-51)\].
+
+This chapter is all about legitimacy: whether it is morally justifiable to use machine learning or automated methods at all in certain scenarios.
+
+Although we have stressed the overriding importance of legitimacy, readers interested in distributive questions may skip to chapter 3 for a technical treatment or to chapter 4 for a normative account; those chapters, chapter 3 in particular, do not directly build on this one.
+
+## Machine Learning Is not a Replacement for Human Decision Making
+
+Machine learning plays an important role in decisions that allocate resources and opportunities that are critical to people’s life chances. The stakes are clearly high. But people have been making high-stakes decisions about each other for a long time, and those decisions seem to be subject to far less critical examination. Here’s a strawman view: decisions based on machine learning are analogous to decision making by humans, and so machine learning doesn’t warrant special concern. While it’s true that machine learning models might be difficult for people to understand, humans are black boxes, too. And while there can be systematic bias in machine learning models, they are often demonstrably less biased than humans.
+
+We reject this analogy of machine learning to human decision making. By understanding why it fails and which analogies are more appropriate, we will develop a better appreciation for what makes machine learning uniquely dangerous as a way of making high-stakes decisions.
+
+While machine learning is sometimes used to automate the tasks performed inside a human’s head, many of the high-stakes decisions that are the focus of work on fairness and machine learning are those that have been traditionally performed by *bureaucracies*. For example, hiring, credit, and admissions decisions are rarely left to one person to make on their own as they see fit. Instead, these decisions are guided by formal rules and procedures, involving many actors with prescribed roles and responsibilities. Bureaucracy arose in part as a response to the subjectivity, arbitrariness, and inconsistency of human decision making; its institutionalized rules and procedures aim to minimize the effects of humans’ frailties as individual decision makers \[[52](#references.xhtml#ref-52)\].
+
+Of course, bureaucracies aren’t perfect. The very term bureaucracy tends to have a negative connotation—a needlessly convoluted process that is difficult or impossible to navigate. And despite their overly formalistic (one might say cold) approach to decision making, bureaucracies rarely succeed in fully disciplining the individual decision makers that occupy their ranks. Bureaucracies risk being as capricious and inscrutable as humans, but far more dehumanizing \[[52](#references.xhtml#ref-52)\].
+
+That’s why bureaucracies often incorporate procedural protections: mechanisms that ensure that decisions are made transparently, on the basis of the right and relevant information, and with the opportunity for challenge and correction. Once we realize that machine learning is being used to automate bureaucratic rather than individual decisions, asserting that humans don’t need to—or simply cannot—account for their everyday decisions does not excuse machine learning from these expectations. As Katherine Strandburg has argued, “\[r\]eason giving is a core requirement in conventional decision systems *precisely because* human decision makers are inscrutable and prone to bias and error, not because of any expectation that they will, or even can, provide accurate and detailed descriptions of their thought processes” \[[53](#references.xhtml#ref-53)\].
+
+In analogizing machine learning to bureaucratic—rather than individual—decision making, we can better appreciate the source of some of the concerns about machine learning. When it is used in high-stakes domains, it undermines the kinds of protections that we often put in place to ensure that bureaucracies are engaged in well-executed and well-justified decision making.
+
+## Bureaucracy as a Bulwark against Arbitrary Decision Making
