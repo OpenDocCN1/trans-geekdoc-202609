@@ -1,0 +1,1 @@
+of Stake (PoS). Ethereum 2.0 will enable increased transaction throughput and intercommunication between different shards, enhancing the network's scalability and interoperability.

@@ -1,0 +1,954 @@
+name: AWS® Certified Cloud Practitioner： Study Guide CLF-C01 Exam
+slug: aws-certified-cloud-practitioner-study-guide-clf-c01-exam
+name_cn: '
+
+  AWS 云实践入门指南 CLF-C01 考试'
+toc:
+- - '##'
+  - 附录 B：额外服务
+- - '##'
+  - 交互式在线学习环境和题库
+- - '##'
+  - 考试目标
+- - '##'
+  - 目标映射表
+- - '##'
+  - 评估测试
+- - '##'
+  - 3. CodeDeploy
+- - '##'
+  - 4. Cloud9
+- - '##'
+  - Answers to Assessment Test
+- - '##'
+  - 'Chapter 1  '
+- - '##'
+  - Introduction
+- - '##'
+  - What Is Cloud Computing?
+- - '###'
+  - Highly Available and Scalable Resources
+- - '###'
+  - Professionally Secured Infrastructure
+- - '###'
+  - 计费模式
+- - '##'
+  - 服务器虚拟化：基础知识
+- - '##'
+  - 云平台模型
+- - '###'
+  - 基础设施即服务（IaaS）
+- - '###'
+  - 平台即服务（PaaS）
+- - '###'
+  - 软件即服务（SaaS）
+- - '###'
+  - 无服务器工作负载
+- - '##'
+  - 可扩展性和弹性
+- - '###'
+  - 可扩展性
+- - '###'
+  - 弹性
+- - '##'
+  - 总结
+- - '##'
+  - 考试要点
+- - '##'
+  - 复习题
+- - '##'
+  - Introduction
+- - '##'
+  - The Free Tier
+- - '###'
+  - How Does the Free Tier Work?
+- - '###'
+  - 监控您的 Free Tier 使用量
+- - '###'
+  - 免费服务有哪些？
+- - '####'
+  - 12 个月免费服务
+- - '####'
+  - 永久免费服务
+- - '##'
+  - 产品定价
+- - '###'
+  - 查找 AWS 定价文档
+- - '###'
+  - 使用在线计算器
+- - '####'
+  - AWS Simple Monthly Calculator
+- - '####'
+  - AWS Total Cost of Ownership Calculator
+- - '##'
+  - Service Limits
+- - '###'
+  - 账单和成本管理
+- - '###'
+  - AWS 账单仪表盘
+- - '###'
+  - AWS 预算
+- - '###'
+  - 监控您的费用
+- - '####'
+  - Cost Explorer
+- - '####'
+  - 费用和使用报告
+- - '####'
+  - 成本分配标签
+- - '###'
+  - AWS Organizations
+- - '##'
+  - Summary
+- - '##'
+  - Exam Essentials
+- - '##'
+  - Review Questions
+- - '###'
+  - 3. Service limits are defaults. They can be increased or decreased on demand.
+- - '###'
+  - 4. No. Some service limits are hard.
+- - '###'
+  - 14. 哪里是获取本月账户费用的快速摘要的最佳位置？
+- - '####'
+  - 1. 预算
+- - '####'
+  - 2. Cost Explorer
+- - '####'
+  - 3. 费用和使用报告
+- - '####'
+  - 4. 账单和成本管理仪表板
+- - '###'
+  - 15. 创建 AWS Budgets 中的用量预算类型的主要目标是什么？
+- - '####'
+  - 1. 将每单位费用的使用与账户成本进行关联，以了解账户的成本效率
+- - '####'
+  - 2. 跟踪账户中任何活动的保留实例的状态
+- - '####'
+  - 3. 跟踪特定资源消耗类别
+- - '####'
+  - 4. 监控账户中发生的费用
+- - '###'
+  - 16. 下列哪项不是可以在成本预算中配置的设置？
+- - '####'
+  - 1. 期间（月度、季度等）
+- - '####'
+  - 2. 实例类型
+- - '####'
+  - 3. 开始和停止日期
+- - '####'
+  - 4. 所有者（资源所有者的用户名）
+- - '###'
+  - 17. Cost Explorer 与成本和使用报告的主要目标之间的主要区别是什么？
+- - '####'
+  - 1. Cost Explorer 显示高级别历史和当前账户费用的可视化，而成本和使用报告以 CSV 格式生成细粒度使用报告。
+- - '####'
+  - 2. 成本和使用报告显示高级别历史和当前账户费用的可视化，而 Cost Explorer 生成细粒度使用报告以 CSV 格式呈现。
+- - '####'
+  - 3. Cost Explorer 让您设置由 billing 事件触发的警报，而成本和使用报告帮助您可视化系统事件。
+- - '####'
+  - 4. 成本和使用报告旨在提醒您恶意入侵，而 Cost Explorer 显示高级别历史和当前账户费用的可视化。
+- - '###'
+  - 18. 成本分配标签的用途是什么？
+- - '####'
+  - 1. 将费用限额与自动触发资源关闭的需求关联，以便在必要时进行关闭
+- - '####'
+  - 2. 帮助您识别特定运行资源的目的和所有者，以更好地理解和控制部署
+- - '####'
+  - 3. 帮助您识别资源，以便跟踪账户支出
+- - '####'
+  - 4. 将账户事件与计费期间在视觉上关联
+- - '###'
+  - 19. 下列哪个场景是 AWS Organizations 的良好使用案例？（选择 TWO.）
+- - '####'
+  - 1. 一家拥有多个 AWS 账户的单一公司，希望拥有一个统一的管理位置
+- - '####'
+  - 2. 一家为其开发人员和管理员提供 AWS 访问的组织
+- - '####'
+  - 3. 一家已与上游供应商整合一些运营的公司
+- - '####'
+  - 4. 一家拥有两个不同的运营单元、各自拥有其 own 会计系统和 AWS 账户的公司
+- - '###'
+  - 20. 哪个工具允许您在浏览器界面中设计图表以跟踪账户支出？
+- - '####'
+  - 1. 预算
+- - '####'
+  - 2. Cost Explorer
+- - '####'
+  - 3. 报告
+- - '####'
+  - 4. 合并计费
+- - '##'
+  - '第 3 章  '
+- - '##'
+  - 保护您的 AWS 资源
+- - '##'
+  - 引言
+- - '##'
+  - AWS Identity and Access Management
+- - '#'
+  - 保护根用户
+- - '##'
+  - 身份验证
+- - '###'
+  - 密码
+- - '###'
+  - 访问密钥
+- - '###'
+  - 使用 SSH 密钥对
+- - '###'
+  - IAM Users
+- - '###'
+  - IAM Groups
+- - '###'
+  - IAM Roles
+- - '###'
+  - 提供联合访问
+- - '###'
+  - 凭证报告
+- - '##'
+  - 加密
+- - '##'
+  - 监管合规（AWS Artifact）
+- - '##'
+  - '第 6 章  '
+- - '###'
+  - '与 AWS 资源一起工作  '
+- - '##'
+  - '介绍  '
+- - '##'
+  - 'AWS 管理控制台  '
+- - '###'
+  - '访问 AWS 管理控制台  '
+- - '####'
+  - '以根用户登录  '
+- - '####'
+  - '以 IAM 用户登录  '
+- - '###'
+  - 打开服务控制台
+- - '###'
+  - 使用快捷方式
+- - '###'
+  - 选择区域
+- - '###'
+  - 账户名称菜单
+- - '###'
+  - 资源组
+- - '###'
+  - 标签编辑器
+- - '###'
+  - 标签策略
+- - '####'
+  - 技术
+- - '####'
+  - Automation
+- - '####'
+  - Business
+- - '####'
+  - Security
+- - '###'
+  - The AWS Console Mobile Application
+- - '####'
+  - Supported Services
+- - '####'
+  - Requirements
+- - '###'
+  - Installation
+- - '####'
+  - 使用独立安装程序进行安装
+- - '##'
+  - 软件开发工具包 (SDK)
+- - '###'
+  - 移动软件开发工具包 (Mobile SDK)
+- - '###'
+  - 物联网 (IoT) 设备软件开发工具包 (SDK)
+- - '##'
+  - CloudWatch
+- - '###'
+  - CloudWatch 指标
+- - '#'
+  - 使用简单通知服务的通知
+- - '#'
+  - 自动扩展操作
+- - '#'
+  - EC2 操作
+- - '##'
+  - CloudWatch Dashboards
+- - '##'
+  - CloudWatch Logs
+- - '###'
+  - 日志事件、流和组
+- - '###'
+  - 指标过滤器
+- - '###'
+  - CloudWatch Events
+- - '##'
+  - CloudTrail
+- - '###'
+  - API 和非 API 事件
+- - '###'
+  - 管理事件和数据事件
+- - '###'
+  - 事件历史记录
+- - '###'
+  - 轨迹
+- - '###'
+  - 日志文件完整性验证
+- - '###'
+  - 费用 Explorer
+- - '####'
+  - 费用与使用情况
+- - '###'
+  - 预留报告
+- - '####'
+  - 预留实例利用率
+- - '####'
+  - 预留实例覆盖率
+- - '###'
+  - 预留实例推荐
+- - '##'
+  - 摘要
+- - '##'
+  - 考试要点
+- - '##'
+  - 复习题
+- - '####'
+  - 使用 AWS Marketplace 和社区 AMI
+- - '####'
+  - 创建自己的 AMI
+- - '###'
+  - 理解 EC2 实例类型
+- - '###'
+  - 服务器存储：弹性块存储 (EBS) 与实例存储卷
+- - '####'
+  - Amazon Elastic Block Store
+- - '####'
+  - Amazon EC2 Instance Store Volumes
+- - '###'
+  - 理解 EC2 定价模型
+- - '####'
+  - On-Demand Instances
+- - '####'
+  - Reserved Instances
+- - '####'
+  - Spot Instances
+- - '##'
+  - 通过托管服务简化部署
+- - '###'
+  - Amazon Lightsail
+- - '###'
+  - AWS Elastic Beanstalk
+- - '##'
+  - 部署容器和无服务器工作负载
+- - '###'
+  - 容器
+- - '###'
+  - 无服务器函数
+- - '##'
+  - 总结
+- - '##'
+  - 考试要点
+- - '##'
+  - 'Chapter 8  '
+- - '##'
+  - Introduction
+- - '###'
+  - Simple Storage Service
+- - '###'
+  - Objects and Buckets
+- - '###'
+  - S3 Storage Classes
+- - '####'
+  - Durability and Availability
+- - '####'
+  - Storage Classes for Frequently Accessed Objects
+- - '####'
+  - 既适用于频繁访问又适用于 infrequently 访问对象的存储类
+- - '###'
+  - 访问权限
+- - '####'
+  - 桶策略
+- - '####'
+  - 用户策略
+- - '####'
+  - 桶和对象访问控制列表
+- - '###'
+  - 对象生命周期配置
+- - '#'
+  - 过期操作
+- - '##'
+  - S3 Glacier
+- - '###'
+  - Archives and Vaults
+- - '###'
+  - 检索选项
+- - '##'
+  - AWS Storage Gateway
+- - '###'
+  - 文件网关
+- - '###'
+  - 卷网关
+- - '###'
+  - 磁带网关
+- - '##'
+  - AWS Snowball
+- - '###'
+  - 硬件规格
+- - '###'
+  - 安全
+- - '###'
+  - Snowball Edge
+- - '##'
+  - 摘要
+- - '###'
+  - 考试要点
+- - '#'
+  - '第 9 章  '
+- - '##'
+  - '核心数据库服务  '
+- - '##'
+  - '介绍  '
+- - '##'
+  - '数据库模型  '
+- - '###'
+  - 关系型数据库
+- - '###'
+  - 结构化查询语言
+- - '####'
+  - SELECT 语句
+- - '####'
+  - INSERT 语句
+- - '###'
+  - 非关系型（No-SQL）数据库
+- - '###'
+  - Amazon Relational Database Service
+- - '###'
+  - 数据库引擎
+- - '###'
+  - 许可证
+- - '###'
+  - 实例类
+- - '####'
+  - 标准 (Standard)
+- - '####'
+  - 内存优化 (Memory Optimized)
+- - '####'
+  - Burstable Performance
+- - '###'
+  - 垂直扩展
+- - '###'
+  - 存储
+- - '####'
+  - 通用型 SSD
+- - '####'
+  - 已保留 IOPS SSD
+- - '####'
+  - 磁盘 (magnetic)
+- - '###'
+  - 使用只读复制实例水平扩展
+- - '###'
+  - 通过 Multi-AZ 实现高可用性
+- - '###'
+  - 备份和恢复
+- - '###'
+  - 确定恢复点目标 (Recovery Point Objective, RPO)
+- - '###'
+  - DynamoDB
+- - '####'
+  - 项目和表
+- - '####'
+  - 水平扩展
+- - '####'
+  - 查询和扫描
+- - '##'
+  - 1. **_The Art of Storytelling_**
+- - '##'
+  - 2. PostgreSQL
+- - '##'
+  - 3. MariaDB
+- - '##'
+  - 4. Oracle
+- - '##'
+  - 5. Microsoft SQL Server
+- - '##'
+  - 8. 哪两项 Amazon RDS（托管关系型数据库服务）功能可在可用性区（Availability Zone）故障时防止数据丢失？（选择两项）
+- - '##'
+  - 9. 哪项 RDS 数据库引擎会自动扩展存储空间，最大可达 64 TB？
+- - '##'
+  - 10. 哪项 RDS 功能可帮助您实现 99.95% 的月度可用性？
+- - '##'
+  - 11. 关于 DynamoDB 分区（partition）的两项正确描述是？
+- - '##'
+  - 12. DynamoDB 在单个 Region 中的最小月度可用性是多少？
+- - '##'
+  - 13. 关于 DynamoDB 表的正确描述是？
+- - '##'
+  - 14. 哪两项配置参数可用于提高 DynamoDB 表的写入性能？（选择两项）
+- - '##'
+  - 15. 哪项 DynamoDB 操作最具读取密集性？
+- - '##'
+  - 16. 对于存储客户列表的 DynamoDB 表，以下哪项最适合作为主键？
+- - '##'
+  - 17. 哪种 Redshift 节点使用磁盘存储？
+- - '##'
+  - 18. 哪项 Redshift 功能可分析存储在 S3 中的结构化数据？
+- - '##'
+  - 19. 用于存储大量来自多种来源的结构化数据以用于报告和分析的关系型数据库的术语是什么？
+- - '##'
+  - 20. 使用密集存储节点时，Redshift 集群的最大可存储数据量是多少？
+- - '##'
+  - 'Chapter 10  '
+- - '##'
+  - 'The Core Networking Services  '
+- - '##'
+  - 'THE AWS CERTIFIED CLOUD PRACTITIONER EXAM OBJECTIVES COVERED IN THIS CHAPTER
+    MAY INCLUDE, BUT ARE NOT LIMITED TO, THE FOLLOWING:  '
+- - '##'
+  - 'Domain 3: Technology  '
+- - '##'
+  - '![images](img/correction.png) 3.1 Define methods of deploying and operating in
+    the AWS Cloud  '
+- - '##'
+  - '![images](img/correction.png) 3.2 Define the AWS global infrastructure  '
+- - '##'
+  - '![images](img/correction.png) 3.3 Identify the core AWS services  '
+- - '##'
+  - 'Introduction  '
+- - '##'
+  - 'Virtual Private Cloud  '
+- - '###'
+  - 'VPC CIDR Blocks  '
+- - '###'
+  - 'Subnets  '
+- - '###'
+  - 'Internet Access  '
+- - '###'
+  - 'Security Groups  '
+- - '###'
+  - Network Access Control Lists
+- - '###'
+  - VPC Peering
+- - '###'
+  - Virtual Private Networks
+- - '###'
+  - Direct Connect
+- - '###'
+  - Route 53
+- - '###'
+  - Resource Records
+- - '###'
+  - Domain Name Registration
+- - '###'
+  - Hosted Zones
+- - '###'
+  - 路由策略
+- - '###'
+  - 健康检查
+- - '###'
+  - 流量流和流量策略
+- - '##'
+  - CloudFront
+- - '##'
+  - 摘要
+- - '##'
+  - Exam Essentials
+- - '##'
+  - Review Questions
+- - '###'
+  - The Imperative Approach
+- - '###'
+  - The Declarative Approach
+- - '###'
+  - Infrastructure as Code
+- - '##'
+  - CloudFormation
+- - '###'
+  - Templates
+- - '###'
+  - Stacks
+- - '####'
+  - Stack Updates
+- - '#'
+  - 追踪堆栈更改
+- - '##'
+  - CloudFormation 与 AWS CLI 的对比
+- - '##'
+  - AWS 开发者工具
+- - '###'
+  - CodeCommit
+- - '###'
+  - CodeBuild
+- - '####'
+  - 构建操作
+- - '####'
+  - 构建环境
+- - '###'
+  - CodeDeploy
+- - '####'
+  - 部署到 EC2 或本地服务器
+- - '####'
+  - 部署到 ECS
+- - '####'
+  - 部署到 Lambda
+- - '###'
+  - CodePipeline
+- - '##'
+  - EC2 Auto Scaling
+- - '###'
+  - Launch Configurations and Launch Templates
+- - '###'
+  - Auto Scaling Groups
+- - '####'
+  - Desired Capacity（期望容量）
+- - '####'
+  - Self-Healing（自我修复）
+- - '###'
+  - Scaling Actions（缩放操作）
+- - '####'
+  - Dynamic Scaling（动态缩放）
+- - '####'
+  - Scheduled Scaling
+- - '##'
+  - Configuration Management
+- - '###'
+  - Systems Manager
+- - '####'
+  - Command Documents
+- - '####'
+  - Configuration Compliance
+- - '####'
+  - Automation Documents
+- - '####'
+  - Distributor
+- - '###'
+  - OpsWorks
+- - '####'
+  - AWS OpsWorks for Puppet Enterprise and AWS OpsWorks for Chef Automate
+- - '####'
+  - AWS OpsWorks Stacks
+- - '##'
+  - 'Chapter 12  '
+- - '##'
+  - Introduction
+- - '##'
+  - The Well-Architected Framework
+- - '###'
+  - Reliability
+- - '###'
+  - Performance Efficiency
+- - '###'
+  - Security
+- - '###'
+  - 成本优化
+- - '###'
+  - 运营卓越
+- - '##'
+  - 使用自动扩展和弹性负载均衡的高可用性 Web 应用程序
+- - '###'
+  - 创建入站安全组规则
+- - '##'
+  - 'Chapter 4: Understanding the AWS Environment'
+- - '##'
+  - 'Chapter 5: Securing Your AWS Resources'
+- - '##'
+  - 'Chapter 6: Working with Your AWS Resources'
+- - '##'
+  - 'Chapter 7: The Core Compute Services'
+- - '##'
+  - 'Appendix B  '
+- - '##'
+  - Athena
+- - '##'
+  - AWS Backup
+- - '##'
+  - AWS Glue
+- - '##'
+  - Batch
+- - '#'
+  - 批量计算
+- - '##'
+  - Cognito
+- - '##'
+  - 数据库迁移服务
+- - '##'
+  - 弹性文件系统
+- - '##'
+  - 弹性 MapReduce
+- - '##'
+  - Inspector
+- - '##'
+  - Kinesis
+- - '##'
+  - Macie
+- - '##'
+  - Neptune
+- - '##'
+  - 简单队列服务
+- - '##'
+  - WorkDocs
+- - '##'
+  - WorkSpaces
+- - '#'
+  - 索引
+- - '##'
+  - A
+- - '##'
+  - C
+- - '##'
+  - D
+- - '#'
+  - 非生产工作量
+- - '#'
+  - Direct Connect
+- - '##'
+  - VPC（virtual private cloud）和
+- - '#'
+  - 讨论论坛
+- - '#'
+  - 分发、CloudFront、配置
+- - '#'
+  - DMS（Database Migration Service）
+- - '#'
+  - DNS（Domain Name System）
+- - '##'
+  - Amazon S3 和
+- - '##'
+  - 域名注册
+- - '##'
+  - 主机区域
+- - '##'
+  - 资源记录
+- - '##'
+  - 文档
+- - '##'
+  - GitHub
+- - '##'
+  - HTML
+- - '##'
+  - Kindle
+- - '##'
+  - PDF
+- - '##'
+  - SDKs（software development kits）
+- - '#'
+  - 域名
+- - '##'
+  - 注册
+- - '##'
+  - 资源记录
+- - '#'
+  - DynamoDB 数据库
+- - '##'
+  - 属性
+- - '##'
+  - 数据存储
+- - '##'
+  - 数据类型
+- - '###'
+  - 文档
+- - '###'
+  - 标量
+- - '###'
+  - 集合
+- - '##'
+  - 加密和
+- - '##'
+  - 项目
+- - '##'
+  - 键值对
+- - '##'
+  - 查询
+- - '##'
+  - RCU（读容量单位）
+- - '##'
+  - 示例表
+- - '##'
+  - 水平缩放
+- - '##'
+  - 扫描
+- - '##'
+  - 表
+- - '##'
+  - WCU（写容量单位）
+- - '#'
+  - EBS（Elastic Block Store）
+- - '##'
+  - Beanstalk
+- - '##'
+  - 加密和
+- - '##'
+  - Lightsail
+- - '##'
+  - EC2（Elastic Cloud Compute）
+- - '##'
+  - AMIs（Amazon Machine Images），选择
+- - '##'
+  - 自动扩展
+- - '###'
+  - 操作
+- - '###'
+  - 组
+- - '###'
+  - 高可用 Web 应用
+- - '###'
+  - 启动配置
+- - '###'
+  - 启动模板
+- - '##'
+  - 可用区
+- - '##'
+  - AWS 控制台移动应用
+- - '##'
+  - CodeDeploy 和
+- - '##'
+  - 成本计算
+- - '##'
+  - 免费层和
+- - '##'
+  - 实例存储卷
+- - '##'
+  - 实例类型
+- - '###'
+  - 加速计算
+- - '###'
+  - 计算优化
+- - '###'
+  - 专用
+- - '###'
+  - 内存优化
+- - '###'
+  - 存储优化
+- - '##'
+  - 实例
+- - '###'
+  - 管理
+- - '###'
+  - Apache Web Server on
+- - '##'
+  - 物理主机
+- - '##'
+  - 定价模型
+- - '##'
+  - 服务器、部署
+- - '##'
+  - Snowball Edge 和
+- - '##'
+  - 子网
+- - '##'
+  - t2.micro 实例类型
+- - '#'
+  - ECR（Elastic Container Registry）
+- - '#'
+  - ECS（Elastic Container Service）
+- - '##'
+  - CodeDeploy 和
+- - '##'
+  - 容器
+- - '#'
+  - 边缘、AWS 控制台
+- - '#'
+  - 边缘位置
+- - '##'
+  - Amazon Route 53
+- - '##'
+  - AWS Shield
+- - '##'
+  - CloudFront 和
+- - '##'
+  - Lambda@Edge
+- - '##'
+  - WAF（Web Application Firewall）
+- - '#'
+  - EFS（Elastic File System）
+- - '#'
+  - EKS（Elastic Container Service for Kubernetes）
+- - '#'
+  - Elastic Beanstalk
+- - '#'
+  - 弹性
+- - '#'
+  - EMR（Elastic MapReduce）
+- - '#'
+  - 加密
+- - '##'
+  - 客户侧
+- - '##'
+  - CMK（customer master key）
+- - '##'
+  - DynamoDB 数据库
+- - '##'
+  - EBS（Elastic Block Store）
+- - '##'
+  - 端到端
+- - '##'
+  - 传输中
+- - '##'
+  - 密钥
+- - '#'
+  - 端到端加密
+- - '#'
+  - 终端健康检查（Route 53）
+- - '#'
+  - 终端
+- - '#'
+  - 环境
+- - '###'
+  - CodeBuild
+- - '###'
+  - 复习题答案
+- - '#'
+  - EU（爱尔兰）区域
+- - '#'
+  - EU（伦敦）区域
+- - '#'
+  - EU（巴黎）区域
+- - '##'
+  - eu-central-1
+- - '##'
+  - eu-west-1
+- - '##'
+  - eu-west-2
+- - '##'
+  - eu-west-3
+- - '#'
+  - 过期、对象生命周期配置
+- - '#'
+  - Failover 路由策略（Route 53）
+- - '#'
+  - 容错（Trusted Advisor）
+- - '##'
+  - 联合身份
+- - '###'
+  - IAM（Identity and Access Management）
+- - '#'
+  - FedRAMP（Federal Risk and Authorization Management Program）
+- - '#'
+  - 文件网关
+- - '#'
+  - Firefox、AWS 控制台
+- - '#'
+  - 论坛、讨论
+- - '##'
+  - H
+- - '##'
+  - I
+- - '##'
+  - J-K
+- - '##'
+  - L
+- - '##'
+  - M
+- - '##'
+  - N
+- - '##'
+  - U
+- - '##'
+  - V
+- - '##'
+  - W-Z
+- - '#'
+  - Comprehensive Online Learning Environment
+- - '###'
+  - Register and Access the Online Test Bank
+- - '#'
+  - '**WILEY END USER LICENSE AGREEMENT**'

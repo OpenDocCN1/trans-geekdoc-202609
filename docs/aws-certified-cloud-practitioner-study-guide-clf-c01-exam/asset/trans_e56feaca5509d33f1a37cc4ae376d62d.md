@@ -1,0 +1,140 @@
+
+-   Asia Pacific (Seoul) Region, [`/path/to/xxx`](#c04.xhtml#Page_51)
+-   Asia Pacific (Singapore) Region, [`/path/to/xxx`](#c04.xhtml#Page_51)
+-   Asia Pacific (Sydney) Region, [`/path/to/xxx`](#c04.xhtml#Page_51)
+-   Asia Pacific (Tokyo) Region, [`/path/to/xxx`](#c04.xhtml#Page_51)
+-   assessment test answers, [`/path/to/xxx`](#a01.xhtml#Page_232)–233
+-   Athena, [`/path/to/xxx`](#a02.xhtml#Page_254)
+-   authentication 
+    -   IAM and, [`/path/to/xxx`](#c05.xhtml#Page_69)
+    -   MFA (multi-factor authentication), [`/path/to/xxx`](#c05.xhtml#Page_70)–71
+-   Auto Scaling, [`/path/to/xxx`](#a01.xhtml#Page_237), [`/path/to/xxx`](#a01.xhtml#Page_238), [`/path/to/xxx`](#a01.xhtml#Page_247), [`/path/to/xxx`](#a01.xhtml#Page_250) 
+    -   EC2 (Elastic Cloud Compute) 
+        -   actions, [`/path/to/xxx`](#c11.xhtml#Page_200)
+        -   capacity, [`/path/to/xxx`](#c11.xhtml#Page_199)
+        -   dynamic scaling, [`/path/to/xxx`](#c11.xhtml#Page_200)
+        -   launch configurations, [`/path/to/xxx`](#c11.xhtml#Page_199)
+        -   launch templates, [`/path/to/xxx`](#c11.xhtml#Page_199)
+        -   scheduled scaling, [`/path/to/xxx`](#c11.xhtml#Page_200)
+        -   self-healing, [`/path/to/xxx`](#c11.xhtml#Page_199)
+    -   highly available web application, [`/path/to/xxx`](#c12.xhtml#Page_214)
+    -   launch template, [`/path/to/xxx`](#c12.xhtml#Page_220)
+-   automation 
+    -   AWS CLI (Command Line Interface), [`/path/to/xxx`](#c11.xhtml#Page_190)
+    -   AWS Developer Tools, [`/path/to/xxx`](#c11.xhtml#Page_191) 
+        -   CodeBuild, [`/path/to/xxx`](#c11.xhtml#Page_195)–196
+        -   CodeCommit, [`/path/to/xxx`](#c11.xhtml#Page_194)–195
+        -   CodeDeploy, [`/path/to/xxx`](#c11.xhtml#Page_196)–197
+        -   CodePipeline, [`/path/to/xxx`](#c11.xhtml#Page_197)–198
+    -   benefits, [`/path/to/xxx`](#c11.xhtml#Page_190)
+    -   CloudFormation and, [`/path/to/xxx`](#c11.xhtml#Page_191)
+    -   declarative approach, [`/path/to/xxx`](#c11.xhtml#Page_191)
+    -   EC2 Auto Scaling and, [`/path/to/xxx`](#c11.xhtml#Page_191)
+    -   IaC (infrastructure as code), [`/path/to/xxx`](#c11.xhtml#Page_191)
+    -   imperative approach, [`/path/to/xxx`](#c11.xhtml#Page_190)
+    -   OpsWorks and, [`/path/to/xxx`](#c11.xhtml#Page_191)
+    -   review question answers, [`/path/to/xxx`](#a01.xhtml#Page_249)–250
+    -   scripting, [`/path/to/xxx`](#c11.xhtml#Page_190)
+    -   Systems Manager and, [`/path/to/xxx`](#c11.xhtml#Page_191)
+    -   templates and, [`/path/to/xxx`](#c11.xhtml#Page_192)
+    -   Well-Architected Framework, [`/path/to/xxx`](#c12.xhtml#Page_213)
+-   Availability Zones, [`/path/to/xxx`](#c04.xhtml#Page_50), [`/path/to/xxx`](#c04.xhtml#Page_54), [`/path/to/xxx`](#c04.xhtml#Page_62), [`/path/to/xxx`](#a01.xhtml#Page_232), [`/path/to/xxx`](#a01.xhtml#Page_237), [`/path/to/xxx`](#a01.xhtml#Page_238), [`/path/to/xxx`](#a02.xhtml#Page_251) 
+    -   designations, [`/path/to/xxx`](#c04.xhtml#Page_54)–55
+    -   EC2 (Elastic Cloud Compute), [`/path/to/xxx`](#c04.xhtml#Page_55)
+    -   high availability and, [`/path/to/xxx`](#c04.xhtml#Page_56)–57
+    -   highly available web application, [`/path/to/xxx`](#c12.xhtml#Page_217)
+    -   networking, [`/path/to/xxx`](#c04.xhtml#Page_55)–56
+-   AWS (Amazon Web Services) account 
+    -   infrastructure, security, [`/path/to/xxx`](#c01.xhtml#Page_3)
+    -   payment model, [`/path/to/xxx`](#c01.xhtml#Page_3)–4
+    -   resources, scalability, [`/path/to/xxx`](#c01.xhtml#Page_2)–3
+    -   review question answers, [`/path/to/xxx`](#a01.xhtml#Page_234)–235
+-   AWS Backup, [`/path/to/xxx`](#a02.xhtml#Page_254)
+-   AWS CLI (Command Line Interface), [`/path/to/xxx`](#c03.xhtml#Page_39), [`/path/to/xxx`](#c06.xhtml#Page_84), [`/path/to/xxx`](#c06.xhtml#Page_98), [`/path/to/xxx`](#c09.xhtml#Page_158), [`/path/to/xxx`](#a01.xhtml#Page_234), [`/path/to/xxx`](#a01.xhtml#Page_240) 
+    -   authentication, [`/path/to/xxx`](#a01.xhtml#Page_232)
+    -   automation and, [`/path/to/xxx`](#c11.xhtml#Page_190)
+    -   CloudFormation comparison, [`/path/to/xxx`](#c11.xhtml#Page_193)
+    -   installation, [`/path/to/xxx`](#c06.xhtml#Page_99) 
+        -   pip, [`/path/to/xxx`](#c06.xhtml#Page_99)
+        -   Python, [`/path/to/xxx`](#c06.xhtml#Page_99)
+        -   stand-alone installer, [`/path/to/xxx`](#c06.xhtml#Page_99)–101
+    -   requirements, [`/path/to/xxx`](#c06.xhtml#Page_99)
+-   aws configure command, [`/path/to/xxx`](#a01.xhtml#Page_241)
+-   AWS Console Mobile Application, [`/path/to/xxx`](#a01.xhtml#Page_241) 
+    -   CloudWatch alarm, [`/path/to/xxx`](#c06.xhtml#Page_95)
+    -   dashboard, [`/path/to/xxx`](#c06.xhtml#Page_94)
+    -   EC2 instances, [`/path/to/xxx`](#c06.xhtml#Page_95)–96
+    -   requirements, [`/path/to/xxx`](#c06.xhtml#Page_97)–98
+    -   resources, [`/path/to/xxx`](#c06.xhtml#Page_84)
+    -   services, supported, [`/path/to/xxx`](#c06.xhtml#Page_96)–97
+-   AWS Developer Tools 
+    -   CodeBuild, [`/path/to/xxx`](#c11.xhtml#Page_195) 
+        -   actions, [`/path/to/xxx`](#c11.xhtml#Page_195)
+        -   environments, [`/path/to/xxx`](#c11.xhtml#Page_195)–196
+    -   CodeCommit, [`/path/to/xxx`](#c11.xhtml#Page_194)–195
+    -   CodeDeploy 
+        -   EC2 and, [`/path/to/xxx`](#c11.xhtml#Page_196)–197
+        -   ECS and, [`/path/to/xxx`](#c11.xhtml#Page_197)
+        -   Lambda, [`/path/to/xxx`](#c11.xhtml#Page_197)
+        -   on-premises instances, [`/path/to/xxx`](#c11.xhtml#Page_196)–197
+    -   CodePipeline, [`/path/to/xxx`](#c11.xhtml#Page_197)–198
+-   AWS Glue, [`/path/to/xxx`](#a02.xhtml#Page_254)
+-   AWS GovCloud (US) Region, [`/path/to/xxx`](#c04.xhtml#Page_51), [`/path/to/xxx`](#a01.xhtml#Page_237)
+-   AWS IoT (Internet of Things), SDKs, [`/path/to/xxx`](#c06.xhtml#Page_102), [`/path/to/xxx`](#a01.xhtml#Page_241)
+-   AWS Lambda, [`/path/to/xxx`](#c01.xhtml#Page_6)
+-   AWS Management Console, [`/path/to/xxx`](#c06.xhtml#Page_85) 
+    -   access, [`/path/to/xxx`](#c06.xhtml#Page_85)
+    -   Billing Dashboard and, [`/path/to/xxx`](#c02.xhtml#Page_23)
+    -   Chrome, [`/path/to/xxx`](#c06.xhtml#Page_85)
+    -   CloudFormation stacks, [`/path/to/xxx`](#c06.xhtml#Page_91)
+    -   Edge, [`/path/to/xxx`](#c06.xhtml#Page_85)
+    -   Firefox, [`/path/to/xxx`](#c06.xhtml#Page_85)
+    -   IAM user, log in, [`/path/to/xxx`](#c06.xhtml#Page_86)–87
+    -   Internet Explorer, [`/path/to/xxx`](#c06.xhtml#Page_85)
+    -   logging in 
+        -   as IAM user, [`/path/to/xxx`](#c06.xhtml#Page_86)–87
+        -   as root user, [`/path/to/xxx`](#c06.xhtml#Page_85)–86
+    -   My Account menu option, [`/path/to/xxx`](#c06.xhtml#Page_90)
+    -   My Billing Dashboard menu option, [`/path/to/xxx`](#c06.xhtml#Page_90)
+    -   My Organization menu option, [`/path/to/xxx`](#c06.xhtml#Page_90)
+    -   My Security Credentials menu option, [`/path/to/xxx`](#c06.xhtml#Page_90)
+    -   passwords, [`/path/to/xxx`](#c05.xhtml#Page_69)–70
+    -   region selection, [`/path/to/xxx`](#c06.xhtml#Page_88)–89
+    -   regions, [`/path/to/xxx`](#c04.xhtml#Page_52)
+    -   resource groups, [`/path/to/xxx`](#c06.xhtml#Page_90)–91
+    -   resource tags, [`/path/to/xxx`](#c06.xhtml#Page_91) 
+        -   automation tags, [`/path/to/xxx`](#c06.xhtml#Page_93)
+        -   business tags, [`/path/to/xxx`](#c06.xhtml#Page_93)
+        -   security tags, [`/path/to/xxx`](#c06.xhtml#Page_93)–94
+        -   technical tags, [`/path/to/xxx`](#c06.xhtml#Page_92)–93
+    -   root, log in, [`/path/to/xxx`](#c06.xhtml#Page_85)–86
+    -   Safari, [`/path/to/xxx`](#c06.xhtml#Page_85)
+    -   Security Credentials page, [`/path/to/xxx`](#c05.xhtml#Page_71)–72
+    -   service consoles, opening, [`/path/to/xxx`](#c06.xhtml#Page_87)–88
+    -   services, [`/path/to/xxx`](#c06.xhtml#Page_84) 
+        -   region selection, [`/path/to/xxx`](#c06.xhtml#Page_88)–89
+    -   shortcuts, [`/path/to/xxx`](#c06.xhtml#Page_88)
+    -   Sign Out menu option, [`/path/to/xxx`](#c06.xhtml#Page_90)
+    -   Switch Role menu option, [`/path/to/xxx`](#c06.xhtml#Page_90)
+    -   Tag Editor, [`/path/to/xxx`](#c06.xhtml#Page_91)–92
+    -   web browsers, [`/path/to/xxx`](#c06.xhtml#Page_85)
+-   AWS Marketplace, AMIs (Amazon Machine Images), [`/path/to/xxx`](#c07.xhtml#Page_121), [`/path/to/xxx`](#c07.xhtml#Page_122)
+-   AWS Shield, [`/path/to/xxx`](#a01.xhtml#Page_238) 
+    -   edge locations, [`/path/to/xxx`](#c04.xhtml#Page_58)
+-   AWS Startups discussion forum, [`/path/to/xxx`](#c03.xhtml#Page_40)
+-   AWS Web Site and Resources discussion forum, [`/path/to/xxx`](#c03.xhtml#Page_40)
+-   Backup, [`/path/to/xxx`](#a02.xhtml#Page_254)
+-   backups, RDS (Relational Database Service), [`/path/to/xxx`](#c09.xhtml#Page_165)
+-   Basic support plan, [`/path/to/xxx`](#a01.xhtml#Page_235), [`/path/to/xxx`](#a01.xhtml#Page_236) 
+    -   benefits, [`/path/to/xxx`](#c03.xhtml#Page_36)
+    -   Trusted Advisor tool, [`/path/to/xxx`](#c03.xhtml#Page_36)
+-   Batch, [`/path/to/xxx`](#a02.xhtml#Page_254)–255
+-   Billing & Cost Management Dashboard, [`/path/to/xxx`](#c02.xhtml#Page_16), [`/path/to/xxx`](#c02.xhtml#Page_24), [`/path/to/xxx`](#c06.xhtml#Page_85) 
+    -   AWS Management Console and, [`/path/to/xxx`](#c02.xhtml#Page_23)
+-   buckets (S3), [`/path/to/xxx`](#c08.xhtml#Page_139), [`/path/to/xxx`](#a01.xhtml#Page_234) 
+    -   copying files between, [`/path/to/xxx`](#c03.xhtml#Page_39)
+    -   creating, [`/path/to/xxx`](#c08.xhtml#Page_144)–145
+    -   names, [`/path/to/xxx`](#a01.xhtml#Page_243)
+    -   permission policies, [`/path/to/xxx`](#c08.xhtml#Page_142)
+    -   Snowball Edge and, [`/path/to/xxx`](#c08.xhtml#Page_149)
+-   budgeting, [`/path/to/xxx`](#c02.xhtml#Page_24)–25
