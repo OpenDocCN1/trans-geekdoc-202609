@@ -1,0 +1,32 @@
+
+To answer the research question, this chapter draws on the symbolic interactionist role of theory in foreign policy analysis (FPA) and traces policy developments relying on a corpus of policy documents from the executive as well as other state agencies and from non-state actors. The chapter proceeds as follows: First, the theoretical premises of role theory are presented, and the concept of a two-level role play is outlined. Following this, essential interactions in the four fields of activity are analyzed. Finally, a short conclusion summarizes the findings.
+
+# Role theory
+
+Roles have been increasingly used as analytical concepts for studying foreign policies.2## Following the symbolic interactionist strain in role theory, roles are understood as social positions that are shaped by ego and alter expectations, and that are associated with a function for a social group (Harnisch 2012: 8). Roles are defined relationally; stable social relationships depend on a role and a complementary counter-role. For example, if an actor claims the role of protector (as the government does in cyber security policy), another actor must fill the role of the one needing protection. However, this relationship does not require any rational complementarity of interests. The motives for assuming role and counter-role may be different and are not immediately relevant for the resulting social structure, as social reality emerges from role interaction (Harnisch 2014: 14).
+
+Though traditional role theory assumes homogeneous and nationally accepted role conceptions, this has changed in recent years. The insight that roles can be disputed domestically between different actors, for example between governments and citizens, has led role theoreticians to develop the concept of role contestation![Image 10](index-158_1.png)
+
+*Cyber securities and cyber security politics* 143 (Cantir and Kaarbo 2012). Various empirical studies have since traced the influence of domestic role contestation on a nation’s foreign policy behavior (Cantir and Kaarbo 2016). However, some analytical blind spots remained. For example, the repercussions of international interactions on the domestic social structure still required more investigation. Therefore, a holistic role theory approach was developed that connects the international process of role and counter-role taking with a domestic role play (“Full-spectrum role-taking”; Harnisch 2014). Examining both levels of role creation is inspired by the two-level game of Robert Putnam (1988), but offers two main advantages: First, it is not limited by a formalistic reference to treaty ratification, but can portray different forms of interaction. Second, the focus is not on balancing two rationalist win-sets, but on the interconnectivity of roles in the different spheres:
+
+The model suggests that the two role-taking processes are interactive: international role taking and making feeds back into domestic role taking (second image reversed) and domestic role taking enables and/or restrains external role taking.
+
+(Harnisch 2014: 2)
+
+Building on this foundation, this chapter argues that there is a domestic role play between government, legislature, judiciary, the private sector, and other non-state actors, and an international role play concerning other states, institutions, and NGOs. Furthermore, the German government has domestically claimed the role of protector in cyberspace, but still requires a complementary counter-role to facilitate a stable cyber security policy. Although the role of protector is not the only role the German Executive plays domestically (another example might include welfare maximizer), it is the most relevant for cyber security and therefore deserves dedicated analysis. Since there are different significant others involved and the role of protector can apply to different actors in different situations, it should be noted that role interaction patterns vary across the different areas of investigation.
+
+![Figure 10.1 Two-level role play.](index-158_1.png)
+
+***From delegation to control: The protection of critical infrastructures***
+
+In 1997, the German Federal Government began work on the protection of critical infrastructures. Initially, the government founded a Critical Infrastructures Working Group (Schulze 2006: 155–156), which recommended close cooperation between “business, science and politics” (Ressortarbeitsgruppe KRITIS 1999). Parliamentarians also assessed that this task should be jointly managed by both the state and industry. The operators of critical infrastructures should also be encouraged to establish appropriate security management of the assets (Deutscher Bundestag 1998: 17). However, these findings remained largely inconsequential at first. The policy for the protection of critical infrastructures gained real traction only after the 9/11 terror attacks. Subsequent anti-terrorism legislation passed by the government highlighted the vulnerability of critical infrastructures to cyberattacks and strengthened the Federal Office for Information Security (BSI). In addition, the cooperation KRITIS, which was intended to enable the state and economy to exchange information effectively, was founded in 2002. However, experts found the network proved largely deficient (Schulze 2006: 185, 247).
+
+In 2005, the government presented the “National Information Infrastructure Protection Plan”, the first strategic document for the protection of critical (information) infrastructures in Germany (Bundesministerium des Innern 2005: 3).
+
+Though the plan assigned responsibility for the protection of infrastructures primarily to private sector operators, the German government (in close consultation with industry) would define minimum standards that would guarantee an adequate level of protection against cyberattacks (Bundesministerium des Innern 2005: 13).
+
+The KRITIS implementation plan, published in 2007, continued this approach of voluntary cooperation and recommended various measures to be taken by companies. However, the central tenet of the infrastructure protection strategy remained
+
+*Cyber securities and cyber security politics* 145
+
+that “the goal should be reached in consensus between the private sector objectives of the operators and the overriding (welfare) interest of the community” (Bundesministerium des Innern 2007: 5). As such, in this first phase of German infrastructure protection, the protector role was delegated to operators of critical infrastructures.

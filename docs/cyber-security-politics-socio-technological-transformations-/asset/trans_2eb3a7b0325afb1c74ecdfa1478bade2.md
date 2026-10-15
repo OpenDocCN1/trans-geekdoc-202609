@@ -1,0 +1,127 @@
+
+Report. `Washington, DC`: `Atlantic Council`. Retrieved [from: `https://www.atlanticcouncil.org`](https://www.atlanticcouncil.org)
+
+[.org /in -depth -research -reports /report /confidence -building -measures -in -cyberspace -a](https://www.atlanticcouncil.org)
+
+[\-multistakeholder -approach -for -stability -and -security/](https://www.atlanticcouncil.org).
+
+Internet Governance Project. (2018, April 13). Defusing the Cyber Security Dilemma Game through Attribution and Network Monitoring. Retrieved from: [https://www.internetgovernance.org](https://www.internetgovernance.org)
+
+[.internetgovernance .org /2018 /04 /13 /defusing -cybersecurity -dilemma -game -attribution](https://www.internetgovernance.org)
+
+[\-network -monitoring//.](https://www.internetgovernance.org)
+
+Internet Governance Project. (2020, June 15). Workshop Synopsis: Building Transnational Attribution (Day 1). Retrieved from: [https://www.internetgovernance.org](https://www.internetgovernance.org)
+
+[workshop -synopsis -building -transnational -attribution -day -1/.](https://www.internetgovernance.org)
+
+Keromytis, A. (2016, April 25). Enhanced Attribution, Proposers Day Briefing.
+
+DARPA. Retrieved from: [https://www.enisa.europa.eu](https://www.enisa.europa.eu)
+
+[\-event -presentations /enhanced -attribution/](https://www.enisa.europa.eu).
+
+Koch, M. (2018, February 22). Germany is Just Fine with the NotPetya Cyberattack but Its Allies Aren’t. *Handelsblatt*. Retrieved from: [https://www.handelsblatt.com](https://www.handelsblatt.com)
+
+[/politics /state -secrets -germany -is -just -fine -with -the -notpetya -cyberattack -but -its -allies](https://www.handelsblatt.com)
+
+[\-arent /23581222 .html](https://www.handelsblatt.com).
+
+Lamprakis, P., Dargenio, R., Gugelmann, D., Lenders, V., Happe, M., and Vanbever, L.
+
+(2017). Unsupervised Detection of APT C&C Channels Using Web Request Graphs.
+
+In M. Polychronakis and M. Meier (eds), *Detection of Intrusions and Malware, and* *Vulnerability Assessment. DIMVA 2017. Lecture Notes in Computer Science, vol 1032*.
+
+Cham: Springer, pp. 366–387.
+
+ *Transnational cyber attribution* 237
+
+Lee, R. (2016, March 4). The Problems with Seeking and Avoiding True Attribution to Cyber Attacks. *SANS DFIR* (Blog). Retrieved from: [https://www.sans.org](https://www.sans.org)
+
+[\-problems -with -seeking -and -avoiding -true -attribution -to -cyber -attacks/](https://www.sans.org).
+
+Lin, H. (2016, September 2). Attribution of Malicious Cyber Incidents: From Soup to Nuts. *SSRN Scholarly Paper*. Retrieved from: [https://papers.ssrn.com](https://papers.ssrn.com)
+
+[\=2835719.](https://papers.ssrn.com)
+
+Miller, C. (2018). What’s Ukraine Doing to Combat Russian Cyberwarfare? “Not Enough.”
+
+Radio Free Europe/Radio Liberty. Retrieved August 21 2020, from [https://www.rferl.org](https://www.rferl.org)
+
+[.org /a /ukraine -struggles -cyberdefense -russia -expands -testing -ground /29085277 .html](https://www.rferl.org).
+
+National Cybersecurity Center of New Zealand. (2016). *Unclassified Cyber Threat Report*.
+
+Retrieved from: [https://www.ncsc.govt.nz](https://www.ncsc.govt.nz)
+
+[\-Unclassified -Cyber -Threat -Report .pdf](https://www.ncsc.govt.nz)
+
+Office of the Director of National Intelligence, United States Government. (2017).
+
+Background to “Assessing Russian Activities and Intentions in Recent US Elections”: The Analytic Process and Cyber Incident Attribution. Retrieved [from: https://www.dni.gov](https://www.dni.gov)
+
+[.gov /files /documents /ICA \_2017 \_01 .pdf](https://www.dni.gov).
+
+Radford, B. J., Apolonio, L. M., Trias, A. J., and Simpson, J. A. (2018). Network Traffic Anomaly Detection Using Recurrent Neural Networks. Prepared for the 2017 National Symposium on Sensor and Data Fusion. Retrieved [from: http://arxiv .org /abs /1803 .10769.](http://arxiv.org)
+
+Rid, T., and Buchanan, B. (2015). Attributing Cyber Attacks. *Journal of Strategic Studies*, 38(1–2): 4–37.
+
+Rubio, J. E., Alcaraz, C., Rios, R., Roman, R., and Lopez, J. (2020). Distributed Detection of APTs: Consensus vs. Clustering. In *European Symposium on Research in Computer* *Security*. Cham: Springer, pp. 174–192.
+
+Schmitt, M., and Vihul, L. (2017, June 30). International Cyber Law Politicized: The UN
+
+GGE’s Failure to Advance Cyber Norms. *Just Security*. Retrieved from: [https://www.justsecurity.org](https://www.justsecurity.org)
+
+[.justsecurity .org /42768 /international -cyber](https://www.justsecurity.org) law-p oliti cized -gges -fail ure-a dvanc e-cyb er norms/.
+
+Segal, A. (2018, June 19). The Theft and Reuse of Advanced Offensive Cyber Weapons Pose a Growing Threat. Council on Foreign Relations (Blog). Retrieved from: [https://www.cfr.org](https://www.cfr.org)
+
+[.cfr .org /blog /theft -and -reuse -advanced -offensive -cyber weapons-pose-growing-threat.](https://www.cfr.org)
+
+Segal, A., and Grigsby, A. (2018, April 23). New Entries in the CFR Cyber Operations Tracker: Q1 2018. Council on Foreign Relations (Blog). Retrieved from: [https://www.cfr.org](https://www.cfr.org)
+
+[.cfr .org /blog /new -entries -cfr -cyber](https://www.cfr.org) operations-tracker-q1-2018.
+
+Segal, A., Hoffman, S., Hanson, F., and Uren, T. (2018, September 25). Hacking for ca$h: Is China Still Stealing Western IP? Australian Strategic Policy Institute. Retrieved from:
+
+[https://s3-ap-southeast-2.amazonaws.com](https://s3-ap-southeast-2.amazonaws.com).
+
+[.pdf ?FHT EXSi f5qZ DfwP oxnA AhTl iEw45dMR1](https://s3-ap-southeast-2.amazonaws.com).
+
+Toon, J. (2016, November 29). $17 Million Contract Will Help Establish Science of Cyber Attribution. Georgia Tech Research, *Horizons* (Blog). Retrieved from: [http://www.rh.gatech.edu](http://www.rh.gatech.edu)
+
+[.rh .gatech .edu /news /584327 /17 -million -contract -will -help -establish -science -cyber](http://www.rh.gatech.edu)
+
+attribution.
+
+UK Foreign Office. (2017, December 19). Foreign Office Minister Condemns North Korean Actor for WannaCry Attacks. Retrieved [from: https://www.gov.uk](https://www.gov.uk)
+
+[/news /foreign -office -minister -condemns -north -korean -actor -for -wannacry -attacks.](https://www.gov.uk)
+
+UK Foreign Office. (2018, February 15). Foreign Office Minister Condemns Russia for NotPetya Attacks. Retrieved from: [https://www.gov.uk](https://www.gov.uk)
+
+[\-office -minister -condemns -russia -for -notpetya -attacks.](https://www.gov.uk)
+
+238 *B. Kuerbis, F. Badiei, K. Grindal, and M. Mueller* UK National Cyber Security Center. (2018, April 16). Russian Sponsored Cyber Actors Targeting Network Infrastructure Devices. Retrieved from: [https://www.ncsc.gov.uk](https://www.ncsc.gov.uk)
+
+[/news /russian -state -sponsored -cyber](https://www.ncsc.gov.uk) actor s-tar getin g-net work- infra struc ture- devic es.
+
+US Department of Homeland Security. (2016, December 29). GRIZZLY STEPPE –
+
+Russian Malicious Cyber Activity (JAR-16-20296A). Retrieved from: [https://us-cert.cisa.gov](https://us-cert.cisa.gov)
+
+[.cisa .gov /sites /default /files /publications /JAR \_16 -20296A \_GRIZZLY %20STEPPE](https://us-cert.cisa.gov)
+
+[\-2016 -1229 .pdf](https://us-cert.cisa.gov).
+
+US Department of Justice. (2014, May 19). U.S. Charges Five Chinese Military Hackers for Cyber Espionage against U.S. Corporations and a Labor Organization for Commercial Advantage. Retrieved from: [https://www.justice.gov](https://www.justice.gov)
+
+[\-military -hackers -cyber -espionage -against -us -corporations -and -labor](https://www.justice.gov).
+
+US Department of Justice. (2018). Criminal Procedures. Retrieved August 1, 2018, from:
+
+[https://www.justice.gov](https://www.justice.gov)
+
+US Department of Treasury. (2018, September 6). Treasury Targets North Korea for Multiple Cyber Attacks. Retrieved [from: https://home.treasury.gov](https://home.treasury.gov)
+

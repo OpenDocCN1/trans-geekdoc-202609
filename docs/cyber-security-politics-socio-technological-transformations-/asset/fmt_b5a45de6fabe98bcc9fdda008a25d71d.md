@@ -1,0 +1,38 @@
+
+[351).1](#index_split_002.html#p151) Similarly, scholars exploring the cyber security dilemma are less certain about the means each opponent holds and develops. Scholars (as well as practitioners) are uncertain not only about the capabilities of state actors involved, but also about the means of non-state actors, including advanced technological firms (Dunn Cavelty and Wenger 2020: 23). Furthermore, these uncertainties are aggravated by rapid changes in technology that states and non-state actors alike try to acquire. This arms race is rapid, and the efficiency of the means the actors develop is not fully `understood2` by either the involved actors or scholars. While DOI: [`10.4324/9781003110224-11`](https://doi.org/10.4324/9781003110224-11)
+
+`*The study of cyber deterrence*`
+
+`*The study of cyber deterrence*` 129
+
+how to use an emerging technology is almost always in question (i.e., nuclear weapons as a means of deterrence or of war-fighting), the facts that the changes are rapid and that non-state actors are involved in acquiring and potentially using these technologies make it even more challenging.
+
+These challenges are thus an obvious obstacle to studying specific strategies, such as cyber `deterrence.3` First, studying cyber deterrence is a challenge because scholars have difficulty identifying and tracing situations of deterrence success[4] as well as situations of deterrence failure (Lupovici 2020). Second, many scholars have emphasized the attribution problem as a great challenge for cyber deterrence success, limiting the ability to issue a credible deterrence threat (see in Morgan 2010; Lupovici 2011; Stevens 2012: 149–53). [5] While this challenge is not necessarily unresolvable for deterrence actors[6] – and so should not prevent them from successfully employing cyber deterrence strategies (e.g. Nye 2017) – it may pose an insurmountable challenge for scholars, who have much less access to this kind of information. Given these two problems, scholars who study cyber deterrence have difficulty getting the required empirical information on cyber incidents.
+
+Their access to information about deterrence failure and success is limited, and even if they gain knowledge about a case of cyber attack, they may have difficulty attributing the source of the attack. These problems seriously limit the ability to establish arguments about deterrence strategy, especially regarding the conditions under which it works or fails.
+
+It seems from this perspective that the uncertainties created by cyber technology, the rapid changes in technology, and the fragmentation of authority all challenge the scholarly exploration of cyber security. Nonetheless, I argue that these uncertainties should not discourage scholars, but rather might lead them to adapt their research questions, adopt additional methods, and shift their empirical focus.
+
+Each of these challenges prompts thinking in directions to minimize or bypass the limitations around studying interactions in the cyber domain. For example, uncertainties and rapid changes in technology mean scholars should focus on shifts over longer segments of time. Even if technology is changing quickly, the impact of this on strategies and doctrines lags. This focus has two important implications.
+
+First, it is a more feasible goal: not only does it provide an anchor that decreases uncertainties given the vast amount of information on past strategies and behavior, but it also allows us to limit the challenge of rapid changes. How technology is translated into policy leaves more traces, especially as strategies like deterrence require strategic communication with opponents (i.e., issuing threats). Second, the impact of technologies on strategies and actor behavior is mediated through social attributes[.7] Therefore, scholars can compare new policies and strategies with past ones and explore whether and how they resonate with them.
+
+Focusing on how a new technology enters into doctrines and strategies raises various questions. Some can be developed and answered through interpretative approaches, by looking at the constraints and opportunities the social context creates for actors relying on new technologies. This helps in conducting comparisons, but also in examining specific characteristics of the technology that allow or limit shifts from past types of behavior. For example, rather than exploring
+
+130 `*Amir Lupovici*`
+
+how a strategy is effective or not effective (i.e., under what conditions a strategy works) given the limitations of uncertainties and rapid changes, scholars can also direct their research toward questions about the strategy’s adoption. Among other things, scholars can explore how actors come to adopt a strategy and adapt it to address challenges of the cyber domain, or alternatively how they refrain from adopting it. Elaborating on these issues leads to questions about how technological impetus is embedded in actors’ narratives, strategic culture, and identities, and how adopting a certain strategy fits or challenges international norms.
+
+In order to illustrate this research conduct and its merit, I briefly discuss the Israeli cyber deterrence strategy and the limited extent of its adoption. Focusing on the adoption of the strategy – rather than on the more uncertain questions about deterrence success – demonstrates a way to address key challenges in studying cyber security given the uncertainties and rapid changes discussed above. As I elaborate below, studying Israel’s adoption of deterrence strategy directs our attention to how it fits Israel’s strategic culture and identities. This, in fact, presents a puzzle. While deterrence is a prominent Israeli strategy, cyber deterrence strategy has so far not been fully adopted. Understanding the social context raises important questions that the rapid technological changes do not prevent us from asking and answering.
+
+**`Israel (cyber) deterrence`**
+
+It is beyond the space limits of this chapter to discuss all relevant methodological aspects or fully explore the case. Rather, this discussion aims to demonstrate the methodological solutions presented above by focusing on Israel’s cyber deterrence strategy. Despite Israel’s reliance on deterrence strategies vis-à-vis various kinds of threats, Israel, unlike for example the United States, [8] has still not adopted an explicit cyber deterrence strategy. However, since the second decade of the 2000s, there has been growing support for adopting such strategy by key Israeli officials.
+
+Deterrence is a prominent strategy in Israel. While this strategy has emerged from different strategic rationales since the 1950s (Yaniv 1987: 72; Levite 1989: 27–35; Bar 1990: 54; Evron 1994: 40, 42–3; Tal 2000: 51; Cohen 2010: 35–6, 77), it continues to be a dominant Israeli strategy, and it is endorsed by both the political and military elites (Yaniv 1987; Evron 1994: 40–1; Levite 1989: 25, 47; Bar-Joseph 2001: 2). Furthermore, over the years the Israeli deterrent strategy has been developed and adapted to address different kinds of threats (Bar-Joseph 1998).
+
+For Israel, practicing deterrence fulfils not just physical security needs, but also identity-related needs. As Lupovici (2016b) suggests, Israel holds a deterrer identity. A deterrer identity is when an actor internalizes a `deterrer role` that it is attached to and through which it perceives how it needs to act in the international
+
+`arena.9` The manifestation of the Israeli deterrer identity is evident in how Israel perceives threats, responds to them, and justifies certain policies. From Israel’s perspective, lack of violence is deterrence success, while eruption of violence is
+
+`*The study of cyber deterrence*` 131
