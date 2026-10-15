@@ -1,0 +1,228 @@
+
+接下来，我们可以定义并编译模型。该模型将期望具有两个输入变量的样本。然后，模型有一个包含50个节点和修正线性激活函数的隐藏层，然后是一个包含3个节点的输出层，用于预测3个类别中每个类别的概率，并使用`softmax`激活函数。由于该问题是多类的，我们将使用分类交叉熵损失函数来优化模型，并使用高效的Adam风格的随机梯度下降。
+
+```
+# define model
+model = Sequential()
+model.add(Dense(50, input_dim=2, activation='relu'))
+model.add(Dense(3, activation='softmax'))
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+```
+
+**清单22.5：定义MLP模型的示例。**
+
+模型拟合50个训练轮次，我们将在每个轮次在测试集上评估模型，将测试集用作验证集。
+
+```
+# fit model
+history = model.fit(trainX, trainy, validation_data=(testX, testy), epochs=50, verbose=0)
+```
+
+**清单22.6：拟合MLP模型的示例。**
+
+运行结束时，我们将评估模型在训练集和测试集上的性能。
+
+```
+# evaluate the model
+_, train_acc = model.evaluate(trainX, trainy, verbose=0)
+_, test_acc = model.evaluate(testX, testy, verbose=0)
+print('Train: %.3f, Test: %.3f' % (train_acc, test_acc))
+```
+
+**清单22.7：评估MLP模型的示例。**
+
+最后，我们将绘制模型在训练和测试数据集上每个训练轮次的准确率学习曲线。
+
+```
+# plot loss learning curves
+pyplot.subplot(211)
+pyplot.title('Cross-Entropy Loss', pad=-40)
+pyplot.plot(history.history['loss'], label='train')
+pyplot.plot(history.history['val_loss'], label='test')
+pyplot.legend()
+# plot accuracy learning curves
+pyplot.subplot(212)
+pyplot.title('Accuracy', pad=-40)
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
+pyplot.legend()
+pyplot.show()
+```
+
+**清单22.8：绘制MLP模型学习曲线的示例。**
+
+完整示例如下。
+
+```
+# develop an mlp for blobs dataset
+from sklearn.datasets.samples_generator import make_blobs
+from keras.utils import to_categorical
+from keras.models import Sequential
+from keras.layers import Dense
+from matplotlib import pyplot
+# generate 2d classification dataset
+X, y = make_blobs(n_samples=1000, centers=3, n_features=2, cluster_std=2, random_state=2)
+# one hot encode output variable
+y = to_categorical(y)
+# split into train and test
+n_train = int(0.9 * X.shape[0])
+trainX, testX = X[:n_train, :], X[n_train:, :]
+trainY, testY = y[:n_train], y[n_train:]
+# define model
+model = Sequential()
+model.add(Dense(50, input_dim=2, activation='relu'))
+model.add(Dense(3, activation='softmax'))
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+# fit model
+history = model.fit(trainX, trainY, validation_data=(testX, testY), epochs=50, verbose=0)
+# evaluate the model
+_, train_acc = model.evaluate(trainX, trainY, verbose=0)
+_, test_acc = model.evaluate(testX, testY, verbose=0)
+print('Train: %.3f, Test: %.3f' % (train_acc, test_acc))
+# plot loss learning curves
+pyplot.subplot(211)
+pyplot.title('Cross-Entropy Loss', pad=-40)
+pyplot.plot(history.history['loss'], label='train')
+pyplot.plot(history.history['val_loss'], label='test')
+pyplot.legend()
+# plot accuracy learning curves
+pyplot.subplot(212)
+pyplot.title('Accuracy', pad=-40)
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
+pyplot.legend()
+pyplot.show()
+```
+
+**清单 22.9：对 blobs 问题拟合 MLP 的示例。**
+
+运行示例首先会打印最终模型在训练集和测试集上的性能。
+
+**注意**：由于学习算法的随机性，您的具体结果可能会有所不同。考虑多次运行示例并比较平均性能。
+
+在这种情况下，我们可以看到模型在训练数据集上实现了约 83% 的准确率，在测试数据集上实现了约 88% 的准确率。选择的将数据集划分为训练集和测试集的方式意味着测试集很小且不能代表更广泛的问题。反过来，测试集上的性能并不能代表模型；在这种情况下，它是乐观偏差的。
+
+```
+Train: 0.832, Test: 0.850
+```
+
+**清单 22.10：对 blobs 问题拟合 MLP 的示例输出。**
+
+还创建了一条线图，显示每个训练 epoch 上模型在训练集和测试集上的准确率学习曲线。我们可以看到模型具有相当稳定的拟合。
+
+![](img/8b574b0ce3be1eda9e1c02c72f9c8a21_460_0.png)
+
+**图 22.2：每个训练 epoch 上模型在训练集和测试数据集上的准确率学习曲线线图。**
+
+## 22.2.3 随机分割集成
+
+模型的 instability 和小的测试数据集意味着我们实际上并不知道该模型在一般新数据上的表现如何。我们可以尝试一种简单的重采样方法，即反复生成数据集在训练集和测试集中的新随机分割并拟合新模型。计算模型在每个分割上的性能平均值将给出模型泛化误差的更好估计。然后我们可以将多个在随机分割上训练的模型组合起来，预计集成模型的性能可能比平均单个模型更稳定且更好。
+
+我们将从问题域生成 10 倍多的样本点并将其作为未见数据集保留。对这个大得多的数据集的模型评估将用作代理或对该问题的模型泛化误差的更准确估计。
+
+这个额外的数据集不是测试数据集。严格来说，它是为了本次演示的目的，但我们假装该数据在模型训练时不可用。
+
+```
+# generate 2d classification dataset
+dataX, datay = make_blobs(n_samples=55000, centers=3, n_features=2, cluster_std=2,
+    random_state=2)
+X, newX = dataX[:5000, :], dataX[5000:, :]
+y, newy = datay[:5000], datay[5000:]
+```
+
+**清单 22.11：创建用于建模的更大数据集的示例。**
+
+因此我们现在有 5,000 个示例来训练模型并估计其总体性能。我们还有 50,000 个示例可用于更好地近似单个模型或集成的真实总体性能。接下来，我们需要一个函数来在训练数据集上拟合和评估单个模型，并返回拟合模型在测试数据集上的性能。我们还需要拟合的模型，以便将其用作集成的一部分。下面的`evaluate_model()`函数实现了此行为。
+
+```
+# evaluate a single mlp model
+def evaluate_model(trainX, trainy, testX, testy):
+    # encode targets
+    trainy_enc = to_categorical(trainy)
+    testy_enc = to_categorical(testy)
+    # define model
+    model = Sequential()
+    model.add(Dense(50, input_dim=2, activation='relu'))
+    model.add(Dense(3, activation='softmax'))
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    # fit model
+    model.fit(trainX, trainy_enc, epochs=50, verbose=0)
+    # evaluate the model
+    _, test_acc = model.evaluate(testX, testy_enc, verbose=0)
+    return model, test_acc
+```
+
+**清单 22.12：定义用于拟合和评估 MLP 模型的函数的示例。**
+
+接下来，我们可以创建训练数据集的随机分割，并在每个分割上拟合和评估模型。我们可以使用 `scikit-learn` 库中的`train_test_split()`函数将数据集随机分割为训练集和测试集。它接受`X`和`y`数组作为参数，`test_size`指定测试数据集的大小（以百分比表示）。我们将使用 5,000 个示例中的 10% 作为测试集。然后我们可以调用`evaluate_model()`来拟合和评估模型。返回的准确率和模型随后可以添加到列表中以供以后使用。在本示例中，我们将分割次数限制为 10，进而将拟合模型的数目限制为 10。
+
+```
+# multiple train-test splits
+n_splits = 10
+scores, members = list(), list()
+for _ in range(n_splits):
+    # split data
+    trainX, testX, trainy, testy = train_test_split(X, y, test_size=0.10)
+    # evaluate model
+    model, test_acc = evaluate_model(trainX, trainy, testX, testy)
+    print('>%3f' % test_acc)
+    scores.append(test_acc)
+    members.append(model)
+```
+
+**清单 22.13：从随机训练/测试分割创建集成成员的示例。**
+
+在拟合和评估模型后，我们可以估计给定模型在所选配置下在该域中的预期性能。
+
+```
+# summarize expected performance
+print('Estimated Accuracy %.3f (%.3f)' % (mean(scores), std(scores)))
+```
+
+**清单 22.14：汇总单个模型性能的示例。**
+
+我们不知道有多少模型对集成有用。很可能存在收益递减点，此后添加更多成员不再改变集成的性能。尽管如此，我们仍可以评估从 1 到 10 的不同集成大小，并在未见的保留数据集上绘制其性能。我们还可以对保留数据集上的每个模型进行评估并计算这些分数的平均值，以获得对所选模型在预测问题上的真实性能的更准确近似。
+
+```
+# evaluate different numbers of ensembles on hold out set
+single_scores, ensemble_scores = list(), list()
+for i in range(1, n_splits+1):
+    ensemble_score = evaluate_n_members(members, i, newX, newy)
+    newy_enc = to_categorical(newy)
+    _, single_score = members[i-1].evaluate(newX, newy_enc, verbose=0)
+    print('>%d: single=%.3f, ensemble=%.3f' % (i, single_score, ensemble_score))
+    ensemble_scores.append(ensemble_score)
+    single_scores.append(single_score)
+```
+
+**清单 22.15：评估不同大小集成的示例。**
+
+最后，我们可以比较并计算平均模型在预测问题上的总体性能的更稳健估计，然后绘制集成大小与保留数据集上准确率的关系。
+
+```
+# plot score vs number of ensemble members
+print('Accuracy %.3f (%.3f)' % (mean(single_scores), std(single_scores)))
+x_axis = [i for i in range(1, n_splits+1)]
+pyplot.plot(x_axis, single_scores, marker='o', linestyle='None')
+pyplot.plot(x_axis, ensemble_scores, marker='o')
+pyplot.show()
+```
+
+**清单 22.16：绘制集成性能与集成大小关系的示例。**
+
+将所有这些内容整合在一起，完整的示例列于下方。
+
+```
+# random-splits mlp ensemble on blobs dataset
+from sklearn.datasets.samples_generator import make_blobs
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from keras.utils import to_categorical
+from keras.models import Sequential
+from keras.layers import Dense
+from matplotlib import pyplot
+from numpy import mean
+from numpy import std
+from numpy import array
+from numpy import argmax
+```
