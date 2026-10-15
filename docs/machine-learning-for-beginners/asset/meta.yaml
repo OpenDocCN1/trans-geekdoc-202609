@@ -1,0 +1,49 @@
+name: Machine Learning For Beginners
+slug: machine-learning-for-beginners
+name_cn: '
+
+  初学者机器学习'
+toc:
+- - '##'
+  - YOUR STARTER GUIDE FOR DATA MANAGEMENT, MODEL TRAINING, NEURAL NETWORKS, MACHINE
+    LEARNING ALGORITHMS
+- - '##'
+  - Chapter 1
+- - '###'
+  - KNN 算法的优势
+- - '###'
+  - KNN 算法的劣势
+- - '###'
+  - 何时使用 KNN 算法？
+- - '###'
+  - 聚类算法的工作原理
+- - '###'
+  - 聚类算法的类型
+- - '###'
+  - 何时使用聚类算法
+- - '##'
+  - How ANNs Work
+- - '##'
+  - Some Interesting Examples
+- - '##'
+  - Advantages of Artificial Neural Networks
+- - '##'
+  - Disadvantages of Artificial Neural Networks
+- - '##'
+  - When to use Artificial Neural Networks
+- - '#'
+  - CONCLUSION
+- - '#'
+  - Notes
+- - '##'
+  - 第 6 章 – 模型训练、验证和应用
+- - '##'
+  - 第 7 章 – 算法
+- - '##'
+  - 第 8 章 – 回归算法
+- - '##'
+  - 第 9 章 – KNN 算法
+- - '##'
+  - 第 10 章 – 聚类算法
+- - '##'
+  - 第 11 章 – 人工神经网络
