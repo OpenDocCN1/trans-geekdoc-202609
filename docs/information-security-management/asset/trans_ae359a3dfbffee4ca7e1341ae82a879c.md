@@ -1,0 +1,86 @@
+
+-   [悲观立场](#9781284211658_CH08_02.xhtml#page_227) [227](#9781284211658_CH08_02.xhtml#page_227)t
+-   PGP. *See* [Pretty Good Privacy](#9781284211658_Index.xhtml#ie0856)
+-   PHI. *See* [Personal health information](#9781284211658_Index.xhtml#ie0823)
+-   Phishing, [75](#9781284211658_CH03_03.xhtml#page_75)–[76](#9781284211658_CH03_03.xhtml#page_76), [183](#9781284211658_CH06_03.xhtml#page_183), [272](#9781284211658_CH09_03.xhtml#page_272)
+-   Photuris, [327](#9781284211658_CH10_04.xhtml#page_327)
+-   PHR. *See* [Personal health records](#9781284211658_Index.xhtml#ie0824)
+-   Physical and environmental security, [133](#9781284211658_CH05_03.xhtml#page_133)
+-   Physical controls, [198](#9781284211658_CH07_02.xhtml#page_198), [198](#9781284211658_CH07_02.xhtml#page_198)t, [207](#9781284211658_CH07_04.xhtml#page_207)
+-   Physical countermeasures, [34](#9781284211658_CH02_01.xhtml#page_34), [34](#9781284211658_CH02_01.xhtml#page_34)t, [52](#9781284211658_CH02_05.xhtml#page_52), [228](#9781284211658_CH08_02.xhtml#page_228)
+-   Physical Layer, [156](#9781284211658_CH06_01.xhtml#page_156)
+-   PIDS. *See* [Protocol-based IDS](#9781284211658_Index.xhtml#ie0876)
+-   PII. *See* [Personally identifiable information](#9781284211658_Index.xhtml#ie0826)
+-   Pineapple®, [45](#9781284211658_CH02_03.xhtml#page_45), [169](#9781284211658_CH06_02.xhtml#page_169)
+-   Pinhole camera, pen with, [265](#9781284211658_CH09_02.xhtml#page_265), [265](#9781284211658_CH09_02.xhtml#page_265)f
+-   Pinterest, [148](#9781284211658_CH06_01.xhtml#page_148)
+-   PIPEDA. *See* [Personal Information Protection and Electronic Documents Act](#9781284211658_Index.xhtml#ie0825)
+-   PKI. *See* [Public key infrastructure](#9781284211658_Index.xhtml#ie0594)
+-   Platform as a Service (PaaS), [149](#9781284211658_CH06_01.xhtml#page_149)
+-   Point-to-Point Protocol (PPP), [326](#9781284211658_CH10_04.xhtml#page_326)
+-   Polymorphic attacks, [345](#9781284211658_CH11_03.xhtml#page_345)
+-   Porter, Michael, [98](#9781284211658_CH04_02.xhtml#page_98), [118](#9781284211658_CH05_01.xhtml#page_118)–[120](#9781284211658_CH05_01.xhtml#page_120), [120](#9781284211658_CH05_01.xhtml#page_120)f
+-   Ports, [16](#9781284211658_CH01_03.xhtml#page_16)t
+-   Positional power, [97](#9781284211658_CH04_01.xhtml#page_97)
+-   Positive reinforcers, [271](#9781284211658_CH09_03.xhtml#page_271)
+-   Power, [97](#9781284211658_CH04_01.xhtml#page_97)
+-   PPP. *See* [Point-to-Point Protocol](#9781284211658_Index.xhtml#ie0845)
+-   Presentation Layer, [157](#9781284211658_CH06_01.xhtml#page_157)
+-   Present-Test-Practice-Assess (PTPA) acquisition and reinforcement model, [6](#9781284211658_CH01_02.xhtml#page_6)
+-   Pretext, [183](#9781284211658_CH06_03.xhtml#page_183), [272](#9781284211658_CH09_03.xhtml#page_272)
+-   Pretty Good Privacy (PGP), [230](#9781284211658_CH08_03.xhtml#page_230), [318](#9781284211658_CH10_03.xhtml#page_318)
+-   Primary key, [155](#9781284211658_CH06_01.xhtml#page_155)
+-   Primary storage, [223](#9781284211658_CH08_01.xhtml#page_223)t
+-   Principals, [91](#9781284211658_CH04_01.xhtml#page_91)
+-   Private industry baseline security, [359](#9781284211658_CH11_04.xhtml#page_359)
+-   Private key cryptography (symmetric), [231](#9781284211658_CH08_03.xhtml#page_231)t, [302](#9781284211658_CH10_01.xhtml#page_302)
+-   Private keys, and asymmetric cryptography, [312](#9781284211658_CH10_03.xhtml#page_312)–[316](#9781284211658_CH10_03.xhtml#page_316), [313](#9781284211658_CH10_03.xhtml#page_313)b–[315](#9781284211658_CH10_03.xhtml#page_315)b
+-   Private law, [95](#9781284211658_CH04_01.xhtml#page_95)t
+-   Privileged access management (PAM), [71](#9781284211658_CH03_02.xhtml#page_71), [71](#9781284211658_CH03_02.xhtml#page_71)t
+-   Privilege escalations, [43](#9781284211658_CH02_03.xhtml#page_43), [68](#9781284211658_CH03_01.xhtml#page_68)t
+-   Probability–severity classification, [202](#9781284211658_CH07_03.xhtml#page_202)t
+-   Procedural justice, [93](#9781284211658_CH04_01.xhtml#page_93)
+-   Procedural law, [95](#9781284211658_CH04_01.xhtml#page_95)t
+-   Process management, [152](#9781284211658_CH06_01.xhtml#page_152)
+-   Programming languages, resource files and, [161](#9781284211658_CH06_01.xhtml#page_161)–[162](#9781284211658_CH06_01.xhtml#page_162)
+-   Program process, [152](#9781284211658_CH06_01.xhtml#page_152)
+-   Project initiation, [37](#9781284211658_CH02_02.xhtml#page_37)
+-   Project plan review, [38](#9781284211658_CH02_02.xhtml#page_38)
+-   Protection rings, [224](#9781284211658_CH08_01.xhtml#page_224)–[225](#9781284211658_CH08_01.xhtml#page_225), [224](#9781284211658_CH08_01.xhtml#page_224)f
+-   Protocol attacks, [74](#9781284211658_CH03_03.xhtml#page_74)
+-   Protocol-based IDS (PIDS), [344](#9781284211658_CH11_03.xhtml#page_344)
+-   Psychological contract, [104](#9781284211658_CH04_02.xhtml#page_104), [104](#9781284211658_CH04_02.xhtml#page_104)t, [267](#9781284211658_CH09_02.xhtml#page_267)
+-   Public Company Accounting Reform and Investor Protection Act of 2002, [197](#9781284211658_CH07_01.xhtml#page_197)
+-   Public key algorithms, asymmetric cryptography, [320](#9781284211658_CH10_03.xhtml#page_320)–[322](#9781284211658_CH10_03.xhtml#page_322)
+-   Public key cryptography (asymmetric), [231](#9781284211658_CH08_03.xhtml#page_231)t, [302](#9781284211658_CH10_01.xhtml#page_302), [310](#9781284211658_CH10_02.xhtml#page_310)–[322](#9781284211658_CH10_03.xhtml#page_322)
+-   Public key infrastructure (PKI), [311](#9781284211658_CH10_03.xhtml#page_311)f
+-   key distribution and, [318](#9781284211658_CH10_03.xhtml#page_318)–[319](#9781284211658_CH10_03.xhtml#page_319)
+-   Public law, [95](#9781284211658_CH04_01.xhtml#page_95)t
+-   PuTTYgen, [313](#9781284211658_CH10_03.xhtml#page_313)
+-   Python, [24](#9781284211658_CH02.xhtml#page_24)
+-   QoS. *See* [Quality of Service](#9781284211658_Index.xhtml#ie0886)
+-   Quality of Service (QoS), [51](#9781284211658_CH02_04.xhtml#page_51), [150](#9781284211658_CH06_01.xhtml#page_150), [360](#9781284211658_CH11_04.xhtml#page_360), [402](#9781284211658_CH12_06.xhtml#page_402), [403](#9781284211658_CH12_06.xhtml#page_403), [406](#9781284211658_CH12_07.xhtml#page_406)–[408](#9781284211658_CH12_07.xhtml#page_408), [410](#9781284211658_CH12_07.xhtml#page_410)
+-   Radio frequency identification (RFID), [248](#9781284211658_CH08_05.xhtml#page_248)
+-   Random-access memory (RAM), [223](#9781284211658_CH08_01.xhtml#page_223)
+-   Ransomware, [78](#9781284211658_CH03_03.xhtml#page_78)
+-   RATs. *See* [Remote access Trojans](#9781284211658_Index.xhtml#ie0906)
+-   RBAC. *See* [Role-based access controls](#9781284211658_Index.xhtml#ie0943)
+-   RDB. *See* [Relational database system](#9781284211658_Index.xhtml#ie0904)
+-   RDF. *See* [Resource Description Framework](#9781284211658_Index.xhtml#ie0913)
+-   Read-only memory (ROM), [223](#9781284211658_CH08_01.xhtml#page_223)
+-   Reasoning, discrete vs. equivocal problems, [385](#9781284211658_CH12_03.xhtml#page_385)–[386](#9781284211658_CH12_04.xhtml#page_386)
+-   Reasoning systems, [379](#9781284211658_CH12_02.xhtml#page_379)–[380](#9781284211658_CH12_03.xhtml#page_380)
+-   Reconnaissance, [80](#9781284211658_CH03_04.xhtml#page_80)
+-   Recovery plan, [200](#9781284211658_CH07_02.xhtml#page_200)
+-   Red Book, [233](#9781284211658_CH08_03.xhtml#page_233)
+-   Reference monitor, [235](#9781284211658_CH08_03.xhtml#page_235)
+-   Referent power, [97](#9781284211658_CH04_01.xhtml#page_97)
+-   Reflected cross-site scripting (XSS), [178](#9781284211658_CH06_03.xhtml#page_178)t
+-   Reinforcers, [270](#9781284211658_CH09_03.xhtml#page_270)–[271](#9781284211658_CH09_03.xhtml#page_271)
+-   Relational database system (RDB), [155](#9781284211658_CH06_01.xhtml#page_155)
+-   Reliable connection, [157](#9781284211658_CH06_01.xhtml#page_157)
+-   Remote access Trojans (RATs), [239](#9781284211658_CH08_03.xhtml#page_239)
+-   Remote control systems, [239](#9781284211658_CH08_03.xhtml#page_239)
+-   Remote procedure calls (RPCs), [157](#9781284211658_CH06_01.xhtml#page_157)
+-   Repeated hashing, [242](#9781284211658_CH08_04.xhtml#page_242)
+-   Representational state transfer (REST), [161](#9781284211658_CH06_01.xhtml#page_161)

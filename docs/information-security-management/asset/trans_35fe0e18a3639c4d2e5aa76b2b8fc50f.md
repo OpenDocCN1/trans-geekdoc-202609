@@ -1,0 +1,4 @@
+
+| 特权访问管理 (PAM) | | PAM 涉及管理访问权限的技术和方法，防止在基础设施中为账户、进程、设备和系统分配未经授权的权限。PAM 帮助组织减少其攻击面，防止或限制因网络攻击以及内部威胁造成的损害。PAM 有时也被称为特权身份管理 (PIM)。 |
+
+最常见的是在记录系统 (SORs)、数据库和其他受保护/敏感系统中看到这些系统。该区域通常是隔离的，意味着它与互联网完全、物理上断开连接。因此，它也是最受内部威胁青睐的目标，这也正是其访问策略严格的原因。值得注意的是，开发人员/程序员<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>

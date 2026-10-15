@@ -1,0 +1,14 @@
+
+# 12.6 生物启发型安全与自适应系统
+
+一种新型的信息和网络安全方法以人体为隐喻，用于构建更具适应性和抗损能力的系统，尤其在许多系统呈移动性的情况下，如笔记本电脑、智能手机以及其他通过所谓的自组网络（MANET）连接的设备。这些系统预计能够承受一定损伤，但它们具有从感染中恢复（recupere）并发展出合成免疫的能力。检测系统损伤的思路来源于危害理论，该理论阐述了当检测到病毒或细菌等危害时，哺乳动物免疫系统的反应。将该类比用于计算系统中，我们可以，例如，检查系统可执行文件以及它们在调用序列中的相互链接、变化事件或状态转换，或代码变更，从而推断原因。本节将介绍生物启发型安全的概念，特别是在与移动设备点对点（P2P）通信基础设施以及 MANETs 相结合的情形中。在此过程中，我们将提供自适应系统的说明及其在真实世界应用中的使用方式。
+
+## 12.6.1 自愈合自适应系统
+
+传统上，自适应系统指的是具有自愈合能力的系统。自愈合意味着系统能够从损伤中恢复。正如系统以多种方式适应环境，系统也使用多种机制进行自我修复或修补。许多自愈合系统采用一种常被称为易感-感染-易感（SIS）的模型。该模型中的每个节点或代理代表一个系统或设备，每条连接则是感染传播的通路。个体节点可能处于多种状态，如“受损”“安全”“感染”或“易感”，如上一章节所述。每当节点变得受损或感染，其他系统或设备受损或感染的速率会显著增加。[^(41)](#9781284211658_CH12_11.xhtml#c12-bib0041)
+
+Until recently, self-healing has relied mainly on traditional security architecture—providing firewalls that can react to attacks and warn of risky behaviors, having built-in redundancies, standby systems, virus scanners, and recovery utilities. However, the term is evolving to represent more “self-correction” methods, including the use of genetic algorithms that can propagate information, optimize systems, and instruct changes in a way that resembles how human genetics interact with (are expressed based on) their environments. Self-healing then relies on the concept of immunology. Immunization has been classified as passive, active, or a hybrid. Passive immunology is the approach previously mentioned, that is, to use firewalls and virus scanning systems that are capable of repairing damage. Active immunization includes using intrusion detection mechanisms that automatically generate an appropriate response to a given signature or type of intrusion or attack. However, an interesting addition to this concept was described by Toutonji and Yoo, in which they defined an “automated method to detect worm attack, analyze the worm’s malicious code, and then generate an anti-worm.”[^(42)](#9781284211658_CH12_11.xhtml#c12-bib0042) In this mechanism, the generated anti-worm would reproduce the behavior as the malicious worm and spread through the network until it could overtake the malicious worm and neutralize it. Nevertheless, they acknowledged that the anti-worm could be reengineered to neutralize defensive systems. As implied then, hybrid immunology is a combination of active and passive approaches, which gives better defense in depth than either passive or active immunology alone.
+
+Research into self-healing approaches[^(43)](#9781284211658_CH12_11.xhtml#c12-bib0043) generally involves discovery of spreading damage. By tracing the damage along the paths through which the damage is occurring, the systems involved might (1) begin to predict the trajectory or the pathways most likely to be affected next, (2) trace back to an original source and decouple (block) the source from the infrastructure, and (3) reroute traffic while systems are repaired, for example, by having virus scanners quarantine and repair the damage.
+
+## 12.6.2 损伤与危害
