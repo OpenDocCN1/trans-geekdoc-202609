@@ -1,0 +1,1 @@
+potential for AI to be used in ways that discriminate against certain groups of people, or for the use of AI in mental health diagnosis and treatment, are important issues that must be addressed. As we continue to push the boundaries of AI in psychology, it is crucial to consider the consequences of these advancements and ensure that they are used for the betterment of society.

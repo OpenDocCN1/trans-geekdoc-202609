@@ -1,0 +1,1 @@
+the ethical issues and societal implications of these technologies are fully understood and addressed. The field of cognitive modeling holds great promise for improving our understanding of human cognition and behavior, and it is up to us to ensure that it is used for the betterment of society.
