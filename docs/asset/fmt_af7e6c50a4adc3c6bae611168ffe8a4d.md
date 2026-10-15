@@ -1,0 +1,242 @@
+
+```python
+# grid search for coefficients in a weighted average ensemble for the blobs problem
+from sklearn.datasets.samples_generator import make_blobs
+from sklearn.metrics import accuracy_score
+from keras.utils import to_categorical
+from keras.models import Sequential
+from keras.layers import Dense
+from numpy import array
+from numpy import argmax
+from numpy import tensordot
+from numpy.linalg import norm
+from itertools import product
+
+# fit model on dataset
+def fit_model(trainX, trainy):
+    trainy_enc = to_categorical(trainy)
+    # define model
+    model = Sequential()
+    model.add(Dense(25, input_dim=2, activation='relu'))
+    model.add(Dense(3, activation='softmax'))
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    # fit model
+    model.fit(trainX, trainy_enc, epochs=500, verbose=0)
+    return model
+
+# make an ensemble prediction for multi-class classification
+```
+
+## 21.2. 加权平均集成案例研究
+
+```python
+def ensemble_predictions(members, weights, testX):
+    # make predictions
+    yhats = [model.predict(testX) for model in members]
+    yhats = array(yhats)
+    # weighted sum across ensemble members
+    summed = tensordot(yhats, weights, axes=((0),(0)))
+    # argmax across classes
+    result = argmax(summed, axis=1)
+    return result
+
+# evaluate a specific number of members in an ensemble
+def evaluate_ensemble(members, weights, testX, testy):
+    # make prediction
+    yhat = ensemble_predictions(members, weights, testX)
+    # calculate accuracy
+    return accuracy_score(testy, yhat)
+
+# normalize a vector to have unit norm
+def normalize(weights):
+    # calculate l1 vector norm
+    result = norm(weights, 1)
+    # check for a vector of all zeros
+    if result == 0.0:
+        return weights
+    # return normalized vector (unit norm)
+    return weights / result
+
+# grid search weights
+def grid_search(members, testX, testy):
+    # define weights to consider
+    w = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    best_score, best_weights = 0.0, None
+    # iterate all possible combinations (cartesian product)
+    for weights in product(w, repeat=len(members)):
+        # skip if all weights are equal
+        if len(set(weights)) == 1:
+            continue
+        # hack, normalize weight vector
+        weights = normalize(weights)
+        # evaluate weights
+        score = evaluate_ensemble(members, weights, testX, testy)
+        if score > best_score:
+            best_score, best_weights = score, weights
+            print('>%s %.3f' % (best_weights, best_score))
+    return list(best_weights)
+
+# generate 2d classification dataset
+X, y = make_blobs(n_samples=1100, centers=3, n_features=2, cluster_std=2, random_state=2)
+# split into train and test
+n_train = 100
+trainX, testX = X[:n_train, :], X[n_train:, :]
+trainy, testy = y[:n_train], y[n_train:]
+# fit all models
+n_members = 5
+members = [fit_model(trainX, trainy) for _ in range(n_members)]
+# evaluate each single model on the test set
+testy_enc = to_categorical(testy)
+for i in range(n_members):
+    _, test_acc = members[i].evaluate(testX, testy_enc, verbose=0)
+    print('Model %d: %.3f' % (i+1, test_acc))
+# evaluate averaging ensemble (equal weights)
+weights = [1.0/n_members for _ in range(n_members)]
+score = evaluate_ensemble(members, weights, testX, testy)
+print('Equal Weights Score: %.3f' % score)
+# grid search weights
+weights = grid_search(members, testX, testy)
+score = evaluate_ensemble(members, weights, testX, testy)
+print('Grid Search Weights: %s, Score: %.3f' % (weights, score))
+```
+
+清单21.25：在blobs问题上网格搜索加权平均集成的示例。
+
+运行该示例首先创建五个单一模型，并在测试数据集上评估其性能。
+
+注意：由于学习算法的随机性，你的具体结果可能会有所不同。建议多次运行该示例并比较平均性能。
+
+在此次运行中，我们可以看到模型2的单独表现最佳，准确率约为81.7%。接下来，创建了一个模型平均集成，其性能约为80.7%，与大多数模型相比是合理的，但并非全部。
+
+```
+Model 1: 0.798
+Model 2: 0.817
+Model 3: 0.798
+Model 4: 0.806
+Model 5: 0.810
+Equal Weights Score: 0.807
+```
+
+清单21.26：集成成员和等权集成模型性能的示例输出。
+
+接下来，执行网格搜索。它相当慢，在现代硬件上可能需要约二十分钟。这个过程可以很容易地使用像Joblib这样的库进行并行化。每次发现一组新的最高性能权重时，都会报告其权重以及在测试数据集上的表现。我们可以看到，在运行过程中，该过程发现仅使用模型2就获得了良好的性能，直到被更好的结果取代。我们可以看到，在此次运行中，选择仅关注第一个和第二个模型的权重达到了最佳性能，在测试数据集上的准确率为81.8%。这优于同一数据集上的单一模型和模型平均集成。
+
+```
+> [0. 0. 0. 0. 1.] 0.810
+> [0. 0. 0. 0.5 0.5] 0.814
+> [0.          0.          0.          0.33333333 0.66666667] 0.815
+> [0. 1. 0. 0. 0.] 0.817
+> [0.23076923 0.76923077 0.          0.          0.        ] 0.818
+Grid Search Weights: [0.23076923076923075, 0.7692307692307692, 0.0, 0.0, 0.0], Score: 0.818
+```
+
+清单21.27：模型权重和加权平均集成性能的示例输出。
+
+寻找权重的另一种方法是随机搜索，它已被证明在模型超参数调优方面更普遍有效。
+
+### 21.2.5 加权平均MLP集成
+
+搜索权重值的另一种方法是使用有向优化过程。优化是一种搜索过程，但搜索过程不是随机或穷举地采样可能解决方案的空间，而是利用任何可用信息进行下一步搜索，例如朝着误差较低的一组权重方向搜索。SciPy库提供了许多优秀的优化算法，包括局部和全局搜索方法。
+
+SciPy提供了差分进化方法的实现。这是少数几种能够直接用于连续输入函数优化的随机全局搜索算法之一，而且效果很好。SciPy的`differential_evolution()`函数要求指定一个函数来评估一组权重并返回一个要最小化的分数。我们可以最小化分类误差（1 - 准确率）。与网格搜索一样，我们必须在评估之前对权重向量进行归一化。下面的`loss_function()`函数将在优化过程中用作评估函数。
+
+```python
+# loss function for optimization process, designed to be minimized
+def loss_function(weights, members, testX, testy):
+  # normalize weights
+  normalized = normalize(weights)
+  # calculate error rate
+  return 1.0 - evaluate_ensemble(members, normalized, testX, testy)
+```
+
+清单21.28：用于全局搜索算法的损失函数示例。
+
+我们还必须指定优化过程的边界。我们可以将边界定义为一个五维超立方体（例如，5个集成成员对应5个权重），值在0.0到1.0之间。
+
+```python
+# define bounds on each weight
+bound_w = [(0.0, 1.0) for _ in range(n_members)]
+```
+
+清单21.29：全局搜索算法的参数边界示例。
+
+我们的损失函数除了权重之外还需要三个参数，我们将以元组形式提供，在每次评估一组权重时传递给`loss_function()`调用。
+
+```python
+# arguments to the loss function
+search_arg = (members, testX, testy)
+```
+
+清单21.30：在全局搜索算法下评估模型性能的参数示例。
+
+我们现在可以调用优化过程。我们将算法的总迭代次数限制为1000，并使用比默认值更小的容差来检测搜索过程是否已收敛。
+
+```python
+# global optimization of ensemble weights
+result = differential_evolution(loss_function, bound_w, search_arg, maxiter=1000, tol=1e-7)
+```
+
+清单21.31：执行全局搜索算法的示例。
+
+调用`differential_evolution()`的结果是一个包含搜索相关各种信息的字典。重要的是，`x`键包含搜索期间找到的最优权重集。我们可以检索最佳权重集，然后在加权集成中使用时报告它们及其在测试集上的性能。
+
+```python
+# get the chosen weights
+weights = normalize(result['x'])
+print('Optimized Weights: %s' % weights)
+# evaluate chosen weights
+score = evaluate_ensemble(members, weights, testX, testy)
+print('Optimized Weights Score: %.3f' % score)
+```
+
+清单21.32：评估通过全局优化找到的权重的示例。
+
+将所有内容整合在一起，完整示例列在下面。
+
+```python
+# global optimization to find coefficients for weighted ensemble on blobs problem
+from sklearn.datasets.samples_generator import make_blobs
+from sklearn.metrics import accuracy_score
+from keras.utils import to_categorical
+from keras.models import Sequential
+from keras.layers import Dense
+from numpy import array
+from numpy import argmax
+from numpy import tensordot
+from numpy.linalg import norm
+from scipy.optimize import differential_evolution
+
+# fit model on dataset
+def fit_model(trainX, trainy):
+    trainy_enc = to_categorical(trainy)
+    # define model
+    model = Sequential()
+    model.add(Dense(25, input_dim=2, activation='relu'))
+    model.add(Dense(3, activation='softmax'))
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    # fit model
+    model.fit(trainX, trainy_enc, epochs=500, verbose=0)
+    return model
+
+# make an ensemble prediction for multi-class classification
+def ensemble_predictions(members, weights, testX):
+    # make predictions
+    yhats = [model.predict(testX) for model in members]
+    yhats = array(yhats)
+    # weighted sum across ensemble members
+    summed = tensordot(yhats, weights, axes=((0),(0)))
+    # argmax across classes
+    result = argmax(summed, axis=1)
+    return result
+
+# # evaluate a specific number of members in an ensemble
+def evaluate_ensemble(members, weights, testX, testy):
+    # make prediction
+    yhat = ensemble_predictions(members, weights, testX)
+    # calculate accuracy
+    return accuracy_score(testy, yhat)
+
+# normalize a vector to have unit norm
+def normalize(weights):
+    # calculate l1 vector norm
+```
