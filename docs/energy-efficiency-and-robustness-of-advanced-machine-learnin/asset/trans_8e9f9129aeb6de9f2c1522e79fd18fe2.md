@@ -1,0 +1,36 @@
+
+-   [\[96\]](#chapter1.xhtml#b1refbib96) Benoit Jacob, Skirmantas Kligys, Bo Chen, Menglong Zhu, Matthew Tang, Andrew G. Howard, Hartwig Adam, and Dmitry Kalenichenko. Quantization and training of neural networks for efficient integer-arithmetic-only inference. In `2018 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2018`, pages 2704–2713. Computer Vision Foundation/IEEE Computer Society, 2018.
+
+-   [\[97\]](#chapter6.xhtml#b6refbib97) Shruti Jadon. A survey of loss functions for semantic segmentation. In `IEEE Conference on Computational Intelligence in Bioinformatics and Computational Biology, CIBCB 2020`, pages 1–7. IEEE, 2020.
+
+-   [\[98\]](#chapter2.xhtml#b2refbib98) Weiwen Jiang, Lei Yang, Sakyasingha Dasgupta, Jingtong Hu, and Yiyu Shi. Standing on the shoulders of giants: Hardware and neural architecture co-search with hot start. `IEEE Trans. Comput. Aided Des. Integr. Circuits Syst.`, 39(11):4154–4165, 2020.
+
+-   [\[99\]](#chapter2.xhtml#b2refbib99) Jianhao Jiao, Huaiyang Huang, Liang Li, Zhijian He, Yilong Zhu, and Ming Liu. Comparing representations in tracking for event camera-based SLAM. In `IEEE Conference on Computer Vision and Pattern Recognition Workshops, CVPR Workshops 2021`, pages 1369–1376. Computer Vision Foundation/IEEE, 2021.
+
+-   [\[100\]](#chapter1.xhtml#b1refbib100) Norman P. Jouppi, Cliff Young, Nishant Patil, David A. Patterson, Gaurav Agrawal, Raminder Bajwa, Sarah Bates, Suresh Bhatia, Nan Boden, Al Borchers, Rick Boyle, Pierre-luc Cantin, Clifford Chao, Chris Clark, Jeremy Coriell, Mike Daley, Matt Dau, Jeffrey Dean, Ben Gelb, Tara Vazir Ghaemmaghami, Rajendra Gottipati, William Gulland, Robert Hagmann, C. Richard Ho, Doug Hogberg, John Hu, Robert Hundt, Dan Hurt, Julian Ibarz, Aaron Jaffey, Alek Jaworski, Alexander Kaplan, Harshit Khaitan, Daniel Killebrew, Andy Koch, Naveen Kumar, Steve Lacy, James Laudon, James Law, Diemthu Le, Chris Leary, Zhuyuan Liu, Kyle Lucke, Alan Lundin, Gordon MacKean, Adriana Maggiore, Maire Mahony, Kieran Miller, Rahul Nagarajan, Ravi Narayanaswami, Ray Ni, Kathy Nix, Thomas Norrie, Mark Omernick, Narayana Penukonda, Andy Phelps, Jonathan Ross, Matt Ross, Amir Salek, Emad Samadiani, Chris Severn, Gregory Sizikov, Matthew Snelham, Jed Souter, Dan Steinberg, Andy Swing, Mercedes Tan, Gregory Thorson, Bo Tian, Horia Toma, Erick Tuttle, Vijay Vasudevan, Richard Walter, Walter Wang, Eric Wilcox, and Doe Hyun Yoon. In-datacenter performance analysis of a tensor processing unit. In `Proceedings of the 44th Annual International Symposium on Computer Architecture, ISCA 2017`, pages 1–12. ACM, 2017.
+
+-   [\[101\]](#chapter2.xhtml#b2refbib101) Chiraag Juvekar, Vinod Vaikuntanathan, and Anantha P. Chandrakasan. GAZELLE: A low latency framework for secure neural network inference. In William Enck and Adrienne Porter Felt, editors, `27th USENIX Security Symposium, USENIX Security 2018`, pages 1651–1669. USENIX Association, 2018.
+
+-   [\[102\]](#chapter6.xhtml#b6refbib102) Jacques Kaiser, Alexander Friedrich, Juan Camilo Vasquez Tieck, Daniel Reichard, Arne Roennau, Emre Neftci, and Rüdiger Dillmann. Embodied event-driven random backpropagation. `CoRR`, abs/1904.04805, 2019.
+
+-   [\[103\]](#chapter2.xhtml#b2refbib103) Kunhyuk Kang, Saakshi Gangwal, Sang Phill Park, and Kaushik Roy. NBTI induced performance degradation in logic and memory circuits: how effectively can we approach a reliability solution? In Chong-Min Kyung, Kiyoung Choi, and Soonhoi Ha, editors, `Proceedings of the 13th Asia South Pacific Design Automation Conference, ASP-DAC 2008`, pages 726–731. IEEE, 2008.
+
+-   [\[104\]](#chapter2.xhtml#b2refbib104) Faiq Khalid, Hassan Ali, Muhammad Abdullah Hanif, Semeen Rehman, Rehan Ahmed, and Muhammad Shafique. Fadec: A fast decision-based attack for adversarial machine learning. In `2020 International Joint Conference on Neural Networks, IJCNN 2020`, pages 1–8. IEEE, 2020.
+
+-   [\[105\]](#chapter2.xhtml#b2refbib105) Faiq Khalid, Hassan Ali, Hammad Tariq, Muhammad Abdullah Hanif, Semeen Rehman, Rehan Ahmed, and Muhammad Shafique. Qusecnets: Quantization-based defense mechanism for securing deep neural network against adversarial attacks. In Dimitris Gizopoulos, Dan Alexandrescu, Panagiota Papavramidou, and Michail Maniatakos, editors, `25th IEEE International Symposium on On-Line Testing and Robust System Design, IOLTS 2019`, pages 182–187. IEEE, 2019.
+
+-   [\[106\]](#chapter6.xhtml#b6refbib106) Jihun Kim and Minho Lee. Robust lane detection based on convolutional neural network and random sample consensus. In Chu Kiong Loo, Keem Siah Yap, Kok Wai Wong, Andrew Teoh Beng Jin, and Kaizhu Huang, editors, `Neural Information Processing - 21st International Conference, ICONIP 2014`, volume 8834 of `Lecture Notes in Computer Science`, pages 454–461. Springer, 2014.
+
+-   [\[107\]](#chapter2.xhtml#b2refbib107) Yoongu Kim, Ross Daly, Jeremie S. Kim, Chris Fallin, Ji-Hye Lee, Donghyuk Lee, Chris Wilkerson, Konrad Lai, and Onur Mutlu. Flipping bits in memory without accessing them: An experimental study of DRAM disturbance errors. In `ACM/IEEE 41st International Symposium on Computer Architecture, ISCA 2014`, pages 361–372. IEEE Computer Society, 2014.
+
+-   [\[108\]](#chapter2.xhtml#b2refbib108) Youngeun Kim, Hyoungseob Park, Abhishek Moitra, Abhiroop Bhattacharjee, Yeshwanth Venkatesha, and Priyadarshini Panda. Rate coding or direct coding: Which one is better for accurate, robust, and energy-efficient spiking neural networks? In `IEEE International Conference on Acoustics, Speech and Signal Processing, ICASSP 2022`, pages 71–75. IEEE, 2022.
+
+-   [\[109\]](#chapter2.xhtml#b2refbib109) Youngeun Kim, Yeshwanth Venkatesha, and Priyadarshini Panda. Privatesnn: Privacy-preserving spiking neural networks. In `Thirty-Sixth AAAI Conference on Artificial Intelligence, AAAI 2022`, pages 1192–1200. AAAI Press, 2022.
+
+-   [\[110\]](#chapter2.xhtml#b2refbib110) Diederik P. Kingma and Jimmy Ba. Adam: A method for stochastic optimization. In Yoshua Bengio and Yann LeCun, editors, `3rd International Conference on Learning Representations, ICLR 2015`, 2015.
+
+-   [\[111\]](#chapter2.xhtml#b2refbib111) Sarada Krithivasan, Sanchari Sen, Nitin Rathi, Kaushik Roy, and Anand Raghunathan. Efficiency attacks on spiking neural networks. In Rob Oshana, editor, `DAC ‘22: 59th ACM/IEEE Design Automation Conference`, pages 373–378. ACM, 2022.
+
+-   [\[112\]](#chapter3.xhtml#b3refbib112) Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton. Cifar-10 (canadian institute for advanced research). 2009.
+
+-   [\[113\]](#chapter2.xhtml#b2refbib113) Alex Krizhevsky, Ilya Sutskever, and Geoffrey E. Hinton. Imagenet classification with deep convolutional neural networks. In Peter L. Bartlett, Fernando C. N. Pereira, Christopher J. C. Burges, Léon Bottou, and Kilian Q. Weinberger, editors, `Advances in Neural Information Processing Systems 25: 26th Annual Conference on Neural Information Processing Systems 2012`, pages 1106–1114, 2012.

@@ -1,0 +1,49 @@
+
+-   [多目标 NAS 方法](https://wiki.example.org/feynmans_learning_method)基于进化算法，另一种确定架构参数的有前途的研究方向是可微分 NAS。
+
+-   隐私保护深度学习的前景正在转向不泄露敏感内容的加密与解密机制。为此，为加密深度学习系统设计专用加速器是迫切需要的，因为其计算复杂度被禁止。加密属性也可以纳入 NAS 框架，以保障深度学习系统的安全。
+
+# Bibliography
+
+*   [\[1\]](#chapter2.xhtml#b2refbib1) Martn Abadi, Paul Barham, Jianmin Chen, Zhifeng Chen, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Geoffrey Irving, Michael Isard, Manjunath Kudlur, Josh Levenberg, Rajat Monga, Sherry Moore, Derek Gordon Murray, Benoit Steiner, Paul A. Tucker, Vijay Vasudevan, Pete Warden, Martin Wicke, Yuan Yu, and Xiaoqiang Zheng. Tensorflow: A system for large-scale machine learning. In Kimberly Keeton and Timothy Roscoe, editors, 12th USENIX Symposium on Operating Systems Design and Implementation, OSDI 2016, *Savannah, GA, USA*, *November 2-4, 2016*, pages 265–283. USENIX Association, 2016.
+
+*   [\[2\]](#chapter1.xhtml#b1refbib2) Martn Abadi, Andy Chu, Ian J. Goodfellow, H. Brendan McMahan, Ilya Mironov, Kunal Talwar, and Li Zhang. Deep learning with differential privacy. In Edgar R. Weippl, Stefan Katzenbeisser, Christopher Kruegel, Andrew C. Myers, and Shai Halevi, editors, *Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security, Vienna*, *Austria, October 24-28, 2016*, pages 308–318. ACM, 2016.
+
+*   [\[3\]](#chapter7.xhtml#b7refbib3) Imran Hafeez Abbassi, Faiq Khalid, Semeen Rehman, Awais Mehmood Kamboh, Axel Jantsch, Siddharth Garg, and Muhammad Shafique. Trojanzero: Switching activity-aware design of undetectable hardware trojans with zero power and area footprint. In Jürgen Teich and Franco Fummi, editors, *Design, Automation & Test in Europe Conference & Exhibition, DATE 2019, Florence, Italy, March 25-29, 2019*, pages 914–919. IEEE, 2019.
+
+*   [\[4\]](#chapter2.xhtml#b2refbib4) Paniti Achararit, Muhammad Abdullah Hanif, Rachmad Vidya Wicaksana Putra, Muhammad Shafique, and Yuko Hara-Azumi. APNAS: accuracy-and-performance-aware neural architecture search for neural hardware accelerators. IEEE Access, 8: 165319–165334, 2020.
+
+*   [\[5\]](#chapter2.xhtml#b2refbib5) Michel Agoyan, Jean-Max Dutertre, Amir-Pasha Mirbaha, David Naccache, Anne-Lise Ribotta, and Assia Tria. How to flip a bit? In *16th IEEE International On-Line Testing Symposium (IOLTS 2010), 5-7 July, 2010, Corfu, Greece*, pages 235–239. IEEE Computer Society, 2010.
+
+*   [\[6\]](#chapter2.xhtml#b2refbib6) Hassan Ali, Faiq Khalid, Hammad Tariq, Muhammad Abdullah Hanif, Rehan Ahmed, and Semeen Rehman. Sscnets: Robustifying dnns using secure selective convolutional filters. IEEE Des. Test, 37(2):58–65, 2020.
+
+*   [\[7\]](#chapter3.xhtml#b3refbib7) H. Amin, K.M. Curtis, and B.R. Hayes-Gill. Piecewise linear approximation applied to nonlinear function of a neural network. *IEE Proceedings - Circuits, Devices and Systems*, 144(6):313–317, 1997.
+
+*   [\[8\]](#chapter2.xhtml#b2refbib8) Arnon Amir, Brian Taba, David J. Berg, Timothy Melano, Jeffrey L. McKinstry, Carmelo di Nolfo, Tapan K. Nayak, Alexander Andreopoulos, Guillaume Garreau, Marcela Mendoza, Jeff Kusnitz, Michael DeBole, Steven K. Esser, Tobi Delbrück, Myron Flickner, and Dharmendra S. Modha. A low power, fully event-based gesture recognition system. In *2017 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2017, Honolulu, HI, USA, July 21-26, 2017*, pages 7388–7397. IEEE Computer Society, 2017.
+
+*   [\[9\]](#chapter3.xhtml#b3refbib9) Kevin Bache, Dennis DeCoste, and Padhraic Smyth. Hot swapping for online adaptation of optimization hyperparameters. In Yoshua Bengio and Yann LeCun, editors, *3rd International Conference on Learning Representations, ICLR 2015, San Diego, CA, USA, May 7-9, 2015, Workshop Track Proceedings*, 2015.
+
+*   [\[10\]](#chapter2.xhtml#b2refbib10) Alireza Bagheri, Osvaldo Simeone, and Bipin Rajendran. Adversarial training for probabilistic spiking neural networks. In *19th IEEE International Workshop on Signal Processing Advances in Wireless Communications, SPAWC 2018, Kalamata, Greece, June 25-28, 2018*, pages 1–5. IEEE, 2018.
+
+*   [\[11\]](#chapter2.xhtml#b2refbib11) R.C. Baumann. Radiation-induced soft errors in advanced semiconductor technologies. IEEE Transactions on Device and Materials Reliability, 5(3):305–316, 2005.
+
+*   [\[12\]](#chapter6.xhtml#b6refbib12) Trevor Bekolay, James Bergstra, Eric Hunsberger, Travis DeWolf, Terrence C. Stewart, Daniel Rasmussen, Feng-Xuan Choo, Aaron Voelker, and Chris Eliasmith. Nengo: a python tool for building large-scale functional brain models. Frontiers Neuroinformatics, 7: 48, 2013.
+
+*   [\[13\]](#chapter2.xhtml#b2refbib13) Yoshua Bengio. Learning deep architectures for AI. Foundations and Trends in Machine Learning, 2(1):1–127, 2009.
+
+*   [\[14\]](#chapter3.xhtml#b3refbib14) Yoshua Bengio. Practical recommendations for gradient-based training of deep architectures. In Grégoire Montavon, Genevieve B. Orr, and Klaus-Robert Müller, editors, Neural Networks: Tricks of the Trade - Second Edition, volume 7700 of *Lecture Notes in Computer Science*, pages 437–478. Springer, 2012.
+
+*   [\[15\]](#chapter7.xhtml#b7refbib15) Yoshua Bengio, Pascal Lamblin, Dan Popovici, and Hugo Larochelle. Greedy layer-wise training of deep networks. In Bernhard Schölkopf, John C. Platt, and Thomas Hofmann, editors, *Advances in Neural Information Processing Systems 19, Proceedings of the Twentieth Annual Conference on Neural Information Processing Systems, Vancouver, British Columbia, Canada, December 4-7, 2006*, pages 153–160. MIT Press, 2006.
+
+*   [\[16\]](#chapter2.xhtml#b2refbib16) Ben Varkey Benjamin, Peiran Gao, Emmett McQuinn, Swadesh Choudhary, Anand Chandrasekaran, Jean-Marie Bussat, Rodrigo Alvarez-Icaza, John V. Arthur, Paul Merolla, and Kwabena Boahen. Neurogrid: A mixed-analog-digital multichip system for large-scale neural simulations. Proc. IEEE, 102(5):699–716, 2014.
+
+*   [\[17\]](#chapter6.xhtml#b6refbib17) Alan C. Bovik, Marianna Clark, and Wilson S. Geisler. Multichannel texture analysis using localized spatial filters. IEEE Trans. Pattern Anal. Mach. Intell., 12(1):55–73, 1990.
+
+*   [\[18\]](#chapter2.xhtml#b2refbib18) Christian Brandli, Raphael Berner, Minhao Yang, Shih-Chii Liu, and Tobi Delbrück. A 240 180 130 db 3 *µ*s latency global shutter spatiotemporal vision sensor. IEEE J. Solid State Circuits, 49(10):2333–2341, 2014.
+
+*   [\[19\]](#chapter2.xhtml#b2refbib19) Jakub Breier, Xiaolu Hou, Dirmanto Jap, Lei Ma, Shivam Bhasin, and Yang Liu. Practical fault attack on deep neural networks. In David Lie, Mohammad Mannan, Michael Backes, and XiaoFeng Wang, editors, *Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security, CCS 2018, Toronto, ON, Canada, October 15-19, 2018*, pages 2204–2206. ACM, 2018.
+
+*   [\[20\]](#chapter2.xhtml#b2refbib20) Wieland Brendel, Jonas Rauber, and Matthias Bethge. Decision-based adversarial attacks: Reliable attacks against black-box machine learning models. In the *6th International Conference on Learning Representations, ICLR 2018, Vancouver, BC, Canada, April 30—May 3, 2018, Conference Track Proceedings*. [OpenReview.net](https://OpenReview.net), 2018.
+
+*   [\[21\]](#chapter2.xhtml#b2refbib21) Julian Büchel, Gregor Lenz, Yalun Hu, Sadique Sheik, and Martino Sorbaro. Adversarial attacks on spiking convolutional networks for event-based vision. *CoRR*, abs/2110.02929, 2021.
+

@@ -1,0 +1,723 @@
+name: Energy Efficiency and Robustness of Advanced Machine Learning Architectures：
+  A Cross-Layer Approach (Chapman & Hall／CRC Artificial Intelligence and Robotics
+  Series)
+slug: energy-efficiency-and-robustness-of-advanced-machine-learnin
+name_cn: 高效能与鲁棒性：跨层方法（人工智能与机器人系列）
+toc:
+- - '#'
+  - 高效能与鲁棒性：跨层方法（人工智能与机器人系列）
+- - '##'
+  - 1.1 Optimization Objectives for Dnn Models and Architectures
+- - '###'
+  - 1.1.1 Energy-Efficiency
+- - '###'
+  - 1.1.2 鲁棒性
+- - '##'
+  - 1.2 State‑of‑the‑Art Challenges and Research Goals Summary
+- - '###'
+  - 1.2.1 State‑of‑the‑Art Limitations
+- - '###'
+  - 1.2.2 科学目标和目标
+- - '##'
+  - 1.3 书籍贡献
+- - '##'
+  - 安全威胁与优化在先进 DL 架构的鲁棒性和健壮性
+- - '##'
+  - 1.4 Book Outline
+- - '##'
+  - Chapter 2Background and Related Work
+- - '##'
+  - 2.1 Deep Neural Networks
+- - '###'
+  - 2.1.1 Layers and Operations
+- - '###'
+  - 2.1.2 Training and Inference
+- - '###'
+  - 2.1.3 DNN Models
+- - '###'
+  - 2.1.4 DNN Hardware Architectures
+- - '####'
+  - 2.1.4.1 Temporal Architectures
+- - '####'
+  - 2.1.4.2 Spatial Architectures
+- - '####'
+  - 2.1.4.3 Memory Hierarchy
+- - '###'
+  - 2.1.5 DNN Optimizations for Energy-Efficiency
+- - '####'
+  - 2.1.5.1 DNN Compression
+- - '####'
+  - 2.1.5.2 Approximate DNNs
+- - '####'
+  - 2.1.5.3 HW-Aware NAS
+- - '###'
+  - 2.2 Capsule Networks
+- - '###'
+  - 2.2.1 Traditional DNNs vs. CapsNets
+- - '###'
+  - 2.2.2 CapsNet Models and Applications
+- - '###'
+  - 2.2.3 胶囊网络的挑战总结
+- - '##'
+  - 2.3 Spiking Neural Networks
+- - '###'
+  - 2.3.1 Spiking Neuron Models
+- - '###'
+  - 2.3.2 Spike Coding Techniques
+- - '###'
+  - 2.3.3 SNN Learning Techniques
+- - '###'
+  - 2.3.4 Neuromorphic Architectures
+- - '###'
+  - 2.3.5 Event-Based Cameras
+- - '###'
+  - 2.3.6 事件基数据集的示例
+- - '###'
+  - 2.3.7 SNN 的挑战概述
+- - '##'
+  - 2.4 DL 系统的脆弱性
+- - '###'
+  - 2.4.1 隐私威胁
+- - '###'
+  - 2.4.2 Fault Injection and Hardware Trojans
+- - '###'
+  - 2.4.3 Reliability Threats
+- - '###'
+  - 2.4.4 Adversarial Security Threats
+- - '####'
+  - 2.4.4.1 Adversarial Attacks
+- - '###'
+  - 2.4.4.2 对抗防御
+- - '###'
+  - 2.4.6 脆弱性研究 for SNNs
+- - '##'
+  - 2.5 Summary of Background and Related Work
+- - '##'
+  - Chapter 3Hardware and Software Optimizations for Capsule Networks
+- - '##'
+  - 3.1 Fastrcaps：一种用于快速且准确训练 CapsNets 的集成框架
+- - '###'
+  - 3.1.1 系统概览
+- - '###'
+  - 3.1.2 学习率策略概览
+- - '###'
+  - 3.1.3 学习率策略在 CapsNets 上的分析
+- - '###'
+  - 3.1.4 FasTrCaps 框架概述
+- - '####'
+  - 3.1.4.1 CapsNet 学习率策略
+- - '####'
+  - 3.1.4.2 批量大小
+- - '####'
+  - 3.1.4.3 CapsNet Decoder 的复杂度
+- - '####'
+  - 3.1.4.4 通过重量共享（WS）降低复杂度
+- - '####'
+  - 3.1.4.5 WarmAdaBatch（WAB）
+- - '####'
+  - 3.1.4.6 优化选择
+- - '###'
+  - 3.1.5 FasTrCaps 框架评估
+- - '####'
+  - 3.1.5.1 实验设置
+- - '####'
+  - 3.1.5.2 Accuracy Results for the MNIST dataset
+- - '####'
+  - 3.1.5.3 Comparison of Different Optimization Types
+- - '####'
+  - 3.1.5.4 Accuracy Results for Fashion-MNIST
+- - '###'
+  - 3.1.6 Summary
+- - '##'
+  - '3.2 CapsAcc: an Efficient Hardware Accelerator for Capsnets'
+- - '###'
+  - 3.2.1 Motivational Analyses of CapsNet Complexity and Execution Time
+- - '####'
+  - 3.2.1.1 Trainable Parameters of the CapsNet
+- - '####'
+  - 3.2.1.2 Execution Time Analyses of the CapsNet's Inference Operations
+- - '####'
+  - 3.2.1.3 Summary of Key Observations from our Analyses
+- - '###'
+  - 3.2.2 CapsAcc Architecture Design
+- - '####'
+  - 3.2.2.1 Overview
+- - '####'
+  - 3.2.2.2 Processing Element Array
+- - '####'
+  - 3.2.2.3 Accumulator
+- - '####'
+  - 3.2.2.4 Activation Unit
+- - '####'
+  - 3.2.2.5 Control Unit
+- - '####'
+  - 3.2.2.6 Memory Hierarchy
+- - '###'
+  - 3.2.3 Dataflow Design
+- - '####'
+  - 3.2.3.1 Conv1 Layer Dataflow
+- - '####'
+  - 3.2.3.2 PrimaryCaps 层的数据流
+- - '####'
+  - 3.2.3.3 ClassCaps 层的数据流
+- - '####'
+  - 3.2.3.4 Dynamic Routing 的数据流
+- - '###'
+  - 3.2.4 完整 CapsAcc 架构的综合评估
+- - '####'
+  - 3.2.4.1 实验设置
+- - '####'
+  - 3.2.4.2 详细的功耗与面积拆解
+- - '####'
+  - 3.2.4.3 对比结果的讨论
+- - '###'
+  - 3.2.5 总结
+- - '##'
+  - '3.3 Feeca: a Methodology to Design a Fast, Energy-Efficient Capsnet Accelerator'
+- - '###'
+  - 3.3.1 FEECA 方法概述
+- - '###'
+  - 3.3.2 优化问题
+- - '####'
+  - 3.3.2.1 问题形式化
+- - '###'
+  - 3.3.3 搜索算法：暴力搜索 vs. 启发式搜索
+- - '###'
+  - 3.3.4 内部原语集合
+- - '###'
+  - 3.3.5 加速器参数估计
+- - '####'
+  - 3.3.5.1 面积
+- - '####'
+  - 3.3.5.2 延迟
+- - '####'
+  - 3.3.5.3 能耗
+- - '###'
+  - 3.3.6 FEECA 方法的评估
+- - '####'
+  - 3.3.6.1 生成器：内部原始元件的综合
+- - '###'
+  - 3.3.6.3 启发式搜索算法
+- - '###'
+  - 3.3.6.4 多目标优化
+- - '###'
+  - 3.3.6.5 案例研究：综合帕雷托最优解
+- - '##'
+  - '3.4 Descnet: Developing Efficient Scratchpad Memories for Capsnet Hardware'
+- - '###'
+  - 3.4.1 DESCNet 方法概述
+- - '####'
+  - 3.4.1.1 我们的创新贡献
+- - '###'
+  - 3.4.2 Required Architectural Modification and Key Research Question
+- - '###'
+  - 3.4.3 Resource Analysis of CapsNet Inference
+- - '####'
+  - 3.4.3.1 Performance and Memory Analyses for the Google's CapsNet on the MNIST
+    Dataset
+- - '#'
+  - 记忆访问分析
+- - '##'
+  - 3.4.3.2 基于 CIFAR10 数据集的 DeepCaps 性能和内存分析
+- - '##'
+  - 3.4.3.3 能耗分解分析
+- - '###'
+  - '3.4.4 DESCNet: Scratchpad Memory Design'
+- - '####'
+  - 3.4.4.1 DESCNet Memory Architecture
+- - '####'
+  - 3.4.4.2 Application-Driven Memory Power Management
+- - '####'
+  - 3.4.4.3 Application-Driven Design Space Exploration of the DESCNet Memory Designs
+- - '###'
+  - 3.4.5 Our Methodology for the DSE of Scratchpad Memories
+- - '###'
+  - 3.4.6 Evaluation of the DESCNet Methodology
+- - '####'
+  - 3.4.6.1 Results for Google's CapsNet (Area and Energy of the On-Chip Memory)
+- - '####'
+  - 3.4.6.2 DeepCaps（片上存储的面积和能量结果）
+- - '####'
+  - 3.4.6.3 受尺寸受限内存约束的 DeepCaps HY-PG 设计选项 DSE
+- - '####'
+  - 3.4.6.4 Impact of the Memory on the Complete CapsNet Accelerator Architecture
+- - '####'
+  - 3.4.6.5 Results Summary and Discussion
+- - '###'
+  - 3.4.7 Summary
+- - '##'
+  - '3.5 Q-Capsnets: a Specialized Framework for Quantizing Capsnets'
+- - '###'
+  - 3.5.1 System Overview
+- - '###'
+  - 3.5.2 Analysis of Area and Energy Consumption for Reduced Wordlength
+- - '###'
+  - 3.5.3 Rounding Schemes
+- - '###'
+  - 3.5.4 Q-CapsNets Framework
+- - '####'
+  - 3.5.4.1 框架的逐步描述
+- - '###'
+  - 3.5.4.2 舍入方案选择
+- - '###'
+  - 3.5.5 我们的 Q-CapsNets 框架评估
+- - '####'
+  - 3.5.5.1 实验环境
+- - '####'
+  - 3.5.5.2 量化浅层胶囊网络（ShallowCaps）在 MNIST 和 FashionMNIST 数据集上的表现
+- - '####'
+  - 3.5.5.3 量化深层胶囊网络（DeepCaps）在 MNIST、FashionMNIST 和 CIFAR10 数据集上的表现
+- - '####'
+  - 3.5.5.4 结果讨论
+- - '###'
+  - 3.5.6 Summary
+- - '###'
+  - '3.6 Red-Cane: Resilience Analysis and Design of Capsnets under Approximations'
+- - '###'
+  - 3.6.1 System Overview
+- - '###'
+  - 3.6.2 Modeling the Errors as Injected Noise
+- - '####'
+  - 3.6.2.1 Error Sources
+- - '####'
+  - 3.6.2.2 Analysis of Different Operations in CapsNets
+- - '###'
+  - 3.6.2.3 近似硬件乘法器的误差特征
+- - '####'
+  - 3.6.2.4 噪声注入模型
+- - '###'
+  - 3.6.3 ReD-CaNe 方法论
+- - '###'
+  - 3.6.4 Evaluation of the ReD-CaNe Methodology
+- - '####'
+  - 3.6.4.1 Experimental Setup
+- - '####'
+  - 3.6.4.2 Detailed Analysis for the CIFAR10 Dataset
+- - '####'
+  - 3.6.4.3 Evaluating the Selection of Approximate Components
+- - '###'
+  - 3.6.4.4 Testing our Methodology on Different Benchmarks
+- - '###'
+  - 3.6.4.5 Results Discussion
+- - '###'
+  - 3.6.5 Summary
+- - '##'
+  - 3.7 Approximate Squash and Softmax Designs
+- - '###'
+  - 3.7.1 System Overview
+- - '###'
+  - 3.7.2 Approximate Computing for DNNs Nonlinear Operations
+- - '####'
+  - 3.7.3.1 Softmax-Taylor Design
+- - '####'
+  - 3.7.3.2 Softmax-Lnu Design
+- - '####'
+  - 3.7.3.3 Softmax-b2 Design
+- - '###'
+  - 3.7.4 Approximate Squash Designs
+- - '####'
+  - 3.7.4.1 Squash-norm Design
+- - '####'
+  - 3.7.4.2 Squash-exp Design
+- - '####'
+  - 3.7.4.3 Squash-pow2 Design
+- - '###'
+  - 3.7.5 Evaluation of the Approximate Softmax and Squash Designs
+- - '####'
+  - 3.7.5.1 Experimental Setup
+- - '####'
+  - 3.7.5.2 评估 Softmax
+- - '####'
+  - 3.7.5.3 评估 Squash
+- - '###'
+  - 3.7.6 总结
+- - '##'
+  - 3.8 Capsule Networks 的硬件与软件优化总结
+- - '##'
+  - Chapter 4 Adversarial Security Threats for DNNs and CapsNets
+- - '###'
+  - 4.1.1 System Overview
+- - '###'
+  - 4.1.2 RobCaps Methodology
+- - '###'
+  - 4.1.4 Robustness Against Affine Transformations
+- - '####'
+  - 4.1.4.1 Affine-CIFAR10 (affCIFAR) and Affine-GTSRB (affGTSRB) Datasets Generation
+- - '####'
+  - 4.1.4.2 Affine Transformations Results
+- - '###'
+  - 4.1.5 Robustness Against Adversarial Attacks
+- - '####'
+  - 4.1.5.1 Projected Gradient Descent (PGD) Attack
+- - '####'
+  - 4.1.6.2 Adversarial Attacks
+- - '###'
+  - 4.1.7 Summary
+- - '##'
+  - '4.2 Capsattacks: a Study on the Security Vulnerabilities of Capsnets Against
+    Adversarial Attacks'
+- - '###'
+  - 4.2.1 System Overview
+- - '###'
+  - 4.2.2 Generation of Targeted Imperceptible and Robust Adversarial Examples
+- - '####'
+  - 4.2.2.1 Imperceptibility and Robustness
+- - '####'
+  - 4.2.2.2 对抗性示例的生成
+- - '####'
+  - 4.2.2.3 攻击方法讨论
+- - '###'
+  - 4.2.3 CapsAttack 方法的评估
+- - '####'
+  - 4.2.3.1 实验设置
+- - '####'
+  - 4.2.3.3 Our Methodology Applied to the VGGNet and the LeNet
+- - '####'
+  - 4.2.3.4 Our Methodology Applied to the DeepCaps and ResNet20 on the CIFAR10 Dataset
+- - '####'
+  - 4.2.3.5 CapsNet 与 CNN 的攻击脆弱性比较
+- - '###'
+  - 4.2.4 总结
+- - '###'
+  - 4.3 Fakeweather：用于模拟摄像头镜头天气条件的 Dnns 对抗攻击
+- - '###'
+  - 4.3.1 系统概览
+- - '###'
+  - 4.3.2.5 fakeSnow 攻击
+- - '###'
+  - 4.3.2.6 fakeHail 攻击
+- - '###'
+  - 4.3.3 伪天气攻击评估
+- - '####'
+  - 4.3.3.1 实验设置
+- - '####'
+  - 4.3.3.2 fakeWeather 攻击评估
+- - '####'
+  - '4.3.3.3 Case Studies: Output Probability Variations under fakeWeather Attacks'
+- - '####'
+  - 4.3.3.4 Results Discussion and Comparison
+- - '####'
+  - 4.3.3.5 Future Outlooks and Applicability
+- - '###'
+  - 4.3.4 总结
+- - '##'
+  - 4.4 DNN 和 CapsNet 的对抗性安全威胁概述
+- - '##'
+  - Chapter 5Integration of Multiple Design Objectives into NAS Frameworks for CapsNets
+    and DNNs
+- - '##'
+  - 5.1 设计包含多个设计目标的框架的流程
+- - '###'
+  - 5.2.2.2 NASCaps Framework
+- - '####'
+  - 5.2.2.1 Framework Overview
+- - '####'
+  - 5.2.2.2 Parametric Modeling of CapsNet Layers and Architectures
+- - '####'
+  - 5.2.2.3 Modeling the Execution of CapsNets in Hardware Accelerators
+- - '####'
+  - 5.2.2.4 The Multi-Objective NSGA-II Algorithm
+- - '###'
+  - 5.2.3 NASCaps 框架的评估
+- - '####'
+  - 5.2.3.1 实验设置
+- - '####'
+  - 5.2.3.2  reduced Training Epochs for Full-Training Accuracy Estimation 的结果
+- - '####'
+  - 5.2.3.3 NASCaps Results for the Partially-Trained DNNs
+- - '####'
+  - 5.2.3.4 NASCaps Results for the Selected Fully-Trained DNNs
+- - '###'
+  - 转移性实验：选取的 DNN 在不同数据集上的表现
+- - '###'
+  - 5.2.3.5 关键结果总结
+- - '###'
+  - 5.2.4 总结
+- - '###'
+  - 5.3.1 系统概览
+- - '###'
+  - 5.3.2 RoHNAS 框架
+- - '####'
+  - 5.3.2.1 通过选择合适的对抗性扰动值来缩小设计空间
+- - '####'
+  - 5.3.3.2 NAS 中选择对抗扰动的方法
+- - '####'
+  - 5.3.3.3 Fast DNN Robustness Evaluation for RoHNAS
+- - '####'
+  - 5.3.3.4 RoHNAS 精确结果对 Pareto‑最优 DNN
+- - '###'
+  - 5.3.4 Summary
+- - '##'
+  - 5.4 Summary of Integration of Multiple Design Objectives Into Nas Frameworks for
+    Capsnets and Dnns
+- - '##'
+  - Chapter 6Efficient Optimizations for Spiking Neural Networks on Neuromorphic Hardware
+- - '##'
+  - 6.1 Overview of the Loihi Neuromorphic Processor
+- - '###'
+  - 6.1.1 Neuron Model
+- - '###'
+  - 6.1.2 芯片架构
+- - '###'
+  - 6.1.3 支持 Loihi 开发者的工具
+- - '##'
+  - 6.2 在 Loihi 上高效实现手势识别的 SNN
+- - '###'
+  - 6.2.1 系统概览
+- - '###'
+  - 6.2.2 DNN-to-SNN Conversion
+- - '####'
+  - 6.2.2.1 转换过程质量评估指标
+- - '####'
+  - 6.2.2.2 可调转换参数
+- - '####'
+  - 6.2.2.3 DNN Training
+- - '####'
+  - 6.2.2.4 Conversion Process
+- - '####'
+  - 6.2.2.5 Experimental Setup
+- - '####'
+  - 6.2.2.6 Results Varying the DThIR
+- - '####'
+  - 6.2.2.7 Results Varying the Experiment Duration and Reset Mode
+- - '###'
+  - 6.2.3 DvsGesture 数据集的预处理方法
+- - '####'
+  - 6.2.3.1 事件累积
+- - '####'
+  - 6.2.3.2 时间窗口大小
+- - '####'
+  - 6.2.3.3 事件极性
+- - '####'
+  - 6.2.3.4 Frame Size
+- - '####'
+  - 6.2.4 Accuracy Results Evaluation
+- - '###'
+  - 6.2.5 Summary
+- - '##'
+  - '6.3 Carsnn: an Efficient Snn for Event-Based Autonomous Cars on the Loihi Neuromorphic
+    Processor'
+- - '###'
+  - 6.3.1 System Overview
+- - '###'
+  - 6.3.2 Problem Analysis and General Design Decisions
+- - '###'
+  - 6.3.3 CarSNN 方法论
+- - '####'
+  - 6.3.3.1 CarSNN 模型设计
+- - '####'
+  - 6.3.3.2 训练参数
+- - '###'
+  - 6.3.3.3 Parameters for Feeding the Input Data
+- - '###'
+  - 6.3.4 我们的 CarSNN 方法的评估
+- - '####'
+  - 6.3.4.1 实验设置
+- - '####'
+  - 6.3.4.2 CarSNN 离线训练的准确率结果
+- - '####'
+  - 6.3.4.3 CarSNN 在 Loihi 上的实现
+- - '####'
+  - 6.3.4.4 Comparison with the State-of-the-Art
+- - '###'
+  - 6.3.5 Summary
+- - '###'
+  - '6.4 Lanesnns: Spiking Neural Networks for Lane Detection on the Loihi Neuromorphic
+    Processor'
+- - '###'
+  - 6.4.1 System Overview
+- - '###'
+  - 6.4.2 问题分析与通用设计决策
+- - '####'
+  - 6.4.2.1 车道检测技术
+- - '####'
+  - 6.4.2.2 数据集预处理
+- - '####'
+  - 6.4.2.3 学习规则
+- - '####'
+  - 6.4.2.4 Loss Function
+- - '###'
+  - 6.4.3 LaneSNNs 设计
+- - '####'
+  - 6.4.3.1 LaneSNNs 方法概述
+- - '####'
+  - 6.4.3.2 Input and Output
+- - '####'
+  - 6.4.3.3 Network Architectures
+- - '##'
+  - 6.4.3.4 反过拟合技术
+- - '###'
+  - 6.4.4 LaneSNNs 的评估
+- - '####'
+  - 6.4.4.1 准确性定义
+- - '####'
+  - 6.4.4.2 实验设置
+- - '####'
+  - 6.4.4.3 LaneSNNs 实现于 Loihi
+- - '####'
+  - 6.4.4.4 Pareto 最优解
+- - '####'
+  - 6.4.4.5 每种 *LaneSNN* 的最佳结果
+- - '####'
+  - 6.4.4.6 Comparison with the State-of-the-Art
+- - '###'
+  - 6.4.5 Summary
+- - '##'
+  - 6.5 Summary of Efficient Optimizations for Spiking Neural Networks on Neuromorphic
+    Hardware
+- - '##'
+  - Chapter 7Security Threats for SNNs on Discrete and Event-Based Data
+- - '##'
+  - 7.1 Security Evaluation of SNNs Vs. DNNs
+- - '###'
+  - 7.1.1 System Overview
+- - '###'
+  - '7.1.2 Analysis: Applying Random Noise to SDBNs'
+- - '####'
+  - 7.1.2.1 Spiking Deep Belief Networks
+- - '####'
+  - 7.1.2.2 Experimental Setup
+- - '####'
+  - 7.1.2.3 Understanding the Impact of Input Random Noise on the Accuracy of an SDBN
+- - '####'
+  - 7.1.3.2 Robustness of adversarial examples
+- - '####'
+  - 7.1.3.3 How to Automatically Generate Attacks for SNNs?
+- - '###'
+  - 7.1.4 Evaluation of our Attack Methodology
+- - '####'
+  - 7.1.4.1 Experimental Setup
+- - '####'
+  - 7.1.4.2 DNN Under Attack
+- - '####'
+  - 7.2.2.2 Bit-Flip with Gradient Search Algorithm
+- - '###'
+  - 7.2.3 NeuroAttack Methodology
+- - '####'
+  - 7.2.3.1 Threat Model
+- - '####'
+  - 7.2.3.2 Hardware Trojan Design
+- - '####'
+  - 7.2.3.3 触发模式设计
+- - '###'
+  - 7.2.4 NeuroAttack 方法的评估
+- - '####'
+  - 7.2.4.1 实验设置
+- - '####'
+  - 7.2.4.2 在 MNIST 数据集上的结果
+- - '####'
+  - 7.2.4.3 Results on the CIFAR10 Dataset
+- - '####'
+  - 7.2.4.4 Hardware Overhead
+- - '###'
+  - 7.2.5 Summary
+- - '###'
+  - 7.3 通过内在结构参数提升 SNN 的鲁棒性方法
+- - '###'
+  - 7.3.1 系统概览
+- - '###'
+  - 7.3.2 案例研究分析：相同架构模型下的 DNN 与 SNN 对比
+- - '###'
+  - 7.3.3 威胁模型
+- - '####'
+  - 7.3.3.1 攻击者知识
+- - '####'
+  - 7.3.3.2 攻击生成
+- - '###'
+  - 7.3.4 Robustness Exploration Methodology
+- - '###'
+  - 7.3.5 Evaluation of the SNNs' Robustness
+- - '####'
+  - 7.3.5.1 Experimental Setup
+- - '####'
+  - 7.3.5.2 Learnability Study
+- - '####'
+  - 7.3.5.3 Security Study
+- - '####'
+  - 7.3.5.4 CNNs' vs. SNNs' Robustness Comparison
+- - '###'
+  - 7.3.6 Summary
+- - '###'
+  - '7.4 R-Snn: a Methodology for Robustifying Snns Through Noise Filters for Dvs'
+- - '###'
+  - 7.4.1 System Overview
+- - '###'
+  - '7.4.2 Case Study Analysis: SNN Robustness against Random Noise'
+- - '###'
+  - 7.4.3 R-SNN Methodology
+- - '####'
+  - 7.4.3.1 Noise Filters for Dynamic Vision Sensors
+- - '###'
+  - 7.4.3.2 空间-时间域中的对抗攻击
+- - '###'
+  - 7.4.3.3 对抗威胁模型
+- - '###'
+  - 7.4.3.4 事件帧的对抗攻击生成
+- - '###'
+  - 7.4.3.5 我们提出的防御方法
+- - '##'
+  - 7.4.4 R‑SNN 方法的评估
+- - '###'
+  - 7.4.4.1 实验设置
+- - '####'
+  - 7.4.4.3 SNN Robustness under Attack by Noise Filter-Unaware Adversary
+- - '####'
+  - 7.4.4.4 SNN Robustness under Attack by Noise Filter-Aware Adversary
+- - '####'
+  - '7.4.4.5 Case Study: Output Probability Variation'
+- - '###'
+  - 7.4.5 Summary
+- - '##'
+  - '7.5 Dvs-Attacks: a Set of Adversarial Attacks on Event-Based Snns'
+- - '###'
+  - 7.5.1 System Overview
+- - '###'
+  - '7.5.2 Case Study Analysis: SNN Robustness against Random Noise'
+- - '###'
+  - 7.5.3 Noise Filters for Dynamic Vision Sensors
+- - '####'
+  - 7.5.3.1 Background Activity Filter
+- - '####'
+  - 7.5.3.2 Mask Filter
+- - '###'
+  - 7.5.4 Threat Model
+- - '###'
+  - 7.5.5.2 Frame Attack
+- - '###'
+  - 7.5.5.3 Corner Attack
+- - '###'
+  - 7.5.5.4 Dash Attack
+- - '###'
+  - 7.5.5.5 MF-Aware Dash Attack
+- - '###'
+  - 7.5.6 Evaluation of the DVS-Attacks
+- - '####'
+  - 7.5.6.1 Experimental Setup
+- - '####'
+  - 7.5.6.2 Sparse Attack 结果
+- - '####'
+  - 7.5.6.3 Frame Attack 结果
+- - '####'
+  - 7.5.6.4 Corner Attack 结果
+- - '####'
+  - 7.5.6.5 Dash Attack 结果
+- - '####'
+  - 7.5.6.6 MF-Aware Dash Attack 结果
+- - '####'
+  - 7.5.6.7  实验得出的关键观察
+- - '###'
+  - 7.5.7 总结
+- - '##'
+  - 7.6 Snns 的安全威胁概述
+- - '##'
+  - Chapter 8Conclusion and Outlook
+- - '##'
+  - 8.1 书籍概述
+- - '##'
+  - 8.2 拟议技术在不断演进的机器学习领域中的作用
+- - '##'
+  - 8.3 未来工作
+- - '##'
+  - Bibliography
+- - '#'
+  - vulnerability studies for SNNs

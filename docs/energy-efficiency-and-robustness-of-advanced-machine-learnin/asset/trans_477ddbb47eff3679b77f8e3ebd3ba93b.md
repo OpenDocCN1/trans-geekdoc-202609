@@ -1,0 +1,69 @@
+
+-   input and output, [`[228](#chapter6.xhtml#p228)`](#chapter6.xhtml#p228)
+
+-   lane detection techniques, [`[225](#chapter6.xhtml#p225)`](#chapter6.xhtml#p225)
+
+-   learning rule, [`[226](#chapter6.xhtml#p226)`](#chapter6.xhtml#p226)–[`[227](#chapter6.xhtml#p226)`](#chapter6.xhtml#p226)
+
+-   loss function, [`[227](#chapter6.xhtml#p227)`](#chapter6.xhtml#p227)–[`[228](#chapter6.xhtml#p227)`](#chapter6.xhtml#p227)
+
+-   network architectures, [`[228](#chapter6.xhtml#p228)`](#chapter6.xhtml#p228)–[`[230](#chapter6.xhtml#p228)`](#chapter6.xhtml#p228)
+
+-   overview, [`[224](#chapter6.xhtml#p224)`](#chapter6.xhtml#p224)–[`[225](#chapter6.xhtml#p224)`](#chapter6.xhtml#p224)
+
+-   problem analysis, [`[225](#chapter6.xhtml#p225)`](#chapter6.xhtml#p225)–[`[228](#chapter6.xhtml#p225)`](#chapter6.xhtml#p225)
+
+-   Laser injection, [`[34](#chapter2.xhtml#p34)`](#chapter2.xhtml#p34)
+
+-   Layer(s)
+
+    *   CapsNet, [`[171](#chapter5.xhtml#p171)`](#chapter5.xhtml#p171)–[`[172](#chapter5.xhtml#p171)`](#chapter5.xhtml#p171)
+
+    *   capsule, [`[8](#chapter1.xhtml#p8)`](#chapter1.xhtml#p8), [`[23](#chapter2.xhtml#p23)`](#chapter2.xhtml#p23), [`[44](#chapter3.xhtml#p44)`](#chapter3.xhtml#p44), [`[134](#chapter4.xhtml#p134)`](#chapter4.xhtml#p134), [`[168](#chapter5.xhtml#p168)`](#chapter5.xhtml#p168)–[`[172](#chapter5.xhtml#p168)`](#chapter5.xhtml#p168), [`[180](#chapter5.xhtml#p180)`](#chapter5.xhtml#p180), [`[184](#chapter5.xhtml#p184)`](#chapter5.xhtml#p184), [`[190](#chapter5.xhtml#p190)`](#chapter5.xhtml#p190)
+
+    *   ClassCaps, [`[22](#chapter2.xhtml#p22)`](#chapter2.xhtml#p22), [`[50](#chapter3.xhtml#p50)`](#chapter3.xhtml#p50), [`[53](#chapter3.xhtml#p53)`](#chapter3.xhtml#p53)–[`[55](#chapter3.xhtml#p53)`](#chapter3.xhtml#p53), [`[61](#chapter3.xhtml#p61)`](#chapter3.xhtml#p61), [`[71](#chapter3.xhtml#p71)`](#chapter3.xhtml#p71), [`[83](#chapter3.xhtml#p83)`](#chapter3.xhtml#p83), [`[134](#chapter4.xhtml#p134)`](#chapter4.xhtml#p134)–[`[136](#chapter4.xhtml#p134)`](#chapter4.xhtml#p134), [`[140](#chapter4.xhtml#p140)`](#chapter4.xhtml#p140)
+
+    *   Conv1, [`[71](#chapter3.xhtml#p71)`](#chapter3.xhtml#p71)
+
+    *   ConvCaps2D, [`[83](#chapter3.xhtml#p83)`](#chapter3.xhtml#p83)
+
+    *   convolutional (Conv), [`[2](#chapter1.xhtml#p2)`](#chapter1.xhtml#p2), [`[11](#chapter2.xhtml#p11)`](#chapter2.xhtml#p11)–[`[12](#chapter2.xhtml#p11)`](#chapter2.xhtml#p11)
+
+    *   descriptor, elements of, [`[171](#chapter5.xhtml#p171)`](#chapter5.xhtml#p171)–[`[172](#chapter5.xhtml#p171)`](#chapter5.xhtml#p171)
+
+    *   mark resilient, [`[115](#chapter3.xhtml#p115)`](#chapter3.xhtml#p115)
+
+    *   MaxPooling, [`[*11*](#chapter2.xhtml#p11)`](#chapter2.xhtml#p11), [`[12](#chapter2.xhtml#p12)`](#chapter2.xhtml#p12)
+
+    *   normalization, [`[12](#chapter2.xhtml#p12)`](#chapter2.xhtml#p12), [`[14](#chapter2.xhtml#p14)`](#chapter2.xhtml#p14)
+
+    *   pooling, [`[12](#chapter2.xhtml#p12)`](#chapter2.xhtml#p12), [`[20](#chapter2.xhtml#p20)`](#chapter2.xhtml#p20)–[`[21](#chapter2.xhtml#p20)`](#chapter2.xhtml#p20), [`[23](#chapter2.xhtml#p23)`](#chapter2.xhtml#p23), [`[134](#chapter4.xhtml#p134)`](#chapter4.xhtml#p134), [`[237](#chapter6.xhtml#p237)`](#chapter6.xhtml#p237)
+
+    *   PrimaryCaps, [`[22](#chapter2.xhtml#p22)`](#chapter2.xhtml#p22), [`[54](#chapter3.xhtml#p54)`](#chapter3.xhtml#p54), [`[60](#chapter3.xhtml#p60)`](#chapter3.xhtml#p60)–[`[61](#chapter3.xhtml#p60)`](#chapter3.xhtml#p60), [`[71](#chapter3.xhtml#p71)`](#chapter3.xhtml#p71)
+
+    *   -uniform ad layer-wise quantization, [`[106](#chapter3.xhtml#p106)`](#chapter3.xhtml#p106)
+
+    *   -uniform quantization, [`[103](#chapter3.xhtml#p103)`](#chapter3.xhtml#p103)
+
+    *   -wise quantization, [`[105](#chapter3.xhtml#p105)`](#chapter3.xhtml#p105)
+
+    *   -wise quantization algorithm, [`[105](#chapter3.xhtml#p105)`](#chapter3.xhtml#p105)
+
+    *   -wise resilience analysis, [`[115](#chapter3.xhtml#p115)`](#chapter3.xhtml#p115)
+
+-   Leaky-integrate-and-fire (LIF), [`[26](#chapter2.xhtml#p26)`](#chapter2.xhtml#p26)
+
+-   Learning rate (LR), [`[45](#chapter3.xhtml#p45)`](#chapter3.xhtml#p45), [`[216](#chapter6.xhtml#p216)`](#chapter6.xhtml#p216), [`[219](#chapter6.xhtml#p219)`](#chapter6.xhtml#p219)–[`[220](#chapter6.xhtml#p219)`](#chapter6.xhtml#p219), [`[233](#chapter6.xhtml#p233)`](#chapter6.xhtml#p233)
+
+    *   decay, [`[202](#chapter6.xhtml#p202)`](#chapter6.xhtml#p202)
+
+    *   policies, [`[42](#chapter3.xhtml#p42)`](#chapter3.xhtml#p42), [`[44](#chapter3.xhtml#p44)`](#chapter3.xhtml#p44), [`[50](#chapter3.xhtml#p50)`](#chapter3.xhtml#p50), [`[51](#chapter3.xhtml#p51)`](#chapter3.xhtml#p51)
+
+        *   adaptive batch size (AdaBatch), [`[44](#chapter3.xhtml#p44)`](#chapter3.xhtml#p44), [`[46](#chapter3.xhtml#p46)`](#chapter3.xhtml#p46)–[`[48](#chapter3.xhtml#p46)`](#chapter3.xhtml#p46), [`[50](#chapter3.xhtml#p50)`](#chapter3.xhtml#p50), [`[52](#chapter3.xhtml#p52)`](#chapter3.xhtml#p52)
+
+        *   analysis of, [`[46](#chapter3.xhtml#p46)`](#chapter3.xhtml#p46)–[`[47](#chapter3.xhtml#p46)`](#chapter3.xhtml#p46)
+
+        *   for CapsNets, [`[47](#chapter3.xhtml#p47)`](#chapter3.xhtml#p47)–[`[48](#chapter3.xhtml#p47)`](#chapter3.xhtml#p47)
+
+        *   one-cycle policy (OCP), [`[44](#chapter3.xhtml#p44)`](#chapter3.xhtml#p44), [`[45](#chapter3.xhtml#p45)`](#chapter3.xhtml#p45), [`[48](#chapter3.xhtml#p48)`](#chapter3.xhtml#p48), [`[53](#chapter3.xhtml#p53)`](#chapter3.xhtml#p53) avar + bvar
+    return cvar
