@@ -1,0 +1,14 @@
+Sadaqa Train’s range of activities expanded in 2017 when it commissioned its first borehole project, resulting in a substantial increase of its annual budget. According to the financial reports, annual internally collected donations varied from ca. GHS 17,400 (USD 4,200) in 2015, GHS 15,600 (USD 3,900) in 2016 and GHS 17,500 (USD 6,600) in 2017.239 From 2017 to 2019, the organisation funded eight water projects in rural communities,240 a ninth in 2020,241 and three in 2021.242 Funding for the water projects is provided by private Ghanaian philanthropists and donors, amounting to GHS 12,000 in 2017 (figures for 2018 are not available), GHS 40,000 in 2019, GHS 10,500 in 2020, and GHS 31,000 in 2021.243
+
+Another new project is the “Zakaatul Fitr Project”. Starting as a campaign on Facebook in 2016, “Send your zakat al-fitr cash (estimated GHS 10 per sa’a) to buy rice packages for the needy.”244 Together with the “Ramadan Food Drive”, the project has become an integral part of its annual humanitarian relief efforts and has replaced the community visits in 2020 and 2021. Furthermore, the widows’ support has since 2020 transformed into a widows empowerment scheme, its core activity being the donation of sewing machines and freezers. The latest addition to Sadaqa Train’s investments is the Akim Achiase Islamic School Construction Project in the Eastern Region. Launched as a three-year project in 2020, Sadaqa Tarin has earmarked almost GHS 35,000 to commission the six units’ classroom block.245
+
+Sadaqa Train has grown into a mature nationwide da‘wa and Muslim development movement. Funding is predominantly generated internally, although some of its recent projects, among others, its donation of medical equipment to health facilities in the Northern and North East Regions in February and May 2021, as well as its 2021 Ramadan Food Drive and Qurban programme, were
+
+Accra, 8.10.2022. According to the Annual Reports of 2019, 2020 and 2021, only Sadaqa Train Southern Sector arranged prison visits. In 2022, the Northern Sector resumed its outreach and donated to Wa Prisons, see “Sadaqa Train presents eatables to Wa Prisons,” 20.4.2022, https://www.ghanaiantimes.com.gh/sadaqat-train-presents-eatables-to-wa-prisons/, accessed 22.8.2022. See further Chapter 3.3.
+239 See financial statistics provided in the annual reports, http://www.sadaqatrain.org/reports/, accessed 17.5.2019.
+240 See http://www.sadaqatrain.org/borehole-projects/, as well as http://www.sadaqatrain.org/water-project-report-2017-till-2019/, accessed 17.5.2019.
+241 See Sadaqa Train Annual Report 2020.
+242 See Sadaqa Train Annual Report 2021.
+243 Figures taken from Annual Report 2017, 2019, 2020, 2021.
+244 https://www.facebook.com/SadaqaTrainGh/photos/a.845077278869094/1123223714387781/?type=3&theater, accessed 17.5.2019.
+245 See Sadaqa Train Annual Report 2021.

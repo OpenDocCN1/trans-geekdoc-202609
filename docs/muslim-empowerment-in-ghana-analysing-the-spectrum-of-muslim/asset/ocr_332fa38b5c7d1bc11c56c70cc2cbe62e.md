@@ -1,0 +1,11 @@
+“poverty has nothing to do with riding or driving.” Quoting Surah 2, verse 177, he reminds his listeners of the God-fearing people of truth, namely those who spend out of their wealth for their relatives, orphans, needy, and wayfarers. He ends with elaborations on the difference between *sadaqa* and *zakat*; the former being either concealed or disclosed, and the latter always to be publicised, “for people to know, to be clear of doubt, and for others to learn from.”41
+
+Obligation and refusal is also the main topic in Sheikh Aminu Bamba’s fifth sermon. “Give out your *zakat* and do good to the poor and the weak,” he started his sermon and continued with a longer elaboration of wrath on hypocrites who refuse or deny paying *zakat*, namely hellfire.42
+
+The recipients of *zakat*, namely the eight categories or cases mentioned in sura Al-Tawba, 9, verse 60, are disclosed and discussed in detail in his seventh sermon: the needy and the poor, those employed to administer the funds, those whose hearts are to be reconciled, to free those in bondage and debt, for the cause of Allah, and to the wayfarers. Besides, the recipient must be a Muslim and should not be a member of one’s household. In addition, Sheikh Aminu Bamba underscores that *zakat* cannot be used to fund the building of mosques or schools.43
+
+Sheikh Aminu Bamba also discussed the two forms of almsgiving and *niyyah* in his sixth sermon, reminding his listeners that one should give *sadaqa* to the poor and needy even after one had paid *zakat*. Therefore, *sadaqa* was continuous, whereas *zakat* was a duty incumbent once a year: “O you slave of Allah, [...] pay the *zakat* of your wealth, and spend on your family, and give *sadaqa* to the poor and the weak, after paying your Zakat.” According to a hadith, what matters is the giver’s intention, not the amount of the alms he distributes.44
+
+# 1.2 Zakat Sermons and Videos on Social Media
+
+While Sheikh Aminu Bamba al-Faradhi is exceptional in having produced an (unpublished) text collection on *zakat*, other scholars have used various audio and digital avenues to spread their sermons and reflections on *zakat* and almsgiving. Videos and cassettes containing sermons of Muslim scholars have been

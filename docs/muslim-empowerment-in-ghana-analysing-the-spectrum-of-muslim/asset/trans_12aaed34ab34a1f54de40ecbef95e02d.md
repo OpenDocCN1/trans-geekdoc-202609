@@ -1,0 +1,209 @@
+
+年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
+
+加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
+
+wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该主页已于 2024 年 5 月失效，原帖 http://www.wakafproject.com/terkini/appeal-for-qurban-for-poor-and-needy-in-ghana-2013/ 已不再可用。
+
+626 见关于加纳的帖子，29.9.2015 和 22.5.2021，https://www.facebook.com/pg/Global EhsanRelief/，于 18.10.2021 访问。
+
+627 TACAHF 的资助/捐助组织 Nouvelle Optique 在 TACAHF 主页的照片库中有所体现，http://www.tacahf.org/index.php?p=gallery，于 18.10.2021 访问；然而，该主页已于 2024 年 5 月失效。另见 Nouvelle Option Facebook 账户上的帖子，从 2018 年首个 TACAHF/Nouvelle Option 水项目视频开始，https://www.facebook.com/nouvelle.optique/videos/191486052242530，于 18.10.2021 访问。
+
+628 “GMA 年度救济服务，2015”，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.1.2022 访问。
+
+629 “2012 年度救济服务”，“GMA 年度救济服务，2015”，30.5.2015，斋月帖子 28.1.2016，“为 2020 年斋月做准备”，2.3.2021，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.11.2017 和 15.1.2022 访问。
+
+630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
+
+631 https://reliefweb.int/report/syrian-arab-republic/qatar-charity-distributes-ramadan-food-baskets-inside-syria，于 25.2.2019 访问。
+
+632 https://www.facebook.com/race4aid，帖子 24.5.2023、31.5.2023、5.6.2023，于 18.8.2023 访问。
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
+
+图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
+照片：HOLGER WEISS/2022
+
+最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
+
+几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
+
+图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
+照片：HOLGER WEISS/2019
+
+自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
+
+每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的[content]
+年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
+
+加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
+
+wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该主页已于 2024 年 5 月失效，原帖 http://www.wakafproject.com/terkini/appeal-for-qurban-for-poor-and-needy-in-ghana-2013/ 已不再可用。
+
+626 见关于加纳的帖子，29.9.2015 和 22.5.2021，https://www.facebook.com/pg/Global EhsanRelief/，于 18.10.2021 访问。
+
+627 TACAHF 的资助/捐助组织 Nouvelle Optique 在 TACAHF 主页的照片库中有所体现，http://www.tacahf.org/index.php?p=gallery，于 18.10.2021 访问；然而，该主页已于 2024 年 5 月失效。另见 Nouvelle Option Facebook 账户上的帖子，从 2018 年首个 TACAHF/Nouvelle Option 水项目视频开始，https://www.facebook.com/nouvelle.optique/videos/191486052242530，于 18.10.2021 访问。
+
+628 “GMA 年度救济服务，2015”，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.1.2022 访问。
+
+629 “2012 年度救济服务”，“GMA 年度救济服务，2015”，30.5.2015，斋月帖子 28.1.2016，“为 2020 年斋月做准备”，2.3.2021，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.11.2017 和 15.1.2022 访问。
+
+630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
+
+631 https://reliefweb.int/report/syrian-arab-republic/qatar-charity-distributes-ramadan-food-baskets-inside-syria，于 25.2.2019 访问。
+
+632 https://www.facebook.com/race4aid，帖子 24.5.2023、31.5.2023、5.6.2023，于 18.8.2023 访问。
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
+
+图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
+照片：HOLGER WEISS/2022
+
+最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
+
+几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
+
+图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
+照片：HOLGER WEISS/2019
+
+自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
+
+每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的[content]
+年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
+
+加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
+
+wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该主页已于 2024 年 5 月失效，原帖 http://www.wakafproject.com/terkini/appeal-for-qurban-for-poor-and-needy-in-ghana-2013/ 已不再可用。
+
+626 见关于加纳的帖子，29.9.2015 和 22.5.2021，https://www.facebook.com/pg/Global EhsanRelief/，于 18.10.2021 访问。
+
+627 TACAHF 的资助/捐助组织 Nouvelle Optique 在 TACAHF 主页的照片库中有所体现，http://www.tacahf.org/index.php?p=gallery，于 18.10.2021 访问；然而，该主页已于 2024 年 5 月失效。另见 Nouvelle Option Facebook 账户上的帖子，从 2018 年首个 TACAHF/Nouvelle Option 水项目视频开始，https://www.facebook.com/nouvelle.optique/videos/191486052242530，于 18.10.2021 访问。
+
+628 “GMA 年度救济服务，2015”，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.1.2022 访问。
+
+629 “2012 年度救济服务”，“GMA 年度救济服务，2015”，30.5.2015，斋月帖子 28.1.2016，“为 2020 年斋月做准备”，2.3.2021，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.11.2017 和 15.1.2022 访问。
+
+630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
+
+631 https://reliefweb.int/report/syrian-arab-republic/qatar-charity-distributes-ramadan-food-baskets-inside-syria，于 25.2.2019 访问。
+
+632 https://www.facebook.com/race4aid，帖子 24.5.2023、31.5.2023、5.6.2023，于 18.8.2023 访问。
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
+
+图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
+照片：HOLGER WEISS/2022
+
+最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
+
+几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
+
+图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
+照片：HOLGER WEISS/2019
+
+自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
+
+每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的[content]
+年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
+
+加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
+
+wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该主页已于 2024 年 5 月失效，原帖 http://www.wakafproject.com/terkini/appeal-for-qurban-for-poor-and-needy-in-ghana-2013/ 已不再可用。
+
+626 见关于加纳的帖子，29.9.2015 和 22.5.2021，https://www.facebook.com/pg/Global EhsanRelief/，于 18.10.2021 访问。
+
+627 TACAHF 的资助/捐助组织 Nouvelle Optique 在 TACAHF 主页的照片库中有所体现，http://www.tacahf.org/index.php?p=gallery，于 18.10.2021 访问；然而，该主页已于 2024 年 5 月失效。另见 Nouvelle Option Facebook 账户上的帖子，从 2018 年首个 TACAHF/Nouvelle Option 水项目视频开始，https://www.facebook.com/nouvelle.optique/videos/191486052242530，于 18.10.2021 访问。
+
+628 “GMA 年度救济服务，2015”，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.1.2022 访问。
+
+629 “2012 年度救济服务”，“GMA 年度救济服务，2015”，30.5.2015，斋月帖子 28.1.2016，“为 2020 年斋月做准备”，2.3.2021，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.11.2017 和 15.1.2022 访问。
+
+630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
+
+631 https://reliefweb.int/report/syrian-arab-republic/qatar-charity-distributes-ramadan-food-baskets-inside-syria，于 25.2.2019 访问。
+
+632 https://www.facebook.com/race4aid，帖子 24.5.2023、31.5.2023、5.6.2023，于 18.8.2023 访问。
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
+
+图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
+照片：HOLGER WEISS/2022
+
+最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
+
+几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
+
+图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
+照片：HOLGER WEISS/2019
+
+自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
+
+每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的[content]
+年），其古尔邦分发项目由新加坡穆斯林慈善机构 Global Ehsan Relief 资助（2021 年：开斋饭）；⁶²⁶ 自 2018 年起，TACAHF 与法国穆斯林慈善机构 Nouvelle Optique 合作，并获得用于水项目、孤儿护理和古尔邦（Qurbani）项目的资金（图 23）。⁶²⁷
+
+加纳穆斯林专业人士学院随后自 2009 年起通过穆斯林慈善家和国际穆斯林慈善机构的捐赠开展其年度救济服务项目，⁶²⁸ 其中包括土耳其 İHH 和德国 WEFA（2011 年至 2016 年）。受益人由加纳穆斯林学院的伊玛目和当地穆斯林酋长确定；主要目标群体是所谓的“被遗忘的孤儿”，即未接受孤儿院定期照顾的儿童，且在食物分发日之前已在学院注册。⁶²⁹ 同样，阿克拉的伊斯兰发展与人道服务委员会于 2016 年执行了迪拜的 Mohammed Bin Rashid al Maktoum 人道主义和慈善基金会的开斋项目。⁶³⁰ 一年后，它执行了卡塔尔慈善组织的项目。⁶³¹ Race4Aid 随后实施了由阿拉伯联合酋长国捐赠资助的各种项目，包括孤儿赞助项目以及清真寺的建设，以及 2023 年在北部地区 Nanton Zuo 的职业培训中心。⁶³²
+
+wakaf2.rssing.com/chan-8574659/latest.php，于 18.10.2021 访问。然而，该主页已于 2024 年 5 月失效，原帖 http://www.wakafproject.com/terkini/appeal-for-qurban-for-poor-and-needy-in-ghana-2013/ 已不再可用。
+
+626 见关于加纳的帖子，29.9.2015 和 22.5.2021，https://www.facebook.com/pg/Global EhsanRelief/，于 18.10.2021 访问。
+
+627 TACAHF 的资助/捐助组织 Nouvelle Optique 在 TACAHF 主页的照片库中有所体现，http://www.tacahf.org/index.php?p=gallery，于 18.10.2021 访问；然而，该主页已于 2024 年 5 月失效。另见 Nouvelle Option Facebook 账户上的帖子，从 2018 年首个 TACAHF/Nouvelle Option 水项目视频开始，https://www.facebook.com/nouvelle.optique/videos/191486052242530，于 18.10.2021 访问。
+
+628 “GMA 年度救济服务，2015”，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.1.2022 访问。
+
+629 “2012 年度救济服务”，“GMA 年度救济服务，2015”，30.5.2015，斋月帖子 28.1.2016，“为 2020 年斋月做准备”，2.3.2021，https://www.facebook.com/GhanaAcademyOfMuslimProfessionals/，于 15.11.2017 和 15.1.2022 访问。
+
+630 “加纳开斋活动”，http://mbrch.gov.ae/en/node/305，于 25.2.2019 访问。
+
+631 https://reliefweb.int/report/syrian-arab-republic/qatar-charity-distributes-ramadan-food-baskets-inside-syria，于 25.2.2019 访问。
+
+632 https://www.facebook.com/race4aid，帖子 24.5.2023、31.5.2023、5.6.2023，于 18.8.2023 访问。
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_235_0.png)
+
+图 23 阿克拉马莫比的 Nouvelle Optique 钻井。由 Abdul-Aziz 慈善和人道主义基金会监督
+照片：HOLGER WEISS/2022
+
+最近的一个阿克拉穆斯林非政府组织是 *Naqshbandi Ghana Foundation.*633 关于该组织知之甚少，尽管其名称似乎表明加纳出现了一个新的逊尼派教团 *Naqshbandiyya*。这或许并不令人意外，鉴于自 2012 年以来土耳其 *NGOs* 在加纳的显著存在以及穆斯林学生从土耳其大学回流。*Naqshbandi Ghana Foundation* 于 2020 年 5 月注册，并在社会福利服务名录中被列为“本地非政府组织”。其活动范围被描述为“支持社会中的弱势群体”以及“…为聪颖但贫困的儿童提供教育支持”634 该组织与英国穆斯林慈善机构 *Love Mercy Hope*（LMH）合作，LMH 成立于 2019 年，并在加纳开展水项目。两家组织共同于 2019 年 12 月在阿克拉发起了一个 *Naqshbandi Dargah* 或精神圣地，635 并在 *Justgiving.com* 上启动了一项国际筹款活动。根据计划，Dargah 复合体将包括一座清真寺、孤儿院、宗教学校和寄宿学校。此外，它还将设有厨房和餐厅，每周三次为低收入家庭提供食物，以及 Mawlana Shaykh Nazim 的 *maqam*（圣墓）。636
+
+几家总部位于库马西的穆斯林 *NGOs* 充当外国穆斯林慈善机构的中介或合作伙伴。其中最古老的是 *Ansarudeen Organisation*，由 Sheikh Abdar-Rahman Muhammad 于 1996 年发起，很快获得了政府和外国捐助者的认可。*Ansarudeen Organisation* 于 1997/1998 年开始其活动，成功委托建设了一座由外国资助的清真寺、Danso 的水井项目以及 Aboaso 的一座可容纳 300 人的清真寺。清真寺和水项目，以及支持孤儿和组织斋月/开斋/古尔邦捐赠，一直是该非政府组织的核心支柱，其主要资助者是阿联酋慈善机构 *Dar al-Ber Society*。*Ansarudeen’s* 第二大支柱是教育和医疗基础设施项目，尽管它在 2006 年停止建设医疗中心，因为官僚挑战超出了组织的承受能力。相反，它开始在阿散蒂地区 Domanofu 建设一所护理培训中心（图 24），于 2022 年完工，正在等待卫生部的批准和认证。它还在阿散蒂地区 Woraso 发起了类似项目。637
+
+![](img/2ddf018ff5f5842e4fd5ba53f93c058a_237_0.png)
+
+图 24 Ansaruddeen 护理学院。阿散蒂地区 Domunafu 的护理培训学院建筑平面图，由 Dar al-Ber Society 和阿联酋援助资助并由 Ansaruddeen 实施。建设始于 2018 年，并于 2020 年完工。
+照片：HOLGER WEISS/2019
+
+自 2019 年以来，该组织在其活动中增加了两个新支柱。第四个支柱是为当地社区提供医疗服务。该组织对非法小规模采金（galamsey）造成的铅中毒影响表示担忧，并开始支付医院的肾透析费用，每次费用为 GHS 400–500，每位患者每周需要三次至四次透析。此外，该组织开始向 500 名婴儿提供婴儿食品，同时开始支付耳部手术费用。后者项目是新颖的，因为它要求组织从国外引进必要的专业能力，因为加纳此前并不存在，迄今已支付约 500 例手术费用。638
+
+每天为约 800 个家庭提供食物捐赠构成了 Ansarudeen 的第五大支柱。该项目不属于年度开斋和斋月食物分发，但作为后 COVID-19 救济措施，于 2022 年 2 月至 7 月间有效。7 月，项目的轮廓被更改，家庭改为领取食物券而非食物捐赠；券由社区长老发放，他们识别出有需要的人。639
+
+Sheikh Abdar-Rahman 的非政府组织运作表明大多数本地穆斯林非政府组织充当外国捐助组织的中介。Ansarudeen 列出七名有薪员工负责监督各种项目，以及十五名在现场的有薪承包商和工人，其薪水由每个外部资助项目征收的 7.5% 管理费覆盖。640
+
+库马西的 Iqra 教育与发展基金会于 2005 年注册，2006 年开始活动。641 其前身沙特非政府组织 Iqra 教育与发展基金会于 1991 年在 Wenchi 外建立了 Al-Faruq 学院作为英语/阿拉伯语基础学校。该校于 2006 年关闭并于 2011 年改建为私立教育学院。642 它于 2015 年被政府吸收为公立教育学院，成为唯一一所政府资助的伊斯兰教育学院。Al-Faruq 教育学院培养小学和初中教师，并开设普通基础教育、幼儿教育和伊斯兰/阿拉伯教育的文凭课程。643
+
+633 另见 https://www.facebook.com/imamhussein.naqshbandigh，于 9.1.2022 访问。
+634 “Naqshbandi Foundation Ghana”，directory.mogcsp.gov.gh，于 5.7.2021 访问。
+635 Love Mercy Hope，主页：www.lovemercyandhope.com（2020），当前项目，于 3.7.2021 访问。2020 年主页已不再可用，其 2024 年新主页提供了加纳过去项目的概述，见 https://lovemercyandhope.com/about-us/。
+636 “Naqshbandi Dergah”，https://www.justgiving.com/campaign/ghanadergah，于 3.7.2021 访问。2021 年 7 月初，该活动列出了 46 名支持者，已捐赠约 £7,000，占目标 £40,000 的 17%。
+
+637 与 Sheikh Abdar-Rahman 和 Sheikh Abdallah 的访谈，库马西，12.12.2019 和 11.10.2022。
+
+638 与 Sheikh Abdallah 的访谈，库马西，11.10.2022。
+
+639 与 Sheikh Abdallah 的访谈，库马西，11.10.2022。
+
+640 与 Sheikh Abdar-Rahman 和 Sheikh Abdallah 的访谈，库马西，12.12.2019。
+
+641 见 https://iqrai.org/?p=2891 和 https://iqrai.org/?page_id=2，均于 17.8.2021 访问。然而，根据 Ishaq Kantier 的说法，Iqra 是沙特组织，可被视为 Al-Muntada 的替代品；与 Ishaq Kantier 的访谈，库马西，12.10.2022。Iqra 教育与发展基金会主页的链接在 2024 年 5 月已无法访问。
+
+642 https://gh.africabz.com/brong-ahafo/al-faruq-college-of-education-227317；https://ghadmissionforms.com/2021/01/19/al-faruq-college-online-admission-forms/，均于 17.8.2021 访问。
+
+643 https://www.prod.facebook.com/www.afcoe.edu.gh/，于 17.8.2021 访问。然而，由于设施和基础设施不足，该学院仅接受 350 名学生——计划中的政府投资为现有基础学校综合体增加一座 4 层宿舍、一座 4 层讲堂和实验室、一座 2 层学院行政楼以及讲师和校长的平房已停滞，该学院被迫于 2021 年将其清真寺改造成多功能厅。见“Al-Faruq 教育学院将清真寺改造成讲堂”，19.2.2021，https://www.honestynewsgh.com/2021/02/19/al-faruq-college-of-education-converts-mosque-into-lecture-halls/，

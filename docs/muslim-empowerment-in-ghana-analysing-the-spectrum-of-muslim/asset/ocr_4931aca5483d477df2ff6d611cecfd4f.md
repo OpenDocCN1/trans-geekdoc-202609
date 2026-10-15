@@ -1,0 +1,15 @@
+world.609 ICODEHS generates most, if not all of its funding from external non-Ghanaian sources, such as Kuwait Zakat House, IICO, Qatar Charity, Dubai Charity Association, Sharjah International Charity, Sheikh Abdullah Al-Nouri Charitable Society, Emirates Red Crescent, MWL, Custodians of the Two Mosques, and the Turkish IHH.610 In 2020, the Ghanaian Times commended ICODEHS saying,
+
+> When it comes to implementation of social protection strategies to alleviate poverty and transform lives of the socially excluded in Ghana and beyond, the work of the Islamic Council for Development and Humanitarian Services (ICODEHS) is exemplary ...611
+
+Apart from building over a thousand mosques and 400 schools/school blocks around the country, ICODEHS has an impressive portfolio of achievements, constituting over 3,000 constructed boreholes and wells, 7 clinics, 4 vocational centres, and 7 houses for the needy, 7 orphanages, and 3 senior high schools.612 ICODEHS has also organised a Medical Caravan (eye screening exercise and surgery) programme, community-led loan schemes for women groups, support interventions for over 3,700 orphans, food crops and livestock, and humanitarian relief programmes during Ramadan and the Eid festivals.613 It further
+
+609 Suleima Mustapha, “Chief Imam, Mustapha Ibrahim among 500 global icons,” 20.1.2020, https://www.graphic.com.gh/news/general-news/chief-imam-mustapha-ibrahim-among-500-global-icons.html, accessed 16.7.2021; https://themuslim500.com/profiles/mustapha-ibrahim/, accessed 7.10.2021; “Sheikh Mustapha Ibrahim,” The Muslim 500: The World’s 500 Most Influential Muslims, chief ed. Prof. S. Abdallah Schleifer (Amman: The Royal Islamic Strategic Studies Centre, 2022), 159.
+
+610 Salifu Abdul-Rahaman, “ICODEHS’ social protection interventions transforming lives,” 1.4.2020, https://www.ghanaian-times.com.gh/icodehs-social-protection-interventions-transforming-lives?utm_source=rss&utm_medium=rss&utm_campaign=icodehs-social-protection-interventions-transforming-lives, accessed 13.7.2021; http://icodehs.org/donations/, accessed 16.5.2019; https://icodehs.org/, accessed 7.10.2021; the homepage was defunct by May 2024.
+
+611 Salifu Abdul-Rahaman, “ICODEHS’ social protection interventions transforming lives.”
+
+612 Physical projects executed by ICODEHS, information provided on presentation of Sheikh Mustapha Ibrahim, president of the Ghana section of the Mohammed VI Foundation of African Oulema, 20.5.2016, http://www.fm60a.org/en/membre/sheikh-mustapha-ibrahim-president-of-the-section-of-ghana/, accessed 30.11.2019. See also Salifu Abdul-Rahaman, “ICODEHS’ social protection interventions transforming lives.”
+
+613 Information provided on the 2016-established homepage of ICODEHS, http://icodehs.org. The homepage has not been updated since 2018. Its 2021-established homepage, https://icodehs.org, lists the same projects and partners. However, the homepage was defunct by May 2024. See also https://www.facebook.com/icodehs/, as well as Salifu Abdul-Rahaman, “ICODEHS’ social protection interventions transforming lives.”

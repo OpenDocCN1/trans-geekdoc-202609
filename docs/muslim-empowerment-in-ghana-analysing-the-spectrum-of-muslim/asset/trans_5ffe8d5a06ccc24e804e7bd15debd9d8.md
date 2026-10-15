@@ -1,0 +1,51 @@
+
+伊克拉教育与发展基金会或伊克拉基金会与萨拉菲社群密切相关，其主页上展示的来自伊斯兰呼吁与研究最高委员会、ASWAJ 阿散蒂地区和安萨鲁逊纳协会的（阿拉伯语）推荐即表明了这一点。644 其宗旨是“为有需要者提供教育机会和社会服务”，通过支持教师、学校、孤儿和寡妇，以及挖掘水井、修建清真寺和组织宣传车队或达瓦巡回活动来实现。645 其阿拉伯语主页进一步说明该基金会在加纳以及贝宁、布基纳法索、几内亚、毛里塔尼亚、尼日利亚和多哥等其他西非国家开展工作。646 该基金会与资助其各项项目的沙特慈善家有联系，647 其2020年用阿拉伯语发布的年度报告清楚地表明了这一点。例如，除2020年的清真寺建设和水项目外，该基金会向72,000人提供了开斋、斋月和开斋节食品包；全年以食物和肉类篮子支持8,271名孤儿和寡妇；将捐助者的现金施舍（天课）分发给1,260名病人和有需要者以及穆斯林囚犯；资助了392名孤儿，其中150名在Al-Noor孤儿院，并为2,184名受资助和未受资助的孤儿提供了书包和开斋节服装，同时还为90名伊玛目和穆斯林教师提供经济援助。648
+
+伊克拉教育与发展基金会与社会服务盖伊姆基金会合作，649 这是另一家总部位于库马西的本地MFBO，[content]
+伊克拉教育与发展基金会或伊克拉基金会与萨拉菲社群密切相关，其主页上展示的来自伊斯兰呼吁与研究最高委员会、ASWAJ 阿散蒂地区和安萨鲁逊纳协会的（阿拉伯语）推荐即表明了这一点。644 其宗旨是“为有需要者提供教育机会和社会服务”，通过支持教师、学校、孤儿和寡妇，以及挖掘水井、修建清真寺和组织宣传车队或达瓦巡回活动来实现。645 其阿拉伯语主页进一步说明该基金会在加纳以及贝宁、布基纳法索、几内亚、毛里塔尼亚、尼日利亚和多哥等其他西非国家开展工作。646 该基金会与资助其各项项目的沙特慈善家有联系，647 其2020年用阿拉伯语发布的年度报告清楚地表明了这一点。例如，除2020年的清真寺建设和水项目外，该基金会向72,000人提供了开斋、斋月和开斋节食品包；全年以食物和肉类篮子支持8,271名孤儿和寡妇；将捐助者的现金施舍（天课）分发给1,260名病人和有需要者以及穆斯林囚犯；资助了392名孤儿，其中150名在Al-Noor孤儿院，并为2,184名受资助和未受资助的孤儿提供了书包和开斋节服装，同时还为90名伊玛目和穆斯林教师提供经济援助。648
+
+伊克拉教育与发展基金会与社会服务盖伊姆基金会合作，649 这是另一家总部位于库马西的本地MFBO，严重依赖阿拉伯捐助者来开展其宣传、教育和建设（清真寺、学校、水）项目。
+
+访问时间 17.8.2021；Nestor Kafui Adjomah，“Inadequate infrastructure negatively impacts academic work at Al-Faruq College of education，” 22.2.2021，https://www.myjoyonline.com/inadequate-infrastructure-negatively-impacts-academic-work-at-al-faruq-college-of-education/，访问时间 17.8.2021。
+
+644 见 https://iqrai.org/wp-content/uploads/2020/06/45844.jpg （伊斯兰呼吁与研究最高委员会），https://iqrai.org/wp-content/uploads/2020/06/45845.jpg （ASWAJ），和 https://iqrai.org/wp-content/uploads/2020/06/45846.jpg （安萨鲁逊纳）。
+
+645 https://www.islamicfinder.org/world/view-place/51538/；https://iqrai.org/?page_id=778，均于 17.8.2021 访问。
+
+646 https://iqrai.org/。
+
+647 Al-Ihsaan 水井，由沙特阿拉伯慈善家捐赠，https://iqrai.org/ 5.8.2020；Waliday As-Saf 水井，由沙特阿拉伯慈善家捐赠，https://iqrai.org/，20.6.2020，访问时间 29.9.2021。
+
+648 2020 年度报告（阿拉伯语），https://iqrai.org/?p=30308，访问时间 17.8.2021。 该链接于 2024 年 5 月已无法访问。
+
+649 https://www.facebook.com/qayyimgh/?ref=py_c。
+
+总部位于库马西的 *United Ansaru al-Islam al-Muttadidah*，成立于 1995 年，又称 *Ansar for Charity and Development Foundation*（ACDF），同样依赖沙特阿拉伯和阿拉伯联合酋长国（其中包括迪拜的 Dar al-Ber Society）的捐助者；650 *Association of the Servant of the Most Gracious, Ghana* 与约旦捐助者有联系，651 而巴林慈善机构 حياة بلا أحزان（‘Life Without Sorrow’）赞助 *Kafiul Yateem Foundation for Social Services*（مؤسسة كافل اليتيم لخدمات الاجتماعية دولة غانا）的孤儿项目。652 *Markaz Aleawn Alyaqin Humanitarian Services* 则至少依赖埃及和土耳其组织的捐款来开展其人道主义服务、钻井、孤儿院、开斋和清真寺项目。自 2020 年起，该组织已从 MWL（水项目）获得资金，同时还有印度尼西亚的 Global Wakaf（水项目）和 ACT（Care for humanity；水项目以及斋月和开斋包和古兰经捐赠）。653 此外，它还担任 KSRelief 斋月食品捐赠计划在 2022 年和 2023 年斋月期间的当地合作伙伴，以及 KSRelief 的水项目。654
+
+此外，还有几家其他总部位于库马西的穆斯林非政府组织，例如 *Al-Fadl Organisation for Humanitarian Services* 在 2020 年和 2021 年从沙特阿拉伯获得了其在阿散蒂地区的水井和清真寺项目的资金，而埃及慈善家则资助了其在农村村庄的古尔邦分发。655 *Ansar Al-Khairiya Organization* 从阿联酋红新月会的 Al-Adahi 项目获得了捐赠，用于购买 80 只羊，在 2020 年和 2021 年分发给低收入家庭，以便他们庆祝宰牲节。^656
+
+总部位于库马西的 *Tarbiyya Foundation* 自 2020 年起与土耳其 Hayrat Yardım 合作，其中包括资助其斋月开斋捐赠、水项目和孤儿支持项目。^657 2022 年，该基金会还开始与德国-土耳其慈善机构 Emin Humanitärer Hilfsverein e.V.（Emin Humanitarian Aid）合作，实施后者组织的水和斋月开斋项目。^658 *Teimako and Blessing Organisation*（TBO）同样从多个土耳其非政府组织获得支持，以资助其对孤儿和贫困家庭的支持以及太阳能水井的钻探和建设（使用太阳能运行的机械化水井）。^659 *FOMWAG Ashanti* 则从卡塔尔慈善机构获得了其在阿马萨曼的学校项目的捐款，以及通过土耳其慈善机构 Deniz Feneri 资助的 Paragon Foundation 在 2022 年提供的 100 个开斋节礼包。^660 *Muslim Access Movement* 则协调了美国慈善机构 Salaam Ul Muslimyin Foundation Ghana 的类似捐赠；^661 总部位于库马西 Old Tafo Zongo 的 *Ummah Foundation* 自 2020 年起已分发来自汉堡的德国慈善和孤儿基金会的斋月礼包，以及来自比利时非政府组织 Hearts
+
+650 https://www.facebook.com/profile.php?id=100083641036045。
+
+651 https://www.facebook.com/ibaaadurrahaman/photos/pcb.2413859238701935/2413856118702247/?type=3&theater，发布于 6.9.2019，访问时间 23.10.2020。
+
+652 https://www.facebook.com/%D9%85%D9%85%D8%A4%D8%B3%D8%B3%D8%A9-%D9%83%D8%A7%D9%81%D9%84-%D8%A7%D9%84%D9%8A%D8%AA%D9%8A%D9%85-%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A%D8%A9-%D8%AF%D9%88%D9%84%D8%A9-%D8%BA%D8%A7%D9%86%D8%A7-516839181840172/，16.3.2019，17.4.2019，23.7.2019，14.9.2019，26.4.2020，访问时间 2.2.2022。
+
+653 https://www.facebook.com/markaz.aleawn.alyaqin/，14.9.2021（穆斯林世界联盟），25.11.2020，20.12.2020，12.2.2021，11.5.2021，9.6.2021，26.9.2021，2.11.2021，10.1.2021，2.6.2022，8.6.2022（Global Wakaf 和 ACT 水项目），9.5.2021（ACT 斋月捐赠），23.5.2021（ACT 开斋捐赠），3.4.2021，2.12.2021，4.5.2022（ACT 古兰经捐赠）。
+
+654 https://m.facebook.com/markaz.aleawn.alyaqin/posts，29.3.2022，1.4.2022，5.4.2022，17.4.2022，21.4.2022，29.3.2023，5.4.2023，23-28.5.2023，4.8.2023，访问时间 29.6.2022 和 18.8.2023。
+
+655 https://www.facebook.com/Al-Fadl-Organization-for-Humanitarian-Services-Kumasi-Ghana-10519138083244/?ref=page_internal，水项目（14.11.2020，15.11.2020，25.11.2020，2.12.2020，3.12.2020，5.12.2020，27.8.2021，29.8.2021，15.9.2021，16.9.2021，17.10.2021），清真寺项目（15.10.2020，2.12.2020，23.12.2020，1.1.2021，4.1.2021，11.1.2021，19.1.2021，23.1.2021），小牛捐赠（14.11.2020），访问时间 16.1.2022。
+
+656. Stephen Asante，“Al-Adahi’ Project to support the needy, deprived communities，”3.8.2020，https://gna.org.gh/2020/08/al-adahi-project-to-support-the-needy-deprived-communities/；“Emirates Red Crescent fetes 1,200 underprivileged Muslim households，”21.7.2021，https://gna.org.gh/2021/07/emirates-red-crescent-fetes-1-200-underprivileged-muslim-households/；均于 28.5.2024 访问。
+
+657. 另见 https://www.facebook.com/TARBIYYAGH/，与 Hayrat Yardım 合作的首贴为 19.10.2020，访问时间 9.1.2022。
+
+658. https://www.facebook.com/TARBIYYAGH，12.1.2022，3.4.2022，访问时间 25.8.2022。
+
+659. https://www.facebook.com/blessingteamako/，25.7. & 28.11. & 29.11. & 6.12. & 8.12.2021（太阳能水井）；3.2.2022（太阳能水井）；18.2. & 21.2.2022（孤儿支持）；21.3.2022（太阳能水井）；31.3.2022（开斋包：Larabanga）；8.4.2022（300 个开斋包：Tamale；300 个开斋包：Koforidua），13.4.2022（开斋包：Accra），3.6.2022（开斋包），17.7.2022（太阳能水井），访问时间 25.8.2022。TBO 列出的合作伙伴（17.3.2022）包括以下组织：Turkiye Diyanet Vakfı，Tadd Afrika，TIKA，IHH，Hayrat Yardım，Haim Sani Yardım，CADERNERDEGI，Ummetin Yardım Eden Leritkderdag，Kızılay，TDV，Kardeseli，Iddef Konya，Idemalilk Ghana，hasene，Iyilik vakfı，Iyilikdernegi，American Helps，和 Canada Helps。
+
+660. https://www.facebook.com/Fomwag-Ashanti-112442813643597，21.4.2022，5.7.2022，访问时间 25.8.2022。
+
+661. https://www.facebook.com/mamtyonline，22.1.2019，8.5.2019，9.9.2019，14.7.2020，访问时间 25.8.2022。

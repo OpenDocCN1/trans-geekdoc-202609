@@ -1,0 +1,15 @@
+partnership with the Students Loans Trust Fund (SLTF), started to guarantee for Muslim students to access and benefit from government-assisted student loans. By 2020, according to a Facebook announcement of SONSETFUND, over 4,000 Muslim students had benefitted from the arrangement since its inception in the 2011/12 academic year.16
+
+However, the introduction of free education at the secondary level by the Ghanaian government in 2017, together with diminishing financial assets due to donor fatigue, resulted in a reorganisation of the SONSETFUND. Among others, it ended its programme for assisting Muslim students at secondary high schools. Instead, the sole objective of the Fund was to support Muslim students at the tertiary level by introducing a new scholarship programme for needy students to pay their university fees—ranging from GHS 900–1,500 per semester or GHS 3,000 (ca. 485 USD) per annum. By 2020, the Fund had financed the tuition fees for over 50 Muslim students at various tertiary institutions in Ghana.17
+
+Alongside its own scholarship programmes, the Fund collaborated with various external partners in providing educational programmes. In 2015, the Islamic University College, Ghana, in collaboration with the SONSETFUND, launched the Imamship Programme, a training programme for imams. The programme was designed to train imams by augmenting their skills and includes courses in Arabic and English, ICT, public speaking, Islamic jurisprudence, mosque management, methodology in daʿwa, and fund-raising techniques.18 One year later, it announced of an Iranian-funded programme provided a scholarship package annually for seven Muslim students at the Islamic University College, and about Turkish government scholarships for two Ghanaian Muslim students to continue their education in Turkey.19 In February 2020, the Office
+
+Support Needy Students," 9.10.2015, https://www.modernghana.com/print/648148/1/zakāt-fund-and-students-loans-trust-fund-collaborate-to-support-needy-students.html, accessed 21.1.2016; “Emerging Trends in Educational Welfare Partnerships—The Story of SLTF and Religious Bodies," Students Loan Trust Fund, 26.11.2015, https://www.sltf.gov.gh/emerging-trends-in-educational-welfare-partnerships-the-story-of-sltf-and-religious-bodies/, accessed 7.11.2017.
+
+16 Declaration posted 10.8.2020, https://www.facebook.com/SONSETFUND/, accessed 30.12.2022.
+
+17 Declaration posted 10.8.2020, https://www.facebook.com/SONSETFUND/, accessed 30.12.2022.
+
+18 “IUCG Ready to Partner Muslim Organizations," www.iug.edu.gh/iucg-ready-to-partner-muslim-organizations, accessed 7.11.2017.
+
+19 “SONSETFUND Achievements at a glance," SONSETFUND 28.8.2017, http://www.sonsetfund.com/newsevents?news_id=159a44263ecdd6&pn=1, accessed 7.11.2017, the homepage was defunct by May 2024; Alhaji Alhasan Abdulai, “National Chief Imam’s Fund [SONSET-

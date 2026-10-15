@@ -1,0 +1,15 @@
+Other trends in cross-border giving identified by Kumi are the increased use of digital technology, social media and crowdfunding platforms, and multi-donor pooled funding models in mobilising cross-border giving. The Anti-Money Laundering Act of 2008 and its amendment in 2014 and the Anti-Terrorism Regulations of 2012, in turn, have led to strict enforcement of financial regulations in Ghana. To what extent these regulations have affected the capacity of NGOs to mobilise cross-border giving is unknown. Following official data, at least 22 suspicious transactions were filed by banks on NGOs between 2010 and 2018.²²
+
+The gradual withdrawal of donors and the general dwindling of volume and pattern of aid to NGOs since 2010 and new priorities and emphasis on donors have resulted in a changing if not volatile aid landscape in Ghana.²³ On the other hand, the economic boom during the 2010s resulted in an increase of middle-class, upper-class and high net-worth individuals who stepped in as domestic donors and supporters of the Ghanaian philanthropic landscape.²⁴ Faith-based organisations, in particular, have successfully applied domestic resource mobilisation strategies for implementing programmes for social development.²⁵
+
+The NGO landscape in contemporary Ghana predominantly comprises Christian, non-denominational and secular factions. The existence, agenda and activities of local and international Muslim NGOs (IMNGOs), Muslim community-based organisations (CBOs) and Muslim civil society organisations (CSOs) have hitherto been regarded as a marginal phenomenon, if noted at all.²⁶ These NGOs constitute most of the registered NGOs in contemporary
+
+²² Kumi, Global Philanthropy Tracker: Ghana, October 2020, 2.
+
+²³ See further Arhin, Kumi, Adam, “Facing the Bullet?”
+
+²⁴ See further SDG Philanthropy Platform, *Enabling Environment for Philanthropy in Ghana* (United Nations Development Programme, 2017), available at https://www.sdgphilanthropy.org/system/files/2018-02/SDG%20Ghana%20Final-2.pdf. On the emergence of middle-classes in Ghana, see Rachel Sponk, “Structures, Feelings and *savoir faire*: Ghana’s Middle Classes in the Making,” *Africa* 90, no. 3 (2020): 470–488. Sponk identifies three enabling conditions for the pursuit of social mobility, namely education, social networks, and access to financial resources of various kinds. See further Carola Lentz and Andrea Noll, “Across Regional Disparities and Beyond Family Ties. A Ghanaian Middle Class in the Making,” *History and Anthropology* (2021), DOI: 10.1080/02757206.2021.1885400.
+
+²⁵ See further WASCI, *Exploring Faith-based Giving as an Alternative Funding Model for Civil Society Organisations in Ghana—Experiences, Prospects and Challenges* (Accra: West Africa Civil Society Institute, 2020).
+
+²⁶ For example, the Civil Society Directory for West Africa 2010–2012 listed only seven Muslim organisations, namely the *Educational Development Fund for Muslim Youth*, the *Federation of Muslim Women Association in Ghana*, the *Ahmadiyya Muslim Youth Organ-*

@@ -1,0 +1,15 @@
+Ghanaian videographers that highlight the impact of climate change on the environment and livelihoods alongside the adoption of climate-smart agriculture systems to improve food-production. The films were part of the Ghana Youth Videography Programme, a partnership between GIMPA and Wilfred Laurier University, Canada, and facilitated by the UN Youth Climate Report, a platform that depicts actions by youth around the world on climate change.244
+
+Among the films included in the documentary was Ofori Ankah Kofi’s video depicting the efforts of a local women’s group, the Nima-Mamobi Mothers’ Club, in plating vegetables and keeping small gardens in Nima in downtown Accra.245 His video included Interviews with activists of the group, among others Hajia Mariam Salifu, and I immediately realised that the group was one of the many local women grassroots associations of Muslim women. Through Ofori Ankah Kofi’s and my research assistant Gariba’s help, I was able to interact a few days later with Hajia Mariam Salifu and see with my own eyes her impressive compound garden (Figure 40). It turned out that the association ranks among the few local Muslim NGOs engaged in mitigating the effects of climate change. Moreover, my background research and interview with Hajia Mariam Salifu revealed that the group has a remarkable history of local engagement for improving sanitary condition and addressing local environmental issues.
+
+The Nima-Mamobi Mothers’ Club (NMMC) defines itself as a “coalition of vibrant mothers with the goal of advancing grassroots development.”246 It started as an informal group that met to address the lack of refuse containers in Nima Zongo in 1995.247 Initially consisting of ten members, the group joined the Ghana Red Cross Society in 1998. Of the subsequent 46 Mothers’ Clubs in Accra, only the one Nima-Mamobi is still functioning, registered as an NGO named Mothers in Development in 2007.248
+
+244 “First Ghanaian Film on Climate Change to showcase at COP27,” 16.10.2022, https://gna.org.gh/2022/10/first-ghanaian-film-on-climate-change-to-showcase-at-cop27/, accessed 7.12.2022; Yaa Kuffour Senyah and Kadmiel Kweifo-Okai, “Film series on Ghana climate impact for COP27,” Daily Graphic 18.10.2022. The UN Youth Climate Report is a multilingual, interactive, database documentary film project, see further https://unfccc.int/topics/education-youth/resources/youth/youth-climate-report.
+
+245 See Green Zongo, a film by Ofori Ankah Kofi, https://www.youtube.com/watch?v=L-VYxOJwK8U.
+
+246 Nima-Mamobi Mothers Club, 24.10.2018, https://www.facebook.com/NMMClub/, accessed 21.11.2022.
+
+247 Interview with Hajia Mariam Salifu, Nima, 19.10.2022.
+
+248 Gertrude Laryea, “The Mothers’ Club of Nima and Maamobi,” 2.3.2015, https://ugdc s2014.wordpress.com/2015/03/02/the-mothers-club-of-nima-and-maamobi/, accessed 21.11.2022. The NMMC is also a member of FOMWAG.

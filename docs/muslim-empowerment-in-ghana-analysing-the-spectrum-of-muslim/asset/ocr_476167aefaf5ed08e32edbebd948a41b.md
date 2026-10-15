@@ -1,0 +1,15 @@
+by Akurugu Iddrisu Yakubu in 2015, the organisation focuses on daʿwa and “developing people.” The latter objective includes a vision to generate funds for the investment in educational and social infrastructure facilities, including schools, hospitals and orphanages.276 On its signpost, it calls for donation, i.e., sadaqa, to “support the needy in society.”277 However, the organisation was relaunched (or someone reformulated its objectives) in 2018. It then initiated a three-part donation call on its new Facebook account. Presenting its four focus areas as 1) charity, 2) food aid, 3) education, and 4) women empowerment, the organisation issued an open call to make donations either through mobile money transfer, or through making a payment into its bank account or by buying its coupons. The latter form can be defined as an innovative non-digital initiative: issuing so-called Food Aid and Education Fund coupons valued GHS 5, 10 or 20 (USD 0.8/1.6/3.2), the donor becomes part of a halal investment.278
+
+Daybreak Dawah Charity operates in Accra, Kumasi, and Techiman mainly on a voluntary basis, see Figure 29. Interestingly, members are both Muslim and non-Muslim young persons. Its activities were at first mainly micro-level interventions, i.e., paying school fees and hospital bills alongside donating clothes and mosquito nets. Funds are solely generated internally through outreach campaigns in Ghana.279 In 2021, the organisation raised its stakes and started two additional intervention schemes, namely the granting of interest-free loans as well as an orphans support and rehabilitation programme. Since then (until August 2022), the organisation has (at least) granted nine interest-free micro loans to women traders in Accra and Kumasi.280 The orphan support programme, in turn, collected funds during Ramadan 2022.281
+
+276 https://www.facebook.com/Day-Break-Dawah-and-Development-Centre-398838943696853/?hc_ref=ARTH-yrtifloYkQbvZK bqITMttDDHHzFGSuX4175nDplQhRAppg9BjzgD77IKMVS5E&fref=tag, accessed 13.5.2019. The Facebook account was created in 2015 but has not been updated since then. Instead, further information about the organisation, including its activities until 2018, is found on the Facebook account of its president Akurugu Iddrisu Yakubu.
+
+277 Signpost photographed by author in Kumasi, 16.9.2018, author's archive.
+
+278 https://www.facebook.com/daybreakdawahdc/, 15.8.2018, accessed 13.5.2019.
+
+279 Group interview with Daybreak Daʿwah Center members Dapai Emanuel, Idriss, Charles and Kevin, Kumasi 12.12.2019.
+
+280 https://www.facebook.com/profile.php?id=100010935812364, 11.11.2021 (Accra), 11.12.2021 (Accra), 6.1.2022 (poster); 30.1.2022 (Kumasi), 4.3.2022 (Kumasi), 8.3.2022 (Kumasi), 13.3.2022 (Kumasi), 22.4.2022 (Kumasi), 23.5.2022 (Kumasi?), 17.7.2022 (Kumasi), accessed 29.8.2022.
+
+281 https://www.facebook.com/profile.php?id=100010935812364, 21.4.2022 (fundraising call in support of orphanage), 1.5.2022 (donation of clothes to orphans), accessed 29.8.2022.

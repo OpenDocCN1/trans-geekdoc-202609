@@ -1,0 +1,13 @@
+The call in 2020 resembles the general call made by Muslim scholars during Ramadan:
+
+> Ramadan is here again, the month of giving. Maximise your rewards by joining us we intend to distribute food and other household essentials to vulnerable families this coming eid inshaa’Allah. Counting on your usual support to make it happen by the will of Allah. Help let’s put smiles on the faces of our Muslim brothers. May Allah accept our ibaadat. One can support by donating rice, oil, tin tomatoes, eggs, soft drinks, pure water, cash, used clothes, shoes etc.⁶⁷
+
+The Kumasi-based NGO *Markaz Aleawn Alyaqin Humanitarian Services* posted a similar message on Facebook during Ramadan 2020, calling for donations to alleviate the sufferings of Muslims affected by the Covid-19 pandemic:
+
+> The Needy is being tested, likewise the receiver of God’s blessing. Let us remember that, for every meal on our table is a privilege denied many, especially in needy times. As the needy is being tested in this uneasy times, likewise is the receiver of God’s blessing to provide them some relief. It’s not for dread of thirst that we guard and protect our little streams; but for lack of faith. Because to an open hands, the search someone to receive is a joy greater than giving. Let us not deny the needy of filling their cup from our little streams. So while enjoying our delectable meals, we should be thankful for such blessing and extend some succour to the needy. Regardless of the minute account, could put a smile on someone’s face. And behind their eyes, God will surely smile upon us. Let’s keep up with prayers while spreading love and washing hands. For donations of food items contact: [mobile telephone number]. For cash, please send it to our Momo account, name: Markaz Aleawn Alyaqin Humanitarian Services. Please join us! With your donation, we’re one step closer to feed the poor and needy as we continue praying to kick-out Covid-19.⁶⁸
+
+The elaborations of some Muslim NGOs on almsgiving resemble those of Muslim scholars. For example, the *Ghana Islamic Youth Sadaqa Association* (GISYA)
+
+⁶⁷ Grain of Hope Foundation, posted on Facebook, 4.5.2020, https://www.facebook.com/permalink.php?story_fbid=251134705635889&id=687684277998950, accessed 4.5.2021.
+
+⁶⁸ Markaz Aleawn Alyaqin Humanitarian Services, Old Tafo, letter/call, dated 8.4.2020, https://www.facebook.com/markaz.aleawn.alyaqin/photos/a.444236052690703/886555645125406/?type=3&theater, accessed 4.5.2021.

@@ -1,0 +1,15 @@
+applauded it as a “brilliant idea.”149 In the same year, the Zakat and Sadaqa Trust Fund registered on the social media platform a Fund Raising Global campaign to raise zakat and sadaqa with relatively modest results—74 persons donated some GHS 1,300 as zakat and 33 persons donated about GHS 740 as sadaqa.150 In early 2022, the Fund introduced the ‘GHS 1 Sadaqat Project’, pledging Muslims to donate one cedi per day, week or month on MTN Mobile Money, and started a campaign on social media for its dissemination and acceptance among Muslims.151 In 2023, the 29th National Ramadan Conference noted in a communiqué that “Muslims in Ghana should throw our support behind the Zakat and Sadaqa Trust Fund,” and urged them to “[..] channel a greater portion of this year’s zakat to the Trust Fund and embark on the GHS 1.00 Sadaqat Project to step up revenue collection for the 2023 financial year.”152
+
+The structural outline of the Zakat and Sadaqa Trust Fund is unique for Ghanaian Muslim NGOs as its Board of Trustees consists of representatives of all Muslim sects and several Muslim organisations and serves as the spiritual and financial expert platform.153 In addition, the Board appoints, supervises and approves the members of the Secretariat. The Secretariat, headed by its CEO, consists of the departments for finance administration, projects and communication. The General Assembly, in turn, is the Fund’s main body; it meets annually to check its accounts and balances.154
+
+149 “Charge 1% of cost of Hajj into Zakāt Fund—Mahama proposes to Muslims,” 26.6.2016, https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Charge-1-of-cost-of-Hajj-in-to-Zakāt-Fund-Mahama-proposes-to-Muslims-450727, accessed 21.2.2019; “Snooping in hajj affairs won’t sway Muslim voters,” 16.7.2016, https://www.newsghana.com.gh/snoopin g-in-hajj-affairs-wont-sway-muslim-voters/, accessed 14.5.2019.
+
+150 See https://www.fundraisingafrica.com/DetailView/344 as well as https://www.fundraisin gafrica.com/DetailView/343, accessed 19.5.2019.
+
+151 GHS 1 Sadaqat project, 11.1.2022, https://www.facebook.com/ZakatandSadaqafundGhana/, accessed 22.8.2023.
+
+152 29th National Ramadan Conference Communique issued at the Two Day annual national Ramadan Conference held in Cape Coast from 7th to 9th March, 2023, published 11.3.2023 on https://www.facebook.com/GhanaAcademyOfMuslimProfessionals, accessed 22.8.2023.
+
+153 In 2021, the board members were Alhasan Andani (Board Chairman), Mohammed Inusah (Vice-Chairman), Hajia Azara Abukari-Haroun (CEO), Supt. (Imam) Husein Abdur Rahim, Mohamed Hardi Nyagsi, Dr Zackaria Abraham Ibn, Hajia Ayisha Salifu, Sheikh Alhaji Sule- man Bandago (representative of the Shi’a), Amin Abdul-Rahman, Dr Marzuk Azindoo (representative of the Tijaniyya), Sheikh Salman M. Alhassan (representative of the Ahus- Sunna), Sheikh Abdul Wahab Issah (representative of the Ahmadiyya). “Board of Trustees Members,” Zakat and Sadaqa Trust Fund, Annual Report 2021.
+
+154 Interview with Sheikh Arimiyao Shu’ab, former CEO of the Zakat and Sadaqa Trust Fund, Accra/Legon, 7.12.2017. I do not doubt that the Zakat and Sadaqa Trust Fund is managed

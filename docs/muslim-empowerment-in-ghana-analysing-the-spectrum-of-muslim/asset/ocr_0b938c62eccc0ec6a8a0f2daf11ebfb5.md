@@ -1,0 +1,11 @@
+August 6th), announced the completion of an Islamic school project in Adenta Commandos (August 13th) alongside the commissioning of water projects in Buayinny, North East Region (August 23rd) and at Gomoa Mpota, Central Region (August 30th). The almost daily updates on its orphan sponsorship, water and masjid continued in September, in addition to the launching of its National Health Insurance Service project in Agona Swedru District, Central Region (September 9th).309
+
+# 8 Local Initiatives in Tamale and Wa
+
+The majority of Muslim NGOs are local initiatives. Many of those associations, youth groups and grassroot organisations discussed in the previous chapters have a local outreach; some of them count but a few active members although several of them can boast with hundreds, if not thousands of followers on Facebook. Most of them are found and active in the Zongo communities in Accra and Kumasi. For an outside spectator, Muslim activism seems to be concentrated to the two urban metropoles in southern Ghana. Much less visible are those groups and organisations in other parts of the country, especially those in predominantly Muslim locations in northern Ghana.
+
+The Sayfudeen Fund, in turn, operates in the Northern Region. The instigator of the charity is Sheikh Khalid Abdul Mumin (born in 1981), who formed the organisation together with Haji Shaibu Abiru in 2017. The latter has since then served as the chair of the fund. The headquarters of the fund is located in Tamale. Its main locations of activities are in Tamale and Bimbila.
+
+The Fund presents itself is a regional self-help initiative, being the outcome of a team of Muslim youth “who came together to pull resources in cash, kind and materials to get them to the needy in societies for the sake of Allah.”310 It is among the few Muslim faith-based organisations that list its members on its homepage, giving an indication of its outreach in 2017. Nineteen of the 48 named members reside in Tamale, others in Bimbila (18), Chereponi (1), Janga (1), Kpandai (1), Kumasi (1), Nalerigu (1), Pusaga (2), and Zabzugu (3), and one in Iran.311
+
+The Fund lists daʿwa, education and humanitarian projects as its main areas of activities, including mosques construction and outreach programmes to

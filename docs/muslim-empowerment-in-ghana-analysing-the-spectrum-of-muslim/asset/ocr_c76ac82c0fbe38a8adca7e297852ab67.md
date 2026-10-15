@@ -1,0 +1,13 @@
+although it is unclear if it was enabled by his earlier connections with the community or by the immigrant members of the Kumasi community who knew him in person. Be as it may, the community launched campaigns on Facebook in 2014 and 2015 to raise money to support Imam Hussein Ali’s da‘wa activities, purchasing an SUV to enable his outreach to rural communities.5 In 2016, the partnership branched out, and the De Koepel mosque community founded a borehole project in some suburbs of Kumasi.6 For reasons not known, the Kumasi-Antwerp partnership ceased at this point. What has happened to the Assalaam Foundation and Imam Hussein Ali is unknown; there is no known Facebook account for either of them. However, the De Koepel mosque community relinked with Kumasi in 2019 when it made a sadaqa donation to the Ummah Foundation.7
+
+This chapter displays the actors and analyses the changing landscape of Muslim NGOs in Ghana during the first two decades of the twenty-first century. Starting by identifying some key founders of philanthropic enterprises, the chapter then moves to discuss the spectrum of Muslim NGOs in Ghana by scrutinizing the activities of grassroots associations, movements and representative bodies alongside the direct and indirect presence of an ever-expanding number of foreign Muslim charities and semi-statal bodies.
+
+# 1 Muslim Philanthropists: Outreach through Charities and Foundations
+
+The number of local Muslim philanthropists has swollen during the last two decades, assumably at least in part reflecting the emergence of a (relatively) affluent Muslim middle-class in the wake of the booming Ghanaian economy during the 2010s. Sheikh Mustapha Ibrahim is the most esteemed among them,
+
+5 Outline of Imam Hussein Ali’s background and De Koepel mosque partnership with Assalaam Foundation is found in the initial call for donations, Assalaam Foundation—Ghana, https://www.facebook.com/Belgisch-Islamitisch-Centrum-De-Koepel-moskee-14265135676614411/, accessed 7.11.2017. However, this document was not anymore available when I checked the Facebook account of de Koepel mosque in December 2021, whereas reference to the campaign is still available; see https://www.facebook.com/page/14265135676614411/search/?q=Assalaam%20Foundation, accessed 31.12.2021.
+
+6 See Waterput voor Ghana 2016, https://de-koepel.be/waterput-voor-ghana/liefdadigheid/liefdadigheid-2016/, accessed 31.12.2021.
+
+7 “Sadaqa voor Ghana 2019,” https://de-koepel.be/sadaqah-voor-ghana/liefdadigheid/, accessed 31.12.2021; https://www.facebook.com/UMMAH-Foundation-122337079156638/, 21.9.2019, accessed 31.12.2021.

@@ -1,0 +1,13 @@
+# 3.1 A Long History of Muslim Self-Help in Ghana
+
+Collective agency among Muslims in Ghana has an old tradition and concentrates on two institutions, namely the mosque and the Sufi brotherhood (tariqa). Both institutions emerged already during the precolonial period, the former one as the centre of a distinctive local community, the latter one marked by the position and (trans-regional) networks of its shaykh or leader. Murray Last and Benjamin Soares have introduced the term ‘prayer economics’ in describing the complex practices among Muslim societies and enclaves in West Africa where adherents give considerable sums to Muslim scholars for prayers, blessings, and Islamic medicine.119 Soares further describes the prayer economy as operating through the circulation of capital—economic, political and spiritual or symbolic which particular social actors can convert from one domain to another. According to him, the prayer economy is, in effect, an economy of religious practice in which people give gifts to certain religious leaders on a large scale in exchange for prayers and blessings. In his view, the exchange of blessings and prayers for commodities has resulted in the process of commodification that has proliferated and intensified around such religious leaders in the postcolonial period.120
+
+The British Provincial Commissioner Angus Duncan-Johnstone provides an early description of the prayer economy in Ghana after he participated in congregational prayer in Kumasi in 1928:
+
+> Last night I attended the all night service at the Mosque the night of Leila al Kadiri when the Koran is read from the start to the finish. On this particular occasion when everyone had assembled in the Mosque at 10 P.M. the Limam [Imam, HW] Malam Babballi proceeded to recite the Suras by heart while all the Malams sat with their Korans open in front of them to catch him out. [...] It is no easy task for the audience is all literate, and highly critical, following every verse in their own Koran. We all gave alms half-way through and I was amused to watch the Limam still mechanically chanting, casting his eyes from time to time on the presents brought to me.121
+
+119 Murray Last, “Charisma and Medicine in Northern Nigeria,” in Charisma and Brotherhood in African Islam, eds. D.B. Cruise O’Brien and C. Coulon (Oxford: Clarendon Press, 1988), 183–204; Benjamin Soares, “The Prayer Economy in a Malian town,” Cahiers d’Etudes Africaines 36, no. 4 (1996): 739–754.
+
+120 See further Benjamin Soares, Islam and the Prayer Economy: History and Authority in a Malian Town (Edinburgh and London: Edinburgh University Press for the International African Institute, 2005).
+
+121 [Angus Colin] Duncan-Johnstone, Informal Diary Ashanti, entry for 20.3.1928, Papers of

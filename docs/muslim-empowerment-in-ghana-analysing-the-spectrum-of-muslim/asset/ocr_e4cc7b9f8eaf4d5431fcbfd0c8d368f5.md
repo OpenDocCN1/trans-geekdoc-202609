@@ -1,0 +1,14 @@
+and Shams Enterprise. While the campaign in 2020 consisted mainly of written daily postings plus a few videos on Facebook, the organisers made heavily use of short videos with endorsements by male and female activists to join the campaign in 2021.293 At least the organisers regarded their campaign as a success—in 2020, they fed 500 people in Accra; in 2021, they fed 1,000 in Accra and organised a similar event in Kumasi where they fed 500 people; in 2022, they fed 1,000 in Accra, 500 in Kumasi and expanded their activities to Tamale where they fed 500 people.294
+
+Eid Feast Ghana, in contrast, is a local campaign in Kumasi, starting as Eid Feast for Prisoners and Eid Feast 2k19 in 2019. While COVID-19 inhibited the project in 2020, the organisers relaunched it in 2021, resulting in a donation of food items worth GHS 8,000 (USD 1,300).295 In 2022, the group supported 150 households, one year later 160.296
+
+Ambitious, long-term crowdfunding campaigns for sadaqa jariya or ongoing charity were (seemingly?) absent on the Ghanaian Muslim internet scene until 2017. That year in February, Fareed Ibrahim, a student at Kumasi Polytech, and his companions launched the ‘One Million Pesewas A Month’ campaign on Facebook.297 At first, the initiators and their supporters defined themselves as a local Muslim youth group to champion Islamic societal development298 but formalised itself as the Islamic Community Association in September 2018.299 The ‘One Million Peewas A Month’ campaign soon spread over Facebook, among others backed by Deen TV,300 and linked to various Muslim da‘wa and
+
+293 For the 2020 and 2021 Feed the Street campaigns, see further https://m.facebook.com/Feed-The-Street-111929177218259/. Sawrah Foundation and KR Foundation actively participated in the campaign only in 2020, see https://m.facebook.com/Sawrah-Foundation-SF-561247134376004/, FTS postings 10.6.2020, 22.7.2020 (video); https://www.facebook.com/krfoundationgh/, FTS posting 9.5.–22.7.2020, accessed 3.2.2022.
+294 https://www.facebook.com/Feed-The-Street-111929177218259, 28.5.2022, accessed 29.8.2022.
+295 https://www.facebook.com/Eid-Feast-Ghana-454901921910937/.
+296 https://www.facebook.com/profile.php?id=100068478520245, 6.5.2022, 25.4.2023, accessed 21.8.2023.
+297 “Brief history about this whole campaign,” https://www.facebook.com/One-Million-Muslims-60-Pesewas-a-Month-Project-1112423655551697/, 21.6.2018, accessed 7.8.2021.
+298 “INFORMATION FOR NEWLY ADDED MEMBERS,” https://www.facebook.com/One-Million-Muslims-60-Pesewas-a-Month-Project-1112423655551697/, 12.3.2018/21.6.2018/23.7.2018, accessed 7.8.2021.
+299 “ISLAMIC COMMUNITY ASSOCIATION (GHANA),” https://www.facebook.com/One-Million-Muslims-60-Pesewas-a-Month-Project-1112423655551697/, 16.9.2018, accessed 7.8.2021.
+300 Deen TV, support to One Million Pesewa A Month Campaign, 20.9.2018, https://www.facebook.com/deenghtv/posts/1980197862036721, accessed 5.10.2021.

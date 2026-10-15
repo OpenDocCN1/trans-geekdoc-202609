@@ -1,0 +1,15 @@
+Deaf Muslim Foundation, enabling it to provide Iftar in 2023 at Savelugu School for the Deaf (78 deaf Muslims), Mamprong Senior Technical School for the deaf (60), Gbeogo School for the Deaf in Bolgatanga (46), Tamale Center (180), Yendi Deaf District (30), and St. John’s Integrated SHS in Navrongo-Tono (48).219
+
+MDD, through financial assistance from GDM, has launched several programmes at its centre in Tamale.220 In April 2013, it started a free ICT training programme in sign language and Islamic classes in sign language. Five months later, it started Friday sermon interpretations in sign language221 and collaborated with the National Road Safety Commission, a road safety campaign for the deaf in November 2013.222 Moreover, MDD, through funds received from the GDM Zakat Fund, has been able to assist individual deaf Muslims.223
+
+A recurring topic of MDD and GMD has been to solicit support for the Savelugu School of the Deaf (SAVEDEAF) and its 250+ students. They made a first donation in April 2013 to support the SAVEDEAF water project,224 namely installing a water tank. In 2019, GMD initiated a new campaign on the global fundraising platform LaunchGood, the Masjid for the Deaf, to raise USD 25,000 to renovate and modernise the school mosque and build bathrooms and washrooms for males and female students, dig water well, hire an imam and two sign interpreters. When the campaign closed in early August 2020, it had raised USD 5,630; enough funds to pay for a water well and to start the renovation of the masjid.225
+
+MDD stands out as the only Ghanaian Muslim NGO exclusively focussing on empowering deaf Muslims. A few other Ghanaian Muslim NGOs have organised ad hoc campaigns to assist such persons with hearing impairments. For example, The Light Foundation donated to the Mampong-Akuapem Demonstration School for the Deaf as part of its Ebola Campaign in September 2014. In contrast, the Muslim Youth Hereafter Project provided food items to the Association of the Deaf for distribution among 40 deaf “brothers and sisters” as part
+
+219 https://www.facebook.com/MDDGhana/, 19.4.2023, accessed 21.8.2023.
+220 See GDM call for supporting activities of MDD, https://www.facebook.com/GlobalDeafMuslim/posts/630653253668996, 3.1.2014, accessed 23.9.2021.
+221 https://www.facebook.com/MDDGhana/, posting 14.8.2013, accessed 23.9.2021.
+222 https://www.facebook.com/MDDGhana/, posting 6.11.2013, accessed 23.9.2021.
+223 See, for example, https://www.facebook.com/GlobalDeafMuslim/posts/4357741767626774, 16.9.2021, accessed 23.9.2021, with a link to the GDM Zakat Fund and its Zakat for the deaf Muslims in Ghana-call, see https://mailchi.mp/globaldeafmuslim/thank-you-from-gdm-for-the-deaf-zakat?fbclid=IwARojzDOGvShuf rDnh7yKawngPit-FfNdl sVYZz2Dn7uF7hAUiZror8KlvXE, accessed 23.9.2021.
+224 https://www.facebook.com/MDDGhana/, 22.4.2013, accessed 23.9.2021.
+225 LaunchGood, Masjid for the Deaf, https://www.launchgood.com/campaign/masjid_for_the_deaf#/, accessed 23.9.2021.
