@@ -1,0 +1,64 @@
+
+Consider your skins, firearms, armor, pets, and characters to be non-functional tokens (NFTs) that you may upgrade and sell. Perhaps you have a very rare item, and as the user base develops, more people desire it. People invest billions in the gaming industry, despite the fact that putting money into games is usually considered "sunk money." Why wouldn't they spend it if they're getting an NFT for all the time they've spent that they can upgrade and sell on a marketplace?
+
+### 6.3.4 TCG - More games
+
+Trading Card Games, in particular, appear to be a perfect fit, given that the purpose of card games is to compete against others and trade. Pokemon, Hearthstone, YuGiOh, and Magic: the Gathering is all quite popular in this sense, with millions of collectors and gamers all over the world. We've all seen how many rare cards like Charizard can fetch in the real world. Splinterlands and Gods Unchained is helping to pave the road.
+
+### 6.3.5 Collectibles
+
+The collectibles market is enormous. Cryptopunks have been sold for $1 million or more, and crypto kitties have gone viral. Even in the digital age, the sense of ownership and the desire to possess something iconic appears to be alive and strong.
+
+### 6.3.6 Sports Collectibles
+
+With renowned businesses and players involved, NBA Top Shot has surpassed $100 million in sales. These NFTs aren't just for collecting; they may also be used in a variety of activities. In fact, these NFTs can be used to create an entire ecosystem of sports games.
+
+### 6.3.7 Domain names
+
+The domain names .eth and .crypto are fetching high prices. People are utilizing them to replace their payment addresses, pay directly using a Twitter handle, and, eventually, host websites. Furthermore, anything that can be held can be an (NFT), so why not domain names?
+
+### 6.3.8 De-FI
+
+NFT can also be applied to decentralized finance with success. Some initiatives, such as Bond, allow you to use your NFT to trade cryptocurrency for no cost. NFTs can and will be utilized in a variety of blockchain-based decentralized financial applications.
+
+### 6.3.9 Digi-physical goods
+
+It's a physical component that also has an NFT attached to it. Both are unique assets. For example, Metafactory sells personalized sweatshirts in real life that have an NFT that can be used in Cryptovoxels. The Headspace does this as well, and some of their NFTs may be seen in Decentraland.
+
+### 6.3.10 Virtual scenes
+
+NFTs can be used to create entire virtual buildings and games. Metazoan is a fantastic initiative that allows Decentraland landowners to purchase and deploy games, structures, and enhancements on their land. Consider the rental market if you really want to host a meet-up on your property but don't want to pay $4000 in development charges. Why not rent one for the weekend for $200? As the virtual realm on blockchain expands, this concept has a lot of potentials.
+
+### 6.3.11 Virtual cars
+
+Why can't we have virtual cars, planes, and boats as NFTs in a virtual world? Some have sold digital cars for hundreds of ETH, and as blockchain virtual worlds evolve, so will the need for sophisticated modes of transportation and exploration. This area has been investigated by CryptoMotors, F1 Delta Time, and Battle Racers.
+
+## 6.4 Legitimate and New NFT marketplaces
+
+NFTs are one-of-a-kind objects that can't be replaced with anything else. The majority of NFTs are now digital. This makes it particularly simple for creators to deliver something rare and distinctive to their fans. Some NFTs, for instance, are digital artworks, which are now being collected in the same way that collectors have been collecting actual paintings for years. And some of these NFTs have fetched astronomical sums. The first NFTs were part of the Ethereum blockchain, which holds additional electrical data to identify them from each other. NTFS is now supported by other blockchains as well. Because different NFTs use different blockchain technologies, not all NFT marketplaces transact all types of NFTs. NFT marketplaces are frequently chosen by creators based on whether or not they support a specific NFC token standard. ERC-721 and ERC-1155 are the two Ethereum standards that have been produced so far. Binance, a competitor, has since developed BEP-721 and BEP-1155 specifications. Because they allow several NFTs to be bunched and transacted together, the two standards diverge from the original "721" specifications. Most NFT platforms require purchasers to have a digital wallet and pay for their purchases using cryptocurrency.
+
+### 6.4.1 [OpenSea](https://opensea.io?ref=0x4509a6dd84e88fd0d894726abb036d98e411c966)
+
+OpenSea claims to be the largest NFT marketplace in the world. Non-fungible tokens include art, censorship-resistant domain names, virtual worlds, trading cards, sports, and collectibles. Assets based on ERC721 and ERC1155 are also included.
+
+### 6.4.2 [Rarible](https://rarible.com/)
+
+Rarible is a society NFT marketplace that employs the RARI token as its "ownership" token, which is an ERC-20 token. Rarible gives the RARI token to active users that buy or sell on the NFT marketplace. It delivers 75,000 RARI every week. On the platform, art assets are given great attention.
+
+### 6.4.3 [super rare](https://superrare.co/)
+
+Super rare is primarily a marketplace for consumers to buy and sell one-of-a-kind, limited-edition digital artworks. Each piece of art is generated by a network artist and tokenized as a crypto-collectible digital commodity that you can own and trade. They define themselves as a cross between Instagram and Christie's, providing a new way to engage with art, culture, and collecting on the internet. Each piece of art on SuperRare is a digital collectible, a digital object that is encrypted and monitored on the blockchain. On top of the marketplace, SuperRare has constructed a social network. Digital collectibles are ideal for a social setting since they have a clear record of ownership.
+
+### 6.4.4 [Foundation](https://foundation.app/)
+
+Foundation is a niche platform that brings together digital innovators, crypto natives, and collectors to advance culture. It's dubbed the "new creative economy." It is mostly concerned with digital art. In August 2020, they launched an open call for creators to work with crypto and explore the concept of value in their first blog post on their website. The creators were invited to hack, sabotage, and distort the value of creative work. When an NFT trades on Foundation, the artist receives 10% of the secondary transaction value, i.e., when a collector resells their work to someone else for a better price, the artist receives 10% of the sales value.
+
+### 6.4.5 [AtomicMarket](https://wax.atomicmarket.io/)
+
+AtomicMarket is an NFT market smart contract with shared liquidity that is used by numerous websites. Everything posted on one market appears on all other exchanges, which is known as shared liquidity. It's a marketplace for Atomic Assets, a non-fungible token standard based on the eosio network. The Atomic Asset standard can be used to tokenize and generate digital assets, as well as to purchase, trade, and auction assets on the Atomic Assets marketplace. On the AtomicMarket, you can both put your own NFTs for sale and explore existing listings. NFTs from well-known collections are marked with a verification tick, making it easier to identify genuine NFTs. Collections that are malicious are placed on a blacklist.
+
+### 6.4.6 [KnownOrigin](https://knownorigin.io/)
+
+KnownOrigin is an online marketplace where you can find and purchase rare digital artwork. Every piece of digital art on KnownOrigin is genuine and one-of-a-kind. Creators can utilize the site to show off their work and sell it to collectors that value authenticity. The Ethereum blockchain protects it. Creators can upload digital artwork to the KnownOrigin gallery as a jpg or Gif file, with all files stored on IPFS.
+
+### 6.4.7 Mintable
