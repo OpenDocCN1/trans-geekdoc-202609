@@ -1,0 +1,50 @@
+
+- 4. Huang X, Wang H, She C, Feng J, Liu X, Hu X, 等. 人工智能促进糖尿病视网膜病变的诊断与筛查.《内分泌学前沿（洛桑）》2022；13:1–12. https://doi.org/10.3389/fendo.2022.946915.
+- 5. Kolb H. 视网膜的简单解剖.《Webvision：视网膜与视觉系统器官》1995：– .
+- 6. Saleh E, Błaszczyński J, Moreno A, Valls A, Romero-Aroca P, de la Riva-Fernández S, Słowiński R. 学习集成分类器用于糖尿病视网膜病变评估.《人工智能医学》2018；85:50–63. https://doi.org/10.1016/j.artmed.2017.09.006.
+- 7. Devaraj D, R S, Prasanna Kumar SC. 用于糖尿病视网膜病变早期检测的渗出物和微动脉瘤分割综述.《今日材料·会议论文集》，Elsevier Ltd；2018. 第10845–50页. https://doi.org/10.1016/j.matpr.2017.12.372.
+- 8. Kaur J, Mittal D. 一种从病理视网膜眼底图像中分割渗出物的通用方法.《生物控制论与生物医学工程》2018；38(1):27–53. https://doi.org/10.1016/j.bbe.2017.10.003.
+- 9. Shankar K, Sait ARW, Gupta D, Lakshmanaprabhu SK, Khanna A, Pandey HM. 使用协同深度学习模型自动检测和分类眼底糖尿病视网膜病变图像.《模式识别快报》2020；133:210–6. https://doi.org/10.1016/j.patrec.2020.02.026.
+- 10. Akram UM, Khan SA. 视网膜图像中暗亮病变的自动检测用于糖尿病视网膜病变的早期检测.《医学系统杂志》2012；36(5):3151–62. https://doi.org/10.1007/s10916-011-9802-2.
+- 11. Imani E, Pourreza H. 使用信号分离算法的视网膜渗出物分割新方法.《生物医学中的计算机方法与程序》2016；133:195–205. https://doi.org/10.1016/j.cmpb.2016.05.016.
+- 12. Shanthi T, Sabeenian RS. 用于糖尿病视网膜病变图像分类的修改版AlexNet架构.《计算机与电气工程》2019；76:56–64. https://doi.org/10.1016/j.compeleceng.2019.03.004.
+- 13. Szolovits P. 医疗计算的可能性.《计算机科学与技术杂志》2011；26(4):625–31. https://doi.org/10.1007/s11390-011-1162-3.
+- 14. Anwar SM, Majid M, Qayyum A, Awais M, Alnowami M, Khan MK. 使用卷积神经网络的医学图像分析：综述.《医学系统杂志》2018；42(11):1–13. https://doi.org/10.1007/s10916-018-1088-1.
+- 15. Faust O, Acharya UR, Ng EYK, Ng KH, Suri JS. 使用数字眼底图像自动检测糖尿病视网膜病变的算法：综述.《医学系统杂志》2012；36:145–57. https://doi.org/10.1007/s10916-010-9454-7.
+- 16. Shweta, EA, Saha S, Bhattacharyya P. 用于临床记录中患者数据去标识化的深度学习架构.《临床自然语言处理研讨会论文集》2016：32–41.
+- 17. Santosh KC, Roy PP. 使用序列分类器检测生物医学图像中的箭头.《国际机器学习与控制论杂志》2018；9(6):993–1006. https://doi.org/10.1007/s13042-016-0623-y.
+- 18. Razzak MI, Naz S, Zaib A. 医学图像处理中的深度学习：概述、挑战与未来.《生物应用分类》2018：323–50. https://doi.org/10.1007/978-3-319-65981-7_12.
+- 19. Kaushik P, Gupta A, Roy PP, Dogra DP. 基于EEG的深度BLSTM-LSTM网络模型用于年龄和性别预测.《IEEE传感器杂志》2019；19(7):2634–41. https://doi.org/10.1109/JSEN.2018.2885582.
+- 20. Lahmar C, Idri A. 论深度学习在诊断糖尿病视网膜病变中的价值.《健康技术（柏林）》2022；12(1):89–105. https://doi.org/10.1007/s12553-021-00606-x.
+- 21. Srinivas M, Roy D, Mohan CK. 使用深度卷积神经网络从X射线图像中提取判别性特征. 2016年IEEE声学、语音与信号处理国际会议（ICASSP），2016：917–21.
+- 22. Lahmar C, Idri A. 用于糖尿病视网膜病变分类的深度混合架构.《生物力学与生物医学工程中的计算机方法：成像与可视化》2022；1–19. https://doi.org/10.1080/21681163.2022.2060864.
+- 23. Deepa V, Kumar CS, Cherian T. 使用图像块的集成多阶段深度卷积神经网络用于糖尿病视网膜病变自动分级.《沙特国王大学学报：计算机与信息科学》2021. https://doi.org/10.1016/j.jksuci.2021.05.009.
+- 24. Ayala A, Ortiz Figueroa T, Fernandes B, Cruz F. 使用深度学习的糖尿病视网膜病变改进检测.《应用科学》2021；11(24). https://doi.org/10.3390/app112411970.
+- 25. Zhu CZ, Hu R, Zou BJ, Zhao RC, Chen CL, Xiao YL. 基于图像级与病变级特征融合的级联框架自动筛查糖尿病视网膜病变.《计算机科学与技术杂志》2019；34(6):1307–18. https://doi.org/10.1007/s11390-019-1977-x.
+- 26. Zhao JJ, Pan L, Zhao PF, Tang XX. 基于语义特征和监督哈希图像检索的肺结节医学征象识别.《计算机科学与技术杂志》2017；32(3):457–69. https://doi.org/10.1007/s11390-017-1736-9.
+- 27. Zhang W, Zhong J, Yang S, Gao Z, Hu J, Chen Y, Yi Z. 使用深度神经网络的糖尿病视网膜病变自动识别和分级系统.《基于知识的系统》2019；175:12–25. https://doi.org/10.1016/j.knosys.2019.03.016.
+- 28. Krizhevsky, Alex, Ilya Sutskever, Geoffrey E. Hinton. 使用深度卷积神经网络的ImageNet分类.《神经信息处理系统进展》2012；2012:1097–105. https://doi.org/10.1201/9781420010749.
+- 29. Roychowdhury S, Koozekanani DD, Parhi KK. DREAM：使用机器学习进行糖尿病视网膜病变分析.《IEEE生物医学与健康信息学杂志》2014；18(5):1717–28. https://doi.org/10.1109/JBHI.2013.2294635.
+- 30. Pratt H, Coenen F, Broadbent DM, Harding SP, Zheng Y. 用于糖尿病视网膜病变的卷积神经网络.《Procedia计算机科学》2016；90:200–5. https://doi.org/10.1016/j.procs.2016.07.014.
+- 31. Gargeya R, Leng T. 使用深度学习自动识别糖尿病视网膜病变.《美国眼科学杂志》2017；124(7):962–9. https://doi.org/10.1016/j.ophtha.2017.02.008.
+- 32. Pal R, Poray J, Sen M. 机器学习算法在糖尿病视网膜病变中的应用. 2017年第二届IEEE电子、信息与通信技术最新趋势国际会议（RTEICT），2017，第2046–51页.
+- 33. Dutta S, Manideep BC, Basha SM, Caytiles RD, Iyengar NCSN. 使用深度学习模型对糖尿病视网膜病变图像进行分类.《国际网格与分布式计算杂志》2018；11(1):99–106. https://doi.org/10.14257/ijgdc.2018.11.1.09.
+- 34. Lam C, Yi D, Guo M, Lindsey T. 使用深度学习自动检测糖尿病视网膜病变.《AMIA转化科学联合峰会论文集》2018；124:147–55. https://doi.org/10.1016/j.ophtha.2017.02.008.
+- 35. Hemant DJ, Anitha J, Indumathy A. 使用Hopfield神经网络在视网膜图像中诊断糖尿病视网膜病变.《医学系统杂志》2018；62:893–900. https://doi.org/10.1080/03772063.2016.1221745.
+- 36. Wan S, Liang Y, Zhang Y. 通过图像分类检测糖尿病视网膜病变的深度卷积神经网络.《计算机与电气工程》2018；72:274–82. https://doi.org/10.1016/j.compeleceng.2018.07.042.
+- 37. Seth S, Agarwal B. 一种用于检测糖尿病视网膜病变的混合深度学习模型.《统计与管理系统杂志》2018；21(4):569–74. https://doi.org/10.1080/09720510.2018.1466965.
+- 38. Gadekallu TR, Khare N, Bhattacharya S, Singh S, Maddikunta PKR, Srivastava G. 深度神经网络预测糖尿病视网膜病变.《环境智能与人文化计算杂志》2020；1–14. https://doi.org/10.1007/s12652-020-01963-7.
+- 39. Roychowdhury S, Koozekanani DD, Parhi KK. DREAM：使用机器学习进行糖尿病视网膜病变分析.《IEEE生物医学与健康信息学杂志》2014；18(5):1717–28. https://doi.org/10.1109/JBHI.2013.2294635.
+- 40. Soni A, Rai A. 一种使用机器学习早期识别糖尿病视网膜病变的新方法. 2021年计算机通信与信息学国际会议（ICCCI），2021. https://doi.org/10.1109/ICCCI50826.2021.9402566.
+- 41. Yu S, Xiao D, Kanagasingam Y. 使用卷积神经网络检测糖尿病视网膜病变的渗出物. 第39届IEEE医学与生物学工程学会年会. IEEE，2017，第1744–7页. https://doi.org/10.1109/EMBC.2017.8037180.
+- 42. Lam C, Yu C, Huang L, Rubin D. 使用图像块和深度学习进行视网膜病变检测.《眼科与视觉科学研究》2018；59(1):590–6.
+- 43. Chudzik P, Majumdar S, Calivá F, Al-Diri B, Hunter A. 使用全卷积神经网络检测微动脉瘤.《生物医学中的计算机方法与程序》2018；158:185–92. https://doi.org/10.1016/j.cmpb.2018.02.016.
+- 44. Chudzik P, Al-Diri B, Caliva F, Ometto G, Hunter A. 使用全卷积神经网络和辅助码本的渗出物分割. IEEE医学与生物学工程学会年会EMBS，2018，第770–3页. https://doi.org/10.1109/EMBC.2018.8512354.
+- 45. Benzamin A, Chakraborty C. 使用深度学习检测视网膜眼底图像中的硬性渗出物. 第二届成像、视觉与模式识别国际会议，2018，第465–9页. https://doi.org/10.1109/ICSCAN.2018.8541246.
+- 46. Long S, Huang X, Chen Z, Pardhan S, Zheng D. 使用动态阈值和SVM分类自动检测彩色视网膜图像中的硬性渗出物：算法开发与评估.《国际生物医学研究》2019：1–13.
+- 47. Ananda S, Kitahara D, Hirabayashi A, Udaya Kumar Reddy KR. 使用多个改进的U-Net和SegNet自动分割眼底图像用于糖尿病视网膜病变诊断. 亚太信号与信息处理协会年度峰会与会议APSIPA ASC. IEEE，2019，第1582–8页. https://doi.org/10.1109/APSIPAASC47483.2019.9023290.
+- 48. Khojasteh P, Passos Júnior LA, Carvalho T, Rezende E, Aliahmad B, Papa JP, Kumar DK. 使用深度可学习特征检测眼底图像中的渗出物.《计算机生物学与医学》2019；104:62–9. https://doi.org/10.1016/j.compbiomed.2018.10.031.
+- 49. Xiao Q, Zou J, Yang M, Gaudio A, Eltani K, Smailagic A, 等. 使用对抗学习改进糖尿病视网膜病变的病变分割. 图像分析与识别国际会议，计算机科学讲义. Springer International Publishing，2019，第333–44页. https://doi.org/10.1007/978-3-030-27272-2.
+- 50. Deepa R, Narayanan NK. 使用机器学习方法检测视网膜图像中的微动脉瘤. 信息技术创新趋势国际会议，2020，第1–5页. https://doi.org/10.1109/icitii49094.2020.9071522.
+- 51. Mateen M, Wen J, Nasrullah N, Sun S, Hayat S. 使用预训练卷积神经网络检测糖尿病视网膜病变的渗出物.《复杂性》2020；2020:1–11. https://doi.org/10.1155/2020/5801870.
+- 52. Sambyal N, Saini P, Syal R, Gupta V. 改进的U-Net架构用于糖尿病视网膜病变图像的语义分割.《生物控制论与生物医学工程》2020；40(3):1094–1109. https://doi.org/10.1016/j.bbbe.2020.05.006.

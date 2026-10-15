@@ -1,0 +1,15 @@
+Regardless of the initial state and decision, according to Bellman's optimality criterion in dynamic programming, all decisions must be an optimal policy. The Bellman optimality equation is expressed as
+
+$$V^*(s) = \max_{\pi} \big( r(s_t, a_t) + \gamma V^*\big(\delta(s_t, a_t)\big) \big). \tag{17.9}$$
+
+When the Markov decision process is exactly modelled, which means that the transition possibilities and rewards are known, Bellman's optimality approach is expected to produce a general solution. In real-time applications, due to the MDP not being modelled exactly, this solution cannot be applicable. Instead, it is preferable to develop a method through policy iteration and value iteration while trial-and-error continues randomly online. Q-learning is an off-policy Temporal difference (TD) learning method [24]. TD optimizes control through the experiences gained from episodes, in which the agent moves from an initial state to a target state by making stochastic decisions. In RL, when the number of states, actions, and transitions are known, then, for a certain number of episodes, the reward function is assumed to be able to sweep almost all the space with random trials from a starting point. As a result of these trials, a lookup table or value function containing the optimal plan to be followed is created according to the obtained experience.
+
+Tabular reinforcement learning techniques are designed for scenarios where there is a limited number of states and actions, allowing the value function to be represented as a lookup table where each state corresponds to an input. The value-update rule for TD(λ) is written as
+
+$$V(s_t) \leftarrow V(s_t) + \alpha \sum_{k=t}^{\infty} \lambda^{k-t} \big[ r_{t+1} + \gamma V(s_{t+1}) - V(s_t) \big],$$ $$\lambda < 1, \quad 0 < \alpha < 1. \tag{17.10}$$
+
+α is the learning rate and the term r_{t+1} + γ V(s_{t+1}) - V(s_t) is the temporal-difference error. In TD(λ) learning, the reward update is performed with Equation 17.10, while the action selection is randomly advanced and is the basis for direct-approximation methods. Then, Q-learning has been proposed by improving the policy update.
+
+$$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \Big[ r_{t+1} + \gamma \max_{a_{t+1}} Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t) \Big]. \tag{17.11}$$
+
+Q-learning greedily develops the policy regarding action values by maximum operator and the agent does not need to know any δ or r functions of the MDP. Function approximation-based methods are utilized to solve the curse of dimensionality when infinite states or actions exist. Continuous state-based discrete-action RL is most suitable for the treatment of AIR. Based on TD learning, radial functions-based value approximations are designed for ten levels of dosages. In RL that relies on value approximation, the experiences are utilized to refine a value function that provides an approximate evaluation of the optimal policy [25]. Tabular methods may not generalize problems involving very large states and/or actions, and value

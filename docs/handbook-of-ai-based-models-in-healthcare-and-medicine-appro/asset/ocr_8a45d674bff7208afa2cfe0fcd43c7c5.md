@@ -1,0 +1,11 @@
+# 11 Decoding EEG Signals to Generate Images Using GANs
+
+Ritik Naik, Kunal Chaudhari, Ketaki Jadhav, and Amit Joshi
+
+# 11.1 INTRODUCTION
+
+Humans have always been curious to comprehend the imaginings happening inside the human brain. With the advent of artificial intelligence (AI) technology and brain imaging techniques, it has been possible to build computation models to capture the human brain’s imagination. Millions of neurons process the perceived visual stimuli, constituting the brain signals. These brain signals are generally recorded using brain-imaging techniques like magnetic resonance imaging (MRI) and functional magnetic resonance imaging (fMRI). Some non-invasive techniques like magnetoencephalography (MEG) and electroencephalography (EEG) are also used for the same purpose. Each method has its own merits and demerits. The scalp surface area of the brain is used in recording EEG signals. EEG signals are classified on the basis of signal frequencies corresponding to different visual stimuli. These brain signals can be decoded by means of deep learning methods and further used to generate images of objects visualized by the subject.
+
+Recent developments in the field of deep learning have enabled fast and efficient operations in the healthcare domain. Various deep learning techniques, like convolutional neural networks (CNN), long short-term memory (LSTM), autoencoders, and others, are used to extract features from encoded brain signals. These extracted features are used by generative adversarial networks (GANs) in order to generate realistic images. This technology can assist patients with disabilities and those suffering from paralysis. Patients will be able to better express their thoughts and emotions with the help of this technology. This can also prove to be helpful to medical practitioners for improved diagnosis.
+
+Reconstructing and generating images from EEG signals has become one of the trending topics in recent years. EEG signals and images cannot be translated using traditional approaches. Various deep learning architectures decode the features from raw EEG signals, which are subsequently fed to GANs for image reconstruction [1]. Image reconstruction from brain signals is largely carried out with the use of fMRI and EEG data. Some early works include a deep convolutional generative adversarial

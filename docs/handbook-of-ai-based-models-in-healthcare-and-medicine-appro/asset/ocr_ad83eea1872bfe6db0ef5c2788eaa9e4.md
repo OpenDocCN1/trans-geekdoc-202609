@@ -1,0 +1,9 @@
+# 17 Machine Learning-Based Decision Support System for Optimal Treatment of Acute Inflammation Response with Specific Patient Conditions
+
+Selami Beyhan and Meriç Çetin
+
+# 17.1 INTRODUCTION
+
+Mathematical modelling has been recently addressed for many diseases with non-linear time-varying dynamics and multiple-equilibrium points. These mathematical models of diseases can be used to predict the future dynamics of the diseases as well as to design a model-based controller. Therefore, control-theoretic approaches have been recently applied for the drug dosage regulation of serious diseases to achieve a desired treatment period including diabetes, tuberculosis, HIV, COVID-19, etc. [1].
+
+It is known that inflammation is a pathological cause of many diseases [2, 3]. The cause of a pathogenic bacterial infection is invading bacteria and secreted inflammatory mediators [4]. Serious diseases, such as COVID-19, autoimmune diseases, arthritis, chronic respiratory disease, inflammatory bowel, psoriasis, coronary heart diseases, psychological disorders, neurological diseases, or cancer etc., are examined and treated on the basis of inflammation [5, 6]. The response of the immune system to such a pathogenic infection occurs as inflammation [7, 8]. Inflammation control becomes more important [9], especially in critical diseases, as inflammation damages the infected tissues. According to the response of the autoimmune system, the inflammation that damages the tissues can be eliminated with the infusion of anti-inflammatory drugs [10]. Delayed therapy may reduce the patient’s chances of survival [11]. Therefore, it is necessary to optimize the treatment for critical conditions. Anti-inflammatory control based on drug infusion is important in terms of providing less costly and more effective pharmaceutical treatments [12]. In the literature, there are several studies on the solution of the inflammation control problem.

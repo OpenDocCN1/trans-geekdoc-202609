@@ -1,0 +1,15 @@
+doctor advises an ultrasound if the patient is having pain or swelling, which requires an internal view of the organs. The images produced by ultrasound are not as precise as images obtained through methods like magnetic resonance imaging (MRI) and computed tomography (CT) scans.
+
+# 18.3.7 MRI
+
+Magnetic resonance imaging (MRI) is a non-invasive imaging technology that provides a three-dimensional detailed anatomical image. An MRI scanner has a “transmitting” coil that produces a magnetic field and a “receiver” coil, which obtains the current which goes to a computer to give the image, created by the position and intensity of the signals (Bulas and Egloff, 2013). MRI technology has been playing an increasingly significant role in biomedical research and clinical diagnosis. Mainly, MRI scans are performed on the brain, spine, and musculoskeletal system. It is a diagnostic tool to study bodily functions and dysfunction (Dong et al., 2015; van Beek et al., 2019).
+
+# 18.3.8 CT Scan
+
+Computed Tomography (CT) has transformed diagnostic decisions to become more precise. It has many advantages over other methods, as it can be completed in minutes, and it is widely used by physicians to approve or exclude a diagnosis. CT scans are often used to examine circulatory system diseases and diagnose cancer conditions, inflammatory diseases, and head or internal organ injuries (Balogh et al., 2015). The rapid utilization of CT scans has led to a concern about evidence that ionizing radiation delivered during scanning causes the development of solid organ cancer and leukaemia. It is becoming a more appealing imaging modality due to its advanced 3D resolution along with shorter scanning time (Power et al., 2016).
+
+Medical imaging is commonly utilized almost in all fields of medicine and plays a crucial part in forming diagnoses. For a varied range of conditions, imaging technology advancements have improved clinicians’ ability to recognize and identify treatment options and permit the patient to avoid more invasive procedures. Developing measurement systems that accurately reflect the data provided by diagnostic imaging is a current challenge for diagnostic imaging systems. The non-invasive imaging tests mentioned above are widely acknowledged to have resulted in a significant decrease in invasive testing. Medical imaging, like other types of diagnostic testing, has limitations (Balogh et al., 2015). The reliability, validity, and specificity of a diagnostic test are taken into consideration when deciding whether to perform it or not, as are the test’s duration and its financial expense, along with any possible risks to the patient (Wexler, 2013).
+
+# 18.3.9 Role of Histopathology in Diagnosis
+
+Viewing the diagnosis from a different perspective can tell us not only the changes occurring at the tissue level but also the actual condition of the tissue. Pathology

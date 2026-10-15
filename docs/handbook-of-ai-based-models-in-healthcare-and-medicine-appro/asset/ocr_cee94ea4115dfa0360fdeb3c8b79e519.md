@@ -1,0 +1,18 @@
+# REFERENCES
+
++   1. E. B. Lenselink et al., “Beyond the hype: Deep neural networks outperform established methods using a ChEMBL bioactivity benchmark set,” J. Cheminform., vol. 9, no. 1, pp. 1–14, 2017, doi: 10.1186/s13321-017-0232-0.
++   2. E. Gawehn, J. A. Hiss, and G. Schneider, “Deep learning in drug discovery,” Mol. Inform., vol. 35, no. 1, pp. 3–14, 2016, doi: 10.1002/minf.201501008.
++   3. A. Holzinger et al., “Interactive machine learning: Experimental evidence for the human in the algorithmic loop: A case study on Ant Colony Optimization,” Appl. Intell., vol. 49, no. 7, pp. 2401–2414, 2019, doi: 10.1007/s10489-018-1361-5.
++   4. J. Vamathevan et al., “Applications of machine learning in drug discovery and development,” Nat. Rev. Drug Discov., vol. 18, no. 6, pp. 463–477, 2019, doi:10.1038/s41573-019-0024-5.
++   5. S. Tasaki, C. Gaiteri, S. Mostafavi, and Y. Wang, “Differential gene expression,” Nat. Mach. Intell., doi: 10.1038/s42256-020-0201-6.
++   6. P. Mamoshina, M. Volosnikova, I. V. Ozerov, and E. Putin, “Machine learning on human muscle transcriptomic data for biomarker discovery and tissue-specific drug target identification,” vol. 9, no. July, pp. 1–10, 2018, doi: 10.3389/fgene.2018.00242.
++   7. D. G. P. van IJzendoorn, K. Szuhai, I. H. Briare-de Bruijn, M. Kostine, M. L. Kuijjer, J. V. M. G. Bovée, “Machine learning analysis of gene expression data reveals novel diagnostic and prognostic biomarkers and identifies therapeutic targets for soft tissue sarcomas,” PLoS Comput. Biol., vol. 15, no. 2, pp. 1–19, 2019, doi:10.1371/journal.pcbi.1006826.
++   8. Y. You et al., “Artificial intelligence in cancer target identification and drug discovery,” Signal Transduct. Target. Ther., vol. 7, no. 1, pp. 1–24, 2022, doi: 10.1038/s41392-022-00994-0.
++   9. G. Selvaraj et al., “Identification of target gene and prognostic evaluation for lung adenocarcinoma using gene expression meta-analysis, network analysis and neural network algorithms,” J. Biomed. Inform., vol. 86, no. May, pp. 120–134, 2018, doi: 10.1016/j.jbi.2018.09.004.
++   10. G. Li, J. Luo, Q. Xiao, C. Liang, P. Ding, and B. Cao, “Predicting microRNA-disease associations using network topological similarity based on DeepWalk,” IEEE Access, vol. 5, pp. 24032–24039, 2017, doi: 10.1109/ACCESS.2017.2766758.
++   11. L. Yu, L. Xue, F. Liu, Y. Li, R. Jing, and J. Luo, “The applications of deep learning algorithms on in silico druggable proteins identification,” J. Adv. Res., vol. 41, pp. 219–231, 2022, doi: 10.1016/j.jare.2022.01.009.
++   12. X. Zhang, T. Li, J. Wang, J. Li, L. Chen, and C. Liu, “Identification of cancer-related long non-coding RNAs using XGboost with high accuracy,” Front. Genet., vol. 10, no. July, pp. 1–14, 2019, doi: 10.3389/fgene.2019.00735.
++   13. M. Madhavan and G. Gopakumar, “DBNLDA: Deep Belief Network based representation learning for lncRNA-disease association prediction,” Appl. Intell., vol. 52, no. 5, pp. 5342–5352, 2022, doi: 10.1007/s10489-021-02675-x.
++   14. B. Kuhlman and P. Bradley, “Advances in protein structure prediction and design,” Nat. Rev. Mol. Cell Biol., doi: 10.1038/s41580-019-0163-x.
++   15. O. Ronneberger et al., “Highly accurate protein structure prediction with AlphaFold,” Nature, vol. 596, no. August, 2021, doi: 10.1038/s41586-021-03819-2.
++   16. À. Bravo, J. Piñero, N. Queralt-Rosinach, M. Rautschka, and L. I. Furlong, “Extraction of relations between genes and diseases from text and large-scale data analysis: Implications for translational research,” BMC Bioinformatics, vol. 16, no. 1, pp. 1–17, 2015, doi: 10.1186/s12859-015-0472-9.

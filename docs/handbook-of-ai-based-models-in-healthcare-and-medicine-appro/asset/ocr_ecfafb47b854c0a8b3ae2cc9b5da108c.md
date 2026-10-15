@@ -1,0 +1,15 @@
++   4. A huge volume of data is collected from the patients. In times of emergency, it is required to segregate the critical data from the normal data. But this huge volume of data sometimes makes the extraction process very slow.
++   5. The machine learning algorithms used in predicting diseases may sometimes create a lot of conflicts between the medical expert and the researcher in terms of the analysis that is being done by the medical experts to predict the diseases.
++   6. Due to continuous monitoring, the external noises being introduced in the ECG and the artifacts due to various parameters, such as stress and anxiety, which are not filtered by the denoising techniques, can sometimes be misinterpreted as CVDs, leading to wrong predictions being made.
+
+# 13.6 CONCLUSION
+
+ML-based ECG analysis enables the continuous monitoring of the patient, helping medical experts to locate any abnormality in the ECG and thereby predict the presence of a particular CVD. Based on the severity of the abnormality detected, immediate treatment is given to the patients by medical experts, which can reduce mortality to a great extent. The manual prediction of disease from the ECG, which is time-consuming, is reduced by using the ML-based technique. The ML-based approach to ECG analysis will be an effective approach in post-CVD affected patients. These systems are trained using the existing data, making it much easier and less tense for the medical experts and the patients who are under examination.
+
+A method to detect the ventricular late potential (VLP) using the ML-based system is discussed in this chapter. The VLP signals are considered important parameters in the detection of CVDs. In post-MI patients, VLPs can be used to notice factors in the ECG signal to avoid sudden cardiac death. Though VLPs play a significant role in the CVD characterization process, the detection process is not widespread. In this work, an EMD-based detection of VLPs is proposed. This method, along with an automatic detection phase, can be used for clinical applications. Using machine learning methods to create an automated ECG analysis system will help physicians more effectively diagnose a disease and suggest appropriate remedies at an early stage, thereby enhancing treatment and reducing mortality.
+
+# REFERENCES
+
++   1. Carroll, W. M. (2019). The global burden of neurological disorders. *The Lancet Neurology*, 18(5), 418–419. https://doi.org/10.1016/S1474-4422(19)30029-8
++   2. Kyu, H. H., Abate, D., Abate, K. H., Abay, S. M., Abbafati, C., Abbasi, N., & Breitborde, N. J. (2018). Global, regional, and national disability-adjusted life-years (DALYs) for 359 diseases and injuries and healthy life expectancy (HALE) for 195 countries and territories, 1990–2017: A systematic analysis for the Global Burden of Disease Study 2017. *The Lancet*, 392(10159), 1859–1922. https://doi.org/10.1016/S0140-6736(18)32335-3
++   3. World Health Organization (2000). Global health estimates: Deaths by cause. Age, sex and country, 2012, 2014.

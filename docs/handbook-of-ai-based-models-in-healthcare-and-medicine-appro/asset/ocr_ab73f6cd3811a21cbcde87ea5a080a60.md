@@ -1,0 +1,15 @@
+and pathogen P has been eliminated. In the septic case, all mediators ($N^*$, $C_A$, $D$) with pathogen $P$ are at high levels.
+
+# 17.3 REINFORCEMENT LEARNING-BASED TREATMENT
+
+Reinforcement learning is an approximate solution to the dynamic programming problem. Dynamic programming is concerned with predicting what will happen in the process before making the next decision when deciding about any state. In these changes, decisions cannot be evaluated independently, and a balance is considered between the current cost and the total cost. For the stochastic problem that aims to improve long-term performance by sacrificing short-term performance, an agent’s decision-making mechanism is modelled by the Markov decision process (MDP) [16]. In RL, the agent designs its actions based on the reactions from the environment. The environment is often modelled as an MDP defined by a series of states, actions, transition probabilities, and expected values. The policy function learns the dynamics based on the environmental rewards of the corresponding actions. After enough trials and learning, the agent selects the best action to maximize the reward for optimal decision-making. According to these definitions, a finite MDP is expressed in a group of mathematical terms ($S$, $A$, $P$, $R$), as follows.
+
++   1. Set of states: $S = s_1, s_2, ..., s_N$ where $s \in S$,\n2. Action set: $A = a_1, a_2, ..., a_n$ where $a \in A$,\n3. State transition probabilities (action to be taken in $s$ state): $P_{sa}(.) \in \{0,1\}$\nwhere $P : S \times A \times S \to [0,1]$, discount factor: $\gamma \in [0,1)$,\n4. Reward function (limited by absolute $r_{max}$.): where $R : S \times A \to \mathbb{R}$.
+
+The main elements of MDP are the policy, the reward function, the value function, and the model of the environment [16]. In Figure 17.1, the general schematic representation of the MDP is depicted.
+
+In MDP, the agent based on one of the states ($s_t \in S$) takes one of the actions ($a_t \in A$) for every $t$ discrete time. The environment rewards the agent who switched to $s_{t+1}$ because of the selected action $a_t$ with $r_t$.
+
+$r_t = r(s_t, a_t),$\n$s_{t+1} = \delta(s_t, a_t).$\n(17.5)
+
+It can be assumed that the functions $r(.)$ and $\delta(.)$ are initially deterministic and a part of the environment. The agent does not need to know these functions. The solution of the MDP or the strategy that the agent should achieve its process-related policy $\pi : S \to A$. The policy is represented by a lookup table or a function that can be stochastic or deterministic [16]. The task of this policy is to ensure that the next-most appropriate action is selected, depending on the current observed state, i.e., $\pi(s_t) = a_t$. The most important question is how the agent will learn this plan. One of

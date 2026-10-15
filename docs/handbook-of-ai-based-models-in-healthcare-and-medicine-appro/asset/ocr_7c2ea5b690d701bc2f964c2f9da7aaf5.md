@@ -1,0 +1,9 @@
+# 8 An Embedded Solution for Real-Time Implementation of a Deep Learning Model for Malicious Breast Tumour Detection
+
+S. Malarvizhi, R. Kayalvizhi, H. Heartlin Maria, Revathi Venkatraman, Shatanu Patil, and A. Maria Jossy
+
+# 8.1 OVERVIEW OF BREAST CARCINOMA
+
+Breast cancer, otherwise known as breast carcinoma or breast malignancy, is an illness that originates as a result of uncontrolled cell multiplication in the breast region. Several types of breast carcinoma exist, and each type is identified by its cell origin. Breasts are composed of a few major components, such as lobules, ducts, and connective tissue, and cancer can arise from any of these components. The lobules are generally presumed to be the glands responsible for milk production. Tubes that transfer the produced milk are known as ducts. Connective tissue surrounds the lobules and ducts and holds them together. The majority of breast malignancy can originate in the ducts and lobules. Breast cancer has the capability to grow outside the breast through blood and lymph arteries. Breast carcinoma affects women of all ages, although it is more common in those over the age of 50. Men can also be affected by breast carcinoma, although it is rare [1–3].
+
+In 2018, a projected 2.08 million women worldwide were diagnosed with breast cancer. In addition, breast cancer accounted for around 24.2% of all malignancies in women. Breast cancer accounted for about one-quarter of all cancer in women. Cancer of the breast was reported as the second-most frequent malignancy in women in 2008, accounting for 115,251 cases. Breast cancer was still the most frequent malignancy in women in 2018, with 162,468 women diagnosed for the first time.

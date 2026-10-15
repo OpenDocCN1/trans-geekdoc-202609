@@ -1,0 +1,14 @@
+et al., 2020; Adamopoulou and Moussiades, 2020). Intent detection and slot filling are tasks included in this. Intent detection and slot filling are viewed as sequence tagging problems. The process can be implemented using long short-term memory (LSTM). The left-to-right sequences were ignored by the LSTM architecture, which only trained datasets using the right context when they were read from left to right. The network can be trained to utilize both sequences using the bidirectional LSTM (Bi-LSTM) architecture, which can then combine the two independent outputs into a single final result. Because of this, the NLU component is typically implemented as a conditional random field (CRF) layer on top of an LSTM-based recurrent neural network. The model that is being described is a sequence-to-sequence model that employs a bidirectional LSTM network that simultaneously fills the slots and predicts the intent.
+
+To train the provided input using two different sequences: a normal sequence and a reverse sequence. Using x to represent the input and h to represent the feature vector of the sequences, which includes the current word's context and the words that came before it. Since the algorithm has both directions, the word vector can be obtained from the normal sequence h^ and another reverse sequence h^. By using the sigmoid function to activate the hidden state, we achieve the desired results. The formulas are displayed as follows.
+
+h = [h^,h^]
+y = δ(h)
+
+# 21.3.2 Natural Language Generator
+
+The creation of text using natural language from a meaning representation is known as natural language generation (NLG) (Ayanouz et al., 2020). Text summarization, machine translation, and conversation systems all rely heavily on NLG systems. The system's response is mapped back to a comprehensible natural language sentence in the NLG as a semantic frame. A statistical model is used to rate the candidate utterances that trainable NLG systems can produce in a variety of ways (such as scholastically or using a rule base). Each speech is given a score by the statistical model, which is trained using textual data. The majority of these systems generate utterances using bigram and trigram language models. However, an NLG based on a semantically controlled LSTM recurrent network can learn from unaligned input by jointly optimizing its surface realization and sentence planning components using a simple cross-entropy training criterion without any heuristics, and good quality language variety is obtained simply by randomly sampling the network outputs.
+
+# 21.3.2.1 Sequence-to-Sequence Models
+
+One decoder node giving output corresponding to one encoder node is how sequence-to-sequence models are conceptualized (Bhagwat et al., 2019; Fadhi, 2019). This concept is easily used in machine translation since the decoder can produce an equivalent term for the target language by just examining one word from the input

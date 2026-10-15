@@ -1,0 +1,82 @@
+
+tissue analysis and diagnosis should be included and the description of its diagnostic approach should be improved (i.e., there should be constant additions of new updates with different algorithms for cell detection or diseased cell prediction). The combined feedback by the pathologist, histopathologist, and clinicians is important for improving the development of software for the timely diagnosis of a disease. Moreover, collaborative tools could be improved for easy exchange of data or images, allowing improvement in the results (Escobar Díaz Guerrero et al., 2022). The ability of different software programmes to work together, exchange data, and use the same standards and protocols make the software interoperable, which is important in the field of bioimage analysis.
+
+## REFERENCES
+
+Abbas, A., Abdelsamea, M. M., and Gaber, M. M. (2020). DeTrac: Transfer learning of class decomposed medical images in convolutional neural networks. IEEE Access, 8, 74901–74913. https://doi.org/10.1109/access.2020.2989273
+
+Adiga, P. U., and Chaudhuri, B. B. (2000). Region based techniques for segmentation of volumetric histo-pathological images. Computer Methods and Programs in Biomedicine, 61(1), 23–47. https://doi.org/10.1016/S0169-2607(99)00026-7
+
+Aeffner, F., Zarella, M. D., Buchbinder, N., Bui, M. M., Goodman, M. R., Hartman, D. J., Lujan, G. M., Molani, M. A., Parwani, A. V., Lillard, K., Turner, O. C., Vemuri, V. N. P., Yuil-Valdes, A. G., and Bowman, D. (2019). Introduction to digital image analysis in whole-slide imaging: A white paper from the digital pathology association. Journal of Pathology Informatics, 10(1), 9. https://doi.org/10.4103/jpi.jpi_82_18
+
+Allan, C., Burel, J. M., Moore, J., Blackburn, C., Linkert, M., Loynton, S., Macdonald, D., Moore, W. J., Neves, C., Patterson, A., Porter, M., Tarkowska, A., Loranger, B., Avondo, J., Lagerstedt, I., Lianas, L., Leo, S., Hands, K., Hay, R. T., Patwardhan, A., Best, C., Kleywegt, G. J., Zanetti, G., and Swedlow, J. R. (2012). OMERO: Flexible, model-driven data management for experimental biology. Nature Methods, 9(3), 245–253. https://doi.org/10.1038/nmeth.1896
+
+Arevalo, J., and Cruz-Roa, A. (2014). Histopathology image representation for automatic analysis: A state-of-the-art review. Revista de Medicina, 22(2), 79–91.
+
+Balogh, E., Miller, B. T., and Ball, J. (2015). Improving Diagnosis in Health Care. The National Academies Press.
+
+Bankhead, P., Loughrey, M. B., Fernández, J. A., Dombrowski, Y., McArt, D. G., Dunne, P. D., McQuaid, S., Gray, R. T., Murray, L. J., Coleman, H. G., James, J. A., Salto-Tellez, M., and Hamilton, P. W. (2017). QuPath: Open source software for digital pathology image analysis. Scientific Reports, 7(1), 1–7. https://doi.org/10.1038/s41598-017-17204-5
+
+Belsare, A. D., and Mushrif, M. M. (2012). Histopathological image analysis using image processing techniques: An overview. Signal and Image Processing, 3(4), 23. https://doi.org/10.5121/sipij.2012.3403
+
+Bray, M. A., and Carpenter, A. E. (2015). CellProfiler Tracer: Exploring and validating high-throughput, time-lapse microscopy image data. BMC Bioinformatics, 16(1), 1–7. https://doi.org/10.1186/s12859-015-0759-x
+
+Bulas, D., and Egloff, A. (2013). Benefits and risks of MRI in pregnancy. Seminars in Perinatology, 37(5), 301–304. https://doi.org/10.1053/j.semperi.2013.06.005
+
+Burri, O. (2022, October 17). QuPath: Taking full control through workflows, scripting, and extensions. Retrieved February 10, 2023, from https://analyticalscience.wiley.com/do/10.1002/was.0004000312
+
+Carpenter, A. E., Jones, T. R., Lamprecht, M. R., Clarke, C., Kang, I. H., Friman, O., Guertin, D. A., Chang, J. H., Lindquist, R. A., Moffat, J., Golland, P., and Sabatini, D. M. (2006). CellProfiler: Image analysis software for identifying and quantifying cell phenotypes. Genome Biology, 7(10), 1–11. https://doi.org/10.1186/gb-2006-7-10-r100
+
+De Chaumont, F., Dallongeville, S., Chenouard, N., Hervé, N., Pop, S., Provoost, T., Meas-Yedid, V., Pankajakshan, P., Lecomte, T., Le Montagner, Y., Lagache, T., Dufour, A., and Olivo-Marin, J. C. (2012). Icy: An open BioImage informatics platform for extended reproducible research. Nature Methods, 9(7), 690–696. https://doi.org/10.1038/nmeth.2075
+
+De Chaumont, F., Dallongeville, S., Provoost, T., Lecomte, T., Dufour, A., and Olivo-Marin, J. C. (2013, September). Icy: A user-friendly environment for algorithm development and deployment. In 21st European Signal Processing Conference (EUSIPCO 2013) (pp. 1–5). IEEE.
+
+DeBerardinis, R. J., and Thompson, C. B. (2012). Cellular metabolism and disease: What do metabolic outliers teach us? Cell, 148(6), 1132–1144. https://doi.org/10.1016/j.cell.2012.02.032
+
+Dobson, E. T. A., Cimini, B., Klemm, A. H., Wählby, C., Carpenter, A. E., and Eliceiri, K. W. (2021). ImageJ and CellProfiler: Complements in open-source BioImage analysis. Current Protocols, 1(5), e89. https://doi.org/10.1002/cpz1.89
+
+Dong, Z., Andrews, T., Xie, C., and Yokoo, T. (2015). Advances in MRI techniques and applications. BioMed Research International, 2015, 1–2. https://doi.org/10.1155/2015/139043
+
+Elmore, S. A. (2012). Enhanced histopathology of the immune system: A review and update. Toxicologic Pathology, 40(2), 148–156. https://doi.org/10.1177/0192623311427571
+
+Escobar Díaz Guerrero, R., Carvalho, L., Bocklitz, T., Popp, J., and Oliveira, J. L. (2022). Software tools and platforms in Digital Pathology: A review for clinicians and computer scientists. Journal of Pathology Informatics, 13, 100103. https://doi.org/10.1016/j.jpi.2022.100103
+
+Fischer, G., Anderson, L., Ranson, M., Sellen, D., and McArthur, E. (2021). Public perceptions on pathology: A fundamental change is required. Journal of Clinical Pathology, 74(12), 812–815. https://doi.org/10.1136/jclinpath-2020-206873
+
+Flach, R. N., Franssen, N. L., Sonnen, A. F. P., Nguyen, T. Q., Breimer, G. E., Veta, M., Stathionikos, N., van Dooijewaard, C., and van Diest, P. J. (2022). Implementation of artificial intelligence in diagnostic practice as a next step after going digital: The UMC Utrecht perspective. Diagnostics (Basel, Switzerland), 12(5), 1042. https://doi.org/10.3390/diagnostics12051042
+
+Gonzalez Obando, D. F., Mandache, D., Olivo-Marin, J. C., and Meas-Yedid, V. (2019, April). Icytomine: A user-friendly tool for integrating workflows on whole slide images. In European Congress on Digital Pathology (pp. 181–189). Cham: Springer. https://doi.org/10.1007/978-3-030-23937-4_21
+
+Gurcan, M. N., Boucheron, L. E., Can, A., Madabhushi, A., Rajpoot, N. M., and Yener, B. (2009). Histopathological image analysis: A review. IEEE Reviews in Biomedical Engineering, 2, 147–171. https://doi.org/10.1109/RBME.2009.2034865
+
+Haase, R., Royer, L. A., Steinbach, P., Schmidt, D., Dibrov, A., Schmidt, U., Weigert, M., Maghelli, N., Tomancak, P., Jug, F., and Myers, E. W. (2019). Clij: GPU-accelerated image processing for everyone. Nature Methods, 17(1), 5–6. https://doi.org/10.1038/s41592-019-0650-1
+
+Horai, Y., Mizukawa, M., Nishina, H., Nishikawa, S., Ono, Y., Takemoto, K., and Baba, N. (2019). Quantification of histopathological findings using a novel image analysis platform. Journal of Toxicologic Pathology, 32(4), 319–327. https://doi.org/10.1293/tox.2019-0022
+
+Ibrahim, A., Gamble, P., Jaroensri, R., Abdelsamea, M. M., Mermel, C. H., Chen, P. C., and Rakha, E. A. (2020). Artificial intelligence in digital breast pathology: Techniques and applications. *Breast (Edinburgh, Scotland)*, 49, 267–273. https://doi.org/10.1016/j.breast.2019.12.007
+
+Jahn, S. W., Plass, M., and Moinfar, F. (2020). Digital pathology: Advantages, limitations and emerging perspectives. *Journal of Clinical Medicine*, 9(11), 3697. https://doi.org/10.3390/jcm9113697
+
+Jakhmola-Mani, R., Mittal, K., and Pande Katare, D. (2020). Alarm test: A novel chemical-free behavioural assessment tool for zebrafish. *Zebrafish in Biomedical Research*. https://doi.org/10.5772/intechopen.91181
+
+Kemp, W. L., Burns, D. K., and Brown, T. G. (Eds.). (2008). Chapter 1. Cellular pathology. *Pathology: The Big Picture*. McGraw Hill. https://accessmedicine.mhmedical.com/content.aspx?bookid=499&sectionid=41568284
+
+Kuczkiewicz-Siemion, O., Sokół, K., Puton, B., Borkowska, A., and Szumera-Cieśkiewicz, A. (2022). The role of pathology-based methods in qualitative and quantitative approaches to cancer immunotherapy. *Cancers*, 14(15), 3833. https://doi.org/10.3390/cancers14153833
+
+Levet, F., Carpenter, A. E., Eliceiri, K. W., Kreshuk, A., Bankhead, P., and Haase, R. (2021). Developing open-source software for bioimage analysis: Opportunities and challenges. *F1000Research*, 10, 302. https://doi.org/10.12688/f1000research.52531.1
+
+Marée, R. (2019). Open practices and resources for collaborative digital pathology. *Frontiers in Medicine*, 6, 255. https://doi.org/10.3389/fmed.2019.00255
+
+Marée, R., Rollus, L., Stévens, B., Hoyoux, R., Louppe, G., Vandaele, R., Begon, J. M., Kainz, P., Geurts, P., and Wehenkel, L. (2016). Collaborative analysis of multi-gigapixel imaging data using Cytomine. *Bioinformatics*, 32(9), 1395–1401. https://doi.org/10.1093/bioinformatics/btw013
+
+McCombe, K. D., Craig, S. G., Pulsawatdi, A. V., Quezada-Marín, J. I., Hagan, M., Rajendran, S., Humphries, M. P., Bingham, V., Salto-Tellez, M., Gault, R., and James, J. A. (2021). HistoClean: Open-source software for histological image preprocessing and augmentation to improve development of robust convolutional neural networks. *Computational and Structural Biotechnology Journal*, 19, 4840–4853. https://doi.org/10.1016/j.csbj.2021.08.033
+
+Meijering, E. (2020). A bird's-eye view of deep learning in BioImage analysis. *Computational and Structural Biotechnology Journal*, 18, 2312–2325. https://doi.org/10.1016/j.csbj.2020.08.003
+
+Nedzved, A., Belotserkovsky, A., Lehmann, T. M., and Ablameyko, S. (2007, February). Morphometrical feature extraction on colour histological images for oncological diagnostics. In *5th International Conference on Biomedical Engineering*, ACTA Press, 379 - 384).
+
+Power, S. P., Moloney, F., Twomey, M., James, K., O'Connor, O. J., and Maher, M. M. (2016). Computed tomography and patient risk: Facts, perceptions and uncertainties. *World Journal of Radiology*, 8(12), 902–915. https://doi.org/10.4329/wjr.v8.i12.902
+
+Rakovic, K., Colling, R., Browning, L., Dolton, M., Horton, M. R., Protheroe, A., Lamb, A. D., Bryant, R. J., Scheffer, R., Crofts, J., Stanislaus, E., and Verrill, C. (2022). The use of digital pathology and artificial intelligence in histopathological diagnostic assessment of prostate cancer: A survey of Prostate Cancer UK supporters. *Diagnostics*, 12(5), 1225. https://doi.org/10.3390/diagnostics12051225
+
+Rani, U., and Amsini, A. (2018). Image processing techniques used in digital pathology imaging: An overview. *International Journal of Engineering Research in Computer Science and Engineering (IJERCSE)*, 5(1)

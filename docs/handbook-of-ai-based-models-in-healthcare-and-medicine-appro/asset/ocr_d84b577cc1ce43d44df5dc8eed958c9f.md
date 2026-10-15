@@ -1,0 +1,5 @@
+![](bbox=[0.08, 0.12, 0.92, 0.82])
+
+# FIGURE 4.3 Pairwise relationship of attributes
+
+Edema, SGOT, and Copper. A recursive feature elimination learning algorithm with a gradient boosting classifier as an estimator is used to identify the features which best explain the target (Age, Hepatomegaly, Bilirubin, Cholesterol, Albumin, Copper, Alk-Phos, SGOT, Triglycerides, Platelets, Prothrombin). With each feature set selected, machine learning models were built and the performance of the models was estimated. In this work, six models were built: XGBoost, AdaBoost, decision tree, random Forest, logistic regression, and multilayer perceptron. Starting with XGBoost, the max_depth parameter is 20 and the min_child_weight is five. For the model built using AdaBoost, the n_estimators parameter is 25 and learning_rate is fixed as one. For the random forest classifier model, the n_estimators parameter is set as 100 and the criterion used to find the best attribute is entropy. For the decision tree classifier, the max_depth parameter is set as 20. The performance metrics of the various models built are shown in Table 4.3.
