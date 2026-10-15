@@ -1,0 +1,279 @@
+
+### `mysqli_query()`
+
+函数 `mysql_query()` 和 `mysqli_query()` 将 SQL 发送到由句柄标识的数据库——`mysql_query()` 的第二个参数，`mysqli_query()` 的第一个参数。然而，为了避免一种称为“SQL 注入”的攻击（使用 GET 或 POST 数据注入 SQL 语句的方法），您绝对 **必须** 使用 `mysql_real_escape_string()` 或 `mysqli_real_escape_string()` 来转义任何危险字符，例如单引号。请参阅前面的和下面的列表以了解实现。那些列表中缺少的代码（但当然包含在代码下载中）基本上是一个 HTML 表单，接受引语、作者和年份。图 7.2 显示了引语收集的 HTML 输入表单。
+
+```
+<?php
+    if ($db = @mysqli_connect('localhost', 'user',
+        'password')) {
+        require_once 'stripFormSlashes.inc.php';
+        mysqli_select_db($db, 'phrasebook');
+        mysqli_query($db, sprintf(
+            'INSERT INTO quotes (quote, author, year)
+            VALUES (\'%s\', \'%s\', \'%s\')',
+            mysqli_real_escape_string($db, $_POST
+            ['quote']),
+            mysqli_real_escape_string($db, $_POST
+            ['author']),
+            intval($_POST['year'])));
+        echo 'Quote saved.';
+        mysqli_close($db);
+    } else {
+        echo 'Connection failed.';
+    }
+?>
+```
+
+*向 MySQLi 发送 SQL (`mysqli_query.php`; 摘录)*
+
+```
+<?php
+    if ($db = @mysql_connect('localhost', 'user',
+        'password')) {
+        require_once 'stripFormSlashes.inc.php';
+        mysql_select_db('phrasebook', $db);
+        mysql_query(sprintf(
+            'INSERT INTO quotes (quote, author, year)
+            VALUES (\'%s\', \'%s\', \'%s\')',
+```
+
+### 向 MySQL 发送 SQL
+
+```php
+mysql_real_escape_string($_POST['quote'], $db),
+ mysql_real_escape_string($_POST['author'], $db),
+ intval($_POST['year'])), $db);
+ echo 'Quote saved.';
+ mysql_close($db);
+ } else {
+ echo 'Connection failed.';
+ }
+ ?>
+```
+
+*发送 SQL 到 MySQL (`mysql_query.php`; 摘录)*
+
+![](img/1e6d362f187af50011d2666ddaa68739_210_0.png)
+
+**图 7.2** 用于清单 7.3 和 7.4 的 HTML 输入表单。
+
+### 使用 MySQL 的预处理语句
+
+```php
+$stmt = mysqli_prepare();
+mysqli_stmt_execute($stmt);
+```
+
+新的 MySQL 扩展提供了一种既避免 SQL 注入又加快 SQL 语句速度的方法：所谓的预处理语句。在其中，你为 SQL 代码中使用的任何动态数据提供占位符。然后你为这些占位符分配值。MySQL 扩展随后会处理其余所有内容，包括特殊字符的转义。
+
+```php
+<?php
+if ($db = @mysqli_connect('localhost', 'user', 'password')) {
+    require_once 'stripFormSlashes.inc.php';
+    mysqli_select_db($db, 'phrasebook');
+    $stmt = mysqli_prepare($db, 'INSERT INTO quotes (quote, author, year) VALUES (?, ?, ?)');
+    $quote = mysqli_real_escape_string($db, $_POST['quote']);
+    $author = mysqli_real_escape_string($db, $_POST['author']);
+    $year = intval($_POST['year']);
+    mysqli_stmt_bind_param($stmt, 'ssi', $quote, $author, $year);
+    if (mysqli_stmt_execute($stmt)) {
+        echo 'Quote saved. ';
+    } else {
+        echo 'Error writing quote.';
+    }
+    mysqli_close($db);
+} else {
+    echo 'Connection failed. ';
+}
+?>
+```
+
+首先，你使用 `mysqli_prepare()` 准备一条 SQL 语句；作为占位符字符，你使用问号：
+
+```php
+$stmt = mysqli_prepare($db, 'INSERT INTO quotes
+    (quote, author, year) VALUES (?, ?, ?)');
+```
+
+然后，你将值绑定到每个参数。首先，提供 `mysqli_prepare()` 返回的语句，然后提供所有参数值的单字符代码（`s` 表示字符串，`i` 表示整数，`d` 表示双精度）。最后，提供一个值列表。因为这些值是通过引用使用的，所以你必须提供变量，而不是原始值。
+
+```php
+mysqli_stmt_bind_param($stmt, 'ssi', $quote,
+    $author, $year);
+```
+
+最后，`mysqli_stmt_execute()` 执行预处理语句。
+
+### 注意
+
+`ext/mysqli` 扩展支持最近 MySQL 版本的一些新功能，包括事务。为此，可用以下函数：
+
+- `mysqli_autocommit($db, false)` 禁用自动提交
+- `mysqli_rollback($db)` 回滚所有待处理的事务
+- `mysqli_commit($db)` 提交所有待处理的事务
+
+> **提示**
+>
+> 使用 auto_increment 值时，函数 `mysql_insert_id()` 和 `mysqli_insert_id()` 返回上一个 INSERT SQL 语句创建的 auto_increment 字段的值。
+
+### 检索 MySQL 查询的结果
+
+```php
+$result = mysqli_query(query);
+mysql_fetch_object($result);
+```
+
+`mysql_query()` 或 `mysqli_query()` 的返回值是指向实际结果集的指针。它可用于遍历 SELECT 语句返回的完整条目列表。为此，以下函数很有用：
+
+- `mysql_fetch_assoc()` 和 `mysqli_fetch_assoc()` 将结果集中的当前行作为关联数组返回（字段名变为键），并移动到下一行。
+- `mysql_fetch_object()` 和 `mysqli_fetch_object()` 将结果集中的当前行作为对象返回（字段名变为属性），并移动到下一行。
+- `mysql_fetch_row()` 和 `mysqli_fetch_row()` 将结果集中的当前行作为数字数组返回，并移动到下一行。
+
+```php
+<table>
+<tr><th>#</th><th>Quote</th><th>Author</th><th>Year</th></tr>
+<?php
+    if ($db = @mysqli_connect('localhost', 'user', 'password')) {
+        mysqli_select_db($db, 'phrasebook');
+        $result = mysqli_query($db, 'SELECT * FROM quotes');
+        while ($row = mysqli_fetch_object($result)) {
+            printf(
+'<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>',
+                htmlspecialchars($row->id),
+                htmlspecialchars($row->quote),
+                htmlspecialchars($row->author),
+                htmlspecialchars($row->year)
+            );
+        }
+        mysqli_close($db);
+    } else {
+        echo '<tr><td colspan="4">Connection failed.</td></tr>';
+    }
+?>
+</table>
+```
+
+*从 MySQL 检索数据 (`mysqli_fetch.php`; 摘录)*
+
+还有其他函数；然而，这三个是最常用的。以下代码使用 `mysql_fetch_assoc()`，而前面的清单使用 `mysqli_fetch_object()` 打印出数据库表的内容。主要思路是使用 while 循环——所有 `mysql_fetch_*`/`mysqli_fetch_*` 函数在结果集中没有剩余数据时会返回 false。
+
+```php
+<table>
+<tr><th>#</th><th>Quote</th><th>Author</th><th>Year</th></tr>
+<?php
+    if ($db = @mysql_connect('localhost', 'user',
+        'password')) {
+    mysql_select_db('phrasebook', $db);
+    $result = mysql_query('SELECT * FROM quotes',
+        $db);
+    while ($row = mysql_fetch_assoc($result)) {
+        printf(
+'<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>',
+            htmlspecialchars($row['id']),
+            htmlspecialchars($row['quote']),
+            htmlspecialchars($row['author']),
+            htmlspecialchars($row['year'])
+        );
+    }
+    mysql_close($db);
+} else {
+    echo '<tr><td colspan="4">Connection failed.</td></tr>';
+}
+?>
+</table>
+```
+
+*从 MySQL 检索数据 (`mysql_fetch.php`; 摘录)*
+
+图 7.3 显示了一些（政治）引语填入后数据库的内容。抱歉，我来自国外——我取了找到的第一批。
+
+![](img/1e6d362f187af50011d2666ddaa68739_216_0.png)
+
+**图 7.3** 数据库的内容。
+
+### 连接到 SQLite
+
+```php
+@sqlite_open('quotes.db', 0666, $error)
+```
+
+从 PHP 5 开始，SQLite 已捆绑在脚本语言中。这是一个轻量级的文件型数据库。这允许非常快速的读取（在许多情况下，甚至比使用“真实”数据库更快），但写入有时可能比其他系统更慢，因为文件锁定是一个问题。然而，PHP 4 用户也可以使用 SQLite，因为在 `http://pecl.php.net/` 上有一个 PECL（PHP 扩展社区库）模块可用。
+
+```php
+<?php
+if ($db = @sqlite_open('quotes.db', 0666, $error))
+{
+echo 'Connected to the database.';
+sqlite_close($db);
+} else {
+echo 'Connection failed: ' . htmlspecialchars
+    ($error);
+}
+?>
+```
+
+*连接到 SQLite (`sqlite_open.php`)*
+
+如果使用 PHP 5，SQLite 支持已包含在内；使用 PHP 4 时，使用 `pear install SQLite`，或当 Windows 是你选择的系统时，从 `http://snaps.php.net/win32/PECL_STABLE/php_sqlite.dll` 加载当前的 SQLite 二进制扩展，将其复制到 PHP 的扩展文件夹，然后在 `php.ini` 中使用 `extension=php_sqlite.dll` 加载它。
+
+然后，你可以使用 `sqlite_open()` 连接到 SQLite 数据源。作为第一个参数，你提供数据库文件名（如果尚不存在则会创建）。为此，PHP 进程需要对文件具有读写权限。第二个参数是文件打开模式（建议使用 0666）；然而，截至本文撰写时，该参数被忽略。第三个参数是一个包含任何错误消息的变量（如权限不足）。
+
+### 注意
+
+就像 `ext/mysqli` 一样，PHP 5 下的 SQLite 扩展也可以使用面向对象编程（OOP）方法访问：
+
+```php
+<?php
+$db = new SQLiteDatabase('quotes.db');
+echo 'Connected to the database.';
+$db->close();
+?>
+```
+
+为了向后兼容，本章在后续示例中使用函数式方法。
+
+### 向 SQLite 发送 SQL
+
+### `sqlite_exec()`
+
+PHP 函数 `sqlite_exec()` 将 SQL 语句发送到数据库。作为第一个参数，使用由 `sqlite_open()` 返回的数据库句柄；第二个参数是 SQL 字符串。为了避免 SQL 注入，PHP 函数 `sqlite_escape_string()` 对动态数据中的危险字符进行转义。以下代码对此进行了实现，示例表 `quotes` 也在 MySQL 示例中使用过。
+
+```php
+<?php
+if ($db = @sqlite_open('quotes.db', 0666, $error))
+{
+require_once 'stripFormSlashes.inc.php';
+sqlite_exec($db, sprintf(
+'INSERT INTO quotes (quote, author, year)
+VALUES (\'%s\', \'%s\', \'%s\')',
+sqlite_escape_string($_POST['quote']),
+sqlite_escape_string($_POST['author']),
+intval($_POST['year'])));
+echo 'Quote saved.';
+sqlite_close($db);
+} else {
+echo 'Connection failed: ' . htmlspecialchars
+($error);
+}
+?>
+```
+
+*向 SQLite 发送 SQL (`sqlite_exec.php`; 摘录)*
+
+> 提示
+>
+> 如果表包含标识列（使用 SQLite 时数据类型为 `INTEGER PRIMARY KEY`），在发送 SQL 语句后调用 `sqlite_last_insert_rowid()` 会返回该列在数据库中新条目的值。
+
+### 检索 SQLite 查询结果
+
+```
+$result = sqlite_query($db, 'SELECT * FROM quotes');
+sqlite_fetch_array($result);
+```
+
+前面提到的 `sqlite_exec()` 函数执行速度非常快；但是，无法访问通过它发送的 SQL 语句的返回值。为此，必须使用 `sqlite_query()`。该函数返回查询结果集的一个句柄。然后可以使用以下函数遍历结果集：
+
+- `sqlite_fetch_array()` 将结果集中的当前行作为关联数组返回（字段名成为键），并继续移动到下一行。
+- `sqlite_fetch_object()` 将结果集中的当前行作为对象返回（字段名成为属性），并继续移动到下一行。
+- `sqlite_fetch_all()` 将整个结果集作为关联数组的数组返回。
