@@ -1,0 +1,755 @@
+- - '#'
+  - 精通机器学习设计：开发者创建可扩展云原生系统的实用手册
+- - '##'
+  - 第1部分：入门
+- - '###'
+  - 第1章：可扩展机器学习设计简介
+- - '####'
+  - 1.1 实际用例与应用
+- - '####'
+  - 1.2 解析机器学习开发流程
+- - '####'
+  - 3. 机器学习框架：
+- - '####'
+  - 4. 版本控制系统：
+- - '##'
+  - 第 2 部分：构建你的可扩展系统
+- - '###'
+  - 第 2 章：设计和实现机器学习管道
+- - '####'
+  - 2.1 为效率和可扩展性构建管道
+- - '####'
+  - 3. 并行化：
+- - '####'
+  - 4. 错误处理和日志记录：
+- - '####'
+  - 5. 监控和可观测性：
+- - '####'
+  - 2.2 实践实现：为常见任务构建管道
+- - '#####'
+  - 1. 图像分类管道：
+- - '####'
+  - 1.1 数据摄取
+- - '#####'
+  - 1.1.1 本地文件：
+- - '######'
+  - Load CSV data
+- - '######'
+  - Load text data
+- - '#####'
+  - 1.1.2 云存储：
+- - '######'
+  - Define bucket and file names
+- - '######'
+  - Create a storage client
+- - '######'
+  - Download the file from the bucket
+- - '#####'
+  - 1.1.3 API：
+- - '######'
+  - Define API endpoint URL
+- - '######'
+  - Send a GET request and retrieve the response
+- - '######'
+  - Check for successful response
+- - '#####'
+  - 1.1.4 数据库：
+- - '######'
+  - Define connection string to the database
+- - '######'
+  - Create a database engine
+- - '######'
+  - Read data from a table
+- - '####'
+  - 1.2. 预处理：为成功准备数据
+- - '#####'
+  - 1.2.1. 处理缺失值：
+- - '######'
+  - Sample data with missing values
+- - '######'
+  - Impute missing values with mean strategy (SimpleImputer)
+- - '######'
+  - Impute missing values with KNN (KNNImputer)
+- - '#####'
+  - 1.2.2. 编码分类数据：
+- - '######'
+  - Sample data with categorical feature
+- - '######'
+  - Label Encoding (using scikit-learn)
+- - '######'
+  - One-Hot Encoding (using pandas)
+- - '#####'
+  - 1.2.3. 特征缩放：
+- - '######'
+  - Sample data
+- - '######'
+  - Standardization (using StandardScaler)
+- - '######'
+  - Normalization (using MinMaxScaler)
+- - '####'
+  - 1.3. 特征工程：
+- - '####'
+  - 1.4. 模型训练：
+- - '####'
+  - 1.5. 评估：
+- - '####'
+  - 1.6. 部署：
+- - '###'
+  - 2. 文本分析管道：从文本数据中提取洞察
+- - '####'
+  - 1. 数据摄取：
+- - '######'
+  - Load text data from a CSV file
+- - '######'
+  - Load text data from a file
+- - '####'
+  - 2. 预处理：
+- - '######'
+  - or
+- - '######'
+  - or
+- - '######'
+  - or
+- - '######'
+  - or
+- - '####'
+  - 3. 特征工程：
+- - '###'
+  - 4. 模型训练：
+- - '###'
+  - 5. 评估：
+- - '###'
+  - 6. 部署：
+- - '####'
+  - 2.3 数据预处理和特征工程的实用技巧
+- - '###'
+  - 1. 了解你的数据：建立坚实的基础
+- - '####'
+  - 1.1. 探索汇总统计：
+- - '######'
+  - Load and explore data
+- - '####'
+  - 1.2. 可视化分布：
+- - '####'
+  - 1.3. 分析分类数据：
+- - '####'
+  - 1.4. 识别潜在问题：
+- - '###'
+  - 2. 处理缺失值：填补数据中的空白
+- - '####'
+  - 1. 识别缺失值：
+- - '######'
+  - Load data (assuming CSV format)
+- - '######'
+  - Check for missing values
+- - '####'
+  - 2. 选择策略：
+- - '####'
+  - 3. 实现你的选择：
+- - '#####'
+  - 均值/中位数插补（使用 SimpleImputer）：
+- - '######'
+  - Impute missing values with mean strategy
+- - '#####'
+  - KNN 插补（使用 KNNImputer）：
+- - '######'
+  - Impute missing values with KNN (using 5 neighbors)
+- - '#####'
+  - 选择合适的策略：
+- - '###'
+  - 3. 尝试特征缩放：平衡竞技场
+- - '####'
+  - 为什么要缩放？
+- - '####'
+  - 常见技术：
+- - '####'
+  - 实验是关键：
+- - '######'
+  - Load data (assuming CSV format)
+- - '######'
+  - Separate features and target variable (if applicable)
+- - '######'
+  - Standardize features (using StandardScaler)
+- - '######'
+  - Or, normalize features to 0-1 range (using MinMaxScaler)
+- - '######'
+  - Evaluate model performance with both scaled and unscaled features...
+- - '####'
+  - 记住：
+- - '###'
+  - 第 3 章：选择和利用云服务
+- - '####'
+  - 3.1 选择云存储解决方案的最佳实践
+- - '####'
+  - 1. 了解你的工作负载：
+- - '####'
+  - 2. 探索实例类型：
+- - '####'
+  - 1. 列出可用的实例类型（AWS CLI）：
+- - '####'
+  - 2. 估算不同实例类型的成本（GCP Python 客户端库）：
+- - '######'
+  - Import necessary libraries
+- - '######'
+  - Define project ID and zone
+- - '######'
+  - Create compute engine and service usage clients
+- - '######'
+  - Define the machine type you want to estimate costs for
+- - '######'
+  - Get machine type details
+- - '######'
+  - Define the usage period (modify as needed)
+- - '######'
+  - Build the request body for cost estimation
+- - '######'
+  - Send the request to the service usage API
+- - '######'
+  - Access and process cost data (modify as needed)
+- - '###'
+  - 3.3 在云平台上部署和管理模型
+- - '####'
+  - 云平台用于模型部署的优势：
+- - '####'
+  - 探索基于云的部署工具：
+- - '####'
+  - 1. AWS SageMaker：
+- - '####'
+  - 代码示例（使用适用于 Python 的 AWS SDK）：
+- - '######'
+  - Import libraries
+- - '######'
+  - Create a SageMaker client
+- - '######'
+  - Define model image and endpoint configuration
+- - '######'
+  - Create a model endpoint
+- - '######'
+  - Create an endpoint
+- - '####'
+  - 2. Google AI Platform：
+- - '####'
+  - 代码示例（使用 Google Cloud Python 客户端库）：
+- - '######'
+  - Import libraries
+- - '######'
+  - Create a prediction service object
+- - '######'
+  - Define project ID and model name
+- - '######'
+  - Deploy the model for online prediction
+- - '###'
+  - 第 4 章：优化性能与可扩展性
+- - '####'
+  - 4.1 高效资源管理与负载均衡的技术：
+- - '####'
+  - 1. 监控资源利用情况：深入了解您的云资源
+- - '####'
+  - 1.1 利用云监控工具：
+- - '####'
+  - 代码示例（使用 AWS CloudWatch boto3 库）：
+- - '######'
+  - Import boto3 library
+- - '######'
+  - Create a CloudWatch client
+- - '######'
+  - Define the instance ID and namespace for metrics
+- - '######'
+  - Get CPU utilization metric data for the past hour
+- - '######'
+  - Process and visualize the retrieved metric data...
+- - '####'
+  - 1.2 设置告警：
+- - '####'
+  - 代码示例（使用 Google Cloud Monitoring API 客户端库）：
+- - '######'
+  - Import Google Cloud Monitoring API client library
+- - '######'
+  - Create a Monitoring service object
+- - '######'
+  - Define the alert policy configuration
+- - '######'
+  - Create the alert policy
+- - '####'
+  - 2. 实例大小调整：为工作负载选择合适的配置
+- - '####'
+  - 1. 了解实例类型：
+- - '####'
+  - 2. 分析你的工作负载：
+- - '####'
+  - 3. 利用云服务商建议：
+- - '####'
+  - 代码示例（使用Google Cloud机器类型建议）：
+- - '######'
+  - Import Google Cloud Machine Type Recommendation API client library
+- - '######'
+  - Create a Machine Type Recommendation service object
+- - '######'
+  - Define your workload requirements
+- - '######'
+  - Get machine type recommendations
+- - '######'
+  - Process and choose the appropriate recommended machine type...
+- - '####'
+  - 从小规模开始并逐步扩展：
+- - '####'
+  - 3. 自动缩放实现动态扩展：适应不断变化的需求
+- - '####'
+  - 3.1 理解自动缩放：
+- - '####'
+  - 3.2 配置自动缩放策略：
+- - '####'
+  - 代码示例（使用AWS CloudFormation模板创建自动缩放组）：
+- - '######'
+  - Define an autoscaling group with autoscaling policy
+- - '####'
+  - 3.3 监控与微调：
+- - '####'
+  - 4. 负载均衡：分担工作负载以实现无缝性能
+- - '####'
+  - 1. 理解负载均衡：
+- - '####'
+  - 2. 选择合适的负载均衡器：
+- - '####'
+  - 代码示例（使用AWS CloudFormation模板创建应用负载均衡器）：
+- - '######'
+  - Define an application load balancer
+- - '####'
+  - 与您的部署集成：
+- - '####'
+  - 4.2 纵向扩展与横向扩展：应对不断增长的数据和工作负载的策略
+- - '####'
+  - 1. 纵向扩展：
+- - '####'
+  - 代码示例（使用 AWS boto3 库升级实例类型）：
+- - '######'
+  - 导入 boto3 库
+- - '######'
+  - 创建 EC2 客户端
+- - '######'
+  - 定义实例 ID 和新实例类型
+- - '######'
+  - 在修改配置前停止实例
+- - '######'
+  - 等待实例停止
+- - '######'
+  - 修改实例类型
+- - '######'
+  - 修改完成后启动实例
+- - '####'
+  - 2. 横向扩展：
+- - '####'
+  - 代码示例（使用 Google Cloud Machine Types API 启动多个类似实例）：
+- - '######'
+  - 导入 Google Cloud Machine Types API 客户端库
+- - '######'
+  - 创建 Compute Engine 服务对象
+- - '######'
+  - 定义机器类型和要启动的实例数量
+- - '######'
+  - 创建请求对象列表
+- - '######'
+  - 批量插入实例
+- - '######'
+  - 处理响应并管理新创建的实例...
+- - '####'
+  - 选择正确的方法取决于以下几个因素：
+- - '####'
+  - 纵向扩展（升级实例类型）：
+- - '####'
+  - 横向扩展（添加更多实例）：
+- - '####'
+  - 4.3 利用容器化和编排工具实现可扩展性：
+- - '####'
+  - 代码示例（使用 YAML 文件定义 Kubernetes 部署）：
+- - '####'
+  - 4. 与云平台集成：
+- - '####'
+  - 1. 使用 TensorFlow Serving 将机器学习模型容器化：
+- - '####'
+  - 2. 使用 Docker Compose 部署容器化模型：
+- - '####'
+  - 3. 在 Kubernetes 中使用水平 Pod 自动缩放器（HPA）进行扩展：
+- - '###'
+  - 第 5 章：机器学习项目的持续集成与交付（CI/CD）
+- - '####'
+  - 5.1 为机器学习项目设置 CI/CD 流水线：简化你的开发工作流
+- - '#####'
+  - 1. 基础：版本控制系统（VCS）
+- - '######'
+  - 1.1 使用 VCS 的好处：
+- - '######'
+  - 1.2 Git 入门：
+- - '####'
+  - 2. 持续集成（CI）：自动化你的开发检查
+- - '#####'
+  - 2.1 持续集成阶段执行的任务：
+- - '######'
+  - 代码示例（使用 ESLint 检查 Python 代码）：
+- - '######'
+  - Install ESLint and a linter plugin for Python
+- - '######'
+  - Create a configuration file (.eslintrc.json) with desired rules
+- - '######'
+  - 在 Python 文件上运行 ESLint
+- - '######'
+  - 代码示例（使用 pytest 对 Python 代码进行单元测试）：
+- - '######'
+  - Define a unit test function
+- - '######'
+  - Run unit tests
+- - '######'
+  - 代码示例（使用 Pandas 在 Python 中进行基本数据验证）：
+- - '######'
+  - Load your data
+- - '######'
+  - Check for missing values
+- - '######'
+  - Check for data type consistency
+- - '######'
+  - You can add further checks based on your specific data format and requirements
+- - '####'
+  - 2.2 使用 Jenkins 实现持续集成：
+- - '####'
+  - 3. 持续交付（CD）：自动化部署及更多
+- - '####'
+  - 3.1 持续交付阶段执行的任务：
+- - '####'
+  - 代码示例（使用 TensorFlow 在 Python 中进行模型训练和评估）：
+- - '######'
+  - Define your model architecture and training loop
+- - '######'
+  - Evaluate the model on unseen data
+- - '####'
+  - 3.2 持续部署工具：
+- - '####'
+  - 选择合适的工具：
+- - '####'
+  - 5.2 自动化测试、部署和版本控制：简化你的机器学习工作流程
+- - '######'
+  - Load your data
+- - '######'
+  - Check for missing values
+- - '######'
+  - Check for data type consistency
+- - '######'
+  - You can add further checks based on your specific data format and requirements
+- - '####'
+  - 2. 自动化部署：
+- - '####'
+  - 代码示例（用于为 Python 脚本创建容器的 Dockerfile）：
+- - '####'
+  - 3. 自动化版本控制：
+- - '####'
+  - 5.3 云原生环境中 CI/CD 的最佳实践：优化你的机器学习工作流程
+- - '####'
+  - 1. 利用基于云的 CI/CD 服务：
+- - '####'
+  - 2. 拥抱容器化：
+- - '####'
+  - 代码示例（用于为 Python 脚本创建容器的 Dockerfile）：
+- - '####'
+  - 3. 监控和记录你的流水线：
+- - '###'
+  - 第 6 章：监控和维护你的系统
+- - '####'
+  - 6.1 机器学习日志、指标和监控工具：保持系统受控
+- - '####'
+  - 1. 日志记录：记录机器学习模型的旅程
+- - '####'
+  - 要记录的内容：
+- - '######'
+  - Define a logger
+- - '######'
+  - Set the logging level (e.g., DEBUG, INFO, WARNING)
+- - '######'
+  - Define a function to log loss during training
+- - '####'
+  - 代码示例（使用 Python 库 logging 记录预测和时间戳）：
+- - '######'
+  - Configure logger (same as previous example)
+- - '####'
+  - 请记住：
+- - '####'
+  - 2. 指标：量化您的机器学习模型性能
+- - '####'
+  - 常用指标：
+- - '####'
+  - 代码示例（在 Python 中计算二分类的准确率）：
+- - '######'
+  - True labels and predicted labels
+- - '######'
+  - Calculate accuracy
+- - '####'
+  - 代码示例（在 Python 中计算精确率）：
+- - '######'
+  - Same `y_true` and `y_pred` from previous example
+- - '######'
+  - Calculate precision
+- - '####'
+  - 3. 监控工具：将各部分整合在一起
+- - '####'
+  - 热门监控工具：
+- - '####'
+  - 代码示例（在基本的 Keras 训练脚本中使用 TensorBoard）：
+- - '######'
+  - Define your model and training data
+- - '######'
+  - Create a TensorBoard callback
+- - '######'
+  - Train the model with the callback
+- - '######'
+  - Launch TensorBoard in your browser (usually http://localhost:6006)
+- - '####'
+  - 选择合适的工具：
+- - '####'
+  - 请记住：
+- - '####'
+  - 1. 基于云的监控服务示例：
+- - '######'
+  - Import necessary libraries
+- - '######'
+  - Define your project ID and metric name
+- - '######'
+  - Create a monitoring client
+- - '######'
+  - Define the metric descriptor (optional, can be created beforehand)
+- - '######'
+  - Create or get the metric descriptor
+- - '######'
+  - Function to record inference latency
+- - '######'
+  - 'Example usage:'
+- - '######'
+  - Access Cloud Monitoring UI to visualize and analyze the metric data.
+- - '####'
+  - 2. Prometheus 和 Grafana 示例：
+- - '#####'
+  - 'a. Dockerfile:'
+- - '#####'
+  - 'b. model_server.py:'
+- - '######'
+  - Define your model loading and prediction logic
+- - '######'
+  - Define a Prometheus metric
+- - '#####'
+  - c. Grafana 仪表盘：
+- - '####'
+  - 6.2 识别和排查常见性能问题：检测和修复机器学习系统中的卡顿
+- - '####'
+  - 常见性能问题：
+- - '####'
+  - 代码示例（说明 Python 中的准确率计算）：
+- - '######'
+  - True labels (ground truth)
+- - '######'
+  - Model predictions on new data
+- - '######'
+  - Calculate accuracy
+- - '####'
+  - 排查技巧：
+- - '####'
+  - 代码示例（使用 print 语句进行 Python 基础调试）：
+- - '######'
+  - Call the predict function and analyze printed values to identify potential errors.
+- - '####'
+  - 检测和修复机器学习系统中的卡顿
+- - '####'
+  - 1. 分析日志中的错误消息：
+- - '######'
+  - Define a logger
+- - '####'
+  - 2. 使用 pdb（Python 调试器）进行调试：
+- - '####'
+  - 3. 使用 Cloud Monitoring（GCP）监控资源利用率：
+- - '######'
+  - Import necessary libraries
+- - '######'
+  - Define your project ID
+- - '######'
+  - Create a monitoring client
+- - '######'
+  - Define the metric filter to query CPU usage
+- - '######'
+  - Get CPU usage data
+- - '######'
+  - Analyze CPU usage data to identify potential resource limitations.
+- - '####'
+  - 4. 比较历史与当前模型性能：
+- - '######'
+  - Load historical accuracy data (e.g., from a CSV file)
+- - '######'
+  - Calculate accuracy on new data
+- - '######'
+  - (replace with your actual code to calculate accuracy)
+- - '######'
+  - Plot historical and current accuracy to visualize changes
+- - '######'
+  - Investigate further if current accuracy deviates significantly from historical
+    trends.
+- - '####'
+  - 6.3 自动化监控和告警：掌控主动维护的主动权
+- - '######'
+  - Load your historical data (e.g., features used for training)
+- - '######'
+  - Train an anomaly detection model (Isolation Forest in this example)
+- - '######'
+  - Check for anomalies in new data points
+- - '######'
+  - Investigate data points flagged as anomalies
+- - '######'
+  - Import necessary libraries
+- - '######'
+  - Define your project ID and monitoring service name
+- - '######'
+  - Build the service object
+- - '######'
+  - Define the filter to query specific metrics
+- - '######'
+  - Schedule a recurring query to check for resource utilization issues
+- - '######'
+  - Schedule the function to run daily using a library like `apscheduler`.
+- - '###'
+  - 第 7 章：机器学习系统的安全考虑
+- - '####'
+  - 7.1 数据安全与隐私：保护机器学习的核心
+- - '######'
+  - Define user roles and permissions (replace with your specific roles)
+- - '######'
+  - Use a permission check function before granting data access
+- - '######'
+  - 'Example usage:'
+- - '######'
+  - Generate a secret key (replace with a secure key generation process)
+- - '######'
+  - Create a Fernet object
+- - '######'
+  - Encrypt a string
+- - '######'
+  - Decrypt the text using the same key
+- - '####'
+  - 7.2 模型安全与可解释性：保护预测免受操纵
+- - '######'
+  - Simplified example (not for production use)
+- - '######'
+  - Define a simple model (replace with your actual model)
+- - '######'
+  - Explain a specific prediction
+- - '######'
+  - The explanation object can provide insights into feature importance for the prediction.
+- - '####'
+  - 3. 模型版本控制与审计：
+- - '####'
+  - 代码示例（使用 Git 进行版本控制）：
+- - '######'
+  - Initialize a Git repository for your model code and training data
+- - '######'
+  - Track changes and commit versions regularly
+- - '######'
+  - Access and revert to previous versions as needed
+- - '####'
+  - 7.3 保护机器学习的云基础设施：为你的模型建造一座堡垒
+- - '####'
+  - 3. 保持信息更新：
+- - '####'
+  - 其他提示：
+- - '###'
+  - 第 8 章：负责任的人工智能与伦理考量
+- - '####'
+  - 8.1 机器学习系统中的公平性与偏见：检测与消除不公正
+- - '####'
+  - 偏见类型：
+- - '####'
+  - 代码示例（说明性场景）：
+- - '######'
+  - Training data with zip code bias
+- - '######'
+  - Model trained on biased data might learn to unfairly favor applicants from zip
+    code 12345.
+- - '####'
+  - 代码示例（使用简单线性模型的说明性示例）：
+- - '######'
+  - Simplified model (not for real-world use) that only considers credit score
+- - '######'
+  - Applicant with low credit score but good financial standing might be unfairly
+    rejected.
+- - '####'
+  - 检测偏见：
+- - '####'
+  - 代码示例（使用 Python 库进行数据分析）：
+- - '######'
+  - Load your data (replace with your data)
+- - '######'
+  - Analyze loan approval rates by zip code
+- - '######'
+  - Investigate any significant differences in approval rates across zip codes.
+- - '####'
+  - 减轻偏见：
+- - '####'
+  - 1. 数据偏见与公平性指标（Python）：
+- - '######'
+  - Create synthetic loan data with potential bias
+- - '######'
+  - Calculate statistical parity metric
+- - '######'
+  - Investigate potential reasons for the observed difference and explore mitigation
+    strategies.
+- - '####'
+  - 2. 公平性感知算法设计（简化示例）：
+- - '######'
+  - Simplified model predicting loan approval based on income and group (not for real-world
+    use)
+- - '######'
+  - Calculate equalized odds score to assess fairness across groups
+- - '######'
+  - Explore alternative algorithms or fairness-aware training techniques to improve
+    fairness.
+- - '####'
+  - 8.2 可解释性和可解释性：揭开机器学习“黑箱”的神秘面纱
+- - '####'
+  - 可解释性为何重要：
+- - '####'
+  - 可解释性和可解释性技术：
+- - '######'
+  - Sample features and target variable (replace with your data)
+- - '######'
+  - Train a decision tree model
+- - '######'
+  - Interpret the tree structure to understand how the model makes decisions
+- - '######'
+  - Load your trained model and data (replace with your data)
+- - '######'
+  - '...'
+- - '######'
+  - Explain a specific prediction
+- - '######'
+  - The explanation object can provide insights into feature importance for the prediction.
+- - '####'
+  - 8.3 算法偏见检测与缓解：防范不公平
+- - '####'
+  - 检测算法偏见：
+- - '######'
+  - Load your data (replace with your data)
+- - '######'
+  - Analyze loan approval rates by gender
+- - '######'
+  - Investigate any significant differences in approval rates across genders.
+- - '######'
+  - Simplified example (not for real-world use)
+- - '######'
+  - Create synthetic loan data with potential bias
+- - '######'
+  - Calculate statistical parity metric (replace with relevant target variable)
+- - '######'
+  - Investigate potential reasons for the observed difference and explore mitigation
+    strategies.
+- - '####'
+  - 2. 公平性感知算法设计（简化示例）：
+- - '######'
+  - Simplified model predicting loan approval based on income and gender (not for
+    real-world use)
+- - '######'
+  - Calculate equalized odds score to assess fairness across genders
+- - '######'
+  - Explore alternative algorithms or fairness-aware training techniques to improve
+    fairness.
