@@ -1,0 +1,14 @@
+# Working with
+Arrays
+
+When simple variables are just not good enough, arrays come into play (or objects, but that's another topic). The array section in the PHP manual, available at http://php.net/array, lists approximately 80 functions that are helpful. Therefore, this book could be filled with array-related phrases alone. However, not all of these functions are really used often. Therefore, this chapter presents the most important problems you'll have to solve when working with arrays—and, of course, solutions for these problems.
+
+There are two types of arrays. The names they are given differ sometimes, but usually arrays are distinguished between numerical arrays and associative arrays. The first type of array uses numerical keys, whereas the latter type can also use strings as keys.
+
+Creating an array can be done in one of two ways:
+
++   - Using the array() function
+
+```
+$a = array('I', 'II', 'III', 'IV');
+```

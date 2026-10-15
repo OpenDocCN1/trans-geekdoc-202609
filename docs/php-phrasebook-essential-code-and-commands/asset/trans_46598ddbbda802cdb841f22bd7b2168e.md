@@ -1,0 +1,188 @@
+
+第一个参数是文件句柄；第二个参数是要使用的锁定类型。以下是可用的选项：
+
+- LOCK_EX—用于写入的独占锁
+- LOCK_NB—非阻塞锁
+- LOCK_SH—用于读取的共享锁
+- LOCK_UN—释放锁
+
+前面的代码包含来自上一节的自定义 file_put_contents() 函数的更新版本，这次使用了独占锁。
+
+## 使用相对路径进行文件访问
+
+```php
+dirname(__FILE__);
+basename(__FILE__);
+```
+
+通常，文件是相对于文档路径打开（或搜索）的。如果您在 Windows 下将 PHP 用作 ISAPI 模块，则 php4ts.dll 或 php5ts.dll 的位置可能相关。为了确保您搜索的是当前脚本的路径，可以使用两步方法：
+
+- 常量 __FILE__ 包含当前脚本的完整路径
+- 函数 dirname() 确定路径的目录名称部分
+
+```php
+<?php
+$directory = dirname(__FILE__);
+$filename = basename(__FILE__);
+print "This script is called $filename and resides in $directory.";
+?>
+```
+
+### 确定目录名称和文件名 (pathinfos.php)
+
+要使用相对路径，您现在可以调用 dirname(__FILE__) 然后附加相对路径，同时考虑目录分隔符字符，在 UNIX/Linux 上是 `/`，在 Windows 上是 `\`，在 Mac OS X 上是 `:`。通常，`/` 在大多数系统上都能正常工作，但您应注意要托管网站的系统的要求。
+
+dirname() 的姊妹函数是 basename()；它确定路径的文件名部分。
+
+本节开头的列表使用 basename() 和 dirname() 以及 __FILE__ 来确定当前路径的信息：目录和文件名。图 6.2 显示了脚本的输出。
+
+![](img/1e6d362f187af50011d2666ddaa68739_185_0.png)
+
+图 6.2 检测脚本的名称及其目录。
+
+## 避免文件访问中的安全陷阱
+
+一点非常重要：如果您在 PHP 中使用文件，请避免从外部来源（如用户输入或 cookie）检索文件名。这可能会允许用户在您的网站中注入危险代码或强制您加载您不想打开的文件。一些所谓的 安全专家 有一个自编程的内容管理系统，它创建了如下的统一资源定位符（URL）：`index.php?page=subpage.html`。这只是将页面 `subpage.html` 加载到某种页面模板中并发送到浏览器。但如果调用以下 URL 怎么办：`index.php?page=../../../etc/passwd`？运气好的话（或运气不好，取决于您的观点），文件 `/etc/passwd` 的内容会在浏览器中打印出来。这种攻击——所谓的目录遍历攻击——在网络上相当常见。然而，您可以通过以下几种方式避免成为受害者：
+
+- 如果可能，不要在文件名中使用动态数据。
+- 如果您必须在文件名中使用动态数据，请使用 `basename()` 来确定文件的实际名称，省略路径信息。
+- 设置 `php.ini` 指令 `open_basedir`。它期望一个 PHP 可以访问文件的目录列表。PHP 在每次打开文件时都会检查 basedir 规则，如果不在适当路径中，则拒绝操作。
+- 将 `include_path` 设置为存放所有待使用文件的目录，并将 `fopen()` 的第三个参数设置为 true，使用 `include_path`。
+
+## 处理 CSV 数据
+
+```php
+fgetcsv($handle, 4096);
+```
+
+CSV 是一种文件格式，全称为逗号分隔值。许多电子表格应用程序可以将数据导出为 CSV 文件。似乎使用 explode() 将 CSV 值转换为数组很容易；然而，这实际上非常复杂。如果值中包含逗号怎么办？那么内容会被双引号包围，这使得使用 explode() 变得困难。
+
+```php
+<table>
+<?php
+  $fp = fopen('file.csv', 'r');
+  while (!feof($fp)) {
+      $line = fgetcsv($fp, 4096);
+      echo '<tr><td>';
+      echo implode('</td><td>', $line);
+      echo '</td></tr>';
+  }
+  fclose($fp);
+?>
+</table>
+```
+
+### 读取 CSV 信息 (fgetcsv.php)
+
+和（几乎）总是一样，PHP 项目已经完成了大部分工作并提供了 fgetcsv()。此函数的工作方式与 fgets() 相同；然而，它将行转换为数组，以逗号（或第三个参数中提供的任何其他字符）分隔内容。
+
+fgetcsv() 的第二个参数是 CSV 文件中行的最大长度。在 PHP 5.0.0 及更高版本中这是可选的，但在之前必须设置。因此您需要检查 CSV 文件中最长行的长度；否则数据将被截断。
+
+本节开头的代码读取 CSV 文件并将其作为 HTML 表格输出。这是通过循环中使用以下代码完成的：
+
+```php
+$line = fgetcsv($fp, 4096);
+echo '<tr><td>';
+echo implode('</td><td>', $line);
+echo '</td></tr>';
+```
+
+这在 HTML 表格中创建一行：`<tr><td>...</td></tr>`。
+
+图 6.3 显示了原始电子表格文件（在 OpenOffice.org 中）和浏览器中的结果。
+
+![](img/1e6d362f187af50011d2666ddaa68739_188_0.png)
+
+图 6.3 OpenOffice.org 中的 CSV 电子表格和浏览器中的结果（fgetcsv.php；摘录）。
+
+> **注意**
+>
+> 在本节开头的代码中，输出未使用 htmlspecialchars() 进行清理——在这种情况下是为了使代码简短。然而，根据您的数据，您应考虑对 fgetcsv() 返回的数组的所有元素运行 htmlspecialchars()。
+
+对于写入 CSV 文件，PHP 提供了一个姊妹函数 fputcsv()。您提供一个文件指针和一个值数组，PHP 会完成其余工作，包括转义特殊字符。不幸的是，该函数目前仅存在于 PHP 的 CVS 中，因此在撰写本文时，您必须手动模拟此行为。基本上，您只需用逗号连接所有数组元素。您还必须处理元素内的逗号，因此用双引号包围所有值。如果元素包含双引号，则必须转义它们。然而，这不是使用反斜杠完成的，而是通过重复引号。以下是有效 CSV 数据行的示例：
+
+```
+Quote,"And she said: ""No."" ...",Unknown
+```
+
+以下是 fputcsv() 的代码：
+
+```php
+if (!function_exists('fputcsv')) {
+    function fputcsv($fp, $line, $separator = ',') {
+        for ($i=0; $i < count($line); $i++) {
+            if (false !== strpos($line[$i], '"')) {
+                $line[$i] = ereg_replace('"', '""', $line[$i]);
+            }
+            if (false !== strpos($line[$i], $separator) ||
+                false !== strpos($line[$i], '"')) {
+                $line[$i] = '"' . $line[$i] . '"';
+            }
+        }
+        fwrite($fp, implode($separator, $line) . "\r\n");
+    }
+}
+```
+
+以下代码使用我们自制的 fputcsv() 手动创建之前使用过的 CSV 文件。
+
+```php
+<?php
+// ...
+
+$data = array(
+    array('April 2005', '19,720,597', '1,310,181'),
+    array('January 2005', '18,455,683',
+        '1,317,871'),
+    array('December 2004', '17,826,404',
+        '1,318,739')
+);
+
+if ($fp = @fopen('usage.csv', 'w')) {
+    foreach ($data as $line) {
+        fputcsv($fp, $line);
+    }
+    fclose($fp);
+    echo 'CSV written.';
+} else {
+    echo 'Cannot open file.';
+}
+?>
+```
+
+### 写入 CSV 信息 (fputcsv.php；摘录)
+
+此代码创建文件 usage.csv，其内容如下：
+
+```
+April 2005,"19,720,597","1,310,181"
+January 2005,"18,455,683","1,317,871"
+December 2004,"17,826,404","1,318,739"
+```
+
+## 解析 INI 文件
+
+```php
+parse_ini_file('php.ini', true)
+```
+
+另一种非常知名的文件格式是 INI 文件格式——它在 Windows 世界中被广泛使用，但今天也驱动着像 PHP 这样复杂软件产品的配置。例如，看看 php.ini。以下是默认 php.ini 的（修改过）摘录，很好地展示了 INI 文件的结构：
+
+```
+[mail function]
+; For Win32 only.
+; SMTP = localhost
+; For Unix only. You may supply arguments as well
+    (default: "sendmail -t -i").
+sendmail_path =
+```
+
+因此，有以方括号中的节标题开头的节，以分号开头的注释，以及格式为 name=value 的设置。PHP 函数 parse_ini_file() 现在读取此类 PHP 文件并将其创建为数组：每个节都是一个子数组，在这些子数组中您可以找到 INI 文件中指令的名称和值。本节开头的代码执行此操作（如果适当，请更改 php.ini 的路径），图 6.4 显示了输出。
+
+```php
+<?php
+    echo '<xmp>' .
+        print_r(parse_ini_file('php.ini', true), true) .
+        '</xmp>';
+?>
+```

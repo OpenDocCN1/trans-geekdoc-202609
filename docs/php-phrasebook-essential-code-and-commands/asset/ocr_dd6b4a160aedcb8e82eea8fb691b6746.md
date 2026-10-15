@@ -1,0 +1,24 @@
+# Validating Email Addresses
+
+Checking whether a string contains a valid email address is two things at once: very common and very complicated. The aforementioned book on regular expressions uses several pages to create a set of regular expressions to perform this task. If you are interested in this, take a look at http://examples.oreilly.com/regex/readme.html.
+
+```
+function checkEmail($s) {
+  $lastDot = strrpos($s, '.');
+  $ampersat = strrpos($s, '@');
+  $length = strlen($s);
+  return !(
+    $lastDot === false ||
+    $ampersat === false ||
+    $length === false ||
+    $lastDot - $ampersat < 3 ||
+    $length - $lastDot < 3
+  );
+}
+```
+
+*Validating Email Addresses (check.inc.php; excerpt)*
+
+Validating email addresses is difficult because the rules for valid domain names differ drastically between countries. For instance, bn.com is valid, whereas bn.de is not (but db.de is). Also, did you know that username@[127.0.0.1] is a valid email address (if 127.0.0.1 is the IP address of the mail server)?
+
+Therefore, the recommendation is to only check for the major elements of an email address: valid characters (an @ character) and a dot somewhere after that. It is impossible to be 100% sure with checking email addresses—if the test is too strict, the user just provides a fantasy email address. The only purpose of email
