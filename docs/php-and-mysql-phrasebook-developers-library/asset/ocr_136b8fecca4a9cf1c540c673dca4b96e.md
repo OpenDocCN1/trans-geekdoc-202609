@@ -1,0 +1,7 @@
+PHP is there to help. The crypt() function encrypts a string using Data Encryption Standard (DES). This is a one-way encryption, so there is no way back. Also, subsequent calls to crypt() result in different results.
+
+For instance, the string 'TopSecret' is encrypted into $1$FK3.qn2.$5i5KhnprsRb.N.SEF4GMW0 (and also $1$Sm61.i12.$0p1j3EHWk1XycncyepP1FZ0 and $1$9S3.c/3.$5I01Bm4v3cnBNOb1AECi1., but this example sticks with the first one). Checking whether a value corresponds to a result from calling crypt() can be done by calling crypt() again: crypt($value, $encryptedValue) must return $encryptedValue.
+
+The preceding script checks whether a password provided via the URL matches the previous result of crypt(). Calling this script with the GET parameter pass=TopSecret succeeds in logging in; all other passwords fail.
+
+**NOTE:** To provide more details: The second parameter to crypt() is the salt (initialization value) for encrypting the data. You can also use a salt when encrypting the original password. However, you do have to make sure that the salt values are unique; otherwise, the encryption is not secure. Therefore, do not use a custom salt value and let PHP do the work. Be also advised, though, that DES encryption can be cracked in about 24 hours, so it's not bulletproof any more. A more recent alternative is Advanced Encryption Standard (AES).

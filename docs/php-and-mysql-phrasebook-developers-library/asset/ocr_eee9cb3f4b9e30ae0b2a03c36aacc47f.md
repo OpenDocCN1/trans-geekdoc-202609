@@ -1,0 +1,7 @@
+been introduced, and if possible, we provide code that does not necessarily require the latest and greatest, if we see it fit.
+
+The name of the book changed a bit, as well. We covered many relevant databases in the first edition, and still do now; however, MySQL continues to be the de facto standard database for PHP development, and therefore it gets its own chapter and part of the book’s title page.
+
+I am indebted to the many readers who provided me with suggestions, errata, and general feedback. Of course, any kind of feedback for this edition of the book is greatly appreciated, as well. The Web site at http://php.phrasebook.org/ contains the code samples from this book, errata (as soon as I learn about them), and contact information. I am looking forward to hearing from you!
+
+As with most books, this has been a team effort. Mark Taber, who oversaw the creation of the Phrasebook series back then, is still onboard and was the project manager for this edition. I still remember when we drafted the new edition during breakfast on one of the rare occasions when we actually met in person. (Next time I’ll pay.) I was happy that my old friend John Coggeshall was kind enough to serve as a technical reviewer—and to save my reputation a few times. Also “thank you” to the team of wizards at Pearson who turn my manuscripts into professional books. And thanks to my family and friends who accept the odd hours my profession requires from time to time.

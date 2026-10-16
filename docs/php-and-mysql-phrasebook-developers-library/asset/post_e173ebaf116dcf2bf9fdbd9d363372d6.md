@@ -1,0 +1,170 @@
+
+```php
+serialize($cookiedata),
+time() + 30*24*60*60);
+}
+
+function getAllCookieData() {
+if (isset($_COOKIE['cookiedata'])) {
+$formdata = $_COOKIE['cookiedata'];
+if ($formdata != '') {
+return unserialize($formdata);
+} else {
+return array();
+}
+} else {
+return null;
+}
+}
+
+function getCookieData($name) {
+$cookiedata = getAllCookieData();
+if ($cookiedata != null &&
+isset($cookiedata[$name])) {
+return $cookiedata[$name];
+}
+return '';
+}
+?>
+```
+
+## Helper Library to Save Multiple Values into One Cookie
+(getCookieData.inc.php)
+
+Usually, one cookie has one value: one string. Therefore, to store multiple data in cookies, multiple cookies have to be used. This, however, could create
+
+some problems (for instance, the limit of 20 cookies per domain). Therefore, it might make sense to try to save multiple data in one cookie. For this, an array comes in handy. Just remember that cookies can only contain strings, so we need to use serialization to prepare the data.
+
+For this, you can write a library that is quite similar to the library used in the Chapter 2, “Working with Arrays,” to save form data in a cookie. One cookie called cookieData contains all values as an associative array. The function getCookieData() returns one specific value, whereas setCookieData() takes an array and writes its contents to the cookie. The preceding listing shows the complete code for this library.
+
+The following listing uses this library to implement the cookie test from the previous phrase using this library:
+
+```php
+<?php
+    require_once 'getCookieData.inc.php';
+
+    if (isset($_GET['step']) && $_GET['step'] == '2')
+{
+    $test = (getCookieData('test') === 'ok') ?
+        'supports' : 'does not support';
+    echo "Browser $test cookies.";
+} else {
+    setCookieData(array('test' => 'ok'));
+    header("Location:
+{$_SERVER['PHP_SELF']}?step=2");
+}
+?>
+```
+
+*Testing the Cookie Configuration of a Browser—Using the Helper Library (cookietest-serialize.php)*
+
+## Saving the User's Language Preference
+
+```
+setcookie('lang', $_SERVER['PHP_SELF'], time() + 10*24*60*60, '/');
+```
+
+```php
+<?php
+if (!isset($_COOKIE['lang']) ||
+    $_COOKIE['lang'] != $_SERVER['PHP_SELF']) {
+    setcookie('lang', $_SERVER['PHP_SELF'],
+        time() + 30*24*60*60, '/');
+}
+?>
+```
+
+### Saving the Current Path in a Cookie (saveLanguage.inc.php)
+
+Many Web pages are multilingual. In addition, they are often organized so that every localized section resides in its own directory, similar to this approach:
+
+- The English language version resides in the en directory.
+- The Spanish language version resides in the es directory.
+- The French language version resides in the fr directory.
+
+You can detect the language of the user in several different ways:
+
+- By trying to tie the client's IP address to a geographic region
+- By reading the Accept-Language HTTP header to determine which languages are the preferred ones
+- By asking the user
+
+Although all of these methods work somehow, the last one (or a combination of several of them) is considered to be most user friendly. So, you do need a home page that offers links to all three versions. That's simple HTML, as shown here:
+
+```
+<a href="en/index.php">English version</a><br />
+<a href="es/index.php">Versión español</a><br />
+<a href="fr/index.php">Version française</a>
+```
+
+*Home Page Linking to the Various Language Versions (multilingual.php; excerpt)*
+
+Now, every language directory has an index.php file in the specific language. In this file, the code is included from the listing at the beginning of this phrase. This checks whether there is already a language cookie. If not, it tries to set a cookie with the current path (retrieved from $_SERVER['PHP_SELF']).
+
+**NOTE:** It is important to set the cookie's path to the root directory of the Web server. Otherwise, the path defaults to the current path, and the cookie is automatically only readable in the current directory and its sub-directories, and not on the home page.
+
+Finally, you have to check on the home page to determine whether the cookie is present, and, if so, redirect the user to the appropriate page. To do so, you must add the following code at the top of the multilingual.php page:
+
+```
+<?php
+if (isset($_COOKIE['lang']) && $_COOKIE['lang'] != '' ) {
+```
+
+```
+header("Location: {$_COOKIE['lang']}");
+}
+?>
+```
+
+### Checking for the Language Cookie (multilingual.php; excerpt)
+
+## Understanding Sessions
+
+Originally, a session is a visit of a user to a Web site. He clicks a few links, has a look at a couple of pages, and then leaves. This defines a session. In other words, if a user does not request any data from a Web site for a period of time (for example, 20 minutes), the session ends.
+
+HTTP does not know any kind of session mechanism: the protocol is stateless. However, PHP comes with a built-in session support that makes it fairly easy to use sessions.
+
+After a session is created, PHP generates a session ID (that is, a long string that identifies the session). PHP then creates a file or a database entry for this session. Then, the PHP application can store data in this session. This data is then written either into the session file or into the database. (Shared memory is another, but rarely used option.)
+
+So, the only thing that must be transported between the client and the server is the session ID. All other data relevant to the session resides at the server. So, no sensitive data is sent over the wire an unnecessary number of times.
+
+The configuration of PHP's session mechanism is completely triggered in the [session] section of the php.ini configuration file. The default settings might not be suitable for all applications, so the next few phrases cover some possible configurations.
+
+## Where to Store the Sessions
+
+Usually, session data is stored in files. The location of these files is set in the php.ini directive session.save_path. Of course, this path must (a) exist and (b) be readable and writable for the PHP process (usually, the process of the Web server). Otherwise, the session information cannot be stored.
+
+However, when you have a lot of users and, therefore, a lot of sessions, PHP should not put all session files in one directory because this might cause some serious performance issues. The following syntax allows PHP to move session data into many subdirectories:
+
+```
+session.save_path = "n;/tmp"
+```
+
+This creates subdirectories up to the level of n within the /tmp directory. However, these subdirectories have to exist so that PHP's session mechanism can write into them; for this, there exists the shell script mod_files.sh in the ext/session directory.
+
+Of course, only the Web server should be allowed to read this directory; otherwise, other users in the system could be able to read session information with possibly sensitive data.
+
+## How to Maintain the Session State
+
+The session ID has to be sent to the browser with every response and—much more important—has to be sent back to the server with every request.
+
+The easiest way to do so is to use cookies. PHP then sends a cookie with the name PHPSESSID (can be changed with the directive session.name) to the client. However, for this to happen, the following php.ini directive must be set:
+
+```
+session.use_cookies = 1
+```
+
+However, what happens if the client does not support cookies? Then, a second mechanism comes into play, in the form of the following directive:
+
+```
+session.use_trans_sid = 0
+```
+
+Then, PHP automatically falls back into a mode in which the session ID is appended automatically to all URLs. This could create some potential security risks (session fixation and session hijacking, for example). Most well-known e-commerce Web sites stopped using this mechanism (for instance, Amazon). When no personal data is stored in a session, you might want to use this feature nevertheless.
+
+To be able to use session.use_trans_sid, PHP must be compiled with the switch enable-trans-sid, something that is automatically done for the Windows and Mac OS X binaries.
+
+The other option is to allow only cookies, not session IDs, in uniform resource locators (URLs). To do so, you can use the following php.ini directive:
+
+```
+session.use_only_cookies = 1
+```
