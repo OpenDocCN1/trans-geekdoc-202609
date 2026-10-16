@@ -1,0 +1,229 @@
+
+[~] `Gadgets` may still be present despite `CLASSPATH` not being leaked
+
+Successfully scanned `1` target(s) for objects exposed via `RMI`.
+
+我们从运行这个程序中看到几个要点。它比 `Metasploit` 更详细。我们得到了服务器的名称，`HelloServer`。正如与 `Metasploit` 类似的情况，我们看到服务器绑定在本地主机的 `38371` 端口，这是 `rmiregistry` 动态分配的端口。我们还可以看到类的继承树。我们可以看到引用 `java.rmi.server.RemoteStub`、`java.rmi.server.RemoteObject` 和 `HelloImpl.Stub` 类。根据 `BaRMIe`，该服务在远程公开但仅限于本地。这意味着我们存在信息泄露。为了尝试识别该 `RMI` 服务的漏洞并潜在利用这些漏洞，我们需要获得系统访问权限。
+
+在识别 `RMI` 注册表和额外服务的同时，我们还发现目标系统上存在另一个软件。这可能显而易见，但如果你发现 `RMI` 注册表和 `RMI` 服务，你就已经找到了至少有一个 Java 运行时环境（`JRE`）或 Java 开发工具包（`JDK`）的系统。这里并没有透露 `JRE` 或 `JDK` 的版本。然而，近年来 Java 实现中出现了许多漏洞。知道系统上至少有一个 `JRE` 可能为你提供了漏洞线索。
+
+## Server Message Block
+
+你在 Windows 网络中最常见的远程过程调用实现就是 Server Message Block（`SMB`）。`SMB` 协议在考虑其所有使用方式和运作方式时相当复杂。你可能最熟悉的是 `SMB` 用于在网络中共享文件。虽然这确实是 `SMB` 的一个用途，但它并非唯一，甚至在文件共享方面也远不止是传输文件内容。
+
+`SMB` 是一个应用层协议，可以在不同的低层协议之上运行。首先，它可以直接在 `TCP` 上运行，而无需其他会话层协议。如果系统直接在 `TCP` 上运行 `SMB`，你会发现 `TCP` 端口 `445` 打开。`SMB` 也可以在像 `NetBIOS` 这样的会话协议上运行，`NetBIOS` 是 `IBM` 开发的应用编程接口（`API`），用于将输入/输出（`I/O`）能力从本地系统扩展到网络。如果你看到 `UDP` 端口 `137` 和 `138` 打开，你就知道 `SMB` 运行在 `NetBIOS` 之上。但如果你看到 `TCP` 端口 `137` 和 `139` 打开，你就发现 `SMB` 运行在 `NetBIOS over TCP` 之上。请记住，这里的 `NetBIOS` 用于名称服务。
+
+那么，`SMB` 到底有什么用途？`SMB` 用于在 Windows 系统之间进行通信——文件共享、网络管理、系统管理。这可能包括确保系统命名避免冲突。管理工作需要系统向本地网络广播自己，以防止冲突。`SMB` 还必须支持身份验证，以防止系统对整个网络敞开。这意味着 `SMB` 了解用户和组。它还知道共享，即向网络公开的目录。系统必须能够向询问的系统提供它们正在导出的共享列表。这使用户可以查看可用的共享，然后在认证后访问想要的共享。
+
+身份验证并不总是必要的。`SMB` 支持所谓的 `null authentication`（空认证）。这意味着某些函数不需要用户名和密码。系统可以使用空认证请求网络上另一系统的信息，即没有传递凭据。空认证可以让我们在不提供凭据的情况下获取大量系统信息。
+
+我们可以使用多种工具来枚举 Windows 系统的信息。实际上，这不仅限于 Windows 系统，尽管在其他系统上实现 `SMB` 的目的是为了与 Windows 系统互操作。`Samba` 是一个可以在类 Unix 操作系统上安装的包，它提供 `SMB` 以及 `NetBIOS` 命名服务。`Samba` 有两个独立的进程：一个是 `smbd`，负责 `SMB`；另一个是 `nmbd`，负责名称方面的互操作。这意味着即使我们是为了枚举 Windows 系统而查找信息，也可以同时获取类 Unix 系统的信息。
+
+- [使用内置工具开始](https://example.org)是首要步骤。内置工具在 Windows 系统上特别可用，但也有类 Unix 工具。我们还将查看若干为 `nmap` 提供的插件，用于收集信息。`Metasploit` 不意外地拥有若干用于扫描 `SMB` 系统的模块。此外还有其他实用工具可用，我们将进一步介绍其中一些。
+
+### 内置工具
+
+如果你在 Windows 系统上，有若干实用工具可用于通过 `SMB` 收集信息，`Linux` 也有相应的对应工具。需要注意的是，使用内置工具时必须处于同一广播域内。`NetBIOS` 最初是为局域网（`LAN`）设计的，而非面向广域网（`WAN`）的概念。因此，部分功能之所以能工作，是因为系统依赖于向网络广播信息。这意味着在使用这些工具之前，你必须先在本地网络中存在。
+
+通过 `nbtstat` 可以获取 `NetBIOS` 统计信息，从而获取本地网络的相关数据。下面的示例展示了使用 `nbtstat` 获取远程系统信息的方式。使用 `nbtstat -a` 可以查看提供的主机名的名称表。如果仅知道远程系统的 `IP` 地址，则可以使用 `nbtstat -A`。输出会在左侧列出名称列表，随后是一个代码。该代码指示名称所属的上下文，并显示每个名称的状态。
+
+#### nbtstat 输出
+
+```
+C:\Users\kilroy> nbtstat -a billthecat
+
+Local Area Connection:
+
+Node IpAddress: [192.168.86.50] Scope Id: []
+
+           NetBIOS Remote Machine Name Table
+
+        Name               Type         Status
+
+     ---------------------------------------------
+
+     BILLTHECAT     <00>  UNIQUE      Registered
+
+     BILLTHECAT     <20>  UNIQUE      Registered
+
+     WORKGROUP      <00>  GROUP       Registered
+
+     MAC Address = AC-87-A3-36-D6-AA                     
+```
+
+显示的代码来自 `NetBIOS`，可查询其含义以确定名称所属的上下文。使用 `SMB` 的系统可以在多种上下文中存在。这里所示的系统既是工作站，也是文件服务器，这意味着已启用文件共享。此外，该系统在网络中还充当工作站或客户端。区分这些功能很重要，因为每个系统只能询问其支持的操作类型。技术上说，每一组功能都关联有特定的过程。在对远程系统调用过程发起操作之前，必须先知道该系统提供哪些过程。`nbtstat -a` 本质上提供了这些信息。
+
+目前为止我们仅查询单个主机名在网络上的所有函数（名称）。如果想看到所有通过 `SMB`/`NetBIOS` 通信的主机名，需要使用其他参数。仍可使用 `nbtstat`，但需在命令行中传入不同的参数。我们需要查找已解析的名称。该列表可能来源于广播消息（当没有中央名称数据库时，系统在上线时会广播自身名称并定期更新），也可能来源于 Windows Internet Name Server（`WINS`），它是企业网络中系统名称的中央存储库。Windows 服务器提供 `WINS` 功能，系统会向 `WINS` 注册，从而实现所有名称的解析。
+
+在下面的代码片段中，你可以看到网络上列出的名称。由于网络中没有 Windows 服务器，也没有 `WINS`，这些名称均是通过广播发现的。这些系统均为 `macOS`，但它们通过 `SMB` 在网络中共享文件。要实现这一点，它们必须像任何其他使用 `SMB` 的系统一样行为。
+
+#### 使用 nbtstat 列出已解析的名称
+
+```
+C:\Users\kilroy
+
+> nbtstat -r
+
+         NetBIOS Names Resolution and Registration Statistics
+
+         ----------------------------------------------------
+
+         Resolved By Broadcast     = 47
+
+         Resolved By Name Server   = 0
+
+         Registered By Broadcast   = 8
+
+         Registered By Name Server = 0
+
+         NetBIOS Names Resolved By Broadcast
+
+         ---------------------------------------------
+
+                 YAZPISTACHIO   <00>
+
+                 BILLTHECAT     <00>
+
+                 YAZPISTACHIO   <00>
+
+                 YAZPISTACHIO   <00>
+
+                 LOLAGRANOLA    <00>
+
+                 LOLAGRANOLA    <00>
+
+                 YAZPISTACHIO   <00>
+
+                 YAZPISTACHIO   <00>                
+```
+
+`nbtstat` 还有其他功能，但它们更多与本地系统的功能相关，与枚举关系不大。虽然 `nbtstat` 功能丰富，但如前所述，它仅在 Windows 系统上可用。如果你使用的是 `Linux` 系统，且已安装 `Samba` 包（提供 `SMB` 通信能力），则可以使用 `nmblookup` 进行名称查询。该工具可用于查询 `WINS` 以及通过广播获取的名称。例如，要获取我们之前对 `billthecat` 的详细信息，可使用 `nmblookup -S -B billthecat`，如下所示。
+
+#### nmblookup 用于枚举
+
+```
+kilroy@savagewood$ nmblookup -S -B 192.168.86.255 billthecat
+
+ Can't load /etc/samba/smb.conf - run testparm to debug it
+
+ querying billthecat on 192.168.86.255
+
+ 192.168.86.32 billthecat<00>
+
+ Looking up status of 192.168.86.32
+
+      BILLTHECAT      <00> -         H <ACTIVE>
+
+      BILLTHECAT      <20> -         H <ACTIVE>
+
+      WORKGROUP       <00> - <GROUP> H <ACTIVE>
+
+      MAC Address = AC-87-A3-36-D6-AA
+
+```
+
+使用 `‑B` 参数让 `nmblookup` 使用提供的广播地址，即本地网络的广播地址。若要使用 `WINS`，可使用 `‑R` 进行递归查找。`‑S` 标志告诉 `nmblookup` 除了名称状态外，还返回节点状态。正是该标志提供了其他用途。正如之前所示，我们可以看到系统既是工作站（`<00>`），也是文件服务器（`<20>`）。此外，我们还能看到该系统属于工作组 `WORKGROUP`。工作组用于临时的 Windows 网络，这里没有域控制器来管理所有系统。
+
+#### 使用 net 实用程序
+
+Windows 内置的 `net` 实用程序广泛用于多种目的。如果你想连接网络中的共享驱动器，则使用 `net use` 来建立连接。`net` 命令可以通过 `SMB` 消息查询网络。下面的示例展示了 Windows 服务器上工作站服务的统计信息，主要包括网络通信数据，如传输字节数，以及已启动和失败的会话数量。
+
+```
+$ sudo nmap --script smb-os-discovery 192.168.1.10
+
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-12 13:51 EST
+
+Nmap scan report for stevedallas.lan (192.168.86.50)
+
+Host is up (0.00058s latency).
+
+PORT    STATE SERVICE
+
+135/tcp open  msrpc
+
+139/tcp open  netbios-ssn
+
+445/tcp open  microsoft-ds
+
+MAC Address: 46:5E:C8:0A:B7:D1 (Unknown)
+
+Host script results:
+
+| smb-os-discovery:
+
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+
+|   Computer name: stevedallas
+
+|   NetBIOS computer name: STEVEDALLAS\x00
+
+|   Workgroup: WORKGROUP\x00
+
+|_  System time: 2021-01-04T20:30:27-06:00
+
+```
+
+```
+$ sudo nmap --script smb-enum-shares 192.168.1.10
+
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-12 13:53 EST
+
+Nmap scan report for stevedallas.lan (192.168.86.50)
+
+Host is up (0.00040s latency).
+
+PORT    STATE SERVICE
+
+135/tcp open  msrpc
+
+139/tcp open  netbios-ssn
+
+445/tcp open  microsoft-ds
+
+MAC Address: 46:5E:C8:0A:B7:D1 (Unknown)
+
+Host script results:
+
+| smb-enum-shares:
+
+|   note: ERROR: Enumerating shares failed, guessing at common ones
+
+(NT_STATUS_ACCESS_DENIED)
+
+|   account_used: <blank>
+
+|   \\192.168.86.50\ADMIN$:
+
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+
+|     Anonymous access: <none>
+
+|   \\192.168.86.50\C$:
+
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+
+|     Anonymous access: <none>
+
+|   \\192.168.86.50\IPC$:
+
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+
+|     Anonymous access: READ
+
+|   \\192.168.86.50\USERS:
+
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+
+|_    Anonymous access: <none>
+
+```
+
+One of the common share names tried is `IPC$`. This is a share name allowing access to shared pipes, which is a method for interprocess communications. Another share name `nmap` checked for is `C$`. This is an administrative share that is created. Again, older versions of Windows will allow easier access to this share, but since Windows XP, there have been more restrictions on the use of this share. It does enable administrators to function remotely, but accessing it requires more than just login credentials. The login credentials have to be for an administrator.
+
+While `nmap` does have other scripts that can be used against systems running `SMB`, most of them are not for enumeration. Many of them are specific to vulnerability identification or confirmation. Since we are focusing on enumeration, we can put off looking at those other
+
+Windows XP 系统运行的是 `SMB` 版本 `1`，因为版本 `2` 直到 Windows Vista 推出后才出现。根据 `SMB` 版本历史，Windows 7 系统会使用 `SMB` 版本 `2.1`。虽然这看起来像是一个过时的扫描，但拥有旧系统对于练习攻击很有用，因为它们更有可能包含软件的弱版本。
+
+#### SMB 版本扫描与 Metasploit
