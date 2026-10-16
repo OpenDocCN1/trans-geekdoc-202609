@@ -1,0 +1,84 @@
+
+ICMP 使用协议号 1，因此防火墙可以通过允许协议号为 1 的流量来允许 `ping` 流量。同样，防火墙可以通过允许协议号 50 和 51 来允许 IPsec Encapsulating Security Protocol (ESP) 流量和 IPsec Authentication Header (AH) 流量。
+
+第二代防火墙增加了额外的过滤能力。例如，应用层网关防火墙根据特定的应用程序要求过滤流量，而 *circuit-level gateway firewalls* 则根据通信电路过滤流量。第三代防火墙（也称为 *stateful inspection firewalls* 和动态数据包过滤防火墙）根据流量流中的状态过滤流量。
+
+*next-generation firewall* 作为 *unified threat management (UTM)* 设备，结合了多种过滤能力。它包含防火墙的传统功能，如数据包过滤和状态检查。然而，它能够执行数据包检查技术，从而识别并阻止恶意流量。它可以使用定义文件和/或白名单及黑名单来过滤恶意软件。此外，它还包含入侵检测和/或入侵防御功能。
+
+## Sandboxing
+
+Sandboxing 为应用程序提供安全边界，防止应用程序与其他应用程序交互。反恶意软件应用程序使用 sandboxing 技术测试未知应用程序。如果应用程序显示可疑特征，sandboxing 技术可防止该应用程序感染其他应用程序或操作系统。
+
+应用程序开发人员经常使用虚拟化技术测试应用程序。他们创建虚拟机，并将其与主机机器和网络隔离。然后，他们可以在该 sandbox 环境中测试应用程序，而不会影响虚拟机之外的任何内容。同样，许多反恶意软件供应商使用虚拟化作为 sandboxing 技术，以观察恶意软件的行为。
+
+## Third-Party Security Services
+
+一些组织将安全服务外包给第三方，即组织内部或组织外的个人或组织。这可能包括许多不同类型的服务，如审计和渗透测试。
+
+在某些情况下，组织必须向外部实体提供保证，确保第三方服务提供商符合特定的安全要求。例如，处理主要信用卡交易的组织必须遵守支付卡行业数据安全标准 (PCI DSS)。这些组织通常会外包部分服务，PCI DSS 要求组织确保服务提供商也符合 PCI DSS 要求。换句话说，PCI DSS 不允许组织将其责任外包。
+
+一些软件即服务 (SaaS) 供应商通过云提供安全服务。例如，Barracuda Networks 包含类似于下一代防火墙和 UTM 设备的云解决方案。例如，其 Web Security Service 充当浏览器的代理。管理员配置代理设置以访问云系统，并根据组织的需求进行 Web 过滤。同样，他们拥有云端邮件安全网关，可执行入站垃圾邮件和恶意软件过滤，并可检查出站流量以确保其符合组织的数据丢失防止策略。
+
+## Penetration Testing
+
+*Penetration testing* 是组织用来防御攻击的另一种预防措施。渗透测试（通常缩写为 *pentest*）模拟实际攻击，试图识别攻击者可以用来绕过应用程序、系统、网络或组织安全的技术。它可能包括漏洞扫描、端口扫描、数据包嗅探、DoS 攻击和社交工程技术。
+
+安全专业人员在进行渗透测试时会尽量避免导致服务中断。然而，渗透测试具有侵入性，可能影响系统的可用性。因此，安全专业人员在进行任何测试前必须获得高级管理层的书面批准。
+
+定期进行的渗透测试是评估组织内部安全控制有效性的好方法。渗透测试可能发现补丁或安全设置不足、新漏洞出现或被暴露、以及安全策略无效或未被遵守的区域。攻击者可以利用这些漏洞。
+
+渗透测试通常包括漏洞扫描或漏洞评估，以检测弱点。但渗透测试更进一步，尝试利用这些弱点。例如，漏洞扫描仪可能发现某网站的后端数据库未使用输入验证技术，易受 SQL 注入攻击。渗透测试可能随后利用 SQL 注入攻击访问整个数据库。同样，漏洞评估可能发现员工对社交工程攻击缺乏教育，渗透测试可能使用社交工程方法访问安全区域或从员工处获取敏感信息。
+
+以下是渗透测试的一些目标：
+
+- 确定系统在遭受攻击时的容忍能力
+- 识别员工实时检测和响应攻击的能力
+- 识别可以实施的额外控制措施以降低风险
+
+### Risks of Penetration Testing
+
+渗透测试存在重大风险，某些方法可能导致服务中断。例如，如果漏洞扫描发现互联网服务器易受缓冲区溢出攻击，渗透测试可以利用该漏洞，导致服务器关闭或重启。
+
+理想情况下，渗透测试应在不造成实际损害的前提下停止。不幸的是，测试人员往往不知道哪一步会导致损害，直到他们执行该步骤。例如，模糊测试工具向应用程序或系统发送无效或随机数据以检查响应。测试人员可能发送一串数据，导致缓冲区溢出并使应用程序挂起，但他们不知道这会发生，直到运行模糊测试工具。
+
+经验丰富的渗透测试人员可以最大限度地降低测试导致损害的风险，但无法完全消除风险。
+
+Whenever possible，测试人员在测试系统而非生产系统时进行渗透测试。例如，在测试应用程序时，测试人员可以在像 sandbox 这样的隔离环境中运行和测试该应用程序。如果测试导致损害，它只会影响测试系统，而不会影响实时网络。挑战在于测试系统通常无法真实反映生产环境。测试人员可能能够测试简单的应用程序，这些应用程序在测试环境中不与其他系统交互。但大多数需要测试的应用程序并不简单。当使用测试系统时，渗透测试人员通常会用一句话说明测试是在测试系统上进行的，因此结果可能无法真实反映生产环境。
+
+### Obtaining Permission for Penetration Testing
+
+渗透测试应在高级管理层经过慎重考虑并批准后方可进行。许多安全专业人员坚持获得书面批准，并明确列出风险。未经批准的安全测试可能导致生产力损失并触发应急响应团队。
+
+- [恶意员工] intent on violating the security of an IT environment can be punished based on existing laws. Similarly, if internal employees perform informal unauthorized tests against a system without authorization, an organization may view their actions as an illegal attack rather than as a penetration test. These employees will very likely lose their jobs and may even face legal consequences.
+
+### Penetration-Testing Techniques
+
+It is common for organizations to hire external consultants to perform penetration testing. The organization can control what information they give to these testers, and the level of knowledge they are given identifies the type of tests they conduct.
+
+#### Black-Box Testing by Zero-Knowledge Team
+
+A `zero-knowledge team` knows nothing about the target site except for publicly available information, such as a domain name and company address. It’s as if they are looking at the target as a black box and have no idea what is within the box until they start probing. An attack by a zero-knowledge team closely resembles a real external attack because all information about the environment must be obtained from scratch.
+
+#### White-Box Testing by Full-Knowledge Team
+
+A `full-knowledge team` has full access to all aspects of the target environment. They know what patches and upgrades are installed, and the exact configuration of all relevant devices. If the target is an application, they would have access to the source code. Full-knowledge teams perform white-box testing (sometimes called crystal-box or clear-box testing). White-box testing is commonly recognized as being more efficient and cost effective in locating vulnerabilities because less time is needed for discovery.
+
+#### Gray-Box Testing by Partial-Knowledge Team
+
+A `partial-knowledge team` that has some knowledge of the target performs gray-box testing, but they are not provided access to all the information. They may be given information on the network design and configuration details so that they can focus on attacks and vulnerabilities for specific targets.
+
+The regular security administration staff protecting the target of a penetration test can be considered a full-knowledge team. However, they aren’t the best choice to perform a penetration test. They often have blind spots or gaps in their understanding, estimation, or capabilities with certain security subjects. If they knew about a vulnerability that could be exploited, they would likely already have recommended a control to minimize it. A full-knowledge team knows what has been secured, so it may fail to properly test every possibility by relying on false assumptions. Zero-knowledge or partial-knowledge testers are less likely to make these mistakes.
+
+Penetration testing may employ automated attack tools or suites, or be performed manually using common network utilities. Automated attack tools range from professional vulnerability scanners and penetration testers to underground tools shared by attackers on the internet. Several open-source and commercial tools (such as `Metasploit`) are available, and both security professionals and attackers use these tools.
+
+Social-engineering techniques are often used during penetration tests. Depending on the goal of the test, the testers may use techniques to breach the physical perimeter of an organization or to get users to reveal information. These tests help determine how vulnerable employees are to skilled social engineers, and how familiar they are with security policies designed to thwart these types of attacks.
+
+### Protect Reports
+
+Penetration testers will provide a report documenting their results, and this report should be protected as sensitive information. The report will outline specific vulnerabilities and how these vulnerabilities can be exploited. It will often include recommendations on how to mitigate the vulnerabilities. If these results fall into the hands of attackers before the organization implements the recommendations, attackers can use details in the report to launch an attack.
+
+It’s also important to realize that just because a penetration testing team makes a recommendation, it doesn’t mean the organization will implement the recommendation. Management has the choice of implementing a recommendation to mitigate a risk or accepting a risk if they decide the cost of the recommended control is not justified. In other words, a one-year-old report may outline a specific vulnerability that hasn’t been mitigated. This year-old report should be protected just as closely as a report completed yesterday.
+
+### Ethical Hacking
+
+*Ethical hacking* is often used as another name for penetration testing. An `ethical hacker` is someone who understands network security and methods to breach security but does not use this knowledge for personal gain. Instead, an ethical hacker uses this knowledge to help organizations understand their vulnerabilities and take action to prevent malicious attacks. An ethical hacker will always stay within legal limits.
