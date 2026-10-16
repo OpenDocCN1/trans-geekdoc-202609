@@ -1,0 +1,752 @@
+name: x86 Software Reverse-Engineering, Cracking, and Counter-Measures (Tech Today)
+slug: x86-software-reverse-engineering-cracking-and-counter-measur
+name_cn: '
+
+  Tech Today 的 x86 软件逆向工程、破解与防御指南'
+toc:
+- - '##'
+  - Introduction
+- - '##'
+  - Who Should Read This Book
+- - '##'
+  - What to Expect from This Book
+- - '###'
+  - Structure of the Book
+- - '###'
+  - Hands-On Experience and Labs
+- - '###'
+  - Companion Download Files
+- - '##'
+  - History
+- - '###'
+  - The First Software Protections
+- - '###'
+  - The Rise of Cracking and Reverse Engineering
+- - '##'
+  - Legal
+- - '#'
+  - 'CHAPTER 1  '
+- - '##'
+  - 反编译
+- - '###'
+  - 反编译何时有用？
+- - '###'
+  - 反编译 JIT 编程语言
+- - '###'
+  - 防御 JIT 语言
+- - '##'
+  - 'Lab 1: 反编译'
+- - '###'
+  - 练习技能
+- - '###'
+  - 要点总结
+- - '##'
+  - 架构
+- - '###'
+  - 计算机架构
+- - '####'
+  - '*The Central Processing Unit*'
+- - '####'
+  - '*桥和外设*'
+- - '####'
+  - '*内存和寄存器*'
+- - '###'
+  - Assembly
+- - '####'
+  - '*机器代码入门*'
+- - '####'
+  - '*从机器代码到 Assembly*'
+- - '####'
+  - '*指令集架构和微架构*'
+- - '#'
+  - 'CHAPTER 2  '
+- - '##'
+  - 'Introduction to x86  '
+- - '##'
+  - 'x86 Assembly: Data, Modes, Registers, and Memory Access  '
+- - '##'
+  - Assembly Syntax
+- - '###'
+  - Working with Binary Values
+- - '####'
+  - '*Zero-Extension and Readability*'
+- - '####'
+  - '*Bit and Byte Significance*'
+- - '####'
+  - '*Endianness*'
+- - '##'
+  - Registers
+- - '###'
+  - Registers in x86
+- - '####'
+  - '*x86 General-Purpose Registers*'
+- - '#####'
+  - '`eax`'
+- - '#####'
+  - '`ebx`'
+- - '#####'
+  - '`ecx`'
+- - '#####'
+  - '`edx`'
+- - '#####'
+  - '`esi`'
+- - '#####'
+  - '`edi`'
+- - '#####'
+  - '`ebp`'
+- - '#####'
+  - '`esp`'
+- - '####'
+  - '*Special-Purpose Registers*'
+- - '#####'
+  - '`eip`'
+- - '##'
+  - 工作寄存器
+- - '####'
+  - '*64-Bit Registers*'
+- - '##'
+  - 存储访问
+- - '###'
+  - 指定数据长度
+- - '##'
+  - 地址模式
+- - '###'
+  - Indexed Addressing
+- - '####'
+  - '*Example: Arrays*'
+- - '###'
+  - Based-Index Addressing
+- - '####'
+  - '*Example: Structs*'
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 3  '
+- - '##'
+  - x86 Instruction Format
+- - '##'
+  - x86 Instructions
+- - '###'
+  - mov
+- - '####'
+  - '************Hands-on Example************'
+- - '###'
+  - inc, dec
+- - '###'
+  - add, sub
+- - '###'
+  - mul
+- - '###'
+  - div
+- - '####'
+  - '************Hands-on Example************'
+- - '###'
+  - and, or, xor
+- - '###'
+  - not
+- - '###'
+  - shr, shl
+- - '###'
+  - sar, sal
+- - '###'
+  - nop
+- - '###'
+  - lea
+- - '####'
+  - '************Hands-on Example************'
+- - '###'
+  - Common x86 Instruction Mistakes
+- - '###'
+  - When In Doubt, Look It Up
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 4  '
+- - '##'
+  - 输出
+- - '###'
+  - 控制引脚
+- - '###'
+  - 冗长
+- - '##'
+  - 系统调用
+- - '###'
+  - sys_write
+- - '###'
+  - sys_exit
+- - '###'
+  - '`Printing` `a` `String`'
+- - '####'
+  - '*times*'
+- - '####'
+  - '*$*'
+- - '##'
+  - objdump
+- - '##'
+  - 'Lab: Hello World'
+- - '###'
+  - Skills
+- - '###'
+  - Takeaways
+- - '##'
+  - ASCII
+- - '###'
+  - 识别 ASCII 字符串
+- - '###'
+  - ASCII 处理技巧
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 5  '
+- - '##'
+  - 理解条件码
+- - '###'
+  - 条件码
+- - '####'
+  - eflags
+- - '####'
+  - '*进位标志*'
+- - '####'
+  - '*零标志*'
+- - '####'
+  - '*符号标志*'
+- - '####'
+  - '*溢出标志*'
+- - '####'
+  - '*其他状态标志*'
+- - '###'
+  - 影响状态标志的操作
+- - '####'
+  - '*add*'
+- - '####'
+  - '*sub*'
+- - '####'
+  - '*cmp*'
+- - '####'
+  - '*test*'
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 6  '
+- - '##'
+  - Binary Analysis
+- - '###'
+  - Static and Dynamic Analysis
+- - '###'
+  - Debugging
+- - '##'
+  - Breakpoints
+- - '#'
+  - 使用软件断点和硬件断点
+- - '##'
+  - Software Breakpoints
+- - '##'
+  - Hardware Breakpoints
+- - '##'
+  - gdb
+- - '###'
+  - Debugging with gdb
+- - '####'
+  - '*Launching gdb*'
+- - '####'
+  - '*Disassembly with gdb*'
+- - '####'
+  - '*Starting and Stopping Code in gdb*'
+- - '####'
+  - '*gdb Breakpoints*'
+- - '####'
+  - '*gdb info Commands*'
+- - '####'
+  - '*Stepping Through Instructions*'
+- - '####'
+  - '*Examining Memory*'
+- - '##'
+  - Segmentation Faults
+- - '##'
+  - 'Lab: Shark Sim 3000'
+- - '###'
+  - Skills
+- - '###'
+  - Takeaways
+- - '##'
+  - Tuning Out the Noise
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 7  '
+- - '##'
+  - Control Flow
+- - '###'
+  - 指令指针
+- - '###'
+  - 控制流指令
+- - '####'
+  - '*jmp*'
+- - '####'
+  - '*条件跳转*'
+- - '####'
+  - '*条件跳转的陷阱*'
+- - '####'
+  - '*示例*'
+- - '##'
+  - Logic Constructs in x86
+- - '###'
+  - if (…) {…}
+- - '###'
+  - if (…) { … } else { … }
+- - '####'
+  - '*if (…) { … } else if { … } else { … }*'
+- - '###'
+  - do { ... } while (...);
+- - '#####'
+  - Missing Cases
+- - '####'
+  - JUMP TABLE
+- - '#####'
+  - Nonzero Bases
+- - '####'
+  - JUMP TABLE
+- - '#####'
+  - Impractical Jump Tables
+- - '###'
+  - Continue
+- - '###'
+  - break
+- - '###'
+  - '&&'
+- - '##'
+  - Stack
+- - '###'
+  - 栈的工作原理
+- - '###'
+  - x86 栈
+- - '####'
+  - '*Using Pop Cautiously*'
+- - '####'
+  - Function Calls and Stack Frames
+- - '###'
+  - Functions in x86
+- - '####'
+  - '*call*'
+- - '####'
+  - '*ret*'
+- - '###'
+  - 栈分析
+- - '###'
+  - 调用约定
+- - '####'
+  - '*为什么约定是必要的*'
+- - '####'
+  - '*介绍调用约定*'
+- - '###'
+  - cdecl
+- - '####'
+  - '*保存寄存器*'
+- - '####'
+  - '*返回值*'
+- - '####'
+  - '*访问参数*'
+- - '###'
+  - Stack Frames
+- - '####'
+  - '*Prologues and Epilogues*'
+- - '#####'
+  - Setting Up a Stack Frame
+- - '#####'
+  - Tearing Down a Stack Frame
+- - '####'
+  - '*Accessing Parameters*'
+- - '####'
+  - '*Local Variables*'
+- - '#####'
+  - '*Shortcuts*'
+- - '###'
+  - The Big Picture
+- - '###'
+  - 记忆要点
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 8  '
+- - '##'
+  - Finding Starting Code
+- - '###'
+  - 编译器
+- - '####'
+  - 优化
+- - '####'
+  - 去符号（Stripping）
+- - '###'
+  - 链接
+- - '####'
+  - 静态链接
+- - '####'
+  - '*Security Impacts of Linking*'
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 9  '
+- - '##'
+  - 'Lab: RE Bingo'
+- - '###'
+  - Skills
+- - '###'
+  - Takeaways
+- - '##'
+  - Basic REconnaissance
+- - '###'
+  - objdump
+- - '###'
+  - strace and ltrace
+- - '####'
+  - '************ltrace************'
+- - '####'
+  - '`strace`'
+- - '####'
+  - '`strace` 示例：`echo`'
+- - '####'
+  - '`strace` 示例：恶意小猫'
+- - '###'
+  - '`strings`'
+- - '###'
+  - 依赖分析器（Dependency Walker）
+- - '###'
+  - 寻找感兴趣的区域
+- - '###'
+  - 逐步注释代码
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 10  '
+- - '##'
+  - 密钥检查器
+- - '###'
+  - 糟糕的方法
+- - '###'
+  - 合理的方法
+- - '###'
+  - 更好的做法
+- - '####'
+  - '*数字签名密钥*'
+- - '###'
+  - 最佳做法
+- - '###'
+  - 其他建议
+- - '####'
+  - '*偏好离线激活*'
+- - '####'
+  - '*部分密钥验证*'
+- - '####'
+  - '*在密钥中编码有用数据*'
+- - '###'
+  - Key Generators
+- - '####'
+  - 为何构建密钥生成器？
+- - '####'
+  - '*密钥生成的哲学*'
+- - '###'
+  - 破解不同类型的键检查
+- - '####'
+  - '*键检查类型 I：仅转换用户名*'
+- - '####'
+  - '*键检查类型 II：转换用户名和键*'
+- - '####'
+  - '*键检查类型 III：可暴力破解*'
+- - '###'
+  - 防御关键生成器
+- - '##'
+  - 实验室：入门级关键生成器
+- - '###'
+  - 技能
+- - '###'
+  - 收获
+- - '##'
+  - Procmon
+- - '###'
+  - 示例：notepad.exe
+- - '##'
+  - Figure 10.2
+- - '##'
+  - Figure 10.3
+- - '##'
+  - Figure 10.4
+- - '##'
+  - Figure 10.6
+- - '##'
+  - Figure 10.7
+- - '##'
+  - How Procmon Aids RE and Cracking
+- - '###'
+  - Call Stacks
+- - '###'
+  - File Operations
+- - '##'
+  - Figure 10.8
+- - '##'
+  - Figure 10.9
+- - '##'
+  - Figure 10.10
+- - '###'
+  - Registry Queries
+- - '##'
+  - Resource Hacker
+- - '##'
+  - Figure 10.12
+- - '###'
+  - Example
+- - '###'
+  - 'Mini-Lab: Windows Calculator'
+- - '##'
+  - Patching
+- - '###'
+  - Patching vs. Key-Genning
+- - '###'
+  - Where to Patch
+- - '###'
+  - NOPs
+- - '##'
+  - Other Debuggers
+- - '###'
+  - OllyDbg
+- - '###'
+  - Immunity
+- - '###'
+  - x86dbg
+- - '###'
+  - WinDbg
+- - '##'
+  - Debugging with Immunity
+- - '###'
+  - 'Immunity: Assembly'
+- - '###'
+  - 'Immunity: Modules'
+- - '###'
+  - 'Immunity: Strings'
+- - '###'
+  - 'Immunity: Running the Program'
+- - '###'
+  - 'Immunity: Exceptions'
+- - '###'
+  - 'Immunity: REwriting the Program'
+- - '##'
+  - 实验：使用 Immunity 进行破解
+- - '###'
+  - 技能
+- - '###'
+  - 收获
+- - '##'
+  - 总结
+- - '#'
+  - '第 11 章  '
+- - '##'
+  - 补丁与高级工具
+- - '##'
+  - 在 010 Editor 中进行补丁
+- - '##'
+  - CodeFusion 补丁
+- - '###'
+  - 'IDA: 函数和变量'
+- - '###'
+  - 'IDA: 注释'
+- - '###'
+  - 'IDA: 路径'
+- - '##'
+  - IDA 修补
+- - '##'
+  - 'Lab: IDA 逻辑流'
+- - '###'
+  - 技能
+- - '###'
+  - 收获
+- - '###'
+  - Skills
+- - '###'
+  - Takeaways
+- - '##'
+  - Summary
+- - '#'
+  - 'CHAPTER 12  '
+- - '##'
+  - Obfuscation
+- - '###'
+  - Evaluating Obfuscation
+- - '###'
+  - Automated Obfuscation
+- - '####'
+  - '***Name Mangling***'
+- - '####'
+  - '***Control Flow Flattening***'
+- - '####'
+  - '***Opaque Predicates***'
+- - '####'
+  - '***Instruction Substitution***'
+- - '###'
+  - Obfuscators
+- - '###'
+  - Defeating Obfuscators
+- - '##'
+  - 'Lab: Obfuscation'
+- - '###'
+  - Skills
+- - '###'
+  - Takeaways
+- - '##'
+  - Anti-Debugging
+- - '##'
+  - 实验：反调试
+- - '###'
+  - 技能
+- - '###'
+  - 收获
+- - '##'
+  - 摘要
+- - '#'
+  - 'CHAPTER 13  '
+- - '##'
+  - 高级防御技术
+- - '###'
+  - 防篡改
+- - '####'
+  - 哈希
+- - '####'
+  - 签名
+- - '####'
+  - 水印
+- - '####'
+  - 守卫
+- - '###'
+  - 打包
+- - '####'
+  - 打包工具的工作原理
+- - '####'
+  - 这是否是一种强保护？
+- - '###'
+  - 破解打包
+- - '###'
+  - PEiD
+- - '##'
+  - 实验室：检测与解包
+- - '###'
+  - 技能
+- - '###'
+  - 收获
+- - '###'
+  - 层级虚拟化
+- - '###'
+  - 虚拟化的问题
+- - '###'
+  - 这是否是强有力的保护？
+- - '###'
+  - 逆转虚拟化
+- - '###'
+  - Cryptors/Decryptors（加密/解密工具）
+- - '####'
+  - 这是否是有用的保护？
+- - '####'
+  - 逆转加密
+- - '###'
+  - 总结
+- - '#'
+  - 'CHAPTER 14  '
+- - '#'
+  - 应用程序开发人员使用各种机制来检测和防范反编译和破解。然而，这些方法中有些比其他方法更有效。本章探讨了一些最常见的技术，它们的相对优势和劣势，以及如何被击败。
+- - '##'
+  - CRC
+- - '###'
+  - 这是否是强有力的保护？
+- - '##'
+  - 代码签名
+- - '###'
+  - 如何进行代码签名
+- - '###'
+  - 如何验证已签名的应用程序
+- - '###'
+  - 代码签名是否有效？
+- - '##'
+  - CRC 与代码签名的比较
+- - '###'
+  - 这是否是强有力的保护？
+- - '###'
+  - RASP 的风险
+- - '###'
+  - 这是否是强有力的保护？
+- - '###'
+  - 白名单
+- - '###'
+  - 白名单的工作原理
+- - '####'
+  - '*破解基于名称的白名单*'
+- - '####'
+  - '*破解基于名称和哈希的白名单*'
+- - '####'
+  - '*示例：Metasploit*'
+- - '###'
+  - 这是否是强有力的保护？
+- - '###'
+  - 黑名单
+- - '###'
+  - 黑名单是否提供强有力的保护？
+- - '###'
+  - 远程认证
+- - '####'
+  - 远程认证示例
+- - '###'
+  - Important Court Cases
+- - '###'
+  - Fair Use
+- - '###'
+  - DMCA Research Exception
+- - '###'
+  - Legality
+- - '#'
+  - 'CHAPTER 16  '
+- - '###'
+  - Timeless Debugging
+- - '###'
+  - Binary Instrumentation
+- - '###'
+  - Intermediate Representations
+- - '###'
+  - Decompiling
+- - '###'
+  - Automatic Structure Recovery
+- - '###'
+  - Visualization
+- - '###'
+  - Deobfuscation
+- - '###'
+  - Theorem Provers
+- - '###'
+  - Symbolic Analysis
+- - '##'
+  - Summary
+- - '##'
+  - 'CHAPTER 17  '
+- - '###'
+  - Bonus Topics
+- - '###'
+  - Stack Smashing
+- - '###'
+  - 栈溢出与栈保护
+- - '###'
+  - 连接 C 和 x86
+- - '###'
+  - 在 x86 代码中使用 C 函数
+- - '###'
+  - 在 C 代码中使用 x86 函数
+- - '#'
+  - run with ./adder
+- - '###'
+  - _start vs. main()
+- - '###'
+  - 标准参数
+- - '#'
+  - 变量
+- - '#'
+  - 被破坏寄存器：
+- - '##'
+  - Summary
+- - '#'
+  - Conclusion
+- - '#'
+  - Index

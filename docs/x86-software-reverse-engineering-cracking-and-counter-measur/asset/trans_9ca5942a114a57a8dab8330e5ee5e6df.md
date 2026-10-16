@@ -1,0 +1,125 @@
+
+# 使用软件断点和硬件断点
+
+在本书中，早期实验专注于使用**软件断点**，而硬件断点则在后续实验中出现。本书将展示多种调试器的使用，并且在每种调试器中配置断点的方法各不相同。
+
+## Software Breakpoints
+
+软件断点是大多数调试器的默认选项。设置软件断点时，实际发生的情况是调试器在后台修改指令，将其替换为断点指令。在 x86 架构中，这对应于 `int3` 指令（`0xcc`）。软件断点仅在执行时有效，这意味着 `int3` 指令必须被执行，断点才会生效。
+
+当处理器到达断点指令时，它会暂停执行并将控制权交还给调试器。这使得反汇编者能够检查程序状态并可能进行修改。
+
+软件断点的主要限制是它们可以被程序轻易检测到。通过**反调试**，程序可以在读取自身内存时检测到断点，并据此采取防御性操作，如删除断点等。
+
+## Hardware Breakpoints
+
+大多数调试器都支持硬件断点，但通常需要手动选择和配置。
+
+硬件断点不像软件断点那样修改程序代码，而是将断点地址存储在硬件寄存器中。
+
+在 x86 架构中，调试寄存器 `DR[0-7]` 用于实现硬件断点。`DR[0-4]` 保存断点地址，而 `DR[6,7]` 存储配置信息。
+
+硬件断点可以配置为在**执行**、**读取**或**写入**特定地址时触发。当处理器检测到匹配断点寄存器的条件时，它会将控制权交给调试器。
+
+硬件断点的优势在于它们能够检测到**内存访问**。例如，硬件断点可以用于定位代码中特定字节被修改或字符串被使用的位置。
+
+硬件断点还能够规避程序对软件断点的防御。如果程序在扫描自身代码时寻找 `int3` 指令，它会忽略硬件断点，因为硬件断点不修改代码。它们并非完全防调试，但高级系统知识可以让应用程序更深入地观察硬件断点，从而大幅提升安全性。
+
+## gdb
+
+GNU Debugger（`gdb`）是 Linux 调试的事实标准。它在许多 Linux 发行版中预装，并且可以在任何发行版上安装。`gdb` 提供的关键功能包括：
+
+*   命令行调试器（无 GUI）
+
+*   可脚本化
+
+*   支持远程调试
+
+`gdb` 是极其普遍的调试器，以至于许多系统和处理器都包含一个 *`gdb` 命令行* 以支持 `gdb` 调试。虽然许多调试器受限于少数架构和平台，`gdb` 支持数百种。
+
+本书将探索多种调试器，并在后续章节介绍基于 GUI 的调试器。但首先需要深入理解如何使用 **GDB**，这是基于命令行的。许多“更美观”的调试器在内部使用 GDB 及其协议；它们仅在外层包装了更友好的界面。
+
+### Debugging with gdb
+
+作为命令行程序，`gdb` 通过在提示符处输入命令来控制程序，提示符显示为 `(gdb)`。尽管 `gdb` 的界面看起来古老，但它是极其强大且广受欢迎的调试器。
+
+`gdb` 的一个有用特性是命令可以使用最简洁的非歧义形式输入。例如，`run` 可以缩写为 `r`，`info registers` 可以缩写为 `info reg`，`disassemble` 可以缩写为 `disas`。你会在实践中逐步了解这些简写。
+
+#### *Launching gdb*
+
+`gdb` 可以通过 `gdb` 命令启动。例如，可执行文件 `printreg-shift.out` 可通过 `gdb printreg-shift.out` 启动，如图 6.1 所示。
+
+![Figure 6.1: The gdb command](images/c06f001.png)
+
+[**Figure 6.1**](#c06.xhtml#R_c06-fig-0001): The `gdb` command
+
+#### *Disassembly with gdb*
+
+x86 架构支持多种语法，包括 Intel 和 AT&T 两种。在 `gdb` 中指定 Intel 语法的命令是 `(gdb) set disassembly-flavor intel`。
+
+设置完语法后，可以选择多种启动调试的方式：
+
+*   `disassemble` 从当前指针位置开始反汇编。
+*   `disassemble address` 从指定地址开始反汇编。
+*   `disassemble label` 从指定标签（如 *`loop`*、 *`main`*）开始反汇编。
+
+图 6.2 展示了使用标签进行反汇编的示例，左侧为原始源代码，右侧为 `gdb` 中的对应反汇编。
+
+![Figure 6.2: Disassembly in gdb](images/c06f002.png)
+
+[**Figure 6.2**](#c06.xhtml#R_c06-fig-0002): Disassembly in `gdb`
+
+指定起始点后，还可以限定反汇编的指令数量。例如，命令 `disassemble main +50` 会从 *`main`* 标签开始，打印 50 条指令。
+
+#### *Starting and Stopping Code in gdb*
+
+`run` 命令用于从程序起始位置执行。此操作会丢弃之前的运行状态。
+
+`continue` 命令用于恢复执行。例如，可以通过断点暂停查看程序栈，然后使用 `continue` 恢复运行。
+
+程序执行可以通过 `quit` 和 `kill` 终止。`kill` 终止运行的进程，而 `quit` 则终止并退出 `gdb`。
+
+#### *gdb Breakpoints*
+
+断点用于暂停代码执行以便分析程序状态。`gdb` 中的 `break address` 命令在指定地址设置断点，而 `break label` 使用标签指定位置，如图 6.3 所示。
+
+![Figure 6.3: Setting a breakpoint in gdb](images/c06f003.png)
+
+[**Figure 6.3**](#c06.xhtml#R_c06-fig-0003): Setting a breakpoint in `gdb`
+
+#### *gdb info Commands*
+
+`info` 命令用于获取各种信息。常用 `info` 命令包括：
+
+*   `info files`：显示已编译文件的各个部分。图 6.4 为简单可执行文件 `a.out` 提供了示例。
+
+    ![Figure 6.4: gdb info files command](images/c06f004.png)
+
+    [**Figure 6.4**](#c06.xhtml#R_c06-fig-0004): `gdb info files` command
+
+*   `info breakpoints`：列出当前定义的所有断点。
+
+*   `info register`：显示当前 x86 寄存器的值，如图 6.5 所示。
+
+*   `info variables`：列出应用程序中所有已定义的变量，如图 6.6 所示。
+
+除了 `info register`，还可以使用 `print $reg` 单独打印寄存器值，示例如下：
+
+```
+(gdb) print $esp
+$1 = (void *) 0xffffd260
+(gdb)
+```
+
+![Figure 6.5: gdb info register command](images/c06f005.png)
+
+[**Figure 6.5**](#c06.xhtml#R_c06-fig-0005): `gdb info register` command
+
+![Figure 6.6: gdb info variable command](images/c06f006.png)
+
+[**Figure 6.6**](#c06.xhtml#R_c06-fig-0006): `gdb info variable` command
+
+#### *Stepping Through Instructions*
+
+`run` 和 `continue` 命令仅用于启动程序运行，直到出现断点等停止条件。这样使得难以实时观察程序行为或变量随时间的变化。
+
