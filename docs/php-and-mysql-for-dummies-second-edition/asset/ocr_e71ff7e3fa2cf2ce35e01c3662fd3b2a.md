@@ -1,0 +1,3 @@
+This file creates the form that is displayed if the user forgets to type in the new pet name. It is very similar to the program in Listing 11-7 that's displayed when a user forgets to type in a new category. Notice that two hidden fields are used to pass on the values for $category and $petName. When the form is filled in, the values for these two variables are needed to store the pet information.
+
+At the end, this program provides a link to the first page so that the user can add another new pet to the catalog if desired.

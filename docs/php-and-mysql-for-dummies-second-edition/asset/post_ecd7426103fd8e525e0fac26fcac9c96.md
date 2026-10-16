@@ -1,0 +1,258 @@
+
+- installing PHP, 32
+- running `myisamchk` table repair utility, 107
+- sending all `INSERT` queries from backup file, 110–112
+- starting MySQL, 30–31
+- list manager, 11
+- `list` statement, 159
+- literals, 128–129, 138, 164
+- `LOAD DATA LOCAL` query, 302–303
+- `LOAD` query, 78, 79–80
+- login name versus account name, 95
+- login page
+  - e-mail message from, 340–341
+  - Members Only application, 338–341
+  - moving information to other pages, 261
+  - need for, 331–332
+  - plan for, 44
+  - private sessions for, 276
+- `Login` table, 54–56, 61, 336–337
+- `login_form.inc` file, 352–355
+- `Login.php` program, 344–356
+- long arrays, registering, 215
+- look and feel design
+  - for Members Only application, 337–342
+  - for Pet Catalog application, 303–309
+- loops
+  - breaking out of, 179–181
+  - defined, 170
+  - `do...while` loops, 171, 176–177
+  - getting all rows of data using, 200–203
+  - infinite, 177–179, 181
+  - `for` loops, 170, 171–174, 202–203
+  - types of, 170–171
+  - `while` loops, 170, 174–176, 200–202
+- Lopuck, Lisa (*Web Design For Dummies*), 41
+
+## • **M** •
+
+- Mac computers
+  - advantages and disadvantages, 29
+  - backing up data, 104–105
+  - checking whether MySQL is installed, 30
+  - checking whether PHP is installed, 31–32
+  - installing MySQL, 31
+  - installing PHP, 32
+  - running `myisamchk` table repair utility, 107
+  - sending all `INSERT` queries from backup file, 110–112
+  - starting MySQL, 30–31
+- `mail` function, 364–366
+- matching character strings to patterns
+  - `ereg` function for, 140–141, 369
+  - examples, 139–140
+  - overview, 137–138
+  - special characters used in patterns, 138–139
+- `maxlength` attribute for HTML forms, 213, 217
+- Member table, 54–56, 61, 333–336
+- `MemberDirectory` database. *See also specific tables*
+  - adding data, 337
+  - building, 333–337
+  - creating, 73
+  - designing, 53–56
+  - tables, 60–61
+- Members Only application. *See also* Web database applications
+  - basic tasks, 342–343
+  - building the database, 333–337
+  - choosing the data, 45
+  - database tables, 60–61
+  - designing the application, 332
+  - designing the database, 53–56
+  - designing the look and feel, 337–342
+  - login page, 338–341
+  - `Login.php` program, 344–356
+  - Members Only section, 342, 358
+  - New Member Welcome page, 341
+  - `New_member.php` program, 356–358
+  - overview, 43–44
+  - `PetShopFrontMembers.php` program, 343–344
+  - plan for, 44
+  - planning for growth, 358–359
+  - storefront page, 338, 339
+  - writing the programs, 342–358
+- Microsoft IIS (Internet Information Server), 30
+- Microsoft Windows. *See* Windows (Microsoft)
+- minus sign (-) as arithmetic operator, 126
+- moving information between pages
+  - by adding information to the URL, 262–266
+  - cookies for, 262, 267–269
+  - HTML forms for, 262, 269
+  - need for, 261–262
+  - sessions for, 262, 270–277
+- moving users between pages, 257–258, 261
+- multidimensional arrays, 162–165, 207–208
+- multiple submit buttons for forms, 238–240
+- myisamchk table repair utility, 107–108
+- MySQL
+  - advantages, 13–14
+  - checking whether installed, 30
+  - database size limits, 14
+  - installing, 30–31
+  - keeping up with changes, 19–20
+  - licensing, 13
+  - overview, 12–15
+  - PHP with, 17–19
+  - as RDBMS, 12, 46
+  - reserved words, 48
+  - security database, 99
+  - starting, 30–31
+  - technical support, 13
+  - testing availability, 34–35
+  - versions, 190–191
+  - Web hosting company support for, 24, 27
+  - Web site, 13, 31
+  - as work environment tool, 21
+- MySQL AB company, 13
+- MySQL accounts. See also permissions
+  - account name, 94–96
+  - adding new accounts, 100–102
+  - attributes, 93–94
+  - hostname, 24, 93, 94–95
+  - from IT department, 23
+  - listing existing accounts, 100
+  - passwords, 96–97
+  - removing accounts, 103
+  - required for MySQL server access, 98
+  - root account, 95, 98
+  - setting up, 98–103
+- mysql client, 71–72
+- mysql functions, 190–191, 192–193. See also specific functions
+- mysql security database, 99
+- MySQL server
+  - closing a connection, 194
+  - communicating with, 14–15, 65–72
+  - connecting with mysql_connect function, 191, 193–194
+  - overview, 14
+  - selecting database to interact with, 194–195
+  - starting, 107, 108
+- mysql_close function, 194
+- mysql_connect function, 191, 192–194
+- mysql_fetch_array function
+  - general format, 198
+  - getting all rows of data, 200–202
+  - getting one row of data, 198–200
+- mysql_i functions, 190–191
+- mysql_num_rows function, 202–203
+- mysql_query function, 195–196, 197–198
+- mysql_select_db function, 194–195, 206
+- mysql_send.php program, 67–71
+- mysql_up.php file, 34–35
+
+## • N •
+
+- \n indicator in PHP (new line), 129, 148, 150
+- names
+  - changing column names, 76
+  - checking using pattern matching, 141
+  - columns, 48
+  - constants, 124–125, 284
+  - data types (MySQL), 58–59
+  - databases, 47
+  - default HTML file, 23
+  - directory, 283
+  - domain names, 26
+  - domains, 25
+  - function, 288
+  - hostname, 24, 93, 94–95
+  - misspelled variable names, 372
+  - MySQL accounts, 93–96
+  - preventing Web server from displaying filenames, 289–290
+  - primary key, 48
+  - program, 282
+  - renaming tables, 76
+  - SQL queries, 66
+  - tables, 47
+  - using variable names literally, 128–129
+  - validating HTML form information, 235–236
+  - variables, 121
+  - variables for database names, 195
+- navigation, usability engineering for, 41
+- nested if statements, 168–169
+- New Member Welcome page (Members Only), 341
+- NewCat_form.inc file, 323–324
+- NewCat_table.inc file, 319–320
+- NewName_form.inc file, 329–330
+- NewName_table.inc file, 324–325
+- Nielsen, Jakob (usability expert), 41
+- notices (PHP)
+  - for nonexistent array elements, 158–159
+  - for nonexistent variables, 122–123
+  - overview, 120
+  - preventing, 123
+- numerical data, 57, 58, 135–137
+
+## ● O ●
+
+- objects, 46–48, 51, 54
+- online catalog application. See Pet Catalog application
+- open source software, 19
+- opening PHP tag (<?php), 17, 116
+- opening sessions, 271
+- operating systems
+  - Apache Web server support for, 17, 29
+  - choosing for your Web site, 28
+  - MySQL support for, 13
+  - PHP support for, 16
+- operators
+  - arithmetic, 125–127
+  - comparison, 135–137
+  - or joining comparisons, 141–143
+- OR word (MySQL), 84, 85–86
+- ORDER BY clause, 83, 87, 220
+- organizing applications
+  - at the application level, 282–283
+  - need for, 281
+  - at the program level, 282, 283–288
+- outer joins, 88–90
+- output
+  - invisible, 373–374
+  - statements that must come before, 260
+
+## ● P ●
+
+- parentheses [()]
+  - in function calls, 153, 181
+  - with PHP arithmetic operators, 126
+  - square brackets confused with, 376
+- Parse error message, 371
+- passing values to functions, 153, 184–187
+- passwords. See also security
+  - adding to MySQL accounts, 102
+  - changing for MySQL accounts, 102
+  - checking with mysql_fetch_array function, 198–200
+  - for MySQL accounts, 96–97, 101–102
+  - for mysql client, 72
+  - recommendations for creating, 96–97
+  - for root account, 96
+  - for SQL queries, 70, 72
+- patterns, matching character strings to, 137–141, 369
+- percent sign (%)
+  - as arithmetic operator, 126
+  - for blank hostname, 95
+- performance. See speed
+- permissions
+  - changing, 100–101
+  - defined, 94
+  - mysql security database for, 99
+  - overview, 97–98
+  - removing, 102–103
+  - for SQL queries, 72
+  - table summarizing, 98
+- Pet Catalog application. See also Web database applications
+  - adding pets to the catalog, 295, 307–309, 316–330
+  - AddPet.php program, 326–330
+  - basic tasks, 310
+  - building the database, 295–303
+  - ChoosePetCat.php program, 317–320
+  - ChoosePetName.php program, 320–326
+  - choosing the data, 45
+  - database tables, 59–60
