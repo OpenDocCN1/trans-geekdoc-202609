@@ -1,0 +1,13 @@
+# # Blockchain Applications in Cybersecurity Solutions
+
+# ## Proof of Stake (PoS)
+
+PoS employs a randomized procedure to find out who has the likelihood to produce the subsequent block [9]. Blockchain users can hold their tokens for a certain duration to become a validator. The nodes are not only involved in validating process as a validator, but sometimes generate a new block and become a contributor. The nodes that act as validators are changed from time to time depending on their active involvement in rendering the blockchain. The probability at which the nodes generate new blocks depends on the number of coins or stakes they possess. The validator node involved in the validating process of a transaction gets a reward amount depending on their level of involvement in forming the block. On the other hand, due to inflation, validators may get a particular amount of coins. These rewards allow retaining the validators in the blockchain network. PoS is more efficient in conserving energy compared to any other consensus mechanisms.
+
+# ## Delegated Proof of Stake (DPoS)
+
+DPoS allows the users to gamble with their stakes to cast votes to different representatives in a transaction [10]. Each user’s vote has a different weightage in the transaction depending on how much stake they have used for casting the vote to a delegate. The vote of user ‘X’ had more weightage than the vote of user ‘Y’, when user ‘X’ used his 100 stakes for casting the vote whereas user ‘Y’ uses only 25. The representatives who secured more votes are given the right to generate a new block. The representatives receive a reward of a certain amount of stakes as transaction fee as in other consensus mechanisms. DPoS is faster and deals with more number of transactions. This mechanism is considered provide digital democracy as it follows a voting system based on stake-weighted votes.
+
+# ## Practical Byzantine Fault Tolerance (pBFT)
+
+In P2P networks, undisputed concurrences among trustworthy and non-faulty nodes help in accomplishing consensus. The basis of BFT is observable in a situation where all nodes reiterate an incoming message [11]. If a node keeps repeating the incoming message, then it evidently signifies that it does not have any fault. Alternatively, if the receivers replicate the incoming message, the network could effortlessly rule out the prospect of Byzantine nodes. Byzantine node denotes the traitor nodes which lie or mislead other nodes in the network deliberately. The byzantine node could also lie to the nodes that are concerned with the consensus protocol. An absolutely functional blockchain network would make sure that Byzantine Fault Tolerance in blockchain assists it in dealing with
