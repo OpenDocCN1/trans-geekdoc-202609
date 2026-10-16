@@ -1,0 +1,104 @@
+
+-   [选择你的受害者主机以进行 Cain & Abel 中的 ARP 欺骗](#c09.xhtml#rc09-fig-0011) a, b, c, d; 2. c; 3. d; 4. e; f
+
+![ FIGURE 9-12:  ARP poisoning results in Cain & Abel](images/9781119485476-fg0912.png)
+
+[FIGURE 9-12:](#c09.xhtml#rc09-fig-0012) ARP poisoning results in Cain & Abel
+
+The preceding steps show how easy it is to exploit a vulnerability and prove that Ethernet switches aren’t all they’re cracked up to be from a security perspective.
+
+#### MAC address spoofing
+
+MAC address spoofing tricks the switch into thinking that your computer is something else. You simply change your computer’s MAC address and masquerade as another user.
+
+![tip](images/tip.png)You can use this trick to test access control systems, such as your IPS/firewall and even your operating-system login controls that check for specific MAC addresses.
+
+#### LINUX-BASED SYSTEMS
+
+In Linux (and Unix), you can spoof MAC addresses with the ifconfig utility. Follow these steps:
+
+1. **While you’re logged in as root, use ifconfig to enter a command that disables the network interface.**
+
+    Insert the network interface number that you want to disable (usually, eth0) into the command, like this:
+
+    `[root@localhost root]# ifconfig eth0 down`
+
+2. **Enter a command for the MAC address you want to use.**
+
+    Insert the fake MAC address and the network interface number (eth0) into the command again, like this:
+
+    `[root@localhost root]# ifconfig eth0 hw ether new_mac_address`
+
+![tip](images/tip.png)You can use a more feature‑rich utility called GNU MAC Changer ([`https://github.com/alobbs/macchanger`](https://github.com/alobbs/macchanger)) for Linux systems.
+
+#### WINDOWS
+
+You can use regedit to edit the Windows Registry, but I like using a neat Windows utility called SMAC ([`www.klcconsulting.net/smac`](http://www.klcconsulting.net/smac)), which makes MAC spoofing a simple process. Follow these steps to use SMAC:
+
+1. **Load the program.**
+
+2. **Select the adapter for which you want to change the MAC address.**
+
+3. **Enter the new MAC address in the New Spoofed MAC Address fields, and click the Update MAC button.**
+
+4. **Stop and restart the network card with these steps:**
+
+    1. *Right-click the network card in Network and Dialup Connections, and choose Disable from the contextual menu.*
+
+    2. *Right-click again and then choose Enable from the contextual menu to make the change take effect.*
+
+    ![tip](images/tip.png)You may have to reboot for this process to work properly.
+
+5. **Click the Refresh button in the SMAC interface.**
+
+To reverse Registry changes with SMAC, follow these steps:
+
+1. **Select the adapter for which you want to change the MAC address.**
+
+2. **Click the Remove MAC button.**
+
+3. **Stop and restart the network card with these steps:**
+
+    1. *Right-click the network card in Network and Dialup Connections, and choose Disable from the contextual menu.*
+
+    2. *Right-click again and then choose Enable from the contextual menu to make the change take effect.*
+
+    ![tip](images/tip.png)You may have to reboot for this process to work properly.
+
+4. **Click the Refresh button in the SMAC interface.**
+
+    You should see your original MAC address again.
+
+#### Countermeasures against ARP poisoning and MAC address Spoofing attacks
+
+A few countermeasures on your network can minimize the effects of an attack against ARP and MAC addresses:
+
+*   **Prevention:** You can prevent MAC address spoofing if your switches can enable port security to prevent automatic changes in the MAC address tables.
+
+    ![warning](images/warning.png)No realistic countermeasures for ARP poisoning exist. The only way to prevent ARP poisoning is to create and maintain static ARP entries in your switches for every host on the network — something that hardly any network administrator has time to do in today’s rat race.
+
+*   **Detection:** You can detect these two types of hacks through an IPS or a stand‑alone MAC address‑monitoring utility.
+
+### Testing denial of service attacks
+
+Denial of service (DoS) attacks are among the most common hacker attacks. A hacker initiates so many invalid requests to a network host that the host uses all its resources to respond to the invalid requests and ignores the legitimate requests.
+
+#### DoS attacks
+
+DoS attacks against your network and hosts can cause systems to crash, data to be lost, and every user to jump on your case wondering when Internet access will be restored.
+
+Here are some common DoS attacks that target an individual computer or network device:
+
+*   **SYN floods:** The attacker floods a host with TCP SYN packets.
+
+*   **Ping of Death:** The attacker sends IP packets that exceed the maximum length of 65,535 bytes, which can crash the TCP/IP stack on many operating systems.
+
+*   **WinNuke:** This attack can disable networking on older Windows 95 and Windows NT computers.
+
+Distributed denial of service (DDoS) attacks have an exponentially greater effect on their victims. One of the most famous attacks of this type was the DDoS attack against eBay, Yahoo!, CNN, and dozens of other websites by a hacker known as MafiaBoy. There have also been highly publicized DDoS attacks against Twitter, Facebook, and other social media sites. The attack apparently was aimed at one user from Georgia (the former Soviet country, not the state where I live), but it affected everyone who used these sites. I couldn’t tweet, and many of my friends and family members couldn’t see what everyone was blabbing about on Facebook (oh, the humanity!). Numerous other highly publicized DDoS attacks have occurred since then. Think about this: When hundreds of millions of people can be taken offline by one targeted DDoS attack, you can see why understanding the dangers of DoS attacks against your business’s systems and applications is important.
+
+#### Testing
+
+DoS testing is one of the most difficult security checks you can run. There just aren’t enough of you and your computers to go around. Don’t fret. You can run a few tests to see where you’re weak. Your first test should be a search for DoS vulnerabilities from a vulnerability‑scanning perspective. By using vulnerability scanners, such as Nexpose ([`https://www.rapid7.com/products/nexpose`](https://www.rapid7.com/products/nexpose)) and AppSpider ([`https://www.rapid7.com/products/appspider`](https://www.rapid7.com/products/appspider)), you can find missing patches and configuration weaknesses that can lead to DoS. A Cisco router‑related tool called Synful Knock Scanner ([`http://talosintel.com/scanner`](http://talosintel.com/scanner)) can test systems for the nasty SYNful Knock malware that was discovered in 2015.
+
+Whichever one you use, good scanners and exploitation tools will save you a ton of time and effort that you can spend on other, more!! e!!! !<ref>

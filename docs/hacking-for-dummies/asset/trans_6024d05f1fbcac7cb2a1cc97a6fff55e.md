@@ -1,0 +1,99 @@
+
+Use an IPS to monitor regularly for DoS attacks. You can run a network analyzer in continuous capture mode if you can’t justify the cost of an all-out IPS solution and use it to monitor for DoS attacks.
+
+Configure firewalls and routers to block malformed traffic. You can enact this countermeasure only if your systems support it, so refer to your administrator’s guide for details.
+
+Minimize IP spoofing by filtering out external packets that appear to come from an internal address, the local host (127.0.0.1), or any other private and nonroutable address, such as 10.x.x.x, 172.16.x.x–172.31.x.x, or 192.168.x.x. The following paper from Cisco Systems provides more information: [`https://www.cisco.com/web/about/ac123/ac147/archived_issues/ipj_10-4/104_ip-spoofing.html`](https://www.cisco.com/web/about/ac123/ac147/archived_issues/ipj_10-4/104_ip-spoofing.html).
+
+Block all ICMP traffic inbound to your network unless you specifically need it. Even then, you should allow it to come in only to specific hosts.
+
+Disable all unneeded TCP/UDP small services, such as echo and chargen.
+
+Establish a baseline of your network protocols and traffic patterns before a DoS attack occurs. That way, you know what to look for. Also, periodically scan for such potential DoS vulnerabilities as rogue DoS software installed on network hosts.
+
+If you get yourself in a real bind and end up under direct DoS assault, you can reach out to managed service vendors such as Imperva Incapsula ([`https://www.incapsula.com/`](https://www.incapsula.com/)), Cloudflare ([`https://www.cloudflare.com/`](https://www.cloudflare.com/)), and DOSarrest ([`https://www.dosarrest.com/`](https://www.dosarrest.com/)).
+
+![remember](images/remember.png)Work with a `minimum necessary` mentality (not to be confused with having too many craft beers) when configuring your network devices, such as firewalls and routers. Identify traffic that’s necessary for approved network use. Allow the traffic that’s needed. Deny all other traffic.
+
+If worst comes to worst, ask your Internet service provider whether it can block DoS attacks from its end.
+
+## Detecting Common Router, Switch, and Firewall Weaknesses
+
+In addition to the technical exploits that I cover in this chapter, some high-level security vulnerabilities commonly found on network devices can create many problems.
+
+### Finding unsecured interfaces
+
+You want to ensure that HTTP and Telnet interfaces to your routers, switches, and firewall aren’t configured with a blank, default, or otherwise easy-to-guess password. This advice sounds like a no-brainer, but it’s one of the most common weaknesses. When a malicious insider or other attacker gains access to your network devices, he owns the network. Then he can lock out administrative access, set up backdoor user accounts, reconfigure ports, and even bring down the entire network without your ever knowing.
+
+![warning](images/warning.png)I once found a simple password that a systems integrator configured on a Cisco ASA firewall and was able to log in to the firewall with full administrative rights. Just imagine what could happen in this situation if someone with malicious intent came across this password. Lesson learned: The little things can get you. Know what your vendors are doing, and keep an eye on them!
+
+Another weakness is related to HTTP, FTP, and Telnet being enabled and used on many network devices. Care to guess why this situation is a problem? Well, anyone with some free tools and a few minutes of time can sniff the network and capture login credentials for these systems when they’re being sent in clear text. When that happens, anything goes.
+
+### Uncovering issues with SSL and TLS
+
+Secure Sockets Layer (SSL) and Transport Layer Security (TLS) were long touted as *the* solutions for securing network communications. Recently, however, SSL and TLS have come under fire from demonstrable exploits such as Heartbleed, Padding Oracle On Downgraded Legacy Encryption (POODLE), and Factoring Attack on RSA-EXPORT Keys (FREAK).
+
+General security vulnerabilities related to SSL and TLS are often uncovered by vulnerability scanners such as Nexpose and Netsparker. In addition to the preceding SSL/TLS vulnerabilities, be on the lookout for the following flaws:
+
+*   SSL versions 2 or 3 and TLS versions 1.0 or 1.1 in use
+
+*   Weak encryption ciphers such as RC4 and SHA-1
+
+If you’re unsure about existing SSL and TLS vulnerabilities on your systems, you don’t have to use a vulnerability scanner. Qualys has a nice website called SSL Labs ([`https://www.ssllabs.com/`](https://www.ssllabs.com/)) that will scan for these vulnerabilities for you.
+
+I didn’t used to be too concerned about SSL- and TLS-related vulnerabilities, but as security researchers and criminal hackers have been demonstrating, the threat is real and needs to be addressed.
+
+## Putting Up General Network Defenses
+
+Regardless of specific attacks against your system, a few good practices can prevent many network problems: 
+
+*   **Use stateful inspection rules that monitor traffic sessions for firewalls.** This practice can help ensure that all traffic traversing the firewall is legitimate and can prevent DoS attacks and other spoofing attacks.
+
+*   **Implement rules to perform packet filtering** based on traffic type, TCP/UDP ports, IP addresses, and even specific interfaces on your routers before the traffic is allowed to enter your network.
+
+*   **Use proxy filtering and Network Address Translation (NAT) or Port Address Translation (PAT).**
+
+*   **Find and eliminate fragmented packets entering your network** (from Fraggle or another type of attack) via an IPS.
+
+*   **Include your network devices in your vulnerability scans.**
+
+*   **Ensure that your network devices have the latest vendor firmware and patches applied.**
+
+*   **Set strong passwords (or, better, passphrases) on all network systems.** I cover passwords in detail in [Chapter 8](#c08.xhtml).
+
+*   **Don’t use Internet Key Exchange (IKE) aggressive mode preshared keys for your virtual private network.** If you must, ensure that the passphrase is strong and changed periodically (such as every 6 to 12 months).
+
+*   **Always use TLS (via HTTPS and so on) or SSH when connecting to network devices.**
+
+*   **Disable SSL and weak ciphers, and use TLS version 1.2 and strong ciphers such as SHA-2 where possible.**
+
+*   **Segment the network, and use a firewall on the following:** 
+
+    *   The DMZ
+
+    *   The internal network
+
+    *   Critical subnetworks broken down by business function or department, such as accounting, finance, human resources, and research
+
+Chapter 10
+
+# Wireless Networks
+
+IN THIS CHAPTER
+
+![check](images/check.png)**Understanding the risks of wireless networks**
+
+![check](images/check.png)**Selecting wireless network hacking tools**
+
+![check](images/check.png)**Cracking wireless encryption**
+
+![check](images/check.png)**Minimizing wireless network risks**
+
+Wireless local area networks (or Wi-Fi) — specifically, the ones based on the IEEE 802.11 standard — are deployed in many business and home network. Wi-Fi was the poster child for weak security and network attacks since the inception of 802.11. The stigma of unsecure Wi-Fi is starting to wane, but now isn’t the time to lower your defenses.
+
+Wi-Fi offers a ton of business value, from convenience to reduced network deployment time. Whether or not your organization allows wireless network access, you probably have it, so testing for Wi-Fi security vulnerabilities is critical.
+
+In this chapter, I cover some common wireless network security vulnerabilities that you should test for, and I discuss some cheap, easy countermeasures that you can implement to ensure that Wi-Fi isn’t more of a risk to your organization than it’s worth.
+
+## Understanding the Implications of Wireless Network Vulnerabilities
+
