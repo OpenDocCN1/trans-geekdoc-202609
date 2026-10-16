@@ -1,0 +1,15 @@
+The values encoded into machine learning systems are an ultimate expression of power. The most powerful can push for their version of ‘good.’ However, for machine learning systems to be worthy of trust, the final values cannot only be those that serve the powerful, but must also include the values of the most vulnerable. Chapter 14 explains technical approaches for bringing diverse voices into the value alignment process; here we try to understand what those voices have to say.
+
+But before getting there, let’s take a step back and think again about the governance of machine learning as a control system. What do we have to do to make it selfless and empowering for all? As shown in Figure 15.2, which extends Figure 14.5, there is a paradigm—a normative theory of how things should be done—that yields principles out of which values arise. The values then influence modeling.
+
+![](bbox=[0.12, 0.4, 0.92, 0.55])
+
+Figure 15.2. A paradigm determines the principles by which values are constructed. The paradigm is one of the most effective points in the system to intervene to change its behavior. Accessible caption. A block diagram that starts with a paradigm block with output principles. Principles are input to a value alignment block with output values. Facts are subtracted from values to yield misalignment. Misalignment is input to a data scientists block with modeling as output. Modeling is input to a machine learning model with output that is fed into a testing block. The output of testing is the same facts that were subtracted from values, creating a feedback loop. Paradigm is intervened upon, shown using a hammer.
+
+There are many leverage points in such a complex system to influence how it behaves.¹ Twiddling with parameters in the machine learning model is a leverage point that may have some small effect. Computing facts quickly and bringing them back to data scientists is a leverage point that may have some slightly larger effect. But the most effective leverage point to intervene on is the paradigm producing the principles.² Therefore, in this chapter, we focus on different paradigms and the principles, codes, and guidelines that come from them.
+
+# 15.1 Landscape of Principles
+
+Over the last several years, different groups from different sectors and different parts of the world have created ethics principles for machine learning (and artificial intelligence more broadly) that espouse their paradigms. Organizations from private industry, government, and civil society (the third sector that is neither industry nor government, and includes non-governmental organizations (NGOs)) have produced normative documents at similar rates. Importantly, however, organizations in more
+
+¹Donella H. Meadows. Thinking in Systems: A Primer. White River Junction, Vermont, USA: Chelsea Green Publishing, 2008. ²More philosophically, Meadows provides an even more effective leverage point: completely transcending the idea of paradigms through enlightenment.

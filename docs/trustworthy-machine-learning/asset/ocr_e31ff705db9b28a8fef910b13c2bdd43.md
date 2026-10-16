@@ -1,0 +1,17 @@
+of 1 indicates a totally unfair society where one person holds all the wealth and a value of 0 indicates an egalitarian society where all people have the same amount of wealth.
+
+What is the equivalent of wealth in the context of machine learning and distributive justice in health care management? It has to be some sort of non-negative benefit value $b_j$ that you want to be equal for different Sospital members. Once you’ve defined the benefit $b_j$, plug it into the Theil index expression and use it as a combined group and individual fairness metric:
+
+$$\text{Theil index} = \frac{1}{n}\sum_{j=1}^{n}\frac{b_j}{\bar{b}}\log\frac{b_j}{\bar{b}}$$
+
+Equation 10.7
+
+The equation averages the benefit divided by the mean benefit $\bar{b}$, multiplied by its natural log, across all people.
+
+That’s all well and good, but benefit to who and under which worldview? The research group that proposed using the Theil index in algorithmic fairness suggested that $b_j$ be 2 for false favorable labels (false positives), 1 for true favorable labels (true positives), 1 for unfavorable labels (true negatives), and 0 for false unfavorable labels (false negatives).¹³ This recommendation is seemingly consistent with the “what you see is what you get” worldview because it is examining model performance, assumes the costs of false positives and false negatives are the same, and takes the perspective of affected members who want to get care management even if they are not truly suitable candidates. More appropriate benefit functions for the problem specification of the Sospital model may be $b_j$ that are (1) 1 for true favorable and true unfavorable labels and 0 for false favorable and false unfavorable labels (“what you see is what you get” while balancing societal needs), or (2) 1 for true favorable and false favorable labels and 0 for true unfavorable and false unfavorable labels (“we’re all equal”).
+
+# 10.4.4  Conclusion
+
+Individual fairness consistency and Theil index are both excellent ways to capture various nuances of fairness in different contexts. Just like group fairness metrics, they require you to clarify your worldview and aim for the same goals in a bottom-up way. Since the Sospital care management setting is regulated using group fairness language, it behooves you to use group fairness metrics in your problem specification and modeling. Counterfactual or causal fairness is a strong requirement from the perspective of the philosophy and science of law, but the regulations are only just catching up. So you might need to utilize causal fairness in problem specifications in the future, but not just yet. As you’ve learned so far, the problem specification and data phases are critical for fairness. But that makes the modeling phase no less important. The next section focuses on bias mitigation to improve fairness as part of the modeling pipeline.
+
+¹³Till Speicher, Hoda Heidari, Nina Grgić-Hlača, Krishna P. Gummadi, Adish Singla, Adrian Weller, and Muhammad Bilal Zafar. “A Unified Approach to Quantifying Algorithmic Unfairness: Measuring Individual & Group Unfairness via Inequality Indices.” In: *Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*. London, England, UK, Jul. 2018, pp. 2239–2248.

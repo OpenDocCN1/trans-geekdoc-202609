@@ -1,0 +1,16 @@
+phrase to keep in mind is “those who can’t do, assume.” Causal discovery has two branches, shown back in Figure 8.2, each with a different assumption that you need to make. The first branch is based on conditional independence testing and relies on the *faithfulness* assumption. The main idea of faithfulness is that the conditional dependence and independence relationships among the random variables encode the causal relationships. There is no coincidental or deterministic relationship among the random variables that masks a causal relationship. The Bayesian network edges are the edges of the structural causal model. Faithfulness is usually true in practice.
+
+One probability distribution can be factored in many ways by choosing different sets of variables to condition on, which leads to different graphs. Arrows pointing in different directions also lead to different graphs. All of these different graphs arising from the same probability distribution are known as a *Markov equivalence class*. One especially informative example of a Markov equivalence class is the setting with just two random variables, say anxiety and wages.⁶ The graph with anxiety as the parent and wages as the child and the graph with wages as the parent and anxiety as the child lead to the same probability distribution, but with opposite cause-and-effect relationships. One important point about the conditional independence testing branch of causal discovery methods is that they find *Markov equivalence classes* of graph structures rather than finding single graph structures.
+
+The second branch of causal discovery is based on making assumptions on the form of the structural equations \(P(Y \mid do(t)) = f_Y(t, noise_Y)\) introduced in Equation 8.1. Within this branch, there are several different varieties. For example, some varieties assume that the functional model has a linear function \(f_Y\), others assume that the functional model has a nonlinear function \(f_Y\) with additive noise \(noise_Y\), and even others assume that the probability distribution of the noise \(noise_Y\) has small entropy. Based on the assumed functional form, a best fit to the observational data is made. The assumptions in this branch are much stronger than in conditional independence testing, but lead to single graphs as the solution rather than Markov equivalence classes. These characteristics are summarized in Table 8.1.
+
+Table 8.1. *Characteristics of the two branches of causal discovery methods.*
+
+| Branch | Faithfulness Assumption | Assumption on Functional Model | Markov Equivalence Class Output | Single Graph Output |
+|---|---|---|---|---|
+| conditional independence | X |  | X |  |
+| functional model |  | X |  | X |
+
+In the remainder of this section, you’ll see an example of each branch of causal discovery in action: the PC algorithm for conditional independence testing-based methods and the additive noise model-based approach for functional model-based methods.
+
+⁶Matthew Ridley, Gautam Rao, Frank Schilbach, and Vikram Patel. “Poverty, Depression, and Anxiety: Causal Evidence and Mechanisms.” In: *Science* 370.6522 (Dec. 2020), p. 1289.

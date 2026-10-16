@@ -1,0 +1,17 @@
+because that understanding is used in this and other later chapters. The reason to dive into the details of bias mitigation algorithms is different. In choosing a bias mitigation algorithm, you have to (1) know where in the pipeline you can intervene, (2) consider your worldview, and (3) understand whether protected attributes are allowed as features and will be available in the deployment data when you are scoring new Sospital members.
+
+![](bbox=[0.12, 0.27, 0.9, 0.35])
+
+Figure 10.8. Three types of bias mitigation algorithms in different parts of the machine learning pipeline. Accessible caption. A block diagram with a training dataset as input to a bias mitigation pre-processing block with a pre-processed dataset as output. The pre-processed dataset is input to a bias mitigation in-processing block with an initial model as output. The initial model is input to a bias mitigation post-processing block with a final model as output.
+
+# 10.5.1 Pre-Processing
+
+At the pre-processing stage of the modeling pipeline, you don’t have the trained model yet. So pre-processing methods cannot explicitly include fairness metrics that involve model predictions. Therefore, most pre-processing methods are focused on the “we’re all equal” worldview, but not exclusively so. There are several ways for pre-processing a training data set: (1) augmenting the dataset with additional data points, (2) applying instance weights to the data points, and (3) altering the labels.
+
+One of the simplest algorithms for pre-processing the training dataset is to append additional rows of made-up members that do not really exist. These imaginary members are constructed by taking existing member rows and flipping their protected attribute values (like counterfactual fairness).16 The augmented rows are added sequentially based on a distance metric so that ‘realistic’ data points close to modes of the underlying dataset are added first. This ordering maintains the fidelity of the data distribution for the learning task. A plain uncorrected distance metric takes the “what you see is what you get” worldview and only overcomes sampling bias, not measurement bias. A corrected distance metric like the example described in the previous section (adding two outpatient visits to the black members) takes the “we’re all equal” worldview and can overcome both measurement and sampling bias (threats to both construct and external validity). This data augmentation approach needs to have protected attributes as features of the model and they must be available in deployment data.
+
+Another way to pre-process the training data set is through sample weights, similar to inverse probability weighting and importance weighting seen in Chapter 8 and Chapter 9, respectively. The reweighing method is geared toward improving statistical parity (“we’re all equal” worldview), which can be assessed before the care management model is trained and is a dataset fairness metric.17 The goal of
+
+16 Shubham Sharma, Yunfeng Zhang, Jesús M. Rios Aliaga, Djallel Bouneffouf, Vinod Muthusamy, and Kush R. Varshney. “Data Augmentation for Discrimination Prevention and Bias Disambiguation.” In: Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society. New York, New York, USA. Feb. 2020, pp. 358–364.
+
+17 Faisal Kamiran and Toon Calders. “Data Preprocessing Techniques for Classification without Discrimination.” In: Knowledge and Information Systems 33.1 (Oct. 2012), pp. 1–33.
