@@ -1,0 +1,165 @@
+
+        *   FLAIR intensity [84](#C13_chapter6.xhtml#term-270)–86, [92](#C13_chapter6.xhtml#term-271)–96
+
+        *   texture analysis [92](#C13_chapter6.xhtml#term-272)–96
+
+        *   T1-weighted features [84](#C13_chapter6.xhtml#term-273)–86
+
+        *   volume reduction [84](#C13_chapter6.xhtml#term-274)
+
+        *   volumetry [92](#C13_chapter6.xhtml#term-275)–96
+
+        *   wavelet transform [84](#C13_chapter6.xhtml#term-276)
+
+    *   image processing [83](#C13_chapter6.xhtml#index_term951)–84
+
+    *   mesial temporal sclerosis [80](#C13_chapter6.xhtml#term-277)
+
+    *   MRI acquisition [83](#C13_chapter6.xhtml#term-278)
+
+    *   mTLE lateralization [92](#C13_chapter6.xhtml#term-279)
+
+    *   multi-structural volume features [90](#C13_chapter6.xhtml#term-280)–92, [98](#C13_chapter6.xhtml#term-281)–100
+
+    *   study population [82](#C13_chapter6.xhtml#term-282)–83
+
+    *   texture features of whole brain [89](#C13_chapter6.xhtml#term-283)–90, [97](#C13_chapter6.xhtml#term-284)–98
+
+*   supervised learning [115](#C14_chapter7.xhtml#index_term960)
+
+*   support vector machines (SVMs) [4](#C08_chapter1.xhtml#index_term961), [91](#C13_chapter6.xhtml#term-285), [98](#C13_chapter6.xhtml#term-286), [119](#C14_chapter7.xhtml#term-287), [136](#C15_chapter8.xhtml#term-288), [140](#C15_chapter8.xhtml#term-289), [141](#C15_chapter8.xhtml#term-290), [167](#C17_chapter10.xhtml#index_term968), [176](#C17_chapter10.xhtml#term-291), [177](#C17_chapter10.xhtml#term-292), [195](#C18_chapter11.xhtml#term-293), [210](#C19_chapter12.xhtml#index_term972)
+
+*   Swish [57](#C12_chapter5.xhtml#index_term973), [58](#C12_chapter5.xhtml#index_term974)
+
+*   Taghva, A. [212](#C19_chapter12.xhtml#index_term975)
+
+*   Tay, B. [212](#C19_chapter12.xhtml#index_term976)
+
+*   T-cell mediated rejection (TMR) [258](#C21_chapter14.xhtml#index_term977), [263](#C21_chapter14.xhtml#index_term978), [265](#C21_chapter14.xhtml#index_term979)
+
+*   temporal lobe epilepsy (TLE) [78](#C13_chapter6.xhtml#index_term980), [79](#C13_chapter6.xhtml#index_term981), [100](#C13_chapter6.xhtml#index_term982)
+
+    *   hippocampal sclerosis [211](#C19_chapter12.xhtml#index_term983)
+
+    *   segmentation and classification of [211](#C19_chapter12.xhtml#index_term984)
+
+*   thermal ablation [28](#C11_chapter4.xhtml#index_term985), [29](#C11_chapter4.xhtml#index_term986)
+
+*   thermal dose computation, patient-specific
+
+    *   computed tomography image dataset [39](#C11_chapter4.xhtml#term-294)
+
+    *   hepatic tumours [39](#C11_chapter4.xhtml#index_term988)
+
+    *   thermal doses [39](#C11_chapter4.xhtml#index_term989)
+
+    *   thermal simulation [41](#C11_chapter4.xhtml#index_term990)
+
+    *   volumetric heat source [39](#C11_chapter4.xhtml#term-295), [40](#C11_chapter4.xhtml#index_term992), [41](#C11_chapter4.xhtml#index_term993)
+
+*   thermal dose modelling, for thermal ablative therapy
+
+    *   cellular neural networks
+
+        *   architecture [31](#C11_chapter4.xhtml#term-296)–32
+
+        *   bio-heat transfer on 2D and 3D grids [33](#C11_chapter4.xhtml#term-297)–38
+
+        *   initial and boundary conditions [39](#C11_chapter4.xhtml#term-298)
+
+    *   soft tissue [30](#C11_chapter4.xhtml#index_term997)–31
+
+*   3D grids, CNN formulation of bio-heat transfer
+
+    *   irregular grids [38](#C11_chapter4.xhtml#term-305)–36
+
+    *   regular grids [37](#C11_chapter4.xhtml#term-306)–38
+
+*   3D reconstruction, of cerebral vasculature [235](#C20_chapter13.xhtml#term-301), [237](#C20_chapter13.xhtml#term-302)
+
+*   thrombolytic agents [209](#C19_chapter12.xhtml#term-303)
+
+*   thyroid nodules [116](#C14_chapter7.xhtml#index_term1003), [117](#C14_chapter7.xhtml#index_term1004)
+
+*   Ting, D.S.W. [20](#C10_chapter3.xhtml#index_term1005)
+
+*   TLE *see* [temporal lobe epilepsy (TLE)](#C22_index.xhtml#idx402)
+
+*   transfer learning [116](#C14_chapter7.xhtml#index_term1006), [118](#C14_chapter7.xhtml#index_term1007), [119](#C14_chapter7.xhtml#index_term1008), [143](#C15_chapter8.xhtml#index_term1009), [148](#C16_chapter9.xhtml#index_term1010), [149](#C16_chapter9.xhtml#index_term253), [161](#C16_chapter9.xhtml#index_term1012), [204](#C18_chapter11.xhtml#index_term1013)
+
+    *   layer-wise freezing of [151](#C16_chapter9.xhtml#index_term1014), [152](#C16_chapter9.xhtml#term-304)
+
+    *   with natural images [149](#C16_chapter9.xhtml#index_term1016)–152
+
+*   Tsallis entropy (TsEn) [136](#C15_chapter8.xhtml#index_term1017)
+
+*   Tversky index [149](#C16_chapter9.xhtml#index_term1018), [153](#C16_chapter9.xhtml#index_term1019), [154](#C16_chapter9.xhtml#index_term1020)
+
+*   2D grids, CNN formulation of bio-heat transfer
+
+    *   irregular grids [34](#C11_chapter4.xhtml#term-305)–36
+
+    *   regular grids [33](#C11_chapter4.xhtml#term-306)–34
+
+*   ultrasound (US) [9](#C09_chapter2.xhtml#index_term1023), [110](#C14_chapter7.xhtml#index_term1024)–113
+
+    *   advantages [111](#C14_chapter7.xhtml#index_term1025)
+
+    *   B-mode [112](#C14_chapter7.xhtml#index_term1026), [117](#C14_chapter7.xhtml#index_term1027), [118](#C14_chapter7.xhtml#index_term1028)
+
+    *   cardiology, AI-powered US in [120](#C14_chapter7.xhtml#term-307)–122
+
+    *   contrast enhanced [112](#C14_chapter7.xhtml#index_term1030)–113
+
+    *   Doppler [112](#C14_chapter7.xhtml#index_term1031)
+
+    *   M-mode [112](#C14_chapter7.xhtml#index_term1032)
+
+    *   point-of-care [120](#C14_chapter7.xhtml#index_term1033), [122](#C14_chapter7.xhtml#term-308)
+
+    *   radiology, AI-powered US in [115](#C14_chapter7.xhtml#term-309)–120
+
+    *   shear wave elastography [112](#C14_chapter7.xhtml#index_term1036), [119](#C14_chapter7.xhtml#term-310)
+
+    *   sound waves [110](#C14_chapter7.xhtml#index_term1038), [111](#C14_chapter7.xhtml#index_term1039)
+
+    *   transducer [110](#C14_chapter7.xhtml#index_term1040)
+
+*   U-Net [153](#C16_chapter9.xhtml#index_term1041), [155](#C16_chapter9.xhtml#index_term1042), [156](#C16_chapter9.xhtml#index_term1043), [161](#C16_chapter9.xhtml#index_term1044)
+
+*   unified segmentation [89](#C13_chapter6.xhtml#index_term1045), [97](#C13_chapter6.xhtml#index_term1046), [98](#C13_chapter6.xhtml#index_term1047), [102](#C13_chapter6.xhtml#index_term1048)
+
+*   US *see* [ultrasound (US)](#C22_index.xhtml#idx422)
+
+*   Vgg16 [58](#C12_chapter5.xhtml#term-311), [59](#C12_chapter5.xhtml#term-312), [67](#C12_chapter5.xhtml#index_term1051), [69](#C12_chapter5.xhtml#term-313), [72](#C12_chapter5.xhtml#index_term1053)
+
+*   viral infection (VI) [259](#C21_chapter14.xhtml#index_term1054), [265](#C21_chapter14.xhtml#index_term1055)
+
+*   visual impairment [19](#C10_chapter3.xhtml#index_term1056), [21](#C10_chapter3.xhtml#index_term1057)
+
+*   visual inspection [134](#C15_chapter8.xhtml#index_term1058), [135](#C15_chapter8.xhtml#term-314)
+
+*   Wang, J. [119](#C14_chapter7.xhtml#index_term1060)
+
+*   Wang, X. [210](#C19_chapter12.xhtml#index_term1061)
+
+*   Webner–Fechner law [57](#C12_chapter5.xhtml#index_term1062)
+
+*   working memory task [135](#C15_chapter8.xhtml#term-315)
+
+*   Wu, F. [119](#C14_chapter7.xhtml#index_term1064)
+
+*   xgboost algorithm [215](#C19_chapter12.xhtml#term-316)
+
+*   Yang, L. [29](#C11_chapter4.xhtml#index_term1066)
+
+*   Yoon, Y.H. [120](#C14_chapter7.xhtml#index_term1067)
+
+*   Yu, Z. [119](#C14_chapter7.xhtml#index_term1068)
+
+*   Zacharaki, E.I. [210](#C19_chapter12.xhtml#index_term1069)
+
+*   Zhang, J. [29](#C11_chapter4.xhtml#index_term1070)
+
+*   Zhang, X. [118](#C14_chapter7.xhtml#index_term1071), [121](#C14_chapter7.xhtml#index_term1072)
+
