@@ -1,0 +1,45 @@
+
+where `p`\[`I**m**g`\[`t`\]`inline-graphic style="height:1.25em;" xlink:href="bk978-0-7503-2244-7ch2ieqn32.gif"/ is constant and `p`\[`k`\[`t`\], `c`\[`t`\] ∣ `I**m**g`\[`t`\]`inline-graphic style="height:1.25em;" xlink:href="bk978-0-7503-2244-7ch2ieqn33.gif"/ can be described as a combination of affine detection `p`(`k`\[`t`\]∣`θ`,`I**m**g`\[`t`\])inline-graphic style="height:1.5625em;" xlink:href="bk978-0-7503-2244-7ch2ieqn34.gif"/, non-rigid probabilistic segmentation `p`\[`c`\[`t`\] ∣ `θ`, `k`\[`t`\], `I**m**g`\[`t`\]`inline-graphic style="height:1.25em;" xlink:href="bk978-0-7503-2244-7ch2ieqn35.gif"/, and the prior of affine parameters `p`\[`θ` ∣ `I**m**g`\[`t`\]`inline-graphic style="height:1.25em;" xlink:href="bk978-0-7503-2244-7ch2ieqn36.gif"/:
+
+`p`(`k`\[`t`\], `c`\[`t`\] ∣ `I**m**g`\[`t`\]) = ∫`p`(`k`\[`t`\] ∣ `θ`,`I**m**g`\[`t`\]) `p` \[`c`\[`t`\] ∣ `θ`, `k`\[`t`\], `I**m**g`\[`t`\]\] `p` \[`θ` ∣ `I**m**g`\[`t`\]\]`d**θ**`,  
+
+(2.10)graphic style="width:38.8125em;" xlink:href="bk978-0-7503-2244-7ch2eqn37.gif" position="float"/
+
+where `θ` represents the parameters of the affine transformation, `k`\[`t`\]inline-graphic style="height:1.125em;" xlink:href="bk978-0-7503-2244-7ch2ieqn38.gif"/ symbolizes the cardiac phase, and `c`\[`t`\]inline-graphic style="height:0.875em;" xlink:href="bk978-0-7503-2244-7ch2ieqn39.gif"/ denotes the LV contour at time stamp `t`. The affine transformation is marginalized using prior information in order to estimate the segmentation and cardiac phase. The segmentation of the heart is performed in two stages by two different sets of DBNs, as shown by equations ([2.9](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2eqn9)) and ([2.10](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2eqn10)). The initial rough contour is determined by the first DBN and then smoothening of the LV shape is carried out. The primary stage is implemented by a cascade of three DBNs trained on three different priors, i.e. systole, diastole, and non-LV. The second stage produces an improved delineation using a principle component analysis based shape model. The LV borders were traced by four cardiologists and one technician. All the DBNs were trained using the same ground truth. The parameters of performance considered for the experiment were average error (AV), mean absolute distance (MAD), Jaccard distance (JD), and average perpendicular error (AVP), which were be 0.83, 0.91, 0.95, and 0.83, respectively. The results were better compared to previous models \[[40](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2bib40), [41](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2bib41)\]. The process model and output images are shown in figures [2.8](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2fig8) and [2.9](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2fig9), respectively.
+
+![Figure 2.8. DBN based LV contour tracking model.](images/bk978-0-7503-2244-7ch2f8_online.jpg)
+
+**Figure 2.8.** DBN based LV contour tracking model.
+
+![Figure 2.9. Output of DBN based segmentation of the LV. The auto-detected outline is shown in yellow, COM \[40\] is outlined in magenta, multiple model data association \[41\] is outlined in cyan, and the ground truth outline is displayed in blue. (Reproduced with permission from \[39\]. Copyright 2013 IEEE.)](images/bk978-0-7503-2244-7ch2f9_online.jpg)
+
+**Figure 2.9.** Output of DBN based segmentation of the LV. The auto-detected outline is shown in yellow, COM \[[40](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2bib40)\] is outlined in magenta, multiple model data association \[[41](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2bib41)\] is outlined in cyan, and the ground truth outline is displayed in blue. (Reproduced with permission from \[[39](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2bib39)\]. Copyright 2013 IEEE.)
+
+##### 2.3.1.2 Automatic segmentation of the left ventricle in cardiac MRI
+
+There are several limitations to conventional LV segmentation models, i.e. leakage, shrinking, and initialization. Therefore, a combination of deep learning along with conventional models, i.e. deformable methods, is proposed to resolve the issues of a lack of data and lower accuracy. The issue of restricted data size is tackled using data augmentation techniques and better design. In this section LV segmentation from an MRI dataset is considered \[[42](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2bib42)\].
+
+The dataset is derived from the MICCAI 2009 dataset challenge and consists of 45 MR cardiac images. Initially, a binary mask was obtained using a CNN deep learning model. The binary mask was used to generate the ROI within the MR dataset. The parameters of the CNN model were trained using an autoencoder. The ROI was applied to the MR images to obtain an initial LV shape `ξ`^(\[0\])inline-graphic style="height:1.25em;" xlink:href="bk978-0-7503-2244-7ch2ieqn40.gif"/ using an autoencoder architecture. Thereafter, the conventional technique of the deformable model was applied to delineate the final LV shape. Finally, a 3D model of the LV contour was obtained. The equation is
+
+`ξ`^(\*) = arg _min[`δ`]*E*\[`ξ`\],  
+
+(2.11)graphic style="width:38.8125em;" xlink:href="bk978-0-7503-2244-7ch2eqn41.gif" position="float"/
+
+where `ξ`^(\*)inline-graphic style="height:1.125em;" xlink:href="bk978-0-7503-2244-7ch2ieqn42.gif"/ denotes the contour shape and *E* represents the energy function. The final contour shape was obtained iteratively using the gradient descend method, which is given as
+
+$$\\quad\\xi^{\\lbrack i + 1\\rbrack} = \\xi^{\\lbrack i\\rbrack} + \\eta\\frac{d\\xi}{dt},$$  
+
+(2.12)graphic style="width:38.8125em;" xlink:href="bk978-0-7503-2244-7ch2eqn43.gif" position="float"/
+
+where `η` denotes the step size, *i* represents successive iterations, and $\\frac{d\\xi}{dt}$inline-graphic style="height:1.8125em;" xlink:href="bk978-0-7503-2244-7ch2ieqn44.gif"/ represents the change in `ξ` with respect to time.
+
+The process model, and 2D and 3D segmentation outputs are displayed in figures [2.10](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2fig10), [2.11](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2fig11)(a) and (b), respectively. The performance parameters of the Dice metric, APD, and conformity are 0.94, 1.81, and 0.86, respectively. Although the proposed model performance was better compared to conventional models, the hardware used was a CPU, and therefore slow. The DL models used were one or two layers deep and hence cannot reach generalization for a larger corpus.
+
+![Figure 2.10. DL based LV contour tracking model for MRI images.](images/bk978-0-7503-2244-7ch2f10_online.jpg)
+
+**Figure 2.10.** DL based LV contour tracking model for MRI images.
+
+![Figure 2.11. (a) Example of outputs from the DL based LV segmentation. The auto-detected LV contour is shown in red-black as indicated by arrow ‘a’, while the ground truth contour is displayed in green as indicated by arrow ‘b’. (b) Inferred 3D shape from the given model with side, top, and bottom cross-sections. (Reproduced with permission from \[42\]. Copyright 2016 Elsevier.)](images/bk978-0-7503-2244-7ch2f11_online.jpg)
+
+**Figure 2.11.** (a) Example of outputs from the DL based LV segmentation. The auto-detected LV contour is shown in red-black as indicated by arrow ‘a’, while the ground truth contour is displayed in green as indicated by arrow ‘b’. (b) Inferred 3D shape from the given model with side, top, and bottom cross-sections. (Reproduced with permission from \[[42](#Chapter_2.xhtml#bk978-0-7503-2244-7ch2bib42)\]. Copyright 2016 Elsevier.)
+
