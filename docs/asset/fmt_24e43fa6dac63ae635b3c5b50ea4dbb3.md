@@ -1,0 +1,194 @@
+
+- T 细胞介导的排斥 (262), (263), (265)
+- 供体肾移植 (258)
+- 切除手术 (78), (82)
+- 受限玻尔兹曼机 (RBMs) (167), (169)
+- `r`-邻域 (34)
+- RNNs *see* 循环神经网络 (RNNs)
+- Romhilt–Estes 多层次评分 (200)
+- 玫瑰痤疮 (10), (11), (13)
+- Rozza, A. (57)
+- 规则诱导方法 (168)
+- Saadeh, W. (5)
+- 显著性图 (124)
+- Samsung S-Detect CAD 系统 (117)
+- Scaled Exponential Linear Unit (`SELU`) (57), (60)–61
+- Schwenke, M. (29)
+- Sedasys 计算机辅助个性化镇静 3, 6, 7
+- segmentation
+  - algorithms 211
+  - of amygdala and hippocampus 86–87
+  - class imbalance in 148, 153
+  - Gram–Schmidt orthogonalization 89, 97, 98
+  - kidney 261
+  - left ventricle 122
+  - level-sets approach 261
+  - MRA for detection of cerebrovascular changes
+    - automatic 229–236, 238–239
+    - manual 229, 236, 238
+  - of thyroid nodules 117
+  - tumor 210–211
+  - unified 89, 97, 98
+- seizures 78, 92
+- semi-supervised learning 204
+- Senders, J.T. 214
+- sensor event 173, 185
+- sensor-level analysis, MCI/AD diagnosis using E/MEG 134, 138, 140
+  - alpha frequency 135
+  - analysis of variance 136
+  - binary classifications 135
+  - Bootstrapping 137
+  - central tendency 136
+  - complete ensemble empirical mode decomposition 138
+  - conventional frequency bands 136
+  - dispersion entropy 134
+  - EEG-based ERPs as neuromarkers 135
+  - enhanced probabilistic neural network 138
+  - fuzzy entropy 136
+  - graph index complexity 137
+  - Higuchi fractal dimension 136
+  - k-mean cluster 135
+  - Kruskal–Wallis statistical tests 135
+  - Lempel–Ziv complexity 136
+  - linear discriminant analysis 136
+  - median frequency 135
+  - multilayer perceptron artificial neural network 136
+  - multiple classifiers 137
+  - permutation disalignment index 136
+  - quadratic discriminant analysis 136
+  - sample entropy 136
+  - spectral entropy 136
+  - support vector machine classifier 136
+  - trial-by-trial negative correlations 137
+  - Tsallis entropy 136
+  - `t`‑test 134, 135
+  - visual inspection 135
+  - working memory task 135
+- shear wave elastography (SWE) 111, 112, 119
+- Shi, H.Y. 214
+- single-domain amnestic MCI (sdMCI) 140
+- skin disease 10, 16
+- skin imaging technology 9–10
+- sliding-window approach 173
+- `softmax` nonlinearity function 114
+- soft tissue thermal dose modelling 30–31
+- somatosensory evoked potentials (SEPs) 213
+- source-level analysis, MCI/AD diagnosis using E/MEG 138–142
+  - beamformer technique 140
+  - binary classification 140
+  - correlation of envelope 141
+  - eLORETA 141
+  - FFT-based power spectral analysis 141
+  - five-fold cross-validation 140
+  - imaginary part of PLV 141
+  - K-nearest neighbor 140
+  - linear discriminant analysis 140
+  - linearly constrained minimum variance 141
+  - Mahalanobis distance classifier 140
+  - multiple-domain amnestic MCI 140
+  - phase-locking value 141
+  - single-domain amnestic MCI 140
+  - source reconstruction 138
+  - standardized low-resolution brain electromagnetic tomography 138
+  - support vector machine 140, 141
+  - time-domain connectivity matrix 140
+- source reconstruction (SR) 137, 138, 141
+- Sparapani, R. 196
+- sphygmomanometer 227, 228
+- spinal cord injury (SCI) 212, 214, 215
+- S-shaped Rectified Linear Activation Unit (`SReLU`) 57, 61–62
+- stacked denoising autoencoder model 118
+- standardized low-resolution brain electromagnetic tomography (sLORETA) 138
+- SteatoTest 196
+- Stevens law 57
+- stochastic gradient descent (SGD) 114
+- stochastic variational inference (SVI) 156
+- structural MRI data, for epilepsy
+  - DTI-based response-driven modeling 87–89, 96–97
+  - feature analysis and classification 84
+  - hippocampal and amygdalar study
+    - FLAIR intensity 86–87, 96
+    - volumetry 86–87, 96
+  - hippocampus study
+    - FLAIR intensity 84–86, 92–96
+    - texture analysis 92–96
+    - T1-weighted features 84–86
+    - volume reduction 84
+    - volumetry 92–96
+    - wavelet transform 84
+  - image processing 83–84
+  - mesial temporal sclerosis 80
+  - MRI acquisition 83
+  - mTLE lateralization 92
+  - multi-structural volume features 90–92, 98–100
+  - study population 82–83
+  - texture features of whole brain 89–90, 97–98
+- supervised learning 115
+- support vector machines (SVMs) 4, 91, 98, 119, 136, 140, 141, 167, 176, 177, 195, 210
+- `Swish` 57, 58
+- Taghva, A. 212
+- Tay, B. 212
+- T-cell mediated rejection (TMR) 258, 263, 265
+- temporal lobe epilepsy (TLE) 78, 79, 100
+  - hippocampal sclerosis 211
+  - segmentation and classification of 211
+- thermal ablation 28, 29
+- thermal dose computation, patient-specific
+  - computed tomography image dataset 39
+  - hepatic tumours 39
+  - thermal doses 39
+  - thermal simulation 41
+  - volumetric heat source 39, 40, 41
+- thermal dose modelling, for thermal ablative therapy
+  - cellular neural networks
+    - architecture 31–32
+    - bio-heat transfer on 2D and 3D grids 33–38
+    - initial and boundary conditions 39
+  - soft tissue 30–31
+- 3D grids, CNN formulation of bio-heat transfer
+  - irregular grids 38–36
+  - regular grids 37–38
+- 3D reconstruction, of cerebral vasculature 235, 237
+- thrombolytic agents 209
+- thyroid nodules 116, 117
+- Ting, D.S.W. 20
+- TLE *see* temporal lobe epilepsy (TLE)
+- transfer learning 116, 118, 119, 143, 148, 149, 161, 204
+  - layer-wise freezing of 151, 152
+  - with natural images 149–152
+- Tsallis entropy (TsEn) 136
+- Tversky index 149, 153, 154
+- 2D grids, CNN formulation of bio-heat transfer
+  - irregular grids 34–36
+  - regular grids 33–34
+- ultrasound (US) 9, 110–113
+  - advantages 111
+  - B-mode 112, 117, 118
+  - cardiology, AI-powered US in 120–122
+  - contrast enhanced 112–113
+  - Doppler 112
+  - M-mode 112
+  - point-of-care 120, 122
+  - radiology, AI-powered US in 115–120
+  - shear wave elastography 112, 119
+  - sound waves 110, 111
+  - transducer 110
+- `U-Net` 153, 155, 156, 161
+- unified segmentation 89, 97, 98, 102
+- US *see* ultrasound (US)
+- `Vgg16` 58, 59, 67, 69, 72
+- viral infection (VI) 259, 265
+- visual impairment 19, 21
+- visual inspection 134, 135
+- Wang, J. 119
+- Wang, X. 210
+- Webner–Fechner law 57
+- working memory task 135
+- Wu, F. 119
+- `xgboost` algorithm 215
+- Yang, L. 29
+- Yoon, Y.H. 120
+- Yu, Z. 119
+- Zacharaki, E.I. 210
+- Zhang, J. 29
+- Zhang, X. 118, 121
