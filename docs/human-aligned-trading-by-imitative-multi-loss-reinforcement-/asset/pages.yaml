@@ -1,0 +1,1297 @@
+- pgno: 0
+  md: '# # Human-aligned trading by imitative multi-loss reinforcement learning
+
+
+    Zhengxin Joseph Ye*, Björn W. Schuller
+
+
+    *GLAM, Department of Computing, Imperial College London, UK*
+
+
+    # ## ARTICLE INFO
+
+
+    +   **Keywords:**
+
+    +   - Algorithmic trading
+
+    +   - Reinforcement learning
+
+    +   - Deep Q network
+
+    +   - Imitation learning
+
+    +   - Human alignment
+
+
+    # ## ABSTRACT
+
+
+    Research into algorithmic trading using reinforcement learning has been garnering
+    increasing popularity in recent years. While most research work focuses on solving
+    a certain modelling problem or data problem with positive results, we believe
+    that in an application as critical as financial trading, aligning the machine
+    to human behaviours is imperative and should be regarded as the basis of all further
+    improvements before machine algorithms are free to go their own innovative ways.
+    In this paper, we are proposing a trading model whose design principles are based
+    on bringing a machine trading agent close to a human trader. We study areas where
+    human alignment is necessary and introduce as a solution a novel multi-loss function
+    of the model combining supervised learning, single-step and multi-step Q learning,
+    and also inject the paradigm of imitation learning in the training and trading
+    processes. We also introduce a realistic backtesting setup and a holding position-aware
+    profit calculation scheme under which the machine algorithm conducts intra-day
+    trading using minute tick data over a group of U.S. stocks chosen to represent
+    different industrial sectors and liquidity levels. Our model’s overall out-performance
+    over a group of baseline models as well as our ablation study results justify
+    the inclusion of individual model features all of which are introduced to bring
+    aspects of the model behaviour more aligned with those of a human trader.
+
+
+    # ## 1. Introduction
+
+
+    Over the past decade, improving and optimising financial trading models/systems
+    through the prowess of machine learning methodologies has been receiving plenty
+    of attention in the Machine Learning and Finance communities, whether it is with
+    the help of supervised learning (Chou & Nguyen, 2018; Tsai et al., 2019), unsupervised
+    learning (Hu et al., 2018), or Reinforcement Learning (RL). RL is a machine learning
+    method that obtains action improvement through continuous interaction with the
+    environment. It has drawn much general attention due to its remarkable achievements
+    in playing video games (Mnih et al., 2015) and board games (Silver et al., 2016).
+    Its advantage is the ability of self-learning, online learning, and continuous
+    decision making. Deep Q Networks (DQNs) (Mnih, 2013), an important variant of
+    modern RL, have in particular been garnering increasing popularity because their
+    intrinsic value-based rewarding mechanism resembles very well the profit searching
+    and risk balancing goals of various investment/trading processes. For example,
+    DQN was adopted by both (Carapuço, Neves, & Horta, 2018; Jeong & Kim, 2019) with
+    the former trading the EUR/USD currency pair and the latter trading four different
+    stock indexes. Ning, Lin, and Jaimungal (2021) optimised trade execution by using
+    DQN to estimate optimal actions of a trader. While these works employed vanilla
+    versions of the model, more complex modelling has also emerged. For instance,
+    Carta, Ferreira, et al. (2021) adopted an
+
+
+    intelligent multi-agent ensemble approach for stock market forecasting, whereas
+    (Tsantekidis et al., 2021) used an additional price trailing reward for their
+    DQN based model which encouraged the agent to track the future price of a traded
+    asset.
+
+
+    While these works presented good results underpinning the feasibility and extensibility
+    of DQN in algorithmic trading, we have noticed that a lot of advancements in building
+    such trading algorithms are conceived as ways to tackle either data problems or/and
+    model problems. These are legitimate motivations which we would explore more in
+    separate research studies. On the other hand though, the question we are asking
+    is that, while reinforcement learning’s intrinsic paradigm of trial and error
+    could allow the agent to arrive at a good solution on its own achieving a certain
+    quantifiable goal thanks to certain excellent model design and ability to discern
+    noisy and non-stationary data, could such a goal still differ from how a human
+    trader would approach the job (Hussein, Gaber, Elyan, & Jayne, 2017)? Or asking
+    differently, how to best align the learnt behaviour to the true human behaviour?
+
+
+    With these questions in mind, we set out to design a DQN-based trading model with
+    a focus on aligning to actual human trading behaviours. We call this model Human-Aligned
+    Trading (HAT). As inspired by a key design decision of the world-renowned AlphaGo
+    which benefited from a pre-training of 30 million expert actions (Silver et al.,'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '2016), our questions first bring us to Imitation Learning, which refers to
+    a learning agent''s acquisition of skills and behaviours by observing a demonstration.
+    Imitation learning has its inspiration and basis stemmed in neuroscience and is
+    an important part of machine intelligence and human computer interaction (Schaal,
+    1999). Specifically for a DQN-based agent, in order for it to learn a good mapping
+    between state and action, it often requires going through hundreds of thousands
+    of steps of learning and re-learning, but in critical real domains such as financial
+    trading, the agent must learn with real consequences for its actions, which requires
+    that the agent has good online performance from the start of trading. Adopting
+    the concept of Imitation Learning in this work, we rely on demonstration data
+    to make the greedy policy induced by the value function imitate a human trader
+    from the start of learning, and then continue improving from its own self-generated
+    data.
+
+
+    Once pre-trained with expert demonstration data, is there any further guarantee
+    that the trading agent would continue to trade like a human trader? We note that
+    the process of algorithmic trading can be essentially viewed as a combination
+    of continuous interpretation of market conditions and optimal execution of trading
+    actions (Deng, Bao, et al., 2017) with the latter being driven by the loss function
+    when a DQN-based agent takes the place of a human trader. If we want to regulate
+    the algorithm''s trading behaviour, we need to work on the loss function. The
+    majority of work in algorithmic trading in the literature uses a single loss function
+    on a single-step reward function based on a certain financial metric (Carapuço
+    et al., 2018; Li, Zheng, & Zheng, 2019; Wen, Yuan, & Yang, 2021; Xiong et al.,
+    2018), such as cumulative return or Sharpe ratio, etc., but we believe a joint
+    multi-loss function should be used to capture a variety of different constraints
+    and dynamics, similar to the work by Hessel et al. (2018).
+
+
+    Specifically, we first add to the mix a supervised loss on the trading actions.
+    Since demonstration data is potentially covering a narrow part of the state and
+    action space, pre-training the DQN in this condition would potentially update
+    the network towards local maxima if we only rely on Q-learning to update towards
+    the max value of the next state. As proven by Piot, Geist, and Pietquin (2014a,
+    2014b), adding supervised loss grounds the values of the unseen actions to reasonable
+    values and also makes the action policy induced by the value function imitate
+    the demonstrator.
+
+
+    We know that systematic traders do not blindly follow the market trend despite
+    the existence of trend-following techniques (Lemperiere, Deremble, et al., 2014).
+    This is the main reason we chose RL over supervised learning so that the agent
+    will focus on the magnitude of trading rewards or PnL (Profit and Loss). We want
+    to offer the model a longer term view of the market so that it is not merely following
+    the direction of each ticking price and not always trying to execute a trade at
+    the next immediate opportunity (Tsantekidis et al., 2021). After all, frequently
+    changing the trading positions (long or short) will contribute nothing to the
+    profits but lead to losses due to the transaction cost and slippage (Deng et al.,
+    2017). Therefore, we employ multi-step Q-learning (Sutton, 1988) as a solution
+    to provide longer term view at each update, enabling the agent to overcome the
+    limitations of working with a single time step. As seen in Hernandez-Garcia and
+    Sutton (2018), Hessel et al. (2018), Meng, Gorbet, and Kulic (2021) and Yuan,
+    Yu, et al. (2019), multi-step methods have been shown to be more efficient than
+    the single-step approach, delivering faster propagation of the reward signal and
+    improving learning speed and final performance. Consequently, the additional deployment
+    of a multi-step loss component at our model output should produce more sensible
+    trade execution behaviour closer to how a human trader would do.
+
+
+    Prioritised Experience Replay (PER) (Schaul, Quan, Antonoglou, & Silver, 2016)
+    is employed so that our learning agent samples important transitions from its
+    replay buffer more frequently rather than uniformly sampling from the replay buffer.
+    It helps achieve more efficient learning and is another way to better align the
+    agent to human behaviour. We also deploy discrete wavelet transformation (DWT)
+    (Lin et al., 2014)
+
+
+    to remove higher frequency noises present in the stock price time series data
+    for smoothing purposes prior to feeding them to the Long Short-Term Memory (LSTM)
+    component of the model network.
+
+
+    The proposed model is backtested on real intraday minute tick data for stock trading
+    with the model trained to take one of three actions at each time point: buy, sell,
+    and hold. Short selling is allowed and bid/ask spreads are considered. We choose
+    5 blue chip stocks and 5 small cap stocks from the U.S. markets and run our testing
+    through three periods of time, where the overall market movement as represented
+    by the movement of the S&P500 index went through a period of uptrend, downtrend,
+    or sideways movement. To sign off, we compare the cumulative intraday return of
+    our model against a buy-and-hold strategy and a host of baseline models to demonstrate
+    that not only we achieve the best trading results, but our algorithm trades more
+    sensibly.
+
+
+    The main contribution of this paper to the literature is a proposal of targeted
+    solutions which aim to better align trading behaviours by machine to those of
+    a human trader. We approach this applied science problem by seeking answers to
+    our own questions in this very topic and later translating such answers to modelling
+    features all of which eventually become part of an integrated model. Technologically,
+    this is a model that runs on a novel joint loss function combining supervised
+    learning, single-step and multi-step Q learning while also injecting the paradigms
+    of imitation learning to the training and running process, assisted by components
+    such as PER and DWT. We show that each element of the overall architecture serves
+    to address a very specific and practical behavioural element in trading that machines
+    need to adapt to in order to function more human-like, as seen in Section 3. In
+    addition, we also propose in Section 4 a realistic trading and profit calculation
+    scheme which considers current stock holding positions as well as a backtesting
+    scheme which eliminates unrealistic assumptions commonly seen in the literature
+    both of which we hope would become part of a realistic benchmark setup for testing
+    machine learning models used in algorithmic trading research.
+
+
+    # 2. Related work
+
+
+    # 2.1. Reinforcement learning in trading
+
+
+    Early work by Moody and Wu (1997) aimed at demonstrating the efficiency of RL
+    methodology for training trading systems. The authors created a Recurrent Reinforcement
+    Learning (RRL) model and used it to train a trading system by optimising the differential
+    Sharpe ratio. Their early studies presented an outperformance of trading systems
+    based on the RL paradigm compared to those based on supervised learning techniques
+    and inspired a host of subsequent work for algorithmic trading on various kinds
+    of assets. Researchers such as Li, Rao, and Shi (2018) recognised RRL was a relatively
+    shallow model and chose a deep actor-critic method to trade China''s CSI 300 index
+    and observed that their model performed well both in uptrend and downtrend market
+    conditions and better than a buy-and-hold strategy.
+
+
+    A DQN as the chosen model in our research is seen in various research into financial
+    trading, such as Double DQN in both cryptocurrency trading (Tran, Pham-Hi, & Bui,
+    2023) and electricity trading (Lee, Seon, et al., 2021). Wen et al. (2021) employed
+    a DQN, as well as two policy gradient methods, Soft Actor-Critic (SAC), and Proximal
+    Policy Optimisation (PPO) to trade equity options. With the help of additional
+    loss-control and profit-taking strategies the authors were able to achieve trading
+    results better than buy-and-hold with all three models. Tsantekidis et al. (2021)
+    used both a DQN and PPO and invented a new reward function to not only try to
+    gain maximum investment return but also try to trail the real price level. They
+    demonstrated an outperformance by the new reward function over baselines in various
+    foreign exchange tradings.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2.2. Key model features
+
+
+    Since the advent of the DQN (Mnih et al., 2015), more researchers have been developing
+    complex models by integrating individual model features for performance enhancement.
+    Hessel et al. (2018) explored the idea of integrating some of the most prominent
+    DQN extensions into a single model called Rainbow. They showed that such extensions
+    were indeed largely complementary with the combined effects giving state-of-the-art
+    results on a benchmark suite of 57 Atari 2600 games. They also found through ablation
+    studies that prioritised replay and multi-step learning were the stand-out contributors
+    to the final performance, a result we have taken note of. Hester et al. (2018)
+    created a new paradigm – Deep Q-Learning from Demonstrations (DQfD) – which pre-trains
+    a DQN by human demonstration data by minimising four sets of losses, a 1-step
+    double Q-learning loss, an n-step double Q-learning loss, a supervised large margin
+    classification loss, and a L2 regularisation loss, effectively ensuring that the
+    network has an initial state bounded by the expert data. Hessel’s work helped
+    us study closely individual modern features of DQNs and their applications whereas
+    Hester’s work partly inspired the creation of our multi-loss function solution
+    to align to human trading behaviours.
+
+
+    Learning with demonstration has long been associated with reinforcement learning.
+    As early as in Lin (1992), Lin demonstrated that teaching his RL learner with
+    demonstrations to play a game in a 2D dynamic environment would improve its score
+    and help prevent the learning from falling into local minima. Modern day research
+    saw imitation learning used in more complex settings with AlphaGo (Silver et al.,
+    2016) probably being the most renowned one. A deep convolutional neural network
+    within a reinforcement learning framework was trained using past games, also using
+    supervised learning to predict the actions taken by experts, before further self-playing
+    combined with planning rollouts. The feat was a domination over human players
+    in the Go game. In finance, Liu et al. (2020) integrated imitation learning with
+    a recurrent deterministic policy gradient model to balance the exploration and
+    exploitation of the trading agent while trading intra-day stock index futures
+    with promising results.
+
+
+    Another important component, multi-step learning, has been found to improve data
+    efficiency by Yuan et al. (2019) who combined a new multi-step based return function
+    with a classic DQN and its variants to play two Atari games. Also in the same
+    Atari environment, Hernandez-Garcia and Sutton (2018) found – using a variety
+    of models including DQNs – that increasing the number of steps n would consistently
+    lead to a gain in overall performance – a result that we also observed though
+    our own performance gain would reach saturation when n reached a certain value.
+    Meng et al. (2021) used a policy network Deep Deterministic Policy Gradient to
+    study both regular multi-step learning as well as a mixed multi-step learning
+    where the Q value update is based on the average over different multi-step setups
+    and showed that their new models addressed the overestimation problems seen in
+    actor-critic algorithms.
+
+
+    # 3. Models and methods
+
+
+    # 3.1. Deep Q network
+
+
+    We follow the standard Markov Decision Process (MDP) framework (Sutton, 1988)
+    to build our models. An MDP is defined by a tuple ⟨S, A, T, r, γ⟩, where S is
+    a finite set of states, A is a finite set of actions, T(s, a, s′) = P[S_{t+1}
+    = s′|S_t = s, A_t = a] is the stochastic transition function, and γ is the discount
+    factor which we set to 0.95. Upon taking an action which is governed by a policy
+    π, the agent receives a reward r(s, a) = 𝔼[R_{t+1}|S_t = s, A_t = a], R_{t+1}
+    being the reward at t + 1, and reaches a new state s′. The goal of a DQN agent
+    is to develop the optimal policy π mapping states to actions that maximises the
+    total discounted future rewards Σ_{t=1}^{T} γ^{t-1} r_{t}, where T is the time
+    step at which each episode completes.
+
+
+    While theoretically, the Q function could be learnt iteratively using the Bellman
+    equation for each state–action pair, it is in reality estimated using a deep neural
+    network with weights θ which is the idea behind a DQN (Mnih et al., 2015). The
+    loss at time t as given in Eq. (1) is minimised while the network parameters are
+    optimised by using stochastic gradient descent.
+
+
+    l(θ_t) = (r_t + γ_{t+1} max_a (Q(S_{t+1}, a, θ''_t)) − Q(S_t, A_t, θ_t))^2 (1)
+
+
+    One drawback in Eq. (1) though is the introduction of an upward bias, since the
+    largest Q value returned by the target network is not necessarily the Q value
+    of the best action determined by the current network, potentially leading to false
+    positives. We therefore take the Double Q-learning approach (Hasselt, 2010) whereby
+    a separate target network θ''_t with an identical architecture to that of the
+    current network θ_t is used to compute the target of the loss function, whereas
+    the current network which computes the actions is updated at every step, leading
+    to an updated version of the loss function (2):
+
+
+    l(θ_t) = (r_t + γ_{t+1} Q(S_{t+1}, argmax_a Q(S_{t+1}, a, θ_t), θ''_t) − Q(S_t,
+    A_t, θ_t))^2 (2)
+
+
+    After the separation, the standard procedure is to update the target network θ''_t
+    less frequently than the current network θ_t, effectively making convergence easier
+    (Mnih, 2013). However, we take the soft updating approach (Lillicrap et al., 2016)
+    by having θ''_t slowly track θ_t in the learnt current network: θ''_t ← τθ_t +
+    (1 − τ)θ''_t, where τ ≪ 1. The soft updating introduces a greater degree of stability
+    similar to those experienced in supervised learning, while also reducing the problem
+    of having to work with an update frequency parameter which may be given a suboptimal
+    value as often experienced in the periodic updating approach.
+
+
+    # 3.2. Multi-step DQN
+
+
+    Multi-step learning is one of the core elements of HAT which serves to improve
+    the performance of the one-step TD method by bootstrapping over longer time intervals
+    of the stock time series price data. The n-step return function from a given state
+    S_t at time t is r_t^{(n)} = Σ_{k=0}^{n} γ_t^{(k)} r_{t+k}, where γ_t^{(k)} is
+    the discounting rate from k steps ahead back to the current time t. This multi-step
+    return enables the trading agent to pay attention over longer time intervals (De
+    Asis, Hernandez-Garcia, Holland, & Sutton, 2018). A new loss function is produced
+    in Eq. (3):
+
+
+    # 3.3. Pre-training'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "![](img/5df77e9474116b71217f79f02a02a4ee_3_0.png)\n\n![](img/5df77e9474116b71217f79f02a02a4ee_3_1.png)\n\
+    \nFig. 1. Using 1-step Q Learning as an example, we present the logical flows\
+    \ of key parameters during the training phase, showcasing how the networks, the\
+    \ environment, the prioritised replay buffer, as well as the expert data cache\
+    \ interact with each other. On the left is the pre-training phase which consumes\
+    \ expert demonstration data. On the right is the logical flow during the regular\
+    \ training phase.\n\n```\nl_p^{(n)}(θ_t) = (r_t^{(n-1)} + γ_t^{(n)} Q(S_{t+n},\
+    \ a_d^{(n)}, θ'_t) - Q(S_t, A_t, θ_t))^2  (5)\n```\n\nSecond, in the pre-training\
+    \ phase, the agent does produce its own actions when it steps through each time\
+    \ point in the episodes, all of which are stored in the experience replay buffer\
+    \ to be later sampled and consumed during the full training stage.\n\nFig. 1 presents\
+    \ the logical flows of key parameters as well as interactions between all key\
+    \ components during both the pre-training and regular training phases.\n\n# 3.4.\
+    \ Prioritised experience replay\n\nIn order to efficiently reduce correlations\
+    \ between the consecutive samples, we store each time step's transition data (S_t,\
+    \ A_t, r_t, S_{t+1}) in a replay buffer and draw mini-batches of samples from\
+    \ there to update the Q network (Mnih, 2013). Instead of uniform sampling, we\
+    \ sample more important transitions from the buffer which is the essence of PER\
+    \ (Schaul et al., 2016) as is formulated in Eq. (6).\n\n```\nP(i) = p_i^α / Σ_k\
+    \ p_k^α, p_i = |l_i| + ε.  (6)\n```\n\nPER naturally generates a bias due to over-sampling\
+    \ of high priority items which may change the TD distribution and skew the expected\
+    \ value calculation. Importance sampling is used to control the sampling speed\
+    \ of high priority samples.\n\n# 3.5. Discrete wavelet transformation\n\nLastly,\
+    \ recognising the intrinsically noisy nature of the minute stock data, we employ\
+    \ Discrete Wavelet Transformation (DWT) to mitigate the noise's bad influence\
+    \ on the real features of observed time series. Unlike the Fourier Transformation,\
+    \ which uses a series of sine waves with different frequencies, Wavelet Transformation\
+    \ uses a series of wavelets of different scales which makes the data localised\
+    \ in time (Karim et al., 2011)...\n\nseries of wavelets of different scales which\
+    \ makes the data localised in time (Karim et al., 2011) and is greatly suitable\
+    \ for dealing with the non-stationary characteristics of stock time series data.\n\
+    \nWorking like a cascade of low-pass and high-pass filters, DWT effectively deconstructs\
+    \ time series data into its frequency sub-bands. We choose to use the Daubechies\
+    \ wavelets with a threshold λ of 0.7 determined through empirical analysis so\
+    \ as to filter away the high frequency part of the normalised version of stock\
+    \ time series whose frequency coefficients are higher than the threshold.\n\n\
+    # Algorithm 1: Algorithmic Trading Agent Imitating Human Trader\n\n```\nData:\
+    \ Time series data denoised using DWT; Five technical trading signals for each\
+    \ time point;\nParameter: D_replay^1 and D_replay^n; θ; θ'; k; T\nforeach episode\
+    \ ∈ 1,2...k do\n  foreach time ∈ 1,2...T do\n    Respectively sample a mini-batch\
+    \ of m transitions from D_replay^1 and D_replay^n with prioritisation;\n    if\
+    \ pre-training then Get the new actions a_d and a_d^n from the demonstration data;\n\
+    \    else if full training then Get the 1-step new action a_{t+1} which meets\
+    \ argmax_a Q(S_{t+1}, a, θ_t); ...\n    Calculate one-step loss l(θ_t) and multi-step\
+    \ loss l''(θ_t) using formulae (2) and (3);\n    Update θ; Soft update θ'_t ←\
+    \ τθ_t + (1-τ)θ'_t; Append tuple (S,A,T,r,γ) to replay buffer;\n```\n\n# 3.6.\
+    \ Joint loss function\n\nPutting everything together, our HAT model uniquely employs\
+    \ a joint loss function combining a 1-step Q value loss, n-step Q value loss..."
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'loss, supervised classification loss on three-class actions (buy/sell/hold)
+    over 1-step and n-step, respectively. During the pre-training, the loss function
+    is: L_joint = ω1 Lp + ωn Lp^(n) + ωs Ls + ωs Ls^(n), (7)
+
+
+    whereas during regular training, the loss function is: L_joint = ω1 L + ωn L^(n)
+    + ωs Ls + ωs Ls^(n), (8)
+
+
+    where the network parameter θt is omitted from the formulae for simplicity, Lp
+    and Lp^(n) are 1-step and n-step Q-value losses at pre-training, L and L^(n) are
+    1-step and n-step Q-value losses during regular training, Ls and Ls^(n) are supervised
+    losses on 1-step and n-step actions, and ω1, ωn and ωs and ωsμ are the weightings
+    1-step Q loss, n-step Q loss, and supervised loss (for both 1-step and n-step).
+    Since L (and Lp) is effectively the vanilla DQN loss, we set ω1 to be always 1.
+
+
+    Being able to pre-train the trading agent with demonstration data is crucial.
+    It is also equally critical that we are able to combine the supervised loss with
+    the Q-learning loss for the pre-training to be effective. This is because the
+    supervised loss grounds the values of agent actions to reasonable values and makes
+    the greedy state-action mapping induced by the network imitate the demonstrator,
+    whereas the Q loss constrains the values between consecutive states and ensures
+    that the network satisfies the Bellman equation and has a suitable starting point
+    for temporal difference learning that follows.
+
+
+    # 4. Trading setup
+
+
+    A high level model architecture and data flow are presented in Fig. 2. After being
+    put through DWT filtering, the time series stock data feeds into an LSTM network
+    which is a kind of recurrent neural network capable of learning long term dependencies
+    without suffering from the vanishing gradient problem (Hochreiter & Schmidhuber,
+    1997). While more advanced sequence handling models such as the Transformer (Vaswani
+    et al., 2017) could be used in place of LSTM, we would like to focus this research
+    on Reinforcement Learning, but will visit the possibility of integrating with
+    Transformer in later studies.
+
+
+    We permit short selling in our setup meaning that the agent may gain if it chooses
+    to sell a borrowed stock against a falling price. Trading cost is accounted for
+    in each action in the form of bid/ask spread s. Having reviewed the real historical
+    tick data of the chosen stocks over the months of interest, we have chosen an
+    average percentage of 0.02% of the mid price as the spread between a bid and an
+    ask price. No separate trading fee is included which reflects the new norm that
+    brokerages nowadays offer commission-free stock trading services. Only mid prices
+    are used in the time series data.
+
+
+    ![](img/5df77e9474116b71217f79f02a02a4ee_4_0.png)
+
+
+    Fig. 2. Flow of data through the model architecture.
+
+
+    The trading agent is allowed to perform one of three actions at any time at ∈
+    {buy, hold, sell} = {−1,0,1}, and it transacts one unit of stock by each action.
+    Assuming a trading action has happened at time t−1, the trading profit is calculated
+    from time t−1 to t as in formula (9): profit_t = a_{t−1}(p_t − p_{t−1}) − s. (9)
+
+
+    The cumulative trading return CTR over T time steps is calculated as in formula
+    (10): CTR_{R,T} = ∏_{i=1}^{T} (a_{i−1}(p_i − p_{i−1}) − s)/p_{i−1} − 1. (10)
+
+
+    We found that, many similar research works make the assumption that the trading
+    reward between two time steps always follows formula (9) or something similar,
+    while in reality, such an assumption is too simplistic (Carta et al., 2021; Deng
+    et al., 2017; Li et al., 2018; Liu et al., 2020; Tsantekidis et al., 2021). To
+    better test our model’s alignment to a human trader, we put in place a rewarding
+    scheme which is realistic and more importantly considers the present state of
+    stock holding, i.e., long (owning stock), no holding, or short (in a short-selling
+    state).
+
+
+    We also try to make the backtesting setup realistic. Since the trading days are
+    non-continuous, we believe that it would be unreasonable to train/trade on a stock
+    time series data with no regard that there were time gaps between data from different
+    days as is often seen (Li et al., 2019), especially when market events can happen
+    overnight. Also, a full day’s new data becomes available after market closes which
+    we believe ought to be captured before the market opens the next day.
+
+
+    We sequentially divide the data in each training window into n episodes. We choose
+    each episode’s length to be the same as the length of the testing window which
+    is 500 in this case. We iteratively carry out'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/5df77e9474116b71217f79f02a02a4ee_5_0.png)
+
+
+    Fig. 3. This diagram breaks down the various cases of transaction going from time
+    t-1 to t. r_{t-1:t} is the realised PnL (profit and loss) of the trading agent
+    only from t-1 to t. Since we only permit the trading agent to possess or transact
+    one share at a time, the implications of this diagram are: (1). A buy or sell
+    signal while being already Long or Short a share does not change the state of
+    share holding. This refers to case 1 and 7. (2). A Sell signal while being Long
+    simply disposes of a currently-owned share. A Buy signal while being short a stock
+    closes the short position by buying back a share from the market. In both cases,
+    the trading action at t-1 is realising a profit/loss with respect to the initial
+    price of transaction which happened before t-1. This refers to case 2 and 6. (3).
+    A Sell signal while having no holding triggers a short-selling action. This refers
+    to case 5. Note that s is the bid/ask spread which is regarded as the cost of
+    trading incurred in each transaction;
+
+
+    100 rounds of episodic training, and we choose the first 20% of total episodes
+    as the expert data for pre-training. Cumulative trading gain in percentage terms
+    is computed as our performance metric.
+
+
+    # 5. Experiments, results, and analysis
+
+
+    In this section, we provide a detailed view on how we construct our environments,
+    set up, and conduct the experiments, followed by assumptions and rationales, experimental
+    results, and our analyses.
+
+
+    # 5.1. Data and trading environment
+
+
+    We choose 10 stocks representative of different industrial sectors and liquidity
+    levels for diversity reasons: blue chip stocks of Apple (AAPL), Netflix (NFLX),
+    Costco (COST), JPMorgan (JPM), Disney (DIS) as well as small cap stocks of Stitch
+    Fix (SFIX), InVitae (NVTA), Novavax (NVAX), Sunrun (RUN), and Digital Turbine
+    (APPS). Minute tick data is sourced from the Investors Exchange which is a national
+    US stock exchange which provides reliable real historical stock trading data.
+    The same data that we have chosen to use is easily obtainable from the exchange
+    for benchmarking purposes. 390 min data points are available on each trading day
+    for each stock and linear interpolation/extrapolation are employed to fill those
+    time points without a price data due to lack of trading activity.
+
+
+    20-period Bollinger Band oscillator signal. Three manually enhanced signals are
+    also used: a moving average trend signal, a moving average golden cross signal,
+    and a break out signal, the value of all of which are evaluated not just on the
+    current time point t, but over a period of three time points prior to t. Together
+    with the normalised and filtered time series data, they form the trading environment
+    of our experiments (Ni, Day, Cheng, & Huang, 2022).
+
+
+    # 5.2. Experimental results and analysis
+
+
+    To evaluate the performance of our model we have chosen the following baseline
+    models for comparison, all of which are run through the exact training and testing
+    windows.
+
+
+    +   - Supervised Learning with the same network A trading agent driven by supervised
+    learning that uses the same internal network in HAT is an important benchmark
+    to compare against. It uses the network architecture as presented in Fig. 2 including
+    the input layers and an LSTM component, except that only one output layer is required
+    to produce softmax cross entropy loss on the 1-step action. Trading is driven
+    entirely based on the predicted buy/sell/hold 1-step actions.
+
+    +   - Vanilla DQN The first RL baseline model is a vanilla DQN model as created
+    by Mnih et al. (2015) which uses a normal Experience Replay. The internal network
+    architecture is made to be the same as the benchmark supervised learning network.
+
+    +   - Prioritised Double DQN (PDDQN) We apply Double Q-learning (Hasselt, 2010)
+    and PER (Schaul et al., 2016) as additional features to the vanilla DQN to bring
+    this benchmark model closer to our own model. Double Q-learning was shown in Hasselt,
+    Guez, and Silver (2016) to have remedied the problem of overestimated action values.
+    This benchmark model also shares the same network architecture as other ones.
+
+    +   - Multi-Step DQN (MSDQN) Multi-step Q-learning (Peng & Williams, 1998) is
+    added as an extension to the vanilla DQN. This model again shares the same underlying
+    network architecture as other baseline models.
+
+    +   - DQfD The model of Deep Q-learning from Demonstrations (DQfD) (Hester et
+    al., 2018) is the closest model to our design which also features the pre-training
+    concept as well as using multi-step learning and a supervised loss function. The
+    key difference is that DQfD''s supervised loss is based on 1-step actions only
+    and it is not using separate PER buffers like we do for 1-step and n-step instances.
+    DQfD also has a different joint loss function profile compared to HAT and all
+    losses are equally weighted.
+
+    +   - Buy-and-Hold (BnH) There is no modelling involved and the cumulative trading
+    return is calculated by Eq. (10) on a daily basis using historical stock price
+    data assuming that a share is bought at the beginning and held to the end of the
+    trading day.
+
+
+    # 5.3. Performance evaluation
+
+
+    All models are trained using the same training set and tested over the three 7-day
+    rolling windows on each of the ten stocks. Each round of testing exercises are
+    carried out 50 times and the daily intraday cumulative trading returns are calculated
+    as the average of the 50 test rounds. A summary is provided in Table 1 which presents
+    the mean daily intra-day trading returns by HAT and the benchmark models/methods,
+    averaged over each 7-day window. It is evident that the HAT consistently performs
+    better than all baseline models, both in terms of higher mean returns and lower
+    return variances.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Table 1
+
+
+    Each cell corresponds to a mean daily intra-day trading return (%) averaged over
+    a 7 day period + the standard deviation. For instance, the first cell in the top
+    table means that over the 7-business period starting from 25-Feb-20, the average
+    daily intra-day trading profit by HAT is −0.021% with a standard deviation of
+    1.94%. The best trading return on each row is highlighted in bold. All numbers
+    are calculated after the same test is repeated 50 times.
+
+
+    | 25-Feb-20 | HAT | Supervised | DQfD | MTDQN | PDDQN | DQN | BnH |
+
+    |---|---:|---:|---:|---:|---:|---:|---:|
+
+    | AAPL | **−0.021% + 1.940%** | −0.023% + 1.814% | −0.243% + 1.651% | −0.404%
+    + 2.022% | −0.316% + 1.865% | −0.374% + 1.779% | −0.191% + 2.053% |
+
+    | COST | **−0.453% + 1.025%** | −0.337% + 1.816% | −0.861% + 1.800% | −0.462%
+    + 1.919% | −0.677% + 1.609% | −0.857% + 1.645% | −0.479% + 2.012% |
+
+    | DIS | **−0.061% + 1.736%** | −0.027% + 1.662% | −0.257% + 1.540% | −0.074% +
+    1.364% | −0.256% + 1.523% | −0.418% + 1.568% | −0.421% + 1.768% |
+
+    | JPM | **−0.584% + 1.739%** | −0.897% + 1.719% | −0.962% + 1.653% | −0.651% +
+    1.489% | −0.870% + 1.591% | −1.029% + 1.606% | −0.814% + 1.872% |
+
+    | NFLX | **−0.658% + 1.626%** | −0.795% + 2.363% | −1.109% + 2.162% | −1.018%
+    + 1.953% | −0.912% + 1.843% | −0.679% + 2.157% | −0.841% + 2.260% |
+
+    | NVAX | **−1.066% + 6.204%** | −1.185% + 6.451% | −1.375% + 6.271% | −1.459%
+    + 6.478% | −1.103% + 6.388% | −1.201% + 6.122% | −1.138% + 6.502% |
+
+    | NVTA | 0.250% + 1.741% | 0.337% + 2.742% | 0.126% + 2.321% | 0.021% + 2.691%
+    | 0.157% + 2.675% | 0.163% + 2.535% | −0.130% + 2.668% |
+
+    | APPS | **1.909% + 3.890%** | 1.854% + 4.124% | 1.613% + 3.834% | 1.814% + 4.108%
+    | 1.675% + 3.899% | 1.869% + 4.092% | 1.668% + 4.275% |
+
+    | RUN | 1.158% + 1.280% | 1.234% + 1.699% | **1.206% + 1.553%** | 0.990% + 1.891%
+    | 1.081% + 1.496% | 1.200% + 1.861% | 0.891% + 1.937% |
+
+    | SFIX | −0.101% + 2.377% | −0.086% + 2.865% | −0.129% + 2.858% | −0.299% + 2.640%
+    | −0.275% + 2.939% | −0.369% + 2.584% | −0.379% + 3.020% |
+
+
+    | 08-Jul-20 | HAT | Supervised | DQfD | MTDQN | PDDQN | DQN | BnH |
+
+    |---|---:|---:|---:|---:|---:|---:|---:|
+
+    | AAPL | **−0.390% + 0.963%** | −0.603% + 1.621% | −0.569% + 1.746% | −0.831%
+    + 1.514% | −0.736% + 1.566% | −0.480% + 1.599% | −0.400% + 1.860% |
+
+    | COST | 0.000% + 0.814% | −0.326% + 0.689% | −0.284% + 0.628% | −0.164% + 0.475%
+    | −0.389% + 0.918% | 0.043% + 0.660% | **0.074% + 0.881%** |
+
+    | DIS | 0.443% + 1.628% | 0.466% + 1.549% | 0.055% + 1.476% | 0.134% + 1.747%
+    | 0.088% + 1.789% | 0.218% + 1.554% | **0.512% + 1.803%** |
+
+    | JPM | **0.486% + 1.209%** | 0.167% + 1.298% | 0.157% + 1.387% | 0.301% + 1.329%
+    | 0.230% + 1.271% | 0.256% + 1.265% | 0.472% + 1.535% |
+
+    | NFLX | **1.182% + 3.297%** | 1.265% + 3.503% | 1.180% + 3.661% | 1.177% + 3.434%
+    | 0.879% + 3.239% | 0.827% + 3.631% | 0.938% + 3.678% |
+
+    | NVAX | **−0.335% + 3.748%** | −0.514% + 4.021% | −0.379% + 3.721% | −0.394%
+    + 4.113% | −0.925% + 3.791% | −0.941% + 3.798% | −0.362% + 4.090% |
+
+    | NVTA | −0.222% + 2.966% | −0.464% + 3.718% | −0.495% + 3.735% | −0.245% + 3.342%
+    | −0.481% + 3.406% | −0.591% + 3.457% | −0.332% + 3.748% |
+
+    | APPS | **0.091% + 3.278%** | 0.017% + 3.515% | −0.243% + 3.540% | −0.265% +
+    3.599% | 0.116% + 3.488% | 0.127% + 3.434% | −0.025% + 3.769% |
+
+    | RUN | 3.093% + 5.247% | 3.039% + 5.267% | **3.131% + 5.462%** | 2.881% + 5.274%
+    | 3.004% + 5.393% | 3.016% + 5.085% | 3.042% + 5.468% |
+
+    | SFIX | −0.034% + 3.195% | −0.191% + 3.196% | **0.007% + 2.933%** | −0.127% +
+    3.191% | −0.016% + 3.284% | −0.211% + 3.006% | −0.205% + 3.261% |
+
+
+    | 20-Aug-20 | HAT | Supervised | DQfD | MTDQN | PDDQN | DQN | BnH |
+
+    |---|---:|---:|---:|---:|---:|---:|---:|
+
+    | AAPL | 0.629% + 1.136% | 0.504% + 0.937% | 0.728% + 1.151% | 0.294% + 1.133%
+    | 0.313% + 1.094% | 0.713% + 1.109% | **0.739% + 1.158%** |
+
+    | COST | 0.019% + −0.246% | 0.059% + 0.265% | −0.137% + 0.063% | −0.361% + 0.104%
+    | −0.012% + −0.093% | −0.347% + 0.074% | **0.336% + 0.233%** |
+
+    | DIS | 0.041% + −0.118% | 0.072% + 0.288% | −0.254% + 0.242% | −0.382% + 0.304%
+    | −0.064% + 0.214% | −0.277% + 0.278% | **0.315% + 0.649%** |
+
+    | JPM | −0.011% + 0.124% | −0.174% + 0.335% | 0.002% + 0.556% | −0.118% + 0.255%
+    | −0.347% + 0.632% | −0.426% + 0.587% | **0.043% + 0.617%** |
+
+    | NFLX | **0.613% + 2.145%** | 0.330% + 2.340% | 0.325% + 2.300% | 0.281% + 2.243%
+    | 0.406% + 2.366% | 0.603% + 2.266% | 0.496% + 2.609% |
+
+    | NVAX | −1.743% + 1.653% | −1.857% + 1.761% | −2.050% + 2.025% | −1.927% + 1.787%
+    | −2.102% + 1.868% | −1.926% + 1.641% | −1.837% + 1.994% |
+
+    | NVTA | **0.779% + 2.280%** | 0.709% + 2.534% | 0.680% + 2.283% | 0.666% + 2.173%
+    | 0.551% + 2.424% | 0.571% + 2.127% | 0.778% + 2.565% |
+
+    | APPS | −0.833% + 3.307% | **−0.702% + 3.713%** | −0.788% + 3.952% | −0.984%
+    + 4.018% | −0.955% + 3.606% | −0.804% + 3.934% | −0.806% + 3.980% |
+
+    | RUN | **0.447% + 1.232%** | 0.319% + 1.193% | 0.024% + 0.997% | 0.357% + 0.980%
+    | 0.207% + 1.400% | 0.196% + 1.062% | **0.319% + 1.411%** |
+
+    | SFIX | **−1.370% + 1.904%** | −1.624% + 1.851% | −1.412% + 1.851% | −1.740%
+    + 1.732% | −1.582% + 1.791% | −1.822% + 1.595% | −1.521% + 2.026% |
+
+
+    Of the five baseline models, the supervised learning model often produces better
+    performance than the rest. This may be because the supervised model follows a
+    simpler rule to execute a trading action entirely based on the prediction of stock
+    movement over the next minute, whereas RL-based models have the action-taking
+    mechanism embedded in the model itself which makes it harder to train. However,
+    HAT’s outperformance proves that a well-trained value-based RL trading system
+    with sufficient amount of human aligning features should execute more optimal
+    actions over time than actions taken purely based on supervised learning outcomes
+    for the fact that the Q value represents the reward over an entire trading period
+    and not just over the next period. Separately, DQfD’s performance is not far off
+    that of supervised learning. After all, it shares a similar modelling paradigm
+    as HAT although it places less emphasis on actions multiple steps ahead.
+
+
+    Table 1 also compares returns by HAT to the buy-and-hold returns over the same
+    periods. The finding is particularly interesting. For the five blue chip stocks
+    of AAPL, COST, DIS, JPM, and NFLX, HAT outperforms a buy-and-hold in a market
+    that is trending down when trading these stocks, but sometimes lags the buy-and-hold
+    in an uptrend market. In a sideways-going market, HAT is marginally better.
+
+
+    In down-trending and up-trending markets, our results may be explainable. When
+    the stock price is falling, holding a stock gives negative returns, but the model
+    can take advantage of short-selling to deliver a cumulative return that is better
+    than buy-and-hold. On the other hand, when the stock price goes through a strong
+    upward movement during the day, the model often may match the return of a buy-and-hold,
+    but there are times when it cannot do so, because of wrong actions taken to short-sell
+    a stock when the price is actually going up. The situation in a sideways-going
+    market indicates that, as much as we would have liked the model to deliver superb
+    performances, a sophisticated model can ultimately be somewhat constrained by
+    the training data set.
+
+
+    ![](img/5df77e9474116b71217f79f02a02a4ee_6_0.png)
+
+
+    When there is no clear trend in the underlying data, the model’s actions appear
+    less well-judged and hence deliver a set of returns that occasionally outperforms
+    but other times simply match those of buy-and-hold.
+
+
+    On the other hand, the HAT model beats a buy-and-hold strategy most of the time
+    with the five small cap stocks of NVAX, NVTA, APPS, RUN, and SFIX, which have
+    less trading liquidity. We present an example trading day for Sunrun Inc (SUN)
+    in Fig. 4 and it is evident that the model trades a lot less often with this stock.
+    A study of historic tick data of these small-cap stocks reveals that their stock
+    prices would stay unchanged over periods of minutes more often than their heavily-traded
+    blue chip counterparts. When trained up using such time series data, the HAT model
+    acquires the tendency to trade less frequently and,'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Table 2
+
+
+    Ablation study on the impacts by loss weights ω_s and ω_n (as per Eq. (8)). Each
+    cell represents a stock''s average daily intra-day trading return averaged over
+    all testing periods + standard deviation. We observe that, higher values of both
+    ω_s and ω_n tend to produce better performance although weight values higher than
+    1.0 do not appear to consistently produce distinguishable performances.
+
+
+    |  | ω_s = 2.0 | ω_s = 1.6 | ω_s = 1.2 | ω_s = 0.8 | ω_s = 0.4 | BnH |
+
+    |---|---|---|---|---|---|---|
+
+    | AAPL | 0.171% + 1.552% | 0.134% + 1.674% | 0.037% + 1.673% | 0.096% + 1.535%
+    | 0.106% + 1.663% | 0.049% + 1.690% |
+
+    | COST | 0.066% + 0.943% | 0.015% + 1.029% | 0.093% + 0.909% | 0.015% + 1.005%
+    | -0.028% + 0.923% | -0.023% + 1.042% |
+
+    | DIS | 0.202% + 1.295% | 0.247% + 1.271% | 0.219% + 1.327% | 0.153% + 1.365%
+    | 0.132% + 1.387% | 0.135% + 1.407% |
+
+    | JPM | -0.059% + 1.333% | 0.030% + 1.366% | -0.125% + 1.371% | -0.066% + 1.217%
+    | -0.054% + 1.261% | -0.100% + 1.341% |
+
+    | NFLX | 0.294% + 2.812% | 0.324% + 2.758% | 0.205% + 2.780% | 0.266% + 2.775%
+    | 0.158% + 2.792% | 0.198% + 2.849% |
+
+    | NVAX | -1.045% + 4.051% | -0.992% + 4.172% | -0.972% + 4.234% | -1.091% + 4.038%
+    | -1.142% + 4.180% | -1.113% + 4.195% |
+
+    | NVTA | 0.241% + 2.933% | 0.231% + 2.974% | 0.223% + 2.963% | 0.166% + 2.851%
+    | 0.158% + 2.909% | 0.105% + 2.994% |
+
+    | APPS | 0.399% + 3.946% | 0.263% + 3.941% | 0.404% + 3.949% | 0.352% + 3.972%
+    | 0.410% + 3.958% | 0.279% + 4.008% |
+
+    | RUN | 1.490% + 2.814% | 1.532% + 2.779% | 1.548% + 2.855% | 1.414% + 2.967%
+    | 1.394% + 2.809% | 1.417% + 2.939% |
+
+    | SFIX | -0.704% + 2.672% | -0.678% + 2.627% | -0.695% + 2.779% | -0.691% + 2.735%
+    | -0.660% + 2.679% | -0.702% + 2.769% |
+
+    |  | ω_n = 2.0 | ω_n = 1.6 | ω_n = 1.2 | ω_n = 0.8 | ω_n = 0.4 | BnH |
+
+    | AAPL | 0.145% + 1.571% | 0.153% + 1.538% | 0.186% + 1.558% | 0.117% + 1.628%
+    | 0.172% + 1.704% | 0.049% + 1.690% |
+
+    | COST | 0.057% + 0.986% | 0.085% + 0.939% | -0.017% + 1.081% | -0.053% + 1.004%
+    | -0.056% + 1.039% | -0.023% + 1.042% |
+
+    | DIS | 0.243% + 1.323% | 0.194% + 1.324% | 0.219% + 1.432% | 0.114% + 1.279%
+    | 0.130% + 1.286% | 0.135% + 1.407% |
+
+    | JPM | -0.096% + 1.356% | 0.051% + 1.276% | -0.070% + 1.368% | -0.082% + 1.220%
+    | -0.103% + 1.352% | -0.100% + 1.341% |
+
+    | NFLX | 0.170% + 2.809% | 0.199% + 2.839% | 0.329% + 2.738% | 0.193% + 2.821%
+    | 0.162% + 2.845% | 0.198% + 2.849% |
+
+    | NVAX | -0.985% + 4.050% | -1.035% + 4.170% | -1.017% + 4.079% | -1.076% + 4.066%
+    | -1.126% + 4.204% | -1.113% + 4.195% |
+
+    | NVTA | 0.207% + 2.989% | 0.191% + 2.862% | 0.190% + 2.879% | 0.098% + 2.972%
+    | 0.066% + 2.889% | 0.105% + 2.994% |
+
+    | APPS | 0.405% + 3.851% | 0.423% + 3.906% | 0.370% + 3.873% | 0.316% + 3.979%
+    | 0.385% + 4.022% | 0.279% + 4.008% |
+
+    | RUN | 1.387% + 2.814% | 1.521% + 2.862% | 1.470% + 2.845% | 1.453% + 2.857%
+    | 1.545% + 2.945% | 1.417% + 2.939% |
+
+    | SFIX | -0.587% + 2.748% | -0.693% + 2.678% | -0.545% + 2.787% | -0.698% + 2.638%
+    | -0.664% + 2.784% | -0.702% + 2.769% |
+
+
+    hence, incurs less trading cost which contributes to better cumulative returns.
+    This behaviour is commonly observed when running tests on these five small-cap
+    stocks.
+
+
+    # 5.4. Ablation studies
+
+
+    Since the HAT model is an integration of multiple modelling features and multiple
+    loss components, we conduct additional experiments to gain understanding on the
+    contribution by key components. First, we look at how the model performs under
+    different weightings for the n-step Q loss ω_n and the supervised loss on trading
+    actions ω_s with the 1-step Q loss ω being set to 1 as explained in Section 3.6.
+    We assign one of 0.4, 0.8, 1.2, 1.6, and 2.0 to each of the weight parameters
+    and execute the same testing routines as used in Section 5.3. We make a conscious
+    decision of setting an upper limit of 2.0 because we do not want any loss to dominate
+    over others. The results are presented in Table 2. We observe that applying a
+    higher weighting to either ω_n or ω_s consistently contributes to an improved
+    trading performance compared to a buy-and-hold strategy. Small weights of ω_n
+    and ω_s do benefit the results but we do not consistently observe this. This result
+    corroborates our design principles of wanting to incorporate both loss components
+    which we theorise in earlier sections. We also observe that setting the parameters
+    to 1.2, 1.6, and 2.0 does not appear to bring along a performance that is materially
+    different. We present in Fig. 5 two actual intra-day returns when trading Apple
+    Inc over two different days by changing the values of ω_n and ω_s, respectively.
+    It is possible that the impact on the combined loss might change if we were to
+    continue increasing the value of these two weightings, but, in the current study,
+    we want to focus on presenting a balanced human-aligning model. We settle on the
+    value of 1.2 for both parameters in our final design.
+
+
+    Next, we assess the impact of different values of n in the n-step loss. Again,
+    without going with out-sized values, we test n ∈ [3, 6, 9, 12, 15] and evaluate
+    the model''s trading return and return variance by running the same testing routines
+    as used in Section 5.3. The summary results are in Table 3. The result appears
+    to show that there is no clear winner choosing one of 9, 12, or 15, but all perform
+    better than the other two smaller values. We settled to use n = 12 in our final
+    performance testing. We provide an example intra-day returns on Costco using one
+    of these 5 values of n in Fig. 6 for demonstration purpose. Despite these findings,
+    we believe that a principled way for choosing the step size n is still needed
+    and dynamically tuning n during the course of learning may be a suitable addition
+    to the process, something we will look into to introduce in the next research
+    phase of this topic.
+
+
+    ![](img/5df77e9474116b71217f79f02a02a4ee_7_0.png)
+
+
+    (a) Day-trading Apple on 20 Aug 2020 with changing values of ω_n
+
+
+    ![](img/5df77e9474116b71217f79f02a02a4ee_7_1.png)
+
+
+    (b) Day-trading Apple on 21 Aug 2020 with changing values of ω_s
+
+
+    Fig. 5. Example intra-day trading returns (y-axis) demonstrating the changing
+    impacts by ω_n and ω_s. The x-axis represents minutes. We observe better performances
+    when these weight parameters are set above 1.0 while no obvious further gains
+    are observed going up to 2.0 (the self-imposed upper limit).
+
+
+    # 6. Conclusion
+
+
+    We have identified RL as a suitable candidate in financial algorithmic trading
+    thanks to its ability of self-learning, online learning'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Table 3
+
+
+    Ablation study on the impacts by varying steps in multi-step Q valuation calculation.
+    Each cell presents a stock''s average daily intra-day trading return averaged
+    over all testing periods + standard deviation. Higher values of n tend to produce
+    better performance though the performance gain by choosing n = 9, 12, or 15 is
+    not always distinctive.
+
+
+    |  | n = 15 | n = 12 | n = 9 | n = 6 | n = 3 | BnH |
+
+    |---|---|---|---|---|---|---|
+
+    | AAPL | 0.224% + 1.632% | **0.238% + 1.682%** | 0.207% + 1.606% | 0.099% + 1.652%
+    | 0.043% + 1.583% | 0.049% + 1.690% |
+
+    | COST | 0.106% + 0.820% | **0.144% + 0.894%** | 0.120% + 0.919% | 0.059% + 1.066%
+    | -0.040% + 1.075% | -0.023% + 1.042% |
+
+    | DIS | 0.304% + 1.167% | 0.293% + 1.334% | **0.309% + 1.166%** | 0.285% + 1.422%
+    | 0.056% + 1.451% | 0.135% + 1.407% |
+
+    | JPM | -0.034% + 1.178% | **0.131% + 1.137%** | -0.069% + 1.174% | 0.053% + 1.283%
+    | -0.154% + 1.337% | -0.100% + 1.341% |
+
+    | NFLX | 0.234% + 2.733% | 0.202% + 2.756% | **0.413% + 2.841%** | 0.184% + 2.881%
+    | 0.248% + 2.853% | 0.198% + 2.849% |
+
+    | NVAX | -1.080% + 3.963% | **-1.042% + 4.111%** | -1.094% + 4.043% | -1.110%
+    + 4.147% | -1.138% + 4.193% | -1.113% + 4.195% |
+
+    | NVTA | 0.293% + 2.828% | 0.171% + 2.774% | **0.316% + 2.752%** | 0.215% + 2.927%
+    | 0.145% + 2.920% | 0.105% + 2.994% |
+
+    | APPS | 0.380% + 3.884% | 0.356% + 3.961% | **0.418% + 4.004%** | 0.413% + 3.892%
+    | 0.289% + 3.966% | 0.279% + 4.008% |
+
+    | RUN | **1.623% + 2.917%** | 1.603% + 2.692% | 1.433% + 2.844% | 1.562% + 2.893%
+    | 1.350% + 2.982% | 1.417% + 2.939% |
+
+    | SFIX | **-0.461% + 2.589%** | -0.583% + 2.575% | -0.502% + 2.626% | -0.548%
+    + 2.675% | -0.731% + 2.655% | -0.702% + 2.769% |
+
+
+    ![](img/5df77e9474116b71217f79f02a02a4ee_8_0.png)
+
+
+    Fig. 6. Example intra-day trading returns (y-axis) from Costco on 25 Feb 2020
+    using the HAT model with changing values of n in the n-step Q value calculation.
+    The x-axis represents minutes within the tradable window. Five values of n are
+    tested and we observe similar performance by choosing n = 9, 12, or 15 which are
+    better than n = 3 or 6.
+
+
+    # Table 4
+
+
+    Full list of hyperparameters used in the system.
+
+
+    | Parameter | Value |
+
+    |---|---|
+
+    | Prioritised reply exponent alpha | 0.4 |
+
+    | prior. reply importance sampling exp. beta | 0.6 |
+
+    | Prioritised reply buffer size | 50,000 |
+
+    | Prioritised reply constant epsilon | 0.001 |
+
+    | Discount factor | 0.95 |
+
+    | Bid/ask spread as percentage of mid price | 0.02% |
+
+    | Episode length | 500 |
+
+    | DWT filtering threshold (lambda) | 0.7 |
+
+    | DWT Model | Daubechies |
+
+    | No. of time points/LSTM network length: | 50 |
+
+    | No. of steps in multi-step learning | 12 |
+
+    | Loss weight for supervised learning loss | 1.2 |
+
+    | Loss weight for multi-step learning loss | 1.2 |
+
+    | Pre-training mini-batch updates | 100,000 |
+
+    | Learning rate | 0.001 |
+
+    | Number of episode iterations | 100 |
+
+    | Optimiser | Adam |
+
+    | Exploration epsilon | 0.1 |
+
+
+    as well as continuous decision-making, with its intrinsic rewarding mechanism
+    well resembling the profit searching process seen in real trading activities.
+    As an application that requires heavy regulation and potentially a high level
+    of human intervention, we believe financial trading carried out by machine learning
+    algorithms should have a high level of alignment with human trading behaviours
+    before they are made to go their more innovative ways. In this research, on algorithmic
+    trading, we looked at aspects of model and system building which would benefit
+    the objective of human alignment and produced a new model, HAT, whose individual
+    features helped offer solutions to achieve such a behavioural alignment.
+
+
+    The two main features of HAT are the employment of imitation learning as well
+    as the design of a joint loss function combining
+
+
+    supervised learning, multi-step and single step Q learning — each component of
+    which is chosen to bridge a specific gap in machine behaviour with that of a human
+    trader. We also introduced a realistic backtesting/trading process and a profit
+    calculation scheme for model performance testing and ablation studies, rejecting
+    some unrealistic assumptions often seen in the literature. We chose five blue
+    chip stocks and five small cap stocks from the U.S. markets and ran our testing
+    through three seven-day windows where the overall stock market as represented
+    by the movement of the S&P500 index had an upward, sideways, or downward trend.
+    We demonstrated an outperformance of HAT over a group of baseline models. When
+    comparing with a buy-and-hold strategy and trading bluechip stocks, while the
+    model generally performed better in down-trending markets with the help of short-selling,
+    it often lagged when stocks were continuously trending up. For small cap stocks,
+    however, the model achieved better performance of ten beating a buy-and-hold regardless
+    of the overall market conditions, partly thanks to the model having been trained
+    to trade less frequently incurring less overall trading costs.
+
+
+    Through our experiments we noticed that despite its sophistication, the model''s
+    performance could be constrained by only accessing time series data from the most
+    recent days, a problem that is common with RL due to the data environment being
+    a partially observable Markov Decision Process. Future research should look to
+    further enrich the data environment, capture features of more types of market-related
+    data, and run against bigger stock universe. Representation Learning methods could
+    be used to make our models more data-aware.
+
+
+    The work to bring machine behaviours more aligned with those of human''s is a
+    complex topic, not least because human behaviour itself is a complex matter and
+    hard to model against. In future studies, we will examine more granular segmentation
+    of human trading behaviour and aim to replicate the individual human way of thinking
+    and behaving through technological solutions.
+
+
+    # CREdiT authorship contribution statement
+
+
+    Zhengxin Joseph Ye: Conceptualization, Methodology, Software, Validation, Formal
+    analysis, Investigation, Resources, Data curation, Writing, Visualization, Project
+    administration. Björn W. Schuller: Writing – review & editing, Supervision.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    Data will be made available on request
+
+
+    # Appendix
+
+
+    Full list of hyperparameters are provided in Table 4, chosen through empirical
+    studies and cross validation routines.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# References
+
+
+    Carapuco, J., Neves, R., & Horta, N. (2018). Reinforcement learning applied to
+    forex trading. *Applied Soft Computing*, 73, 783–794.
+
+
+    Carta, S., Ferreira, A., et al. (2021). Multi-DQN: an ensemble of deep Q-learning
+    agents for stock market forecasting. *Expert Systems with Applications*, 164.
+
+
+    Chou, J.-S., & Nguyen, T.-K. (2018). Forward forecast of stock price using sliding-window
+    metaheuristic-optimized machine-learning regression. *IEEE Transactions on Industrial
+    Informatics*, 14(7), 3132–3142.
+
+
+    De Asis, K., Hernandez-Garcia, J. F., Holland, G. Z., & Sutton, R. S. (2018).
+    Multi-step reinforcement learning: A unifying algorithm. In *Proceedings of the
+    AAAI conference on artificial intelligence*.
+
+
+    Deng, Y., Bao, F., et al. (2017). Deep direct reinforcement learning for financial
+    signal representation and trading. *IEEE Transactions on Neural Networks and Learning
+    Systems*, 28(3), 653–664.
+
+
+    Edwards, R. (2007). *Technical analysis of stock trends* (9th). Taylor & Francis.
+
+
+    Hasselt, H. (2010). Double Q-learning. vol. 23, In *Advances in neural information
+    processing systems* (pp. 2613–2621).
+
+
+    Hasselt, H. v., Guez, A., & Silver, D. (2016). Deep reinforcement learning with
+    double Q-learning. In *Proceedings of the thirtieth AAAI conference on artificial
+    intelligence* (pp. 2094–2100). AAAI Press.
+
+
+    Hernandez-Garcia, J. F., & Sutton, R. S. (2018). Understanding multi-step deep
+    reinforcement learning: A systematic study of the DQN target. In *32nd conference
+    on neural information processing systems*.
+
+
+    Hessel, M., et al. (2018). Rainbow: Combining improvements in deep reinforcement
+    learning. In AAAI (pp. 3215–3222).
+
+
+    Hester, T., et al. (2018). Deep Q-learning from demonstrations. In *AAAI conference
+    on artificial intelligence* (pp. 8).
+
+
+    Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. *Neural Computation*,
+    9, 1735–1780.
+
+
+    Hu, G., et al. (2018). Deep stock representation learning: From candlestick charts
+    to investment decisions. In *2018 IEEE international conference on acoustics,
+    speech and signal processing* (pp. 2706–2710).
+
+
+    Hussein, A., Gaber, M. M., Elyan, E., & Jayne, C. (2017). Imitation learning:
+    a survey of learning methods.. *ACM computing surveys*, 50.
+
+
+    Jeong, G., & Kim, H. Y. (2019). Improving financial trading decisions using deep
+    Q-learning: Predicting the number of shares, action strategies, and transfer learning.
+    *Expert Systems with Applications*, 117, 125–138.
+
+
+    Karim, S. A. A., et al. (2011). Wavelet transform and fast Fourier transform for
+    signal compression: A comparative study. In *2011 International conference on
+    electronic devices, systems and applications* (pp. 280–285).
+
+
+    Lee, S., Seon, J., et al. (2021). Novel energy trading system based on deep-reinforcement
+    learning in microgrids. *Energies*, 14(17).
+
+
+    Lemperiere, Y., Deremble, C., et al. (2014). Two centuries of trend following.
+    *The Journal of Investment Strategies*, 3.
+
+
+    Li, J., Rao, R., & Shi, J. (2018). Learning to trade with deep actor critic methods.
+    vol. 02, In *2018 11th international symposium on computational intelligence and
+    design* (pp. 66–71).
+
+
+    Li, Y., Zheng, W., & Zheng, Z. (2019). Deep robust reinforcement learning for
+    practical algorithmic trading. *IEEE Access*, 7, 108014–108022.
+
+
+    Lillicrap, T. P., et al. (2016). Continuous control with deep reinforcement learning.
+    In *4th International conference on learning representations, ICLR 2016*.
+
+
+    Lin, L. (1992). Self-improving reactive agents based on reinforcement learning,
+    planning and teaching. *Machine Learning*, 8, 293–321.
+
+
+    Lin, H.-Y., et al. (2014). Discrete-wavelet-transform-based noise removal and
+    feature extraction for ECG signals. *IRBM*, 35(6), 351–361, Healthcom 2013.
+
+
+    Liu, Y., et al. (2020). Adaptive quantitative trading: An imitative deep reinforcement
+    learning approach. *Proceedings of the AAAI Conference on Artificial Intelligence*,
+    34, 2128–2135.
+
+
+    Meng, L., Gorbet, R., & Kulic, D. (2021). The effect of multi-step methods on
+    overestimation in deep reinforcement learning. In *2020 25th international conference
+    on pattern recognition* (pp. 347–353).
+
+
+    Mnih, V. (2013). Playing atari with deep reinforcement learning. CoRR.
+
+
+    Mnih, V., et al. (2015). Human-level control through deep reinforcement learning.
+    *Nature*, 518, 529–533.
+
+
+    Moody, J., & Wu, L. (1997). Optimization of trading systems and portfolios. In
+    *Proceedings of the IEEE/IAFE 1997 computational intelligence for financial engineering*
+    (CIFEr) (pp. 300–307).
+
+
+    Ni, Y., Day, M.-Y., Cheng, Y., & Huang, P. (2022). Can investors profit by utilizing
+    technical trading strategies? evidence from the Korean and Chinese stock markets.
+    *Financial Innovation*.
+
+
+    Ning, B., Lin, F. H. T., & Jaimungal, S. (2021). Double deep Q-learning for optimal
+    execution. *Applied Mathematical Finance*, 28(4), 361–380.
+
+
+    Peng, J., & Williams, R. (1998). Incremental multi-step Q-learning. *Machine Learning*,
+    22.
+
+
+    Piot, B., Geist, M., & Pietquin, O. (2014a). Boosted and reward-regularized classification
+    for apprenticeship learning. In *Proceedings of the 2014 international conference
+    on autonomous agents and multi-agent systems* (pp. 1249–1256).
+
+
+    Piot, B., Geist, M., & Pietquin, O. (2014b). Boosted bellman residual minimization
+    handling expert demonstrations. In ECML/PKDD.
+
+
+    Sang, Y.-F., et al. (2009). Entropy-based wavelet denoising method for time series
+    analysis. *Entropy*, 11, 1123–1148.
+
+
+    Schaal, S. (1999). Is imitation learning the route to humanoid robots? *Trends
+    in Cognitive Sciences*, 3(6), 233–242.
+
+
+    Schaul, T., Quan, J., Antonoglou, I., & Silver, D. (2016). Prioritized experience
+    replay. In *International conference on learning representations*.
+
+
+    Silver, D., et al. (2016). Mastering the game of go with deep neural networks
+    and tree search. *Nature*, 529, 484–489.
+
+
+    Sutton, R. (1988). Learning to predict by the method of temporal differences.
+    *Machine Learning*, 3, 9–44.
+
+
+    Tran, M., Pham-Hi, D., & Bui, M. (2023). Optimizing automated trading systems
+    with deep reinforcement learning. *Algorithms*, 16(1).
+
+
+    Tsai, M.-C., et al. (2019). Forecasting leading industry stock prices based on
+    a hybrid time-series forecast model. *PLOS ONE*, 13(12), 1–24.
+
+
+    Tsantekidis, A., et al. (2021). Price trailing for financial trading using deep
+    reinforcement learning. *IEEE Transactions on Neural Networks and Learning Systems*,
+    32(7), 2837–2846.
+
+
+    Vaswani, A., et al. (2017). Attention is all you need. In *Proceedings of the
+    31st international conference on neural information processing systems* (pp. 6000–6010).
+
+
+    Wen, W., Yuan, Y., & Yang, J. (2021). Reinforcement learning for options trading.
+    *Applied Sciences*, 11(23).
+
+
+    Xiong, Z., et al. (2018). Practical deep reinforcement learning approach for stock
+    trading. In *NeurIPS 2018 AI in finance workshop*.
+
+
+    Yuan, Y., Yu, Z., et al. (2019). A novel multi-step Q-learning method to improve
+    data efficiency for deep reinforcement learning. *Knowledge-Based Systems*, 175.'
+  merge: -1
+  img_proc: true
