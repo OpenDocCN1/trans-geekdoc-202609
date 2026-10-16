@@ -1,0 +1,2343 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/37669628775ca7a07835165249fef088_1_0.png)
+
+
+    Instill AI
+
+
+    # Practical Linear Algebra for Machine Learning
+
+
+    Author:
+
+    Amirsina Torfi
+
+
+    December, 2020'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# Table of Contents\n\n+   1 Introduction 1\n+   1.1 Is Mathematics Painful?\
+    \ 1\n+   1.2 The Motivation 2\n+   1.3 How to Use This Book? 3\n+   \n+   2 Basic\
+    \ Linear Algebra Definitions 4\n+   2.1 Introduction 4\n+   2.2 Scalar and Vector\
+    \ 4\n+   2.3 Matrix 5\n+   2.4 Tensor 6\n+   2.5 Conclusion 6\n+   \n+   3 An\
+    \ Introduction to NumPy 7\n+   3.1 Introduction 7\n+   3.2 Data Types 7\n+   3.2.1\
+    \ Basic Data Types 8\n+   3.2.2 Type Conversion 8\n+   3.3 Defining a NumPy Array\
+    \ 10\n+   3.3.1 Create an array from a list 10\n+   3.3.2 Special functions 12\n\
+    +   3.3.3 Universal functions 13\n+   3.3.4 Random array 14\n+   3.4 Basic Arithmetic\
+    \ Operations 15\n+   3.5 Array Manipulation 16\n+   3.5.1 Indexing 16\n+   3.5.2\
+    \ Shaping 18\n+   3.6 Conclusion 19\n+   \n+   4 Matrix Operations 20"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "+   7.2.1  Eigenvector and Eigenvalue ........................................\
+    \ 45\n+   7.2.2  The Process ..........................................................\
+    \ 46\n+   7.2.3  Discussion on Matrix Eigendecomposition .............................\
+    \ 47\n+   7.2.4  One Special Matrix Type and its Decomposition .......................\
+    \ 48\n+   7.2.5  Useful Properties ....................................................\
+    \ 48\n+   7.2.6  Using Python ..........................................................\
+    \ 49\n+   7.3    Singular Value Decomposition (SVD) ...................................\
+    \ 49\n+   7.3.1  Preliminary Definitions ..............................................\
+    \ 49\n+   7.3.2  Matrix decomposition with SVD ........................................\
+    \ 50\n+   7.3.3  A Practical Implementation ............................................\
+    \ 51\n+   7.3.4  Applications of SVD ...................................................\
+    \ 52\n+   7.4    Conclusion ............................................................\
+    \ 52\n+   References .....................................................................\
+    \ 53\n+   Appendix A: The Notations .....................................................\
+    \ 54\n+   Appendix B: Python Environment .................................................\
+    \ 54\n+   Index ..........................................................................\
+    \ 55\n\n# # List of Figures\n\n+   Fig. 2.1  A vector and its constituent elements\
+    \ ............................ 5\n+   Fig. 2.2  Tensor representation ...............................................\
+    \ 6\n+   \n+   Fig. 3.1  Transform a list to NumPy array. ..................................\
+    \ 10\n+   Fig. 3.2  Transform a list into a two dimensional NumPy array ................\
+    \ 11\n+   Fig. 3.3  Defining filled arrays .............................................\
+    \ 12\n+   Fig. 3.4  NumPy indexing .......................................................\
+    \ 13\n+   Fig. 3.5  Element-wise summation with NumPy ..................................\
+    \ 16\n+   Fig. 3.6  NumPy indexing .......................................................\
+    \ 17\n+   \n+   Fig. 4.1  Dimension Matching ..................................................\
+    \ 24\n+   Fig. 4.2  Matrix-Vector Multiplication. .......................................\
+    \ 28\n+   \n+   Fig. 5.1  Vector norm ..........................................................\
+    \ 35\n+   \n+   Fig. 6.1  Linear Dependent .....................................................\
+    \ 41\n+   \n+   Fig. 7.1  Eigenvector ..........................................................\
+    \ 46"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Chapter 1
+
+
+    # Introduction
+
+
+    In this chapter, the goal is to investigate the importance of Linear Algebra in
+    Machine Learning and motivate you to continue further.
+
+
+    # 1.1. Is Mathematics Painful?
+
+
+    Let me start with one fact: The majority of us may dislike math if not hate it!
+    We try to avoid it at all costs and when we feel like we can’t avoid it, it’s
+    like being in agony as our lungs blister with chemical burns. Am I right? We may
+    have many different reasons, consciously or subconsciously:
+
+
+    +   - While reading it, it always looks like that we have to learn new things
+    which we do not know how useful they are, except for understanding what we are
+    reading!
+
+    +   - Why should I spend too much time one something that I don’t receive an immediate
+    benefit? What if I can skip the math and still be able to do the job?
+
+    +   - Maybe due to the conformity bias, It looks cool to say, “I hate mathematics.”
+
+    +   - Maybe you had a bad teacher! I am not talking about being good or bad in
+    actually knowing math; I am talking about a teacher that always discouraged you
+    by criticizing your manner or questioning your ability! It usually happened. Right?
+
+    +   - Any other reason that you have in mind and I missed them ...
+
+
+    All in all, the list is too long. Many times understanding the root of this problem
+    may not solve the problem. Perhaps it’s good to only think about our motivations
+    rather than forcing ourselves to like it! I personally believe there is no reason
+    to like something if we have to do it. On the other hand, it’s actually a skill:
+    Doing things we hate to do! So, let’s forget about liking math for a moment and
+    try to just motivate ourselves to learn it at the level that we need!'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'A question still remains: **Do we really need to learn math if we desire to
+    learn Machine Learning?** The short answer is: (1) yes, you need to learn some
+    branches of mathematics, such as Linear Algebra, (2) you need to learn it as needed.
+    There is no need to be a master!
+
+
+    # 1.2. The Motivation
+
+
+    **Why Linear Algebra is Necessary for Machine Learning?** Linear Algebra is a
+    branch of math that is broadly used everywhere. It is, in essence, the study of
+    vectors and linear functions and we use it to interpret and utilize Machine Learning.
+    Knowing Linear Algebra enlighten you about how algorithms work at their core level,
+    which helps you to employ an algorithm better or even make a decision whether
+    that choice (the utilized algorithm/approach) is practical or not. An example
+    is the K-nearest neighbor algorithm which is known to be one of the simplest Machine
+    Learning algorithms. Even for that, you still cannot avoid knowing a minimal level
+    of Linear Algebra, if you would like to know how to implement it.
+
+
+    Vectors and matrices are everywhere, especially in Deep Learning. Loosely speaking,
+    Deep Learning is technically Machine Learning using Neural Networks and Big Data.
+    Neural Networks are made of matrices, and they mainly operate under the laws of
+    Linear Algebra. Henceforth, a good knowledge of linear algebra seems to be necessary
+    for understanding and utilizing Machine Learning and Deep Learning algorithms
+    and architectures. Let’s not ignore what we can easily see: ***Linear Algebra
+    is a MUST KNOWN for Machine Learning.***
+
+
+    But wait! Is that enough to exclaim the importance of Linear Algebra? Of course
+    not. I like to address some situations that you need to know Linear Algebra, SERIOUSLY:
+
+
+    +   - **Working with vectors:** Can you ignore vectors and their associated characteristics
+    while working on Machine Learning? I think NOT. They are everywhere. The foundation
+    of Machine Learning is based on vectors and matrices.
+
+    +   - **Delving deep in an algorithm:** You can’t possibly hit the root and gain
+    a core understanding of Machine Learning algorithms without knowing Linear Algebra.
+    You may say, "who cares about core understanding?" Yeah, you can ignore it, but
+    what if your implementation is not working? What if you want to improve a method?
+    What if you want to know more than average?! Then you need it so bad!!
+
+    +   - **You want to teach what you know:** Yes, that is very important. Assume
+    you want to DO Machine Learning, whatever that "DOING" means. Eventually, you
+    want to share your knowledge by any mean. Explaining to other folks, your manager,
+    your students, and the list goes on. Of course, if you work in a company, it is
+    unlikely that any of your managers care about "how your algorithm works and what
+    is inside it?!" BUT, they care about the results. Assume you want to convince
+    them something is NOT working. Then you need to explain in detail. If your managers
+    neither'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'care about why your algorithm works nor you can convince them by going into
+    the details of Linear Algebra, then you MUST SIMPLY QUIT and chase your prosperity
+    elsewhere!
+
+
+    Those lines where only simple examples to showcase the importance of Linear Algebra
+    in Machine Learning. It is hard (if not impossible) to touch base on each and
+    every aspect of Linear Algebra that are important in Machine Learning, in just
+    ONE post. I am sure you will, but again, I suggest you to google "*The importance
+    of Linear Algebra in Machine Learning*" to explore more!
+
+
+    It looks impossible to ignore, right? In the beginning, it may be like torture
+    to force ourselves to dig deep into it. BUT, if you are audacious, what you will
+    gain is amazing knowledge which facilitates your climbing the ladder of Machine
+    Learning.
+
+
+    # 1.3. How to Use This Book?
+
+
+    This book aims to teach you the core concepts in a practical way. The focus is
+    on the Linear Algebra topics that are mostly used in Machine Learning and Deep
+    Learning. To further assist you in understanding the materials, for each notion,
+    a practical Python code is provided. Do NOT just run the code. Try to understand
+    everything by going further and modifying the codes to see what you will understand.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Chapter 2
+
+
+    # Basic Linear Algebra Definitions
+
+
+    # 2.1. Introduction
+
+
+    In the process of practicing Machine Learning [1] you keep hearing buzzwords related
+    to Linear Algebra. Vector, matrix, tensor? Those are basic Linear Algebra Definitions.
+    In this chapter, some of the most commonly used Linear Algebra definitions are
+    introduced.
+
+
+    This chapter aims to accomplish the following:
+
+
+    +   - Provide the basic definitions in Linear Algebra that we hear every day while
+    dealing with Machine Learning.
+
+    +   - Describe the connection between those basic concepts.
+
+    +   - Demonstration of the commonly used notations.
+
+
+    If you already know Linear Algebra and/or familiar with basic definitions, you
+    may still find some aspects of this article useful, such as the representation
+    of "the commonly used notations."
+
+
+    # 2.2. Scalar and Vector
+
+
+    By using mathematical definition, a scalar is "*an element of a field, which is
+    used to define a vector space, usually the field of real numbers.*" Simply speaking,
+    a scalar is just a number. We usually denote a scalar with a lower case symbol,
+    such as a.
+
+
+    It is worth to have a comparison between scalars and vectors. Most probably, you
+    are familiar with measures such as the velocity of a moving car and the direction
+    of moving, which have both quantity and direction. Such elements are called vector
+    as opposed to scalars, which have magnitude only. We denote vectors with bold
+    symbols such as a.
+
+
+    Subscripts usually denote the elements of the vector. For example the second element
+    of the vector v is denoted as v₂. In general, we show a k-dimensional vector as
+    an array of elements:'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/37669628775ca7a07835165249fef088_12_0.png)
+
+
+    Fig. 2.1. The red arrow **v** is the vector and *a* and *b* are scalars denoting
+    the magnitudes of **v** in horizontal and vertical directions.
+
+
+    **v** = $\begin{bmatrix} v_1 \\ v_2 \\ \dots \\ v_{k-1} \\ v_k \end{bmatrix}$
+
+
+    **NOTATION:** We denote a k-dimensional vector as **v** ∈ ℝ^k.
+
+
+    # 2.3. Matrix
+
+
+    In mathematics, a matrix is a rectangular array of elements, such as numbers organized
+    in rows and columns. Usually, the matrices are denoted with bold uppercase, such
+    as **M**. An example of a matrix is below:
+
+
+    **A** = $\begin{bmatrix} 1 & -1 & 3 \\ 4 & 11 & -0.2 \end{bmatrix}$
+
+
+    We denote the matrix elements with subscripts. In the matrix **M**, the element
+    in *i*^th row and *j*^th column is denoted as **M**_{i,j}. So you can easily say
+    for the example above, **M**_{1,2} = −1 and **M**_{2,3} = −0.2. Another important
+    notation is when we desire to refer a row or a column as a whole, i.e., all elements
+    in that particular row/column. In this case, we use “:” sign in the subscript.
+    For example, assume we want to refer to all elements of *i*^th row for matrix
+    **M**. We denote that row with **M**_{i,:}. For matrix **A**, **A**_{1,:} is as
+    below:
+
+
+    **A**_{1,:} = $\begin{bmatrix} 1 & -1 & 3 \end{bmatrix}$'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '**NOTE:** We usually represent a vector using one column and multiple rows
+    of elements. Henceforth, we can call a vector of size $k$ as a $k \times 1$ matrix.
+    In general, we can informally say vectors are special kind of matrices which are
+    1-dimensional.
+
+
+    **NOTATION:** We denote a matrix as $\mathbf{M} \in \mathbb{R}^{m\times n}$ in
+    which $m$ and $n$ are the number of rows and columns, respectively.
+
+
+    # 2.4. Tensor
+
+
+    We usually represent data in machine learning, numerically. Tensors are used for
+    such numerical representation. A tensor is simply a container that holds data
+    in N-dimensional space. A Tensor can host and represent multiple matrices. An
+    example is shown below:
+
+
+    $$\begin{bmatrix}\begin{bmatrix}10 & 3 & 3.1 \\ 6 & 12 & -0.2 \\ 1 & -2 & 7 \\
+    4. & 1.1 & 81.1\end{bmatrix} \begin{bmatrix}1.0 & -1 & 3 \\ 4 & 11 & -2 \\ 1.1
+    & -2 & -2 \\ 4 & 4 & -5\end{bmatrix}\end{bmatrix}$$
+
+
+    You can consider a simple 3D tensor as the data cube depicted below:
+
+
+    ![](img/37669628775ca7a07835165249fef088_13_0.png)
+
+
+    **Fig. 2.2.** In this tensor, each color represents a matrix and the concatenation
+    of the matrices, form the tensor.
+
+
+    # 2.5. Conclusion
+
+
+    In this chapter, some of the most commonly used Linear Algebra definitions in
+    Machine Learning are described. Scalar, vector, matrix, and tensor are what you
+    hear the most. It is crucial to know them before proceeding to learn other concepts
+    in Linear Algebra. For more details about the concepts in this chapter, you can
+    refer to [2–6].'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# # Chapter 3
+
+
+    # # An Introduction to NumPy
+
+
+    This chapter is dedicated to NumPy [7], one of the most important scientific computing
+    libraries for Linear Algebra and henceforth, Machine Learning! As we will use
+    it frequently to explain the concepts of Linear Algebra, it is important to know
+    how to utilize it.
+
+
+    # 3.1.  Introduction
+
+
+    In almost **any Python program code in Machine Learning** you see ”NumPy” library
+    being used! Why? Doing Machine Learning is impossible without Linear Algebra and
+    Linear Algebra is formed by vectors, matrices, etc. Well, **NumPy is one of the
+    best scientific computing packages, in particular, for Linear Algebra.** So that
+    was the short answer to the ”why” question earlier!
+
+
+    **You can conduct a simple 30 minutes research** to find out if I am right or
+    wrong! Search through the web and look for Machine Learning projects and their
+    available source codes. Check to see how many of them use Numpy. Check Python
+    codes. See how many times you see the expression *”import numpy”* or *”import
+    numpy as np”* on top of the code. Do it! It definitely motivates you unless you
+    already are aware of the importance of Numpy.
+
+
+    Here are what you learn in this chapter:
+
+
+    +   - What is Numpy?
+
+    +   - How we can define arrays in Numpy?
+
+    +   - What are the basic operations?
+
+    +   - How to leverage Numpy for Machine Learning?
+
+    +   - What are the most used tips and tricks in using Numpy?
+
+
+    # 3.2.  Data Types
+
+
+    Here, some of the most important Numpy numeric data types that you frequently
+    encounter are described. Numpy supports numerous data types, perhaps even more
+    than Python itself!'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "# ### 3.2.1  Basic Data Types\n\nThe most basic data types are as follows:\
+    \ integer (ex : 1, 2, −10), float (ex : 1.1, 3.24, −7.00111), complex (ex : 1\
+    \ + 2j, 2.1 + 3j, −2 + 1.4j), and Boolean (ex: True, False). You can use NumPy\
+    \ to convert Python elements in many different ways such as changing an array\
+    \ type to another specific type. Let’s start with the following examples:\n\n\
+    ```\n```python\n# Import NumPy library\nimport NumPy as np\n\n# Define a number\n\
+    a = 10\nprint('Type, before converting: ', type(a))\n\n# Change the type to float\
+    \ with NumPy\nb = np.float64(a)\nprint('Type, after converting: ', type(b))\n\n\
+    # Change the type to float with NumPy\nc = float(a)\nprint('Type, after converting:\
+    \ ', type(c))\n```\n```\n\n```\n```text\nType, before converting:  <class ’int’>\n\
+    Type, after converting:  <class ’numpy.float64’>\nType, after converting:  <class\
+    \ ’float’>\n```\n```\n\n> **Question**\n> \n> What is the difference between using\
+    \ “np.float64” and the Python “float” built-in function?\n\n# ### 3.2.2  Type\
+    \ Conversion\n\nNow, let’s turn a list to a NumPy array. For now, let’s just focus\
+    \ on the data types and conversion, later in this chapter, you will see how to\
+    \ define NumPy arrays in details.\n\n```\n```python\n# Import NumPy library\n\
+    import numpy as np\n\n# Define a Python list\na = [1, 2, 1.3]\nprint('Type \"\
+    a\": ', type(a))\n\n# Turn Python list into a NumPy array of type np.int32 (Integer\n\
+    \    (-2147483648 to 2147483647))\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '```
+
+    b = np.int32(a)
+
+    print(''Array "b": '', b)
+
+    print(''Type array "b": '', type(b))
+
+    print(''Array "b" data type: '', b.dtype)
+
+
+    # Turn Python list into a NumPy array of type np.float32 (same as Python float)
+
+    c = np.float32(a)
+
+    print(''Array "c": '', c)
+
+    print(''Type array "c": '', type(c))
+
+    print(''Array "c" data type: '', c.dtype)
+
+    ```
+
+
+    ```
+
+    Type "a": <class ''list''>
+
+    Array "b": [1 2 1]
+
+    Type array "b": <class ''numpy.ndarray''>
+
+    Array "b" data type: int32
+
+    Array "c": [1. 2. 1.3]
+
+    Type array "c": <class ''numpy.ndarray''>
+
+    Array "c" data type: float32
+
+    ```
+
+
+    We used the .dtype NumPy method to realize what is the data type inside the array.
+    The recommended way to change the type of a NumPy array is the usage of .astype()
+    method. Take a look at the following example:
+
+
+    ```
+
+    # Import NumPy library
+
+    import numpy as np
+
+
+    # Define a Python list
+
+    a = [1, 2, 4]
+
+    print(''Type "a": '', type(a))
+
+
+    # Turn Python list into a NumPy array of type np.int32 (Integer (-2147483648 to
+    2147483647))
+
+    b = np.int32(a)
+
+    print(''Array "b": '', b)
+
+    print(''Type array "b": '', type(b))
+
+
+    # Turn Python list into a NumPy array of type np.float32 (same as Python float)
+
+    c = b.astype(np.float32)
+
+    print(''Array "c": '', c)
+
+    print(''Type array "c": '', type(c))
+
+    ```
+
+
+    ```
+
+    Type "a": <class ''list''>
+
+    Array "b": [1 2 4]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '```
+
+    Type array "b":  <class ''numpy.ndarray''>
+
+    Array "c":  [1. 2. 4.]
+
+    Type array "c":  <class ''numpy.ndarray''>
+
+    ```
+
+
+    # 3.3. Defining a NumPy Array
+
+
+    An array is basically a one- or multi-dimensional grid of values. In a NumPy array,
+    in particular, all values are from the same type (integer, float). How we are
+    going to define a NumPy array? For a NumPy array, we have the following definitions:
+
+
+    +   - **Rank:** The number of dimensions an array has.
+
+    +   - **Shape:** A tuple that indicates the number of elements in each dimension.
+    Ex: The shape of an array being as (2,4,10) indicates that we have a three-dimensional
+    array which has 2,4, and 10 elements in the first, second, and third dimension,
+    respectively.
+
+
+    # 3.3.1 Create an array from a list
+
+
+    Now let’s get started with Python. We start with the most common approach. Let’s
+    define create a NumPy array from a list:
+
+
+    ```
+
+    # Import NumPy library
+
+    import numpy as np
+
+
+    # Define a Python list
+
+    mylist = [1, 2, 4, 8]
+
+
+    # Create a NumPy array from the list
+
+    numpy_array = np.array(mylist)
+
+    print(''Array: '', numpy_array)
+
+    ```
+
+
+    ```
+
+    Array:  [1 2 4 8]
+
+    ```
+
+
+    ![](img/37669628775ca7a07835165249fef088_17_0.png)
+
+
+    Fig. 3.1. Above, we used np.array function to transform a list into a NumPy array
+
+
+    What if we do not define a list and just input the numbers as below:'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# 3.3. DEFINING A NUMPY ARRAY\n\n```\n```python\n# Import NumPy library\nimport\
+    \ numpy as np\n\n# Naively input the numbers\nnumpy_array = np.array(1,2,4,8)\n\
+    print('Array: ', numpy_array)\n```\n```\n\n> Run the above code to see what you\
+    \ will get as the output.\n\nNow, let’s define a two-dimensional array:\n\n```\n\
+    ```python\n# Import NumPy library\nimport numpy as np\n\n# Naively input the numbers\n\
+    row1 = [2,4,6,8]\nrow2 = [1,3,5,7]\nnumpy_array = np.array([row1,row2])\nprint('Array:\
+    \ ', numpy_array)\n\n# Get the shape\nprint('Shape: ', numpy_array.shape)\n```\n\
+    ```\n\n```\n```text\nArray:  [[2 4 6 8]\n [1 3 5 7]]\nShape:  (2, 4)\n```\n```\n\
+    \n![](img/37669628775ca7a07835165249fef088_18_0.png)\n\n**Fig. 3.2.** Above, we\
+    \ transformed a list into a two-dimensional NumPy array\n\nLet’s take a look at\
+    \ the above code once again. We defined a matrix. The argument inside **np.array**\
+    \ is a list that each of its elements is another list (see figure above)! The\
+    \ inside lists denoted as row1 and row2 forms the rows of the matrix and MUST\
+    \ have the same size! Think why? That was a simple example to showcase how we\
+    \ can create arrays. The **.shape** method is used to return the NumPy array shape.\
+    \ The output above shows we have a matrix with two rows and four columns."
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# 3.3.2 Special functions\n\nWe can create NumPy arrays using some special\
+    \ NumPy functions. I used a couple of them below for your reference:\n\n```\n\
+    # Import NumPy library\nimport numpy as np\n\n### Defining arrays using special\
+    \ functions ###\n# Arguments:\n# shape: The shape of the numpy array\n# dtype:\
+    \ Specifying the data type (not required)\n\n# Defining an all-zero array\nzeroArray\
+    \ = np.zeros(shape=(3,5), dtype=np.int16 )\nprint(\"zeroArray: \", zeroArray)\n\
+    \n# Defining an all-one array\nonesArray = np.ones(shape=(3,5), dtype=np.float32\
+    \ )\nprint(\"onesArray: \", onesArray)\n\n# Defining an array filled with one\
+    \ specific elements\nfullArray = np.full(shape=(3,5), fill_value=4.2, dtype=np.float64\
+    \ )\nprint(\"fullArray: \", fullArray)\n```\n\n```\nzeroArray: [[0 0 0 0 0]\n\
+    \ [0 0 0 0 0]\n [0 0 0 0 0]]\nonesArray: [[1. 1. 1. 1. 1.]\n [1. 1. 1. 1. 1.]\n\
+    \ [1. 1. 1. 1. 1.]]\nfullArray: [[4.2 4.2 4.2 4.2 4.2]\n [4.2 4.2 4.2 4.2 4.2]\n\
+    \ [4.2 4.2 4.2 4.2 4.2]]\n```\n\n![](img/37669628775ca7a07835165249fef088_19_0.png)\n\
+    \n![](img/37669628775ca7a07835165249fef088_19_1.png)\n\nFig. 3.3. Defining arrays\
+    \ filled with specific elements\n\nOne of the most important special functions\
+    \ is np.arange which is similar to Python range built-in function. An example\
+    \ of using np.arrage is as below:"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '```
+
+    # Import NumPy library
+
+    import numpy as np
+
+
+    # Define a NumPy array using np.arrage
+
+    # np.arrage defines an interval of numbers
+
+    # Arguments:
+
+    #   start: Starting of the interval.
+
+    #   stop: Ending of the interval.
+
+    #   step: Step size.
+
+    # NOTE: The interval includes "start" number but does NOT include "stop" number.
+
+    arr = np.arange(start=3,stop=10,step=2)
+
+    print("Array: ", arr)
+
+    ```
+
+
+    Array: [3 5 7 9]
+
+
+    ![](img/37669628775ca7a07835165249fef088_20_0.png)
+
+
+    Fig. 3.4. NumPy indexing starts from 0 to infinity! By defining np.arange(start=3,stop=10,step=2),
+    start index is 3. The stop index is 10 BUT it is NOT included in the range. Step
+    size is 2 means every other index is picked, i.e., we only pick green indexes
+    and jump over orange ones
+
+
+    # 3.3.3 Universal functions
+
+
+    NumPy, for performing element-wise operations, provides some universal functions.
+    Take a look at some of the universal functions demonstrated below:
+
+
+    ```
+
+    # Import NumPy library
+
+    import numpy as np
+
+
+    v = np.array([1, 3, 5])
+
+    w = np.array([2, 4, 6])
+
+
+    # Exponential opration
+
+    print(''e^v= '', np.exp(v))
+
+
+    # The squere root of an array
+
+    print(''v^{1/2}= '', np.sqrt(v))
+
+
+    # Adding two vectors
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "```\nprint('v+w= ', np.add(v, w))\n\n# Sin and Cos of an array\nprint('Sin(v)=\
+    \ ', np.sin(v))\nprint('Cos(v)= ', np.cos(v))\n```\n\nRun the above code to see\
+    \ the result.\n\n# 3.3.4 Random array\n\nSometimes, it is desired to define an\
+    \ array with random numbers. There are many ways to this task depends on the kind\
+    \ of random numbers we want to use. For example, do we want to generate random\
+    \ integers, float, etc? Take a look at the below approaches:\n\n```\n# Import\
+    \ NumPy library\nimport numpy as np\n\n### Defining arrays with random elements\
+    \ ###\n# Arguments:\n#   size: The size of the numpy array\n\n# Defining a random\
+    \ array\nrandArray = np.random.random(size=(2,3))\nprint(\"randArray: \", randArray)\n\
+    \n# Defining a random array with integer elements\n# high: The highest element\
+    \ that is allowed to be generated is `` high-1``\n# low: The lowest integer that\
+    \ is allowed to be generated\nrandintArray = np.random.randint(low=1, high=5,\
+    \ size=(2,3))\nprint(\"randintArray: \", randintArray)\n```\n\n```\nrandArray:\
+    \  [[0.65055144 0.12510875 0.09906024]\n [0.47333278 0.67082837 0.7673982 ]]\n\
+    randintArray:  [[4 4 1]\n [1 2 2]]\n```\n\nCAVEAT\n\nSince we generated a random\
+    \ vector, if you use the above Python code, you definitely will NOT get the results\
+    \ I reported above! It was obvious, though. Right?"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# 3.4. Basic Arithmetic Operations\n\nLet’s first cover the basic arithmetic\
+    \ operations with some examples:\n\n```\n# Import NumPy library\nimport numpy\
+    \ as np\n\n# Create two arrays\na = np.array([[1,5],[0,8]], dtype=np.float32)\n\
+    b = np.array([[2,1],[5,2]], dtype=np.float32)\nprint('a= ', a)\nprint('b= ', b)\n\
+    \n# Elementwise adding\n# a + b and np.add(a, b) are the same.\n# Check to see\
+    \ if a + b and np.add(a, b) are the same using ``assert ``.\n# .all() method check\
+    \ if all elements of a matrix is True.\nprint('a + b= ', a + b)\nassert((a + b\
+    \ == np.add(a, b)).all())\n\n# Elementwise subtraction\nprint('a - b= ', a - b)\n\
+    assert((a - b == np.subtract(a, b)).all())\n\n# Elementwise multiplication\nprint('a\
+    \ * b= ', a * b)\nassert((a * b == np.multiply(a, b)).all())\n\n# Elementwise\
+    \ division\nprint('a / b= ',a / b)\nassert((a / b == np.divide(a, b)).all())\n\
+    \n# Elementwise square\nprint('a^2= ', np.square(a))\nassert((a ** 2 == np.square(a)).all())\n\
+    ```\n\n```\na= [[1. 5.]\n    [0. 8.]]\nb= [[2. 1.]\n    [5. 2.]]\na + b= [[ 3.\
+    \   6.]\n        [ 5.  10.]]\na - b= [[-1.   4.]\n        [-5.   6.]]\na * b=\
+    \ [[ 2.   5.]\n        [ 0.  16.]]\na / b= [[0.5 5. ]\n```"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '```
+
+    [0.  4. ]
+
+    a^2=  [[ 1. 25.]
+
+    [ 0. 64.]]
+
+    [1 2 2]]
+
+    ```
+
+
+    ![](img/37669628775ca7a07835165249fef088_23_0.png)
+
+
+    Fig. 3.5. Element-wise summation. In element-wise operations, the operator performs
+    on correspondent elements from matrices
+
+
+    # 3.5. Array Manipulation
+
+
+    After becoming familiar with NumPy arrays, now it’s time to learn how to play
+    with arrays and learn some techniques.
+
+
+    # 3.5.1 Indexing
+
+
+    First, let’s define and slice an array:
+
+
+    ```
+
+    # Import NumPy library
+
+    import numpy as np
+
+
+    # Create a matrix
+
+    A = np.array([[2,1,3,4],[5,2,9,4],[5,2,10,1],[2,2,11,-1]])
+
+    print(''A=\n'', A)
+
+
+    # Extract the first two rows
+
+    # Remember 0:2 in indexing means {0,1} and does NOT include 2!
+
+    # Using : merely, means ALL!
+
+    print(''The first two rows= \n'', A[0:2,:])
+
+
+    # Extract the first three rows and the last two columns
+
+    # -2: means the second to the last to the end!
+
+    # 0:3 mean {0,1,2}
+
+    print(''The first three rows and last two columns= \n'', A[0:3,-2:])
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "```\n```python\n# Let’s point to one element\n# The second row (index 1) and\
+    \ third column (index 2)\n# Remember Python indexing starts from zero!!\nprint('The\
+    \ second row and third column= \\n', A[1,2])\n```\n```\n\n```\n```\nA=\n  [[ 2\
+    \  1  3  4]\n   [ 5  2  9  4]\n   [ 5  2 10  1]\n   [ 2  2 11 -1]]\nThe first\
+    \ two rows=\n  [[2 1 3 4]\n   [5 2 9 4]]\nThe first three rows and last two columns=\n\
+    \  [[ 3  4]\n   [ 9  4]\n   [10  1]]\nThe second row and third column=\n  9\n\
+    ```\n```\n\n![](img/37669628775ca7a07835165249fef088_24_0.png)\n\nFig. 3.6. Left\
+    \ figure: Shows the A[0:4,-2:] which is the first three rows and the last two\
+    \ columns.\nRight figure: Shows A[1,2] which is only one single element located\
+    \ in second row and third column.\n\nLet’s review the code above. At line 11,\
+    \ I used sliced indexing by selecting from a range of indices. At line 21, I only\
+    \ used integer indices. We can simply combine both, but there might be a difference\
+    \ in the output matrix ranking. Check the example below:\n\n```\n```python\n#\
+    \ Import NumPy library\nimport numpy as np\n\n# Create a matrix\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "```\nA = np.array([[2,1,3,4],[5,2,9,4],[5,2,10,1],[2,2,11,-1]])\nprint('A=\\\
+    n', A)\n\n# Extract the first row and all columns using two approaches\nprint('The\
+    \ first row with slice indexing= \\n', A[0:1,:]) # Slice indexing\nprint('The\
+    \ first row with integer indexing= \\n', A[0,:])  # Integer indexing\nprint('The\
+    \ first row shape slice indexing= \\n', A[0:1,:].shape) # Slice indexing\nprint('The\
+    \ first row shape integer indexing= \\n', A[0,:].shape)  # Integer indexing\n\
+    ```\n\n```\nA=\n[[ 2  1  3  4]\n [ 5  2  9  4]\n [ 5  2 10  1]\n [ 2  2 11 -1]]\n\
+    The first row with slice indexing=\n[[2 1 3 4]]\nThe first row with integer indexing=\n\
+    [2 1 3 4]\nThe first row shape slice indexing=\n(1, 4)\nThe first row shape integer\
+    \ indexing=\n(4,)\n```\n\nIf you see the results, the shape of the matrix would\
+    \ be different. Basically, **with slice indexing, we have a rank-2 matrix** and\
+    \ **with integer indexing, we will have a rank-1 matrix**. Be careful about this\
+    \ difference when you are dealing with NumPy indexing. We later talk about the\
+    \ matrix rank concept in details.\n\n# 3.5.2 Shaping\n\n```\n# Import NumPy library\n\
+    import numpy as np\n\n# Create a matrix\nA = np.array([[2,1,3,4],[5,2,9,4],[5,2,10,1]])\n\
+    print('A=\\n', A)\nprint('Shape of A=\\n', A.shape)\n\n# Reshape A to the new\
+    \ shape of (2,6)\nB = A.reshape(2,6)\nprint(\"B: \\n\", B)\n\n# Reshape A to the\
+    \ new shape of (2,x)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "```\n# If we use -1, the remaining dimension will be chosen automatically\n\
+    C = A.reshape(4,-1)\nprint(\"C: \\n\", C)\n# Flatten operation\nprint(\"Flatten\
+    \ A: \\n\", A.ravel())\n```\n\n```\nA=\n  [[ 2  1  3  4]\n  [ 5  2  9  4]\n  [\
+    \ 5  2 10  1]]\nShape of A=\n(3, 4)\nB:\n  [[ 2  1  3  4  5  2]\n  [ 9  4  5 \
+    \ 2 10  1]]\nC:\n  [[ 2  1  3]\n  [ 4  5  2]\n  [ 9  4  5]\n  [ 2 10  1]]\nFlatten\
+    \ A:\n[ 2  1  3  4  5  2  9  4  5  2 10  1]\n```\n\nThe question is how reshaping\
+    \ operations work? Above we had the matrix A of size (3,4) with 12 (3 × 4) total\
+    \ elements. When we use np.reshape, the default NumPy order is “C-style”, which\
+    \ is, the rightmost index “changes the fastest” for the processing operation.\
+    \ Let’s use the above example of using .ravel() to flatten the matrix: The first\
+    \ element is obviously A₀,₀ and the next one is A₀,₁. The processing and creating\
+    \ the new array is as below when using .ravel():\n\n[A₀,₀, A₀,₁, A₀,₂, A₀,₃, A₁,₀,\
+    \ …, A₃,₃, A₃,₄]\n\n# 3.6. Conclusion\n\nIn this chapter, you learned how to use\
+    \ NumPy. You also realized how important it is for Machine Learning purposes.\
+    \ But clearly this introduction is NOT a panacea for all your NumPy needs nor\
+    \ it is flawless! You always need to explore more. You can learn more efficiently\
+    \ if you practice on your own. Use the above codes as a starter code and try to\
+    \ play around with them. If you would like to know more about NumPy, you can refer\
+    \ to [8–10]."
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Chapter 4
+
+
+    # Matrix Operations
+
+
+    This chapter is dedicated to describe how we work with matrices and vectors. The
+    discussion about vectors is straightforward and most of the content of this chapter
+    is dedicated to matrix operations.
+
+
+    # 4.1. Introduction
+
+
+    Have you ever wondered why you need to know matrix operations? The answer is very
+    simple: To work with matrices! Above all, the assumption is that you are familiar
+    with the basic definitions (chapter 2). In this chapter, the most important matrix
+    and vector operations that we need and frequently encounter in Machine Learning
+    are are described.
+
+
+    # 4.2. Matrix Transpose
+
+
+    The transpose of a matrix is an operator which switches the row and column indices
+    of the matrix. As a result, after transposing a matrix, we have a new matrix and
+    is denoted as A^T. Therefore, the i^th row, j^th column elements of A are the
+    j^th row and i^th column elements of A^T, respectively. Assume we show A^T with
+    matrix B, then we have the following:
+
+
+    **B**_{j,i} = **A**_{i,j}
+
+
+    We can have the following example to clarify better:
+
+
+    $$\begin{bmatrix}2 & 3 & 1 \\ 3 & -4 & 2.2\end{bmatrix}^T = \begin{bmatrix}2 &
+    3 \\ 3 & -4 \\ 1 & -2.2\end{bmatrix}$$
+
+
+    Calculation of a matrix transpose is very easy with Python. For instance, you
+    can try the following code:
+
+
+    ```
+
+    # Use Numpy package
+
+    import numpy as np
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "```\n# Define a 3x2 matrix using np.array\nA = np.array([[1, 2.2], [4, 7],\
+    \ [8, -2]])\n\"\"\"A = [[ 1.   2.2]\n      [ 4.   7. ]\n      [ 8.  -2. ]]\"\"\
+    \"\n\nprint(\"A is: {}\".format(A))\nprint(\"The shape of A is: {}\".format(A.shape))\n\
+    \n# Use transpose() method\nB = A.transpose()\n\"\"\"B = [[ 1.   4.   8. ]\n \
+    \     [ 2.2  7.  -2. ]]\"\"\"\n\nprint(\"B is: {}\".format(B))\nprint(\"The shape\
+    \ of B is: {}\".format(B.shape))\n```\n\n```\nA is: [[ 1.   2.2]\n  [ 4.   7.\
+    \ ]\n  [ 8.  -2. ]]\nThe shape of A is: (3, 2)\nB is: [[ 1.   4.   8. ]\n  [ 2.2\
+    \  7.  -2. ]]\nThe shape of B is: (2, 3)\n```\n\nNOTE: It is worth noting that\
+    \ (A^T)^T = A.\n\n# 4.3. Identity Matrix\n\nIdentity matrix, which is denoted\
+    \ as I_n, is a square matrix (number of rows = number of columns = n) that all\
+    \ its elements along the main diagonal are 1's and the other elements are zero.\
+    \ For example, we can have the following 4 × 4 identity matrix:\n\n$$\\begin{bmatrix}1\
+    \ & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1\\end{bmatrix}$$\n\
+    \nYou can create the above matrix using the following code:\n\n```\n# Use Numpy\
+    \ package\nimport numpy as np\n```"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "```\n```python\n# Define an Identity matrix\n# Ref: https://docs.scipy.org/doc/numpy/reference/generated/numpy.\n\
+    \    eye.html\nA = np.eye(4)\n```\n```\n\n# #### 4.4. Adding Operation\n\nAdding\
+    \ two matrices is possible only if both matrices have the same shape. Assume C\
+    \ = A + B. Let’s get back to Python and define the same two matrices defined above.\
+    \ After that, we will add them together:\n\n```\n```python\n# Use Numpy package\n\
+    import numpy as np\n\n# Define a 3x2 matrix using np.array\nA = np.array([[1,\
+    \ 2.2], [4, 7], [8, -2]])\n\n# Use transpose() method\nB = A.transpose()\n\n#\
+    \ Create a matrix similar to A in shape but filled with random\n#     numbers\n\
+    # Use *A.shape argument\nA_like = np.random.randn(*A.shape)\n\n# Add two matrices\
+    \ of the same shape\nM = A + A_like\nprint(\"M equals to: \", M)\n\n# Add two\
+    \ matrices with different shape\nC = A + B\nprint(\"C equals to: \", C)\n```\n\
+    ```\n\nYou should get the following output:\n\n```\n```text\nM equals to:  [[\
+    \ 2.4212905   2.88158481]\n [ 4.34872344  5.01038501]\n [ 7.58194231 -2.0192284\
+    \ ]]\n--------------------------------------------------------------------------\n\
+    \nValueError                              Traceback (most recent\n    call last)\n\
+    <ipython-input-35-293b043ce9a9> in <module>()\n     16\n     17 # Add two matrices\
+    \ with different shape\n---> 18 C = A + B\n     19 print(\"C equals to: \", C)\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '```
+
+    ValueError: operands could not be broadcast together with shapes
+
+    (3,2) (2,3)
+
+    ```
+
+
+    What created the above error?
+
+
+    There are some important characteristics for adding matrices that you need to
+    know:
+
+
+    +   - A + B = B + A
+
+    +   - (A + B) + C = A + (B + C)
+
+    +   - A + 0 = 0 + A
+
+    +   - (A + B)^T = A^T + B^T
+
+
+    You can simply confirm the above properties with the following Python code:
+
+
+    ```
+
+    # Use Numpy package
+
+    import numpy as np
+
+
+    # Define random 3x4 matrix using np.array
+
+    # Ref: https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.random.randint.html
+
+    A = np.random.randint(10, size=(3, 4))
+
+    B = np.random.randint(10, size=(3, 4))
+
+    C = np.random.randint(10, size=(3, 4))
+
+
+    # np.all() test whether all array elements are True.
+
+    # More info: https://docs.scipy.org/doc/numpy/reference/generated/numpy.all.html
+
+    checkProperty = np.all(A + B == B + A)
+
+    if checkProperty: print(''Property A + B == B + A is confirmed!'')
+
+
+    checkProperty = np.all((A + B) + C == A + (B + C))
+
+    if checkProperty: print(''Property (A + B) + C == A + (B + C) is confirmed!'')
+
+
+    checkProperty = np.all(A + 0 == 0 + A)
+
+    if checkProperty: print(''Property A + 0 == 0 + A is confirmed!'')
+
+
+    checkProperty = np.all((A + B).transpose() == A.transpose() + B.transpose())
+
+    if checkProperty: print(''Property (A + B)^T == A^T + B^T is confirmed!'')
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# 4.5. Scalar Multiplication
+
+
+    If we multiply a matrix by a number (a.k.a. scalar), the result equals to multiplying
+    every entry of the matrix by that specific scalar. For example, you can check
+    the following calculations:
+
+
+    $2*\begin{bmatrix}2 & 3 & 1 \\ 3 & -4 & 2.2\end{bmatrix}=\begin{bmatrix}4 & 6
+    & 2 \\ 6 & -8 & 4.4\end{bmatrix}$
+
+
+    The properties of scalar and matrix multiplication are as below:
+
+
+    +   - $(\alpha + \beta)\mathbf{A} = \alpha\mathbf{A} + \beta\mathbf{A}$
+
+    +   - $\alpha(\mathbf{A} + \mathbf{B}) = \alpha\mathbf{A} + \alpha\mathbf{B}$
+
+    +   - $0.\mathbf{A} = 0$
+
+    +   - $1.\mathbf{A} = \mathbf{A}$
+
+
+    # 4.6. Matrix Multiplication
+
+
+    Assuming we like to multiply to matrices and calculate the output as $\mathbf{C}=\mathbf{A}\mathbf{B}$.
+    For doing so, the dimension of $\mathbf{A}$ and $\mathbf{B}$ matrices should match.
+    Here, being matched does not mean being equal. Matching means the number of columns
+    of $\mathbf{A}$ should equal the number of rows in $\mathbf{B}$. An example is
+    to assume the shape of $\mathbf{A}$ equal to $m \times q$. Then, the shape of
+    $\mathbf{B}$ MUST be $q \times n$, so $q$ is shared. As a result of such multiplication,
+    the shape of $\mathbf{C}$ equal to $m \times n$.
+
+
+    ![](img/37669628775ca7a07835165249fef088_31_0.png)
+
+
+    Fig. 4.1. Visualization of the dimention matching in matrix multiplication.
+
+
+    Check the following Python code to have a better understanding of matrix multiplication:'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# 4.6. MATRIX MULTIPLICATION\n\n```\n```python\n# Use Numpy package\nimport\
+    \ numpy as np\n\n# Define two 3x4 random matrices using np.array\n# Ref: https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/\n\
+    \    numpy.random.randint.html\nA = np.random.randint(10, size=(3, 4))\nB = np.random.randint(10,\
+    \ size=(3, 4))\n\nprint('Shape A is: {}'.format(A.shape))\nprint('Shape B is:\
+    \ {}'.format(B.shape))\n\n# Calculate the number of columns in A and number of\
+    \ rows in B\nA_num_columns = A.shape[1]\nB_num_rows = B.shape[0]\n\n# Check the\
+    \ dimensions\nif A_num_columns != B_num_rows: print('dimension mismatch')\n\n\
+    # You should get an error as A_num_columns != B_num_rows\nC = np.matmul(A , B)\n\
+    ```\n```\n\n> > What you will get as the output? Some of the above operations\
+    \ are valid and some of the are NOT...\n\nMathematically speaking, we can calculate\
+    \ different elements of the $C = AB$ as below:\n\n$$C_{i,j} = \\sum_m A_{i,m}B_{m,j}\
+    \ = A_{i,1}B_{1,j} + \\ldots + A_{i,q}B_{q,j}$$\n\nAn illustrative example is\
+    \ shown below:\n\n![](img/37669628775ca7a07835165249fef088_32_0.png)\n\nYou can\
+    \ implement the above example with the following code and confirm the results:\n\
+    \n```\n```python\n# Use Numpy package\nimport numpy as np\n\n# Define two matrices\n\
+    A = np.array([[2,3,-1],[7,0,2]])\nB = np.array([[2,1],[2,-1],[1,5]])\n\nprint('Shape\
+    \ A is: {}'.format(A.shape))\nprint('Shape B is: {}'.format(B.shape))\n\n# Calculate\
+    \ the number of columns in A and number of rows in B\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "```\nA_num_columns = A.shape[1]\nB_num_rows = B.shape[0]\n\n# Check the dimensions\n\
+    if A_num_columns != B_num_rows: print('dimension mismatch')\n\n# You should get\
+    \ an error as A_num_columns != B_num_rows\nC = np.matmul(A , B)\nprint('C=AB=\
+    \ {}'.format(C))\n\n# Instead of C=AB let's calculate C=BA\nC = np.matmul(B ,\
+    \ A)\nprint('C=BA= {}'.format(C))\n```\n\nThe output will be:\n\n```\nShape A\
+    \ is: (2, 3)\nShape B is: (3, 2)\nC=AB= [[ 9 -6]\n       [16 17]]\nC=BA= [[11\
+    \  6  0]\n       [-3  6 -4]\n       [37  3  9]]\n```\n\nYou can clearly check\
+    \ that AB ≠ BA. Properties of matrix multiplication are as below:\n\n+   - (AB)C\
+    \ = A(BC)\n+   - A(B + C) = AB + AC\n+   - (AB)^T = B^T A^T\n\nYou can check all\
+    \ the above properties with the following Python code:\n\n```\n# Use Numpy package\n\
+    import numpy as np\n\n# Define three random 3x3 matrix using np.array\n# Ref:\
+    \ https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.random.randint.html\n\
+    A = np.random.randint(10, size=(3, 3))\nB = np.random.randint(10, size=(3, 3))\n\
+    C = np.random.randint(10, size=(3, 3))\n\n# np.all() test whether all array elements\
+    \ are True.\n# More info: https://docs.scipy.org/doc/numpy/reference/generated/numpy.all.html\n\
+    checkProperty = np.all(np.matmul(A,np.matmul(B,C)) == np.matmul(np.matmul(A,B),C))\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "```\n```python\nif checkProperty: print('Property A(BC) = (AB)C is confirmed!')\n\
+    \ncheckProperty = np.all(np.matmul(A,B+C) == np.matmul(A,B) + np.\n    matmul(A,C))\n\
+    if checkProperty: print('Property A(B+C) = AB + AC is confirmed!')\n\ncheckProperty\
+    \ = np.all(np.matmul(A,B).transpose() == np.matmul(B.\n    transpose(),A.transpose()))\n\
+    if checkProperty: print('Property (AB)^T = B^T.A^T is confirmed!')\n```\n```\n\
+    \nIt is important to address the matrix power. Assuming you see something like\
+    \ $A^3$. This simply means we multiply the **A** matrix to its own for three times.\
+    \ It can be shown as below:\n\n$A^3 = A \\times A \\times A$\n\n**BUT**, the matrix\
+    \ **should be an square matrix**, e.g., the number of its rows and columns **MUST**\
+    \ be the same. Otherwise, the power operation would be invalid. Implement the\
+    \ following code to see what would happen:\n\n```\n```python\n# Calculate the\
+    \ matrix power for two square and non-square matrices.\n\n# Use Numpy package\n\
+    import numpy as np\n# A: 3x3 SQUARE matrix using np.array\nA = np.random.randint(10,\
+    \ size=(3, 3))\nprint('A has the shape of: {}'.format(A.shape))\n\n# Calculate\
+    \ A^3\nn=3\noutput = np.linalg.matrix_power(A, n)\nprint('Output has the shape\
+    \ of: {}'.format(output.shape))\n\n# A: 3x4 NON-SQUARE matrix using np.array\n\
+    B = np.random.randint(10, size=(3, 4))\nprint('B has the shape of: {}'.format(B.shape))\n\
+    \n# Calculate A^3\nn=3\noutput = np.linalg.matrix_power(B, n)\nprint('Output has\
+    \ the shape of: {}'.format(output.shape))\n```\n```\n\n# ## 4.7. Matrix-Vector\
+    \ Multiplication\n\nLet’s take a look on how we can define matrices and vectors\
+    \ and multiplying them.\n\n```\n```python\n# Import Numpy library\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '```
+
+    import numpy as np
+
+    # Create two vectors and two matrices
+
+    v = np.array([0,8]).reshape(-1,1)
+
+    u = np.array([1,4]).reshape(-1,1)
+
+    A = np.array([[2,1],[5,2]])
+
+    B = np.array([[2,1],[5,2]])
+
+    # Dot porduct of two vectors with two approaches
+
+    print(''v.u = '', v.dot(u.transpose()))
+
+    print(''v.u = '', np.dot(v, u.transpose()))
+
+    # Porduct of a vector with a matrix
+
+    print(''A.v = '', A.dot(v))
+
+    print(''A.v = '', np.dot(A, v))
+
+    # Matrix product with three approaches
+
+    print(''A.B = '', A.dot(B))
+
+    print(''A.B = '', np.dot(A, B))
+
+    print(''A.B = '', np.matmul(A,B))
+
+    ```
+
+
+    Let’s do a practice. Run the above code and answer the following questions:
+
+
+    # Question
+
+
+    +   - What is the shape and rank of **v** and **u**?
+
+    +   - In lines 11 and 12, did we have to use ".transpose()"? Why?
+
+    +   - Instead of calculating ‘v.u’ how would you calculate ‘u.v’?
+
+    +   - Take a look at lines 15 and 16. Instead of ‘A.v’, can we calculate ‘v.A’?
+
+
+    ![](img/37669628775ca7a07835165249fef088_35_0.png)
+
+
+    Fig. 4.2. You may see the visual answer to some of the questions above! Dimension
+    matching is crucial in multiplying vectors and matrices.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '**NOTE:** We usually represent a vector using one column and multiple rows
+    of elements. Henceforth, we can call a vector of size $k$ as a $k \times 1$ matrix.
+    In general, we can informally say vectors are special kind of matrices which are
+    1-dimensional. $(\mathbf{A}^T)^T = \mathbf{A}$.
+
+
+    Similarly, to multiply the vector $\mathbf{v}$ to matrix $\mathbf{M}$, the dimensions
+    must match. Assume our matrix $\mathbf{A}$ has the size of $m \times n$ and we
+    like to calculate the $\mathbf{w} = \mathbf{A}\mathbf{v}$. What is the size of
+    $\mathbf{v}$? Can you guess? The only acceptable size for $\mathbf{v}$ is $n \times
+    1$. So we have the following operation:
+
+
+    $\begin{bmatrix} w_1 \\ w_2 \\ \vdots \\ w_m \end{bmatrix}^{m \times 1} = \begin{bmatrix}
+    A_{11} & A_{12} & \cdots & A_{1n} \\ A_{21} & A_{22} & \cdots & A_{2n} \\ \vdots
+    & \cdots & \cdots & \vdots \\ A_{m1} & \cdots & \cdots & A_{mn} \end{bmatrix}^{m
+    \times n} \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}^{n \times
+    1}$
+
+
+    You can implement a working example as below:
+
+
+    ```
+
+    # Use Numpy package
+
+    import numpy as np
+
+    # A: 3x4 matrix using np.array
+
+    A = np.random.randint(10, size=(3, 4))
+
+
+    # B: A vector of size 4
+
+    v = np.random.randint(10, size=(4,))
+
+
+    print(''Shape A is: {}''.format(A.shape))
+
+    print(''Shape v is: {}''.format(v.shape))
+
+
+    # Calculate the number of colums in A and number of rows in B
+
+    A_num_columns = A.shape[1]
+
+    v_num_rows = v.shape[0]
+
+
+    # Check the dimensions
+
+    if A_num_columns != v_num_rows: print(''dimension mismatch'')
+
+
+    # You should get an error as A_num_columns != B_num_columns
+
+    w = np.matmul(A , v)
+
+    print(''w=Av='', w)
+
+    print(''The shape of w is:'',w.shape)
+
+    ```
+
+
+    # 4.8. Matrix Inverse
+
+
+    The inverse of matrix $\mathbf{A}$ exists and is shown with $\mathbf{A}^{-1}$
+    when both of the following conditions hold:'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '+   - **A** is a square matrix
+
+    +   - Multiplying **A** with its inverse results in identity matrix: **A A**⁻¹
+    = **I**
+
+
+    If the matrix **A** is **invertible**, it is called non-singular. Otherwise, it
+    is called **non-invertible** or **singular**. The concept of a matrix being singular
+    is a relatively more advance concept and will be described in the following chapters.
+
+
+    You can practice the calculation of a matrix inverse using the following code:
+
+
+    ```
+
+    # Use Numpy package
+
+    import numpy as np
+
+    # A: 3x3 SQUARE matrix using np.array
+
+    A = np.random.randint(10, size=(3, 3))
+
+    print(''A has the shape of: {}''.format(A.shape))
+
+
+    # Caculate matrix inverse
+
+    a inv = np.linalg.inv(A)
+
+    print(''The inverse of A is:'',ainv)
+
+
+    # Check to see if multiplication of A and A^{-1} equals to identiy matrix I
+
+    if np.allclose(np.dot(A, ainv), np.eye(A.shape[0])): print(''A is invertible!'')
+
+    ```
+
+
+    The following properties apply for matrix inversion operation:
+
+
+    +   - (**A B**)⁻¹ = **B**⁻¹ **A**⁻¹
+
+    +   - (**A**ᵀ)⁻¹ = (**A**⁻¹)ᵀ
+
+    +   - (**α A**)⁻¹ = (1/α) **A**⁻¹
+
+
+    You can check the aforementioned properties using the following Python script:
+
+
+    ```
+
+    # Use Numpy package
+
+    import numpy as np
+
+    # Define two 3x3 SQUARE matrix using np.array
+
+    A = np.random.randint(10, size=(3, 3))
+
+    B = np.random.randint(10, size=(3, 3))
+
+
+    # np.round(A,2): rounds the array A to two decimal points
+
+    # Check property (AB)^{-1} = B^{-1}.A^{-1}
+
+    left_side = np.linalg.inv(np.matmul(A,B))
+
+    right_side = np.matmul(np.linalg.inv(B),np.linalg.inv(A))
+
+    checkProperty = np.all(np.round(left_side, 2) == np.round(right_side , 2))
+
+    if checkProperty: print(''Property (AB)^{-1} = B^{-1}.A^{-1} is confirmed!'')
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '```
+
+    ```python
+
+    # Check property (A^{T})^{-1} = (A^{-1})^{T}
+
+    left_side = np.linalg.inv(np.transpose(A))
+
+    right_side = np.transpose(np.linalg.inv(A))
+
+    checkProperty = np.all(np.round(left_side, 2) == np.round(right_side, 2))
+
+    if checkProperty: print(''Property (A^{T})^{-1} = (A^{-1})^{T} is confirmed!'')
+
+
+    # np.dot is a very important function.
+
+    # Ref: https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html
+
+    # Check property (alpha.A)^{-1} = (1/alpha)A^{-1}
+
+    alpha = float(3) # Any scalar (make sure to define a float)
+
+    left_side = np.linalg.inv(np.dot(alpha,A))
+
+    right_side = np.dot(1/alpha,np.linalg.inv(A))
+
+    checkProperty = np.all(np.round(left_side, 2) == np.round(right_side, 2))
+
+    if checkProperty: print(''Property (alpha.A)^{-1} = (1/alpha)A^{-1} is confirmed!'')
+
+    ```
+
+    ```
+
+
+    # ## 4.9. Matrix Trace
+
+
+    Assume we have a square matrix. Trace of a matrix is an operator that is the sum
+    of its **diagonal elements** as below:
+
+
+    $$Tr(\mathbf{M}) = \sum_k M_{k,k}$$
+
+
+    Working with the trace of a matrix, instead of the matrix itself, is easier for
+    a lot of matrix calculations and mathematical proofs.
+
+
+    We have the following properties for the matrix trace operator:
+
+
+    +   - $Tr(\mathbf{M}) = Tr(\mathbf{M}^{T})$
+
+    +   - $Tr(\mathbf{AB}) = Tr(\mathbf{BA})$ if both **AB** and **BA** exists and
+    are valid.
+
+
+    # ## 4.10. Matrix Determinant
+
+
+    The **determinant** of the matrix $\mathbf{A} \in \mathbb{R}^{N \times N}$ is
+    a scalar value that we compute from the elements of the matrix. The matrix **MUST**
+    be square so we can compute the determinant. Furthermore, the matrix must be **non-singular**!'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# 4.11. Special Matrices
+
+
+    There are special kinds of matrices that you may hear their names every day. I
+    wanted to briefly describe some of them here.
+
+
+    # Symmetric matrix
+
+
+    A symmetric matrix, equals its transpose as below:
+
+
+    **M** = **M**^T
+
+
+    An example would be the following matrix:
+
+
+    [ 1  -1 ]
+
+    [-1  3 ]
+
+
+    # Diagonal matrix
+
+
+    A diagonal matrix only have non-zero elements on its main diagonal. Everywhere
+    else in the matrix, we have zero elements.
+
+
+    **M**_{i,j} = 0, i ≠ j
+
+
+    **M**_{i,j} ≠ 0, i = j
+
+
+    We can have the following example:
+
+
+    [ 1  0  0 ]
+
+    [ 0  3  0 ]
+
+    [ 0  0 -1 ]
+
+
+    > NOTE: A diagonal matrix, does not have to be a square matrix. The main diagonal
+    of a matrix is formed with the elements **M**_{i,j} when i = j.
+
+
+    # Orthogonal matrix
+
+
+    An Orthogonal matrix is a square matrix which has the following characteristic:
+
+
+    **M** **M**^T = **M**^T **M** = **I**
+
+
+    Noted that if we multiply **M** with **M**^T and it results in the identity matrix,
+    this implies that **M**^T = **M**^{-1}.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# 4.12. Conclusion
+
+
+    In this chapter, the important matrix operations that are commonly used in Machine
+    Learning we explained. In addition, you learned how to code them in Python. In
+    conclusion, you made a sense of the practical implementation of the operations
+    in Python in addition to their theoretical interpretation. If you desire to dig
+    more into matrices, you can refer to [4–6].'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# ## 5.2. Vector Norm
+
+
+    We usually use the norms for vectors and rarely for matrices. At first, let’s
+    define what the norm of a vector is? A norm can be described as below:
+
+
+    +   - A function that operates on a vector (matrix) and returns a scalar element.
+
+    +   - A norm is denoted by \(\mathcal{L}^q\) in which \(q\) shows the order of
+    the norm and \(p \ge 1, p \in \mathbb{R}\).
+
+    +   - The order a vector (matrix) is always a non-negative value.
+
+    +   - The intuition behind the norm is to measure a kind of distance.
+
+
+    ![](img/37669628775ca7a07835165249fef088_42_0.png)
+
+
+    **Fig. 5.1.** A norm usually indicates a distance or magnitude metric.
+
+
+    A norm is mathematically defined as below:
+
+
+    | q-norm of a vector |
+
+    |---|
+
+    | \(\mathcal{L}^q(\mathbf{v}) = \|\mathbf{v}\|_q = \left(\sum_k |v_k|^q\right)^{1/q}\)
+    |
+
+
+    The sign \(|\cdot|\) is an operation that outputs the absolute value of its argument.
+    The example of which is \(|-2| = 2\) and \(|2| = 2\). You can implement \(\mathcal{L}^q\)
+    by the following Python code:
+
+
+    ```
+
+    ```python
+
+    # Import Numpy package and the norm function
+
+    import numpy as np
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '```
+
+    from numpy.linalg import norm
+
+
+    # Define a vector
+
+    v = np.array([2,3,1,0])
+
+
+    # Take the q-norm which q=2
+
+    q = 2
+
+    v_norm = norm(v, ord=q)
+
+
+    # Print values
+
+    print(''The vector: '', v)
+
+    print(''The vector norm: '', v_norm)
+
+    ```
+
+
+    The vector: [2 3 1 0]
+
+    The vector norm: 3.7416573867739413
+
+
+    # 5.2.1 The Norm Function Properties
+
+
+    It is crucial to know the norms properties as we may need them in mathematical
+    computation, especially mathematical proofs. A norm function ℒ(.) has the following
+    properties:
+
+
+    +   1. If the norm is zero, then the vector is all zero as well: ℒ(v) = 0 ⇒ v
+    = 0
+
+    +   2. ℒ(v + w) ≤ ℒ(v) + ℒ(w). This is called triangle inequality.
+
+    +   3. ∀β ∈ ℝ : ℒ(βv) = |β| ℒ(v)
+
+
+    # 5.2.2 Proving the Properties (Advanced)
+
+
+    Properties (1) is easy to prove. As the norm add the absolute values of vector
+    elements to any power, if the norm is zero, the only possible answer is that all
+    vector elements must be zero.
+
+
+    We can prove property (3) as below:
+
+
+    ℒ^q(βv) = (∑_k |β v_k|^q)^{1/q} = (|β|^q ∑_k |v_k|^q)^{1/q} = |β| (∑_k |v_k|^q)^{1/q}
+    = |β| ℒ^q(v)'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "We can mathematically prove property (2) as well. BUT, let’s do it in an empirical\
+    \ way. Let’s define our experiment as below:\n\n+   1. We randomly generate two\
+    \ vectors **v** and **w**\n+   2. We check the property that should be true.\n\
+    +   3. Repeat the experiment for E=100 times.\n\nThis is *NOT scientific proof*.\
+    \ However, if $E = \\infty$, then we can say we proved it. Right? Let’s do it\
+    \ in **Python**:\n\n```\n# Import Numpy package and the norm function\nimport\
+    \ numpy as np\nfrom numpy.linalg import norm\n\n# Repeat experiments\nE = 100\
+    \  # Number of experiments\nq = 2    # Order of the norm\nfor i in range(E):\n\
+    \    # Define two random vector of size (1,5). Obviously v does not equal w!!\n\
+    \    v = np.random.rand(1,5)\n    w = np.random.rand(1,5)\n\n    propertyCheck\
+    \ = norm(v+w, ord=q) <= norm(v, ord=q) + norm(w, ord=q)\n    if propertyCheck\
+    \ == False:\n        print('Property is NOT correct')\n```\n\nSo if the property\
+    \ (2) holds for all experiments, we expect the above Python code returns **NOTHING**.\
+    \ Think why?\n\n# 5.3. Most Used Norms\n\nIn the previous section, I described\
+    \ what is the norm in general, and we implement it in Python. Here, I would like\
+    \ to discuss the norms that are mostly used in Machine Learning.\n\n# 5.3.1 ℒ¹\
+    \ norm\n\nThe ℒ¹ norm is technically the summation over the absolute values of\
+    \ a vector. The simple mathematical formulation is as below:"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "$\\|\\mathbf{v}\\|_1 = \\sum_k |v_k|$\n\nIn Machine Learning, we usually use\
+    \ $\\mathcal{L}^1$ norm when the **sparsity of a vector matters**, i.e., when\
+    \ the essential factor is the non-zero elements of a matrix. **BUT why?** The\
+    \ $\\mathcal{L}^1$ simply target the non-zero elements by adding them up.\n\n\
+    # ### 5.3.2  $\\mathcal{L}^2$ norm\n\n$\\mathcal{L}^2$ norm is also called the\
+    \ Euclidean norm which is the Euclidean distance of a vector to zero.\nWe can\
+    \ simply calculate it as below:\n\n$\\|\\mathbf{v}\\|_2 = \\sqrt{\\sum_k |v_k|^2}$\n\
+    \nThe $\\mathcal{L}^2$ is commonly used in Machine Learning due to being differentiable,\
+    \ which is crucial for optimization purposes. Let’s calculate $\\mathcal{L}^2$\
+    \ norm of a random vector with Python using two approaches. Both should lead to\
+    \ the same results:\n\n```\n# Import Numpy package and the norm function\nimport\
+    \ numpy as np\nfrom numpy.linalg import norm\n\n# Defining a random vector\nv\
+    \ = np.random.rand(1,5)\n\n# Calculate L-2 norm\nsum_square = 0\nfor i in range(v.shape[1]):\n\
+    \    # Define two random vector of size (1,5). Obviously v does not\n      equal\
+    \ w!!\n    sum_square += np.square(v[0,i])\nL2_norm_approach_1 = np.sqrt(sum_square)\n\
+    \n# Calculate L-2 norm using numpy\nL2_norm_approach_2 = norm(v, ord=2)\n\nprint('L2_norm:\
+    \ ', L2_norm_approach_1)\nprint('L2_norm with numpy:', L2_norm_approach_2)\n```\n\
+    \nYou should get the same results!"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Chapter 6
+
+
+    # Linear Independence
+
+
+    This chapter in dedicated to the concept of linear independence of vectors and
+    its associations with the solution of linear equation systems.
+
+
+    # 6.1. Introduction
+
+
+    **What is the concept of vectors’ linear independence?** One simple example: Let’s
+    say you want to find the answer to the **A x = b**. One may say we can simply
+    find the answer by taking an inverse of **A** as **x = A⁻¹ b**. NOT SO FAST! There
+    is more in that? What if **A** does not have an inverse or is not square? You
+    just let it go? Guess not.
+
+
+    That was just one example. In Machine Learning, it frequently happens that you
+    want to **explore the correlation between vectors** to analyze them better. For
+    **example**, you are dealing with a matrix which in essence, is formed by vectors.
+    What would you know if you are not familiar with the concept of **linear independence**?
+
+
+    In this chapter, you will learn the following:
+
+
+    +   - The concept of linear independence/dependence!
+
+    +   - Examples of the linear dependence of vectors
+
+    +   - How to do it in Python using Numpy?
+
+    +   - Matrix ranks
+
+    +   - The solutions to a system of linear equations
+
+
+    # 6.2. The Concept
+
+
+    Assuming we have the set of {v¹, v², …, vᵖ} ∈ ℝ^q which are p column vectors of
+    size q. Then, we call this set linear independent, if no vector exists that we
+    can represent it as the linear combination of any other two vectors. Although,
+    perhaps it is easier to define linear dependence.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Linear Dependency
+
+
+    A vector $\mathbf{v}^i$ is linear dependent if we can express it as the linear
+    combination of another two vectors in the set, as below:
+
+
+    $$\mathbf{v}^i = \sum_{j \neq i} \alpha_j \mathbf{v}^j$$
+
+
+    In the above case, we say the set of {$\mathbf{v}^1, \mathbf{v}^2, \dots, \mathbf{v}^p$}
+    vectors are linearly dependent!
+
+
+    ![](img/37669628775ca7a07835165249fef088_48_0.png)
+
+
+    Fig. 6.1. Vector **d** is a linear combination of vectors **a**, **b**, and **c**.
+    Actually, **d** = **a** + **b** + **c**.
+
+
+    # 6.3. Example
+
+
+    Consider the three vectors below:
+
+
+    $$\mathbf{v} = \begin{bmatrix} 1 \\ -1 \\ 2 \end{bmatrix}, \mathbf{u} = \begin{bmatrix}
+    0 \\ 3 \\ 1 \end{bmatrix}, \mathbf{w} = \begin{bmatrix} 2 \\ 1 \\ 5 \end{bmatrix}$$
+
+
+    The above set is linearly dependent. Why? It is simple. Because $\mathbf{w} =
+    2\mathbf{v} + \mathbf{u}$. Let''s do the above with Python and Numpy:
+
+
+    ```
+
+    # Import Numpy library
+
+    import numpy as np
+
+
+    # Define three column vectors
+
+    v = np.array([1, -1, 2]).reshape(-1,1)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '```
+
+    ```python
+
+    u = np.array([0, 3, 1]).reshape(-1,1)
+
+    w = np.array([2, 1, 5]).reshape(-1,1)
+
+
+    # Check the linear dependency with writing the equality
+
+    print(''Does the equality w = 2*v+u holds? Answer:'', np.all(w == 2*v+u
+
+    ))
+
+    ```
+
+    ```
+
+
+    Run the above code and see if Numpy confirms that or not!
+
+
+    # 6.4. The Relationship With Matrix Rank
+
+
+    The linear dependence of vectors has been discussed so far. Assume we have the
+    matrix $\mathbf{M} \in \mathbb{R}^{m\times n}$. The matrix has m rows and n columns.
+    Let’s focus on the columns. The n columns form n vectors. The $j^{th}$ column
+    is denoted with $\mathbf{M}_{:,j}$. So we have the set of n vectors {$\mathbf{M}_{:,1},
+    \mathbf{M}_{:,2}, \ldots, \mathbf{M}_{:,n}$} as columns. The size of the largest
+    subset of {$\mathbf{M}_{:,1}, \mathbf{M}_{:,2}, \ldots, \mathbf{M}_{:,n}$} that
+    its vectors are linearly independent, is called the **column rank** of the matrix
+    $\mathbf{M}$. Considering the rows of $\mathbf{M}$, the size of the largest subset
+    of rows that form a linearly independent set is called the **row rank** of the
+    matrix $\mathbf{M}$.
+
+
+    We have the following properties for matrix ranks:
+
+
+    +   - For $\mathbf{M} \in \mathbb{R}^{m\times n}$, $\operatorname{rank}(\mathbf{M})
+    \leq \min(m,n)$. If $\operatorname{rank}(\mathbf{M}) = \min(m,n)$, the matrix
+    $\mathbf{M}$ is full rank.
+
+    +   - For $\mathbf{M} \in \mathbb{R}^{m\times n}$, $\mathbf{N} \in \mathbb{R}^{n\times
+    q}$, and $\mathbf{H}=\mathbf{MN} \in \mathbb{R}^{m\times q}$, $\operatorname{rank}(\mathbf{H})
+    \leq \min(\operatorname{rank}(\mathbf{M}),\operatorname{rank}(\mathbf{N}))$.
+
+    +   - For $\mathbf{M} \in \mathbb{R}^{m\times n}$, $\mathbf{N} \in \mathbb{R}^{m\times
+    n}$, and $\mathbf{H}=\mathbf{M}+\mathbf{N} \in \mathbb{R}^{m\times n}$, $\operatorname{rank}(\mathbf{H})
+    \leq \operatorname{rank}(\mathbf{M}) + \operatorname{rank}(\mathbf{N})$.
+
+
+    Check first and second property above with the following code:
+
+
+    ```
+
+    ```python
+
+    # Import Numpy library
+
+    import numpy as np
+
+    from numpy.linalg import matrix_rank
+
+
+    # Define random 3x4 matrix using np.array
+
+    # Ref: https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/
+
+    #      numpy.random.randint.html
+
+    M = np.random.randint(10, size=(3, 4))
+
+    N = np.random.randint(10, size=(4, 3))
+
+
+    # np.all() test whether all array elements are True.
+
+    # More info: https://docs.scipy.org/doc/numpy/reference/generated/
+
+    #      numpy.all.html
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "```\ncheckProperty = np.all(matrix_rank(M) <= min(M.shape[0],M.shape[1]))\n\
+    if checkProperty: print('Property rank(M) <= min(M.shape[0],M.shape[1]) is confirmed!')\n\
+    \ncheckProperty = np.all(matrix_rank(np.matmul(M,N)) <= min(\n    matrix_rank(M),matrix_rank(N)))\n\
+    if checkProperty: print('Property rank(MN) <= min(rank(M),rank(N)) is confirmed!')\n\
+    ```\n\nPractice\n\nPractice: Modify the above code and check property (3).\n\n\
+    # 6.5. Linear Equations\n\nI talked about **linear dependency** and **matrix ranks**.\
+    \ After that, I would like to discuss their *application in finding the solution\
+    \ of linear equations*, which is of great importance. Consider the following equality\
+    \ which set a system of linear equations:\n\n$$\\mathbf{A}^{m\\times n}\\mathbf{x}^{n\\\
+    times 1} = \\mathbf{b}^{m\\times 1}$$\n\nAbove, we see the matrix **A** is multiplied\
+    \ by the vector **x** and forms another vector **b**. The above equality creates\
+    \ a set of m-line linear equations. Let’s write line $j$ for example:\n\n$$\\\
+    mathbf{A}_{j,1}\\mathbf{x}_1 + \\mathbf{A}_{j,2}\\mathbf{x}_2 + \\dots + \\mathbf{A}_{j,n}\\\
+    mathbf{x}_n = \\mathbf{b}_j,\\; j \\in \\{1,2,\\dots,m\\}$$\n\nSo the question\
+    \ is how many solution exists for the system of equations **Ax = b**. By solution\
+    \ I mean the possible values for the variables **x** = $[x_1,x_2,\\dots,x_n]^T$.\
+    \ The answer is one of the following:\n\n+   - There is **NO solution**.\n+  \
+    \ - The system has **one unique solution**.\n+   - We have **infinite** numbers\
+    \ of solutions.\n\n**NOTE:** As you observed, having more than one BUT less than\
+    \ infinity solutions is NOT possible!\n\nTheorem\n\nIf **u** and **v** are two\
+    \ solutions of the **Ax = b** equation, then the specific linear combination of\
+    \ them as below, is a solution as well:\n\n$$\\mathbf{w} = \\beta\\mathbf{u} +\
+    \ (1-\\beta)\\mathbf{v},\\forall\\beta \\in \\mathbb{R}$$"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '**PROOF:** Look at the below equations to see how **w** is also a solution:
+
+
+    $Aw = A\{\beta v + (1-\beta)u\} = \beta Av + Au - \beta Au = \beta b + b - \beta
+    b = b$ ▲
+
+
+    So the above proves shows that if we have more than one solution, then we can
+    say we have infinite number of solutions! The **following two conditions** determine
+    the number of solutions if there is at least one solution. Try to prove them based
+    on what you learned so far:
+
+
+    +   - $A^{m\times n}x^{n\times 1}=b^{m\times 1}$ has at least one solution if
+    $m\le n$ and $\operatorname{Rank}(A)=m$.
+
+    +   - $A^{m\times n}x^{n\times 1}=b^{m\times 1}$ has exactly one solution if $m=n$
+    and $\operatorname{Rank}(A)=m$.
+
+
+    # 6.6.  **Conclusion**
+
+
+    In this chapter, you learned the concept of linear independence of the vectors
+    and their associates with the system of linear equations. This concept is crucial,
+    especially in Machine Learning and optimization theory, in which we are dealing
+    with all sorts of mathematical proofs necessary to justify why a method should
+    work!'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Chapter 7
+
+
+    # Matrix Decomposition
+
+
+    This chapter is dedicated to explaining the concept of **matrix decomposition
+    or factorization**, its definition, and the process. You will learn how you can
+    decompose a matrix to its constituent elements.
+
+
+    # 7.1.   Introduction
+
+
+    What is the *benefit of decomposing a matrix*? What does that mean? When we *decompose
+    anything*, we break it into its constituent elements. Assume we are going to disintegrate
+    a **tool** (a car or a watch!). Such action helps us to understand the core particles
+    and their tasks. Furthermore, it helps to have a better understanding of how that
+    specific tool works and its characteristics! *Assume that the tool is a matrix
+    which we would like to decompose.* There are different approaches to decompose
+    a matrix. However, perhaps the most commonly used ones are matrix eigendecomposition
+    and Singular Value Decomposition (SVD).
+
+
+    # 7.2.   Matrix Eigendecomposition
+
+
+    In this section, I am going to show you the definition of eigendecomposition and
+    the subsequent concepts necessary to understand it.
+
+
+    # 7.2.1   Eigenvector and Eigenvalue
+
+
+    Before we move on, we should know the definition of eigenvector and eigenvalue.
+    The definition of eigenvector and eigenvalue are somehow connected.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Definition
+
+
+    Assuming we have the square matrix of \(A \in \mathbb{R}^{N\times N}\). The nonzero
+    vector \(\mathbf{v} \in \mathbb{R}^{N\times 1}\) is an eigenvector and scalar
+    \(\lambda\) is its associated eigenvalue if we have:
+
+
+    \[A\mathbf{v}=\lambda\mathbf{v}\]
+
+
+    From the above definition, it is clear that if \(\mathbf{v}\) is an eigenvector,
+    any vector \(\alpha\mathbf{v}\), \(\alpha \in \mathbb{R}\) is also an eigenvector
+    with the same eigenvalue \(\lambda\). Therefore, if we have one eigenvector, then
+    we have infinite ones!
+
+
+    ![](img/37669628775ca7a07835165249fef088_53_0.png)
+
+
+    **Fig. 7.1.** Since \(\mathbf{v}\) is an eigenvector, any vector \(\alpha\mathbf{v}\)
+    is also an eigenvector
+
+
+    Due to that, it is customary to only work with eigenvectors that have **unit norm**.
+    It is simple to construct an eigenvector with the unit norm. Assume \(\mathbf{v}\)
+    is our eigenvector. Then, the following vector is also an eigenvector with the
+    unit norm:
+
+
+    \[\mathbf{w}=\alpha\mathbf{v}=\frac{1}{\lVert\mathbf{v}\rVert}\mathbf{v}\]
+
+
+    where \(\lVert\mathbf{v}\rVert\) is the norm of vector \(\mathbf{v}\). We usually
+    consider the euclidean norm.
+
+
+    # 7.2.2 The Process
+
+
+    Here, the process of how we decompose a matrix to its constituent elements is
+    explained. It is called the **eigendecomposition of a matrix**.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Matrix Eigendecomposition
+
+
+    Assume we have the square matrix of $A \in \mathbb{R}^{N\times N}$ which has $N$
+    linear independent eigenvectors $\mathbf{v}^i$, $i \in 1,\ldots,N$. Then, we can
+    factorize matrix $A$ as below:
+
+
+    $$A = V\Lambda V^{-1}$$
+
+
+    where $V \in \mathbb{R}^{N\times N}$ is the square matrix whose $j^{th}$ column
+    is the eigenvector $\mathbf{v}^j$ of $A$, and $\Lambda$ is the diagonal matrix
+    whose diagonal elements are the corresponding eigenvalues, $\Lambda_{jj} = \lambda_j$.
+
+
+    Above, we basically concatenate eigenvectors $\mathbf{v}^i$ to form the $V$ matrix
+    as below:
+
+
+    ![](img/37669628775ca7a07835165249fef088_54_0.png)
+
+
+    # 7.2.3 Discussion on Matrix Eigendecomposition
+
+
+    Note that *we can only factorize* **diagonalizable matrices** as above. But the
+    question is what is a diagonalizable matrix?
+
+
+    # Diagonalizable Matrix
+
+
+    Assume we have the square matrix of $A \in \mathbb{R}^{N\times N}$. It is called
+    diagonalizable or nondefective if there exists an invertible matrix $H$ such that
+    $HAH^{-1}$ is a diagonal matrix.
+
+
+    let’s have a more precise definition of a matrix being singular or non-singular.
+
+
+    # Singular Matrix
+
+
+    Assume we have the square matrix of $A \in \mathbb{R}^{N\times N}$. It is called
+    singular if and only if any of the eigenvalues $(\lambda)$ are zero.
+
+
+    Under some circumstances, we can calculate the **matrix inverse** using the decomposition.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Matrix Inverse
+
+
+    Assume we have the square matrix **A** ∈ ℝ^{N×N}, it can be eigendecomposed and
+    it is nonsingular. Therefore, we can calculate its inverse as below:
+
+
+    **A**^{-1} = **V** Λ^{-1} **V**^{-1}
+
+
+    Since Λ is diagonal, it inverse Λ^{-1} is also diagnoal and we can calculate it
+    as:
+
+
+    Λ_{jj}^{-1} = 1 / λ_j
+
+
+    # 7.2.4 One Special Matrix Type and its Decomposition
+
+
+    We are interested to investigate a special kind of matrix: **Real symmetric matrix**.
+    A real symmetric matrix is basically a symmetric matrix in which all elements
+    belong to the space of real numbers ℝ.
+
+
+    For the **real symmetric matrix** of **A** ∈ ℝ^{N×N}, the eigenvalues are real
+    numbers and we can choose eigenvectors in a way that they are orthogonal to each
+    other. Then, we can factorize matrix **A** as below:
+
+
+    **A** = **Q** Λ **Q**^{T}
+
+
+    where **Q** is an orthogonal matrix whose columns are the eigenvectors of **A**,
+    and Λ is a diagonal matrix whose diagonal elements are the corresponding eigenvalues,
+    Λ_{jj} = λ_j.
+
+
+    # 7.2.5 Useful Properties
+
+
+    So far, the concepts and how we can decompose a matrix were explained. Let’s see
+    how we can leverage it. Assuming **A** ∈ ℝ^{N×N}:
+
+
+    +   - The determinant of the matrix **A** equals the product of its eigenvalues.
+
+    +   - The trace of the matrix **A** equals the summation of its eigenvalues.
+
+    +   - If the eigenvalues of **A** are λ_i, and **A** is non-singular, then the
+    eigenvalues of **A**^{-1} are simply 1/λ_i.
+
+    +   - The eigenvectors of **A**^{-1} are the same as the eigenvectors of **A**.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# 7.3.4 Applications of SVD
+
+
+    # Moore–Penrose Pseudoinverse
+
+
+    Before, digging into how SVD can help us with pseudoinverse calculations, let’s
+    talked about what is a Pseudoinverse?
+
+
+    Assuming we have the matrix of **A** ∈ ℂ^{M×N}. Then, we have a pseudoinverse
+    of **A**, defined as **A**⁺ ∈ ℂ^{M×N}, that satisfies all of the following criteria:
+
+
+    +   - **A A**⁺ **A** = **A**
+
+    +   - **A**⁺ **A A**⁺ = **A**⁺
+
+    +   - (**A A**⁺)* = **A A**⁺
+
+    +   - (**A**⁺ **A**)* = **A**⁺ **A**
+
+
+    How we can *calculate the* **Pseudoinverse** *of a matrix using SVD*? If we have
+    the SVD of a matrix **A** as **U Σ V***, then **A**⁺ can be calculated as below:
+
+
+    **A**⁺ = **V Σ**⁺ **U***
+
+
+    where Σ⁺ is the pseudoinverse of Σ and we create it by replacing each non-zero
+    diagonal entry σ in Σ by 1/σ and transposing the resulting matrix.
+
+
+    # Matrix Rank Determination
+
+
+    Previously, the linear dependence and the matrix ranks were discussed. Now, as
+    we have SVD, a more general approach compared to eigendecomposition, we can conclude
+    the following directions.
+
+
+    **Matrix Rank:** Assume we have the SVD of a matrix **A** as **U Σ V***. The rank
+    of **A** equals the number of non-zero singular values which is the number of
+    non-zero diagonal elements in Σ.
+
+
+    # 7.4. Conclusion
+
+
+    In this chapter, the matrix decomposition (factorization) concept and two of its
+    most used techniques were introduced. You learn what is matrix decomposition and
+    how to do it. You also practiced to implement it in Python and NumPy. If you would
+    like to know more about matrix decomposition, you can refer to [11, 12].'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# # References\n\n+   [1] Torfi A (2019) What is Machine Learning? An Introduction.\
+    \ Available at [https://www.machinelearningmindset.com/what-is-machine-learning/](https://www.machinelearningmindset.com/what-is-machine-learning/).\n\
+    +   \n+   [2] Schwartz M (1960) *Vector analysis: with applications to geometry\
+    \ and physics* (Harper), .\n+   \n+   [3] Borisenko AI, et al. (1968) *Vector\
+    \ and tensor analysis with applications* (Courier Corporation), .\n+   \n+   [4]\
+    \ Watkins DS (2004) *Fundamentals of matrix computations*. Vol. 64 (John Wiley\
+    \ & Sons), .\n+   \n+   [5] Meyer CD (2000) *Matrix analysis and applied linear\
+    \ algebra*. Vol. 71 (Siam), .\n+   \n+   [6] Lancaster P, Tismenetsky M (1985)\
+    \ *The theory of matrices: with applications* (Elsevier), .\n+   \n+   [7] Oliphant\
+    \ TE (2006) *A guide to NumPy*. Vol. 1 (Trelgol Publishing USA), .\n+   \n+  \
+    \ [8] VanderPlas J (2016) *Python data science handbook: essential tools for working\
+    \ with data* (O’Reilly Media, Inc.), .\n+   \n+   [9] Nunez-Iglesias J, Van Der\
+    \ Walt S, Walt S, Dashnow H (2017) *Elegant SciPy: The Art of Scientific Python*\
+    \ (O’Reilly Media, Inc.), .\n+   \n+   [10] Bressert E (2012) *SciPy and NumPy:\
+    \ an overview for developers* (O’Reilly Media, Inc.), .\n+   \n+   [11] Axler\
+    \ SJ (1997) *Linear algebra done right*. Vol. 2 (Springer), .\n+   \n+   [12]\
+    \ Dym H (2013) *Linear algebra in action*. Vol. 78 (American Mathematical Soc.),\
+    \ ."
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# # Appendix
+
+
+    # ## Appendix A: The Notations
+
+
+    | Notation | Meaning |
+
+    |---|---|
+
+    | $a$ | A scalar |
+
+    | **v** | vector |
+
+    | **A** | matrix |
+
+    | $\mathbb{A}$ | A set which can be the set of real number $\mathbb{R}$ for example
+    |
+
+    | $\{1,\ldots,n\}$ | The set of all integers in the range of 1 to **n** |
+
+    | $v_i$ | Element $i$ of vector **v** |
+
+    | $v_{-i}$ | All vector **v** elements except $i$ |
+
+    | $A_{i,j}$ | The element of row $i$ and column $j$ from the matrix **A** |
+
+    | $A^T$ | The transpose of matrix **A** |
+
+    | $A^H$ | The conjugate transpose of matrix **A** |
+
+    | $\|v\|_p$ | The $\mathcal{L}^p$ norm of vector **v** |
+
+
+    # ## Appendix B: Python Environment
+
+
+    As you could see throughout the book, Python is used. Python is a programming
+    language and needs an environment for being run. Instead of going through the
+    numerous ways to setup a Python environment and installing the required packages,
+    I would like to suggest using [Google Colab](https://colab.research.google.com).
+    It provides you a nice environment with all the necessary packages installed.
+    It also gives you FREE GPUs access! You will find it extremely valuable. In other
+    words, invaluable!'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Alphabetical Index
+
+
+    3D tensor, 6
+
+    arithmetic operations, 15
+
+    array, 8
+
+    Boolean, 8
+
+    built-in function, 12
+
+    column rank, 42
+
+    complex, 8
+
+    data types, 8
+
+    diagonal elements, 31
+
+    diagonalizable matrix, 47
+
+    element-wise operations, 13
+
+    float, 8
+
+    Identity matrix, 21
+
+    integer, 8
+
+    k-dimensional vector, 4
+
+    Linear Algebra, 4
+
+    linear dependence, 40
+
+    linear equation systems, 40
+
+    linear independence, 40
+
+    list, 8
+
+    Machine Learning, 4
+
+    matrix, 4
+
+    matrix inverse, 30
+
+    matrix norms, 34
+
+    matrix operations, 20
+
+    matrix ranks, 42
+
+    multi-dimensional grid, 10
+
+    non-singular, 30
+
+    NumPy, 7
+
+    reshaping operations, 19
+
+    row rank, 42
+
+    scalar, 4
+
+    shape, 10
+
+    singular, 30
+
+    slice indexing, 18
+
+    special functions, 12
+
+    square matrix, 27
+
+    tensor, 4
+
+    Trace, 31
+
+    transpose, 20
+
+    unit norm, 46
+
+    universal functions, 13
+
+    vector, 4
+
+    vector norms, 34'
+  merge: -1
+  img_proc: true
