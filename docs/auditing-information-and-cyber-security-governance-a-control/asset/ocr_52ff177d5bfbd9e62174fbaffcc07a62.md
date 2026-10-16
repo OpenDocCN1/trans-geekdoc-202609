@@ -1,0 +1,17 @@
++   - time frames for processing user administration operations from defined and accepted requestors,
++   - processes denoting passcodes remission to users for additions or resets, and
++   - controls to ensure passcode destruction after a specified time if the passcode does not reach the intended recipient (Davis, 2008).
+
+Classification of protection mechanisms can help determine data sensitivity, information processed by an entity using IT, and an appropriate defense strategy deployment (Davis, 2008). An assigned IT auditor should consider control classification analysis to provide additional IAP control system insight and determine CSG audit testing nature, timing, and the extent to enable sufficient audit assurance. As constructed in Appendix E, IAP mechanisms are classifiable to ensure an appropriate defense against errors, mistakes, omissions, irregularities, and illegal acts for informational assets (Davis, 2008). Assessing physical and logical controls can involve highly technical issues, especially for large integrated systems and systems that involve telecommunications (Davis, 2008). Consequently, even an experienced IT auditor may need to seek technical advice from an expert on some issues (Davis, 2008). Nonetheless, an assigned IT auditor should study and evaluate whether the IT access process provides appropriate identification, authentication, and authorization (Davis, 2008).
+
+# Identification
+
+Subject and object identification are essential for appropriate access control (Davis, 2008). Effective identity management establishes trust in an entity’s technological environment (Davis, 2008). Moreover, proof-of-identity enables entity personnel to trust that the presented credentials are accurate representations of validated users (Davis, 2008). IAP identification policies should inscribe classifications and attributes of acceptable users, user groups, processes, and devices acting on behalf of individuals as well as accessible resources (Davis, 2008). In other words, designed entity identity policies should guide behaviors by defining the uniqueness of accessible objects and subjects requesting access (Davis, 2008). Therefore, as minimum procedures, an IT auditor should study and evaluate implemented IAP controls limiting the number of unknown users accessing information assets and controls enabling credentials’ usage oversight and monitoring throughout the computing environment (Davis, 2008).
+
+# Authentication
+
+Proper subject authentication is vital to safeguarding an entity’s infrastructure (Davis, 2008). Controls for authenticating users based on entity-centric policies need deployment in ensuring appropriate access (Davis, 2008). Typically, no single authentication mechanism acts as a panacea for providing total protection from all potential threats. Thus, an assigned IT auditor should study and evaluate any inherent, control, and residual risks that are part of an entity’s applied identification verification solution set (Davis, 2008).
+
+# Authorization
+
+Entity authorization authority should reflect an assessment of managerial, operational, and technical control requirements (Davis, 2008). As a CSG activity, the audit of relevant Identity and Access Management controls should include authorization authority (Davis,

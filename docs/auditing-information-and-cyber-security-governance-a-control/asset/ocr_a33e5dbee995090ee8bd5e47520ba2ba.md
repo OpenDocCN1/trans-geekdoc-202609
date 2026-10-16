@@ -1,0 +1,15 @@
+# Security Governance
+
+# Abstract
+
+Dependence on information by for-profit and not-for-profit organizational formations continues to expand. However, distinguishing information security from cybersecurity is a perspective issue. Contextually, information security means protecting information and information systems from unauthorized access, use, disclosure, modification, disruption, and destruction. In contrast, cybersecurity focuses on protecting IT that acquires, stores, manipulates, manages, moves, controls, displays, switches, interchanges, or transmits digitally encoded data. In contrast, Information Security Governance (ISG) necessitates taking the expanded view that the entity’s data, information, and derived knowledge must receive appropriate protection without regard to the acquisition, handling, processing, transport, or storage method. Chapter 1 focuses on the effect of entity governance, ISG, and Cyber Security Governance as management tools for appropriate information and technology security.
+
+# Introduction
+
+Information usually obtains value when considered usable in decision-making (Davis, 2008a). Security is a prominent component within organizational governance that enables fulfilling a stakeholder expectation (Brotby, 2009; Davis, 2017; Flores et al., 2014). Part of the stakeholder security expectation is satisfied through appropriate Information Security Governance (ISG; Davis, 2008a, 2013). Properly constructed and implemented, ISG supports stakeholder expectations concerning management’s explicit or implicit fiduciary responsibilities (Davis, 2008a, 2011, 2017).
+
+Loyalty to the person or group (i.e., principal) tasking the duty is a fiduciary expectation (Davis, 2008a). Consequently, personal interests do not supersede a fiduciary duty, and the fiduciary must not profit from the position unless the principal consents (Davis, 2008a). Therefore, a fiduciary should avoid engaging in activities where personal interests and fiduciary duty are conflictive and situations where the fiduciary duty conflicts with another fiduciary duty (Davis, 2008a). Moreover, a fiduciary should not seek personal benefit from the fiduciary position without expressing principal knowledge and consent (Davis, 2008a).
+
+Control is the exercise of directing or restraining influence (Avison, 2007). An organization’s information security controls comprise the procedures adopted or devised to furnish management with some degree of comfort regarding the achievement of protection objectives for information assets. An entity’s management should, and in several countries do, have a legal responsibility to implement adequate control systems for preventing, detecting, and conditionally correcting errors, mistakes, omissions, irregularities, and illegal acts (Davis, 2006, 2008a).
+
+ISG should address creating and implementing a “system of security controls” that enable ethical and legal managerial responsibilities fulfillment for information assets

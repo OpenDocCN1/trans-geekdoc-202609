@@ -1,0 +1,21 @@
+Davis, R. E. (2020). IT auditing using a system perspective. IGI Global.
+Dey, A., LaGuardia, P., & Srinivasan, M. (2011). Building sustainability in logistics operations: A research agenda. Management Research Review, 34, 1237–1259. https://doi.org/10.1108/01409171111178774
+El Wardani, M. A., Messner, J. I., & Horman, M. J. (2006). Comparing procurement methods for design-build projects. Journal of Construction Engineering and Management, 132(3), 230–238. https://doi.org/10.1061/(ASCE)0733-9364(2006)132:3(230)
+Gottschalk, P., & Solli-Saether, H. (2005). Critical success factors from IT outsourcing theories: An empirical study. Industrial Management & Data Systems, 105(6), 685–702. https://doi.org/10.1108/02635570510606941
+Groznik, A., & Trkman, P. (2012). Current issues and challenges of supply chain management. Ekonomska Istrazivanja, 25, 1101–1112. https://doi.org/10.1080/1331677X.2012.11517551
+Haag, S., & Cummings, M. (2008). Management information systems for the information age (Laureate Education, Inc., custom ed.). McGraw-Hill/Irwin.
+Hagiu, A., & Yoffie, D. B. (2009). What's your Google strategy? Harvard Business Review, 87(4), 74–81. https://hbr.org
+Hamel, G. (2006). The why, what, and how of management innovation. Harvard Business Review, 84(2), 72–84. https://hbr.org
+Handfield, R. B., & Lawson, B. (2007). Integrating suppliers into new product development. Research Technology Management, 50(5), 44–51. https://doi.org/10.1080/08956308.2007.11657461
+Harms, D., Hansen, E. G., & Schaltegger, S. (2013). Strategies in sustainable supply chain management: An empirical investigation of large German companies. Corporate Social Responsibility & Environmental Management, 20, 205–218. https://doi.org/10.1002/csr.1293
+Holweg, M., Disney, S., Holmstrom, J., & Smaros, J. (2005). Supply chain collaboration: Making sense of the strategy continuum. European Journal of Management, 23, 170–181. https://doi.org/10.1016/j.emj.2005.02.008
+Ismail, H. S., & Sharifi, H. (2006). A balanced approach to building agile supply chains. International Journal of Physical Distribution & Logistics Management, 36(6), 431–444. https://doi.org/10.1108/09600030610677384
+IT Governance Institute. (2018). COBIT 2019 framework: Introduction and methodology. ISACA.
+Kamasak, R., & Bulutlar, F. (2010). The influence of knowledge sharing on innovation. European Business Review, 22(3), 306–317. https://doi.org/10.1108/09555341011040994
+Karajeh, H., Maqableh, M., & Masa’deh, R. (2014). Security of cloud computing environment. Vision 2020: Sustainable Growth, Economic Development, and Global Competitiveness: Proceedings of the 23rd International Business Information Management Association Conference, IBIMA 2014, 2202–2215. International Business Information Management Association.
+Ketchen, D. J., Rebarick, W., Hult, G. T. M., & Meyer, D. (2008). Best value supply chains: A key competitive weapon for the 21st century. Business Horizons, 51(3), 235–243. https://doi.org/10.1016/j.bushor.2008.01.012
+Kim, J., Lee, K., & Joshi, K. (2013). Globalization of information technology products and services. Journal of Global Information Technology Management, 16(3), 1–6. https://doi.org/10.1080/1097198X.2013.10845639
+Krogh, G. V. (2012). How does social software change knowledge management? Toward a strategic research agenda. The Journal of Strategic Information Systems, 21(2), 154–164. https://doi.org/10.1016/j.jsis.2012.04.003
+Kuyken, K. (2012). Knowledge communities: Towards a re-thinking of intergenerational knowledge transfer. VINE, 42, 365–381. https://doi.org/10.1108/03055721211267495
+Kwon, I.-W. G., & Suh, T. (2006). Factors affecting the level of trust and commitment in supply chain management. The Journal of Supply Chain Management, 40(2), 4–14. https://doi.org/10.1111/j.1745-493X.2004.tb00165.x
+Laszlo, K., & Laszlo, A. (2002). Evolving knowledge for development: The role of knowledge management in a changing world. Journal of Knowledge Management, 6(4), 400–412. https://doi.org/10.1108/13673270210440893

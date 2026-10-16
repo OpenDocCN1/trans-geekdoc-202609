@@ -1,0 +1,19 @@
+irregularity’s effect on the audit objectives and evidence reliability (Davis, 2013, 2020). When the effect of an irregularity appears so significant that sufficient or reliable evidence is unobtainable, the in-charge IT auditor evaluates the need for engagement continuance (Davis, 2013, 2020). Furthermore, when audit evidence suggests managerial irregularity complexity, the in-charge IT auditor must consider engagement discontinuance (Davis, 2013, 2020).
+
+Audit area directing and monitoring activities should reflect the managerial strategy for ensuring an appropriate control system (Davis, 2011, 2020). Audit evidence classification by governance level delineates managerial responsibility. Policies, directives, standards, procedures, and rules should have a one-to-one or one-to-many correspondence with entity management’s risk appetite (Davis, 2011, 2020). Since entity manager-leaders plan, direct, and support technology deployments, audit area administrative duties should include establishing or enforcing policies, procedures, standards, and rules for ensuring the right-sizing of information asset controls.
+
+# Engagement Report Structuring
+
+Direct reporting audit engagements exist when management does not inscribe an assertion concerning the effectiveness of control procedures, and the IT auditor provides an opinion (Davis, 2011, 2020). Conversely, attest reporting audit engagements happen when management inscribes an assertion regarding the effectiveness of control activities, and the IT auditor provides an opinion about the stated assertion (Davis, 2011, 2020). Whether the IT audit team members engage in direct or attest reporting, IT audit team members must complete assignments assuming IT auditing is a methodical examination of auditable units (Davis, 2020).
+
+Regardless of the CSG examination type, the oversight committee and management need to be comfortable with the audit assurance level and determine whether to classify the CSG audit report as privileged information. Reporting on CSG involves auditing at the highest level in the entity. Generally, the assigned IT auditor should address CSG reports to the audit committee and executive manager-leaders. Where inadequacies occur in CSG design or deployment, the auditor should immediately report a significant deficiency to the appropriate individual or group defined in the audit charter or engagement letter.
+
+Contextually, in addition to compliance with de facto and de jure reporting standards, the CSG audit report should include following the organizational terms-of-reference with:
+
++   - a statement that executive manager-leaders are responsible for the entity’s control systems;
++   - a statement that a control system can only provide reasonable assurance against material misstatements or losses;
++   - a description of the primary procedures that executive manager-leaders established to provide an effective CSG system and the related supporting documentation;
++   - information on any noncompliance with the entity’s policies or any relevant laws and regulations or industry codes of practice for entity governance;
++   - information on any material or significant uncontrolled risks;
++   - information on any ineffective or inefficient control structures, controls, or activities, together with the IT auditor’s recommendations for improvement; and
++   - the IT auditor’s overall conclusion on the deployed CSG, as defined in the terms-of-reference.

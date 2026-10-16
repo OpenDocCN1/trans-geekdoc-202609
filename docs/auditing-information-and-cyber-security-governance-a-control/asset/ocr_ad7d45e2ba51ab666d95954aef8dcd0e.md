@@ -1,0 +1,21 @@
+Mukati, M. A., & Ali, S. M. (2014). The vulnerability of cyber security and strategy to conquer the potential threats on business applications. Journal of Independent Studies and Research, 12(1), 56–62. https://szabist.edu.pk/journals-jsr/
+Niazi, A. S. (2011). Training and development strategy and its role in organizational performance. Journal of Public Administration and Governance, 1(2), 42–57. https://doi.org/10.5296/jpag.v1i2.862
+Olusegun, O. J., & Ithnin, N. B. (2013). People are the answer to security: Establishing a sustainable information security awareness training (ISAT) program in organization. International Journal of Computer Science and Information Security, 11(8), 57–64. https://publons.com/journal/30902/international-journal-of-computer-science-and-info/
+Pande, S., & Ansari, V. A. (2014). A theoretical framework for corporate governance. Indian Journal of Corporate Governance, 7(1), 56–72. https://doi.org/10.1177/0974686220140104
+Pitesa, M., & Thau, S. (2013). Masters of the universe: How power and accountability influence self-serving decisions under moral hazard. Journal of Applied Psychology, 98, 550–558. https://doi.org/10.1037/a0031697
+Posey, C., Roberts, T., Lowry, P. B., Bennett, B., & Courtney, J. (2013). Insiders’ protection of organizational information assets: Development of a systematics based taxonomy and theory of diversity for protection-motivated behaviors. MIS Quarterly, 37(4). www.misq.org/
+Price, J. D. (2014). Reducing the risk of a data breach using effective compliance programs (Publication No. 3619214) [Doctoral Study, Walden University]. ProQuest Dissertations Publishing.
+Rida-E-Fiza, S., Farooq, M., & Mirza, F. I. (2015). Barriers in employee effective training and learning. Mediterranean Journal of Social Sciences, 6(3 S2), 240–250. https://doi.org/10.5901/mjss.2015.v6n3s2p240
+Safa, N. S., Sookhak, M., Von Solms, R., Furnell, S., Ghani, N. A., & Herawan, T. (2015). Information security conscious care behaviour formation in organizations. Computers & Security, 53, 65–78. https://doi.org/10.1016/j.cose.2015.05.012
+Salas, E., Shuffler, M. L., Thayer, A. L., Bedwell, W. L., & Lazzara, E. H. (2015). Understanding and improving teamwork in organizations: A scientifically based practical guide. Human Resource Management, 54(4), 599–622. https://doi.org/10.1002/hrm.21628
+Singh, A. N., Picot, A., Kranz, J., Gupta, M. P., & Ojha, A. (2013). Information security management (ISM) practices: Lessons from select cases from India and Germany. Global Journal of Flexible Systems Management, 14, 225–239. https://doi.org/10.1007/s40171-013-0047-4
+Siponen, M., Mahmood, M. A., & Pahnila, S. (2014). Employees’ adherence to information security policies: An exploratory field study. Information & Management, 51(2), 217–224. https://doi.org/10.1016/j.im.2013.08.006
+Sloan, P. (2014). The reasonable information security program. Richmond Journal of Law & Technology, 21(1), 1–92. https://jolt.richmond.edu/
+Stern, G. (2017). Getting with the program to beef up cybersecurity. Biomedical Instrumentation & Technology, 51(1), 70–75. https://doi.org/10.2345/0899-8205-51.1.70
+Vance, A., & Siponen, M. T. (2012). IS security policy violations: A rational choice perspective. Journal of Organizational and End User Computing, 24(1), 21–41. https://doi.org/10.4018/joeuc.2012010102
+Zhao, H., Peng, Z., & Sheard, G. (2013). Workplace ostracism and hospitality employees’ counterproductive work behaviors: The joint moderating effects of proactive personality and political skill. International Journal of Hospitality Management, 33, 219–227. https://doi.org/10.1016/j.ijhm.2012.08.006
+
+# Recommended Reading
+
+Gai, K., Qiu, M., & Sun, X. (2018). A survey on FinTech. Journal of Network and Computer Applications, 103, 262–273. https://doi.org/10.1016/j.jnca.2017.10.011
+Guo, Y., & Wang, C. (2020). The impact mechanisms of psychological learning climate on employees’ innovative use of information systems. Journal of Global Information Management (JGIM), 28(2), 52–72. https://doi.org/10.4018/JGIM.2020040103

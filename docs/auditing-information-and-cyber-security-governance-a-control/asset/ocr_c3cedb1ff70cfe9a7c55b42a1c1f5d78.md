@@ -1,0 +1,17 @@
+interpretation assessments are necessary to permit appropriate ethical behaviors (Haag & Cummings, 2008).
+
+# Tier Five Infrastructure
+
+Infrastructure is the structure beneath a structure (Haag & Cummings, 2008). Thus, cybersecurity infrastructure is the structure beneath an IT infrastructure (Haag & Cummings, 2008). Usually, an information security work unit that is responsible for developing and deploying good ISG usually includes resilient security regarding the entity’s IT infrastructures and information systems supporting critical functions or operational processes (Davis, 2008a). Specifically, the network infrastructures should have adequate IAP for IT hardware, operating systems, configuration systems, facilities, and support structures (Davis, 2008a). In general, an IAP life cycle covers the phases of needs’ determination and demonstration, development, production, use, and disposal or retirement. Consequently, considering common IT infrastructure risks, expressing cybersecurity governance expectations within entity IT control objectives is imperative.
+
+# Tier Five Orchestration
+
+Asset orchestration entails administrative searching, selecting, and configuring resources and capabilities that require the ability to match investment decisions with congruent deployment decisions (Tan et al., 2014). Moreover, asset orchestration involves identifying the critical assets and developing a governance system with the means for practical use (Hitt, 2016). Asset orchestration also involves the coordination of co-specialized assets and productive usage (Hitt, 2016). Enabling accommodation of essential IT asset management requirements is implementing and controlling a configuration database containing details regarding IT architecture elements used in provisioning and management of IT services (Davis, 2009b). In ensuring successful IT asset management, relevant inventory management best practice adoption is necessary (Davis, 2009b).
+
+# Tier Five Processes
+
+Knowledge of the current and upcoming life cycle phases of information assets is essential for determining the applicable primary information security processes. The adopted processes for coordinating security knowledge-sharing mechanisms influence security knowledge-sharing in entities (Davis, 2017; Flores et al., 2014). Where information security process alignments occur with the accepted IT value definition, service basic principles should deliver appropriate quality, on-time, and within budget, while achieving promised benefits (Davis, 2008b). IT service delivery and support benefits usually translate into a competitive advantage, reduced elapsed time for service request fulfillment, customer satisfaction, reduced customer wait time, and increased employee productivity and profitability (Davis, 2008b).
+
+# Tier Five Information
+
+Information and decisions have convergence points when conjoined with the binodal processes conveying entity governance relationships (Davis, 2008a, 2017). Information practice domains include data processing systems design, organization analysis, and advertising effectiveness (Davis, 2008a, 2017). In contrast, decision practice areas encompass organization, learning, cybernetics, and suboptimization disciplines (Davis, 2008a, 2017). On

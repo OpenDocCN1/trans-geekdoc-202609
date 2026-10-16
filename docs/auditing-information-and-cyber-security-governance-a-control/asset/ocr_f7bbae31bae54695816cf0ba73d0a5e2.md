@@ -1,0 +1,18 @@
+Management should assume full responsibility for developing and maintaining a structural policy that establishes the entity’s overall approach to ISG (Davis, 2008a). Typically, the information security manager-leader’s role in policy formulation includes establishing an appropriate IAP control environment (Davis, 2008a). Within the defined framework, ISG policies need to maintain congruency with entity and technology objectives, minimizing risks by addressing asset loss limitation, timely irregularity identification, illicit act recognition, and service restoration (Davis, 2008a). A cost–benefit analysis should be the basis for adopted measures’ prioritization (Davis, 2008a). Manager-leaders should also ensure that ISG policies specify the
+
++   - ambit,
++   - purpose,
++   - objectives,
++   - management structure,
++   - implementation responsibility definitions,
++   - implementation responsibility assignments,
++   - penalty definitions for failing to comply with lower-level ISG policies, and
++   - disciplinary actions for failing to comply with lower-level ISG policies (Davis, 2008a).
+
+Top-down ISG policy construction typically requires procedures, standards, and rules to organize, direct, and control activities consistent with sustaining designed structural intentions (Davis, 2008a). As a logical managerial assumption, information assets are the primary protection points for ISG programs (Davis, 2008a). Entity information security policies positively affect subjective norms toward the performance of information security conscious-care behaviors (Davis, 2017; Safa et al., 2015). Nonetheless, entity manager-leaders should examine employee time spent on organizational tasks (Davis, 2017; Posey et al., 2014). High IT user workloads can create a conflict between assigned organizational tasks and information security responsibilities (Davis, 2017; Posey et al., 2014). Entity employees who feel overburdened are more likely to have lapses in information security vigilance (Davis, 2017; Posey et al., 2014). Entity management’s control environment due diligence can significantly reduce IAP risks (Davis, 2008a).
+
+Management’s negligence to support and implement information security policy initiatives is usually a matter of conflicting priorities for sustaining an appropriate control environment (Davis, 2008a). Conflicting priorities resolution can occur through an entity’s performance-reward systems (Davis, 2008a). Consequently, performance goals associated with information security must be reasonable and support, not impede, operational processes and deployed IT (Davis, 2008a). Priorities must be clearly defined and established in the information security strategy (Davis, 2008a). Process owners need key performance indicators approved at the highest entity oversight level to ensure goals will be effectively, consistently, and efficiently managed, monitored, and executed (Davis, 2008a).
+
+# Directives
+
+Directives present orders or instructions (Davis, 2011). Directives serve or intend to influence, guide, or administrate actions or goals (Davis, 2011). Proxy Directives are legal inscriptions assigning decisions to another if the decision-maker cannot make decisions (Davis, 2011). When activated, entity proxy directives are interpretable as conveying fiduciary requirements to the assignee (Davis, 2011). Individuals and internal or external central authorities may issue directives (Davis, 2011). Internal directives are usually

@@ -1,0 +1,19 @@
+comprehensive high-level risk assessment should be the starting point for developing or modifying an entity’s IAP policies and plan (Davis, 2008). Minimally, entities should perform an IAP risk assessment every 3 months (Davis, 2008). As a corollary activity, an inscription of quantitative or qualitative analysis should occur when performing risk assessments to gauge an information asset’s value (Davis, 2008).
+
+Management’s pursuit of opportunities presents risks to the entity (Davis, 2008). Opportunity risks can be threats to the established system of safeguarding controls (Davis, 2008). Threats associated with an opportunity need evaluation to determine the viability of pursuit (Davis, 2008). Meticulous opportunity impact consideration relative to established or created threats should be a critical success factor (i.e., hurdle point) for justifying the pursuit of an opportunity (Davis, 2008). Diagnostically, unless the information asset’s threat value exceeds the information asset’s opportunity value, the item under assessment should remain classified as an information asset opportunity by the individual or individuals responsible for the risk analysis (Davis, 2008).
+
+Good IAP risk management addresses potential unacceptable event identification and treatment while recognizing the strategic implications of multiple flashpoints such as increases in electronic crimes, infusions of new laws or regulations, and escalations in litigation activity (Davis, 2008). Consequently, independent risk assessments performance and inscription should occur regularly or whenever systems, facilities, or other conditions change (Davis, 2008). Therefore, whether the risk management process is formal or informal, minimally, the IT auditor should evaluate
+
++   - deployed IAP risk assessment framework existence;
++   - operational, IT, security, and IAP risk assessment updating frequency;
++   - risk assessment policies, directives, procedures, standards, and rules;
++   - the inclusion of entity-wide objectives in the IAP risk identification process;
++   - whether the level of the individuals involved in the IAP risk assessment is appropriate;
++   - the objectivity of personnel who performed and reviewed the IAP assessment;
++   - implementation of appropriate measures to mitigate IAP risks;
++   - inclusion of probability, frequency, and threat analysis techniques in the risk identification process;
++   - whether the IAP risk assessment considers information sensitivity, criticality, and impact;
++   - whether the IAP risk assessment considers the range of risks to the entity’s information assets, and
++   - whether final IAP risk determinations and related management approvals are documented and maintained on file (Davis, 2008).
+
+Responsibility designation enhances the ability to assure information assets are appropriately protected. An entity’s executive manager-leaders should assign information assets to information owners and technology owners (Davis, 2008). After that, appointed information owners should have the responsibility for establishing rules concerning the appropriate use and protection of subject data. In contrast, designated technology owners should be responsible for coordinating development life cycle activities specific to subject technologies (Davis, 2008). Given the delineated assignment circumstances, the information owners for data stored within, processed by, or transmitted through technology may not be the same as the technology owners (Davis, 2008). Also, a single technology may use data obtained from multiple information owners (Davis, 2008). However, information owners should retain assigned responsibilities, even when data sharing with other entities (Davis, 2008).
