@@ -1,0 +1,313 @@
+
+## M
+- loss, 125–126, 295
+  - defining, 501
+  - hinge, 301–305, 465
+  - minimizing, 526
+  - vs. score, 127, 207
+- M method, 183–185, 197, 200, 202
+- machine learning
+  - and math, 19–20
+  - definition of, 4
+  - limits of, 15
+  - running on GPUs, 82
+- macro, 168
+- macro precision, 168
+- magical_minimum_finder, 500–511
+- make_cost, 502–503
+- make_scorer, 185, 196, 208
+- Manhattan distance, 82, 367
+- manifolds, 459–462
+  - differentiable, 466–467
+- Mann–Whitney U statistic, 202
+- margin errors, 254
+- mathematics
+  - 1-based indexing in, 54
+  - ∑ notation, 30
+  - derivatives, 526
+  - eigenvalues and eigenvectors, 456–457
+  - linear algebra, 452, 457, 465
+  - matrix algebra, 82, 465–466
+  - optimization, 500
+  - parameters, 318
+- matplotlib, 20, 22, 222–223
+- matrices, 456
+  - breaking down, 457
+  - decomposition (factorization), 452, 455
+  - identity, 465
+  - multiplication of, 82, 465
+  - orthogonal, 465–466
+  - squaring, 466
+  - transposing, 465
+- Matrix, The, 67
+- matshow, 275–277
+- max_depth, 242
+- maximum margin separator, 252
+- mean, 54, 85, 271, 446
+  - arithmetic, 170, see also average
+  - bootstrap, 391–393
+  - computing, 390–391, 395
+  - definition of, 88
+  - distribution of, 390–391
+  - empirical, 457
+  - for two variables, multiplying, 271
+  - geometric, 170
+  - harmonic, 170
+  - multiple, for each train-test split, 231
+  - predicting, 147, 205
+  - weighted, 89–90
+- mean absolute error (MAE), 209
+- mean squared error (MSE), 91, 101, 130, 209
+- mean_squared_error, 91, 126
+- measurements
+  - accuracy of, 27
+  - critical, 16
+  - errors in, 15, 142–143, 241
+  - levels of, 18
+  - overlapping, 410
+  - rescaling, 328, 414
+  - scales of, 412–414
+- median, 206, 446
+  - computing on training data, 349
+  - definition of, 88
+  - predicting, 205
+- median absolute error, 209
+- medical diagnosis, 10
+  - assessing correctness of, 11–12
+  - confusion matrix for, 165–166
+  - example of, 6–7
+  - for rare diseases, 160, 163, 178
+- memory
+  - constraints of, 325
+  - cost of, 71
+  - measuring, 12, 76
+  - relating to input size, 72
+  - shared between programs, 76–77
+  - testing usage of, 77–81, 102–104
+- memory_profiler, 78
+- merge, 334
+- meta level, 4, 17
+- methods
+  - baseline, 159–161
+  - chaining, 166
+- metrics.accuracy_score, 62
+- metrics.mean_squared_error, 91
+- metrics.roc_curve, 174, 179
+- metrics.SCORERS.keys(), 161–162, 208
+- micro, 168
+- Minkowski distance, 63, 82, 367
+- MinMaxScaler, 327
+- mistakes, see errors
+- Mitchell, Tom, 18
+- Moby Dick, 13
+- mode value, 446
+- models, 8, 66
+  - additive, 318
+  - bias of, 144–145
+  - building, 14
+  - combining, 390–398
+  - comparing, 14
+  - concrete, 371
+  - evaluating, 14, 110
+  - features working well with, 423–426, 464
+  - fitting, 359–361, 363, 367, 370
+  - fully defined, 371
+  - keeping simple, 126, 295
+  - not modifying the internal state of, 8, 361
+  - performance of, 423
+  - selecting, 113–114, 361–362
+  - variability of, 144–145
+  - workflow template for, 67, 90
+- Monte Carlo, see randomness
+- Monte Carlo cross-validation, see repeated train-test splitting (RTTS)
+- Morse code, 417
+- most_frequent, 160–161
+- multiclass learners, 179–185, 195–201
+  - averaging, 168–169
+- mutual information, 418–423, 464
+  - minimizing, 466
+- mutual_info_classif, 419, 421–422
+- mutual_info_regression, 420–421
+
+## N
+- Naive Bayes (NB), 68–70, 292
+  - bias-variance for, 148
+  - evaluating, 70–71
+  - in text classification, 69
+  - performance of, 74–76, 78–81, 191
+- natural language processing (NLP), 9
+- nearest neighbors, see k-Nearest Neighbors
+- Nearest Shrunken Centroids (NSC), 292
+- NearestCentroids, 292
+- negative outcome, 163–164
+- nested cross-validation, 157, 370–377
+- Netflix, 117
+- neural networks, 512–516, 526
+- newsgroups, 476
+- Newton’s Method, 292
+- No Free Lunch Theorem, 290
+- noise, 15, 117
+  - addressing, 350, 353–356
+  - capturing, 122, 124, 126
+  - distracting, 109–110, 296
+  - eliminating, 144
+  - manipulating, 117
+- non-normality, 350
+- nonic, 120
+- nonlinearity, 285
+- nonparametric learning methods, 65
+- nonprimitive events, see compound events
+- normal distribution, 27, 520–524
+
+## O
+- normal equations, 101
+- normalization, 221, 322, 356, 474–476
+- Normalizer, 475
+- np_array_fromiter, 491–492, 494–495
+- np_cartesian_product, 41
+- numbers
+  - binary vs. decimal, 53
+  - floating-point, 52–53
+  - numerical features, 6–7, 18, 225, 343–344, 346
+  - predicting, 10–11
+- NumPy, 20
+  - np.corrcoef, 416
+  - floating-point numbers in, 52–53
+  - np.array, 276, 494
+  - np.dot, 29–30, 38, 47–52
+  - np.fromiter, 494
+  - np.histogram, 21
+  - np.linalg.svd, 455
+  - np.polyfit, 119
+  - np.random.randint, 21
+  - np.searchsorted, 310
+- NuSVC, 253–257, 291
+- Nystroem kernel, 436
+- Occam’s razor, 124, 284
+- odds
+  - betting, 259–262
+  - probability of, 262–266
+- one-hot coding, 333–341, 347, 356, 526
+- one-versus-all (OvA), 169
+- one-versus-one (OvO), 181–182, 253
+- one-versus-rest (OvR), 168, 179–182, 253, 267
+- OneHotEncoder, 333
+- OpenCV library, 485
+- optimization, 156, 497–500, 526
+  - premature, 83
+- ordinal regression, 18
+- outcome, outputs, see targets
+
+## P
+- overconfidence, 109–110
+  - and resampling, 128
+- overfitting, 117, 122–126, 290, 296
+  - of base models, 396
+- pairplot, 86
+- pandas, 20
+  - pd.cut, 328, 330–331
+  - DataFrame, 323
+  - one-hot coding in, 333–334
+  - vs. sklearn, 323, 332
+- parabolas, 45
+  - finding the best fit, 119–123
+- piecewise, 313
+- parameters, 115
+  - adjusting, 116
+  - choosing, 359
+  - in computer science vs. math, 318
+  - shuffling, 368
+  - tuning, 362
+  - vs. arguments, 362
+  - vs. explicit values, 360–361
+- Pareto principle, 83
+- partitions, 242
+- patsy, 334–340, 344–347
+  - connecting sklearn and, 347–348
+  - documentation for, 356
+- PayPal, 189
+- PCA, 449–452
+- peeking, 225
+- penalization, see complexity
+- penalties, 300, 306, 502
+- percentile, 206
+- performance, 102
+  - estimating, 382
+  - evaluating, 131, 150–152, 382
+  - measuring, 74–76, 78–81, 173, 178
+  - overestimating, 109
+- physical laws, 17
+- piecewise constant regression, 309–313, 318
+  - implementing, 310
+  - preprocessing inputs in, 341
+  - vs. k-NN-R, 310
+- PiecewiseConstantRegression, 313
+- Pipeline, 378–379
+- pipelines, 224–225, 377–382
+  - integrating feature selection with, 426–428
+- plain linear model, 146, 147
+- planes, 39–41
+  - finding the best, 410, 457
+- playing cards, 21
+- plots, 40, 41
+- plus-one trick, 38, 43–45, 336, 521
+- points in space, 34–43, 82
+- polyfit, 119
+- polynomial kernel, 253
+- polynomials
+  - degree of, 119, 124
+  - quadratic, 45
+- positive outcome, 163–164
+- precision, 165
+  - macro, 168
+  - tradeoffs between recall and, 168, 170–173, 185–187, 202
+- precision–recall curve (PRC), 185–187, 202
+- predict, 224–225, 379, 490–491
+- predict_proba, 174–175
+- predicted values, 10–11, 33
+  - calculating, 97, 265
+- prediction bar, 170–177, 186
+- predictions, 165
+  - combining, 389, 395, 405
+  - evaluating, 215–217
+  - flipping, 202
+  - probability of, 170
+  - real-world cost of, 56
+- predictive features, 7
+- predictive residuals, 219
+- predictors, see features
+- premature optimization, 83
+- presumption of innocence, 12
+- prime factorization, 452
+- principal components analysis (PCA), 445–462, 465–466
+  - feature engineering in, 324
+  - using dot products, 458–459, 461
+- prior, 160–161
+- probabilistic graphical models (PGMs), 516–525
+  - and linear regression, 519–523
+  - and logistic regression, 523–525
+- probabilistic principal components analysis (PPCA), 466
+- probabilities, 21–27
+  - conditional, 24, 25
+  - distribution of, 25–27, 290
+  - expected value of, 31–32
+  - of independent events, 23, 69
+  - of primitive events, 22
+  - of winning, 259–266
+- processing time, see time
+- programs
+  - bottlenecks in, 83
+  - memory usage of, 76–77
+- Provost, Foster, 18
+- purchasing behavior, predicting, 11
+- pydotplus, 245
+- pymc3, 519–521
+- Pythagorean theorem, 63
+- Python
+  - indexing semantics in, 21, 54
+  - list comprehension in, 136
+  - memory management in, 77
+  - using modules in the book, 20
+
+## Q
+- Quadratic Discriminant Analysis (QDA), 282–285

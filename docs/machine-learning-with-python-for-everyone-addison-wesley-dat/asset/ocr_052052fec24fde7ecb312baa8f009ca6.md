@@ -1,0 +1,13 @@
+On the other end of the spectrum—the end with less bias—we get complexity in two very different ways. PlainLinear includes information from all the features, but trades off feature values, based on parameter weights, to get to a “central” predicted value. 1-NN includes information from all the features in the distance calculation, but then it only considers the closest example to get the prediction value.
+
+It is amazingly interesting—at least to me—that consulting more examples in nearest neighbors leads to more bias, yet consulting more features in linear regression leads to less bias. An explanation is that in nearest neighbors, the only thing we do when we consult someone else is average away the differences between examples—we are smoothing out the rough edges. So, it has as much to do with our method of combining information as it does with the fact that we are consulting more examples.
+
+# 5.6.5.4 Bias-Variance for Naive Bayes
+
+There’s an elephant in the room. We’ve discussed each of the methods we introduced in Part I, except Naive Bayes (NB). So, what about the bias-variance of NB? Describing the tradeoffs with NB is a little different because Naive Bayes is more like a single point on a spectrum of assumptions. The spectrum that NB lives on has the number of conditional independence assumptions on its x: axis for complexity. Naive Bayes makes almost as many of these as possible: everything is conditionally independent given the class (Figure 5.12).
+
+If class is independent of all the features—the ultimate independence assumption—the best we can do is guess based on the distribution of the class. For a continuous target, it implies that we guess the mean. We are back to a mean-only model for our least complex, most biased, most-assumptions model within a class of models. That’s pretty convenient. Other, more complicated models that try to add complexity to NB could make fewer and fewer independence assumptions. These would come with more and more complicated claims about dependency. Eventually, we get the most complicated type of dependency: the dreaded full joint distribution. Among other problems, if we want to adequately capture the distinctions in a fully dependent joint distribution, we need an amount of data that is exponential in the number of features of the data. For each additional feature we need something like—I’m taking liberties with the values—another factor-of-10 examples. If we need 100 examples for two features, we would need 1000 for three features. Yikes. Suffice it to say, that is not good for us.
+
+![](bbox=[0.14, 0.75, 0.86, 0.88])
+
+Figure 5.12 Naive Bayes is one bias-variance point on a spectrum of possibilities.

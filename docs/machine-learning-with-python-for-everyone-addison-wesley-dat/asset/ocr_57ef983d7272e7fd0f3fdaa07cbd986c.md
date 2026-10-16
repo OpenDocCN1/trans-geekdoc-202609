@@ -1,0 +1,3 @@
++   5. We used a single, fixed global vocabulary size in our image classification system. What are the effects of different global vocabulary size on learning performance and on resource usage?
++   6. We evaluated our image classification system using a confusion matrix. Extend that evaluation to include an ROC curve and a PRC.
++   7. In the image system, does using more categories help with overall performance? What about performance on individual categories? For example, if we train with 10 or 20 categories, does our performance on kangaroos increase?

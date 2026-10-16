@@ -1,0 +1,15 @@
+# 5.6.2 Variance of the Model
+
+There are some sources of error we can control in a learning system, but there may be limits on our control. When we pick a single model—say, linear regression—and go through a training step, we set the values of the parameters of that model. We are setting the values on the knobs of our factory machine. If we choose our training and testing datasets at random, which we should, we lose some control over the outcome. The parameters of our model—the values of our knobs—are subject to the coin-flipping choice of training data. If we flip the coins again, we get different training data. With different training data we get a different trained model. The way models vary due to the random selection of the data we train on is called the variance of the model.
+
+A trained model will give us different answers when we use it on test cases and in the wild. Here's a concrete example. If we have one very bad data point, with 1-Nearest Neighbors, most of our training and testing examples will be unaffected by it. However, for anyone that is the nearest neighbor of the bad example, things will go wrong. Conversely, if we used a large number of neighbors, the effect of that example would be diluted out among many other training examples. We've ended up with a tradeoff: being able to account for tricky examples also leaves us exposed to following bad examples. Our racetrack example did not include an example of variance due to the model training.
+
+# 5.6.3 Bias of the Model
+
+Our last source of error is where we have the most control. When I choose between two models, one may have a fundamentally better resonance with the relationship between the inputs and outputs. We've already seen one example of poor resonance in Section 5.3.2: a line has great difficulty following the path of a parabola.
+
+Let's tie this idea to our current discussion. We'll start by eliminating noise—the inherent randomness—we discussed a few paragraphs back. We eliminate it by considering only a best-guess output for any given input. So, while an input example made from level of education, degree program, and years post-graduation {college, economics, 5} actually has a range of possible income predictions, we'll take one best value to represent the possible outputs. Now, we ask, 'How well can model one line up with that single value?' and 'How well can model two line up with that single value?' Then, we expand that process to all of our inputs—{secondary, vocational, 10}, {grad, psychology, 8}—and ask how well do the models match the single best guesses for every possible input.
+
+Don't worry, we'll make these ideas more concrete in a moment.
+
+We say that a model that cannot match the actual relationship between the inputs and outputs—after we ignore the inherent noisiness in the data—has higher bias. A highly biased model has difficulty capturing complicated patterns. A model with low bias can follow more complicated patterns. In the racetrack example, when we wanted to relate speed and time to come up with a distance, we couldn't do it with addition because the true relationship between them is multiplication.

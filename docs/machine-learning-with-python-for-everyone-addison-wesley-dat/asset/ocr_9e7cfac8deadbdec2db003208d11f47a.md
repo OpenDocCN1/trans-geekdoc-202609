@@ -1,0 +1,11 @@
+# 3.3 Training and Testing: Don’t Teach to the Test
+
+Let’s briefly turn our attention to how we are going to use our data. Imagine you are taking a class (Figure 3.2). Let’s go wild and pretend you are studying machine learning. Besides wanting a good grade, when you take a class to learn a subject, you want to be able to use that subject in the real world. Our grade is a surrogate measure for how well we will do in the real world. Yes, I can see your grumpy faces: grades can be very bad estimates of how well we do in the real world. Well, we’re in luck! We get to try to make good grades that really tell us how well we will do when we get out there to face reality (and, perhaps, our student loans).
+
+![](bbox=[0.2, 0.4, 0.8, 0.63])
+
+Figure 3.2 School work: training, testing, and evaluating.
+
+So, back to our classroom setting. A common way of evaluating students is to teach them some material and then test them on it. You might be familiar with the phrase “teaching to the test.” It is usually regarded as a bad thing. Why? Because, if we teach to the test, the students will do better on the test than on other, new problems they have never seen before. They know the specific answers for the test problems, but they’ve missed out on the general knowledge and techniques they need to answer novel problems. Again, remember our goal. We want to do well in the real-world use of our subject. In a machine learning scenario, we want to do well on unseen examples. Our performance on unseen examples is called generalization. If we test ourselves on data we have already seen, we will have an overinflated estimate of our abilities on novel data.
+
+Teachers prefer to assess students on novel problems. Why? Teachers care about how the students will do on new, never-before-seen problems. If they practice on a specific problem and figure out what’s right or wrong about their answer to it, we want that new nugget of knowledge to be something general that they can apply to other problems. If we want to estimate how well the student will do on novel problems, we have to evaluate them on novel problems. Are you starting to feel bad about studying old exams yet?
