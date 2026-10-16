@@ -1,0 +1,29 @@
+![](bbox=[0.087, 0.078, 0.47, 0.3])
+
+**Fig. 4.** Amplitudes of transfer functions for heave, pitch and roll responses with different relative wave directions (β = 90 deg., β = 150 deg. and β = 180 deg.) and ship forward speed $U = 16.19$ knots.
+
+![](bbox=[0.088, 0.392, 0.469, 0.613])
+
+**Fig. 5.** Calculated time-series of ship motion responses at ship forward speed $U = 16.19$ knots and sea state parameters $H_s = 3.0$ m, $T_z = 4.0$ m and β = 150 deg.
+
+We design Latin hypercube sampling (LHS) to discretize the three-dimensional search space of $H_s$, $T_z$ and β with a 20,000 number of sample points at a uniform distance. The range of validity for parameter $H_s$ is [0.5, 10.5] m and [3.5, 9.6] m for parameter $T_z$. The encounter angle β is defined in range [0, 360] deg. In addition, following (Mittendorf et al., 2022) work, constraints for irregular waves are applied to include wave breaking conditions in the sense of moderate wave steepness with a limited maximum value $S_s$ given as DNV-GL (2018):
+
+$$S_s = \begin{cases} \frac{1}{10} & \text{for } T_z \leq 6\ s \\ \frac{1}{15} & \text{for } T_z \geq 12\ s \end{cases} \tag{6}$$
+
+Finding the values between the limits given in the above equation is done with linear interpolation. The dataset contained about 13,000 samples after these constraints were applied. The final three-dimensional search space of $H_s$, $T_z$, and β was sampled by the LHS. Since the LHS method helps to ensure that the samples are spread out evenly and reduces the possibility that some of the samples are left out in the given range, it was a useful tool for our simulation and experimentation. LHS is also computationally less expensive than the standard Monte Carlo sampling. This may not be as significant with modern computers, but it was used since it may give marginally more accurate results in terms of true variability (given the amount of processing time).
+
+Fig. 3 shows an example of a 2D representation of a wave spectrum using a selected distributed parameter pair ($H_s$ and $T_z$). If the third parameter from the three-dimensional search space (the direction of the wave β) is taken into account, it is possible to obtain a directional wave spectrum.
+
+The following is a detailed description of the data augmentation process and the NN architectures which are used to create the DL models.
+
+# 2.2. *Data preprocessing*
+
+Input–output samples were prepared for models’ training in the form of JSON files, and subsequently processed and scaled. The output values of the sea state parameters were scaled so that $H_s$ and $T_z$ were divided by a value of 15, and the relative wave direction β values were divided by the value of 360. The extensive experimentation showed that the scaling of input data (3-DOF) is not influencing the convergence of the tested models. However, the convergence of models is greatly influenced by the output scale (set to be between 0 and 1). By choosing scaling values of 15 and 360 as maximum values in our dataset enlarged by 10%, we have ensured the fulfillment of these conditions.
+
+Data augmentation strategies are employed in the data preprocessing step to increase the accuracy of our models. With data augmentation applied to proposed models, we increase the variety of our data and eliminate overfitting.
+
+Next, we explain the utilized data augmentation methods. Fig. 6 shows one batch with $n = 32$ samples. Each sample in the batch consists of three time-series input data of ship motion responses, denoted as $M_1$, $M_2$ and $M_3$. Within each batch, sampling with size $s = 32$ was performed resulting in $k = 47$ sub-samples of each input data.
+
+Fig. 7 compares transformations on how the sub-samples of each input data are shuffled. We distinguish two different approaches: batch-wise and row-wise types of augmentation. Comparison is given using one batch with $n = 3$ samples and $k = 3$ tokens. As depicted in the figure, batch-wise augmentation randomly shuffles the input data signals so that all rows shuffle simultaneously in the same manner. Row-wise augmentation, on the other hand, shuffles each data sample separately. To compare the results, all DL models were trained without any augmentation, as well as with batch-wise and row-wise data augmentation. The trained models always outperformed those not using the above data augmentations.
+
+Besides the results confirming the benefits of utilizing the row-wise and batch-wise augmentation, it is necessary to elaborate more on what the utilized augmentation does to the model training. Similar to the “mosaic” and “bag of freebies” augmentation introduced in YoloV4 paper, the utilized augmentations also deal with variation in data (Bochkovskiy et al., 2020). The general idea is to permute the data chunks to force the model to learn different relations between the chunks and to make the whole problem more demanding. By introducing more variations in the data, the model is forced to learn more in-depth relations in the scattered patterns. Hence, the row-wise and batch-wise augmentation differ in the number of permutations (increased variance) they introduce into the data during the models’ training. The batch-wise augmentation introduces less variation in the training because all samples in the batch are rearranged with the same random seed. On the contrary, row-wise augmentation is more costly for numeric operations but introduces more variation to the dataset due to the per-sample random seed. Based on our evaluation, we cannot single out the best approach for all methods — some methods benefit more from batch-wise augmentation, while others perform better with

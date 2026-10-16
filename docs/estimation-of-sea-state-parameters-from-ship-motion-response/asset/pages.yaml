@@ -1,0 +1,1434 @@
+- pgno: 0
+  md: '# Estimation of sea state parameters from ship motion responses using attention-based
+    neural networks
+
+
+    Denis Selimović a,b , Franko Hržić a,b , Jasna Prpić-Oršić a , Jonatan Lerga a,b,*
+
+
+    a Department of Computer Engineering, Faculty of Engineering, University of Rijeka,
+    Vukovarska 58, 51000 Rijeka, Croatia
+
+    b Center for Artificial Intelligence and Cybersecurity, University of Rijeka,
+    Radmile Matejčić 2, 51000 Rijeka, Croatia
+
+
+    # ARTICLE INFO
+
+
+    +   Keywords:
+
+    +   - Ship motions
+
+    +   - Sea state estimation
+
+    +   - Deep learning
+
+    +   - Attention neural network
+
+    +   - Uncertainty estimation
+
+
+    # ABSTRACT
+
+
+    On-site estimation of sea state parameters is crucial for ship navigation. Extensive
+    research has been conducted on model-based estimation utilizing ship motion responses.
+    Model-free approaches based on machine learning (ML) have recently gained popularity,
+    and estimation from time-series of ship motion responses using deep learning (DL)
+    methods has given promising results. In this study, we apply the novel, attention-based
+    neural network (AT-NN) for estimating wave height, zero-crossing period, and relative
+    wave direction from raw time-series data of ship pitch, heave, and roll. Despite
+    reduced input data, it has been demonstrated that the proposed approaches by modified
+    state-of-the-art techniques (based on convolutional neural networks (CNN) for
+    regression, multivariate long short-term memory CNN, and sliding puzzle neural
+    network) improved estimation MSE, MAE, and NSE by up to 86%, 66%, and 56%, respectively,
+    compared to the best performed original methods for all sea state parameters.
+    Furthermore, the proposed technique based on AT-NN outperformed all tested methods
+    (original and enhanced), improving estimation MSE by 94%, MAE by 74%, and NSE
+    by 80% when considering all sea state parameters. Finally, we proposed a novel
+    approach for interpreting the uncertainty estimation of neural network outputs
+    based on the Monte-Carlo dropout method to enhance the model''s trustworthiness.
+
+
+    # 1. Introduction
+
+
+    Unfavorable weather conditions while ship navigation may lead to various dangerous
+    situations that negatively affect the ship''s cargo and crew. The sensitivity
+    of the ship to unsafe circumstances depends on its stability parameters, hull
+    geometry, size, and speed (IMO, 2007). Thus, maintaining stable operational performance
+    for ship routing is critical for safety and navigational efficiency. This represents
+    a challenge for onboard decision support systems (DSSs), which consider the problem
+    of obtaining data on the surrounding sea state and help make operational decisions
+    more precise (Faltinsen, 1990). Since encountered waves affect almost all ship
+    operations, real-time estimation of their characteristics is of crucial importance.
+    Different approaches for collecting information about sea state data exist. Moored
+    wave buoys, navigational radars, or satellite data are traditionally used. However,
+    these methods do not represent a complete solution due to their limitations in
+    availability, reliability, convenience and/or cost of maintenance (Nielsen, 2017).
+    For example, statistical-based methods can provide accurate wave height estimates,
+    but wave period and wave direction estimates are relatively poor. On the other
+    hand, expensive wave radars can produce accurate estimations of wave period and
+    wave
+
+
+    direction, but wave height is not always estimated correctly (Selimović et al.,
+    2020). As a more efficient alternative to standard estimation methods, the concept
+    of a “wave buoy analogy” intends to measure only available ship responses to infer
+    sea state information. These result in less complexity, easier maintenance, and
+    ultimately lower costs. Decades of research have been conducted on this concept.
+    A concise overview of sea state estimation techniques based on ship motions is
+    given in Nielsen (2017). Optimization methods were developed and refined as computing
+    resources improved. Ultimately, this results in several published research papers
+    incorporating the speed-of-advanced problem and full-scale tests. The concept
+    is introduced with the assumption of linearity between sea state and measured
+    ship responses. With an appropriate mathematical model, two different estimation
+    approaches can be found in the literature, one in the frequency domain and another
+    directly in the time domain. The latter intends to address challenges that appear
+    in frequency domain procedures. In the time domain, research focuses on methods
+    that apply Kalman filtering (Pascoal and Guedes Soares, 2009; Pascoal et al.,
+    2017) or stepwise procedures (Nielsen et al., 2015, 2016). However, most of the
+    research done'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_1_0.png)
+
+
+    Fig. 1. Flowchart representing conducted research.
+
+
+    in the frequency domain uses spectral analysis, with a mathematical relationship
+    between the response spectra and the directional wave spectrum (DWS). The model
+    description is given with complex transfer functions, i.e., response amplitude
+    operators (RAOs). The corresponding DWS is then found by inverse mapping procedures.
+    Procedures in the frequency domain are formulated so that the mathematical model
+    is based either on the equivalence of spectral energy distribution (Nielsen, 2006;
+    Tannuri et al., 2003; Hinostroza and Guedes Soares, 2016) or the spectral moments
+    (Montazeri et al., 2016).
+
+
+    Although the above-mentioned DWS estimation techniques have shown fine performance
+    in many reports, their implementation may include some constraints. The concept
+    of analogy is given with the assumption of linearity, and spectral analysis requires
+    stable operating conditions where it should be a certain minimum period of stationarity
+    to perform one. In addition, the accuracy and reliability of estimation largely
+    depend on the accuracy of RAOs which may be less accurate or incomplete due to
+    insufficient knowledge of the input conditions.
+
+
+    Recently, sea state estimation was related to data-driven ML approaches to overcome
+    the limits of conventional RAO-based methods. The idea is to build a parametrized
+    ML model without knowledge about ship model description. A few studies have been
+    published on the use of ML approaches to train the model. The proposed models,
+    trained on time and/or frequency domain features, have shown sufficient accuracy
+    in predicting wave characteristics. As the model is based only on ship motion
+    data, the assumption is that it can be adapted to various types of ships. An example
+    of a model-free approach to identify sea state levels is proposed by Tu et al.
+    (2018). The authors apply available dynamic positioning (DP) sensors to collect
+    time-series data in four degrees of freedom (DOF). The estimation procedure includes
+    multilayer classifiers, and time and frequency domain features are extracted from
+    the data with several preprocessing techniques.
+
+
+    As the classification in feature-based approaches is dependent on the quality
+    and quantity of hand-engineered features, research suggested the application of
+    DL methods. The DL-based model for classifying the sea state levels proposed by
+    Cheng et al. (2019) uses only raw time-series data. Here, the classification accuracy
+    is improved using a multi-component model. Namely, convolutional neural networks
+    (CNNs) and fast Fourier transform help extract time and frequency characteristics,
+    while recurrent neural networks search for long dependencies in motion data. Cheng
+    et al. (2020a) expanded this work using densely connected CNN to take into account
+    the estimation of wave direction characteristics. Additionally, to improve the
+    interpretability and achieve even better accuracy, Cheng et al. (2020b) proposed
+    a model based on 2D spectrogram images, which carry both time and frequency information.
+
+
+    The before-mentioned papers are related to DP application without ship forward-speed.
+    On the other hand, Duz et al. (2019) and Mak and Düz (2019) successfully predicted
+    wave height and wave direction under forward-speed conditions. Ship motions in
+    6-DOF are used as input, and the problem was treated as a multivariate time-series
+    regression. Results are given for several NN structures with appropriate performance
+    comparisons. Those works are extended to identify real-time DWS using deep convolutional
+    encoding-decoding NN in Scholcz and Mak (2020). However, the approach is focused
+    on training models
+
+
+    on simulated data, and then these models are used for measured data directly or
+    applied using transfer learning methods. In Mittendorf et al. (2022) several proposed
+    DL architectures also prove sufficient results in the case of an advanced ship
+    in beam and following seas with no significant effect on the prediction accuracy
+    when a different forward-speed is applied.
+
+
+    In this paper, we propose several DL models for sea state parameter estimation
+    (the flowchart of the research is given in Fig. 1). The main focus was on improving
+    the currently proposed models and implementing the new DL model based on AT-NN.
+    The input data was 3-DOF ship motion time-series, and the output indicated the
+    wave period, relative wave direction and significant wave height. As in Duz et
+    al. (2019), the problem was characterized as a multivariate time-series regression.
+    The algorithms are trained with numerically simulated data generated according
+    to the recommended guidelines. Proposed methods have been compared to state-of-the-art
+    reports to evaluate the novelty of the research and its potential real-life applications.
+
+
+    The rest of the paper is structured as follows. In Section 2, the data generation
+    process is given with described simulation procedure. Next, the applied NN architectures
+    and DL models are described. The performances of applied models were evaluated
+    and described in Section 3. Conclusion remarks on the limitations of the present
+    work and possible future works are provided in Section 4.
+
+
+    # 2. Methods
+
+
+    Collecting real-time estimation of encountered wave characteristics may be worthwhile
+    for improving navigational efficiency. While routing, the ship encounters stochastic
+    environmental forces, thus subjected to three rotational (rolling, pitching, and
+    yawing) and three linear (surging, swaying, and heaving) motion responses, as
+    shown in Fig. 2. According to many previous studies mentioned in the introduction
+    of the paper, considering a set of three motion responses is advantageous for
+    successful sea state estimation in a wave buoy analogy approach. Based on the
+    given input-output data pairs, the idea is to create a DL model to estimate the
+    characteristics of encounter waves with given ship motion responses in 3-DOF.
+    We observe the roll, pitch, and heave motions, mostly driven by the sea waves
+    and least affected by the operation of the thrusters (Selimović et al., 2020;
+    Nielsen, 2006).
+
+
+    For testing DL model accuracy, stationary stochastic time-series of 3-DOF ship
+    motion responses are computed from the known wave spectra. Time-series simulation
+    procedures are done according to recommended guidelines given in DNV-GL (2018),
+    and related research work by Mittendorf et al. (2022). This section describes
+    the used procedures for generating time-series data and models for wave characteristics
+    estimation.
+
+
+    # 2.1. Computing of time-series data
+
+
+    Let us suppose the ship is navigating in the natural seaway, i.e. in irregular
+    waves, at a specified forward speed, U, and with a relative'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_2_0.png)
+
+
+    Fig. 2. Ship motion responses in six degrees of freedom (6-DOF).
+
+
+    ![](img/4734fbdc67cafcec90fddf3b05be1d58_2_1.png)
+
+
+    Fig. 3. Unidirectional one-dimensional Bretschneider wave spectrum with H_s =
+    3.0 m and T_z = 4.0 s.
+
+
+    Table 1
+
+    Main characteristics of the Bulk Carrier ship.
+
+    | Name | Value |
+
+    |---|---|
+
+    | Length L_pp | 160.4 m |
+
+    | Breadth B | 27.2 m |
+
+    | Draught T | 6.55 m |
+
+    | Metacentric height G_M | 3.97 m |
+
+    | Block coefficient C_B | 0.77 |
+
+    | Displacement | 22,193 t |
+
+
+    heading to the waves, β. In this case wave elevation can be expressed as a sum
+    of multiple sinusoidal (regular) wave components:
+
+
+    ζ(x,t) = Σ_{i=1}^{n} A_i cos(ω_i t - k_i x + ε_i)   (1)
+
+
+    where ω_i is a wave frequency of a particular wave component, k_i is a wave number,
+    and ε_i is a the random phase shift in the range [0,2π] to ensure random nature
+    of the waves. The amplitude A_i can be found from the relation to the wave spectrum
+    S(ω), given with Eq. (2):
+
+
+    ½ A_i² = S(ω_i) Δω_i   (2)
+
+
+    where considered frequency interval Δω_i has randomly distributed boundaries.
+
+
+    Wave spectrum S(ω) is given in the frequency domain and describes how the total
+    wave energy of all wave frequencies ω_i is distributed in stationary seaway (Faltinsen,
+    1990). It can be estimated by one of the well-known spectra suggested by the International
+    Towing Tank Conference (ITTC, 1969). In the case of fully developed seas, the
+    recommendation is to use the two-parameter Bretschneider spectrum, cf. Eq. (3).
+
+
+    S(ω) = 124 H_s² / T_z⁴ ω^{-5} exp(-496 / (T_z⁴ ω⁴))   (3)
+
+
+    The Eq. (3) is given in a rewritten form as the characteristic statistical period
+    of interest is zero up-crossing period T_z, with a relation to mean wave period
+    T_1, T_1 = 1.087 T_z and peak period T_p, T_p = 1.405 T_z. H_s represents significant
+    wave height, and ω is the wave frequency (DNV-GL, 2018).
+
+
+    The energy distribution, in an example of two-parameter Bretschneider spectrum,
+    is given in Fig. 3 with values of H_s = 3.0 m and T_z = 4.0 s. The one-dimensional
+    spectrum has a single peak value indicating that unimodal seas are being observed.
+    The single peak value occurs at an angular frequency ω_p = 1.12 rad/s, corresponding
+    to the above relations for the peak period T_p and zero up-crossing period T_z
+    since ω_p = 2π / T_p. Also, the supplied spectrum includes information on the
+    significant wave height H_s, which can be determined from the area under the spectrum.
+    It should be noted that, for practicality and simplicity reasons, generated time-series
+    do not contain information about wave directionality. In other words, we only
+    observe long-crested or unidirectional waves with a narrow spreading.
+
+
+    While routing, the ship is observed as a complex object with the forward speed
+    U, and it is encountered by waves at a specific encounter angle β. Encountered
+    wave spectrum is not equal to wave spectrum given in wave frequency domain ω due
+    to Doppler shift. Therefore, ship responses should be observed in the encounter
+    frequency domain ω_e. The following expression applies to the transformation from
+    wave to encounter frequency domain:
+
+
+    ω_e = ω - ω² U / g cos(β)   (4)
+
+
+    with g being the gravitational constant in the adopted right-handed coordinate
+    system, where the encounter angle of 180 deg indicates head seas.
+
+
+    Given ship speed and heading angle, we can easily calculate the encounter period
+    from the wave period. The encounter period is significant since it represents
+    the period when the ship encounters waves. Consequently, substantial ship motions
+    may occur if it coincides with the natural ship motion period. Since it depends
+    on the ship''s speed and course angle, in addition to the wave frequency, the
+    captain can “control” it by adjusting the ship''s speed or course angle.
+
+
+    With known encounter wave spectrum and appropriate complex-valued transfer functions
+    Φ_R, one can calculate the time-series of ship motion responses R_i(t) following
+    (Denis and Pierson, 1953):
+
+
+    R_i(t) = Σ_{i=1}^{n} A_i |Φ_R(ω_{e,i})| cos(ω_{e,i} t + ε_i)   (5)
+
+
+    where frequency discretization is non-equidistant, and amplitude A_i is given
+    in wave frequency domain ω as stated in Eq. (2). Since the unidirectional spectrum
+    is observed, each set of time-series R_i(t) is generated for a single encounter
+    angle β, with other wave characteristics contained in the amplitude A_i.
+
+
+    Transfer functions are computed with a strip theory solver for pitch, roll and
+    heave as a function of encounter frequency ω_e and encounter angle β. Forward
+    speed was 16.19 knots, and relative wave directions were discretized into 36 headings
+    for [0,360]deg, with other values obtained by linear interpolation. The range
+    of wave frequencies ω are defined as [0,4.0] rad/s. The ship under study was a
+    20,000DWT Bulk Carrier, with the primary characteristics shown in Table 1. The
+    amplitudes of frequency response functions for heave, pitch, and roll motions
+    are given in Fig. 4 with relative wave direction β = 150 deg and ship forward
+    speed U = 16.19 knots.
+
+
+    By applying the Eq. (5), we computed time-series of motion responses in 3-DOF,
+    with a sampling frequency of 5 Hz and sample lengths of 300 s. An example of time-series
+    responses is given in Fig. 5.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_3_0.png)
+
+
+    **Fig. 4.** Amplitudes of transfer functions for heave, pitch and roll responses
+    with different relative wave directions (β = 90 deg., β = 150 deg. and β = 180
+    deg.) and ship forward speed $U = 16.19$ knots.
+
+
+    ![](img/4734fbdc67cafcec90fddf3b05be1d58_3_1.png)
+
+
+    **Fig. 5.** Calculated time-series of ship motion responses at ship forward speed
+    $U = 16.19$ knots and sea state parameters $H_s = 3.0$ m, $T_z = 4.0$ m and β
+    = 150 deg.
+
+
+    We design Latin hypercube sampling (LHS) to discretize the three-dimensional search
+    space of $H_s$, $T_z$ and β with a 20,000 number of sample points at a uniform
+    distance. The range of validity for parameter $H_s$ is [0.5, 10.5] m and [3.5,
+    9.6] m for parameter $T_z$. The encounter angle β is defined in range [0, 360]
+    deg. In addition, following (Mittendorf et al., 2022) work, constraints for irregular
+    waves are applied to include wave breaking conditions in the sense of moderate
+    wave steepness with a limited maximum value $S_s$ given as DNV-GL (2018):
+
+
+    $$S_s = \begin{cases} \frac{1}{10} & \text{for } T_z \leq 6\ s \\ \frac{1}{15}
+    & \text{for } T_z \geq 12\ s \end{cases} \tag{6}$$
+
+
+    Finding the values between the limits given in the above equation is done with
+    linear interpolation. The dataset contained about 13,000 samples after these constraints
+    were applied. The final three-dimensional search space of $H_s$, $T_z$, and β
+    was sampled by the LHS. Since the LHS method helps to ensure that the samples
+    are spread out evenly and reduces the possibility that some of the samples are
+    left out in the given range, it was a useful tool for our simulation and experimentation.
+    LHS is also computationally less expensive than the standard Monte Carlo sampling.
+    This may not be as significant with modern computers, but it was used since it
+    may give marginally more accurate results in terms of true variability (given
+    the amount of processing time).
+
+
+    Fig. 3 shows an example of a 2D representation of a wave spectrum using a selected
+    distributed parameter pair ($H_s$ and $T_z$). If the third parameter from the
+    three-dimensional search space (the direction of the wave β) is taken into account,
+    it is possible to obtain a directional wave spectrum.
+
+
+    The following is a detailed description of the data augmentation process and the
+    NN architectures which are used to create the DL models.
+
+
+    # 2.2. *Data preprocessing*
+
+
+    Input–output samples were prepared for models’ training in the form of JSON files,
+    and subsequently processed and scaled. The output values of the sea state parameters
+    were scaled so that $H_s$ and $T_z$ were divided by a value of 15, and the relative
+    wave direction β values were divided by the value of 360. The extensive experimentation
+    showed that the scaling of input data (3-DOF) is not influencing the convergence
+    of the tested models. However, the convergence of models is greatly influenced
+    by the output scale (set to be between 0 and 1). By choosing scaling values of
+    15 and 360 as maximum values in our dataset enlarged by 10%, we have ensured the
+    fulfillment of these conditions.
+
+
+    Data augmentation strategies are employed in the data preprocessing step to increase
+    the accuracy of our models. With data augmentation applied to proposed models,
+    we increase the variety of our data and eliminate overfitting.
+
+
+    Next, we explain the utilized data augmentation methods. Fig. 6 shows one batch
+    with $n = 32$ samples. Each sample in the batch consists of three time-series
+    input data of ship motion responses, denoted as $M_1$, $M_2$ and $M_3$. Within
+    each batch, sampling with size $s = 32$ was performed resulting in $k = 47$ sub-samples
+    of each input data.
+
+
+    Fig. 7 compares transformations on how the sub-samples of each input data are
+    shuffled. We distinguish two different approaches: batch-wise and row-wise types
+    of augmentation. Comparison is given using one batch with $n = 3$ samples and
+    $k = 3$ tokens. As depicted in the figure, batch-wise augmentation randomly shuffles
+    the input data signals so that all rows shuffle simultaneously in the same manner.
+    Row-wise augmentation, on the other hand, shuffles each data sample separately.
+    To compare the results, all DL models were trained without any augmentation, as
+    well as with batch-wise and row-wise data augmentation. The trained models always
+    outperformed those not using the above data augmentations.
+
+
+    Besides the results confirming the benefits of utilizing the row-wise and batch-wise
+    augmentation, it is necessary to elaborate more on what the utilized augmentation
+    does to the model training. Similar to the “mosaic” and “bag of freebies” augmentation
+    introduced in YoloV4 paper, the utilized augmentations also deal with variation
+    in data (Bochkovskiy et al., 2020). The general idea is to permute the data chunks
+    to force the model to learn different relations between the chunks and to make
+    the whole problem more demanding. By introducing more variations in the data,
+    the model is forced to learn more in-depth relations in the scattered patterns.
+    Hence, the row-wise and batch-wise augmentation differ in the number of permutations
+    (increased variance) they introduce into the data during the models’ training.
+    The batch-wise augmentation introduces less variation in the training because
+    all samples in the batch are rearranged with the same random seed. On the contrary,
+    row-wise augmentation is more costly for numeric operations but introduces more
+    variation to the dataset due to the per-sample random seed. Based on our evaluation,
+    we cannot single out the best approach for all methods — some methods benefit
+    more from batch-wise augmentation, while others perform better with'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_4_0.png)
+
+
+    Fig. 6. Data augmentation modeling with more samples.
+
+
+    ![](img/4734fbdc67cafcec90fddf3b05be1d58_4_1.png)
+
+
+    Fig. 7. Comparison of batch-wise and row-wise data augmentation.
+
+
+    row-wise augmentation. Nevertheless, any kind of data augmentation is better than
+    no augmentation, as also demonstrated in the work of Mak et al. showing that batch-wise
+    and row-wise augmentation can help models with learning scatter information in
+    the signal.
+
+
+    # 2.3. Deep learning models
+
+
+    In this research, we propose a novel DL model for sea state parameter estimation
+    based on the current state-of-the-art module called Attention (Vaswani et al.,
+    2017). To prove that the proposed model is fine-tuned and can be treated as the
+    best currently available solution, we have compared it with the three other DL
+    models presented in Mak and Düz (2019). Furthermore, to correctly compare the
+    proposed model with existing models, we have enhanced the existing models by scaling
+    the number of kernels and neurons. Here we find the work done by Mak and Düz (2019)
+    to be the most relevant due to several facts: their approach is well defined and
+    enables their models’ reproducibility, proposed models are based on different
+    modules, and last but not least, they have been dealing with the same problem
+    as the one addressed in this paper. The only difference between our utilization
+    of existing models and their original usage was the number of input signals. Namely,
+    in the original paper, the existing models utilized 6-DOF of ship motion, while
+    our experiments only used 3-DOF. By reducing the number of DOF, we did not impair
+    the model’s integrity in any way, which is supported by the obtained results which
+    are comparable to the results in the original paper.
+
+
+    In the following subsections, the utilized DL models will be presented and described
+    in detail, while the source code implementing the models can be found in the following
+    repository (Selimović et al., 2022). Furthermore, at the end of this subsection,
+    we briefly summarize all models’ hyperparameters and explore the motivation behind
+    the models.
+
+
+    # 2.3.1. CNN for regression: original and enhanced
+
+
+    The first NN presented in Mak and Düz (2019) was the most straightforward NN based
+    on convolutions. Hence, CNN-REG perfectly fits this DL model: a CNN for regression.
+    The NN consisted of two convolutions and a dense layer mainly followed by the
+    tanh activation functions (as depicted in Fig. 8. The first convolutional layer
+    had 48 filters with kernel size 3 × 15, while the second convolution layer had
+    48 filters with kernel size 1 × 9. The dense layer consisted of 30 neurons followed
+    by the dropout layer with the dropout probability set to 0.25. Furthermore, we
+    have experimented with the values of the following hyperparameters to find the
+    best possible performance:
+
+
+    +   - max pooling kernel sizes: 1, 3, 5, 7, 10,
+
+    +   - scaling factor κ : 1, 5, 10,
+
+    +   - Tested optimizers were ADAM and SGD both with learning rates α = 5 · 10⁻³,
+    5 · 10⁻⁴, 5 · 10⁻⁵,
+
+    +   - Data augmentation: row-wise and batch-wise.
+
+
+    Let us note that the NNs proposed by Mak et al. were enhanced by adding a scaling
+    factor that increases the “width” of the NN. The width is enhanced by multiplying
+    the number of filters in convolutional layers and the number of neurons in dense
+    layers by scaling factor κ. For example, the initially proposed number of filters
+    in the first convolutional layer was 48, which after the scaling by κ = 5, becomes
+    240. This way, we did not just compare our proposed AT-NN DL model with current
+    state-of-the-art NNs; we have even tried to enhance the originally proposed models.
+    Therefore we will present results for two versions of the CNN-REG NN topology:
+    the original one (CNN-REG-ORG) and the enhanced one (CNN-REG-ENH).
+
+
+    The parameters for CNN-REG-ORG are same as stated in Mak and Düz (2019) (κ = 1,
+    max pooling kernel size equal to 3) except we have used SGD with learning rate
+    α = 0.005 since the originally proposed learning rate α = 0.03 would not converge
+    on our dataset. As best dataset augmentation for this model was shown to be “Row-wise”
+    data augmentation. For the CNN-REG-ENH the best performing parameters were as
+    follows: κ = 10, max pooling kernel size 5, optimizer ADAM with learning rate
+    α = 0.0005, and data augmentation row-wise.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_5_0.png)
+
+
+    Fig. 8. The architecture of the convolutional neural network for regression (CNN-REG).
+
+
+    ![](img/4734fbdc67cafcec90fddf3b05be1d58_5_1.png)
+
+
+    Fig. 9. The architecture of the multivariate LSTM-CNN (MLSTM-CNN).
+
+
+    # 2.3.2. Multivariate long short-term memory CNN (MLSTM-CNN): original and enhanced
+
+
+    Multivariate long short-term memory (LSTM) CNN consists of two components, as
+    depicted in Fig. 9. The first component is based on convolutions (similar to the
+    CNN-REG model) but enhanced with squeeze and excitation block (SEB) (Hu et al.,
+    2018). SEB block introduces weights that increase inter-dependencies among the
+    convolution layers feature maps while simultaneously adding minor computational
+    costs. The second component is based on the LSTM block (Hochreiter and Schmidhuber,
+    1997). The LSTM block introduces memory that is able to “remember” the dependencies
+    between the signal sample in the observed moment and all samples before the observed
+    moment.
+
+
+    The tested hyperparameters for MSLSTM-CNN are related to scaler value κ chosen
+    among the following options: 1, 5, and 10. Other hyperparameters, such as data
+    augmentation and optimizers (and their respective learning rates), were the same
+    as in the case of CNN-REG. After enhancing the originally proposed MLSTM-CNN,
+    the best performing parameters for MSTM-CNN-ENH were: data augmentation row-wise,
+    optimizer ADAM with a learning rate set to α = 0.005, and scaling factor κ = 5.
+    On the other hand, the best performing parameters for MLSTM-CNN-ORG were: data
+    augmentation batch-wise, and optimizer SGD with learning rate α = 0.005.
+
+
+    # 2.3.3. Sliding puzzle network: original and enhanced
+
+
+    The sliding puzzle neural network (SP-NN) proposed in Mak and Düz (2019) has a
+    pretty neat motivation. This model aims to shuffle random patches of the input
+    data in a manner that resemble a sliding puzzle. In a sliding puzzle, although
+    the image is shuffled, the content of the image can still be seen. This idea led
+    to the construction of the NN, which topology can be seen in Fig. 10. The SP-NN
+    is designed to remove the positional dependency between samples completely.
+
+
+    ![](img/4734fbdc67cafcec90fddf3b05be1d58_5_2.png)
+
+
+    Fig. 10. The architecture of the sliding puzzle neural network (SP-NN).
+
+
+    achieve this, the average, max, and min pooling are performed for each feature
+    map of the second convolution layer. As the original authors state: the result
+    of encoding is purely based on initial convolutions.
+
+
+    We have built two versions of SP-NN: the original one that resembles the model
+    proposed by its authors (SP-NN-ORG) and an enhanced one (SP-NN-ENH) where we increased
+    the width of SP-NN-ORG by a factor κ. Therefore SP-NN-ORG had the following hyperparameters:
+    the first convolution layer had 64 filters with kernel size 1 × 25, the second
+    convolution layer had 128 filters with kernel size 3 × 1, dense layer consisted
+    of 30 neurons, SEB block had shrink ratio of 16.
+
+
+    For the SP-NN-ENH we have scaled a number of filters and neurons by multiplying
+    them with factor κ = 10. Optimizer for SP-NN-ENH was adam with α = 0.00005. The
+    optimizer for the original version was SGD with α = 0.005.
+
+
+    We believe that we have enhanced all NNs in a manner that does not violets the
+    original author’s reasons and motivation behind NN design. Also, wherever we had
+    doubts about parameters’ values (when these were not specified in the original
+    work), we tested different parameter values and took the best-performing one.
+
+
+    # 2.3.4. Attention-based neural network (AT-NN)
+
+
+    Many state-of-the-art algorithms in computer vision, natural language processing
+    (NLP), or even augmented data generation rely on attention modules (Galassi et
+    al., 2021; Zhang et al., 2019; Woo et al., 2018). The attention module, including
+    the self-attention module, has been introduced in paper (Vaswani et al., 2017),
+    which claims that “Attention is all you need”. The intuition behind the attention
+    module comes from NLP, where the urge to capture relations between words far away
+    from each other in a sentence/text was necessary.
+
+
+    We believe that the time-series signals describing the ship’s motion have also
+    scattered information that needs to be grouped. The proposed model AT-NN can seize
+    the interaction and correlation between different parts of the input signals by
+    utilizing the self-attention module. Thus, the model can create new informative
+    features essential for sea state estimation, which simple convolution operations
+    cannot obtain.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Attention based neural network
+
+
+    # Self-attention blocks
+
+
+    # Fully connected blocks
+
+
+    ![](img/4734fbdc67cafcec90fddf3b05be1d58_6_0.png)
+
+
+    Fig. 11. The architecture of the attention based neural network (AT-NN).
+
+
+    3 × 125. Since we utilized 128 kernels in this operation, NN operates on 128 embedded
+    signals instead of three original ones. Besides merging three signals into one,
+    the convolution operation also resulted in 1377 overlapping window positions over
+    the original signals. Each window captured 125 samples of the input signals. These
+    overlapping window positions are equivalent to the “tokens” in the NLP models.
+    Established practice in NLP recommends that each token have its position in sentence/signal
+    encoded because the inter-token positions may be relevant information (Jaderberg
+    et al., 2015). We have followed this practice and utilized the sin and cosine
+    encoding as proposed in Vaswani et al. (2017).
+
+
+    After merging and tokenizing the input signals, the proposed AT-NN utilizes two
+    self-attention blocks. As depicted in Fig. 11, each self-attention block consists
+    of two multi-head attention (MHA) layers followed by a normalization layer. The
+    attention mechanism is given by Eq. (7):
+
+
+    ```
+
+    attention(Q, K, V) = softmax( Q K^T / sqrt(d_k) ) V   (7)
+
+    ```
+
+
+    where Q, K, and V represent query, key, and value matrices, respectively, with
+    their weights included (W_q, W_k, W_v). In our case, we used self-attention where
+    Q, K, and V were all equal to the layer''s input. Generally speaking, the self-attention
+    mechanism seeks relations between the tokens in the same input signal, not between
+    the observed input signal and another different signal. Parameter d_k is a scaling
+    factor equal to the length of the input embedding (in our case, 1377).
+
+
+    ```
+
+    multihead(Q, K, V) = concat(head_1, ..., head_j) W^O
+
+    head_i = attention(Q, K, V)   (8)
+
+    ```
+
+
+    performing a simple linear projection utilizing weights W^O. Furthermore, the
+    output of MHA is added to its input. After the addition is performed, the final
+    summed output of the MHA is normalized. Normalization is done by subtracting the
+    embedding mean value from the embedding values and dividing it by their standard
+    deviation (Garbin et al., 2020). The described mechanism is repeated two times
+    in one self-attention block, as depicted in Fig. 11. AT-NN model was built from
+    two consecutive self-attention blocks.
+
+
+    The final embedding calculated by the second MHA (batch_size × 128 × 1377) is
+    flattened into batch_size number of 1D vectors with a length of 176,256. This
+    is important because the next part of the proposed AT-NN consists of fully-connected
+    (dense) layers. As depicted in Fig. 11, the AT-NN consists of three dense layers.
+    The first dense layer has 128 neurons and is followed by the RELU activation function,
+    dropout layer, and batch normalization layer (Agarap, 2018; Santurkar et al.,
+    2018).
+
+
+    +   - number of MHA blocks: 2, 4, 8,
+
+    +   - number of heads in each MHA block: 2, 4, 8,'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Table 2
+
+
+    An overview of the best performing hyperparameters for each model.
+
+
+    | Model | DATA_AUG | OPTIMIZER | LR | SCALE | MAXPOOL | BLOCKS | NUM HEADS | EMB
+    SIZE | NUM EMB | HEADS NEURONS |
+
+    |---|---|---|---|---|---|---|---|---|---|---|
+
+    | CNN-REG-ORG | Row-wise | SGD | 0.005 | 3 | 1 | / | / | / | / | / |
+
+    | MLSTM-CNN-ORG | Batch-wise | SGD | 0.005 | 1 | / | / | / | / | / | / |
+
+    | SP-NN-ORG | Batch-wise | SGD | 0.005 | 5 | 1 | / | / | / | / | / |
+
+    | CNN-REG-ENH | Row-wise | ADAM | 0.0005 | 10 | 5 | / | / | / | / | / |
+
+    | MLSTM-CNN-ENH | Row-wise | ADAM | 0.005 | 5 | / | / | / | / | / | / |
+
+    | SP-NN-ENH | Batch-wise | ADAM | 0.00005 | 10 | 5 | / | / | / | / | / |
+
+    | AT-NN | Batch-wise | ADAM | 0.0005 | / | / | 2 | 2 | 125 | 128 | 128,64,3 |
+
+
+    +   - token size: 125, 250, 500,
+
+    +   - number of embeddings: 32, 64, 128, 256,
+
+    +   - number of neurons in fully connected layers consecutively: (128, 64, 3),
+    (256, 128, 3), (512, 256, 3), and (1,024, 512, 3),
+
+    +   - Tested optimizers were ADAM and SGD both with learning rates α = 5·10⁻³,
+    5·10⁻⁴, 5·10⁻⁵ (Kingma and Ba, 2014; Bottou, 2012),
+
+    +   - Data augmentation: row-wise and batch-wise.
+
+
+    When considering the choice of the optimizers, it was decided to utilize the SGD
+    to be consistent with the paper (Mak and Düz, 2019), and ADAM as the most popular
+    optimizer. Other popular optimizers, such as RMS-prop (Zou et al., 2019) and ADAGRAD
+    (Mukkamala and Hein, 2017), can also be utilized; however, this would not significantly
+    affect methods performances and research conclusions. Maybe some models would
+    converge faster or obtain better results, but the achieved results have shown
+    satisfactory model performance and, hence, no need for further optimizer testing.
+
+
+    The model was trained with batch_size set to 32 for 250 epochs with early stopping
+    if there was no change in loss function on the validation data set for 10 epochs.
+    The best model consisted of 2 MHA blocks with 2 heads each, a token size of 125,
+    and the number of embeddings set to 128. The number of neurons in dense layers
+    was (128, 64, 3) respectively, while the optimizer was ADAM with a learning rate
+    set to 5·10⁻⁴.
+
+
+    # 2.4. Hyperparameter overview, training setup and models'' mechanisms
+
+
+    The overview of the best-performing hyperparameters for each model is given in
+    Table 2. Since we trained a large number of models, the best performance (top
+    25), conducted with different hyperparameters, was achieved by those that used
+    some kind of data augmentation. However, there is no evident distinction between
+    the two types of augmentation (batch-wise and row-wise) in terms of the produced
+    results.
+
+
+    The loss function was mean squared error (MSE) (James and Stein, 1992). The training
+    process mentioned in Section 2.3.4 was the same for all models: batch size was
+    always set to 32, with early stopping after there was no improvement on validation
+    loss of 10 epochs. The constraint that the models are training for 250 epochs
+    was never fulfilled because all models converged after the 100 to 150 epoch.
+
+
+    To understand the differences between the models, one needs to understand the
+    mechanisms running the utilized models. The three original models (CNN-REG, MLSTM-REG,
+    and SP-NN) proposed by the Mak and Düz (2019) rely on the popular mechanisms in
+    the machine learning community. At the moment of their release, the models utilizing
+    those mechanisms won various competitions (Russakovsky et al., 2015). The most
+    straightforward mechanism utilized by CNN-REG (Fig. 8) is based on the plain 2D
+    convolution. The 2D convolution learns different patterns, which helps extract
+    useful information to predict the targeted variable. The issue with the convolution
+    is that it scans “linearly” by moving the learned pattern (represented as the
+    quadratic window) only to neighboring data in the input signal. This principle
+    struggles with detecting the connection between scattered patterns in the input
+    data/signal or finding cause-and-effect relationships between data patterns. Although,
+    the convolution mechanism is easy to understand and optimize. To cope with the
+    issues of cause-and-effect between the data parts, Mak et al. proposed a second
+    neural
+
+
+    network called MLSTM-CNN (Fig. 9 based on long-short-term memory (LSTM) mechanism
+    (Yu et al., 2019). The LSTM mechanism utilizes vectors that can remember the state
+    of the part of the input while predicting the next part, which is particularly
+    useful in natural language processing, where one word influences the words after
+    it. In the studied case of estimating the sea state parameters from ship motion,
+    it is evident that the sea state in time t_i influences the sea state in time
+    t_{i+1}. Hence, remembering the previous state of the sea could be beneficial.
+    In the architecture proposed by Mak and Düz (2019), the LSTM part is merged with
+    the CNN-REG-like neural network as depicted in Fig. 9. During the training, we
+    noticed that this model is slow to compute (due to the two branches). The last
+    proposed model by Mak et al. tries to achieve the benefits of the LSTM mechanism
+    by involving clever data augmentation mechanisms (batch-wise and row-wise augmentation),
+    forcing the 2D convolutions to learn more advanced patterns. By doing so, the
+    complexity of the model is not increased, so the output computation is quick.
+    With these guidelines kept in focus, the neural network model named Sliding Puzzle
+    (SP-NN, Fig. 10) is created. To increase the perceptive field, the SP-NN utilizes
+    three different scales for feature aggregations (Max Pooling layers). This creates
+    different views on the input signal features processed with the 2D convolutional
+    layers. The mechanism resulted in quick calculations while being easy to understand.
+    At the same time, thanks to innovative augmentation and different receptive fields’
+    sizes, capturing cause-and-effect relationships between different parts of the
+    input signals is feasible.
+
+
+    Lastly, the novel model based on the attention mechanism follows the intuitions
+    presented in paper (Vaswani et al., 2017) where it is argued that the mechanism
+    performs better on many different tasks thanks to the capability to capture even
+    long-term dependencies in the input data. LSTM and plain 2D convolutions on the
+    mashed data cannot capture such long-term dependencies, so we believed utilizing
+    the attention (and self-attention) mechanism as the feature extractors were the
+    valid approach. Furthermore, regarding the mechanism’s complexities, the attention
+    mechanism is far less complex than the LSTM mechanism and is similar to the 2D
+    convolution. Hence, utilization of it is well justified. Also, we have investigated
+    the possible enhancements to the models proposed by Mak et al.. The enhancements
+    resulted in scaling the number of filters in convolutional layers. The introduced
+    scaling increased the model’s capacity to learn different patterns, ultimately
+    leading to better features (and, consequently, results). Simultaneously, the enhancements
+    did not impair the original idea behind the models and their mechanisms.
+
+
+    Next, we provide the achieved results for all tested models and elaborate on their
+    efficiency, advantages, and limitations.
+
+
+    # 3. Results and discussion
+
+
+    # 3.1. NN models performance
+
+
+    Evaluation of model performances is done separately for each sea state parameter:
+    H_s, T_z, and β. We have calculated three metrics: mean squared error (MSE), mean
+    absolute error (MAE), and Nash-SutcliffeEfficiency (NSE) (Chai and Draxler, 2014;
+    Nash and Sutcliffe, 1970) on both validation and test sets. MSE and MAE are commonly
+    used metrics in neural network evaluation, while NSE is a more rigorous metric
+    originating from hydrology. Namely, when training NNs, it'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_8_0.png)
+
+
+    Fig. 12. The radar charts show the absolute and squared errors of each sea state
+    parameter estimated using the AT-NN for every wave angle on the validation dataset.
+
+
+    # Table 3
+
+
+    Models results of estimated parameters on validation dataset (-10^-3).
+
+
+    | Model | MSE | | | MAE | | | NSE | | | MSE | MAE | NSE |
+
+    | | H_s | T_z | β | H_s | T_z | β | H_s | T_z | β | | | |
+
+    | CNN-REG-ORG | 5.285 | 3.889 | 1.252 | 57.042 | 50.812 | 26.703 | 843.208 | 598.950
+    | 937.176 | 3.476 | 44.852 | 793.111 |
+
+    | MLSTM-CNN-ORG | 4.942 | 4.194 | 1.113 | 56.162 | 53.026 | 25.387 | 853.407 |
+    567.514 | 944.171 | 3.416 | 44.859 | 788.364 |
+
+    | SP-NN-ORG | 5.226 | 4.765 | 1.413 | 57.097 | 54.960 | 26.935 | 844.973 | 508.647
+    | 929.108 | 3.801 | 46.331 | 760.909 |
+
+    | CNN-REG-ENH | 0.939 | 0.478 | 0.210 | 23.321 | 16.436 | 11.417 | 972.146 | 950.675
+    | 989.456 | 0.543 | 17.058 | 970.759 |
+
+    | MLSTM-CNN-ENH | 1.260 | 0.605 | 0.298 | 26.480 | 19.14 | 13.94 | 962.63 | 937.67
+    | 985.04 | 0.720 | 19.85 | 961.78 |
+
+    | SP-NN-ENH | 1.290 | 0.752 | 0.169 | 26.582 | 19.686 | 9.921 | 961.736 | 922.505
+    | 991.502 | 0.736 | 18.730 | 958.581 |
+
+    | AT-NN | 0.803 | 0.372 | 0.115 | 20.823 | 13.836 | 7.600 | 976.182 | 961.543
+    | 994.214 | 0.430 | 14.086 | 977.313 |
+
+
+    # Table 4
+
+
+    Models results of estimated parameters on test dataset (-10^-3).
+
+
+    | Model | MSE | | | MAE | | | NSE | | | MSE | MAE | NSE |
+
+    | | H_s | T_z | β | H_s | T_z | β | H_s | T_z | β | | | |
+
+    | CNN-REG-ORG | 5.039 | 3.940 | 1.620 | 55.412 | 50.962 | 28.445 | 848.066 | 605.270
+    | 920.216 | 3.533 | 44.940 | 791.184 |
+
+    | MLSTM-CNN-ORG | 4.887 | 4.118 | 1.556 | 55.246 | 52.170 | 28.297 | 852.675 |
+    587.368 | 923.360 | 3.520 | 45.238 | 787.801 |
+
+    | SP-NN-ORG | 5.262 | 4.663 | 1.903 | 58.078 | 53.857 | 28.713 | 841.354 | 532.818
+    | 906.277 | 3.943 | 46.883 | 760.150 |
+
+    | CNN-REG-ENH | 0.982 | 0.561 | 0.231 | 24.166 | 17.323 | 11.694 | 970.400 | 943.744
+    | 988.617 | 0.591 | 17.728 | 967.587 |
+
+    | MLSTM-CNN-ENH | 1.345 | 0.692 | 0.290 | 26.954 | 20.598 | 13.600 | 959.442 |
+    930.708 | 985.716 | 0.776 | 20.384 | 958.622 |
+
+    | SP-NN-ENH | 1.257 | 0.862 | 0.217 | 26.768 | 21.340 | 10.730 | 962.107 | 913.647
+    | 989.319 | 0.779 | 19.613 | 955.024 |
+
+    | AT-NN | 0.852 | 0.404 | 0.115 | 21.122 | 13.956 | 7.485 | 974.325 | 959.516
+    | 994.359 | 0.457 | 14.188 | 976.067 |
+
+
+    is necessary to focus the models on the most troublesome samples. This behavior
+    can be achieved through MSE because it makes small errors (correct predictions)
+    even smaller. At the same time, it increases the influence of errors in samples
+    that the model did not predict correctly (or was the furthest from the correct
+    prediction). On the other hand, we have also utilized MAE and NSE, which may be
+    considered reliable and realistic metrics for the real-life scenario of sea state
+    estimation. Tables 3 and 4 present model results for each estimated parameter
+    on validation and test set, respectively. As can be seen, columns MSE, MAE, and
+    NSE represent the average MSE, average MAE, and average NSE of the three estimated
+    sea parameters (showing the general score of the models over all three estimated
+    sea state parameters). The model
+
+
+    with the lowest MSE and MAE and the highest NSE was considered to be the best-performing
+    model. Since the dataset in the paper (Mak and Düz, 2019) was not publicly available,
+    we could not apply our method to it, and we had to re-implemented all of the models.
+    By comparing their loss values results on the validation set (MSE = 0.05), we
+    can conclude that produced results using the original models are improved. In
+    our study, instead of 6-DOF motions, only 3-DOF was used as input parameters.
+    Accordingly, we successfully demonstrated that original models achieve the same
+    or better results with reduced input data. This is also, besides estimation accuracy,
+    one of the advantages of here proposed approach.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_9_0.png)
+
+
+    **Fig. 13.** The radar charts show the absolute and squared errors of each sea
+    state parameter estimated using the AT-NN for every wave angle on the test dataset.
+
+
+    Next, we point out the fact that our proposed model AT-NN achieved the best results
+    among all tested models. In both Tables 3 and 4 the best results for each estimated
+    parameter are bolded. The best overall MSE on the test set was for the AT-NN 0.457
+    · 10⁻³. Its MAE was 14.188 · 10⁻³, and NSE 976.067 · 10⁻³. The runner-up model
+    was CNN-REG-ENH model with averaged MSE 0.591 · 10⁻³, averaged MAE 17.728 · 10⁻³,
+    and averaged NSE 967.587 · 10⁻³. Since the error was already low (<4 · 10⁻³) achieved
+    by existing models, the improvement made by the proposed model, AT-NN, was impactful.
+    In other words, the AT-NN improved the MSE by up to 13% over the best-performing
+    enhanced model and by up to 83% over the best-performing original model when considering
+    all sea state parameters. When considering MAE and NSE for all sea state parameters,
+    the AT-NN improved MAE by up to 13% and 62%, as well as NSE by up to 0.4% and
+    8% compared to best enhanced and original models, respectively.
+
+
+    Figs. 12 and 13 present the absolute and squared errors of the AT-NN, as the best-performing
+    model in our study, for each data point in the validation and test set. The radar
+    charts of the estimated parameters ($H_s$, $T_p$, and $β$) as a function of wave
+    angle have the potential to identify regions where the proposed model is the most
+    erroneous. However, after careful examination, we can conclude that on both sets
+    it is not possible to claim that the model has a region where it consistently
+    fails. The errors seem to be related to individual angles rather than neighboring
+    angles. This behavior confirms that the model is neither overfitted nor under
+    fitted. When the modal underperforms, it still achieves a remarkably good result.
+    In addition, to increase the trustworthiness of the proposed model, we have enabled
+    uncertainty estimation as an additional feature.
+
+
+    The process is quite simple in bolt and nuts: for the same input time-series signals,
+    we run predictions of the AT-NN 256 times, on every prediction dropping random
+    neurons. By dropping random neurons, we obtain a new version of the original NN
+    that gives predictions slightly different from other “sampled” networks. By calculating
+    the mean value $μ$ standard deviation $σ$ of all predictions, we can calculate
+    a Gaussian curve that estimates the uncertainty of the model decision. Accompanying
+    uncertainty estimation, we also have the actual prediction of the model generated
+    without dropping any of the neurons.
+
+
+    To increase explainability and provide additional information, we have extended
+    the output of Monte-Carlo dropout sampling by involving statistical measurement.
+    Although quite simple in its nature, statistical measurement involved counting
+    how many correct measurements of the test set fell into Gaussian curves estimated
+    by Monte-Carlo dropout sampling with different values of $σ$ ($μ$ was fixated).
+    The different values of $σ$ were calculated by multiplying sigma with $n ∈ [1,
+    2, 3, 4, 5]$, resulting in wider Gaussian curves. Thus, following one’s expectation,
+    wider Gaussian curves would also encompass a bigger number of correct measurements
+    of the sea state. Therefore for $n = 1$, the Gaussian curve with $σ_{scaled} =
+    1×σ$ contained 387 correct predictions while 896 predictions/samples were outside
+    the range. This leads us to 30% certainty in total (387/1283) for this quite narrow,
+    Gaussian curve. On the other hand, a much wider Gaussian curve with $σ_{scaled}
+    = 5 × σ$ contained 1246 predictions from 1283 samples in the test set which lead
+    us to the certainty of 97%. The validation dataset had similar performance related
+    to $σ$ values and the number of contained samples, so the integrity of the estimation
+    was not impaired. The graphical example of the final AT-NN output is given in
+    Fig. 14. It can be seen that the blue line represents the true value for the given
+    input signals, and the black line represents the prediction of the AT-NN without
+    dropping any neurons. In contrast, Gaussian curves represent different “intervals”/“areas”
+    of probability that correct measurements lie within. We believe that this novel
+    process of estimating and interpreting the NN’s output raises the trustworthiness
+    of the proposed model. Also, besides having only one number, as a result, the
+    user of the proposed model, if having doubts in model estimation, now has confidence
+    levels
+
+
+    # ### 3.2. Uncertainty estimation
+
+
+    As mentioned in Section 2.3.4, adding dropout layers to the “head” part of the
+    AT-NN model enabled the utilization of Monte-Carlo sampling. By utilizing Monte-Carlo
+    dropout sampling, we simulated the Gaussian process and, therefore, obtained model
+    prediction uncertainty for each estimated sea state parameters (Gal and Ghahramani,
+    2016).'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_10_0.png)
+
+
+    Fig. 14. Uncertainty estimation of NN outputs H_s, T_z and β based od Monte-Carlo
+    dropout.
+
+
+    provided by different Gaussian curves. We believe that uncertainty estimation
+    tailored in the previously described way can be crucial information in various
+    practical scenarios.
+
+
+    # 3.3. Discussion
+
+
+    In our study, we have re-implemented the models proposed by Mak and Düz (2019)
+    and enhanced them by scaling their number of filters resulting in an enhanced
+    version of the models. As discussed in the end Section 2.4, the motivation behind
+    enhancements and each model mechanism are well justified. The same goes for the
+    novel model proposed in this research. The experiments have shown that the enhanced
+    version of the original models performs better than the original models. The enhancement
+    is evident in the box plot diagrams of the MSE and MAE results on the test set
+    in Fig. 15. The figure also shows that the proposed model AT-NN performed better
+    than the original and enhanced models, becoming a new state-of-the-art model for
+    estimating sea state parameters from ship motions responses. The excellence of
+    the proposed model based on the attention mechanism is confirmed
+
+
+    even by the NSE metric of NSE(AT − NN) = 976.067 · 10⁻³ on the test set (Table
+    4). If we compare the results on the test set between the best performing original
+    model (which was CNN-REG-ORG with MSE(MLSTM − CNN − ORG) = 3.533 · 10⁻³) to the
+    proposed model (MSE(AT − NN) = 0.457 · 10⁻³), the error is reduced by 3.076 ·
+    10⁻³ which when put in a ratio is near ≈ 7.73 times lower error rate. Also, upon
+    analyzing the radar diagrams presented in Figs. 12 and 13, it was determined that
+    there is no specific range of angles where the suggested model consistently underperforms
+    in estimating the sea state parameters. Furthermore, the introduced uncertainty
+    estimation of the model''s sea state parameters prediction raises the trustworthiness
+    of the proposed model to an even higher level, which is essential for developing
+    applications that utilize machine learning models. The next research step would
+    be testing the proposed method on various real-life datasets. We believe that
+    similar results could be achieved with adequate pre-processing of the input data,
+    but it has to be further investigated for different sea state measurements.
+
+
+    Finally, let us conclude our study by clearly pointing out the achievements and
+    novelty introduced in this manuscript, summarized as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/4734fbdc67cafcec90fddf3b05be1d58_11_0.png)
+
+
+    (a)
+
+
+    ![](img/4734fbdc67cafcec90fddf3b05be1d58_11_1.png)
+
+
+    (b)
+
+
+    Fig. 15. Box-plot diagrams on the test set with two measures: (a) MSE and (b)
+    MAE.
+
+
+    +   - We have retrained the existing state-of-the-art models proposed in Mak and
+    Düz (2019) and enhanced them by increasing their width. The enhanced models performed
+    better than the originally proposed models.
+
+    +   - We have proven that it is possible to obtain similar or better results by
+    only 3-DOF ship motion responses instead of using 6-DOF ship motion responses
+    (sea state parameters'' estimation improved by up to 94% in terms of MSE, by up
+    to 74% in terms of MAE, and by up to 80% in terms of NSE when considering all
+    tested methods and sea parameters). Compared to the best-performing original models,
+    the improvement was up to 83%, 62%, and 8% in terms of MSE, MAE, and NSE, respectively.
+
+    +   - As guidelines for model training, we have dug into data augmentation methods
+    based on shuffling input signal slices. The investigation concludes that all tested
+    models achieve better results with shuffled input signals'' slices.
+
+    +   - We have proposed a novel AT-NN model that achieved the best results among
+    all tested models for each estimated sea state parameter. To the best of our knowledge,
+    this is the first time the AT-NN to be implemented for sea state estimation.
+
+
+    +   - Furthermore, in this manuscript, we have proposed a novel way of interpreting
+    the uncertainty estimation of NN outputs based on the Monte-Carlo dropout method.
+    The way we interpret the uncertainty of the model''s predictions would raise the
+    model''s trustworthiness even if its initial prediction achieved a negligible
+    error rate. Also, this is the first time for the uncertainty estimation of the
+    DL models in the sea state estimation, according to the extensive literature review.
+
+
+    # 4. Conclusion
+
+
+    The paper presents a novel attention-based DL model for estimating important sea
+    state characteristics. By evaluating the performance for each sea state parameter,
+    we confirm that the AT-NN model is fine-tuned and suitable for estimating key
+    sea state parameters. The improvement made by the proposed AT-NN model proved
+    significant as MSE was reduced by up to 83%, MAE by up to 62%, and NSE by up to
+    8% compared to the best versions of the original, formerly proposed state-of-the-art
+    models considering all estimated sea state parameters. When compared to best versions
+    of modified models, MSE was reduced by up to 13%, MAE by up to 12%, and NSE by
+    up to 0.4%. Despite using 3-DOF input motion data, the proposed model achieved
+    the best results among all tested, original and enhanced models for each estimated
+    sea state parameter. As one of the next steps in future research, the utilization
+    of 6-DOF ship motion responses could potentially improve the precision of parameter
+    estimation. Additionally, in practical applications, entire wave directional spectrum
+    estimation is of great importance. Therefore, future work directions may also
+    include information about wave directionality in numerical simulations that can
+    extend the application of the DL model to short-crested waves and combined wind
+    and swell sea spectrums.
+
+
+    # CRediT authorship contribution statement
+
+
+    Denis Selimović: Conceptualization, Methodology, Software, Validation, Investigation,
+    Data curation, Writing – original draft, Visualization. Franko Hržić: Conceptualization,
+    Methodology, Software, Validation, Investigation, Data curation, Writing – original
+    draft, Visualization. Jasna Prpić-Oršić: Conceptualization, Methodology, Validation,
+    Formal analysis, Resources, Data curation, Writing – review & editing, Supervision,
+    Project administration, Funding acquisition. Jonatan Lerga: Conceptualization,
+    Methodology, Validation, Formal Analysis, Investigation, Resources, Writing –
+    original draft, Writing – review & editing, Supervision, Project administration,
+    Funding acquisition.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    Data will be made available on request.
+
+
+    # Funding
+
+
+    This work was fully supported by the Croatian Science Foundation under the project
+    IP-2018-01-3739, EU Horizon 2020 project INNO2MARE (“Strengthening the capacity
+    for excellence of Slovenian and Croatian innovation ecosystems to support the
+    digital and green transitions of maritime regions”) under the number 101087348,
+    IRI2 project “ABsistemDCiCloud” (KK.01.2.1.02.0179), and University of Rijeka
+    projects uniri-tehnic-18-17 and uniri-tehnic-18-15.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# References
+
+
+    Agarap, A.F., 2018. Deep learning using rectified linear units (ReLU). CoRR abs/1803.08375
+    URL http://arxiv.org/abs/1803.08375, arXiv:1803.08375.
+
+
+    Baldi, P., Sadowski, P.J., 2013. Understanding dropout. In: Burges, C., Bottou,
+    L., Welling, M., Ghahramani, Z., Weinberger, K. (Eds.), In: Advances in Neural
+    Information Processing Systems, vol. 26, Curran Associates, Inc., URL https://proceedings.neurips.cc/paper/2013/file/71f6278d1a0f599e06ad9bf1ba03cb0-Paper.pdf.
+
+
+    Bochkowsky, A., Wang, C., Liao, H.M., 2020. YOLOv4: Optimal speed and accuracy
+    of object detection. CoRR abs/2004.10934 URL https://arxiv.org/abs/2004.10934,
+    arXiv:2004.10934.
+
+
+    Bottou, L., 2012. Stochastic gradient descent tricks. In: Montavon, G., Orr, G.B.,
+    Müller, K.-R. (Eds.), Neural Networks: Tricks of the Trade: Second Edition. Springer
+    Berlin Heidelberg, Berlin, Heidelberg, pp. 421–436. http://dx.doi.org/10.1007/978-3-642-35289-8_25.
+
+
+    Chai, T., Draxler, R.R., 2014. Root mean square error (RMSE) or mean absolute
+    error (MAE)? – Arguments against avoiding RMSE in the literature. Geosci. Model
+    Dev. 7 (3), 1247–1250. http://dx.doi.org/10.5194/gmd-7-1247-2014, URL https://gmd.copernicus.org/articles/7/1247/2014/.
+
+
+    Cheng, X., Li, G., Ellefsen, A., Chen, S., Hildre, H., Zhang, H., 2020a. A novel
+    densely connected convolutional neural network for sea state estimation using
+    ship motion data. IEEE Trans. Instrum. Meas. PP, 1. http://dx.doi.org/10.1109/TIM.2020.2967115.
+
+
+    Cheng, X., Li, G., Skulstad, R., Chen, S., Hildre, H., Zhang, H., 2019. Modeling
+    and Analysis of Motion Data from Dynamically Positioned Vessels for Sea State
+    Estimation. pp. 6644–6650. http://dx.doi.org/10.1109/TRA.2019.8794069.
+
+
+    Cheng, X., Li, G., Skulstad, R., Zhang, H., Chen, S., 2020b. SpectralSeaNet: Spectrogram
+    and convolutional network-based sea state estimation. In: IECON 2020 the 46th
+    Annual Conference of the IEEE Industrial Electronics Society. pp. 5069–5074. http://dx.doi.org/10.1109/IECON43393.2020.9254890.
+
+
+    Denis, M., Pierson, W., 1953. On the Motions of Ships in Confused Seas. Defense
+    Technical Information Center, URL https://books.google.hr/books?id=3816a0AEACAAJ.
+
+
+    DNV-GL, 2018. Class guideline: Wave loads. DNVGL-CG-0130 84, Edition January.
+
+
+    Duz, B., Mak, B., Hageman, R., Grasso, N., 2019. Real time estimation of local
+    wave characteristics from ship motions using artificial neural networks.
+
+
+    Faltinsen, O.M., 1990. Sea Loads on Ships and Offshore Structures. Cambridge University
+    Press, The Edinburgh Building, Cambridge CB2 2RU, UK.
+
+
+    Gal, Y., Ghahramani, Z., 2016. Dropout as a Bayesian approximation: Representing
+    model uncertainty in deep learning. In: Balcan, M.F., Weinberger, K.Q. (Eds.),
+    Proceedings of the 33rd International Conference on Machine Learning. In: Proceedings
+    of Machine Learning Research, vol. 48, PMLR, New York, New York, USA, pp. 1050–1059,
+    URL https://proceedings.mlr.press/v48/gal16.html.
+
+
+    Galassi, A., Lippi, M., Torroni, P., 2021. Attention in natural language processing.
+    IEEE Trans. Neural Netw. Learn. Syst. 32 (10), 4291–4308. http://dx.doi.org/10.1109/TNNLS.2020.3019893.
+
+
+    Garbin, C., Zhu, X., Marques, O., 2020. Dropout vs. batch normalization: An empirical
+    study of their impact to deep learning. Multimedia Tools Appl. 79 (19), 12777–12815.
+    http://dx.doi.org/10.1007/s11042-019-08453-9.
+
+
+    Hinoztroza, M., Guedes Soares, C., 2016. Parametric estimation of the directional
+    wave spectrum from ship motions. Int. J. Marit. Eng. 158, A121–A130. http://dx.doi.org/10.3940/rina.2016.a2.356.
+
+
+    Hochreiter, S., Schmidhuber, J., 1997. Long short-term memory. Neural Comput.
+    9 (8), 1735–1780. http://dx.doi.org/10.1162/neco.1997.9.8.1735.
+
+
+    Hu, J., Shen, L., Sun, G., 2018. Squeeze-and-excitation networks. In: Proceedings
+    of the IEEE Conference on Computer Vision and Pattern Recognition. CVPR.
+
+
+    IMO, 2007. Revised guidance to the master for avoiding dangerous situations in
+    adverse weather and sea conditions.
+
+
+    ITTC (Ed.), 1969. Proceedings of the 12th International Towing Tank Conference,
+    Vol. 1. ITTC, URL https://www.ittc.info/media/2745/index.pdf.
+
+
+    Jaderberg, M., Simonyan, K., Zisserman, A., kavukcuoglu, k., 2015. Spatial transformer
+    networks. In: Cortes, C., Lawrence, N., Lee, D., Sugiyama, M., Garnett, R. (Eds.),
+    In: Advances in Neural Information Processing Systems, vol. 28, Curran Associates,
+    Inc., URL https://proceedings.neurips.cc/paper/2015/file/33ceb07bf4eeb3da587e268d663aba1a-Paper.pdf.
+
+
+    James, W., Stein, C., 1992. Estimation with quadratic loss. In: Kotz, S., Johnson,
+    N.L. (Eds.), Breakthroughs in Statistics: Foundations and Basic Theory. Springer
+    New York, New York, NY, pp. 443–460. http://dx.doi.org/10.1007/978-1-4612-0919-5_30.
+
+
+    Kingma, D.P., Ba, J., 2014. Adam: A method for stochastic optimization. http://dx.doi.org/10.48550/ARXIV.1412.6980,
+    URL https://arxiv.org/abs/1412.6980.
+
+
+    Mak, B., Düz, B., 2019. Ship as a wave buoy: Estimating relative wave direction
+    from in-service ship motion measurements using machine learning. In: International
+    Conference on Offshore Mechanics and Arctic Engineering, Volume 9: Rodney Eatock
+    Taylor Honoring Symposium on Marine and Offshore Hydrodynamics; Takeshi Kinoshita
+    Honoring Symposium on Offshore Technology, http://dx.doi.org/10.1115/OMAE2019-96201.
+
+
+    Mittendorf, M., Nielsen, U., Bingham, H., 2022. The prediction of sea state parameters
+    by deep learning techniques using ship motion data.
+
+
+    Montazeri, N., Nielsen, U.D., Juncher Jensen, J., 2016. Estimation of wind sea
+    and swell using shipboard measurements – A refined parametric modelling approach.
+    Appl. Ocean Res. 54, 73–86. http://dx.doi.org/10.1016/j.apor.2015.11.004, URL
+    https://www.sciencedirect.com/science/article/pii/S0141118715001388.
+
+
+    Mukkamala, M.C., Hein, M., 2017. Variants of RMSProp and adagrad with logarithmic
+    regret bounds. In: Precup, D., Teh, Y.W. (Eds.), Proceedings of the 34th International
+    Conference on Machine Learning. In: Proceedings of Machine Learning Research,
+    vol. 70, PMLR, pp. 2545–2553, URL https://proceedings.mlr.press/v70/mukkamala17a.html.
+
+
+    Nash, J., Sutcliffe, J., 1970. River flow forecasting through conceptual models
+    part I — A discussion of principles. J. Hydrol. 10 (3), 282–290. http://dx.doi.org/10.1016/0022-1694(70)90255-6,
+    URL https://www.sciencedirect.com/science/article/pii/0022169470902556.
+
+
+    Nielsen, U.D., 2006. Estimations of on-site directional wave spectra from measured
+    ship responses. Mar. Struct. 19 (1), 33–69. http://dx.doi.org/10.1016/j.marstruc.2006.05.001,
+    URL https://www.sciencedirect.com/science/article/pii/S095183390600529.
+
+
+    Nielsen, U.D., 2017. A concise account of techniques available for shipboard sea
+    state estimation. Ocean Eng. 129, 352–362. http://dx.doi.org/10.1016/j.oceaneng.2016.11.035,
+    URL https://www.sciencedirect.com/science/article/pii/S0029801816305388.
+
+
+    Nielsen, U., Bjerregård, M., Galeazzi, R., Fossen, T., 2015. New concepts for
+    shipboard sea state estimation. http://dx.doi.org/10.23919/OCEANS.2015.7404386.
+
+
+    Nielsen, U.D., Galeazzi, R., Brodtkorb, A.H., 2016. Evaluation of shipboard wave
+    estimation techniques through model-scale experiments. In: OCEANS 2016 - Shanghai.
+    pp. 1–8. http://dx.doi.org/10.1109/OCEANSAP.2016.7485701.
+
+
+    Pascoal, R., Guedes Soares, C., 2009. Kalman filtering of vessel motions for ocean
+    wave directional spectrum estimation. Ocean Eng. 36 (6), 477–488. http://dx.doi.org/10.1016/j.oceaneng.2009.01.013,
+    URL https://www.sciencedirect.com/science/article/pii/S0029801809000183.
+
+
+    Pascoal, R., Perera, L., Guedes Soares, C., 2017. Estimation of directional sea
+    spectra from ship motions in sea trials. Ocean Eng. 132, 126–137. http://dx.doi.org/10.1016/j.oceaneng.2017.01.020,
+    URL https://www.sciencedirect.com/science/article/pii/S0029801817300288.
+
+
+    Russakovsky, O., Deng, J., Su, H., Krause, J., Satheesh, S., Ma, S., Huang, Z.,
+    Karpathy, A., Khosla, A., Bernstein, M., Berg, A.C., Fei-Fei, L., 2015. ImageNet
+    large scale visual recognition challenge. Int. J. Comput. Vis. (IJCV) 115 (3),
+    211–252. http://dx.doi.org/10.1007/s11263-015-0816-y.
+
+
+    Santurkar, S., Tsipras, D., Ilyas, A., Madry, A., 2018. How does batch normalization
+    help optimization? In: Bengio, S., Wallach, H., Larochelle, H., Grauman, K., Cesa-Bianchi,
+    N., Garnett, R. (Eds.), In: Advances in Neural Information Processing Systems,
+    vol. 31, Curran Associates, Inc., URL https://proceedings.neurips.cc/paper/2018/file/905056c1ac1ad141560467e0a99f1ec-Paper.pdf.
+
+
+    Scholz, T., Mak, B., 2020. Ship as a wave buoy: Estimating full directional wave
+    spectra from in-service ship motion measurements using deep learning. http://dx.doi.org/10.1115/OMAE2020-18783.
+
+
+    Selimović, D., Hrizić, F., Prpić-Oršić, J., Lerga, J., 2022. Sea state estimation
+    from ship motion responses using deep learning. URL https://github.com/fhrzic/DselimovicProject.git.
+
+
+    Selimović, D., Lerga, J., Prpić-Oršić, J., Kenji, S., 2020. Improving the performance
+    of dynamic ship positioning systems: A review of filtering and estimation techniques.
+    J. Mar. Sci. Eng. 8 (4), http://dx.doi.org/10.3390/jmse8040234, URL https://www.mdpi.com/2077-1312/8/4/234.
+
+
+    Tannuri, E.A., Sparano, J.V., Simos, A.N., Da Cruz, J.J., 2003. Estimating directional
+    wave spectrum based on stationary ship motion measurements. Appl. Ocean Res. 25
+    (5), 243–261. http://dx.doi.org/10.1016/j.apor.2004.01.003, URL https://www.sciencedirect.com/science/article/pii/S014111870400070.
+
+
+    Tu, F., Ge, S.S., Choo, Y.S., Hang, C.C., 2018. Sea state identification based
+    on vessel motion response learning via multi-layer classifiers. Ocean Eng. 147,
+    318–332. http://dx.doi.org/10.1016/j.oceaneng.2017.08.047, URL https://www.sciencedirect.com/science/article/pii/S0029801817305188.
+
+
+    Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser,
+    L.U., Polosukhin, I., 2017. Attention is all you need. In: Guyon, I., Luxburg,
+    U.V., Bengio, S., Wallach, H., Fergus, R., Vishwanathan, S., Garnett, R. (Eds.),
+    In: Advances in Neural Information Processing Systems, vol. 30, Curran Associates,
+    Inc., URL https://proceedings.neurips.cc/paper/2017/file/3f5ee243547de91fb053c1c4a845a-Paper.pdf.
+
+
+    Woo, S., Park, J., Lee, J.Y., Kweon, I.S., 2018. CBAM: Convolutional block attention
+    module. In: Proceedings of the European Conference on Computer Vision. ECCV.
+
+
+    Yu, Y., Si, X., Hu, C., Zhang, J., 2019. A review of recurrent neural networks:
+    LSTM cells and network architectures. Neural Comput. 31 (7), 1235–1270. http://dx.doi.org/10.1162/neco_a.01199.
+
+
+    Zhang, H., Goodfellow, I., Metaxas, D., Odena, A., 2019. Self-attention generative
+    adversarial networks. In: Chaudhuri, K., Salakhutdinov, R. (Eds.), Proceedings
+    of the 36th International Conference on Machine Learning. In: Proceedings of Machine
+    Learning Research, vol. 97, PMLR, pp. 7354–7363, URL https://proceedings.mlr.press/v97/zhang19d.html.
+
+
+    Zou, F., Shen, L., Jie, Z., Zhang, W., Liu, W., 2019. A sufficient condition for
+    convergences of adam and rmsprop. In: Proceedings of the IEEE/CVF Conference on
+    Computer Vision and Pattern Recognition. CVPR.'
+  merge: -1
+  img_proc: true
