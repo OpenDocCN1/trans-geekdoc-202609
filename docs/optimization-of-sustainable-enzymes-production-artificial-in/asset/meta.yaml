@@ -1,0 +1,294 @@
+name: Optimization of Sustainable Enzymes Production ： Artificial Intelligence and
+  Machine Learning Techniques
+slug: optimization-of-sustainable-enzymes-production-artificial-in
+name_cn: '
+
+  人工智能与机器学习技术在可持续酶生产中的优化'
+toc:
+- - '##'
+  - 1 Introduction
+- - '##'
+  - 1.1 Introduction
+- - '##'
+  - 1.2 Structure
+- - '##'
+  - 1.3 Enzyme Classification
+- - '###'
+  - 1.4.1 Enzymes in Food Processing
+- - '###'
+  - 1.4.2 Enzymes in Cosmetics
+- - '##'
+  - 1.5 Commercially Important Enzymes
+- - '##'
+  - 1.6 Typical Enzyme Production Process
+- - '###'
+  - 1.6.1 工业酶
+- - '###'
+  - 1.6.2 培养基配方与制备
+- - '###'
+  - 1.6.3 培养基灭菌
+- - '###'
+  - 1.6.4 酶的纯化
+- - '##'
+  - 1.7 世界市场
+- - '##'
+  - 1.8 总结
+- - '##'
+  - 思考题
+- - '##'
+  - 3 发酵工艺优化：对工业酶生产的影响
+- - '##'
+  - 3.1 Introduction
+- - '###'
+  - 3.1.1 On the Production of Enzymes
+- - '###'
+  - 3.1.2 酶生产中的发酵技术
+- - '####'
+  - 3.1.2.1 浸液发酵
+- - '####'
+  - 3.1.2.2 固体发酵
+- - '###'
+  - 3.2 发酵过程工程中的操作问题
+- - '###'
+  - 3.2.1 发酵过程控制特点
+- - '###'
+  - 3.3 影响发酵过程的因素
+- - '####'
+  - 3.3.1 媒体组成
+- - '###'
+  - 3.3.2 pH
+- - '###'
+  - 3.3.3 Temperature
+- - '###'
+  - 3.3.4 Mechanical Forces and Aeration
+- - '##'
+  - 3.4 Optimization of Fermentation Process Technology
+- - '###'
+  - 3.4.1 文献检索
+- - '###'
+  - 3.4.2 营养替换
+- - '###'
+  - 3.4.3 生物学模拟
+- - '###'
+  - 3.4.4 一元素一因子法
+- - '###'
+  - 3.4.5 因子设计
+- - '###'
+  - 3.4.10 Fuzzy Logic
+- - '###'
+  - 3.4.11 Genetic Algorithm
+- - '##'
+  - 3.5 Conclusions
+- - '##'
+  - 4 Reforming Process Optimization of Enzyme Production Using Artificial Intelligence
+    and Machine Learning
+- - '##'
+  - 4.1 Introduction
+- - '##'
+  - 4.2 Process of Enzyme Production
+- - '##'
+  - 2 发酵菌株的发育与接种菌种
+- - '##'
+  - 3 发酵过程
+- - '##'
+  - 4 酶的生产
+- - '##'
+  - 5 酶的分离
+- - '##'
+  - 6 酶的纯化
+- - '##'
+  - 7 酶的包装
+- - '###'
+  - 4.2.1 酶生产工艺优化的必要性
+- - '###'
+  - 4.4.1 人工神经网络（ANN）
+- - '###'
+  - 4.4.2 遗传算法（GA）
+- - '##'
+  - 4.5 人工智能和机器学习的优势
+- - '#'
+  - 基于人工智能的优化模型在预测结果方面优于基于统计回归的优化技术 (`Haider et al. 2008`; `Nagata and Chu 2003`).
+    其神经网络模型的高性能归功于其处理非线性关系的能力 (`Lek et al. 1996`; `Somers and Casal 2009`). 人工神经网络
+    (ANN) 在输入和输出之间提供了非线性映射 (`Masoumi et al. 2011`). 多种微生物系统的酶产量表现出可诱导表达的模式 (`Sahu
+    et al. 2019`)，其本质上是非线性的。另一种流行的统计优化技术基于对响应的线性二次相关性假设 (`[Sahu et al. 2019](#ch4.xhtml#ref4_4.4
+- - '#'
+  - 5 Scale-Up Models for Chitinase Production, Enzyme Kinetics, and Optimization
+- - '##'
+  - 5.1 Introduction
+- - '##'
+  - 5.2 响应面方法（Response Surface Methodology）
+- - '##'
+  - 5.3 Plackett–Burman 设计
+- - '##'
+  - 5.8 Genetic Algorithm
+- - '##'
+  - 5.9 Particle Swarm Optimization
+- - '##'
+  - 5.10 Enhancement of Production – Significant Studies
+- - '##'
+  - 5.11 使用先进工具进行过程优化的优势
+- - '##'
+  - 5.12 ANN 在发酵放大中的作用
+- - '##'
+  - 5.13 结论
+- - '##'
+  - References
+- - '#'
+  - 6 Genetic Algorithm for Optimization of Fermentation Processes of Various Enzyme
+    Productions
+- - '##'
+  - 6.1 Introduction
+- - '###'
+  - 6.2.1 Fermentation Methods
+- - '####'
+  - 6.2.1.1 Solid-State Fermentation
+- - '####'
+  - 6.2.1.2 Submerged Fermentation
+- - '###'
+  - 6.2.2 Fermentation Parameters
+- - '##'
+  - 6.3 优化策略以提高酶产量
+- - '###'
+  - 6.3.1 基质优化方法
+- - '##'
+  - 6.4 遗传算法作为发酵工艺优化技术
+- - '###'
+  - 6.4.1 History of GA
+- - '###'
+  - 6.4.2 遗传算法在优化发酵过程中的应用
+- - '##'
+  - 6.5 优化技术中的问题与瓶颈
+- - '#'
+  - 7 使用人工神经网络优化各类酶的工艺参数
+- - '##'
+  - 7.1 入 介
+- - '##'
+  - 7.2 解决优化问题的策略
+- - '##'
+  - 7.3 Description and Architecture of Artificial Neural Networks
+- - '###'
+  - 7.3.1 ANN 作为优化器
+- - '###'
+  - 7.3.2 ANN 在酶类过程参数优化中的示例
+- - '##'
+  - 7.4 描述与应用响应面方法用于工艺优化
+- - '##'
+  - 7.5 ANN 与 RSM 方法的比较
+- - '##'
+  - 7.6 Conclusions
+- - '##'
+  - References
+- - '#'
+  - '8 Advanced Evolutionary Differential Evolution and Central Composite Design:
+    Comparative Study for Process Optimization of Chitinase Production'
+- - '##'
+  - 8.1 Introduction
+- - '##'
+  - 8.2 Methods and Materials
+- - '###'
+  - 8.2.1 Microorganism and Growth Condition
+- - '###'
+  - 8.2.2 Substrate Preparation (Colloidal Chitin)
+- - '###'
+  - 8.2.3 Production of Chitinase
+- - '###'
+  - 8.2.4 Chitinase Enzyme Activity Assay
+- - '###'
+  - 8.2.5 Statistical Optimization of Medium Components
+- - '####'
+  - 8.2.5.1 Plackett–Burman Design
+- - '####'
+  - 8.2.5.2 The Central Composite Design and the Response Surface Methodology
+- - '###'
+  - '8.2.6 Machine Learning Approach: Differential Evolution'
+- - '####'
+  - 8.2.6.1 Differential Evolution in the Context
+- - '####'
+  - 8.2.6.2. The Fundamentals of DE Algorithms
+- - '#####'
+  - 8.2.6.2.1 Initialization
+- - '#####'
+  - 8.2.6.2.2 Mutation
+- - '#####'
+  - 8.2.6.2.3 Crossover
+- - '#####'
+  - 8.2.6.2.4 选择
+- - '###'
+  - 8.2.7 验证实验
+- - '###'
+  - 8.3 结果与讨论
+- - '####'
+  - 8.3.1 Plackett–Burman 设计
+- - '###'
+  - 8.3.2 Central Composite Design
+- - '###'
+  - 8.3.3 Differential Evolution (DE)
+- - '###'
+  - 8.3.4 实验模型验证
+- - '##'
+  - 8.4 结论
+- - '##'
+  - 致谢
+- - '##'
+  - 参考文献
+- - '#'
+  - 9 Artificial Bee Colony for Optimization of Process Parameters for Various Enzyme
+    Productions
+- - '##'
+  - 9.1 Introduction
+- - '##'
+  - 9.2 ABC Algorithm Motivations
+- - '##'
+  - 9.4 蜜蜂觅食行为
+- - '##'
+  - 9.5 ABC 算法中的迭代步骤
+- - '###'
+  - 9.5.1 群体初始化
+- - '###'
+  - 9.5.2 观察者蜂
+- - '###'
+  - 9.5.3 侦查蜂阶段
+- - '###'
+  - 9.5.4 终止
+- - '##'
+  - 9.6 ABC 在过程优化方法论中
+- - '##'
+  - 9.7 新型改进型 ABC（MABC）
+- - '##'
+  - 9.8 不同参数在 ABC 用于酶优化中的影响
+- - '##'
+  - 9.9 ABC 用于优化的控制参数
+- - '##'
+  - 9.10 ABC 算法的修改
+- - '##'
+  - 9.11 ABC 摘要
+- - '##'
+  - 9.12 ABC 的应用
+- - '##'
+  - 9.13 Conclusions and Future Prospects
+- - '#'
+  - 索引
+- - '##'
+  - A
+- - '##'
+  - B
+- - '##'
+  - C
+- - '##'
+  - D
+- - '##'
+  - R
+- - '##'
+  - S
+- - '##'
+  - T
+- - '##'
+  - U
+- - '##'
+  - V
+- - '##'
+  - W
+- - '##'
+  - X
+- - '##'
+  - Y

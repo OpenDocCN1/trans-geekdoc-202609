@@ -1,0 +1,36 @@
+
+-   [欧哈, B.K., 斯里, P.K., 和 斯里瓦斯塔瓦, N.](#ch2.xhtml#R_ref2_116) 2019. “酶在动物饲料工业中的作用。” 在《酶在食品生物技术中的应用》, 由 Mohammed Kuddus 编辑, 93–109. Academic Press.
+-   [奥苏吉, A.C., 埃, S.O.O., 奥西, E.E., 和 乔拉卡, F.C.](#ch2.xhtml#R_ref2_117) 2014. “部分从大蒜中提纯的过氧化物酶对工业重要染料的生物漂白。” Scientific World Journal 2014: 183163.
+-   [欧塔伊, S.](#ch2.xhtml#R_ref2_118) 2020. “酶在食品工业中的近期应用。” Journal of Current Research on Engineering, Science and Technology 6(1): 17–30.
+-   [潘达,T., 和 戈里什南卡尔,B.S.](#ch2.xhtml#R_ref2_119) 2005. “酯化酶的生产与应用。” Applied Microbiology and Biotechnology 67: 160–169.
+-   [潘迪, A., 尼加姆, P., 索科尔, C.R., 索科尔, V.T., 斯辛, D., 和 摩罕, R.](#ch2.xhtml#R_ref2_120) 2000. “微生物淀粉酶的进展。” Biotechnology and Applied Biochemistry 31(2): 135–152.
+-   [潘迪, D., 帕特尔, S.K., 斯辛, R., 康普, P., 拉尔, V., 和 乔, D.](#ch2.xhtml#R_ref2_121) 2019. “溶剂耐受的 *Bacillus* sp. APB-6 的酰胺酶的分离与表征。” Indian Journal of Microbiology 59(4): 500–507.
+-   [潘迪, K., 斯辛, B., 潘迪, A.K., 巴德丁丁, I.J., 潘迪, S., 米沙, V.K., 和 詹, P.A.](#ch2.xhtml#R_ref2_122) 2017. “微生物酶在工业废水处理中的应用。” International Journal of Current Microbiology and Applied Sciences 6(8): 1243–1254.
+-   [潘迪, A., 拉林根南, S., 拉, J.R., 卡米, N.R., 和 古特曼, M.K.](#ch2.xhtml#R_ref2_123) 2016. “廉价的 α-淀粉酶的生产与在皮革加工中的纤维分离应用。” RSC Advances 6(39): 33170–33176.
+-   [帕特尔, A., 斯里尼, R.R., 和 潘迪, A.](#ch2.xhtml#R_ref2_124) 2016. “应用于食品工业的新型酶工艺。” Current Opinion in Food Science 7: 64–72.
+-   [帕特尔, A.K., 斯里尼, R.R., 和 潘迪, A.](#ch2.xhtml#R_ref2_125) 2017. “微生物酶的生产、纯化与应用。” 在《微生物酶的生物技术》中, 由 Goutam Brahmachari, Arnold Demain, and Jose Adrio 编辑, 13–41. Academic Press.
+-   [彭, Y.H., 和 施, Y.H.](#ch2.xhtml#R_ref2_126) 2013. “微生物降解某些卤代化合物: 生化和分子特征。” 在《有害和特殊产品的生物降解》中, 由 R. Chamy, and F. Rosenkranz 编辑, 51–69.
+-   [佩利阿托, M., 费罗, F., 焦安蒂, M., 莫索托, R., 和 英齐尼, R.](#ch2.xhtml#R_ref2_127) 2011. “蛋白酶对酸性染料对羊毛染色的影响。” Open Chemistry 9: 157–164.
+-   [佩亚特, L.A., 彭法南塔基斯, N., 乔治萨基, K., 乌阿扎尼, J., 杰尼尔, O., 特鲁加科斯, I.P., 和 福亚利基斯, N.](#ch2.xhtml#R_ref2_128) 2019. “陆地微生物: 具有皮肤保护应用的生物活性分子的细胞工厂。” Molecules 24(9): 1836.
+-   [法姆, L.T.M., 金, S.J., 和 金, Y.H.](#ch2.xhtml#R_ref2_129) 2016. “通过在长距离电子传递路径中嵌入电子中继提高木质纤维素降解酶的催化性能。” Biotechnology for Biofuels 9(1): 1–10.
+-   [波尔森, P.B., 和 克劳斯·布赫尔兹, H.](#ch2.xhtml#R_ref2_130) 2003. “酶学史与食品生产的重点。” 在《食品酶学手册》中, 由 J.R. Whitaker, A.G.J. Voragen, and D.W.S. Wong 编辑, Marcel Dekker, New York.
+-   [普里, M.](#ch2.xhtml#R_ref2_131) 2012. “关于 naringinase 的最新研究: 结构与生物技术方面。” Applied Microbiology and Biotechnology 93: 49–60.
+-   [赖, S.K., 罗, J.K., 和 姜, A.K.](#ch2.xhtml#R_ref2_132) 2010. “表征一种耐洗涤剂的碱性蛋白酶, 来自新型耐热菌株 *Paenibacillus tezpurensis* sp. nov. AS-S24-II。” Applied Microbiology and Biotechnology 85(5): 1437–1450.
+-   [拉贾库马尔, R., 杰亚普里扬, K.R., 和 仁格萨, R.](#ch2.xhtml#R_ref2_133) 2011. “从 *Bacillus megaterium* RRM2 中分离并表征一种蛋白酶, 用于洗涤剂和脱毛工业。” Journal of Basic Microbiology 51: 614–624.
+-   [拉托雷, D.S., 赛德, M., 和 斯辛, S.P.](#ch2.xhtml#R_ref2_134) 2021. “海洋梭形菌: 微生物技术的新前沿——生物修复。” 在《微生物技术的最新进展》中, 由 Chandrama Prakash Upadhyaya, Joginder Singh, Ram Prasad, and Vivek Kumar 编辑, 425–449. Springer, Singapore.
+-   [拉维德兰, S., 帕尔梅斯瓦兰, B., 乌姆亚, S.B., 阿布拉罕, A., 马修, A.K., 马德瓦恩, A., 里贝尔, S., 和 潘迪, A.](#ch2.xhtml#R_ref2_135) 2018. “微生物酶在食品工业中的应用。” Food Technology and Biotechnology 56(1): 16–30.
+-   [罗宾逊, W.G., 和 霍克, R.H.](#ch2.xhtml#R_ref2_136) 1964. “里西奈酰胺酶 I. 反应产物和底物特异性。” The Journal of Biological Chemistry 239: 4257–4262.
+-   [罗兹尔, J.D., 和 波莫里乌斯, A.S.](#ch2.xhtml#R_ref2_137) 2002. Enzyme Catalysis in Organic Synthesis, 2nd ed., edited by K. Drauz, and H. Waldmann, vol. II, 873893. Wiley-VCH, Weinheim, Germany.
+-   [萨布, A.](#ch2.xhtml#R_ref2_138) 2003. “微生物治疗酶的来源、性质与应用。” Indian Journal of Biotechnology 2(3): 334–341.
+-   [萨达希瓦姆, S., 萨维塔, S., 斯瓦米南南, K., 和 林, F.H.](#ch2.xhtml#R_ref2_139) 2008. “从新孤立的 *Trichoderma harzianum* WL1 中分离、纯化并表征中红潜力的淀粉酶。” Process Biochemistry 43: 736–742.
+-   [桑吉, A., 盖格, N., 古普塔, V.K., 米特尔, A., 和 克哈德, R.C.](#ch2.xhtml#R_ref2_140) 2010. “一步纯化和表征一种由碱性 *Bacillus subtilis* ASH 产生的无纤维素木糖兰酶。” Brazilian Journal of Microbiology 41: 467–476.
+-   [施赫, T., 克, O., 和Borchert, T.V.](#ch2.xhtml#R_ref2_141) 2002. “技术应用酶。” 在《生物聚合物》中, 由 S.R. Fahnestock, and S.R. Steinbüchel 编辑, 377–437. Wiley-VCH, Weinheim, Germany.
+-   [ Sharma, H.P., Patel, H., 和 Sharma, S.](#ch2.xhtml#R_ref2_142) 2014. “酶的果汁提取与澄清: 综述。” Trends Post Harvest Technology 2(1):1–14.
+-   [Sharma, P.K., 和 Chand, D.](#ch2.xhtml#R_ref2_143) 2012. “从 Pseudomonas sp. XPB-6 中分离出耐热纤维素酶。” International Research Journal of Biological Sciences 1(5): 31–41.
+-   [Shi, K., Jing, J., Song, L., Su, T., 和 Wang, Z.](#ch2.xhtml#R_ref2_144) 2020. “酶的聚酯水解: *Candida antarctica* 脂肪酶和 *Fusarium solani* 纤蛋白酶对 ε-卡普罗内酯的降解。” International Journal of Biological Macromolecules 144: 183–189.
+-   [Shiroya, A.J.](#ch2.xhtml#R_ref2_145) 2021. “淀粉酶酶的最新进展” In Industrial Biotechnology: A Review. Pharma News.
+-   [Singh, D., 和 Chen, S.](#ch2.xhtml#R_ref2_146) 2008. “芽孢乳杆菌 *Phanerochaete chrysosporium* 的条件对木质素降解酶的生产的影响。” Applied Microbiology and Biotechnology 81: 399–417.
+-   [Singh, P., 和 Kumar, S.](#ch2.xhtml#R_ref2_147) 2019. “微生物酶在食品生物技术中的应用。” 在《酶在食品生物技术中的应用》中, 由 Mohammed Kuddus 编辑, 19–28. Academic Press.
+-   [Singh, R., Sulaiman, O., Hashim, R., Rupani, P.F., 和 Peng, L.C.](#ch2.xhtml#R_ref2_148) 2010. “利用不同真菌物种对木质纤维素材料的生物降解: 综述。” Reviews in Environmental Science and Biotechnology 9: 141–151.
+-   [Singh, R., Kumar, M., Mittal, A., 和 Mehta, P.K.](#ch2.xhtml#R_ref2_149) 2016. “微生物酶: 21 世纪工业进展。” 3 Biotech 6(2): 1–15.
+-   [Singh, R., Singh, A., 和 Sachan, S.](#ch2.xhtml#R_ref2_150) 2019. “食品工业中的酶: 朋友还是敌人?。” 在《酶在食品生物技术中的应用》中, 由 Mohammed Kuddus 编辑, 827–843. Academic Press.
