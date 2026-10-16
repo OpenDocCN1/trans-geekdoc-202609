@@ -1,0 +1,236 @@
+
+## D
+
+- 无线社交工程和，460
+- Diffie、Whitfield，235–236, 554
+- Diffie‑Hellman 算法，235–236, 553–555
+- `dig`，135–136
+- 目录遍历，522–523
+- 反汇编，354–356
+- 发现阶段，11, 74
+- 离散安全属性，586
+- 磁盘加密，572–575
+- 分布式拒绝服务 (DDoS)，528–529
+- 分布式网络协议 (DNP)，153
+- distributed.net 项目，624
+- DLL (动态链接库)，326, 350
+- `dm‑crypt`，575
+- DMZ (非军事区)，44–45, 88, 89, 539, 654
+- DNP (分布式网络协议)，153
+- DNS (域名系统)
+    - 关于，3–4, 75, 129–130
+    - 名称查找，130–136
+    - 被动 DNS，138–142
+    - 伪造，422–424
+    - 区域传输，136–138
+- DNS 放大攻击，528
+- DNS 安全扩展 (DNSSEC)，107, 427
+- `dnsrecon`，137–138
+- 文档对象模型 (DOM)，147, 517, 518
+- 域名，397
+- Domain Name System (DNS)
+    - 关于，3–4, 75, 129–130
+    - 名称查找，130–136
+    - 被动 DNS，138–142
+    - 伪造，422–424
+    - 区域传输，136–138
+- 域名注册商，105–109
+- DomainMonger，106
+- dork (Google)，150
+- DoS (拒绝服务) 攻击
+    - 关于，64, 526
+    - 带宽攻击，527–529
+    - 老旧，531
+    - 慢速攻击，529–530
+- 点分十进制表示。*See* 期间 (.)
+- 点分四十进制。*See* 期间 (.)
+- 双连字符 (‑‑)，520
+- DPI (深度包检查)，78–79
+- 加密驱动，573
+- dropper，347–348
+- DROWN (使用过时且弱化的 RSA 加密)，181
+- `dsniff`，419
+- DuckDuckGo，112–114
+- DVWA (Damn Vulnerable Web Application)，521
+- `DYLD_INSERT_LIBRARIES` 变量，329
+- 动态分析
+    - 关于，361
+    - Cuckoo Sandbox，362–366
+    - 调试，366–370
+- Dynamic Host Configuration Protocol (DHCP)
+    - 饥饿攻击，424–426
+    - 无线社交工程和，460
+- dynamic link library (DLL)，326, 350
+- EBCDIC (Extended Binary Coded Decimal Interchange Code)，21
+- EC2 (Elastic Compute Cloud)，49
+- ECC (椭圆曲线密码学)，560–562
+- EC‑Council，2, 522
+- EDGAR，104–105
+- EDR (端点检测与响应)
+    - 关于，84–85, 385, 604
+    - 规避和，313
+- 802.11 标准，472–473
+- Elastic Compute Cloud (EC2)，49
+- Elastic Kubernetes Service (EKS)，593
+- Elastic Stack (ELK stack)，86, 329, 541
+- ELF (Executable and Linkable Format) 文件，378
+- Elk Cloner，342
+- 椭圆曲线密码学 (ECC)，560–562
+- Empire，307
+- 编码负载，380
+- 加密驱动，573
+- 加密
+    - 基础，551–555
+- `disk/file`, 572–575
+- `Wi‑Fi`, 478–483
+- `encryptors`, in `static analysis`, 351–353
+- `endpoint detection and response (EDR)`
+    - `about`, 84–85, 385, 604
+    - `evasion and`, 313
+- `entity-relationship diagram`, 590–591
+- `enumeration`
+    - `about`, 232–233, 272–273
+    - `answers to review questions`, 672–674
+    - in `ethical hacking`, 12–13
+    - `remote procedure call (RPC)`, 236–242
+    - `review questions`, 274–277
+    - `Server Message Block (SMB)`, 242–257
+    - `service enumeration`, 233–236
+    - `Simple Mail Transfer Protocol (SMTP)`, 260–264
+    - `Simple Network Management Protocol (SNMP)`, 258–260
+    - `web-based enumeration`, 264–271
+- `Escalate Privileges` stage, in `life cycle`, 9, 536
+- `ESSID`, 491
+- `Establish Foothold` stage, in `life cycle`, 9, 536
+- `EternalBlue`, 346
+- `ethical hacking`
+    - `about`, 5–6
+    - `methodology of`, 12–15
+- `ethics`, 2–5
+- `Ettercap`, 420–421, 422–424, 426
+- `evasion techniques`
+    - `about`, 214–220, 313–314
+    - for `applications`, 535–536
+    - with `nmap`, 221–223
+- `Event Viewer`, clearing in `Meterpreter`, 329
+- `evil twin`, 491–493
+- `Executable and Linkable Format (ELF) file`, 378
+- `Execution` stage, in `MITRE ATT&CK framework`, 10, 73
+- `Exfiltration` stage, in `MITRE ATT&CK framework`, 11, 75
+- `Exploitation` stage, in `Lockheed Martin Cyber Kill Chain`, 602
+- `exploit-db`, 281–285, 290–292
+- `exploits`
+    - `defined`, 291
+    - `searching for`, 281–285
+- `Express library`, 383–384
+- `Extended Binary Coded Decimal Interchange Code (EBCDIC)`, as a `Presentation layer protocol`, 21
+- `eXtensible Markup Language (XML)`
+    - `about`, 597, 635
+    - `external entity processing`, 515–516
+    - `format`, 183, 308–313
+
+## F
+
+- `Face ID (Apple)`, 445
+- `Facebook`, 116–119, 618–619
+- `facial recognition`, 445
+- `false acceptance rates (FARs)`, 446
+- `false negative vulnerability`, 191
+- `false positive vulnerability`, 191
+- `false rejection rates (FRRs)`, 446
+- `Farmer, Dan`, 191
+- `FARs (false acceptance rates)`, 446
+- `FiercePhish`, 451–452
+- `file encryption`, 572–575
+- `File Transfer Protocol (FTP)`
+    - `about`, 498
+    - `stateful filtering and`, 77
+- `file traversal`, 522–523
+- `fileless malware`, 348
+- `filesystems`, encrypting, 572
+- `FileVault`, 573–574
+- `filters`, running `tcpdump` without, 409
+- `fingerprint scanning`, 445
+- `Firebug`, 147
+- `FireEye Labs Advanced Reverse Engineering (FLARE)`, 349, 370–371
+- `Firefox`
+    - `attacks on`, 305–306
+    - `plugins for`, 143–144
+- `firewalls`
+    - `about`, 76
+    - `Application layer`, 79–80
+    - `deep packet inspection (DPI)`, 78–79
+    - `packet filters`, 76–77
+    - `service enumeration and`, 236
+    - `stateful filtering`, 77–78
+    - `unified threat management (UTM)`, 80
+- `Flags field`, 33
+- `FLARE (FireEye Labs Advanced Reverse Engineering)`, 349, 370–371
+- `fog computing`, 651–652
+- `footprinting. *See* reconnaissance and footprinting`
+- `forced browsing`, 524, 638
+- `419 scam`, 440
+- `four-way handshake`, 494
+- `fping`, using `MegaPing`, 163–165
+- `FQDNs (fully qualified domain names)`, 129–130, 131–133, 135, 152, 454
+- `Fragment Offset field`, 33
+- `fragmentation`, as an `evasion technique`, 219
+- `fragroute`, 217–218, 219
+- `frame`, 395
+- `frequency analysis`, 552
+- `FRRs (false rejection rates)`, 446
+- `FTP (File Transfer Protocol)`
+    - `about`, 498
+    - `stateful filtering and`, 77
+- `full mesh network`, 27–28
+- `fully qualified domain names (FQDNs)`, 129–130, 131–133, 135, 152, 454
+- `functions`, 627
+- `fuzzing`, 308–313
+
+## G
+
+- `gait recognition`, 446
+- `Generic Routing Encapsulation (GRE) protocol`, 220
+- `GET method`, 384, 631, 635
+- `Ghidra`, static analysis using, 358–361
+- `GoDaddy`, 106
+- `Google`, 150–152, 618–619
+- `Google Chrome`
+    - `attacks on`, 305
+    - `plugins for`, 143–144
+    - `trusted third party and`, 566
+- `Google Compute`, 639
+- `Google dork`, 150
+- `Google Drive`, 47, 619
+- `Google Hacking Database`, 151–152
+- `Google Rapid Response (GRR)`, 85
+- `governmental data classifications`, 583
+- `GPUs (graphics processing units)`, 625
+- `Graham, Robert`, 184
+- `Graph API (Facebook)`, 117–118
+- `graphics processing units (GPUs)`, 625
+- `gray hat`, 4
+- `GRE (Generic Routing Encapsulation) protocol`, 220
+- `grid computing`, 624–625
+- `group temporal key (GTK)`, 480–481
+- `GRR (Google Rapid Response)`, 85
+- `guidelines, security`, 72
+
+## H
+
+- `hactivists`, `ransomware and`, 346
+- `half-open scan`, 169
+- Handshake tools, 492
+- `hashdump` command, 292–293
+- hashing, cryptographic, 569–570
+- Header Length field, 32–33
+- headers, 32–34
+- Health Insurance Portability and Accountability Act (HIPAA), 45
+- heap, 534
+- heap spraying, 534
+- Heartbleed attack, 146
+- heating, ventilation, and cooling (HVAC), 621
+- Hellman, Martin, 235–236, 554
+- HID (human interface device), 652
+- hiding data, 219, 330–332
+- Hierarchical File System (HFS), 330–331
