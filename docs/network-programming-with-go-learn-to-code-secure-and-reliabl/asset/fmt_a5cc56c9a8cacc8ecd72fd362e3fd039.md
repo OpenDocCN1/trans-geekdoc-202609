@@ -1,0 +1,374 @@
+
+if r.Method != 3`http.MethodPost` {
+
+4`http.Error`(w, "", http.StatusMethodNotAllowed)
+
+return
+
+}
+
+var u `User`
+
+err := json.NewDecoder(r.Body).Decode(&u)
+
+Writing HTTP Clients **179**
+
+ if err != nil {
+
+t.Error(err)
+
+http.Error(w, "Decode Failed", http.StatusBadRequest)
+
+return
+
+}
+
+5w.WriteHeader(http.StatusAccepted)
+
+}
+
+}
+
+*Listing 8-6: A handler that can decode JSON into a User object (* post_test .go *)* The handlePostUser function 1 returns a function that will handle POST
+
+requests. If the request method is anything other than POST 3, it returns a
+
+status code indicating that the server disallows the method 4. The function
+
+then attempts to decode the JSON in the request body to a User object. If
+
+successful, the response’s status is set to *Accepted* 5.
+
+Unlike the Go HTTP client, the Go HTTP server must explicitly drain
+
+the request body 2 before closing it. We’ll discuss this in more detail in
+
+[Chapter 9](#index_split_004.html#p209).
+
+The test in Listing 8-7 encodes a User object into JSON and sends it in a
+
+POST request to the test server.
+
+*\--snip--*
+
+func TestPostUser(t \*testing.T) {
+
+ts := httptest.NewServer(http.HandlerFunc(handlePostUser(t)))
+
+defer ts.Close()
+
+resp, err := http.Get(ts.URL)
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+if 1`resp.StatusCode` != http.StatusMethodNotAllowed {
+
+t.Fatalf("expected status %d; actual status %d",
+
+http.StatusMethodNotAllowed, resp.StatusCode)
+
+}
+
+buf := new(bytes.Buffer)
+
+u := User{First: "Adam", Last: "Woodbeck"}
+
+2 err = json.NewEncoder(buf).Encode(&u)
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+resp, err = 3`http.Post`(ts.URL, "application/json", buf)
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+if resp.StatusCode != 4`http.StatusAccepted` {
+
+t.Fatalf("expected status %d; actual status %d",
+
+http.StatusAccepted, resp.StatusCode)
+
+}
+
+**180** Chapter 8
+
+ }
+
+\_ = resp.Body.Close()
+
+}
+
+*Listing 8-7: Encoding a User object to JSON and POST to the test server (* post_test .go *)* The test first makes sure that the test server’s handler properly responds
+
+with an error if the client sends the wrong type of request 1. If the test
+
+server receives anything other than a POST request, it will respond with a
+
+Method Not Allowed error. Then, the test encodes a User object into JSON
+
+and writes the data to a bytes buffer 2. It makes a POST request to the
+
+test server’s URL with the content type *application/json* because the bytes buffer, representing the request body, contains JSON 3. The content
+
+type informs the server’s handler about the type of data to expect in the
+
+request body. If the server’s handler properly decoded the request body,
+
+the response status code is 202 Accepted 4.
+
+***Posting a Multipart Form with Attached Files***
+
+Posting JSON to a web server is easy. Simply set the appropriate content
+
+type and send along the JSON payload in the request body. But how do you
+
+handle sending various bits of data to a web server in a single POST request?
+
+Answer: use the mime/multipart package.
+
+The mime/multipart package allows you to craft multipart *Multipurpose*
+
+*Internet Mail Extensions (MIME) messages*, which separate each bit of data you want to send from the other bits of data by a string known as a *boundary*.
+
+You’ll see an example of a boundary a bit later in this section, though it isn’t
+
+something you typically need to worry about.
+
+Each MIME part includes optional headers that describe the content, as
+
+well as a body that contains the content itself. For example, if a web server
+
+parsed a MIME part with a Content-Type header set to *text/plain*, it would treat the part’s body as plaintext.
+
+Listing 8-8 introduces a new test that walks you through the process
+
+of building up a multipart request body using the mime/multipart package.
+
+*\--snip--*
+
+func TestMultipartPost(t \*testing.T) {
+
+reqBody := 1new(bytes.Buffer)
+
+w := 2multipart.NewWriter(reqBody)
+
+for k, v := range map\[string\]string{
+
+"date": time.Now().Format(time.RFC3339),
+
+"description": "Form values with attached files",
+
+} {
+
+err := 3w.WriteField(k, v)
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+}
+
+*Listing 8-8: Creating a new request body, multipart writer, and write form data (* post_test .go *)* Writing HTTP Clients **181**
+
+First, you create a new buffer 1 to act as the request body. You then create a new multipart writer 2 that wraps the buffer. The multipart writer
+
+generates a random boundary upon initialization. Finally, you write form
+
+fields to the multipart writer 3. The multipart writer separates each form
+
+field into its own part, writing the boundary, appropriate headers, and the
+
+form field value to each part’s body.
+
+At this point, your request body has two parts, one for the *date* form
+
+field and one for the *description* form field. Let’s attach a couple of files in Listing 8-9.
+
+*\--snip--*
+
+for i, file := range \[\]string{
+
+"./files/hello.txt",
+
+"./files/goodbye.txt",
+
+} {
+
+filePart, err := 1w.CreateFormFile(fmt.Sprintf("file%d", i+1),
+
+filepath.Base(file))
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+f, err := os.Open(file)
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+\_, err = 2io.Copy(filePart, f)
+
+\_ = f.Close()
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+}
+
+err := 3w.Close()
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+*Listing 8-9: Writing two files to the request body, each in its own MIME part (* post_test .go *)* Attaching a field to a request body isn’t as straightforward as adding form
+
+field data. You have an extra step. First, you need to create a multipart section writer from Listing 8-8’s multipart writer 1. The CreateFormFile method
+
+accepts a field name and a filename. The server uses this filename when
+
+parsing the MIME part. It does not need to match the filename you attach.
+
+Now, you just open the file and copy its contents to the MIME part writer 2.
+
+When you’re done adding parts to the request body, you must close
+
+the multipart writer 3, which finalizes the request body by appending the
+
+boundary.
+
+**182** Chapter 8
+
+Listing 8-10 posts the request to a well-regarded test server, *httpbin.org*.
+
+*\--snip--*
+
+ctx, cancel := context.WithTimeout(context.Background(),
+
+60\*time.Second)
+
+defer cancel()
+
+req, err := http.NewRequestWithContext(ctx, http.MethodPost,
+
+1"https://httpbin.org/post", 2reqBody)
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+req.Header.Set("Content-Type", 3w.FormDataContentType())
+
+resp, err := http.DefaultClient.Do(req)
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+defer func() { \_ = resp.Body.Close() }()
+
+b, err := ioutil.ReadAll(resp.Body)
+
+if err != nil {
+
+t.Fatal(err)
+
+}
+
+if resp.StatusCode != http.StatusOK {
+
+t.Fatalf("expected status %d; actual status %d",
+
+http.StatusOK, resp.StatusCode)
+
+}
+
+t.Logf("\\n%s", b)
+
+}
+
+*Listing 8-10: Sending a POST request to* httpbin .org *with Go’s default HTTP client* *(* post_test .go *)*
+
+First, you create a new request and pass it a context that will time out
+
+in 60 seconds. Since you’re making this call over the internet, you don’t have
+
+as much certainty that your request will reach its destination as you do when
+
+testing over localhost. The POST request is destined for *https://www.httpbin*
+
+*.org/* 1 and will send the multipart request body 2 in its payload.
+
+Before you send the request, you need to set the Content-Type header
+
+to inform the web server you’re sending multiple parts in this request.
+
+The multipart writer’s FormDataContentType method 3 returns the appro-
+
+priate Content-Type value that includes its boundary. The web server uses
+
+the boundary from this header to determine where one part stops and
+
+another starts as it reads the request body.
+
+Once you run the test with the -v flag, you should see output like the
+
+JSON in Listing 8-11.
+
+Writing HTTP Clients **183**
+
+{
+
+"args": {},
+
+"data": "",
+
+1"files": {
+
+"file1": "Hello, world!\\n",
+
+"file2": "Goodbye, world!\\n"
+
+},
+
+2"form": {
+
+"date": "2006-01-02T15:04:05-07:00",
+
+"description": "Form fields with attached files"
+
+},
+
+"headers": {
+
+"Accept-Encoding": "gzip",
+
+"Content-Length": "739",
