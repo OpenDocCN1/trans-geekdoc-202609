@@ -1,0 +1,135 @@
+
+-   [被动侦察](#c04.xhtml#Page_142)–144
+-   密码破解
+    -   关于，[295](#c07.xhtml#Page_295)–296
+    -   John the Ripper，[296](#c07.xhtml#Page_296)–298
+    -   Kerberoasting，[300](#c07.xhtml#Page_300)–304
+    -   Rainbow Tables，[298](#c07.xhtml#Page_298)–300
+-   密码，收集，[292](#c07.xhtml#Page_292)–295
+-   载荷
+    -   定义，[395](#c09.xhtml#Page_395)
+    -   编码，[380](#c08.xhtml#Page_380)
+-   支付卡行业 (PCI)，[45](#c02.xhtml#Page_45)
+-   PCAP (数据包捕获) 文件，[401](#c09.xhtml#Page_401)
+-   PCI (支付卡行业)，[45](#c02.xhtml#Page_45)
+-   PCRE (Perl 兼容正则表达式)，[524](#c12.xhtml#Page_524)
+-   PDF (Portable Document Format)，网络钓鱼及，[451](#c10.xhtml#Page_451)
+-   PDUs (协议数据单元)，[29](#c02.xhtml#Page_29)，[395](#c09.xhtml#Page_395)
+-   PE Detective，[352](#c08.xhtml#Page_352)–353
+-   Peach，[308](#c07.xhtml#Page_308)–313
+-   PEAP (Protocol Extensible Authentication Protocol)，[481](#c11.xhtml#Page_481)
+-   PeekYou，[115](#c04.xhtml#Page_115)
+-   渗透测试。*See* [伦理黑客](#b02.xhtml#ind494)
+-   Penetration Testing Execution Standard (PTES)，[6](#c01.xhtml#Page_6)
+-   人员，开源情报 (OSI) 及，[112](#c04.xhtml#Page_112)–115
+-   句号 (.)，[34](#c02.xhtml#Page_34)
+-   Perl 兼容正则表达式 (PCRE)，[524](#c12.xhtml#Page_524)
+-   持久性，[322](#c07.xhtml#Page_322)–326，[385](#c08.xhtml#Page_385)–386。*See also* [访问](#b02.xhtml#ind7)，[在伦理黑客中维护](#b02.xhtml#ind10)
+-   持久性阶段，在 MITRE ATT&CK 框架中，[10](#c01.xhtml#Page_10)，[73](#c03.xhtml#Page_73)
+-   持久型跨站脚本，[517](#c12.xhtml#Page_517)
+-   个人健康信息 (PHI)，[45](#c02.xhtml#Page_45)，[394](#c09.xhtml#Page_394)–395
+-   PGP (Pretty Good Privacy)，[571](#c13.xhtml#Page_571)–572
+-   PHI (个人健康信息)，[45](#c02.xhtml#Page_45)，[394](#c09.xhtml#Page_394)–395
+-   网络钓鱼
+    -   关于，[440](#c10.xhtml#Page_440)，[448](#c10.xhtml#Page_448)–452
+    -   联系垃圾邮件，[452](#c10.xhtml#Page_452)
+    -   移动设备上，[501](#c11.xhtml#Page_501)
+    -   交换条件，[452](#c10.xhtml#Page_452)
+-   电话通话，作为物理社会工程，[445](#c10.xhtml#Page_445)–446
+-   phreak，[440](#c10.xhtml#Page_440)
+-   物理控制，[68](#c03.xhtml#Page_68)
+-   物理层 (OSI 模型)，[22](#c02.xhtml#Page_22)
+-   物理网络
+    -   关于，[29](#c02.xhtml#Page_29)
+    -   地址，[29](#c02.xhtml#Page_29)–30
+    -   交换，[30](#c02.xhtml#Page_30)–31
+-   物理社会工程
+    -   关于，[442](#c10.xhtml#Page_442)
+    -   徽章访问，[442](#c10.xhtml#Page_442)–444
+    -   饵诱，[447](#c10.xhtml#Page_447)–448
+    -   生物特征，[445](#c10.xhtml#Page_445)–446
+    -   人阱，[444](#c10.xhtml#Page_444)–445
+    -   电话通话，[446](#c10.xhtml#Page_446)–447
+    -   尾随，[448](#c10.xhtml#Page_448)
+-   Pikker，Hieki，[362](#c08.xhtml#Page_362)
+-   ping 扫描
+    -   关于，[163](#c05.xhtml#Page_163)
+    -   使用 `fping`，[163](#c05.xhtml#Page_163)–165
+    -   使用 MegaPing，[165](#c05.xhtml#Page_165)–166
+-   跳转，[319](#c07.xhtml#Page_319)–322
+-   PKI (公钥基础设施)，[562](#c13.xhtml#Page_562)
+-   平台即服务 (PaaS)，[49](#c02.xhtml#Page_49)–51，[617](#c15.xhtml#Page_617)，[621](#c15.xhtml#Page_621)
+-   PLCs (可编程逻辑控制器)，[652](#c15.xhtml#Page_652)–653，[654](#c15.xhtml#Page_654)
+-   Nessus 插件标签，[205](#c05.xhtml#Page_205)
+-   PMK (pairwise master key)，[480](#c11.xhtml#Page_480)
+-   指针 (PTR) 记录，[132](#c04.xhtml#Page_132)，[396](#c09.xhtml#Page_396)
+-   政策，安全，[69](#c03.xhtml#Page_69)–70
+-   多态恶意软件，[348](#c08.xhtml#Page_348)
+-   多态性，[219](#c05.xhtml#Page_219)
+-   POODLE 攻击，[146](#c04.xhtml#Page_146)
+-   `popen()`，[374](#c08.xhtml#Page_374)
+-   端口镜像/跨越，[410](#c09.xhtml#Page_410)
+-   端口扫描
+    -   关于，[162](#c05.xhtml#Page_162)–163，[167](#c05.xhtml#Page_167)–168
+    -   详细信息，[173](#c05.xhtml#Page_173)–176
+    -   `masscan`，[184](#c05.xhtml#Page_184)–185
+    -   MegaPing，[185](#c05.xhtml#Page_185)–186
+    -   Metasploit，[188](#c05.xhtml#Page_188)–190
+    -   `nmap`，[168](#c05.xhtml#Page_168)
+    -   脚本，[176](#c05.xhtml#Page_176)–181
+    -   TCP 扫描，[168](#c05.xhtml#Page_168)–171
+    -   UDP 扫描，[171](#c05.xhtml#Page_171)–173
+    -   Zenmap，[181](#c05.xhtml#Page_181)–184
+-   Portable Document Format (PDF)，网络钓鱼及，[451](#c10.xhtml#Page_451)
+-   `portmap` 服务，[237](#c06.xhtml#Page_237)
+-   所有权 (控制)，在 Parkerian hexad 中，[65](#c03.xhtml#Page_65)
+-   post exploitation
+    -   关于，[313](#c07.xhtml#Page_313)
+    -   隐藏痕迹，[326](#c07.xhtml#Page_326)
+    -   规避，[313](#c07.xhtml#Page_313)–314
+    -   隐藏数据，[330](#c07.xhtml#Page_330)–332
+    -   日志操作，[329](#c07.xhtml#Page_329)
+    -   持久性，[322](#c07.xhtml#Page_322)–326
+    -   跳转，[319](#c07.xhtml#Page_319)–322
+    -   特权提升，[314](#c07.xhtml#Page_314)–319
+    -   进程注入，[327](#c07.xhtml#Page_327)–329
+    -   rootkits，[326](#c07.xhtml#Page_326)–327
+    -   时间管理，[332](#c07.xhtml#Page_332)
+-   POST 方法，[384](#c08.xhtml#Page_384)，[631](#c15.xhtml#Page_631)，[635](#c15.xhtml#Page_635)
+-   Postel，Jon，[106](#c04.xhtml#Page_106)
+-   Postman，[649](#c15.xhtml#Page_649)
+-   可能不受欢迎的应用程序 (PUAs)，[341](#c08.xhtml#Page_341)
+-   可能不受欢迎的程序 (PUPs)，[341](#c08.xhtml#Page_341)
+-   PowerShell，[307](#c07.xhtml#Page_307)，[314](#c07.xhtml#Page_314)，[537](#c12.xhtml#Page_537)–538，[632](#c15.xhtml#Page_632)–633
+-   PowerSploit，[307](#c07.xhtml#Page_307)–308
+-   表示层
+    -   n‑tier 应用程序设计，[589](#c14.xhtml#Page_589)
+    -   OSI 模型，[21](#c02.xhtml#Page_21)
+-   pre‑shared key (PSK)，[459](#c10.xhtml#Page_459)，[478](#c11.xhtml#Page_478)，[480](#c11.xhtml#Page_480)，[553](#c13.xhtml#Page_553)–554
+-   pretexting，[438](#c10.xhtml#Page_438)–440
+-   Pretty Good Privacy (PGP)，[571](#c13.xhtml#Page_571)–572
+-   私有分类，[583](#c14.xhtml#Page_583)
+-   私有云，[623](#c15.xhtml#Page_623)
+-   特权提升
+    -   规避和，[314](#c07.xhtml#Page_314)–319
+    -   Linux，[318](#c07.xhtml#Page_318)–319
+-   Privilege Escalation 阶段，在 MITRE ATT&CK 框架中，[11](#c01.xhtml#Page_11)，[73](#c03.xhtml#Page_73)–74
+-   概率。*See* [风险](#b02.xhtml#ind1343)
+-   程序，[71](#c03.xhtml#Page_71)–72，[626](#c15.xhtml#Page_626)
+-   process injection，[327](#c07.xhtml#Page_327)–329
+-   可编程逻辑控制器 (PLCs)，[652](#c15.xhtml#Page_652)–653，[654](#c15.xhtml#Page_654)
+-   程序，[626](#c15.xhtml#Page_626)
+-   Project Athena，[300](#c07.xhtml#Page_300)
+-   properties，在静态分析中，[356](#c08.xhtml#Page_356)
+-   Protect function，在 NIST 网络安全框架中，[600](#c14.xhtml#Page_600)
+-   protections
+    -   应用程序，[535](#c12.xhtml#Page_535)–536
+    -   检测和，[223](#c05.xhtml#Page_223)–224
+    -   Web 应用，[524](#c12.xhtml#Page_524)–526
+-   protocol data units (PDUs)，[29](#c02.xhtml#Page_29)，[395](#c09.xhtml#Page_395)
+-   Protocol Extensible Authentication Protocol (PEAP)，[481](#c11.xhtml#Page_481)
+-   Protocol 字段，[33](#c02.xhtml#Page_33)
+-   protocol stacks。*See* [stacks](#b02.xhtml#ind1603)
+-   protocols，[19](#c02.xhtml#Page_19)–20
+-   PSK (pre‑shared key)，[459](#c10.xhtml#Page_459)，[478](#c11.xhtml#Page_478)，[480](#c11.xhtml#Page_480)，[553](#c13.xhtml#Page_553)–554
+-   PTES (Penetration Testing Execution Standard)，[6](#c01.xhtml#Page_6)

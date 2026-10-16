@@ -1,0 +1,92 @@
+
+716. [705](#b02.xhtml#Page_705)
+
+717. [706](#b02.xhtml#Page_706)
+
+718. [707](#b02.xhtml#Page_707)
+
+719. [708](#b02.xhtml#Page_708)
+
+720. [709](#b02.xhtml#Page_709)
+
+721. [710](#b02.xhtml#Page_710)
+
+722. [711](#b02.xhtml#Page_711)
+
+723. [712](#b02.xhtml#Page_712)
+
+724. [713](#b02.xhtml#Page_713)
+
+725. [714](#b02.xhtml#Page_714)
+
+726. [715](#b02.xhtml#Page_715)
+
+727. [716](#b02.xhtml#Page_716)
+
+728. [717](#b02.xhtml#Page_717)
+
+729. [718](#b02.xhtml#Page_718)
+
+730. [719](#b02.xhtml#Page_719)
+
+731. [720](#b02.xhtml#Page_720)
+
+732. [721](#b02.xhtml#Page_721)
+
+733. [722](#b02.xhtml#Page_722)
+
+734. [723](#b02.xhtml#Page_723)
+
+735. [724](#b02.xhtml#Page_724)
+
+736. [725](#b03.xhtml#Page_725)
+
+737. [726](#b03.xhtml#Page_726)
+
+738. [727](#eula.xhtml#Page_727)
+
+Copyright © 2023 by John Wiley & Sons, Inc. All rights reserved.
+
+Published by John Wiley & Sons, Inc., Hoboken, New Jersey.  
+
+Published simultaneously in Canada and the United Kingdom.
+
+ISBN: 978-1-394-18692-1  
+
+ISBN: 978-1-394-18687-7 (ebk.)  
+
+ISBN: 978-1-394-18691-4 (ebk.)
+
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, scanning, or otherwise, except as permitted under Section 107 or 108 of the 1976 United States Copyright Act, without either the prior written permission of the Publisher, or authorization through payment of the appropriate per‑copy fee to the Copyright Clearance Center, Inc., 222 Rosewood Drive, Danvers, MA 01923, (978) 750‑8400, fax (978) 750‑4470, or on the web at `www.copyright.com`. Requests to the Publisher for permission should be addressed to the Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748‑6011, fax (201) 748‑6008, or online at `www.wiley.com/go/permission`.
+
+**Trademarks:** WILEY, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be used without written permission. CEH is a trademark of EC‑Council. All other trademarks are the property of their respective owners. John Wiley & Sons, Inc. is not associated with any product or vendor mentioned in this book.
+
+**Limit of Liability/Disclaimer of Warranty:** While the publisher and author have used their best efforts in preparing this book, they make no representations or warranties with respect to the accuracy or completeness of the contents of this book and specifically disclaim any implied warranties of merchantability or fitness for a particular purpose. No warranty may be created or extended by sales representatives or written sales materials. The advice and strategies contained herein may not be suitable for your situation. You should consult with a professional where appropriate. Further, readers should be aware that websites listed in this work may have changed or disappeared between when this work was written and when it is read. Neither the publisher nor author shall be liable for any loss of profit or any other commercial damages, including but not limited to special, incidental, consequential, or other damages.
+
+For general information on our other products and services or for technical support, please contact our Customer Care Department within the United States at (800) 762‑2974, outside the United States at (317) 572‑3993 or fax (317) 572‑4002.
+
+Wiley also publishes its books in a variety of electronic formats. Some content that appears in print may not be available in electronic formats. For more information about Wiley products, visit our web site at `www.wiley.com`.
+
+**Library of Congress Control Number:** 2023932588
+
+Cover image: © Getty Images Inc./Jeremy Woodhouse  
+
+Cover design: Wiley
+
+# About the Authors
+
+**Ric Messier**, GCIH, CCSP, GSEC, CEH, CISSP, MS, has entirely too many letters after his name, as though he spends time gathering up strays that follow him home at the end of the day. His interest in information security began in high school but was cemented when he was a freshman at the University of Maine, Orono, when he took advantage of a vulnerability in a jailed environment to break out of the jail and gain elevated privileges on an IBM mainframe in the early 1980s. His first experience with Unix was in the mid‑1980s and with Linux in the mid‑1990s. Ric is an author, trainer, educator, and security professional with multiple decades of experience. He is currently a Principal Consultant with Mandiant and has developed graduate programs and courses in information security at different colleges and universities.
+
+## About the Technical Editor
+
+**James Michael Stewart**, CISSP, CEH, CHFI, ECSA, CND, ECIH, CySA+, PenTest+, CASP+, Security+, Network+, A+, CISM, and CFR, has been writing and training for more than 25 years, with a current focus on security. He has been teaching CISSP training courses since 2002, not to mention other courses on internet security and ethical hacking/penetration testing. He is the author of and contributor to more than 75 books on security certification, Microsoft topics, and network administration, including *CompTIA Security+ Review Guide*. More information about Michael can be found at his website, `www.impactonline.com`.
+
+# Introduction
+
+You're thinking about becoming a Certified Ethical Hacker (CEH). No matter what variation of security testing you are performing—ethical hacking, penetration testing, red teaming, or application assessment—the skills and knowledge necessary to achieve this certification are in demand. Even the idea of security testing and ethical hacking is evolving as businesses and organizations begin to have a better understanding of the adversaries they are facing. It's no longer the so‑called script kiddies that businesses felt they were fending off for so long. Today's adversary is organized, well‑funded, and determined. This means testing requires different tactics.
+
+Depending on who you are listening to, 80–90 percent of attacks today use social engineering. The old technique of looking for technical vulnerabilities in network services is simply not how attackers are getting into networks. Networks that are focused on applying a defense‑in‑depth approach, hardening the outside, may end up being susceptible to attacks from the inside, which is what happens when desktop systems are compromised. The skills needed to identify vulnerabilities and recommend remediations are evolving, along with the tactics and techniques used by attackers.
+
+This book is written to help you understand the breadth of content you will need to know to obtain the CEH certification. You will find a lot of concepts to provide you with a foundation that can be applied to the skills required for the certification. While you can read this book cover to cover, for a substantial chunk of the subjects, getting hands‑on experience is essential. The concepts are often demonstrated through the use of tools. Following along with these demonstrations and using the tools yourself will help you understand the tools and how to use them. Many of the demonstrations are done in Kali Linux, though many of the tools have Windows analogs if you are more comfortable there.
+
+We can't get through this without talking about ethics, though you will find it mentioned in several places throughout the book. This is serious, and not only because it's a huge part of the basis for the certification. It's also essential for protecting yourself and the people you are working for. The short version is do not do anything that would cause damage to systems or your employer. There is much more to it than that, which you'll read more about in [Chapter 1](#c01.xhtml), “Ethical Hacking,” as a starting point. It's necessary to start wrapping your head around the ethics involved in this exam and profession. You will have to sign an agreement as part of achieving your certification.

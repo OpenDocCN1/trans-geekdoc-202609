@@ -1,0 +1,158 @@
+
+CDIs (Constrained Data Items), [587](#c14.xhtml#Page_587)
+
+Censys.io, [646](#c15.xhtml#Page_646)
+
+certificate authority (CA), [562](#c13.xhtml#Page_562)–568
+
+certificate revocation lists (CRLs), [565](#c13.xhtml#Page_565)
+
+certificates, [562](#c13.xhtml#Page_562)
+
+certification rules (CRs), [587](#c14.xhtml#Page_587)
+
+CGI (common gateway interface) model, [523](#c12.xhtml#Page_523)–524
+
+ChaCha20, [236](#c06.xhtml#Page_236)
+
+Chaos Computer Club, [8](#c01.xhtml#Page_8)
+
+Checksum field, [33](#c02.xhtml#Page_33), [39](#c02.xhtml#Page_39)
+
+CIA triad 
+
+    about, [61](#c03.xhtml#Page_61)
+
+    availability, [64](#c03.xhtml#Page_64)
+
+    confidentiality, [61](#c03.xhtml#Page_61)–62
+
+    integrity, [63](#c03.xhtml#Page_63)–64
+
+    Parkerian hexad, [65](#c03.xhtml#Page_65)
+
+Cialdini, Robert, [436](#c10.xhtml#Page_436)–437
+
+CIDR (Classless Inter‑Domain Routing) notation, [36](#c02.xhtml#Page_36), [169](#c05.xhtml#Page_169)
+
+CIFS (Common Internet File System), [13](#c01.xhtml#Page_13)
+
+CIM (computer‑integrated manufacturing), [654](#c15.xhtml#Page_654)
+
+Cipher Block Chaining (CBC), [557](#c13.xhtml#Page_557)
+
+ciphersuite, [556](#c13.xhtml#Page_556)–557
+
+Cisco, [122](#c04.xhtml#Page_122)
+
+Clark‑Wilson Integrity Model, [586](#c14.xhtml#Page_586)–587
+
+classification, of data, [582](#c14.xhtml#Page_582)–584
+
+Classless Inter‑Domain Routing (CIDR) notation, [36](#c02.xhtml#Page_36), [169](#c05.xhtml#Page_169)
+
+`clearev` command, [329](#c07.xhtml#Page_329)
+
+clearing Event Viewer, in Meterpreter, [329](#c07.xhtml#Page_329)
+
+client‑server architecture, [634](#c15.xhtml#Page_634)
+
+client‑side vulnerabilities, [305](#c07.xhtml#Page_305)–307
+
+cloning, [454](#c10.xhtml#Page_454)–457
+
+cloud computing 
+
+    about, [46](#c02.xhtml#Page_46)–47, [612](#c15.xhtml#Page_612)–616, [655](#c15.xhtml#Page_655)–656
+
+    answers to review questions, [695](#b01.xhtml#Page_695)–697
+
+    architectures, [625](#c15.xhtml#Page_625)–631
+
+    cloud services, [616](#c15.xhtml#Page_616)–621
+
+    common threats, [639](#c15.xhtml#Page_639)–645
+
+    deployment, [631](#c15.xhtml#Page_631)–633
+
+    grid computing, [624](#c15.xhtml#Page_624)–625
+
+    infrastructure as a service (IaaS), [48](#c02.xhtml#Page_48)–49
+
+    Internet of Things (IoT), [53](#c02.xhtml#Page_53)
+
+    operational technology, [652](#c15.xhtml#Page_652)–655
+
+    platform as a service (PaaS), [49](#c02.xhtml#Page_49)–51
+
+    public compared with private cloud, [623](#c15.xhtml#Page_623)
+
+    REST, [633](#c15.xhtml#Page_633)–638
+
+    review questions, [657](#c15.xhtml#Page_657)–661
+
+    shared responsibility model, [621](#c15.xhtml#Page_621)–623
+
+    software as a service, [51](#c02.xhtml#Page_51)–53
+
+    storage as a service (StaaS), [47](#c02.xhtml#Page_47)–48
+
+cloud‑based applications, [593](#c14.xhtml#Page_593)–595
+
+CloudFormation, [633](#c15.xhtml#Page_633)
+
+cloud‑native design, [629](#c15.xhtml#Page_629)–631
+
+CNAME (canonical name) records, [132](#c04.xhtml#Page_132), [138](#c04.xhtml#Page_138)
+
+Cobalt Stike's Beacon, [384](#c08.xhtml#Page_384)
+
+Code Red, [343](#c08.xhtml#Page_343)
+
+Collection stage, in MITRE ATT&CK framework, [11](#c01.xhtml#Page_11), [74](#c03.xhtml#Page_74)–75
+
+collision, [295](#c07.xhtml#Page_295)–296, [569](#c13.xhtml#Page_569)
+
+colon (:), [35](#c02.xhtml#Page_35)
+
+Command and Control stage 
+
+    in Lockheed Martin Cyber Kill Chain, [602](#c14.xhtml#Page_602)
+
+    in MITRE ATT&CK framework, [8](#c01.xhtml#Page_8), [11](#c01.xhtml#Page_11), [75](#c03.xhtml#Page_75)
+
+command injection, [521](#c12.xhtml#Page_521)–522
+
+command‑and‑control infrastructure (C&C), [344](#c08.xhtml#Page_344), [382](#c08.xhtml#Page_382)–383
+
+commitment, in theory of influence, [437](#c10.xhtml#Page_437)
+
+common gateway interface (CGI) model, [523](#c12.xhtml#Page_523)–524
+
+Common Internet File System (CIFS), [13](#c01.xhtml#Page_13)
+
+Common Object Request Broker Architecture (CORBA), [237](#c06.xhtml#Page_237)
+
+common off‑the‑shelf (COTS) malware, [8](#c01.xhtml#Page_8)
+
+Common Vulnerabilities and Exposures (CVE), [181](#c05.xhtml#Page_181)
+
+communication models, [19](#c02.xhtml#Page_19)–24
+
+companies, open source intelligence (OSI) and, [103](#c04.xhtml#Page_103)–104
+
+Complete Mission stage, in life cycle, [10](#c01.xhtml#Page_10), [536](#c12.xhtml#Page_536)
+
+computer‑integrated manufacturing (CIM), [654](#c15.xhtml#Page_654)
+
+Confidential classification, [583](#c14.xhtml#Page_583)
+
+confidentiality, in CIA triad, [61](#c03.xhtml#Page_61)–62
+
+Constrained Data Items (CDIs), [587](#c14.xhtml#Page_587)
+
+contact spamming, [452](#c10.xhtml#Page_452)
+
+container, [592](#c14.xhtml#Page_592)–593
+
+content‑addressable memory (CAM), [30](#c0<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>,<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>,, - user. usermer, user, user are.fology ( the,cb is the user user is is user is is is ( user is is<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
