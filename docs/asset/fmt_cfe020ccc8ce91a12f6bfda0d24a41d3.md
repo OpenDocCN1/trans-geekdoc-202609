@@ -1,0 +1,274 @@
+
+```
+iris = datasets.load_iris()
+model = neighbors.KNeighborsClassifier(10)
+skms.cross_val_score(model, iris.data, iris.target, cv=5)
+```
+
+Out[17]:
+
+```
+array([0.9667, 1. , 1. , 0.9333, 1. ])
+```
+
+如上所述，这里的交叉验证是以分层方式进行的，因为这是 `sklearn` 中分类器的默认做法。这是什么意思呢？基本上，分层意味着当我们在为交叉验证进行训练-测试划分时，我们希望保持数据中目标类别原有的比例。嗯？我们来看一个例子。下面是一个以猫和狗为目标的小型数据集，我们将从中进行两折训练样本划分：
+
+In [18]:
+
+```
+# not stratified
+pet = np.array(['cat', 'dog', 'cat',
+    'dog', 'dog', 'dog'])
+list_folds = list(skms.KFold(2).split(pet))
+training_idxs = np.array(list_folds)[:, 0, :]
+
+print(pet[training_idxs])
+```
+
+```
+[['dog' 'dog' 'dog']
+ ['cat' 'dog' 'cat']]
+```
+
+喜欢猫的读者会注意到，第一折中没有猫。这不太好。如果这是我们的目标，我们就没有任何猫的样本可供学习。简单地说，这肯定不好。分层采样确保了猫和狗之间的公平：
+
+In [19]:
+
+```
+# stratified
+# note: typically this is behind the scenes
+# making StratifiedKFold produce readable output
+# requires some trickery. feel free to ignore.
+pet = np.array(['cat', 'dog', 'cat', 'dog', 'dog', 'dog'])
+idxs = np.array(list(skms.StratifiedKFold(2)
+                .split(np.ones_like(pet), pet)))
+training_idxs = idxs[:, 0, :]
+print(pet[training_idxs])
+```
+
+```
+[['cat' 'dog' 'dog']
+ ['cat' 'dog' 'dog']]
+```
+
+现在，两个折中的猫和狗数量都达到了平衡，与它们在整体数据集中的比例一致。分层确保我们的每个训练集中猫和狗的百分比与整个可用数据总体中的百分比相同（或者在不均分时取整后几乎相同）。如果没有分层，我们最终可能会得到某个目标类别的样本太少（甚至没有）——在我们非分层的示例中，第一个训练集没有猫。我们不指望这样的训练数据能产生好的模型。
+
+在以下情况下，分层尤其有用：
+
+- 我们的总体数据有限，或者
+- 我们数据集中某些类别的代表性不足。
+
+代表性不足可能源于稀缺性——比如我们讨论的是罕见疾病或中奖彩票——也可能源于我们的数据收集过程。从某种意义上说，总数据量有限会让所有类别都变得稀有。我们将在第 6.2 节进一步讨论稀有类别的相关问题。
+
+默认的分层如何应用于第 3 章的鸢尾花数据集？这意味着当我们进行交叉验证划分时，可以确保每个训练集都包含三种目标花朵中每一种的均衡代表性。如果我们不想要分层怎么办？这样做会稍微有点棘手，但仍然可以实现：
+
+In [20]:
+
+```
+# running nonstratified CV
+iris = datasets.load_iris()
+model = neighbors.KNeighborsClassifier(10)
+non_strat_kf = skms.KFold(5)
+skms.cross_val_score(model,
+                     iris.data,
+                     iris.target,
+                     cv=non_strat_kf)
+```
+
+Out[20]:
+
+```
+array([1. , 1. , 0.8667, 0.9667, 0.7667])
+```
+
+我们可以有根据地猜测，最后一折的花朵分布可能很糟糕。我们可能没有看到足够多的某一种类，无法学习到识别它的模式。
+
+### 5.5.3 重复训练-测试划分
+
+这是训练-测试划分的另一个示例，但稍微增加了一点花样。（如果你跟得上，这里是一个训练-测试的花样。）我们的花样是，我们打算通过反复抛硬币来生成多个训练-测试划分。为什么我们要*重复*最基本的训练-测试划分步骤呢？每当我们依赖随机性时，我们都会受到变化的影响：几个不同的训练-测试划分可能会给出不同的结果。其中一些结果可能非常好，另一些则可能非常糟糕。在某些场景下，比如买彩票，*绝大多数*结果都非常相似——你没有赢到钱。在其他场景下，我们无法提前知道结果是什么。幸运的是，我们手头有一个极其有用的工具，可以在面对未知随机性时把它拿出来用。那就是多次重复随机操作，看看会发生什么。大家退后，我们准备试试科学方法了！
+
+对于训练-测试划分，我们通常无法提前知道预期表现如何。也许问题非常简单，几乎所有的训练-测试划分都会得到一个在测试集上表现良好的优质学习器。又也许这是一个非常困难的问题，而我们恰好选择了一个简单的训练数据子集——训练时表现很好，但测试时表现糟糕。我们可以通过生成许多训练-测试划分并观察不同结果来研究由训练-测试划分引起的变化。我们通过多次随机重新划分并评估结果来实现这一点。如果我们真的想深入技术层面，我们甚至可以计算结果的平均值、中位数或方差等统计量。不过，在进入用统计量*总结数据*之前，我一直更喜欢先*直接查看数据*。
+
+这些多个值——每个训练-测试划分对应一个——让我们得到结果及其发生频率的分布。就像绘制教室中学生身高的图表能得到一个身高分布一样，重复的训练-测试划分能让我们得到一个评估指标的分布——无论是准确率、均方根误差，还是其他指标。这个分布*并非*覆盖所有可能的变化来源。它只是考虑了随机性造成的一个差异：我们如何选择训练数据和测试数据。我们可以看到，我们的结果*有多大的变化*，而这*正是由于*训练-测试划分的随机性。闲话少说，让我们看看一些结果。
+
+In [21]:
+
+```
+# as a reminder, these are some of the imports
+# that are hidden behind: from mlwpy import *
+# from sklearn import (datasets, neighbors,
+#                     model_selection as skms,
+#                     linear_model, metrics)
+# see Appendix A for details
+
+linreg  = linear_model.LinearRegression()
+diabetes = datasets.load_diabetes()
+
+scores = []
+for r in range(10):
+    tts = skms.train_test_split(diabetes.data,
+                                diabetes.target,
+                                test_size=.25)
+(diabetes_train_ftrs, diabetes_test_ftrs,
+    diabetes_train_tgt,  diabetes_test_tgt) = tts
+
+fit  = linreg.fit(diabetes_train_ftrs, diabetes_train_tgt)
+preds = fit.predict(diabetes_test_ftrs)
+
+score = metrics.mean_squared_error(diabetes_test_tgt, preds)
+scores.append(score)
+
+scores = pd.Series(np.sqrt(sorted(scores)))
+df = pd.DataFrame({'RMSE':scores})
+df.index.name = 'Repeat'
+display(df.T)
+```
+
+| 重复次数 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| RMSE | 49.00 | 50.19 | 51.97 | 52.07 | 53.20 | 55.70 | 56.25 | 57.49 | 58.64 | 58.69 |
+
+你当然可以把查看数据这件事推向极致。原始列表只对相对较少的数值有用——人们并不擅长阅读过多的数字。让我们画一张图吧。`Seaborn` 库中的 `swarmplot` 在这里非常有用。它绘制单值图——也称为 `stripplot`（带状图）——并将重复的值水平堆叠起来，让你感受到哪里有成团的值。
+
+In [22]:
+
+```
+ax = plt.figure(figsize=(4, 3)).gca()
+sns.swarmplot(y='RMSE', data=df, ax=ax)
+ax.set_xlabel('Over Repeated\nTrain-Test Splits');
+```
+
+![](img/d94e4cd766940d79abed0bc6ba4e4344_163_0.png)
+
+In [23]:
+
+```
+display(df.describe().T)
+```
+
+|  | 计数 | 均值 | 标准差 | 最小值 | 25% | 50% | 75% | 最大值 |
+|---|---|---|---|---|---|---|---|---|
+| RMSE | 10.000 | 54.322 | 3.506 | 49.003 | 51.998 | 54.451 | 57.182 | 58.694 |
+
+在评估这样的图时，始终要让自己关注数据的尺度。乍一看，我们可能会觉得这组数据分散程度很大，但进一步观察后，我们看到它其实聚集在 50 到 60 之间的中上区域。这是否“很多”取决于 RMSE 值的大小——平均值接近 55，所以我们在 ±10% 的范围内。这足以引起我们的注意。
+
+作为一个小小 Python 课程，这里有一种用列表推导式代替循环重写上面计算分数代码的方式。基本策略是：
+
+- 将循环的内容提取出来并转换为一个函数
+- 在列表推导式中反复使用这个函数。
+
+这个重写会带来一点性能提升——但我这样做并不是为了资源优化。最大的收获是，我们为“进行训练-测试划分、拟合、预测和评估”这一过程赋予了一个名字。正如《创世记》中所言，命名是我们在计算机程序中所能做的最有力的事情之一。定义一个函数也为我们提供了一个单一实体，我们可以对其资源使用进行测试，并在其他代码中复用。
+
+In [24]:
+
+```
+def tts_fit_score(model, data, msr, test_size=.25):
+    ' apply a train-test split to fit model on data and eval with MSR '
+    tts = skms.train_test_split(data.data,
+                                data.target,
+                                test_size=test_size)
+
+    (train_ftrs, test_ftrs, train_tgt, test_tgt) = tts
+
+    fit  = linreg.fit(train_ftrs, train_tgt)
+    preds = fit.predict(test_ftrs)
+
+    score = msr(test_tgt, preds)
+    return score
+
+linreg  = linear_model.LinearRegression()
+diabetes = datasets.load_diabetes()
+scores = [tts_fit_score(linreg, diabetes,
+                        metrics.mean_squared_error) for i in range(10)]
+print(np.mean(scores))
+```
+
+## 5.5（重采样：从少中获取更多）137
+
+我最后再对重复的训练-测试划分和交叉验证做一个评论。使用 k 折交叉验证，我们会对每个示例都只得到一个、且仅一个预测结果。每个示例恰好位于一个测试子集中。整个数据集的预测结果将汇总自在不同数据集合上训练的 k 个模型。使用重复的训练-测试划分，我们可能会完全忽略对某些示例的训练或预测，而对其他示例进行重复预测，如图 5.8 所示。在重复的训练-测试划分中，一切都取决于我们的选择过程的随机性。
+
+![](img/d94e4cd766940d79abed0bc6ba4e4344_165_0.png)
+
+管理重复循环以进行多次训练-测试划分有点烦人。这并不伤筋动骨，但出错的地方很多。如果有人能把这个过程封装成一个独立的单一函数就好了。幸运的是，`sklearn` 已经做了这件事。如果我们将 `ShuffleSplit` 数据分割器传入 `cross_val_score` 的 `cv` 参数，我们就能得到与上面手工编码完全相同的算法。
+
+```
+In [25]:
+linreg = linear_model.LinearRegression()
+diabetes = datasets.load_diabetes()
+
+# nondefault cv argument
+ss = skms.ShuffleSplit(test_size=.25) # default, 10 splits
+scores = skms.cross_val_score(linreg,
+diabetes.data, diabetes.target,
+cv=ss,
+scoring='neg_mean_squared_error')
+
+scores = pd.Series(np.sqrt(-scores))
+df = pd.DataFrame({'RMSE': scores})
+df.index.name = 'Repeat'
+```
+
+```
+display(df.describe().T)
+
+ax = sns.swarmplot(y='RMSE', data=df)
+ax.set_xlabel('Over Repeated\nTrain-Test Splits');
+```
+
+|  | 计数 | 平均值 | 标准差 | 最小值 | 25% | 50% | 75% | 最大值 |
+|---|---|---|---|---|---|---|---|---|
+| RMSE | 10.000 | 55.439 | 3.587 | 50.190 | 52.966 | 55.397 | 58.391 | 60.543 |
+
+![](img/d94e4cd766940d79abed0bc6ba4e4344_166_0.png)
+
+与我们手动版本之间的细微差异是由于随机选择训练-测试划分造成的。
+
+现在，我想谈谈随机性影响我们这些勇敢的机器学习学习者的另一种方式。这是计算机在我们要求它做随机事情时所使用的那种随机性。这就是 `ShuffleSplit` 背后发生的事情。别担心，我马上就会解释 `random_state`。
+
+```
+In [26]:
+
+ss = skms.ShuffleSplit(test_size=.25, random_state=42)
+
+train, test = 0, 1
+next(ss.split(diabetes.data))[train][:10]
+```
+
+Out[26]:
+
+```
+array([ 16, 408, 432, 316,  3,  18, 355,  60, 398, 124])
+```
+
+顺便说一下，我使用 `next` 是因为 `ShuffleSplit` 依赖 Python 生成器来一个接一个地生成划分。说 `next` 会给我下一个数据划分。获取下一个数据划分后，我挑选出训练数据 `[train]`，然后是前十个示例 `[:10]`。够用了。让我们再试一次。
+
+```
+In [27]:
+
+ss = skms.ShuffleSplit(test_size=.25, random_state=42)
+next(ss.split(diabetes.data))[train][:10]
+```
+
+```
+Out[27]:
+
+array([ 16, 408, 432, 316,   3,  18, 355,  60, 398, 124])
+```
+
+这可不太好。有人叫——有人！我们需要帮助。结果是一样的。这不是 supposed to be 随机的吗？答案是 是的……又不是。计算机上的随机性通常是伪随机的。这是一长串数字，组合在一起时足够随机，可以伪装成随机。我们从该列表中的某一点开始，然后开始取值。对外部观察者来说，它们看起来相当随机。但如果你知道机制，你实际上可以提前知道接下来会有什么值。因此，(1) 我们生成的值看起来大多是随机的，但 (2) 用于生成它们的流程实际上是确定性的。这种确定性有一个很好的副作用，我们可以利用它。如果我们为伪随机数序列指定一个起点，我们就可以获得一个可重复的、并非那么随机的值列表。当我们使用 `random_state` 时，我们为 `ShuffleSplit` 在请求随机性时设置一个起点。我们最终会得到相同的输出。可重复的训练-测试划分对于创建可重复的测试用例、与学生分享示例以及在追踪错误时消除一些自由度非常有用。
+
+顺便说一下，这里还有另一个类似问题出现的地方。让我们做两次 `KFold` 的独立运行。
+
+```
+In [28]:
+
+train, test = 0, 1
+kf = skms.KFold(5)
+next(kf.split(diabetes.data))[train][:10]
+```
+
+```
+Out[28]:
+
+array([89, 90, 91, 92, 93, 94, 95, 96, 97, 98])
+```
