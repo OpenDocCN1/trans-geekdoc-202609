@@ -1,0 +1,210 @@
+
+- review questions, `review questions`, 543–548
+- slow, `slow`, 529–530
+- web application attacks, `web application attacks`, 512–526
+- Wi‑Fi, `Wi‑Fi`, 484–495
+- auditing, `auditing`, 93–95
+- authentication
+  - failures of, as one of OWASP top ten vulnerabilities, `failures of`, 514–515
+  - service enumeration and, `service enumeration and`, 236
+  - Wi‑Fi, `Wi‑Fi`, 477–478
+- authenticity, in Parkerian hexad, `authenticity`, 65
+- authority
+  - defined, `defined`, 562
+  - in theory of influence, `in theory of influence`, 437
+- authorized entities, `authorized entities`, 4
+- automating
+  - malware analysis, `malware analysis`, 370–371
+  - social engineering, `social engineering`, 461–464
+- `autoroute` module, `autoroute module`, 321–322
+- availability, in CIA triad, `availability`, 64
+- avoidance, of risk, `avoidance`, 69
+- AWS (Amazon Web Services), `AWS`, 49, 593–594, 616, 633, 639, 641
+- Azure Active Directory, `Azure Active Directory`, 622–623
+- Background Intelligent Transfer Service (BITS), `Background Intelligent Transfer Service (BITS)`, 325–326
+- badge access, `badge access`, 442–444
+- baiting, `baiting`, 447–448
+- bandwidth attacks, `bandwidth attacks`, 527–529
+- base service set identifier (BSSID), `base service set identifier (BSSID)`, 458–459, 477, 490
+- Beacon (Cobalt Stike), `Beacon (Cobalt Stike)`, 384
+- BeFF (Browser Exploitation Framework), `BeFF`, 492–493
+- Bell‑LaPadula model, `Bell‑LaPadula model`, 586
+- Berkeley Packet Filter (BPF), `Berkeley Packet Filter (BPF)`, 408–410
+- Berkeley Software Distribution (BSD), `Berkeley Software Distribution (BSD)`, 396
+- Biba, Kenneth, `Biba, Kenneth`, 585
+- Biba model, `Biba model`, 585
+- biometrics, `biometrics`, 445–446
+- birthday paradox, `birthday paradox`, 296, 569
+- BitLocker, `BitLocker`, 574
+- BITS (Background Intelligent Transfer Service), `BITS`, 325–326
+- black boxes, `black boxes`, 591
+- black hat, `black hat`, 4
+- black‑box testing, `black‑box testing`, 638
+- Blaster, `Blaster`, 343
+- blog storage, `blog storage`, 620
+- bluebugging, `bluebugging`, 498–499
+- bluedump, `bluedump`, 499
+- bluejacking, `bluejacking`, 498
+- bluesmack, `bluesmack`, 499
+- bluesnarfing, `bluesnarfing`, 498
+- Bluetooth
+  - about, `about`, 495–496
+  - bluebugging, `bluebugging`, 498–499
+  - bluedump, `bluedump`, 499
+  - bluejacking, `bluejacking`, 498
+  - bluesmack, `bluesmack`, 499
+  - bluesnarfing, `bluesnarfing`, 498
+  - scanning, `scanning`, 496–498
+- botnet, `botnet`, 344
+- BPF (Berkeley Packet Filter), `BPF`, 408–410
+- bring your own device (BYOD), `bring your own device (BYOD)`, 483–484
+- Broadcom, `Broadcom`, 487
+- Browser Exploitation Framework (BeFF), `Browser Exploitation Framework (BeFF)`, 492–493
+- brute force zone transfers, `brute force zone transfers`, 137–138
+- `brute_dirs` module, `brute_dirs module`, 265
+- BSD (Berkeley Software Distribution), `BSD`, 396
+- BSSID (base service set identifier), `BSSID`, 458–459, 477, 490
+- `btscanner` program, `btscanner program`, 496–497
+- buffer overflow, `buffer overflow`, 532–534
+- built‑in utilities, `built‑in utilities`, 243–247
+- Burp Suite, `Burp Suite`, 636–637
+- bus network, `bus network`, 24–25
+- Business Logic layer, in n‑tier application design, `Business Logic layer`, 590
+- BYOD (bring your own device), `BYOD`, 483–484
+- bytes, `bytes`, 34, 564
+- C, Python compared with, `C`, 372–374
+- CA (certificate authority), `CA`, 562–568
+- cacheability, of applications, `cacheability`, 635
+- caching DNS, `caching DNS`, 132
+- CAM (content‑addressable memory), `CAM`, 30–31
+- canonical name (CNAME) records, `canonical name (CNAME) records`, 132, 138
+- captive portal, `captive portal`, 459
+- Cascading Style Sheets (CSS), `Cascading Style Sheets (CSS)`, 517
+- `cat` command, `cat command`, 522
+- `cat /etc/shadow` command, `cat /etc/shadow command`, 295
+- catastrophizing, `catastrophizing`, 67
+- CBC (Cipher Block Chaining), `CBC`, 557
+- C&C (command‑and‑control infrastructure), `C&C`, 344, 382–383
+- CDIs (Constrained Data Items), 587
+- Censys.io, 646
+- certificate authority (CA), 562–568
+- certificate revocation lists (CRLs), 565
+- certificates, 562
+- certification rules (CRs), 587
+- CGI (common gateway interface) model, 523–524
+- ChaCha20, 236
+- Chaos Computer Club, 8
+- Checksum field, 33, 39
+- CIA triad
+  - about, 61
+  - availability, 64
+  - confidentiality, 61–62
+  - integrity, 63–64
+  - Parkerian hexad, 65
+- Cialdini, Robert, 436–437
+- CIDR (Classless Inter‑Domain Routing) notation, 36, 169
+- CIFS (Common Internet File System), 13
+- CIM (computer‑integrated manufacturing), 654
+- Cipher Block Chaining (CBC), 557
+- ciphersuite, 556–557
+- Cisco, 122
+- Clark‑Wilson Integrity Model, 586–587
+- classification, of data, 582–584
+- Classless Inter‑Domain Routing (CIDR) notation, 36, 169
+- `clearev` command, 329
+- clearing Event Viewer, in Meterpreter, 329
+- client‑server architecture, 634
+- client‑side vulnerabilities, 305–307
+- cloning, 454–457
+- cloud computing
+  - about, 46–47, 612–616, 655–656
+  - answers to review questions, 695–697
+  - architectures, 625–631
+  - cloud services, 616–621
+  - common threats, 639–645
+  - deployment, 631–633
+  - grid computing, 624–625
+  - infrastructure as a service (IaaS), 48–49
+  - Internet of Things (IoT), 53
+  - operational technology, 652–655
+  - platform as a service (PaaS), 49–51
+  - public compared with private cloud, 623
+  - REST, 633–638
+  - review questions, 657–661
+  - shared responsibility model, 621–623
+  - software as a service, 51–53
+  - storage as a service (StaaS), 47–48
+- cloud‑based applications, 593–595
+- CloudFormation, 633
+- cloud‑native design, 629–631
+- CNAME (canonical name) records, 132, 138
+- Cobalt Stike's Beacon, 384
+- Code Red, 343
+- Collection stage, in MITRE ATT&CK framework, 11, 74–75
+- collision, 295–296, 569
+- colon (:), 35
+- Command and Control stage
+  - in Lockheed Martin Cyber Kill Chain, 602
+  - in MITRE ATT&CK framework, 8, 11, 75
+- command injection, 521–522
+- command‑and‑control infrastructure (C&C), 344, 382–383
+- commitment, in theory of influence, 437
+- common gateway interface (CGI) model, 523–524
+- Common Internet File System (CIFS), 13
+- Common Object Request Broker Architecture (CORBA), 237
+- common off‑the‑shelf (COTS) malware, 8
+- Common Vulnerabilities and Exposures (CVE), 181
+- communication models, 19–24
+- companies, open source intelligence (OSI) and, 103–104
+- Complete Mission stage, in life cycle, 10, 536
+- computer‑integrated manufacturing (CIM), 654
+- Confidential classification, 583
+- confidentiality, in CIA triad, 61–62
+- Constrained Data Items (CDIs), 587
+- contact spamming, 452
+- container, 592–593
+- content‑addressable memory (CAM), 30
+- \[分类，\] 582–584
+- \[隐藏，\] 219, 330–332
+- \[完整性，\] 515, 585
+- \[伪造，\] 219
+- \[静态数据，\] 572
+- \[数据泄露，\] 641–642
+- \[数据加密标准 (DES)，\] 555–556
+- \[数据处理，\] 642
+- \[数据层 (n‑tier 应用设计)，\] 590
+- \[数据链路层 (OSI 模型)，\] 22
+- \[数据偏移字段，\] 38
+- \[数据库，\] 595–598
+- \[DDoS (分布式拒绝服务)，\] 528–529
+- \[去认证攻击，\] 489–491
+- \[调试，动态分析和，\] 366–370
+- \[使用过时且弱化的 RSA 加密 (DROWN)，\] 181
+- \[深度包检查 (DPI)，\] 78–79
+- \[防御规避阶段，\] 11, 74
+- \[防御‑在‑深度 方法，\] 89–90, 538–540
+- \[防御‑在‑深度 方法，\] 87–89, 538–540
+- \[可防御的网络架构，\] 90–91, 540–542
+- \[DELETE 方法，\] 631, 635
+- \[传输，\] 8
+- \[传输阶段，\] 602
+- \[非军事区 (DMZ)，\] 44–45, 88, 89, 539, 654
+- \[拒绝服务 (DoS) 攻击\]
+  - \[关于，\] 64, 526
+  - \[带宽攻击，\] 527–529
+  - \[老旧，\] 531
+  - \[慢速攻击，\] 529–530
+- \[部署，云，\] 625–638
+- \[DES (数据加密标准)，\] 555–556
+- \[目标地址字段，\] 33
+- \[目标端口字段，\] 37
+- \[检测函数，\] 600
+- \[检测\]
+  - \[保护和，\] 223–224
+  - \[嗅探器，\] 410–412
+  - \[伪造，\] 426–428
+- \[设备，\] 646
+- \[DevOps，\] 90
+- \[DevSecOps，\] 90
+- \[DHCP (动态主机配置协议)\]
+  - \[饥饿攻击，\] 424–426
