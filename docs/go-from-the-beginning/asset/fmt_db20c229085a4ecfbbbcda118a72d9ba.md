@@ -1,0 +1,35 @@
+
+ 1 package main
+ 2 
+ 3 import (
+ 4  "fmt"
+ 5  "log"
+ 6  "regexp"
+ 7 )
+ 8 
+ 9 func main() {
+10  var url string
+11  fmt.Println("Type URL: ")
+12  fmt.Scan(&url)
+13 
+14  r, err := regexp.Compile(`^(?P<protocol>\w+):\/\/(?P<domain>\w+\.\w+)\/(?P<route>\w+
+15 +)\/?`)
+16  if err != nil {
+17   log.Fatal("Error compiling: ", err)
+18  }
+19  m := r.FindStringSubmatch(url)
+20  if m == nil {
+21   panic("mo match")
+22  }
+23  result := make(map[string]string)
+24  for i, name := range r.SubexpNames() {
+25   if i != 0 && name != "" {
+26    result[name] = m[i]
+27   }
+28  }
+29  fmt.Println("The URL consist of:")
+30  fmt.Println(result["protocol"])
+31  fmt.Println(result["domain"])
+32  fmt.Println(result["route"])
+33 }
+ 4
