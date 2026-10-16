@@ -1,0 +1,15 @@
+A common algorithm used for building VFM models is the ANN which could create a function originating from the inputs that connect them to the final output. Generally, an ANN consists of an input layer to read the input features which usually are pressure, temperature, choke opening, or other production system parameters in the case of a VFM.
+
+The second component of the ANN is the hidden layer where non linear functions are created to build the connection between the inputs and the prediction and the final component is the output layer where the results achieved in the hidden layers go through an activation function to reach the final prognosis. The ANN showed significant results when applied to a steady state flow unlike the case of transient movement.
+
+Al-Qutami et al. (2017) showed in three publications the application of ANN in constructing a VFM model (Al-Qutami et al., 2017, 2017, 2017). Their work provides a significant sighting to improve VFM models. The latest methodology applied in their research was an ANN model was trained using the Levenberg-Marquardt optimisation algorithm and K-fold cross-validation to specify the number of neurons. This work was able to conclude that the gas flow rate is most sensitive to choke opening and that the bottom hole pressure is the most critical feature for the flow rate prediction.
+
+Loh and Omrani (2018) implemented feed-forward neural networks on simulated and field data to predict oil and gas flow rates. The results showed that the NN model was effective at steady state flow while the model produced transient flow imprecise predictions. Furthermore, they conducted a sensitivity study on the input features that showed that the NN model was able to perform well even in case of noisy inputs. Finally, they introduced a new back-allocation technique to predict the flow rate using separator measurements.
+
+Alajmi et al. (2015) introduced an NN model to predict the oil flow rate through the choke and they added the empirical correlation for critical choke flow to the input features. The study demonstrated a noticeable enhancement in the NN model performance compared to the mechanic models.
+
+To conclude in this section, we have reviewed the main building blocks of creating VFMs. It started with data gathering, preprocessing, and feature engineering. We have also presented the validation techniques. Finally, we also presented some NN applications to VFM as an example for the algorithms used for data-driven VFMs.
+
+# 5. Field Experience with a Data-driven VFM System
+
+In the pursuit of VFMs, several industrial and research works were published. In this section, we focus on highlighting the industrial applications that show a bench marking or a commercial tool. Among the available industrial works available Denny et al. (2013) reported the importance of integrating VFM

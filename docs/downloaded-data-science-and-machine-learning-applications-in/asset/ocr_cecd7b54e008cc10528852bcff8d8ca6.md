@@ -1,0 +1,5 @@
+...Table 10.2 contd.
+
+| Author(s) | Input Variables | Predicted Output | Model Used | Activation Functions | Output | Statistical Measures | Remarks |
+|---|---|---|---|---|---|---|---|
+| Moghadasi et al. (2017) | Well logs (GR, NPHI, DT, Calliper, ILD, RHOZ, Sw, Vsh), lithology, Core data | Porosity and Permeability | Artificial Neural Network (ANN), Principal Component Analysis (PCA)-ANN, Statistical ANN based on bagging approach | Levenberg-Marquardt Optimization Algorithm | Results indicated that the statistical ANN had an improved quality as compared to those obtained from both PCA-based ANN and the classical ANN models. | Classical Neural Network<br>Porosity<br>R² = 73.7%, MSE = 0.0089<br>Permeability<br>R² = 72.2%, MSE = 0.0074<br>PCA based ANN<br>Porosity<br>R² = 79.8%, MSE = 0.0085<br>Permeability<br>R² = 74.1%, MSE = 0.0092<br>Bagged ANN<br>Porosity<br>R² = 94%, MSE = 0.001<br>Permeability<br>R² = 85%, MSE = 0.0034 | Even though the bagging ANN approach can optimize the ANN model, its performance is heavily dependent on the decision criteria, which is often difficult to determine |

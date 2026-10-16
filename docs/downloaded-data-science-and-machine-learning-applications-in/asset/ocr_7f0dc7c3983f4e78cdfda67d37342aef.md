@@ -1,0 +1,11 @@
+# # CHAPTER 1
+
+# ## Introduction
+
+> > “Data is the new oil”—this buzz phrase has become a ubiquitous adage in today’s digital age. Data science and machine learning have become indispensable tools for extracting insights and value from vast amounts of data. The field of subsurface engineering is no exception to this trend, and this book brings together a collection of chapters from experts in this field, exploring various data science and machine learning applications in subsurface engineering.
+
+In this book, we delve into the potential of these technologies for subsurface engineering, including topics such as data-driven reservoir characterisation, machine learning in drilling operations, and computer vision application in seismic image processing and interpretation. The book is divided into several chapters, each offering a unique perspective and case studies on the different applications of data science and machine learning in subsurface engineering.
+
+Chapter 2 focuses on predicting drilling fluid loss in the Marun oil field using machine learning models. The research begins by assessing the importance of input features through model agnostic metrics. Once a suitable dataset is established, several machine learning models will be used, with the best-performing one optimised using the Bayesian Optimisation algorithm. This research aims to generate new insights into the generalisation of individual features to explain the target. The study’s main contributions are twofold. Firstly, it provides a global explanation of variables in mud-loss prediction using explainable artificial intelligence (AI). Secondly, it develops a machine learning workflow that utilises explainable AI to enhance drilling fluid lost circulation prediction. Overall, this research offers valuable insights into applying machine learning to subsurface engineering, and the potential benefits of explainable AI in improving drilling fluid loss prediction.
+
+Chapter 3 describes a study aimed at developing an AI-based model that can predict porosity and producible pore volume fraction using wireline logs and NMR-measured total porosity and free fluid index. Wireline logs are

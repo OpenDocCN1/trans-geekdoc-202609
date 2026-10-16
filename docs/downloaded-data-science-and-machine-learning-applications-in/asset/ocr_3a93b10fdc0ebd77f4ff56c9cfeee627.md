@@ -1,0 +1,2 @@
+| Mohamed et al. 2022 | T₂ logarithmic mean, T₂ peak, T₂ components range and T₂ component range index | Permeability | Feed-forward Backpropagation Neural Network, Cascade-forward Neural Network, Elman Neural Network, Pattern Recognition Neural Network and Distributed Delay Neural Network | Bayesian Regularisation | Results show that the Elman Neural Network had the best prediction of permeability | The model had the highest prediction of 0.99 correlation coefficient and 0.88 R2 as compared with the other methods | |
+|---|---|---|---|---|---|---|---|

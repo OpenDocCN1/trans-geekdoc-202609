@@ -1,0 +1,12 @@
+Table 3.1. Summary of MICP and NMR techniques identifying key advantages, limitations, and measurement principles.
+
+| Technique | Measurement Principle | Developed by | Advantages | Limitations | Observations |
+|---|---|---|---|---|---|
+| Mercury Injection Capillary Pressure (MICP) | Injects mercury into the pore structure at a given pressure, and the amount of mercury that can be injected into the pore structure is directly related to the proportion of free fluid in the reservoir. | Purcell (1949) | Accurate measurement of free fluid volume (FFV) | Requires a core sample | MICP is considered one of the most accurate and reliable methods for measuring FFV, but it is a destructive method. |
+| Nuclear Magnetic Resonance (NMR) | Uses magnetic fields and radio waves to obtain detailed images of the fluid distribution within the reservoir. | (Bloch, 1946) | Provides detailed images of the pore structure and fluid distribution within the reservoir. | Not able to provide quantitative measurements of pore types and sensitive to the presence of clay minerals. | NMR imaging is particularly useful for complex pore structures and can provide information on the distribution of multiple fluid phases. |
+
+Overall, understanding pore volume fraction is crucial for effective reservoir management and optimisation. However, accurately measuring and determining porosity and its associated producible volume can be challenging due to the complexity of the pore structure and the limited availability of core samples.
+
+The measurement of pore volume fraction is complicated and challenging. Many researchers in this discipline are always experimenting with new ideas and methodologies. Many researchers have been drawn to estimate pore volume fractions and total porosity using NMR data over the last two decades. This preference for NMR is owing to its non-invasive nature (Otchere et al., 2022a). Artificial intelligence (AI) can potentially revolutionise how pore volumes are predicted in reservoirs. One potential application is using AI to predict pore volumes measured by NMR, using wireline logs as input.
+
+Conventional wireline logs are ubiquitous in all wells drilled and provide essential information on the formation properties of the reservoir. These logs exhibit an intricate and nonlinear correlation with the distribution of pore volume fractions. On the other hand, NMR measurements provide information on the fluid distribution within the pore structure. Nonetheless, this approach

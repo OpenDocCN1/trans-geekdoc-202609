@@ -1,0 +1,7 @@
+![](bbox=[0.2, 0.12, 0.85, 0.55])
+
+Fig. 7.3. Low and high salinity water and oil relative permeability curves (set #1 is for the original relative permeability plot while set #2 is for the LSW relative permeability plot).
+
+carbonates with SO₄²⁻ simple relative permeability interpolation. The component wizard used linear interpolation for SO₄²⁻ concentration to effect the change.
+
+Upon completion of the reservoir simulation model, well completion procedures were implemented. In this study, we determined that the inverse five-spot pattern was the most optimal approach for the reservoir simulation. To achieve maximum effectiveness, it was ensured that all six grid layers were perforated for both production and injection wells, with vertical wells for efficient oil extraction. The placement of the injection well in the central location allowed for efficient fluid sweep throughout the reservoir, moving the oil towards the production wells situated at the corners, resulting in a high areal sweep efficiency. The sweeping motion of the injected fluid played a significant role in improving oil recovery in the reservoir. The implementation of the inverse five-spot pattern and vertical wells in all six grid layers of the model enabled efficient extraction of the oil.
