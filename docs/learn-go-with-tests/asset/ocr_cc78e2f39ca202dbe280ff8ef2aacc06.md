@@ -1,0 +1,3 @@
+**TDD's main purpose is to provide feedback on your design.** For the millionth time, listen to your tests, they are reflecting your design back at you.
+
+Be honest about the quality of your tests by listening to the feedback they give you, and you'll become a better developer for it.

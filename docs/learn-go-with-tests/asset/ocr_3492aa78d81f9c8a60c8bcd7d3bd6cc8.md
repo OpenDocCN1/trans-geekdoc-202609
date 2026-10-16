@@ -1,0 +1,1 @@
+Ruby on Rails shop, but because it is server-side, we can use it with Go.

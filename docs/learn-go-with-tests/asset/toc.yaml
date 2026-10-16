@@ -1,0 +1,10 @@
+- - '###'
+  - github.com/quii/learn-go-with-tests/generics
+- - '###'
+  - github.com/quii/learn-go-with-tests/json-and-io/v4
+- - '###'
+  - github.com/quii/learn-go-with-tests/command-line/v2
+- - '##'
+  - 先编写测试
+- - '##'
+  - 尝试运行测试

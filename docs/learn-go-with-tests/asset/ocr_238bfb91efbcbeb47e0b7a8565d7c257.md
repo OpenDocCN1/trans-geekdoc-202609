@@ -1,0 +1,1 @@
+By separating the concerns and using existing abstractions within Go testing our important business logic is a breeze.
