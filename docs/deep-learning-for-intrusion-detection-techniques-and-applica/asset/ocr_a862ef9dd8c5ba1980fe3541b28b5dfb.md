@@ -1,0 +1,13 @@
+handwriting recognition, feature learning, social network filtering, machine translation, dimensionality reduction, and intrusion detection.
+
+With reference to network intrusion detection systems (NIDSs), DL provides significant benefits over conventional ML techniques. Initially, DL models may acquire intricate features from unprocessed data on their own, doing away with the necessity for human feature engineering. Because NIDS applications frequently work with high-dimensional data, this feature is particularly helpful. Second, DL models are more resilient to data noise and outliers, which is important for NIDSs that regularly deal with imperfect and noisy data. Last but not least, DL makes it possible to create innovative NIDS strategies like hybrid and anomaly detection.
+
+# 4.4 Deep Learning Algorithms
+
+DL architectures are revolutionizing NIDSs by tackling limitations inherent in traditional methods. These powerful models, driven by ANNs, automatically extract intricate features from raw network traffic, capturing complex relationships and nuances beyond the reach of statistical or rule-based approaches. This enables DL to detect not just known attack signatures, but also subtle anomalies and even zero-day threats before they wreak havoc. Therefore, several recent studies have explored innovative approaches for network intrusion detection using DL techniques.
+
+DL models applied in IDSs include DNNs, deep belief networks (DBNs), convolutional neural networks (CNNs), recurrent neural networks (RNNs), long short-term memory (LSTM) networks, and AEs.
+
+# 4.4.1 Deep Neural Networks (DNNs)
+
+DNNs are a class of ANNs with multiple layers of neurons, enabling them to learn complex nonlinear relationships in data. In network anomaly detection, DNNs are effective at extracting and analyzing features from raw network traffic to identify irregularities. Their ability to model intricate patterns makes them well-suited for detecting subtle anomalies that simpler models might overlook. For example, Amarasinghe et al. introduced a supervised learning IDS utilizing DNNs, which increases user trust by producing feedback on the decision-making produced by IDSs [22]. This plan produces online feedback throughout the deployment phase and offline feedback following the training phase. The Network Security Laboratory – Knowledge Discovery in Databases (NSL-KDD) is used to assess this strategy in order to detect two distributed denial of service (DDoS) and probe attacks with varying depths. The authors demonstrated how the user can add an additional layer of evaluation using their generated input.

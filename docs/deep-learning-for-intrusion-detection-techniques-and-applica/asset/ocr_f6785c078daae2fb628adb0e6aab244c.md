@@ -1,0 +1,13 @@
++   - **Long Short-Term Memory (LSTM) networks**, a kind of RNN, are particularly suited to discovering long-term dependencies in time series. For example, with regard to smart environments, LSTMs can learn complex temporal patterns, like user behavior in smart homes, device interaction in industrial settings, or environmental changes in smart cities. Because LSTMs can “remember” previous states over long periods of time, they are very valuable for detecting anomalies that creep up gradually or have long-run effects, such as gradual cyberattacks or system failure unfolding over time.
+
+For instance, when it is a smart home, using an LSTM model, house members can be continuously monitoring their activity of turning off or on the lights, unlocking or locking doors, or adjusting the thermostats. Upon such a point where actions tend to behave far away from the previous normal trends of behavior—it may have sent an alarm in real time, the system having sensed that somebody has unlocked a door at inconvenient hours or somebody had turned off lights in an empty dwelling.
+
+Real-time anomaly detection in smart environments is important not only for the identification of security threats but also for the continued operation of the system. A deep learning-based system capable of real-time analysis ensures that anomalies are detected and addressed as soon as they occur, preventing more serious issues from developing.
+
+# 9.8.3 Intrusion Detection Systems (IDSs) Using Deep Learning
+
+IDS stands for an intrusion detection system that monitors network traffic and system behavior to detect signs of unauthorized access or malicious activity [20]. Deep learning enhances traditional IDS through better accuracy and adaptability as detailed below:
+
++   - **Improved Detection Accuracy:** Traditional IDSs usually work on signature-based methods which are limited to known attack patterns. Deep learning models may identify novel attack patterns as they learn from large datasets of both normal and malicious activity.
++   - **Adaptability to New Threats:** Moreover, as smart environments are always adapting, new kinds of attacks emerge. Deep learning systems can learn and adapt in real time; therefore, their capability to recognize zero-day threats can also be improved.
++   - **Network Traffic Analysis:** Deep learning models can analyze network traffic at multiple layers of abstraction to detect high-level attack strategies, such as distributed DoS attacks, and low-level intrusions, like port scanning or malware.

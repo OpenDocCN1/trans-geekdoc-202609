@@ -1,0 +1,11 @@
+![](bbox=[0.1, 0.13, 0.92, 0.38])
+
+Figure 10.6 Architecture of CNN. Source: Ref. [21] / with permission of Springer Nature.
+
+recognize temporal relationships. RNNs, unlike feed-forward networks, possess looping connections that assist them in remembering past inputs, and therefore, they are best suited for context-requiring tasks. RNNs can handle sequences that are best suited for time-series forecasting, language modeling, and speech recognition tasks due to their recursive nature. Nevertheless, the capacity of normal RNNs to learn long-term dependencies is poor. This weakness is circumvented by LSTM and GRU architecture, which enhances RNNs’ capacity to handle and learn sequential input.
+
++   - **Input Layer:** The layer is presented with the first piece of sequence data. In each step, data is fed to the network as shown in Figure 10.7. The input can be a single value, a vector, or a more complex data structure.
++   - **Hidden Layer:** The core of the RNN, consisting of connected neurons. Each neuron is presented with the current input and the previous deep layer’s state. This “state” holds the network’s memory of the previous inputs and allows it to understand the current element in context. This process allows the RNN to remember and pass relevant information across time and allows it to simulate long-term dependencies.
++   - **Activation Function:** This function introduces nonlinearity into the network, allowing it to learn intricate patterns. It transforms the combined input from the current input layer and the previous hidden layer state before passing it. Some of them include sigmoid, tanh, and ReLU functions.
++   - **Output Layer:** This layer provides the network’s prediction based on the processed data. The output can be a classification, regression, or another sequence.
++   - **Recurrent Connection:** An important feature of RNNs is the recurrent connection within the hidden layer. This connection enables the network to transmit concealed state information (the network’s memory) to the following time step. This establishes a loop inside the network, allowing it to sustain an internal state that includes information from prior inputs.

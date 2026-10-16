@@ -1,0 +1,5 @@
+UNSW-NB15 dataset, SCRS Conference Proceedings on Intelligent Systems, pp. 483–494.
+27 Kasongo, S.M. (2023). A deep learning technique for intrusion detection system using a Recurrent Neural Networks based framework. Computer Communications 199: 113–125.
+28 Dina, A.S. and Manivannan, D. (2021). Intrusion detection based on machine learning techniques in computer networks. Internet of Things 16: 100462.
+29 Umer, M., Sadiq, S., Karamti, H. et al. (2022). Deep learning-based intrusion detection methods in cyber-physical systems: challenges and future trends. Electronics 11 (20): https://doi.org/10.3390/electronics11203326.
+30 Asharf, J., Mustafa, N., Khurshid, H. et al. (2020). A review of intrusion detection systems using machine and deep learning in internet of things: challenges, solutions and future directions. Electronics 9: https://doi.org/10.3390/electronics9071177.

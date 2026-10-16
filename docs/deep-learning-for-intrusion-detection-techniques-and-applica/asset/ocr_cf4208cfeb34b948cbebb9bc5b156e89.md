@@ -1,0 +1,15 @@
+Moreover, feature extraction and selection address common issues such as **overfitting**, where models memorize the training data instead of learning generalizable patterns [10]. High-dimensional datasets increase the risk of overfitting by introducing noise and irrelevant information. By focusing on the most impactful features, these techniques improve the model's ability to generalize to unseen data, ensuring reliable performance across varied environments.
+
+In essence, feature extraction and selection serve as foundational processes that not only boost the accuracy of IDSs but also ensure their efficiency and scalability. These techniques empower IDS to handle complex and evolving cyber threats, making them indispensable in modern cybersecurity frameworks.
+
+# 7.1.5 Challenges in Managing High-Dimensional Data in IDSs
+
+Handling high-dimensional data in IDSs presents several challenges, particularly concerning computational demands, model performance, and data sparsity. Network traffic datasets, for instance, often comprise an extensive array of attributes—ranging from packet headers to user session metadata—resulting in thousands of dimensions. Effectively managing this deluge of features is critical to ensuring IDS models remain efficient and accurate [9].
+
+One prominent issue is the curse of dimensionality, a phenomenon where the data becomes increasingly sparse as the number of features grows. This sparsity complicates the task of detecting meaningful patterns, as the data points are spread thinly across the high-dimensional feature space. Consequently, deep learning models may struggle to generalize, often resorting to overfitting—memorizing training data instead of learning patterns that apply to unseen data.
+
+Moreover, the computational cost of processing high-dimensional datasets is substantial. As the number of features increases, so does the complexity of the algorithms, leading to longer training times and higher resource consumption. For real-time IDS applications, where swift threat detection is paramount, such delays can render the system ineffective.
+
+Data sparsity further exacerbates these challenges. Many features in high-dimensional datasets may hold little to no useful information, yet they contribute to the computational burden and risk of overfitting. This inefficiency underscores the need for dimensionality reduction techniques that prioritize relevant features while discarding redundant or irrelevant ones.
+
+To mitigate these issues, techniques like PCA and linear discriminant analysis (LDA) are widely employed. PCA transforms high-dimensional data into a smaller set of uncorrelated features by capturing the directions of maximum variance, while LDA selects features that best separate the classes of interest. These methods help retain critical information while reducing dimensionality, enabling models to process data more efficiently and effectively.

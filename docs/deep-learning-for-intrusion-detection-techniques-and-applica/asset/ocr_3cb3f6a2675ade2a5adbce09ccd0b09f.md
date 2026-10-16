@@ -1,0 +1,13 @@
+There methodologies applied for intrusion detection are categorized into three major categories: (a) signature-based detection (SD) (also known as knowledge-based detection or misuse detection), (b) anomaly-based detection (AD), and (c) stateful protocol analysis (SPA) [18].
+
++   a) SD uses known attacks and threats to study the patterns that act like a signature, the process compares patterns against captured events to identify possible intrusions.
++   b) AD focuses on normal or expected behaviors as against the known behaviors and monitors regular activities, network connections, users, and hosts over a span of time. The profiles monitored can be static or dynamic and developed from many attributes, like failed login attempts, the count of e-mails sent, and processor usage. Attempted break-ins, penetration by legitimate users, masquerading, DOS, Trojan horse, etc. are a few examples of AD. To recognize significant attacks, it compares normal profiles with events observed. As it studies behaviors, it is also called “behaviour-based detection” by some scholars.
++   c) SPA is considered to be the most powerful detection method, it acts on different layers like the network layer, application layer, and transport layer. “It uses the predefined vendors specification settings to detect the deviations of appropriate protocols and applications” [10]. Stateful indicates its ability to know and trace the protocol states like pairing requests with replies. The SPA network protocol models are originally based on protocol standards from international standard organizations, e.g., IETF. It is also known as specification-based detection [20].
+
+For extensive and accurate detection, IDSs apply multiple methodologies, and these methodologies complement each other.
+
+# 5.6 Deep Learning for Intrusion Detection
+
+IPS issues false positive and false negative alerts. False positive alerts are an alarm identifying an event in IDS that is not an attack. False negative alerts do not produce any alarm even though there is an attack; a common flaw in it is that it cannot offer accurate detection and is ineffective for the attacks of the present day [21].
+
+To identify intrusions in networks, the intrusion detection method uses software and hardware. The data available online are used to extract features for classification-based intrusion detection models. ML methods—supervised and unsupervised, and DL models—are frequently utilized in IDSs. Hybrid techniques developed by scholars combining algorithms like support vector machines (SVM), particle swarm optimization (PSO), and k nearest neighbor (KNN) have enhanced the efficiency of IDSs enhancing the performance of ML models. The NSLKDD enhancing the performance of ML models. The NSLKDD

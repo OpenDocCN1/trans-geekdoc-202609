@@ -1,0 +1,12 @@
+# 6.3 Dataset Properties
+
+For facilitating direct comparison between intrusion detection datasets, to aid researchers in choosing appropriate datasets for specific evaluation needs, it is essential to establish common properties as a foundation for assessment. In this regard, key dataset characteristics are frequently referenced in the literature to evaluate intrusion detection datasets. The FAIR principles [8] provide a general framework for scholarly data, emphasizing four key attributes: findability, accessibility, interoperability, and reusability.
+
+# 6.3.1 Basic Information
+
+The following four properties represent general details about the dataset, including its availability, year of creation, and the inclusion of both malicious and normal network traffic.
+
++   1) **Year of Creation:** The relevance of an intrusion detection dataset depends significantly on its age, as network traffic evolves over time and new attack scenarios emerge on a daily basis. This property indicates the year the dataset’s underlying network traffic was captured, which is often more critical for assessing its relevance than the year of publication.
++   2) **Public Availability:** For effective comparison of different intrusion detection methods, datasets should be publicly accessible. Public availability also ensures that third parties can independently verify the dataset’s quality. This property is classified into three categories: “yes” (freely available), “or” (on request, requiring a message to the authors or responsible parties), and “no” (not publicly accessible).
++   3) **Normal Traffic:** This attribute determines whether a dataset contains regular user activity, classified as either “yes” or “no.” A “yes” value confirms the presence of normal user behavior but does not specify if attack data is included. The effectiveness of an IDS relies on distinguishing between normal and malicious activities, making the inclusion of typical user behavior crucial for evaluating detection accuracy and false alarm rates. However, datasets without normal traffic can still be utilized by merging them with other datasets or integrating real-world network data through techniques like overlaying or salting [9, 10].
++   4) **Attack Traffic:** Intrusion detection datasets should encompass a variety of attack scenarios. This property specifies whether malicious network traffic is included and is marked as “yes” if at least one attack is present in the dataset.
