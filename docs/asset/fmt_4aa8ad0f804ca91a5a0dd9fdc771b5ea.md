@@ -1,0 +1,122 @@
+
+best effect for FR, has the minimum variance, can effectively improve the generalization ability and has high stability.
+
+## Experiment 9
+
+In this experiment, in order to validate the performance of the proposed algorithm with some other methods such as BP, HBPNNs, RBF, HRBFNNs, SVM and MCDFC.
+
+**Table 3**. Average recognition rates of different recognition methods
+
+**Table 4**. Recognition rates of different recognition methods for 20 times
+
+**Table 5**. Average recognition rates and variances of different recognition methods.
+
+本书版权归 Arcler 所有
+
+![Image 1642](img/index-355_1.jpg)
+
+![Image 1643](img/index-355_2.png)
+
+![Image 1644](img/index-355_3.png)
+
+![Image 1645](img/index-355_4.png)
+
+Hierarchical Representations Feature Deep Learning for Face Recognition 329
+
+**Figure 16**
+
+In the experiment we set up different hidden layers and each hidden layer with different neurons. The architecture of DBNESR is similar with DBN, but with a different loss function introduced for supervised learning stage.
+
+For greedy layer-wise unsupervised learning we train the weights of tuning supervised learning for the different epochs.
+
+All DBNESR structures and learning epochs used in this experiment are separately shown in Table 6. The number of units in input layer is the same as the feature dimensions of the dataset.
+
+Almost all the recognition rates of these DBNESR structures are more than 90%, in particular the effects of the models of 500-1000-40 and 1000-500-40 are best and most stable.
+
+Therefore, the DBNESR structures used in this experiment are 1000-500-40, which represents the number of units in output layer is 40, and in 2 hidden layers are 1000 and 500 respectively.
+
+The learning rate is set to dynamic value, which the initial learning rate is set to 0.1 and becomes smaller as the training error becoming smaller. The experimental results are shown in Table 7, Table 8 and in Figures 17-19.
+
+本书版权归 Arcler 所有
+
+![Image 1646](img/index-356_1.png)
+
+![Image 1647](img/index-356_2.png)
+
+![Image 1648](img/index-356_3.png)
+
+![Image 1649](img/index-356_4.png)
+
+![Image 1650](img/index-356_5.png)
+
+![Image 1651](img/index-356_6.png)
+
+Deep Learning Algorithms
+
+330
+
+**Table 6**. Different hidden layers of DBNESR and learning epochs used in this experiment
+
+**Table 7**. Recognition rates of different recognition methods for 20 times
+
+**Table 8**. Average recognition rates and variances of different recognition methods
+
+本书版权归 Arcler 所有
+
+![Image 1652](img/index-357_1.jpg)
+
+![Image 1653](img/index-357_2.jpg)
+
+![Image 1654](img/index-357_3.png)
+
+![Image 1655](img/index-357_4.png)
+
+![Image 1656](img/index-357_5.png)
+
+Hierarchical Representations Feature Deep Learning for Face Recognition 331
+
+**Figure 17**
+
+**Figure 18**. The bar charts of average recognition rate of different recognition methods.
+
+本书版权归 Arcler 所有
+
+![Image 1657](img/index-358_1.jpg)
+
+![Image 1658](img/index-358_2.png)
+
+![Image 1659](img/index-358_3.png)
+
+![Image 1660](img/index-358_4.png)
+
+Deep Learning Algorithms
+
+332
+
+**Figure 19**. The bar charts of variance of different recognition methods.
+
+As shown in Table 7, Table 8 and in Figures 17-19, our proposed rates of DBNESR is highest and most stable, namely there is the largest average recognition rate and the smallest variance.
+
+## CONCLUSION
+
+The conducted experiments validate that the proposed algorithm DBNESR is optimal for face recognition with the highest and most stable recognition rates, that is, it successfully implements hierarchical representations’ feature deep learning for face recognition. You can also be sure that it reflects hierarchical representations of feature by DBNESR in terms of its capability of modeling other artificial intelligent tasks, which is also
+
+HBPNNs and WT + PCA + HBPNNs. The experiment is repeated many times and takes the average recognition rate. The experimental results are shown in Table 1. As shown in Table 1, Recognition rates of HBPNNs are
+
+HBPNNs) recognition rates of the methods based on WT + PCA are higher than them based on PCA.
+
+## Experiment 6
+
+This experiment compares the recognition rate of the methods respectively based on WT + 2D-PCA + RBF and WT + 2D-PCA + HRBFNNs. The experiment is repeated for many times and takes the average recognition rate. The experimental results are shown in Table 2.
+
+As shown in Table 2, Recognition rates of HRBFNNs are improved very greatly being compared to RBF. Therefore, HRBFNNs being used for FR is more feasible.
+
+## Experiment 7
+
+“One-Against-the Rest” for the experiment and choose the method with experiment is repeated for 20 times and takes the average recognition rate.
+
+The experimental results are shown in Table 3.
+
+As shown in Table 3, “One-Against-the Rest” SVM has higher recognition rate than “One-Against-the-Rest” SVM and at the same time has lower wrong number. Therefore, we use the way of “One-Against-One” to reconstruct the
+
+## Experiment 8
