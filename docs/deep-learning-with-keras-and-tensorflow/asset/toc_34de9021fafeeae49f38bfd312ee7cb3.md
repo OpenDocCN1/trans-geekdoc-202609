@@ -1,0 +1,561 @@
+## 作者：Valerio Maggio
+## 联系方式：
+## 第一部分：简介
+## 第二部分：监督学习
+## 第三部分：无监督学习
+## 第四部分：循环神经网络
+## 第五部分：附加材料
+## 要求
+## 测试一切是否正常运行
+## optional
+## 如果目前为止一切正常，您就可以开始了！
+## 1.1 简介 - 深度学习与人工神经网络
+## 深度学习简介
+## 构建模块：人工神经网络 (ANN)
+## 单层神经网络
+## 介绍多层神经网络架构
+## Notes on Notation (usually) Adopted
+## Forward Propagation
+## Backward Propagation
+## Import the required packages
+## Display plots in notebook 
+## Define plot's default figure size
+## Start Building our MLP building blocks
+## calculate a random number where:  a <= rand < b
+## Make a matrix 
+## our sigmoid function
+## derivative of our sigmoid function, in terms of the output (i.e. y)
+## Our neural networks class
+## Activation Function
+## BackPropagation
+## 把所有内容整合在一起
+## create a network with two inputs, one hidden, and one output nodes
+## Helper function to plot a decision boundary.
+## This generates the contour plot to show the decision boundary visually
+## Put your code here 
+## %load ../solutions/sol_111.py
+## 练习
+## %load ../solutions/sol_112.py
+## 附录
+## 1.1.1 感知机和 Adaline
+## 感知机和 Adaline
+## (exceprt from Python Machine Learning Essentials, Supplementary Materials)
+## 章节
+## Display plots in notebook 
+## Define plot's default figure size
+## 在鸢尾花数据集上训练感知机模型
+## 训练感知机模型
+## 绘制决策区域的函数
+## 自适应线性神经元与学习收敛
+## 标准化特征并重新训练 Adaline
+## standardize features
+## 1.1.2 MLP 和 MNIST
+## (exceprt from Python Machine Learning Essentials, Supplementary Materials)
+## Sections
+## Classifying handwritten digits
+## Obtaining the MNIST dataset
+## plt.savefig('./figures/mnist_all.png', dpi=300)
+## plt.savefig('./figures/mnist_7.png', dpi=300)
+## 实现多层感知机
+## NeuralNetMLP 类
+## 属性
+## 训练人工神经网络
+## plt.savefig('./figures/cost.png', dpi=300)
+## plt.savefig('./figures/mnist_miscl.png', dpi=300)
+## 使用梯度检查调试神经网络
+## 2.1 简介 - Theano
+## Theano
+## 语言中的语言
+## 符号变量
+## 计算表达式
+## 其他张量类型
+## 自动微分
+## 共享变量
+## 更新
+## 2.2 简介 - Tensorflow
+## Tensorflow
+## Tensorflow 主要特性
+## 非常初步的示例
+## A simple calculation in Python
+## The ~same simple calculation in Tensorflow
+## 会话和模型
+## 数据流图
+## Tensorflow 图模型
+## Tensorflow 图模型（续）
+## Tensorflow 图模型会话
+## Tensorboard
+## Tensorboard 示例
+## 示例
+## 数据类型（张量）
+## 一维张量（向量）
+## 二维张量（矩阵）
+## 基本操作（示例）
+## 处理张量
+## 转置
+## 计算梯度
+## 为什么选择 Tensorflow？
+## 示例 1. 记录设备放置
+## Creates a graph.
+## Creates a session with log_device_placement set to True.
+## Runs the op.
+## 使用多个 GPU
+## Creates a graph.
+## Creates a session with log_device_placement set to True.
+## Runs the op.
+## 更多关于 Tensorflow
+## 2.3 Keras 简介
+## Keras: Theano 和 TensorFlow 的深度学习库
+## Kaggle 挑战数据
+## Logistic Regression
+## Data Preparation
+## Using Theano
+## Declare Theano symbolic variables
+## Construct Theano expression graph
+## Compile
+## Train
+## Using Tensorflow
+## Parameters
+## tf Graph Input
+## Model (Introducing Tensorboard)
+## Construct (linear) model
+## Minimize error using cross entropy
+## Note: More name scopes will clean up graph representation
+## Accuracy
+## Learning in a TF Session
+## Plug TensorBoard Visualisation 
+## Launch the graph
+## 使用 Keras
+## Dense
+## (some) others `keras.core.layers`
+## now: model.output_shape == (None, 64, 10)
+## note: `None` is the batch dimension
+## Activation
+## Optimizer
+## 稍微深入“数据科学”此示例
+## 过拟合
+## 多层全连接网络
+## 前向传播与反向传播
+## 你的回合！
+## 实操 - Keras 全连接网络
+## ...
+## ...
+## 随意尝试！添加你想要的任意层数！尝试以获得更好的结果。
+## 深度的理论动机
+## 深度的理论动机
+## 附录
+## 2.3.1 Keras Backend
+## Keras Backend
+## Keras Backend 示例
+## Set model weights
+## Define model and loss
+## Training
+## plotting
+## Your Turn
+## Moreover
+## Exercise: Linear Regression
+## Definition: Placeholders and Variables
+## Placeholders and variables
+## Notes:
+## Model definition
+## Define model and loss
+## %load ../solutions/sol_2311.py
+## %load ../solutions/sol_2312.py
+## Training
+## Generate data
+## Training
+## Plot loss history
+## %load ../solutions/sol_2313.py
+## Final Note:
+## 3.0 - MNIST Dataset
+## MNIST Dataset
+## Also known as `digits` if you're familiar with `sklearn`:
+## Problem Definition
+## Data
+## Load the data
+## Load the datasets
+## Basic data analysis on the dataset
+## What is the type of X_train?
+## What is the type of y_train?
+## Find number of observations in training data
+## Find number of observations in test data
+## Display first 2 records of X_train
+## Display the first 10 records of y_train
+## Find the number of observations for each digit in the y_train dataset
+## Find the number of observations for each digit in the y_test dataset
+## What is the dimension of X_train?. What does that mean?
+## Display Images
+## Displaying the first training data
+## Let's now display the 11th record
+## 3.1 Hidden Layer Representation and Embeddings
+## Fully Connected Feed-Forward Network
+## 模型定义
+## 引入 ReLU
+## 注意：请记住此函数，因为它在 CNN 中被大量使用
+## FC@512+relu -> FC@512+relu -> FC@nb_classes+softmax
+## ... your Code Here
+## %load ../solutions/sol_321.py
+## 数据准备 (`keras.dataset`)
+## Put everything on grayscale
+## convert class vectors to binary class matrices
+## 分割训练和验证数据
+## 训练
+## 绘制网络性能趋势
+## 快速练习：
+## Your code here
+## 引入 Dropout 层
+## Pls note **where** the `K.in_train_phase` is actually called!!
+## Exercise:
+## FC@512+relu -> DropOut(0.2) -> FC@512+relu -> DropOut(0.2) -> FC@nb_classes+softmax
+## ... your Code Here
+## %load ../solutions/sol_312.py
+## %load solutions/sol23.py
+## Inspecting Layers
+## We already used `summary`
+## `model.layers` is iterable
+## Extract hidden layer representation of the given data
+## Check
+## Hint: Alternative Method to get activations
+## Generate the Embedding of Hidden Features
+## 4.1 卷积神经网络
+## 卷积神经网络
+## 参考文献：
+## 它长什么样？
+# 问题空间
+## 图像分类
+## 输入和输出
+## 目标
+## CNN 的结构
+## 卷积层
+## 卷积滤波器
+## 这里的主要区别在于，卷积矩阵是 **学习** 得到的。
+## 高层视角
+## 感受野的可视化
+## 深入网络
+## ReLU（整流线性单元）层
+## 使用 Bokeh（交互式图表）
+## show the results
+## 注：我们使用了 `default` TSNE 参数。通过调整 TSNE 超参数可以获得更好的结果
+## 练习 1：
+## 尝试使用不同的算法创建流形
+## Your code here
+## 练习 2：
+## 尝试提取模型第一层和最后一层的隐藏特征
+## Your code here
+## Try using the `get_activations` function relying on keras backend
+## ReLu
+## Pooling Layers
+## Dropout Layer
+## Fully Connected Layer
+## Going further: Convolution Arithmetic
+## CNN in Keras
+## Convolution1D
+## Arguments:
+## Example
+## apply a convolution 1d of length 3 to a sequence with 10 timesteps,
+## with 64 output filters
+## now model.output_shape == (None, 10, 64)
+## add a new conv1d on top
+## now model.output_shape == (None, 10, 32)
+## Convolution2D
+## 4.2. MNIST CNN
+## 用于 MNIST 的卷积网络
+## 加载数据
+## 数据准备
+## 非常重要：
+## 预处理和归一化数据
+## Test data
+## Converting the output to binary classification(Six=1,Not Six=0)
+## Selecting the 5918 examples where the output is 6
+## Selecting the examples where the output is not 6
+## Selecting 6000 random examples from the data that 
+## only contains the data where the output is not 6
+## Appending the data with output as 6 and data with output as <> 6
+## Reshaping the appended data to appropraite form
+## Appending the labels and converting the labels to 
+## binary classification(Six=1,Not Six=0)
+## Converting the classes to its binary categorical form
+## 一个简单的 CNN
+## -- Initializing the values for the convolution neural network
+## number of convolutional filters to use
+## size of pooling area for max pooling
+## convolution kernel size
+## Vanilla SGD
+## 步骤 1：模型定义
+## Keras 中卷积滤波器的维度
+## Convolution1D
+## Convolution2D
+## 参数：
+## 示例
+## apply a 3x3 convolution with 64 output filters on a 256x256 image:
+## now model.output_shape == (None, 256, 256, 64)
+## add a 3x3 convolution on top, with 32 output filters:
+## now model.output_shape == (None, 256, 256, 32)
+## 步骤 2：编译
+## 步骤 3：拟合
+## 步骤 4：评估
+## Evaluating the model on the test data    
+## 让我们绘制模型预测！
+## 添加更多密集层
+## 添加 Dropout
+## 添加更多卷积层
+## 练习
+## Function for constructing the convolution neural network
+## Feel free to add parameters, if you want
+## 理解卷积层结构
+## 4.3 CIFAR10 CNN
+## 卷积神经网络
+## 训练网络
+## 批量归一化
+## 如何在 Keras 中使用 BatchNorm
+## 参数
+## 练习
+## Try to add a new BatchNormalization layer to the Model 
+## (after the Dropout layer) - before or after the ReLU Activation
+## 附录：
+## 练习：构建浅层网络
+## [conv@32x3x3+relu]x2 --> MaxPool@2x2 --> DropOut@0.25 -->
+## [conv@64x3x3+relu]x2 --> MaxPool@2x2 --> DropOut@0.25 -->
+## Flatten--> FC@512+relu --> DropOut@0.5 --> FC@nb_classes+SoftMax
+## NOTE: each couple of Conv filters must have `border_mode="same"` and `"valid"`, respectively
+## %load solutions/sol31.py
+## 理解层形状
+## 理解权重形状
+## 警告：以下单元可能计算量较大....
+## 4.4 深度卷积神经网络
+## 深度网络模型
+## Keras 中的著名模型
+## 参考文献
+## VGG16
+## VGG19
+## `keras.applications`
+## 实操 VGG16 - 预训练权重
+## Hands On:
+## 尝试对 VGG19 模型做同样的操作
+## from keras.applications import VGG19
+## - Visualise Summary
+## - Infer classes using VGG19 predictions
+## [your code here]
+## 残差网络
+## ResNet 50
+## 可视化 CNN 的卷积滤波器
+## 每个滤波器生成的图片尺寸。
+## 使用 ImageNet 权重构建 VGG16 网络
+## 获取每个“关键”层的符号输出（我们为它们赋予了唯一名称）。
+## 测试图像
+## input_img_data /= 255
+## 通过各层可视化图像
+## 调用笔记本中定义的隐藏特征函数（2.1 隐藏层表示与嵌入）
+## 现在可视化 `block5_conv2` 层的前 64 个过滤器
+## 卷积网络如何看待世界
+## 指定要扫描的过滤器百分比
+## utility function to convert a tensor into a valid image
+## dimensions of the generated pictures for each filter.
+## this is the placeholder for the input images
+## 5.1 超参数调优
+## `keras.wrappers.scikit_learn`
+## 问题：
+## 数据准备
+## input image dimensions
+## 加载训练数据并进行基本数据归一化
+## 将类向量转换为二进制类矩阵
+## 构建模型
+## 网格搜索超参数
+## 训练日志输出
+## GridSearchCV 配置输出
+## 更多内容：
+## 5.3 迁移学习与微调
+## 迁移学习与微调
+## 使用 GPU（强烈推荐）
+## 设置
+## input image dimensions
+## number of convolutional filters to use
+## size of pooling area for max pooling
+## convolution kernel size
+## 数据集准备
+## the data, shuffled and split between train and test sets
+## create two datasets one with digits below 5 and one with 5 and above
+## define two groups of layers: feature (convolutions) and classification (dense)
+## create complete model
+## train model for 5-digit classification [0..4]
+## freeze feature layers and rebuild model
+## transfer: train dense layers for new classification task [5..9]
+## 你的练习
+## your code here
+## Plugging new Layers
+## 5.3.1 Keras 与 TF 集成
+## 紧密集成
+## Tensorboard 集成
+## `TensorBoard` 回调
+## 参数
+## 标签的 one-hot 编码（1 到 100 个类别）
+## TensorFlow 训练日志与 TensorBoard 使用
+## 训练日志输出
+## 运行 TensorBoard
+## `Runing Tensorboard`
+## `tf.Queue` 与 `Keras` 集成
+## `tf.Queue` integration with `Keras`
+## 6.1. 自动编码器与嵌入
+## 无监督学习
+## 自动编码器
+## 参考
+## 介绍 `Keras Functional API`
+## this is the size of our encoded representations
+## this is our input placeholder
+## "encoded" is the encoded representation of the input
+## "decoded" is the lossy reconstruction of the input
+## this model maps an input to its reconstruction
+## this model maps an input to its encoded representation
+## create a placeholder for an encoded (32-dimensional) input
+## retrieve the last layer of the autoencoder model
+## create the decoder model
+## 训练日志
+## Testing the Autoencoder
+## Sample generation with Autoencoder
+## Convolutional AutoEncoder
+## at this point the representation is (4, 4, 8) i.e. 128-dimensional
+## 卷积自编码器训练与应用
+## 数据预处理
+## 模型训练
+## 重构结果可视化
+## 编码器中间表示可视化
+## 预训练编码器
+## Use the encoder to pretrain a classifier
+## 应用于图像去噪
+## 问题
+## at this point the representation is (7, 7, 32)
+## 现在让我们来看看....
+## 变分自编码器
+## 什么是变分自编码器？
+## 变分自编码器如何工作？
+## 编码器网络
+## note that "output_shape" isn't necessary with the TensorFlow backend
+## so you could write `Lambda(sampling)([z_mean, z_log_sigma])`
+## 解码器网络
+## end-to-end autoencoder
+## encoder, from inputs to latent space
+## generator, from latent space to reconstructed inputs
+## 让我们可视化 VAE 模型
+## 练习：对 `encoder` 和 `generator` 模型做同样的事情
+## MNIST 上的 VAE
+## display a 2D manifold of the digits
+## we will sample n points within [-15, 15] standard deviations
+## 6.2 NLP and Deep Learning
+## 使用人工神经网络进行自然语言处理
+## 词嵌入
+## 什么？
+## 为什么？
+## 示例
+## 使用 gensim 的 `word2vec` 示例
+## 从数据目录读取博客文章
+## Word2Vec
+## Gensim Word2Vec Vocabulary 输出示例
+## Doc2Vec
+## 0 for male, 1 for female
+## 用于句子分类的卷积神经网络
+## 参数
+## Model Hyperparameters
+## Training parameters
+## Word2Vec parameters, see train_word2vec
+## 数据准备
+## Load data
+## Shuffle data
+## 构建 CNN 模型
+## main sequential model
+## Training model
+## ==================================================
+## 训练日志
+## Another Example
+## 7.1 RNN 和 LSTM
+## 循环神经网络
+## RNN
+## 参数：
+## 时间反向传播
+## -- Keras Import
+## IMDB 情感分类任务
+## 数据准备 - IMDB
+## 模型构建
+## try using different optimizers and different optimizer configs
+## LSTM
+## LSTM 网络
+## Arguments
+## GRU
+## Your Turn! - Hands on Rnn
+## !!! Play with those! try and get better results!
+## try using different optimizers and different optimizer configs
+## Convolutional LSTM
+## Artificial Data Generation
+## Artificial Data Generation
+## Model
+## 构建网络模型
+## 训练网络
+## 注意：这需要花费一些时间（在我的硬件上每个 epoch 大约需要 3 分钟）
+## Train the network
+## 测试网络
+## Testing the network on one movie
+## feed it with the first 7 positions and then
+## predict the new positions
+## 然后将预测结果与真实值进行比较
+## 7.2 用于句子生成的 LSTM
+## 使用 LSTM 的 RNN
+## 从数据目录读取博客文章
+## 文本处理 - one hot 构建单词索引
+## 0 表示男性，1 表示女性
+## 使用 TFIDF 向量化器作为输入，而非 one hot 编码器
+## 使用 LSTM 进行句子生成
+## 将所有男性文本数据读入一个字符串
+## 构建男性帖子的字符集
+## 构建两个索引 - 字符索引和字符索引
+## 将文本切分为最大长度为 maxlen 的半冗余序列
+## 输入的向量化
+## 构建模型：单个 LSTM
+## 从概率数组中采样索引的辅助函数
+## train the model, output generated text after each iteration
+## 8.1 Custom Layer
+## Custom Keras Layer
+## Idea:
+## AntiRectifier Layer
+## Parametrs and Settings
+## global parameters
+## Data Preparation
+## the data, shuffled and split between train and test sets
+## convert class vectors to binary class matrices
+## Model with Custom Layer
+## build the model
+## compile the model
+## train the model
+## Excercise
+## your code here
+## 8.2 Multi-Modal Networks
+## Keras Functional API
+## Recall: All models (layers) are callables
+## this returns a tensor
+## a layer instance is callable on a tensor, and returns a tensor
+## this creates a model that includes
+## the Input layer and three Dense layers
+## Multi-Input Networks
+## Keras Merge Layer
+## 自己动手
+## 步骤 1：获取数据 - MNIST
+## let's load MNIST data as we did in the exercise on MNIST with FC Nets
+## %load ../solutions/sol_821.py
+## 步骤 2：创建多输入网络
+## try yourself
+## `evaluate` the model on test data
+## 更有趣的用例
+## 问题与数据
+## Headline input: meant to receive sequences of 100 integers, between 1 and 10000.
+## Note that we can name any layer by passing it a "name" argument.
+## This embedding layer will encode the input sequence
+## into a sequence of dense 512-dimensional vectors.
+## A LSTM will transform the vector sequence into a single vector,
+## containing information about the entire sequence
+## We stack a deep densely-connected network on top
+## And finally we add the main logistic regression layer
+## 模型定义
+## 注意：
+## And trained it via:
+## 结论
+## 一些参考资料
+## 前沿技术
+## Hyper-Cool
+## Super-Cool

@@ -1,0 +1,124 @@
+
+
+# TensorFlow 训练日志与 TensorBoard 使用
+
+## 训练日志输出
+
+```
+INFO:tensorflow:Summary name block1_conv1/kernel:0 is illegal; using block1_conv1/kernel_0 instead.
+INFO:tensorflow:Summary name block1_conv1/bias:0 is illegal; using block1_conv1/bias_0 instead.
+INFO:tensorflow:Summary name block1_conv2/kernel:0 is illegal; using block1_conv2/kernel_0 instead.
+INFO:tensorflow:Summary name block1_conv2/bias:0 is illegal; using block1_conv2/bias_0 instead.
+INFO:tensorflow:Summary name block2_conv1/kernel:0 is illegal; using block2_conv1/kernel_0 instead.
+INFO:tensorflow:Summary name block2_conv1/bias:0 is illegal; using block2_conv1/bias_0 instead.
+INFO:tensorflow:Summary name block2_conv2/kernel:0 is illegal; using block2_conv2/kernel_0 instead.
+INFO:tensorflow:Summary name block2_conv2/bias:0 is illegal; using block2_conv2/bias_0 instead.
+INFO:tensorflow:Summary name block3_conv1/kernel:0 is illegal; using block3_conv1/kernel_0 instead.
+INFO:tensorflow:Summary name block3_conv1/bias:0 is illegal; using block3_conv1/bias_0 instead.
+INFO:tensorflow:Summary name block3_conv2/kernel:0 is illegal; using block3_conv2/kernel_0 instead.
+INFO:tensorflow:Summary name block3_conv2/bias:0 is illegal; using block3_conv2/bias_0 instead.
+INFO:tensorflow:Summary name block3_conv3/kernel:0 is illegal; using block3_conv3/kernel_0 instead.
+INFO:tensorflow:Summary name block3_conv3/bias:0 is illegal; using block3_conv3/bias_0 instead.
+INFO:tensorflow:Summary name block4_conv1/kernel:0 is illegal; using block4_conv1/kernel_0 instead.
+INFO:tensorflow:Summary name block4_conv1/bias:0 is illegal; using block4_conv1/bias_0 instead.
+INFO:tensorflow:Summary name block4_conv2/kernel:0 is illegal; using block4_conv2/kernel_0 instead.
+INFO:tensorflow:Summary name block4_conv2/bias:0 is illegal; using block4_conv2/bias_0 instead.
+INFO:tensorflow:Summary name block4_conv3/kernel:0 is illegal; using block4_conv3/kernel_0 instead.
+INFO:tensorflow:Summary name block4_conv3/bias:0 is illegal; using block4_conv3/bias_0 instead.
+INFO:tensorflow:Summary name block5_conv1/kernel:0 is illegal; using block5_conv1/kernel_0 instead.
+INFO:tensorflow:Summary name block5_conv1/bias:0 is illegal; using block5_conv1/bias_0 instead.
+INFO:tensorflow:Summary name block5_conv2/kernel:0 is illegal; using block5_conv2/kernel_0 instead.
+INFO:tensorflow:Summary name block5_conv2/bias:0 is illegal; using block5_conv2/bias_0 instead.
+INFO:tensorflow:Summary name block5_conv3/kernel:0 is illegal; using block5_conv3/kernel_0 instead.
+INFO:tensorflow:Summary name block5_conv3/bias:0 is illegal; using block5_conv3/bias_0 instead.
+INFO:tensorflow:Summary name ft_fc1/kernel:0 is illegal; using ft_fc1/kernel_0 instead.
+INFO:tensorflow:Summary name ft_fc1/bias:0 is illegal; using ft_fc1/bias_0 instead.
+INFO:tensorflow:Summary name batch_normalization_1/gamma:0 is illegal; using batch_normalization_1/gamma_0 instead.
+INFO:tensorflow:Summary name batch_normalization_1/beta:0 is illegal; using batch_normalization_1/beta_0 instead.
+INFO:tensorflow:Summary name batch_normalization_1/moving_mean:0 is illegal; using batch_normalization_1/moving_mean_0 instead.
+INFO:tensorflow:Summary name batch_normalization_1/moving_variance:0 is illegal; using batch_normalization_1/moving_variance_0 instead.
+INFO:tensorflow:Summary name dense_1/kernel:0 is illegal; using dense_1/kernel_0 instead.
+INFO:tensorflow:Summary name dense_1/bias:0 is illegal; using dense_1/bias_0 instead.
+Epoch 1/20
+781/781 [==============================] - 49s - loss: 0.0161 - acc: 0.9974    
+Epoch 2/20
+781/781 [==============================] - 48s - loss: 1.1923e-07 - acc: 1.0000    
+Epoch 3/20
+781/781 [==============================] - 47s - loss: 1.1922e-07 - acc: 1.0000    - ETA:
+Epoch 4/20
+781/781 [==============================] - 47s - loss: 1.1922e-07 - acc: 1.0000    
+Epoch 5/20
+781/781 [==============================] - 48s - loss: 1.1922e-07 - acc: 1.0000    
+Epoch 6/20
+781/781 [==============================] - 48s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 7/20
+781/781 [==============================] - 47s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 8/20
+781/781 [==============================] - 48s - loss: 1.1922e-07 - acc: 1.0000    
+Epoch 9/20
+781/781 [==============================] - 48s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 10/20
+781/781 [==============================] - 47s - loss: 1.1921e-07 - acc: 1.0000    - ET
+Epoch 11/20
+781/781 [==============================] - 48s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 12/20
+781/781 [==============================] - 47s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 13/20
+781/781 [==============================] - 47s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 14/20
+781/781 [==============================] - 48s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 15/20
+781/781 [==============================] - 46s - loss: 1.1921e-07 - acc: 1.0000    - ETA: 0s - loss: 1.1921e-07 - acc:
+Epoch 16/20
+781/781 [==============================] - 47s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 17/20
+781/781 [==============================] - ETA: 0s - loss: 1.1921e-07 - acc: 1.000 - 47s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 18/20
+781/781 [==============================] - 47s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 19/20
+781/781 [==============================] - 47s - loss: 1.1921e-07 - acc: 1.0000    
+Epoch 20/20
+781/781 [==============================] - 47s - loss: 1.1921e-07 - acc: 1.0000    
+
+<keras.callbacks.History at 0x7fdb8f8f2be0>
+```
+
+## 运行 TensorBoard
+
+### `Runing Tensorboard`
+
+```
+%%bash
+python -m tensorflow.tensorboard --logdir=./tf_logs
+```
+
+## `tf.Queue` 与 `Keras` 集成
+
+### `tf.Queue` integration with `Keras`
+
+**Source**: [https://gist.github.com/Dref360/43e20eda5eb5834b61bc06a4c1855b29](https://gist.github.com/Dref360/43e20eda5eb5834b61bc06a4c1855b29)
+
+```
+import operator
+import threading
+from functools import reduce
+
+import keras
+import keras.backend as K
+from keras.engine import Model
+import numpy as np
+import tensorflow as tf
+import time
+from keras.layers import Conv2D
+from tqdm import tqdm
+```
+
+```
+Using TensorFlow backend.
+```
+
+```
+def prod(factors):
+    return reduce(operator.mul, factors, 1)
+```
+

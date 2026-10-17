@@ -1,0 +1,297 @@
+
+
+# 更多内容：
+
+The `GridSearchCV` model in scikit-learn performs a complete search, considering `all` the possible combinations of Hyper-parameters we want to optimise.
+
+If we want to apply for an optmised and bounded search in the hyper-parameter space, I strongly suggest to take a look at:
+
+*   `Keras + hyperopt == hyperas`: [`http://maxpumperla.github.io/hyperas/`](http://maxpumperla.github.io/hyperas/)
+
+# 5.3 迁移学习与微调
+
+# 迁移学习与微调
+
+*   在 MNIST 数据集上训练一个简单的卷积神经网络，针对前 5 个数字 \[0..4\]。
+
+*   冻结卷积层并微调全连接层，用于对数字 \[5..9\] 进行分类。
+
+#### 使用 GPU（强烈推荐）
+
+\-> 如果使用 `theano` 后端：
+
+`THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32`
+
+```python
+import numpy as np
+import datetime
+
+np.random.seed(1337)  # for reproducibility
+```
+
+```python
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.utils import np_utils
+from keras import backend as K
+from numpy import nan
+
+now = datetime.datetime.now
+```
+
+```
+Using TensorFlow backend.
+```
+
+### 设置
+
+```python
+now = datetime.datetime.now
+
+batch_size = 128
+nb_classes = 5
+nb_epoch = 5
+
+# input image dimensions
+img_rows, img_cols = 28, 28
+# number of convolutional filters to use
+nb_filters = 32
+# size of pooling area for max pooling
+pool_size = 2
+# convolution kernel size
+kernel_size = 3
+```
+
+```python
+if K.image_data_format() == 'channels_first':
+    input_shape = (1, img_rows, img_cols)
+else:
+    input_shape = (img_rows, img_cols, 1)
+```
+
+```python
+def train_model(model, train, test, nb_classes):
+
+    X_train = train[0].reshape((train[0].shape[0],) + input_shape)
+    X_test = test[0].reshape((test[0].shape[0],) + input_shape)
+    X_train = X_train.astype('float32')
+    X_test = X_test.astype('float32')
+    X_train /= 255
+    X_test /= 255
+
+    print('X_train shape:', X_train.shape)
+    print(X_train.shape[0], 'train samples')
+    print(X_test.shape[0], 'test samples')
+
+    # convert class vectors to binary class matrices
+    Y_train = np_utils.to_categorical(train[1], nb_classes)
+    Y_test = np_utils.to_categorical(test[1], nb_classes)
+
+    model.compile(loss='categorical_crossentropy',
+                  optimizer='adadelta',
+                  metrics=['accuracy'])
+
+    t = now()
+    model.fit(X_train, Y_train,
+              batch_size=batch_size, nb_epoch=nb_epoch,
+              verbose=1,
+              validation_data=(X_test, Y_test))
+    print('Training time: %s' % (now() - t))
+    score = model.evaluate(X_test, Y_test, verbose=0)
+    print('Test score:', score[0])
+    print('Test accuracy:', score[1])
+```
+
+## 数据集准备
+
+```python
+# the data, shuffled and split between train and test sets
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+# create two datasets one with digits below 5 and one with 5 and above
+X_train_lt5 = X_train[y_train < 5]
+y_train_lt5 = y_train[y_train < 5]
+X_test_lt5 = X_test[y_test < 5]
+y_test_lt5 = y_test[y_test < 5]
+
+X_train_gte5 = X_train[y_train >= 5]
+y_train_gte5 = y_train[y_train >= 5] - 5  # make classes start at 0 for
+X_test_gte5 = X_test[y_test >= 5]         # np_utils.to_categorical
+y_test_gte5 = y_test[y_test >= 5] - 5
+```
+
+```python
+# define two groups of layers: feature (convolutions) and classification (dense)
+feature_layers = [
+    Convolution2D(nb_filters, kernel_size, kernel_size,
+                  border_mode='valid',
+                  input_shape=input_shape),
+    Activation('relu'),
+    Convolution2D(nb_filters, kernel_size, kernel_size),
+    Activation('relu'),
+    MaxPooling2D(pool_size=(pool_size, pool_size)),
+    Dropout(0.25),
+    Flatten(),
+]
+classification_layers = [
+    Dense(128),
+    Activation('relu'),
+    Dropout(0.5),
+    Dense(nb_classes),
+    Activation('softmax')
+]
+```
+
+```python
+# create complete model
+model = Sequential(feature_layers + classification_layers)
+
+# train model for 5-digit classification [0..4]
+train_model(model,
+            (X_train_lt5, y_train_lt5),
+            (X_test_lt5, y_test_lt5), nb_classes)
+```
+
+```
+X_train shape: (30596, 1, 28, 28)
+30596 train samples
+5139 test samples
+Train on 30596 samples, validate on 5139 samples
+Epoch 1/5
+30596/30596 [==============================] - 3s - loss: 0.2071 - acc: 0.9362 - val_loss: 0.0476 - val_acc: 0.9848
+Epoch 2/5
+30596/30596 [==============================] - 3s - loss: 0.0787 - acc: 0.9774 - val_loss: 0.0370 - val_acc: 0.9879
+Epoch 3/5
+30596/30596 [==============================] - 3s - loss: 0.0528 - acc: 0.9846 - val_loss: 0.0195 - val_acc: 0.9926
+Epoch 4/5
+30596/30596 [==============================] - 3s - loss: 0.0409 - acc: 0.9880 - val_loss: 0.0152 - val_acc: 0.9942
+Epoch 5/5
+30596/30596 [==============================] - 3s - loss: 0.0336 - acc: 0.9901 - val_loss: 0.0135 - val_acc: 0.9959
+Training time: 0:00:40.094398
+Test score: 0.0135238260214
+Test accuracy: 0.995913601868
+```
+
+```python
+# freeze feature layers and rebuild model
+for l in feature_layers:
+    l.trainable = False
+
+# transfer: train dense layers for new classification task [5..9]
+train_model(model,
+            (X_train_gte5, y_train_gte5),
+            (X_test_gte5, y_test_gte5), nb_classes)
+```
+
+```
+X_train shape: (29404, 1, 28, 28)
+29404 train samples
+4861 test samples
+Train on 29404 samples, validate on 4861 samples
+Epoch 1/5
+29404/29404 [==============================] - 1s - loss: 0.3810 - acc: 0.8846 - val_loss: 0.0897 - val_acc: 0.9728
+Epoch 2/5
+29404/29404 [==============================] - 1s - loss: 0.1245 - acc: 0.9607 - val_loss: 0.0596 - val_acc: 0.9825
+Epoch 3/5
+29404/29404 [==============================] - 1s - loss: 0.0927 - acc: 0.9714 - val_loss: 0.0467 - val_acc: 0.9860
+Epoch 4/5
+29404/29404 [==============================] - 1s - loss: 0.0798 - acc: 0.9755 - val_loss: 0.0408 - val_acc: 0.9868
+Epoch 5/5
+29404/29404 [==============================] - 1s - loss: 0.0704 - acc: 0.9783 - val_loss: 0.0353 - val_acc: 0.9887
+Training time: 0:00:07.964140
+Test score: 0.0352752654647
+Test accuracy: 0.988685455557
+```
+
+## 你的练习
+
+尝试微调 VGG16 网络
+
+```python
+## your code here
+```
+
+```python
+...
+...
+# Plugging new Layers
+    model.add(Dense(768, activation='sigmoid'))
+    model.add(Dropout(0.0))
+    model.add(Dense(768, activation='sigmoid'))
+    model.add(Dropout(0.0))
+    model.add(Dense(n_labels, activation='softmax'))
+```
+
+# 5.3.1 Keras 与 TF 集成
+
+### 紧密集成
+
+```python
+import tensorflow as tf
+```
+
+```
+tf.__version__
+```
+
+```
+'1.1.0'
+```
+
+```python
+from tensorflow.contrib import keras
+```
+
+* * *
+
+### Tensorboard 集成
+
+```python
+from keras.datasets import cifar100
+
+(X_train, Y_train), (X_test, Y_test) = cifar100.load_data(label_mode='fine')
+```
+
+```
+Using TensorFlow backend.
+```
+
+```python
+from keras import backend as K
+
+img_rows, img_cols = 32, 32
+
+if K.image_data_format() == 'channels_first':
+    shape_ord = (3, img_rows, img_cols)
+else:  # channel_last
+    shape_ord = (img_rows, img_cols, 3)
+```
+
+```
+shape_ord
+```
+
+```
+(32, 32, 3)
+```
+
+```
+X_train.shape
+```
+
+```
+(50000, 32, 32, 3)
+```
+
+```python
+import numpy as np
+nb_classes = len(np.unique(Y_train))
+```
+
+```python
+from keras.applications import vgg16
+from keras.layers import Input
+```
+
