@@ -1,0 +1,40 @@
+
+
+# 场景分析与勒索软件案例
+
+在勒索软件示例（[Figure 3.26](#c03.xhtml#c3-fig-0026)）中，已确认 IT 运维参与者首先可能会在尝试自行访问文件共享或运行诊断之间进行选择，该诊断会显示当前连接到文件共享的用户及其对应的活动级别。考虑到目标是尽量减少潜在损害影响的时间线，显然后一种选择是最佳的。无论参与者能否访问文件共享，完整的诊断很可能仍然需要。这只是场景分析产生的无数基本程序效率示例之一。[Figure 3.28](#c03.xhtml#c3-fig-0028) 是基于假设攻击的时间线示例，该攻击基于 [Figure 3.27](#c03.xhtml#c3-fig-0027) 中的威胁向量。该场景要求目标用户拥有多个文件共享的访问权限，其中一个是客户访问的支付应用程序。[Figure 3.28](#c03.xhtml#c3-fig-0028) 中的时间线显示了钓鱼邮件投递、用户桌面上的恶意软件启动以及三个文件共享被依次加密。它显示，IT 运维收到警报，第一个文件共享在恶意软件启动几分钟后被禁用。它显示，在 IT 运维完成对第一个文件共享问题的诊断之前，第二个文件共享上的加密已经开始。第二个文件共享支持支付处理应用程序，因此该应用程序的故障会产生另一个警报。IT 运维将用户桌面诊断为中断原因，并将其升级到网络管理，以便在其完成加密第三个文件共享之前将其从网络中禁用。时间线的其余部分列举了恢复和取证活动。
+
+与 [Figure 3.28](#c03.xhtml#c3-fig-0028) 中的时间线相对应的损失计算示例显示在 [Figure 3.29](#c03.xhtml#c3-fig-0029) 中。当然，每个企业都有自己的命名法和执行此类计算的方法。在此示例中，显示了技术中断，但不一定是货币损失的来源。这反映了目标企业将损失计算限制在花费的美元上，而非因员工生产力下降或应用程序中断导致的业务机会损失的选择。尽管如此，此计算是可能的，中断数字通常被提出以决定是否值得进行此类展示。该企业选择不代表技术实际处理事件的时间，而仅代表其薪资覆盖的工时与为应对事件支付额外帮助的费用之间的差额。对于勒索软件事件，此损失相当小，原因是 IT 运维在诊断近因方面工作迅速，而这是控制损害的途径。
+
+![Figure 3.28 Example Ransomware Timeline](images/c03f028.jpg)
+
+[**Figure 3.28**](#c03.xhtml#R_c3-fig-0028) Example Ransomware Timeline
+
+![Figure 3.29 Example Ransomware Loss Calculation](images/c03f029.jpg)
+
+[**Figure 3.29**](#c03.xhtml#R_c3-fig-0029) Example Ransomware Loss Calculation
+
+请注意，时间线包括损失计算中不可见但仍然是场景分析重要结果的项目。CISO 向执法部门报告事件，法律部门提交监管报告。该事件过于轻微，公共关系部门未发布公开声明，但显然一些客户的交易被延迟，损失显示这些交易的费用已被免除。这表明危机管理团队权衡了客户沟通选项，并决定仅与受负面影响的客户沟通。当客户在未请求补偿的情况下因服务中断获得补偿时，这在金融圈被称为“goodwill”。它显示公共关系部门在尽量减少该事件在社交媒体上引发对企业敌意的可能性方面发挥了作用。
+
+在场景练习结束时，将有足够的信息来产生由练习生成的端到端威胁向量。在社区演练时，某些细节可能无法获得，但稍后会被追踪，并生成一份包含估计损失和由练习生成的端到端威胁向量的报告。该向量将被仔细审查并指定根本原因。如威胁向量图所示，某些向量活动由威胁行为者执行，某些是自动化的，某些由企业员工执行。对于自动化活动或由员工执行的活动，提出给定活动的场景参与者将被记录，但不被视为根本原因或近因。就威胁行为者活动而言，单个 *single* 行为不太可能是成功攻击的根本原因。为了使威胁行为者活动成功，它们必须按包含目标的顺序发生。也就是说，场景分析的一个结果是识别事件中的某个活动，如果该活动被中断，将中断并禁用整个威胁向量序列。在损失较高的情况下，至少会有一些建议，即应以某种活动形式提出补救措施，该活动（i）由目标控制，且（ii）将中断同一风险类别中的未来事件。
+
+然而，仅仅因为识别了根本原因，并不意味着场景练习也识别了一套能够中断向量的适当控制措施。充分记录威胁向量和事件的业务影响就足够了。然后将使用这些信息创建一个或多个“risk issues”，这些问题将被正式跟踪直到得到补救。场景事件和问题（s）都与风险相关联，并可供负责计算风险复发概率的人参考历史。
+
+## References
+
+1. BASEL (2011). *Operational Risk – Supervisory Guidelines for the Advanced Measurement Approaches*. Basel Committee on Banking Supervision. [bis.org](http://bis.org).
+
+2. Bayuk, J. (2010a). *CyberForensics, Understanding Information Security Investigations*. Springer.
+
+3. Bayuk, J. (2010b). *Enterprise Security for the Executive: Setting the Tone at the Top*. Praeger.
+
+4. Bayuk, J., Healy, J., Rohmeyer, P. et al. (2012). *Cyber Security Policy Guidebook*. Wiley.
+
+5. Jericho Forum (2007). Commandments version 1.2. [https://collaboration.opengroup.org/jericho/commandments_v1.2.pdf](https://collaboration.opengroup.org/jericho/commandments_v1.2.pdf) (accessed 08 May 2023).
+
+6. Kindervag, J. (2010). No More Chewy Centers, Introducing the Zero Trust Model of Information Security. [https://media.paloaltonetworks.com/documents/Forrester‐No‐More‐Chewy‐Centers.pdf](https://media.paloaltonetworks.com/documents/Forrester-No-More-Chewy-Centers.pdf) (accessed 08 May 2023).
+
+7. NIST‐CSF (2018). Framework for Improving Critical Infrastructure Cybersecurity, version 1.1. National Institute of Standards and Technology. [https://nvlpubs.nist.gov/nistpubs/cswp/nist.cswp.04162018.pdf](https://nvlpubs.nist.gov/nistpubs/cswp/nist.cswp.04162018.pdf) (accessed 08 May 2023).
+
+8. NIST 800‐61r2 (2012). Computer Security Incident Handling Guide. National Institute of Standards and Technology. [https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800‐61r2.pdf](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) (accessed 08 May 2023).
+

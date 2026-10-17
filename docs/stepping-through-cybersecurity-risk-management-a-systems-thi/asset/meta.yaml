@@ -1,0 +1,236 @@
+name: Stepping Through Cybersecurity Risk Management ： A Systems Thinking Approach
+slug: stepping-through-cybersecurity-risk-management-a-systems-thi
+name_cn: 网络安全风险管理系统思考指南
+toc:
+- - '##'
+  - 网络安全策略监控与修复
+- - '##'
+  - 访问控制与安全风险计算
+- - '##'
+  - 致谢
+- - '##'
+  - 关于配套网站
+- - '#'
+  - '1  '
+- - '##'
+  - 网络安全攻击事件与风险框架
+- - '#'
+  - 2 威胁
+- - '#'
+  - DDoS 攻击始于黑客入侵数千台联网计算机
+- - '#'
+  - 典型的竞争对手攻击将聚焦于客户数据和/或知识产权
+- - '#'
+  - '3'
+- - '##'
+  - Events
+- - '#'
+  - 场景分析与勒索软件案例
+- - '#'
+  - 4 控制
+- - '#'
+  - 安全原则与策略形式化
+- - '#'
+  - 企业安全标准
+- - '#'
+  - 过程控制与程序
+- - '#'
+  - '5'
+- - '##'
+  - Assessments
+- - '#'
+  - 审计（Audit）
+- - '#'
+  - 评估
+- - '#'
+  - 6 问题
+- - '##'
+  - 问题识别
+- - '#'
+  - Metricon 安全度量体系
+- - '#'
+  - 设备计数 – 已收集配置 + 可疑设备 + 标准违规
+- - '#'
+  - '8'
+- - '#'
+  - 三道防线：企业网络安全风险管理
+- - '#'
+  - 网络安全委员会
+- - '#'
+  - 应急响应委员会
+- - '#'
+  - 技术委员会
+- - '#'
+  - 8.4 框架元素所有者
+- - '#'
+  - 9 风险
+- - '##'
+  - Figure 9.13 Trends in Cybersecurity Risk Tolerance
+- - '##'
+  - Figure 9.14 Risk Remediation Target
+- - '##'
+  - Figure 9.15 Methods of Cybersecurity Probability Estimation
+- - '#'
+  - 10 分析
+- - '##'
+  - 图 10.2 示例审计识别卡
+- - '##'
+  - 图 10.3 WAFW 讨论辅助图
+- - '##'
+  - 图 10.4 主控制与补偿控制
+- - '##'
+  - 图 10.5 网络安全土木工程类比
+- - '#'
+  - 附录
+- - '#'
+  - 第 4 章 控制
+- - '#'
+  - 第 5 章 评估
+- - '#'
+  - 第 6 章 问题
+- - '#'
+  - 第 7 章 指标
+- - '#'
+  - 第 8 章 人员
+- - '#'
+  - 第 9 章 风险
+- - '##'
+  - 3. 当威胁情报显示企业正受到新威胁行为者的针对性攻击时。
+- - '##'
+  - 4. 当类别包含多个实际损失事件且没有补救计划时。
+- - '##'
+  - 3. 以下哪些管理风险措施可能是定性的而非定量的？
+- - '##'
+  - 4. 当没有足够的历史数据可用于计算特定类别中网络安全风险事件发生的概率时，是否存在合理的替代方法来估算概率？
+- - '##'
+  - 5. 考虑一种情况，父风险类别有三个子类别，其概率分别为 30%、55% 和 95%。父类别中发生风险的概率是多少？
+- - '#'
+  - 索引
+- - '##'
+  - '*a*'
+- - '#'
+  - 索引
+- - '##'
+  - a
+- - '##'
+  - b
+- - '##'
+  - c
+- - '#'
+  - d
+- - '##'
+  - critics/critical
+- - '##'
+  - Cyber and Infrastructure Security Agency (CISA)
+- - '##'
+  - cyberattacks
+- - '##'
+  - cyberwar
+- - '##'
+  - cyberwarfare
+- - '##'
+  - cycle
+- - '#'
+  - e
+- - '##'
+  - damage
+- - '##'
+  - data
+- - '##'
+  - database
+- - '##'
+  - decision
+- - '##'
+  - defense
+- - '##'
+  - Deming
+- - '##'
+  - detection/detect
+- - '##'
+  - Drucker
+- - '#'
+  - f
+- - '##'
+  - effective/effectiveness
+- - '##'
+  - elements
+- - '##'
+  - engineer
+- - '##'
+  - engineering
+- - '##'
+  - enterprise management
+- - '##'
+  - escalation
+- - '##'
+  - espionage
+- - '##'
+  - evaluate
+- - '##'
+  - executive management
+- - '##'
+  - exfiltrate
+- - '##'
+  - exploit
+- - '##'
+  - external standards
+- - '#'
+  - f
+- - '##'
+  - fail safe
+- - '##'
+  - fail‐over procedures
+- - '##'
+  - feature
+- - '##'
+  - Federal Financial Institutions Examination Council (FFIEC)
+- - '#'
+  - g
+- - '#'
+  - h
+- - '#'
+  - i
+- - '#'
+  - 索引
+- - '##'
+  - i
+- - '##'
+  - j
+- - '##'
+  - k
+- - '##'
+  - l
+- - '##'
+  - m
+- - '##'
+  - n
+- - '#'
+  - o
+- - '#'
+  - p
+- - '#'
+  - q
+- - '#'
+  - r
+- - '#'
+  - S
+- - '##'
+  - s
+- - '#'
+  - t
+- - '#'
+  - u
+- - '#'
+  - v
+- - '##'
+  - 漏洞
+- - '##'
+  - W
+- - '###'
+  - 工作流
+- - '##'
+  - Z
+- - '###'
+  - 零日漏洞
+- - '###'
+  - 零信任
