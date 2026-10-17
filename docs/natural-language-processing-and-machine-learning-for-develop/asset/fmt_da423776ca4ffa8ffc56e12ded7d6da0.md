@@ -1,0 +1,127 @@
+
+[Listing 8.2](#ch08.xhtml#list8.2) displays the contents of `sklearn_tree3.py` that extends the code in [Listing 8.1](#ch08.xhtml#list8.1) by adding a third label, and also by predicting the label of three points instead of two points in the Euclidean plane (the modifications are shown in bold).
+
+***LISTING 8.2: sklearn_tree3.py***
+
+```python
+from sklearn import tree  # X = pairs of 2D points and Y = the class of each point
+X = [[0, 0], [1, 1], [2, 2]]
+Y = [0, 1, **2**]
+tree_clf = tree.DecisionTreeClassifier()
+tree_clf = tree_clf.fit(X, Y)  # predict the class of samples:
+print("predict class of \[-1., -1.\]:")
+print(tree_clf.predict([[-1., -1.]]))
+print("predict class of \[0.8, 0.8\]:")
+print(tree_clf.predict([[0.8, 0.8]]))
+print("predict class of \[2., 2.\]:")
+print(tree_clf.predict([[2., 2.]]))
+# the percentage of training samples of the same class
+# in a leaf note equals the probability of each class
+print("probability of each class in \[2.,2.\]:")
+print(tree_clf.predict_proba([[2., 2.]]))
+```
+
+Now launch the code in [Listing 8.2](#ch08.xhtml#list8.2) and you will see the following output:
+
+```
+predict class of \[-1., -1.\]: \[0\] **predict class of \[0.8, 0.8\]:** **\[1\]** predict class of \[2., 2.\]: \[**2**\] probability of each class in \[2.,2.\]: \[\[**0\. 0. 1.**\]\] 
+```
+
+As you can see, the points \[-1,-1\], \[0.8, 0.8\], and \[2,2\] are correctly labeled with the values 0, 1, and 2, respectively, which again is probably what you expected. [Listing 8.3](#ch08.xhtml#list8.3) displays the dataset `partial_wine.csv`, which contains two features and a label column (there are three classes). The total row count for the complete dataset is 178.
+
+***LISTING 8.3: partial_wine.csv***
+
+```python
+Alcohol, Malic acid, class 14.23,1.71,1 13.2,1.78,1 13.16,2.36,1 14.37,1.95,1 13.24,2.59,1 14.2,1.76,1 
+```
+
+[Listing 8.4](#ch08.xhtml#list8.4) displays contents of `tree_classifier.py` that uses a decision tree, with entropy as the value for the criterion parameter (and shown in bold), in order to train a model on the dataset `partial_wine.csv`.
+
+***LISTING 8.4: tree_classifier.py***
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd  # Importing the dataset
+dataset = pd.read_csv('partial_wine.csv')
+X = dataset.iloc[:, [0, 1]].values
+y = dataset.iloc[:, 2].values  # split the dataset into a training set and a test set
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)  # Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)  # ====> INSERT YOUR CLASSIFIER CODE HERE <====
+from sklearn.tree import DecisionTreeClassifier  # ====> INSERT YOUR CLASSIFIER CODE HERE <====
+classifier = DecisionTreeClassifier(criterion='entropy', random_state=0)  # classifier.fit(X_train, y_train)  # ====> INSERT YOUR CLASSIFIER CODE HERE <====  # predict the test set results
+y_pred = classifier.predict(X_test)  # generate the confusion matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+print("confusion matrix:")
+print(cm)
+```
+
+[Listing 8.4](#ch08.xhtml#list8.4) starts with import statements and then populates the variable `dataset` with the contents of the CSV file `partial_wine.csv`. Next, the variable `X` is initialized with the first two columns (and all the rows) of `dataset`, and the variable `y` is initialized with the third column (and all the rows) of `dataset`.
+
+Next, the variables `X_train`, `X_test`, `y_train`, `y_test` are populated with data from `X` and `y` using a 75/25 split proportion. Notice that the variable `sc` (which is an instance of the `StandardScaler` class) performs a scaling operation on the variables `X_train` and `X_test`.
+
+The code block shown in bold in [Listing 8.4](#ch08.xhtml#list8.4) is where we create an instance of the `DecisionTreeClassifier` class and then train the instance with the data in the variables `X_train` and `X_test`.
+
+The next portion of [Listing 8.4](#ch08.xhtml#list8.4) populates the variable `y_pred` with a set of predictions that are generated from the data in the `X_test` variable. The last portion of [Listing 8.4](#ch08.xhtml#list8.4) creates a confusion matrix based on the data in `y_test` and the predicted data in `y_pred`.
+
+Remember that all the diagonal elements of a confusion matrix are correct predictions (such as true positive and true negative); all the other cells contain a numeric value that specifies the number of predictions that are incorrect (such as false positive and false negative).
+
+Now launch the code in [Listing 8.4](#ch08.xhtml#list8.4) and you will see the following output for the confusion matrix in which there are 36 correct predictions and nine incorrect predictions (with an accuracy of 80%):
+
+```
+confusion matrix: \[\[13  1  2\]  \[ 0 17  4\]  \[ 1  1  6\]\] from sklearn.metrics import confusion_matrix 
+```
+
+The sum of the nonzero entries is 45 in the preceding 3×3 matrix, and the diagonal entries are correctly identified labels. Hence the accuracy is 36/45 = 0.80.
+
+## **Decision Trees, Gini Impurity, and Entropy**
+
+In the previous chapter, you learned how to calculate values for gini impurity and entropy. As you now know, the `DecisionTreeClassifier` class has a `criterion` parameter whose value can be either `entropy` or `gini` (the latter is the default value).
+
+[Listing 8.5](#ch08.xhtml#list8.5) displays the contents of `tree_iris_gini.py` that illustrates how to use the `DecisionTreeClassifier` class in Sklearn and specify `gini` as the criterion (which is specific in the code just for emphasis).
+
+***LISTING 8.5: tree_iris_gini.py***
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import export_graphviz 
+iris = load_iris()
+X = iris.data[:, 2:]
+y = iris.target 
+tree_clf = DecisionTreeClassifier(max_depth=4,criterion='gini',random_state=10)
+tree_clf.fit(X, y) 
+export_graphviz( 
+    tree_clf, 
+    out_file="iris_gini.dot", 
+    feature_names=iris.feature_names[2:], 
+    class_names=iris.target_names, 
+    rounded=True, 
+    filled=True) 
+plt.show() 
+```
+
+[Listing 8.5](#ch08.xhtml#list8.5) starts with import statements and then initializes the variable `iris` as an instance of the Iris dataset that is available through Sklearn. The variable `X` is initialized with all the rows of `iris` and all columns except the first column. The variable `y` is initialized as the target column in `iris`, which is the label values. Note that the data and target components are defined in the Iris dataset that is built into Sklearn: if you download a CSV file containing the Iris dataset, it does not necessarily contain data and target components.
+
+The next code snippet initializes the variable `tree_clf` as an instance of the Sklearn class `DecisionTreeClassifier`, after which the `fit()` method of `tree_clf` is invoked with `X` and `y` as arguments.
+
+The last code block invokes the `export_graphviz()` method to generate a “.dot” file, and you can use the `dot` executable in GraphViz (after installing it on your machine) to create a PNG file with this command:
+
+```
+dot -Tpng iris_gini.dot -o iris_gini.png 
+```
+
+[Figure 8.1](#ch08.xhtml#fig8.1) displays a tree-based graph with gini impurity values for various nodes in the tree.
+
+![Figure 8.1 ¶ A Tree with Gini Impurity Values.](images/fig8.1.jpg)
+
+Figure 8.1 ¶ A Tree with Gini Impurity Values.
+
+[Listing 8.6](#ch08.xhtml#list8.6) displays the contents of `tree_iris_entropy.py` that illustrates how to use the `DecisionTreeClassifier` class in Sklearn and specify `entropy` instead of `gini` as the value for the `criterion` parameter.
+
+***LISTING 8.6: tree_iris_entropy.py***

@@ -1,0 +1,74 @@
+
+x: `tf.Tensor`(`\[\[1. 2. 3.\]  \[4. 5. 6.\]\], shape=(2, 3), dtype=float32`) `x.shape`: `(2, 3)` `x.dtype`: `<dtype: 'float32'>` `x\[:, 1:\]`: `tf.Tensor`(`\[\[2. 3.\]  \[5. 6.\]\], shape=(2, 2), dtype=float32`) `x\[..., 1, tf.newaxis\]: `tf.Tensor`(`\[\[2.\]  \[5.\]\], shape=(2, 1), dtype=float32`) `x + 10`: `tf.Tensor`(`\[\[11. 12. 13.]  \[14. 15. 16.]  \], shape=(2, 3), dtype=float32`) `tf.square(x)`: `tf.Tensor`(`\[\[ 1.  4.  9.]  \[16. 25. 36.]  \], shape=(2, 3), dtype=float32`) `x @ tf.transpose(x)`: `tf.Tensor`(`\[\[14. 32.]  \[32. 77.]  \], shape=(2, 2), dtype=float32`) `m1`: `tf.Tensor`(`\[\[51. 52. 54.]  \[53. 56. 62.]  \], shape=(2, 3), dtype=float32`) `m1 + 50`: `tf.Tensor`(`\[\[51. 52. 54.]  \[53. 56. 62.]  \], shape=(2, 3), dtype=float32`) `m1 * 2`: `tf.Tensor`(`\[\[ 2.  4.  8.]  \[ 6. 12. 24.]  \], shape=(2, 3), dtype=float32`) `tf.square(m1)`: `tf.Tensor`(`\[\[  1.   4.  16.]  \[  9.  36. 144.]  \], shape=(2, 3), dtype=float32` 
+
+## **Second-Order Tensors in TF 2 (1)**
+
+[Listing E.19](#appE.xhtml#listE.19) displays the contents of `tf2_elem2.py` that illustrates how to define a second-order TF tensor and access elements in that tensor.
+
+***LISTING E.19: tf2_elem2.py***
+
+import `tensorflow` as `tf` `arr2` = `tf`.`constant`(`\[\[1,2\],\[2,3\]\]) `@tf.function` `def compute_values`:   print('arr2: ',arr2)   print('\[0\]:  ',arr2\[0\])   print('\[1\]:  ',arr2\[1\]) `compute_values`() 
+
+[Listing E.19](#appE.xhtml#listE.19) contains the `TF` constant `arr1` that is initialized with the value `\[\[1,2\],\[2,3\]\]`. The three `print()` statements display the value of `arr1`, the value of the element whose index is 1, and the value of the element whose index is `\[1,1\]`. The output from [Listing E.19](#appE.xhtml#listE.19) is here:
+
+arr2:   `tf.Tensor`(`\[\[1 2\]  \[2 3\]\], shape=(2, 2), dtype=int32`) `\[0\]`:   `tf.Tensor`(`\[1 2\], shape=(2,), dtype=int32`) `\[1\]`:   `tf.Tensor`(`\[2 3\], shape=(2,), dtype=int32`) 
+
+## **Second-Order Tensors in TF 2 (2)**
+
+[Listing E.20](#appE.xhtml#listE.20) displays the contents of `tf2_elem3.py` that illustrates how to define a second-order `TF` 2 tensor and how to access elements in that tensor.
+
+***LISTING E.20: tf2_elem3.py***
+
+import `tensorflow` as `tf` `arr3` = `tf.constant`(`\[\[\[1,2\],\[2,3\]\],\[\[3,4\],\[5,6\]\]\]) `@tf.function` `# repłace print() with tf.print()` `def compute_values`:   print('arr3:   ',arr3)   print('\[1\]:    ',arr3\[1\])   print('\[1,1\]:  ',arr3\[1,1\])   print('\[1,1,0\]:',arr3\[1,1,0\]) `compute_values`() 
+
+[Listing E.20](#appE.20) contains the `TF` constant `arr3` that is initialized with the value `\[\[\[1,2\],\[2,3\]\],\[\[3,4\],\[5,6\]\]\]`. The four `print()` statements display the value of `arr3`, the value of the element whose index is 1, the value of the element whose index is `\[1,1\],` and the value of the element whose index is `\[1,1,0\].` The output from [Listing E.20](#appE.xhtml#listE.20) (adjusted slightly for display purposes) is here:
+
+arr3:    `tf.Tensor`(`\[\[\[1 2\]  \[2 3\]\]  \[\[3 4\]  \[5 6\]\]\], shape=(2, 2, 2), dtype=int32`) `\[1\]:     `tf.Tensor`(`\[\[3 4\]  \[5 6\]\], shape=(2, 2), dtype=int32`) `\[1,1\]:   `tf.Tensor`(`\[5 6\], shape=(2,), dtype=int32`) `\[1,1,0\]: `tf.Tensor`(`5`, shape=(), dtype=int32`) 
+
+## **Multiplying Two Second-Order Tensors in TF**
+
+[Listing E.21](#appE.xhtml#listE.21) displays the contents of `tf2_mult.py` that illustrates how to multiply Second-order tensors in `TF` 2.
+
+***LISTING E.21: tf2_mult.py***
+
+import `tensorflow` as `tf` `m1` = `tf.constant`(`\[\[3., 3.\]\])  # 1x2 `m2` = `tf.constant`(`\[\[2.\],\[2.\]\]) # 2x1 `p1` = `tf.matmul`(m1, m2)        # 1x1   @`tf.function` `def compute_values`:   print('m1:',m1)   print('m2:',m2)   print('p1:',p1) `compute_values`() 
+
+[Listing E.21](#appE.xhtml#listE.21) contains two `TF` constant `m1` and `m2` that are initialized with the value `\[\[3., 3.\]\]` and `\[\[2.\],\[2.\]\]`. Due to the nested square brackets, `m1` has shape 1x2, whereas `m2` has shape 2x1. Hence, the product of `m1` and `m2` has shape (1,1).
+
+The three `print()` statements display the value of `m1`, `m2`, and `p1`. The output from [Listing E.21](#appE.xhtml#listE.21) is here:
+
+m1: `tf.Tensor`(`\[\[3. 3.\]\], shape=(1, 2), dtype=float32`) `m2`: `tf.Tensor`(`\[\[2.\]  \[2.\]\], shape=(2, 1), dtype=float32`) `p1`: `tf.Tensor`(`\[\[12.\]\], shape=(1, 1), dtype=float32`) 
+
+## **Convert Python Arrays to TF Tensors**
+
+[Listing E.22](#appE.xhtml#listE.22) displays the contents of `tf2_convert_tensors.py` that illustrates how to convert a Python array to a `TF` 2 tensor.
+
+***LISTING E.22: tf2_convert_tensors.py***
+
+import `tensorflow` as `tf` import `numpy` as `np`  `x1` = `np`.`array`(`\[\[1.,2.\],\[3.,4.\]\]) `x2` = `tf`.`convert_to_tensor`(value=`x1`, dtype=`tf.float32`) `print ('x1:',x1) print ('x2:',x2) 
+
+[Listing E.22](#appE.xhtml#listE.22) is straightforward, starting with an import statement for `TensorFlow` and one for `NumPy`. Next, the `x_data` variable is a `NumPy` array, and `x` is a `TF` tensor that is the result of converting `x_data` to a `TF` tensor. The output from [Listing E.22](#appE.xhtml#listE.22) is here:
+
+x1: `\[\[1. 2.]  \[3. 4.\]\]` x2: `tf.Tensor`(`\[\[1. 2.]  \[3. 4.\]\], shape=(2, 2), dtype=float32`) 
+
+### **Conflicting Types in TF 2**
+
+[Listing E.23](#appE.xhtml#listE.23) displays the contents of `tf2_conflict_types.py` that illustrates what happens when you try to combine incompatible tensors in `TF` 2.
+
+***LISTING E.23: tf2_conflict_types.py***
+
+import `tensorflow` as `tf` `try`:   `tf.constant`(1) + `tf.constant`(1.0) `except tf.errors.InvalidArgumentError` as `ex`:   print(`ex`) `try`:   `tf.constant`(1.0, dtype=`tf.float64`) + `tf.constant`(1.0) `except tf.errors.InvalidArgumentError` as `ex`:   print(`ex`) 
+
+[Listing E.23](#appE.xhtml#listE.23) contains two `try/except` blocks. The first block adds two constants 1 and 1.0, which are compatible. The second block attempts to add the value 1.0 that’s declared as a `tf.float64` with 1.0, which are not compatible tensors. The output from [Listing E.23](#appE.xhtml#listE.23) is here:
+
+cannot compute Add as input #1(zero-based) was expected to be a int32 tensor but is a float tensor \[Op:Add\] name: add/ cannot compute Add as input #1(zero-based) was expected to be a double tensor but is a float tensor \[Op:Add\] name: add/ 
+
+## **Differentiation and `tf.GradientTape` in TF 2**
+
+Automatic differentiation (i.e., calculating derivatives) is useful for implementing ML algorithms such as back propagation for training various types of neural networks. During eager execution, the `TF` 2 context manager `tf.GradientTape` traces operations for computing gradients. This context manager provides a `watch()` method for specifying a tensor that will be differentiated (in the mathematical sense of the word).
+
+The `tf.GradientTape` context manager records all forward-pass operations on a “tape.” Next, it computes the gradient by “playing” the tape backward, and then discards the tape after a single gradient computation. Thus, a `tf.GradientTape` can only compute one gradient: subsequent invocations throw a runtime error. Keep in mind that the `tf.GradientTape` context manager only exists in eager mode.
+
+Why do we need the `tf.GradientTape` context manager? Consider deferred execution mode, where we have a graph in which we know how nodes are connected. The gradient computation of a function is performed in two steps: 1) backtracking from the output to the input of the graph, and 2) computing the gradient to obtain the result.
+
+By contrast, in eager execution the only way to compute the gradient of a function using automatic differentiation is to construct a graph. After constructing the graph of the operations executed within the `tf.GradientTape` context manager on some “watchable” element (such as a variable), we can instruct the tape to compute the required gradient. If you want a more detailed explanation, the `tf.GradientTape` documentation page contains an example that explains how and why tapes are needed.

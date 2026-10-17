@@ -1,0 +1,117 @@
+
+If you use Google Translate, the following sentence is generated, which is almost identical to the preceding sentence (the only difference is the direct object particle):
+
+![image](images/161-02.jpg)
+
+Consecutive postpositions in Japanese are also possible. For example, the sentence “Nihon e iku **toki** **ni** **wa**, sushi o tabemasu” means “when (whenever) \[I\] go to Japan, I eat sushi,” and also contains three consecutive post positions. The pronoun “I” is in square brackets because the speaker might be one or more different people.
+
+However, multiple consecutive postpositions adhere to rules (i.e., not all combinations are possible), which creates more complexity for nonnative-Japanese speakers. If a Japanese sentence in Hiragana is written without spaces, ambiguity can arise regarding whether to interpret a syllable as a postposition or as part of a word. To illustrate this detail, consider the interesting Japanese sentence “The artist drew a picture,” whose translation is clear when it’s written as follows::
+
+*Gaka ga e o kaita*
+
+As you already know, the particles “ga” and “o” are postpositions; the word “e” is a postposition as well, but in this case it’s a homonym for the word “picture.” This is an example whereby two words with different Kanji have the same pronunciation (and the same is true for Mandarin and Cantonese).
+
+Now consider what happens when the preceding Romanji sentence is written without any spaces:
+
+*Gakagaeokaita*
+
+The preceding sentence might appear to have six consecutive postpositions: ga, ka, ga, e, o, and ka. As you can see, knowledge of Japanese vocabulary is necessary in order to parse the preceding sentence correctly. Incidentally, the preceding Romanji sentence can also be written as shown here, with no change in meaning, because the postpositions are “markers” for the grammatical function of the nouns in the sentence:
+
+*E o gaka ga kaita*
+
+In case you are interested, the following link contains an extensive list of Japanese sentences with postpositions:
+
+*[https://en.wikipedia.org/wiki/Japanese\_particles](https://en.wikipedia.org/wiki/Japanese_particles)*
+
+### **Ambiguity in Japanese Sentences**
+
+Since Japanese does not pluralize nouns, the same word is used for singular as well as plural, which requires contextual information in order to determine the exact meaning of a Japanese sentence. As a simple illustration, which is discussed in more detail later in this chapter under the topic of tokenization, here is a Japanese sentence written in Romanji, followed by Hiragana and Kanji (the second and third sentences are from Google Translate):
+
+Watashi wa tomodachi ni hon o agemashita 
+
+![image](images/162-01.jpg)
+
+The preceding sentence can mean any of the following, and the correct interpretation depends on the context of a conversation:
+
+*   I gave a book to a friend
+
+*   I gave a book to friends
+
+*   I gave books to a friend
+
+*   I gave books to friends
+
+Moreover, the context for the words *friend* and *friends* in the Japanese sentence is also ambiguous: they do not indicate whose friends (mine, yours, his, hers, and so forth). In fact, the following Japanese sentence is also grammatically correct and ambiguous:
+
+Tomodachi ni hon o agemashita 
+
+The preceding sentence does not specify who gave a book (or books) to a friend (or friends), but its context will be clear during a conversation. Incidentally, Japanese people often omit the subject pronoun (unless the sentence becomes ambiguous), so it’s more common to see the second sentence (i.e., without “Watashi wa”) instead of the first Romanji sentence.
+
+Contrast the earlier Japanese sentence with its counterpart in the romance languages Italian, Spanish, French, Portuguese, and finally in German (some accent marks are missing for some words):
+
+Italian:    Ho dato un libro a mio amico Spanish:    \[Yo\] Le di un libro a mi amigo Portuguese: Eu dei um livro para meu amigo French:     J'ai donne un livre au mon ami German:     Ich habe ein Buch dem Freund gegeben 
+
+Notice that the Italian and French sentences use a compound verb whose two parts are consecutive (adjacent), whereas German uses a compound verb in which the second part (the past participle) is at the end of the sentence. However, the Spanish and Portuguese sentences use the simple past (the “preterite”) form of the verb “to give.”
+
+### **Japanese Nominalization**
+
+*Nominalizers* convert verbs (or even entire sentences) into a noun. Nominalizers resemble a “that” clause in English, and they are useful when speaking about an action as a noun. Japanese has two nominalizers: “no” and “koto ga.”
+
+The nominalizer ![image](images/163-01.jpg)(no) is required with verbs of perception, such as ![image](images/163-02.jpg)![image](images/163-03.jpg)(to see) and ![image](images/163-04.jpg)(to listen). For example, the following sentence means “I love listening to music,” written in Romanji in the first sentence, followed by a second sentence that contains a mixture of Kanji and Hiragana:
+
+Watashi wa ongaku o kiku no ga daisuki desu 
+
+![image](images/163-05.jpg)
+
+The next three sentences all mean “He loves reading a newspaper,” written in Romanji and then Hiragana and Kanji:
+
+Kare wa shimbun o yomu no ga daisuki desu 
+
+![image](images/163-06.jpg)
+
+The “koto ga” nominalizer, which is the other Japanese nominalizer, is used sentences of the form “have you ever . . .” For example, the following sentence means “Have you (ever) been in Japan”:
+
+Nihon ni ita koto ga dekimasu ka
+
+![image](images/164-01.jpg)
+
+### **Google Translate and Japanese**
+
+Google Translate provides a wonderful service, yet sometimes its translations from Japanese to English are incorrect. This point is not intended as a criticism of Google Translate; on the contrary, it’s an indication of the complexity of the translation process, even for simple Japanese sentences.
+
+For example, the following sentence means “I love reading a newspaper” but is incorrectly translated in Google Translate as “I love reading”:
+
+![image](images/164-02.jpg)
+
+Note that the letter m in the preceding sentence is due to a limitation of the keyboard in translating ASCII letters to Japanese. As another example, the following (almost identical) sentence is incorrectly translated in Google Translate as “I love to read him” *because of the white space that precedes “yomu”* ![image](images/164-04.jpg):
+
+![image](images/164-04.jpg)
+
+If you enter the following sentence in Hiragana in Google Translate, the correct Romanji is generated:
+
+![image](images/164-05.jpg)
+
+*Yuki ga hon o yomimashita*
+
+The preceding sentence means “Yuki read the book”; however, Google Translate provides this incorrect English translation:
+
+*I just read Yuki*
+
+As another example, the following sentence in Hiragana is translated correctly in Google Translate:
+
+![image](images/164-06.jpg)
+
+*Sushi ga yuki ni taberareta*
+
+*Sushi was eaten by Yuki*
+
+Notice how the particle (postposition) “ni” in the preceding sentence is translated as “by” when it’s used in the context of the passive voice in English.
+
+### **Japanese and Korean**
+
+As you learned earlier in this chapter, both Japanese and Korean have postpositions, some of which are similar. There appears to be some degree of comingling among Korean and Japanese, both of which have been influenced by Chinese. The following link contains some interesting details (i.e., a mixture of speculation, conjectures, and some facts) regarding the common aspects of Japanese and Korean:
+
+*[https://linguistics.stackexchange.com/questions/41/are-the-japanese-and-korean-subject-particles-known-to-be-related-in-any-way-in](https://linguistics.stackexchange.com/questions/41/are-the-japanese-and-korean-subject-particles-known-to-be-related-in-any-way-in)*
+
+### **Vowel-Optional Languages and Word Direction**
+
