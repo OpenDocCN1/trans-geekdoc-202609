@@ -1,0 +1,82 @@
+
+On the other hand, the idf (inverse-document frequency) of a word is inversely proportional to the log of the number of occurrences of a word in multiple documents. Thus, a word that appears in many documents makes that word less valuable, and hence lowers its idf value. By contrast, rare words are more relevant than popular ones, so they help to extract relevance. The tf-idf relevance of each word is a normalized data format also adds up to 1.
+
+Notice that the idf value involves the logarithm of `N/dc`. This is because word frequencies are distributed exponentially, and the logarithm provides a better weighting of a word’s overall popularity. In addition, tf-idf assumes a document is a “bag of words.”
+
+Note the following idf and tf-idf values:
+
+*   `idf = 0` for words that appear in every document
+
+*   `tfidf = 0` for words that appear in every document
+
+*   `idf = log(N)` for words that appear in one document
+
+In addition, a word that appears frequently in a `single` document will have a higher tf-idf value. Moreover, a word that appears frequently in a document is probably part of a topic.
+
+For example, suppose that the word syzygy appears in a collection of documents. The word syzygy can be a sort of differentiator because it probably appears in a low number of documents of that collection.
+
+After the tf-idf values are computed for the words in the corpus, the words are sorted in decreasing order, based on their tf-idf value, and then the highest scoring words are selected. The number of selected words depends on you: it can be as small as 5 or as large as 100 (or even larger).
+
+By way of comparison, BoW and tf-idf differ from word embeddings (discussed later in this chapter) in two important ways:
+
+1.  BoW and tf-idf calculate one number per word whereas word embeddings create one vector per word.
+
+2.  BoW and tf-idf work better for classifying entire documents, whereas word embeddings are useful for determining the context of words in a document.
+
+Incidentally, you can implement a rudimentary search algorithm based on tf-idf scores for the words in a corpus, and make a determination based on the most relevant words (which is based on their tf-idf value) in a corpus.
+
+As another example, with the corresponding code in a later chapter, suppose that we have the following set of sentences:
+
+1) I love Chicago deep dish pizza 2) New York style pizza is also good 3) San Francisco pizza can be very good
+
+The tf-idf pairs are here:
+
+`{'love': 5, 'chicago': 0, 'deep': 1, 'dish': 2, 'pizza': 7, 'new': 6, 'york': 10, 'style': 9, 'good': 4, 'san': 8, 'francisco': 3}`
+
+The tf-idf encoding for the initial three sentences is here:
+
+`I love Chicago deep dish pizza: [[0.47952794 0.47952794 0.47952794 0. 0. 0.47952794 0. 0.28321692 0. 0.]] New York style pizza is also good: [[0. 0. 0. 0. 0.38376993 0. 0.50461134 0.29803159 0. 0.50461134 0.50461134]] San Francisco pizza can be very good: [[0. 0. 0. 0.5844829 0.44451431 0. 0.34520502 0.5844829 0. 0.34520502 0.]]`
+
+Compare the tf-idf encoding of the same three sentences using a BoW encoding and an ngram encoding in an earlier section.
+
+## Limitations of tf-idf
+
+The tf-idf value is useful for calculating the word relevance of individual words, but can be less effective when trying to match a phrase in one or more documents. If you allow partial matches, then the set of matching phrases can contain phrases that are less relevant.
+
+For example, suppose a set of documents pertains to various animals, and you want to find the documents that contain the phrase “strong beautiful racing horse.” Would you accept the phrase “strong beautiful racing dog” as a match? If this phrase has the same tf-idf value as the original search phrase, then tf-idf cannot distinguish between them, and so tf-idf cannot reject the latter phrase in the matching set of documents.
+
+As you will see, a better solution involves `word2vec` (or even better, an attention-based mechanism such as the `transformer` architecture) because `word2vec` provides word vectors that contain contextual information about words (which is not the case for tf-idf values). Even better is the `Transformer`-based architecture is discussed in the final chapter of this book.
+
+As you know, BoW models lose useful information, such as the semantics, structure, sequence, and context around nearby words in each text document. A better approach involves statistical language models, as discussed later in this chapter.
+
+## Pointwise Mutual Information (PMI)
+
+PMI is an alternative to tf-idf, which works well for both word–context matrices as well as term–document matrices. However, PMI is biased towards infrequent events.
+
+A better alternative to PMI is a variant known as positive PMI (PPMI) that replaces negative PMI values with zero (which is conceptually similar to ReLU in machine learning). Some empirical results indicate that PPMI has superior performance when measuring semantic similarity with word-context matrices.
+
+## The Context of Words in a Document
+
+There are two types of context for words: semantic context and pragmatic context, both of which are discussed in the following subsections. You will also learn about the distributional hypothesis regarding the context of words. An important point to keep in mind is that the distributional hypothesis is based on something called a heuristic, which means that it is based on an assumption that is often true. In fact, the assumption is true to that extent that its accuracy is reliable enough that it outweighs the frequency of its incorrect estimates.
+
+In a subsequent section, you will also learn about the cosine similarity metric that is used to measure the distance between two floating point vectors that represents two words.
+
+### What is Semantic Context?
+
+Semantic context refers to the manner in which words are related to each other. For example, if you hear a sentence that starts with “Once in a blue \_\_\_\_,” you might infer that the missing word is “moon.” Another example is “I’m feeling fine and \_\_\_,” where the missing word is “dandy.”
+
+The distributional hypothesis asserts that words that occur in a similar context tend to have similar meanings. The context of a word is the words that commonly occur around that word. For example, in the sentence “the cat sat on the mat,” here is the context of the word “sat”:
+
+`("the", "cat", "on", "the", "mat")`
+
+The key idea is worth repeating here: words with similar contexts share meaning and their reduced vector representations will be similar.
+
+Another interesting concept is pragmatics, which is a subfield of linguistics that studies the relationship between context and meaning. As a simple example, consider the following sentence: “He was in his prison cell talking on his new cell phone while a nurse extracted some of his blood cell samples.” As you can see, the word cell has three different meanings in the previous sentence, and therefore any embedding that takes into account both semantic and pragmatic context must generate three different vectors. More information about pragmatics is here:
+
+[`en.wikipedia.org/wiki/Pragmatics`](https://en.wikipedia.org/wiki/Pragmatics)
+
+### Textual Entailment
+
+Another interesting NLP task is called textual entailment, which analyzes a pair of sentences to predict whether or not the facts in the first sentence imply the facts in the second sentence. This type of analysis is important in various NLP-based applications, and actual results do vary (as you might expect). In fact, one of the techniques for training the BERT model is called NSP, which is an acronym for next sentence prediction. More details regarding NSP are in Chapter 11.
+
+### Discrete, Distributed, and Contextual Word Representations
