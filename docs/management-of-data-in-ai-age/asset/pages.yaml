@@ -1,0 +1,3081 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# IMPORTANT
+
+
+    This Ebook is protected by the proprietary intellectual property rights of CSMFL
+    Publications, in all regions, globally.
+
+
+    This copy is sold subject to the condition that no part of this Ebook shall be
+    reproduced or shared by any means or on any platform online or offline or by photocopying,
+    imaging or scanning without the written permission of CSMFL Publications.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Management of Data in AI Age
+
+
+    Edited by
+
+
+    MSS El Namaki & Pooja Sharma
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Management of Data in AI Age
+
+
+    Edited by MSS El Namaki & Pooja Sharma
+
+
+    Published by
+
+    CSMFL Publications
+
+    (international publishers of knowledge & literature)
+
+    2862, HUDA, Sector 17, Jagadhri-135003, INDIA
+
+    www.csmflpublications.com
+
+    support@csmflpublications.com
+
+
+    The views and opinions expressed in this book are the authors’ own and the facts
+    are as reported by them, which have been verified to the extent possible, and
+    the publishers are not in any way liable for the same.
+
+
+    Copyright © Publisher & its Authors
+
+
+    No part of this publication may be reproduced, transmitted, or stored in a retrieval
+    system, in any form or by any means, electronic, mechanical, photocopying, recording
+    or otherwise, without the prior permission of the publisher.
+
+
+    **ISBN** (paperback print): 978-81-948483-4-9
+
+    **ISBN** (ebook): 978-81-948483-5-6
+
+    **MRP:** USD 49.99 (Paperback)|USD 34.99 (ebook)
+
+
+    Edition 2020
+
+    The moral right of the authors has been asserted.
+
+
+    **Printed & published by CSMFL, India to be sold worldwide.**
+
+
+    This book is sold subject to the condition that it shall not, by way of trade
+    otherwise, be lent, resold, hired out or otherwise circulated, without the publisher’s
+    prior consent, in any form of binding or cover other than that in which it is
+    published.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'machines were developed and utilized in every field to reduce the manual work
+    of human beings which has made significant changes in science and technology.
+    In the twentieth century of information technology revolution, gave rise to the
+    development of Artificial intelligence with the concept of creating intelligent
+    machines which can perform any task like human being does through learning, reasoning
+    and self-correction [11]. With this invention, machines will be taking over and
+    decline the human mental work. Thus, the goal of Artificial intelligence is to
+    develop systems that can function intelligently and independently [14].
+
+
+    The concept of Artificial Intelligence is old but has gathered enough popularity
+    recently. Fig 1.1 shows some of the milestones in the history of AI. From the
+    year 1950 till data, there is a vast improvement and developments in the field
+    of AI. In 1950, Alan Turing has proposed a Turing test to check the ability of
+    machines to work intelligently as humans [16]. He suggested why can’t machines
+    work and think in a similar manner as human being does. The term Artificial Intelligence
+    was first coined in the year 1956 by John McCarthy at Dartmouth conference which
+    led to the development of first AI program. Then he developed LISP programming
+    language for AI. In the year 1961, first industrial robot was developed which
+    replaced humans on the assembly line. Then in the year 1964, first Chatbot named
+    ELIZA is developed which was an early NLP (Natural language processing) program
+    to have a communication between humans and machine. During the years 1974 to 1980,
+    there was no research and development done in the field of AI due to shortage
+    of funds'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'from the government and that time period was the first AI winter duration when
+    no invention was made. After the AI winter duration, the invention came with the
+    development of Expert system and then so many inventions in the field of AI continued
+    till date with Siri, Google Now, Amazon echo etc. as shown in the figure below.
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_8_0.png)
+
+
+    Fig 1.1 History of AI
+
+
+    Earlier we had very small amount of data which was not capable to predict the
+    accurate result. These days we have tremendous increase in the amount of data.
+    Even the statistics suggest that by the year 2020, data will increase from 4.4
+    ZB to 44 ZB. Along with the large amount of data, these days we have high end
+    computational power of system and large storage to store this vast amount of data.
+    Thus, it is expected than more than 70 percentage of the enterprise will utilize
+    Artificial Intelligence.
+
+
+    Artificial Intelligence is defined as a study of intelligent agents which can
+    perceive, analyze and understand its surroundings and act accordingly to achieve
+    its objectives [1]. AI is a technique which enables the machine to act like humans
+    by replicating the behavior and nature [14]. Thus, it'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'allows the machines to learn from past experience and perform task on the new
+    input as humans do [16]. It allows the machines to train on the specific task
+    by processing large amount of data and recognize patterns, this kind of intelligence
+    is also known as Machine learning[8].
+
+
+    Thus, AI is a broader umbrella under which comes the subfields Machine learning
+    and Deep learning. In our day to day life we all use artificial intelligence i.e.
+    from voice-powered personal assistant such as Apple Siri, Alexa, to Netflix, Pandora,
+    and Tesla self-driving car are some of the examples of AI which is based on Natural
+    Language processing, deep learning. Thus, AI is making our lives better and efficient
+    in many unforeseen ways. Fig 1.2 depicts the various approaches in Artificial
+    Intelligence and how it can be used in various fields. Humans speak and listen
+    and they converse through a language which is a field of speech recognition which
+    is based on statistics, thus is called statistical learning. Humans can read and
+    write text in a language which is a field of Natural language processing. We humans
+    can see with eyes and process what we see and this is the field of Computer vision
+    which is symbolic way of computers to process the knowledge and information. Humans
+    have the ability to see patterns such as grouping of similar objects which is
+    a discipline of pattern recognition and Machines are even better at recognizing
+    pattern where the field of Machine learning came into picture. The brain of humans
+    is a network of neurons which helps us to learn and memorize things. If we can
+    recreate the structure and function of human brain then the machines will have
+    the'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'cognitive capabilities like human brain. This is the field of neural networks
+    which are complex structures which we can use to learn complex things which is
+    a field of Deep learning. Thus, AI can be used in the field of Machine learning,
+    expert system, natural language processing, robotics, pattern recognition, decision
+    making, prediction, clustering and classification etc.
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_10_0.png)
+
+
+    Fig 1.2 An Overview of various approaches in AI
+
+
+    Machine learning is the most common type of Artificial Intelligence and the subset
+    of AI which plays a major role in the development of business to process huge
+    amount of data. It mainly focuses on designing systems and training them so that
+    they can learn to make predictions based on learning from past experience. It
+    deals with the extraction of patterns from the data set which helps in prediction.
+
+
+    The working of machine learning mainly focuses on training where the system is
+    trained using Machine learning algorithm on labeled/ unlabeled data. Input data
+    is passed to the ML algorithm and then the predictions are made. The prediction
+    is evaluated for accuracy and if it is acceptable then only the'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'ML algorithm gets deployed else it is trained again and again with the augmented
+    data set. Another is deep learning, which is subset of Machine learning [8] which
+    utilizes ML algorithms to train deep neural network for achieving better accuracy
+    where former was not working well. Thus, AI is a broader part allowing machines
+    to execute in a smarter manner like human beings and ML and Deep learning are
+    its subparts which are shown in the figure 1.3.
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_11_0.png)
+
+
+    Fig 1.3 AI vs Machine learning vs Deep learning [2]
+
+
+    # **Types of Artificial Intelligence learning:**
+
+
+    +   - **Artificial Narrow Intelligence** - It is also known as the Weak AI or
+    Narrow AI which is applied to a specific domain where AI can perform only the
+    specific task and will not learn new. Artificial Narrow Intelligence will make
+    decisions based on programmed algorithm and training data. Some of the examples
+    of Artificial Narrow Intelligence include AI-powered web searches, Self'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'biosensors where tests are done on blood samples taken from human body to detect
+    any disease which can be used to monitor the patients’ health to cure the disease.
+    Gene expression is one of an important diagnostic tool which can be analyzed by
+    ML to interpret the microarray of data for classifying and detecting the abnormalities
+    [19]. With AI, biosensors systems can detect and diagnose the cardiovascular diseases
+    at early stages and thus AI techniques can help in predicting the disease and
+    increases the survival rates of cancer patients.
+
+
+    +   - **AI in Banking sector**
+
+
+    Due to rapid growth in online mobile banking service, the popularity of AI in
+    banking is increasing where it is maintaining a high confidential dataset of user’s
+    data [17]. AI powered chat bots are helping the customers to provide the services.
+    Chatbot named Erica- A virtual financial assistant was piloted by Bank of America
+    in the year 2017 which made available in June 2018 to download the Erica app.
+    Erica is developed using AI and natural language to help the users to access their
+    bank information, balance enquiries, transfer money etc. Through this app, customers
+    are alerted using predictive analytics and on the basis of the average monthly
+    spending of customers about their spending. If the spending of customer likely
+    to bring their balance low, then in advance they are alerted. Customers were also
+    reminded of their recurring payments and it helps them on how they can spend money
+    on any purchase.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# • **AI in Recommendation systems**
+
+
+    Retail companies are using the latest technologies i.e. artificial intelligence,
+    machine learning to keep them ahead in the competitive market. These companies
+    are utilizing recommendation systems on buying behavior of customers to increase
+    the user interaction by gathering the details of their purchase preferences and
+    enhance their shopping potential. Amazon.com makes use of recommendations on its
+    website to gather the customer’s information regarding previous purchase, products
+    viewed and accordingly it recommends the products to their users. It makes use
+    of recommendation algorithm such as Collaborative filtering on item to item which
+    gathers the information from the user purchase and compiles the list of recommendation
+    from them so that the next time a user is thinking about any latest technology,
+    the Amazon web page will suggest the latest device or gadget for its users. Another
+    example is of Netflix which senses which movie or show is of your interest and
+    you want to watch next.
+
+
+    # • **AI in Agriculture**
+
+
+    AI and Machine learning can benefit in the field of Agriculture to monitor the
+    soil health to get information about its nutritional value and to understand the
+    effects of seeds in different soils. Agriculture is making use of these technologies
+    for in-field farming where cognitive computing plays a major role which will help
+    the farmers in daily farming. In field of agriculture huge volume of'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'data is generated related to soil, pest infection which can be sensed by these
+    cognitive solution and can help to improve yield [15].
+
+
+    In agriculture, precision farming is the area gaining importance where images
+    are captured through drone for in-depth analysis and scanning of field, monitoring
+    of crops to generate real-time alerts to farmers to improve efficiency in farming.
+    There are various implementation of AI in agriculture such as FarmBot, Blue River
+    technology, Prospera. Farmbot was implemented in the year 2011 utilising precision
+    farming technology for growing crops at own place. It helps for end to end farming
+    from planting seeds to testing soil, detecting weeds, watering plants using open
+    source software system. In Agriculture industry, the major concern is herbicides
+    resistance which has been responsible for financial loss of worth $43 billion
+    of American farmers. In response to this big financial loss, Blue River Technology
+    has launched a weed spraying machine – The See and Spray robot as a solution to
+    reduce the effect of chemicals on the crops. This robot utilizes AI tools, cameras,
+    sensors to manage the field by the farmers in the way they want. This machine
+    uses deep learning algorithms and is taught with huge data set of around 10 thousand
+    different plant and it sprays in the field after testing the soil and the crops.
+
+
+    # Application areas of AI'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "As Artificial Intelligence is gaining importance in today’s world, it is very\
+    \ crucial to solve complex problems in an efficient manner. Using this cognitive\
+    \ intelligence technology machines are working in a smarter manner and is being\
+    \ used in many areas which are discussed below:\n\n+   1. **Healthcare** — As\
+    \ discussed in the case study, AI has major role in the field of healthcare where\
+    \ it is growing day by day and becoming advantageous for the healthcare industry.\
+    \ AI can be used to help doctors for performing better monitoring and diagnosis\
+    \ of the patients.\n+   \n+   2. **Social media** — Facebook, Gmail, Twitter,\
+    \ Snap chat are some of the applications using AI to store and manage the data.\n\
+    +   \n+   3. **Construction** — Construction sector is widely using the AI applications\
+    \ which helps in giving suggestions related to designing of buildings and helps\
+    \ for giving recommendation for the safety features. It will help the engineers\
+    \ for performing task in more productive manner.\n+   \n+   4. **Education** —\
+    \ AI is helping students and teachers for making education system smarter by creating\
+    \ a virtual learning environment to deliver the education in best and smart manner.\n\
+    +   \n+   5. **Agriculture** — It is known that in future, our planet will need\
+    \ more food than currently being"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'produced. Thus, AI would be a solution to this ongoing problem. PEAT is an
+    application which has been developed to test and analyse the properties of soil
+    through scanning the recorded images. Thus, it will help in detection of infections
+    in the crops and will help in crop management practices to maximize their output.
+
+
+    +   6. **Data security** — AI can be used in cyber attacks which are growing in
+    this digital world as there is lots of data in every field. Thus, securing the
+    data is crucial requirement where AI can help to discover the bugs, failures and
+    cyber attacks. AEG (Automatic exploit generation) is a software used in smart
+    devices to protect against security breach.
+
+
+    +   7. **Robotics** — In Robotics, AI plays an incredible role which can help
+    in the world of business to perform task like humans through programming. Sophia,
+    Erica are the examples of Robots developed so far where Sophia was developed in
+    2016 which imitates the gestures and facial expressions of humans and make conversations
+    and does analysis like humans.
+
+
+    +   8. **Finance** — AI based solutions are helping finance sector for making
+    smarter decisions in various credit and financial processes to'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'add more value and to save time. Example includes Robo advisor Wealthfront
+    tracks the accounts of customers and analyze how they invest and make decisions
+    using AI and gives recommendation in a better manner.
+
+
+    # **B. Role of Artificial Intelligence in empowering Business models**
+
+
+    We all have witnessed the way global digital transformation, in the past decade,
+    has significantly changed the business models around the world. Not only organizations,
+    digitalization has also deliberately affected the lives of individuals and their
+    work styles [II]. The use of digital technologies and underlying data has entirely
+    transformed the way consumers and industries interact. Moreover, the blend of
+    Artificial Intelligence (AI) and emerging technologies has revolutionized the
+    commercial sector in a way how consumers and industries interact, framing new
+    business strategies to enhance revenue generation and many more.
+
+
+    It is evident from the recent studies that the inclusion of AI technology in framing
+    business strategies has been proved to be highly beneficial for different top-notch
+    companies like Facebook, Google, Uber, Amazon, Alibaba, Tesla, etc [I]. Using
+    AI technology, these companies have gained a competitive edge in the market in
+    comparison to those who failed to adopt AI in their business models. However,
+    in addition to the inclusion of AI technology in framing innovative business models,
+    the top company executives also need to encapsulate an entrepreneurial and ingenious
+    mindset to remain competitive and creditable.'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '+   - 61 percent of business professionals agree that AI and Machine Learning
+    are the most significant data initiative in their organizations.
+
+    +   - The declarations also revealed that usage of ML/AI based technologies has
+    evolved quite rapidly over the time. Thus, making these technologies a business
+    priority as indicated by organizations which are actively using AI for creating
+    new business models as part of short-term goals to achieve.
+
+
+    It is evident from the report presented by Gartner [7] that
+
+
+    > In 2021, artificial intelligence (AI) augmentation will create $2.9 trillion
+    of business value and 6.2 billion hours of worker productivity globally. Gartner
+    defines augmented intelligence as a human-centered partnership model of people
+    and AI working together to enhance cognitive performance. This includes learning,
+    decision making, and new experiences.
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_20_0.png)
+
+
+    Figure 1.4: Business Value Forecast by AI Type [7]'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# C. Collaboration of Artificial Intelligence and Big Data in Business Innovation
+
+
+    Until before the evolution of Big Data, organizations were completely unaware
+    of the power of data being generated by them on a continuous basis. The traditional
+    business methodologies adopted by organizations were overlooking the potential
+    of data in formulating business strategies. With the advent of new technologies
+    to cater to the potential of data - both unstructured and structured, organizations
+    are now adopting in-house data analytics tools to improve their business models.
+    [1]
+
+
+    Big Data is much more than a mere collection of data as articulated by many researchers.
+    The notion of three Vs: Volume, Velocity, and Variety defines Big data in a sophisticated
+    way to gain insights that result in better decision making and improved business
+    strategies.
+
+
+    In 2001, after investigating the challenges, issues and potential generated from
+    tremendous amount of data, Gartner developed the ‘3V model’ that characterizes
+    big data in context to three attributes:
+
+
+    > “Big Data is high-volume, high-velocity, and/or high-variety information assets
+    that demand cost-effective, innovative forms of information processing that enable
+    enhanced insight, decision making, and process automation.”
+
+
+    Thus, the term Big data analytics (BDA) was coined to better express the potential
+    of Big data in examining large'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'amounts of data to reveal hidden patterns, trends, correlations, opportunities
+    and other useful analysis. That, in turn, results in smarter business moves, more
+    efficient and effective operations, increased profitability and sustainability
+    along with higher customer satisfaction. This awareness of trends in the data
+    pool and advantage of hidden information has completely redefined the business
+    moves in this digital epoch which can be overwhelming to markets and organizations
+    around the globe [21].
+
+
+    Furthermore, the advances in the field of AI have taken the potential of BDA to
+    a next level in businesses. The amalgamation of AI and BDA has resulted in framing
+    innovative business models. In order to make effective futuristic decisions and
+    predictions in businesses using AI, Big data plays a significant role. The efficient
+    use of AI depends highly on the scope and quality of the available data used for
+    training and testing algorithms [3]. Due to the momentum generated by AI and BDA,
+    data has now become a valued commodity in businesses and organizations are competing
+    to gather the most remunerative data pool. Moreover, with the advancements in
+    AI and data mining, it’s now possible to collect and store data generated by users
+    and customers efficiently [1].
+
+
+    For instance, in order to predict the customer churn Moz used AI based deep learning
+    neural networks for analyzing customer actions and behaviors. Efficient business
+    insights were collected based on the history of actions performed by'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'customers to decrease churn among existing customers, which otherwise could
+    have impeded the company growth [1].
+
+
+    The interplay between BDA and AI in view of businesses has also paved the way
+    to the collection of data from the physical environment. In contrast to earlier
+    online data collection techniques based on search queries, orders placed or purchased,
+    clicks made by customers, many retail companies are now looking forward to gathering
+    data offline as well for efficient decision making.
+
+
+    For instance, Amazon has incorporated corporate surveillance strategies in grocery
+    stores to collect data related to customer preferences and behaviors. Actuators
+    and advanced sensors have been installed in stores to accomplish offline data
+    collection tasks. Furthermore, Internet of Things (IoT) based tools, Drones, and
+    AI-based personal assistants are being used to transform customer actions into
+    valuable data. This collected data acts as a driving force behind the price-setting
+    algorithms that incorporates responses as per customer demands and reacts accordingly
+    [1].
+
+
+    The potential showcased by AI and Big Data to generate new insights to facilitate
+    product, process, and business innovations have made the adaptation of these technologies,
+    a business priority.
+
+
+    # D. Machine learning in Business
+
+
+    Machine learning is a subset of AI that incorporates the capability of automatic
+    identification and detection of'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'patterns, relationships, correlations and trends in the given data. Once these
+    relationships and patterns are identified, they are further used to make assumptions
+    about the behavior of new patterns. Essentially, it’s comparable to the way how
+    humans learn, think and derive conclusions on the basis of regular experiences
+    gained by interacting with environment and people. Humans then use these derived
+    conclusions to deal with new situations [6].
+
+
+    The rise of Artificial intelligence, in this era, has marked an unprecedented
+    boom in application of Machine learning (ML) techniques in numerous field which
+    includes healthcare, banking, automobile, financial sector, manufacturing, retail
+    etc. Although ML techniques have been known to be operating from quite a long
+    time but due to recent technological advancements their use has become widespread
+    in the business areas where it was limited previously. Even the enterprises that
+    were not using ML at all due to higher implementation costs and lack of relevant
+    manpower are also adapting ML based solutions [12].
+
+
+    Organizations dealing with retail business are using ML techniques to make analysis
+    of purchase histories of the customers to understand their interests, demands
+    and affordability to generate personalized product recommendations for the next
+    purchase [1]. Another application of ML in business is target marketing wherein
+    based on the information provided like gender, income, age, browsing history,
+    purchase history, locations etc., the system will predict whether the concerned
+    person is interested in a'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'particular product or not. Based on these predictions, marketing department
+    makes decisions accordingly whether to consider a person for promotional offers
+    or not [6].
+
+
+    Deep Learning, a variant of Machine Learning, has gained enough popularity in
+    recent years due to its potential to embody hierarchical processing using different
+    layers of architecture. Moreover, deep learning has been identified to be best
+    suited for high dimensional and dynamical data handling used in Bioinformatics,
+    vision and speech recognition and sensor web.
+
+
+    Even deep learning has been found to work miraculously in e-commerce business
+    for personalized product recommendations. The deep learning algorithm deployed
+    in an e-commerce website traces the customer’s journey and activities. Based on
+    the specifications of products viewed, duration of time spend on viewing each
+    product, the customer activity before and after viewing each product, time of
+    the day when customer logged into the e-commerce website, his location, gender
+    and other relevant factors, the e-commerce website then offers the customer personalized
+    purchase option that would appeal the customer ultimately. Thus, deep learning
+    is considered to create more opportunities for improved business conversion rate
+    and eventually helps to improve brand image by targeting customers with personalized
+    content.
+
+
+    # E. Group Recommendation systems – A new interactive tool in online business'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'Recommendation systems are being extensively used in various business applications
+    which include recommendations of movies, products, music, books, news and other
+    items as on amazon.com. The revolution in societal interaction has intensified
+    the necessity of recommendation systems in general. The problem of information
+    overload on the user has been solved to a great extent using recommendation systems
+    and is proved to be helpful in making choices easier and efficient from the options
+    available to the user. Recommendation systems operate by collecting the past preferences
+    and choices made by customers to generate an appropriate recommendation of items
+    as per customer satisfaction [4].
+
+
+    Personalized product recommendation is one of major applications of AI in businesses.
+    The recommendation systems developed using AI were originally more focused on
+    single user models that works by suggesting products or services to cater the
+    needs and preferences of individual users. But, as per new scenario of online
+    usage, it has been observed that users like to perform activities in groups such
+    as playing games in groups online, watching movies etc. So, in order to accommodate
+    such cases, AI techniques need to be devised that contend with the problem of
+    group recommendations that would be gratifying the requirements of almost all
+    the individuals in that group to a great extent [1].
+
+
+    The increased usability of mobile phones, digital gadgets and societal networking
+    has augmented the importance and necessity of group recommendations in varied
+    business areas.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'The important factors that play significant role in group recommendation systems
+    are social history of users, their societal relationships, resemblance in interests
+    and choices, social interaction etc. Moreover, all these factors can now be easily
+    extracted from the social network structure of a particular group of users [4].
+    Most of the research on group recommendation systems is mainly focused on exploring
+    the core algorithms used in generation of group recommendations.
+
+
+    There are two major strategies that have been identified to generate group recommendations,
+    as mentioned below:
+
+
+    +   1. Formulating a common group profile for a group of users through aggregation
+    of their individual profiles and generating recommendations based on the group
+    profile [10].
+
+    +   2. Generating personalized recommendations for the members of a particular
+    group, and then accumulating them into a single group recommendation [9].
+
+
+    # Recommendation Engines – Business Use Case
+
+
+    Netflix, Amazon, Facebook, LinkedIn, all these big companies use recommendation
+    systems for providing services to the customers and understanding the customer
+    demands to attain higher customer satisfaction. The streaming services of Netflix
+    use recommendation engines to generate recommendations that match user preferences
+    for watching movies, shows etc. As per the preferences, age, interests, user express
+    his views in surveys for rating movies which acts as user’s features that are
+    learnt by machines to provide'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: 'recommendations. Further, user’s response to recommendations is also examined
+    to make better recommendations.
+
+
+    Recommendation systems have gained enough popularity these days, particularly
+    as part of online business, and have been deployed across a broad spectrum of
+    businesses to increase customer interaction and enrich shopping potential, as
+    mentioned below:
+
+
+    +   - *Supermarkets:* Generating custom coupons for next purchases by considering
+    the previous history of purchases and including the items that a customer would
+    be interested in.
+
+    +   - *Retail industry:* Companies send emails and text messages to their customers
+    following a purchase and give recommendation for new products like books, music
+    albums, groceries, clothing etc. Many companies like Amazon and other similar
+    sites offer product recommendations in real time based on the preferences of customers
+    when they visit their online sites.
+
+    +   - *Stock Market:* Personalized stock recommendations are made for the investors
+    by analyzing their previous assets, preferences, earnings and dividends.
+
+    +   - *Movie and Television services:* Companies like Netflix analyze each customer’s
+    previous content choices and make recommendations based on them, as well as proactively
+    recommend items in real time based on their browsing history.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '+   - *Social networking sites:* Sites like LinkedIn and Facebook use recommendation
+    systems to suggest additional connections or friends based on a person’s existing
+    network.
+
+
+    # F. Natural Language Processing- Another Business Perspective of AI
+
+
+    Natural Language Processing (NLP) is a subfield of AI that deals with the interaction
+    between machines and humans using the natural languages. It is a blend of Natural
+    Language, Machine Learning and Artificial Intelligence that collectively builds
+    a technology to interact with machines in normal human language. The objective
+    of NLP is to read, decode, understand, and make sense of the human languages in
+    a valuable way. Most of the NLP techniques are highly dependent on machine learning
+    algorithms to derive meaning from human languages.
+
+
+    Natural language processing is a scientific discipline that focuses entirely on
+    making natural language accessible to machines. NLP addresses tasks such as identification
+    of sentence boundaries in documents, extracting relationships from documents and
+    searching and retrieval of documents and many more. NLP is a necessary means to
+    facilitate text analytics by establishing structure in unstructured text to enable
+    further analysis [1].
+
+
+    Basic NLP tasks include tokenization and parsing, lemmatization/stemming, part
+    of speech (POS) tagging, named entity recognition, word segmentation, morphological'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'transform or augment the text to achieve greater value and derive useful text
+    analytics. [1]
+
+
+    # ## Natural Language Processing – Business Use Cases
+
+
+    Today, Natural Language Processing is becoming the quickest evolving AI technology
+    in Businesses. Organizations are turning to NLP technology to derive understanding
+    from the multitudinous unstructured data available online and in call logs.
+
+
+    A 2019 Statista report reveals that the NLP market will increase to 43.9 billion
+    dollars by 2025.
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_31_0.png)
+
+
+    *Figure 1.5: Revenues from the natural language processing (NLP) market worldwide
+    from 2017 to 2025 (in million U.S. dollars) [20]*
+
+
+    It is quite clear from the statistics that companies now believe in the potential
+    of NLP in aiding business profits.
+
+
+    Following are the most common NLP use cases in business:
+
+
+    [^1]: www.statista.com'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '+   - **Sentiment Analysis:** Sentiment analysis is being widely used as a
+    social media and internet monitoring tool. It encompasses Natural Language Processing
+    in order to comprehend and analyze the responses received on social media platforms
+    like Twitter, Facebook, Instagram etc. in context to business messages published.
+    It helps to examine the attitude, emotional state and feelings of the consumer
+    engaged in posts and commenting related to a business posts. The product reviews
+    posted on social media, sentiment are used to identify whether consumers are satisfied
+    or dissatisfied with a product. Similarly, a business organization could use sentiment
+    analysis to measure the impact of a new product, ad campaign or consumer’s response
+    to recent company news on social media. [1]
+
+
+    Sentiment Analysis is also known as opinion mining. It is implemented through
+    a combination of Natural Language Processing and statistics by assigning values
+    based on positive, negative and neutral sentiments in the text which in turn helps
+    to identify the underlying mood of the writer with respect to context (happy,
+    joyful, worried, sad, annoyed, etc.) This application of NLP helps business organizations
+    in gaining insights of consumers’ reactions and moods.
+
+
+    Thus, helps to do a competitive comparison and make necessary adjustments in business
+    strategies accordingly. The information collected through the task of sentiment
+    analysis is also very useful in designing a better customer'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'insight into audience tastes, preferences, feelings, interests and perceptions
+    which in turn helps to improve organization’s customer service and support functionality.
+    Speech separation is an application of, AI aided, NLP that helps in identification
+    of the voice of the caller of interest from the mixture of voices of other callers
+    and thus, answering each of the callers separately. In addition, call recordings
+    of the customers are analyzed by organizations to get insight whether the customer
+    is happy or sad, his needs and future requirements [22].
+
+
+    Relevant NLP tasks in customer service include:
+
+
+    +   - *Speech recognition* – conversion of spoken language into text
+
+    +   - *Question answering*· Answering questions posed by humans in a natural language.
+
+
+    +   - **Reputation Monitoring** – Earlier business organizations were only confined
+    to their internal databases for generating text analytics to understand customer
+    demands and improving business strategies. But with the development of improved
+    learning algorithms, businesses started adopting tools to analyze public data.
+    Although, some of this data is structured and ready to be analyzed (e.g. census
+    data, stock prices), but most of it is still in unstructured format especially
+    in the form of human-generated text such as news, blog posts, forums, reviews,
+    reports, social media like Twitter, Facebook etc. These sources contain abundant
+    useful information, although unstructured, about how competitors, customers and
+    the'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'market as a whole are evolving. Organizations are now using these sources of
+    information in reputation monitoring by identifying the mentions of their brands
+    and products along with recognizing cases when they should act.
+
+
+    Reputation monitoring includes following NLP tasks:
+
+
+    +   - *Sentiment analysis*, which determines the attitude, emotional state, feelings,
+    judgement or intent of the customer. This is done by either assigning a polarity
+    to the text (positive, neutral or negative) or trying to recognize the underlying
+    mood (happy, sad, calm, angry, etc.).
+
+    +   - *Co-reference resolution*, which connects pronouns to the right objects.
+    For example, if a customer writes: “Someone from the seller side called up to
+    ask if I liked my new apartment or not”. I replied: It is awesome”. Here, it is
+    important to recognize that “it” refers to the apartment and not the person. In
+    short, the customer is giving positive feedback about the product [].
+
+
+    +   - **Market Intelligence** · Business markets are highly influenced by market
+    knowledge and information exchange between various industries, stakeholders, governments
+    and regulatory bodies. It is crucial to keep abreast of latest industry trends
+    and changing standards. NLP is a useful technology to track and monitor the market
+    intelligence reports and extract the necessary information for organizations to
+    formulate new business'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'market, competitors, customers, and other important details about their industry.
+
+
+    There are dozens of tools available to help entrepreneurs monitor their competitors.
+    NLP-powered engines like Zirra² simplify the process for automatically building
+    a competitive landscape [23]. When Zirra analyzes something, it gathers a list
+    of companies and ranks them from zero to one. This rank shows how closely these
+    companies are related to each other using a multimodal semantic field. The algorithms
+    solutions like Zirra create the list of companies by scanning the Internet for
+    articles and putting the data into an NLP module that closes out semantic relationships
+    between companies.
+
+
+    These are some of the applications of Natural Language Processing which will be
+    witnessed by business organizations in the time to come. There are other applications
+    as well, such as Ad Placement, neural machine translation, hiring tools and management,
+    regulatory compliance, data visualization, biometrics, robotics, process automation
+    etc. The system behind the NLP concept is statistical in nature. For this concept
+    to move from Natural Language Processing (NLP) to Natural Language Understanding
+    (NLU) where the consumer can get to see and experience a human-emotional connect
+    with the machines, is the future prospect to work towards. Over the last decade,
+    the information technology industry has taken its leap of faith and dug deep into
+    the various aspects of the Natural Language Processing.
+
+
+    ² www.zirra.com'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'Business organizations have found, tested and executed most favorable applications
+    of NLP to advance the progress of Business Intelligence. Yet, the technology needs
+    lots of data and processes in place to understand, analyze and respond to the
+    needs of the human mind.
+
+
+    # G. Concluding Remarks on AI in Business
+
+
+    From above mentioned facts and figures, it can be postulated that businesses that
+    are adopting AI can expect to see increased productivity in future. New competences
+    can be derived from streamlining tasks that previously took days to complete by
+    people and improving work processes by pairing people and machines in new ways.
+    Many businesses also believe that AI will accelerate and enhance innovation, thus
+    creating new jobs and business perspectives. Some expect to see augmented consumer
+    demand from more personalized and higher-quality AI-enhanced products and services.
+
+
+    At the same time, it’s a critical issue of debate that AI will result in eliminating
+    jobs. For instance, virtual assistants being deployed to enhance customer support
+    could result in many people working in customer care lose their jobs.
+
+
+    Even though, the use of AI in business is rising, but AI and machine learning
+    are not yet effective enough to be deployed for every business operation. While
+    there are many aspects of a business which can be automated, and necessarily be
+    automated but tasks that require judgment, prioritization and trade-offs still
+    require human intelligence.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "To capitalize on AI technology, businesses will need to hire people with AI\
+    \ experience or the skills to analyze and use the data to encapsulate need of\
+    \ human supervision with AI. Businesses also need the computing power and system\
+    \ infrastructure to support AI-enabled products and services, and they need platforms\
+    \ to organize and integrate their data. Getting this infrastructure in place can\
+    \ be expensive.\n\nMoreover, the data collected by AI offers another big challenge.\
+    \ How do businesses guarantee the validity of data collected in terms of correctness\
+    \ and reliability? What limits do they need to put on its use? Confirmation of\
+    \ the fact, that machine will carry out human orders as intended?\n\nThere are\
+    \ concerns that unintentional biases may find their way into AI algorithms or\
+    \ decision-making models. Businesses need to establish robust controls to prevent\
+    \ this from happening and monitor the systems that learn through AI. Letting stakeholders\
+    \ know about the business’s oversight can help establish trust with stakeholders\
+    \ that businesses are using AI reliably.\n\n# References:\n\n+   [1] Akerkar,\
+    \ R.(2019). *Artificial Intelligence for Business*, Springer Briefs in Business,\
+    \ pp. 1–92. Springer, Cham, https://doi.org/10.1007/978-3-319-97436-1\n+   \n\
+    +   [2] Aslam M. A., Kaur. A.,(2020). *Emerging Trends and Applications of Machine\
+    \ Learning: A Survey*, The Mattingley Publishing Co Inc., Vol. 82, 16701-16705."
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '+   [3] BaFin (2018). *Big Data Meets Artificial Intelligence—Challenges and
+    Implications for the Supervision and Regulation of Financial Services.* https://www.bafin.de/SharedDocs/Downloads/EN/dl_bai_studie_en.html
+    (accessed on 30/5/2020).
+
+
+    +   [4] Dara, H., Chowdary, R. & Kumar, C. (2019). *A survey on group recommender
+    systems.* Journal of Intelligent Information Systems. 10.1007/s10844-018-0542-3.
+
+
+    +   [5] Das, S., Ghosh, I., Banerjee, G. & Sarkar, U. (2018). *Artificial Intelligence
+    in Agriculture: A Literature Survey.* International Journal of Scientific Research
+    in Computer Science Applications and Management Studies, Volume 7, Issue 3
+
+
+    +   [6] Finlay, S. (2018). *Artificial Intelligence and Machine Learning for Business:
+    A No-Nonsense Guide to Data Driven Technologies* (Third Edition). Relativistic,
+    ISBN-13: 9781999730345.
+
+
+    +   [7] Gartner. (2019). *Gartner Says AI Augmentation Will Create $2.9 Trillion
+    of Business Value in 2021.* https://www.gartner.com/en/newsroom/press-releases/2019-08-05-gartner-says-ai-augmentation-will-create-2point9-trillion-of-business-value-in-2021
+    (accessed on 30th May 2020).
+
+
+    +   [8] Girasa R. (2020) *AI as a Disruptive Technology,* Springer Science and
+    Business Media LLC, DOI https://doi.org/10.1007/978-3-030-35975-1_1
+
+
+    +   [9] Kim, H.N., & El Saddik, A. (2015). *A stochastic approach to group recommendations
+    in social media systems.* Information Systems, 50(Supplement C), 76–93.
+
+
+    +   [10] Kim, J.K., Kim, H.K., Oh, H.Y., Ryu, Y.U. (2010). *A group recommendation
+    system for online communities.* International Journal of Information Management,
+    30(3), 212–219.
+
+
+    +   [11] Krishnan, P.R. (2019). *Reshaping a Business Around AI: The Machine First™
+    Approach to Digital Transformation.* https://www.tcs.com/content/dam/tcs/pdf/perspectives/volume-12/Reshaping-a-Business-Around-AI-The-Machine-First-Approach-to-Digital-Transformation.pdf
+    (accessed on 30th May 2020).'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '[12] Management Solutions (2018), *Machine learning a key component in business
+    model transformation*, https://www.managementsolutions.com/sites/default/files/publicaciones/eng/machine-learning.pdf
+    (accessed on 30ᵗʰ May 2020).
+
+
+    [13] MEMSQL, *Survey Finds Machine Learning and Artificial Intelligence are Top
+    Business Priorities*, https://www.globenewswire.com/news-release/2018/02/07/1335563/0/en/Survey-Finds-Machine-Learning-and-Artificial-Intelligence-are-Top-Business-Priorities.html
+    (accessed on 30ᵗʰ May 2020).
+
+
+    [14] Minsky M. (1961). *Steps toward artificial intelligence.* Proceedings of
+    IRE, Vol. 49, no. 1, pages 8-30. IEEE
+
+
+    [15] MobiDev (2010). Natural Language Processing (NLP) Use Cases for Business
+    Optimization. https://mobidev.biz/blog/natural-language-processing-nlp-use-cases-business
+    (accessed on 30ᵗʰ May 2020).
+
+
+    [16] O’Leary, D.E. (1995), *On the History of the AI Applications, I: IEEE Expert,
+    the First Nine Years, IEEE Expert*, Vol. 10, No. 1, https://doi.org/10.1109/64.391956
+
+
+    [17] Pau L.F., Gianotti C. (1990) *Applications of Artificial Intelligence in
+    banking, financial services and economics.* In: Economic and Financial Knowledge-Based
+    Processing. Springer, Berlin, Heidelberg, ISBN : 978-3-642-76004-4.
+
+
+    [18] PwC (2018). *2018 AI predictions – 8 insights to shape business strategy.*
+    https://www.pwc.es/es/publicaciones/tecnologia/assets/ai-predictions-2018.pdf
+    (accessed on 30ᵗʰ May 2020).
+
+
+    [19] Rong, G., Mendez, A., Bou Assi, E., Zhao, B. & Sawan, M. (2020). *Artificial
+    Intelligence in Healthcare: Review and Prediction Case Studies.* Engineering.
+    Volume 6, Issue 3, Pages 291-301.
+
+
+    [20] Satista. (2020), *Natural Language Processing market revenue worldwide 2017
+    – 2025*, https://www.statista.com/statistics/607891/worldwide-natural-language-processing-market-revenues/#statisticContainer
+    (accessed on 30ᵗʰ May 2020).'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '+   [21] Soofastaei, A. (2019). *Introductory Chapter: Advanced Analytics and
+    Artificial Intelligence Applications*, IntechOpen, DOI: 10.5772/intechopen.89784
+
+    +   [22] UpGrad (2019). *5 Applications of Natural Language Processing for Businesses*.
+    https://www.upgrad.com/blog/5-applications-of-natural-language-processing-for-businesses/
+    (accessed on 30th May 2020).
+
+    +   [23] Zirra. (2017). *9 Tools that Simplify Competitive Analysis (2017).* https://wisdom.zirra.com/2017/08/24/9-tools-that-simplify-competitive-analysis/
+    (accessed on 30th May 2020).'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: This page is left blank intentionally.
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "# Applied Artificial Intelligence – Making AI Work for Consumers as a Core\
+    \ Business Component\n\nMikael Wiberg, Ph.D., Professor  \nDepartment of Informatics,\
+    \ Umeå University, 9018 87 Umeå, Sweden  \nmikael.wiberg@umu.se  \n+46 (0)70 662\
+    \ 10 70\n\n# Abstract\n\nArtificial Intelligence (AI) is now rapidly being applied\
+    \ in our society. While the breakthrough of AI in terms of its use and its applicability\
+    \ on a societal level has in fact been repeatedly announced since the mid 1950s,\
+    \ is now truer than ever. As recently acknowledged, AI has now, after three waves\
+    \ of developments, finally left the research labs and entered real-world contexts.\
+    \ Accordingly, and as AI is now increasingly and widely applied, we suggest that\
+    \ it is now time to address issues related to “Applied Artificial Intelligence”\
+    \ (AAI). In this paper we propose this term, and we define it as the study, design,\
+    \ development, implementation and use of Artificial Intelligence technologies\
+    \ to address real-world problems. In this article we present how AI has developed\
+    \ over the past few decades, and across three waves of developments, and we illustrated\
+    \ Applied Artificial Intelligence by presenting our e-Biz corp case where a global\
+    \ actor is now using AI as a core component of their online business. We conclude\
+    \ this article with a set of recommendations for moving forward with Applied Artificial"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'Intelligence, and we present the main contributions offered by our work to
+    the growing body of research on how to make use of AI.
+
+
+    **Keywords:** AI, Artificial Intelligence, Applied Artificial Intelligence, Core
+    business
+
+
+    # The Breakthrough of Artificial Intelligence in Society
+
+
+    *“Artificial Intelligence is no longer an academic term, but a reality”*. This
+    could have been said today, given the current and escalating hype surrounding
+    AI. However, it was actually stated by Holloway and Hand (1988) in their Business
+    Horizon article published almost 30 years ago. Nevertheless, this statement concerning
+    the large-scale and real-world breakthrough of AI could have also been made today,
+    in the year 2020. In looking back from a historical viewpoint, the proof-of-concept
+    in terms of the wide scale societal breakthrough of Artificial Intelligence (AI)
+    has been a continuously repeated promise and message surrounding the development
+    of this technology over the last few decades, from the mid 1950s until today (see
+    e.g. Turing, 1950; Weizenbaum, 1966 and Makridakis, S. (2017)). As formulated
+    by Xu (2019), we are now already in the 3rd wave of AI, and the promise of AI
+    has been repeated for each of these three waves of developments of AI technologies.
+
+
+    Still, this statement about the breakthrough of AI as formulated by Holloway and
+    Hand (1988) might now be truer than ever. As pinpointed by Xu (2019) this 3rd
+    wave of AI is now characterized by technological enhancements and the deployment
+    and use of AI solutions in society, whereas'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'the 1ˢᵗ and 2ⁿᵈ wave was to a large extent academia driven. In short, AI is
+    now increasingly applied on a societal level.
+
+
+    Accordingly, and as AI is now increasingly applied, we suggest that it is now
+    time to address issues related to “Applied Artificial Intelligence” (AAI) and
+    accordingly expand the focus from technical matters of making AI work (as a technology),
+    to making AI work in the context of its use and implementation. With this as our
+    central point of departure we propose the term “Applied Artificial Intelligence”
+    (AAI) and we define it as *the study, design, development, implementation and
+    use of Artificial Intelligence technologies to address real-world problems.* In
+    this paper we propose this term in an attempt to look beyond the technological
+    developments surrounding the area of AI, and as an effort to redirect our focus
+    towards what this technology now enables, for consumers as well and for businesses
+    when AI is now increasingly applied in real-life settings.
+
+
+    The development of AI has been driven by technological advancements on the one
+    hand, including the developments in machine learning, pattern recognition and
+    neural networks (e.g. Gilio, 1995), and visions and promises about the next steps
+    of AI in terms of its applicability on the other hand (Xu, 2019). Through these
+    cycles of developments, the breakthrough of AI has been a repeated message, surrounded
+    by promises of a nearby future (see e.g. Makridakis, 2017; Kaplan & Haenlein,
+    2020), and at the same time it has also been surrounded by doubts and fears (see
+    e.g. Clark, 2003,'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'solutions the aim “beyond the human” (Kaplan and Haenlein, 2019) and where
+    AI can be used to do beyond human scale work tasks (e.g. collect, search, filter,
+    analyze, generate and edit massive amounts of data). We see this in how AI is
+    increasingly applied in search engines, in social media platforms, and in streaming
+    services. AI is no longer only aimed at “the human-like”, but increasingly applied
+    to do these large-scale tasks that no single human, or even a collection of humans
+    could do (within a reasonable time). For instance, to filter and analyze millions
+    of data points, thousands of times, over and over again, with high precision,
+    and at high speed. It is this type of AI that we look at in this article.
+
+
+    As recently formulated by Kaplan and Haenlein (2019) AI – “Artificial Intelligence”
+    can be defined as *“a system’s ability to correctly interpret external data, to
+    learn from such data, and to use those learnings to achieve specific goals and
+    tasks through flexible adaptation”*. This definition is in line with the current
+    large-scale use of AI, and we can also notice that “reason” is no longer an explicit
+    term used in the definition of AI. Of course, it would have been a central notion
+    if still aiming for “human-like” AI, but as we move beyond human capabilities
+    it might be more interesting to focus on what AI can offer, beyond any comparison
+    with the human mind. In short, AI might now be its own distinctive form of intelligence
+    where analogies with the human brain is no longer fruitful or useful, but rather
+    misleading in how to understand both how AI works, but maybe foremost what it
+    can offer. AI might no longer be human-like, but might'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: 'instead offer an artificial intelligence that can be useful for tasks no humans
+    can perform – individually or collectively.
+
+
+    With a point of departure taken in this recent shift in the development of AI
+    that we suggest that it is now time to also 1) shift our analytical lens – from
+    the individual (and human-like) to the large-scale (and beyond human), to 2) to
+    explore the kind of artificial intelligence that AI can offer today, and to 3)
+    explore this from the perspective of AAI – Applied Artificial Intelligence.
+
+
+    In this paper we do this exploration with a particular interest in understanding
+    how *applied artificial intelligence* might be designed to support multiple stakeholders
+    (in our case consumers and businesses), and how applied AI might work in the creation
+    of new digital services for consumers, as well as how AI can be used as a core
+    business component. Our turn to applied AI is motivated by the increasing adoption
+    of AI to real-world problems, and studies that have most recently shown how AI
+    technologies are becoming increasingly practically relevant (see e.g. Gomes et
+    al., 2019 and Ågerfalk, 2020).
+
+
+    In this article we present how AI has developed over the past few decades, and
+    across three waves of developments, and we illustrated Applied Artificial Intelligence
+    by presenting our e-Biz corp case where a global actor is now applying AI as a
+    core component of their online business. We conclude this article with a set of
+    recommendations for moving forward with Applied Artificial Intelligence, and we
+    present the main'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'conversation-based system that was designed to mimic a therapist.
+
+
+    During the 1970s and 1980s there were lots of developments that set the next stage
+    in the development of AI, including breakthroughs in technical research that increased
+    CPU capacity, advancements in parallel distributed processing, and the development
+    in artificial neural networks. Still, the focus was on different ways of creating
+    models of the brain and to arrive at better models of human cognition. As noticed
+    by Kaplan & Haenlein (2019) “_a common way to define artificial intelligence is
+    to do so by referencing human intelligence_”.
+
+
+    Along these lines Nicholas Negroponte, the funding father of the Architecture
+    Machine Group at MIT, dedicated his 1970 book *The Architecture Machine*, which
+    was a book that proposed a theory of interfaces for artificial intelligence, “_to
+    the first machine that can appreciate the gesture_” (Vardouli & Touloumi, 2019).
+    Again, the goal was to create the human-like intelligent machine. However, this
+    recurring reference to the human, or the brain, was challenged as we moved forward
+    from the early days of AI developments.
+
+
+    In the 1990s, more advanced artificial neural networks were developed that could
+    read the numbers on checks, but that was as far they went. As stated by Miller
+    (2019) these early machines had trouble finding patterns, an essential aspect
+    of data analysis, the computers were still not powerful enough, and there was
+    not enough data available to train the algorithms. Still, the 1990s mark an important
+    shift in the development of AI – away from modeling the brain, and'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'towards tasks that AI can perform, beyond the human level, and beyond basic
+    research on how the brain works, and towards what AI can do (i.e. what we in this
+    paper refer to as ‘applied artificial intelligence’).
+
+
+    If we now map this development to the three waves of AI as proposed by Xu (2019)
+    we can see how the 1st wave of AI lasted for approximately 20 years (1950s-1970s),
+    and how it was mostly driven by academia with a focus on technological solutions,
+    symbolism and connectionism. In moving forward, we can also see how the 2nd wave
+    of AI (1980s-1990s) was still academia driven and technology oriented, and as
+    indicated above it was a clear focus on speech recognition, machine translations,
+    artificial neural networks, and research on pattern recognition. Still, it was
+    not only the late 1990s that the focus started to shift towards the use of AI
+    for different purposes, and according to Xu (2019) if was not until the beginning
+    of 2000 that we could see the beginning of a 3rd wave of AI (2006).
+
+
+    With the 3rd wave of AI came an important shift – from being a research lab product,
+    it started to become widely applied. As suggested by Xu (2019) it was a breakthrough
+    in applications (including functional systems built on deep learning, speech recognition,
+    pattern recognition, and big data) and it was enabled by high-performance computers.
+    As such it started to prove itself useful and it is increasingly applied to real-world
+    problems.
+
+
+    So, in a sense, and as I started this paper with the quote from Holloway and Hand
+    (1988) about the breakthrough of AI we'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: 'can now with the 3^rd^ wave of AI see how it is increasingly a concern related
+    to how it should be applied. From being about technical questions (e.g. machine
+    learning and algorithms for pattern recognition), to the more fundamental and
+    philosophical questions (i.e. what is “intelligence”? And to what extent can machines
+    be intelligent?), we can see how the AI field is shifting towards questions concerning
+    different forms of AI, and if it should be human-like (and manifest itself as
+    robots, avatars, conversation partners in different settings), or beyond-human
+    like forms (e.g. cloud-based AI solutions).
+
+
+    The most recent developments that has followed from the shift to 3^rd^ wave AI
+    include calls for
+
+
+    human-centered approaches to AI (Xu, 2019), a focus on ethical and responsible
+    AI design and development (Dignum, 2019), and a concern for the social and societal
+    impact of AI.
+
+
+    |  | First Wave (1950s–1970s) | Second Wave (1980s–1990s) | Third Wave (2006–)
+    |
+
+    |---|---|---|---|
+
+    | Major advances in technologies | Early symbolism and connectionism school, production
+    systems, knowledge inference, preliminary expert systems | Statistical model in
+    speech recognition and machine translation, artificial neural network in pattern
+    recognition, expert systems | Breakthroughs in applications of deep learning in
+    speech recognition, pattern recognition, big data, high-performance computers
+    |
+
+    | Human needs | Not satisfied | Not satisfied | Starting to provide useful and
+    real problem-solving AI solutions |
+
+    | Focus | Technological solutions | Technological solutions | Integrated solutions;
+    ethical design, technological enhancement, human factors design |
+
+    | Characteristics | Academia driven | Academia driven | Technological enhancement
+    and application + a human-centered approach |
+
+
+    Figure 1. Three waves of Artificial Intelligence (from Xu, 2019).
+
+
+    As to understand the social, ethical and societal impact of applied AI it is important
+    to study how it is being applied.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'Here we contribute to this growing need by focusing on a company that applies
+    AI on a large scale, by embedding AI in the development of their e-biz platform
+    that reaches thousands of consumers. In doing so we follow the growing trend of
+    focusing on what AI can do (in this case for consumers and for businesses), and
+    we present the challenges they had to face when applying AI technologies in this
+    particular context.
+
+
+    Before moving to this case of 3rd wave AI as applied in a business context we
+    first examine the current approaches taken to the development of AI. In the next
+    section we outline the existing approach including the machine-centered approach,
+    the human-centered approach and the systems centered approach. We conclude that
+    these approaches have been successful, but also that there might be room for a
+    forth approach – to work with an applied AI approach – when it comes to questions
+    concerning how AI should be used in a real-world context.
+
+
+    # ### Three Approaches to AI – A Call for a Fourth Approach to AI?
+
+
+    Before presenting our business case, and before discussing applied AI - not only
+    in terms of “using”, and in that sense applying AI, but also from the viewpoint
+    of “applying” as a specific approach to AI - we should first outline and discuss
+    a set of other approaches taken to this technology. For sure, and before proposing
+    “applied AI” as a distinct approach (including the study, design, development,
+    implementation and use of Artificial Intelligence technologies to address real-'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'intelligent machines that would “act” as a human. The “Turing test” (Turing,
+    1950) is all about this human-likeness of AI. The turing test was developed by
+    Alan Turing in 1950, and it is a test of a computer’s ability to show intelligent
+    behavior equivalent to, or indistinguishable from, that of a human. In this strive,
+    the notions of human-like AI, or human-level AI has been recurring notions (see
+    e.g. Miller (2019) and Kaplan& Haenlein (2019).
+
+
+    In going back to the roots for this human-like model for the development of Ai
+    we should of course mention the Eliza system. This system was designed by Joseph
+    Weizenbaum in 1966, and it is said to be the first computer program pass the Turing
+    test. The Eliza program worked by examining a user’s typed comments for keywords,
+    and responded to the user in a dialogue fashion. By relying on this model, Eliza
+    could respond either with a generic phrase or by repeating an earlier comment
+    left by the user. The Eliza program was in this was designed to replicate the
+    behavior of a psychotherapist. In passing the Turing test, Eliza was able to fool
+    some people into believing that they were talking to a real person, instead of
+    a computer.
+
+
+    Eliza, and similar systems developed at this time relied on an idea that humans
+    could be modeled as computer programs, and in this way it would be possible to
+    create AI that could mimic the human brain, and thus present itself as “intelligent”.
+    As formulated by Newell and Simon (1972):'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '> “Humans, when engaged in problem solving in the kinds of tasks we have considered,
+    are representable as information processing systems” (Newell and Simon, 1972)
+
+
+    As further described by Miller (2019), these researchers expanded the concept
+    of a computer’s functional architecture to reflect the way the brain is put together,
+    that is the brains cognitive functional architecture. The analogy with the human
+    brain was the dominant model.
+
+
+    > “Like a computer, the brain has storage for information or facts – memory –
+    and ways of retrieving information and working on it, using rules for problem
+    solving – algorithms.” (Miller, 2019).
+
+
+    This first set of human-like developments was the result of close collaborations
+    between several scientific disciplines (including collaborations across cognitive
+    science, psychology, neuroscience and computer science). It was in this sense
+    multidisciplinary, but they all shared the same focus – to inform the design of
+    an intelligence computational machine.
+
+
+    Since then, the multi-disciplinary tradition of research collaborations around
+    AI has continued, but the outcome is nowadays more diverse. Today, researchers
+    are interested in not only the technical challenges associated with the design
+    and implementation of intelligence machinery, but also in understanding its philosophical,
+    social, cultural, ethical and moral implications. Here, there are some recent
+    calls for “responsible AI” (Dignum, 2019), and the importance of understanding
+    AI as “agency” (Ågerfalk, 2020) as well as, and in relation to that, to understand
+    “what algorithms'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: 'want” (Finn, 2017) from the viewpoints of agency, but also power, control,
+    collection and processing of data, etc. Here, AI is again approached from a human-centered
+    perspective, but with a wider idea about the object of study.
+
+
+    # 3. System-centered approaches to AI
+
+
+    If we now turn to the most recent developments surrounding AI, and a set of contemporary
+    factors that motivates a turn to “applied AI” as proposed in this article, we
+    should acknowledge the increasing interest in system-centered approaches to AI.
+    No longer do we need to write line-by-line code to build AI systems, and no longer
+    do we need to hand-feed these systems with data. Instead, several platforms and
+    development frameworks (including e.g. Microsoft azure) now offers ready-made
+    “AI components” to integrate AI-functionality in just about any digital service.
+    This development enables compositional design (Stolterman & Wiberg, 2020) of AI-solutions,
+    and it lowers the development barrier to build functional AI-systems for real-world
+    use contexts.
+
+
+    With the systems-centered approach to AI developers can now focus on what they
+    want the AI system to do (i.e., how it should be applied), rather than just getting
+    it to work (from a technical viewpoint). Further, the access to data is handled
+    by another set of ready-made components (e.g. components for database access and
+    retrieval, or components for data scraping of websites), and again it becomes
+    more of an issue to think about what data sources should be used, rather than'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: 'how to solve any technical problems associated with getting
+
+    the data in the first place.
+
+
+    # 4. Towards a forth approach? A call for Applied
+
+    Artificial Intelligence
+
+
+    Although we now have the AI technology in place, and as
+
+    we have it accessible as ready-made AI components that can
+
+    be easily integrated in systems and digital services, there
+
+    might still be a need for an additional approach here. If we
+
+    now have the technology in place, the next question to tackle
+
+    has to do with how to put it to use in different contexts? To
+
+    address this question, I suggest that we need to approach it
+
+    from the viewpoint of “Applied Artificial Intelligence”.
+
+    Although there is nothing new about the fact that AI should
+
+    be used, there is still no explicit approach developed that has
+
+    as its particular aim to focus on the process through which it
+
+    can be put to work. In this article I suggest that on a business
+
+    level, we should not just treat this technology as a tool, but
+
+    we should strive for more full-scale implementation and
+
+    integration projects where whole business models are built
+
+    around this technology as a core business component.
+
+
+    Here I define “Applied Artificial Intelligence” (AAI) as the
+
+    study, design, development, implementation and use of
+
+    Artificial Intelligence technologies to address real-world
+
+    problems. Further, I rely on the work by Zook (2003;2007)
+
+    when I suggest that as we apply AI to real-world problems,
+
+    we can also do that by understanding AI as a core business
+
+    component (Zook, 2007) and by formulating ideas on how'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Applying AI as A Core Business Component – The Ebiz Corp Case
+
+
+    Artificial intelligence is increasingly a background technology that is integrated
+    in digital platforms, products and services – ranging from the integration of
+    AI-components in search engines and streaming services, to the use of AI in healthcare
+    (Rahwan, et al., 2019).
+
+
+    In our research project we have worked in close collaboration with an e-Biz company
+    where we have followed their development of one such AI-based platform that operates
+    in the background to support “intelligent pricing” for online web shops. In adopting
+    the methodological perspective proposed by Rahwan, et al. (2019) we have followed
+    this development during the last 11 months, and we have followed both the development
+    of the technical AI-system, as well as the CEO, the Sales manager and the technical
+    development team during this period in order to gain an informed understanding
+    of how they develop their core business through the development of this AI system.
+
+
+    In our research collaboration with the eBiz company we have also been inspired
+    by the work by Zook and Allen (2003) on processes that governs the growth of the
+    business core, the work by Strassmann(1990) on how to align the development of
+    IT with the development of business values, and the work by Zook (2007) on how
+    to further develop the core business through the development of digital solutions.
+    In doing so we have focused on how AI might be applied as a core'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'component in the development of the AI-platform as well as the eBiz company
+    as an AI-driven business. In following the development of eBiz and their AI-platform
+    we adopted an engaged scholarship methodology (Van de ven, 2007) where we worked
+    closely together with this company instead of just relying on e.g. interviews.
+
+
+    The eBiz company we have collaborated is a global actor who has offices in 6 counties,
+    including an innovation office in London. eBiz develops and provide an AI-powered
+    web retail platform for 30 customers (global chains), and they have formulated
+    their core business as being about “doing intelligent brand and product matching
+    online to provide the best price for the customer”. They are accordingly supporting
+    multiple stakeholders here (including other companies as their clients, as well
+    as the online shoppers (endusers/customers). In doing so they acknowledge how
+    the AI-system is of strategic value if aligned with the organization and its trading
+    partners (Melville, et. al., 2004), and ways of integrating the synchronous development
+    of IT, algorithms and business models (Gomez-Uribe, 2015).
+
+
+    eBiz also has a mission statement that is completely aligned with their AI-platform.
+    This statement says that they deliver a complete and exact view of how all their
+    client’s products are compare in price points with any competition on the online
+    market. The comparison is data-driven, automatic, and their algorithms scrape
+    and analyze the web on a daily basis.
+
+
+    This allows online retailers to curate assortment, increase volume, growth and
+    target specific strategic and tactical goals'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'in terms of pricing with full control saving vast amounts of hours using AI-technologies.
+
+
+    # The eBiz AI-platform in action
+
+
+    The AI-system developed by eBiz is a digital platform that their clients can use
+    when building and developing their online webshops. The AI-modules runs in the
+    background, and it scraps the web for competing products as to automatically adjust
+    prices on the products their clients are selling over the web. At the current
+    moment the platform has algorithms for data scraping and processing, and the system
+    can act based on this (i.e. implement “intelligent pricing” for their clients).
+    At the current moment the platform handles automatic and intelligent pricing of
+    600.000 items (web shop products), and these adjustments are made continuously
+    in relation to competitors pricing strategies, and in relation to a wide set of
+    factors.
+
+
+    The AI-system operates along a simple cycle of 1) input to the system (the e-retailers
+    product feed), 2) scraping (of the web, and downloading of selected competitors
+    products and prices, and 3) the processing of this data (to automatically adjust
+    the e-retailers prices, and the further processing of this data as input to the
+    e-retailers ERP systems).
+
+
+    In implementing this cycle eBiz says that they enable their clients to 1) follow
+    their competitors by tracking and matching comparable products, at the same time
+    as their system supports 1) dynamic and intelligent pricing and rule setting (e.g.
+    “Adjust my price to be higher or lower price, in'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'part of the business model it can both “run the business” (Holloway & Hand,
+    1988) and at the same time serve the online customer.
+
+
+    However, to make AI work also comes with some conditions and necessities. In our
+    project we have focused on making it work for consumers, and as a core business
+    component, by relying on the following simple model for applying AI in this context
+    including the cycle of 1) monitoring, 2) acting/reacting, and 3) re-configuring.
+    Here we briefly outline these three components:
+
+
+    # 1) Monitoring
+
+
+    The AI system we have focused on in this business case is configured to monitor
+    changes online from the viewpoint of price changes for similar products. To make
+    this work, the AI system is dependent on a set of variables that describe each
+    product, and the system can then train its algorithms to constantly monitor these
+    similar products online.
+
+
+    # 2) Acting/reacting
+
+
+    The AI system we have focused on can also act. Given any changes in the pricing
+    of similar products online, the AI system can also take some actions. It can act/react
+    on changes in the pricing of similar products, and it can instantly and dynamically
+    adjust the prices of the online shops articles based on an analysis of how similar
+    products are priced.
+
+
+    # 3) Reconfiguring'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: 'Not only can the AI system act and react on the data it collects through scraping
+    of other websites, but since the AI system is also configured to train its underlying
+    algorithms it can also adapt to changes (e.g. adopt to changing pricing strategies
+    in the marked (e.g. “black Friday sales” or other campaigns).
+
+
+    To successfully apply AI in a business context is about designing AI solutions
+    that incorporate these three aspects in a continuous cycle. That is, it should
+    not only be configured to monitor a particular data set, and be configured to
+    act upon this data, but the true power comes from making use of AI’s capability
+    of also training its algorithms to achieve higher precision, or its ability to
+    constantly, at high speed, and with increased precision, adjust and reconfigure
+    itself given changes in the data landscape it is set to monitor.
+
+
+    Of course, there are also challenges associated with applying AI to real-world
+    use contexts. In the research project reported in this article, which is specifically
+    oriented towards applying AI in a business context, we have identified two such
+    overarching challenges.
+
+
+    The 1st challenge has to do with “*the risk of getting disconnected*” (Borgmann,
+    1984). When we apply automatic technologies, and in this case even self-reconfiguring
+    technologies we also introduce these as a mediator between ourselves and the task
+    it autonomously executes. In the case of the eBiz business, there is no way to
+    either do what the system does by hand, or even follow what the system does. It
+    is too many subtasks being done, at too high speed for any'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'human to monitor. The loss of this ability to monitor how the system works
+    implies a risk of also losing the understanding of how it does the work – it just
+    works, and the process becomes black-boxed. In the eBiz case we have reported
+    in this paper they deal with this challenge through in-house development of the
+    AI system. This strategy forces them to constantly make sure that they understand
+    what the system does, how it operates, and how it develops. Accordingly, it’s
+    an active strategy that both continuously aligns the development of the AI-system
+    with the development of their core business model, at the same time as it is a
+    strategy that constantly makes sure that there is no disconnect between an understanding
+    of their core business, and a close-up understanding of how their core business
+    AI-system operates on their behalf.
+
+
+    The 2ⁿᵈ challenge is about *the lack of transparency*. This challenge comes as
+    an effect as the AI-solution scale to business level. With small-scale AI-solutions
+    (e.g. if machine-learning is applied to a small data set to check for errors)
+    it is possible to have an understanding of the data set, the algorithms, and the
+    output from the system. When the data set grows, when the algorithms re-configure
+    themselves, and when the complexity grows in terms of the sets of multiple variables
+    that the system handles there is a good chance that the transparency is lost –
+    here it is not about being disconnected as in the 1ˢᵗ challenge, but as a 2ⁿᵈ
+    effect, being disconnected might also lead to a situation where it is hard to
+    reestablish an understanding for how the AI-system works. In relation to this
+    2ⁿᵈ challenge there is a whole strand of research on “explainable AI” (XAI). However,
+    most of this'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'work is related to small-scale systems, and in relation to individuals. For
+    the business we have studied it offers no solution here! (it is in fact rather
+    pointless, and in fact impossible to monitor and make sense of the actions the
+    AI system takes as it scrapes the web and adjusts 600.000 articles every day).
+    Accordingly, this call for other solutions for how to review how the AI works.
+    As formulated by Xu (2019):
+
+
+    > > “Explainable AI (XAI) enables users to understand the algorithm and parameters
+    used, which is intended to address the AI black-box problem. If a medical-diagnosis
+    intelligent system predicts the likelihood of cancer based on a patient’s personal
+    data, XAI should provide the reasons for the prediction to the patient through
+    a UI. Previous research on XAI had mainly been done in two ways: visualization
+    of ML [machine-learning] processes and explainable ML algorithms. However, these
+    approaches may be biased in explaining how ML algorithms work and rely mainly
+    on abstract visualization methods or statistical algorithms, which may further
+    increase complexity.” (Wei Xu, 2019)
+
+
+    As illustrated here, current XAI solutions are only offered at the level of the
+    individual (as a “walk-through” XAI model, and there is an implicit assumption
+    made here that the AI-system operates at the same pace as the individual so that
+    he/she can monitor what the system does in a step-by-step fashion. That is not
+    the case when it comes to the business AI-solution we have reported on in this
+    article.
+
+
+    Indeed, and when it comes to large-scale AI-system other examination models are
+    needed. In our research collaboration'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'with the eBiz company we are exploring explanation models that offers explanations
+    of the inner logic of the system, and descriptions of the decision model so that
+    both customers and the eBiz company can examine a particular output from the system
+    and see if it makes sense (i.e. if it corresponds to that explanation model).
+    By focusing on these alternative solutions, we propose “examinable AI” as a complement
+    to explainable AI, and we note that this might serve as a call for research aimed
+    at resolving this 2\u207f\u1d48 challenge associated with black-boxed AI-system,
+    and how to increase transparency on how these systems work in real use contexts.
+
+
+    Before moving to the concluding section of this article we should also summarize
+    a couple of lessons learnt during this case. In short, we think that we have provided
+    a case that illustrates:
+
+
+    +   1) ***AI as a background technology.*** During the 1\u02e2\u1d57 and 2\u207f\u1d48
+    wave of AI developments the focus was very much on AI as a foreground technology.
+    The focus was on developing an intelligence machine that we can interact with
+    (e.g. the Eliza system, the DeepBlue chess playing system, or a robot). Now, AI
+    operates in the background of our attention to provide better services. This is
+    a radical change. Further, our case also illustrates:
+
+
+    +   2) ***AI beyond human-like intelligence.*** During the 1\u02e2\u1d57 and 2\u207f\u1d48
+    wave the focus was to a large extent on building a system that worked like the
+    human brain. In the case we have reported here there is nothing human-like about
+    this AI-system. It performs tasks no human could do, at a pace that'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: 'no human can compete with. As such, we illustrate a “beyond human-level” case
+    of applied AI. Finally, our case also illustrates:
+
+
+    3) **_AI as a core business component._** Existing approaches to AI views it as
+    a technology or a “tool” to be developed. In the case we have reported in this
+    article it is not possible to distinguish between the technology being developed
+    and the business model. Instead, the AI-system is the core business, and it is
+    through the in-house development of this system, and by running the system, that
+    also the business develops. In short, this illustrates a 3rd wave AI-case where
+    AI is being applied in society to work for its customers, as well as for the business
+    developing this AI-system.
+
+
+    # Moving Forward with Applied Artificial Intelligence!
+
+
+    As we have now moved from the 1st and 2nd wave of Artificial Intelligence, towards
+    the most recent 3rd wave of developments (Xu, 2019) several things have also changed
+    over the last few decades. We now have AI technologies that can be applied to
+    real-world problems, and there is no longer a single focus on developing AI for
+    the purposing of getting a better understanding of the brain and how it works
+    (and related high-level questions of what “intelligence” and “reason” is). Instead,
+    the contemporary focus is much wider, and it includes questions on how to make
+    use of AI in society, and questions concerning how it can be applied to real-world
+    problems. With this as our point of departure we have in this article proposed
+    the terms “Applied Artificial Intelligence” to speak to these questions of how
+    to make use of this'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'technology. In this article we define Applied Artificial Intelligence (AAI)
+    as “*the study, design, development, implementation and use of Artificial Intelligence
+    technologies to address real-world problems*”.
+
+
+    In focusing on applied AI, and what it can offer we have in this paper argued
+    that it is time to leave the previous “human-like” models of AI behind, and redirect
+    our focus on what today’s “beyond human level” AI systems can offer. With this
+    as an important point of departure we have in this paper explicitly focused on
+    how AI can work, at the level of a global business, as a core platform component,
+    and as core business.
+
+
+    As stated by Zook & Allen (2003) “*the most successful companies were able to
+    consistently, profitably outgrow their rivals by developing a formula for pushing
+    out the boundaries of their core businesses in predictable, repeatable ways*”.
+    In the case we have presented in this article they are doing this expansion with
+    and through AI. By aligning the development of their business model and the development
+    of an AI system that perfectly reflect this business model they illustrate how
+    AI can work as a core business component. Further, by having this business component
+    installed, the system can provide them with realtime feedback on how the business
+    performs. It can present analysis of the data the system already has, and since
+    AI is to a large extend also a probability technology it can offer quite precise
+    estimations of what will happen next.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: 'By focusing on a real-world business and how they have applied AI as a core
+    business component we have in this article been able to illustrate “AI in action”.
+    This means that we have in this article demonstrated a proof-of-concept of what
+    Applied AI can look like at the business level. In doing so we also present this
+    case as evidence of 3<sup>rd</sup> wave AI beyond speculations on AI as “the next
+    big thing”. In relation to the statement made by Holloway and Hand (1988) we can
+    now say for sure that “*AI is no longer an academic term, but a reality*”.
+
+
+    In this article we have also presented a conceptual frame for businesses to think
+    strategically about AI as a core business component. We have done so by presenting
+    the implications and challenges that are associated with applying AI on a business
+    level. For sure, the strategic business value of IT has been known for a long
+    time (see e.g. Strassmann, 1990; Melville, et al., 2004). What we can add to this
+    is that IT might not only work as a recourse that can support other structures
+    and processes in the company, but it can also be a structure and process in the
+    development of the core business model. In short, we have in this paper offered
+    a complimentary perspective on the role of technology and in particular how AI
+    might work as an applied technology, and as a core business component. This contribution
+    is well-aligned with the perspective proposed by Rahwan, et al. (2019) who suggests
+    that the machine behavior of AI needs to be studied empirically, i.e. to apply
+    an applied perspective on AI.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: 'Finally, and in adding to Xu’s (2019) definition of useful AI as “*an AI solution
+    that can provide the functions required to satisfy target users’ needs in the
+    valid usage scenarios of their work and life*” we would like to expand on this
+    notion of “Useful AI”, and suggest that it needs to work, not only for users/consumers,
+    but also for the businesses providing the service. In order to successfully apply
+    AI to real-world problems it needs to work, for its users, and for those who provide
+    digital services based on applied artificial intelligence.
+
+
+    # References
+
+
+    +   1. Borgmann, A. (1984) Technology and the character of contemporary life ·
+    a philosophical inquiry. The University of Chicago Press.
+
+    +   2. Clark, A. (2003) Natural-Born Cyborgs – Minds, Technologies, and the Future
+    of Human Intelligence, Oxford University Press.
+
+    +   3. Dignum, V. (2019) Responsible Artificial Intelligence – How to develop
+    and use AI in a responsible way, Springer.
+
+    +   4. Finn, E. (2017) What algorithms want – Imagination in the age of computing,
+    MIT Press.
+
+    +   5. Gilio A. (1995) Algorithms for Precise and Imprecise Conditional Probability
+    Assessments. In: Coletti G., Dubois D., Scozzafava R. (eds) Mathematical Models
+    for Handling Partial Knowledge in Artificial Intelligence. Springer, Boston, MA
+
+    +   6. Gomes, C., Fern, X., Fink, D., Fisher, D., Flecker, A., Freund, D., Fern,
+    A. (2019). Computational sustainability: Computing for a better World and a sustainable
+    future. Communications of the ACM, 62(9), 56–65.
+
+    +   7. Gomez-Uribe, CA and Hunt, N. (2016). The Netflix Recommender System: Algorithms,
+    Business Value, and Innovation. ACM Trans. Manage. Inf. Syst. 6, 4, Article 13
+    (December 2016), 10 pages. DOI:https://doi.org/10.1145/2843948'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '+   [8]. Holloway, C., & Hand, H. H. (1988). Who’s running the store, anyway?
+    Artificial intelligence!!!, Business Horizons, 31(2), 70–76.
+
+
+    +   [9]. Johnson, Mark & Christensen, C.C. & Kagermann, Henning. (2008). Reinventing
+    Your Business Model. Harvard Business Review. 87. 52–60.
+
+
+    +   [10]. Kaplan, A. M., & Haenlein, M. (2019). Siri, Siri, in my hand: Who’s
+    the fairest in the land? On the interpretations, illustrations, and implications
+    of artificial intelligence. Business Horizons, 62(1), 15–25.
+
+
+    +   [11]. Kaplan, A., Haenlein, M. (2020) Rulers of the world, unite! The challenges
+    and opportunities of artificial intelligence, Business Horizons, Volume 63, Issue
+    1, Pages 37–50.
+
+
+    +   [12]. McCarthy, J., Minsky, M. L., Rochester, N., & Shannon, C. E. (1955).
+    A proposal for the Dartmouth summer research project on artificial intelligence.
+    Available at http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html
+
+
+    +   [13]. Makridakis, S. (2017). The forthcoming Artificial Intelligence (AI)
+    revolution: Its impact on society and firms. Futures, 100(90), 46–60.
+
+
+    +   [14]. Miller, A. (2019) The Artist in the Machine – The World of AI-powered
+    creativity, MIT Press.
+
+
+    +   [15]. Melville, Nigel & Kraemer, Kenneth & Gurbaxani, Vijay. (2004). Review:
+    Information Technology and Organizational Performance: An Integrative Model of
+    IT Business Value. MIS Quarterly. 28. 283–322. 10.2307/25148636.
+
+
+    +   [16]. Newell, A., and Simon, H. (1972) Human Problem Solving, NJ: Prentice
+    Hall.
+
+
+    +   [17]. Rahwan, I., Cebrian, M., Obradovich, N. et al. (2019) Machine behaviour.
+    Nature 568, 477–486. https://doi.org/10.1038/s41586-019-1138-y
+
+
+    +   [18]. Stolterman, E. & Wiberg, M. (2020) Compositional interaction design—changes
+    in design practice and its implications for teaching and research, Digital Creativity,
+    1–20, Routledge.
+
+
+    +   [19]. Strassmann, PA (1990) The business value of computers, Information Economics
+    Pr.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '+   [20]. Turing, Alan (October 1950), “Computing Machinery and Intelligence”,
+    *Mind*, LIX (236): 433–460, doi:10.1093/mind/LIX.236.433, ISSN 0026-4423
+
+
+    +   [21]. Turing, Alan (1952), “Can Automatic Calculating Machines be Said to
+    Think?”, in Copeland, B. Jack (ed.), *The Essential Turing: The ideas that gave
+    birth to the computer age*, Oxford: Oxford University Press, ISBN 978-0-19-825080-7
+
+
+    +   [22]. Van de Ven, A. H., *Engaged Scholarship: A Guide for Organizational
+    and Social Research*, Oxford University Press, Oxford, 2007.
+
+
+    +   [23]. Vardouli T., & Touloumi, O. (2019) *Computer Architectures: Constructing
+    the Common Ground*, Routledge Research in Design, Technology and Society, Routledge.
+
+
+    +   [24]. Wei, Xu (2019) Toward human-centered AI, *interactions* 26(4):42-46,
+    DOI: 10.1145/3328485
+
+
+    +   [25]. Weizenbaum, Joseph (January 1966), "ELIZA – A Computer Program For the
+    Study of Natural Language Communication Between Man And Machine", *Communications
+    of the ACM*, 9 (1): 36–45, doi:10.1145/365153.365168
+
+
+    +   [26]. Zook, C., & Allen, J. (2003). Growth outside the core. *Harvard business
+    review*, 81 12, 66-73, 125.
+
+
+    +   [27]. Zook C. (2007) Finding your next core business. *Harvard Business Review*.
+    Apr;85(4):66-75, 140.
+
+
+    +   [29]. Ågerfalk, P. (2020) Artificial intelligence as digital agency, *European
+    Journal of Information Systems*, 29:1, 1-8, DOI: 10.1080/0960085X.2020.1721947'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: This page is left blank intentionally.
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# Does the Human Brain Resort to AI’s Deep Learning in Order to Solve Problems
+
+
+    Prof. M S S El Namaki
+
+
+    Dean, VU School of Management, Switzerland.
+
+    Dean (Retired) Maastricht School of Management, MSM, The Netherlands.
+
+    CEO, Association for Accreditation of International Business Education
+
+    aaime.net, Dr.el.namaki@gmail.com
+
+
+    # I. The problem
+
+
+    Problem solving is a daily occurrence in business and, also, in human brains.
+    Businesses resort to a variety of modes in order to find an answer to these problems.
+    Human brains adopt, also, a variety of measures to solve their own brand of problems.
+    Artificial Intelligence technologies seem to have been extending a helping hand
+    to business in the search for problem solving mechanisms. Machine learning and
+    deep learning are currently recognized as prime modes for business insight and
+    problem solving. Does the human brain possess competencies and instruments that
+    could compare to the deep learning technologies adopted by AI?
+
+
+    This will be the focus of the following article.
+
+
+    The article is eclectic. It draws on concepts and frameworks from psychology,
+    neurology and management. It starts with'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: 'identifying the contours of problem solving seen through psychology and management
+    eyes. It then explores the cognitive functions of the brain and the deep learning
+    dimension of this cognition. Possible overlapping of the two processes, the managerial
+    and the neurological, in the process of problem solving is then explored
+
+
+    The article draws on recent research on all three areas: psychology, neurology
+    and strategic management.
+
+
+    The article could contribute to a better understanding of the role of the human
+    brain in advancing solutions to managerial problems. It could also produce tools
+    supportive to the process of computational cognition.
+
+
+    # II. Key variables: problem solving, deep learning and brain cognition
+
+
+    +   - What is problem solving?
+
+
+    Problem solving is “higher-order cognitive process that requires the modulation
+    and control of more routine or fundamental skills” (Goldstein & Levin, 1987).
+    It occurs if an organization, an individual or a system does not know how to proceed
+    from a given state to a desired goal state. It starts with an idea, or a problem,
+    and proceeds all the way to an end result.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'The concept is rather eclectic with roots in psychology and tentacles in philosophy,
+    artificial intelligence, computer science, engineering, mathematics and medicine.
+
+
+    A ”problem-solving cycle” is a sequence of events that would lead to a solution.
+    . In this cycle one recognizes a problem, defines the problem, develops a strategy
+    to solve the problem, organizes the pertinent knowledge, mobilizes required resources,
+    conducts remedial action, monitors progress, and evaluates the solution (Schacter,
+    D.L. 2009).
+
+
+    +   - **What is deep learning?**
+
+
+    Deep learning is a subset of machine learning. It is a process that involves neural
+    networks that could learn, unsupervised, from unstructured or unlabeled data.
+
+
+    Machine learning works with algorithms that detect patterns and learn how to make
+    predictions. The process can be supervised, semi-supervised or unsupervised. In
+    supervised learning an algorithm learns from labeled training data how to predict
+    outcomes for unknown variables. In unsupervised learning unlabeled data lead to
+    a model that works on its own to discover outcomes.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: 'decision making, comprehension and production of language. (Wang et al, 2008)
+
+
+    # **a. Memory**
+
+
+    Memory is our ability to encode, store, retain and subsequently recall information
+    and past experiences in the human brain. It can be thought of in general terms
+    as the use of past experience to affect or influence current behavior. Memory
+    is the sum total of what we remember, and gives us the capability to learn and
+    adapt from previous experiences as well as to build relationships. It is the ability
+    to remember past experiences, and the power or process of recalling to mind previously
+    learned facts, experiences, impressions, skills and habits. It is the store of
+    things learned and retained from our activity or experience, as evidenced by modification
+    of structure or behavior, or by recall and recognition. In more physiological
+    or neurological terms, memory is, at its simplest, a set of encoded neural connections
+    in the brain. It is the recreation or reconstruction of past experiences by the
+    synchronous firing of neurons that were involved in the original experience.
+
+
+    Memory is related to but distinct from learning, which is the process by which
+    we acquire knowledge of the world and modify our subsequent behavior. During learning,
+    neurons that fire together to produce a particular experience are'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: 'altered so that they have a tendency to fire together again. . Thus, memory
+    depends on learning because it stores and retrieves learned information. But learning
+    also depends largely on memory as stored knowledge relates, by inference and association,
+    to newly acquired knowledge.
+
+
+    # Figure (2) Types of human memory
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_84_0.png)
+
+
+    **Source:** Types of Human Memory, July 8, 2020 the Human Memory 2010-2020
+
+
+    # b. Learning
+
+
+    The brain learns.
+
+
+    Brain learning processes could take different shapes depending on a process and
+    the criterion. If the criterion is time then learning is long and short term but
+    if the criterion is transparency then it is explicit or implicit and, finally
+    if the criterion is depth of analysis learning could become either'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'deep or generic.
+
+
+    Learning is a key cognitive function of the human brain and the link to managerial
+    performance. It is a process of acquiring or modifying knowledge, behaviors, skills,
+    values, or preferences. The brain “learns” and the cerebrum is most important
+    device for learning as it is here where higher-ordered functions like memory and
+    reasoning occur. Each area of the cerebrum specializes in a function – sight,
+    hearing, speech, touch, short-term memory, long-term memory, language and reasoning
+    abilities are the most important for learning. Through a network of neurons, sensory
+    information is transmitted by synapses along the neural pathway and stored temporarily
+    in short-term memory, a volatile region of the brain that acts like a receiving
+    center for the flood of sensory information we encounter in our daily lives Once
+    processed in short-term memory, our brain’s neural pathways carry these memories
+    to the structural core, where they are compared with existing memories and stored
+    in our long-term memory, the vast repository of our life long experiences and
+    the, prime point of reference within managerial behavior (Ford , 2011) (UCERI,
+    OECD, 2008).
+
+
+    Brain learning could be explicit or implicit. Explicit learning connotes conscious
+    awareness and articulation of what is being learned. Implicit learning is without
+    conscious access. (Roman F. Loonis, et al, October 2017).'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: 'Learning could also be deep i.e. Models patterns in data as complex, mufti-
+    layered networks it could also be “generic” building mathematical model based
+    on sample data or ”training data”, in order to make predictions or decisions without
+    being explicitly programmed to perform the task.
+
+
+    # III. How does all of that translate into problem solving?
+
+
+    Analysis provided above could lead to the hypothesis that problem solving is one
+    of the core cognitive functions of the human brain. And a deep learning-like brain
+    configuration guides the process.
+
+
+    Problem solving is seen, then, as a higher level brain activity that connotes
+    interaction with many other cognitive processes such as abstraction, searching,
+    learning, decision making, inference, analysis, and synthesis. (Wang et al 2008).
+
+
+    The brain performs this cognitive function when it seeks a solution for a given
+    problem or a potential route to a goal. Problem solving can be perceived by the
+    brain, then, as a learning and analysis process.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "cases, could be structured or unstructured, functional or multi-functional,\
+    \ conceptual or applied, short or long term, high risk or low risk etc.\n\nIs\
+    \ it plausible that the human brain is adopting its own version of deep learning\
+    \ in its search for an answer to the myriad of problem situations that it confronts?\
+    \ It resorts to a process of “management” of memory and learning. Memory provides\
+    \ the ability to encode, store, retain and subsequently recall information and\
+    \ past experiences. Brain’s consequently learns. A learning that depends on several\
+    \ criteria from time, long and short term learning, to transparency, explicit\
+    \ or implicit learning and depth of analysis, deep or generic learning.\n\nThese\
+    \ cognitive processes of the brain contribute to problem solving. Drucker’s self-management\
+    \ problem provides an illustration.\n\n# References\n\n+   [1]. Schacter, D.L.\
+    \ et al. (2009). Psychology, Second Edition. New York: Worth\n+   \n+   [2]. “Wang,\
+    \ Y, Chiew V (2008), ”On the cognitive process of human problem solving”, Cognitive\
+    \ Systems Research (2008)\n+   \n+   [3]. LeCun Y, Bengio Y, Hinton G. Deep learning.\
+    \ Nature. 2015\n+   \n+   [4]. Goldstein F, Levin H (1987). “Disorders of reasoning\
+    \ and problem-solving ability” in M. Meier, A. Benton, and L. Diller"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Artificial Intelligence, Machine Learning and Data Science as Iterations
+    of Business Automation for Small Businesses
+
+
+    Pooja Sharma
+
+    Managing Partner- Business Automation, SKS Consulting & Advisors,
+
+    India
+
+
+    # Abstract
+
+
+    Artificial intelligence and machine learning, the two iterations of automation
+    are based on the data, small or large. The larger the data, the more effective
+    an AI or machine learning tool will be. The opposite holds the opposite iteration.
+    With a larger pool of data, the large businesses and multinational corporations
+    have effectively been building, developing and adopting refined AI and machine
+    learning based decision systems.
+
+
+    The contention of this chapter is to explore if the small businesses with small
+    data in hands are well-off to use and adopt AI and machine learning based tools
+    for their day to day business operations.
+
+
+    **Keywords:** AI for small business, machine learning for small business, Data
+    Science, Big Data
+
+
+    The modern age automation tools are being developed using artificial intelligence
+    and machine learning. The basis of development of an AI or machine learning tool
+    is entirely'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: 'based on the availability and quantity of data. The more data we have, the
+    more effective our automation tools will be.
+
+
+    Now, we come across the issue if the mere availability and quantity of data are
+    the only basis of an effective AI or machine learning tool. Not entirely but largely
+    yes. To train an AI based tool, we need more and more buckets of data. This data
+    needs to be fetched from a gamut of processes and operations taking place across
+    a particular industry or business organization. Why we are stressing here on the
+    data coming from a particular industry or a business organization. The answer
+    lies in the concept of relevance of data that is further based on the effectiveness
+    of data science or analytics capabilities of a business unit.
+
+
+    Here come the small businesses in the discussion of this chapter. Small businesses
+    are obviously having fewer market offerings generally operating in niche markets
+    and thus have small data in hands especially in the infancy stages of their business.
+    Even small businesses with established business presence and market for their
+    offerings still have small data with them.
+
+
+    The small data may not be sufficient to build, develop and train an AI system.
+    Furthermore, a small business may not have data for some business processes entirely
+    that other small businesses may have. There are a larger number of small businesses
+    not having HR departments, legal compliances divisions and other functional divisions
+    that large businesses have. The absence of data related to all processes of a'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: 'business or the availability of small data with the small business requires
+    re-working or re-thinking on the fact if a small business still can embrace the
+    business automation tools that are basically based on big data driven AI systems.
+
+
+    # AI vendors and small businesses
+
+
+    It is evident that insufficient data in the hands of small businesses coupled
+    with small investment outlays they may have, makes it infeasible to build and
+    develop their own AI systems independently. Lesser data and limited financial
+    outlays with small businesses hinder the in-house development of AI based automation
+    tools.
+
+
+    But, the small businesses can still adopt the AI based automation tools procured
+    from AI vendors. AI vendors are the full time developers of AI systems for the
+    industry segments they have specializations in. AI vendors pool small data from
+    the businesses processes from different small businesses they work with and then
+    the collected data is aggregated to build and train a standalone AI system for
+    all the businesses falling into a particular market segment.
+
+
+    This way, a small business can benefit from the automated data of the HR department
+    of another small business even if the former doesn’t have an HR function division.
+    An AI system procured from an AI vendor may further help a small business to adopt
+    automation in their business decisions and processes without investing on in-house
+    AI development.
+
+
+    # Does it solve the AI adoption problems?'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'the same were built using years of experience of these large corporations.
+    All this means that using platforms provided by these large corporations, small
+    businesses are helping themselves benefitting from the years of experience and
+    AI development. Off-course, using these platforms comes with a price but this
+    is far lesser than what it takes to build in-house or procuring from an AI vendor.
+
+
+    # How can data science help small businesses?
+
+
+    Small businesses have small data. Generally, it isn’t difficult to manually process
+    the lesser quantity of data but making this data, how smaller it can be, work
+    for one or more objectives at the same time may save time and efforts of the small
+    businesses generally having small teams to focus on relatively more critical business
+    processes.
+
+
+    Having data analytics people or just having an understanding of data relevance
+    and analysis can help small businesses get an edge in their market segments.
+
+
+    # Small business functions having prospects for AI, machine learning and data
+    science
+
+
+    The AI based automation tools and data analytics can be used for real-business
+    problems in marketing, sales, customer relations, billing & accounting, after
+    sales customer experience etc. All these business functions are vital and pervasive
+    in every small business and there are a number of large businesses providing AI
+    powered support services for all these functions that small businesses may use.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Conclusion
+
+
+    As the in-house development of AI based automation tools are over dependent on
+    the availability of big data, small businesses may not have such large amounts
+    of data to go for developing their own AI systems. Those small businesses who
+    have established themselves in their niche market segments and have scaled to
+    a step further can opt for procuring AI technologies from the AI vendors.
+
+
+    And those small businesses that are in their infancy stages may use AI powered
+    platforms of large service providers helping them adopt and use AI automation
+    for their small businesses. It is also concluded here that successful adoption
+    of AI automation depends on how effectively small businesses identify and analyze
+    the data available with them or within the implemented AI system. AI and machine
+    learning has to go more miles to reach the small businesses directly and the AI
+    technologies need to be affordable for the small businesses for their adoption.
+
+
+    # References
+
+
+    +   1. Brynjolfsson, E., & Mcafee, A. N. D. R. E. W. (2017). The business of artificial
+    intelligence. Harvard Business Review, 1-20.
+
+    +   2. Davenport, T. H., & Dyché, J. (2013). Big data in big companies. International
+    Institute for Analytics, 3, 1-31.
+
+    +   3. Fountaine, T., McCarthy, B., & Saleh, T. (2019). Building the AI-powered
+    organization. Harvard Business Review, 97(4), 62-73.
+
+    +   4. Furman, J., & Seamans, R. (2019). AI and the Economy. Innovation Policy
+    and the Economy, 19(1), 161-191.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '[5]. Ho, N. (2020, August). How AI Can Help Build Resiliency for Small Businesses
+    in a Global Economic Crisis. In Proceedings of the 26th ACM SIGKDD International
+    Conference on Knowledge Discovery & Data Mining (pp. 3606-3606).'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# Big Data and Data Analytics in Agricultural
+
+    Space: Towards Sustainable and Intelligent
+
+    Agro Sector Development
+
+
+    P. K. Paul¹#, Anil Bhuimali², R.R. Sinha³ K.S. Tiwary⁴, Pappachan Baby⁵
+
+    R. Rajesh⁶
+
+
+    Executive Director, MCIS, Department of CIS, Information Scientist (Offg.),
+
+    Raiganj University, India.
+
+
+    ²Vice Chancellor, Raiganj University, West Bengal, India.
+
+    ³Pro Vice Chancellor (Asian Region), Commonwealth Vocational
+
+    University, Kingdom of Tonga.
+
+    ⁴Dean (Science & Management), Raiganj University, West Bengal, India.
+
+    ⁵Head (Asian Region), Ballsbridge University, Commonwealth of Dominica.
+
+    ⁶Principal, Rohini College of Engineering and Technology (RCET),
+
+    Kanyakumari, TN, India.
+
+
+    #pkpaul.infotech@gmail.com
+
+
+    # Abstract
+
+
+    Agriculture has become important for each and everyone for its importance in the
+    daily lives. Cultivation and farming is most important and valuable in our life
+    as it is needed for all of us. Furthermore it is essential to have better healthy
+    agricultural systems and in this context Agricultural Informatics play a leading
+    role. Here proper mechanism is very important in healthy and modern agricultural
+    systems and development and for this various initiatives and methods are useful
+    and enhancing. There are rapid changes and growth in respect of the support of
+    various technologies which help in modernizing agricultural production and systems
+    like genetic engineering and technologies, computing'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '*Agro Sector Development* is theoretical in nature and aimed with following
+    objective and agendas (but not limited to)—
+
+
+    +   - To learn about the basic of the Agricultural Informatics including origin,
+    evolution and development.
+
+    +   - To know about the Agricultural Informatics and its applications in functioning
+    towards advanced Agricultural systems.
+
+    +   - To get the idea of emerging Agricultural Informatics as an academic programs,
+    nationally and internationally.
+
+    +   - To learn about the emerging Information Technologies in Agricultural Informatics
+    and allied areas.
+
+    +   - To know about the Big Data including allied areas and with its features
+    and characteristics in brief.
+
+    +   - To dig out the emerging applications of the Big Data and Analytics in Agricultural
+    and similar areas.
+
+    +   - To find out the Big Data and Analytics applications in the Agricultural
+    Informatics with the issues, challenges and potentialities.
+
+
+    # Methods:
+
+
+    The work entitled ‘Big Data and Data Analytics in Agricultural Space: *Towards
+    Sustainable and Intelligent Agro Sector Development*’ is a theoretical paper and
+    interdisciplinary in nature. Here various published secondary sources of IT, Agricultural
+    Sciences, Environment etc. have been consulted. Moreover different kinds of primary
+    sources'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'have also been gathered, analyzed and further reported in this work. To get
+    the real scenario of Agricultural Informatics various websites of the service
+    offering companies and universities have been analyzed and incorporated including
+    the government project reports etc.
+
+
+    # Introduction
+
+
+    Agricultural Informatics deals with both Agricultural Science and Information
+    Science. Therefore Agricultural Informatics is an interdisciplinary field. Moreover
+    ‘Information Science’ & ‘Agricultural Science’ are also interdisciplinary and
+    very broad field. Agricultural Informatics is gaining rapidly for the developing
+    not only agricultural systems but also environmental systems. Agricultural Informatics
+    is dedicated in higher productivity in Agricultural Informatics including ecological
+    systems [1], [12], [26]. In pre production activities Agricultural Informatics
+    is widely applicable moreover additionally in post production of the agriculture
+    job as well Agricultural Informatics is effective and useful. Agricultural Informatics
+    is needed in developing agricultural practice and has developed advanced and productive
+    agricultural systems. The emerging smart agriculture is many ways depends on the
+    better and healthy Agricultural Informatics practice. Due to its importance educational
+    programs and research programs on Agricultural Informatics have been started by
+    many universities, internationally. In the development of the Agricultural Informatics
+    various branches from the Computing/ Information related branches are playing
+    leading roles and among them these are important —
+
+
+    +   - Information Technology'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '+   - Information Science
+
+    +   - Information Systems
+
+    +   - Computer Science
+
+    +   - Computing / Computer Applications
+
+    +   - Computer Science and Engineering etc.
+
+
+    Agricultural Informatics is growing rapidly and associated with the engineering,
+    technologies, sciences, management and economical studies as well (refer also
+    Fig: 1). As it is an Applied Science therefore Agricultural Informatics uses various
+    kind of procedure, methods, tools and principles in betterment of the agricultural
+    systems such as various types of crops, plants, animals, etc. The practice of
+    agriculture is dedicated in sedentary human civilization and it was developed
+    around 105,000 years ago. And about 11,500 years ago nascent farming was developed
+    whereas nascent animal (pigs, sheep, cattle, etc.) got started cultivation about
+    10,000 years ago. Internationally there are totalli regions engaged with the agricultural.
+    Today cultivation and agriculture deal with various types of plants, tress, seeds,
+    crops, domestic animals, and chemicals etc [4], [10], [129].
+
+
+    Even fertilizers, leather, sugar, alcohols cotton etc are also considered as Agricultural
+    Informatics. Different areas and fields which are related with the agriculture
+    and Agricultural Informatics can be applied in different areas as mentioned in
+    Fig: 1.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'various academic programs have been started internationally
+
+    in respect of Agricultural Informatics and allied branches
+
+    such as—
+
+
+    +   - Agricultural Information Systems.
+
+    +   - Agricultural Information Technology.
+
+    +   - Agricultural Computing.
+
+    +   - Smart Agriculture
+
+    +   - Digital Agriculture etc [6], [19], [28].
+
+
+    Agricultural Informatics is emerging as a field of study and its
+
+    practice also but there is a limitation in its real practice with
+
+    all the areas and regions therefore supports from different
+
+    stakeholders are highly solicited viz. governmental supports,
+
+    NGOs, societies etc. Moreover the stakeholders are regarding
+
+    the Agricultural Informatics are also increasing but
+
+    principally these are—
+
+
+    +   - Information or Similar Contents.
+
+    +   - Technologies or Other Systems.
+
+    +   - Agricultural Systems and Allied Areas
+
+    +   - People including User, designer and developer.
+
+
+    The emergence and need of Agricultural Informatics in
+
+    developing countries are also increasing due to its applicability
+
+    in other allied areas also.
+
+
+    # Smart & Digital Agriculture: Powered by the Agricultural Informatics
+
+
+    Agricultural Informatics is required and very much important
+
+    in different Agricultural activities and among these important'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: 'are pre productions of the agricultural systems. And also post production Agricultural
+    systems. Hence ultimately Agricultural Informatics improves the development economy
+    [2], [13], [25]. There are various emerging technologies of the Information Technology
+    (or allied areas viz. Information and Communication Technology, Computing Sciences
+    which are useful in Agricultural activities; please refer 2 where Big Data and
+    Analytics are also important and valuable.
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_107_0.png)
+
+
+    Fig: 2~Agricultural Informatics and emerging components
+
+
+    Agricultural Informatics is required for various purposes and among these important
+    are include but not limited to the—
+
+
+    +   - Enhancement of the Productivity.
+
+    +   - Productivity related easiness and flexibility.
+
+    +   - Very minimum amount of HR involvement.
+
+    +   - Integrating components that are useful in agriculture.
+
+
+    Agricultural Informatics is highest amount of practiced in the developed nations
+    but in recent past many developing'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: 'countries and even undeveloped countries are also getting the benefits of the
+    Agricultural Informatics for its pre and post production activities [7], [8],
+    [24].
+
+
+    It is an important fact that, worldwide many farmers are notable in doing Agriculture
+    with proper methods, functions however millions of people are associated in Agriculture
+    directly and indirectly. And in this context, Agricultural Informatics can be
+    useful in the agricultural activities with the use of IT/Computing related components.
+    Farmers have to face various challenges like heat, cold, flood, weather, drought,
+    insect, pest infestations, disease of the agricultural crops etc and here agricultural
+    informatics is effectively useful. According to its uses in the nutritional systems,
+    global agro business development, ecological aspects also Agricultural Informatics
+    are effectively useful [30], [31]. Therefore Agricultural Informatics can be useful
+    in the following in broader context—
+
+
+    +   - Input including the Output systems of in pre production and post production.
+
+    +   - In the affairs of the weather forecasting systems
+
+    +   - Harvesting of the agro crops.
+
+    +   - In food security and food for all.
+
+    +   - To enhance the value-chain development in Agricultural Systems.
+
+    +   - In enhancing better Agricultural systems and sustainable growth.
+
+    +   - In Agro Marketing and better supply-chain systems, HR etc.'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: 'Agricultural Informatics however is very much important and required healthy
+    Agricultural development with modern day’s technologies and tools; and among these
+    one important is Big Data which is depicted in later sections.
+
+
+    # Big Data with an Overview & Features
+
+
+    Data is important and applicable everywhere whether it is Healthcare sector, Government
+    sector, Private or public sector, horticulture, Management, Education etc. apart
+    from the Agriculture. Due to the growing amount of data in various activities
+    and therefore various techniques are used for the scientific Data Management.
+    The Big Data evolved as a Managing large amount of data and similar amount of
+    facet and it is also useful in Complex data management; therefore it is called
+    as Big Data Management. Here different analytical tools are also used and therefore
+    it is also called as Data Analytics or Analytics [11], [16], [22]. The applications
+    of the Analytics for other areas created other domains and fields viz.—
+
+
+    +   - Business Analytics
+
+    +   - Healthcare Analytics
+
+    +   - Medical Analytics
+
+    +   - Marketing Analytics
+
+    +   - Government Analytics
+
+    +   - Learning Analytics etc.
+
+
+    As far as Analytics application in Agriculture is concerned, in short it is called
+    as Agricultural Analytics. The term big data was emerged in the year 1990 but
+    in last few years massive changes are noticeable due to the commercialization
+    of data'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: 'Business, Manufacturing etc. There are different companies involved with the
+    Big Data Analytics and among these primarily big giant MNCs are Microsoft Corporation,
+    Teradata Corporation, SAP, EMC, HP, Dell [15], [20], [27].
+
+
+    Primarily only private organizations were involved with the Big Data Analytics
+    but gradually Government bodies also implemented Big Data including associated
+    systems and services.
+
+
+    # **Issues and Challenges: _The Power of “V” and Big Data_**
+
+
+    The applications of Big Data are rising in different are for its emergence and
+    need. However Big Data is significant due to its characteristics such as (also
+    refer fig: 3)—
+
+
+    **_Volume:_** It is actually the amount of data and including the similar content
+    and form.
+
+
+    **_Variety:_** Data comes with various formats including normal text, image, audio,
+    video content etc. and this nature of variety consider as important feature in
+    complex data management.
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_112_0.png)
+
+
+    **Fig: 3 The Core Characteristics of Big Data**'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '**Variable:** In data management, the variable is an important quantity as
+    data is changeable. Different kind of inconsistency (or uniformity) has to be
+    handled in Big data and data analytics.
+
+
+    **Veracity (quality):** In Big data quality of data is is important to get the
+    perfect accuracy and healthy deals with the applications. The quality is thus
+    treated as veracity.
+
+
+    **Velocity:** Velocity is also important in data analytics in this context speed
+    of the data is an important criterion.
+
+
+    # Big Data Applications in Agriculture and Allied Sectors
+
+
+    Big Data and Analytics is very much important and valuable in developing better
+    and smarter agricultural systems. The increasing amount of the populations, including
+    demand for the food, climate change and so on lead the uses of Big Data and Analytics
+    including other emerging technologies into agriculture directly and indirectly.
+    Here IoT devices and other technologies can get the data or collect the data and
+    thereafter Cloud Computing based systems helps in virtualization of the data but
+    this large amount of generated data can be solved by the of Big Data and Analytics
+    systems. The data related to the fields, soil, and plants aid, crops etc in real-time
+    basis. Then expert or analyst integrates large amount of variety and complex data
+    in different models and make them enable for the agriculture and allied sectors.
+    The Compound Annual Growth Rate (CAGR) of Big Data and Analytics into Agriculture
+    is 16.2%. The market size of Big Data and Analytics in agriculture is also increasing.
+    In 2018 it'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: 'was 585 USD million and it is expected it is to be reach at 1236 million by
+    the end of 2023. There are many areas where Big Data and Analytics.
+
+
+    # As a solution in the context of Growing Populations
+
+
+    Worldwide the populations are rising and this is become an important challenge
+    in respect of the food productions. In this context various organizations, agricultural
+    farms, industries, institutions etc. are moving well in respect of the better
+    and productive agricultural foods, products and yields. With the help of Big data
+    farmers and other stakeholders can get real time data on various aspects and areas
+    such as rainfall patterns, water cycles, soil condition, crop condition, fertilizer
+    requirements etc. and in this context it helps in productive agricultural foods.
+
+
+    This enables them to make smart decisions, such as what crops to plant for better
+    profitability and when to harvest. The right decisions ultimately improve farm
+    yields. Using mathematical modeling can be helpful in different activities and
+    thus it helps in agro development in different context as well. The use of sensors
+    for collecting data is worthy in data management and proper decision making.
+
+
+    # Ethical Pesticides
+
+
+    Big Data Applications in the Agriculture is also helpful in the management and
+    administration of the agricultural systems. Big Data with the AI based tools helpful
+    in predicting regarding the uses of the pesticides. As pesticides is always'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: 'harmful in the soil and agricultural products etc. Thus here Big Data and Analytics
+    are helpful in identification of actual need of the pesticides, when to apply,
+    how to apply etc. when, and by how much. Hence this is helpful in managing of
+    pesticides uses and also ethically supports the human being and society as well
+    [14], [22].
+
+
+    # Optimizing farm equipment
+
+
+    Big Data and Analytics is also helpful in the find out and optimizing farm and
+    related equipments And for the big farms such kind of monitoring using Big Data
+    is helpful and healthy in different context. This way Big Data and Analytics is
+    applicable in other diverse areas as well as depicted in Fig: 4.
+
+
+    ![](img/b7c8c2816c849efde3ab5fa1da0676f7_115_0.png)
+
+
+    Fig: 4-Agricultural Big Data impact in Agro Systems'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# In Risk management
+
+
+    As far as Risk Management is concerned, Big Data and Analytics is also effective
+    in find out the risk in agriculture including pre producing and post producing
+    agricultural system. With these events like crop failure, and even improve feed
+    efficiency and so on can be analyzed based on need and requirement. In post production
+    activities like supply chain management, marketing management etc., Big Data and
+    Analytics are effective [17], [32].
+
+
+    # In Food Safety & Prevention
+
+
+    In modern days agricultural systems Big Data and Analytics could be helpful in
+    the activities such as Humidity, temperature and chemicals and this can lead the
+    smart agricultural systems as well businesses in different context.
+
+
+    # Equipment and Supply Chain management
+
+
+    In maintenance of equipment in order to reduce downtime and keep everything productive
+    and to provide solutions of the equipment management and supply chain Big Data
+    Analytics are very useful and solidly effective. Third of food produced for human
+    consumption is lost or wasted every year according to the McKinsey. Big data can
+    help achieve supply chain efficiencies with the help of tracking and optimizing
+    delivery truck routes and for this other allied technologies also associated and
+    useful viz.—
+
+
+    +   - Cloud Computing'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '+   - Internet of Things
+
+    +   - Robotics and AI etc.
+
+
+    And these are still growing in different context and ultimately helping in complex
+    data management and solving agriculture related issues.
+
+
+    # Smarter Agriculture: The Emergence and Role of Big Data in Agriculture & Allied
+    Sectors
+
+
+    Data mining is about the mining of the data and it includes the discovery patterns
+    in large data sets with the help of artificial intelligence, machine learning
+    statistics and database system and in this context Big Data and Analytics plays
+    a vital role. Precision agriculture is possible with Big Data Analytics applications
+    to ensure profitability, efficiency and these are ultimately helpful in future
+    decision-making. In applications and managing of fertilizers, chemical, crops,
+    seeds etc. are possible with the Big Data Analytics Big Data Analytics in agriculture
+    is about the capturing relevant data from a huge number of sources and to make
+    actionable information for healthy pre agriculture and post agricultural business
+    processes. With this Real-time insights can be possible to get and by the advance
+    analytics even emerging weather etc. are also possible to gather. In facilitating
+    better marketing Big data connectivity are useful and thus companies seeking a
+    benefits of the Big Data Analytics. Here allied technologies are also useful like
+    Robots in controlling, analysis and planning in various agro related aspects and
+    in this regard agri-tech companies are providing various advanced approaches.
+    The encounter autonomous vehicle can'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: 'be connected with the Big Data to measure soil moisture even including nutrient,
+    including predictive weather, image-capturing by the satellites use of the drones
+    etc. to know about the crop health [5], [29], [34].
+
+
+    These insights are extremely important since they tell the farmer when and how
+    much to irrigate a field, crop health, weather predictions, pest infestations
+    and even drought conditions. Considering the increasing labor shortages and find
+    out also become possible with the big data and therefore in manpower aspects also
+    big data provides healthy advantage for agriculture. Emerging technologies become
+    the urgent aspect in modern companies and start-ups and there Big Data has made
+    serious advancement. Though it is fact that the vast majority of farmers are concern
+    about the soil health and trying in ensuring of a sustainable farming and in this
+    regard Big Data and Analytics are important and urgent. The satellite image of
+    a plot of land can also be consider as important in agriculture and in this context
+    the geospatial approach and satellite monitoring connected with the big data would
+    be suitable for their decisions. As Information is considered as power and valuable
+    therefore in the agricultural industry also Big Data is useful in decision making
+    including in precision farming. Further with the help of Big Data Analytics proper
+    food and agro product tracking may be effective using sensors and analytics; and
+    results in proper supply chains. The big data revolution is the potential for
+    value creation in the farmers and also in industry, different stakeholders involved
+    etc [10], [32].'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# Suggestions and Facts
+
+
+    Information Technology is one of the important gift from the applied science and
+    deals with the collection, selection, organization, processing, managing, dissemination
+    of the information. Big Data is applicable in diverse areas in agriculture powered
+    by other technologies and such as growing rapidly.
+
+
+    +   - The *Efficient Agriculture Systems* become easy using Big Data Analytics
+    supported Agro Informatics here agricultural monitoring including agro based products
+    management possible effectively. Hence Big Data Analytics applications could be
+    useful and applied.
+
+    +   - *Expansion of the Agro Systems* including commercialization of the agriculture,
+    cleaning and Purity including managing pesticides and fertilizers etc.
+
+    +   - *Speedy Agricultural Systems* with Big Data and allied technologies become
+    possible in effective agriculture. Here use of the robotics, analytics, HCI can
+    be considered as important in digital agricultural systems.
+
+    +   - *Quality Production i.e.* in the pre production big data helpful in soil,
+    crops, weather management, drone monitoring systems; and in this regard Big Data
+    Analytics can be opted as important.
+
+    +   - *Quantity Enhancement of Agro Products* with real-time monitoring can be
+    possible with the Big Data Analytics in agriculture and it will be helpful in
+    enhancing the agro products, crops, plants. Even in harvesting, medication etc.
+    and in this way Big Data'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: 'Analytics can be helpful in quantity enhancement of agro products.
+
+
+    +   - Regarding the post production of the agricultural Big Data Analytics can
+    help in *Livestock Management* like supply chain management, commercialization
+    etc. and in this regard Big Data Analytics can be considered as a need of the
+    hour.
+
+
+    Training, initiatives, proper funding, technological integration from the industries
+    with the agro and allied organizations are also essential and expected.
+
+
+    # Conclusion
+
+
+    Every farmer has their desired goal and based on that they are basically performing
+    their operation. A farmer and agricultural organizations are always expected in
+    healthy efficiency, reduction of the cost, increasing the value of the product,
+    profitability, efficiency and cost management etc. In this context Agricultural
+    Literacy including Agricultural Informatics may be consider as important and valuable
+    including websites, portals, agro networks, agricultural systems the farmer can
+    get knowledge of farming, about the current trends etc. The world is changing
+    and here wide role and importance of the IT can be noted. Different countries
+    of the world initiated Information Technology in agriculture and developing countries
+    are also in the process of the development of the Agricultural Informatics. And
+    for this educational institute, colleges, universities have started educational
+    programs on Agricultural Informatics. Moreover here farmer easily and effectively
+    can used Big Data and'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: 'Analytics. Big Data is an emerging topic and it needs joint efforts from the
+    various professional associations, societies, council, and government department
+    and so on. Furthermore, ministries such as agriculture, Information Technology,
+    education and human resources, social welfare can also take important imitative
+    for the integration of the Big Data in Agricultural Systems and also other allied
+    areas. Skilling, Training etc. are also important and valuable of big data in
+    agriculture and allied areas for the solid, intelligent, sustainable agricultural
+    development.
+
+
+    # References
+
+
+    +   [1]. Abbasi, A. Z., Islam, N., & Shaikh, Z. A. (2014). A review of wireless
+    sensors and networks’ applications in agriculture. *Computer Standards & Interfaces,
+    36*(2), 263–270.
+
+
+    +   [2]. Adão, T., Hruška, J., Pádua, L., Bessa, J., Peres, E., Morais, R., &
+    Sousa, J. J. (2017). Hyperspectral imaging: A review on UAV-based sensors, data
+    processing and applications for agriculture and forestry. *Remote Sensing, 9*(11),
+    110.
+
+
+    +   [3]. Adetunji, K. E., & Joseph, M. K. (2018, August). Development of a Cloud-based
+    Monitoring System using Arduino: Applications in Agriculture. In *2018 International
+    Conference on Advances in Big Data, Computing and Data Communication Systems (icABCD)*
+    (pp. 484–4854). IEEE.
+
+
+    +   [4]. Ahmad, T., Ahmad, S., & Jamshed, M. (2015, October). A knowledge based
+    Indian agriculture: With cloud ERP arrangement. In *2015 International Conference
+    on Green Computing and Internet of Things (ICGCIoT)* (pp. 333–340). IEEE.
+
+
+    +   [5]. Aubert, B. A., Schroeder, A., & Grimaudo, J. (2012). IT as enabler of
+    sustainable farming: An empirical analysis of farmers’ adoption decision of precision
+    agriculture technology. *Decision support systems, 54*(1), 510–520.'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: "+   6. Babu, S. M., Lakshmi, A. J., & Rao, B. T. (2015, April). A study on\
+    \ cloud based Internet of Things: CloudIoT. In *2015 global conference on communication\
+    \ technologies (GCCT)* (pp. 60-65). IEEE.\n+   \n+   7. Balamurugan, S., Divyabharathi,\
+    \ N., Jayashruthi, K., Bowiya, M., Shermy, R. P., & Shanker, R. (2016). Internet\
+    \ of agriculture: Applying IoT to improve food and farming technology. *International\
+    \ Research Journal of Engineering and Technology (IRJET), 3*(10), 713-719.\n+\
+    \   \n+   8. Bauckhage, C., & Kersting, K. (2013). Data mining and pattern recognition\
+    \ in agriculture. *KI-Künstliche Intelligenz, 27*(4), 313-324.\n+   \n+   9. Channe,\
+    \ H., Kothari, S., & Kadam, D. (2015). Multidisciplinary model for smart agriculture\
+    \ using internet-of-things (IoT), sensors, cloud-computing, mobile-computing &\
+    \ big-data analysis. *Int. J. Computer Technology & Applications, 6*(3), 374-382.\n\
+    +   \n+   10. Gill, S. S., Chana, I., & Buyya, R. (2017). IoT based agriculture\
+    \ as a cloud and big data service: the beginning of digital India. *Journal of\
+    \ Organizational and End User Computing (JOEUC), 29*(4), 1-23.\n+   \n+   11.\
+    \ Gómez-Chabla, R., Real-Avilés, K., Morán, C., Grijalva, P., & Recalde, T. (2019,\
+    \ January). IoT Applications in Agriculture: A Systematic Literature Review. In\
+    \ *2nd International Conference on ICTs in Agronomy and Environment* (pp. 68-76).\
+    \ Springer, Cham.\n+   \n+   12. Goraya, M. S., & Kaur, H. (2015). Cloud computing\
+    \ in agriculture. *HCTL Open International Journal of Technology Innovations and\
+    \ Research (IJTIR), 16*, 2321-1814.\n+   \n+   13. Guardo, E., Di Stefano, A.,\
+    \ La Corte, A., Sapienza, M., & Scatà, M. (2018). A fog computing-based IoT framework\
+    \ for precision agriculture. *Journal of Internet Technology, 19*(5), 1401-1411.\n\
+    +   \n+   14. Kamble, S. S., Gunasekaran, A., & Gawankar, S. A. (2020). Achieving\
+    \ sustainable performance in a data-driven agriculture supply chain: A review\
+    \ for research and applications. *International Journal of Production Economics,\
+    \ 219*, 179-194."
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '+   [24]. Othman, M. F., & Ghazali, K. (2012). Wireless sensor network applications:
+    A study in environment monitoring system. *Procedia Engineering, 41*, 1204–1210.
+
+
+    +   [25]. Ozdogan, B., Gacar, A., & Aktas, H. (2017). Digital agriculture practices
+    in the context of agriculture 4.0. *Journal of Economics Finance and Accounting,
+    4*(2), 186–193.
+
+
+    +   [26]. Paui, Prantosh Kumar Minakshi Ghosh, Dipak Chaterjee. (2014) Information
+    Systems & Networks (ISN): Emphasizing Agricultural Information Networks with a
+    case Study of AGRIS. *Scholars Journal of Agriculture and Veterinary Sciences.
+    1*(1).
+
+
+    +   [27]. Paul, Prantosh Kumar (2013) Information and Knowledge Requirement for
+    Farming and Agriculture Domain. *International Journal of Soft Computing Bio Informatics
+    4*(2), 80–84.
+
+
+    +   [28]. Paul, Prantosh Kumar et.al. (2015) Agricultural Problems in India requiring
+    solution through Agricultural Information Systems: Problems and Prospects in Developing
+    Countries. International Journal of Information Science and Computing 2(1), 33–40.
+
+
+    +   [29]. Paul, Prantosh Kumar et.al. (2016). Cloud Computing and Virtualization
+    in Agricultural Space: A Knowledge Survey. *Palgo Journal of Agriculture, 4*(2),
+    202–206.
+
+
+    +   [30]. Paul, Prantosh Kumar et.al. (2015). Information and Communication Technology
+    and Information: their role in Tea Cultivation and Marketing in the context of
+    Developing Countries—A Theoretical Approach. *Current Trends in Biotechnology
+    and Chemical Research. 5*(2), 155–161.
+
+
+    +   [31]. Rezník, T., Charvát, K., Lukas, V., Charvát Jr, K., Horáková, Š., &
+    Kepka, M. (2015, September). Open data model for (precision) agriculture applications
+    and agricultural pollution monitoring. In *EnviroInfo and ICT for Sustainability
+    2015*. Atlantis Press.
+
+
+    +   [32]. TongKe, F. (2013). Smart agriculture based on cloud computing and IOT.
+    *Journal of Convergence Information Technology, 8*(2).
+
+
+    +   [33]. Tsekour opoulos, G., Andreopoulou, Z., Koliou ska, C., Koutroumanidis,
+    T., & Batzios, C. (2013). Internet functions in'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: 'marketing: multicriteria ranking of agricultural SMEs websites in Greece. *Agrárinformatika/Journal
+    of agricultural informatics*, 4(2), 22–36.
+
+
+    [34]. Zamora-Izquierdo, M. A., Santa, J., Martínez, J. A., Martínez, V., & Skarmeta,
+    A. F. (2019). Smart farming IoT platform based on edge and cloud computing. *Biosystems
+    engineering*, 177, 4–17.'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true

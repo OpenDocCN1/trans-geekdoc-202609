@@ -1,0 +1,21 @@
+
+- 6. Babu, S. M., Lakshmi, A. J., & Rao, B. T. (2015, April). A study on cloud based Internet of Things: CloudIoT. In *2015 global conference on communication technologies (GCCT)* (pp. 60-65). IEEE.
+- 7. Balamurugan, S., Divyabharathi, N., Jayashruthi, K., Bowiya, M., Shermy, R. P., & Shanker, R. (2016). Internet of agriculture: Applying IoT to improve food and farming technology. *International Research Journal of Engineering and Technology (IRJET), 3*(10), 713-719.
+- 8. Bauckhage, C., & Kersting, K. (2013). Data mining and pattern recognition in agriculture. *KI-Künstliche Intelligenz, 27*(4), 313-324.
+- 9. Channe, H., Kothari, S., & Kadam, D. (2015). Multidisciplinary model for smart agriculture using internet-of-things (IoT), sensors, cloud-computing, mobile-computing & big-data analysis. *Int. J. Computer Technology & Applications, 6*(3), 374-382.
+- 10. Gill, S. S., Chana, I., & Buyya, R. (2017). IoT based agriculture as a cloud and big data service: the beginning of digital India. *Journal of Organizational and End User Computing (JOEUC), 29*(4), 1-23.
+- 11. Gómez-Chabla, R., Real-Avilés, K., Morán, C., Grijalva, P., & Recalde, T. (2019, January). IoT Applications in Agriculture: A Systematic Literature Review. In *2nd International Conference on ICTs in Agronomy and Environment* (pp. 68-76). Springer, Cham.
+- 12. Goraya, M. S., & Kaur, H. (2015). Cloud computing in agriculture. *HCTL Open International Journal of Technology Innovations and Research (IJTIR), 16*, 2321-1814.
+- 13. Guardo, E., Di Stefano, A., La Corte, A., Sapienza, M., & Scatà, M. (2018). A fog computing-based IoT framework for precision agriculture. *Journal of Internet Technology, 19*(5), 1401-1411.
+- 14. Kamble, S. S., Gunasekaran, A., & Gawankar, S. A. (2020). Achieving sustainable performance in a data-driven agriculture supply chain: A review for research and applications. *International Journal of Production Economics, 219*, 179-194.
+- [24]. Othman, M. F., & Ghazali, K. (2012). Wireless sensor network applications: A study in environment monitoring system. *Procedia Engineering, 41*, 1204–1210.
+- [25]. Ozdogan, B., Gacar, A., & Aktas, H. (2017). Digital agriculture practices in the context of agriculture 4.0. *Journal of Economics, Finance and Accounting, 4*(2), 186–193.
+- [26]. Paul, Prantosh Kumar, Ghosh, Minakshi, & Chaterjee, Dipak. (2014). Information Systems & Networks (ISN): Emphasizing Agricultural Information Networks with a case study of AGRIS. *Scholars Journal of Agriculture and Veterinary Sciences, 1*(1).
+- [27]. Paul, Prantosh Kumar. (2013). Information and Knowledge Requirement for Farming and Agriculture Domain. *International Journal of Soft Computing and Bio-Informatics, 4*(2), 80–84.
+- [28]. Paul, Prantosh Kumar, et al. (2015). Agricultural Problems in India requiring solution through Agricultural Information Systems: Problems and Prospects in Developing Countries. *International Journal of Information Science and Computing, 2*(1), 33–40.
+- [29]. Paul, Prantosh Kumar, et al. (2016). Cloud Computing and Virtualization in Agricultural Space: A Knowledge Survey. *Palgo Journal of Agriculture, 4*(2), 202–206.
+- [30]. Paul, Prantosh Kumar, et al. (2015). Information and Communication Technology and Information: Their Role in Tea Cultivation and Marketing in the Context of Developing Countries—A Theoretical Approach. *Current Trends in Biotechnology and Chemical Research, 5*(2), 155–161.
+- [31]. Rezník, T., Charvát, K., Lukas, V., Charvát Jr, K., Horáková, Š., & Kepka, M. (2015, September). Open data model for (precision) agriculture applications and agricultural pollution monitoring. In *EnviroInfo and ICT for Sustainability 2015*. Atlantis Press.
+- [32]. TongKe, F. (2013). Smart agriculture based on cloud computing and IOT. *Journal of Convergence Information Technology, 8*(2).
+- [33]. Tsekouropoulos, G., Andreopoulou, Z., Koliou Ska, C., Koutroumanidis, T., & Batzios, C. (2013). Internet functions in marketing: multicriteria ranking of agricultural SMEs websites in Greece. *Agrárinformatika / Journal of Agricultural Informatics, 4*(2), 22–36.
+- [34]. Zamora-Izquierdo, M. A., Santa, J., Martínez, J. A., Martínez, V., & Skarmeta, A. F. (2019). Smart farming IoT platform based on edge and cloud computing. *Biosystems Engineering, 177*, 4–17.
