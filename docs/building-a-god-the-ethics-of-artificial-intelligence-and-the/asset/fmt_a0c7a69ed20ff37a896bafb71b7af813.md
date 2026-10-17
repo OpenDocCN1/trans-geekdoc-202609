@@ -1,0 +1,54 @@
+
+[16](#Chapter02.xhtml#ch02r.ftn.0017). John Yang, Andrew Corkery, and Harry Zahn, “The Promises and Potential Pitfalls of Artificial Intelligence in Medicine,” PBS News, May 20, 2023, [`https://www.pbs.org/newshour/show/the-promises-and-potential-pitfalls-of-artificial-intelligence-in-medicine`](https://www.pbs.org/newshour/show/the-promises-and-potential-pitfalls-of-artificial-intelligence-in-medicine).
+
+[17](#Chapter02.xhtml#ch02r.ftn.0018). See Insitro (`website`), accessed May 2, 2024, [`https://insitro.com/`](https://insitro.com/).
+
+[18](#Chapter02.xhtml#ch02r.ftn.0019). Tiernan Ray, “AI Pioneer Daphne Koller Sees Generative AI Leading to Cancer Breakthroughs,” ZDNET, October 25, 2023, [`https://www.zdnet.com/article/ai-pioneer-daphne-koller-sees-generative-ai-leading-to-cancer-breakthroughs/`](https://www.zdnet.com/article/ai-pioneer-daphne-koller-sees-generative-ai-leading-to-cancer-breakthroughs/).
+
+[19](#Chapter02.xhtml#ch02r.ftn.0020). Ray, “AI Pioneer Daphne Koller Sees Generative AI Leading to Cancer Breakthroughs.”
+
+[20](#Chapter02.xhtml#ch02r.ftn.0021). Ray, “AI Pioneer Daphne Koller Sees Generative AI Leading to Cancer Breakthroughs.”
+
+[21](#Chapter02.xhtml#ch02r.ftn.0022). See David Marchese, “Want to Live Longer and Healthier? Peter Attia Has a Plan,” `New York Times`, May 22, 2023, [`https://www.nytimes.com/interactive/2023/05/22/magazine/peter-attia-interview.html`](https://www.nytimes.com/interactive/2023/05/22/magazine/peter-attia-interview.html).
+
+[22](#Chapter02.xhtml#ch02r.ftn.0023). Chinta Sidharthan, “Breakthrough AI Tool PANDA Shows Promise in Early Detection of Pancreatic Cancer Using Non-contrast CT,” News Medical, November 23, 2023, [`https://www.news-medical.net/news/20231123/Breakthrough-AI-tool-PANDA-shows-promise-in-early-detection-of-pancreatic-cancer-using-non-contrast-CT.aspx`](https://www.news-medical.net/news/20231123/Breakthrough-AI-tool-PANDA-shows-promise-in-early-detection-of-pancreatic-cancer-using-non-contrast-CT.aspx). See the original article: Kai Cao et al., “Large-Scale Pancreatic Cancer Detection via Non-contrast CT and Deep Learning,” `Nature Medicine`, November 20, 2023, [`https://www.nature.com/articles/s41591-023-02640-w`](https://www.nature.com/articles/s41591-023-02640-w).
+
+[23](#Chapter02.xhtml#ch02r.ftn.0024). “5725-W51 IBM Watson for Oncology,” IBM, accessed May 2, 2024, [`https://www.ibm.com/docs/en/announcements/watson-oncology?region=CAN`](https://www.ibm.com/docs/en/announcements/watson-oncology?region=CAN).
+
+[24](#Chapter02.xhtml#ch02r.ftn.0025). “LumineticsCore,” Digital Diagnostics, accessed May 2, 2024, [`https://www.digitaldiagnostics.com/products/eye-disease/idx-dr-eu/#:~:text=IDx%2DDR%20is%20intended%20for,previously%20diagnosed%20with%20diabetic%20retinopathy`](https://www.digitaldiagnostics.com/products/eye-disease/idx-dr-eu/#:~:text=IDx%2DDR%20is%20intended%20for,previously%20diagnosed%20with%20diabetic%20retinopathy).
+
+[25](#Chapter02.xhtml#ch02r.ftn.0026). Spencer Turcotte, “Cambridge Memorial Hospital Becomes First in Province to Use AI Screening Technology for Assessing Low Bone Mineral Density,” CTV News Kitchener, November 23, 2023, [`https://kitchener.ctvnews.ca/cambridge-memorial-hospital-becomes-first-in-province-to-use-ai-screening-technology-for-assessing-low-bone-mineral-density-1.6658275#:~:text=Cambridge%20Memorial%20Hospital%20\(CMH\)%20is,bone%20mineral%20density%20\(BMD`](https://kitchener.ctvnews.ca/cambridge-memorial-hospital-becomes-first-in-province-to-use-ai-screening-technology-for-assessing-low-bone-mineral-density-1.6658275#:~:text=Cambridge%20Memorial%20Hospital%20\(CMH\)%20is,bone%20mineral%20density%20\(BMD`).
+
+[26](#Chapter02.xhtml#ch02r.ftn.0027). 16 Bit (`website`), accessed May 2, 2024, [`https://www.16bit.ai/company`](https://www.16bit.ai/company).
+
+[27](#Chapter02.xhtml#ch02r.ftn.0028). 16 Bit (`website`). `Ibid`.
+
+[28](#Chapter02.xhtml#ch02r.ftn.0029). Insilico Medicine (`website`), accessed May 2, 2024, [`https://insilico.com/`](https://insilico.com/).
+
+[29](#Chapter02.xhtml#ch02r.ftn.0030). Alec Crawford, “Artificial Intelligence Can Build a Better World (If We Make It),” AI Supremacy, June 7, 2023, [`https://aisupremacy.substack.com/p/artificial-intelligence-can-build`](https://aisupremacy.substack.com/p/artificial-intelligence-can-build).
+
+[30](#Chapter02.xhtml#ch02r.ftn.0031). “Versius for Surgeons,” CMR Surgical, accessed May 2, 2024, [`https://cmrsurgical.com/versius/surgeon#:~:text=Versius%20gives%20surgeons%20the%20flexibility,the%20needs%20of%20each%20patient`](https://cmrsurgical.com/versius/surgeon#:~:text=Versius%20gives%20surgeons%20the%20flexibility,the%20needs%20of%20each%20patient).
+
+[31](#Chapter02.xhtml#ch02r.ftn.0032). “How Robotic Surgery Is Revolutionising the Operating Room: A Look inside Milton Keynes University Hospital,” CMR Surgical, accessed May 2, 2024, [`https://cmrsurgical.com/features/how-robotic-surgery-is-revolutionising-the-operating-room-a-look-inside-milton-keynes-university-hospital`](https://cmrsurgical.com/features/how-robotic-surgery-is-revolutionising-the-operating-room-a-look-inside-milton-keynes-university-hospital).
+
+[32](#Chapter02.xhtml#ch02r.ftn.0033). Paul Carr, “Generative AI: Friend or Foe for the Translation Industry?,” `Forbes`, August 11, 2023, [`https://www.forbes.com/sites/forbestechcouncil/2023/08/11/generative-ai-friend-or-foe-for-the-translation-industry/?sh=7f8751427fc1`](https://www.forbes.com/sites/forbestechcouncil/2023/08/11/generative-ai-friend-or-foe-for-the-translation-industry/?sh=7f8751427fc1).
+
+[33](#Chapter02.xhtml#ch02r.ftn.0034). Carr, “Generative AI.”
+
+[34](#Chapter02.xhtml#ch02r.ftn.0035). Carr, “Generative AI.”
+
+[35](#Chapter02.xhtml#ch02r.ftn.0036). Sahir Maharaj, “Generative AI: Can Machines Truly Master Language Translation?,” Medium, February 26, 2023, [`https://medium.com/@sahirmaharaj/generative-ai-can-machines-truly-master-language-translation-98b5b26ada7b`](https://medium.com/@sahirmaharaj/generative-ai-can-machines-truly-master-language-translation-98b5b26ada7b).
+
+[36](#Chapter02.xhtml#ch02r.ftn.0037). This information was obtained directly from the Harbinger website: Rahul Niraj, “Generative AI–Based Automated Translation: What You Need to Know,” Harginger Group, August 21, 2023, [`https://www.harbingergroup.com/blogs/generative-ai-based-automated-translation-what-you-need-to-know/`](https://www.harbingergroup.com/blogs/generative-ai-based-automated-translation-what-you-need-to-know/).
+
+[37](#Chapter02.xhtml#ch02r.ftn.0038). Niraj, “Generative AI–Based Automated Translation.”
+
+[38](#Chapter02.xhtml#ch02r.ftn.0040). Amanda Hoover and Samantha Spengler, “For Some Autistic People, ChatGPT Is a Lifeline,” `Wired`, May 30, 2023, [`https://www.wired.com/story/for-some-autistic-people-chatgpt-is-a-lifeline/`](https://www.wired.com/story/for-some-autistic-people-chatgpt-is-a-lifeline/).
+
+[39](#Chapter02.xhtml#ch02r.ftn.0041). Hoover and Spengler, “For Some Autistic People, ChatGPT Is a Lifeline.”
+
+[40](#Chapter02.xhtml#ch02r.ftn.0042). Hoover and Spengler, “For Some Autistic People, ChatGPT Is a Lifeline.”
+
+[41](#Chapter02.xhtml#ch02r.ftn.0043). Hoover and Spengler, “For Some Autistic People, ChatGPT Is a Lifeline.”
+
+[42](#Chapter02.xhtml#ch02r.ftn.0044). Piers Douglas Lionel Howe, Nicolas Fay, and Morgan Saletta, “ChatGPT’s Advice Is Perceived as Better Than That of Professional Advice Columnists,” `Frontiers in Psychology`, November 20, 2023, [`https://www.frontiersin.org/articles/10.3389/fpsyg.2023.1281255/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Psychology&id=1281255`](https://www.frontiersin.org/articles/10.3389/fpsyg.2023.1281255/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Psychology&id=1281255).
