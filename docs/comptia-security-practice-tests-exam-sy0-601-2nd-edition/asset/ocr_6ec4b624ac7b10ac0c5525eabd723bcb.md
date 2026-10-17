@@ -1,0 +1,17 @@
+41. B. HVAC systems are an important part of the availability for systems and infrastructure. They are also a target for attackers who target Internet of Things (IoT) or network-connected devices. They are not frequent targets for use in social engineering efforts, although they could be used that way. They are not a primary line of defense for organizations.
+
+42. B. Symmetric encryption is typically faster than asymmetric encryption. This is why many protocols use asymmetric encryption to exchange a symmetric key, and then use that key for the rest of their transaction. It is not more secure, key length is not a meaningful difference between symmetric and asymmetric encryption, and key distribution for symmetric encryption is more challenging for larger populations using symmetric encryption if confidentiality needs to be maintained because every potential pair of communicators would need a different symmetric key.
+
+43. C. Entropy is a measure of uncertainty. Having sources of entropy (or randomness) is a key element in a PRNG. Some pseudo-random number generators rely on input from keyboards, mice, or other human-generated inputs to have a source of entropy data.
+
+44. A. With the software as a service (SaaS) model, the consumer has the ability to use applications provided by the cloud provider over the Internet. SaaS is a subscription service where software is licensed on a subscription basis. Platform as a service (PaaS) provides the framework and underlying tools to build applications and services. Infrastructure as a service (IaaS) provides the components of an entire network and systems infrastructure. Hybrid models use both cloud and locally hosted systems.
+
+45. C. Resource policies are associated with a resource and allow you to determine which principals have access to that resource as well as what actions they can take on it. Resource policies are not used to set consumption limits.
+
+46. D. Storage area network (SAN) replication copies the contents of one repository to another repository, such as an organization’s central SAN environment to a remote SAN at the hardware or block level.
+
+47. C. A snapshot is an image of the virtual machine (VM) at some point in time. It is standard practice to periodically take a snapshot of a virtual system so that you can return that system to a last known good state. Sandboxing is the process of isolating a system or software. The hypervisor is the mechanism through which the virtual environment interacts with the hardware, and elasticity is the ability for the system to scale.
+
+48. D. RAID level 5 is disk striping with distributed parity. It can withstand the loss of any single disk. RAID 0 is disk striping; it does not provide any fault tolerance. RAID 1 is mirroring. It does protect against the loss of a single disk but not with distributed parity. RAID 3 is disk striping with dedicated parity. This means a dedicated drive containing all the parity bits.
+
+49. D. A Faraday cage, named after physicist Michael Faraday, involves placing wire mesh around an area or device to block electromagnetic signals. A VLAN can segment a network but won’t block electromagnetic interference (EMI). Software-defined networking (SDN) virtualizes a network but does not protect against EMI. A Trusted Platform Module (TPM) is used for cryptographic applications.

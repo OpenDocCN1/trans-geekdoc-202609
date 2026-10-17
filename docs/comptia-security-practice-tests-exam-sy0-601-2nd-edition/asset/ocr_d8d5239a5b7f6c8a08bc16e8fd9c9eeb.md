@@ -1,0 +1,19 @@
+86. A. Customer data can include any information that a customer uploads, shares, or otherwise places in or creates via a service. Customers may have contractual security guarantees in the terms of service, and notification or other clauses may also impact what Rick needs to do if the data is breached. PII is personally identifiable information like name, address, or other details that can identify a person. Financial information may include bills, account balances, and similar details. Health information covers a broad range of data about an individual’s medical and health status or history.
+
+87. C. Theft of proprietary information like a formula or code is an example of intellectual property (IP) theft. IP theft can be harder to quantify the cost of a loss in many cases but can have significant impact to an organization that relies on the IP for their business. External risk is risk created by factors outside the organization, internal risk is created by the organization itself or its decisions, and licensing risk exists through software and other contracts.
+
+88. B. This is an example of a personnel credential policy since it applies to the staff who are employed by his organization. Policies like this help to ensure that accounts are not shared or reused. There is no mention of specific devices, service accounts, or administrative accounts.
+
+89. C. The likelihood of occurrence, or probability, is multiplied by the impact to determine a risk’s severity.
+
+90. D. Organizations can determine how they want to determine asset value, but consistency is important in many cases. Thus, the original cost, the replacement cost, or a depreciated cost may be used.
+
+91. A. A business impact analysis (BIA) helps to identify critical systems by determining which systems will create the largest impact if they are not available. MTBF is the mean time between failures, an RTO is a recovery time objective, and an ICD was made up for this question.
+
+92. D. The most common means of transferring breach risk is to purchase cybersecurity insurance. Accepting breaches is rarely considered a valid risk process, blaming breaches on competitors does not actually transfer risk, and selling data to another organization is not a risk handling process but may be a business process.
+
+93. B. Service accounts are not typically allowed to use interactive logins, and thus prohibiting interactive logins is a common security policy for them. Limited login hours or locations are more commonly used for employee accounts when they should not be accessing resources after hours or from nonwork locations. Frequent password expiration for service accounts is actually likely to cause a service outage, and many service accounts have complex passwords and are set with longer password expiration timeframes or are set to never expire.
+
+94. C. The cost of a breach is an example of the impact of a breach. Probability is how likely the risk is to occur, and risk severity is calculated by multiplying probability and impact.
+
+95. B. Sean is conducting a site risk assessment that will help him understand and communicate the risks that the site itself has. If the location is in a FEMA-identified flood plain, or if there are concerns about tornadoes or other natural disasters, those need to be taken into account as the organization makes its decisions about the location. A BIA identifies mission-critical functions and the systems that support them. Crime prevention through environmental design is a design concept that uses the design of facilities to reduce the likelihood of criminal actions through use of lighting and other controls. Business continuity planning focuses on how to keep an organization operating despite disruptions.

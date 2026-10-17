@@ -1,0 +1,17 @@
+58. B. Downgrade attacks seek to make a Transport Layer Security (TLS) connection use a weaker cipher version, thus allowing the attacker to more easily break the encryption and read the protected data. In a disassociation attack, the attacker attempts to force the victim into disassociating from a resource. Session hijacking is when the attacker takes over an authenticated session. Brute-force attempts every possible random combination to get the password or encryption key.
+
+59. D. A collision is when two different inputs produce the same hash. A rainbow table is a table of precomputed hashes. Brute force attempts every possible random combination to get the password or encryption key. Session hijacking is when the attacker takes over an authenticated session.
+
+60. C. An advanced persistent threat (APT) involves sophisticated (i.e., advanced) attacks over a period of time (i.e., persistent). A distributed denial-of-service (DDoS) could be a part of an APT, but in and of itself is unlikely to be an APT. Brute force attempts every possible random combination to get the password or encryption key. In a disassociation attack, the attacker attempts to force the victim into disassociating from a resource.
+
+61. B. Phishing is not commonly used to acquire email addresses. Phishing emails target personal information and sensitive information like passwords and credit card numbers in most cases.
+
+62. A. When an IDS or antivirus mistakes legitimate traffic for an attack, this is called a false positive. A false negative is when the IDS mistakes an attack for legitimate traffic. It is the opposite of a false positive. Options C and D are both incorrect. Although these may be grammatically correct, these are not the terms used in the industry. In military operations, false flag operations attempt to transfer blame to another company, thus a “false flag.”
+
+63. B. A keylogger is a software or hardware tool used to capture keystrokes. Keyloggers are often used by attackers to capture credentials and other sensitive information. A rootkit is used to obtain and maintain administrative rights on a system, and a worm is a self-spreading form of malware that frequently targets vulnerable services on a network to spread.
+
+64. A. The term for attempting to gain any privileges beyond what you have is privilege escalation. Session hijacking is taking over an authenticated session. Root grabbing and climbing are not terms used in the industry.
+
+65. B. MAC flooding attacks attempt to overflow a switch’s CAM table, causing the switch to send all traffic to all ports rather than to the port that a given MAC address is associated with. Although this was possible with many older switches, most modern switches are less susceptible to this type of attack, and some have security capabilities built in to prevent this type of attack.
+
+66. B. Spyware and adware are both common examples PUPs, or potentially unwanted programs. Though not directly malicious, they can pose risks to user privacy as well as create annoyances like popups or other unwanted behaviors. Trojans appear to be legitimate programs or are paired with them, RATs provide remote access and are a subcategory of Trojans, and ransomware demands payment or other actions to avoid damage to files or reputation.

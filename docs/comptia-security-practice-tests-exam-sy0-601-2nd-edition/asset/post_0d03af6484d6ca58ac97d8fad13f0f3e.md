@@ -1,0 +1,288 @@
+
+- passwords
+  - aging, 263
+  - complexity of, 258
+  - storing, 142, 208, 274
+- patching, 95, 174, 246, 281, 291
+- pathping, 276
+- Payment Card Industry Data Security Standard (PCI-DSS), 162, 171, 175, 283, 290, 292
+- PBKDF2 algorithm, 236
+- penetration tests, 5, 28, 37, 68, 188, 191, 196, 199, 202, 205, 209, 227-228
+- pepper, 3, 186
+- perfect forward secrecy (PFS), 49, 214
+- permissions
+  - auditing, 257
+  - setting, 35, 207
+- permissions creep, 3, 187
+- personal identification number (PIN), 241
+- Personal Information Exchange (PFX), 87-88, 240-241
+- personally identifiable information (PII), 235, 291
+- personnel credential policy, 293
+- -p flag, 267
+- pharming attacks, 19, 197
+- phishing, 2, 6, 9, 13, 23, 25, 27, 28, 36, 186, 189, 191, 193, 199, 200, 202, 208, 217
+- picture passwords, 47, 213
+- pie charts, 31, 205
+- ping command, 271
+- pivot, 8, 190
+- plain-text password attack, 10, 191
+- platform as a service (PaaS), 54, 58, 64, 73, 78, 218, 221, 225, 232, 235
+- playbooks, 142, 154, 274, 276, 281
+- point-to-multipoint topology, 248
+- point-to-point topology, 248
+- policies, 283, 285, 289, 294
+- polymorphic virus, 198
+- POP3, 85, 239
+- port scans, 211, 270
+- port security, 83, 238, 248
+- Postgres server, 194
+- potentially unwanted programs (PUPs), 14, 21, 29, 193, 198, 203
+- power distribution unit (PDU), 75, 226, 233, 247
+- PowerShell, 23, 40, 199, 211, 222
+- predictive analysis, 4, 187, 210
+- prepending, 20, 33, 37, 197, 206, 209
+- preproduction environments, 216
+- preshared key (PSK), 100, 244-245, 248
+- pretexting, 16, 33, 195, 206
+- preventive controls, 166, 167, 286, 287
+- prime factorization algorithms, 50, 215
+- Privacy Enhanced Mail (PEM) files, 126, 240-241, 266
+- privacy notices, 184, 296, 297
+- private cloud, 65, 78, 225, 235
+- private keys, 48, 49, 214, 247, 280
+- privilege creep, 80, 236
+- privilege escalation, 13, 15, 20, 34, 193, 194, 197, 206-207
+- privilege scan, 195
+- privileged access management (PAM), 265
+- production server, 51, 216
+- proprietary data, 285, 293
+- proprietary intelligence, 32, 205
+- protected cable distribution, 77, 234
+- Protected Extensible Authentication Protocol (PEAP), 94, 237, 245
+- protocols, 212
+- provenance, 151, 275, 279
+- proximity card readers, 75, 233
+- PRTG, 274
+- pseudonymization, 171-172, 290
+- public cloud, 64, 65, 225
+- public key infrastructure (PKI), 256, 264
+- public keys, 48, 49, 214, 247
+- purple teams, 4-5, 22, 30, 188, 199, 204
+- push notifications, 82-83, 237
+- Python, 17, 195
+
+## Q
+- qualitative risk assessment, 162, 165, 174-175, 283, 285, 291
+- quality assurance (QA), 216
+
+## R
+- quantitative risk assessment, 162, 165, 168, 174–175, 283, 285, 288, 291
+- quantum computing, 72, 231
+- quantum cryptography, 215
+- quantum encryption, 50, 215
+- quarantine process, 153, 272, 280
+- Qubits, 215
+- quick formatting, 148, 277
+- race conditions, 14, 23, 194, 199
+- radio frequency identifier (RFID), 11, 23, 27, 75, 96, 192, 199, 202, 233, 246
+- RAID, 55, 56, 71, 218, 219, 230
+- rainbow tables, 9, 12, 21, 191, 193, 198, 203, 298
+- ransomware, 22, 199
+- Raspberry Pi, 48, 214
+- rate limiting, 246
+- rebooting, 276
+- reconnaissance phase, of penetration testing, 37, 209
+- recovery, 131, 267
+- recovery point objective (RPO), 169, 289
+- recovery time objective (RTO), 166, 177, 287, 292
+- Red Hat, 270
+- red teams, 4–5, 22, 24, 30, 188, 199, 200, 204
+- refactoring, 8, 36, 190, 208
+- registration authority (RA), 239
+- remote access, 246
+- Remote Authentication Dial-in User Service (RADIUS), 56, 100, 219, 231, 246, 248
+- remote registry, 254
+- remote wipe, 82–83, 237, 252
+- remote-access Trojan (RAT), 10, 14, 17, 21, 29, 32, 191, 193, 195, 198, 203, 205
+- replay attack, 25, 29, 201, 203
+- reputational gains, 210
+- requests for comments (RFCs), 63, 224
+- resource constraints, 234
+- resource policies, 54, 218
+- resource-based policies, 98, 247
+- restoration order, 213
+- retention policies, 138, 271
+- retina scans, 62, 223
+- reverse proxy, 112, 114, 125, 127, 257, 266
+- reverse shell, 205
+- -R flag, 272
+- right-to-audit clauses, 280
+- risk acceptance, 163, 166, 167, 168, 284, 287, 288
+- risk avoidance, 163, 166, 167, 168, 284, 287, 288
+- risk heat maps, 174–175, 291
+- risk mitigation, 163, 166, 167, 168, 182, 284, 287, 288, 297
+- risk register, 166, 171, 287, 290
+- risk transfer, 163, 166, 167, 168, 284, 287, 288
+- robocalling, 28, 202
+- rogue access point, 3, 11, 186, 192
+- role-based access control (RBAC), 110, 111, 114, 255, 257, 259
+- root certificate, 249
+- root grabbing, 13, 193
+- Root Guard, 240
+- rootkit, 2, 9, 10, 13, 14, 19, 22, 27, 186, 190, 191, 193, 194, 196, 199, 201, 202
+- route command, 268
+- RSA key, 49, 214
+- RSH, 16, 195
+- RTO, 50, 215
+- RTOS, 61, 223
+- rule of engagement, for penetration tests, 32, 205
+- rule-based access control, 255
+
+## S
+- salts, 3, 49, 79, 186, 214, 223, 235
+- sandboxing, 53, 54, 217, 218, 244
+- scalability, in cloud computing, 56, 226
+- scanless tool, 136, 270
+- scarcity, 5, 16, 188, 194
+- script kiddies, 6, 18, 33, 189, 196, 205
+- scripting, 65, 225
+- scrypt algorithm, 236
+- secrets management services, 102, 250
+- secure cookies, 241
+- secure IMAPs, 247
+- Secure Lightweight Directory Access Protocol (LDAPS), 115, 259
+- Secure POP3, 84, 238
+- Secure Shell (SSH), 43, 86, 97, 98, 195, 212, 238, 240, 247, 253, 278
+- Secure Sockets Layer (SSL), 31, 67, 204, 220, 227
+- Secure/Multipurpose Internet Mail Extensions (S/MIME), 84, 238
+- Security Account Manager (SAM) file, 204
+- Security Assertion Markup Language (SAML), 56, 60, 80, 102, 116, 219, 222, 236, 250, 253, 255, 260, 263
+- security audits, 5, 188
+- Security Enhanced Linux (SELinux), 265
+- security groups, 117, 261
+- security guard, 59, 69, 221, 229
+- security information and event management (SIEM) device, 4, 31, 72, 187–188, 204, 205, 210, 231, 249
+- security monitoring, 187–188
+- security orchestration, automation, and response (SOAR), 8, 31, 39, 190, 204, 210
+- security zones, 90, 242–243
+- segmentation, 150, 151, 255, 275, 278, 279
+- segmentation fault, 187
+- self-encrypting drive (SED), 52, 63, 217, 224
+- self-signed certificate, 87, 240
+- sensor appliances, 247
+- sensors, 272
+- separation of duties, 166, 169, 179, 286, 288–289, 294
+- serverless architectures, 58, 221
+- server-side request forgery (SSRF), 7, 36, 189, 208
+- service accounts, 251, 293
+- service level agreement (SLA), 162, 176, 179, 283–284, 286, 292, 294
+- service organization report (SOC), 39, 210
+- Service Set Identifiers (SSIDs), 246
+- session hijacking, 3, 12, 13, 18, 26, 186, 192, 193, 196, 201
+- session IDs, 211
+- Session Initiation Protocol (SIP), 239, 270, 278
+- session persistence, 253
+- sFlow, 269, 271
+- SFTP, 195
+- SHA1 algorithm, 80, 236, 269
+- shimming, 8, 24, 190, 200
+- Shiva Password Authentication Protocol (SPAP), 103, 251
+- short message service (SMS) messages, 69, 217, 228
+- shoulder surfing, 25, 28, 33, 200, 202, 206
+- signage, 68, 228
+- silent patching, 36, 208
+- Simple Network Management Protocol (SNMP), 98, 120, 126, 247, 252, 263, 266, 274
+- simulation, 272
+- simultaneous authentication of equals (SAE), 243
+- single loss expectancy (SLE), 163, 284, 295
+- single point of failure (SPOF), 168, 176, 288, 292
+- Single Sign-On (SSO), 113, 255, 258
+- site survey, 237
+- skimmer, 29, 203
+- smartcards, 68, 69, 227, 229, 238
+- smishing, 27, 189, 202
+- SMS pushes, 234
+- Smurf attack, 25, 200
+- snapshots, 54, 65, 218, 225
+- SOC2 engagement, 294
+- social engineering, 9, 16, 24, 187, 191, 194, 195, 200, 206
+- social login, 73, 231
+- social media influence campaigns, 18, 196
+- social proof, 194
+- software
+  - compiling, 63, 224
+  - updates for, 202
+- software as a service (SaaS), 54, 58, 73, 218, 221, 232
+- software firewall, 103, 251
+- software-defined networking (SDN), 52, 55, 59, 67, 217, 218, 221, 227
+- source code, 290
+- SourceForge, 40, 210
+- spam, 6, 189
+- sparse infector virus, 195
+- spear phishing, 2, 9, 28, 186, 189, 191, 202
+- SPIM, 3, 187
+- split horizon DNS, 99, 248
+- split-tunnel VPNs, 123, 264
+- spyware, 14, 193, 198
+- SQL injection, 2, 3, 10, 20, 22, 51, 57, 186, 189, 191, 197, 198, 216, 220, 245, 280
+- SRTP, 238
+- SSH File Transfer Protocol (SFTP), 252
+- staging environments, 51, 216
+- staging server, 53, 217
+- stakeholder management, 133, 138, 268, 271
+- standards, 224
+- state actors, 18, 196
+- state laws, 294
+- stateful inspection firewall, 91, 243
+- stateful packet inspection (SPI), 91, 243
+- stateless firewall, 255
+- Statement of Standards for Attestation Engagements (SSAEs), 290
+- static codes, 230, 245, 247, 252
+- storage area network (SAN), 54, 62, 218, 223
+- stored procedures, 66, 220, 226
+- storm control, 257
+- stream ciphers, 192
+- string injection, 243
+- strings command, 136, 270
+- Structured Query Language (SQL), 203
+- Structured Threat Intelligence Exchange (STIX) protocol, 23, 29, 199, 203
+- Subject Alternate Name (SAN), 246
+- subnet mask, 46, 212
+- subscriber identity module (SIM), 234
+- subscription services, 241
+- Supervisory Control and Data Acquisition (SCADA) system, 52, 67, 215, 216–217, 227
+- supply chain risk, 291
+- swapfiles, 34, 206–207, 273
+- symmetric cryptography, 71, 230
+- symmetric encryption, 49, 53–54, 214, 218
+- SYN flood, 33, 206, 243
+- syslog, 38, 152, 156, 209, 279, 282
+- system crash file, 274
+- system dump file, 274
+- system on a chip (SoC), 224
+- system restore point, 68, 228
+
+## T
+- tabletop exercises, 267
+- tagging drives, 279
+- tail command, 269
+- tailgating, 23, 39, 199, 210
+- tape backups, 62, 223
+- TAXII, 23, 199
+- TCP handshakes, 4, 187
+- TCP port 23, 34, 206
+- TCP port 443, 43, 212
+- tcpdump, 267
+- tcpreplay tool, 279
+- technical controls, 286
+- Telnet, 16, 43, 195, 206
+- Terminal Access Controller Access Control System Plus (TACACS+), 116, 260
+- terminate and stay resident (TSR), 220
+- test server, 51, 216
+- testing, 284
+- theHarvester, 132, 267
+- third-party code, risks of, 59, 222
+- third-party credential policies, 295
+- third-party risks, 210
+- third-party secure destruction companies, 47, 213
+- threat actors, 207
