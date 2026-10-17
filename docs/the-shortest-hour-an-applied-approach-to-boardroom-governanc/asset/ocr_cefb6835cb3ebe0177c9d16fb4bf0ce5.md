@@ -1,0 +1,11 @@
+# Chapter 16
+
+# Risk management
+
+The concept of risk management is certainly not absent from the work you perform as a director for a company. To be sure, you are actively engaged in multiple types of business risk, whether it be regulatory, financial, supply chain, or a host of others. There is no shortage of potential risks that emerge every year; we have recently seen variable levels of risks associated with the pandemic, wars, and economic uncertainty that impacted the risk universe for many companies. To keep track of these fluctuating risks and their potential impacts, corporations have leveraged enterprise risk management (ERM) programs.
+
+For each and every company that I have been a part of, cyber security, or specifically a cyber breach at the company, has been either the number one or number two identified risk on the prioritized ERM inventory of risks. At this stage in this book, you have a good grasp of the many different risks associated with cyber security, the work that your security team (and other employees) are doing to protect the company, and the potential impacts of a cyber breach. It makes good sense then that security is top of mind for the ERM program.
+
+Involvement in the ERM process by the CISO can vary widely, some an active participant in the recurring meetings with executives, while others may just update cyber security content for the materials used by others in the ERM meetings. It is my belief that if a risk is so prevalent among ERM groups across companies spanning multiple industries, and that risk is considered so high as to rate in the top five risks for the company, it makes good sense to have the CISO as part of the ERM meetings and discussions. Besides the ability to talk about the general risk of cyber breaches for a company, the CISO can explain the details of contributing risks that feed into those general concerns.
+
+Highlighting the downstream risks and how a corporation addresses them provides more details that speak to the likelihood of the macro cyber risks outlined in the ERM process. Usually done through what is called a

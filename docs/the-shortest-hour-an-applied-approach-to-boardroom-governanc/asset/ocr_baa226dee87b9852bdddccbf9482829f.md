@@ -1,0 +1,13 @@
+for a company. If a corporation leverages a de-centralized security model with multiple teams performing security services, understanding the total security spend may prove even more difficult. Even with all the security capabilities assembled into one organization with the total spend understood in great detail, the notion of comparing that spend to other security programs across similar industries, company size, etc., may not yield the desired results that provide actionable benchmarks.
+
+This dilemma doesn’t stop our industry from trying, though. There are many different ratios that can be created to compare security spend across multiple variables. For example:
+
++   - Percentage of IT budget allocated to security spend
++   - Cost of security per employee
++   - Security spending per (some dollar increment) of revenue
++   - Security full-time equivalencies (FTEs) as a percentage of total IT FTEs
++   - And many more…
+
+Engaging in these metrics will indeed produce data points that can be compared to ratios from other organizations of similar size and industry. But consider the financial assumptions behind the data and one will recognize that there may be contributors to the benchmark data which diminish their effectiveness. For example, the percentage of IT budget dedicated to security spend assumes many factors. Because it is a point in time ratio, only measuring the current percentage at the time of the conversion, the numbers could be skewed as a result of security spend variability. If the ratio is taken in November after a February breach of the same year, the budget may reflect a large percentage of the IT budget that is allocated to security. This is normal after a large breach when new controls may be procured and implemented. However, in the previous year, the ratio may have been quite lower and as a result, this point in time ratio can be misleading. Using this example, the one-time ratio doesn’t show a true trend in the security finances, only a reactive measurement, especially if future years show a decline in security funding.
+
+Regarding the same ratio, it assumes that the IT budget is of adequate appropriateness. With so many IT departments reducing their budgets, it dilutes the security spend ratio with the assumption that with fewer IT costs, the necessity of security spend follows the same reductive path. Moreover, if the IT budget doesn’t represent all the technology spend for a corporation, perhaps as a result of a de-centralized IT model with separate digital teams, eCommerce groups, etc., the ratio doesn’t consider the security services provided to those separate technology teams (and security almost always provides services to the entire corporation, not just what is represented in IT).

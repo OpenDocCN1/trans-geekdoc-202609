@@ -1,0 +1,24 @@
+
+- static application testing see static code review
+- stock 65, 128, 163
+- strategic plan *see* security strategy
+- surveys 67, 96, 97
+- system logs 109, 158
+- tabletop exercise 98, 128, 163; injects 128, 163
+- technology bundles 56, 153
+- technology committee 17, 30, 34, 99, 150
+- third party risk 9, 82, 83, 142–144, 165, 166
+- third party security questionnaire 143, 166
+- threat actor 7–11, 38, 49, 79, 121
+- threat hunting 152
+- threat intelligence 9, 70, 77, 82, 101, 118, 152, 159
+- U.S. Secret Service 31
+- U.S. Securities and Exchange Commission board expertise 91, 92–98, 157
+- USB drives 22, 75, 130
+- vendor hourly rates 79
+- vendor outsourcing 76–79, 155
+- vendor selection 73–75, 155; attribute priorities 75; desired attributes 73, 74, 155; scoring 76
+- virtual CISO 17
+- vulnerability management 72, 82, 109, 110, 135, 152, 158
+- website defacement 10, 121, 161
+- zero trust model 115, 117, 160
