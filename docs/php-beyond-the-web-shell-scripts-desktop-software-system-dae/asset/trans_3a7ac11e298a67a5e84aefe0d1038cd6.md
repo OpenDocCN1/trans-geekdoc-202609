@@ -1,0 +1,74 @@
+
+
+## 工具与资源
+
+### Composer
+
+The easy way to keep libraries consistent and up-to-date on a per-project basis. See Appendix A for more information.
+
+- **Main website** : [http://getcomposer.org/](http://getcomposer.org/)
+- **Package Repository** : [https://packagist.org/](https://packagist.org/)
+- **Installation info** : [http://getcomposer.org/doc/00-intro.md#installation-ni](http://getcomposer.org/doc/00-intro.md#installation-ni)
+- **Main documentation** : [http://getcomposer.org/doc/](http://getcomposer.org/doc/)
+- **Tutorial** : [http://code.tutsplus.com/tutorials/easy-package-management-with-composer--net-25530](http://code.tutsplus.com/tutorials/easy-package-management-with-composer--net-25530)
+
+### PHP Beautifier
+
+Takes your PHP source code and formats it for readability by, for example indenting code, adding new lines where needed and formatting data structures.
+
+- **Main website** : [http://pear.php.net/package/PHP\_Beautifier](http://pear.php.net/package/PHP_Beautifier)
+- **Installation** : `pear install PHP_Beautifier`
+- **Main documentation** : [http://beautifyphp.sourceforge.net/docs/](http://beautifyphp.sourceforge.net/docs/)
+
+### PHPLighter
+
+Takes your PHP source code and creates a syntax-highlighted HTML version. Uses advanced tokenisation to highlight more features of code. Useful for reviewing and displaying code.
+
+- **Main website** : [https://github.com/brandonwamboldt/PHPLighter](https://github.com/brandonwamboldt/PHPLighter)
+- **Main documentation & installation info** : [https://github.com/brandonwamboldt/PHPLighter#usage](https://github.com/brandonwamboldt/PHPLighter#usage)
+
+### PHP Refactoring Browser
+
+A command line refactoring tool for PHP
+
+- **Main website, documentation & installation info** : [http://qafoolabs.github.io/php-refactoring-browser/](http://qafoolabs.github.io/php-refactoring-browser/)
+
+### phptidy
+
+A tool for formatting PHP code for readability.
+
+- **Main website, documentation & installation info** : [https://github.com/cmrcx/phptidy](https://github.com/cmrcx/phptidy)
+
+### Phabricator
+
+An open software engineering platform created at Facebook that inclues many tools designed to help create better software. Written in PHP.
+
+- **Main website, documentation & installation info** : [http://phabricator.org/](http://phabricator.org/)
+
+## 5\. User facing software
+
+After slugging through the preliminary information necessary to understand developing PHP in a non-web context, we’re now getting to the nitty-gritty of how to start communicating with our users without the rendering engine of a web browser.
+
+Some software sits and happily runs without any interaction from humans, we’ll call this “system software” and will examine it in Chapter 6. However a large proportion of software requires interactivity with the user, and there are a number of different ways of performing the interaction in PHP. From interactive command lines through to fully fledged GUI (Graphical User Interface) based software, it can all be done with PHP.
+
+When choosing how your software interacts with humans, you need focus on the needs of the user and put your own preferences to one side if at all possible. Command line interactions are (usually) very straight forward to code, text is, well, just text and it’s what PHP excels at. However many users, particularly non-technical users, shy away from text based CLI software. Unless you are meticulous about your software structure and interface flow, text based input can be :
+
+- prone to error
+- hard to navigate
+- require mental agility on the part of the user
+- have low discoverability
+- and be initially slower to use than a GUI
+
+If you choose a text based interface, make sure your target users will be happy with it (you may be, but often your users aren’t much like you!). Text interfaces, because of the simplicity of coding, can often be a good choice for proof-of-concept and prototype software (particularly where the main benefits of the application are in what it does, not in how the user interacts with it), but be aware that temporary interfaces have an uncanny way of “sticking around”. Additionally, some non-technical commissioning users (the words “pointy-haired-boss” spring to mind here) can’t see past an interface to the application beneath and may not be happy with your proposed project, even after you explain that the interface is just temporary. This is understandable to some extent as, for most users, the application IS the interface. It is all they see and use day-in day-out. The changes to their files and other functions performed just happen by “magic” of course. Good user interface design (whether it be for text based interfaces or fully-fledged GUIs) is a field of endeavour in and of itself, so get help from the professionals where you can, read some of the multitude of books available on the subject, or take a course. If you ever looked at a piece of software and wondered how it got so popular while your preferred, much more functionally superior software, languished in obscurity, the answer is often at least partly down to good user interface design.
+
+### 5.1 Command line interface basics
+
+As described above, there are still uses for text-based interfaces, particularly in environments with technically-adept users. When creating a text based program to run on the command line, there are three primary considerations over-and-above the PHP you are already accustomed to. These are
+
+1. Getting keyboard input
+2. Outputting text (and graphics) to the screen
+3. Program flow control
+
+Rather than describe each one in isolation, we will instead look through a simple program that contains elements of each. Read through the code and comments below. The program is a screen-saver type routine which fills the shell with colour via a wiggling snake-like cursor.
+
+
