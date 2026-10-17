@@ -1,0 +1,15 @@
+# 4.5 Global regulation: UK and EU Member States
+
+4.5 Cryptoasset service providers that deliver critical functions should be licensed or authorised. These would include storage, transfer, settlement, and custody of reserves and assets, among others, similar to existing rules for financial service providers. Licensing and authorisation criteria should be clearly articulated, the responsible authorities clearly designated, and coordination mechanisms among them well defined.
+
+4.6 Stringency should be tailored to the main use cases of cryptoassets and stable-coins. For example, services and products for investments should have requirements similar to those of securities brokers and dealers, overseen by the securities regulator. Services and products for payments should have requirements similar to those of bank deposits, overseen by the central bank or the payments oversight authority. Regardless of the initial authority for approving crypto services and products, all overseers – from central banks to securities and banking regulators – need to coordinate to address the various risks arising from different and changing uses.
+
+4.7 Authorities should provide clear requirements on regulated financial institutions concerning their exposure to, and engagement with, crypto. For example, the appropriate banking, securities, insurance, and pension regulators should stipulate the capital and liquidity requirements and limits on exposure to different types of these assets, and require investor suitability and risk assessments. If the regulated entities provide custodial services, requirements should be clarified to address the risks arising from those functions.
+
+4.8 Some emerging markets and developing economies face more immediate and acute risks of currency substitution through cryptoassets. Capital flow management measures will need to be fine-tuned in the face of this effect. This is because applying established regulatory tools to manage capital flows may be more challenging when value is transmitted through new instruments, new channels and new service providers that are not regulated entities After the comment period, the SEC will hold another vote to reach the final decision. If passed, the amendments could grant the SEC new powers to regulate crypto and DeFi platforms.
+
+4.9 There is an urgent need for cross-border collaboration and cooperation to address the technological, legal, regulatory, and supervisory challenges. Setting up a comprehensive, consistent, and coordinated regulatory approach to crypto is a daunting task. However, if we start now, we can achieve the policy goal of maintaining financial stability while benefiting from the benefits that the underlying technological innovations bring.
+
+# CHOICE OF JURISDICTION
+
+4.10 Evidently, one of the chief issues which surrounds resolving a dispute in civil matters (as opposed to criminal) is who has jurisdiction when there are features of an action or actions which straddle different countries and jurisdictions.

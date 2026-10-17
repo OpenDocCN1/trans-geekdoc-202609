@@ -1,0 +1,11 @@
+# 12.3 The Metaverse
+
+One could argue that spatial-temporal consistency is the single most important characteristic of a Metaverse. In relation to the Metaverse this is sometimes referred to as hyper-spatial temporality, in effect a world that, whilst parallel and virtual to the real world, is able to defeat the constraints of physical space, time and nature and consequently offer an experience that is not only immersive but supernatural in the experience and opportunities it provides. To return to the internet extension analogy, if the internet currently provides a one-dimensional experience the Metaverse would be a 3D, immersive, augmented reality experience.
+
+12.3 It is important to note that the Metaverse as it exists now in 2022 will likely not be the Metaverse landscape that will be possible in a decade or decades. Because the creation of a Metaverse requires a confluence of technologies it follows that what is possible is constantly evolving and the augmented parallel, virtual hyper-spatial, temporal landscape achievable today is far short of what will be possible in years to come. One major flaw in what is possible today is the need for the interoperability. Interoperability means the ability for one Metaverse platform or world to be fully integrated with another so that it is accessible for the user. There are barriers to interoperability not least that some companies for example, Apple, arguably design their products so that they are not interoperable. This is not meant as any criticism because one can argue that the current business model of many technology companies is such that interoperability defeats or at least damages their business model which relies on a consumer following that is not only devoted to but to some extent at least restricted to its brand.
+
+![](bbox=[0.13, 0.51, 0.89, 0.82])
+
+Seven layers of the metaverse
+
+12.4 Jon Radoff put forward the above seven-layered model as an example of a Metaverse's constituent parts and the corresponding tech that could enable

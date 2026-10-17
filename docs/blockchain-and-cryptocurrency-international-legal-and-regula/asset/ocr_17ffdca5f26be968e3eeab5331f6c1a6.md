@@ -1,0 +1,15 @@
+10.31 Perhaps, the EWF is an example of the implementation of blockchain and regulation as a collaborative force and speaks to the possibility of the co-existence of new, decentralised players alongside traditional, centralised sources of natural resources contributing to a complex system.
+
+# DIGITISATION
+
+# Information storage, transparency and real-time tracking
+
+10.32 If decentralisation is the aim of blockchain implementation, at the market and distribution stages, then digitisation is how it will be achieved. However, the implications of digitisation reach further than decentralisation, as blockchain could be beneficially implemented at every stage of the process of producing, transporting and distributing natural resources. With this in mind, the resultant benefits have been identified as reducing costs, improving productivity, and increasing trust (accommodating decentralisation can be included among these).41
+
+10.33 A large proportion of blockchain’s appeal comes down to its ability to store information (that is, the technology can securely store vast amounts of data in real time). For example, if you were to input your name ‘Joe Bloggs’ into a blockchain, it would take up the same amount of space as the entirety of James Joyce’s Ulysses. When information is stored in a blockchain, it becomes a hash (or a representation, usually a combination of numbers and letters, of the input data) that is a fixed length. It is also important to note that, if even the smallest change is made to the input data, the output hash will be completely different. This is what makes the blockchain secure, as only the exact, unalterable original input data’s hash will be accepted, making a change to the blockchain almost impossible.
+
+10.34 Data storage is perhaps the use for blockchain that is easiest to imagine. What’s more, it is already being used in the diamond industry, with some success. While diamonds are not energy-producing natural resources, both industries extract and refine natural products before shipping and distributing them in the market. British company Everledger has worked with the diamond industry to help reduce fraud, prevent theft and solve ethical problems.42 Everledger uses blockchain to take 40 measurements of each diamond, which are then assigned a unique identifier. This information is added to the blockchain where it becomes secure and subsequently easy to track after sales and transfers.43 By the time a diamond arrives at the end-consumer, it is possible to know where it was mined, how it was transported and every company that touched the product along the way.
+
+41 Mota da Silva, F. and Jaitly, A., ‘Blockchain in Natural Resources: Hedging Against Volatile Prices’, TATA Consultancy Services.
+42 Pearson, T., ‘How Does Blockchain Technology Work?’, https://hackernoon.com/how-does-blockchain-technology-work-cceee47eaba.
+43 Ibid.

@@ -1,0 +1,5 @@
+in terms of due diligence, they offer unique challenges that must be addressed accordingly.
+
+# MOVING FORWARD
+
+10.84 The natural resources industry and energy sector clearly view blockchain as the technology of a decentralised, digitised, greener and more democratic (in terms of the market) future. In addition to this, when answering any regulatory questions surrounding the technology, it must be considered how to accommodate blockchain's distributed nature and ability to cross jurisdictional boundaries. With this in mind, the manner in which start-ups deal with these issues in small trial runs will serve as useful case studies for some of the problems. Despite this, some of these trial runs, due to their nature as small-scale operations, will not touch on the wider problems of large-scale blockchain implementation. Finally, it is important to bear in mind that it is likely that, eventually, these unregulated trials will become detrimental to the reputation of the technology if they continue to fail, as investing in ICOs is already considered high risk.

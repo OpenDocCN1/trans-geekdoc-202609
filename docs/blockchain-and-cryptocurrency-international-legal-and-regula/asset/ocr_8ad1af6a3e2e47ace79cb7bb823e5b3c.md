@@ -1,0 +1,13 @@
+# ### 7.29 *Initial coin offerings*
+
+**7.29** Interestingly, Telegram structured the offering as a Simple Agreement for Future Tokens, or as a Utility Token, in an attempt to avoid the suggestion that these were securities. The SEC disagreed and complained that there was a common enterprise and that a reasonable initial purchaser would have purchased Grams with investment intent and an expectation of profit. In issuing the preliminary injunction the Court supported the SEC Complaint, and found that.^28
+
++   - The expectation was based on the essential entrepreneurial and managerial efforts of Telegram;
++   - Grams did not exist at the time of the sales;
++   - Purchasers provided capital to fund the development of the TON blockchain in exchange for the future delivery of Grams, expecting to resell them for a profit, and that the offering materials emphasised Telegram’s commitment to developing the project;
++   - Telegram failed to demonstrate that it was exempt from the registration requirements under Regulation D (which provides an exemption for registration of securities offered in private sales to accredited investors);
++   - Telegram did not intend Grams to remain with the initial purchasers, but intended them to reach the public via post-launch resales by initial purchasers (who the Court found were underwriters).
+
+**7.30** On 21 October 2020, Kik Interactive Inc. were required to pay $5 million after final judgement was made, by consent, by the US District Court for the Southern District of New York. The SEC complained that Kik’s unregistered offering of digital ‘Kin’ tokens in 2017 violated the federal securities laws. The SEC’s complaint, filed on 4 June 2019, alleged that Kik sold digital asset securities to US investors without registering their offer and sale as required by the US securities laws. The Court granted the SEC’s motion for summary judgment on 30 September 2020, finding that undisputed facts established that Kik’s sales of ‘Kin’ tokens were sales of investment contracts, and therefore of securities, and that Kik violated the federal securities laws when it conducted an unregistered offering of securities that did not qualify for any exemption from registration requirements. The Court further found that Kik’s private and public token sales were a single integrated offering.^29
+
+**7.31** The Kik case differed from Telegram as Kik’s tokens (Kin) were offered in a pre-sale, to a limited number of accredited investors, and a public sale. Kik suggested that these were two distinct transactions; however, the Court concluded that both transactions were integrated and constituted unregistered securities. It

@@ -1,0 +1,3 @@
+# SAM THOMAS
+
+Sam Thomas has written and advised on every aspect of cyber law and regulation, from jurisdictional issues in the online environment to government oversight of cryptocurrency and initial coin offerings. Before being called to the Bar in 2011, Sam worked in the financial sector, as a broker for indices, commodities and treasuries. Consequently, Sam brings a practical insight with his robust legal analysis.

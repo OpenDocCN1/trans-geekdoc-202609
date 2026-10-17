@@ -1,0 +1,15 @@
+# **1.28** *Introduction*
+
+Blockchain enables the tracing of each and every transaction across the chain to the first transaction. That address stays with the user; if you can identify him or her, then you can identify every transaction they have been involved with when using that address.
+
+**1.28** In addition, where the parties are anonymous or visible, the police would likely be able to investigate criminals at points where they sought to convert fiat currency into cryptocurrency and then cryptocurrency to fiat currency. These jumping on and off points provide the police with traditional investigation opportunities. In essence, the focus would be on tracking the movement of cryptocurrency as it leaves a cryptocurrency exchange, and vice versa. The police and investigation agencies in the UK and around the world are developing software and systems to gather and share blockchain intelligence. The borderless nature of blockchain actually provides an advantage, because police from different jurisdictions will not need to request the assistance of foreign law enforcers (known as ‘Mutual Legal Assistance Treaties’ or ‘MLATs’) in any blockchain investigation, as there are no borders within blockchain. MLATs simply are not needed. Once law enforcement can access the blockchain, there are no third parties or foreign states to hamper the investigation.
+
+# SMART CONTRACTS
+
+**1.29** A smart contract is best explained as a self-executing piece of computer code. It consists of a set of pre-defined rules that automatically enforce the terms of the contract. When X happens, Y then automatically happens without any further action from the parties needing to be taken. This level of automation can have distinct case uses and advantages. For example, smart contracts in applying self-executing code, are another means whereby blockchain might reduce the opportunity for fraud, by removing the involvement of the human mind and automating the execution of agreements.
+
+**1.30** However, risks also arise from smart contracts and they will usually require human intervention, at least at some level; smart contracts are brought in to existence by humans and there are dangers in supposing they are purely autonomous or reliably fair by design. These smart contracts are explained in **Chapter 3** and examined in further detail in **Chapter 11** within the context of decentralised autonomous organisations (‘DAOs’). This is because DAOs are essentially a combination of smart contracts or, if one prefers, a super smart contract. A DAO it can be said materialises as a smart contract – a piece of code – executed on top of an increasingly opaque stack of distributed networking and consensus technology, such as the Ethereum blockchain or similar blockchains.
+
+# DECENTRALISED AUTONOMOUS ORGANISATIONS
+
+**1.31** A DAO is a computer program that has no manager or leader. It involves users, and it runs on a peer-to-peer network. A peer-to-peer network means that
