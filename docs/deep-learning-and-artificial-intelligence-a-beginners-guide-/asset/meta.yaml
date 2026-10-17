@@ -1,0 +1,93 @@
+name: Deep Learning and Artificial Intelligence： A Beginners’ Guide to Neural Networks
+  and Deep Learning
+slug: deep-learning-and-artificial-intelligence-a-beginners-guide-
+name_cn: 神经网络与深度学习初学者指南：深度学习与人工智能
+toc:
+- - '##'
+  - 关于作者
+- - '##'
+  - 简介
+- - '##'
+  - 什么是神经网络？
+- - '###'
+  - 神经网络的类型
+- - '###'
+  - 应用
+- - '###'
+  - 神经网络的组件
+- - '##'
+  - 生物神经网络
+- - '##'
+  - 问题
+- - '##'
+  - 机器与人类
+- - '#'
+  - 人工神经网络
+- - '##'
+  - 神经元
+- - '##'
+  - Weights
+- - '##'
+  - Bias
+- - '##'
+  - Input and Output
+- - '##'
+  - Classifications and Classifiers
+- - '##'
+  - 消失梯度
+- - '##'
+  - 层：输入层、隐藏层和输出层
+- - '##'
+  - 前向传播和反向传播
+- - '##'
+  - GPU 训练
+- - '#'
+  - Keras 模型和层
+- - '##'
+  - 什么是 Keras？
+- - '##'
+  - 什么是 Keras 模型？
+- - '##'
+  - 什么是 Keras 层？
+- - '##'
+  - 进入 Keras 之前你需要理解什么？
+- - '##'
+  - 像个好书呆子一样，古典文学参考文献为你准备好了
+- - '#'
+  - 深度学习算法
+- - '##'
+  - RBM：受限玻尔兹曼机
+- - '##'
+  - DBN：深度置信网络
+- - '##'
+  - 'CNN: Convolutional Neural Networks'
+- - '##'
+  - 'Perceptron: IMPORTANT!!!!'
+- - '##'
+  - MLP：多层感知机
+- - '##'
+  - 循环神经网络
+- - '##'
+  - RNTN：递归神经张量网络
+- - '#'
+  - 神经网络的优势
+- - '##'
+  - 更快的人类大脑
+- - '##'
+  - 更擅长专用任务
+- - '##'
+  - 数学的进一步抽象
+- - '##'
+  - 更好的威胁检测
+- - '#'
+  - 神经网络的商业应用
+- - '##'
+  - 消除琐碎任务的需求
+- - '##'
+  - 有效广告
+- - '##'
+  - 非常精确的预测能力
+- - '#'
+  - CONCLUSION
+- - '#'
+  - 欢迎来到本书的结尾
