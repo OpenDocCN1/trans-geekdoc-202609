@@ -1,0 +1,8 @@
+
+We could look at individual device’s lifecycle data to personalize the needs of each device. `![Figure 10.6](#ch10.xhtml#fig10_6)` presents a product lifecycle analysis of three individual devices: `M1` (`ID 01011043`), `M2` (`ID 01001859`), and `P1` (`ID 91015346`). `![Table 10.5](#ch10.xhtml#tab10_5)` complements this analysis by providing key metrics such as `Mean Time Between Failure (MTBF)`, `Mean Time to Repair (MTTR)`, `Total Operating Time (OT)`, and `Total Repairing Time (RT)`.
+
+`![Fig. 10.6 Product Lifecycle Analysis for M1 (Product ID: 01011043), M2 (Product ID: 01001859), and P1 (Product ID: 91015346). Note: Operating time is measured in years, while all other units are in days. The abbreviation labels are described in Table 10.4.](#ch10.xhtml#R_fig10_6)` `[Table 10.4](#ch10.xhtml#tab12<unk><unk><unk>)`
+
+[Table 10.5 Information for Each Individual Device](#ch10.xhtml#R_tab10_5)
+
+| Product || ID || Failure count || MTTB (Days) || MTTR<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>
