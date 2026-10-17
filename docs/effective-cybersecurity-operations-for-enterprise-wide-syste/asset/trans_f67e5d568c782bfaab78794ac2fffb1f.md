@@ -1,0 +1,56 @@
+
+-   [Hinkley Point](https://www.independent.co.uk/news/uk/home-news/hinkley-point-theresa-may-nuclear-power-poll-majority-uk-opposes-plant-edf-china-a7308701.html)的绝大多数英国公众反对特蕾莎·梅批准核电站的决定。The Independent. 2016年。2022年11月3日检索，来源：<https://www.independent.co.uk/news/uk/home-news/hinkley-point-theresa-may-nuclear-power-poll-majority-uk-opposes-plant-edf-china-a7308701.html>
+
+-   Civil Aviation Authority. (2018). CAP1480: Implementation of the recommendations from the Independent Enquiry into the NATS Systems Failure on 12th December 2014. Retrieved on April 15, 2022, from: <https://publicapps.caa.co.uk/modalapplication.aspx?appid=11&mode=detail&id=7614&filter=2>
+
+-   CIWEM. (2019). Thirty years on, what has water privatisation achieved? CIWEM. Retrieved on April 12, 2022, from: <https://www.ciwem.org/the-environment/how-should-water-and-environmental-management-firms-tap,-retain-and-promote-female-talent>
+
+-   Committee on Commerce, Science, and Transportation. (2014). ‘Kill Chain’ Analysis of the 2013 Target Data Breach. Retrieved on April 12, 2022, from: <https://www.hsdl.org/?abstract&did=751170>
+
+-   Consumer Council for Water. (2021). How much water do you use? CCW. Retrieved on April 12, 2022, from: <https://www.ccwater.org.uk/households/using-water-wisely/averagewateruse/>
+
+-   Corera, G. (2022, March 29). More must reconsider Russian anti-virus software use, UK warns. BBC News. Retrieved on November 3, 2022, from: <https://www.bbc.com/news/technology-60854882>
+
+-   CPNI. (2022). Cyber Assurance of Physical Security Systems. Retrieved on April 13, 2022, from: <https://www.cpni.gov.uk/cyber-assurance-physical-security-systems-capss>
+
+-   Department for Digital, Culture, Media & Sport (2020). Huawei to be removed from UK 5G networks by 2027. Retrieved on November 3, 2022, from: <https://www.gov.uk/government/news/huawei-to-be-removed-from-uk-5g-networks-by-2027>
+
+-   Desai, N. (2016). IT vs. OT for the Industrial Internet. GlobalSign GMO Internet, Inc. Retrieved on February 28, 2022, from: <https://www.globalsign.com/en/blog/it-vs-ot-industrial-internet>
+
+-   Edwards, C. (2017). Thatcher’s golden legacy of privatisation. CapX. Retrieved on March 2, 2022, from: <https://capx.co/thatchers-golden-legacy-of-privatisation/>
+
+-   Gordon, L. A., Loeb, M. P., & Zhou, L. (2020). Integrating cost–benefit analysis into the NIST Cybersecurity Framework via the Gordon–Loeb Model. Journal of Cybersecurity, 6(1), tyaa005. doi:<https://doi.org/10.1093/cybsec/tyaa005>
+
+-   Gov.UK. (2022). National Security and Investment Act 2021. Retrieved on November 3, 2022, from: <https://www.gov.uk/government/collections/national-security-and-investment-act>
+
+-   Hall, K. (2018). Brit water firms, power plants with crap cyber security will pay up to £17m, peers told. Retrieved on February 1, 2022, from: <https://www.theregister.com/2018/05/22/house_of_lords_new_cybersecurity_regulations/>
+
+-   Harding, L., Sabbagh, D., & Koshiw, I. (2022, October 31). Russia targets Ukraine energy and water infrastructure in missile attacks. The Guardian. Retrieved on November 3, 2022, from: <https://www.theguardian.com/world/2022/oct/31/russian-missiles-kyiv-ukraine-cities>
+
+-   Hartmann, C. C., & Carmenate, J. (2021). Academic Research on the Role of Corporate Governance and IT Expertise in Addressing Cybersecurity Breaches: Implications for Practice, Policy, and Research. Current Issues in Auditing, 15(2), A9–A23. doi:<https://doi.org/10.2308/CIIA-2020-034>
+
+-   Herath, T., & Rao, H. R. (2009). Encouraging information security behaviors in organizations: Role of penalties, pressures and perceived effectiveness. Decision Support Systems, 47(2), 154–165. doi:<https://doi.org/10.1016/j.dss.2009.02.005>
+
+-   Khan, R., Maynard, P., McLaughlin, K., Laverty, D. M., & Sezer, S. (2016). Threat Analysis of BlackEnergy Malware for Synchrophasor based Real-time Control and Monitoring in Smart Grid. Retrieved on April 11, 2022, from: <https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/ICS2016.7>
+
+-   Khattak, A., Khanji, S., & Khan, W. (2019). Smart Meter Security: Vulnerabilities, Threat Impacts, and Countermeasures. In, 554–562.
+
+-   Langner, R. (2011). Stuxnet: Dissecting a Cyberwarfare Weapon. IEEE Security and Privacy, 9(3), 49–51. doi:<https://doi.org/10.1109/MSP.2011.67>
+
+-   Laski, H. J. (1916). Basis of Vicarious Liability. The Yale Law Journal, 26(2), 105. doi:<https://doi.org/10.2307/786314>
+
+-   Laville, S. (2020, July 1). England’s privatised water firms paid £57bn in dividends since 1991. The Guardian. Retrieved on February 28, 2022, from: <https://www.theguardian.com/environment/2020/jul/01/england-privatised-water-firms-dividends-shareholders>
+
+-   MI5. (2022). Joint address by MI5 and FBI Heads. Retrieved on November 3, 2022, from: <https://www.mi5.gov.uk/news/speech-by-mi5-and-fbi>
+
+-   Miron, W., & Muita, K. (2014). Cybersecurity Capability Maturity Models for Providers of Critical Infrastructure. Technology Innovation Management Review, 4(10), 33–39. doi:<https://doi.org/10.22215/timreview/837>
+
+-   Nicholson, A., Webber, S., Dyer, S., Patel, T., & Janicke, H. (2012). SCADA security in the light of Cyber-Warfare. Computers & Security, 31(4), 418–436. doi:<https://doi.org/10.1016/j.cose.2012.02.009>
+
+-   O’Neil, P. (2022). These hackers just showed how easy it is to target critical infrastructure. Retrieved on May 2, 2022, from: <https://www-technologyreview-com.cdn.ampproject.org/c/s/www.technologyreview.com/2022/04/21/1050815/hackers-target-critical-infrastructure-pwn2own/amp/>
+
+-   Ofwat. (2017). Delivering Water 2020: Our final methodology for the 2019 price review. Ofwat. Retrieved on April 13, 2022, from: <https://www.ofwat.gov.uk/publication/delivering-water-2020-final-methodology-2019-price-review/>
+
+-   Ofwat. (2018). Your water company. Ofwat. Retrieved on October 13, 2022, from: <https://www.ofwat.gov.uk/households/your-water-company/>
+
+-   Ofwat. (2022). Legislation. Ofwat. Retrieved on May 2, 2022, from: <https://www.ofwat.gov.uk/regulated-companies/ofwat-industry-overview/legislation/>

@@ -1,0 +1,538 @@
+name: Effective Cybersecurity Operations for Enterprise-Wide Systems
+slug: effective-cybersecurity-operations-for-enterprise-wide-syste
+name_cn: '
+
+  企业级系统的有效网络安全运营'
+toc:
+- - '##'
+  - 第 1 章
+- - '##'
+  - Work From Home/WFH Model
+- - '##'
+  - Problematic Internet Use
+- - '##'
+  - PIU and the Big Five
+- - '##'
+  - PIU 在 COVID-19 时代
+- - '##'
+  - Cyberpsychology
+- - '##'
+  - Social Isolation and Loneliness
+- - '##'
+  - 结果
+- - '##'
+  - 描述性统计
+- - '##'
+  - 参与者的人口统计学及其他相关统计数据
+- - '##'
+  - 心理和认知行为量表
+- - '##'
+  - FUTURE RESEARCH DIRECTIONS
+- - '##'
+  - CONCLUSION
+- - '##'
+  - REFERENCES
+- - '##'
+  - Chapter 2
+- - '##'
+  - 网络安全视角下的教育
+- - '##'
+  - 指令、授权、政策和法律在网络安全方面
+- - '##'
+  - 将安全融入应用程序的每一层
+- - '##'
+  - 创建适当的心理模型
+- - '##'
+  - 减少安全和技术术语
+- - '##'
+  - 设计易于学习
+- - '##'
+  - 极简化设计
+- - '##'
+  - 关注系统满意度和用户体验
+- - '##'
+  - 助用户完成任务并提供建议
+- - '##'
+  - 减少系统相关的认知负荷
+- - '##'
+  - 展示安全功能
+- - '##'
+  - 显示系统状态
+- - '##'
+  - 防止、管理和恢复错误（撤销）
+- - '##'
+  - 帮助、建议和文档
+- - '##'
+  - 信息性反馈
+- - '##'
+  - 接受所有用户
+- - '##'
+  - 早期网络安全可用性考虑因素
+- - '##'
+  - 结论
+- - '##'
+  - 参考文献
+- - '##'
+  - 第 3 章
+- - '##'
+  - Chapter 4
+- - '##'
+  - Exploit Detection and Various Design Patterns in Cyber Software
+- - '##'
+  - 'Vidhant Maan Thapa  '
+- - '##'
+  - 'Sudhanshu Srivastava  '
+- - '##'
+  - 'Shelly Garg  '
+- - '##'
+  - 'ABSTRACT  '
+- - '##'
+  - 'INTRODUCTION  '
+- - '##'
+  - Prominent Use-Cases
+- - '##'
+  - One-Fuzz
+- - '##'
+  - OSS-FUZZ
+- - '##'
+  - IMPLEMENTATION
+- - '##'
+  - Quick Recovery From Zero-Day Exploits
+- - '##'
+  - General Zero-Day Model
+- - '##'
+  - CONCLUSION AND FUTURE SCOPE
+- - '##'
+  - REFERENCES
+- - '##'
+  - 第 5 章
+- - '##'
+  - 建立风险增强统一安全控制集
+- - '##'
+  - 'Stephen G. Fridakis  '
+- - '##'
+  - 摘要
+- - '##'
+  - 为什么合规不等于安全
+- - '##'
+  - 1. 合规与安全的概念
+- - '##'
+  - CUSTOM CONTROLS TO CONSIDER
+- - '##'
+  - CONTROL SUFFICIENCY
+- - '##'
+  - 第 6 章
+- - '##'
+  - 关于健康监测系统中网络安全和隐私风险的案例研究
+- - '##'
+  - 'Fatma Dogan Akkaya  '
+- - '##'
+  - '摘要  '
+- - '##'
+  - '引言  '
+- - '##'
+  - '参考文献  '
+- - '##'
+  - 'THE THEORETICAL BACKGROUND OF SURVEILLANCE PHENOMENA: EXPLORING POWER DYNAMICS
+    AND SOCIAL IMPLICATIONS'
+- - '##'
+  - 总体而言，本章旨在提供关于健康监测系统所涉及的网络安全风险的见解，以及在保护个人健康信息方面数据隐私和安全的重要性。
+- - '##'
+  - REFERENCES
+- - '##'
+  - References
+- - '##'
+  - EU Member States
+- - '##'
+  - Other References
+- - '##'
+  - 第七章
+- - '##'
+  - 摘要
+- - '##'
+  - 引言
+- - '##'
+  - RISK AND RISK ANALYSIS
+- - '##'
+  - TYPES OF RISK ANALYSIS
+- - '##'
+  - 定量风险分析
+- - '##'
+  - 2. 这是一种系统化的方法，用于在整个生命周期内管理和实现集团或实体负责的项目的价值，可适用于有形和无形资产（如建筑物、设备等有形资产，以及人力资本、知识产权、商誉、财务资产等无形资产）。
+- - '##'
+  - 3. 资产管理是一种系统化的程序，旨在以最经济的方式（包括所有成本、风险和性能属性）创建、使用、维护、改进和处置资产。
+- - '##'
+  - 4. 资产管理明确关注帮助组织实现既定目标，优化可用收益，从而确保活动与组织平衡的最佳组合。
+- - '##'
+  - 5. 资产管理通过在资产全生命周期内降低总拥有成本（包括采购、运营、维护和更新）来改善决策。
+- - '##'
+  - 6. 资产管理旨在同时提升价值并降低风险。
+- - '##'
+  - 7. 它也日益被应用于私营部门和公共基础设施部门，以确保在成本、风险、服务/性能和可持续性方面采取协调的优化方法。
+- - '##'
+  - Importance of Asset Management
+- - '##'
+  - 风险识别：资产管理涵盖了资产使用和所有权过程中产生的风险的识别与管理，意味着组织始终具备应对任何可能出现的风险的能力。
+- - '##'
+  - 资产控制简便：资产管理流程使组织能够轻松跟踪其资产（无论是流动资产还是固定资产），所有者清楚资产的位置、使用情况以及是否有任何修改。能够更有效地回收资产从而提升回报。
+- - '##'
+  - 折旧准确性：资产管理确保资产在财务报表中准确记录，因为资产会被频繁核查。
+- - '##'
+  - 消除幽灵资产：存在被盗、丢失或毁损但记录不当的资产情况。通过战略资产管理，公司所有者能够识别丢失的资产并将其从账目中移除。
+- - '##'
+  - 制定战略资产管理计划
+- - '##'
+  - 完成资产清单：企业所有者首先必须清点所有资产，只有在了解资产的确切数量后，才能成功管理这些资产。清点公司资产时应列出的项目包括：资产总数、资产位置、每个资产的价值、购置日期以及预计使用寿命。
+- - '##'
+  - 计算生命周期成本：为确保资产管理策略的准确性，企业所有者应计算每个资产的总生命周期成本。常见的错误是仅考虑初始采购成本。在资产生命周期内，还会产生维护费用、状况和性能建模、处置成本等额外支出。
+- - '##'
+  - 设定服务水平：计算生命周期成本后，需设定服务水平。简单来说，这意味着明确资产提供的各项服务的范围、质量和目的。随后，业主可选择必要的维护、运营和更换措施，以保持资产良好工作状态。
+- - '##'
+  - 进行长期财务规划：资产管理计划理想情况下应能纳入长期财务规划。有了健全的财务计划，所有者可决定哪些目标可实现、哪些需优先处理。
+- - '##'
+  - 资产管理的好处
+- - '##'
+  - 提升采购与使用：通过全生命周期监控公司资产，业主可改进资产采购与使用流程。典型例子是思科系统（Cisco Systems），利用个人电脑资产管理节省成本。实施该计划后，企业发现了浪费性购买习惯，并通过建立更完善的工具获取流程来修正。
+- - '##'
+  - 提升合规性：政府机构、慈善机构和企业均需提交资产购置、使用和处置的报告。为简化报告，多数机构保持资产信息在集中数据库中。在财政年度结束后准备报告时，可轻松通过该方法获取所需信息。
+- - '##'
+  - 双目标：资产管理旨在随时间提升投资组合价值，同时保持可控风险，即在最大化价值的同时最小化风险。
+- - '##'
+  - 资产管理的类型和分类
+- - '##'
+  - Financial Asset Management (FAM)
+- - '##'
+  - 人中人攻击（Mitm）：
+- - '##'
+  - 拒绝服务：
+- - '##'
+  - 社会工程：
+- - '##'
+  - 勒索软件：
+- - '##'
+  - 网络安全类型：
+- - '##'
+  - 关键基础设施网络安全：
+- - '##'
+  - 网络安全：
+- - '##'
+  - 云安全：
+- - '##'
+  - 物联网（IoT）安全：
+- - '##'
+  - 应用安全：
+- - '##'
+  - 身份管理与数据安全：
+- - '##'
+  - 移动安全：
+- - '##'
+  - 灾难恢复与业务连续性规划（DRBCP）：
+- - '##'
+  - 网络安全措施的管理：
+- - '##'
+  - 网络安全相关的做法：
+- - '##'
+  - 用户教育：
+- - '##'
+  - 应用安全：
+- - '##'
+  - 网络安全：
+- - '##'
+  - 领导力承诺：
+- - '##'
+  - 密码管理：
+- - '##'
+  - 网络安全专家：
+- - '##'
+  - 网络安全专家的职能：
+- - '##'
+  - 3. 通信与网络安全
+- - '##'
+  - 4. 身份与访问管理
+- - '##'
+  - 5. 安全运营
+- - '##'
+  - 6. 安全评估与测试
+- - '##'
+  - 7. 软件开发安全
+- - '##'
+  - 8. 安全与风险管理
+- - '##'
+  - 第 9 章
+- - '##'
+  - 机会与未来研究
+- - '##'
+  - Brett J. L. Landry
+- - '##'
+  - Renita Murimi
+- - '##'
+  - Greg Bell
+- - '##'
+  - 摘要
+- - '##'
+  - 引言
+- - '##'
+  - 影响安全专业人员
+- - '##'
+  - 参考文献
+- - '##'
+  - 第 10 章
+- - '##'
+  - 一个探索性研究：英格兰和威尔士
+- - '##'
+  - Chapter 11
+- - '##'
+  - 联邦机构加强帮助确保选举基础设施安全、监督残疾人投票可及性以及执行竞选金融法 (美国政府问责局, 2020c)
+- - '##'
+  - 2016 年总统选举
+- - '##'
+  - 1. 选举选民统计
+- - '##'
+  - 2. 选举官员和声明
+- - '##'
+  - 3. 选举人团概览
+- - '##'
+  - 4. 选举人团结果认证
+- - '##'
+  - Chapter 12
+- - '##'
+  - 1. 研究背景与需求
+- - '##'
+  - 2. STATEMENT OF THE PROBLEM
+- - '##'
+  - 3. LITERATURE REVIEW
+- - '##'
+  - 实施网络安全计划
+- - '##'
+  - MAIN RESEARCH OBJECTIVE
+- - '##'
+  - Research Objectives
+- - '##'
+  - METHODOLOGY AND METHODS
+- - '##'
+  - PARAMETERS FOR FRAMEWORK VALIDATION
+- - '##'
+  - 评估贫乏网络安全知识和技能差距对大学社会工程攻击的贡献
+- - '##'
+  - 分析通过提高学生和员工网络安全知识和技能来减少社会工程攻击的必要措施
+- - '##'
+  - 表 9. 关于改进网络安全知识和技能发展措施的感知
+- - '##'
+  - Efstathopoulos, G., Grammatikis, P. R., Sarigiannidis, P., Argyriou, V., Sarigiannidis,
+    A., Stamatakis, K., . . . Athanasopoulos, S. K. (2019, September). Operational
+    data based intrusion detection system for smart grid. In 2019 IEEE 24th International
+    Workshop on Computer Aided Modeling and Design of Communication Links and Networks
+    (CAMAD) (pp. 1-6). IEEE. doi:`[10.1109/CAMAD.2019.8858503](https://doi.org/10.1109/CAMAD.2019.8858503)`
+- - '##'
+  - 'Egan, M. (2021). Robinhood discloses breach that exposed information of millions
+    of customers. CNN. Retrieved on August 4, 2022, from: [`https://www.cnn.com/2021/11/08/tech/robinhood-data-breach/index.html`](https://www.cnn.com/2021/11/08/tech/robinhood-data-breach/index.html)'
+- - '##'
+  - Egelman S. Harbach M. Peer E. (2016). Behavior Ever Follows Intention? Proceedings
+    of the 2016 CHI Conference on Human Factors in Computing Systems. doi:`[10.1145/2858036.2858265](https://doi.org/10.1145/2858036.2858265)`
+- - '##'
+  - Egelman, S., & Peer, E. (2015). Predicting privacy and security attitudes. Computers
+    & Society, 45(1), 22–28. doi:`[10.1145/2738210.2738215](https://doi.org/10.1145/2738210.2738215)`
+- - '##'
+  - Eijkelenboom, E., & Nieuwesteeg, B. (2021). An analysis of cybersecurity in Dutch
+    annual reports of listed companies. Computer Law & Security Report, 40, 105513.
+    doi:`[10.1016/j.clsr.2020.105513](https://doi.org/10.1016/j.clsr.2020.105513)`
+- - '##'
+  - 'Eltahir, M. E., & Ahmed, O. S. (2023). Cybersecurity Awareness in African Higher
+    Education Institutions: A Case Study of Sudan. Academic Press.'
+- - '##'
+  - English, R., & Maguire, J. (2023). Exploring Student Perceptions and Expectations
+    of Cyber Security. In Computing Education Practice (pp. 25–28). doi:`[10.1145/3573260.3573267](https://doi.org/10.1145/3573260.3573267)`
+- - '##'
+  - ENISA. (2015). ENISA Threat Landscape. ENISA.
+- - '##'
+  - 'ENISA. (2019). Cybersecurity Culture Guidelines: Behavioural Aspects of Cybersecurity.
+    [`https://www.enisa.europa.eu/publications/cybersecurity-culture-guidelines-behavioural-aspects-of-cybersecurity`](https://www.enisa.europa.eu/publications/cybersecurity-culture-guidelines-behavioural-aspects-of-cybersecurity)'
+- - '##'
+  - 'ENISA. (2020). Threat Landscape Report: From January 2019 to April 2020. [`https://www.enisa.europa.eu/publications/enisa-threat-landscape-2020-main-incidents/at_download/fullReport`](https://www.enisa.europa.eu/publications/enisa-threat-landscape-2020-main-incidents/at_download/fullReport)'
+- - '##'
+  - Ericson, R., & Haggerty, K. (1997). Policing the Risk Society. University of Toronto
+    Press. doi:`[10.3138/9781442678590](https://doi.org/10.3138/9781442678590)`
+- - '##'
+  - 'Erwin, B. A., Turk, C. L., Heimberg, R. G., Fresco, D. M., & Hantula, D. A. (2004).
+    The Internet: Home to a severe population of individuals with social anxiety disorder?
+    Journal of Anxiety Disorders, 18(5), 629–646. doi:`[10.1016/j.janxdis.2003.08.002](https://doi.org/10.1016/j.janxdis.2003.08.002)`'
+- - '##'
+  - 'Estrada, S., & Reyes Álvarez, J. (2023). Conclusions: The Challenge Towards the
+    Future Is Digital and Sustainable Transformations from a Systemic Perspective
+    in a Changing COVID World. In Digital and Sustainable Transformations in a Post-COVID
+    World (pp. 475–502). Springer. doi:`[10.1007/978-3-031-16677-8\_18](https://doi.org/10.1007/978-3-031-16677-8_18)`'
+- - '##'
+  - Ewing, E. (2020). The 2020 election was attacked, but not severely disrupted.
+    Here’s how. [`https://www.npr.org/2020/11/04/931090626/the-2020-election-was-attacked-but-not-severely-disrupted-heres-how`](https://www.npr.org/2020/11/04/931090626/the-2020-election-was-attacked-but-not-severely-disrupted-heres-how)
+- - '##'
+  - 'Fàbregues, S., & Molina-Azorín, J. F. (2017). Addressing quality in mixed methods
+    research: A review and recommendations for a future agenda. Quality & Quantity,
+    51(6), 2847–2863. doi:`[10.1007/s11135-016-0449-4](https://doi.org/10.1007/s11135-016-0449-4)`'
+- - '##'
+  - Faltermaier, S., Strunk, K., Obermeier, M., & Fiedler, M. (2023). Managing Organizational
+    Cyber Security–The Distinct Role of Internalized Responsibility. Academic Press.
+- - '##'
+  - Fatokun Faith B. Hamid S. Norman A. Fatokun Johnson O. Eke C. I. (2020). Relating
+    Factors of Tertiary Institution Students’ Cybersecurity Behavior. 2020 International
+    Conference in Mathematics, Computer Engineering and Computer Science, ICMCECS
+    2020. doi:`[10.1109/ICMCECS47690.2020.246990](https://doi.org/10.1109/ICMCECS47690.2020.246990)`
+- - '##'
+  - 'Feldman, M. (2020). Dirty tricks: 9 falsehoods that could undermine the 2020
+    election. [`https://www.brennancenter.org/our-work/research-reports/dirty-tricks-9-falsehoods-could-undermine-2020-election`](https://www.brennancenter.org/our-work/research-reports/dirty-tricks-9-falsehoods-could-undermine-2020-election)'
+- - '##'
+  - 'Feldman, J. M. (2016). Technology, Power and Social Change: Comparing Three Marx-Inspired
+    Views. Socialism and Democracy, 30(2), 28–72. doi:`[10.1080/08854300.2016.1184913](https://doi.org/10.1080/08854300.2016.1184913)`'
+- - '##'
+  - 'Feldmann, A., Gasser, O., Lichtblau, F., Poese, I., Christoph, B., De-Cix, D.,
+    Wagner, D., De-Cix, M., Tapiador, J., Vallina-Rodriguez, N., Hohlfeld, O., Smaragdakis,
+    G., & Berlin, T. (2020). The Lockdown Effect: Implications of the COVID-19 Pandemic
+    on Internet Traffic. Enric Pujol BENOCS, 20.'
+- - '##'
+  - FERPA. (1974). Family Educational Rights and Privacy Act (FERPA). Available on
+    [`https://ed.gov/policy/gen/guid/fpco/ferpa/index.html`](https://ed.gov/policy/gen/guid/fpco/ferpa/index.html)
+- - '##'
+  - 'FIPS. (2015). Federal Information Processing Standateds Publications. Available
+    on: [`https://csrc.nist.gov/publications/PubsFIPS.html`](https://csrc.nist.gov/publications/PubsFIPS.html)'
+- - '##'
+  - Fiske, D. W. (1949). Consistency of the factorial structures of personality ratings
+    from different sources. Journal of Abnormal and Social Psychology, 44(3), 329–344.
+    doi:`[10.1037/h0057198](https://doi.org/10.1037/h0057198)`
+- - '##'
+  - Fiss, P. C. (2007). A set-theoretic approach to organizational configurations.
+    Academy of Management Review, 32(4), 1180–1198. doi:`[10.5465/amr.2007.26586092](https://doi.org/10.5465/amr.2007.26586092)`
+- - '##'
+  - 'Fiss, P. C. (2011). Building better causal theories: A fuzzy set approach to
+    typologies in organization research. Academy of Management Journal, 54(2), 393–420.
+    doi:`[10.5465/amj.2011.60263120](https://doi.org/10.5465/amj.2011.60263120)`'
+- - '##'
+  - Fleming, J., & Zegwaard, K. E. (2018). Methodologies, methods and ethical considerations
+    for conducting research in work-integrated learning. International Journal of
+    Work-Integrated Learning, 19(3), 205–213.
+- - '##'
+  - Florackis, C., Louca, C., Michaely, R., & Weber, M. (2023). Cybersecurity risk.
+    Review of Financial Studies, 36(1), 351–407. doi:`[10.1093/rfs/hhac024](https://doi.org/10.1093/rfs/hhac024)`
+- - '##'
+  - Fogg, B. (2009). A Behavior Model for Persuasive Design. Academic Press.
+- - '##'
+  - Foreman, C. J., & Gurugubelli, D. (2015). Identifying the cyber attack surface
+    of the advanced metering infrastructure. The Electricity Journal, 28(1), 94–103.
+    doi:`[10.1016/j.tej.2014.12.007](https://doi.org/10.1016/j.tej.2014.12.007)`
+- - '##'
+  - 'Forsyth, D. R. (2008). International Encyclopedia of the Social Sciences. Available
+    from: [`https://scholarship.richmond.edu/cgi/viewcontent.cgi?article=1164&context=jepson-faculty-publications`](https://scholarship.richmond.edu/cgi/viewcontent.cgi?article=1164&context=jepson-faculty-publications)'
+- - '##'
+  - 'Fox, S. (2017). Beyond AI: Multi-Intelligence (MI) combining natural and artificial
+    intelligences in hybrid beings and systems. Technologies, 5(3), 1–14. doi:`[10.3390/technologies5030038](https://doi.org/10.3390/technologies5030038)`'
+- - '##'
+  - 'Freeze, D. (2021, April 27). Cybercrime To Cost The World $10.5 Trillion Annually
+    By 2025. Cybercrime Magazine. Retrieved on December 3, 2021, from: [`https://cybersecurityventures.com/cybercrime-damages-6-trillion-by-2021/`](https://cybersecurityventures.com/cybercrime-damages-6-trillion-by-2021/)'
+- - '##'
+  - 'French, A. (2017, Jan 5). Q&A: Alexa may be listening, but will she tell on you?
+    [`https://www.latimes.com/business/technology/la-fi-tn-amazon-echo-privacy-qa-20170105-story.html`](https://www.latimes.com/business/technology/la-fi-tn-amazon-echo-privacy-qa-20170105-story.html)'
+- - '##'
+  - 'Hilary, G., Segal, B., & Zhang, M. H. (2016). Cyber-Risk Disclosure: Who Cares?
+    SSRN Electronic Journal. Retrieved on November 11, 2020, from: `http://niccs.us-cert.gov/glossary#letter_c
+    https://www.publicsafety.gc.ca/cnt/rsrcs/pblctns/cbr-scrt-strtgy/index-en`…doi:`[10.2139/ssrn.2852519](https://doi.org/10.2139/ssrn.2852519)`'
+- - '##'
+  - Hill, C., James, B. I., & Sahyoun, N. (2023). What is Missing in Data Governance?
+    Regulation, Board Oversight, and a New Role for Accountants. Academic Press.
+- - '##'
+  - HIPAA. (2022). HIPAA for Professionals. HHS.gov. `https://www.hhs.gov/hipaa/for-professionals/index.html`
+- - '##'
+  - HITRUST Alliance. (2023). Information Risk Management and Compliance. `https://hitrustalliance.net/`
+- - '##'
+  - 'Howarth, F. (2014). The Role of Human Error in Successful Security Attacks. Online.
+    Available: `https://securityintelligence.com/the-role-of-human-error-in-successful-security-attacks/`'
+- - '##'
+  - Hughes, M. E., Waite, L. J., Hawkley, L. C., & Cacioppo, J. T. (2004). A Short
+    Scale for Measuring Loneliness in Large Surveys. Research on Aging, 26(6), 655–672.
+    doi:`[10.1177/0164027504268574](https://doi.org/10.1177/0164027504268574)`
+- - '##'
+  - 'Hummer, L. (2016). Security Starts with People: Three Steps to Build a Strong
+    Insider Threat Protection Program Online. Available: `https://securityintelligence.com/security-starts-withpeople-three-steps-to-build-a-strong-insider-threat-protection-program`'
+- - '##'
+  - 'Hu, Q., West, R., & Smarandescu, L. (2015). The Role of Self-Control in Information
+    Security Violations: Insights from a Cognitive Neuroscience Perspective. Journal
+    of Management Information Systems, 31(4), 6–48. doi:`[10.1080/07421222.2014.1001255](https://doi.org/10.1080/07421222.2014.1001255)`'
+- - '##'
+  - 'Iannacci, F., & Kraus, S. (2022). Configurational theory: A review (Papagiannidis,
+    S., Ed.). Springer International Publishing. doi:`[10.1007/978-3-319-09450-2_23](https://doi.org/10.1007/978-3-319-09450-2_23)`'
+- - '##'
+  - IAPP . (2023a). Opt-In. `https://iapp.org/resources/article/opt-in/`
+- - '##'
+  - IAPP . (2023b). Opt-Out. `https://iapp.org/resources/article/opt-out/`
+- - '##'
+  - IAPP. (2023c). U.S. state comprehensive privacy laws. `https://iapp.org/media/pdf/resource_center/us_state_privacy_laws_overview.pdf`
+- - '##'
+  - 'IBM. (2020). Cost of a Data Breach Report 2020 2 Contents. Available from: `https://www.capita.com/sites/g/files/nginej291/files/2020-08/Ponemon-Global-Cost-of-Data-Breach-Study-2020.pdf`'
+- - '##'
+  - IEC. (2022). IEC 27001:2022 - Information security, cybersecurity and privacy
+    protection — Information security management systems — Requirements. `https://www.iso27001security.com/html/27034.html`
+- - '##'
+  - 'Institute for Government. (2021). Timeline of UK Government Coronavirus Lockdowns.
+    Available from: `https://www.instituteforgovernment.org.uk/charts/uk-government-coronavirus-lockdowns`'
+- - '##'
+  - Intersoft Consulting. (2023). Art. 17 GDPR – Right to erasure (‘right to be forgotten’).
+    General Data Protection Regulation (GDPR). `https://gdpr-info.eu/art-17-gdpr/`
+- - '##'
+  - Ipsen, C., van Veldhoven, M., Kirchner, K., & Hansen, J. P. (2021). Six Key Advantages
+    and Disadvantages of Working from Home in Europe during COVID-19. International
+    Journal of Environmental Research and Public Health, 18(4), 1–17. doi:`[10.3390/ijerph18041826](https://doi.org/10.3390/ijerph18041826)`
+- - '##'
+  - 'ITU. (2012). Cybercrime Understanding Cybercrime : Understanding Cybercrime:
+    Phenomena, Challenges and Legal Response. ITU.'
+- - '##'
+  - 'Jaber, A., & Fritsch, L. (2023). Towards AI-powered Cybersecurity Attack Modeling
+    with Simulation Tools: Review of Attack Simulators. In International Conference
+    on P2P, Parallel, Grid, Cloud and Internet Computing (pp. 249-257). Springer.'
+- - '##'
+  - 'Jaber, A., & Fritsch, L. (2023). Towards AI-powered Cybersecurity Attack Modeling
+    with Simulation Tools: Review of Attack Simulators. International Conference on
+    P2P, Parallel, Grid, Cloud and Internet Computing, 249–257.'
+- - '##'
+  - Jackob, N. G. E. (2010). The relationship between perceived media dependency,
+    use of alternative information sources, and general trust in mass media. International
+    Journal of Communication, 4, 18.
+- - '##'
+  - Jacobs, J., Romanosky, S., Adjerid, I., & Baker, W. (2020). Improving vulnerability
+    remediation through better exploit prediction. Journal of Cybersecurity, 6(1),
+    tyaa015. doi:`[10.1093/cybsec/tyaa015](https://doi.org/10.1093/cybsec/tyaa015)`
+- - '##'
+  - James, L. (2018). Making cyber-security a strategic business priority. Network
+    Security, 2018(5), 6–8. doi:`[10.1016/S1353-4858\(18\)30042-4](https://doi.org/10.1016/S1353-4858\(18\)30042-4)`
+- - '##'
+  - Jarjoui, S., & Murimi, R. (2021). A framework for enterprise cybersecurity risk
+    management. In Daimi, K., & Peoples, C. (Eds.), Advances in Cybersecurity Management
+    (pp. 139–161). Springer International Publishing., doi:`[10.1007/978-3-030-71381-2_8](https://doi.org/10.1007/978-3-030-71381-2_8)`
+- - '##'
+  - 'Jarjoui S. Murimi R. Murimi R. (2021). Hold my beer: A case study of how ransomware
+    affected an Australian beverage company. In 2021 International Conference on Cyber
+    Situational Awareness, Data Analytics and Assessment (CyberSA) (pp. 1-6). `https://doi.org/doi:[10.1109/CyberSA52016.2021.9478239]`'
+- - '##'
+  - 'Jessor, R. (1987). Problem-Behavior Theory, Psychosocial Development, and Adolescent
+    Problem Drinking. Addiction, 82(4), 331–342. Retrieved on June 2, 2021 from: `https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1360-0443.1987.tb01490.x`'
+- - '##'
+  - 'Johri, A., & Kumar, S. (2023). Exploring Customer Awareness towards Their Cyber
+    Security in the Kingdom of Saudi Arabia: A Study in the Era of Banking Digital
+    Transformation. Human Behavior and Emerging Technologies, 2023, 2023. doi:`[10.1155/2023/2103442](https://doi.org/10.1155/2023/2103442)`'
+- - '##'
+  - Joint Security and Privacy Committee NEMA/COCIR/JIRA. (2003). Defending Medical
+    Information Systems Against Malicious Software. `https://www.medicalimaging.org/wp-content/uploads/2011/02/medical-defending.pdf`
+- - '##'
+  - 'Joint Technology Committee. (2016). Responding to a Cyberattack. Retrieved on
+    October 7, 2021, from: `https://www.ncsc.org/~/media/Files/PDF/About Us/Committees/JTC/JTC
+    Resource Bulletins/Responding`toCyberAttack2-26-2016FINAL.ashx`'
+- - '##'
+  - 'Kahneman, D., & Tversky, A. (2012). Prospect theory: An analysis of decision
+    under risk. In Handbook of the Fundamentals of Financial Decision Making (pp.
+    99–127). World Scientific. doi:`[10.1142/9789814417358_0006](https://doi.org/10.1142/9789814417358_0006)`'
+- - '##'
+  - 'Kamariotou, M., & Kitsios, F. (2023). Information Systems Strategy and Security
+    Policy: A Conceptual Framework. Electronics (Basel), 12(2), 382. doi:`[10.3390/electronics12020382](https://doi.org/10.3390/electronics12020382)`'
+- - '##'
+  - Kanyangale, M. (2019). Seven Snags of Research Ethics on the Qualitative Research
+    Voyage. International Business Research, 12(6), 1. doi:`[10.5539/ibr.v12n6p1](https://doi.org/10.5539/ibr.v12n6p1)`
+- - '##'
+  - 文献引用列表
+- - '##'
+  - 期刊论文
