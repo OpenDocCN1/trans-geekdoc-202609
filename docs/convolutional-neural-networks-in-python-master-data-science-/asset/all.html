@@ -1,0 +1,1119 @@
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 743 1186" preserveaspectratio="none">
+<image width="743" height="1186" href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div id="part0000_split_000.html#1-929b3035e09748a1895098cb3d0bb252" class="body">
+<p>Convolutional Neural Networks in Python</p>
+<p><span id="part0000_split_000.html#b1" class="calibre1"></span>Master Data Science and Machine Learning with Modern Deep Learning in Python, Theano, and TensorFlow</p>
+<p>By: The LazyProgrammer (<a href="http://lazyprogrammer.me" class="calibre2"><span class="c" dir="ltr">http://lazyprogrammer.me</span></a>)</p>
+<p> </p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<div id="part0000_split_001.html#1-929b3035e09748a1895098cb3d0bb252" class="sgc">
+
+</div>
+<div class="body">
+<p><a href="../Text/part0001.html#UGI1-929b3035e09748a1895098cb3d0bb252" class="calibre2"><span dir="ltr">Introduction</span></a></p>
+<p><a href="../Text/part0002.html#1T141-929b3035e09748a1895098cb3d0bb252" class="calibre2"><span dir="ltr">Chapter 1: Review of Feedforward Neural Networks</span></a></p>
+<p><a href="../Text/part0003.html#chapter-3" class="calibre2"><span dir="ltr">Chapter 2: Convolution</span></a></p>
+<p><a href="../Text/part0004.html#chapter-4" class="calibre2"><span dir="ltr">Chapter 3: The Convolutional Neural Network</span></a></p>
+<p><a href="../Text/part0005.html#chapter-5" class="calibre2"><span dir="ltr">Chapter 4: Sample Code in Theano</span></a></p>
+<p><a href="../Text/part0006.html#chapter-6" class="calibre2"><span dir="ltr">Chapter 5: Sample Code in TensorFlow</span></a></p>
+<p><a href="../Text/part0007.html#chapter-7" class="calibre2"><span dir="ltr">Conclusion</span></a></p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="part0001.html"></span></p>
+<div id="part0001.html#UGI1-929b3035e09748a1895098cb3d0bb252" class="body">
+<span id="part0001.html#chapter-1" class="calibre1"></span>
+<h1 id="part0001.html#calibre_pb_0" class="s6">Introduction</h1>
+<p> </p>
+<p>This is the 3rd part in my Data Science and Machine Learning series on Deep Learning in Python. At this point, you already know a lot about neural networks and deep learning, including not just the basics like backpropagation, but how to improve it using modern techniques like momentum and adaptive learning rates. You've already written deep neural networks in Theano and TensorFlow, and you know how to run code using the GPU.</p>
+<p> </p>
+<p>This book is all about how to use deep learning for computer vision using convolutional neural networks. These are the state of the art when it comes to image classification and they beat vanilla deep networks at tasks like MNIST.</p>
+<p> </p>
+<p>In this course we are going to up the ante and look at the StreetView House Number (SVHN) dataset - which uses larger color images at various angles - so things are going to get tougher both computationally and in terms of the difficulty of the classification task. But we will show that convolutional neural networks, or CNNs, are capable of handling the challenge!</p>
+<p> </p>
+<p>Because convolution is such a central part of this type of neural network, we are going to go in-depth on this topic. It has more applications than you might imagine, such as modeling artificial organs like the pancreas and the heart. I'm going to show you how to build convolutional filters that can be applied to audio, like the echo effect, and I'm going to show you how to build filters for image effects, like the Gaussian blur and edge detection.</p>
+<p> </p>
+<p>After describing the architecture of a convolutional neural network, we will jump straight into code, and I will show you how to extend the deep neural networks we built last time with just a few new functions to turn them into CNNs. We will then test their performance and show how convolutional neural networks written in both Theano and TensorFlow can outperform the accuracy of a plain neural network on the StreetView House Number dataset.</p>
+<p> </p>
+<p>All the materials used in this book are FREE. You can download and install Python, Numpy, Scipy, Theano, and TensorFlow with pip or easy_install.</p>
+<p> </p>
+<p>Lastly, my goal is to show you that convolutional networks aren’t magical and they don’t require expert-level math to figure out.</p>
+<p> </p>
+<p>It’s just the same thing we had with regular neural networks:</p>
+<p> </p>
+<p>y = softmax( relu(X.dot(W1).dot(W2) )</p>
+<p> </p>
+<p>Except we replace the first “dot product” with a convolution:</p>
+<p> </p>
+<p>y = softmax( relu(conv(X, W1)).dot(W2) )</p>
+<p> </p>
+<p>The way they are trained is exactly the same as before, so all your skills with backpropagation, etc. carry over.</p>
+<p> </p>
+<p> </p>
+<div id="part0001.html#calibre_pb_2" class="calibre3">
+
+</div>
+</div>
+<p><span id="part0002.html"></span></p>
+<div id="part0002.html#1T141-929b3035e09748a1895098cb3d0bb252" class="body">
+<span id="part0002.html#chapter-2" class="calibre1"></span>
+<h1 id="part0002.html#calibre_pb_0" class="s6">Chapter 1: Review of Feedforward Neural Networks</h1>
+<p> </p>
+<p>In this lecture we are going to review some important background material that is needed in order to understand the material in this course. I’m not going to cover the material in depth here but rather just explain what it is that you need to know.</p>
+<p> </p>
+<p>Train and Predict</p>
+<p> </p>
+<p>You should know that the basic API that we can use for all supervised learning problems is fit(X,Y) or train(X,Y) function, which takes in some data X and labels Y, and a predict(X) function which just takes in some data X and makes a prediction that we will try to make close to the corresponding Y.</p>
+<p> </p>
+<p>Predict</p>
+<p> </p>
+<p>We know that for neural networks the predict function is also called the feedforward action, and this is simply the dot product and a nonlinear function on each layer of the neural network.</p>
+<p> </p>
+<p>e.g. z1 = s(w0x), z2 = s(w1z1), z3 = s(w2z2), y = s(w3z3)</p>
+<p> </p>
+<p>We know that the nonlinearities we usually use in the hidden layers is usually a relu, sigmoid, or tanh.</p>
+<p> </p>
+<p>We know that the output is a sigmoid for binary classification and softmax for classification with &gt;= 2 classes.</p>
+<p> </p>
+<p>Train</p>
+<p> </p>
+<p>We know that training a neural network simply is the application of gradient descent, which is the same thing we use for logistic regression and linear regression when we don’t have a closed-form solution. We know that linear regression has a closed form solution but we don’t necessarily have to use it, and that gradient descent is a more general numerical optimization method.</p>
+<p> </p>
+<p>W ← W - learning_rate * dJ/dW</p>
+<p> </p>
+<p>We know that libraries like Theano and TensorFlow will calculate the gradient for us, which can get very complicated the more layers there are. You’ll be thankful for this feature of neural networks when you see that the output function becomes even more complex when we incorporate convolution (although the derivation is still do-able and I would recommend trying for practice).</p>
+<p> </p>
+<p>At this point you should be familiar with how the cost function J is derived from the likelihood and how we might not calculate J over the entire training data set but rather in batches to improve training time.</p>
+<p> </p>
+<p>If you want to learn more about backpropagation and gradient descent you’ll want to check out my first course on deep learning, Deep Learning in Python part 1, which you can find at <a href="https://udemy.com/data-science-deep-learning-in-python" class="calibre2"><span class="c1" dir="ltr">https://udemy.com/data-science-deep-learning-in-python</span></a></p>
+<p> </p>
+<p>Data Preprocessing</p>
+<p> </p>
+<p>When we work with images you know that an image is really a 2-D array of data, and that if we have a color image we have a 3-D array of data where one extra dimension is for the red, green, and blue channels.</p>
+<p> </p>
+<p>In the past, we’ve flattened this array into a vector, which is the usual input into a neural network, so for example a 28 x 28 image becomes a 784 vector, and a 3 x 32 x 32 image becomes a 3072 dimensional vector.</p>
+<p> </p>
+<p>In this book, we are going to keep the dimensions of the original image for a portion of the processing.</p>
+<p> </p>
+<p>Where to get the data used in this book</p>
+<p> </p>
+<p>This book will use the MNIST dataset (handwritten digits) and the streetview house number (SVHN) dataset.</p>
+<p> </p>
+<p>The streetview house number dataset is a much harder problem than MNIST since the images are in color, the digits can be at an angle and in different styles or fonts, and the dimensionality is much larger.</p>
+<p> </p>
+<p>To get the code we use in this book you’ll want to go to:</p>
+<p> </p>
+<p><a href="https://github.com/lazyprogrammer/machine_learning_examples" class="calibre2"><span class="c1" dir="ltr">https://github.com/lazyprogrammer/machine_learning_examples</span></a></p>
+<p> </p>
+<p>And look in the folder: cnn_class</p>
+<p> </p>
+<p>If you’ve already checked out this repo then simply do a “git pull” since this code will be on the master branch.</p>
+<p> </p>
+<p>I would highly recommend NOT just running this code but using it as a backup if yours doesn’t work, and try to follow along with the code examples by typing them out yourself to build muscle memory.</p>
+<p> </p>
+<p>Once you have the machine_learning_examples repo you’ll want to create a folder adjacent to the <span>cnn_class</span> folder called <span>large_files</span> if you haven’t already done that for a previous class.</p>
+<p> </p>
+<p>That is where we will expect all the data to reside.</p>
+<p> </p>
+<p>To get the MNIST data, you’ll want to go to <a href="https://www.kaggle.com/c/digit-recognizer" class="calibre2"><span class="c1" dir="ltr">https://www.kaggle.com/c/digit-recognizer</span></a></p>
+<p> </p>
+<p>I think it’s pretty straightforward to download at that point. We’re only going to use the train.csv file since that’s the one with labels. You are more than welcome to attempt the challenge and submit a solution using the techniques you learn in this class.</p>
+<p> </p>
+<p>You can get the streetview house number data from <a href="http://ufldl.stanford.edu/housenumbers/" class="calibre2"><span class="c1" dir="ltr">http://ufldl.stanford.edu/housenumbers/</span></a></p>
+<p> </p>
+<p>You’ll want to get the files under “format 2”, which are the cropped digits.</p>
+<p> </p>
+<p>Note that these are MATLAB binary data files, so we’ll need to use the Scipy library to load them, which I’m sure you have heard of if you’re familiar with the Numpy stack.<span id="part0002.html#chapter-2-101"></span></p>
+<h1 id="part0002.html#calibre_pb_1" class="s11"> </h1>
+<div id="part0002.html#calibre_pb_2" class="calibre3">
+
+</div>
+</div>
+<p><span id="part0003.html"></span></p>
+<div class="body">
+<span id="part0003.html#chapter-3" class="calibre1"></span>
+<h1 id="part0003.html#calibre_pb_0" class="s6">Chapter 2: Convolution</h1>
+<p> </p>
+<p>In this chapter I’m going to give you guys a crash course in convolution. If you really want to dig deep on this topic you’ll want to take a course on signal processing or linear systems.</p>
+<p> </p>
+<p>So what is convolution?</p>
+<p> </p>
+<p>Think of your favorite audio effect (suppose that’s the “echo”). An echo is simply the same sound bouncing back at you in the future, but with less volume. We’ll see how we can do that mathematically later.</p>
+<p> </p>
+<p>All effects can be thought of as filters, like the one I’ve shown here, and they are often drawn in block diagrams. In machine learning and statistics these are sometimes called kernels.</p>
+<p> </p>
+<p>--------</p>
+<p>x(t)---&gt;| h(t) |---&gt;y(t)</p>
+<p>--------</p>
+<p> </p>
+<p>I’m representing our audio signal by this triangle. Remember that we want to do 2 things, we want to hear this audio signal in the future, which is basically a shift in to the right, and this audio signal should be lower in amplitude than the original.</p>
+<p> </p>
+<p>The last operation is to sum them all together.</p>
+<p>￼<span class="calibre4"><img src="OEBPS/Images/00001.jpeg" alt="image.png" class="calibre5" /></span></p>
+<p> </p>
+<p>Notice that the width of the signal stays the same, because it hasn’t gotten longer or shorter, which would change the pitch.</p>
+<p> </p>
+<p>So how can we do this in math? Well we can represent the amplitude changes by weights called w. And for this particular echo filter we just make sure that each weight is less than the last.</p>
+<p> </p>
+<p>e.g. y(t) = x(t) + 0.5x(t - delay) + 0.2x(t - 2*delay) + 0.1x(t - 3*delay) + …</p>
+<p> </p>
+<p>For any general filter, there wouldn’t be this restriction on the weights. The weights themselves would define the filter.</p>
+<p> </p>
+<p>And we can write the operation as a summation.</p>
+<p> </p>
+<p>y(n) = sum[m=-inf..+inf]{ h(m)x(n - m) }</p>
+<p> </p>
+<p>So now here is what we consider the “definition” of convolution. We usually represent it by an asterisk (e.g. y(n) = x(n) * h(n)). We can do it for a continuous independent variable (where it would involve an integral instead of a sum) or a discrete independent variable.</p>
+<p> </p>
+<p>You can think of it as we are “sliding” the filter across the signal, by changing the value of m.</p>
+<p> </p>
+<p>I want to emphasize that it doesn’t matter if we slide the filter across the signal, or if we slide the signal across the filter, since they would give us the same result.</p>
+<p> </p>
+<p>There are some very practical applications of this signal processing technique.</p>
+<p> </p>
+<p>One of my favorite examples is that we can build artificial organs. Remember that the organ’s function is to regulate certain parameters in your body.</p>
+<p> </p>
+<p>So to replace an organ, we would need to build a machine that could exactly match the response of that organ. In other words, for all the input parameters, like blood glucose level, we need to output the same parameters that the organ does, like how much insulin to produce.</p>
+<p> </p>
+<p>So for every input X we need to output an accurate Y.</p>
+<p> </p>
+<p>In fact, that sounds a lot like machine learning, doesn’t it!</p>
+<p> </p>
+<p>Since we’ll be working with images, we need to talk about 2-dimensional convolution, since images are 2-dimensional signals.</p>
+<p> </p>
+<p>y(m,n) = sum[i=-inf..+inf]{ sum[j=-inf..+inf]{ h(i,j)x(m-i,n-j) } }</p>
+<p> </p>
+<p>You can see from this formula that this just does both convolutions independently in each direction. I’ve got some pseudocode here to demonstrate how you might write this in code, but notice there’s a problem. If i &gt; n or j &gt; m, we’ll go out of bounds.</p>
+<p> </p>
+<p>def convolve(x, w):</p>
+<p>y = np.zeros(x.shape)</p>
+<p>for n in xrange(x.shape[0]):</p>
+<p>for m in xrange(x.shape[1]):</p>
+<p>for i in xrange(w.shape[0]):</p>
+<p>for j in xrange(w.shape[1]):</p>
+<p>y[n,m] += w[i,j]*x[n-i,m-j]</p>
+<p> </p>
+<p>What that tells us is that the shape of Y is actually BIGGER than X. Sometimes we just ignore these extra parts and consider Y to be the same size as X. You’ll see when we do this in Theano and TensorFlow how we can control the method in which the size of the output is determined.</p>
+<p> </p>
+<p>Gaussian Blur</p>
+<p> </p>
+<p>If you’ve ever done image editing with applications like Photoshop or GIMP you are probably familiar with the blur filter. Sometimes it’s called a Gaussian blur, and you’ll see why in a minute.</p>
+<p> </p>
+<p>If you just want to see the code that’s already been written, check out the file <a href="https://github.com/lazyprogrammer/machine_learning_examples/blob/master/cnn_class/blur.py" class="calibre2"><span class="c2" dir="ltr">https://github.com/lazyprogrammer/machine_learning_examples/blob/master/cnn_class/blur.py</span></a> from Github.</p>
+<p> </p>
+<p>The idea is the same as we did with the sound echo. We’re going to take a signal and spread it out.</p>
+<p> </p>
+<p>But this time instead of having predefined delays we are going to spread out the signal in the shape of a 2-dimensional Gaussian.</p>
+<p> </p>
+<p>Here is the definition of the filter:</p>
+<p> </p>
+<p>W = np.zeros((20, 20))</p>
+<p>for i in xrange(20):</p>
+<p>for j in xrange(20):</p>
+<p>dist = (i - 9.5)**2 + (j - 9.5)**2</p>
+<p>W[i, j] = np.exp(-dist / 50.)</p>
+<p> </p>
+<p>The filter itself looks like this:</p>
+<p> </p>
+<p>￼<span class="calibre6"><img src="OEBPS/Images/00002.jpeg" alt="gaussian.jpg" class="calibre7" /></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>And this is the result on the famous Lena image:</p>
+<p> </p>
+<p>￼<span class="calibre8"><img src="OEBPS/Images/00003.jpeg" alt="blurred.jpg" class="calibre9" /></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>The full code</p>
+<p> </p>
+<p>import numpy as np</p>
+<p>from scipy.signal import convolve2d</p>
+<p>import matplotlib.pyplot as plt</p>
+<p>import matplotlib.image as mpimg</p>
+<p> </p>
+<p># load the famous Lena image</p>
+<p>img = mpimg.imread('lena.png')</p>
+<p> </p>
+<p># what does it look like?</p>
+<p>plt.imshow(img)</p>
+<p>plt.show()</p>
+<p> </p>
+<p># make it B&amp;W</p>
+<p>bw = img.mean(axis=2)</p>
+<p>plt.imshow(bw, cmap='gray')</p>
+<p>plt.show()</p>
+<p> </p>
+<p># create a Gaussian filter</p>
+<p>W = np.zeros((20, 20))</p>
+<p>for i in xrange(20):</p>
+<p>for j in xrange(20):</p>
+<p>dist = (i - 9.5)**2 + (j - 9.5)**2</p>
+<p>W[i, j] = np.exp(-dist / 50.)</p>
+<p> </p>
+<p># let's see what the filter looks like</p>
+<p>plt.imshow(W, cmap='gray')</p>
+<p>plt.show()</p>
+<p> </p>
+<p># now the convolution</p>
+<p>out = convolve2d(bw, W)</p>
+<p>plt.imshow(out, cmap='gray')</p>
+<p>plt.show()</p>
+<p> </p>
+<p># what's that weird black stuff on the edges? let's check the size of output</p>
+<p>print out.shape</p>
+<p># after convolution, the output signal is N1 + N2 - 1</p>
+<p> </p>
+<p> </p>
+<p># we can also just make the output the same size as the input</p>
+<p>out = convolve2d(bw, W, mode='same')</p>
+<p>plt.imshow(out, cmap='gray')</p>
+<p>plt.show()</p>
+<p>print out.shape</p>
+<p> </p>
+<p> </p>
+<p>Edge Detection</p>
+<p> </p>
+<p>Edge detection is another important operation in computer vision. If you just want to see the code that’s already been written, check out the file <a href="https://github.com/lazyprogrammer/machine_learning_examples/blob/master/cnn_class/edge.py" class="calibre2"><span class="c2" dir="ltr">https://github.com/lazyprogrammer/machine_learning_examples/blob/master/cnn_class/edge.py</span></a> from Github.</p>
+<p> </p>
+<p>Now I’m going to introduce the Sobel operator. The Sobel operator is defined for 2 directions, X and Y, and they approximate the gradient at each point of the image. Let’s call them Hx and Hy.</p>
+<p> </p>
+<p>Hx = np.array([</p>
+<p>[-1, 0, 1],</p>
+<p>[-2, 0, 2],</p>
+<p>[-1, 0, 1],</p>
+<p>], dtype=np.float32)</p>
+<p> </p>
+<p>Hy = np.array([</p>
+<p>[-1, -2, -1],</p>
+<p>[0, 0, 0],</p>
+<p>[1, 2, 1],</p>
+<p>], dtype=np.float32)</p>
+<p> </p>
+<p>Now let’s do convolutions on these. So Gx is the convolution between the image and Hx. Gy is the convolution between the image and Hy.</p>
+<p>￼<span class="calibre8"><img src="OEBPS/Images/00004.jpeg" alt="edge.jpg" class="calibre9" /></span></p>
+<p> </p>
+<p> </p>
+<p>You can think of Gx and Gy as sort of like vectors, so we can calculate the magnitude and direction. So G = sqrt(Gx^2 + Gy^2). We can see that after applying both operators what we get out is all the edges detected.</p>
+<p> </p>
+<p>The full code</p>
+<p> </p>
+<p>import numpy as np</p>
+<p>from scipy.signal import convolve2d</p>
+<p>import matplotlib.pyplot as plt</p>
+<p>import matplotlib.image as mpimg</p>
+<p> </p>
+<p># load the famous Lena image</p>
+<p>img = mpimg.imread('lena.png')</p>
+<p> </p>
+<p># make it B&amp;W</p>
+<p>bw = img.mean(axis=2)</p>
+<p> </p>
+<p># Sobel operator - approximate gradient in X dir</p>
+<p>Hx = np.array([</p>
+<p>[-1, 0, 1],</p>
+<p>[-2, 0, 2],</p>
+<p>[-1, 0, 1],</p>
+<p>], dtype=np.float32)</p>
+<p> </p>
+<p># Sobel operator - approximate gradient in Y dir</p>
+<p>Hy = np.array([</p>
+<p>[-1, -2, -1],</p>
+<p>[0, 0, 0],</p>
+<p>[1, 2, 1],</p>
+<p>], dtype=np.float32)</p>
+<p> </p>
+<p>Gx = convolve2d(bw, Hx)</p>
+<p>plt.imshow(Gx, cmap='gray')</p>
+<p>plt.show()</p>
+<p> </p>
+<p>Gy = convolve2d(bw, Hy)</p>
+<p>plt.imshow(Gy, cmap='gray')</p>
+<p>plt.show()</p>
+<p> </p>
+<p># Gradient magnitude</p>
+<p>G = np.sqrt(Gx*Gx + Gy*Gy)</p>
+<p>plt.imshow(G, cmap='gray')</p>
+<p>plt.show()</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>The Takeaway</p>
+<p> </p>
+<p>So what is the takeaway from all these examples of convolution? Now you know that there are SOME filters that help us detect features - so perhaps, it would be possible to just do a convolution in the neural network and use <span class="c2">gradient descent</span> to find the best filter.</p>
+<div id="part0003.html#calibre_pb_2" class="calibre3">
+
+</div>
+</div>
+<p><span id="part0004.html"></span></p>
+<div class="body">
+<span id="part0004.html#chapter-4" class="calibre1"></span>
+<h1 id="part0004.html#calibre_pb_0" class="s6">Chapter 3: The Convolutional Neural Network</h1>
+<p> </p>
+<p>All of the networks we’ve seen so far have one thing in common: all the nodes in one layer are connected to all the nodes in the next layer. This is the “standard” feedforward neural network. With convolutional neural networks you will see how that changes.</p>
+<p> </p>
+<p>Note that most of this material is inspired by LeCun, 1998 (Gradient-based learning applied to document recognition), specifically the LeNet model.</p>
+<p> </p>
+<p>Why do convolution?</p>
+<p> </p>
+<p>Remember that you can think of convolution as a “sliding window” or a “sliding filter”. So, if we are looking for a feature in an image, let’s say for argument’s sake, a dog, then it doesn’t matter if the dog is in the top right corner, or in the bottom left corner.</p>
+<p> </p>
+<p>Our system should still be able to recognize that there is a dog in there somewhere.</p>
+<p> </p>
+<p>We call this “translational invariance”.</p>
+<p> </p>
+<p>Question to think about: How can we ensure the neural network has “rotational invariance?” What other kinds of invariances can you think of?</p>
+<p> </p>
+<p>Downsampling</p>
+<p> </p>
+<p>Another important operation we’ll need before we build the convolutional neural network is downsampling. So remember our audio sample where we did an echo - that was a 16kHz sample. Why 16kHz? Because this is adequate for representing voices.</p>
+<p> </p>
+<p>The telephone has a sampling rate of 8kHz - that’s why voices sound muffled over the phone.</p>
+<p> </p>
+<p>For images, we just want to know if after we did the convolution, was a feature present in a certain area of the image. We can do that by downsampling the image, or in other words, changing its resolution.</p>
+<p> </p>
+<p>So for example, we would downsample an image by converting it from 32x32 to 16x16, and that would mean we downsampled by a factor of 2 in both the horizontal and vertical direction.</p>
+<p> </p>
+<p>There are a couple of ways of doing this: one is called maxpooling, which means we take a 2x2 or 3x3 (or any other size) block and just output the maximum value in that block.</p>
+<p> </p>
+<p>Another way is average pooling - this means taking the average value over the block. We will just use maxpooling in our code.</p>
+<p> </p>
+<p>Theano has a function for this: theano.tensor.signal.downsample.max_pool_2d</p>
+<p> </p>
+<p>The simplest CNN</p>
+<p> </p>
+<p>The simplest convolutional net is just the kind I showed you in the introduction to this book. It does not even need to incorporate downsampling.</p>
+<p> </p>
+<p>Just compute the hidden layer as follows:</p>
+<p> </p>
+<p>Z = conv(X, W1)</p>
+<p>Y = softmax(Z.dot(W2))</p>
+<p> </p>
+<p>As stated previously, you could then train this simply by doing gradient descent.</p>
+<p> </p>
+<p>Exercise: Try this on MNIST. How well does it perform? Better or worse than a fully-connected MLP?</p>
+<p> </p>
+<p>The LeNet architecture</p>
+<p> </p>
+<p>Now we are finally at the point where I can describe the layout of a typical convolutional neural network, specifically the LeNet flavor.</p>
+<p> </p>
+<p>You will see that it is just a matter of joining up the operations we have already discussed.</p>
+<p> </p>
+<p>So in the first layer, you take the image, and keep all the colors and the original shape, meaning you don’t flatten it. (i.e. it remains (3 x W x H))</p>
+<p> </p>
+<p>Then you perform convolution on it.</p>
+<p> </p>
+<p>Next you do maxpooling to reduce the size of the features.</p>
+<p> </p>
+<p>Then you do another convolution and another maxpooling.</p>
+<p> </p>
+<p>Finally, you flatten these features into a vector and you put it into a regular, fully connected neural network like the ones we’ve been talking about.</p>
+<p> </p>
+<p>Schematically it would look like this:</p>
+<p> </p>
+<p>￼<span class="calibre10"><img src="OEBPS/Images/00005.jpeg" alt="LeNet.png" class="calibre11" /></span></p>
+<p> </p>
+<p> </p>
+<p>The basic pattern is:</p>
+<p>convolution / pool / convolution / pool / fully connected hidden layer / logistic regression</p>
+<p> </p>
+<p>Note that you can have arbitrarily many convolution + pool layers, and more fully connected layers.</p>
+<p> </p>
+<p>Some networks have only convolution. The design is up to you.</p>
+<p> </p>
+<p>Technicalities</p>
+<p> </p>
+<p>4-D tensor inputs: The dimension of the inputs is a 4-D tensor, and it’s pretty easy to see why. The image already takes up 3 dimensions, since we have height, width, and color. The 4th dimension is just the number of samples (i.e. for batch training).</p>
+<p> </p>
+<p>4-D tensor filters / kernels: You might be surprised to learn that the kernels are ALSO 4-D tensors. Now why is this? Well in the LeNet model, you have multiple kernels per image and a different set of kernels for each color channel. The next layer after the convolution is called a feature map. This feature map is the same size as the number of kernels. So basically you can think of this as, each kernel will extract a different feature, and place it onto the feature map. Example:</p>
+<p> </p>
+<p>Input image size: (3, 32, 32)</p>
+<p>First kernel size: (3, M1, 5, 5)</p>
+<p> </p>
+<p>Note that the order in which the dimensions appear is somewhat arbitrary. For example, the data from the MATLAB files has N as the last dimension, whereas Theano expects it to be in the first dimension.</p>
+<p> </p>
+<p>We’ll see that in TensorFlow the dimensions of the kernels are going to be different from Theano.</p>
+<p> </p>
+<p>Another thing to note is that the shapes of our filters are usually MUCH smaller than the image itself. What this means is that the same tiny filter gets applied across the entire image. This is the idea of <span class="c3">weight sharing</span>.</p>
+<p> </p>
+<p>By sharing this weight we’re introducing less parameters into the model, and this is going to help us generalize better, since as you know from my previous courses, when you have TOO many parameters, you’ll end up overfitting.</p>
+<p> </p>
+<p>You can think of this as a method of generalization.</p>
+<p> </p>
+<p>In the schematic above, we assume a pooling size of (2, 2), which is what we will also use in the code. This fits our data nicely because both 28 (MNIST) and 32 (SVHN) can be divided by 2 twice evenly.</p>
+<p> </p>
+<p>Training a CNN</p>
+<p> </p>
+<p>Now this is the cool part.</p>
+<p> </p>
+<p>It’s ridiculous how many people take my courses or read my books and ask things like, “But, but, … what about X modern technique?”</p>
+<p> </p>
+<p>Well, here’s how you train a CNN:</p>
+<p> </p>
+<p>W &lt;— W - learning_rate * dJ/dW</p>
+<p> </p>
+<p>Look familiar?</p>
+<p> </p>
+<p>That’s because it’s the same “backpropagation” (gradient descent) equation from plain neural networks!</p>
+<p> </p>
+<p>People think there is some kind of sorcery or well-kept secret behind all of this that is going to take years and years of effort for them to figure out.</p>
+<p> </p>
+<p>People have been using convolution since the 1700s. LeCun himself published his paper in 1998.</p>
+<p> </p>
+<p>Researchers conjure up new ways to hack together neural networks everyday. The ones that become popular are the ones that perform well.</p>
+<p> </p>
+<p>You can imagine, however, with so many researchers researching there is bound to be <span class="c4">someone</span> who does better than the others.</p>
+<p> </p>
+<p>You too, can be a deep learning researcher. Just try different things. Be creative. Use backprop. Easy, right?</p>
+<p> </p>
+<p>Remember, in Theano, it’s just:</p>
+<p> </p>
+<p>param = param - learning_rate * T.grad(cost, param)</p>
+<p> </p>
+<p> <span id="part0004.html#chapter-4-434"></span></p>
+<h1 id="part0004.html#calibre_pb_1" class="s11"> </h1>
+<div id="part0004.html#calibre_pb_2" class="calibre3">
+
+</div>
+</div>
+<p><span id="part0005.html"></span></p>
+<div class="body">
+<span id="part0005.html#chapter-5" class="calibre1"></span>
+<h1 id="part0005.html#calibre_pb_0" class="s6">Chapter 4: Sample Code in Theano</h1>
+<p> </p>
+<p>In this chapter we are going to look at the components of the Theano convolutional neural network. This code can also be found at <a href="https://github.com/lazyprogrammer/machine_learning_examples/blob/master/cnn_class/cnn_theano.py" class="calibre2"><span class="c2" dir="ltr">https://github.com/lazyprogrammer/machine_learning_examples/blob/master/cnn_class/cnn_theano.py</span></a></p>
+<p> </p>
+<p>So the first thing you might be wondering after learning about convolution and downsampling is - does Theano have functions for these? And of course the answer is yes.</p>
+<p> </p>
+<p>In the LeNet we always do the convolution followed by pooling, so we just call it convpool.</p>
+<p> </p>
+<p>def convpool(X, W, b, poolsize=(2, 2)):</p>
+<p>conv_out = conv2d(input=X, filters=W)</p>
+<p>pooled_out = downsample.max_pool_2d(</p>
+<p>input=conv_out,</p>
+<p>ds=poolsize,</p>
+<p>ignore_border=True</p>
+<p>)</p>
+<p>return relu(pooled_out + b.dimshuffle('x', 0, 'x', 'x'))</p>
+<p> </p>
+<p>Notice that max pool requires some additional parameters.</p>
+<p> </p>
+<p>The last step where we call the function dimshuffle() on the bias does a broadcasting since b is a 1-D vector and after the conv_pool operation you get a 4-D tensor. You’ll see that TensorFlow has a function that encapsulates this for us.</p>
+<p> </p>
+<p>The next component is the rearranging of the input. Remember that MATLAB does things a bit weirdly and puts the index to each sample in the LAST dimension, but Theano expects it to be in the FIRST dimension. It also happens to expect the color dimension to come next. So that is what this code here is doing.</p>
+<p> </p>
+<p>def rearrange(X):</p>
+<p># input is (32, 32, 3, N)</p>
+<p># output is (N, 3, 32, 32)</p>
+<p>N = X.shape[-1]</p>
+<p>out = np.zeros((N, 3, 32, 32), dtype=np.float32)</p>
+<p>for i in xrange(N):</p>
+<p>for j in xrange(3):</p>
+<p>out[i, j, :, :] = X[:, :, j, i]</p>
+<p>return out / 255</p>
+<p> </p>
+<p>Also, as you know with neural networks we like our data to stay in a small range, so we divide by the maximum value at the end which is 255.</p>
+<p> </p>
+<p>It’s also good to keep track of the size of each matrix as each operation is done. You’ll see that with TensorFlow, by default each library treats the edges of the result of the convolution a little differently, and the order of each dimension is also different.</p>
+<p> </p>
+<p>So in Theano, our first filter has the dimensions “num_feature_maps”, which you can think of as the number of kernels or filters we are going to create, then it has “num_color_channels”, which is 3 for a color image, and then the filter width and height. I’ve chosen to use 5 since that’s what I usually see in existing code, but of course this is a hyperparameter that you can optimize.</p>
+<p> </p>
+<p># (num_feature_maps, num_color_channels, filter_width, filter_height)</p>
+<p>W1_shape = (20, 3, 5, 5)</p>
+<p>W1 = np.random.randn(W1_shape)</p>
+<p>b1_init = np.zeros(W1_shape[0])</p>
+<p> </p>
+<p># (num_feature_maps, old_num_feature_maps, filter_width, filter_height)</p>
+<p>W2_shape = (50, 20, 5, 5)</p>
+<p>W2 = np.random.randn(W2_shape)</p>
+<p>b2_init = np.zeros(W2_shape[0])</p>
+<p> </p>
+<p>W3_init = np.random.randn(W2_shape[0]*5*5, M)</p>
+<p>b3_init = np.zeros(M)</p>
+<p> </p>
+<p>W4_init = np.random.randn(M, K)</p>
+<p>b4_init = np.zeros(K)</p>
+<p> </p>
+<p>Note that the bias is the same size as the number of feature maps.</p>
+<p> </p>
+<p>Also note that this filter is a 4-D tensor, which is different from the filters we were working with previously, which were 1-D and 2-D filters.</p>
+<p> </p>
+<p>So the OUTPUT of that first conv_pool operation will also be a 4-D tensor. The first dimension of course will be the batch size. The second is now no longer color, but the number of feature maps, which after the first stage would be 20. The next 2 are the dimensions of the new image after conv_pooling, which is 32 - 5 + 1, which is 28, and then divided by 2 which is 14.</p>
+<p> </p>
+<p>In the next stage, we’ll use a filter of size 50 x 20 x 5 x 5. This means that we now have 50 feature maps. So the output of this will have the first 2 dimensions as batch_size and 50. And then next 2 dimensions will be the new image after conv_pooling, which will be 14 - 5 + 1, which is 10, and then divided by 2 which is 5.</p>
+<p> </p>
+<p>In the next stage we pass everything into a vanilla, fully-connected ANN, which we’ve used before. Of course this means we have to flatten our output from the previous layer from 4-dimensions to 2-dimensions.</p>
+<p> </p>
+<p>Since that image was 5x5 and had 50 feature maps, the new flattened dimension will be 50x5x5.</p>
+<p> </p>
+<p>Now that we have all the initial weights and operations we need, we can compute the output of the neural network. So we do the convpool twice, and then notice this flatten() operation before I do the dot product. That’s because Z2, after convpooling, will still be an image.</p>
+<p> </p>
+<p># forward pass</p>
+<p>Z1 = convpool(X, W1, b1)</p>
+<p>Z2 = convpool(Z1, W2, b2)</p>
+<p>Z3 = relu(Z2.flatten(ndim=2).dot(W3) + b3)</p>
+<p>pY = T.nnet.softmax(Z3.dot(W4) + b4)</p>
+<p> </p>
+<p>But if you call flatten() by itself it’ll turn into a 1-D array, which we don’t want, and luckily Theano provides us with a parameter that allows us to control how much to flatten the array. ndim=2 means to flatten all the dimensions after the 2nd dimension.</p>
+<p> </p>
+<p>The full code is as follows:</p>
+<p> </p>
+<p>import numpy as np</p>
+<p>import theano</p>
+<p>import theano.tensor as T</p>
+<p>import matplotlib.pyplot as plt</p>
+<p> </p>
+<p>from theano.tensor.nnet import conv2d</p>
+<p>from theano.tensor.signal import downsample</p>
+<p> </p>
+<p>from scipy.io import loadmat</p>
+<p>from sklearn.utils import shuffle</p>
+<p> </p>
+<p>from datetime import datetime</p>
+<p> </p>
+<p> </p>
+<p>def error_rate(p, t):</p>
+<p>return np.mean(p != t)</p>
+<p> </p>
+<p> </p>
+<p>def relu(a):</p>
+<p>return a * (a &gt; 0)</p>
+<p> </p>
+<p> </p>
+<p>def y2indicator(y):</p>
+<p>N = len(y)</p>
+<p>ind = np.zeros((N, 10))</p>
+<p>for i in xrange(N):</p>
+<p>ind[i, y[i]] = 1</p>
+<p>return ind</p>
+<p> </p>
+<p> </p>
+<p>def convpool(X, W, b, poolsize=(2, 2)):</p>
+<p>conv_out = conv2d(input=X, filters=W)</p>
+<p> </p>
+<p># downsample each feature map individually, using maxpooling</p>
+<p>pooled_out = downsample.max_pool_2d(</p>
+<p>input=conv_out,</p>
+<p>ds=poolsize,</p>
+<p>ignore_border=True</p>
+<p>)</p>
+<p>return relu(pooled_out + b.dimshuffle('x', 0, 'x', 'x'))</p>
+<p> </p>
+<p> </p>
+<p>def init_filter(shape, poolsz):</p>
+<p>w = np.random.randn(*shape) / np.sqrt(np.prod(shape[1:]) + shape[0]*np.prod(shape[2:] / np.prod(poolsz)))</p>
+<p>return w.astype(np.float32)</p>
+<p> </p>
+<p> </p>
+<p>def rearrange(X):</p>
+<p># input is (32, 32, 3, N)</p>
+<p># output is (N, 3, 32, 32)</p>
+<p>N = X.shape[-1]</p>
+<p>out = np.zeros((N, 3, 32, 32), dtype=np.float32)</p>
+<p>for i in xrange(N):</p>
+<p>for j in xrange(3):</p>
+<p>out[i, j, :, :] = X[:, :, j, i]</p>
+<p>return out / 255</p>
+<p> </p>
+<p> </p>
+<p>def main():</p>
+<p># step 1: load the data, transform as needed</p>
+<p>train = loadmat('../large_files/train_32x32.mat')</p>
+<p>test = loadmat('../large_files/test_32x32.mat')</p>
+<p> </p>
+<p># Need to scale! don't leave as 0..255</p>
+<p># Y is a N x 1 matrix with values 1..10 (MATLAB indexes by 1)</p>
+<p># So flatten it and make it 0..9</p>
+<p># Also need indicator matrix for cost calculation</p>
+<p>Xtrain = rearrange(train['X'])</p>
+<p>Ytrain = train['y'].flatten() - 1</p>
+<p>del train</p>
+<p>Xtrain, Ytrain = shuffle(Xtrain, Ytrain)</p>
+<p>Ytrain_ind = y2indicator(Ytrain)</p>
+<p> </p>
+<p>Xtest = rearrange(test['X'])</p>
+<p>Ytest = test['y'].flatten() - 1</p>
+<p>del test</p>
+<p>Ytest_ind = y2indicator(Ytest)</p>
+<p> </p>
+<p> </p>
+<p>max_iter = 8</p>
+<p>print_period = 10</p>
+<p> </p>
+<p>lr = np.float32(0.00001)</p>
+<p>reg = np.float32(0.01)</p>
+<p>mu = np.float32(0.99)</p>
+<p> </p>
+<p>N = Xtrain.shape[0]</p>
+<p>batch_sz = 500</p>
+<p>n_batches = N / batch_sz</p>
+<p> </p>
+<p>M = 500</p>
+<p>K = 10</p>
+<p>poolsz = (2, 2)</p>
+<p> </p>
+<p># after conv will be of dimension 32 - 5 + 1 = 28</p>
+<p># after downsample 28 / 2 = 14</p>
+<p>W1_shape = (20, 3, 5, 5) # (num_feature_maps, num_color_channels, filter_width, filter_height)</p>
+<p>W1_init = init_filter(W1_shape, poolsz)</p>
+<p>b1_init = np.zeros(W1_shape[0], dtype=np.float32) # one bias per output feature map</p>
+<p> </p>
+<p># after conv will be of dimension 14 - 5 + 1 = 10</p>
+<p># after downsample 10 / 2 = 5</p>
+<p>W2_shape = (50, 20, 5, 5) # (num_feature_maps, old_num_feature_maps, filter_width, filter_height)</p>
+<p>W2_init = init_filter(W2_shape, poolsz)</p>
+<p>b2_init = np.zeros(W2_shape[0], dtype=np.float32)</p>
+<p> </p>
+<p># vanilla ANN weights</p>
+<p>W3_init = np.random.randn(W2_shape[0]*5*5, M) / np.sqrt(W2_shape[0]*5*5 + M)</p>
+<p>b3_init = np.zeros(M, dtype=np.float32)</p>
+<p>W4_init = np.random.randn(M, K) / np.sqrt(M + K)</p>
+<p>b4_init = np.zeros(K, dtype=np.float32)</p>
+<p> </p>
+<p> </p>
+<p># step 2: define theano variables and expressions</p>
+<p>X = T.tensor4('X', dtype='float32')</p>
+<p>Y = T.matrix('T')</p>
+<p>W1 = theano.shared(W1_init, 'W1')</p>
+<p>b1 = theano.shared(b1_init, 'b1')</p>
+<p>W2 = theano.shared(W2_init, 'W2')</p>
+<p>b2 = theano.shared(b2_init, 'b2')</p>
+<p>W3 = theano.shared(W3_init.astype(np.float32), 'W3')</p>
+<p>b3 = theano.shared(b3_init, 'b3')</p>
+<p>W4 = theano.shared(W4_init.astype(np.float32), 'W4')</p>
+<p>b4 = theano.shared(b4_init, 'b4')</p>
+<p> </p>
+<p># momentum changes</p>
+<p>dW1 = theano.shared(np.zeros(W1_init.shape, dtype=np.float32), 'dW1')</p>
+<p>db1 = theano.shared(np.zeros(b1_init.shape, dtype=np.float32), 'db1')</p>
+<p>dW2 = theano.shared(np.zeros(W2_init.shape, dtype=np.float32), 'dW2')</p>
+<p>db2 = theano.shared(np.zeros(b2_init.shape, dtype=np.float32), 'db2')</p>
+<p>dW3 = theano.shared(np.zeros(W3_init.shape, dtype=np.float32), 'dW3')</p>
+<p>db3 = theano.shared(np.zeros(b3_init.shape, dtype=np.float32), 'db3')</p>
+<p>dW4 = theano.shared(np.zeros(W4_init.shape, dtype=np.float32), 'dW4')</p>
+<p>db4 = theano.shared(np.zeros(b4_init.shape, dtype=np.float32), 'db4')</p>
+<p> </p>
+<p># forward pass</p>
+<p>Z1 = convpool(X, W1, b1)</p>
+<p>Z2 = convpool(Z1, W2, b2)</p>
+<p>Z3 = relu(Z2.flatten(ndim=2).dot(W3) + b3)</p>
+<p>pY = T.nnet.softmax( Z3.dot(W4) + b4)</p>
+<p> </p>
+<p># define the cost function and prediction</p>
+<p>params = (W1, b1, W2, b2, W3, b3, W4, b4)</p>
+<p>reg_cost = reg*np.sum((param*param).sum() for param in params)</p>
+<p>cost = -(Y * T.log(pY)).sum() + reg_cost</p>
+<p>prediction = T.argmax(pY, axis=1)</p>
+<p> </p>
+<p># step 3: training expressions and functions</p>
+<p># you could of course store these in a list =)</p>
+<p>update_W1 = W1 + mu*dW1 - lr*T.grad(cost, W1)</p>
+<p>update_b1 = b1 + mu*db1 - lr*T.grad(cost, b1)</p>
+<p>update_W2 = W2 + mu*dW2 - lr*T.grad(cost, W2)</p>
+<p>update_b2 = b2 + mu*db2 - lr*T.grad(cost, b2)</p>
+<p>update_W3 = W3 + mu*dW3 - lr*T.grad(cost, W3)</p>
+<p>update_b3 = b3 + mu*db3 - lr*T.grad(cost, b3)</p>
+<p>update_W4 = W4 + mu*dW4 - lr*T.grad(cost, W4)</p>
+<p>update_b4 = b4 + mu*db4 - lr*T.grad(cost, b4)</p>
+<p> </p>
+<p># update weight changes</p>
+<p>update_dW1 = mu*dW1 - lr*T.grad(cost, W1)</p>
+<p>update_db1 = mu*db1 - lr*T.grad(cost, b1)</p>
+<p>update_dW2 = mu*dW2 - lr*T.grad(cost, W2)</p>
+<p>update_db2 = mu*db2 - lr*T.grad(cost, b2)</p>
+<p>update_dW3 = mu*dW3 - lr*T.grad(cost, W3)</p>
+<p>update_db3 = mu*db3 - lr*T.grad(cost, b3)</p>
+<p>update_dW4 = mu*dW4 - lr*T.grad(cost, W4)</p>
+<p>update_db4 = mu*db4 - lr*T.grad(cost, b4)</p>
+<p> </p>
+<p>train = theano.function(</p>
+<p>inputs=[X, Y],</p>
+<p>updates=[</p>
+<p>(W1, update_W1),</p>
+<p>(b1, update_b1),</p>
+<p>(W2, update_W2),</p>
+<p>(b2, update_b2),</p>
+<p>(W3, update_W3),</p>
+<p>(b3, update_b3),</p>
+<p>(W4, update_W4),</p>
+<p>(b4, update_b4),</p>
+<p>(dW1, update_dW1),</p>
+<p>(db1, update_db1),</p>
+<p>(dW2, update_dW2),</p>
+<p>(db2, update_db2),</p>
+<p>(dW3, update_dW3),</p>
+<p>(db3, update_db3),</p>
+<p>(dW4, update_dW4),</p>
+<p>(db4, update_db4),</p>
+<p>],</p>
+<p>)</p>
+<p> </p>
+<p># create another function for this because we want it over the whole dataset</p>
+<p>get_prediction = theano.function(</p>
+<p>inputs=[X, Y],</p>
+<p>outputs=[cost, prediction],</p>
+<p>)</p>
+<p> </p>
+<p>t0 = datetime.now()</p>
+<p>LL = []</p>
+<p>for i in xrange(max_iter):</p>
+<p>for j in xrange(n_batches):</p>
+<p>Xbatch = Xtrain[j*batch_sz:(j*batch_sz + batch_sz),]</p>
+<p>Ybatch = Ytrain_ind[j*batch_sz:(j*batch_sz + batch_sz),]</p>
+<p> </p>
+<p>train(Xbatch, Ybatch)</p>
+<p>if j % print_period == 0:</p>
+<p>cost_val, prediction_val = get_prediction(Xtest, Ytest_ind)</p>
+<p>err = error_rate(prediction_val, Ytest)</p>
+<p>print "Cost / err at iteration i=%d, j=%d: %.3f / %.3f" % (i, j, cost_val, err)</p>
+<p>LL.append(cost_val)</p>
+<p>print "Elapsed time:", (datetime.now() - t0)</p>
+<p>plt.plot(LL)</p>
+<p>plt.show()</p>
+<p> </p>
+<p> </p>
+<p>if __name__ == '__main__':</p>
+<p>main()</p>
+<p> <span id="part0005.html#chapter-5-731"></span></p>
+<h1 id="part0005.html#calibre_pb_1" class="s11"> </h1>
+<div id="part0005.html#calibre_pb_2" class="calibre3">
+
+</div>
+</div>
+<p><span id="part0006.html"></span></p>
+<div class="body">
+<span id="part0006.html#chapter-6" class="calibre1"></span>
+<h1 id="part0006.html#calibre_pb_0" class="s6">Chapter 5: Sample Code in TensorFlow</h1>
+<p> </p>
+<p>In this chapter we are going to examine the code at:</p>
+<p><a href="https://github.com/lazyprogrammer/machine_learning_examples/blob/master/cnn_class/cnn_tf.py" class="calibre2"><span class="c1" dir="ltr">https://github.com/lazyprogrammer/machine_learning_examples/blob/master/cnn_class/cnn_tf.py</span></a></p>
+<p> </p>
+<p>We are going to do a similar thing that we did with Theano, which is examine each part of the code more in depth before putting it all together.</p>
+<p> </p>
+<p>Hopefully it helps you guys isolate each of the parts and gain an understanding of how they work.</p>
+<p> </p>
+<p>This is the ConvPool in TensorFlow. It’s almost the same as what we did with Theano except that the conv2d() function takes in a new parameter called strides.</p>
+<p> </p>
+<p> </p>
+<p>def convpool(X, W, b):</p>
+<p># just assume pool size is (2,2) because we need to augment it with 1s</p>
+<p>conv_out = tf.nn.conv2d(X, W, strides=[1, 1, 1, 1], padding='SAME')</p>
+<p>conv_out = tf.nn.bias_add(conv_out, b)</p>
+<p>pool_out = tf.nn.max_pool(conv_out, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')</p>
+<p>return pool_out</p>
+<p> </p>
+<p>In the past we just assumed that we had to drag the filter along every point of the signal, but in fact we can move with any size step we want, and that’s what stride is. We’re also going to use the padding parameter to control the size of the output.</p>
+<p> </p>
+<p>Remember that the bias is a 1-D vector, and we used the dimshuffle function in Theano to add it to the convolution output. Here we can just use a function that TensorFlow built called bias_add().</p>
+<p> </p>
+<p>Next we call the max_pool() function. Notice that the ksize parameter is kind of like the poolsize parameter we had with Theano, but it’s now 4-D instead of 2-D. We just add ones at the ends. Notice that this function ALSO takes in a strides parameter, meaning we can max_pool at EVERY step, but we’ll just use non-overlapping sub-images like we did previously.</p>
+<p> </p>
+<p>The next step is to rearrange the inputs. Remember that convolution in Theano is not the same as convolution in TensorFlow. That means we have to adjust not only the input dimensions but the filter dimensions as well. The only change with the inputs is that the color now comes last.</p>
+<p> </p>
+<p>def rearrange(X):</p>
+<p># input is (32, 32, 3, N)</p>
+<p># output is (N, 32, 32, 3)</p>
+<p>N = X.shape[-1]</p>
+<p>out = np.zeros((N, 32, 32, 3), dtype=np.float32)</p>
+<p>for i in xrange(N):</p>
+<p>for j in xrange(3):</p>
+<p>out[i, :, :, j] = X[:, :, j, i]</p>
+<p>return out / 255</p>
+<p> </p>
+<p>The next step is unique to the TensorFlow implementation. If you recall, TensorFlow allows us to not have to specify the size of each dimension in its input.</p>
+<p> </p>
+<p>This is great and allows for a lot of flexibility, but I hit a snag during development, which is my RAM started swapping when I did this. If you haven’t noticed yet the size of the SVHN data is pretty big, about 73k samples.</p>
+<p> </p>
+<p>So one way around this is to make the shapes constant, which you’ll see later. That means we’ll always have to pass in batch_sz number of samples each time, which means the total number of samples we use has to be a multiple of it. In the code I used exact numbers but you can also calculate it using the data.</p>
+<p> </p>
+<p>X = tf.placeholder(tf.float32, shape=(batch_sz, 32, 32, 3), name='X')</p>
+<p>T = tf.placeholder(tf.float32, shape=(batch_sz, K), name='T')</p>
+<p> </p>
+<p>Just to reinforce this idea, the filter is going to be in a different order than before. So now the dimensions of the image filter come first, then the number of color channels, then the number of feature maps.</p>
+<p> </p>
+<p># (filter_width, filter_height, num_color_channels, num_feature_maps)</p>
+<p>W1_shape = (5, 5, 3, 20)</p>
+<p>W1_init = init_filter(W1_shape, poolsz)</p>
+<p>b1_init = np.zeros(W1_shape[-1], dtype=np.float32) # one bias per output feature map</p>
+<p> </p>
+<p># (filter_width, filter_height, old_num_feature_maps, num_feature_maps)</p>
+<p>W2_shape = (5, 5, 20, 50)</p>
+<p>W2_init = init_filter(W2_shape, poolsz)</p>
+<p>b2_init = np.zeros(W2_shape[-1], dtype=np.float32)</p>
+<p> </p>
+<p># vanilla ANN weights</p>
+<p>W3_init = np.random.randn(W2_shape[-1]*8*8, M) / np.sqrt(W2_shape[-1]*8*8 + M)</p>
+<p>b3_init = np.zeros(M, dtype=np.float32)</p>
+<p>W4_init = np.random.randn(M, K) / np.sqrt(M + K)</p>
+<p>b4_init = np.zeros(K, dtype=np.float32)</p>
+<p> </p>
+<p>For the vanilla ANN portion, also notice that the outputs of the convolution are now a different size. So now it’s 8 instead of 5.</p>
+<p> </p>
+<p>For the forward pass, the first 2 parts are the same as Theano.</p>
+<p> </p>
+<p>One thing that’s different is TensorFlow objects don’t have a flatten method, so we have to use reshape.</p>
+<p> </p>
+<p>Z1 = convpool(X, W1, b1)</p>
+<p>Z2 = convpool(Z1, W2, b2)</p>
+<p>Z2_shape = Z2.get_shape().as_list()</p>
+<p>Z2r = tf.reshape(Z2, [Z2_shape[0], np.prod(Z2_shape[1:])])</p>
+<p>Z3 = tf.nn.relu( tf.matmul(Z2r, W3) + b3 )</p>
+<p>Yish = tf.matmul(Z3, W4) + b4</p>
+<p> </p>
+<p>Luckily this is pretty straightforward EVEN when you pass in None for the input shape parameter. You can just pass in -1 in reshape and it will be automatically be calculated. But as you can imagine this will make your computation take longer.</p>
+<p> </p>
+<p>The last step is to calculate the output just before the softmax. Remember that with TensorFlow the cost function requires the logits without softmaxing, so we won’t do the softmax at this point.</p>
+<p> </p>
+<p>The full code is as follows:</p>
+<p> </p>
+<p>import numpy as np</p>
+<p>import tensorflow as tf</p>
+<p>import matplotlib.pyplot as plt</p>
+<p> </p>
+<p>from datetime import datetime</p>
+<p>from scipy.signal import convolve2d</p>
+<p>from scipy.io import loadmat</p>
+<p>from sklearn.utils import shuffle</p>
+<p> </p>
+<p> </p>
+<p>def y2indicator(y):</p>
+<p>N = len(y)</p>
+<p>ind = np.zeros((N, 10))</p>
+<p>for i in xrange(N):</p>
+<p>ind[i, y[i]] = 1</p>
+<p>return ind</p>
+<p> </p>
+<p> </p>
+<p>def error_rate(p, t):</p>
+<p>return np.mean(p != t)</p>
+<p> </p>
+<p> </p>
+<p>def convpool(X, W, b):</p>
+<p># just assume pool size is (2,2) because we need to augment it with 1s</p>
+<p>conv_out = tf.nn.conv2d(X, W, strides=[1, 1, 1, 1], padding='SAME')</p>
+<p>conv_out = tf.nn.bias_add(conv_out, b)</p>
+<p>pool_out = tf.nn.max_pool(conv_out, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')</p>
+<p>return pool_out</p>
+<p> </p>
+<p> </p>
+<p>def init_filter(shape, poolsz):</p>
+<p>w = np.random.randn(*shape) / np.sqrt(np.prod(shape[:-1]) + shape[-1]*np.prod(shape[:-2] / np.prod(poolsz)))</p>
+<p>return w.astype(np.float32)</p>
+<p> </p>
+<p> </p>
+<p>def rearrange(X):</p>
+<p># input is (32, 32, 3, N)</p>
+<p># output is (N, 32, 32, 3)</p>
+<p>N = X.shape[-1]</p>
+<p>out = np.zeros((N, 32, 32, 3), dtype=np.float32)</p>
+<p>for i in xrange(N):</p>
+<p>for j in xrange(3):</p>
+<p>out[i, :, :, j] = X[:, :, j, i]</p>
+<p>return out / 255</p>
+<p> </p>
+<p> </p>
+<p>def main():</p>
+<p>train = loadmat('../large_files/train_32x32.mat') # N = 73257</p>
+<p>test = loadmat('../large_files/test_32x32.mat') # N = 26032</p>
+<p> </p>
+<p># Need to scale! don't leave as 0..255</p>
+<p># Y is a N x 1 matrix with values 1..10 (MATLAB indexes by 1)</p>
+<p># So flatten it and make it 0..9</p>
+<p># Also need indicator matrix for cost calculation</p>
+<p>Xtrain = rearrange(train['X'])</p>
+<p>Ytrain = train['y'].flatten() - 1</p>
+<p>print len(Ytrain)</p>
+<p>del train</p>
+<p>Xtrain, Ytrain = shuffle(Xtrain, Ytrain)</p>
+<p>Ytrain_ind = y2indicator(Ytrain)</p>
+<p> </p>
+<p>Xtest = rearrange(test['X'])</p>
+<p>Ytest = test['y'].flatten() - 1</p>
+<p>del test</p>
+<p>Ytest_ind = y2indicator(Ytest)</p>
+<p> </p>
+<p># gradient descent params</p>
+<p>max_iter = 20</p>
+<p>print_period = 10</p>
+<p>N = Xtrain.shape[0]</p>
+<p>batch_sz = 500</p>
+<p>n_batches = N / batch_sz</p>
+<p> </p>
+<p># limit samples since input will always have to be same size</p>
+<p># you could also just do N = N / batch_sz * batch_sz</p>
+<p>Xtrain = Xtrain[:73000,]</p>
+<p>Ytrain = Ytrain[:73000]</p>
+<p>Xtest = Xtest[:26000,]</p>
+<p>Ytest = Ytest[:26000]</p>
+<p>Ytest_ind = Ytest_ind[:26000,]</p>
+<p> </p>
+<p># initialize weights</p>
+<p>M = 500</p>
+<p>K = 10</p>
+<p>poolsz = (2, 2)</p>
+<p> </p>
+<p>W1_shape = (5, 5, 3, 20) # (filter_width, filter_height, num_color_channels, num_feature_maps)</p>
+<p>W1_init = init_filter(W1_shape, poolsz)</p>
+<p>b1_init = np.zeros(W1_shape[-1], dtype=np.float32) # one bias per output feature map</p>
+<p> </p>
+<p>W2_shape = (5, 5, 20, 50) # (filter_width, filter_height, old_num_feature_maps, num_feature_maps)</p>
+<p>W2_init = init_filter(W2_shape, poolsz)</p>
+<p>b2_init = np.zeros(W2_shape[-1], dtype=np.float32)</p>
+<p> </p>
+<p># vanilla ANN weights</p>
+<p>W3_init = np.random.randn(W2_shape[-1]*8*8, M) / np.sqrt(W2_shape[-1]*8*8 + M)</p>
+<p>b3_init = np.zeros(M, dtype=np.float32)</p>
+<p>W4_init = np.random.randn(M, K) / np.sqrt(M + K)</p>
+<p>b4_init = np.zeros(K, dtype=np.float32)</p>
+<p> </p>
+<p> </p>
+<p># define variables and expressions</p>
+<p># using None as the first shape element takes up too much RAM unfortunately</p>
+<p>X = tf.placeholder(tf.float32, shape=(batch_sz, 32, 32, 3), name='X')</p>
+<p>T = tf.placeholder(tf.float32, shape=(batch_sz, K), name='T')</p>
+<p>W1 = tf.Variable(W1_init.astype(np.float32))</p>
+<p>b1 = tf.Variable(b1_init.astype(np.float32))</p>
+<p>W2 = tf.Variable(W2_init.astype(np.float32))</p>
+<p>b2 = tf.Variable(b2_init.astype(np.float32))</p>
+<p>W3 = tf.Variable(W3_init.astype(np.float32))</p>
+<p>b3 = tf.Variable(b3_init.astype(np.float32))</p>
+<p>W4 = tf.Variable(W4_init.astype(np.float32))</p>
+<p>b4 = tf.Variable(b4_init.astype(np.float32))</p>
+<p> </p>
+<p>Z1 = convpool(X, W1, b1)</p>
+<p>Z2 = convpool(Z1, W2, b2)</p>
+<p>Z2_shape = Z2.get_shape().as_list()</p>
+<p>Z2r = tf.reshape(Z2, [Z2_shape[0], np.prod(Z2_shape[1:])])</p>
+<p>Z3 = tf.nn.relu( tf.matmul(Z2r, W3) + b3 )</p>
+<p>Yish = tf.matmul(Z3, W4) + b4</p>
+<p> </p>
+<p>cost = tf.reduce_sum(tf.nn.softmax_cross_entropy_with_logits(Yish, T))</p>
+<p> </p>
+<p>train_op = tf.train.RMSPropOptimizer(0.0001, decay=0.99, momentum=0.9).minimize(cost)</p>
+<p> </p>
+<p># we'll use this to calculate the error rate</p>
+<p>predict_op = tf.argmax(Yish, 1)</p>
+<p> </p>
+<p>t0 = datetime.now()</p>
+<p>LL = []</p>
+<p>init = tf.initialize_all_variables()</p>
+<p>with tf.Session() as session:</p>
+<p>session.run(init)</p>
+<p> </p>
+<p>for i in xrange(max_iter):</p>
+<p>for j in xrange(n_batches):</p>
+<p>Xbatch = Xtrain[j*batch_sz:(j*batch_sz + batch_sz),]</p>
+<p>Ybatch = Ytrain_ind[j*batch_sz:(j*batch_sz + batch_sz),]</p>
+<p> </p>
+<p>if len(Xbatch) == batch_sz:</p>
+<p>session.run(train_op, feed_dict={X: Xbatch, T: Ybatch})</p>
+<p>if j % print_period == 0:</p>
+<p># due to RAM limitations we need to have a fixed size input</p>
+<p># so as a result, we have this ugly total cost and prediction computation</p>
+<p>test_cost = 0</p>
+<p>prediction = np.zeros(len(Xtest))</p>
+<p>for k in xrange(len(Xtest) / batch_sz):</p>
+<p>Xtestbatch = Xtest[k*batch_sz:(k*batch_sz + batch_sz),]</p>
+<p>Ytestbatch = Ytest_ind[k*batch_sz:(k*batch_sz + batch_sz),]</p>
+<p>test_cost += session.run(cost, feed_dict={X: Xtestbatch, T: Ytestbatch})</p>
+<p>prediction[k*batch_sz:(k*batch_sz + batch_sz)] = session.run(</p>
+<p>predict_op, feed_dict={X: Xtestbatch})</p>
+<p>err = error_rate(prediction, Ytest)</p>
+<p>print "Cost / err at iteration i=%d, j=%d: %.3f / %.3f" % (i, j, test_cost, err)</p>
+<p>LL.append(test_cost)</p>
+<p>print "Elapsed time:", (datetime.now() - t0)</p>
+<p>plt.plot(LL)</p>
+<p>plt.show()</p>
+<p> </p>
+<p> </p>
+<p>if __name__ == '__main__':</p>
+<p>main()</p>
+<p> <span id="part0006.html#chapter-6-978"></span></p>
+<h1 id="part0006.html#calibre_pb_1" class="s11"> </h1>
+<div id="part0006.html#calibre_pb_2" class="calibre3">
+
+</div>
+</div>
+<p><span id="part0007.html"></span></p>
+<div class="body">
+<span id="part0007.html#chapter-7" class="calibre1"></span>
+<h1 id="part0007.html#calibre_pb_0" class="s6">Conclusion</h1>
+<p> </p>
+<p><span id="part0007.html#b3"></span>I really hope you had as much fun reading this book as I did making it.</p>
+<p> </p>
+<p>Did you find anything confusing? Do you have any questions?</p>
+<p> </p>
+<p>I am always available to help. Just email me at: <a href="mailto:info@lazyprogrammer.me" class="calibre2"><span class="c5" dir="ltr">info@lazyprogrammer.me</span></a></p>
+<p> </p>
+<p>Do you want to learn more about deep learning? Perhaps online courses are more your style. I happen to have a few of them on Udemy.</p>
+<p> </p>
+<p>A lot of the material in this book is covered in this course, but you get to see me derive the formulas and write the code live:</p>
+<p> </p>
+<p><a href="https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow" class="calibre2"><span class="c" dir="ltr">Deep Learning: Convolutional Neural Networks in Python</span></a></p>
+<p> </p>
+<p><a href="https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow" class="calibre2"><span class="c" dir="ltr">https://www.udemy.com/deep-learning-convolutional-neural-networks-theano-tensorflow</span></a></p>
+<p> </p>
+<p>The background and prerequisite knowledge for deep learning and neural networks can be found in my class “Data Science: Deep Learning in Python” (officially known as “part 1” of the series). In this course I teach you the feedforward mechanism of a neural network (which I assumed you already knew for this book), and how to derive the training algorithm called backpropagation (which I also assumed you knew for this book):</p>
+<p> </p>
+<p><a href="https://udemy.com/data-science-deep-learning-in-python" class="calibre2"><span class="c5" dir="ltr">Data Science: Deep Learning in Python</span></a></p>
+<p> </p>
+<p><a href="https://udemy.com/data-science-deep-learning-in-python" class="calibre2"><span class="c5" dir="ltr">https://udemy.com/data-science-deep-learning-in-python</span></a></p>
+<p> </p>
+<p>The corresponding book on Kindle is:</p>
+<p> </p>
+<p><a href="https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01CVJ19E8" class="calibre2"><span class="c6" dir="ltr">https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01CVJ19E8</span></a></p>
+<p> </p>
+<p>Are you comfortable with this material, and you want to take your deep learning skillset to the next level? Then my follow-up Udemy course on deep learning is for you. Similar to previous book, I take you through the basics of Theano and TensorFlow - creating functions, variables, and expressions, and build up neural networks from scratch. I teach you about ways to accelerate the learning process, including batch gradient descent, momentum, and adaptive learning rates. I also show you live how to create a GPU instance on Amazon AWS EC2, and prove to you that training a neural network with GPU optimization can be orders of magnitude faster than on your CPU.</p>
+<p> </p>
+<p><a href="https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow/" class="calibre2"><span class="c5" dir="ltr">Data Science: Practical Deep Learning in Theano and TensorFlow</span></a></p>
+<p> </p>
+<p><a href="https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow" class="calibre2"><span class="c5" dir="ltr">https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow</span></a></p>
+<p> </p>
+<p>In part 4 of my deep learning series, I take you through unsupervised deep learning methods. We study principal components analysis (PCA), t-SNE (jointly developed by the godfather of deep learning, Geoffrey Hinton), deep autoencoders, and restricted Boltzmann machines (RBMs). I demonstrate how unsupervised pretraining on a deep network with autoencoders and RBMs can improve supervised learning performance.</p>
+<p> </p>
+<p><a href="https://www.udemy.com/unsupervised-deep-learning-in-python" class="calibre2"><span class="c" dir="ltr">Unsupervised Deep Learning in Python</span></a></p>
+<p> </p>
+<p><a href="https://www.udemy.com/unsupervised-deep-learning-in-python" class="calibre2"><span class="c" dir="ltr">https://www.udemy.com/unsupervised-deep-learning-in-python</span></a></p>
+<p> </p>
+<p>Would you like an introduction to the basic building block of neural networks - logistic regression? In this course I teach the theory of logistic regression (our computational model of the neuron), and give you an in-depth look at binary classification, manually creating features, and gradient descent. You might want to check this course out if you found the material in this book too challenging.</p>
+<p> </p>
+<p><a href="https://udemy.com/data-science-logistic-regression-in-python" class="calibre2"><span class="c5" dir="ltr">Data Science: Logistic Regression in Python</span></a></p>
+<p> </p>
+<p><a href="https://udemy.com/data-science-logistic-regression-in-python" class="calibre2"><span class="c5" dir="ltr">https://udemy.com/data-science-logistic-regression-in-python</span></a></p>
+<p> </p>
+<p>The corresponding book for Deep Learning Prerequisites is:</p>
+<p> </p>
+<p><a href="https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01D7GDRQ2" class="calibre2"><span class="c7" dir="ltr">https://kdp.amazon.com/amazon-dp-action/us/bookshelf.marketplacelink/B01D7GDRQ2</span></a></p>
+<p> </p>
+<p>To get an even simpler picture of machine learning in general, where we don’t even need gradient descent and can just solve for the optimal model parameters directly in “closed-form”, you’ll want to check out my first Udemy course on the classical statistical method - linear regression:</p>
+<p> </p>
+<p><a href="https://www.udemy.com/data-science-linear-regression-in-python" class="calibre2"><span class="c5" dir="ltr">Data Science: Linear Regression in Python</span></a></p>
+<p> </p>
+<p><a href="https://www.udemy.com/data-science-linear-regression-in-python" class="calibre2"><span class="c5" dir="ltr">https://www.udemy.com/data-science-linear-regression-in-python</span></a></p>
+<p> </p>
+<p>If you are interested in learning about how machine learning can be applied to language, text, and speech, you’ll want to check out my course on Natural Language Processing, or NLP:</p>
+<p> </p>
+<p><a href="https://www.udemy.com/data-science-natural-language-processing-in-python" class="calibre2"><span class="c5" dir="ltr">Data Science: Natural Language Processing in Python</span></a></p>
+<p> </p>
+<p><a href="https://www.udemy.com/data-science-natural-language-processing-in-python" class="calibre2"><span class="c5" dir="ltr">https://www.udemy.com/data-science-natural-language-processing-in-python</span></a></p>
+<p> </p>
+<p>If you are interested in learning SQL - structured query language - a language that can be applied to databases as small as the ones sitting on your iPhone, to databases as large as the ones that span multiple continents - and not only learn the mechanics of the language but know how to apply it to real-world data analytics and marketing problems? Check out my course here:</p>
+<p> </p>
+<p><a href="https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data" class="calibre2"><span class="c8" dir="ltr">SQL for Marketers: Dominate data analytics, data science, and big data</span></a></p>
+<p> </p>
+<p><a href="https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data" class="calibre2"><span class="c8" dir="ltr">https://www.udemy.com/sql-for-marketers-data-analytics-data-science-big-data</span></a></p>
+<p> </p>
+<p>Finally, I am <span class="c4">always</span> giving out <span class="c3">coupons</span> and letting you know when you can get my stuff for <span class="c3">free</span>. But you can only do this if you are a current student of mine! Here are some ways I notify my students about coupons and free giveaways:</p>
+<p> </p>
+<p>My newsletter, which you can sign up for at <a href="http://lazyprogrammer.me" class="calibre2"><span class="c5" dir="ltr">http://lazyprogrammer.me</span></a> (it comes with a free 6-week intro to machine learning course)</p>
+<p> </p>
+<p>My Twitter, <a href="https://twitter.com/lazy_scientist" class="calibre2"><span class="c5" dir="ltr">https://twitter.com/lazy_scientist</span></a></p>
+<p> </p>
+<p>My Facebook page, <a href="https://facebook.com/lazyprogrammer.me" class="calibre2"><span class="c5" dir="ltr">https://facebook.com/lazyprogrammer.me</span></a> (don’t forget to hit “like”!)</p>
+</div>
