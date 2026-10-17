@@ -1,0 +1,181 @@
+
+
+# MC Microsoft Certified Azure 数据基础认证学习指南：考试 DP-900
+
+本书旨在以适合考试权重的水平覆盖每个考试目标。下表详细列出了本书的考试覆盖情况，显示了每个部分的权重以及涵盖每个目标或子目标的章节：
+
+| Subject Area | % of Exam |
+| --- | --- |
+| Describe core data concepts | 15–20% |
+| Describe how to work with relational data on Azure | 25–30% |
+| Describe how to work with nonrelational data on Azure | 25–30% |
+| Describe an analytics workload on Azure | 25–30% |
+| **Total** | 100% |
+
+## Domain 1: Describe Core Data Components
+
+### Subdomain 1a: Describe types of core data workloads
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 1-1 Describe batch data | 1 |
+| 1-2 Describe streaming data | 1 |
+| 1-3 Describe the difference between batch and streaming data | 1 |
+| 1-4 Describe the characteristics of relational data | 1 |
+
+### Subdomain 1b: Describe data analytics core concepts
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 1-5 Describe data visualization (e.g., visualization, reporting, business intelligence (BI)) | 1 |
+| 1-6 Describe basic chart types such as bar charts and pie charts | 1 |
+| 1-7 Describe analytics techniques (e.g., descriptive, diagnostic, predictive, prescriptive, cognitive) | 1 |
+| 1-8 Describe ELT and ETL processing | 1 |
+| 1-9 Describe the concepts of data processing | 1 |
+
+## Domain 2: Describe How to Work with Relational Data on Azure
+
+### Subdomain 2a: Describe relational data workloads
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 2-1 Identify the right data offering for a relational workload | 2 |
+| 2-2 Describe relational data structures (e.g., tables, index, views) | 2 |
+
+### Subdomain 2b: Describe relational Azure data services
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 2-3 Describe and compare PaaS, IaaS, and SaaS solutions | 2 |
+| 2-4 Describe Azure SQL database services including Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure Virtual Machine | 2 |
+| 2-5 Describe Azure Synapse Analytics | 2 |
+| 2-6 Describe Azure Database for PostgreSQL, Azure Database for MariaDB, and Azure Database for MySQL | 2 |
+
+### Subdomain 2c: Identify basic management tasks for relational data
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 2-7 Describe provisioning and deployment of relational data services | 2 |
+| 2-8 Describe method for deployment including the Azure portal, Azure Resource Manager templates, Azure PowerShell, and the Azure command-line interface (CLI) | 2 |
+| 2-9 Identify data security components (e.g., firewall, authentication) | 2 |
+| 2-10 Identify basic connectivity issues (e.g., accessing from on-premises, access with Azure VNETs, access from Internet, authentication, firewalls) | 2 |
+| 2-11 Identify query tools (e.g., Azure Data Studio, SQL Server Management Studio, sqlcmd utility, etc.) | 2 |
+
+### Subdomain 2d: Describe query techniques for data using SQL language
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 2-12 Compare Data Definition Language (DDL) versus Data Manipulation Language (DML) | 2 |
+| 2-13 Query relational data in Azure SQL Database, Azure Database for PostgreSQL, and Azure Database for MySQL | 2 |
+
+## Domain 3: Describe How to Work with Nonrelational Data on Azure
+
+### Subdomain 3a: Describe nonrelational data workloads
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 3-1 Describe the characteristics of nonrelational data | 3 |
+| 3-2 Describe the types of nonrelational and NoSQL data | 3 |
+| 3-3 Recommend the correct data store | 3 |
+| 3-4 Determine when to use nonrelational data | 3 |
+
+### Subdomain 3b: Describe nonrelational data offerings on Azure
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 3-5 Identify Azure data services for nonrelational workloads | 3 |
+| 3-6 Describe Azure Cosmos DB APIs | 3 |
+| 3-7 Describe Azure Table storage | 3 |
+| 3-8 Describe Azure Blob storage | 4 |
+| 3-9 Describe Azure File storage | 4 |
+
+### Subdomain 3c: Identify basic management tasks for nonrelational data
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 3-10 Describe provisioning and deployment of nonrelational data services | 3, 4 |
+| 3-11 Describe method for deployment including the Azure portal, Azure Resource Manager templates, Azure PowerShell, and the Azure command-line interface (CLI) | 3, 4 |
+| 3-12 Identify data security components (e.g., firewall, authentication, encryption) | 3, 4 |
+| 3-13 Identify basic connectivity issues (e.g., accessing from on-premises, access with Azure VNETs, access from Internet, authentication, firewalls) | 3, 4 |
+| 3-14 Identify management tools for nonrelational data | 3, 4 |
+
+## Domain 4: Describe an Analytics Workload on Azure
+
+### Subdomain 4a: Describe analytics workloads
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 4-1 Describe transactional workloads | 5 |
+| 4-2 Describe the difference between a transactional and an analytics workload | 5 |
+| 4-3 Describe the difference between batch and real time | 5 |
+| 4-4 Describe data warehousing workloads | 5 |
+| 4-5 Determine when a data warehouse solution is needed | 5 |
+
+### Subdomain 4b: Describe the components of a modern data warehouse
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 4-6 Describe Azure data services for modern data warehousing such as Azure Data Lake, Azure Synapse Analytics, Azure Databricks, and Azure HDInsight | 5 |
+| 4-7 Describe modern data warehousing architecture and workload | 5 |
+
+### Subdomain 4c: Describe data ingestion and processing on Azure
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 4-8 Describe common practices for data loading | 5 |
+| 4-9 Describe the components of Azure Data Factory (e.g., pipeline, activities, etc.) | 5 |
+| 4-10 Describe data processing options (e.g., Azure HDInsight, Azure Databricks Azure Synapse Analytics, Azure Data Factory) | 5 |
+
+### Subdomain 4d: Describe data visualization in Microsoft Power BI
+
+| Exam Objective | Chapter |
+| --- | --- |
+| 4-11 Describe the role of paginated reporting | 6 |
+| 4-12 Describe the role of interactive reports | 6 |
+| 4-13 Describe the role of dashboards | 6 |
+| 4-14 Describe the workflow in Power BI | 6 |
+
+## Assessment Test
+
+1. Which of the four Vs of big data is related to the speed at which data is processed?
+
+   1. Volume
+   2. Velocity
+   3. Value
+   4. Variety
+
+2. Which of the following components is not included in the Lambda architecture design pattern?
+
+   1. Batch layer
+   2. Serving layer
+   3. Speed layer
+   4. Transactional layer
+
+3. Which of the following transactional database properties ensures that once a transaction is committed, it will remain committed even if there is a system failure?
+
+   1. Consistency
+   2. Atomicity
+   3. Durability
+   4. Resilience
+
+4. Which of the following technologies can be used to orchestrate the flow of data in a data processing pipeline?
+
+   1. Azure SQL Database
+   2. Azure Data Factory
+   3. Azure Data Lake Storage Gen2
+   4. Azure Synapse Analytics dedicated SQL pools
+
+5. Is the italicized portion of the following statement true, or does it need to be replaced with one of the other fragments that appear below? Azure Synapse Analytics dedicated SQL pools is an example of a *relational* database.
+
+   1. Nonrelational
+   2. NoSQL
+   3. Object
+   4. No change needed
+
+6. Which of the following is not a core component of a relational database?
+
+   1. Document
+   2. Index
+   3. Table
+   4. View
+

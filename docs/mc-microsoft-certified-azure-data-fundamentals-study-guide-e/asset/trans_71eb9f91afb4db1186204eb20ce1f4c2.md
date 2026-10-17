@@ -1,0 +1,124 @@
+
+
+# O
+
+*   obfuscation, [110](#c02.xhtml#Page_110)–112
+*   object storage, [9](#c01.xhtml#Page_9), [230](#c05.xhtml#Page_230), [231](#c05.xhtml#Page_231). *See also* [file, object, and data lake storage](#b02.xhtml#ind775)
+*   online analytical processing (OLAP) systems
+    *   about, [5](#c01.xhtml#Page_5)
+    *   workload design considerations, [55](#c02.xhtml#Page_55)–58
+*   Online Services category (Power BI Desktop), [306](#c06.xhtml#Page_306)
+*   online transaction processing (OLTP) systems
+    *   about, [4](#c01.xhtml#Page_4)–5
+    *   workload design considerations, [52](#c02.xhtml#Page_52)–55
+*   OPENROWSET command, [289](#c05.xhtml#Page_289)–291
+*   OPENROWSET function, [287](#c05.xhtml#Page_287)
+*   open-source databases in Azure, [92](#c02.xhtml#Page_92)–96
+*   Orchestration button (Azure Data Factory Studio), [257](#c05.xhtml#Page_257)
+*   orchestration engine, [229](#c05.xhtml#Page_229)–230
+*   Other category (Power BI Desktop), [306](#c06.xhtml#Page_306)
+*   output, in ARM templates, [102](#c02.xhtml#Page_102)
+
+# P
+
+*   PaaS (Platform as a Service), [62](#c02.xhtml#Page_62)
+*   page blobs, [192](#c04.xhtml#Page_192)
+*   paginated reports (Power BI)
+    *   about, [320](#c06.xhtml#Page_320)–323
+    *   pinning, [319](#c06.xhtml#Page_319)
+*   parameters, in ARM templates, [101](#c02.xhtml#Page_101)
+*   partition keys, [151](#c03.xhtml#Page_151)
+*   PBIX files, [315](#c06.xhtml#Page_315)
+*   performance tiers, in Azure Storage, [180](#c04.xhtml#Page_180)
+*   phantom reads, [52](#c02.xhtml#Page_52)
+*   pie charts, [38](#c01.xhtml#Page_38)–39
+*   pipelines
+    *   about, [252](#c05.xhtml#Page_252)
+    *   creating with Copy Data Activity, [259](#c05.xhtml#Page_259)–267
+    *   Synapse, [269](#c05.xhtml#Page_269)
+*   PITR (point-in-time restore), [89](#c02.xhtml#Page_89)
+*   Platform as a Service (PaaS), [62](#c02.xhtml#Page_62)
+*   point-in-time restore (PITR), [89](#c02.xhtml#Page_89)
+*   PolyBase, [282](#c05.xhtml#Page_282)–285
+*   PostgreSQL
+    *   Azure databases for, [95](#c02.xhtml#Page_95)–96
+    *   querying, [128](#c02.xhtml#Page_128)
+*   Power BI
+    *   about, [269](#c05.xhtml#Page_269), [302](#c06.xhtml#Page_302)–303, [324](#c06.xhtml#Page_324)
+    *   exam essentials, [325](#c06.xhtml#Page_325)
+    *   review question answers, [337](#b01.xhtml#Page_337)
+    *   review questions, [326](#c06.xhtml#Page_326)–327
+    *   working with
+        *   about, [303](#c06.xhtml#Page_303)–304
+        *   dashboards, [318](#c06.xhtml#Page_318)–320
+        *   interactive reports, [304](#c06.xhtml#Page_304)–318
+        *   paginated reports, [320](#c06.xhtml#Page_320)–323
+*   Power BI Desktop, [302](#c06.xhtml#Page_302), [304](#c06.xhtml#Page_304)–315
+*   Power BI mobile app, [303](#c06.xhtml#Page_303)
+*   Power BI Q&A, [319](#c06.xhtml#Page_319)
+*   Power BI Report Builder, [303](#c06.xhtml#Page_303)
+*   Power BI Report Server, [303](#c06.xhtml#Page_303)
+*   Power BI report template (PBIT), [315](#c06.xhtml#Page_315)
+*   Power BI service
+    *   about, [302](#c06.xhtml#Page_302)–303
+    *   publishing and sharing interactive reports with, [315](#c06.xhtml#Page_315)–318
+*   Power Platform category (Power BI Desktop), [306](#c06.xhtml#Page_306)
+*   Power Query, ADF and, [25](#c01.xhtml#Page_25)
+*   Power Query Editor, [309](#c06.xhtml#Page_309)–311
+*   predictive analytics, [33](#c01.xhtml#Page_33)–34
+*   Premium tier
+    *   for Azure Files, [187](#c04.xhtml#Page_187)
+    *   for Azure SQL Database, [89](#c02.xhtml#Page_89)
+*   premium tier storage, [180](#c04.xhtml#Page_180)
+*   prescriptive analytics, [34](#c01.xhtml#Page_34)
+*   primary key, [58](#c02.xhtml#Page_58)
+*   PRIMARY KEY command, [122](#c02.xhtml#Page_122)
+*   private endpoint, [156](#c03.xhtml#Page_156)
+*   Private Link, [84](#c02.xhtml#Page_84)
+*   properties, [150](#c03.xhtml#Page_150)
+*   provisioned compute, [81](#c02.xhtml#Page_81)
+*   provisioned throughput, [149](#c03.xhtml#Page_149)
+*   public endpoint, [156](#c03.xhtml#Page_156)
+*   publishing interactive reports with Power BI service, [315](#c06.xhtml#Page_315)–318
+
+# Q
+
+*   query techniques, for SQL, [119](#c02.xhtml#Page_119)–128
+*   Quick Insights (Power BI), [319](#c06.xhtml#Page_319)
+
+# R
+
+*   RBAC (role-based access control)
+    *   about, [107](#c02.xhtml#Page_107)–108
+    *   for Azure Cosmos DB, [166](#c03.xhtml#Page_166)–167
+*   Read Committed isolation level, [52](#c02.xhtml#Page_52)
+*   Read Committed Snapshot isolation level, [53](#c02.xhtml#Page_53)
+*   Read Uncommitted isolation level, [52](#c02.xhtml#Page_52)
+*   real-time message ingestion, [17](#c01.xhtml#Page_17), [231](#c05.xhtml#Page_231)
+*   Recents button (Azure Databricks), [246](#c05.xhtml#Page_246)
+*   relational data structures
+    *   about, [58](#c02.xhtml#Page_58)
+    *   functions, [61](#c02.xhtml#Page_61)
+    *   indexes, [60](#c02.xhtml#Page_60)
+    *   stored procedures, [60](#c02.xhtml#Page_60)–61
+    *   tables, [58](#c02.xhtml#Page_58)
+    *   triggers, [61](#c02.xhtml#Page_61)
+    *   views, [58](#c02.xhtml#Page_58)–59
+*   relational databases
+    *   about, [3](#c01.xhtml#Page_3)–6, [129](#c02.xhtml#Page_129)–130
+    *   Azure offerings
+        *   about, [61](#c02.xhtml#Page_61)–62
+        *   Azure SQL, [63](#c02.xhtml#Page_63)–90
+        *   Azure Synapse Analytics dedicated SQL pools, [90](#c02.xhtml#Page_90)–92
+        *   open-source databases, [92](#c02.xhtml#Page_92)–96
+    *   exam essentials, [130](#c02.xhtml#Page_130)–131
+    *   features of
+        *   about, [51](#c02.xhtml#Page_51)
+        *   design considerations, [51](#c02.xhtml#Page_51)–61
+    *   management tasks for
+        *   about, [96](#c02.xhtml#Page_96)
+        *   common connectivity issues, [113](#c02.xhtml#Page_113)–115
+        *   database security, [106](#c02.xhtml#Page_106)–112
+        *   deployment scripting and automation, [96](#c02.xhtml#Page_96)–105
+        *   management tools, [115](#c02.xhtml#Page_115)–119
+
