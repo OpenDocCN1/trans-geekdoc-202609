@@ -1,0 +1,11 @@
+will be enhanced by expanding your knowledge of how they work. In the exercises at the end of the chapter, you will have the opportunity to research preventive methods for viruses and to try out antivirus methods from McAfee, Norton, AVG, Bitdefender, Kaspersky, Malwarebytes, and other antivirus vendors.
+
+Before proceeding, there are two important facts to keep in mind. The first is that the categories described in this chapter are not always clear in real-world malware. For example, a single piece of malware might combine virus functionality and spyware capabilities and might also be used to launch a DoS attack. It is still important to learn and understand the categories of malware, but you also need to be aware that many real-world malware examples overlap several categories. The second fact to keep in mind is that the world of malware is very dynamic. Things are changing fast. We will look at specific examples that are worthy of study due to their prominence in the history of malware, but it is a good idea to always stay current and constantly review the most recent malware outbreaks.
+
+# # Viruses
+
+By definition, a computer virus is a program that self-replicates. Some sources define a virus as a file that must attach to another file, such as an executable, in order to run. However, that is not accurate. Generally, a virus will also have some other unpleasant function, but the self-replication and rapid spread are the hallmarks of a virus. Often this growth, in and of itself, can be a problem for an infected network. Any rapidly spreading virus can reduce the functionality and responsiveness of a network. Simply by exceeding the traffic load that a network was designed to carry, the network may be rendered temporarily nonfunctional. The infamous ILOVEYOU virus actually had no negative payload, but the sheer volume of emails it generated bogged down many networks.
+
+# ## How a Virus Spreads
+
+A virus usually spreads primarily in one of just a few ways. The first is to simply email itself out to everyone in your email address book. Another method is to scan your computer for connections to a network and then copy itself to other machines on the network to which your computer has access. Viruses can also reside on portable media such as USB devices, CDs, or DVDs. It is also possible to

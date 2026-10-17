@@ -1,0 +1,125 @@
+...[/content]. Ensure we translate content but keep symbols, code unchanged. Also need to translate links content (the text inside brackets) but keep URL same. For list items, we need to translate the text after the link or after numbers. Also need to keep list markers (like "-", "1.", etc.) and preserve them.
+
+We need to parse the entire given text (the "以下是需要翻译的文本" includes many sections). Let's extract the content to translate.
+
+The content starts after "## 以下是需要翻译的文本" and includes:
+
+[content]
+
+2. Analyze that document.
+3. Write a brief essay giving your opinion of that disaster recovery plan. Also note any changes you would recommend to that policy.
+
+## Exercise 11.4: Learning About Audits
+
+1. Using the resources given or other resources, find at least one sample security audit plan.
+2. Analyze that document.
+3. Write a brief essay giving your opinion of that plan. Do you feel the audit plan is adequate? What changes might you recommend?
+
+### FYI: Helpful Resources
+
+For Exercises 11.2, 11.3, and 11.4, you may find the following resources helpful:
+
+- [www.cert.org](http://www.cert.org)
+- [www.sans.org](http://www.sans.org)
+
+## Exercise 11.5: Securing Your Computer
+
+Using either your home computer or a lab computer, follow the guidelines given in this chapter to secure that computer. Those steps should include the following:
+
+1. Scan for all patches and install them.
+2. Shut down all unneeded services.
+3. Install antivirus software. (A demo version can be used for this exercise.)
+4. Install antispyware software. (A demo version can be used for this exercise.)
+5. Set appropriate password permissions.
+
+## Exercise 11.6: Secure Passwords
+
+1. Using the Web or other resources, find out why longer passwords are harder to break.
+2. Also find out what other things you should do to make a password harder to crack.
+3. Write a brief essay describing what makes a perfect password.
+
+## Exercise 11.7: Securing a Server
+
+This exercise is for those students with access to a lab server. Using the guidelines discussed in this chapter, secure a lab server. The steps taken should include the following:
+
+1. Scan for all patches and install them.
+2. Shut down all unneeded services.
+3. Remove unneeded software.
+4. Install antivirus software. (A demo version can be used for this exercise.)
+5. Install antispyware software. (A demo version can be used for this exercise.)
+6. Set appropriate password permissions.
+7. Enable logging of any security violations. (Consult your operating system documentation for instructions.)
+
+## Exercise 11.8: Backups
+
+Using the Web and other resources as a guide, develop a backup plan for a web server. The plan should cover how frequently to back up and where to store the backup media.
+
+## Exercise 11.9: User Accounts
+
+This exercise is best done with a lab computer, not a machine actually in use.
+
+1. Locate user accounts. (In Windows 8 or Windows 10, this is done by going to Start > Control Panel > Administrative Tools > Computer Management and looking for Groups and Users.)
+2. Disable all default accounts (Guest, Administrator).
+
+## Projects
+
+### Project 11.1: Writing and Executing an Audit Plan
+
+With the knowledge you have gained while studying six chapters of this text and in examining security policies in the preceding exercises, it is now time to devise your own audit plan. This plan should detail all the steps in an audit.
+
+Note: The second part of this project is contingent upon getting permission from some organization to allow you to audit its security. It is also ideal for a group project.
+
+Taking the audit plan you wrote, audit a network. This audit can be conducted for any sort of organization, but you should make your first audit one with a small network (fewer than 100 users).
+
+### Project 11.2: Forming a Disaster Recovery Plan
+
+Using the knowledge you have gained thus far, create an IT disaster recovery plan for an organization. You may use a fictitious organization, but a real organization would be better.
+
+### Project 11.3: Writing a Security Policy Document
+
+Note: This project is designed as a group project.
+
+It is now time to bring all you have learned thus far together. Write a complete set of security policies for an organization. Again, you may use a fictitious company, but real organizations are better. This set of policies must cover user access, password policies, frequency of audits (both internal and external), minimum security requirements, guidelines for web surfing, and so on.
+
+### Project 11.4: Secure Web Servers
+
+Using the information in this chapter as well as other resources, come up with a strategy specifically for securing a web server. This strategy should include the security of the server itself as well as securing the network from the server.
+
+### Project 11.5: Adding Your Own Guidelines
+
+Note: This project is ideal for a group project.
+
+This chapter has outlined some general procedures for security. Write an essay detailing your own additional guidelines. These can be guidelines for individual computers, servers, networks, or any combination thereof.
+
+Juan Garcia is the network administrator for a small company that also maintains its own web server. He has taken the following precautions:
+
+- All computers are patched, have antivirus software, and have unneeded services shut down.
+- The network has a firewall with proxy server and IDS.
+- The organization has a policy requiring passwords of ten characters in length, and they must be changed every 90 days.
+
+Consider the following questions:
+
+1. Has Juan done enough to secure the network?
+2. What other actions would you recommend he take?
+
+## Chapter 12. Cyber Terrorism and Information Warfare
+
+After reading this chapter and completing the exercises, you will be able to do the following:
+
+- Explain what cyber terrorism is and how it has been used in some actual cases
+- Understand the basics of information warfare
+- Have a working knowledge of some plausible cyber terrorism scenarios
+- Have an appreciation for the dangers posed by cyber terrorism
+
+Throughout this book, various ways have been examined in which a person might use a computer to commit a crime. This book has also looked into specific methods to make a system more secure. One issue that has not been addressed is that of cyber terrorism. People in countries around the world have grown accustomed to the ever-present threat of a terrorist attack, which could come in the form of a bomb, a hijacking, release of a biological agent, or other means. Most people have not given much thought to the possibility of cyber terrorism.
+
+The first question might be this: What is cyber terrorism? According to the FBI, cyber terrorism is the premeditated, politically motivated attack against information, computer systems, computer programs, and data that results in violence against noncombatant targets by subnational groups or clandestine agents. Cyber terrorism is simply the use of computers and the Internet connectivity between them in order to launch a terrorist attack. In short, cyber terrorism is just like other forms of terrorism—it is only the milieu of the attack that has changed. Clearly, the loss of life due to a cyber attack would be much less than that of a bombing. In fact, it is highly likely that there would be no loss of life at all. However, significant economic damage, disruptions in communications, disruptions in supply lines, and general degradation of the national infrastructure are all quite possible via the Internet.
+
+The real question might be: What is the difference between cyber espionage and cyber terrorism? First and foremost, the goal of espionage is simply to gather information. It is preferable to the spy if no one is even aware that anything occurred. This is true for both corporate and international espionage. Cyber terrorism, on the other hand, seeks to cause damage, and it needs to be as public as possible. The idea is to strike fear into people. While some might find the topics related, they are actually quite different.
+
+It is a strong possibility that, in time, someone or some group will try to use computer methods to launch a military or terrorist attack against our nation. Some experts make the case that the MyDoom virus (discussed in Chapter 4, “Denial of Service Attacks”) was an example of domestic economic terrorism. However, an attack such as that may be only the tip of the iceberg. Sometime in the near future, our nation may be the target of a serious cyber terrorism attack. This chapter will examine some possible cyber terrorism scenarios, with the purpose of giving you a realistic assessment of just how serious a threat this is. In the exercises at the end of the chapter, you will have the opportunity to examine current acts of cyber terrorism, as well as potential threats, and the actions you can take to help prevent them.
+
+The first edition of this book discussed cyber terrorism as well. That was in 2004. At that time, some may have thought that the coverage of that topic was almost fiction, that there was no real threat from cyber terrorism. That has proven to not be the case. One of the first indications that cyber terrorism is a real threat was that in November 2006 the Secretary of the Air Force announced the creation of the Air Force Cyber Command (AFCC), whose primary function is to monitor and defend American interests in cyberspace. The AFCC draws upon the personnel resources of the 67th Network Warfare Wing as well as other resources. It seems that the United States Air Force takes the threat of cyber terrorism and cyber warfare seriously and has created an entire command to counter that threat.
+
+### Actual Cases of Cyber Terrorism
+

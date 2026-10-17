@@ -1,0 +1,11 @@
+Intelligence Agency (Federal Intelligence Service in English, Bundesnachrichtendienst in German, commonly known as simply BND) began in 2013 to hire a number of hackers.
+
+More and more nations are treating cyber defense like any other area of defense and establishing the appropriate military and intelligence organizations to deal with it.
+
+In the second edition of this book, I stated, “It is unreasonable to ask every police department to have a computer-crime specialist on staff. However, state-level investigative agencies should be able to hire such personnel.” I am thrilled to report that many positive trends in this area have exceeded my expectations. First, many law enforcement agencies, even small local agencies, do indeed now have cyber forensic detectives. There are also a number of cybercrime task forces that bring together state, local, and federal resources. For example, the U.S. Secret Service had established Electronic Crimes Task Forces around the country that bring together state, local, and federal resources to combat cybercrime and terrorism. The Department of Homeland Security has set up regional Fusion Centers to assist in coordinating the sharing of information between intelligence agencies and law enforcement agencies, at all levels.
+
+
+
+Unfortunately, as legislative bodies become aware of this problem and focus some resources on the issue, the threats continue to grow. A paper commissioned by the Rand Corporation noted that even groups such as Al Qaeda—which have not used cyber terrorism as one of their attack modalities as of this writing—have used Internet and computer technology resources to plan their various activities and coordinate training.
+
+As early as 2000, the U.S. General Accounting Office warned of several possible cyber terrorism scenarios. As shown in Figure 12.6, their concerns involved far more lethal attackers than any of the scenarios that have been outlined in this chapter. They proposed possible attack scenarios in which the computer-controlled machinery in a chemical plant was altered in order to cause a release of toxic chemicals into the environment. This could be done in a variety of ways, including simply causing the machinery to drastically overproduce, overheat, or perhaps prematurely shut down

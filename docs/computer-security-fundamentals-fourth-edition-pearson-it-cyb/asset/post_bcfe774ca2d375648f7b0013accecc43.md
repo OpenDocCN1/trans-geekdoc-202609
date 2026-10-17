@@ -1,0 +1,44 @@
+
+Because some readers may wonder whether this is just fear mongering, let’s look at some actual cases of cyber terrorism before we delve into the various aspects of it. How likely is a genuine cyber terrorist attack? Well, let’s look at some real-world cases. Later in this chapter, we will examine some older, historical cases to get a sense of perspective.
+
+In May 2007, government offices of Estonia were subjected to a mass denial of service (DoS) attack. This attack was executed because some people opposed the government’s removal of a Russian WWII memorial. While this was a relatively minor attack, it was politically motivated and thus qualifies as cyber terrorism.
+
+CENTCOM, or Central Command, is the U.S. military command responsible for operations in the Middle East and Near East. In 2008, CENTCOM was infected with spyware. A USB drive was left in the parking lot of a DoD facility in the Middle East. A soldier picked it up and plugged it into his workstation, thus introducing the spyware to the CENTCOM network. The worm was known as Agent.btz, a variant of the SillyFDC worm. This was a significant security breach, and we will probably never know how much data was lost or how much damage was caused.
+
+The year 2009 brought a number of Internet-based attacks, specifically against U.S. government websites, such as the websites of the Pentagon and the White House (in the United States) and various government agencies in South Korea. These attacks coincided with increased tensions with North Korea. Clearly, these were examples of cyber terrorism, albeit relatively minor.
+
+In December 2009, a far more disturbing story came out. Hackers broke into computer systems and stole secret defense plans of the United States and South Korea. Authorities speculated that North Korea was responsible. The information stolen included a summary of plans for military operations by South Korean and U.S. troops in case of war with North Korea, and the attacks traced back to a Chinese IP address. This case is clearly an example of cyber espionage and a very serious one at that.
+
+In December 2010, a group calling itself the Pakistan Cyber Army hacked the website of India’s top investigating agency, the Central Bureau of Investigation (CBI). This sort of cyber espionage is far more common than what is revealed to the public.
+
+Stuxnet employed a classic virus design. Stuxnet has three modules: a worm that executes routines related to the attack; a link file that executes the propagated copies of the worm; and a rootkit responsible for hiding files and processes, with the goal of making it more difficult to detect the presence of Stuxnet. It is not the purpose of this discussion to explore the intricacies of Stuxnet. Rather, Stuxnet is introduced as both an example of state-sponsored malware attacks and at least an attempt to target such attacks.
+
+No modern discussion of cyber warfare and espionage would be complete without a discussion of Flame. This virus first appeared in 2012 and was targeting Windows operating systems. The first item that makes this virus notable is that it was specifically designed for espionage. It was first discovered in May 2012 at several locations, including Iranian government sites. Flame is spyware that can monitor network traffic and take screenshots of the infected system.
+
+It was spyware that recorded keyboard activity and network traffic, took screenshots, and is even reported to have recorded Skype conversations. It also would turn the infected computer into a Bluetooth beacon attempting to download information from nearby Bluetooth-enabled devices.
+
+Kaspersky Labs reported that the Flame file contained an MD5 hash that only appeared on machines in the Middle East. This indicates the possibility that the virus authors intended to target the malware attack to a specific geographical region. The Flame virus also appears to have had a kill function allowing someone controlling it to send a signal directing it to delete all traces of itself. These two items indicate an attempt to target the malware, though the outcome of that targeting seems to have been a failure, or we would not be aware of its existence.
+
+During the conflict between Russia and Georgia, a number of hacking incidents played a role. The StopGeorgia.ru forum was an online forum designed to facilitate attacks against key network targets within Georgia. The online forum would advertise specific targets, give tutorials (and in some cases tools) for helping even low-skilled attackers engage the targets, and even provided links to proxy servers to help facilitate the attack by hiding the attacker’s true IP address and location.
+
+As an example of what the website StopGeorgia.ru offered, there was a tool named DoSHTTP that automated DoS attacks and a list of websites and IP addresses within Georgia that would be good targets. This encouraged anyone sympathetic to Russia’s position in this conflict, who had even minimal computer skills, to embark on cyber attacks against Georgia.
+
+## FinFisher
+
+FinFisher spyware was designed for law enforcement agencies with a warrant, to collect evidence on suspects. However, the software was released by WikiLeaks. It is now available on the Internet for anyone who wishes to use it.
+
+## BlackEnergy
+
+BlackEnergy theoretically manipulates water and power systems, including causing blackouts and water supply disruptions. The BlackEnergy software has been traced to the Russian group SandWorm. In January 2016, a blackout at the Kiev airport was linked to the BlackEnergy malware.
+
+The BlackEnergy malware specifically affects power plants. The malware is a 32-bit Windows executable. BlackEnergy is versatile malware, able to initiate several different attack modalities. It can launch distributed denial of service (DDoS) attacks. It also can deliver KillDisk, a feature that renders a system unusable.
+
+## NSA ANT Catalog
+
+This is reported to be a catalog that the NSA makes available to agencies within the U.S. government that have clearance. It is a catalog of malware, including spyware, that has been developed by the National Security Agency’s Tailored Access Operations group. A number of sources purport to have lists of items in the catalog as well as screenshots from the catalog. Given the classified nature of this catalog, if it actually exists, any website claiming to have details of the catalog should be treated with some skepticism.
+
+There are a variety of ways that a cyber attack can cause economic damage. Lost files and lost records are one way. Chapter 9, “Computer Security Technology,” discussed cyber espionage and mentioned the inherent value of data. In addition to stealing that data, it could simply be destroyed, in which case the data is gone and the resources used to accumulate and analyze the data are wasted. To use an analogy, consider that a malicious person could choose to simply destroy your car rather than steal it. In either case, you are without the car and will have to spend additional resources acquiring transportation.
+
+In addition to simply destroying economically valuable data (remember that there is very little data that does not have some intrinsic value), there are other ways to cause economic disruption. Some of those ways include stealing credit cards, transferring money from accounts, and committing fraud. But it is a fact that anytime IT staff is involved with cleaning up a virus rather than developing applications or administering networks and databases, there is economic loss. The mere fact that companies now need to purchase antivirus software and intrusion detection software and hire computer security professionals means that computer crime has already caused economic damage to companies and governments around the world. However, the general damage caused by random virus outbreaks, lone hacking attacks, and online fraud is not the type of economic damage that is the focus of this chapter. This chapter is concerned with a concerted and deliberate attack against a particular target or targets for the exclusive purpose of causing direct damage.
+
+A good way to get a firm grasp on the impact of this type of attack is to walk through a scenario. Group X (which could be an aggressive nation, a terrorist group, an activist group, or literally any group with the motivation to damage a particular nation) decides to make a concerted attack on our country. It finds a small group of individuals (in this case, six) who are well versed in computer security, networking, and programming. These individuals, motivated either by ideology or monetary needs, are organized to create a coordinated attack. There are many possible scenarios under which they could execute such an attack and cause significant economic harm. The example outlined next is just one of those possible attack modalities.

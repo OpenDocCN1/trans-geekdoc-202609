@@ -1,0 +1,5 @@
+![](bbox=[0.151, 0.086, 0.651, 0.615])
+
+While information can be taken from your company without overt hacking of the system, you should keep in mind that if your system is unsecured, it is entirely possible that an outside party could compromise your system and obtain that information without an employee as an accomplice. In addition to these methods, other low-tech and even virtually “no-tech” methods can be used to extract information. *Social engineering*, which was discussed at length in Chapter 3, is the process of talking a person into giving up information she otherwise would not divulge. This technique can be applied to industrial espionage in a number of ways.
+
+The first and most obvious use of social engineering in industrial espionage is in direct conversation in which the perpetrator attempts to get the targeted employee to reveal sensitive data. As illustrated in Figure 7.4, employees will often inadvertently divulge information to a supplier, vendor,
