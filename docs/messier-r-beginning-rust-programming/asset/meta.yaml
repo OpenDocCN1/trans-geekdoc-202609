@@ -1,0 +1,356 @@
+name: Messier, R： Beginning Rust Programming
+slug: messier-r-beginning-rust-programming
+name_cn: '
+
+  Rust 入门指南'
+toc:
+- - '##'
+  - 你将学到的内容
+- - '###'
+  - 第 1 章
+- - '###'
+  - 第 2 章
+- - '###'
+  - 第 3 章
+- - '###'
+  - 第 4 章
+- - '###'
+  - 第 5 章
+- - '###'
+  - 第 6 章
+- - '###'
+  - 第 7 章
+- - '###'
+  - 第 8 章
+- - '###'
+  - 第 9 章
+- - '###'
+  - 第 10 章
+- - '###'
+  - 第 11 章
+- - '##'
+  - PUTTING THE PIECES TOGETHER
+- - '##'
+  - 生成游戏网格
+- - '##'
+  - 分析主函数
+- - '###'
+  - 定义函数
+- - '###'
+  - 定义变量
+- - '####'
+  - 数据类型
+- - '####'
+  - Arrays
+- - '###'
+  - 控制结构
+- - '##'
+  - LOOKING AT MORE FUNCTION FUNCTIONS
+- - '###'
+  - 返回值
+- - '###'
+  - 传递参数
+- - '####'
+  - 作用域
+- - '###'
+  - EXTENDING LIFE
+- - '####'
+  - Adding Modules
+- - '####'
+  - Option Types
+- - '###'
+  - 输出到终端
+- - '###'
+  - 使用颜色
+- - '###'
+  - 打印生成
+- - '##'
+  - SUMMARY
+- - '##'
+  - ADDITIONAL RESOURCES
+- - '##'
+  - Building a Library
+- - '##'
+  - REFERENCES
+- - '###'
+  - Traits and Implementations
+- - '###'
+  - Self-Identification
+- - '###'
+  - 剩余部分
+- - '##'
+  - SECOND PASS
+- - '###'
+  - The Driver
+- - '##'
+  - ADDITIONAL RESOURCES
+- - '##'
+  - OUR DATA
+- - '###'
+  - '`Word` 特性'
+- - '###'
+  - '`impl` 实现'
+- - '###'
+  - 使用 *Option Enum*
+- - '###'
+  - 完成实现
+- - '###'
+  - 简洁地处理错误
+- - '###'
+  - 剩余的故事
+- - '###'
+  - 初始化
+- - '###'
+  - 玩游戏
+- - '###'
+  - 总结
+- - '##'
+  - In Concurrence
+- - '##'
+  - THE DINING PHILOSOPHERS
+- - '###'
+  - Interprocess Communications
+- - '##'
+  - 一种 Rust 中可用的消息传递方式是 `channel`。
+- - '##'
+  - THE MAIN EVENT
+- - '###'
+  - Unix Sockets
+- - '###'
+  - File and Directory Handling
+- - '###'
+  - Closures
+- - '##'
+  - THREADING IN THE MAIN
+- - '###'
+  - 创建流
+- - '###'
+  - 加密散列
+- - '###'
+  - 创建线程
+- - '##'
+  - NETWORK PROGRAMMING
+- - '###'
+  - 编程套接字
+- - '###'
+  - 处理请求
+- - '###'
+  - 操作系统调用
+- - '###'
+  - ENCRYPTION
+- - '####'
+  - 加密算法
+- - '###'
+  - 采用混合模式
+- - '###'
+  - 加密算法
+- - '###'
+  - 传输层安全性（TLS）
+- - '###'
+  - TLS Server
+- - '###'
+  - REMOTE ACCESS CLIENT
+- - '###'
+  - 创建连接
+- - '###'
+  - 验证输入
+- - '###'
+  - 正则表达式
+- - '###'
+  - The Final Function
+- - '##'
+  - 关系型
+- - '###'
+  - Microservices
+- - '###'
+  - Model-View-Controller
+- - '##'
+  - DATABASES
+- - '###'
+  - Structured Query Language
+- - '###'
+  - 服务器或嵌入式
+- - '###'
+  - 访问数据库
+- - '###'
+  - 编写数据库程序
+- - '####'
+  - 主函数和模块
+- - '###'
+  - 数据库函数
+- - '####'
+  - 添加记录
+- - '####'
+  - 记录列表
+- - '##'
+  - ASSERTIONS
+- - '###'
+  - Design by Contract
+- - '##'
+  - NOSQL
+- - '##'
+  - WORKING WITH MONGODB
+- - '###'
+  - 插入数据
+- - '####'
+  - 从文件读取数据
+- - '####'
+  - Populating the Database
+- - '####'
+  - Retrieving Values
+- - '##'
+  - STYLE GUIDES
+- - '##'
+  - HYPERTEXT TRANSFER PROTOCOL
+- - '###'
+  - 程序化通信
+- - '###'
+  - 通过 TLS 进行 Web 通信
+- - '###'
+  - CLIENT COMMUNICATION
+- - '###'
+  - Jumping Ahead
+- - '###'
+  - Jumping Ahead
+- - '###'
+  - 返回
+- - '###'
+  - SUMMARY
+- - '##'
+  - OFFENSIVE VS. DEFENSIVE PROGRAMMING
+- - '##'
+  - WEB APPLICATION COMMUNICATIONS
+- - '###'
+  - Web 应用参数
+- - '###'
+  - 异步 JavaScript 和 XML
+- - '###'
+  - Representational State Transfer
+- - '####'
+  - APIs in Node.js and Python
+- - '####'
+  - Rust API 服务器
+- - '##'
+  - SUMMARY
+- - '##'
+  - ADDITIONAL RESOURCES
+- - '##'
+  - WINDOWS REGISTRY
+- - '###'
+  - 程序化访问注册表
+- - '###'
+  - 使用 Rust 访问注册表
+- - '##'
+  - SYSTEM INFORMATION WITH RUST
+- - '##'
+  - PERSISTENCE (FOR FUN)
+- - '##'
+  - SUMMARY
+- - '##'
+  - ADDITIONAL RESOURCES
+- - '##'
+  - LOGGING
+- - '###'
+  - 使用 syslog
+- - '###'
+  - 使用 Windows 事件日志
+- - '##'
+  - WORKING WITH RASPBERRY PI
+- - '###'
+  - 点亮灯光
+- - '###'
+  - 读取 GPIO
+- - '##'
+  - SUMMARY
+- - '##'
+  - ADDITIONAL RESOURCES
+- - '##'
+  - Collecting Stuff
+- - '##'
+  - ARRAYS AND VECTORS
+- - '##'
+  - LINKED LISTS
+- - '###'
+  - 栈
+- - '###'
+  - 队列
+- - '###'
+  - 排序
+- - '##'
+  - SEARCH TREES
+- - '##'
+  - SUMMARY
+- - '##'
+  - ADDITIONAL RESOURCES
+- - '##'
+  - UNIT TESTING
+- - '###'
+  - Testing Types
+- - '###'
+  - 递归
+- - '##'
+  - MACHINE LEARNING
+- - '###'
+  - Chatbots
+- - '###'
+  - Neural Networks
+- - '##'
+  - SUMMARY
+- - '##'
+  - INDEX
+- - '###'
+  - Symbols
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '###'
+  - D
+- - '###'
+  - E
+- - '###'
+  - F
+- - '###'
+  - G
+- - '###'
+  - H
+- - '###'
+  - I
+- - '###'
+  - J
+- - '###'
+  - K
+- - '###'
+  - L
+- - '###'
+  - M
+- - '###'
+  - N
+- - '###'
+  - O
+- - '###'
+  - P
+- - '###'
+  - Q
+- - '###'
+  - R
+- - '###'
+  - S
+- - '##'
+  - 关于作者
+- - '##'
+  - V
+- - '##'
+  - W
+- - '##'
+  - X
+- - '##'
+  - Y
+- - '##'
+  - ABOUT THE TECHNICAL EDITOR
+- - '##'
+  - ACKNOWLEDGMENTS
+- - '##'
+  - '**WILEY END USER LICENSE AGREEMENT**'

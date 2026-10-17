@@ -1,0 +1,150 @@
+
+*   in Node.js, [`varName`](#c11.xhtml#Page_250)–252
+*   in Python, [`varName`](#c11.xhtml#Page_250)–252
+*   applications. *See specific applications*
+*   [`app.route()`](#c11.xhtml#Page_251) function, [251](#c11.xhtml#Page_251)–252
+*   [`area()`](#c15.xhtml#Page_355), [359](#c15.xhtml#Page_359) function
+*   [`args()`](#c02.xhtml#Page_34) function, [34](#c02.xhtml#Page_34)
+*   arithmetic logic unit (ALU), [97](#c05.xhtml#Page_97)–98
+*   arrays, [12](#c01.xhtml#Page_12)–14, [322](#c14.xhtml#Page_322)–329
+*   artificial intelligence, [364](#c15.xhtml#Page_364)–366, [369](#c15.xhtml#Page_369)
+*   [`as_bytes()`](#c10.xhtml#Page_229) function, [229](#c10.xhtml#Page_229)
+*   ASCII (American Standard Code for Information Interchange), [81](#c04.xhtml#Page_81), [225](#c10.xhtml#Page_225)–226
+*   [`as_object_id()`](#c09.xhtml#Page_209) function, [209](#c09.xhtml#Page_209)
+*   [`assert()`](#c09.xhtml#Page_194) function, [194](#c09.xhtml#Page_194), [197](#c09.xhtml#Page_197)
+*   [`assert!()`](#c15.xhtml#Page_357) macro, [357](#c15.xhtml#Page_357)
+*   assertions, [192](#c09.xhtml#Page_192)–198
+*   [`as_str()`](#c10.xhtml#Page_235) function, [235](#c10.xhtml#Page_235), [284](#c12.xhtml#Page_284)
+*   Asynchronous JavaScript and XML (AJAX), [248](#c11.xhtml#Page_248)–249
+*   attribute, [197](#c09.xhtml#Page_197)
+### B
+*   Back Orifice (BO), [121](#c06.xhtml#Page_121)–122
+*   backdoor, [122](#c06.xhtml#Page_122)
+*   BackOffice Server, [122](#c06.xhtml#Page_122)
+*   backtrace, [194](#c09.xhtml#Page_194)
+*   [`bacon()`](#c11.xhtml#Page_251) function, [251](#c11.xhtml#Page_251)
+*   Berkeley Systems Distribution (BSD), [128](#c06.xhtml#Page_128)
+*   binary tree, [340](#c14.xhtml#Page_340)
+*   binding, [57](#c03.xhtml#Page_57)
+*   Birthday Paradox, [117](#c05.xhtml#Page_117)
+*   black box testing, [351](#c15.xhtml#Page_351)
+*   [`bool`](#c04.xhtml#Page_80) type, [80](#c04.xhtml#Page_80)
+*   Boolean value, [12](#c01.xhtml#Page_12)
+*   bounds, [87](#c04.xhtml#Page_87)–88
+*   Bourne Shell, [275](#c12.xhtml#Page_275)
+*   Brooks, Frederick 
+    *   [`The Mythical Man-Month`](#c11.xhtml#Page_242)–243
+*   BSD (Berkeley Systems Distribution), [128](#c06.xhtml#Page_128)
+*   [`build()`](#c10.xhtml#Page_234) function, [234](#c10.xhtml#Page_234)
+*   Business Logic layer, in application models, [168](#c08.xhtml#Page_168)
+### C
+*   C# functions, [113](#c05.xhtml#Page_113)
+*   cacheability, REST and, [249](#c11.xhtml#Page_249), [250](#c11.xhtml#Page_250)
+*   Caesar cipher, [143](#c07.xhtml#Page_143)
+*   CAM (content addressable memory), [199](#c09.xhtml#Page_199)
+*   Cargo, [4](#c01.xhtml#Page_4)–5, [6](#c01.xhtml#Page_6)
+*   carriage return, [150](#c07.xhtml#Page_150)
+*   Cartesian coordinates, [18](#c01.xhtml#Page_18)–19
+*   [`catch`](#c04.xhtml#Page_85) block, [85](#c04.xhtml#Page_85)
+*   C/C++ 
+    *   about, [6](#c01.xhtml#Page_6)
+    *   first-class functions, [112](#c05.xhtml#Page_112)–113
+    *   references in, [50](#c03.xhtml#Page_50)–51
+    *   [`struct`](#c03.xhtml#Page_53) in, [53](#c03.xhtml#Page_53)
+    *   style guide, [217](#c10.xhtml#Page_217)–218
+    *   systems programming in, [265](#c12.xhtml#Page_265)–266
+*   cDc (Cult of the Dead Cow), [121](#c06.xhtml#Page_121)–122
+*   [`census()`](#c01.xhtml#Page_16) function, [16](#c01.xhtml#Page_16)–17
+*   central processing unit (CPU), [97](#c05.xhtml#Page_97)–98
+*   CERN (European Organization for Nuclear Research), [219](#c10.xhtml#Page_219)
+*   [`char`](#c01.xhtml#Page_12) values, [12](#c01.xhtml#Page_12), [78](#c04.xhtml#Page_78)
+*   [`chars()`](#c04.xhtml#Page_81) function, [81](#c04.xhtml#Page_81)
+*   chatbots, [366](#c15.xhtml#Page_366)–369
+*   [`check_complete()`](#c04.xhtml#Page_94) function, [94](#c04.xhtml#Page_94)
+*   [`check_for_letter()`](#c04.xhtml#Page_79) method, [79](#c04.xhtml#Page_79)
+*   ciphertext, [143](#c07.xhtml#Page_143)
+*   client communication, [229](#c10.xhtml#Page_229)–238
+*   clients and servers 
+    *   about, [121](#c06.xhtml#Page_121)–122
+    *   handling requests, [134](#c06.xhtml#Page_134)–137
+    *   network programming, [125](#c06.xhtml#Page_125)–131
+    *   operating system calls, [137](#c06.xhtml#Page_137)–139
+    *   planning, [123](#c06.xhtml#Page_123)–125
+    *   programming sockets, [128](#c06.xhtml#Page_128)–131
+    *   `tcp` server, [131](#c06.xhtml#Page_131)–139
+*   client-server architecture, REST and, [249](#c11.xhtml#Page_249), [250](#c11.xhtml#Page_250)
+*   client-side applications 
+    *   about, [141](#c07.xhtml#Page_141)–142
+    *   creating connections, [156](#c07.xhtml#Page_156)
+    *   encryption, [142](#c07.xhtml#Page_142)–154
+    *   encryption algorithms, [144](#c07.xhtml#Page_144)–145, [147](#c07.xhtml#Page_147)
+    *   final functions, [157](#c07.xhtml#Page_157)–159
+    *   hybrid, [145](#c07.xhtml#Page_145)–146
+    *   regular expressions, [157](#c07.xhtml#Page_157)–159
+    *   remote access client, [154](#c07.xhtml#Page_154)–162
+    *   TLS Server, [151](#c07.xhtml#Page_151)–154
+    *   Transport Layer Security (TLS), [147](#c07.xhtml#Page_147)–151
+    *   validating input, [157](#c07.xhtml#Page_157)
+*   [`clone()`](#c04.xhtml#Page_91) function, [91](#c04.xhtml#Page_91)
+*   closures, [112](#c05.xhtml#Page_112)–113
+*   cmdlets, [275](#c12.xhtml#Page_275)
+*   [`cmp()`](#c14.xhtml#Page_340) function, [340](#c14.xhtml#Page_340)
+*   code coverage, [351](#c15.xhtml#Page_351)
+*   code on demand, REST and, [250](#c11.xhtml#Page_250)
+*   [`collect()`](#c02.xhtml#Page_35) function, [35](#c02.xhtml#Page_35), [284](#c12.xhtml#Page_284)
+*   collections 
+    *   about, [321](#c14.xhtml#Page_321)–322
+    *   arrays, [322](#c14.xhtml#Page_322)–329
+    *   linked lists, [329](#c14.xhtml#Page_329)–340
+    *   queues, [336](#c14.xhtml#Page_336)–337
+    *   search trees, [340](#c14.xhtml#Page_340)–345
+    *   sorting, [337](#c14.xhtml#Page_337)–340
+    *   stacks, [333](#c14.xhtml#Page_333)–336
+    *   vectors, [322](#c14.xhtml#Page_322)–329
+*   collision, [117](#c05.xhtml#Page_117)
+*   colors, [44](#c02.xhtml#Page_44)
+*   command-line arguments, [34](#c02.xhtml#Page_34)–39
+*   common name (CN), [152](#c07.xhtml#Page_152)
+*   communication 
+    *   client, [229](#c10.xhtml#Page_229)–238
+    *   interprocess, [103](#c05.xhtml#Page_103)–106
+*   compiling programs, [22](#c01.xhtml#Page_22)–23
+*   component testing, [350](#c15.xhtml#Page_350)
+*   concurrence 
+    *   about, [97](#c05.xhtml#Page_97)–98
+    *   closures, [112](#c05.xhtml#Page_112)–113
+    *   creating streams, [115](#c05.xhtml#Page_115)–116
+    *   creating threads, [117](#c05.xhtml#Page_117)–118
+    *   cryptographic hashing, [116](#c05.xhtml#Page_116)–117
+    *   dining philosophers, [98](#c05.xhtml#Page_98)–106
+    *   directory handling, [109](#c05.xhtml#Page_109)–112
+    *   file handling, [109](#c05.xhtml#Page_109)–112
+    *   interprocess communication (IPC), [103](#c05.xhtml#Page_103)–106
+    *   main event, [106](#c05.xhtml#Page_106)–113
+    *   mutexes, [101](#c05.xhtml#Page_101)–103
+    *   semaphores, [101](#c05.xhtml#Page_101)–103
+    *   threading, [114](#c05.xhtml#Page_114)–118
+    *   Unix sockets, [107](#c05.xhtml#Page_107)–109
+*   [`connect()`](#c10.xhtml#Page_228) function, [228](#c10.xhtml#Page_228)–229
+*   connections, creating, [156](#c07.xhtml#Page_156)
+*   content addressable memory (CAM), [199](#c09.xhtml#Page_199)
+*   control structures, [14](#c01.xhtml#Page_14)–16
+*   [`converttojson()`](#c03.xhtml#Page_62) function, [62](#c03.xhtml#Page_62)
+*   Conway, John Horton, [1](#c01.xhtml#Page_1)
+*   Conway's Game of Life 
+    *   about, [1](#c01.xhtml#Page_1)–2
+    *   Cargo, [4](#c01.xhtml#Page_4)–5
+    *   compiling programs, [22](#c01.xhtml#Page_22)–23
+    *   control structures, [14](#c01.xhtml#Page_14)–16
+    *   defining functions, [8](#c01.xhtml#Page_8)–9
+    *   defining variables, [9](#c01.xhtml#Page_9)–14
+    *   external functionality, [5](#c01.xhtml#Page_5)–6
+    *   function functions, [16](#c01.xhtml#Page_16)–22
+    *   generating game grid, [7](#c01.xhtml#Page_7)–8
+    *   main function, [8](#c01.xhtml#Page_8)–15
+    *   namespaces, [6](#c01.xhtml#Page_6)–7
+    *   passing parameters, [18](#c01.xhtml#Page_18)–22
+    *   program, [2](#c01.xhtml#Page_2)–3
+    *   returning values, [16](#c01.xhtml#Page_16)–18
+*   CPU (central processing unit), [97](#c05.xhtml#Page_97)–98
+*   crates, [5](#c01.xhtml#Page_5)
