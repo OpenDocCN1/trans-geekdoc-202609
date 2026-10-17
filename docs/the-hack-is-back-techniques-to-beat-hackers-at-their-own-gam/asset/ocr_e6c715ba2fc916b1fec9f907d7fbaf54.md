@@ -1,0 +1,7 @@
+Once the Burp window has opened, we are given a few different options about how to use the tool. Note in the bottom left part of the window that the **Event Log** states that the Proxy Service has started, along with the location of the service. This proxy allows us to send traffic through Burp from other non-Burp tools and review the activity that occurs. In the case of this screenshot, we can see that our proxy is running on the **localhost of 127.0.0.1** and on port **8080**. Note that while Burp is primarily used with the pre-configured browser or with Firefox pointed at the proxy, we can always push other CLI-based tools through the Burp proxy as well. This gives us the opportunity to review requests made by other tools inside of Burp’s history.
+
+![](bbox=[0.106, 0.255, 0.894, 0.591])
+
+**FIGURE 3.29** The proxy service is running on localhost port 8080, allowing other non-Burp programs to use the proxy to be analyzed by Burp.
+
+Now that we know the Burp windows are up and running with the proxy, we can start pushing traffic through it. Burp comes with a pre-configured browser that uses the established Burp proxy, reducing the steps needed to get started. To use this browser, click on the **Proxy** tab, then the **Intercept** tab, and click on **Open Browser**. This will open up a Chromium browser for us to use.

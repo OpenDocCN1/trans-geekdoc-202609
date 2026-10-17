@@ -1,0 +1,13 @@
+Finally, on to one of my favorite topics, Capture the Flags, or CTFs. A CTF is a great way to practice your Cybersecurity skills. There are a large number of beginner intermediate and difficult-themed CTFs that you can go through on tryhackme covering various topics. The team I coach at UMGC and I have participated in a number of CTFs on a variety of cybersecurity topics including OSINT, Cryptography, Forensics, Cell-Phone Forensics, Critical Infrastructure, Pentesting, Log Analysis, and a number of other Cyber related topics. While coaching the team since 2015, the team has had over 50 top 3 finishes and awards, which is definitely a tribute to the students, and not the coach. I do participate with the University’s students in the CTFs when they are open to anyone, and it is a lot of fun and I always learn something. Chris and I have done some together, and we finished in first some time, and other times, we did not place in the top 3. No matter how much you know or how much experience you have, nothing (except learning) is guaranteed when you compete. I find it extremely beneficial that the Tryhackme platform uses topic tags to help you determine which topics will be covered in each CTF.
+
+![](bbox=[0.25, 0.3, 0.75, 0.38])
+
+FIGURE 10.25 Capture the Flags.
+
+The best part about the Tryhackme CTFs is the available writeups that can help give you through the questions if you get stuck. The writeups with the solutions are submitted by members of the community. Typically, many different individuals submit writeups allowing you to get diverse perspectives on how people solve a particular problem. There are almost always multiple ways to solve a problem and multiple tools that can be utilized. Even if you solve the problems yourself, it is still worth glancing at examining the other solutions to see how other people approach it. Creating your own write-up is also a great way to work on documentation. For most cyber job roles, you will need to provide great documentation. You could also add your write-up to your resume as proof of some of your experience and technical writing skills.
+
+![](bbox=[0.25, 0.68, 0.8, 0.85])
+
+FIGURE 10.26 Capture the Flags Writeups.
+
+Another website that keeps a list of Capture the Flag events is https://CTFtime.org. You utilize the site to find one or more upcoming Capture the Flag competitions just about every week and weekend. They provide links to the organization hosting the competition. Almost all of the competitions are online but there are some CTFs that require teams to show up onsite. Just about all

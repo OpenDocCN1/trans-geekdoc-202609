@@ -1,0 +1,108 @@
+
+
+请确保 DNS 记录的生存时间（TTL）值非常低。如果我们错误地导致资源不可用，用户只需等待五分钟或重启机器即可恢复访问。但是，我们必须尽可能降低这种概率。
+
+### 预防多播 DNS 攻击
+
+为了预防并降低多播 DNS 攻击的风险，我们可以在域级别强制实施 GPO，以阻止使用 LLMNR。这是一种有效的控制措施，因为现代企业网络不需要在配置的 DNS 服务器之外使用备用 DNS 解析机制。
+
+## NTLM 中继攻击
+
+NTLM 中继以 NT LAN Manager 身份验证协议命名，利用了 Windows 身份验证的基础机制，试图在域内未授权访问区域。攻击者置身于两个受害者之间，可以支配和控制正在发生的活动。
+
+要利用这一点，我们可以使用 NetExec 工具来识别域中哪些机器未强制实施 SMB 签名。找到这些机器后，我们就能跟踪哪些机器在中转入站连接时可能被利用。为此，我们可以运行以下命令：
+
+```
+nxc smb 192.168.56.0/24 --gen-relay-list relayable.txt
+```
+
+![](img/181571ad74cba0e6a2f38fcd2658651e_230_0.png)
+
+**图 7.23** 运行 NetExec 获取未强制实施 SMB 签名的机器列表。
+
+现在我们有了保存为 **relayable.txt** 的易受攻击机器列表，可以使用 Impacket 的 **ntlmrelayx.py** 脚本针对检测到的机器发起攻击。该脚本的作用是接收传入的 NTLM 连接，并尝试将其中继到其他机器以建立连接。使用 **-tf** 开关时，我们可以向程序提供一个目标文件，让它尝试与这些目标建立连接。**-socks** 开关将为任何成功的连接建立 SOCKS 代理，使我们能够按需持续利用该连接。
+
+```
+ntlmrelayx.py -tf relayable.txt -smb2 -socks
+```
+
+要练习这个技术并更深入地学习，有若干优秀的实训和资源可用。最好的学习资源之一是 Jean-François Maes 的《NTLM Relaying 101》，它以 GitBook 形式发布于 https://jfmaes-1.gitbook.io/ntlm-relaying-like-a-boss-get-da-before-lunch/。
+
+要解决这个问题，强制实施 SMB 签名至关重要。这可以防止对资源的未授权操作，从而保护域的完整性。
+
+## 已认证访问
+
+获得对 AD 的已认证访问可以揭示大量有关如何攻击目标的信息。我们不仅能够访问一些潜在的 SMB 共享，还可以在 LDAP 中收集信息以寻找潜在的提权路径。
+
+### SMB 共享
+
+已认证账户的访问权限可能允许通过 SMB 访问域内多台计算机上的文件共享。用户往往会在文件共享中保存诸如密码之类的内容，这会让提权变得更加容易。更糟糕的是，一些管理员会在共享中存储包含凭据的 PowerShell 和批处理脚本。访问 SMB 共享以搜索敏感文件不仅有效，而且对应的 ATT&CK ID 为 T1135¹²。
+
+有多种工具可以帮助我们实现这一目标，例如 NetExec 工具¹³，它是 CrackMapExec 工具的最新替代品。该工具可用于多种不同功能，例如密码喷洒，但根据作者的经验，该工具的亮点在于它能够系统地访问网络中的 SMB 共享。NetExec 不需要我们以单机和手动的方式尝试 SMB 登录和枚举，而是允许我们提供 IP 列表或 CIDR 来枚举共享。这提高了我们完成测试的效率。
+
+```
+root@t470:~# nxc smb 192.168.56.0/24 -u robb.stark -p sexywolfy --shares
+SMB 192.168.56.12 445 MEEREEN [*] Windows Server 2016 Standard Evaluation 14393 x64 (name:MEEREEN) (domain...
+SMB 192.168.56.1 445 server_name [*] UNIX (name:server_name) (domain:WORKGROUP) (signing:False) (SMBv1:True)
+SMB 192.168.56.10 445 KINGSLANDING [*] Windows 10.0 Build 17763 x64 (name:KINGSLANDING) (domain:sevenkingdoms...)
+SMB 192.168.56.11 445 WINTERFELL [*] Windows 10.0 Build 17763 x64 (name:WINTERFELL) (domain:north.sevenkingdc
+SMB 192.168.56.12 445 MEEREEN [*] essos.local\robb.stark:sexywolfy STATUS_LOGON_FAILURE
+SMB 192.168.56.23 445 BRAAVOS [*] Windows Server 2016 Standard Evaluation 14393 x64 (name:BRAAVOS) (domain...
+SMB 192.168.56.22 445 CASTELBLACK [*] Windows 10.0 Build 17763 x64 (name:CASTELBLACK) (domain:north.sevenkingt
+SMB 192.168.56.1 445 server_name [*] WORKGROUP\robb.stark:sexywolfy STATUS_ACCESS_DENIED
+SMB 192.168.56.1 445 server_name [*] Error enumerating shares: STATUS_ACCESS_DENIED
+SMB 192.168.56.10 445 KINGSLANDING [-] sevenkingdoms.local\robb.stark:sexywolfy STATUS_LOGON_FAILURE
+SMB 192.168.56.11 445 WINTERFELL [*] north.sevenkingdoms.local\robb.stark:sexywolfy (Pwn3d!)
+SMB 192.168.56.23 445 BRAAVOS [*] essos.local\robb.stark:sexywolfy
+SMB 192.168.56.22 445 CASTELBLACK [*] north.sevenkingdoms.local\robb.stark:sexywolfy
+SMB 192.168.56.23 445 BRAAVOS [*] Enumerated shares
+```
+
+| 共享 | 权限 | 备注 |
+|---|---|---|
+| ADMIN$ | READ,WRITE | 远程管理 |
+| C$ | READ,WRITE | 默认共享 |
+| CertEnroll | | Active Directory 证书服务共享 |
+| IPC$ | | 远程 IPC |
+| public | 基本 | 所有域用户均可读取的共享 |
+
+```
+SMB 192.168.56.22 445 CASTELBLACK [*] Enumerated shares ...
+```
+
+图 7.24 使用已知凭据运行 NetExec 枚举 CIDR 范围内的共享。
+
+以 2022 年 9 月的 Uber 数据泄露事件为例，攻击者利用了开放的 SMB 共享，其中包含 PowerShell 脚本中的明文管理员凭据。这充分展示了该威胁的现实影响，以及如果没有定期的渗透测试和威胁模拟，要妥善发现它会有多困难。Uber 这家 3180 亿美元的公司都为此困扰——我们如何从他们的错误中吸取教训来保护其他环境？
+
+### SYSVOL 共享
+
+SYSVOL 是域控制器中的一个特定共享，用于支持域功能。该文件夹用于支持域内的 AD 功能，并且必须对域内公开，以便用户和计算机访问。通常，此文件夹中包含大量组策略对象和引用。通过组策略在这些文件夹中存储本地管理员密码的情况不太常见，但依然很有可能。
+
+这种 GPO 会在公共文件夹中存储加密的本地管理员密码，但 Microsoft 已在线公开了加密密码。¹⁴ 这意味着任何能在 SYSVOL 文件夹中找到本地管理员密码的人都可以解密它，并尝试借此访问本地机器。
+
+此外，许多管理员会将域脚本存储在 SYSVOL 上的 scripts 文件夹中。这是管理员常用的一种技术，用于确保用户和机器在启动或登录时运行特定脚本。其中一些脚本会尝试执行映射驱动器或运行额外程序等操作，请留意这些脚本，因为它们可能泄露敏感信息。
+
+在作者的专业经验中，一次内部测试发现 SYSVOL\scripts 文件夹中的一个域脚本使用了管理员账户的加密密码。该密码被用来在域用户登录时以提权账户身份运行功能和进程。对二进制文件和加密密码进行简单的逆向工程即可揭示该账户使用的明文密码，这是该次渗透中用于攻陷域的几条途径之一。
+
+### 本地管理员访问
+
+在许多情况下，我们会获得域内某台本地机器的管理员访问权限，并意图逐步提权到域管理员。实现这一目标的方法有多种，例如收集本地管理员账户的密码或 NTLM 哈希。系统管理员需要能够以本地管理员身份登录机器，以便在机器无法访问网络时修复问题。然而，如果所有机器都使用相同的本地管理员密码，那么攻击者就可能利用这一身份验证材料在域内其他机器之间横向移动。
+
+为了修复此问题，请使用 Microsoft 本地管理员密码解决方案（LAPS）。它利用 Active Directory 管理本地管理员的身份验证材料，为每台机器设置唯一密码。实施 LAPS 简单易行，可确保尽可能多地在环境中使用。
+
+## BloodHound
+
+BloodHound 是由 SpecterOps 开发的一款工具，用于枚举和发现 AD 权限中的攻击路径。BloodHound 可以发现许多难以识别或理解的提权路径，并提供便捷的基于图形的可视化。该工具能够有效展示环境中攻击路径的利用者及其利用方式。
+
+BloodHound 的工作原理是使用收集代理从 AD 中收集所有可用信息，然后将其导入 Neo4j 数据库进行存储。BloodHound GUI 连接该数据库，以可视化形式进行分析。这种可视化分析不仅帮助作为攻击者的我们看到提权路径，也帮助系统管理员和业务决策者理解并直观地了解风险水平。作者一直在给客户的报告中使用 BloodHound 的截图，以易于理解的方式展示信息。
+
+BloodHound 也是 MITRE ATT&CK 框架中列出的工具，工具 ID 为 S0521。¹⁵ 至少有四个已命名的已知威胁行为者利用 BloodHound 攻击 AD 域以谋取个人利益。熟悉该软件将帮助我们理解并向客户展示风险，从而最终降低运营风险。
+
+请注意，截至 2023 年 8 月，BloodHound Community Edition 已发布。与 BloodHound Legacy 版本相比，它提供了若干优势，例如完全容器化的架构。此外，Cypher 查询速度更快，CE 还支持 API。在本节中，我们将探讨 BloodHound CE，因为 BloodHound Legacy 已不再受支持。
+
+### 嗅探数据
+
+要分析 AD 环境中潜在的提权路径，必须使用收集工具对网络进行枚举，以获取所有对象及其关系的列表。这可以通过 BloodHound 收集代理完成，该代理可以通过 C# 可执行文件、PowerShell 脚本，甚至从基于 Linux 的机器上使用 Python 来运行。通常，这需要用户级权限才能绑定到域控制器。
+
+作者更喜欢 Python 版本的收集器，也称为 **bloodhound.py**。该工具是 Kali 软件源的一部分，可以使用 **sudo apt install bloodhound.py** 安装。通过 **apt** 安装后，可以使用 **bloodhound-python** 命令运行它。要从 AD 收集数据并导入 BloodHound GUI，我们必须提供凭据来获取信息。收集方法有多种，但通常我们应该选择 **all**，以确保我们拥有尽可能多的数据来搜索整个域。
+

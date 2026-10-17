@@ -1,0 +1,21 @@
+Digital Ocean provides several quick and simple examples of how to deploy their serverless code infrastructure online at [https://github.com/digitalocean/sample-functions-php-helloworld](https://github.com/digitalocean/sample-functions-php-helloworld). If you do not have a Digital Ocean account, consider signing up using the referral link [https://bit.ly/m4lvheDigitalOcean](https://bit.ly/m4lvheDigitalOcean) to get $200 in free credits to explore this activity.
+
+We can check the IP as well as a few other factors to help determine if we should send our payload. Another thing we can control easily is the **User Agent** field, where we can specify a certain string of characters as a “signature” to deliver the payload. Additionally, we can always place another HTTP header into our request which will help us identify the “good” requests to serve our payload with. We can even get more specific and use a specific source port or range of source ports in combination with these other factors.
+
+After creating all these mitigations from detection and identification with malware analysis tools, we can upload our attack to a burner host somewhere on the Internet and check what these services might say. For example, we can start our service as an AWS Lightsail or Digital Ocean droplet host, ensure our PHP code is set up and working as intended, and then run a scanner against the website to see what it is returned with. To hide even further, we can modify the original “**Apache Setup Test Page**” default splash screen to be used as a template for our checking script. Keep in mind that we will need to modify the search order that Apache/Nginx uses based on the file extensions.
+
+Placing our PHP checking code can go at the top of the file for the default installation splash page, where we intend to identify if the IP is a “good” IP or not. If the IP is not one that we’re checking for, we will have the server return the splash page only, leading analysis tools to consider that this is a server that was either just set up or has nothing else on it.
+
+This activity is simply scratching the surface of different ways to hide among legitimate services and systems, and these types of attacks rely heavily on creativity to execute. If you can dream up how to provide the file and check for scanners, you can implement it through code.
+
+# ## BACKDOOR CHANNELS
+
+Backdoors are ways for us as attackers to continue our communications with our target after exploitation and to ensure we can return if we lose our connection. Generally, these backdoors will follow after a successful exploitation at our target. Since the purpose of this chapter is not exploitation, but rather obfuscation and deception, we will not cover how the target was exploited and instead focus on how to maintain a connection.
+
+There are several interesting ways that we can achieve this through effective and new technologies. The classic way of establishing persistence is through additional user accounts and persistent reverse shells in startup scripts, but we will focus on the connection itself returning to us instead of the underlying exploitation/persistence mechanism.
+
+# ## WireGuard
+
+WireGuard is an extremely simple, fast, and modern VPN technology that uses UDP to route packets with a set of pre-shared keys.¹³ It’s designed to be simple, flexible, fast, and secure. Since it operates with the UDP transport layer protocol, it is much faster and reduces the overhead from a TCP connection establishing over a channel. This speed is apparent when we connect to a WireGuard peer compared to the speed from a traditional TCP-based VPN. With the UDP transport layer protocol, it is much faster and reduces the overhead from a TCP connection establishing over a channel. This speed is apparent when we connect to a WireGuard peer compared to the speed from a traditional TCP-based VPN.
+
+By design, WireGuard will not respond to any traffic on the open WireGuard port unless the cryptographic configuration is properly set up. While this does make it frustrating to troubleshoot, when it’s operating as intended, any port scanner probing that UDP port will have no responses unless they have access to the keys. This is excellent from our perspective to hide services, as our

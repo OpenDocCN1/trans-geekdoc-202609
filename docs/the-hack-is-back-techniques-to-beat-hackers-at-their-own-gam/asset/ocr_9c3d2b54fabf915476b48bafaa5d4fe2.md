@@ -1,0 +1,5 @@
+![](bbox=[0.107, 0.083, 0.894, 0.527])
+
+FIGURE 1.33 The dreaded, but very secure, Windows 11 operating system.
+
+But before we close out this chapter, I want to alert you to the fact that not all versions of Windows 11 are secure from this attack. In some cases, Windows 11 is upgraded from Windows 10 and the user is told that not “all of the features” of Windows 11 will work. I also noticed, and this is very important, that the Encryption feature does seem to protect systems when a local account is created “not tied to a Microsoft account”. The Microsoft Account seems to be a requirement of having the BitLocker encryption feature functioning properly without additional configuration. So, you need to go all in, which includes meeting the hardware requirements and signing in with a Microsoft account to have a fully secure Windows 11. If you don’t play by Microsoft’s rules, even Windows 11 still be vulnerable to this method of physical attack. See below for the proof.
