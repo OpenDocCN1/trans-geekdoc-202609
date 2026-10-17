@@ -1,0 +1,10 @@
+Internet-facing security seriously and address glaring holes there, no one will be spared in this war – be it McDonalds, a large insurance company, a supplier to the US nuclear ammunition, or an SME, especially in the current environment of rapidly growing popularity of Ransomware-as-a-Service offerings (like REvil) accompanied by “segregation of duties” between several groups of cyber criminals.
+
+Recent galore of so-called digital transformations (and massive proliferation of the agile approach) together with consequences of COVID-19 (e. g. work from home) significantly increased companies’ exposure to the Internet and, subsequently, the risk of cyber-attacks.
+
+I feel obliged to add couple of words about the author. Andy Jenkinson is a highly respected professional and is well known around the industry. He is a Group CEO of CIP specialising in Risk, Compliance, Cyber Security and PKI. Through our online collaboration over the last couple of years I have personally witnessed his tireless efforts to educate people and to help various organisations out. I have also witnessed multiple push backs that never stopped Andy’s efforts. Andy is a sought-after speaker and has spoken at numerous conferences and events. Andy is also the author of another outstanding book “Stuxnet to Sunburst. 20 Years of Digital Exploitation and Cyber Warfare” that I can also strongly recommend.
+
+Who should read this book? In my opinion, it is a must read for Chairmen, Board Members, CEOs and CISOs, as well as, those in charge of operational security. Anyone interested in cyber security will also enjoy (and may be frightened) reading this book. In summary – I can strongly recommend this book to wide audience of anyone with interest in this area!
+
+**Dr Vladas Leonas**  
+*Adjunct Professor, Torrens University*

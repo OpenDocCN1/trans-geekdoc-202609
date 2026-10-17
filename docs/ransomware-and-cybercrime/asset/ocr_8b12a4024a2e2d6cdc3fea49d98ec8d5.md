@@ -1,0 +1,7 @@
+# If a Clever Person Learns from Their Mistakes and a Wise Person Learns from the Mistakes of Others, What Is a Person Who Learns from Neither Known As?
+
+On 15 May 2020, I emailed Thomas, an executive of ExaGrid, and shared a screenshot showing ExaGrid’s Internet security Rating. I concluded with the line: ‘Thomas, ExaGrid’s Internet security needs checking as the attached indicates’. To which Thomas responded, ‘Hi Andy, I am not sure I’m following, would you like to expand?’ I went back to Thomas on the same day and said, ‘Hi Thomas, as I say, I would suggest your security team check the Internet security connectivity as a Rating of F and 0 is the worst possible security Rating. If they are unable to discover these issues, let me know and we would be happy to engage and assist, regards, Andy’. I did not hear back from Thomas.
+
+We have just learned that ExaGrid, quite likely unknown to Thomas, were targeted and became victims of a Ransomware attack by the Conti Gang, who claimed to have infiltrated ExaGrid’s network for a period of a month. After negotiating, a figure of $2.6 million was paid in Bitcoin to the Conti Gang, who then released the decryption key.
+
+ExaGrid’s homepage states: ‘Fastest Backups, Fastest Recoveries. Industry’s Best Ransomware Recovery. Unparalleled, Cost-effective Scale-out’. What it does not state is: We are wide open to being infiltrated and attacked with Ransomware, as our Internet security Rating and score are F and 0...
