@@ -1,0 +1,121 @@
+
+| | varName | ( |
+| | | offWidth uint64 = 4 |
+| | | posWidth uint64 = 8 |
+| | | entWidth = offWidth + posWidth |
+| | | ) |
+| | | ) |
+| | | ) |
+| | | type index struct { |
+| | | file *os.File |
+| | | mmap gommap.MMap |
+| | | size uint64 |
+| | | } |
+
+我们在整个索引中使用 `*Width` 常量，就像存储的变量和常量一样，我们将常量放在文件顶部，以便于查找。`*Width` 常量定义每个索引条目所占用的字节数。
+
+我们的索引条目包含两个字段：记录的偏移和它在存储文件中的位置。我们将偏移存储为 `uint32`，位置存储为 `uint64`，因此它们分别占用 4 和 8 个字节。我们使用 `entWidth` 可以直接根据偏移计算出条目的位置，因为文件中的位置等于偏移乘以 `entWidth`。
+
+`index` 定义了我们的索引文件，由一个持久化文件和一个内存映射文件组成。`size` 表示索引的大小以及下一个要追加到索引的条目应写入的位置。
+
+现在在 `newIndex` 函数下方添加以下 `newIndex` 函数：
+
+``` 
+func newIndex(f *os.File, c Config) (*index, error) {
+    idx := &index{
+        file: f,
+    }
+    fi, err := os.Stat(f.Name())
+    if err != nil {
+        return nil, err
+    }
+    idx.size = uint64(fi.Size())
+    if err = os.Truncate(f.Name(), int64(c.Segment.MaxIndexBytes)); err != nil {
+        return nil, err
+    }
+    if idx.mmap, err = gommap.Map(f.Fd(), gommap.PROT_READ|gommap.PROT_WRITE, gommap.MAP_SHARED); err != nil {
+        return nil, err
+    }
+    return idx, nil
+}
+```
+
+`newIndex` 为给定的文件创建索引。我们创建索引并保存文件当前的大小，以便在添加索引条目时跟踪索引文件中的数据量。我们在内存映射文件之前先将文件扩展到最大索引大小，然后返回创建好的索引给调用者。
+
+接下来，在 `newIndex` 下方添加以下 `Close` 方法：
+
+``` 
+func (i *index) Close() error {
+    if err := i.mmap.Sync(gommap.MS_SYNC); err != nil {
+        return err
+    }
+    if err := i.file.Sync(); err != nil {
+        return err
+    }
+    if err := i.file.Truncate(int64(i.size)); err != nil {
+        return err
+    }
+    return i.file.Close()
+}
+```
+
+`Close` 确保内存映射文件的数据已同步到持久化文件，并且持久化文件已刷新到稳定存储。随后它将持久化文件截断到实际包含的数据量，最后关闭文件。
+
+现在我们已经看到如何打开和关闭索引，可以讨论文件增长和截断的意义。
+
+当我们启动服务时，服务需要知道下一个要写入日志记录的偏移量。服务通过读取索引文件的最后 12 个字节来获取下一条记录的偏移，这是一个简单的过程。然而，在我们对文件进行增长时，这个过程会出错。（我们现在进行文件增长的原因是，一旦文件被内存映射，就无法再调整大小，所以只能在此时进行。）我们通过在文件末尾追加空空间来增长文件，这导致最后一个条目不再位于文件末尾，而是与文件末尾之间存在未知的空白空间。这个空白空间会阻碍服务正确重新启动。因此我们在服务优雅退出时会截断索引文件，去除空白空间，使最后一个条目再次位于文件末尾。这种优雅的退出使服务能够正确且高效地重新启动。
+
+| Handling Ungraceful Shutdowns |
+| --- |
+| ![images/aside-icons/warning.png](Images/warning.png) || A graceful shutdown occurs when a service finishes its ongoing tasks, performs its processes to ensure there’s no data loss, and prepares for a restart. If your service crashes or its hardware fails, you’ll experience an ungraceful shutdown. An example of an ungraceful shutdown for the service we’re building would be if it lost power before it finished truncating its index files. You handle ungraceful shutdowns by performing a sanity check when your service restarts to find corrupted data. If you have corrupted data, you can rebuild the data or replicate the data from an uncorrupted source. The log we’re building doesn’t handle ungraceful shutdowns because I wanted to keep the code simple. |
+
+现在回到编程部分。
+
+在 `Read` 方法下方添加以下 `Read` 方法：
+
+``` 
+func (i *index) Read(in int64) (out uint32, pos uint64, err error) {
+    if i.size == 0 {
+        return 0, 0, io.EOF
+    }
+    if in == -1 {
+        out = uint32((i.size / entWidth) - 1)
+    } else {
+        out = uint32(in)
+    }
+    pos = uint64(out) * entWidth
+    if i.size < pos+entWidth {
+        return 0, 0, io.EOF
+    }
+    out = enc.Uint32(i.mmap[pos : pos+offWidth])
+    pos = enc.Uint64(i.mmap[pos+offWidth : pos+entWidth])
+    return out, pos, nil
+}
+```
+
+`Read(int64)` 接收一个相对偏移并返回对应记录在存储中的位置。给定的偏移是相对于段的基准偏移的；0 始终是索引的第一条记录，1 是第二条，以此类推。我们使用相对偏移来减小索引的大小，因为偏移以 `uint32` 存储。如果使用绝对偏移，则需要以 `uint64` 存储偏移并为每条记录多占用四个字节。四个字节看似不多，但在处理分布式日志（如 LinkedIn）时，记录数量可以达到万亿级，四个字节的开销会变成巨大的负担。即使是相对较小的公司，每天也会产生数十亿条记录，这同样会产生显著的开销。
+
+在 `Read` 方法下方添加以下 `Write` 方法：
+
+``` 
+func (i *index) Write(off uint32, pos uint64) error {
+    if uint64(len(i.mmap)) < i.size+entWidth {
+        return io.EOF
+    }
+    enc.PutUint32(i.mmap[i.size:i.size+offWidth], off)
+    enc.PutUint64(i.mmap[i.size+offWidth:i.size+entWidth], pos)
+    i.size += uint64(entWidth)
+    return nil
+}
+```
+
+`Write(off uint32, pos uint64)` 用于向索引中追加给定的偏移和位置。首先检查是否有足够的空间写入新条目。如果有空间，则使用编码函数将偏移和位置写入内存映射文件，并更新下一次写入的位置。
+
+在 `Write` 方法下方添加以下 `Name` 方法，用于返回索引的文件路径：
+
+``` 
+func (i *index) Name() string {
+    return i.file.Name()
+}
+```
+

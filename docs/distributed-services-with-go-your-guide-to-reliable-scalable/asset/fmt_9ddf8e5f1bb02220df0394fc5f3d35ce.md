@@ -1,0 +1,226 @@
+
+`[CoordinateWithConsensus/internal/log/distributed.go](http://media.pragprog.com/titles/tjgo/code/CoordinateWithConsensus/internal/log/distributed.go)` 
+
+|​  || ​**func**​ (l \*DistributedLog) Read(offset ​**uint64**​) (\*api.Record, ​**error**​) { |
+
+| --- | --- |
+
+|​  || ​**return**​ l.log.Read(offset) |
+
+|​  || } |
+
+Read(offset uint64) reads the record for the offset from the server’s log. When you’re okay with relaxed consistency, read operations need not go through Raft. When you need strong consistency, where reads must be up-to-date with writes, then you must go through Raft, but then reads are less efficient and take longer.
+
+### Finite-State Machine
+
+Raft defers the running of your business logic to the FSM. After the previous snippet, define your fsm type with this code:
+
+[CoordinateWithConsensus/internal/log/distributed.go](http://media.pragprog.com/titles/tjgo/code/CoordinateWithConsensus/internal/log/distributed.go) 
+
+|​  || ​**var**​ \_ raft.FSM = (\*fsm)(nil) |
+
+| --- | --- |
+
+|​  ||  |
+
+|​  || ​**type**​ fsm ​**struct**​ { |
+
+|​  || log \*Log |
+
+|​  || } |
+
+The FSM must access the data it manages. In our service, that’s a log, and the FSM appends records to the log. If you were writing a key-value service, then your FSM would update the store of your data: an int, a map, Postgres—whatever store you’ve used.
+
+Your FSM must implement three methods:
+
+* Apply(record \*raft.Log)—Raft invokes this method after committing a log entry.
+
+* Snapshot—Raft periodically calls this method to snapshot its state. For most services, you’ll be able to build a compacted log—for example, if we were building a key-value store and we had a bunch of commands saying “set foo to bar,” “set foo to baz,” “set foo to qux,” and so on, we would only set the latest command to restore the current state. Because we’re replicating a log itself, we need the full log to restore it.
+
+* Restore(io.ReadCloser)—Raft calls this to restore an FSM from a snapshot—for instance, if an EC2 instance failed and a new instance took its place.
+
+Put this code below the fsm type to implement Apply:
+
+[CoordinateWithConsensus/internal/log/distributed.go](http://media.pragprog.com/titles/tjgo/code/CoordinateWithConsensus/internal/log/distributed.go) 
+
+|​  || ​**type**​ RequestType ​**uint8**​ |
+
+| --- | --- |
+
+|​  ||  |
+
+|​  || ​**const**​ ( |
+
+|​  || AppendRequestType RequestType = 0 |
+
+|​  || ) |
+
+|​  ||  |
+
+|​  || ​**func**​ (l \*fsm) Apply(record \*raft.Log) ​**interface**​{} { |
+
+|​  || buf := record.Data |
+
+|​  || reqType := RequestType(buf\[0\]) |
+
+|​  || ​**switch**​ reqType { |
+
+|​  || ​**case**​ AppendRequestType: |
+
+|​  || ​**return**​ l.applyAppend(buf\[1:\]) |
+
+|​  || } |
+
+|​  || ​**return**​ nil |
+
+|​  || } |
+
+|​  ||  |
+
+|​  || ​**func**​ (l \*fsm) applyAppend(b \[\]​**byte**​) ​**interface**​{} { |
+
+|​  || ​**var**​ req api.ProduceRequest |
+
+|​  || err := proto.Unmarshal(b, &req) |
+
+|​  || ​**if**​ err != nil { |
+
+|​  || ​**return**​ err |
+
+|​  || } |
+
+|​  || offset, err := l.log.Append(req.Record) |
+
+|​  || ​**if**​ err != nil { |
+
+|​  || ​**return**​ err |
+
+|​  || } |
+
+|​  || ​**return**​ &api.ProduceResponse{Offset: offset} |
+
+|​  || } |
+
+|​  ||  |
+
+|​  || ​**func**​ (l \*fsm) Snapshot() (raft.FSMSnapshot, ​**error**​) { |
+
+| --- | --- |
+
+|​  || r := f.log.Reader() |
+
+|​  || ​**return**​ &snapshot{reader: r}, nil |
+
+|​  || } |
+
+|​  ||  |
+
+|​  || ​**var**​ \_ raft.FSMSnapshot = (\*snapshot)(nil) |
+
+|​  ||  |
+
+|​  || ​**type**​ snapshot ​**struct**​ { |
+
+|​  || reader io.Reader |
+
+|​  || } |
+
+|​  ||  |
+
+|​  || ​**func**​ (s \*snapshot) Persist(sink raft.SnapshotSink) ​**error**​ { |
+
+|​  || ​**if**​ \_, err := io.Copy(sink, s.reader); err != nil { |
+
+|​  || \_ = sink.Cancel() |
+
+|​  || ​**return**​ err |
+
+|​  || } |
+
+|​  || ​**return**​ sink.Close() |
+
+|​  || } |
+
+|​  ||  |
+
+|​  || ​**func**​ (s \*snapshot) Release() {} |
+
+Snapshot returns an FSMSnapshot that represents a point-in-time snapshot of the FSM’s state. In our case that state is our FSM’s log, so call Reader to return an io.Reader that will read all the log’s data.
+
+These snapshots serve two purposes: they allow Raft to compact its log so it doesn’t store logs whose commands Raft has applied already. And they allow Raft to bootstrap new servers more efficiently than if the leader had to replicate its entire log again and again.
+
+Raft calls Snapshot according to your configured SnapshotInterval (how often Raft checks if it should snapshot—default is two minutes) and SnapshotThreshold (how many logs since the last snapshot before making a new snapshot—default is 8192).
+
+Raft calls Persist on the FSMSnapshot we created to write its state to some sink that, depending on the snapshot store you configured Raft with, could be in-memory, a file, an S3 bucket—something to store the bytes in. We’re using the file snapshot store so that when the snapshot completes, we’ll have a file containing all the Raft’s log data. A shared state store such as S3 would put the burden of writing and reading the snapshot on S3 rather than the leader and allow new servers to restore snapshots without streaming from the leader. Raft calls Release when it’s finished with the snapshot.
+
+Put this Restore method below Release:
+
+[CoordinateWithConsensus/internal/log/distributed.go](http://media.pragprog.com/titles/tjgo/code/CoordinateWithConsensus/internal/log/distributed.go) 
+
+|​  || ​**func**​ (f \*fsm) Restore(r io.ReadCloser) ​**error**​ { |
+
+| --- | --- |
+
+|​  || b := make(\[\]​**byte**​, lenWidth) |
+
+|​  || ​**var**​ buf bytes.Buffer |
+
+|​  || ​**for**​ i := 0; ; i++ { |
+
+|​  || \_, err := io.ReadFull(r, b) |
+
+|​  || ​**if**​ err == io.EOF { |
+
+|​  || ​**break**​ |
+
+|​  || } ​**else**​ ​**if**​ err != nil { |
+
+|​  || ​**return**​ err |
+
+|​  || } |
+
+|​  || size := ​**int64**​(enc.Uint64(b)) |
+
+|​  || ​**if**​ \_, err = io.CopyN(&buf, r, size); err != nil { |
+
+|​  || ​**return**​ err |
+
+|​  || } |
+
+|​  || record := &api.Record{} |
+
+|​  || ​**if**​ err = proto.Unmarshal(buf.Bytes(), record); err != nil { |
+
+|​  || ​**return**​ err |
+
+|​  || } |
+
+|​  || ​**if**​ i == 0 { |
+
+|​  || f.log.Config.Segment.InitialOffset = record.Offset |
+
+|​  || ​**if**​ err := f.log.Reset(); err != nil { |
+
+|​  || ​**return**​ err |
+
+|​  || } |
+
+|​  || } |
+
+|​  || ​**if**​ \_, err = f.log.Append(record); err != nil { |
+
+|​  || ​**return**​ err |
+
+|​  || } |
+
+|​  || buf.Reset() |
+
+|​  || } |
+
+|​  || ​**return**​ nil |
+
+|​  || } |
+
+Raft calls Restore to restore an FSM from a snapshot. For example, if we lost a server and scaled up a new one, we’d want to restore its FSM. The FSM must discard existing state to make sure its state will match the leader’s replicated state.
+
+In our Restore implementation, we reset the log and configure its initial offset to the first record’s offset we read from the snapshot so the log’s offsets match. Then we read the records in the snapshot and append them to our new log.
