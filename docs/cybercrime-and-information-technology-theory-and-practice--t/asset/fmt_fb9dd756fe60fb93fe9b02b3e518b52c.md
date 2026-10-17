@@ -1,0 +1,132 @@
+
+![FIGURE 6.24 The asymmetric encryption or public key cryptography (PKC).](images/fig6.24.jpg)
+
+**FIGURE 6.24** The asymmetric encryption or public key cryptography (PKC).
+
+*Bob and Alice have their own separate public keys, which they share with the world, including their friend Eve, and their own private keys which they keep to themselves. Bob encrypts a secret message (a love letter) with Alice’s public key. Even though Eve knows that Bob used Alice's public key, she cannot decrypt the message and read the secret love letter. Only Alice, using her private key, can decrypt the message. Eve would need both keys to decrypt the encrypted data. The private key is kept safe on the user’s computer. The public key, on the other hand, is exchanged on the Internet (* [*Figure 6.25*](#c6.xhtml#f6.25) *).*
+
+![FIGURE 6.25 The asymmetric encryption Bob, Eve, and Alice.](images/fig6.25.jpg)
+
+**FIGURE 6.25** The asymmetric encryption Bob, Eve, and Alice.
+
+There are different public key encryption schemes that use widely differing mathematical algorithms from the ones used with Symmetric Cryptography. The following are mathematical algorithms used in asymmetric cryptography:
+
+*   The Rivest, Shamir, Adleman (RSA) Algorithm
+
+*   The Diffie Hellman Algorithm
+
+*   The ElGamal Cryptosystem
+
+*   The Elliptical Wave Theory Algorithm
+
+*   The Digital Signature Algorithm (DSA)
+
+*   The Elliptic-Curve cryptography (ECC)
+
+Table 6.4 compares symmetric and asymmetric encryption.
+
+**TABLE 6.4** Symmetric vs Asymmetric Encryption
+
+| Symmetric Encryption || Asymmetric Encryption |
+
+| --- | --- |
+
+| Algorithms exampleChaCha20
+
+*   RC4
+
+*   AES
+
+*   DES
+
+*   3DES
+
+ || Algorithms examplesDSA
+
+*   RSA
+
+*   Diffie Hellman^([^(340)](#fn340))
+
+*   ECC
+
+*   El Gamal
+
+ |
+
+| --- | --- |
+
+| Complexity
+
+*   Involves one key to encrypt and then decrypt the message.
+
+*   Uses a simpler encryption method compared to asymmetric encryption because only one key is utilized.
+
+*   Faster operation compared to asymmetric encryption.
+
+ || ComplexitySlower operation but offers better security because two keys are used.
+
+*   Uses two different mathematically connected cryptographic keys, the public key, and the private or secret key.
+
+*   Sender and receiver do not share the secret key. The public key is known to all. Private key is known only to the receiver.
+
+*   Uses a complex mathematical process.
+
+ |
+
+| Usage examplesPretty Good Privacy (PGP) uses asymmetric encryption data.
+
+*   Banking sector (credit card information).
+
+*   Data at rest (storage encryption).
+
+*   SSL/TLS and SSH protocols use both symmetric/asymmetric encryptions and hashing algorithms.
+
+ || Usage examples
+
+*   Digital signatures (provides authentication of a source sending a message).
+
+*   Blockchain uses asymmetric encryption to authenticate the authorized transactions in cryptocurrency.
+
+*   SSL/TLS, SSH, PGP protocols.
+
+ |
+
+As a result of the strengths and weaknesses of symmetric and asymmetric encryption, they have been employed in different ways. *Typically, symmetric encryption safeguards the message, and asymmetric encryption is used to send the symmetric key securely.*
+
+### [6.6.3 Digital Certificates and Certificate Authority](#contents.xhtml#re_h-6-22)
+
+At this point we should mention that in cryptography, *public key certificates* are widely distributed by the *Certificate Authority (CA).* The CA consists of trusted third parties that validate the identities of an entity by issuing *digital certificates* like email addresses, and websites, to individual users. Think of these digital certificates as passports or electronic ID cards that establish the identity of an ID holder. Essentially, the public key certificate certifies ownership of the public key.
+
+To be able to generate a new digital certificate, the applicant or owner needs to generate a *Certificate Signing Request (CSR)*, along with a pair of private and public keys on the computing system where the certificate will be installed. This request provides information about the applicant. Then, the CA verifies the information, and issues, or “signs,” the certificate, that now contains a public key and the identity of the applicant. The matching private key is kept secret by the user. In other words, the CA confirms that the public key enclosed in the certificate belongs to the owner of the computing system in the certificate.
+
+In summary, digital certificate technology is based on public key cryptography, where every entity has two keys, public and private, that work only when they are used together and act as keys to a user’s encryption scheme. A digital certificate links the public and private key with its owner and allows a user to verify to whom a certificate has been issued. Also, the Certificate Authority makes sure that the owner is not claiming a false identity. The user keeps the private key in a secure location and does not share it, while the public key is sent to every user with whom the user wants to communicate. The most common international framework for digital certificates is defined by the X.509^([^(341)](#fn341))
+
+*   Issuer’s distinguished name
+
+*   Subject; contains owner’s information
+
+*   Public key; contains the actual public key
+
+*   Certificate; serial number of the certificate
+
+*   Digital signature of the issuer
+
+*   Validity period; when issued and date of expiration
+
+Some certificate providers are Comodo, IdenTrust, GeoTrus, Network Solutions, RapidSSL, Symantec, Thawte, DigiCert, GoDaddy, GlobalSign, and Trustwave.
+
+*The Certificate Authority can verify a bank’s website. Therefore, when we connect to the website, we can be sure that it is the real website and not a fraud. The digital certificate for the bank’s website is issued by the same Certificate Authority. A public key from the user’s browser encrypts data, such as deposits and withdrawals, and sends them to the bank’s website. The private key from the bank’s website decrypts the data sent by the browser.*
+
+### [6.6.4 Hash Functions or Hashing Algorithms](#contents.xhtml#re_h-6-23)
+
+The hash algorithm converts data or a message of any length to a fixed length.^([^(342)](#fn342))
+
+The purpose of hash functions is data integrity. A hash algorithm (H) accepts a variable length of data (M) as input and produces a fixed-length output hash value (h). h = H(M). When we change any bit or bits of (M) this results in a change to the hash code.^([^(343)](#fn343))
+
+To be able to find the solution to a hash message, one must guess it by trying a brute-force attack, where the attacker inputs random passwords to see if they match, or by use of a rainbow table of matched hashes.^([^(344)](#fn344))
+
+*Bob creates a hash algorithm into an authentication tag. Alice runs the same computation and checks its result against the tag. If they match, the message is authenticated, if not the packet is discarded.*
+
+In a university, each student is assigned a unique number that can be used to retrieve information. That number may be kept safe by hashing it. Hashing is used for the authentication of passwords, digital signatures, which authenticate the identity of the sender and ensure message integrity, Message Authentication Codes (MAC), tags attached to confirm the authenticity of a message, and biometrics. For example, a typical password in a computer might be stored as “0d7006cd055e94cf614587e1d.”
+
+The hash function is easy to compute for any given message, but it is impossible to then calculate the original input. In contrast to cryptography, a hash algorithm is a one-way mechanism. It is not reversible.

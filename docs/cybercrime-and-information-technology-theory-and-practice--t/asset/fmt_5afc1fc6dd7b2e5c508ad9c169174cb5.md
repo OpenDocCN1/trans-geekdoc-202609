@@ -1,0 +1,96 @@
+
+# 第一章：计算机技术的早期发展
+
+## 古代计算装置
+
+**FIGURE 1.20** Ancient abacus calculation device. Courtesy of Shutterstock.
+
+在 1901 年，科学家在希腊安提基特拉岛的一艘沉船中发现了一项重要发现（[Figure 1.21](#c1.xhtml#f1.21））。安提基特拉机械发明于公元前二世纪左右，被誉为世界上第一台机械计算机。这台模拟计算机由古希腊人制造，他们用它以令人印象深刻的精度预测月食和日食的时间和颜色。^([^(18)](#fn18))
+
+![FIGURE 1.21 Antikythera Mechanism. Courtesy of Shutterstock.](images/fig1.21.jpg)
+
+**FIGURE 1.21** Antikythera Mechanism. Courtesy of Shutterstock.
+
+在公元前 4 世纪（428–347 年），希腊数学家 *Archytas of Tarentum* 设计了一种名为 *The Pigeon* 的机械鸟，它由蒸汽驱动移动^([^(19)](#fn19))
+
+![FIGURE 1.22 Mechanical bird. Courtesy of Shutterstock](images/fig1.22.jpg)
+
+**FIGURE 1.22** Mechanical bird. Courtesy of Shutterstock
+
+![FIGURE 1.23 Siphon float and constant flow of Heron of Alexandria. Courtesy of Shutterstock.](images/fig1.23.jpg)
+
+**FIGURE 1.23** Siphon float and constant flow of Heron of Alexandria. Courtesy of Shutterstock.
+
+## 近代机械计算机
+
+早期现代机械计算机的例子包括 17 世纪数学家和物理学家 Blaise Pascal 以及数学家 Gottfried Wilhelm (von) Leibniz 发明的计算器。^([^(20)](#fn20))
+
+在 1822 年，Charles Babbage 向皇家天文学学会宣布了他的计算机发明，论文标题为“Note on the application of machinery to the computation of astronomical and mathematical tables.” Babbage 的计算机，或 *difference engine*，使用十进制数系统，并通过摇动手柄操作^([^(21)](#fn21))
+
+![FIGURES 1.24 Small part of Babbage’s mechanical calculating engine. Courtesy of Shutterstock.](images/fig1.24.jpg)
+
+**FIGURES 1.24** Small part of Babbage’s mechanical calculating engine. Courtesy of Shutterstock.
+
+![FIGURES 1.25 The thermionic valve.](images/fig1.25.jpg)
+
+**FIGURES 1.25** The thermionic valve.
+
+## 电子计算机的诞生
+
+在 Charles Babbage 的分析机之后，计算领域最重要的创新之一来自 Iowa State University 的 John Atanasoff（[Figure 1.26](#c1.xhtml#f1.26)）。在 1939 年，他与 Clifford Berry 一起建造了 Atanasoff-Berry Computer (ABC)，这是第一台使用电子管的电子、数字、通用设备。^([^(22)](#fn22))
+
+![FIGURE 1.26 Atanasoff-Berry Computer at Durham Center, Iowa State University.](images/fig1.26.jpg)
+
+**FIGURE 1.26** Atanasoff-Berry Computer at Durham Center, Iowa State University.
+
+> The ABC was the first linear algebra computer, and its 1940 performance is very close to what Moore’s law predicts (the law is described later in this chapter). World War II prevented its innovations from being published and credited to Atanasoff and Berry.^([^(23)](#fn23))
+
+另一项创新是 Z3 计算机，它在德国建造。由 *Konrad Zuse* 在 1941 年设计，这台二进制机器是第一台可编程、受控、全自动数字计算机，可以在二进制内存中存储 64 个浮点数。原始 Z3 在第二次世界大战期间被毁^([^(24)](#fn24))
+
+![FIGURE 1.27 A replica of the very first electronic computer (Z3) being built by Konrad Zuse. Courtesy of Shutterstock.](images/fig1.27.jpg)
+
+**FIGURE 1.27** A replica of the very first electronic computer (Z3) being built by Konrad Zuse. Courtesy of Shutterstock.
+
+在 1939 年至 1945 年之间，英国 Colossus 电子管计算机是二战期间用于对抗德国的最重要工具之一。分析人员使用这台计算机在英国布莱切利公园破解德国战争密码。这台机器是第一台完全功能的电子数字计算机。
+
+在 1946 年，美国电子数值积分计算机 (ENIAC) 首次使用高速电子管，其运行速度快于任何之前的机器（[Figure 1.28](#c1.xhtml#f1.28)）。Mauchly 和 Eckert 在宾夕法尼亚大学 Moore School of Electrical Engineering 建造了 ENIAC。^([^(25)](#fn25))
+
+![FIGURES 1.28 The ENIAC computer. Courtesy of the Library of Congress.](images/fig1.28.jpg)
+
+**FIGURES 1.28** The ENIAC computer. Courtesy of the Library of Congress.
+
+![FIGURE 1.29 The historical timeline of the beginnings of modern computer technology.](images/fig1.29.jpg)
+
+**FIGURE 1.29** The historical timeline of the beginnings of modern computer technology.
+
+在 1950 年代和 1960 年代，Remington Rand Inc. 将 Eckert-Mauchly Computer Corporation 的 ERA 1101，或 UNIVAC 1101，引入美国。这是第一台商用计算机，第一位客户是美国政府（[Figure 1.30](#c1.xhtml#f1.30)）。ERA 的磁鼓使用磁带，可容纳多达两百万位，或 65,000 个 30 位字。其访问时间在 8 到 64 毫秒之间。^([^(26)](#fn26))
+
+![FIGURE 1.30 ERA 1103 UNIVAC 2 Calculating Machine. Photograph from National Aeronautics and Space Administration (NASA).](images/fig1.30.jpg)
+
+**FIGURE 1.30** ERA 1103 UNIVAC 2 Calculating Machine. Photograph from National Aeronautics and Space Administration (NASA).
+
+在 1958 年，来自 Texas Instruments 的电气工程师 Jack St. Clair Kilby 制造了第一个集成电路或半导体芯片，IC，也称为微芯片。
+
+微芯片是一组在制造过程中以微观形式连接的微型晶体管。现代计算机芯片，或硅晶圆，可以容纳数十亿个晶体管。^([^(27)](#fn27))
+
+为了他的发明，Jack St. Clair Kilby 在 2000 年获得了诺贝尔物理学奖。^([^(28)](#fn28))
+
+在 1964 年，国际商业机器 (IBM) 推出了 IBM System/360。它旨在用于商业和科学用途。IBM 提供了六种型号的 360 系列，从小到大，都使用相同的程序，从而为客户节省了资金。到 1971 年，IBM 的净收入超过 10 亿美元。该公司成为计算机生产的领导者，且无法满足需求^([^(29)](#fn29))
+
+![FIGURE 1.31 The IBM 7090 Data Processing System at Data Processing and Data Reduction at the NASA Ames Research Center, c1963. Photograph from National Aeronautics and Space Administration (NASA).](images/fig1.31.jpg)
+
+**FIGURE 1.31** The IBM 7090 Data Processing System at Data Processing and Data Reduction at the NASA Ames Research Center, c1963. Photograph from National Aeronautics and Space Administration (NASA).
+
+在 1965 年，Gordon E. Moore 假设集成电路上的元件数量将在未来 10 年内每两年翻一番。这一假设成为摩尔定律，预测随着计算能力的增强，其成本将呈指数级下降。摩尔定律是电子行业的风向标，也是创新的催化剂。Moore 是 Intel Corporation 的联合创始人。^([^(30)](#fn30))
+
+截至 1969 年，除了机械的持续发展外，ARPANET (Advanced Research Projects Agency network) 成为互联网的前身。ARPANET 最初是一个军用计算机网络，使用早期的分组交换技术。它是第一个实现传输控制协议和互联网协议 TCP/IP 套件的网络，以便更有效地通过这个早期互联网进行传输（[Figure 1.32](#c1.xhtml#f1.32)）。
+
+![FIGURE 1.32 A map of the ARPANET in December 1970. Courtesy of DARPA.](images/fig1.32.jpg)
+
+**FIGURE 1.32** A map of the ARPANET in December 1970. Courtesy of DARPA.
+
+第一台个人计算机是 Kenbak-1。它在 1971 年以 750 美元的价格在 *Scientific American* 杂志上出售。Kenbak-1 销售情况不佳，但它确实提高了公众对家用计算机的认识^([^(31)](#fn31))
+
+![FIGURE 1.33 Kenbak-1. Photo courtesy of Mr. John Blankenbaker](images/fig1.33.jpg)
+
+**FIGURE 1.33** Kenbak-1. Photo courtesy of Mr. John Blankenbaker

@@ -1,0 +1,48 @@
+
+
+*Email spoofing* occurs when a cybercriminal creates and sends email messages from a forged sender’s email address and makes the recipient believe that the email was sent from a legitimate source. Email spoofing is the most widely used method to execute phishing attacks.^([^(323)](#fn323))
+
+*IP spoofing* occurs when hackers modify an IP packet by falsifying its source address. This attack is often used to set up DDoS attacks. The IP spoofing attack has become less common since ISPs have started performing egress filtering and packet filtering to detect and discard spoofed IP packets. Now, it is quite difficult to spoof an IP address outside of a LAN connection. Nevertheless, in cloud computing, hackers use IP spoofing techniques to launch DDoS attacks and masquerade the source’s identity.^([^(324)](#fn324))
+
+*MAC spoofing* changes the factory-assigned MAC, the physical address of a computing device’s network interface controller (NIC), also known as a network interface card. If a hacker can exploit backdoor vulnerabilities in the device’s drivers and modify the MAC address, he is seen as an authorized user. Then, the hacker presents himself at the default gateway and copies all the data without being detected. With these data, the hacker has detailed knowledge about the applications in use and destination host IP addresses. Additionally, the hacker can deny services on a wireless network, inject packets, send frames to all the wireless users using a broadcast address, and manipulate any packet field.^([^(325)](#fn325))
+
+*Website spoofing* occurs when a cybercriminal creates a fake replica of a real website like that of a bank or a university, and when a user logs into the fraudulent website, the hacker obtains the user’s credentials. Nevertheless, this type of spoofing first requires a phishing email that baits the user into clicking on a malicious link.
+
+### 6.3.6 Structured Query Language (SQL) Injection or (SQLI)
+
+Structured Query Language, or SQL, is a programming language used with databases to query the database for specific information. An SQL query is basically a request for data. Examples include data retrieval, updates, and data removal. To query a database, a Web page is usually designed that accepts a specific type of identification, like username and password. When a user enters the information, it is checked for authentication. If correct, the user is granted entry. If not, access to the database is denied.
+
+SQL injection is a type of cyberattack where hackers “inject” malicious SQL code to manipulate the database and gain access to information illicitly. In other words, the hacker exploits software vulnerability by adding malicious SQL code to Web applications. Since most Web pages have no way of refusing authenticated requests, once authenticated, the hacker can enter a malicious code in the SQL code that changes the query. As a result, the hacker breaks into the database and steals, alters, or destroys data.
+
+### 6.3.7 Wi-Fi Hacking
+
+A Wi-Fi connection offers a seamless wireless connection to the Internet. As a result, hackers target Wi-Fi connections and attempt to exploit their vulnerabilities, particularly targeting Wi-Fi in home networks. Once the hacker gains access to the network, he will either target the network itself or go after its connected devices. The hacker will usually focus on the link with the vulnerabilities that are easiest to exploit. Most wireless networks are vulnerable since there is no physical connection to deal with. Established wireless security protocols are frequently exploited to gain unauthorized access to Wi-Fi networks. For example, the security protocol Wired Equivalent Privacy (WEP), introduced in 1999, is the least secure, and the Wi-Fi Protected Access (WPA) protocol also has security vulnerabilities.^([^(326)](#fn326))
+
+Some of the most common Wi-Fi attacks are the following:
+
+* *Cracking attacks* occur when a hacker uses different password-cracking techniques to break into a Wi-Fi network and gain access. Some of these include: 
+
+    * *Brute-force attacks*, meaning the hacker uses every possible combination of letters in a series of password-cracking attempts, struggling by trial and error to “force” its way until the correct password is found. For example, the simplest cipher is the Caesar cipher that can easily be cracked using a brute-force attack. Since the Caesar cipher has only 26 possible keys, by using brute force we can easily try all 26 possible key combinations.
+
+    * *Dictionary attacks* are like *brute-force attacks* but use passwords from a list containing words from the dictionary that many people like to use for their password. The hacker may try words like “password,” “attack,” or “profanity” or credentials stolen from a third-party resource with information about the target’s name, birthday month, etc.
+
+    * *Phishing*, as discussed earlier, is a dishonest attempt to gather personal information, including usernames and passwords.
+
+    * *Rainbow table* is a password-cracking technique that uses the rainbow hash table. This table is used in cryptography to encrypt and store important values like passwords using pre-computed hash values for every possible combination of characters. The passwords in almost all online services and computer systems are stored as hashes. We will discuss the hash value further in the chapter.
+
+* *Jamming Wi-Fi signals* occurs when a hacker blocks a signal, using an illegal jamming device, for the purpose of creating noise and denying users access to a wireless point. According to the Federal Communications Commission (FCC), jamming critical communications like 911 and other emergency calls poses serious risks to public safety.  
+
+      “It is unlawful to advertise, sell, distribute, import, or otherwise market jamming devices to consumers in the United States.”^([^(327)](#fn327))
+
+* A *Wi-Fi de-authentication attack* occurs when a hacker targets a communication when it is traveling between the Wi-Fi Access Point and the device. This is actually a type of denial-of-service (DoS) attack. The goal is to send fake de-authentication packets to wireless users to capture their handshake and other data. These packets may spoof the user’s IP address.^([^(328)](#fn328))
+
+* *Wi-Fi protected setup (WPS) attack*. The WPS standard uses a Personal Identification Number, which is an 8-digit pin, or a push button to connect to the router. This standard was created by Cisco and was designed to simplify connectivity between a wireless device and a router.^([^(329)](#fn329))
+
+* WPA consists of a family of Wi-Fi security certifications or security technologies developed by the Wi-Fi Alliance to secure wireless computer networks.^([^(330)](#fn330))
+
+* *Public Wi-Fi security issues*. Free Wi-Fi can be found in public places such as airports, coffee shops, malls, restaurants, and hotels. Most Wi-Fi hotspots are convenient but are often not secure. The hotspots are becoming more widespread because people want to use their devices 24/7, but the risks are considerable.
+
+Some of the risks of using these free hot spots include:
+
+* *Man-in-the-Middle (MITM) attacks*, a type of cyber eavesdropping that occurs when data sent from point A to point B is intercepted by an attacker. The attacker then interjects himself into the communication process and accesses the victim’s computing system to monitor the online activity. Sometimes, the hacker can intercept login credentials and steal credit card information, alter the contents of the messages, or mimic the user. Every time we connect to a public Wi-Fi hotspot, we should assume that everything is being watched.
+
