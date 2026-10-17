@@ -1,0 +1,1227 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/9524d5a086bf2a81667a6843d3391ba9_1_0.png)
+
+
+    Figure 1. Three components of the ML photodynamics approach. (a) The QC data set
+    stores the information on photochemical reactions. (b) ML algorithms learn excited-state
+    potential energy surfaces. (c) NAM D is used to propagate trajectories using the
+    ML potential.
+
+
+    Molecular Dynamics (PyRAI²MD) and demonstrates the role of nanosecond-scale photodynamics
+    simulations in resolving the photo-torquoselectivity observed in experiments.
+
+
+    +   - Li, J.; Stein, R.; Adrion, D. M.; Lopez, S. A. Machine-Learning Photodynamics
+    Simulations Uncover the Role of Substituent Effects on the Photochemical Formation
+    of Cubanes. J. Am. Chem. Soc. 2021, 143, 20166–2017S.² This work showcases the
+    advantages of machine learning photodynamics simulations for complex photochemical
+    reactions that uncover the substituent effects on the photochemical [2 + 2] cycloaddition
+    toward octasubstituted cubane.
+
+    +   - Li, J.; Lopez, S. A. Excited-state distortions promote the photochemical
+    4π-disrotatory electrocyclizations of fluorobenzenes via machine learning accelerated
+    photodynamics simulations. Chem. - Eur. J. 2022, DOI: 10.1002/chem.202200651.³
+    This work demonstrates the significance of machine learning photodynamics simulations
+    for revealing the long-lived nonradiative decay mechanism of fluorobenzenes and
+    its role in the photochemical formation of Dewar-fluorobenzenes.
+
+
+    # 1. INTRODUCTION
+
+
+    Photochemistry is appealing because it harnesses renewable solar energy to synthesize
+    chemical products⁴ and fuels⁵⁻⁸ under mild conditions with a high atomic conversion
+    efficiency. Photochemical reactions occur via radiationless processes on an ultrashort
+    time scale (10⁻¹⁵−10⁻¹² s). The mechanism studies rely on time-resolved experiments
+    (i.e., attochemistry⁹) to probe the excited-state molecular vibrations and electronic
+    structures. Comprehensive investigations are complemented with computational modeling
+    to disentangle the elusive spectroscopic features and identify the critical excited-state
+    structures. Quantum-chemical (QC) calculations for excited-state electronic structures
+    are often costly. Therefore, machine learning (ML) techniques have been introduced
+    to accelerate the calculations.
+
+
+    ML models learn the relationship between molecular structures and associated properties
+    (e.g., energies, ¹⁰⁻¹³ transition dipole moments, ¹⁰⁻¹³ and oscillator strengths¹⁴,¹⁵)
+    from a large QC data set. The applications have succeeded in the discovery of
+    new molecules¹⁶ and materials,¹⁷ predicting reaction barriers,¹⁸ finding transition
+    states,¹⁹,²⁰ solving the Schrödinger equation,²¹,²² modeling wave functions,²³,²⁴
+    optimizing density functionals,²⁵,²⁶ computing IR spectra,²⁷ UV−vis spectra,¹¹,¹³
+    and NMR spectra,²⁸ and simulating excited-state dynamics¹²,²⁹ and complex photochemical
+    reactions.¹⁻³ The energy prediction achieves chemical accuracy (1 kcal·mol⁻¹),
+    which is required for realistic chemical prediction and comparison with experiments.
+
+
+    costs are negligible compared with the same-level QC calculation.¹²,²⁹ Thus, many
+    studies have used ML potentials as a prominent accelerator for nonadiabatic molecular
+    dynamics (NAMD) simulations, for instance, multiconfigurational time-dependent
+    Hartree (MCTDH)³⁰ and trajectory surface hopping (TSH)³¹ calculations. Several
+    groups have developed ML mixed quantum–classical NAMD approaches (called ML photodynamics
+    in this Account), such as MLAtom³² with Newton-X³³ and SchNarc³⁴ with SHARC.³⁵
+    To study photochemical cycloaddition and electrocyclic reactions, our group developed
+    the Python Rapid Artificial Intelligence Ab Initio Molecular Dynamics (PyRAI²MD)
+    code.¹
+
+
+    Training ML potentials is a challenging task. First, generating high-quality machine-learnable
+    QC data requires expertise in computational chemistry and ML. The training data
+    generation protocol often inherits human biases that require specific steps to
+    remove. Second, the rapid development of ML models has made comparing the efficiencies
+    and performances of these models rather challenging.³⁶ We begin with an overview
+    of the fundamental background for ML photodynamics. We will then provide a short
+    tutorial on building ML potentials and discuss the applications in our recent
+    publications. Finally, we will summarize our findings and outlook on future method
+    development.
+
+
+    # 2. THE ML PHOTODYNAMICS APPROACH
+
+
+    ML photodynamics methods generally contain three key components (Figure 1): the
+    QC data set, the ML potential, and NAM D.
+
+
+    # 2.1. Quantum-Chemical Data Set for Training
+
+
+    Single-reference methods (e.g., time-dependent density functional theory) are
+    used to compute vertical excitation energies with an errors ranging from 0.3 to
+    0.5 eV.³⁷ However, they fail when there is strong coupling between electronic
+    states (e.g., avoided crossings or conical intersections) because it violates
+    the Born–Oppenheimer approximation. Single-reference methods may also predict
+    incorrect branching-plane dimensionality at these crossing regions.³⁸,³⁹ Multiconfigurational
+    self-consistent field (MCSCF) methods, such as complete active space self-consistent
+    field (CASSCF), are more suitable for describing the electronic structures near
+    the crossing regions. The term CASSCF(m,n) refers to an active space of m electrons
+    and n orbitals. The CASSCF wave function is often limited to an active space of
+    22 electrons and 22 orbitals with modern quantum-chemical software.⁴⁰ The selection
+    of active orbitals is not trivial. Active spaces that are too small may cause
+    high-lying state(s) to become relatively low-lying along the reaction coordinate,
+    known as intruder state(s). Accounting for electron correlation significantly
+    improves the energies, which can approach the experimental energies.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/9524d5a086bf2a81667a6843d3391ba9_2_0.png)
+
+
+    **Figure 2.** Three perspectives of selecting electronic states on the basis of
+    (a) the absorption spectrum, (b) the reaction coordinate diagram, and (c) state
+    populations from QC-NAMD simulations.
+
+
+    energy is divided into static and dynamic components. CASSCF recovers the static
+    correlation by its multireference formalism. However, it omits dynamic correlation
+    because it treats each electron in the mean field of the other electrons. Thus,
+    it usually results in overestimated excitation energies. The use of CASSCF data
+    must be carefully validated against multireference methods, such as multireference
+    configuration interaction (MRCI) and extended multistate complete active space
+    second-order perturbation theory (XMS-CASPT2). We recommend the ANO-type double-ζ
+    basis set or comparable aug-cc-pVDZ basis set because they provide a balance between
+    computational cost and accuracy and capture diverse excitation types, including
+    Rydberg states. Moreover, Bowen, Lester, and co-workers showed that in the dissociation
+    of CH₃COO Criegee intermediates and more recently Marquet and co-workers showed
+    that in the dissociation of tyrosine, there are no available reference methods
+    that can describe the entire reaction space, requiring a combination of QC methods
+    to be employed.
+
+
+    # 2.2. Machine Learning Potentials
+
+
+    Kernel methods and neural networks (NNs) are the two most common methods to train
+    ML potentials. Various examples are high-dimensional neural network potential
+    (HDNNP), SchNet, PhysNet, ANI, deep potential smooth edition (DeepPot-SE), gradient-domain
+    machine learning (GDML), kernel ridge regression using RE descriptor and the Gaussian
+    kernel (KREG), reproducing kernel Hilbert space (RKHS), and Gaussian approximation
+    potential (GAP). Some packages of a collection of ML methods are MLatom and fast
+    learning of atomic rare events (FLARE). A comparison of NN and kernel methods
+    shows rather similar accuracies for ML photodynamics simulations. We refer readers
+    to refs 12 and 32 for more information about the method benchmarks. Our following
+    discussion will focus on the most basic architecture of NNs based on fully connected
+    feed-forward multilayer perceptrons.
+
+
+    ML potentials predict molecular properties using a numerical representation of
+    the 3D molecular structure. Global descriptors contain complete molecular structural
+    information, such as the so-called Coulomb matrix and inverse distance matrix.
+    They are translation- and rotation-invariant and thus can distinguish molecular
+    structures in arbitrary orientations and positions. However, global descriptors
+    are not invariant to permuted chemically equivalent atoms. Specialized techniques
+    (e.g., bag of bonds, randomly sorted Coulomb matrices, and permutation invariant
+    polynomials) are introduced to enforce permutation invariance in global descriptors.
+    However,
+
+
+    these techniques may apply only to small molecules and result in discontinuous
+    potential energy surfaces (PESs). On the other hand, local descriptors describe
+    atomistic environments with a set of basis functions that are permutation invariant.
+    However, they may introduce system-dependent hyperparameters (e.g., shape and
+    size of the basis functions). Some examples are atom-centered symmetry functions
+    (ACSFs), smooth overlap of atomic positions (SOAP), and Faber–Christensen–Huang–Lilienfeld
+    (FCHL). In addition, Pozdnyakov and co-workers suggested that the inclusion of
+    higher-order terms in descriptors is essential to further improve the model accuracy.
+    The ML potentials are often trained for a specific molecule in ML photodynamics.
+    Thus, we implemented global descriptors (e.g., inverse distance matrix) in PyRAI²MD
+    for simplicity. We enable more efficient training through a data augmentation
+    approach (see section 3.4).
+
+
+    Many databases, such as GDB-13 and GDB-17 and their subsets QM7, QM7b, QM8, and
+    QM9 as well as the VERDE materials database, are designed to learn molecular properties
+    at equilibrium geometries. However, ML photodynamics relies on a more specialized
+    dataset that contains the molecular properties at different geometries for a given
+    molecule. Active learning is an efficient and practical strategy for this task.
+    It allows models to sample undersampled data resembling an automatic reaction
+    exploration. We will discuss the initial set generation in section 3.2 and active
+    learning in section 3.3.
+
+
+    # 2.3. Nonadiabatic Molecular Dynamics
+
+
+    The ML photodynamics approach is based on mixed quantum–classical NAMD using TSH
+    methods, such as Tully’s fewest switches surface hopping (FSSH). It computes the
+    hopping probability between two states of the same spin multiplicity with the
+    nonadiabatic couplings (NACs) and spin–orbit couplings (SOCs) for different spin
+    multiplicities. It is more challenging to predict NACs than SOCs because NACs
+    are vector properties. Marquet and co-workers suggested that fitting numerator
+    components of NACs to the first-order-derivative of a virtual potential avoids
+    the discontinuous data near state crossings. Recent work by our group and the
+    Gómez-Bombarelli group showed that the NNs tend to underestimate NACs with increasing
+    atom count because of the unavailability of training data for the unphysical virtual
+    potential and/or low-accuracy predictions of energy gaps near crossing regions.
+    A possible solution to the NAC prediction problem is to use the Baeck-An approximation
+    based on the ML-predicted energies. The improvement of the energy gap is challenging
+    and requires substantial'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/9524d5a086bf2a81667a6843d3391ba9_3_0.png)
+
+
+    **Figure 3.** Initial set generation with geometrical interpolation and Wigner
+    sampling. The colored curves represent the interpolated points, and the gray points
+    represent the Wigner-sampled reactant and product structures.
+
+
+    computational effort to generate data near crossing regions. The NAC prediction
+    may be bypassed with the Zhu–Nakamura theory of surface hopping (ZNSH).^74 ZNSH
+    uses only energies and forces of two crossing states in hopping probability calculations.
+    The forces are diabatized in a generalized 1D model based on three-point interpolation.^75–77
+    ZNSH has shown results consistent with those of FSSH.^75–77 It also has a formula
+    to compute intersystem crossing with SOCs.^78 Our examples in section 4 used ZNSH.
+    Since the ZNSH solely depends on the shape of the PESs, one must justify the ZNSH
+    results with FSSH if the QC-NAMD data are available. In addition, the recent developments
+    of ML methods for multiscale systems^79 and long-range dispersion^80 in the ground-state
+    potential pave the way to the future ML photodynamics approach for larger systems.
+
+
+    stopping, dropout, and weight decay).^82,84 Early stopping stops the training
+    procedure when the validation error increases while the training error decreases.
+    Dropout randomly ignores the outputs from some number of nodes to prevent complex
+    coadaptation of nodes within the layer, making a more robust prediction. Weight
+    decay adds a small penalty to the loss function to prevent overfitting.
+
+
+    # 3. TRAINING ML PHOTODYNAMICS MODELS
+
+
+    # 3.1. Building an ML Potential
+
+
+    We first determine an appropriate number of electronic states to construct an
+    ML potential. It is recommended to first compute the absorption spectrum and compare
+    with available experimental results to assess relevant states in the excitation
+    (Figure 2a). The reaction coordinate diagram is also useful to characterize the
+    selected states along with a possible reaction path (Figure 2b). A more rigorous
+    justification requires analyzing the state populations during QC-NAMD simulations
+    (Figure 2c). Because the model in Figure 2 shows a separate S₁ and higher states
+    in the absorption spectrum and reaction diagram and the state population transfer
+    mainly involves the S₁ and S₀ states, we can build an ML potential to learn the
+    S₀ and S₁ energies and forces, which reduces the dataset size and training noise.
+
+
+    Training an ML potential minimizes a mean-square-error loss function using gradient
+    descent methods.^81 We split the training data into two parts (e.g., 9:1). The
+    first part is used to train the model; the other part is for test or validation.
+    The kernel methods and NNs may contain hyperparameters that need additional optimization,
+    which can be done with grid search and random grid search.^82 With a limited amount
+    of training data, k-fold cross-validation is an effective approach for hyperparameter
+    optimization.^83 NN potentials are prone to overfitting, where the model fits
+    the training data and noise generally leads to predictive failure outside the
+    training set. Thus, we recommend overfitting prevention (e.g., early
+
+
+    # 3.2. Initial Set Sampling
+
+
+    Initial set sampling provides a baseline for learning the PESs. Structural sampling
+    has been done in thermal reactions with MD-based methods (umbrella sampling,^85
+    trajectory-guided sampling,^86 enhanced sampling,^87 and metadynamics^88), stochastic
+    surface walk,^89 Wigner sampling,^90 and normal mode scans.^71,91 However, these
+    techniques have limited efficacy for complex photochemical reactions. For instance,
+    Wigner sampling for reactant or product geometries captures only accessible nonequilibrium
+    geometries near local or global minima. Normal mode scans include many irrelevant
+    molecular vibrations; ground-state MD simulations access different mechanistic
+    pathways from excited-state processes. Excited-state MD becomes prohibitively
+    expensive as the number of degrees of freedom increases. We recently reported
+    a composite scheme that combines Wigner sampling and geometrical interpolation
+    to generate a compact yet relevant initial set (Figure 3).
+
+
+    Wigner sampling is commonly used to generate initial conditions for photodynamics
+    and absorption spectra.^92 Learning the Wigner-sampled reactants helps reduce
+    the undersampling of structures near the Franck–Condon (FC) region. Geometrical
+    interpolation complements structural correlations between the reactants and products
+    in the dataset. We use geodesic interpolation^93 to generate intermediate structures
+    between the optimized reactant, product, and minimum-energy crossing point (MECP)
+    geometries. We combine the Wigner-sampled geometrical displacements of reactants
+    with the interpolated structures to broaden the sampled space (Figure 3). For
+    sampling structures of larger systems in a complex environment, Wigner sampling
+    needs to be combined with multiscale MD simulations to sample the environment.^94
+
+
+    We train five models to demonstrate the effect of Wigner sampling and geometrical
+    interpolation. Each model consists of two independently trained NNs. The hyperparameters
+    and training results are available in the Supporting Information.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/9524d5a086bf2a81667a6843d3391ba9_4_0.png)
+
+
+    Figure 4. (a–e) NN-predicted reaction coordinate diagrams for various sizes of
+    the Wigner and interpolations sets. (f–j) Uncertainties of the NN-predicted S0,
+    S1, and S2 energies. The predicted energy is the average of the results from two
+    independently trained NNs. The uncertainty is the standard deviation of the two
+    NN predictions. Training data calculations were performed at the XMS-CASPT2(6,7)/aug-cc-pVDZ
+    level.
+
+
+    ![](img/9524d5a086bf2a81667a6843d3391ba9_4_1.png)
+
+
+    Figure 5. (a) NN-predicted photochemical reactions of octamethyl-[3]-ladderdiene
+    and yields. (b) Plots of the number of collected structures of octamethyl-[3]-ladderdiene
+    as a function of active learning iteration. The legend shows the reaction space
+    defined by the three reaction coordinates r1, d1, and c1 corresponding to the
+    [2 + 2] cycloaddition, electrocyclic ring-opening, and σC–C cleavage pathways,
+    respectively. The inset 3D plots illustrate the spatial distributions of the collected
+    structures.
+
+
+    use the prediction standard deviations to estimate the prediction uncertainties.
+    The training set is built upon two subsets in varying ratios: the Wigner sampling
+    set contains 100 reactant and product structures, and the geometrical interpolation
+    set contains 500 structures (25 paths by 20 intermediates). The test set has 201
+    interpolated structures in
+
+
+    the 4π disrotatory electrocyclization of hexafluorobenzene (HFB). Figure 4a shows
+    that the NNs exclusively trained with the Wigner set predict the incorrect topology
+    of PESs near the S1/ S0 crossing region. The prediction uncertainty rises to >0.01
+    hartree (>6.2 kcal mol−1), which suggests an area of undersampled structures (Figure
+    4f). Upon addition of 50%'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/9524d5a086bf2a81667a6843d3391ba9_5_0.png)
+
+
+    Figure 6. (a) Two chemically equivalent pathways in the 4π disrotatory electrocyclization
+    of HFB. (b) Permutation map for HFB, defined by the “C6 operation” reordering
+    the atoms around the C6 axis of HFB. (c) NN-predicted energies of Dewar-HFB with
+    and without the permutation map. The left column is the control set, and the right
+    column is the test set. (d) Active learning curves of HFB with and without a permutation
+    map. The completion ratio is the number of complete trajectories divided by the
+    total number of trajectories.
+
+
+    of the interpolation set, the NNs learn the S1/S0 crossing but predict two crossing
+    regions (Figure 4b) and show high uncertainty (>0.03 hartree) near the S1/S0 and
+    S2/S1 crossings (Figure 4g). Including the complete interpolation set predicts
+    a better topology throughout the reaction coordinate diagram (Figure 4c). The
+    uncertain regions narrow to the S0/S1 crossing (Figure 4h). Reducing the Wigner
+    set by 50% shows similar errors near the S1/S0 crossing region (Figure 4d). However,
+    the uncertainty decreases below 0.01 hartree, which makes the model less effective
+    in detecting undersampled structures (Figure 4i). As can be seen in Figure 4e,
+    removing the Wigner set results in notable uncertainty, especially for the product
+    (Figure 4j). Our findings suggest equal significance of Wigner sampling and geometrical
+    interpolation in the initial set generation but do not yet indicate an optimal
+    ratio between the Wigner and interpolation sets.
+
+
+    # 3.3. Active Learning
+
+
+    Active learning, which searches undersampled structures in the initial set, was
+    initially introduced by Behler95 for ground-state MD simulations and then adapted
+    for excited-state PESs by Marquetand and co-workers.71 Active learning uses a
+    similarity measure to determine the uncertainty of predicted molecular properties
+    during MD simulations. Kernel-based methods (e.g., Gaussian process regression)
+    may provide the covariance of the predictions as an estimate of the prediction
+    uncertainty. However, the NN potential needs a committee model of at least two
+    independently trained NNs to evaluate uncertainties. The ML potential is first
+    trained with the initial set and propagates an ensemble of trajectories to search
+    undersampled structures. These trajectories are terminated if the predicted energies,
+    forces, NACs, and SOCs of the current structures exceed predefined thresholds
+    (e.g., 0.043 hartree and 0.25 hartree·bohr−1 for energy and force, respectively).1,2
+    The
+
+
+    uncertain structures are recomputed with QC calculations and added to retrain
+    the ML potential. Our recent ML photodynamics simulations for octamethyl-[3]-ladderdiene
+    (A) showed substantial efficacy of active learning in the automatic discovery
+    of new reaction pathways.2 The initial training set contained only 4321 structures
+    sampled from the interpolated reaction coordinate diagram for the [2 + 2] cycloaddition.
+    The active learning propagated 125 trajectories from the S1 state in 1 ps (0.5
+    fs time step). It completed in 51 iterations and found 4982 new structures from
+    the σC–C cleavage and electrocyclic ring-opening pathways with five predicted
+    intermediates or products (Figure 5a). In Figure 5b, we have plotted the number
+    of collected structures and their distributions to visualize the learning progress
+    in the reaction space. In the first three iterations, the trajectories searched
+    around the FC region (A, r > 2.0 Å, d < 2.0 Å, and c < 2.0 Å). A broader exploration
+    began at iteration 7 that learned the electrocyclic ring-opening pathways to D
+    and E (r > 2.0 Å, d > 2.0 Å, and c < 2.0 Å), and the σC–C cleavage pathways to
+    C (r > 2.0 Å, d < 2.0 Å, and c > 2.0 Å). The undersampled structures in the electrocyclic
+    ring-opening pathway gradually decreased to a plateau at iterations 36–40. After
+    that, the trajectories detected a new pathway toward F (r > 2.0 Å, d > 3.2 Å,
+    and c < 2.0 Å).
+
+
+    # 3.4. Data Augmentation
+
+
+    Symmetric molecules render the inverse distance matrix unable to learn the photochemical
+    reaction pathways. For instance, HFB (D6h symmetry) undergoes a 4π disrotatory
+    electrocyclization reaction. It has six equivalent carbons (Figure 6a). Active
+    learning tends to search all equivalent reaction pathways because the inverse
+    distance matrix is not permutation invariant. This increases the training data
+    calculations ~6-fold. To reduce these redundant QC calculations, we introduced
+    a data augmentation approach, called a permutation map, to'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/9524d5a086bf2a81667a6843d3391ba9_6_0.png)
+
+
+    Figure 7. (a) Photo-torquoselective isomerization of norbornyl cyclohexadiene
+    (NCHD). (b) Geometries of intermediates and products optimized at the CASSCF(4,3)/ANO-S-VDZP
+    level. The red and blue dotted lines highlight the angle θ in the syn and anti
+    configurations. The black dotted lines show the distance R. (c) State populations
+    of the 240 QC and 3954 ML trajectories. (d) QC and (e) ML trajectories of NCHD
+    in 1 ps simulations at 300 K. The black dots represent the last surface hopping
+    point in each trajectory. (f) Conversion between NCHD and Int-a and Int-b in 1
+    ns. From ref 1. CC BY-NC 3.0.
+
+
+    generate equivalent data from existing data. In Figure 6b, pathways 1 and 2 have
+    equivalent MECPs with different representations, I1 and I2. The permutation maps
+    reorder the atoms of the MECP in pathway 1 around the C6 axis of HFB. The permuted
+    MECP has a new representation I1,p, and I1,p = I2 because the inverse distance
+    matrix is rotationally invariant. Since the permutation map reorders the atoms
+    in the representation, all of the vector properties (e.g., forces and NACs) are
+    also reordered accordingly.
+
+
+    We compare the predicted energies of Dewar-HFB with and without permutations to
+    show the significance of our data augmentation approach. Details of the NN hyperparameters
+    and training results are given in the Supporting Information. The training set
+    contains the 901 structures from Wigner sampling and geometrical interpolation
+    of the C1–C4 bond formation.3 The control set contains 100 Dewar-HFB structures
+    with the C1–C4 bond. The predictions show similar error distributions regardless
+    of the permutations (Figure 6c). The test set contains 100 Dewar-HFB structures
+    with the C2–C5 bond. Without permutations, the predictions result in a large mean
+    absolute error (MAE) of 4.54 eV. Using the permutation map, however, decreases
+    the MAE to 0.100 eV. Figure 6d compares the progress of the direct active learning
+    approach with that of active learning with an HFB permutation map. It propagates
+    200 trajectories from S1 in 10 ps (0.5 fs time step). In the active learning with
+    permutations, the completion ratio reaches 0.8 in 10 iterations and exceeds 0.9
+    in 30 iterations. Without permutations, the learning curve fluctuates in the first
+    20 iterations and requires 29 iterations to reach a 0.8 completion ratio. The
+    active learning with permutations collects considerably fewer structures (2128)
+    than that without permutations (3029). The data augmentation can be avoided using
+    a permutationally invariant local descriptor, such the descriptor implemented
+    in SchNarc.34
+
+
+    # 4. APPLICATIONS OF ML PHOTODYNAMICS SIMULATIONS
+
+
+    In this section, we provide an overview of our latest contributions in applying
+    ML photodynamics to resolve mechanistic problems in photochemistry. Photochemical
+    cycloaddition and electrocyclic reactions serve as fundamental routes to produce
+    highly strained organic compounds that are
+
+
+    typically inaccessible via thermal routes. CASSCF or XMS-CASPT2 calculations were
+    used as reference methods to properly describe the PESs involving state degeneracies
+    along the reaction coordinate(s). However, the demonstrated systems all require
+    substantial—sometimes prohibitive—computational costs for large molecules or reactions
+    that have excited-state lifetimes exceeding 10 ps. ML photodynamics simulations
+    enable the acceleration of energy and gradient predictions on increasingly large
+    molecules.
+
+
+    # 4.1. Photo-torquoselective Isomerization of Norbornyl Cyclohexadiene
+
+
+    Irradiation of norbornyl cyclohexadiene (NCHD) initiates a torquoselective 4π
+    disrotatory electrocyclic ring-closing reaction to major (anti-NL) and minor (syn-NL)
+    norbornyl ladderene (NL) products (Figure 7a).1 We performed QC and ML photodynamics
+    simulations to uncover the origin of the photo-torquoselectivity. We computed
+    240 QC trajectories of NCHD at the CASSCF(4,3)/ANO-S-VDZP level and 3954 ML trajectories
+    with NNs trained at the same level in 1 ps. The QC trajectory required 17 days,
+    whereas the ML trajectory only took 38 s on a single CPU. The final MD snapshots
+    were optimized to intermediates and products (Figure 7b).
+
+
+    The ML trajectories show excited-state dynamics and an S1 half-life consistent
+    with those from the QC trajectories (Figure 7c). They predict a 0.2% quantum yield
+    of syn-NL (Figure 7e), which is missing in the QC trajectories because of the
+    limited number of trajectories (Figure 7d). The ML photodynamics simulations are
+    consistent with our PES calculations and confirm that the syn pathway is steeper
+    than the anti pathway, forming a higher ratio of Int-a. However, the anti pathway
+    has a steeper energy descent at the S1/S0 crossing seam, favoring anti-NL. The
+    984 1 ns ML trajectories reveal thermal conversions from the unexpected intermediates
+    Int-a and Int-b to NCHD (Figure 7f), which explains their absence in the experiment.
+    This work demonstrates the efficiency and accuracy of ML photodynamics simulations
+    and emphasizes the importance of long-time-scale simulations.
+
+
+    # 4.2. Substituent Effects on the Photochemical Reactions of [3]-Ladderdiene
+
+
+    The [2 + 2] cycloaddition of [3]-ladderdienes can access cubanes. The quantum
+    yield of cubane increases in the [3]-'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Figure 8. (a) NN-predicted relaxation pathways of octamethyl, octatrifluoromethyl,
+    and octacyclopropyl [3]-ladderdiene. (b) NN-simulated relaxation rates of substituted
+    [3]-ladderdienes. (c–e) NN trajectories of (c) CH3, (d) CF3, and (e) cPr-substituted
+    [3]-ladderdiene. Each plot contains 400 randomly selected trajectories. The averaged
+    starting points, surface hopping points, and products are marked with red dots,
+    black circles, and black dots, respectively. The inset legends illustrate the
+    last trajectory snapshot with predicted yields. Reproduced from ref 2. Copyright
+    2021 American Chemical Society.
+
+
+    Figure 9. (a) Photochemical 4π disrotatory electrocyclization of HFB. (b) A trajectory
+    reversing to HFB in the first 0.6 ns simulations. It traces the twisting angle
+    α in a 2 ps interval, highlighted by the red circles on the structures. The black
+    circles mark the twisting angle in each snapshot. (c) Structural distribution
+    of the HFB hopping points. The scatter points are defined by the twisting angle
+    α (highlighted in red dotted lines) and the 1,4-carbon distance R (marked by blue
+    dotted lines), shown in the aligned hopping structures. The colors from blue to
+    red represent the accumulation of the hopping points from low to high, as evaluated
+    by Gaussian kernel density estimation. The black circles mark the hopping points
+    undergoing 4π disrotatory electrocyclization. (d) An HFB hopping structure leads
+    to the 4π disrotatory electrocyclization. Reproduced with permission from ref
+    3. Copyright 2022 Wiley-VCH.
+
+
+    ladderdienes octasubstituted with methyl (CH3), trifluoromethyl (CF3), and cyclopropyl
+    (cPr) groups.2 We recently performed the first simulations for these molecules
+    using ML photodynamics.2 The NNs were trained with CASSCF(8,7)/ANO-S-VDZP+ANO-S-MB
+    (for substituents) calculations. The trajectories were propagated from the S1
+    FC region for 2 ps (0.5 fs time step). We collected 3835, 3259, and 3122 trajectories
+    for octamethyl (A), octatrifluoromethy (A′), and octacyclopropyl [3]-ladderdiene
+    (A″) to analyze the excited-
+
+
+    state dynamics. Figure 8a,b illustrates the observed pathways and S1 → S0 relaxation
+    half-lives. The ML trajectories discovered four S1 relaxation pathways in the
+    trajectories of octamethyl [3]-ladderdiene: (1) [2 + 2] cycloaddition, (2) 4π
+    disrotatory electrocyclic ring opening, (3) σC–C cleavage, and (4) 6π conrotatory
+    electrocyclic ring opening. The 4π and 6π ring-opening reactions have higher relaxation
+    rates than the [2 + 2] cycloaddition (Figure 8b). The closed-shell repulsion in
+    CF3 blocks the 6π ring-opening'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/9524d5a086bf2a81667a6843d3391ba9_8_0.png)
+
+
+    Figure 10. (a) S1 state population, (b) product distributions, and (c) energy
+    conservation in the ML photodynamics simulation of A'''' with Δt = 1, 0.5, 0.25,
+    and 0.10 fs. (d) Predicted yields as functions of the number of trajectories of
+    A''''. The shaded areas in (c) and (d) denote the range of one standard deviation
+    obtained from bootstrapping 10% of the total trajectories 100 times. Panel (d)
+    was adapted from ref 2. Copyright 2021 American Chemical Society.
+
+
+    pathway, enhancing the [2 + 2] cycloaddition. The steric effect of cPr also accelerates
+    the [2 + 2] cycloaddition reaction to compete with the 4π disrotatory electrocyclic
+    ring-opening reaction. Figure 8c shows a broad trajectory distribution toward
+    five products, where the quantum yield of octamethyl cubane is 1%. As can be seen
+    in Figure 8d,e, the steric clashes narrow the spatial distributions of the reaction
+    paths and deactivate the side-reaction channels. These findings explain the increasing
+    quantum yields of octatrifluoromethyl (14%) and octacyclopropyl cubane (15%).
+    This work highlights the capability of ML photodynamics simulations to discover
+    complex photochemical reactions.
+
+
+    # 4.3. Photocyclization of Hexafluorobenzenes
+
+
+    Hexafluorination of benzene significantly enhances the chemoselectivity of the
+    photochemical 4π disrotatory electrocyclization to strained Dewar-HFB (Figure
+    9a).96 However, the long-lived nonradiative decay of HFB and low quantuam yield
+    of Dewar-HFB prevent productive QC-NAMD simulations from understanding the mechanisms.96
+    The ML photodynamics simulations enable us to model the excited-state dynamics
+    of HFB in 4 ns at the XMS-CASPT2(6,7)/aug-cc-pVDZ level.3
+
+
+    The ML photodynamics simulations show that most HFBs reform the reactant. Figure
+    9b illustrates one of the HFB trajectories in the first 600 ps (0.6 ns). The snapshots
+    display the pseudo-Jahn–Teller distortions breaking the planar structure with
+    out-of-plane C–F bending. The nonradiative decay occurs at a surface hopping point
+    involving a πC–C cis–trans isomerization, where the twisting angle α is 110° at
+    0.29 ns. Figure 9c plots the distribution of the HFB hopping points. The hopping
+    structures reveal a smooth twisting of the C–F bonds around the C1–C2 bond, indicating
+    a continuous S1/S0 crossing seam. However, the structures leading to the 4π disrotatory
+    electrocyclization are sparsely distributed along the seam without a particular
+    clustering pattern (R = 2.58–2.87 Å). This implies that neither the πC–C twisting
+    nor the 1,4-carbon distance directly determines the formation of Dewar-HFB. Thus,
+    the 4π disrotatory electrocyclization of HFB could be attributed to the dynamical
+    effects in the post-surface-hopping structures, with the nuclear momentum continuously
+    populating the bond-forming vibration mode. Figure 9d shows a surface hopping
+    point yielding Dewar-fluorobenzene. The predicted reaction quantum yield is 0.3%,
+    in line with the experimental results (≤3%).97
+
+
+    # 4.4. Remarks on ML Photodynamics Simulations
+
+
+    Long-time-scale ML photodynamics simulations extensively integrate Newton''s equation
+    of motion. The time step strongly depends on the vibrational frequency of the
+    system under investigation.
+
+
+    investigation. For instance, a typical vibrational period of C–H stretching in
+    small organic molecules is about 10 fs, suggesting that the maximum time step
+    should be 1 fs. A time step that is too large may accumulate substantial errors
+    in trajectory propagations. The simulations also require a sufficient number of
+    trajectories to meet the statistical convergence of the considered properties
+    (e.g., time constants and quantum yields). However, this information is often
+    unavailable in QC-NAMD studies because of the computational cost. In this subsection,
+    we use ML photodynamics simulations to explore the influence of the integration
+    time step and number of trajectories on simulation of photochemical reactions.
+    The model system is octacyclopropyl [3]-ladderdiene (A'''').
+
+
+    The trajectories were propagated from the S1 in 1 ps. We collected 3266, 3268,
+    3271, and 3211 trajectories with time steps (Δt) of 0.1, 0.25, 0.5, and 1 fs,
+    respectively. Figure 10a plots the time evolution of the S1 population. For Δt
+    = 0.1 fs, the predicted S1 half-life is 165.6 fs. Increasing the step size to
+    1 fs shortens the half-life to 80 fs. However, the product distributions are less
+    sensitive than the state populations. Setting Δt from 0.1 to 1 fs lowers the yield
+    of A'''' only from 0.54 to 0.50 and increases the yield of B'''' from 0.14 to
+    0.16 and the yield of E'''' from 0.29 to 0.34 (Figure 10b). A recent benchmark
+    by Baratti and co-workers reported that the random numerical noise of 10−5 hartree
+    in energy calculations at Δt = 0.5 fs causes the total energy not to be conserved
+    in NAMD simulations.98 As the NN potential is trained at chemical accuracy (1.6
+    × 10−3 hartree), the choice of Δt needs extra carefulness. For Δt = 0.1 fs, the
+    trajectories obtain reasonable energy conservation with an absolute energy drift
+    of 5 × 10−5 hartree (Figure 10c). The energy drifts increase to 2 × 10−4 and 2
+    × 10−3 hartree at Δt = 0.25 and 0.5 fs, respectively. However, Δt = 1 fs accumulates
+    a tremendous energy drift approaching 0.1 hartree in 2 ps of simulation. Thus,
+    we think that Δt = 0.5 fs is required for energy conservation in ML photodynamics.
+
+
+    Figure 10d plots the predicted yields as functions of the number of trajectories
+    of A''''. A typical 500 trajectories that we usually consider in QC-NAMD simulations
+    do not predict a converged yield. The yields significantly fluctuate under 1000
+    trajectories. Thus, the ML photodynamics simulations require at least 1100–1500
+    trajectories to reach statistical convergence.
+
+
+    # 5. CONCLUSIONS AND OUTLOOK
+
+
+    We have presented an overview of ML-photodynamics and demonstrated its value in
+    resolving the role of substituent effects on the reactivities, stereoselectivities,
+    and automatically'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'identifying mechanistic pathways with active learning in photochemical reactions.
+    We combined Wigner sampling and geometrical interpolation to simplify training
+    data generation. The method trains effective ML potentials to predict qualitatively
+    correct PESs and detect undersampled structures near crossing regions. Moreover,
+    we discussed data augmentation with atomic permutations that mitigate the permutational
+    variance in the inverse distance matrix representation; it substantially accelerates
+    active learning for photochemical reactions of high-symmetry molecules.
+
+
+    ML photodynamics enables highly efficient nanosecond NAMD simulations with the
+    quality of CASSCF and XMS-CASPT2 for relatively large molecules. The training
+    requires minimal prior knowledge of the intended photochemical reaction. The current
+    limitations of ML photodynamics are unsatisfactory predictions of NACs and the
+    energy gaps near the crossing regions. Current ML photodynamics simulations may
+    employ NAC-free surface hopping methods such as the Zhu–Nakamura theory until
+    a more suitable model for NAC predictions is developed. Overall, ML photodynamics
+    simulations provide a valuable tool to study long-time-scale photochemical reactions.
+    We expect this Account to contribute to a deeper understanding of the ML photodynamics
+    approach and inspire future applications in simulating photochemistry in molecular
+    solids and explicit solvation with further applications in chemical biology and
+    materials chemistry, solid-state, explicit-solvent, and biological systems.
+
+
+    # ▪ ASSOCIATED CONTENT
+
+
+    # ⓘ Supporting Information
+
+
+    The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.accounts.2c00288.
+
+
+    +   - NN hyperparameters, training metrics, and data availability (PDF)
+
+
+    # ▪ AUTHOR INFORMATION
+
+
+    # Corresponding Author
+
+
+    **Steven A. Lopez** — *Department of Chemistry and Chemical Biology, Northeastern
+    University, Boston, Massachusetts 02115, United States*; ◉ orcid.org/0000-0002-8418-3638;
+    Email: s.lopez@northeastern.edu
+
+
+    # Author
+
+
+    **Jingbai Li** — *Department of Chemistry and Chemical Biology, Northeastern University,
+    Boston, Massachusetts 02115, United States*
+
+
+    Complete contact information is available at: https://pubs.acs.org/10.1021/acs.accounts.2c00288
+
+
+    # Notes
+
+
+    The authors declare no competing financial interest.
+
+
+    # Biographies
+
+
+    **Jingbai Li** received his Ph.D. in 2019 from the Illinois Institute of Technology,
+    working with Prof. Andrey Yu. Rogachev. He was a postdoctoral researcher at Northeastern
+    University, working with Prof. Steven A. Lopez and developed PyRAI²MD in the Lopez
+    group. He is an associate professor in the Hoffmann Institute of Advanced Materials
+    at Shenzhen Polytechnic. His research is focused on development of ML-photodynamics
+    approaches for studying photochemical reactions in complex environments.
+
+
+    **Steven A. Lopez** earned his Ph.D. in 2015 from the University of California,
+    Los Angeles, working with Prof. Kendall N. Houk. He was a DOE Energy Efficiency
+    and Renewable Energy Postdoctoral Fellow at Harvard University, working with Prof.
+    Alán Aspuru-Guzik. He is an assistant professor in the Chemistry & Chemical Biology
+    Department at Northeastern University. His group is focused on understanding light-driven
+    processes in organic molecules and soft materials using state-of-the-art QC methods
+    and ML techniques.
+
+
+    # ▪ ACKNOWLEDGMENTS
+
+
+    J.L. and S.A.L. acknowledge the Office of Naval Research (N00014-18-1-2659) National
+    Science Foundation (CAREER Grant NSF-CHE-2144556), and the National Science Foundation
+    (NSF-OAC-2118201) for funding this research. J.L. and S.A.L. appreciate the assistance
+    from the Northeastern Research Computing Team and the computing resources provided
+    by the Massachusetts Life Science Center (Grant G00006360).
+
+
+    # ▪ REFERENCES
+
+
+    +   1. Li, J.; Reiser, P.; Boswell, B. R.; Eberhard, A.; Burns, N. Z.; Friederich,
+    P.; Lopez, S. A. Automatic discovery of photoisomerization mechanisms with nanosecond
+    machine learning photodynamics simulations. *Chem. Sci.* **2021**, *12* (14),
+    5302–5314.
+
+    +   2. Li, J.; Stein, R.; Adrion, D. M.; Lopez, S. A. Machine-Learning Photodynamics
+    Simulations Uncover the Role of Substituent Effects on the Photochemical Formation
+    of Cubanes. *J. Am. Chem. Soc.* **2021**, *143* (48), 20166–20175.
+
+    +   3. Li, J.; Lopez, S. A. Excited-State Distortions Promote the Photochemical
+    4π-Electrocyclizations of Fluorobenzenes via Machine Learning Accelerated Photodynamics
+    Simulations. *Chem. - Eur. J.* **2022**, DOI: 10.1002/chem.202200651.
+
+    +   4. *Solar-to-Chemical Conversion: Photocatalytic and Photoelectrochemical
+    Processes*; Sun, H., Ed.; Wiley, 2021.
+
+    +   5. de Meijere, A.; Redlich, S.; Frank, D.; Magull, J.; Hofmeister, A.; Menzel,
+    H.; Konig, B.; Svoboda, J. Octacyclopropylcubane and some of its isomers. *Angew.
+    Chem., Int. Ed. Engl.* **2007**, *46* (24), 4574–6.
+
+    +   6. Xie, J.; Zhang, X.; Shi, C.; Pan, L.; Hou, F.; Nie, G.; Xie, J.; Liu, Q.;
+    Zou, J.-J. Self-photensitized [2 + 2] cycloaddition for synthesis of high-energy-density
+    fuels. *Sustainable Energy & Fuels* **2020**, *4* (2), 911–920.
+
+    +   7. Dong, L.; Feng, Y.; Wang, L.; Feng, W. Azobenzene-based solar thermal fuels:
+    design, properties, and applications. *Chem. Soc. Rev.* **2018**, *47* (19), 7339–7368.
+
+    +   8. Orrego-Hernandez, J.; Dreos, A.; Moth-Poulsen, K. Engineering of Norbornadiene/Quadricyclane
+    Photoswitches for Molecular Solar Thermal Energy Storage Applications. *Acc. Chem.
+    Res.* **2020**, *53* (8), 1478–1487.
+
+    +   9. Merritt, I. C. D.; Jacquemin, D.; Vacher, M. Attachment: Is Controlling
+    Electrons the Future of Photochemistry? *J. Phys. Chem. Lett.* **2021**, *12*
+    (34), 8404–8415.
+
+    +   10. Westermayr, J.; Gastegger, M.; Menger, M.; Mai, S.; Gonzalez, L.; Marquetand,
+    P. Machine learning enables long time scale molecular photodynamics simulations.
+    *Chem. Sci.* **2019**, *10* (35), 8100–8107.
+
+    +   11. Westermayr, J.; Marquetand, P. Deep learning for UV absorption spectra
+    with SchNarc: First steps toward transferability in chemical compound space. *J.
+    Chem. Phys.* **2020**, *153* (15), 154112.
+
+    +   12. Westermayr, J.; Marquetand, P. Machine Learning for Electronically Excited
+    States of Molecules. *Chem. Rev.* **2021**, *121* (16), 9873–9926.
+
+    +   13. Westermayr, J.; Maurer, R. J. Physically inspired deep learning of molecular
+    excitations and photoemission spectra. *Chem. Sci.* **2021**, *12* (32), 10755–10764.
+
+    +   14. Pronobis, W.; Schütt, K. T.; Tkatchenko, A.; Müller, K.-R. Capturing intensive
+    and extensive DFT/TDDFT molecular properties with machine learning. *Eur. Phys.
+    J. B* **2018**, *91* (8), No. 178.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '(15) Ramakrishnan, R.; Hartmann, M.; Tapavicza, E.; von Lilienfeld, O. A. Electronic
+    spectra from TDDFT and machine learning in chemical space. *J. Chem. Phys.* **2015,
+    143** (8), No. 084111.
+
+
+    (16) Nandy, A.; Duan, C.; Taylor, M. G.; Liu, F.; Steeves, A. H.; Kulik, H. J.
+    Computational Discovery of Transition-metal Complexes: From High-throughput Screening
+    to Machine Learning. *Chem. Rev.* **2021, 121** (16), 9927–10000.
+
+
+    (17) Friedrich, J.; Hase, F.; Proppe, J.; Aspuru-Guzik, A. Machine-learned potentials
+    for next-generation matter simulations. *Nat. Mater.* **2021, 20** (6), 750–761.
+
+
+    (18) Lewis-Atzwell, T.; Townsend, P. A.; Grayson, M. N. Machine learning activation
+    energies of chemical reactions. *Wiley Interdiscip. Rev.: Comput. Mol. Sci.* **2021**,
+    DOI: 10.1002/wcms.1593.
+
+
+    (19) Peterson, A. A. Acceleration of saddle-point searches with machine learning.
+    *J. Chem. Phys.* **2016, 145** (7), No. 074106.
+
+
+    (20) Pozun, Z. D.; Hansen, K.; Sheppard, D.; Rupp, M.; Muller, K. R.; Henkelman,
+    G. Optimizing transition states via kernel-based machine learning. *J. Chem. Phys.*
+    **2012, 136** (17), 174101.
+
+
+    (21) Hermann, J.; Schätzle, Z.; Noe, F. Deep-neural-network solution of the electronic
+    Schrödinger equation. *Nat. Chem.* **2020, 12** (10), 891–897.
+
+
+    (22) Han, J.; Zhang, L.; E, W. Solving many-electron Schrödinger equation using
+    deep neural networks. *J. Comput. Phys.* **2019, 399,** No. 108929.
+
+
+    (23) Schutt, K. T.; Gastegger, M.; Tkatchenko, A.; Muller, K. R.; Maurer, R. J.
+    Unifying machine learning and quantum chemistry with a deep neural network for
+    molecular wavefunctions. *Nat. Commun.* **2019, 10** (1), 5024.
+
+
+    (24) Gastegger, M.; McSloy, A.; Luya, M.; Schutt, K. T.; Maurer, R. J. A deep
+    neural network for molecular wave functions in quasi-atomic minimal basis representation.
+    *J. Chem. Phys.* **2020, 153** (4), No. 044123.
+
+
+    (25) Zhou, Y.; Wu, J.; Chen, S.; Chen, G. Toward the Exact Exchange-Correlation
+    Potential: A Three-Dimensional Convolutional Neural Network Construct. *J. Phys.
+    Chem. Lett.* **2019, 10** (22), 7264–7269.
+
+
+    (26) Dick, S.; Fernandez-Serra, M. Machine learning accurate exchange and correlation
+    functionals of the electronic density. *Nat. Commun.* **2020, 11** (1), 3509.
+
+
+    (27) Gastegger, M.; Behler, J.; Marquetand, P. Machine learning molecular dynamics
+    for the simulation of infrared spectra. *Chem. Sci.* **2017, 8** (10), 6924–6935.
+
+
+    (28) Gao, P.; Zhang, J.; Peng, Q.; Zhang, J.; Glezakou, V. A. General Protocol
+    for the Accurate Prediction of Molecular (13)C/(1)H NMR Chemical Shifts via Machine
+    Learning Augmented DFT. *J. Chem. Inf. Model.* **2020, 60** (8), 3746–3754.
+
+
+    (29) Dral, P. O.; Barbatti, M. Molecular excited states through a machine learning
+    lens. *Nat. Rev. Chem.* **2021, 5**, 388–405.
+
+
+    (30) Bonfanti, M.; Worth, G. A.; Burghardt, I. Multi-Configuration Time-Dependent
+    Hartree Methods: From Quantum to Semiclassical and Quantum-Classical. In *Quantum
+    Chemistry and Dynamics of Excited States: Methods and Applications*; González,
+    L., Lindh, R., Eds.; Wiley, 2021; pp 383–411.
+
+
+    (31) Mai, S.; Marquetand, P.; González, L. Surface Hopping Molecular Dynamics.
+    In *Quantum Chemistry and Dynamics of Excited States: Methods and Applications*;
+    González, L., Lindh, R., Eds.; Wiley, 2021; pp 499–530.
+
+
+    (32) Dral, P. O.; Ge, F.; Xue, B. X.; Hou, Y. F.; Pinheiro, M., Jr.; Huang, J.;
+    Barbatti, M. Meltom 2: An Integrative Platform for Atomistic Machine Learning.
+    *Top Curr. Chem.* **2021, 379** (4), 27.
+
+
+    (33) Barbatti, M.; Ruckenbauer, M.; Plasser, F.; Pittner, J.; Granucci, G.; Persico,
+    M.; Lischka, H. Newton-X: a surface-hopping program for nonadiabatic molecular
+    dynamics. *Wiley Interdiscip. Rev. Comput. Mol. Sci.* **2014, 4** (1), 26–33.
+
+
+    (34) Westermayr, J.; Gastegger, M.; Marquetand, P. Combining SchNet and SHARC:
+    The SchNarc Machine Learning Approach for Excited-State Dynamics. *J. Phys. Chem.
+    Lett.* **2020, 11** (10), 3828–3834.
+
+
+    (35) Mai, S.; Marquetand, P.; Gonzalez, L. Nonadiabatic dynamics: The SHARC approach.
+    *Wiley Interdiscip. Rev.: Comput. Mol. Sci.* **2018, 8** (6), e1370.
+
+
+    (36) Pinheiro, M. J., Jr.; Ge, F.; Ferre, N.; Dral, P. O.; Barbatti, M. Choosing
+    the right molecular machine learning potential. *Chem. Sci.* **2021, 12** (43),
+    14396–14413.
+
+
+    (37) Huix-Rotllant, M.; Ferré, N.; Barbatti, M. Time-Dependent Density Functional
+    Theory. In *Quantum Chemistry and Dynamics of Excited States: Methods and Applications*;
+    González, L., Lindh, R., Eds.; Wiley, 2021; pp 13–46.
+
+
+    (38) Huix-Rotllant, M.; Nikiforov, A.; Thiel, W.; Filatov, M. Description of Conical
+    Intersections with Density Functional Methods. *Top Curr. Chem.* **2015, 368**,
+    445–76.
+
+
+    (39) Levine, B. G.; Ko, C.; Quenneville, J.; Martínez, T. J. Conical intersections
+    and double excitations in time-dependent density functional theory. *Mol. Phys.*
+    **2006, 104** (5–7), 1039–1051.
+
+
+    (40) Vogtliatzis, K. D.; Ma, D.; Olsen, J.; Gagliardi, L.; de Jong, W. A. Pushing
+    configuration-interaction to the limit: Towards massively parallel MCSCF calculations.
+    *J. Chem. Phys.* **2017, 147** (18), 184111.
+
+
+    (41) Helmich-Paris, B. Benchmarks for Electronically Excited States with CASSCF
+    Methods. *J. Chem. Theory Comput.* **2019, 15** (7), 4170–4179.
+
+
+    (42) Gomez, S.; Ibele, L. M.; Gonzalez, L. The 3s Rydberg state as a doorway state
+    in the ultrafast dynamics of 1,1-difluoroethylene. *Phys. Chem. Chem. Phys.* **2019,
+    21** (9), 4871–4878.
+
+
+    (43) Roos, B. O.; Merchan, M.; McDiarmid, R.; Xing, X. Theoretical and Experimental
+    Determination of the Electronic Spectrum of Norbornadiene. *J. Am. Chem. Soc.*
+    **1994, 116** (13), 5927–5936.
+
+
+    (44) Kidwell, N. M.; Li, H.; Wang, X.; Bowman, J. M.; Lester, M. I. Unimolecular
+    dissociation dynamics of vibrationally activated CH₃CHOOC Criegee intermediates
+    to OH radical products. *Nat. Chem.* **2016, 8** (5), 509–14.
+
+
+    (45) Westermayr, J.; Gastegger, M.; Vörös, D.; Panzenboeck, L.; Joerg, F.; González,
+    L.; Marquetand, P. Deep learning study of tyrosine reveals that roaming can lead
+    to photodamage. *Nat. Chem.* **2022**, DOI: 10.1038/s41557-022-00950-z.
+
+
+    (46) Behler, J. Four Generations of High-Dimensional Neural Network Potentials.
+    *Chem. Rev.* **2021, 121** (16), 10037–10072.
+
+
+    (47) Schutt, K. T.; Sauceda, H. E.; Kindermans, P. J.; Tkatchenko, A.; Muller,
+    K. R. SchNet - A deep learning architecture for molecules and materials. *J. Chem.
+    Phys.* **2018, 148** (24), 241722.
+
+
+    (48) Unke, O. T.; Meuwly, M. PhysNet: A Neural Network for Predicting Energies,
+    Forces, Dipole Moments, and Partial Charges. *J. Chem. Theory Comput.* **2019,
+    15** (6), 3678–3693.
+
+
+    (49) Gao, X.; Ramezanghorbani, F.; Isayev, O.; Smith, J. S.; Roitberg, A. E. TorchANI:
+    A Free and Open Source PyTorch-Based Deep Learning Implementation of the ANI Neural
+    Network Potentials. *J. Chem. Inf. Model.* **2020, 60** (7), 3408–3415.
+
+
+    (50) Zhang, L.; Han, J.; Wang, H.; Saidi, W. A.; Car, R.; Weinan, E. End-to-end
+    symmetry preserving inter-atomic potential energy model for finite and extended
+    systems. In *Proceedings of the 32nd International Conference on Neural Information
+    Processing Systems*; Curran Associates, 2018; pp 4441–4451.
+
+
+    (51) Chmiela, S.; Sauceda, H. E.; Muller, K. R.; Tkatchenko, A. Towards exact
+    molecular dynamics simulations with machine-learned force fields. *Nat. Commun.*
+    **2018, 9** (1), 3887.
+
+
+    (52) Koner, D.; Meuwly, M. Permutationally Invariant, Reproducing Kernel-Based
+    Potential Energy Surfaces for Polyatomic Molecules: From Formaldehyde to Acetone.
+    *J. Chem. Theory Comput.* **2020, 16** (9), 5474–5484.
+
+
+    (53) Bartok, A. P.; Payne, M. C.; Kondor, R.; Csanyi, G. Gaussian approximation
+    potentials: the accuracy of quantum mechanics, without the electrons. *Phys. Rev.
+    Lett.* **2010, 104** (13), 136403.
+
+
+    (54) Xie, Y.; Vandermause, J.; Sun, L.; Cepellotti, A.; Kozinsky, B. Bayesian
+    force fields from active learning for simulation of inter-dimensional transformation
+    of stanene. *npj Comput. Mater.* **2021, 7** (1), No. 40.
+
+
+    (55) Westermayr, J.; Faber, F. A.; Christensen, A. S.; von Lilienfeld, O. A.;
+    Marquetand, P. Neural networks and kernel ridge regression for'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   (56) Rupp, M.; Tkatchenko, A.; Muller, K. R.; von Lilienfeld, O. A. Fast
+    and accurate modeling of molecular atomization energies with machine learning.
+    Phys. Rev. Lett. 2012, 108 (5), No. 058301.
+
+    +   (57) Hansen, K.; Biegler, F.; Ramakrishnan, R.; Pronobis, W.; von Lilienfeld,
+    O. A.; Muller, K. R.; Tkatchenko, A. Machine Learning Predictions of Molecular
+    Properties: Accurate Many-Body Potentials and Nonlocality in Chemical Space. J.
+    Phys. Chem. Lett. 2015, 6 (12), 2326–31.
+
+    +   (58) Hansen, K.; Montavon, G.; Biegler, F.; Fazli, S.; Rupp, M.; Scheffler,
+    M.; von Lilienfeld, O. A.; Tkatchenko, A.; Muller, K. R. Assessment and Validation
+    of Machine Learning Methods for Predicting Molecular Atomization Energies. J.
+    Chem. Theory Comput. 2013, 9 (8), 3404–19.
+
+    +   (59) Qu, C.; Yu, Q.; Bowman, J. M. Permutationally Invariant Potential Energy
+    Surfaces. Annu. Rev. Phys. Chem. 2018, 69, 151–175.
+
+    +   (60) Behler, J. Atom-centered symmetry functions for constructing high-dimensional
+    neural network potentials. J. Chem. Phys. 2011, 134 (7), No. 074106.
+
+    +   (61) Bartók, A. P.; Kondor, R.; Csányi, G. On representing chemical environments.
+    Phys. Rev. B Condens Matter 2013, 87 (18), 184115.
+
+    +   (62) Christensen, A. S.; Bratholm, L. A.; Faber, F. A.; Anatole von Lilienfeld,
+    O. FCHL revisited: Faster and more accurate quantum machine learning. J. Chem.
+    Phys. 2020, 152 (4), No. 044107.
+
+    +   (63) Pozdnyakov, S. N.; Willatt, M. J.; Bartok, A. P.; Ortner, C.; Csanyi,
+    G.; Ceriotti, M. Incompleteness of Atomic Structure Representations. Phys. Rev.
+    Lett. 2020, 125 (16), 166001.
+
+    +   (64) Blum, L. C.; Reymond, J. L. 970 million druglike small molecules for
+    virtual screening in the chemical universe database GDB-13. J. Am. Chem. Soc.
+    2009, 131 (25), 8732–3.
+
+    +   (65) Ruddigkeit, L.; van Deursen, R.; Blum, L. C.; Reymond, J. L. Enumeration
+    of 166 billion organic small molecules in the chemical universe database GDB-17.
+    J. Chem. Inf. Model. 2012, 52 (11), 2864–75.
+
+    +   (66) Rupp, M.; Tkatchenko, A.; Muller, K. R.; von Lilienfeld, O. A. Fast and
+    accurate modeling of molecular atomization energies with machine learning. Phys.
+    Rev. Lett. 2012, 108 (5), No. 058301.
+
+    +   (67) Montavon, G.; Rupp, M.; Gobre, V.; Vazquez-Mayagoitia, A.; Hansen, K.;
+    Tkatchenko, A.; Müller, K.-R.; von Lilienfeld, O. A. Machine learning of molecular
+    electronic properties in chemical compound space. New J. Phys. 2013, 15 (9), No.
+    095003.
+
+    +   (68) Ramakrishnan, R.; Dral, P. O.; Rupp, M.; von Lilienfeld, O. A. Quantum
+    chemistry structures and properties of 134 kilo molecules. Sci. Data 2014, 1,
+    140022.
+
+    +   (69) Abreha, B. G.; Agarwal, S.; Foster, I.; Blaiszik, B.; Lopez, S. A. Virtual
+    Excited State Reference for the Discovery of Electronic Materials Database: An
+    Open-Access Resource for Ground and Excited State Properties of Organic Molecules.
+    J. Phys. Chem. Lett. 2019, 10 (21), 6835–6841.
+
+    +   (70) Maï, S.; Marquetand, P.; González, L. A general method to describe intersystem
+    crossing dynamics in trajectory surface hopping. Int. J. Quantum Chem. 2015, 115
+    (18), 1215–1231.
+
+    +   (71) Westermayr, J.; Gastegger, M.; Menger, M.; Mai, S.; Gonzalez, L.; Marquetand,
+    P. Machine learning enables long time scale molecular photodynamics simulations.
+    Chem. Sci. 2019, 10 (35), 8100–8107.
+
+    +   (72) Axelrod, S.; Shakhnovich, E.; Gómez-Bombarelli, R. Excited state, non-adiabatic
+    dynamics of large photoswitchable molecules using a chemically transferable machine
+    learning potential. Nat. Commun. 2022, 13, No. 3440.
+
+    +   (73) do Casal, M. T.; Toldo, J. M.; Pinheiro, M.; Barbatti, M. Fewest switches
+    surface hopping with Baeck-An couplings. Open Res. Eur. 2021, 1, No. 49.
+
+    +   (74) Ishida, T.; Nanbu, S.; Nakamura, H. Clarification of nonadiabatic chemical
+    dynamics by the Zhu-Nakamura theory of nonadiabatic transition: from tri-atomic
+    systems to reactions in solutions. Int. Rev. Phys. Chem. 2017, 36 (2), 229–285.
+
+
+    +   (75) Yu, L.; Xu, C.; Lei, Y.; Zhu, C.; Wen, Z. Trajectory-based nonadiabatic
+    molecular dynamics without calculating nonadiabatic coupling in the avoided crossing
+    case: trans→cis photoisomerization in azobenzene. Phys. Chem. Chem. Phys. 2014,
+    16 (47), 25883–95.
+
+    +   (76) Shchepanovska, D.; Shannon, R. J.; Curchod, B. F. E.; Glowacki, D. R.
+    Nonadiabatic Kinetics in the Intermediate Coupling Regime: Comparing Molecular
+    Dynamics to an Energy-Grained Master Equation. J. Phys. Chem. A 2021, 125 (16),
+    3473–3488.
+
+    +   (77) Yue, L.; Yu, L.; Xu, C.; Lei, Y.; Liu, Y.; Zhu, C. Benchmark Performance
+    of Global Switching versus Local Switching for Trajectory Surface Hopping Molecular
+    Dynamics Simulation: Cis<->Trans Azobenzene Photoisomerization. ChemPhysChem 2017,
+    18 (10), 1274–1287.
+
+    +   (78) Yue, L.; Yu, L.; Xu, C.; Zhu, C.; Liu, Y. Quantum yields of singlet and
+    triplet chemiex citation of dimethyl 1,2-dioxetane: ab initio nonadiabatic molecular
+    dynamic simulations. Phys. Chem. Chem. Phys. 2020, 22 (20), 11440–11451.
+
+    +   (79) Lier, B.; Poliak, P.; Marquetand, P.; Westermayr, J.; Oostenbrink, C.
+    BuRNN: Buffer Region Neural Network Approach for Polarizable-Embedded Neural Network/Molecular
+    Mechanics Simulations. J. Phys. Chem. Lett. 2022, 13 (17), 3812–3818.
+
+    +   (80) Westermayr, J.; Chaudhuri, S.; Jeindl, A.; Hofmann, O. T.; Maurer, R.
+    J. Long-range dispersion-inclusive machine learning potentials for structure search
+    and optimization of hybrid organic–inorganic interfaces. Digital Discovery 2022,
+    DOI: 10.1039/D2DD00016D.
+
+    +   (81) Kingma, D. P.; Ba, J. L. Adam: A Method for Stochastic Optimization.
+    arXiv (Computer Science.Machine Learning), January 30, 2017, 1412.6980, ver. 9.
+    https://arxiv.org/abs/1412.6980 (accessed 2022-05-09).
+
+    +   (82) Goodfellow, I.; Bengio, Y.; Courville, A. Deep Learning; MIT Press, 2016.
+
+    +   (83) Hastie, T.; Tibshirani, R.; Friedman, J. H. The Elements of Statistical
+    Learning: Data Mining, Inference, and Prediction, 2nd ed.; Springer: New York,
+    2009.
+
+    +   (84) Bishop, C. M. Pattern Recognition and Machine Learning, 1st ed.; Springer:
+    New York, 2006.
+
+    +   (85) Kästner, J. Umbrella sampling. Wiley Interdiscip. Rev.: Comput. Mol.
+    Sci. 2011, 1 (6), 932–942.
+
+    +   (86) Tao, G. Trajectory-guided sampling for molecular dynamics simulation.
+    Theor. Chem. Acc. 2019, 138 (3), No. 34.
+
+    +   (87) Yang, Y. I.; Shao, Q.; Zhang, J.; Yang, L.; Gao, Y. Q. Enhanced sampling
+    in molecular dynamics. J. Chem. Phys. 2019, 151 (7), No. 070902.
+
+    +   (88) Herr, J. E.; Yao, K.; McIntyre, R.; Toth, D. W.; Parkhill, J. Metadynamics
+    for training neural network model chemistries: A competitive assessment. J. Chem.
+    Phys. 2018, 148 (24), 241710.
+
+    +   (89) Shang, C.; Liu, Z. P. Stochastic Surface Walking Method for Structure
+    Prediction and Pathway Searching. J. Chem. Theory Comput. 2013, 9 (3), 1838–45.
+
+    +   (90) Dahl, J. P.; Springborg, M. The Morse oscillator in position space, momentum
+    space, and phase space. J. Chem. Phys. 1988, 88 (7), 4535–4547.
+
+    +   (91) Smith, J. S.; Isayev, O.; Roitberg, A. E. ANI-1: an extensible neural
+    network potential with DFT accuracy at force field computational cost. Chem. Sci.
+    2017, 8 (4), 3192–3203.
+
+    +   (92) Barbatti, M.; Sen, K. Effects of different initial condition samplings
+    on photodynamics and spectrum of pyrrole. Int. J. Quantum Chem. 2016, 116 (10),
+    762–771.
+
+    +   (93) Zhu, X.; Thompson, K. C.; Martinez, T. J. Geodesic interpolation for
+    reaction pathways. J. Chem. Phys. 2019, 150 (16), 164103.
+
+    +   (94) Avagliano, D.; Lorini, E.; González, L. Sampling effects in quantum mechanical/molecular
+    mechanics trajectory surface hopping non-adiabatic dynamics. Philos. Trans. R.
+    Soc. A 2022, 380 (2223), 20200381.
+
+    +   (95) Behler, J. Constructing high-dimensional neural network potentials: A
+    tutorial review. Int. J. Quantum Chem. 2015, 115 (16), 1032–1050.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '(96) Cox, J. M.; Bain, M.; Kellogg, M.; Bradforth, S. E.; Lopez, S. A. Role
+    of the Perfluoro Effect in the Selective Photochemical Isomerization of Hexafluorobenzene.
+    J. Am. Chem. Soc. 2021, 143 (18), 7002–7012.
+
+
+    (97) Haller, I. Photoisomerization of Hexafluorobenzene. J. Am. Chem. Soc. 1966,
+    88 (9), 2070–2071.
+
+
+    (98) Mukherjee, S.; Pinheiro, M., Jr.; Demoulin, B.; Barbatti, M. Simulations
+    of molecular photodynamics in long timescales. Philos. Trans. R. Soc. A 2022,
+    380 (2223), 20200382.
+
+
+    # Recommended by ACS
+
+
+    # Predicting Molecular Photochemistry Using Machine-Learning-Enhanced Quantum
+    Dynamics Simulations
+
+
+    Gareth W. Richings and Scott Habershon
+
+    JANUARY 04, 2022
+
+    ACCOUNTS OF CHEMICAL RESEARCH
+
+    READ
+
+
+    # Quantum Trajectory Mean-Field Method for Nonadiabatic Dynamics in Photochemistry
+
+
+    Lin Shen, Wei-Hai Fang, et al.
+
+    AUGUST 02, 2019
+
+    THE JOURNAL OF PHYSICAL CHEMISTRY A
+
+    READ
+
+
+    # Modeling Non-adiabatic Dynamics in Nanoscale and Condensed Matter Systems
+
+
+    Oleg V. Prezhdo.
+
+    NOVEMBER 10, 2021
+
+    ACCOUNTS OF CHEMICAL RESEARCH
+
+    READ
+
+
+    # Intersystem Crossings in Late-Row Elements: A Perspective
+
+
+    Andrew J. S. Valentine and Xiaosong Li
+
+    MARCH 29, 2022
+
+    THE JOURNAL OF PHYSICAL CHEMISTRY LETTERS
+
+    READ
+
+
+    Get More Suggestions >'
+  merge: -1
+  img_proc: true
