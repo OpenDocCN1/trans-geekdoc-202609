@@ -1,0 +1,15 @@
+name: Machine Learning： An Introduction for Beginners, User Guide to Build Intelligent
+  Systems
+slug: machine-learning-an-introduction-for-beginners-user-guide-to
+name_cn: '
+
+  机器学习：面向初学者的入门指南，构建智能系统的用户指南'
+toc:
+- - '##'
+  - 第 4 章：可以通过机器学习解决的问题
+- - '##'
+  - 第 7 章：支持向量机算法
+- - '##'
+  - 第 8 章：使用 Python 进行机器学习
+- - '##'
+  - 第 11 章：神经网络与深度学习

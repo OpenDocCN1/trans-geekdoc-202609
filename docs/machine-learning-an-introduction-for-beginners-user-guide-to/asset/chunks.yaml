@@ -1,0 +1,2266 @@
+- raw: "\n\n![](image8.jpg)\n\n![](image8.jpg)\n\nMachine Learning An Introduction\
+    \ for Beginners, User Guide to Build Intelligent Systems MARK HOWARD Table of\
+    \ Contents [Introduction](#part0002.xhtml) [Chapter 1: Machine Learning](#part0003.xhtml)\
+    \ [Chapter 2: Top Problems in Machine Learning](#part0004.xhtml)              \
+    \ [Chapter 3: Problems with Machine Learning That Have Not Been Solved](#part0005.xhtml)\
+    \ [             ](#part0005.xhtml) [Chapter 4: Problems That Can Be Solved with\
+    \ Machine Learning](#part0006.xhtml) [             ](#part0006.xhtml) [Chapter\
+    \ 5: Examples of Machine Learning](#part0007.xhtml)               [Chapter 6:\
+    \ Free Datasets](#part0008.xhtml) [Chapter 7: Support Vector Algorithms](#part0009.xhtml)\
+    \ [Chapter 8: Machine Learning with Python](#part0010.xhtml)               [Chapter\
+    \ 9: Keras and Machine Learning](#part0011.xhtml) [Chapter 10: Theano and Machine\
+    \ Learning](#part0012.xhtml)               [Chapter 11: Neural Networks and Deep\
+    \ Learning](#part0013.xhtml)               [Conclusion](#part0013.xhtml#blKgt1RJS_mVQpoHiTA2cQ577)\
+    \ [Check Out Other Books](#part0014.xhtml#blKgt1RJS_mVQpoHiTA2cQ578) \n\nIntroduction\
+    \ Congratulations on downloading Machine Learning and thank you for doing so.\
+    \ The following chapters will discuss everything that you need to know about Machine\
+    \ Learning. Machine Learning is happening around us every day whether we know\
+    \ it or not. It is impossible not to use Machine Learning in your job. As Machine\
+    \ Learning gets more popular, it is being used in more companies than ever before\
+    \ because of how efficient Machine Learning is. Throughout the chapters of this\
+    \ book, you are going to find out some of the problems that Machine Learning has\
+    \ and how to fix them, and the problems that it has fixed. Machine Learning is\
+    \ amazing and is not something that should just be scoffed at because as technology\
+    \ evolves, Machine Learning becomes more prevalent. There are plenty of books\
+    \ on this subject on the market, thanks again for choosing this one! Every effort\
+    \ was made to ensure it is full of as much useful information as possible, please\
+    \ enjoy! \n\nChapter 1: Machine Learning Before you can delve into Machine Learning,\
+    \ you have to know what Machine Learning is. Machine Learning is a branch of artificial\
+    \ intelligence that stems from the idea that a system is going to be able to take\
+    \ data, learn from it, identify any patterns that are present, and then make decisions\
+    \ without the intervention of a human. If there is intervention from a human,\
+    \ the intervention is minimal. Using the data that the machine gathers, it is\
+    \ able to analyze the data and then automatically build a model from that data.\
+    \ So, why is Machine Learning so important? It is important because it has the\
+    \ same factors that helped make Bayesian analysis and data mining popular. With\
+    \ the growing volume of available wide variety of data, the computing process\
+    \ becomes cheaper and ultimately more powerful. This allows businesses to store\
+    \ their data. Because of all of these factors, it means that models are going\
+    \ to be produced quicker and bigger, and more complex sets of data are going to\
+    \ be analyzed faster with more accurate results delivered. This is going to help\
+    \ companies know where they are going to be able to make more money and where\
+    \ they need to be careful to avoid unknown risks. As you are going to learn in\
+    \ a later chapter, banks, the government, healthcare, marketing, transportation,\
+    \ and oil and gas are all using Machine Learning. They are using the technology\
+    \ to be more efficient, learn where they can make money, and know when they need\
+    \ to cut back on their spending. There are four popular methods that are used\
+    \ when working with Machine Learning: supervised, unsupervised, semi-supervised,\
+    \ and reinforcement learning. The first one is supervised. That is the case when\
+    \ the algorithm is trained to use examples that have been labeled so that it knows\
+    \ where the input is and where the desired output should be. Take for example\
+    \ a piece of factory equipment. Its data points have been labeled as F for failure\
+    \ or R for runs. The algorithm is going to receive the inputs and all of the outputs\
+    \ that correspond with that input. From there, the algorithm will learn by comparing\
+    \ the outputs that are given with the correct outputs to locate the error. After\
+    \ that, it is going to modify the model accordingly. By using methods of classification,\
+    \ prediction, regression, and gradient boosting supervised learning, the algorithm\
+    \ will create patterns so that it can predict the values of the label with any\
+    \ extra data that was not labeled. Supervised learning can typically be seen in\
+    \ applications where the historical data is predicting a future event. The next\
+    \ learning is semi-supervised. It is usually used with applications where supervised\
+    \ learning is taking place. However, semi-supervised learning is going to take\
+    \ the data that is labeled and not labeled and use it for training. These data\
+    \ are typically a small amount of labeled data, and a large part of unlabeled\
+    \ data since unlabeled data is less expensive and is not going to take as much\
+    \ effort to gather. Semi-supervised learning will be used with the same methods\
+    \ that were used with the supervised learning; but, it is only going to be useful\
+    \ whenever the cost that is associated with labeling becomes too high to allow\
+    \ for a fully labeled training process. Unsupervised learning will be done when\
+    \ the data contains no historical labels. The system will not have the correct\
+    \ answer as it does with supervised or semi-supervised learning. The first thing\
+    \ that has to be done is that the algorithm has to figure out what it is being\
+    \ shown. The goal will end up being for the machine to explore the data and discover\
+    \ if there are any structure. Unsupervised learning is also going to use transactional\
+    \ data. Reinforcement learning will usually be seen in navigation systems, gaming,\
+    \ and robotics. Reinforcement learning will cause the algorithm to be discovered\
+    \ through a trial and error situation which is going to help yield the biggest\
+    \ reward. With reinforcement learning, there are going to be at least three components.\
+    \ The first one is the agent who is going to be the decision maker. The second\
+    \ will be the environment in which the agent interacts with, and the third will\
+    \ be the actions that the agent goes through. The goal is for the agent to pick\
+    \ the proper actions that are going to maximize the reward they expect over a\
+    \ definite amount of time. As long as the agent follows good policy, they are\
+    \ going to be able to reach the reward faster. Therefore, the goal of reinforcement\
+    \ learning is to figure out what the best policy is. Machine Learning also includes\
+    \ categories such as learning where the program is going to learn the inductive\
+    \ bias of the program based on experiences that have happened before. Developmental\
+    \ learning is going to be the same as robot learning. The program is going to\
+    \ be able to generate its own sequence from the learning situations that it is\
+    \ put through so that it can acquire repertoires of novel skills through self-exploration\
+    \ and interactions with humans and other programs. Yet, another category of Machine\
+    \ Learning is going to happen when you consider what the output is from the Machine\
+    \ Learning system. \n\n1.  The classification of inputs is going to be divided\
+    \ into at least two classes. The user is going to have to produce a model that\
+    \ is going to take the inputs that are not seen by the user from these classes.\
+    \ This is going to usually happen in supervised learning such as your email filters\
+    \ between spam and not spam. \n\n2.  Regression is also going to be supervised\
+    \ for the outputs to be continuous instead of being discrete. \n\n3.  Clustering\
+    \ is going to take the input sets and divide them into various groups. However,\
+    \ the difference between clustering and classification is that the groups are\
+    \ not going to know the user before they are made which makes this an unsupervised\
+    \ task. "
+  fmt: "\n![](image8.jpg)\n\n![](image8.jpg)\n\nMachine Learning An Introduction for\
+    \ Beginners, User Guide to Build Intelligent Systems MARK HOWARD Table of Contents\
+    \ [Introduction](#part0002.xhtml) [Chapter 1: Machine Learning](#part0003.xhtml)\
+    \ [Chapter 2: Top Problems in Machine Learning](#part0004.xhtml) [Chapter 3: Problems\
+    \ with Machine Learning That Have Not Been Solved](#part0005.xhtml) [Chapter 4:\
+    \ Problems That Can Be Solved with Machine Learning](#part0006.xhtml) [Chapter\
+    \ 5: Examples of Machine Learning](#part0007.xhtml) [Chapter 6: Free Datasets](#part0008.xhtml)\
+    \ [Chapter 7: Support Vector Algorithms](#part0009.xhtml) [Chapter 8: Machine\
+    \ Learning with Python](#part0010.xhtml) [Chapter 9: Keras and Machine Learning](#part0011.xhtml)\
+    \ [Chapter 10: Theano and Machine Learning](#part0012.xhtml) [Chapter 11: Neural\
+    \ Networks and Deep Learning](#part0013.xhtml) [Conclusion](#part0013.xhtml#blKgt1RJS_mVQpoHiTA2cQ577)\
+    \ [Check Out Other Books](#part0014.xhtml#blKgt1RJS_mVQpoHiTA2cQ578) \n\nIntroduction\
+    \ Congratulations on downloading Machine Learning and thank you for doing so.\
+    \ The following chapters will discuss everything that you need to know about Machine\
+    \ Learning. Machine Learning is happening around us every day whether we know\
+    \ it or not. It is impossible not to use Machine Learning in your job. As Machine\
+    \ Learning gets more popular, it is being used in more companies than ever before\
+    \ because of how efficient Machine Learning is. Throughout the chapters of this\
+    \ book, you are going to find out some of the problems that Machine Learning has\
+    \ and how to fix them, and the problems that it has fixed. Machine Learning is\
+    \ amazing and is not something that should just be scoffed at because as technology\
+    \ evolves, Machine Learning becomes more prevalent. There are plenty of books\
+    \ on this subject on the market, thanks again for choosing this one! Every effort\
+    \ was made to ensure it is full of as much useful information as possible, please\
+    \ enjoy! \n\nChapter 1: Machine Learning Before you can delve into Machine Learning,\
+    \ you have to know what Machine Learning is. Machine Learning is a branch of artificial\
+    \ intelligence that stems from the idea that a system is going to be able to take\
+    \ data, learn from it, identify any patterns that are present, and then make decisions\
+    \ without the intervention of a human. If there is intervention from a human,\
+    \ the intervention is minimal. Using the data that the machine gathers, it is\
+    \ able to analyze the data and then automatically build a model from that data.\
+    \ So, why is Machine Learning so important? It is important because it has the\
+    \ same factors that helped make Bayesian analysis and data mining popular. With\
+    \ the growing volume of available wide variety of data, the computing process\
+    \ becomes cheaper and ultimately more powerful. This allows businesses to store\
+    \ their data. Because of all of these factors, it means that models are going\
+    \ to be produced quicker and bigger, and more complex sets of data are going to\
+    \ be analyzed faster with more accurate results delivered. This is going to help\
+    \ companies know where they are going to be able to make more money and where\
+    \ they need to be careful to avoid unknown risks. As you are going to learn in\
+    \ a later chapter, banks, the government, healthcare, marketing, transportation,\
+    \ and oil and gas are all using Machine Learning. They are using the technology\
+    \ to be more efficient, learn where they can make money, and know when they need\
+    \ to cut back on their spending. There are four popular methods that are used\
+    \ when working with Machine Learning: supervised, unsupervised, semi-supervised,\
+    \ and reinforcement learning. The first one is supervised. That is the case when\
+    \ the algorithm is trained to use examples that have been labeled so that it knows\
+    \ where the input is and where the desired output should be. Take for example\
+    \ a piece of factory equipment. Its data points have been labeled as F for failure\
+    \ or R for runs. The algorithm is going to receive the inputs and all of the outputs\
+    \ that correspond with that input. From there, the algorithm will learn by comparing\
+    \ the outputs that are given with the correct outputs to locate the error. After\
+    \ that, it is going to modify the model accordingly. By using methods of classification,\
+    \ prediction, regression, and gradient boosting supervised learning, the algorithm\
+    \ will create patterns so that it can predict the values of the label with any\
+    \ extra data that was not labeled. Supervised learning can typically be seen in\
+    \ applications where the historical data is predicting a future event. The next\
+    \ learning is semi-supervised. It is usually used with applications where supervised\
+    \ learning is taking place. However, semi-supervised learning is going to take\
+    \ the data that is labeled and not labeled and use it for training. These data\
+    \ are typically a small amount of labeled data, and a large part of unlabeled\
+    \ data since unlabeled data is less expensive and is not going to take as much\
+    \ effort to gather. Semi-supervised learning will be used with the same methods\
+    \ that were used with the supervised learning; but, it is only going to be useful\
+    \ whenever the cost that is associated with labeling becomes too high to allow\
+    \ for a fully labeled training process. Unsupervised learning will be done when\
+    \ the data contains no historical labels. The system will not have the correct\
+    \ answer as it does with supervised or semi-supervised learning. The first thing\
+    \ that has to be done is that the algorithm has to figure out what it is being\
+    \ shown. The goal will end up being for the machine to explore the data and discover\
+    \ if there are any structure. Unsupervised learning is also going to use transactional\
+    \ data. Reinforcement learning will usually be seen in navigation systems, gaming,\
+    \ and robotics. Reinforcement learning will cause the algorithm to be discovered\
+    \ through a trial and error situation which is going to help yield the biggest\
+    \ reward. With reinforcement learning, there are going to be at least three components.\
+    \ The first one is the agent who is going to be the decision maker. The second\
+    \ will be the environment in which the agent interacts with, and the third will\
+    \ be the actions that the agent goes through. The goal is for the agent to pick\
+    \ the proper actions that are going to maximize the reward they expect over a\
+    \ definite amount of time. As long as the agent follows good policy, they are\
+    \ going to be able to reach the reward faster. Therefore, the goal of reinforcement\
+    \ learning is to figure out what the best policy is. Machine Learning also includes\
+    \ categories such as learning where the program is going to learn the inductive\
+    \ bias of the program based on experiences that have happened before. Developmental\
+    \ learning is going to be the same as robot learning. The program is going to\
+    \ be able to generate its own sequence from the learning situations that it is\
+    \ put through so that it can acquire repertoires of novel skills through self-exploration\
+    \ and interactions with humans and other programs. Yet, another category of Machine\
+    \ Learning is going to happen when you consider what the output is from the Machine\
+    \ Learning system. \n\n1. The classification of inputs is going to be divided\
+    \ into at least two classes. The user is going to have to produce a model that\
+    \ is going to take the inputs that are not seen by the user from these classes.\
+    \ This is going to usually happen in supervised learning such as your email filters\
+    \ between spam and not spam. \n\n2. Regression is also going to be supervised\
+    \ for the outputs to be continuous instead of being discrete. \n\n3. Clustering\
+    \ is going to take the input sets and divide them into various groups. However,\
+    \ the difference between clustering and classification is that the groups are\
+    \ not going to know the user before they are made which makes this an unsupervised\
+    \ task. \n"
+  trans: "\n![](img/image8.jpg)\n\n![](img/image8.jpg)\n\nMachine Learning 入门指南，用户指南，构建智能系统\
+    \ MARK HOWARD 目录 Introduction 第 1 章：机器学习 第 2 章：机器学习中的主要问题 第 3 章：机器学习中尚未解决的问题 第\
+    \ 4 章：可用机器学习解决的问题 第 5 章：机器学习示例 第 6 章：免费数据集 第 7 章：支持向量机算法 第 8 章：使用 Python 进行机器学习\
+    \ 第 9 章：Keras 与机器学习 第 10 章：Theano 与机器学习 第 11 章：神经网络与深度学习 结论 查看其他书籍 \n\nIntroduction\
+    \ 恭喜您下载了机器学习，感谢您的选择。接下来的章节将讨论您需要知道的所有关于机器学习的内容。机器学习无处不在，无论我们知晓与否，它都在我们身边每天发生。在您的工作中，不可能不使用机器学习。随着机器学习的普及，它已被比历史上任何时候都更多的公司所使用，因为机器学习的高效性。在本书的章节中，您将了解机器学习面临的一些问题以及如何解决它们，以及机器学习已经解决的问题。机器学习太棒了，不应该因为技术发展而被轻视，因为技术发展使得机器学习变得越来越普遍。市场上有大量关于此主题的书籍，感谢您选择这本！我们已尽最大努力确保内容尽可能有用，请享受！\
+    \ \n\n第 1 章：机器学习 在深入机器学习之前，您必须了解机器学习的概念。机器学习是人工智能的一个分支，其核心思想是系统能够从数据中学习、识别其中的模式，并无需人工干预即可做出决策。如果有的人工干预，干预程度也应极小。系统利用收集的数据分析，然后自动根据数据构建模型。那么，机器学习为什么重要呢？因为它与贝叶斯分析和数据挖掘的流行原因相同。随着数据量的不断增长以及数据种类的多样化，计算成本降低，计算能力增强。这使得企业能够存储数据，并更快、更准确地分析更复杂的数据集，快速生成更大、更复杂的模型。这将帮助公司更清楚地了解在哪里可以赚取更多利润，以及在哪里需要谨慎以避免未知风险。正如您在后续章节中将学到的，银行、政府、医疗、营销、交通以及石油和天然气行业都在使用机器学习。它们利用该技术提高效率、发现赚钱机会，并识别需要削减支出的领域。在机器学习中，有四种流行的方法：监督学习、无监督学习、半监督学习和强化学习。第一种是监督学习，即算法在标记数据上进行训练，以了解输入与期望输出的对应关系。例如，工厂设备的数据点被标记为“故障”（F）或“运行”（R）。算法接收输入及其对应的输出，并通过比较给定的输出与正确输出来学习错误位置。随后，它会相应地修改模型。通过分类、预测、回归和梯度提升等监督学习方法，算法会创建模式，以便在未标记的额外数据中预测标签值。监督学习通常出现在历史数据用于预测未来事件的应用场景。下一种学习是半监督学习，它通常与监督学习一起应用。半监督学习将标记数据和未标记数据结合用于训练。标记数据通常较少，而未标记数据占大部分，因为未标记数据获取成本低且无需太大努力即可获取。当标记成本过高，无法进行完全标记的训练时，半监督学习将发挥作用，它使用与监督学习相同的方法，但仅在标记成本过高时才有用。无监督学习用于数据中不存在历史标签的情况，系统没有像监督或半监督学习那样拥有正确答案。第一步是让算法理解它所看到的内容。目标是让机器探索数据，发现是否存在结构。无监督学习也会使用交易数据。强化学习通常出现在导航系统、游戏和机器人中。强化学习通过试错来让算法“发现”最佳行为，从而获得最大回报。在强化学习中，至少包含三个组件：第一是代理（agent），即决策者；第二是环境（environment），即代理交互的环境；第三是代理所执行的动作（actions）。目标是让代理选择能在一定时间内最大化预期回报的正确动作。只要代理遵循良好的策略（policy），就能更快达到回报。因此，强化学习的目标是找出最佳策略。机器学习还包括一种学习类别，即程序根据以往经验的\
+    \ inductive bias 进行学习。发展性学习（developmental learning）等同于机器人学习，程序能根据其经历生成自己的学习序列，通过自我探索和与人类及其他程序的交互，获得新技能的\
+    \ repertoire。此外，机器学习还包括一种基于输出的类别。 \n\n1. 输入的分类将分为至少两类。用户需要构建一个模型，能处理用户未见的输入，这些输入通常来自监督学习，例如电子邮件过滤器区分垃圾邮件和正常邮件。\
+    \ \n\n2. 回归也是监督学习的一种，其输出为连续值，而非离散值。 \n\n3. 聚类（clustering）会将输入集分成多个组。但聚类与分类的区别在于，聚类在形成组时用户不需要事先知道这些组，因此这是一个无监督任务。\
+    \ \n"
+  toc: []
+- raw: "4.  Density estimation is going to locate the distribution for the inputs\
+    \ in that space. \n\n5.  Dimensional reduction takes the input and simplifies\
+    \ it so they can be mapped to the lowest dimension. \n\n6.  Topic modeling will\
+    \ take a problem from the program that is inserted by a user and tasked to see\
+    \ if the documents inserted cover related topics. \n\nA classification Machine\
+    \ Learning model is going to be validated by a technique that uses accuracy estimation\
+    \ such as holdout. Holdout is going to split the data when training and testing\
+    \ your set before evaluating the performance of the model on the test set. However,\
+    \ if you look at n fold cross-validation, then you are going to see that the data\
+    \ will randomly be split into subsets where the k-1 instances are going to be\
+    \ used in training the model. While the k instance is going to be used in testing\
+    \ the predictive ability for the training model that you are using. Along with\
+    \ this, the holdout and the cross-validation method is going to use samples for\
+    \ the n instances. The replacement comes from the dataset and how it is going\
+    \ to be able to be used in assessing the model’s accuracy. On top of that, there\
+    \ is an overall accuracy that an investigator discovers. It is going to be reported\
+    \ for specificity and sensitivity such as the true positive rate and the true\
+    \ negative rate. This means that the true positive rate and the true negative\
+    \ rate are going to sometimes report false positive rates or false negative rates.\
+    \ But, it is these rates that are going to fail to show the numerator and denominator\
+    \ for the equation. Your total operating characteristic is going to be an effective\
+    \ method that is going to show the models’ diagnostic abilities. Total operating\
+    \ characteristic is also going to reveal the numerators and denominators that\
+    \ were mentioned previously in the rates. This means that the total operating\
+    \ characteristic is going to show you more information than you were able to use.\
+    \ This will include the receiver operating characteristic which is going to fall\
+    \ under the area under the curve. Due to what it is, Machine Learning often times\
+    \ brings up a lot of ethical questions. The systems that are trained to work with\
+    \ the data that you collect is going to be biased based on the exhibits that the\
+    \ biases are going to be used on which is going to digitalize the cultural prejudices.\
+    \ Therefore, the responsibility that comes from collecting data is going to be\
+    \ a big part of Machine Learning. Due to the language that you use when dealing\
+    \ with Machine Learning, you are going to be using machines that are trained on\
+    \ bias. \n\nChapter 2: Top Problems in Machine Learning Machine Learning is still\
+    \ evolving and still being used every day. As it is used more, the more we are\
+    \ going to be able to figure out where the problems are and what needs to be done\
+    \ to fix them. Some of these problems are yet to be solved, but that does not\
+    \ mean that there will not be a solution later in the future. One problem is that\
+    \ natural language processing and understanding language is still a problem when\
+    \ it comes to Machine Learning, even with the deepest networks. Because of the\
+    \ many different languages and dialects, it is hard for machines to decipher what\
+    \ is being said. But that does not stop them from trying. Programs such as Siri\
+    \ and Cortana are constantly being updated so that they can better serve their\
+    \ users. Images can be classified with Machine Learning, but it cannot figure\
+    \ out what is going on in the image. By understanding what is going on in an image,\
+    \ it cannot be further classified. But we are going to have the option to figure\
+    \ out where the influences in the image lie and how we would be able to recreate\
+    \ the work in the same style. This also leads to solving semantic segmentation.\
+    \ Machines should be taught how to identify what is going on in each pixel so\
+    \ that we can better understand what is going on in the image. Deep reinforcement\
+    \ needs to be stabilized as well. If something is not broken, why attempt to fix\
+    \ it? Sometimes the old ways work the best, and there is no reason to be messing\
+    \ with the model that already works. With deep reinforcement being stabilized,\
+    \ this would be possible. This is then going to allow deep reinforcement to tackle\
+    \ harder problems that have yet to be touched by Machine Learning such as Montezuma's\
+    \ revenge. On top of that, with stabilized reinforcement, learning the ability\
+    \ to control robotics would open up exponentially, and the possibilities would\
+    \ be endless. There is no telling how far robotics would go because they would\
+    \ be able to figure out the best way to receive their reward; in other words,\
+    \ they would be given the option to act like humans but have an incentive as to\
+    \ what they should do to get that reward. GANs are generative adversarial networks\
+    \ that are going to work with a specific class of artificial intelligence. It\
+    \ is a set of algorithms that will be used with unsupervised learning which will\
+    \ then be implemented on a system of two neural networks working against each\
+    \ other in a zero-sum game framework. While they are great for those who use Machine\
+    \ Learning for games, they are highly stabilized and make gaming harder because\
+    \ they are known to frequently crash. Training deep nets is an issue as well because\
+    \ it has been proven by the shattering of gradients paper that those that use\
+    \ Machine Learning do not understand yet how to train their nets properly. That\
+    \ also leads into the fact that no one quite understands what deep nets do in\
+    \ general. There have been those that have written papers on what deep nets are\
+    \ and why they are required, but then there have been those that have written\
+    \ papers on how deep nets are not needed, and they tend to make life more complicated.\
+    \ So, why are deep nets there? And do we actually need them? Lastly, there has\
+    \ to be a way to get people to stop worrying so much about things such as Skynet\
+    \ and the economic impact. First of all, Skynet is a fictional company in the\
+    \ movie Terminator and is not going to happen. Before robots are able to make\
+    \ their own decisions if ever, there will no doubt be a failsafe in place that\
+    \ is going to ensure that the robots do not rise up against humans and try to\
+    \ kill them. All Skynet is, is a good plot for a movie franchise that millions\
+    \ of people love. Secondly, what is the economic impact of Machine Learning? With\
+    \ Machine Learning, companies are going to have the ability to figure out where\
+    \ they are going to make more money and that means that more money is going to\
+    \ be put into the economy! Besides certain things in Machine Learning not being\
+    \ stabilized, Machine Learning does not have that many problems. It is hard to\
+    \ remember that Machine Learning is still in its infancy and is still being trained\
+    \ as technology evolves, so we have to be patient and keep in mind that there\
+    \ are going to be more problems before they are to be fixed. "
+  fmt: "\n4. Density estimation is going to locate the distribution for the inputs\
+    \ in that space.  \n5. Dimensional reduction takes the input and simplifies it\
+    \ so they can be mapped to the lowest dimension.  \n6. Topic modeling will take\
+    \ a problem from the program that is inserted by a user and tasked to see if the\
+    \ documents inserted cover related topics.  \nA classification Machine Learning\
+    \ model is going to be validated by a technique that uses accuracy estimation\
+    \ such as holdout. Holdout is going to split the data when training and testing\
+    \ your set before evaluating the performance of the model on the test set. However,\
+    \ if you look at n fold cross-validation, then you are going to see that the data\
+    \ will randomly be split into subsets where the k-1 instances are going to be\
+    \ used in training the model. While the k instance is going to be used in testing\
+    \ the predictive ability for the training model that you are using. Along with\
+    \ this, the holdout and the cross-validation method is going to use samples for\
+    \ the n instances. The replacement comes from the dataset and how it is going\
+    \ to be able to be used in assessing the model’s accuracy. On top of that, there\
+    \ is an overall accuracy that an investigator discovers. It is going to be reported\
+    \ for specificity and sensitivity such as the true positive rate and the true\
+    \ negative rate. This means that the true positive rate and the true negative\
+    \ rate are going to sometimes report false positive rates or false negative rates.\
+    \ But, it is these rates that are going to fail to show the numerator and denominator\
+    \ for the equation. Your total operating characteristic is going to be an effective\
+    \ method that is going to show the models’ diagnostic abilities. Total operating\
+    \ characteristic is also going to reveal the numerators and denominators that\
+    \ were mentioned previously in the rates. This means that the total operating\
+    \ characteristic is going to show you more information than you were able to use.\
+    \ This will include the receiver operating characteristic which is going to fall\
+    \ under the area under the curve. Due to what it is, Machine Learning often times\
+    \ brings up a lot of ethical questions. The systems that are trained to work with\
+    \ the data that you collect is going to be biased based on the exhibits that the\
+    \ biases are going to be used on which is going to digitalize the cultural prejudices.\
+    \ Therefore, the responsibility that comes from collecting data is going to be\
+    \ a big part of Machine Learning. Due to the language that you use when dealing\
+    \ with Machine Learning, you are going to be using machines that are trained on\
+    \ bias.  \nChapter 2: Top Problems in Machine Learning Machine Learning is still\
+    \ evolving and still being used every day. As it is used more, the more we are\
+    \ going to be able to figure out where the problems are and what needs to be done\
+    \ to fix them. Some of these problems are yet to be solved, but that does not\
+    \ mean that there will not be a solution later in the future. One problem is that\
+    \ natural language processing and understanding language is still a problem when\
+    \ it comes to Machine Learning, even with the deepest networks. Because of the\
+    \ many different languages and dialects, it is hard for machines to decipher what\
+    \ is being said. But that does not stop them from trying. Programs such as Siri\
+    \ and Cortana are constantly being updated so that they can better serve their\
+    \ users. Images can be classified with Machine Learning, but it cannot figure\
+    \ out what is going on in the image. By understanding what is going on in an image,\
+    \ it cannot be further classified. But we are going to have the option to figure\
+    \ out where the influences in the image lie and how we would be able to recreate\
+    \ the work in the same style. This also leads to solving semantic segmentation.\
+    \ Machines should be taught how to identify what is going on in each pixel so\
+    \ that we can better understand what is going on in the image. Deep reinforcement\
+    \ needs to be stabilized as well. If something is not broken, why attempt to fix\
+    \ it? Sometimes the old ways work the best, and there is no reason to be messing\
+    \ with the model that already works. With deep reinforcement being stabilized,\
+    \ this would be possible. This is then going to allow deep reinforcement to tackle\
+    \ harder problems that have yet to be touched by Machine Learning such as Montezuma's\
+    \ revenge. On top of that, with stabilized reinforcement, learning the ability\
+    \ to control robotics would open up exponentially, and the possibilities would\
+    \ be endless. There is no telling how far robotics would go because they would\
+    \ be able to figure out the best way to receive their reward; in other words,\
+    \ they would be given the option to act like humans but have an incentive as to\
+    \ what they should do to get that reward. GANs are generative adversarial networks\
+    \ that are going to work with a specific class of artificial intelligence. It\
+    \ is a set of algorithms that will be used with unsupervised learning which will\
+    \ then be implemented on a system of two neural networks working against each\
+    \ other in a zero-sum game framework. While they are great for those who use Machine\
+    \ Learning for games, they are highly stabilized and make gaming harder because\
+    \ they are known to frequently crash. Training deep nets is an issue as well because\
+    \ it has been proven by the shattering of gradients paper that those that use\
+    \ Machine Learning do not understand yet how to train their nets properly. That\
+    \ also leads into the fact that no one quite understands what deep nets do in\
+    \ general. There have been those that have written papers on what deep nets are\
+    \ and why they are required, but then there have been those that have written\
+    \ papers on how deep nets are not needed, and they tend to make life more complicated.\
+    \ So, why are deep nets there? And do we actually need them? Lastly, there has\
+    \ to be a way to get people to stop worrying so much about things such as Skynet\
+    \ and the economic impact. First of all, Skynet is a fictional company in the\
+    \ movie Terminator and is not going to happen. Before robots are able to make\
+    \ their own decisions if ever, there will no doubt be a failsafe in place that\
+    \ is going to ensure that the robots do not rise up against humans and try to\
+    \ kill them. All Skynet is, is a good plot for a movie franchise that millions\
+    \ of people love. Secondly, what is the economic impact of Machine Learning? With\
+    \ Machine Learning, companies are going to have the ability to figure out where\
+    \ they are going to make more money and that means that more money is going to\
+    \ be put into the economy! Besides certain things in Machine Learning not being\
+    \ stabilized, Machine Learning does not have that many problems. It is hard to\
+    \ remember that Machine Learning is still in its infancy and is still being trained\
+    \ as technology evolves, so we have to be patient and keep in mind that there\
+    \ are going to be more problems before they are to be fixed. \n```if (condVar\
+    \ > someVal) {console.log(\"xxx\")}```\n"
+  trans: "\n4. 密度估计将在输入空间中定位输入的分布。  \n5. 维度降低将输入简化，以便它们可以映射到最低维度。  \n6. 主题建模会从用户插入的程序中提取问题，并判断插入的文档是否涵盖相关主题。\
+    \  \n分类机器学习模型将通过使用保留法等准确率估计技术进行验证。保留法在训练和测试数据集合之前将数据划分，然后在测试集上评估模型的性能。然而，如果查看\
+    \ n 重叉验证，则会发现数据会随机划分为子集，其中 k-1 个实例用于训练模型，而第 k 个实例用于测试模型的预测能力。与此同时，保留法和交叉验证方法会使用\
+    \ n 个实例的样本。数据来自数据集，并用于评估模型的准确性。除此之外，研究者还会发现一个总体准确率，并将其报告为特异性和灵敏度，例如真阳性率和真阴性率。这意味着真阳性率和真阴性率有时会报告假阳性率或假阴性率。但正是这些率未能显示分子和分母，导致总体特征曲线（ROC）成为有效展示模型诊断能力的方法。总体特征曲线还会揭示前面提到的率中的分子和分母。这意味着总体特征曲线能提供比单纯的率更多的信息，包括受曲线下面积（AUC），其属于受曲线下面积。由于这些特性，机器学习经常引发大量伦理问题。用于处理收集的数据的系统会因训练数据中体现的偏见而变得有偏见，这会数字化文化偏见。因此，数据收集所带来的责任在机器学习中占据重要地位。由于使用的语言会引发机器学习中的偏见，我们在使用机器学习时，实际上是在使用经过偏见训练的机器。\
+    \  \n第 2 章：机器学习中的主要问题 机器学习仍在不断发展，并且每天都在被使用。随着使用的增多，我们能够更好地发现问题所在以及需要做什么来解决它们。有些问题目前尚未得到解决，但这并不意味着未来不会有解决方案。一个问题是自然语言处理和语言理解在机器学习中仍然是一个挑战，即使是最深层的网络也难以应对。由于众多语言和方言的存在，机器很难辨认所说的内容。但这并不阻止它们尝试。Siri\
+    \ 和 Cortana 等程序不断更新，以更好地服务于用户。图像可以通过机器学习进行分类，但无法理解图像内部的具体情境。要真正理解图像内容，就无法进一步分类。不过，我们可以确定图像中影响因素的位置，并尝试在相同风格下重现作品。这也指向语义分割的解决——机器需要学会识别每个像素的含义，从而更好地理解图像。深度强化学习也需要得到稳定。如果没有损坏，为什么还要去修改？有时旧方法效果最佳，没有必要对已经运行良好的模型进行调整。一旦深度强化学习得到稳定，就能让其处理目前机器学习尚未涉及的更复杂问题，例如《马里奥》中的“复仇”关卡。稳定的强化学习还能够指数级提升机器人控制的可能性，可能性无限。机器人能够找到获得奖励的最佳方式，换句话说，它们可以像人类一样行动，但拥有明确的激励机制，决定应做什么才能获得奖励。生成对抗网络（GAN）是一种作用于特定人工智能类别的生成模型，属于无监督学习范畴，由两个神经网络在零和博弈框架下相互对抗组成。虽然它们在游戏领域表现出色，但因高度稳定且经常导致崩溃，使得游戏变得更具挑战性。深度网络的训练同样是一个问题，因为“梯度碎片”论文证明，当前从事机器学习的人尚未完全掌握如何正确训练网络。这也说明，目前人们对深度网络的工作原理并不完全清楚。虽然有人撰写论文阐述深度网络的必要性，也有人撰写论文指出其不必要性，导致情况更加复杂。那么，深度网络到底是为了什么？我们真的需要它们吗？最后，还需要让人们停止过度担忧诸如\
+    \ Skynet 这类问题以及经济影响。首先，Skynet 是《终结者》电影中的虚构公司，根本不会实现。在机器人能够自行决策之前，必然会有安全机制防止机器人反叛并伤害人类。Skynet\
+    \ 仅是一部深受数百万观众喜爱的电影系列的情节设定。其次，机器学习的经济影响——随着机器学习的应用，企业能够找出更大利润的方向，从而将更多资金注入经济。除去一些尚未稳定的机器学习技术外，机器学习本身并没有许多问题。我们必须记住，机器学习仍处于起步阶段，正随着技术发展不断被训练，因此需要保持耐心，认识到在问题得到解决之前，还会出现更多挑战。\
+    \  \n```if (condVar > someVal) {console.log(\"xxx\")}```\n"
+  toc: []
+- raw: 'Chapter 3: Problems with Machine Learning That Have Not Been Solved As stated
+    above, Machine Learning is evolving as technology evolves, so it is highly likely
+    that there are always going to be issues that will have to be dealt with before
+    an answer is found. There are going to be ways around these issues, and even if
+    there are not, there are going to be ways for you to analyze and get your data
+    results despite these issues. Below, are a few issues that have yet to be solved
+    by Machine Learning. One, the variable event space has not been solved yet to
+    solve this, we are going to need to be able to create a classification system
+    that is going to respond in an efficient and meaningful way even if the event
+    space is varying from the training data. Another one is that there is no context
+    understanding when it comes to the processing languages. Context analysis is a
+    big deal for Machine Learning because it leaves a large hole open for things to
+    be misunderstood. One possible solution is that the open AI team should come up
+    with a solution that allows the agents to create their own rules instead of making
+    it to where they need to find patterns. Facial identification is quickly becoming
+    a popular way for people to unlock their device because it is quick and a semi-secure
+    way to keep your device from being hacked. However, it is by no means perfect
+    because people with similar facial features will be able to get into each other’s
+    phone. Not only that but if a female wears makeup and does not for the facial
+    recognition''s picture, then she is not going to be able to get into her phone
+    because she altered her appearance. Automated learning is a big part of Machine
+    Learning, and if a machine cannot automatically learn what it is supposed to,
+    then it is not going to be useful to the company that is using it. Learning has
+    to come from a variety of resources, and when a graph is being made based on the
+    connected sense that is missing, then the automated learning is going to hit a
+    snag and is going to have gaps in what it is able to do. For example, IBM''s Watson
+    has been doing an excellent job, but it still requires a system that is more geared
+    for automated general intelligence. In some Machine Learning, the machine is going
+    to need to make its own decisions based on its reasoning over a deviating test
+    space; but this is not going to include the rule-based engines. To make the reasoning
+    that is required, Machine Learning will need to have space for reasoning or debatable
+    agents that will help with its reasoning. Have you ever talked to Siri and she
+    got confused if you are trying to talk to her or if you are talking to someone
+    else? This is an issue that Machine Learning has with its efficient repose generation.
+    In other words, Siri cannot create a contextual response when you are talking
+    to her unless it is already programmed in or if she can look it up on the internet.
+    The three-way human rule is an issue with Machine Learning as well. Machines cannot
+    always comprehend the knowledge that human has a three-way rule that takes an
+    image, gives it a type, and then gives it a description. If Machine Learning could
+    comprehend the three-way human rule, then classifying art, music, and others would
+    be an easier task. Another issue that Machine Learning has shown is its memory
+    networks. Many people believe that working with technology means that you do not
+    need a lot of space. However, this is far from true because to store all of the
+    data that is collected, there needs to be a lot of space available. Machines are
+    not humans, so they are not going to be able to come up with the thoughts that
+    a human is able to come up with. But machines can be taught as long as we do not
+    push them past their limits, but we do not limit them to where all of the work
+    still needs to be done by a human. Technology is going to have its holdups, but
+    eventually, they can be solved. One reason they may not be solved yet is that
+    the technology needed to solve it does not exist yet. '
+  fmt: '
+
+    # Chapter 3: Problems with Machine Learning That Have Not Been Solved
+
+
+    As stated above, Machine Learning is evolving as technology evolves, so it is
+    highly likely that there are always going to be issues that will have to be dealt
+    with before an answer is found. There are going to be ways around these issues,
+    and even if there are not, there are going to be ways for you to analyze and get
+    your data results despite these issues.
+
+
+    Below, are a few issues that have yet to be solved by Machine Learning.
+
+
+    One, the variable event space has not been solved yet. To solve this, we are going
+    to need to be able to create a classification system that is going to respond
+    in an efficient and meaningful way even if the event space is varying from the
+    training data.
+
+
+    Another one is that there is no context understanding when it comes to the processing
+    languages. Context analysis is a big deal for Machine Learning because it leaves
+    a large hole open for things to be misunderstood. One possible solution is that
+    the open AI team should come up with a solution that allows the agents to create
+    their own rules instead of making it to where they need to find patterns.
+
+
+    Facial identification is quickly becoming a popular way for people to unlock their
+    device because it is quick and a semi-secure way to keep your device from being
+    hacked. However, it is by no means perfect because people with similar facial
+    features will be able to get into each other’s phone. Not only that but if a female
+    wears makeup and does not for the facial recognition''s picture, then she is not
+    going to be able to get into her phone because she altered her appearance.
+
+
+    Automated learning is a big part of Machine Learning, and if a machine cannot
+    automatically learn what it is supposed to, then it is not going to be useful
+    to the company that is using it. Learning has to come from a variety of resources,
+    and when a graph is being made based on the connected sense that is missing, then
+    the automated learning is going to hit a snag and is going to have gaps in what
+    it is able to do. For example, IBM''s Watson has been doing an excellent job,
+    but it still requires a system that is more geared for automated general intelligence.
+
+
+    In some Machine Learning, the machine is going to need to make its own decisions
+    based on its reasoning over a deviating test space; but this is not going to include
+    the rule-based engines. To make the reasoning that is required, Machine Learning
+    will need to have space for reasoning or debatable agents that will help with
+    its reasoning.
+
+
+    Have you ever talked to Siri and she got confused if you are trying to talk to
+    her or if you are talking to someone else? This is an issue that Machine Learning
+    has with its efficient repose generation. In other words, Siri cannot create a
+    contextual response when you are talking to her unless it is already programmed
+    in or if she can look it up on the internet.
+
+
+    The three-way human rule is an issue with Machine Learning as well. Machines cannot
+    always comprehend the knowledge that human has a three-way rule that takes an
+    image, gives it a type, and then gives it a description. If Machine Learning could
+    comprehend the three-way human rule, then classifying art, music, and others would
+    be an easier task.
+
+
+    Another issue that Machine Learning has shown is its memory networks. Many people
+    believe that working with technology means that you do not need a lot of space.
+    However, this is far from true because to store all of the data that is collected,
+    there needs to be a lot of space available. Machines are not humans, so they are
+    not going to be able to come up with the thoughts that a human is able to come
+    up with. But machines can be taught as long as we do not push them past their
+    limits, but we do not limit them to where all of the work still needs to be done
+    by a human.
+
+
+    Technology is going to have its holdups, but eventually, they can be solved. One
+    reason they may not be solved yet is that the technology needed to solve it does
+    not exist yet.
+
+    '
+  trans: '
+
+    # 第 3 章：未解决的机器学习问题
+
+
+    如前所述，随着技术的发展，机器学习也在不断演进，因此在找到答案之前，很可能总是需要解决一些问题。即使没有解决的方法，也会有分析数据并获得结果的方法。
+
+
+    下面列出了一些尚未被机器学习解决的问题。
+
+
+    首先，变量事件空间尚未得到解决。为了解决这一问题，我们需要能够创建一个能够在训练数据的事件空间有所不同的情况下，以高效且有意义的方式进行响应的分类系统。
+
+
+    另一个问题是缺乏语言处理的上下文理解。上下文分析对机器学习至关重要，因为它会在理解方面留下巨大的空白，导致误解的可能性。一个可能的解决方案是，OpenAI
+    团队应开发一种让代理能够自己制定规则的方案，而不是必须寻找模式。
+
+
+    人脸识别正在迅速成为人们解锁设备的流行方式，因为它快速且半安全，可以防止设备被黑客入侵。但这绝不是完美的，因为面部特征相似的人可能会互相解锁手机。而且，如果女性在用于人脸识别的照片中没有化妆，那么她将无法解锁手机，因为她改变了外观。
+
+
+    自动学习是机器学习的重要组成部分，如果机器无法自动学习它需要学习的内容，那么它对使用它的公司就没有用处。学习必须从多种资源中获取，当图表基于缺失的连接感而构建时，自动学习将会受阻并出现缺口。例如，IBM
+    的 Watson 表现出色，但仍需要一个更偏向人工智能的系统。
+
+
+    在某些机器学习场景中，机器需要基于其在偏离测试空间上的推理做出自己的决策，但这不包括基于规则的引擎。为了进行所需的推理，机器学习需要有空间用于推理或可争论的代理，以帮助其推理。
+
+
+    你是否曾经和 Siri 交谈过，发现她如果你在和她交谈还是在和别人交谈时会感到困惑？这是机器学习在高效回应生成方面存在的问题。换句话说，Siri 除非已经被编程好，或者可以在互联网上查找信息，否则无法创建上下文感知的回应。
+
+
+    三位一体规则也是机器学习面临的一个问题。机器不一定能够理解人类的三位一体规则，即先将图像分类，然后给出描述。如果机器学习能够理解三位一体规则，那么分类艺术、音乐等将会更加容易。
+
+
+    另一个机器学习表现出的问题是其记忆网络。许多人认为使用技术意味着不需要大量存储空间。然而，事实并非如此，因为存储收集的所有数据需要大量空间。机器不是人类，因此无法像人类一样产生思考。但只要我们不把它们推到极限，也不会限制它们到必须由人类完成所有工作，机器是可以被教导的。
+
+
+    技术会遇到障碍，但最终可以解决。其中一个原因是目前还不存在解决该问题所需的技术。'
+  toc: []
+- raw: 'Chapter 4: Problems That Can Be Solved with Machine Learning Machine Learning
+    is helping out a lot of companies as well as individuals in their daily lives.
+    In this chapter, you will see some points that were mentioned above as problems
+    that have not been solved by Machine Learning just yet. Even though there are
+    issues with that particular piece of Machine Learning, that does not mean that
+    it does not work. Sometimes, these issues can be patched or fixed at a later date
+    while the software is put out for users to use and discover what issues there
+    may be with the software that the developers did not catch. Machine Learning helps
+    with spam detection. When you get into your inbox, there are always emails that
+    automatically gets routed to your spam box because of keywords that are detected
+    in other emails. Yet some spam is allowed through because these keywords have
+    been found in your inbox. It is going to filter those keywords to your inbox on
+    the slight chance that you are going to want the emails even though they are spam.
+    Spam detection still has a long way to go, but it is getting better as more rules
+    are made. Have you ever wondered how the credit card companies are able to know
+    when someone has used your card? It is because of the transaction record that
+    they keep! Every month, the credit card company knows your usual stores and about
+    how much is going to be spent. If they see any activity outside of your usual
+    area or outside of how much you usually spend, they are going to say that the
+    card was stolen and report it as such. This can cause problems later on if you
+    decide to go on a trip or if you spend over what you normally spend. It is not
+    perfect, but Machine Learning is learning how to recognize zip codes written on
+    envelopes so that they are able to sort the envelopes out into geographical locations
+    and that way the mail is sorted faster and is delivered faster. There are still
+    some issues with this as machines are not always able to read a person''s handwriting
+    since everyone writes in a different manner. As we''ve mentioned, Siri is able
+    to understand what you are saying. But, what if other machines were also capable
+    of doing this? Thanks to Machine Learning, this is now becoming a reality. The
+    biggest issue is that everyone has different dialects and speaks a different language.
+    Not only that, but new words are being added to the dictionary almost daily. But,
+    even with there being issues in machine’s understanding of what is being said
+    to them, this does not stop them from trying to fulfill the request that is made.
+    When you upload a picture on Facebook, there is an algorithm that looks at the
+    facial features of those in the picture and asks you if you would like to tag
+    that person. This allows the person to see the picture where they were tagged
+    and allows them to decide if they want it on their profile or not. The same algorithm
+    is used when a user decides to use the facial recognition software on their phone
+    or computer to unlock their device. Everyone knows when they log into websites
+    such as Amazon, there is a list of products that are recommended to you because
+    of your past purchases or because of things that you have looked at. There is
+    a model that is built-in to the code of the website that allows it to figure out
+    ways to target you specifically as an individual so that you are given a more
+    personalized shopping experience. In doing this, Amazon and other websites that
+    use the same algorithm are hoping that they are going to be able to keep you coming
+    back to spend money with them. This algorithm can also be seen in Facebook because
+    it allows you to log into other websites so that it can provide you with ads that
+    you may want to see instead of generic ads that are not going to catch your attention.
+    The medical field has to advance with technology, or else it falls behind. Because
+    of Machine Learning, the medical field is able to take the symptoms that a patient
+    is feeling. This allows them to plug the symptoms into their computer and get
+    a list of diagnosis. This is not going to be perfect, but it is going to point
+    the healthcare provider in the right direction so that they are able to figure
+    out what is wrong with the patient. When it comes to trading stock, it is vital
+    to know when you are going to trade or hold on to your stock so can make more
+    money. Machine Learning has come up with an algorithm that looks at the financial
+    information and analyzes it so that stockbrokers are able to know when they should
+    trade and when they should let their stocks go. This is helping many companies
+    save money, so they are not buying useless stocks or so that they are not holding
+    onto a stock that is about to lose all of its value. Data entry by humans is going
+    to have issues such as duplication and inaccurate data. But, with Machine Learning,
+    algorithms work with predictive modeling algorithms to improve these issues. They
+    learn how to perform time-intensive documentation and other data entry tasks.
+    This opens up more free time for those with the proper knowledge to be able to
+    work on the more intensive problem-solving tasks because they do not need to deal
+    with the menial data entry jobs that machines are able to do. An amazing invention
+    known as Dulight was created by Baidu to help those that are visually impaired
+    to learn what is going on around them. They will work with a computer that will
+    use image recognition to survey the grounds around them and then speak to them
+    through an earpiece in their ear that will tell them what they would see. Machine
+    Learning is used by most of the companies that are in business today. It may not
+    be used in a way that is automatically visible to the general public or even their
+    employees, but it is being used even in the simple way of analyzing data. This
+    aids them in making better decisions in gaining money rather than losing money. '
+  fmt: '
+
+    # Chapter 4: Problems That Can Be Solved with Machine Learning
+
+
+    Machine Learning is helping out a lot of companies as well as individuals in their
+    daily lives. In this chapter, you will see some points that were mentioned above
+    as problems that have not been solved by Machine Learning just yet. Even though
+    there are issues with that particular piece of Machine Learning, that does not
+    mean that it does not work. Sometimes, these issues can be patched or fixed at
+    a later date while the software is put out for users to use and discover what
+    issues there may be with the software that the developers did not catch.
+
+
+    Machine Learning helps with spam detection. When you get into your inbox, there
+    are always emails that automatically gets routed to your spam box because of keywords
+    that are detected in other emails. Yet some spam is allowed through because these
+    keywords have been found in your inbox. It is going to filter those keywords to
+    your inbox on the slight chance that you are going to want the emails even though
+    they are spam. Spam detection still has a long way to go, but it is getting better
+    as more rules are made.
+
+
+    Have you ever wondered how the credit card companies are able to know when someone
+    has used your card? It is because of the transaction record that they keep! Every
+    month, the credit card company knows your usual stores and about how much is going
+    to be spent. If they see any activity outside of your usual area or outside of
+    how much you usually spend, they are going to say that the card was stolen and
+    report it as such. This can cause problems later on if you decide to go on a trip
+    or if you spend over what you normally spend. It is not perfect, but Machine Learning
+    is learning how to recognize zip codes written on envelopes so that they are able
+    to sort the envelopes out into geographical locations and that way the mail is
+    sorted faster and is delivered faster. There are still some issues with this as
+    machines are not always able to read a person''s handwriting since everyone writes
+    in a different manner.
+
+
+    As we''ve mentioned, Siri is able to understand what you are saying. But, what
+    if other machines were also capable of doing this? Thanks to Machine Learning,
+    this is now becoming a reality. The biggest issue is that everyone has different
+    dialects and speaks a different language. Not only that, but new words are being
+    added to the dictionary almost daily. But, even with there being issues in machine’s
+    understanding of what is being said to them, this does not stop them from trying
+    to fulfill the request that is made.
+
+
+    When you upload a picture on Facebook, there is an algorithm that looks at the
+    facial features of those in the picture and asks you if you would like to tag
+    that person. This allows the person to see the picture where they were tagged
+    and allows them to decide if they want it on their profile or not. The same algorithm
+    is used when a user decides to use the facial recognition software on their phone
+    or computer to unlock their device.
+
+
+    Everyone knows when they log into websites such as Amazon, there is a list of
+    products that are recommended to you because of your past purchases or because
+    of things that you have looked at. There is a model that is built-in to the code
+    of the website that allows it to figure out ways to target you specifically as
+    an individual so that you are given a more personalized shopping experience. In
+    doing this, Amazon and other websites that use the same algorithm are hoping that
+    they are going to be able to keep you coming back to spend money with them. This
+    algorithm can also be seen in Facebook because it allows you to log into other
+    websites so that it can provide you with ads that you may want to see instead
+    of generic ads that are not going to catch your attention.
+
+
+    The medical field has to advance with technology, or else it falls behind. Because
+    of Machine Learning, the medical field is able to take the symptoms that a patient
+    is feeling. This allows them to plug the symptoms into their computer and get
+    a list of diagnosis. This is not going to be perfect, but it is going to point
+    the healthcare provider in the right direction so that they are able to figure
+    out what is wrong with the patient.
+
+
+    When it comes to trading stock, it is vital to know when you are going to trade
+    or hold on to your stock so can make more money. Machine Learning has come up
+    with an algorithm that looks at the financial information and analyzes it so that
+    stockbrokers are able to know when they should trade and when they should let
+    their stocks go. This is helping many companies save money, so they are not buying
+    useless stocks or so that they are not holding onto a stock that is about to lose
+    all of its value.
+
+
+    Data entry by humans is going to have issues such as duplication and inaccurate
+    data. But, with Machine Learning, algorithms work with predictive modeling algorithms
+    to improve these issues. They learn how to perform time-intensive documentation
+    and other data entry tasks. This opens up more free time for those with the proper
+    knowledge to be able to work on the more intensive problem-solving tasks because
+    they do not need to deal with the menial data entry jobs that machines are able
+    to do.
+
+
+    An amazing invention known as Dulight was created by Baidu to help those that
+    are visually impaired to learn what is going on around them. They will work with
+    a computer that will use image recognition to survey the grounds around them and
+    then speak to them through an earpiece in their ear that will tell them what they
+    would see.
+
+
+    Machine Learning is used by most of the companies that are in business today.
+    It may not be used in a way that is automatically visible to the general public
+    or even their employees, but it is being used even in the simple way of analyzing
+    data. This aids them in making better decisions in gaining money rather than losing
+    money.
+
+    '
+  trans: '
+
+    # 第 4 章：可以通过机器学习解决的问题
+
+
+    机器学习正在帮助许多公司以及个人在日常生活中。在这一章中，你将看到一些之前提到的、尚未被机器学习解决的问题。即使对该特定机器学习方法存在问题，也不意味着它不起作用。有时，这些问题可以在以后修复或补丁，而软件会先发布供用户使用，以发现开发者未能捕捉到的潜在问题。
+
+
+    机器学习有助于垃圾邮件检测。当你查看收件箱时，总是会有邮件因其他邮件中检测到的关键词而自动被路由到垃圾邮件箱。然而，某些垃圾邮件仍会通过，因为这些关键词已出现在你的收件箱中。系统会根据你可能希望收到这些邮件的微小可能性来过滤这些关键词到你的收件箱。垃圾邮件检测仍需很长时间改进，但随着规则的不断制定，它正在逐步变得更好。
+
+
+    你是否曾想过，信用卡公司如何知道有人使用了你的卡片？这是因为它们保存了交易记录！每个月，信用卡公司知道你通常去的商店以及大致花费的金额。如果发现任何超出你通常地区或消费习惯的活动，它们会认为卡片被盗并据此报告。这在你计划旅行或花费超过平时时可能会带来问题。虽然不完美，但机器学习正在学习识别信封上的邮政编码，以便将信件按地理位置进行分类，从而加快分拣和递送速度。由于人们书写方式各异，机器有时无法识别手写内容，这仍是一个存在的问题。
+
+
+    如前所述，Siri 能够理解你说的话。但如果其他机器也能做到这一点呢？得益于机器学习，这已成为现实。最大的问题是，每个人都有不同的方言，说的语言也不同。而且，新词几乎每天都在被加入词典中。即便如此，机器对语音的理解仍存在问题，这并未阻止它们尝试履行被请求的任务。
+
+
+    当你在 Facebook 上上传一张照片时，有一个算法会查看照片中人物的面部特征，并询问你是否希望标记该人。这使得被标记的人能够查看照片并在其个人主页上决定是否保留该标记。相同的算法也用于用户在手机或电脑上使用人脸识别软件以解锁设备时的验证。
+
+
+    众所周知，在 Amazon 等网站登录时，会有一个基于你以往购买或浏览记录的产品推荐列表。网站内置的模型会根据你作为个体的特征来制定策略，从而提供更个性化的购物体验。Amazon
+    和其他使用相同算法的网站希望通过这种方式保持用户的回头率，鼓励他们继续消费。该算法同样适用于 Facebook，因为它允许你登录其他网站，从而提供你可能感兴趣的广告，而非那些不易引起注意的通用广告。
+
+
+    医疗领域必须与技术同步发展，否则会落后。得益于机器学习，医疗行业能够将患者的症状输入计算机，从而生成可能的诊断列表。这并不完全准确，但能够指引医疗提供者正确的方向，帮助他们弄清患者的问题。
+
+
+    在股票交易时，及时知道何时买入或持有股票至关重要，以便获利。机器学习已开发出一种算法，分析财务信息以帮助股票经纪人判断何时交易、何时持有股票。这对许多公司节省了资金，避免了购买无用股票或在股票价值即将归零前持有股票的情况。
+
+
+    人工数据录入存在重复和数据不准确等问题。但得益于机器学习，算法结合预测模型来改善这些问题，学习执行耗时的文档和其他数据录入任务。这为拥有专业知识的人士腾出更多时间，让他们能够专注于更具挑战性的问题解决任务，而无需处理机器能够完成的琐碎数据录入工作。
+
+
+    由百度开发的 Dulight 是一项令人惊叹的发明，旨在帮助视力受损者了解周围环境。它会与一台计算机配合，利用图像识别技术调查其周围的地形，并在耳机中通过语音告知其所见内容。
+
+
+    目前，大多数正在营业的公司都在使用机器学习。它可能不以显而易见的方式直接作用于公众或员工，但即使在简单的数据分析中也在被应用，这有助于它们做出更明智的决策，从而赚取而非亏损金钱。
+
+    '
+  toc: []
+- raw: "Chapter 5: Examples of Machine Learning In more recent years, Machine Learning\
+    \ has been used more in various areas of business and has then been passed on\
+    \ to other companies as well as the consumers. Machine Learning has combined with\
+    \ artificial intelligence so that new products can be released to the public.\
+    \ These products then spur other products to be released and have helped to better\
+    \ the products that are released for consumers. One such product is the Hello\
+    \ Barbie toy that has a microphone in her necklace. Whenever a child speaks, their\
+    \ words are transmitted to a server at Toy Talk and analyzed so that the appropriate\
+    \ response can be sent back. All these takes less than a second to complete. Hello\
+    \ Barbie is able to respond with 8,000 lines of dialogue and is able to save their\
+    \ answers so that they are able to respond later to questions such as where the\
+    \ child's favorite food is stored. The Coca-Cola company sells more than 500 drinks\
+    \ in 200 countries which makes it the largest beverage company in the world. By\
+    \ analyzing the data from each country, Coca-Cola is able to learn what sells\
+    \ best in that country and they are able to get rid of the drinks that do not\
+    \ sell. This means that they are able to maximize their profits and minimize their\
+    \ profit loss margin. Heineken does the same thing, except they are using artificial\
+    \ intelligence and Machine Learning to improve their customer service, marketing,\
+    \ advertising, and operations in America, so they are able to expand. Have you\
+    \ heard of Watson? Watson has been implemented in various businesses in a wide\
+    \ variety of sectors such as culinary arts. Chef Watson has become a sous-chef\
+    \ in a kitchen developing recipes and complementing their human counterparts which\
+    \ make working in a kitchen more efficient than before. Watson has also been fed\
+    \ images of Gaudi's work so that he is able to look at it and analyze it by learning\
+    \ where his influences lie. It learns the various influences such as Barcelona,\
+    \ and any cultural, biographical, or historical data so that this information\
+    \ can be shared with a human artist and help him create a sculpture that follows\
+    \ in the same style as Gaudi. Watson has even been given algorithms that help\
+    \ composers with musical elements to inspire them and help them determine what\
+    \ song is going to be a hit. Watson is able to do this by using conversations,\
+    \ speeches, and newspaper headlines to help with their inspiration. BP is one\
+    \ of the largest companies in global energy, and they realize the massive potential\
+    \ that Machine Learning and artificial intelligence has for their industry. By\
+    \ using the new updated technology, they are able to improve their use of resources\
+    \ and the safety of their process of refining oil and gas. By improving their\
+    \ operations, they are able to take all of their data and place it in the hands\
+    \ of those who are able to make the high-risk decisions that will ultimately change\
+    \ the world. Also, in the energy sector, GE has been using Machine Learning, IoT\
+    \ (Internet of Things) and big data to create an internet of energy where all\
+    \ of their data is sent. They are able to optimize their data to help push them\
+    \ to their vision of a digital power plant. In the financial sector, there are\
+    \ around 3.6 petabytes of data, and it continues to grow on a daily basis. Every\
+    \ day some people are looking at their credit through an agency known as Experian,\
+    \ and because of that, they receive a large amount of data from a variety of marketing\
+    \ databases, public records, and transaction records. They are currently trying\
+    \ to improve their system where Machine Learning makes their services come to\
+    \ a decision faster.  They aim to relay those decisions to their consumers faster,\
+    \ so people are not waiting for several days at a time for a credit decision on\
+    \ a purchase they are trying to make. American Express handles over 110 million\
+    \ cards that are currently being used while processing over a trillion dollars\
+    \ in transactions. Because of this, they rely on Machine Learning algorithms that\
+    \ are created to help detect fraud in real time. This helps to save the company\
+    \ millions of dollars. On top of that, AmEx is trying to get control of the flow\
+    \ of data by developing apps that would allow cardholders to log in and access\
+    \ their account. This will also help them see online business trends for their\
+    \ users. Google's Deep Mind has created a machine that can mimic the thought process\
+    \ of a human being. Deep Mind has been able to beat humans at a variety of games,\
+    \ but that is not where its possibilities end. Deep Mind has the potential to\
+    \ help with healthcare applications so that they can reduce the time that it takes\
+    \ for treatment plans to be made which means that they are quicker when diagnosing\
+    \ the illness. Machine Learning has helped Volvo be able to predict when a part\
+    \ of a vehicle is going to fail or will need to be serviced. This has helped saved\
+    \ countless lives. Volvo is also trying to develop their own autonomous vehicles.\
+    \ \n\nChapter 6: Free Datasets The datasets that you use when you are working\
+    \ with Machine Learning are going to be located in the datasets that have already\
+    \ been cited by peer-review academic journals. Datasets are a vital part of Machine\
+    \ Learning that you must know to understand Machine Learning. As we have discussed\
+    \ previously, there have been major advancements in the field of Machine Learning.\
+    \ Thanks to users learning about the computer's hardware, the algorithms that\
+    \ the computer will use, and the availability that you will be offered from the\
+    \ high-quality training datasets. Most datasets are going to be supervised or\
+    \ may even be semi-supervised as they deal with algorithms because of the expensiveness\
+    \ and the difficulty of producing the algorithms because the data is going to\
+    \ need to be labeled. But, if the data does not need to be labeled, then it can\
+    \ be left unsupervised which is going to be too costly for most companies to produce.\
+    \ Most datasets that you use for image data will be the sets that help when recognizing\
+    \ faces or actions. They are also made to recognize handwriting and characters\
+    \ that are written on a piece of paper. Text data will be things such as messages\
+    \ that are sent between people, reviews left online, posts written on Facebook\
+    \ or Twitter, or any text that is placed into any computer program. Sound data\
+    \ will be any sound such as speech or music that can be placed on a computer and\
+    \ analyzed. Physical data will be the data that you collect from earth science,\
+    \ astronomy, and other systems that you are going to have the option of measuring\
+    \ physically. Signal data is data that will track electricity or other motions\
+    \ such as how traffic moves through a city. The multivariate data will be data\
+    \ that measure the weather, internet traffic, finances, and even a state census.\
+    \ And finally, biological datasets will measure drug discoveries, plant growth,\
+    \ animal growth, and human growth as well. Therefore, biological data will measure\
+    \ anything living that can be measured. "
+  fmt: '
+
+    # Chapter 5: Examples of Machine Learning
+
+
+    In recent years, Machine Learning has been used in various areas of business and
+    has been passed on to other companies as well as consumers. Machine Learning has
+    combined with artificial intelligence so that new products can be released to
+    the public. These products then spur other products to be released and have helped
+    to better the products that are released for consumers. One such product is the
+    Hello Barbie toy that has a microphone in her necklace. Whenever a child speaks,
+    their words are transmitted to a server at Toy Talk and analyzed so that the appropriate
+    response can be sent back. All these takes less than a second to complete. Hello
+    Barbie is able to respond with 8,000 lines of dialogue and is able to save their
+    answers so that they are able to respond later to questions such as where the
+    child''s favorite food is stored.
+
+
+    The Coca-Cola company sells more than 500 drinks in 200 countries which makes
+    it the largest beverage company in the world. By analyzing the data from each
+    country, Coca-Cola is able to learn what sells best in that country and they are
+    able to get rid of the drinks that do not sell. This means that they are able
+    to maximize their profits and minimize their profit loss margin.
+
+
+    Heineken does the same thing, except they are using artificial intelligence and
+    Machine Learning to improve their customer service, marketing, advertising, and
+    operations in America, so they are able to expand.
+
+
+    Have you heard of Watson? Watson has been implemented in various businesses in
+    a wide variety of sectors such as culinary arts. Chef Watson has become a sous-chef
+    in a kitchen developing recipes and complementing their human counterparts which
+    make working in a kitchen more efficient than before. Watson has also been fed
+    images of Gaudi''s work so that he is able to look at it and analyze it by learning
+    where his influences lie. It learns the various influences such as Barcelona,
+    and any cultural, biographical, or historical data so that this information can
+    be shared with a human artist and help him create a sculpture that follows in
+    the same style as Gaudi. Watson has even been given algorithms that help composers
+    with musical elements to inspire them and help them determine what song is going
+    to be a hit. Watson is able to do this by using conversations, speeches, and newspaper
+    headlines to help with their inspiration.
+
+
+    BP is one of the largest companies in global energy, and they realize the massive
+    potential that Machine Learning and artificial intelligence has for their industry.
+    By using the new updated technology, they are able to improve their use of resources
+    and the safety of their process of refining oil and gas. By improving their operations,
+    they are able to take all of their data and place it in the hands of those who
+    are able to make the high-risk decisions that will ultimately change the world.
+
+
+    Also, in the energy sector, GE has been using Machine Learning, IoT (Internet
+    of Things) and big data to create an internet of energy where all of their data
+    is sent. They are able to optimize their data to help push them to their vision
+    of a digital power plant.
+
+
+    In the financial sector, there are around 3.6 petabytes of data, and it continues
+    to grow on a daily basis. Every day some people are looking at their credit through
+    an agency known as Experian, and because of that, they receive a large amount
+    of data from a variety of marketing databases, public records, and transaction
+    records. They are currently trying to improve their system where Machine Learning
+    makes their services come to a decision faster. They aim to relay those decisions
+    to their consumers faster, so people are not waiting for several days at a time
+    for a credit decision on a purchase they are trying to make.
+
+
+    American Express handles over 110 million cards that are currently being used
+    while processing over a trillion dollars in transactions. Because of this, they
+    rely on Machine Learning algorithms that are created to help detect fraud in real
+    time. This helps to save the company millions of dollars. On top of that, AmEx
+    is trying to get control of the flow of data by developing apps that would allow
+    cardholders to log in and access their account. This will also help them see online
+    business trends for their users.
+
+
+    Google''s Deep Mind has created a machine that can mimic the thought process of
+    a human being. Deep Mind has been able to beat humans at a variety of games, but
+    that is not where its possibilities end. Deep Mind has the potential to help with
+    healthcare applications so that they can reduce the time that it takes for treatment
+    plans to be made which means that they are quicker when diagnosing the illness.
+
+
+    Machine Learning has helped Volvo be able to predict when a part of a vehicle
+    is going to fail or will need to be serviced. This has helped saved countless
+    lives. Volvo is also trying to develop their own autonomous vehicles.
+
+
+    # Chapter 6: Free Datasets
+
+
+    The datasets that you use when you are working with Machine Learning are going
+    to be located in the datasets that have already been cited by peer-review academic
+    journals. Datasets are a vital part of Machine Learning that you must know to
+    understand Machine Learning. As we have discussed previously, there have been
+    major advancements in the field of Machine Learning. Thanks to users learning
+    about the computer''s hardware, the algorithms that the computer will use, and
+    the availability that you will be offered from the high-quality training datasets.
+
+
+    Most datasets are going to be supervised or may even be semi-supervised as they
+    deal with algorithms because of the expensiveness and the difficulty of producing
+    the algorithms because the data is going to need to be labeled. But, if the data
+    does not need to be labeled, then it can be left unsupervised which is going to
+    be too costly for most companies to produce.
+
+
+    Most datasets that you use for image data will be the sets that help when recognizing
+    faces or actions. They are also made to recognize handwriting and characters that
+    are written on a piece of paper.
+
+
+    Text data will be things such as messages that are sent between people, reviews
+    left online, posts written on Facebook or Twitter, or any text that is placed
+    into any computer program.
+
+
+    Sound data will be any sound such as speech or music that can be placed on a computer
+    and analyzed.
+
+
+    Physical data will be the data that you collect from earth science, astronomy,
+    and other systems that you are going to have the option of measuring physically.
+
+
+    Signal data is data that will track electricity or other motions such as how traffic
+    moves through a city.
+
+
+    The multivariate data will be data that measure the weather, internet traffic,
+    finances, and even a state census.
+
+
+    And finally, biological datasets will measure drug discoveries, plant growth,
+    animal growth, and human growth as well. Therefore, biological data will measure
+    anything living that can be measured.
+
+    '
+  trans: '
+
+    # 第 5 章：机器学习示例
+
+
+    近年来，机器​​学习已被应用于各个商业领域，并被传递给其他公司以及消费者。机器学习与人工智能相结合，使得新产品能够向公众发布。这些产品随后推动其他产品的推出，并帮助改善了面向消费者的产品。其中一个产品是
+    Hello Barbie 玩具，它在项链上内置了麦克风。每当孩子说话时，他们的语音会被传输到 Toy Talk 服务器并进行分析，以便发送适当的回复。整个过程只需少于一秒钟完成。Hello
+    Barbie 能够回复 8,000 行对话，并能够保存答案，以便在后续回答诸如孩子最爱食物的存放位置等问题。
+
+
+    可口可乐公司在 200 个国家销售超过 500 种饮料，使其成为全球最大的饮料公司。通过分析每个国家的数据，可口可乐能够了解该国最畅销的饮品，并淘汰销量不佳的饮品。这意味着他们能够最大化利润并最小化利润损失率。
+
+
+    海尼根同样做法，但他们利用人工智能和机器学习来改善其在美国的客户服务、营销、广告和运营，从而实现扩张。
+
+
+    你听说过 Watson 吗？Watson 已被应用于各行各业的多个领域，包括烹饪艺术。Chef Watson 已成为厨房中的副主厨，负责开发食谱并辅助其人类同事，使厨房工作比以前更高效。Watson
+    还被输入过高迪（Gaudi）的作品图像，以便他能够观察并分析这些作品，从而学习其影响来源。它学习了包括巴塞罗那在内的各种影响，以及文化、传记和历史数据，以便将这些信息与人类艺术家分享，帮助其创作出与高迪风格一致的雕塑。Watson
+    甚至被赋予了帮助作曲家在音乐元素上获得灵感的算法，并协助他们判断哪首歌曲将成为热门。Watson 通过利用对话、演讲和报纸标题来获取灵感。
+
+
+    BP 是全球能源行业中最大的公司之一，认识到机器学习和人工智能对其行业具有巨大的潜力。通过使用最新的技术，他们能够提升资源利用率和石油和天然气精炼过程的安全性。通过优化运营，他们能够将所有数据交到能够做出高风险决策的人手中，这些决策最终将改变世界。
+
+
+    在能源行业，通用电气（GE）也在使用机器学习、物联网（IoT）和大数据来构建能源物联网，将所有数据全部传输。他们能够优化数据，推动其实现数字化电厂的愿景。
+
+
+    在金融领域，数据量约为 3.6 千 petabytes，且每日持续增长。每天，部分人会通过 Experian 等信用机构查看自己的信用，因此他们从各种营销数据库、公共记录和交易记录中接收到大量数据。他们目前正在改进系统，机器学习使服务能够更快做出决策。他们希望更快地向消费者传递这些决策，避免人们在购买时因等待数日而延迟信用决策。
+
+
+    美国运通公司（American Express）目前使用超过 1.1 亿张正在使用的卡片，并处理超过一万亿美元的交易。因此，他们依赖于专门用于实时欺诈检测的机器学习算法，这为公司节约了数百万美元。此外，AmEx
+    正在通过开发允许卡片持卡人登录并访问账户的应用来控制数据流，这也有助于他们了解用户的在线业务趋势。
+
+
+    Google 的 Deep Mind 开发了一种能模仿人类思维过程的机器。Deep Mind 已能够在各类游戏中击败人类，但其可能性远不止于此。Deep Mind
+    有潜力帮助医疗保健领域，从而缩短治疗方案制定的时间，使诊断更快速。
+
+
+    机器学习帮助沃尔沃（Volvo）预测车辆部件何时可能故障或需要保养。这帮助挽救了无数生命。沃尔沃也在开发自己的自动驾驶汽车。
+
+
+    # 第 6 章：免费数据集
+
+
+    您在使用机器学习时使用的数据集将位于已被同行评审学术期刊引用的数据集中。数据集是机器学习的关键部分，您必须了解它们才能理解机器学习。正如我们之前讨论的，该领域已取得重大进展。得益于用户对计算机硬件的了解、将用于计算的算法以及高质量训练数据集的可用性。
+
+
+    大多数数据集将是受监督的，甚至可能是半监督的，因为它们涉及算法，而由于数据标记的高成本和难度，生成这些算法很困难。如果数据不需要标记，则可以留作无监督，这对大多数公司来说成本过高。
+
+
+    您用于图像数据的大多数数据集将是用于面部或动作识别的集合，同时也用于识别纸上书写的手写体和字符。
+
+
+    文本数据包括人与人之间发送的消息、网上留下的评论、Facebook 或 Twitter 上发布的帖子，或任何输入到任何计算机程序中的文本。
+
+
+    音频数据指任何声音，如语音或音乐，可以放置在计算机上并进行分析。
+
+
+    物理数据是从地球科学、天文学和其他系统中收集的数据，这些系统可以通过物理方式进行测量。
+
+
+    信号数据是用于跟踪电力或其他运动的数据，例如交通在城市中的流动情况。
+
+
+    多元数据是测量天气、互联网流量、金融以及甚至人口普查等数据。
+
+
+    最后，生物数据测量药物发现、植物生长、动物生长和人类生长等。因此，生物数据测量任何可被测量的生物。
+
+
+    '
+  toc: []
+- raw: "Chapter 7: Support Vector Algorithms Part of Machine Learning is learning\
+    \ how to understand support vector algorithms.  The most common way that people\
+    \ learn how to work with machine algorithms is to start with regression. Once\
+    \ you have that down, it is downhill from there. However, regression is not the\
+    \ answer to everything. While working with Machine Learning algorithms, it is\
+    \ helpful to think of the algorithm as a toolbox that contains any and every tool\
+    \ that you are going to need to get the job done. But, you need to know how to\
+    \ use those tools and when you need to switch to another tool. Regression is like\
+    \ a humor which is going to help you pin down the data that you need. However\
+    \ you will not have the ability to take that screw out with a hammer which is\
+    \ a higher and more complex dataset. But, support vector machines serve as the\
+    \ screwdriver that you need to deal with the smaller datasets that help to build\
+    \ stronger foundations for the models you are creating. It is highly recommended\
+    \ that you take the time to learn how to use Random Forest, naive Bayes algorithms,\
+    \ and Ensemble modeling before using support vector algorithms. These knowledge\
+    \ is going to make support vector machines much easier for you. The support vector\
+    \ machine is a machine that is going to be part of the supervised Machine Learning\
+    \ branch. It will be supervised while it is dealing with any algorithms that are\
+    \ used for regression as well as classification. However, it will typically be\
+    \ used while dealing with classification. Support vectors come with coordinates\
+    \ that come from individual observations. These points are the frontier that is\
+    \ used when showing the best segregation of two classes, for example, a line versus\
+    \ a hyperplane. So, the first question is, how do we identify what the hyperplane\
+    \ is? The first scenario would be when you have three planes. Once you've located\
+    \ all three planes, you will have the tools to identify the hyperplane because\
+    \ of the classifications that you've already done. Remember you need to select\
+    \ the hyperplane that segregates your two classes best. The second scenario is\
+    \ that you have three planes, but they all segregate your classes. How do you\
+    \ tell which is the right plane? For this scenario, you will need to maximize\
+    \ the distance between data points and the hyperplanes to see which one segregates\
+    \ best. The distance that you have created will be known as the margin. You will\
+    \ need to choose the plane with the highest margin because of robustness. If you\
+    \ pick one with the lowest margin, you will have a high chance of classifying\
+    \ the data points you're working with. While working with support vector machines,\
+    \ you will come to realize that it is going to be easier to work with linear hyperplanes\
+    \ that lay between two different classes. However, it is sensible to wonder if\
+    \ you will need to add your line manually to the hyperplane. Your answer would\
+    \ be no because the support vector machine will have a method that is built in\
+    \ to take the lowest dimension input space and move it to the highest dimensional\
+    \ space; this is known as a kernel trick. So, one inseparable problem will be\
+    \ in converting the separable problem by using kernel functions. This is going\
+    \ to be useful when you are using non-linear separation problems since it will\
+    \ best work with complex data transformations. They can figure out what process\
+    \ needs to be used while separating data based on the labels that were defined\
+    \ by the program user. Python has a sci-kit that is a widely used library you\
+    \ can use to implement Machine Learning algorithms. Support vector machines can\
+    \ also be found in this library as long as you use the following code. Syntax\
+    \ #import library from sklearn import svm #make sure you have an x (predictor)\
+    \ and y (target) for the training datasets as well as a x\\_test (predictor) of\
+    \ test\\_dataset #create SVM classification object model = svm . Svc (kernel =\
+    \ 'linear', c=1, gamma =1) #there are going to be several options linked to your\
+    \ model here such as if you want to change the kernel, gamma, or the c value.\
+    \ Model. Fit (x, y) model. Score (x, y) #try and predict the outcome predicted\
+    \ = model. Predict (x\\_test) As you set the parameters of your algorithms that\
+    \ are machine learned, you will be helping to improve the model's performance\
+    \ overall. Syntax sklearn. Svm. SVC (C = 1.0, kernel – 'rbf', degree = 3, gamma\
+    \ = 0.0, coef 0 = 0.0, shrinking = true, probability = false, tol = 0.001, cache\\\
+    _size = 200, class\\_weight = none, verbose = false, max\\_inter = -1, random\\\
+    _state = none) Example import lumpy as lp import matholib. Pylot as plt from sklearn\
+    \ import svm, dataset import data iris = dataset. Bring up \\_ iris ( ) x = iris.\
+    \ Data \\[0: 4\\] #attempt to avoid any ugly slicing by using a 2-D dataset y\
+    \ = iris. Target c = 26 svc = svm . SCV (kernel = linear, c = 3, gamma = 4). fit\
+    \ (x, y) x\\_ min x\\_ max  \\[0 : 9\\], min ( ) - 7 x \\[ : 7\\], max ( ) + 6\
+    \ h = (x\\_max / x\\_min) / 4 xx, yy = pu. Meshgrid (pi. Arrange (x\\_min, x\\\
+    _max, h) pi. arrange (y\\_min, y\\_max, h)) Using supported vector machines have\
+    \ both pros and cons. Let's look at a few. Pros \n\n1.  You will have the option\
+    \ to use subset training points for any decision function that has to be used\
+    \ to make the memory more efficient; \n\n2.  It is going to work better with the\
+    \ margins of separation; \n\n3.  It will be more effective when you are dealing\
+    \ with multiple dimensions as long as they are bigger than the number of samples\
+    \ you have; and \n\n4.  It will work inside of high dimensional spaces. \n\nCons\
+    \ \n\n1.  Should the dataset have extra noise, it will not perform well; \n\n\
+    2.  It will not give you direct probability estimates; and \n\n3.  You cannot\
+    \ use large datasets because the training time will be too high "
+  fmt: "\n# Chapter 7: Support Vector Algorithms\n\nPart of Machine Learning is learning\
+    \ how to understand support vector algorithms. The most common way that people\
+    \ learn how to work with machine algorithms is to start with regression. Once\
+    \ you have that down, it is downhill from there. However, regression is not the\
+    \ answer to everything. While working with Machine Learning algorithms, it is\
+    \ helpful to think of the algorithm as a toolbox that contains any and every tool\
+    \ that you are going to need to get the job done. But, you need to know how to\
+    \ use those tools and when you need to switch to another tool. Regression is like\
+    \ a humor which is going to help you pin down the data that you need. However\
+    \ you will not have the ability to take that screw out with a hammer which is\
+    \ a higher and more complex dataset. But, support vector machines serve as the\
+    \ screwdriver that you need to deal with the smaller datasets that help to build\
+    \ stronger foundations for the models you are creating. It is highly recommended\
+    \ that you take the time to learn how to use Random Forest, naive Bayes algorithms,\
+    \ and Ensemble modeling before using support vector algorithms. These knowledge\
+    \ is going to make support vector machines much easier for you. The support vector\
+    \ machine is a machine that is going to be part of the supervised Machine Learning\
+    \ branch. It will be supervised while it is dealing with any algorithms that are\
+    \ used for regression as well as classification. However, it will typically be\
+    \ used while dealing with classification. Support vectors come with coordinates\
+    \ that come from individual observations. These points are the frontier that is\
+    \ used when showing the best segregation of two classes, for example, a line versus\
+    \ a hyperplane. So, the first question is, how do we identify what the hyperplane\
+    \ is? The first scenario would be when you have three planes. Once you've located\
+    \ all three planes, you will have the tools to identify the hyperplane because\
+    \ of the classifications that you've already done. Remember you need to select\
+    \ the hyperplane that segregates your two classes best. The second scenario is\
+    \ that you have three planes, but they all segregate your classes. How do you\
+    \ tell which is the right plane? For this scenario, you will need to maximize\
+    \ the distance between data points and the hyperplanes to see which one segregates\
+    \ best. The distance that you have created will be known as the margin. You will\
+    \ need to choose the plane with the highest margin because of robustness. If you\
+    \ pick one with the lowest margin, you will have a high chance of classifying\
+    \ the data points you're working with. While working with support vector machines,\
+    \ you will come to realize that it is going to be easier to work with linear hyperplanes\
+    \ that lay between two different classes. However, it is sensible to wonder if\
+    \ you will need to add your line manually to the hyperplane. Your answer would\
+    \ be no because the support vector machine will have a method that is built in\
+    \ to take the lowest dimension input space and move it to the highest dimensional\
+    \ space; this is known as a kernel trick. So, one inseparable problem will be\
+    \ in converting the separable problem by using kernel functions. This is going\
+    \ to be useful when you are using non-linear separation problems since it will\
+    \ best work with complex data transformations. They can figure out what process\
+    \ needs to be used while separating data based on the labels that were defined\
+    \ by the program user. Python has a sci-kit that is a widely used library you\
+    \ can use to implement Machine Learning algorithms. Support vector machines can\
+    \ also be found in this library as long as you use the following code. Syntax\
+    \ #import library from sklearn import svm #make sure you have an x (predictor)\
+    \ and y (target) for the training datasets as well as a x_test (predictor) of\
+    \ test_dataset #create SVM classification object model = svm.Svc(kernel='linear',\
+    \ c=1, gamma=1) #there are going to be several options linked to your model here\
+    \ such as if you want to change the kernel, gamma, or the c value. Model.Fit(x,\
+    \ y) model.Score(x, y) #try and predict the outcome predicted = model.Predict(x_test)\
+    \ As you set the parameters of your algorithms that are machine learned, you will\
+    \ be helping to improve the model's performance overall. Syntax sklearn.Svm.SVC(C=1.0,\
+    \ kernel='rbf', degree=3, gamma=0.0, coef0=0.0, shrinking=true, probability=false,\
+    \ tol=0.001, cache_size=200, class_weight=none, verbose=false, max_inter=-1, random_state=none)\
+    \ Example import lumpy as lp import matholib.Pylot as plt from sklearn import\
+    \ svm, dataset import data iris = dataset.Bring up _ iris( ) x = iris.Data[0:4]\
+    \ #attempt to avoid any ugly slicing by using a 2-D dataset y = iris.Target c\
+    \ = 26 svc = svm.SCV(kernel=linear, c=3, gamma=4).fit(x, y) x_min x_max[0:9],\
+    \ min( ) - 7 x[:7], max( ) + 6 h = (x_max / x_min) / 4 xx, yy = pu.Meshgrid(pi.Arrange(x_min,\
+    \ x_max, h) pi.arrange(y_min, y_max, h)) Using supported vector machines have\
+    \ both pros and cons. Let's look at a few. Pros \n\n1. You will have the option\
+    \ to use subset training points for any decision function that has to be used\
+    \ to make the memory more efficient; \n\n2. It is going to work better with the\
+    \ margins of separation; \n\n3. It will be more effective when you are dealing\
+    \ with multiple dimensions as long as they are bigger than the number of samples\
+    \ you have; and \n\n4. It will work inside of high dimensional spaces. \n\nCons\
+    \ \n\n1. Should the dataset have extra noise, it will not perform well; \n\n2.\
+    \ It will not give you direct probability estimates; and \n\n3. You cannot use\
+    \ large datasets because the training time will be too high\n"
+  trans: "\n# 第 7 章：支持向量机算法\n\n机器学习的一部分是学习如何理解支持向量机算法。人们学习如何使用机器学习算法的最常见方式是先从回归开始。一旦掌握了这一点，后续便会迎刃而解。然而，回归并不是万能的解决方案。在使用机器学习算法时，将算法视为一个包含任何你可能需要的工具的工具箱是有帮助的。但你需要知道如何使用这些工具，以及何时需要切换到其他工具。回归就像一个幽默，能帮助你锁定所需的数据。然而，你无法用锤子（一种用于处理更高级、更复杂数据集的工具）来取出那个螺丝。但支持向量机作为螺丝刀，能够处理较小的数据集，从而为你构建模型提供更坚实的基础。强烈建议你在使用支持向量机之前，先花时间学习如何使用随机森林、朴素贝叶斯算法和集成建模。这些知识将使支持向量机变得更加易于使用。支持向量机属于监督机器学习的分支，它在处理回归和分类算法时都是监督的。不过，它通常用于分类任务。支持向量机的数据点带有坐标，这些点是用于展示两类最佳分隔的边界（例如，直线与高维空间中的超平面）。那么，第一个问题是：如何确定超平面是什么？第一种情况是你有三个平面。一旦你找到了这三个平面，你就可以利用已有的分类结果来识别超平面。记住，你需要选择能最佳分隔两类的超平面。第二种情况是你有三个平面，但它们都能分隔类别。如何判断哪个是正确的平面？对于这种情况，你需要最大化数据点与超平面之间的距离，以确定哪个分隔效果最佳。这个距离被称为边界（margin）。你需要选择边界最大的平面，因为这样更稳健。如果选择边界最小的平面，你会面临对数据点分类错误的高风险。在使用支持向量机时，你会发现使用位于两类之间的线性超平面会更加容易。然而，你可能会想知道是否需要手动在超平面上添加一条直线。答案是否定的，因为支持向量机内置了一个方法，能够将最低维度输入空间转换为最高维度空间（即核技巧）。因此，一个不可分割的问题在于通过核函数将可分问题转换为不可分问题。这在处理非线性分离问题时特别有用，因为它能够处理复杂的数据转换。这些方法能够根据程序用户定义的标签来确定分隔数据所需的过程。Python\
+    \ 拥有 sci-kit 这一广泛使用的库，你可以用它来实现机器学习算法。支持向量机也可以在该库中找到，只需使用以下代码。语法 #导入库 from sklearn\
+    \ import svm #确保你有训练数据集的 x（特征）和 y（目标），以及 x_test（测试数据集的特征） #创建 SVM 分类对象 model =\
+    \ svm.Svc(kernel='linear', c=1, gamma=1) #模型的参数选项包括改变核函数、gamma 或 c 值 Model.Fit(x,\
+    \ y) model.Score(x, y) #尝试预测结果 predicted = model.Predict(x_test) 当你设置机器学习算法的参数时，你将提升模型整体性能。\
+    \ Syntax sklearn.Svm.SVC(C=1.0, kernel='rbf', degree=3, gamma=0.0, coef0=0.0,\
+    \ shrinking=true, probability=false, tol=0.001, cache_size=200, class_weight=none,\
+    \ verbose=false, max_inter=-1, random_state=none) 示例 import lumpy as lp import\
+    \ matholib.Pylot as plt from sklearn import svm, dataset import data iris = dataset.Bring\
+    \ up _ iris( ) x = iris.Data[0:4] #尝试避免丑陋的切片，使用 2-D 数据集 y = iris.Target c = 26\
+    \ svc = svm.SCV(kernel=linear, c=3, gamma=4).fit(x, y) x_min x_max[0:9], min(\
+    \ ) - 7 x[:7], max( ) + 6 h = (x_max / x_min) / 4 xx, yy = pu.Meshgrid(pi.Arrange(x_min,\
+    \ x_max, h) pi.arrange(y_min, y_max, h)) 使用支持向量机有优点和缺点。让我们看几个。优点 \n\n1. 你可以使用子集训练点来使任何决策函数更高效，从而节省内存；\
+    \ \n\n2. 它在处理分隔边界时表现更好； \n\n3. 当特征维度大于样本数量时，它在多维空间中表现更有效； \n\n4. 它能在高维空间中工作。 \n\
+    \n缺点 \n\n1. 如果数据集包含额外噪声，它的表现会下降； \n\n2. 它无法直接提供概率估计； \n\n3. 由于训练时间过长，无法使用大规模数据集\n"
+  toc: []
+- raw: 'Chapter 8: Machine Learning with Python Python is a coding program you can
+    use for almost any type of coding that needs to be done when writing your own
+    programs. Since Python will provide you with the outputs based on the inputs that
+    you give, you will be using Machine Learning! Most of what Python does is going
+    to be unsupervised. Some parts have to be supervised because you will be searching
+    for a specific outcome. Should you want to use Python to leverage the Machine
+    Learning you are doing, there are a few things that you need to know in case you
+    do not know about them yet. Python is extremely versatile, and you can do extremely
+    specific computation, and then it can be converted to Machine Learning. You will
+    need to install Python on your computer if you have not done it yet. You will
+    also need to obtain the package that works with Machine Learning. It is highly
+    recommended that you install Anaconda because it is an industrial strength implementation
+    that will have the ability to be used with any operating system. It also has every
+    package you will need as you work with Machine Learning. Your main objective for
+    using Machine Learning will define what a data scientist is for. There is a variety
+    of data scientist that use Machine Learning algorithms. You will also need to
+    have an understanding of kernel methods, so you are able to gain insight from
+    the support vector machine models that you are using. As you deal with data science,
+    you will have to load your data into the program. The discipline that you use
+    will have to work with the data that you observed and collected. You will then
+    load that digital dataset into the Python library which is known as scikit-learn.
+    To load your data, you will need to bring the module into Python with the dataset
+    that you got from the sklearn library. After that, you are going to have the option
+    of using the load\_digits ( ) function from the dataset that you imported. Syntax
+    From sklearn import Digits = datasets. load\_digits () Print (\_\_\_\_\_) At this
+    point in time, you should notice that the dataset module will be holding other
+    methods that will be loaded to fetch the most popular reference to the dataset
+    that is currently being used. So, you can always count on the module to work if
+    you do not have an artificial data generator. Keep in mind that if you download
+    data, it will already be separated between test and training sets. You will be
+    able to tell the difference by the extensions of the data. “.tra” will be training
+    and “.tes” will be test. Both files have to be loaded for your project to be elaborated.
+    When you first start working with datasets, you need to observe the data description
+    so that you can see what you will be learning from that dataset. When using scikit-learn,
+    the data is not going to be made readily available. So, you will need to download
+    the data from another source, and you will usually find the description so that
+    you have enough information for your dataset. Note: the insights you get are not
+    going to be deep enough for what you will be using the data for. You will need
+    to perform an exploratory data analysis on the data so you can see how difficult
+    the data will be used. If you have not already checked the description or you
+    need to double check it, you will need to pay special attention to the basic information
+    in the description. The digital data will be printed once it has been loaded because
+    of the scikit-learn datasets. You will probably already know a lot of information
+    about what you are looking for because of your target values. You will need to
+    have access to the digital data through the attribute data module. This will be
+    accessed the same way that you access the target values with the target attribute.
+    The description will give you access through the descry attribute. If you need
+    to look at what key is available for the data you are using, then use the digits.
+    Keys ( ) function. Example #getting the keys for your digit data Print (digits.
+    \_\_\_) #printing out the data you are using Print (digits. \_\_\_) #accessing
+    your target values Print (digits. \_\_\_) #getting your description for your dataset
+    Print (digits. descr) If you read the read\_csv ( ) function, you will be able
+    to import your data so that you are looking at the same data frame that contains
+    the data you want. There will not be any description for the data that you are
+    working with. In this event, you will be using the option to restore the head
+    ( ) or the tail ( ) function so you can inspect the data again. As you use these
+    methods, you will need to read the description of the data! Now you may be asking
+    how you are supposed to access the arrays for the data. The answer is that you
+    will still use the attributes that are tied to the array. You will need to keep
+    in mind that the attributes will be available when you are using the digits. Keys
+    ( ) function. For example, if you are using the data attribute in an attempt to
+    isolate the data, then you will be able to use the target function to find the
+    target values along with using ht edescr for the description. So, what now? First,
+    you should figure out the number of dimensions that is created by the number of
+    items that are in your array. The arrays shape will be a tuple that is going to
+    tell you how big every dimension is. Example Y = pi. Zeros ((4, 2, 5)) which means
+    that your array is going to be shaped to the (4, 2, 5) points. To see the shape
+    of the array, you will use the target, the descr, and the data functions. The
+    first thing you will do is use the data function so you can isolate the NumPy
+    array from the digit data before you can use the attribute shape which will help
+    you to discover the shape of the array. You will use the target and descr to do
+    the exact same thing. Another attribute you can use is the images which will show
+    you the data as an image instead of as a number. Example #separate your digits
+    data digits \_data = digits. data #look at the shape of your array Print (shape
+    for the digits data) #isolate the target values Digits\_ target = digits. \_\_\_
+    #look at the shape again Print (target function) #print the number of unique labels
+    that you have Number\_ digits = len (np. Unique (digits. Target)) #isolate your
+    image Digits\_ images = digits. Images #look at the shape once more print (image
+    shape) The last thing that needs to be done as you saw in the example is that
+    the image data has to contain the dimensions for your shape. You will have the
+    option to visually check the image and the data functions by reshaping your image
+    so that it is no longer 3D but 2D. You can do this by using digits. Images. Reshape
+    (instances and pixels). You can also use a longer bit of code just in case you
+    want to be completely sure about the reshaping of your image. Print (np. All (digits.
+    Images. Reshape ((instances and pixels)) == digits. Data)) As you work with the
+    NumPy method, you will be using the all ( ) method so that you can test elements
+    in the array that lay on the axis so you can see if your evaluation is true. If
+    they come back true, then the image that has been reshaped will be equal to the
+    digits. Data function. Once you feel confident with what you have just learned,
+    you will be ready to move to more complex situations where you can visualize the
+    images that you are working with. Python has a visualization library call the
+    matplotlib that is used for this very purpose. Syntax Import matlotlib pyplot
+    as plt Fig = plt. Figure (figsize = 6, 6)) Fig. subplots\_ adjust (left = 0, right=
+    1, bottom = 0 top = 1 hspace = 0.05, wspace = 0.05 For I in range (64): Ax = fig.
+    add\_ subplot (8, 8, I + 1, xticks = \[\], yticks = \[\]) Ax. imshow (digits.
+    Images \[ I\] cmap = plt.cm. binary, interpolation = ‘nearest’) Ax. Text (0, 7,
+    str (digits. target \[i\])) Plt. Show () The syntax that you just saw will be
+    used a lot and can seem a bit overwhelming, but you will have the option to break
+    the code down into chunks, so you can do it and understand it easier. '
+  fmt: '
+
+    # Chapter 8: Machine Learning with Python
+
+
+    Python is a coding program you can use for almost any type of coding that needs
+    to be done when writing your own programs. Since Python will provide you with
+    the outputs based on the inputs that you give, you will be using Machine Learning!
+    Most of what Python does is going to be unsupervised. Some parts have to be supervised
+    because you will be searching for a specific outcome.
+
+
+    Should you want to use Python to leverage the Machine Learning you are doing,
+    there are a few things that you need to know in case you do not know about them
+    yet. Python is extremely versatile, and you can do extremely specific computation,
+    and then it can be converted to Machine Learning. You will need to install Python
+    on your computer if you have not done it yet. You will also need to obtain the
+    package that works with Machine Learning. It is highly recommended that you install
+    Anaconda because it is an industrial strength implementation that will have the
+    ability to be used with any operating system. It also has every package you will
+    need as you work with Machine Learning.
+
+
+    Your main objective for using Machine Learning will define what a data scientist
+    is for. There is a variety of data scientist that use Machine Learning algorithms.
+    You will also need to have an understanding of kernel methods, so you are able
+    to gain insight from the support vector machine models that you are using.
+
+
+    As you deal with data science, you will have to load your data into the program.
+    The discipline that you use will have to work with the data that you observed
+    and collected. You will then load that digital dataset into the Python library
+    which is known as scikit-learn. To load your data, you will need to bring the
+    module into Python with the dataset that you got from the sklearn library.
+
+
+    After that, you are going to have the option of using the load_digits() function
+    from the dataset that you imported. Syntax From sklearn import Digits = datasets.load_digits()
+    Print(______) At this point in time, you should notice that the dataset module
+    will be holding other methods that will be loaded to fetch the most popular reference
+    to the dataset that is currently being used. So, you can always count on the module
+    to work if you do not have an artificial data generator. Keep in mind that if
+    you download data, it will already be separated between test and training sets.
+    You will be able to tell the difference by the extensions of the data. “.tra”
+    will be training and “.tes” will be test. Both files have to be loaded for your
+    project to be elaborated.
+
+
+    When you first start working with datasets, you need to observe the data description
+    so that you can see what you will be learning from that dataset. When using scikit-learn,
+    the data is not going to be made readily available. So, you will need to download
+    the data from another source, and you will usually find the description so that
+    you have enough information for your dataset. Note: the insights you get are not
+    going to be deep enough for what you will be using the data for. You will need
+    to perform an exploratory data analysis on the data so you can see how difficult
+    the data will be used. If you have not already checked the description or you
+    need to double check it, you will need to pay special attention to the basic information
+    in the description. The digital data will be printed once it has been loaded because
+    of the scikit-learn datasets. You will probably already know a lot of information
+    about what you are looking for because of your target values. You will need to
+    have access to the digital data through the attribute data module. This will be
+    accessed the same way that you access the target values with the target attribute.
+    The description will give you access through the descry attribute. If you need
+    to look at what key is available for the data you are using, then use the digits.Keys()
+    function. Example #getting the keys for your digit data Print(digits.____) #printing
+    out the data you are using Print(digits.____) #accessing your target values Print(digits.____)
+    #getting your description for your dataset Print(digits.descr)
+
+
+    If you read the read_csv() function, you will be able to import your data so that
+    you are looking at the same data frame that contains the data you want. There
+    will not be any description for the data that you are working with. In this event,
+    you will be using the option to restore the head() or the tail() function so you
+    can inspect the data again. As you use these methods, you will need to read the
+    description of the data! Now you may be asking how you are supposed to access
+    the arrays for the data. The answer is that you will still use the attributes
+    that are tied to the array. You will need to keep in mind that the attributes
+    will be available when you are using the digits.Keys() function. For example,
+    if you are using the data attribute in an attempt to isolate the data, then you
+    will be able to use the target function to find the target values along with using
+    ht edescr for the description. So, what now? First, you should figure out the
+    number of dimensions that is created by the number of items that are in your array.
+    The arrays shape will be a tuple that is going to tell you how big every dimension
+    is. Example Y = pi. Zeros((4, 2, 5)) which means that your array is going to be
+    shaped to the (4, 2, 5) points. To see the shape of the array, you will use the
+    target, the descr, and the data functions. The first thing you will do is use
+    the data function so you can isolate the NumPy array from the digit data before
+    you can use the attribute shape which will help you to discover the shape of the
+    array. You will use the target and descr to do the exact same thing. Another attribute
+    you can use is the images which will show you the data as an image instead of
+    as a number. Example #separate your digits data digits_data = digits.data #look
+    at the shape of your array Print(shape for the digits data) #isolate the target
+    values Digits_target = digits.____ #look at the shape again Print(target function)
+    #print the number of unique labels that you have Number_digits = len(np.Unique(digits.Target))
+    #isolate your image Digits_images = digits.Images #look at the shape once more
+    print(image shape) The last thing that needs to be done as you saw in the example
+    is that the image data has to contain the dimensions for your shape. You will
+    have the option to visually check the image and the data functions by reshaping
+    your image so that it is no longer 3D but 2D. You can do this by using digits.Images.reshape(instances
+    and pixels). You can also use a longer bit of code just in case you want to be
+    completely sure about the reshaping of your image. Print(np.All(digits.Images.reshape((instances
+    and pixels)) == digits.Data)) As you work with the NumPy method, you will be using
+    the all() method so that you can test elements in the array that lay on the axis
+    so you can see if your evaluation is true. If they come back true, then the image
+    that has been reshaped will be equal to the digits.Data function. Once you feel
+    confident with what you have just learned, you will be ready to move to more complex
+    situations where you can visualize the images that you are working with. Python
+    has a visualization library call the matplotlib that is used for this very purpose.
+    Syntax Import matplotlib.pyplot as plt Fig = plt.Figure(figsize = 6, 6)) Fig.subplots_adjust(left
+    = 0, right= 1, bottom = 0 top = 1 hspace = 0.05, wspace = 0.05 For I in range(64):
+    Ax = fig.add_subplot(8, 8, I + 1, xticks = [], yticks = []) Ax.imshow(digits.Images[I]
+    cmap = plt.cm.binary, interpolation = ''nearest'') Ax.Text(0, 7, str(digits.target[i]))
+    Plt.Show() The syntax that you just saw will be used a lot and can seem a bit
+    overwhelming, but you will have the option to break the code down into chunks,
+    so you can do it and understand it easier.
+
+    '
+  trans: '
+
+    # 第 8 章：使用 Python 进行机器学习
+
+
+    Python 是一种编程程序，你可以用它来完成几乎所有需要在编写自己的程序时进行的编码工作。由于 Python 会根据你提供的输入给出输出，所以你将使用机器学习！Python
+    的大部分功能是无监督的。有些部分需要监督，因为你将在寻找特定的结果。
+
+
+    如果你想使用 Python 来利用你正在进行的机器学习，那么在你尚未了解它们之前，你需要知道几件事。Python 极其灵活，你可以进行极其具体的计算，然后将其转换为机器学习。如果你尚未安装
+    Python，则需要在你的计算机上安装它。你还需要获得与机器学习兼容的包。强烈建议你安装 Anaconda，因为它是工业级实现，能够在任何操作系统上使用，并且包含你在使用机器学习时所需的所有包。
+
+
+    使用机器学习的主要目标将定义数据科学家的角色。使用机器学习算法的数据科学家种类繁多。你还需要了解核方法，以便能够从你正在使用的支持向量机模型中获得洞察。
+
+
+    当你处理数据科学时，你需要将数据加载到程序中。你所使用的学科必须能够处理你观察和收集的数据。你将把这个数字数据集加载到 scikit-learn 所在的 Python
+    库中。要加载你的数据，你需要将 scikit-learn 库中的模块导入 Python，并使用你获得的数据集。
+
+
+    随后，你将有机会使用从你导入的数据集中加载的 `load_digits()` 函数。语法：`from sklearn import Digits = datasets.load_digits()`，`Print(______)`。此时，你应该注意到该模块将保存其他方法，用于获取当前正在使用的最流行数据集的引用。因此，即使你没有人工生成数据，也可以始终依赖该模块工作。请记住，如果你下载数据，它已经会在测试集和训练集之间分离。你可以通过文件扩展名区分两者：“.tra”
+    是训练集，“.tes” 是测试集。这两个文件都需要加载，以便你的项目得到完善。
+
+
+    当你开始处理数据集时，需要观察数据描述，以便了解你将从该数据中学习什么。使用 scikit-learn 时，数据不会自动提供。因此，你需要从其他来源下载数据，通常可以在该来源中找到描述，从而获得足够的信息来处理你的数据集。注意：你获得的洞察可能不足以满足你对数据的使用需求。你需要对数据进行探索性数据分析，以便了解数据将如何被使用。如果你尚未检查描述，或者需要再次确认，你需要特别关注描述中的基本信息。加载后，数字数据会通过
+    scikit-learn 数据集打印出来。你可能因为目标值而已经知道很多关于你所寻找的信息。你需要通过 `data` 属性访问数字数据，这与通过 `target`
+    属性访问目标值的方式相同。描述将通过 `descr` 属性提供访问。如果你需要查看正在使用的数据的键，请使用 `digits.Keys()` 函数。例如：`Print(digits.____)`
+    # 打印你正在使用的数据 `Print(digits.____)` # 打印目标值 `Print(digits.____)` # 获取数据集的描述 `Print(digits.descr)`
+
+
+    如果阅读 `read_csv()` 函数，你将能够导入你的数据，从而查看包含你想要数据的数据框。对于你正在使用的数据，不会有描述。在这种情况下，你将使用 `head()`
+    或 `tail()` 函数来恢复数据，以便再次检查。当你使用这些方法时，你需要阅读数据的描述！现在你可能在想如何访问数据的数组。答案是，你仍然使用与数组关联的属性。请记住，当你使用
+    `digits.Keys()` 函数时，这些属性将可用。例如，如果你尝试使用 `data` 属性来孤立数据，你可以使用 `target` 函数来找到目标值，同时使用
+    `ht edescr` 来获取描述。那么现在呢？首先，你应该确定数组创建的维度数量，这由数组中的项目数量决定。数组的 `shape` 将是一个元组，告诉你每个维度的大小。例如
+    `Y = pi. Zeros((4, 2, 5))` 这意味着你的数组将被形状为 (4, 2, 5) 的点。要查看数组的形状，你将使用 `target`、`descr`
+    和 `data` 函数。第一步是使用 `data` 函数，以便从数字数据中孤立 NumPy 数组，然后使用 `shape` 属性来发现数组的形状。你将使用
+    `target` 和 `descr` 执行完全相同的操作。另一个可用的属性是 `images`，它会以图像形式显示数据，而不是数字。例如：`#分离你的数字数据
+    digits_data = digits.data` # 查看数字数据的形状 `Print(shape for the digits data)` # 孤立目标值
+    `Digits_target = digits.____` # 再次查看形状 `Print(target function)` # 打印唯一标签的数量 `Number_digits
+    = len(np.Unique(digits.Target))` # 孤立图像 `Digits_images = digits.Images` # 再次查看形状
+    `print(image shape)` 最后，如示例所示，图像数据必须包含形状的维度。你可以通过重塑图像，使其不再是三维而是二维来直观检查图像和数据函数。你可以使用
+    `digits.Images.reshape(instances and pixels)` 进行此操作。你也可以使用更长的代码片段以确保图像的重塑完全正确。`Print(np.All(digits.Images.reshape((instances
+    and pixels)) == digits.Data))` 当你使用 NumPy 方法时，你将使用 `all()` 方法来测试数组在轴上上的元素，以便查看你的评估是否为真。如果结果为真，则重塑后的图像将等于
+    `digits.Data` 函数。一旦你对所学内容感到自信，你就可以开始处理更复杂的情况，在那里你可以可视化你正在处理的图像。Python 有可视化库 matplotlib，专门用于此目的。语法：`Import
+    matplotlib.pyplot as plt` `Fig = plt.Figure(figsize = 6, 6))` `Fig.subplots_adjust(left
+    = 0, right= 1, bottom = 0 top = 1 hspace = 0.05, wspace = 0.05` `For I in range(64):`
+    `Ax = fig.add_subplot(8, 8, I + 1, xticks = [], yticks = [])` `Ax.imshow(digits.Images[I]
+    cmap = plt.cm.binary, interpolation = ''nearest'')` `Ax.Text(0, 7, str(digits.target[i]))`
+    `Plt.Show()` 你刚刚看到的语法将被大量使用，可能看起来有些令人望而却步，但你可以将代码分解为块，以便更容易理解和操作。
+
+    '
+  toc: []
+- raw: "1.  matplotlib.pyplot will be imported; \n\n2.  You will change your figures\
+    \ to the size that you are looking for in your image, so your subplots are the\
+    \ same size; \n\n3.  Subplots will be set up as your parameter, so you have the\
+    \ option to adjust how the image is laid out; \n\n4.  After this has been done,\
+    \ you will fill out your figure; \n\n5.  The subplots need to be initialized,\
+    \ and this can be done by adding each to their proper position on the grid; \n\
+    \n6.  Now that the figure has been filled out, you can initialize the subplots;\
+    \ \n\n7.  Every dot that is added will be displayed on the image on the grid just\
+    \ like a colored map. The interpolation method will mean that the data you place\
+    \ on the grid is interpolated so that it is not completely smooth; \n\n8.  The\
+    \ last step is to add the text to your subplots; and \n\n9.  Finally, do not forget\
+    \ to plot your points with the plt.show ( ) function. \n\nChapter 9: Keras and\
+    \ Machine Learning If you follow the latest news on technology, then you know\
+    \ about Tensorflow. This is a Machine Learning framework that was created by Google\
+    \ to be open sourced in 2015 and was eagerly welcomed by the public.  If you have\
+    \ never used Machine Learning before, then this framework is going to be hard\
+    \ for you to understand. But, that can be fixed with Keras which can be used with\
+    \ Tensorflow and several other Machine Learning frameworks to make a neural network\
+    \ that is faster and easier to use. As you set up Keras, you will want to download\
+    \ the Anaconda distribution that works with Python. If you have not used it before,\
+    \ then you will find that it is fairly simple to use. After you've installed Anaconda,\
+    \ you will go to the CD in the bin directory and run the following commands to\
+    \ make sure they are working properly. \n\n1.  Pip install pandas; \n\n2.  Pip\
+    \ install Tensorflow; and \n\n3.  Pip install Keras. \n\nNow that you know it\
+    \ is all working, you will be ready to go! If you have not used Python before,\
+    \ that is okay because all you'll really need to know are the basics of how the\
+    \ program works. If you want to use Python on a more complex level, then you will\
+    \ benefit from learning how to use every aspect of Python in your personal and\
+    \ professional life. The data set that is used with Keras will be working on a\
+    \ set that works with characteristics like the number of patients that come to\
+    \ their appointment versus those that call and cancel. You will be setting up\
+    \ neural networks to use with the characteristics you are targeting so that you\
+    \ can predict things like how many patients will show up to their appointment.\
+    \ The first thing you need to do is prepare the data before you can train your\
+    \ model. You will read your data and then separate it into two variables. One\
+    \ will be the characteristics of your patients and the other of those that do\
+    \ not show up. Syntax Import pandas as pds Dataframex = pds. read\\_ csv (no show\
+    \ issue comma 3000k. csv, usecols = \\[ 0, 1, 4, 6, 8, 9, 10, 11, 12, 13\\]) Dataframe\
+    \ y = pds. Read\\_ csv (no show issue comma 300k csv, usecols = (\\[ 5\\]) Print\
+    \ (dataframe x. head ()) Print (dataframe y. head ()) After you put your data\
+    \ into your program, you will notice that there are going to be several features\
+    \ that will not be represented by a number, this will be changed through the use\
+    \ of panda's library. At this point in time, you will replace the values in your\
+    \ feature with a number, you will do the same with the y data frame. While creating\
+    \ a neural network, you need to create it as well as train it in Keras. You will\
+    \ describe your model as a sequential layer of data that goes through the program.\
+    \ After you're done, you will put it into a dataset then train your model accordingly.\
+    \ Syntax Import numpy as np Seed = 9 Np. Random. Seed (seed) From keras. Models\
+    \ import sequential From keras. Layers import dense Model = sequential () Model.\
+    \ Add (dense (12, input\\_shape = 11,), Init = ‘uniform’, activation = sigmoid))\
+    \ Model. Add (dense (12, init = uniform, activation = sigmoid)) Model. Add (dense\
+    \ (12, init = uniform activation = sigmoid)) Model. Add (dense (2, init = uniform,\
+    \ activation = sigmoid)) Model. Summary () Import keras Tbcallback = Keras. Callbacks.\
+    \ Tensorboard (log \\_ dir = / tmp/ keras \\_ logs, write \\_ graph = true) Model.\
+    \ Compile (loss = mean \\_ squared\\_ error Optimizer = Adam metrics = \\[ accuracy\\\
+    ]) Model. Fit 9data frame x. values, data frame y. values, Epochs = 9, batch \\\
+    _ size = 43 verbose = 2 Validation \\_ split = 9.3 call backs = \\[ tbcall back\\\
+    ]) To understand what you just did, let's break it down into steps. First, you\
+    \ will use the constant seed for your random number that is generated to create\
+    \ a pseudo-random number every time that it is used. This will be useful when\
+    \ you are using different models and compare their performances. Next, you will\
+    \ define your neural network so that it is connected fully to the layers and nodes\
+    \ that you will be using with the sigmoid function. The Tensorboard will be used\
+    \ when visualizing the model that you are training. Your model will now be trained\
+    \ with the optimizer and the loss function. The epoch will be the number of times\
+    \ that your dataset is sent through the network. Validation\\_split is going to\
+    \ tell you how much of your data is going to be held back to validate the performance\
+    \ of the model that you have created. Validation\\_split is going to tell you\
+    \ how much of your data is going to be held back to validate the performance of\
+    \ the model that you have created. You can now use a Tensorboard to visualize\
+    \ the model that you have trained by using the following code bin the bin folder\
+    \ for Anaconda. /tensorboard – logdir = / tmp/ keras\\_logs Using Machine Learning\
+    \ and neural networks with Tensorflow and Keras are going to help you learn how\
+    \ to use Machine Learning as well as how to work with Python. \n\nChapter 10:\
+    \ Theano and Machine Learning Theano is another Python library where you can define,\
+    \ optimize, and evaluate a variety of mathematical equations with multiple arrays\
+    \ and dimensions. Theano will be similar to Keras, but it will use different commands\
+    \ that will allow you to build your own documentation with Python with this code.\
+    \ Syntax Python. / doc/ scripts/ docgen. Py You can also use HTML or PDF to make\
+    \ your documents. Theano will be the distribution directory that will be used\
+    \ when importing into Python. It will hold the packages that you are working with.\
+    \ But, there are various submodels that you can use if you want so that you can\
+    \ accomplish your goal. Sandbox is going to be dependent on the other codes that\
+    \ you use. Gof plus compile will be your core commands Scalar is going to depend\
+    \ on what is inside of your core. Sparse is going to be dependent upon Tensor.\
+    \ Tensor is going to be dependent upon scalar Theano/ examples are going to be\
+    \ the copies of the examples that are found inside of the program or online. Theano/benchmark\
+    \ and examples are going to be the distribution of the program however it is not\
+    \ going to be included in the Python package. Theano/bin is going to be all of\
+    \ the executable scripts that you are going to find copied in the bin folder.\
+    \ Tests will be the part of the package that are going to be distributed and fall\
+    \ into the appropriate submodel. Theano/doc is going to be the files and scripts\
+    \ that you are going to use when creating documents. Theano/html is going to be\
+    \ the area of the program where the documents will be generated. Each command\
+    \ will allow you to use them with machine learning as long as you write out the\
+    \ code just as you would with Kernas. "
+  fmt: "\n1. `matplotlib.pyplot` will be imported;  \n2. You will change your figures\
+    \ to the size that you are looking for in your image, so your subplots are the\
+    \ same size;  \n3. Subplots will be set up as your parameter, so you have the\
+    \ option to adjust how the image is laid out;  \n4. After this has been done,\
+    \ you will fill out your figure;  \n5. The subplots need to be initialized, and\
+    \ this can be done by adding each to their proper position on the grid;  \n6.\
+    \ Now that the figure has been filled out, you can initialize the subplots;  \n\
+    7. Every dot that is added will be displayed on the image on the grid just like\
+    \ a colored map. The interpolation method will mean that the data you place on\
+    \ the grid is interpolated so that it is not completely smooth;  \n8. The last\
+    \ step is to add the text to your subplots; and  \n9. Finally, do not forget to\
+    \ plot your points with the `plt.show()` function.  \n\nChapter 9: Keras and Machine\
+    \ Learning If you follow the latest news on technology, then you know about Tensorflow.\
+    \ This is a Machine Learning framework that was created by Google to be open sourced\
+    \ in 2015 and was eagerly welcomed by the public. If you have never used Machine\
+    \ Learning before, then this framework is going to be hard for you to understand.\
+    \ But, that can be fixed with Keras which can be used with Tensorflow and several\
+    \ other Machine Learning frameworks to make a neural network that is faster and\
+    \ easier to use. As you set up Keras, you will want to download the Anaconda distribution\
+    \ that works with Python. If you have not used it before, then you will find that\
+    \ it is fairly simple to use. After you've installed Anaconda, you will go to\
+    \ the CD in the bin directory and run the following commands to make sure they\
+    \ are working properly.  \n\n1. `pip install pandas`;  \n2. `pip install Tensorflow`;\
+    \ and  \n3. `pip install Keras`.  \n\nNow that you know it is all working, you\
+    \ will be ready to go! If you have not used Python before, that is okay because\
+    \ all you'll really need to know are the basics of how the program works. If you\
+    \ want to use Python on a more complex level, then you will benefit from learning\
+    \ how to use every aspect of Python in your personal and professional life. The\
+    \ data set that is used with Keras will be working on a set that works with characteristics\
+    \ like the number of patients that come to their appointment versus those that\
+    \ call and cancel. You will be setting up neural networks to use with the characteristics\
+    \ you are targeting so that you can predict things like how many patients will\
+    \ show up to their appointment. The first thing you need to do is prepare the\
+    \ data before you can train your model. You will read your data and then separate\
+    \ it into two variables. One will be the characteristics of your patients and\
+    \ the other of those that do not show up.  \n\nSyntax `import pandas as pds` `Dataframex\
+    \ = pds.read_csv(no show issue comma 3000k. csv, usecols = [ 0, 1, 4, 6, 8, 9,\
+    \ 10, 11, 12, 13])` `Dataframe y = pds.read_csv(no show issue comma 300k csv,\
+    \ usecols = (\\[ 5\\])) Print (dataframe x.head()) Print (dataframe y.head())`\
+    \  \n\nAfter you put your data into your program, you will notice that there are\
+    \ going to be several features that will not be represented by a number, this\
+    \ will be changed through the use of `pandas` library. At this point in time,\
+    \ you will replace the values in your feature with a number, you will do the same\
+    \ with the `y` data frame. While creating a neural network, you need to create\
+    \ it as well as train it in Keras. You will describe your model as a sequential\
+    \ layer of data that goes through the program. After you're done, you will put\
+    \ it into a dataset then train your model accordingly.  \n\nSyntax `import numpy\
+    \ as np` `Seed = 9` `np.random.seed(seed)` `from keras.models import sequential`\
+    \ `from keras.layers import dense` `Model = sequential()` `Model.add(dense(12,\
+    \ input_shape = 11, init = 'uniform', activation = sigmoid))` `Model.add(dense(12,\
+    \ init = 'uniform', activation = sigmoid))` `Model.add(dense(12, init = 'uniform',\
+    \ activation = sigmoid))` `Model.add(dense(2, init = 'uniform', activation = sigmoid))`\
+    \ `Model.summary()` `import keras` `Tbcallback = keras.callbacks.Tensorboard(log_dir\
+    \ = /tmp/keras_logs, write_graph = true)` `Model.compile(loss = 'mean_squared_error',\
+    \ optimizer = Adam, metrics = [accuracy])` `Model.fit(dataframe x.values, dataframe\
+    \ y.values, epochs = 9, batch_size = 43, verbose = 2, validation_split = 0.3,\
+    \ callbacks = [Tbcallback])`  \n\nTo understand what you just did, let's break\
+    \ it down into steps. First, you will use the constant seed for your random number\
+    \ that is generated to create a pseudo-random number every time that it is used.\
+    \ This will be useful when you are using different models and compare their performances.\
+    \ Next, you will define your neural network so that it is connected fully to the\
+    \ layers and nodes that you will be using with the sigmoid function. The Tensorboard\
+    \ will be used when visualizing the model that you are training. Your model will\
+    \ now be trained with the optimizer and the loss function. The epoch will be the\
+    \ number of times that your dataset is sent through the network. `validation_split`\
+    \ is going to tell you how much of your data is going to be held back to validate\
+    \ the performance of the model that you have created. `validation_split` is going\
+    \ to tell you how much of your data is going to be held back to validate the performance\
+    \ of the model that you have created. You can now use a Tensorboard to visualize\
+    \ the model that you have trained by using the following code `bin the bin folder\
+    \ for Anaconda. /tensorboard – logdir = /tmp/keras_logs`  \n\nChapter 10: Theano\
+    \ and Machine Learning Theano is another Python library where you can define,\
+    \ optimize, and evaluate a variety of mathematical equations with multiple arrays\
+    \ and dimensions. Theano will be similar to Keras, but it will use different commands\
+    \ that will allow you to build your own documentation with Python with this code.\
+    \ Syntax `Python. / doc/ scripts/ docgen. Py` You can also use HTML or PDF to\
+    \ make your documents. Theano will be the distribution directory that will be\
+    \ used when importing into Python. It will hold the packages that you are working\
+    \ with. But, there are various submodels that you can use if you want so that\
+    \ you can accomplish your goal. `Sandbox` is going to be dependent on the other\
+    \ codes that you use. `Gof` plus `compile` will be your core commands. `Scalar`\
+    \ is going to depend on what is inside of your core. `Sparse` is going to be dependent\
+    \ upon `Tensor`. `Tensor` is going to be dependent upon `scalar` `Theano/ examples`\
+    \ are going to be the copies of the examples that are found inside of the program\
+    \ or online. `Theano/benchmark` and examples are going to be the distribution\
+    \ of the program however it is not going to be included in the Python package.\
+    \ `Theano/bin` is going to be all of the executable scripts that you are going\
+    \ to find copied in the bin folder. Tests will be the part of the package that\
+    \ are going to be distributed and fall into the appropriate submodel. `Theano/doc`\
+    \ is going to be the files and scripts that you are going to use when creating\
+    \ documents. `Theano/html` is going to be the area of the program where the documents\
+    \ will be generated. Each command will allow you to use them with machine learning\
+    \ as long as you write out the code just as you would with Kernas.  \n"
+  trans: "\n1. `matplotlib.pyplot` 将被导入；  \n2. 你会将图表调整到你想要的尺寸，因此子图的大小保持一致；  \n3. 子图的设置将由你的参数决定，从而让你有调整图像布局的选项；\
+    \  \n4. 完成以上操作后，你会填充图表；  \n5. 子图需要初始化，这可以通过将每个子图放置到合适的网格位置来实现；  \n6. 现在图表已填充，你可以初始化子图；\
+    \  \n7. 每个点的添加都会在网格上的图像上显示，就像彩色地图一样。插值方法会对网格上的数据进行插值，使其不完全平滑；  \n8. 最后一步是向子图中添加文本；\
+    \  \n9. 最后，切记使用 `plt.show()` 函数绘制点。  \n\n第 9 章：Keras 与机器学习 如果你关注最新的技术新闻，你就会知道\
+    \ Tensorflow。这是一个由 Google 于 2015 年开源的机器学习框架，受到公众热烈欢迎。如果你以前从未使用过机器学习，那么这个框架会对你来说很难理解。但这可以通过\
+    \ Keras 来解决，Keras 可以与 Tensorflow 以及其他几种机器学习框架一起使用，构建更快、更易用的神经网络。当你设置 Keras 时，你会想要下载与\
+    \ Python 兼容的 Anaconda 发行版。如果你之前未使用过它，你会发现它使用非常简单。安装 Anaconda 后，你会进入 Anaconda 的\
+    \ bin 目录中的 CD 并运行以下命令以确保一切正常工作。  \n\n1. `pip install pandas`；  \n2. `pip install\
+    \ Tensorflow`；以及  \n3. `pip install Keras`。  \n\n现在你知道一切都已正常工作，你就可以开始使用了！如果你以前从未使用过\
+    \ Python，这没关系，因为你只需要了解程序的基本工作原理。如果你想在更复杂的层面使用 Python，那么学习如何在个人和职业生活中使用 Python\
+    \ 的每个方面会很有帮助。Keras 使用的数据集将处理一个包含患者到达就诊次数与取消就诊次数特征的数据集。你将使用这些特征构建神经网络，以预测患者将出席其就诊的次数。第一步是准备数据，然后才能训练模型。你需要读取数据并将其分为两个变量：一个是患者的特征，另一个是不出席的情况。\
+    \  \n\nSyntax `import pandas as pds` `Dataframex = pds.read_csv(no show issue\
+    \ comma 3000k. csv, usecols = [ 0, 1, 4, 6, 8, 9, 10, 11, 12, 13])` `Dataframe\
+    \ y = pds.read_csv(no show issue comma 300k csv, usecols = (\\[ 5\\])) Print (dataframe\
+    \ x.head()) Print (dataframe y.head())`  \n\n在将数据导入程序后，你会发现有几个特征无法用数字表示，这将通过 `pandas`\
+    \ 库进行转换。此时，你需要将特征的值替换为数字，并对 `y` 数据框同样进行操作。在创建神经网络时，你需要先构建模型，然后在 Keras 中进行训练。你会将模型描述为一个顺序层的数据流，该流会在程序中经过处理。完成后，你会将其放入数据集并相应地训练模型。\
+    \  \n\nSyntax `import numpy as np` `Seed = 9` `np.random.seed(seed)` `from keras.models\
+    \ import sequential` `from keras.layers import dense` `Model = sequential()` `Model.add(dense(12,\
+    \ input_shape = 11, init = 'uniform', activation = sigmoid))` `Model.add(dense(12,\
+    \ init = 'uniform', activation = sigmoid))` `Model.add(dense(12, init = 'uniform',\
+    \ activation = sigmoid))` `Model.add(dense(2, init = 'uniform', activation = sigmoid))`\
+    \ `Model.summary()` `import keras` `Tbcallback = keras.callbacks.Tensorboard(log_dir\
+    \ = /tmp/keras_logs, write_graph = true)` `Model.compile(loss = 'mean_squared_error',\
+    \ optimizer = Adam, metrics = [accuracy])` `Model.fit(dataframe x.values, dataframe\
+    \ y.values, epochs = 9, batch_size = 43, verbose = 2, validation_split = 0.3,\
+    \ callbacks = [Tbcallback])`  \n\n为了理解你刚刚做的事情，我们将其分解为步骤。首先，你会使用常量种子来生成伪随机数，以便每次使用时都能得到相同的序列，这在使用不同模型并比较性能时很有用。接下来，你会定义神经网络，使其完全连接到使用\
+    \ sigmoid 函数的层和节点。Tensorboard 将用于可视化正在训练的模型。模型现在会使用优化器和损失函数进行训练。epoch 表示数据集被送入网络的次数。`validation_split`\
+    \ 将告诉你有多少数据会被保留用于验证模型的性能。`validation_split` 将告诉你有多少数据会被保留用于验证模型的性能。你现在可以使用 Tensorboard\
+    \ 通过以下代码可视化已训练的模型：在 Anaconda 的 bin 文件夹中运行 `tensorboard – logdir = /tmp/keras_logs`。\
+    \  \n\n第 10 章：Theano 与机器学习 Theano 是另一个 Python 库，你可以使用它定义、优化和评估包含多个数组和维度的各种数学方程。Theano\
+    \ 与 Keras 类似，但使用不同的命令，允许你用 Python 编写自己的文档。语法 `Python. / doc/ scripts/ docgen.\
+    \ Py` 你也可以使用 HTML 或 PDF 来生成文档。Theano 将是导入 Python 时使用的分发目录，它包含你正在使用的包。但有多个子模型可供选择，以便实现你的目标。`Sandbox`\
+    \ 将依赖于你使用的其他代码。`Gof` 加 `compile` 是核心命令。`Scalar` 将取决于核心内部的内容。`Sparse` 依赖于 `Tensor`。`Tensor`\
+    \ 依赖于 `scalar`。`Theano/ examples` 是程序或网络中已有的示例的复制件。`Theano/benchmark` 和 examples\
+    \ 是程序的分发内容，但不会随 Python 包一起安装。`Theano/bin` 包含在 bin 文件夹中复制的所有可执行脚本。Tests 是随包分发的测试部分，会落入相应的子模型。`Theano/doc`\
+    \ 是用于创建文档的文件和脚本。`Theano/html` 是生成文档的程序区域。每个命令都可以与机器学习一起使用，只要你像使用 Keras 那样编写代码。\
+    \  \n"
+  toc: []
+- raw: "Chapter 11: Neural Networks and Deep Learning Neural networks are programming\
+    \ paradigms that are biologically inspired to enable a computer to learn from\
+    \ data that is observed. Deep Learning is a set of techniques that you are going\
+    \ to use for Neural Networks. Both Neural Networks and Deep Learning are going\
+    \ to give you the best solution to any problem that you may come up against when\
+    \ you are working with image, speech and natural language recognition and processing.\
+    \ The human visual system is complex and one of the most interesting things that\
+    \ you can study because you are never going to fully understand how it works with\
+    \ the other parts of your body. Take handwriting, for instance, many people are\
+    \ going to be able to look at something that is written and be able to tell you\
+    \ what is written without any problem, but the little effort that it takes to\
+    \ recognize what is written is actually deceptive. If you look at the different\
+    \ hemispheres of your brain, you are going to realize that your visual cortex\
+    \ has several millions of neurons that are going to be connected. However, your\
+    \ vision is not going to be connected to your visual cortex. Instead, it is connected\
+    \ by a series of cortices that involve your vision making it reach the location\
+    \ where you can process even the most complex of images. Inside of your head is\
+    \ essentially a supercomputer that has been fined tuned by evolution. The ability\
+    \ to recognize handwriting is not always easy, but your brain has adapted to so\
+    \ you can be able to do it unconsciously. It is not very often that we take the\
+    \ time to think of how complex our visual system truly is. Just like how it is\
+    \ difficult to recognize visual patterns, a computer is not going to have these\
+    \ issues. But, it is going to be different than how we do it ourselves. Our brains\
+    \ recognize shapes and how things are written out, but how do you tell a computer\
+    \ this? You are trying to make rules, and those rules are going to end up getting\
+    \ lost in the exceptions and caveats that you have to create. The Neural Network\
+    \ approach is going to look at the problem in a different way though. It is going\
+    \ to take a large number of digits that are handwritten and be trained to recognize\
+    \ the various shapes so that it is able to do what our brain can do. Essentially,\
+    \ the neural network is going to use the examples that are inside of your data\
+    \ to infer rules that are set in place as their way to recognize handwritten digits.\
+    \ The more examples you add that train the program, the more the network is going\
+    \ to be able to learn handwriting options to improve its accuracy. Neural Networks\
+    \ are going to work with an artificial neuron that is known as a perceptron which\
+    \ was developed in the 60s by Frank Rosenblatt. But, when we look at it today,\
+    \ it is going to be used like other models of artificial neurons. Your main neuron\
+    \ is going to be known as the sigmoid neuron; but to understand the sigmoid neuron,\
+    \ you have to understand the perceptrons. Perceptrons are going to take several\
+    \ binary inputs and give you a single binary output. Rosenblatt came up with a\
+    \ single rule that will be used when dealing with the output of perceptrons. This\
+    \ is where weights came in as a way to express real numbers and their importance\
+    \ to the inputs and outputs. The output for the neuron is going to either be zero\
+    \ or one. It will determine the weight of the sum and if it is less than or greater\
+    \ than the threshold value. Your threshold value is going to be a real number\
+    \ that is going to be used in the parameters for the neuron. Think of the perceptron\
+    \ as a device that is going to make its decisions by weighing the evidence. For\
+    \ example, if you want to go on a family outing, there are several things that\
+    \ you are going to have to look at to determine if you are going to be able to\
+    \ go on the outing as planned. \n\n1.  Is the car big enough for everyone that\
+    \ wants to go?\n\n2.  Is the weather going to be good?\n\n3.  What do you need\
+    \ to pack for the amount of time that you are going to be out?"
+  fmt: "\n# Chapter 11: Neural Networks and Deep Learning\n\nNeural networks are programming\
+    \ paradigms that are biologically inspired to enable a computer to learn from\
+    \ data that is observed. Deep Learning is a set of techniques that you are going\
+    \ to use for Neural Networks. Both Neural Networks and Deep Learning are going\
+    \ to give you the best solution to any problem that you may come up against when\
+    \ you are working with image, speech and natural language recognition and processing.\
+    \ The human visual system is complex and one of the most interesting things that\
+    \ you can study because you are never going to fully understand how it works with\
+    \ the other parts of your body. Take handwriting, for instance, many people are\
+    \ going to be able to look at something that is written and be able to tell you\
+    \ what is written without any problem, but the little effort that it takes to\
+    \ recognize what is written is actually deceptive. If you look at the different\
+    \ hemispheres of your brain, you are going to realize that your visual cortex\
+    \ has several millions of neurons that are going to be connected. However, your\
+    \ vision is not going to be connected to your visual cortex. Instead, it is connected\
+    \ by a series of cortices that involve your vision making it reach the location\
+    \ where you can process even the most complex of images. Inside of your head is\
+    \ essentially a supercomputer that has been fined tuned by evolution. The ability\
+    \ to recognize handwriting is not always easy, but your brain has adapted to so\
+    \ you can be able to do it unconsciously. It is not very often that we take the\
+    \ time to think of how complex our visual system truly is. Just like how it is\
+    \ difficult to recognize visual patterns, a computer is not going to have these\
+    \ issues. But, it is going to be different than how we do it ourselves. Our brains\
+    \ recognize shapes and how things are written out, but how do you tell a computer\
+    \ this? You are trying to make rules, and those rules are going to end up getting\
+    \ lost in the exceptions and caveats that you have to create. The Neural Network\
+    \ approach is going to look at the problem in a different way though. It is going\
+    \ to take a large number of digits that are handwritten and be trained to recognize\
+    \ the various shapes so that it is able to do what our brain can do. Essentially,\
+    \ the neural network is going to use the examples that are inside of your data\
+    \ to infer rules that are set in place as their way to recognize handwritten digits.\
+    \ The more examples you add that train the program, the more the network is going\
+    \ to be able to learn handwriting options to improve its accuracy. Neural Networks\
+    \ are going to work with an artificial neuron that is known as a perceptron which\
+    \ was developed in the 60s by Frank Rosenblatt. But, when we look at it today,\
+    \ it is going to be used like other models of artificial neurons. Your main neuron\
+    \ is going to be known as the sigmoid neuron; but to understand the sigmoid neuron,\
+    \ you have to understand the perceptrons. Perceptrons are going to take several\
+    \ binary inputs and give you a single binary output. Rosenblatt came up with a\
+    \ single rule that will be used when dealing with the output of perceptrons. This\
+    \ is where weights came in as a way to express real numbers and their importance\
+    \ to the inputs and outputs. The output for the neuron is going to either be zero\
+    \ or one. It will determine the weight of the sum and if it is less than or greater\
+    \ than the threshold value. Your threshold value is going to be a real number\
+    \ that is going to be used in the parameters for the neuron. Think of the perceptron\
+    \ as a device that is going to make its decisions by weighing the evidence. For\
+    \ example, if you want to go on a family outing, there are several things that\
+    \ you are going to have to look at to determine if you are going to be able to\
+    \ go on the outing as planned. \n\n1.  `Is the car big enough for everyone that\
+    \ wants to go?`\n\n2.  `Is the weather going to be good?`\n\n3.  `What do you\
+    \ need to pack for the amount of time that you are going to be out?`\n"
+  trans: '
+
+    # 第 11 章：神经网络与深度学习
+
+
+    神经网络是一种受生物学启发的编程范式，用于让计算机从观察到的数据中学习。深度学习是一套技术，你将用于神经网络。神经网络和深度学习都将为你提供解决在图像、语音和自然语言识别与处理时可能遇到的任何问题的最佳方案。人类的视觉系统复杂，是你可以研究的最有趣的事物之一，因为你永远无法完全理解它如何与身体其他部分协同工作。以书写为例，许多人能够看见某段文字并毫不费力地告诉你它写的是什么，但实际识别文字所付出的微小努力却具有欺骗性。如果你观察大脑的不同半球，你会发现你的视觉皮层有数百万个神经元相互连接。然而，你的视觉并不会直接与视觉皮层相连，而是通过一系列皮层传递，使视觉信息到达能够处理最复杂图像的区域。大脑内部本质上是一个经过进化精心优化的超级计算机。识别书写并非总是轻松，但你的大脑已经适应了这种能力，使你能够不自觉地完成它。我们很少有机会思考视觉系统的真正复杂程度。就像很难识别视觉模式一样，计算机也不会遇到这些问题。但它的工作方式与人类不同。我们的大脑识别形状和书写方式，但如何向计算机传达这一点呢？你需要制定规则，而这些规则最终会因你为处理例外和边界情况而创造的繁复规则而丢失意义。神经网络的方法则截然不同。它会将大量手写数字作为输入，并训练模型识别各种形状，从而实现类似人脑的功能。基本上，神经网络会利用数据中的示例来推断其内在的识别规则。你添加的训练示例越多，网络越能学习书写的各种变体，提高准确率。神经网络会使用一种称为“感知器”的人工神经元，该感知器于
+    60 年代由 Frank Rosenblatt 提出。但从今天的角度来看，它的使用方式与其他人工神经元模型相同。你的主要神经元被称为“逻辑函数”（sigmoid
+    neuron），但要理解逻辑函数，必须先理解感知器。感知器会接收多个二元输入并输出一个二元结果。Rosenblatt 提出了一个规则，用于确定感知器的输出。在此过程中，权重（weights）作为表达实数及其对输入输出重要性的方式出现。神经元的输出要么是
+    0，要么是 1，它会根据加权和与阈值的大小关系来决定。阈值是一个实数，作为神经元的参数使用。你可以把感知器看作一种通过权衡证据做出决策的设备。例如，如果你计划一次家庭出游，需要考虑以下几点来决定是否按计划进行：
+
+
+    1. `Is the car big enough for everyone that wants to go?`
+
+
+    2. `Is the weather going to be good?`
+
+
+    3. `What do you need to pack for the amount of time that you are going to be out?`
+
+    '
+  toc: []
+- raw: 'Each factor is going to be able to be represented by a binary variable. By
+    looking at the weights and the threshold for your problem, you are going to be
+    able to create different models for the decision making process. Your perceptron
+    is going to be the decision maker if you are going to be able to go on your outing
+    or not. When you drop the threshold, you are going to most likely be able to go
+    on your outing with your family. Keep in mind that your perceptron is not going
+    to be a complete model of the decision-making process that a human can do. However,
+    your perceptron is going to be able to weigh different evidence to make the decisions
+    that you need. This should seem more plausible for a complex network of perceptrons
+    that are going to make small decisions that you may not notice are being made.
+    While a learning algorithm sounds like the way to go, how are you going to create
+    an algorithm for a neural network? Think about having a network for your perceptrons
+    that you can use to solve problems. The inputs for the network are going to be
+    like the raw pixel data that is scanned into the program. This will allow the
+    network to have the ability to learn weights and biases for the output to be classified
+    correctly. If you make any changes to the weight in the network,  your output
+    is going to correspond with the change that you made. However, the reality of
+    perceptrons is that when a change is made to the weights, then there is the possibility
+    that the perceptron is going to flip completely due to that change. This change
+    is going to cause the behavior of your entire network to change completely into
+    a more complex behavior. So, while one of your digits is going to be classified
+    correctly, your network is going to be behaving in a way that is going to be hard
+    to control. Your network’s new behavior is going to make it difficult to see how
+    your weights and biases need to be modified so that your network is closer to
+    the behavior that you want. Therefore, there must be a clever way of getting around
+    this issue that may not be obvious instantly. You can overcome the problem just
+    by bringing in a new neuron known as the sigmoid neuron. These neurons are going
+    to be like perceptrons, but they are going to be modified so that when you make
+    small changes, they are only going to give you a small change in your output rather
+    than taking chance that your output changes completely. This is vitally important,
+    and the sigmoid neuron is going to be enabled to learn the behavior of the network.
+    Your sigmoid neuron is going to have inputs that are similar to your perceptron.
+    However, it is going to be able to take any value that falls between zero and
+    one. This means that you can use the decimal points that fall between these two
+    numbers as a valid input for your sigmoid neuron. Just like a perceptron, your
+    sigmoid is going to have a weight for every input as well as a bias that covers
+    everything in that neuron. However, your output is not going to be zero or one,
+    it is going to be known as a sigmoid function, and it is going to be defined by
+    this equation. σ(z)≡1/1+e −z Another way to look at it is to put the outputs of
+    your sigmoid neuron with your inputs. 1/1+exp(−∑jwjxj−b) When you first look at
+    your sigmoid neuron, they are going to look very different than your perceptrons.
+    However, the algebraic expression for the sigmoid function is going to seem opaque
+    and like you are never going to be able to master it. However, you are going to
+    be able to because there are a lot of similarities between your perceptrons and
+    your sigmoid neurons. To understand the similarities, you need to look at a perceptron
+    model like z≡ w⋅ x+b, where you have a large positive number. Which then means
+    e−z≈0e−z≈0  and σ(z)≈1 are equal. Ultimately, your sigmoid neuron is going to
+    be a large positive number just like it would be for the perceptron. Now, think
+    of it as if you were working with negative numbers. Then, your sigmoid’s behavior
+    will be the same as the perceptron. The only time you are going to see deviation
+    from your perceptron model is of modest size.  '
+  fmt: "\nEach factor is going to be able to be represented by a binary variable.\
+    \ By looking at the weights and the threshold for your problem, you are going\
+    \ to be able to create different models for the decision making process. Your\
+    \ perceptron is going to be the decision maker if you are going to be able to\
+    \ go on your outing or not. When you drop the threshold, you are going to most\
+    \ likely be able to go on your outing with your family. Keep in mind that your\
+    \ perceptron is not going to be a complete model of the decision-making process\
+    \ that a human can do. However, your perceptron is going to be able to weigh different\
+    \ evidence to make the decisions that you need. This should seem more plausible\
+    \ for a complex network of perceptrons that are going to make small decisions\
+    \ that you may not notice are being made. While a learning algorithm sounds like\
+    \ the way to go, how are you going to create an algorithm for a neural network?\
+    \ Think about having a network for your perceptrons that you can use to solve\
+    \ problems. The inputs for the network are going to be like the raw pixel data\
+    \ that is scanned into the program. This will allow the network to have the ability\
+    \ to learn weights and biases for the output to be classified correctly. If you\
+    \ make any changes to the weight in the network, your output is going to correspond\
+    \ with the change that you made. However, the reality of perceptrons is that when\
+    \ a change is made to the weights, then there is the possibility that the perceptron\
+    \ is going to flip completely due to that change. This change is going to cause\
+    \ the behavior of your entire network to change completely into a more complex\
+    \ behavior. So, while one of your digits is going to be classified correctly,\
+    \ your network is going to be behaving in a way that is going to be hard to control.\
+    \ Your network’s new behavior is going to make it difficult to see how your weights\
+    \ and biases need to be modified so that your network is closer to the behavior\
+    \ that you want. Therefore, there must be a clever way of getting around this\
+    \ issue that may not be obvious instantly. You can overcome the problem just by\
+    \ bringing in a new neuron known as the sigmoid neuron. These neurons are going\
+    \ to be like perceptrons, but they are going to be modified so that when you make\
+    \ small changes, they are only going to give you a small change in your output\
+    \ rather than taking chance that your output changes completely. This is vitally\
+    \ important, and the sigmoid neuron is going to be enabled to learn the behavior\
+    \ of the network. Your sigmoid neuron is going to have inputs that are similar\
+    \ to your perceptron. However, it is going to be able to take any value that falls\
+    \ between zero and one. This means that you can use the decimal points that fall\
+    \ between these two numbers as a valid input for your sigmoid neuron. Just like\
+    \ a perceptron, your sigmoid is going to have a weight for every input as well\
+    \ as a bias that covers everything in that neuron. However, your output is not\
+    \ going to be zero or one, it is going to be known as a sigmoid function, and\
+    \ it is going to be defined by this equation. σ(z)≡1/1+e −z Another way to look\
+    \ at it is to put the outputs of your sigmoid neuron with your inputs. 1/1+exp(−∑jwjxj−b)\
+    \ When you first look at your sigmoid neuron, they are going to look very different\
+    \ than your perceptrons. However, the algebraic expression for the sigmoid function\
+    \ is going to seem opaque and like you are never going to be able to master it.\
+    \ However, you are going to be able to because there are a lot of similarities\
+    \ between your perceptrons and your sigmoid neurons. To understand the similarities,\
+    \ you need to look at a perceptron model like z≡ w⋅ x+b, where you have a large\
+    \ positive number. Which then means e−z≈0e−z≈0  and σ(z)≈1 are equal. Ultimately,\
+    \ your sigmoid neuron is going to be a large positive number just like it would\
+    \ be for the perceptron. Now, think of it as if you were working with negative\
+    \ numbers. Then, your sigmoid’s behavior will be the same as the perceptron. The\
+    \ only time you are going to see deviation from your perceptron model is of modest\
+    \ size.  \n"
+  trans: '
+
+    每个因素都可以用二进制变量来表示。通过查看问题的权重和阈值，你将能够为决策过程创建不同的模型。你的感知器将在你能否外出时成为决策者。当你去掉阈值时，你大概率能够和家人外出。请记住，你的感知器并不是人类能够进行的完整决策过程的完整模型。然而，你的感知器能够权衡不同的证据，做出你需要的决定。这对于由多个感知器组成的复杂网络来说更为合理，这些感知器会做出你可能察觉不到的微小决策。虽然学习算法听起来像是正确的方向，但你将如何为神经网络创建一个算法呢？考虑到你可以拥有一个用于感知器的网络来解决问题。网络的输入将类似于被扫描到程序中的原始像素数据。这将使网络能够学习输出的权重和偏置，从而正确分类结果。如果你对网络中的权重进行任何更改，输出将相应地改变。然而，感知器的现实是，当权重发生变化时，感知器可能会完全翻转，这会导致整个网络的行为发生完全的改变，转变为更复杂的行为。因此，即使一个数字被正确分类，你的网络也会表现得难以控制。新的行为会使你看到如何调整权重和偏置以使网络更接近你想要的行为变得困难。因此，必须有一种巧妙的方法来规避这个问题，这可能瞬间并不明显。你可以通过引入一种新的神经元——
+    sigmoid 神经元来解决这个问题。这些神经元类似于感知器，但经过修改，当你进行微小变化时，它们只会在输出上产生微小的变化，而不会导致输出完全改变。这一点至关重要，sigmoid
+    神经元将能够学习网络的行为。你的 sigmoid 神经元将拥有与感知器相似的输入。然而，它能够接受介于零和一之间的任何值。这意味着你可以将这两个数字之间的小数作为有效输入。就像感知器一样，sigmoid
+    神经元也有每个输入的权重以及一个偏置，涵盖该神经元的所有内容。然而，它的输出并不是零或一，而是 sigmoid 函数，由以下方程定义：σ(z)≡1/1+e^−z
+    另一种观察方式是将 sigmoid 神经元的输出与输入结合：1/1+exp(−∑jwjxj−b) 当你第一次看到 sigmoid 神经元时，它们看起来与感知器非常不同。但
+    sigmoid 函数的代数表达式看起来晦涩难懂，似乎难以掌握。不过，你会掌握它，因为感知器和 sigmoid 神经元之间有许多相似之处。要理解这些相似之处，你需要查看感知器模型，如
+    z≡ w⋅ x+b，其中 z 取一个很大的正数。这意味着 e^−z≈0，σ(z)≈1。最终，sigmoid 神经元将是一个很大的正数，就像感知器一样。现在，想象你在使用负数进行工作，那么
+    sigmoid 的行为将和感知器相同。只有在微小尺度上，sigmoid 才会与感知器模型出现偏差。'
+  toc: []
+- raw: '  But, what is your mathematical form of σ? The truth of the matter is that
+    the exact form for this variable is not important because we are going to focus
+    on the shape of our function. Should this function be a step function, then your
+    sigmoid neuron is going to end up being a perceptron because the output would
+    be either zero or one, depending if your equation gives you a positive or negative
+    output. When you use the function for σ, then you are going to get a perceptron
+    that is smooth. While how smooth your function is, is important, it is not something
+    you need to spend a lot of time focusing on. The smoothness is simply going to
+    modify the weights and bias which is then going to change the output for your
+    sigmoid neuron. Thanks to calculus, your output is going to be predicted by this
+    equation. Δoutput≈ ∑j ∂ output / ∂wj Δwj + ∂output / ∂b Δb, Your sum that is found
+    all over your weights and your output is going to show a partial derivative for
+    your output with the respect to your weights. You should not get too worried if
+    you find that you are not comfortable working with partial derivatives. Your expression
+    above is going to look complex due to all of the partial derivatives that are
+    in it, but you are actually going to see that it is fairly simple by looking at
+    your output as a linear function. The linearity will make it easy to pick out
+    smaller changes that are done to the weights and biases to extract the change
+    that you want in your output. Therefore, your sigmoid neuron is going to have
+    the same behavior as the perceptron which is going to make it easier for you to
+    figure out how to change your weights and biases to change the output. If the
+    shape is what matters most, then it is not going to be an exact form which is
+    going to be the reason for the use of the o in the equation. When you are looking
+    at the changes that cause you to use a different activation function, then the
+    value for that partial derivative is going to change in the equation. So, when
+    you compute those derivatives later, your function is going to take the algebra
+    and simplify it so that the exponentials have properties that you can work with
+    when differentiated. As you interpret your output that comes from the sigmoid
+    neuron, you are going to see that one of the biggest differences is going to be
+    the perceptrons and the neurons where the neurons do not output zero or one. They
+    can have any output as long as the output is a real number and it falls between
+    zero and one. This is going to be useful when you are wanting your output to represent
+    the average intensity for the pixels that are in an image. However, sometimes
+    this is going to be a problem. Take for instance you are wanting your output to
+    say that your image is nine or is not nine. It is going to be easier to do this
+    if your output is zero or one for your perceptron. But, in practice, you are going
+    to have to set up a convention to deal with this. This will allow you to interpret
+    the output for at least half of the image which is going to indicate the number
+    you want it to be. This means that any output that is less than half means that
+    the output is not going to be what you want it to be. Conclusion Thanks for making
+    it through to the end of Machine Learning, let’s hope it was informative and able
+    to provide you with all of the tools you need to achieve your goals whatever they
+    may be. The next step is to get started with your Machine Learning! If you are
+    not using Machine Learning, then perhaps it is time for you to start! As you saw
+    from this book, there are various ways to use Machine Learning, and there are
+    a lot of different things that you are going to be able to do with Machine Learning.
+    You can even use coding programs with Machine Learning so that you can manipulate
+    the output that you get. Finally, if you found this book useful in any way, a
+    review on Amazon is always appreciated!  Thank you and good luck! Mark Howard '
+  fmt: '
+
+    But, what is your mathematical form of `σ`? The truth of the matter is that the
+    exact form for this variable is not important because we are going to focus on
+    the shape of our function. Should this function be a step function, then your
+    sigmoid neuron is going to end up being a perceptron because the output would
+    be either zero or one, depending if your equation gives you a positive or negative
+    output. When you use the function for `σ`, then you are going to get a perceptron
+    that is smooth. While how smooth your function is, is important, it is not something
+    you need to spend a lot of time focusing on. The smoothness is simply going to
+    modify the weights and bias which is then going to change the output for your
+    sigmoid neuron. Thanks to calculus, your output is going to be predicted by this
+    equation. `Δoutput≈ ∑j ∂ output / ∂wj Δwj + ∂output / ∂b Δb`, Your sum that is
+    found all over your weights and your output is going to show a partial derivative
+    for your output with the respect to your weights. You should not get too worried
+    if you find that you are not comfortable working with partial derivatives. Your
+    expression above is going to look complex due to all of the partial derivatives
+    that are in it, but you are actually going to see that it is fairly simple by
+    looking at your output as a linear function. The linearity will make it easy to
+    pick out smaller changes that are done to the weights and biases to extract the
+    change that you want in your output. Therefore, your sigmoid neuron is going to
+    have the same behavior as the perceptron which is going to make it easier for
+    you to figure out how to change your weights and biases to change the output.
+    If the shape is what matters most, then it is not going to be an exact form which
+    is going to be the reason for the use of the o in the equation. When you are looking
+    at the changes that cause you to use a different activation function, then the
+    value for that partial derivative is going to change in the equation. So, when
+    you compute those derivatives later, your function is going to take the algebra
+    and simplify it so that the exponentials have properties that you can work with
+    when differentiated. As you interpret your output that comes from the sigmoid
+    neuron, you are going to see that one of the biggest differences is going to be
+    the perceptrons and the neurons where the neurons do not output zero or one. They
+    can have any output as long as the output is a real number and it falls between
+    zero and one. This is going to be useful when you are wanting your output to represent
+    the average intensity for the pixels that are in an image. However, sometimes
+    this is going to be a problem. Take for instance you are wanting your output to
+    say that your image is nine or is not nine. It is going to be easier to do this
+    if your output is zero or one for your perceptron. But, in practice, you are going
+    to have to set up a convention to deal with this. This will allow you to interpret
+    the output for at least half of the image which is going to indicate the number
+    you want it to be. This means that any output that is less than half means that
+    the output is not going to be what you want it to be. Conclusion Thanks for making
+    it through to the end of Machine Learning, let’s hope it was informative and able
+    to provide you with all of the tools you need to achieve your goals whatever they
+    may be. The next step is to get started with your Machine Learning! If you are
+    not using Machine Learning, then perhaps it is time for you to start! As you saw
+    from this book, there are various ways to use Machine Learning, and there are
+    a lot of different things that you are going to be able to do with Machine Learning.
+    You can even use coding programs with Machine Learning so that you can manipulate
+    the output that you get. Finally, if you found this book useful in any way, a
+    review on Amazon is always appreciated! Thank you and good luck! Mark Howard
+
+    '
+  trans: '
+
+    但是，你的σ的数学形式是什么？事实上，这个变量的确切形式并不重要，因为我们将关注函数的形状。如果这个函数是阶梯函数，那么你的 sigmoid 神经元将会变成感知器，因为输出要么是零要么是一，取决于你的方程给出的输出是正还是负。当你使用σ函数时，你将得到一个平滑的感知器。虽然函数的平滑程度很重要，但它并不需要花费太多时间去关注。平滑度仅仅会修改权重和偏置，从而改变
+    sigmoid 神经元的输出。得益于微积分，你的输出将由以下方程预测：`Δoutput≈ ∑j ∂ output / ∂wj Δwj + ∂output /
+    ∂b Δb`，你在所有权重和输出中找到的总和将显示出你输出关于权重的偏导数。如果你对偏导数感到不适，不要太担心。你的表达式看起来会因为包含大量的偏导数而显得复杂，但实际上通过将输出视为线性函数，你会发现它其实相当简单。线性化会让你更容易找出对权重和偏置进行的小幅度变化，从而提取你想要的输出变化。因此，你的
+    sigmoid 神经元的行为将和感知器相同，这将使你更容易确定如何调整权重和偏置以改变输出。如果形状是最重要的，那么它并不关心确切形式，这也是方程中出现 o
+    的原因。当你查看导致使用不同激活函数的变化时，方程中的那个偏导数的值将会发生变化。因此，当你稍后计算这些导数时，你的函数会运用代数并简化它，使得指数具有可在求导时使用的性质。当你解释
+    sigmoid 神经元的输出时，你会发现其中一个最大的区别在于感知器和那些不输出零或一的神经元。它们可以输出任何实数，只要该数值在零到一之间。这在你希望输出表示图像中像素的平均强度时会很有用。然而，这有时也会是个问题。例如，如果你希望输出图像是“九”或者“不是九”，那么使用输出为零或一的感知器会更容易实现。但在实践中，你需要设立一种惯例来处理这种情况。这将使你能够解释至少图像的一半的输出，从而指示你想要的数值。这意味着任何小于一半的输出都不会是你想要的结果。结论感谢你阅读完这本《机器学习》一书，希望它
+    informative 且能提供你实现目标所需的所有工具，无论目标是什么。下一步是开始你的机器学习之旅！如果你不使用机器学习，那么可能是时候开始使用它了！从这本书中，你可以看到使用机器学习的各种方法，以及你将能够用机器学习做的诸多事情。你甚至可以使用编程工具配合机器学习，从而操控你得到的输出。最后，如果你觉得这本书有用，在亚马逊上留下评论总是受到欢迎！谢谢，祝好运！Mark
+    Howard
+
+    '
+  toc: []
+- raw: 'Text Copyright © Mark Howard All rights reserved. No part of this guide may
+    be reproduced in any form without permission in writing from the publisher except
+    in the case of brief quotations embodied in critical articles or reviews. Legal
+    & Disclaimer The information contained in this book and its contents is not designed
+    to replace or take the place of any form of medical or professional advice; and
+    is not meant to replace the need for independent medical, financial, legal or
+    other professional advice or services, as may be required. The content and information
+    in this book has been provided for educational and entertainment purposes only.
+    The content and information contained in this book has been compiled from sources
+    deemed reliable, and it is accurate to the best of the Author''s knowledge, information
+    and belief. However, the Author cannot guarantee its accuracy and validity and
+    cannot be held liable for any errors and/or omissions. Further, changes are periodically
+    made to this book as and when needed. Where appropriate and/or necessary, you
+    must consult a professional (including but not limited to your doctor, attorney,
+    financial advisor or such other professional advisor) before using any of the
+    suggested remedies, techniques, or information in this book. Upon using the contents
+    and information contained in this book, you agree to hold harmless the Author
+    from and against any damages, costs, and expenses, including any legal fees potentially
+    resulting from the application of any of the information provided by this book.
+    This disclaimer applies to any loss, damages or injury caused by the use and application,
+    whether directly or indirectly, of any advice or information presented, whether
+    for breach of contract, tort, negligence, personal injury, criminal intent, or
+    under any other cause of action. You agree to accept all risks of using the information
+    presented inside this book. You agree that by continuing to read this book, where
+    appropriate and/or necessary, you shall consult a professional (including but
+    not limited to your doctor, attorney, or financial advisor or such other advisor
+    as needed) before using any of the suggested remedies, techniques, or information
+    in this book. Check Out Other Books Go here to check out other related books that
+    might interest you: ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 1\\Kindle Publishing\\Đã
+    PUBLISH\\Hình Cover Kindle Fire HD10.jpg](image502.jpg)Kindle Fire HD 10 Manual:
+    The Complete User Guide with Instructions, Tutorial to Unlock the True Potential
+    of Your Kindle HD10 Fire Tablet in 30 Minutes [https://amzn.to/2zVr3rq](https://amzn.to/2zVr3rq)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 5\\Kindle\\Cover\\alexa-01.jpg](image509.jpg)Alexa:
+    How to Use Your Amazon Alexa Devices New, Essential User Guide for Amazon Echo
+    and Alexa (The Complete User Guide-Alexa & Echo Show Setup and Tips) [https://amzn.to/2NuBeFe](https://amzn.to/2NuBeFe)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 3\\Kindle\\Cover\\Kindle Fire HD 8 &
+    10 Tablet with Alexa-01.jpg](image515.jpg)Kindle Fire HD 8 & 10 Tablet with Alexa:
+    How to Use Kindle Fire HD, the Complete User Guide with Step-by-Step Instructions
+    [https://amzn.to/2NMvarM](https://amzn.to/2NMvarM) ![D:\\KINH DOANH ONLINE\\HUẾ\\LET
+    GO\\DO 4\\Kindle\\Cover\\Amazon Echo Show User Guide-01.jpg](image521.jpg)Amazon
+    Echo Show User Guide: Amazon Echo Show with Step-by-Step Instructions, Amazon
+    Echo Setup (The Complete User Guide) [https://amzn.to/2NOSdm7](https://amzn.to/2NOSdm7)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 2\\Kindle\\Cover\\kindle fire hd-01.jpg](image527.jpg)Kindle
+    Fire HD Manual: The Complete Tutorial and User Guide for Your New Kindle Fire
+    HD Device in 30 Minutes [https://amzn.to/2AAuwMw](https://amzn.to/2AAuwMw) ![D:\\KINH
+    DOANH ONLINE\\HUẾ\\LET GO\\DO 6\\Kindle\\Cover\\e139e9ed8d1a6c44350b.jpg](image533.jpg)Fire
+    Stick: Essential User Guide for Amazon Fire Stick, How to Unlock Your Fire Stick
+    Like a Pro (Amazon Fire TV, Amazon Fire TV Stick, Amazon Fire TV Cube) [https://amzn.to/2Mypamo](https://amzn.to/2Mypamo)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 7\\Kindle\\Cover\\amazon echo dot-01.jpg](image539.jpg)Amazon
+    Echo Dot - 2nd Generation Amazon Echo Dot with Alexa: How to Unlock the True Potential
+    of Your Echo Dot, Learn to Use Your Echo Dot Like a Pro [https://amzn.to/2KZ6VVL](https://amzn.to/2KZ6VVL)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 9\\Kindle\\Cover\\kindle fire hd 8 tablet-01.jpg](image545.jpg)Kindle
+    Fire HD8 Tablet: How to Use Kindle Fire HD, the Complete User Guide with Step-by-Step
+    Instructions, Tutorial to Unlock the True Potential of Your Device in 30 Minutes
+    [https://amzn.to/2Lctd6E](https://amzn.to/2Lctd6E) ![Alexa and Echo Dot-03](image551.jpg)Alexa
+    and Amazon Echo Dot: The Complete User Guide with Step by Step Instructions, User
+    Guide to Master Your Amazon Echo Dot and Alexa (Two Book Bundle) [https://amzn.to/2BPTpUU](https://amzn.to/2BPTpUU)
+    ![Kindle Fire HD 8 & 10 Instructions-01-01](image557.jpg)Kindle Fire HD 8 & 10
+    Instructions: The Complete User Guide with Step by Step Instructions, Learn to
+    Master Your Kindle Fire HD 8 & 10 Tablet in 1 Hour (Two Book Bundle) [https://amzn.to/2oi4QeK](https://amzn.to/2oi4QeK)'
+  fmt: '
+
+    Text Copyright © Mark Howard All rights reserved. No part of this guide may be
+    reproduced in any form without permission in writing from the publisher except
+    in the case of brief quotations embodied in critical articles or reviews. Legal
+    & Disclaimer The information contained in this book and its contents is not designed
+    to replace or take the place of any form of medical or professional advice; and
+    is not meant to replace the need for independent medical, financial, legal or
+    other professional advice or services, as may be required. The content and information
+    in this book has been provided for educational and entertainment purposes only.
+    The content and information contained in this book has been compiled from sources
+    deemed reliable, and it is accurate to the best of the Author''s knowledge, information
+    and belief. However, the Author cannot guarantee its accuracy and validity and
+    cannot be held liable for any errors and/or omissions. Further, changes are periodically
+    made to this book as and when needed. Where appropriate and/or necessary, you
+    must consult a professional (including but not limited to your doctor, attorney,
+    financial advisor or such other professional advisor) before using any of the
+    suggested remedies, techniques, or information in this book. Upon using the contents
+    and information contained in this book, you agree to hold harmless the Author
+    from and against any damages, costs, and expenses, including any legal fees potentially
+    resulting from the application of any of the information provided by this book.
+    This disclaimer applies to any loss, damages or injury caused by the use and application,
+    whether directly or indirectly, of any advice or information presented, whether
+    for breach of contract, tort, negligence, personal injury, criminal intent, or
+    under any other cause of action. You agree to accept all risks of using the information
+    presented inside this book. You agree that by continuing to read this book, where
+    appropriate and/or necessary, you shall consult a professional (including but
+    not limited to your doctor, attorney, or financial advisor or such other advisor
+    as needed) before using any of the suggested remedies, techniques, or information
+    in this book. Check Out Other Books Go here to check out other related books that
+    might interest you: ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 1\\Kindle Publishing\\Đã
+    PUBLISH\\Hình Cover Kindle Fire HD10.jpg](image502.jpg)Kindle Fire HD 10 Manual:
+    The Complete User Guide with Instructions, Tutorial to Unlock the True Potential
+    of Your Kindle HD10 Fire Tablet in 30 Minutes [https://amzn.to/2zVr3rq](https://amzn.to/2zVr3rq)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 5\\Kindle\\Cover\\alexa-01.jpg](image509.jpg)Alexa:
+    How to Use Your Amazon Alexa Devices New, Essential User Guide for Amazon Echo
+    and Alexa (The Complete User Guide-Alexa & Echo Show Setup and Tips) [https://amzn.to/2NuBeFe](https://amzn.to/2NuBeFe)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 3\\Kindle\\Cover\\Kindle Fire HD 8 &
+    10 Tablet with Alexa-01.jpg](image515.jpg)Kindle Fire HD 8 & 10 Tablet with Alexa:
+    How to Use Kindle Fire HD, the Complete User Guide with Step-by-Step Instructions
+    [https://amzn.to/2NMvarM](https://amzn.to/2NMvarM) ![D:\\KINH DOANH ONLINE\\HUẾ\\LET
+    GO\\DO 4\\Kindle\\Cover\\Amazon Echo Show User Guide-01.jpg](image521.jpg)Amazon
+    Echo Show User Guide: Amazon Echo Show with Step-by-Step Instructions, Amazon
+    Echo Setup (The Complete User Guide) [https://amzn.to/2NOSdm7](https://amzn.to/2NOSdm7)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 2\\Kindle\\Cover\\kindle fire hd-01.jpg](image527.jpg)Kindle
+    Fire HD Manual: The Complete Tutorial and User Guide for Your New Kindle Fire
+    HD Device in 30 Minutes [https://amzn.to/2AAuwMw](https://amzn.to/2AAuwMw) ![D:\\KINH
+    DOANH ONLINE\\HUẾ\\LET GO\\DO 6\\Kindle\\Cover\\e139e9ed8d1a6c44350b.jpg](image533.jpg)Fire
+    Stick: Essential User Guide for Amazon Fire Stick, How to Unlock Your Fire Stick
+    Like a Pro (Amazon Fire TV, Amazon Fire TV Stick, Amazon Fire TV Cube) [https://amzn.to/2Mypamo](https://amzn.to/2Mypamo)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 7\\Kindle\\Cover\\amazon echo dot-01.jpg](image539.jpg)Amazon
+    Echo Dot - 2nd Generation Amazon Echo Dot with Alexa: How to Unlock the True Potential
+    of Your Echo Dot, Learn to Use Your Echo Dot Like a Pro [https://amzn.to/2KZ6VVL](https://amzn.to/2KZ6VVL)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 9\\Kindle\\Cover\\kindle fire hd 8 tablet-01.jpg](image545.jpg)Kindle
+    Fire HD8 Tablet: How to Use Kindle Fire HD, the Complete User Guide with Step-by-Step
+    Instructions, Tutorial to Unlock the True Potential of Your Device in 30 Minutes
+    [https://amzn.to/2Lctd6E](https://amzn.to/2Lctd6E) ![Alexa and Echo Dot-03](image551.jpg)Alexa
+    and Amazon Echo Dot: The Complete User Guide with Step by Step Instructions, User
+    Guide to Master Your Amazon Echo Dot and Alexa (Two Book Bundle) [https://amzn.to/2BPTpUU](https://amzn.to/2BPTpUU)
+    ![Kindle Fire HD 8 & 10 Instructions-01-01](image557.jpg)Kindle Fire HD 8 & 10
+    Instructions: The Complete User Guide with Step by Step Instructions, Learn to
+    Master Your Kindle Fire HD 8 & 10 Tablet in 1 Hour (Two Book Bundle) [https://amzn.to/2oi4QeK](https://amzn.to/2oi4QeK)
+
+    '
+  trans: '
+
+    Copyright © Mark Howard 保留所有权利。未经出版商书面许可，本指南的任何部分不得以任何形式复制，除非是嵌入在评论或评论中的简短引用。
+
+
+    Legal & Disclaimer 书中信息及内容不旨在取代任何形式的医疗或专业建议；也不旨在替代独立的医疗、财务、法律或其他专业建议或服务。本书内容仅供教育和娱乐之用。本书内容来源于可信来源，且在作者所知、信息及信念范围内是准确的。然而，作者不能保证其准确性和有效性，亦不承担任何错误或遗漏的责任。此外，本书会不定期进行更新。如有必要或适当，您应在使用本书中建议的任何疗法、技术或信息前，咨询专业人士（包括但不限于您的医生、律师、财务顾问或其他专业顾问）。使用本书内容和信息后，您同意使本人免受因使用本书所提供的任何建议或信息而产生的任何损害、费用及支出（包括可能产生的法律费用）的责任。本免责声明适用于因使用本书所提供的任何建议或信息（直接或间接）导致的任何损失、损害或伤害，包括但不限于违约、侵权、疏忽、人身伤害、故意行为或任何其他诉讼原因。您同意承担使用本书所提供信息的全部风险。您同意，在继续阅读本书时，如有必要或适当，您应在使用本书中建议的任何疗法、技术或信息前，咨询专业人士（包括但不限于您的医生、律师或财务顾问或其他所需顾问）。
+
+
+    Check Out Other Books Go here to check out other related books that might interest
+    you: ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 1\\Kindle Publishing\\Đã PUBLISH\\Hình
+    Cover Kindle Fire HD10.jpg](img/image502.jpg)Kindle Fire HD 10 Manual: The Complete
+    User Guide with Instructions, Tutorial to Unlock the True Potential of Your Kindle
+    HD10 Fire Tablet in 30 Minutes [`amzn.to/2zVr3rq`](https://amzn.to/2zVr3rq) ![D:\\KINH
+    DOANH ONLINE\\HUẾ\\LET GO\\DO 5\\Kindle\\Cover\\alexa-01.jpg](img/image509.jpg)Alexa:
+    How to Use Your Amazon Alexa Devices New, Essential User Guide for Amazon Echo
+    and Alexa (The Complete User Guide-Alexa & Echo Show Setup and Tips) [`amzn.to/2NuBeFe`](https://amzn.to/2NuBeFe)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 3\\Kindle\\Cover\\Kindle Fire HD 8 &
+    10 Tablet with Alexa-01.jpg](img/image515.jpg)Kindle Fire HD 8 & 10 Tablet with
+    Alexa: How to Use Kindle Fire HD, the Complete User Guide with Step-by-Step Instructions
+    [`amzn.to/2NMvarM`](https://amzn.to/2NMvarM) ![D:\\KINH DOANH ONLINE\\HUẾ\\LET
+    GO\\DO 4\\Kindle\\Cover\\Amazon Echo Show User Guide-01.jpg](img/image521.jpg)Amazon
+    Echo Show User Guide: Amazon Echo Show with Step-by-Step Instructions, Amazon
+    Echo Setup (The Complete User Guide) [`amzn.to/2NOSdm7`](https://amzn.to/2NOSdm7)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 2\\Kindle\\Cover\\kindle fire hd-01.jpg](img/image527.jpg)Kindle
+    Fire HD Manual: The Complete Tutorial and User Guide for Your New Kindle Fire
+    HD Device in 30 Minutes [`amzn.to/2AAuwMw`](https://amzn.to/2AAuwMw) ![D:\\KINH
+    DOANH ONLINE\\HUẾ\\LET GO\\DO 6\\Kindle\\Cover\\e139e9ed8d1a6c44350b.jpg](img/image533.jpg)Fire
+    Stick: Essential User Guide for Amazon Fire Stick, How to Unlock Your Fire Stick
+    Like a Pro (Amazon Fire TV, Amazon Fire TV Stick, Amazon Fire TV Cube) [`amzn.to/2Mypamo`](https://amzn.to/2Mypamo)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 7\\Kindle\\Cover\\amazon echo dot-01.jpg](img/image539.jpg)Amazon
+    Echo Dot - 2nd Generation Amazon Echo Dot with Alexa: How to Unlock the True Potential
+    of Your Echo Dot, Learn to Use Your Echo Dot Like a Pro [`amzn.to/2KZ6VVL`](https://amzn.to/2KZ6VVL)
+    ![D:\\KINH DOANH ONLINE\\HUẾ\\LET GO\\DO 9\\Kindle\\Cover\\kindle fire hd 8 tablet-01.jpg](img/image545.jpg)Kindle
+    Fire HD8 Tablet: How to Use Kindle Fire HD, the Complete User Guide with Step-by-Step
+    Instructions, Tutorial to Unlock the True Potential of Your Device in 30 Minutes
+    [`amzn.to/2Lctd6E`](https://amzn.to/2Lctd6E) ![Alexa and Echo Dot-03](img/image551.jpg)Alexa
+    and Amazon Echo Dot: The Complete User Guide with Step by Step Instructions, User
+    Guide to Master Your Amazon Echo Dot and Alexa (Two Book Bundle) [`amzn.to/2BPTpUU`](https://amzn.to/2BPTpUU)
+    ![Kindle Fire HD 8 & 10 Instructions-01-01](img/image557.jpg)Kindle Fire HD 8
+    & 10 Instructions: The Complete User Guide with Step by Step Instructions, Learn
+    to Master Your Kindle Fire HD 8 & 10 Tablet in 1 Hour (Two Book Bundle) [`amzn.to/2oi4QeK`](https://amzn.to/2oi4QeK)
+
+    '
+  toc: []
