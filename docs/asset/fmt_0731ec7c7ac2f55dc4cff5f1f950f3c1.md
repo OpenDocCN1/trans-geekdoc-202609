@@ -1,0 +1,162 @@
+
+- Multiply lists and arrays, [6](#ch01.xhtml#page_6)
+
+### N
+
+- Naive bayes (NB), [346](#ch08.xhtml#page_346)
+- Named entity recognition (NER), [109](#ch03.xhtml#page_109), [110](#ch03.xhtml#page_110), [152](#ch03.xhtml#page_152)
+- Named entity recognition (NER), [242](#ch05.xhtml#page_242)
+- Natural language generation (NLG), [145](#ch03.xhtml#page_145), [149](#ch03.xhtml#page_149)
+- Natural language processing (NLP), [160](#ch04.xhtml#page_160), [190](#ch04.xhtml#page_190)
+- Natural language toolkit (NLTK), [208](#ch06.xhtml#page_208), [249](#ch06.xhtml#page_249)
+- Natural language understanding (NLU), [145](#ch04.xhtml#page_145), [149](#ch04.xhtml#page_149), [209](#ch04.xhtml#page_209)
+- Never ending language learning (NELL), [209](#ch04.xhtml#page_209)
+- Next sentence prediction (NSP), [482](#ch11.xhtml#page_482), [483](#ch11.xhtml#page_483)
+- **NLP**
+  - Concepts (I), [109]–[164]
+  - Concepts (II), [165]–[210]
+  - NLP and text mining, [208]
+  - NLP applications, [375]–[414]
+  - NLP techniques in ML, [149]–[150]
+  - Training model, [150]
+- **NLTK**
+  - Bow, [250]–[251]
+  - Context-free grammars, [271]–[273]
+  - Lemmatization, [254]–[256]
+  - Lxml, and xpath, [261]–[263]
+  - N-grams, [263]–[264]
+  - Pos (1), [264]–[268]
+  - Pos (2), [268]–[269]
+  - Stemmers, [251]–[254]
+  - Stop words, [256]–[257]
+  - Tokenizers, [270]–[271]
+- Noam chomsky, [111](#ch03.xhtml#page_111)
+- Nominal data, [503](#appA.xhtml#page_503)
+- Nonlinear datasets, [24]–[25]
+- Nonlinear least squares, [26](#ch07.xhtml#page_26), [317](#ch07.xhtml#page_317)
+- Normalization, [300](#ch07.xhtml#page_300)
+- Numpy and dot products, [11], [12]
+- Numpy and other operations, [14]
+- Numpy and the “norm” of vectors, [13]
+- Numpy methods, [10]
+
+### O
+
+- One-hot encoding, [509](#appA.xhtml#page_509)
+- One-hot encoding examples, [222]–[224]
+- One-shot, [495](#ch11.xhtml#page_495)
+- Ordinal data, [503](#appA.xhtml#page_503)
+- Origin of languages, [110]–[118]
+- Fluency, [112]–[113]
+- Other cloud platforms, [689]–[690]
+- Other types of regression, [308]–[309]
+- Outlier detection, [513]–[514]
+- Out of vocabulary (OOV), [173](#ch11.xhtml#page_173), [422](#ch11.xhtml#page_422), [474](#ch11.xhtml#page_474)
+- Overfitting versus underfitting, [298]–[300]
+- Overview of word embeddings and algorithms, [189]–[191]
+- Word embedding algorithms, [190]–[191]
+- Word embeddings, [190]
+
+### P
+
+- **Pandas**
+  - Alternatives, [40](#ch02.xhtml#page_40)
+  - Converting strings to dates, [55](#ch02.xhtml#page_55)
+  - Data cleaning tasks, [39](#ch02.xhtml#page_39)
+  - Data frames, [39], [46]–[47]
+  - Data frames and csv files, [62]–[65]
+  - Data frames and scatterplots, [89]–[90]
+  - Data frames and simple statistics, [90]–[92]
+  - Data visualization, [740]–[741]
+  - Excel spreadsheets, [96]
+  - Handling missing data, [75]–[80]
+  - Handling outliers, [87]–[89]
+  - Managing rows, [70]–[75]
+  - Matching and splitting strings, [53]–[55]
+  - Merging and splitting columns, [56]–[58]
+  - Options and settings, [38](#ch02.xhtml#page_38)
+  - Profiling, [106]
+- 随机数，[46](#ch02.xhtml#page_46)–[47](#ch02.xhtml#page_47)
+- 阅读 CSV 文件，[48](#ch02.xhtml#page_48)
+- 有用的一行命令，[104](#ch02.xhtml#page_104)–[105](#ch02.xhtml#page_105)
+- 带有 NumPy 示例的 Pandas 数据框，[40](#ch02.xhtml#page_40)–[42](#ch02.xhtml#page_42)
+- 词性（POS），[109](#ch03.xhtml#page_109)，[147](#ch03.xhtml#page_147)，[158](#ch03.xhtml#page_158) [258](#ch06.xhtml#page_258)
+- 某些语言的高峰使用量，[115](#ch03.xhtml#page_115)
+- 皮尔森相关系数，[554](#appA.xhtml#page_554)–[555](#appA.xhtml#page_555)
+- 困惑度，[533](#appA.xhtml#page_533)，[537](#appA.xhtml#page_537)
+- 音素，[134](#ch03.xhtml#page_134)
+- 音素语言，[133](#ch03.xhtml#page_133)–[134](#ch03.xhtml#page_134)
+- 披萨，[137](#ch03.xhtml#page_137)
+- 点积互信息（PMI），[184](#ch04.xhtml#page_184)
+- 词性标注，[158](#ch03.xhtml#page_158)–[159](#ch03.xhtml#page_159)
+- 技术，[159](#ch03.xhtml#page_159)
+- 词序，[125](#ch03.xhtml#page_125)
+- 精确度，[303](#ch07.xhtml#page_303)
+- 准备数据集并训练模型，[292](#ch07.xhtml#page_292)–[293](#ch07.xhtml#page_293)
+- 准备数据集，[503](#appA.xhtml#page_503)–[511](#appA.xhtml#page_511)
+- 流行度，[304](#ch07.xhtml#page_304)
+- 主要成分分析（PCA），[542](#appA.xhtml#page_542)–[545](#appA.xhtml#page_545)
+- 概率方法，[159](#ch03.xhtml#page_159)
+- 概率，[519](#appA.xhtml#page_519)–[522](#appA.xhtml#page_522)
+- 期望值，[521](#appA.xhtml#page_521)–[522](#appA.xhtml#page_522)
+- 概率分布，[533](#appA.xhtml#page_533)
+- 概率分布，[523](#appA.xhtml#page_523)
+- 投影，[551](#appA.xhtml#page_551)
+- 蛋白质折叠，[496](#ch11.xhtml#page_496)
+- 勾股定理，[186](#ch04.xhtml#page_186)
+- **Python**
+  - 字符类，[604](#appC.xhtml#page_604)–[605](#appC.xhtml#page_605)
+  - 表情符号，[596](#appB.xhtml#page_596)
+  - 异常处理，[592](#appB.xhtml#page_592)–[593](#appB.xhtml#page_593)
+  - 处理用户输入，[594](#appB.xhtml#page_594)
+  - 标识符，[571](#appB.xhtml#page_571)–[572](#appB.xhtml#page_572)
+  - 安装，[569](#appB.xhtml#page_569)–[570](#appB.xhtml#page_570)
+  - 元字符，[600](#appC.xhtml#page_600)–[603](#appC.xhtml#page_603)
+  - 其他基，[579](#appB.xhtml#page_579)
+  - 引号和注释，[573](#appB.xhtml#page_573)–[574](#appB.xhtml#page_574)
+  - 简单数据类型，[577](#appB.xhtml#page_577)–[578](#appB.xhtml#page_578)
+  - 字符串切片和拼接，[586](#appB.xhtml#page_586)–[587](#appB.xhtml#page_587)
+  - 标准模块，[575](#appB.xhtml#page_575)
+  - 工具，[567](#appB.xhtml#page_567)–[569](#appB.xhtml#page_569)
+  - 处理分数，[581](#appB.xhtml#page_581)–[582](#appB.xhtml#page_582)
+  - 处理日期，[591](#appB.xhtml#page_591)
+  - 处理数字，[578](#appB.xhtml#page_578)–[579](#appB.xhtml#page_579)
+  - 处理字符串，[583](#appB.xhtml#page_583)–[585](#appB.xhtml#page_585)
+  - 处理 Unicode，[582](#appB.xhtml#page_582)
+  - Python 示例代码 bow，[219](#ch05.xhtml#page_219)–[222](#ch05.xhtml#page_222)
+  - Python 库，[148](#ch03.xhtml#page_148)
+
+### Q
+
+- 二次方程，[22](#ch01.xhtml#page_22)
+- 使用 NumPy 和 Matplotlib 的二次散点图，[314](#ch07.xhtml#page_314)–[316](#ch07.xhtml#page_316)
+
+### R
+
+- 随机数，[2](#ch01.xhtml#page_2)
+- 随机过采样，[515](#appA.xhtml#page_515)
+- 随机重采样，[515](#appA.xhtml#page_515)
+- 随机下采样，[515](#appA.xhtml#page_515)
+- 随机变量，[522](#appA.xhtml#page_522)–[523](#appA.xhtml#page_523)
+- 召回，[303](#ch07.xhtml#page_303)
+- 接收机操作特征曲线（ROC），[304](#ch07.xhtml#page_304)
+- 推荐系统，[381](#ch09.xhtml#page_381)
+- 电影，[382](#ch09.xhtml#page_382)–[383](#ch09.xhtml#page_383)
+- 推荐系统与强化学习，[386](#ch09.xhtml#page_386)–[389](#ch09.xhtml#page_389)
+- 循环神经网络（RNNS），[330](#ch08.xhtml#page_330)
+- 指代歧义，[147](#ch03.xhtml#page_147)
+- 正则表达式，[600](#appC.xhtml#page_600)
+- 额外匹配函数，[612](#appC.xhtml#page_612)–[613](#appC.xhtml#page_613)
+- 额外主题，[623](#appC.xhtml#page_623)
+- 使用字符类进行分组，[613](#appC.xhtml#page_613)–[614](#appC.xhtml#page_614)
+- 使用字符类，[614](#appC.xhtml#page_614)–[615](#appC.xhtml#page_615)
+- 正则表达式，[100](#ch02.xhtml#page_100)–[103](#ch02.xhtml#page_103)
+- 分组，[622](#appC.xhtml#page_622)
+- 增强，[286](#ch07.xhtml#page_286)
+- 增强学习（RL），[389](#ch09.xhtml#page_389)
+- 关系提取，[146](#ch03.xhtml#page_146)
+- 关系提取（RE），[208](#ch04.xhtml#page_208)–[209](#ch04.xhtml#page_209)
+- 基于检索，[411](#ch09.xhtml#page_411)
+- 雷丁斯数据集，[455](#ch10.xhtml#page_455)–[457](#ch10.xhtml#page_457)
+- 脊回归，[299](#ch07.xhtml#page_299)
+- 罗马帝国，[115](#ch03.xhtml#page_115)
