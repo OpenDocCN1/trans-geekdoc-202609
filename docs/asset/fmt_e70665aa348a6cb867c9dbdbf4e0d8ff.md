@@ -1,0 +1,95 @@
+
+28. S. J. Pan and Q. Yang, “A survey on transfer learning,” IEEE Transactions on Knowledge and Data Engineering, vol. 22, no. 10, pp. 1345–1359, 2010. [29] M. Mehdipour Ghazi, B. Yanikoglu, and E. Aptoula, “Plant identification using deep neural networks via optimization of transfer learning parameters,” Neurocomputing, vol. 235, pp. 228–235, 2017.
+
+29. S. Ruder, “An overview of gradient descent optimization algorithms,” https://arxiv.org/abs/1609.04747, 2017. [31] D. P. Kingma and J. L. Ba, “Adam: a method for stochastic optimization,” https://arxiv.org/abs/1412.6980, 2017.
+
+30. S. S. Sannakki, V. S. Rajpurohit, V. B. Nargund, R. Arun Kumar, and S. Prema Yallur, “Leaf disease grading by machine vision and fuzzy logic,” International Journal of Computer Technology and Applications, vol. 2, no. 5, pp. 1709–1716, 2011.
+
+本书版权归 Arcler 所有
+
+![Image 814](img/index-181_1.png)
+
+![Image 815](img/index-181_2.png)
+
+![Image 816](img/index-181_3.png)
+
+31. D. Samanta, P. P. Chaudhury, and A. Ghosh, “Scab diseases detection of potato using image processing,” International Journal of Computer Trends and Technology, vol. 3, pp. 109–113, 2012.
+
+32. P. J. Herrera, J. Dorado, and A. Ribeiro, “A novel approach for weed type classification based on shape descriptors and a fuzzy decisionmaking method,” Sensors, vol. 14, no. 8, pp. 15304–15324, 2014.
+
+33. B. Cheng and E. T. Matson, “A feature-based machine learning agent for automatic rice and weed discrimination,” International Conference on Artificial Intelligence and Soft Computing, pp. 517–527, 2015.
+
+34. S. Sankaran and R. Ehsani, “Comparison of visible-near infrared and mid-infrared spectroscopy for classification of Huanglongbing and citrus canker infected leaves,” Agricultural Engineering International: CIGR Journal, vol. 15, no. 3, pp. 75–79, 2013.
+
+35. X. Cheng, Y. Zhang, Y. Chen, Y. Wu, and Y. Yue, “Pest identification via deep residual learning in complex background,” Computers and Electronics in Agriculture, vol. 141, pp. 351–356, 2017.
+
+36. A. dos Santos Ferreira, D. Matte Freitas, G. Gonçalves da Silva, H. Pistori, and M. Teophilo Folhes, “Weed detection in soybean crops using ConvNets,” Computers and Electronics in Agriculture, vol. 143, pp. 314–324, 2017.
+
+37. S. Sladojevic, M. Arsenovic, A. Anderla, D. Culibrk, and D. Stefanovic, “Deep Neural Networks Based Recognition of Plant Diseases by Leaf Image Classification,” Computational Intelligence and Neuroscience, vol. 2016, Article ID 3289801, 11 pages, 2016.
+
+38. S. P. Mohanty, D. P. Hughes, and M. Salathé, “Using deep learning for image-based plant disease detection,” Frontiers in Plant Science, vol. 7, article no. 1419, 2016.
+
+39. I. Sa, Z. Ge, F. Dayoub, B. Upcrof, T. Perez, and C. McCool, “Deepfruits: A fruit detection system using deep neural networks,” Sensors, vol. 16, article no. 1222, no. 8, 2016.
+
+40. V. Nair and G. E. Hinton, “Rectified linear units improve Restricted Boltzmann machines,” in Proceedings of the 27th International Conference on Machine Learning (ICML ’10), pp. 807–814, Haifa, Israel, June 2010.
+
+41. D. P. Hughes and M. Salathe, “An open access repository of images on plant health to enable the development of mobile disease diagnostics,” https://arxiv.org/abs/1511.08060, 2016.
+
+本书版权归 Arcler 所有
+
+![Image 817](img/index-182_1.png)
+
+![Image 818](img/index-182_2.png)
+
+![Image 819](img/index-182_3.png)
+
+本书版权归 Arcler 所有
+
+![Image 820](img/index-183_1.png)
+
+![Image 821](img/index-183_2.png)
+
+![Image 822](img/index-183_3.png)
+
+# CHAPTER 8: DEEP LEARNING FOR PLANT IDENTIFICATION IN NATURAL ENVIRONMENT
+
+**Yu Sun, Yuan Liu, Guan Wang, and Haiyan Zhang**
+
+School of Information Science and Technology, Beijing Forestry University, Beijing 100083, China
+
+## ABSTRACT
+
+Plant image identification has become an interdisciplinary focus in both botanical taxonomy and computer vision. The first plant image dataset collected by mobile phone in natural scene is presented, which contains 10,000 images of 100 ornamental plant species in Beijing Forestry University campus. A 26-layer deep learning model consisting of 8 residual building blocks is designed for large-scale plant classification in natural environment. The proposed model achieves a recognition rate of 91.78% on the BJFU100 dataset, demonstrating that deep learning is a promising technology for smart forestry.
+
+**Citation**: Yu Sun, Yuan Liu, Guan Wang, Haiyan Zhang, “Deep Learning for Plant
+vol. 2017, Article ID 7361042, 6 pages, 2017. https://doi.org/10.1155/2017/7361042.
+
+**Copyright**: © 2017 by Authors. This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+
+本书版权归 Arcler 所有
+
+![Image 823](img/index-184_1.png)
+
+![Image 824](img/index-184_2.png)
+
+![Image 825](img/index-184_3.png)
+
+## INTRODUCTION
+
+Automatic plant image identification is the most promising solution towards bridging the botanical taxonomic gap, which receives considerable attention in both botany and computer community. As the machine learning technology advances, sophisticated models have been proposed for automatic plant identification. With the popularity of smartphones and the emergence of Pl@ntNet mobile apps [1], millions of plant photos have been acquired. Mobile-based automatic plant identification is essential to real-world social-based ecological surveillance [2], invasive exotic plant monitor [3], ecological science popularization, and so on. Improving the performance of mobile-based plant identification models attracts increased attention from scholars and engineers.
+
+Nowadays, many efforts have been conducted in extracting local $ ~ leaf characteristic as a comparative tool for studying plants, and some leaf datasets including Swedish leaf dataset, Flavia dataset, and ICL dataset are standard benchmark. In [4], Söderkvist extracted shape characteristics and moment features of the leaves and analyzed the 15 different Swedish tree classes using back propagation for the feed-forward neural network.
+
+In [5], Fu et al. chose the local contrast and other parameters to describe ' < network was used to segment the veins and other leaves. The experiment shows that the neural network is more effective in identifying the vein ' # combining snakes technique with cellular neural networks, which obtained satisfactory results on leaf segmentation. He and Huang used the probabilistic \# comparing to BP neural network [7]. In 2013, the idea of natural-based leaf recognition was proposed, and the method of contour segmentation algorithm based on polygon leaf model was used to obtain contour image [8]. With the deep learning becoming a hot spot in combination with shape characteristics, using deep belief network which includes eight layers of Convolution Neural Network to identify leaf images and achieved a higher recognition rate. Some researchers focus on $ # ° # word to describe the color, shape, texture features, and other characteristics [10].
+
+In [11], Zhang et al. combined Harr features with SIFT features of classifying them by `k`-nearest neighbor method. In [12], they raised a method of recognizing the picking rose by integrating BP neural network.
+
+本书版权归 Arcler 所有
+
+![Image 826](img/index-185_1.png)
+
+![Image 827](img/index-185_2.png)
+
+![Image 828](img/index-185_3.png)
+
+The studies of identifying plants by fruit are relatively rare. Li et al. proposed the method of multifeature integration using preference Ainet as the recognition algorithm [13]. After so many years continued exploration into plant recognition technology, the dedicated mobile applications such as LeafSnap [14], Pl@ntNet [1], or Microsoft Garage’s Flower Recognition app [15] can be conveniently used for identify plants.
