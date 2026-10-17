@@ -1,0 +1,3 @@
+# 12.4.2 Next
+
+In the next tutorial, you will discover how to implement and apply the k-Nearest Neighbors algorithm for classification.
